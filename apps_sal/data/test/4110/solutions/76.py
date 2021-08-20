@@ -1,17 +1,16 @@
-D, G = [int(x) for x in input().split()]
-P, C = [], []
+(D, G) = [int(x) for x in input().split()]
+(P, C) = ([], [])
 for _ in range(D):
-    p, c = [int(x) for x in input().split()]
+    (p, c) = [int(x) for x in input().split()]
     P.append(p)
     C.append(c)
-
 ans = 1000
-for b in range(2**D):
+for b in range(2 ** D):
     score = 0
     solve = 0
     unsolved = []
     for i in range(D):
-        if (b >> i) & 1:
+        if b >> i & 1:
             score += C[i] + 100 * (i + 1) * P[i]
             solve += P[i]
         else:
@@ -28,5 +27,4 @@ for b in range(2**D):
                 break
     if G <= score:
         ans = min(ans, solve)
-
 print(ans)

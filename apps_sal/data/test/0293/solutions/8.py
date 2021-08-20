@@ -1,5 +1,5 @@
 x = int(input()) * 6
-n, equ, ans = 0, False, []
+(n, equ, ans) = (0, False, [])
 while True:
     n += 1
     if n * (n + 1) * (2 * n - 1) > x:
@@ -16,12 +16,11 @@ while True:
         ans.append((n, m))
         if n == m:
             equ = True
-
 print(len(ans) * 2 - equ)
 for p in ans:
-    print("%d %d" % (p[0], p[1]))
+    print('%d %d' % (p[0], p[1]))
 if equ:
     ans.pop()
 ans.reverse()
 for p in ans:
-    print("%d %d" % (p[1], p[0]))
+    print('%d %d' % (p[1], p[0]))

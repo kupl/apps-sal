@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         d = num
         s = math.ceil(math.sqrt(num))

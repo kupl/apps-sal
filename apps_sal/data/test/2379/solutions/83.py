@@ -1,4 +1,4 @@
-N, K, C = map(int, input().split())
+(N, K, C) = map(int, input().split())
 S = input()
 i = 0
 d1 = [-1] * N

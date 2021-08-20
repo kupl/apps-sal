@@ -1,10 +1,10 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 l = 0
 r = 0
 u = 0
 d = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a < x:
         l += 1
     if a > x:

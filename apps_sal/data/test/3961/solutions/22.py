@@ -6,5 +6,4 @@ for i in range(1, n):
     L.append([v, 0])
     y = L[l[i] - 1][0]
     L[i][1] = v + v - y + 1
-
 print((L[-1][1] + 1) % 1000000007)

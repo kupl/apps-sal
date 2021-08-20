@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 LL = [''] * n
 AllCount = 0
 for i in range(n):

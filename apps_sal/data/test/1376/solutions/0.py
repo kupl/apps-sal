@@ -9,10 +9,10 @@ for i in range(n, 2 * n):
 res = 0
 for i in sorted(m):
     if s > d:
-        s, d = d, s
-    a, b = m[i]
+        (s, d) = (d, s)
+    (a, b) = m[i]
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     res += abs(s - a) + abs(b - d)
-    s, d = a, b
+    (s, d) = (a, b)
 print(res)

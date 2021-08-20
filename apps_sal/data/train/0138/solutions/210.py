@@ -1,5 +1,3 @@
-# 1567. Maximum Length of Subarray With Positive Product
-
 def sgn(n):
     if n > 0:
         return +1
@@ -29,7 +27,6 @@ def partial_products(arr):
 
 
 def get_subarr_max_len(arr):
-    # zero-free
     first_index = {}
     max_len = 0
     for (i, prod) in enumerate(partial_products(arr)):
@@ -41,13 +38,12 @@ def get_subarr_max_len(arr):
 def get_max_len(arr):
     arr = [sgn(x) for x in arr]
     arr.append(0)
-
     if len(arr) == 0:
         return 0
-
-    return max(get_subarr_max_len(subarr) for subarr in split_0(arr))
+    return max((get_subarr_max_len(subarr) for subarr in split_0(arr)))
 
 
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         return get_max_len(nums)

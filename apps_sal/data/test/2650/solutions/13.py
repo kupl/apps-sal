@@ -1,10 +1,10 @@
 import heapq
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 belong = [-1 for i in range(n)]
 rating = [0 for i in range(n)]
 second = [[] for i in range(2 * 10 ** 5 + 5)]
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     rating[i] = a
     belong[i] = b
     heapq.heappush(second[b], (-1 * a, i))
@@ -13,7 +13,7 @@ for i in range(2 * 10 ** 5 + 5):
     if second[i]:
         heapq.heappush(first, (-1 * second[i][0][0], second[i][0][1], i))
 for i in range(q):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     before = belong[c - 1]
     belong[c - 1] = d
     heapq.heappush(second[d], (-1 * rating[c - 1], c - 1))

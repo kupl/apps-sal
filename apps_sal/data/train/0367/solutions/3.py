@@ -1,4 +1,5 @@
 class Solution:
+
     def findDuplicate(self, nums):
         """
         :type nums: List[int]
@@ -11,11 +12,9 @@ class Solution:
             fast = nums[nums[fast]]
             if slow == fast:
                 break
-
         ptr1 = nums[0]
         ptr2 = slow
         while ptr1 != ptr2:
             ptr1 = nums[ptr1]
             ptr2 = nums[ptr2]
-
         return ptr1

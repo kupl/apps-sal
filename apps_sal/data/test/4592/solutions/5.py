@@ -1,7 +1,4 @@
 from collections import defaultdict
-
-
-# 素因数分解
 d = defaultdict(int)
 
 
@@ -22,7 +19,7 @@ def prime_factorize(n):
 
 
 N = int(input())
-MOD = int(1e9) + 7
+MOD = int(1000000000.0) + 7
 ans = 1
 for i in range(1, N + 1):
     prime_factorize(i)

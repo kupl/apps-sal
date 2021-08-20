@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         return merge_sort(nums)
 
@@ -6,7 +7,6 @@ class Solution:
 def merge_sort(nums):
     if len(nums) <= 1:
         return nums
-
     pivot = len(nums) // 2
     left = merge_sort(nums[:pivot])
     right = merge_sort(nums[pivot:])
@@ -15,8 +15,7 @@ def merge_sort(nums):
 
 def merge(l1: List[int], l2: List[int]) -> List[int]:
     res = []
-
-    i, j = 0, 0
+    (i, j) = (0, 0)
     while i < len(l1) and j < len(l2):
         if l1[i] <= l2[j]:
             res.append(l1[i])

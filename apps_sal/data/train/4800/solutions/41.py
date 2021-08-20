@@ -1,4 +1,3 @@
-
 def hotpo(n, c=0):
     if n <= 1:
         return c

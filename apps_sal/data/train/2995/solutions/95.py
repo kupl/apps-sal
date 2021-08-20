@@ -5,5 +5,4 @@ def sum_mul(n, m):
             if abs(i) % n == 0:
                 total += i
         return total
-
     return 'INVALID'

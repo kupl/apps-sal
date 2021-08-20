@@ -5,8 +5,8 @@ ans = N * f
 curlen = 0
 maxlen = 0
 index = 0
-while(index < 2 * N):
-    if (x[index % N] == f):
+while index < 2 * N:
+    if x[index % N] == f:
         maxlen = max(maxlen, curlen)
         curlen = 0
     else:

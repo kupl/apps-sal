@@ -8,7 +8,7 @@ for i in range(test):
         if items[j] < 2000:
             t = 2000 - items[j]
             if t in items[j + 1:]:
-                ANS.append("Accepted")
+                ANS.append('Accepted')
                 c = 2
                 break
             else:
@@ -16,6 +16,6 @@ for i in range(test):
         else:
             break
     if c == 1:
-        ANS.append("Rejected")
+        ANS.append('Rejected')
 for ans in ANS:
     print(ans)

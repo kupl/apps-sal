@@ -48,7 +48,7 @@ class Solution:
 
     def findLatestStep(self, arr: List[int], m: int) -> int:
         disjoint = UnionFind(len(arr))
-        ans = - 1
+        ans = -1
         val = [0] * len(arr)
         for k in range(len(arr)):
             index = arr[k] - 1
@@ -58,52 +58,8 @@ class Solution:
                 disjoint.union(index, index - 1)
             if index + 1 < len(val) and val[index] == val[index + 1]:
                 disjoint.union(index, index + 1)
-            #print(k, disjoint.groupCount)
             if disjoint.groupCount[m] > 0:
                 ans = k + 1
-            '''
-            i = 0
-            while i < len(arr):
-                if val[i] == 1 and disjoint.getSize(i) == m:
-                    i += disjoint.getSize(i)
-                    ans = k + 1
-                    continue
-                i += 1
-            '''
-            #print(k, disjoint.size, val)
+            '\n            i = 0\n            while i < len(arr):\n                if val[i] == 1 and disjoint.getSize(i) == m:\n                    i += disjoint.getSize(i)\n                    ans = k + 1\n                    continue\n                i += 1\n            '
         return ans
-
-    '''
-    def findLatestStep(self, arr: List[int], m: int) -> int:
-        def check(i):
-            val = [0]*len(arr)
-            for k in range(i+1):
-                val[arr[k]-1] = 1
-            count = 0
-            success = False
-            for k in range(len(val)):
-                if val[k] > 0:
-                    count += 1
-                else:
-                    if count == m:
-                        success = True
-                        break
-                    count = 0
-            if count == m:
-                success = True
-            return success                
-            
-        left = 0
-        right = len(arr)
-        while left < right:
-            mid = left + (right - left) //2
-            if not check(mid):
-                right = mid
-            else:
-                left = mid + 1
-        print(left)
-        if left == 0 and not check(left):
-            return -1
-        else:
-            return left
-    '''
+    '\n    def findLatestStep(self, arr: List[int], m: int) -> int:\n        def check(i):\n            val = [0]*len(arr)\n            for k in range(i+1):\n                val[arr[k]-1] = 1\n            count = 0\n            success = False\n            for k in range(len(val)):\n                if val[k] > 0:\n                    count += 1\n                else:\n                    if count == m:\n                        success = True\n                        break\n                    count = 0\n            if count == m:\n                success = True\n            return success                \n            \n        left = 0\n        right = len(arr)\n        while left < right:\n            mid = left + (right - left) //2\n            if not check(mid):\n                right = mid\n            else:\n                left = mid + 1\n        print(left)\n        if left == 0 and not check(left):\n            return -1\n        else:\n            return left\n    '

@@ -1,15 +1,14 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 
 
 def f(x, y):
     if x == y:
         return x
+    elif (x, y) == ('R', 'S') or (x, y) == ('S', 'P') or (x, y) == ('P', 'R'):
+        return x
     else:
-        if (x, y) == ('R', 'S') or (x, y) == ('S', 'P') or (x, y) == ('P', 'R'):
-            return x
-        else:
-            return y
+        return y
 
 
 dp = [[''] * n for _ in range(k + 1)]

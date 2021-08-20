@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-ans = "NO"
+(n, m) = list(map(int, input().split()))
+ans = 'NO'
 for i in range(m):
     a = set()
     line = list(map(int, input().split()))
@@ -10,6 +10,6 @@ for i in range(m):
             break
         a.add(line[j])
     if not answer:
-        ans = "YES"
+        ans = 'YES'
         break
 print(ans)

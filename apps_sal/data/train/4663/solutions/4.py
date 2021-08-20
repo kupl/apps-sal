@@ -4,4 +4,4 @@ def order(s):
         for j in list(s.split()):
             if str(i) in j:
                 z.append(j)
-    return " ".join(z)
+    return ' '.join(z)

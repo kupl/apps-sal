@@ -4,5 +4,4 @@ def solution(digits):
         n = int(digits[i:i + 5])
         if n > max:
             max = n
-
     return max

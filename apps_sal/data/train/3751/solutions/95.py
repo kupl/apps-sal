@@ -5,4 +5,4 @@ def bool_to_word(boolean):
         else:
             return 'No'
     else:
-        raise TypeError("boolean was not of type boolean but of type {}".format(type(boolean)))
+        raise TypeError('boolean was not of type boolean but of type {}'.format(type(boolean)))

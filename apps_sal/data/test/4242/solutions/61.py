@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 
 
 def ans120(A: int, B: int, K: int):

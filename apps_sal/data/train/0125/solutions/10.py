@@ -1,4 +1,5 @@
 class Solution:
+
     def superPow(self, a, b):
         num = 0
         currentpow = 1
@@ -8,8 +9,8 @@ class Solution:
         return self.binpow(a, num % 570)
 
     def binpow(self, n, p):
-        if(p == 0):
+        if p == 0:
             return 1
-        if(p % 2 == 0):
-            return (self.binpow(n * n, p // 2)) % 1337
-        return (n * self.binpow(n, p - 1)) % 1337
+        if p % 2 == 0:
+            return self.binpow(n * n, p // 2) % 1337
+        return n * self.binpow(n, p - 1) % 1337

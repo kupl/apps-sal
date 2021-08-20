@@ -1,5 +1,5 @@
 def sieve(n):
-    n = n - 1  # finding primes smaller than the limit
+    n = n - 1
     primes = [True for i in range(n + 1)]
     result = []
     p = 2
@@ -11,7 +11,6 @@ def sieve(n):
     for p in range(2, n + 1):
         if primes[p]:
             result.append(p)
-    # print(result)
     return result
 
 
@@ -22,16 +21,13 @@ def prime_maxlength_chain(n):
     results = []
     if n == 0:
         return []
-    i, j = 0, 0
-
+    (i, j) = (0, 0)
     while sum(prime_num[i:count_max + i + j]) < n:
         while sum(prime_num[i:count_max + i + j]) < n:
-            #print(prime_num[i:count_max+i+j], i, j, count_max)
             count = len(prime_num[i:count_max + i + j])
             summe = sum(prime_num[i:count_max + i + j])
             if summe in prime_num:
                 prime_sums.append([count, summe])
-
             j += 1
         if count_max <= prime_sums[-1][0]:
             count_max = prime_sums[-1][0]
@@ -41,5 +37,4 @@ def prime_maxlength_chain(n):
     for p in prime_sums:
         if p[0] == prime_sums[-1][0]:
             results.append(p[1])
-
     return results

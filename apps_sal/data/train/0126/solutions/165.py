@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         n = len(s)
         s0 = s[:minSize]
@@ -13,5 +14,5 @@ class Solution:
             if counter[s[i - minSize]] == 0:
                 counter.pop(s[i - minSize])
             if len(counter) <= maxLetters:
-                substr[s[i - minSize + 1: i + 1]] += 1
+                substr[s[i - minSize + 1:i + 1]] += 1
         return max(substr.values(), default=0)

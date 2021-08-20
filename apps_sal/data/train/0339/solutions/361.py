@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def find(target, arr):
             seen = Counter()
             count = 0
@@ -16,5 +18,4 @@ class Solution:
         @lru_cache(None)
         def twoProduct2(target):
             return find(target, nums2)
-
-        return sum(twoProduct2(a * a) for a in nums1) + sum(twoProduct1(a * a) for a in nums2)
+        return sum((twoProduct2(a * a) for a in nums1)) + sum((twoProduct1(a * a) for a in nums2))

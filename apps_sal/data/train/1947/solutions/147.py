@@ -40,6 +40,7 @@ def createMaxHistogram(arr):
 
 
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         res = []
         bHist = createMaxHistogram(B)

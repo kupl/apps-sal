@@ -1,5 +1,5 @@
 __author__ = 'Ol4a'
-m, d = list(map(int, input().split()))
+(m, d) = list(map(int, input().split()))
 k = m + d - 1
 print(k)
 for i in range(1, d + 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         max = 0
         for i in range(0, len(nums) - 1):
@@ -7,6 +8,3 @@ class Solution:
                 if product > max:
                     max = product
         return max
-
-        # 0 1 2 3 4 5 len=6
-        # 2 3 5 6 8 9

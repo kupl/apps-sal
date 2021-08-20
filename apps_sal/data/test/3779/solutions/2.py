@@ -1,8 +1,11 @@
 import math
-def i(): return map(int, input().split())
 
 
-n, k = i()
+def i():
+    return map(int, input().split())
+
+
+(n, k) = i()
 g = k
 for a in i():
     g = math.gcd(g, a)

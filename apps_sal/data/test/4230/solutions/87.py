@@ -1,5 +1,5 @@
 import bisect
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 if N == 0:
     print(X)
 else:

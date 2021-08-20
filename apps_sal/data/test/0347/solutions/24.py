@@ -1,7 +1,5 @@
 __author__ = 'MoonBall'
-
 import sys
-# sys.stdin = open('data/A.in', 'r')
 T = 1
 
 
@@ -14,7 +12,6 @@ def process():
     for _ in range(5):
         total += max(0.3 * z[_], (1 - a[_] / 250) * z[_] - 50 * b[_])
     total += 100 * c[0] - 50 * c[1]
-
     print(int(total))
 
 

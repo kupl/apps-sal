@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 unlike_list = set(map(str, input().split()))
 
 
@@ -15,5 +15,4 @@ while not ans:
         ans = True
     else:
         N += 1
-
 print(N)

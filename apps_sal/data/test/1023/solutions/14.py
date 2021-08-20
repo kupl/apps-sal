@@ -1,4 +1,4 @@
-n, m, ta, tb, k = list(map(int, input().split()))
+(n, m, ta, tb, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 if k >= min(n, m):
@@ -7,7 +7,6 @@ else:
     result = -1
     for i in range(k + 1):
         num = A[i] + ta
-        #print(i, num)
         left = -1
         right = m
         while left + 1 != right:

@@ -1,6 +1,6 @@
 def correct(string):
     l = list(string)
-    for idx, char in enumerate(l):
+    for (idx, char) in enumerate(l):
         if char == '5':
             l[idx] = 'S'
         if char == '0':
@@ -10,4 +10,4 @@ def correct(string):
     return ''.join(l)
 
 
-print(correct("5INGAPORE"))
+print(correct('5INGAPORE'))

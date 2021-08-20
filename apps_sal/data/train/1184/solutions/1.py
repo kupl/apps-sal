@@ -1,4 +1,3 @@
-# cook your dish here
 f = []
 for ad in range(int(input())):
     n = int(input())
@@ -7,14 +6,14 @@ for ad in range(int(input())):
     c = [0] * 4
     d = [0] * 4
     for i in range(n):
-        x = (input().split())
-        if x[0] == "A":
+        x = input().split()
+        if x[0] == 'A':
             a[int(x[1]) // 3 - 1] += 1
-        elif x[0] == "B":
+        elif x[0] == 'B':
             b[int(x[1]) // 3 - 1] += 1
-        elif x[0] == "C":
+        elif x[0] == 'C':
             c[int(x[1]) // 3 - 1] += 1
-        elif x[0] == "D":
+        elif x[0] == 'D':
             d[int(x[1]) // 3 - 1] += 1
     x = []
     for i in range(4):
@@ -32,7 +31,6 @@ for ad in range(int(input())):
                         for t in range(3, -1, -1):
                             s += (25 + 25 * t) * y[t]
                         x.append(s)
-
     m = max(x)
     f.append(m)
     print(m)

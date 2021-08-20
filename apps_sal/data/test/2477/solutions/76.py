@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
@@ -9,7 +9,7 @@ def isOK(x):
     return cnt <= K
 
 
-left, right = 0, 10 ** 10
+(left, right) = (0, 10 ** 10)
 while right - left > 1:
     mid = (left + right) // 2
     if isOK(mid):

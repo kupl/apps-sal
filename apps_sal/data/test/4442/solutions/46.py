@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 s = [a] * b
 t = [b] * a
 ab = map(str, s)

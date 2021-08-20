@@ -19,7 +19,6 @@ N = int(input())
 arr = []
 for i in range(1, N + 1):
     arr += fact(i)
-# print(arr)
 arc = collections.Counter(arr)
 num74cnt = 0
 num24cnt = 0
@@ -41,5 +40,4 @@ ans = num74cnt
 ans += num24cnt * (num2cnt - 1)
 ans += num14cnt * (num4cnt - 1)
 ans += num4cnt * (num4cnt - 1) // 2 * (num2cnt - 2)
-
 print(ans)

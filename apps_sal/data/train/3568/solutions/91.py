@@ -3,4 +3,4 @@ def bumps(road):
     for i in road:
         if i == 'n':
             b += 1
-    return "Woohoo!" if b <= 15 else "Car Dead"
+    return 'Woohoo!' if b <= 15 else 'Car Dead'

@@ -2,10 +2,10 @@ import sys
 
 
 def solve():
-    n, x0, y0 = read()
+    (n, x0, y0) = read()
     stormtroopers = list()
     for i in range(n):
-        xi, yi = read()
+        (xi, yi) = read()
         temp = (xi, yi)
         stormtroopers.append(temp)
     shots = 0
@@ -16,7 +16,7 @@ def solve():
             remstormtroopers = [point for point in stormtroopers if point[0] != x0]
         else:
             slope = (cur[1] - y0) / (cur[0] - x0)
-            remstormtroopers = [point for point in stormtroopers if abs(point[1] - y0 - slope * (point[0] - x0)) > 0.0000001]
+            remstormtroopers = [point for point in stormtroopers if abs(point[1] - y0 - slope * (point[0] - x0)) > 1e-07]
         stormtroopers = remstormtroopers
     return shots
 
@@ -24,27 +24,27 @@ def solve():
 def read(mode=2):
     inputs = input().strip()
     if mode == 0:
-        return inputs  # String
+        return inputs
     if mode == 1:
-        return inputs.split()  # List of strings
+        return inputs.split()
     if mode == 2:
-        return list(map(int, inputs.split()))  # List of integers
+        return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     if isinstance(s, tuple):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 def run():
     if sys.hexversion == 50594544:
-        sys.stdin = open("test.txt")
+        sys.stdin = open('test.txt')
     res = solve()
     write(res)
 

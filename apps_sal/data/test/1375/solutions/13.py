@@ -1,6 +1,6 @@
 n = int(input())
 t = list(map(int, input().split()))
-q, s = 0, sum(t)
+(q, s) = (0, sum(t))
 if s % 3 == 0:
     a = s // 3
     b = s - a

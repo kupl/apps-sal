@@ -1,6 +1,5 @@
-
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     element_count = [0] * 1000001
     count = 0

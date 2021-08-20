@@ -1,5 +1,5 @@
 from copy import deepcopy
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [list(map(int, input().split())) for i in range(m)]
 best1 = -1
@@ -11,7 +11,7 @@ for i in range(n):
     tmp3 = []
     c = deepcopy(a)
     for j in range(m):
-        x, y = b[j]
+        (x, y) = b[j]
         x -= 1
         y -= 1
         if x <= i and i <= y:

@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
-ans = -10**18
+ans = -10 ** 18
 flag = dict()
 for i in range(n):
     if i in flag:

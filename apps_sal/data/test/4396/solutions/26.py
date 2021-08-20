@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,16 +9,14 @@ MOD = 1000000007
 
 def main():
     N = int(readline())
-
     ans = 0
     rate = 380000.0
     for _ in range(N):
-        x, u = readline().split()
+        (x, u) = readline().split()
         if u == 'JPY':
             ans += int(x)
         else:
             ans += float(x) * rate
-
     print(ans)
     return
 

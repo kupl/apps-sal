@@ -1,5 +1,5 @@
-x, y = input().split()
-x, y = int(x), int(y)
+(x, y) = input().split()
+(x, y) = (int(x), int(y))
 if x == y == 0:
     print(0)
 if y >= -x and y > x:

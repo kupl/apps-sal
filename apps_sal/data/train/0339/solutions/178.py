@@ -18,6 +18,7 @@ def commonCnt(nums1, nums2):
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         square1 = [e * e for e in nums1]
         square2 = [e * e for e in nums2]

@@ -34,7 +34,5 @@ for i in range(n):
                         if c == 0:
                             l1[j] = 1
                             V = V[:q - 1] + [l[j]] + V[q - 1:]
-
         k = k + 1
-
 print(k)

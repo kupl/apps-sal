@@ -28,5 +28,4 @@ for _ in range(t):
                 break
         n_operation = abs(n_operation)
         operation.append(max(p_operation, n_operation))
-
     print(int(min(operation)))

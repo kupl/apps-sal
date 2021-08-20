@@ -1,7 +1,4 @@
-n, a, b, c = [int(input()) for _ in range(4)]
-
-# n=ax+
-
+(n, a, b, c) = [int(input()) for _ in range(4)]
 use = max(0, (n - b) // (b - c))
 rem = n - use * (b - c)
 x = rem // b

@@ -1,4 +1,5 @@
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
         if n < 10:
             return n

@@ -7,7 +7,7 @@ def __starting_point():
     a = int(input())
     b = int(input())
     h = int(input())
-    print((solve(a, b, h)))
+    print(solve(a, b, h))
 
 
 __starting_point()

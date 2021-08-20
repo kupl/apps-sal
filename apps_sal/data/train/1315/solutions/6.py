@@ -11,6 +11,4 @@ for i in range(n):
     else:
         d[t] = 1
         s = s + 1
-
-
 print(s)

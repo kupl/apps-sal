@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         steps = 0
         while True:
@@ -10,5 +11,4 @@ class Solution:
                 break
             nums = [int(x / 2) for x in nums]
             steps += 1
-
         return steps

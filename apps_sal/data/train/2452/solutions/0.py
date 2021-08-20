@@ -1,4 +1,5 @@
 class Solution:
+
     def lastStoneWeight(self, stones: List[int]) -> int:
         while True:
             if len(stones) == 1:

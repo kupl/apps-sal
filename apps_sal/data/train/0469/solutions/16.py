@@ -1,15 +1,16 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
-        edge = [[]for i in range(n)]
+        edge = [[] for i in range(n)]
         cntEdge = 0
-        for u, v in enumerate(leftChild):
+        for (u, v) in enumerate(leftChild):
             if v == -1:
                 continue
             else:
                 edge[u].append(v)
                 edge[v].append(u)
                 cntEdge += 1
-        for u, v in enumerate(rightChild):
+        for (u, v) in enumerate(rightChild):
             if v == -1:
                 continue
             else:

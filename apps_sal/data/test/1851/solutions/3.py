@@ -2,7 +2,7 @@ input()
 a = list(map(int, input().split(' ')))
 days = 0
 resolves = set()
-for i, b in enumerate(a):
+for (i, b) in enumerate(a):
     if not resolves:
         days += 1
     resolves.add(b)

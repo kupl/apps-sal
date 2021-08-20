@@ -1,14 +1,12 @@
 DEBUG = True
-n = input().strip().split(" ")
+n = input().strip().split(' ')
 n = int(n[0])
 
 
 def oneTest(N, k):
     n = N
-
     nv = 0
     np = 0
-
     while n > 0:
         if n <= k:
             nv += n
@@ -16,11 +14,9 @@ def oneTest(N, k):
         else:
             n -= k
             nv += k
-
             x = n // 10
             n -= x
             np += x
-
     assert nv + np == N
     return nv * 2 >= N
 
@@ -39,7 +35,6 @@ def getResult(n):
 
 k = getResult(n)
 print(k)
-
 if DEBUG:
     if k > 1:
         assert not oneTest(n, k - 1)

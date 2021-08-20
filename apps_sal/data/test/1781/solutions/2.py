@@ -1,6 +1,5 @@
 from collections import Counter
-n, k = list(map(int, input().split()))
-# n,k=1,2
+(n, k) = list(map(int, input().split()))
 a = set()
 c = [set() for i in range(3)]
 b = set()
@@ -24,14 +23,13 @@ c = list(c[0]) + list(c[1]) + list(c[2])
 for i in range(k):
     a.remove(c[i])
 for i in b:
-    if (i[1] != 2) and (i[1] != 7) and (i[1] != 11):
-        if not(tuple([i[0], i[1] + 1]) in a):
+    if i[1] != 2 and i[1] != 7 and (i[1] != 11):
+        if not tuple([i[0], i[1] + 1]) in a:
             z = z + 1
-    if (i[1] != 4) and (i[1] != 9) and (i[1] != 0):
-        if not(tuple([i[0], i[1] - 1]) in a):
+    if i[1] != 4 and i[1] != 9 and (i[1] != 0):
+        if not tuple([i[0], i[1] - 1]) in a:
             z = z + 1
 c = set(c)
-
 print(z)
 for i in range(n):
     s = ''

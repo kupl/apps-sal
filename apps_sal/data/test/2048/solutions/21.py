@@ -1,4 +1,3 @@
-
 import sys
 import math
 import os.path
@@ -9,11 +8,11 @@ def log(*args, **kwargs):
 
 
 def ni():
-    return list(map(int, input().split(" ")))
+    return list(map(int, input().split(' ')))
 
 
 def nio(offset):
-    return [int(x) + offset for x in input().split(" ")]
+    return [int(x) + offset for x in input().split(' ')]
 
 
 def nia():
@@ -21,34 +20,20 @@ def nia():
 
 
 CMAX = 1000000000
-
-n, = ni()
+(n,) = ni()
 s = nia()
 c = nia()
-
-# log(f"s = {s}")
-# log(f"c = {c}")
-
-# log(f"small = {small}")
 l1 = [CMAX] * n
 l2 = [CMAX] * n
-
 for j in range(1, n):
     for i in range(j):
-        if (s[i] < s[j]):
-            # log(f"s[{i}] = {s[i]} s[{j}]={s[j]}")
+        if s[i] < s[j]:
             l1[j] = min(l1[j], c[i])
             l2[i] = min(l2[i], c[j])
-
-# log(f"l1 = {l1}")
-# log(f"l2 = {l2}")
-
 res = CMAX
-
 for i in range(n):
     res = min(res, l1[i] + l2[i] + c[i])
-
-if (res < CMAX):
+if res < CMAX:
     print(res)
 else:
     print(-1)

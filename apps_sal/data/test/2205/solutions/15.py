@@ -1,8 +1,6 @@
 n = int(input())
 p = [int(x) for x in input().split()]
-
 d = [0 for i in range(n + 1)]
-
 for i in range(2, n + 1):
     d[i] -= n // i
     d[n % i + 1] -= 1

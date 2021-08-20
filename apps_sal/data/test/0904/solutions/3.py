@@ -4,7 +4,7 @@ import sys
 def vol(i):
     ans = 0
     for j in i:
-        if ('A' <= j <= 'Z'):
+        if 'A' <= j <= 'Z':
             ans += 1
     return ans
 

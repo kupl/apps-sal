@@ -1,7 +1,7 @@
 n = int(input())
 a = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a.append((y, x))
 a.sort()
 cnt = 0

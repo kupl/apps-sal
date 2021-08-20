@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people = deque(sorted(people))
         count = 0

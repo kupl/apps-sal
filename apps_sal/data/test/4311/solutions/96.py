@@ -6,14 +6,12 @@ def f(n):
 
 
 s = int(input())
-
 a = []
 for i in range(1000000):
     if i == 0:
         a.append(s)
+    elif f(a[-1]) in a:
+        print(i + 1)
+        break
     else:
-        if f(a[-1]) in a:
-            print(i + 1)
-            break
-        else:
-            a.append(f(a[-1]))
+        a.append(f(a[-1]))

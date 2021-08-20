@@ -1,10 +1,10 @@
 st = input()
-st1 = ""
+st1 = ''
 others = False
 length = len(st)
 for i in range(0, length):
     if i == length - 1 and others is False:
-        st1 += str(chr(((ord(st[i]) - 98) % 26) + 97))
+        st1 += str(chr((ord(st[i]) - 98) % 26 + 97))
         break
     if st[i] == 'a':
         if others is True:

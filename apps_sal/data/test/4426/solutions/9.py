@@ -1,15 +1,15 @@
 s = input()
-if s == "SUN":
+if s == 'SUN':
     print(7)
-elif s == "SAT":
+elif s == 'SAT':
     print(1)
-elif s == "FRI":
+elif s == 'FRI':
     print(2)
-elif s == "THU":
+elif s == 'THU':
     print(3)
-elif s == "WED":
+elif s == 'WED':
     print(4)
-elif s == "TUE":
+elif s == 'TUE':
     print(5)
-elif s == "MON":
+elif s == 'MON':
     print(6)

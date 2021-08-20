@@ -1,29 +1,24 @@
 class UnionFind:
+
     def __init__(self, N):
-        self.indices = list(range(N))  # each elem belongs to diff index
+        self.indices = list(range(N))
 
     def find(self, x):
         if x == self.indices[x]:
             return x
-
-        # Was unioned with a diff number, find that number's index
-        # Set ans to elem, makes subsequent queries faster
         self.indices[x] = self.find(self.indices[x])
-
         return self.indices[x]
 
     def union(self, x, y):
-        x_i, y_i = self.find(x), self.find(y)
-
-        # Set x's index to y's index, unions both number's sets
+        (x_i, y_i) = (self.find(x), self.find(y))
         self.indices[x_i] = y_i
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         UF = UnionFind(n)
-
         primes_set = defaultdict(list)
 
         def get_primes(num):
@@ -31,13 +26,10 @@ class Solution:
                 if num % i == 0:
                     return get_primes(num // i) | set([i])
             return set([num])
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             for factor in get_primes(num):
                 primes_set[factor].append(i)
-
         for vals in primes_set.values():
             for i in range(len(vals) - 1):
                 UF.union(vals[i], vals[i + 1])
-
         return max(Counter([UF.find(i) for i in range(n)]).values())

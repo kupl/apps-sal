@@ -1,7 +1,7 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if c <= b:
-    print("delicious")
+    print('delicious')
 elif c <= a + b:
-    print("safe")
+    print('safe')
 else:
-    print("dangerous")
+    print('dangerous')

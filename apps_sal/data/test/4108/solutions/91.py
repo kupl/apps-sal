@@ -4,7 +4,7 @@ n = len(s)
 
 
 def get_count_list(s):
-    alphabets = "abcdefghijklmnopqrstuvwxyz"
+    alphabets = 'abcdefghijklmnopqrstuvwxyz'
     ans = {}
     for alphabet in alphabets:
         ans[alphabet] = []
@@ -24,12 +24,8 @@ s_count = get_count_list(s)
 t_count = get_count_list(t)
 s_index = get_index2alpha(s)
 t_index = get_index2alpha(t)
-
 ans = 0
-
 s_set = set(s)
-
-
 for i in range(n):
     s_alpha = s_index[i]
     t_alpha = t_index[i]
@@ -37,8 +33,7 @@ for i in range(n):
         s_set.remove(s_alpha)
         if not s_count[s_alpha] == t_count[t_alpha]:
             ans += 1
-
 if ans == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -9,12 +9,12 @@ for i in range(T):
         for j in range(i + 1, len(seq)):
             b = seq[j]
             d = seq[b - 1]
-            if(a != b and c == d):
+            if a != b and c == d:
                 ans = 1
                 break
-        if(ans == 1):
+        if ans == 1:
             break
-    if(ans == 1):
-        print("Truly Happy")
+    if ans == 1:
+        print('Truly Happy')
     else:
-        print("Poor Chef")
+        print('Poor Chef')

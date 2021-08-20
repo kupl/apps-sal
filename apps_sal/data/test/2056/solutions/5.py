@@ -5,7 +5,6 @@ for a in A:
     for i in range(20):
         if a >> i & 1:
             X[i] += 1
-# print("X =", X)
 m = (1 << 20) - 1
 s = m
 ans = 0

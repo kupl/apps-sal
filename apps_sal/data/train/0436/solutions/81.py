@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         ans = 1
         queue = [n]

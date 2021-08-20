@@ -1,10 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 class UnionFind:
-    # def   -> foo=UnionFind(n,1)  <- 1-based index, default is 0
-    # method -> foo.hoge(huga)
-    __slots__ = ["_size", "_first_idx", "_parents"]
+    __slots__ = ['_size', '_first_idx', '_parents']
 
     def __init__(self, size: int, first_index: int = 0) -> None:
         self._size = size
@@ -21,11 +19,11 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
     def unite(self, x: int, y: int) -> bool:
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return False
         if self._parents[x] > self._parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self._parents[x] += self._parents[y]
         self._parents[y] = x
         return True
@@ -42,6 +40,6 @@ class UnionFind:
 
 uf = UnionFind(n, 1)
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     uf.unite(x, y)
 print(uf.group_count())

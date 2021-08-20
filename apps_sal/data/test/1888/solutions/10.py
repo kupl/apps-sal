@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = [0] * n
 for i in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     d[a - 1] -= c
     d[b - 1] += c
 ans = 0

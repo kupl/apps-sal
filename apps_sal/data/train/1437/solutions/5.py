@@ -1,8 +1,7 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     input()
-    l = list(map(int, input().split(" ")))
+    l = list(map(int, input().split(' ')))
     l.sort()
     i = 0
     j = len(l) - 1
@@ -16,7 +15,6 @@ for _ in range(int(input())):
             break
         i += 1
         j -= 1
-
     j = len(l)
     for i in range(2, int(math.sqrt(n) + 1)):
         if n % i == 0:
@@ -24,7 +22,6 @@ for _ in range(int(input())):
                 j -= 1
             else:
                 j -= 2
-
     if f and j == 0:
         print(n)
     else:

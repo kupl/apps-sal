@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         run = 0
         maxRun = 0
@@ -18,5 +19,4 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 maxRun = run
-
         return maxRun if maxProfit > 0 else -1

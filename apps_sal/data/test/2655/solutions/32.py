@@ -3,7 +3,7 @@ An = list(map(int, input().split()))
 An.sort(reverse=True)
 answer = 0
 t = N - 1
-for i, Ai in enumerate(An):
+for (i, Ai) in enumerate(An):
     lim = 2
     if i == 0:
         lim = 1

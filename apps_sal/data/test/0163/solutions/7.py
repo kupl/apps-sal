@@ -1,15 +1,14 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = input()
 g = 0
 t = 0
-
 for j in range(n):
     if a[j] == 'G':
         g = j
     if a[j] == 'T':
         t = j
 if g < t:
-    g, t = t, g
+    (g, t) = (t, g)
 if (g - t) % k == 0:
     per = 0
     for j in range(t, g + 1, k):

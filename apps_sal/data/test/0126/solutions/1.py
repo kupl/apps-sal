@@ -13,6 +13,6 @@ if num[3] + num[6] + num[9] + num[0] > 0:
 if num[7] + num[0] + num[9] > 0:
     ans += 1
 if ans == 4:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

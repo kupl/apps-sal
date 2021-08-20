@@ -3,6 +3,7 @@ MIN_INT = -sys.maxsize - 1
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         _max = MIN_INT
         rotate = 0
@@ -25,7 +26,7 @@ class Solution:
                 _max = money
                 ans = rotate
         i += 1
-        while(total > 0):
+        while total > 0:
             rotate = i + 1
             if total >= 4:
                 num += 4

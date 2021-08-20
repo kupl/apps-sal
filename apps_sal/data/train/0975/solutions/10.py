@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    n, r, x, y = list(map(int, input().strip().split(' ')))
+    (n, r, x, y) = list(map(int, input().strip().split(' ')))
     X = []
     Y = []
     if x != 0:

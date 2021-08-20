@@ -6,7 +6,7 @@ def fix_progression(arr):
     for i in range(len(arr)):
         D = defaultdict(int)
         for j in range(i):
-            q, r = divmod(arr[i] - arr[j], i - j)
+            (q, r) = divmod(arr[i] - arr[j], i - j)
             if not r:
                 D[q] += 1
                 res = max(res, D[q])

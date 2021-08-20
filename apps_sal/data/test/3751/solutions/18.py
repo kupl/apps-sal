@@ -1,7 +1,6 @@
 s = input()
 l = [0] * 26
 ans = True
-
 for ch in s:
     x = ord(ch) - ord('a')
     l[x] += 1
@@ -17,7 +16,6 @@ if ans:
                     ans = False
                     break
             break
-
 if ans:
     print('YES')
 else:

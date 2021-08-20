@@ -12,7 +12,6 @@ def main():
     w = []
     for i in range(n):
         w.append(input())
-
     if check_shiritori(n, w):
         print('Yes')
     else:

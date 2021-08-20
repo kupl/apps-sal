@@ -1,4 +1,5 @@
 class Solution:
+
     def findPairs(self, nums, k):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution:
         """
         if k < 0:
             return 0
-        result, lookup = set(), set()
+        (result, lookup) = (set(), set())
         for num in nums:
             if num + k in lookup:
                 result.add(num)

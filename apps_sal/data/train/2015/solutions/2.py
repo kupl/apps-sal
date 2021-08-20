@@ -1,11 +1,11 @@
 def main():
-    n, res, vv, dd, pp = int(input()), [], [], [], []
+    (n, res, vv, dd, pp) = (int(input()), [], [], [], [])
     for i in range(n):
-        v, d, p = map(int, input().split())
+        (v, d, p) = map(int, input().split())
         vv.append(v)
         dd.append(d)
         pp.append(p)
-    for i, v, p in zip(range(1, n + 1), vv, pp):
+    for (i, v, p) in zip(range(1, n + 1), vv, pp):
         if p >= 0:
             res.append(i)
             d = 0

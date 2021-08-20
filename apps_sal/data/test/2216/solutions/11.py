@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 
 
 def printTube(tube):
@@ -15,7 +15,6 @@ for i in range(n):
         jDomain = range(m)
     else:
         jDomain = reversed(range(m))
-
     for j in jDomain:
         currTube.append((i, j))
         if len(currTube) >= 2 and nbTubes < k - 1:

@@ -7,7 +7,6 @@ def lcm(x, y):
 
 n = int(input())
 t = int(input())
-
 for i in range(n - 1):
     num = int(input())
     t = lcm(t, num)

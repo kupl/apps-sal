@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 p = list(map(int, input().split()))
 rev = 1
 new_rev = 1

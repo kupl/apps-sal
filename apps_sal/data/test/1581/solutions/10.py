@@ -1,9 +1,8 @@
 import numpy as np
 import sys
 input = sys.stdin.readline
-MOD = 10**9 + 7
-
-n, k = map(int, input().split())
+MOD = 10 ** 9 + 7
+(n, k) = map(int, input().split())
 S = set()
 i = 1
 while i * i <= n:

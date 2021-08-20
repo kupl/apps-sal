@@ -3,7 +3,7 @@ a1 = list(map(int, input().split()))
 n2 = int(input())
 a2 = list(map(int, input().split()))
 if n1 < n2:
-    a1, a2 = a2, a1
+    (a1, a2) = (a2, a1)
 if sum(a1) != sum(a2):
     print(-1)
 else:

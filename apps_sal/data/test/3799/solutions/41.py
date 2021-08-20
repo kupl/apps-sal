@@ -3,14 +3,13 @@ def __starting_point():
     N = len(S)
     if S[0] == S[-1]:
         if N % 2 == 0:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')
+    elif N % 2 == 0:
+        print('Second')
     else:
-        if N % 2 == 0:
-            print("Second")
-        else:
-            print("First")
+        print('First')
 
 
 __starting_point()

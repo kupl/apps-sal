@@ -5,7 +5,6 @@ l = 0
 r = 2
 t = A[-1]
 a = t
-
 for m in A[1:-2]:
     while abs(t - 2 * A[r] + m) > abs(t - 2 * A[r + 1] + m):
         r += 1
@@ -13,5 +12,4 @@ for m in A[1:-2]:
         l += 1
     x = sorted([A[l], m - A[l], A[r] - m, t - A[r]])
     a = min(a, x[3] - x[0])
-
 print(a)

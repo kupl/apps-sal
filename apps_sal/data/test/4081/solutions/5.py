@@ -1,17 +1,12 @@
 import sys
-
 input = sys.stdin.readline
-
 n = int(input())
-
 a = list(map(int, input().split()))
-
 last = 0
 left = 0
 right = n - 1
 ans = 0
 output = []
-
 while left <= right:
     if a[left] > last:
         if a[right] > last:
@@ -35,6 +30,5 @@ while left <= right:
         ans += 1
     else:
         break
-
 print(ans)
 print(''.join(output))

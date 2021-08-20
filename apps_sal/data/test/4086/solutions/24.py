@@ -8,4 +8,4 @@ for i in l:
 v.reverse()
 print(len(v))
 for i in v:
-    print(i, end=" ")
+    print(i, end=' ')

@@ -5,4 +5,4 @@ def is_divisible(n, x, y):
         else:
             return False
     else:
-        print("Inputs should be positive, non-zero digits!")
+        print('Inputs should be positive, non-zero digits!')

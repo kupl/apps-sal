@@ -1,4 +1,4 @@
-N, K = input().strip().split()
+(N, K) = input().strip().split()
 S = input()
 N = int(N)
 K = int(K)

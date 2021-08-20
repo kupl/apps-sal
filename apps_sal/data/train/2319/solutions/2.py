@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     r = [0] * n
     for i in range(n):

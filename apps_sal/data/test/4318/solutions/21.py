@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 h_max = a[0]
 r = 1
 for ii in range(1, len(a)):

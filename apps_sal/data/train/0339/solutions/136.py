@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def getProd(nums):
             dict1 = {}
             for i in range(len(nums)):
@@ -13,10 +15,10 @@ class Solution:
         res = 0
         d1 = getProd(nums1)
         for x in nums2:
-            if x**2 in d1:
-                res += d1[x**2]
+            if x ** 2 in d1:
+                res += d1[x ** 2]
         d2 = getProd(nums2)
         for x in nums1:
-            if x**2 in d2:
-                res += d2[x**2]
+            if x ** 2 in d2:
+                res += d2[x ** 2]
         return res // 2

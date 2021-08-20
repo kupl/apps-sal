@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [None for _ in range(amount + 2)]
         dp[amount + 1] = float('inf')

@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val):
         self.val = val
         self.next = None
@@ -6,6 +7,7 @@ class Node:
 
 
 class Component:
+
     def __init__(self):
         self.length = 0
         self.head = None
@@ -13,6 +15,7 @@ class Component:
 
 
 class Solution:
+
     def __init__(self):
         self.ds = {}
 
@@ -30,7 +33,7 @@ class Solution:
 
     def unionSet(self, c1, c2):
         if c1.length < c2.length:
-            c1, c2 = c2, c1
+            (c1, c2) = (c2, c1)
         c1.tail.next = c2.head
         c1.tail = c2.tail
         tmp = c2.head

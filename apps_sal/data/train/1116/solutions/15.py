@@ -8,5 +8,4 @@ ans = b.count(0)
 d = collections.Counter(b)
 for i in d.values():
     ans += i * (i - 1) // 2
-
 print(ans)

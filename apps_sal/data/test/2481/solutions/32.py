@@ -1,9 +1,9 @@
 import heapq
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 C = []
 for i in range(10):
     C.append(list(map(int, input().split())))
-INF = float("inf")
+INF = float('inf')
 
 
 def dfs(x):
@@ -12,10 +12,10 @@ def dfs(x):
     hq = [(0, x)]
     heapq.heapify(hq)
     while hq:
-        cost, step = heapq.heappop(hq)
+        (cost, step) = heapq.heappop(hq)
         if cost > memo[step]:
             continue
-        for j, c in enumerate(C[step]):
+        for (j, c) in enumerate(C[step]):
             if memo[j] > memo[step] + c:
                 memo[j] = memo[step] + c
                 heapq.heappush(hq, (memo[j], j))
@@ -30,6 +30,6 @@ for h in range(H):
         else:
             A[w] += 1
 ans = 0
-for number, a in enumerate(A):
+for (number, a) in enumerate(A):
     ans += a * dfs(number)
 print(ans)

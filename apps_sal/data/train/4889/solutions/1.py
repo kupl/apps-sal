@@ -22,19 +22,12 @@ def max_hexagon_beam(n: int, seq: tuple):
 
     beams: 1-n-min(r,0) <= q,s <= n-1-max(r,0)  etc.
     """
-
     i = 0
     grid = []
     length = len(seq)
-
     for r in range(1 - n, n):
         grid.append([])
         for q in range(1 - n - min(r, 0), n - max(r, 0)):
             grid[r + n - 1].append(seq[i % length])
             i += 1
-
-    return max((
-        max(sum(grid[r + n - 1][q + n - 1 + min(r, 0)] for r in range(1 - n - min(q, 0), n - max(q, 0))) for q in range(1 - n, n)),
-        max(sum(grid[r + n - 1][-s - r + n - 1 + min(r, 0)] for s in range(1 - n - min(r, 0), n - max(r, 0))) for r in range(1 - n, n)),
-        max(sum(grid[-q - s + n - 1][q + n - 1 + min(-q - s, 0)] for q in range(1 - n - min(s, 0), n - max(s, 0))) for s in range(1 - n, n)),
-    ))
+    return max((max((sum((grid[r + n - 1][q + n - 1 + min(r, 0)] for r in range(1 - n - min(q, 0), n - max(q, 0)))) for q in range(1 - n, n))), max((sum((grid[r + n - 1][-s - r + n - 1 + min(r, 0)] for s in range(1 - n - min(r, 0), n - max(r, 0)))) for r in range(1 - n, n))), max((sum((grid[-q - s + n - 1][q + n - 1 + min(-q - s, 0)] for q in range(1 - n - min(s, 0), n - max(s, 0)))) for s in range(1 - n, n)))))

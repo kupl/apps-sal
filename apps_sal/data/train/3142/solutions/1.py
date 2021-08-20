@@ -2,4 +2,4 @@ import re
 
 
 def seven_ate9(str_):
-    return re.sub(r'79(?=7)', r'7', str_)
+    return re.sub('79(?=7)', '7', str_)

@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, k1, k2 = R()
+(n, k1, k2) = R()
 k = k1 + k2
 A = list(R())
 B = tuple(R())

@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 arr = []
 ans = [0 for _ in range(n)]
@@ -10,7 +10,7 @@ if w < 0:
     print(-1)
 else:
     arr = list(reversed(sorted(arr)))
-    for a, i in arr:
+    for (a, i) in arr:
         d = min(w, a - ans[i])
         ans[i] += d
         w -= d

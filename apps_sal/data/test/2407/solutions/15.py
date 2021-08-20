@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
 import sys
 from collections import deque
-
-
 input = sys.stdin.readline
 
 
@@ -41,10 +38,8 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
@@ -63,21 +58,18 @@ def slv(N, R, X):
                 X.append(rr)
                 break
         ll += R
-
         while X:
             l = X.popleft()
             if l > ll:
                 X.appendleft(l)
                 break
-
     return ll // R
 
 
 def main():
     Q = read_int()
-
     for _ in range(Q):
-        N, R = read_int_n()
+        (N, R) = read_int_n()
         X = read_int_n()
         print(slv(N, R, X))
 

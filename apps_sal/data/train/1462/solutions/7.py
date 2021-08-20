@@ -1,15 +1,14 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     a = input()
     a = a.upper()
-    b = a.find("BERHAMPORE", 0, len(a))
-    c = a.find("SERAMPORE", 0, len(a))
+    b = a.find('BERHAMPORE', 0, len(a))
+    c = a.find('SERAMPORE', 0, len(a))
     if b != -1 and c == -1:
-        print("GCETTB")
+        print('GCETTB')
     elif b == -1 and c != -1:
-        print("GCETTS")
+        print('GCETTS')
     elif b != -1 and c != -1:
-        print("Both")
+        print('Both')
     elif b == -1 and c == -1:
-        print("Others")
+        print('Others')

@@ -1,4 +1,4 @@
-parliamentarian_quantity, hight, width = map(int, input().split())
+(parliamentarian_quantity, hight, width) = map(int, input().split())
 if parliamentarian_quantity <= hight * width:
     assembly_hall = [[0] * width for row in range(hight)]
     current = 1
@@ -14,6 +14,6 @@ if parliamentarian_quantity <= hight * width:
                 parity = -parity
             else:
                 break
-    [print(" ".join(map(str, row))) for row in assembly_hall]
+    [print(' '.join(map(str, row))) for row in assembly_hall]
 else:
     print(-1)

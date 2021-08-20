@@ -2,4 +2,4 @@ def sum_to_infinity(sequence):
     r = sequence[1] / sequence[0]
     if abs(r) < 1:
         return round(sequence[0] / (1 - r), 3)
-    return "No Solutions"
+    return 'No Solutions'

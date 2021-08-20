@@ -6,9 +6,8 @@ def solve():
     T = input()
     if not set(T) <= set(S):
         return -1
-
-    pos = {c: [] for c in "abcdefghijklmnopqrstuvwxyz"}
-    for i, c in enumerate(S):
+    pos = {c: [] for c in 'abcdefghijklmnopqrstuvwxyz'}
+    for (i, c) in enumerate(S):
         pos[c].append(i)
     ans = 0
     cur_pos = 0
@@ -21,8 +20,7 @@ def solve():
             cur_pos = pos[t][nxt_idx] + 1
         else:
             cur_pos = pos[t][nxt_idx] + 1
-
     return ans + cur_pos
 
 
-print((solve()))
+print(solve())

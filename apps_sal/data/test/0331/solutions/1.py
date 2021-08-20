@@ -1,4 +1,4 @@
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 m -= 1
 a = [int(i) for i in input().split()]
 ans = 1000000

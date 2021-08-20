@@ -5,7 +5,7 @@ def days_represented(trips):
     days = previous_end - trips[0][0] + 1
     trips.pop(0)
     for trip in trips:
-        start, end = trip
+        (start, end) = trip
         if start > previous_end:
             days += end - start + 1
             previous_end = end

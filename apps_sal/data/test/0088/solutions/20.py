@@ -1,11 +1,10 @@
 ans = 0
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 l = 2
 pos = l - 2
 ans = 0
 while True:
-    n = ((1 << l) - 1) - (1 << pos)
-    #print(l, pos, n)
+    n = (1 << l) - 1 - (1 << pos)
     if n > b:
         break
     if n >= a:

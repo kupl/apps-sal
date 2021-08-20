@@ -1,9 +1,9 @@
 n = int(input())
-rem = 10**10
+rem = 10 ** 10
 S = 0
 allissame = 0
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     S += a
     if a < b:
         allissame |= 1
@@ -15,6 +15,6 @@ for i in range(n):
     else:
         pass
 if not allissame:
-    print((0))
+    print(0)
 else:
-    print((S - rem))
+    print(S - rem)

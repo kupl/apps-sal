@@ -9,5 +9,4 @@ for i in range(len(l)):
     p *= 2
     p %= 1000000007
     ans %= 1000000007
-
 print(int(ans))

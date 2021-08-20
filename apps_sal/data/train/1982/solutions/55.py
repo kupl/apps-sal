@@ -1,7 +1,8 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = defaultdict(lambda: [])
-        for a, b in dislikes:
+        for (a, b) in dislikes:
             graph[a].append(b)
             graph[b].append(a)
         visited = {}
@@ -15,7 +16,7 @@ class Solution:
                     return False
             return True
         for a in range(1, N + 1):
-            if a not in visited and not visit(0, a):
+            if a not in visited and (not visit(0, a)):
                 return False
         return True
 
@@ -29,15 +30,11 @@ class Solution:
             return group[a] > 0 and group[b] > 0
 
         def helper(group1Person: int, group2Person: int, index: int) -> bool:
-            # print(\"helper\", index)
             group1[group1Person] += 1
             group2[group2Person] += 1
-            #print(list(filter(lambda x: x[1] > 0, group1.items())))
-            #print(list(filter(lambda x: x[1] > 0, group2.items())))
             if index == len(dislikes):
                 return True
-            a, b = dislikes[index]
-            # print(\"loop\", index, a, b)
+            (a, b) = dislikes[index]
             if bothInGroup(group1, a, b) or bothInGroup(group2, a, b):
                 group1[group1Person] -= 1
                 group2[group2Person] -= 1
@@ -56,5 +53,4 @@ class Solution:
             group1[group1Person] -= 1
             group2[group2Person] -= 1
             return False
-
         return helper(dislikes[0][0], dislikes[0][1], 1)

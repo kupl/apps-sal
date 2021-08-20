@@ -1,4 +1,3 @@
-# for _ in range(int(input())):
 for _ in range(1):
     n = int(input())
     s = input()
@@ -6,7 +5,7 @@ for _ in range(1):
     suf[n - 1] = int(s[-1] in 'c')
     suf1 = [0] * n
     suf1[n - 1] = int(s[-1] in '?')
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     m = s.count('?')
     tr0 = pow(3, m, mod)
     if m - 1 >= 0:

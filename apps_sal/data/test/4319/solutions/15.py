@@ -1,6 +1,5 @@
 import sys
-sys.setrecursionlimit(10**8)
-
+sys.setrecursionlimit(10 ** 8)
 k = int(sys.stdin.readline())
 liste = list(map(int, sys.stdin.readline().split()))
 out = list()

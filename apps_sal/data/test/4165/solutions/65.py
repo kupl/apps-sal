@@ -1,7 +1,6 @@
 N = int(input())
 L = list(map(int, input().split()))
 ans = True
-
 for i in range(N):
     sum = 0
     for j in range(N):

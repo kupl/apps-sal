@@ -2,4 +2,4 @@ e = [0, 4, 10, 20, 35, 56, 83, 116, 155, 198, 244, 292]
 
 
 def solve(n):
-    return e[n] if n < 12 else 292 + (49 * (n - 11))
+    return e[n] if n < 12 else 292 + 49 * (n - 11)

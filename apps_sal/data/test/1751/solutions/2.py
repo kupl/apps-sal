@@ -45,21 +45,21 @@ def srlinput():
 
 def NOYES(fl):
     if fl:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def YESNO(fl):
     if fl:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():
     n = iinput()
-    res, ans, mod = 1, 1, int(1e9 + 7)
+    (res, ans, mod) = (1, 1, int(1000000000.0 + 7))
     for i in range(1, n + 1):
         res = res * i % mod
     for i in range(1, n):

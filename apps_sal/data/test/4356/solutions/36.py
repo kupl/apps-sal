@@ -1,9 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [input() for _ in range(N)]
 B = [input() for _ in range(M)]
-
-ans = "No"
-
+ans = 'No'
 for i in range(N - M + 1):
     for j in range(N - M + 1):
         flag = True
@@ -12,9 +10,7 @@ for i in range(N - M + 1):
                 if A[i + k][j + l] != B[k][l]:
                     flag = False
                     break
-
         if flag:
-            ans = "Yes"
+            ans = 'Yes'
             break
-
 print(ans)

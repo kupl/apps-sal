@@ -9,23 +9,15 @@ def chek(mid):
     return True
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 l = -1
 r = m
-
 a = list(map(int, input().split()))
-
 chek(3)
-
-
 while l < r - 1:
-
     mid = (l + r) // 2
     if chek(mid):
         r = mid
     else:
         l = mid
-
-#print(l, r)
 print(r)

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
 
@@ -26,13 +26,13 @@ def dfs(c, p, d):
         used[i] = False
 
 
-N, M, R = map(int, input().split())
+(N, M, R) = map(int, input().split())
 S = list(map(int, input().split()))
 E = [[float('inf')] * N for _ in range(N)]
 for i in range(N):
     E[i][i] = 0
 for _ in range(M):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     a -= 1
     b -= 1
     E[a][b] = E[b][a] = c

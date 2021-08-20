@@ -1,6 +1,5 @@
-# your code goes here
-a = (input())
-b = (input())
+a = input()
+b = input()
 j = 0
 for i in range(len(a)):
     if a[i] == '0':
@@ -17,22 +16,22 @@ for i in range(len(b)):
 b = b[j:]
 flag = 0
 if len(a) > len(b):
-    print(">")
+    print('>')
 elif len(a) < len(b):
-    print("<")
+    print('<')
 else:
     for i in range(len(a)):
-        if (a[i] > b[i]):
+        if a[i] > b[i]:
             flag = 1
             break
-        elif (a[i] < b[i]):
+        elif a[i] < b[i]:
             flag = 2
             break
         else:
             continue
-    if (flag == 0):
-        print("=")
-    elif (flag == 1):
-        print(">")
+    if flag == 0:
+        print('=')
+    elif flag == 1:
+        print('>')
     else:
-        print("<")
+        print('<')

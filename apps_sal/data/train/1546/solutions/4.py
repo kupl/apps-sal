@@ -1,21 +1,20 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
-    A, B, C = map(int, input().split())
-    if A**2 + (B**2) == C**2:
+    (A, B, C) = map(int, input().split())
+    if A ** 2 + B ** 2 == C ** 2:
         if A + B > C:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-    elif B**2 + (C**2) == A**2:
+            print('NO')
+    elif B ** 2 + C ** 2 == A ** 2:
         if C + B > A:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-    elif A**2 + (C**2) == B**2:
+            print('NO')
+    elif A ** 2 + C ** 2 == B ** 2:
         if A + C > B:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

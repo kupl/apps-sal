@@ -9,9 +9,9 @@ def dfs(u):
     return False
 
 
-n, a, m, b = int(input()), list(map(int, input().split())), int(input()), list(map(int, input().split()))
+(n, a, m, b) = (int(input()), list(map(int, input().split())), int(input()), list(map(int, input().split())))
 pair = [-1] * m
 for i in range(n):
     used = [0] * n
     dfs(i)
-print(sum(1 for p in pair if p != -1))
+print(sum((1 for p in pair if p != -1)))

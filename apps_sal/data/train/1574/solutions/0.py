@@ -1,9 +1,7 @@
 def f(n):
-
     s = list(map(int, input().split()))
     low = []
     high = []
-
     for i in range(n - 1):
         low.append(min(s[i], s[i + 1]))
         high.append(max(s[i], s[i + 1]))
@@ -20,7 +18,6 @@ def f(n):
             j += 1
             curr -= 1
         mx = max(mx, curr)
-
     return mx
 
 

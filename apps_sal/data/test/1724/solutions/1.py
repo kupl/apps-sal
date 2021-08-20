@@ -9,7 +9,7 @@ s = input()
 maxi = 0
 cur = n - 1
 tmp = 0
-while (cur >= 0):
+while cur >= 0:
     if s[cur] == '1':
         x = sum[cur] + tmp
         if x > maxi:

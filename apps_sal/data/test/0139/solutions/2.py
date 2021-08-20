@@ -25,22 +25,18 @@ def find_cycle(g, n):
 
 
 def __starting_point():
-    n, m = map(int, input().split())
-
+    (n, m) = map(int, input().split())
     g = []
     for _ in range(n):
         g.append([])
-
     for _ in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         g[u - 1].append(v - 1)
-
     out = False
     c = find_cycle(g, n)
     if c:
         first_index = c.index(c[-1])
         c = c[first_index:]
-
         for i in range(len(c) - 1):
             if i != 0:
                 g[c[i - 1]].append(c[i])
@@ -48,7 +44,6 @@ def __starting_point():
             out = out or find_cycle(g, n) is None
     else:
         out = True
-
     print('YES' if out else 'NO')
 
 

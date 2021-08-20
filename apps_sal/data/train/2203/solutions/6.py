@@ -7,4 +7,4 @@ for row in mat:
         print(*row)
         break
 else:
-    assert(0)
+    assert 0

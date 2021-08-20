@@ -1,5 +1,5 @@
 def time_to_min(etime):
-    hours, minutes = etime.split(':')
+    (hours, minutes) = etime.split(':')
     return int(hours) * 60 + int(minutes)
 
 
@@ -33,8 +33,8 @@ def check_for_alert(time_list):
 
 
 class Solution:
-    def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
 
+    def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         entry = {}
         alert = []
         for ii in range(0, len(keyName)):

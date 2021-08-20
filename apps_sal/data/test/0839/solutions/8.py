@@ -1,7 +1,6 @@
 a = []
 for i in range(5):
     a.append(list(map(int, input().split())))
-
 used = [False] * 5
 ans = 0
 for i1 in range(5):
@@ -9,7 +8,6 @@ for i1 in range(5):
     for i2 in range(5):
         if not used[i2]:
             used[i2] = True
-
             for i3 in range(5):
                 if not used[i3]:
                     used[i3] = True

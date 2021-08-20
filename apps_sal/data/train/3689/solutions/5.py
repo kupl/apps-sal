@@ -4,5 +4,5 @@ def how_many_pizzas(n):
     total_pizzas = int(area / eight_area)
     slices = 0
     if area % eight_area != 0:
-        slices = int((area - (total_pizzas * eight_area)) / 8)
-    return "pizzas: {}, slices: {}".format(total_pizzas, slices)
+        slices = int((area - total_pizzas * eight_area) / 8)
+    return 'pizzas: {}, slices: {}'.format(total_pizzas, slices)

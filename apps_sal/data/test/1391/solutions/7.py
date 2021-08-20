@@ -36,7 +36,6 @@ def binarySearch(lewy, prawy):
 
 
 bikesBoysCanRent = binarySearch(0, ilRowerow)
-
 for x in range(bikesBoysCanRent):
     totalCostOfRenting += cenyRowerow[x]
 wyjscie2 = totalCostOfRenting - budzet

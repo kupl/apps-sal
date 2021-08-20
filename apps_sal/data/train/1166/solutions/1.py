@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 arr = [int(i) for i in input().split()]
 q = int(input())
@@ -12,5 +11,4 @@ for _ in range(q):
             for j in range(n - i + 1):
                 if min(arr[j:j + i]) == val:
                     count += 1
-
         print(count)

@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, A: List[int]) -> int:
         a = sum(A)
         b = sum(set(A))

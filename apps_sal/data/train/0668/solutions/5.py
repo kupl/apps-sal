@@ -1,4 +1,3 @@
-# cook your dish here
 def maxsubarraysum(arr):
     max_till = arr[0]
     max_cur = arr[0]
@@ -10,7 +9,7 @@ def maxsubarraysum(arr):
 
 
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     arr = [int(i) for i in input().split()]
     if m == 1:
         print(maxsubarraysum(arr))

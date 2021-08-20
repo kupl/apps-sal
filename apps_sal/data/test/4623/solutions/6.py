@@ -13,8 +13,7 @@ def solve():
             j = tw - i
             if j > n or j <= 0:
                 continue
-            if i != j and c[i] - b[i] >= 1 and c[j] - b[j] >= 1 \
-                    or i == j and c[i] - b[i] >= 2:
+            if i != j and c[i] - b[i] >= 1 and (c[j] - b[j] >= 1) or (i == j and c[i] - b[i] >= 2):
                 b[i] += 1
                 b[j] += 1
                 cans += 1

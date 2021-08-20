@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = sorted(map(int, input().split()), reverse=True)
-s = 0  # sum a which may not be necessary
+s = 0
 need = 0
 for i in range(n):
     if s + a[i] < k:

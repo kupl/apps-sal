@@ -1,10 +1,9 @@
 from bisect import *
-A, B, Q = map(int, input().split())
-inf = float("inf")
+(A, B, Q) = map(int, input().split())
+inf = float('inf')
 S = [-inf] + [int(input()) for a in range(A)] + [inf]
 T = [-inf] + [int(input()) for b in range(B)] + [inf]
 X = [int(input()) for q in range(Q)]
-
 for x in X:
     si = bisect(S, x)
     ti = bisect(T, x)

@@ -1,10 +1,6 @@
 import sys
 readline = sys.stdin.readline
-
-N, M = list(map(int, readline().split()))
-
-# by size
-# 0-indexed
+(N, M) = list(map(int, readline().split()))
 
 
 class UnionFind:
@@ -32,7 +28,6 @@ class UnionFind:
         if x == y:
             return
         if self.size[x] > self.size[y]:
-            # 大きい方にくっつける
             self.parent[y] = x
             self.size[x] += self.size[y]
         else:
@@ -49,16 +44,14 @@ class UnionFind:
         return r
 
     def show_parent(self):
-        print((self.parent))
+        print(self.parent)
 
     def show_size(self):
-        print((self.size))
+        print(self.size)
 
 
 UF = UnionFind(N)
-
 for i in range(M):
-    x, y, z = list(map(int, readline().split()))
+    (x, y, z) = list(map(int, readline().split()))
     UF.unite(x - 1, y - 1)
-
-print((len(UF.get_roots())))
+print(len(UF.get_roots()))

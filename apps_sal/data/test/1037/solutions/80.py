@@ -1,6 +1,5 @@
 import sys
 import socket
-
 hostnames = ['N551J', 'F551C', 'X553M']
 input_file = 'e1.in'
 if socket.gethostname() in hostnames:
@@ -37,7 +36,7 @@ def solve():
     for s in range(1, n + 1):
         for x in range(s + 1):
             y = s - x
-            ai, i = b[-s]
+            (ai, i) = b[-s]
             if x > 0:
                 c = best[x - 1][y] + (n - x) * ai - i * ai
                 if c > best[x][y]:
@@ -46,13 +45,7 @@ def solve():
                 c = best[x][y - 1] - (y - 1) * ai + i * ai
                 if c > best[x][y]:
                     best[x][y] = c
-
-    # for i in range(n + 1):
-    #     for j in range(n + 1):
-    #         print(best[i][j], end='\t')
-    #     print()
-
-    res = - inf
+    res = -inf
     for x in range(n):
         y = n - x
         if res < best[x][y]:

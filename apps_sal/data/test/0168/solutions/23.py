@@ -3,7 +3,7 @@ def read_nums():
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     s = input()
     count = 0
     for ch in s:

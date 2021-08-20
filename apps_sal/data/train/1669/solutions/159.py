@@ -1,9 +1,9 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         n = len(hand)
         if n % W:
             return False
-
         C = Counter(hand)
         keys = sorted(C.keys())
         output = []

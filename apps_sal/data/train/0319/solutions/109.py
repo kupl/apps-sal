@@ -1,5 +1,7 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
+
         @lru_cache(None)
         def dp(i, t):
             if i == len(stoneValue):
@@ -17,7 +19,6 @@ class Solution:
                     s -= stoneValue[j]
                     m = min(m, s + dp(j + 1, 0))
             return m
-
         ans = dp(0, 0)
         if ans > 0:
             return 'Alice'

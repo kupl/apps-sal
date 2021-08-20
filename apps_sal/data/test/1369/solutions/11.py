@@ -8,11 +8,11 @@ def d(x, y):
 
 
 def nai(x, y, z):
-    c, b, a = sorted([d(x, y), d(y, z), d(z, x)])
-    co = (b**2 + c**2 - a**2) / (2 * b * c)
+    (c, b, a) = sorted([d(x, y), d(y, z), d(z, x)])
+    co = (b ** 2 + c ** 2 - a ** 2) / (2 * b * c)
     if co < 0:
         return a / 2
-    si = sqrt(1 - co**2)
+    si = sqrt(1 - co ** 2)
     return a / si / 2
 
 

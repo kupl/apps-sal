@@ -1,24 +1,20 @@
-# You lost the game.
-
 n = int(input())
 L = list(map(int, input().split()))
-
 if n == 1:
     if L[0] == 0:
-        print("UP")
+        print('UP')
     elif L[0] == 15:
-        print("DOWN")
+        print('DOWN')
     else:
-        print("-1")
+        print('-1')
 else:
     d = L[n - 2] - L[n - 1]
     if d < 0:
         if L[n - 1] == 15:
-            print("DOWN")
+            print('DOWN')
         else:
-            print("UP")
+            print('UP')
+    elif L[n - 1] == 0:
+        print('UP')
     else:
-        if L[n - 1] == 0:
-            print("UP")
-        else:
-            print("DOWN")
+        print('DOWN')

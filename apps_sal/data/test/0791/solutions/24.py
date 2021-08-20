@@ -10,14 +10,13 @@ def solve():
         for i in range(n):
             if p == 0:
                 break
+            elif k[i] == '0':
+                k = k[:i] + '1' + k[i + 1:]
+                ans += 1
+                p = 0
             else:
-                if k[i] == '0':
-                    k = k[:i] + '1' + k[i + 1:]
-                    ans += 1
-                    p = 0
-                else:
-                    k = k[:i] + '0' + k[i + 1:]
-                    ans += 1
+                k = k[:i] + '0' + k[i + 1:]
+                ans += 1
         print(ans)
 
 

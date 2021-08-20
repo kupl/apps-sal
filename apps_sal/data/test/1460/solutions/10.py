@@ -23,5 +23,4 @@ def solve():
     print(n + 1, n + 1)
 
 
-# for i in range(mint()):
 solve()

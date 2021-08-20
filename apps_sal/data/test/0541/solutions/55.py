@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 l = [list(map(int, input().split())) for _ in range(M)]
 l.sort(key=lambda x: x[1])
 broken_bridge = 0

@@ -1,6 +1,6 @@
 s = input()
-ans = "Good"
+ans = 'Good'
 for i in range(3):
     if s[i] == s[i + 1]:
-        ans = "Bad"
+        ans = 'Bad'
 print(ans)

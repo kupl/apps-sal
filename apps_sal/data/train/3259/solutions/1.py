@@ -1,5 +1,5 @@
 raw = 'abcde123fghij456klmno789pqrst.@0uvwxyz_/'
-layout = {char: divmod(i, 8) for i, char in enumerate(raw)}
+layout = {char: divmod(i, 8) for (i, char) in enumerate(raw)}
 layout['SHIFT'] = (5, 0)
 layout[' '] = (5, 1)
 
@@ -9,6 +9,7 @@ def distance(a, b):
 
 
 class Keyboard:
+
     def __init__(self):
         self.total = 0
         self.cap = False
@@ -20,11 +21,10 @@ class Keyboard:
         self.current = layout['SHIFT']
 
     def next_letter(self, letter):
-        if letter.isupper() and not self.cap:
+        if letter.isupper() and (not self.cap):
             self.hit_shift()
         elif letter.islower() and self.cap:
             self.hit_shift()
-
         self.total += distance(self.current, layout[letter.lower()])
         self.current = layout[letter.lower()]
 

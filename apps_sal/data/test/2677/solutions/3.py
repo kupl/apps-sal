@@ -1,6 +1,5 @@
-# cook your dish here
 s = input()
-l = ["A", "E", "I", "O", "U"]
+l = ['A', 'E', 'I', 'O', 'U']
 c = 0
 p = 0
 if len(s) >= 8:
@@ -11,6 +10,6 @@ if len(s) >= 8:
         elif s[m] not in l:
             c += 1
     if c >= 5 and p == 1:
-        print("GOOD")
+        print('GOOD')
     else:
-        print("-1")
+        print('-1')

@@ -1,6 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         n = len(locations)
 
         @functools.lru_cache(None)
@@ -11,5 +12,4 @@ class Solution:
                 if curr != i and cost <= rest:
                     res += recur(i, rest - cost)
             return res
-
         return recur(start, fuel) % MOD

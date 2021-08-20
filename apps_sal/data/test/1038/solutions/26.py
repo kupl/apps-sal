@@ -1,12 +1,12 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def xor(x):
     num = [0 for i in range(41)]
     for i in range(41):
-        temp = (x + 1) // (2 ** (i + 1))
-        temp2 = (x + 1) % (2 ** (i + 1))
-        num[i] += temp * (2 ** i)
+        temp = (x + 1) // 2 ** (i + 1)
+        temp2 = (x + 1) % 2 ** (i + 1)
+        num[i] += temp * 2 ** i
         num[i] += max(temp2 - 2 ** i, 0)
     return num
 

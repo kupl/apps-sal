@@ -1,9 +1,9 @@
-_, s = input(), input()
+(_, s) = (input(), input())
+MAX_H = 1 + 2 * max((s.count('[', 0, i) - s.count(']', 0, i) for i in range(len(s) + 1)))
 
-MAX_H = 1 + 2 * max(s.count('[', 0, i) - s.count(']', 0, i) for i in range(len(s) + 1))
 
-
-def line(d): return '+'.join((' ' * d, '|' * (MAX_H - 2 * d - 2), ' ' * d))
+def line(d):
+    return '+'.join((' ' * d, '|' * (MAX_H - 2 * d - 2), ' ' * d))
 
 
 def draw(s, i, d):

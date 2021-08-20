@@ -1,8 +1,8 @@
-# Dinic's algorithm
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -27,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.G))
+            (*self.it,) = list(map(iter, self.G))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -60,13 +60,12 @@ class Dinic:
         return flow
 
 
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 dinic = Dinic((h + 1) * (w + 1))
 maze = [list(input()) for _ in range(h)]
 start = 0
 goal = 0
 INF = 10 ** 9 + 7
-
 for i in range(h):
     for j in range(w):
         if maze[i][j] == '.':
@@ -82,4 +81,4 @@ for i in range(h):
         dinic.add_multi_edge(j + 1, (i + 1) * (w + 1) + j + 1, 1, 1)
         dinic.add_multi_edge((i + 1) * (w + 1), (i + 1) * (w + 1) + j + 1, 1, 1)
 ans = dinic.flow(start, goal)
-print((ans if ans < 10**9 else -1))
+print(ans if ans < 10 ** 9 else -1)

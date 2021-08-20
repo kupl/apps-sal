@@ -4,8 +4,8 @@ a.sort()
 before = a[0]
 for i in range(1, n):
     if before == a[i]:
-        print("NO")
+        print('NO')
         break
     before = a[i]
 else:
-    print("YES")
+    print('YES')

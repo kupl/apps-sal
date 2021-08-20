@@ -11,6 +11,6 @@ def li():
 
 
 for n in range(ii()):
-    k, x = mi()
+    (k, x) = mi()
     ans = 9 * (k - 1) + x
     print(ans)

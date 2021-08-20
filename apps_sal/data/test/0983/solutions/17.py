@@ -1,4 +1,4 @@
-n, p, q, r = map(int, input().split())
+(n, p, q, r) = map(int, input().split())
 a = [int(i) for i in input().split()]
 min_suf = [0] * n
 max_suf = [0] * n

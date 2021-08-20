@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 s = list(map(int, sys.stdin.readline().strip().split()))
 t = 0
@@ -25,5 +24,4 @@ while i < n:
         i = n
     else:
         i = i + 1
-
 print(t)

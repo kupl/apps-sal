@@ -1,7 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        mx, ans = -1, -1
-        wait, income, cost = 0, 0, 0
+        (mx, ans) = (-1, -1)
+        (wait, income, cost) = (0, 0, 0)
         for i in range(1, 51 * 100000):
             if i <= len(customers):
                 wait += customers[i - 1]
@@ -11,12 +12,10 @@ class Solution:
                 onboard = 4
             else:
                 onboard = wait
-
             wait -= onboard
             income += onboard * boardingCost
             cost += runningCost
             curr = income - cost
-            # print(onboard, income, cost, curr)
             if curr > mx:
                 mx = curr
                 ans = i

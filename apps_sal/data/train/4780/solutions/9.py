@@ -3,13 +3,13 @@ PI = 314159265358979323846264338327950288419716939937510582097494459230781640628
 
 def square_pi(digits):
     n = 100 - digits + 1
-    num = PI // 10**n
+    num = PI // 10 ** n
     sum = 0
     while num:
-        num, m = divmod(num, 10)
-        sum += m**2
+        (num, m) = divmod(num, 10)
+        sum += m ** 2
     i = 0
     while True:
-        if i**2 >= sum:
+        if i ** 2 >= sum:
             return i
         i += 1

@@ -1,6 +1,6 @@
 def main():
-    M = 10**9 + 7
-    r1, c1, r2, c2 = map(int, input().split())
+    M = 10 ** 9 + 7
+    (r1, c1, r2, c2) = map(int, input().split())
     n = r2 + c2 + 2
     val = 1
     fac = [val]

@@ -1,7 +1,7 @@
 q = int(input())
 for _ in range(q):
     s = input()
-    u, r, d, l = 0, 0, 0, 0
+    (u, r, d, l) = (0, 0, 0, 0)
     for i in s:
         if i == 'U':
             u += 1

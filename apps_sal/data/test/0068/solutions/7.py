@@ -1,12 +1,7 @@
 n = int(input())
-# a=list(map(int,input().split()))
-# b=list(map(int,input().split()))
-
 s = list(input())
-x, y = list(map(int, input().split()))
-
+(x, y) = list(map(int, input().split()))
 it = [0, 0, 0, 0]
-
 for i in range(len(s)):
     if s[i] == 'U':
         s[i] = 0
@@ -30,8 +25,6 @@ def yes(steps, ost, x, y):
 
 
 ans = 0
-
-
 if distance(x, y, 0, 0) > n or (x + y + n) % 2 == 1:
     print(-1)
 elif yes(it, 0, x, y):
@@ -40,34 +33,26 @@ else:
     i = -1
     cur_ans = 0
     max_ans = 0
-
     steps = [0, 0, 0, 0]
-
     while yes(steps, n - cur_ans, x, y):
         i += 1
         steps[s[i]] += 1
         cur_ans += 1
-
     steps[s[i]] -= 1
     i -= 1
     cur_ans -= 1
     max_ans = cur_ans
-
     j = n
     ok = True
-
     while j > 0 and ok:
         j = j - 1
         steps[s[j]] += 1
         cur_ans += 1
-
-        while i >= 0 and not yes(steps, n - cur_ans, x, y):
+        while i >= 0 and (not yes(steps, n - cur_ans, x, y)):
             steps[s[i]] -= 1
             i -= 1
             cur_ans -= 1
-
         if yes(steps, n - cur_ans, x, y) and cur_ans > max_ans:
             max_ans = cur_ans
-        ok = (i >= 0) or yes(steps, n - cur_ans, x, y)
-
+        ok = i >= 0 or yes(steps, n - cur_ans, x, y)
     print(n - max_ans)

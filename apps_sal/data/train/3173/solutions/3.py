@@ -1,4 +1,3 @@
-
 def create_array(n):
     res = []
     i = 1

@@ -1,4 +1,3 @@
-#print('HARE KRISHNA')
 def I():
     return int(input())
 
@@ -29,5 +28,5 @@ maxi2 = 0
 for i in range(n - 2, -1, -1):
     if l[i] != l[n - 1]:
         maxi2 = i
-maxi2 = (n - 1 - maxi2)
+maxi2 = n - 1 - maxi2
 print(max(maxi1, maxi2))

@@ -1,6 +1,7 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
-        q = [[-v, k] for k, v in collections.Counter(barcodes).items()]
+        q = [[-v, k] for (k, v) in collections.Counter(barcodes).items()]
         heapq.heapify(q)
         result = []
         while q:

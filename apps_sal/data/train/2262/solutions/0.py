@@ -3,16 +3,12 @@ input = sys.stdin.readline
 
 
 def main():
-    R, C, N = map(int, input().split())
+    (R, C, N) = map(int, input().split())
     xyxy = [list(map(int, input().split())) for i in range(N)]
-
     r = []
-
     for i in range(N):
-        x1, y1, x2, y2 = xyxy[i]
-        # どちらも周上にある場合は周上の座標に変換してから記録
+        (x1, y1, x2, y2) = xyxy[i]
         if ((x1 == 0 or x1 == R) or (y1 == 0 or y1 == C)) and ((x2 == 0 or x2 == R) or (y2 == 0 or y2 == C)):
-            # １つ目
             if x1 == 0:
                 r.append((y1, i))
             elif x1 == R:
@@ -21,7 +17,6 @@ def main():
                 r.append((R - x1 + C * 2 + R, i))
             else:
                 r.append((x1 + C, i))
-            # 2つ目
             if x2 == 0:
                 r.append((y2, i))
             elif x2 == R:
@@ -30,9 +25,7 @@ def main():
                 r.append((R - x2 + C * 2 + R, i))
             else:
                 r.append((x2 + C, i))
-
     r = sorted(r)
-    # print(r)
     stack = []
     for i in range(len(r)):
         if len(stack) > 0:
@@ -42,11 +35,10 @@ def main():
                 stack.append(r[i][1])
         else:
             stack.append(r[i][1])
-
     if len(stack) > 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def __starting_point():

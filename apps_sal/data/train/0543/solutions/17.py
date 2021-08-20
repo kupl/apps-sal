@@ -12,27 +12,21 @@ try:
         tsl = list(map(int, input().split()))
         ds = int(input())
         dsl = list(map(int, input().split()))
-
         for j in range(ts):
-            if (tsl[j] not in trl):
+            if tsl[j] not in trl:
                 check1 = False
             else:
                 continue
-
         for k in range(ds):
-            if (dsl[k] not in drl):
+            if dsl[k] not in drl:
                 check2 = False
             else:
                 continue
-
-        if (check1 == True and check2 == True):
-            result.append("yes")
+        if check1 == True and check2 == True:
+            result.append('yes')
         else:
-            result.append("no")
-
+            result.append('no')
     for b in result:
         print(b)
-
-
 except:
     pass

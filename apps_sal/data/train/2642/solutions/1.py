@@ -1,6 +1,6 @@
 def swap_case(s):
     out = ''
-    for ind, let in enumerate(s):
+    for (ind, let) in enumerate(s):
         if let.isalpha():
             if let.islower():
                 out += s[ind].capitalize()

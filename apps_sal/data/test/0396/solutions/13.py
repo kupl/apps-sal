@@ -1,6 +1,6 @@
 from collections import deque
 q = deque()
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 q.append(1)
 u = 1
 p = 0

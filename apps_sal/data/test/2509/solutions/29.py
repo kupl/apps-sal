@@ -6,7 +6,7 @@ def input():
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     answer = 0
     for b in range(1, N + 1):
         p = N // b

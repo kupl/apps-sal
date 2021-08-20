@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, n):
         m = n
         sum = 0
@@ -8,7 +9,7 @@ class Solution:
         if m == 2:
             return 2
         else:
-            while(m > tmp):
+            while m > tmp:
                 k = m % tmp
                 if k == 0:
                     m = m / tmp
@@ -16,10 +17,5 @@ class Solution:
                 else:
                     tmp = tmp + 1
             sum = sum + tmp
-
             return sum
-
-        """
-         :type n: int
-         :rtype: int
-         """
+        '\n         :type n: int\n         :rtype: int\n         '

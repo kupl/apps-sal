@@ -14,8 +14,7 @@ for i in range(int(input())):
             print(1)
         else:
             print(2)
+    elif even > 0:
+        print(2)
     else:
-        if even > 0:
-            print(2)
-        else:
-            print(1)
+        print(1)

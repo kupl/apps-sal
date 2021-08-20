@@ -2,12 +2,13 @@ from queue import Queue
 
 
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = Queue()
         q.put((n, 0))
         visited = set()
         while True:
-            num, days = q.get()
+            (num, days) = q.get()
             if num in visited:
                 continue
             visited.add(num)
@@ -16,7 +17,6 @@ class Solution:
             days += 1
             if num % 3 == 0:
                 q.put((num // 3, days))
-
             if num % 2 == 0:
                 q.put((num // 2, days))
             q.put((num - 1, days))

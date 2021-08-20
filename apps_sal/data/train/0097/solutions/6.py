@@ -25,10 +25,8 @@ def optimize(a):
                     p1 = i
                     t = j
                     break
-        else:
-            if ord(a[i]) - ord('A') == t:
-                p2 = i
-
+        elif ord(a[i]) - ord('A') == t:
+            p2 = i
     if p1 >= 0 and p2 >= 0:
         return a[:p1] + a[p2] + a[p1 + 1:p2] + a[p1] + a[p2 + 1:]
     return a

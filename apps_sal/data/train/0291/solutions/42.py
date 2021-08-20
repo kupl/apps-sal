@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         even = [0] * len(arr)
         odd = [0] * len(arr)

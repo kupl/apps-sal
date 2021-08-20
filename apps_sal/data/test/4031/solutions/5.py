@@ -10,11 +10,10 @@ def is_good(strings):
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     strings = []
     for _ in range(n):
         strings.append(input())
-
     strings = sorted(strings, key=lambda x: len(x))
     if is_good(strings):
         print('YES')

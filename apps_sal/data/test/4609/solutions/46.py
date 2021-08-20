@@ -5,7 +5,6 @@ c = collections.Counter(s)
 b = []
 for myvalue in list(c.values()):
     b.append(myvalue)
-
 d = len(b)
 ans = int(0)
 for i in range(int(d)):
@@ -13,5 +12,4 @@ for i in range(int(d)):
         pass
     else:
         ans += 1
-
 print(ans)

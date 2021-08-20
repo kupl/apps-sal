@@ -1,11 +1,8 @@
 o = input()
 e = input()
-
-p = ""
-
+p = ''
 for i in range(len(o)):
     p += o[i]
     if i < len(e):
         p += e[i]
-
 print(p)

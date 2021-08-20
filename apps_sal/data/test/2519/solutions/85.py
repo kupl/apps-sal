@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 p = list(map(int, input().split()))
 ans = sum(p[0:K])
 s = ans

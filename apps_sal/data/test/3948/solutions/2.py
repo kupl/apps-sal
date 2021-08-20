@@ -1,5 +1,5 @@
 import math
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 edges = []
 for i in range(n - 1):
     edges.append(tuple(map(int, input().split())))
@@ -20,7 +20,7 @@ for i in range(k):
         small = []
         for guy in degrees:
             if degrees[guy] == 2:
-                print("No")
+                print('No')
                 done = True
                 break
             if degrees[guy] == 3:
@@ -28,7 +28,7 @@ for i in range(k):
                 if center == None:
                     center = guy
                 elif center != guy:
-                    print("No")
+                    print('No')
                     done = True
                     break
             elif degrees[guy] > 1:
@@ -36,12 +36,12 @@ for i in range(k):
         degrees = degreelist[i + 1]
         if center != None and center not in small:
             if not done:
-                print("No")
+                print('No')
             done = True
             break
         elif len(small) == 0:
             if not done:
-                print("No")
+                print('No')
             done = True
             break
         for guy in small:
@@ -53,13 +53,13 @@ for i in range(k):
         for guy in degrees:
             if degrees[guy] > 1 and degreelist[i][guy] != degrees[guy]:
                 if not done:
-                    print("No")
+                    print('No')
                 done = True
                 break
     else:
         break
 if not done:
     if len(degreelist[-1]) == 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

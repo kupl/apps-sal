@@ -3,9 +3,9 @@ def test(x):
 
 
 x = int(input())
-h, m = [int(i)for i in input().split()]
+(h, m) = [int(i) for i in input().split()]
 ans = 0
-while (not test(h)) and (not test(m)):
+while not test(h) and (not test(m)):
     if m - x < 0:
         if h == 0:
             h = 23

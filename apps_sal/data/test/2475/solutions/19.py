@@ -1,6 +1,5 @@
 N = int(input())
-*S, = map(int, input().split())
-
+(*S,) = map(int, input().split())
 ans = 0
 for d in range(1, N):
     r = k = 0

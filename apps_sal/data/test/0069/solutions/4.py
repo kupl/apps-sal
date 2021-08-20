@@ -1,6 +1,6 @@
 sd = []
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     s = input()
     bal = []
     b = 0
@@ -16,7 +16,7 @@ for _ in range(int(input())):
             ans = -1
             break
         elif b != 0:
-            if (x - d) % b == 0 and ((x - d) // b) >= 0:
+            if (x - d) % b == 0 and (x - d) // b >= 0:
                 ans += 1
     if x == 0 and ans != -1:
         ans += 1

@@ -8,4 +8,4 @@ def string_color(name):
         r = sum(xs) % 256
         g = reduce(mul, xs) % 256
         b = abs(xs[0] - sum(xs[1:])) % 256
-        return f"{r:02X}{g:02X}{b:02X}"
+        return f'{r:02X}{g:02X}{b:02X}'

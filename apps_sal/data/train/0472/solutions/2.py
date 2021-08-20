@@ -1,8 +1,9 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         return self.canReach2(arr, start, [])
 
@@ -11,9 +12,7 @@ class Solution:
             return False
         if arr[start] == 0:
             return True
-
         visited.append(start)
-        # print(start)
         res = self.canReach2(arr, start + arr[start], visited) or self.canReach2(arr, start - arr[start], visited)
         if res is False:
             visited.pop()

@@ -1,4 +1,4 @@
-n, b, d = [int(i) for i in input().split()]
+(n, b, d) = [int(i) for i in input().split()]
 s = [int(i) for i in input().split()]
 k = 0
 ans = 0

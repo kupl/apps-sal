@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -26,18 +24,14 @@ def is_prime(a):
 
 def main():
     N = int(inp())
-
     p = N
     while not is_prime(p):
         p += 1
-
     diff = p - N
     assert diff <= N // 2
-
     print(p)
     for i in range(N):
         print(i + 1, (i + 1) % N + 1)
-
     i = 1
     j = 1 + N // 2
     while diff > 0:

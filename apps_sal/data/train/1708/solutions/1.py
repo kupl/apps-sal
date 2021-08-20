@@ -1,12 +1,13 @@
 class MemoryManager:
+
     def __init__(self, memory):
         """
         @constructor Creates a new memory manager for the provided array.
         @param {memory} An array to use as the backing memory.
         """
         self.mem = memory
-        self.blockpointers = []  # A list of pointers to the start of each allocated block
-        self.blocksizes = []    # A list of sizes of each block
+        self.blockpointers = []
+        self.blocksizes = []
 
     def allocate(self, size):
         """
@@ -16,28 +17,21 @@ class MemoryManager:
         @raises If it is not possible to allocate a block of the requested size.
         """
         if size > len(self.mem):
-            raise Exception("Cannot allocate more memory than exists")
-
-        # check start of memory
+            raise Exception('Cannot allocate more memory than exists')
         if self.blockpointers == [] or (0 not in self.blockpointers and size <= self.blockpointers[0]):
             self.blockpointers.insert(0, 0)
             self.blocksizes.insert(0, size)
             return 0
-
-        # check after every allocated block
-        for i, e in enumerate(self.blocksizes[:-1]):
-            if size <= (self.blockpointers[i + 1] - self.blockpointers[i] - e):
+        for (i, e) in enumerate(self.blocksizes[:-1]):
+            if size <= self.blockpointers[i + 1] - self.blockpointers[i] - e:
                 self.blockpointers.insert(i, self.blockpointers[i] + e)
                 self.blocksizes.insert(i, size)
                 return self.blockpointers[i]
-
-        # check after last allocated block
-        if size <= (len(self.mem) - self.blockpointers[-1] - self.blocksizes[-1]):
+        if size <= len(self.mem) - self.blockpointers[-1] - self.blocksizes[-1]:
             self.blockpointers.append(self.blockpointers[-1] + self.blocksizes[-1])
             self.blocksizes.append(size)
             return self.blockpointers[-1]
-
-        raise Exception("Cannot allocate more memory than available")
+        raise Exception('Cannot allocate more memory than available')
 
     def release(self, pointer):
         """
@@ -46,8 +40,7 @@ class MemoryManager:
         @raises If the pointer does not point to an allocated block.
         """
         if pointer not in self.blockpointers:
-            raise Exception("No memory has been allocated")
-
+            raise Exception('No memory has been allocated')
         index = self.blockpointers.index(pointer)
         self.blockpointers.pop(index)
         self.blocksizes.pop(index)
@@ -61,7 +54,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if not self.inMemory(pointer):
-            raise Exception("No memory has been allocated")
+            raise Exception('No memory has been allocated')
         return self.mem[pointer]
 
     def write(self, pointer, value):
@@ -72,7 +65,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if not self.inMemory(pointer):
-            raise Exception("No memory has been allocated")
+            raise Exception('No memory has been allocated')
         self.mem[pointer] = value
 
     def inMemory(self, pointer):

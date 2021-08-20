@@ -1,5 +1,5 @@
 def max_floor(eggs, drops):
-    return sum(max_floor(eggs - 1, d) + 1 for d in range(drops)) if eggs else 0
+    return sum((max_floor(eggs - 1, d) + 1 for d in range(drops))) if eggs else 0
 
 
 def solve(emulator):

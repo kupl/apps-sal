@@ -1,6 +1,5 @@
 n = int(input())
 a = sorted(list(map(int, input().split())))
-
 cnt = 0
 i = 0
 while i < n - 1:

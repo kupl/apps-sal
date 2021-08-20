@@ -19,17 +19,13 @@ def factorization(n):
 
 
 n = int(input())
-dat = [0] * 2000  # 約数として求められたある数の合計
-
-# N! の各要素の素因数分解をする
+dat = [0] * 2000
 res = 1
 for i in range(1, n + 1):
     d = factorization(i)
     for j in range(len(d)):
         dat[d[j][0]] += d[j][1]
-
 for i in range(2, n + 1):
-    res *= (dat[i] + 1)
+    res *= dat[i] + 1
     res %= mod
-
 print(res)

@@ -1,5 +1,5 @@
 k = int(input())
-s = ""
+s = ''
 i = 1
 while len(s) < k + 10:
     s += str(i)

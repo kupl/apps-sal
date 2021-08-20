@@ -1,5 +1,5 @@
 import itertools as it
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 dtab = []
 dtab.append([0 for _ in range(c + 1)])
 for i in range(c):

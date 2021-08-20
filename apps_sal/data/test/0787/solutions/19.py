@@ -1,7 +1,7 @@
 def TrueCount(a):
     c = 0
     for i in a:
-        if(i == True):
+        if i == True:
             c += 1
     return c
 
@@ -22,21 +22,17 @@ def uniqueStrings(a, s):
 
 n = int(input())
 s = input()
-
 a = [False] * 26
-
 for i in s:
     a[ord(i) - ord('a')] = True
-
 k = TrueCount(a)
-
-if(k < n):
-    print("NO")
+if k < n:
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     b = uniqueStrings(a, s)
     i = 0
-    while(i < n - 1):
+    while i < n - 1:
         print(b[i])
         i += 1
     print(''.join(b[i:len(b)]))

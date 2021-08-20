@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 
 class HopcroftKarp:
+
     def __init__(self, N0, N1):
         self.N0 = N0
         self.N1 = N1
@@ -23,8 +24,6 @@ class HopcroftKarp:
             self.G[1].append(backward)
 
     def add_edge(self, fr, to):
-        #assert 0 <= fr < self.N0
-        #assert 0 <= to < self.N1
         v0 = 2 + fr
         v1 = 2 + self.N0 + to
         forward = [v1, 1, None]
@@ -40,7 +39,7 @@ class HopcroftKarp:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -52,7 +51,7 @@ class HopcroftKarp:
             return 1
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w] and self.dfs(w, t):
                 e[1] = 0
                 rev[1] = 1
@@ -65,34 +64,26 @@ class HopcroftKarp:
         bfs = self.bfs
         dfs = self.dfs
         while bfs():
-            *self.it, = map(iter, G)
+            (*self.it,) = map(iter, G)
             while dfs(0, 1):
                 flow += 1
         return flow
 
     def matching(self):
-        return [cap for _, cap, _ in self.backwards]
+        return [cap for (_, cap, _) in self.backwards]
 
 
 n = int(input())
-
 solve = HopcroftKarp(n, n)
-
-red, blue = [], []
-
+(red, blue) = ([], [])
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     red.append([a, b])
-
 for i in range(n):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     blue.append([c, d])
-
-
 for i in range(n):
     for j in range(n):
         if red[i][0] < blue[j][0] and red[i][1] < blue[j][1]:
             solve.add_edge(i, j)
-
-
 print(solve.flow())

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 total = 0
 for i in range(n):
     if a[i] > b[i]:
@@ -15,7 +14,4 @@ for i in range(n):
         else:
             total += b[i]
             a[i + 1] -= b[i]
-
-    # print(total)
-
 print(total)

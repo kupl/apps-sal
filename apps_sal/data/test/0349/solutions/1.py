@@ -3,12 +3,10 @@ def getn():
 
 
 def getns():
-    return [int(x)for x in input().split()]
+    return [int(x) for x in input().split()]
 
 
-# n=getn()
-# ns=getns()
-n, m = getns()
+(n, m) = getns()
 a = [[0] * m for i in range(n)]
 b = [[0] * m for i in range(n)]
 a = []
@@ -19,7 +17,7 @@ for i in range(n):
     b.append(getns())
 for i in range(n):
     for j in range(m):
-        a[i][j], b[i][j] = min(a[i][j], b[i][j]), max(a[i][j], b[i][j])
+        (a[i][j], b[i][j]) = (min(a[i][j], b[i][j]), max(a[i][j], b[i][j]))
 
 
 def check(x):
@@ -39,7 +37,5 @@ if check(a) and check(b):
 else:
     print('Impossible')
 quit()
-
-
 print(a)
 print(b)

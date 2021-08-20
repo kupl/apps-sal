@@ -1,10 +1,8 @@
 n = int(input())
-s = "No"
-
+s = 'No'
 for i in range(n):
     for j in range(n):
         if 4 * i + 7 * j == n:
-            s = "Yes"
+            s = 'Yes'
             break
-
 print(s)

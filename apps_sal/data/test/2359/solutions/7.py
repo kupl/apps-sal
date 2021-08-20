@@ -1,5 +1,4 @@
 from fractions import Fraction
-
 T = int(input())
 
 
@@ -8,11 +7,11 @@ def TMP(h, c, nbH):
 
 
 for _ in range(T):
-    h, c, t = [int(_) for _ in input().split()]
+    (h, c, t) = [int(_) for _ in input().split()]
     if t <= (h + c) // 2:
         print(2)
         continue
-    L, R = 1, 10**9
+    (L, R) = (1, 10 ** 9)
     a = 0
     while L <= R:
         m = (L + R) // 2

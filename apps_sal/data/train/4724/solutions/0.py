@@ -1,2 +1,2 @@
 def drop_cap(str_):
-    return ' '.join(w.capitalize() if len(w) > 2 else w for w in str_.split(' '))
+    return ' '.join((w.capitalize() if len(w) > 2 else w for w in str_.split(' ')))

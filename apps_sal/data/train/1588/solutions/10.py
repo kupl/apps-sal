@@ -1,10 +1,10 @@
 t = int(input())
-while(t):
+while t:
     re = []
     st = {}
     m = {}
     for _ in range(int(input())):
-        a, b = input().split()
+        (a, b) = input().split()
         b = int(b)
         if b in list(st.keys()):
             st[b] += 1
@@ -24,5 +24,5 @@ while(t):
     if count == 1:
         print(m[ind])
     else:
-        print("Nobody wins.")
+        print('Nobody wins.')
     t -= 1

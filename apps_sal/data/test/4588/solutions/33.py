@@ -1,11 +1,8 @@
-# coding = SJIS
-
-x, y = list(map(str, input().split()))
-alp = ["A", "B", "C", "D", "E", "F"]
-
+(x, y) = list(map(str, input().split()))
+alp = ['A', 'B', 'C', 'D', 'E', 'F']
 if alp.index(x) < alp.index(y):
-    print("<")
+    print('<')
 elif alp.index(x) > alp.index(y):
-    print(">")
+    print('>')
 else:
-    print("=")
+    print('=')

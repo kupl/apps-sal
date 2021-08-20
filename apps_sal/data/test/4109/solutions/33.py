@@ -1,12 +1,12 @@
-N, M, X = map(int, input().split())
+(N, M, X) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(N)]
 d = []
-for i in range(2**N):
+for i in range(2 ** N):
     b = [0] * (M + 1)
     e = i
     for j in range(N):
-        if e >= (2**(N - j - 1)):
-            e -= (2**(N - j - 1))
+        if e >= 2 ** (N - j - 1):
+            e -= 2 ** (N - j - 1)
             for k in range(M + 1):
                 b[k] += a[j][k]
     c = 1

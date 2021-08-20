@@ -1,4 +1,3 @@
-
 def positive_sum(n):
     b = 0
     if not n:

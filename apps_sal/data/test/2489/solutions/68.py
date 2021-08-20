@@ -14,5 +14,4 @@ for i in range(1, lim + 1):
     for j in range(i * 2, lim + 1, i):
         ans -= B[j]
         B[j] = 0
-
 print(ans)

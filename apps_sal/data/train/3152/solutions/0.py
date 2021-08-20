@@ -2,7 +2,7 @@ from itertools import cycle
 
 
 def interpreter(tape, array):
-    idx, result = 0, list(map(int, array))
+    (idx, result) = (0, list(map(int, array)))
     for cmd in cycle(map(int, tape)):
         if idx == len(array):
             break

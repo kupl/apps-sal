@@ -1,10 +1,7 @@
 s = input()
 n = len(s)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [[0] * 3 for _ in range(n)]
-# dp[i][0] count of A's in all possible strings u generate till i
-# dp[i][1] count of AB's ''
-# dp[i][2] count of ABC's ''
 cnt = 1
 for i in range(n):
     if s[i] == '?':
@@ -39,5 +36,4 @@ for i in range(n):
             dp[i][0] %= mod
         else:
             dp[0][0] = 1
-
-print((dp[-1][2] % mod))
+print(dp[-1][2] % mod)

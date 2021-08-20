@@ -1,7 +1,5 @@
 s = input()
-
 alphabets = 'abcdefghijklmnopqrstuvwxyz'
-
 for x in alphabets:
     if x in s:
         continue

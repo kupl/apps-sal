@@ -10,15 +10,23 @@ from collections import Counter
 from collections import deque
 from heapq import heappush, heappop, heapify
 from itertools import permutations, combinations
-mod = int(1e9) + 7
+mod = int(1000000000.0) + 7
 
 
-def ip(): return int(stdin.readline())
+def ip():
+    return int(stdin.readline())
 
 
-def inp(): return list(map(int, stdin.readline().split()))
-def ips(): return stdin.readline().rstrip()
-def out(x): return stdout.write(str(x) + "\n")
+def inp():
+    return list(map(int, stdin.readline().split()))
+
+
+def ips():
+    return stdin.readline().rstrip()
+
+
+def out(x):
+    return stdout.write(str(x) + '\n')
 
 
 t = ip()

@@ -1,6 +1,6 @@
 n = int(input())
-a_6 = [int(6**i) for i in range(1, 10) if 6**i <= 10**5]
-a_9 = [int(9**i) for i in range(1, 10) if 9**i <= 10**5]
+a_6 = [int(6 ** i) for i in range(1, 10) if 6 ** i <= 10 ** 5]
+a_9 = [int(9 ** i) for i in range(1, 10) if 9 ** i <= 10 ** 5]
 a = [1]
 for i in a_6:
     a.append(i)

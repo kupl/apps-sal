@@ -1,4 +1,4 @@
-n, m, w = list(map(int, input().split()))
+(n, m, w) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 
 

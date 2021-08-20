@@ -1,8 +1,6 @@
 import collections
-
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
-
 ans = 0
 q = collections.deque()
 if a[0] <= x:
@@ -10,7 +8,6 @@ if a[0] <= x:
 else:
     ans += a[0] - x
     q.append(x)
-
 for i in range(1, n):
     tmp = q[-1] + a[i]
     if tmp <= x:
@@ -19,6 +16,4 @@ for i in range(1, n):
         ans += tmp - x
         q.append(x - q[-1])
     q.popleft()
-
-
 print(ans)

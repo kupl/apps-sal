@@ -5,9 +5,7 @@ from heapq import heapify, heappush, heappop
 def solve():
     N = int(input())
     Ss = list(map(int, input().split()))
-
     cnt = Counter(Ss)
-
     PQ = [-N]
     for key in sorted(list(cnt.keys()), reverse=True):
         num = cnt[key]
@@ -19,7 +17,6 @@ def solve():
         for depth in depths:
             for d in range(depth):
                 heappush(PQ, -d)
-
     return True
 
 

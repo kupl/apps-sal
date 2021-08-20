@@ -1,4 +1,4 @@
-x, t = list(map(int, input().split()))
+(x, t) = list(map(int, input().split()))
 
 
 def answer(x: int, t: int) -> int:

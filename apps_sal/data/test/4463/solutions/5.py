@@ -3,6 +3,6 @@ t = list(input())
 s.sort()
 t.sort(reverse=True)
 if s < t:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

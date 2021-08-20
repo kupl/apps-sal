@@ -7,24 +7,23 @@ for _ in range(int(input())):
     odd = 0
     Dict = Counter(List)
     Len = len(Dict)
-    if(Length % 2 != 0):
+    if Length % 2 != 0:
         for i in Dict:
-            if(Dict[i] % 2 == 0):
+            if Dict[i] % 2 == 0:
                 even += 1
             else:
                 odd += 1
-        if(odd == 1):
-            print("YES")
+        if odd == 1:
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
     else:
         for i in Dict:
-            if(Dict[i] % 2 == 0):
+            if Dict[i] % 2 == 0:
                 even += 1
             else:
                 odd += 1
-        if(odd == 0 or odd == 2):
-            print("YES")
+        if odd == 0 or odd == 2:
+            print('YES')
         else:
-            print("NO")
+            print('NO')

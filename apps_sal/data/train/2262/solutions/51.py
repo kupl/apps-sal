@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
 import random
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -38,16 +46,16 @@ mod = 1000000007
 
 
 def solve():
+
     def check(x, y):
         return (x == 0) | (x == w) | (y == 0) | (y == h)
-
-    w, h, n = LI()
+    (w, h, n) = LI()
     px0 = []
     pxw = []
     py0 = []
     pyh = []
     for i in range(1, n + 1):
-        x, y, s, t = LI()
+        (x, y, s, t) = LI()
         if check(x, y) & check(s, t):
             if x == 0:
                 px0.append((y, i))
@@ -71,7 +79,7 @@ def solve():
     pyh.sort()
     p = px0 + pyh + pxw + py0
     q = deque()
-    for x, i in p:
+    for (x, i) in p:
         if q:
             qi = q.pop()
             if qi != i:
@@ -80,12 +88,10 @@ def solve():
         else:
             q.append(i)
     if q:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
     return
-
-# Solve
 
 
 def __starting_point():

@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         n = len(A)
         stack = []
@@ -11,7 +12,6 @@ class Solution:
                 l_c = stack[-1] + 1
             stack.append(i)
             l_count.append(l_c)
-
         stack = []
         r_count = []
         for i in range(n):
@@ -22,9 +22,7 @@ class Solution:
                 r_c = stack[-1] - 1
             stack.append(n - i - 1)
             r_count.append(r_c)
-
         r_count = r_count[::-1]
-
         t = 0
         print(l_count)
         print(r_count)
@@ -32,5 +30,4 @@ class Solution:
             l = l_count[i]
             r = r_count[i]
             t += (i - l + 1) * (r - i + 1) * A[i]
-
-        return t % (10**9 + 7)
+        return t % (10 ** 9 + 7)

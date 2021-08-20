@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         d = set([0, len(arr) + 1])
         if m == len(arr):
@@ -21,5 +22,4 @@ class Solution:
                 if exit:
                     return i
             d.add(arr[i])
-
         return -1

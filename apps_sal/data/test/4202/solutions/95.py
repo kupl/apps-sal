@@ -1,5 +1,4 @@
-L, R = map(int, input().split())
-
+(L, R) = map(int, input().split())
 m = 2019
 flag = False
 for i in range(L, R):
@@ -10,5 +9,4 @@ for i in range(L, R):
             break
     if flag:
         break
-
 print(m)

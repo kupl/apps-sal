@@ -9,7 +9,6 @@ for i in range(a):
     else:
         c = s[-1]
         s = c + s[:-1]
-
 if b == 1:
     print('Yes')
 else:

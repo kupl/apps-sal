@@ -3,7 +3,7 @@ input1 = sys.stdin.readline
 
 
 def solve():
-    n, s = [int(i) for i in input1().split()]
+    (n, s) = [int(i) for i in input1().split()]
     empl = []
     for i in range(n):
         empl.append([int(j) for j in input1().split()])

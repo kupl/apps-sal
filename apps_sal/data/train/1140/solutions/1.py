@@ -1,8 +1,7 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    p, idx = list(map(int, input().split()))
-    length = 2**p
+    (p, idx) = list(map(int, input().split()))
+    length = 2 ** p
     somma = 0
     mult = 1
     while length > 1:

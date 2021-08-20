@@ -9,21 +9,17 @@ def number_count(string, n):
 def main():
     s = str(input())
     k = int(input())
-
-    if number_count(s, 1) == len(s):   # sの中身がすべて１の場合
+    if number_count(s, 1) == len(s):
         number = '1'
-
     else:
         for i in range(len(s)):
             if s[i] != '1':
                 first_index = i
                 break
-
         if k < first_index + 1:
             number = '1'
         else:
             number = s[first_index]
-
     print(number)
 
 

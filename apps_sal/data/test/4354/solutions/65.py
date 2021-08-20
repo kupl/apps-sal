@@ -9,20 +9,19 @@ def answer(n: int, m: int, students: List[List[int]], check_points: List[List[in
     students_destination = []
     for student in students:
         mds = {}
-        for i, check_point in enumerate(check_points, start=1):
+        for (i, check_point) in enumerate(check_points, start=1):
             md = manhattan_distance(student, check_point)
             if md not in list(mds.keys()):
                 mds[md] = str(i)
         students_destination.append(mds[min(mds.keys())])
-
     return '\n'.join(students_destination)
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for _ in range(n)]
     cd = [list(map(int, input().split())) for _ in range(m)]
-    print((answer(n, m, ab, cd)))
+    print(answer(n, m, ab, cd))
 
 
 def __starting_point():

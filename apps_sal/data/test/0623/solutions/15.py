@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import itertools
-
 CHARGE = 1
 DISCHARGE = -2
 
@@ -31,7 +27,7 @@ def solve(j1, j2):
 
 
 def main():
-    j1, j2 = list(map(int, input().split()))
+    (j1, j2) = list(map(int, input().split()))
     print(solve(j1, j2))
 
 

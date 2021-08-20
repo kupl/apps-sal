@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = collections.deque([n])
         day = 0

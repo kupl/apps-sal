@@ -1,12 +1,9 @@
-
-
 def main():
     n = int(input())
     st = set()
     st.add(2)
     number = 2
     change = 2
-
     while number <= n:
         change += 3
         number += change

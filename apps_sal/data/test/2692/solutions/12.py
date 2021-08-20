@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, b = list(map(int, input().split()))
+    (n, b) = list(map(int, input().split()))
     low = 0
     high = n
     while low < high:
@@ -13,7 +13,6 @@ for _ in range(t):
                 break
             left = book + left % b
             cook += book
-        #  print(low,high,mid,cook)
         if high - low < 3:
             for i in range(low, high + 1):
                 cook = i

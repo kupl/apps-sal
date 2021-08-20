@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 x -= z
 count = 0
 while x >= y + z:

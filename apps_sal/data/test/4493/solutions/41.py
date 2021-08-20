@@ -1,4 +1,4 @@
-from sys import stdin, stdout  # only need for big input
+from sys import stdin, stdout
 
 
 def solve():
@@ -9,9 +9,9 @@ def solve():
     a2 = [c2[i] - b[i] for i in range(3)]
     a3 = [c3[i] - b[i] for i in range(3)]
     if max(a2) == min(a2) and max(a3) == min(a3):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def main():

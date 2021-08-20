@@ -1,5 +1,3 @@
-# Function to rotate the matrix
-# 90 degree clockwise
 def rotate90Clockwise(A):
     N = len(A[0])
     for i in range(N // 2):
@@ -16,11 +14,11 @@ def check(A, B):
     c2 = 0
     for i in range(N):
         for j in range(N):
-            if(A[i][j] == B[N - 1 - i][j]):
+            if A[i][j] == B[N - 1 - i][j]:
                 c1 += 1
-            if(A[i][j] == B[i][N - 1 - j]):
+            if A[i][j] == B[i][N - 1 - j]:
                 c2 += 1
-    if(c1 == N**2 or c2 == N**2):
+    if c1 == N ** 2 or c2 == N ** 2:
         return True
     else:
         return False
@@ -42,26 +40,26 @@ for j in range(N):
         bb.append(b[j])
     B.append(bb)
 flag = False
-if(A == B):
+if A == B:
     flag = True
-if(check(A, B)):
-    flag = True
-rotate90Clockwise(A)
-if(A == B):
-    flag = True
-if(check(A, B)):
+if check(A, B):
     flag = True
 rotate90Clockwise(A)
-if(A == B):
+if A == B:
     flag = True
-if(check(A, B)):
+if check(A, B):
     flag = True
 rotate90Clockwise(A)
-if(A == B):
+if A == B:
     flag = True
-if(check(A, B)):
+if check(A, B):
     flag = True
-if(flag):
-    print("Yes")
+rotate90Clockwise(A)
+if A == B:
+    flag = True
+if check(A, B):
+    flag = True
+if flag:
+    print('Yes')
 else:
-    print("No")
+    print('No')

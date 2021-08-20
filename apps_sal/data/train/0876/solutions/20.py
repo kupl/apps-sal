@@ -1,9 +1,9 @@
 T = int(input())
-while(T):
+while T:
     nx = [int(x) for x in input().split()]
     A = [int(x) for x in input().split()]
     if max(A) - min(A) < nx[1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     T = T - 1

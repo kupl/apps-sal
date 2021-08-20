@@ -1,4 +1,4 @@
-n, b = map(int, input().split())
+(n, b) = map(int, input().split())
 cnt = {}
 i = 2
 while i * i <= b:
@@ -19,7 +19,7 @@ def get(x):
     return ret
 
 
-ans = int(1e30)
+ans = int(1e+30)
 for (a, t) in cnt.items():
     ans = min(ans, get(a) // t)
 print(ans)

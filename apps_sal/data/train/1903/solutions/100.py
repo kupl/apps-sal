@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self):
         self.father = {}
         self.size = {}
@@ -11,17 +12,13 @@ class UnionFind:
     def union(self, p, q):
         self.insert(p)
         self.insert(q)
-
-        p, q = map(self.find, (p, q))
+        (p, q) = map(self.find, (p, q))
         if p == q:
             return False
-
         if self.size[p] < self.size[q]:
-            p, q = q, p
-
+            (p, q) = (q, p)
         self.size[p] += self.size[q]
         self.father[q] = p
-
         return True
 
     def insert(self, p):
@@ -31,15 +28,15 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dis = []
-        for i, (x, y) in enumerate(points):
-            for u, v in points[:i]:
+        for (i, (x, y)) in enumerate(points):
+            for (u, v) in points[:i]:
                 dis.append((abs(x - u) + abs(y - v), (x, y), (u, v)))
         dis.sort()
-
-        uf, r = UnionFind(), 0
-        for d, p1, p2 in dis:
+        (uf, r) = (UnionFind(), 0)
+        for (d, p1, p2) in dis:
             if uf.union(p1, p2):
                 r += d
         return r

@@ -1,5 +1,5 @@
 import numpy as np
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 Grid = np.array([[0 if x == '.' else -1 for x in input()] for _ in range(H)], dtype='int64')
 
 
@@ -10,8 +10,7 @@ def solveMase(Grid, start, goal):
         v = V.pop(0)
         if v == goal:
             return Grid[goal]
-
-        y, x = v
+        (y, x) = v
         nV = []
         if x > 0:
             nV.append((y, x - 1))
@@ -21,7 +20,6 @@ def solveMase(Grid, start, goal):
             nV.append((y, x + 1))
         if y < H - 1:
             nV.append((y + 1, x))
-
         for nv in nV:
             if Grid[nv] == -1 or nv in seen:
                 continue

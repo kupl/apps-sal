@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 
 
 def f(x):
@@ -15,12 +15,10 @@ def f(x):
 N = int(input())
 links = [[] for _ in range(N + 1)]
 for _ in range(N - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     links[u].append([v, w])
     links[v].append([u, w])
-
 c = [-1] * (N + 1)
 c[1] = 0
 f(1)
-
 print(*c[1:], sep='\n')

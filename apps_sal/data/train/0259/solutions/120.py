@@ -2,13 +2,13 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         if not nums:
             return sys.maxsize
-        left, right = 1, 2
+        (left, right) = (1, 2)
         while right < sys.maxsize and self.get_sum(nums, right) > threshold:
-            left, right = right, right * 2
-
+            (left, right) = (right, right * 2)
         while left + 1 < right:
             mid = (left + right) // 2
             if self.get_sum(nums, mid) <= threshold:

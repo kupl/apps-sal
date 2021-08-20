@@ -1,7 +1,6 @@
-r, g, b = list(map(str, input().split()))
+(r, g, b) = list(map(str, input().split()))
 li = r + g + b
-
 if int(li) % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, pos: List[int], m: int) -> int:
         pos.sort()
 

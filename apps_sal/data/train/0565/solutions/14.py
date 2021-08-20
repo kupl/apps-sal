@@ -1,9 +1,9 @@
 T = int(input())
 for xs in range(T):
-    N, Q = [int(o) for o in input().split()]
+    (N, Q) = [int(o) for o in input().split()]
     a = [int(o) for o in input().split()]
     b = sorted(a)
-    Di = {}  # Dictionary
+    Di = {}
     for i in range(len(a)):
         Di[a[i]] = [i]
     for i in range(len(b)):
@@ -19,7 +19,7 @@ for xs in range(T):
         s = 0
         maxs = N - Di[q][1] - 1
         mins = N - maxs - 1
-        while low <= high:  # Binary Search algorithm
+        while low <= high:
             mid = (low + high) // 2
             if mid == ind:
                 break
@@ -39,14 +39,14 @@ for xs in range(T):
         lenb = len(b)
         sw = min(lenf, lenb)
         rs = max(lenf, lenb) - sw
-        mins, maxs = mins - sw, maxs - sw
+        (mins, maxs) = (mins - sw, maxs - sw)
         ex = min(mins, maxs)
         if ex < rs:
             r.append(-1)
             s = 1
         else:
-            sw += rs  # When ex>=rs
+            sw += rs
         if not s:
             r.append(sw)
     for ans in r:
-        print(ans)  # Final
+        print(ans)

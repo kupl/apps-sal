@@ -1,6 +1,6 @@
 def go():
     n = int(input())
-    x, y = [int(i) for i in input().split(' ')]
+    (x, y) = [int(i) for i in input().split(' ')]
     a = 1 + 1
     b = n + n
     c = x + y

@@ -1,7 +1,7 @@
 n = int(input())
 teams = []
 for i in range(n):
-    h, a = list(map(int, input().split()))
+    (h, a) = list(map(int, input().split()))
     teams.append([h, a])
 ans = 0
 for i in teams:

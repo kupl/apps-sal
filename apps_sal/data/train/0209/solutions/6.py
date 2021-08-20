@@ -1,8 +1,9 @@
 class Solution:
+
     def mergeStones(self, stones: List[int], K: int) -> int:
-        dp, N, Sum, H = {}, len(stones), {-1: 0}, {}
+        (dp, N, Sum, H) = ({}, len(stones), {-1: 0}, {})
         for i in range(N):
-            j, dp[i], H[i], Sum[i] = i, {}, {}, Sum[i - 1] + stones[i]
+            (j, dp[i], H[i], Sum[i]) = (i, {}, {}, Sum[i - 1] + stones[i])
             while j > -1:
                 H[i][j] = (i - j + 1) % (K - 1) + (K - 1) * (1 // (1 + (i - j + 1) % (K - 1)))
                 if i - j < K - 1:

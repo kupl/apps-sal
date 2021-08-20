@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 coun = 1
 d = 0

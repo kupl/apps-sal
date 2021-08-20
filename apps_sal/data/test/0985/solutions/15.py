@@ -1,8 +1,8 @@
 lim = int(input())
-dx, dy = dict(), dict()
+(dx, dy) = (dict(), dict())
 summ = 0
 for i in range(0, lim):
-    x, y = (int(j) for j in input().split())
+    (x, y) = (int(j) for j in input().split())
     diagx = x + y
     diagy = x - y
     if diagx in dx:

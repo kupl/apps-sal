@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = str(input())
 
 
@@ -20,16 +20,14 @@ def run_length_encoding(text: str) -> list:
 rle = run_length_encoding(S)
 gr = len(rle)
 hp = 0
-for c, x in rle:
+for (c, x) in rle:
     hp += x - 1
-
 if gr == 1:
     ans = hp
 elif gr == 2:
     ans = hp + 1
+elif K < gr // 2:
+    ans = hp + 2 * K
 else:
-    if K < gr // 2:
-        ans = hp + 2 * K
-    else:
-        ans = hp + 2 * ((gr - 1) // 2) + (gr - 1) % 2
+    ans = hp + 2 * ((gr - 1) // 2) + (gr - 1) % 2
 print(ans)

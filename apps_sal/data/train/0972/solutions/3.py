@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 hs = sorted([int(input()) for _ in range(n)])
 m = hs[k - 1] - hs[0]
 i = k

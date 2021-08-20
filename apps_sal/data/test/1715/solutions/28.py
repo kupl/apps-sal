@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 import bisect
-
 INF = 10 ** 18
 
 
@@ -18,13 +16,13 @@ def solve(s, t, x):
 
 
 def main():
-    A, B, Q = list(map(int, input().split()))
-    s = [-10**18] + [int(input()) for _ in range(A)] + [10**18]
-    t = [-10**18] + [int(input()) for _ in range(B)] + [10**18]
+    (A, B, Q) = list(map(int, input().split()))
+    s = [-10 ** 18] + [int(input()) for _ in range(A)] + [10 ** 18]
+    t = [-10 ** 18] + [int(input()) for _ in range(B)] + [10 ** 18]
     x = [int(input()) for _ in range(Q)]
     ans = solve(s, t, x)
     for i in range(Q):
-        print((ans[i]))
+        print(ans[i])
     return
 
 

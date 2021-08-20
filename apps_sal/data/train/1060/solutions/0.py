@@ -1,9 +1,6 @@
 def countSubstr(str, n, x, y):
-
     tot_count = 0
-
     count_x = 0
-
     for i in range(n):
         if str[i] == x:
             count_x += 1

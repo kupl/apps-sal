@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, words, k):
         """
         :type words: List[str]
@@ -8,7 +9,7 @@ class Solution:
         cnt = {i: words.count(i) for i in list(set(words))}
         cntRev = {}
         ans = []
-        for key, val in cnt.items():
+        for (key, val) in cnt.items():
             if val not in cntRev:
                 cntRev[val] = [key]
             else:

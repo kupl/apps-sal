@@ -1,4 +1,4 @@
-a, s = input().split()
+(a, s) = input().split()
 a = int(a)
 s = int(s)
 top1 = a
@@ -10,7 +10,7 @@ for i in range(0, 100007):
     l1.append(0)
     l2.append(0)
 for i in range(0, s):
-    z, x = input().split()
+    (z, x) = input().split()
     z = int(z)
     x = int(x)
     if l1[z] == 0:
@@ -21,4 +21,4 @@ for i in range(0, s):
         l2[x] = 1
     l3.append(top1 * top2)
 for i in l3:
-    print(i, end=" ")
+    print(i, end=' ')

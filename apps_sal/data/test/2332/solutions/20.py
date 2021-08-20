@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 word = input().split()
 cost = list(map(int, input().split()))
 for i in range(k):

@@ -2,6 +2,7 @@ from heapq import *
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
@@ -13,7 +14,6 @@ class Solution:
                 heappush(minHeap, num)
             else:
                 countsMap[num] += 1
-
         while len(minHeap) > 0:
             minNum = heappop(minHeap)
             while countsMap[minNum] > 0:
@@ -23,5 +23,4 @@ class Solution:
                         return False
                     else:
                         countsMap[currNum] -= 1
-
         return True

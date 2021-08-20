@@ -6,7 +6,7 @@ for i in range(0, len(l)):
 temp[0] = l[0]
 temp[1] = l[1]
 temp[2] = l[2]
-if(n <= 3):
+if n <= 3:
     print(sum(temp))
 else:
     for i in range(3, n):

@@ -1,15 +1,12 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s_pos = []
 c_pos = []
-
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s_pos.append([a, b])
-
 for i in range(m):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     c_pos.append([c, d])
-
 for i in range(n):
     min_dist = 10 ** 16
     c_index = 0

@@ -1,6 +1,6 @@
 def solve():
-    n, m = list(map(int, input().split()))
-    A, B = set(), set()
+    (n, m) = list(map(int, input().split()))
+    (A, B) = (set(), set())
     for i in range(n):
         A.add(input().rstrip())
     for i in range(m):

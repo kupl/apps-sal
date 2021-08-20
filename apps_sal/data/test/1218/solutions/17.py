@@ -13,11 +13,11 @@ def sum1(i):
 line = input()
 n = Decimal(line.split()[0])
 k = Decimal(line.split()[1])
-if(n == 1):
+if n == 1:
     print(0)
-elif(k > n):
+elif k > n:
     print(1)
-elif(sum2(2, k) < n):
+elif sum2(2, k) < n:
     print(-1)
 else:
     c = 2 * n + k - k * k

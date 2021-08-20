@@ -9,7 +9,7 @@ def check(p):
     return p + v(k - 1, p - 1) + v(n - k, p - 1) <= m
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 l = 0
 r = 10 ** 100
 while r - l > 1:

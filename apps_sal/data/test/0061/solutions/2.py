@@ -1,10 +1,10 @@
-n, bx = map(int, input().split())
+(n, bx) = map(int, input().split())
 s1 = 0
 p1 = 1
 for i in list(map(int, input().split()))[::-1]:
     s1 += i * p1
     p1 *= bx
-m, by = map(int, input().split())
+(m, by) = map(int, input().split())
 s2 = 0
 p2 = 1
 for i in list(map(int, input().split()))[::-1]:

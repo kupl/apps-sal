@@ -1,9 +1,9 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
 
         def get_val(nums):
-            # print(nums)
             if len(nums) == 0:
                 return 0
             products = [1]

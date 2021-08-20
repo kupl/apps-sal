@@ -6,6 +6,6 @@ for i in range(t):
         m = m + j
         n = m
         for l in range(1, j + 1):
-            print(n, end="")
+            print(n, end='')
             n = n - 1
         print()

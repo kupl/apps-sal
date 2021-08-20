@@ -9,11 +9,10 @@ def put(i, x, y):
         on_right.append((x, i))
 
 
-on_top, on_bottom, on_left, on_right = [], [], [], []
-
-r, c, n = list(map(int, input().split()))
+(on_top, on_bottom, on_left, on_right) = ([], [], [], [])
+(r, c, n) = list(map(int, input().split()))
 for i in range(n):
-    x1, y1, x2, y2 = list(map(int, input().split()))
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     if 0 < x1 < r and 0 < y1 < c:
         continue
     if 0 < x2 < r and 0 < y2 < c:
@@ -26,10 +25,9 @@ on_left.sort(reverse=True)
 on_right.sort()
 stack = []
 for on_edge in [on_top, on_right, on_bottom, on_left]:
-    for p, i in on_edge:
+    for (p, i) in on_edge:
         if stack and stack[-1] == i:
             stack.pop()
         else:
             stack.append(i)
-
-print(('NO' if stack else 'YES'))
+print('NO' if stack else 'YES')

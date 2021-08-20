@@ -1,5 +1,5 @@
 class Solution:
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         self.res = 0

@@ -1,4 +1,3 @@
-# cook your dish here
 from operator import itemgetter
 t = int(input())
 for _ in range(t):
@@ -6,7 +5,7 @@ for _ in range(t):
     start = []
     end = []
     for i in range(n):
-        first, last = map(int, input().split())
+        (first, last) = map(int, input().split())
         start.append((first, i))
         end.append((last, i))
     score = [0] * n

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         heap = []
         union_find = dict()
@@ -12,7 +13,6 @@ class Solution:
                 return node
             else:
                 return find_set(ufo[node], ufo)
-
         cost = 0
         n = 0
         while heap:
@@ -22,8 +22,7 @@ class Solution:
             if left_root != right_root:
                 cost += currEdge[0]
                 n += 1
-                if n == (len(points) - 1):
+                if n == len(points) - 1:
                     break
                 union_find[left_root] = right_root
-
         return cost

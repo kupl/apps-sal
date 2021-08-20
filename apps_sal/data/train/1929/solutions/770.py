@@ -4,57 +4,17 @@ class StreamChecker:
         self.waitlist = []
         self.trie = dict()
         for word in words:
-            # create a temporary dict based off our root dict object
             temp_dict = self.trie
             for letter in word:
-                # update our temporary dict and add our current letter and a sub-dictionary
-                # if key is not in dict, setdefault() will add {key:{}} and return default value {}
-                # otherwise it will directly return the existing value of key
                 temp_dict = temp_dict.setdefault(letter, dict())
-            # If our word is finished, add {'#': '#'} at the stopping node
             temp_dict['#'] = '#'
 
     def query(self, letter):
         waitlist = []
-        # if letter can be the prefix of word
         if letter in self.trie:
             waitlist.append(self.trie[letter])
-        # for each possible prefix, append letter if the new substr still can be a prefix
         for item in self.waitlist:
             if letter in item:
                 waitlist.append(item[letter])
-
         self.waitlist = waitlist
-        return any('#' in item for item in self.waitlist)
-
-#         self.words = defaultdict(str)
-#         self.querying = defaultdict(list)
-#         for word in words:
-#             if (len(word)>1):
-#                 self.words[word[0]] = word[1:]
-#             else:
-#                 self.words[word[0]] = \"\"
-#         print(self.words)
-
-#     def query(self, letter: str) -> bool:
-#         #need a new flag
-#         self.querying[letter] += self.words[letter]
-#         if (self.querying[letter] or letter in self.query.keys()):
-#             bucket = []
-#             print(self.querying[letter])
-#             for seq in self.querying[letter]:
-#                 print(seq)
-#                 if len(seq) == 1:
-#                     return True
-#                 elif seq[0] == letter:
-#                     bucket.append(letter)
-#                 elif len(seq)>1:
-#                     self.querying[seq[0]] += seq[1:]
-#             self.querying[letter] = bucket
-
-#         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('#' in item for item in self.waitlist))

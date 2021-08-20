@@ -1,4 +1,4 @@
-l, r, x, y = list(map(int, input().split()))
+(l, r, x, y) = list(map(int, input().split()))
 h = []
 a = 0
 if y % x < 1:
@@ -20,8 +20,8 @@ if y % x < 1:
     m = len(h)
     for i in range(1 << m):
         p = 1
-        for j, u in enumerate(h):
-            if(i >> j) & 1:
+        for (j, u) in enumerate(h):
+            if i >> j & 1:
                 p *= u
         a += l <= p <= r and l <= s // p <= r
 print(a)

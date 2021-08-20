@@ -1,4 +1,5 @@
 class Solution:
+
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
         MOD = 10 ** 9 + 7
 
@@ -11,6 +12,5 @@ class Solution:
             a = dp(i + 1, g - group[i], max(0, p - profit[i]))
             b = dp(i + 1, g, p)
             return (a + b) % MOD
-
         n = len(group)
         return dp(0, G, P)

@@ -30,11 +30,9 @@ for _ in range(t):
     for i in range(a, b + 1):
         if s[i] == r[i]:
             c += 1
-        else:
-            if c != 0:
-                gap.append(c)
-                c = 0
-    # print(gap,k,l)
+        elif c != 0:
+            gap.append(c)
+            c = 0
     gap.sort()
     for i in gap:
         k -= 1

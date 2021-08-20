@@ -1,7 +1,7 @@
 N = int(input())
 lsA = map(int, input().split())
 mainasu = 0
-minabs = 10**10
+minabs = 10 ** 10
 ls2 = []
 for i in lsA:
     if i < 0:

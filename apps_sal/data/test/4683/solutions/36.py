@@ -1,5 +1,5 @@
 N = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 A = list(map(int, input().split()))
 Asum = sum(A)
 ans = 0

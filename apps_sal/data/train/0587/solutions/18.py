@@ -8,5 +8,4 @@ def foo(n):
 
 
 data = list(map(foo, input().split()))
-
 print(' '.join(data))

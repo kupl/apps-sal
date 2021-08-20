@@ -1,4 +1,4 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 ryou = []
 for i in range(N):
     ryou.append(int(input()))

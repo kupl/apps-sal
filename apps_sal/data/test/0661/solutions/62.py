@@ -1,4 +1,4 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 ret = []
 if k >= 2 ** m or (m == 1 and k == 1):
     ret.append(-1)

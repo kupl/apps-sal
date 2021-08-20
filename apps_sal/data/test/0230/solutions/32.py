@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 A = 1234567
 MOD = 10000000000000007
 
@@ -16,20 +15,17 @@ def ok(length):
         if rolling_hash not in occurence:
             occurence[rolling_hash] = []
         occurence[rolling_hash].append(i)
-
     for key in occurence:
         if occurence[key][-1] - occurence[key][0] >= length:
             return True
     return False
 
 
-bottom, top = 0, n
-
+(bottom, top) = (0, n)
 while top - bottom > 1:
     mid = (top + bottom) // 2
     if ok(mid):
         bottom = mid
     else:
         top = mid
-
 print(bottom)

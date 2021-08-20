@@ -3,14 +3,14 @@ for t in range(int(input())):
     x = list(map(int, input().split()))
     if sum(x) == n:
         if n % 2:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')
     else:
         i = 0
         while x[i] == 1:
             i += 1
         if i % 2:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')

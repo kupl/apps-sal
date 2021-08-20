@@ -1,12 +1,10 @@
-
 def f(x):
     return x[1]
 
 
 L = [int(s) for s in input().split()]
-n, m = L[0], L[1]
+(n, m) = (L[0], L[1])
 Result = [[] for i in range(m)]
-
 for i in range(n):
     Name = [s for s in input().split()]
     region = int(Name[1]) - 1
@@ -17,7 +15,6 @@ for i in range(m):
     R.append(X[0][0])
     R.append(X[1][0])
     if len(X) > 2 and X[2][1] == X[1][1]:
-        print("?")
-
+        print('?')
     else:
-        print(" ".join(R))
+        print(' '.join(R))

@@ -2,7 +2,7 @@ import math
 for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     k = []
     for i in range(n):
         if p == arr[i]:

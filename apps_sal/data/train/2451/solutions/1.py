@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, ransomNote, magazine):
         """
         :type ransomNote: str
@@ -13,5 +14,4 @@ class Solution:
             if v == 0:
                 return False
             n[ord(c)] = v - 1
-
         return True

@@ -1,4 +1,5 @@
 class Exp:
+
     def __init__(self, s):
         self.a = 1
         self.p = 0
@@ -20,7 +21,7 @@ class Exp:
             self.a -= other.a
             return self
         else:
-            return Equ([self, Exp("-1") * other])
+            return Equ([self, Exp('-1') * other])
 
     def __mul__(self, other):
         self.p += other.p
@@ -33,17 +34,18 @@ class Exp:
         return self
 
     def __str__(self):
-        s = ""
+        s = ''
         if self.a != 0:
             s += str(self.a)
-        if (self.p) == 1:
+        if self.p == 1:
             s += 'x'
-        if s == "":
+        if s == '':
             s += '0'
         return s
 
 
 class Equ:
+
     def __init__(self, exp):
         self.exp = dict()
         for e in exp:
@@ -69,7 +71,7 @@ class Equ:
             if p in self.exp:
                 self.exp[p] -= other.exp[p]
             else:
-                self.exp[p] = Exp("-1") * other.exp[p]
+                self.exp[p] = Exp('-1') * other.exp[p]
         return self
 
     def __mul__(self, other):
@@ -101,13 +103,13 @@ class Equ:
         return self
 
     def __str__(self):
-        s = ""
+        s = ''
         for p in self.exp:
             s += ' (' + str(self.exp[p]) + ') +'
         return s[:-1]
 
     def get_power(self, p):
-        return self.exp[p] if p in self.exp else Exp("0") if p == 0 else Exp("0x")
+        return self.exp[p] if p in self.exp else Exp('0') if p == 0 else Exp('0x')
 
 
 def build1(s):
@@ -124,7 +126,7 @@ def build1(s):
             stack.append(s[i])
             j = i + 1
     stack.remove('!')
-    for i, x in enumerate(stack):
+    for (i, x) in enumerate(stack):
         if x not in ['+', '-', '*', '/', '(', ')', '!']:
             stack[i] = Exp(x)
     return stack
@@ -137,16 +139,12 @@ def build2(s):
         while s[start] != '(':
             start -= 1
         s = s[:start] + [build2(s[start + 1:end])] + s[end + 1:]
-    op = {'+': lambda x, y: x + y,
-          '-': lambda x, y: x - y,
-          '*': lambda x, y: x * y,
-          '/': lambda x, y: x.__div__(y)}
+    op = {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y, '/': lambda x, y: x.__div__(y)}
     i = 2
     for order in [0, 1]:
         i = 2
         while i < len(s):
-            if (order == 0 and s[i - 1] in ['*', '/']) \
-                    or (order == 1 and s[i - 1] in ['+', '-']):
+            if order == 0 and s[i - 1] in ['*', '/'] or (order == 1 and s[i - 1] in ['+', '-']):
                 s[i - 2] = op[s[i - 1]](s[i - 2], s[i])
                 s.pop(i)
                 s.pop(i - 1)
@@ -164,7 +162,7 @@ def build(s):
 
 
 def solve_for_x(equation):
-    l, r = equation.split(" = ")
-    l, r = build(l), build(r)
-    l, r = l.get_power(1) - r.get_power(1), r.get_power(0) - l.get_power(0)
+    (l, r) = equation.split(' = ')
+    (l, r) = (build(l), build(r))
+    (l, r) = (l.get_power(1) - r.get_power(1), r.get_power(0) - l.get_power(0))
     return r.a / l.a

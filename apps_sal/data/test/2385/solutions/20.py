@@ -1,28 +1,20 @@
 from collections import deque
-
-
 MOD = 10 ** 9 + 7
 
 
 def solve(n, edge_list):
-
-    # mod
     factorial = [1] * n
     for i in range(1, n):
-        factorial[i] = (factorial[i - 1] * i) % MOD
+        factorial[i] = factorial[i - 1] * i % MOD
     factorial_inv = [1] * n
     factorial_inv[-1] = pow(factorial[-1], MOD - 2, MOD)
     for i in range(n - 2, 0, -1):
-        factorial_inv[i] = (factorial_inv[i + 1] * (i + 1)) % MOD
-
-    # graph
+        factorial_inv[i] = factorial_inv[i + 1] * (i + 1) % MOD
     g = [[] for _ in range(n)]
     for i in range(n - 1):
-        a, b = edge_list[i]
+        (a, b) = edge_list[i]
         g[a].append(b)
         g[b].append(a)
-
-    # root 0
     order = []
     parent = [-1] * n
     parent[0] = 0
@@ -36,19 +28,14 @@ def solve(n, edge_list):
                 parent[q] = p
                 children[p].append(q)
                 queue.append(q)
-
-    # n_children
     count_children_res = [-1] * n
-
     for x in order[::-1]:
         if len(children[x]) == 0:
             count_children_res[x] = 0
         else:
             r = len(children[x]) + sum([count_children_res[y] for y in children[x]])
             count_children_res[x] = r
-
     assign_children_res = [-1] * n
-
     for x in order[::-1]:
         if len(children[x]) == 0:
             assign_children_res[x] = 1
@@ -59,44 +46,31 @@ def solve(n, edge_list):
                 r *= factorial_inv[count_children_res[y] + 1]
                 r %= MOD
             assign_children_res[x] = r
-
-    # reverse direction
     assign_parents_res = [-1] * n
     assign_parents_res[0] = 1
-
     for x in order[1:]:
         p = parent[x]
         r = assign_children_res[p]
         r *= pow(assign_children_res[x], MOD - 2, MOD)
         r *= factorial[count_children_res[x] + 1]
-
-        # r *= factorial[count_children_res[p] - count_children_res[x] - 1]
         r *= factorial_inv[count_children_res[p]]
-
         r *= assign_parents_res[p]
         r *= factorial[n - count_children_res[x] - 2]
-        # r *= factorial_inv[count_children_res[p] - count_children_res[x] - 1]
         r *= factorial_inv[n - count_children_res[p] - 1]
-
         r %= MOD
         assign_parents_res[x] = r
-
     res_list = [0] * n
     res_list[0] = assign_children_res[0]
-
     for i in range(1, n):
         res = factorial[n - 1]
-        # children
         for j in children[i]:
             res *= assign_children_res[j]
             res *= factorial_inv[count_children_res[j] + 1]
             res %= MOD
-        # parent
         res *= assign_parents_res[i]
         res *= factorial_inv[n - 1 - count_children_res[i]]
         res %= MOD
         res_list[i] = res
-    # print(res_list)
     return res_list
 
 
@@ -104,7 +78,7 @@ def main():
     n = int(input())
     edge_list = []
     for _ in range(n - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         edge_list.append((a - 1, b - 1))
     res_list = solve(n, edge_list)
     for res in res_list:
@@ -120,8 +94,6 @@ def test():
 
 def __starting_point():
     test()
-    # r_star = solve(200000, [(i, 0) for i in range(1, 200000)])
-    # print(1)
     main()
 
 

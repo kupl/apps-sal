@@ -7,4 +7,4 @@ def numericals(s):
         else:
             history[char] += 1
         result.append(history[char])
-    return "".join(map(str, result))
+    return ''.join(map(str, result))

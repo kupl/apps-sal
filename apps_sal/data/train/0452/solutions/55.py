@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], D: int) -> int:
         n = len(jobDifficulty)
         dp = [[float('inf')] * n + [0] for _ in range(D + 1)]

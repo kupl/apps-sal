@@ -1,7 +1,5 @@
 n = int(input())
-
 s = input()
-
 lst = []
 k = 0
 for x in range(n):
@@ -13,10 +11,8 @@ for x in range(n):
         k = 0
 if k != 0:
     lst.append(k)
-
 ans = 0
 for x in lst:
     if x >= 3:
         ans += x - 2
-
 print(ans)

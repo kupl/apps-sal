@@ -1,5 +1,5 @@
-n, d = int(input()), list(map(int, input().split()))
-a, b = map(int, input().split())
+(n, d) = (int(input()), list(map(int, input().split())))
+(a, b) = map(int, input().split())
 temp = min(a, b)
 b = max(a, b)
 a = temp

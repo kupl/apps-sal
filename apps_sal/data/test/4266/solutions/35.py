@@ -1,4 +1,4 @@
-K, X = map(int, input().split())
+(K, X) = map(int, input().split())
 first = X - K + 1
 second = X + K - 1
 if first < -1000000:

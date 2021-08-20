@@ -1,6 +1,6 @@
 def main():
     nums = list(map(int, input().split()))
-    for i, n in enumerate(nums):
+    for (i, n) in enumerate(nums):
         if n == 0:
             return i + 1
 

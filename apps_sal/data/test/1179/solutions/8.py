@@ -1,11 +1,11 @@
 def solve(n, k):
     tmp = 0
     i = 0
-    while (tmp < k):
+    while tmp < k:
         i += 1
         tmp += i
     tmp -= i
-    return (k - tmp - 1)
+    return k - tmp - 1
 
 
 data = input().split()

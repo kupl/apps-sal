@@ -6,8 +6,8 @@ readline = sys.stdin.readline
 def compress(L):
     L2 = list(set(L))
     L2.sort()
-    C = {v: k for k, v in enumerate(L2, 1)}
-    return L2, C
+    C = {v: k for (k, v) in enumerate(L2, 1)}
+    return (L2, C)
 
 
 def order(a, b, c, d):
@@ -25,34 +25,30 @@ for i in range(limit * 400):
     for j in range(2, limit):
         calc[i][j] = calc[i][j - 1] * (i - j + 1)
 pp = [[pow(i, j) for j in range(10)] for i in range(10)]
-
 N = int(readline())
 C = [tuple(map(int, readline().split())) for _ in range(N)]
 D = Counter()
-
-
 Rot = []
 for i in range(N):
-    a, b, c, d = C[i]
+    (a, b, c, d) = C[i]
     Rot.append((a, b, c, d))
     Rot.append((d, a, b, c))
     Rot.append((c, d, a, b))
     Rot.append((b, c, d, a))
-Lc, Cr = compress(Rot)
+(Lc, Cr) = compress(Rot)
 Lc = [None] + Lc
 Cc = []
-
 Od = Counter()
 Base = Counter()
 D = Counter()
 for i in range(N):
-    a, b, c, d = C[i]
-    a, b, c, d = min((a, b, c, d), (b, c, d, a), (c, d, a, b), (d, a, b, c))
+    (a, b, c, d) = C[i]
+    (a, b, c, d) = min((a, b, c, d), (b, c, d, a), (c, d, a, b), (d, a, b, c))
     od = order(a, b, c, d)
-    r1 = Cr[(a, b, c, d)]
-    r2 = Cr[(b, c, d, a)]
-    r3 = Cr[(c, d, a, b)]
-    r4 = Cr[(d, a, b, c)]
+    r1 = Cr[a, b, c, d]
+    r2 = Cr[b, c, d, a]
+    r3 = Cr[c, d, a, b]
+    r4 = Cr[d, a, b, c]
     Base[r1] = r1
     Base[r2] = r1
     Base[r3] = r1
@@ -63,16 +59,14 @@ for i in range(N):
     Od[r4] = od
     Cc.append((r1, r2, r3, r4))
     D[r1] += 1
-
-
 ans = 0
 for i in range(N):
     D[Cc[i][0]] -= 1
-    a, b, c, d = Lc[Cc[i][0]]
+    (a, b, c, d) = Lc[Cc[i][0]]
     for j in range(i + 1, N):
         D[Cc[j][0]] -= 1
         for idx in range(4):
-            e, f, g, h = Lc[Cc[j][idx]]
+            (e, f, g, h) = Lc[Cc[j][idx]]
             E = Counter()
             r1 = (b, e, h, c)
             if r1 not in Cr:
@@ -90,16 +84,13 @@ for i in range(N):
             if r4 not in Cr:
                 continue
             r4 = Base[Cr[r4]]
-
             E[r1] += 1
             E[r2] += 1
             E[r3] += 1
             E[r4] += 1
             res = 1
-            for k, n in list(E.items()):
+            for (k, n) in list(E.items()):
                 res *= calc[D[k]][n] * pp[Od[k]][n]
             ans += res
-
         D[Cc[j][0]] += 1
-
 print(ans)

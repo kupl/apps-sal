@@ -1,6 +1,5 @@
 n = int(input())
 N = n * n
-
 a = [1] * (N + 1)
 a[1] = 0
 i = 2
@@ -11,7 +10,6 @@ while i <= N:
             a[j] = 0
             j += i
     i += 1
-
 k = n
 while a[k] == 0:
     k += 1

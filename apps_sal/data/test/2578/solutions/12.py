@@ -3,13 +3,14 @@ input = sys.stdin.readline
 
 
 class Node:
+
     def __init__(self, val):
         self.parent = self
         self.size = 1
 
 
 def union(x, y):
-    xRoot, yRoot = find(x), find(y)
+    (xRoot, yRoot) = (find(x), find(y))
     if xRoot == yRoot:
         return
     if xRoot.size >= yRoot.size:
@@ -27,6 +28,7 @@ def find(x):
 
 
 class Problem:
+
     def __init__(self, In=sys.stdin, Out=sys.stdout):
         pass
 
@@ -34,10 +36,9 @@ class Problem:
         print(self._solve())
 
     def _solve(self):
-        n, m = [int(item) for item in sys.stdin.readline().strip().split()]
+        (n, m) = [int(item) for item in sys.stdin.readline().strip().split()]
         node = [Node(x) for x in range(n + 1)]
-        groups = [[int(item) for item in sys.stdin.readline().strip().split()]
-                  for _ in range(m)]
+        groups = [[int(item) for item in sys.stdin.readline().strip().split()] for _ in range(m)]
         for g in range(m):
             group = groups[g]
             k = group[0]
@@ -45,9 +46,8 @@ class Problem:
                 continue
             for i in range(2, k + 1):
                 union(node[group[i]], node[group[i - 1]])
-
         ans = [find(node[x]).size for x in range(1, n + 1)]
-        return ' '.join(str(x) for x in ans)
+        return ' '.join((str(x) for x in ans))
 
 
 def main():

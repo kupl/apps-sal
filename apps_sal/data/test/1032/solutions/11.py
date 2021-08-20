@@ -1,6 +1,6 @@
 import copy
 con = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
@@ -8,23 +8,17 @@ def getlist():
 
 
 def Binary_Search(N, P, A, dif):
-    # 初期化
     left = 0
     right = N - 1
     ansleft = dif
     ansright = -INF
-
-    # 二分探索
     while left <= right:
         mid = (left + right) // 2
-        jud = "Yes"
-
+        jud = 'Yes'
         B = copy.deepcopy(A)
         B.append(INF)
         for t in range(N):
             B[t] -= mid
-
-        # 尺取り
         array = [None] * N
         i = 0
         j = 0
@@ -33,36 +27,30 @@ def Binary_Search(N, P, A, dif):
                 j += 1
             else:
                 if (j - i) % P == 0:
-                    jud = "No"
+                    jud = 'No'
                     break
                 array[i] = j - i
                 i += 1
             if i >= N:
                 break
-
-        if jud == "Yes":
+        if jud == 'Yes':
             ansright = max(ansright, dif + mid)
             left = mid + 1
         else:
             right = mid - 1
-
-    return ansleft, ansright
-
-# 処理内容
+    return (ansleft, ansright)
 
 
 def main():
-    N, P = getlist()
+    (N, P) = getlist()
     A = getlist()
     A = sorted(A)
     dif = 0
-    # 配列の初期化
     for i in range(N):
         dif = max(dif, A[i] - i)
     for i in range(N):
         A[i] -= dif
-
-    L, R = Binary_Search(N, P, A, dif)
+    (L, R) = Binary_Search(N, P, A, dif)
     if R == -INF:
         print(0)
         print()

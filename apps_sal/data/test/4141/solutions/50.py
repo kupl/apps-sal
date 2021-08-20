@@ -7,5 +7,4 @@ for i in range(N):
     elif A[i] % 6 != 0 and A[i] % 10 != 0:
         ans = 'DENIED'
         break
-
 print(ans)

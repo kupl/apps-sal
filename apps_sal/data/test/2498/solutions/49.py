@@ -3,7 +3,7 @@ import math
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):
@@ -14,7 +14,7 @@ def lcm_list(numbers):
     return reduce(lcm_base, numbers, 1)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 a = [i // 2 for i in list(set(a))]
 nothing = False
@@ -30,7 +30,6 @@ for i in a:
     if cnt_common != cnt:
         nothing = True
         break
-
 b = lcm_list(a)
 if nothing:
     print(0)

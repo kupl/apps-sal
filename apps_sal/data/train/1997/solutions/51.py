@@ -1,13 +1,11 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         length = len(intervals)
         if length <= 1:
             return length
-
         temp = intervals[:]
-
-        i, j = 0, 1
-
+        (i, j) = (0, 1)
         while i < len(intervals) - 1:
             j = i + 1
             while j < len(intervals):
@@ -26,7 +24,6 @@ class Solution:
                 else:
                     j += 1
             i += 1
-
         return len(temp)
 
     def ainbHelper(self, a: List[int], b: List[int]) -> bool:

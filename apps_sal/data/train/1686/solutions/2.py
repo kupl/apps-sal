@@ -1,5 +1,4 @@
-# cook your dish here
-r, c, k = map(int, input().split())
+(r, c, k) = map(int, input().split())
 matrix = []
 for _ in range(r):
     matrix.append(list(map(int, input().split())))
@@ -36,7 +35,6 @@ for i in range(1, min(k + 1, r)):
                 left[i][j][1] = left[i][j - 1][1] + 1
             if left[i][j][1] > k:
                 left[i][j][0] -= up[i][j - k - 1][0]
-
 for i in range(min(k + 1, r), r):
     for j in range(1, min(k + 1, c)):
         if matrix[i][j] == 1:
@@ -48,7 +46,6 @@ for i in range(min(k + 1, r), r):
                 up[i][j][1] = up[i - 1][j][1] + 1
             if up[i][j][1] > k:
                 up[i][j][0] -= left[i - k - 1][j][0]
-
     for j in range(min(k + 1, c), c):
         if matrix[i][j] == 1:
             up[i][j][0] = up[i - 1][j][0] + left[i - 1][j][0]
@@ -61,10 +58,5 @@ for i in range(min(k + 1, r), r):
                 left[i][j][1] = left[i][j - 1][1] + 1
             if left[i][j][1] > k:
                 left[i][j][0] -= up[i][j - k - 1][0]
-'''
-for i in range(r):
-    print([el for el in up[i]])
-for i in range(r):
-    print([el[0] for el in left[i]])
-'''
+'\nfor i in range(r):\n    print([el for el in up[i]])\nfor i in range(r):\n    print([el[0] for el in left[i]])\n'
 print((up[-1][-1][0] + left[-1][-1][0]) % 20011)

@@ -3,7 +3,9 @@ import sys
 
 
 class FordFulkerson:
+
     class Edge:
+
         def __init__(self, to, cap, rev):
             self.to = to
             self.cap = cap
@@ -50,35 +52,28 @@ def solve(r, w):
     :param w:
     :return:
     """
-    num_cities, num_roads = list(map(int, input().split()))
+    (num_cities, num_roads) = list(map(int, input().split()))
     original = list(map(int, input().split()))
     result = list(map(int, input().split()))
-
     flow_ford = FordFulkerson(num_cities * 2 + 2)
     T = num_cities + 1
-
     for i in range(num_roads):
-        p, q = list(map(int, input().split()))
+        (p, q) = list(map(int, input().split()))
         flow_ford.add_edge(p, T + q - 1, 10 ** 9)
         flow_ford.add_edge(q, T + p - 1, 10 ** 9)
-
     for i in range(num_cities):
         flow_ford.add_edge(i + 1, T + i, 10 ** 9)
         flow_ford.add_edge(0, 1 + i, original[i])
         flow_ford.add_edge(T + i, 2 * num_cities + 1, result[i])
-
     ans = [[0 for i in range(num_cities)] for j in range(num_cities)]
     flow_ford.max_flow(0, 2 * num_cities + 1)
-
     for i in range(1, num_cities + 1):
         for v in flow_ford.G[i]:
             if v.to != 0:
                 ans[i - 1][v.to - T] = flow_ford.G[v.to][v.rev].cap
-
     if sum(original) != sum(result):
         print('NO')
         return
-
     if [sum([ans[i][j] for i in range(num_cities)]) for j in range(num_cities)] == result:
         print('YES')
         for a in ans:
@@ -86,10 +81,6 @@ def solve(r, w):
     else:
         print('NO')
 
-
-# -------
-# main
-# -------
 
 def __starting_point():
     solve(sys.stdin, sys.stdout)

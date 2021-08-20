@@ -1,11 +1,9 @@
-n, e = list(map(int, input().split()))
-#d=[[0]*(n+1) for _ in range(n+1)]
+(n, e) = list(map(int, input().split()))
 dl = {}
 for itr in range(1, n + 1):
     dl[itr] = set()
 for itr in range(e):
-    a1, a2 = list(map(int, input().split()))
-    # d[a1][a2]=1
+    (a1, a2) = list(map(int, input().split()))
     dl[a1].add(a2)
 ans = 0
 for i in range(1, n + 1):

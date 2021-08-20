@@ -1,10 +1,9 @@
-# cook your dish here
 def walk(n, m, o):
     a = 0
     b = 0
     tot = 0
     for i in range(n):
-        if((m[i] == o[i]) and (a == b)):
+        if m[i] == o[i] and a == b:
             tot += m[i]
         a += m[i]
         b += o[i]

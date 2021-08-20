@@ -1,6 +1,5 @@
-n, k, q = list(map(int, input().split()))
+(n, k, q) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 ans = 10 ** 18
 for x in A:
     B = []

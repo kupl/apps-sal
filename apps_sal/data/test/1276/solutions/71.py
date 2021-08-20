@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/09/07
 
 @author: harurun
-'''
+"""
 
 
 def main():
@@ -10,7 +10,6 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
     N = int(pin())
     S = pin()[:-1]
     r = 0
@@ -18,17 +17,17 @@ def main():
     b = 0
     cnt = 0
     for i in range(N):
-        if S[i] == "R":
+        if S[i] == 'R':
             r += 1
-        elif S[i] == "G":
+        elif S[i] == 'G':
             g += 1
-        elif S[i] == "B":
+        elif S[i] == 'B':
             b += 1
         for j in range(i + 1, N):
             k = 2 * j - i
             if k >= N:
                 continue
-            if S[i] != S[j] and S[j] != S[k] and S[k] != S[i]:
+            if S[i] != S[j] and S[j] != S[k] and (S[k] != S[i]):
                 cnt += 1
     print(r * g * b - cnt)
     return

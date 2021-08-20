@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = b - a
 for i in range(1, 999):
     x = (i + 1) * i // 2

@@ -1,5 +1,4 @@
 a = int(input())
 b = int(input())
 c = int(input())
-
-print(((b + a) * c) // 2)
+print((b + a) * c // 2)

@@ -1,6 +1,6 @@
 import math
 n = int(input())
-inf = float("inf")
+inf = float('inf')
 a = [inf]
 b = [inf]
 c = [inf]
@@ -9,28 +9,28 @@ ac = [inf]
 bc = [inf]
 abc = [inf]
 for i in range(n):
-    x, s = input().split()
+    (x, s) = input().split()
     x = int(x)
     s_ = []
     for j in s:
         s_.append(j)
     s = sorted(s_)
-    s = "".join(s)
-    if s == "A":
+    s = ''.join(s)
+    if s == 'A':
         a.append(x)
-    elif s == "B":
+    elif s == 'B':
         b.append(x)
-    elif s == "C":
+    elif s == 'C':
         c.append(x)
-    elif s == "AB":
+    elif s == 'AB':
         ab.append(x)
-    elif s == "AC":
+    elif s == 'AC':
         ac.append(x)
-    elif s == "BC":
+    elif s == 'BC':
         bc.append(x)
-    elif s == "ABC":
+    elif s == 'ABC':
         abc.append(x)
-ans = float("inf")
+ans = float('inf')
 a = min(a)
 b = min(b)
 c = min(c)

@@ -11,8 +11,6 @@ def gcd(x, y):
 
 
 ans = a[0]
-
 for i in range(n - 1):
     ans = ans * a[i] // fractions.gcd(ans, a[i])
-
-print((ans + 1))
+print(ans + 1)

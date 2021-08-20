@@ -1,14 +1,13 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
     ans = 0
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     i = [''] * N
     for _ in range(M):
-        s, c = input().split()
+        (s, c) = input().split()
         if i[int(s) - 1] != '' and i[int(s) - 1] != c:
             ans = -1
             break

@@ -7,11 +7,11 @@ def cnt(x1, y1, x2, y2):
     return ans
 
 
-h, w, n, kk = list(map(int, input().split()))
+(h, w, n, kk) = list(map(int, input().split()))
 anss = 0
 lst = [[0] * 20 for i in range(20)]
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     lst[x - 1][y - 1] = 1
 for i in range(h):
     for j in range(w):

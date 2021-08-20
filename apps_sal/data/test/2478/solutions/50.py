@@ -11,7 +11,7 @@ def add1(S):
             cum.append(cum[-1] - 1)
     if min(cum) >= 0:
         return S
-    out = '(' * (-min(cum))
+    out = '(' * -min(cum)
     out += S
     return out
 
@@ -23,7 +23,6 @@ def add2(S):
             cum.append(cum[-1] + 1)
         else:
             cum.append(cum[-1] - 1)
-
     if cum[-1] == 0:
         return S
     n = cum[-1]

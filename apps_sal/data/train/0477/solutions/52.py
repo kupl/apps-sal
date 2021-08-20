@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
+
         def helper(memo):
             ans = ''
             for c in memo:

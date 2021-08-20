@@ -1,5 +1,4 @@
 N = int(input())
-
 cards = [int(s) for s in input().split()]
 list.sort(cards, reverse=True)
 a_cards = cards[0::2]

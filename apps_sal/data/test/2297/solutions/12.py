@@ -10,6 +10,6 @@ def getsum(N):
 
 
 while Q != 0:
-    L, R = list(map(int, input().split()))
+    (L, R) = list(map(int, input().split()))
     print(getsum(R) - getsum(L - 1))
     Q -= 1

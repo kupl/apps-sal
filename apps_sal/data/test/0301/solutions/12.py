@@ -1,6 +1,5 @@
 import sys
-
-u, v = list(map(int, sys.stdin.readline().strip().split()))
+(u, v) = list(map(int, sys.stdin.readline().strip().split()))
 w = v - u
 if w % 2 == 1 or w < 0:
     print(-1)
@@ -14,7 +13,7 @@ else:
     w = w // 2
     if u & w == 0:
         print(2)
-        print(str(u + w) + " " + str(w))
+        print(str(u + w) + ' ' + str(w))
     else:
         print(3)
-        print(str(u) + " " + str(w) + " " + str(w))
+        print(str(u) + ' ' + str(w) + ' ' + str(w))

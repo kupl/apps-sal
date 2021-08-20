@@ -1,5 +1,4 @@
 from itertools import accumulate
-
 n = int(input())
 S = {'D': (0, -1), 'U': (0, 1), 'R': (1, 0), 'L': (-1, 0)}
 line = [S[c] for c in input()]

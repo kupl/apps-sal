@@ -1,8 +1,7 @@
-N, S = input().split()
-N, a = int(N), 0
-
+(N, S) = input().split()
+(N, a) = (int(N), 0)
 for i in range(N):
-    c1, c2 = 0, 0
+    (c1, c2) = (0, 0)
     for s in S[i:]:
         if s == 'A':
             c1 += 1

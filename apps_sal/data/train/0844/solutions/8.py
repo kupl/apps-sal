@@ -1,12 +1,9 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 arr = [True for i in range(n)]
-
 open = 0
-
 for i in range(k):
     temp = input().split()
-    if temp[0] == "CLICK":
+    if temp[0] == 'CLICK':
         cl = int(temp[1]) - 1
         if arr[cl]:
             open += 1
@@ -14,7 +11,6 @@ for i in range(k):
         else:
             open -= 1
             arr[cl] = True
-
     else:
         open = 0
         arr = [True for i in range(n)]

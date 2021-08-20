@@ -7,6 +7,6 @@ for i in range(3):
     if L[i] == 7:
         count7 += 1
 if count5 == 2 and count7 == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

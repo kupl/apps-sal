@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         moves = [-1, 0, 1]
 
@@ -16,5 +17,4 @@ class Solution:
                 new_position = position + delta
                 number_of_moves += count(s - 1, new_position)
             return number_of_moves
-
-        return count(steps) % (10**9 + 7)
+        return count(steps) % (10 ** 9 + 7)

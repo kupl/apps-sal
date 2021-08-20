@@ -4,7 +4,7 @@ for _ in range(int(input())):
     a.sort()
     b = []
     b.append(1)
-    t = 10**6
+    t = 10 ** 6
     used = [0] * (t + 1)
     used[1] = 1
     can_be = 2
@@ -15,7 +15,7 @@ for _ in range(int(input())):
     for i in range(1, n):
         for j in diffs:
             used[min(b[i - 1] + j, t)] = 1
-        while(used[can_be]):
+        while used[can_be]:
             can_be += 1
         b.append(can_be)
         used[can_be] = 1

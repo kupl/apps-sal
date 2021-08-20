@@ -3,5 +3,4 @@ def row_sum_odd_numbers(n):
     sum = 0
     for i in range(n):
         sum += start_number + i * 2
-
     return sum

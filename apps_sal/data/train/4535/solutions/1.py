@@ -1,8 +1,8 @@
 def zfunc(s):
     if s == '':
         return []
-    n, ans = len(s), [0] * len(s)
-    ans[0], i, j = n, 1, 0
+    (n, ans) = (len(s), [0] * len(s))
+    (ans[0], i, j) = (n, 1, 0)
     while i < n:
         while i + j < n and s[j] == s[i + j]:
             j += 1

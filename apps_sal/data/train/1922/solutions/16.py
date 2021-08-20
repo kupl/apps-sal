@@ -1,17 +1,10 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def helper(self, root):
         if not root:
             return 2
-
         left = self.helper(root.left)
         right = self.helper(root.right)
-
         if left == 0 or right == 0:
             self.count += 1
             return 1
@@ -21,6 +14,5 @@ class Solution:
             return 0
 
     def minCameraCover(self, root: TreeNode) -> int:
-
         self.count = 0
         return (self.helper(root) == 0) + self.count

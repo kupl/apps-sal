@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -18,4 +17,4 @@ for _ in range(t):
             v.append(a[j][i])
         ans.append(v)
     for ele in ans:
-        print("".join(ele))
+        print(''.join(ele))

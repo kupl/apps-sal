@@ -13,7 +13,7 @@ class SegmentTree:
         self.depth = (self.n - 1).bit_length()
         self.segment = (1 << self.depth) - 1
         self.tree = [identity] * (self.segment * 2 + 1)
-        self.tree[self.segment: self.n + self.segment] = a
+        self.tree[self.segment:self.n + self.segment] = a
         for i in range(self.segment - 1, -1, -1):
             self.tree[i] = self.f(self.tree[2 * i + 1], self.tree[2 * i + 2])
 
@@ -56,13 +56,13 @@ n = int(input())
 s = input()
 q = int(input())
 a = ord('a')
-segment_tree = SegmentTree([1 << (ord(c) - a) for c in s])
+segment_tree = SegmentTree([1 << ord(c) - a for c in s])
 for _ in range(q):
     query = input().split()
     if query[0] == '1':
         i = int(query[1]) - 1
         c = query[2]
-        segment_tree.update(i, 1 << (ord(c) - a))
+        segment_tree.update(i, 1 << ord(c) - a)
     else:
         l = int(query[1]) - 1
         r = int(query[2]) - 1

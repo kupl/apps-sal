@@ -1,10 +1,6 @@
-k, p = list(map(int, input().strip().split()))
-
-
+(k, p) = list(map(int, input().strip().split()))
 vsota = 0
-
 count = 0
-
 x = 1
 while True:
     u = int(str(x) + str(x)[::-1])

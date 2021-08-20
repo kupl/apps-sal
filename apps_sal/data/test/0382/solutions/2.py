@@ -1,14 +1,11 @@
 import re
 import bisect
-
-n, m, q = [int(v) for v in input().split()]
+(n, m, q) = [int(v) for v in input().split()]
 s = input().strip()
 t = input().strip()
-
 starts = [m.start() for m in re.finditer('(?=%s)' % t, s)]
-
 for _ in range(q):
-    l, r = [int(v) for v in input().split()]
+    (l, r) = [int(v) for v in input().split()]
     if r - l + 1 < len(t):
         print(0)
     else:

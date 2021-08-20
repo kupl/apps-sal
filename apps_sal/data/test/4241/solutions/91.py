@@ -1,6 +1,5 @@
 s = input()
 t = input()
-
 ans = len(t)
 for i in range(len(s) - len(t) + 1):
     cnt = 0

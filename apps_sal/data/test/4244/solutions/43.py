@@ -1,5 +1,4 @@
 import numpy as np
-
 n = int(input())
 x = list(map(int, input().split()))
 p = round(np.mean(x))

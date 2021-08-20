@@ -1,6 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
         current_ways = [1] * 10
         for i in range(1, n):
             prev = current_ways.copy()
@@ -14,5 +15,4 @@ class Solution:
             current_ways[7] = (prev[2] + prev[6]) % M
             current_ways[8] = (prev[1] + prev[3]) % M
             current_ways[9] = (prev[2] + prev[4]) % M
-
         return sum(current_ways) % M

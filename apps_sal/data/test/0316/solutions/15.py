@@ -1,6 +1,5 @@
-# coding: utf-8
 import sys
-sys.setrecursionlimit(int(1e7))
+sys.setrecursionlimit(int(10000000.0))
 
 
 def main():

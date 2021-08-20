@@ -1,23 +1,20 @@
 import sys
 input = sys.stdin.readline
-
-oo = 10**20
+oo = 10 ** 20
 n = int(input())
 a = list(map(int, input().split()))
 adj = [[] for _ in range(n)]
 for _ in range(n - 1):
-    u, v = [int(i) - 1 for i in input().split()]
+    (u, v) = [int(i) - 1 for i in input().split()]
     adj[u].append(v)
     adj[v].append(u)
 sm = [0] * n
 mx = [-oo] * n
 best = [-oo] * n
-
-
 stack = [(0, -1)]
 visit = [False] * n
 while stack:
-    u, p = stack[-1]
+    (u, p) = stack[-1]
     if not visit[u]:
         for v in adj[u]:
             if v != p:
@@ -38,7 +35,6 @@ while stack:
             cur = x[1] + x[2]
             best[u] = max(best[u], cur)
         stack.pop()
-
 ans = max(best)
 if ans <= -oo:
     print('Impossible')

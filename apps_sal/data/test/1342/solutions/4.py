@@ -9,7 +9,6 @@ def judge(lists, x):
             ans += t + 1
         else:
             return -1
-
     return ans
 
 
@@ -25,7 +24,6 @@ while True:
             elif judge(balls, minn // i) >= 0:
                 ans = judge(balls, minn // i)
                 break
-
         print(ans)
     except EOFError:
         break

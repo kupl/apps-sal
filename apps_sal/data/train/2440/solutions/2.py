@@ -1,4 +1,5 @@
 class Solution:
+
     def climbStairs(self, n):
         T = [1, 1]
         for i in range(2, n + 1):
@@ -18,11 +19,11 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        if (n in T):
+        if n in T:
             return T[n]
-        if (n < 0):
+        if n < 0:
             return 0
-        if (n < 2):
+        if n < 2:
             return 1
         T[n] = self.climbStairs(n - 2) + self.climbStairs(n - 1)
         return T[n]

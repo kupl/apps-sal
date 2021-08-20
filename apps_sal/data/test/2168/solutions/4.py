@@ -9,7 +9,6 @@ for i in range(n):
     g_max = max(g_max, max(t[1:]))
 for i in range(n):
     dic[i] = company[i][0] * (g_max - max(company[i][1:]))
-
 itr = sorted(list(dic.items()), key=itemgetter(1))
 res = 0
 for i in itr:

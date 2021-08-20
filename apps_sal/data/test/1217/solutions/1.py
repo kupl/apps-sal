@@ -1,9 +1,9 @@
 def bin_search(k):
     l = -1
     r = n - 1
-    while (r - l > 1):
+    while r - l > 1:
         h = (l + r) // 2
-        if (lst1[h] > k):
+        if lst1[h] > k:
             r = h
         else:
             l = h
@@ -13,7 +13,7 @@ def bin_search(k):
         return r
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 lst1 = [int(x) for x in input().split()]
 lst2 = [int(x) for x in input().split()]
 lst1.sort()

@@ -4,12 +4,12 @@ prod = 1
 max = 0
 c = 0
 for i in a:
-    if(i == 0):
+    if i == 0:
         prod = 1
         c = 0
     else:
         prod = prod * i
         c += 1
-        if(c > max):
+        if c > max:
             max = c
 print(max)

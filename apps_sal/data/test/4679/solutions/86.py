@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 
@@ -10,7 +9,6 @@ def main():
     A = input()
     B = input()
     C = input()
-
     w = 'a'
     while True:
         if w == 'a':

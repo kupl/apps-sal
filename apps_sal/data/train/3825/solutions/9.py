@@ -1,2 +1,5 @@
 from re import sub, I
-def filter_words(phrase): return sub("(bad|mean|ugly|horrible|hideous)", "awesome", phrase, 0, I)
+
+
+def filter_words(phrase):
+    return sub('(bad|mean|ugly|horrible|hideous)', 'awesome', phrase, 0, I)

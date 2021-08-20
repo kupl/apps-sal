@@ -3,7 +3,7 @@ s = input() + 'R'
 last = 'L'
 ix = -1
 cnt = 0
-for i, v in enumerate(s):
+for (i, v) in enumerate(s):
     if v == 'R':
         if last == 'L':
             cnt += i - ix - 1

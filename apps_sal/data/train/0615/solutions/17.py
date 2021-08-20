@@ -1,4 +1,3 @@
-# cook your dish here
 noofcases = int(input())
 for _ in range(noofcases):
     numqui = input().split()

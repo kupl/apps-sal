@@ -1,27 +1,27 @@
 for t in range(int(input())):
     a = input().split()
-    n, month = int(a[0]), a[1]
-    if month == "january":
+    (n, month) = (int(a[0]), a[1])
+    if month == 'january':
         d = n
-    elif month == "february":
+    elif month == 'february':
         d = n + 31
-    elif month == "march":
+    elif month == 'march':
         d = n + 60
-    elif month == "april":
+    elif month == 'april':
         d = n + 91
-    elif month == "may":
+    elif month == 'may':
         d = n + 121
-    elif month == "june":
+    elif month == 'june':
         d = n + 152
-    elif month == "july":
+    elif month == 'july':
         d = n + 182
-    elif month == "august":
+    elif month == 'august':
         d = n + 213
-    elif month == "september":
+    elif month == 'september':
         d = n + 244
-    elif month == "october":
+    elif month == 'october':
         d = n + 274
-    elif month == "november":
+    elif month == 'november':
         d = n + 305
     else:
         m = 12
@@ -30,26 +30,26 @@ for t in range(int(input())):
     if d == 0:
         d = 366
     if d <= 31:
-        print(d, "january")
+        print(d, 'january')
     elif d <= 60:
-        print(d - 31, "february")
+        print(d - 31, 'february')
     elif d <= 91:
-        print(d - 60, "march")
+        print(d - 60, 'march')
     elif d <= 121:
-        print(d - 91, "april")
+        print(d - 91, 'april')
     elif d <= 152:
-        print(d - 121, "may")
+        print(d - 121, 'may')
     elif d <= 182:
-        print(d - 152, "june")
+        print(d - 152, 'june')
     elif d <= 213:
-        print(d - 182, "july")
+        print(d - 182, 'july')
     elif d <= 244:
-        print(d - 213, "august")
+        print(d - 213, 'august')
     elif d <= 274:
-        print(d - 244, "september")
+        print(d - 244, 'september')
     elif d <= 305:
-        print(d - 274, "october")
+        print(d - 274, 'october')
     elif d <= 335:
-        print(d - 305, "november")
+        print(d - 305, 'november')
     else:
-        print(d - 335, "december")
+        print(d - 335, 'december')

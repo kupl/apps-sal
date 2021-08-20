@@ -39,12 +39,5 @@ class DinnerPlates:
         return -1
 
     def _clean(self):
-        while self.stacks and not self.stacks[-1]:
+        while self.stacks and (not self.stacks[-1]):
             self.stacks.pop()
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

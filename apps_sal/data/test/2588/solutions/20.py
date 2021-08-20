@@ -1,6 +1,6 @@
 test = int(input())
 for _ in range(test):
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     s = input()
     ans = a * n + b * (n + 1)
     for i in range(n):

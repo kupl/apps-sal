@@ -2,12 +2,10 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    n, k = map(int, readline().split())
-
+    (n, k) = map(int, readline().split())
     if k == 0:
-        print(n**2)
+        print(n ** 2)
     else:
         res = 0
         for b in range(1, n + 1):
@@ -18,7 +16,6 @@ def main():
                 l = n % b
                 res += (b - k) * m
                 res += max(0, l - k + 1)
-
         print(res)
 
 

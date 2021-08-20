@@ -12,7 +12,6 @@ def solve(N, M, T):
     ay = -1
     bx = -1
     by = -1
-
     for y in range(N):
         for x in range(M):
             if T[y][x] == 'B':
@@ -21,12 +20,11 @@ def solve(N, M, T):
                     ay = y
                 bx = x
                 by = y
-
     return ((ay + by) // 2 + 1, (ax + bx) // 2 + 1)
 
 
 def main():
-    N, M = [int(e) for e in inp().split()]
+    (N, M) = [int(e) for e in inp().split()]
     T = [inp() for _ in range(N)]
     print(*solve(N, M, T))
 

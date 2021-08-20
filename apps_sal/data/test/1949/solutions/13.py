@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = sorted(list(set(map(int, input().split()))))
 if 0 in a:
     a.remove(0)

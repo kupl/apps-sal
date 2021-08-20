@@ -1,10 +1,11 @@
 class Solution:
+
     @lru_cache(None)
     def countVowelPermutation(self, n: int) -> int:
         prevs = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
         for i in range(1, n):
             cur = defaultdict(int)
-            for prev, count in prevs.items():
+            for (prev, count) in prevs.items():
                 if prev == 'a':
                     cur['e'] += count
                 elif prev == 'e':
@@ -20,15 +21,4 @@ class Solution:
                     cur['a'] += count
             prevs = cur
         return sum(prevs.values()) % 1000000007
-        '''
-        vocals = ['aeiou']
-        arr = vocals * n
-        prods = list(map(\"\".join, itertools.product(*arr)))
-        count = 0
-        for prod in prods:
-            if \"aa\" in prod or \"ai\" in prod or \"ao\" in prod or \"au\" in prod or \"ee\" in prod or \"eo\" in prod or \"eu\" in prod or \"ii\" in prod or \"oa\" in prod or \"oe\" in prod or \"oo\" in prod or \"ue\" in prod or \"ui\" in prod or \"uo\" in prod or \"uu\" in prod:
-                continue
-            print(prod)
-            count += 1
-        return count%(10**9+7)
-        '''
+        '\n        vocals = [\'aeiou\']\n        arr = vocals * n\n        prods = list(map("".join, itertools.product(*arr)))\n        count = 0\n        for prod in prods:\n            if "aa" in prod or "ai" in prod or "ao" in prod or "au" in prod or "ee" in prod or "eo" in prod or "eu" in prod or "ii" in prod or "oa" in prod or "oe" in prod or "oo" in prod or "ue" in prod or "ui" in prod or "uo" in prod or "uu" in prod:\n                continue\n            print(prod)\n            count += 1\n        return count%(10**9+7)\n        '

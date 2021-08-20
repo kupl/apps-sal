@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[] for _ in range(n)]
-b = ""
-c = ""
+b = ''
+c = ''
 ans = 0
 for i in range(n):
     a[i] = list(input())
@@ -15,5 +15,5 @@ for i in range(n - m + 1):
         if c == b:
             ans += 1
             break
-        c = ""
-print("Yes" if ans > 0 else "No")
+        c = ''
+print('Yes' if ans > 0 else 'No')

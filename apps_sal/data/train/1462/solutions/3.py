@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
@@ -6,10 +5,10 @@ for _ in range(t):
     a = 'berhampore'
     b = 'serampore'
     if a in ss and b in ss:
-        print("Both")
+        print('Both')
     elif a in ss:
-        print("GCETTB")
+        print('GCETTB')
     elif b in ss:
-        print("GCETTS")
+        print('GCETTS')
     else:
-        print("Others")
+        print('Others')

@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseStr(self, s, k):
         """
         :type s: str
@@ -9,8 +10,8 @@ class Solution:
         i = 0
         c = 0
         strlen = len(s)
-        while(i < strlen):
-            if(c % 2):
+        while i < strlen:
+            if c % 2:
                 l.append(s[i:i + k])
             else:
                 temp = s[i:i + k]

@@ -8,6 +8,6 @@ for _ in range(t):
         odp = [0, 1] * n
         for i in range(n):
             if i < n - 1:
-                print("01", end="")
+                print('01', end='')
             else:
-                print("01")
+                print('01')

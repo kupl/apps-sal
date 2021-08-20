@@ -1,7 +1,7 @@
 def seven_generator(m):
     if m < 100:
         return
-    x, y = divmod(m, 10)
+    (x, y) = divmod(m, 10)
     nxt = x - 2 * y
     yield nxt
     yield from seven_generator(nxt)

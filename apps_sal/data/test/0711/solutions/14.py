@@ -1,7 +1,5 @@
-# D - Factorization
-
-N, M = map(int, input().split())
-MOD = 10**9 + 7
+(N, M) = map(int, input().split())
+MOD = 10 ** 9 + 7
 
 
 def prime_factorization(n):
@@ -23,7 +21,6 @@ def prime_factorization(n):
 fac = [1, 1]
 inv = [0, 1]
 finv = [1, 1]
-
 for i in range(2, N + 36):
     fac.append(fac[-1] * i % MOD)
     inv.append(MOD - inv[MOD % i] * (MOD // i) % MOD)
@@ -31,7 +28,7 @@ for i in range(2, N + 36):
 
 
 def comb_mod(n, r, m):
-    if (n < 0 or r < 0 or n < r):
+    if n < 0 or r < 0 or n < r:
         return 0
     r = min(r, n - r)
     return fac[n] * finv[n - r] * finv[r] % m
@@ -41,6 +38,5 @@ primes = prime_factorization(M)
 ans = 1
 if primes != 0:
     for (p, ex) in primes:
-        ans = (ans * comb_mod(ex + N - 1, N - 1, MOD)) % MOD
-
+        ans = ans * comb_mod(ex + N - 1, N - 1, MOD) % MOD
 print(ans)

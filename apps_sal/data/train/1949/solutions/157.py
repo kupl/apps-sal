@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         self.ret = 0
         self.grid = grid
@@ -12,7 +13,7 @@ class Solution:
         self.ret = max(self.ret, cur_gold)
         if (0 <= i < len(self.grid) and 0 <= j < len(self.grid[0])) and self.grid[i][j] != 0:
             gold = self.grid[i][j]
-            for m, n in [(-1, 0), (0, -1), (0, 1), (1, 0)]:
+            for (m, n) in [(-1, 0), (0, -1), (0, 1), (1, 0)]:
                 self.grid[i][j] = 0
                 self.dfs(i + m, j + n, cur_gold + gold)
                 self.grid[i][j] = gold

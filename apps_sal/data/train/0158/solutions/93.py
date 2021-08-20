@@ -1,4 +1,5 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
         q = collections.deque()
         visited = set()
@@ -14,15 +15,12 @@ class Solution:
                 if S[i] != B[i]:
                     break
                 i += 1
-
             for j in range(i + 1, len(S)):
                 if S[j] == B[i]:
-                    S[j], S[i] = S[i], S[j]
+                    (S[j], S[i]) = (S[i], S[j])
                     res.append(''.join(S))
-                    S[j], S[i] = S[i], S[j]
-
+                    (S[j], S[i]) = (S[i], S[j])
             return res
-
         while q:
             for _ in range(len(q)):
                 curr = q.popleft()
@@ -33,5 +31,4 @@ class Solution:
                         q.append(next_str)
                         visited.add(next_str)
             level += 1
-
         return -1

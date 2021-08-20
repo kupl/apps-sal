@@ -2,7 +2,7 @@ def inpmap():
     return list(map(int, input().split()))
 
 
-n, a, b = inpmap()
+(n, a, b) = inpmap()
 arr = list(input())
 s = 0 if a > b else 1
 ix = [a, b]

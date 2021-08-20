@@ -5,4 +5,3 @@ def house_numbers_sum(inp):
         if n == 0:
             break
     return r
-    # Flez

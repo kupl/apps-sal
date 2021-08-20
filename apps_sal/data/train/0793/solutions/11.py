@@ -5,7 +5,7 @@ def f(x):
     return int(fabs(x - r))
 
 
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 li = list(map(int, input().split()))
 li = list(map(f, li))
 for z in range(min(li), 0, -1):

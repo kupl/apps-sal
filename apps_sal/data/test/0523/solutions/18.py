@@ -1,20 +1,18 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 strings = []
 pal = []
 pairs = []
-
 for i in range(n):
     s = input()
     r = s[::-1]
     if s == r:
         pal.append(s)
+    elif r in strings:
+        pairs.insert(0, s)
+        pairs.append(r)
+        strings.remove(r)
     else:
-        if r in strings:
-            pairs.insert(0, s)
-            pairs.append(r)
-            strings.remove(r)
-        else:
-            strings.append(s)
+        strings.append(s)
 l = len(pairs)
 ans = ''
 for i in range(l // 2):

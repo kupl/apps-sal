@@ -1,4 +1,5 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         iterator = list(range(len(arr)))
         count = 0

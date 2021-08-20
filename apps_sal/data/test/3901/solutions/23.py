@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 list_ = list(map(int, input().split()))
 if 1 in list_:

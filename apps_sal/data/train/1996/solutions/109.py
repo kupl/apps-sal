@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         ans = []
         if len(graph) == 0:
@@ -17,8 +18,7 @@ class Solution:
         for neighbor in graph[i]:
             if status[neighbor] == 1:
                 return False
-            if status[neighbor] == 0 and not self.dfs(neighbor, graph, status, ans):
+            if status[neighbor] == 0 and (not self.dfs(neighbor, graph, status, ans)):
                 return False
-
         status[i] = 2
         return True

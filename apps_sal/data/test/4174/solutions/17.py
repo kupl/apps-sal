@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = [int(num) for num in input().split()]
 sum = 0
 cont = 1

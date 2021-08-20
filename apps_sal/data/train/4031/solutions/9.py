@@ -2,7 +2,7 @@ def interpreter(code, tape):
     pos = 0
     tape = list(map(int, list(tape)))
     pos_code = 0
-    while pos_code < len(code) and pos < len(tape) and pos > -1:
+    while pos_code < len(code) and pos < len(tape) and (pos > -1):
         instruction = code[pos_code]
         if instruction == '>':
             pos += 1
@@ -24,7 +24,6 @@ def interpreter(code, tape):
                         if open == 0:
                             pos_code = i
                             break
-
         elif instruction == ']':
             if tape[pos] != 0:
                 closed = 1

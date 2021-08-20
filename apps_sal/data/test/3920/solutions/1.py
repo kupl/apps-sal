@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
-def sq(x): return x * x
+def sq(x):
+    return x * x
 
 
 a = list(map(int, input().split()))

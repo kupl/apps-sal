@@ -1,8 +1,8 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 k = a
 l = b
-a2, a3, a5 = 0, 0, 0
-b2, b3, b5 = 0, 0, 0
+(a2, a3, a5) = (0, 0, 0)
+(b2, b3, b5) = (0, 0, 0)
 while k:
     if k % 2 == 0:
         a2 += 1
@@ -15,7 +15,6 @@ while k:
         k = k / 5
     else:
         break
-
 while l:
     if l % 2 == 0:
         b2 += 1

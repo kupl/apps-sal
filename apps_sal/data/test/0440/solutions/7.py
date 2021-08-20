@@ -1,8 +1,6 @@
 d = {'a', 'e', 'i', 'o', 'u', 'y'}
-
 n = int(input())
 s = list(input())
-
 found = -1
 while 1:
     found = -1
@@ -10,7 +8,7 @@ while 1:
         if s[i] in d and s[i + 1] in d:
             found = i + 1
             break
-    if (found == -1):
+    if found == -1:
         break
     s.pop(found)
-print(*s, sep="")
+print(*s, sep='')

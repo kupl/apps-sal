@@ -1,5 +1,5 @@
 t = int(input())
-while (t > 0):
+while t > 0:
     n = int(input())
     x = list(map(int, input().split()))
     max = []

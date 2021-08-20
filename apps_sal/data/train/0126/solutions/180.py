@@ -1,12 +1,13 @@
-'''
+"""
 uniq<=max
 len(sub)>=min and <=max
-'''
+"""
 
 
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
-        hash, w_hash, res = {}, {}, float('-inf')
+        (hash, w_hash, res) = ({}, {}, float('-inf'))
         self.initial_fill(s, minSize, hash)
         for i in range(0, len(s) - minSize + 1):
             if len(hash) <= maxLetters:

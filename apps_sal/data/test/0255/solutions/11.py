@@ -1,13 +1,11 @@
-
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
 m_skills = sorted(list(R()))
-
 m = int(input())
 w_skills = sorted(list(R()))
-
 N = max(m, n)
 j_list = []
 i_list = []
@@ -18,5 +16,4 @@ for i in range(n):
             j_list.append(j)
             res += 1
             break
-
 print(res)

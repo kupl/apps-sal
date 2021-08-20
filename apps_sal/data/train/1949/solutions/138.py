@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         n = len(grid)
         m = len(grid[0])
@@ -19,13 +20,10 @@ class Solution:
         if visited[i][j] == 0 and grid[i][j] != 0:
             visited[i][j] = 1
             neighbours = [[i + 1, j], [i - 1, j], [i, j + 1], [i, j - 1]]
-
             for neighbour in neighbours:
-                if neighbour[0] >= 0 and neighbour[0] < n and neighbour[1] >= 0 and neighbour[1] < m:
+                if neighbour[0] >= 0 and neighbour[0] < n and (neighbour[1] >= 0) and (neighbour[1] < m):
                     k = max(k, self.dfsUtil(grid, neighbour[0], neighbour[1], visited, m, n))
-
             visited[i][j] = 0
             return ct + k
-
         else:
             return 0

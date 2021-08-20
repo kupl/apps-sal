@@ -6,5 +6,5 @@ def pig_latin(s):
         s += 'w'
         i = 0
     else:
-        i = next((i for i, c in enumerate(s) if c in 'aeiou'), 0)
+        i = next((i for (i, c) in enumerate(s) if c in 'aeiou'), 0)
     return s[i:] + s[:i] + 'ay'

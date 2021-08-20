@@ -1,7 +1,6 @@
 n = int(input())
 hl = list(map(int, input().split()))
 hl[0] -= 1
-
 flag = True
 for i in range(1, n):
     if hl[i] > hl[i - 1]:
@@ -10,7 +9,6 @@ for i in range(1, n):
         continue
     else:
         flag = False
-
 if flag:
     print('Yes')
 else:

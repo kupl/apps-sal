@@ -4,4 +4,4 @@ def merge_arrays(first, second):
     third = []
     for y in a:
         third.append(y)
-    return(sorted(third))
+    return sorted(third)

@@ -3,5 +3,5 @@ def evenize_word(w):
 
 
 def evenator(s):
-    s = "".join(c for c in s if c.isspace() or c.isalnum())
-    return " ".join(evenize_word(w) for w in s.split())
+    s = ''.join((c for c in s if c.isspace() or c.isalnum()))
+    return ' '.join((evenize_word(w) for w in s.split()))

@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         pos_set = set()
         neg_set = set()
@@ -32,7 +33,6 @@ class Solution:
                     return False
                 else:
                     dict_[0] = 0
-
         for key in dict_:
             if dict_[key] != 0:
                 return False

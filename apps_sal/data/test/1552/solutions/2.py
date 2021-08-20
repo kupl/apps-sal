@@ -3,7 +3,7 @@ n = int(input())
 a = list(map(int, input().split()))
 for i in range(n):
     t[a[i] - 1].append(i + 1)
-m = 1e9
+m = 1000000000.0
 for i in t:
     m = min(len(i), m)
 print(m)

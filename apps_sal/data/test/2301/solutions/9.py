@@ -7,7 +7,6 @@ for i in range(n):
         res[i * 2 + 1] = arr[i]
     else:
         res[(i - n // 2) * 2] = arr[i]
-
 x = 0
 for i in range(1, n - 1):
     if res[i - 1] > res[i] < res[i + 1]:

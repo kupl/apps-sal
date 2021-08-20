@@ -1,12 +1,9 @@
 import sys
-
-N, T = list(map(int, sys.stdin.readline().rstrip().split()))
-
+(N, T) = list(map(int, sys.stdin.readline().rstrip().split()))
 As = []
 As = list(map(int, sys.stdin.readline().rstrip().split()))
-
 mins = []
-m = 1e10
+m = 10000000000.0
 vs = []
 for A in As:
     m = min(m, A)

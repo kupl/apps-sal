@@ -1,22 +1,14 @@
 def zozonacci(pattern, length):
-    if (pattern == [] or length == 0):
+    if pattern == [] or length == 0:
         return []
-
-    pattern_dict = {"fib": fibonacci,
-                    "jac": jacobsthal,
-                    "pad": padovan,
-                    "pel": pell,
-                    "tet": tetranacci,
-                    "tri": tribonacci}
+    pattern_dict = {'fib': fibonacci, 'jac': jacobsthal, 'pad': padovan, 'pel': pell, 'tet': tetranacci, 'tri': tribonacci}
     initial_pattern = pattern[0]
-
-    if (initial_pattern in ["fib", "jac", "pel", "tet", "tri"]):
+    if initial_pattern in ['fib', 'jac', 'pel', 'tet', 'tri']:
         resultList = [0, 0, 0, 1]
     else:
         resultList = [0, 1, 0, 0]
-    if (length < 4):
+    if length < 4:
         return resultList[:length]
-
     for x in range(length - 4):
         rule = pattern[x % len(pattern)]
         pattern_dict[rule](resultList)

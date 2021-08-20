@@ -1,13 +1,12 @@
 from operator import itemgetter
 n = int(input())
-abi = [[-10**9, 0]] + [list(map(int, input().split())) for i in range(n)]
+abi = [[-10 ** 9, 0]] + [list(map(int, input().split())) for i in range(n)]
 abi.sort(key=itemgetter(0))
 ar = [0] * (n + 1)
 ar[0] = 0
 
 
 def check(pos, num):
-    # print(pos,num)
     if abi[pos][0] < num:
         return True
     else:

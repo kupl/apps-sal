@@ -1,4 +1,4 @@
-N, R = map(int, input().split())
+(N, R) = map(int, input().split())
 if N > 9:
     print(R)
 else:

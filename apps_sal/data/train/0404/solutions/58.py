@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         memo = {}
 
@@ -16,5 +17,4 @@ class Solution:
                     avg = memo[key] + sum(nums[i:]) / (len(nums) - i)
                     max_avg = max(max_avg, avg)
                 return max_avg
-
         return fn(A, K)

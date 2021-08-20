@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getPower(num: int) -> int:
             if num == 1:
                 return 0

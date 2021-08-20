@@ -12,11 +12,8 @@ for a in array:
         new_array.append(-a - 1)
     else:
         new_array.append(a)
-
 if not is_even(len(array)):
     positive = min(new_array)
     k = new_array.index(positive)
-
     new_array = new_array[:k] + [-new_array[k] - 1] + new_array[k + 1:]
-
-print(" ".join(list(map(str, new_array))))
+print(' '.join(list(map(str, new_array))))

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -7,18 +5,10 @@ import heapq
 import time
 import itertools
 import sys
-
-"""
-created by shhuan at 2018/11/10 22:33
-
-"""
-
-
-N, M, L = list(map(int, input().split()))
+'\ncreated by shhuan at 2018/11/10 22:33\n\n'
+(N, M, L) = list(map(int, input().split()))
 A = [int(x) for x in input().split()]
-
 ans = 0
-
 i = 0
 while i < N:
     j = i
@@ -29,14 +19,12 @@ while i < N:
         i = j + 1
     else:
         i += 1
-
-
 for mi in range(M):
     line = input()
     if len(line) == 1:
         print(ans)
     else:
-        t, p, d = list(map(int, line.split()))
+        (t, p, d) = list(map(int, line.split()))
         prev = A[p - 1]
         A[p - 1] += d
         if prev <= L < A[p - 1]:

@@ -2,10 +2,10 @@ from bisect import bisect_left
 
 
 def can_make_tri(a, b, c):
-    return a < b + c and b < c + a and c < a + b
+    return a < b + c and b < c + a and (c < a + b)
 
 
-N, *L = list(map(int, open(0).read().split()))
+(N, *L) = list(map(int, open(0).read().split()))
 L.sort()
 ans = 0
 for i in range(N - 2):

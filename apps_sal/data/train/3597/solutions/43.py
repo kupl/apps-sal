@@ -1,9 +1,9 @@
 def say_hello(name, city, state):
-    res = "Hello, "
+    res = 'Hello, '
     for n in name:
-        res += n + " "
+        res += n + ' '
     res = res[:-1]
-    res += "! Welcome to "
-    res += city + ", "
-    res += state + "!"
+    res += '! Welcome to '
+    res += city + ', '
+    res += state + '!'
     return res

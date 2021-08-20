@@ -1,4 +1,3 @@
-# cook your dish here
 from itertools import accumulate
 list0 = list(map(int, input().split()))
 n = list0[0]
@@ -9,4 +8,4 @@ M = 1000000007
 for j in range(k):
     list1 = list(accumulate(list1))
 for i in list1:
-    print(i % M, end=" ")
+    print(i % M, end=' ')

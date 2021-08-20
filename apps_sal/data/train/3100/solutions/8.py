@@ -1,5 +1,5 @@
 def max_and_min(arr1, arr2):
-    mi, ma = float("inf"), -float("inf")
+    (mi, ma) = (float('inf'), -float('inf'))
     for x in arr1:
         for y in arr2:
             d = abs(x - y)

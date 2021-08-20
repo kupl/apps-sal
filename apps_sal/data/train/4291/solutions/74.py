@@ -7,5 +7,4 @@ def century(year):
         uno = year % 100
         if uno >= 1:
             siglo += 1
-
     return siglo

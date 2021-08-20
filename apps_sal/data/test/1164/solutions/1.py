@@ -1,5 +1,5 @@
 s = input()
-l = ''.join(list((map(lambda x: x if ord('0') <= ord(x) <= ord('9') or x == '.' else ' ', list(s)))))
+l = ''.join(list(map(lambda x: x if ord('0') <= ord(x) <= ord('9') or x == '.' else ' ', list(s))))
 
 
 def readnum(s):
@@ -14,15 +14,13 @@ def readnum(s):
 
 
 l = list(map(readnum, l.split()))
-a, b = (0, 0)
+(a, b) = (0, 0)
 for (x, y) in l:
     a += int(x)
     b += int(y)
 a += b // 100
 b = b % 100
-
 a = str(a)
-
 na = ''
 nd = 0
 for c in a[::-1]:
@@ -30,7 +28,6 @@ for c in a[::-1]:
         na = '.' + na
     na = c + na
     nd += 1
-
 print(na, end='')
 if b:
     print('.%02d' % b)

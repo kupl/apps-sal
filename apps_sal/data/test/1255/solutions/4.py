@@ -12,5 +12,4 @@ for i in range(n - 1):
     A.append(y)
     if res > maxx:
         maxx = res
-
 print(maxx)

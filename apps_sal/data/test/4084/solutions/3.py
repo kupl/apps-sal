@@ -1,5 +1,5 @@
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     f = a * (n // (a + b))
     l = n % (a + b)
     rest = 0

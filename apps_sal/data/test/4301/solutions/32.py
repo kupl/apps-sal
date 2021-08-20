@@ -1,4 +1,4 @@
-N, *D = map(int, open(0).read().split())
+(N, *D) = map(int, open(0).read().split())
 S = sorted(D, reverse=True)
 if S[1] == S[0]:
     [print(S[0]) for i in range(N)]

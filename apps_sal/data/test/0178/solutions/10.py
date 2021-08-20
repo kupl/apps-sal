@@ -5,7 +5,6 @@ def main():
     for i in range(n - 11 + 1):
         if s[i] == '8':
             eight += 1
-
     if eight > (n - 11) // 2:
         print('YES')
     else:

@@ -3,12 +3,10 @@ import math
 t = int(input())
 while t > 0:
     fp = 0
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
-
     for i in range(n):
         left = []
-
         arr = [0] * 2050
         for j in range(i, n):
             right = a[j]

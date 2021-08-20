@@ -1,8 +1,8 @@
 def compute():
-    n, m = [int(s) for s in input().split()]
+    (n, m) = [int(s) for s in input().split()]
     p = {}
     for i in range(m):
-        u, v = [int(s) for s in input().split()]
+        (u, v) = [int(s) for s in input().split()]
         if u > v:
             if p.get(u) == 2:
                 return 0
@@ -17,8 +17,8 @@ def compute():
                 return 0
             p[v] = 1
             p[u] = 2
-    div1, div2 = [], []
-    for k, v in list(p.items()):
+    (div1, div2) = ([], [])
+    for (k, v) in list(p.items()):
         if v == 1:
             div1.append(k)
         else:
@@ -40,7 +40,6 @@ def compute():
     div2_hardest = max(div2)
     if div2_hardest > div1_easiest:
         return 0
-
     res = 1
     for i in range(len(p_left)):
         if p_left[i] > div1_easiest:
@@ -49,7 +48,6 @@ def compute():
             pass
         else:
             res += 1
-
     return res
 
 

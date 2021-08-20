@@ -9,4 +9,4 @@ def around_fib(n):
     for v in str(fib[-1]):
         cnt[int(v)] += 1
     chunk = textwrap.wrap(str(fib[-1]), 25)
-    return "Last chunk " + chunk[-1] + "; Max is " + str(max(cnt)) + " for digit " + str(cnt.index(max(cnt)))
+    return 'Last chunk ' + chunk[-1] + '; Max is ' + str(max(cnt)) + ' for digit ' + str(cnt.index(max(cnt)))

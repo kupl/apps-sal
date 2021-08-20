@@ -1,7 +1,5 @@
-
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 result = m * n - sum(a)
 
 
@@ -14,4 +12,4 @@ def show_result():
         return 0
 
 
-print((show_result()))
+print(show_result())

@@ -14,7 +14,7 @@ def reads():
 
 
 S = input()
-x, y = reads()
+(x, y) = reads()
 qs = [len(s) for s in S.split('T')]
 
 
@@ -26,4 +26,4 @@ def knapsack(xs, target):
 
 
 ans = knapsack(qs[2::2], x - qs[0]) and knapsack(qs[1::2], y)
-print("Yes" if ans else "No")
+print('Yes' if ans else 'No')

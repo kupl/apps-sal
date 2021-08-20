@@ -1,4 +1,5 @@
 class Solution:
+
     def findLUSlength(self, a, b):
         """
         :type a: str
@@ -9,8 +10,7 @@ class Solution:
         n = len(b)
         if m != n:
             return max(m, n)
+        elif a != b:
+            return m
         else:
-            if a != b:
-                return m
-            else:
-                return -1
+            return -1

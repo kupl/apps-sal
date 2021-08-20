@@ -1,5 +1,4 @@
 MOD = 998244353
-
 fact = [1]
 curr = 1
 for i in range(1, 6 * 10 ** 5):
@@ -12,7 +11,7 @@ def inv(x):
     return pow(x, MOD - 2, MOD)
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 out = 0
 for i in range(1, n + 1):
     count = n // i - 1

@@ -1,4 +1,5 @@
 class HandleException:
+
     def __init__(self, func, failure, exceptions):
         self.target = func
         self.failure = failure

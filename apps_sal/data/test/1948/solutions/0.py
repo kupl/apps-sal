@@ -1,12 +1,11 @@
 from collections import deque
 from sys import stdin
-
-n, x = map(int, stdin.readline().split())
+(n, x) = map(int, stdin.readline().split())
 leafs = set(range(n))
 graph = [[] for i in range(n)]
 count = [False for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, stdin.readline().split())
+    (a, b) = map(int, stdin.readline().split())
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
     if not count[a - 1]:

@@ -1,27 +1,23 @@
 class Solution:
+
     def rec(self, i, m, t):
         if self.memo[i][m][t] != -1:
             return self.memo[i][m][t]
-
         if i == self.n:
             return 0
-
         if t == 0:
-            res, now = 0, 0
-
+            (res, now) = (0, 0)
             for j in range(2 * m):
                 if i + j >= self.n:
                     break
                 now += self.piles[i + j]
                 res = max(res, now + self.rec(i + j + 1, max(m, j + 1), 1))
         else:
-            res = 10**18
-
+            res = 10 ** 18
             for j in range(2 * m):
                 if i + j >= self.n:
                     break
                 res = min(res, self.rec(i + j + 1, max(m, j + 1), 0))
-
         self.memo[i][m][t] = res
         return res
 

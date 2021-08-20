@@ -7,7 +7,7 @@ def f(n):
     return ans
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a = sorted(a)
 ans = f(n - m) // f(a[0] - 1)

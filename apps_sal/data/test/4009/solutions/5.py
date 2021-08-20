@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 s = input().strip()
 ans = 0
 for i in range(x):

@@ -4,7 +4,6 @@ def reverse_list(l):
     index = -1
     print('len = ', length)
     print('reversed_list = ', reversed_list)
-
     for i in l:
         print(l[index])
         reversed_list.append(l[index])

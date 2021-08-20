@@ -9,9 +9,8 @@ def ulam_sequence(u0, u1, n):
             if n not in sums:
                 sums.add(n)
                 unique_sums.add(n)
-            else:
-                if n in unique_sums:
-                    unique_sums.remove(n)
+            elif n in unique_sums:
+                unique_sums.remove(n)
         unique_sums.remove(next_num)
         sequence.append(next_num)
     sequence.append(min(unique_sums))

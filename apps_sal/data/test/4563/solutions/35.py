@@ -7,12 +7,10 @@ def eceil(x, y):
 
 
 prev = ballots[0]
-
 for i in range(1, N):
-    m, n = ballots[i]
+    (m, n) = ballots[i]
     k = max(eceil(prev[0], m), eceil(prev[1], n))
     tot = k * (m + n)
     prev[0] = tot * m // (m + n)
     prev[1] = tot * n // (m + n)
-    # print(m,n,k,tot,prev)
-print((sum(prev)))
+print(sum(prev))

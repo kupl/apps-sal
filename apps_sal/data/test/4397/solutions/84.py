@@ -1,2 +1,2 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 print(n - p + 1)

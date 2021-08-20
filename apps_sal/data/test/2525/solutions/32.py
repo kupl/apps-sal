@@ -2,14 +2,13 @@ from collections import deque
 S = deque()
 S.extend(list(input()))
 F = True
-
 for _ in range(int(input())):
-    p, *q = input().split()
+    (p, *q) = input().split()
     if p == '1':
-        F = not(F)
+        F = not F
     else:
         c = q[1]
-        if (q[0] == '1' and F) or (q[0] == '2' and not(F)):
+        if q[0] == '1' and F or (q[0] == '2' and (not F)):
             S.appendleft(c)
         else:
             S.append(c)

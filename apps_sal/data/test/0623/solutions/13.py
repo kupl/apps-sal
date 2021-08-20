@@ -1,5 +1,5 @@
 import math
-x, y = (int(z) for z in input().split())
+(x, y) = (int(z) for z in input().split())
 a = min(x, y)
 b = max(x, y)
 

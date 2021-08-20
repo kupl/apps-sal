@@ -10,7 +10,7 @@ def solve(a, b):
 def main():
     T = int(input())
     for _ in range(T):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         print(solve(a, b))
 
 

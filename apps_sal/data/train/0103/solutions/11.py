@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, m = read_ints()
+    (n, m) = read_ints()
     a = []
     for i in range(n):
         a.append(list(read_ints()))
@@ -22,4 +22,4 @@ for case_num in range(t):
                 if j in col:
                     col.remove(j)
     lo = min(len(row), len(col))
-    print("Ashish" if lo % 2 == 1 else "Vivek")
+    print('Ashish' if lo % 2 == 1 else 'Vivek')

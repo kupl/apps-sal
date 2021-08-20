@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     b = list(map(int, input().split()))
     a = [0] * (n + 1)
     for i in range(n):
@@ -9,11 +9,10 @@ def main():
             a[i] += a[i - 1]
         a[i] %= k
     for i in range(1, n + 1):
-        a[i] = (a[i] - (i % k) + k) % k
+        a[i] = (a[i] - i % k + k) % k
     dic = {}
     ans = 0
-    l, r = 0, 0
-#    print(a)
+    (l, r) = (0, 0)
     while r < n + 1:
         x = a[r]
         if k <= r - l:
@@ -24,7 +23,6 @@ def main():
             dic[x] += 1
         else:
             dic[x] = 1
-#        print(l, r)
         r += 1
     print(ans)
 

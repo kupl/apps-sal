@@ -6,7 +6,7 @@ def main():
     a = [0] * n
     b = [0] * n
     for i in range(n):
-        a[i], b[i] = list(map(int, input().split()))
+        (a[i], b[i]) = list(map(int, input().split()))
     ans = median(b) - median(a)
     if n % 2 == 0:
         ans *= 2

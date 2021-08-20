@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 H = list(map(int, input().split()))
 count = 0
 for h in H:

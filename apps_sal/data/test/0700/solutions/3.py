@@ -4,7 +4,7 @@ def solve(board):
     for i in range(n):
         for j in range(n):
             if board[i][j] is 'X':
-                ans += 2**(i * n + j)
+                ans += 2 ** (i * n + j)
     return ans
 
 
@@ -50,12 +50,10 @@ s = set()
 s.add(solve(arr1))
 add_rotations(arr1, s)
 l1 = len(s)
-# print(s,arr1,arr2)
 s.add(solve(arr2))
 add_rotations(arr2, s)
-# print(s)
 l2 = len(s)
 if l1 == l2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

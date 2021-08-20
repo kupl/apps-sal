@@ -4,7 +4,7 @@ b = 0
 flag = True
 t = set(list('qwertyuioplkjhgfdsazxcvbnm'))
 for i in range(n):
-    op, w = list(map(str, input().split()))
+    (op, w) = list(map(str, input().split()))
     w = set(list(w))
     if op == '!':
         t &= w

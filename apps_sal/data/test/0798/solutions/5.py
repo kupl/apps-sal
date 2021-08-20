@@ -1,7 +1,7 @@
 v = [[0] * 2 for i in range(3)]
 for i in range(3):
     v[i][1] = i
-v[0][0], v[1][0], v[2][0] = map(int, input().split())
+(v[0][0], v[1][0], v[2][0]) = map(int, input().split())
 ways = [[0] * 3 for i in range(3)]
 v.sort(reverse=True)
 cord = [0] * 3

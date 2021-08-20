@@ -1,8 +1,8 @@
 class Solution:
+
     def findCircleNum(self, M):
         size = len(M)
         parents = list(range(size))
-        # print(parents)
         res = size
         for i in range(size):
             for j in range(i + 1, size):

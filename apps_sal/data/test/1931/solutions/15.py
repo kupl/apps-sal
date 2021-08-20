@@ -3,11 +3,10 @@ arr = []
 n = 1
 while 1:
     v = n * (n + 1) // 2 * 3 - n
-    if v > 10**9:
+    if v > 10 ** 9:
         break
     arr.append(v)
     n += 1
-
 T = int(input())
 for _ in range(T):
     N = int(input())

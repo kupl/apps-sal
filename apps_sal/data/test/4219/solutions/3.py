@@ -4,16 +4,15 @@ for i in range(n):
     a = int(input())
     s_i = []
     for j in range(a):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         s_i.append([x - 1, y])
     s.append(s_i)
-
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     honest = [0] * n
-    skip = False  # 矛盾があるときTrue
+    skip = False
     for j in range(n):
-        if ((i >> j) & 1):
+        if i >> j & 1:
             honest[j] = 1
     for j in range(n):
         if honest[j] == 1:

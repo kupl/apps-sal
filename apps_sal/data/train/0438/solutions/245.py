@@ -1,7 +1,6 @@
 class UnionFind:
 
     def __init__(self, n):
-        # every node's parent is itself
         self.parents = list(range(n))
         self.ranks = [0] * n
 
@@ -11,33 +10,28 @@ class UnionFind:
         return self.parents[u]
 
     def union(self, u, v):
-        pu, pv = self.find(u), self.find(v)
-
+        (pu, pv) = (self.find(u), self.find(v))
         if pu == pv:
             return
-
         if self.ranks[pu] > self.ranks[pv]:
             self.parents[pv] = pu
             self.ranks[pu] += self.ranks[pv]
-
         elif self.ranks[pv] > self.ranks[pu]:
             self.parents[pu] = pv
             self.ranks[pv] += self.ranks[pu]
-
         else:
             self.parents[pu] = pv
             self.ranks[pv] += self.ranks[pu]
 
 
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
-        n, ans = len(arr), -1
-        uf = UnionFind(n)
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
+        (n, ans) = (len(arr), -1)
+        uf = UnionFind(n)
         if m == n:
             return m
-
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             uf.ranks[i] = 1
             for j in (i - 1, i + 1):
@@ -46,5 +40,4 @@ class Solution:
                         ans = step
                     if uf.ranks[j]:
                         uf.union(i, j)
-
         return ans

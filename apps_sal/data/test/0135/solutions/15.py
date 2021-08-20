@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, k = input().strip().split()
+    (n, k) = input().strip().split()
     n = int(n)
     k = int(k)
     a = {}

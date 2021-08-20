@@ -1,2 +1,2 @@
 def whitespace(string):
-    return string.strip() == ""
+    return string.strip() == ''

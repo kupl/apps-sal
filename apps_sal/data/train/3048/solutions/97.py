@@ -9,4 +9,4 @@ def alternateCase(s):
             res.append(x.upper())
         else:
             res.append(x)
-    return "".join(res)
+    return ''.join(res)

@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 D = {}
 for a in A:
@@ -6,14 +6,12 @@ for a in A:
         D[a] += 1
     else:
         D[a] = 1
-
 for i in range(M):
-    B, C = map(int, input().split())
+    (B, C) = map(int, input().split())
     if C in D:
         D[C] += B
     else:
         D[C] = B
-
 K = sorted(D.keys(), reverse=True)
 ans = 0
 cnt = N

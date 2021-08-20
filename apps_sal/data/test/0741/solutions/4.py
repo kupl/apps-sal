@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 gar = []
 shadow = []
@@ -23,7 +23,7 @@ if n % 2 == 0:
 else:
     n = n // 2 + 1
 for i in range(n):
-    if i != n - 1:  # !!!!!!!!!
+    if i != n - 1:
         teclight += gar[i]
         light -= gar[i]
         if gar[i] > 1:
@@ -34,16 +34,15 @@ for i in range(n):
         if shadow[i] > 1:
             newlight = teclight + shadow[i] - 1 + dark
             lightmax = max(lightmax, newlight)
-    else:
-        if len(shadow) == n:
-            teclight += gar[i]
-            light -= gar[i]
-            if gar[i] > 1:
-                newlight = teclight - 1 + dark
-                lightmax = max(lightmax, newlight)
-            tecdark += shadow[i]
-            dark -= shadow[i]
-            if shadow[i] > 1:
-                newlight = teclight + shadow[i] - 1 + dark
-                lightmax = max(lightmax, newlight)
+    elif len(shadow) == n:
+        teclight += gar[i]
+        light -= gar[i]
+        if gar[i] > 1:
+            newlight = teclight - 1 + dark
+            lightmax = max(lightmax, newlight)
+        tecdark += shadow[i]
+        dark -= shadow[i]
+        if shadow[i] > 1:
+            newlight = teclight + shadow[i] - 1 + dark
+            lightmax = max(lightmax, newlight)
 print(lightmax)

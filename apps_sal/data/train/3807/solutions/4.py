@@ -9,4 +9,4 @@ def smaller(arr):
         a.append(counter)
         counter = 0
         arr.remove(arr[0])
-    return(a)
+    return a

@@ -1,11 +1,11 @@
-
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
-        R, C = len(grid), len(grid[0])
+        (R, C) = (len(grid), len(grid[0]))
         self.O = 0
 
         def check(r, c, Z):
-            if -1 < r < R and -1 < c < C and (r, c) not in Z:
+            if -1 < r < R and -1 < c < C and ((r, c) not in Z):
                 return True
             return False
 
@@ -24,7 +24,6 @@ class Solution:
                 if check(r, c - 1, Z + [(r, c)]) == True:
                     bt(r, c - 1, res + a, Z + [(r, c)])
                 return
-
         for i in range(R):
             for j in range(C):
                 if grid[i][j] != 0:

@@ -8,14 +8,13 @@ def li():
     return list(map(int, input().split()))
 
 
-# https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
 def modInverse(a, m):
     m0 = m
     y = 0
     x = 1
-    if (m == 1):
+    if m == 1:
         return 0
-    while (a > 1):
+    while a > 1:
         q = a // m
         t = m
         m = a % m
@@ -23,7 +22,7 @@ def modInverse(a, m):
         t = y
         y = x - q * y
         x = t
-    if (x < 0):
+    if x < 0:
         x = x + m0
     return x
 
@@ -37,12 +36,12 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
-l, r = num()
-print("YES")
+(l, r) = num()
+print('YES')
 for i in range(l, r + 1, 2):
     print(i, i + 1)

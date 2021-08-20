@@ -8,7 +8,6 @@ for i in range(1, int(math.sqrt(N - 1)) + 1):
     else:
         i += 1
 a -= 1
-
 if int(math.sqrt(N - 1)) == math.sqrt(N - 1):
     a -= 1
 for i in range(2, int(math.sqrt(N)) + 1):

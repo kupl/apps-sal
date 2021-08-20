@@ -3,5 +3,5 @@ def remove_smallest(numbers):
     if len(numbers) >= 1:
         result.remove(min(numbers))
     else:
-        return ([])
+        return []
     return result

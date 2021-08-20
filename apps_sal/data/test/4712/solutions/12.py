@@ -1,7 +1,7 @@
-h, w = map(int, input().split())
-print("#" * (w + 2))
+(h, w) = map(int, input().split())
+print('#' * (w + 2))
 for i in range(h):
     a = str(input())
-    a = "#" + a + "#"
+    a = '#' + a + '#'
     print(a)
-print("#" * (w + 2))
+print('#' * (w + 2))

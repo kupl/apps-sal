@@ -5,5 +5,5 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-n, k = list(map(int, input().split()))
-print(n // gcd(n, 10**k) * 10 ** k)
+(n, k) = list(map(int, input().split()))
+print(n // gcd(n, 10 ** k) * 10 ** k)

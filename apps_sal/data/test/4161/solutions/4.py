@@ -15,5 +15,4 @@ for a in range(1, K + 1):
         d = gcd(a, b)
         for c in range(1, K + 1):
             ans += gcd(c, d)
-
 print(ans)

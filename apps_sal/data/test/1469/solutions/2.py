@@ -8,11 +8,11 @@ def main():
     edges = list()
     for i in range(1, N):
         edges.append((i, i + 1, 0))
-        edges.append((i, i + 1, 2**(i - 1)))
+        edges.append((i, i + 1, 2 ** (i - 1)))
     for t in range(N - 1, 0, -1):
-        if L - 2**(t - 1) >= 2**r:
-            edges.append((t, N, L - 2**(t - 1)))
-            L -= 2**(t - 1)
+        if L - 2 ** (t - 1) >= 2 ** r:
+            edges.append((t, N, L - 2 ** (t - 1)))
+            L -= 2 ** (t - 1)
     print('{} {}'.format(N, len(edges)))
     for e in edges:
         print(' '.join(map(str, e)))

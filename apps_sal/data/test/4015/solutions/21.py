@@ -1,4 +1,4 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 can = True
 if m % n != 0:
     can = False

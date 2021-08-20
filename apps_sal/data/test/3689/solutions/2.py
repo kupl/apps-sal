@@ -1,8 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-
 num = s[:k] * (n // k) + s[:n % k]
-
 print(n)
 if s <= num:
     print(num)

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 b = [0]
@@ -15,4 +15,4 @@ b.append(d)
 b.sort()
 for i in range(len(b) - 1):
     b[i + 1] += b[i]
-print((b[max(0, c - k)]))
+print(b[max(0, c - k)])

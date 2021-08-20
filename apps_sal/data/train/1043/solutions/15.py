@@ -1,8 +1,6 @@
-# cook your dish here
 t = int(input())
-
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = []
     l1 = list(map(str, input().split()))
     for i in range(k):
@@ -10,8 +8,7 @@ for i in range(t):
         l = l + l2
     for a in l1:
         if a in l:
-            print("YES", end=" ")
+            print('YES', end=' ')
         else:
-            print("NO", end=" ")
-
+            print('NO', end=' ')
     print()

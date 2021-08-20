@@ -17,12 +17,9 @@ def interpreter(tape):
             stack[-1] += 1
         if tape[index] == '-':
             stack[-1] -= 1
-
         stack[-1] %= 256
-
         if tape[index] == '*':
             output += chr(stack[-1])
-
         if tape[index] == '[':
             if stack[-1] == 0:
                 i = index + 1
@@ -41,7 +38,5 @@ def interpreter(tape):
                         break
                     i -= 1
                 continue
-
         index += 1
-
     return output

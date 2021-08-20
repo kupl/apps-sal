@@ -1,6 +1,6 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 S = input()
 if S.count('-') == 1 and S[A] == '-':
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

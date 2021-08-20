@@ -1,8 +1,6 @@
-'''input
+"""input
 4
-'''
-
-
+"""
 from math import sqrt
 
 
@@ -26,7 +24,6 @@ for i in range(1, n + 1, 2):
     a.append(i)
 for i in range(2, n + 1, 2):
     a.append(i)
-
 print(len(a))
 for i in a:
     print(i, end=' ')

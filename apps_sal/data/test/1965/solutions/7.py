@@ -15,7 +15,7 @@ def intinp():
 
 
 def solution():
-    n, x = mulinp()
+    (n, x) = mulinp()
     a = arrinp()
     if len(set(a)) == 1:
         if a[0] == x:
@@ -35,7 +35,6 @@ def solution():
         print(1)
     else:
         print(2)
-
     return
 
 

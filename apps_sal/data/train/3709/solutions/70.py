@@ -4,4 +4,4 @@ def simple_multiplication(a):
             b = a * 9
         else:
             b = a * 8
-    return(b)
+    return b

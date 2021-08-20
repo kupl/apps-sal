@@ -15,8 +15,7 @@ def f(level, offset):
     return ret
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-
 memo = {}
-print((f(k, 0)))
+print(f(k, 0))

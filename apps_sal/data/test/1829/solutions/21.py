@@ -1,6 +1,4 @@
-#autor @ShymCoder
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 b = []
 for i in range(n + m):
@@ -11,8 +9,7 @@ if len(b) % 2 == 1:
         print('YES')
     else:
         print('NO')
+elif n <= m:
+    print('NO')
 else:
-    if n <= m:
-        print('NO')
-    else:
-        print('YES')
+    print('YES')

@@ -1,14 +1,18 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
 a = [input() for i in range(n)]
-def f(x): return x * (x - 1) // 2
+
+
+def f(x):
+    return x * (x - 1) // 2
 
 
 cnt = 0
 for i in range(n):
     k1 = a[i].count('C')
-    k2 = sum(a[j][i] == 'C' for j in range(n))
+    k2 = sum((a[j][i] == 'C' for j in range(n)))
     cnt += f(k1) + f(k2)
 print(cnt)

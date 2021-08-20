@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         solved = {}
         ps = [0] + piles[:]
@@ -10,7 +11,7 @@ class Solution:
 
         def solve(p, m, is_alex):
             if (p, m, is_alex) in solved:
-                return solved[(p, m, is_alex)]
+                return solved[p, m, is_alex]
             if p >= len(piles):
                 return 0
             if is_alex:
@@ -24,11 +25,10 @@ class Solution:
                 ms = math.inf
                 for x in range(1, 2 * m + 1):
                     if p + x < len(ps):
-                        ms = min(ms, - (ps[p + x] - ps[p]) + solve(p + x, max(x, m), not is_alex))
+                        ms = min(ms, -(ps[p + x] - ps[p]) + solve(p + x, max(x, m), not is_alex))
                     else:
                         break
-            solved[(p, m, is_alex)] = ms
-            return solved[(p, m, is_alex)]
-
+            solved[p, m, is_alex] = ms
+            return solved[p, m, is_alex]
         diff = solve(0, 1, True)
         return (sum(piles) + diff) // 2

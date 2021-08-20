@@ -16,7 +16,7 @@ parent = [-1] * n
 d = {i: c[i] for i in range(n)}
 for i in range(n):
     m = min(d, key=d.get)
-    if(is_st[m]):
+    if is_st[m]:
         st.append(m)
     else:
         ed.append([m, parent[m]])
@@ -24,14 +24,14 @@ for i in range(n):
     del d[m]
     for j in d.keys():
         t_cost = (k[m] + k[j]) * dist(p[m], p[j])
-        if(t_cost < d[j]):
+        if t_cost < d[j]:
             d[j] = t_cost
             parent[j] = m
             is_st[j] = 0
 print(ans)
 print(len(st))
 for i in st:
-    print(i + 1, end=" ")
+    print(i + 1, end=' ')
 print()
 print(len(ed))
 for i in ed:

@@ -1,7 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 class Solution:
+
     def __init__(self, n, k):
         self.n = n
         self.k = k

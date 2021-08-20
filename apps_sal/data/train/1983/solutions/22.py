@@ -19,11 +19,3 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         last_k_nums = self.nums[-1 * k:]
         return prod(last_k_nums)
-        # return reduce((lambda x, y: x* y), last_k_nums)
-        # return self.nums[k`]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

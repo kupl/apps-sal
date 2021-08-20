@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 
 
@@ -14,7 +13,7 @@ def friend(i, j, k):
     return False
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ids = []
 insieme = set()
 for i in range(n):

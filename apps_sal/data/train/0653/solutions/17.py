@@ -1,15 +1,12 @@
 n = int(input())
-
 a = list(map(int, input().split()))
 h = int(input())
 a.sort()
 p = 0
 mp = 0
-
 l = n - 1
 flag = True
 c = 0
-
 for x in a:
     while x > h and c < l:
         if p > 0:
@@ -20,7 +17,6 @@ for x in a:
         else:
             flag = False
             break
-
     if x <= h and flag == True:
         c = c + 1
         h = h - x
@@ -29,5 +25,4 @@ for x in a:
             mp = p
     else:
         break
-
 print(mp)

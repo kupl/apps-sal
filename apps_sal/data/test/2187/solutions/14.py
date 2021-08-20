@@ -27,7 +27,6 @@ def solve():
     for i in reversed(list(range(1, n))):
         if nums[i] < nums[i - 1]:
             needed += nums[i - 1] - nums[i]
-
     print(needed)
 
 

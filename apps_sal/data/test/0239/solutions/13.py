@@ -1,14 +1,12 @@
 from math import sqrt
-n, m = [int(s) for s in input().split()]
-
-p = [(i, j) for i in range(4) for j in range(4) if i + j < 4 and (i <= n) and (j <= m)]
-q = [(n - i, m - j) for i, j in p]
-
+(n, m) = [int(s) for s in input().split()]
+p = [(i, j) for i in range(4) for j in range(4) if i + j < 4 and i <= n and (j <= m)]
+q = [(n - i, m - j) for (i, j) in p]
 p = set(p + q)
 
 
 def dist(a, b):
-    return sqrt((a[0] - b[0])**2. + (a[1] - b[1])**2.)
+    return sqrt((a[0] - b[0]) ** 2.0 + (a[1] - b[1]) ** 2.0)
 
 
 def dp(a, b, c, d):
@@ -31,6 +29,5 @@ for a in p:
                 if f > t:
                     r = (a, b, c, d)
                     t = f
-
-for i, j in r:
+for (i, j) in r:
     print(i, j)

@@ -6,7 +6,7 @@ for i in range(n):
 for i in range(n):
     f = True
     for j in range(n):
-        if s[i][j] == 1 or s[j][i] == 2 or s[i][j] == 3 or s[j][i] == 3:
+        if s[i][j] == 1 or s[j][i] == 2 or s[i][j] == 3 or (s[j][i] == 3):
             f = False
     if f:
         ans.append(i)

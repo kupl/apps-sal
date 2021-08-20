@@ -1,5 +1,5 @@
 def solve():
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     worst = a + b - 1
     if a + b >= n + 1:
         worst = n

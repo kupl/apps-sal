@@ -7,6 +7,6 @@ for i in range(n - 1):
         success = False
         break
 if success:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

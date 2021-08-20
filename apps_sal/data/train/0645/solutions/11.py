@@ -1,28 +1,23 @@
 import sys
 import math
-# sys.setrecursionlimit(100000000)
 input = sys.stdin.readline
-
-############ ---- USER DEFINED INPUT FUNCTIONS ---- ############
 
 
 def inp():
-    return(int(input()))
+    return int(input())
 
 
 def inlt():
-    return(list(map(int, input().split())))
+    return list(map(int, input().split()))
 
 
 def insr():
     s = input()
-    return(list(s[:len(s) - 1]))
+    return list(s[:len(s) - 1])
 
 
 def invr():
-    return(list(map(int, input().split())))
-################################################################
-############ ---- THE ACTUAL CODE STARTS BELOW ---- ############
+    return list(map(int, input().split()))
 
 
 t = inp()

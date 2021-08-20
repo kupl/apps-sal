@@ -1,8 +1,9 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         if not arr:
             return 0
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
 
         def Kadane(arr):
             sum_till_now = 0

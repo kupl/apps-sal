@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,8 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -32,7 +32,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -41,23 +41,21 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ab = []
 uf = UnionFind(n + 1)
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ab.append((a, b))
-
 ans = []
 huben = n * (n - 1) // 2
-for a, b in ab[::-1]:
+for (a, b) in ab[::-1]:
     ans.append(huben)
     if not uf.same(a, b):
         huben -= uf.size(a) * uf.size(b)
         uf.union(a, b)
-
 for aa in ans[::-1]:
     print(aa)

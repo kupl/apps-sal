@@ -1,12 +1,10 @@
 import heapq
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 E = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     E[a - 1].append(b - 1)
-
-
 d = N + 1
 flag = False
 for i in range(N):
@@ -33,7 +31,6 @@ for i in range(N):
                     continue
                 used[u] = used[temp] + 1
                 q.append(u)
-
 if flag:
     h = []
     dist = [N + 1] * N

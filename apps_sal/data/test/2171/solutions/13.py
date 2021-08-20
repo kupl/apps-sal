@@ -1,11 +1,10 @@
-# cook your dish here
 a = int(input())
 b = a % 6
 if b == 0:
-    print("yes")
+    print('yes')
 elif b == 3:
-    print("yes")
+    print('yes')
 elif b == 1:
-    print("yes")
+    print('yes')
 else:
-    print("no")
+    print('no')

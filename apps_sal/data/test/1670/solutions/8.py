@@ -1,11 +1,10 @@
 import collections
-
 a_name = input()
 b_name = input()
 n = int(input())
 players = [collections.Counter() for i in range(2)]
 for i in range(n):
-    t, team, player, color = input().split()
+    (t, team, player, color) = input().split()
     team = 0 if team == 'h' else 1
     player = int(player)
     if color == 'y' and players[team][player] == 0:

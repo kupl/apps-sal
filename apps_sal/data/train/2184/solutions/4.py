@@ -1,4 +1,4 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 A = list(map(int, input().split()))
 left = {}
 right = {}

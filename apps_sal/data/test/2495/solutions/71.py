@@ -2,6 +2,7 @@ import sys
 
 
 class Bit:
+
     def __init__(self, n):
         """
         :param n: 最大の要素数
@@ -16,12 +17,12 @@ class Bit:
         i -= 1
         while i >= 0:
             s += self.tree[i]
-            i = (i & (i + 1)) - 1
+            i = (i & i + 1) - 1
         return s
 
     def built(self, array):
         """ array を初期値とするBITを構築 """
-        for i, a in enumerate(array):
+        for (i, a) in enumerate(array):
             self.add(i, a)
 
     def add(self, i, x):
@@ -43,20 +44,20 @@ class Bit:
         二分探索であるため、ai>=0 を満たす必要がある
         """
         sum_ = 0
-        pos = -1    # 1-indexed の時は pos = 0
+        pos = -1
         if not equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] < x:  # 1-indexed の時は k <= self.n
+                if k < self.n and sum_ + self.tree[k] < x:
                     sum_ += self.tree[k]
                     pos += 1 << i
         if equal:
             for i in range(self.depth, -1, -1):
                 k = pos + (1 << i)
-                if k < self.n and sum_ + self.tree[k] <= x:  # 1-indexed の時は k <= self.n
+                if k < self.n and sum_ + self.tree[k] <= x:
                     sum_ += self.tree[k]
                     pos += 1 << i
-        return pos, sum_
+        return (pos, sum_)
 
     def __getitem__(self, i):
         """ [a0, a1, a2, ...] """
@@ -68,11 +69,9 @@ class Bit:
             yield self.get(i, i + 1)
 
     def __str__(self):
-        text1 = " ".join(["element:            "] + list(map(str, self)))
-        text2 = " ".join(["cumsum(1-indexed):  "] + list(str(self.sum(i)) for i in range(1, self.n + 1)))
-        return "\n".join((text1, text2))
-
-###############################################################
+        text1 = ' '.join(['element:            '] + list(map(str, self)))
+        text2 = ' '.join(['cumsum(1-indexed):  '] + list((str(self.sum(i)) for i in range(1, self.n + 1))))
+        return '\n'.join((text1, text2))
 
 
 def solve(sign):
@@ -92,7 +91,6 @@ def solve(sign):
 
 
 input = sys.stdin.readline
-
 N = int(input())
 A = list(map(int, input().split()))
-print((min(solve(-1), solve(1))))
+print(min(solve(-1), solve(1)))

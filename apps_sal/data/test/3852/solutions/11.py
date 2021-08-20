@@ -39,18 +39,18 @@ def negativeOpe():
 
 
 if MIN >= 0:
-    print((N - 1))
+    print(N - 1)
     positiveOpe()
 elif MAX <= 0:
-    print((N - 1))
+    print(N - 1)
     negativeOpe()
 elif abs(MAX) >= abs(MIN):
-    print((N - 1 + N))
+    print(N - 1 + N)
     for i in range(1, N + 1):
         print((MAXidx, i))
     positiveOpe()
 else:
-    print((N - 1 + N))
+    print(N - 1 + N)
     for i in range(1, N + 1):
         print((MINidx, i))
     negativeOpe()

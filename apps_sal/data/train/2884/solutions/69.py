@@ -6,5 +6,4 @@ def stringify(node):
         currentNode = currentNode.next
     if currentNode is None:
         res += 'None'
-
     return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
         counts = collections.defaultdict(int)
         freq = collections.defaultdict(int)

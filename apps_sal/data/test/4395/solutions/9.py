@@ -1,8 +1,6 @@
 import itertools
-
 n = int(input())
 lamps = input()
-
 perms = itertools.permutations(['R', 'G', 'B'])
 best = n
 for p in perms:
@@ -13,6 +11,5 @@ for p in perms:
     if recolors < best:
         best = recolors
         bestp = p
-
 print(best)
 print(''.join(itertools.islice(itertools.cycle(bestp), n)))

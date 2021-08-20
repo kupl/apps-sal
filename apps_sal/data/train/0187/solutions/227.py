@@ -15,7 +15,7 @@ def wheel(cust, ticket, cost):
         n_waiting -= seated
         earn += seated * ticket - cost
         rots += 1
-        if (earn > res[1]):
+        if earn > res[1]:
             res[1] = earn
             res[0] = rots
     if res[0] <= 0:
@@ -24,5 +24,6 @@ def wheel(cust, ticket, cost):
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         return wheel(customers, boardingCost, runningCost)

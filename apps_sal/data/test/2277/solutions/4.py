@@ -11,9 +11,9 @@ for i in range(n):
 ans = pf[-1] % 2
 asss = []
 m = int(input())
-cs = [(i * (i - 1) // 2) % 2 for i in range(1501)]
+cs = [i * (i - 1) // 2 % 2 for i in range(1501)]
 for _ in range(m):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     c = r - l + 1
     if c > 1 and cs[c] == 1:
         ans += 1

@@ -1,11 +1,11 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         max_sum = 0
 
         @lru_cache
         def _calculateSumFromIndex(i, length):
             return sum(A[i:i + length])
-
         for l in range(len(A) - L + 1):
             l_sum = _calculateSumFromIndex(l, L)
             if l >= M:

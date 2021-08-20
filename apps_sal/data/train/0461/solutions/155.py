@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         total_time = [0] * n
         total_time[headID] = informTime[headID]

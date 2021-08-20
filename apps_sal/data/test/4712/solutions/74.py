@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 A = [input() for i in range(H)]
 print('#' * (W + 2))
 for a in A:

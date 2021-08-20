@@ -1,7 +1,6 @@
 s = input()
-
 start = ['0', '1']
-ans = 10**6
+ans = 10 ** 6
 for offset in [0, 1]:
     now = 0
     for i in range(len(s)):
@@ -9,5 +8,4 @@ for offset in [0, 1]:
         if s[i] != start[j]:
             now += 1
     ans = min(ans, now)
-
 print(ans)

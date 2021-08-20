@@ -6,14 +6,13 @@ import operator
 import functools
 import fractions
 import collections
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 dX = [-1, 1, 0, 0, -1, 1, -1, 1]
 dY = [0, 0, -1, 1, 1, -1, -1, 1]
 RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
-mod = int(1e9 + 7)
-eps = 1e-6
-#################################################
+mod = int(1000000000.0 + 7)
+eps = 1e-06
 x = RI()[0]
 x %= 360
 if x > 180:

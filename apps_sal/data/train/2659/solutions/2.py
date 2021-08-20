@@ -1,1 +1,2 @@
-def last_chair(n): return n - 1
+def last_chair(n):
+    return n - 1

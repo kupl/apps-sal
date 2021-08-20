@@ -1,5 +1,4 @@
-A, B, N = map(int, input().split())
-
+(A, B, N) = map(int, input().split())
 min = N
 if N > B - 1:
     min = B - 1

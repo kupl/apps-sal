@@ -4,9 +4,10 @@ sys.setrecursionlimit(1000000)
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         to = collections.defaultdict(list)
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             to[a - 1].append((b - 1, t - 1))
             to[b - 1].append((a - 1, t - 1))
 
@@ -17,7 +18,7 @@ class Solution:
                 if remain[n] == 0:
                     return
                 remain[n] = 0
-                for nn, t in to[n]:
+                for (nn, t) in to[n]:
                     if t == etype or t == 2:
                         dfs(nn)
             dfs()
@@ -26,7 +27,6 @@ class Solution:
             return -1
         if not is_connected(1):
             return -1
-
         ids = [i for i in range(n)]
 
         def find(i):
@@ -43,21 +43,18 @@ class Solution:
                 return False
             ids[j] = i
             return True
-
         e = 0
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 3:
                 if union(a - 1, b - 1):
                     e += 1
         ids2 = list(ids)
-
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 1:
                 if union(a - 1, b - 1):
                     e += 1
-
         ids = ids2
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 2:
                 if union(a - 1, b - 1):
                     e += 1

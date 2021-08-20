@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 g = []
 q = []
 for i in range(n):
@@ -30,6 +30,5 @@ for s in g:
         if j + 1 < len(s) and (s[j + 1] != '.' and s[j + 1] != '-'):
             an += 1
 print(an)
-
 for s in g:
-    print("".join(s))
+    print(''.join(s))

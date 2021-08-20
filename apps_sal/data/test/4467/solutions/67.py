@@ -1,15 +1,14 @@
 n = int(input())
 R = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     R.append((a, b))
 B = []
 for i in range(n):
-    c, d = list(map(int, input().split()))
+    (c, d) = list(map(int, input().split()))
     B.append((c, d))
-
-R.sort(reverse=True)  # aをx座標でソート
-B.sort(key=lambda x: x[1])  # bをｙ座標でソート
+R.sort(reverse=True)
+B.sort(key=lambda x: x[1])
 ans = 0
 for i in R:
     for j in range(len(B)):
@@ -17,5 +16,4 @@ for i in R:
             ans += 1
             B.pop(j)
             break
-
 print(ans)

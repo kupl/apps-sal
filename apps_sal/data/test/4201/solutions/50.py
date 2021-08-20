@@ -1,7 +1,6 @@
 import itertools
-H, W, K = map(int, input().split())
+(H, W, K) = map(int, input().split())
 c = [input() for _ in range(H)]
-
 ans = 0
 for i in range(H + 1):
     for j in range(W + 1):

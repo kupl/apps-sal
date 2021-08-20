@@ -27,11 +27,11 @@ def stupid(a, inv, was, order):
         if was[i] == 0:
             was[i] = 1
             order.append(i)
-            x, _, y = inv[i]
+            (x, _, y) = inv[i]
             y = -y
-            a[x], a[y] = a[y], a[x]
+            (a[x], a[y]) = (a[y], a[x])
             r = stupid(a, inv, was, order)
-            a[x], a[y] = a[y], a[x]
+            (a[x], a[y]) = (a[y], a[x])
             was[i] = 0
             if r is not None:
                 return r
@@ -51,8 +51,8 @@ r = list(range(len(inv)))
 if r is not None:
     print(len(r))
     for z in r:
-        v, _, u = inv[z]
+        (v, _, u) = inv[z]
         u = -u
         print(u + 1, v + 1)
 else:
-    print("wut")
+    print('wut')

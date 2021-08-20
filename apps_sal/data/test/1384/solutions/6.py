@@ -1,17 +1,15 @@
-
-
 def solve(s):
-    '''
+    """
     >>> solve([1, 1, 0, 1])
     3
     >>> solve([0, 1, 0, 0, 1, 0])
     4
     >>> solve([0])
     1
-    '''
+    """
     zeroes = accum(s, 0)
     ones = list(reversed(accum(reversed(s), 1)))
-    return max(x + y for x, y in zip(zeroes, ones))
+    return max((x + y for (x, y) in zip(zeroes, ones)))
 
 
 def accum(lst, value):

@@ -1,8 +1,6 @@
 w = input()
-
-if w.endswith("s"):
-    w += "es"
+if w.endswith('s'):
+    w += 'es'
 else:
-    w += "s"
-
+    w += 's'
 print(w)

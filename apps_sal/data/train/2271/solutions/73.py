@@ -10,7 +10,6 @@ from functools import reduce
 from operator import xor
 from types import FunctionType
 from typing import List
-
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 
@@ -27,6 +26,7 @@ def narray(*shape, init=0):
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -41,13 +41,10 @@ class UnionFind:
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -64,7 +61,7 @@ class UnionFind:
                 yield i
 
     def roots(self):
-        for i, x in enumerate(self.parents):
+        for (i, x) in enumerate(self.parents):
             if x < 0:
                 yield i
 
@@ -79,16 +76,16 @@ class UnionFind:
         return ret
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, list(members)) for r, members in self.all_group_members())
+        return '\n'.join(('{}: {}'.format(r, list(members)) for (r, members) in self.all_group_members()))
 
 
 def main():
-    N, M = lmi()
+    (N, M) = lmi()
     P = lmi()
     XY = [lmi() for _ in range(M)]
     uf = UnionFind(N)
-    for x, y in XY:
-        x, y = x - 1, y - 1
+    for (x, y) in XY:
+        (x, y) = (x - 1, y - 1)
         uf.union(P[x] - 1, P[y] - 1)
     ans = 0
     for i in range(N):

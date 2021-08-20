@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = max(A)
         array = [0] * (n + 1)
@@ -18,7 +19,6 @@ class Solution:
             yp = find(y)
             if xp != yp:
                 array[yp] = xp
-
         length = len(A)
         for i in range(length):
             for j in range(2, int(math.sqrt(A[i])) + 1):

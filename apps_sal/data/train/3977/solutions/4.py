@@ -8,7 +8,7 @@ def distance(p1, p2):
 def cluster(points, n):
     lista = [[en] for en in points]
     while len(lista) > n:
-        min_pair, min_dist = (0, 0), float('inf')
+        (min_pair, min_dist) = ((0, 0), float('inf'))
         for i in range(len(lista) - 1):
             for j in range(i + 1, len(lista)):
                 dist = 0
@@ -20,6 +20,6 @@ def cluster(points, n):
                     min_dist = dist
                     min_pair = (i, j)
         lista[min_pair[0]].extend(lista[min_pair[1]])
-        del(lista[min_pair[1]])
+        del lista[min_pair[1]]
     lista = [sorted(en) for en in lista]
     return sorted(lista, key=lambda x: x[0])

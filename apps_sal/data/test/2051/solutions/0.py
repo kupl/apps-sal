@@ -1,10 +1,9 @@
 from collections import defaultdict
-
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 c = [0] + [int(x) for x in input().split()]
 g = defaultdict(lambda: [])
 for i in range(m):
-    l, r = [int(x) for x in input().split()]
+    (l, r) = [int(x) for x in input().split()]
     g[l].append(r)
     g[r].append(l)
 done = [0] * (1 + n)
@@ -29,7 +28,7 @@ for i in range(n):
             q.append(ne)
     fcol = None
     maxn = -1
-    for col, num in list(mcx.items()):
+    for (col, num) in list(mcx.items()):
         if num >= maxn:
             maxn = num
             fcol = col

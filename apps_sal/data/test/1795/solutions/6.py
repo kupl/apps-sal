@@ -1,7 +1,6 @@
 def run():
     input()
     s = [int(x) for x in input().split()]
-
     for i in range(len(s)):
         s1 = s[i]
         s2 = s[s1 - 1]

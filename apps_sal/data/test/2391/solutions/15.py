@@ -20,7 +20,7 @@ def mp_find(target, pattern, table):
     result = []
     j = 0
     for i in range(len(target)):
-        while(j != -1 and pattern[j] != target[i]):
+        while j != -1 and pattern[j] != target[i]:
             j = table[j]
         j += 1
         if j == len(pattern):
@@ -33,7 +33,6 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     xa = xor_next(a)
     xb = xor_next(b)
     mp_t = make_mp_table(xa)
@@ -42,10 +41,10 @@ def main():
     res.sort(reverse=True)
     for i in range(len(res)):
         k = n - res[i]
-        if(k >= n):
+        if k >= n:
             continue
         x = a[k] ^ b[0]
-        print((str(k) + ' ' + str(x)))
+        print(str(k) + ' ' + str(x))
 
 
 main()

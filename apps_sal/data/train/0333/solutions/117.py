@@ -3,11 +3,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return 0
         d = defaultdict(list)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             d[num].append(i)
         length = len(arr)
         q = deque()
@@ -15,12 +16,10 @@ class Solution:
         q.append(0)
         s = set()
         s.add(0)
-        while(len(q) > 0):
+        while len(q) > 0:
             size = len(q)
             while size > 0:
                 top = q.popleft()
-                # if top == length - 1:
-                #     return level
                 if top - 1 >= 0 and top - 1 not in s:
                     s.add(top - 1)
                     q.append(top - 1)

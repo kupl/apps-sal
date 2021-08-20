@@ -7,4 +7,4 @@ class Cat(Animal):
 
     def speak(self) -> str:
         """ Say my name! """
-        return f"{self.name} meows."
+        return f'{self.name} meows.'

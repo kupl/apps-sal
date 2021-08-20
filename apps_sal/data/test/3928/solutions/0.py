@@ -8,12 +8,12 @@ def f(x):
         while i + z[i] < len(x) and x[z[i]] == x[i + z[i]]:
             z[i] += 1
         if i + z[i] - 1 > r:
-            l, r = i, i + z[i] - 1
+            (l, r) = (i, i + z[i] - 1)
     return z
 
 
 a = list(map(int, input('').split()))
-n, a, b = a[0], a[1], a[2]
+(n, a, b) = (a[0], a[1], a[2])
 s = input('')
 dp = [0 for i in range(n)]
 dp[0] = a

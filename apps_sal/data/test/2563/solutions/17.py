@@ -3,13 +3,11 @@ for _ in range(int(input())):
     x = input()
     even = deque()
     odd = deque()
-
     for i in map(int, x):
         if i % 2 == 0:
             even.append(i)
         else:
             odd.append(i)
-    #print(even, odd)
     ans = deque()
     while len(ans) < len(x):
         if len(even) == 0:
@@ -20,4 +18,4 @@ for _ in range(int(input())):
             ans.append(even.popleft())
         else:
             ans.append(odd.popleft())
-    print(''.join(str(i) for i in ans))
+    print(''.join((str(i) for i in ans)))

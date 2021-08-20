@@ -1,13 +1,10 @@
-# E
 import numpy as np
-
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 S = list()
 for _ in range(H):
     S.append(list(input()))
 S_arr = np.array(S)
-
-res = "NO"
+res = 'NO'
 
 
 def check_col_switch(S_arr, H, W):
@@ -19,9 +16,9 @@ def check_col_switch(S_arr, H, W):
     for j in range(W):
         if done_col[j] == 1:
             continue
-        rev_j = S_arr[::(-1), j]
+        rev_j = S_arr[::-1, j]
         for k in range(W):
-            if np.prod(S_arr[:, k] == rev_j) == 1 and j != k and done_col[k] == 0:
+            if np.prod(S_arr[:, k] == rev_j) == 1 and j != k and (done_col[k] == 0):
                 done_col[j] = 1
                 done_col[k] = 1
                 break
@@ -32,23 +29,20 @@ def check_col_switch(S_arr, H, W):
             else:
                 res_bar += 10
     if res_bar <= 0:
-        return "YES"
+        return 'YES'
     else:
-        return "NO"
+        return 'NO'
 
 
 def check_col_switch_fast(S_arr, H, W):
-
-    col_raw = np.array(["".join(list(S_arr[:, j])) for j in range(W)])
-    col_reverse = np.array(["".join(list(S_arr[::(-1), j])) for j in range(W)])
-
+    col_raw = np.array([''.join(list(S_arr[:, j])) for j in range(W)])
+    col_reverse = np.array([''.join(list(S_arr[::-1, j])) for j in range(W)])
     argsa = np.argsort(col_raw)
     argsb = np.argsort(col_reverse)
-
-    res = "YES"
+    res = 'YES'
     for j in range(W):
         if col_raw[argsa[j]] != col_reverse[argsb[j]]:
-            res = "NO"
+            res = 'NO'
             break
     cnt_single = 0
     for j in range(W):
@@ -62,8 +56,7 @@ def check_col_switch_fast(S_arr, H, W):
         else:
             j += 1
     if cnt_single >= 2:
-        res = "NO"
-
+        res = 'NO'
     return res
 
 
@@ -95,9 +88,6 @@ def run_row_switch(S_arr, row_matching, H, W):
 
 
 row_match_list = make_pairs([i for i in range(H)])
-
-
-# row_matching
 same_row_list = []
 for i in range(H):
     j_list = [i]
@@ -119,10 +109,8 @@ def pass_condition(rs):
 
 
 row_match_list_s = [rs for rs in row_match_list if pass_condition(rs)]
-
-
 for rs in row_match_list_s:
     res = check_col_switch(run_row_switch(S_arr, rs, H, W), H, W)
-    if res == "YES":
+    if res == 'YES':
         break
 print(res)

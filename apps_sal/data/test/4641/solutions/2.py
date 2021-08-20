@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, x = mints()
+    (n, x) = mints()
     c = [0] * x
     ans = 0
     for i in range(n):

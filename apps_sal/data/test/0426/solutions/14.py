@@ -1,8 +1,11 @@
 import sys
-def input(): return sys.stdin.readline().strip()
 
 
-n, k = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+(n, k) = list(map(int, input().split()))
 S = list(input())
 if n == 1 and k == 1:
     print(0)

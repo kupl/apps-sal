@@ -1,6 +1,6 @@
 n = int(input())
 s1 = input().rstrip()
-s = (')'.join(s1.split('('))).split(')')
+s = ')'.join(s1.split('(')).split(')')
 fl = 0
 ans = 0
 k = 0

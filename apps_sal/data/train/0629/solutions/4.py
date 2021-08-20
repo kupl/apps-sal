@@ -1,11 +1,10 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
-    r, b, g, m = map(int, input().split())
+    (r, b, g, m) = map(int, input().split())
     red = sorted(map(int, input().split()), reverse=True)
     blue = sorted(map(int, input().split()), reverse=True)
     green = sorted(map(int, input().split()), reverse=True)
-    x, y, z = red[0], blue[0], green[0]
+    (x, y, z) = (red[0], blue[0], green[0])
     for _ in range(m):
         k = max(x, y, z)
         if k == x:

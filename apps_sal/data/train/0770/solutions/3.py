@@ -1,5 +1,4 @@
 def solve(array, k, n):
-
     even = []
     odd = []
     for i in range(n):
@@ -27,8 +26,7 @@ def solve(array, k, n):
 
 queries = []
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     queries.append((list(map(int, input().split())), k))
-
 for query in queries:
     print(solve(query[0], query[1], len(query[0])))

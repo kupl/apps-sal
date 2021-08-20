@@ -6,7 +6,7 @@ mr = 0
 for i in s:
     if i == m:
         row += 1
-    elif(i > m):
+    elif i > m:
         m = i
         row = 1
         mr = 0

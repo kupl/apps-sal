@@ -41,22 +41,6 @@ def solver(n, L):
             return count
         else:
             return count + 1
-        # if a < div1Min:
-        #	div1Min
 
 
 main()
-# L = [(1, 4), (5, 2)]
-# print(solver(5, L))
-
-# L2 = [(1, 2), (2, 3), (1, 3)]
-# print(solver(3, L2))
-
-# L3 = [(3, 1), (3, 2)]
-# print(solver(3, L3))
-
-#print(solver(2, [(1, 2)]))
-# used = [False, True, True, True]
-# a = [b for b in used if b == True]
-# print(a)
-#print(max({1, 2, 3}))

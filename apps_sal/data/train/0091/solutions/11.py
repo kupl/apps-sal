@@ -25,6 +25,6 @@ for i in range(t):
             used[now] = True
             p.append(str(now + 1))
     if ans:
-        print(" ".join(p))
+        print(' '.join(p))
     else:
         print(-1)

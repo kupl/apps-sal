@@ -15,6 +15,6 @@ for i in range(n):
     else:
         ans = 0
 if ans == 1:
-    print(" ".join(map(str, ANS)))
+    print(' '.join(map(str, ANS)))
 else:
     print(-1)

@@ -1,4 +1,5 @@
 class Solution:
+
     def containsDuplicate(self, nums):
         """
         :type nums: List[int]
@@ -12,5 +13,4 @@ class Solution:
                 return True
             else:
                 map[i] = 0
-
         return False

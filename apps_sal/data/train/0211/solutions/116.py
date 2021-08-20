@@ -1,10 +1,12 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def check(s):
             if len(s) == 1:
                 return [[s]]
             if len(s) == 0:
-                return[[]]
+                return [[]]
             ans = []
             for i in range(1, len(s) + 1):
                 for item in check(s[i:]):

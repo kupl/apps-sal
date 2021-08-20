@@ -1,4 +1,5 @@
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
         d = {}
         for i in arr:
@@ -7,7 +8,7 @@ class Solution:
             else:
                 d[i] = 1
         max = 0
-        for k, v in list(d.items()):
+        for (k, v) in list(d.items()):
             if k == v:
                 if v > max:
                     max = v

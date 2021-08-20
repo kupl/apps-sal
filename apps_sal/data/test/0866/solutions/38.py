@@ -6,11 +6,11 @@ def calccombi(n, k):
     return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD
 
 
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 if (x + y) % 3 != 0 or 2 * y < x or 2 * x < y:
     print(0)
 else:
-    MOD = 1_000_000_007
+    MOD = 1000000007
     n = (2 * y - x) // 3
     m = (2 * x - y) // 3
     fac = [0] * (n + m + 1)

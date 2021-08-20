@@ -1,6 +1,9 @@
 import heapq
 import sys
-def input(): return sys.stdin.readline()
+
+
+def input():
+    return sys.stdin.readline()
 
 
 for i in range(int(input())):
@@ -22,5 +25,4 @@ for i in range(int(input())):
                 continue
             s.add(i)
             heapq.heappush(h, -i)
-
     print(ans)

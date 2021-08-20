@@ -1,4 +1,5 @@
 class Solution:
+
     def arrayNesting(self, nums):
         """
         :type nums: List[int]
@@ -12,7 +13,7 @@ class Solution:
             curr = 1
             while nums[p] != -1 and nums[p] in tovisit:
                 tovisit.remove(nums[p])
-                nums[p], p = -1, nums[p]
+                (nums[p], p) = (-1, nums[p])
                 curr += 1
             maxLen = max(maxLen, curr)
         return maxLen

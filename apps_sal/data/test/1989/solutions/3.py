@@ -5,18 +5,16 @@ import sys
 def update(i, val):
     while i < maxi:
         bit[i] += val
-        i += i & (-i)
+        i += i & -i
 
 
 def query(i):
     ans = 0
     while i > 0:
         ans += bit[i]
-        i -= i & (-i)
-    return(ans)
+        i -= i & -i
+    return ans
 
-
-# taking inputs
 
 n = int(input())
 l = list(map(int, sys.stdin.readline().split()))

@@ -5,7 +5,7 @@ try:
         n = int(input())
         count = 0
         for i in P:
-            if(n >= i):
+            if n >= i:
                 count = count + n // i
                 n = n % i
         print(count)

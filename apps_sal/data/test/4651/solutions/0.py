@@ -8,6 +8,6 @@ for qi in range(q):
             if used[i]:
                 continue
             if a[i] < a[i - 1]:
-                a[i], a[i - 1] = a[i - 1], a[i]
+                (a[i], a[i - 1]) = (a[i - 1], a[i])
                 used[i] = True
-    print(' '.join(str(x) for x in a))
+    print(' '.join((str(x) for x in a)))

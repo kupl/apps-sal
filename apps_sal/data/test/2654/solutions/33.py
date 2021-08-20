@@ -3,12 +3,12 @@ def solve(n, a, b):
     r = l + 1 + (n % 2 == 0)
     lb = sum(sorted(a)[l:r])
     ub = sum(sorted(b)[l:r])
-    return (ub - lb) + 1
+    return ub - lb + 1
 
 
 n = int(input())
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
 print(solve(n, a, b))

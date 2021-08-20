@@ -1,7 +1,7 @@
 n = int(input())
 x = list(map(int, input().split()))
 x.sort()
-count, count2 = 0, 0
+(count, count2) = (0, 0)
 ans = 1
 for i in range(n):
     count += x[i] - i
@@ -19,6 +19,6 @@ for i in range(n):
     if i == n - 1:
         ans = 0
 if ans == 0 or count % 2 == 0 or count2 > 1:
-    print("cslnb")
+    print('cslnb')
 else:
-    print("sjfnb")
+    print('sjfnb')

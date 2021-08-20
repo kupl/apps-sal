@@ -8,10 +8,9 @@ for ii in range(n):
         bi += t[ii]
     else:
         ba += t[ii]
-
 if c > bi and c > ba:
-    print("chest")
+    print('chest')
 elif bi > c and bi > ba:
-    print("biceps")
+    print('biceps')
 else:
-    print("back")
+    print('back')

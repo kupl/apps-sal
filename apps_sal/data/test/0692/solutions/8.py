@@ -13,11 +13,9 @@ def lcm(a, b):
 n = int(input())
 m = list(map(int, input().split()))
 r = list(map(int, input().split()))
-
 cap = 1
 for val in m:
     cap = lcm(cap, val)
-
 ans = 0
 for day in range(cap):
     works = False
@@ -27,5 +25,4 @@ for day in range(cap):
             break
     if works:
         ans += 1
-
 print(ans / cap)

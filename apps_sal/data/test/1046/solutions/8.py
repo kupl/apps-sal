@@ -1,5 +1,5 @@
 input()
-a, i, c = input().split(), 0, 0
+(a, i, c) = (input().split(), 0, 0)
 a.sort()
 while i < len(a):
     j = a.count(a[i])

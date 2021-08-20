@@ -1,6 +1,6 @@
 import random
 for _ in range(int(input())):
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     X = [[int(a) for a in input().split()] for _ in range(N)]
     Y = [[X[i][j] for i in range(N)] for j in range(M)]
     ma = 0

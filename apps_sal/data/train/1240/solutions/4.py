@@ -6,5 +6,5 @@ for _ in range(int(input())):
         if a[_] % 6 == 0:
             res += 6
         else:
-            res += (a[_] % 6)
+            res += a[_] % 6
     print(res)

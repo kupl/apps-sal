@@ -4,4 +4,4 @@ def dms(deg, dirs):
 
 
 def convert_to_dms(dd_lat, dd_lon):
-    return '%03d*%02d\'%06.3f"%s' % dms(float(dd_lat), 'NS'), '%03d*%02d\'%06.3f"%s' % dms(float(dd_lon), 'EW')
+    return ('%03d*%02d\'%06.3f"%s' % dms(float(dd_lat), 'NS'), '%03d*%02d\'%06.3f"%s' % dms(float(dd_lon), 'EW'))

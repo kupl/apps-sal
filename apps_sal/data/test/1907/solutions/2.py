@@ -17,18 +17,16 @@ def find_prev(side, circle):
 
 
 Circle = namedtuple('Circle', 'x y r')
-
 n = int(input())
 cs = []
 for i in range(n):
     cs.append(Circle(*list(map(int, input().split()))))
-
 cs = sorted(cs, key=lambda circle: -circle.r)
 ans = 0.0
 counts = dict()
 left = []
 right = []
-for ind, cur in enumerate(cs):
+for (ind, cur) in enumerate(cs):
     prev_left = find_prev(left, cur)
     prev_right = find_prev(right, cur)
     if prev_left is None:
@@ -47,5 +45,4 @@ for ind, cur in enumerate(cs):
         left.append(cur)
         counts[cur] = True
         ans += area(cur)
-
 print(ans)

@@ -1,6 +1,5 @@
 def __starting_point():
     n = int(input())
-
     num = 0
     while num < n:
         print(pow(num, 2))

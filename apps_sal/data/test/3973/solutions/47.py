@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
-
 imos = [0] * (2 * m)
 diff = [0] * (2 * m)
 res = 0
@@ -13,7 +12,6 @@ for i in range(n - 1):
     imos[r + 1] -= 1
     diff[r + 1] += r - l - 1
     res += r - l
-
 ans = [0] * (2 * m)
 tmp = 0
 for i in range(2 * m):
@@ -23,7 +21,6 @@ for i in range(2 * m):
     else:
         ans[i] += tmp
     ans[i] -= diff[i]
-
 max_ = 0
 for i in range(m):
     max_ = max(max_, ans[i] + ans[i + m])

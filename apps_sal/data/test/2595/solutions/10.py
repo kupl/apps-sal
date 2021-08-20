@@ -23,8 +23,7 @@ def lm():
 
 q = nn()
 for _ in range(q):
-    a, b = mi()
-
+    (a, b) = mi()
     small = min(a, b)
     big = max(a, b)
     ops = 0

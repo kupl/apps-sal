@@ -1,9 +1,7 @@
 import copy
 n = int(input())
 alist = [int(input()) for _ in range(n)]
-
 alist_copy = copy.copy(alist)
-
 alist_copy.sort()
 max_value = alist_copy[-1]
 next_value = alist_copy[-2]

@@ -1,6 +1,4 @@
-#from collections import deque
 from functools import reduce
-
 n = int(input())
 crush = [int(i) - 1 for i in input().split()]
 
@@ -14,7 +12,7 @@ def parity_treat(n):
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 

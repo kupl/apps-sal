@@ -1,4 +1,4 @@
-n, k = (int(i) for i in input().split())
+(n, k) = (int(i) for i in input().split())
 z = [int(i) for i in input().split()]
 p = z[0]
 a = z[0]

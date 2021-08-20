@@ -1,7 +1,7 @@
 a = input().strip()
 n = len(a)
 c = a.index('^')
-l, r = 0, 0
+(l, r) = (0, 0)
 for i in range(c):
     if a[i].isdigit():
         l += (c - i) * int(a[i])

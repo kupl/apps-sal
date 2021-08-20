@@ -1,7 +1,7 @@
 class Solution:
-    def stoneGameIII(self, cards):
-        dp = [float('-inf')] * (len(cards))
 
+    def stoneGameIII(self, cards):
+        dp = [float('-inf')] * len(cards)
         for i in range(len(dp) - 1, -1, -1):
             if len(dp) - 1 - i >= 3:
                 dp[i] = max(sum(cards[i:i + 3]) - dp[i + 3], sum(cards[i:i + 2]) - dp[i + 2], sum(cards[i:i + 1]) - dp[i + 1])

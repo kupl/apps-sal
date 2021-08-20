@@ -18,4 +18,4 @@ for i in same:
 for i in range(len(arr)):
     if arr[i] == 0:
         arr[i] = remain.pop()
-print(*arr, sep=" ")
+print(*arr, sep=' ')

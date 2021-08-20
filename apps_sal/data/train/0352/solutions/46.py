@@ -1,4 +1,5 @@
 class Solution:
+
     def checkPredecessor(self, word_1, word_2):
         find_extra = False
         for i in range(len(word_1)):

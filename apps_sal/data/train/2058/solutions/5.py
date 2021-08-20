@@ -2,23 +2,36 @@ from heapq import *
 
 
 class Maxheap:
-    def __init__(_): _.h = []
-    def add(_, v): heappush(_.h, -v)
-    def top(_): return -_.h[0]
-    def pop(_): return -heappop(_.h)
+
+    def __init__(_):
+        _.h = []
+
+    def add(_, v):
+        heappush(_.h, -v)
+
+    def top(_):
+        return -_.h[0]
+
+    def pop(_):
+        return -heappop(_.h)
 
 
 class Graph:
+
     def __init__(_):
-        _.change = Maxheap()  # increment slope at ...
-        _.change.add(-10**18)
-        _.a = _.y = 0  # last line has slope a, starts from y
-        _.dx = 0      # the whole graph is shifted right by ...
+        _.change = Maxheap()
+        _.change.add(-10 ** 18)
+        _.a = _.y = 0
+        _.dx = 0
 
-    def __repr__(_): return f"<{[x+_.dx for x in _.change]}; {_.a} {_.y}>"
+    def __repr__(_):
+        return f'<{[x + _.dx for x in _.change]}; {_.a} {_.y}>'
 
-    def shiftx(_, v): _.dx += v
-    def shifty(_, v): _.y += v
+    def shiftx(_, v):
+        _.dx += v
+
+    def shifty(_, v):
+        _.y += v
 
     def addleft(_, v):
         if _.change.top() < v - _.dx:

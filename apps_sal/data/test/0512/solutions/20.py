@@ -1,10 +1,10 @@
 def check():
     N = int(input())
-    up, down = [0] * (2 * N + 1), [0] * (2 * N + 1)
-    A, B = [0] * N, [0] * N
+    (up, down) = ([0] * (2 * N + 1), [0] * (2 * N + 1))
+    (A, B) = ([0] * N, [0] * N)
     for i in range(N):
-        A[i], B[i] = map(int, input().split())
-    for a, b in zip(A, B):
+        (A[i], B[i]) = map(int, input().split())
+    for (a, b) in zip(A, B):
         if 0 < b <= a or b == 1 or a == 2 * N:
             return 'No'
         if a == -1:
@@ -25,7 +25,7 @@ def check():
             x = (l + 1) // 2
             for left in range(1, 2 * N - l + 1):
                 for y in range(left, left + x):
-                    if (up[y] > 0 and up[y] != y + x) or down[y] != 0:
+                    if up[y] > 0 and up[y] != y + x or down[y] != 0:
                         dp[left][left + l] = 0
                     if up[y + x] != 0 or (down[y + x] > 0 and down[y + x] != y):
                         dp[left][left + l] = 0

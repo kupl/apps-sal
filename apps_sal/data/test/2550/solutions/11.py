@@ -2,7 +2,7 @@ import string
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     lst = list(map(int, input().split()))
     sm = 0
     for i in lst:

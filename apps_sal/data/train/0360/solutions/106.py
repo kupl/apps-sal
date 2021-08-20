@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def check_capacity(capacity) -> bool:
@@ -12,7 +13,6 @@ class Solution:
                     if days > D:
                         return False
             return True
-
         left = max(weights)
         right = left * len(weights) // D
         while left < right:

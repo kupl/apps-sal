@@ -14,11 +14,11 @@ def f(n, k):
         s = 0
         for j in range(m):
             s += dp0[j]
-            dp1[m - j - 1] = (s * ws[j]) % md
+            dp1[m - j - 1] = s * ws[j] % md
         dp0 = dp1[:]
-    print((sum(dp0) % md))
+    print(sum(dp0) % md)
 
 
-md = 10**9 + 7
-n, k = list(map(int, input().split()))
+md = 10 ** 9 + 7
+(n, k) = list(map(int, input().split()))
 f(n, k)

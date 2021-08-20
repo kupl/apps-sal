@@ -1,6 +1,6 @@
 class Solution:
-    def getWinner(self, arr: List[int], k: int) -> int:
 
+    def getWinner(self, arr: List[int], k: int) -> int:
         i = 0
         j = 1
         m = k

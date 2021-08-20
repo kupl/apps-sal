@@ -8,6 +8,6 @@ digit = 0
 ans = 1
 for _ in range(k):
     print(ans)
-    if snuke(ans + 10**digit) > snuke(ans + 10**(digit + 1)):
+    if snuke(ans + 10 ** digit) > snuke(ans + 10 ** (digit + 1)):
         digit += 1
-    ans += 10**digit
+    ans += 10 ** digit

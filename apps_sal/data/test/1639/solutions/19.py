@@ -1,6 +1,6 @@
 n = int(input())
 al = list(map(int, input().split()))
-res, t = 0, 0
+(res, t) = (0, 0)
 last = -1
 for i in al:
     if i >= last:

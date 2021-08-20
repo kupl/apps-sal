@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 D = list(map(int, input().split()))
 E = []
 for i in range(10):
@@ -15,7 +15,7 @@ if ind == len(N):
     print(N)
 else:
     flag = 0
-    x = ""
+    x = ''
     for i in range(ind, -1, -1):
         n = int(N[i])
         for e in E:

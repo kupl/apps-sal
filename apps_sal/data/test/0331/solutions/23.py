@@ -1,7 +1,5 @@
-n, m, k = list(map(int, input().split()))
-
+(n, m, k) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
 m = m - 1
 lp = m - 1
 rp = m + 1

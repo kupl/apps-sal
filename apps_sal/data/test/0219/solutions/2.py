@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, m, s, d = [int(x) for x in input().split()]
+    (n, m, s, d) = [int(x) for x in input().split()]
     obstacles = [int(x) for x in input().split()]
     obstacles.sort()
     if obstacles[0] <= s:

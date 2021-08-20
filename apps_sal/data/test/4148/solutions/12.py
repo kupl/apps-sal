@@ -6,4 +6,4 @@ for e in s:
     if od > 90:
         od = 64 + od - 90
     ans.append(chr(od))
-print("".join(ans))
+print(''.join(ans))

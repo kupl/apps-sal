@@ -19,13 +19,11 @@ def is_hcm(x, A):
     return True
 
 
-N, M = [int(x) for x in input().split()]
+(N, M) = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()]
-
 l = lcm_g(A)
 if is_hcm(l // 2, A):
     ans = (2 * M + l) // (2 * l)
 else:
     ans = 0
-
 print(ans)

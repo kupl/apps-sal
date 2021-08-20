@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coin: List[int], sum1: int) -> int:
         maxv = float('inf') - 1
         n = len(coin)

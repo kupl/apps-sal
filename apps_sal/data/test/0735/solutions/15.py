@@ -1,5 +1,5 @@
 def decSeq(L):
-    l, r = 0, 0
+    (l, r) = (0, 0)
     for i in range(len(L) - 1):
         if L[i + 1] < L[i]:
             l = i
@@ -11,13 +11,11 @@ def decSeq(L):
                 break
     except IndexError:
         r = len(L) - 1
-    return l, r
+    return (l, r)
 
 
-n, arr = input(), list(map(int, input().split()))
-
-l, r = decSeq(arr)
-
+(n, arr) = (input(), list(map(int, input().split())))
+(l, r) = decSeq(arr)
 if sorted(arr) == arr:
     print('yes')
     print(1, 1)

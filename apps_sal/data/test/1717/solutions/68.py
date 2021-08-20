@@ -22,8 +22,7 @@ ans = 1
 for i in range(1, n + 1):
     f_ans = factorize(ans)
     f_i = factorize(i)
-
-    for k, v in list(f_i.items()):
+    for (k, v) in list(f_i.items()):
         if f_ans[k] < v:
             ans *= pow(k, v - f_ans[k])
 ans += 1

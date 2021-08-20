@@ -25,17 +25,15 @@ def transpose_bar(amount, bar):
                 previous_beat[fret] += frets[fret]
                 joined = True
         new_bar = write_bar(new_bar, previous_beat, amount)
-
     if not joined:
         new_bar = write_bar(new_bar, frets, amount)
-
     return new_bar
 
 
 def transpose(amount, tab):
     string_bars = [gen.split('|')[1:-1] for gen in tab]
     bars = list(zip(*string_bars))
-    new_bars = [('e', 'B', 'G', 'D', 'A', 'E'), ]
+    new_bars = [('e', 'B', 'G', 'D', 'A', 'E')]
     try:
         for bar in bars:
             new_bars.append(transpose_bar(amount, bar))

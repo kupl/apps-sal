@@ -1,7 +1,6 @@
 import sys
-
 sys.setrecursionlimit(280000)
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 dead = a
 while a >= b:

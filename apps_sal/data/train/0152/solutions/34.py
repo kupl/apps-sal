@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         if len(position) < m:
             return 0
@@ -12,16 +13,13 @@ class Solution:
                     ball_pos = i
                     if balls == 0:
                         return True
-
             return False
-
         position.sort()
-        l, h = 1, position[-1]
+        (l, h) = (1, position[-1])
         while l < h:
             f = l + (h - l + 1) // 2
             if valid_force(f):
                 l = f
             else:
                 h = f - 1
-
         return l

@@ -1,13 +1,12 @@
 class Solution:
-    def maxJumps(self, arr: List[int], d: int) -> int:
 
+    def maxJumps(self, arr: List[int], d: int) -> int:
         l = []
         n = len(arr)
         for i in range(n):
             l.append([arr[i], i])
         l.sort()
         l = [i[1] for i in l]
-
         dp = [1] * n
         for i in l:
             for j in range(i + 1, min(n, i + d + 1)):

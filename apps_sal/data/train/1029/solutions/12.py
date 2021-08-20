@@ -1,6 +1,5 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
-
+    (n, m) = map(int, input().split())
     mLi = list(map(int, input().split()))
     nLi = [i for i in range(1, n + 1) if i not in mLi]
     x = []
@@ -10,6 +9,5 @@ for _ in range(int(input())):
             x.append(nLi[j])
         else:
             y.append(nLi[j])
-
-    print(*x, sep=" ")
-    print(*y, sep=" ")
+    print(*x, sep=' ')
+    print(*y, sep=' ')

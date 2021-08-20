@@ -1,8 +1,8 @@
 def f():
     n = int(input())
-    k, m = n // 2, n - 2
+    (k, m) = (n // 2, n - 2)
     t = input()
-    a, b = t[0], t[1]
+    (a, b) = (t[0], t[1])
     if a == b:
         return 'NO'
     if t != a + b * m + a:

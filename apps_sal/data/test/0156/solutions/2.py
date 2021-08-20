@@ -2,17 +2,17 @@ from bisect import bisect_left
 
 
 def gcd(a, b):
-    while(b):
+    while b:
         a %= b
-        a, b = b, a  # Swap para tener el mas chico en b
+        (a, b) = (b, a)
     return a
 
 
 def divisors(n):
     d = []
-    for i in range(1, int(n**0.5) + 1):
-        if (n % i == 0):
-            d.append(i) if(i * i == n) else d.extend([i, n // i])
+    for i in range(1, int(n ** 0.5) + 1):
+        if n % i == 0:
+            d.append(i) if i * i == n else d.extend([i, n // i])
     return list(sorted(d))
 
 

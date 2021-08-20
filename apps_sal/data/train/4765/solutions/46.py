@@ -1,4 +1,5 @@
 class Hero(object):
+
     def __init__(self, *name):
         if name:
             self.name = str(name)[2:-3]

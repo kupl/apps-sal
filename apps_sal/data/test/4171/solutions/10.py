@@ -1,8 +1,8 @@
 import collections
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = [int(i) for i in input().split()]
-ans = float("inf")
-D1, D2 = collections.defaultdict(list), collections.defaultdict(int)
+ans = float('inf')
+(D1, D2) = (collections.defaultdict(list), collections.defaultdict(int))
 for i in range(n):
     a = A[i]
     c = 0

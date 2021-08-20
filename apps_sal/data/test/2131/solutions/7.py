@@ -6,7 +6,6 @@ for i in range(n - 1):
     s = input().split()
     dic[int(s[0])] += 1
     dic[int(s[1])] += 1
-
 cl = []
 count1 = 0
 count2 = 0
@@ -20,7 +19,6 @@ for x in dic.keys():
     else:
         count3 += 1
         p = x
-
 if count3 == 0:
     print('Yes')
     print(1)

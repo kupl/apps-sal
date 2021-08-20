@@ -1,7 +1,4 @@
-# Known primes
 primes = [2, 3, 5, 7, 11]
-
-# Generate prime numbers in sequence
 
 
 def gen_primes():
@@ -23,7 +20,7 @@ def gen_primes():
 
 def get_primes(how_many, group_size=2):
     result = []
-    for i, p in enumerate(gen_primes(), start=1):
+    for (i, p) in enumerate(gen_primes(), start=1):
         result.append(p)
         if len(result) == group_size:
             yield tuple(result)

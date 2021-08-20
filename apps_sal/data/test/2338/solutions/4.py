@@ -4,7 +4,7 @@ n = int(input())
 seg = [list(map(int, input().split())) for _ in range(n)]
 seg = sorted(seg, key=lambda x: abs(x[0]) + abs(x[1]))
 res = []
-for x, y in seg:
+for (x, y) in seg:
     if x > 0:
         res.append('1 %d %c' % (x, 'R'))
     if x < 0:

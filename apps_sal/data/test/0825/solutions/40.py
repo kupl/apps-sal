@@ -1,6 +1,9 @@
 import collections
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def prime_factorize(n):
@@ -23,7 +26,6 @@ def prime_factorize(n):
 N = int(input())
 count = 0
 prime_list = collections.Counter(prime_factorize(N))
-
 for key in prime_list:
     num = prime_list[key]
     for i in range(1, num + 1):
@@ -32,5 +34,4 @@ for key in prime_list:
             count += 1
         else:
             break
-
 print(count)

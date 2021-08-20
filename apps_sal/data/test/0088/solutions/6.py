@@ -1,5 +1,4 @@
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 ans = 0
 for l in range(1, 70):
     for pos in range(l - 1):

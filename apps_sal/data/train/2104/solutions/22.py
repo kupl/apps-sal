@@ -2,7 +2,7 @@ n = int(input())
 s = list(map(int, input().split()))
 s.sort()
 mix = s[0]
-maxx = s[(n - 1)]
+maxx = s[n - 1]
 miy = s[n]
 may = s[-1]
 dp = []

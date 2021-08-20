@@ -9,15 +9,14 @@ for i in range(len(li)):
         health = health - li[i]
         points += 1
         li[i] = 0
+    elif points >= 1 and li[pointer] != 0:
+        points -= 1
+        health += li[pointer]
+        pointer -= 1
+        if health >= li[i]:
+            health = health - li[i]
+            points += 1
+            li[i] = 0
     else:
-        if points >= 1 and li[pointer] != 0:
-            points -= 1
-            health += li[pointer]
-            pointer -= 1
-            if health >= li[i]:
-                health = health - li[i]
-                points += 1
-                li[i] = 0
-        else:
-            break
+        break
 print(points)

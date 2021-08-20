@@ -1,10 +1,10 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         children = set()
         children.add(0)
         for i in range(n):
             l = [leftChild[i], rightChild[i]]
-
             for c in l:
                 if c != -1:
                     if i in children:
@@ -12,10 +12,8 @@ class Solution:
                             return False
                         else:
                             children.add(c)
+                    elif c in children:
+                        children.add(i)
                     else:
-                        if c in children:
-                            children.add(i)
-                        else:
-                            return False
-
+                        return False
         return len(children) == n

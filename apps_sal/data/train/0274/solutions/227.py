@@ -57,6 +57,7 @@ class MinMaxQueue:
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums:
             return 0

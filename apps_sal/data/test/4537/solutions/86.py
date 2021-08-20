@@ -1,2 +1,2 @@
 a = input()
-print(max(eval(a.replace(" ", k))for k in "+-*"))
+print(max((eval(a.replace(' ', k)) for k in '+-*')))

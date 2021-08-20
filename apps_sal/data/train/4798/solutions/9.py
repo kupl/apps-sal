@@ -18,5 +18,5 @@ def avg_diags(m):
     if diagonal_2 == []:
         ans2 = -1
     else:
-        ans2 = round(sum(diagonal_2) * (-1) / len(diagonal_2), 0)
+        ans2 = round(sum(diagonal_2) * -1 / len(diagonal_2), 0)
     return [ans1, ans2]

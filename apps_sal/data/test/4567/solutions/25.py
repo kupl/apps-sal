@@ -8,8 +8,7 @@ for i in s_score:
         break
 if sum(score) % 10 != 0:
     print(sum(score))
+elif a == 0:
+    print(0)
 else:
-    if a == 0:
-        print(0)
-    else:
-        print(sum(score) - a)
+    print(sum(score) - a)

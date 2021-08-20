@@ -18,5 +18,5 @@ def f(n, p):
     return -1
 
 
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 print(f(n, p))

@@ -1,12 +1,25 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
 
 
-class Combination():
-    def __init__(self, n, mod=10**9 + 7):
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
+
+
+class Combination:
+
+    def __init__(self, n, mod=10 ** 9 + 7):
         self.mod = mod
         self.fac = [1] * (n + 1)
         for i in range(1, n + 1):
@@ -30,8 +43,8 @@ class Combination():
 
 
 def main():
-    n, k = mi()
-    mod = 10**9 + 7
+    (n, k) = mi()
+    mod = 10 ** 9 + 7
     c = Combination(n)
     for i in range(k):
         if n - k < i:

@@ -1,15 +1,14 @@
 from collections import defaultdict, deque
-
 adj = defaultdict(lambda: defaultdict(lambda: 0))
 
 
 def bfs(graph, inicio, destino, parent):
     parent.clear()
     queue = deque()
-    queue.append([inicio, float("Inf")])
+    queue.append([inicio, float('Inf')])
     parent[inicio] = -2
-    while (len(queue)):
-        current, flow = queue.popleft()
+    while len(queue):
+        (current, flow) = queue.popleft()
         for i in adj[current]:
             if parent[i] == -1 and graph[current][i] > 0:
                 parent[i] = current
@@ -38,8 +37,7 @@ def maxflow(graph, inicio, destino):
     return flow
 
 
-n, m, x = [int(i) for i in input().split()]
-
+(n, m, x) = [int(i) for i in input().split()]
 for _ in range(m):
     t = [int(i) for i in input().split()]
     adj[t[0]][t[1]] = t[2]
@@ -57,7 +55,6 @@ def check(k):
 
 lo = 1 / x
 hi = check(1)
-
 for _ in range(70):
     mid = (hi + lo) / 2
     if check(mid) >= x:

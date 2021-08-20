@@ -12,6 +12,7 @@ class Gender(Enum):
 
 
 class Person:
+
     def __init__(self, name):
         self.name = name
         self.gender = None
@@ -26,7 +27,7 @@ class Person:
         return copy
 
     def __str__(self):
-        return "Name: {}, Gender: {}, Children: {}, Parents: {}".format(self.name, self.gender, self.children, self.parents)
+        return 'Name: {}, Gender: {}, Children: {}, Parents: {}'.format(self.name, self.gender, self.children, self.parents)
 
 
 class Family:
@@ -36,11 +37,11 @@ class Family:
 
     def __copy__(self):
         copy = Family()
-        copy.family = {name: person.__copy__() for name, person in list(self.family.items())}
+        copy.family = {name: person.__copy__() for (name, person) in list(self.family.items())}
         return copy
 
     def __str__(self):
-        return "\n" + "\n".join(person.__str__() for name, person in list(self.family.items())) + "\n"
+        return '\n' + '\n'.join((person.__str__() for (name, person) in list(self.family.items()))) + '\n'
 
     def init_if_missing(self, name):
         if name not in self.family:
@@ -82,25 +83,16 @@ class Family:
         current_parents = self.get_parents_of(child_name)
         if parent_name in current_parents:
             return True
-
-        elif parent_name == child_name \
-            or child_name in self.get_ancestors_of(parent_name) \
-            or 2 <= len(current_parents) \
-            or (len(current_parents) == 1 and self.family[parent_name].gender is not None and
-                self.family[current_parents[0]].gender == self.family[parent_name].gender):
+        elif parent_name == child_name or child_name in self.get_ancestors_of(parent_name) or 2 <= len(current_parents) or (len(current_parents) == 1 and self.family[parent_name].gender is not None and (self.family[current_parents[0]].gender == self.family[parent_name].gender)):
             return False
-
         else:
-            # if there is another parent with known gender, checks for inconsistency
-            if len(current_parents) == 1 and self.family[parent_name].gender is None \
-                    and self.family[current_parents[0]].gender is None:
+            if len(current_parents) == 1 and self.family[parent_name].gender is None and (self.family[current_parents[0]].gender is None):
                 family_copy = self.__copy__()
                 res = family_copy.female(parent_name)
                 if res:
                     res = family_copy.set_parent_of(child_name, parent_name)
                     if not res:
                         return False
-
             self.update_parent_of(child_name, parent_name)
             return True
 
@@ -109,13 +101,11 @@ class Family:
             self.family[child_name].parents.append(parent_name)
             self.family[parent_name].children.append(child_name)
             self.family[parent_name].children.sort()
-
         if len(self.family[child_name].parents) == 2:
             self.family[child_name].parents.sort()
-            p0, p1 = self.family[self.family[child_name].parents[0]], self.family[self.family[child_name].parents[1]]
-            if (p0.gender is not None and p1.gender is not None) or (p0.gender is None and p1.gender is None):
+            (p0, p1) = (self.family[self.family[child_name].parents[0]], self.family[self.family[child_name].parents[1]])
+            if p0.gender is not None and p1.gender is not None or (p0.gender is None and p1.gender is None):
                 return
-
             if p0.gender is not None:
                 self.family[self.family[child_name].parents[1]].gender = Gender.opp_gender(p0.gender)
                 for child in p1.children:

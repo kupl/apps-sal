@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 t = sorted(map(int, input().split()))
 res = 0
 for x in range(min(m // sum(t), n) + 1):

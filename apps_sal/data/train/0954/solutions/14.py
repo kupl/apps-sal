@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for w in range(t):
     n = int(input())
@@ -8,5 +7,5 @@ for w in range(t):
     for a in range(n - 1, 0, -1):
         l.append(a)
     for p in l:
-        sm = sm + p**3
+        sm = sm + p ** 3
     print(sm)

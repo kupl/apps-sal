@@ -1,6 +1,5 @@
-# cook your dish here
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = 0
 for x in range(1, a + 1):
     for y in range(1, b + 1):

@@ -1,8 +1,6 @@
 __author__ = 'kitkat'
 import sys
-
-#sys.stdin = open("in.txt")
-MAXN = int(2e5 + 10)
+MAXN = int(200000.0 + 10)
 try:
     while True:
         S = [0] * MAXN
@@ -10,7 +8,7 @@ try:
         L = [0] * MAXN
         R = [0] * MAXN
         n = int(input())
-        val = list(map(int, input().split(" ")))
+        val = list(map(int, input().split(' ')))
         top = -1
         for i in range(n):
             while ~top and val[i] <= val[S[top]]:
@@ -31,6 +29,6 @@ try:
             ans[i] = max(ans[i], ans[i + 1])
         for i in range(1, n + 1):
             sys.stdout.write('%d ' % ans[i])
-        print("")
+        print('')
 except EOFError:
     pass

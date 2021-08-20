@@ -1,5 +1,4 @@
 def alternateCase(s=''):
-    # your code here
     print(s)
     listl = list(s)
     n = len(s)
@@ -13,15 +12,13 @@ def alternateCase(s=''):
             print(listl)
             s = ''.join(listl)
             print(s)
-
-        else:
-            if s[i].islower() == True:
-                print(s[i])
-                letra = s[i].upper()
-                print(letra)
-                listl[i] = letra
-                print(listl)
-                s = ''.join(listl)
-                print(s)
+        elif s[i].islower() == True:
+            print(s[i])
+            letra = s[i].upper()
+            print(letra)
+            listl[i] = letra
+            print(listl)
+            s = ''.join(listl)
+            print(s)
         i += 1
     return s

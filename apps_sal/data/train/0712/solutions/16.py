@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for t1 in range(t):
     n = int(input())
@@ -6,7 +5,7 @@ for t1 in range(t):
     prod = 1
     for i in l:
         prod = prod * i
-    if(prod % 2 == 1):
+    if prod % 2 == 1:
         print('YES')
     else:
         print('NO')

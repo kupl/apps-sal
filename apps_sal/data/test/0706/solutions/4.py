@@ -1,7 +1,6 @@
-
 def main():
     mod = 1000000007
-    a, b, n, x = list(map(int, input().split()))
+    (a, b, n, x) = list(map(int, input().split()))
     if a == 1:
         print((x + n * b) % mod)
     else:

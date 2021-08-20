@@ -2,6 +2,7 @@ from sys import stdin
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.tree = [-1 for i in range(n)]
         return
@@ -12,7 +13,7 @@ class UnionFind:
         if xroot == yroot:
             return
         if self.tree[xroot] > self.tree[yroot]:
-            xroot, yroot = yroot, xroot
+            (xroot, yroot) = (yroot, xroot)
         self.tree[xroot] += self.tree[yroot]
         self.tree[yroot] = xroot
         return
@@ -64,12 +65,12 @@ def input():
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     p = list(map(int, input().split()))
     uf = UnionFind(n)
     ans = 0
     for i in range(m):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         uf.union(x - 1, y - 1)
     arr = uf.getelements()
     for i in range(len(arr)):

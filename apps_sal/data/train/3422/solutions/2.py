@@ -1,18 +1,18 @@
 def diamond(n):
-    if n % 2 == 0 or n <= 0:                        # validate input
+    if n % 2 == 0 or n <= 0:
         return None
-    diamond = ""                                 # initialize diamond string
-    for i in range(n):                            # loop diamond section lines
-        length = getLength(i, n)                  # get length of diamond section
-        diamond += getLine(length, n)             # generate diamond line
+    diamond = ''
+    for i in range(n):
+        length = getLength(i, n)
+        diamond += getLine(length, n)
     return diamond
 
 
 def getLine(len, max):
-    spaces = (max - len) // 2                         # compute number of leading spaces
-    return (" " * spaces) + ("*" * len) + "\n"    # create line
+    spaces = (max - len) // 2
+    return ' ' * spaces + '*' * len + '\n'
 
 
 def getLength(index, max):
-    distance = abs(max // 2 - index)                # find distance from center (max length)
-    return max - distance * 2                       # compute length of diamond section
+    distance = abs(max // 2 - index)
+    return max - distance * 2

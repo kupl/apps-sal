@@ -1,5 +1,4 @@
 class Funnel(object):
-    # Coding and coding...
 
     def __init__(self):
         self.data = [[None] * i for i in range(1, 6)]
@@ -11,7 +10,7 @@ class Funnel(object):
             if self.number_elements < 15:
                 for row in self.data:
                     for i in range(len(row)):
-                        if row[i] is None and not added:
+                        if row[i] is None and (not added):
                             row[i] = new_elem
                             added = True
                             self.number_elements += 1
@@ -40,11 +39,10 @@ class Funnel(object):
                 self.data[current_row][current_idx] = None if current_row == 4 else self.data[current_row + 1][current_idx + 1]
                 current_row += 1
                 current_idx += 1
-
         return node
 
     def __str__(self):
-        res = ""
-        for i, row in enumerate(self.data[::-1]):
-            res += (" " * i + "\\" + " ".join([str(elem) if elem is not None else " " for elem in row]) + "/\n")
+        res = ''
+        for (i, row) in enumerate(self.data[::-1]):
+            res += ' ' * i + '\\' + ' '.join([str(elem) if elem is not None else ' ' for elem in row]) + '/\n'
         return res[:-1]

@@ -1,9 +1,7 @@
 a = int(input())
 b = int(input())
-
 if a > b:
-    a, b = b, a
-
+    (a, b) = (b, a)
 i = 1
 r = 0
 while True:

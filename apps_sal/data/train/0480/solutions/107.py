@@ -1,10 +1,11 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         if arrLen > steps // 2 + 1:
             arrLen = steps // 2 + 1
         num_ways = [0 for i in range(arrLen)]
         num_ways[0] = 1
-        k = 10**9 + 7
+        k = 10 ** 9 + 7
         for _ in range(steps):
             cur_num_ways = num_ways[:]
             for i in range(arrLen):

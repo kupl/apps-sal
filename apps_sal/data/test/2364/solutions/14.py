@@ -9,7 +9,7 @@ def main():
         a[i] += a[i - 1]
     ans = 0
     for i in range(n - 2):
-        m = (n - 1) - (i + 2)
+        m = n - 1 - (i + 2)
         ans = (ans + pow(2, m, mod) * a[i] * (m + 5)) % mod
     print((ans + a[-2] + a[-2] + a[-1]) % mod)
 

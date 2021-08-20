@@ -1,8 +1,8 @@
 def braces_status(s):
-    matching = {"}": "{", "]": "[", ")": "("}
+    matching = {'}': '{', ']': '[', ')': '('}
     stack = []
     for c in s:
-        if c in "[({":
+        if c in '[({':
             stack.append(c)
         elif c in matching and (not stack or stack.pop() != matching[c]):
             return False

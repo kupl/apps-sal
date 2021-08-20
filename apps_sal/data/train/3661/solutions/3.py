@@ -9,7 +9,7 @@ def partitions(n, s=float('inf')):
         return
     for i in range(min(n, s), 0, -1):
         for p in partitions(n - i, i):
-            yield [i] + p
+            yield ([i] + p)
 
 
 def find_part_max_prod(n):

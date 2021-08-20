@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 0
 if k == 0:
     print(n * n)

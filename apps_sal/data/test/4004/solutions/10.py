@@ -1,7 +1,16 @@
 IN = input
-def rint(): return int(IN())
-def rmint(): return list(map(int, IN().split()))
-def rlist(): return list(rmint())
+
+
+def rint():
+    return int(IN())
+
+
+def rmint():
+    return list(map(int, IN().split()))
+
+
+def rlist():
+    return list(rmint())
 
 
 n = rint()
@@ -18,8 +27,7 @@ elif len(b) == 2:
         print(p)
     else:
         print(p // 2)
+elif b[1] - b[0] == b[-1] - b[1]:
+    print(b[1] - b[0])
 else:
-    if b[1] - b[0] == b[-1] - b[1]:
-        print(b[1] - b[0])
-    else:
-        print(-1)
+    print(-1)

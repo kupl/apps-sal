@@ -4,8 +4,7 @@ try:
 except:
     fin = sys.stdin
 input = fin.readline
-
-mod = 10**9 + 9
+mod = 10 ** 9 + 9
 
 
 def f(x, y):
@@ -18,11 +17,9 @@ def f(x, y):
     return ans
 
 
-n, a, b, k = map(int, input().split())
+(n, a, b, k) = map(int, input().split())
 s = [1 if c == '+' else -1 for c in input()]
-# period k-1
-pr = sum(s[i] * f(a, n - i) * f(b, i) for i in range(k)) % mod
-#ratio (b/a)^k
+pr = sum((s[i] * f(a, n - i) * f(b, i) for i in range(k))) % mod
 rt = f(b, k) * f(f(a, k), mod - 2) % mod
 terms = (n + 1) // k
 if rt == 1:

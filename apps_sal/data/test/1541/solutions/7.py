@@ -1,6 +1,5 @@
-
 def weight(s):
-    w, i = 0, 1
+    (w, i) = (0, 1)
     for c in s:
         if c != '=':
             w += i * int(c)
@@ -10,7 +9,7 @@ def weight(s):
 
 def main():
     line = input()
-    l, r = line.split('^')
+    (l, r) = line.split('^')
     l = weight(l[::-1])
     r = weight(r)
     if l > r:

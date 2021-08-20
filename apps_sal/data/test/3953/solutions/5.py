@@ -1,5 +1,4 @@
 from sys import stdin
-
 __author__ = 'artyom'
 
 
@@ -26,7 +25,6 @@ n = int(stdin.readline().strip())
 x = []
 for _ in range(n):
     x.append(stdin.readline().strip())
-
 a = solve(x)
 if a:
     for i in range(n):

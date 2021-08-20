@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     a = tuple(map(int, input().split()))
     ans = 0
     ans1 = 0

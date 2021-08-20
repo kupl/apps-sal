@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     robots = [0] * N
     c = 0
     Id = M
@@ -9,6 +9,6 @@ for _ in range(T):
         c += 1
         Id = (Id + M) % N
     if c == N:
-        print("Yes")
+        print('Yes')
     else:
-        print("No", c)
+        print('No', c)

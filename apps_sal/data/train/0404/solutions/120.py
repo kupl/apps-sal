@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         if len(A) <= K:
             return sum(A)
@@ -13,7 +14,7 @@ class Solution:
             cur = [A[0]]
             for i in range(1, n):
                 stage_max = 0
-                for j1, j in enumerate(last[:i]):
+                for (j1, j) in enumerate(last[:i]):
                     stage_max = max(stage_max, j + (A1[i] - A1[j1]) / (i - j1))
                 cur.append(stage_max)
             last = cur

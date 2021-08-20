@@ -10,4 +10,4 @@ for i in range(1, N + 1):
     while i - a >= 0:
         cnt[i] = min(cnt[i], cnt[i - a] + 1)
         a *= 9
-print((cnt[N]))
+print(cnt[N])

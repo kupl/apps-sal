@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = [int(x) for x in input().split()]
 diff = [0] * (n - 1)
 p = arr[-1] - arr[0]

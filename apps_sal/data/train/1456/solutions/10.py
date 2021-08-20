@@ -1,10 +1,9 @@
-# cook your dish here
 import math
 
 
 def jd(x):
     n = x
-    y = (x * (x + 1)) // 2
+    y = x * (x + 1) // 2
     ans = 0
     p = 0
     while n >= 1:
@@ -18,7 +17,7 @@ def jd(x):
 
 
 for _ in range(int(input())):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     if l > 1:
         print(jd(r) - jd(l - 1))
     else:

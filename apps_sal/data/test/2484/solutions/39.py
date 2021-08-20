@@ -2,11 +2,9 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n = int(readline())
     a = list(map(int, readline().split()))
-
     l = 0
     r = 1
     ans = 0
@@ -27,7 +25,6 @@ def main():
             l += 1
             ans += 1
             ans += r - l
-
     print(ans)
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         jumps = list(range(26))
         if len(s) != len(t):

@@ -1,5 +1,5 @@
 from collections import Counter
-url = "https://atcoder.jp//contests/abc058/tasks/arc071_a"
+url = 'https://atcoder.jp//contests/abc058/tasks/arc071_a'
 
 
 def main():
@@ -11,8 +11,8 @@ def main():
             if c_count < isall[k]:
                 isall[k] = c_count
     isall = sorted(isall.items())
-    for k, v in isall:
-        print(k * v, end="")
+    for (k, v) in isall:
+        print(k * v, end='')
 
 
 def __starting_point():

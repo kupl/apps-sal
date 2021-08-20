@@ -1,8 +1,8 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         dp = [1] * len(words)
-
         possible_pred = [0] * len(words)
         for i in range(len(words) - 1, -1, -1):
             cur_word = words[i]

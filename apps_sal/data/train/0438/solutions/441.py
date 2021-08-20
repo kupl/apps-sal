@@ -1,5 +1,5 @@
-
 class Node:
+
     def __init__(self, parent, value):
         self.value = value
         self.parent = parent
@@ -8,8 +8,9 @@ class Node:
 
 
 class UnionFind:
+
     def __init__(self, nodes):
-        self.subsets = [Node(i, v) for i, v in enumerate(nodes)]
+        self.subsets = [Node(i, v) for (i, v) in enumerate(nodes)]
         self.maxSubSetSize = 1
 
     def union(self, i, j):
@@ -35,6 +36,7 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         arr0 = [a - 1 for a in arr]
         uf = UnionFind(list(range(len(arr0))))

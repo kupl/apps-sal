@@ -1,4 +1,4 @@
-x, y, z, K = list(map(int, input().split()))
+(x, y, z, K) = list(map(int, input().split()))
 A = sorted(map(int, input().split()), reverse=True)
 B = sorted(map(int, input().split()), reverse=True)
 C = sorted(map(int, input().split()), reverse=True)
@@ -11,6 +11,5 @@ for i in range(x):
                 continue
             break
 ans.sort(reverse=True)
-
 for i in range(K):
-    print((ans[i]))
+    print(ans[i])

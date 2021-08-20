@@ -1,15 +1,15 @@
 def main():
     input()
-    l, r = [], []
-    for c, x in zip(input(), list(map(int, input().split()))):
+    (l, r) = ([], [])
+    for (c, x) in zip(input(), list(map(int, input().split()))):
         if c == 'L':
             l.append(x)
         else:
             r.append(x)
-    ilo, ihi = iter(r), iter(l)
+    (ilo, ihi) = (iter(r), iter(l))
     res = 10 ** 10
     try:
-        lo, hi = next(ilo), next(ihi)
+        (lo, hi) = (next(ilo), next(ihi))
         while True:
             if lo < hi:
                 if res > hi - lo:

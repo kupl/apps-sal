@@ -3,7 +3,6 @@ import sys
 
 def main():
     x = sys.stdin.readline().split()
-
     l = int(x[0])
     r = int(x[1])
     xx = int(x[2])
@@ -12,9 +11,9 @@ def main():
     for i in range(xx, y + 1):
         p = i * k
         if l <= p and p <= r:
-            print("YES")
+            print('YES')
             return
-    print("NO")
+    print('NO')
 
 
 def __starting_point():

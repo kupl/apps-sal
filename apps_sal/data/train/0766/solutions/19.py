@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s, s2 = int(input()), 1, 1
+    (n, s, s2) = (int(input()), 1, 1)
     arr = list(map(int, input().split()))
     s = s * max(arr)
     arr.remove(max(arr))

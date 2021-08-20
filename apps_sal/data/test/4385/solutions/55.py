@@ -3,10 +3,8 @@ b = int(input())
 c = int(input())
 d = int(input())
 e = int(input())
-
 k = int(input())
-
 if e - a > k:
-    print(":(")
+    print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

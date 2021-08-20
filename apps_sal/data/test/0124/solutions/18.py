@@ -1,7 +1,6 @@
 def __starting_point():
-    x, y, z = (int(x) for x in input().split())
-    a, b, c = (int(x) for x in input().split())
-
+    (x, y, z) = (int(x) for x in input().split())
+    (a, b, c) = (int(x) for x in input().split())
     if a < x:
         print('NO')
         quit()

@@ -6,5 +6,5 @@ for i in x:
 num = round(float(num / n))
 ans = 0
 for i in x:
-    ans += (i - num)**2
+    ans += (i - num) ** 2
 print(ans)

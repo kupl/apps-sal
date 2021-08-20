@@ -1,4 +1,4 @@
-lis = ["Sunny", "Cloudy", "Rainy"]
+lis = ['Sunny', 'Cloudy', 'Rainy']
 S = input()
 x = lis.index(S)
 if x == 2:

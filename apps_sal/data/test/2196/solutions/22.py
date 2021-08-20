@@ -1,4 +1,4 @@
-m, s, n = 0, set(), int(input())
+(m, s, n) = (0, set(), int(input()))
 for a in map(int, input().split()):
     while a in s:
         s.remove(a)

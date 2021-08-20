@@ -2,7 +2,6 @@ class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.kn = kingName
-        # get_child[parent] = ([child in order], start_index)
         self.get_child = {}
         self.get_parent = {}
         self.is_dead = set()
@@ -25,7 +24,7 @@ class ThroneInheritance:
             child = []
             start_index = 0
             if x in self.get_child:
-                child, start_index = self.get_child[x]
+                (child, start_index) = self.get_child[x]
             if len(child) == 0 or all([c in cur_order_set for c in child]):
                 if x == self.kn:
                     return None
@@ -47,9 +46,3 @@ class ThroneInheritance:
             if co and co not in self.is_dead:
                 final_cur_order.append(co)
         return final_cur_order
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

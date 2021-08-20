@@ -2,12 +2,13 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if not n:
             return 0
         edges = defaultdict(list)
         root = 0
-        for idx, val in enumerate(manager):
+        for (idx, val) in enumerate(manager):
             if val == -1:
                 root = idx
             else:

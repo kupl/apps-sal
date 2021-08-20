@@ -1,10 +1,10 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         if not initialBoxes:
             return 0
         unused_keys = set()
         boxes = set([i for i in initialBoxes if status[i] == 0])
-
         Q = collections.deque([i for i in initialBoxes if status[i] == 1])
         res = 0
         while Q:

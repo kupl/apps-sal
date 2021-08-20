@@ -6,4 +6,4 @@ else:
     count[0] = 1
     for i in range(3, S + 1):
         count[i] = count[i - 1] + count[i - 3]
-    print((count[S]) % (10**9 + 7))
+    print(count[S] % (10 ** 9 + 7))

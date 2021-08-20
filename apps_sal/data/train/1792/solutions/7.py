@@ -10,6 +10,7 @@ def f(n):
     if n == 1:
         return 0
     else:
+
         def g(n):
             if n in cache_g:
                 return cache_g[n]

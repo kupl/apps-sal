@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 try:
     while True:
-        l, r, k = list(map(int, input().split()))
+        (l, r, k) = list(map(int, input().split()))
         x = 1
         ls = []
         while x <= r:
@@ -13,6 +11,5 @@ try:
             print(' '.join(map(str, ls)))
         else:
             print(-1)
-
 except EOFError:
     pass

@@ -3,11 +3,8 @@ def next_item(xs, item):
         for x in xs:
             if x == item:
                 return next(xs)
-
     if xs == [] or item not in xs:
         return None
-
-    if xs.index(item) == (len(xs) - 1):
+    if xs.index(item) == len(xs) - 1:
         return None
-
-    return xs[(xs.index(item) + 1)]
+    return xs[xs.index(item) + 1]

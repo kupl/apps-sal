@@ -1,20 +1,5 @@
 z = input
-
-"""
-
-n=int(z())
-
-for i in range(n):
-
-x=int(z())
-
-l=list(map(int,z().split()))
-
-a,b=map(int,z().split())
-
-x=z()
-
-"""
+'\n\nn=int(z())\n\nfor i in range(n):\n\nx=int(z())\n\nl=list(map(int,z().split()))\n\na,b=map(int,z().split())\n\nx=z()\n\n'
 n = int(z())
 for i in range(n):
     x = z()

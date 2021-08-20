@@ -16,5 +16,4 @@ for i in range(n):
     if j[s] * l <= 0:
         e += abs(l - j[s])
         l = j[s]
-print((min(e, d)))
-#####################################################
+print(min(e, d))

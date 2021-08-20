@@ -1,5 +1,4 @@
 from collections import OrderedDict
-
 arr = [3, 4, 4, 3, 6, 3]
 
 

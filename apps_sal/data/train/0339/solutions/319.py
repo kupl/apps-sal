@@ -1,7 +1,6 @@
 class Solution:
 
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-
         self.count = 0
 
         def computeCount(nums1, nums2):
@@ -17,7 +16,6 @@ class Solution:
                     else:
                         hashMap[nums2[j]] = 1
                 hashMap.clear()
-
         computeCount(nums1, nums2)
         computeCount(nums2, nums1)
         return self.count

@@ -21,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 mm = 1000000007
@@ -42,7 +42,7 @@ def solve():
         n = len(s)
         l = [0] * n
         for i in range(n - 1):
-            if(s[i] == s[i + 1] and s[i] == "v"):
+            if s[i] == s[i + 1] and s[i] == 'v':
                 l[i] = 1
         pre = [0] * n
         suf = [0] * n
@@ -54,8 +54,8 @@ def solve():
             suf[i] = suf[i + 1] + l[i]
         ans = 0
         for i in range(n):
-            if(s[i] == "o"):
-                if(i - 1 >= 0 and i + 1 < n):
+            if s[i] == 'o':
+                if i - 1 >= 0 and i + 1 < n:
                     ans += pre[i - 1] * suf[i + 1]
         print(ans)
 

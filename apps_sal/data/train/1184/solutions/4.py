@@ -12,7 +12,7 @@ for _ in range(int(stdin.readline())):
         a.append(temp)
     s = 0
     for __ in range(t):
-        mov, time = input().split()
+        (mov, time) = input().split()
         time = int(time)
         if mov == 'A':
             if time == 12:
@@ -41,19 +41,18 @@ for _ in range(int(stdin.readline())):
                 a[2][2] += 1
             else:
                 a[2][3] += 1
+        elif time == 12:
+            a[3][0] += 1
+        elif time == 3:
+            a[3][1] += 1
+        elif time == 6:
+            a[3][2] += 1
         else:
-            if time == 12:
-                a[3][0] += 1
-            elif time == 3:
-                a[3][1] += 1
-            elif time == 6:
-                a[3][2] += 1
-            else:
-                a[3][3] += 1
+            a[3][3] += 1
     ma = -1
     cakes = []
     for k in range(4):
-        mai, maj = -1, -1
+        (mai, maj) = (-1, -1)
         for i in range(4):
             for j in range(4):
                 if a[i][j] > ma:
@@ -69,16 +68,14 @@ for _ in range(int(stdin.readline())):
     for i in range(len(cakes)):
         if cakes[i] == 0:
             s -= 100
-        else:
-            if i == 0:
-                s += cakes[i] * 100
-            elif i == 1:
-                s += cakes[i] * 75
-            elif i == 2:
-                s += cakes[i] * 50
-            elif i == 3:
-                s += cakes[i] * 25
+        elif i == 0:
+            s += cakes[i] * 100
+        elif i == 1:
+            s += cakes[i] * 75
+        elif i == 2:
+            s += cakes[i] * 50
+        elif i == 3:
+            s += cakes[i] * 25
     print(s)
     arr.append(s)
-    # print(arr)
 print(sum(arr))

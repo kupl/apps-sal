@@ -12,7 +12,6 @@ class StreamChecker:
         curNode = self.Trie.root
         i = 0
         while curNode and i < len(self.curQuery):
-
             curLetter = self.curQuery[i]
             ind = ord(curLetter) - ord('a')
             curNode = curNode.children[ind]
@@ -20,16 +19,12 @@ class StreamChecker:
                 return False
             if curNode.isWord:
                 return True
-
             i += 1
         return False
 
 
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
-
 class Trie:
+
     def __init__(self):
         self.root = Node()
 
@@ -47,6 +42,7 @@ class Trie:
 
 
 class Node:
+
     def __init__(self):
         self.children = [None] * 26
         self.isWord = False

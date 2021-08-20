@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 sizes = list(map(int, input().split()))
 
 
@@ -7,7 +7,7 @@ def solve(n, k, sizes):
         return max(sizes)
     head = sizes[:n - k]
     tail = sizes[n - k:]
-    for i, h in enumerate(head[::-1]):
+    for (i, h) in enumerate(head[::-1]):
         tail[i] += h
     return max(tail)
 

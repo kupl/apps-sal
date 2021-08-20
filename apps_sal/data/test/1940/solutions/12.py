@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 days = 0
 w = list(map(int, input().split()))
 for wi in w:

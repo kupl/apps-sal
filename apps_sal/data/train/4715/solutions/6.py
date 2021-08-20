@@ -24,7 +24,4 @@ def build_palindrome(word: str) -> str:
     """Add letters to the right or the left of the given word to get the
     shorter palindrome.
     """
-    return sorted([
-        build_left_palindrome(word),
-        build_right_palindrome(word)
-    ], key=len)[0]
+    return sorted([build_left_palindrome(word), build_right_palindrome(word)], key=len)[0]

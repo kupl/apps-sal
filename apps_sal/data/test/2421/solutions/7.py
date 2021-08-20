@@ -2,16 +2,16 @@ import heapq
 
 
 def dijkstra(g: list, start, goal=None):
-    num = len(g)          # グラフのノード数
+    num = len(g)
     dist = [float('inf') for i in range(num)]
     dist[start] = 0
     q = []
-    heapq.heappush(q, (0, start))  # 始点をpush
+    heapq.heappush(q, (0, start))
     while q:
-        prov_cost, src = heapq.heappop(q)  # pop
+        (prov_cost, src) = heapq.heappop(q)
         if dist[src] < prov_cost:
             continue
-        for node, cost in g[src]:
+        for (node, cost) in g[src]:
             if dist[node] > dist[src] + cost:
                 dist[node] = dist[src] + cost
                 heapq.heappush(q, (dist[node], node))
@@ -22,18 +22,18 @@ dxdy = ((1, 1), (0, 1), (-1, 0), (-1, -1), (0, -1), (1, 0))
 INF = 3 * 10 ** 18
 t = int(input())
 for _ in range(t):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     c = list(map(int, input().split()))
     g = [[] for _ in range(25)]
     for i in range(5):
         for j in range(5):
             for k in range(6):
-                dx, dy = dxdy[k]
+                (dx, dy) = dxdy[k]
                 if 0 <= i + dx < 5 and 0 <= j + dy < 5:
                     g[i * 5 + j].append(((i + dx) * 5 + j + dy, c[k]))
     dist = dijkstra(g, 12)
     for i in range(6):
-        dx, dy = dxdy[i]
+        (dx, dy) = dxdy[i]
         c[i] = dist[12 + dx * 5 + dy]
     ans = 0
     if x > 0 and y > 0:

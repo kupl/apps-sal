@@ -1,6 +1,6 @@
 from functools import lru_cache
-M = 10**9 + 7
-n, k = map(int, input().split())
+M = 10 ** 9 + 7
+(n, k) = map(int, input().split())
 
 
 @lru_cache(None)
@@ -14,6 +14,6 @@ l = [f(i) for i in range(n + 1)]
 a = 0
 for i in range(min(n, k + 1)):
     c = l[n] * l[n - 1] % M
-    p = l[i]**2 * l[n - i] * l[n - i - 1] % M
+    p = l[i] ** 2 * l[n - i] * l[n - i - 1] % M
     a += c * pow(p, M - 2, M)
 print(a % M)

@@ -1,5 +1,5 @@
 def resolve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = tuple(map(int, input().split()))
     s = [(i + 1) / 2 for i in p]
     a = sum(s[:k])

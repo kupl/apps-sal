@@ -1,4 +1,4 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 p = sorted(map(int, input().split()))
 q = sorted(map(int, input().split()))
 r = sorted(map(int, input().split()))

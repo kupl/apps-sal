@@ -1,5 +1,7 @@
 class Solution:
+
     def longestZigZag(self, root: TreeNode) -> int:
+
         def solve(root):
             if root:
                 solve(root.left)

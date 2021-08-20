@@ -1,11 +1,11 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def iig(vn, en):
     res = [[] for _ in range(vn)]
     for _ in range(en):
-        ai, bi = [int(x) - 1 for x in input().split()]
+        (ai, bi) = [int(x) - 1 for x in input().split()]
         res[ai].append(bi)
         res[bi].append(ai)
     return res
@@ -23,27 +23,24 @@ def sep_pc(graph, root=0):
                 f(y, x)
         return
     f(root, -1)
-    return parent, children
+    return (parent, children)
 
 
 def itree(n, root=0):
     return sep_pc(iig(n, n - 1), root)
 
 
-mod = 10**9 + 7
-
-fact_range = 10**5 + 3
+mod = 10 ** 9 + 7
+fact_range = 10 ** 5 + 3
 facts = [1] * (fact_range + 1)
 for i in range(0, fact_range):
     facts[i + 1] = facts[i] * (i + 1) % mod
-
 ifacts = [1] * (fact_range + 1)
 ifacts[fact_range] = pow(facts[fact_range], mod - 2, mod)
 for i in range(fact_range, 0, -1):
     ifacts[i - 1] = ifacts[i] * i % mod
-
-n, k = list(map(int, input().split()))
-p, c = itree(n)
+(n, k) = list(map(int, input().split()))
+(p, c) = itree(n)
 
 
 def dfs(i=0, cur=k, avail=k - 1):
@@ -56,4 +53,4 @@ def dfs(i=0, cur=k, avail=k - 1):
     return cur
 
 
-print((dfs()))
+print(dfs())

@@ -3,5 +3,6 @@ def playerRankUp(pts):
 
 
 class Player(object):
+
     def __init__(self, rank):
         self.rank = rank

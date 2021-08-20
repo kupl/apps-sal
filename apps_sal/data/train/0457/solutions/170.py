@@ -2,8 +2,9 @@ import sys
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        '''
+        """
         [1,2,3] 7 => 3
 
         7-3 = 4
@@ -14,7 +15,7 @@ class Solution:
         0 1 2 3 4 5 6 7
         3 2 2 2 1 1 1 1
               &
-        '''
+        """
         dp = [sys.maxsize] * (amount + 1)
         if amount == 0:
             return 0

@@ -8,7 +8,7 @@ for i in range(n):
         dd[s] = 1
 ma = max(dd.values())
 lst = []
-for k, v in dd.items():
+for (k, v) in dd.items():
     if v == ma:
         lst.append(k)
 for l in sorted(lst):

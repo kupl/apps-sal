@@ -14,12 +14,12 @@ def search_sunuke(num):
     if num >= 100:
         digits = len(str(num))
         if digits < 12:
-            for i in range(count + 10**(digits - 2), 10**digits, 10**(digits - 2)):
+            for i in range(count + 10 ** (digits - 2), 10 ** digits, 10 ** (digits - 2)):
                 if num_sunuke > calc_sunuke(i):
                     return False
             return True
         else:
-            for i in range(count + 10**(digits - 3), 10**digits, 10**(digits - 3)):
+            for i in range(count + 10 ** (digits - 3), 10 ** digits, 10 ** (digits - 3)):
                 if num_sunuke > calc_sunuke(i):
                     return False
             return True
@@ -45,14 +45,14 @@ while sunuke_num != K:
         if digits < 12:
             for c in count_str:
                 if c != '9':
-                    count += 10**(digits - 2)
+                    count += 10 ** (digits - 2)
                     break
             if r_count == count:
-                count += 10**(digits - 1)
+                count += 10 ** (digits - 1)
         else:
             for c in count_str:
                 if c != '9':
-                    count += 10**(digits - 3)
+                    count += 10 ** (digits - 3)
                     break
             if r_count == count:
-                count += 10**(digits - 2)
+                count += 10 ** (digits - 2)

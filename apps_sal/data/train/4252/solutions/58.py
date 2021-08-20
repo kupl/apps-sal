@@ -10,5 +10,4 @@ def merge_arrays(first, second):
             y = y
         else:
             y.append(x[z])
-
     return sorted(y)

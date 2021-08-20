@@ -1,5 +1,4 @@
 num = [x for x in range(1, 101)]
-# print(num)
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -14,10 +13,10 @@ for _ in range(int(input())):
                 if l[i] - l[i + 1] == 1:
                     d = d + 1
             if d == n - 1:
-                print("yes")
+                print('yes')
             else:
-                print("no")
+                print('no')
         else:
-            print("no")
+            print('no')
     else:
-        print("no")
+        print('no')

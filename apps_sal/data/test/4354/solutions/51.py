@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 al = []
 bl = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     al.append([a, b])
 for j in range(m):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     bl.append([c, d])
 
 

@@ -1,6 +1,6 @@
 def GCD(m, n):
     while n != 0:
-        m, n = n, m % n
+        (m, n) = (n, m % n)
     return m
 
 
@@ -13,10 +13,10 @@ def gcd_all(a):
 
 
 def f(a):
-    mx = 10**6
+    mx = 10 ** 6
     p = set([])
     sieve = [i for i in range(mx + 1)]
-    for i in range(2, int(mx**0.5 + 1)):
+    for i in range(2, int(mx ** 0.5 + 1)):
         for j in range(2 * i, mx + 1, i):
             if sieve[j] > i:
                 sieve[j] = i
@@ -44,4 +44,4 @@ def f(a):
 
 n = int(input())
 a = list(map(int, input().split()))
-print((f(a)))
+print(f(a))

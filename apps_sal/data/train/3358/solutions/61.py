@@ -1,4 +1,4 @@
-dict = {"5": "S", "0": "O", "1": "I"}
+dict = {'5': 'S', '0': 'O', '1': 'I'}
 
 
 def correct(string):

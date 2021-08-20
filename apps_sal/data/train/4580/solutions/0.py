@@ -1,5 +1,5 @@
 def tiaosheng(a):
-    j, t = 0, 0
+    (j, t) = (0, 0)
     for j in a:
         t += 3
         if j + t > 60:

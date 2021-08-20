@@ -1,5 +1,4 @@
 T = int(input())
-
 while T >= 1:
     T -= 1
     a = input()

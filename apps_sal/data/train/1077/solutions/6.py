@@ -9,7 +9,6 @@ for q in range(t):
             s += ' ' + a[i][x]
         a[i][2] = s
     ans = 'Begin on' + a[n - 1][2] + '\n'
-
     i = n - 2
     while i > -1:
         if a[i + 1][0] == 'Left':

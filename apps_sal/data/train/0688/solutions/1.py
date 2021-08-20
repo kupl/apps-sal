@@ -7,6 +7,6 @@ for i in range(int(input())):
     if s[0] != s[-1]:
         count += 1
     if count <= 2:
-        print("uniform")
+        print('uniform')
     else:
-        print("non-uniform")
+        print('non-uniform')

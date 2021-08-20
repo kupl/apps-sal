@@ -1,6 +1,5 @@
-max_fact = 5 * 10**5
-mod = 10**9 + 7
-
+max_fact = 5 * 10 ** 5
+mod = 10 ** 9 + 7
 f = [1] * (max_fact + 1)
 for idx in range(2, max_fact + 1):
     f[idx] = f[idx - 1] * idx
@@ -33,11 +32,10 @@ def homogeneous_product(n, r):
 
 comb = combination
 perm = permutation
-
-N, M = [int(_) for _ in input().split()]
+(N, M) = [int(_) for _ in input().split()]
 ans = 0
 for p in range(N + 1):
-    ans += (-1)**p * comb(N, p) * perm(M - p, N - p)
+    ans += (-1) ** p * comb(N, p) * perm(M - p, N - p)
     ans %= mod
 ans *= perm(M, N)
 ans %= mod

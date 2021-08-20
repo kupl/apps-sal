@@ -1,12 +1,9 @@
 def main():
     n = int(input())
     cities = list(map(int, input().split()))
-
     cities.sort()
-
     minimum = float('inf')
     count = 0
-
     for i in range(len(cities) - 1):
         dif = abs(cities[i] - cities[i + 1])
         if dif == minimum:
@@ -14,7 +11,6 @@ def main():
         elif dif < minimum:
             minimum = dif
             count = 1
-
     print(minimum, count)
 
 

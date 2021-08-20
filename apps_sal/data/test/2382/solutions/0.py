@@ -2,12 +2,9 @@ def main():
     N = int(input())
     S = list(map(int, input().split()))
     INF = float('inf')
-
     S.sort()
-
     parents = [S[-1]]
     S[-1] = INF
-
     for _ in range(N):
         checking = 2
         parents.sort(reverse=True)

@@ -12,5 +12,4 @@ cur = d[n - 1]
 while i > 0:
     cur = max(cur, d[i] - cur)
     i -= 1
-
 print(cur)

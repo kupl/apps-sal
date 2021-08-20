@@ -1,5 +1,5 @@
 def main():
-    *S, = input()
+    (*S,) = input()
     c = S.pop()
     ans = 0
     while S:

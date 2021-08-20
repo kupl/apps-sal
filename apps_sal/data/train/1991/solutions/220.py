@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         mem = {}
 
@@ -14,4 +15,4 @@ class Solution:
                     res += dfs(i, currFuel - abs(locations[idx] - locations[i]))
             mem[key] = res
             return mem[key]
-        return dfs(start, fuel) % (10**9 + 7)
+        return dfs(start, fuel) % (10 ** 9 + 7)

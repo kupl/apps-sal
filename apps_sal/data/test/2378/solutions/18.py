@@ -1,16 +1,13 @@
-#!/usr/bin/env python3
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 n = int(input())
 edge = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = [int(item) - 1 for item in input().split()]
+    (a, b) = [int(item) - 1 for item in input().split()]
     edge[a].append(b)
     edge[b].append(a)
-
 childs = [[] for _ in range(n)]
 
 
@@ -32,7 +29,7 @@ total_pattern = pow(2, n, MOD)
 total_pattern_inv = pow(total_pattern, MOD - 2, MOD)
 inv2 = pow(2, MOD - 2, MOD)
 pow2_table = [1]
-for i in range(2 * 10**5):
+for i in range(2 * 10 ** 5):
     pow2_table.append(pow2_table[-1] * 2 % MOD)
 ans = 0
 for line in childs:

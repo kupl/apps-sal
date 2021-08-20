@@ -9,15 +9,11 @@ def max_sub(a):
 
 
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-
     a1 = list(a[::2])
     a2 = list(a[1::2])
-
-    d1 = list(y - x for x, y in zip(a1, a2))
-    d2 = list(y - x for x, y in zip(a1[1:], a2))
-
+    d1 = list((y - x for (x, y) in zip(a1, a2)))
+    d2 = list((y - x for (x, y) in zip(a1[1:], a2)))
     print(sum(a1) + max(max_sub(d1), max_sub(d2)))

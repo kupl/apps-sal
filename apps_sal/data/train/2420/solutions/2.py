@@ -1,4 +1,5 @@
 class Solution:
+
     def isAnagram(self, s, t):
         """
         :type s: str
@@ -7,14 +8,10 @@ class Solution:
         """
         if len(s) != len(t):
             return False
-
         s_list = list(s)
         t_list = list(t)
-
         s_list.sort()
         t_list.sort()
-
         if s_list == t_list:
             return True
-
         return False

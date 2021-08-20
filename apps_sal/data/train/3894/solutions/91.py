@@ -13,4 +13,4 @@ def solve(s):
         s = s.lower()
     else:
         s = s.upper()
-    return(s)
+    return s

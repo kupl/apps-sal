@@ -2,6 +2,7 @@ import sys
 
 
 class Solution:
+
     def maximumSum(self, arr: List[int]) -> int:
         ignore = 0
         not_ignore = 0

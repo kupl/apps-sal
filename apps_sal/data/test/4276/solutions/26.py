@@ -1,4 +1,4 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 ans = 1001
 ls = []
 for i in range(N):

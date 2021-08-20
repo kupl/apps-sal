@@ -1,4 +1,5 @@
 class Solution:
+
     def removePalindromeSub(self, s: str) -> int:
         if not s:
             return 0

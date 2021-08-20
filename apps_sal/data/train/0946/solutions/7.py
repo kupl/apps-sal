@@ -1,6 +1,5 @@
-# cook your dish here
-n, k = list(map(int, input().split()))
-a = [[]for i in range(n)]
+(n, k) = list(map(int, input().split()))
+a = [[] for i in range(n)]
 for i in range(n):
     a[i] = list(map(int, input().split()))
 f = []
@@ -20,5 +19,5 @@ for i in range(k):
     p.append(s[n - 1])
 r = str(p[0]) + ' '
 for i in range(1, k):
-    r += (str(p[i]) + ' ')
+    r += str(p[i]) + ' '
 print(r)

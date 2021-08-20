@@ -2,9 +2,9 @@ from fractions import gcd
 
 
 def __starting_point():
-    a, b, x, y = list(map(int, input().split()))
+    (a, b, x, y) = list(map(int, input().split()))
     c = gcd(x, y)
-    x, y = x // c, y // c
+    (x, y) = (x // c, y // c)
     answer = min(a // x, b // y)
     print(answer)
 

@@ -1,4 +1,3 @@
-
 def solve():
     s = input().split()[0]
     cnt = [0] * 2020
@@ -7,9 +6,9 @@ def solve():
     t = 1
     for d in map(int, s[-1::-1]):
         m = (m + d * t) % 2019
-        t = (t * 10) % 2019
+        t = t * 10 % 2019
         cnt[m] += 1
     return sum([k * (k - 1) // 2 for k in cnt])
 
 
-print((solve()))
+print(solve())

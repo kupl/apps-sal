@@ -4,6 +4,6 @@ for i in range(5):
 k = int(input())
 t.sort()
 if t[4] - t[0] > k:
-    print(":(")
+    print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

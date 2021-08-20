@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, n: int, cuts: List[int]) -> int:
         cuts.sort()
         from functools import lru_cache

@@ -5,4 +5,4 @@ def dating_range(age):
     else:
         mini = age // 2 + 7
         maxi = (age - 7) * 2
-    return "{}-{}".format(mini, maxi)
+    return '{}-{}'.format(mini, maxi)

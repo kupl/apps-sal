@@ -1,11 +1,10 @@
-# cook your dish here
 n = int(input())
 a = [int(i) for i in input().split()]
 for i in a:
     if i == 1:
-        print("2", '', end='')
+        print('2', '', end='')
     elif i == 2:
-        print("1", '', end='')
+        print('1', '', end='')
     else:
         b = str(bin(i)).replace('0b', '')
         p = ''

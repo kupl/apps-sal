@@ -31,12 +31,15 @@ for i in range(len(numg)):
     else:
         cnt += 1
 numg2.append([num1, cnt])
-def str1(val): return val[1]
+
+
+def str1(val):
+    return val[1]
 
 
 numg2.sort(key=str1)
 numk2.sort(key=str1)
 if numg2[-1][0] == numk2[-1][0]:
-    print((n - max(numg2[-1][1] + numk2[-2][1], numg2[-2][1] + numk2[-1][1])))
+    print(n - max(numg2[-1][1] + numk2[-2][1], numg2[-2][1] + numk2[-1][1]))
 else:
-    print((n - (numg2[-1][1] + numk2[-1][1])))
+    print(n - (numg2[-1][1] + numk2[-1][1]))

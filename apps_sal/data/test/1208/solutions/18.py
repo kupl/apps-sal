@@ -4,7 +4,7 @@ q = 0
 cnt = 0
 mx = 0
 for i in range(a):
-    z, x = input().split()
+    (z, x) = input().split()
     x = int(x)
     if z == '+':
         b[x] = 1

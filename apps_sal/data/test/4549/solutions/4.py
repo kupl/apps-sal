@@ -1,7 +1,5 @@
 import sys
-
 input = sys.stdin.readline
-
 d = '.'
 dn = '#'
 
@@ -24,7 +22,7 @@ def isPaintable(h, w, x, y, canvas):
 
 def main():
     ans = 'Yes'
-    h, w = map(int, input().split())
+    (h, w) = map(int, input().split())
     canvas = []
     for _ in range(h):
         s = list(input().rstrip('\n'))
@@ -33,7 +31,7 @@ def main():
         if ans == 'No':
             break
         for x in range(w):
-            if canvas[y][x] == dn and not isPaintable(h, w, x, y, canvas):
+            if canvas[y][x] == dn and (not isPaintable(h, w, x, y, canvas)):
                 ans = 'No'
                 break
     print(ans)

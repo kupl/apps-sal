@@ -1,4 +1,4 @@
-buyers, price = [int(item) for item in input().split()]
+(buyers, price) = [int(item) for item in input().split()]
 purchases = [input() for _ in range(buyers)]
 apples = 0
 for purchase in purchases[::-1]:

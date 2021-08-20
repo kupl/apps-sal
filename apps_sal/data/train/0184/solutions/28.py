@@ -1,4 +1,5 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         n = len(text)
         ans = 1
@@ -20,10 +21,9 @@ class Solution:
                         else:
                             ans = max(ans, first + second)
                     else:
-                        if j != 0 and j != n - 1 and text[j - 1] == chr(i + 97) and text[j + 1] == chr(i + 97):
+                        if j != 0 and j != n - 1 and (text[j - 1] == chr(i + 97)) and (text[j + 1] == chr(i + 97)):
                             second = first
                         else:
                             second = 0
                         first = 0
-
         return ans

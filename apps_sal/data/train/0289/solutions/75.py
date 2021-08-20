@@ -1,9 +1,9 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         prefixSum = [0] * (len(A) + 1)
         for i in range(1, len(A) + 1):
             prefixSum[i] = prefixSum[i - 1] + A[i - 1]
-
         ans = 0
         for i in range(M - 1, len(A)):
             sumM = prefixSum[i + 1] - prefixSum[i + 1 - M]

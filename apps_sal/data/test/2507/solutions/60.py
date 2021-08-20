@@ -3,16 +3,14 @@ import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = np.array(list(map(int, input().split())), dtype=np.int64)
 F = np.array(list(map(int, input().split())), dtype=np.int64)
 A.sort()
 F.sort()
 F = F[::-1]
-
 l = 0
-r = 10**12 + 100
+r = 10 ** 12 + 100
 
 
 def solve(num):
@@ -30,7 +28,6 @@ while r - l > 1:
         r = mid
     else:
         l = mid
-
 if solve(l):
     print(l)
 else:

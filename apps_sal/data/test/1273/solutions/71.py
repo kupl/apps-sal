@@ -1,11 +1,10 @@
 from collections import deque
-
 N = int(input())
 E = []
 G = {i: set() for i in range(1, N + 1)}
 c = [-1 for i in range(N - 1)]
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     E.append({a, b})
     G[a].add(i)
     G[b].add(i)
@@ -13,7 +12,7 @@ Q = deque([0])
 c[0] = 1
 while Q:
     i = Q.popleft()
-    a, b = E[i]
+    (a, b) = E[i]
     n = len(G[a])
     color = 0
     count = 0
@@ -42,6 +41,6 @@ while Q:
             count += 1
             if count > 1:
                 break
-print((max(c)))
+print(max(c))
 for i in c:
     print(i)

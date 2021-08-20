@@ -2,7 +2,7 @@ from collections import deque
 
 
 def dbl_linear(n):
-    u, q2, q3 = 1, deque([]), deque([])
+    (u, q2, q3) = (1, deque([]), deque([]))
     for _ in range(n):
         q2.append(2 * u + 1)
         q3.append(3 * u + 1)

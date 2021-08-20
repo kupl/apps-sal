@@ -1,11 +1,9 @@
 N = int(input())
 P = list(map(int, input().split()))
-
 t = []
-for i, p in enumerate(P):
-    if (i + 1) == p:
+for (i, p) in enumerate(P):
+    if i + 1 == p:
         t.append(i)
-
 ans = 0
 checked = [False] * len(t)
 for i in range(len(t)):

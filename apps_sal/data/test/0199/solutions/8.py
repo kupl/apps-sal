@@ -1,5 +1,5 @@
 import math
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 v = list(map(int, input().split()))
 x = sum(v)
 if s > x:

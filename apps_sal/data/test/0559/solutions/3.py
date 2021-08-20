@@ -8,7 +8,7 @@ def frac(n):
         t = 1
         for j in range(p - 1):
             b_list[j] -= t
-            t = (t * n) % p
+            t = t * n % p
 
 
 if a_list[0] == 1:

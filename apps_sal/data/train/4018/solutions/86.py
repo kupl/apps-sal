@@ -1,6 +1,6 @@
 def isDigit(string):
     try:
-        string = string.strip(" ")
+        string = string.strip(' ')
         try:
             k = int(string)
         except:

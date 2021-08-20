@@ -1,4 +1,3 @@
-# code
 t = int(input())
 c = 1
 while t > 0:
@@ -10,8 +9,6 @@ while t > 0:
     ry = inp[1]
     path_len = int(input())
     path = input()
-
-    # print(path)
     posx = 0
     posy = 0
     for p in path:
@@ -23,8 +20,7 @@ while t > 0:
             posy += 1
         elif p == 'D':
             posy -= 1
-
-    if posx > m or posx < 0 or posy > n or posy < 0:
+    if posx > m or posx < 0 or posy > n or (posy < 0):
         print('Case ' + str(c) + ': ' + 'DANGER')
     elif posx != rx or posy != ry:
         print('Case ' + str(c) + ': ' + 'SOMEWHERE')

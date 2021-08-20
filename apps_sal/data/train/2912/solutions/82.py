@@ -5,4 +5,4 @@ def find_multiples(integer, limit):
             lst.append(i)
     if limit % integer == 0:
         lst.append(limit)
-    return(lst)
+    return lst

@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 t = 0

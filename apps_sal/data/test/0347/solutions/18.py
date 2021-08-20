@@ -1,9 +1,10 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
 
-    def get(): return [int(x) for x in (f.readline() if mode == "file" else input()).split()]
+    def get():
+        return [int(x) for x in (f.readline() if mode == 'file' else input()).split()]
     m = get()
     w = get()
     h = get()
@@ -12,10 +13,9 @@ def main():
     for i in range(5):
         ans += max(0.3 * s, (1 - m[i] / 250) * s - 50 * w[i])
         s += 500
-    ans += (100 * h[0] - 50 * h[1])
+    ans += 100 * h[0] - 50 * h[1]
     print(int(ans))
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

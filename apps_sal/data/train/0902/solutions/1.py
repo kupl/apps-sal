@@ -2,7 +2,7 @@ for _ in range(int(input())):
     temp = list(input().split())
     n = int(temp[0])
     s = temp[1]
-    du, de = 0, 0
+    (du, de) = (0, 0)
     for _ in range(n):
         mc = input()
         if mc[0] == '1':
@@ -10,11 +10,10 @@ for _ in range(int(input())):
         else:
             de += mc.count('0')
     if de > du:
-        print("Dee")
+        print('Dee')
     elif de < du:
-        print("Dum")
+        print('Dum')
+    elif s == 'Dee':
+        print('Dum')
     else:
-        if s == "Dee":
-            print("Dum")
-        else:
-            print("Dee")
+        print('Dee')

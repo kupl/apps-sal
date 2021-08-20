@@ -9,8 +9,8 @@ def test():
         input_ex2 = input_exa.split()
         a = int(input_ex2[0])
         b = int(input_ex2[1])
-        ans = (a**2 + b**2)
-        ans_2 = ans**0.5
+        ans = a ** 2 + b ** 2
+        ans_2 = ans ** 0.5
         if ans_2 > d:
             pass
         else:

@@ -1,8 +1,7 @@
 from collections import Counter
 N = int(input())
-*S, = map(int, input().split())
+(*S,) = map(int, input().split())
 C = Counter(S)
-
 memo = [[-1] * (N + 1) for i in range(N + 1)]
 
 
@@ -15,10 +14,10 @@ def comb(n, k):
     return r
 
 
-*CS, = C.items()
+(*CS,) = C.items()
 CS.sort(reverse=1)
 S = [0]
-for k, v in CS:
+for (k, v) in CS:
     S.append(S[-1] + v)
 T = [0]
 for i in range(N + 1):
@@ -27,5 +26,5 @@ ok = 1
 if len(S) < len(T):
     ok = 0
 else:
-    ok = all(a <= b for a, b in zip(S, T)) and S[-2] >= 2**(N - 1)
-print("Yes" if ok else "No")
+    ok = all((a <= b for (a, b) in zip(S, T))) and S[-2] >= 2 ** (N - 1)
+print('Yes' if ok else 'No')

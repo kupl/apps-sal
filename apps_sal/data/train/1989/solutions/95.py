@@ -1,11 +1,11 @@
 class Solution:
+
     def longestAwesome(self, s):
         d = {(0,) * 10: -1}
-        t = (0, ) * 10
+        t = (0,) * 10
         ans = 0
         for i in range(len(s)):
             num = int(s[i])
-            # update tuple
             t = t[:num] + ((t[num] + 1) % 2,) + t[num + 1:]
             if t not in d:
                 d[t] = i
@@ -19,5 +19,4 @@ class Solution:
                     temp = t[:m] + (1 - t[m],) + t[m + 1:]
                     if temp in d:
                         ans = max(ans, i - d[temp])
-
         return ans

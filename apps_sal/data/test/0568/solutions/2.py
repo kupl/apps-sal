@@ -1,5 +1,5 @@
 def main():
-    MOD = int(1e9 + 7)
+    MOD = int(1000000000.0 + 7)
     n = int(input())
     a = 1
     for i in range(n):

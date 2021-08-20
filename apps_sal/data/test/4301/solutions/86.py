@@ -5,7 +5,6 @@ for _ in range(N):
 AA = sorted(A)
 most = AA[N - 1]
 second = AA[N - 2]
-
 for i in range(N):
     if A[i] == most:
         print(second)

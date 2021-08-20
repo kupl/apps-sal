@@ -2,7 +2,6 @@ n = int(input())
 s = [input() for i in range(n)]
 m = int(input())
 t = [input() for i in range(m)]
-
 ans = []
 for i in s:
     cnt = 0
@@ -13,7 +12,6 @@ for i in s:
         if i == t[k]:
             cnt -= 1
     ans.append(cnt)
-
 if max(ans) < 0:
     print('0')
 else:

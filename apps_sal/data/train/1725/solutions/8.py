@@ -5,9 +5,8 @@ def generate_table(max_n, max_fn):
         for k in range(j + 1):
             if j + k <= max_fn:
                 a[0][j][k] = 1
-
     i = 1
-    while 2**i + 1 <= max_n:
+    while 2 ** i + 1 <= max_n:
         a.append([[0 for __ in range(_ + 1)] for _ in range(max_fn + 1)])
         for j in range(max_fn + 1):
             for k in range(j + 1):
@@ -26,14 +25,14 @@ def linear(s1, s2, indices, table, max_fn):
 
 def circular_limited_sums(max_n, max_fn):
     table = generate_table(max_n + 1, max_fn)
-    lengths = [2**i + 1 for i in range(8)]
+    lengths = [2 ** i + 1 for i in range(8)]
     lengths = lengths[::-1]
     m = max_n
     indices = []
-    for index, length in enumerate(lengths):
+    for (index, length) in enumerate(lengths):
         while length - 1 <= m:
             indices.append(7 - index)
-            m -= (length - 1)
+            m -= length - 1
     if len(indices) == 1:
         return sum([table[indices[0]][s][s] for s in range(max_fn + 1)]) % 12345787
     if len(indices) == 2:

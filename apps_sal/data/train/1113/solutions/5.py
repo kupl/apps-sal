@@ -13,4 +13,4 @@ for element in lists:
             results.append([n, 1])
     results.sort(key=lambda x: x[0])
     results.sort(key=lambda x: x[1], reverse=True)
-    print(" ".join([str(x) for x in results[0]]))
+    print(' '.join([str(x) for x in results[0]]))

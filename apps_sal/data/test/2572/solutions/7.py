@@ -8,7 +8,7 @@ def print(val):
 
 def prog():
     for _ in range(int(input())):
-        n, m = map(int, input().split())
+        (n, m) = map(int, input().split())
         a = [list(map(int, input().split())) for i in range(n)]
         ans = 0
         for i in range(n // 2):
@@ -22,7 +22,6 @@ def prog():
         if m % 2:
             for i in range(n // 2):
                 ans += abs(a[n - 1 - i][m // 2] - a[i][m // 2])
-
         print(ans)
 
 

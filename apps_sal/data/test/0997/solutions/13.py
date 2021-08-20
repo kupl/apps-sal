@@ -23,7 +23,6 @@ for i in s:
         k += ','
     else:
         k += i
-
 kk = k.split(',')
 a = []
 for i in kk:
@@ -31,13 +30,11 @@ for i in kk:
         a.append(i)
     else:
         b.append(i)
-
 if a == []:
-    print("-")
+    print('-')
 else:
     print('"' + ','.join(a) + '"')
-
 if b == []:
-    print("-")
+    print('-')
 else:
     print('"' + ','.join(b) + '"')

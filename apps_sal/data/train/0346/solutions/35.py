@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         n = len(nums)
         noOfNiceSubArrays = 0
@@ -11,12 +12,6 @@ class Solution:
                 oddList.append(even)
                 even = 0
         oddList.append(even)
-        # print(oddList)
         for i in range(len(oddList) - k):
             noOfNiceSubArrays += (oddList[i] + 1) * (oddList[i + k] + 1)
-
         return noOfNiceSubArrays
-
-
-#     [1,1,2,1,1]
-#     [0, 0, ]

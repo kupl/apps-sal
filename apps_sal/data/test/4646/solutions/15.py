@@ -8,7 +8,7 @@ for _ in range(T):
     a = list(map(int, input().split()))
     odd = 0
     even = 0
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if i % 2 == 1 and x % 2 == 0:
             odd += 1
         elif i % 2 == 0 and x % 2 == 1:

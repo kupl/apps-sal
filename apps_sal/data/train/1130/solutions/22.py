@@ -2,7 +2,7 @@ import math
 n = int(input())
 l = []
 for i in range(n):
-    N, D = map(int, input().split())
+    (N, D) = map(int, input().split())
     lst = list(map(int, input().split()))
     lst.append(D)
     lst.reverse()
@@ -19,7 +19,7 @@ def number(li):
             risk.append(i)
         else:
             non_risk.append(i)
-    return (math.ceil(len(risk) / d) + math.ceil(len(non_risk) / d))
+    return math.ceil(len(risk) / d) + math.ceil(len(non_risk) / d)
 
 
 for i in l:

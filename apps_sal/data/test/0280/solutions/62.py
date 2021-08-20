@@ -6,26 +6,23 @@ input = sys.stdin.readline
 
 
 def solve():
-    INF = 10**15
-
-    N, M = list(map(int, input().split()))
+    INF = 10 ** 15
+    (N, M) = list(map(int, input().split()))
     Ws = list(map(int, input().split()))
     LVs = [tuple(map(int, input().split())) for _ in range(M)]
-
-    minV = min([V for L, V in LVs])
+    minV = min([V for (L, V) in LVs])
     LVs.sort(key=lambda x: x[1])
-    bdrLs, bdrVs = [0], [0]
+    (bdrLs, bdrVs) = ([0], [0])
     maxL = 0
-    for L, V in LVs:
+    for (L, V) in LVs:
         if L > maxL:
             bdrLs.append(L)
             bdrVs.append(V)
             maxL = L
-
     ans = INF
     for Camels in permutations(Ws, N):
         accCamels = [0] + list(accumulate(Camels))
-        Lss = [[INF] * (N) for _ in range(N)]
+        Lss = [[INF] * N for _ in range(N)]
         for i in range(N):
             if Camels[i] > minV:
                 Lss[i][i] = INF
@@ -35,7 +32,6 @@ def solve():
                 wgt = accCamels[j + 1] - accCamels[i]
                 iV = bisect_left(bdrVs, wgt) - 1
                 Lss[i][j] = bdrLs[iV]
-
         costs = [0] * N
         for i in range(1, N):
             cost = 0
@@ -44,12 +40,10 @@ def solve():
                 if c2 > cost:
                     cost = c2
             costs[i] = cost
-
         if costs[-1] < ans:
             ans = costs[-1]
-
     if ans == INF:
-        print((-1))
+        print(-1)
     else:
         print(ans)
 

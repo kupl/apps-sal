@@ -1,6 +1,7 @@
 class Solution:
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
-        term = 10**9 + 7
+        term = 10 ** 9 + 7
         heap = []
         lst = [i for i in range(n)]
         lst.sort(key=lambda x: (-efficiency[x], -speed[x]))
@@ -11,7 +12,6 @@ class Solution:
             acc += speed[idx]
             heap.append(speed[idx])
             ret = max(ret, acc * efficiency[idx])
-        # build heap
         import heapq
         heapq.heapify(heap)
         for i in range(k, n):

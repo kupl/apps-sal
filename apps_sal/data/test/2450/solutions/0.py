@@ -1,8 +1,9 @@
-def inp(): return map(int, input().split())
+def inp():
+    return map(int, input().split())
 
 
 def sol():
-    x, y, on, tw = inp()
+    (x, y, on, tw) = inp()
     res = 0
     for n in range(x):
         s = input()
@@ -12,11 +13,11 @@ def sol():
                 sm += 1
             else:
                 a = sm * on
-                b = (sm // 2) * tw + (sm % 2) * on
+                b = sm // 2 * tw + sm % 2 * on
                 res += min(a, b)
                 sm = 0
         a = sm * on
-        b = (sm // 2) * tw + (sm % 2) * on
+        b = sm // 2 * tw + sm % 2 * on
         res += min(a, b)
     print(res)
 

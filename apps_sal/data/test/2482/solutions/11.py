@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = [-1] * n
@@ -19,7 +20,7 @@ class UnionFind:
         if x == y:
             return
         if self.par[x] > self.par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
 
@@ -28,27 +29,21 @@ class UnionFind:
 
 
 def main():
-    n, k, l = map(int, input().split())
-
+    (n, k, l) = map(int, input().split())
     road = UnionFind(n)
     train = UnionFind(n)
-
     for _ in range(k):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         road.unite(p - 1, q - 1)
-
     for _ in range(l):
-        r, s = map(int, input().split())
+        (r, s) = map(int, input().split())
         train.unite(r - 1, s - 1)
-
     d = defaultdict(int)
     for i in range(n):
-        d[(road.find(i), train.find(i))] += 1
-
+        d[road.find(i), train.find(i)] += 1
     ans = []
     for i in range(n):
-        ans.append(d[(road.find(i), train.find(i))])
-
+        ans.append(d[road.find(i), train.find(i)])
     print(*ans)
 
 

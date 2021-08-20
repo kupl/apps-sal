@@ -1,12 +1,10 @@
 __author__ = 'PrimuS'
-
 n = int(input())
 p1 = [0] * n
 p2 = [0] * n
 n1 = 0
 n2 = 0
 last = -1
-
 for i in range(n):
     a = int(input())
     if a > 0:
@@ -17,10 +15,8 @@ for i in range(n):
         p2[n2] = -a
         n2 += 1
         last = 2
-
 s1 = sum(p1)
 s2 = sum(p2)
-
 if s1 > s2:
     print('first')
 elif s2 > s1:
@@ -41,8 +37,7 @@ else:
             print('first')
         else:
             print('second')
+    elif last == 1:
+        print('first')
     else:
-        if last == 1:
-            print('first')
-        else:
-            print('second')
+        print('second')

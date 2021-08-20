@@ -2,15 +2,12 @@ import math
 
 
 class Solution1:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
-
         N = len(A)
-
         if N <= 1:
             return False
-
         max_sum = sum(A)
-        # print(max_sum)
         sums = [0] * (max_sum + 1)
         for i in range(N):
             num = A[i]
@@ -18,34 +15,30 @@ class Solution1:
                 if sums[s - num]:
                     sums[s] |= sums[s - num] << 1
             sums[num] |= 1
-            # print(sums)
-        # print(sums)
         for l in range(1, N):
-            if (max_sum * l) % N == 0:
-                s = int((max_sum * l) / N)
-                if (sums[s] >> (l - 1)) & 1:
+            if max_sum * l % N == 0:
+                s = int(max_sum * l / N)
+                if sums[s] >> l - 1 & 1:
                     return True
         return False
 
 
 class Solution2:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
         A.sort(reverse=True)
         N = len(A)
         if N <= 1:
             return False
         max_size = math.ceil(N / 2)
-
         max_sum = sum(A)
         target_mean = max_sum / N
-        # print(target_mean)
         ans = False
 
         def choose(max_n, curr_n, curr_sum, next_id):
             nonlocal target_mean
             nonlocal ans
             nonlocal N
-            #print(max_n, curr_n, curr_sum, next_id)
             if ans:
                 return
             if curr_n > max_n:
@@ -61,36 +54,29 @@ class Solution2:
                 return
             for i in range(next_id, N):
                 choose(max_n, curr_n + 1, curr_sum + A[i], i + 1)
-
         choose(max_size, 0, 0, 0)
-
         return ans
 
 
 class Solution(object):
+
     def splitArraySameAverage(self, A):
         from fractions import Fraction
         N = len(A)
         S = sum(A)
         A = [z - Fraction(S, N) for z in A]
-
         if N == 1:
             return False
-
-        # Want zero subset sum
         left = {A[0]}
         for i in range(1, N // 2):
             left = {z + A[i] for z in left} | left | {A[i]}
         if 0 in left:
             return True
-
         right = {A[-1]}
         for i in range(N // 2, N - 1):
             right = {z + A[i] for z in right} | right | {A[i]}
         if 0 in right:
             return True
-
-        sleft = sum(A[i] for i in range(N // 2))
-        sright = sum(A[i] for i in range(N // 2, N))
-
-        return any(-ha in right and (ha, -ha) != (sleft, sright) for ha in left)
+        sleft = sum((A[i] for i in range(N // 2)))
+        sright = sum((A[i] for i in range(N // 2, N)))
+        return any((-ha in right and (ha, -ha) != (sleft, sright) for ha in left))

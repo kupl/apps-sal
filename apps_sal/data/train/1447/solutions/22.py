@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -18,10 +17,10 @@ for _ in range(int(input())):
         if i not in qw or qw[-1] == i:
             qw.append(i)
         else:
-            print("NO")
+            print('NO')
             c = 1
             break
     if c == 0 and len(ut) == len(t):
-        print("YES")
+        print('YES')
     elif c == 0:
-        print("NO")
+        print('NO')

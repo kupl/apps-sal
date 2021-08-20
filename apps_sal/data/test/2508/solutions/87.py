@@ -1,14 +1,11 @@
 from collections import deque
 from heapq import heappop, heappush
-
 import numpy as np
-
 from numba import njit
 
 
 @njit('UniTuple(i8[:],4)(i1[:],i8,i8,i8)')
 def reachable(field, h2, w2, k):
-    # 各マスから上下左右にどこまで行けるか
     hw = h2 * w2
     up = np.full(hw, -1, dtype=np.int64)
     dw = np.full(hw, -1, dtype=np.int64)
@@ -48,58 +45,50 @@ def reachable(field, h2, w2, k):
                 dw[i] = min(dw_tmp, i + wk)
             else:
                 dw_tmp = -1
-    return up, dw, lf, rg
+    return (up, dw, lf, rg)
 
 
 @njit('i8(i8,i8,i8,i1[:],i8,i8,i8,i8)')
 def solve(h2, w2, k, field, x1, y1, x2, y2):
     s = x1 * w2 + y1
     t = x2 * w2 + y2
-    up, dw, lf, rg = reachable(field, h2, w2, k)
-
+    (up, dw, lf, rg) = reachable(field, h2, w2, k)
     INF = 10 ** 18
     ans = [[INF, INF] for _ in field]
     ans[s][0] = ans[s][1] = 0
-
     q = [(0, s)]
     while q:
-        cost, v = heappop(q)
+        (cost, v) = heappop(q)
         if v == t:
             return cost
         nc = cost + 1
-
         for u in range(up[v], v, w2):
             if ans[u][0] <= nc:
                 break
             ans[u][0] = nc
             heappush(q, (nc, u))
-
         for u in range(dw[v], v, -w2):
             if ans[u][0] <= nc:
                 break
             ans[u][0] = nc
             heappush(q, (nc, u))
-
         for u in range(lf[v], v, 1):
             if ans[u][1] <= nc:
                 break
             ans[u][1] = nc
             heappush(q, (nc, u))
-
         for u in range(rg[v], v, -1):
             if ans[u][1] <= nc:
                 break
             ans[u][1] = nc
             heappush(q, (nc, u))
-
     return -1
 
 
-h, w, k = list(map(int, input().split()))
-x1, y1, x2, y2 = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
+(x1, y1, x2, y2) = list(map(int, input().split()))
 h2 = h + 2
 w2 = w + 2
-
 field_tmp = [input() for _ in range(h)]
 field = [0] * w2
 for row in field_tmp:
@@ -108,4 +97,4 @@ for row in field_tmp:
     field.append(0)
 field.extend([0] * w2)
 field = np.array(field, dtype=np.int8)
-print((solve(h2, w2, k, field, x1, y1, x2, y2)))
+print(solve(h2, w2, k, field, x1, y1, x2, y2))

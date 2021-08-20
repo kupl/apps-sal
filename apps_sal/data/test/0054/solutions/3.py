@@ -18,13 +18,9 @@ def test(d):
 
 
 inp = list(map(int, input().split()))
-
 w = inp[0]
 m = inp[1]
-
 a = 1
-
-
 for i in range(0, 100):
     if a > m:
         d = a - m
@@ -32,6 +28,6 @@ for i in range(0, 100):
     a *= w
 ans = test(d)
 if ans == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

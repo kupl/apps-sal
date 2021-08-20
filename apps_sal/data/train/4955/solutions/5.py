@@ -2,7 +2,7 @@ from functools import reduce
 
 
 def ride(group, comet):
-    return "GO" if score(group) == score(comet) else "STAY"
+    return 'GO' if score(group) == score(comet) else 'STAY'
 
 
 def score(word):

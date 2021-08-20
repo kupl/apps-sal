@@ -2,6 +2,7 @@ import itertools
 
 
 class TrieNode:
+
     def __init__(self):
         self.end = False
         self.nodes = {}
@@ -27,8 +28,6 @@ class TrieNode:
         if len(word) == 0 or word[0] not in self.nodes:
             return False
         return self.nodes[word[0]].exists(word[1:])
-
-#from collections import deque
 
 
 class StreamChecker:

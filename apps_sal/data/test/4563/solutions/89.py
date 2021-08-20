@@ -2,7 +2,7 @@ n = int(input())
 ans_t = 1
 ans_a = 1
 for i in range(n):
-    t, a = map(int, input().split())
+    (t, a) = map(int, input().split())
     if t == 1:
         k1 = ans_t
     else:

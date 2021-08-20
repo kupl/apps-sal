@@ -1,16 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 n = int(input())
 X = []
 H = []
-
 for i in range(n):
     (x, h) = (int(i) for i in input().split())
     X += [x]
     H += [h]
-
 if n < 3:
     tr = n
 else:
@@ -25,5 +19,4 @@ else:
             min = X[i] + H[i]
         else:
             min = X[i]
-
 print(tr)

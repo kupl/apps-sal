@@ -11,7 +11,7 @@ def snuke(N):
     s = N
     now = nsn(N)
     for d in range(k + 1):
-        x = (10**(d + 1)) * (N // (10**(d + 1)) + 1) - 1
+        x = 10 ** (d + 1) * (N // 10 ** (d + 1) + 1) - 1
         y = nsn(x)
         if y < now:
             s = x
@@ -21,7 +21,7 @@ def snuke(N):
 
 K = int(input())
 ans = 1
-print((1))
+print(1)
 for i in range(K - 1):
     ans = snuke(ans + 1)
     print(ans)

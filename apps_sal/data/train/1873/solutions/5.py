@@ -1,6 +1,7 @@
 class Solution:
+
     def findNextChar(self, string, i, char):
-        otherChar = "R" if char == "L" else "L"
+        otherChar = 'R' if char == 'L' else 'L'
         for i in range(i, len(string)):
             if string[i] == otherChar:
                 return None
@@ -16,13 +17,12 @@ class Solution:
         """
         end_i = 0
         for i in range(len(start)):
-            if start[i] != "X":
+            if start[i] != 'X':
                 end_i = self.findNextChar(end, end_i, start[i])
-                if end_i == None or (start[i] == "L" and end_i > i) or (start[i] == "R" and end_i < i):
+                if end_i == None or (start[i] == 'L' and end_i > i) or (start[i] == 'R' and end_i < i):
                     return False
                 end_i += 1
         for end_i in range(end_i, len(end)):
-            if end[end_i] != "X":
+            if end[end_i] != 'X':
                 return False
-
         return True

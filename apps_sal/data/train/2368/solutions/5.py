@@ -6,6 +6,6 @@ for _ in range(int(input())):
     b1 = min(b)
     ans = 0
     for i in range(n):
-        cnt1, cnt2 = a[i] - a1, b[i] - b1
+        (cnt1, cnt2) = (a[i] - a1, b[i] - b1)
         ans += max(cnt1, cnt2)
     print(ans)

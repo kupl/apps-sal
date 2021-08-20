@@ -3,6 +3,7 @@ from copy import deepcopy
 
 
 class Member:
+
     def __init__(self, name, gender=''):
         self.name = name
         self.gender = gender
@@ -12,6 +13,7 @@ class Member:
 
 
 class family:
+
     def __init__(self):
         self.children = defaultdict(list)
         self.member_objects = []
@@ -48,11 +50,11 @@ class family:
         return bool(gdr) and gdr == 'female'
 
     def is_cycle(self, child, parent):
-        copy = defaultdict(list, {i.name: [k.name for k in j] for i, j in self.children.items()})
+        copy = defaultdict(list, {i.name: [k.name for k in j] for (i, j) in self.children.items()})
         copy[child.name].append(parent.name)
         Q = deque([[parent.name, []]])
         while Q:
-            node, path = Q.popleft()
+            (node, path) = Q.popleft()
             path.append(node)
             for neighbour in copy[node]:
                 if neighbour not in path:
@@ -79,30 +81,28 @@ class family:
         return 'malefemale' in k or 'femalemale' in k
 
     def set_parent_of(self, child, parent):
-        child, parent = self.get_member(child), self.get_member(parent)
+        (child, parent) = (self.get_member(child), self.get_member(parent))
         if parent in self.children[child] or parent in self.children[child]:
             return True
-        if child == parent or len(self.children[child]) == 2 or \
-           parent.gender and self.children[child] and self.children[child][0].gender == parent.gender or self.is_consistent(child, parent):
+        if child == parent or len(self.children[child]) == 2 or (parent.gender and self.children[child] and (self.children[child][0].gender == parent.gender)) or self.is_consistent(child, parent):
             return False
-
         self.children[child].append(parent)
         self.set_rest_of_things()
         return True
 
     def get_children_of(self, name):
-        return sorted([i.name for i, j in self.children.items() if name in [k.name for k in j]])
+        return sorted([i.name for (i, j) in self.children.items() if name in [k.name for k in j]])
 
     def get_parents_of(self, name):
-        return sorted(next(([k.name for k in j] for i, j in self.children.items() if i.name == name), []))
+        return sorted(next(([k.name for k in j] for (i, j) in self.children.items() if i.name == name), []))
 
     def set_rest_of_things(self, cpy='', prt=''):
         cpy = self.children if not cpy else cpy
-        d, i, keys, genders = {'male': 'female', 'female': 'male'}, 0, list(cpy.keys()), defaultdict(str)
+        (d, i, keys, genders) = ({'male': 'female', 'female': 'male'}, 0, list(cpy.keys()), defaultdict(str))
         while i < len(keys):
             parents = cpy[keys[i]]
             if len(parents) > 1:
-                a, b = parents
+                (a, b) = parents
                 if (a.gender, b.gender).count('') == 1:
                     b.gender = d.get(a.gender, b.gender)
                     a.gender = d.get(b.gender, a.gender)

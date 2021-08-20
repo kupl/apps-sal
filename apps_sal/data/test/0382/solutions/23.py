@@ -1,16 +1,15 @@
-
 def mi():
     return list(map(int, input().split()))
 
 
-n, m, q = mi()
+(n, m, q) = mi()
 s = list(input())
 t = list(input())
 pre1 = [0] * n
 pre2 = [0] * n
 if n >= m:
     for i in range(n - m + 1):
-        if (s[i:i + m] == t):
+        if s[i:i + m] == t:
             pre1[i + m - 1] = 1
             pre2[i] = 1
     for i in range(1, n):
@@ -18,15 +17,10 @@ if n >= m:
         pre2[i] += pre2[i - 1]
 pre1.insert(0, 0)
 pre2.insert(0, 0)
-
-
 while q:
     q -= 1
-    l, r = mi()
-    s1, s2 = 0, 0
-    # for i in range(l, r+1):
-    # s1+=pre1[i]
-    # s2+=pre2[i]
+    (l, r) = mi()
+    (s1, s2) = (0, 0)
     if m > n:
         print(0)
         continue

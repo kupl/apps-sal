@@ -1,7 +1,7 @@
 def smash(words):
-    str = ""
+    str = ''
     for word in words:
         str += word
-        str += " "
+        str += ' '
     str = str.strip()
     return str

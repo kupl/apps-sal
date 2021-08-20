@@ -9,7 +9,7 @@ for i in range(n - 1):
     accumr[i + 1] += a[n - i - 2] + accumr[i]
 ll = 0
 rr = n - 3
-ans = 10**18
+ans = 10 ** 18
 for i in range(1, n - 2):
     sl = accuml[i]
     sr = accumr[n - 2 - i]

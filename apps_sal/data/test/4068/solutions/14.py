@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(input()) for _ in range(m)]
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 a.append(float('INF'))
 a = a[::-1]
 dp = [0] * (n + 1)

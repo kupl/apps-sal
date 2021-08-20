@@ -1,10 +1,8 @@
-# https://codeforces.com/problemset/problem/773/A
-
 t = int(input())
 for i in range(t):
-    x, y, p, q = list(map(int, input().split()))
+    (x, y, p, q) = list(map(int, input().split()))
     left = -1
-    right = 10**9
+    right = 10 ** 9
     r = right
     while left + 1 < right:
         t = (left + right) // 2

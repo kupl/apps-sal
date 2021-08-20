@@ -1,4 +1,3 @@
-
 def count(sequence):
     result = 0
     current_length = 1
@@ -8,15 +7,11 @@ def count(sequence):
         if sequence[i - 1] == x:
             current_length += 1
             continue
-
         if current_length % 2 == 0:
             result += 1
-
         current_length = 1
-
     if current_length % 2 == 0:
         result += 1
-
     return result
 
 

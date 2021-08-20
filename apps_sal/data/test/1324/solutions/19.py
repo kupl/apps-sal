@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-
 def main():
-    a1, a2, a3, a4 = list(map(int, input().split()))
-
+    (a1, a2, a3, a4) = list(map(int, input().split()))
     res = 0
     for s in input():
         if s == '1':
@@ -13,7 +10,6 @@ def main():
             res += a3
         if s == '4':
             res += a4
-
     print(res)
 
 

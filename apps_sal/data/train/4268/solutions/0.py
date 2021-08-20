@@ -1,9 +1,8 @@
-d, polydivisible, arr = 1, [], list(range(1, 10))
+(d, polydivisible, arr) = (1, [], list(range(1, 10)))
 while arr:
     d += 1
     polydivisible.extend(arr)
-    arr = [n for x in arr for n in
-           range(-(-x * 10 // d) * d, (x + 1) * 10, d)]
+    arr = [n for x in arr for n in range(-(-x * 10 // d) * d, (x + 1) * 10, d)]
 
 
 def next_num(n):

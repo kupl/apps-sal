@@ -9,6 +9,6 @@ for i in range(N):
     constS[Ss] += 1
     constD[Dd] += 1
 ans = 0
-for key, val in constS.items():
+for (key, val) in constS.items():
     ans += val * constD[key]
 print(ans)

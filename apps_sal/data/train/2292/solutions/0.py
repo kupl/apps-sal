@@ -31,7 +31,7 @@ if t == -1:
     print('1\n1')
 elif t == 1:
     print(n)
-    print((1))
+    print(1)
 else:
     zl = Z(w)
     w.reverse()
@@ -40,5 +40,5 @@ else:
     for i in range(0, n - 1):
         if zl[i] and zr[n - 2 - i]:
             cnt = cnt + 1
-    print((2))
+    print(2)
     print(cnt)

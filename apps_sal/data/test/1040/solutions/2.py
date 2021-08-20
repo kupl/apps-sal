@@ -1,12 +1,12 @@
 N = int(input())
 S = input()
-T = ""
+T = ''
 for s in S:
-    if s in "fox":
+    if s in 'fox':
         T += s
-        if T[-3:] == "fox":
+        if T[-3:] == 'fox':
             T = T[:-3]
             N -= 3
     else:
-        T = ""
+        T = ''
 print(N)

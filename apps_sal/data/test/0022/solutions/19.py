@@ -12,8 +12,8 @@ if n % 2 == 0 or s[n // 2] in insym:
         if s1[i] not in disym or disym[s1[i]] != s2[i]:
             flg = False
     if flg:
-        print("TAK")
+        print('TAK')
     else:
-        print("NIE")
+        print('NIE')
 else:
-    print("NIE")
+    print('NIE')

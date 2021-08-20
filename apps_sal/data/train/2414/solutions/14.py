@@ -1,12 +1,12 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
+
         def isGood(i, j, a):
             return abs(arr[i] - arr[j]) <= a
-
         ret = 0
         if not arr:
             return ret
-
         n = len(arr)
         for i in range(0, n):
             for j in range(i + 1, n):

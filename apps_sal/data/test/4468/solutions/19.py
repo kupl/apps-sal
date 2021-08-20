@@ -2,7 +2,7 @@ import numpy as np
 
 
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     ts = list(map(int, input().split()))
     ans = t
     for i in range(n - 1):

@@ -7,18 +7,17 @@ use = {}
 for x in a:
     if x in d1:
         if use1[x] == n - x:
-            t += (n - x)
+            t += n - x
             use1[x] = 0
         use1[x] += 1
     else:
         d1[x] = 0
-        t += (n - x)
+        t += n - x
         use1[x] = 1
-
 if n != t:
-    print("Impossible")
+    print('Impossible')
 else:
-    print("Possible")
+    print('Possible')
     d = {}
     cv = 1
     for x in a:

@@ -1,6 +1,4 @@
-# coding :utf-8
 import math
-
 num_N = int(input())
 num_S = int(input())
 
@@ -16,15 +14,12 @@ def get_s(n, b):
 def solve():
     if num_S == num_N:
         return num_N + 1
-
     num_sqr = int(math.sqrt(num_N))
     for i in range(2, num_sqr + 1):
         if get_s(num_N, i) == num_S:
             return i
-
     if num_N % num_S == 0 and num_N // num_S > num_S:
         return num_N // num_S
-
     num_dif = num_N - num_S
     for i in range(num_sqr + 1, 0, -1):
         b = num_dif / i + 1
@@ -36,4 +31,4 @@ def solve():
     return -1
 
 
-print((solve()))
+print(solve())

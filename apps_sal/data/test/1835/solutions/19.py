@@ -7,21 +7,19 @@ for _ in range(int(input())):
     numberOnes = 0
     numOdd = 0
     for elem in s:
-        if (len(elem) % 2) == 1:
+        if len(elem) % 2 == 1:
             numOdd += 1
         for num in elem:
-            if num == "0":
+            if num == '0':
                 numberZeroes += 1
             else:
                 numberOnes += 1
-
     while numOdd > 1:
         if numberOnes > 1:
             numberOnes -= 1
         else:
             numberZeroes -= 1
         numOdd -= 1
-
     if numOdd == 1:
         if numberOnes % 2 == 1:
             numberOnes -= 1
@@ -31,7 +29,6 @@ for _ in range(int(input())):
             numberOnes -= 1
         else:
             numberZeroes -= 1
-
     if numberOnes % 2 == 0 and numberZeroes % 2 == 0:
         print(n)
     else:

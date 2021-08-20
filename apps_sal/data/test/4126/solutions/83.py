@@ -1,5 +1,4 @@
 s = input()
-
 ans = 'No'
 n = len(s)
 if s == s[::-1]:

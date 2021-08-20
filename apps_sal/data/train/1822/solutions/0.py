@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, words, k):
         """
         :type words: List[str]
@@ -8,4 +9,4 @@ class Solution:
         from collections import Counter
         count = Counter(words)
         common = sorted(list(count.items()), key=lambda item: (-item[1], item[0]))[:k]
-        return [w for w, n in common]
+        return [w for (w, n) in common]

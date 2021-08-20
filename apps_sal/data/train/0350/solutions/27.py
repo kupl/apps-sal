@@ -1,9 +1,10 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         last_seen = {}
         start = end = 0
         ans = 0
-        for i, x in enumerate(A):
+        for (i, x) in enumerate(A):
             last_seen[x] = i
             while len(last_seen) > K:
                 if last_seen[A[start]] == start:

@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 
 
 def __sum(n):
@@ -12,13 +12,11 @@ def _sum(l, r):
     if l <= 0:
         delta = abs(l) + 1
         l = 1
-
-    # print(l, r, __sum(r) - __sum(l - 1))
     return __sum(r) - __sum(l - 1) + delta
 
 
 left = 1
-right = int(1e9) + 2
+right = int(1000000000.0) + 2
 while right - left > 1:
     mid = (left + right) // 2
     sub = _sum(mid - k + 1, mid) + _sum(mid - (n - k), mid - 1)
@@ -26,5 +24,4 @@ while right - left > 1:
         left = mid
     else:
         right = mid
-
 print(left)

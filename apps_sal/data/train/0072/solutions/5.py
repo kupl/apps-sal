@@ -11,7 +11,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, k = read_ints()
+    (n, k) = read_ints()
     a = list(read_ints())
     cnt = Counter(a)
     distinct = len(cnt)
@@ -21,7 +21,7 @@ for case_num in range(t):
         print(n * k)
         s = set(cnt)
         for i in range(1, n + 1):
-            if len(s) < k and not i in s:
+            if len(s) < k and (not i in s):
                 s.add(i)
         ans = list(s) * n
         print(' '.join(map(str, ans)))

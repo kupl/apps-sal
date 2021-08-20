@@ -1,11 +1,11 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
         reachable_so_far = 0
-
         for i in range(len(nums)):
             if reachable_so_far < i:
                 return False

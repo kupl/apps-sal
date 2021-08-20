@@ -13,5 +13,4 @@ for i in range(1, len(word)):
             res.append(word[i])
     else:
         res.append(word[i])
-
 print(''.join(res))

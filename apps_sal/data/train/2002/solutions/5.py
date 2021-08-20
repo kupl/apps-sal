@@ -1,7 +1,7 @@
 def func(a):
     b = [0] * 26
     for i in range(len(a)):
-        b[ord(a[i]) - ord("a")] += 1
+        b[ord(a[i]) - ord('a')] += 1
     c = 0
     for i in b:
         if i == 1:
@@ -26,9 +26,8 @@ for i in a:
             b = []
             d = 0
             for k in a[i]:
-                b.append((s[(k + j) % n]))
+                b.append(s[(k + j) % n])
             d = d + func(b)
             e.append(d)
         c = c + max(e)
-
 print(c / n)

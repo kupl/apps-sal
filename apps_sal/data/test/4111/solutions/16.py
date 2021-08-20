@@ -9,7 +9,6 @@ for i in range(n):
     if i % 2 == 0:
         es += a[i]
         sa[i] = es
-
     else:
         os += a[i]
         sa[i] = os
@@ -20,7 +19,6 @@ for i in range(n):
     if i % 2 == 0:
         if es - ea[i] + oa[i - 1] == os - oa[i - 1] + ea[i - 1]:
             count += 1
-    else:
-        if os - oa[i] + ea[i - 1] == es - ea[i - 1] + oa[i - 1]:
-            count += 1
+    elif os - oa[i] + ea[i - 1] == es - ea[i - 1] + oa[i - 1]:
+        count += 1
 print(count)

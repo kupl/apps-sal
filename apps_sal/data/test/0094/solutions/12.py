@@ -1,10 +1,10 @@
 n = input()
 l = len(n)
-n, k = int(n), input()
-K, d, ans = [], 1, 0
+(n, k) = (int(n), input())
+(K, d, ans) = ([], 1, 0)
 while k:
     ll = l
-    while ll > len(k) or int(k[-ll:]) >= n or k[-ll] == "0":
+    while ll > len(k) or int(k[-ll:]) >= n or k[-ll] == '0':
         if ll > 1:
             ll -= 1
         else:

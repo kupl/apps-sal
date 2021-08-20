@@ -3,29 +3,21 @@ from bisect import bisect_left
 
 
 def main():
-    inf = float("inf")
-    n, m = map(int, input().split())
+    inf = float('inf')
+    (n, m) = map(int, input().split())
     weight = sorted(list(map(int, input().split())))
     bridge = [tuple(map(int, input().split())) for _ in range(m)]
-
     bridge.sort(key=lambda x: x[1])
-    # 脆い橋から順に並べた
     bridge_w = [x[1] for x in bridge]
-    # i番目に脆い橋が渡れるとき取れる長さの最も短い値
     bridge_l = [0] * (m + 1)
     for i in range(m):
         bridge_l[i + 1] = max(bridge[i][0], bridge_l[i])
-
     if weight[-1] > bridge_w[0]:
         print(-1)
         return
-
-    # ラクダの並べ方についてそれぞれ考えたい
     mn = inf
     for x in permutations(weight):
-        # iとjのラクダが離れていなければならない距離をdis
         dis = [[0] * n for _ in range(n)]
-
         for i in range(1, n):
             for j in range(n - i):
                 work_weight = sum(x[j:j + i + 1])
@@ -37,7 +29,6 @@ def main():
                 dis[j][j + i] = mx
         if dis[0][n - 1] < mn:
             mn = dis[0][n - 1]
-
     print(mn)
 
 

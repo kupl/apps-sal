@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 cs = dict()
 ans = []
@@ -7,7 +7,6 @@ for num in a:
         cs[num] += 1
     else:
         cs[num] = 1
-
     if len(cs) == n:
         new = dict()
         for i in list(cs.keys()):

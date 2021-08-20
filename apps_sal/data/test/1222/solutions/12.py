@@ -6,9 +6,9 @@ i = 0
 while i != K:
     x = deq.popleft()
     if x % 10 != 0:
-        deq.append(10 * x + (x % 10) - 1)
-    deq.append(10 * x + (x % 10))
+        deq.append(10 * x + x % 10 - 1)
+    deq.append(10 * x + x % 10)
     if x % 10 != 9:
-        deq.append(10 * x + (x % 10) + 1)
+        deq.append(10 * x + x % 10 + 1)
     i += 1
 print(x)

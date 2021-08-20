@@ -7,13 +7,12 @@ def solve():
     dx = []
     dy = []
     for _ in range(N):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         dx.append(x + y)
         dy.append(x - y)
     dx.sort()
     dy.sort()
     print(max(dx[N - 1] - dx[0], dy[N - 1] - dy[0]))
-
     return
 
 

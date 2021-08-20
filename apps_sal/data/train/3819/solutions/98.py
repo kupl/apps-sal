@@ -1,5 +1,5 @@
 def smash(words):
-    sentence = ""
+    sentence = ''
     length_words = len(words)
     for word in words:
         sentence += word
@@ -7,4 +7,4 @@ def smash(words):
             pass
         else:
             sentence += ' '
-    return(sentence)
+    return sentence

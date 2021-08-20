@@ -1,9 +1,10 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         res = 0
         if len(s) < 2:
             return res
-        first, second = 0, 1
+        (first, second) = (0, 1)
         while second < len(s):
             if s[first] == s[second]:
                 if cost[first] <= cost[second]:

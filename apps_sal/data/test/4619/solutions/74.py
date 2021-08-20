@@ -1,12 +1,9 @@
-w, h, n = map(int, input().split())
-
+(w, h, n) = map(int, input().split())
 x = [0] * n
 y = [0] * n
 a = [0] * n
-
 for i in range(n):
-    x[i], y[i], a[i] = map(int, input().split())
-
+    (x[i], y[i], a[i]) = map(int, input().split())
 w_l = 0
 h_l = 0
 for i in range(n):

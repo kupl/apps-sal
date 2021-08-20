@@ -6,13 +6,13 @@ def who_wins_beggar_thy_neighbour(hand_1, hand_2):
     pile = []
     turn = 0
     for _ in range(10000):
-        while(not pile or pile[-1][0] not in special):
+        while not pile or pile[-1][0] not in special:
             if not h[turn]:
                 return turn ^ 1
             pile.append(h[turn].pop(0))
             turn ^= 1
         count = special[pile[-1][0]]
-        while(count > 0):
+        while count > 0:
             if not h[turn]:
                 return turn ^ 1
             pile.append(h[turn].pop(0))

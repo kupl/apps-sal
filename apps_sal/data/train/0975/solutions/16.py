@@ -19,7 +19,7 @@ for loop in range(test):
                 flag += 1
     except NameError:
         flag = 0
-    sch = x + y - (2 * flag)
+    sch = x + y - 2 * flag
     inele = sch + flag
     ele = n - inele
     print(min(ele, r))

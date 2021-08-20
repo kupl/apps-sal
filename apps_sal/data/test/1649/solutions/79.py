@@ -4,17 +4,14 @@ for bitset in range(1, 2 ** 4):
     eat_sum = 0
     left_sum = 0
     for j in range(4):
-        if ((bitset >> j) & 1) == 1:
+        if bitset >> j & 1 == 1:
             eat_sum += A[j]
         else:
             left_sum += A[j]
-        #print(eat_sum, left_sum)
-
     if eat_sum == left_sum:
         yes = True
         break
-
 if yes:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

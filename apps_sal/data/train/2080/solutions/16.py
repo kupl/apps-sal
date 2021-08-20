@@ -6,15 +6,15 @@ t = min(q)
 cost.sort()
 total = 0
 index = len(cost) - 1
-while(index >= 0):
+while index >= 0:
     r = t
-    if(index >= t):
+    if index >= t:
         r = t
-        while(r):
+        while r:
             total += cost[index]
             r -= 1
             index -= 1
-        if(index >= 2):
+        if index >= 2:
             index -= 2
         else:
             break

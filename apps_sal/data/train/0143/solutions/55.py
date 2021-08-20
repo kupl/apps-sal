@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         left = ans = 0
         types = collections.defaultdict(int)

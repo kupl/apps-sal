@@ -6,7 +6,7 @@ def summation(num):
             x -= 1
         return num
     else:
-        return print("error")
+        return print('error')
 
 
 summation(0)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 flag = False
 s1 = ''
 for i in range(n):

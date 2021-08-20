@@ -1,12 +1,12 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         endpos = len(arr) - 1
         graph = {}
-        for i, n in enumerate(arr):
+        for (i, n) in enumerate(arr):
             if n not in graph:
                 graph[n] = []
             graph[n].append(i)
-
         curr = set([0])
         hit = set()
         mark = 0

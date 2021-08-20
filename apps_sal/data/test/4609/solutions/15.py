@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 def main():
     N = int(input())
     ans = 0
@@ -16,7 +13,6 @@ def main():
         else:
             dic[a] -= 1
             ans -= 1
-
     print(ans)
 
 

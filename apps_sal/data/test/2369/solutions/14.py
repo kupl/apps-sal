@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 fac = [1] * n
 finv = [1] * n
 inv = [0] * n

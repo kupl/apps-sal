@@ -1,9 +1,6 @@
 class Solution:
-    def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
-        # actually don't need to go up to maxSize since if
-        # a string of maxSize has an occurence, then any substring
-        # has at least an equal number of occurences
 
+    def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         seen = collections.defaultdict(int)
         n = len(s)
         counts = collections.Counter(s[:minSize])

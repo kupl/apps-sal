@@ -1,7 +1,7 @@
 class Solution:
+
     def maxDiff(self, num: int) -> int:
         s = str(num)
-
         a = True
         i = 0
         while i < len(s):
@@ -12,10 +12,8 @@ class Solution:
                 if s[i] == n:
                     s = s[:i] + '9' + s[i + 1:]
             i += 1
-
         n1 = int(s)
         s = str(num)
-
         a = True
         if int(s[0]) > 1:
             n = s[0]
@@ -33,6 +31,5 @@ class Solution:
                 if s[i] == n:
                     s = s[:i] + y + s[i + 1:]
             i += 1
-
         n2 = int(s)
         return n1 - n2

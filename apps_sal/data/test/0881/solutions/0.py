@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 dp = [[False] * (n + 1) for i in range(n + 1)]
 
 

@@ -5,9 +5,6 @@ for Q in range(q):
     alice = A[0]
     bob = A[1]
     excess = A[2]
-
     total = sum(A)
-
     each = total // 2
-
     print(each)

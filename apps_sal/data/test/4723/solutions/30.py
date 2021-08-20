@@ -2,7 +2,6 @@ s = input()
 t = input()
 ls = len(s)
 lt = len(t)
-
 ans = 0
 for i in range(ls - lt + 1):
     x = s[:i] + t + s[i + lt:ls]
@@ -21,7 +20,6 @@ for i in range(ls - lt + 1):
             else:
                 p += x[k]
         ans = p
-
 if ans:
     print(p)
 else:

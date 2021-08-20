@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 Sum = 0
 for i in range(N):
     a = list(map(int, input().split()))

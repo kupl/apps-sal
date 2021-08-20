@@ -1,8 +1,8 @@
 def rain_amount(mm):
     if mm < 40:
-        a = "You need to give your plant "
-        b = "mm of water"
-        s = ""
+        a = 'You need to give your plant '
+        b = 'mm of water'
+        s = ''
         s += a
         st = 40 - mm
         st = str(st)
@@ -10,4 +10,4 @@ def rain_amount(mm):
         s += b
         return s
     else:
-        return "Your plant has had more than enough water for today!"
+        return 'Your plant has had more than enough water for today!'

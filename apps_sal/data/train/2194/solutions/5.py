@@ -1,12 +1,10 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 par = [-1] + [int(i) - 1 for i in input().split()]
 child = [[] for i in range(n)]
 for i in range(1, n):
     child[par[i]].append(i)
-
 size = [1] * n
 
 

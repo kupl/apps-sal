@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     ans = 2
     v = 1
     if n <= 2:

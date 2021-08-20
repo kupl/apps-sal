@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         history = []
         count = 0
@@ -8,5 +9,4 @@ class Solution:
             limit = max(limit, i)
             if len(history) == limit:
                 count += 1
-
         return count

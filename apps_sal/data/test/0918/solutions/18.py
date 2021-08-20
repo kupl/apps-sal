@@ -1,4 +1,4 @@
-n, m = (int(z) for z in input().split())
+(n, m) = (int(z) for z in input().split())
 Par = [850] * m
 Res = dict()
 r = dict()

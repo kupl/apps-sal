@@ -1,10 +1,10 @@
-N, K, *L = list(map(int, open(0).read().split()))
-S = sorted([(d, t)for t, d in zip(*[iter(L)] * 2)], reverse=True)
+(N, K, *L) = list(map(int, open(0).read().split()))
+S = sorted([(d, t) for (t, d) in zip(*[iter(L)] * 2)], reverse=True)
 In = set()
 C = X = 0
 uni = []
 dub = []
-for d, t in S:
+for (d, t) in S:
     if t not in In:
         In.add(t)
         uni.append(d)
@@ -23,4 +23,4 @@ for d in dub:
         uni.pop()
         X -= 1
         det += d
-print((sum(uni) + det + X**2))
+print(sum(uni) + det + X ** 2)

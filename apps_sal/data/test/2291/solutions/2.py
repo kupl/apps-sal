@@ -1,9 +1,6 @@
 import sys
-
 X = int(sys.stdin.readline())
-
 a = set([int(i) for i in sys.stdin.readline().split()])
-
 top = 1 << 31
 ans = 0
 

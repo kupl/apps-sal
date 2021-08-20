@@ -1,21 +1,21 @@
 def interpreter(tape):
-    data, pointer, output = [0], 0, "",
+    (data, pointer, output) = ([0], 0, '')
     for command in tape:
-        if command == ">":
+        if command == '>':
             pointer += 1
-        elif command == "<":
+        elif command == '<':
             pointer -= 1
-        elif command == "+" and is_valid(pointer, data):
+        elif command == '+' and is_valid(pointer, data):
             data[pointer] = (data[pointer] + 1) % 256
-        elif command == "-" and is_valid(pointer, data):
+        elif command == '-' and is_valid(pointer, data):
             data[pointer] = (data[pointer] - 1) % 256
-        elif command == "/" and is_valid(pointer, data):
+        elif command == '/' and is_valid(pointer, data):
             data[pointer] = 0
-        elif command == "!":
+        elif command == '!':
             data.append(0)
-        elif command == "*" and is_valid(pointer, data):
+        elif command == '*' and is_valid(pointer, data):
             output += chr(data[pointer])
-        elif command == "*":
+        elif command == '*':
             output += chr(0)
     return output
 

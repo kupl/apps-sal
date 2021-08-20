@@ -2,7 +2,7 @@ def mp():
     return map(int, input().split())
 
 
-n, m = mp()
+(n, m) = mp()
 if m % n != 0:
     print(-1)
 else:

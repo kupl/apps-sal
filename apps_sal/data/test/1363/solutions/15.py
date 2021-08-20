@@ -9,8 +9,7 @@ def nCr(n, r):
     return f(n) // f(r) // f(n - r)
 
 
-g, d, f = list(map(int, input().split()))
-
+(g, d, f) = list(map(int, input().split()))
 gs = list(map(int, input().split()))
 gs.sort()
 ds = list(map(int, input().split()))
@@ -43,5 +42,4 @@ for i in ds:
     answer += count_by_first(i, ds_count=1)
 for i in fs:
     answer += count_by_first(i, fs_count=2)
-
 print(answer)

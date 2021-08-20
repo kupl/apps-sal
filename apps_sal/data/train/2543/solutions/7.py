@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseOnlyLetters(self, S: str) -> str:
         s = set()
         for i in range(ord('a'), ord('z') + 1):
@@ -11,7 +12,7 @@ class Solution:
                 order.append(S[i])
         new = []
         order.reverse()
-        for i in reversed((S)):
+        for i in reversed(S):
             if i in s:
                 new.append(order.pop())
             else:

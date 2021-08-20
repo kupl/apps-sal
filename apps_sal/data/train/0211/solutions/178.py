@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         N = len(s)
 
@@ -17,5 +18,4 @@ class Solution:
                         maxSs = Nsplit + 1
                 i += 1
             return maxSs
-
         return splitLookup(s, set())

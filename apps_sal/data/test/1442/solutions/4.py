@@ -1,11 +1,11 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 pricesell = dict()
 pricebuy = dict()
 sellp = set()
 buyp = set()
 for i in range(n):
     tmp = input().split()
-    if tmp[0] == "B":
+    if tmp[0] == 'B':
         if int(tmp[1]) in buyp:
             pricebuy[int(tmp[1])] += int(tmp[2])
         else:
@@ -24,7 +24,7 @@ sell.sort()
 buy1 = buy[:min(s, len(buy))]
 sell1 = sell[:min(s, len(sell))]
 sell1.sort(reverse=True)
-buy1 = list(map(lambda x: "B " + str(x[0]) + " " + str(x[1]), buy1))
-sell1 = list(map(lambda x: "S " + str(x[0]) + " " + str(x[1]), sell1))
-print(*sell1, sep="\n")
-print(*buy1, sep="\n")
+buy1 = list(map(lambda x: 'B ' + str(x[0]) + ' ' + str(x[1]), buy1))
+sell1 = list(map(lambda x: 'S ' + str(x[0]) + ' ' + str(x[1]), sell1))
+print(*sell1, sep='\n')
+print(*buy1, sep='\n')

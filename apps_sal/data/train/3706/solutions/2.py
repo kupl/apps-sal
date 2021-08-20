@@ -4,5 +4,4 @@ def layers(n):
     while i * i < n:
         i += 2
         r += 1
-
     return r

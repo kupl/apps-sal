@@ -1,7 +1,8 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, m = R()
+(n, m) = R()
 a = sorted(R())
 b = sorted(R())
 b.reverse()

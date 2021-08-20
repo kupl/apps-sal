@@ -1,7 +1,5 @@
-N, K, *A = map(int, open(0).read().split())
-
+(N, K, *A) = map(int, open(0).read().split())
 A.sort(reverse=True)
-
 cur = 0
 ans = 0
 for a in A:
@@ -10,5 +8,4 @@ for a in A:
         ans += 1
     else:
         ans = 0
-
 print(ans)

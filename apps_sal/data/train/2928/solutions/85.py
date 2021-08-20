@@ -1,6 +1,6 @@
 def alphabet_war(fight):
-    dl = {"w": 4, "p": 3, "b": 2, "s": 1}
-    dr = {"m": 4, "q": 3, "d": 2, "z": 1}
+    dl = {'w': 4, 'p': 3, 'b': 2, 's': 1}
+    dr = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
     lwork = 0
     rwork = 0
     for x in fight:
@@ -9,6 +9,6 @@ def alphabet_war(fight):
     if lwork == rwork:
         return "Let's fight again!"
     elif lwork > rwork:
-        return "Left side wins!"
+        return 'Left side wins!'
     else:
-        return "Right side wins!"
+        return 'Right side wins!'

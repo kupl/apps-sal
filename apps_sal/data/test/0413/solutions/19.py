@@ -9,5 +9,5 @@ def buttons(m, n, Steps):
         return Steps + (n - m)
 
 
-[n, m] = (input()).split(' ')
+[n, m] = input().split(' ')
 print(buttons(int(m), int(n), 0))

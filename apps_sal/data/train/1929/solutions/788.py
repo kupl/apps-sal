@@ -8,7 +8,6 @@ class StreamChecker:
         for w in words:
             insert(self.d, w)
         self.l = []
-        # print(self.d)
 
     def query(self, letter: str) -> bool:
         if letter not in self.s:
@@ -37,7 +36,3 @@ def insert(d, s):
         if s[0] not in d:
             d[s[0]] = {}
         insert(d[s[0]], s[1:])
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

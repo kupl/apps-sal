@@ -1,9 +1,9 @@
 class Solution:
-    def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
 
+    def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         _max = max(worker) + 1
         make = [0] * _max
-        num = [(difficulty[i], profit[i])for i in range(len(profit)) if difficulty[i] < _max]
+        num = [(difficulty[i], profit[i]) for i in range(len(profit)) if difficulty[i] < _max]
         num.sort(key=lambda x: x[0])
         x = 0
         while x < len(num):

@@ -2,7 +2,7 @@ import numpy as np
 
 
 def __starting_point():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     P = [int(p) - 1 for p in input().split()]
     C = list(map(int, input().split()))
     cycleIDs = np.full(N, -1, np.int64)
@@ -18,7 +18,6 @@ def __starting_point():
             while True:
                 currentCycleCosts.append(C[v])
                 cycleIDs[v] = cycleID
-
                 v = P[v]
                 if cycleIDs[v] != -1:
                     procCnt = K % len(currentCycleCosts)
@@ -28,15 +27,13 @@ def __starting_point():
                     cycleID += 1
                     break
     ans = -10 ** 9
-    for procCnt, currentCycleSize, currentCycleCosts in cycleInfs:
+    for (procCnt, currentCycleSize, currentCycleCosts) in cycleInfs:
         loopScore = 0
         if np.sum(currentCycleCosts) > 0:
             cycleLoopCnt = (K - procCnt) // currentCycleSize
             loopScore = cycleLoopCnt * np.sum(currentCycleCosts[:currentCycleSize])
-
         for i in range(currentCycleSize):
             ans = max(ans, np.roll(currentCycleCosts, i).cumsum()[:procCnt].max() + loopScore)
-
     print(ans)
 
 

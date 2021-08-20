@@ -1,5 +1,4 @@
 def parse_float(string):
-
     if type(string) == str:
         try:
             float(string)

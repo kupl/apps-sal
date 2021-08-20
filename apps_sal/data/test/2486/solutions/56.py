@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-*l, = list(map(int, input().split()))
+(n, k) = map(int, input().split())
+(*l,) = list(map(int, input().split()))
 l.sort(reverse=True)
 m = 0
 ans = 0

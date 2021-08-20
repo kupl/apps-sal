@@ -1,6 +1,6 @@
 n = int(input())
 a = input()
-x, y = 0, 0
+(x, y) = (0, 0)
 for i in range(n):
     if a[i] == 'U':
         y += 1

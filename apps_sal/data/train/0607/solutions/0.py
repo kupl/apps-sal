@@ -1,12 +1,11 @@
-'''input
+"""input
 2
 3
 2 2 3
 4
 2 3 3 2
-'''
+"""
 import math
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -23,7 +22,6 @@ for _ in range(int(input())):
             if curr_gcd == 1:
                 count += 1
                 i += 1
-                # print(i)
                 break
             i += 1
     print(count)

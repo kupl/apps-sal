@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin
 import collections
 
@@ -15,10 +14,8 @@ def solve(tc):
         base.append(p)
         base.appendleft(p + 1)
         p += 2
-
     if p == n:
         base.append(p)
-
     for x in base:
         print(x, end=' ')
     print()
@@ -26,9 +23,8 @@ def solve(tc):
 
 LOCAL_TEST = not __debug__
 if LOCAL_TEST:
-    infile = __file__.split('.')[0] + "-test.in"
+    infile = __file__.split('.')[0] + '-test.in'
     stdin = open(infile, 'r')
-
 tcs = int(stdin.readline().strip())
 tc = 1
 while tc <= tcs:

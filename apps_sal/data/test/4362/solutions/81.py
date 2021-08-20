@@ -1,5 +1,5 @@
 a = input()
 if a.islower():
-    print("a")
+    print('a')
 else:
-    print("A")
+    print('A')

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         total = 0
         l = len(customers)
@@ -22,5 +23,4 @@ class Solution:
             if temp > maxsum:
                 maxrot = rotation
                 maxsum = temp
-
         return maxrot

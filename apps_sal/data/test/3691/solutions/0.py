@@ -1,18 +1,11 @@
-x0, y0, A, C, B, D = list(map(int, input().split()))
-
+(x0, y0, A, C, B, D) = list(map(int, input().split()))
 pts = [[x0, y0]]
 for i in range(100):
-    nx, ny = [pts[-1][0] * A + B, pts[-1][1] * C + D]
+    (nx, ny) = [pts[-1][0] * A + B, pts[-1][1] * C + D]
     pts.append([nx, ny])
     if max(nx, ny) > 10000000000000000 * 10000000000000000:
         break
-
-
-x, y, t = list(map(int, input().split()))
-# print (pts[0])
-# print (pts[1])
-# print (pts[2])
-# print (pts[3])
+(x, y, t) = list(map(int, input().split()))
 _max = 0
 for i in range(len(pts)):
     for j in range(len(pts)):

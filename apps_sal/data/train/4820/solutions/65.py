@@ -1,4 +1,5 @@
 class Cat(Animal):
+
     def ___init__(self, s):
         self.name = s
 

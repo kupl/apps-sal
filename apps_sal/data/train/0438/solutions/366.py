@@ -1,5 +1,7 @@
 class Solution:
+
     class UnionFind:
+
         def __init__(self, n, m):
             self.n = n
             self.m = m
@@ -25,7 +27,7 @@ class Solution:
             return self.parent[idx]
 
         def unite(self, idx, idx2):
-            if idx < 0 or idx2 < 0 or idx >= self.n or idx2 >= self.n:
+            if idx < 0 or idx2 < 0 or idx >= self.n or (idx2 >= self.n):
                 return
             root = self.find(idx)
             root2 = self.find(idx2)
@@ -50,9 +52,8 @@ class Solution:
         n = len(arr)
         uf = self.UnionFind(n, m)
         ans = -2
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             uf.set(num - 1)
             if uf.counts_num[m] > 0:
                 ans = max(ans, i)
-
         return ans + 1

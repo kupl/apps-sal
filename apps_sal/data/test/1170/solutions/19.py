@@ -1,25 +1,20 @@
-# Bhargey Mehta (Junior)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 import bisect
-#sys.stdin = open("input.txt", "r")
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 sys.setrecursionlimit(1000000)
-
 N = 50000
-
 for _ in range(int(input())):
     x = int(input())
     found = None
     for i in range(1, N):
         if i * i - x <= 0:
             continue
-        low, high = 1, N - 1
+        (low, high) = (1, N - 1)
         while low <= high:
-            mid = (low + high) >> 1
-            lhs = i * i - (i // mid) * (i // mid)
+            mid = low + high >> 1
+            lhs = i * i - i // mid * (i // mid)
             if lhs == x:
                 found = (i, mid)
                 break

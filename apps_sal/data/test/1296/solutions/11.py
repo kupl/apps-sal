@@ -10,7 +10,7 @@ def check(n, s, a):
 
 
 def main():
-    n, s = map(int, stdin.readline().split())
+    (n, s) = map(int, stdin.readline().split())
     a = list(map(int, stdin.readline().split()))
     for i in range(n):
         a[i] = [a[i], i + 1]

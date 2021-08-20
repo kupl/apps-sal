@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         res = [0]
         wait = 0
@@ -13,7 +14,6 @@ class Solution:
                 wait = 0
             profit = board * boardingCost - runningCost
             res.append(res[-1] + profit)
-
         while wait:
             if wait > 4:
                 board = 4

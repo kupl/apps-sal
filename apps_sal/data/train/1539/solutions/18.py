@@ -1,8 +1,5 @@
 def main():
-
     t = int(input())
-
-    # enter cases
     for i in range(t):
         a = str(input())
         b = str(input())
@@ -15,8 +12,6 @@ def checkJewellery(a, b):
         if s in a:
             count = count + 1
     print(count)
-
-# ===============================================================================
 
 
 def __starting_point():

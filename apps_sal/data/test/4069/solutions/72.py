@@ -1,23 +1,20 @@
-x, k, d = list(map(int, input().split()))
-
+(x, k, d) = list(map(int, input().split()))
 if x < 0:
     if x + k * d < 0:
-        print((-x - k * d))
+        print(-x - k * d)
     else:
         a = -x // d
         x += a * d
         if (k - a) % 2 == 0:
-            print((-x))
+            print(-x)
         else:
-            print((x + d))
-
+            print(x + d)
+elif x - k * d > 0:
+    print(x - k * d)
 else:
-    if x - k * d > 0:
-        print((x - k * d))
+    a = x // d
+    x -= a * d
+    if (k - a) % 2 == 0:
+        print(x)
     else:
-        a = x // d
-        x -= a * d
-        if (k - a) % 2 == 0:
-            print(x)
-        else:
-            print((d - x))
+        print(d - x)

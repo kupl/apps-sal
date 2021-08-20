@@ -1,5 +1,5 @@
 def isTree(matrix):
-    seen, stack = set(), [0]
+    (seen, stack) = (set(), [0])
     while stack:
         node = stack.pop()
         if node in seen:

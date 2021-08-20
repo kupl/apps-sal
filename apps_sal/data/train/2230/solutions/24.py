@@ -4,11 +4,9 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 input()
 c = list(map(int, input().split()))
-
 t = sorted(zip(p, a, b), key=lambda x: x[0])
 t = [list(x) for x in t]
 p = [None, 0, 0, 0]
-
 r = []
 for ci in c:
     i = p[ci]
@@ -18,7 +16,7 @@ for ci in c:
         r.append('-1')
     else:
         r.append(str(t[i][0]))
-        t[i][1], t[i][2] = 0, 0
+        (t[i][1], t[i][2]) = (0, 0)
         i += 1
     p[ci] = i
 print(*r)

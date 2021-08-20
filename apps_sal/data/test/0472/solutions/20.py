@@ -9,13 +9,14 @@ def digit_sum(num):
     return res
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
 res = math.inf
 for s in range(1, 91):
-    l, r = 1, 10**9
+    (l, r) = (1, 10 ** 9)
     while l < r:
         x = (l + r) // 2
         ne = x * x + s * x

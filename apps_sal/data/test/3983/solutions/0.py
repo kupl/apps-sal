@@ -1,7 +1,8 @@
 import sys
 
 
-class UnionFindVerSize():
+class UnionFindVerSize:
+
     def __init__(self, N):
         self._parent = [n for n in range(0, N)]
         self._size = [1] * N
@@ -23,9 +24,7 @@ class UnionFindVerSize():
         gy = self.find_root(y)
         if gx == gy:
             return
-
         self.group -= 1
-
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy
             self._size[gy] += self._size[gx]
@@ -41,20 +40,18 @@ class UnionFindVerSize():
 
 
 input = sys.stdin.readline
-
 for _ in range(int(input())):
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     uf = UnionFindVerSize(N)
     for _ in range(M):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         uf.unite(a - 1, b - 1)
-
     if N % 2 == 1:
         all = N * (N - 1) // 2 - M
         if all % 2 == 0:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
     else:
         all = N * (N - 1) // 2 - M
         s1 = uf.get_size(0)
@@ -62,20 +59,12 @@ for _ in range(int(input())):
         if s1 % 2 == sN % 2:
             if s1 % 2 == 0:
                 if all % 2 == 0:
-                    print("Second")
+                    print('Second')
                 else:
-                    print("First")
+                    print('First')
+            elif all % 2 == 1:
+                print('Second')
             else:
-                if all % 2 == 1:
-                    print("Second")
-                else:
-                    print("First")
+                print('First')
         else:
-            print("First")
-
-# odd,even->even,even first
-# odd,even->odd,odd first
-# odd,odd->even,even second
-# odd,odd->odd,odd first
-# even,even->even,even first
-# even,even->odd,odd second
+            print('First')

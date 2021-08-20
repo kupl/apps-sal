@@ -11,7 +11,7 @@ n = int(input())
 string = input()
 x = []
 lens = []
-for i in string.split(" "):
+for i in string.split(' '):
     x.append(int(i))
 x.sort()
 for i in range(0, n - 1):

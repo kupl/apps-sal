@@ -6,7 +6,7 @@ def eratosthenes(m):
         return []
     dp = [True] * (m + 1)
     sosu = [2]
-    like = [0] * (m + 1)  # 累積和
+    like = [0] * (m + 1)
     like[3] = 1
     for x in range(3, m + 1, 2):
         if dp[x]:
@@ -18,10 +18,10 @@ def eratosthenes(m):
     return like
 
 
-like = eratosthenes(10**5 + 1)
+like = eratosthenes(10 ** 5 + 1)
 c = np.array(like).cumsum()
 q = int(input())
 for i in range(q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ans = c[r] - c[l - 1]
     print(ans)

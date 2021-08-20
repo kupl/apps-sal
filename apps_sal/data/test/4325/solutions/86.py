@@ -1,5 +1,4 @@
-n, x, t = map(int, input().split())
-
+(n, x, t) = map(int, input().split())
 if n / x == n // x:
     print(n // x * t)
 else:

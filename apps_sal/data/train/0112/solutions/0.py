@@ -29,8 +29,8 @@ def solve(n):
                         ok = True
                         for ddx in range(0, 2):
                             for ddy in range(0, 2):
-                                x, y = i - 1 + dx + ddx, j - 1 + dy + ddy
-                                if 0 <= x < n and 0 <= y < n and a[x][y] == 0:
+                                (x, y) = (i - 1 + dx + ddx, j - 1 + dy + ddy)
+                                if 0 <= x < n and 0 <= y < n and (a[x][y] == 0):
                                     ok = False
                         if ok:
                             curPoints.append((i + dx, j + dy))
@@ -38,7 +38,7 @@ def solve(n):
     points = list(set(points))
     for i in range(1, len(points)):
         if lexComp(points[0], points[i]) > 0:
-            points[0], points[i] = points[i], points[0]
+            (points[0], points[i]) = (points[i], points[0])
     points[1:] = sorted(points[1:], key=lambda p: (math.atan2(p[1] - points[0][1], p[0] - points[0][0]), dist2(p, points[0])))
     hull = []
     for p in points:

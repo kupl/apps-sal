@@ -16,9 +16,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
-n, m = L()
+(n, m) = L()
 a = L()
 print(max(n - sum(a), -1))

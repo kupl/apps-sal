@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = set(map(int, input().split()))
 answer = []
 i = 1

@@ -1,4 +1,3 @@
-# coding:UTF-8
 import sys
 
 
@@ -7,17 +6,13 @@ def resultSur97(x):
 
 
 def __starting_point():
-    # ------ 入力 ------#
-    nk = list(map(int, input().split()))     # スペース区切り連続数字
-
+    nk = list(map(int, input().split()))
     x = nk[1]
-    dList = list(map(int, input().split()))     # スペース区切り連続数字
-
-    # ------ 処理 ------#
+    dList = list(map(int, input().split()))
     f = 0
     n = nk[0]
     while f == 0:
-        nList = [int(c) for c in str(n)]  # 数字→単数字リスト変換
+        nList = [int(c) for c in str(n)]
         b = 1
         for i in nList:
             for j in dList:
@@ -28,13 +23,7 @@ def __starting_point():
             break
         else:
             n += 1
-
-    # ------ 出力 ------#
-    print(("{}".format(n)))
-    # if flg == 0:
-    #     print("YES")
-    # else:
-    #     print("NO")
+    print('{}'.format(n))
 
 
 __starting_point()

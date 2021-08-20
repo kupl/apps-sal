@@ -1,5 +1,5 @@
 import math
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n == 0:
     print(0, 1)
     print(0, m)

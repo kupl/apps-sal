@@ -1,10 +1,8 @@
-X, Y = input().split()
-
-temp = "ABCDEF"
-
+(X, Y) = input().split()
+temp = 'ABCDEF'
 if temp.index(X) > temp.index(Y):
-    print(">")
+    print('>')
 elif temp.index(X) == temp.index(Y):
-    print("=")
+    print('=')
 else:
-    print("<")
+    print('<')

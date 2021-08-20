@@ -1,4 +1,5 @@
 class Solution:
+
     def firstMissingPositive(self, nums):
         """
         :type nums: List[int]
@@ -8,7 +9,7 @@ class Solution:
             return 1
         n = len(nums)
         for i in range(len(nums)):
-            while nums[i] > 0 and nums[i] <= n and nums[i] != nums[nums[i] - 1]:
+            while nums[i] > 0 and nums[i] <= n and (nums[i] != nums[nums[i] - 1]):
                 tmp = nums[i]
                 nums[i] = nums[tmp - 1]
                 nums[tmp - 1] = tmp

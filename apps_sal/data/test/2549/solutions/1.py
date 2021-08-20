@@ -1,16 +1,19 @@
 import sys
 import bisect
 M = 998244353
-def y(): return map(int, sys.stdin.readline().split())
 
 
-n, m = y()
+def y():
+    return map(int, sys.stdin.readline().split())
+
+
+(n, m) = y()
 d = sorted(y())
 p = [0]
 for i in d:
     p.append(p[-1] + i)
 for _ in range(m):
-    a, b = y()
+    (a, b) = y()
     i = bisect.bisect_left(d, b)
     if n - i < a:
         print(0)

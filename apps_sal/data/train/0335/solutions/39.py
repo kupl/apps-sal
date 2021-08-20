@@ -2,8 +2,8 @@ from functools import lru_cache
 
 
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
-        # rods = sorted(rods)[::-1]
         n = len(rods)
         psum = rods.copy()
         for i in range(n - 1)[::-1]:

@@ -1,6 +1,6 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
-        # Backtrack for positive and backtrack for negative
         res = []
         n = len(rating)
 
@@ -8,7 +8,6 @@ class Solution:
             if len(curr) == 3:
                 res.append(curr)
                 return
-
             for i in range(index + 1, n):
                 if curr == [] or rating[i] > curr[-1]:
                     btInc(i, curr + [rating[i]])
@@ -17,12 +16,9 @@ class Solution:
             if len(curr) == 3:
                 res.append(curr)
                 return
-
             for i in range(index + 1, n):
                 if curr == [] or rating[i] < curr[-1]:
                     btDec(i, curr + [rating[i]])
-
         btInc(-1, [])
         btDec(-1, [])
-
         return len(res)

@@ -1,11 +1,11 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 array = list(map(int, input().split()))
 array.sort()
 med = n // 2
 
 
 def key(m):
-    s = 10**10
+    s = 10 ** 10
     ind = None
     for i in range(n):
         if 0 <= m - array[i] <= s:

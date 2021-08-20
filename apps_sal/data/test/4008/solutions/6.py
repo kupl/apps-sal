@@ -1,8 +1,4 @@
-# list(map(int,input().split()))
-# map(int,input().split())
-# for test in range(t):
-# int(input())
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 tup = [[0, 0] for i in range(n)]
 for i in range(n):
@@ -29,4 +25,4 @@ for i in range(1, n):
 if flag == 0:
     print('YES')
     for i in range(n):
-        print(dp[i], end=" ")
+        print(dp[i], end=' ')

@@ -1,4 +1,4 @@
-x = input("").split(' ')
+x = input('').split(' ')
 a = int(x[0])
 b = int(x[1])
 pow2 = []
@@ -11,10 +11,10 @@ def solve(c):
     for g in range(66):
         k = 0
         for y in range(g):
-            k |= (1 << y)
+            k |= 1 << y
         for y in range(g + 1, 66):
-            k |= (1 << y)
-            if (k <= c):
+            k |= 1 << y
+            if k <= c:
                 cnt += 1
     return cnt
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
         i = 0
         for j in range(len(s)):

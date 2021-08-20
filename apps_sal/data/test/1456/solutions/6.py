@@ -22,7 +22,7 @@ def proc(dx, dy):
 for i in range(-(n - 1), n):
     for j in range(-(n - 1), n):
         proc(i, j)
-if any(b[i][j] == 'x' and not h[i][j] for i in range(n) for j in range(n)):
+if any((b[i][j] == 'x' and (not h[i][j]) for i in range(n) for j in range(n))):
     print('NO')
 else:
     print('YES')

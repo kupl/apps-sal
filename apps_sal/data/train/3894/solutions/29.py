@@ -6,17 +6,13 @@ def solve(s):
         if s[i].isupper():
             acount += 1
             i += 1
-
         elif s[i].islower():
             bcount += 1
             i += 1
-
     if bcount >= acount:
         print(bcount)
         return s.lower()
-
     if acount > bcount:
-
         return s.upper()
     else:
         return s.lower()

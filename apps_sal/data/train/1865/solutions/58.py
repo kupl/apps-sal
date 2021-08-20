@@ -1,7 +1,7 @@
 class Solution:
-    def minPushBox(self, grid: List[List[str]]) -> int:
-        n, m = len(grid), len(grid[0])
 
+    def minPushBox(self, grid: List[List[str]]) -> int:
+        (n, m) = (len(grid), len(grid[0]))
         for i in range(n):
             for j in range(m):
                 if grid[i][j] == 'T':
@@ -10,23 +10,22 @@ class Solution:
                     s = (i, j)
                 elif grid[i][j] == 'B':
                     b = (i, j)
-
         dirs = [[1, 0], [-1, 0], [0, 1], [0, -1]]
         q = [tuple(s + b)]
         seen = set(q)
         steps = 0
         while q:
             nq = []
-            for si, sj, bi, bj in q:
+            for (si, sj, bi, bj) in q:
                 if t == (bi, bj):
                     return steps
-                for di, dj in dirs:
-                    nsi, nsj = si + di, sj + dj
+                for (di, dj) in dirs:
+                    (nsi, nsj) = (si + di, sj + dj)
                     if nsi == bi and nsj == bj:
-                        nbi, nbj = bi + di, bj + dj
+                        (nbi, nbj) = (bi + di, bj + dj)
                         ds = 1
                     else:
-                        nbi, nbj = bi, bj
+                        (nbi, nbj) = (bi, bj)
                         ds = 0
                     if not (0 <= nsi < n and 0 <= nsj < m):
                         continue

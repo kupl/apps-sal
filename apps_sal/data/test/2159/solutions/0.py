@@ -7,7 +7,7 @@ for i in range(n):
     for j in range(i, n):
         t = d.get(a[j], 0) + 1
         d[a[j]] = t
-        if t > v or t == v and a[j] < m:
+        if t > v or (t == v and a[j] < m):
             v = t
             m = a[j]
         r[m] += 1

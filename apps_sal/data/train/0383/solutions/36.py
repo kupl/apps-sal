@@ -1,5 +1,7 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
+
         def infected(src, exclude=None):
             infected = set()
 
@@ -17,9 +19,9 @@ class Solution:
                 dfs(source, infected)
             return len(infected)
         initial.sort()
-        res, best = initial[0], len(graph)
+        (res, best) = (initial[0], len(graph))
         for source in initial:
             temp = infected(initial, source)
             if temp < best:
-                res, best = source, temp
+                (res, best) = (source, temp)
         return res

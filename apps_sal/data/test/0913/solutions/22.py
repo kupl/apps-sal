@@ -12,8 +12,7 @@ for _ in range(1):
                 k += 1
     if ans == 0:
         print(-1)
+    elif k % ans == 0:
+        print(k // ans + 1)
     else:
-        if k % ans == 0:
-            print(k // ans + 1)
-        else:
-            print(k // ans + 1)
+        print(k // ans + 1)

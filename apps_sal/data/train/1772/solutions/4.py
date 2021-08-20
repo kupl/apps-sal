@@ -5,7 +5,7 @@ class VigenereCipher(object):
         self.alphabet = alphabet * 2
 
     def encode(self, text):
-        encrypted = ""
+        encrypted = ''
         a = 0
         for i in text:
             if i in self.alphabet:
@@ -17,7 +17,7 @@ class VigenereCipher(object):
         return encrypted
 
     def decode(self, text):
-        decrypted = ""
+        decrypted = ''
         a = 0
         for i in text:
             if i in self.alphabet:

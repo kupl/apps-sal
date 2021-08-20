@@ -1,5 +1,5 @@
 try:
-    [a, b] = list(map(int, input().split(" ")))
+    [a, b] = list(map(int, input().split(' ')))
     for i in range(b):
         if a % 10 == 0:
             a = int(a / 10)

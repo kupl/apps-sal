@@ -4,7 +4,7 @@ types = len(set(s))
 d = dict()
 c = 0
 j = 0
-ans = 10**10
+ans = 10 ** 10
 for i in range(n):
     if s[i] not in d:
         d[s[i]] = 0

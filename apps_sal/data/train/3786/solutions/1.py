@@ -7,7 +7,7 @@ def siegfried(week, txt):
     if week >= 2:
         txt = txt.replace('ph', 'f').replace('Ph', 'F')
     if week >= 3:
-        txt = re.sub('([A-z]{2,})e([-!?]+)', r'\1\2', ' '.join([x.rstrip('e') if len(x) > 3 else x for x in re.sub(r'([A-z])\1', r'\1', txt, flags=re.I).split()]))
+        txt = re.sub('([A-z]{2,})e([-!?]+)', '\\1\\2', ' '.join([x.rstrip('e') if len(x) > 3 else x for x in re.sub('([A-z])\\1', '\\1', txt, flags=re.I).split()]))
     if week >= 4:
         txt = txt.replace('th', 'z').replace('Th', 'Z').replace('wr', 'r').replace('Wr', 'R').replace('wh', 'v').replace('Wh', 'V').replace('w', 'v').replace('W', 'V')
     if week >= 5:

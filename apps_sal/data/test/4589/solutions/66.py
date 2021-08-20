@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 S = [input() for _ in range(h)]
 S = ['.' + s + '.' for s in S]
 S = ['.' * (w + 2)] + S + ['.' * (w + 2)]

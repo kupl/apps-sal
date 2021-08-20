@@ -27,7 +27,7 @@ def binary_lifting():
 
 def solve(a, b):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = 0
     while True:
         i = bisect.bisect_left(to2[a], b)
@@ -53,7 +53,7 @@ pow2 = [1] * m
 for i in range(1, m):
     pow2[i] = 2 * pow2[i - 1]
 for _ in range(q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     ans = solve(a, b)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
 
         def helper(index, start, mx):
@@ -7,7 +8,6 @@ class Solution:
                 return d[key]
             if index == len(arr):
                 return (index - start) * mx
-
             if index - start + 1 <= k:
                 d[key] = max(helper(index + 1, start, max(arr[index], mx)), (index - start) * mx + helper(index + 1, index, arr[index]))
                 return d[key]

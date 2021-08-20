@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 servers = [0 for i in range(n)]
 for i in range(q):
-    time, serv, leng = list(map(int, input().split()))
+    (time, serv, leng) = list(map(int, input().split()))
     pos = []
     for j in range(n):
         if servers[j] <= time:

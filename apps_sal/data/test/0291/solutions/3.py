@@ -1,4 +1,4 @@
-a, b = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
 iters = 0
 while a <= b:
     a *= 3

@@ -1,8 +1,7 @@
 n = int(input())
-
 tree = {}
 for i in range(n - 1):
-    _from, _to, cost = map(int, input().split())
+    (_from, _to, cost) = map(int, input().split())
     if _from not in tree:
         tree[_from] = [(_to, cost)]
     else:
@@ -11,7 +10,6 @@ for i in range(n - 1):
         tree[_to] = [(_from, cost)]
     else:
         tree[_to].append((_from, cost))
-
 passed = [0] * n
 all_cost = []
 

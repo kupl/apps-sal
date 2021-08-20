@@ -4,7 +4,7 @@ def fn(y, m, b):
     return ans // 2
 
 
-m, b = list(map(int, input().split()))
+(m, b) = list(map(int, input().split()))
 lo = 0
 hi = b
 while lo < hi:

@@ -10,7 +10,6 @@ def which_movie(n, m, langs_ix, audio_ix, subs_ix):
         vp = langs[audio_ix[i]] if audio_ix[i] in langs else 0
         asp = langs[subs_ix[i]] if subs_ix[i] in langs else 0
         scores.append((i + 1, vp, asp))
-
     scores = sorted(scores, key=lambda x: (x[1], x[2], -x[0]))
     return scores[-1][0]
 

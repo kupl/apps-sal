@@ -1,6 +1,6 @@
 s = input()
 s = s.lower()
-s = (' '.join(s)).split()
+s = ' '.join(s).split()
 n = int(input())
 for i in range(0, len(s)):
     if n + 96 >= ord(s[i]):

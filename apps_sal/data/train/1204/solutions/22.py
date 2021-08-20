@@ -12,7 +12,6 @@ for i in range(int(input())):
             gap.append(t)
             l += 1
             t = 0
-
     gap.append(t)
     gp = len(gap) - 1
     gap = gap[1:-1]

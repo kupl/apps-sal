@@ -1,13 +1,13 @@
 def f(n):
     if n == 1:
-        yield "7"
-        yield "5"
-        yield "3"
+        yield '7'
+        yield '5'
+        yield '3'
     else:
         for i in f(n - 1):
-            yield i + "7"
-            yield i + "5"
-            yield i + "3"
+            yield (i + '7')
+            yield (i + '5')
+            yield (i + '3')
 
 
 n = int(input())

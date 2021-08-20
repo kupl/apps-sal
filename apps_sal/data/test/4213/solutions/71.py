@@ -5,7 +5,7 @@ def diff_list_max(l: list) -> int:
 def __starting_point():
     n = int(input())
     l = list(map(int, input().split()))
-    print((diff_list_max(l)))
+    print(diff_list_max(l))
 
 
 __starting_point()

@@ -18,7 +18,7 @@ for i in range(t):
                 r[1] += 1
             else:
                 r[0] = 1 - r[0]
-            fl_ord = not(fl_ord)
+            fl_ord = not fl_ord
         if r == [1, n]:
             print('YES')
             break

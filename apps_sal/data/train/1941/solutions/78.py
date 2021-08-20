@@ -26,16 +26,16 @@ def dfs(encode, cur, sub_encodes):
 
 
 class Solution:
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         letters = 'abcdefghijklmnopqrstuvwxyz'
         records = defaultdict(int)
         for word in words:
             encode = get_encode(word, letters)
             records[encode] += 1
-
         results = []
         for puzzle in puzzles:
-            encode, cur, idx_first = get_encode(puzzle, letters), 0, letters.index(puzzle[0])
+            (encode, cur, idx_first) = (get_encode(puzzle, letters), 0, letters.index(puzzle[0]))
             sub_encodes = {encode}
             dfs(encode, cur, sub_encodes)
             result = sum([records[sub_encode] for sub_encode in list(sub_encodes) if sub_encode[idx_first] == '1'])

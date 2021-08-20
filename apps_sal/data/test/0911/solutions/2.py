@@ -1,8 +1,8 @@
-n, c = list(map(int, input().split(" ")))
+(n, c) = list(map(int, input().split(' ')))
 limak = 0
 rade = 0
-score = input().split(" ")
-time = input().split(" ")
+score = input().split(' ')
+time = input().split(' ')
 lTime = 0
 rTime = 0
 for i in range(n):
@@ -11,8 +11,8 @@ for i in range(n):
     rTime += int(time[n - 1 - i])
     rade += max(0, int(score[n - 1 - i]) - rTime * c)
 if limak > rade:
-    print("Limak")
+    print('Limak')
 elif rade > limak:
-    print("Radewoosh")
+    print('Radewoosh')
 else:
-    print("Tie")
+    print('Tie')

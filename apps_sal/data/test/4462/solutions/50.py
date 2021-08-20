@@ -13,11 +13,9 @@ for i in range(n):
 res = 'No'
 if n_odd == 0:
     res = 'Yes'
-else:
-    if n_2k > 0:
-        if n_odd <= n_4k:
-            res = 'Yes'
-    else:
-        if n_odd <= n_4k + 1:
-            res = 'Yes'
+elif n_2k > 0:
+    if n_odd <= n_4k:
+        res = 'Yes'
+elif n_odd <= n_4k + 1:
+    res = 'Yes'
 print(res)

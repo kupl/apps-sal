@@ -7,6 +7,6 @@ for i in range(97, 123):
         k = 0
         break
 if k:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

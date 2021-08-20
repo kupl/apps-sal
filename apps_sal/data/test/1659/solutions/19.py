@@ -1,13 +1,12 @@
 import sys
-n, x = [int(x) for x in sys.stdin.readline().split()]
+(n, x) = [int(x) for x in sys.stdin.readline().split()]
 bad = 0
 for i in range(n):
-    sym, num = sys.stdin.readline().split()
-    if sym == "+":
+    (sym, num) = sys.stdin.readline().split()
+    if sym == '+':
         x += int(num)
+    elif x < int(num):
+        bad += 1
     else:
-        if x < int(num):
-            bad += 1
-        else:
-            x -= int(num)
+        x -= int(num)
 print(x, bad)

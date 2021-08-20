@@ -1,5 +1,5 @@
 pr = list([0 for x in range(101)])
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 inp = list(map(int, input().split()))
 for i in inp:
     pr[i] += 1

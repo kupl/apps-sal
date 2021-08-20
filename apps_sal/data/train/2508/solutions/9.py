@@ -1,4 +1,5 @@
 class Solution:
+
     def heightChecker(self, heights: List[int]) -> int:
         diff = [sorted(heights)[k] - heights[k] for k in range(len(heights))]
         move = 0

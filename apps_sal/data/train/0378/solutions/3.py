@@ -1,4 +1,5 @@
 class Solution:
+
     def search(self, nums, pos, target, seen):
         if (pos, target) in seen:
             return False

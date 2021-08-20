@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         players = collections.defaultdict(int)
         for i in range(len(arr) - 1):

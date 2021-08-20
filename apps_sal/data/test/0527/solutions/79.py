@@ -2,7 +2,7 @@ def abc138_e():
     s = str(input())
     t = str(input())
     sd = dict()
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if sd.get(c) == None:
             sd[c] = []
         sd[c].append(i)

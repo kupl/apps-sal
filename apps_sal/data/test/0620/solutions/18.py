@@ -1,9 +1,9 @@
 import math
-
-EPSILON = 10 ** -3
+EPSILON = 10 ** (-3)
 
 
 class Vector:
+
     def __init__(self, d=2, coords=[0, 0]):
         self.d = d
         self.coords = coords[:]
@@ -21,13 +21,13 @@ class Vector:
         return tuple([self.coords[i] + point[i] for i in range(self.d)])
 
     def inverse(self):
-        return Vector(self.d, list(map((lambda x: -x), self.coords)))
+        return Vector(self.d, list(map(lambda x: -x, self.coords)))
 
     def __repr__(self):
-        return "Vector[{}] ({})".format(self.d, self.coords)
+        return 'Vector[{}] ({})'.format(self.d, self.coords)
 
     def len(self):
-        return math.sqrt(sum(x * x for x in self.coords))
+        return math.sqrt(sum((x * x for x in self.coords)))
 
     def __add__(self, other):
         assert self.d == other.d
@@ -41,7 +41,7 @@ class Vector:
 
     def scalmul(self, other):
         assert self.d == other.d
-        return sum(self.coords[i] * other.coords[i] for i in range(self.d))
+        return sum((self.coords[i] * other.coords[i] for i in range(self.d)))
 
     def cos(self, other):
         return self.scalmul(other) / (self.len() * other.len())
@@ -56,10 +56,11 @@ class Vector:
         return other.proj_to(self)
 
 
-def t(): return tuple(map(int, input().split()))
+def t():
+    return tuple(map(int, input().split()))
 
 
-p1, p2, p3 = t(), t(), t()
+(p1, p2, p3) = (t(), t(), t())
 p = [p1, p2, p3]
 ans = set()
 for i in range(3):
@@ -67,13 +68,11 @@ for i in range(3):
     for _p in p:
         if _p != p[i]:
             others.append(_p)
-
     assert len(others) == 2
     v1 = Vector.fromEnds(others[0], others[1])
     v2 = Vector.fromEnds(others[1], others[0])
     ans.add(v1.apply(p[i]))
     ans.add(v2.apply(p[i]))
-
 print(len(ans))
 for item in ans:
-    print(" ".join(map(str, item)))
+    print(' '.join(map(str, item)))

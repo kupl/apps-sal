@@ -1,6 +1,6 @@
 s = input().split()
-F, I, T = (int(s[i]) for i in range(3))
-a = [""] * F
+(F, I, T) = (int(s[i]) for i in range(3))
+a = [''] * F
 for i in range(F):
     a[i] = input()
 r = 0

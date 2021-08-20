@@ -2,7 +2,7 @@ n = int(input())
 arr = list(map(int, input().strip().split(' ')))
 d = {}
 i = 0
-while(i < n):
+while i < n:
     try:
         t = d[arr[i]]
         arr[t] = -1
@@ -13,5 +13,5 @@ while(i < n):
         i += 1
 print(n - arr.count(-1))
 for i in range(n):
-    if(arr[i] != -1):
+    if arr[i] != -1:
         print(arr[i], end=' ')

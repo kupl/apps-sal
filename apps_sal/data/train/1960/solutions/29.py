@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         l = list(range(1, m + 1))
         n = 0

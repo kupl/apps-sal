@@ -1,8 +1,8 @@
-n, k, c = list(map(int, input().split()))
+(n, k, c) = list(map(int, input().split()))
 s = input()
 left = [k + 1] * n
 right = [k + 1] * n
-l, r = 1, 1
+(l, r) = (1, 1)
 i = 0
 while i < n:
     if s[i] == 'o':
@@ -19,4 +19,4 @@ while i < n + 1:
     i += 1
 for i in range(n):
     if left[i] + right[i] == k + 1:
-        print((i + 1))
+        print(i + 1)

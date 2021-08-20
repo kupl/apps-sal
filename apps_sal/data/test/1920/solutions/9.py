@@ -14,5 +14,4 @@ ans = -1
 for i in range(1000):
     k = 2 * min(boy[i], girl[i])
     ans = max(ans, k)
-
 print(ans)

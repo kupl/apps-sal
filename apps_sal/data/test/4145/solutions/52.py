@@ -18,7 +18,7 @@ def get_sieve_of_eratosthenes_new(n):
         data = [e for e in data if e % p != 0]
 
 
-prime = get_sieve_of_eratosthenes_new(10**6)
+prime = get_sieve_of_eratosthenes_new(10 ** 6)
 for num in prime:
     if num >= X:
         print(num)

@@ -3,8 +3,6 @@ def find_missing_letter(chars):
         current = chars[i]
         after = chars[i + 1]
         expected = chr(ord(current) + 1)
-
         if after != expected:
             return expected
-
     return ''

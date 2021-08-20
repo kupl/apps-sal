@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -16,53 +17,19 @@ class Solution:
                 if i % j == 0:
                     return setPrimes(i // j) | set([j])
             return set([i])
-
         primes = defaultdict(list)
         for i in range(n):
             s = setPrimes(A[i])
             for prime in s:
                 primes[prime].append(i)
-
-        for _, indices in primes.items():
+        for (_, indices) in primes.items():
             for i in range(len(indices) - 1):
-                k, l = find(indices[i]), find(indices[i + 1])
+                (k, l) = (find(indices[i]), find(indices[i + 1]))
                 if k == l:
                     continue
                 if size[l] > size[k]:
-                    k, l = l, k
+                    (k, l) = (l, k)
                 index[l] = k
                 size[k] += size[l]
         return max(size)
-
-        '''
-        n = len(A)
-        A.sort()
-        adj = [[] for _ in range(n)]
-        for i in range(n-1):
-            for j in range(i+1,n):
-                a, b = A[i], A[j]
-                while b:
-                    a, b = b, a%b
-                if a > 1:
-                    adj[i].append(j)
-                    adj[j].append(i)
-                    
-        visited = [False]*n
-        connected = [False]*n
-        
-        def dfs(i):
-            if visited[i]:
-                return 0
-            visited[i] = True
-            connected[i] = True
-            s = 1
-            for j in adj[i]:
-                s += dfs(j)
-            return s
-        
-        M = 0
-        for i in range(n):
-            if not connected[i]:
-                M = max(M, dfs(i))
-        return M
-        '''
+        '\n        n = len(A)\n        A.sort()\n        adj = [[] for _ in range(n)]\n        for i in range(n-1):\n            for j in range(i+1,n):\n                a, b = A[i], A[j]\n                while b:\n                    a, b = b, a%b\n                if a > 1:\n                    adj[i].append(j)\n                    adj[j].append(i)\n                    \n        visited = [False]*n\n        connected = [False]*n\n        \n        def dfs(i):\n            if visited[i]:\n                return 0\n            visited[i] = True\n            connected[i] = True\n            s = 1\n            for j in adj[i]:\n                s += dfs(j)\n            return s\n        \n        M = 0\n        for i in range(n):\n            if not connected[i]:\n                M = max(M, dfs(i))\n        return M\n        '

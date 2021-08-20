@@ -1,6 +1,5 @@
 N = int(input())
 ss = list(map(int, input().split()))
-
 ans = 0
 for C in range(1, N):
     score = 0
@@ -11,5 +10,4 @@ for C in range(1, N):
             break
         score += ss[k * C] + ss[N - 1 - k * C]
         ans = max(ans, score)
-
 print(ans)

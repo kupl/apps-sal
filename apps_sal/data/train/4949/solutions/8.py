@@ -6,5 +6,5 @@ def crusoe(n, d, a, dd, da):
     for _ in range(n):
         x += d * cos(rad(a))
         y += d * sin(rad(a))
-        d, a = d * dd, a * da
+        (d, a) = (d * dd, a * da)
     return (x, y)

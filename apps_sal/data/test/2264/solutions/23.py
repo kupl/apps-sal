@@ -2,7 +2,7 @@ test = int(input())
 for _ in range(test):
     n = int(input())
     mas = 0
-    minA = 10**10
+    minA = 10 ** 10
     maxB = -1
     for __ in range(n):
         mas = list(map(int, input().split()))

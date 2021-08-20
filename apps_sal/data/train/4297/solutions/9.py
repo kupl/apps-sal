@@ -4,5 +4,4 @@ def get_mean(arr, x, y):
     elif x > len(arr) or y > len(arr):
         return -1
     else:
-        return 0.5 * (sum(arr[:x]) / x + sum(arr[-y::]) / y)
-    # your code here
+        return 0.5 * (sum(arr[:x]) / x + sum(arr[-y:]) / y)

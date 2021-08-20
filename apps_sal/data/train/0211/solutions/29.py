@@ -1,8 +1,8 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         if not s:
             return 0
-
         self.answer = 0
         substrings = []
 
@@ -14,6 +14,5 @@ class Solution:
                 substrings.append(s[start_i:j])
                 backtrack(j)
                 substrings.pop()
-
         backtrack(0)
         return self.answer

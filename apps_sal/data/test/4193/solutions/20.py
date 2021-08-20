@@ -21,13 +21,11 @@ def main():
             return True
         if board[0][2] == board[1][1] == board[2][0] == True:
             return True
-
     for _ in range(n):
         num = int(input())
         if check(punch(num)):
-            return "Yes"
-    return "No"
-
+            return 'Yes'
+    return 'No'
     print(card)
 
 

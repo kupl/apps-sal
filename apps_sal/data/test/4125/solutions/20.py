@@ -1,11 +1,10 @@
 import sys
 import math
-
 input = sys.stdin.readline
 
 
 def main():
-    N, X = map(int, input().split())
+    (N, X) = map(int, input().split())
     x = list(map(int, input().split()))
     x.append(X)
     ans = abs(x[0] - X)

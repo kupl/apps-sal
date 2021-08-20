@@ -1,9 +1,5 @@
-
 n = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-
 ma = a.index(max(a))
 mi = a.index(min(a))
-
-print((a[ma] - a[mi]))
+print(a[ma] - a[mi])

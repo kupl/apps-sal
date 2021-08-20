@@ -1,4 +1,3 @@
-
 from collections import defaultdict, deque
 import sys
 import heapq
@@ -9,20 +8,28 @@ import string
 import queue
 import copy
 import time
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
-mod = 10**9 + 7
-eps = 10**-7
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
-def inpl_str(): return list(sys.stdin.readline().split())
+mod = 10 ** 9 + 7
+eps = 10 ** (-7)
 
 
-N, M, d = inpl()
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def inpl_str():
+    return list(sys.stdin.readline().split())
+
+
+(N, M, d) = inpl()
 CC = inpl()
-
 if sum(CC) + (d - 1) * (M + 1) < N:
-    print("NO")
+    print('NO')
 else:
     x = 0
     ans = [0] * (d - 1)
@@ -30,7 +37,6 @@ else:
     for i in range(M):
         ans += [i + 1] * CC[i]
         ans += [0] * (d - 1)
-
     L = len(ans) - N
     ans2 = []
     for a in ans:
@@ -38,6 +44,5 @@ else:
             L -= 1
         else:
             ans2.append(a)
-
-    print("YES")
-    print(" ".join(map(str, ans2)))
+    print('YES')
+    print(' '.join(map(str, ans2)))

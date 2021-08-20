@@ -9,6 +9,6 @@ for i in range(N):
         c2 += 1
 f = c4 * 2 + 1
 if f >= N or f + c2 - 1 >= N:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,9 +1,7 @@
 MOD = 998244353
 BOUND = 19
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
 basis = []
 for p in range(m - 1, -1, -1):
     p2 = pow(2, p)
@@ -17,12 +15,11 @@ for p in range(m - 1, -1, -1):
         for i in range(n):
             if l[i] >= p2:
                 l[i] ^= nex
-
 extra = n - len(basis)
 
 
 def add(a, b):
-    out = [0] * (max(len(a), len(b)))
+    out = [0] * max(len(a), len(b))
     for i in range(len(a)):
         out[i] = a[i]
     for i in range(len(b)):
@@ -32,7 +29,7 @@ def add(a, b):
 
 
 def addSh(a, b):
-    out = [0] * (max(len(a) + 1, len(b)))
+    out = [0] * max(len(a) + 1, len(b))
     for i in range(len(a)):
         out[i + 1] = a[i]
     for i in range(len(b)):
@@ -54,7 +51,6 @@ for p in range(m - 1, -1, -1):
             currN[v ^ basis[i]] = add(curr[v], currN[v ^ basis[i]])
         curr = currN
         i += 1
-
     currN = dict(curr)
     for v in curr:
         if v >= p2:
@@ -63,7 +59,6 @@ for p in range(m - 1, -1, -1):
             currN[v ^ p2] = addSh(curr[v], currN[v ^ p2])
             del currN[v]
     curr = currN
-
 out = curr[0]
 while len(out) < m + 1:
     out.append(0)

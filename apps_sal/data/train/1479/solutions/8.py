@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -11,7 +10,7 @@ for i in range(t):
     g = [0]
     h = [0]
     for j in range(n):
-        q, s = list(map(int, input().split()))
+        (q, s) = list(map(int, input().split()))
         if q < 9:
             if q == 1:
                 a.append(s)

@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         f_old = [0] * min(steps + 1, arrLen)
         f_new = [0] * min(steps + 1, arrLen)

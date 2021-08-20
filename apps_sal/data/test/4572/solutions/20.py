@@ -6,8 +6,7 @@ for alpha in alphabets:
         ans.append(1)
     else:
         ans.append(0)
-
 if sum(ans) == 26:
     print('None')
 else:
-    print((alphabets[ans.index(0)]))
+    print(alphabets[ans.index(0)])

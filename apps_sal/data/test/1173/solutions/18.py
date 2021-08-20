@@ -1,10 +1,13 @@
 from collections import deque
 n = int(input())
-def x(i): return int(i) - 1
+
+
+def x(i):
+    return int(i) - 1
 
 
 a = [deque(list(map(x, input().split())) + [-1]) for _ in range(n)]
-tcnt, ans = n * (n - 1), 0
+(tcnt, ans) = (n * (n - 1), 0)
 chk = set(range(n))
 while tcnt > 0:
     chk_next = set()
@@ -22,5 +25,4 @@ while tcnt > 0:
         if a[i][0] != -1:
             chk.add(a[i][0])
     ans += 1
-
 print(ans)

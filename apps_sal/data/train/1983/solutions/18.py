@@ -21,17 +21,6 @@ class ProductOfNumbers:
         res = 1
         for i in range(len(self.product) - 1, len(self.product) - tenth - 1, -1):
             res *= self.product[i]
-
-        for i in range(
-            len(self.data) - tenth * 10 - 1,
-            len(self.data) - tenth * 10 - remain - 1,
-            -1
-        ):
+        for i in range(len(self.data) - tenth * 10 - 1, len(self.data) - tenth * 10 - remain - 1, -1):
             res *= self.data[i]
         return res
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

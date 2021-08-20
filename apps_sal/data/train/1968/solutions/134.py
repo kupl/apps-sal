@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.name = name
         self.subdir = {}
@@ -9,13 +10,13 @@ class Node:
 
 
 class Solution:
+
     def dfs(self, node, dirstr, found):
-        #print(dirstr, found)
         rtn = []
-        if node.terminal and not found:
+        if node.terminal and (not found):
             rtn = [dirstr]
         for x in node.subdir.keys():
-            rtn = rtn + self.dfs(node.subdir[x], dirstr + '/' + x, (found | node.terminal))
+            rtn = rtn + self.dfs(node.subdir[x], dirstr + '/' + x, found | node.terminal)
         return rtn
 
     def removeSubfolders(self, folder: List[str]) -> List[str]:

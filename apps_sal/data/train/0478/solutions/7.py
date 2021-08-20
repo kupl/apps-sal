@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNumber(self, nums):
         dict = {}
         for i in nums:

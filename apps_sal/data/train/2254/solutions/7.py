@@ -1,12 +1,12 @@
 from sqlite3 import collections
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 Q = collections.deque()
 A = n * [0]
 B = A[:]
 L = []
 s = n = 0
 for _ in range(q):
-    y, x = list(map(int, input().split()))
+    (y, x) = list(map(int, input().split()))
     if y < 2:
         x -= 1
         Q.append(x)

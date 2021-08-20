@@ -38,5 +38,4 @@ if y < n // 3:
             a[i] = '1'
             y += 1
             x -= 1
-
 print(''.join(a))

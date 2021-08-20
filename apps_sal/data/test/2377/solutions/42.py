@@ -1,12 +1,10 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    a[i], b[i] = list(map(int, input().split()))
-
+    (a[i], b[i]) = list(map(int, input().split()))
 a = sorted(a, reverse=True)
 b = sorted(b, reverse=True)
-
 ans = 0
 i = 0
 while i < n and a[0] < b[i]:
@@ -18,4 +16,4 @@ while i < n and a[0] < b[i]:
 if h <= 0:
     print(ans)
 else:
-    print((ans + (h + a[0] - 1) // a[0]))
+    print(ans + (h + a[0] - 1) // a[0])

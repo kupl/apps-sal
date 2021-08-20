@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         if len(arr) < k:
             return 0

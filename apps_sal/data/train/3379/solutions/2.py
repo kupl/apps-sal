@@ -6,4 +6,4 @@ def encrypter(strng):
             pt += z[ord(i) - ord('a')]
         else:
             pt = pt + i
-    return pt  # your code here
+    return pt

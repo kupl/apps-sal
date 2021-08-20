@@ -1,5 +1,4 @@
 Q = int(input())
-
 for q in range(Q):
     n = int(input())
     L = list(map(int, input().split()))

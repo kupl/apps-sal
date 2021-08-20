@@ -12,5 +12,4 @@ less = sorted(a)[:3]
 s = set(less)
 m = [less.count(i) for i in s]
 n = [a.count(i) for i in s]
-
 print(reduce(lambda x, y: x * y, list(map(lambda x, y: C(x, y), n, m)), 1))

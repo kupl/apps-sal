@@ -1,4 +1,5 @@
-class RestoreGraph():
+class RestoreGraph:
+
     def __init__(self, n, k, dis_values):
         self.dis_values = dis_values
         self.n = n
@@ -16,7 +17,7 @@ class RestoreGraph():
         for i in range(1, self.n):
             if dis_pairs[ind][0] != dis_pairs[i][0] - 1 or count[ind] == self.k:
                 ind = ind + 1
-                while(ind < i and (dis_pairs[ind][0] < dis_pairs[i][0] - 1 or count[ind] == self.k)):
+                while ind < i and (dis_pairs[ind][0] < dis_pairs[i][0] - 1 or count[ind] == self.k):
                     ind += 1
                 if dis_pairs[ind][0] != dis_pairs[i][0] - 1 or count[ind] == self.k:
                     print(-1)
@@ -29,8 +30,7 @@ class RestoreGraph():
             print(dis_pairs[i][1] + 1, dis_pairs[parent[i]][1] + 1)
 
 
-n, k = list(map(int, input().strip(' ').split(' ')))
+(n, k) = list(map(int, input().strip(' ').split(' ')))
 arr = list(map(int, input().strip(' ').split(' ')))
-
 graph = RestoreGraph(n, k, arr)
 graph.generate_graph()

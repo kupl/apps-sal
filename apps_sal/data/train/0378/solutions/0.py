@@ -1,11 +1,12 @@
 class Solution:
+
     def canPartition(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
         _sum = sum(nums)
-        div, mod = divmod(_sum, 2)
+        (div, mod) = divmod(_sum, 2)
         if mod != 0:
             return False
         target = [div] * 2

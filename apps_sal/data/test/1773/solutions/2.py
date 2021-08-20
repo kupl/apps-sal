@@ -2,7 +2,7 @@ n = int(input())
 l = []
 r = []
 for i in range(n):
-    x, a = list(map(int, input().split()))
+    (x, a) = list(map(int, input().split()))
     if x < 0:
         l.append((x, a))
     else:

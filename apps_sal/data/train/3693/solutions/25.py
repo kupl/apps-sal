@@ -1,1 +1,2 @@
-def make_negative(n): return -abs(n)
+def make_negative(n):
+    return -abs(n)

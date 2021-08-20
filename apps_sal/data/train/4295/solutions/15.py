@@ -2,7 +2,7 @@ def balanced_num(number):
     l = len(str(number))
     List = list(str(number))
     if l == 1 or l == 2:
-        return('Balanced')
+        return 'Balanced'
     else:
         sum1 = sum2 = 0
         if l % 2 == 0:
@@ -15,4 +15,4 @@ def balanced_num(number):
                 j = -i - 1
                 sum1 += int(List[i])
                 sum2 += int(List[j])
-    return'Balanced' if sum1 == sum2 else 'Not Balanced'
+    return 'Balanced' if sum1 == sum2 else 'Not Balanced'

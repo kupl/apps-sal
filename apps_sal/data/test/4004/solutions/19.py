@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(x) for x in input().split()]
 b = sorted(set(a))
-
 if len(b) == 1:
     print(0)
 elif len(b) == 2:

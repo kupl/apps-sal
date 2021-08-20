@@ -1,23 +1,21 @@
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 k = min(k, n - 1)
-MOD = 10**9 + 7
-
-# a*a**(p-2) mod p (Fermat's little theorem)
+MOD = 10 ** 9 + 7
 
 
-def modInv(x, m=10**9 + 7):
+def modInv(x, m=10 ** 9 + 7):
     return pow(x, m - 2, m)
 
 
 class combMod:
-    def __init__(self, maxN, mod=10**9 + 7):
+
+    def __init__(self, maxN, mod=10 ** 9 + 7):
         self.maxN = maxN
         self.mod = mod
-        self.fac = [None] * (maxN + 1)  # fac[0]=1, fac[1]=1, fac[2]=2 ... fac[maxN]
+        self.fac = [None] * (maxN + 1)
         self.ifac = [None] * (maxN + 1)
-        # self.ifac[0]=1
 
-    def calc_fact(self):  # make the table
+    def calc_fact(self):
         self.fac[0] = 1
         for i in range(1, self.maxN + 1):
             self.fac[i] = self.fac[i - 1] * i % self.mod

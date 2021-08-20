@@ -12,6 +12,7 @@ def steps(m):
 
 
 class CodeforcesTask679BSolution:
+
     def __init__(self):
         self.result = ''
         self.m = 0
@@ -33,7 +34,7 @@ class CodeforcesTask679BSolution:
             else:
                 self.m = cube(x) - 1 - cube(x - 1)
                 sub += cube(x - 1)
-        self.result = "{0} {1}".format(ste, sub)
+        self.result = '{0} {1}'.format(ste, sub)
 
     def get_result(self):
         return self.result

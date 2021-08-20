@@ -4,7 +4,7 @@ def read_line():
 
 T = int(input())
 for _ in range(T):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = read_line()
     t = 0
     all_eq = True

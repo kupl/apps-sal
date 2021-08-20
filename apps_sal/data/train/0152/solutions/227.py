@@ -1,4 +1,5 @@
 class Solution:
+
     def distribute(self, position, m, dist):
         prev = position[0]
         m -= 1
@@ -12,7 +13,7 @@ class Solution:
 
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        low, high = 0, position[-1] - position[0]
+        (low, high) = (0, position[-1] - position[0])
         res = 0
         while low <= high:
             mid = (high - low) // 2 + low

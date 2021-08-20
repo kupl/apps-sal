@@ -1,2 +1,2 @@
 def contamination(text, char):
-    return len(text) * char if text != '' or text != '' else ""
+    return len(text) * char if text != '' or text != '' else ''

@@ -1,8 +1,13 @@
-# Pye
 import os
 import sys
-def _(): return sys.stdin.readline()
-def __(): return sys.stdin.readline().split()
+
+
+def _():
+    return sys.stdin.readline()
+
+
+def __():
+    return sys.stdin.readline().split()
 
 
 N = 100005

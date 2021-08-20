@@ -5,8 +5,8 @@ dir = {'R', 'L', 'U', 'D'}
 N = int(input())
 dic = defaultdict(list)
 for _ in range(N):
-    x, y, d = input().split()
-    x, y = int(x), int(y)
+    (x, y, d) = input().split()
+    (x, y) = (int(x), int(y))
     dic[d].append((x, y))
 x_max = defaultdict(lambda: -inf)
 x_min = defaultdict(lambda: inf)
@@ -36,5 +36,5 @@ def f(t):
     return dx(t) * dy(t)
 
 
-xopt = fmin(f, x0=10**8, ftol=10**-9, disp=False)
-print((f(xopt[0])))
+xopt = fmin(f, x0=10 ** 8, ftol=10 ** (-9), disp=False)
+print(f(xopt[0]))

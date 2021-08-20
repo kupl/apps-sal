@@ -5,4 +5,3 @@ def find_average(nums):
         return 0
     else:
         return sum(nums) / len(nums)
-    # your code here

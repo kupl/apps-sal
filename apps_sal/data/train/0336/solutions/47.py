@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         sc = Counter(s)
         tc = Counter(t)
@@ -14,5 +15,4 @@ class Solution:
                     c -= tc[i]
                 elif tc[i] > sc[i]:
                     c -= sc[i]
-
         return c

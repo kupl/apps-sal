@@ -26,7 +26,7 @@ def f(n, a):
                 break
         else:
             Ri = i
-    print((x[Li]))
+    print(x[Li])
 
 
 n = int(input())

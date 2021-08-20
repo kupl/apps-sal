@@ -1,6 +1,6 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-res, i = 1, 0
+(res, i) = (1, 0)
 f = (arr[0] - 1) // k * k + 1
 e = f + k - 1
 while e < arr[-1]:

@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 park = [input() for i in range(n)]
 answers = [0] * m
 for inot in range(n):

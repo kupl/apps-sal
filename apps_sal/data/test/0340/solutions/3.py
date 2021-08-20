@@ -36,7 +36,7 @@ if n != 1:
     r *= n
 k = 0
 i = 0
-while m > (1 << i):
+while m > 1 << i:
     i += 1
 mm = 1 << i
 for j in range(len(c)):

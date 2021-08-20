@@ -7,4 +7,4 @@ ONE_MINUTE_IN_SECONDS = 60
 def cockroach_speed(s):
     cm = ONE_KM_IN_METERS * ONE_METER_IN_CM
     sec = ONE_HOUR_IN_MINUTES * ONE_MINUTE_IN_SECONDS
-    return int((s * cm) / sec)
+    return int(s * cm / sec)

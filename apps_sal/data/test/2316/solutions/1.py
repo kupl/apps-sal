@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    x, n, m = map(int, input().split())
+    (x, n, m) = map(int, input().split())
     for _ in range(n):
         if x <= 20:
             break

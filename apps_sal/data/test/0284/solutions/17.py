@@ -45,8 +45,7 @@ elif n < 1234567:
         print('YES')
     else:
         print('NO')
+elif one(n):
+    print('YES')
 else:
-    if one(n):
-        print('YES')
-    else:
-        print('NO')
+    print('NO')

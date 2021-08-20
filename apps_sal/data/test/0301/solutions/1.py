@@ -1,8 +1,6 @@
-v, u = list(map(int, input().split()))
-
+(v, u) = list(map(int, input().split()))
 count = [0] * 100
 index = 0
-
 works = True
 while u >= 0 and v >= 0 and (v > 0 or u > 0):
     u2 = u & 1
@@ -22,8 +20,7 @@ while u >= 0 and v >= 0 and (v > 0 or u > 0):
         u >>= 1
         v >>= 1
         index += 1
-
-if works and u >= 0 and v >= 0:
+if works and u >= 0 and (v >= 0):
     out = []
     for i in range(100):
         while len(out) < count[i]:

@@ -1,15 +1,15 @@
 def sol(a, k):
     n = len(a)
-    if(k == 0):
+    if k == 0:
         return 1
-    if(k == 1):
+    if k == 1:
         v = set()
         for x in a:
             v.add(x)
         return len(v)
-    if(n < k or n < 1 or k < 1):
+    if n < k or n < 1 or k < 1:
         return 0
-    if(n == k):
+    if n == k:
         return 1
     sz = max(3000, n)
     v1 = [0] * sz
@@ -18,10 +18,10 @@ def sol(a, k):
     v2[n - 1] = 1
     v3[a[n - 1] - 1] = 1
     for i in range(n - 2, -1, -1):
-        if(i < 0):
+        if i < 0:
             break
         v2[i] = v2[i + 1]
-        if(v3[a[i] - 1] == 0):
+        if v3[a[i] - 1] == 0:
             v2[i] += 1
             v3[a[i] - 1] = 1
     for j in range(1, k):
@@ -36,7 +36,7 @@ def sol(a, k):
     return v1[0]
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 ar = []
 for x in s:
@@ -48,7 +48,7 @@ while cur >= 0:
     k -= mx
     ans += (n - cur) * mx
     cur -= 1
-if(k != 0):
+if k != 0:
     print(-1)
 else:
     print(ans)

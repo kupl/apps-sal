@@ -1,24 +1,23 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         if n > m:
-            n, m = m, n
+            (n, m) = (m, n)
         if m == n:
             return 1
         res = [m * n]
         dp = {}
 
         def dfs(cnt, hs):
-            # print(hs)
             if cnt > res[0]:
                 return
             key = tuple(hs)
             if key in dp and dp[key] <= cnt:
                 return
             dp[key] = cnt
-            if all(h == n for h in hs):
+            if all((h == n for h in hs)):
                 res[0] = min(res[0], cnt)
                 return
-
             min_h = min(hs)
             min_i = hs.index(min_h)
             r = m

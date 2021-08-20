@@ -1,4 +1,3 @@
-# cook your dish here
 P = [True] * 1001
 p = 2
 while p * p <= 201:
@@ -20,6 +19,6 @@ for t in range(int(input())):
             ok = True
             break
     if ok == False:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

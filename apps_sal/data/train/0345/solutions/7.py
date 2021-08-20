@@ -1,4 +1,5 @@
 class Solution:
+
     def splitArray(self, nums, m):
         """
         :type nums: List[int]
@@ -8,11 +9,9 @@ class Solution:
         return self.use_binary_search(nums, m)
 
     def use_binary_search(self, nums, m):
-        lo, hi = max(nums), sum(nums)
-
+        (lo, hi) = (max(nums), sum(nums))
         while lo < hi:
             mid = lo + (hi - lo) // 2
-
             if self.valid(mid, nums, m):
                 hi = mid
             else:
@@ -20,7 +19,7 @@ class Solution:
         return lo
 
     def valid(self, target, nums, m):
-        total, count = 0, 1
+        (total, count) = (0, 1)
         for num in nums:
             total += num
             if total > target:

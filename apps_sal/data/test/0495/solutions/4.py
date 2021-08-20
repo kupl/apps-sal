@@ -1,4 +1,4 @@
-s, k = input().split()
+(s, k) = input().split()
 k = int(k)
 for i in range(0, len(s)):
     val = s[i]

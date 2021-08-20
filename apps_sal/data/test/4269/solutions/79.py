@@ -1,5 +1,4 @@
-a, b, c, d = list(input())
-
+(a, b, c, d) = list(input())
 if a == b:
     print('Bad')
 elif b == c:

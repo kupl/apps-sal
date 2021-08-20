@@ -5,12 +5,11 @@ for _ in range(int(input())):
     for i in l:
         x ^= i
     s = sum(l)
-    if s == (2 * x):
-        print("0\n")
+    if s == 2 * x:
+        print('0\n')
+    elif x == 0:
+        print('1')
+        print(s)
     else:
-        if x == 0:
-            print("1")
-            print(s)
-        else:
-            print("2")
-            print(x, x + s)
+        print('2')
+        print(x, x + s)

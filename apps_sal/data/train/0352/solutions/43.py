@@ -1,15 +1,12 @@
 class Solution:
+
     def isPredecessor(self, word1, word2):
         for i in range(1, len(word2) + 1):
-            if (word2[:i - 1] + word2[i:]) == word1:
+            if word2[:i - 1] + word2[i:] == word1:
                 return True
         return False
 
     def longestStrChain(self, words: List[str]) -> int:
-        # sort by length
-        # add smallest set to dictionary that maps the word to the longest length
-        # should be 1 to start with
-        # then go bigger looking @ smaller word list, compute longest length for each word
         wordLengths = {}
         for word in words:
             if len(word) in wordLengths:

@@ -5,7 +5,7 @@ used = [0 for i in range(n + 1)]
 deq = deque()
 deq.append((1, 1))
 while deq:
-    x, cnt = deq.popleft()
+    (x, cnt) = deq.popleft()
     mins[x] = min(mins[x], cnt)
     used[x] = 1
     if used[10 * x % n] == 0:

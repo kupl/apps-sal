@@ -2,14 +2,11 @@ import math
 from decimal import *
 import sys
 from fractions import Fraction
-
-
 n = int(input())
-
 S = set()
 M = dict()
 ma = 0
-alf = "abcdefghijklmnopqrstuvwxyz"
+alf = 'abcdefghijklmnopqrstuvwxyz'
 for c in range(0, n):
     s = input()
     L = len(s)

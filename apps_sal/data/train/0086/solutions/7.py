@@ -28,13 +28,12 @@ def readLine():
 
 
 def solve(a):
-    v0, v1 = 0, 0
+    (v0, v1) = (0, 0)
     for i in a:
         if i == 0:
             v0 += 1
         else:
             v1 += 1
-
     if v1 > v0:
         if v1 % 2 != 0:
             v1 -= 1
@@ -45,7 +44,6 @@ def solve(a):
 
 
 tests = readInt()
-
 for i in range(tests):
     n = readInt()
     a = [readInt() for _ in range(n)]

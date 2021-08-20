@@ -1,7 +1,6 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
-    x = [int(i)for i in input().split()]
+    (n, k) = list(map(int, input().split()))
+    x = [int(i) for i in input().split()]
     a = []
     count = 0
     for i in x:

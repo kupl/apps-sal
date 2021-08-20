@@ -21,9 +21,9 @@ def main():
                 primes[t] = max(primes[t], 1)
             else:
                 primes[t] = 1
-    for i, t in list(primes.items()):
+    for (i, t) in list(primes.items()):
         ans *= i ** t
-    print((ans + 1))
+    print(ans + 1)
 
 
 def __starting_point():

@@ -1,6 +1,6 @@
 from bisect import *
 t = int(input())
-while(t):
+while t:
     t -= 1
     n = int(input())
     a = list(map(int, input().split()))
@@ -9,10 +9,10 @@ while(t):
     l = 1
     r = 0
     for i in range(n + 1):
-        if(a[i] % 2):
+        if a[i] % 2:
             r += 1
         else:
-            if(l and r):
+            if l and r:
                 ref.append([l, r + l - 1])
                 l = i + 2
                 r = 0
@@ -20,13 +20,12 @@ while(t):
     ref1 = []
     for i in ref:
         ref1.append([i[1], i[0]])
-    # print(ref)
     q = int(input())
-    while(q):
+    while q:
         q -= 1
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         it = bisect_left(ref1, [l])
-        if(l >= ref1[it][1] and r <= ref1[it][0]):
-            print("ODD")
+        if l >= ref1[it][1] and r <= ref1[it][0]:
+            print('ODD')
         else:
-            print("EVEN")
+            print('EVEN')

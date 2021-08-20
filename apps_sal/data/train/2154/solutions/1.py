@@ -1,10 +1,10 @@
-k, q = map(int, input().split())
+(k, q) = map(int, input().split())
 t = [0] * (k + 1)
 t[1] = 1
 c = [0]
 n = i = 1
 while i < 1001:
-    if (2000 * t[k] > i - (10**-7)):
+    if 2000 * t[k] > i - 10 ** (-7):
         c.append(n)
         i += 1
     else:

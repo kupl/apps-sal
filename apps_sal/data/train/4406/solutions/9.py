@@ -3,4 +3,4 @@ from operator import add
 
 
 def tram(stops, off, on):
-    return max(accumulate((b - a for a, b in zip(off, on[:stops])), add))
+    return max(accumulate((b - a for (a, b) in zip(off, on[:stops])), add))

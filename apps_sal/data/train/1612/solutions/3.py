@@ -38,15 +38,15 @@ def factor(n):
 
 def partitions(factors):
     if len(factors) == 1:
-        yield factors[0],
+        yield (factors[0],)
         return
     first = factors[0]
     for subpart in partitions(factors[1:]):
-        for n, fact in enumerate(subpart):
+        for (n, fact) in enumerate(subpart):
             yield tuple(sorted(subpart[:n] + (first * fact,) + subpart[n + 1:], reverse=True))
         yield tuple(sorted((first,) + subpart, reverse=True))
 
 
 def score(part):
-    factors = [(f, len(list(g))) for f, g in groupby(part)]
-    return sum(f**e for f, e in factors) * sum(e for _, e in factors)
+    factors = [(f, len(list(g))) for (f, g) in groupby(part)]
+    return sum((f ** e for (f, e) in factors)) * sum((e for (_, e) in factors))

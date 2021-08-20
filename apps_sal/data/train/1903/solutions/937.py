@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def find(self, parent, i):
         if parent[i] == i:
             return i
@@ -29,7 +30,7 @@ class Solution:
             parent.append(node)
             rank.append(0)
         while e < self.V - 1:
-            u, v, w = self.graph[i]
+            (u, v, w) = self.graph[i]
             i = i + 1
             x = self.find(parent, u)
             y = self.find(parent, v)
@@ -38,13 +39,12 @@ class Solution:
                 result.append([u, v, w])
                 self.union(parent, rank, x, y)
         summ = 0
-        for u, v, weight in result:
+        for (u, v, weight) in result:
             summ += weight
         return summ
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         self.V = len(points)
-        # [0 for i in range(len(points))] for i in range(len(points))
         self.graph = []
         for i in range(len(points)):
             for j in range(len(points)):

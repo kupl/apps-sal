@@ -6,10 +6,8 @@ def solve(x):
 
     def check(brr):
         return all(brr)
-
     cnt = 0
     ops = []
-
     while not check(brr):
         if cnt % 2 == 0:
             n = None
@@ -28,7 +26,6 @@ def solve(x):
                 else:
                     brr[i] = 0
         cnt += 1
-
     print(cnt)
     print(' '.join(map(str, ops)))
 

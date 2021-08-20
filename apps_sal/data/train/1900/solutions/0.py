@@ -1,4 +1,5 @@
 class Solution:
+
     def widthOfBinaryTree(self, root):
         """
         :type root: TreeNode

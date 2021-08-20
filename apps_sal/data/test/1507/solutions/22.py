@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 if k >= len(set(s)):
-    print("NO")
+    print('NO')
     quit()
 l = {}
 for e in set(s):
@@ -16,12 +16,12 @@ for x in range(n):
         if k > 0:
             continue
         else:
-            print("YES")
+            print('YES')
             quit()
     else:
         g.add(s[x])
         k -= 1
         if k < 0:
-            print("YES")
+            print('YES')
             quit()
-print("YES" if k < 0 else "NO")
+print('YES' if k < 0 else 'NO')

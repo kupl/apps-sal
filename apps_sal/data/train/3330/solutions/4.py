@@ -5,22 +5,13 @@ def make_triangle(m, n):
     The final digit of each number is taken as a character in making the ∆.
     This functions returns a ∆ as a string if possible with the given input else, returns an empty string.
     """
-
-    # Type check for arguments
-    if (type(m) != type(0)) or (type(n) != type(0)):
-        raise TypeError("m and n should be int")
-    # Value check for arguments
+    if type(m) != type(0) or type(n) != type(0):
+        raise TypeError('m and n should be int')
     if m >= n:
-        raise ValueError("m not < n")
-
+        raise ValueError('m not < n')
     chars = [str(i)[-1] for i in range(m, n + 1)]
-    # chars contains all the characters that will make up the ∆.
-
-    # Can this set of chars make a ∆.
-    row, charc = 0, 0  # ncpr is the no. of rows in a ∆. And charc is the no. of characters a ∆ of specific side length contains. Both initially set to 0.
-
+    (row, charc) = (0, 0)
     while True:
-        # The loop will break if the ∆ is possible else, will cause the function to return an empty string.
         row += 1
         charc = 0
         for j in range(1, row):
@@ -30,20 +21,14 @@ def make_triangle(m, n):
             break
         if len(chars) < charc:
             return ''
-
-    # ∆ generation
-    lor = [[' ' for j in range(i)] for i in range(1, row + 1)]  # lor contains all the rows of the ∆ as white strings.
-    # For Step-1 to work
-    i1, sp, b = 0, 0, -1
-    # For Step-2 to work
+    lor = [[' ' for j in range(i)] for i in range(1, row + 1)]
+    (i1, sp, b) = (0, 0, -1)
     c = 2
-    i2, l = row - c, 0
-    # For Step-3 to work
-    i3, j = row - 2, 0
+    (i2, l) = (row - c, 0)
+    (i3, j) = (row - 2, 0)
     while True:
         if len(chars) == 0:
             break
-        # Step-1
         while i1 <= row - 1:
             lor[i1][b] = chars[0]
             chars.pop(0)
@@ -52,7 +37,6 @@ def make_triangle(m, n):
         b -= 1
         if len(chars) == 0:
             break
-        # Step-2
         while i2 >= l:
             lor[row - 1][i2] = chars[0]
             chars.pop(0)
@@ -63,7 +47,6 @@ def make_triangle(m, n):
         l += 1
         if len(chars) == 0:
             break
-        # Step-3
         while i3 > sp:
             lor[i3][j] = chars[0]
             chars.pop(0)

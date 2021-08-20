@@ -1,13 +1,12 @@
 class Solution:
-    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
 
+    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         goods = 0
         for i in range(1, len(arr) - 1):
             first = arr[:i]
             last = arr[i + 1:]
-
-            ij_count, jk_count, ik_count = 0, 0, 0
-            ij_pairs, jk_pairs = [], []
+            (ij_count, jk_count, ik_count) = (0, 0, 0)
+            (ij_pairs, jk_pairs) = ([], [])
             for n in first:
                 if abs(arr[i] - n) <= a:
                     ij_count += 1

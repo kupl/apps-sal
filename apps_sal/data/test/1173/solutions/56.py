@@ -31,4 +31,4 @@ for i in range(N):
 if ok:
     print(ans)
 else:
-    print((-1))
+    print(-1)

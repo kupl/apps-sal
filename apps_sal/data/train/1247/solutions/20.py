@@ -5,7 +5,6 @@ def valid(hash_t, n, d):
             if (hash_t[j] - hash_t[i + 1]) % d != 0:
                 flag = 1
                 return False
-
     return True
 
 
@@ -21,10 +20,10 @@ def num_inversion(hash_t, n, d):
 
 tc = int(input())
 while tc:
-    n, d = input().split()
+    (n, d) = input().split()
     n = int(n)
     d = int(d)
-    a = [int(x) for x in input().split(" ")]
+    a = [int(x) for x in input().split(' ')]
     if d == 1:
         count = 0
         for i in range(n):
@@ -36,11 +35,9 @@ while tc:
         hash_t = [0] * (n + 1)
         for i in range(n):
             hash_t[a[i]] = i + 1
-
         if not valid(hash_t, n + 1, d):
             print(-1)
         else:
-            # print("Valid")
             count = num_inversion(hash_t, n + 1, d)
             print(count)
     tc -= 1

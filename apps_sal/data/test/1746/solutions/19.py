@@ -6,19 +6,14 @@ for i in range(n - 1):
     tree[par].append(i + 1)
     parents.append(par)
 flag = True
-# print(parents)
-# print(tree)
 for i in parents:
     count = 0
-
     for j in tree[i]:
-        if(len(tree[j]) == 0):
+        if len(tree[j]) == 0:
             count += 1
-    if(count < 3):
+    if count < 3:
         flag = False
-
-
-if(flag):
+if flag:
     print('Yes')
 else:
     print('No')

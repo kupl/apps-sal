@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         ans = 0
         heap1 = []
@@ -12,7 +13,7 @@ class Solution:
         while end < n:
             heapq.heappush(heap1, [-nums[end], end])
             heapq.heappush(heap2, [nums[end], end])
-            while (-heap1[0][0]) - heap2[0][0] > limit:
+            while -heap1[0][0] - heap2[0][0] > limit:
                 start += 1
                 while heap1 and heap1[0][1] < start:
                     heapq.heappop(heap1)

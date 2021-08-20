@@ -8,7 +8,7 @@ def solve(arr):
             dic[i] += 1
         else:
             dic[i] = 0
-    for key, value in dic.items():
+    for (key, value) in dic.items():
         if value == 0:
             res = key
     return res

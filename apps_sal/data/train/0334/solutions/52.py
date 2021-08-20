@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         repeats = []
         low = 0
@@ -13,7 +14,7 @@ class Solution:
         if high - low > 0:
             repeats.append((low, high + 1))
         total = 0
-        for low, high in repeats:
+        for (low, high) in repeats:
             maxVal = 0
             for i in range(low, high):
                 maxVal = max(maxVal, cost[i])

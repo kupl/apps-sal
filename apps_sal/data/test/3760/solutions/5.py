@@ -1,5 +1,5 @@
 import math
-n, m, x, y, a, b = map(int, input().split())
+(n, m, x, y, a, b) = map(int, input().split())
 gcd = math.gcd(a, b)
 a //= gcd
 b //= gcd

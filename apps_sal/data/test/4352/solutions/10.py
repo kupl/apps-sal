@@ -1,5 +1,4 @@
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 if A == 1 and B == 1:
     print('Draw')
 elif A == 1 and B != 1:

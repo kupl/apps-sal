@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if 4 * boardingCost < runningCost:
             return -1
@@ -28,7 +29,7 @@ class Solution:
         while queue:
             running_round += 1
             curr = queue.popleft()
-            curr_profit += (curr * boardingCost - runningCost)
+            curr_profit += curr * boardingCost - runningCost
             if curr_profit > max_profit:
                 ans = running_round
             max_profit = max(curr_profit, max_profit)

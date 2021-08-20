@@ -3,7 +3,7 @@ def sort(words):
         return
     it = iter(words)
     pivot = next(it)
-    lt, ge = [], []
+    (lt, ge) = ([], [])
     for i in it:
         if i < pivot:
             lt.append(i)

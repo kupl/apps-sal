@@ -10,16 +10,25 @@ import bisect
 import sys
 import random
 import time
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
+
+def LI():
+    return list(map(int, input().split()))
 
 
-def LI(): return list(map(int, input().split()))
-def II(): return int(input())
-def LS(): return input().split()
-def S(): return input()
+def II():
+    return int(input())
+
+
+def LS():
+    return input().split()
+
+
+def S():
+    return input()
 
 
 def main():
@@ -38,7 +47,6 @@ def main():
                 break
             if t[j] < s[j]:
                 break
-
     return '\n'.join(a)
 
 

@@ -1,6 +1,7 @@
 class Solution:
+
     def compareVersion(self, version1, version2):
-        v1, v2 = [int(i) for i in version1.split('.')], [int(i) for i in version2.split('.')]
+        (v1, v2) = ([int(i) for i in version1.split('.')], [int(i) for i in version2.split('.')])
         if len(v1) > len(v2):
             v2 += [0] * (len(v1) - len(v2))
         if len(v1) < len(v2):

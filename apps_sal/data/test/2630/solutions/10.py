@@ -1,4 +1,5 @@
 class Solution:
+
     def uniquePathsWithObstacles(self, obstacleGrid):
         """
         :type obstacleGrid: List[List[int]]
@@ -6,7 +7,6 @@ class Solution:
         """
         if not len(obstacleGrid) > 0:
             return 0
-
         m = len(obstacleGrid)
         n = len(obstacleGrid[0])
         arr = [[1 for y in range(n)] for x in range(m)]

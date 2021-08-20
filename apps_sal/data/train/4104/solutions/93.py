@@ -5,5 +5,4 @@ def max_tri_sum(numbers):
     num = sorted(num)
     for i in sorted(num[-3:]):
         sum = i + sum
-    # your code here
     return sum

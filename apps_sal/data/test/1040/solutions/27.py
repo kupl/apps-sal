@@ -2,8 +2,6 @@ N = int(input())
 S = input()
 T = []
 n = 0
-
-
 for s in S:
     T.append(s)
     if T[-3:] == ['f', 'o', 'x']:

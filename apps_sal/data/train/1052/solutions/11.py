@@ -1,4 +1,3 @@
-# cook your dish here
 import queue
 
 
@@ -11,13 +10,13 @@ def digitsum(a):
 
 
 for _ in range(int(input())):
-    min1, pos = 1000000, -10
+    (min1, pos) = (1000000, -10)
     track = queue.Queue(100000)
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     i = 0
     track.put([n, 0])
     while i < 100000 and track.empty() != True:
-        a, b = track.get()
+        (a, b) = track.get()
         if min1 > a:
             min1 = a
             pos = b

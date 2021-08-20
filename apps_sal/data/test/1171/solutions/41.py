@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, K = (int(x) for x in input().rstrip('\n').split())
+(N, K) = (int(x) for x in input().rstrip('\n').split())
 vs = [int(x) for x in input().rstrip('\n').split()]
 g = [vs[0], vs[-1]]
 rest = K

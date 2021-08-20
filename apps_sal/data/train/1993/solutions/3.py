@@ -1,4 +1,5 @@
 class Solution:
+
     def removeComments(self, source):
         """
         :type source: List[str]
@@ -11,7 +12,7 @@ class Solution:
             if not in_block:
                 newline = []
             while i < len(line):
-                if line[i:i + 2] == '/*' and not in_block:
+                if line[i:i + 2] == '/*' and (not in_block):
                     in_block = True
                     i += 1
                 elif line[i:i + 2] == '*/' and in_block:
@@ -22,7 +23,6 @@ class Solution:
                 elif not in_block:
                     newline.append(line[i])
                 i += 1
-            if newline and not in_block:
-                ans.append("".join(newline))
-
+            if newline and (not in_block):
+                ans.append(''.join(newline))
         return ans

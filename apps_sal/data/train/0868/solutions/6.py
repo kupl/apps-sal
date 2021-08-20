@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     from math import ceil
     l = [int(i) for i in input().split()]
     cnt = 0

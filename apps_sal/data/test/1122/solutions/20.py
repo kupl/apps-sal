@@ -3,7 +3,7 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     used = set()
     Ans = [None for _ in range(M)]
     left = 1
@@ -17,8 +17,7 @@ def solve():
         left += 1
         right -= 1
     for i in range(M):
-        print(*Ans[i], sep=" ")
-
+        print(*Ans[i], sep=' ')
     return 0
 
 

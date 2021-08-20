@@ -6,10 +6,10 @@ def input():
     return sys.stdin.readline()
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = [(0, 0)] * n
 for i in range(n):
-    t, b = list(map(int, input().split()))
+    (t, b) = list(map(int, input().split()))
     arr[i] = (t, b)
 arr.sort(key=lambda x: (-x[1], -x[0]))
 sum_length = 0

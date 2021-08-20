@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         pr = [i for i in range(len(s))]
 
@@ -13,10 +14,8 @@ class Solution:
                 pr[x] = pr[pr[x]]
                 x = pr[x]
             return x
-
         for i in pairs:
             union(i[0], i[1])
-
         from collections import defaultdict
         dp = defaultdict(list)
         for i in range(len(s)):

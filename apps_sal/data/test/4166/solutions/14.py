@@ -1,8 +1,8 @@
 def f():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     num = [set() for i in range(n)]
     for i in range(m):
-        s, c = map(int, input().split())
+        (s, c) = map(int, input().split())
         num[s - 1].add(c)
     s = []
     for i in num:
@@ -21,7 +21,7 @@ def f():
             return
         else:
             s[0] = 1
-    print(''.join(str(x) for x in s))
+    print(''.join((str(x) for x in s)))
 
 
 f()

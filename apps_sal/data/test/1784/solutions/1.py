@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 mn = min(a)
-if (max(a) - mn > k):
+if max(a) - mn > k:
     print('NO')
 else:
     print('YES')

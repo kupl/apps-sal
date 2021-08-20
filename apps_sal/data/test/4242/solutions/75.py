@@ -1,4 +1,4 @@
-a, b, k = [int(num) for num in input().split()]
+(a, b, k) = [int(num) for num in input().split()]
 count = []
 c = min(a, b)
 for i in range(1, c + 1):

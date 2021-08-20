@@ -3,9 +3,9 @@ def iroha():
     li.sort()
     merge = li[0] + li[1]
     if merge == li[2]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

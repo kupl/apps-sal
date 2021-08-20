@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 
 
 def walk(n, m):
@@ -13,18 +13,17 @@ def walk(n, m):
 
 w = walk(n, m)
 for s in range(k - 1):
-    print("2 ", end="")
-    print("{} {} ".format(*next(w)), end="")
-    print("{} {}".format(*next(w)), end="")
+    print('2 ', end='')
+    print('{} {} '.format(*next(w)), end='')
+    print('{} {}'.format(*next(w)), end='')
     print()
-
 r = []
 while True:
     try:
         r.append(next(w))
     except StopIteration as e:
         break
-print("{} ".format(len(r)), end="")
+print('{} '.format(len(r)), end='')
 for i in r:
-    print("{} {} ".format(*i), end="")
+    print('{} {} '.format(*i), end='')
 print()

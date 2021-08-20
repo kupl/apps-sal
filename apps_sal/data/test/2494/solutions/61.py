@@ -6,14 +6,14 @@ def main():
     brdict = {}
     for i in range(1, k):
         if i == k - 1:
-            if (10 * (k - 1)) % k == 0:
+            if 10 * (k - 1) % k == 0:
                 brdict[i] = [(0, 0)]
             else:
                 brdict[i] = [(0, 1)]
         else:
-            if i != (i * 10) % k:
-                brdict[i] = [((i * 10) % k, 0)]
-            if (i * 10) % k != i + 1:
+            if i != i * 10 % k:
+                brdict[i] = [(i * 10 % k, 0)]
+            if i * 10 % k != i + 1:
                 brdict[i] = brdict.get(i, []) + [(i + 1, 1)]
     start = 1
     cost = [i for i in range(k)]

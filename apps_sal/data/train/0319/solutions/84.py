@@ -1,6 +1,5 @@
-# dp
-# f(i) = suffixsum[i] - min(f(i+x) for x in range(1,4))
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         memo = dict()
 
@@ -12,8 +11,8 @@ class Solution:
             memo[i] = suffixsum[i] - min([dfs(i + x) for x in range(1, 4)])
             return memo[i]
         N = len(stoneValue)
-        suffixsum, acc = [0] * N, 0
-        for i, v in enumerate(reversed(stoneValue)):
+        (suffixsum, acc) = ([0] * N, 0)
+        for (i, v) in enumerate(reversed(stoneValue)):
             acc += v
             suffixsum[~i] = acc
         alice = dfs(0)

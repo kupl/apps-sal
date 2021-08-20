@@ -1,4 +1,3 @@
-# cook your dish here
 def func(n):
     sum = 0
     if k == 1:
@@ -7,11 +6,11 @@ def func(n):
         return sum
     if k == 2:
         for i in l:
-            sum += (n - i)**2
+            sum += (n - i) ** 2
         return sum
     if k == 3:
         for i in l:
-            sum += (abs(n - i))**3
+            sum += abs(n - i) ** 3
         return sum
 
 
@@ -20,11 +19,10 @@ def findPeakUtil(low, high, n):
     one = func(mid - 1)
     two = func(mid)
     three = func(mid + 1)
-    # print(one,two,three,mid)
     if (mid == 0 or one >= two) and (mid == n - 1 or three >= two):
         return mid
-    elif (mid > 0 and one < two):
-        return findPeakUtil(low, (mid - 1), n)
+    elif mid > 0 and one < two:
+        return findPeakUtil(low, mid - 1, n)
     else:
         return findPeakUtil(mid + 1, high, n)
 

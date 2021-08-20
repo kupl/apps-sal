@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfit(self, prices):
         """
         :type prices: List[int]
@@ -11,5 +12,4 @@ class Solution:
         for i in prices:
             min_before = min(i, min_before)
             max_profit = max(max_profit, i - min_before)
-
         return max_profit

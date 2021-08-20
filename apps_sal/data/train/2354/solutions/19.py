@@ -9,8 +9,7 @@ for w in a:
         b.append((w + w2)[:2])
         b.append((w + w2)[1:3])
         b.append((w + w2)[2:])
-
 if password in b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,1 +1,1 @@
-print((int(int(input())**.5)**2))
+print(int(int(input()) ** 0.5) ** 2)

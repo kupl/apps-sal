@@ -1,10 +1,10 @@
 def main():
-    n, m, mn, mx = map(int, input().split())
+    (n, m, mn, mx) = map(int, input().split())
     A = list(map(int, input().split()))
     a = min(A)
     b = max(A)
     if a < mn or b > mx:
-        print("Incorrect")
+        print('Incorrect')
         return
     cnt = 0
     if a > mn:
@@ -12,9 +12,9 @@ def main():
     if b < mx:
         cnt += 1
     if m + cnt <= n:
-        print("Correct")
+        print('Correct')
     else:
-        print("Incorrect")
+        print('Incorrect')
 
 
 main()

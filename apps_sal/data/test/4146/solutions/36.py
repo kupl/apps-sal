@@ -1,7 +1,6 @@
 import collections
 N = int(input())
-*V, = map(int, input().split())
-
+(*V,) = map(int, input().split())
 c1 = collections.Counter(V[0::2]).most_common()
 c2 = collections.Counter(V[1::2]).most_common()
 c1.append([0, 0])

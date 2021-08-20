@@ -1,4 +1,4 @@
-r1, c1, r2, c2 = list(map(int, input().split()))
+(r1, c1, r2, c2) = list(map(int, input().split()))
 mod = 10 ** 9 + 7
 
 
@@ -11,16 +11,13 @@ def cmb(n, r, mod):
 
 def make_table(n, mod=10 ** 9 + 7):
     N = n
-    # 元テーブル
     g1 = [0] * (N + 1)
     g1[0] = 1
     g1[1] = 1
-
     tmp = g1[1]
     for i in range(2, N + 1):
         tmp = tmp * i % mod
-        g1[i] = (g1[i - 1] * i) % mod
-
+        g1[i] = g1[i - 1] * i % mod
     return g1
 
 

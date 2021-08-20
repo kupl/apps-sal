@@ -13,18 +13,16 @@ def scalar(x, y):
 
 
 def vector(p, q):
-    return ([(q[i] - p[i]) for i in range(5)])
+    return [q[i] - p[i] for i in range(5)]
 
 
 number = 0
 good_points = []
-
 n = int(input())
 liste = []
 for _ in range(n):
-    x = list(map(int, input().split(" ")))
+    x = list(map(int, input().split(' ')))
     liste.append(x)
-
 if n > 11:
     print(0)
 else:

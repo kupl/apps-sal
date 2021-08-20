@@ -1,9 +1,6 @@
-a, b = map(int, input().split())
-
-# 整数同士のただの計算になってしまうため、型を指定する。
+(a, b) = map(int, input().split())
 A = str(a) * b
 B = str(b) * a
-
 if a > b:
     print(B)
 else:

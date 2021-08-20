@@ -26,7 +26,7 @@ def ans(n, k, a):
     return dp[n]
 
 
-n, k = list(map(int, input().split(" ")))
+(n, k) = list(map(int, input().split(' ')))
 a = input()
 out = ans(n, k, a)
 print(out)

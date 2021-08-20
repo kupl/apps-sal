@@ -1,10 +1,7 @@
 q = int(input())
-
 for _ in range(q):
-
     n = int(input())
     a = sorted(list(map(int, input().split())))
-
     s = []
     last = a[0]
     count = 1
@@ -15,16 +12,12 @@ for _ in range(q):
             count = 0
         count += 1
     s.append(count)
-
     s.sort()
-
     answer = s[-1]
-
     for i in range(len(s) - 2, -1, -1):
         if s[i] >= s[i + 1]:
             s[i] = s[i + 1] - 1
         if not s[i]:
             break
         answer += s[i]
-
     print(answer)

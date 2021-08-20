@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     dicword = []
     misp = []
     for j in range(n):

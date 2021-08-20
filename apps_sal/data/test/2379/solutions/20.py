@@ -1,18 +1,13 @@
 def main():
     import sys
     input = sys.stdin.readline
-    sys.setrecursionlimit(10**7)
+    sys.setrecursionlimit(10 ** 7)
     from collections import Counter, deque
     from itertools import combinations, permutations, accumulate, groupby, product
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     import math
-    #from math import gcd
-
-    #inf = 10**17
-    #mod = 10**9 + 7
-
-    n, k, c = map(int, input().split())
+    (n, k, c) = map(int, input().split())
     s = input().rstrip()
     left = [0] * n
     day = 0
@@ -28,7 +23,6 @@ def main():
         else:
             left[day] = temp
         day += 1
-
     right = [0] * n
     day = n - 1
     temp = 0
@@ -43,7 +37,6 @@ def main():
         else:
             right[day] = temp
         day -= 1
-
     res = []
     for i in range(n):
         if s[i] == 'o':

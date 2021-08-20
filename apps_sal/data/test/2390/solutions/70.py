@@ -1,8 +1,8 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 clock = []
 counter_clock = []
 for i in range(n):
-    x, v = map(int, input().split())
+    (x, v) = map(int, input().split())
     clock.append([x, v])
     counter_clock.append([c - x, v])
 clock.sort()

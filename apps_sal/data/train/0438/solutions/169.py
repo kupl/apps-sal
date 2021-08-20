@@ -1,11 +1,12 @@
 class Solution:
-    class UnionFind():
+
+    class UnionFind:
+
         def __init__(self, n):
             self.parents = list(range(n))
             self.sizes = [0] * n
 
         def find(self, i):
-            #print(i, self.parents)
             if i != self.parents[i]:
                 self.parents[i] = self.find(self.parents[i])
             return self.parents[i]
@@ -13,10 +14,8 @@ class Solution:
         def union(self, i, j):
             pi = self.find(i)
             pj = self.find(j)
-
             if pi == pj:
                 return
-
             if self.sizes[pi] > self.sizes[pj]:
                 self.parents[pj] = pi
                 self.sizes[pi] += self.sizes[pj]
@@ -30,12 +29,8 @@ class Solution:
         if n == m:
             return n
         union_find = self.UnionFind(n)
-
-        for step, num in enumerate(arr):
+        for (step, num) in enumerate(arr):
             i = num - 1
-            # print(i)
-            # print(union_find.parents)
-            # print(union_find.sizes)
             union_find.sizes[i] += 1
             for j in [i - 1, i + 1]:
                 if 0 <= j < n:

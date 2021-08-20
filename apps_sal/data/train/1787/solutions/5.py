@@ -6,11 +6,7 @@ def matrix_multiply(A, B):
     if colsA != rowsB:
         print('Number of A columns must equal number of B rows.')
         return
-    C = [[0],
-         [0],
-         [0],
-         [0],
-         [0]]
+    C = [[0], [0], [0], [0], [0]]
     for i in range(rowsA):
         for j in range(colsB):
             total = 0
@@ -23,16 +19,8 @@ def matrix_multiply(A, B):
 def invert_matrix(A, tol=None):
     n = len(A)
     AM = A
-    I = [[1, 0, 0, 0, 0],
-         [0, 1, 0, 0, 0],
-         [0, 0, 1, 0, 0],
-         [0, 0, 0, 1, 0],
-         [0, 0, 0, 0, 1]]
-    IM = [[1, 0, 0, 0, 0],
-          [0, 1, 0, 0, 0],
-          [0, 0, 1, 0, 0],
-          [0, 0, 0, 1, 0],
-          [0, 0, 0, 0, 1]]
+    I = [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]]
+    IM = [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]]
     indices = list(range(n))
     for fd in range(n):
         fdScaler = 1.0 / AM[fd][fd]
@@ -47,7 +35,8 @@ def invert_matrix(A, tol=None):
     return IM
 
 
-def mean(x): return sum(x) / len(x)
+def mean(x):
+    return sum(x) / len(x)
 
 
 class Datamining:
@@ -56,10 +45,10 @@ class Datamining:
         A = []
         v = []
         for k in range(5):
-            v.append([mean([y * x**k for x, y in train_set])])
-            A.append([mean([x**(j + k) for x, y in train_set]) for j in range(5)])
+            v.append([mean([y * x ** k for (x, y) in train_set])])
+            A.append([mean([x ** (j + k) for (x, y) in train_set]) for j in range(5)])
         B = invert_matrix(A)
         self.coefs = matrix_multiply(B, v)
 
     def predict(self, x):
-        return sum([a[0] * x**i for i, a in enumerate(self.coefs)])
+        return sum([a[0] * x ** i for (i, a) in enumerate(self.coefs)])

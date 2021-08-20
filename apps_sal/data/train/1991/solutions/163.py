@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @lru_cache(None)
         def dp(cur, fuel):
             res = int(cur == finish)
@@ -16,7 +18,7 @@ class Solution:
                 res += dp(i, fuel - (locations[i] - locations[cur]))
             return res % MOD
         MOD = 10 ** 9 + 7
-        start_loc, finish_loc = locations[start], locations[finish]
+        (start_loc, finish_loc) = (locations[start], locations[finish])
         locations.sort()
         start = locations.index(start_loc)
         finish = locations.index(finish_loc)

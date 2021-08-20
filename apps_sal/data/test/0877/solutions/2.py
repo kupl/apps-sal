@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 left = 0
 right = n
 for i in range(m):
-    ui, vi = list(map(int, input().split()))
+    (ui, vi) = list(map(int, input().split()))
     if ui > vi:
         left = max(left, vi)
         right = min(right, ui)

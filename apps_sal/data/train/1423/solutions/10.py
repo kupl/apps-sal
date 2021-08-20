@@ -26,4 +26,3 @@ while t:
     ans = johnny(a, x)
     print(ans)
     t -= 1
-# cook your dish here

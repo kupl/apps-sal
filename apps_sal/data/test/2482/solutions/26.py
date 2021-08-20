@@ -26,19 +26,16 @@ class UnionFind:
                 self.rank[root_i] += 1
 
 
-N, K, L = map(int, input().split())
-
+(N, K, L) = map(int, input().split())
 uf1 = UnionFind(N)
 for _ in range(K):
-    i, j = map(int, input().split())
+    (i, j) = map(int, input().split())
     uf1.unite(i - 1, j - 1)
-
 uf2 = UnionFind(N)
 for _ in range(L):
-    i, j = map(int, input().split())
+    (i, j) = map(int, input().split())
     uf2.unite(i - 1, j - 1)
-
 set_id_pairs = [(uf1.find(i), uf2.find(i)) for i in range(N)]
 counter = Counter(set_id_pairs)
 counts = [counter[set_id_pairs[i]] for i in range(N)]
-print(' '.join(str(c) for c in counts))
+print(' '.join((str(c) for c in counts)))

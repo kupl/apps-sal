@@ -1,5 +1,5 @@
 def is_madhav_array(arr):
-    r, x, c = [], 1, len(arr)
+    (r, x, c) = ([], 1, len(arr))
     try:
         while arr:
             t = 0

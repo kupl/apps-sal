@@ -1,6 +1,5 @@
-
-
 class Solution:
+
     def numTeams(self, rating):
         length = len(rating)
         num_combinations = 0

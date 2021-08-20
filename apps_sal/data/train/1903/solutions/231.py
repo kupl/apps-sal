@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dist = [[-1 for _ in points] for _ in points]
         for i in range(len(points)):
@@ -16,7 +17,7 @@ class Solution:
         for j in range(1, len(points)):
             heapq.heappush(min_cost_pq, (dist[0][j], j))
         while connected_count < len(points):
-            d, i = heapq.heappop(min_cost_pq)
+            (d, i) = heapq.heappop(min_cost_pq)
             if connected[i]:
                 continue
             res += d

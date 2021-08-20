@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -8,7 +7,7 @@ while t:
     c = []
     i = 0
     while i < n:
-        while (i < n - 1) and (arr[i] == arr[i + 1]):
+        while i < n - 1 and arr[i] == arr[i + 1]:
             i += 1
             count += 1
         if arr[i] in con or count in c:
@@ -17,11 +16,8 @@ while t:
         c.append(count)
         i += 1
         count = 1
-
     if i == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-    # print(*con)
-    # print(*c)
+        print('NO')
     t -= 1

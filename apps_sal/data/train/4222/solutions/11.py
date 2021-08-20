@@ -1,8 +1,8 @@
 def get_size(w, h, d):
     L = []
     if w == h == d:
-        SA = 6 * (w**2)
-        V = w**3
+        SA = 6 * w ** 2
+        V = w ** 3
         L.append(SA)
         L.append(V)
     else:

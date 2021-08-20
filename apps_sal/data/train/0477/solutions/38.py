@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
+
         def revert(s):
             ans = ''
             for x in s:

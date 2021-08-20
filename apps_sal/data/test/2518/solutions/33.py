@@ -1,5 +1,5 @@
-n, a, b = list(map(int, input().split()))
-h = [int(input())for _ in range(n)]
+(n, a, b) = list(map(int, input().split()))
+h = [int(input()) for _ in range(n)]
 h.sort(reverse=True)
 l = -1
 r = (max(h) - 1) // b + 1

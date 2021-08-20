@@ -1,6 +1,6 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 a = list(map(int, input().split()))
-if (y - x >= 0):
+if y - x >= 0:
     ans = 0
     for elem in a:
         if elem <= x:

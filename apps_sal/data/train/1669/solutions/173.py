@@ -1,6 +1,7 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        if ((len(hand) % W) != 0):
+        if len(hand) % W != 0:
             return False
         sorted_hand = hand
         sorted_hand.sort()

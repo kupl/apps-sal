@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         mul = [0 for i in range(len(nums))]
         inc = [0 for i in range(len(nums))]

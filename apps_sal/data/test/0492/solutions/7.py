@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 n = int(input())
 n = n % 4
 V = ['^', '>', 'v', '<']

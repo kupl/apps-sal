@@ -1,13 +1,13 @@
 def solve(n):
-    res = (n // 7) * 2
+    res = n // 7 * 2
     d = n % 7
-    if (d == 6):
+    if d == 6:
         minn = res + 1
         maxx = res + 2
-    elif (d == 1):
+    elif d == 1:
         minn = res
         maxx = res + 1
-    elif (d == 0):
+    elif d == 0:
         minn = res
         maxx = res
     else:
@@ -18,4 +18,4 @@ def solve(n):
 
 n = int(input())
 sol = solve(n)
-print(str(sol[0]) + " " + str(sol[1]))
+print(str(sol[0]) + ' ' + str(sol[1]))

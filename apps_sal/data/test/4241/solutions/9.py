@@ -6,14 +6,13 @@ def answer(s: str, t: str) -> int:
             if t[j] != s[i + j]:
                 count += 1
         result = min(result, count)
-
     return result
 
 
 def main():
     s = input()
     t = input()
-    print((answer(s, t)))
+    print(answer(s, t))
 
 
 def __starting_point():

@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    used = [0for i in range(n + 2)]
+    used = [0 for i in range(n + 2)]
     ans = []
     minimum = 1
     ans.append(a[0])
@@ -27,6 +27,6 @@ for i in range(t):
         if a[i] != maximum:
             flag = False
     if flag and a[-1] == n:
-        print(" ".join(map(str, ans)))
+        print(' '.join(map(str, ans)))
     else:
         print(-1)

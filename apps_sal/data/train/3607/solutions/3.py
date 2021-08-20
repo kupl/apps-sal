@@ -1,5 +1,5 @@
 def valid(num, power):
-    return num == sum(int(x)**power for x in str(num))
+    return num == sum((int(x) ** power for x in str(num)))
 
 
 def eq_sum_powdig(hMax, exp):

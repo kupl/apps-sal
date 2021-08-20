@@ -5,7 +5,7 @@ for i in range(1, n + 1):
 kids.reverse()
 ans = []
 while kids:
-    v, d, p, k = kids.pop()
+    (v, d, p, k) = kids.pop()
     ans.append(k)
     for i in range(max(-v, -len(kids)), 0):
         kids[i][2] -= v + i + 1

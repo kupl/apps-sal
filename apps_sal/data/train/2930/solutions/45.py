@@ -4,4 +4,4 @@ def summation(num):
     while n != num:
         n += 1
         to_return += n
-    return(to_return)
+    return to_return

@@ -1,5 +1,4 @@
-
-'''
+"""
 x ^ y = z
 
 0 ^ 1 = 1
@@ -15,10 +14,11 @@ z   y   x
 0   1 = 1
 
 可见，仍是异或。计算前缀即可
-'''
+"""
 
 
 class Solution:
+
     def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         n = len(arr)
         prefix_xor = [0] * n
@@ -26,7 +26,7 @@ class Solution:
         for i in range(1, n):
             prefix_xor[i] = prefix_xor[i - 1] ^ arr[i]
         ret = []
-        for start, end in queries:
+        for (start, end) in queries:
             if start == 0:
                 ret.append(prefix_xor[end])
             else:

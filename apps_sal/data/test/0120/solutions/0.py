@@ -1,11 +1,8 @@
-
 import sys
-# sys.stdin=open("data.txt")
 input = sys.stdin.readline
-
 n = int(input())
 if n % 4:
-    print("===")
+    print('===')
 else:
     t = input().strip()
     a = [n // 4] * 4
@@ -19,7 +16,7 @@ else:
         elif i == 'T':
             a[3] -= 1
     if min(a) < 0:
-        print("===")
+        print('===')
     else:
         out = []
         for i in t:
@@ -38,4 +35,4 @@ else:
                     a[3] -= 1
             else:
                 out.append(i)
-        print("".join(out))
+        print(''.join(out))

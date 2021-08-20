@@ -1,10 +1,10 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         n = len(status)
         visited = [0] * n
         unopened = [0] * n
         opened = []
-
         ans = 0
         for b in initialBoxes:
             if status[b] == 1:

@@ -10,7 +10,6 @@ for i in range(N):
 for i in range(n):
     d[a[i]] += 1
 ans = 0
-# print(d)
 cting = 0
 for i in range(n):
     temp = d[a[i]]
@@ -20,13 +19,10 @@ for i in range(n):
         if cting == 1:
             ans += 1
         d[a[i]] -= 1
-
     elif l[a[i]] == 1:
         d[a[i]] -= 1
         if temp - 1 == 0:
             cting -= 1
-
     elif cting == 0:
         ans += 1
-
 print(pow(2, ans - 1, 998244353))

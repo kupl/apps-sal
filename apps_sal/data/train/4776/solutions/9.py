@@ -1,7 +1,5 @@
-
 def length_sup_u_k(n, k):
     greater_num = 0
-
     number_table = []
     for index in range(0, n):
         if index <= 1:
@@ -30,5 +28,4 @@ def comp(n):
             number_table.append(new_number)
         if number_table[index] < number_table[index - 1]:
             pred_suck_count += 1
-
     return pred_suck_count

@@ -6,16 +6,13 @@ for i in range(N):
     data[i % 2].append(A[i])
     flag[0].append(i % 2)
     flag[1].append((i + 1) % 2)
-
 num0 = 0
-
 for i in range(len(data[0])):
     u = data[0][i]
     if u > 0:
         num0 += u
     else:
         flag[0][2 * i] = 1
-
 if num0 == 0:
     num0 = max(data[0])
     flag[0] = [1 for i in range(N)]
@@ -24,16 +21,13 @@ if num0 == 0:
         if u == num0:
             flag[0][2 * i] = 0
             break
-
 num1 = 0
-
 for i in range(len(data[1])):
     u = data[1][i]
     if u > 0:
         num1 += u
     else:
         flag[1][2 * i + 1] = 1
-
 if num1 == 0:
     num1 = max(data[1])
     flag[1] = [1 for i in range(N)]
@@ -42,7 +36,6 @@ if num1 == 0:
         if u == num1:
             flag[1][2 * i + 1] = 0
             break
-
 if num0 > num1:
     print(num0)
     H = flag[0]
@@ -66,7 +59,6 @@ while True:
         kkk -= 1
     else:
         break
-
 while kkk > 0:
     if H[kkk] == 0:
         kkk -= 1
@@ -77,7 +69,6 @@ while kkk > 0:
             cnt += 1
         for j in range((cnt + 1) // 2, 0, -1):
             ans.append(kkk + j)
-
 print(len(ans))
 for u in ans:
     print(u)

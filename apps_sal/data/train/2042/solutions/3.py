@@ -1,10 +1,14 @@
-def read(): return list(map(int, input().split()))
-def per(L, R): return R - L - 1 + min(R - n - 1, n - L)
+def read():
+    return list(map(int, input().split()))
 
 
-n, a, b, T = read()
+def per(L, R):
+    return R - L - 1 + min(R - n - 1, n - L)
+
+
+(n, a, b, T) = read()
 f = [1 + (i == 'w') * b for i in input()] * 2
-L, R = 0, n
+(L, R) = (0, n)
 ans = 0
 cur = sum(f) // 2
 while L <= n and R < n * 2:

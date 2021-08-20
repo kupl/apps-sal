@@ -15,8 +15,10 @@ def p2(n):
 
 
 def cmp_to_key(mycmp):
-    'Convert a cmp= function into a key= function'
+    """Convert a cmp= function into a key= function"""
+
     class K:
+
         def __init__(self, obj, *args):
             self.obj = obj
 
@@ -41,7 +43,7 @@ def cmp_to_key(mycmp):
 
 
 def comp(x, y):
-    return (p2(x) - p3(x)) - (p2(y) - p3(y))
+    return p2(x) - p3(x) - (p2(y) - p3(y))
 
 
 n = int(input())
@@ -49,5 +51,5 @@ arr = list(map(int, input().split()))
 arr = sorted(arr, key=cmp_to_key(comp))
 s = str(arr[0])
 for c in arr[1:]:
-    s += f" {c}"
+    s += f' {c}'
 print(s)

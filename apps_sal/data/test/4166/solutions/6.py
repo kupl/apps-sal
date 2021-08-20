@@ -1,10 +1,9 @@
-
 def main():
-    n, m = map(int, input().split(" "))
+    (n, m) = map(int, input().split(' '))
     s = [0] * m
     c = [0] * m
     for i in range(m):
-        s[i], c[i] = map(int, input().split(" "))
+        (s[i], c[i]) = map(int, input().split(' '))
     ans = [-1] * n
     for i in range(m):
         if ans[s[i] - 1] != -1 and ans[s[i] - 1] != c[i]:
@@ -23,11 +22,11 @@ def main():
                 if n == 1:
                     print(0)
                     return
-                print(1, end="")
+                print(1, end='')
             else:
-                print(0, end="")
+                print(0, end='')
         else:
-            print(ans[i], end="")
+            print(ans[i], end='')
     print()
 
 

@@ -2,7 +2,7 @@ n = int(input())
 x = [int(i) for i in input().split()]
 m = int(input())
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     t = b - 1
     t1 = x[a] - b

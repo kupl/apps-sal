@@ -1,11 +1,12 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-A, B, T = LI()
+(A, B, T) = LI()
 
 
 def main():
-    ans = (T // A) * B
+    ans = T // A * B
     print(ans)
 
 

@@ -7,7 +7,6 @@ def do(string):
                 ok.append(str(int(12 / i)) + 'x' + str(i))
                 num += 1
                 break
-
     ok = [str(num)] + ok
     print(' '.join(ok))
 

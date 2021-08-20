@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = input()
     a = [0 for i in range(26)]
     for i in l:

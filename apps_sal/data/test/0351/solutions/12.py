@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = sorted(tuple(map(int, input().split())))
 max = k
 ans = 0

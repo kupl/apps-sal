@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     mat = []
     ans = []
     for i in range(n + 2):
@@ -13,12 +13,12 @@ for _ in range(t):
         ans.append(p)
     y = int(input())
     for i in range(y):
-        a, b = [int(x) for x in input().split()]
+        (a, b) = [int(x) for x in input().split()]
         mat[a][b] = 1
         ans[a][b] = 0
     y = int(input())
     for i in range(y):
-        a, b = [int(x) for x in input().split()]
+        (a, b) = [int(x) for x in input().split()]
         mat[a][b] = 1000000000
         ans[a][b] = 1000000000
     for i in range(1, n + 1):
@@ -72,9 +72,9 @@ for _ in range(t):
     for i in range(1, n + 1):
         for j in range(1, m + 1):
             if mat[i][j] == 1000000000:
-                print('X', end=" ")
+                print('X', end=' ')
             elif ans[i][j] >= 1000000000:
-                print('-1', end=" ")
+                print('-1', end=' ')
             else:
-                print(ans[i][j], end=" ")
+                print(ans[i][j], end=' ')
         print()

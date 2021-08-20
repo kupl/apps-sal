@@ -1,6 +1,5 @@
 X = input()
-
-A = ""
+A = ''
 first = True
 for ch in X:
     if ch == '9' and first:
@@ -10,6 +9,5 @@ for ch in X:
         if v > 4:
             v = 9 - v
         A += chr(v + ord('0'))
-
     first = False
 print(A)

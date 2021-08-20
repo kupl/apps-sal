@@ -1,5 +1,5 @@
-n, d = list(map(int, input().split()))
-best, cur = 0, 0
+(n, d) = list(map(int, input().split()))
+(best, cur) = (0, 0)
 for i in range(d):
     day = list(set(input()))
     if day != ['1']:

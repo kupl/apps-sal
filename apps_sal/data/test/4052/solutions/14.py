@@ -16,7 +16,7 @@ for j in t:
         t1[j] = 1
     else:
         t1[j] += 1
-if (s1 != t1):
+if s1 != t1:
     print(-1)
 else:
     ans = []
@@ -26,9 +26,9 @@ else:
         while a[q] != t[ind]:
             q += 1
         while q != ind:
-            a[q], a[q - 1] = a[q - 1], a[q]
+            (a[q], a[q - 1]) = (a[q - 1], a[q])
             ans.append(q)
             q -= 1
         ind += 1
     print(len(ans))
-    print(" ".join(map(str, ans)))
+    print(' '.join(map(str, ans)))

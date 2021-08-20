@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 i = 0
 a = 0
@@ -13,6 +12,6 @@ for k in d:
             a = 1
             break
 if a == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

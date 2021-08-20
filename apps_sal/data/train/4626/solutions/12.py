@@ -3,7 +3,7 @@ s_ = 'abcdefghijklmnopqrstuvwxyz'
 
 def decode(string_):
     if not isinstance(string_, str):
-        return "Input is not a string"
+        return 'Input is not a string'
     s = ''
     for i in string_:
         if not i.isalpha():

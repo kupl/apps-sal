@@ -1,15 +1,13 @@
 import sys
 sys.setrecursionlimit(200000)
-
 n = int(input())
 arr = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     arr[a - 1].append(b - 1)
     arr[b - 1].append(a - 1)
 s = max([len(p) for p in arr]) + 1
 print(s)
-
 colored = [0] * n
 
 
@@ -35,4 +33,4 @@ else:
         c = c + 1 if c < s else 1
         if j < n - 1:
             i = arr[i][0] if not colored[arr[i][0]] else arr[i][1]
-print(" ".join(map(str, colored)))
+print(' '.join(map(str, colored)))

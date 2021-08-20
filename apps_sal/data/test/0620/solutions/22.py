@@ -1,8 +1,7 @@
 l = []
 for i in range(3):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     l.append([x, y])
-
 S = set()
 
 
@@ -30,8 +29,6 @@ for i in range(3):
             new.append([x, y])
             if calc(new) > 0:
                 S.add(tuple([x, y]))
-
-
 print(len(S))
 for i in S:
     print(i[0], i[1])

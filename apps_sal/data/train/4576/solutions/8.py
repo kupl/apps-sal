@@ -10,4 +10,4 @@ def gcd_matrix(a, b):
             k[j] = gcd(a[j], b[i])
             s.append(k[j])
         p += sum(s)
-    return round((p / (len(a) * len(b))), 3)
+    return round(p / (len(a) * len(b)), 3)

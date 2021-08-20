@@ -1,14 +1,11 @@
-n, m, s, t = list(map(int, input().split()))
+(n, m, s, t) = list(map(int, input().split()))
 G = [[] for _ in range(n + 1)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     G[a].append(b)
     G[b].append(a)
-
 dists = [n + 1] * (n + 1)
 distt = [n + 1] * (n + 1)
-
-# BFS find distance
 T = [s]
 count = 0
 while T:
@@ -20,7 +17,6 @@ while T:
                 newT.append(j)
     count += 1
     T = newT
-
 T = [t]
 count = 0
 while T:
@@ -32,7 +28,6 @@ while T:
                 newT.append(j)
     count += 1
     T = newT
-
 count = 0
 mm = dists[t]
 for i in range(1, n + 1):

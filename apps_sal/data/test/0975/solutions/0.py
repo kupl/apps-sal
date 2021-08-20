@@ -5,8 +5,8 @@ a = [int(i) for i in a]
 b = [int(i) for i in b]
 a.sort()
 b.sort()
-c = a[::]
-d = b[::]
+c = a[:]
+d = b[:]
 ans1 = 0
 ans2 = 0
 for i in a:
@@ -22,6 +22,5 @@ for i in c:
             break
     else:
         ans1 += 1
-
 print(ans1)
 print(ans2)

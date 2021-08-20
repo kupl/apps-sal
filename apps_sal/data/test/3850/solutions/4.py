@@ -2,12 +2,12 @@ def read():
     return [int(x) for x in input().split()]
 
 
-n, k, p = read()
+(n, k, p) = read()
 a = read()
 b = read()
 a.sort()
 b.sort()
-ans = 2e9 + 1
+ans = 2000000000.0 + 1
 ans = int(ans)
 for i in range(k - n + 1):
     tmp = 0

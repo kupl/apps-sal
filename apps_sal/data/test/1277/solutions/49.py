@@ -1,5 +1,3 @@
-# even faster by using a comprehensive list at the end
-
 from collections import deque
 import sys
 si = sys.stdin.readline
@@ -12,7 +10,6 @@ def BFS(g, n, s):
     visited = set()
     visited.add(s)
     Q = deque([s])
-
     while len(Q):
         d += 1
         Qs = len(Q)
@@ -28,16 +25,15 @@ def BFS(g, n, s):
 
 def main():
     l = [int(e) for e in si().split()]
-    n, u, v = l[0], l[1], l[2]
+    (n, u, v) = (l[0], l[1], l[2])
     graph = [[] for _ in range(n + 1)]
     for _ in range(n - 1):
         l = [int(e) for e in si().split()]
         graph[l[0]].append(l[1])
         graph[l[1]].append(l[0])
-
     udt = BFS(graph, n, u)
     vdt = BFS(graph, n, v)
-    print((-1 + max([v for u, v in zip(udt, vdt) if u < v])))
+    print(-1 + max([v for (u, v) in zip(udt, vdt) if u < v]))
 
 
 def __starting_point():

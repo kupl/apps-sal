@@ -1,10 +1,9 @@
 n = int(input())
 l = []
 for i in range(n):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     t = [a, b, c]
     l.append(sorted(t))
-
 l.sort()
 l1 = []
 for i in l:

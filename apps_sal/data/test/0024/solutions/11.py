@@ -1,7 +1,6 @@
 field = []
 for _ in range(10):
     field.append(input())
-
 rows = [row for row in field]
 columns = []
 for i in range(10):

@@ -20,5 +20,5 @@ num_sum.reverse()
 numbers.reverse()
 del num_sum[0]
 for i in range(N - 1):
-    r += (numbers[i] * num_sum[i]) % CONST
-print((r % CONST))
+    r += numbers[i] * num_sum[i] % CONST
+print(r % CONST)

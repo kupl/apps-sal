@@ -1,15 +1,13 @@
-# cook your dish here
-n, m = map(int, input().split(" "))
+(n, m) = map(int, input().split(' '))
 arr = []
 for i in range(n):
     arr.append([int(j) for j in input().split()])
 l = int(input())
 check = []
 for i in range(l):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     check.append([a - 1, b - 1])
-
-e1, e2 = 0, 0
+(e1, e2) = (0, 0)
 for i in range(l):
     if e1 != -1:
         if check[i][0] < n and check[i][1] < m:

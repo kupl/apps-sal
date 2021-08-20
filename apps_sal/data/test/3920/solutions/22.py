@@ -18,11 +18,9 @@ def m(end, start):
 def area(poly):
     ret = 0
     n = len(poly)
-
     for i in range(n):
         j = (i + 1) % n
         ret += crs(poly[i], poly[j])
-
     return abs(ret) / 2.0
 
 
@@ -33,23 +31,16 @@ def dist(a, b):
 def get_next_point(p0, p1, x, y):
     r = ((p1[0] - p0[0]) / x * y, (p1[1] - p0[1]) / x * y)
     r = rotate(r, radians(60))
-
     return (p1[0] + r[0], p1[1] + r[1])
 
 
 a = list(map(int, input().split()))
-
-
 pnt = [(0, 0), (a[0], 0)]
-
 for i in range(1, len(a)):
     pnt.append(get_next_point(pnt[-2], pnt[-1], a[i - 1], a[i]))
-    assert((dist(pnt[-2], pnt[-1]) - a[i]) <= 1e-7)
-
-
+    assert dist(pnt[-2], pnt[-1]) - a[i] <= 1e-07
 ret = area(pnt) * 4 / sqrt(3)
 for i in range(floor(ret), floor(ret) + 3):
-    if abs(ret - i) < 1e-7:
+    if abs(ret - i) < 1e-07:
         ret = i
-
 print(ret)

@@ -1,9 +1,6 @@
 from sys import stdin
 from math import ceil, gcd
 
-# Input data
-#stdin = open("input", "r")
-
 
 def dfs(src, visit):
     visit[src] = 1
@@ -13,10 +10,10 @@ def dfs(src, visit):
 
 
 for _ in range(int(stdin.readline())):
-    n, m = list(map(int, stdin.readline().split()))
+    (n, m) = list(map(int, stdin.readline().split()))
     d = {}
     for i in range(m):
-        u, v = list(map(int, stdin.readline().split()))
+        (u, v) = list(map(int, stdin.readline().split()))
         if u in d:
             d[u].append(v)
         else:

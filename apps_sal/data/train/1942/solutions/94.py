@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         ans = []
         d = {i: set(favoriteCompanies[i]) for i in range(len(favoriteCompanies))}
@@ -9,5 +10,4 @@ class Solution:
                         break
             else:
                 ans.append(i)
-
         return ans

@@ -20,7 +20,7 @@ for _ in range(rn()):
         else:
             ans = 1
     else:
-        ans = (k - a)
+        ans = k - a
         a = k
         if (k + a) % 2 != 0:
             ans += 1

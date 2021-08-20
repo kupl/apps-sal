@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         engineers = [(speed[i], efficiency[i]) for i in range(n)]
         engineers.sort(key=lambda x: (-x[1], x[0]))

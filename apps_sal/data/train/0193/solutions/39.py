@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         length = len(arr)
         bar = length // 2

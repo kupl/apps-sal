@@ -1,4 +1,3 @@
-
 def __starting_point():
     inp = input()
     arr = inp.split(' ')
@@ -6,7 +5,7 @@ def __starting_point():
     m = int(arr[1])
     s = int(arr[2])
     f = int(arr[3])
-    ans = ""
+    ans = ''
     ch = 'L'
     inc = -1
     if s < f:
@@ -28,7 +27,7 @@ def __starting_point():
             s += inc
             if s == f:
                 break
-        if s != f and (((s + inc) >= l and (s + inc) <= r) or ((s >= l) and (s <= r))):
+        if s != f and (s + inc >= l and s + inc <= r or (s >= l and s <= r)):
             ans += 'X'
         elif s != f:
             ans += ch

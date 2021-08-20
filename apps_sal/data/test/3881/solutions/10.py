@@ -1,9 +1,8 @@
 import collections
-
-n, q = [int(x) for x in input().split()]
+(n, q) = [int(x) for x in input().split()]
 g = dict()
 for i in range(q):
-    to, f = input().split()
+    (to, f) = input().split()
     if f in g:
         g[f].append(to)
     else:

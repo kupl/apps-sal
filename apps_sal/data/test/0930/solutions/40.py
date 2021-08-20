@@ -1,20 +1,14 @@
-# coding: utf-8
 import math
 import sys
-#from operator import itemgetter
 sysread = sys.stdin.readline
-#from heapq import heappop, heappush
-#from collections import defaultdict
-sys.setrecursionlimit(10**7)
-#from itertools import combinations
+sys.setrecursionlimit(10 ** 7)
 
 
 def run():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mod = 10 ** 9 + 7
     ret = 0
     inv = generate_inv(n, mod)
-
     if k >= n - 1:
         k = n - 1
     left = 1
@@ -56,7 +50,7 @@ def comb_mod(n, a, mod):
         down *= i + 1
         down %= mod
     down = pow_mod(down, mod - 2, mod)
-    return (up * down) % mod
+    return up * down % mod
 
 
 def pow_mod(n, k, mod):
@@ -64,12 +58,12 @@ def pow_mod(n, k, mod):
     while True:
         if k // 2 >= 1:
             if k % 2 == 1:
-                res = (res * n) % mod
-            n = (n ** 2) % mod
+                res = res * n % mod
+            n = n ** 2 % mod
             k = k // 2
         else:
             break
-    return (n * res) % mod
+    return n * res % mod
 
 
 def __starting_point():

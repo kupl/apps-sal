@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     L = list(map(int, input().split()))
     Balance = [0] * k
     Is = 0

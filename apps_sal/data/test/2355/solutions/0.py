@@ -1,6 +1,6 @@
 t = int(input())
 for tt in range(t):
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     now = 1
     ans = 0
     while ans != 2 * n + p:

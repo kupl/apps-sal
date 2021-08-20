@@ -1,2 +1,2 @@
 def move(x, y):
-    return (y * 2) + x
+    return y * 2 + x

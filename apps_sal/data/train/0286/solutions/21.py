@@ -1,20 +1,17 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
-        '''
+        """
         箱子中有n个球，箱中有2种颜色的球，分别有k1,k2个
         箱子中的组合数为n!/k1!k2!
-        '''
-        n = sum(balls)  # 总球数
-        k = len(balls)  # 球色数
+        """
+        n = sum(balls)
+        k = len(balls)
         self.total = 0
         self.valid = 0
-        fact = [1] * 50  # 得到每个数的阶乘
+        fact = [1] * 50
         for i in range(1, 50):
             fact[i] = fact[i - 1] * i
-        #d: depth
-        # b1, b2: # of balls in box1, box2
-        # c1,c2 :两个box中不同色的球数
-        # p1, p2: # permutations of duplicate balls in box1, box2
 
         def dfs(d, b1, b2, c1, c2, p1, p2):
             if b1 > n // 2 or b2 > n // 2:

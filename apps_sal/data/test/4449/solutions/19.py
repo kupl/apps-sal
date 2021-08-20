@@ -13,4 +13,4 @@ for i in range(N):
         if B[i * 2] * B[-i * 2 - 1] != S:
             flag = False
             break
-    print(["NO", "YES"][flag])
+    print(['NO', 'YES'][flag])

@@ -1,4 +1,4 @@
-n, m, k = tuple(map(int, input().split(' ')))
+(n, m, k) = tuple(map(int, input().split(' ')))
 marks = [0 for i in range(m)]
 for i in range(n):
     s = input()
@@ -10,6 +10,4 @@ for mark in marks:
     if mark >= k:
         res += 1
 print(res)
-"""
-a kitten
-"""
+'\na kitten\n'

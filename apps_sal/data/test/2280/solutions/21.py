@@ -5,7 +5,7 @@ for i in range(q):
     l.sort()
     ans = 0
     for i in range(n - 2):
-        if (ans + 1 == l[-2]):
+        if ans + 1 == l[-2]:
             break
         else:
             ans += 1

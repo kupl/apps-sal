@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         dp = [0 for _ in range(k + 1)]
         rolling_max = -1

@@ -1,17 +1,13 @@
 def main():
     import sys
     readline = sys.stdin.buffer.readline
-
     from collections import deque
-
     n = int(readline())
     ab = [list(map(int, readline().split())) for _ in range(n - 1)]
-
     l = [[] for _ in range(n + 1)]
-    for a, b in ab:
+    for (a, b) in ab:
         l[a].append(b)
         l[b].append(a)
-
     parents = [-1] * (n + 1)
     order = []
     q = deque()
@@ -24,7 +20,6 @@ def main():
                 continue
             parents[i] = c
             q.append(i)
-
     color = [-1] * (n + 1)
     for i in order:
         ng = color[i]
@@ -36,14 +31,12 @@ def main():
                 c += 1
             color[j] = c
             c += 1
-
     ans = []
-    for a, b in ab:
+    for (a, b) in ab:
         if a == parents[b]:
             ans.append(color[b])
         else:
             ans.append(color[a])
-
     print(max(ans))
     print('\n'.join(list(map(str, ans))))
 

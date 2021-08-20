@@ -1,6 +1,5 @@
 from sys import stdin, stdout
 import numpy as np
-
 n = int(input())
 a = list(map(int, input().split()))
 q = int(input())
@@ -21,19 +20,16 @@ while q:
                     forward += 1
                 else:
                     break
-
             for j in range(i - 1, -1, -1):
                 if flag:
                     if a[j] > k:
                         backward += 1
                     else:
                         break
+                elif a[j] >= k:
+                    backward += 1
                 else:
-                    if a[j] >= k:
-                        backward += 1
-                    else:
-                        break
+                    break
             count += forward * backward
             ans += count
-
     print(ans)

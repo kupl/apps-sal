@@ -1,12 +1,11 @@
 import sys
-
 input = sys.stdin.readline
 S = input()
 S = S.replace('\n', '')
-tmp = ""
+tmp = ''
 division_count = 0
 for s in S:
-    if tmp == "":
+    if tmp == '':
         tmp = s
         continue
     if tmp == s:

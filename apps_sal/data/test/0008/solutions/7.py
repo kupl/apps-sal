@@ -11,13 +11,12 @@ def isk(a, b, c):
     return 0
 
 
-a, b, c = input().split()
+(a, b, c) = input().split()
 x = [a, b, c]
 typem = []
 types = []
 typep = []
-m, s, p = 0, 0, 0
-
+(m, s, p) = (0, 0, 0)
 for i in x:
     if i[1] == 'm':
         m += 1
@@ -28,55 +27,42 @@ for i in x:
     elif i[1] == 'p':
         p += 1
         typep.append(i)
-
 ans = 0
 done = 0
-
 if isk(a, b, c) or ism(a, b, c):
     ans = 0
     done = 1
-
-if done == 0 and a == b and b == c:
+if done == 0 and a == b and (b == c):
     ans = 0
     done = 1
-
 elif done == 0 and a == b:
     ans = 1
     done = 1
-
 elif done == 0 and b == c:
     ans = 1
     done = 1
 elif done == 0 and a == c:
     ans = 1
     done = 1
-# Shuntsu
 if done == 0 and m >= 2:
     typem.sort()
     for i in range(len(typem) - 1):
-        if abs(int(typem[i][0]) - int(typem[i + 1][0])) <= 2 and \
-           abs(int(typem[i][0]) - int(typem[i + 1][0])) > 0:
+        if abs(int(typem[i][0]) - int(typem[i + 1][0])) <= 2 and abs(int(typem[i][0]) - int(typem[i + 1][0])) > 0:
             ans = 1
             done = 1
-
 if done == 0 and s >= 2:
     types.sort()
     for i in range(len(types) - 1):
-        if abs(int(types[i][0]) - int(types[i + 1][0])) <= 2 and \
-           abs(int(types[i][0]) - int(types[i + 1][0])) > 0:
+        if abs(int(types[i][0]) - int(types[i + 1][0])) <= 2 and abs(int(types[i][0]) - int(types[i + 1][0])) > 0:
             ans = 1
             done = 1
-
 if done == 0 and p >= 2:
     typep.sort()
     for i in range(len(typep) - 1):
-        if abs(int(typep[i][0]) - int(typep[i + 1][0])) <= 2 and \
-           abs(int(typep[i][0]) - int(typep[i + 1][0])) > 0:
+        if abs(int(typep[i][0]) - int(typep[i + 1][0])) <= 2 and abs(int(typep[i][0]) - int(typep[i + 1][0])) > 0:
             ans = 1
             done = 1
-
 if done == 0:
     ans = 2
     done = 1
-
 print(ans)

@@ -37,7 +37,7 @@ elif n % 2 == 1:
         a[n - 1][j] = z
         z += 1
         if j % 2 == 1:
-            a[n - 3][j], a[n - 1][j] = a[n - 1][j], a[n - 3][j]
+            (a[n - 3][j], a[n - 1][j]) = (a[n - 1][j], a[n - 3][j])
 elif n % 2 == 0:
     for i in range(n - 3):
         for j in range(n):
@@ -54,8 +54,7 @@ elif n % 2 == 0:
         a[n - 1][j] = z
         z += 1
         if j % 2 == 1:
-            a[n - 3][j], a[n - 1][j] = a[n - 1][j], a[n - 3][j]
-
+            (a[n - 3][j], a[n - 1][j]) = (a[n - 1][j], a[n - 3][j])
 if n >= 4:
     m = n ** 2
     a[n - 3][n - 4] = m - 6

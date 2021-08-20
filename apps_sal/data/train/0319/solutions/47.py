@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         cursum = 0

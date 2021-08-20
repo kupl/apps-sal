@@ -1,9 +1,9 @@
 n = int(input())
-a = list(tuple(map(int, input().split())) for i in range(n))
-s = sum(t for t, w in a)
-a = [(t / w, t, t + w) for t, w in a]
+a = list((tuple(map(int, input().split())) for i in range(n)))
+s = sum((t for (t, w) in a))
+a = [(t / w, t, t + w) for (t, w) in a]
 a.sort(reverse=True)
-d, i = s, 0
+(d, i) = (s, 0)
 while d >= 0:
     s -= a[i][1]
     d -= a[i][2]

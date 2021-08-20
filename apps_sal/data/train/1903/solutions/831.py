@@ -1,5 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def manhadistance(x, y):
             return abs(x[0] - y[0]) + abs(x[1] - y[1])
         n = len(points)
@@ -16,18 +18,14 @@ class Solution:
                     if min_distance[i][j] < min_flag:
                         min_flag = min_distance[i][j]
                         min_point = i
-        # print(min_distance)
         for j in range(n):
             if j != min_point:
                 heappush(queue, (min_distance[min_point][j], min_point, j))
-        # print(queue)
-
         res = 0
         visit = [False] * n
         while queue:
             cur = heappop(queue)
-            v, x, y = cur
-
+            (v, x, y) = cur
             if not visit[x] or not visit[y]:
                 res += cur[0]
                 visit[x] = True
@@ -37,5 +35,4 @@ class Solution:
             for j in range(n):
                 if not visit[j]:
                     heappush(queue, (min_distance[y][j], y, j))
-
         return res

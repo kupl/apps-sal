@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, num):
         self.forest = list(range(num))
 
@@ -12,19 +13,18 @@ class DisjointSet:
 
 
 class Solution:
+
     def largestComponentSize(self, arr):
         n = len(arr)
         ds = DisjointSet(n)
         primesDict = defaultdict(list)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             primes = self.getPrimes(num)
             for p in primes:
                 primesDict[p].append(i)
-
         for li in primesDict.values():
             for i in range(len(li) - 1):
                 ds.union(li[i], li[i + 1])
-
         return max(Counter([ds.find(i) for i in range(n)]).values())
 
     def getPrimes(self, num):

@@ -1,4 +1,3 @@
-# Vika
 col = int(input())
 ll = list(map(int, input().split()))
 a1 = col * min(ll)

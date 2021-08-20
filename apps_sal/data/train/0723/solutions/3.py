@@ -1,4 +1,3 @@
-# cook your code here
 T = int(input())
 for i in range(T):
     N = int(input())
@@ -14,14 +13,13 @@ for i in range(T):
             if diff[j][0] == -1:
                 print(0, end=' ')
             elif diff[j][0] == 0:
-                print("%d" % diff[j][1], end=' ')
+                print('%d' % diff[j][1], end=' ')
             else:
-                print("%dx^%d" % (diff[j][1], diff[j][0]), end=' ')
+                print('%dx^%d' % (diff[j][1], diff[j][0]), end=' ')
+        elif diff[j][0] == -1:
+            break
+        elif diff[j][0] == 0:
+            print('+ %d' % diff[j][1], end=' ')
         else:
-            if diff[j][0] == -1:
-                break
-            elif diff[j][0] == 0:
-                print("+ %d" % diff[j][1], end=' ')
-            else:
-                print("+ %dx^%d" % (diff[j][1], diff[j][0]), end=' ')
-    print("")
+            print('+ %dx^%d' % (diff[j][1], diff[j][0]), end=' ')
+    print('')

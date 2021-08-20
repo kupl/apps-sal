@@ -1,8 +1,6 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 import sys
 input = sys.stdin.readline
-inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
-
+(inp, ip) = (lambda: int(input()), lambda: [int(w) for w in input().split()])
 for _ in range(inp()):
     n = inp()
     x = ip()
@@ -16,13 +14,10 @@ for _ in range(inp()):
         t = dt.get(x[i], [])
         t.append(i)
         dt[x[i]] = t
-    # print(x)
-    # print(pre)
-    # print(dt)
     ans = 0
     for i in range(n):
         if len(dt[x[i]]) > 1:
-            a, b = dt[x[i]][:2]
+            (a, b) = dt[x[i]][:2]
             dt[x[i]] = dt[x[i]][1:]
             if a == b:
                 continue
@@ -31,7 +26,6 @@ for _ in range(inp()):
             if x[i] % 2:
                 if ct % 2:
                     ans = max(ans, t)
-            else:
-                if ((b - 1 - a + 1 + 1) - ct) % 2 == 0:
-                    ans = max(ans, t)
+            elif (b - 1 - a + 1 + 1 - ct) % 2 == 0:
+                ans = max(ans, t)
     print(ans)

@@ -12,5 +12,4 @@ def count_2(x, num):
 ans = 0
 for i in range(n):
     ans += count_2(a[i], 0)
-
 print(ans)

@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -8,7 +7,7 @@ if not USE_STDIO:
 
 
 def main():
-    n, k = list(map(int, input().split(' ')))
+    (n, k) = list(map(int, input().split(' ')))
     ans = (k + n - 1) // n
     print(ans)
 

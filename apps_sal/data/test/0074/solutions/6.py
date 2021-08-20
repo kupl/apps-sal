@@ -8,15 +8,12 @@ def miller_rabin(n):
         return True
     if n <= 1 or not n & 1:
         return False
-
     primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]
-
     d = n - 1
     s = 0
     while not d & 1:
         d >>= 1
         s += 1
-
     for prime in primes:
         if prime >= n:
             continue
@@ -33,7 +30,6 @@ def miller_rabin(n):
 
 
 N = int(input())
-
 if miller_rabin(N):
     print(1)
     print(N)

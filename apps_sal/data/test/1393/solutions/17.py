@@ -5,11 +5,10 @@ def change(x):
         return x.upper()
 
 
-s, t = input(), input()
+(s, t) = (input(), input())
 L = [0] * 256
 for i in t:
     L[ord(i)] += 1
-
 ans1 = ans2 = 0
 P = []
 for i in s:
@@ -19,7 +18,6 @@ for i in s:
         ans1 += 1
     else:
         P.append(i)
-
 for i in P:
     x = ord(change(i))
     if L[x] > 0:

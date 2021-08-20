@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def calc(n):
@@ -17,7 +17,6 @@ else:
             r = mid
         else:
             l = mid
-
     if calc(l) >= n - m:
         r = l
     ans += r

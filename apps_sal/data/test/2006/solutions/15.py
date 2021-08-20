@@ -1,9 +1,9 @@
 def main():
-    n, _ = list(map(int, input().split()))
+    (n, _) = list(map(int, input().split()))
     res = set()
     for _ in range(n):
         a = input()
-        s, g = a.find("S"), a.find("G")
+        (s, g) = (a.find('S'), a.find('G'))
         if s < g:
             print(-1)
             return

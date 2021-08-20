@@ -6,29 +6,56 @@ import heapq
 from itertools import combinations as c, permutations as perm, product as p
 from collections import deque
 from copy import deepcopy
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
-MOD = 10**9 + 7
-#MOD = 998244353
+MOD = 10 ** 9 + 7
 
 
-def si(): return input()
-def ii(): return int(input())
-def fi(): return float(input())
-def lstr(): return input().split()
-def lint(): return list(map(int, input().split()))
-def lintdec(): return list(map(lambda x: int(x) - 1, input().split()))
-def lnstr(n): return [input() for _ in range(n)]
-def lnint(n): return [ii() for _ in range(n)]
-def lint_list(n): return [lint() for _ in range(n)]
-def lcm(a, b): return a * b // math.gcd(a, b)
+def si():
+    return input()
 
 
-#######################################################
-N, M = lint()
+def ii():
+    return int(input())
 
 
-class UnionFind():
+def fi():
+    return float(input())
+
+
+def lstr():
+    return input().split()
+
+
+def lint():
+    return list(map(int, input().split()))
+
+
+def lintdec():
+    return list(map(lambda x: int(x) - 1, input().split()))
+
+
+def lnstr(n):
+    return [input() for _ in range(n)]
+
+
+def lnint(n):
+    return [ii() for _ in range(n)]
+
+
+def lint_list(n):
+    return [lint() for _ in range(n)]
+
+
+def lcm(a, b):
+    return a * b // math.gcd(a, b)
+
+
+(N, M) = lint()
+
+
+class UnionFind:
+
     def __init__(self):
         self.par = [0] * N
         self.rank = [0] * N
@@ -59,19 +86,15 @@ def main():
     UF = UnionFind()
     a = lint()
     b = lint()
-
     for _ in range(M):
-        c, d = lintdec()
+        (c, d) = lintdec()
         UF.unite(c, d)
-
     roots = [UF.root(i) for i in range(N)]
     sum_a = {root: 0 for root in set(roots)}
     sum_b = sum_a.copy()
-
     for i in range(N):
         sum_a[roots[i]] += a[i]
         sum_b[roots[i]] += b[i]
-
     print('Yes' if sum_a == sum_b else 'No')
 
 

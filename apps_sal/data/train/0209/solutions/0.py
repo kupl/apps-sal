@@ -1,4 +1,5 @@
 class Solution:
+
     def mergeStones(self, stones: List[int], K: int) -> int:
         n = len(stones)
         if (n - 1) % (K - 1) != 0:
@@ -14,5 +15,5 @@ class Solution:
             res = 0
             if (j - i) % (K - 1) == 0:
                 res = prefix[j + 1] - prefix[i]
-            return res + min(dp(i, mid) + dp(mid + 1, j) for mid in range(i, j, K - 1))
+            return res + min((dp(i, mid) + dp(mid + 1, j) for mid in range(i, j, K - 1)))
         return dp(0, n - 1)

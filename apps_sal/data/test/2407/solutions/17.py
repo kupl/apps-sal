@@ -1,15 +1,13 @@
 import heapq
-# python template for atcoder1
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 
 
 def solve():
-    N, R = list(map(int, input().split()))
+    (N, R) = list(map(int, input().split()))
     M = list(set([-int(x) for x in input().split()]))
     heapq.heapify(M)
-
     ans = 0
     cur_pos = 0
     while M:

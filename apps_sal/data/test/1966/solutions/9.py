@@ -22,18 +22,15 @@ for i in range(4):
     f = []
     f.append(b[i])
     b.pop(i)
-
     for j in range(3):
         d = b[:]
         f.append(d[j])
         d.pop(j)
         for k in range(2):
             e = d[:]
-            # print(e)
             f.append(e[k])
             e.pop(k)
             f.append(e[0])
-
             se = []
             for v in f:
                 se.append(a[v])
@@ -45,7 +42,6 @@ for i in range(4):
                             if (ii + jj) % 2 != seg[ii][jj]:
                                 fa += 1
                 m = min(m, fa, 4 * n * n - fa)
-                # print(fa)
             else:
                 for seg in se[:2]:
                     for ii in range(n):
@@ -57,9 +53,7 @@ for i in range(4):
                         for jj in range(n):
                             if (ii + jj) % 2 == seg[ii][jj]:
                                 fa += 1
-             #   print(fa)
                 m = min(m, fa, 4 * n * n - fa)
-            # print(m,f)
             f.pop()
             f.pop()
         f.pop()

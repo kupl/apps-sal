@@ -1,7 +1,6 @@
-# cook your dish here
-num, loc = map(int, input().split())
+(num, loc) = map(int, input().split())
 houses = list(map(int, input().split()))
-ans = 10**9
+ans = 10 ** 9
 temp = []
 for i in range(num):
     diff = abs(houses[i] - loc)

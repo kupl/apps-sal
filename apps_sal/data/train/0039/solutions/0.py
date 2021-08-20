@@ -1,7 +1,6 @@
 t = int(input())
-
 for tt in range(t):
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = input()
     n = len(s)
     cost = [0] * n

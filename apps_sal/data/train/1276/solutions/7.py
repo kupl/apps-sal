@@ -1,6 +1,6 @@
 from bisect import *
 for x in range(eval(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     arr.sort()
     t = 1
@@ -15,9 +15,7 @@ for x in range(eval(input())):
         else:
             ans += 1
             t = t * 2
-    # print t,ans
-    while t < 2**(k):
-        # print 1
+    while t < 2 ** k:
         ans += 1
         t = t * 2
     print(ans)

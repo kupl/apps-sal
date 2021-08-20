@@ -1,11 +1,8 @@
 class UF(object):
 
     def __init__(self, size):
-        # initially, each node is an independent component
         self.parent = [i for i in range(size)]
-        # keep the size of each component
-        self.size = [1] * (size)
-        # count of the disconnected sets
+        self.size = [1] * size
 
     def union(self, p, q):
         rootp = self.find(p)
@@ -32,8 +29,8 @@ class UF(object):
 
 
 class Solution:
-    def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
         distances = []
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
@@ -42,7 +39,7 @@ class Solution:
         distances.sort()
         uf = UF(len(points))
         res = 0
-        for dis, u, v in distances:
+        for (dis, u, v) in distances:
             if not uf.connected(u, v):
                 uf.union(u, v)
                 res += dis

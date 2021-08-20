@@ -1,7 +1,7 @@
 from inspect import getfullargspec
 
 
-def curry_partial(f, *initial_args, arg_spec=None):  # I don't think this is what I needed to do...
+def curry_partial(f, *initial_args, arg_spec=None):
     if not arg_spec:
         if not callable(f):
             return f
@@ -13,6 +13,7 @@ def curry_partial(f, *initial_args, arg_spec=None):  # I don't think this is wha
         else:
             return f(*initial_args[:param_l])
     else:
+
         def fun(*args):
-            return curry_partial(f, *(initial_args + args), arg_spec=arg_spec)
+            return curry_partial(f, *initial_args + args, arg_spec=arg_spec)
         return fun

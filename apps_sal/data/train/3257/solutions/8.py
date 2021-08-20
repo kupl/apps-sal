@@ -7,5 +7,5 @@ def slogan_maker(tab):
     generator = [] * len(unique)
     x = list(itertools.permutations(unique))
     for i in x:
-        generator.append(" ".join(i))
+        generator.append(' '.join(i))
     return generator

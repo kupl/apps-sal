@@ -1,7 +1,7 @@
 n = int(input())
-ws, hs, ans = [], [], ''
+(ws, hs, ans) = ([], [], '')
 for i in range(n):
-    w, h = map(int, input().split())
+    (w, h) = map(int, input().split())
     ws.append(w)
     hs.append(h)
 const = tuple(hs)

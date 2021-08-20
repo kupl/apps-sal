@@ -7,7 +7,6 @@ M = int(input())
 t = []
 for j in range(M):
     t.append(input())
-
 ans = 0
 for i in range(N + 1):
     target = s[i]

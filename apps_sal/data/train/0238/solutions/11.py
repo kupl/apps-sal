@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfit(self, prices):
         """
         :type prices: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         if not prices:
             return 0
-        buy1, sell1, buy2, sell2 = -prices[0], 0, -prices[0], 0
+        (buy1, sell1, buy2, sell2) = (-prices[0], 0, -prices[0], 0)
         for p in prices:
             buy1 = max(buy1, -p)
             sell1 = max(sell1, buy1 + p)

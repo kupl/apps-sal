@@ -1,7 +1,7 @@
-n, money = map(int, input().split())
+(n, money) = map(int, input().split())
 ans = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans.append([a, b, a - b])
 s = 0
 for i in range(len(ans)):

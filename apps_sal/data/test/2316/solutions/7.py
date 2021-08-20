@@ -1,7 +1,6 @@
 t = int(input())
-
 for g in range(t):
-    x, a, b = list(map(int, input().split()))
+    (x, a, b) = list(map(int, input().split()))
     while x > 20 and a > 0:
         x = x // 2 + 10
         a -= 1

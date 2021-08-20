@@ -4,6 +4,6 @@ def my_first_kata(a, b):
     elif isinstance(a, int) and isinstance(b, int):
         a = int(a)
         b = int(b)
-        return a % b + + b % a
+        return a % b + +b % a
     else:
         return False

@@ -1,5 +1,5 @@
 from collections import deque
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 m = max(a)
 dq = deque()
@@ -23,4 +23,3 @@ for _ in range(q):
         print(*ans[x - 1])
     else:
         print(m, temp[(x - len(ans) - 1) % len(temp)])
-# print(ans)

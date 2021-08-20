@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 n = int(input())
 d = {'^': 0, '>': 1, 'v': 2, '<': 3}
 e = {'^': 0, '>': 3, 'v': 2, '<': 1}

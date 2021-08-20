@@ -1,4 +1,4 @@
-w, h, k = map(int, input().split())
+(w, h, k) = map(int, input().split())
 ans = 0
 for i in range(k):
     ans += w * 2 + (h - 2) * 2

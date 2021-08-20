@@ -1,6 +1,6 @@
 import bisect
-A, B, Q = map(int, input().split())
-INF = 10**18
+(A, B, Q) = map(int, input().split())
+INF = 10 ** 18
 S = [-INF] + [int(input()) for i in range(A)] + [INF]
 T = [-INF] + [int(input()) for i in range(B)] + [INF]
 for q in range(Q):

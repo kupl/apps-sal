@@ -46,11 +46,11 @@ def mul(A, B):
     return ret
 
 
-L, A, B, M = map(int, input().split())
+(L, A, B, M) = map(int, input().split())
 ans = 0
 d = 0
 for k in range(18, 0, -1):
-    l = max((pw(10, (k - 1)) - A + B - 1) // B, 0)
+    l = max((pw(10, k - 1) - A + B - 1) // B, 0)
     r = min((pw(10, k) - A - 1) // B, L - 1)
     if l <= r:
         MT = [[1, mpw(10, k), 0], [0, mpw(10, k), (M - B * mpw(10, k) % M) % M], [0, 0, mpw(10, k)]]

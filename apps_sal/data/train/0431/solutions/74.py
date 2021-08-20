@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         res = 0
         A = [0] + A + [0]
@@ -8,4 +9,4 @@ class Solution:
                 j = stack.pop()
                 res += A[j] * (i - j) * (j - stack[-1])
             stack.append(i)
-        return res % (10**9 + 7)
+        return res % (10 ** 9 + 7)

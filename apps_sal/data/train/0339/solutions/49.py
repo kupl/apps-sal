@@ -1,4 +1,5 @@
 class Solution:
+
     def helper(self, nums1, nums2):
         n1 = len(nums1)
         n2 = len(nums2)
@@ -10,9 +11,7 @@ class Solution:
                     h1[nums1[j] * nums1[k]] = 1
                 else:
                     h1[nums1[j] * nums1[k]] += 1
-
-        l = [i**2 for i in nums2]
-
+        l = [i ** 2 for i in nums2]
         ans = 0
         for i in l:
             if i in h1:
@@ -20,5 +19,4 @@ class Solution:
         return ans
 
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-
         return self.helper(nums1, nums2) + self.helper(nums2, nums1)

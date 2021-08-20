@@ -1,4 +1,3 @@
-# send help plz
 from math import inf
 
 

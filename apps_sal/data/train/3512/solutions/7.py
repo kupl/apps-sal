@@ -3,5 +3,5 @@ def last_fib_digit(n):
     tmp = 1
     n = n % 60
     for i in range(n):
-        last, tmp = tmp, (last + tmp)
+        (last, tmp) = (tmp, last + tmp)
     return last % 10

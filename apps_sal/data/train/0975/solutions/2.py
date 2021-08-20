@@ -3,7 +3,7 @@ for _ in range(int(input())):
     nc = 0
     arr1 = []
     arr2 = []
-    n, r, x, y = list(map(int, input().split()))
+    (n, r, x, y) = list(map(int, input().split()))
     if x != 0:
         arr1 = list(map(int, input().split()))
     if y != 0:

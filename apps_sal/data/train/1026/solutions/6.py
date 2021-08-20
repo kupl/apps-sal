@@ -7,6 +7,6 @@ try:
         b = l[1]
         c = l[2]
         ans = a * (b - 1) * (c - 2)
-        print(ans % ((10**9) + 7))
+        print(ans % (10 ** 9 + 7))
 except:
     pass

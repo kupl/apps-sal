@@ -1,6 +1,5 @@
 s = int(input())
 TMP = [s]
-
 if s == 1 or s == 2:
     print(4)
 else:

@@ -1,8 +1,6 @@
-D, T, S = map(int, input().split())
-
+(D, T, S) = map(int, input().split())
 time = D / S
-
-if(time <= T):
+if time <= T:
     print('Yes')
 else:
     print('No')

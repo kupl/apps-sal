@@ -1,4 +1,5 @@
 class UnionFindSet:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [0] * n
@@ -23,22 +24,21 @@ class UnionFindSet:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         ans = -1
         uf = UnionFindSet(n)
-
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             uf.rank[i] = 1
             for j in (i - 1, i + 1):
                 if 0 <= j < n:
                     if uf.rank[uf.find(j)] == m:
                         ans = step
-                    print((uf.rank[uf.find(j)]))
+                    print(uf.rank[uf.find(j)])
                     if uf.rank[j]:
                         uf.union(i, j)
-
         for i in range(n):
             if uf.rank[uf.find(i)] == m:
                 return n

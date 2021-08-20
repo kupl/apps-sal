@@ -5,8 +5,8 @@ try:
         x = list(map(int, input().split()))
         y = x[2] / (math.sqrt(2) * x[1])
         if y > 1:
-            print("Elevator")
+            print('Elevator')
         else:
-            print("Stairs")
+            print('Stairs')
 except:
     pass

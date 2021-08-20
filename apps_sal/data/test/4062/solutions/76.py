@@ -1,4 +1,4 @@
-x, y, z, w = map(int, input().split())
+(x, y, z, w) = map(int, input().split())
 l = []
 l.append(x * z)
 l.append(x * w)

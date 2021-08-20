@@ -1,14 +1,12 @@
-n, m, k, x, y = list(map(int, input().split()))
+(n, m, k, x, y) = list(map(int, input().split()))
 if n == 1:
     t = m
 elif m == 1:
     t = n + n - 2
 else:
     t = n * m + (n - 2) * m
-
 ma = -1
 mi = 10 ** 30
-
 a = [[0] * m for i in range(n)]
 for i in range(n):
     for j in range(m):
@@ -21,13 +19,11 @@ for i in range(n):
         if k > 0:
             a[i][j] += 1
             k -= 1
-
 for i in range(n - 2, -1, -1):
     for j in range(m):
         if k > 0:
             a[i][j] += 1
             k -= 1
-
 for i in range(n):
     for j in range(m):
         ma = max(ma, a[i][j])

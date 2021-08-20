@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 def target_game(values):
+
     @lru_cache(maxsize=None)
     def rec(i):
         if i >= len(values):

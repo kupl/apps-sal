@@ -1,11 +1,6 @@
 import sys
 from collections import deque
-
 T = int(input())
-# 0 L
-# 1 |-
-# 2 -|
-# 3 _|
 
 
 def ku_state(p1, p2, p3):
@@ -27,15 +22,15 @@ def ku_state(p1, p2, p3):
 
 
 for _ in range(T):
-    ax, ay, bx, by, cx, cy = list(map(int, input().split()))
+    (ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
     ps = [(ax, ay), (bx, by), (cx, cy)]
-    ku = (ku_state(*ps))
+    ku = ku_state(*ps)
     xb = min(ax, bx, cx)
     yb = min(ay, by, cy)
     xd = int(abs(xb + 0.5))
     yd = int(abs(yb + 0.5))
     if xb == 0 and yb == 0:
-        print((int(ku != 0)))
+        print(int(ku != 0))
         continue
     if ku == 0:
         ans = max(abs(xb), abs(yb)) * 2

@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.par = list(range(n))
         self.rnk = [0] * n
@@ -9,11 +10,11 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return False
         if self.rnk[xr] < self.rnk[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         if self.rnk[xr] == self.rnk[yr]:
             self.rnk[xr] += 1
         self.par[yr] = xr
@@ -21,6 +22,7 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         edges = []
@@ -29,12 +31,10 @@ class Solution:
                 edges.append([u, v, abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])])
 
         def MST():
-            # Kruskals, edges sorted
             dsu = DSU(N)
             ans = 0
-            for u, v, w in sorted(edges, key=lambda e: e[2]):
+            for (u, v, w) in sorted(edges, key=lambda e: e[2]):
                 if dsu.union(u, v):
                     ans += w
             return ans
-
         return MST()

@@ -1,17 +1,12 @@
-# cook your dish here
-
-
 t = int(input())
-
 for i in range(t):
     ic = int(input())
-
     if ic <= 250000:
         t1 = 0
     elif ic > 250000 and ic <= 500000:
         t1 = (ic - 250000) * 0.05
     elif ic > 500000 and ic <= 750000:
-        t1 = (250000) * 0.05 + (ic - 500000) * 0.1
+        t1 = 250000 * 0.05 + (ic - 500000) * 0.1
     elif ic > 750000 and ic <= 1000000:
         t1 = 250000 * 0.05 + 250000 * 0.1 + (ic - 750000) * 0.15
     elif ic > 1000000 and ic <= 1250000:

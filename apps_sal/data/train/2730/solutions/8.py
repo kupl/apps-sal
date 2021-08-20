@@ -7,7 +7,7 @@ def tickets(people):
             if cash == 50:
                 change.remove(25)
                 change.append(50)
-            if cash == 100 and (50 in change):
+            if cash == 100 and 50 in change:
                 change.remove(50)
                 change.remove(25)
             elif cash == 100:
@@ -15,6 +15,6 @@ def tickets(people):
                 change.remove(25)
                 change.remove(25)
     except:
-        return "NO"
+        return 'NO'
     else:
-        return "YES"
+        return 'YES'

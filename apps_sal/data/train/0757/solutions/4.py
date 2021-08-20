@@ -1,6 +1,6 @@
 def q():
     test = int(input())
-    while(test > 0):
+    while test > 0:
         ip = int(input())
         st = input()
         l = list(st)
@@ -11,7 +11,7 @@ def q():
             print('No')
         else:
             while i < ip:
-                if (l[i] in vowel and l[i + 1] in vowel):
+                if l[i] in vowel and l[i + 1] in vowel:
                     flg = 0
                     break
                 else:

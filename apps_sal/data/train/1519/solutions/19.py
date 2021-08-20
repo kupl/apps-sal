@@ -1,13 +1,12 @@
-# cook your dish here
 import math
 
 
 def exp(x):
-    return x > 0 and (x & (x - 1)) == 0
+    return x > 0 and x & x - 1 == 0
 
 
 def count(number):
-    return int((math.log(number) // math.log(2)) + 1)
+    return int(math.log(number) // math.log(2) + 1)
 
 
 for x in range(int(input())):
@@ -17,4 +16,4 @@ for x in range(int(input())):
         print(x)
     else:
         b = count(x)
-        print(2**b)
+        print(2 ** b)

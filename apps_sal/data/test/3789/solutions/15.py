@@ -1,10 +1,9 @@
-# Dinic's algorithm by @yaketake08
-# https://tjkendev.github.io/procon-library/python/max_flow/dinic.html
 from collections import deque
-INF = 10**30
+INF = 10 ** 30
 
 
 class Dinic:
+
     def __init__(self, n):
         self.n = n
         self.g = [[] for i in range(n)]
@@ -29,7 +28,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in g[v]:
+            for (w, cap, _) in g[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -40,7 +39,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -53,7 +52,7 @@ class Dinic:
         flow = 0
         g = self.g
         while self.bfs(s, t):
-            *self.it, = map(iter, self.g)
+            (*self.it,) = map(iter, self.g)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -64,8 +63,7 @@ class Dinic:
 n = int(input())
 a = [-1] + list(map(int, input().split()))
 d = Dinic(n + 2)
-s, t = 0, n + 1
-
+(s, t) = (0, n + 1)
 for i in range(1, n + 1):
     if a[i] > 0:
         d.add_edge(i, t, a[i])
@@ -73,6 +71,5 @@ for i in range(1, n + 1):
         d.add_edge(s, i, -a[i])
     for j in range(2 * i, n + 1, i):
         d.add_edge(i, j, INF)
-
 res = d.flow(s, t)
 print(sum([x for x in a if x > 0]) - res)

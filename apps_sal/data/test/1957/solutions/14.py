@@ -1,5 +1,5 @@
-n, A, B = input().split(' ')
-n, A, B = int(n), int(A), int(B)
+(n, A, B) = input().split(' ')
+(n, A, B) = (int(n), int(A), int(B))
 s = [int(i) for i in input().split(' ')]
 num = sum(s)
 first = s[0]
@@ -12,4 +12,3 @@ while first / num < B / A:
     ptr -= 1
     rst += 1
 print(rst)
-# print(after)

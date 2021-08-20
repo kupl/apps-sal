@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         """
         :type input: str
@@ -10,7 +11,6 @@ class Solution:
         for line in lines:
             name = line.strip('\t')
             depth = len(line) - len(name)
-
             if '.' not in name:
                 if depth >= len(paths):
                     paths.append(len(name) + 1)

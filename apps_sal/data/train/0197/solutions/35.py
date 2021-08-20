@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, S: str) -> bool:
         stack = []
         for i in S:

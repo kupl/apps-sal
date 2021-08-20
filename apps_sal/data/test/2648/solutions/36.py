@@ -3,11 +3,9 @@ from collections import Counter
 
 
 def main():
-    # 入力
     readline = stdin.readline
     n = int(readline())
     a = list(map(int, readline().split()))
-
     c = Counter(a)
     ans = n
     cnt_two = 0
@@ -22,13 +20,11 @@ def main():
                 cnt_two += 1
         elif c[key] == 2:
             cnt_two += 1
-
     if cnt_two % 2 == 0:
         ans -= cnt_two
     else:
         ans -= cnt_two - 1
         ans -= 2
-
     print(ans)
 
 

@@ -1,5 +1,4 @@
 def arr(n=None):
-
     if n == 0 or n == None:
         array = []
     else:

@@ -1,9 +1,9 @@
 def main():
     n = input()
-    if "9" in n:
-        print("Yes")
+    if '9' in n:
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 main()

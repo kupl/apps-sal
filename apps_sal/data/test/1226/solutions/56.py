@@ -1,4 +1,4 @@
-MOD = 1_000_000_007
+MOD = 1000000007
 
 
 def calc_combi(n, k):
@@ -11,7 +11,7 @@ def calc_combi(n, k):
     return frac * pow(denomi, MOD - 2, MOD)
 
 
-n, a, b = map(int, input().rstrip().split())
+(n, a, b) = map(int, input().rstrip().split())
 nca = calc_combi(n, a)
 ncb = calc_combi(n, b)
 print((pow(2, n, MOD) - 1 - nca - ncb) % MOD)

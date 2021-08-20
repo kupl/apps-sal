@@ -1,1 +1,2 @@
-def getVolumeOfCubiod(_, __, ___): return _ * __ * ___
+def getVolumeOfCubiod(_, __, ___):
+    return _ * __ * ___

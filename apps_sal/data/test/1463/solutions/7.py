@@ -2,7 +2,6 @@ n = int(input())
 data = []
 for i in range(n):
     data += [list(map(int, input().split()))]
-
 for i in range(n):
     for j in range(n):
         if data[i][j] == 1:
@@ -15,9 +14,9 @@ for i in range(n):
                     t = True
                     break
         if not t:
-            print("No")
+            print('No')
             break
     if not t:
         break
 if t:
-    print("Yes")
+    print('Yes')

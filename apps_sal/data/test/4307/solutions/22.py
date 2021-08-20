@@ -1,5 +1,4 @@
 N = int(input())
-
 cnt = []
 
 
@@ -19,5 +18,4 @@ def divisor(n):
 for i in range(1, N + 1):
     if i % 2 != 0:
         divisor(i)
-
 print(len(cnt))

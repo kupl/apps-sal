@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         p = [0] * len(points)
         for i in range(len(points)):
@@ -16,12 +17,11 @@ class Solution:
 
         def union(x, y):
             if x > y:
-                x, y = y, x
+                (x, y) = (y, x)
             p[y] = x
-
         res = 0
         while len(pq) > 0:
-            dis, i, j = heapq.heappop(pq)
+            (dis, i, j) = heapq.heappop(pq)
             if find(i) == find(j):
                 continue
             res += dis

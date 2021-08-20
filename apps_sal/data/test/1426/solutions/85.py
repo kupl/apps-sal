@@ -1,14 +1,12 @@
 from collections import deque
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 adj_list = [[] for _ in range(3 * n)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     adj_list[3 * u - 3].append(3 * v - 2)
     adj_list[3 * u - 2].append(3 * v - 1)
     adj_list[3 * u - 1].append(3 * v - 3)
-
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 dist = [-1] * (3 * n)
 queue = deque([3 * s - 3])
 dist[3 * s - 3] = 0

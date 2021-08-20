@@ -4,6 +4,7 @@ qs = [tuple(map(int, input().split())) for i in range(Q)]
 
 
 class Heapq:
+
     def __init__(self, arr, desc=False):
         if desc:
             arr = [-a for a in arr]
@@ -24,12 +25,11 @@ class Heapq:
 lq = Heapq([], True)
 rq = Heapq([])
 ans = 0
-
 for q in qs:
     if q[0] == 2:
         print(lq.top(), ans)
         continue
-    _, a, b = q
+    (_, a, b) = q
     ans += b
     lq.push(a)
     rq.push(a)

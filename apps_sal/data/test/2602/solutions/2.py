@@ -10,7 +10,7 @@ def r2(t):
 
 
 for _ in range(r1(int)):
-    a, b, n, m = r2(int)
+    (a, b, n, m) = r2(int)
     if n + m > a + b or m > min(a, b):
         print('No')
     else:

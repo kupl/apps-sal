@@ -1,5 +1,4 @@
 import math
-
 x = int(input())
 money = 100
 year = 0

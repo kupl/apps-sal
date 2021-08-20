@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         size = len(jobDifficulty)
         memoi = [jobDifficulty[0]] * size
@@ -15,9 +16,6 @@ class Solution:
             newMemoi = [float('inf')] * size
             for end in range(cut, size):
                 for split in range(cut - 1, end):
-                    newMemoi[end] = min(
-                        newMemoi[end],
-                        memoi[split] + findMax(split + 1, end + 1)
-                    )
+                    newMemoi[end] = min(newMemoi[end], memoi[split] + findMax(split + 1, end + 1))
             memoi = newMemoi
         return memoi[-1] if memoi[-1] != float('inf') else -1

@@ -6,7 +6,7 @@ def resolve():
     for i in range(query):
         q = input()
         if q[0] == '2':
-            _, f, c = q.split()
+            (_, f, c) = q.split()
             if (int(f) + r) % 2 == 0:
                 s += c
             else:

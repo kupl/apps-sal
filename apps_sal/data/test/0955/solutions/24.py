@@ -10,8 +10,7 @@ dmin['AC'] = 9999999
 dmin['BC'] = 9999999
 dmin['ABC'] = 9999999
 for i in range(n):
-    p, v = input().split()
-    # price.append(int(p))
+    (p, v) = input().split()
     p = int(p)
     v = ''.join(sorted(v))
     if dmin[v] > p:

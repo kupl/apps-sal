@@ -1,4 +1,4 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 A = [int(a) for a in input().split()]
 A.append(A[0] + K)
 b = []

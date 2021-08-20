@@ -1,9 +1,9 @@
 def hoop_count(n):
     n = int(n)
     if n >= 10:
-        return "Great, now move on to tricks"
+        return 'Great, now move on to tricks'
     else:
-        return "Keep at it until you get it"
+        return 'Keep at it until you get it'
 
 
 x = hoop_count(20)

@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         cycle = set()
         used = set()
@@ -14,5 +15,4 @@ class Solution:
                     return False
             used.add(cur)
             return True
-
         return list(filter(do, range(len(graph))))

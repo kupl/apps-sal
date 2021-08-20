@@ -1,6 +1,6 @@
 def binary_cleaner(seq):
-    list_a, list_b = [], []
-    for k, v in enumerate(seq):
+    (list_a, list_b) = ([], [])
+    for (k, v) in enumerate(seq):
         if v > 1:
             list_b.append(k)
         else:

@@ -4,7 +4,7 @@ def func(c, k, s, n):
         nc.append(c[i] + (i + 1) * (k + 1))
     nc.sort()
     val = sum(nc[:k + 1])
-    if(val <= s):
+    if val <= s:
         return val
     else:
         return -1
@@ -22,14 +22,14 @@ for v in val:
 begin = 0
 end = n - 1
 flag = 0
-while(begin <= end):
+while begin <= end:
     mid = (begin + end) // 2
-    if(func(c, mid, s, n) != -1):
-        if(mid == n - 1):
+    if func(c, mid, s, n) != -1:
+        if mid == n - 1:
             print(mid + 1, func(c, mid, s, n))
             flag = 1
             break
-        if(func(c, mid + 1, s, n) == -1):
+        if func(c, mid + 1, s, n) == -1:
             print(mid + 1, func(c, mid, s, n))
             flag = 1
             break
@@ -37,5 +37,5 @@ while(begin <= end):
             begin = mid + 1
     else:
         end = mid - 1
-if(flag == 0):
-    print("0 0")
+if flag == 0:
+    print('0 0')

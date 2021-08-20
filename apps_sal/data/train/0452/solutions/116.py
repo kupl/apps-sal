@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
         if n < d:
@@ -14,13 +15,12 @@ class Solution:
                     return max(jobDifficulty[index:])
                 return float('inf')
             if (subsets_remaining, index) in memo:
-                return memo[(subsets_remaining, index)]
+                return memo[subsets_remaining, index]
             min_difficulty = float('inf')
             for i in range(index, n):
                 current_max = max(jobDifficulty[index:i + 1])
                 remaining_difficulty = top_down(subsets_remaining - 1, i + 1)
                 min_difficulty = min(min_difficulty, current_max + remaining_difficulty)
-            memo[(subsets_remaining, index)] = min_difficulty
+            memo[subsets_remaining, index] = min_difficulty
             return min_difficulty
-
         return top_down(d, 0)

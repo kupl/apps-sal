@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 0
 if k > 2 * n:
     print(ans)
@@ -14,5 +14,5 @@ else:
         else:
             amari.add(r * i % k)
             q = (n - r * i) // k + 1
-            ans += q**3
+            ans += q ** 3
     print(ans)

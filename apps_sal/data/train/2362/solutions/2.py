@@ -1,4 +1,4 @@
-y = 10**5
+y = 10 ** 5
 T = int(input())
 for _ in range(T):
     x = [-y, -y, y, y]

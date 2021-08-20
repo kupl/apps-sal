@@ -5,5 +5,5 @@ while i < t:
     if n == 2:
         print(n)
     else:
-        print((n // 2) + 1)
+        print(n // 2 + 1)
     i += 1

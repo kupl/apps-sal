@@ -2,17 +2,15 @@ n = int(input())
 wcnt = 0
 bcnt = 0
 for i in range(n):
-    a, b = input().split()
-    if b == "soft":
+    (a, b) = input().split()
+    if b == 'soft':
         bcnt = bcnt + 1
     else:
         wcnt = wcnt + 1
-
 if wcnt > bcnt:
     t = wcnt
     wcnt = bcnt
     bcnt = t
-
 lo = 1
 hi = 100
 while lo < hi:

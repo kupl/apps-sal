@@ -2,6 +2,7 @@
 
 
 class StdReader:
+
     def read_int(self):
         return int(self.read_string())
 
@@ -35,44 +36,25 @@ def part_sorted(b, i, j, reverse=False):
 
 
 def main():
-    n, m = reader.read_ints()
+    (n, m) = reader.read_ints()
     a = reader.read_ints()
-
     ops = []
     for i in range(m):
-        t, r = reader.read_ints()
+        (t, r) = reader.read_ints()
         op = (t, r)
-
         while ops and op[1] >= ops[-1][1]:
             ops.pop()
-
         ops.append(op)
-
-    # newops = []
-    # prevt = None
-    # for op in ops:
-    # 	if prevt is None or prevt != op[0]:
-    # 		newops.append(op)
-    # 		# max_r = max(max_r, op[1])
-
-    # 	prevt = op[0]
-
-    # ops = newops
-
     max_r = ops[0][1]
     b = sorted(a[:max_r])
     bl = 0
     br = max_r - 1
-
     for i in range(len(ops)):
-        t, r = ops[i]
-
+        (t, r) = ops[i]
         r1 = 0
         if i < len(ops) - 1:
-            t1, r1 = ops[i + 1]
-
+            (t1, r1) = ops[i + 1]
         k = r - r1
-
         if t == 1:
             for p in range(k):
                 a[r - 1 - p] = b[br]
@@ -81,12 +63,6 @@ def main():
             for p in range(k):
                 a[r - 1 - p] = b[bl]
                 bl += 1
-
-    # for op in ops:
-    # 	t, r = op
-    # 	reverse = t != 1
-    # 	part_sort(a, 0, r, reverse=reverse)
-
     for ai in a:
         print(ai, end=' ')
 

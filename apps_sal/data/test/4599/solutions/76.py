@@ -8,4 +8,4 @@ for i in range(len(li)):
         Alice += li[i]
     if (i + 1) % 2 == 0:
         Bob += li[i]
-print((Alice - Bob))
+print(Alice - Bob)

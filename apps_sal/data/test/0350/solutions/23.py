@@ -17,5 +17,4 @@ for i in range(len(a)):
             t -= 1
         su += t
         d[t] = 1
-
 print(su)

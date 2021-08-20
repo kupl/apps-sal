@@ -19,15 +19,11 @@ def lm():
 
 
 q = nn()
-
-
 for _ in range(q):
-    n, k = mi()
+    (n, k) = mi()
     moves = 0
     while n >= k:
         moves += n % k + 1
-
         n = n // k
-        # print(n)
     moves += n
     print(moves)

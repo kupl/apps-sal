@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         n = len(nums)
         modgrps = defaultdict(lambda: [])
@@ -15,8 +16,8 @@ class Solution:
         if tot % p == 0:
             return 0
 
-        def qry(i, j): return psums[j] if i == 0 else psums[j] - psums[i - 1]
-
+        def qry(i, j):
+            return psums[j] if i == 0 else psums[j] - psums[i - 1]
         ans = float('inf')
         need = tot % p
         for i in range(n):
@@ -27,7 +28,7 @@ class Solution:
             grp = modgrps[x]
             if len(grp) == 0:
                 continue
-            index, jump = 0, len(grp) - 1
+            (index, jump) = (0, len(grp) - 1)
             while jump >= 1:
                 while index + jump < len(grp) and grp[index + jump] <= i:
                     index += jump
@@ -35,5 +36,4 @@ class Solution:
             length = i - (grp[index] + 1) + 1
             if length > 0:
                 ans = min(ans, length)
-
         return ans if ans < float('inf') else -1

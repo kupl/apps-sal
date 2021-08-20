@@ -5,12 +5,12 @@ for i in range(10 ** 4):
 
 
 def find_num(n):
-    seq, x = 1, 0
+    (seq, x) = (1, 0)
     for j in range(n):
         M = seq
         for m in masks:
             if x & m:
                 M |= m
-        x = ~M & (M + 1)
+        x = ~M & M + 1
         seq |= x
     return x.bit_length() - 1

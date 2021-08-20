@@ -11,15 +11,13 @@ def jumpsto(n):
         powe += 1
     powe -= 1
     jump += 1
-    return jump + jumpsto(n - 2**powe)
+    return jump + jumpsto(n - 2 ** powe)
 
 
 for _ in range(int(input())):
-    # = int(input())
-    x, y = list(map(int, input().strip().split()))
+    (x, y) = list(map(int, input().strip().split()))
     x += 1
     y += 1
-    # = list(map(int, input().strip().split()))
     jumpx = jumpsto(x)
     jumpy = jumpsto(y)
     if jumpx == jumpy:

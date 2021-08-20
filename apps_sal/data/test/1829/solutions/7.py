@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = []
 v = []
 for i in range(n):
@@ -10,5 +10,4 @@ for i in range(m):
         del p[p.index(v[-1])]
         del v[-1]
         r += 1
-
-print('YES' if r % 2 and len(p) >= len(v) or r % 2 == 0 and len(p) > len(v) else 'NO')
+print('YES' if r % 2 and len(p) >= len(v) or (r % 2 == 0 and len(p) > len(v)) else 'NO')

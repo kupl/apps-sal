@@ -1,4 +1,4 @@
-from math import*
+from math import *
 n = int(input())
 som = 0
 ch = []

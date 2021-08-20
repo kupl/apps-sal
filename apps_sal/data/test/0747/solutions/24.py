@@ -1,20 +1,19 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 count = 0
 ans = 0
 curr = 0
 fruit = []
 caramel = []
 for i in range(n):
-    t, h, m = map(int, input().split())
+    (t, h, m) = map(int, input().split())
     if t == 0:
         caramel.append((h, m))
     else:
         fruit.append((h, m))
-
 caramel = sorted(caramel)
 fruit = sorted(fruit)
-fruit2 = fruit[::]
-caramel2 = caramel[::]
+fruit2 = fruit[:]
+caramel2 = caramel[:]
 x2 = x
 
 

@@ -18,14 +18,13 @@ while i < n:
                 rt *= 3
             pre = 0
             i += 2
+    elif k[0][i] == k[1][i]:
+        rt *= 3
+        pre = 1
+        i += 1
     else:
-        if k[0][i] == k[1][i]:
-            rt *= 3
-            pre = 1
-            i += 1
-        else:
-            rt *= 6
-            pre = 0
-            i += 2
+        rt *= 6
+        pre = 0
+        i += 2
     rt %= mods
 print(rt)

@@ -1,9 +1,9 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         memo = collections.defaultdict(dict)
         ans = 0
-
-        for i, a2 in enumerate(A):
+        for (i, a2) in enumerate(A):
             for j in range(i):
                 a1 = A[j]
                 diff = a2 - a1

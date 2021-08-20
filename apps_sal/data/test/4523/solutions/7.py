@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 for _ in range(int(input())):
     n = int(input())
     L = list(map(int, input().split()))

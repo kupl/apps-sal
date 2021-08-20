@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 import sys
-
 n = int(sys.stdin.readline())
 a = [int(x) for x in sys.stdin.readline().split(' ')]
-
 sum = [0, 0]
-i, start, end = 0, 0, n - 1
+(i, start, end) = (0, 0, n - 1)
 while start <= end:
     if a[start] >= a[end]:
         sum[i] += a[start]

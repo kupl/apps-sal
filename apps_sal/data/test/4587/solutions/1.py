@@ -1,15 +1,11 @@
 N = int(input())
-A = [int(a) for a in input().split(" ")]
-B = [int(b) for b in input().split(" ")]
-C = [int(c) for c in input().split(" ")]
-
+A = [int(a) for a in input().split(' ')]
+B = [int(b) for b in input().split(' ')]
+C = [int(c) for c in input().split(' ')]
 A.sort()
 B.sort()
 C.sort()
-
 combiBC = [0] * len(B)
-# combiBC[i] : number of combination of B, C when B[i] is selected
-
 ic = 0
 lc = len(C)
 for ib in range(len(B)):
@@ -21,14 +17,12 @@ for ib in range(len(B)):
         else:
             combiBC[ib] = lc - ic
             break
-
 sumCombiBC = []
 for i in range(len(combiBC)):
     if i == 0:
         sumCombiBC.append(combiBC[-1])
     else:
         sumCombiBC.insert(0, combiBC[-i - 1] + sumCombiBC[0])
-
 cnt = 0
 ib = 0
 for ia in range(len(A)):
@@ -40,5 +34,4 @@ for ia in range(len(A)):
         else:
             cnt += sumCombiBC[ib]
             break
-
 print(cnt)

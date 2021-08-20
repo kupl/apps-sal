@@ -1,18 +1,15 @@
 def help():
     n = int(input())
-    arr = list(map(int, input().split(" ")))
-
+    arr = list(map(int, input().split(' ')))
     ev = []
     od = []
-
     for i in range(n):
-        if(arr[i] % 2 == 1):
-            if(arr[i] % 2 != i % 2):
+        if arr[i] % 2 == 1:
+            if arr[i] % 2 != i % 2:
                 od.append(i)
-        else:
-            if(arr[i] % 2 != i % 2):
-                ev.append(i)
-    if(len(ev) == len(od)):
+        elif arr[i] % 2 != i % 2:
+            ev.append(i)
+    if len(ev) == len(od):
         print(len(ev))
     else:
         print(-1)

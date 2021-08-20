@@ -1,10 +1,7 @@
 import sys
 readline = sys.stdin.readline
-
-
 T = int(readline())
 Ans = [None] * T
-
 for qu in range(T):
     N = int(readline())
     A = list(map(int, readline().split()))
@@ -18,11 +15,8 @@ for qu in range(T):
             Ans[qu] = 'T'
     elif A[-1] > sum(A[:-1]):
         Ans[qu] = 'T'
+    elif sum(A) % 2 == 0:
+        Ans[qu] = 'HL'
     else:
-        if sum(A) % 2 == 0:
-            Ans[qu] = 'HL'
-        else:
-            Ans[qu] = 'T'
-
-
+        Ans[qu] = 'T'
 print('\n'.join(Ans))

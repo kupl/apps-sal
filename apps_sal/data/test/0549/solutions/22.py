@@ -1,4 +1,3 @@
-# python3
 import math
 
 
@@ -7,8 +6,7 @@ def solve():
     m = int(math.sqrt(n))
     while n % m != 0:
         m -= 1
-
-    return str(m) + " " + str(int(n / m))
+    return str(m) + ' ' + str(int(n / m))
 
 
 print(solve())

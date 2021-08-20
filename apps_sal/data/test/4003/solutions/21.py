@@ -18,7 +18,7 @@ def rec(a, i, j):
 def func(a, i, j, new, s):
     while True:
         if n - i < -j:
-            return len(new) - 1, s
+            return (len(new) - 1, s)
             break
         if a[i] > new[-1] and a[j] > new[-1]:
             if a[i] == a[j]:
@@ -48,7 +48,7 @@ def func(a, i, j, new, s):
                 s += 'R'
                 j -= 1
         else:
-            return len(new) - 1, s
+            return (len(new) - 1, s)
             break
 
 

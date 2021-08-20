@@ -29,5 +29,5 @@ for i in range(a):
             uk += 1
     if not f and uk1 == len(s):
         print('YES')
-    elif uk1 != len(s) and not f:
+    elif uk1 != len(s) and (not f):
         print('NO')

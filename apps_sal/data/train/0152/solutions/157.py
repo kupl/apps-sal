@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
 
         def isPossible(mid, m):
@@ -11,7 +12,6 @@ class Solution:
                     m -= 1
                 i += 1
             return m == 0
-
         position.sort()
         n = len(position)
         lo = hi = position[-1] - position[0]

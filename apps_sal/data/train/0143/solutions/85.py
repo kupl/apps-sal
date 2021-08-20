@@ -1,6 +1,6 @@
 class Solution:
-    def totalFruit(self, tree: List[int]) -> int:
 
+    def totalFruit(self, tree: List[int]) -> int:
         out = 0
         for i in range(len(tree)):
             tot = self.getTotalAtIndex(tree, i)
@@ -11,13 +11,11 @@ class Solution:
         return out
 
     def getTotalAtIndex(self, tree, i):
-
         fruit_types = set()
         cnt = 0
         for j in range(i, len(tree)):
             if len(fruit_types) < 2:
                 fruit_types.add(tree[j])
-
             if tree[j] in fruit_types:
                 cnt += 1
             else:

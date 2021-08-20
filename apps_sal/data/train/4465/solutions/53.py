@@ -1,5 +1,5 @@
 def super_size(n):
-    res = ""
+    res = ''
     n = list(str(n))
     for i in range(len(n)):
         res += str(max(n))

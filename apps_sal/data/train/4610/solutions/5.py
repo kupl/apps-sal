@@ -1,5 +1,4 @@
 def number_increasing(n):
-    # coding and coding..
     if n == 1:
         return True
     if (n - 1) % 5 == 0:

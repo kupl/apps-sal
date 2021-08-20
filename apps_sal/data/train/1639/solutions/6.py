@@ -11,7 +11,7 @@ def gta(limit, *args):
                 if len(nums) == limit:
                     break
             numbers[i] = numbers[i][1:]
-        elif "".join(numbers) == "":
+        elif ''.join(numbers) == '':
             break
     ans = 0
     for n in range(1, len(nums) + 1):

@@ -7,6 +7,5 @@ def grab_two(arr, run_sum):
 
 
 def min_sum(arr):
-    # Your code here
     arr.sort()
     return grab_two(arr, 0)

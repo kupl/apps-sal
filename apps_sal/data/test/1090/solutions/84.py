@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, K = (int(x) for x in input().rstrip('\n').split())
+(N, K) = (int(x) for x in input().rstrip('\n').split())
 L = list(input())
 now = L[0]
 same = 0

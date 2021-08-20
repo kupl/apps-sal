@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         best_attempt = 0
         for i in range(len(tree)):

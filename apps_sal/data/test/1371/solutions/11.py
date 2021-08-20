@@ -1,8 +1,8 @@
 def __starting_point():
     S = int(input())
-    MOD = 10**9 + 7
+    MOD = 10 ** 9 + 7
     if S < 3:
-        print((0))
+        print(0)
         return
     dp = [0] * (S + 1)
     dp[0] = 1
@@ -10,7 +10,7 @@ def __starting_point():
         for t in range(s - 3, -1, -1):
             dp[s] += dp[t]
             dp[s] %= MOD
-    print((dp[S]))
+    print(dp[S])
 
 
 __starting_point()

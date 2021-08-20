@@ -1,5 +1,2 @@
-# 140-A
-
 N = int(input())
-
-print((N**3))
+print(N ** 3)

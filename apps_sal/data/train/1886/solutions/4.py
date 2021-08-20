@@ -10,7 +10,7 @@ class NumArray:
 
     def build(self, nums):
         n = len(nums)
-        self.segTree[n: 2 * n] = nums[:]
+        self.segTree[n:2 * n] = nums[:]
         for i in range(n - 1, 0, -1):
             self.segTree[i] = self.eval(self.segTree[2 * i], self.segTree[2 * i + 1])
 
@@ -44,14 +44,7 @@ class NumArray:
                 l += 1
             if r & 1 == 0:
                 s += self.segTree[r]
-
             r -= 1
             l >>= 1
             r >>= 1
         return s
-
-
-# Your NumArray object will be instantiated and called as such:
-# obj = NumArray(nums)
-# obj.update(i,val)
-# param_2 = obj.sumRange(i,j)

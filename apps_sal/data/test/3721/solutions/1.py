@@ -2,6 +2,7 @@ from sys import stdin, stdout
 
 
 class DSU:
+
     def __init__(self, n):
         self.root = [-1 for x in range(0, n)]
 
@@ -19,13 +20,10 @@ class DSU:
         return True
 
 
-n, m, q = map(int, stdin.readline().split())
-
+(n, m, q) = map(int, stdin.readline().split())
 dsu = DSU(n + m + 1)
 groups = n + m
-
 for line in stdin:
-    r, c = map(int, line.split())
+    (r, c) = map(int, line.split())
     groups -= dsu.link(r, n + c)
-
 stdout.write(str(groups - 1) + '\n')

@@ -1,18 +1,14 @@
 from collections import deque
 import sys
 readline = sys.stdin.readline
-
-N, M = map(int, readline().split())
+(N, M) = map(int, readline().split())
 bridges = [None] * M
 G = [[] for i in range(N)]
-
 for i in range(M):
-    a, b = map(int, readline().split())
+    (a, b) = map(int, readline().split())
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
     bridges[i] = (a - 1, b - 1)
-
-
 ans = 0
 for i in range(M):
     q = deque([])
@@ -29,5 +25,4 @@ for i in range(M):
             q.append(child)
     if len(seen) != N:
         ans += 1
-
 print(ans)

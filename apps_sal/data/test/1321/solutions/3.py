@@ -3,7 +3,7 @@ def main():
     height = []
     width = []
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         width.append(a)
         height.append(b)
     s_w = sum(width)

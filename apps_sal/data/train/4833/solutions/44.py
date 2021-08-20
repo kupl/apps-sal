@@ -3,7 +3,7 @@ def replace_exclamation(s):
     x = []
     for i in s:
         if i.lower() in vowels:
-            x.extend("!")
+            x.extend('!')
         else:
             x.extend(i)
-    return "".join(x)
+    return ''.join(x)

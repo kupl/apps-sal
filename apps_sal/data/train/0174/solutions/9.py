@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthLongestPath(self, x):
         """
         :type input: str
@@ -9,7 +10,7 @@ def lengthLongestPath(self, input):
     maxlen = 0
     pathlen = {0: 0}
     for line in input.splitlines():
-        name = line.lstrip('\t')
+        name = line.lstrip('	')
         depth = len(line) - len(name)
         if '.' in name:
             maxlen = max(maxlen, pathlen[depth] + len(name))
@@ -19,7 +20,6 @@ def lengthLongestPath(self, input):
         """
         h = {0: 0}
         maxlen = 0
-        # print(x.splitlines())
         for line in x.splitlines():
             name = line.lstrip('\t')
             depth = len(line) - len(name)

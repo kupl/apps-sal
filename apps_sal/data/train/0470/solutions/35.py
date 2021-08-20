@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         MOD = 1000000007
         count = [0] * 101
@@ -16,14 +17,12 @@ class Solution:
             if x < z <= 100:
                 ans += count[x] * (count[x] - 1) // 2 * count[z]
                 ans %= MOD
-
         for x in range(101):
             if (target - x) % 2 == 0:
                 y = (target - x) // 2
                 if x < y <= 100:
                     ans += count[x] * count[y] * (count[y] - 1) // 2
                     ans %= MOD
-
         if target % 3 == 0:
             x = target // 3
             if 0 <= x <= 100:

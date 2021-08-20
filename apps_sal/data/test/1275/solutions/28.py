@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     k = abs(k)
     c = 0
     for y in range(2, 2 * n - k + 1):

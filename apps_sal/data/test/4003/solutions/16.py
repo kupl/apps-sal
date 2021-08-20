@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 @Project : CodeForces
 @File    : 32.py 
@@ -60,14 +59,13 @@ def __starting_point():
                     break
             if l_c > r_c:
                 for i in range(l_c):
-                    result.append("L")
+                    result.append('L')
             else:
                 for i in range(r_c):
-                    result.append("R")
+                    result.append('R')
             break
-
     print(len(result))
-    print("".join(result))
+    print(''.join(result))
 
 
 __starting_point()

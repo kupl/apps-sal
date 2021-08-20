@@ -18,8 +18,8 @@ class Solution:
             return 0
         nums1.sort()
         nums2.sort()
-        counter1 = Counter([x**2 for x in nums1])
-        counter2 = Counter([x**2 for x in nums2])
+        counter1 = Counter([x ** 2 for x in nums1])
+        counter2 = Counter([x ** 2 for x in nums2])
         self.rst = 0
         self.search(nums1, nums2, counter2)
         self.search(nums2, nums1, counter1)

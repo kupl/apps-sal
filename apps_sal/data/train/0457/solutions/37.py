@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         l = [int(amount + 1)] * int(amount + 1)
         if amount == 0:
@@ -10,9 +11,8 @@ class Solution:
                     remainder = i - coin
                     if remainder < 0:
                         pass
-                    else:
-                        if l[i] > l[remainder] + 1:
-                            l[i] = l[remainder] + 1
+                    elif l[i] > l[remainder] + 1:
+                        l[i] = l[remainder] + 1
         if l[amount] == amount + 1:
             return -1
         else:

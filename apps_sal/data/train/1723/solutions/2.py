@@ -27,10 +27,12 @@ class Line(Segment):
         return self._control_points
 
     def point_at(self, t):
-        x, y = self._control_points[::2], self._control_points[1::2]
-        x0, y0, x1, y1 = self._control_points
-        def eq(p, t): return (1 - t) * p[0] + t * p[1]
-        return eq(x, t), eq(y, t)
+        (x, y) = (self._control_points[::2], self._control_points[1::2])
+        (x0, y0, x1, y1) = self._control_points
+
+        def eq(p, t):
+            return (1 - t) * p[0] + t * p[1]
+        return (eq(x, t), eq(y, t))
 
     def sub_segment(self, t):
         p0 = self._control_points[:2]
@@ -48,9 +50,11 @@ class Quad(Segment):
         return self._control_points
 
     def point_at(self, t):
-        x, y = self._control_points[::2], self._control_points[1::2]
-        def eq(p, t): return (1 - t)**2 * p[0] + 2 * (1 - t) * t * p[1] + t**2 * p[2]
-        return eq(x, t), eq(y, t)
+        (x, y) = (self._control_points[::2], self._control_points[1::2])
+
+        def eq(p, t):
+            return (1 - t) ** 2 * p[0] + 2 * (1 - t) * t * p[1] + t ** 2 * p[2]
+        return (eq(x, t), eq(y, t))
 
     def sub_segment(self, t):
         p0 = self._control_points[:2]
@@ -69,9 +73,11 @@ class Cubic(Segment):
         return self._control_points
 
     def point_at(self, t):
-        x, y = self._control_points[::2], self._control_points[1::2]
-        def eq(p, t): return (1 - t)**3 * p[0] + 3 * (1 - t)**2 * t * p[1] + 3 * (1 - t) * t**2 * p[2] + t**3 * p[3]
-        return eq(x, t), eq(y, t)
+        (x, y) = (self._control_points[::2], self._control_points[1::2])
+
+        def eq(p, t):
+            return (1 - t) ** 3 * p[0] + 3 * (1 - t) ** 2 * t * p[1] + 3 * (1 - t) * t ** 2 * p[2] + t ** 3 * p[3]
+        return (eq(x, t), eq(y, t))
 
     def sub_segment(self, t):
         p0 = self._control_points[:2]

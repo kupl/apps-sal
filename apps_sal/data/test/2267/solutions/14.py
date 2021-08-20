@@ -17,4 +17,4 @@ for i in range(n):
     s.append(a)
 r = sorted(s, key=cmp_to_key(compare), reverse=True)
 for i in range(n):
-    print(r[i], end="")
+    print(r[i], end='')

@@ -1,4 +1,4 @@
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 s = 0
 for i in range(1, B + 1):
     x = A * i % B

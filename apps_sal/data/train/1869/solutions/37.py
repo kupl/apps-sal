@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def recoverFromPreorder(self, S: str) -> TreeNode:
         root_num = ''
         start = 0
@@ -24,7 +19,7 @@ class Solution:
                 while S[start].isdigit():
                     num += S[start]
                     start += 1
-                    if (start == len(S)):
+                    if start == len(S):
                         break
                 div.append((depth_counter, int(num)))
                 depth_counter = 0
@@ -32,7 +27,7 @@ class Solution:
         track = res
         dicts = [res]
         for i in range(1, len(div)):
-            depth, val = div[i][0], div[i][1]
+            (depth, val) = (div[i][0], div[i][1])
             roots = dicts[depth - 1]
             dicts = dicts[:depth]
             if not roots.left:

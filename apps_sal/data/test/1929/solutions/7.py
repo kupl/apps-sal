@@ -1,7 +1,6 @@
-n, t, c = list(map(int, input().split()))
+(n, t, c) = list(map(int, input().split()))
 seq = list(map(int, input().split()))
-
-start, end = 0, 0
+(start, end) = (0, 0)
 res = 0
 for i in range(n):
     if seq[i] <= t:
@@ -10,6 +9,5 @@ for i in range(n):
             res += 1
         end += 1
     else:
-        start, end = i, i
-
+        (start, end) = (i, i)
 print(res)

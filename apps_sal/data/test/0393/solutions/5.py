@@ -11,8 +11,7 @@ for c in b:
         zeros = zeros + 1
         if zeros > 2:
             ans = False
-
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

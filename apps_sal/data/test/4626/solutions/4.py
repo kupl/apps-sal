@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c = sorted(map(int, input().split()))
+    (a, b, c) = sorted(map(int, input().split()))
     res = 10 ** 100
     for p in range(-1, 2):
         for q in range(-1, 2):

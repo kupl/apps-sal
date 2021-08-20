@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         while sum(nums) != 0:
@@ -10,5 +11,4 @@ class Solution:
                 for i in range(len(nums)):
                     nums[i] /= 2
                 res += 1
-            # print(nums)
         return res

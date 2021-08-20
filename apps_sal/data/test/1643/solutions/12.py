@@ -10,7 +10,6 @@ def main():
             q.append(i)
         elif len(q) > 0:
             q.pop()
-
     result = []
     q = set(q)
     for i in range(len(s)):
@@ -18,7 +17,6 @@ def main():
             result.append('0')
         else:
             result.append(s[i])
-
     print(''.join(result))
 
 

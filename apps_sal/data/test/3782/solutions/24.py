@@ -1,4 +1,3 @@
-
 """
 Writer: SPD_9X2
 https://atcoder.jp/contests/arc098/tasks/arc098_c
@@ -20,52 +19,31 @@ O(NlogN)
 各数字が領域差しておくか前処理して置けばO(N**2)で解けるかな
 
 """
-
-N, K, Q = list(map(int, input().split()))
+(N, K, Q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ai = []
 for i in range(N):
     ai.append([a[i], i])
 ai.sort()
-
 ans = ai[Q - 1][0] - ai[0][0]
-
 for cant in range(N - Q):
-
-    # 0 ~ cantまでのai[i]を取ってはいけない
-
     rannum = [-1] * (cant + 2)
     rannum[0] = 0
-    indlis = [0] * N  # rannumのindexを指し示す
-
+    indlis = [0] * N
     for i in range(cant + 1):
-
-        na, nind = ai[i]
+        (na, nind) = ai[i]
         indlis[nind] += 1
-
     for i in range(N):
-
         if i != N - 1:
             indlis[i + 1] += indlis[i]
-
         rannum[indlis[i]] += 1
-
-    #print (rannum , indlis)
-
     ncat = []
     for i in range(cant + 1, N):
-
-        na, nind = ai[i]
-
+        (na, nind) = ai[i]
         if rannum[indlis[nind]] >= K:
             ncat.append(na)
             rannum[indlis[nind]] -= 1
-
         if len(ncat) == Q:
             ans = min(ans, ncat[-1] - ncat[0])
             break
-
-    #print (ncat)
-
 print(ans)

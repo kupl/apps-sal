@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, s = list(map(str, input().split()))
+    (n, s) = list(map(str, input().split()))
     n = int(n)
     laddus = 0
     for i in range(n):
@@ -12,9 +12,9 @@ for _ in range(t):
                 laddus += 300
         elif x[0] == 'TOP_CONTRIBUTOR':
             laddus += 300
-        elif x[0] == "BUG_FOUND":
+        elif x[0] == 'BUG_FOUND':
             laddus += int(x[1])
-        elif x[0] == "CONTEST_HOSTED":
+        elif x[0] == 'CONTEST_HOSTED':
             laddus += 50
     if s == 'INDIAN':
         months = laddus // 200

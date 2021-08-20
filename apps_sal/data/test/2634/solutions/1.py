@@ -1,12 +1,13 @@
 class Solution:
+
     def subsets(self, nums):
         """
         :type nums: List[int]
         :rtype: List[List[int]]
         """
+
         def mask(x):
             return 1 << x
-
         exp = 1 << len(nums)
         ans = []
         for count in range(exp):

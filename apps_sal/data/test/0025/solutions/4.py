@@ -1,5 +1,4 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 if n * n < k:
     print(-1)
 else:

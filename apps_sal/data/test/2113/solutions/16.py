@@ -1,9 +1,9 @@
 n = int(input())
 l = [1] + [0] * n
-d = [[]for _ in range(n)]
+d = [[] for _ in range(n)]
 c = [0]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     d[a - 1] += [b - 1]
     d[b - 1] += [a - 1]
 while c:

@@ -1,10 +1,7 @@
 import math
-
 N = int(input())
 l = list(map(int, input().split()))
-
 cur_max = l.pop()
-
 flag = 1
 while l:
     tmp = l.pop()

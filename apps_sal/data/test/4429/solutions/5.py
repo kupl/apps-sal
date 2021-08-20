@@ -10,7 +10,7 @@ def fun(x, y, z):
     for i in l:
         for j in l:
             for k in l:
-                if x == max(i, j) and y == max(i, k) and z == max(j, k):
+                if x == max(i, j) and y == max(i, k) and (z == max(j, k)):
                     flag = 1
                     a = i
                     b = j
@@ -21,13 +21,13 @@ def fun(x, y, z):
         if flag:
             break
     if flag:
-        print("YES")
+        print('YES')
         print(a, b, c)
     else:
-        print("NO")
+        print('NO')
 
 
 while t:
     t -= 1
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     fun(x, y, z)

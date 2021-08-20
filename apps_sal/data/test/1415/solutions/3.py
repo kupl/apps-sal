@@ -1,8 +1,8 @@
-x, y, x0, y0 = list(map(int, input().split()))
+(x, y, x0, y0) = list(map(int, input().split()))
 a = [[0] * (y + 1) for i in range(x + 1)]
 s = input()
 count = x * y
-result = [0] * (len(s))
+result = [0] * len(s)
 for i in range(len(s)):
     if a[x0][y0] == 0:
         a[x0][y0] = 1
@@ -16,5 +16,4 @@ for i in range(len(s)):
         y0 -= 1
     elif s[i] == 'R' and y0 < y:
         y0 += 1
-
-print(" ".join(map(str, result)), count)
+print(' '.join(map(str, result)), count)

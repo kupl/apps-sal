@@ -1,4 +1,4 @@
-p, x, y = list(map(int, input().split()))
+(p, x, y) = list(map(int, input().split()))
 ls = []
 i = x // 50 % 475
 for z in range(25):

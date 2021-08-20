@@ -8,7 +8,7 @@ for _ in range(q):
     for i in range(n):
         x = a[i]
         c = 1
-        while not (i + 1) == x:
+        while not i + 1 == x:
             x = a[x - 1]
             c += 1
         ans.append(c)

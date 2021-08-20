@@ -40,11 +40,11 @@ def main():
             elif onlyA:
                 onlyA -= 1
         if A > B:
-            print("First")
+            print('First')
         elif A < B:
-            print("Second")
+            print('Second')
         else:
-            print("Draw")
+            print('Draw')
         break
 
 

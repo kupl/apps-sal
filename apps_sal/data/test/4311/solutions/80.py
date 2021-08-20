@@ -1,5 +1,4 @@
-
-url = "https://atcoder.jp//contests/abc116/tasks/abc116_b"
+url = 'https://atcoder.jp//contests/abc116/tasks/abc116_b'
 
 
 def calc(n):
@@ -16,7 +15,7 @@ def main():
         tmp = calc(ans[-1])
         ans.append(tmp)
         if ans.index(tmp) != len(ans) - 1:
-            print((len(ans)))
+            print(len(ans))
             break
 
 

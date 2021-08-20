@@ -10,11 +10,9 @@ for i in range(int(input())):
     ans = 0
     k = int(n ** 0.5) + 1
     while n >= 0 and k >= 0:
-        # print(k)
         if n < A[k]:
             k -= 1
         else:
             n -= A[k]
             ans += 1
-
     print(ans)

@@ -1,4 +1,5 @@
 class Solution:
+
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
         hashMap = {}
         boolean = False
@@ -7,17 +8,15 @@ class Solution:
             return False
 
         def commonFactor(a, b):
-            if(b == 0):
+            if b == 0:
                 return a
             else:
                 return commonFactor(b, a % b)
-
         for i in range(lenght):
             if hashMap.get(deck[i]) is not None:
                 hashMap[deck[i]] = hashMap[deck[i]] + 1
             else:
                 hashMap[deck[i]] = 1
-
         for i in range(lenght):
             if hashMap[deck[i]] == 1:
                 return False

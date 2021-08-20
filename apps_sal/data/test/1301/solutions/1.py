@@ -1,7 +1,6 @@
 choices = 'Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon'.split(', ')
 choices.append('Sylveon')
 choices = list([x.lower() for x in choices])
-
 n = int(input())
 s = input()
 for can in choices:

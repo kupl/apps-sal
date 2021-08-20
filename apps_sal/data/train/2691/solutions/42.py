@@ -1,9 +1,8 @@
 def solve(s):
     max = 0
-
     for i in range(len(s)):
         if s[i].isnumeric():
-            k = ""
+            k = ''
             for j in range(i, len(s)):
                 if s[j].isnumeric():
                     k += s[j]

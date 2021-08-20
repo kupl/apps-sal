@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 if n % (2 * d + 1) == 0:
     print(n // (2 * d + 1))
 else:

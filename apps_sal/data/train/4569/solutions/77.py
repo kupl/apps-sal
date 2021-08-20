@@ -4,4 +4,4 @@ def next_item(xs, item):
         if found:
             return i
         else:
-            found = (i == item)
+            found = i == item

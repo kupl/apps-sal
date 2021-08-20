@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
 
         def helper(x):
@@ -10,7 +11,6 @@ class Solution:
                     x //= 2
                 steps += 1
             return steps
-
         lookup = {}
         for x in range(lo, hi + 1):
             lookup[x] = helper(x)

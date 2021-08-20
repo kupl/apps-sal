@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -13,7 +12,7 @@ def main():
     if x > 0:
         print(0)
     else:
-        print(- x + 1)
+        print(-x + 1)
 
 
 def __starting_point():

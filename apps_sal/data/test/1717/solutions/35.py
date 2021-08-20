@@ -12,5 +12,4 @@ def gcd(u, v):
 x = 1
 for i in range(1, n + 1):
     x = i // gcd(x, i) * x
-
-print((x + 1))
+print(x + 1)

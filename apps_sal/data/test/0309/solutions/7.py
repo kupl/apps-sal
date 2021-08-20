@@ -1,5 +1,5 @@
 def main():
-    l, r = (format(int(s), 'b') for s in input().split())
+    (l, r) = (format(int(s), 'b') for s in input().split())
     le = len(r)
     if len(l) == le:
         for i in range(le):

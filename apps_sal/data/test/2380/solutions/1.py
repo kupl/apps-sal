@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 num = []
@@ -17,4 +17,4 @@ for i in range(n):
         break
     a[i] = num[cnt][1]
     num[cnt][0] -= 1
-print((sum(a)))
+print(sum(a))

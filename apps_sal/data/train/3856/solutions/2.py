@@ -1,6 +1,6 @@
 from bisect import bisect
 n = 10 ** 6
-dominant, primes, sieve = [], set(), [0, 0] + [1] * (n - 2)
+(dominant, primes, sieve) = ([], set(), [0, 0] + [1] * (n - 2))
 for k in range(n):
     if sieve[k]:
         primes.add(k)
@@ -9,4 +9,5 @@ for k in range(n):
             dominant.append(k)
 
 
-def solve(a, b): return sum(dominant[bisect(dominant, a - 1): bisect(dominant, b)])
+def solve(a, b):
+    return sum(dominant[bisect(dominant, a - 1):bisect(dominant, b)])

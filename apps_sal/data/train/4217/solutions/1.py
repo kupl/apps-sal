@@ -8,7 +8,7 @@ def solve(a, b):
         for month in (1, 3, 5, 7, 8, 10, 12):
             d = date(year, month, 1)
             if d.weekday() == 4:
-                last = d.strftime("%b")
+                last = d.strftime('%b')
                 if first is None:
                     first = last
                 count += 1

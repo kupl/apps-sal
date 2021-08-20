@@ -1,5 +1,5 @@
-s, t = input(), input()
-n, m = len(t), len(s) + 1
+(s, t) = (input(), input())
+(n, m) = (len(t), len(s) + 1)
 d = 1000000007
 g = [1] * m
 f = k = 0

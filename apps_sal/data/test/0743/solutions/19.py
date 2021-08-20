@@ -1,6 +1,6 @@
 def pairGCD(a, b):
     while a:
-        a, b = b % a, a
+        (a, b) = (b % a, a)
     return b
 
 

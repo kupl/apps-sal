@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = [input() for i in range(0, n)]
 dp = [[n * m + 1] * 8 for i in range(0, n + 1)]
 
@@ -19,14 +19,13 @@ def minLenB(s):
 
 def minLenC(s):
     for i in range(0, len(s)):
-        if s[i] in ["#", "*", "&"]:
+        if s[i] in ['#', '*', '&']:
             return i
     return m + 1
 
 
 dp[0][0] = 0
 dp[0][1:] = [n * m + 1] * 7
-
 l = [[0] * 3 for i in range(0, n)]
 for i in range(0, n):
     l[i][0] = min(minLenA(s[i]), 1 + minLenA(list(reversed(s[i]))))

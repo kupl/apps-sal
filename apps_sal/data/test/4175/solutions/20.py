@@ -9,4 +9,4 @@ for i in range(N - 1):
         ans = False
     s.add(q)
     t = q
-print("Yes") if ans else print("No")
+print('Yes') if ans else print('No')

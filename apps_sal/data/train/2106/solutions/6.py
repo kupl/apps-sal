@@ -1,10 +1,12 @@
 from functools import reduce
-
 n = int(input())
 cards = [list(map(int, input().split()[1:])) for i in range(n)]
 mid = [c[len(c) >> 1] for c in cards if len(c) & 1 == 1]
-a, b = 0, 0
-def add(x=0, y=0): return x + y
+(a, b) = (0, 0)
+
+
+def add(x=0, y=0):
+    return x + y
 
 
 for c in cards:

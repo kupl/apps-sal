@@ -8,7 +8,6 @@ for i in d:
     if d[i] >= 2:
         longest = max(longest, i)
 d[longest] -= 2
-
 longest_2nd = 0
 for i in d:
     if d[i] >= 2:

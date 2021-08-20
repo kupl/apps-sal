@@ -4,7 +4,7 @@ a = []
 b = []
 neither = []
 for i in range(n):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     if c == 11:
         both.append(d)
     elif c == 10:

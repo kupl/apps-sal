@@ -7,7 +7,7 @@ def cut_fruits(fruits):
     for fruit in fruits:
         if fruit in FRUIT_NAMES:
             med = ceil(len(fruit) / 2)
-            res.extend([fruit[: med], fruit[med:]])
+            res.extend([fruit[:med], fruit[med:]])
         else:
             res.append(fruit)
     return res

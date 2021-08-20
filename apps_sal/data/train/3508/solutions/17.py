@@ -1,6 +1,5 @@
 def halving_sum(n):
     result = n
-
     if n < 1:
         return n
     else:
@@ -10,4 +9,4 @@ def halving_sum(n):
         return result
 
 
-print((halving_sum(25)))
+print(halving_sum(25))

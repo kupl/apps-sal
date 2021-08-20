@@ -4,6 +4,6 @@ for i in S:
     A.remove(i)
 A.sort()
 try:
-    print((A[0]))
+    print(A[0])
 except:
-    print("None")
+    print('None')

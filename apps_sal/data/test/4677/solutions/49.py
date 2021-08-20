@@ -1,6 +1,5 @@
 s = input()
 ans = ''
-
 for char in s:
     if char == '0':
         ans += '0'

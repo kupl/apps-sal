@@ -2,19 +2,20 @@ import queue
 
 
 class Solution:
+
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         color_bounds = {}
-        for i, row in enumerate(targetGrid):
-            for j, color in enumerate(row):
+        for (i, row) in enumerate(targetGrid):
+            for (j, color) in enumerate(row):
                 if not color in color_bounds:
-                    color_bounds[color] = {'row': [1e6, -1e6], 'col': [1e6, -1e6]}
+                    color_bounds[color] = {'row': [1000000.0, -1000000.0], 'col': [1000000.0, -1000000.0]}
                 color_bounds[color]['row'][0] = min(color_bounds[color]['row'][0], i)
                 color_bounds[color]['row'][1] = max(color_bounds[color]['row'][1], i)
                 color_bounds[color]['col'][0] = min(color_bounds[color]['col'][0], j)
                 color_bounds[color]['col'][1] = max(color_bounds[color]['col'][1], j)
         graph = collections.defaultdict(list)
         degree = Counter()
-        for color, bounds in list(color_bounds.items()):
+        for (color, bounds) in list(color_bounds.items()):
             seen = set()
             for i in range(bounds['row'][0], bounds['row'][1] + 1):
                 for j in range(bounds['col'][0], bounds['col'][1] + 1):

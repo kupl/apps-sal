@@ -1,10 +1,7 @@
-# coding=utf-8
 import sys
-
 sys.setrecursionlimit(10000)
 g = []
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 idx = [[False for i in range(m)] for j in range(n)]
 for k in range(n):
     g.append(input())

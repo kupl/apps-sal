@@ -1,5 +1,5 @@
 def fx(s, n, xsum):
-    sub = [[None for x in range(n + 2)]for y in range(xsum + 2)]
+    sub = [[None for x in range(n + 2)] for y in range(xsum + 2)]
     for i in range(n + 1):
         sub[0][i] = True
     for i in range(1, xsum + 1):
@@ -15,7 +15,7 @@ def fx(s, n, xsum):
         print('No')
 
 
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for _ in range(t):
     q = list(map(int, input().split()))

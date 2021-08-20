@@ -13,7 +13,7 @@ def solve1(dp):
 
 def solve(n, k, As, dp):
     count = 0
-    for i, ak in enumerate(As):
+    for (i, ak) in enumerate(As):
         if ak % k:
             continue
         if ak == 0:
@@ -29,12 +29,11 @@ def solve(n, k, As, dp):
     return count
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 As = list(map(int, input().split()))
 dp = collections.defaultdict(list)
-for i, a in enumerate(As):
+for (i, a) in enumerate(As):
     dp[a].append(i)
-
 if n < 3:
     print(0)
 elif k == 1:

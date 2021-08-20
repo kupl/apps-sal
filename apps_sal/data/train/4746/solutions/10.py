@@ -3,4 +3,4 @@ from functools import reduce
 
 
 def fisHex(name):
-    return reduce(xor, (ord(c) - 87 for c in name.lower() if c in "abcdef"), 0)
+    return reduce(xor, (ord(c) - 87 for c in name.lower() if c in 'abcdef'), 0)

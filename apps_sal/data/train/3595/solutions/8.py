@@ -3,8 +3,8 @@ def swapping(fir, sec):
     for ch in sf:
         occurs = fir.count(ch)
         if occurs % 2 != 0 and ch in sec.lower():
-            f = f"{ch}{ch.upper()}"
-            s = f"{ch.upper()}{ch}"
+            f = f'{ch}{ch.upper()}'
+            s = f'{ch.upper()}{ch}'
             t = sec.maketrans(f, s)
             sec = sec.translate(t)
     return sec

@@ -1,4 +1,5 @@
 def validation(foo):
+
     def wrapper(x):
         return foo(x or [0])
     return wrapper

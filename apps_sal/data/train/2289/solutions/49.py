@@ -1,4 +1,3 @@
-
 """
 Writer: SPD_9X2
 https://atcoder.jp/contests/arc081/tasks/arc081_c
@@ -45,48 +44,34 @@ aaaaaabbbbbbc
 →これはあくまで、後ろから見て辞書順最小でしかない…あれまさか？
 →正解しちゃったー？？？
 """
-
 A = list(input())
 A.reverse()
-
-alp = "abcdefghijklmnopqrstuvwxyz"
+alp = 'abcdefghijklmnopqrstuvwxyz'
 alpdic = {}
 for i in range(26):
     alpdic[alp[i]] = i
-
 allcol = [0] * (len(A) + 1)
 apnum = [[0] * 26 for i in range(len(A) + 1)]
 lastap = [[0] * 26 for i in range(len(A) + 1)]
-
 for i in range(len(A)):
-
     for j in range(26):
         apnum[i + 1][j] = apnum[i][j]
         lastap[i + 1][j] = lastap[i][j]
         allcol[i + 1] = allcol[i]
-
     apnum[i + 1][alpdic[A[i]]] |= 1
     if 0 not in apnum[i + 1]:
         apnum[i + 1] = [0] * 26
         allcol[i + 1] += 1
     lastap[i + 1][alpdic[A[i]]] = i + 1
-
 anslen = allcol[-1] + 1
 ans = []
 nind = len(A)
-
 for i in range(anslen):
-
-    #print ("".join(A[:nind]))
-
     minind = 0
     for j in range(26):
         if apnum[nind][j] == 0:
             minind = j
             break
     ans.append(alp[minind])
-
     nind = lastap[nind][minind] - 1
-
-# ans.reverse()
-print("".join(ans))
+print(''.join(ans))

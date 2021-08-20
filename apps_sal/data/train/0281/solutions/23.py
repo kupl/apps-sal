@@ -1,11 +1,11 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
         count = [0] * 26
         seen = set()
-
-        for cs, ct in zip(s, t):
+        for (cs, ct) in zip(s, t):
             diff = (ord(ct) - ord(cs)) % 26
             if diff != 0:
                 if diff in seen:
@@ -18,8 +18,3 @@ class Solution:
                         return False
                     seen.add(diff)
         return True
-        # alpha = '0abcdefghijklmnopqrstuvwxyz'
-        # aplha_d = {}
-        # val = 1
-        # for i in range(len(aplha)):
-        #     aplha_d[aplha[i]]

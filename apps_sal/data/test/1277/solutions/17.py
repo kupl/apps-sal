@@ -1,10 +1,10 @@
 from collections import deque
 import sys
-sys.setrecursionlimit(10**7)
-N, u, v = map(int, input().split())
+sys.setrecursionlimit(10 ** 7)
+(N, u, v) = map(int, input().split())
 D = [[] for i in range(N)]
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     D[a].append(b)

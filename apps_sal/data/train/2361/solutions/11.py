@@ -6,7 +6,7 @@ def solve(n):
     sol = [0] * n
     curr = 1
     while h:
-        _, l, r = heapq.heappop(h)
+        (_, l, r) = heapq.heappop(h)
         mid = l + (r - l) // 2
         if l <= mid - 1:
             heapq.heappush(h, (l - mid + 1, l, mid - 1))
@@ -20,7 +20,4 @@ def solve(n):
 t = int(input())
 for _ in range(t):
     n = int(input())
-    # n, k = map(int, input().split())
-    # a = list(map(int, input().split()))
-    # b = list(map(int, input().split()))
     print(' '.join(map(str, solve(n))))

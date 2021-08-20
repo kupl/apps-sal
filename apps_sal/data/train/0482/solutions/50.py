@@ -1,5 +1,5 @@
-
 class Solution:
+
     def __init__(self):
         self.vals = None
 
@@ -11,9 +11,9 @@ class Solution:
         if b - a == 1:
             return 0
         if self.vals[a][b] == 0:
-            low = 2**30
+            low = 2 ** 30
             for i in range(a + 1, b):
-                res = self.mctHelp(arr, a, i) + self.mctHelp(arr, i, b) + (max(arr[a:i]) * max(arr[i:b]))
+                res = self.mctHelp(arr, a, i) + self.mctHelp(arr, i, b) + max(arr[a:i]) * max(arr[i:b])
                 if res < low:
                     low = res
             self.vals[a][b] = low

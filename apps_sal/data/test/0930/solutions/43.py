@@ -1,6 +1,6 @@
 def solve():
-    mod = 10**9 + 7
-    n, k = list(map(int, input().split()))
+    mod = 10 ** 9 + 7
+    (n, k) = list(map(int, input().split()))
     m = min(n - 1, k)
     ans = 1
     dp0 = [1] * (m + 1)
@@ -13,4 +13,4 @@ def solve():
     return ans
 
 
-print((solve()))
+print(solve())

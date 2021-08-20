@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 0:
             return n
@@ -27,4 +28,4 @@ class Solution:
         total = 0
         for i in range(len(pad)):
             total += sum(pad[i])
-        return total % (10**9 + 7)
+        return total % (10 ** 9 + 7)

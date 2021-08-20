@@ -1,22 +1,22 @@
 def mod(n):
     if n > 0:
-        return -(n // 2), n % 2
+        return (-(n // 2), n % 2)
     elif n < 0:
-        return (-n + 1) // 2, (-n) % 2
+        return ((-n + 1) // 2, -n % 2)
     else:
-        return 0, 0
+        return (0, 0)
 
 
 def main():
     N = int(input())
     if N == 0:
-        print((0))
+        print(0)
         return
     ANS = []
     while N != 0:
-        N, b = mod(N)
+        (N, b) = mod(N)
         ANS.append(b)
-    print(("".join(map(str, ANS[::-1]))))
+    print(''.join(map(str, ANS[::-1])))
 
 
 def __starting_point():

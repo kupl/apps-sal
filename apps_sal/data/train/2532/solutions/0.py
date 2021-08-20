@@ -1,7 +1,8 @@
 class Solution:
+
     def thousandSeparator(self, n: int) -> str:
         arr = []
-        i, count = 0, 0
+        (i, count) = (0, 0)
         num = str(n)
         while i < len(num):
             if count != 3:
@@ -11,5 +12,4 @@ class Solution:
             else:
                 arr.append('.')
                 count = 0
-
         return ''.join(arr[::-1])

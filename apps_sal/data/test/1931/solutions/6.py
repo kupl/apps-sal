@@ -11,6 +11,6 @@ for q in range(0, t):
                 right = m
             else:
                 left = m
-        n -= (3 * left * (left + 1) // 2 - left)
+        n -= 3 * left * (left + 1) // 2 - left
         number += 1
     print(number)

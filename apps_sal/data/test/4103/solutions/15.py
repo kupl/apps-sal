@@ -1,4 +1,4 @@
-n, b, a = map(int, input().split())
+(n, b, a) = map(int, input().split())
 l1 = list(map(int, input().split()))
 maxa = a
 dist = 0
@@ -17,14 +17,13 @@ while (b != 0 or a != 0) and dist < n:
             x += 1
             dist += 1
             b -= 1
+    elif b > 0:
+        dist += 1
+        b -= 1
+        a += 1
+        x += 1
     else:
-        if b > 0:
-            dist += 1
-            b -= 1
-            a += 1
-            x += 1
-        else:
-            dist += 1
-            a -= 1
-            x += 1
+        dist += 1
+        a -= 1
+        x += 1
 print(dist)

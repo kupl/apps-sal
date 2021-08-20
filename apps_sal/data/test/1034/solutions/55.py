@@ -1,4 +1,4 @@
-X, Y, Z, K = list(map(int, input().split()))
+(X, Y, Z, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
@@ -14,4 +14,4 @@ for i in range(min(X, K)):
             ans.append(A[i] + B[j] + C[k])
 ans.sort(reverse=True)
 for i in range(K):
-    print((ans[i]))
+    print(ans[i])

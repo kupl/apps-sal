@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
 
     def value(v):
@@ -19,8 +19,7 @@ def main():
             else:
                 ng = mid
         return ok
-
-    print((b_search(10**16, 0, value)))
+    print(b_search(10 ** 16, 0, value))
 
 
 main()

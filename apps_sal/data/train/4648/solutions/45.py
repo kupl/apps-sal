@@ -10,6 +10,6 @@ def automorphic(n):
     square = n * n
     order = ordern(n)
     if square % order == n:
-        return "Automorphic"
+        return 'Automorphic'
     else:
-        return "Not!!"
+        return 'Not!!'

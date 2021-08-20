@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
-c, d = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
 yes = True
 for i in range(1, 100):
     if a % i == c % i and c % i == 0:

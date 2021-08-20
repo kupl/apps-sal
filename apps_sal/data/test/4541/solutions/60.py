@@ -9,6 +9,5 @@ elif c == 'e':
     print('vowel')
 elif c == 'o':
     print('vowel')
-
 else:
     print('consonant')

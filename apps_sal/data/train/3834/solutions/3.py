@@ -1,7 +1,7 @@
 def palin(a, b):
-    res = int('1' + ('0' * (a - 1))) + 1
+    res = int('1' + '0' * (a - 1)) + 1
     q = a // 2
-    step = ('1' + (q * '0'), '11' + ((q - 1) * '0'))[a % 2 == 0]
+    step = ('1' + q * '0', '11' + (q - 1) * '0')[a % 2 == 0]
     l = []
     while b > 0:
         temp = len(str(res)) // 2
@@ -10,7 +10,7 @@ def palin(a, b):
         if len(res) > a:
             a = len(str(res))
             q = a // 2
-            step = ('1' + (q * '0'), '11' + ((q - 1) * '0'))[a % 2 == 0]
+            step = ('1' + q * '0', '11' + (q - 1) * '0')[a % 2 == 0]
         if l and l[-1] == 99:
             l.append(101)
         if res == res[::-1]:

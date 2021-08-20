@@ -10,4 +10,4 @@ while n:
 if ans == 1:
     print(1)
 else:
-    print(((prev + 1) * (10**(ans - 1))) - N)
+    print((prev + 1) * 10 ** (ans - 1) - N)

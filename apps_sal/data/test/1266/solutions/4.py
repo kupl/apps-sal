@@ -1,5 +1,5 @@
 n = int(input())
-xo, yo = (int(x) for x in input().split())
+(xo, yo) = (int(x) for x in input().split())
 inf = 1000000000000
 above = [inf, 'N']
 below = [inf, 'N']
@@ -27,7 +27,6 @@ for i in range(n):
         elif x < xo and xo - x < left[0]:
             left[0] = xo - x
             left[1] = T
-
     if x - xo == y - yo:
         if x > xo and x - xo < upright[0]:
             upright[0] = x - xo
@@ -42,9 +41,7 @@ for i in range(n):
         elif x < xo and xo - x < upleft[0]:
             upleft[0] = xo - x
             upleft[1] = T
-
-
-if botright[1] == 'B' or botright[1] == 'Q' or botleft[1] == 'B' or botleft[1] == 'Q' or upleft[1] == 'B' or upleft[1] == 'Q' or upright[1] == 'B' or upright[1] == 'Q' or above[1] == 'R' or above[1] == 'Q' or below[1] == 'R' or below[1] == 'Q' or left[1] == 'R' or left[1] == 'Q' or right[1] == 'R' or right[1] == 'Q':
-    print("YES")
+if botright[1] == 'B' or botright[1] == 'Q' or botleft[1] == 'B' or (botleft[1] == 'Q') or (upleft[1] == 'B') or (upleft[1] == 'Q') or (upright[1] == 'B') or (upright[1] == 'Q') or (above[1] == 'R') or (above[1] == 'Q') or (below[1] == 'R') or (below[1] == 'Q') or (left[1] == 'R') or (left[1] == 'Q') or (right[1] == 'R') or (right[1] == 'Q'):
+    print('YES')
 else:
-    print("NO")
+    print('NO')

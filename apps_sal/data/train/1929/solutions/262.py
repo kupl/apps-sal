@@ -1,10 +1,12 @@
 class TrieNode:
+
     def __init__(self):
         self.isWord = False
         self.child = {}
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -30,7 +32,7 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie = Trie()
-        self.max_length = max(len(word) for word in words)
+        self.max_length = max((len(word) for word in words))
         self.letters = collections.deque()
         for word in words:
             self.trie.add_word(word[::-1])
@@ -39,7 +41,6 @@ class StreamChecker:
         self.letters.append(letter)
         if len(self.letters) > self.max_length:
             self.letters.popleft()
-
         t = list(self.letters)[::-1]
         cur = self.trie.root
         for letter in t:
@@ -49,8 +50,3 @@ class StreamChecker:
             if cur.isWord:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

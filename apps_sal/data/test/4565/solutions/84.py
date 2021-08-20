@@ -1,8 +1,6 @@
 from collections import deque
-
 N = int(input())
 S = input()
-
 left = deque([0])
 right = [0]
 for i in range(N):
@@ -16,9 +14,7 @@ for i in range(N):
     else:
         plus = 0
     right.append(right[-1] + plus)
-
 left.popleft()
 right = right[::-1]
 right.pop()
-
 print(min([left[i] + right[i] for i in range(N)]) - 1)

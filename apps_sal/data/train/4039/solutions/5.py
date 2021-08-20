@@ -1,6 +1,6 @@
 def trans_base(n, b):
     r = ''
-    while(n > 0):
+    while n > 0:
         d = n % b
         r += str(d) if d < 10 else 'x'
         n //= b

@@ -1,4 +1,5 @@
 class Solution:
+
     def nthPersonGetsNthSeat(self, n: int) -> float:
         D = [0] * n
         D[0] = 1.0

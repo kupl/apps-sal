@@ -1,6 +1,5 @@
 mem = [[-1, -1] for x in range(0, 103)]
-
-n, k, d = list(map(int, input().split()))
+(n, k, d) = list(map(int, input().split()))
 
 
 def dp(remain, has_d):
@@ -19,4 +18,4 @@ def dp(remain, has_d):
     return mem[remain][has_d]
 
 
-print(dp(n, 0) % (10**9 + 7))
+print(dp(n, 0) % (10 ** 9 + 7))

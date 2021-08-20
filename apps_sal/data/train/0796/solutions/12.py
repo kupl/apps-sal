@@ -1,4 +1,3 @@
-
 t = int(input())
 for _ in range(0, t):
     n = int(input())
@@ -8,5 +7,5 @@ for _ in range(0, t):
         if arr[i] * arr[i + 1] < 0:
             ans[i] = ans[i + 1] + 1
     for i in range(0, n):
-        print(str(ans[i]) + " ", end="")
-    print("")
+        print(str(ans[i]) + ' ', end='')
+    print('')

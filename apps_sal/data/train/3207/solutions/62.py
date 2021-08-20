@@ -1,6 +1,5 @@
 def reverseWords(s):
-    s = s.split(" ")
+    s = s.split(' ')
     s.reverse()
-    x = " "
-
+    x = ' '
     return x.join(s)

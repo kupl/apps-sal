@@ -6,4 +6,4 @@ for i in itself:
 ok = True
 for i in range(len(s)):
     ok &= s[i] in d.keys() and s[len(s) - i - 1] == d[s[i]]
-print("TAK" if ok else "NIE")
+print('TAK' if ok else 'NIE')

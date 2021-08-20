@@ -29,380 +29,40 @@ for i in range(p):
 	print(tri[0])
 
 	"""
-"""
-no=input()
-towords(no[:])
-
-
-def assist1(no):
-	no=int(no)
-
-	if no==1:
-		to_add='one'
-	elif no==2:
-		to_add='two'
-	elif no==3:
-		to_add='three'
-	elif no==4:
-		to_add='four'
-	elif no==5:
-		to_add='five'
-	elif no==6:
-		to_add='six'
-	elif no==7:
-		to_add='seven'
-	elif no==8:
-		to_add='eight'
-	elif no==9:
-		to_add='nine'
-	else:
-		to_add=''
-
-def assist2(no):
-	below_hundred=int(no)
-
-	
-	if below_hundred==10:
-		to_add='ten'
-	elif below_hundred==20:
-		to_add='twenty'
-	elif below_hundred==30:
-		to_add='thirty'
-	elif below_hundred==40:
-		to_add='forty'
-	elif below_hundred==50:
-		to_add='fifty'
-	elif below_hundred==60:
-		to_add='sixty'
-	elif below_hundred==70:
-		to_add='seventy'
-	elif below_hundred==80:
-		to_add='eighty'
-	elif below_hundred==90:
-		to_add='ninety'
-	elif below_hundred==11:
-		to_add='eleven'
-	elif below_hundred==12:
-		to_add='twelve'
-	elif below_hundred==13:
-		to_add='thirteen'
-	elif below_hundred==14:
-		to_add='fourteen'
-	elif below_hundred==15:
-		to_add='felifteen'
-	elif below_hundred==16:
-		to_add='sixteen'
-	elif below_hundred==17:
-		to_add='seventeen'
-	elif below_hundred==18:
-		to_add='eightteen'
-	elif below_hundred==19:
-		to_add='nineteen'
-	else:
-		to_add=''
-
-def towords(no):
-
-	if 10<below_hundred<20 or below_hundred%10==0:
-		assist1(no[:-2])
-	
-	else:
-		=assist(no[-1])
-
-	if int(no)>100:
-"""
-
-# str_num=[]
-# n=int(input())
-# arr=input()
-# for i in arr:
-#	str_num.append(int(i))
-"""
-def find_sub(stri):
-	maxi=0
-	if stri[0]=='S':
-		stri=stri[stri.find('G'):]
-
-	while True:
-		if stri.find('G')==-1 :
-			break
-
-		elif stri.find('S')==-1 :
-			if len(stri)>maxi:
-				maxi=len(stri)
-			break
-
-		end_index=stri.find('S')
-		stri=stri[end_index:]
-
-		if end_index > maxi:
-			maxi=end_index
-
-		var=stri.find('G')
-		if var!=-1:
-			stri=stri[var:]
-
-	return maxi
-
-			
-
-		
-
-def main():
-	n=int(input())
-	trophies=input()
-
-	if trophies.find('S')==-1:
-		return n
-	if trophies.find('G')==-1:
-		return 0
-
-
-	maxy=0
-	for i in range(n):
-		for j in range(i+1,n):
-			if trophies[i]!=trophies[j]:			
-				temp=find_sub(trophies[:i]+trophies[j]+trophies[i+1:j]+trophies[i]+trophies[j+1:])
-				if temp> maxy:
-					maxy=temp
-
-	return maxy
-
-#print(main())
-
-for i in range(100000):
-	print("a", end="")"""
-
-"""
-def hhh():
-	n,m=map(int,input().split())
-	done=[]
-	count=0
-
-	A=list(map(int,input().split(" ")))
-	B=list(map(int,input().split(" ")))
-
-	for i in range(m):
-		done.append(A[0]+B[i])
-		print(0,i)
-
-
-	while True:
-		for i in range(n):
-			for j in range(m):
-				if(A[i]+B[j] not in done):
-					print(i,j)
-					done.append(A[i]+B[j])
-					count+=1
-					if count==m+n-1:
-						print(done)
-						return
-
-hhh()
-
-
-def Tee(N,M):
-	if M - N>0:
-		temp=str(M - N)
-	else:
-		temp=str(N - M)
-#	print(temp)
-	if (int(temp)/2)%2!=0:
-		print("Even")
-	else:
-		print("Odd")
-
-	
-for i in range(int(input())):
-	N,M=map(str,input().split(" "))
-	if int(N[-1])%2==0:
-		N1=int(N[-1])+1
-#		print(N,N[-1],N1)
-	else:
-		N1=int(N[-1])
-#		print(N,N[-1],N1)	
-	if int(M[-1])%2==0:
-		M1=int(M[-1])-1
-#		print(M,M[-1],M1)
-	else:
-		M1=int(M[-1])
-	Tee(N1,M1)"""
-"""	
-from copy import deepcopy
-def rec(current,final,time):
-	if memoization[current[0]][current[1]]!=-1 and memoization[current[0]][current[1]]+matrix[current[0]][current[1]]>memoization[][]
-
-matrix=[]
-memoization=[]
-R,C=map(int,input().split())
-
-
-temp=[-1 for i in range(C)]
-
-for i in range(R):
-	matrix.append(list(map(int,input().split())))
-	memoization.append[temp[:]]
-
-D=int(input())
-current=[0,0]
-for i in range(D):
-	x=int(input())
-	y=int(input())
-	rec(current,[x-1,y-1])
-
-
-N,K,w=map(int,input().split())
-
-Arr=list(map(int,input().split()))
-finalScore=0
-for i in range(K):
-	
-	sumAll=0
-	startAll=0
-	endAll=0
-	start=0
-	sumI=0
-
-	for j in range(N):
-		if(j<w):
-			start=0
-			sumI+=Arr[j]
-		else:
-			start=j-w+1
-			sumI+=(Arr[j]-Arr[j-w])
-
-		if(sumI>sumAll):
-			sumAll=sumI
-			startAll=start
-			endAll=j
-
-	for j in range(N-w,N):
-		sumI-=Arr[j]
-		start=j+1
-
-		if(sumI>sumAll):
-			sumAll=sumI
-			startAll=start
-			endAll=N-1
-	print(startAll,endAll)
-	for q in range(startAll,endAll+1):
-		Arr[q]=0
-	print(Arr)
-	finalScore+=sumAll
-
-print(finalScore)
-class div(object):
-
-	def __init__(self,no5,no2):
-		self.no2 = no2
-		self.no5 = no5
-
-	def __add__(self,toadd):
-		return(div(self.no5+toadd.no5,self.no2+toadd.no2))
-	
-a=[]
-ans=[[]]
-path=[[]]
-
-def rec(divObj,i,j,N,pathi):
-	zeros=min(divObj.no5,divObj.no2)
-
-	if ans[i][j]!=-1 and zeros<ans[i][j]:
-		ans[i][j]=zeros
-		path[i][j]=pathi
-	elif ans[i][j]==-1:
-		ans[i][j]=zeros
-		path[i][j]=pathi
-	else:
-		return
-
-	if j+1<N:
-		rec(divObj+a[i][j+1],i,j+1,N,pathi+"R")
-
-	if i+1<N:
-		rec(divObj+a[i+1][j],i+1,j,N,pathi+"D")
-
-N=int(input())
-
-for i in range(N):
-	a.append(list(map(int,input().split())))
-
-for i in range(N):
-	for j in range(N):
-		temp=a[i][j]
-
-		a[i][j]=div(0,0)
-
-		br1=temp
-
-		while True:
-			br1=br1/5
-			if br1%1==0:
-				a[i][j].no5+=1
-			else:
-				break
-
-		br2=temp
-
-		while True:
-			br2=br2/2
-			if br2%1==0:
-				a[i][j].no2+=1
-			else:
-				break
-
-ans = [[-1 for i in range(N)] for j in range(N)]
-path = [["" for i in range(N)] for j in range(N)]
-
-rec(a[0][0],0,0,N,"")
-
-print(ans[N-1][N-1])
-print(path[N-1][N-1])"""
-
-
+"\nno=input()\ntowords(no[:])\n\n\ndef assist1(no):\n\tno=int(no)\n\n\tif no==1:\n\t\tto_add='one'\n\telif no==2:\n\t\tto_add='two'\n\telif no==3:\n\t\tto_add='three'\n\telif no==4:\n\t\tto_add='four'\n\telif no==5:\n\t\tto_add='five'\n\telif no==6:\n\t\tto_add='six'\n\telif no==7:\n\t\tto_add='seven'\n\telif no==8:\n\t\tto_add='eight'\n\telif no==9:\n\t\tto_add='nine'\n\telse:\n\t\tto_add=''\n\ndef assist2(no):\n\tbelow_hundred=int(no)\n\n\t\n\tif below_hundred==10:\n\t\tto_add='ten'\n\telif below_hundred==20:\n\t\tto_add='twenty'\n\telif below_hundred==30:\n\t\tto_add='thirty'\n\telif below_hundred==40:\n\t\tto_add='forty'\n\telif below_hundred==50:\n\t\tto_add='fifty'\n\telif below_hundred==60:\n\t\tto_add='sixty'\n\telif below_hundred==70:\n\t\tto_add='seventy'\n\telif below_hundred==80:\n\t\tto_add='eighty'\n\telif below_hundred==90:\n\t\tto_add='ninety'\n\telif below_hundred==11:\n\t\tto_add='eleven'\n\telif below_hundred==12:\n\t\tto_add='twelve'\n\telif below_hundred==13:\n\t\tto_add='thirteen'\n\telif below_hundred==14:\n\t\tto_add='fourteen'\n\telif below_hundred==15:\n\t\tto_add='felifteen'\n\telif below_hundred==16:\n\t\tto_add='sixteen'\n\telif below_hundred==17:\n\t\tto_add='seventeen'\n\telif below_hundred==18:\n\t\tto_add='eightteen'\n\telif below_hundred==19:\n\t\tto_add='nineteen'\n\telse:\n\t\tto_add=''\n\ndef towords(no):\n\n\tif 10<below_hundred<20 or below_hundred%10==0:\n\t\tassist1(no[:-2])\n\t\n\telse:\n\t\t=assist(no[-1])\n\n\tif int(no)>100:\n"
+'\ndef find_sub(stri):\n\tmaxi=0\n\tif stri[0]==\'S\':\n\t\tstri=stri[stri.find(\'G\'):]\n\n\twhile True:\n\t\tif stri.find(\'G\')==-1 :\n\t\t\tbreak\n\n\t\telif stri.find(\'S\')==-1 :\n\t\t\tif len(stri)>maxi:\n\t\t\t\tmaxi=len(stri)\n\t\t\tbreak\n\n\t\tend_index=stri.find(\'S\')\n\t\tstri=stri[end_index:]\n\n\t\tif end_index > maxi:\n\t\t\tmaxi=end_index\n\n\t\tvar=stri.find(\'G\')\n\t\tif var!=-1:\n\t\t\tstri=stri[var:]\n\n\treturn maxi\n\n\t\t\t\n\n\t\t\n\ndef main():\n\tn=int(input())\n\ttrophies=input()\n\n\tif trophies.find(\'S\')==-1:\n\t\treturn n\n\tif trophies.find(\'G\')==-1:\n\t\treturn 0\n\n\n\tmaxy=0\n\tfor i in range(n):\n\t\tfor j in range(i+1,n):\n\t\t\tif trophies[i]!=trophies[j]:\t\t\t\n\t\t\t\ttemp=find_sub(trophies[:i]+trophies[j]+trophies[i+1:j]+trophies[i]+trophies[j+1:])\n\t\t\t\tif temp> maxy:\n\t\t\t\t\tmaxy=temp\n\n\treturn maxy\n\n#print(main())\n\nfor i in range(100000):\n\tprint("a", end="")'
+'\ndef hhh():\n\tn,m=map(int,input().split())\n\tdone=[]\n\tcount=0\n\n\tA=list(map(int,input().split(" ")))\n\tB=list(map(int,input().split(" ")))\n\n\tfor i in range(m):\n\t\tdone.append(A[0]+B[i])\n\t\tprint(0,i)\n\n\n\twhile True:\n\t\tfor i in range(n):\n\t\t\tfor j in range(m):\n\t\t\t\tif(A[i]+B[j] not in done):\n\t\t\t\t\tprint(i,j)\n\t\t\t\t\tdone.append(A[i]+B[j])\n\t\t\t\t\tcount+=1\n\t\t\t\t\tif count==m+n-1:\n\t\t\t\t\t\tprint(done)\n\t\t\t\t\t\treturn\n\nhhh()\n\n\ndef Tee(N,M):\n\tif M - N>0:\n\t\ttemp=str(M - N)\n\telse:\n\t\ttemp=str(N - M)\n#\tprint(temp)\n\tif (int(temp)/2)%2!=0:\n\t\tprint("Even")\n\telse:\n\t\tprint("Odd")\n\n\t\nfor i in range(int(input())):\n\tN,M=map(str,input().split(" "))\n\tif int(N[-1])%2==0:\n\t\tN1=int(N[-1])+1\n#\t\tprint(N,N[-1],N1)\n\telse:\n\t\tN1=int(N[-1])\n#\t\tprint(N,N[-1],N1)\t\n\tif int(M[-1])%2==0:\n\t\tM1=int(M[-1])-1\n#\t\tprint(M,M[-1],M1)\n\telse:\n\t\tM1=int(M[-1])\n\tTee(N1,M1)'
+'\t\nfrom copy import deepcopy\ndef rec(current,final,time):\n\tif memoization[current[0]][current[1]]!=-1 and memoization[current[0]][current[1]]+matrix[current[0]][current[1]]>memoization[][]\n\nmatrix=[]\nmemoization=[]\nR,C=map(int,input().split())\n\n\ntemp=[-1 for i in range(C)]\n\nfor i in range(R):\n\tmatrix.append(list(map(int,input().split())))\n\tmemoization.append[temp[:]]\n\nD=int(input())\ncurrent=[0,0]\nfor i in range(D):\n\tx=int(input())\n\ty=int(input())\n\trec(current,[x-1,y-1])\n\n\nN,K,w=map(int,input().split())\n\nArr=list(map(int,input().split()))\nfinalScore=0\nfor i in range(K):\n\t\n\tsumAll=0\n\tstartAll=0\n\tendAll=0\n\tstart=0\n\tsumI=0\n\n\tfor j in range(N):\n\t\tif(j<w):\n\t\t\tstart=0\n\t\t\tsumI+=Arr[j]\n\t\telse:\n\t\t\tstart=j-w+1\n\t\t\tsumI+=(Arr[j]-Arr[j-w])\n\n\t\tif(sumI>sumAll):\n\t\t\tsumAll=sumI\n\t\t\tstartAll=start\n\t\t\tendAll=j\n\n\tfor j in range(N-w,N):\n\t\tsumI-=Arr[j]\n\t\tstart=j+1\n\n\t\tif(sumI>sumAll):\n\t\t\tsumAll=sumI\n\t\t\tstartAll=start\n\t\t\tendAll=N-1\n\tprint(startAll,endAll)\n\tfor q in range(startAll,endAll+1):\n\t\tArr[q]=0\n\tprint(Arr)\n\tfinalScore+=sumAll\n\nprint(finalScore)\nclass div(object):\n\n\tdef __init__(self,no5,no2):\n\t\tself.no2 = no2\n\t\tself.no5 = no5\n\n\tdef __add__(self,toadd):\n\t\treturn(div(self.no5+toadd.no5,self.no2+toadd.no2))\n\t\na=[]\nans=[[]]\npath=[[]]\n\ndef rec(divObj,i,j,N,pathi):\n\tzeros=min(divObj.no5,divObj.no2)\n\n\tif ans[i][j]!=-1 and zeros<ans[i][j]:\n\t\tans[i][j]=zeros\n\t\tpath[i][j]=pathi\n\telif ans[i][j]==-1:\n\t\tans[i][j]=zeros\n\t\tpath[i][j]=pathi\n\telse:\n\t\treturn\n\n\tif j+1<N:\n\t\trec(divObj+a[i][j+1],i,j+1,N,pathi+"R")\n\n\tif i+1<N:\n\t\trec(divObj+a[i+1][j],i+1,j,N,pathi+"D")\n\nN=int(input())\n\nfor i in range(N):\n\ta.append(list(map(int,input().split())))\n\nfor i in range(N):\n\tfor j in range(N):\n\t\ttemp=a[i][j]\n\n\t\ta[i][j]=div(0,0)\n\n\t\tbr1=temp\n\n\t\twhile True:\n\t\t\tbr1=br1/5\n\t\t\tif br1%1==0:\n\t\t\t\ta[i][j].no5+=1\n\t\t\telse:\n\t\t\t\tbreak\n\n\t\tbr2=temp\n\n\t\twhile True:\n\t\t\tbr2=br2/2\n\t\t\tif br2%1==0:\n\t\t\t\ta[i][j].no2+=1\n\t\t\telse:\n\t\t\t\tbreak\n\nans = [[-1 for i in range(N)] for j in range(N)]\npath = [["" for i in range(N)] for j in range(N)]\n\nrec(a[0][0],0,0,N,"")\n\nprint(ans[N-1][N-1])\nprint(path[N-1][N-1])'
 dicti = {}
 for i in range(26):
     dicti[chr(97 + i)] = i + 1
-
-# print(dicti)
-
 k = int(input())
 str1 = list(input())
 str2 = list(input())
-
 delta = []
-
 for i in range(k):
     str1[i] = dicti[str1[i]]
     str2[i] = dicti[str2[i]]
     delta.append(str2[i] - str1[i])
-
 for i in range(k - 1, 0, -1):
-    if(delta[i] < 0):
+    if delta[i] < 0:
         delta[i - 1] -= 1
         delta[i] += 26
-
 divide = []
-
 for i in range(k - 1):
     divide.append(delta[i])
-    if(delta[i] % 2 != 0):
+    if delta[i] % 2 != 0:
         divide[i] = delta[i] // 2
         delta[i + 1] += 26
     else:
         divide[i] = delta[i] // 2
-    # print(i,divide,delta)
-
 divide.append(delta[-1] // 2)
-
 ans = [0 for i in range(k)]
-
 for i in range(k - 1, -1, -1):
     sumi = str1[i] + divide[i]
-    if(sumi > 26):
+    if sumi > 26:
         sumi -= 26
-        if(i != 0):
+        if i != 0:
             divide[i - 1] += 1
-    ans[i] = (chr)(96 + sumi)
-
-print(*ans, sep="")
+    ans[i] = chr(96 + sumi)
+print(*ans, sep='')

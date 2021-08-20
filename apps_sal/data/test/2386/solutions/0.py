@@ -19,13 +19,13 @@ from collections import deque
 import collections
 import itertools
 import heapq
-
 sys.setrecursionlimit(4100000)
 product = functools.partial(functools.reduce, operator.mul)
-INF = float("inf")
+INF = float('inf')
 
 
 class UnionFind:
+
     def __init__(self, n, m):
         self.parents = [[-1, {m[i]: 1}] for i in range(n)]
         self.n = n
@@ -54,12 +54,12 @@ class UnionFind:
         return self.roots()
 
     def union(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x != y:
             if self.parents[x][0] > self.parents[y][0]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parents[x][0] += self.parents[y][0]
-            for k, v in list(self.parents[y][1].items()):
+            for (k, v) in list(self.parents[y][1].items()):
                 self.parents[x][1].setdefault(k, 0)
                 self.parents[x][1][k] += v
             self.parents[y] = x
@@ -97,6 +97,7 @@ class UnionFind:
 
 
 class Imos:
+
     def __init__(self, n):
         self.val = [0] * n
 
@@ -119,6 +120,7 @@ class Imos:
 
 
 class CS:
+
     def __init__(self, grid):
         self.cs = grid
         for i0 in range(len(grid)):
@@ -127,12 +129,10 @@ class CS:
                     if i1 == 0:
                         continue
                     self.cs[i0][i1] += self.cs[i0][i1 - 1]
+                elif i1 == 0:
+                    self.cs[i0][i1] += self.cs[i0 - 1][i1]
                 else:
-                    if i1 == 0:
-                        self.cs[i0][i1] += self.cs[i0 - 1][i1]
-                    else:
-                        self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - \
-                            self.cs[i0 - 1][i1 - 1]
+                    self.cs[i0][i1] += self.cs[i0 - 1][i1] + self.cs[i0][i1 - 1] - self.cs[i0 - 1][i1 - 1]
 
     def sum(self, start_0, start_1, end_0, end_1):
         if start_0 == 0:
@@ -143,8 +143,7 @@ class CS:
             return self.cs[end_0][end_1] - self.cs[start_0 - 1][end_1]
         start_0 -= 1
         start_1 -= 1
-        return self.cs[end_0][end_1] - self.cs[start_0][end_1] - self.cs[end_0][
-            start_1] + self.cs[start_0][start_1]
+        return self.cs[end_0][end_1] - self.cs[start_0][end_1] - self.cs[end_0][start_1] + self.cs[start_0][start_1]
 
 
 def mod(n):
@@ -167,7 +166,7 @@ def listban(l):
 
 
 def div(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -200,7 +199,7 @@ def div_counter(l, n):
 
 
 def lcm(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def C(n, r):
@@ -228,7 +227,7 @@ def DFS(g, s, pos=None):
         pos = set()
     pos.add(s)
     for i in g[s]:
-        if not (i in pos):
+        if not i in pos:
             DFS(g, i, pos)
     return pos
 
@@ -241,7 +240,7 @@ def DFS_one(g, s, pos=None):
     b = copy(pos)
     m = copy(pos)
     for i in g[s]:
-        if not (i in pos):
+        if not i in pos:
             b = DFS(g, i, pos)
             if len(m) < len(b):
                 m = b
@@ -259,8 +258,8 @@ def BFS(g, q, pos=None):
         if not i in pos:
             q.append(i)
     while q != deque():
-        pos, q = BFS(g, q, pos)
-    return pos, q
+        (pos, q) = BFS(g, q, pos)
+    return (pos, q)
 
 
 def SSP(a, li=None):
@@ -268,8 +267,7 @@ def SSP(a, li=None):
         li = []
     if len(a) == 1:
         return [a[0]]
-    return list(set(
-        li + SSP(a[1:], li) + list([x + a[0] for x in SSP(a[1:], li)]) + [a[0]]))
+    return list(set(li + SSP(a[1:], li) + list([x + a[0] for x in SSP(a[1:], li)]) + [a[0]]))
 
 
 def dijkstra(g, s):
@@ -281,7 +279,7 @@ def dijkstra(g, s):
     while hq:
         v = heapq.heappop(hq)[1]
         seen[v] = True
-        for to, cost in g[v]:
+        for (to, cost) in g[v]:
             if seen[to] == False and dist[v] + cost < dist[to]:
                 dist[to] = dist[v] + cost
                 heapq.heappush(hq, (dist[to], to))
@@ -300,9 +298,9 @@ def LIS(b):
 
 def yn(b):
     if b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def op(s):

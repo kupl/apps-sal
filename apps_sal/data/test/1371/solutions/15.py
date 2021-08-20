@@ -16,7 +16,6 @@ def solve():
             DP[i + j] += DP[i]
             DP[i + j] %= mod
     print(DP[S])
-
     return 0
 
 

@@ -11,9 +11,8 @@ ans = 0
 for i in range(5):
     if l[i] % 10 == 0:
         ans += l[i]
+    elif i == 4:
+        ans += l[i]
     else:
-        if i == 4:
-            ans += l[i]
-        else:
-            ans += l[i] + 10 - l[i] % 10
+        ans += l[i] + 10 - l[i] % 10
 print(ans)

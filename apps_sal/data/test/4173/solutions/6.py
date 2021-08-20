@@ -1,7 +1,7 @@
 def main():
     q = int(input())
     for case in range(q):
-        n, a, b = map(int, input().split())
+        (n, a, b) = map(int, input().split())
         if n % 2 == 0:
             print(min(n * a, n * b // 2))
         else:

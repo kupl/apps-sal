@@ -1,8 +1,8 @@
-n, l, x, y = list(map(int, input().split(" ")))
-li = list(map(int, input().split(" ", n)[:n]))
+(n, l, x, y) = list(map(int, input().split(' ')))
+li = list(map(int, input().split(' ', n)[:n]))
 li.sort()
 dic = {}
-a1, a2 = 0, 0
+(a1, a2) = (0, 0)
 ans = 2
 x1 = x
 y1 = y

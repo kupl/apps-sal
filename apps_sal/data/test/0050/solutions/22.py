@@ -1,11 +1,11 @@
-# codeforces1150A_live
-def gi(): return list(map(int, input().strip().split()))
+def gi():
+    return list(map(int, input().strip().split()))
 
 
-n, m, r = gi()
+(n, m, r) = gi()
 l = gi()
 ll = gi()
-ans = (r // min(l)) * max(ll) + r % min(l)
+ans = r // min(l) * max(ll) + r % min(l)
 if ans < r:
     ans = r
 print(ans)

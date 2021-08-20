@@ -1,10 +1,10 @@
-n, MA, MB = map(int, input().split())
-INF = 10**10
+(n, MA, MB) = map(int, input().split())
+INF = 10 ** 10
 A = []
 B = []
 C = []
 for i in range(n):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     if MA * b - MB * a > 0:
         A.append([MA * b - MB * a, c])
     elif MA * b - MB * a < 0:

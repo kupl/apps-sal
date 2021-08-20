@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 a = set(map(int, input().split()))
 b = set(map(int, input().split()))
 c = a & b

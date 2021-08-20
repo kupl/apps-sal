@@ -1,4 +1,5 @@
 class Solution:
+
     def checkDistance(self, position, minDist, m):
         lastBallPos = position[0]
         ballLeft = m - 1

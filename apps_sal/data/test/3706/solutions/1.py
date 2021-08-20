@@ -1,7 +1,6 @@
-n, m = input().strip().split()
-n, m = int(n), int(m)
+(n, m) = input().strip().split()
+(n, m) = (int(n), int(m))
 g = [[int(j) for j in input().strip().split()] for i in range(n)]
-
 answer = []
 
 
@@ -10,7 +9,7 @@ def b():
         minRow = min(g[i])
         if minRow != 0:
             for k in range(minRow):
-                answer.append("row " + str(i + 1))
+                answer.append('row ' + str(i + 1))
             for j in range(m):
                 g[i][j] -= minRow
 
@@ -23,12 +22,12 @@ def a():
                 minCol = g[i][j]
         if minCol != 0:
             for k in range(minCol):
-                answer.append("col " + str(j + 1))
+                answer.append('col ' + str(j + 1))
             for i in range(n):
                 g[i][j] -= minCol
 
 
-if(n < m):
+if n < m:
     b()
     a()
 else:
@@ -40,4 +39,4 @@ if maxNumber == 0:
     for el in answer:
         print(el)
 else:
-    print("-1")
+    print('-1')

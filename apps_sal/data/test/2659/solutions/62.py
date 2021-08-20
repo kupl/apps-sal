@@ -18,7 +18,6 @@ for i in range(1, 100):
             ans[-1] = (i, tmp)
         else:
             ans.append((i, tmp))
-
 for j in range(15):
     for i in range(100, 1000):
         n = int(str(i) + ''.join(['9'] * j))
@@ -27,6 +26,5 @@ for j in range(15):
             while ans[-1][1] > tmp:
                 ans.pop()
         ans.append((n, tmp))
-
 for i in range(int(input())):
     print(ans[i][0])

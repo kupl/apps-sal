@@ -9,9 +9,9 @@ for y in range(t):
     same = 0
     for i in d.values():
         same = max(i, same)
-    if(diff < same):
+    if diff < same:
         print(diff)
-    elif(diff == same):
+    elif diff == same:
         print(diff - 1)
     else:
         print(same)

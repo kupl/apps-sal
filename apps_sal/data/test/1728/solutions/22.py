@@ -1,8 +1,7 @@
 import sys
-
 lines = []
 for line in sys.stdin:
-    lines.append(line.rstrip("\r\n\t "))
+    lines.append(line.rstrip('\r\n\t '))
 n = int(lines[0])
 data = lines[1].split(' ')
 tree = [0]

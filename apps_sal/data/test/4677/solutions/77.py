@@ -1,7 +1,7 @@
 s = input()
-S = ""
+S = ''
 for i in s:
-    if i == "B":
+    if i == 'B':
         S = S[:-1]
     else:
         S += i

@@ -1,4 +1,4 @@
-w, l = list(map(int, input().split()))
+(w, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = sum(a[:l])
 r = 1000000000000000000

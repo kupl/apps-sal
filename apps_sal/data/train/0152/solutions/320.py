@@ -1,7 +1,8 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        lo, hi = 1, 10**9
+        (lo, hi) = (1, 10 ** 9)
         while hi > lo:
             mid = (lo + hi + 1) // 2
             lapo = position[0]

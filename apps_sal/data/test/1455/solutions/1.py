@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     n = int(buf)

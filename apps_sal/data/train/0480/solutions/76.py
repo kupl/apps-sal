@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, n: int) -> int:
         A = [0, 1]
         mod = 10 ** 9 + 7

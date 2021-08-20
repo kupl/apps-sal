@@ -7,7 +7,6 @@ def process(first, second):
     for s in second:
         if s in dist1:
             ret = ret + 1
-
     print(ret)
 
 
@@ -16,7 +15,6 @@ def __starting_point():
     for i in range(cases):
         first = input()
         second = input()
-
         process(first, second)
 
 

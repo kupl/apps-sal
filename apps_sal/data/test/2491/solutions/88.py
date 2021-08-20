@@ -7,8 +7,7 @@ class Edge:
 
 
 def bellman_ford(N, edges, start, goal):
-    # Weight Maximization
-    MIN_INF = - 10**15
+    MIN_INF = -10 ** 15
     d = [MIN_INF for _ in range(N)]
     d[start] = 0
     for loop in range(N):
@@ -26,20 +25,19 @@ def bellman_ford(N, edges, start, goal):
         if loop == N - 1:
             if not goal_updated:
                 return d[goal]
-            # exists a positive loop which connected to the goal node.
             return None
 
 
 def main():
-    N, M = list(map(int, input().split(' ')))
+    (N, M) = list(map(int, input().split(' ')))
     edges = list()
     for _ in range(M):
-        a, b, c = list(map(int, input().split(' ')))
+        (a, b, c) = list(map(int, input().split(' ')))
         from_node = a - 1
         to_node = b - 1
         weight = c
         edges.append(Edge(from_node, to_node, weight))
-    start, goal = 0, N - 1
+    (start, goal) = (0, N - 1)
     result = bellman_ford(N, edges, start, goal)
     if result is None:
         print('inf')

@@ -4,37 +4,26 @@ from random import randint
 def factMod(n, mod):
     res = 1
     for i in range(2, n + 1):
-        res = (res * i) % mod
+        res = res * i % mod
     return res
 
 
 def powMod(n, p, mod):
     res = 1
-
     while p > 0:
         if p % 2 == 1:
-            res = (res * n) % mod
-
+            res = res * n % mod
         p //= 2
-        n = (n * n) % mod
-
+        n = n * n % mod
     return res
 
 
 def invMod(n, mod):
     return powMod(n, mod - 2, mod)
 
-#t = 6
-#print(invMod(t, 97))
-#print( (invMod(t, 97) * t) % 97 )
-# return
-
 
 def CnkMod(n, k, mod):
-    return (
-        factMod(n, mod) *
-        invMod(factMod(k, mod) * factMod(n - k, mod), mod)
-    ) % mod
+    return factMod(n, mod) * invMod(factMod(k, mod) * factMod(n - k, mod), mod) % mod
 
 
 def computeCnksMod(N, mod):
@@ -44,38 +33,22 @@ def computeCnksMod(N, mod):
         res[n][0] = res[n - 1][0]
         for k in range(1, n + 1):
             res[n][k] = (res[n - 1][k] + res[n - 1][k - 1]) % mod
-
     return res
 
 
 magic = 998244353
-
 n = int(input()) + 1
 aa = [1] + [int(s) + 1 for s in input().split(' ')]
-
-#aa = [1] + [randint(0, 999) for i in range(1000)]
-#n = len(aa)
-
 cnks = computeCnksMod(n, magic)
-
-#print('aa:', aa)
-
 d = [0] * (n + 1)
 d[n] = 1
-
 for i in reversed(list(range(n))):
     if i != 0 and aa[i] < 2:
         continue
-
     cur = 0
-
     tosel = aa[i] - 1
     for j in range(i + tosel + 1, n + 1):
         avail = j - i - 1
-        #cur = (cur + CnkMod(avail, tosel, magic) * d[j]) % magic
         cur = (cur + cnks[avail][tosel] * d[j]) % magic
-
     d[i] = cur
-
-# print(d)
 print(d[0] - 1)

@@ -3,7 +3,6 @@ def string_func(s, x):
     cyc = x % life(l)
     order = list(s)
     string = list(s)
-
     c = 0
     for i in range(l - 1, -1 + l // 2, -1):
         order[c] = i
@@ -12,8 +11,7 @@ def string_func(s, x):
     for i in range(0, l // 2, 1):
         order[c] = i
         c += 2
-
-    return "".join(sort(order, string, cyc))
+    return ''.join(sort(order, string, cyc))
 
 
 def sort(schema, string, times):
@@ -30,7 +28,7 @@ def life(n):
         return 1
     m = 1
     while True:
-        a = (2 ** m) % (2 * n + 1)
+        a = 2 ** m % (2 * n + 1)
         if a == 1 or a == 2 * n:
             return m
         m = m + 1

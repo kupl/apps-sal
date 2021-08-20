@@ -1,6 +1,6 @@
 a = int(input())
 xy = [map(int, input().split()) for _ in range(a)]
-x, y = [list(i) for i in zip(*xy)]
+(x, y) = [list(i) for i in zip(*xy)]
 f = 0
 for i in range(len(x)):
     if x[i] == y[i] and len(x) > i + 2:
@@ -8,7 +8,7 @@ for i in range(len(x)):
             if x[i + j] != y[i + j]:
                 break
         else:
-            print("Yes")
+            print('Yes')
             break
 else:
-    print("No")
+    print('No')

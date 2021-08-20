@@ -1,10 +1,12 @@
 class Node:
+
     def __init__(self, id):
         self.id = id
         self.children = []
 
 
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         nodes = []
         for i in range(n):

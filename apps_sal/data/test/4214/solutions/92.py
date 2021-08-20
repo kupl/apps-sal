@@ -4,22 +4,17 @@ import math
 
 def main():
     N = int(input())
-
     p = []
     for i in range(N):
         p.append(list(map(int, input().split())))
-
     c = 0
     tot = 0
-
     for points in permutations(p):
         d = 0
         for i in range(1, len(points)):
             d += dist(points[i - 1], points[i])
-
         c += 1
         tot += d
-
     print(tot / c)
 
 

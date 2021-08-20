@@ -1,11 +1,10 @@
-# cook your dish here
 def main():
     t = int(input())
     for _ in range(t):
         n = int(input())
         ar = list(map(int, input().split()))
         if n > 62:
-            print("NO")
+            print('NO')
             continue
         lk = set()
         ok = True
@@ -22,9 +21,9 @@ def main():
                     lk.add(curr)
                 idx += 1
         if ok:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
 
 
 def __starting_point():

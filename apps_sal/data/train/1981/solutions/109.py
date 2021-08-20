@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
-        s = sorted([a for a, _ in requests])
-        e = sorted([a for _, a in requests])
+        s = sorted([a for (a, _) in requests])
+        e = sorted([a for (_, a) in requests])
         freq = []
         for i in range(len(nums)):
             start_after = bisect.bisect_right(s, i)
@@ -10,6 +11,6 @@ class Solution:
         freq.sort(reverse=True)
         nums.sort(reverse=True)
         res = 0
-        for i, f in enumerate(freq):
-            res += int(f * nums[i] % (1e9 + 7))
-        return int(res % (1e9 + 7))
+        for (i, f) in enumerate(freq):
+            res += int(f * nums[i] % (1000000000.0 + 7))
+        return int(res % (1000000000.0 + 7))

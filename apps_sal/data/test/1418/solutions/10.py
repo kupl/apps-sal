@@ -1,5 +1,4 @@
 import math
-
 primes = [2]
 n = int(input())
 curr_num = 1
@@ -18,5 +17,4 @@ for i in range(3, n + 1):
         curr_num += 1
         res.append(curr_num)
         primes.append(i)
-
-print(" ".join(map(str, res)))
+print(' '.join(map(str, res)))

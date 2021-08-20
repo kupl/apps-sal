@@ -1,7 +1,8 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         MOD = 10 ** 9 + 7
-        n = sum(1 for c in s if c == '1')
+        n = sum((1 for c in s if c == '1'))
         if n % 3 != 0:
             return 0
         if n == 0:
@@ -19,5 +20,4 @@ class Solution:
                 k += 1
                 i += 1
             return k
-
         return f(s, n) * f(''.join(reversed(s)), n) % MOD

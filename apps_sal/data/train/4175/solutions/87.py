@@ -1,6 +1,5 @@
 def repeater(string, n):
-    # Your code goes here.
-    output = ""
+    output = ''
     for x in range(n):
         output = output + string
     return output

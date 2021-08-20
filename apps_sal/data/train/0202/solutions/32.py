@@ -1,4 +1,5 @@
 class Solution:
+
     def longestMountain(self, A: List[int]) -> int:
         res = cur = 1
         desc = False
@@ -15,15 +16,14 @@ class Solution:
                     res = max(res, cur)
                     cur = 2
                     desc = False
+            elif desc:
+                cur += 1
+            elif cur > 1:
+                desc = True
+                cur += 1
             else:
-                if desc:
-                    cur += 1
-                elif cur > 1:
-                    desc = True
-                    cur += 1
-                else:
-                    cur = 1
-                    desc = False
+                cur = 1
+                desc = False
         if desc:
             res = max(res, cur)
-        return 0 if res < 3 and not desc else res
+        return 0 if res < 3 and (not desc) else res

@@ -9,14 +9,12 @@ class ThroneInheritance:
         self.dead = collections.defaultdict(bool)
 
     def birth(self, parentName: str, childName: str) -> None:
-
         self.children[parentName].append(childName)
 
     def death(self, name: str) -> None:
         self.dead[name] = True
 
     def getInheritanceOrder(self) -> List[str]:
-
         stack = [self.king]
         ans = []
         while stack:
@@ -25,5 +23,4 @@ class ThroneInheritance:
                 ans.append(node)
             for child in reversed(self.children[node]):
                 stack.append(child)
-
         return ans

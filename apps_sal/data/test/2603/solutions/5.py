@@ -4,12 +4,10 @@ for _ in range(int(input())):
     cur = min(a)
     b = sorted(a)
     good = 1
-
     for i in range(n):
-        if (a[i] != b[i] and a[i] % cur > 0):
+        if a[i] != b[i] and a[i] % cur > 0:
             good = 0
-
     if good:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

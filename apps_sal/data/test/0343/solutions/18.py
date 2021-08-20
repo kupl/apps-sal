@@ -1,4 +1,4 @@
-n, k, p, x, y = map(int, input().split())
+(n, k, p, x, y) = map(int, input().split())
 A = list(map(int, input().split()))
 cnt = n // 2 + 1
 for i in A:

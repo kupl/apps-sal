@@ -1,6 +1,6 @@
 class Solution:
-    def maxDistance(self, position: List[int], m: int) -> int:
 
+    def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
         res = 0
 
@@ -15,17 +15,12 @@ class Solution:
                     cur = position[i]
                     count += 1
             return count + 1
-
-        l, r = 0, position[-1] - position[0]
-
+        (l, r) = (0, position[-1] - position[0])
         while l <= r:
             mid = (l + r) // 2
-
             if check(mid) >= m:
                 res = max(mid, res)
                 l = mid + 1
-
             else:
                 r = mid - 1
-
         return res

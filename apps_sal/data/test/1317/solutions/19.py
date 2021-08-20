@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 A = set()
 A_ = set()
 B_ = set()

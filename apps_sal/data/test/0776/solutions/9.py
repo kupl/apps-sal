@@ -3,6 +3,7 @@ def list_from_input():
 
 
 class Mouse:
+
     def __init__(self, price, type):
         self.type = type
         self.price = price
@@ -16,13 +17,11 @@ class Mouse:
 
 
 def main():
-    usb_pc, ps_pc, both_pc = list_from_input()
+    (usb_pc, ps_pc, both_pc) = list_from_input()
     mouses_count = int(input())
-
     mouses = []
     for i in range(mouses_count):
         mouses.append(Mouse.from_input())
-
     mouses.sort(key=lambda mouse: mouse.price)
     purchase_amount = 0
     pc_with_mouses = 0
@@ -39,7 +38,6 @@ def main():
             both_pc -= 1
             purchase_amount += mouse.price
             pc_with_mouses += 1
-
     print(pc_with_mouses, purchase_amount)
 
 

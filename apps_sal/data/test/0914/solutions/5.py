@@ -14,6 +14,6 @@ elif len(t) > n:
         j[2] += 1
         j[0] = j[1] / j[2]
     print(ceil(max(r)[0]))
-    print(''.join(j[3] * j[2] for j in r))
+    print(''.join((j[3] * j[2] for j in r)))
 else:
-    print('1\n' + t * (n // len(t)) + t[: n % len(t)])
+    print('1\n' + t * (n // len(t)) + t[:n % len(t)])

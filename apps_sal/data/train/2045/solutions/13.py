@@ -1,7 +1,8 @@
 import sys
 
 
-class SegmTree():
+class SegmTree:
+
     def __init__(self, array=None, size=None):
         if array is not None:
             size = len(array)
@@ -55,16 +56,13 @@ class SegmTree():
         return ans
 
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 st = SegmTree([1] * n)
 ans = [0] * n
 for _ in range(m):
-    l, r, x = list(map(int, input().split()))
+    (l, r, x) = list(map(int, input().split()))
     l -= 1
     x -= 1
     for i in st.find_nonzeros(l, r):
@@ -72,5 +70,3 @@ for _ in range(m):
             ans[i] = x + 1
             st.add(i, -1)
 print(*ans)
-
-# inf.close()

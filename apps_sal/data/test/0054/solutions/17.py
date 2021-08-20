@@ -1,15 +1,14 @@
 import math
-
-w, m = list(map(int, input().split()))
+(w, m) = list(map(int, input().split()))
 if w == 2:
-    print("YES")
+    print('YES')
 else:
-    n = math.ceil(math.log(1e9, w))
+    n = math.ceil(math.log(1000000000.0, w))
     for mask in range(1 << n):
         s = m
         p = 1
         for i in range(n):
-            if mask & (1 << i):
+            if mask & 1 << i:
                 s += p
             p *= w
         while s > 0:
@@ -17,7 +16,7 @@ else:
                 break
             s //= w
         else:
-            print("YES")
+            print('YES')
             break
     else:
-        print("NO")
+        print('NO')

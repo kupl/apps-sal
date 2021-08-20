@@ -14,5 +14,4 @@ res = 100
 for i in range(1, int(math.sqrt(n)) + 5):
     if n % i == 0:
         res = min(max(k(i), k(n // i)), res)
-
 print(res)

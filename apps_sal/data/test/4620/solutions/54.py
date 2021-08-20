@@ -10,16 +10,28 @@ from time import time
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 n = INT()
 ls = []
 for i in range(n - 1):
-    c, s, f = MAP()
+    (c, s, f) = MAP()
     ls.append([c, s, f])
 for i in range(n - 1):
     ans = 0

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = input()
 cycle = n
 for i in range(1, n):

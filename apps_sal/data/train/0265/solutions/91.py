@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, A: List[int], T: int) -> int:
         N = len(A)
         prefix_sum = [0 for _ in range(N + 1)]

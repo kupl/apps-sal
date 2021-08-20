@@ -1,7 +1,7 @@
 s = input().strip()
 k = int(input())
 if len(s) < k:
-    print("impossible")
+    print('impossible')
 else:
     s_set = set(map(str, list(s)))
     if len(s_set) >= k:

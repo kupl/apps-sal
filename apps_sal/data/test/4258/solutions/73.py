@@ -1,5 +1,4 @@
-A, B, T = map(int, input().split())
-
+(A, B, T) = map(int, input().split())
 cnt = 0
 while T >= A:
     cnt += B

@@ -1,10 +1,11 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-a, b, c, d = f()
-s, t = f()
-vx, vy = f()
-ux, uy = f()
+(a, b, c, d) = f()
+(s, t) = f()
+(vx, vy) = f()
+(ux, uy) = f()
 
 
 def g(m):
@@ -15,8 +16,8 @@ def g(m):
     return x * x + y * y > (m * s) ** 2
 
 
-l, r = 0, 1e9
-while r - l > 1e-6:
+(l, r) = (0, 1000000000.0)
+while r - l > 1e-06:
     m = (l + r) / 2
     if g(m):
         l = m

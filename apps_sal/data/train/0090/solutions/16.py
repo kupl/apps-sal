@@ -14,7 +14,7 @@ def main():
             k += 1
     sm = 0
     for i in a:
-        print(i, end=" ")
+        print(i, end=' ')
     print()
 
 

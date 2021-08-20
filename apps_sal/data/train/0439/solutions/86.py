@@ -1,4 +1,5 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
         if len(A) == 1:
             return 1
@@ -18,13 +19,12 @@ class Solution:
                 else:
                     odd_or_even = 0
                     temp_len = 2
+            elif odd_or_even == None or odd_or_even == 0:
+                odd_or_even = 1
+                temp_len += 1
             else:
-                if odd_or_even == None or odd_or_even == 0:
-                    odd_or_even = 1
-                    temp_len += 1
-                else:
-                    odd_or_even = 1
-                    temp_len = 2
+                odd_or_even = 1
+                temp_len = 2
             last = i
             max_len = max(max_len, temp_len)
         return max_len

@@ -1,4 +1,5 @@
 class Solution:
+
     def num_count(self, x, count):
         if x == 1:
             return count

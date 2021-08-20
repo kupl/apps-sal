@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 otr = []
 for i in range(n):
     otr.append([int(j) for j in input().split()])

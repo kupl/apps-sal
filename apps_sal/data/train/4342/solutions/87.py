@@ -1,8 +1,7 @@
 def no_space(x):
-    # your code here
-    answer = ""
+    answer = ''
     for i in x:
-        if i == " ":
+        if i == ' ':
             continue
         else:
             answer += i

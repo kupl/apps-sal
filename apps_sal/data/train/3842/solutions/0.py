@@ -1,5 +1,5 @@
 def word_wrap(s, limit):
-    s, i, li = s.split(), 0, []
+    (s, i, li) = (s.split(), 0, [])
     while i < len(s):
         t = s[i]
         if len(t) <= limit:

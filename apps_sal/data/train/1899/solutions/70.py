@@ -1,11 +1,8 @@
-# 9:27 -> DNF
-# get an island as sets of 1s, bfs, O(|V|), where V is all A[i][j]
-# For one of the islands, run bfs from all its nodes to find the other island
-# return shortest of such bfs'
 from math import sqrt
 
 
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
 
         def get_islands(A):
@@ -16,7 +13,7 @@ class Solution:
                         if not island_one:
                             island_one = make_island(A, i, j, set())
                         else:
-                            return island_one, make_island(A, i, j, set())
+                            return (island_one, make_island(A, i, j, set()))
 
         def make_island(A, i, j, visited):
             visited.add((i, j))
@@ -38,7 +35,7 @@ class Solution:
             queue = [(i, j)]
             dist_map = {(i, j): 0}
             while queue:
-                i, j = queue.pop(0)
+                (i, j) = queue.pop(0)
                 neighbors = []
                 if (i, j + 1) not in start_island and j < len(A[0]) - 1:
                     neighbors.append((i, j + 1))
@@ -49,12 +46,12 @@ class Solution:
                 if (i + 1, j) not in start_island and i < len(A) - 1:
                     neighbors.append((i + 1, j))
                 for neighbor in neighbors:
-                    n_i, n_j = neighbor
+                    (n_i, n_j) = neighbor
                     if A[n_i][n_j] == 1:
-                        return dist_map[(i, j)] + 1
-                    if neighbor not in global_dist_map or global_dist_map[neighbor] > dist_map[(i, j)] + 1:
+                        return dist_map[i, j] + 1
+                    if neighbor not in global_dist_map or global_dist_map[neighbor] > dist_map[i, j] + 1:
                         queue.append(neighbor)
-                        global_dist_map[neighbor] = dist_map[neighbor] = dist_map[(i, j)] + 1
+                        global_dist_map[neighbor] = dist_map[neighbor] = dist_map[i, j] + 1
             return False
 
         def find_shortest_pair(island1, island2):
@@ -65,37 +62,15 @@ class Solution:
                     distance_between = sqrt((coords2[0] - coords1[0]) ** 2 + (coords2[1] - coords1[1]) ** 2)
                     if distance_between < min_distance:
                         min_distance = distance_between
-                        shortest_coords = coords1, coords2
+                        shortest_coords = (coords1, coords2)
             return shortest_coords
-
-        first_island, second_island = get_islands(A)
-
+        (first_island, second_island) = get_islands(A)
         min_island = first_island if len(first_island) < len(second_island) else second_island
-
         shortest_bridge = len(A) * len(A[0])
-
         global_dist_map = {}
-
         for island in min_island:
-            i, j = island
+            (i, j) = island
             shortest_bridge_here = find_shortest_bridge(A, i, j, min_island, global_dist_map)
             if shortest_bridge_here:
                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
-
         return shortest_bridge - 1
-
-#         first_coords, second_coords = find_shortest_pair(first_island, second_island)
-
-#         i, j = first_coords
-
-#         return find_shortest_bridge(A, i, j, first_island) - 1
-
-#         shortest_bridge = len(A)*len(A[0])
-
-#         for island in first_island:
-#             i, j = island
-#             shortest_bridge_here = find_shortest_bridge(A, i, j, first_island)
-#             if shortest_bridge_here:
-#                 shortest_bridge = min(shortest_bridge, shortest_bridge_here)
-
-#         return shortest_bridge - 1

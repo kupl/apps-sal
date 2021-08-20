@@ -1,9 +1,10 @@
 class UnionFind:
+
     def __init__(self, n):
         self.v = [-1 for _ in range(n)]
 
     def find(self, x):
-        if self.v[x] < 0:  # (負)は根
+        if self.v[x] < 0:
             return x
         else:
             self.v[x] = self.find(self.v[x])
@@ -15,7 +16,7 @@ class UnionFind:
         if x == y:
             return
         if -self.v[x] < -self.v[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.v[x] += self.v[y]
         self.v[y] = x
 
@@ -27,27 +28,20 @@ class UnionFind:
 
 
 mx = 10 ** 5 + 10
-
 n = int(input())
-
 uf = UnionFind(mx * 2)
-
 for _ in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     uf.unite(x, y + mx)
-
 vx = [0] * (mx * 2)
 vy = [0] * (mx * 2)
-
 for i in range(mx):
     root = uf.find(i)
     vx[root] += 1
-
 for i in range(mx, mx * 2):
     root = uf.find(i)
     vy[root] += 1
-
 ans = -n
-for xx, yy in zip(vx, vy):
+for (xx, yy) in zip(vx, vy):
     ans += xx * yy
 print(ans)

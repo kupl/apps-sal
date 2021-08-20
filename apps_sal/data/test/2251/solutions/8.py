@@ -2,10 +2,10 @@ from collections import defaultdict
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     edges = defaultdict(lambda: defaultdict(list))
     for _ in range(m):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         d = edges[c]
         d[a].append(b)
         d[b].append(a)
@@ -16,11 +16,10 @@ def main():
         for y in dd:
             if y not in chain:
                 dfs(y)
-
     res = []
     chain = set()
     for _ in range(int(input())):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         x = 0
         for color in list(edges.values()):
             chain.clear()

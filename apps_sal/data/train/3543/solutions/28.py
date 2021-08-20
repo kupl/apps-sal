@@ -6,9 +6,7 @@ def increment_string(s):
             s = s[:-1]
         else:
             break
-
     if not num:
         return s + '1'
-
-    fmt = "0{}d".format(len(num))  # so it preverses the amount of digits
+    fmt = '0{}d'.format(len(num))
     return s + format(int(num[::-1]) + 1, fmt)

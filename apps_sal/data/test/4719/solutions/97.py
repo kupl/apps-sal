@@ -9,4 +9,4 @@ for i in range(n - 1):
             t.append(j)
     ans = t
 ans.sort()
-print("".join(ans))
+print(''.join(ans))

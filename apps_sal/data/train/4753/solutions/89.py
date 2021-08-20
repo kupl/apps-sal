@@ -1,8 +1,7 @@
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
 
 
 def goose_filter(birds):
-
     done = list()
     for word in birds:
         if word in geese:

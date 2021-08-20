@@ -1,12 +1,11 @@
 import collections
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 m += 2
 arr = list(map(int, input().split()))
 arr.append(0)
 arr.append(n)
 arr = sorted(arr)
-g, r = map(int, input().split())
+(g, r) = map(int, input().split())
 q = collections.deque()
 q.append((0, 0))
 dist = [[0] * (g + 1) for _ in range(m + 2)]
@@ -14,7 +13,7 @@ checked = [[0] * (g + 1) for _ in range(m + 2)]
 checked[0][0] = 1
 ans = -1
 while len(q) != 0:
-    v, t = q.popleft()
+    (v, t) = q.popleft()
     if t == 0:
         if n - arr[v] <= g:
             tmp = dist[v][t] * (g + r) + n - arr[v]

@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         charChars = Counter(chars)
         counter = 0
@@ -8,7 +9,6 @@ class Solution:
             for letter in countC.items():
                 if letter[0] in charChars and charChars[letter[0]] >= letter[1]:
                     count += 1
-
             if count == len(countC):
                 counter += len(word)
         return counter

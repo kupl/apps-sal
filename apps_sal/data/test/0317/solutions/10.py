@@ -2,15 +2,13 @@ def Main():
     num = input()
     str = list(input().lower())
     str.sort()
-    str = "".join(str)
-
+    str = ''.join(str)
     for word in range(97, 123):
         symb = chr(word)
         if str.find(symb) == -1:
-            print("NO")
+            print('NO')
             return
-
-    print("YES")
+    print('YES')
     return
 
 

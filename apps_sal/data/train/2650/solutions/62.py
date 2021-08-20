@@ -1,4 +1,4 @@
-N, L = map(int, input().split())
+(N, L) = map(int, input().split())
 mat = []
 for i in range(N):
     mat.append(input())
@@ -13,4 +13,4 @@ while i <= N:
     if FINISH == 0:
         break
 for i in range(N):
-    print(mat[i], end="")
+    print(mat[i], end='')

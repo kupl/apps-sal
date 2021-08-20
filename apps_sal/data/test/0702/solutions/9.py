@@ -1,8 +1,8 @@
-# Please DON'T hack me! TY!
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -30,7 +30,7 @@ class Main:
                     if j == 0 or j == n - 1 or i >= n - 2:
                         print('NO')
                         return
-                    if ss[i + 1][j - 1] != '.' or ss[i + 1][j] != '.' or ss[i + 1][j + 1] != '.' or ss[i + 2][j] != '.':
+                    if ss[i + 1][j - 1] != '.' or ss[i + 1][j] != '.' or ss[i + 1][j + 1] != '.' or (ss[i + 2][j] != '.'):
                         print('NO')
                         return
                     ss[i + 1][j - 1] = '#'

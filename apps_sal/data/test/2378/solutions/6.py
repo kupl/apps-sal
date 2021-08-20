@@ -1,20 +1,18 @@
 import sys
 n = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 edge = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edge[a].append(b)
     edge[b].append(a)
-
 inv2 = [1] * (n + 1)
 t = pow(pow(2, n, mod), mod - 2, mod)
 for i in range(n, -1, -1):
     inv2[i] = t
     t *= 2
     t %= mod
-
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 dep = [-1 for i in range(n + 1)]
 ans = [0]
 

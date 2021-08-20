@@ -1,14 +1,3 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
 
     def matchPath(self, head, root):
@@ -16,16 +5,12 @@ class Solution:
             return True
         if root is None:
             return False
-
         if head.val != root.val:
             return False
-
         if self.matchPath(head.next, root.left):
             return True
-
         if self.matchPath(head.next, root.right):
             return True
-
         return False
 
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
@@ -39,5 +24,4 @@ class Solution:
                 nexts.append(node.left)
             if node.right:
                 nexts.append(node.right)
-
         return False

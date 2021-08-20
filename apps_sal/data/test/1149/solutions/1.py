@@ -7,6 +7,6 @@ for i in range(1, len(nums)):
 for i in range(1, len(nums2)):
     b[nums2[i] - 1] = 1
 if sum(b) == n:
-    print("I become the guy.")
+    print('I become the guy.')
 else:
-    print("Oh, my keyboard!")
+    print('Oh, my keyboard!')

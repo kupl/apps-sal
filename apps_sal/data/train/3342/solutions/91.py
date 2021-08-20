@@ -1,5 +1,5 @@
 def pattern(n):
-    st = ""
+    st = ''
     for n in range(1, n + 1):
-        st += str(n) * n + "\n"
+        st += str(n) * n + '\n'
     return st[:-1]

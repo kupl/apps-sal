@@ -15,8 +15,7 @@ def solve(n, m):
         extra = n - upto * (m * m)
         if extra >= i:
             upto += 1
-        cnt[(i * i) % m] += upto
-
+        cnt[i * i % m] += upto
     ans = 0
     for i in range(0, m):
         for j in range(0, m):
@@ -27,15 +26,3 @@ def solve(n, m):
 
 (n, m) = list(map(int, input().split(' ')))
 print(solve(n, m))
-
-# for n in range(1, 50, 1):
-# 	for m in range(1, 50, 1):
-# 		a = brute(n, m)
-# 		b = solve(n, m)
-# 		# print(a, b)
-# 		if a != b:
-# 			1/0
-
-# print(ans)
-
-# print(brute(n, m))

@@ -6,5 +6,5 @@ while True:
         d[pointer] = d[pointer][1:]
         pointer = tmp
     else:
-        print((pointer.upper()))
+        print(pointer.upper())
         break

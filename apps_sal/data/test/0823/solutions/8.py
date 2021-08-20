@@ -1,11 +1,8 @@
-
 s = input().split()
-x = (int(s[0]))
-y = (int(s[1]))
-
+x = int(s[0])
+y = int(s[1])
 dirx = [1, 0, -1, 0]
 diry = [0, 1, 0, -1]
-
 if x == 0 and y == 0:
     print(0)
 else:

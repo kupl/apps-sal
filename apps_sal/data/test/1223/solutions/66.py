@@ -1,16 +1,14 @@
 N = int(input())
 Ps = list(map(int, input().split()))
-
 iPs = [0] * (N + 1)
-for iP, A in enumerate(Ps):
+for (iP, A) in enumerate(Ps):
     iPs[A] = iP
-
 ans = 0
 iLs = list(range(N + 1))
 iRs = list(range(N + 1))
 for P in range(1, N + 1):
     i = iPs[P]
-    iL, iR = iLs[i], iRs[i]
+    (iL, iR) = (iLs[i], iRs[i])
     if iL <= 1:
         iL2 = 0
     else:
@@ -27,5 +25,4 @@ for P in range(1, N + 1):
     ans += P * num
     iLs[iR + 1] = iL
     iRs[iL - 1] = iR
-
 print(ans)

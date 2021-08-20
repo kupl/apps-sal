@@ -15,7 +15,7 @@ def bins(x):
     return bin(x)[2:]
 
 
-p = 10**9 + 7
+p = 10 ** 9 + 7
 s = input()
 ans = 1
 for sym in s:
@@ -25,6 +25,4 @@ for sym in s:
         if i is '0':
             ans *= 3
     ans %= p
-
 print(ans)
-# print(get_num(s))

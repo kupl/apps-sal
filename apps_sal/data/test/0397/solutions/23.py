@@ -22,7 +22,7 @@ def rt(x1, x2, y3):
 
 
 def main():
-    n, k = rinput()
+    (n, k) = rinput()
     i = 0
     t = 0
     while k > i:

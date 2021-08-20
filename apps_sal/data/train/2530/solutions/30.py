@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         c = [0] * 60
         res = 0

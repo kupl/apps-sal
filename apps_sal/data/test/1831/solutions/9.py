@@ -31,7 +31,7 @@ def corr(v, n):
         return 0
 
 
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 v = []
 for c in range(m):
     v.append(list(map(int, input().split(' '))))

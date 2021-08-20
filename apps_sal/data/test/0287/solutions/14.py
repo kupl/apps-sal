@@ -2,9 +2,7 @@ from sys import stdout
 from random import randint
 from math import *
 import re
-
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 def find_min(n, k):

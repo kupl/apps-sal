@@ -1,4 +1,3 @@
-# cook your dish here
 def ub(arr, item):
     n = len(arr)
     low = 0
@@ -11,7 +10,6 @@ def ub(arr, item):
             low = mid + 1
         else:
             high = mid - 1
-
     return low
 
 
@@ -30,27 +28,22 @@ def lb(arr, item):
 
 
 def main():
-    n, x, y = map(int, input().split())
+    (n, x, y) = map(int, input().split())
     timing = []
     for i in range(n):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         timing.append((p, q))
-
     v = list(map(int, input().split()))
-
     w = list(map(int, input().split()))
     timing.sort()
     v.sort()
     w.sort()
-
-    mn = 1e18
-
+    mn = 1e+18
     for i in range(n):
         s = lb(v, timing[i][0])
         e = ub(w, timing[i][1])
         if s >= 0 and e < y:
             mn = min(mn, abs(v[s] - w[e]) + 1)
-
     print(mn)
 
 

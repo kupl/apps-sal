@@ -1,21 +1,21 @@
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = input()
-
 if P == 2 or P == 5:
+
     def solve25(N, P, S):
         c = 0
         for i in range(N - 1, -1, -1):
             if int(S[i]) % P == 0:
-                # 以降桁を増やしてもOK
                 c += i + 1
         return c
     print(solve25(N, P, S))
 else:
+
     def solve(N, P, S):
         rcounts = [0] * P
-        rcounts[0] = 1  # sそのものが割り切れた場合に引き算する相手がいないから
+        rcounts[0] = 1
         ints = 0
-        for i, s in enumerate(S[::-1]):
+        for (i, s) in enumerate(S[::-1]):
             ints += int(s) * pow(10, i, P)
             r = ints % P
             rcounts[r] += 1

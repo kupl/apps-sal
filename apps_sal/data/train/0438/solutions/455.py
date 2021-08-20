@@ -1,22 +1,20 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parents = [i for i in range(n)]
         self.size = [1] * n
 
     def find(self, i):
         while i != self.parents[i]:
-            self.parents[i] = self.parents[self.parents[i]]  # path halving
+            self.parents[i] = self.parents[self.parents[i]]
             i = self.parents[i]
         return i
 
     def union(self, a, b):
         aPar = self.find(a)
         bPar = self.find(b)
-
         if aPar == bPar:
             return
-
-        # union by size
         if self.size[aPar] > self.size[bPar]:
             self.parents[bPar] = aPar
             self.size[aPar] += self.size[bPar]
@@ -26,14 +24,14 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
         uf = UnionFind(N)
         isAlive = [False] * N
         numM = 0
         latest = -1
-
-        for index, i in enumerate(arr):
+        for (index, i) in enumerate(arr):
             isAlive[i - 1] = True
             if i != 1 and isAlive[i - 2]:
                 if uf.size[uf.find(i - 2)] == m:
@@ -47,5 +45,4 @@ class Solution:
                 numM += 1
             if numM > 0:
                 latest = index + 1
-
         return latest

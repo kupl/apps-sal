@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = 4 * 60 - m
 o = 0
 a = 5

@@ -1,14 +1,14 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = {}
 y = {}
 for i in range(n):
-    p, s = map(int, input().split())
+    (p, s) = map(int, input().split())
     if p * s in x:
         x[p * s] += 1
     else:
         x[p * s] = 1
 for i in range(m):
-    p, s = map(int, input().split())
+    (p, s) = map(int, input().split())
     if p * s in y:
         y[p * s] += 1
     else:

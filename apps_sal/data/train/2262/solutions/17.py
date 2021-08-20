@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-w, h, n = list(map(int, input().split()))
+(w, h, n) = list(map(int, input().split()))
 
 
 def proj(x, y):
@@ -17,17 +16,17 @@ def proj(x, y):
 
 ps = []
 for i in range(n):
-    x1, y1, x2, y2 = list(map(int, input().split()))
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     p1 = proj(x1, y1)
     p2 = proj(x2, y2)
     if p1 is not None and p2 is not None:
         ps += [(p1, i), (p2, i)]
 ps.sort()
 stk = []
-for _, i in ps:
+for (_, i) in ps:
     if stk and stk[-1] == i:
         stk.pop()
     else:
         stk.append(i)
 result = not stk
-print((['NO', 'YES'][result]))
+print(['NO', 'YES'][result])

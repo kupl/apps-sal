@@ -2,7 +2,7 @@ from sys import stdin
 
 
 def main():
-    plus, minus = [], []
+    (plus, minus) = ([], [])
     readline = stdin.readline
     n = int(readline())
     for _ in range(n):
@@ -14,7 +14,6 @@ def main():
     plus.sort(key=lambda x: x.count(')'))
     minus.sort(key=lambda x: x.count('('), reverse=True)
     plus.extend(minus)
-
     sum = 0
     for v in ''.join(plus):
         sum = sum + (1 if v == '(' else -1)
@@ -22,7 +21,6 @@ def main():
             return print('No')
     if sum != 0:
         return print('No')
-
     return print('Yes')
 
 

@@ -9,10 +9,9 @@ def evaluate_tree(terms, ops):
     if not ops:
         return {terms[0]: str(terms[0])}
     results = {}
-    for idx, op in enumerate(ops, 1):
-        left, right = evaluate_tree(terms[:idx], ops[:idx - 1]), evaluate_tree(terms[idx:], ops[idx:])
-        results.update({op(l, r): f'({left[l]}){operators[op]}({right[r]})'
-                        for l, r in product(left, right) if not (op == div and r == 0)})
+    for (idx, op) in enumerate(ops, 1):
+        (left, right) = (evaluate_tree(terms[:idx], ops[:idx - 1]), evaluate_tree(terms[idx:], ops[idx:]))
+        results.update({op(l, r): f'({left[l]}){operators[op]}({right[r]})' for (l, r) in product(left, right) if not (op == div and r == 0)})
     return results
 
 

@@ -1,17 +1,14 @@
-#!/usr/bin/env python3
-
 import re
-
-nice = re.compile(r"^10*$")
+nice = re.compile('^10*$')
 
 
 def main():
     _ = input()
     result = 0
-    mul = "1"
+    mul = '1'
     for s in input().split():
-        if s == "0":
-            return "0"
+        if s == '0':
+            return '0'
         if nice.match(s):
             result += len(s) - 1
         else:
@@ -22,6 +19,5 @@ def main():
 try:
     while True:
         print(main())
-
 except EOFError:
     pass

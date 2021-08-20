@@ -6,7 +6,6 @@ m = mas[0]
 for i in range(n - 1):
     if math.gcd(mas[i], mas[i + 1]) != 1:
         l.append(i + 1)
-       # print(l)
 for i in l[::-1]:
     mas.insert(i, 1)
 k = len(mas) - n

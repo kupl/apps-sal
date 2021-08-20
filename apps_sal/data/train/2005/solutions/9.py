@@ -1,10 +1,7 @@
 s = input()
 n = len(s)
-
-
 a = [n] * (n + 1)
 ans = 0
-
 for i in range(n - 1, -1, -1):
     a[i] = a[i + 1]
     j = 1

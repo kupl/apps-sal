@@ -4,7 +4,7 @@ b = []
 c = []
 d = []
 for i in range(n):
-    opt, num = [int(x) for x in input().split()]
+    (opt, num) = [int(x) for x in input().split()]
     if opt == 0:
         a.append(num)
     if opt == 10:

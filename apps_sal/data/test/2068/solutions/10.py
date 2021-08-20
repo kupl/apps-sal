@@ -1,7 +1,7 @@
 N = input()
 N = int(N)
 res = 0
-graph = [["polycarp"]]
+graph = [['polycarp']]
 for i in range(N):
     data = input().split(' ')
     reposter = data[0].lower()

@@ -5,10 +5,10 @@ def fact(n):
     return q
 
 
-n, m, k = input().split()
+(n, m, k) = input().split()
 n = int(n)
 m = int(m)
 k = int(k)
 com = fact(n - 1) // (fact(k) * fact(n - 1 - k))
-dd = m * ((m - 1)**k)
-print((com * dd) % 998244353)
+dd = m * (m - 1) ** k
+print(com * dd % 998244353)

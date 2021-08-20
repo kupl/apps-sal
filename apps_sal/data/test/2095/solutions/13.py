@@ -20,9 +20,9 @@ def main(a, n):
     for i in range(n):
         if 1 in a[i] or 3 in a[i]:
             continue
-        s += [i + 1, ]
+        s += [i + 1]
     print(len(s))
-    print(" ".join([str(i) for i in s]))
+    print(' '.join([str(i) for i in s]))
 
 
 def main_input(info=0):

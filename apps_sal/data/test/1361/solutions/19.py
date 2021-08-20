@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input(). split()))
+a = list(map(int, input().split()))
 sl = []
 s2 = []
 for i in range(n - 2):

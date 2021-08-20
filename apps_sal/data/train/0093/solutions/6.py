@@ -1,16 +1,13 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-
     memo = {}
     for i in range(n):
         memo[a[i]] = i
-
     max_num = -1
     cnt = 0
     ans = 0

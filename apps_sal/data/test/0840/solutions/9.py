@@ -1,5 +1,3 @@
-# from duongtnhat's submission #17754492
-
 def ok(u, a, b, n, k):
     for i in range(n):
         if b[i] >= a[i] * u:
@@ -11,10 +9,10 @@ def ok(u, a, b, n, k):
     return k >= 0
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-l, r = 0, 2000000010
+(l, r) = (0, 2000000010)
 while l < r - 1:
     g = (l + r) // 2
     if ok(g, a, b, n, k):

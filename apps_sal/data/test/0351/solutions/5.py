@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = [int(i) for i in input().split()]
 s.sort()
 ans = 0

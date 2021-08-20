@@ -18,7 +18,7 @@ def foo(a, m, w, desired_height):
     return True
 
 
-n, m, w = map(int, input().split())
+(n, m, w) = map(int, input().split())
 a = list(map(int, input().split()))
 x = 1
 y = 1000100000
@@ -28,4 +28,4 @@ while x < y:
         x = mi
     else:
         y = mi - 1
-print((x))
+print(x)

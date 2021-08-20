@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         indicesToDelete = set()
         for i in range(len(s) - 2):
@@ -14,7 +15,6 @@ class Solution:
         s = newS[::-1]
         left = 0
         right = len(s) - 1
-
         while left < right:
             if s[left] == 'a' and s[right] == 'c':
                 if s[left + 1] == 'b' and s[left + 2] == 'c':

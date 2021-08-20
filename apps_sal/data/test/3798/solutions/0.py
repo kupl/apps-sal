@@ -9,7 +9,7 @@ def f(b, n):
     return s
 
 
-INF = 10**15
+INF = 10 ** 15
 
 
 def solve(n, s):
@@ -23,9 +23,9 @@ def solve(n, s):
     for p in range(1, m + 10):
         q = s - p
         b = (n - q) // p
-        if (b > p) and (b > q) and (f(b, n) == s):
+        if b > p and b > q and (f(b, n) == s):
             best = min(best, b)
-    return -1 if (best == INF) else best
+    return -1 if best == INF else best
 
 
 n = int(input())

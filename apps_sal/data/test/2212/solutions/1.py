@@ -7,7 +7,7 @@ def od(i, j):
     return abs(j - n // 2) < k
 
 
-u, v = 0, 0
+(u, v) = (0, 0)
 for i in range(n):
     for j in range(n):
         if od(i, j):
@@ -16,5 +16,4 @@ for i in range(n):
         else:
             v += 1
             a[i][j] = v * 2
-
 print('\n'.join([' '.join(map(str, x)) for x in a]))

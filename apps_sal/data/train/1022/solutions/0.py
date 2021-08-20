@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 import math
 test = int(input())
 for _ in range(test):
@@ -10,20 +8,18 @@ for _ in range(test):
         if n % 2 == 1:
             f = 1
             break
-        else:
-            if l[i] != l[i + n // 2]:
-                if min(l[i], l[i + n // 2]) == -1:
-                    l[i] = max(l[i], l[i + n // 2])
-                    l[i + n // 2] = max(l[i], l[i + n // 2])
-                else:
-                    f = 1
-                    break
+        elif l[i] != l[i + n // 2]:
+            if min(l[i], l[i + n // 2]) == -1:
+                l[i] = max(l[i], l[i + n // 2])
+                l[i + n // 2] = max(l[i], l[i + n // 2])
             else:
-                if l[i] == -1:
-                    l[i] = 1
-                    l[i + n // 2] = 1
+                f = 1
+                break
+        elif l[i] == -1:
+            l[i] = 1
+            l[i + n // 2] = 1
     if f == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         print(*l)

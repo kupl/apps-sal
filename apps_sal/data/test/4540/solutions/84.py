@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -7,8 +6,7 @@ import heapq
 import collections
 import itertools
 import bisect
-
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def zz():
@@ -37,8 +35,7 @@ A_.extend(A)
 sum_ = 0
 for i in range(len(A_) - 1):
     sum_ += abs(A_[i] - A_[i + 1])
-
-for i in (range(1, N + 1)):
+for i in range(1, N + 1):
     sub = abs(A_[i] - A_[i - 1]) + abs(A_[i] - A_[i + 1])
     add = abs(A_[i - 1] - A_[i + 1])
     print(sum_ + add - sub)

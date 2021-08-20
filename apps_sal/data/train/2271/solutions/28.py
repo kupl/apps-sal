@@ -1,12 +1,12 @@
 from collections import Counter, deque, defaultdict
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = list(map(int, input().split()))
 idx_lst = [0] * n
-for i, x in enumerate(p):
+for (i, x) in enumerate(p):
     idx_lst[x - 1] = i
 lst = [[] for _ in range(n)]
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     lst[x - 1].append(y - 1)
     lst[y - 1].append(x - 1)
 seen = [False] * n

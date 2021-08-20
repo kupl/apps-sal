@@ -1,7 +1,9 @@
 class Solution:
+
     def shortestSuperstring(self, A: List[str]) -> str:
+
         def cost(a, b):
-            alen, blen = len(a), len(b)
+            (alen, blen) = (len(a), len(b))
             minlen = min(alen, blen)
             for i in range(minlen - 1, 0, -1):
                 if a[alen - i:] == b[:i]:
@@ -14,7 +16,6 @@ class Solution:
                 if j == i:
                     continue
                 g[i][j] = cost(A[i], A[j])
-
         dp = [[float('inf')] * n for _ in range(1 << n)]
         parent = [[-1] * n for _ in range(1 << n)]
         anslen = float('inf')
@@ -24,7 +25,7 @@ class Solution:
             dp[1 << i][i] = len(A[i])
         for s in range(1, 1 << n):
             for j in range(n):
-                if (s & (1 << j)) == 0:
+                if s & 1 << j == 0:
                     continue
                 ps = s & ~(1 << j)
                 for i in range(n):
@@ -33,7 +34,6 @@ class Solution:
                     if dp[s][j] > dp[ps][i] + g[i][j]:
                         dp[s][j] = dp[ps][i] + g[i][j]
                         parent[s][j] = i
-
         for i in range(n):
             if anslen > dp[(1 << n) - 1][i]:
                 anslen = dp[(1 << n) - 1][i]

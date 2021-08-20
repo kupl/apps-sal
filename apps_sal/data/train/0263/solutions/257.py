@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -14,7 +15,7 @@ class Solution:
         c[8] = [1, 3]
         c[9] = [2, 4]
         c[0] = [4, 6]
-        dp = [[None for _ in range(n + 1)]for _ in range(10)]
+        dp = [[None for _ in range(n + 1)] for _ in range(10)]
         for i in range(10):
             dp[i][1] = 1
             dp[i][2] = len(c[i])

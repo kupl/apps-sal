@@ -11,7 +11,7 @@ def phi(a):
             while a % i == 0:
                 a //= i
         i = i + 1
-    if(a > 1):
+    if a > 1:
         res -= res // a
     return res
 

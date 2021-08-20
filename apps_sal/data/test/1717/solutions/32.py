@@ -9,4 +9,4 @@ def lcm(x, y):
 ans = 1
 for i in range(1, n + 1):
     ans = lcm(i, ans)
-print((ans + 1))
+print(ans + 1)

@@ -1,7 +1,5 @@
 def land_perimeter(arr):
-
-    I, J = len(arr), len(arr[0])
-
+    (I, J) = (len(arr), len(arr[0]))
     P = 0
     for i in range(I):
         for j in range(J):
@@ -14,5 +12,4 @@ def land_perimeter(arr):
                     P += 1
                 if j == J - 1 or arr[i][j + 1] == 'O':
                     P += 1
-
     return 'Total land perimeter: ' + str(P)

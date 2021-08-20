@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -30,18 +28,16 @@ class UnionFind():
         return self.find(x) == self.find(y)
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 uf = UnionFind(n)
 for i in range(m):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     uf.union(c - 1, d - 1)
-
 sumA = {}
 sumB = {}
 for i in range(n):
@@ -52,11 +48,9 @@ for i in range(n):
     else:
         sumA[g] = a[i]
         sumB[g] = b[i]
-
-ans = "Yes"
+ans = 'Yes'
 for k in sumA.keys():
     if sumA[k] != sumB[k]:
-        ans = "No"
+        ans = 'No'
         break
-
 print(ans)

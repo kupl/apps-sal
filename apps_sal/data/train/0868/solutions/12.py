@@ -1,5 +1,4 @@
 import heapq
-
 t = int(input())
 for y in range(t):
     (n, k) = (int(x) for x in input().split())
@@ -11,7 +10,7 @@ for y in range(t):
         places.append(place)
     A = [int(x) for x in input().split()]
     heaps = [[-x] for x in A]
-    assert(len(A) == n)
+    assert len(A) == n
     ans = A.count(1)
     for l in range(1, n):
         elements = [0] * 2001
@@ -29,7 +28,7 @@ for y in range(t):
                 for r in reserve:
                     heapq.heappush(heaps[s], r)
                 x = -reserve[-1]
-            elif (places[l] == 2):
+            elif places[l] == 2:
                 x = max(-heaps[s][1], heaps[s][2])
             else:
                 x = -heaps[s][0]

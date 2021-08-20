@@ -14,7 +14,7 @@ def prime(n):
 
 for _ in range(eval(input())):
     primef = []
-    x, prod = eval(input()), 1
+    (x, prod) = (eval(input()), 1)
     m = list(map(int, input().split()))
     for i in m:
         prime(i)

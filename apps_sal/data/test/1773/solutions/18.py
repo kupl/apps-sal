@@ -18,7 +18,6 @@ def main():
             left.append(s)
         else:
             right.append(s)
-
     res = 0
     if len(left) < len(right):
         res += my_sum(left)
@@ -30,7 +29,6 @@ def main():
         sr = sorted(left, key=itemgetter(0), reverse=True)
         for v in range(min(len(right) + 1, len(left))):
             res += sr[v][1]
-
     print(res)
 
 

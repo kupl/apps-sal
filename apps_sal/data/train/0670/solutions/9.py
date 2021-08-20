@@ -1,9 +1,9 @@
 def gcd(a, b):
-    if (a == 0):
+    if a == 0:
         return b
-    if (b == 0):
+    if b == 0:
         return a
-    if (a > b):
+    if a > b:
         return gcd(a % b, b)
     else:
         return gcd(a, b % a)
@@ -15,6 +15,6 @@ for t in range(int(input())):
     g = a[0]
     for i in range(1, n):
         g = gcd(a[i], g)
-        if (g == 1):
+        if g == 1:
             break
     print(g * n)

@@ -34,6 +34,6 @@ pn = sieve(N)
 fn = trial_division(N)
 res = 1
 for f in fn.values():
-    res *= (f + 1)
+    res *= f + 1
     res %= MOD
 print(res)

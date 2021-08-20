@@ -1,10 +1,7 @@
 n = int(input())
-
 dp = [0] * 40
-
 if n == 0:
     print(0)
-
 elif n > 0:
     x = bin(n)
     bx = x[2:]
@@ -25,9 +22,8 @@ elif n > 0:
                     dp[i + 2] += 1
     dpr = list(reversed(dp))
     dprs = list(map(lambda x: str(x), dpr))
-    dprj = "".join(dprs)
+    dprj = ''.join(dprs)
     print(int(dprj))
-
 else:
     x = bin(-n)
     bx = x[2:]
@@ -48,5 +44,5 @@ else:
                     dp[i + 2] += 1
     dpr = list(reversed(dp))
     dprs = list(map(lambda x: str(x), dpr))
-    dprj = "".join(dprs)
+    dprj = ''.join(dprs)
     print(int(dprj))

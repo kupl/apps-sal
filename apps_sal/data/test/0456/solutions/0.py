@@ -12,9 +12,7 @@ while i <= n - 1:
         else:
             print(a[i], end='')
             i += 1
-
+    elif a[i:i + 2] == 'go':
+        i += 2
     else:
-        if a[i:i + 2] == 'go':
-            i += 2
-        else:
-            s = 0
+        s = 0

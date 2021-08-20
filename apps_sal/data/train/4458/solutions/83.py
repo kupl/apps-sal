@@ -4,10 +4,9 @@ from re import match
 def time_correct(t):
     if not t:
         return t
-    if not bool(match(r'\d{2}:\d{2}:\d{2}', t)):
+    if not bool(match('\\d{2}:\\d{2}:\\d{2}', t)):
         return None
-
-    h, m, s = map(int, t.split(':'))
+    (h, m, s) = map(int, t.split(':'))
     if s > 59:
         m += s // 60
         s %= 60

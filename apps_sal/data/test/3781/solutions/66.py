@@ -9,7 +9,6 @@ def solve():
     for _ in range(T):
         N = int(input())
         As = list(map(int, input().split()))
-
         if N % 2:
             anss.append('Second')
         else:
@@ -20,8 +19,7 @@ def solve():
                     break
             else:
                 anss.append('Second')
-
-    print(('\n'.join(anss)))
+    print('\n'.join(anss))
 
 
 solve()

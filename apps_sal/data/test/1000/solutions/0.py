@@ -1,6 +1,5 @@
-n, v = map(int, input().split())
+(n, v) = map(int, input().split())
 req = n - 1
-
 if req <= v:
     print(req)
 else:

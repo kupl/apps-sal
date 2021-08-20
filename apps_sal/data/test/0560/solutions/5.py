@@ -1,4 +1,4 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 str = []
 for i in range(0, r):
     aLine = input()

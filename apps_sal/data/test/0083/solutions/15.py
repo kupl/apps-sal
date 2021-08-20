@@ -1,14 +1,11 @@
-#!/bin/python3
-
 import math
 import os
 import random
 import re
 import sys
-
 n = int(input())
 l = list(map(int, input().split()))
-a, b = 0, 0
+(a, b) = (0, 0)
 for i in l:
     if i > 0:
         a += 1

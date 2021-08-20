@@ -1,4 +1,5 @@
 class Solution:
+
     def hammingDistance(self, x, y):
         """
         :type x: int
@@ -7,7 +8,7 @@ class Solution:
         """
         if x == y:
             return 0
-        bin_x, bin_y = bin(x)[2:], bin(y)[2:]
+        (bin_x, bin_y) = (bin(x)[2:], bin(y)[2:])
         if x < y:
             bin_x = bin_x.zfill(len(bin_y))
         else:

@@ -1,11 +1,11 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 graph = [list() for _ in range(n + 1)]
 count = [0 for _ in range(n + 1)]
 dp = [0 for _ in range(n + 1)]
 for _ in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     if v < u:
-        u, v = v, u
+        (u, v) = (v, u)
     graph[v].append(u)
     count[v] += 1
     count[u] += 1

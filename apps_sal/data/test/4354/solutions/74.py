@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 students = [list(map(int, input().split())) for _ in range(n)]
 points = [list(map(int, input().split())) for _ in range(m)]
 ans = []
@@ -11,4 +11,4 @@ for i in range(n):
             min_diff = diff
             near_point = j + 1
     ans.append(near_point)
-print("\n".join(map(str, ans)))
+print('\n'.join(map(str, ans)))

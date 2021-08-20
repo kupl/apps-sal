@@ -1,7 +1,7 @@
 n = int(input())
 dist = {}
 for i in range(n - 1):
-    u, v = [int(e) for e in input().split()]
+    (u, v) = [int(e) for e in input().split()]
     if u not in dist:
         dist[u] = []
     if v not in dist:

@@ -1,4 +1,4 @@
 r = int(input())
 g = int(input())
-ans = (g * 2) - r
-print((int(ans)))
+ans = g * 2 - r
+print(int(ans))

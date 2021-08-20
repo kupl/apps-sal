@@ -1,6 +1,6 @@
-a, ta = list(map(int, input().split()))
-b, tb = list(map(int, input().split()))
-h, m = list(map(int, input().split(":")))
+(a, ta) = list(map(int, input().split()))
+(b, tb) = list(map(int, input().split()))
+(h, m) = list(map(int, input().split(':')))
 m += h * 60
 mint = m - tb
 maxt = m + ta

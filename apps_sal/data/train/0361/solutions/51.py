@@ -1,17 +1,16 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         if m > n:
-            n, m = m, n
-        res, state = m * n, [0] * n
+            (n, m) = (m, n)
+        (res, state) = (m * n, [0] * n)
 
         def dfs(count):
-            # print(count, state)
             nonlocal res
             if count > res:
                 return
             min_h = min(state)
             if min_h == m:
-                # print(count, state)
                 res = min(res, count)
                 return
             e = s = state.index(min_h)
@@ -25,5 +24,4 @@ class Solution:
                 for i in range(s, s + l):
                     state[i] -= l
         dfs(0)
-
         return res

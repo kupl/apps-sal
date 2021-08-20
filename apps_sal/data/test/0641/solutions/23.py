@@ -1,9 +1,9 @@
 inp = input().split()
-if inp[2] == "week":
+if inp[2] == 'week':
     ans = 51
-    if inp[0] in "567":
+    if inp[0] in '567':
         ans += 1
-    if inp[0] in "123456":
+    if inp[0] in '123456':
         ans += 1
     print(ans)
 else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
         dp = [[None for _ in range(n)] for _ in range(n)]

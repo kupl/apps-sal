@@ -1,11 +1,11 @@
-N, A, B = map(int, input().split())
-M = 10**9 + 7
+(N, A, B) = map(int, input().split())
+M = 10 ** 9 + 7
 
 
 def cmb(N, R, M):
     C = [1] * (R + 1)
     for i in range(1, R + 1):
-        C[i] = (C[i - 1] * (N + 1 - i) * pow(i, M - 2, M)) % M
+        C[i] = C[i - 1] * (N + 1 - i) * pow(i, M - 2, M) % M
     return C
 
 

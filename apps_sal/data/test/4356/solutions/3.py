@@ -1,6 +1,6 @@
 def main():
-    n, m = list(map(int, input().split()))
-    a, b = [], []
+    (n, m) = list(map(int, input().split()))
+    (a, b) = ([], [])
     for i in range(n):
         a.append(input())
     for i in range(m):

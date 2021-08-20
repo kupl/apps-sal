@@ -1,20 +1,17 @@
-D, G = map(int, input().split())
+(D, G) = map(int, input().split())
 table = []
 ans = 0
-
 for i in range(D):
-    p, c = map(int, input().split())
+    (p, c) = map(int, input().split())
     ans += p
     table.append((p, c))
-
-
-for i in range(2**D):
+for i in range(2 ** D):
     score = 0
     n = 0
     solved = [0] * D
     for j in range(D):
         if i >> j & 1:
-            p, c = table[j]
+            (p, c) = table[j]
             solved[j] = 1
             score += 100 * (j + 1) * p + c
             n += p
@@ -28,7 +25,6 @@ for i in range(2**D):
                     if score >= G:
                         break
                 break
-
     if score >= G:
         ans = min(n, ans)
 print(ans)

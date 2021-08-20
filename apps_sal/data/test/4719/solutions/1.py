@@ -10,4 +10,4 @@ for i in range(n):
         ans[k] = min(ans[k], lst[k])
 for l in range(26):
     if ans[l] > 0:
-        print(chr(l + 97) * ans[l], end="")
+        print(chr(l + 97) * ans[l], end='')

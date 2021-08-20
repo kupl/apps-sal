@@ -2,10 +2,9 @@ import itertools
 
 
 def amida_patterns(w):
-    # (0, 1, 2, ... , w - 1) -> ?
     ret = list()
     for bars in itertools.product([0, 1], repeat=w - 1):
-        if sum([b * bb for b, bb in zip(bars[1:], bars[:-1])]) > 0:
+        if sum([b * bb for (b, bb) in zip(bars[1:], bars[:-1])]) > 0:
             continue
         location = list(range(w))
         for i in range(w):
@@ -18,8 +17,8 @@ def amida_patterns(w):
 
 
 def main():
-    MOD = 10**9 + 7
-    H, W, K = list(map(int, input().split(' ')))
+    MOD = 10 ** 9 + 7
+    (H, W, K) = list(map(int, input().split(' ')))
     ap_list = amida_patterns(W)
     dp = [[0 for _ in range(W)] for _ in range(H + 1)]
     dp[0][0] = 1

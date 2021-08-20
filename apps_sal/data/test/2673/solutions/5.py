@@ -1,9 +1,8 @@
 from collections import defaultdict
 from collections import deque
-
 s = input().strip()
 n = len(s)
-dist = [0] * (n)
+dist = [0] * n
 visited = [False] * n
 d = defaultdict(list)
 for i in range(n):
@@ -21,14 +20,12 @@ while stk:
             visited[i] = True
             stk.append(i)
     d[s[node]] = []
-    if node > 0 and not visited[node - 1]:
+    if node > 0 and (not visited[node - 1]):
         stk.append(node - 1)
         visited[node - 1] = True
         dist[node - 1] = dist[node] + 1
-    if node < n - 1 and not visited[node + 1]:
+    if node < n - 1 and (not visited[node + 1]):
         stk.append(node + 1)
         visited[node + 1] = True
         dist[node + 1] = dist[node] + 1
-# print(d)
-# print(dist)
 print(dist[-1])

@@ -1,10 +1,8 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 jadval = []
 for i in range(n):
-    jadval.append(list(input().replace(" ", "")))
+    jadval.append(list(input().replace(' ', '')))
 s = 0
-# raste
 for i in range(n):
     f = 0
     for j in range(m):
@@ -12,7 +10,6 @@ for i in range(n):
             f = 1
         elif f == 1:
             s += 1
-# chape
 for i in range(n):
     f = 0
     j = m - 1
@@ -22,7 +19,6 @@ for i in range(n):
         elif f == 1:
             s += 1
         j -= 1
-# paeene
 for j in range(m):
     f = 0
     for i in range(n):
@@ -30,7 +26,6 @@ for j in range(m):
             f = 1
         elif f == 1:
             s += 1
-# balae
 for j in range(m):
     f = 0
     i = n - 1

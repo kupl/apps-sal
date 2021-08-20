@@ -1,5 +1,5 @@
 N = input()
-if N in "aiueo":
-    print("vowel")
+if N in 'aiueo':
+    print('vowel')
 else:
-    print("consonant")
+    print('consonant')

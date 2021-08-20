@@ -1,5 +1,4 @@
 import sys
-# sys.setrecursionlimit(100000)
 
 
 def input():
@@ -18,7 +17,7 @@ def make_divisors(n: int):
     lower_divs = []
     upper_divs = []
     i = 1
-    while i**2 <= n:
+    while i ** 2 <= n:
         if n % i == 0:
             lower_divs.append(i)
             if i != n // i:
@@ -30,7 +29,7 @@ def make_divisors(n: int):
 def main():
     n = input_int()
     divs = make_divisors(n)
-    ans = float("inf")
+    ans = float('inf')
     for div in divs:
         a = div
         b = n // div

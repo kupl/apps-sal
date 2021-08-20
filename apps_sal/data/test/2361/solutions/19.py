@@ -1,10 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 Query = [list(map(int, input().split())) for _ in range(Q)]
-
-for n, m, k in Query:
+for (n, m, k) in Query:
     p = n // k
     if p >= m:
         ans = m

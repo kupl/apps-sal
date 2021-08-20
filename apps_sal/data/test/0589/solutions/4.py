@@ -1,6 +1,5 @@
 import math
 import string
-
 s = input()
 pr = 0
 for x in string.ascii_uppercase[:10]:

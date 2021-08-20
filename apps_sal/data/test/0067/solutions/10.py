@@ -1,8 +1,5 @@
-# coding: utf-8
-
 import sys
 import math
-
 import array
 import bisect
 import collections
@@ -10,7 +7,6 @@ from collections import Counter, defaultdict
 import fractions
 import heapq
 import re
-
 sys.setrecursionlimit(1000000)
 
 
@@ -26,27 +22,37 @@ def argmin(l):
     return l.index(min(l))
 
 
-def YESNO(ans, yes="YES", no="NO"):
+def YESNO(ans, yes='YES', no='NO'):
     print([no, yes][ans])
 
 
-def II(): return int(input())
-def MI(): return list(map(int, input().split()))
-def MIL(): return list(MI())
-def MIS(): return input().split()
+def II():
+    return int(input())
+
+
+def MI():
+    return list(map(int, input().split()))
+
+
+def MIL():
+    return list(MI())
+
+
+def MIS():
+    return input().split()
 
 
 def main():
-    x, y, z = MI()
+    (x, y, z) = MI()
     u = x - y + z
     d = x - y - z
     if u > 0 and d > 0:
-        return "+"
+        return '+'
     if u < 0 and d < 0:
-        return "-"
+        return '-'
     if u == 0 and d == 0:
-        return "0"
-    return "?"
+        return '0'
+    return '?'
 
 
 def __starting_point():

@@ -1,12 +1,12 @@
 def solve():
     ans = 0
-    N, M = map(int, input().split())
-    A, C = [0] * M, [0] * M
+    (N, M) = map(int, input().split())
+    (A, C) = ([0] * M, [0] * M)
     for i in range(M):
-        A[i], b = map(int, input().split())
+        (A[i], b) = map(int, input().split())
         c = list(map(int, input().split()))
         for j in range(b):
-            C[i] += 1 << (c[j] - 1)
+            C[i] += 1 << c[j] - 1
     dp = [float('inf')] * (1 << N)
     dp[0] = 0
     for i in range(1, (1 << N) + 1):

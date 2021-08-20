@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 c = list(map(int, input().split(' ')))
 d = list(map(int, input().split(' ')))
 e = []
@@ -8,7 +8,6 @@ for i in range(1, a + 1):
 for i in d:
     if i not in e:
         e.append(i)
-
 tot = 0
 for i in d:
     indx = e.index(i)

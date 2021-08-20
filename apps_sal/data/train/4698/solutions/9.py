@@ -7,10 +7,8 @@ def isInt(n):
 
 def is_int_array(arr):
     my_list = []
-
     if type(arr) is not list:
         return False
-
     if not arr:
         return True
     else:

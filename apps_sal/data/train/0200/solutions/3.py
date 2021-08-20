@@ -1,10 +1,9 @@
 class Solution:
+
     def findMinFibonacciNumbers(self, k: int) -> int:
         first = 1
         second = 1
-
         fib = []
-
         i = 0
         while True:
             if i == 0:

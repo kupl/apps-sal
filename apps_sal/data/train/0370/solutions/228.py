@@ -1,7 +1,9 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
 
         class UF:
+
             def __init__(self, N):
                 self.parents = [i for i in range(N)]
                 self.sizes = [1 for _ in range(N)]
@@ -16,18 +18,15 @@ class Solution:
                 x = self.find(x)
                 y = self.find(y)
                 if self.sizes[x] < self.sizes[y]:
-                    x, y = y, x
+                    (x, y) = (y, x)
                 if x != y:
                     self.parents[y] = x
                     self.sizes[x] += self.sizes[y]
                     self.max = max(self.max, self.sizes[x])
         uf = UF(len(A))
-
         dic = {}
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             for factor in range(2, int(math.sqrt(num) + 1)):
-                # if factor**2 > num:
-                #     break
                 if num % factor == 0:
                     for fac in [factor, num // factor]:
                         if fac in dic:

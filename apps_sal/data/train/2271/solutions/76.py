@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,13 +17,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -37,7 +35,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -49,10 +47,10 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
+        return '\n'.join((f'{r}: {m}' for (r, m) in self.all_group_members().items()))
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = list(map(int, input().split()))
 a = [list(map(int, input().split())) for i in range(m)]
 uf = UnionFind(n)

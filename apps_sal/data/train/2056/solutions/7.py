@@ -8,15 +8,14 @@ for i in range(n):
         if k == False:
             result += 1
         k = True
+    elif k == False and z != a[i]:
+        result += 1
+        k = True
+    elif k == False and z == a[i]:
+        result += 1
     else:
-        if k == False and z != a[i]:
-            result += 1
-            k = True
-        elif k == False and z == a[i]:
-            result += 1
-        else:
-            k = False
-            z = a[i]
+        k = False
+        z = a[i]
 if k == False:
     result += 1
 print(result)

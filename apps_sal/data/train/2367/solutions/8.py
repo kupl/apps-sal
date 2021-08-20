@@ -15,7 +15,7 @@ for i in range(q):
             no = 1
             break
     if no:
-        print("NO")
+        print('NO')
         continue
     yes = 0
     for i in range(26):
@@ -26,7 +26,7 @@ for i in range(q):
             yes = 1
             break
     if yes:
-        print("YES")
+        print('YES')
         continue
 
     def countRev(s):
@@ -38,6 +38,6 @@ for i in range(q):
         return count
     x = countRev(a) - countRev(b)
     if x % 2:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

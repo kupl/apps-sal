@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 a = []
 g = 0
@@ -11,16 +11,16 @@ for i in range(n):
     if s[i] == 'T':
         t = i
 if abs((t - g) % k != 0):
-    print("NO")
+    print('NO')
     raise SystemExit
 if t > g:
     for i in range(g, t, k):
         if i in a:
-            print("NO")
+            print('NO')
             raise SystemExit
 else:
     for i in range(t, g, k):
         if i in a:
-            print("NO")
+            print('NO')
             raise SystemExit
-print("YES")
+print('YES')

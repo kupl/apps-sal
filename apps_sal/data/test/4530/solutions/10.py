@@ -1,15 +1,12 @@
 from collections import Counter
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for tests in range(t):
     n = int(input())
     C = Counter(list(map(int, input().split())))
-
     LEN = len(C)
     MAX = max(C.values())
-
     if MAX < LEN:
         print(MAX)
     elif MAX == LEN:

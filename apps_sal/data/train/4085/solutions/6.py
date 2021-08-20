@@ -5,7 +5,7 @@ from random import sample
 def mix_words(strng):
     if type(strng) != str:
         return None
-    return re.sub(r'[A-Za-z]{4,}', fu, strng)
+    return re.sub('[A-Za-z]{4,}', fu, strng)
 
 
 def fu(w):

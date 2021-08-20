@@ -1,6 +1,6 @@
 def main():
     t = int(input())
-    while(t):
+    while t:
         n = int(input())
         list1 = list(map(int, input().split()))
         list1.sort(reverse=True)

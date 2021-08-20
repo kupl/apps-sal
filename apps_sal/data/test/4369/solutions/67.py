@@ -1,2 +1,2 @@
 N = int(input())
-print(((N + N % 2) // 2))
+print((N + N % 2) // 2)

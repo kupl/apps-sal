@@ -1,11 +1,10 @@
 s = list(input())
 t = list(input())
-ls, lt = len(s), len(t)
-# リストを反転させてケツから調べる事で辞書順最小を求める
+(ls, lt) = (len(s), len(t))
 s.reverse()
 t.reverse()
 for i in range(ls):
-    for j in range(lt):  # このfor文が全部回ればt in sである
+    for j in range(lt):
         if i + j >= ls:
             break
         if s[i + j] != '?' and s[i + j] != t[j]:

@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(lambda x: 1 if x == '1' else 0, input()))
-left, right = - 10 ** 9, 10 ** 9
+(left, right) = (-10 ** 9, 10 ** 9)
 for i in range(4, n):
     test = True
     for j in range(2, 5):

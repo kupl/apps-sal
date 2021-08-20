@@ -1,4 +1,4 @@
-ip = input().split(" ")
+ip = input().split(' ')
 n = int(ip[0])
 x = int(ip[1])
 
@@ -6,7 +6,7 @@ x = int(ip[1])
 def get_num_layers(level):
     if level == 1:
         return 5
-    return 5 * (1 << (level - 1)) + 3 * ((1 << (level - 1)) - 1)
+    return 5 * (1 << level - 1) + 3 * ((1 << level - 1) - 1)
 
 
 def func(level, index):
@@ -26,4 +26,4 @@ def func(level, index):
         return 1 + func(level - 1, mid - 1) + func(level - 1, index - mid - 1)
 
 
-print((func(n, x)))
+print(func(n, x))

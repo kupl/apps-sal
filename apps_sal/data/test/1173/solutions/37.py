@@ -18,20 +18,18 @@ def can_match(i, A, next_set):
 next_set = set()
 for i in range(N):
     can_match(i, A, next_set)
-
 day = 0
 battle = 0
 while next_set:
     day += 1
-    current_set, next_set = next_set, set()
+    (current_set, next_set) = (next_set, set())
     for match in current_set:
         battle += 1
         del A[match[0]][0]
         can_match(match[0], A, next_set)
         del A[match[1]][0]
         can_match(match[1], A, next_set)
-
 if battle == N * (N - 1) // 2:
     print(day)
 else:
-    print((-1))
+    print(-1)

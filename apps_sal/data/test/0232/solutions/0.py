@@ -1,5 +1,5 @@
 s = input().split()
-n, m = int(s[0]), int(s[1])
+(n, m) = (int(s[0]), int(s[1]))
 cl = list(map(int, input().split()))
 com = list(map(int, input().split()))
 res = False
@@ -12,7 +12,6 @@ for i in range(n):
         if e:
             res = True
             break
-
 if res:
     print('YES')
 else:

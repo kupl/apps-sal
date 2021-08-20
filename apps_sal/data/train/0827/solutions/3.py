@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = [x for x in input().strip()]
     c1 = s.count('a')
     c2 = s.count('b')
@@ -9,5 +9,5 @@ for _ in range(int(input())):
         if x == 'b':
             m += 1
         if x == 'a':
-            ans += (((k * (k + 1)) // 2) * c2) - (k * m)
+            ans += k * (k + 1) // 2 * c2 - k * m
     print(ans)

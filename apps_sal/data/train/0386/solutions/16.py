@@ -2,8 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
-
-    MOD = 10**9 + 7
+    MOD = 10 ** 9 + 7
 
     def __init__(self):
         self.cache = defaultdict(dict)
@@ -14,10 +13,8 @@ class Solution:
     def count(self, n: int, vowel: str = None) -> int:
         if n == 0:
             return 1
-
         if vowel in self.cache[n]:
             return self.cache[n][vowel]
-
         count = 0
         if vowel == 'a':
             count = self.count(n - 1, 'e')

@@ -5,11 +5,11 @@ black = True
 for i in range(n):
     line = input().split()
     for c in line:
-        if c == "W" or c == "B" or c == "G":
+        if c == 'W' or c == 'B' or c == 'G':
             pass
         else:
             black = False
 if black:
-    print("#Black&White")
+    print('#Black&White')
 else:
-    print("#Color")
+    print('#Color')

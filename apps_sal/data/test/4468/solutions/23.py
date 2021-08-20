@@ -1,8 +1,6 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 T = list(map(int, input().split()))
-
-prev, now, ans = T[0], 0, 0
-
+(prev, now, ans) = (T[0], 0, 0)
 for i in range(n):
     if not i:
         continue

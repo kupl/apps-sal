@@ -1,13 +1,9 @@
 import sys
 3
-
-
 n = int(sys.stdin.readline())
 b = [int(x) for x in sys.stdin.readline().split()]
 b.sort()
-
 if b[0] == b[-1]:
-    # Difference is zero
     print(0, n * (n - 1) // 2)
 else:
     d = b[-1] - b[0]

@@ -1,4 +1,4 @@
-n, m, q = [int(i) for i in input().split()]
+(n, m, q) = [int(i) for i in input().split()]
 t = []
 u = []
 for i in range(n):
@@ -14,7 +14,7 @@ for i in range(n):
     u.append(o)
 answer = []
 for i in range(q):
-    a, b = [int(i) - 1 for i in input().split()]
+    (a, b) = [int(i) - 1 for i in input().split()]
     if t[a][b] == 1:
         t[a][b] = 0
     else:

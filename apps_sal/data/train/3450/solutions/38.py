@@ -4,5 +4,4 @@ def array(string):
         return None
     res.pop()
     res.pop(0)
-
     return ' '.join(res)

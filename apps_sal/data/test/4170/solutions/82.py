@@ -7,6 +7,6 @@ for i in range(N - 1):
         cnt += 1
     else:
         ans = max(cnt, ans)
-        cnt = 0  # 初期化
+        cnt = 0
 ans = max(cnt, ans)
 print(ans)

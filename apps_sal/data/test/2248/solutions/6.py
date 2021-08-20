@@ -1,12 +1,9 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 gr = [[] for i in range(n)]
-
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     gr[v - 1].append(u - 1)
     gr[u - 1].append(v - 1)
-
 v = [False for i in range(n)]
 s = [0]
 tr = {}

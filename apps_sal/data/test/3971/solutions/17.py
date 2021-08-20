@@ -7,7 +7,7 @@ def main():
         cnt[x] += x
     a = b = 0
     for x in cnt:
-        a, b = b, max(b, a + x)
+        (a, b) = (b, max(b, a + x))
     print(b)
 
 

@@ -13,7 +13,7 @@ for i in range(n):
         cnt = 0
         v = []
         for k in range(2000):
-            if idx & (1 << k):
+            if idx & 1 << k:
                 v.append(k)
         print(len(v), end=' ')
         for e in v:

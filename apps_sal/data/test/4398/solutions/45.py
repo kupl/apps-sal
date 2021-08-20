@@ -1,2 +1,2 @@
 input()
-print(*(map(''.join, zip(*input().split()))), sep='')
+print(*map(''.join, zip(*input().split())), sep='')

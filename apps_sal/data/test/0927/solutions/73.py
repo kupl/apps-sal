@@ -20,10 +20,9 @@ def compare(A, B):
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     A = list(map(int, input().split()))
     match = (-1, 2, 5, 5, 4, 5, 6, 3, 7, 6)
-
     dp = [[0] * 10 for _ in range(1 + N)]
     changed = [0] * (N + 1)
     changed[0] = 1

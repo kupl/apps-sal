@@ -1,5 +1,4 @@
 pay = int(input())
-
 if pay % 1000 == 0:
     print(0)
 else:

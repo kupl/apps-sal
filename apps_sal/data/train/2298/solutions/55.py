@@ -1,6 +1,5 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 A = list(map(int, input().split()))
-
 min_a = A[0]
 profit = 0
 ans = 0

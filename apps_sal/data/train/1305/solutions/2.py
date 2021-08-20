@@ -9,7 +9,7 @@ for _ in range(int(input())):
     for j in range(len(b) - 1):
         if b[j + 1] - b[j] == 1:
             f = 1
-            print("UNSAFE")
+            print('UNSAFE')
             break
     if f != 1:
-        print("SAFE")
+        print('SAFE')

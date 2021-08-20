@@ -2,7 +2,7 @@ from functools import cmp_to_key
 
 
 def cmp_func(a, b):
-    ab, ba = (a + b), (b + a)
+    (ab, ba) = (a + b, b + a)
     return (ab > ba) - (ab < ba)
 
 

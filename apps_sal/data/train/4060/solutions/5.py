@@ -11,6 +11,5 @@ def ant_bridge(ants, terrain):
             if terrain[i + 1] == '-':
                 terrain[i + 1] = q.pop()
                 q.insert(0, terrain[i + 1])
-
-    rest = "".join(q)
+    rest = ''.join(q)
     return rest

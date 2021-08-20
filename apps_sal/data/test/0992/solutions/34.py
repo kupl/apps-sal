@@ -1,7 +1,6 @@
 import numpy as np
-
 mod = 998244353
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 dp = np.zeros(s + 1, dtype=int)
 dp[0] = 1
 for a in map(int, input().split()):

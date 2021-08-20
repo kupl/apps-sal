@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-ans = 10e9
+ans = 10000000000.0
 for i in range(n):
     k = 0
     for j in range(n):

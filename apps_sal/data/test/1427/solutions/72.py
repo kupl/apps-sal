@@ -1,9 +1,7 @@
 from fractions import gcd
 from sys import stdin
 input = stdin.readline
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 n = int(input())
 a = list(map(int, input().split()))
 d = 1
@@ -12,5 +10,4 @@ for i in range(n):
 ans = 0
 for i in range(n):
     ans += d // a[i]
-
 print(ans % mod)

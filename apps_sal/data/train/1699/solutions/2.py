@@ -1,5 +1,5 @@
 def v(k, n):
-    return (1.0 / k) * (n + 1)**(-2 * k)
+    return 1.0 / k * (n + 1) ** (-2 * k)
 
 
 def doubles(maxk, maxn):

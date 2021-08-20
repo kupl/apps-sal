@@ -4,7 +4,7 @@ cols = [0] * n
 for r in range(n):
     s = input()
     for c in range(n):
-        if s[c] == "C":
+        if s[c] == 'C':
             rows[r] += 1
             cols[c] += 1
 ans = 0

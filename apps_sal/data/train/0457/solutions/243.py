@@ -1,6 +1,8 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        def helper(coins, rem, count):  # count is a list
+
+        def helper(coins, rem, count):
             if rem < 0:
                 return -1
             if rem == 0:
@@ -17,7 +19,6 @@ class Solution:
             else:
                 count[rem - 1] = minVal
             return count[rem - 1]
-
         if amount < 1:
             return 0
         return helper(coins, amount, [0] * amount)

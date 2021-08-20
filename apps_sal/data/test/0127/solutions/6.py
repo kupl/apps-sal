@@ -1,8 +1,8 @@
-n, f = list(map(int, input().split()))
+(n, f) = list(map(int, input().split()))
 ans = 0
 L = []
 for _ in range(n):
-    p, c = list(map(int, input().split()))
+    (p, c) = list(map(int, input().split()))
     s = min(p, c)
     sf = min(2 * p, c)
     ans += s

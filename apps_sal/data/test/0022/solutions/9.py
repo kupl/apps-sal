@@ -1,9 +1,7 @@
-a = "AHIMOTUVWXYovwx"
-b = "bdpq"
-c = "dbqp"
-
+a = 'AHIMOTUVWXYovwx'
+b = 'bdpq'
+c = 'dbqp'
 l = list(zip(a, a)) + list(zip(b, c))
-
 s = input()
 
 
@@ -15,5 +13,4 @@ def f(c):
 
 
 t = ''.join(map(f, s[::-1]))
-
-print("TAK" if s == t else "NIE")
+print('TAK' if s == t else 'NIE')

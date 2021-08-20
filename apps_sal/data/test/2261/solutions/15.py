@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
 import sys
 
 
 def flatten(iter_lst):
-    return list(item for iter_ in iter_lst for item in iter_)
+    return list((item for iter_ in iter_lst for item in iter_))
 
 
 def repeatPattern(a, b, totalLength):
-
     totalLength = len(a) * len(b)
     ret = [None] * totalLength
     x = 0
@@ -33,7 +31,7 @@ def vectors(k):
 
 
 def string(v):
-    return ''.join("+" if i == 1 else "*" for i in v)
+    return ''.join(('+' if i == 1 else '*' for i in v))
 
 
 def strings(k):
@@ -43,5 +41,3 @@ def strings(k):
 N = int(input())
 for s in strings(N):
     print(s)
-# for _ in range(100):
-#   strings(N)

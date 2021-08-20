@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     data = list(map(int, list(input())))
     fl = False
-    data.append("&")
+    data.append('&')
     l = 0
     st = []
     for i in range(len(data)):

@@ -21,9 +21,9 @@ def nextPrime(n):
 
 
 def gcd(a, b):
-    while(a):
+    while a:
         b %= a
-        a, b = b, a
+        (a, b) = (b, a)
     return b
 
 

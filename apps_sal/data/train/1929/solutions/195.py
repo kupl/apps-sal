@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self):
         self.children = {}
         self.value = None
@@ -22,6 +23,7 @@ class TreeNode:
 
 
 class StreamChecker:
+
     def __init__(self, words):
         self.root = TreeNode()
         self.characters = deque()

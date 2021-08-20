@@ -1,10 +1,8 @@
 import numpy as np
-
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 b = np.zeros((h, w), dtype=np.int)
-
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         b[:, :x] = 1
     elif a == 2:

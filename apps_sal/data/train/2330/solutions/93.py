@@ -1,13 +1,10 @@
 s = [int(i) for i in input()]
-
 if s[0] == 0 or s[-1] == 1:
     print(-1)
-
 else:
     s.pop()
     if s != s[::-1]:
         print(-1)
-
     else:
         org = 1
         for i in range((len(s) + 1) // 2):

@@ -3,9 +3,9 @@ def main():
     input = sys.stdin.readline
     l = [[0, 0, 0]]
     r = [[0, 0, 0]]
-    n, c = map(int, input().split())
+    (n, c) = map(int, input().split())
     for i in range(n):
-        x, v = map(int, input().split())
+        (x, v) = map(int, input().split())
         r.append([x, v])
         l.append([c - x, v])
     r.sort()

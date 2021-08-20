@@ -1,6 +1,5 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 if c <= a - b:
-    print((0))
+    print(0)
 else:
-    print((c - (a - b)))
+    print(c - (a - b))

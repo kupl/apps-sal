@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         mem = [[0] * 1001 for i in range(len(A))]
         ret = 0

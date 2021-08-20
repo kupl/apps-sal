@@ -1,10 +1,11 @@
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-t, = I()
+(t,) = I()
 while t:
     t -= 1
-    n, = I()
+    (n,) = I()
     l = I()
     l = [i - 1 for i in l]
     p = [i for i in range(n)]
@@ -18,8 +19,6 @@ while t:
                 v[i] += 1
                 p[j] = i
                 j = l[j]
-
-    # print(v)
     for i in range(n):
         print(v[p[i]], end=' ')
     print()

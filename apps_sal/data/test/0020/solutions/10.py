@@ -1,12 +1,10 @@
-# coding: utf-8
-
 def is_parindrome(h, m):
-    s = "{:02d}:{:02d}".format(h, m)
+    s = '{:02d}:{:02d}'.format(h, m)
     return s == s[::-1]
 
 
 def main():
-    h, m = list(map(int, input().split(":")))
+    (h, m) = list(map(int, input().split(':')))
     c = 0
     while not is_parindrome(h, m):
         m += 1

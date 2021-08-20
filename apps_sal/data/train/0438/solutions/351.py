@@ -1,5 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
+
         def dfs(start, end, cur):
             if end - start + 1 < m:
                 return -2

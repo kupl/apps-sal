@@ -1,9 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = [0] * n
 cnt = 0
 for i in range(n):
     arr[i] = [int(x) for x in input().split()]
-
 for i in range(n):
     for j in range(0, 2 * m, 2):
         try:
@@ -11,5 +10,4 @@ for i in range(n):
                 cnt += 1
         except:
             pass
-
 print(cnt)

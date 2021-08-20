@@ -2,14 +2,12 @@ import heapq
 
 
 class Solution:
+
     def maxPerformance(self, n: int, S: List[int], E: List[int], k: int) -> int:
-
         tmp = []
-
-        for x, y in zip(S, E):
+        for (x, y) in zip(S, E):
             tmp.append([y, x])
         tmp.sort(reverse=True)
-
         stack = []
         sums = 0
         res = 0

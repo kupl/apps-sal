@@ -18,18 +18,18 @@ def ff(ss, m, n):
                 return (k, l)
 
 
-ss, m, n, i, j = f()
-k, l = ff(ss, m, n)
+(ss, m, n, i, j) = f()
+(k, l) = ff(ss, m, n)
 sss = []
 for x in range(m):
-    s = ""
+    s = ''
     for y in range(n):
-        if (i <= x and x <= k and j <= y and y <= l):
-            s += "X"
+        if i <= x and x <= k and (j <= y) and (y <= l):
+            s += 'X'
         else:
-            s += "."
+            s += '.'
     sss.append(s)
-if(ss == sss):
-    print("YES")
+if ss == sss:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

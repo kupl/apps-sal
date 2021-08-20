@@ -1,5 +1,5 @@
 s = input()
-a, b = s.count('x'), s.count('y')
+(a, b) = (s.count('x'), s.count('y'))
 if b > a:
     print('y' * (b - a))
 else:

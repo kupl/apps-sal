@@ -3,23 +3,23 @@ import collections as cl
 import bisect as bs
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 Max = sys.maxsize
 
 
-def l():  # intのlist
+def l():
     return list(map(int, input().split()))
 
 
-def m():  # 複数文字
+def m():
     return map(int, input().split())
 
 
-def onem():  # Nとかの取得
+def onem():
     return int(input())
 
 
-def s(x):  # 圧縮
+def s(x):
     a = []
     if len(x) == 0:
         return []
@@ -36,15 +36,15 @@ def s(x):  # 圧縮
     return a
 
 
-def jo(x):  # listをスペースごとに分ける
-    return " ".join(map(str, x))
+def jo(x):
+    return ' '.join(map(str, x))
 
 
-def max2(x):  # 他のときもどうように作成可能
+def max2(x):
     return max(map(max, x))
 
 
-def In(x, a):  # aがリスト(sorted)
+def In(x, a):
     k = bs.bisect_left(a, x)
     if k != len(a) and a[k] == x:
         return True
@@ -62,26 +62,9 @@ def pow_k(x, n):
     return ans
 
 
-"""
-def nibu(x,n,r):
-    ll = 0
-    rr = r
-    while True:
-        mid = (ll+rr)//2
-
-    if rr == mid:
-        return ll
-    if (ここに評価入れる):
-        rr = mid
-    else:
-        ll = mid+1
-"""
-
-
-n, q = m()
-
-ans = (n - 2)**2
-
+'\ndef nibu(x,n,r):\n    ll = 0\n    rr = r\n    while True:\n        mid = (ll+rr)//2\n\n    if rr == mid:\n        return ll\n    if (ここに評価入れる):\n        rr = mid\n    else:\n        ll = mid+1\n'
+(n, q) = m()
+ans = (n - 2) ** 2
 ta = n - 2
 tate = [n - 2 for i in range(n - 2)]
 ltate = [0 for i in range(n - 2)]
@@ -89,14 +72,13 @@ yo = n - 2
 yoko = [n - 2 for i in range(n - 2)]
 lyoko = [0 for i in range(n - 2)]
 for i in range(q):
-    a, b = m()
+    (a, b) = m()
     b -= 2
     if a == 1:
         if ltate[b] == 0:
             ans -= ta
         else:
             ans -= tate[b]
-
         for j in range(b, n - 2):
             if ltate[j] == 0:
                 tate[j] = ta
@@ -104,7 +86,6 @@ for i in range(q):
                 yo = b
             else:
                 break
-
     else:
         if lyoko[b] == 0:
             ans -= yo

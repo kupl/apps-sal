@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 if x % z == 0 or y % z == 0:
     print(x // z + y // z, 0)
 else:

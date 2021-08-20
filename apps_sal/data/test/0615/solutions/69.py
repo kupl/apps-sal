@@ -1,5 +1,3 @@
-# 解説解法
-# 15:49
 n = int(input())
 a = list(map(int, input().split()))
 b = [a[0]]
@@ -14,7 +12,6 @@ p = 0
 q = 0
 r = b[j]
 s = b[-1] - r
-# print(p,q,r,s)
 can = []
 for i in range(n - 2):
     q += a[i]
@@ -39,6 +36,4 @@ for i in range(n - 2):
             break
     if 1 <= i < n - 2:
         can.append(max(p, q, r, s) - min(p, q, r, s))
-        # print(p,q,r,s)
-# print(can)
 print(min(can))

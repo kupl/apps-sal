@@ -1,5 +1,5 @@
 from collections import deque
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = deque()
 s = set()
 for i in map(int, input().split()):

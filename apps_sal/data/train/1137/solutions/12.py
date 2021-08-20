@@ -3,7 +3,7 @@ target = 2000
 
 def finds(nums, target):
     tmp_map = {}
-    for index, num in enumerate(nums):
+    for (index, num) in enumerate(nums):
         if target - num in tmp_map:
             return [index, tmp_map[target - num]]
         tmp_map[num] = index
@@ -12,7 +12,7 @@ def finds(nums, target):
 for i in range(int(input())):
     n = int(input())
     nums = list(map(int, input().split()))
-    if (finds(nums, target)) == None:
-        print("Rejected")
+    if finds(nums, target) == None:
+        print('Rejected')
     else:
-        print("Accepted")
+        print('Accepted')

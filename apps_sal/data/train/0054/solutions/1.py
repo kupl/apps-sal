@@ -8,7 +8,7 @@ for i in range(t):
         if j <= 2048:
             s += j
         if s == 2048:
-            print("YES")
+            print('YES')
             break
     else:
-        print("NO")
+        print('NO')

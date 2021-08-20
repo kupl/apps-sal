@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-l, k = list(map(int, input().split()))
+(l, k) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c1 = 0
 c2 = 0

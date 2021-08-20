@@ -29,5 +29,4 @@ for k in range(1, N + 1):
             else:
                 ng = m
         ans.append(ok)
-
 print(*ans, sep='\n')

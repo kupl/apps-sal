@@ -1,7 +1,6 @@
 s = input()
 heavy = 0
 total = 0
-
 i = 0
 while i < len(s) - 4:
     if s[i:i + 5] == 'heavy':
@@ -12,6 +11,4 @@ while i < len(s) - 4:
         total += heavy
     else:
         i += 1
-
-
-print("%d" % total)
+print('%d' % total)

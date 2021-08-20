@@ -1,4 +1,5 @@
 class Solution:
+
     def find132pattern(self, nums):
         """
         :type nums: List[int]
@@ -13,5 +14,4 @@ class Solution:
             while stack and stack[-1] < nums[i]:
                 max_c = max(max_c, stack.pop())
             stack.append(nums[i])
-
         return False

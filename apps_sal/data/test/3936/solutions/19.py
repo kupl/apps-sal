@@ -6,11 +6,10 @@ from heapq import heapify, heappop, heappush
 from itertools import product, permutations, combinations, combinations_with_replacement
 from functools import reduce
 from math import gcd, sin, cos, tan, asin, acos, atan, degrees, radians
-
-sys.setrecursionlimit(10**6)
-INF = 10**20
-eps = 1.0e-20
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 6)
+INF = 10 ** 20
+eps = 1e-20
+MOD = 10 ** 9 + 7
 
 
 def lcm(x, y):
@@ -50,7 +49,7 @@ def lint():
 
 
 def ilint():
-    return int(input()), list(map(int, input().split()))
+    return (int(input()), list(map(int, input().split())))
 
 
 def judge(x, l=['Yes', 'No']):
@@ -71,6 +70,7 @@ def ntos(x, c0='a'):
 
 
 class counter(dict):
+
     def __init__(self, *args):
         super().__init__(args)
 
@@ -85,18 +85,19 @@ class counter(dict):
         return l
 
 
-class comb():
+class comb:
+
     def __init__(self, n, mod=None):
         self.l = [1]
         self.n = n
         self.mod = mod
 
     def get(self, k):
-        l, n, mod = self.l, self.n, self.mod
+        (l, n, mod) = (self.l, self.n, self.mod)
         k = n - k if k > n // 2 else k
         while len(l) <= k:
             i = len(l)
-            l.append(l[i - 1] * (n + 1 - i) // i if mod == None else (l[i - 1] * (n + 1 - i) * powmod(i, -1, mod)) % mod)
+            l.append(l[i - 1] * (n + 1 - i) // i if mod == None else l[i - 1] * (n + 1 - i) * powmod(i, -1, mod) % mod)
         return l[k]
 
 
@@ -118,13 +119,11 @@ def pf(x, mode='counter'):
         T = deepcopy(S)
         for x in T:
             for i in range(1, C[k] + 1):
-                S.add(x * (k**i))
+                S.add(x * k ** i)
     if mode == 'set':
         return S
     if mode == 'list':
         return sorted(list(S))
-
-######################################################
 
 
 N = intput()
@@ -132,7 +131,6 @@ S1 = input()
 S2 = input()
 i = 0
 ans = 1
-# first,tate,yoko
 tmp = 0
 same = [3, 2, 1]
 diff = [6, 2, 3]

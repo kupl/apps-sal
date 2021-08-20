@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 h = []
 for i in range(N):
     h.append(int(input()))

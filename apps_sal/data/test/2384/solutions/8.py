@@ -1,8 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 inf = 10 ** 18
-
 dp = [[-inf] * 3 for _ in range(n + 1)]
 k = 1 + n % 2
 dp[0][0] = 0
@@ -14,4 +12,4 @@ for i in range(n):
         if (i + j) % 2 == 0:
             now += A[i]
         dp[i + 1][j] = max(dp[i + 1][j], now)
-print((dp[n][k]))
+print(dp[n][k])

@@ -1,9 +1,9 @@
-els = ["AC", "AG", "AL", "AM", "AR", "AS", "AT", "AU", "B", "BA", "BE", "BH", "BI", "BK", "BR", "C", "CA", "CD", "CE", "CF", "CL", "CM", "CN", "CO", "CR", "CS", "CU", "DB", "DS", "DY", "ER", "ES", "EU", "F", "FE", "FL", "FM", "FR", "GA", "GD", "GE", "H", "HE", "HF", "HG", "HO", "HS", "I", "IN", "IR", "K", "KR", "LA", "LI", "LR", "LU", "LV", "MC", "MD", "MG", "MN", "MO", "MT", "N", "NA", "NB", "ND", "NE", "NH", "NI", "NO", "NP", "O", "OG", "OS", "P", "PA", "PB", "PD", "PM", "PO", "PR", "PT", "PU", "RA", "RB", "RE", "RF", "RG", "RH", "RN", "RU", "S", "SB", "SC", "SE", "SG", "SI", "SM", "SN", "SR", "TA", "TB", "TC", "TE", "TH", "TI", "TL", "TM", "TS", "U", "V", "W", "XE", "Y", "YB", "ZN", "ZR"]
+els = ['AC', 'AG', 'AL', 'AM', 'AR', 'AS', 'AT', 'AU', 'B', 'BA', 'BE', 'BH', 'BI', 'BK', 'BR', 'C', 'CA', 'CD', 'CE', 'CF', 'CL', 'CM', 'CN', 'CO', 'CR', 'CS', 'CU', 'DB', 'DS', 'DY', 'ER', 'ES', 'EU', 'F', 'FE', 'FL', 'FM', 'FR', 'GA', 'GD', 'GE', 'H', 'HE', 'HF', 'HG', 'HO', 'HS', 'I', 'IN', 'IR', 'K', 'KR', 'LA', 'LI', 'LR', 'LU', 'LV', 'MC', 'MD', 'MG', 'MN', 'MO', 'MT', 'N', 'NA', 'NB', 'ND', 'NE', 'NH', 'NI', 'NO', 'NP', 'O', 'OG', 'OS', 'P', 'PA', 'PB', 'PD', 'PM', 'PO', 'PR', 'PT', 'PU', 'RA', 'RB', 'RE', 'RF', 'RG', 'RH', 'RN', 'RU', 'S', 'SB', 'SC', 'SE', 'SG', 'SI', 'SM', 'SN', 'SR', 'TA', 'TB', 'TC', 'TE', 'TH', 'TI', 'TL', 'TM', 'TS', 'U', 'V', 'W', 'XE', 'Y', 'YB', 'ZN', 'ZR']
 s = input()
 
 
 def f(t):
-    if t == "":
+    if t == '':
         return True
     for p in els:
         if t.startswith(p) and f(t[len(p):]):
@@ -12,6 +12,6 @@ def f(t):
 
 
 if f(s):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

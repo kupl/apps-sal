@@ -9,7 +9,7 @@ def mult(x, y):
     return z
 
 
-n, x = map(int, stdin.readline().split())
+(n, x) = map(int, stdin.readline().split())
 a = list(map(float, stdin.readline().split()))
 for _ in range(x, 128):
     a.append(0)

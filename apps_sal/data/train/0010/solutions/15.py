@@ -1,5 +1,4 @@
 import sys
-
 T = int(sys.stdin.readline().strip())
 for t in range(0, T):
     n = int(sys.stdin.readline().strip())
@@ -14,4 +13,4 @@ for t in range(0, T):
                     ans.pop()
                 ans.append(p[i])
     print(len(ans))
-    print(" ".join(list(map(str, ans))))
+    print(' '.join(list(map(str, ans))))

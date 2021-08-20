@@ -6,6 +6,6 @@ for c in res:
     if len(s) > k and s[k] == c:
         k += 1
 if len(s) > k:
-    print("no")
+    print('no')
 else:
-    print("yes")
+    print('yes')

@@ -3,8 +3,8 @@ import math
 from functools import lru_cache
 from collections import defaultdict
 from decimal import Decimal
-sys.setrecursionlimit(10**9)
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 9)
+MOD = 10 ** 9 + 7
 
 
 def input():
@@ -28,19 +28,16 @@ def main():
     N = ii()
     F = [list(mi()) for i in range(N)]
     P = [list(mi()) for i in range(N)]
-
     m = -math.inf
-
-    for ptn in range(1, 2**10):
+    for ptn in range(1, 2 ** 10):
         r = 0
         for i in range(N):
             cnt = 0
             for j in range(10):
-                if F[i][j] and (ptn >> j) & 1:
+                if F[i][j] and ptn >> j & 1:
                     cnt += 1
             r += P[i][cnt]
         m = max(m, r)
-
     print(m)
 
 

@@ -21,7 +21,7 @@ def cond(x, a, n):
 
 
 def solve(a, n):
-    l, r = -1, n + 1
+    (l, r) = (-1, n + 1)
     while r - l > 1:
         m = (r + l) // 2
         if cond(m, a, n):

@@ -1,11 +1,12 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
+
         def getMax(p, N):
             _max = 0
             for i in range(len(p) - N):
                 _max = max(p[i + N] - p[i], _max)
             return _max
-
         pre = [0] * (len(A) + 1)
         for i in range(0, len(A)):
             pre[i + 1] = pre[i] + A[i]

@@ -1,4 +1,4 @@
-N, K, M = map(int, input().split())
+(N, K, M) = map(int, input().split())
 A1 = list(map(int, input().split()))
 add = []
 for i in range(0, K + 1):
@@ -6,7 +6,6 @@ for i in range(0, K + 1):
         add.append(i)
     else:
         pass
-
 if not add:
     print(-1)
 elif K > max(add):

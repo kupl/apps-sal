@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 
 
 def power(a, b):
-    return a**b
+    return a ** b
 
 
 def concatenate(a, b):
@@ -13,7 +12,6 @@ def concatenate(a, b):
 def order(arr, i):
     if len(arr) <= 1:
         return arr
-
     l = []
     r = []
     n = len(arr)
@@ -29,15 +27,14 @@ def order(arr, i):
 
 
 for _ in range(t):
-    p, idx = list(map(int, input().split()))
-    n = 2**p - 1
+    (p, idx) = list(map(int, input().split()))
+    n = 2 ** p - 1
     l = []
     s = 0
-    while(p > 0):
+    while p > 0:
         l.append(int(idx % 2))
         idx = idx / 2
         p -= 1
-        # print(l)
     for i in l:
         s = s * 2 + i
     print(s)

@@ -5,7 +5,7 @@ d = int(input())
 e = int(input())
 f = int(input())
 ans = 0
-if(f > e):
+if f > e:
     m = min(b, c, d)
     ans += m * f
     d -= m

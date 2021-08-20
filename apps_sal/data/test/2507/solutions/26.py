@@ -1,14 +1,13 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
 f = [int(i) for i in input().split()]
-
 a.sort()
 f.sort(reverse=True)
 
 
 def score(x):
     syugyo = 0
-    for A, F in zip(a, f):
+    for (A, F) in zip(a, f):
         sup = x // F
         if sup < A:
             syugyo += A - sup
@@ -25,4 +24,4 @@ while left < right - 1:
         right = mid
     else:
         left = mid
-print((left + 1 if left != 0 else 0))
+print(left + 1 if left != 0 else 0)

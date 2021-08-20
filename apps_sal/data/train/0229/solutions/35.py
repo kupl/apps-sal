@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         if not A:
             return True
@@ -21,5 +22,4 @@ class Solution:
                 if k * 2 in c:
                     c[k * 2] -= c[k]
                     c[k] = 0
-
         return set(c.values()) == {0}

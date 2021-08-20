@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
-
 class Bit:
+
     def __init__(self, n):
         self.size = n
         self.tree = [0] * n
@@ -10,7 +9,7 @@ class Bit:
         i -= 1
         while i >= 0:
             s += self.tree[i]
-            i = (i & (i + 1)) - 1
+            i = (i & i + 1) - 1
         return s
 
     def add(self, i, x):
@@ -23,28 +22,22 @@ a = ord('a')
 
 
 def make_index(s):
-
     index = [[] for _ in range(26)]
-    for i, ch in enumerate(s):
+    for (i, ch) in enumerate(s):
         index[ord(ch) - a].append(i)
-
     return index
 
 
 def solve(s):
-
     n = len(s)
     index = make_index(s)
-
     odd = None
-    for code, char_pos in enumerate(index):
+    for (code, char_pos) in enumerate(index):
         if len(char_pos) % 2 == 1:
             if odd is not None:
                 return -1
             odd = code
-
     bit = Bit(n)
-
     ans = 0
     cnt = 0
     for i in range(n):
@@ -59,18 +52,15 @@ def solve(s):
         bit.add(j, 1)
         if n // 2 <= cnt:
             break
-
     if odd is not None:
         j = index[odd][-1]
         ans += abs(n // 2 - (j - bit.sum(j)))
-
     return ans
 
 
 def main():
     s = input()
-
-    print((solve(s)))
+    print(solve(s))
 
 
 def __starting_point():

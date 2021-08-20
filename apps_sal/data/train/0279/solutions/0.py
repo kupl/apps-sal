@@ -1,11 +1,12 @@
 class Solution:
+
     def getPermutation(self, n, k):
         """
         :type n: int
         :type k: int
         :rtype: str
         """
-        nums = list("123456789")
+        nums = list('123456789')
         k -= 1
         factor = 1
         for i in range(1, n):
@@ -17,4 +18,4 @@ class Solution:
             if i:
                 k %= factor
                 factor //= i
-        return "".join(res)
+        return ''.join(res)

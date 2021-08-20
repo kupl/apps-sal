@@ -1,12 +1,10 @@
-# cook your dish here
-n, sal, tip = list(map(int, input().split()))
+(n, sal, tip) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 res = n * sal
 for i in range(len(a)):
     num = a[i] - 1
-    res += (tip - (tip * 2 * num / 100))
-# print(res)
+    res += tip - tip * 2 * num / 100
 if res < 300:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

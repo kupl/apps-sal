@@ -1,5 +1,5 @@
 import numpy as np
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 lsa = list(map(int, input().split()))
 ls2 = []

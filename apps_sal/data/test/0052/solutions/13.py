@@ -1,5 +1,5 @@
 n = int(input()) + 1
-b, p = 1, []
+(b, p) = (1, [])
 while b < n + 1:
     d = (2 * b - 1) ** 2 + 8 * (n - b)
     s = int(d ** 0.5)

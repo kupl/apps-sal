@@ -1,5 +1,4 @@
 import sys
-
 rl = sys.stdin.readline
 T = int(rl())
 for t in range(T):

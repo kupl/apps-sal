@@ -7,5 +7,4 @@ def is_palindrome(s):
             end -= 1
         else:
             return False
-
     return True

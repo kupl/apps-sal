@@ -29,7 +29,6 @@ def main():
     res = 0
     for i in range(len(sums2) - 1, -1, -1):
         res = (sums2[i] + res * 10) % 998244353
-
     print(res)
 
 

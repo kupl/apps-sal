@@ -1,6 +1,5 @@
 from math import sqrt
-
-xs, ys, xt, yt = map(int, input().split())
+(xs, ys, xt, yt) = map(int, input().split())
 n = int(input())
 xyr = [list(map(int, input().split())) for i in range(n)]
 xyr.insert(0, [xs, ys, 0])

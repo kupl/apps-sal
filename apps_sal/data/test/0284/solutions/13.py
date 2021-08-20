@@ -4,10 +4,10 @@ import random
 
 def test():
     for i in range(100):
-        a, b, c = [random.randint(1, 20) for _ in range(3)]
+        (a, b, c) = [random.randint(1, 20) for _ in range(3)]
         k = 1234567 * a + 123456 * b + 1234 * c
-        assert k <= 1e9
-        assert solve(k) == "YES"
+        assert k <= 1000000000.0
+        assert solve(k) == 'YES'
 
 
 def solve(n):
@@ -17,8 +17,8 @@ def solve(n):
             if k > n:
                 break
             elif (k - n) % 1234 == 0:
-                return "YES"
-    return "NO"
+                return 'YES'
+    return 'NO'
 
 
 n = int(input())

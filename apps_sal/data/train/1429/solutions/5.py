@@ -1,4 +1,3 @@
-# cook your dish here
 k = 30
 for _ in range(int(input())):
     n = int(input())
@@ -8,8 +7,7 @@ for _ in range(int(input())):
     for i in range(k):
         p = 0
         for j in range(n):
-            if(l1[j] & (1 << i)):
+            if l1[j] & 1 << i:
                 p = p * (1 - l2[j]) + (1 - p) * l2[j]
         ans += p * (1 << i)
-
-    print("%.15f" % ans)
+    print('%.15f' % ans)

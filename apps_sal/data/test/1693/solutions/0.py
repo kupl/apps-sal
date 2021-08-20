@@ -20,7 +20,6 @@ def solve():
         if q:
             msp[i] = q[-1]
         q.append(i)
-
     dp1 = [0] * n
     for i in range(n):
         dp1[i] = m[i] * (i - msl[i])

@@ -6,12 +6,12 @@ def main():
     aList = list(map(int, input().split()))
     sumA = 1
     if aList.count(0) > 0:
-        print((0))
+        print(0)
         return
     for a in aList:
         sumA *= a
         if sumA > 10 ** 18:
-            print((-1))
+            print(-1)
             return
     print(sumA)
 

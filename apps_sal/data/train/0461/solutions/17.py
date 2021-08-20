@@ -1,8 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         employees_of_manager = [[] for i in range(n)]
-        for e, m in enumerate(manager):
-            # print(m)
+        for (e, m) in enumerate(manager):
             if m >= 0:
                 employees_of_manager[m].append(e)
 

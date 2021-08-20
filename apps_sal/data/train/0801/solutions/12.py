@@ -3,7 +3,7 @@ while t > 0:
     n = int(input())
     arr1 = list(map(int, input().split()))
     arr2 = list(map(int, input().split()))
-    resultant, s = [], set()
+    (resultant, s) = ([], set())
     for i in range(0, len(arr1)):
         s.add(arr1[i])
         resultant.append(arr1[i])
@@ -34,5 +34,4 @@ while t > 0:
         for i in range(0, len(vector) // 2):
             ans += min(mini, vector[i])
         print(ans)
-
     t -= 1

@@ -1,4 +1,4 @@
-n, k = [int(item) for item in input().split()]
+(n, k) = [int(item) for item in input().split()]
 result = [0] * n
 if k < n - 1:
     result[0] = n

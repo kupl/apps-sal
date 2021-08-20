@@ -1,8 +1,7 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ruiseki = [0] * (n + 1)
     mod = 998244353
-
     move_list = [list(map(int, input().split())) for i in range(k)]
     sorted_list = sorted(move_list)
     dp = [0] * (n + 1)
@@ -17,7 +16,7 @@ def main():
             else:
                 break
         ruiseki[i] = ruiseki[i - 1] % mod + dp[i] % mod
-    print((dp[-1] % mod))
+    print(dp[-1] % mod)
 
 
 def __starting_point():

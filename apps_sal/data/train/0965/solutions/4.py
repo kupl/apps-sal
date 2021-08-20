@@ -1,6 +1,5 @@
-# cook your dish here
 for x in range(int(input())):
-    n, k = input().strip(' ').split()
+    (n, k) = input().strip(' ').split()
     n = int(n)
     k = int(k)
     if k == 0:

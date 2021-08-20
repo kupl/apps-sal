@@ -1,5 +1,5 @@
 import copy
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 l = []
 for i in range(M):
     l.append(list(map(int, input().split())))
@@ -9,10 +9,10 @@ def bfs(l, tmp, came):
     t = []
     for n in tmp:
         for s in l:
-            if (s[0] == n) and (s[1] not in came):
+            if s[0] == n and s[1] not in came:
                 t.append(s[1])
                 came.append(s[1])
-            elif (s[1] == n) and (s[0] not in came):
+            elif s[1] == n and s[0] not in came:
                 t.append(s[0])
                 came.append(s[0])
     if t == []:

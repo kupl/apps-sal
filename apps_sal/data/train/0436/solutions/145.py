@@ -1,9 +1,10 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = [(0, n)]
         visited = set()
         while q:
-            x, curr = heapq.heappop(q)
+            (x, curr) = heapq.heappop(q)
             if curr == 1:
                 return x + 1
             if curr not in visited:

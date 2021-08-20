@@ -1,12 +1,11 @@
-# F
 from bisect import bisect_left, bisect_right
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 N = int(input())
 a = list(map(int, input().split()))
 lists = [[] for i in range(N)]
 for i in range(N - 1):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     lists[u - 1].append(v - 1)
     lists[v - 1].append(u - 1)
 
@@ -38,4 +37,4 @@ check[0] = True
 LIS = [a[0]]
 ans[0] = 1
 search(0, LIS)
-print(*ans, sep="\n")
+print(*ans, sep='\n')

@@ -8,9 +8,9 @@ def operator_insertor(n):
                         for a6 in ['+', '-', '']:
                             for a7 in ['+', '-', '']:
                                 for a8 in ['+', '-', '']:
-                                    expression = "1{}2{}3{}4{}5{}6{}7{}8{}9".format(a1, a2, a3, a4, a5, a6, a7, a8)
+                                    expression = '1{}2{}3{}4{}5{}6{}7{}8{}9'.format(a1, a2, a3, a4, a5, a6, a7, a8)
                                     signs = len(expression) - 9
-                                    if (eval(expression) == n) and (min > signs):
+                                    if eval(expression) == n and min > signs:
                                         min = signs
     if min == 9:
         return None

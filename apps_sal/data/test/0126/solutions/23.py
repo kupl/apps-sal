@@ -1,11 +1,6 @@
 n = int(input())
-# a, b = map(int, input().split())
 number = input()
-
-numpad = [['1', '2', '3'],
-          ['4', '5', '6'],
-          ['7', '8', '9'],
-          [None, '0', None]]
+numpad = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], [None, '0', None]]
 
 
 def get_coordinates(digit):
@@ -21,15 +16,15 @@ def get_coordinates(digit):
     else:
         first_coordinate = 3
         second_coordinate = 1
-    return first_coordinate, second_coordinate
+    return (first_coordinate, second_coordinate)
 
 
 def add(v1, v2):
-    return v1[0] + v2[0], v1[1] + v2[1]
+    return (v1[0] + v2[0], v1[1] + v2[1])
 
 
 def sub(v1, v2):
-    return v1[0] - v2[0], v1[1] - v2[1]
+    return (v1[0] - v2[0], v1[1] - v2[1])
 
 
 def try_it(start_digit, what_to_do):
@@ -50,7 +45,6 @@ def try_it(start_digit, what_to_do):
 sequence = []
 for i in range(n - 1):
     sequence.append(sub(get_coordinates(number[i + 1]), get_coordinates(number[i])))
-
 for digit in set('1234567890') - set(number[0]):
     if try_it(digit, sequence):
         print('NO')

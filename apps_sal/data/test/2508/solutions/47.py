@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-
 input = sys.stdin.readline
 
 
@@ -9,8 +8,8 @@ def log(*args):
 
 
 def main():
-    h, w, k = map(int, input().strip().split())
-    x1, y1, x2, y2 = map(int, input().strip().split())
+    (h, w, k) = map(int, input().strip().split())
+    (x1, y1, x2, y2) = map(int, input().strip().split())
     x1 -= 1
     y1 -= 1
     x2 -= 1
@@ -36,7 +35,7 @@ def main():
             for dist in range(1, k + 1):
                 new_x = x + add_x * dist
                 new_y = y + add_y * dist
-                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@' or ((not costs1[new_x][new_y] is None) and costs1[new_x][new_y] < cost + 1):
+                if new_x >= h or new_x < 0 or new_y >= w or (new_y < 0) or (m[new_x][new_y] == '@') or (not costs1[new_x][new_y] is None and costs1[new_x][new_y] < cost + 1):
                     break
                 if costs1[new_x][new_y] is None:
                     costs1[new_x][new_y] = cost + 1
@@ -49,12 +48,12 @@ def main():
             for dist in range(1, k + 1):
                 new_x = x + add_x * dist
                 new_y = y + add_y * dist
-                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@' or ((not costs2[new_x][new_y] is None) and costs2[new_x][new_y] < cost + 1):
+                if new_x >= h or new_x < 0 or new_y >= w or (new_y < 0) or (m[new_x][new_y] == '@') or (not costs2[new_x][new_y] is None and costs2[new_x][new_y] < cost + 1):
                     break
                 if costs2[new_x][new_y] is None:
                     costs2[new_x][new_y] = cost + 1
                     q2.append((new_x, new_y, cost + 1))
-    print("-1")
+    print('-1')
 
 
 def __starting_point():

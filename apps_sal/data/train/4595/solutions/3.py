@@ -7,8 +7,7 @@ def on_right_diagonal(b1, b2):
 
 
 def bishop_diagonal(bishop1, bishop2):
-    b1, b2 = (ord(bishop1[0]) - 96, int(bishop1[1])), (ord(bishop2[0]) - 96, int(bishop2[1]))
-
+    (b1, b2) = ((ord(bishop1[0]) - 96, int(bishop1[1])), (ord(bishop2[0]) - 96, int(bishop2[1])))
     if on_left_diagonal(b1, b2):
         key = b1[0] + b1[1]
         if key < 10:

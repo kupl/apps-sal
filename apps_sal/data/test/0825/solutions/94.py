@@ -17,7 +17,6 @@ def factor(n):
 
 num = [i for i in range(1, 65)]
 num = list(accumulate(num))
-
 N = int(input())
 primes = Counter(factor(N))
 ans = 0

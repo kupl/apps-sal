@@ -2,7 +2,9 @@ import functools
 
 
 class Solution:
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
+
         @functools.lru_cache(None)
         def dp(start, p):
             if p == 1:

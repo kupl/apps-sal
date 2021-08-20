@@ -1,4 +1,2 @@
-
 S = str(input())
-
-print((S[::2]))
+print(S[::2])

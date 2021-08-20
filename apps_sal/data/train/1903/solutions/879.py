@@ -2,14 +2,14 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def distance(p1, p2):
             return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
-
         L = len(points)
         if L <= 1:
             return 0
-
         todo = set(range(L))
         nex = 0
         h = []
@@ -22,6 +22,6 @@ class Solution:
                 heapq.heappop(h)
             if not h:
                 break
-            cost, nex = heapq.heappop(h)
+            (cost, nex) = heapq.heappop(h)
             ans += cost
         return ans

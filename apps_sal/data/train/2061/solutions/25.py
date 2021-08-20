@@ -12,5 +12,5 @@ def solve(x, y):
 
 T = int(input())
 for _ in range(T):
-    ax, ay, bx, by, cx, cy = list(map(int, input().split()))
-    print((solve(ax + bx + cx, ay + by + cy)))
+    (ax, ay, bx, by, cx, cy) = list(map(int, input().split()))
+    print(solve(ax + bx + cx, ay + by + cy))

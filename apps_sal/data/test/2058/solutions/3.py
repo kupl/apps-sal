@@ -1,10 +1,8 @@
 a = list(map(int, input()))
 b = list(map(int, input()))
-
 ps = [0] * (len(b) + 1)
 for i in range(len(b)):
     ps[i + 1] = ps[i] + b[i]
-
 ans = 0
 for i in range(len(a)):
     left = i

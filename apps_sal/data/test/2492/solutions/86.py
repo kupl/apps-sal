@@ -1,17 +1,13 @@
 import numpy as np
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a = np.array(a)
 a.sort()
-
 nega = a[a < 0]
 zero = a[a == 0]
 posi = a[a > 0]
-
-l = -10**18 - 1
-r = 10**18 + 1
+l = -10 ** 18 - 1
+r = 10 ** 18 + 1
 while r - l > 1:
     mid = (r + l) // 2
     cnt = 0
@@ -25,5 +21,4 @@ while r - l > 1:
         r = mid
     else:
         l = mid
-
 print(r)

@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 x = s[0]
 summ = sum(s)
@@ -8,7 +8,7 @@ for i in range(n):
 y.sort(reverse=True)
 count = 0
 index = 0
-while (x * a) / summ < b:
+while x * a / summ < b:
     count += 1
     if y[index][1] == 0:
         index += 1

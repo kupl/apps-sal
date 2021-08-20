@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         import collections
         count = collections.Counter(hand)
@@ -12,5 +13,4 @@ class Solution:
                     del count[num + j]
                 else:
                     count[num + j] -= val
-
         return True

@@ -1,7 +1,8 @@
 class Solution:
+
     def decodeAtIndex(self, S, K):
         N = 0
-        for i, c in enumerate(S):
+        for (i, c) in enumerate(S):
             N = N * int(c) if c.isdigit() else N + 1
             if K <= N:
                 break

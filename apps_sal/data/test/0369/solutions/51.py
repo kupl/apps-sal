@@ -1,5 +1,5 @@
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     S = [int(s) for s in input()][::-1]
     ANS = []
     t = 0
@@ -10,12 +10,12 @@ def main():
                 t += i
                 break
         else:
-            print((-1))
+            print(-1)
             return
     if sum(ANS) == N:
-        print((" ".join(map(str, ANS[::-1]))))
+        print(' '.join(map(str, ANS[::-1])))
     else:
-        print((-1))
+        print(-1)
 
 
 def __starting_point():

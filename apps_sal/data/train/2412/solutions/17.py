@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, s: str) -> str:
         i = 0
         while i + 1 < len(s):

@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
-
 cl = 0
 cr = 0
 a = []
@@ -24,7 +23,7 @@ while True:
             a[-1][1] = cr
         ans = max(ans, cr - cl + 1)
     if cr < n - 1:
-        tl, tr = a.pop(0)
+        (tl, tr) = a.pop(0)
         cl = tr
         cr -= 1
         ck -= 1

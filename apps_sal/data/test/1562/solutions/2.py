@@ -6,24 +6,24 @@ def binSearchMax(number):
     last = bn
     first = 0
     mid = (last + first) // 2
-    while(last >= first):
-        if(ar[mid] < number):
+    while last >= first:
+        if ar[mid] < number:
             first = mid + 1
-        elif(ar[mid] > number):
+        elif ar[mid] > number:
             last = mid - 1
         else:
             return mid
         mid = (last + first) // 2
-    if (ar[last] == number):
+    if ar[last] == number:
         return last
     return first
 
 
-n, m, k, q = list(map(int, input().split()))
+(n, m, k, q) = list(map(int, input().split()))
 mmn = [[m, -1] for i in range(n)]
 maxn = 0
 for i in range(k):
-    r, c = list(map(int, input().split()))
+    (r, c) = list(map(int, input().split()))
     r -= 1
     mmn[r][0] = min(mmn[r][0], c)
     mmn[r][1] = max(mmn[r][1], c)
@@ -37,7 +37,6 @@ bi.sort()
 ar = bi
 bn = q + 3
 dp = [[0, 0] for i in range(n)]
-
 dp[0][1] = mmn[0][1] - mmn[0][0]
 dp[0][0] = dp[0][1] * 2
 z = 0

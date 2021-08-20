@@ -1,4 +1,5 @@
 class Solution:
+
     def plusOne(self, a, b):
         bigger = max([a, b], key=len)
         smaller = min([a, b], key=len)
@@ -11,7 +12,7 @@ class Solution:
         memo = {}
         sort = [[i for i in words if len(i) == a] for a in set([len(j) for j in words])][::-1]
         print(sort)
-        for i, row in enumerate(sort):
+        for (i, row) in enumerate(sort):
             if i == 0:
                 for j in row:
                     memo[j] = 1
@@ -23,6 +24,4 @@ class Solution:
                             print((a, b))
                             values.append(1 + memo[b])
                     memo[a] = max(values) if values else 1
-#         for key, value in memo.items():
-#             print(key, value)
         return max(memo.values())

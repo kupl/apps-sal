@@ -1,12 +1,12 @@
-n, x = map(int, input().split())
-if x >= 2**n:
+(n, x) = map(int, input().split())
+if x >= 2 ** n:
     prefix_array = []
-    for i in range(1, 2**n):
+    for i in range(1, 2 ** n):
         prefix_array.append(i)
 else:
     prefix_array = []
     compl = {}
-    for i in range(1, 2**n):
+    for i in range(1, 2 ** n):
         if i == x:
             continue
         try:

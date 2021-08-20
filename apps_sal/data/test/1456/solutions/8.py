@@ -12,9 +12,6 @@ def __starting_point():
         table.append(input())
     for i in range(2 * n):
         newT.append([1] * (2 * n))
-    #table = [input() for i in range(n)]
-    #newT = [[1] * (2 * n) for i in range(2 * n)]
-
     for i in range(n):
         for j in range(n):
             if table[i][j] != 'o':
@@ -36,9 +33,9 @@ def __starting_point():
                 if piece == 1:
                     break
             if piece == 0:
-                print("NO")
+                print('NO')
                 return
-    print("YES")
+    print('YES')
     for i in range(1, 2 * n):
         for j in range(1, 2 * n):
             if i == n and j == n:

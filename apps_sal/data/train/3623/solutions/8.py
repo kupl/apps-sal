@@ -5,4 +5,4 @@ def product(s):
     if excl == 0 | qust == 0:
         return 0
     else:
-        return (excl * qust)
+        return excl * qust

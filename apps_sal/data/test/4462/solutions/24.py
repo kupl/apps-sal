@@ -7,8 +7,7 @@ for x in a:
         count += 1
     elif x % 2 == 0:
         hcount += 1
-
-if (count + (hcount // 2)) >= (N // 2):
+if count + hcount // 2 >= N // 2:
     print('Yes')
 else:
     print('No')

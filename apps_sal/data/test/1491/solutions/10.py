@@ -2,10 +2,9 @@ n = int(input())
 a = list(map(int, input().split()))
 x = []
 for i in a:
-    s = i**0.5
+    s = i ** 0.5
     s = round(s)
-    x.append((abs(s**2 - i), i))
-
+    x.append((abs(s ** 2 - i), i))
 x.sort()
 n2 = n // 2
 ans = 0

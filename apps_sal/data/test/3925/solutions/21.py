@@ -1,9 +1,7 @@
 word = input()
-
 maximum = 0
-prev = "-"
+prev = '-'
 curlen = 0
-
 for i in word:
     if prev == i:
         maximum = max(maximum, curlen)
@@ -12,7 +10,6 @@ for i in word:
         curlen += 1
         prev = i
 maximum = max(maximum, curlen)
-
 start = word[0]
 left = 1
 i = 1
@@ -25,7 +22,6 @@ while True:
         i += 1
     else:
         break
-
 start = word[-1]
 right = 1
 i = len(word) - 2
@@ -38,15 +34,13 @@ while True:
         i -= 1
     else:
         break
-
 if len(word) == 1:
     print(1)
-else:
-    if word[0] != word[-1]:
-        poss = left + right
-        if poss > len(word):
-            print(len(word))
-        else:
-            print(max(poss, maximum))
+elif word[0] != word[-1]:
+    poss = left + right
+    if poss > len(word):
+        print(len(word))
     else:
-        print(maximum)
+        print(max(poss, maximum))
+else:
+    print(maximum)

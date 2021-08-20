@@ -1,5 +1,4 @@
-k, a, b = list(map(int, input().split()))
-
+(k, a, b) = list(map(int, input().split()))
 if a >= k and b >= k:
     print(a // k + b // k)
 elif a >= k:

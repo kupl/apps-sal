@@ -2,13 +2,13 @@ def subString(s, n):
     lst = []
     for i in range(n):
         for len in range(i + 1, n + 1):
-            lst.append(s[i: len])
+            lst.append(s[i:len])
     return lst
 
 
 lst = []
 for _ in range(int(input())):
-    n = (input())
+    n = input()
     lst.append(n)
 m = int(input())
 b = input()

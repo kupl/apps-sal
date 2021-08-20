@@ -12,4 +12,4 @@ def primfacs(n):
 
 
 nums = list(map(str, primfacs(int(input()))))
-print(int(float("".join(nums))))
+print(int(float(''.join(nums))))

@@ -1,5 +1,5 @@
 a = int(input())
-x = ""
+x = ''
 y = 0
 for i in range(a):
     x = input().split()

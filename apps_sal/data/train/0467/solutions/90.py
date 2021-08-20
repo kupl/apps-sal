@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         res = 0
 
@@ -9,15 +10,13 @@ class Solution:
                 if len(res) > 4:
                     return 0
                 if not v % i:
-                    res += i,
+                    res += (i,)
                     if v // i > i:
-                        res += v // i,
+                        res += (v // i,)
                     else:
                         break
             res = set(res)
             return sum(res) if len(res) == 4 else 0
-
         for v in nums:
             res += divisors(v)
-
         return res

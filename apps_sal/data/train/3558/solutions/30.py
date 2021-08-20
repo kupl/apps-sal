@@ -1,1 +1,2 @@
-def capitalize_word(s): return s.capitalize()
+def capitalize_word(s):
+    return s.capitalize()

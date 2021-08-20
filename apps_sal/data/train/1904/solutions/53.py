@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def __init__(self):
         self.dist_coord = dict()
         self.dist_heap = [None]
@@ -24,21 +25,18 @@ class Solution:
         self._calc_dist_coord()
         for i in reversed(list(range(1, len(self.dist_heap) // 2 + 1))):
             self.shift_down(self.dist_heap, i)
-
         while K > 0 and len(self.dist_heap) > 1:
-            # print(self.dist_coord, self.dist_heap)
             for point in self.dist_coord[self.dist_heap[1]]:
                 self.final_result.append(point)
                 K -= 1
             self.del_elem_from_heap(self.dist_heap)
-            # K -= 1
         return self.final_result
 
     def shift_up(self, h_list):
         i = len(h_list) - 1
         while int(i / 2) > 0:
             if h_list[i] > h_list[int(i / 2)]:
-                h_list[i], h_list[int(i / 2)] = h_list[int(i / 2)], h_list[i]
+                (h_list[i], h_list[int(i / 2)]) = (h_list[int(i / 2)], h_list[i])
             i = int(i / 2)
 
     def shift_down(self, h_list, start):
@@ -47,12 +45,10 @@ class Solution:
         r = 2 * i + 1
         if l < len(h_list) and h_list[i] > h_list[l]:
             i = l
-
         if r < len(h_list) and h_list[i] > h_list[r]:
             i = r
-
         if i != start:
-            h_list[start], h_list[i] = h_list[i], h_list[start]
+            (h_list[start], h_list[i]) = (h_list[i], h_list[start])
             self.shift_down(h_list, i)
 
     def add_elem_to_heap(self, h_list, val):

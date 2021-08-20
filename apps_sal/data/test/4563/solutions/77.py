@@ -1,11 +1,11 @@
 n = int(input())
-t_i, a_i = map(int, input().split())
+(t_i, a_i) = map(int, input().split())
 t = []
 a = []
 t.append(t_i)
 a.append(a_i)
 for i in range(1, n):
-    t_i, a_i = map(int, input().split())
+    (t_i, a_i) = map(int, input().split())
     t.append(t_i)
     a.append(a_i)
     if t[i - 1] > t[i] or a[i - 1] > a[i]:

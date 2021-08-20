@@ -7,23 +7,21 @@ def solve(a, b, min1, min2, min3, min4, x, y):
         return []
     solMin1 = (a / y + b) / (y - 1 / y)
     solMin2 = (b / y + a) / (y - 1 / y)
-    solMin1 *= (x * y)
-    solMin2 *= (x * y)
-
-    if solMin1 >= min1 and solMin1 <= min2 and solMin2 >= min3 and solMin2 <= min4:
-        # Solution found
+    solMin1 *= x * y
+    solMin2 *= x * y
+    if solMin1 >= min1 and solMin1 <= min2 and (solMin2 >= min3) and (solMin2 <= min4):
         return [a, solMin1, b, solMin2]
     return []
 
 
 def integerPart(x):
-    return Decimal(str(x).split(".")[0])
+    return Decimal(str(x).split('.')[0])
 
 
 def fractionalPart(x):
-    t = str(x).split(".")
+    t = str(x).split('.')
     if len(t) > 0:
-        return "." + t[1]
+        return '.' + t[1]
     return 0
 
 
@@ -41,15 +39,12 @@ for i in range(eval(input())):
     f = Decimal(f)
     g = Decimal(g)
     h = Decimal(h)
-
     if a > g or (a == g and b > h):
-        print("-1")
+        print('-1')
         continue
-
-    solutionh = Decimal("-1")
-    solutionm = Decimal("-1")
-    diff = Decimal("-10000000000000000")
-
+    solutionh = Decimal('-1')
+    solutionm = Decimal('-1')
+    diff = Decimal('-10000000000000000')
     solution1 = []
     solution2 = []
     solution3 = []
@@ -70,20 +65,18 @@ for i in range(eval(input())):
     solution1 = solve(a + 0, g + 0, b, x * y, l1, h, x, y)
     if a < y - 1 and len(solution1) == 0:
         solution2 = solve(a + 1, g + 0, 0, x * y, l1, h, x, y)
-    if g >= 1 and len(solution1) == 0 and len(solution2) == 0:
+    if g >= 1 and len(solution1) == 0 and (len(solution2) == 0):
         solution4 = solve(a + 0, g - 1, b, x * y, 0, x * y, x, y)
     if g - e >= 2 and c - a >= 2:
         solution5 = solve(a + 1, g - 1, 0, x * y, 0, x * y, x, y)
-
-    if len(solution1) == 0 and len(solution2) == 0 and len(solution4) == 0:
+    if len(solution1) == 0 and len(solution2) == 0 and (len(solution4) == 0):
         solution10 = solve(a, e, 0, x * y, 0, x * y, x, y)
         solution11 = solve(c, e, 0, x * y, 0, x * y, x, y)
         solution12 = solve(c, g, 0, x * y, 0, x * y, x, y)
-    if a < y - 1 and len(solution1) == 0 and len(solution2) == 0 and len(solution4) == 0 and c - a >= 2:
+    if a < y - 1 and len(solution1) == 0 and (len(solution2) == 0) and (len(solution4) == 0) and (c - a >= 2):
         solution13 = solve(a + 1, e, 0, x * y, 0, x * y, x, y)
-    if g >= 1 and len(solution1) == 0 and len(solution2) == 0 and len(solution4) == 0 and g - e >= 2:
+    if g >= 1 and len(solution1) == 0 and (len(solution2) == 0) and (len(solution4) == 0) and (g - e >= 2):
         solution14 = solve(c, g - 1, 0, x * y, 0, x * y, x, y)
-
     if len(solution1) > 0:
         if solution1[0] < c or (solution1[0] == c and solution1[1] <= d):
             if solution1[2] > e or (solution1[2] == e and solution1[3] >= f):
@@ -166,7 +159,6 @@ for i in range(eval(input())):
                             diff = t
                             solutionh = solution14[0]
                             solutionm = solution14[1]
-
     limit1 = (y - 1 / y) * (f / (x * y)) - e / y
     if limit1 <= a + 1:
         limit1 = a + 1
@@ -175,7 +167,6 @@ for i in range(eval(input())):
     if limit2 >= g - 1:
         limit2 = g - 1
     limit2 = Decimal(str(int(limit2)))
-
     if limit1 >= a + 1 and limit1 <= c - 1:
         solutionNew = solve(limit1, e, 0, x * y, 0, x * y, x, y)
         if len(solutionNew) > 0:
@@ -224,9 +215,8 @@ for i in range(eval(input())):
                                 diff = t
                                 solutionh = solutionNew[0]
                                 solutionm = solutionNew[1]
-
     if solutionh == -1 or diff < 0:
-        print("-1")
+        print('-1')
     else:
         tz = solutionm
         solutionm *= 100
@@ -235,18 +225,17 @@ for i in range(eval(input())):
             r1 = str(r1)
             r1 = Decimal(r1)
             r2 = solutionm - r1
-            if r2 >= Decimal(".5"):
-                r1 += Decimal("1")
+            if r2 >= Decimal('.5'):
+                r1 += Decimal('1')
             t1 = (r1 - r1 % 100) / 100
             t2 = r1 % 100
             t1 = int(t1)
             if t2 == 0:
-                t2 = "00"
+                t2 = '00'
             elif t2 < 10:
-                t2 = "0" + str(t2)
+                t2 = '0' + str(t2)
             else:
                 t2 = str(t2)
         except:
             exit(0)
-        # print str(solutionh)+":%.2f"%(solutionm);
-        print(str(solutionh) + ":%d.%s" % (t1, t2))
+        print(str(solutionh) + ':%d.%s' % (t1, t2))

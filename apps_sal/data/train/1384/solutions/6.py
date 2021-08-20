@@ -8,7 +8,7 @@ for _ in range(int(input())):
         i -= 1
         num = 0
         while i >= 0:
-            if a[i] == "1":
+            if a[i] == '1':
                 num += 1
                 i -= 1
             else:
@@ -19,13 +19,13 @@ for _ in range(int(input())):
         j += 1
         num = 0
         while j <= n - 1:
-            if a[j] == "1":
+            if a[j] == '1':
                 num += 1
                 j += 1
             else:
                 break
         migi[kaori] = num
-    if (n == k):
+    if n == k:
         print(n)
     else:
         max = 0

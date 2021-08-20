@@ -1,7 +1,6 @@
-
 q = int(input())
 N = [int(input()) for i in range(q)]
-t = [3**i for i in range(10)]
+t = [3 ** i for i in range(10)]
 
 
 def d(x):
@@ -12,9 +11,7 @@ def d(x):
             ans += m
         m *= 3
         x //= 2
-    return(ans)
-
-# print(d(2))
+    return ans
 
 
 for i in range(q):
@@ -22,15 +19,13 @@ for i in range(q):
     m = 0
     t = 0
     l = 0
-    r = 2**50
+    r = 2 ** 50
     mid = (l + r) // 2
     while r - l > 1:
-
         m = d(mid)
         if m >= n:
             r = mid
         else:
             l = mid
         mid = (l + r) // 2
-
     print(d(l + 1))

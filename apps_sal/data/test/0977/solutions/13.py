@@ -1,8 +1,7 @@
 import bisect
 import sys
 input = sys.stdin.readline
-
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 arr = list(map(int, input().split()))
 arr = sorted(arr)
 mins = arr[0]

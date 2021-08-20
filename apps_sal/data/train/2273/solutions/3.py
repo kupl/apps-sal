@@ -1,9 +1,7 @@
 import sys
 readline = sys.stdin.readline
-
 T = int(readline())
 Ans = ['NO'] * T
-
 for qu in range(T):
     N = int(readline())
     A = list(map(int, readline().split()))

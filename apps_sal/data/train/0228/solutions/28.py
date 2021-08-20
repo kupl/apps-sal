@@ -1,7 +1,8 @@
 class Solution:
+
     def maxVowels(self, s, k):
-        vcnt, res = dict(), 0
-        for i, c in enumerate(s):
+        (vcnt, res) = (dict(), 0)
+        for (i, c) in enumerate(s):
             if i - k >= 0 and s[i - k] in 'aeiou':
                 vcnt[s[i - k]] -= 1
             if c in 'aeiou':
@@ -11,15 +12,11 @@ class Solution:
 
 
 class Solution:
+
     def maxVowels(self, s, k):
-        res, cnt = 0, 0
-        for i, c in enumerate(s):
-            # if i-k >= 0 and s[i-k] in 'aeiou':
-            #     cnt -= 1
-            # if c in 'aeiou':
-            #     cnt += 1
+        (res, cnt) = (0, 0)
+        for (i, c) in enumerate(s):
             cnt += (c in 'aeiou') - (i - k >= 0 and s[i - k] in 'aeiou')
-            #res = max(res, cnt)
             if cnt > res:
                 res = cnt
         return res

@@ -1,6 +1,5 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [list(map(int, input().split())) for _ in range(N)]
-
 AB.sort(key=lambda x: x[0])
 ans = 0
 for AB in AB:

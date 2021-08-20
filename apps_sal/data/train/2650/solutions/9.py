@@ -14,10 +14,8 @@ def readintslist(n):
 
 
 def main():
-    n, l = readints()
-
+    (n, l) = readints()
     s = [input() for _ in range(n)]
-
     s = sorted(s)
     print(*s, sep='')
 

@@ -5,7 +5,7 @@ for nt in range(int(input())):
     s.sort()
     if len(s) == 1:
         print(1)
-        print(*([1] * n))
+        print(*[1] * n)
     elif len(s) == 2:
         print(2)
         a = s[0]
@@ -24,22 +24,21 @@ for nt in range(int(input())):
                 if l[i] == l[i - 1] and l[0] == l[i]:
                     ans.append(ans[-1])
                 elif l[i] == l[i - 1] and l[i] != l[0]:
-                    ans.append((ans[0] % 2) + 1)
+                    ans.append(ans[0] % 2 + 1)
                 else:
-                    temp = (ans[-1] % 2) + 1
+                    temp = ans[-1] % 2 + 1
                     if l[i] == l[0]:
                         ans.append(temp)
+                    elif temp == ans[0]:
+                        ans.append(3)
                     else:
-                        if temp == ans[0]:
-                            ans.append(3)
-                        else:
-                            ans.append(temp)
+                        ans.append(temp)
                 continue
             if l[i] == l[i - 1]:
                 ans.append(ans[-1])
             else:
-                ans.append((ans[-1] % 2) + 1)
-        x = (len(set(ans)))
+                ans.append(ans[-1] % 2 + 1)
+        x = len(set(ans))
         if x == 2:
             print(2)
             print(*ans)
@@ -56,6 +55,6 @@ for nt in range(int(input())):
             print(*ans)
         else:
             for i in range(index, n):
-                ans[i] = (ans[i - 1] % 2) + 1
+                ans[i] = ans[i - 1] % 2 + 1
             print(2)
             print(*ans)

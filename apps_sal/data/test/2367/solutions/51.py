@@ -1,6 +1,5 @@
-h, w, a, b = map(int, input().split())
-
-mod = 10**9 + 7
+(h, w, a, b) = map(int, input().split())
+mod = 10 ** 9 + 7
 fac = [1, 1]
 inv = [1, 1]
 finv = [1, 1]
@@ -22,5 +21,4 @@ ans = 0
 for i in range(h - a):
     ans += nck(i + b - 1, b - 1) * nck(h - 1 - i + w - b - 1, w - b - 1) % mod
     ans %= mod
-
 print(ans)

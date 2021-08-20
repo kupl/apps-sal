@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 mini = 1000
 amount = 0
 ans = 0

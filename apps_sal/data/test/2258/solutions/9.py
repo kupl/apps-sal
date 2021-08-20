@@ -25,8 +25,8 @@ r = list(range(len(inv)))
 if r is not None:
     print(len(r))
     for z in r:
-        v, _, u = inv[z]
+        (v, _, u) = inv[z]
         u = -u
         print(u + 1, v + 1)
 else:
-    print("wut")
+    print('wut')

@@ -1,5 +1,5 @@
 def mystery(n):
-    return n ^ (n >> 1)
+    return n ^ n >> 1
 
 
 def mystery_inv(n):

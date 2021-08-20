@@ -1,12 +1,12 @@
 def main():
-    n, l = int(input()), input().split()
-    x, a = [False] * n, l[0]
-    for i, b in enumerate(l):
+    (n, l) = (int(input()), input().split())
+    (x, a) = ([False] * n, l[0])
+    for (i, b) in enumerate(l):
         if a == b:
             x[i] = x[i - 1] = True
         a = b
     b = 0
-    for i, a in enumerate(x):
+    for (i, a) in enumerate(x):
         if a:
             if b:
                 if b & 1:

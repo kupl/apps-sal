@@ -1,7 +1,9 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+
         def helper(i, j):
-            if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 0:
+            if i < 0 or i >= len(grid) or j < 0 or (j >= len(grid[0])) or (grid[i][j] == 0):
                 return 0
             val = grid[i][j]
             grid[i][j] = 0

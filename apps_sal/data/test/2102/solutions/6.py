@@ -3,7 +3,7 @@ n = int(input())
 s = list(map(int, input().split()))
 b = []
 i = j = 0
-ans = 10**18
+ans = 10 ** 18
 cs = [0] * n
 nz = 1
 z = n * 6

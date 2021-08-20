@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         A_max = max(A)
         primes = []
@@ -9,12 +10,10 @@ class Solution:
                 primes.append(i)
                 for j in range(i + i, len(seive), i):
                     seive[j] = False
-
         graph = defaultdict(list)
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             for p in primes:
                 if p * p > num:
-
                     break
                 if num % p == 0:
                     while num % p == 0:
@@ -32,6 +31,7 @@ class Solution:
 
 
 class DS:
+
     def __init__(self, n):
         self.p = [-1] * n
 
@@ -42,13 +42,12 @@ class DS:
         return x
 
     def union(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return
         if self.p[x] < self.p[y]:
             self.p[x] -= 1
             self.p[y] = x
-
         else:
             self.p[y] -= 1
             self.p[x] = y

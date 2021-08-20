@@ -1,5 +1,5 @@
 from bisect import bisect
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 a = list(map(int, input().split()))
 a.reverse()
 s = sum(a)

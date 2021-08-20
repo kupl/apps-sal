@@ -7,7 +7,7 @@ def func(arr):
             store.append(arr[x])
             biggest = arr[x][1]
             count += 1
-    return count, store
+    return (count, store)
 
 
 def main():
@@ -26,11 +26,10 @@ def main():
                     store[z][1].append((y, x))
             if bo:
                 store.append([total, [(y, x)]])
-    # print(store)
     biggest = 0
     big_val = []
     for x in range(len(store)):
-        test, test_s = func(store[x][1])
+        (test, test_s) = func(store[x][1])
         if test > biggest:
             biggest = test
             big_val = test_s

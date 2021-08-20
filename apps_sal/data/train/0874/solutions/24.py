@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m, s = list(map(int, input().split()))
+    (n, m, s) = list(map(int, input().split()))
     arr = [int(a) for a in input().split()]
     count = 0
     arr.sort()

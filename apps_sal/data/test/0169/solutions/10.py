@@ -1,4 +1,4 @@
-n, a, b, c = int(input()), int(input()), int(input()), int(input())
+(n, a, b, c) = (int(input()), int(input()), int(input()), int(input()))
 x = (n - c) // (b - c)
 if c > n:
     x = 0

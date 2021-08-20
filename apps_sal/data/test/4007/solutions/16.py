@@ -1,7 +1,7 @@
 n = int(input())
 f = list(map(int, input().split()))
-give = set(i for i in range(n))
-get = set(i for i in range(n))
+give = set((i for i in range(n)))
+get = set((i for i in range(n)))
 for i in range(n):
     if f[i] > 0:
         give.remove(i)

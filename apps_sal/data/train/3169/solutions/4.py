@@ -1,10 +1,4 @@
-penta_fib_table = {
-    0: 0,
-    1: 1,
-    2: 1,
-    3: 2,
-    4: 4
-}
+penta_fib_table = {0: 0, 1: 1, 2: 1, 3: 2, 4: 4}
 
 
 def penta_fib(n):

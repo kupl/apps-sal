@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 li = list(map(int, input().split()))
 su = sum(li)
 x = m * n - su

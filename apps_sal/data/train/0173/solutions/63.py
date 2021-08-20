@@ -1,6 +1,6 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
-        # save remainder in hashmap and then check if remaining remainder is in the hashmap
         if len(arr) % 2 == 1:
             return False
         mapping = defaultdict(int)
@@ -12,8 +12,7 @@ class Solution:
                 mapping[key] -= 1
                 count += 1
             else:
-                mapping[(i % k) or k] += 1
-
+                mapping[i % k or k] += 1
         if count == len(arr) // 2:
             return True
         return False

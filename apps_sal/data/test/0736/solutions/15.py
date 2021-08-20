@@ -1,6 +1,6 @@
 def main():
     nAndM = str(input()).split()
-    n, m = int(nAndM[0]), int(nAndM[1])
+    (n, m) = (int(nAndM[0]), int(nAndM[1]))
     maxX = n // 2
     answers = []
     for x in range(maxX + 1):

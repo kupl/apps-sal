@@ -1,10 +1,8 @@
 import sys
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-P = int(1e9 + 7)
+P = int(1000000000.0 + 7)
 sumA = sum(A)
-# 値が大きくmod Pな時
 
 
 def comb(n, r):
@@ -13,10 +11,10 @@ def comb(n, r):
     nume = 1
     deno = 1
     for i in range(1, r + 1):
-        nume = (nume * (n - i + 1)) % P
-        deno = (deno * i) % P
+        nume = nume * (n - i + 1) % P
+        deno = deno * i % P
     deno_inv = pow(deno, P - 2, P)
     return nume * deno_inv % P
 
 
-print((comb(M + N, N + sumA)))
+print(comb(M + N, N + sumA))

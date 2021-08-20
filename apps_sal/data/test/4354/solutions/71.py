@@ -1,14 +1,10 @@
 lst = input().split()
-
 N = int(lst[0])
 M = int(lst[1])
-
 students = []
 checkpoints = []
-
 for i in range(N):
     students.append(input().split())
-
 for i in range(M):
     checkpoints.append(input().split())
 

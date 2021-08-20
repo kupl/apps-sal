@@ -1,5 +1,4 @@
 def base3(n):
-    # 17 -> [2, 2, 1] (reversedd)
     array = []
     while n > 0:
         array.append(n % 3)
@@ -12,15 +11,12 @@ def good(n):
 
 
 def convert(array):
-    return sum(array[i] * 3 ** i for i in range(len(array)))
+    return sum((array[i] * 3 ** i for i in range(len(array))))
 
 
 for _ in range(int(input())):
     n = base3(int(input()))
     i = 0
-    # print(n)
-    # [1, 1, 2, 1, 2, 1, 0, 0, 1, 2, 0, 2, 1] ->
-    # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1]
     for i in range(len(n) - 1, -1, -1):
         if n[i] == 2:
             for j in range(i - 1, -1, -1):
@@ -28,14 +24,12 @@ for _ in range(int(input())):
             break
     i = 0
     while i < len(n):
-        # Carry
         if n[i] > 2:
             if i < len(n) - 1:
                 n[i + 1] += n[i] // 3
             else:
                 n.append(n[i] // 3)
             n[i] %= 3
-        # Is it 2
         if n[i] == 2:
             if i < len(n) - 1:
                 n[i + 1] += 1
@@ -44,4 +38,3 @@ for _ in range(int(input())):
             n[i] = 0
         i += 1
     print(convert(n))
-    # print()

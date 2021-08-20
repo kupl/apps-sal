@@ -2,10 +2,10 @@ import numpy as np
 
 
 def main():
-    h, w = map(int, input().split())
+    (h, w) = map(int, input().split())
     s = np.array([list(input()) for _ in range(h)])
     t = np.zeros((h + 2, w + 2))
-    t[1:-1, 1:-1][s == "."] = 1
+    t[1:-1, 1:-1][s == '.'] = 1
     row = np.zeros((h + 2, w + 2))
     col = np.zeros((w + 2, h + 2))
     for i in range(1, h + 1):

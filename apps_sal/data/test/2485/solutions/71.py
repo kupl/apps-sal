@@ -1,10 +1,10 @@
-h, w, m = map(int, input().split())
+(h, w, m) = map(int, input().split())
 x = {}
 y = {}
 dic = {}
 for _ in range(m):
-    a, b = map(int, input().split())
-    dic[(a, b)] = 1
+    (a, b) = map(int, input().split())
+    dic[a, b] = 1
     x[a] = x.get(a, 0) + 1
     y[b] = y.get(b, 0) + 1
 p = max(x.values())

@@ -1,4 +1,3 @@
-
 for _ in range(int(input())):
     k = input()
     flag = 0
@@ -8,6 +7,6 @@ for _ in range(int(input())):
             flag = 1
             break
     if flag == 1:
-        print("1")
+        print('1')
     else:
-        print("0")
+        print('0')

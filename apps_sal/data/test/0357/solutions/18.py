@@ -4,11 +4,9 @@ def cnt(string, substr):
 
 string = input()
 x = 0
-
 for i in ['Danil', 'Olya', 'Slava', 'Ann', 'Nikita']:
     x += cnt(string, i)
-
-if (x == 1):
+if x == 1:
     print('YES')
 else:
     print('NO')

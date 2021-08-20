@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     s = input()
     s = list(s)
-    for n, i in enumerate(s):
+    for (n, i) in enumerate(s):
         if i in 'aeiou':
             s[n] = 1
         else:

@@ -1,20 +1,18 @@
 class Solution:
-    def regionsBySlashes(self, grid: List[str]) -> int:
 
+    def regionsBySlashes(self, grid: List[str]) -> int:
         root = {}
 
         def find(x):
             root.setdefault(x, x)
-            if root[x] != x:  # not find( root[x]  )
+            if root[x] != x:
                 root[x] = find(root[x])
             return root[x]
 
         def union(x, y):
-            rx, ry = find(x), find(y)
-
+            (rx, ry) = (find(x), find(y))
             if rx != ry:
                 root[ry] = find(rx)
-
         for i in range(len(grid)):
             for j in range(len(grid)):
                 if i:
@@ -31,5 +29,4 @@ class Solution:
                     union((i, j, 0), (i, j, 1))
                     union((i, j, 0), (i, j, 2))
                     union((i, j, 0), (i, j, 3))
-
         return len(set(map(find, list(root.keys()))))

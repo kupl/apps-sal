@@ -1,6 +1,5 @@
 import math
-
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 0
 a.append(math.inf)

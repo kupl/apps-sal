@@ -3,4 +3,4 @@ def index(array, n):
         return -1
     else:
         number = array[n]
-        return number**n
+        return number ** n

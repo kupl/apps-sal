@@ -1,5 +1,5 @@
 DCT = {'t': 'tomato', 'l': 'lettuce', 'c': 'cheese', 'g': 'guacamole', 's': 'salsa'}
-DCT.update({c: 'beef' for c in "aeiuo"})
+DCT.update({c: 'beef' for c in 'aeiuo'})
 
 
 def tacofy(word):

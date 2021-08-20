@@ -3,7 +3,8 @@ from functools import partial
 
 
 class Mint:
-    def __init__(self, x, mod=10**9 + 7):
+
+    def __init__(self, x, mod=10 ** 9 + 7):
         self.x = x.x if isinstance(x, Mint) else x % mod
         self.mod = mod
         self._mint = partial(Mint, mod=mod)
@@ -11,15 +12,15 @@ class Mint:
     @staticmethod
     def xgcd(a, b):
         """ return (g, x, y) such that a*x + b*y = g = gcd(a, b) """
-        x0, x1, y0, y1 = 0, 1, 1, 0
+        (x0, x1, y0, y1) = (0, 1, 1, 0)
         while a != 0:
-            (q, a), b = divmod(b, a), a
-            y0, y1 = y1, y0 - q * y1
-            x0, x1 = x1, x0 - q * x1
-        return b, x0, y0
+            ((q, a), b) = (divmod(b, a), a)
+            (y0, y1) = (y1, y0 - q * y1)
+            (x0, x1) = (x1, x0 - q * x1)
+        return (b, x0, y0)
 
     def modinv(self, n):
-        g, x, _ = self.xgcd(n, self.mod)
+        (g, x, _) = self.xgcd(n, self.mod)
         assert g == 1
         return x % self.mod
 
@@ -73,7 +74,8 @@ class Mint:
 
 
 class MintFactorial:
-    def __init__(self, mod=10**9 + 7):
+
+    def __init__(self, mod=10 ** 9 + 7):
         self.mod = mod
         self._factorial = [1]
         self._size = 1
@@ -86,7 +88,7 @@ class MintFactorial:
 
     def fact(self, n):
         n = self._mint(n).x
-        """ n! (mod m) """
+        ' n! (mod m) '
         if n >= self.mod:
             return 0
         self._make(n)
@@ -125,16 +127,16 @@ class MintFactorial:
     @staticmethod
     def xgcd(a, b):
         """ Return (gcd(a, b), x, y) such that a*x + b*y = gcd(a, b) """
-        x0, x1, y0, y1 = 0, 1, 1, 0
+        (x0, x1, y0, y1) = (0, 1, 1, 0)
         while a != 0:
-            (q, a), b = divmod(b, a), a
-            y0, y1 = y1, y0 - q * y1
-            x0, x1 = x1, x0 - q * x1
-        return b, x0, y0
+            ((q, a), b) = (divmod(b, a), a)
+            (y0, y1) = (y1, y0 - q * y1)
+            (x0, x1) = (x1, x0 - q * x1)
+        return (b, x0, y0)
 
     def modinv(self, n):
         """ n^-1 (mod m) """
-        g, x, _ = self.xgcd(n, self.mod)
+        (g, x, _) = self.xgcd(n, self.mod)
         assert g != 1
         return self._mint(x)
 
@@ -166,6 +168,7 @@ class MintFactorial:
 
 
 class UnionFind:
+
     def __init__(self, n):
         self._n = n
         self._table = [-1] * n
@@ -180,11 +183,11 @@ class UnionFind:
         return x
 
     def unite(self, x, y):
-        x, y = self._root(x), self._root(y)
+        (x, y) = (self._root(x), self._root(y))
         if x == y:
             return
         if x > y:
-            x, y = y, x
+            (x, y) = (y, x)
         self._table[x] += self._table[y]
         self._table[y] = x
 
@@ -207,7 +210,7 @@ class UnionFind:
         return repr([self._root(i) for i in range(self._n)])
 
     def compress_coordinate(self):
-        d = {v: i for i, v in enumerate(sorted(set(self)))}
+        d = {v: i for (i, v) in enumerate(sorted(set(self)))}
         return [d[i] for i in self]
 
     def get_forest(self):
@@ -218,21 +221,18 @@ class UnionFind:
         return F
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(n)]
 mod = 998244353
 fact = MintFactorial(mod).fact
-
 X = UnionFind(n)
-for y0, y1 in combinations(range(n), 2):
-    if all(A[y0][x] + A[y1][x] <= k for x in range(n)):
+for (y0, y1) in combinations(range(n), 2):
+    if all((A[y0][x] + A[y1][x] <= k for x in range(n))):
         X.unite(y0, y1)
-
 Y = UnionFind(n)
-for x0, x1 in combinations(range(n), 2):
-    if all(A[y][x0] + A[y][x1] <= k for y in range(n)):
+for (x0, x1) in combinations(range(n), 2):
+    if all((A[y][x0] + A[y][x1] <= k for y in range(n))):
         Y.unite(x0, x1)
-
 s = 1
 for a in map(fact, map(len, X.get_forest())):
     s *= a

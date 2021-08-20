@@ -4,7 +4,7 @@ i = 1
 while i < len(string):
     s.add(string[i])
     i += 3
-if string == "{}":
+if string == '{}':
     print(0)
 else:
     print(len(s))

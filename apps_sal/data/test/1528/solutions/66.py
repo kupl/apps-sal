@@ -1,7 +1,5 @@
-n, x = list(map(int, input().split()))
-
-a, b = [1], [1]
-
+(n, x) = list(map(int, input().split()))
+(a, b) = ([1], [1])
 for i in range(n):
     a.append(a[i] * 2 + 3)
     b.append(b[i] * 2 + 1)
@@ -14,7 +12,6 @@ def cal(n, x):
         else:
             return 1
     val = (a[n] + 1) // 2
-
     if x < val:
         return cal(n - 1, x - 1)
     elif x == val:

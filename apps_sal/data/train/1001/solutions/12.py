@@ -1,5 +1,4 @@
-
-from collections import(deque)
+from collections import deque
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -18,7 +17,6 @@ for _ in range(int(input())):
     for i in range(5, len(a)):
         if a[i] < a[d[0]]:
             ans += 1
-            # print(a[i])
         while d and a[d[0]] > a[i]:
             d.popleft()
         while d and a[d[-1]] > a[i]:

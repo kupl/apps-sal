@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def recoverFromPreorder(self, S: str) -> TreeNode:
         ptr = 0
 
@@ -14,7 +9,6 @@ class Solution:
             while ptr < len(S) and S[ptr] == '-':
                 nextLevel += 1
                 ptr += 1
-
             if level == nextLevel:
                 val = ''
                 while ptr < len(S) and S[ptr] != '-':
@@ -27,5 +21,4 @@ class Solution:
             else:
                 ptr -= nextLevel
                 return None
-
         return traverse(0)

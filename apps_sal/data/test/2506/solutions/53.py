@@ -1,13 +1,12 @@
 from itertools import accumulate
 import numpy as np
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = np.array(input().split(), np.int64)
 A = np.sort(A)
 
 
 def is_ok(x):
-    cnt = n**2 - np.searchsorted(A, x - A, side='left').sum()
+    cnt = n ** 2 - np.searchsorted(A, x - A, side='left').sum()
     if cnt >= m:
         return True
     else:
@@ -15,14 +14,13 @@ def is_ok(x):
 
 
 l = 0
-r = 2 * 10**5 + 1
+r = 2 * 10 ** 5 + 1
 while l + 1 < r:
     c = (l + r) // 2
     if is_ok(c):
         l = c
     else:
         r = c
-
 B = [0] + list(A)
 B = list(accumulate(B))
 ans = 0

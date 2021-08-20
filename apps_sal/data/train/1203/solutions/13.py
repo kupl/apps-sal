@@ -1,5 +1,4 @@
-z = (10**9 + 7)
-
+z = 10 ** 9 + 7
 fact = []
 fact.append(1)
 for i in range(1, 4000):
@@ -20,9 +19,9 @@ def nCr(n, r):
 
 
 for _ in range(0, int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     for __ in range(0, q):
-        i, k = list(map(int, input().split()))
+        (i, k) = list(map(int, input().split()))
         a = nCr(i - 1, k - 1)
         b = pow(2, n - i, z)
-        print((a * b) % z)
+        print(a * b % z)

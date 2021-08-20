@@ -1,12 +1,6 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
-
-# Code by H~$~C
-
 import math
 from sys import stdin
 input = stdin.readline
-
 n = int(input())
 arr = list(map(int, input().split()))
 mx = 0

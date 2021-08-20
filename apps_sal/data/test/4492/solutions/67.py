@@ -1,8 +1,6 @@
-N, X = map(int, input().split())
-
+(N, X) = map(int, input().split())
 A = list(map(int, input().split()))
 cnt = 0
-
 for i in range(N - 1):
     temp = 0
     if A[i] + A[i + 1] <= X:
@@ -17,9 +15,7 @@ for i in range(N - 1):
             A[i + 1] -= temp
             cnt += temp
             temp -= A[i + 1]
-
         if A[i] + A[i + 1] > X:
             A[i] -= temp
             cnt += temp
-
 print(cnt)

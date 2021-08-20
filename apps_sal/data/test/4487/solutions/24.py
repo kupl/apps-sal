@@ -1,7 +1,6 @@
-a, b, c = map(str, input().split())
-
+(a, b, c) = map(str, input().split())
 if a[len(a) - 1] == b[0] and b[len(b) - 1] == c[0]:
-    ans = "YES"
+    ans = 'YES'
 else:
-    ans = "NO"
+    ans = 'NO'
 print(ans)

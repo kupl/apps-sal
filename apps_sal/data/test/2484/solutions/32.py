@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,8 +8,7 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     s = 0
     xors = 0
     ans = 0
@@ -20,15 +18,12 @@ def main():
             xors ^= A[right]
             s += A[right]
             right += 1
-
         ans += right - left
-
         if left == right:
             right += 1
         else:
             xors ^= A[left]
             s -= A[left]
-
     print(ans)
     return
 

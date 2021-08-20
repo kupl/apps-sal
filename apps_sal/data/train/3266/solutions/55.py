@@ -3,7 +3,7 @@ def my_first_kata(a, b):
     y = isinstance(b, int)
     if x and y == True:
         if a and b > 0:
-            return (a % b) + (b % a)
+            return a % b + b % a
         else:
             return False
     else:

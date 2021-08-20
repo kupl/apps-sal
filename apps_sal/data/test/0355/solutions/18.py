@@ -11,7 +11,6 @@ for i in range(8):
             break
         if board[7 - j][i] == 'B':
             B = min(B, j)
-
 if A <= B:
     print('A')
 else:

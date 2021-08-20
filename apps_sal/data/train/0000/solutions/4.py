@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
     n = int(input())
-    i0, i1 = [], []
-    l0, l1 = [], []
-    h0, h1 = False, False
+    (i0, i1) = ([], [])
+    (l0, l1) = ([], [])
+    (h0, h1) = (False, False)
     for i in range(n):
         t = input()
         if t[0] == '0' and t[-1] == '1':
@@ -16,8 +16,8 @@ for i in range(t):
             h1 = True
         elif t[0] == t[-1] == '0':
             h0 = True
-    c0, c1 = len(l0), len(l1)
-    req, sl = 0, []
+    (c0, c1) = (len(l0), len(l1))
+    (req, sl) = (0, [])
     s0 = set(l0)
     s1 = set(l1)
     if c0 > 0 or c1 > 0:
@@ -48,9 +48,8 @@ for i in range(t):
         else:
             print(len(sl))
             print(*sl)
+    elif h0 and h1:
+        print(-1)
     else:
-        if h0 and h1:
-            print(-1)
-        else:
-            print(0)
-            print(*[])
+        print(0)
+        print(*[])

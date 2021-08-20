@@ -13,5 +13,4 @@ x = int(math.sqrt(N))
 while N % x != 0:
     x -= 1
 y = int(N / x)
-
-print((ten(y)))
+print(ten(y))

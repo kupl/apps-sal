@@ -1,4 +1,3 @@
-# cook your dish here
 from bisect import insort
 try:
     x = []

@@ -13,7 +13,7 @@ def li():
 n = ii()
 a = li()
 a.sort()
-i, j = 0, n - 1
+(i, j) = (0, n - 1)
 ans = 0
 while i < j:
     ans += (a[i] + a[j]) ** 2

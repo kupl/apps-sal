@@ -1,9 +1,7 @@
 s = input()
 lc = s[-1]
-
-if lc != "s":
-    s += "s"
+if lc != 's':
+    s += 's'
 else:
-    s += "es"
-
+    s += 'es'
 print(s)

@@ -1,14 +1,14 @@
 import numpy as np
 import sys
 read = sys.stdin.read
-r1, c1, r2, c2 = list(map(int, read().split()))
+(r1, c1, r2, c2) = list(map(int, read().split()))
 MOD = 10 ** 9 + 7
 
 
 def cumprod(A, MOD=MOD):
     L = len(A)
-    Lsq = int(L**.5 + 1)
-    A = np.resize(A, Lsq**2).reshape(Lsq, Lsq)
+    Lsq = int(L ** 0.5 + 1)
+    A = np.resize(A, Lsq ** 2).reshape(Lsq, Lsq)
     for n in range(1, Lsq):
         A[:, n] *= A[:, n - 1]
         A[:, n] %= MOD
@@ -27,10 +27,10 @@ def make_fact(U, MOD=MOD):
     fact_inv = cumprod(x, MOD)[::-1]
     fact.flags.writeable = False
     fact_inv.flags.writeable = False
-    return fact, fact_inv
+    return (fact, fact_inv)
 
 
-fac, finv = make_fact(2 * 10**6 + 10, MOD)
+(fac, finv) = make_fact(2 * 10 ** 6 + 10, MOD)
 
 
 def comb(n, k, mod=MOD, fac=fac, finv=finv):
@@ -41,7 +41,6 @@ def comb(n, k, mod=MOD, fac=fac, finv=finv):
     return fac[n] * (finv[k] * finv[n - k] % mod) % mod
 
 
-answer = comb(r2 + c2 + 2, r2 + 1) - comb(r1 + c2 + 1, r1) - \
-    comb(c1 + r2 + 1, c1) + comb(r1 + c1, r1)
+answer = comb(r2 + c2 + 2, r2 + 1) - comb(r1 + c2 + 1, r1) - comb(c1 + r2 + 1, c1) + comb(r1 + c1, r1)
 answer %= MOD
 print(answer)

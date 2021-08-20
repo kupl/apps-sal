@@ -7,4 +7,4 @@ while i < n:
     s.append(a[i])
     i += c
     c += 1
-print(*s, sep="")
+print(*s, sep='')

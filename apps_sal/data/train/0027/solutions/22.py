@@ -3,7 +3,7 @@ def ck(a):
     while a % 2 == 0:
         a = a // 2
         ans += 1
-    return([a, ans])
+    return [a, ans]
 
 
 t = int(input())
@@ -12,7 +12,7 @@ for _ in range(t):
     a = list(map(int, input().split()))
     c = {}
     for i in range(n):
-        x, y = ck(a[i])
+        (x, y) = ck(a[i])
         if c.get(x) == None:
             c[x] = y
         elif c.get(x) < y:

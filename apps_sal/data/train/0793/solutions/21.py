@@ -4,8 +4,7 @@ from collections import defaultdict
 
 
 def main():
-    # for _ in range(int(stdin.readline())):
-    n, d = map(int, stdin.readline().split())
+    (n, d) = map(int, stdin.readline().split())
     arr = [int(k) for k in stdin.readline().split()]
     arr.sort()
     ind = bisect.bisect_left(arr, d)
@@ -15,11 +14,10 @@ def main():
             diff = abs(arr[ind - 1] - d)
         else:
             diff = min(abs(arr[ind + 1] - d), abs(arr[ind - 1] - d))
+    elif ind == n:
+        diff = abs(arr[ind - 1] - d)
     else:
-        if ind == n:
-            diff = abs(arr[ind - 1] - d)
-        else:
-            diff = abs(arr[ind] - d)
+        diff = abs(arr[ind] - d)
     counter = 0
     for i in range(1, n):
         if abs(arr[i] - arr[i - 1]) % diff != 0:

@@ -9,14 +9,11 @@ def ff(x, i, d):
 
 c = input()
 s = input()
-
 d = 1 if c == 'L' else -1
-
-x = "qwertyuiop"
-y = "asdfghjkl;"
-z = "zxcvbnm,./"
-
-ans = ""
+x = 'qwertyuiop'
+y = 'asdfghjkl;'
+z = 'zxcvbnm,./'
+ans = ''
 for i in s:
     if x.find(i) != -1:
         ans += ff(x, i, d)

@@ -12,4 +12,4 @@ c0 = n - (c2 + c4)
 cc = c4 - c0
 if c2 >= 1 and c2 != n:
     cc -= 1
-print(("Yes" if cc >= -1 else "No"))
+print('Yes' if cc >= -1 else 'No')

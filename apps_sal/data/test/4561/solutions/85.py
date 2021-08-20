@@ -1,8 +1,8 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if b < c:
     if abs(b - c) <= a:
-        print("safe")
+        print('safe')
     else:
-        print("dangerous")
+        print('dangerous')
 else:
-    print("delicious")
+    print('delicious')

@@ -4,25 +4,24 @@ import sys
 input = sys.stdin.readline
 
 
-def I(): return int(input())
-def MI(): return list(map(int, input().split()))
-def LI(): return list(map(int, input().split()))
+def I():
+    return int(input())
 
 
-mod = 10**9 + 7
+def MI():
+    return list(map(int, input().split()))
 
-"""
-基本的に達成可能だと思う
-基本は次数が小さいところ(=端)を取れるように頂点の値を決めておけばOk
-問題は同じ頂点に入っている複数の辺が同じ数値の場合.この時は端ではない方にその数値を割り振るか?
 
-長さ4のパスで3辺の値がどれも1のときとか
+def LI():
+    return list(map(int, input().split()))
 
-スターグラフが2つ連結している時とかもめんどいな
-"""
+
+mod = 10 ** 9 + 7
+'\n基本的に達成可能だと思う\n基本は次数が小さいところ(=端)を取れるように頂点の値を決めておけばOk\n問題は同じ頂点に入っている複数の辺が同じ数値の場合.この時は端ではない方にその数値を割り振るか?\n\n長さ4のパスで3辺の値がどれも1のときとか\n\nスターグラフが2つ連結している時とかもめんどいな\n'
 
 
 class UnionFind:
+
     def __init__(self, N: int):
         """
         N:要素数
@@ -35,7 +34,7 @@ class UnionFind:
         self.rank = [0] * N
 
     def __repr__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
     def find(self, x: int):
         """頂点xの根を見つける"""
@@ -48,10 +47,6 @@ class UnionFind:
 
     def union(self, x: int, y: int):
         """x,yが属する木をunion"""
-        # 根を比較する
-        # すでに同じ木に属していた場合は何もしない.
-        # 違う木に属していた場合はrankを見てくっつける方を決める.
-        # rankが同じ時はrankを1増やす
         x = self.find(x)
         y = self.find(y)
         if x == y:
@@ -71,7 +66,7 @@ class UnionFind:
 
     def count(self, x):
         """頂点xが属する木のサイズを返す"""
-        return - self.root[self.find(x)]
+        return -self.root[self.find(x)]
 
     def members(self, x):
         """xが属する木の要素を列挙"""
@@ -80,7 +75,7 @@ class UnionFind:
 
     def roots(self):
         """森の根を列挙"""
-        return [i for i, x in enumerate(self.root) if x < 0]
+        return [i for (i, x) in enumerate(self.root) if x < 0]
 
     def group_count(self):
         """連結成分の数"""
@@ -97,7 +92,7 @@ class UnionFind:
 
 def Kruskal(maxV, edges):
     edges.sort()
-    newAdj = [[]for _ in range(N)]
+    newAdj = [[] for _ in range(N)]
     uf = UnionFind(maxV)
     ans = 0
     for e in edges:
@@ -108,70 +103,45 @@ def Kruskal(maxV, edges):
             ans += e[0]
             newAdj[fro].append(to)
             newAdj[to].append(fro)
-
     return newAdj
 
-# ラベルを色と呼ぶ
 
-
-N, M = MI()
+(N, M) = MI()
 dd = defaultdict(int)
 Edge = []
-
-# 多重辺は無視しても行けそう
-
 for _ in range(M):
-    u, v, c = MI()
+    (u, v, c) = MI()
     u -= 1
     v -= 1
     c -= 1
-    if dd[(u, v)]:
+    if dd[u, v]:
         continue
     Edge.append((u, v))
-
-    dd[(u, v)] = c
-    dd[(v, u)] = c
-
-# 木で十分かな
+    dd[u, v] = c
+    dd[v, u] = c
 adj = Kruskal(N, Edge)
-# print(adj)
-
 Col = [-1] * N
-
 q = queue.Queue()
-
 for v in adj[0]:
     q.put((v, 0))
-
-
 while not q.empty():
-
-    v, p = q.get()
-
-    if Col[p] != dd[(v, p)]:  # 親を繋げられてないなら
-        Col[v] = dd[(v, p)]
+    (v, p) = q.get()
+    if Col[p] != dd[v, p]:
+        Col[v] = dd[v, p]
+    elif Col[p] == 0:
+        Col[v] = 1
     else:
-        # 親とつなげるためには違う色である必要あり
-        if Col[p] == 0:
-            Col[v] = 1
-        else:
-            Col[v] = 0
-
+        Col[v] = 0
     for nv in adj[v]:
         if nv == 0 or Col[nv] != -1:
             continue
         q.put((nv, v))
-
-# rootの色を決める，隣接色以外
 col_0 = [0] * N
 for v in adj[0]:
     col_0[Col[v]] += 1
-
 for i in range(N):
     if col_0[i] == 0:
         Col[0] = i
         break
-# print(col_0)
-
 for i in range(N):
-    print((Col[i] + 1))
+    print(Col[i] + 1)

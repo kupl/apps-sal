@@ -21,7 +21,6 @@ def prime_factorize(n):
 n = int(input())
 c = Counter(prime_factorize(n))
 v = list(c.values())
-
 ans = 0
 for i in v:
     k = i

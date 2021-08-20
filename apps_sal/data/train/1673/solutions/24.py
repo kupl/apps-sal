@@ -1,14 +1,15 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
+
         def second_smallest(nums):
-            s1, s2 = float('inf'), float('inf')
+            (s1, s2) = (float('inf'), float('inf'))
             for num in nums:
                 if num <= s1:
-                    s1, s2 = num, s1
+                    (s1, s2) = (num, s1)
                 elif num < s2:
                     s2 = num
             return s2
-
         n = len(arr)
         for i in range(1, n):
             for j in range(n):

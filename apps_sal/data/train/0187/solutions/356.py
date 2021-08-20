@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         best = 0
         index = None
@@ -18,7 +19,6 @@ class Solution:
             if p > best:
                 best = p
                 index = i
-
         if index is None:
             return -1
         return index

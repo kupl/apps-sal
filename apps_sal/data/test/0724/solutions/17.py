@@ -2,7 +2,7 @@ from sys import stdin as cin
 
 
 def main():
-    n, m = list(map(int, cin.readline().split()))
+    (n, m) = list(map(int, cin.readline().split()))
     a = list(map(int, cin.readline().split()))
     a.sort()
     x = 0

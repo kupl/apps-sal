@@ -17,10 +17,9 @@ for i in range(n):
     [A, B] = [a[start], a[(start + 1) % n]]
     res[i] = [A, B]
     if A > B:
-        a[start], a[(start + 1) % n] = a[(start + 1) % n], a[start]
+        (a[start], a[(start + 1) % n]) = (a[(start + 1) % n], a[start])
     start = (start + 1) % n
     end = (end + 1) % n
-
 output = []
 for x in range(q):
     m = int(input()) - 1
@@ -28,6 +27,5 @@ for x in range(q):
         output.append([M, r[(m - t) % len(r)]])
     else:
         output.append(res[m])
-
 for i in output:
     print(i[0], i[1])

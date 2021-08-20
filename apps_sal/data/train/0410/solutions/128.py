@@ -1,8 +1,9 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         nums = []
         for i in range(lo, hi + 1):
-            temp, steps = i, 0
+            (temp, steps) = (i, 0)
             while temp != 1:
                 if temp % 2 == 0:
                     temp //= 2

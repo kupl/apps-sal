@@ -1,8 +1,7 @@
 class Solution:
+
     def brokenCalc(self, X: int, Y: int) -> int:
-
         count = 0
-
         while Y != X:
             if Y < X:
                 count += X - Y

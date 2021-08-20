@@ -1,7 +1,7 @@
 s = input()[::-1]
 count = 0
 n = len(s)
-s1 = ""
+s1 = ''
 for i in range(n):
     if s[i] == '0':
         count += 1

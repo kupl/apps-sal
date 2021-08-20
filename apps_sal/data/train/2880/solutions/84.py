@@ -7,4 +7,4 @@ def seven(m):
         m = x - 2 * y
         steps += 1
         lenght = len(str(m))
-    return m, steps
+    return (m, steps)

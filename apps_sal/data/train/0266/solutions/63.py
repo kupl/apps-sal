@@ -1,4 +1,5 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         left_unique = [0 for x in range(len(s))]
         right_unique = [0 for x in range(len(s))]
@@ -21,7 +22,6 @@ class Solution:
                     right_unique[len(s) - x - 1] += 1
             else:
                 right_unique[len(s) - x - 1] = right_unique[len(s) - x]
-
         min_splits = 0
         for x in range(1, len(s)):
             if left_unique[x - 1] == right_unique[x]:

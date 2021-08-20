@@ -1,6 +1,3 @@
-#input = open("input.txt").readline
-#f = open("output.txt", "w")
-
 def greedy(le, su):
     if su > le * 9:
         return None
@@ -18,21 +15,18 @@ def greedy(le, su):
 
 
 def get(li):
-    st = ""
+    st = ''
     for i in li:
         st += str(i)
-    if st == "":
-        st = "0"
+    if st == '':
+        st = '0'
     return st
 
 
-mi = [0]  # mi is OK ans
-mi_str = "0"
-
-const = "9" * 500
-
+mi = [0]
+mi_str = '0'
+const = '9' * 500
 n = int(input())
-
 for i in range(n):
     s = int(input())
     for j in range(len(mi), -1, -1):

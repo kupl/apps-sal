@@ -1,4 +1,5 @@
 class Solution:
+
     def toGoatLatin(self, S: str) -> str:
         words = S.split(' ')
 

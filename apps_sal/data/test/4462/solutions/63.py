@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 x = 0
 y = 0
 z = 0
@@ -11,8 +10,7 @@ for i in a:
         y += 1
     else:
         z += 1
-
 if y % 2 + z - 1 <= x:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

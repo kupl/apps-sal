@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-a, b, f, k = map_input()
+(a, b, f, k) = map_input()
 tot = a * k
 s = 2 * a - f
 cur = 0
@@ -19,29 +19,27 @@ go = 0
 ans = 0
 while cur < tot:
     go = 1 - go
-    if(go == 1):
+    if go == 1:
         if cnt < s and cnt < tot - cur:
-            if(cnt < f):
+            if cnt < f:
                 print(-1)
                 break
             cnt = b
             ans += 1
-            cnt -= (a - f)
+            cnt -= a - f
         else:
             cnt -= a
+    elif cnt < a + f and cnt < tot - cur:
+        if cnt < a - f:
+            print(-1)
+            break
+        cnt = b
+        ans += 1
+        cnt -= f
     else:
-        if cnt < a + f and cnt < tot - cur:
-            if(cnt < a - f):
-                print(-1)
-                break
-            cnt = b
-            ans += 1
-            cnt -= (f)
-        else:
-            cnt -= a
+        cnt -= a
     cur += a
-    # print(cur,cnt,ans)
-    if(cnt < 0):
+    if cnt < 0:
         print(-1)
         break
 else:

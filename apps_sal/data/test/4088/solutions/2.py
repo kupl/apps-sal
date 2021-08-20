@@ -17,16 +17,16 @@ for _ in range(int(input())):
     for elem in letters:
         sortedLetters.append((elem, letters[elem]))
     sortedLetters.sort()
-    ans = ["" for _ in range(m)]
+    ans = ['' for _ in range(m)]
     while True:
         done = True
         toChange = []
         for i in range(m):
             dist = 0
-            if ans[i] != "":
+            if ans[i] != '':
                 continue
             for j in range(m):
-                if ans[j] != "":
+                if ans[j] != '':
                     dist += abs(i - j)
             if dist == b[i]:
                 toChange.append(i)
@@ -38,4 +38,4 @@ for _ in range(int(input())):
         for i in toChange:
             ans[i] = sortedLetters[-1][0]
         sortedLetters.pop(-1)
-    print("".join(ans))
+    print(''.join(ans))

@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 wins = 0
 loss = 0
 draw = 0
@@ -9,5 +9,4 @@ for i in range(1, 7):
         loss += 1
     else:
         draw += 1
-
 print(wins, draw, loss)

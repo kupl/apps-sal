@@ -1,13 +1,14 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-A, B = LI()
+(A, B) = LI()
 
 
 def main():
     ans = A + B
     if ans >= 10:
-        ans = "error"
+        ans = 'error'
     print(ans)
 
 

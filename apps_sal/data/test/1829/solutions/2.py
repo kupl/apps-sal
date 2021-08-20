@@ -1,6 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = set()
-ama, amb, am2 = n, m, 0
+(ama, amb, am2) = (n, m, 0)
 for i in range(n):
     a.add(input())
 for i in range(m):
@@ -11,6 +11,6 @@ for i in range(m):
         am2 += 1
 xtr = am2 % 2
 if ama + xtr > amb:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

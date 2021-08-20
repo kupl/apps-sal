@@ -1,5 +1,5 @@
 def riders(s, x):
-    station, i, riders, p = 1, 0, [0], 0
+    (station, i, riders, p) = (1, 0, [0], 0)
     while station <= len(s) + 1:
         if riders[p] + s[i] <= 100:
             riders[p] += s[i]

@@ -1,18 +1,16 @@
 3
-
-n, m = tuple(map(int, input().split()))
+(n, m) = tuple(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(n)]
-
-simple = [0] * (10**5 + 4)
+simple = [0] * (10 ** 5 + 4)
 simple[1] = 1
-for i in range(2, 10**5 + 4):
+for i in range(2, 10 ** 5 + 4):
     if simple[i] == 0:
         j = 2
-        while i * j < 10**5 + 4:
+        while i * j < 10 ** 5 + 4:
             simple[i * j] = 1
             j += 1
 simple[-1] = len(simple) - 1
-for i in range(10**5 + 2, 0, -1):
+for i in range(10 ** 5 + 2, 0, -1):
     if simple[i] == 1:
         simple[i] = simple[i + 1]
     else:

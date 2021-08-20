@@ -4,17 +4,17 @@ from math import *
 
 
 def solve():
-    n, m, leftbank, rightbank = map(int, input().split())
+    (n, m, leftbank, rightbank) = map(int, input().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     l = list(map(int, input().split()))
     smallx = leftbank
     smallxsquared = smallx * smallx
     rightbankminusleftbanksquared = (rightbank - leftbank) * (rightbank - leftbank)
-    leftbest, rightbest, distbest = -1, -1, 100000000
-    for i, bcord, length in zip(count(), b, l):
+    (leftbest, rightbest, distbest) = (-1, -1, 100000000)
+    for (i, bcord, length) in zip(count(), b, l):
         wanty = bcord * smallx / rightbank
-        ll, rr = 0, n - 1
+        (ll, rr) = (0, n - 1)
         while ll < rr:
             mm = (ll + rr + 1) // 2
             if a[mm] > wanty:
@@ -34,5 +34,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

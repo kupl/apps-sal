@@ -1,8 +1,8 @@
-alpha = "abcdefghijklmnopqrstuvwxyz"
+alpha = 'abcdefghijklmnopqrstuvwxyz'
 n = int(input())
-s = ""
+s = ''
 for _ in range(n):
-    s += input() + " "
+    s += input() + ' '
 for x in alpha:
     if x not in s:
         print(x)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles):
         piles.sort()
         end = len(piles) - 2

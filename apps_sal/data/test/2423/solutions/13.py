@@ -1,7 +1,7 @@
 n = int(input())
 tree = [0] * (n + 1)
 for i in range(n - 1):
-    vex1, vex2 = list(map(int, input().split()))
+    (vex1, vex2) = list(map(int, input().split()))
     tree[vex1] += 1
     tree[vex2] += 1
 ans = 0

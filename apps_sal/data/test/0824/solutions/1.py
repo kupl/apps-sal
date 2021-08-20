@@ -1,6 +1,5 @@
 mod = 10 ** 9 + 7
-
-fact, inv, invfact = [1, 1], [0, 1], [1, 1]
+(fact, inv, invfact) = ([1, 1], [0, 1], [1, 1])
 for i in range(2, 200200):
     fact.append(fact[-1] * i % mod)
     inv.append(inv[mod % i] * (mod - mod // i) % mod)
@@ -14,7 +13,7 @@ def C(n, k):
 
 
 s = input()
-op, cl = 0, s.count(')')
+(op, cl) = (0, s.count(')'))
 ans = 0
 for x in s:
     if x == '(':
@@ -23,5 +22,4 @@ for x in s:
         ans += cur
     else:
         cl -= 1
-
 print(ans % mod)

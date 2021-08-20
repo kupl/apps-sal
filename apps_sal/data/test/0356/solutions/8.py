@@ -7,10 +7,10 @@ i = 0
 j = 0
 sumA = 0
 sumB = 0
-while (i < n and j < m):
+while i < n and j < m:
     sumA += arrA[i]
     sumB += arrB[j]
-    if (sumA == sumB):
+    if sumA == sumB:
         sumA = 0
         sumB = 0
         i += 1
@@ -22,7 +22,7 @@ while (i < n and j < m):
     else:
         sumB -= arrB[j]
         i += 1
-if (j == m and i == n):
+if j == m and i == n:
     print(result)
 else:
-    print("-1")
+    print('-1')

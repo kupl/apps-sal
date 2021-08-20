@@ -1,1 +1,2 @@
-def check_for_factor(b, f): return not bool(b % f)
+def check_for_factor(b, f):
+    return not bool(b % f)

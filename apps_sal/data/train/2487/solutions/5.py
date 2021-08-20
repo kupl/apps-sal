@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedSubstringPattern(self, s):
         size = len(s)
         for x in range(1, size // 2 + 1):

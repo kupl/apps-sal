@@ -1,4 +1,4 @@
-a, b, c, x, y = map(int, input().split())
+(a, b, c, x, y) = map(int, input().split())
 ans = 0
 ab = min(a + b, c * 2)
 temp = min(x, y)

@@ -1,7 +1,8 @@
 class Solution:
+
     def shortestPathAllKeys(self, grid: List[str]) -> int:
-        m, n = len(grid), len(grid[0])
-        q, seen, keys = deque(), set(), set()
+        (m, n) = (len(grid), len(grid[0]))
+        (q, seen, keys) = (deque(), set(), set())
         for i in range(m):
             for j in range(n):
                 if grid[i][j] == '@':
@@ -9,18 +10,16 @@ class Solution:
                     seen.add((i, j, ''))
                 elif 'a' <= grid[i][j] <= 'f':
                     keys.add(grid[i][j])
-
         steps = 0
         while q:
             size = len(q)
-            #print(list(q), grid[q[0][0]][q[0][1]])
             for _ in range(size):
-                x, y, k = q.popleft()
+                (x, y, k) = q.popleft()
                 if len(k) == len(keys):
                     return steps
-                for i, j in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-                    nx, ny, nk = x + i, y + j, k
-                    if nx < 0 or nx >= m or ny < 0 or ny >= n or grid[nx][ny] == '#':
+                for (i, j) in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                    (nx, ny, nk) = (x + i, y + j, k)
+                    if nx < 0 or nx >= m or ny < 0 or (ny >= n) or (grid[nx][ny] == '#'):
                         continue
                     if 'A' <= grid[nx][ny] <= 'F' and grid[nx][ny].lower() not in nk:
                         continue

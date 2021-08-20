@@ -4,4 +4,4 @@ def reverse_factorial(num):
     while f < num:
         n += 1
         f = f * n
-    return f"{n}!" if f == num else "None"
+    return f'{n}!' if f == num else 'None'

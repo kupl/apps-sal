@@ -1,10 +1,10 @@
 class Solution:
+
     def reorderedPowerOf2(self, N: int) -> bool:
         n_hash = {}
         n_str = str(N)
         for c in n_str:
             n_hash[c] = n_hash.get(c, 0) + 1
-
         for i in range(0, 31):
             num = pow(2, i)
             if len(str(num)) > len(str(N)):

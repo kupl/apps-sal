@@ -1,6 +1,5 @@
 from math import factorial
 from functools import lru_cache
-
 factorial = lru_cache(maxsize=None)(factorial)
 
 
@@ -14,4 +13,4 @@ def comb(a, b):
 
 
 def value_at(a, n):
-    return round(sum(x * comb(n, i) for i, x in enumerate(a[::-1])), 2)
+    return round(sum((x * comb(n, i) for (i, x) in enumerate(a[::-1]))), 2)

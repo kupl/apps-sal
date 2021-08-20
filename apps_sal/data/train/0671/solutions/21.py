@@ -7,11 +7,9 @@ def hasKey(dic, key):
 
 cases = int(sys.stdin.readline().rstrip())
 for case in range(cases):
-
-    [N, S] = list(map(int, sys.stdin.readline().rstrip().split(" ")))
-
-    p = list(map(int, sys.stdin.readline().rstrip().split(" ")))
-    t = list(map(int, sys.stdin.readline().rstrip().split(" ")))
+    [N, S] = list(map(int, sys.stdin.readline().rstrip().split(' ')))
+    p = list(map(int, sys.stdin.readline().rstrip().split(' ')))
+    t = list(map(int, sys.stdin.readline().rstrip().split(' ')))
     costs = {}
     costs[0] = []
     costs[1] = []
@@ -24,12 +22,12 @@ for case in range(cases):
     error = True
     for i in costs[0]:
         for j in costs[1]:
-            if (i + j <= left):
+            if i + j <= left:
                 error = False
                 break
-        if(error == False):
+        if error == False:
             break
-    if(error):
-        print("no")
+    if error:
+        print('no')
     else:
-        print("yes")
+        print('yes')

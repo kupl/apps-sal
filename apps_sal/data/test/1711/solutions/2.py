@@ -1,4 +1,5 @@
 class Combination:
+
     def __init__(self, n, MOD):
         self.fact = [1]
         for i in range(1, n + 1):
@@ -18,18 +19,17 @@ class Combination:
     def permutation(self, k, r):
         if k < r:
             return 0
-        return (self.fact[k] * self.inv_fact[k - r]) % self.MOD
+        return self.fact[k] * self.inv_fact[k - r] % self.MOD
 
     def combination(self, k, r):
         if k < r:
             return 0
-        return (self.fact[k] * self.inv_fact[k - r] * self.inv_fact[r]) % self.MOD
+        return self.fact[k] * self.inv_fact[k - r] * self.inv_fact[r] % self.MOD
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 MOD = 998244353
 comb = Combination(2 * 10 ** 5 + 10, MOD)
-
 ans = 0
 pow_ = pow(2, n - 2, MOD)
 for i in range(1, m + 1):

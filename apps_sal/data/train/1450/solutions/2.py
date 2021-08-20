@@ -2,11 +2,26 @@ import math
 from collections import defaultdict as dd
 from sys import stdin, stdout
 input = stdin.readline
-def geti(): return list(map(int, input().strip().split()))
-def getl(): return list(map(int, input().strip().split()))
-def gets(): return input()
-def geta(): return int(input())
-def print_s(s): stdout.write(s + '\n')
+
+
+def geti():
+    return list(map(int, input().strip().split()))
+
+
+def getl():
+    return list(map(int, input().strip().split()))
+
+
+def gets():
+    return input()
+
+
+def geta():
+    return int(input())
+
+
+def print_s(s):
+    stdout.write(s + '\n')
 
 
 def solve():
@@ -15,7 +30,7 @@ def solve():
         a = getl()
         a.sort()
         for i in range(1, n, 2):
-            a[i], a[i - 1] = a[i - 1], a[i]
+            (a[i], a[i - 1]) = (a[i - 1], a[i])
         print(*a)
 
 

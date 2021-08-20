@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         minSteps = 0
         dict = {}
@@ -15,5 +16,4 @@ class Solution:
                     minSteps += 1
             else:
                 minSteps += 1
-
         return minSteps

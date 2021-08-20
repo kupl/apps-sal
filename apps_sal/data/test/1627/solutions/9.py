@@ -1,4 +1,5 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -7,4 +8,4 @@ for i in range(n):
     for j in range(n - 1):
         if a[j] > a[j + 1]:
             print(j + 1, j + 2)
-            a[j], a[j + 1] = a[j + 1], a[j]
+            (a[j], a[j + 1]) = (a[j + 1], a[j])

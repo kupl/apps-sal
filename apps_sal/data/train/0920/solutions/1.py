@@ -1,10 +1,10 @@
 for _ in range(int(input())):
     string = input()
-    girls, boys = string.count('g'), string.count('b')
-    arrangement = ""
+    (girls, boys) = (string.count('g'), string.count('b'))
+    arrangement = ''
     answer = 0
-    if(boys > girls):
-        boys, girls = girls, boys
+    if boys > girls:
+        (boys, girls) = (girls, boys)
     boys_index = []
     pos = 0
     extra_right = (girls - boys) // 2
@@ -19,11 +19,10 @@ for _ in range(int(input())):
     nb = 0
     ng = 0
     for i in range(len(arrangement)):
-        if(arrangement[i] == 'g'):
+        if arrangement[i] == 'g':
             answer += i * nb - i * (boys - nb)
             ng += 1
         else:
             answer += i * ng - i * (girls - ng)
             nb += 1
-
     print(answer)

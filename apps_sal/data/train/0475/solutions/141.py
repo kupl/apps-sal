@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, l: int, r: int) -> int:
         psum = [0]
         for v in nums:

@@ -1,16 +1,14 @@
 class Solution:
+
     def numberOfArithmeticSlices(self, A):
         """
         :type A: List[int]
         :rtype: int
         """
-
         if len(A) < 3:
             return 0
-
         count = 0
         l = len(A)
-
         i = 0
         while i < l - 2:
             j = i + 2
@@ -23,5 +21,4 @@ class Solution:
                     break
             if j == l:
                 break
-
         return count

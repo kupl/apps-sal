@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 D = list(map(int, input().split()))
-
 while True:
     S = str(N)
     flag = True

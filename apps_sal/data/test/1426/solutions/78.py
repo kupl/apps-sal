@@ -5,31 +5,30 @@ import itertools
 import heapq
 import collections
 from operator import itemgetter
-# a.sort(key=itemgetter(i)) # i番目要素でsort
 from functools import lru_cache
-# @lru_cache(maxsize=None)
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 input = sys.stdin.readline
 INF = float('inf')
-mod = 10**9 + 7
-eps = 10**-7
+mod = 10 ** 9 + 7
+eps = 10 ** (-7)
 
 
 def inp():
-    '''
+    """
     一つの整数
-    '''
+    """
     return int(input())
 
 
 def inpl():
-    '''
+    """
     一行に複数の整数
-    '''
+    """
     return list(map(int, input().split()))
 
 
-class Dijkstra():
+class Dijkstra:
+
     def __init__(self):
         self.e = collections.defaultdict(list)
 
@@ -85,16 +84,14 @@ class Dijkstra():
         prev = collections.defaultdict(lambda: None)
         d[s] = 0
         q = []
-        heapq.heappush(q, (0, s))  # (cost, 探索候補ノード)
-        v = collections.defaultdict(bool)  # 確定済かどうか
+        heapq.heappush(q, (0, s))
+        v = collections.defaultdict(bool)
         while len(q):
-            # ノードuにおけるコストはk
-            k, u = heapq.heappop(q)
+            (k, u) = heapq.heappop(q)
             if v[u]:
                 continue
             v[u] = True
-
-            for uv, ud in self.e[u]:  # cost is ud from u to uv
+            for (uv, ud) in self.e[u]:
                 if v[uv]:
                     continue
                 vd = k + ud
@@ -102,20 +99,18 @@ class Dijkstra():
                     d[uv] = vd
                     prev[uv] = u
                     heapq.heappush(q, (vd, uv))
+        return (d, prev)
 
-        return d, prev
 
-
-n, m = inpl()
+(n, m) = inpl()
 graph = Dijkstra()
 for i in range(m):
-    u, v = inpl()
+    (u, v) = inpl()
     graph.add(u, v + n, 1, directed=True)
     graph.add(u + n, v + n + n, 1, directed=True)
     graph.add(u + n + n, v, 1, directed=True)
-s, t = inpl()
+(s, t) = inpl()
 ans = 0
-d, _ = graph.Dijkstra_search(s)
-ans = d[t] if d[t] != INF else - 1
-# print(d)
+(d, _) = graph.Dijkstra_search(s)
+ans = d[t] if d[t] != INF else -1
 print(ans // 3)

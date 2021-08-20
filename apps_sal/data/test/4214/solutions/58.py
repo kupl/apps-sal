@@ -1,12 +1,10 @@
 import math
 import itertools
-
 n = int(input())
 pos = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     pos.append([x, y])
-
 iter = list(itertools.permutations(list(range(n))))
 total = 0
 for i in iter:

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     a = int(input())
@@ -7,7 +6,7 @@ for i in range(t):
     p = 0
     dene = 0
     lene = 0
-    while(p >= 0):
+    while p >= 0:
         dene = dene + pow(2, i - 1)
         lene = lene + a
         p = lene - dene

@@ -4,14 +4,14 @@ input = sys.stdin.readline
 
 def solve(n, points):
     ans = []
-    x, y = 0, 0
+    (x, y) = (0, 0)
     for i in range(n):
-        xi, yi = points[i]
+        (xi, yi) = points[i]
         if xi < x or yi < y:
             print('NO')
             return
         ans += ['R'] * (xi - x) + ['U'] * (yi - y)
-        x, y = xi, yi
+        (x, y) = (xi, yi)
     print('YES')
     print(''.join(ans))
 

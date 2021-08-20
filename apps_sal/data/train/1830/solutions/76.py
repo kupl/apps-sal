@@ -1,9 +1,10 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         ret = [1] * len(rains)
         filled = dict()
         dryDays = list()
-        for ind, rain in enumerate(rains):
+        for (ind, rain) in enumerate(rains):
             if rain > 0:
                 ret[ind] = -1
                 if rain not in filled:

@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 l = list(map(int, input().split()))
 ans = 1
 d = [0] * (n + 1)

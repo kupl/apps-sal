@@ -1,6 +1,6 @@
 def IsPrime(n):
     i = 2
-    limit = int(n**0.5)
+    limit = int(n ** 0.5)
     while i <= limit:
         if n % i == 0:
             return False

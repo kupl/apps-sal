@@ -12,7 +12,7 @@ def vect(a, b):
 n = int(input())
 a = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a.append([[x, y], i + 1])
 a.sort(key=lambda x: atan2(x[0][1], x[0][0]))
 a.append(a[0])

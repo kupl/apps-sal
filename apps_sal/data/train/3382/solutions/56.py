@@ -4,5 +4,4 @@ def lowercase_count(strng):
     for i in letters:
         if i.islower():
             lowercase += 1
-
     return lowercase

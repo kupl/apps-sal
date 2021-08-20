@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, m = read_ints()
+    (n, m) = read_ints()
     if n == 1:
         print(0)
     elif n == 2:

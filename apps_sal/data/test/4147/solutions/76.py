@@ -1,8 +1,6 @@
-N, A, B, C = map(int, input().split())
-
+(N, A, B, C) = map(int, input().split())
 L = [int(input()) for _ in range(N)]
-
-INF = 10**9
+INF = 10 ** 9
 
 
 def dfs(i, a, b, c):
@@ -11,7 +9,6 @@ def dfs(i, a, b, c):
             return abs(a - A) + abs(b - B) + abs(c - C) - 30
         else:
             return INF
-
     ret1 = dfs(i + 1, a, b, c)
     ret2 = dfs(i + 1, a + L[i], b, c) + 10
     ret3 = dfs(i + 1, a, b + L[i], c) + 10

@@ -1,9 +1,8 @@
 l = input()
-l = l.replace(";", ",")
-l = l.split(",")
+l = l.replace(';', ',')
+l = l.split(',')
 nums = []
 alpha = []
-
 for i in l:
     try:
         num = int(i)
@@ -13,12 +12,11 @@ for i in l:
             alpha.append(i)
     except:
         alpha.append(i)
-
 if len(nums) == 0:
-    print("-")
+    print('-')
 else:
-    print("\"" + ",".join(nums) + "\"")
+    print('"' + ','.join(nums) + '"')
 if len(alpha) == 0:
-    print("-")
+    print('-')
 else:
-    print("\"" + ",".join(alpha) + "\"")
+    print('"' + ','.join(alpha) + '"')

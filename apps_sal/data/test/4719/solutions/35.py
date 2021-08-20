@@ -10,4 +10,4 @@ for i in range(n - 1):
 ans = []
 for i in alphabet:
     ans += [i] * alphabet[i]
-print((''.join(sorted(ans))))
+print(''.join(sorted(ans)))

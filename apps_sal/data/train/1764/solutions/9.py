@@ -15,12 +15,11 @@ def solve(emulator):
     """Return the least floor for which the egg breaks"""
     drops = emulator.drops
     eggs = emulator.eggs
-
-    lower_bound, n = 0, 0
+    (lower_bound, n) = (0, 0)
     while drops > 0:
         n = lower_bound + highest_floor(eggs - 1, drops - 1) + 1
         drops -= 1
-        if emulator.drop(n):  # it broke for floor n
+        if emulator.drop(n):
             eggs -= 1
             if eggs == 0 or drops == 0:
                 return n

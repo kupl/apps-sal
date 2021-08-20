@@ -1,5 +1,5 @@
-n, a, b = list(map(int, input().split()))
-M = 10**9 + 7
+(n, a, b) = list(map(int, input().split()))
+M = 10 ** 9 + 7
 
 
 def combination(n, k):
@@ -26,8 +26,6 @@ def combination(n, k):
             while j % m == 0:
                 count[m] += 1
                 j = j // m
-    # print(p)
-    # print(count)
     ans = 1
     for i in kp:
         bufi = i
@@ -35,12 +33,9 @@ def combination(n, k):
             while count[j] > 0 and bufi % j == 0:
                 bufi = bufi // j
                 count[j] -= 1
-        #print(i, bufi)
         ans *= bufi
         ans %= M
-
-    # print(kp)
     return ans
 
 
-print(((pow(2, n, M) - 1 - combination(n, a) - combination(n, b)) % M))
+print((pow(2, n, M) - 1 - combination(n, a) - combination(n, b)) % M)

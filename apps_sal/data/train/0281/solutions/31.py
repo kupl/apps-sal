@@ -1,7 +1,8 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         times = {}
-        if (len(s) != len(t)):
+        if len(s) != len(t):
             return False
         for i in range(len(s)):
             orig = (ord(t[i]) - ord(s[i]) + 26) % 26

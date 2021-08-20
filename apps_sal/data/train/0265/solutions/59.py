@@ -1,8 +1,8 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         prefixSum = {0: -1}
         dp = [0] * len(nums)
-
         currSum = 0
         for i in range(len(nums)):
             currSum = currSum + nums[i]

@@ -1,10 +1,5 @@
 from sys import stdin
-"""
-n=int(stdin.readline().strip())
-n,m=map(int,stdin.readline().strip().split())
-s=list(map(int,stdin.readline().strip().split()))
-s=stdin.readline().strip()
-"""
+'\nn=int(stdin.readline().strip())\nn,m=map(int,stdin.readline().strip().split())\ns=list(map(int,stdin.readline().strip().split()))\ns=stdin.readline().strip()\n'
 T = int(stdin.readline().strip())
 for caso in range(T):
     n = int(stdin.readline().strip())
@@ -18,9 +13,9 @@ for caso in range(T):
         else:
             pos += s[i]
     if pos == neg:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         if pos > neg:
             s = s[::-1]
             print(*s)

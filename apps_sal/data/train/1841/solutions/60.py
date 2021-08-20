@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         cnt = len(arr)
         arr = sorted(arr)
@@ -6,10 +7,9 @@ class Solution:
         mid = arr[mid_id]
         if k == cnt:
             return arr
-
         curr = 0
         res = []
-        left, right = 0, cnt - 1
+        (left, right) = (0, cnt - 1)
         while curr < k:
             if abs(arr[right] - mid) >= abs(mid - arr[left]):
                 res.append(arr[right])
@@ -18,5 +18,4 @@ class Solution:
                 res.append(arr[left])
                 left += 1
             curr += 1
-
         return res

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = sorted([int(input()) for i in range(n)])
 c = float('inf')
 for i in range(n - k + 1):

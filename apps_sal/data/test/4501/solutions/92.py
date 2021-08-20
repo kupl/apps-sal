@@ -1,6 +1,6 @@
-N, A = map(int, input().split())
+(N, A) = map(int, input().split())
 x = list(map(int, input().split()))
-dp = [[[0] * (2501) for i in range(N + 1)] for k in range(N + 1)]
+dp = [[[0] * 2501 for i in range(N + 1)] for k in range(N + 1)]
 dp[0][0][0] = 1
 for j in range(N):
     for k in range(N):

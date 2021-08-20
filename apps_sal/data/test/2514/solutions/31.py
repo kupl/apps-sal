@@ -5,7 +5,7 @@ Q = int(input())
 counter = Counter(A)
 res = sum(A)
 for i in range(Q):
-    b, c = list(map(int, input().split()))
+    (b, c) = list(map(int, input().split()))
     res -= counter[b] * b
     res += counter[b] * c
     counter[c] += counter[b]

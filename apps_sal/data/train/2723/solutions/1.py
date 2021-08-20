@@ -1,7 +1,6 @@
 def average_string(s):
     if not s:
         return 'n/a'
-
     numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     total = 0
     counter = 0

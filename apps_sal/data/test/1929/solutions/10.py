@@ -1,4 +1,4 @@
-n, t, c = [int(i) for i in input().split()]
+(n, t, c) = [int(i) for i in input().split()]
 h = [int(i) for i in input().split()]
 res = 0
 cnt = 0

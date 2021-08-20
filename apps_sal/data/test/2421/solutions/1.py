@@ -9,7 +9,7 @@ def read_ints():
 d = [(1, 1), (0, 1), (-1, 0), (-1, -1), (0, -1), (1, 0)]
 t = read_int()
 for case_num in range(t):
-    x, y = read_ints()
+    (x, y) = read_ints()
     c = list(read_ints())
     ans = -1
     for i in range(6):
@@ -27,7 +27,6 @@ for case_num in range(t):
                     nc = cost + t1 * c[j]
                     if ans == -1 or ans > nc:
                         ans = nc
-
         if dy != 0 and y // dy >= 0:
             t = y // dy
             cost = t * c[i]

@@ -1,23 +1,9 @@
 import unittest
-
-RIGHT_SIDE_WINS = "Right side wins!"
-LEFT_SIDE_WINS = "Left side wins!"
+RIGHT_SIDE_WINS = 'Right side wins!'
+LEFT_SIDE_WINS = 'Left side wins!'
 FIGHT_AGAIN = "Let's fight again!"
-
-
-LEFT_LETTERS = {
-    'w': 4,
-    'p': 3,
-    'b': 2,
-    's': 1,
-}
-
-RIGHT_LETTERS = {
-    'm': 4,
-    'q': 3,
-    'd': 2,
-    'z': 1,
-}
+LEFT_LETTERS = {'w': 4, 'p': 3, 'b': 2, 's': 1}
+RIGHT_LETTERS = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
 
 
 def alphabet_war(fight):
@@ -28,7 +14,6 @@ def alphabet_war(fight):
             left.append(LEFT_LETTERS[ele])
         elif ele in RIGHT_LETTERS:
             right.append(RIGHT_LETTERS[ele])
-
     if sum(left) == sum(right):
         return FIGHT_AGAIN
     else:
@@ -36,6 +21,7 @@ def alphabet_war(fight):
 
 
 class TestAlphabetWar(unittest.TestCase):
+
     def test_alphabet_war_on_right_side_wins(self):
         fight = 'z'
         actual = alphabet_war(fight)

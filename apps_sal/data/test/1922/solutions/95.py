@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 if N == 2 or M == 2:
     ans = 0
 elif N == 1:

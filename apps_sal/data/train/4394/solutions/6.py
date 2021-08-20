@@ -5,7 +5,7 @@ def men_still_standing(cards):
         jg(a if x[0] == 'A' else b, x)
         if a['n'] < 7 or b['n'] < 7:
             break
-    return a['n'], b['n']
+    return (a['n'], b['n'])
 
 
 def jg(t, x):

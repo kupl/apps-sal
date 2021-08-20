@@ -8,8 +8,7 @@ from heapq import heapify, heappop, heappush
 from operator import itemgetter, attrgetter
 from itertools import permutations, combinations
 sys.setrecursionlimit(500000)
-
-n, K = map(int, input().split())
+(n, K) = map(int, input().split())
 mo = 998244353
 a = [[0] * (n + 2) for _ in range(n + 2)]
 a[0][0] = 1

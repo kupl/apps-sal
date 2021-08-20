@@ -5,24 +5,20 @@ for i in range(11):
         a.pop(3)
         a.pop(6)
         mass.append(a)
-
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 x -= 1
 y -= 1
-
 n = 0
 for i in range(x % 3 * 3, x % 3 * 3 + 3):
     for j in range(y % 3 * 3, y % 3 * 3 + 3):
         if mass[i][j] == '.':
             mass[i][j] = '!'
             n += 1
-
 if n == 0:
     for i in range(9):
         for j in range(9):
             if mass[i][j] == '.':
                 mass[i][j] = '!'
-
 for i in range(9):
     mass[i].insert(3, ' ')
     mass[i].insert(7, ' ')

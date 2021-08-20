@@ -1,21 +1,23 @@
 class Solution:
+
     def shortestSuperstring(self, A: List[str]) -> str:
+
         @lru_cache(None)
         def dp(i, p, mask):
             if i == n:
-                return 0, 0
+                return (0, 0)
             result = 0
             k = -1
             for j in range(n):
-                if not (mask >> j) & 1:
+                if not mask >> j & 1:
                     continue
                 l = g[p].get(j, 0)
-                h, x = dp(i + 1, j, mask & ~(1 << j))
+                (h, x) = dp(i + 1, j, mask & ~(1 << j))
                 h += l
                 if h >= result:
                     result = h
                     k = j
-            return result, k
+            return (result, k)
         A.insert(0, '*')
         n = len(A)
         g = collections.defaultdict(dict)
@@ -32,7 +34,7 @@ class Solution:
         p = 0
         result = ''
         for i in range(1, n):
-            l, x = dp(i, p, mask)
+            (l, x) = dp(i, p, mask)
             result += A[x][g[p].get(x, 0):]
             p = x
             mask = mask & ~(1 << x)

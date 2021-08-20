@@ -6,7 +6,7 @@ for i in range(101):
         h = abs(alist[0][0] - i) + abs(alist[0][1] - j) + alist[0][2]
         ans = True
         for k in range(n):
-            if max((h - abs(alist[k][0] - i) - abs(alist[k][1] - j)), 0) != alist[k][2]:
+            if max(h - abs(alist[k][0] - i) - abs(alist[k][1] - j), 0) != alist[k][2]:
                 ans = False
         if ans:
             ansx = i

@@ -1,5 +1,3 @@
-
-
 for _ in range(int(input())):
     n = input()
     a = n[::-1]
@@ -9,5 +7,4 @@ for _ in range(int(input())):
             k += 1
         else:
             break
-
     print(a[k:])

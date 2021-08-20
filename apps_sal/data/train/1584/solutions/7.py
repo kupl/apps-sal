@@ -1,5 +1,4 @@
-# cook your dish here
-r, c, n = map(int, input().split())
+(r, c, n) = map(int, input().split())
 x = {}
 y = {}
 xy = {}

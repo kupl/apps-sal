@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
         def check(flower, N, m, k):
@@ -14,7 +15,6 @@ class Solution:
                 else:
                     count = 0
             return False
-
         N = len(bloomDay)
         if N < m * k:
             return -1
@@ -27,11 +27,9 @@ class Solution:
             for x in range(N):
                 if bloomDay[x] <= day:
                     flower[x] = 1
-
             if check(flower, N, m, k):
                 right = day
                 res = min(res, day)
             else:
                 left = day + 1
-
         return res

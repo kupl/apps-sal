@@ -1,5 +1,4 @@
 import bisect
-
 N = int(input())
 ans = 0
 i = 2

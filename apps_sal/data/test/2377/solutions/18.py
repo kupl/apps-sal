@@ -1,7 +1,7 @@
-n, h = map(int, input().split())
-al, bl = [], []
+(n, h) = map(int, input().split())
+(al, bl) = ([], [])
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     al.append(a)
     bl.append(b)
 ma = max(al)

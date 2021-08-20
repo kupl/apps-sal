@@ -7,5 +7,4 @@ def repeat_it(s, n):
             x += 1
         return st
     else:
-        return "Not a string"
-# Completed by Ammar on 25/8/2019 at 12:07AM.
+        return 'Not a string'

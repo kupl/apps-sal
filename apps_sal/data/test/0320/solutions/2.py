@@ -3,7 +3,7 @@ a = 0
 b = 0
 ans = 0
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if (x + y) % 2 == 1:
         ans = 1
     a += x

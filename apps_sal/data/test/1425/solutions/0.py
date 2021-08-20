@@ -18,7 +18,7 @@ for i in range(n):
         flag = 1
         break
 if flag == 0:
-    print("YES")
-    print(' '.join(str(x) for x in ans))
+    print('YES')
+    print(' '.join((str(x) for x in ans)))
 else:
-    print("NO")
+    print('NO')

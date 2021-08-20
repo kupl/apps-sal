@@ -3,12 +3,10 @@ from itertools import permutations
 
 def solve(n, a):
     ans = []
-
     for des in desire:
         check = 1
         for i in range(n - 1):
-
-            if (a[i] == a[i + 1]):
+            if a[i] == a[i + 1]:
                 return [-1]
             if a[i + 1] == des[a[i] - 1]:
                 check = 0
@@ -37,9 +35,7 @@ for p in per:
                 break
         if doublecheck:
             desire.append(p)
-# print(desire)
 for _ in range(int(input())):
-
     n = int(input())
     a = list(map(int, input().split()))
     print(*solve(n, a))

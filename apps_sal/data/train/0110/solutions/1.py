@@ -1,7 +1,7 @@
 from math import *
 from random import *
 for t in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mas = list(map(int, input().split()))
     pick = [0 for i in range(n)]
     for i in range(1, n - 1):

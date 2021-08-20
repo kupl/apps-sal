@@ -1,7 +1,6 @@
 from collections import deque
 import copy
-H, W = map(int, input().split())
-
+(H, W) = map(int, input().split())
 inf = 1000000000
 field = []
 for i in range(H):
@@ -33,11 +32,8 @@ for i in range(H):
         f = copy.deepcopy(field)
         f[i][j] = 0
         tmp = 0
-        # print('--start--')
         while l:
-            x, y = l.popleft()
-            # print(x,y)
-            # i,jを訪問
+            (x, y) = l.popleft()
             for v in vector:
                 if not isIn(x + v[1], y + v[0]):
                     continue

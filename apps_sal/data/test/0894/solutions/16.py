@@ -1,10 +1,7 @@
-x, y = list(map(int, input().split(' ')))
-
-A_x, B_x, A_y, B_y = 0, 0, 0, 0
-
+(x, y) = list(map(int, input().split(' ')))
+(A_x, B_x, A_y, B_y) = (0, 0, 0, 0)
 A = abs(x) + abs(y)
-B = -(A)
-
+B = -A
 if x < 0:
     A_x = B
     if y > 0:
@@ -17,5 +14,4 @@ else:
         A_y = A
     else:
         A_y = B
-
-print("%d %d %d %d" % (A_x, A_y, B_x, B_y))
+print('%d %d %d %d' % (A_x, A_y, B_x, B_y))

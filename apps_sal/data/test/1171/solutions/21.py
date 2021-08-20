@@ -1,10 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 V = list(map(int, input().split()))
-
-ans = - 10 ** 19
-# i: Dから取り出す宝石の個数
+ans = -10 ** 19
 for i in range(min(k + 1, n + 1)):
-    # j: 左からとる個数(i-jが右からとる個数)
     for j in range(i + 1):
         inhands = V[:j] + V[n - i + j:]
         inhands.sort()

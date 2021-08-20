@@ -1,16 +1,13 @@
-# 无向图的生成树
-# 生成树->有G的全部v，但边数最少的连通子图; 带权->可以找mst
-# 3->遇环删 得边数目
-# 3，1->遇环删 得边数目 ?=n-1
-# 3，2->遇环删 得边数目 ?=n-1
 from collections import defaultdict
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+
         def get_circle(comb):
             G = defaultdict(list)
-            for t, u, v in edges:
+            for (t, u, v) in edges:
                 if t in comb:
                     G[u].append(v)
                     G[v].append(u)
@@ -29,7 +26,6 @@ class Solution:
                             cnt += 1
                             stack.append(nei)
             return cnt
-
         type3 = get_circle((3,))
         if type3 == n - 1:
             return len(edges) - n + 1

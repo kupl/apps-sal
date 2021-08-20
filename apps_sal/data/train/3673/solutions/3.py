@@ -8,7 +8,7 @@ def primes(n):
     for x in chain([2], count(3, 2)):
         if n == 1:
             return
-        if x**2 > n:
+        if x ** 2 > n:
             yield Fraction(n - 1, n)
             return
         elif not n % x:

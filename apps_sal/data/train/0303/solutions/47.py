@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         rec = {}
 
@@ -16,5 +17,4 @@ class Solution:
                 temp = max(temp, pre_max * (j - idx + 1) + helper(j + 1))
             rec[idx] = temp
             return temp
-
         return helper(0)

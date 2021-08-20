@@ -1,8 +1,9 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         hierarchy = defaultdict(set)
-        for index, higher in enumerate(manager):
-            hierarchy[higher].add(index)  # be careful about what variables you add.
+        for (index, higher) in enumerate(manager):
+            hierarchy[higher].add(index)
         times = defaultdict(int)
 
         def computeTotalTime(start):

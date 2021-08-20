@@ -2,6 +2,7 @@ from math import sqrt
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         from functools import lru_cache
 

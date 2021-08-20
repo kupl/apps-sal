@@ -1,5 +1,5 @@
-
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         num_odd = 0
         start = 0

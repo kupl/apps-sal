@@ -12,7 +12,7 @@ def factorize_add(num):
         return num
     d = 2
     p = 0
-    while d < num**.5 + 1:
+    while d < num ** 0.5 + 1:
         while not num % d:
             p += d
             num /= d

@@ -1,11 +1,11 @@
 __author__ = 'Utena'
 import operator
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = list(map(int, input().split()))
 r0 = [[0, 10000000000]]
 x0 = [0]
 for i in range(m):
-    t, r = map(int, input().split())
+    (t, r) = map(int, input().split())
     while r >= r0[-1][1]:
         r0 = r0[:-1]
         x0 = x0[:-1]

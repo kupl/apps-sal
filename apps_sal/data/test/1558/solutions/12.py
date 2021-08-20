@@ -1,8 +1,8 @@
-n, r, avg = [int(i) for i in input().split()]
+(n, r, avg) = [int(i) for i in input().split()]
 a = [0] * n
 b = [[0] * 2 for i in range(n)]
 for j in range(n):
-    a[j], b[j][0] = [int(i) for i in input().split()]
+    (a[j], b[j][0]) = [int(i) for i in input().split()]
     b[j][1] = j
 b.sort()
 mid = -1

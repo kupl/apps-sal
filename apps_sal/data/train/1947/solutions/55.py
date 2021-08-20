@@ -16,12 +16,9 @@ class Solution:
                 d[ord(ch) - ord('a')] += 1
             C.append(d)
         l = [0] * 26
-        # print(C)
         for j in C:
             for i in range(26):
                 l[i] = max(l[i], j[i])
-        # print(l)
-
         for i in A:
             d = list(l)
             for ch in i:
@@ -29,5 +26,4 @@ class Solution:
                     d[ord(ch) - ord('a')] -= 1
             if sum(d) == 0:
                 result.append(i)
-
         return result

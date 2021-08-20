@@ -20,4 +20,4 @@ def getCounts(arr):
 
 
 ans = (2 * getCounts(arr) - n) / (n * n)
-print("%.6f" % ans)
+print('%.6f' % ans)

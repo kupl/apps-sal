@@ -10,6 +10,5 @@ for cell in input():
         k = 0
 if k > 0:
     sl.append(str(k))
-
 print(len(sl))
-print(" ".join(sl))
+print(' '.join(sl))

@@ -4,9 +4,9 @@ def main():
         if n % i == 0:
             if i < 5 or n // i < 5:
                 continue
-            vowels = "aeiou"
+            vowels = 'aeiou'
             ind = 0
-            ans = ""
+            ans = ''
             for j in range(n // i):
                 for k in range(i):
                     ans += vowels[(j + k) % 5]

@@ -6,10 +6,10 @@ input = sys.stdin.readline
 
 
 def solve():
-    N, Q = list(map(int, input().split()))
+    (N, Q) = list(map(int, input().split()))
     es = [[] for i in range(N + 1)]
     for i in range(N - 1):
-        u, v, c, d = list(map(int, input().split()))
+        (u, v, c, d) = list(map(int, input().split()))
         es[u].append([v, c, d])
         es[v].append([u, c, d])
     LOG_N = int(log(N, 2)) + 1
@@ -22,7 +22,7 @@ def solve():
         v = dq.popleft()
         p = parent[0][v]
         lv = level[v]
-        for u, c, d in es[v]:
+        for (u, c, d) in es[v]:
             if u != p:
                 parent[0][u] = v
                 level[u] = lv + 1
@@ -37,20 +37,19 @@ def solve():
 
     def lca(u, v):
         if level[u] > level[v]:
-            u, v = v, u
+            (u, v) = (v, u)
         for k in range(LOG_N)[::-1]:
-            if (level[v] - level[u]) >> k & 1:
+            if level[v] - level[u] >> k & 1:
                 v = parent[k][v]
         if u == v:
             return u
         for k in range(LOG_N)[::-1]:
             if parent[k][u] != parent[k][v]:
-                u, v = parent[k][u], parent[k][v]
+                (u, v) = (parent[k][u], parent[k][v])
         return parent[0][u]
-
     qs = [[] for i in range(N + 1)]
     for i in range(Q):
-        x, y, u, v = list(map(int, input().split()))
+        (x, y, u, v) = list(map(int, input().split()))
         qs[u].append([i, x, y, 1])
         qs[v].append([i, x, y, 1])
         a = lca(u, v)
@@ -60,16 +59,15 @@ def solve():
     query = [0] * Q
 
     def EulerTour(v, p, d):
-        for id, col, y, f in qs[v]:
+        for (id, col, y, f) in qs[v]:
             query[id] += f * (d + y * cnt[col] - ds[col])
-        for u, c, _d in es[v]:
+        for (u, c, _d) in es[v]:
             if u != p:
                 ds[c] += _d
                 cnt[c] += 1
                 EulerTour(u, v, d + _d)
                 ds[c] -= _d
                 cnt[c] -= 1
-
     EulerTour(1, -1, 0)
     for res in query:
         print(res)

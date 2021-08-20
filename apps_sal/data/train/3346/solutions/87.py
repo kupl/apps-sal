@@ -1,4 +1,5 @@
 def gap(g, m, n):
+
     def isprime(i):
         if i <= 3:
             return i > 1
@@ -10,7 +11,6 @@ def gap(g, m, n):
                 return False
             x += 6
         return True
-
     lp = 2
     for j in range(m, n + 1):
         if isprime(j):

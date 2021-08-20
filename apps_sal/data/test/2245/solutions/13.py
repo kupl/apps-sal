@@ -1,20 +1,20 @@
 def find(n, k):
     if k % 3 != 0:
         if n % 3 == 0:
-            return "Bob"
+            return 'Bob'
         else:
-            return "Alice"
+            return 'Alice'
     position = n % (k + 1)
     if position == k:
-        return "Alice"
+        return 'Alice'
     if position % 3 == 0:
-        return "Bob"
+        return 'Bob'
     else:
-        return "Alice"
+        return 'Alice'
 
 
 ans = []
 for _ in range(int(input())):
-    n, k = list(map(int, input().strip().split(' ')))
+    (n, k) = list(map(int, input().strip().split(' ')))
     ans += [find(n, k)]
-print("\n".join(ans))
+print('\n'.join(ans))

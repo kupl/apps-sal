@@ -9,16 +9,13 @@ def main():
     for i in range(len(a)):
         x[a[i]] = b[i]
         x[a[i].upper()] = b[i].upper()
-
     s = [0] * len(c)
-
     for i in range(len(c)):
         if c[i] in x:
             s[i] = x[c[i]]
         else:
             s[i] = c[i]
-
-    print("".join(s))
+    print(''.join(s))
 
 
 main()

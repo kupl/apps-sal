@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-mini = 10**9 + 1
+mini = 10 ** 9 + 1
 s = 0
 flag = 1
 for i in a:

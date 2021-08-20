@@ -17,7 +17,7 @@ def solve(N, A):
     INF = N + 1
     best = INF
     pos = {}
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         if a in pos:
             best = min(best, i - pos[a] + 1)
         pos[a] = i
@@ -25,9 +25,6 @@ def solve(N, A):
         return -1
     return best
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

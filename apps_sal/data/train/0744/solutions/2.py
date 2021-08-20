@@ -1,7 +1,6 @@
-arr = ["*"]
+arr = ['*']
 for i in range(105):
-    arr.append("*" + " " * i + "*")
-
+    arr.append('*' + ' ' * i + '*')
 t = int(input())
 for i in range(t):
     k = int(input())

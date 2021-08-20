@@ -3,7 +3,7 @@ from copy import deepcopy
 
 def nQueen(size):
     for y in range((size + 1) // 2):
-        board = tuple(set(range(size)) for _ in range(size))
+        board = tuple((set(range(size)) for _ in range(size)))
         if solve(board, set(), size, 0, y):
             return [s.pop() for s in board]
     return []
@@ -41,6 +41,6 @@ def solve(board, placed, size, sx, sy):
 
 
 def update(board, new_board):
-    for s, ns in zip(board, new_board):
+    for (s, ns) in zip(board, new_board):
         s.clear()
         s.update(ns)

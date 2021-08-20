@@ -3,13 +3,13 @@ line = input().split()
 a = int(line[0])
 b = int(line[1])
 if a == 0 and b == 0:
-    print("infinity")
+    print('infinity')
 elif a == 0:
-    print("0")
+    print('0')
 elif a == b:
-    print("infinity")
+    print('infinity')
 elif a < b:
-    print("0")
+    print('0')
 else:
     c = a - b
     out = 0

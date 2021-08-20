@@ -17,9 +17,7 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-
-n, k = L()
+(n, k) = L()
 n += 1
 l = [i for i in range(n)]
 l = np.cumsum(l)
@@ -29,5 +27,4 @@ for i in range(k, n):
     sa = l[n - 1] - l[n - 1 - i] - l[i - 1] + 1
     sum += sa
     sum %= mod
-    # print(k,sa)
 print(sum)

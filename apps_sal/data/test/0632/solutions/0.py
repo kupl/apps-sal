@@ -11,7 +11,7 @@ def list_input():
 
 
 for nt in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     for i in range(2, n + 1):
         if n % i == 0:
             num = i

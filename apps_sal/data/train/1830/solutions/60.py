@@ -2,26 +2,16 @@ from bisect import bisect_left
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         flooded = {}
         dry_days = []
         out = [-1 for _ in range(len(rains))]
-
         for i in range(len(rains)):
             day = rains[i]
             if day > 0:
                 if day in flooded:
                     if dry_days:
-                        # found = False
-                        # for d in range(len(dry_days)):
-                        #     dry_day = dry_days[d]
-                        #     if dry_day > flooded[day]:
-                        #         out[dry_day] = day
-                        #         dry_days.pop(d)
-                        #         found = True
-                        #         break
-                        # if not found:
-                        #     return []
                         dry = bisect_left(dry_days, flooded[day])
                         if dry == len(dry_days):
                             return []

@@ -1,8 +1,6 @@
-n, l, r = list(map(int, input().split()))
-
+(n, l, r) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 c = [0 for i in range(100005)]
 for i in range(l - 1, r):
     c[a[i]] += 1

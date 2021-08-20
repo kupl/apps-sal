@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = 0
 a = 0
 l = []
@@ -15,13 +15,13 @@ l.reverse()
 if a == 0 and k != 0:
     for i in l:
         s = k * s + i
-        if s > 10**9 or s < -10**9:
+        if s > 10 ** 9 or s < -10 ** 9:
             break
-if k == 0 and ((not f and l[-1] == 0) or (f and (n - a) % 2 == 0)):
-    print("Yes")
+if k == 0 and (not f and l[-1] == 0 or (f and (n - a) % 2 == 0)):
+    print('Yes')
 elif k == 0:
-    print("No")
-elif (a == 0 and s == 0) or (n % 2 == 1 and a > 0):
-    print("Yes")
+    print('No')
+elif a == 0 and s == 0 or (n % 2 == 1 and a > 0):
+    print('Yes')
 else:
-    print("No")
+    print('No')

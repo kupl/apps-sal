@@ -1,6 +1,5 @@
-# cook your dish here
 try:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     m = n
     c = 0
     while m != 0:
@@ -11,13 +10,12 @@ try:
             n = n - 1
             if n == 0:
                 break
-        else:
-            if n % 10 != 0:
-                n = n - 1
-            elif n % 10 == 0:
-                n = n // 10
-            elif n == 0:
-                break
+        elif n % 10 != 0:
+            n = n - 1
+        elif n % 10 == 0:
+            n = n // 10
+        elif n == 0:
+            break
     print(n)
 except:
     pass

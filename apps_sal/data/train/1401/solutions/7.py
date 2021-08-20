@@ -1,4 +1,4 @@
-t, k = list(map(int, input().split()))
+(t, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 arr.sort()
 c = 0

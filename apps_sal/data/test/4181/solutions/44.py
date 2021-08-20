@@ -4,9 +4,9 @@ B = [int(i) for i in input().split()]
 ans = 0
 for i in range(N):
     p = A[i] + A[i + 1]
-    if(p - B[i] >= 0):
+    if p - B[i] >= 0:
         ans += B[i]
-        if(A[i] - B[i] < 0):
+        if A[i] - B[i] < 0:
             A[i + 1] = p - B[i]
     else:
         ans += p

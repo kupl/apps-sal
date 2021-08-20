@@ -6,7 +6,7 @@ for x in reversed(a):
     m[x] = m[x + 1] + 1
 v = max(list(m.keys()), key=m.get)
 seq = []
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     if v == x:
         seq.append(i + 1)
         v += 1

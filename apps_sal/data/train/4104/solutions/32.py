@@ -7,4 +7,4 @@ def max_tri_sum(numbers):
         elif answer == 3:
             break
         print(answer)
-    return(sum(answer))
+    return sum(answer)

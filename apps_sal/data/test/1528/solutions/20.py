@@ -1,25 +1,20 @@
-n, x = map(int, input().split())
-
-f_dict = {
-    0: 1
-}
+(n, x) = map(int, input().split())
+f_dict = {0: 1}
 
 
 def f(n):
     if f_dict.get(n):
         return f_dict.get(n)
-    return (3 + f(n - 1) * 2)
+    return 3 + f(n - 1) * 2
 
 
-patty_dict = {
-    0: 1
-}
+patty_dict = {0: 1}
 
 
 def total_patty(n):
     if patty_dict.get(n):
         return patty_dict.get(n)
-    return (1 + 2 * total_patty(n - 1))
+    return 1 + 2 * total_patty(n - 1)
 
 
 def count_patty(n, x):

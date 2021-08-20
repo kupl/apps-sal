@@ -1,5 +1,4 @@
-p, k = list(map(int, input().split()))
-
+(p, k) = list(map(int, input().split()))
 ans = None
 for x in range(0, k):
     res = []

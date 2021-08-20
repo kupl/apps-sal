@@ -1,4 +1,5 @@
 class Solution:
+
     def leastInterval(self, tasks, n):
         """
         :type tasks: List[str]

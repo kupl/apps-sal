@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.name = name
         self.children = []
@@ -27,13 +28,5 @@ class ThroneInheritance:
                 ordering.append(node.name)
             for c in node.children:
                 preOrder(c)
-
         preOrder(self.king)
         return ordering
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

@@ -1,10 +1,5 @@
 from bisect import insort
 
-# abcd
-# aabc
-# aaab aabb
-# aaaa
-
 
 def main():
     wd = input()
@@ -15,15 +10,12 @@ def main():
         chars[c] += 1
     odds = list()
     evens = list()
-
-    for k, v in list(chars.items()):
+    for (k, v) in list(chars.items()):
         if v % 2:
             odds.append((k, v))
         else:
             evens.append((k, v))
-
     odds.sort()
-    # print(odds)
     while len(odds) > 1:
         odds[0] = (odds[0][0], odds[0][1] + 1)
         odds[-1] = (odds[-1][0], odds[-1][1] - 1)
@@ -34,19 +26,14 @@ def main():
         if odds[0][1] % 2 == 0:
             evens.append(odds[0])
             del odds[0]
-
     if len(odds) and odds[0][1] > 1:
         evens.append((odds[0][0], odds[0][1] - 1))
         odds[0] = (odds[0][0], 1)
-
     evens.sort()
-    #print(odds,'\n', evens)
-
     p = list()
-    for x, c in evens:
+    for (x, c) in evens:
         for k in range(c // 2):
             p.append(x)
-
     if len(odds):
         print(''.join(p + [odds[0][0] for _ in range(odds[0][1])] + p[::-1]))
     else:

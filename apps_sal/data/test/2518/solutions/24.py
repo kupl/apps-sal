@@ -1,7 +1,7 @@
 def abc063_d():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     H = [int(input()) for _ in range(n)]
-    lower, upper = 0, 10**16
+    (lower, upper) = (0, 10 ** 16)
     d = a - b
     while upper - lower > 1:
         x = (upper + lower) // 2

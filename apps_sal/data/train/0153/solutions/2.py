@@ -1,9 +1,11 @@
 class Solution:
+
     def makesquare(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
+
         def checkv(t, c, nums, used):
             if t == 0:
                 return True

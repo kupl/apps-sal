@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         if k > len(s):
             return False
@@ -8,7 +9,7 @@ class Solution:
                 dictionary[character] += 1
             else:
                 dictionary[character] = 1
-        print((list(dictionary.values())))
+        print(list(dictionary.values()))
         odd_occurences = 0
         for e in list(dictionary.values()):
             if e % 2 == 1:

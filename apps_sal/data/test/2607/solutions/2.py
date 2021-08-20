@@ -38,9 +38,8 @@ for _ in range(t):
                     ok = False
                     break
             if ok:
-                print("".join(a))
+                print(''.join(a))
             else:
                 print(-1)
-
         else:
             print(-1)

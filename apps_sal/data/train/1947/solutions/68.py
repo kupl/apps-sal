@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def wordSubsets(self, A, B):
         count = collections.Counter()
         for b in B:

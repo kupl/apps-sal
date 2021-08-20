@@ -1,2 +1,2 @@
 str = input()
-print(int(str)**2)
+print(int(str) ** 2)

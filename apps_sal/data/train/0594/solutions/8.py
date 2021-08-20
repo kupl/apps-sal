@@ -10,8 +10,8 @@ def max_possible_sum_of_subsegment(array):
     return maxx
 
 
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 tot = sum(l)
 maxx = max_possible_sum_of_subsegment(l)
-print(tot - (maxx) + (maxx / x))
+print(tot - maxx + maxx / x)

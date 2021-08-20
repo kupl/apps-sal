@@ -12,15 +12,11 @@ def solve(B):
         else:
             odds.append(b)
     if len(evens) == 0:
-        # if no evens, we're gucci
         return []
-
     even_gcd = evens[0]
     for e in evens:
         even_gcd = math.gcd(even_gcd, e)
-
     even_remove = [even_gcd * x for x in solve([e // even_gcd for e in evens])]
-
     if len(odds) + len(even_remove) < len(evens):
         return odds + even_remove
     else:
@@ -30,4 +26,4 @@ def solve(B):
 ans = solve(B)
 print(len(ans))
 if len(ans) != 0:
-    print(" ".join([str(x) for x in ans]))
+    print(' '.join([str(x) for x in ans]))

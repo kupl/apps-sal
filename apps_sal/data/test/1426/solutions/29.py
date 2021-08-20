@@ -1,16 +1,14 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 u = []
 v = []
 g = [[] for _ in range(n)]
-
 for i in range(m):
-    uu, vv = map(int, input().split())
+    (uu, vv) = map(int, input().split())
     u.append(uu)
     v.append(vv)
     g[uu - 1].append(vv - 1)
-
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 s -= 1
 t -= 1
 
@@ -35,7 +33,6 @@ def bfs(u):
 
 
 d = bfs(s)
-
 ans = int(d[t][0] / 3)
 if d[t][0] == -1:
     ans = -1

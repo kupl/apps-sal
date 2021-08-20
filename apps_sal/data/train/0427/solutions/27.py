@@ -1,6 +1,6 @@
 class Solution:
+
     def countOrders(self, n: int) -> int:
-        # m = m * 2
         res = 1
         for i in range(1, n + 1):
             res = res * self.choose(2 * i, 2)

@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         current_picking = tree[0]
         prev_picking = None
@@ -11,17 +12,13 @@ class Solution:
                     prev_picking = current_picking
                     current_picking = tree[i]
                     baskets[current_picking] = [i, i]
+                elif tree[i] != prev_picking:
+                    baskets = {current_picking: [baskets[prev_picking][1] + 1, baskets[current_picking][1]], tree[i]: [i, i]}
+                    prev_picking = current_picking
+                    current_picking = tree[i]
                 else:
-                    if tree[i] != prev_picking:
-                        baskets = {
-                            current_picking: [baskets[prev_picking][1] + 1, baskets[current_picking][1]],
-                            tree[i]: [i, i]
-                        }
-                        prev_picking = current_picking
-                        current_picking = tree[i]
-                    else:
-                        prev_picking, current_picking = current_picking, prev_picking
-                        baskets[current_picking][1] = i
+                    (prev_picking, current_picking) = (current_picking, prev_picking)
+                    baskets[current_picking][1] = i
             else:
                 baskets[current_picking][1] = i
             if baskets.get(current_picking) and baskets.get(prev_picking):

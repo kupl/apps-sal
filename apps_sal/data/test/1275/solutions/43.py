@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 k = abs(k)
 li = [0] * (n * 2 + 1)
 for i in range(2, n * 2 + 1):

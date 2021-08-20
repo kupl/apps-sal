@@ -4,43 +4,39 @@ if icase == 0:
     s = input()
 elif icase == 1:
     n = 3
-    s = "())"
+    s = '())'
 elif icase == 2:
     n = 6
-    s = ")))())"
+    s = ')))())'
 elif icase == 3:
     n = 8
-    s = "))))(((("
-
+    s = '))))(((('
 l = []
 r = []
 sim = s[0]
-if sim == "(":
+if sim == '(':
     lidx = 0
     l.append(1)
     ridx = -1
-elif sim == ")":
+elif sim == ')':
     lidx = 0
     l.append(0)
     ridx = 0
     r.append(1)
-
 for i in range(1, len(s)):
-    if s[i] == "(" and s[i - 1] == "(":
+    if s[i] == '(' and s[i - 1] == '(':
         l[lidx] += 1
-    elif s[i] == "(" and s[i - 1] == ")":
+    elif s[i] == '(' and s[i - 1] == ')':
         lidx += 1
         l.append(1)
-    elif s[i] == ")" and s[i - 1] == ")":
+    elif s[i] == ')' and s[i - 1] == ')':
         r[ridx] += 1
-    elif s[i] == ")" and s[i - 1] == "(":
+    elif s[i] == ')' and s[i - 1] == '(':
         ridx += 1
         r.append(1)
-
 ll = sum(l)
 rr = sum(r)
 ds = ll - rr
-
 if len(l) > len(r):
     r.append(0)
 xmin = 0
@@ -48,6 +44,5 @@ x = 0
 for i in range(len(l)):
     x = x + l[i] - r[i]
     xmin = min(x, xmin)
-
-strs = "(" * (-xmin) + s + ")" * (ds - xmin)
+strs = '(' * -xmin + s + ')' * (ds - xmin)
 print(strs)

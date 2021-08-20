@@ -1,9 +1,8 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 W = [1] * w
 H = [1] * h
-
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         for i in range(x):
             W[i] = 0

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     L = []
     for i in range(N):
         L.append(list(map(int, input().split())))

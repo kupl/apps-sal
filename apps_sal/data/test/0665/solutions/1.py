@@ -1,14 +1,14 @@
 t = int(input())
 for i in range(t):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    mx, sm, mxi = 0, 0, 0
+    (mx, sm, mxi) = (0, 0, 0)
     k = True
     for ii in range(len(a)):
         i = a[ii]
         sm += i
         if i > mx:
-            mx, mxi = i, ii
+            (mx, mxi) = (i, ii)
         if sm > s:
             break
     else:

@@ -24,5 +24,4 @@ class Solution:
                 if grid[row][col] != '\\\\':
                     self.union((row, col, 0), (row, col, 1))
                     self.union((row, col, 2), (row, col, 3))
-
         return len(set(map(self.find, self.f)))

@@ -4,4 +4,4 @@ class Cat(Animal):
         self.Animal = Animal
 
     def speak(self):
-        return "{} meows.".format(self.Animal)
+        return '{} meows.'.format(self.Animal)

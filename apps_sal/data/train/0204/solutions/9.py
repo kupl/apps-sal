@@ -1,8 +1,9 @@
 class Solution:
+
     def search(self, nums, target):
         if len(nums) <= 3:
             return nums.index(target) if target in nums else -1
-        l, r = 0, len(nums) - 1
+        (l, r) = (0, len(nums) - 1)
         while l < r:
             m = (l + r) // 2
             left = nums[l]

@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     r = list(map(int, input().split()))
-    rating = [[r[i]] * (m) for i in range(n)]
+    rating = [[r[i]] * m for i in range(n)]
     ranking = [[0] * m for i in range(n)]
     for i in range(n):
         diff = list(map(int, input().split()))
@@ -11,7 +10,6 @@ for _ in range(t):
             rating[i][j] += diff[j]
             if j + 1 < m:
                 rating[i][j + 1] = rating[i][j]
-
     for i in range(m):
         rate = [[j, rating[j][i]] for j in range(n)]
         rate = sorted(rate, key=lambda x: x[1], reverse=True)
@@ -24,7 +22,6 @@ for _ in range(t):
                 c += 1 + gap
                 gap = 0
             ranking[rate[j][0]][i] = c
-
     count = 0
     for i in range(n):
         rate = rating[i].copy()

@@ -1,5 +1,5 @@
-alth = "abcdefghijklmnopqrstuvwxyz"
-alth2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alth = 'abcdefghijklmnopqrstuvwxyz'
+alth2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 s2 = [[0] * 26 for i in range(2)]
 s3 = [[0] * 26 for i in range(2)]
 s = input()

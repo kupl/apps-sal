@@ -3,4 +3,4 @@ def solve(n):
         return n
     a = int((len(str(n)) - 1) * '9')
     b = n - a
-    return sum([int(i) for i in (list(str(a)) + list(str(b)))])
+    return sum([int(i) for i in list(str(a)) + list(str(b))])

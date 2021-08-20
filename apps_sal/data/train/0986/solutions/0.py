@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     t = t - 1
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = [0] * n
     done = True
 
@@ -11,14 +11,12 @@ while t > 0:
                 a[j] = z
                 done = True
                 break
+            elif a[j] > z:
+                swap(j)
+                a[j] = z
             else:
-                if a[j] > z:
-                    swap(j)
-                    a[j] = z
-                else:
-                    done = False
-                    break
-
+                done = False
+                break
     for i in range(0, n):
         for j in range(0, n):
             if abs(i - j) == k:
@@ -26,37 +24,16 @@ while t > 0:
                     a[j] = i + 1
                     done = True
                     break
+                elif a[j] > i + 1:
+                    swap(a[j])
+                    a[j] = i + 1
                 else:
-                    if a[j] > i + 1:
-                        swap(a[j])
-                        a[j] = i + 1
-                    else:
-                        done = False
-
+                    done = False
     if 0 in a:
         print('CAPTAIN AMERICA EVADES')
+    elif done:
+        for c in a:
+            print(c, end=' ')
+        print()
     else:
-        if done:
-            for c in a:
-                print(c, end=' ')
-            print()
-        else:
-            print('CAPTAIN AMERICA EVADES')
-
-    # for i in range(1,n+1):
-    #   if i - k >=0 :
-    #       if a[abs(i-k-1)] == 0:
-    #           a[abs(i-k-1)] = i
-    #           done = True
-    #       else:
-    #           done = False
-    #           break
-    #   else:
-    #       done = False
-    #       break
-    # if done:
-    #   for c in a:
-    #       print c,
-    #   print
-    # else:
-    #   print "CAPTAIN AMERICA EVADES"
+        print('CAPTAIN AMERICA EVADES')

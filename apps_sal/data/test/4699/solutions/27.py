@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = list(input().split())
-#n = 1000
 flag = True
 while flag:
     flag2 = True
@@ -13,5 +12,4 @@ while flag:
         break
     else:
         flag = True
-
 print(n)

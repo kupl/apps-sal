@@ -9,7 +9,7 @@ class Task:
 
     def getData(self):
         input()
-        self.a = [int(x) for x in input().split(" ")]
+        self.a = [int(x) for x in input().split(' ')]
 
     def solve(self):
         currentFolderCounter = 0
@@ -29,7 +29,7 @@ class Task:
 
     def printAnswer(self):
         print(len(self.answer))
-        print(re.sub('[\[\],]', '', str(self.answer)))
+        print(re.sub('[\\[\\],]', '', str(self.answer)))
 
 
 task = Task()

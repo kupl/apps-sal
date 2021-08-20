@@ -1,5 +1,5 @@
 def solve():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     c = n // k
     if m < c:
         print(m)

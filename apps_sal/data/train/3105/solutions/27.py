@@ -3,6 +3,5 @@ def count_sheep(n):
     details = []
     for i in range(1, n + 1):
         count += 1
-        details.append(str(count) + " sheep...")
-
-    return "".join(details)
+        details.append(str(count) + ' sheep...')
+    return ''.join(details)

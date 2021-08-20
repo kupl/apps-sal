@@ -7,14 +7,13 @@ sys.setrecursionlimit(3000)
 def main():
     ntc = next(ints)
     for tc in range(1, ntc + 1):
-        n, k = (next(ints) for i in range(2))
+        (n, k) = (next(ints) for i in range(2))
         s = next(strs)
         R = (n + k - 1) // k
         m = [[int(i * k + j < n and s[i * k + j] == '1') for i in range(R)] for j in range(k)]
         s = [sum(m[j]) for j in range(k)]
         s_sum = sum(s)
         ans = [0] * k
-        # 0  1  1  0  1  0  1  1  0
         for j in range(k):
             off = [0] * (R + 1)
             on = [0] * (R + 1)

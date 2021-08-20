@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 def gcd(m, n):
     if n == 0:
         return m
@@ -8,7 +5,7 @@ def gcd(m, n):
 
 
 def main():
-    A, B, C, D = list(map(int, input().split()))
+    (A, B, C, D) = list(map(int, input().split()))
     ans = B - A + 1
     ans -= B // C + B // D
     ans += (A - 1) // C + (A - 1) // D

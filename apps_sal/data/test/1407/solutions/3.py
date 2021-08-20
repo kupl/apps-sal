@@ -1,11 +1,8 @@
 import bisect
-
 from math import sqrt
-
-maxn = int(1e5 + 50)
+maxn = int(100000.0 + 50)
 isprime = [1 for i in range(maxn + 1)]
-
-d = [1E9 for i in range(maxn + 1)]
+d = [1000000000.0 for i in range(maxn + 1)]
 
 
 def sieve():
@@ -20,18 +17,14 @@ def sieve():
 
 
 sieve()
-
 dst = 0
 for i in range(maxn, 0, -1):
     if isprime[i]:
         dst = 0
     d[i] = min(d[i], dst)
     dst += 1
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 matrix = [list(map(int, input().split())) for i in range(n)]
-
 rows = (sum([d[x] for x in matrix[i]]) for i in range(n))
 column = (sum((d[matrix[i][j]] for i in range(n))) for j in range(m))
-
 print(min(min(rows), min(column)))

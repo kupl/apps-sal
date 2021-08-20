@@ -5,8 +5,8 @@ def f(a, b):
         return a // b + 1
 
 
-hh, mm = map(int, input().split())
-h, d, c, n = map(int, input().split())
+(hh, mm) = map(int, input().split())
+(h, d, c, n) = map(int, input().split())
 t = hh * 60 + mm
 if t >= 20 * 60:
     print(c * f(h, n) * 0.8)

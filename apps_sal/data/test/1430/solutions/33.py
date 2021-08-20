@@ -1,9 +1,8 @@
-N, K = map(int, input().split())
-S = input() + "2"
+(N, K) = map(int, input().split())
+S = input() + '2'
 L = []
 cnt = 0
 temp = int(S[0])
-
 for x in S:
     if temp == int(x):
         cnt += 1
@@ -11,19 +10,15 @@ for x in S:
         L.append(cnt)
         cnt = 1
         temp = int(x)
-
-if S[0] == "0":
+if S[0] == '0':
     Lcs = [0, 0]
 else:
     Lcs = [0]
-
 for x in L:
     Lcs.append(Lcs[-1] + x)
-
 ans = Lcs[1]
 N = len(Lcs)
 i = 2
-
 if i + 2 * (K - 1) > N - 1:
     print(Lcs[-1])
 else:

@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getPower(n):
             step = 0
             while n != 1:
@@ -13,6 +15,5 @@ class Solution:
         for i in range(lo, hi + 1):
             ip = getPower(i)
             ans.append((ip, i))
-        # print(ans)
         ans.sort()
         return ans[k - 1][1]

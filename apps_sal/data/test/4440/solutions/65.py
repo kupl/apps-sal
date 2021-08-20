@@ -1,3 +1,3 @@
 l = int(input())
-ans = (l / 3)**3
+ans = (l / 3) ** 3
 print(ans)

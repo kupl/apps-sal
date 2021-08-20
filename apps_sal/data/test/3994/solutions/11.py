@@ -1,14 +1,9 @@
-# D1_B
-
 lim = 200
 arr = [0] * lim
-
 n = int(input())
-
 st = list(input())
-
 for i in range(0, n):
-    ln = [int(j) for j in input().split(" ")]
+    ln = [int(j) for j in input().split(' ')]
     a = ln[0]
     b = ln[1]
     o = [False, True][int(st[i])]
@@ -21,5 +16,4 @@ for i in range(0, n):
             o = not o
         if o:
             arr[j] += 1
-
 print(max(arr))

@@ -1,7 +1,7 @@
-string, column, cnt, mincnt = map(int, input().split())
+(string, column, cnt, mincnt) = map(int, input().split())
 maps = [['*' for i in range(column)] for j in range(string)]
 for i in range(cnt):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     maps[a - 1][b - 1] = '#'
 ans = 0
 for i in range(string):

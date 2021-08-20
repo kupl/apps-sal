@@ -1,7 +1,6 @@
 def greet(name, owner):
-    # Add code here
     if name == owner:
-        what = "boss"
+        what = 'boss'
     else:
-        what = "guest"
-    return "Hello {}".format(what)
+        what = 'guest'
+    return 'Hello {}'.format(what)

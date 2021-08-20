@@ -1,10 +1,10 @@
-n, *xy = map(int, open(0).read().split())
-x = [[xx, i] for i, xx in enumerate(xy[::2])]
-y = [[yy, i] for i, yy in enumerate(xy[1::2])]
+(n, *xy) = map(int, open(0).read().split())
+x = [[xx, i] for (i, xx) in enumerate(xy[::2])]
+y = [[yy, i] for (i, yy) in enumerate(xy[1::2])]
 x.sort()
 y.sort()
-px = [[x1 - x0, i0, i1] for (x0, i0), (x1, i1) in zip(x, x[1:])]
-py = [[y1 - y0, i0, i1] for (y0, i0), (y1, i1) in zip(y, y[1:])]
+px = [[x1 - x0, i0, i1] for ((x0, i0), (x1, i1)) in zip(x, x[1:])]
+py = [[y1 - y0, i0, i1] for ((y0, i0), (y1, i1)) in zip(y, y[1:])]
 p = px + py
 x = []
 y = []

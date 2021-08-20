@@ -3,8 +3,7 @@ import sys
 
 
 def testcase():
-
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     brr = list(map(int, input().split()))
     arr.sort()

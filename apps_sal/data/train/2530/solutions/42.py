@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         songs_dict = [0] * 60
         res = 0

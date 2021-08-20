@@ -1,14 +1,11 @@
 from bisect import bisect_right
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 flag = 0
-
 A.sort()
-
 tmp1 = 1
 tmp2 = 1
-
 l = 0
 r = n - 1
 if k % 2 == 1:
@@ -28,7 +25,6 @@ for i in range(k // 2):
         r -= 2
         tmp1 *= vr
     tmp1 %= mod
-
 idx = bisect_right(A, 0)
 if idx == n:
     idx -= 1
@@ -44,7 +40,6 @@ for i in range(k):
         r += 1
         tmp2 *= vr
     tmp2 %= mod
-
 if flag == 0:
     print(tmp1)
 else:

@@ -2,10 +2,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-5
--5 -3 5 3 0
-'''
+'\n5\n-5 -3 5 3 0\n'
 n = int(input())
 a = sorted(list(mi()))
 ans = 0

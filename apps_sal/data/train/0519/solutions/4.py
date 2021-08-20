@@ -1,6 +1,5 @@
-# cook your dish here
 inpu = list(map(int, input().split()))
-n, k = inpu[0], inpu[1]
+(n, k) = (inpu[0], inpu[1])
 v = inpu[2:n + 2]
 b = inpu[n + 2:2 * n + 2]
 brac = {i: set() for i in range(n)}
@@ -8,11 +7,10 @@ for i in range(n):
     for j in range(i + 1, n):
         if b[j] - b[i] == k:
             brac[i].add(j)
-
 dp = [[0 for i in range(n)] for j in range(n)]
 for j in range(1, n):
     for i in range(n - j):
-        ans = -float("inf")
+        ans = -float('inf')
         if i + j in brac[i]:
             if j == 1:
                 ans = max(ans, v[i + j] + v[i])

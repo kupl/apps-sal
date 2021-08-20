@@ -5,4 +5,3 @@ def sum_array(arr):
         return sum(sorted(arr)[1:-1])
     else:
         return 0
-    #sum(i for i in arr if i > min(arr) and i < max(arr))

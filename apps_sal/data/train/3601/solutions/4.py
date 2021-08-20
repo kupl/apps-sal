@@ -1,5 +1,5 @@
 def find_nb(m):
-    total, i = 1, 2
+    (total, i) = (1, 2)
     while total < m:
         total += i * i * i
         i += 1

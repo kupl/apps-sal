@@ -5,10 +5,10 @@ import collections
 import itertools
 import sys
 import random
-# Union-Find
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = [-1 for i in range(self.n)]
@@ -26,7 +26,7 @@ class UnionFind():
         if p == q:
             return None
         if p > q:
-            p, q = q, p
+            (p, q) = (q, p)
         self.par[p] += self.par[q]
         self.par[q] = p
 
@@ -35,8 +35,6 @@ class UnionFind():
 
     def size(self, x):
         return -self.par[self.find(x)]
-
-# 素数関連
 
 
 def prime_numbers(x):
@@ -69,7 +67,6 @@ def is_prime(x):
         prime_number += difference
         difference = 6 - difference
     return True
-# Prime-Factorize
 
 
 def prime_factorize(n):
@@ -89,11 +86,11 @@ def prime_factorize(n):
     return res
 
 
-# nCr
 mod = 10 ** 9 + 7
 
 
-class nCr():
+class nCr:
+
     def __init__(self, n):
         self.n = n
         self.fa = [1] * (self.n + 1)
@@ -108,21 +105,20 @@ class nCr():
         if n < 0 or r < 0:
             return 0
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
-# 拡張Euclidの互除法
 
 
 def extgcd(a, b, d=0):
     g = a
     if b == 0:
-        x, y = 1, 0
+        (x, y) = (1, 0)
     else:
-        x, y, g = extgcd(b, a % b)
-        x, y = y, x - a // b * y
-    return x, y, g
-# BIT
+        (x, y, g) = extgcd(b, a % b)
+        (x, y) = (y, x - a // b * y)
+    return (x, y, g)
 
 
-class BinaryIndexedTree():
+class BinaryIndexedTree:
+
     def __init__(self, n):
         self.n = n
         self.BIT = [0] * (self.n + 1)
@@ -138,10 +134,10 @@ class BinaryIndexedTree():
             res += self.BIT[i]
             i -= i & -i
         return res
-# Associative Array
 
 
-class AssociativeArray():
+class AssociativeArray:
+
     def __init__(self, q):
         self.dic = dict()
         self.q = q
@@ -150,15 +146,14 @@ class AssociativeArray():
         for i in range(self.q):
             Query = list(map(int, input().split()))
             if Query[0] == 0:
-                x, y, z = Query
+                (x, y, z) = Query
                 self.dic[y] = z
             else:
-                x, y = Query
+                (x, y) = Query
                 if y in self.dic:
                     print(self.dic[y])
                 else:
                     print(0)
-# Floor Sum
 
 
 def floor_sum(n, m, a, b):
@@ -173,17 +168,16 @@ def floor_sum(n, m, a, b):
     x_max = y_max * m - b
     if y_max == 0:
         return res
-    res += y_max * (n + (-x_max // a))
+    res += y_max * (n + -x_max // a)
     res += floor_sum(y_max, a, m, (a - x_max % a) % a)
     return res
-# Z-Algorithm
 
 
 def z_algorithm(s):
     str_len = len(s)
     res = [0] * str_len
     res[str_len - 1] = str_len
-    i, j = 1, 0
+    (i, j) = (1, 0)
     while i < str_len:
         while i + j < str_len and s[i + j] == s[j]:
             j += 1
@@ -200,16 +194,17 @@ def z_algorithm(s):
     return res
 
 
-class Manacher():
+class Manacher:
+
     def __init__(self, s):
         self.s = s
 
     def coustruct(self):
-        i, j = 0, 0
+        (i, j) = (0, 0)
         s_len = len(self.s)
         res = [0] * s_len
         while i < s_len:
-            while i - j >= 0 and i + j < s_len and self.s[i - j] == self.s[i + j]:
+            while i - j >= 0 and i + j < s_len and (self.s[i - j] == self.s[i + j]):
                 j += 1
             res[i] = j
             k = 1
@@ -217,7 +212,6 @@ class Manacher():
                 k += 1
             i += k
             j -= k
-# mod-sqrt
 
 
 def mod_sqrt(a, p):
@@ -236,11 +230,11 @@ def mod_sqrt(a, p):
         if pow(r, k, p) == p - 1:
             break
     k += 1
-    w, x, y, z = n, 1, 1, 0
+    (w, x, y, z) = (n, 1, 1, 0)
     while k:
         if k % 2:
-            y, z = w * y + r * x * z, x * y + w * z
-        w, x = w * w + r * x * x, 2 * w * x
+            (y, z) = (w * y + r * x * z, x * y + w * z)
+        (w, x) = (w * w + r * x * x, 2 * w * x)
         w %= p
         x %= p
         y %= p
@@ -249,7 +243,7 @@ def mod_sqrt(a, p):
     return y
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 for i in range(1, n):
     a[i] += a[i - 1]

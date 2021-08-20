@@ -1,52 +1,49 @@
-#
-# abc093 a
-#
 import sys
 from io import StringIO
 import unittest
 
 
 class TestClass(unittest.TestCase):
+
     def assertIO(self, input, output):
-        stdout, stdin = sys.stdout, sys.stdin
-        sys.stdout, sys.stdin = StringIO(), StringIO(input)
+        (stdout, stdin) = (sys.stdout, sys.stdin)
+        (sys.stdout, sys.stdin) = (StringIO(), StringIO(input))
         resolve()
         sys.stdout.seek(0)
         out = sys.stdout.read()[:-1]
-        sys.stdout, sys.stdin = stdout, stdin
+        (sys.stdout, sys.stdin) = (stdout, stdin)
         self.assertEqual(out, output)
 
     def test_入力例_1(self):
-        input = """bac"""
-        output = """Yes"""
+        input = 'bac'
+        output = 'Yes'
         self.assertIO(input, output)
 
     def test_入力例_2(self):
-        input = """bab"""
-        output = """No"""
+        input = 'bab'
+        output = 'No'
         self.assertIO(input, output)
 
     def test_入力例_3(self):
-        input = """abc"""
-        output = """Yes"""
+        input = 'abc'
+        output = 'Yes'
         self.assertIO(input, output)
 
     def test_入力例_4(self):
-        input = """aaa"""
-        output = """No"""
+        input = 'aaa'
+        output = 'No'
         self.assertIO(input, output)
 
 
 def resolve():
     S = input()
-    if "a" in S and "b" in S and "c" in S:
-        print("Yes")
+    if 'a' in S and 'b' in S and ('c' in S):
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():
-    # unittest.main()
     resolve()
 
 

@@ -1,8 +1,7 @@
-# cook your dish here
 x = int(input())
 for m in range(x):
     y = int(input())
-    l = list(map(int, input().split(" ")))
+    l = list(map(int, input().split(' ')))
     count = 0
     for i in range(y - 1):
         f = l[i]

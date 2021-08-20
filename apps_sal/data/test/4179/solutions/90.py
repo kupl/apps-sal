@@ -1,9 +1,10 @@
-N, M, C = map(int, input().split())
+(N, M, C) = map(int, input().split())
 BM = list(map(int, input().split()))
 ANM = [list(map(int, input().split())) for _ in range(N)]
 
 
 class Answer:
+
     def __init__(self, N, M, C, BM, ANM):
         self.N = N
         self.M = M

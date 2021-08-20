@@ -3,7 +3,6 @@ n = int(input())
 a = input().split()
 for i in range(0, n):
     a[i] = int(a[i])
-
 a.sort()
 dists = []
 for i in range(1, n):

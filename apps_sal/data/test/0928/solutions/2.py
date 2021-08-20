@@ -1,6 +1,5 @@
-N, K = [int(_) for _ in input().split()]
+(N, K) = [int(_) for _ in input().split()]
 A = [int(_) for _ in input().split()]
-
 ans = N * (N - 1) // 2
 k = 0
 s = 0

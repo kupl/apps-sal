@@ -1,11 +1,9 @@
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 s = set()
-
 s.add(A)
 s.add(B)
 s.add(C)
-
 if len(s) == 2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

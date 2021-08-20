@@ -9,19 +9,16 @@ b[1] -= v
 b[2] -= v
 b[4] -= v
 h.append(v)
-
 v = min(b[1], b[3], b[6])
 b[1] -= v
 b[3] -= v
 b[6] -= v
 h.append(v)
-
 v = min(b[1], b[2], b[6])
 b[1] -= v
 b[2] -= v
 b[6] -= v
 h.append(v)
-
 if sum(h) * 3 < n:
     print(-1)
 else:

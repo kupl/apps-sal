@@ -1,4 +1,5 @@
 class Solution:
+
     def dfs(self, node, v, g):
         if v[node] == 2:
             return False
@@ -20,7 +21,6 @@ class Solution:
         g = {}
         v = [0] * len(graph)
         ans = set()
-
         for i in range(len(graph)):
             if not self.dfs(i, v, graph):
                 ans.add(i)

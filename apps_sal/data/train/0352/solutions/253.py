@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.cache = collections.defaultdict(int)
 
@@ -19,11 +20,9 @@ class Solution:
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         ans = 0
-
         for word in words[::-1]:
             if word not in self.cache:
                 ans = max(ans, self.longestEndWith(word, words))
                 if ans == len(words):
                     break
-
         return ans

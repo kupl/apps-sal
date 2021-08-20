@@ -7,7 +7,7 @@ def human_years_cat_years_dog_years(human_years):
 
 def critter_age(human_years, critter_years_multipliers):
     critter_age = previous_year = 0
-    for year, multiplier in critter_years_multipliers:
+    for (year, multiplier) in critter_years_multipliers:
         is_older = human_years > year
         years_difference = (year if is_older else human_years) - previous_year
         critter_age += multiplier * years_difference
@@ -18,11 +18,6 @@ def critter_age(human_years, critter_years_multipliers):
 
 
 infinity = float('inf')
-
 human_age = partial(critter_age, critter_years_multipliers=((infinity, 1),))
-cat_age = partial(critter_age, critter_years_multipliers=((1, 15),
-                                                          (2, 9),
-                                                          (infinity, 4)))
-dog_age = partial(critter_age, critter_years_multipliers=((1, 15),
-                                                          (2, 9),
-                                                          (infinity, 5)))
+cat_age = partial(critter_age, critter_years_multipliers=((1, 15), (2, 9), (infinity, 4)))
+dog_age = partial(critter_age, critter_years_multipliers=((1, 15), (2, 9), (infinity, 5)))

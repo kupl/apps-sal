@@ -6,7 +6,6 @@ def answer(n: int, a: List[int]) -> int:
     num = round(sum(a) / n)
     for i in a:
         cost += (i - num) ** 2
-
     return cost
 
 

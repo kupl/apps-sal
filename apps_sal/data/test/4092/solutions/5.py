@@ -7,7 +7,7 @@ ans = 0
 hashi[pref] = 1
 for i in range(n):
     pref += li[i]
-    if(pref in hashi):
+    if pref in hashi:
         ans += 1
         pref = li[i]
         hashi = dict()

@@ -1,12 +1,10 @@
-n, m = map(int, input().split(' '))
+(n, m) = map(int, input().split(' '))
 a = []
 for i in range(n):
     a.append(list(map(int, input().split(' '))))
-
 p = []
 possible = True
 col_swap = False
-# print('swaps:')
 for r in a:
     x = []
     j = 0
@@ -19,7 +17,6 @@ for r in a:
             swaps.append((j, tmp - 1))
         else:
             j += 1
-    # print(swaps)
     if len(swaps) > 2:
         possible = False
         break
@@ -28,20 +25,13 @@ for r in a:
     if len(swaps) > 0:
         x = swaps
         if len(swaps) == 2 and swaps[0][0] == swaps[1][0]:
-            x.append((
-                min(swaps[0][1], swaps[1][1]),
-                max(swaps[0][1], swaps[1][1])
-            ))
+            x.append((min(swaps[0][1], swaps[1][1]), max(swaps[0][1], swaps[1][1])))
         p.append(x)
-
-#print('possible:', possible, 'p:', p, 'col_swap:', col_swap)
 if possible and col_swap and p:
     c = set(p[0])
     for x in p:
         c = c.intersection(x)
     possible = bool(c)
-    #print('c:', c)
-
 if possible:
     print('YES')
 else:

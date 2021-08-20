@@ -1,2 +1,2 @@
 def search_names(x):
-    return([['bar_', 'bar@bar.com']])
+    return [['bar_', 'bar@bar.com']]

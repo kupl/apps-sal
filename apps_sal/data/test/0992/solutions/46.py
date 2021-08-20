@@ -3,7 +3,7 @@ MOD = 998244353
 
 
 def main():
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     a = list(map(int, input().split()))
     dp = np.zeros((n + 1, s + 1), dtype=np.int64)
     dp[0][0] = 1

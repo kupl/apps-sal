@@ -1,21 +1,18 @@
-#
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
 def check(a, x, m):
     Max = m
     flg = True
-
     for val in a[::-1]:
         if val <= Max:
             Max = min(Max, val + x)
+        elif val + x < m:
+            flg = False
+            break
         else:
-            if (val + x) < m:
-                flg = False
-                break
-            else:
-                Max = min(Max, (val + x) % m)
+            Max = min(Max, (val + x) % m)
     return flg
 
 

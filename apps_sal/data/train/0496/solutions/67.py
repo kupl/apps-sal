@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         A.sort()
         dup = []
@@ -12,7 +13,6 @@ class Solution:
         j = 0
         i = -1
         ans = 0
-
         print(seen)
         while j < len(dup):
             if i == dup[j]:
@@ -22,7 +22,6 @@ class Solution:
                 seen.add(curr)
                 ans += curr - dup[j]
                 j += 1
-
             else:
                 i += 1
         return ans

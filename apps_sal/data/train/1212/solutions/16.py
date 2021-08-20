@@ -8,7 +8,7 @@ for i in range(t):
             d[i] = 1
         else:
             d[i] += 1
-    l = [[x, y] for x, y in d.items()]
+    l = [[x, y] for (x, y) in d.items()]
     l.sort(key=lambda j: j[1], reverse=True)
     for i in range(1, 27):
         f = len(s) // i

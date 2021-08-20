@@ -1,9 +1,9 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     v = list(map(int, input().split()))
     reversed_v = [0] + v[::-1]
     v = [0] + v
-    ans = -float("inf")
+    ans = -float('inf')
     for i in range(n + 1):
         for j in range(n + 1):
             if i + j > min(n, k):

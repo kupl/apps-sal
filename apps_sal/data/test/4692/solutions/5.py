@@ -1,5 +1,2 @@
-# 084a
-
 M = int(input())
-
-print((24 + (24 - M)))
+print(24 + (24 - M))

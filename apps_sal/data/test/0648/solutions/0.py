@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-m, b = read()
+(m, b) = read()
 ans = -1
 
 

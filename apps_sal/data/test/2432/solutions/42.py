@@ -6,7 +6,7 @@ from collections import defaultdict, Counter
 
 def main():
     i = bin(int(input()))[2:]
-    i = ('0' * (6 - len(i))) + i
+    i = '0' * (6 - len(i)) + i
     i = ''.join(list(map(lambda x: i[x], [0, 5, 3, 2, 4, 1])))
     print(int(i, 2))
 

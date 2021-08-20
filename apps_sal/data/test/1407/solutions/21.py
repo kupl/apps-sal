@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = [list(map(int, input().split())) for _ in range(n)]
-
-N = int(1e5 + 4)
+N = int(100000.0 + 4)
 is_prime = [0] * N
 is_prime[0] = is_prime[1] = 1
 for i in range(2, N):
@@ -15,7 +14,7 @@ for i in range(N - 2, 0, -1):
         is_prime[i] = is_prime[i + 1]
     else:
         is_prime[i] = i
-r, c = [0] * n, [0] * m
+(r, c) = ([0] * n, [0] * m)
 for i in range(n):
     for j in range(m):
         r[i] += is_prime[arr[i][j]] - arr[i][j]

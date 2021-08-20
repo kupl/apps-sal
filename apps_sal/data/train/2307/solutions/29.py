@@ -1,6 +1,5 @@
-n, A, B = map(int, input().split())
+(n, A, B) = map(int, input().split())
 x = list(map(int, input().split()))
-
 if A >= B:
     ans = B * (n - 1)
 else:

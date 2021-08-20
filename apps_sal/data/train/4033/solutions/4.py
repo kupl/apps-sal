@@ -1,1 +1,2 @@
-def contamination(s, c): return c * len(s)
+def contamination(s, c):
+    return c * len(s)

@@ -1,5 +1,5 @@
 def alternateCase(s):
-    ret = ""
+    ret = ''
     for c in s:
         if c.isalpha():
             if c.isupper():

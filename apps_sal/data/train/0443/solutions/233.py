@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         output = 0
         for item in itertools.combinations([x for x in range(len(rating))], 3):

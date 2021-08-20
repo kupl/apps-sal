@@ -1,12 +1,10 @@
 import sys
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 es = []
 for _ in range(M):
     e = list(map(int, input().split()))
     e[2] *= -1
     es.append(e)
-
 INF = float('inf')
 d = [INF for _ in range(N + 1)]
 d[1] = 0

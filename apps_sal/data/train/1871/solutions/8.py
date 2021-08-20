@@ -10,5 +10,6 @@ def findMaxDiff(node, collected):
 
 
 class Solution:
+
     def maxAncestorDiff(self, root: TreeNode) -> int:
         return findMaxDiff(root, [])

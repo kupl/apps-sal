@@ -1,14 +1,13 @@
-A, B, C, D = list(map(int, input().split()))
-
+(A, B, C, D) = list(map(int, input().split()))
 while A > 0 and C > 0:
     C -= B
     if C <= 0:
-        print("Yes")
+        print('Yes')
         break
     else:
         A -= D
         if A <= 0:
-            print("No")
+            print('No')
             break
         else:
             continue

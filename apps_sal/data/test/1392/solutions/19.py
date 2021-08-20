@@ -6,7 +6,7 @@ def all_zero(mas):
 
 
 I = [int(i) for i in input().split()]
-n, k = I[0], I[1]
+(n, k) = (I[0], I[1])
 ans = 0
 for i in range(n):
     pretender = input()

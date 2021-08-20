@@ -1,11 +1,7 @@
 import bisect
 import numpy as np
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
-#N,K = 9,9
-#A = [-3,-2,-2,-2,0,0,1,2,2]
 
 
 def simple():
@@ -15,21 +11,16 @@ def simple():
 
 def solve():
     A.sort()
-
     iplus = bisect.bisect_right(A, 0)
     izeros = bisect.bisect_left(A, 0)
-
     pluss = np.array(A[iplus:]).astype(np.int64)
     zeros = A[izeros:iplus]
     minuss = np.array(A[:izeros]).astype(np.int64)
-
     nplus = len(pluss)
     nzero = len(zeros)
     nminus = len(minuss)
-
     npminus = nplus * nminus
     npzeros = nzero * (nplus + nminus) + nzero * (nzero - 1) // 2
-
     if npminus < K <= npminus + npzeros:
         return 0
     elif K <= npminus:
@@ -39,7 +30,7 @@ def solve():
             mid = (mn + mx) // 2
             xs = -(-mid // minuss)
             cnt = nplus * nminus
-            cnt -= np.sum(np.searchsorted(pluss, xs, side="left"))
+            cnt -= np.sum(np.searchsorted(pluss, xs, side='left'))
             if cnt >= K:
                 mx = mid
             else:
@@ -49,9 +40,9 @@ def solve():
         nK = K - npminus - npzeros
         pluss2 = (-minuss)[::-1]
         mn = -1
-        mx = max(A[0]**2, A[-1]**2)
-        pluss_p2 = pluss**2
-        pluss2_p2 = pluss2**2
+        mx = max(A[0] ** 2, A[-1] ** 2)
+        pluss_p2 = pluss ** 2
+        pluss2_p2 = pluss2 ** 2
         while mx - mn > 1:
             mid = (mn + mx) // 2
             cnt = 0
@@ -62,7 +53,6 @@ def solve():
             cnt += np.sum(np.searchsorted(pluss2, xs2, side='right'))
             cnt -= np.count_nonzero(pluss2_p2 <= mid)
             cnt = cnt // 2
-            # print(mn,mid,mx,cnt)
             if nK <= cnt:
                 mx = mid
             else:
@@ -70,6 +60,4 @@ def solve():
         return mx
 
 
-print((solve()))
-# for K in range(1,N*(N-1)//2+1):
-#    print(solve(),simple())
+print(solve())

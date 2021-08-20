@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
         longest_common_sub = ''
         str1_len = len(str1)
@@ -14,20 +15,18 @@ class Solution:
                     dp[i][j] = dp[i - 1][j - 1] + 1
                 else:
                     dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + 1
-        # reconstruct the array
         toret = []
         i = str1_len
         j = str2_len
         while i > 0 or j > 0:
-            if i > 0 and j > 0 and str1[i - 1] == str2[j - 1]:
+            if i > 0 and j > 0 and (str1[i - 1] == str2[j - 1]):
                 toret.append(str1[i - 1])
                 i -= 1
                 j -= 1
+            elif dp[i - 1][j] < dp[i][j - 1]:
+                toret.append(str1[i - 1])
+                i -= 1
             else:
-                if dp[i - 1][j] < dp[i][j - 1]:
-                    toret.append(str1[i - 1])
-                    i -= 1
-                else:
-                    toret.append(str2[j - 1])
-                    j -= 1
+                toret.append(str2[j - 1])
+                j -= 1
         return ''.join(reversed(toret))

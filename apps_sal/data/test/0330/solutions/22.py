@@ -1,6 +1,5 @@
 import math
-
-p, y = list(map(int, input().split()))
+(p, y) = list(map(int, input().split()))
 
 
 def isPrime(p, n):
@@ -19,5 +18,4 @@ while i > p:
         ans = i
         break
     i -= 1
-
 print(ans)

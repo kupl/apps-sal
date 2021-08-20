@@ -1,7 +1,7 @@
 def subCompare(s):
     t = 0
     if s is None or not s.isalpha():
-        s = ""
+        s = ''
     for x in s:
         t += ord(x.upper())
     return t

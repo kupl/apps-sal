@@ -1,5 +1,5 @@
 import re
-nomial = re.compile(r'(?P<sign>[\+-]?)(?P<coef>[0-9]*)(?P<x>[a-z]?)\^?(?P<exp>[0-9]*)')
+nomial = re.compile('(?P<sign>[\\+-]?)(?P<coef>[0-9]*)(?P<x>[a-z]?)\\^?(?P<exp>[0-9]*)')
 
 
 def derive(eq):
@@ -9,7 +9,7 @@ def derive(eq):
     c = int(m.group('coef') or '1')
     exp = int(m.group('exp') or '1')
     if not m.group('x'):
-        r = ""
+        r = ''
     elif not m.group('exp'):
         r = m.group('sign') + str(c)
     elif m.group('exp') == '2':

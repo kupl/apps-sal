@@ -23,12 +23,10 @@ def rec(x, y, b):
     return dp[x][y]
 
 
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 t = int(input())
-# t = 1
 for _ in range(t):
     a = list(map(int, list(input())))
-    # a = [randint(0, 1) for i in range(1000)]
     n = len(a)
     dp = [[-1, -1, -1] for i in range(n)]
     res = rec(0, 0, 0)

@@ -2,7 +2,6 @@ def unflatten(flat_array, depth):
     left = True
     i = 0
     new_array = flat_array
-
     for d in range(depth):
         new_array = unflatten_list(new_array, left, i)
         left = not left
@@ -12,12 +11,10 @@ def unflatten(flat_array, depth):
             i = len(new_array) - 1
     return new_array
 
-#true = left, false = right
-
 
 def unflatten_list(array, direction, i):
     new_list = []
-    while (direction == True and i < len(array)) or (direction == False and i >= 0):
+    while direction == True and i < len(array) or (direction == False and i >= 0):
         elem = array[i]
         if type(elem) == list:
             if direction:
@@ -40,20 +37,17 @@ def unflatten_list(array, direction, i):
                 else:
                     new_list.insert(0, elem)
                     i -= 1
-            else:
-                if direction:
-                    if(i + residual <= len(array)):
-                        new_list.append(array[i:i + residual])
-                        i = i + residual
-                    else:
-                        new_list.append(array[i:])
-                        i = len(array)
+            elif direction:
+                if i + residual <= len(array):
+                    new_list.append(array[i:i + residual])
+                    i = i + residual
                 else:
-                    if(i - residual <= len(array)):
-                        new_list.insert(0, array[i - residual + 1: i + 1])
-                        i = i - residual
-                    else:
-                        new_list.insert(0, array[:i + 1])
-                        i = -1
-
+                    new_list.append(array[i:])
+                    i = len(array)
+            elif i - residual <= len(array):
+                new_list.insert(0, array[i - residual + 1:i + 1])
+                i = i - residual
+            else:
+                new_list.insert(0, array[:i + 1])
+                i = -1
     return new_list

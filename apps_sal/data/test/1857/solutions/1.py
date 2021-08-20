@@ -9,7 +9,7 @@ def fact(n):
 
 
 def C(n, k):
-    return fact(n) // (fact(k) * (fact(n - k)))
+    return fact(n) // (fact(k) * fact(n - k))
 
 
 n = int(input())

@@ -3,6 +3,7 @@ import collections
 
 
 class Solution:
+
     def largestComponentSize(self, A) -> int:
         self.pre = {}
         for i in A:

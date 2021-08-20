@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         total = 0
         for num in nums:

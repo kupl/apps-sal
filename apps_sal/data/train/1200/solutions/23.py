@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     s = input()
-    if s.count("A") == s.count("B"):
+    if s.count('A') == s.count('B'):
         flag = 1
         for i in range(0, len(s), 2):
             if s[i] != s[i + 1]:
@@ -9,8 +9,8 @@ for _ in range(int(input())):
                 flag = 0
                 break
         if flag == 0:
-            print("no")
+            print('no')
         else:
-            print("yes")
+            print('yes')
     else:
-        print("no")
+        print('no')

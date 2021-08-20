@@ -20,7 +20,7 @@ for i in range((n + 1) // 2):
     if lis11[i] != -1:
         lis21.append(i)
         if len(lis21) > 1:
-            if (i - lis21[-2]) > long:
+            if i - lis21[-2] > long:
                 long = i - lis21[-2]
     if (i > 0) & (lis11[i] > 0):
         if lis11[i - 1] == lis11[i]:
@@ -29,7 +29,7 @@ for i in range(n // 2):
     if lis12[i] != -1:
         lis22.append(i)
         if len(lis22) > 1:
-            if (i - lis22[-2]) > long:
+            if i - lis22[-2] > long:
                 long = i - lis22[-2]
     if (i > 0) & (lis12[i] > 0):
         if lis12[i - 1] == lis12[i]:

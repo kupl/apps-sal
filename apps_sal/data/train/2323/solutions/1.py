@@ -1,15 +1,12 @@
 import sys
 readline = sys.stdin.readline
-
-N, M = map(int, readline().split())
+(N, M) = map(int, readline().split())
 A = [0] + list(map(int, readline().split()))
 for i in range(1, N):
     A[i] += A[i - 1]
-
-INF = 10**9 + 7
+INF = 10 ** 9 + 7
 B = [list(map(int, readline().split())) for _ in range(N)] + [[INF] * M] + [[0] * M]
 right = [[0] * M for _ in range(N)]
-
 for m in range(M):
     L = list(range(N))
     L.sort(key=lambda x: B[x][m])
@@ -20,7 +17,6 @@ for m in range(M):
         right[vn - 1][m] = RR[vn] - 1
         RR[LL[vn]] = RR[vn]
         LL[RR[vn]] = LL[vn]
-
 diff = [0] * (N + 1)
 for m in range(M):
     diff[0] += B[0][m]
@@ -29,7 +25,6 @@ for m in range(M):
         if B[i][m] > pre:
             diff[i] += B[i][m] - pre
             pre = B[i][m]
-
 offset = 0
 ans = 0
 for l in range(N):
@@ -49,6 +44,4 @@ for l in range(N):
     for r in range(l + 1, N):
         roff += diff[r]
         ans = max(ans, roff - (A[r] - A[l]))
-        #print(l, r, roff - (A[r] - A[l]))
-
 print(ans)

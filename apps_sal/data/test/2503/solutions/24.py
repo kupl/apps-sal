@@ -1,19 +1,19 @@
-n, k = map(int, input().split())
-X, Y, C = [], [], []
+(n, k) = map(int, input().split())
+(X, Y, C) = ([], [], [])
 for _ in range(n):
-    x, y, c = input().split()
+    (x, y, c) = input().split()
     X.append(int(x) % (2 * k))
     Y.append(int(y) % (2 * k))
-    C.append(c == "B")
+    C.append(c == 'B')
 G = [[0] * k for _ in range(k)]
 cnt = 0
-for x, y, c in zip(X, Y, C):
-    if (x >= k and y < k) or (x < k and y >= k):
+for (x, y, c) in zip(X, Y, C):
+    if x >= k and y < k or (x < k and y >= k):
         x += k
         c ^= 1
     x %= k
     y %= k
-    G[x][y] += (-1)**c
+    G[x][y] += (-1) ** c
     cnt += c
 for i in range(k):
     for j in range(k - 1):

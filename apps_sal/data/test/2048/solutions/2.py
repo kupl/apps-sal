@@ -7,7 +7,6 @@ for i in range(n):
     for j in range(i + 1, n):
         if l[i] < l[j]:
             take.append(v[j])
-
     d[i] = sorted(take)
 mini = 99999999999
 for i in range(n):
@@ -20,6 +19,6 @@ for i in range(n):
                 if mini > sum1:
                     mini = sum1
 if mini == 99999999999:
-    print("-1")
+    print('-1')
 else:
     print(mini)

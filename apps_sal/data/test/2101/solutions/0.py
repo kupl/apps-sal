@@ -1,4 +1,4 @@
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 a = sorted(map(int, input().split()), reverse=True)
 b = sorted(map(int, input().split()), reverse=True)
 c = sorted(map(int, input().split()), reverse=True)

@@ -3,9 +3,10 @@ import collections
 
 
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         sweeplines = []
-        for i, j in requests:
+        for (i, j) in requests:
             sweeplines.append((i, 1))
             sweeplines.append((j + 1, -1))
         sweeplines.sort()
@@ -19,5 +20,5 @@ class Solution:
             freqs.append(freq)
         freqs.sort(reverse=True)
         nums.sort(reverse=True)
-        ans = sum([freq * num for freq, num in zip(freqs, nums)])
-        return ans % (10**9 + 7)
+        ans = sum([freq * num for (freq, num) in zip(freqs, nums)])
+        return ans % (10 ** 9 + 7)

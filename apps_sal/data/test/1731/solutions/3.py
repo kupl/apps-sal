@@ -1,10 +1,9 @@
 import math
-
 MOD = 1000000007
 
 
 def main():
-    (n, m) = ([int(x) for x in input().split()])
+    (n, m) = [int(x) for x in input().split()]
     m *= 2
     a = [0] * n
     a[0] = 1

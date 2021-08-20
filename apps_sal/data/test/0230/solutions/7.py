@@ -2,7 +2,7 @@ import random
 from collections import defaultdict
 
 
-class RollingHash():
+class RollingHash:
 
     def __init__(self, S, b=3491, m=999999937):
         """任意の基数と法でハッシュを生成する"""
@@ -14,7 +14,7 @@ class RollingHash():
         for i in range(n):
             c = ord(S[i])
             prefix[i + 1] = (prefix[i] * b + c) % m
-            power[i + 1] = (power[i] * b) % m
+            power[i + 1] = power[i] * b % m
 
     def get(self, l, r):
         """S[l, r) のハッシュを求める"""
@@ -40,12 +40,12 @@ class RollingHash():
 def read():
     N = int(input().strip())
     S = input().strip()
-    return N, S
+    return (N, S)
 
 
 def solve(N, S):
     ans = []
-    for m in [999999937, 10**9 + 7]:
+    for m in [999999937, 10 ** 9 + 7]:
         b = random.randint(10000, m - 1)
         rh = RollingHash(S, b=b, m=m)
         low = 0
@@ -77,7 +77,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print("%s" % str(outputs))
+        print('%s' % str(outputs))
 
 
 __starting_point()

@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, lis: List[int], tar: int) -> int:
         n = len(lis)
         mod = 1000000000 + 7

@@ -1,5 +1,5 @@
 def main():
-    n, t, a = int(input()), 0, '*'
+    (n, t, a) = (int(input()), 0, '*')
     for b in input():
         if a == b:
             t += 1

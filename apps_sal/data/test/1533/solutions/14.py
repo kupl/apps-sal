@@ -1,14 +1,12 @@
-
-
 def main():
     n = int(input())
     s = set()
     for i in range(n):
         name = input()
         if name in s:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
         s.add(name)
 
 

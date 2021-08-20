@@ -1,4 +1,4 @@
-X, Y, Z, K = list(map(int, input().split()))
+(X, Y, Z, K) = list(map(int, input().split()))
 l_A = list(map(int, input().split()))
 l_B = list(map(int, input().split()))
 l_C = list(map(int, input().split()))
@@ -13,4 +13,4 @@ for i in range(len(l_A)):
                 break
             l += [l_A[i] + l_B[j] + l_C[k]]
 ans = sorted(l, reverse=True)[:K]
-print(*ans, sep="\n")
+print(*ans, sep='\n')

@@ -1,7 +1,7 @@
-'''input
+"""input
 4
 1 5 2 5
-'''
+"""
 n = int(input())
 a = list(map(int, input().split()))
 t = 0

@@ -1,5 +1,5 @@
 from math import ceil
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h = [int(input()) for _ in range(n)]
 l = 0
 r = max(h)
@@ -8,7 +8,7 @@ r = max(h)
 def f(x):
     res = 0
     for i in range(n):
-        res += ceil(max(0, (h[i] - b * x)) / (a - b))
+        res += ceil(max(0, h[i] - b * x) / (a - b))
     return res <= x
 
 

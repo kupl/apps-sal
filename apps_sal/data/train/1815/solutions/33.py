@@ -2,6 +2,7 @@ import string
 
 
 class Solution:
+
     def shiftingLetters(self, S, shifts):
         start = ord('a')
         res = []

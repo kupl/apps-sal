@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n = int(input())
@@ -7,14 +6,12 @@ for _ in range(int(input())):
         print(2 * a[0])
     else:
         a = list(set(a))
-        x, p = 0, 0
+        (x, p) = (0, 0)
         z = max(a)
         a.remove(z)
         for i in range(len(a)):
             x = math.gcd(x, a[i])
-
         y = max(a)
-    # print(y)
         a.append(z)
         a.remove(y)
         for i in range(len(a)):

@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 point = []
 for _ in range(n):
     point.append(list(map(int, input().split())))
@@ -9,9 +9,8 @@ for i in range(n - 1):
             continue
         dis = 0
         for f in range(d):
-            dis += (point[i][f] - point[l][f])**2
-        dis = dis**(0.5)
-        # print(dis)
+            dis += (point[i][f] - point[l][f]) ** 2
+        dis = dis ** 0.5
         if dis.is_integer():
             ans += 1
 print(ans)

@@ -2,7 +2,6 @@ n = int(input())
 l = [0] * (n + 1)
 l[0] = 2
 l[1] = 1
-
 if n == 1:
     ans = l[1]
 else:

@@ -1,4 +1,4 @@
-a, n = map(int, input().split())
+(a, n) = map(int, input().split())
 if a % 2 == 0:
     print(*[a // 2] + [a] * (n - 1))
 else:
@@ -9,4 +9,4 @@ else:
         else:
             d[-1] -= 1
             d.extend([a] * (n - len(d)))
-    print(" ".join(str(i)for i in d))
+    print(' '.join((str(i) for i in d)))

@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in [0] * t:
     s = input()
     stack = []
@@ -14,14 +13,11 @@ for _ in [0] * t:
             zero_count = 0
         else:
             zero_count += 1
-
-        for v, zeros in stack:
+        for (v, zeros) in stack:
             v = (v << 1) + c
             need_zeros = v - v.bit_length()
             if need_zeros <= zeros:
                 ans += 1
                 append((v, zeros))
-
         stack = new_stack
-
     print(ans)

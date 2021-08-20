@@ -1,9 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 S = 0
 for i in range(n - 1):
     S += (m + A[i + 1] - A[i]) % m
-
 T = 2 * m
 D = [0] * (T + 10)
 data = [0] * (T + 1)
@@ -36,5 +35,5 @@ for i in range(n - 1):
 for i in range(1, 2 * m + 5):
     D[i] += D[i - 1]
     add(i, D[i])
-res = min(S - (get(a) + get(a + m)) for a in A)
+res = min((S - (get(a) + get(a + m)) for a in A))
 print(res)

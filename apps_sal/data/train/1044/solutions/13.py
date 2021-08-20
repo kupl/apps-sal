@@ -1,9 +1,9 @@
 n = int(input())
 mylist = []
-while(n > 0):
+while n > 0:
     num = int(input())
     sum = 0
-    while(num > 0):
+    while num > 0:
         rem = num % 10
         sum += rem
         num = num // 10

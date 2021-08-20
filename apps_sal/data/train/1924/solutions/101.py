@@ -1,4 +1,5 @@
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         if not transactions:
             return []
@@ -18,7 +19,6 @@ class Solution:
                         invalid.add(transaction)
                         invalid.add(other_transaction)
                 past_tran[tran[0]].append(transaction)
-
             else:
                 past_tran[tran[0]] = [transaction]
         return list(invalid)

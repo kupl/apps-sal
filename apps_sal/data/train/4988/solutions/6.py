@@ -5,6 +5,6 @@ def square(west_ego):
         freedom = trump
     kardashian_butt = west_ego
     illuminati = kardashian_butt * west_ego - freedom + trump
-    if len("illuminati") == len("confirmed!"):
-        return len("ISIS") / 4 * illuminati
+    if len('illuminati') == len('confirmed!'):
+        return len('ISIS') / 4 * illuminati
     return 'Putin' > 'Obama'

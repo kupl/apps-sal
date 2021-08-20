@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        n, res = len(nums), 0
+        (n, res) = (len(nums), 0)
         while True:
-            count, i = 0, 0
+            (count, i) = (0, 0)
             while i < n:
                 if nums[i] % 2:
                     break

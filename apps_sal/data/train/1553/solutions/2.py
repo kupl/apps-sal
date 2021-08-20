@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 forest = []
 matrix = []
 for _ in range(n):
@@ -15,7 +14,7 @@ for i in range(1, n):
         matrix[i][j] = matrix[i - 1][j] + matrix[i][j - 1] - matrix[i - 1][j - 1] + forest[i][j]
 c = int(input())
 for _ in range(c):
-    x1, y1, x2, y2 = map(int, input().split())
+    (x1, y1, x2, y2) = map(int, input().split())
     x1 -= 1
     y1 -= 1
     x2 -= 1

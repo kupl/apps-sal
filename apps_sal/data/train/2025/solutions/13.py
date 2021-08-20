@@ -13,7 +13,6 @@ for i in range(2, n + 1):
     while x <= n:
         prime[x] = True
         x += i
-
 print(len(ans))
 for x in ans:
-    print(x, end=" ")
+    print(x, end=' ')

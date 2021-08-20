@@ -1,5 +1,5 @@
-n, a = int(input()), [int(i) for i in input().split()]
-b, m = a[:], dict()
+(n, a) = (int(input()), [int(i) for i in input().split()])
+(b, m) = (a[:], dict())
 b.sort()
 for i in range(len(b) - 1):
     m[b[i]] = b[i + 1]

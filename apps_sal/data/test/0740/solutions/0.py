@@ -1,17 +1,14 @@
 from collections import deque
-k, na, nb, nc, ta, tb, tc = list(map(int, input().split()))
-
+(k, na, nb, nc, ta, tb, tc) = list(map(int, input().split()))
 a = deque()
 b = deque()
 c = deque()
-
 for i in range(na):
     a.append(0)
 for i in range(nb):
     b.append(0)
 for i in range(nc):
     c.append(0)
-
 t = 0
 for i in range(k):
     vr = max(a[0], b[0] - ta, c[0] - (ta + tb))

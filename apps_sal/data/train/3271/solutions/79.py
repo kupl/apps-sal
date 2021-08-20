@@ -1,7 +1,5 @@
 def arr(n=0):
-    # [ the numbers 0 to N-1 ]
     num_list = []
-
     if n < 1:
         return num_list
     else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def pancakeSort(self, arr: List[int]) -> List[int]:
         n = len(arr)
         ans = []
@@ -13,5 +14,4 @@ class Solution:
                 flip(maxInd)
                 flip(n - 1)
             n -= 1
-
         return ans

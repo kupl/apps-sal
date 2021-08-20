@@ -3,7 +3,7 @@ for _ in range(t):
     works = 0
     n = int(input())
     ps = []
-    for i in range(2, 4 * 10**4):
+    for i in range(2, 4 * 10 ** 4):
         c = 0
         while n % i == 0:
             c += 1
@@ -19,15 +19,13 @@ for _ in range(t):
             base[2 * i] = ps[i][0]
             base[2 * i + 1] = ps[i][0] * ps[(i + 1) % len(ps)][0]
             factors = [1]
-
-        for p, pp in ps:
+        for (p, pp) in ps:
             mult = [pow(p, i) for i in range(pp + 1)]
             new = []
             for m in mult:
                 for f in factors:
                     new.append(m * f)
             factors = new
-
         for v in factors:
             if v in base:
                 lists[base.index(v)] += [v]
@@ -36,14 +34,13 @@ for _ in range(t):
                     if v % base[u] == 0:
                         lists[u] += [v]
                         break
-
         out = sum(lists, [])
     elif len(ps) == 2:
-        p, q = ps
+        (p, q) = ps
         if p[1] < q[1]:
-            p, q = q, p
-        p, pp = p
-        q, qq = q
+            (p, q) = (q, p)
+        (p, pp) = p
+        (q, qq) = q
         if pp == 1 and qq == 1:
             works = 1
             out = [p, p * q, q]
@@ -61,7 +58,6 @@ for _ in range(t):
                                 lists[u] += [v]
                                 break
             out = sum(lists, [])
-
     else:
         out = []
         for i in range(1, ps[0][1] + 1):

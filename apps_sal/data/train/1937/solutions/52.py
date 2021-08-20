@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Person:
+
     def __init__(self, name, parent):
         self.name = name
         self.is_alive = True
@@ -16,6 +17,7 @@ class Person:
 
 
 class Order:
+
     def __init__(self):
         self.order = []
         self.names_set = set()
@@ -33,6 +35,7 @@ class Order:
 
 
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.family = defaultdict(Person)
         self.king = Person(kingName, None)
@@ -48,6 +51,7 @@ class ThroneInheritance:
         self.family[name].is_alive = False
 
     def getInheritanceOrder(self) -> 'List[str]':
+
         def successor(person, cur_order):
             children_not_in_order = cur_order.not_in(person.children)
             if not person.has_children() or not children_not_in_order:
@@ -57,17 +61,13 @@ class ThroneInheritance:
                     return successor(person.parent, cur_order)
             else:
                 return children_not_in_order[0]
-
         order = Order()
-
         next_in_order = self.king
         while next_in_order:
             order.add(next_in_order)
             next_in_order = successor(next_in_order, order)
-
         res = []
         for p in order.order:
             if p.is_alive:
                 res.append(p.name)
-
         return res

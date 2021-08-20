@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-INF = 10**18
-
+INF = 10 ** 18
 N = int(input())
 D = []
 U = []
@@ -11,29 +9,27 @@ R = []
 UD = []
 LR = []
 for _ in range(N):
-    str_x, str_y, d = map(str, input().rstrip().split())
+    (str_x, str_y, d) = map(str, input().rstrip().split())
     x = int(str_x)
     y = int(str_y)
-    if d == "U":
+    if d == 'U':
         U.append(y)
         UD.append(x)
-    elif d == "D":
+    elif d == 'D':
         D.append(y)
         UD.append(x)
-    elif d == "L":
+    elif d == 'L':
         L.append(x)
         LR.append(y)
     else:
         R.append(x)
         LR.append(y)
-
 UD.sort()
 LR.sort()
 U.sort()
 D.sort()
 L.sort()
 R.sort()
-
 T = [0]
 if L and R:
     T.append((L[0] - R[0]) / 2)
@@ -53,7 +49,6 @@ if U and LR:
 if D and LR:
     T.append(-LR[0] + D[0])
     T.append(-LR[-1] + D[-1])
-
 ans = INF
 for t in T:
     if t < 0:
@@ -81,5 +76,4 @@ for t in T:
         l = min(l, UD[0])
         r = max(r, UD[-1])
     ans = min(ans, (r - l) * (u - d))
-
 print(ans)

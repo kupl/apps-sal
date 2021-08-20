@@ -1,6 +1,6 @@
 tc = int(input())
 while tc != 0:
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     arr = []
     for i in range(r):
         temp = list(map(int, input()))
@@ -12,7 +12,6 @@ while tc != 0:
             if arr[i][j] == 1:
                 temp += 1
         if temp != 1 and temp != 0:
-            count += (temp * (temp - 1)) // 2
+            count += temp * (temp - 1) // 2
     print(count)
-
     tc -= 1

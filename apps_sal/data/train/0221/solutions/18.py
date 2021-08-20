@@ -1,6 +1,6 @@
 class Solution:
-    def longestDupSubstring(self, S: str) -> str:
 
+    def longestDupSubstring(self, S: str) -> str:
         lo = 1
         hi = len(S)
         nums = [ord(i) - ord('a') for i in S]
@@ -19,7 +19,6 @@ class Solution:
                     return i
                 seen.add(hval)
             return -1
-
         start = -1
         while lo <= hi:
             mi = lo + (hi - lo) // 2
@@ -29,5 +28,4 @@ class Solution:
                 start = begin
             else:
                 hi = mi - 1
-
-        return S[start: start + lo - 1]
+        return S[start:start + lo - 1]

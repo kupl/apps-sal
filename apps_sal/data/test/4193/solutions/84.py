@@ -7,12 +7,10 @@ for i in b:
         for k in range(3):
             if i == a[j][k]:
                 visited[j][k] = True
-
-ans = "No"
+ans = 'No'
 for i in visited:
     if i == [True, True, True]:
-        ans = "Yes"
-
+        ans = 'Yes'
 for i in range(3):
     flag = True
     for j in range(3):
@@ -20,10 +18,9 @@ for i in range(3):
             flag = False
             break
     if flag:
-        ans = "Yes"
-
+        ans = 'Yes'
 if visited[0][0] and visited[1][1] and visited[2][2]:
-    ans = "Yes"
+    ans = 'Yes'
 if visited[2][0] and visited[1][1] and visited[0][2]:
-    ans = "Yes"
+    ans = 'Yes'
 print(ans)

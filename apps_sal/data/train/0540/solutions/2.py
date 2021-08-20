@@ -1,10 +1,9 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ar = [int(x) for x in input().split()]
     ar.sort()
     f = 0
     j = 1
-    # v=[]
     if m == 1:
         c = ar.count(1)
         if n - c == 0:
@@ -27,9 +26,8 @@ for _ in range(int(input())):
                         continue
                 else:
                     break
-        else:
-            if m != 1:
-                f = 1
+        elif m != 1:
+            f = 1
         if f == 1 or j != m:
             print(-1)
         else:

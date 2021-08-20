@@ -1,6 +1,7 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
-        st, ed, l, cnt = 0, 1, len(arr), 0
+        (st, ed, l, cnt) = (0, 1, len(arr), 0)
         while cnt < k:
             if ed == l:
                 return arr[st]

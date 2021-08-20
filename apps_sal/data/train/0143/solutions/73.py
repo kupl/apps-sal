@@ -19,13 +19,13 @@ class window:
 
 
 class Solution:
-    def totalFruit(self, tree):
 
+    def totalFruit(self, tree):
         win = window()
-        l, res = 0, 0
-        for r, fruit in enumerate(tree):
+        (l, res) = (0, 0)
+        for (r, fruit) in enumerate(tree):
             win.add(fruit)
-            while l < r and not win.valid():
+            while l < r and (not win.valid()):
                 win.remove(tree[l])
                 l += 1
             res = max(res, r - l + 1)

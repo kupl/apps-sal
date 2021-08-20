@@ -1,5 +1,5 @@
 def __starting_point():
-    y, k, n = str(input()).split()
+    (y, k, n) = str(input()).split()
     y = int(y)
     k = int(k)
     n = int(n)

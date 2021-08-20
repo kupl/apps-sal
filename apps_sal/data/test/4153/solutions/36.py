@@ -1,5 +1,4 @@
 s = input()
-
 z = 0
 o = 0
 for c in s:
@@ -7,5 +6,4 @@ for c in s:
         o += 1
     else:
         z += 1
-
-print((min(o, z) * 2))
+print(min(o, z) * 2)

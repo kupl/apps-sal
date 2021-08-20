@@ -1,11 +1,9 @@
 n = int(input())
 s = input()
-
 dp = [[0, 0, 0] for _ in range(n)]
 dp2 = [[0, 0, 0] for _ in range(n)]
 prev = [0, 0, 0]
 free = 0
-
 mod = 1000000007
 for i in range(n):
     if i > 0:
@@ -22,7 +20,6 @@ for i in range(n):
             dp[i][2] -= mod
     if s[i] == '?':
         free += 1
-
 for i in reversed(range(0, n)):
     if i + 1 < n:
         dp2[i] = dp2[i + 1].copy()
@@ -36,10 +33,9 @@ for i in reversed(range(0, n)):
         dp2[i][2] += dp2[i][1]
         if dp2[i][2] >= mod:
             dp2[i][2] -= mod
-
 ans = dp[n - 1][2] * pow(3, free, mod) % mod
-ans += (free * (free - 1) * (free - 2) // 6) * pow(3, mod - 1 + free - 3, mod) % mod
-before, after = 0, free
+ans += free * (free - 1) * (free - 2) // 6 * pow(3, mod - 1 + free - 3, mod) % mod
+(before, after) = (0, free)
 for i in range(n):
     if s[i] == '?':
         mul = pow(3, free - 1, mod)

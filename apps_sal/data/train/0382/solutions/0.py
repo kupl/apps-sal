@@ -1,4 +1,5 @@
 class Solution:
+
     def findPeakElement(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         if not nums:
             return -1
-
         start = 0
         end = len(nums) - 1
         while start + 1 < end:

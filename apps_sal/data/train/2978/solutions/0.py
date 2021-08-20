@@ -6,7 +6,7 @@ def count_sel(nums):
     d = defaultdict(list)
     total = 0
     unique = 0
-    for k, v in cnt.items():
+    for (k, v) in cnt.items():
         d[v].append(k)
         total += v
         unique += 1

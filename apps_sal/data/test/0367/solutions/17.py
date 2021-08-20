@@ -3,7 +3,7 @@ arr = [0 for i in range(26)]
 ch = 'a'
 for i in range(26):
     arr[i] = st.count(chr(i + ord('a')))
-i, j = 0, 25
+(i, j) = (0, 25)
 n = len(st)
 while i < 26 and arr[i] % 2 == 0:
     i += 1
@@ -18,7 +18,6 @@ while i < j:
         j -= 1
 r = ''
 middle = ''
-
 for i in range(26):
     c = str(chr(i + 97))
     r = r + c * (arr[i] // 2)

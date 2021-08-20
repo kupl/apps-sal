@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 q = [0] * n
 for i in range(n):
@@ -8,7 +8,7 @@ for j in range(n):
     s[j + 1] = s[j] + q[j]
 t = k + 1
 answer = s[k] - s[0]
-while(t <= n):
+while t <= n:
     answer = max(answer, s[t] - s[t - k])
     t += 1
 print(answer)

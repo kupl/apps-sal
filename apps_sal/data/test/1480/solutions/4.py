@@ -1,4 +1,4 @@
-n, k = map(int, input().strip().split(" "))
+(n, k) = map(int, input().strip().split(' '))
 arr = list(map(int, input().strip().split()))
 children = list([i + 1 for i in range(n)])
 answer = []
@@ -8,5 +8,4 @@ for ai in arr:
     answer.append(str(children[i]))
     del children[i]
     n -= 1
-
-print(" ".join(answer))
+print(' '.join(answer))

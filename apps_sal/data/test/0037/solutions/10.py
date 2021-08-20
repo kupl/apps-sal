@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 num = c // a + 1
 temp = 0
 for i in range(num):
@@ -6,6 +6,6 @@ for i in range(num):
         temp = 1
         break
 if temp == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

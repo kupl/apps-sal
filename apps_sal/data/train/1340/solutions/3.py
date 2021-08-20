@@ -7,7 +7,7 @@ def revsubseq(lis):
     nls = []
     while e > s:
         if lis[s] > 0 and lis[e] <= 0:
-            lis[s], lis[e] = lis[e], lis[s]
+            (lis[s], lis[e]) = (lis[e], lis[s])
             nls.append(s + 1)
             nls.append(e + 1)
             s += 1
@@ -33,7 +33,7 @@ def mxsubarray(lis):
 
 for t in range(int(input())):
     n = int(input())
-    lis = list(map(int, input(). split()))
+    lis = list(map(int, input().split()))
     nls = revsubseq(lis)
     mx = mxsubarray(lis)
     if mx < 0:

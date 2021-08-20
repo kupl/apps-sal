@@ -2,10 +2,10 @@ import math
 s1 = input()
 s1 = ''.join(sorted(s1))
 nen = 0
-p = ""
-np = ""
-ot = ""
-o = ""
+p = ''
+np = ''
+ot = ''
+o = ''
 i = 0
 o1 = []
 while i < len(s1):
@@ -30,7 +30,6 @@ else:
         nen = i + 1
     ot = ''.join(sorted(ot))
     ot = ot + np[nen]
-
 for i in range(0, d):
     o = o + ot[i]
 if len(s1) % 2 == 0:
@@ -39,12 +38,4 @@ if len(s1) % 2 == 0:
 else:
     for i in range(0, d - 1):
         o1.append(ot[d - i - 2])
-# for i in range(0, d-1):
-#    o1.append(ot[d-i-1])
-# print(p)
-# print(np)
-# print(ot)
-# print(ot)
-# print(o)
-# print(o1)
 print(o + ''.join(o1))

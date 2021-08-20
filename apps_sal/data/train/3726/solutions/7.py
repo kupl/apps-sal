@@ -9,5 +9,4 @@ def sort_array(source_array):
         if source_array[j] % 2 == 1:
             source_array[j] = odd[x]
             x += 1
-
     return source_array

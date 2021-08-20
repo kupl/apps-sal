@@ -3,12 +3,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    x, y, z = Input()
-
+    (x, y, z) = Input()
     people = x // y
     spaces = (people + 1) * z
     while True:

@@ -1,5 +1,5 @@
 def fusc(n):
-    a, b = 1, 0
+    (a, b) = (1, 0)
     while n > 0:
         if n & 1:
             b = a + b

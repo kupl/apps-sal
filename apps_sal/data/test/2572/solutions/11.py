@@ -4,7 +4,6 @@ for u in range(t):
     n = x[0]
     m = x[1]
     k = [[[] for j in range((m + 1) // 2)] for i in range((n + 1) // 2)]
-
     for i in range(n // 2):
         inp = [int(x) for x in input().split()]
         for j in range(m // 2):

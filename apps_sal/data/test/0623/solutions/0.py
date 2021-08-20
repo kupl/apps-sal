@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 while a > 0 and b > 0:
     if max(a, b) > 1:

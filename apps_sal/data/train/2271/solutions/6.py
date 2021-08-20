@@ -1,17 +1,13 @@
 from collections import deque
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 plist = list(map(int, input().split()))
-
 pilist = []
-for i, p in enumerate(plist):
+for (i, p) in enumerate(plist):
     pilist.append((p, i + 1))
-
 pilist.sort(key=lambda x: x[0])
-
 dic = {k: [] for k in range(N + 1)}
 for _ in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     dic[plist[x - 1]].append(plist[y - 1])
     dic[plist[y - 1]].append(plist[x - 1])
 groups = []
@@ -31,7 +27,6 @@ for p in range(1, N + 1):
                     group_i.append(pilist[q_n - 1][1])
                     queue.append(q_n)
         groups.append((group_p, group_i))
-
 ans = 0
 for group in groups:
     p = set(group[0])

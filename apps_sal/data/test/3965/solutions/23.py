@@ -13,6 +13,6 @@ for i in range(n):
     if count != a[i]:
         f = False
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-N, C = list(map(int, input().split()))
+mod = 10 ** 9 + 7
+(N, C) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 dp = [[0] * (C + 1) for i in range(N + 1)]
@@ -13,9 +13,9 @@ for i in range(N):
             S[i][j] %= mod
             power[x] *= x
             power[x] %= mod
-for i in range(N):  # iばんめ
-    for j in range(C + 1):  # jこのキャンディー
-        for k in range(j + 1):  # iばんめにk子くばる
+for i in range(N):
+    for j in range(C + 1):
+        for k in range(j + 1):
             dp[i][j] += dp[i - 1][j - k] * S[i][k]
             dp[i][j] %= mod
-print((dp[-2][-1]))
+print(dp[-2][-1])

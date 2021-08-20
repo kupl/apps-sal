@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfaction(self, satisfaction: List[int]) -> int:
         satisfaction.sort()
         table = [[None] * len(satisfaction) for i in range(len(satisfaction))]

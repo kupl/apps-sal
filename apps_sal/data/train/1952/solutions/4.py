@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseBetween(self, head, m, n):
         """
         :type head: ListNode
@@ -10,7 +11,6 @@ class Solution:
         dummy.next = head
         count = 0
         pre = dummy
-
         while head:
             count += 1
             temp = head.next

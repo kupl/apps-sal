@@ -1,4 +1,4 @@
-k, a, b = map(int, input().split())
+(k, a, b) = map(int, input().split())
 if a % k:
     a += k - a % k
 b -= b % k

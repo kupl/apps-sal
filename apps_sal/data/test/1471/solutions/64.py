@@ -1,12 +1,11 @@
 import sys
-sys.setrecursionlimit(10**7)
-
+sys.setrecursionlimit(10 ** 7)
 N = int(input())
 links = [[] for _ in range(N)]
 result = [0 for _ in range(N)]
 memo = [0 for _ in range(N)]
 for _ in range(N - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     u -= 1
     v -= 1
     links[u].append([v, w])

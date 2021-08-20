@@ -1,12 +1,13 @@
 class Solution(object):
+
     def minMalwareSpread(self, graph, initial):
+
         def dfs(node, visited):
             for neighbor in range(len(graph[node])):
                 if graph[node][neighbor] == 1 and neighbor not in visited:
                     visited.add(neighbor)
                     dfs(neighbor, visited)
-
-        res, max_size = min(initial), 0
+        (res, max_size) = (min(initial), 0)
         i_set = set(initial)
         total_visited = set()
         for node in range(len(graph)):

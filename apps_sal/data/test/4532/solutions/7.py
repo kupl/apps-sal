@@ -1,5 +1,5 @@
 for nt in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     new = list(map(int, input().split()))
     a = []
     for i in range(n):
@@ -13,7 +13,7 @@ for nt in range(int(input())):
     d = {}
     maxx = 0
     for i in range(n):
-        diff = k - (a[i] % k)
+        diff = k - a[i] % k
         if diff not in d:
             maxx = max(maxx, diff)
             d[diff] = 1

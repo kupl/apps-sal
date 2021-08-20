@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for cs in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [[] for _ in range(n)]
     for i in range(n):
         a[i] = [int(_) for _ in input().split()]

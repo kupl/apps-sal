@@ -1,4 +1,5 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         dp = copy.deepcopy(arr)
         for i in range(1, len(dp)):

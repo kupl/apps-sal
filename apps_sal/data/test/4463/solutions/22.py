@@ -1,7 +1,6 @@
 S = input()
 T = input()
-
 if sorted(S) < sorted(T, reverse=True):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

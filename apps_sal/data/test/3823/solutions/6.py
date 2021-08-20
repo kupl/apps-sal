@@ -6,11 +6,8 @@ for i in range(len(A)):
     A[i] = round(A[i], 3) - int(A[i])
     if A[i] == 0:
         z += 1
-# print(A)
 ANS = sum(A)
-# print(ANS)
-ans = 10**10
+ans = 10 ** 10
 for j in range(n - z, n + 1):
     ans = min(ans, abs(ANS - j))
-
-print("%.3f" % ans)
+print('%.3f' % ans)

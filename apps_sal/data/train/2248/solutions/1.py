@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    p, q = list(map(int, input().split()))
+    (p, q) = list(map(int, input().split()))
     if p % q != 0:
         print(p)
         continue
@@ -15,7 +15,6 @@ for _ in range(int(input())):
         i += 1
     if q != 1:
         pr[q] = 1
-
     res = 1
     for k in pr:
         v = pr[k]
@@ -24,5 +23,5 @@ for _ in range(int(input())):
         while pp % k == 0:
             pp //= k
             x += 1
-        res = max(res, p // k**(x - (v - 1)))
+        res = max(res, p // k ** (x - (v - 1)))
     print(res)

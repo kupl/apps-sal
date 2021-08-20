@@ -1,5 +1,4 @@
 N = int(input())
-
 kazu = 1
 if N < 10:
     kazu = N
@@ -13,5 +12,4 @@ elif N < 100000:
     kazu = N - 9000 - 90
 elif N == 100000:
     kazu = 90000 + 900 + 9
-
 print(kazu)

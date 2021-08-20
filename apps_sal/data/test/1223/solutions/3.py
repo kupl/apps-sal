@@ -3,11 +3,10 @@ P = list(map(int, input().split()))
 R = list(range(N))
 L = list(range(N))
 I = [-1] * (N + 1)
-for i, p in enumerate(P):
+for (i, p) in enumerate(P):
     I[p] = i
-
 ans = 0
-for n, idx in enumerate(I[1:], 1):
+for (n, idx) in enumerate(I[1:], 1):
     l = idx - 1
     while l >= 0 and l != L[l]:
         l = L[l]
@@ -16,7 +15,6 @@ for n, idx in enumerate(I[1:], 1):
         r = R[r]
     L[idx] = l
     R[idx] = r
-
     if l != -1:
         l2 = l - 1
         while l2 >= 0 and l2 != L[l2]:

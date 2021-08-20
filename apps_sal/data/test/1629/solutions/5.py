@@ -25,6 +25,6 @@ while True:
     if (i + 1) % n[0] == t:
         break
     else:
-        i = (i + 1)
+        i = i + 1
 for i in x:
     print(i, end=' ')

@@ -3,4 +3,3 @@ def move(position, roll):
     print(roll)
     position = position + roll * 2
     return position
-    # your code here

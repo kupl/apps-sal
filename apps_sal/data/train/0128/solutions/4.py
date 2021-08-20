@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, s):
         result = number = 0
         sign = 1
@@ -26,7 +27,6 @@ class Solution:
                 result += sign * number
                 number = 0
                 sign = 1
-                #result += stack.pop() * stack.pop()
                 result = result * stack.pop() + stack.pop()
         result += number * sign
         return result

@@ -4,7 +4,7 @@ for i in range(t):
     ra = []
     n = int(input())
     for j in range(n):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         la.append(l)
         ra.append(r)
     x = max(la) - min(ra)

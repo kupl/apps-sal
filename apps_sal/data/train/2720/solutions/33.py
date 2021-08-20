@@ -8,4 +8,5 @@ def n(digits):
     return k
 
 
-def solution(digits): return max(n(digits))
+def solution(digits):
+    return max(n(digits))

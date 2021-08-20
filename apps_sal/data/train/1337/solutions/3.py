@@ -6,7 +6,7 @@ def listLCM(l):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 def gcd(a, b):

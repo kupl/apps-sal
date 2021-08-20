@@ -1,6 +1,6 @@
 def f(a, b, c):
     m = min(a, b, c)
-    a, b, c = a - m, b - m, c - m
+    (a, b, c) = (a - m, b - m, c - m)
     if a == b and a == c:
         return 0
     if a == b:
@@ -24,7 +24,6 @@ def f(a, b, c):
             return (a - b - 1) * 2
         else:
             return b - a - 1
-
     m = min(a, b, c)
     n = min(max(a, b), max(b, c), max(a, c))
     if a == m:

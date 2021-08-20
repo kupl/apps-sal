@@ -1,13 +1,27 @@
 import sys
 import heapq as hq
-
 readline = sys.stdin.readline
 read = sys.stdin.read
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
+
+
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
 
 
 def solve():
@@ -25,8 +39,6 @@ def solve():
     print(cost)
     return
 
-
-# solve()
 
 T = ni()
 for _ in range(T):

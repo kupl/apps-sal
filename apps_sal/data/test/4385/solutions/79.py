@@ -4,6 +4,6 @@ for i in range(3):
 e = int(input())
 k = int(input())
 if e - w <= k:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

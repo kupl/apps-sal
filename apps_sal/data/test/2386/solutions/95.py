@@ -11,4 +11,4 @@ for i in range(N):
     cnt1 += abs(a[i] - ave)
 for i in range(N):
     cnt2 += abs(a[i] - a[N // 2])
-print((min(cnt1, cnt2)))
+print(min(cnt1, cnt2))

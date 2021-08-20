@@ -1,5 +1,4 @@
-# 94 C - Buy an Integer (hint)
-A, B, X = map(int, input().split())
+(A, B, X) = map(int, input().split())
 
 
 def judge(x):
@@ -11,15 +10,13 @@ def judge(x):
 
 sta = 0
 fin = X
-
-while (fin - sta) > 1:
+while fin - sta > 1:
     m = (fin + sta) // 2
     if judge(m) == True:
         sta = m
     else:
         fin = m
-
-if sta > 10**9:
-    print(10**9)
+if sta > 10 ** 9:
+    print(10 ** 9)
 else:
     print(sta)

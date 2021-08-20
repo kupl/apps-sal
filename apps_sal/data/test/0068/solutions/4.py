@@ -1,6 +1,6 @@
 n = int(input())
 s = list(input())
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 L = s.count('L')
 U = s.count('U')
 R = s.count('R')
@@ -35,8 +35,6 @@ while x + y < 2 * n:
         elif i == 'U':
             U += 1
         x += 1
-
-
 if abs(a) + abs(b) > len(s):
     print(-1)
 elif (len(s) - (abs(a) + abs(b))) % 2 != 0:

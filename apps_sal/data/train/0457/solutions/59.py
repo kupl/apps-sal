@@ -1,11 +1,12 @@
 class Solution:
+
     def bfs(self, cur, coins):
         if cur == 0:
             return 0
         queue = [(0, cur)]
         visited = {}
         while queue:
-            times, cur = heapq.heappop(queue)
+            (times, cur) = heapq.heappop(queue)
             for c in coins:
                 if c == cur:
                     return times + 1

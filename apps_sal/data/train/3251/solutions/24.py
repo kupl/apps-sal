@@ -1,5 +1,5 @@
 def primeFactors(n):
-    res = ""
+    res = ''
     fac = 2
     while fac <= n:
         count = 0
@@ -7,8 +7,8 @@ def primeFactors(n):
             count += 1
             n = n / fac
         if count > 0:
-            res += "(" + str(fac)
-            res += "**" + str(count) if (count > 1) else ""
-            res += ")"
+            res += '(' + str(fac)
+            res += '**' + str(count) if count > 1 else ''
+            res += ')'
         fac += 1
     return res

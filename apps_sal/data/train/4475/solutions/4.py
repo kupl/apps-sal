@@ -15,5 +15,4 @@ def find(seq):
                 break
             else:
                 x.append(t)
-
     return min(seq) + len(x) * x[0]

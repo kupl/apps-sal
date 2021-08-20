@@ -6,7 +6,7 @@ def check(a, k):
     return sum(used[:k + 1]) == k + 1
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 cnt = 0
 for i in range(n):
     a = int(input())

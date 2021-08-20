@@ -18,6 +18,5 @@ def dfs(d, val, al):
 al = list()
 for i in range(1, 10):
     dfs(1, i, al)
-
 al.sort()
-print((al[k - 1]))
+print(al[k - 1])

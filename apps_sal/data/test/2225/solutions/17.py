@@ -1,8 +1,7 @@
 import sys
-
-n, m = list(map(int, sys.stdin.readline().lstrip().rstrip().split()))
+(n, m) = list(map(int, sys.stdin.readline().lstrip().rstrip().split()))
 arr = list(map(int, sys.stdin.readline().lstrip().rstrip().split()))
-tree = [arr[::]]
+tree = [arr[:]]
 cnt = 1
 while True:
     temp = []
@@ -19,12 +18,12 @@ while True:
         tree.append(temp)
     cnt += 1
 for i in range(m):
-    pos, val = list(map(int, sys.stdin.readline().lstrip().rstrip().split()))
+    (pos, val) = list(map(int, sys.stdin.readline().lstrip().rstrip().split()))
     pos -= 1
     tree[0][pos] = val
     cnt = 1
     while cnt <= n:
-        pos = (pos) // 2
+        pos = pos // 2
         if cnt % 2 != 0:
             tree[cnt][pos] = tree[cnt - 1][2 * pos] | tree[cnt - 1][2 * pos + 1]
         else:

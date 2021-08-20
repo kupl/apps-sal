@@ -1,10 +1,8 @@
-n, x = list(map(int, input().split()))
-
-pate, slice = [1], [1]
+(n, x) = list(map(int, input().split()))
+(pate, slice) = ([1], [1])
 for _ in range(n + 1):
     pate.append(2 * pate[-1] + 1)
     slice.append(2 * slice[-1] + 3)
-
 ans = 0
 while n * x > 0:
     if x >= slice[n - 1] + 2:
@@ -13,4 +11,4 @@ while n * x > 0:
     elif x < slice[n - 1] + 2:
         x -= 1
     n -= 1
-print((ans + (x > 0)))
+print(ans + (x > 0))

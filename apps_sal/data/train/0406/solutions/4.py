@@ -1,4 +1,5 @@
 class Solution:
+
     def ladderLength(self, beginWord, endWord, wordList):
         """
         :type beginWord: str
@@ -17,7 +18,7 @@ class Solution:
         endSet.add(endWord)
         while len(beginSet) != 0 and len(endSet) != 0:
             if len(beginSet) > len(endSet):
-                beginSet, endSet = endSet, beginSet
+                (beginSet, endSet) = (endSet, beginSet)
             tmp = set()
             for word in beginSet:
                 chs = list(word)
@@ -25,7 +26,7 @@ class Solution:
                     for ch in range(ord('a'), ord('z') + 1):
                         old = chs[i]
                         chs[i] = chr(ch)
-                        target = "".join(chs)
+                        target = ''.join(chs)
                         if target in endSet:
                             return res + 1
                         if target not in visited and target in wordList:

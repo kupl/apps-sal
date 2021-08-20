@@ -1,9 +1,8 @@
 M = 10 ** 9 + 7
-
 t = int(input())
 for _ in range(t):
     s = list(map(int, input()))
-    p, m = 0, 1
+    (p, m) = (0, 1)
     for d in reversed(s):
         p += d * m
         m = m * 10 % M

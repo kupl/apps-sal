@@ -1,4 +1,5 @@
 class Solution:
+
     def firstUniqChar(self, s):
         """
         :type s: str
@@ -8,7 +9,6 @@ class Solution:
             return -1
         elif len(s) == 1:
             return 0
-
         result = len(s)
         for ch in range(ord('a'), ord('z') + 1):
             if s.find(chr(ch)) == -1:

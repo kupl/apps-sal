@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = 0
 if m >= 2 and n >= 1:
     if m // 2 >= n:

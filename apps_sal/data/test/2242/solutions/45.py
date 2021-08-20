@@ -1,11 +1,7 @@
 from collections import defaultdict
-
 S = input()
-
 d = defaultdict(int)
-
 d[0] += 1
-
 mod = 0
 R = 1
 for i in range(len(S)):
@@ -16,5 +12,4 @@ ans = 0
 for i in list(d.values()):
     if i > 1:
         ans += i * (i - 1) / 2
-
-print((int(ans)))
+print(int(ans))

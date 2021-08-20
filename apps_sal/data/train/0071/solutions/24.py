@@ -1,5 +1,3 @@
-# Lack of emotion causes lack of progress and lack of motivation. Tony Robbins
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))

@@ -1,4 +1,5 @@
-def r(): return int(input())
+def r():
+    return int(input())
 
 
 n = r()

@@ -1,4 +1,5 @@
 class Solution:
+
     def isbi(self, i, color):
         q = []
         q.append(i)
@@ -15,7 +16,7 @@ class Solution:
 
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         self.graph = collections.defaultdict(list)
-        for v, u in dislikes:
+        for (v, u) in dislikes:
             self.graph[v].append(u)
             self.graph[u].append(v)
         color = [-1] * (N + 1)

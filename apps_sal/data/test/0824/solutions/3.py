@@ -1,6 +1,6 @@
 t = input()
-n, m = len(t) + 1, 1000000007
-a, b = 0, t.count(')') - 1
+(n, m) = (len(t) + 1, 1000000007)
+(a, b) = (0, t.count(')') - 1)
 f = [1] * n
 for i in range(2, n):
     f[i] = i * f[i - 1] % m

@@ -18,15 +18,15 @@ for i in range(questions):
     d = 0
     e = 0
     for j in range(students):
-        if ans[j][i] == "A":
+        if ans[j][i] == 'A':
             a += 1
-        if ans[j][i] == "B":
+        if ans[j][i] == 'B':
             b += 1
-        if ans[j][i] == "C":
+        if ans[j][i] == 'C':
             c += 1
-        if ans[j][i] == "D":
+        if ans[j][i] == 'D':
             d += 1
-        if ans[j][i] == "E":
+        if ans[j][i] == 'E':
             e += 1
     n.append(max(a, b, c, d, e))
 total = 0

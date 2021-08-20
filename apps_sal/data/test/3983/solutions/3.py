@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.table = [-1] * n
 
@@ -36,40 +37,32 @@ class UnionFind:
 t = int(input())
 buf = []
 for _ in range(t):
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     if n % 2 == 1:
-        if (n * (n - 1) // 2 - m) & 1:
+        if n * (n - 1) // 2 - m & 1:
             buf.append('First')
         else:
             buf.append('Second')
         for _ in range(m):
             input()
         continue
-
     uft = UnionFind(n)
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         uft.unite(a, b)
-
     s = uft.get_size(0)
     t = uft.get_size(n - 1)
-
-    if (s & 1) ^ (t & 1):
+    if s & 1 ^ t & 1:
         buf.append('First')
-    elif (n * (n - 1) // 2 - m) & 1:
-        # 先手は偶-偶にしたい
+    elif n * (n - 1) // 2 - m & 1:
         if s & 1 == 0:
             buf.append('First')
         else:
             buf.append('Second')
+    elif s & 1 == 0:
+        buf.append('Second')
     else:
-        # 先手は奇-奇にしたい
-        if s & 1 == 0:
-            buf.append('Second')
-        else:
-            buf.append('First')
-
-print(('\n'.join(buf)))
+        buf.append('First')
+print('\n'.join(buf))

@@ -1,5 +1,5 @@
 a = [int(x) for x in input().split()]
-n, k = a[0], a[1]
+(n, k) = (a[0], a[1])
 a = [int(x) for x in input().split()]
 n = 5 - k
 ch = 0

@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
         Ss = [ord(c) for c in s]
         Tt = [ord(d) for d in t]
@@ -14,5 +15,4 @@ class Solution:
                 maxCost += diff[i]
                 i += 1
             result = max(result, j - i + 1)
-
         return result

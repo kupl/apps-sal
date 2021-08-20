@@ -29,6 +29,6 @@ def union(a, b):
 
 
 for i in range(n - 1):
-    x, y = [int(s) - 1 for s in input().split(' ')]
+    (x, y) = [int(s) - 1 for s in input().split(' ')]
     union(x, y)
-print(" ".join([str(i + 1) for i in kitten[root(x)]]))
+print(' '.join([str(i + 1) for i in kitten[root(x)]]))

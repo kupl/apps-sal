@@ -1,27 +1,24 @@
 import sys
 import math
-
 s = input()
 l = len(s)
-
 p = '1'
 k = 0
 v = 1
 res = []
 for i in range(l):
-    if(p != s[i]):
+    if p != s[i]:
         p = s[i]
-        if(v == 1):
+        if v == 1:
             k = 0
         v = 1
         res.append(p)
     else:
         v += 1
-        if(v == 2):
-            if(k % 2 == 0):
+        if v == 2:
+            if k % 2 == 0:
                 res.append(p)
                 k = 1
             else:
                 k = 0
-
-print("".join(res))
+print(''.join(res))

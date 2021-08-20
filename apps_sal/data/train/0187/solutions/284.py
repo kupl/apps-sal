@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         max_profit = 0
         customers.reverse()
@@ -15,7 +16,7 @@ class Solution:
             pay = min(4, pp)
             curr_boarding_cost += boardingCost * pay
             pp -= pay
-            if max_profit < (curr_boarding_cost - curr_running_cost):
+            if max_profit < curr_boarding_cost - curr_running_cost:
                 max_cnt = cnt
                 max_profit = curr_boarding_cost - curr_running_cost
         return max_cnt

@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 cnt = 0
 A_ = []
 for i in A:
@@ -9,8 +8,7 @@ for i in A:
         A_.append(-i)
     else:
         A_.append(i)
-
 if cnt % 2 == 0:
-    print((sum(A_)))
+    print(sum(A_))
 else:
-    print((sum(A_) - 2 * min(A_)))
+    print(sum(A_) - 2 * min(A_))

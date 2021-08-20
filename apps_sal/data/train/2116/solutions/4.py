@@ -17,4 +17,4 @@ while i <= len(s) - m:
 for i in range(len(s)):
     if s[i] < z and mark[i]:
         ans.append(s[i])
-print(''.join(str(i) for i in sorted(ans)))
+print(''.join((str(i) for i in sorted(ans))))

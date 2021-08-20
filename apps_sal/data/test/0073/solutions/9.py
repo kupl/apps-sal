@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-c, v0, v1, a, l = map_input()
+(c, v0, v1, a, l) = map_input()
 cur = 0
 cnt = 0
 while cur < c:

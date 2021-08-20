@@ -4,8 +4,7 @@ from itertools import groupby as gb
 from itertools import permutations as perm
 from collections import Counter as C
 from collections import defaultdict as dd
-sys.setrecursionlimit(10**5)
-
+sys.setrecursionlimit(10 ** 5)
 T = int(input())
 for i in range(T):
     ang = int(input())

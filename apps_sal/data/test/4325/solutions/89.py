@@ -7,14 +7,13 @@ def input():
 
 
 sys.setrecursionlimit(20000000)
-
 MOD = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
-    N, X, T = list(map(int, input().split()))
-    print((math.ceil(N / X) * T))
+    (N, X, T) = list(map(int, input().split()))
+    print(math.ceil(N / X) * T)
 
 
 def __starting_point():

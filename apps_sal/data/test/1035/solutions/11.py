@@ -11,18 +11,14 @@ def factorization(n):
                 cnt += 1
                 temp //= i
             arr.append(i)
-
     if temp != 1:
         arr.append(temp)
-
     if not arr:
         arr.append(n)
-
     return arr
 
 
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 gcd = math.gcd(A, B)
 f = factorization(gcd)
-print((len(f)))
+print(len(f))

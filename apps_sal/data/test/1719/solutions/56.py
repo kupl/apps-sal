@@ -1,7 +1,7 @@
 n = int(input())
 x = 0
 dp = [[[[0] * 4 for q in range(4)] for p in range(4)] for i in range(n - 2)]
-ng = ["012", "021", "102", "0112", "0132", "0312"]
+ng = ['012', '021', '102', '0112', '0132', '0312']
 for p in range(4):
     for q in range(4):
         for r in range(4):
@@ -17,5 +17,5 @@ for i in range(n - 3):
 for p in range(4):
     for q in range(4):
         for r in range(4):
-            x = (x + dp[-1][p][q][r]) % (10**9 + 7)
+            x = (x + dp[-1][p][q][r]) % (10 ** 9 + 7)
 print(x)

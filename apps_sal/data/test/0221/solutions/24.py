@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if n % (2 * k + 1) == 0 or n % (2 * k + 1) >= k + 1:
     if n % (2 * k + 1) == 0:
         print(n // (2 * k + 1))

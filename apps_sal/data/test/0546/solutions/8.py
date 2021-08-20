@@ -18,12 +18,12 @@ for i in range(n):
                     break
             if cont:
                 q = False
-                print("NO")
+                print('NO')
                 break
         elif s[sc] != pat[x]:
             if pat[x] != '?' or s[sc] not in good:
                 q = False
-                print("NO")
+                print('NO')
                 break
         x += 1
         sc += 1
@@ -33,6 +33,6 @@ for i in range(n):
     if q:
         if x < len(pat) or sc < len(s):
             q = False
-            print("NO")
+            print('NO')
     if q:
-        print("YES")
+        print('YES')

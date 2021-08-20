@@ -15,7 +15,7 @@ def n_part_harshad(k):
     if k < 1:
         return vals - {0}
     prevs = n_part_harshad(k - 1)
-    groups = (10 * a + b for a, b in itertools.product(prevs, vals))
+    groups = (10 * a + b for (a, b) in itertools.product(prevs, vals))
     return set(filter(part_harshad, groups))
 
 

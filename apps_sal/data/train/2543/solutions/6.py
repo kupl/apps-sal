@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseOnlyLetters(self, S: str) -> str:
         S = list(S)
         start = 0
@@ -8,7 +9,7 @@ class Solution:
                 start += 1
             while not S[end].isalpha() and start < end:
                 end -= 1
-            S[start], S[end] = S[end], S[start]
+            (S[start], S[end]) = (S[end], S[start])
             start += 1
             end -= 1
         return ''.join(S)

@@ -1,8 +1,9 @@
 class Solution:
+
     def __init__(self):
         self.dp = {}
-        self.s = ""
-        self.t = ""
+        self.s = ''
+        self.t = ''
         self.letter2Indices = {}
 
     def numDistinct(self, s, t):
@@ -15,7 +16,6 @@ class Solution:
             return 0
         if not t:
             return 1
-
         self.s = s.lower()
         self.t = t.lower()
         length = len(s)
@@ -27,7 +27,6 @@ class Solution:
                 self.letter2Indices[letter].append(i)
             else:
                 self.letter2Indices[letter] = list([i])
-
         return self.numSubseq(0, 0)
 
     def numSubseq(self, startS, startT):
@@ -35,10 +34,8 @@ class Solution:
             return 1
         if startS >= len(self.s):
             return 0
-
         if self.dp[startT][startS] >= 0:
             return self.dp[startT][startS]
-
         letter = self.t[startT]
         count = 0
         firstMatch = -1
@@ -47,9 +44,7 @@ class Solution:
                 if i >= startS:
                     count += self.numSubseq(i + 1, startT + 1)
                     if firstMatch < 0:
-                        # We can directly fill dp[startT][startS:firstMatch-1] with the same number
                         firstMatch = i
-
         self.dp[startT][startS] = count
         for i in range(startS + 1, firstMatch):
             self.dp[startT][i] = count

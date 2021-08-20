@@ -8,20 +8,20 @@ def f(sm, nine):
     if sm >= 8:
         sm -= 8
         ret = '8' + ret
-    ret = str(sm % 9) + (sm // 9) * '9' + ret
+    ret = str(sm % 9) + sm // 9 * '9' + ret
     return int(ret)
 
 
 def g(sm, lstmax):
     mn = min(sm, lstmax)
     sm -= lstmax
-    ret = str(sm % 9) + (sm // 9) * '9' + str(mn)
+    ret = str(sm % 9) + sm // 9 * '9' + str(mn)
     return int(ret)
 
 
 def digit_sum(n):
     s = str(n)
-    return sum(int(i) for i in s)
+    return sum((int(i) for i in s))
 
 
 def nc(i):
@@ -40,7 +40,7 @@ def naive(n, k):
     sm = 0
     for i in range(k + 1):
         sm += digit_sum(c + i)
-    for _ in range(10**6):
+    for _ in range(10 ** 6):
         if sm == n:
             return c
         sm -= digit_sum(c)
@@ -51,25 +51,20 @@ def naive(n, k):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     mp = k * (k + 1) // 2
     res = 10 ** 100
-
-    # くりあがりなし
     if n - mp > 0 and (n - mp) % (k + 1) == 0:
         fx = (n - mp) // (k + 1)
         res = min(res, g(fx, 9 - k))
-
-    # くりあがりあり
-    for i in range(k + 1):  # くりあがる位置
-        for j in range(1, 30):  # 9の個数
+    for i in range(k + 1):
+        for j in range(1, 30):
             mp = nc(k - i) - nc(i)
-            if (n + 9 * j * (k - i) - mp) > 0 and (n + 9 * j * (k - i) - mp) % (k + 1) == 0:
+            if n + 9 * j * (k - i) - mp > 0 and (n + 9 * j * (k - i) - mp) % (k + 1) == 0:
                 fx = (n + 9 * j * (k - i) - mp) // (k + 1)
                 if f(fx, j) - i < 0:
                     continue
                 res = min(res, f(fx, j) - i)
-
     for i in range(400):
         tmp = 0
         for j in range(k + 1):
@@ -77,7 +72,6 @@ for _ in range(int(input())):
         if tmp == n:
             res = min(res, i)
             break
-
     if res == 10 ** 100:
         res = -1
     print(res)

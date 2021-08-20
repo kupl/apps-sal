@@ -1,7 +1,3 @@
-# import sys
-# sys.stdin = open('input', 'r')
-# sys.stdout = open('output', 'w')
-
 def check(A, sum, n):
     if n == 0:
         if sum % 360 == 0:
@@ -14,11 +10,9 @@ def check(A, sum, n):
 
 n = int(input())
 A = []
-
 for _ in range(n):
     x = int(input())
     A.append(x)
-
 if check(A, 0, n):
     print('YES')
 else:

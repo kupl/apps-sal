@@ -3,7 +3,7 @@ def primeFactors(n):
     while n % 2 == 0:
         n /= 2
         factors.append(2)
-    for i in range(3, int(n**.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         while n % i == 0:
             n /= i
             factors.insert(0, i)
@@ -13,13 +13,13 @@ def primeFactors(n):
 
 
 def score(p):
-    last, xp, s = p[0], p[0], 0
+    (last, xp, s) = (p[0], p[0], 0)
     for e in p[1:]:
         if e == last:
             xp *= e
         else:
             s += xp
-            xp, last = e, e
+            (xp, last) = (e, e)
     return (s + xp) * len(p)
 
 
@@ -38,14 +38,11 @@ def partition(collection):
     if len(collection) == 1:
         yield [collection]
         return
-
     first = collection[0]
     for smaller in partition(collection[1:]):
-        # insert `first` in each of the subpartition's subsets
-        for n, subset in enumerate(smaller):
-            yield smaller[:n] + [[first] + subset] + smaller[n + 1:]
-        # put `first` in its own subset
-        yield [[first]] + smaller
+        for (n, subset) in enumerate(smaller):
+            yield (smaller[:n] + [[first] + subset] + smaller[n + 1:])
+        yield ([[first]] + smaller)
 
 
 def find_spec_prod_part(n, com):
@@ -61,5 +58,4 @@ def find_spec_prod_part(n, com):
             continue
         mplist.append(mp)
         best = fn(best, [mp, score(mp)], key=lambda x: x[1])
-
     return [sorted(best[0], reverse=True), best[1]]

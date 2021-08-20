@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n = int(input())
@@ -15,7 +14,6 @@ for _ in range(int(input())):
             mi.append(l1[d])
     mi.sort(reverse=True)
     for i in range(len(mi)):
-        if(i + 1) % 2 != 0:
+        if (i + 1) % 2 != 0:
             x = x + mi[i]
-
     print(x)

@@ -1,7 +1,6 @@
 s = input().split()
 n = s[0]
 k = int(s[1])
-
 ans = 0
 cur = 0
 for i in n[::-1]:

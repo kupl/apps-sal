@@ -1,6 +1,4 @@
-# 入力
-X, t = map(int, input().split())
-# 処理
+(X, t) = map(int, input().split())
 answer = X - t
 if X <= t:
     print(0)

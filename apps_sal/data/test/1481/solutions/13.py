@@ -3,7 +3,6 @@ board = []
 for i in range(n):
     r = input()
     board.append(r)
-# print(board)
 can = True
 for i in range(n):
     row = board[i]
@@ -15,28 +14,19 @@ for i in range(n):
         for k in range(2):
             if ind_r[k] >= n or ind_r[k] < 0:
                 continue
-
-            else:
-                # print(row[ind_r[k]])
-                # print("----------")
-                if row[ind_r[k]] == 'o':
-                    c += 1
+            elif row[ind_r[k]] == 'o':
+                c += 1
         for k in range(2):
             if ind_c[k] >= n or ind_c[k] < 0:
                 continue
-
-            else:
-                # print(board[ind_c[k]][j])
-                # print("----------")
-                if board[ind_c[k]][j] == 'o':
-                    c += 1
-        # print(c)
+            elif board[ind_c[k]][j] == 'o':
+                c += 1
         if c % 2 != 0:
             can = False
             break
     if can == False:
         break
 if can == True:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

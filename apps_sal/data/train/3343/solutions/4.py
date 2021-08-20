@@ -1,11 +1,10 @@
 from decimal import Decimal, ROUND_HALF_UP
-
 units = 'KMGT'
 q = Decimal('0.001')
 
 
 def memorysize_conversion(memorysize):
-    n, unit = memorysize.split()
+    (n, unit) = memorysize.split()
     n = Decimal(n)
     i = units.find(unit[0].upper()) + 1
     if unit[1] == 'i':

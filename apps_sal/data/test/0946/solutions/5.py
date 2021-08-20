@@ -5,6 +5,6 @@ for i in a:
     if i == 1:
         flag = True
 if flag:
-    print("HARD")
+    print('HARD')
 else:
-    print("EASY")
+    print('EASY')

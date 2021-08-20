@@ -1,5 +1,4 @@
 import math
-
 N = int(input())
 S = int(input())
 L = N - S
@@ -15,7 +14,6 @@ def search(b, n=N):
 
 
 def main():
-
     if L < 0:
         print(-1)
     elif L == 0:
@@ -27,7 +25,6 @@ def main():
                 P.append(l + 1)
                 P.append(L // l + 1)
         P.sort()
-
         ans = -1
         for p in P:
             if p == 1:
@@ -36,7 +33,6 @@ def main():
             if S == S0:
                 ans = p
                 break
-
         print(ans)
 
 

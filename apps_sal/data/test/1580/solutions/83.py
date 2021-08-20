@@ -1,11 +1,9 @@
-# E - 1 or 2
 from typing import Set
 
 
 class UnionFind:
     """Union-Find: O(α(N))"""
-
-    __slots__ = ["_data_size", "_first_idx", "_parents"]
+    __slots__ = ['_data_size', '_first_idx', '_parents']
 
     def __init__(self, data_size: int, is_zero_origin: bool = True) -> None:
         self._data_size = data_size
@@ -26,9 +24,7 @@ class UnionFind:
     @property
     def groups(self) -> Set[int]:
         """Return the set of groups (roots)."""
-        return {
-            self[x] for x in range(self._first_idx, self._data_size + self._first_idx)
-        }
+        return {self[x] for x in range(self._first_idx, self._data_size + self._first_idx)}
 
     def is_connected(self, x: int, y: int) -> bool:
         """Return whether two vertices x and y are connected or not."""
@@ -36,21 +32,21 @@ class UnionFind:
 
     def unite(self, x: int, y: int) -> None:
         """Unite two groups of vertices x and y."""
-        x, y = self[x], self[y]
+        (x, y) = (self[x], self[y])
         if x == y:
             return
         if self._parents[x] > self._parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self._parents[x] += self._parents[y]
         self._parents[y] = x
 
 
 def main():
-    N, _, *X = list(map(int, open(0).read().split()))
+    (N, _, *X) = list(map(int, open(0).read().split()))
     tree = UnionFind(N, is_zero_origin=False)
-    for x, y, _ in zip(*[iter(X)] * 3):
+    for (x, y, _) in zip(*[iter(X)] * 3):
         tree.unite(x, y)
-    print((len(tree)))
+    print(len(tree))
 
 
 def __starting_point():

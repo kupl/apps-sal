@@ -2,21 +2,17 @@ def main():
     n = int(input())
     graph = [[] for i in range(n)]
     ans = [(0, 0)] * n
-
     for _ in range(n - 1):
-        u, v = [int(el) for el in input().split()]
+        (u, v) = [int(el) for el in input().split()]
         u -= 1
         v -= 1
         graph[u].append(v)
         graph[v].append(u)
-
     for l in graph:
         if len(l) > 4:
             print('NO')
             return
-
     step = 1 << 28
-
     used = [False] * n
 
     def dfs(v, direction, step, koord):
@@ -36,17 +32,13 @@ def main():
         elif direction == '':
             my_koord = (0, 0)
             dirs = ['u', 'd', 'l', 'r']
-
         ans[v] = my_koord
-
         d = 0
         for u in graph[v]:
             if not used[u]:
                 dfs(u, dirs[d], step >> 1, my_koord)
                 d += 1
-
     dfs(0, '', step, (0, 0))
-
     print('YES')
     for k in ans:
         print(k[0], k[1])

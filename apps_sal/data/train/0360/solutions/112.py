@@ -1,13 +1,12 @@
 class Solution:
-    def shipWithinDays(self, weights: List[int], D: int) -> int:
 
+    def shipWithinDays(self, weights: List[int], D: int) -> int:
         n = len(weights)
         if not n:
             return n
-
         total = sum(weights)
         target = total // D
-        left, right = max(weights), total
+        (left, right) = (max(weights), total)
 
         def check(s, total, D):
             cur = 0
@@ -21,14 +20,12 @@ class Solution:
                 else:
                     cur += w
                     i += 1
-
                 if D == 1:
                     if total > s:
                         return False
                     else:
                         return True
             return True
-
         ans = total
         while left <= right:
             mid = (left + right + 1) // 2
@@ -37,5 +34,4 @@ class Solution:
                 right = mid - 1
             else:
                 left = mid + 1
-
         return ans

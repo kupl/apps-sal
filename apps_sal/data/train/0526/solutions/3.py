@@ -1,8 +1,7 @@
-# cook your dish here
 def compress(a):
     prev = None
     prev_c = 1
-    ans_s = ""
+    ans_s = ''
     k = 0
     for x in a:
         if prev == x:
@@ -23,12 +22,11 @@ def compress(a):
     else:
         ans_s = ans_s + str(prev)
         k += 8
-    # print(ans_s)
     return k
 
 
 t = int(input())
-while(t):
+while t:
     t = t - 1
     a = input()
     ans = compress(a)

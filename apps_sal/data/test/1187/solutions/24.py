@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 data = []
 chil = []
 for i in range(n + 1):
@@ -6,27 +6,6 @@ for i in range(n + 1):
 for j in range(m):
     data.append([int(i) for i in input().split()])
     chil[data[-1][0]].add(data[-1][1])
-
-# done = set()
-# fnd = set()
-# cycle = False
-# def dfs(a):
-#     for c in chil[a]:
-#         print(a,c)
-#         if c in fnd:
-#             nonlocal cycle
-#             cycle = True
-#             return
-#         if c not in done:
-#             fnd.add(c)
-#             dfs(c)
-# for i in range(1, n+1):
-#     if i not in done:
-#         dfs(i)
-#         done |= fnd
-#         fnd = set()
-#         if cycle:
-#             break
 
 
 def cycle():
@@ -50,5 +29,5 @@ if not cycle():
 else:
     print(2)
     for d in data:
-        print(["2", "1"][d[0] < d[1]], end=' ')
+        print(['2', '1'][d[0] < d[1]], end=' ')
     print()

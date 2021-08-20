@@ -1,10 +1,10 @@
-c = [[0, 0] for i in range(round(1e6 + 1))]
+c = [[0, 0] for i in range(round(1000000.0 + 1))]
 
 
 def ans(t):
-    a, k, s = [int(x) for x in input().split()]
+    (a, k, s) = [int(x) for x in input().split()]
     v = list([int(x) for x in input().split()])
-    y, x, a, m = 0, 0, 0, 1e12
+    (y, x, a, m) = (0, 0, 0, 1000000000000.0)
     for i in range(len(v)):
         if c[v[i]][0] != t:
             c[v[i]] = [t, 0]

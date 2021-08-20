@@ -2,7 +2,7 @@ a = []
 b = []
 c = 0
 for _ in range(int(input())):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     z = x + y
     a.append(z)
     b.append(x)

@@ -1,5 +1,4 @@
 def get_char(c):
-
     myascii = {}
     myascii['32'] = ' '
     myascii['33'] = '!'
@@ -96,7 +95,6 @@ def get_char(c):
     myascii['124'] = '|'
     myascii['125'] = '}'
     myascii['126'] = '~'
-
     if c in myascii:
         out = myascii[str(c)]
     else:

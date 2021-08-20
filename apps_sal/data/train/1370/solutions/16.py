@@ -1,4 +1,4 @@
 for i in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a = set(str(a))
-    print(len(a)**3)
+    print(len(a) ** 3)

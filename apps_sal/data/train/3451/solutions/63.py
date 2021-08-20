@@ -3,7 +3,7 @@ def triangle(row):
     result = list(row)
     while len(result) > 1:
         current = list()
-        for i, j in zip(result[:-1], result[1:]):
+        for (i, j) in zip(result[:-1], result[1:]):
             if i == j:
                 current.extend([i])
             else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         n = len(nums)
         calls = 0
@@ -13,12 +14,10 @@ class Solution:
                 odd_index += 1
             if num_zeros == n:
                 return calls
-
             if odd_index == n:
                 for j in range(n):
                     nums[j] /= 2
                 calls += 1
-
             for j in range(i, n):
                 if nums[j] % 2 != 0:
                     nums[j] -= 1

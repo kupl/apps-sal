@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         total = sum(customers)
         x = total / 4
@@ -26,14 +27,12 @@ class Solution:
                 return -1
             else:
                 return c
-
         else:
             for i in range(0, x + 1):
                 if total < 4:
                     profit = (b + total) * boardingCost - (i + 1) * runningCost
                     list1.append(profit)
                 else:
-
                     b = b + 4
                     profit = b * boardingCost - (i + 1) * runningCost
                     total = total - 4

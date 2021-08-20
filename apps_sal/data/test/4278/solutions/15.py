@@ -16,13 +16,10 @@ def conbi(n, r):
     ue = 1
     for i in range(n - r + 1, n + 1):
         ue *= i
-
     sita = 1
-
     for i in range(1, r + 1):
         sita *= i
-
-    return (ue // sita)
+    return ue // sita
 
 
 i = 0
@@ -34,5 +31,4 @@ while i < n - 1:
         i += 1
     ans += conbi(c, 2)
     i += 1
-
 print(ans)

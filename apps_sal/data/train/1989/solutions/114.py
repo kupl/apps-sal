@@ -1,8 +1,9 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
         seen = {0: -1}
         mask = 2 ** 10 - 1
-        bs = [0] + [(1 << i) for i in range(10)]
+        bs = [0] + [1 << i for i in range(10)]
         cur = 0
         best = 1
         for i in range(len(s)):

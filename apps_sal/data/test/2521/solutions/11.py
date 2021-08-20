@@ -22,4 +22,4 @@ for i in range(1, n + 1):
     temppostpop = heapq.heappop(posts)
     aqs += tempposta - temppostpop
     apossum[i] = aqs
-print((max([x + y for x, y in zip(apresum, apossum[::-1])])))
+print(max([x + y for (x, y) in zip(apresum, apossum[::-1])]))

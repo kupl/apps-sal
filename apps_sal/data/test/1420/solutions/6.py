@@ -1,4 +1,4 @@
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 d = max(a[0], l - a[-1])

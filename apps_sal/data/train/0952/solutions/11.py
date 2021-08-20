@@ -8,7 +8,7 @@ for _ in range(n):
     p = 0
     q = 0
     for i in s:
-        if(isVowel(i)):
+        if isVowel(i):
             p = p + 1
         elif i > 'a' and i < 'e':
             if i == 'c':

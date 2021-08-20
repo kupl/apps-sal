@@ -1,8 +1,8 @@
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 a = []
 b = []
 for _ in range(n):
-    c, d = list(map(int, input().split()))
+    (c, d) = list(map(int, input().split()))
     if d < 0:
         b.append([c, d])
     else:
@@ -24,4 +24,3 @@ if z == 0 or r < 0:
     print('NO')
 else:
     print('YES')
-# print(a,b)

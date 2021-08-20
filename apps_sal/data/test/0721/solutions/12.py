@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = list(map(int, input().split()))
 m = int(input())
 a.sort()

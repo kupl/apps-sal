@@ -2,7 +2,7 @@ n = int(input())
 h = [0] * n
 m = [0] * n
 for i in range(0, n):
-    h[i], m[i] = map(int, input().split(':'))
+    (h[i], m[i]) = map(int, input().split(':'))
 for i in range(0, n):
     for j in range(i, n):
         if h[j] < h[i] or (h[j] == h[i] and m[j] < m[i]):

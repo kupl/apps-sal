@@ -2,7 +2,7 @@ from functools import reduce
 
 
 def getDivisors(n):
-    lst, p = [], 2
+    (lst, p) = ([], 2)
     while n > 1:
         while not n % p:
             lst.append(p)
@@ -19,13 +19,11 @@ def eq_dice(diceSet):
 
 
 def genCombDices(tup, seens):
-
     if tup[0] != 2:
         yield tup
-
     if len(tup) > 2:
-        for i, a in enumerate(tup):
-            for j, b in enumerate(tup[i + 1:], i + 1):
+        for (i, a) in enumerate(tup):
+            for (j, b) in enumerate(tup[i + 1:], i + 1):
                 m = a * b
                 t = tuple(sorted(tup[:i] + tup[i + 1:j] + tup[j + 1:] + (m,)))
                 if m > 20 or t in seens:

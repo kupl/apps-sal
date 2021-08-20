@@ -1,8 +1,8 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         memo = defaultdict(list)
-
-        for i, n in enumerate(B):
+        for (i, n) in enumerate(B):
             memo[n].append(i)
 
         @lru_cache(None)
@@ -17,5 +17,4 @@ class Solution:
                         break
             count = max(count, helper(index + 1, taken))
             return count
-
         return helper(0, -1)

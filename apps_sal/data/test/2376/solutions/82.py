@@ -1,10 +1,10 @@
-n, w = list(map(int, input().split()))
-w_sub, v_sub = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
+(w_sub, v_sub) = list(map(int, input().split()))
 w0 = w_sub
 inf = 1000000001
 x = [[inf, v_sub], [inf], [inf], [inf]]
 for i in range(n - 1):
-    w_sub, v_sub = list(map(int, input().split()))
+    (w_sub, v_sub) = list(map(int, input().split()))
     w_sub -= w0
     x[w_sub].append(v_sub)
 for i in range(4):
@@ -13,7 +13,6 @@ for i in range(4):
     l_sub = len(x[i])
     for j in range(1, l_sub):
         x[i][j] += x[i][j - 1]
-
 ma = 0
 l3 = len(x[3])
 l2 = len(x[2])
@@ -31,5 +30,4 @@ for i in range(l3):
                     break
         else:
             break
-
 print(ma)

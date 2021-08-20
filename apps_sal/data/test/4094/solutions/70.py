@@ -1,6 +1,5 @@
 def main():
     K = int(input())
-
     ans = -1
     r = 7 % K
     for i in range(1, K + 1):

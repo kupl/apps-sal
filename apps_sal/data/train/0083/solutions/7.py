@@ -1,8 +1,7 @@
 from math import *
-
 t = int(input())
 for y in range(t):
-    x, y, a, b = list(map(int, input().split()))
+    (x, y, a, b) = list(map(int, input().split()))
     if (y - x) % (a + b) != 0:
         print(-1)
     else:

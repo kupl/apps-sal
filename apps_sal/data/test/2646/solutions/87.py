@@ -1,9 +1,8 @@
 from collections import deque
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[] for _ in range(n)]
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a[x - 1].append(y - 1)
     a[y - 1].append(x - 1)
 c = [0] * n
@@ -16,6 +15,6 @@ while len(que) > 0:
             continue
         c[i] = e + 1
         que.append(i)
-print("Yes")
+print('Yes')
 for i in range(1, n):
     print(c[i])

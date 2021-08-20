@@ -16,7 +16,6 @@ else:
         if index == 0:
             a[index + 1] += a[index] - killed
             a[index] = 0
-
         elif index == n - 1:
             a[index - 1] += killed - 1
             a[index] = 0
@@ -24,6 +23,5 @@ else:
             a[index - 1] += killed - 1
             a[index + 1] += a[index] - killed
             a[index] = 0
-
     for i in range(n):
         print(a[i])

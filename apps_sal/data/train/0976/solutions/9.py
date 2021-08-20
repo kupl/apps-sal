@@ -17,21 +17,16 @@ for i in it:
             maa = max(maa, j - c[1] + 1)
         else:
             mi = max(mi, j - c[1] + 1)
+    elif a == []:
+        a.append([i, j])
+        b.append(1)
     else:
-        if a == []:
-            a.append([i, j])
-            b.append(1)
+        if i == a[-1][0]:
+            b.append(b[-1])
         else:
-
-            if i == a[-1][0]:
-
-                b.append(b[-1])
-            else:
-                b.append(b[-1] + 1)
-            a.append([i, j])
+            b.append(b[-1] + 1)
+        a.append([i, j])
     if b:
         ma = max(ma, b[-1])
     j += 1
-   # print(a,b)
-
 print(ma, maa, mi)

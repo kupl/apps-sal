@@ -1,10 +1,9 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
-
         counts = Counter(nums)
-
         for num in sorted(counts):
             prev = num
             frequency = counts[num]
@@ -18,5 +17,4 @@ class Solution:
                     counts[nextNum] -= frequency
                     prev = nextNum
                 counts[num] -= frequency
-
         return True

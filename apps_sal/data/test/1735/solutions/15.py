@@ -7,5 +7,4 @@ for c in s:
         st.pop()
     else:
         st.append(c)
-
-print('Yes' if k % 2 == 1 else "No")
+print('Yes' if k % 2 == 1 else 'No')

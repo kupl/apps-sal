@@ -12,7 +12,6 @@ class Solution:
         for i in range(len(reservedSeats)):
             res[reservedSeats[i][0] - 1].append(reservedSeats[i][1])
         count_rows = 0
-
         helper = [0 for i in range(10)]
         for i in res.keys():
             count_rows += 1
@@ -28,6 +27,5 @@ class Solution:
             if count == 0 and helper[3:7] == [0, 0, 0, 0]:
                 count += 1
             ans += count
-
         ans += (n - count_rows) * 2
         return ans

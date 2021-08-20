@@ -1,6 +1,6 @@
 n = int(input())
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
     n -= 1
     n -= 2
@@ -8,4 +8,4 @@ else:
     if jam > 0:
         print(1, jam)
     else:
-        print("NO")
+        print('NO')

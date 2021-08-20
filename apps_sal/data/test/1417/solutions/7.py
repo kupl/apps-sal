@@ -12,9 +12,6 @@ def f(n):
         ans -= fact(n) // fact(i + 1) * n * (i * (n - i) - 1)
     return ans
 
-# purvikaurraina
-#print(f(int(input())) % 998244353)
-
 
 def g(n):
     M = 998244353

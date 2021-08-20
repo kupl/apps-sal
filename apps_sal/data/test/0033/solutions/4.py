@@ -16,17 +16,17 @@ def solve(a1, m1, a2, m2):
     sol = egcd(m1, m2)
     m1x = m1 * sol[0]
     m2y = m2 * sol[1]
-    return (m1x * a2 + m2y * a1)
+    return m1x * a2 + m2y * a1
 
 
-a1, b1, a2, b2, L, R = list(map(int, input().split(' ')))
+(a1, b1, a2, b2, L, R) = list(map(int, input().split(' ')))
 L -= b1
 R -= b1
 b2 -= b1
 b1 = 0
 g = gcd(a1, a2)
 L = max(L, max(b1, b2))
-if (b2 % g != 0 or L > R):
+if b2 % g != 0 or L > R:
     print(0)
     quit()
 rmod = a1 * a2 // g
@@ -39,7 +39,7 @@ sol %= mod
 sol *= g
 L -= sol
 R -= sol
-if (L <= 0):
+if L <= 0:
     lnew = L % rmod
     R += lnew - L
     L = lnew

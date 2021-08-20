@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mass = list(map(int, input().split()))
 wuneed = set()
 for i in range(1, n + 1):

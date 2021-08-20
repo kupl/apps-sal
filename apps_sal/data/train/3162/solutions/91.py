@@ -1,4 +1,5 @@
 def compare(s1, s2):
+
     def get_val(s):
         if not s:
             return 0

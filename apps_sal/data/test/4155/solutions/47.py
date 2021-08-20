@@ -1,6 +1,5 @@
 n = int(input())
 al = list(map(int, input().split()))
-
 res = 0
 temp = 0
 for i in range(n):
@@ -9,5 +8,4 @@ for i in range(n):
         temp = al[i]
     else:
         temp = al[i]
-
 print(res)

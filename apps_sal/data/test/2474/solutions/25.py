@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 c = list(map(int, input().split()))
 c.sort(reverse=True)

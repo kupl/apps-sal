@@ -1,15 +1,14 @@
 import itertools
 from itertools import permutations as perm
-
 l = [[int(x) for x in input().split()] for i in range(8)]
 
 
 def dist2(p0, p1):
-    return sum([(p0[i] - p1[i])**2 for i in range(3)])
+    return sum([(p0[i] - p1[i]) ** 2 for i in range(3)])
 
 
 def check(c):
-    dists = [[(c[i][0] - c[j][0])**2 + (c[i][1] - c[j][1])**2 + (c[i][2] - c[j][2])**2 for i in range(8)] for j in range(8)]
+    dists = [[(c[i][0] - c[j][0]) ** 2 + (c[i][1] - c[j][1]) ** 2 + (c[i][2] - c[j][2]) ** 2 for i in range(8)] for j in range(8)]
     s2 = min([min(l) for l in dists])
     return all([sorted(l) == [0, s2, s2, s2, 2 * s2, 2 * s2, 2 * s2, 3 * s2] for l in dists])
 
@@ -58,18 +57,18 @@ for l2 in perm(l, 3):
         s2 = dist2(p0, p1)
         if s2 == 0:
             continue
-        s = round(s2**.5)
-        if s**2 != s2:
+        s = round(s2 ** 0.5)
+        if s ** 2 != s2:
             continue
         for p2 in perm(l2[2]):
             if dist2(p0, p2) != s2 or dist2(p1, p2) != 2 * s2:
                 continue
             p3 = sub(add(p1, p2), p0)
             x = div(cross(sub(p1, p0), sub(p2, p0)), s)
-            p4, p5, p6, p7 = add(p0, x), add(p1, x), add(p2, x), add(p3, x)
+            (p4, p5, p6, p7) = (add(p0, x), add(p1, x), add(p2, x), add(p3, x))
             l3 = [p0, p1, p2, p3, p4, p5, p6, p7]
             if sorted([sorted(p) for p in l]) == sorted([sorted(p) for p in l3]):
-                print("YES")
+                print('YES')
                 used = [False for i in range(8)]
                 for p in l:
                     for i in range(8):
@@ -85,7 +84,5 @@ for l2 in perm(l, 3):
             break
     if solved:
         break
-
 if not solved:
-    print("NO")
-#if not poss(1,[l[0]]): print("NO")
+    print('NO')

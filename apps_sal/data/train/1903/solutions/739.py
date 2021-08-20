@@ -2,7 +2,9 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def helper(a, b):
             return abs(a[0] - b[0]) + abs(a[1] - b[1])
         edges = []
@@ -11,9 +13,8 @@ class Solution:
                 heapq.heappush(edges, (helper(points[i], points[j]), i, j))
         tree = []
         res = 0
-        # print(edges)
         while edges:
-            dist, i, j = heapq.heappop(edges)
+            (dist, i, j) = heapq.heappop(edges)
             flag = False
             for p in range(len(tree)):
                 s = tree[p]
@@ -37,5 +38,4 @@ class Solution:
             if not flag:
                 tree.append({i, j})
                 res += dist
-            # print(tree)
         return res

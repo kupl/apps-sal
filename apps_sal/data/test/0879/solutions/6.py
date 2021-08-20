@@ -7,4 +7,4 @@ while cur > 1:
     ans.appendleft(str(cur))
     cur = p[cur - 2]
 ans.appendleft('1')
-print(" ".join(ans))
+print(' '.join(ans))

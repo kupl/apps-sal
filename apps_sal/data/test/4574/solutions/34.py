@@ -12,7 +12,7 @@ def main():
             line = -1
         else:
             line = an
-    print((lines[0] * lines[1] if len(lines) == 2 else 0))
+    print(lines[0] * lines[1] if len(lines) == 2 else 0)
 
 
 def __starting_point():

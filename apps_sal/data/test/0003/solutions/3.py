@@ -1,8 +1,8 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 arr = []
-ff = [0] * (5005)
+ff = [0] * 5005
 for i in range(q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     for j in range(x, y + 1):
         ff[j] += 1
     arr.append([x, y])
@@ -19,7 +19,6 @@ for i in range(q):
         c[j] = c[j - 1]
         if ff[j] == 1:
             c[j] += 1
-    # print(ff[0:n+1])
     for j in range(i + 1, q):
         ans = max(ans, tt - c[arr[j][1]] + c[arr[j][0] - 1])
     for j in range(arr[i][0], arr[i][1] + 1):

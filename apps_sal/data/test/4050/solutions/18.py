@@ -1,6 +1,5 @@
 from collections import defaultdict
 from itertools import accumulate
-
 N = int(input())
 H = defaultdict(lambda: [])
 A = list(map(int, input().split()))
@@ -16,7 +15,7 @@ for L in list(H.values()):
     L.sort()
     ansc = []
     pi = -1
-    for i, j in L:
+    for (i, j) in L:
         if j >= pi:
             ansc.append((j + 1, i))
             pi = i
@@ -24,5 +23,5 @@ for L in list(H.values()):
         ans = ansc.copy()
         ctr = len(ans)
 print(ctr)
-for j, i in ans:
+for (j, i) in ans:
     print(j, i)

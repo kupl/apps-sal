@@ -1,13 +1,13 @@
-s1 = "qwertyuiop"
-s2 = "asdfghjkl;"
-s3 = "zxcvbnm,./"
+s1 = 'qwertyuiop'
+s2 = 'asdfghjkl;'
+s3 = 'zxcvbnm,./'
 
 
 def main():
     p = input()
     s = input()
-    a = ""
-    if p == "L":
+    a = ''
+    if p == 'L':
         d = 1
     else:
         d = -1

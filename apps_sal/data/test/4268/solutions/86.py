@@ -1,5 +1,5 @@
 import numpy as np
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 xlist = [list(map(int, input().split())) for i in range(n)]
 xarray = np.array(xlist)
 ans = 0

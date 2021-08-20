@@ -24,14 +24,14 @@ def sol(p):
                 res = unique_non_border(p, x, x + l, y, y + l)
                 if res != -1:
                     return res
-    assert(False)
+    assert False
     return -1
 
 
 n = int(input())
 p = []
 for i in range(4 * n + 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     p.append((x, y))
 ans = sol(p)
 print(*p[ans])

@@ -1,6 +1,5 @@
 n = int(input())
 socks = [int(x) for x in input().split()]
-
 on = set()
 m = 0
 i = 0

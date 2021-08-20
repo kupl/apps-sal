@@ -3,7 +3,7 @@ def main():
     K = int(input())
     for i in range(min(K, len(S))):
         if S[i] != '1':
-            print((S[i]))
+            print(S[i])
             return
     print('1')
     return

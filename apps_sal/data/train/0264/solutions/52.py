@@ -1,11 +1,12 @@
 class Solution:
+
     def maxLength(self, arr):
         prev = {0: 0}
         for word in arr:
             seen = 0
             duplicate = False
             for char in word:
-                binaryC = 1 << (ord(char) - ord('a'))
+                binaryC = 1 << ord(char) - ord('a')
                 if binaryC & seen != 0:
                     duplicate = True
                     break
@@ -22,12 +23,13 @@ class Solution:
 
 
 class Solution:
+
     def maxLength(self, arr):
         cands = {0: 0}
         for word in arr:
             if len(word) != len(set(word)):
                 continue
-            currW = sum(1 << (ord(char) - ord('a')) for char in word)
+            currW = sum((1 << ord(char) - ord('a') for char in word))
             toAdd = dict()
             for prevW in cands:
                 if prevW & currW == 0:

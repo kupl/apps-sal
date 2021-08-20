@@ -1,11 +1,6 @@
 import collections
-
 N = int(input())
 A = list(map(int, input().split()))
-
-# ap+aq == p-q (p>q)
-# p-ap = q+aq
-
 mp = {}
 ans = 0
 for p in range(N):
@@ -15,5 +10,4 @@ for p in range(N):
         mp[p + A[p] + 1] += 1
     else:
         mp[p + A[p] + 1] = 1
-
 print(ans)

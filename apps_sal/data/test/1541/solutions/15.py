@@ -1,12 +1,12 @@
 sum = 0
 seq = input()
-ind = seq.index("^")
+ind = seq.index('^')
 for i in range(len(seq)):
     if seq[i].isdigit():
         sum += (ind - i) * int(seq[i])
 if sum == 0:
-    print("balance")
+    print('balance')
 elif sum > 0:
-    print("left")
+    print('left')
 else:
-    print("right")
+    print('right')

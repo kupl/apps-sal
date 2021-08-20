@@ -1,6 +1,6 @@
 n = int(input())
 ans = 0
-temp = 3 * 10**5
+temp = 3 * 10 ** 5
 n2 = temp * 2 + 1
 ar = [0] * n2
 while n > 0:
@@ -11,7 +11,7 @@ while n > 0:
     num2 = 0
     last = 0
     for i in si:
-        if i == "(":
+        if i == '(':
             numOp += 1
         else:
             numCl += 1

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
-
 dp = [0] * a[-1]
 for x in a:
     if dp[x - 1] == 0:
@@ -9,7 +8,6 @@ for x in a:
         while y <= a[-1]:
             dp[y - 1] = 1
             y += x
-
 sum = 0
 d = [0] * a[-1]
 for i in a:

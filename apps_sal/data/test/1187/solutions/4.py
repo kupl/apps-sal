@@ -11,10 +11,10 @@ def dfs(inp, stat, u):
 
 def main():
     ans = []
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     inp = tuple(([] for _ in range(n + 1)))
     for _ in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         ans.append((u > v) + 1)
         inp[u].append(v)
     stat = [1] * (n + 1)

@@ -4,12 +4,12 @@ def judge(k, N, A):
     for i in A:
         while p >= 0 and A[p] + i < k:
             p -= 1
-        t += (p + 1)
+        t += p + 1
     return t
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A.sort(reverse=True)
     t = A[0] * 2
@@ -49,4 +49,4 @@ def main():
     return r - (judge(X, N, A) - M) * X
 
 
-print((main()))
+print(main())

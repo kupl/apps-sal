@@ -7,4 +7,3 @@ def final_grade(ex, p):
         return 75
     else:
         return 0
-  # return # final grade

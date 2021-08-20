@@ -1,8 +1,7 @@
-number = input().split(" ")
+number = input().split(' ')
 S = int(number[0])
 W = int(number[1])
-
 if S > W:
-    print("safe")
+    print('safe')
 else:
-    print("unsafe")
+    print('unsafe')

@@ -1,9 +1,9 @@
 from collections import Counter
-n, W = map(int, input().split())
+(n, W) = map(int, input().split())
 wv = [list(map(int, input().split())) for _ in range(n)]
 w0 = wv[0][0]
-d = {w0: [0], w0 + 1: [0], w0 + 2: [0], w0 + 3: [0], }
-for w, v in wv:
+d = {w0: [0], w0 + 1: [0], w0 + 2: [0], w0 + 3: [0]}
+for (w, v) in wv:
     d[w].append(v)
 for i in range(4):
     d[w0 + i].sort(reverse=True)

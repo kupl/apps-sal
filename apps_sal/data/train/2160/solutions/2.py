@@ -1,9 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 f = 0
 b = []
 p = sum(a) // k
-
 q = 0
 c = 0
 for i in a:
@@ -17,8 +16,8 @@ for i in a:
         f = 1
         break
 if f == 1 or len(b) != k or p != sum(a) / k:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
     for i in b:
-        print(i, end=" ")
+        print(i, end=' ')

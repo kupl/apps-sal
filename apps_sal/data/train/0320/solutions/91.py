@@ -1,8 +1,9 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         res = 0
         while True:
-            for i, x in enumerate(nums):
+            for (i, x) in enumerate(nums):
                 if x % 2 != 0:
                     nums[i] -= 1
                     res += 1
@@ -12,5 +13,4 @@ class Solution:
             res += 1
             if sum(nums) == 0:
                 break
-
         return res

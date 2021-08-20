@@ -6,8 +6,7 @@ for each in arr:
         odd += 1
     else:
         even += 1
-
 if even > odd:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

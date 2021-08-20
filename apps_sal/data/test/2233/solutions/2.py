@@ -10,9 +10,8 @@ for i in range(n):
             cnt += 1
             bad.append(i)
     if cnt != 2:
-        print("No")
+        print('No')
+    elif s[bad[0]] != s[bad[1]] or t[bad[0]] != t[bad[1]]:
+        print('No')
     else:
-        if s[bad[0]] != s[bad[1]] or t[bad[0]] != t[bad[1]]:
-            print("No")
-        else:
-            print("Yes")
+        print('Yes')

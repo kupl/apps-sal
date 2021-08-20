@@ -1,11 +1,12 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         if n < m * k:
             return -1
 
         def count(day):
-            cnt, counter = 0, 0
+            (cnt, counter) = (0, 0)
             for i in range(n):
                 if bloomDay[i] <= day:
                     counter += 1
@@ -15,7 +16,7 @@ class Solution:
                 else:
                     counter = 0
             return cnt
-        l, r = min(bloomDay), max(bloomDay)
+        (l, r) = (min(bloomDay), max(bloomDay))
         while l <= r:
             mid = l + (r - l) // 2
             if count(mid) < m:

@@ -18,9 +18,9 @@ def main():
     print(kl)
     for i in need:
         if i != need[len(need) - 1]:
-            print(i, end=" ")
+            print(i, end=' ')
         else:
-            print(i, end="")
+            print(i, end='')
 
 
 def find_min(vect):

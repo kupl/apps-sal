@@ -1,4 +1,4 @@
-n, a, b = (int(i) for i in input().split())
+(n, a, b) = (int(i) for i in input().split())
 ans = [[0 for i in range(b)] for j in range(a)]
 if n > a * b:
     print(-1)

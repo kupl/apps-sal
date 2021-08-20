@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ans = 0
     if n < k:
         ans = k

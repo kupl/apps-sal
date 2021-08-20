@@ -7,7 +7,6 @@ def I():
 
 N = 39
 p = [3 ** i for i in range(N)]
-
 q = int(I())
 for _ in range(q):
     n = int(I())

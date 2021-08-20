@@ -8,7 +8,7 @@ def check(k):
         return 0
 
 
-n, s = [int(i) for i in input().split()]
+(n, s) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 min_sum = 0
 L = 0

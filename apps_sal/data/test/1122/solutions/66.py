@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n % 2 == 1:
     ab = []
     a = n // 2
@@ -8,7 +8,7 @@ if n % 2 == 1:
         a -= 1
         b += 1
         ab.append([str(a), str(b)])
-    for a, b in ab:
+    for (a, b) in ab:
         print(a, b)
 else:
     l = m
@@ -23,5 +23,5 @@ else:
             b = a - l
         ab.append([str(a), str(b)])
         l -= 1
-    for a, b in ab:
+    for (a, b) in ab:
         print(a, b)

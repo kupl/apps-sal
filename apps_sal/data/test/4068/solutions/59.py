@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = set([int(input()) for _ in range(m)])
 step = [0] * (n + 1)
 step[0] = 1

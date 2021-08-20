@@ -2,7 +2,6 @@ import sys
 from collections import deque
 readline = sys.stdin.readline
 q = int(readline())
-
 for _ in range(q):
     n = int(readline())
     tmp = []

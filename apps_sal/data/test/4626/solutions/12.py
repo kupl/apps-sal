@@ -1,5 +1,4 @@
 import sys
-
 q = int(sys.stdin.readline())
 
 
@@ -8,7 +7,7 @@ def dist(x, y, z):
 
 
 def solve(a, b, c):
-    best_dist = 10**18
+    best_dist = 10 ** 18
     for ax in [-1, 0, 1]:
         for bx in [-1, 0, 1]:
             for cx in [-1, 0, 1]:
@@ -17,5 +16,5 @@ def solve(a, b, c):
 
 
 for _ in range(q):
-    a, b, c = map(int, sys.stdin.readline().strip().split(' '))
+    (a, b, c) = map(int, sys.stdin.readline().strip().split(' '))
     print(solve(a, b, c))

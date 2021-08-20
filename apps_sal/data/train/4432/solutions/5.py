@@ -4,7 +4,7 @@ def can_jump(arr):
     i = 0
     j = arr[i]
     n = i + j
-    if not x or not(arr[0]):
+    if not x or not arr[0]:
         return False
     while True:
         if x < n:

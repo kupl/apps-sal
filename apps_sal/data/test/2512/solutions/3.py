@@ -2,7 +2,10 @@ import sys
 import numpy as np
 from collections import defaultdict
 from numba import njit
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 @njit
@@ -18,10 +21,10 @@ def koushin(dp, item):
 
 
 def main():
-    R, C, K = map(int, input().split())
+    (R, C, K) = map(int, input().split())
     items = defaultdict(list)
     for _ in range(K):
-        r, c, v = map(int, input().split())
+        (r, c, v) = map(int, input().split())
         items[r - 1].append([c - 1, v])
     dp = np.zeros(C, dtype=int)
     for RR in range(R):

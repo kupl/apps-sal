@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     nn = []
     qq = []
     for j in range(n):
@@ -10,13 +10,13 @@ for i in range(int(input())):
         l3 = []
         for k in nn:
             if len(j) < 4:
-                a, b = 1, 1
+                (a, b) = (1, 1)
             elif len(j) < 20:
-                a, b = 2, 1
+                (a, b) = (2, 1)
             elif len(j) < 40:
-                a, b = 3, 2
+                (a, b) = (3, 2)
             elif len(j) <= 100:
-                a, b = 5, 4
+                (a, b) = (5, 4)
             m = 0
             for l in range(0, len(j), b):
                 try:

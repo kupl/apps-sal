@@ -17,7 +17,7 @@ def factors(n):
 def factor_sum(n):
     while True:
         c = factors(n)
-        result = sum(key * value for key, value in c.items())
+        result = sum((key * value for (key, value) in c.items()))
         if result == n:
             return n
         n = result

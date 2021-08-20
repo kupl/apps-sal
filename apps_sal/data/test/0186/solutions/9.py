@@ -1,6 +1,5 @@
-t2, t3 = list(map(int, input().split(' ')))
-
-left = 2 * (t2) - 10
+(t2, t3) = list(map(int, input().split(' ')))
+left = 2 * t2 - 10
 right = 3 * (t2 + t3) + 10
 while right - left != 1:
     guess = int((left + right) / 2)

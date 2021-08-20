@@ -1,7 +1,5 @@
 import sys
-
 t = int(input())
-
 while t > 0:
     n = int(input())
     minimum = sys.maxsize

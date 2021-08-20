@@ -1,5 +1,4 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 ans = 0
 for i in range(1, n + 1):
     num = i
@@ -11,5 +10,4 @@ for i in range(1, n + 1):
         num = num * 2
         p = p * (1 / 2)
     ans += p
-
 print(ans)

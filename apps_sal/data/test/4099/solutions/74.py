@@ -1,4 +1,4 @@
-N, K, M = list(map(int, input().split()))
+(N, K, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 now_total = 0
 target_total = N * M
@@ -8,6 +8,6 @@ target_point = target_total - now_total
 if 0 < target_point <= K:
     print(target_point)
 elif target_point <= 0:
-    print((0))
+    print(0)
 else:
-    print((-1))
+    print(-1)

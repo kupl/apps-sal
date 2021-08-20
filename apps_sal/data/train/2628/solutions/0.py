@@ -1,9 +1,9 @@
 from collections import defaultdict
 d = defaultdict(list)
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 for i in range(n):
     w = input()
     d[w].append(str(i + 1))
 for j in range(m):
     w = input()
-    print((' '.join(d[w]) or -1))
+    print(' '.join(d[w]) or -1)

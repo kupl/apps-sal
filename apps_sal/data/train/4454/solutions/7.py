@@ -9,7 +9,7 @@ def presses(phrase):
             part = alphabet[:result] or [' ']
             part.append(str(x))
             alphabet = alphabet[result:]
-            for i, c in enumerate(part, 1):
+            for (i, c) in enumerate(part, 1):
                 if c in s:
                     res = phrase.count(c)
                     counter += res * i

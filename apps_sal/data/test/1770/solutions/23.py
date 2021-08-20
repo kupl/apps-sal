@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, x, y, d = map(int, input().split())
+    (n, x, y, d) = map(int, input().split())
     if y == 1 or y == n:
         print(abs(-abs(x - y) // d))
     elif abs(x - y) % d == 0:

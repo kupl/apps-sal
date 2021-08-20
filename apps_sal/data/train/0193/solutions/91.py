@@ -2,8 +2,8 @@ from collections import Counter
 
 
 class Solution:
-    def minSetSize(self, arr: List[int]) -> int:
 
+    def minSetSize(self, arr: List[int]) -> int:
         n = len(arr)
         counts = Counter(arr)
         sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0]))

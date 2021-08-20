@@ -14,7 +14,7 @@ def vsense(val, a, l):
 
 
 while t:
-    n, l, a, b = list(map(int, input().split()))
+    (n, l, a, b) = list(map(int, input().split()))
     val = list(map(int, input().split()))
     val.sort()
     sense = 0
@@ -40,5 +40,4 @@ while t:
         ans += abs(st - val[c])
         st += l
     print(ans)
-
     t -= 1

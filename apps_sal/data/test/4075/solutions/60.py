@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ks = []
 ss = []
 for _ in range(m):

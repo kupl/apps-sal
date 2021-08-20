@@ -1,4 +1,4 @@
-k, s = map(int, input().split())
+(k, s) = map(int, input().split())
 ans = 0
 for i in range(k + 1):
     num = s - i

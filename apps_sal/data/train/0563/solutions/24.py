@@ -11,8 +11,7 @@ for i in range(0, t):
     arr = list(map(int, input().split()))
     q = int(input())
     for x in range(0, q):
-        p1, p2 = list(map(int, input().split()))
+        (p1, p2) = list(map(int, input().split()))
         result.append(logic(arr, p1, p2))
-
 for item in result:
     print(item)

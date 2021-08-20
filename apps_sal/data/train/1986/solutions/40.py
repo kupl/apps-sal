@@ -1,4 +1,5 @@
 class Solution:
+
     def backtracking(self, result, visited, n, found):
         if len(result) == 2 ** n:
             diff = abs(result[-1] - result[0])
@@ -11,7 +12,7 @@ class Solution:
             return
         start = result[-1]
         for i in range(n):
-            num = start ^ (1 << i)
+            num = start ^ 1 << i
             if num in visited or num < 0 or num >= 2 ** n:
                 continue
             result.append(num)

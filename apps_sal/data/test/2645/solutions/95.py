@@ -1,3 +1,3 @@
 s = input()
-num = s.count("g") - s.count("p")
+num = s.count('g') - s.count('p')
 print((num - len(s) % 2) // 2)

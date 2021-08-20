@@ -1,5 +1,5 @@
 n = int(input())
-a = [(int(x), y) for x, y in zip(input().split(), list(range(n)))]
+a = [(int(x), y) for (x, y) in zip(input().split(), list(range(n)))]
 a.sort()
 i = j = 0
 l = []

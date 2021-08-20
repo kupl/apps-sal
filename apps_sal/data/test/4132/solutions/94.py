@@ -1,7 +1,6 @@
 import sys
 from math import gcd
 from functools import reduce
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -11,9 +10,8 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
-    print((reduce(gcd, A)))
+    (N, *A) = list(map(int, read().split()))
+    print(reduce(gcd, A))
     return
 
 

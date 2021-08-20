@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, = map(int, input().split())
+    (n,) = map(int, input().split())
     if n == 0:
         print(1)
     elif n % 4 == 0:

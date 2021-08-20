@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
 num_of_matches = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 dp = [-1] * (n + 1)
@@ -15,7 +14,6 @@ for i in range(1, n + 1):
         elif dp[i - num_of_matches[aa]] > 0:
             val = max(val, dp[i - num_of_matches[aa]] + 1)
     dp[i] = val
-
 res = ''
 remain = dp[n]
 match = n

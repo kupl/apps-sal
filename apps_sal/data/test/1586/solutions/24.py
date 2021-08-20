@@ -1,10 +1,7 @@
-
 def resolve():
     N = int(input())
-
     if N % 2 == 1:
         return print(0)
-
     ans = 0
     tmp = N // 2
     while tmp:

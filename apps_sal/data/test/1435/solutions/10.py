@@ -1,4 +1,4 @@
-s, a, c = input(), 1, 1
+(s, a, c) = (input(), 1, 1)
 for i in range(1, len(s)):
     if int(s[i]) + int(s[i - 1]) == 9:
         c += 1
@@ -7,6 +7,6 @@ for i in range(1, len(s)):
         c = 1
     else:
         c = 1
-if(c % 2):
+if c % 2:
     a *= c // 2 + 1
 print(a)

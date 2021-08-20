@@ -1,1 +1,2 @@
-def is_divisible(a, b): return a % b == 0
+def is_divisible(a, b):
+    return a % b == 0

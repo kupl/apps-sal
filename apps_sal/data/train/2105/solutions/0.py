@@ -12,4 +12,4 @@ if n <= 2:
     print(1)
 else:
     print(2)
-print(' '.join('1' if x else '2' for x in a[2:]))
+print(' '.join(('1' if x else '2' for x in a[2:])))

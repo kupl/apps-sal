@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-tmp = 10**10
+tmp = 10 ** 10
 minus = 0
 zeros = 0
 ans = 0

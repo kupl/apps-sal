@@ -6,6 +6,6 @@ for i in range(n):
     if p[i] != pp[i]:
         cnt += 1
 if cnt > 2:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

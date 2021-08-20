@@ -13,38 +13,34 @@ def minus(arr1, arr2):
 def check0(arr1, arr2):
     if arr1[0] == arr2[0]:
         return +4
+    elif len(arr2[0]) == 0:
+        return 0
     else:
-        if len(arr2[0]) == 0:
-            return 0
-        else:
-            return -1
+        return -1
 
 
 def check1(arr1, arr2):
     if arr1[1] == arr2[1]:
         return +4
+    elif len(arr2[1]) == 0:
+        return 0
     else:
-        if len(arr2[1]) == 0:
-            return 0
-        else:
-            return -1
+        return -1
 
 
 def check2(arr1, arr2):
     if arr1[2] == arr2[2]:
         return +4
+    elif len(arr2[2]) == 0:
+        return 0
     else:
-        if len(arr2[2]) == 0:
-            return 0
-        else:
-            return -1
+        return -1
 
 
 def check3(arr1, arr2):
     if arr1[3] == arr2[3]:
         return +4
+    elif len(arr2[3]) == 0:
+        return 0
     else:
-        if len(arr2[3]) == 0:
-            return 0
-        else:
-            return -1
+        return -1

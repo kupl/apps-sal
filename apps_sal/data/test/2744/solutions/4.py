@@ -3,17 +3,14 @@ import sys
 import os
 from io import BytesIO, IOBase
 py2 = round(0.5)
-
 if py2:
     from future_builtins import ascii, filter, hex, map, oct, zip
     range = xrange
 
 
-# FastIO for PyPy2 and PyPy3 by Pajenegod
-
-
 class FastI(object):
-    def __init__(self, fd=0, buffersize=2**14):
+
+    def __init__(self, fd=0, buffersize=2 ** 14):
         self.stream = stream = BytesIO()
         self.bufendl = 0
 
@@ -38,20 +35,20 @@ class FastI(object):
         self.bufendl -= 1
         return self.stream.readline()
 
-    def input(self): return self.readline().rstrip(b'\r\n')
+    def input(self):
+        return self.readline().rstrip(b'\r\n')
 
 
 class FastO(IOBase):
+
     def __init__(self, fd=1):
         stream = BytesIO()
-        self.flush = lambda: os.write(1, stream.getvalue()) and not stream.truncate(0) and stream.seek(0)
+        self.flush = lambda: os.write(1, stream.getvalue()) and (not stream.truncate(0)) and stream.seek(0)
         self.write = stream.write if py2 else lambda s: stream.write(s.encode())
 
 
-sys.stdin, sys.stdout = FastI(), FastO()
+(sys.stdin, sys.stdout) = (FastI(), FastO())
 input = sys.stdin.readline
-
-# REWRITTEN HEAPQ
 
 
 def heappush(heap, item):
@@ -63,25 +60,20 @@ def heappop(heap):
     lastelt = heap.pop()
     if not heap:
         return lastelt
-
-    returnitem, heap[0] = heap[0], lastelt
+    (returnitem, heap[0]) = (heap[0], lastelt)
     _siftup(heap)
     return returnitem
-
-# Does a pop and then a push
 
 
 def heapreplace(heap, item):
-    returnitem, heap[0] = heap[0], item
+    (returnitem, heap[0]) = (heap[0], item)
     _siftup(heap)
     return returnitem
-
-# Does a push and then a pop
 
 
 def heappushpop(heap, item):
     if heap and heap[0] < item:
-        item, heap[0] = heap[0], item
+        (item, heap[0]) = (heap[0], item)
         _siftup(heap)
     return item
 
@@ -93,19 +85,16 @@ def heapify(x):
 
 def _siftdown(heap, pos):
     newitem = heap[pos]
-    ppos = (pos - 1) >> 1
+    ppos = pos - 1 >> 1
     while pos and newitem < heap[ppos]:
         heap[pos] = heap[ppos]
         pos = ppos
-        ppos = (pos - 1) >> 1
+        ppos = pos - 1 >> 1
     heap[pos] = newitem
 
 
 def _siftup(heap, pos=0):
-    # Move the item at pos to a leaf
-    # by switching place with smallest child (bias to right)
     newitem = heap[pos]
-
     leftchild = 2 * pos + 1
     rightchild = leftchild + 1
     while rightchild < len(heap):
@@ -117,19 +106,16 @@ def _siftup(heap, pos=0):
             pos = rightchild
         leftchild = 2 * pos + 1
         rightchild = leftchild + 1
-    if leftchild < len(heap):  # Special case of only one child
+    if leftchild < len(heap):
         heap[pos] = heap[leftchild]
         pos = leftchild
-    # Now newitem has been moved to an leaf
     heap[pos] = newitem
     _siftdown(heap, pos)
 
 
-# ACTUAL CODE
 s = sys.stdin.read().replace(b'\r', b'')
 inp = []
 numb = 0
-
 for i in range(len(s)):
     if s[i] >= 48:
         numb = 10 * numb + s[i] - 48
@@ -138,14 +124,11 @@ for i in range(len(s)):
         numb = 0
 if s[-1] >= 48:
     inp.append(numb)
-
 ind = 0
-
 n = inp[ind]
 ind += 1
 m = inp[ind]
 ind += 1
-
 coupl = [[] for _ in range(n)]
 cost = [[] for _ in range(n)]
 for _ in range(m):
@@ -157,15 +140,11 @@ for _ in range(m):
     coupl[u].append(v)
     cost[u].append(w)
     cost[v].append(w)
-
 best = [1.0 * inp[ind + i] for i in range(n)]
-
-
 Q = [(best[i], i) for i in range(n)]
 heapify(Q)
-
 while Q:
-    c, node = heappop(Q)
+    (c, node) = heappop(Q)
     if best[node] != c:
         continue
     for j in range(len(coupl[node])):

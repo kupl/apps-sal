@@ -10,4 +10,4 @@ def odd_penta_fib():
 
 
 def count_odd_pentaFib(n):
-    return sum(1 for key, grp in groupby(islice(odd_penta_fib(), n + 1)) if key % 2 == 1)
+    return sum((1 for (key, grp) in groupby(islice(odd_penta_fib(), n + 1)) if key % 2 == 1))

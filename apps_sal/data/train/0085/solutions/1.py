@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     s = input().strip()
@@ -20,7 +19,6 @@ for _ in range(t):
             if (i < x or out[i - x] == '0') and (i + x >= n or out[i + x] == '0'):
                 works = False
                 break
-
     if works:
         print(out)
     else:

@@ -1,10 +1,10 @@
-n, m, k = list(map(int, input().split(' ')))
+(n, m, k) = list(map(int, input().split(' ')))
 M = [[0 for j in range(m - 1)] for i in range(n - 1)]
 C = [[False for j in range(m)] for i in range(n)]
 ans = 0
 ansCnt = False
 for w in range(k):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     x -= 1
     y -= 1
     if (C[x][y] == False) & (ansCnt == False):

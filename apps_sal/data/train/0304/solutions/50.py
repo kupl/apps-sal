@@ -1,9 +1,9 @@
 import math
-
 from collections import Counter
 
 
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         sol = 0
         c = Counter(ages)

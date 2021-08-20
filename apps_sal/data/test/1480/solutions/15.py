@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 used = [0] * n
-ans = ""
+ans = ''
 cnt = 1
 tmp = n
 for i in range(k):
@@ -12,9 +12,9 @@ for i in range(k):
         cnt += 1
         cnt = cnt % tmp
     if cnt != 0:
-        ans += str(cnt) + " "
+        ans += str(cnt) + ' '
     else:
-        ans += str(tmp) + " "
+        ans += str(tmp) + ' '
     used[cnt - 1] = 1
     while used[cnt] == 1:
         cnt += 1

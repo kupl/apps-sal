@@ -1,7 +1,6 @@
-# You lost the game.
 s = str(input())
 n = len(s)
-A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 if n < 26:
     print(-1)
 else:
@@ -21,13 +20,13 @@ else:
     else:
         j = 0
         for k in range(n):
-            if s[k] == "?":
+            if s[k] == '?':
                 if k >= i and k < i + 26:
                     while F[j] == 0:
                         j += 1
-                    print(A[j], end="")
+                    print(A[j], end='')
                     F[j] = 0
                 else:
-                    print("A", end="")
+                    print('A', end='')
             else:
-                print(s[k], end="")
+                print(s[k], end='')

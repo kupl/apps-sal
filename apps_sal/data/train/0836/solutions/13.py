@@ -8,10 +8,9 @@ for t in range(eval(input())):
     maxim = max(lr)
     index = -1
     maxR = -1
-    for i, value in enumerate(lr):
+    for (i, value) in enumerate(lr):
         if maxim == value:
             if maxR < r[i]:
                 maxR = r[i]
                 index = i
-
     print(index + 1)

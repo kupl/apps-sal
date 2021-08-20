@@ -9,9 +9,8 @@ class Solution:
             q.append((root.left, True, 1))
         if root.right:
             q.append((root.right, False, 1))
-
         while q:
-            n, is_left, depth = q.popleft()
+            (n, is_left, depth) = q.popleft()
             max_depth = max(depth, max_depth)
             if n.left:
                 if is_left:
@@ -23,5 +22,4 @@ class Solution:
                     q.append((n.right, False, depth + 1))
                 else:
                     q.append((n.right, False, 1))
-
         return max_depth

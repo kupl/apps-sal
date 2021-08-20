@@ -4,7 +4,7 @@ def solve():
     A.sort()
     for i in range(N - 1):
         A[i + 1] = (A[i + 1] + A[i]) / 2
-    print((A[-1]))
+    print(A[-1])
     return
 
 

@@ -1,8 +1,7 @@
-# cook your dish here
-n = (int(input()))
+n = int(input())
 x = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a = [a, a + b]
     x.append(a)
 x.sort()

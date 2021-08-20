@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
@@ -16,6 +16,6 @@ for i in range(n - m + 1):
         if judge == b:
             flag += 1
 if flag == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

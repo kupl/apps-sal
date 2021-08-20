@@ -8,4 +8,4 @@ def is_prime(n):
 
 
 def circular_prime(n):
-    return all(is_prime(c) for c in circular_permutations(n))
+    return all((is_prime(c) for c in circular_permutations(n)))

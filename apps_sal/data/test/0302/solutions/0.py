@@ -7,9 +7,6 @@ Language: Python 3.3.4
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -19,17 +16,15 @@ def read(mode=2):
         return [int(x) for x in inputs.split()]
 
 
-def write(s="\n"):
+def write(s='\n'):
     if isinstance(s, list):
-        s = " ".join(s)
+        s = ' '.join(s)
     s = str(s)
-    print(s, end="")
-
-# SOLUTION
+    print(s, end='')
 
 
 def g(n):
-    return (10**n - 1) // 9
+    return (10 ** n - 1) // 9
 
 
 def solve(n):
@@ -44,16 +39,16 @@ def solve(n):
     gl = g(l)
     a = n
     res1 = 0
-    res1 += (a // gl) * l
+    res1 += a // gl * l
     a %= gl
     res1 += solve(a)
     b = g(l + 1) - n
     res2 = l + 1
-    res2 += (b // gl) * l
+    res2 += b // gl * l
     b %= gl
     res2 += solve(b)
     return min(res1, res2)
 
 
-n, = read()
+(n,) = read()
 print(solve(n))

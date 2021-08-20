@@ -13,4 +13,4 @@ for i in range(1, 10):
             lst.append(now * 10 + j)
             que.append(now * 10 + j)
 lst.sort()
-print((lst[k - 1]))
+print(lst[k - 1])

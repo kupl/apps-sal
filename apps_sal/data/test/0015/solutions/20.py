@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if c == 0:
     if b == a:
         print('YES')
@@ -7,16 +7,13 @@ if c == 0:
 elif c > 0:
     if b < a:
         print('NO')
+    elif a % c == b % c:
+        print('YES')
     else:
-        if a % c == b % c:
-            print('YES')
-        else:
-            print('NO')
-else:
-    if b > a:
         print('NO')
-    else:
-        if a % c == b % c:
-            print('YES')
-        else:
-            print('NO')
+elif b > a:
+    print('NO')
+elif a % c == b % c:
+    print('YES')
+else:
+    print('NO')

@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 l = []
 for i in range(n):
     l.append(s[i])
@@ -8,5 +7,4 @@ for i in range(n):
         l.pop()
         l.pop()
         l.pop()
-
-print((len(l)))
+print(len(l))

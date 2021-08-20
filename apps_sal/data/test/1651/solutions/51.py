@@ -33,27 +33,19 @@ def get_int_multi():
 def get_string_char_list():
     return list(str(input()))
 
-# print("{} {}".format(a, b))
-# a_list = [0] * a
-# dp = [[0] * a for _ in range(b)]
-# pow(8, -1, c_mod)) 逆元。MOD計算の割り算の際にかける
-
 
 sys.setrecursionlimit(10 ** 6)
 
 
 def main():
     start = time.time()
-
-    s, p = get_int_multi()
-
+    (s, p) = get_int_multi()
     m1 = (s + (s ** 2 - 4 * p) ** (1 / 2)) / 2
     m2 = (s - (s ** 2 - 4 * p) ** (1 / 2)) / 2
-
-    if round(m1) == m1 and round(m2) == m2 and m1 > 0 and m2 > 0:
-        print("Yes")
+    if round(m1) == m1 and round(m2) == m2 and (m1 > 0) and (m2 > 0):
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

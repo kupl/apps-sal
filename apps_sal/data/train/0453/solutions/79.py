@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
+
         @lru_cache(None)
         def dp(g, i, c):
             if g > target:
@@ -22,6 +24,5 @@ class Solution:
                     else:
                         ans = min(ans, cost[i][j] + dp(g + 1, i + 1, j + 1))
             return ans
-
         ans = dp(0, 0, 0)
         return -1 if ans >= sys.maxsize else ans

@@ -15,5 +15,5 @@ if ans == 0:
     pass
 if ans != 0:
     for i in range(N // 2):
-        ans = (ans * 2) % (10**9 + 7)
+        ans = ans * 2 % (10 ** 9 + 7)
 print(ans)

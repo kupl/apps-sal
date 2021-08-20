@@ -3,7 +3,7 @@ S = input()
 
 
 def count():
-    return(S.count("ABC"))
+    return S.count('ABC')
 
 
 print(count())

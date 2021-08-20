@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    h, n = list(map(int, input().split()))
+    (h, n) = list(map(int, input().split()))
     ps = list(map(int, input().split())) + [0, 0]
     ps.reverse()
     cur = n - 1

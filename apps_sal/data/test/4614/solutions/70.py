@@ -1,3 +1,2 @@
-a, b, c = list(map(int, input().split()))
-
-print((a ^ b ^ c))
+(a, b, c) = list(map(int, input().split()))
+print(a ^ b ^ c)

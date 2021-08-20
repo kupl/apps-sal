@@ -1,11 +1,11 @@
 class Solution:
-    def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int], maxNum=10e6, bound=200) -> bool:
 
+    def isEscapePossible(self, blocked: List[List[int]], source: List[int], target: List[int], maxNum=10000000.0, bound=200) -> bool:
         maxArea = bound * bound // 2 + 1
         directions = [0, 1, 0, -1, 0]
 
         def dfs(x, y, t):
-            if x < 0 or x > maxNum or y < 0 or y > maxNum or tuple([x, y]) in block:
+            if x < 0 or x > maxNum or y < 0 or (y > maxNum) or (tuple([x, y]) in block):
                 return False
             seen.add(tuple([x, y]))
             block.add(tuple([x, y]))

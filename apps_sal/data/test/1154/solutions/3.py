@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, h, k = read()
+(n, h, k) = read()
 a = list(read())
 ans = rem = 0
 for i in range(n):

@@ -1,9 +1,3 @@
-# I'm slightly sad, I had a simple clean solution, that wasn't quite fast enough, needed 2-3 more seconds
-#
-# def multiply(n, k):
-#     return k if k<2 else sum(multiply(x,k-1) for x in factors(n))
-#
-
 from collections import Counter
 from functools import lru_cache, reduce
 from itertools import combinations
@@ -16,21 +10,18 @@ def multiply(n, k):
         return k
     if k == 2:
         return len(factors(n))
-    # get all the combinations that prod to n
     tups = get_factor_tuples(n, k)
-    # insert all the extra 1s
     tups = {tuple((1,) * (k - len(x)) + x) for x in tups}
-    # do factorial math to find # of unique combinations of each tuple (multinomial coefficient)
     f = factorial(k)
-    return sum(f // reduce(mul, [factorial(v) for v in list(Counter(p).values()) if v > 1] + [1]) for p in tups)
+    return sum((f // reduce(mul, [factorial(v) for v in list(Counter(p).values()) if v > 1] + [1]) for p in tups))
 
 
 def get_factor_tuples(n, k):
     pair = {(n,)}
     for kp in range(1, k):
-        k_tup = set(x for x in pair if len(x) == kp)
+        k_tup = set((x for x in pair if len(x) == kp))
         for grp in k_tup:
-            for i, e in enumerate(grp):
+            for (i, e) in enumerate(grp):
                 g = grp[:i] + grp[i + 1:]
                 if e not in primefactors(n):
                     for a in factors(e):
@@ -42,7 +33,7 @@ def get_factor_tuples(n, k):
 
 @lru_cache(maxsize=None)
 def primefactors(n):
-    i, f = 3, []
+    (i, f) = (3, [])
     while n & 1 == 0:
         f.append(2)
         n = n >> 1

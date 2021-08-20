@@ -3,12 +3,12 @@ s2 = input()
 n = int(input())
 a = []
 for _ in range(n):
-    t, u, v, w = input().split()
+    (t, u, v, w) = input().split()
     a.append((int(t), u, int(v), w))
 a.sort()
 xs = set()
 ys = set()
-for t, u, v, w in a:
+for (t, u, v, w) in a:
     if (u, v) in ys:
         continue
     if w == 'y':

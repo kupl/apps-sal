@@ -1,5 +1,4 @@
 import sys
-
 N = int(input())
 a = [0]
 a[1:] = list(map(int, sys.stdin.readline().rstrip().split()))

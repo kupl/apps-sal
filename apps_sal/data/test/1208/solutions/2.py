@@ -1,5 +1,4 @@
 n = int(input())
-
 mn = mx = cur = 0
 s = set()
 for i in range(n):

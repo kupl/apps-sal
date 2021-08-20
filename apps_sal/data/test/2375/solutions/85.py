@@ -1,9 +1,9 @@
 def main():
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if abs(x - y) <= 1:
-        print("Brown")
+        print('Brown')
     else:
-        print("Alice")
+        print('Alice')
 
 
 def __starting_point():

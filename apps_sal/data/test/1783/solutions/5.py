@@ -1,4 +1,4 @@
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 arr = [int(x) for x in input().split()]
 s = sum(arr[:n])
 val = m - n + 1

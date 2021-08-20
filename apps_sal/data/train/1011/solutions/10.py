@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     s = input()
     cap = 0
     small = 0

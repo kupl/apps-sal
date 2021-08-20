@@ -17,7 +17,7 @@ for i in range(1, n + 2):
             for j in range(i - cur, i - 1):
                 b[j] = c1
         else:
-            mid = i - (cur // 2) - 1
+            mid = i - cur // 2 - 1
             for j in range(i - cur, i - 1):
                 b[j] = c1 if j < mid else c2
         cur = 0

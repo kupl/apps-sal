@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         ans = i = connected = 0
@@ -13,5 +14,4 @@ class Solution:
             ans += min_d[min_j]
             i = min_j
             connected += 1
-
         return ans

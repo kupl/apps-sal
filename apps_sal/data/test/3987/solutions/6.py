@@ -1,6 +1,3 @@
-# fek mikoni aslan lozoomi dare kasi tu in donya dustet dashtet bashe ?!
-# age are chera tanhayi ?!!
-# age na chera namordi ?!!!
 DP = [0] * 4
 input()
 for x in map(int, input().split()):

@@ -6,8 +6,5 @@ ans = min(o, t)
 if o > t:
     o = o - ans
     new = o // 3
-    # print(new)
     ans = ans + new
-
-
 print(ans)

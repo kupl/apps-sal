@@ -14,11 +14,8 @@ def str_single():
     return input()
 
 
-# start
 t = int_single()
-
 res = []
-
 for i in range(t):
     n = int_single()
     l = int_multiple()
@@ -29,8 +26,6 @@ for i in range(t):
             mn = l[j]
         if l[j] > mn:
             cnt += 1
-
     res.append(cnt)
-
 for r in res:
     print(r)

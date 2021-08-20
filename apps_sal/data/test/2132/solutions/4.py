@@ -13,7 +13,7 @@ for _ in range(n):
             ms.pop(-1)
     elif a[0] == 2:
         if o != 1:
-            z += (1 - o)
+            z += 1 - o
             o = 1
     elif a[0] == 3:
         ms.append(a[1])

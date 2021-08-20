@@ -3,4 +3,4 @@ def summation(num):
     for i in range(0, num):
         x = x + num
         num = num - 1
-    return(x)
+    return x

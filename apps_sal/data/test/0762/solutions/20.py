@@ -1,4 +1,4 @@
-n, b = list(map(int, input().split()))
+(n, b) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 ai2 = [0] * n
 temp1 = 0
@@ -7,9 +7,7 @@ for i in range(n - 1):
         temp1 += 2
     if temp1 == i + 1:
         ai2[i] = 1
-
 ai4 = []
-
 temp1 = 0
 for i in range(n - 1, 0, -1):
     if ai[i] % 2 == 0:

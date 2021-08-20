@@ -3,5 +3,5 @@ def string_to_array(s):
     for x in s.split():
         c.append(x)
     if len(s) == 0:
-        return [""]
+        return ['']
     return c

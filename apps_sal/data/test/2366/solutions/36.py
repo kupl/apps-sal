@@ -15,18 +15,16 @@ def cmb(n, r):
 n = int(input())
 al = list(map(int, input().split()))
 c = Counter(al)
-
 k = 0
 for v in list(c.values()):
     if v == 1:
         continue
     else:
         k += cmb(v, 2)
-
 for a in al:
     if c[a] == 1:
         print(k)
     elif c[a] == 2:
-        print((k - cmb(c[a], 2)))
+        print(k - cmb(c[a], 2))
     else:
-        print((k - cmb(c[a], 2) + cmb(c[a] - 1, 2)))
+        print(k - cmb(c[a], 2) + cmb(c[a] - 1, 2))

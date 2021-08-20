@@ -2,7 +2,7 @@ n = int(input())
 s = [i for i in input()]
 temp = ''
 ans = 0
-for i, j in enumerate(s):
+for (i, j) in enumerate(s):
     if i % 2:
         if temp == 'a':
             if j == 'a':

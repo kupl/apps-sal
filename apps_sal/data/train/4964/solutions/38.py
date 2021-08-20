@@ -1,6 +1,5 @@
 def is_uppercase(inp):
-    strn = ""
-
+    strn = ''
     if inp == inp.upper():
         strn = True
     else:

@@ -8,18 +8,16 @@ def factorial(n, mod):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     md = 10 ** 9 + 7
-
     if abs(n - m) >= 2:
         ans = 0
     elif abs(n - m) == 1:
-        ans = (factorial(n, md) * factorial(m, md))
+        ans = factorial(n, md) * factorial(m, md)
         ans %= md
     else:
-        ans = (factorial(n, md) * factorial(m, md)) * 2
+        ans = factorial(n, md) * factorial(m, md) * 2
         ans %= md
-
     print(ans)
 
 

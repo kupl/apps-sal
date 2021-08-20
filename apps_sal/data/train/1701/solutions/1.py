@@ -1,6 +1,5 @@
 from functools import reduce
-arop = {'add': lambda a, b: a + b, 'sub': lambda a, b: a - b, 'mul': lambda a, b: a * b, 'div': lambda a, b: a // b,
-        'and': lambda a, b: a & b, 'or': lambda a, b: a | b, 'xor': lambda a, b: a ^ b}
+arop = {'add': lambda a, b: a + b, 'sub': lambda a, b: a - b, 'mul': lambda a, b: a * b, 'div': lambda a, b: a // b, 'and': lambda a, b: a & b, 'or': lambda a, b: a | b, 'xor': lambda a, b: a ^ b}
 
 
 class Machine(object):
@@ -15,7 +14,7 @@ class Machine(object):
             return self.cpu.read_reg(x)
 
     def execute(self, instr):
-        op, a, b = (instr.split(' ') + [None, None, None])[:3]
+        (op, a, b) = (instr.split(' ') + [None, None, None])[:3]
         if a:
             a = a.rstrip(',')
         if op in ('pushrr', 'poprr'):

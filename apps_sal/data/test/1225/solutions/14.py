@@ -1,4 +1,3 @@
-# 26
 H = int(input())
 
 
@@ -9,5 +8,4 @@ def getAns(x):
 
 
 ans = getAns(H)
-
 print(ans)

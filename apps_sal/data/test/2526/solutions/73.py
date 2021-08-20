@@ -1,6 +1,6 @@
 import heapq
 from collections import deque
-must_red, must_green, a, b, c = list(map(int, input().split()))
+(must_red, must_green, a, b, c) = list(map(int, input().split()))
 delicious_red_ls = list(map(int, input().split()))
 delicious_green_ls = list(map(int, input().split()))
 delicious_free_ls = list(map(int, input().split()))
@@ -11,7 +11,6 @@ first_green = delicious_green_ls[:must_green]
 first_set = first_green + first_red
 first_set.sort()
 delicious_free_ls.sort()
-
 while delicious_free_ls:
     to_be_erased = heapq.heappop(first_set)
     erase = delicious_free_ls[-1]
@@ -21,4 +20,4 @@ while delicious_free_ls:
     else:
         heapq.heappush(first_set, to_be_erased)
         break
-print((sum(first_set)))
+print(sum(first_set))

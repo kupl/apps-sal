@@ -1,8 +1,7 @@
 from bisect import bisect_left as bl
-n, m, t1, t2, k = list(map(int, input().split()))
+(n, m, t1, t2, k) = list(map(int, input().split()))
 A = [int(a) for a in input().split()]
 B = [int(a) - t1 for a in input().split()]
-
 if min(n, m) <= k:
     print(-1)
 else:

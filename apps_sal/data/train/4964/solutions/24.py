@@ -1,7 +1,5 @@
 def is_uppercase(inp):
-
     count = 0
-
     letters = list(inp)
     for x in letters:
         if count < len(letters):

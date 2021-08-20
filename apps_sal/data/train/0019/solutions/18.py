@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     a = [int(s) for s in input().split()]
     s = dict()
     for j in range(d):

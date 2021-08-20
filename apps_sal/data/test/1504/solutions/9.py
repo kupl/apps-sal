@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    n, k = map(int, input().split())
-    l1, r1 = map(int, input().split())
-    l2, r2 = map(int, input().split())
+    (n, k) = map(int, input().split())
+    (l1, r1) = map(int, input().split())
+    (l2, r2) = map(int, input().split())
     intersect = False
     if l1 >= l2 and l1 <= r2:
         intersect = True
@@ -17,16 +17,15 @@ for f in range(int(input())):
         l = min(l1, l2)
         r = max(r1, r2)
         totlen = r - l
-        intlen = (r2 - l2) + (r1 - l1) - totlen
+        intlen = r2 - l2 + (r1 - l1) - totlen
         if n * intlen >= k:
             print(0)
+        elif n * totlen >= k:
+            print(k - n * intlen)
         else:
-            if n * totlen >= k:
-                print(k - n * intlen)
-            else:
-                s = n * (totlen - intlen)
-                k -= n * totlen
-                print(s + 2 * k)
+            s = n * (totlen - intlen)
+            k -= n * totlen
+            print(s + 2 * k)
     else:
         l = min(l1, l2)
         r = max(r1, r2)

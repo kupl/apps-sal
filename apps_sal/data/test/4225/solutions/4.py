@@ -1,7 +1,6 @@
 def __starting_point():
     S = input()
-    a, b, c, k = map(int, S.split(sep=' '))
-
+    (a, b, c, k) = map(int, S.split(sep=' '))
     if k <= a:
         print(k)
     elif k <= a + b:

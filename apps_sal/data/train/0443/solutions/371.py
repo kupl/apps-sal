@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.num_teams = 0
 
@@ -6,13 +7,11 @@ class Solution:
         for i in range(len(rating)):
             first_soldier = rating[i]
             self.compareFirstSoldier(first_soldier, rating[i:])
-
         reversed_rating = rating
         reversed_rating.reverse()
         for i in range(len(reversed_rating)):
             first_soldier = reversed_rating[i]
             self.compareFirstSoldier(first_soldier, reversed_rating[i:])
-
         return self.num_teams
 
     def compareFirstSoldier(self, soldier_val: int, rating: List[int]) -> None:

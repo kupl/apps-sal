@@ -1,1 +1,2 @@
-def two_decimal_places(n): return round(n, 2)
+def two_decimal_places(n):
+    return round(n, 2)

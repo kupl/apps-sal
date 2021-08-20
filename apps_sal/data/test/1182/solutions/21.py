@@ -14,12 +14,9 @@ def solve(r, c, n, m):
     return ans
 
 
-r, c, n, k = list(map(int, input().split()))
-
+(r, c, n, k) = list(map(int, input().split()))
 arr = [[0 for i in range(20)] for j in range(20)]
-
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     arr[x][y] = 1
-
 print(solve(r, c, n, k))

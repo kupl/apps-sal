@@ -1,4 +1,4 @@
-tn, tk = input().split()
+(tn, tk) = input().split()
 n = int(tn)
 k = int(tk)
 a = input()
@@ -14,4 +14,4 @@ for i in range(k):
 for i in range(n):
     if vis[i]:
         continue
-    print(a[i], end="")
+    print(a[i], end='')

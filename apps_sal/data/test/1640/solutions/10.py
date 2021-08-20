@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split(' ')))
-
 d = {}
 s = a[0]
 ret = 0
@@ -15,5 +14,4 @@ for i in range(1, n):
     if a[i] not in d:
         d[a[i]] = 0
     d[a[i]] += 1
-
 print(ret)

@@ -1,7 +1,7 @@
 n = int(input())
 s1 = input()
 s2 = input()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 if s1[0] == s2[0]:
     cnt = 3
     flag = 0

@@ -1,5 +1,5 @@
 from math import gcd, sqrt, floor
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = gcd(a, b)
 x = []
 for i in range(1, floor(sqrt(c)) + 1):

@@ -2,7 +2,7 @@ for _ in range(int(input())):
     n = int(input())
     res = n
     cur = 0
-    for i, c in enumerate(input()):
+    for (i, c) in enumerate(input()):
         if c == '1':
             x = i + 1
             y = n - x + 1

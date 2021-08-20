@@ -4,7 +4,7 @@ l = [[] for i in range(N)]
 color = [0] * N
 mem = []
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     l[a].append(b)

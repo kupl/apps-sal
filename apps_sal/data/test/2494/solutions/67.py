@@ -1,5 +1,4 @@
 from collections import deque
-
 k = int(input())
 v = list(range(k))
 stack = deque([1])

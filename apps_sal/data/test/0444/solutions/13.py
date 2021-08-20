@@ -14,17 +14,12 @@ def read_string():
     return input().strip()
 
 
-def read_string_list(delim=" "):
+def read_string_list(delim=' '):
     return input().strip().split(delim)
-
-###### Author : Samir Vyas #######
-###### Write Code Below    #######
 
 
 n = read_int()
-
 print(n)
-
 for i in range(n):
-    print(1, end=" ")
+    print(1, end=' ')
 print()

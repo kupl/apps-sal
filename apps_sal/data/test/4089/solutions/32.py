@@ -1,22 +1,17 @@
-def num2alpha(c): return chr(c + 64)
+def num2alpha(c):
+    return chr(c + 64)
 
 
 N = int(input())
 degit = 0
 temp_degit = 0
 top = 0
-
 for i in range(1, 50):
     temp_degit += 1
     under = top + 1
-    top += 26**i
-    # print(temp_degit)
-    # print(under,top)
+    top += 26 ** i
     if under <= N and N <= top:
         degit = temp_degit
-# print(degit)
-
-# print(N%26)
 arr = []
 for i in range(degit):
     if N % 26 == 0:
@@ -25,11 +20,7 @@ for i in range(degit):
     else:
         arr.append(N % 26)
     N //= 26
-    # print(N)
-
-rsl = ""
-# print(arr)
-# print(num2alpha(10))
+rsl = ''
 for i in reversed(arr):
     rsl += num2alpha(i)
 print(rsl.lower())

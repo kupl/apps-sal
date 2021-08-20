@@ -1,5 +1,5 @@
 import heapq
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 p = sorted(list(map(int, input().split())), reverse=True)
 q = sorted(list(map(int, input().split())), reverse=True)
 r = list(map(lambda x: -int(x), input().split()))

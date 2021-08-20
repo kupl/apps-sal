@@ -6,6 +6,7 @@ d = sys.stdin.readlines()
 
 
 class Tab(object):
+
     def __init__(self):
         self.value = [0 for _ in range(n + 1)]
 
@@ -37,7 +38,6 @@ def group(l):
 
 mat = [None for _ in range(n)]
 euh = 0
-
 for x in d[1:]:
     line = x[:-1]
     s = str(bin(int(line, 16)))[2:].zfill(n)

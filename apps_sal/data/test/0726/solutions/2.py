@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 2
 for i in range(n - 1):

@@ -2,8 +2,8 @@ n = int(input())
 a = [tuple(map(int, input().split())) for _ in range(n)]
 s = {a[q]: q + 1 for q in range(n)}
 a.sort()
-q, q1 = 0, 1
-d, d1, d2 = [[[a[0]]]], [], []
+(q, q1) = (0, 1)
+(d, d1, d2) = ([[[a[0]]]], [], [])
 while q1 < n:
     while q1 < n and a[q][0] == a[q1][0]:
         while q1 < n and a[q][1] == a[q1][1]:

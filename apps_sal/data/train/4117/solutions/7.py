@@ -1,4 +1,4 @@
-search = __import__("re").compile(r"\d+").findall
+search = __import__('re').compile('\\d+').findall
 
 
 def sum_from_string(string):

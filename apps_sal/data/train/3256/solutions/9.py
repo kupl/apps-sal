@@ -1,7 +1,7 @@
 def sum_pow_dig_seq(n, e, k):
     path = [n]
     while True:
-        n = sum(int(d)**e for d in str(n))
+        n = sum((int(d) ** e for d in str(n)))
         if n in path:
             break
         path.append(n)

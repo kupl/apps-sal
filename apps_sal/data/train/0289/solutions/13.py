@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         dpA = self.sumArray(A, L)
         dpB = self.sumArray(A, M)

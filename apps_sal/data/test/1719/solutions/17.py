@@ -36,7 +36,6 @@ def int2acgt(val):
 
 n = int(input())
 dp = [[0] * 64 for _ in range(n)]
-
 dp[0][acgt2int('TTA')] = 1
 dp[0][acgt2int('TTC')] = 1
 dp[0][acgt2int('TTG')] = 1
@@ -45,8 +44,7 @@ dp[0][acgt2int('TTT')] = 1
 
 def is_valid(chs):
     tmp = ''.join(chs)
-    ng = ['AGC', 'GAC', 'ACG', 'AAGC', 'ACGC', 'AGGC',
-          'ATGC', 'AGAC', 'AGCT', 'AGGC', 'AGTC']
+    ng = ['AGC', 'GAC', 'ACG', 'AAGC', 'ACGC', 'AGGC', 'ATGC', 'AGAC', 'AGCT', 'AGGC', 'AGTC']
     for item in ng:
         if item in tmp:
             return False
@@ -62,5 +60,4 @@ for i in range(1, n):
             if is_valid(my_chs1):
                 tmp += dp[i - 1][acgt2int(my_chs1[:-1])] % (10 ** 9 + 7)
         dp[i][j] = tmp
-
-print((sum(dp[-1]) % (10 ** 9 + 7)))
+print(sum(dp[-1]) % (10 ** 9 + 7))

@@ -1,18 +1,15 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 A = []
 C = []
 for i in range(n):
     B = [int(j) for j in input().split()]
     A.append(B)
     C.append(sorted(list(set(B))))
-
 xor = 0
 ans = []
-
 for i in range(n):
     xor ^= A[i][0]
     ans.append(1)
-
 if xor == 0:
     found = 0
     for trial in range(n - 1, -1, -1):

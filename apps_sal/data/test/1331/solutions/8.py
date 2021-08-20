@@ -1,7 +1,8 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, m, k = f()
+(n, m, k) = f()
 t = sorted(f())
 d = [1] * n
 i = s = 0

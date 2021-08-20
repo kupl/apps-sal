@@ -3,10 +3,10 @@ def isValid(formula):
         return False
     if 3 in formula and 4 in formula:
         return False
-    if 5 in formula and not 6 in formula:
+    if 5 in formula and (not 6 in formula):
         return False
     if 5 not in formula and 6 in formula:
         return False
-    if not 7 in formula and not 8 in formula:
+    if not 7 in formula and (not 8 in formula):
         return False
     return True

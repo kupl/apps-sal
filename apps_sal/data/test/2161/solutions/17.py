@@ -1,8 +1,7 @@
 phones = dict()
 n = int(input())
-
 for i in range(n):
-    name, num, *numbers = input().split()
+    (name, num, *numbers) = input().split()
     for number in numbers:
         try:
             for el in phones[name]:
@@ -16,6 +15,5 @@ for i in range(n):
                 phones[name].add(number)
         except KeyError:
             phones[name] = {number}
-
 print(len(phones))
-print('\n'.join([' '.join([name, ' '.join([str(len(numbers)), ' '.join(numbers)])]) for name, numbers in list(phones.items())]))
+print('\n'.join([' '.join([name, ' '.join([str(len(numbers)), ' '.join(numbers)])]) for (name, numbers) in list(phones.items())]))

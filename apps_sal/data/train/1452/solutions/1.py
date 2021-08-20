@@ -7,21 +7,19 @@ def ggt(a, b):
 
 
 def kgv(a, b):
-    return (a * b) / ggt(a, b)
+    return a * b / ggt(a, b)
 
 
 case = int(input())
-
 for l in range(case):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     if n == 1:
-        print("Yes")
+        print('Yes')
     elif k == 0:
-        print("No 1")
+        print('No 1')
     else:
         remaining = kgv(n, k) / k
         if remaining == n:
-            print("Yes")
-
+            print('Yes')
         else:
-            print("No %d" % remaining)
+            print('No %d' % remaining)

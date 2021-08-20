@@ -39,14 +39,13 @@ while len(A) and (A[0] > last or A[-1] > last):
             else:
                 ans += 'R' * cnt2
             break
+    elif A[0] > last:
+        last = A[0]
+        A.popleft()
+        ans += 'L'
     else:
-        if A[0] > last:
-            last = A[0]
-            A.popleft()
-            ans += 'L'
-        else:
-            last = A[-1]
-            A.pop()
-            ans += 'R'
+        last = A[-1]
+        A.pop()
+        ans += 'R'
 print(len(ans))
 print(ans)

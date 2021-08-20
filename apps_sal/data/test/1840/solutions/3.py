@@ -1,7 +1,7 @@
 from sys import stdin
 from bisect import bisect_right as br
 input = stdin.readline
-s, b = map(int, input().split())
+(s, b) = map(int, input().split())
 sp = list(map(int, input().split()))
 bp = []
 for i in range(b):

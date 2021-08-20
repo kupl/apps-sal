@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def tribonacci(self, n: int) -> int:
         if n > 0 and n < 3:
             return 1

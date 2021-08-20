@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 x = int(input())
 a.sort()
 ans = 0
@@ -14,5 +14,4 @@ else:
     for i in range(n):
         if a[i] < 0:
             ans += -a[i]
-
 print(ans)

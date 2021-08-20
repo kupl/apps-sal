@@ -1,9 +1,5 @@
 class TweetCounts:
-    MAP = {
-        'minute': 60,
-        'hour': 60 * 60,
-        'day': 24 * 60 * 60
-    }
+    MAP = {'minute': 60, 'hour': 60 * 60, 'day': 24 * 60 * 60}
 
     def __init__(self):
         self.data = defaultdict(list)
@@ -15,10 +11,8 @@ class TweetCounts:
     def getTweetCountsPerFrequency(self, freq: str, tweetName: str, startTime: int, endTime: int) -> List[int]:
         data = self.data[tweetName]
         index = 0
-
         while index < len(data) and data[index] < startTime:
             index += 1
-
         ans = []
         tmp = 0
         k = 0

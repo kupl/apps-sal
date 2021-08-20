@@ -1,16 +1,16 @@
 MOD = 10 ** 9 + 7
-
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 
 
 def f(x):
-    return (x * (x + 1) * (x - 1)) // 6 % MOD
+    return x * (x + 1) * (x - 1) // 6 % MOD
 
 
-tmp = (N * N * f(M)) % MOD + (M * M * f(N)) % MOD
+tmp = N * N * f(M) % MOD + M * M * f(N) % MOD
 
 
 class Factorial:
+
     def __init__(self, n, mod):
         self.f = [1]
         self.mod = mod
@@ -32,8 +32,6 @@ class Factorial:
 
 
 c = Factorial(N * M - 2, MOD).comb
-
 tmp *= c(N * M - 2, K - 2)
 tmp %= MOD
-
 print(tmp)

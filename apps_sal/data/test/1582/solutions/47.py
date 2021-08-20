@@ -7,14 +7,14 @@ for i in range(N):
     head = int(num_list[i][0])
     length = len(num_list[i])
     tail = int(num_list[i][length - 1])
-    if (head == 0) or (tail == 0):
+    if head == 0 or tail == 0:
         continue
     list_all[head - 1, tail - 1] += 1
 sum1 = 0
 for i in range(9):
     for j in range(i + 1):
         if i == j:
-            sum1 += (list_all[i, j] * list_all[j, i])
+            sum1 += list_all[i, j] * list_all[j, i]
         else:
-            sum1 += (list_all[i, j] * list_all[j, i]) * 2
+            sum1 += list_all[i, j] * list_all[j, i] * 2
 print(int(sum1))

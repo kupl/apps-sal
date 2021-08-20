@@ -13,7 +13,6 @@ class Solution:
                 t = cur[:i] + cur[i + 1:]
                 dfs(t, step + 1)
         s = set(words)
-
         for w in sorted(words, key=len, reverse=True):
             dfs(w, 1)
         return self._max

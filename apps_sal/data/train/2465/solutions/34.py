@@ -1,4 +1,5 @@
 class Solution:
+
     def divisorGame(self, N: int) -> bool:
         dp = [False, False]
         for x in range(2, N + 1):

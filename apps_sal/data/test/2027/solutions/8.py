@@ -1,4 +1,3 @@
-# You lost the game.
 n = int(input())
 L = list(map(int, input().split()))
 R = [0 for _ in range(n)]
@@ -9,4 +8,4 @@ for i in range(n - 2, -1, -1):
         R[i] = L[i] + t
         t = R[i] - t
 for i in range(n):
-    print(R[i], end=" ")
+    print(R[i], end=' ')

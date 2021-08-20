@@ -2,12 +2,13 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
-        '''
+        """
         # Analysis:
 
 
-        '''
+        """
         lookup = collections.defaultdict(int)
         for row in matrix:
             vals = []

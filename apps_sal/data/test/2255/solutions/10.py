@@ -1,11 +1,10 @@
 import sys
 import heapq
-# sys.setrecursionlimit(200000)
 input = sys.stdin.readline
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[] for i in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     g[a].append(b)

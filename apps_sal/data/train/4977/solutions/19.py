@@ -1,1 +1,2 @@
-def goals(l, co, ch): return l + co + ch
+def goals(l, co, ch):
+    return l + co + ch

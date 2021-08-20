@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 
 def main():
-    xs, ys, xt, yt = map(int, input().split())
+    (xs, ys, xt, yt) = map(int, input().split())
     n = int(input())
 
     def dijkstra(s):
@@ -12,16 +12,15 @@ def main():
         cost = [float('inf')] * (n + 2)
         cost[s] = 0
         while hq:
-            c, v = heapq.heappop(hq)
+            (c, v) = heapq.heappop(hq)
             if c > cost[v]:
                 continue
-            for d, u in edges[v]:
+            for (d, u) in edges[v]:
                 tmp = d + cost[v]
                 if tmp < cost[u]:
                     cost[u] = tmp
                     heapq.heappush(hq, (tmp, u))
         return cost[-1]
-
     circles = []
     circles.append([xs, ys, 0])
     for _ in range(n):
@@ -36,7 +35,6 @@ def main():
             r = circles[i][2] + circles[j][2]
             edges[i].append([max(0, d - r), j])
             edges[j].append([max(0, d - r), i])
-
     ans = dijkstra(0)
     print(ans)
 

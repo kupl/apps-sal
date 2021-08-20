@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def uf(self, n):
         self.root = [i for i in range(n)]
         self.size = [1] * n
@@ -20,7 +21,9 @@ class UnionFind(object):
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def primeFactors(n):
             primes = set()
             while n % 2 == 0:
@@ -30,13 +33,13 @@ class Solution:
                 while n % i == 0:
                     primes.add(i)
                     n //= i
-            if n > 2:  # incase 3
+            if n > 2:
                 primes.add(n)
             return primes
         uf = UnionFind()
         uf.uf(len(A))
         pF = {}
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             primes = primeFactors(num)
             for p in primes:
                 if p in pF:

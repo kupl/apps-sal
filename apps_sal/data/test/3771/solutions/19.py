@@ -1,7 +1,8 @@
 from collections import deque
 
 
-class EDOMONDS_KARP():
+class EDOMONDS_KARP:
+
     def __init__(self, N, s, t):
         self.N = N
         self.s = s
@@ -21,7 +22,7 @@ class EDOMONDS_KARP():
         f = 0
         flow = [[0] * N for _ in range(N)]
         while True:
-            m, prev = self.bfs(flow)
+            (m, prev) = self.bfs(flow)
             if m == 0:
                 break
             f += m
@@ -57,9 +58,8 @@ class EDOMONDS_KARP():
         return (0, prev)
 
 
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 board = [input() for _ in range(H)]
-
 EK = EDOMONDS_KARP(H + W + 2, 0, H + W + 1)
 for h in range(H):
     for w in range(W):
@@ -72,6 +72,5 @@ for h in range(H):
         if board[h][w] == 'T':
             EK.add_edge(h + 1, H + W + 1, float('inf'))
             EK.add_edge(w + H + 1, H + W + 1, float('inf'))
-
-f, _ = EK.max_flow()
-print((f if f < float('inf') else -1))
+(f, _) = EK.max_flow()
+print(f if f < float('inf') else -1)

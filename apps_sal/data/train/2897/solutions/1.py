@@ -1,1 +1,2 @@
-def oddity(n): return ["odd", "even"][n**.5 % 1 != 0]
+def oddity(n):
+    return ['odd', 'even'][n ** 0.5 % 1 != 0]

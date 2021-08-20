@@ -1,9 +1,9 @@
 def search(n):
     s = 1
     e = n
-    while(s <= e):
+    while s <= e:
         mid = (s + e) // 2
-        if((mid * (mid + 1) // 2) <= n):
+        if mid * (mid + 1) // 2 <= n:
             ans = mid
             s = mid + 1
         else:
@@ -12,4 +12,4 @@ def search(n):
 
 
 n = int(input())
-print((1 + n - search(n + 1)))
+print(1 + n - search(n + 1))

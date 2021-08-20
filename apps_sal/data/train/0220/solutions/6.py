@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         n = len(customers)
         res = 0
         for k in range(len(customers)):
-            if (grumpy[k] == 0):
+            if grumpy[k] == 0:
                 res = res + customers[k]
         diff = []
         for j in range(len(customers)):

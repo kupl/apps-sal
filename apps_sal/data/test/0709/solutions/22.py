@@ -1,2 +1,2 @@
 n = int(input())
-print(str(bin(n)).count("1"))
+print(str(bin(n)).count('1'))

@@ -9,6 +9,6 @@ for i in range(n):
     if ss[-3:] == s:
         out += 1
 if out == go:
-    print("home")
+    print('home')
 else:
-    print("contest")
+    print('contest')

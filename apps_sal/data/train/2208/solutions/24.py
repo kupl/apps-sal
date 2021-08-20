@@ -4,18 +4,16 @@ NTC here
 from collections import defaultdict
 import threading
 from sys import stdin, setrecursionlimit
-setrecursionlimit(10**7)
-
+setrecursionlimit(10 ** 7)
 threading.stack_size(2 ** 27)
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 class Disjoint_set:
@@ -38,15 +36,13 @@ class Disjoint_set:
 
 
 def main():
-    n, k = lin()
-
+    (n, k) = lin()
     a = [lin() for i in range(k)]
     da = Disjoint_set(n)
-    for i, j in a:
+    for (i, j) in a:
         da.union(i, j)
     ch = defaultdict(int)
     for i in range(1, n + 1):
-        # print("CNN",i,da.find_set(da.data[i]).value)
         ch[da.find_set(i)] += 1
     ans = 0
     for i in ch:
@@ -56,9 +52,9 @@ def main():
 
 
 try:
+
     def __starting_point():
         threading.Thread(target=main).start()
 except Exception as e:
     print(e)
-
 __starting_point()

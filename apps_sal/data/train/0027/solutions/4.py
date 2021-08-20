@@ -6,7 +6,7 @@ def f(n):
     while n % 2 == 0:
         n //= 2
         st += 1
-    return n, st
+    return (n, st)
 
 
 t = int(input())
@@ -15,7 +15,7 @@ for _ in range(t):
     d = defaultdict(int)
     for i in input().split():
         el = int(i)
-        os, st = f(el)
+        (os, st) = f(el)
         d[os] = max(d[os], st)
     s = 0
     for el in list(d.values()):

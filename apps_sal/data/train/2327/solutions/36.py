@@ -1,10 +1,8 @@
-# seishin.py
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 D = [[] for i in range(M + 1)]
 for i in range(N):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     D[r - l + 1].append(l)
-
 data = [0] * (M + 2)
 
 
@@ -29,7 +27,6 @@ for d in range(1, M + 1):
         add(l, 1)
         add(l + d, -1)
         C -= 1
-
     cnt = C
     i = d
     while i <= M:

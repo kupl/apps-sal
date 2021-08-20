@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         memo = {}
 
@@ -18,7 +19,6 @@ class Solution:
                 three = check(num_orange // 3, days_left - 1)
             memo[t] = one or two or three
             return memo[t]
-
         for i in range(1, 50):
             if check(n, i):
                 return i

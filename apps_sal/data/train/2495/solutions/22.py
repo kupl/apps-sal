@@ -1,4 +1,5 @@
 class Solution:
+
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         count = 0
         for item in target:

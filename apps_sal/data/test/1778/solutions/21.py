@@ -4,10 +4,8 @@ def gambling():
     bb = list(map(int, input().split()))
     aa.sort()
     bb.sort()
-
-    sa, sb = 0, 0
+    (sa, sb) = (0, 0)
     while aa or bb:
-        # turn a
         if len(aa) == 0:
             bb.pop()
         elif len(bb) == 0:
@@ -16,8 +14,6 @@ def gambling():
             sa += aa.pop()
         else:
             bb.pop()
-
-        # turn b
         if len(bb) == 0:
             aa.pop()
         elif len(aa) == 0:
@@ -26,7 +22,6 @@ def gambling():
             sb += bb.pop()
         else:
             aa.pop()
-
     print(sa - sb)
 
 

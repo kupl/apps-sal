@@ -3,7 +3,6 @@ def distinct(seq):
     for item in seq:
         if item not in result:
             result.append(item)
-
     return result
 
 

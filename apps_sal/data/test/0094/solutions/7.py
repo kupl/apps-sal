@@ -1,7 +1,5 @@
-# I'm feeling greedy
 base = int(input())
 num = input()
-
 result = 0
 place_value = 1
 end = len(num)
@@ -18,5 +16,4 @@ while end > 0:
     result += place_value * int(num[begin:end])
     place_value *= base
     end = begin
-
 print(result)

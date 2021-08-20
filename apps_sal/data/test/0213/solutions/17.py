@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = set()
 s = {i for i in range(1, 101)}
 b = False
 for i in range(m):
-    k, f = map(int, input().split())
+    (k, f) = map(int, input().split())
     if k == n:
         print(f)
         b = True
@@ -26,10 +26,9 @@ if b == False:
     for j in s:
         if a == -1:
             a = (n - 1) // j
-        else:
-            if (n - 1) // j != a:
-                print(-1)
-                t = False
-                break
+        elif (n - 1) // j != a:
+            print(-1)
+            t = False
+            break
     if t == True:
         print(a + 1)

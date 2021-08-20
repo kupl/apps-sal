@@ -9,7 +9,6 @@ def eprint(*args):
 
 
 zz = 1
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -40,14 +39,13 @@ def bo(i):
 t = fi()
 while t > 0:
     t -= 1
-    n, m, a, b = mi()
+    (n, m, a, b) = mi()
     d = [['0' for i in range(m)] for j in range(n)]
     i = 0
     j = 0
     flag = 0
     for k in range(b * m):
         if d[i][j] == '1':
-            # print(i,j,"LOL")
             pp = i - 1
             while i != pp - 1 and d[i][j] == '1':
                 i += 1
@@ -65,12 +63,8 @@ while t > 0:
             d[i][j] = '1'
             i = (i + 1) % n
             j = (j + 1) % m
-        # print(i,j)
-        # for ppp in d:
-        #	print(*ppp)
-
     if flag:
-        print("NO")
+        print('NO')
         continue
     for i in range(n):
         v = 0
@@ -81,8 +75,8 @@ while t > 0:
             flag = 1
             break
     if flag:
-        print("NO")
+        print('NO')
         continue
-    print("YES")
-    for i in d	:
-        print("".join(i))
+    print('YES')
+    for i in d:
+        print(''.join(i))

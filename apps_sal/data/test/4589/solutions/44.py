@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 s = list()
 t = list()
 a = [0 for i in range(w + 2)]
@@ -10,15 +10,13 @@ for i in range(h):
     s.append(d)
     t.append(b)
 s.append(a)
-
 for j in range(1, h + 1):
     for k in range(1, w + 1):
         if s[j][k] == 0:
             cnt = 0
-            cnt = (s[j - 1][k - 1] + s[j - 1][k] + s[j - 1][k + 1]) + (s[j][k - 1] + s[j][k + 1]) + (s[j + 1][k - 1] + s[j + 1][k] + s[j + 1][k + 1])
+            cnt = s[j - 1][k - 1] + s[j - 1][k] + s[j - 1][k + 1] + (s[j][k - 1] + s[j][k + 1]) + (s[j + 1][k - 1] + s[j + 1][k] + s[j + 1][k + 1])
             t[j - 1] = t[j - 1].replace('.', str(cnt), 1)
-
         else:
             continue
 for i in range(h):
-    print((t[i]))
+    print(t[i])

@@ -6,8 +6,8 @@ def sin():
 
 
 for _ in range(int(sin())):
-    n, m = map(int, sin().split())
-    l = list(map(int, sin().split(" ")))
+    (n, m) = map(int, sin().split())
+    l = list(map(int, sin().split(' ')))
     g = [0] * max(l) * 2
     for i in l:
         g[i - 1] = 1

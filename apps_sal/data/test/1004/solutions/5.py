@@ -22,7 +22,7 @@ def solve():
     for i in mints():
         k += 1
         if i < 0:
-            if (-i) not in s:
+            if -i not in s:
                 print(-1)
                 return
             s.remove(-i)

@@ -1,11 +1,9 @@
 (n, m) = list(map(int, input().split()))
-
 array = [0] * (n + 1)
 lst = []
 for x in range(m):
     (s, d, c) = list(map(int, input().split()))
     lst.append((d, s, c, x + 1))
-
 lst.sort()
 i = 0
 flag = True
@@ -21,7 +19,6 @@ for (d, s, c, p) in lst:
         break
     else:
         array[d] = m + 1
-
 if flag:
     print(*array[1:])
 else:

@@ -3,10 +3,9 @@ class Solution:
     def rabinKarp(self, L, nums):
         h = 0
         a = 26
-        MOD = 2**32
+        MOD = 2 ** 32
         for i in range(L):
             h = (h * a + nums[i]) % MOD
-
         aL = pow(a, L, MOD)
         seen = {h}
         for start in range(1, len(nums) - L + 1):
@@ -18,7 +17,7 @@ class Solution:
 
     def longestDupSubstring(self, S: str) -> str:
         nums = [ord(ch) - ord('a') for ch in S]
-        l, r = 0, len(S)
+        (l, r) = (0, len(S))
         while l < r:
             mid = l + (r - l) // 2
             if self.rabinKarp(mid, nums) != -1:

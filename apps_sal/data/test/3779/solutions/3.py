@@ -1,5 +1,5 @@
 from math import gcd
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 g = 0
 l = list(map(int, input().split()))
 for e in l:

@@ -1,6 +1,6 @@
 def solve(s):
     d = {}
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c not in d:
             d[c] = [i, i]
         else:

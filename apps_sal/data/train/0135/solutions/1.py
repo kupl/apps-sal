@@ -1,4 +1,5 @@
 class Solution:
+
     def validateStackSequences(self, pushed: List[int], popped: List[int]) -> bool:
         if len(pushed) != len(popped):
             return False

@@ -1,4 +1,3 @@
-# cook your dish here
 from bisect import bisect_left
 
 
@@ -11,7 +10,7 @@ def BinarySearch(a, x):
 
 
 for _t in range(int(input())):
-    _n, q = list(map(int, input().split()))
+    (_n, q) = list(map(int, input().split()))
     mounts = list(map(int, input().split()))
     for _q in range(q):
         query = list(map(int, input().split()))

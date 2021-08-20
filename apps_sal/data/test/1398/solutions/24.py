@@ -1,5 +1,5 @@
-fd = open("input.txt", "r")
-fd1 = open("output.txt", "w")
+fd = open('input.txt', 'r')
+fd1 = open('output.txt', 'w')
 n = int(fd.readline())
 arr = list(map(int, fd.readline().split()))
 freq = [0 for i in range(5001)]

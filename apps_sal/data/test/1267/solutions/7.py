@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -17,7 +15,6 @@ def write():
 def main():
     n = int(input())
     a = [int(x) for x in input().split()]
-
     dd = set(a)
     print(len(dd) - 1 if 0 in dd else len(dd))
 

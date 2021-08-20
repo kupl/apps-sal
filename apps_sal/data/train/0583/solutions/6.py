@@ -3,6 +3,6 @@ for _ in range(int(input())):
     b = list(map(int, input().split()))
     k = sum(b)
     if k >= 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

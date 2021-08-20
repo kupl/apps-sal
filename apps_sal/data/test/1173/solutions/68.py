@@ -1,5 +1,5 @@
 import time
-from collections import*  # defaultdict Counter deque appendleft
+from collections import *
 import sys
 input = sys.stdin.readline
 t = time.time()
@@ -7,8 +7,7 @@ t = time.time()
 
 def main():
     n = int(input())
-    d = [[]] + [deque(list(map(int, input().split())))for i in n * [0]]
-
+    d = [[]] + [deque(list(map(int, input().split()))) for i in n * [0]]
     c = 0
     while any(d):
         c += 1
@@ -25,14 +24,12 @@ def main():
                         skip.add(oppo)
                         skip.add(i)
                         f = 1
-
         if not f:
-            print((-1))
+            print(-1)
             return
         if abs(time.time() - t) > 1:
-            print((n * (n - 1) // 2))
+            print(n * (n - 1) // 2)
             return
-
     print(c)
 
 

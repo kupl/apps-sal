@@ -12,7 +12,7 @@ def solve(n, m):
         maxx = max(maxx, bf(n, m, i))
     for i in range(1, n + 1):
         if bf(n, m, i) == maxx:
-            return(i)
+            return i
 
 
 def solve2(a, b):
@@ -31,5 +31,5 @@ def solve2(a, b):
         return l
 
 
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 print(solve2(a, b))

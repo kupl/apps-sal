@@ -1,19 +1,17 @@
-# 1205B
 def do():
     n = int(input())
-    nums = [int(c) for c in input().split(" ")]
+    nums = [int(c) for c in input().split(' ')]
     valid = set()
     for i in range(64):
         count = []
         for j in range(n):
-            if (1 << i) & nums[j]:
+            if 1 << i & nums[j]:
                 count.append(nums[j])
             if len(count) == 3:
                 return 3
         if len(count) == 2:
             valid.add(count[0])
             valid.add(count[1])
-    # valid won't be that large hahaha at most 64*2
     nv = len(valid)
     valid = list(valid)
     dis = [[float('inf')] * nv for _ in range(nv)]

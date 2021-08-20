@@ -1,12 +1,12 @@
 import math
 import time
-
-a, b = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
 if a < b:
     print(0)
 elif a == b:
-    print("infinity")
+    print('infinity')
 else:
+
     def FindRequiredDivisors(x, b):
         y = 1
         ans = 0

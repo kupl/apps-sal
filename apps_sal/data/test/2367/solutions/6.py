@@ -5,7 +5,7 @@ INF = 10 ** 15
 
 
 def main():
-    H, W, A, B = map(int, input().split())
+    (H, W, A, B) = map(int, input().split())
     MAXN = H + W + 3
     factorial = [1]
     for i in range(1, MAXN + 1):
@@ -15,14 +15,18 @@ def main():
     for i in range(MAXN - 1, -1, -1):
         inv_factorial[i] = inv_factorial[i + 1] * (i + 1) % MOD
 
-    def fact(N): return factorial[N]
-    def nck(N, K): return 0 if K > N or K < 0 else factorial[N] * inv_factorial[N - K] * inv_factorial[K] % MOD
-    def dist(sy, sx, gy, gx): return nck(gy - sy + gx - sx, gy - sy)
+    def fact(N):
+        return factorial[N]
+
+    def nck(N, K):
+        return 0 if K > N or K < 0 else factorial[N] * inv_factorial[N - K] * inv_factorial[K] % MOD
+
+    def dist(sy, sx, gy, gx):
+        return nck(gy - sy + gx - sx, gy - sy)
     ans = 0
     if H - A < W - B:
-        H, W = W, H
-        A, B = B, A
-
+        (H, W) = (W, H)
+        (A, B) = (B, A)
     for i in range(W - B):
         x = B + i + 1
         y = H - A - i

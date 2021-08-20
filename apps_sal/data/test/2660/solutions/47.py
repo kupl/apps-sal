@@ -8,7 +8,7 @@ fx = 0
 for i in range(q):
     Q = list(map(int, input().split()))
     if Q[0] == 1:
-        a, b = Q[1], Q[2]
+        (a, b) = (Q[1], Q[2])
         heapq.heappush(L, -a)
         heapq.heappush(R, a)
         l = -heapq.heappop(L)

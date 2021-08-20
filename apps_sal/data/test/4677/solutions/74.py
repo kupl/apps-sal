@@ -5,10 +5,8 @@ for i in range(len(a)):
         test += '0'
     elif a[i] == '1':
         test += '1'
+    elif len(a) == 0:
+        pass
     else:
-        if len(a) == 0:
-            pass
-        else:
-            test = test[:-1]
-
+        test = test[:-1]
 print(test)

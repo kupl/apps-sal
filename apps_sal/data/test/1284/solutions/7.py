@@ -1,4 +1,5 @@
-def y(x): return print(x) or quit()
+def y(x):
+    return print(x) or quit()
 
 
 n = int(input())

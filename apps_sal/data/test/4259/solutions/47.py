@@ -1,5 +1,5 @@
 K = int(input())
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 li = []
 for i in range(A, B + 1):
     li.append(i)
@@ -11,6 +11,6 @@ for j in li:
     else:
         ans = False
 if ans == True:
-    print("OK")
+    print('OK')
 else:
-    print("NG")
+    print('NG')

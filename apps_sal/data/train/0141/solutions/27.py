@@ -1,4 +1,5 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         groups = self.group_people_by_weight(people, limit)
         return self.count_num_boats(groups, limit)

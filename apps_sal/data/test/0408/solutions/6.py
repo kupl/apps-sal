@@ -1,10 +1,12 @@
 import sys
-def read(t=int): return list(map(t, sys.stdin.readline().split()))
+
+
+def read(t=int):
+    return list(map(t, sys.stdin.readline().split()))
 
 
 array = lambda *ds: [array(*ds[1:]) for _ in range(ds[0])] if ds else 0
-
-n, m = read()
+(n, m) = read()
 
 
 def smart(n, m):
@@ -23,11 +25,5 @@ def brute(n, m):
                 best = max(best, a + b)
     return best
 
-# for n in range(10):
-#     for m in range(10):
-#         if smart(n, m) != brute(n, m):
-#             print(smart(n,m), brute(n,m))
-
 
 print(smart(n, m))
-# print(brute(n, m))

@@ -5,10 +5,8 @@ def asterisc_it(n):
         n_str = ''.join(n)
     else:
         n_str = str(n)
-
     prev = False
-    result = ""
-
+    result = ''
     for s in n_str:
         if int(s) % 2 == 0:
             if prev == True:
@@ -17,5 +15,4 @@ def asterisc_it(n):
         else:
             prev = False
         result = result + s
-
     return result

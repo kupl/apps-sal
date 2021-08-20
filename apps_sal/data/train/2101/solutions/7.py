@@ -1,9 +1,9 @@
 import sys
 from sys import stdin, stdout
-n, m = stdin.readline().split()
+(n, m) = stdin.readline().split()
 n = int(n)
 m = int(m)
-e = set(tuple(map(int, stdin.readline().split())) for _ in range(m))
+e = set((tuple(map(int, stdin.readline().split())) for _ in range(m)))
 a = set(range(1, n + 1))
 q = []
 r = 0

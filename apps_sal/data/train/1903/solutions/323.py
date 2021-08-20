@@ -1,25 +1,25 @@
 class Solution:
+
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
         n = len(a)
         if n <= 1:
             return 0
         d = defaultdict(list)
-        min_val, min_i = float('inf'), None
+        (min_val, min_i) = (float('inf'), None)
         for i in range(n - 1):
             for j in range(i + 1, n):
                 val = abs(a[i][0] - a[j][0]) + abs(a[i][1] - a[j][1])
                 d[i].append((val, i, j))
                 d[j].append((val, j, i))
                 if min_val > val:
-                    min_val, min_i = val, i
-
+                    (min_val, min_i) = (val, i)
         for i in range(n):
             heapify(d[i])
         q = [heappop(d[min_i])]
         heapify(q)
-        ans, cur = 0, set()
+        (ans, cur) = (0, set())
         while len(cur) < n:
-            val, i, j = heappop(q)
+            (val, i, j) = heappop(q)
             if i not in cur or j not in cur:
                 ans += val
             cur.add(i)

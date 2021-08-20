@@ -1,27 +1,19 @@
-# cook your dish here
 from math import sqrt
 t = int(input())
 
 
 def isprime(n):
-
-    # Corner cases
-    if (n <= 1):
+    if n <= 1:
         return False
-    if (n <= 3):
+    if n <= 3:
         return True
-
-    # This is checked so that we can skip
-    # middle five numbers in below loop
-    if (n % 2 == 0 or n % 3 == 0):
+    if n % 2 == 0 or n % 3 == 0:
         return False
-
     i = 5
-    while(i * i <= n):
-        if (n % i == 0 or n % (i + 2) == 0):
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
             return False
         i = i + 6
-
     return True
 
 
@@ -34,9 +26,9 @@ for _ in range(t):
     s = 0
     e = len(l) - 1
     ans = -1
-    while(s <= e):
+    while s <= e:
         mid = (s + e) // 2
-        if((l[mid]**4) <= n):
+        if l[mid] ** 4 <= n:
             ans = mid
             s = mid + 1
         else:

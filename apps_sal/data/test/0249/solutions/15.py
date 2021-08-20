@@ -1,16 +1,14 @@
-
 import itertools
 import math
 
 
 def can_measure(a, d):
-    return any(i + d in a for i in a)
+    return any((i + d in a for i in a))
 
 
 def main():
-    n, l, x, y = list(map(int, input().split()))
+    (n, l, x, y) = list(map(int, input().split()))
     a = set(map(int, input().split()))
-
     can_x = can_measure(a, x)
     can_y = can_measure(a, y)
     if can_x and can_y:
@@ -37,7 +35,6 @@ def main():
                     print(1)
                     print(i - y)
                     break
-
         else:
             print(2)
             print(x, y)

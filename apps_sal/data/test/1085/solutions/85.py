@@ -3,7 +3,6 @@ import math
 
 def calc_yakusu_num(n):
     num = 0
-
     for i in range(1, int(math.sqrt(n)) + 1):
         if n % i == 0:
             if i == n // i:
@@ -29,11 +28,8 @@ def calc_yakusu(n):
 def __starting_point():
     ans = 0
     n = int(input())
-
     ans += calc_yakusu_num(n - 1)
-
     y = calc_yakusu(n)
-
     for i in y:
         tmp = n
         while tmp % i == 0:

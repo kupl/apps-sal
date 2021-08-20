@@ -1,7 +1,7 @@
-s, l = map(int, input().split())
+(s, l) = map(int, input().split())
 t = []
 for i in range(l, 0, -1):
-    k = i & (i ^ (i - 1))
+    k = i & (i ^ i - 1)
     if s >= k:
         t.append(str(i))
         s -= k

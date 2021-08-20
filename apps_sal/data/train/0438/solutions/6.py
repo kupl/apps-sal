@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         nums = []
         max_index = -1
@@ -8,7 +9,6 @@ class Solution:
             nums.append(0)
         for i in range(len(arr)):
             index = arr[i] - 1
-
             if index == 0:
                 try:
                     nums[index] = 1 + nums[index + 1]

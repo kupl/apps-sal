@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         possibilities = {2: {9, 7}, 1: {8, 6}, 3: {4, 8}, 4: {3, 9, 0}, 5: {}, 6: {1, 7, 0}, 7: {6, 2}, 8: {1, 3}, 9: {4, 2}, 0: {4, 6}}
 
@@ -11,5 +12,4 @@ class Solution:
                         temp[next_position] += result[curr_position]
                 result = temp
             return sum(result.values()) % (pow(10, 9) + 7)
-
         return dp(n)

@@ -1,9 +1,10 @@
 class UF:
+
     def __init__(self, m, n):
         self.p = {(i, j): (i, j) for i in range(m) for j in range(n)}
 
     def union(self, ti, tj):
-        pi, pj = self.find(*ti), self.find(*tj)
+        (pi, pj) = (self.find(*ti), self.find(*tj))
         if pi != pj:
             self.p[pj] = pi
             return False
@@ -16,9 +17,9 @@ class UF:
 
 
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        # 如何定义cycle：同一个点的两个不同方向的path，最终汇聚到非自身的同一点
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         uf = UF(m, n)
         for i in range(m):
             for j in range(n):

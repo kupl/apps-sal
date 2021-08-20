@@ -1,6 +1,5 @@
-# cook your dish here
 for t in range(int(input())):
-    k, n = map(int, input().split())
+    (k, n) = map(int, input().split())
     a = list(map(int, input().split()))[:n]
     lst = []
     for i in range(n):

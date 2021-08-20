@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    N, S = map(int, input().split())
+    (N, S) = map(int, input().split())
     A = [int(a) for a in input().split()]
     if S >= sum(A):
         print(0)

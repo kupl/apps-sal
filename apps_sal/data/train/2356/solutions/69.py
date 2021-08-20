@@ -1,5 +1,5 @@
 def ans(n, k):
-    dp = [[0 for x in range(6001)]for y in range(6001)]
+    dp = [[0 for x in range(6001)] for y in range(6001)]
     dp[1][1] = 1
     for i in range(2, n + 1):
         for j in range(3000, 0, -1):
@@ -7,5 +7,5 @@ def ans(n, k):
     print(dp[n][k])
 
 
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 ans(n, k)

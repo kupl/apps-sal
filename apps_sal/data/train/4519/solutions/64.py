@@ -1,7 +1,6 @@
-
 def max_number(number):
     number_list = [x for x in str(number)]
-    new_string = ""
+    new_string = ''
     while number_list:
         for x in number_list:
             if x == max(number_list):

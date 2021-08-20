@@ -3,7 +3,6 @@ a = int(input())
 b = int(input())
 max_1 = 6
 max_2 = 6
-
 akrat = 4
 pole = [n] * 6
 pole[0] += -b
@@ -18,7 +17,6 @@ if n in pole:
     max_1 = pole.index(n)
 else:
     max_1 = 6
-
 if n >= 2 * b:
     akrat = 4
     pole = [n] * 6

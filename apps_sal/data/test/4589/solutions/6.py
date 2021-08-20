@@ -1,5 +1,5 @@
 def resolve():
-    h, w = map(int, input().split())
+    (h, w) = map(int, input().split())
     s = []
     for _ in range(h):
         s.append(list(input()))
@@ -11,7 +11,7 @@ def resolve():
                 for k in range(8):
                     nx = x + dx[k]
                     ny = y + dy[k]
-                    if not(nx < h and 0 <= nx and ny < w and 0 <= ny) or s[nx][ny] == '#':
+                    if not (nx < h and 0 <= nx and (ny < w) and (0 <= ny)) or s[nx][ny] == '#':
                         continue
                     if s[nx][ny] == '.':
                         s[nx][ny] = '1'

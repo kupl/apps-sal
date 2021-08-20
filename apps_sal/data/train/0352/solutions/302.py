@@ -2,8 +2,8 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        # idea is to sort words based on length and then apply dfs on each index
         n = len(words)
         words.sort(key=len)
         memo = {}
@@ -28,7 +28,6 @@ class Solution:
                 f_max = max(f_max, c_max)
             memo[start] = f_max
             return f_max
-
         ans = 0
         for i in range(n):
             ans = max(ans, recur(i))

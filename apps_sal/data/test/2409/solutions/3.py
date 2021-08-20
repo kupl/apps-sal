@@ -1,15 +1,9 @@
 for h in range(int(input())):
-    n, k, l = list(map(int, input().strip().split()))
-
+    (n, k, l) = list(map(int, input().strip().split()))
     arr = list(map(int, input().strip().split()))
-
     dp = [0 for i in range(len(arr) + 1)]
     dp[0] = -1
-
-    # print(p)
-
     there = True
-
     for i in range(len(arr)):
         if arr[i] > l:
             there = False
@@ -18,12 +12,10 @@ for h in range(int(input())):
             dp[i + 1] = arr[i]
         else:
             dp[i + 1] = -1
-
     if there == False:
-        print("No")
+        print('No')
         continue
     pointer = 0
-
     for i in range(n + 1):
         if dp[i] == -1:
             if i == n:
@@ -39,8 +31,7 @@ for h in range(int(input())):
                     break
                 else:
                     pointer = -(l - dp[i])
-
     if there == False:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

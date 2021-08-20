@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 mod = 998244353
 dp = [[0] * (k + 1) for i in range(n)]
 dp[0][0] = m

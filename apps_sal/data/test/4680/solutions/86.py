@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if a % 5 != 0 and a % 7 != 0:
     print('NO')
 elif b % 5 != 0 and b % 7 != 0:
@@ -15,8 +15,7 @@ elif b % 7 == 0:
         print('YES')
     else:
         print('NO')
+elif a % 5 == 0 and b % 5 == 0:
+    print('YES')
 else:
-    if a % 5 == 0 and b % 5 == 0:
-        print('YES')
-    else:
-        print('NO')
+    print('NO')

@@ -22,5 +22,4 @@ if deb:
     file = open('input.txt', 'w')
 else:
     input = sys.stdin.readline
-
 main()

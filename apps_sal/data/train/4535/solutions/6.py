@@ -8,7 +8,7 @@ def zfunc(str_):
         if str_[:l] == str_[i:]:
             r.append(l)
             continue
-        while(i + j < len(str_) and str_[j] == str_[i + j]):
+        while i + j < len(str_) and str_[j] == str_[i + j]:
             j += 1
         r.append(j)
     return r

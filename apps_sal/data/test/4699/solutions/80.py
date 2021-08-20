@@ -1,9 +1,8 @@
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     D = set(map(int, input().split()))
     numset = set(range(0, 10))
     d = numset.difference(D)
-
     for n in range(N, pow(10, 6) + 10):
         check = set(list(str(n)))
         ngflag = False

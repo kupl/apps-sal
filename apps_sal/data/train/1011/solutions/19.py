@@ -1,7 +1,6 @@
-# cook your dish here
 T = int(input())
 for i in range(T):
-    N, K = list(map(int, input().split(" ")))
+    (N, K) = list(map(int, input().split(' ')))
     msg = input()
     lower = 0
     upper = 0
@@ -11,23 +10,23 @@ for i in range(T):
         elif ord(s) in range(97, 123):
             lower += 1
     if K > N:
-        print("both")
+        print('both')
     elif lower == upper:
         if K >= lower:
-            print("both")
+            print('both')
         else:
-            print("none")
+            print('none')
     elif lower < upper:
         if K < lower:
-            print("none")
+            print('none')
         elif K >= upper:
-            print("both")
+            print('both')
         else:
-            print("brother")
+            print('brother')
     elif upper < lower:
         if K < upper:
-            print("none")
+            print('none')
         elif K >= lower:
-            print("both")
+            print('both')
         else:
-            print("chef")
+            print('chef')

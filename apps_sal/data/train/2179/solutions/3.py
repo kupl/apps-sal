@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 n = int(input())
 s = [int(i) for i in input().split()]
 ans = 0

@@ -1,12 +1,12 @@
 n = int(input())
 a = list(map(int, input().split()))
 l = []
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     l.append([x, i])
 l.sort(reverse=True)
 cnt = 1
 dp = [[0] * (n + 1) for _ in range(n + 1)]
-for i, j in l:
+for (i, j) in l:
     for x in range(cnt + 1):
         if x == 0:
             dp[x][cnt - x] = dp[x][cnt - x - 1] + i * (n - 1 - (cnt - x - 1) - j)

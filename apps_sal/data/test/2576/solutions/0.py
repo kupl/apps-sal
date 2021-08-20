@@ -20,5 +20,5 @@ def SI():
 
 t = II()
 for q in range(t):
-    a, b, c, d = MI()
+    (a, b, c, d) = MI()
     print(max(a + b, c + d))

@@ -1,6 +1,7 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        m, n = len(text1), len(text2)
+        (m, n) = (len(text1), len(text2))
         memo = [[-1 for _ in range(n)] for _ in range(m)]
         return self.lcs(text1, 0, text2, 0, memo)
 

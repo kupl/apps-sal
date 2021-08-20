@@ -1,18 +1,15 @@
 n = int(input())
 s = list(input())
-ans = ""
-
+ans = ''
 l = 0
 for i in range(n):
     ans += s[i]
-    if s[i] == ")":
+    if s[i] == ')':
         if l == 0:
-            ans = "(" + ans
+            ans = '(' + ans
         else:
             l -= 1
     else:
         l += 1
-
-ans += (")" * l)
-
+ans += ')' * l
 print(ans)

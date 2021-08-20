@@ -11,7 +11,7 @@ for i in range(n):
 if (len(ab) + len(ba)) % 2:
     print(-1)
 else:
-    print(len(ab) // 2 + len(ba) // 2 + (len(ab) % 2) * 2)
+    print(len(ab) // 2 + len(ba) // 2 + len(ab) % 2 * 2)
     for i in range(1, len(ab), 2):
         print(ab[i - 1] + 1, ab[i] + 1)
     for i in range(1, len(ba), 2):

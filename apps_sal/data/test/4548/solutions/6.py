@@ -1,4 +1,4 @@
-n, m, x = map(int, input().split())
+(n, m, x) = map(int, input().split())
 a = list(map(int, input().split()))
 root0 = 0
 rootn = 0

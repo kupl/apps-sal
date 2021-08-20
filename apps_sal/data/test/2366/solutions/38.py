@@ -3,7 +3,6 @@ A = list(map(int, input().split()))
 d = {}
 for a in A:
     d[a] = d.get(a, 0) + 1
-
 comb = []
 for i in d:
     if d[i] > 1:

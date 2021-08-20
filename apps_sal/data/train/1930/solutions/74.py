@@ -11,7 +11,7 @@ class Cashier:
     @lru_cache(maxsize=128)
     def compute_amount(self, pdt, qty):
         bill = 0
-        for p, q in zip(pdt, qty):
+        for (p, q) in zip(pdt, qty):
             i = self.p.index(p)
             bill += self.amt[i] * q
         return bill
@@ -20,11 +20,6 @@ class Cashier:
         self.c += 1
         amt = self.compute_amount(tuple(product), tuple(amount))
         if self.c % self.n == 0 and self.d:
-            return amt - (amt * self.d / 100)
+            return amt - amt * self.d / 100
         else:
             return amt
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

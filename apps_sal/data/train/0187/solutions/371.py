@@ -1,5 +1,5 @@
 class Solution:
-    # simulation, time O(customers/4), space O(1)
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         n = len(customers)
         cur = remain = rot = 0

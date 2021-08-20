@@ -7,9 +7,8 @@ def findout(n):
     while n % 2 == 0:
         n = n // 2
         cnt += 1
-
     return cnt
 
 
 A = [findout(s) for s in S]
-print((sum(A)))
+print(sum(A))

@@ -1,9 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 g = [0 for i in range(43)]
 ans = 0
-
 for i in a:
     if i == 4:
         g[4] += 1
@@ -38,5 +36,5 @@ for i in a:
             ans += 1
     else:
         ans += 1
-ans += (g[4] + 2 * g[8] + 3 * g[15] + 4 * g[16] + 5 * g[23])
+ans += g[4] + 2 * g[8] + 3 * g[15] + 4 * g[16] + 5 * g[23]
 print(ans)

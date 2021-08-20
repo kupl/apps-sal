@@ -1,1 +1,2 @@
-def opposite(x): return -x
+def opposite(x):
+    return -x

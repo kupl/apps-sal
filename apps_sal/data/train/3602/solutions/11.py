@@ -1,6 +1,6 @@
 def run_length_encoding(s):
     rle = []
-    for i, ch in enumerate(s):
+    for (i, ch) in enumerate(s):
         if i == 0:
             rle.append([1, ch])
         else:

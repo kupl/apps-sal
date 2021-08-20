@@ -1,6 +1,5 @@
 n = int(input())
 l_list = list(map(int, input().split()))
-
 len_l = len(l_list)
 l_list = sorted(l_list)
 cnt = 0

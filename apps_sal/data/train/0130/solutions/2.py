@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfArrays(self, s: str, k: int) -> int:
         MOD = 10 ** 9 + 7
         n = len(s)
@@ -17,5 +18,4 @@ class Solution:
                     break
                 ans += dp(j + 1)
             return ans % MOD
-
         return dp(0)

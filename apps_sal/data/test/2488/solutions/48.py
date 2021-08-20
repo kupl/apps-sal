@@ -1,5 +1,5 @@
 from collections import deque
-N, D, A = map(int, input().split())
+(N, D, A) = map(int, input().split())
 monster = []
 for k in range(N):
     monster.append(list(map(int, input().split())))
@@ -11,7 +11,6 @@ monster = deque(monster)
 final = monster[-1][0]
 ruiseki = 0
 minuslist = deque()
-
 while len(monster) > 0:
     while len(minuslist) > 0:
         if monster[0][0] >= minuslist[0][0]:
@@ -25,5 +24,4 @@ while len(monster) > 0:
             minuslist.append([monster[0][0] + 2 * D + 1, monster[0][1] - ruiseki])
         ruiseki = monster[0][1]
     monster.popleft()
-
 print(ans)

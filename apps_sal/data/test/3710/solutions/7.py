@@ -1,6 +1,6 @@
 import sys
 import math
-n, k = list(map(int, sys.stdin.readline().split()))
+(n, k) = list(map(int, sys.stdin.readline().split()))
 arr = list(map(int, sys.stdin.readline().split()))
 ans = 1
 for i in arr:

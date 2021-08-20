@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 ans_pos = 0
 ans_neg = 0
 tmp_pos = 0

@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
         rods = sorted(rods)[::-1]
         n = len(rods)

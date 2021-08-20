@@ -10,5 +10,4 @@ for s in reversed(S):
     r %= mod
     d = d * 10 % mod
     p[r] += 1
-
 print(sum([i * (i - 1) // 2 for i in p]))

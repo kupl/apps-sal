@@ -1,7 +1,7 @@
 def egged(year, span):
-    NBASE, NCB = 300, 3
+    (NBASE, NCB) = (300, 3)
     if year < 1:
-        return "No chickens yet!"
+        return 'No chickens yet!'
     nc = []
     ttl = []
     n = 0

@@ -1,14 +1,11 @@
 from itertools import combinations_with_replacement
-
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 conditions = []
 for i in range(q):
     conditions.append(list(map(int, input().split())))
-
 cands = []
 for i in combinations_with_replacement(list(range(1, m + 1)), n):
     cands.append(i)
-
 maxi = 0
 for cand in cands:
     score = 0

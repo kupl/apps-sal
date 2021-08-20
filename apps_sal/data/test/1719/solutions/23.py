@@ -4,7 +4,6 @@ dp = [[[0] * 4 for _ in range(4)] for _ in range(n + 1)]
 for j in range(4):
     for k in range(4):
         dp[2][j][k] = 1
-
 for i in range(2, n):
     for j in range(4):
         for k in range(4):
@@ -19,12 +18,9 @@ for i in range(2, n):
     dp[i + 1][1][3] %= mod
     dp[i + 1][1][2] -= dp[i - 1][3][0]
     dp[i + 1][1][2] %= mod
-
 ans = 0
 for j in range(4):
     for k in range(4):
         ans += dp[n][j][k]
         ans %= mod
 print(ans)
-
-# for i in range(n+1): print(dp[i])

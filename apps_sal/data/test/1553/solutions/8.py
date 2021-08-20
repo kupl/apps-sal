@@ -9,15 +9,13 @@ def can(a, h):
     return cur <= h
 
 
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
-lt, rt = 0, n + 1
+(lt, rt) = (0, n + 1)
 while lt < rt - 1:
     mid = (lt + rt) // 2
     if can(a[:mid], h):
         lt = mid
     else:
         rt = mid
-
 print(lt)

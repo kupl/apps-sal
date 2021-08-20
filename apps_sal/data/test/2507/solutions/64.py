@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     A = np.array(sorted(list(map(int, input().split()))))
     F = np.array(sorted(list(map(int, input().split())), reverse=True))
 

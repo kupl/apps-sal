@@ -1,9 +1,8 @@
 from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
 from scipy.sparse import csr_matrix
-
-h, w = map(int, input().split())
-ma = [list(map(int, input().split(" "))) for i in range(10)]
-sco = [list(map(int, input().split(" "))) for i in range(h)]
+(h, w) = map(int, input().split())
+ma = [list(map(int, input().split(' '))) for i in range(10)]
+sco = [list(map(int, input().split(' '))) for i in range(h)]
 a = csr_matrix(ma)
 b = dijkstra(a)
 ans = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def numberToWords(self, num):
         """
         :type num: int
@@ -22,23 +23,17 @@ class Solution:
                     out_str += under20_lyst[ten_digit % 10]
                 else:
                     out_str += tens_lyst[ten_digit // 10] + ' ' + num_lyst[ten_digit % 10]
-
             return out_str.strip()
-
         if not num:
             return 'Zero'
-
-        res = num // 1000    # 商
-        last3 = num % 1000     # 余数，后三位
+        res = num // 1000
+        last3 = num % 1000
         ans = ''
-
         while res or last3:
             if last3:
                 ans = convert(last3) + ' ' + large_scale.pop(0) + ' ' + ans
             else:
                 large_scale.pop(0)
-
             last3 = res % 1000
             res = res // 1000
-
         return ans.strip()

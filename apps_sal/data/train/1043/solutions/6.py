@@ -1,7 +1,7 @@
 t = int(input())
 i = 0
 while i < t:
-    n, k = input().split()
+    (n, k) = input().split()
     n = int(n)
     k = int(k)
     s = []
@@ -20,9 +20,9 @@ while i < t:
     d = 0
     while d < n:
         if ans[d] == 0:
-            print("NO", end=" ")
+            print('NO', end=' ')
         else:
-            print("YES", end=" ")
+            print('YES', end=' ')
         d += 1
-    print("")
+    print('')
     i += 1

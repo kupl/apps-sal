@@ -4,12 +4,10 @@ def encoder(data):
         for key in dictionary:
             if dictionary[key] == value:
                 return key
-
     dictionary = {0: ''}
     dict_index = 1
     substring = ''
     encoded = []
-
     for char in data:
         substring += char
         if substring not in list(dictionary.values()):

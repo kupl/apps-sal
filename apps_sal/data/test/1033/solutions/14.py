@@ -1,7 +1,6 @@
-n, h = input().split(' ')
+(n, h) = input().split(' ')
 n = int(n)
 h = int(h)
-
 l = 1
 r = 1000000000000000000
 while l < r:
@@ -22,5 +21,4 @@ while l < r:
         l = k + 1
     else:
         r = k
-
 print(l)

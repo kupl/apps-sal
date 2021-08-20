@@ -1,6 +1,5 @@
-A, B, C = map(int, input().split())
-
-if (B + C) - A >= 0:
-    print((B + C) - A)
+(A, B, C) = map(int, input().split())
+if B + C - A >= 0:
+    print(B + C - A)
 else:
-    print("0")
+    print('0')

@@ -3,18 +3,18 @@ from string import ascii_lowercase
 
 def rank(st, we, n):
     if not st:
-        return "No participants"
+        return 'No participants'
     if n > len(st.split(',')):
-        return "Not enough participants"
+        return 'Not enough participants'
     x = ascii_lowercase
     s = 0
     winning_num = []
     names = []
     group = sorted(list(zip(st.split(','), we)))
-    for name, weight in group:
+    for (name, weight) in group:
         names.append(name)
         for letter in name.lower():
-            s += (x.index(letter)) + 1
+            s += x.index(letter) + 1
         s += len(name)
         winning_num.append(s * weight)
         s = 0
@@ -22,7 +22,7 @@ def rank(st, we, n):
     final.sort(reverse=True)
     z = []
     final_names = []
-    for V, N in final:
+    for (V, N) in final:
         final_names.append(N)
         if V == final[n - 1][0]:
             z.append(N)

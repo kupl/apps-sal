@@ -1,5 +1,4 @@
 3
-
 input()
 nums = list(map(int, input().split()))
 sum_n = sum(nums)

@@ -1,10 +1,11 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         """
         :type input: str
         :rtype: int
         """
-        res, l = 0, 0
+        (res, l) = (0, 0)
         path = []
         for line in input.splitlines():
             name = line.lstrip('\t')

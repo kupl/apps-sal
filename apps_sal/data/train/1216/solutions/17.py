@@ -1,9 +1,8 @@
 def func(x, a):
     for amount in a:
         if amount >= x:
-            return "YES"
-
-    return "NO"
+            return 'YES'
+    return 'NO'
 
 
 for _ in range(int(input())):

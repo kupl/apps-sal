@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubArray(self, nums):
         """
         :type nums: List[int]
@@ -12,7 +13,6 @@ class Solution:
             else:
                 total += n
             print(total)
-
             best = max(total, best)
         if max(nums) < 0:
             return max(nums)

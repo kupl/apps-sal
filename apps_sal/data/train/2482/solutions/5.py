@@ -1,4 +1,5 @@
 class Solution:
+
     def canPlaceFlowers(self, nums, n):
         """
         :type flowerbed: List[int]

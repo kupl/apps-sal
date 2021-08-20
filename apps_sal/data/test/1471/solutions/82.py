@@ -1,13 +1,10 @@
 from collections import deque
-
 N = int(input())
 G = [{} for _ in range(N + 1)]
-
 for i in range(N - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     G[u][v] = w
     G[v][u] = w
-
 for i in range(1, N + 1):
     if len(G[i]) == 1:
         start = i

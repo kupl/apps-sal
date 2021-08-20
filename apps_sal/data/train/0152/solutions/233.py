@@ -1,4 +1,5 @@
 class Solution:
+
     def feasible(self, d, m):
         last_pos = self.position[0]
         i = 1

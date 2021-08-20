@@ -1,15 +1,13 @@
 from collections import Counter
 test = int(input())
 for _ in range(test):
-    n, q = list(map(int, input().split(' ')))
+    (n, q) = list(map(int, input().split(' ')))
     correct = []
-    # corrected = set(corrected)
     wrong = []
     for j in range(n):
         mydict = input()
         if mydict not in correct:
             correct.append(mydict)
-
     for i in range(q):
         misspelt = input()
         wrong.append(misspelt)

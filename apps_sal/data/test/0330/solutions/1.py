@@ -1,4 +1,4 @@
-p, y = list(map(int, input().split()))
+(p, y) = list(map(int, input().split()))
 
 
 def f(x):

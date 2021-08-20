@@ -2,7 +2,5 @@ import re
 
 
 def lowercase_count(strng):
-
-    regex = r'[a-z]'
-
+    regex = '[a-z]'
     return len(re.findall(regex, strng))

@@ -1,5 +1,5 @@
 def cat_mouse(x, j):
-    d, c, m = x.find('D'), x.find('C'), x.find('m')
+    (d, c, m) = (x.find('D'), x.find('C'), x.find('m'))
     if -1 in [d, c, m]:
         return 'boring without all three'
     if abs(c - m) <= j:

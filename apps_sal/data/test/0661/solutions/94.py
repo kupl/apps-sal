@@ -1,15 +1,15 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 v = []
 if k == 0:
-    for i in range(0, 2**m):
+    for i in range(0, 2 ** m):
         v.append(i)
         v.append(i)
-elif k < 2**m and m > 1:
-    for i in range(0, 2**m):
+elif k < 2 ** m and m > 1:
+    for i in range(0, 2 ** m):
         if i != k:
             v.append(i)
     v.append(k)
-    for i in range(2**m - 1, -1, -1):
+    for i in range(2 ** m - 1, -1, -1):
         if i != k:
             v.append(i)
     v.append(k)
@@ -19,6 +19,6 @@ else:
     for i in range(0, len(v)):
         print(v[i])
         if i == len(v) - 1:
-            print("\n")
+            print('\n')
         else:
-            print(" ")
+            print(' ')

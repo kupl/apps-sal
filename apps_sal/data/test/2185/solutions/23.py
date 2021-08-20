@@ -5,29 +5,29 @@ for _ in range(T):
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     C = []
-    for a, b in zip(A, B):
+    for (a, b) in zip(A, B):
         C.append(b - a)
     D = []
-    for v, g in groupby(C):
+    for (v, g) in groupby(C):
         D.append(v)
     if len(D) == 1:
         if D[0] >= 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     elif len(D) == 2:
         if 0 in D:
             D.remove(0)
             if D[0] >= 0:
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')
         else:
-            print("NO")
+            print('NO')
     elif len(D) == 3:
         if D[0] == D[-1] == 0 and D[1] >= 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

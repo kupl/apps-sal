@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     n = int(input())
     a = [int(s) for s in input().split(' ')]
-    ost0, ost1, ost2 = 0, 0, 0
+    (ost0, ost1, ost2) = (0, 0, 0)
     col = 0
     for el in a:
         if el % 3 == 0:

@@ -3,10 +3,10 @@ from sys import stdin as si
 
 def __starting_point():
     for _ in range(int(si.readline().strip())):
-        _, _, k = list(map(int, si.readline().strip().split()))
+        (_, _, k) = list(map(int, si.readline().strip().split()))
         lookup = {}
         for i in range(k):
-            x, y = list(map(int, si.readline().strip().split()))
+            (x, y) = list(map(int, si.readline().strip().split()))
 
             def check(d):
                 if d in lookup:

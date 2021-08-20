@@ -10,13 +10,12 @@ for _ in range(t):
             ones += 1
         else:
             break
-    if(ones < n):
-        if(ones % 2 == 0):
-            print("First")
+    if ones < n:
+        if ones % 2 == 0:
+            print('First')
         else:
-            print("Second")
+            print('Second')
+    elif ones % 2 == 1:
+        print('First')
     else:
-        if(ones % 2 == 1):
-            print("First")
-        else:
-            print("Second")
+        print('Second')

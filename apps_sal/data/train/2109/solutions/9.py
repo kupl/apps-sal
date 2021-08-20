@@ -1,12 +1,12 @@
 q = int(input())
 for i in range(q):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a == b:
         ans = 2 * a - 2
     elif abs(a - b) == 1:
         ans = 2 * min(a, b) - 2
     else:
-        c = (a * b)**0.5
+        c = (a * b) ** 0.5
         if c % 1 == 0:
             c = int(c) - 1
         else:

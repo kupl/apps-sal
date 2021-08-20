@@ -2,8 +2,6 @@ S = list(input())
 N = len(S)
 S.append('R')
 ans = [0] * N
-
-# cnt for RL
 cnt = [0, 0]
 l = 'R'
 for i in range(N):
@@ -18,4 +16,4 @@ for i in range(N):
         ans[i - cnt[1]] = cnt[0] - r1 + r2
         ans[i - cnt[1] + 1] = cnt[1] - r2 + r1
         cnt = [0, 0]
-print(' '.join(str(n) for n in ans))
+print(' '.join((str(n) for n in ans)))

@@ -1,1 +1,2 @@
-def odd_ball(a): return a.index("odd") in a
+def odd_ball(a):
+    return a.index('odd') in a

@@ -1,7 +1,6 @@
 n = int(input())
 a = sorted(map(int, input()))
 b = sorted(map(int, input()))
-
 r1 = n
 j = 0
 try:
@@ -16,7 +15,6 @@ try:
             raise UserWarning
 except UserWarning:
     pass
-
 r2 = 0
 j = 0
 try:
@@ -31,6 +29,5 @@ try:
             raise UserWarning
 except UserWarning:
     pass
-
 print(r1)
 print(r2)

@@ -1,7 +1,8 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         g = collections.defaultdict(list)
-        for a, b in pairs:
+        for (a, b) in pairs:
             g[a].append(b)
             g[b].append(a)
 
@@ -23,6 +24,6 @@ class Solution:
             idx.sort()
             chars = [s[j] for j in idx]
             chars.sort()
-            for j, c in zip(idx, chars):
+            for (j, c) in zip(idx, chars):
                 s[j] = c
         return ''.join(s)

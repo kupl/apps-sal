@@ -37,9 +37,8 @@ def solve(val):
     return r_val <= k
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 sum_a = sum(a)
 div = make_divisors(sum_a)
 ans = 0

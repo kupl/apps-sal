@@ -1,7 +1,6 @@
 n = int(input())
-S = list(input() for _ in range(n))
-
-T = "abcdefghijklmnopqrstuvwxyz"
+S = list((input() for _ in range(n)))
+T = 'abcdefghijklmnopqrstuvwxyz'
 for c in T:
     x = 50
     for s in S:

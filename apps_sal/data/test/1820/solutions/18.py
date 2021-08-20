@@ -1,6 +1,9 @@
 import sys
 3
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 for _ in range(int(input())):

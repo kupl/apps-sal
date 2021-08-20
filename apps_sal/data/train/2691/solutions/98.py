@@ -8,4 +8,4 @@ def solve(s):
     result_list = s.split()
     for i in range(len(result_list)):
         result_list[i] = int(result_list[i])
-    return (max(result_list))
+    return max(result_list)

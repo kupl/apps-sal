@@ -4,7 +4,7 @@ from operator import itemgetter
 
 
 def debug(x, table):
-    for name, val in table.items():
+    for (name, val) in table.items():
         if x is val:
             print('DEBUG:{} -> {}'.format(name, val), file=sys.stderr)
             return None
@@ -14,7 +14,7 @@ INF = 1000
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     str_l = []
     for i in range(n):
         moji = []
@@ -27,21 +27,13 @@ def solve():
             else:
                 moji.append('a')
         str_l.append(moji)
-
-    # debug(str_l, locals())
     row_nums = []
-
     for i in range(n):
-        kyori = [get_kyori(str_l[i], '1'),
-                 get_kyori(str_l[i], 'a'),
-                 get_kyori(str_l[i], '*')]
-
+        kyori = [get_kyori(str_l[i], '1'), get_kyori(str_l[i], 'a'), get_kyori(str_l[i], '*')]
         row_nums.append(kyori)
-
     ans = INF
     debug(row_nums, locals())
-
-    for i, j, k in permutations((0, 1, 2)):
+    for (i, j, k) in permutations((0, 1, 2)):
         tmp = 0
         kyori_c = row_nums.copy()
         kyori_c.sort(key=itemgetter(i))
@@ -53,13 +45,11 @@ def solve():
         kyori_c.sort(key=itemgetter(k))
         tmp += kyori_c[0][k]
         ans = min(tmp, ans)
-
     print(ans)
 
 
 def get_kyori(str1, c):
     res = INF
-
     if c in str1:
         i1 = str1.index(c)
         if i1 > len(str1) // 2:
@@ -68,7 +58,6 @@ def get_kyori(str1, c):
         if i2 > len(str1) // 2:
             i2 = len(str1) - i2 + 1
         res = min(i1, i2)
-
     return res
 
 

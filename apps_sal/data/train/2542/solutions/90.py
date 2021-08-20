@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         inc = True
         dec = True
@@ -9,5 +10,4 @@ class Solution:
             elif A[i + 1] - A[i] < 0:
                 dec = dec and True
                 inc = False
-
         return inc or dec

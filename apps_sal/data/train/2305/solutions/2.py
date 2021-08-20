@@ -1,17 +1,12 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
-
 N = int(input())
 VW = [[int(x) - 1 for x in input().split()] for _ in range(N - 1)]
-
-"""
-直径に次数1の頂点が生えている
-"""
-
+'\n直径に次数1の頂点が生えている\n'
 graph = [[] for _ in range(N)]
 deg = [0] * N
-for v, w in VW:
+for (v, w) in VW:
     graph[v].append(w)
     graph[w].append(v)
     deg[v] += 1
@@ -19,12 +14,12 @@ for v, w in VW:
 
 
 def dijkstra(start):
-    INF = 10**10
+    INF = 10 ** 10
     dist = [INF] * N
     q = [(start, 0)]
     while q:
         qq = []
-        for v, d in q:
+        for (v, d) in q:
             dist[v] = d
             for w in graph[v]:
                 if dist[w] == INF:
@@ -37,7 +32,7 @@ dist = dijkstra(0)
 v = dist.index(max(dist))
 dist = dijkstra(v)
 w = dist.index(max(dist))
-diag = v, w
+diag = (v, w)
 
 
 def create_perm(start):
@@ -67,9 +62,7 @@ def create_perm(start):
 
 
 P = create_perm(diag[1])
-
 Q = create_perm(diag[0])
-
 if len(P) != N:
     answer = -1
 else:

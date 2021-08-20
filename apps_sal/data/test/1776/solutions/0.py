@@ -2,11 +2,12 @@ from math import inf
 
 
 class Node:
+
     def __init__(self, parent=None, leftExp=None, rightExp=None, signQ=0):
-        self.parent, self.leftExp, self.rightExp, self.signQ = parent, leftExp, rightExp, signQ
+        (self.parent, self.leftExp, self.rightExp, self.signQ) = (parent, leftExp, rightExp, signQ)
 
     def __str__(self):
-        return "Node"
+        return 'Node'
 
 
 memo = {}
@@ -20,21 +21,13 @@ def Memoize(node, p, maxValue, minValue):
 
 
 def ExpMaxValue(root: Node, p):
-
     m = root.signQ - p
-    """if root.signQ == 1:
-        if p == 1:
-            return [root.leftExp.value + root.rightExp.value, root.leftExp.value + root.rightExp.value]
-        else:
-            return [root.leftExp.value - root.rightExp.value, root.leftExp.value - root.rightExp.value]"""
-
+    'if root.signQ == 1:\n        if p == 1:\n            return [root.leftExp.value + root.rightExp.value, root.leftExp.value + root.rightExp.value]\n        else:\n            return [root.leftExp.value - root.rightExp.value, root.leftExp.value - root.rightExp.value]'
     if root.signQ == 0:
         return [root.value, root.value]
-
     if root in memo:
         if p in memo[root]:
             return memo[root][p]
-
     if m == 0:
         value = ExpMaxValue(root.leftExp, root.leftExp.signQ)[0] + ExpMaxValue(root.rightExp, root.rightExp.signQ)[0]
         Memoize(root, p, value, value)
@@ -43,7 +36,6 @@ def ExpMaxValue(root: Node, p):
         value = ExpMaxValue(root.leftExp, 0)[0] - ExpMaxValue(root.rightExp, 0)[0]
         Memoize(root, p, value, value)
         return [value, value]
-
     maxValue = -inf
     minValue = inf
     if m >= p:
@@ -52,10 +44,8 @@ def ExpMaxValue(root: Node, p):
             for pQLeft in range(pQLeftMin + 1):
                 if root.leftExp.signQ - pQLeft + (1 - pQMid) > m:
                     continue
-
                 resLeft = ExpMaxValue(root.leftExp, pQLeft)
                 resRight = ExpMaxValue(root.rightExp, p - pQMid - pQLeft)
-
                 if pQMid == 1:
                     maxValue = max(resLeft[0] + resRight[0], maxValue)
                     minValue = min(resLeft[1] + resRight[1], minValue)
@@ -69,19 +59,15 @@ def ExpMaxValue(root: Node, p):
                 pQLeft = root.leftExp.signQ - mQLeft
                 if pQLeft + (1 - mQMid) > p:
                     continue
-
                 resLeft = ExpMaxValue(root.leftExp, pQLeft)
                 resRight = ExpMaxValue(root.rightExp, p - (1 - mQMid) - pQLeft)
-
                 if mQMid == 0:
                     maxValue = max(resLeft[0] + resRight[0], maxValue)
                     minValue = min(resLeft[1] + resRight[1], minValue)
                 else:
                     maxValue = max(resLeft[0] - resRight[1], maxValue)
                     minValue = min(resLeft[1] - resRight[0], minValue)
-
     Memoize(root, p, int(maxValue), int(minValue))
-
     return [int(maxValue), int(minValue)]
 
 
@@ -100,12 +86,8 @@ def main():
     if len(exp) == 1:
         print(exp)
         return
-
-    #root = Node(None, None, None)
-    #root.parent = root
     cNode = Node()
     isRight = False
-
     for i in range(1, len(exp) - 1):
         if exp[i] == '(':
             if not isRight:
@@ -123,19 +105,14 @@ def main():
                 cNode.parent.signQ += cNode.signQ
             cNode = cNode.parent
             isRight = False
+        elif not isRight:
+            cNode.leftExp = Node(cNode)
+            cNode.leftExp.value = int(exp[i])
         else:
-            if not isRight:
-                cNode.leftExp = Node(cNode)
-                cNode.leftExp.value = int(exp[i])
-            else:
-                cNode.rightExp = Node(cNode)
-                cNode.rightExp.value = int(exp[i])
-
-    # PrintNodes(cNode)
-
+            cNode.rightExp = Node(cNode)
+            cNode.rightExp.value = int(exp[i])
     ss = str(input()).split()
-    p, m = int(ss[0]), int(ss[1])
-
+    (p, m) = (int(ss[0]), int(ss[1]))
     print(ExpMaxValue(cNode, p)[0])
 
 

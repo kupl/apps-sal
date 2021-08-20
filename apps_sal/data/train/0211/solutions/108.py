@@ -1,4 +1,5 @@
 class Solution:
+
     def f(self, s):
         xss = []
         if len(s) == 0:
@@ -12,10 +13,8 @@ class Solution:
                 if s[:i] not in x:
                     x.append(s[:i])
                     xss.append(x)
-
         return xss
 
     def maxUniqueSplit(self, s: str) -> int:
         x = max([len(y) for y in self.f(s)])
-
         return x - 1

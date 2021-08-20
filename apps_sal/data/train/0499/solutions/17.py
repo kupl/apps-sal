@@ -1,7 +1,8 @@
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         n = len(target)
-        if (n == 1):
+        if n == 1:
             return target[0]
         else:
             ans = target[0]

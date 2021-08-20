@@ -1,6 +1,5 @@
-
-
 class Solution:
+
     def grayCode(self, n: int) -> List[int]:
         if n == 0:
             return [0]
@@ -9,5 +8,4 @@ class Solution:
 
     def circularPermutation(self, n: int, start: int) -> List[int]:
         ind = self.grayCode(n).index(start)
-
         return self.grayCode(n)[ind:] + self.grayCode(n)[:ind]

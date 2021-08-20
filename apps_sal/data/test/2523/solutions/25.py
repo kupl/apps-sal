@@ -8,4 +8,4 @@ def find_cont(S):
 
 
 S = input()
-print((find_cont(S)))
+print(find_cont(S))

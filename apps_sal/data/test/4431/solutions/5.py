@@ -2,7 +2,7 @@ def f(n):
     return n * (n + 1) // 2
 
 
-a, m = map(int, input().split())
+(a, m) = map(int, input().split())
 s = list(input())
 t = set(input().split())
 p = 0

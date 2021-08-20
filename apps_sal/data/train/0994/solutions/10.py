@@ -15,7 +15,6 @@ def binary_search(b, item, n):
             ub = mid - 1
         else:
             lb = mid + 1
-
     if f == 1:
         return cnt
     else:
@@ -28,9 +27,7 @@ for v in range(cases):
     n = a[0]
     x = a[1]
     a = list(map(int, input().strip().split()))
-
     cnt = 0
-
     for i in range(1, n + 1):
         if x % i == 0:
             side = i
@@ -47,36 +44,14 @@ for v in range(cases):
                 right += 1
                 s = s + a[right] - a[left]
                 left += 1
-
                 if s > x:
                     freq = freq + 1
                 else:
                     subsetsum.append(s)
-
             y = x // side
             subsetsum.sort()
-
             for r in range(n - side + 1 - freq):
                 h = binary_search(subsetsum, y - subsetsum[r], n - side + 1 - freq)
                 if h:
                     cnt = cnt + h - 1
-
     print(cnt)
-
-
-# a = [1,2,3,4,5]
-# n = 5
-# for i in range(1,6):
-#     print(i)
-#     left = 0
-#     right = i-1
-#     subset = []
-#     s = sum(a[:right+1])
-#     subset.append(s)
-#     while right < n-1:
-#         right += 1
-#         s = s + a[right] - a[left]
-#         left += 1
-#         subset.append(s)
-
-#     print(subset)

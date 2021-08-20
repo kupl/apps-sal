@@ -1,11 +1,8 @@
 def add_binary(a, b):
-    output = ""
+    output = ''
     result = a + b
-
-    bit = 0x01
-
+    bit = 1
     while bit <= result:
-        output = ("1" if (bit & result) > 0 else "0") + output
+        output = ('1' if bit & result > 0 else '0') + output
         bit *= 2
-
     return output

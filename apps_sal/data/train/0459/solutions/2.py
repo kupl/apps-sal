@@ -1,4 +1,5 @@
 class Solution:
+
     def characterReplacement(self, s, k):
         """
         :type s: str

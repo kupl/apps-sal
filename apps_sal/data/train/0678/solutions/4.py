@@ -2,7 +2,7 @@ tcases = int(input())
 lis = []
 for i in range(tcases):
     peoples = int(input())
-    tells = list(map(int, input().split(" ")))
+    tells = list(map(int, input().split(' ')))
     lis.append((peoples, tells))
 
 

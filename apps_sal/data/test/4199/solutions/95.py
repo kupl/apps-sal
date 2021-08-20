@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 h = list(map(int, input().split()))
 
 
@@ -7,7 +7,6 @@ def count():
     for i in range(N):
         if h[i] >= K:
             count += 1
-
     return count
 
 

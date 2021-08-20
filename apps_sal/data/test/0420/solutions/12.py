@@ -11,12 +11,10 @@ def checkMatr(a):
     return res
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 table = []
 for i in range(n):
     table.append(str(input()))
-
 while checkMatr(table):
     table = table[:int(len(table) / 2)]
-
 print(len(table))

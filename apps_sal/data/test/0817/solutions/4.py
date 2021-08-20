@@ -6,7 +6,7 @@ flag = True
 last = ['']
 for i in range(n - 2, -1, -1):
     tmp = res[-1]
-    if flag and s[i] == tmp[0] and s[i] > last[-1]:
+    if flag and s[i] == tmp[0] and (s[i] > last[-1]):
         res.append(res[-2])
         l.append(l[-1] - 1)
         flag = False

@@ -1,9 +1,7 @@
 import math
-
 n = int(input())
-
 if n == 1:
-    print("1")
+    print('1')
 else:
     smallestDivisor = n
     if n % 2 == 0:
@@ -15,8 +13,6 @@ else:
             if n % i == 0:
                 smallestDivisor = i
                 break
-
     while n % smallestDivisor == 0:
         n //= smallestDivisor
-
-    print(str(smallestDivisor) if n == 1 else "1")
+    print(str(smallestDivisor) if n == 1 else '1')

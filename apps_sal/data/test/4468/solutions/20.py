@@ -1,4 +1,4 @@
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 t_List = [int(x) for x in input().split()]
 pre = 0
 ans = T

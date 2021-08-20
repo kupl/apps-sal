@@ -13,12 +13,11 @@ def answer(n: int, x: int, l: List[int]) -> int:
         if x < d:
             return count
         count += 1
-
     return count
 
 
 def main():
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     l = list(map(int, input().split()))
     print(answer(n, x, l))
 

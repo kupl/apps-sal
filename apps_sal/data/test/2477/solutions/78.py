@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-*A, = map(int, input().split())
+(N, K) = map(int, input().split())
+(*A,) = map(int, input().split())
 
 
 def C(x):
@@ -7,7 +7,7 @@ def C(x):
 
 
 def binary_search2(func, n_min, n_max):
-    left, right = n_min, n_max
+    (left, right) = (n_min, n_max)
     while right - left > 1:
         middle = (left + right) // 2
         y_middle = func(middle)
@@ -15,7 +15,6 @@ def binary_search2(func, n_min, n_max):
             right = middle
         else:
             left = middle
-
     return right
 
 

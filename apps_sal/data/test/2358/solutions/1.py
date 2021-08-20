@@ -1,6 +1,6 @@
 a = input()
-ans, ans1 = [], []
-q1, q2 = 0, len(a) - 1
+(ans, ans1) = ([], [])
+(q1, q2) = (0, len(a) - 1)
 while True:
     while q1 < len(a) and a[q1] == ')':
         q1 += 1

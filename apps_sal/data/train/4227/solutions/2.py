@@ -1,13 +1,12 @@
 from functools import reduce
 from operator import add
 import re
+P_TO_PYTHON = re.compile('[+-]?\\d*i')
+P_FROM_PYTHON = re.compile('[()]|\\b1(?=j)|([+-]|^)0j')
 
 
-P_TO_PYTHON = re.compile(r'[+-]?\d*i')
-P_FROM_PYTHON = re.compile(r'[()]|\b1(?=j)|([+-]|^)0j')
-
-
-def complexify(m): return "{}{}1j".format(m.group()[:-1], '*' * (len(m.group()) > 1 and m.group()[-2] not in "-+"))
+def complexify(m):
+    return '{}{}1j'.format(m.group()[:-1], '*' * (len(m.group()) > 1 and m.group()[-2] not in '-+'))
 
 
 def complexSum(arr):

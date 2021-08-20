@@ -1,6 +1,4 @@
 t = int(input())
-
-
 for _ in range(t):
     used_q = set()
     n = int(input())

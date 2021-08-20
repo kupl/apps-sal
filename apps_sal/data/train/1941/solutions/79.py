@@ -1,6 +1,7 @@
 class Solution:
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        dic = {}  # trie
+        dic = {}
         for word in words:
             cur = dic
             for c in word:
@@ -23,7 +24,6 @@ class Solution:
                         dfs(i, dic[k], True)
                     else:
                         dfs(i, dic[k], False)
-
         for i in range(len(puzzles)):
             dfs(i, dic, False)
         return res

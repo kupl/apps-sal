@@ -14,12 +14,12 @@ for j in range(1, 18):
         graph[j][i + 1] = graph[j - 1][t]
 q = int(input())
 for _ in range(q):
-    x, y = map(int, input().split())
-    x, y = min(x, y), max(x, y)
+    (x, y) = map(int, input().split())
+    (x, y) = (min(x, y), max(x, y))
     ans = 0
     for j in range(18)[::-1]:
         if graph[j][x] < y:
-            ans += 2**j
+            ans += 2 ** j
             x = graph[j][x]
         if j == 0 and x < y:
             ans += 1

@@ -1,4 +1,4 @@
-N, D = map(int, input().split())
+(N, D) = map(int, input().split())
 R = N % (2 * D + 1)
 if R != 0:
     L = (N - R) / (2 * D + 1) + 1

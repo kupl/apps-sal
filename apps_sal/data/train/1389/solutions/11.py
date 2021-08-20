@@ -2,14 +2,13 @@ n = int(input())
 ans = []
 for x in range(n):
     a = input()
-    a = (' '.join(a.split()[::-1]))
-    # print(a)
+    a = ' '.join(a.split()[::-1])
     punctuation = ".,:;'"
-    b = ""
+    b = ''
     for i in a:
         if i not in punctuation:
             b += i
     ans.append(b)
-n = (ans[::-1])
+n = ans[::-1]
 for i in n:
     print(i)

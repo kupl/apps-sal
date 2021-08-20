@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         if not nums:
             return 0
-        tails = [0] * (len(nums))
+        tails = [0] * len(nums)
         size = 0
         for num in nums:
             i = 0

@@ -1,5 +1,5 @@
 import heapq
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
 turn = min(N, K)
 m = 0
@@ -12,15 +12,11 @@ for A in range(turn + 1):
         if B > 0:
             h = h + V[len(V) - B:]
         heapq.heapify(h)
-
         ans = sum(h)
         for i in range(K - A - B):
             if h != []:
                 f = heapq.heappop(h)
-
                 if f < 0:
                     ans -= f
         m = max(ans, m)
-
-
 print(m)

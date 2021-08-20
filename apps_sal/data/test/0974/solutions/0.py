@@ -19,7 +19,7 @@ def main():
                 x = []
                 res += 1
         else:
-            a, b = s.split()
+            (a, b) = s.split()
             x.append(int(b))
     print(res)
 

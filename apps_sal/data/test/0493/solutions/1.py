@@ -1,16 +1,13 @@
-
 n = int(input())
 s = input().strip()
-
 r = -1
 l = -1
 cb = 0
 res = 0
-
 for i in range(len(s)):
-    if s[i] == ".":
+    if s[i] == '.':
         cb += 1
-    elif s[i] == "L":
+    elif s[i] == 'L':
         if r > -1:
             if cb % 2 == 1:
                 res += 1
@@ -18,16 +15,13 @@ for i in range(len(s)):
         else:
             cb = 0
         r = -1
+    elif r > -1:
+        cb = 0
+        r = i
     else:
-        if r > -1:
-            cb = 0
-            r = i
-        else:
-            r = i
-            res += cb
-            cb = 0
-
+        r = i
+        res += cb
+        cb = 0
 if r == -1:
     res += cb
-
 print(res)

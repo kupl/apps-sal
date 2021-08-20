@@ -6,8 +6,6 @@ from functools import cmp_to_key
 import heapq
 sys.setrecursionlimit(100000)
 
-# input functions for me
-
 
 def rsa(sep=''):
     if sep == '':
@@ -27,17 +25,23 @@ def ria(sep=''):
     return list(rip(sep))
 
 
-def ri(): return int(input())
-def rd(): return float(input())
-def rs(): return input()
-##
+def ri():
+    return int(input())
+
+
+def rd():
+    return float(input())
+
+
+def rs():
+    return input()
 
 
 class mint:
-    mod = int(1e9 + 7)
+    mod = int(1000000000.0 + 7)
 
     def __init__(self, v=0):
-        if not ((v >= 0) and (v < mint.mod)):
+        if not (v >= 0 and v < mint.mod):
             v %= mint.mod
             if v < 0:
                 v += mint.mod
@@ -56,11 +60,11 @@ class mint:
         return mint(v)
 
     def __floordiv__(self, other):
-        v = self.V * mint.inv((other.V if isinstance(other, mint) else other))
+        v = self.V * mint.inv(other.V if isinstance(other, mint) else other)
         return mint(v)
 
     def __truediv__(self, other):
-        v = self.V * mint.inv((other.V if isinstance(other, mint) else other))
+        v = self.V * mint.inv(other.V if isinstance(other, mint) else other)
         return mint(v)
 
     def __eq__(self, other):
@@ -69,8 +73,8 @@ class mint:
     def __ne__(self, other):
         return self.V != (other.V if isinstance(other, mint) else other)
 
-    def __int__(self): return self.V
-    # right operand
+    def __int__(self):
+        return self.V
 
     def __radd__(self, other):
         v = (other.V if isinstance(other, mint) else other) + self.V
@@ -94,7 +98,7 @@ class mint:
 
     @staticmethod
     def inv(x):
-        a, _, _ = mint.extGCD(x, mint.mod)
+        (a, _, _) = mint.extGCD(x, mint.mod)
         return (a + mint.mod) % mint.mod
 
     @staticmethod
@@ -105,7 +109,7 @@ class mint:
         a1 = 0
         b0 = 0
         b1 = 1
-        while(r1 > 0):
+        while r1 > 0:
             q1 = r0 // r1
             r2 = r0 % r1
             a2 = a0 - q1 * a1
@@ -119,7 +123,7 @@ class mint:
         c = r0
         a = a0
         b = b0
-        return a, b, c
+        return (a, b, c)
 
     @staticmethod
     def pow(x, k):
@@ -142,7 +146,6 @@ def main():
     Pow2[0] = mint(1)
     for i in range(1, N + 1):
         Pow2[i] = Pow2[i - 1] * 2
-
     tot = mint(0)
     for i in range(N):
         tot += mint(A[i]) * Pow2[N - 1]

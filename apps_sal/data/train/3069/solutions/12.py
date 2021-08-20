@@ -6,6 +6,4 @@ def greet(language):
         print(x)
         return x
     else:
-        return "Welcome"
-
-     # return ("welcome")
+        return 'Welcome'

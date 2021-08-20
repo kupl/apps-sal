@@ -1,5 +1,7 @@
 class Solution:
+
     def stoneGameII(self, a: List[int]) -> int:
+
         @lru_cache(maxsize=None)
         def minimax(st, m, player):
             if st >= len(a):

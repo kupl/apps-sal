@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 N = int(input())
 G = list(map(int, input().split()))
 real = [i for i in range(N)]
 d = [1, -1]
-
 if G == real:
     print('Yes')
 else:

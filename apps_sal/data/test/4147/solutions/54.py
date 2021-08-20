@@ -1,4 +1,4 @@
-N, A, B, C = list(map(int, input().split()))
+(N, A, B, C) = list(map(int, input().split()))
 L = [int(input()) for _ in range(N)]
 
 
@@ -14,4 +14,4 @@ def rec(itr, a, b, c, mp):
     return res
 
 
-print((rec(0, 0, 0, 0, 0)))
+print(rec(0, 0, 0, 0, 0))

@@ -1,10 +1,11 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
 
         def dp(k, n):
             if (k, n) in memo:
-                return memo[(k, n)]
+                return memo[k, n]
             if k == 1:
                 return n
             if n == 0:
@@ -25,6 +26,6 @@ class Solution:
                 else:
                     res = pre
                     break
-            memo[(k, n)] = res
+            memo[k, n] = res
             return res
         return dp(K, N)

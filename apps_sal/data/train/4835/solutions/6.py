@@ -5,9 +5,7 @@ def okkOokOo(s):
     s = s.replace(',', '')
     s = s.replace(' ', '')
     s = s.replace('!', '')
-
     bis = s.split('?')
     for i in xrange(len(bis)):
         bis[i] = chr(int(bis[i], 2))
-
     return ''.join(bis)

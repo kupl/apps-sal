@@ -1,6 +1,5 @@
 from itertools import compress
 import numpy as np
-
 s = np.ones(100000)
 s[:2] = s[4::2] = 0
 for i in range(3, int(len(s) ** 0.5) + 1, 2):

@@ -1,7 +1,7 @@
 t = int(input())
 i = 0
 while i < t:
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     Max = a + b

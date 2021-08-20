@@ -1,8 +1,7 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 MAXN = N + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

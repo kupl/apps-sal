@@ -5,7 +5,7 @@ Q = [[] for i in range(N)]
 for i in range(1, N):
     Q[P[i]].append(i)
 dp = [0 for i in range(N)]
-INF = 10**9 + 7
+INF = 10 ** 9 + 7
 
 
 def solve(i):
@@ -26,6 +26,6 @@ def solve(i):
 
 solve(0)
 if dp[0] < INF:
-    print("POSSIBLE")
+    print('POSSIBLE')
 else:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')

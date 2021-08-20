@@ -1,4 +1,4 @@
-class Dog ():
+class Dog:
     bark = None
 
     def __init__(self, breed):
@@ -13,8 +13,6 @@ class Dog ():
         Dog.bark = func
 
 
-snoopy = Dog("Beagle")
-
-snoopy.bark = lambda x: "Woof"
-
-scoobydoo = Dog("Great Dane")
+snoopy = Dog('Beagle')
+snoopy.bark = lambda x: 'Woof'
+scoobydoo = Dog('Great Dane')

@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 maxn = max(max(a, b), c)
 minn = min(min(a, b), c)
 midn = a + b + c - minn - maxn

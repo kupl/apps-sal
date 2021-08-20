@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A):
         A.sort()
         ans = 0

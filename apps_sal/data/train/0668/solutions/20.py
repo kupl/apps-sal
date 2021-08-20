@@ -1,11 +1,10 @@
-# cook your dish here
 import sys
 t = int(input())
 for _ in range(t):
-    N, k = map(int, input().split())
+    (N, k) = map(int, input().split())
     A = list(map(int, input().split()))
     B = A * k
-    max_ = -(sys.maxsize) - 1
+    max_ = -sys.maxsize - 1
     value = 0
     for i in range(len(B)):
         value = value + B[i]

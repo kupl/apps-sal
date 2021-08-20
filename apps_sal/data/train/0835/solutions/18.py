@@ -1,15 +1,14 @@
-# cook your code here
 t = int(input())
-while(t > 0):
+while t > 0:
     t -= 1
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n % 2 != 0 and m % 2 != 0:
-        print("No")
+        print('No')
     elif m == 1 and n == 2:
-        print("Yes")
+        print('Yes')
     elif n == 1 and m == 2:
-        print("Yes")
+        print('Yes')
     elif m < 2 or n < 2:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

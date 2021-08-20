@@ -1,7 +1,7 @@
 can11 = set()
 can12 = set()
 can2 = False
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for ai in a:
     if ai in can11:

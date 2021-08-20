@@ -1,4 +1,5 @@
 class Solution:
+
     def trysolve(self, s, seq, n):
         seq.append(n)
         if self.solve(s, seq):
@@ -24,12 +25,12 @@ class Solution:
         return False
 
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        limit = 2**31 - 1
+        limit = 2 ** 31 - 1
         for i in range(1, len(S)):
             n1 = int(S[:i])
-            if(n1 > limit):
+            if n1 > limit:
                 return []
-            if(n1 != 0 and S[0] == '0'):
+            if n1 != 0 and S[0] == '0':
                 return []
             for j in range(i + 1, len(S)):
                 n2 = int(S[i:j])

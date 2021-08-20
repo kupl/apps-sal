@@ -6,5 +6,4 @@ s = a + b
 t = []
 for i in s:
     t.append(a.count(i) - b.count(i))
-
-print((0 if max(t) <= 0 else max(t)))
+print(0 if max(t) <= 0 else max(t))

@@ -1,6 +1,6 @@
 def solve(s):
     string = ''
-    for i, item in enumerate(s):
+    for (i, item) in enumerate(s):
         if item.isalpha():
             string += ' '
         else:

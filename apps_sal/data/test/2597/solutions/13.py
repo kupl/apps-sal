@@ -8,7 +8,7 @@ for _ in range(int(input())):
     lo = 0
     hi = n - 1
     while lo <= hi:
-        mi = (lo + hi) >> 1
+        mi = lo + hi >> 1
         if check(mi):
             ans = mi + 1
             lo = mi + 1

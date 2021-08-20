@@ -15,6 +15,6 @@ for t in range(int(input())):
         else:
             j -= 1
     if ans == 1:
-        print("Accepted")
+        print('Accepted')
     else:
-        print("Rejected")
+        print('Rejected')

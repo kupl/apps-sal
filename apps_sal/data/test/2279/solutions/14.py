@@ -11,7 +11,7 @@ arr = []
 for i in range(n * 2):
     arr.append([None] * (n * 2))
 elems = []
-for i in range(1, (n * 2)):
+for i in range(1, n * 2):
     lst = list(map(int, input().split()))
     for j in range(len(lst)):
         elems.append([-lst[j], i, j])
@@ -20,7 +20,7 @@ players = [True] * (n * 2)
 rez = [None] * (n * 2)
 cnt = 0
 while elems and cnt != n:
-    w, a, b = heappop(elems)
+    (w, a, b) = heappop(elems)
     if players[a] and players[b]:
         players[a] = False
         players[b] = False

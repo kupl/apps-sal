@@ -1,18 +1,12 @@
 import sys
-
 input = sys.stdin.readline
-
 n = int(input())
-
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
-
 perm = [-1 for i in range(n)]
 avail = set()
-
 for i in range(1, n + 1):
     avail.add(i)
-
 for i in range(n):
     if a[i] == b[i]:
         avail.remove(a[i])
@@ -34,7 +28,7 @@ def solve(seq, curravail):
         if difference(seq, a) == 1 and difference(seq, b) == 1:
             return seq
     for i in range(len(seq)):
-        if (seq[i] == -1):
+        if seq[i] == -1:
             for item in list(curravail):
                 newseq = list(seq)
                 newseq[i] = item
@@ -44,4 +38,4 @@ def solve(seq, curravail):
                     return solve(newseq, newset)
 
 
-print(" ".join(map(str, solve(perm, avail))))
+print(' '.join(map(str, solve(perm, avail))))

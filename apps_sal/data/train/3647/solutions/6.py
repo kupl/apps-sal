@@ -1,5 +1,3 @@
-# I haven't tested them, but I think candle_index is the best of these
-
 from random import randint
 
 
@@ -10,7 +8,7 @@ def zip_slices(arr):
     m = n // 2
     mins = arr[m:][::-1]
     maxes = arr[:m]
-    for a, b in zip(maxes, mins):
+    for (a, b) in zip(maxes, mins):
         res.extend([a, b])
     if n % 2:
         res.append(mins[-1])
@@ -58,4 +56,5 @@ def set_pop(arr):
     return res
 
 
-def solve(arr): return (zip_slices, candle_pop, candle_index, set_pop)[randint(0, 3)](arr)
+def solve(arr):
+    return (zip_slices, candle_pop, candle_index, set_pop)[randint(0, 3)](arr)

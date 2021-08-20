@@ -4,4 +4,4 @@ for i in range(len(l)):
         l[i] = '9'
     elif l[i] == '9':
         l[i] = '1'
-print((''.join(l)))
+print(''.join(l))

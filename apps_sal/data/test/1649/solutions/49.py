@@ -1,6 +1,5 @@
 import itertools
 Alist = list(map(int, input().split()))
-
 Blist = Alist
 ansflag = False
 for i in range(1, 5):
@@ -8,7 +7,6 @@ for i in range(1, 5):
         if sum(Alist) - sum(v) == sum(v):
             ansflag = True
             break
-
 if ansflag == True:
     print('Yes')
 else:

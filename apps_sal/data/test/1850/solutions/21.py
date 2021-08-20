@@ -1,5 +1,4 @@
-n, d = map(int, input().split())
-
+(n, d) = map(int, input().split())
 pos = list(map(int, input().split()))
 points = list(map(int, input().split()))
 cur = d - 1

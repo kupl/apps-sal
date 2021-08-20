@@ -1,8 +1,7 @@
 class Solution:
-    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
 
+    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         k = K
-        # separable, so do two 1-d convolutions
 
         def convolve(values):
             acc = sum(values[:k])
@@ -24,9 +23,7 @@ class Solution:
                 row = col
                 transposed.append(row)
             return transposed
-
         convolved_rows = [convolve(row) for row in mat]
         tranposed = transpose(convolved_rows)
         convolved = [convolve(row) for row in tranposed]
-
         return transpose(convolved)

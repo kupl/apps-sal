@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         missing = []
         target = 0
@@ -13,5 +14,4 @@ class Solution:
                 target = missing[-1] + k - len(missing)
             else:
                 target = missing[k - 1]
-
         return target

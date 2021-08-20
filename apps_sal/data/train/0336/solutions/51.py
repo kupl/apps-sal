@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         sCounts = collections.defaultdict(int)
         tCounts = collections.defaultdict(int)
@@ -12,5 +13,4 @@ class Solution:
                 change += tCounts[k]
             elif k in sCounts and sCounts[k] < tCounts[k]:
                 change += tCounts[k] - sCounts[k]
-
         return change

@@ -20,9 +20,9 @@ def main():
         if line[i] == '0':
             zr = True
     for i in range(n - 1, -1, -1):
-        if line[i] == "0":
+        if line[i] == '0':
             on = True
-        if line[i] == "1" and on:
+        if line[i] == '1' and on:
             zero += 1
             break
     if zero == 0 and one == 0:
@@ -31,11 +31,11 @@ def main():
         else:
             print(1)
     else:
-        line = ""
+        line = ''
         for k in range(zero):
-            line += "0"
+            line += '0'
         for k in range(one):
-            line += "1"
+            line += '1'
         print(line)
 
 

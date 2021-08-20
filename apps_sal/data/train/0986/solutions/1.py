@@ -1,5 +1,4 @@
 t = int(input())
-
 while t:
     t -= 1
     a = [int(i) for i in input().split()]
@@ -22,6 +21,6 @@ while t:
             temp = [i + 2 * k for i in temp]
     if flag:
         res = [str(i) for i in res]
-        print(" ".join(res))
+        print(' '.join(res))
     else:
-        print("CAPTAIN AMERICA EVADES")
+        print('CAPTAIN AMERICA EVADES')

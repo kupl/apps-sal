@@ -16,11 +16,8 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
 n = N()
 if '7' in str(n):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

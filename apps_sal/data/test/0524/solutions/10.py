@@ -16,5 +16,4 @@ while con:
     if con:
         cost = tmp
     c += 1
-
 print(cost)

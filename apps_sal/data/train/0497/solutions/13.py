@@ -1,4 +1,5 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(startTime)
         jobs = list(zip(endTime, startTime, profit))
@@ -17,7 +18,6 @@ class Solution:
                 else:
                     right = mid - 1
             return -1
-
         dp = [0] * n
         dp[0] = jobs[0][2]
         for i in range(1, n):

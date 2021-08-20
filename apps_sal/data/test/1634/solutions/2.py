@@ -1,5 +1,5 @@
-c1, c2, c3, c4 = map(int, input().split())
-n, m = map(int, input().split())
+(c1, c2, c3, c4) = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 sum1 = 0

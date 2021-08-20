@@ -2,9 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
-        # lengths of AM seqs after i with a diff d
         mem = [defaultdict(int) for _ in range(n)]
         res = 0
         for i in reversed(range(n)):

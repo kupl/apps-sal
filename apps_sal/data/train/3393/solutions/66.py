@@ -5,8 +5,8 @@ def get_divisors(n):
     i = 1
     result = []
     while i <= math.sqrt(n):
-        if (n % i == 0):
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 result.append(i)
             else:
                 result += [i, n / i]

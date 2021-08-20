@@ -1,4 +1,5 @@
 class Solution:
+
     def nextGreaterElement(self, n):
         """
         :type n: int
@@ -14,7 +15,6 @@ class Solution:
                     if temp[j] > s[i - 1]:
                         pivot = j
                         break
-
                 s[i - 1] = temp[pivot]
                 del temp[pivot]
                 s[i:] = temp

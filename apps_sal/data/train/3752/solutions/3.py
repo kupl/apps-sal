@@ -7,6 +7,6 @@ def binom(x, k):
 
 def value_at(poly_spec, x):
     r = 0
-    for k, c in enumerate(poly_spec[::-1]):
+    for (k, c) in enumerate(poly_spec[::-1]):
         r += c * binom(x, k)
     return round(r, 2)

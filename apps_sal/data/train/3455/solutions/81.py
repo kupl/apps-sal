@@ -11,10 +11,10 @@ def disarium_number(number):
     tot = 0
     i = 0
     while i < len(digit):
-        term = digit[i]**(i + 1)
+        term = digit[i] ** (i + 1)
         tot = tot + term
         i = i + 1
     if tot == numberc:
-        return "Disarium !!"
+        return 'Disarium !!'
     else:
-        return "Not !!"
+        return 'Not !!'

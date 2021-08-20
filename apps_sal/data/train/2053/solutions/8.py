@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 g = list(map(int, input().split()))
 b = sorted(b, reverse=True)

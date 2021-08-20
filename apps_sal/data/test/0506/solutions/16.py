@@ -1,11 +1,6 @@
-#!/c/Python34/python
-# coding: utf-8
-
-
 def main():
     [a, b] = list(map(int, input().split()))
     ans = 0
-
     while 1:
         if a > b:
             ans += a // b
@@ -17,7 +12,6 @@ def main():
             if b % a == 0:
                 break
             b = b % a
-
     print(ans)
     return
 

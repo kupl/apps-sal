@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         i = 1
         c_set = {n}

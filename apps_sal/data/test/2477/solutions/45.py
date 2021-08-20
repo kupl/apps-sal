@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(i) for i in input().split()]
 
 
@@ -15,7 +15,7 @@ def f(length, ls):
         return False
 
 
-ok, ng = max(A), 0
+(ok, ng) = (max(A), 0)
 while abs(ok - ng) > 1:
     z = (ok + ng) // 2
     if f(z, A) == True:

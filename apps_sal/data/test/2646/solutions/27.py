@@ -1,22 +1,21 @@
 from heapq import heappush, heapify, heappop
 
 
-def dijkstra(start: "始点", V: "頂点数", es: "隣接リスト", INF=10000000000):
-    # INF = 10**10 毎回チェックしよう
-    prev = [-1] * n  # 経路復元
-    d = [INF] * n  # 頂点sからの最短距離
+def dijkstra(start: '始点', V: '頂点数', es: '隣接リスト', INF=10000000000):
+    prev = [-1] * n
+    d = [INF] * n
     que = [start]
     d[start] = 0
     while que:
-        dv, v = divmod(heappop(que), INF)
+        (dv, v) = divmod(heappop(que), INF)
         if d[v] < dv:
             continue
-        for e, de in es[v]:
+        for (e, de) in es[v]:
             if d[e] > d[v] + de:
                 d[e] = d[v] + de
                 heappush(que, d[e] * INF + e)
                 prev[e] = v
-    return d, prev
+    return (d, prev)
 
 
 def get_path(t, prev):
@@ -28,17 +27,14 @@ def get_path(t, prev):
     return path
 
 
-n, m = list(map(int, input().split()))
-es = [[] for _ in range(n)]  # es[i] = (頂点iの(隣接する頂点,コスト)の組)
-# 入力
+(n, m) = list(map(int, input().split()))
+es = [[] for _ in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     es[a].append((b, 1))
-    es[b].append((a, 1))  # 無向グラフ
-
-
-d, prev = dijkstra(0, n, es)
-print("Yes")
+    es[b].append((a, 1))
+(d, prev) = dijkstra(0, n, es)
+print('Yes')
 for i in range(1, n):
-    print((prev[i] + 1))
+    print(prev[i] + 1)

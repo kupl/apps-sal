@@ -6,6 +6,6 @@ cnt = 0
 for i in range(N):
     cnt += vec[i] != vec2[i]
 if cnt <= 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

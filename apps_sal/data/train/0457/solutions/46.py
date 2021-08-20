@@ -1,8 +1,9 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
-        rec = [0] * (amount)
+        rec = [0] * amount
         fr = [0]
         new = []
         l = 1
@@ -15,7 +16,7 @@ class Solution:
             for c in coins:
                 if cur + c == amount:
                     return l
-                if cur + c < amount and not rec[cur + c]:
+                if cur + c < amount and (not rec[cur + c]):
                     new.append(cur + c)
                     rec[cur + c] = 1
         return -1

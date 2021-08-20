@@ -18,24 +18,21 @@ def union(a: List, b: List) -> List:
 
 
 class Solution:
+
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
         result = []
-
         while A and B:
             a = A[0]
             b = B[0]
             i = intersection(a, b)
             if i:
                 result.append(i)
-            # get rid of interval with the smallest front
             if a[1] < b[1]:
                 A.pop(0)
             elif a[1] > b[1]:
                 B.pop(0)
             else:
-                A.pop(0)  # validate
-
-        # consolidate adjacent intervals in the result
+                A.pop(0)
         i = 1
         while i < len(result):
             u = union(result[i - 1], result[i])
@@ -45,5 +42,4 @@ class Solution:
                 result.insert(i - 1, u)
             else:
                 i += 1
-
         return result

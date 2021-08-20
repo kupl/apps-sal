@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 
 
 def half(v):
@@ -13,5 +13,4 @@ def half(v):
 ans = 0
 for i in range(2, 2 * n + 1):
     ans += half(i) * half(i - k)
-
 print(ans)

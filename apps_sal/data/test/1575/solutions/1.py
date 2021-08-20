@@ -4,10 +4,8 @@ tf = int(inp[1])
 T = int(inp[2])
 inp = input()
 n = int(inp)
-
 if n == 0:
     print(ts)
-
 else:
     inp = input().split(' ')
     min_del_t = 10000000000000
@@ -19,13 +17,11 @@ else:
         if t_cur < t and t_cur + T <= tf:
             ans = t_cur
             break
-        else:
-            if min_del_t > time_waiting and t_cur + T <= tf:
-                min_del_t = time_waiting
-                ans = t - 1
+        elif min_del_t > time_waiting and t_cur + T <= tf:
+            min_del_t = time_waiting
+            ans = t - 1
         t_cur += T
-    # print(min_del_t)
-    if(t_cur + T <= tf):
+    if t_cur + T <= tf:
         print(t_cur)
     else:
         print(ans)

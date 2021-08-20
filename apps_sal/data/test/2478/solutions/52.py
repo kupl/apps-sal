@@ -1,7 +1,7 @@
 n = int(input())
 s = str(input())
 l = []
-left, right = 0, 0
+(left, right) = (0, 0)
 for c in s:
     if c == ')':
         if l == []:

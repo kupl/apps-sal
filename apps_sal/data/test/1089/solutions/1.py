@@ -1,9 +1,8 @@
 import sys
-
 MOD = 10 ** 9 + 7
 
 
-def make_table(size=10**6, p=MOD):
+def make_table(size=10 ** 6, p=MOD):
     fac = [None] * (size + 1)
     fac[0] = 1
     for i in range(size):
@@ -12,10 +11,10 @@ def make_table(size=10**6, p=MOD):
     ifac[size] = pow(fac[size], p - 2, p)
     for i in range(size, 0, -1):
         ifac[i - 1] = ifac[i] * i % p
-    return fac, ifac
+    return (fac, ifac)
 
 
-fac, ifac = make_table(2 * 10**5)
+(fac, ifac) = make_table(2 * 10 ** 5)
 
 
 def comb(n, r, mod=MOD):
@@ -24,7 +23,7 @@ def comb(n, r, mod=MOD):
     return fac[n] * ifac[r] % mod * ifac[n - r] % mod
 
 
-n, m, k = map(int, sys.stdin.readline().split())
+(n, m, k) = map(int, sys.stdin.readline().split())
 
 
 def main():
@@ -36,7 +35,6 @@ def main():
     for i in range(1, m):
         horiz[i + 1] += horiz[i]
         horiz[i + 1] %= MOD
-
     res = 0
     for i in range(1, n):
         res += (vert[n] - vert[i] - i * (n - i)) * m % MOD * m % MOD
@@ -44,7 +42,6 @@ def main():
     for i in range(1, m):
         res += (horiz[m] - horiz[i] - i * (m - i)) * n % MOD * n % MOD
         res %= MOD
-
     res *= comb(n * m - 2, k - 2)
     res %= MOD
     return res

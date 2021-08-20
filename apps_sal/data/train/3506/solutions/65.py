@@ -5,6 +5,5 @@ def vowel_indices(word):
     n = []
     for i in range(a):
         if word[i] in vowels:
-            #i = i+1
             n.append(i + 1)
-    return(n)
+    return n

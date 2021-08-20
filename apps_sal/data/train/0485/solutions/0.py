@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         n = len(A)
         record = [0] * n
@@ -7,7 +8,7 @@ class Solution:
         for i in range(n):
             if i >= K:
                 flip -= record[i - K]
-            if A[i] == (flip % 2):
+            if A[i] == flip % 2:
                 if i > n - K:
                     return -1
                 ans += 1

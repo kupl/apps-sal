@@ -1,4 +1,5 @@
 class Solution:
+
     def nthPersonGetsNthSeat(self, n: int) -> float:
         dp = [0] * (n + 1)
         if n > 0:

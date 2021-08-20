@@ -1,7 +1,5 @@
 import sys
 from math import *
-#sys.stdin = open('inpA.in', 'r')
-
 n = int(input())
 a = []
 if n > 4:
@@ -11,7 +9,7 @@ if n > 4:
         else:
             a = [n - i + (n % 2 == 0)] + a
     print(len(a))
-    print(' '.join(str(x) for x in a))
+    print(' '.join((str(x) for x in a)))
 elif n == 4:
     print(4)
     print(2, 4, 1, 3)

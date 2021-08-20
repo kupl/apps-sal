@@ -1,9 +1,7 @@
 def main():
     n = int(input())
     inlis = list(map(int, input().split()))
-
     ans = 10 ** 10
-
     for kouho1 in range(-100, 101):
         tmp1 = 0
         for i in range(n):

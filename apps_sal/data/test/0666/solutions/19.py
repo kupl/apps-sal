@@ -1,5 +1,5 @@
 n = int(input())
-a, b = 0, n
+(a, b) = (0, n)
 while a < b - 1:
     c = (a + b) // 2
     if c * (c + 1) // 2 < n:

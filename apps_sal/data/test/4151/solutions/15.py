@@ -1,7 +1,7 @@
 def step(x):
     ans = 1
     for i in range(x):
-        ans = (ans * 2) % 998244353
+        ans = ans * 2 % 998244353
     return ans
 
 
@@ -12,7 +12,7 @@ counter = 0
 first = {}
 last = {}
 for x in range(len(arr)):
-    if (arr[x] not in first):
+    if arr[x] not in first:
         first[arr[x]] = x
         last[arr[x]] = x
     else:
@@ -23,7 +23,7 @@ for x in first:
     arr2[last[x]] -= 1
 sum = 0
 for i in arr2:
-    if (sum == 0):
+    if sum == 0:
         counter += 1
     sum += i
 counter -= 1

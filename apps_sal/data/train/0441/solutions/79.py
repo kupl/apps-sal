@@ -1,18 +1,15 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         self.primes = [2, 3, 5, 7, 11]
         self.get_primes(N)
-        # print(self.primes)
         self.get_factors(2 * N)
-        # print(self.factor_arr)
         ans = 0
         for factor in self.factor_arr:
-            x = ((2 * N) / factor - factor - 1) / 2
-            # print(x)
+            x = (2 * N / factor - factor - 1) / 2
             if x < 0:
-                continue  # break
+                continue
             if x % 1 == 0:
-                # print(x)
                 ans += 1
         return ans
 
@@ -20,14 +17,13 @@ class Solution:
         self.factors = {1: 1}
         self.factor_arr = [1]
         i = 0
-        while(n > 1 and i < len(self.primes)):
+        while n > 1 and i < len(self.primes):
             prime = self.primes[i]
             pw = 0
-            # print(n,prime)
-            while(n % prime == 0):
+            while n % prime == 0:
                 n = n / prime
                 pw += 1
-            while(pw):
+            while pw:
                 length = len(self.factor_arr)
                 for fi in range(length):
                     nf = self.factor_arr[fi] * prime
@@ -35,7 +31,6 @@ class Solution:
                         self.factors[nf] = 1
                         self.factor_arr += [nf]
                 pw -= 1
-            # print(\"p-f_arr\",prime,self.factor_arr)
             i += 1
         if n > 1:
             length = len(self.factor_arr)
@@ -56,8 +51,7 @@ class Solution:
             k += 1
             i = 0
         num = 6 * k + adds[i]
-
-        while(num * num < n):
+        while num * num < n:
             if self.is_prime(num):
                 self.primes += [num]
             i = i + 1

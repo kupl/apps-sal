@@ -5,10 +5,10 @@ for tes in range(t):
     vow = 0
     v = ['A', 'E', 'I', 'O', 'U']
     for i in s:
-        if i == 'A' or i == 'E' or i == 'O' or i == 'U' or i == 'I':
+        if i == 'A' or i == 'E' or i == 'O' or (i == 'U') or (i == 'I'):
             vow += 1
     if vow <= 1:
-        print("No")
+        print('No')
     else:
         f = 0
         if s[0] in v and s[n - 1] in v:
@@ -18,6 +18,6 @@ for tes in range(t):
                 f = 1
                 break
         if f == 1:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

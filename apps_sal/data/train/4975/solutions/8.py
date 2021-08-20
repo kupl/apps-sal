@@ -1,5 +1,5 @@
 def solution(n):
-    ROMAN_SYMBOLS = ["M", "D", "C", "L", "X", "V", "I"]
+    ROMAN_SYMBOLS = ['M', 'D', 'C', 'L', 'X', 'V', 'I']
     ROMAN_VALUES = [1000, 500, 100, 50, 10, 5, 1]
     idx = 0
     roman = []
@@ -13,4 +13,4 @@ def solution(n):
             roman = roman[:-3] + [ROMAN_SYMBOLS[idx - 1]]
             if roman[-3:-2] == roman[-1:]:
                 roman = roman[:-3] + [ROMAN_SYMBOLS[idx]] + [ROMAN_SYMBOLS[idx - 2]]
-    return "".join(roman)
+    return ''.join(roman)

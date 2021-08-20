@@ -6,8 +6,8 @@ for i in range(t):
     else:
         k = -1
         for i in range(N):
-            s, p, v = list(map(int, input().split()))
-            h = (p // (s + 1)) * v
+            (s, p, v) = list(map(int, input().split()))
+            h = p // (s + 1) * v
             if h > k:
                 k = h
         print(int(k))

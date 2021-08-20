@@ -1,6 +1,6 @@
 import bisect
 a = []
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 k = 0
 for ai in input().split():
     bisect.insort(a, int(ai))

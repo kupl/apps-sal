@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 if 0 in a:
-    print(sum(abs(i)for i in a))
+    print(sum((abs(i) for i in a)))
 else:
     pc = mc = 0
     for i in range(n):

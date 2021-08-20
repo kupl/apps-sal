@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 le = list(map(int, input().split()))
 le.sort()
 gou = 0

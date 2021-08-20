@@ -1,4 +1,4 @@
-H, W, A, B = [int(_) for _ in input().split()]
+(H, W, A, B) = [int(_) for _ in input().split()]
 mod = 10 ** 9 + 7
 f = [1] * (3 * 10 ** 6 + 10)
 for i in range(1, 3 * 10 ** 6 + 10):
@@ -11,7 +11,7 @@ def comb(n, r):
         fi[r] = pow(f[r], mod - 2, mod)
     if n - r not in fi:
         fi[n - r] = pow(f[n - r], mod - 2, mod)
-    return (f[n] * fi[r] * fi[n - r]) % mod
+    return f[n] * fi[r] * fi[n - r] % mod
 
 
 ans = 0

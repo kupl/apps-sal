@@ -1,4 +1,4 @@
-n, b, p = input().split()
+(n, b, p) = input().split()
 n = int(n)
 b = int(b)
 p = int(p)

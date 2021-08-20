@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = []
 for _ in range(n):
     l.append(input().strip())
@@ -20,7 +19,7 @@ if n >= 4 and m >= 4:
     print(-1)
 else:
     if n < m:
-        n, m = m, n
+        (n, m) = (m, n)
         l = [''.join([l[j][i] for j in range(m)]) for i in range(n)]
     if m == 1:
         print(0)
@@ -34,12 +33,11 @@ else:
             even += 1
         for nex in l:
             if nex == '00' or nex == '11':
-                odd, even = even + 1, odd
+                (odd, even) = (even + 1, odd)
             else:
-                odd, even = even, odd + 1
+                (odd, even) = (even, odd + 1)
         print(min(even, odd))
     elif m == 3:
-        #ee, eo, oe, oo = [0, 0, 0 ,0]
         ll = [0, 0, 0, 0]
         for nex in l:
             ll.reverse()

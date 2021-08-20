@@ -16,7 +16,6 @@ for i in range(200):
     m = n - i
     if digit_sum(m) == i:
         res.append(m)
-
 print(len(res))
 while res:
     print(res.pop())

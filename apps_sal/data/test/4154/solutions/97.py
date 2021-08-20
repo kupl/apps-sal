@@ -12,10 +12,8 @@ large = N
 for i in range(M):
     if small < LR[i][0]:
         small = LR[i][0]
-
     if large > LR[i][1]:
         large = LR[i][1]
-
 if small <= large:
     print(large - small + 1)
 else:

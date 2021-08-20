@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-n, p = I()
+(n, p) = I()
 a = list(I())
 b = list(I())
 r = a[p - 1] + b[0]

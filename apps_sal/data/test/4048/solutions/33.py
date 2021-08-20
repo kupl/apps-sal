@@ -1,12 +1,11 @@
 N = int(input())
-
 num = set()
-for n in range(2, 10**7):
+for n in range(2, 10 ** 7):
     if N % n == 0:
         num.add(tuple(sorted([n, N // n])))
     if N == n:
         break
-ans = (10**12, 10**12)
+ans = (10 ** 12, 10 ** 12)
 if not num:
     print(N - 1)
 else:

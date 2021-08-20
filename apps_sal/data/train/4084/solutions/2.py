@@ -1,5 +1,4 @@
 from math import log
-
 MINUTES_PER_KATA = 6.0
 PUSHUPS_BASE_TIME = 5.0
 

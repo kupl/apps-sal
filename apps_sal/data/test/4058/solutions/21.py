@@ -1,10 +1,10 @@
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.insert(0, 0)
 pos = 1
 ans = 0
 last = 0
-while(True):
+while True:
     if pos > n:
         break
     prelast = last

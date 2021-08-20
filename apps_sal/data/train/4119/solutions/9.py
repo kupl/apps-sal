@@ -1,4 +1,4 @@
-ORDER = {v: i for i, v in enumerate([':D', ':)', ':|', ':(', 'T_T'])}
+ORDER = {v: i for (i, v) in enumerate([':D', ':)', ':|', ':(', 'T_T'])}
 
 
 def sort_emotions(arr, order):

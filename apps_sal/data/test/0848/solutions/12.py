@@ -2,12 +2,12 @@ def pair(a, b):
     if a > b:
         return pair(b, a)
     else:
-        return (((a + b) * (a + b + 1)) / 2) + b
+        return (a + b) * (a + b + 1) / 2 + b
 
 
 (n, k) = list(map(int, input().split()))
 if k > int((n - 1) / 2):
-    print("-1")
+    print('-1')
 else:
     print(n * k)
     hash = {}
@@ -25,6 +25,6 @@ else:
                     continue
                 else:
                     hash[p] = 1
-                    print("%d %d" % (i, j))
+                    print('%d %d' % (i, j))
                     count += 1
                     j += 1

@@ -11,7 +11,6 @@ def solution(digits):
                 final = int(str(stg[num1]) + str(stg[num1 + 1]) + str(stg[num1 + 2]) + str(stg[num1 + 3]))
             if int(str(stg[num1]) + str(stg[num1 + 1]) + str(stg[num1 + 2]) + str(stg[num1 + 3]) + str(stg[num1 + 4])) > final:
                 final = int(str(stg[num1]) + str(stg[num1 + 1]) + str(stg[num1 + 2]) + str(stg[num1 + 3]) + str(stg[num1 + 4]))
-
         except:
             pass
     return final

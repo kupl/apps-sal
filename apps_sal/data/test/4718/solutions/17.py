@@ -1,3 +1,2 @@
-# ABC085A
 s = input()
-print("2018" + s[4:])
+print('2018' + s[4:])

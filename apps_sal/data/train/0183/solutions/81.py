@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
+
         @lru_cache(None)
         def solve(i, j, c):
             if i == len(nums1) or j == len(nums2):

@@ -1,17 +1,17 @@
 s = str(input())
-f = ""
+f = ''
 for i in range(len(s)):
     f += s[i]
     if s[i] == '-':
-        f += " "
-g = ""
+        f += ' '
+g = ''
 for i in range(len(f)):
     if f[i].isdigit():
-        g += " "
+        g += ' '
     g += f[i]
-final = ""
+final = ''
 e = g.split()
 for i in range(len(e)):
     z = e[i]
-    final = (final + int(z[0]) * (z[2:len(z) - 1]) if z[0].isdigit() else final + z)
-print("Return") if final == final[::-1] else print("Continue")
+    final = final + int(z[0]) * z[2:len(z) - 1] if z[0].isdigit() else final + z
+print('Return') if final == final[::-1] else print('Continue')

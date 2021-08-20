@@ -3,8 +3,7 @@ l = [*map(int, input().split())]
 
 
 def f(a):
-    return [sum(min(
-        [abs(e - a), abs(e - (a - 1)), abs(e - (a + 1))]) for e in l), a]
+    return [sum((min([abs(e - a), abs(e - (a - 1)), abs(e - (a + 1))]) for e in l)), a]
 
 
 res = [float('inf'), float('inf')]

@@ -1,4 +1,5 @@
 class Solution:
+
     def isHappy(self, n):
         """
         :type n: int
@@ -11,7 +12,7 @@ class Solution:
             seen[str(n)] = True
             newN = 0
             while n > 0:
-                n, mod = divmod(n, 10)
+                (n, mod) = divmod(n, 10)
                 newN += mod ** 2
             n = newN
         return False

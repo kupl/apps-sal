@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         ans = 0
         orig = [int(''.join([str(c) for c in row]), 2) for row in matrix]

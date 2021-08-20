@@ -13,7 +13,7 @@ a = int(input())
 b = [int(i) for i in list(input())]
 for i in range(max(1, sum(b))):
     if check(i):
-        print("YES")
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

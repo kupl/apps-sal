@@ -1,11 +1,10 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 rooms = input()
 count = [0] * (n + 1)
 for i in range(n):
     count[i] = count[i - 1]
     if rooms[i] == '0':
         count[i] += 1
-
 ans = float('inf')
 for i in range(n):
     if rooms[i] != '0':

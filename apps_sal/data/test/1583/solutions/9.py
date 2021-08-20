@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import math
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
@@ -9,10 +8,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(500000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -39,19 +38,17 @@ def lcm(a, b):
 
 
 def solve():
-    A, B, X = list(map(int, input().split()))
+    (A, B, X) = list(map(int, input().split()))
     X /= A
-
-    # 台形
     if X > A * B / 2:
         rest = A * B - X
         h = 2 * rest / A
         r = math.atan(h / A)
-        print((math.degrees(r)))
+        print(math.degrees(r))
     else:
         h = 2 * X / B
         r = math.atan(B / h)
-        print((math.degrees(r)))
+        print(math.degrees(r))
 
 
 def main():

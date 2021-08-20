@@ -24,5 +24,4 @@ while len(index):
         maxP = tp
     else:
         ans.remove(tmp[j])
-
-print("{0:.9f}".format(maxP))
+print('{0:.9f}'.format(maxP))

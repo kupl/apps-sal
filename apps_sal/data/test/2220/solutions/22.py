@@ -14,7 +14,7 @@ def mints():
     return map(int, minp().split())
 
 
-n, m, k = mints()
+(n, m, k) = mints()
 a = list(mints())
 a.sort()
 b = a[-1]

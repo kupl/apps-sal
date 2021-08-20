@@ -1,4 +1,5 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
         if len(A) == 1:
             return 1
@@ -6,7 +7,7 @@ class Solution:
         ret = 1
         max_ret = ret
         for i in range(len(A) - 1):
-            _diff = (A[i + 1] - A[i])
+            _diff = A[i + 1] - A[i]
             if diff * _diff < 0:
                 ret += 1
             else:

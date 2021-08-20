@@ -1,4 +1,4 @@
-n, m, q = [int(x) for x in input().split()]
+(n, m, q) = [int(x) for x in input().split()]
 data = []
 saveCount = []
 globalMax = 0
@@ -19,9 +19,8 @@ for i in range(n):
         globalMaxIndex = i
         globalMax = mx
     data.append(temp)
-
 for i in range(q):
-    y, x = [int(c) - 1 for c in input().split()]
+    (y, x) = [int(c) - 1 for c in input().split()]
     data[y][x] = 0 if data[y][x] else 1
     mx = 0
     curEyes = 0

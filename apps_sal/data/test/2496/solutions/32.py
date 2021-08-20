@@ -1,14 +1,14 @@
-max_num = 10**6 + 1
+max_num = 10 ** 6 + 1
 prime = [i for i in range(max_num)]
-r2_num = int(max_num**(1 / 2)) + 1
+r2_num = int(max_num ** (1 / 2)) + 1
 for i in range(2, r2_num):
     if prime[i] == i:
-        for j in range(i**2, max_num, i):
+        for j in range(i ** 2, max_num, i):
             if prime[j] == j:
                 prime[j] = i
 
 
-def gcd(a, b):  # a >= b
+def gcd(a, b):
     if a % b == 0:
         return b
     else:
@@ -17,9 +17,8 @@ def gcd(a, b):  # a >= b
 
 flg_pairwise = True
 flg_setwise = False
-
 n = int(input().rstrip())
-a_ls = list(map(int, input().rstrip().split(" ")))
+a_ls = list(map(int, input().rstrip().split(' ')))
 gcd_a = 0
 primes_a = []
 count_prime = [0 for i in range(max_num)]
@@ -40,11 +39,11 @@ for a in a_ls:
         a = a // p
     if flg_pairwise:
         prime[tmp_prime] = 0
-    if flg_setwise and not flg_pairwise:
+    if flg_setwise and (not flg_pairwise):
         break
 if flg_pairwise:
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif flg_setwise:
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')

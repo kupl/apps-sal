@@ -27,5 +27,5 @@ def f(n):
     return ret
 
 
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 print((f(r) - f(l - 1) + mod) % mod)

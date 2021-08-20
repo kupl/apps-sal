@@ -47,43 +47,30 @@ def srlinput():
 
 def NOYES(fl):
     if fl:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def YESNO(fl):
     if fl:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():
+
     def answer(res):
         print((res + 1) // 2)
     n = iinput()
-    #k = iinput()
-    #m = iinput()
-    #n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
-    #q = srlinput()
-    #q = linput()
     q = rlinput()
     w = [0] + [q[i] - q[i - 1] for i in range(1, n)]
     res = q[0] + sum([max(w[i], 0) for i in range(1, n)])
     answer(res)
     k = iinput()
     for o in range(k):
-        l, r, x = rinput()
+        (l, r, x) = rinput()
         if l == 1:
             res += x
         else:

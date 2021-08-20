@@ -1,7 +1,6 @@
 def increment_string(strng):
     import re
-    a = re.findall(r'\d+', strng)
-
+    a = re.findall('\\d+', strng)
     if len(a) > 0:
         a = a[-1]
         longitud = len(str(a))
@@ -12,7 +11,6 @@ def increment_string(strng):
             strng = strng.replace(str(a), str(number))
         else:
             strng = strng.replace(str(a), str(b))
-
     else:
-        strng = strng + "1"
+        strng = strng + '1'
     return strng

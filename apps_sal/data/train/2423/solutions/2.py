@@ -1,4 +1,5 @@
 class Solution:
+
     def minStartValue(self, nums: List[int]) -> int:
         pSum = 0
         minSum = 0

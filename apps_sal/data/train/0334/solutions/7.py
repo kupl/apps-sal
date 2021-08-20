@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         _min = 0
         stack = []
@@ -18,5 +19,4 @@ class Solution:
                         stack.append((s[i], t[1]))
                 else:
                     stack.append((s[i], i))
-
         return _min

@@ -7,8 +7,8 @@ def get_strings(city):
             letters.update({letter: value})
         else:
             letters.update({letter: 1})
-    result = ""
-    for letter in city.lower().replace(" ", ""):
+    result = ''
+    for letter in city.lower().replace(' ', ''):
         if letter not in result:
             result += letter + ':' + '*' * letters[letter] + ','
     return result[:-1]

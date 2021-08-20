@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def split(s):
             if len(s) == 0:
                 return []
@@ -15,7 +17,6 @@ class Solution:
                 else:
                     res.append(ans)
             return res
-
         options = split(s)
         m = 0
         for o in options:

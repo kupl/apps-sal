@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 if a * b < n:
     print(-1)
 elif a + b - 1 > n:
@@ -16,4 +16,4 @@ else:
         for k in range(c, c - i, -1):
             ans[j] = k
             j += 1
-    print(" ".join(map(str, ans)))
+    print(' '.join(map(str, ans)))

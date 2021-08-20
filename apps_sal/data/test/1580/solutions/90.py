@@ -10,7 +10,7 @@ class UnionFind:
         if parent_node == node:
             return node
         root_node = self.root(parent_node)
-        self.parents[node] = root_node  # reduction
+        self.parents[node] = root_node
         return root_node
 
     def union(self, one_node, other_node):
@@ -27,10 +27,10 @@ class UnionFind:
 
 
 def main():
-    N, M = list(map(int, input().split(' ')))
+    (N, M) = list(map(int, input().split(' ')))
     tree = UnionFind(N)
     for _ in range(M):
-        x, y, _ = list(map(int, input().split(' ')))
+        (x, y, _) = list(map(int, input().split(' ')))
         tree.union(x - 1, y - 1)
     roots = list(map(lambda n: tree.root(n), range(N)))
     print(len(set(roots)))

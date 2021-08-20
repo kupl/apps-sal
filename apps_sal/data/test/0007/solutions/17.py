@@ -1,7 +1,7 @@
 def mySqrt(n):
     l = 0
     r = n + 1
-    while (l < r - 1):
+    while l < r - 1:
         m = (l + r) // 2
         if m * m > n:
             r = m
@@ -10,8 +10,7 @@ def mySqrt(n):
     return l
 
 
-n, m = [int(i) for i in input().split()]
-
+(n, m) = [int(i) for i in input().split()]
 if m >= n:
     print(n)
 else:

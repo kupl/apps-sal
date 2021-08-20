@@ -1,5 +1,5 @@
 def fire_and_fury(tweet):
-    if not all(c in 'EFIRUY' for c in tweet):
+    if not all((c in 'EFIRUY' for c in tweet)):
         return 'Fake tweet.'
     s = [0]
     for i in range(0, len(tweet) - 3):

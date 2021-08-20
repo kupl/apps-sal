@@ -3,4 +3,4 @@ def factorial(n):
 
 
 def strong_num(number):
-    return ['Not Strong !!', 'STRONG!!!!'][sum(factorial(int(s)) for s in str(number)) == number]
+    return ['Not Strong !!', 'STRONG!!!!'][sum((factorial(int(s)) for s in str(number))) == number]

@@ -1,4 +1,5 @@
 class Solution:
+
     def largestSumOfAverages(self, A: List[int], K: int) -> float:
         dp = [[0 for j in range(K)] for i in A]
         for j in range(len(A)):

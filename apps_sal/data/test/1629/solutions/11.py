@@ -14,7 +14,7 @@ def mints():
     return list(map(int, minp().split()))
 
 
-n, x = mints()
+(n, x) = mints()
 x -= 1
 a = list(mints())
 m = min(a)

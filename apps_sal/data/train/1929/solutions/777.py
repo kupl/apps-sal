@@ -5,7 +5,6 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.root = dict()
-
         for word in words:
             root = self.root
             for c in word:
@@ -13,13 +12,11 @@ class StreamChecker:
                     root[c] = dict()
                 root = root[c]
             root['$'] = '.'
-
         self.searches = []
 
     def query(self, letter: str) -> bool:
         searches = self.searches
         searches.append(self.root)
-
         found = False
         updated_searches = []
         for search in searches:
@@ -30,5 +27,4 @@ class StreamChecker:
             if '$' in search:
                 found = True
         self.searches = updated_searches
-
         return found

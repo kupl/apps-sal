@@ -13,15 +13,13 @@ for _ in range(int(input())):
         max_s = max(max_s, _heros[i][1])
         pows.append(_heros[i][0])
         endu.append(_heros[i][1])
-
     pows.append(0)
-    endu.append(10**9)
+    endu.append(10 ** 9)
     i = 0
-    for ans in range(1, 10**9):
+    for ans in range(1, 10 ** 9):
         hero_i = 0
         power = pows[0]
         mons_power = 0
-
         if power < mons[i]:
             print(-1)
             break
@@ -29,7 +27,6 @@ for _ in range(int(input())):
             if endu[hero_i] < j:
                 hero_i += 1
                 power = pows[hero_i]
-
             mons_power = max(mons_power, mons[i])
             if power < mons_power:
                 break

@@ -1,4 +1,5 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
 input()
@@ -9,4 +10,4 @@ for i in range(len(a)):
     if a[i] == 0:
         a[i] = b[p]
         p += 1
-print('Yes'if any(a[i] <= a[i - 1] for i in range(1, len(a)))else'No')
+print('Yes' if any((a[i] <= a[i - 1] for i in range(1, len(a)))) else 'No')

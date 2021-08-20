@@ -1,5 +1,5 @@
 def LDTA(n):
-    x, s = n, set(str(n))
+    (x, s) = (n, set(str(n)))
     for _ in range(30):
         x *= n
         for d in str(x):

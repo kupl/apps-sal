@@ -1,11 +1,10 @@
-n, k = [int(item) for item in input().split()]
-MOD = 10**9 + 7
-MAX_N = 10**4
-
+(n, k) = [int(item) for item in input().split()]
+MOD = 10 ** 9 + 7
+MAX_N = 10 ** 4
 fac = [1] + [0] * MAX_N
 fac_inv = [1] + [0] * MAX_N
 for i in range(1, n + 1):
-    fac[i] = fac[i - 1] * (i) % MOD
+    fac[i] = fac[i - 1] * i % MOD
     fac_inv[i] = fac_inv[i - 1] * pow(i, MOD - 2, MOD) % MOD
 
 
@@ -25,5 +24,4 @@ for i in range(n + 1):
     val = pow(-1, i) * mod_nCr(n, i) * pow(base, n, MOD)
     ans += val
     ans %= MOD
-
 print(ans)

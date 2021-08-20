@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    ct2, ct3 = 0, 0
+    (ct2, ct3) = (0, 0)
     while n % 2 == 0:
         n /= 2
         ct2 += 1

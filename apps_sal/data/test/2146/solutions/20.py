@@ -1,7 +1,7 @@
 n = int(input())
 dp = [0, 0] + [n] * (n - 1) + [0]
 a = tuple(map(int, input().split()))
-i, q = 0, [1]
+(i, q) = (0, [1])
 while i < n:
     v = q[i]
     i += 1

@@ -1,5 +1,5 @@
 import math
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 lsx = list(map(int, input().split()))
 lsx.sort()
 gcd = abs(lsx[0] - X)

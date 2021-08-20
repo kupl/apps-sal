@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def isOK(day, m):
             cur = 0
             for ptr in range(len(bloomDay)):
@@ -13,10 +15,9 @@ class Solution:
                         if m == 0:
                             return True
             return False
-
         if m * k > len(bloomDay):
             return -1
-        left, right = min(bloomDay), max(bloomDay)
+        (left, right) = (min(bloomDay), max(bloomDay))
         while left < right:
             mid = (left + right) // 2
             if isOK(mid, m):

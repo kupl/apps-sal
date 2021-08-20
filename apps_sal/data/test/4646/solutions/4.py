@@ -1,10 +1,9 @@
 T = int(input())
-
 for t in range(T):
     N = int(input())
     A = [int(_) for _ in input().split()]
-    badE, badO = 0, 0
-    for i, el in enumerate(A):
+    (badE, badO) = (0, 0)
+    for (i, el) in enumerate(A):
         if el % 2 != i % 2:
             if i % 2:
                 badO += 1

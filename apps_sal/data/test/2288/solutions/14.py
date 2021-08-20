@@ -6,17 +6,15 @@ for _ in range(t):
     st = 0
     ac = [aa[i] for i in range(n) if bb[i] == 0]
     bc = [aa[i] for i in range(n) if bb[i] == 1]
-    if(len(ac) == 0 or len(bc) == 0):
-        if(len(ac) == 0):
-            if(bc != sorted(bc)):
-                print("No")
+    if len(ac) == 0 or len(bc) == 0:
+        if len(ac) == 0:
+            if bc != sorted(bc):
+                print('No')
             else:
-                print("Yes")
+                print('Yes')
+        elif sorted(ac) != ac:
+            print('No')
         else:
-            if(sorted(ac) != ac):
-                print("No")
-            else:
-                print("Yes")
-
+            print('Yes')
     else:
-        print("Yes")
+        print('Yes')

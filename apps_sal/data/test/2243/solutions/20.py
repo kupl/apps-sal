@@ -1,8 +1,8 @@
-n, size, tasks = map(int, input().split())
+(n, size, tasks) = map(int, input().split())
 friends = list(map(int, input().split()))
 online = list()
 for i in range(tasks):
-    type, id = map(int, input().split())
+    (type, id) = map(int, input().split())
     id -= 1
     if type == 1:
         adds = friends[id]

@@ -1,8 +1,6 @@
 import math
-
 n = int(input())
 str = input()
-
 res = ['' for i in range(n)]
 b = True
 for i in range(n):
@@ -11,13 +9,9 @@ for i in range(n):
         for j in range(i):
             res[j] = '0'
         b = False
-
         for j in range(i + 1, n):
             res[j] = str[j]
-
         break
-
-
 if b:
     print(n)
 else:

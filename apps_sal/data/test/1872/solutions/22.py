@@ -1,9 +1,8 @@
-# More es mi pastor nada me faltara
 import math
-ln = input().split(" ")
+ln = input().split(' ')
 n = int(ln[0])
 r = int(ln[1])
-tot_area = n / 2 * (math.sin(2 * math.pi / n)) * r * r
+tot_area = n / 2 * math.sin(2 * math.pi / n) * r * r
 if n < 10 ** 6:
     x = (1 - math.cos(2 * math.pi / n)) / (1 - math.cos(3 * math.pi / n))
 else:

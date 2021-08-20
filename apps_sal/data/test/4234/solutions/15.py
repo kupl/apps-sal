@@ -9,8 +9,6 @@ def log(*args, **kwargs):
 
 n = int(input())
 s = input()
-
-
 result = ''
 i = 0
 while i < n - 1:
@@ -23,6 +21,5 @@ while i < n - 1:
         j += 1
     if j == n:
         break
-
 print(n - len(result))
 print(result)

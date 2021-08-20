@@ -5,7 +5,6 @@ counter = 0
 for item in s:
     if item == prev:
         counter += 1
-
     else:
         break
 s.reverse()
@@ -14,7 +13,6 @@ prev1 = s[0]
 for item in s:
     if item == prev1:
         counter1 += 1
-
     else:
         break
 if prev == prev1:

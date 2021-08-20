@@ -6,16 +6,16 @@ class BisectBase:
         self._rc = self.gt_item if asc else self.lt_item
 
     def lt_item(self, idx, item):
-        raise NotImplementedError("lt_item should be implemented")
+        raise NotImplementedError('lt_item should be implemented')
 
     def gt_item(self, idx, item):
-        raise NotImplementedError("gt_item should be implemented")
+        raise NotImplementedError('gt_item should be implemented')
 
     def le_item(self, idx, item):
-        raise NotImplementedError("le_item should be implemented")
+        raise NotImplementedError('le_item should be implemented')
 
     def ge_item(self, idx, item):
-        raise NotImplementedError("ge_item should be implemented")
+        raise NotImplementedError('ge_item should be implemented')
 
     def bisect_left(self, item):
         return self._bisect_left(item, 0, self._n)
@@ -55,4 +55,4 @@ class Bisect(BisectBase):
 n = int(input())
 b = Bisect(n + 1, True)
 m = b.bisect_right(2 * (n + 1)) - 1
-print((n + 1 - m))
+print(n + 1 - m)

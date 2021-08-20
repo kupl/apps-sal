@@ -1,7 +1,6 @@
 import sys
 from math import gcd
 from itertools import accumulate
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -11,11 +10,9 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     vec1 = list(accumulate(A, func=gcd))
     vec2 = list(accumulate(reversed(A), func=gcd))
-
     ans = 0
     for i in range(N):
         if i == 0:
@@ -24,10 +21,8 @@ def main():
             res = vec1[-2]
         else:
             res = gcd(vec1[i - 1], vec2[N - i - 2])
-
         if ans < res:
             ans = res
-
     print(ans)
     return
 

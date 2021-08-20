@@ -1,8 +1,8 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 s = input()
 ans = 0
 if p == 2 or p == 5:
-    for i, c in enumerate(s, 1):
+    for (i, c) in enumerate(s, 1):
         if int(c) % p == 0:
             ans += i
 else:
@@ -16,7 +16,6 @@ else:
         cnt[x % p] += 1
         d *= 10
         d %= p
-    # print(cnt)
     for v in cnt:
         ans += v * (v - 1) // 2
 print(ans)

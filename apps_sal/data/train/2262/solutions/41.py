@@ -1,8 +1,6 @@
 import sys
 from collections import defaultdict
 
-# sys.stdin = open('c1.in')
-
 
 def read_int_list():
     return list(map(int, input().split()))
@@ -31,22 +29,21 @@ def pos(X, Y):
         return r + c + r + c - Y
 
 
-r, c, n, = read_int_list()
+(r, c, n) = read_int_list()
 x = [0, 0]
 y = [0, 0]
 a = []
 for i in range(n):
-    x[0], y[0], x[1], y[1] = read_int_list()
+    (x[0], y[0], x[1], y[1]) = read_int_list()
     if (x[0] in [0, r] or y[0] in [0, c]) and (x[1] in [0, r] or y[1] in [0, c]):
         for k in range(2):
             a.append((pos(x[k], y[k]), i))
 m = len(a) // 2
 a.sort()
-
 res = 'YES'
 started = set()
 s = []
-for p, i in a:
+for (p, i) in a:
     if i not in started:
         started.add(i)
         s.append(i)
@@ -55,5 +52,4 @@ for p, i in a:
             res = 'NO'
             break
         s.pop()
-
 print(res)

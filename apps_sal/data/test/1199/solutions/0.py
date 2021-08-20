@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, m = readln()
+(n, m) = readln()
 cnt = [0] * (m + 1)
 for c in readln():
     cnt[c] += 1

@@ -1,11 +1,9 @@
-# 分岐は後で処理すれば良い
-# それぞれ0,nに近づくのが最適
 from heapq import heappush, heappop
-inf = 10**10
+inf = 10 ** 10
 n = int(input())
 l = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a].append(b)
     l[b].append(a)
 
@@ -15,7 +13,7 @@ def dijkstra(s):
     dist = [inf] * (n + 1)
     dist[s] = 0
     while q:
-        c, v = heappop(q)
+        (c, v) = heappop(q)
         if dist[v] < c:
             continue
         for i in l[v]:
@@ -37,6 +35,6 @@ for i in range(1, n + 1):
     else:
         countp += 1
 if countp > counts:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

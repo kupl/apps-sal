@@ -1,7 +1,5 @@
 import re
-
-
-_regex = "[^\(|\)]"
+_regex = '[^\\(|\\)]'
 
 
 def valid_parentheses(string):

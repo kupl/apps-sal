@@ -5,10 +5,10 @@ def main():
     a = stdin.readline().strip()
     x = a.split('+')
     y = x[1].split('=')
-    d, b, c = x[0], y[0], y[1]
-    if (len(d) + len(b) == len(c)):
+    (d, b, c) = (x[0], y[0], y[1])
+    if len(d) + len(b) == len(c):
         print(a)
-    elif (len(d) + 1 + len(b) == len(c) - 1):
+    elif len(d) + 1 + len(b) == len(c) - 1:
         d = d + '|'
         f = []
         for i in range(len(c)):
@@ -17,9 +17,9 @@ def main():
         c = ''.join(f)
         e = d + '+' + b + '=' + c
         print(e)
-    elif (len(d) - 1 + len(b) == len(c) + 1):
+    elif len(d) - 1 + len(b) == len(c) + 1:
         c = c + '|'
-        if(len(d) > 1):
+        if len(d) > 1:
             f = []
             for i in range(len(d)):
                 f.append(d[i])

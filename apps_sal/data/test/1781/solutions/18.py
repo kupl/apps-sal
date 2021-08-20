@@ -1,4 +1,4 @@
-n, z = map(int, input().split())
+(n, z) = map(int, input().split())
 s = 0
 a = []
 x = []

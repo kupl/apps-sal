@@ -1,6 +1,5 @@
-n, m, s = [int(x) for x in input().split()]
+(n, m, s) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-
 low = 0
 high = 0
 for i in range(m):

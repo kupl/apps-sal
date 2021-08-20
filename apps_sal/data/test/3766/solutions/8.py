@@ -16,9 +16,8 @@ def checker(hint, cards):
             elif i[1] == j[1]:
                 if i[0] not in hint and j[0] not in hint:
                     return False
-            else:
-                if i[0] not in hint and i[1] not in hint and j[0] not in hint and j[1] not in hint:
-                    return False
+            elif i[0] not in hint and i[1] not in hint and (j[0] not in hint) and (j[1] not in hint):
+                return False
     return True
 
 

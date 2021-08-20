@@ -1,5 +1,4 @@
 import sys
-
 input_ = sys.stdin.readline
 
 
@@ -14,26 +13,19 @@ def is_ordered(arr):
 def main():
     n = int(input_())
     changed = False
-
     befores = []
     afters = []
-
     for x in range(n):
-        before, after = list(map(int, input_().split()))
-
+        (before, after) = list(map(int, input_().split()))
         if before != after:
             changed = True
-
         befores.append(before)
         afters.append(after)
-
     if changed:
-        return "rated"
-
+        return 'rated'
     if is_ordered(afters):
-        return "maybe"
-
-    return "unrated"
+        return 'maybe'
+    return 'unrated'
 
 
 def __starting_point():

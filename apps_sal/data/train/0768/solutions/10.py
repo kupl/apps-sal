@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(1000000)
 
 
@@ -8,16 +7,16 @@ def dfs(root, graph):
     try:
         for i in graph[root]:
             retrieval.append(dfs(i, graph))
-        if(retrieval != []):
+        if retrieval != []:
             mx = retrieval[0][0] + retrieval[0][1]
             totalNodesInSubtree = 0
             for i in retrieval:
                 totalNodesInSubtree += i[1]
-                if(i[0] + i[1] > mx):
+                if i[0] + i[1] > mx:
                     mx = i[0] + i[1]
             return [mx, totalNodesInSubtree + 1]
         else:
-            return[0, 1]
+            return [0, 1]
     except:
         return [0, 1]
 
@@ -27,7 +26,7 @@ for _ in range(int(input())):
     l = list(map(int, input().split()))
     graph = {}
     for i in range(n - 1):
-        if(graph.get(l[i])):
+        if graph.get(l[i]):
             graph[l[i]].add(i + 2)
         else:
             graph[l[i]] = set([i + 2])

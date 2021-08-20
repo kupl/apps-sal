@@ -6,13 +6,13 @@ class Solution:
 
     @lru_cache(None)
     def helper(self, start, finish, fuel):
-        if(fuel < abs(self.locations[start] - self.locations[finish])):
+        if fuel < abs(self.locations[start] - self.locations[finish]):
             return 0
         res = 0
-        for i, v in enumerate(self.locations):
-            if(i != start):
+        for (i, v) in enumerate(self.locations):
+            if i != start:
                 res += self.helper(i, finish, fuel - abs(v - self.locations[start]))
-        if(start == finish):
+        if start == finish:
             res += 1
         return res
 

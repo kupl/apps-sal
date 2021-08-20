@@ -1,7 +1,5 @@
 import math
-# import sys
-# input = sys.stdin.readline
-n, m = [int(i) for i in input().split(' ')]
+(n, m) = [int(i) for i in input().split(' ')]
 d = [[] for i in range(n)]
 done = [False for i in range(n)]
 
@@ -22,10 +20,9 @@ def dfs(visited, i, d):
 
 edgelist = []
 for i in range(m):
-    a, b = [int(i) for i in input().split(' ')]
+    (a, b) = [int(i) for i in input().split(' ')]
     edgelist.append([a, b])
     d[a - 1].append(b - 1)
-
 ans = 0
 visited = [False for i in range(n)]
 for i in range(n):
@@ -41,4 +38,4 @@ if ans:
             print(1, end=' ')
 else:
     print(1)
-    print(' '.join('1' for i in range(m)))
+    print(' '.join(('1' for i in range(m))))

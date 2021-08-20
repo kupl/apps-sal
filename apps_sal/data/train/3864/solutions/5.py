@@ -11,8 +11,8 @@ def int32_to_ip(int32):
     However, we need to shift this value *back* to get a number within (0,255)
     inclusive, as required, so shift right by the same amount.
     """
-    first = (int32 & (255 << 24)) >> 24
-    second = (int32 & (255 << 16)) >> 16
-    third = (int32 & (255 << 8)) >> 8
+    first = (int32 & 255 << 24) >> 24
+    second = (int32 & 255 << 16) >> 16
+    third = (int32 & 255 << 8) >> 8
     fourth = int32 & 255
-    return f"{first}.{second}.{third}.{fourth}"
+    return f'{first}.{second}.{third}.{fourth}'

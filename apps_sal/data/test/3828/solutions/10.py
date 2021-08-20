@@ -1,4 +1,5 @@
-def readInts(): return list(map(int, input().split()))
+def readInts():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -8,7 +9,6 @@ for i in range(n):
     p[a[i] - 1] = i
 inc = 1
 ret = n - 1
-# print(p)
 for i in range(1, n):
     if p[i] > p[i - 1]:
         inc += 1

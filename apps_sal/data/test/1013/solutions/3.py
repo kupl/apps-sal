@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
 g = []
 for i in range(n):
@@ -10,7 +10,7 @@ for i in range(n):
 l = len(g)
 two = False
 for i in range(l):
-    if g[i][0] == 0 or g[i][1] == 0 or g[i][0] == (n - 1) or g[i][1] == (m - 1):
+    if g[i][0] == 0 or g[i][1] == 0 or g[i][0] == n - 1 or (g[i][1] == m - 1):
         two = True
         break
 if two:

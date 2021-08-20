@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def main():
     from collections import deque
 
@@ -16,8 +13,8 @@ def main():
         prime_factorization_lst : lst
             [素因数]の形で素因数が列挙された素因数分解結果
         """
-        fct = []  # prime factor
-        b = 2     # base factor
+        fct = []
+        b = 2
         while b * b <= n:
             while n % b == 0:
                 n //= b
@@ -26,9 +23,7 @@ def main():
         if n > 1:
             fct.append(n)
         return fct
-
     N = int(input())
-
     q = deque(prime_factorization_list(N))
     memo = []
     while q:
@@ -43,7 +38,7 @@ def main():
                 break
         if res not in memo:
             memo.append(res)
-    print((len(memo)))
+    print(len(memo))
 
 
 def __starting_point():

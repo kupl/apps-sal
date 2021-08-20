@@ -1,7 +1,8 @@
 numbers = 'zero one two three four five six seven eight nine'.split()
 
 
-def f(n): return ''.join(numbers[int(i)] for i in str(n))
+def f(n):
+    return ''.join((numbers[int(i)] for i in str(n)))
 
 
 def numbers_of_letters(n):

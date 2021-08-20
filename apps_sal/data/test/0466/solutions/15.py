@@ -1,7 +1,6 @@
-c, d = [int(x) for x in input().strip().split()]
-n, m = [int(x) for x in input().strip().split()]
+(c, d) = [int(x) for x in input().strip().split()]
+(n, m) = [int(x) for x in input().strip().split()]
 k = int(input().strip())
-
 t = n * m - k
 if t <= 0:
     print(0)

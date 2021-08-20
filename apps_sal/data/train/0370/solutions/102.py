@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A):
         n = len(A)
         primes = collections.defaultdict(list)
@@ -10,7 +11,7 @@ class Solution:
             return parents[x]
 
         def union(x, y):
-            xr, yr = find(x), find(y)
+            (xr, yr) = (find(x), find(y))
             if xr > yr:
                 parents[xr] = yr
             else:
@@ -21,7 +22,7 @@ class Solution:
                 if N % i == 0:
                     return {i} | primeSet(N // i)
             return {N}
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             for q in primeSet(num):
                 primes[q] += [i]
         for group in primes.values():

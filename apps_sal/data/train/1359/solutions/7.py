@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -26,5 +25,4 @@ for _ in range(t):
                 odd_res += 2
             else:
                 odd_res += 1
-
     print(min(even_res, odd_res))

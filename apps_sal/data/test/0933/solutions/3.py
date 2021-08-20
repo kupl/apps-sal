@@ -3,14 +3,14 @@ C = [0] * len(s)
 ind = -1
 x = True
 for i in range(len(s)):
-    if(x):
+    if x:
         C[i] = 1
         y = True
         x = False
         ind += 1
         continue
-    if(y):
-        if(s[i] == s[ind]):
+    if y:
+        if s[i] == s[ind]:
             C[i] = 1
             z = True
             y = False
@@ -20,8 +20,8 @@ for i in range(len(s)):
             C[i] = 1
             ind += 1
             continue
-    if(z):
-        if(s[i] == s[ind]):
+    if z:
+        if s[i] == s[ind]:
             C[i] = 0
             z = True
             continue
@@ -31,8 +31,8 @@ for i in range(len(s)):
             a = True
             ind2 = i
             continue
-    if(a):
-        if(s[i] == s[ind2]):
+    if a:
+        if s[i] == s[ind2]:
             C[i] = 0
             continue
         else:
@@ -41,5 +41,5 @@ for i in range(len(s)):
             a = False
             y = True
 for i in range(len(s)):
-    if(C[i]):
-        print(s[i], end="")
+    if C[i]:
+        print(s[i], end='')

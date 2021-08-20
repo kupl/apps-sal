@@ -1,15 +1,12 @@
 import sys
 3.7
-
-
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-
 cur = 0
 
 
 def is_submask(n, mask):
-    return (n & mask) == mask
+    return n & mask == mask
 
 
 def f(mask):

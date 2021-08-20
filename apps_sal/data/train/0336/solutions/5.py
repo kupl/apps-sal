@@ -1,6 +1,6 @@
 class Solution:
-    def minSteps(self, s: str, t: str) -> int:
 
+    def minSteps(self, s: str, t: str) -> int:
         arr1 = defaultdict()
         arr2 = defaultdict()
         count = 0

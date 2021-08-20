@@ -1,6 +1,7 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
-        if (len(A) <= 1):
+        if len(A) <= 1:
             return 0
         elif len(A[1]) == 1:
             return 0

@@ -1,26 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
 from itertools import accumulate
-
-
-# In[19]:
-
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 P = list(map(int, input().split()))
 C = list(map(int, input().split()))
 P = [p - 1 for p in P]
-
-
-# In[20]:
-
-
 check = [False] * N
-ans = -float("inf")
+ans = -float('inf')
 for i in range(N):
     if not check[i]:
         score = []
@@ -38,12 +22,8 @@ for i in range(N):
             ac = list(accumulate(score))
             if sum(score) <= 0:
                 ans = max(ans, max(ac[:min(K, length)]))
+            elif K % length == 0:
+                ans = max(ans, ac[-1] * (K // length - 1) + max(ac))
             else:
-                if K % length == 0:
-                    ans = max(ans, ac[-1] * (K // length - 1) + max(ac))
-                else:
-                    ans = max(ans, ac[-1] * (K // length) + max(ac[:K % length]))
+                ans = max(ans, ac[-1] * (K // length) + max(ac[:K % length]))
 print(ans)
-
-
-# In[ ]:

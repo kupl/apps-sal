@@ -1,9 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 rate = [0] * 8
 s = 0
-
 for i in a:
     if i < 400:
         rate[0] = 1
@@ -23,12 +21,8 @@ for i in a:
         rate[7] = 1
     elif 3200 <= i:
         s += 1
-
-
 ans1 = 8 - rate.count(0)
 ans2 = ans1 + s
 if ans1 == 0 and s != 0:
     ans1 = 1
-
-
 print(ans1, ans2)

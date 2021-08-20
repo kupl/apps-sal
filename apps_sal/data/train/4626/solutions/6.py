@@ -17,4 +17,3 @@ def decode(s):
         else:
             m += im
     return m
-    # your code here

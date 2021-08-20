@@ -1,8 +1,9 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def find(A, target):
-            # print(A, target)
-            l, r = 0, len(A) - 1
+            (l, r) = (0, len(A) - 1)
             ans = 0
             while l < r:
                 s = A[l] * A[r]
@@ -21,13 +22,11 @@ class Solution:
                         ans += (r - l) * (r - l - 1) // 2
                     else:
                         ans += numL * numR
-                    # print(ans)
                 elif s < target:
                     l += 1
                 else:
                     r -= 1
             return ans
-
         ans = 0
         nums1.sort()
         nums2.sort()

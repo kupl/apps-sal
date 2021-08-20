@@ -1,8 +1,6 @@
 import heapq
 import sys
 input = sys.stdin.readline
-
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -15,16 +13,11 @@ for _ in range(t):
     ruiseki_cnt = [0] * (n + 1)
     for i in range(n):
         ruiseki_cnt[i + 1] = ruiseki_cnt[i] + cnt[i]
-    # print(cnt)
-    # print(ruiseki_cnt)
     need = [0] * n
     for i in range(1, n):
         if cnt[i] != 0 and i > ruiseki_cnt[i]:
             need[i] = min(i - ruiseki_cnt[i], i)
-    # print(need)
     info = sorted(info, reverse=True)
-    # print(info)
-
     num = n - 1
     pos = 0
     q = []

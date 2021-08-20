@@ -1,4 +1,4 @@
-n, k = map(int, input().split(' '))
+(n, k) = map(int, input().split(' '))
 s1 = input()
 m = list(set(s1))
 m = sorted(m)

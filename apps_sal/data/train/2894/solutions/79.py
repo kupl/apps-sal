@@ -1,5 +1,4 @@
 def triple_trouble(one, two, three):
-
     counter = 0
     res = ''
     for i in one:

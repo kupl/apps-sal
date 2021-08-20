@@ -1,5 +1,4 @@
-A, B, X = list(map(int, input().split()))
-# A, B, X = 10, 7, 100
+(A, B, X) = list(map(int, input().split()))
 
 
 def digit(x):
@@ -14,7 +13,6 @@ def calc_value(x):
 def binary_search(num_max):
     if num_max <= 0:
         return 0
-
     left = 0
     right = num_max
     while left <= right:
@@ -26,17 +24,13 @@ def binary_search(num_max):
             left = mid + 1
         else:
             right = mid - 1
-
     return left - 1
 
 
-# data = list(range(0, X//A+1))
-store = 10**9
-
+store = 10 ** 9
 if X >= calc_value(store):
     ans = store
 else:
     ans = binary_search(X // A)
-    ans = min(10**9, ans)
-
+    ans = min(10 ** 9, ans)
 print(ans)

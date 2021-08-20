@@ -1,5 +1,5 @@
 def main():
-    d, k, a, b, t = list(map(int, input().split()))
+    (d, k, a, b, t) = list(map(int, input().split()))
     res = [d * b]
     if d // k:
         x = d // k * (a * k + t)

@@ -10,9 +10,9 @@ for i in range(2, int(math.sqrt(N)) + 1):
         data[i] += 1
 if N != 1:
     data[N] += 1
-cumsum = list(accumulate(range(1, 10**6 * 2)))
+cumsum = list(accumulate(range(1, 10 ** 6 * 2)))
 for value in data.values():
-    for i in range(10**6 * 2):
+    for i in range(10 ** 6 * 2):
         if value < cumsum[i]:
             result += i
             break

@@ -11,7 +11,7 @@ def make_divisors(n: int) -> list:
 
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     divs = make_divisors(n)
     ans = 10 ** 18
     for div in divs:

@@ -17,23 +17,21 @@ def solve(N, A, M, H):
     H.sort(key=lambda h: (h[1], -h[0]))
     spow = [0] * (N + 1)
     s0 = 0
-    for p, s in H:
+    for (p, s) in H:
         if s0 == s:
             continue
         spow[s] = p
         s0 = s
-
     maxp = 0
     for d in range(N, -1, -1):
         maxp = max(maxp, spow[d])
         spow[d] = maxp
-
     ans = 0
     maxa = A[0]
     if A[0] > spow[1]:
         return -1
     start = 0
-    for i, a in enumerate(A[1:]):
+    for (i, a) in enumerate(A[1:]):
         if a > spow[1]:
             return -1
         i += 1
@@ -45,9 +43,6 @@ def solve(N, A, M, H):
             start = i
     return ans + 1
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

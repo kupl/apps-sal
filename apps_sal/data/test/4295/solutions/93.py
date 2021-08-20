@@ -1,10 +1,6 @@
-n, k = list(map(int, input().split()))
-
-
+(n, k) = list(map(int, input().split()))
 x = n % k
-
 y = abs(x - k)
-
 if x >= y:
     print(y)
 else:

@@ -22,9 +22,9 @@ for i in range(0, n):
     s = input()
     slen = len(s)
     cvariants = 0
-    variants = ""
+    variants = ''
     for a in range(1, slen + 1):
-        if (test_all_cols(s, a)):
+        if test_all_cols(s, a):
             cvariants += 1
-            variants += str(a) + "x" + str(slen // a) + " "
+            variants += str(a) + 'x' + str(slen // a) + ' '
     print(str(cvariants), variants)

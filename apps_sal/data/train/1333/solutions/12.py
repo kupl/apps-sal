@@ -8,9 +8,8 @@ for afskafshjd in range(int(input())):
             flag = 1
             break
         x = bin(b[i] & b[i - 1])
-
         count = count + x.count('1')
     if flag == 1:
         print('0')
         continue
-    print((pow(2, count, 10**9 + 7)))  # cook your dish here
+    print(pow(2, count, 10 ** 9 + 7))

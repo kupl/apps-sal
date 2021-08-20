@@ -1,11 +1,11 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 A = list(map(int, input().split()))
 D = {}
 for i in range(N):
     D[i + 1] = A[i]
 C = []
-for k, v in D.items():
+for (k, v) in D.items():
     [C.append(k) for _ in range(v)]
 h = 0
 while True:

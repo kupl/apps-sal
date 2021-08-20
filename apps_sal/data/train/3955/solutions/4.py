@@ -1,7 +1,7 @@
 def bracket_pairs(string):
     result = {}
     stack = []
-    for i, c in enumerate(string):
+    for (i, c) in enumerate(string):
         if c == ')':
             if not stack:
                 return False

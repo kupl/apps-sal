@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 NewX = []
 for i in range(N - 1):

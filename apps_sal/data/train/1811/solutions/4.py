@@ -11,7 +11,7 @@ class StockSpanner:
             return self.spans[0]
         idx = len(self.stocks) - 2
         cur_span = self.spans[-1]
-        while(idx >= 0):
+        while idx >= 0:
             if price < self.stocks[idx]:
                 break
             else:
@@ -19,8 +19,3 @@ class StockSpanner:
                 idx -= self.spans[idx]
         self.spans[-1] = cur_span
         return self.spans[-1]
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

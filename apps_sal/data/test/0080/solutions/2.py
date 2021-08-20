@@ -13,7 +13,7 @@ def lcm(x, y):
     return x * y // gcd(x, y)
 
 
-tl, tr, tx, ty = input().split()
+(tl, tr, tx, ty) = input().split()
 l = int(tl)
 r = int(tr)
 x = int(tx)
@@ -21,13 +21,12 @@ y = int(ty)
 t = []
 cnt = 0
 for i in range(1, int(math.sqrt(y)) + 1):
-    if y % i == 0 and i >= l and i <= r:
+    if y % i == 0 and i >= l and (i <= r):
         t.append(i)
         cnt += 1
-    if y % i == 0 and i * i != y and y // i >= l and y // i <= r:
+    if y % i == 0 and i * i != y and (y // i >= l) and (y // i <= r):
         t.append(y // i)
         cnt += 1
-#for i in t:print(i)
 ans = 0
 for i in range(cnt):
     for j in range(cnt):

@@ -1,7 +1,7 @@
 t = int(input())
 ans = []
 for _ in range(t):
-    n, k, d = [int(x) for x in input().split()]
+    (n, k, d) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     var = []
     for g in range(n - d + 1):

@@ -16,5 +16,5 @@ for i in range(len(l)):
         t = s
         x = a
         y = b
-print(t, end=":")
-print(x, y, sep="-")
+print(t, end=':')
+print(x, y, sep='-')

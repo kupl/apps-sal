@@ -4,11 +4,11 @@ used = []
 ans = []
 for i in range(1, n + 1):
     d = []
-    start, end = i, arr[i]
+    (start, end) = (i, arr[i])
     if i not in used:
         d.append(i)
         used.append(i)
-        while(True):
+        while True:
             d.append(end)
             if end == start:
                 break

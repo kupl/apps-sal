@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting_customers = 0
         wheel_rotations = 0
@@ -16,21 +17,16 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit
                 minimum_wheel_rotations = wheel_rotations
-        fullrevenue_rotations = (waiting_customers // 4)
+        fullrevenue_rotations = waiting_customers // 4
         wheel_rotations += fullrevenue_rotations
-        # fullprofit = fullprofit_rotations * 4 * boardingCost - fullprofit_rotations * runningCost
         fullrevenue = fullrevenue_rotations * (4 * boardingCost - runningCost)
-
         profit += fullrevenue
-
         if profit > max_profit:
             max_profit = profit
             minimum_wheel_rotations = wheel_rotations
-
         remaining_customers = waiting_customers % 4
         wheel_rotations += 1
         remaining_revenue = remaining_customers * boardingCost - runningCost
-
         profit += remaining_revenue
         if profit > max_profit:
             max_profit = profit

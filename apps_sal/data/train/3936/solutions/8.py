@@ -3,8 +3,7 @@ def zozonacci(pattern, length):
         return []
     if pattern == []:
         return []
-
-    result = [0, 0, 0, 1] if pattern[0] != "pad" else [0, 1, 0, 0]
+    result = [0, 0, 0, 1] if pattern[0] != 'pad' else [0, 1, 0, 0]
     result2 = []
     if length < 4:
         for i in range(length):
@@ -13,15 +12,15 @@ def zozonacci(pattern, length):
     j = 0
     for i in range(4, length):
         seq = pattern[j]
-        if seq == "fib":
+        if seq == 'fib':
             result.append(result[i - 1] + result[i - 2])
-        elif seq == "jac":
+        elif seq == 'jac':
             result.append(result[i - 1] + 2 * result[i - 2])
-        elif seq == "pad":
+        elif seq == 'pad':
             result.append(result[i - 2] + result[i - 3])
-        elif seq == "pel":
+        elif seq == 'pel':
             result.append(2 * result[i - 1] + result[i - 2])
-        elif seq == "tet":
+        elif seq == 'tet':
             result.append(result[i - 1] + result[i - 2] + result[i - 3] + result[i - 4])
         else:
             result.append(result[i - 1] + result[i - 2] + result[i - 3])

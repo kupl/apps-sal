@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         ok = [-1 for i in range(len(points))]
 
@@ -8,7 +9,7 @@ class Solution:
             ok[x1] = x2
 
         def find(x):
-            if(ok[x] == -1):
+            if ok[x] == -1:
                 return x
             else:
                 ok[x] = find(ok[x])
@@ -22,7 +23,7 @@ class Solution:
         for i in d:
             x = find(i[1])
             y = find(i[2])
-            if(x != y):
+            if x != y:
                 union(i[1], i[2])
                 ans += i[0]
         return ans

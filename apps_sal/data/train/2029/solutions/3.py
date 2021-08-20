@@ -1,9 +1,8 @@
 N = int(input())
-
 if N % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     X = [-1] * (2 * N)
     a = 1
     b = 2 * N
@@ -19,5 +18,4 @@ else:
         i += 1
         a += 2
         b -= 2
-
     print(*X)

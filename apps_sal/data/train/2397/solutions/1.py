@@ -8,12 +8,12 @@ def count_smaller(value, banlist):
 
 cases = int(input())
 for case in range(cases):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     banned = []
     for i in range(n):
         banned.append(int(input(), 2))
     desindex = ((1 << m) - n - 1) // 2
     candid = desindex
-    while (count_smaller(candid, banned) < desindex) or (candid in banned):
+    while count_smaller(candid, banned) < desindex or candid in banned:
         candid += 1
     print(bin(candid)[2:].zfill(m))

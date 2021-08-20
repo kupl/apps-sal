@@ -1,6 +1,6 @@
 def main():
     N = int(input())
-    ans = (N // 11) * 2
+    ans = N // 11 * 2
     n = N % 11
     if n > 6:
         ans += 2

@@ -1,6 +1,5 @@
 n = int(input())
 arr = [input() for i in range(n)]
-
 for i in range(n - 1, 0, -1):
     new = arr[i]
     old = arr[i - 1]
@@ -15,6 +14,4 @@ for i in range(n - 1, 0, -1):
     else:
         if le2 > le1:
             arr[i - 1] = arr[i]
-
-
 print('\n'.join(arr))

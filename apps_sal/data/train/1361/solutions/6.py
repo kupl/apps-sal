@@ -1,5 +1,4 @@
-# Vision and the MindStone
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 data = list(map(int, input().split()))
 output = []
 output.append(data)
@@ -12,4 +11,4 @@ for i in range(1, K + 1):
     for j in range(1, N):
         output[i][j] = output[i - 1][j] + output[i][j - 1]
 for i in output[K]:
-    print(i % (10**9 + 7), end=" ")
+    print(i % (10 ** 9 + 7), end=' ')

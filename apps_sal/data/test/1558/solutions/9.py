@@ -24,9 +24,7 @@ while i < n:
     lst.append(Exam(a, b))
     s += a
     i += 1
-
 lst.sort(key=lambda exam: exam.b)
-
 ans = 0
 avg *= n
 for exam in lst:
@@ -34,5 +32,4 @@ for exam in lst:
         break
     ans += min(r - exam.a, avg - s) * exam.b
     s += min(r - exam.a, avg - s)
-
 print(ans)

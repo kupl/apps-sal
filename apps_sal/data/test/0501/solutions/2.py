@@ -6,7 +6,7 @@ def helper(n):
         R += 1
     bottom = R >> 1
     top = R - bottom
-    flag = (top > bottom)
+    flag = top > bottom
     tcnt = 0
     tmp = 1
     while top:
@@ -24,12 +24,12 @@ def helper(n):
         bcnt += n
     else:
         tcnt += n
-    ans = (pow(tcnt, 2, 1000000007) + (bcnt * (bcnt + 1))) % 1000000007
+    ans = (pow(tcnt, 2, 1000000007) + bcnt * (bcnt + 1)) % 1000000007
     return ans
 
 
 def main():
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ans = helper(r)
     if l != 1:
         ans -= helper(l - 1)

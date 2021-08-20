@@ -3,7 +3,7 @@ N = int(input())
 A = list(map(int, input().split()))
 a = collections.Counter(A)
 b = []
-for i, j in a.items():
+for (i, j) in a.items():
     if j >= 2:
         b.append([i, j])
 b.sort(reverse=True)

@@ -1,4 +1,3 @@
-
 t = int(input())
 while t:
     t -= 1
@@ -16,4 +15,4 @@ while t:
     temp = 0
     for i in range(n):
         temp = max(temp, arr[i])
-    print(sumi - (temp * temp))
+    print(sumi - temp * temp)

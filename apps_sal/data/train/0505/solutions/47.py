@@ -1,4 +1,5 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         result = []
         capacity = s.count(')')
@@ -14,6 +15,6 @@ class Solution:
                 if not opened:
                     continue
                 opened -= 1
-            print((result.append(char)))
+            print(result.append(char))
             print('done')
         return ''.join(result)

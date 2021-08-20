@@ -2,6 +2,7 @@ from collections import Counter, defaultdict
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         n = len(nums)
         if n % k != 0:

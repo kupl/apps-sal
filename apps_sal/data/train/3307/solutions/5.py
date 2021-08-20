@@ -2,8 +2,8 @@ def fat_fingers(string):
     if string is None:
         return None
     tokens = string.replace('a', 'A').split(sep='A')
-    for i, token in enumerate(tokens):
+    for (i, token) in enumerate(tokens):
         if i % 2 == 0:
-            continue  # CapsLock presses cancel each other out
+            continue
         tokens[i] = token.swapcase()
     return ''.join(tokens)

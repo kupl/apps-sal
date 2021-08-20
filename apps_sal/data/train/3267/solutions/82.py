@@ -1,7 +1,7 @@
 def well(x):
     k = 0
     for i in x:
-        if i == "good":
+        if i == 'good':
             k += 1
     if k == 0:
         return 'Fail!'

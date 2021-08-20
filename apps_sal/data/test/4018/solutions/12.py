@@ -1,11 +1,10 @@
-n, K = list(map(int, input().split()))
+(n, K) = list(map(int, input().split()))
 s = input()
 max_n = 104
 dp = [[0] * max_n for i in range(max_n)]
-s = "$" + s
+s = '$' + s
 for i in range(n + 1):
     dp[0][i] = 1
-
 for ln in range(1, n + 1):
     for j in range(1, n + 1):
         dp[ln][j] = dp[ln][j - 1] + dp[ln - 1][j - 1]
@@ -16,14 +15,14 @@ for ln in range(1, n + 1):
 ans = 0
 for ln in range(n, -1, -1):
     cnt = dp[ln][n]
-    if (cnt < K):
-        ans += (cnt * (n - ln))
+    if cnt < K:
+        ans += cnt * (n - ln)
         K -= cnt
     else:
-        ans += (K * (n - ln))
+        ans += K * (n - ln)
         K = 0
         break
-if (K != 0):
+if K != 0:
     print(-1)
 else:
     print(ans)

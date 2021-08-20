@@ -1,10 +1,7 @@
 def __starting_point():
-
     n = int(input())
     locs = [int(x) for x in input().split()]
-
     for i in range(n):
-
         if i == 0:
             minres = locs[i + 1] - locs[i]
             maxres = locs[-1] - locs[i]
@@ -14,7 +11,6 @@ def __starting_point():
         else:
             minres = min(locs[i] - locs[i - 1], locs[i + 1] - locs[i])
             maxres = max(locs[i] - locs[0], locs[-1] - locs[i])
-
         print(minres, maxres)
 
 

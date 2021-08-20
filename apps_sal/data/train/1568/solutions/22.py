@@ -6,7 +6,7 @@ def main():
         n /= 2
         count = 0
         for j in weights:
-            if (j >= n):
+            if j >= n:
                 count += 1
         print(count)
 

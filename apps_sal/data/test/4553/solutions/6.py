@@ -1,15 +1,15 @@
-a, b = input().split()
+(a, b) = input().split()
 c = input()
 a = int(a)
 b = int(b)
 d = 0
-if c[a] == "-":
+if c[a] == '-':
     for i in range(a + b + 1):
-        if c[i] == "-":
+        if c[i] == '-':
             d = d + 1
     if d == 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("No")
+    print('No')

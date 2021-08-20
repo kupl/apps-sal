@@ -1,7 +1,8 @@
 class MajorityChecker:
+
     def __init__(self, nums):
         atoi = defaultdict(list)
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             atoi[num].append(i)
         self.nums = nums
         self.atoi = atoi

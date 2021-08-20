@@ -3,6 +3,6 @@ def jumping_number(number):
     number = str(number)[1:]
     for el in number:
         if int(el) - int(curr) != 1 and int(curr) - int(el) != 1:
-            return "Not!!"
+            return 'Not!!'
         curr = el
-    return "Jumping!!"
+    return 'Jumping!!'

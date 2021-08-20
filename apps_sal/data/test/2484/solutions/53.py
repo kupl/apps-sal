@@ -1,6 +1,5 @@
 n = int(input())
 a_list = [int(x) for x in input().split()]
-
 ans = 0
 temp_xor = a_list[0]
 temp_sum = a_list[0]

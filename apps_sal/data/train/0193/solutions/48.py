@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         d = {}
         for k in arr:
@@ -6,9 +7,8 @@ class Solution:
                 d[k] += 1
             else:
                 d[k] = 1
-
         t = []
-        for k, v in d.items():
+        for (k, v) in d.items():
             t.append(v)
         t.sort(reverse=True)
         r = 0

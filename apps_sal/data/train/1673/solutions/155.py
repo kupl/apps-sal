@@ -1,8 +1,7 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
-
         m = len(arr)
-
         for i in range(1, m):
             min1 = min(arr[i - 1])
             ind = arr[i - 1].index(min1)

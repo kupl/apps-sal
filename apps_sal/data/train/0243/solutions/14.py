@@ -1,10 +1,10 @@
 class Solution:
+
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         bad = []
         for i in range(len(fronts)):
             if fronts[i] == backs[i]:
                 bad.append(fronts[i])
-
         ans = 10000000000
         for i in range(len(fronts)):
             if fronts[i] not in bad:

@@ -3,7 +3,7 @@ all_sums = {}
 
 def helper():
     all_sums[0] = 0
-    rec, suma = 0, 0
+    (rec, suma) = (0, 0)
     made = {0}
     for i in range(1, 2500000):
         cur = rec - i

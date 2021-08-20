@@ -1,7 +1,6 @@
-# cook your dish here
 test = int(input())
 for t in range(test):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     numbers = []
     for i in range(n):
         numbers.append(i + 1)

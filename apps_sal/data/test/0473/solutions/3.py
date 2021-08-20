@@ -3,8 +3,8 @@ def ui(a):
     return '0' * (2 - len(a)) + a
 
 
-a, b = map(int, input().split(':'))
-c, d = map(int, input().split(':'))
+(a, b) = map(int, input().split(':'))
+(c, d) = map(int, input().split(':'))
 t1 = 60 * a + b
 t2 = 60 * c + d
 if t1 >= t2:

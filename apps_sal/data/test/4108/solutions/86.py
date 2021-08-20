@@ -1,7 +1,7 @@
 s = input()
 t = input()
 sl = len(s)
-ss = ""
+ss = ''
 used = [False] * 26
 cnt = 0
 for i in range(sl):
@@ -11,9 +11,8 @@ for i in range(sl):
         cnt += 1
         ss += str(cnt)
         used[(ord(s[i]) - 97) % 26] = cnt
-
 used = [False] * 26
-tt = ""
+tt = ''
 cnt = 0
 for i in range(sl):
     if used[(ord(t[i]) - 97) % 26]:
@@ -22,8 +21,7 @@ for i in range(sl):
         cnt += 1
         tt += str(cnt)
         used[(ord(t[i]) - 97) % 26] = cnt
-
 if ss == tt:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

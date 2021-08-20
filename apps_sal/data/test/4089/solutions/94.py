@@ -1,8 +1,6 @@
 N = int(input())
-
 ans = ''
-
-while(N):
+while N:
     N -= 1
     ans = ans + chr(int(N % 26) + 97)
     N = N // 26

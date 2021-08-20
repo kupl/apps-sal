@@ -1,6 +1,6 @@
 def read_input():
-    a1, a2 = list(map(int, input().strip().split()))
-    return a1, a2
+    (a1, a2) = list(map(int, input().strip().split()))
+    return (a1, a2)
 
 
 def solution(a1, a2):
@@ -14,13 +14,12 @@ def solution(a1, a2):
         else:
             a2 += 1
             a1 -= 2
-
         ans += 1
     return ans
 
 
 def __starting_point():
-    a1, a2 = read_input()
+    (a1, a2) = read_input()
     print(solution(a1, a2))
 
 

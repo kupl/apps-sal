@@ -1,25 +1,45 @@
 import sys
-
 sys.setrecursionlimit(10 ** 5)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def maketo():
     atoi = [[] for _ in range(n)]
-    for i, a in enumerate(aa):
+    for (i, a) in enumerate(aa):
         if a < 1 or a > n:
             return True
         atoi[a - 1].append(i)
         if len(atoi[a - 1]) > 2:
             return True
     for a in range(n):
-        u, v = atoi[a]
+        (u, v) = atoi[a]
         if u + n == v:
             continue
         to[u].append((v + n) % (n * 2))
@@ -47,17 +67,13 @@ for _ in range(II()):
     n = II()
     aa = LI() + LI()
     to = [[] for _ in range(n * 2)]
-
     if maketo():
         print(-1)
         continue
-    # print(to)
-
     ans = []
     flap = [-1] * n
     ng = False
     for u in range(n):
-        # u+=n
         if flap[u % n] != -1:
             continue
         cur = [[], []]
@@ -66,10 +82,8 @@ for _ in range(II()):
             ans += cur[0]
         else:
             ans += cur[1]
-        # print(u,flap,cur,ans)
         if ng:
             break
-
     if ng:
         print(-1)
     else:

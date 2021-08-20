@@ -1,7 +1,5 @@
 n = int(input())
-
 seq = sorted(list(map(int, input().split())))[::-1]
-
 a = seq[0]
 last = -1
 for i in range(len(seq)):

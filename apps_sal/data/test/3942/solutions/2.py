@@ -2,7 +2,7 @@ s = input()
 ans = []
 count = 0
 last_pos = s.rfind('#')
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     if c == '(':
         count += 1
     elif c == ')':

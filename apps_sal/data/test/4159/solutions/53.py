@@ -10,13 +10,12 @@ def answer(a: int, b: int, k: int) -> List[int]:
     else:
         a = 0
         b = 0
-
     return [a, b]
 
 
 def main():
-    a, b, k = map(int, input().split())
-    a, b = answer(a, b, k)
+    (a, b, k) = map(int, input().split())
+    (a, b) = answer(a, b, k)
     print(a, b)
 
 

@@ -12,6 +12,5 @@ while 3 ** a < n:
     if finished:
         break
     a += 1
-
 if not finished:
     print(-1)

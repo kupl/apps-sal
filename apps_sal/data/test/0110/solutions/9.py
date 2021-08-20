@@ -11,6 +11,5 @@ for i in range(n):
         maxi = i
 if n % 2 != 0:
     ai[maxi] = -ai[maxi] - 1
-
 for i in range(n):
-    print(ai[i], end=" ")
+    print(ai[i], end=' ')

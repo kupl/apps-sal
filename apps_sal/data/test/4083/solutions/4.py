@@ -1,11 +1,8 @@
 from sys import stdin
-
 input = stdin.readline
 inf = 1000 * 1000 * 1000
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
-
 a.sort()
 res = inf
 for i in range(0, 200001, 1):
@@ -24,5 +21,4 @@ for i in range(0, 200001, 1):
     for i in range(k):
         tmp += b[i]
     res = min(res, tmp)
-
 print(res)

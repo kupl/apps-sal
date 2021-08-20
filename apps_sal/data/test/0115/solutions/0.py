@@ -1,4 +1,4 @@
-r, s, p = list(map(int, input().split()))
+(r, s, p) = list(map(int, input().split()))
 dp = [[[0] * (p + 1) for _ in range(s + 1)] for _ in range(r + 1)]
 dp[r][s][p] = 1
 
@@ -10,7 +10,7 @@ def nCk(n, k):
     for i in range(k):
         res *= n - i
     for i in range(k):
-        res //= (i + 1)
+        res //= i + 1
     return res
 
 
@@ -27,8 +27,6 @@ for ri in range(r, -1, -1):
                 dp[ri][si - 1][pi] += dp[ri][si][pi] * ri * si / t
             if pi > 0:
                 dp[ri][si][pi - 1] += dp[ri][si][pi] * si * pi / t
-
-
 r_sum = sum([dp[ri][0][0] for ri in range(r + 1)])
 s_sum = sum([dp[0][si][0] for si in range(s + 1)])
 p_sum = sum([dp[0][0][pi] for pi in range(p + 1)])

@@ -2,7 +2,7 @@ a = input()
 res = 0
 cur = 0
 for i in reversed(a):
-    if (i == 'b'):
+    if i == 'b':
         cur += 1
     else:
         res += cur

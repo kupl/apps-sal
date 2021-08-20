@@ -1,7 +1,7 @@
 class PlayingCards:
-    codex = tuple(n + suit for suit in 'CDHS' for n in 'A23456789TJQK')
+    codex = tuple((n + suit for suit in 'CDHS' for n in 'A23456789TJQK'))
     ix = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    xi = {ch: i for i, ch in enumerate(ix)}
+    xi = {ch: i for (i, ch) in enumerate(ix)}
 
     @staticmethod
     def encode(s):
@@ -14,7 +14,7 @@ class PlayingCards:
             q += PlayingCards.xi[ch]
         if q >= 52 * tiers[0]:
             return
-        for i, x in enumerate(tiers):
+        for (i, x) in enumerate(tiers):
             if q >= x:
                 break
         codex = list(PlayingCards.codex[:i])
@@ -31,12 +31,12 @@ class PlayingCards:
             return
         q = 0
         tiers = PlayingCards.get_tiers()
-        for i, card in enumerate(r):
+        for (i, card) in enumerate(r):
             if card != PlayingCards.codex[i]:
                 break
         tiers = tiers[i:]
         cdx = list(PlayingCards.codex[i:])
-        for card, tier in zip(r[i:], tiers):
+        for (card, tier) in zip(r[i:], tiers):
             j = cdx.index(card)
             q += j * tier
             cdx.pop(j)

@@ -2,6 +2,7 @@ from operator import itemgetter
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.rank = [0] * n
@@ -19,7 +20,6 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -40,7 +40,7 @@ def kruskal(n, edges):
     uf = UnionFind(n)
     edges.sort()
     res = 0
-    for d, s, t in edges:
+    for (d, s, t) in edges:
         if not uf.same(s, t):
             uf.unite(s, t)
             res += d
@@ -48,17 +48,14 @@ def kruskal(n, edges):
 
 
 n = int(input())
-
 xy = [[i] + list(map(int, input().split())) for i in range(n)]
-
 edges = set()
 for key in [itemgetter(1), itemgetter(2)]:
     xy.sort(key=key)
     for i in range(n - 1):
-        i1, x1, y1 = xy[i]
-        i2, x2, y2 = xy[i + 1]
+        (i1, x1, y1) = xy[i]
+        (i2, x2, y2) = xy[i + 1]
         d = min(abs(x1 - x2), abs(y1 - y2))
         edges.add((d, i1, i2))
-
 edges = list(edges)
-print((kruskal(n, edges)))
+print(kruskal(n, edges))

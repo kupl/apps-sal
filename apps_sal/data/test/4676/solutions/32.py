@@ -7,4 +7,4 @@ for i in range(len(e)):
 if len(o) == len(e):
     print(ans)
 else:
-    print((ans + o[-1]))
+    print(ans + o[-1])

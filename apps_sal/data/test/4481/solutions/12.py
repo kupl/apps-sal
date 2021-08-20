@@ -1,5 +1,4 @@
 N = int(input())
-
 d = {}
 for _ in range(N):
     S = input()
@@ -7,7 +6,6 @@ for _ in range(N):
         d[S] += 1
     else:
         d[S] = 1
-
 m = max(d.values())
-for s in sorted(k for k in d if d[k] == m):
+for s in sorted((k for k in d if d[k] == m)):
     print(s)

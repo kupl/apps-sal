@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def cal(lst1, lst2):
             count = 0
             d = {}
@@ -12,5 +14,4 @@ class Solution:
                     if v in d:
                         count += d[v]
             return count
-
         return cal(nums1, nums2) + cal(nums2, nums1)

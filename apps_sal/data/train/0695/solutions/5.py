@@ -10,7 +10,6 @@ for testcase in range(testcases):
         continue
     diffbit = 0
     biggestnum = 1 << 5
-    # print(biggestnum)
     checknum = 0
     flag = 0
     while True:
@@ -28,7 +27,6 @@ for testcase in range(testcases):
         if flag == 1:
             if i & checknum:
                 ans += 1
-        else:
-            if i & checknum == 0:
-                ans += 1
+        elif i & checknum == 0:
+            ans += 1
     print(ans)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = list(map(int, input().split()))
 k = A[0] - 1
 for i in range(1, m):

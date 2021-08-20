@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 List = list(map(int, input().split()))
 INF = 10000000000
 expList = [INF] * 1001

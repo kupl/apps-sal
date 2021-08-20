@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         memo = {0: False}
 
@@ -16,5 +17,4 @@ class Solution:
                     return True
             memo[i] = False
             return False
-
         return dp(n)

@@ -1,13 +1,25 @@
 import sys
 import numpy as np
-def input(): return sys.stdin.readline().rstrip()
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+
+
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
 
 
 def main():
-    n, k = mi()
+    (n, k) = mi()
     s = input()
     a = [0]
     for i in range(1, n):
@@ -15,7 +27,7 @@ def main():
             a.append(i)
     a.append(n)
     ans = 0
-    i, e = 0, 0
+    (i, e) = (0, 0)
     m = len(a)
     for i in range(m):
         e = i + 2 * k

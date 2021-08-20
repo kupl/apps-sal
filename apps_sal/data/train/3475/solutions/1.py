@@ -1,6 +1,5 @@
 from re import compile, match
-
-REGEX = compile(r'[+-]?(0(?P<base>[bxo]))?[\d\w]+\Z')
+REGEX = compile('[+-]?(0(?P<base>[bxo]))?[\\d\\w]+\\Z')
 
 
 def to_integer(strng):

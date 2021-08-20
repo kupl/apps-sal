@@ -6,4 +6,4 @@ for _ in range(int(input())):
         freq[e - 1] += 1
     m = max(freq)
     c = freq.count(m)
-    print((n - (m * c)) // (m - 1) + c - 1)
+    print((n - m * c) // (m - 1) + c - 1)

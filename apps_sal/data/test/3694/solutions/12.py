@@ -12,7 +12,7 @@ def is_winning_state(nims, n):
     for k in keys:
         if counts[k] > 2:
             return True
-        if counts[k] > 1 and (k - 1) in keys and counts[k - 1] > 0:
+        if counts[k] > 1 and k - 1 in keys and (counts[k - 1] > 0):
             return True
         if counts[k] > 1:
             lose_count += 1
@@ -27,7 +27,7 @@ def main():
     if is_winning_state(nims, n):
         print('cslnb')
     else:
-        x = sum(nims) - (n * (n - 1)) // 2
+        x = sum(nims) - n * (n - 1) // 2
         if x % 2 == 0:
             print('cslnb')
         else:

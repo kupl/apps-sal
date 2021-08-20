@@ -1,6 +1,9 @@
 import sys
-sys.setrecursionlimit(10**9)
-def read(): return sys.stdin.readline()
+sys.setrecursionlimit(10 ** 9)
+
+
+def read():
+    return sys.stdin.readline()
 
 
 def read_ints():
@@ -8,23 +11,16 @@ def read_ints():
 
 
 def read_intgrid(h):
-    return list(list(map(int, read().split()))for i in range(h))
+    return list((list(map(int, read().split())) for i in range(h)))
 
 
 def read_strgrid(h):
-    return list(list(read())for i in range(h))
+    return list((list(read()) for i in range(h)))
 
 
 def main():
-    # input data
-    n, k = map(int, input().split())
-    # solve
-    '''
-    半分全列挙する。n以下の数で作れる数rの組み合わせを考えるクロス表作ればわかる。
-    r==n+1の時、n個
-    r<n+1の時、r-1
-    r>n+1の時、2n-r+!
-    '''
+    (n, k) = map(int, input().split())
+    '\n    半分全列挙する。n以下の数で作れる数rの組み合わせを考えるクロス表作ればわかる。\n    r==n+1の時、n個\n    r<n+1の時、r-1\n    r>n+1の時、2n-r+!\n    '
     k = abs(k)
     combs = [0] * (n * 2 + 1)
     for i in range(1, n * 2 + 1):
@@ -34,14 +30,10 @@ def main():
             combs[i] = i - 1
         elif i > n + 1:
             combs[i] = 2 * n - i + 1
-
     cnt = 0
     for i in range(1, n * 2 + 1):
         cnt += combs[i] * combs[max(0, i - k)]
-
-    # print(combs)
     print(cnt)
-
     return None
 
 

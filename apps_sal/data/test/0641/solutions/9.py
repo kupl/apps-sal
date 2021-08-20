@@ -15,7 +15,6 @@ else:
         elif i in (4, 6, 9, 11):
             if n <= 30:
                 total += 1
-        else:
-            if n <= 29:
-                total += 1
+        elif n <= 29:
+            total += 1
     print(total)

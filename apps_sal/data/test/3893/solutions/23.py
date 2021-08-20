@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 import itertools
 import functools
@@ -19,12 +18,12 @@ def sign(x):
 
 
 def solve():
-    x1, y1 = list(map(int, input().split()))
-    x2, y2 = list(map(int, input().split()))
+    (x1, y1) = list(map(int, input().split()))
+    (x2, y2) = list(map(int, input().split()))
     n = int(input())
     r = 0
     for i in range(n):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         s1 = value(a, b, c, x1, y1)
         s2 = value(a, b, c, x2, y2)
         if sign(s1) != sign(s2):

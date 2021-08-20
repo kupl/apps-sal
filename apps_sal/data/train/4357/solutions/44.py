@@ -3,7 +3,7 @@ def nth_smallest(arr, pos):
     min = 0
     for i in range(len(arr)):
         pos -= 1
-        if(pos == 0):
+        if pos == 0:
             min = arr[i]
             break
     return min

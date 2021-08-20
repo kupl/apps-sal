@@ -14,7 +14,7 @@ def dfs(graph, start, goal):
     round = 0
     while s_stack or g_stack:
         while s_stack:
-            a, cost = s_stack.popleft()
+            (a, cost) = s_stack.popleft()
             if cost > round:
                 s_stack.appendleft([a, cost])
                 break
@@ -24,7 +24,7 @@ def dfs(graph, start, goal):
                     visited[b] += 1
                     s_cnt += 1
         while g_stack:
-            a, cost = g_stack.popleft()
+            (a, cost) = g_stack.popleft()
             if cost > round:
                 g_stack.appendleft([a, cost])
                 break
@@ -34,14 +34,13 @@ def dfs(graph, start, goal):
                     visited[b] += 1
                     g_cnt += 1
         round += 1
-    # print(s_cnt, g_cnt)
     return s_cnt > g_cnt
 
 
 N = int(input())
 graph = {}
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in graph:
         graph[a] = {}
     if b not in graph:

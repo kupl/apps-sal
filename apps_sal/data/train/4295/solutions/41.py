@@ -12,8 +12,7 @@ def balanced_num(number):
         left_sum += i
     for j in right_side:
         right_sum += j
-
     if left_sum != right_sum:
-        return "Not Balanced"
+        return 'Not Balanced'
     else:
-        return "Balanced"
+        return 'Balanced'

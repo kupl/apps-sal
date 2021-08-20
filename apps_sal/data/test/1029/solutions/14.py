@@ -6,7 +6,7 @@ def cmp(x, y):
 
 
 s = input()
-r, c = len(s), 1
+(r, c) = (len(s), 1)
 for i in range(len(s) - 1, 0, -1):
     if s[i] != '0':
         if i > r - i:

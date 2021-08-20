@@ -1,6 +1,5 @@
-# cook your dish here
 try:
-    d1, v1, d2, v2, p = map(int, input().split())
+    (d1, v1, d2, v2, p) = map(int, input().split())
     total = 0
     while p > 0:
         total += 1

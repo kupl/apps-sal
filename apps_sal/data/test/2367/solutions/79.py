@@ -15,7 +15,7 @@ def factorial(n, mod):
     return s
 
 
-h, w, a, b = map(int, input().split())
+(h, w, a, b) = map(int, input().split())
 mod = pow(10, 9) + 7
 x = h - a + b - 1
 y = w - b + a - 2

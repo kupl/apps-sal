@@ -3,7 +3,6 @@ for i in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     a.sort(reverse=True)
-
     answer = []
     answer.append(a.pop(0))
     n -= 1
@@ -11,7 +10,7 @@ for i in range(int(input())):
     for _ in range(n):
         index = 0
         m = 0
-        for i, val in enumerate(a):
+        for (i, val) in enumerate(a):
             num = gcd(gc, val)
             if num >= m:
                 m = num
@@ -22,4 +21,4 @@ for i in range(int(input())):
             break
         else:
             answer.append(a.pop(index))
-    print(" ".join(str(num) for num in answer))
+    print(' '.join((str(num) for num in answer)))

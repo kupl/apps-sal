@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 n = int(input())
-
 a = [0] * n
 x = n - 1
-for i in range(n - 1, - 1, -1):
+for i in range(n - 1, -1, -1):
     if i == n - 1:
         a[i] = n
     elif i == n - 2:

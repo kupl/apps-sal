@@ -1,7 +1,7 @@
 def min_value(digits):
     list = []
     list2 = []
-    ans = ""
+    ans = ''
     for i in digits:
         if i not in list:
             list.append(i)

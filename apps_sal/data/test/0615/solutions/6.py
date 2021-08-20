@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-AA = [0] * (N)
+AA = [0] * N
 AA[0] = A[0]
 for i in range(1, N):
     AA[i] = AA[i - 1] + A[i]

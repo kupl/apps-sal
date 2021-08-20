@@ -2,7 +2,7 @@ import math
 
 
 def rad(angle):
-    return (angle / 180) * math.pi
+    return angle / 180 * math.pi
 
 
 def dist(a, b, c, d):
@@ -14,9 +14,9 @@ while tt > 0:
     tt -= 1
     n = int(input())
     angle = rad(360 / (2 * n))
-    l1, l2 = n // 2, n - n // 2
-    px, py = 0, 0
-    vx, vy = 1, 0
+    (l1, l2) = (n // 2, n - n // 2)
+    (px, py) = (0, 0)
+    (vx, vy) = (1, 0)
     ans = 0
     cur = 0
     for i in range(1, n + 1):

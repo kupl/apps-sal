@@ -1,4 +1,3 @@
-#!/user/bin/env pypy3
 import sys
 from typing import NamedTuple, List
 
@@ -20,14 +19,13 @@ class Position(NamedTuple):
     def can_move_from(self, prev) -> bool:
         diff_t = self.t - prev.t
         diff_move = self._calc_diff_move(prev)
-        # 奇数のときはその場禁止
         if not diff_t % 2 == diff_move % 2:
             return False
         return diff_t >= diff_move
 
 
 def result_format(b: bool) -> str:
-    return "Yes" if b else "No"
+    return 'Yes' if b else 'No'
 
 
 def solve(positions: List[Position]) -> bool:
@@ -44,10 +42,10 @@ def main():
     n = int(fast_input())
     positions = []
     for _ in range(n):
-        t, x, y = list(map(int, fast_input().split()))
+        (t, x, y) = list(map(int, fast_input().split()))
         positions.append(Position(t=t, x=x, y=y))
     result = solve(positions)
-    print((result_format(result)))
+    print(result_format(result))
 
 
 main()

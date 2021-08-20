@@ -13,13 +13,12 @@ def search(c):
             r += dp_arr[bar]
             bar += 1
         else:
-            r -= (dp_arr[bar - 1])
+            r -= dp_arr[bar - 1]
             bar -= 1
         res_nega += r
     return res_nega
 
 
-# binary search
 a_sorted = sorted(a_list)
 left = 0
 right = N
@@ -37,4 +36,4 @@ while True:
     else:
         right = mid + 1
         mid = (mid + left) // 2
-print((a_sorted[mid]))
+print(a_sorted[mid])

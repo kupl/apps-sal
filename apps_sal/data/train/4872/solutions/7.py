@@ -1,10 +1,16 @@
 class F:
-    def __init__(S, *a): S.a = a
-    def compute(S): return __import__("operator").__dict__[type(S).__name__](*(x.compute()for x in S.a))
+
+    def __init__(S, *a):
+        S.a = a
+
+    def compute(S):
+        return __import__('operator').__dict__[type(S).__name__](*(x.compute() for x in S.a))
 
 
 class value(F):
-    def compute(S): return S.a[0]
+
+    def compute(S):
+        return S.a[0]
 
 
 class add(F):

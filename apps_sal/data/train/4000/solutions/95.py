@@ -8,13 +8,11 @@ def strong_num(n):
             fac = 1
             for y in range(1, i + 1):
                 fac = fac * y
-
             g.append(fac)
     print(g)
     h = sum(g)
     if h == n:
-        mystr = "STRONG!!!!"
+        mystr = 'STRONG!!!!'
     if h != n:
-        mystr = "Not Strong !!"
-
+        mystr = 'Not Strong !!'
     return mystr

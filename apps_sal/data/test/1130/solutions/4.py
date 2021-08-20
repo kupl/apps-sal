@@ -18,16 +18,15 @@ def str_array():
     return input().strip().split()
 
 
-n, m, lesson = int_array()
-dp = [[250005 for i in range(lesson + 2)]for j in range(n + 1)]
+(n, m, lesson) = int_array()
+dp = [[250005 for i in range(lesson + 2)] for j in range(n + 1)]
 days = [[] for i in range(n)]
 for i in range(n):
     s = input()
     for j in range(m):
-        if s[j] == "1":
+        if s[j] == '1':
             days[i].append(j + 1)
-
-m = [[250005 for i in range(lesson + 2)]for j in range(n + 1)]
+m = [[250005 for i in range(lesson + 2)] for j in range(n + 1)]
 for i in range(n):
     for j in range(lesson + 1):
         if j <= len(days[i]):
@@ -39,15 +38,10 @@ for i in range(n):
                     var = days[i][0 + k]
                     var1 = days[i][-1 * max(1, 1 + (j - k))]
                     m[i][j] = min(m[i][j], var1 - var + 1)
-
-
 for i in range(lesson + 1):
     dp[0][i] = m[0][i]
 for i in range(1, n):
     for j in range(lesson + 1):
         for k in range(j + 1):
-
             dp[i][j] = min(dp[i][j], dp[i - 1][j - k] + m[i][k])
-            #dp[i][j] = min(dp[i][j], dp[i - 1][k]+m[i][j-k])
-
 print(min(dp[n - 1]))

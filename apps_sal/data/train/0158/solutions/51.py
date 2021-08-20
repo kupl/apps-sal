@@ -1,4 +1,5 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
         l = len(A)
 
@@ -8,20 +9,19 @@ class Solution:
             for i in range(pos + 1, l):
                 if t[i] == target and (t[i], B[i]) not in visited:
                     visited.add((t[i], B[i]))
-                    t[pos], t[i] = t[i], t[pos]
-                    yield(''.join(t))
-                    t[pos], t[i] = t[i], t[pos]
+                    (t[pos], t[i]) = (t[i], t[pos])
+                    yield ''.join(t)
+                    (t[pos], t[i]) = (t[i], t[pos])
         step = 0
         index = 0
         seen = set()
         q = collections.deque()
         q.append((A, 0))
         seen.add(A)
-
         while q:
             lq = len(q)
             for j in range(lq):
-                tmp, k = q.popleft()
+                (tmp, k) = q.popleft()
                 if tmp == B:
                     return step
                 while k < l and tmp[k] == B[k]:

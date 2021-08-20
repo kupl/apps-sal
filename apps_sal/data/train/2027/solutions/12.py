@@ -1,5 +1,8 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 s = input()
@@ -16,6 +19,5 @@ for i in s:
         ans[r] = stone
         r += 1
     stone += 1
-# print(ans)
 for i in ans[1:]:
     print(i)

@@ -1,4 +1,5 @@
 class Dick:
+
     def __init__(self):
         self.s = 0
         self.m = dict()
@@ -43,4 +44,4 @@ def ok(a, n):
 
 n = int(input())
 a = list(map(int, input().split()))
-print("YES" if ok(a, n) else "NO")
+print('YES' if ok(a, n) else 'NO')

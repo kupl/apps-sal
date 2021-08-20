@@ -4,6 +4,6 @@ def cube_odd(arr):
         if type(n) != int:
             break
         elif n % 2:
-            s += n**3
+            s += n ** 3
     else:
         return s

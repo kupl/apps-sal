@@ -1,4 +1,5 @@
 class Solution:
+
     def makeHalf(self, a):
         for i in range(len(a)):
             a[i] //= 2

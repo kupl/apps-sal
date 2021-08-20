@@ -1,5 +1,5 @@
 def sum(n):
-    return (n * (n + 1)) // 2
+    return n * (n + 1) // 2
 
 
 def range_sum(left, right):
@@ -7,23 +7,20 @@ def range_sum(left, right):
 
 
 def binary_search(k, n):
-    low, high, mid = 1, k, 0
-
+    (low, high, mid) = (1, k, 0)
     while low <= high:
         mid = (low + high) // 2
         s = range_sum(mid, k)
-
         if s == n:
             return k - mid + 1
         elif s > n:
             low = mid + 1
         else:
             high = mid - 1
-
     return k - low + 2
 
 
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 if n == 1:
     print(0)
 elif n <= k:
@@ -31,7 +28,6 @@ elif n <= k:
 else:
     n -= 1
     k -= 1
-
     if n > sum(k):
         print(-1)
     else:

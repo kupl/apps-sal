@@ -5,12 +5,12 @@ def spidey_swings(buildings):
     for (height, width) in buildings:
         sumWidths += width
         corners.append((sumWidths, height))
-    xSpidey, ySpidey = 0, 50
+    (xSpidey, ySpidey) = (0, 50)
     while True:
-        maxAvgYield, bestDist, bestX, bestReached = 0, None, None, False
+        (maxAvgYield, bestDist, bestX, bestReached) = (0, None, None, False)
         minRope = 9999
         xCornerLast = 0
-        for xCorner, yCorner in corners:
+        for (xCorner, yCorner) in corners:
             if xCorner <= xSpidey:
                 xCornerLast = xCorner
                 continue
@@ -21,7 +21,7 @@ def spidey_swings(buildings):
                 if yCorner - lenRope < 20:
                     break
                 dist = xDist * 2
-                reached = (xSpidey + dist >= sumWidths)
+                reached = xSpidey + dist >= sumWidths
                 avgYield = dist / lenRope
                 if not reached and maxAvgYield < avgYield:
                     maxAvgYield = avgYield
@@ -32,7 +32,7 @@ def spidey_swings(buildings):
                     bestDist = dist
                     bestX = x
                     bestReached = reached
-                elif bestReached and reached and minRope > lenRope:
+                elif bestReached and reached and (minRope > lenRope):
                     minRope = lenRope
                     bestDist = dist
                     bestX = x

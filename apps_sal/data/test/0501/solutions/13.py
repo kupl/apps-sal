@@ -1,6 +1,5 @@
-l, r = list(map(int, input().split()))
-
-mod = 10**9 + 7
+(l, r) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 
 
 def f(l):
@@ -9,13 +8,10 @@ def f(l):
     while left < l:
         left += pow(2, c)
         c += 1
-
     extra = left - l
-    # print(extra)
     ls = 0
     odd = 0
     eve = 0
-
     for i in range(c):
         if i % 2 == 0:
             odd += pow(2, i)
@@ -26,7 +22,6 @@ def f(l):
         temp = (odd - extra) * (odd - extra) + eve * (eve + 1)
     else:
         temp = odd * odd + (eve - extra) * (eve + 1 - extra)
-
     return temp
 
 

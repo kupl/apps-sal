@@ -5,7 +5,7 @@ def sieve(n):
     primes = [True] * (n + 1)
     primes[0] = False
     primes[1] = False
-    for index, i in enumerate(primes):
+    for (index, i) in enumerate(primes):
         if i == True:
             for j in range(index * index, n + 1, index):
                 primes[j] = False
@@ -17,10 +17,10 @@ def sub_from_nearest(a):
 
 
 def main():
-    m, n = [int(x) for x in input().split()]
+    (m, n) = [int(x) for x in input().split()]
     prime_bool = sieve(100003)
     nearest = -1
-    for i, bool in (list(enumerate(prime_bool)))[::-1]:
+    for (i, bool) in list(enumerate(prime_bool))[::-1]:
         if bool:
             nearest = i
             nearest_prime[i] = i

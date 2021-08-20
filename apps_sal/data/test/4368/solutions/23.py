@@ -1,6 +1,6 @@
 def readinput():
-    n, k = list(map(int, input().split()))
-    return n, k
+    (n, k) = list(map(int, input().split()))
+    return (n, k)
 
 
 def main(n, k):
@@ -13,7 +13,7 @@ def main(n, k):
 
 
 def __starting_point():
-    n, k = readinput()
+    (n, k) = readinput()
     ans = main(n, k)
     print(ans)
 

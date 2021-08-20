@@ -1,11 +1,11 @@
 from collections import deque
 from math import *
-n, k, q = list(map(int, input().split()))
+(n, k, q) = list(map(int, input().split()))
 A = []
 lens = 0
 B = list(map(int, input().split()))
 for i in range(q):
-    per1, per2 = list(map(int, input().split()))
+    (per1, per2) = list(map(int, input().split()))
     if per1 == 1:
         if lens < k:
             A.append([per2, B[per2 - 1]])
@@ -18,7 +18,6 @@ for i in range(q):
                     c = A[i][1]
                     r = i
             if B[per2 - 1] > A[r][1]:
-
                 A[r] = [per2, B[per2 - 1]]
     else:
         si = True

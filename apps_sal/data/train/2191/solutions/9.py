@@ -11,7 +11,7 @@ def main():
     for a in reversed(aa):
         if a <= res:
             break
-        res = max(res, maxa % a, *tuple(b % a for b in x[2 * a - 1::a]))
+        res = max(res, maxa % a, *tuple((b % a for b in x[2 * a - 1::a])))
     print(res)
 
 

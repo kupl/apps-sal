@@ -1,15 +1,9 @@
-# Why do we fall ? So we can learn to pick ourselves up.
-
-
 t = int(input())
 for _ in range(0, t):
     n = int(input())
     abc = [int(i) for i in input().split()]
-
     i = 0
-
     lst = [n]
-
     for _ in range(0, 100):
         k = str(lst[-1] / abc[i % 3]).split('.')
         if int(k[1][0]) > 0:
@@ -21,7 +15,7 @@ for _ in range(0, t):
     ind = 0
     while len(pattern) == 0:
         for i in range(ind, len(lst) - 1):
-            check = lst[ind: i + 1] * 50
+            check = lst[ind:i + 1] * 50
             check = check[:len(lst) - ind]
             if lst[ind:] == check:
                 pattern = check
@@ -47,16 +41,4 @@ for _ in range(0, t):
             qq -= ind
             kk = qq % lp
             print(final_pattern[kk])
-
-
-"""
-1
-56
-3 5 7
-4
-0
-1
-2
-3
-
-"""
+'\n1\n56\n3 5 7\n4\n0\n1\n2\n3\n\n'

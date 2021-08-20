@@ -5,5 +5,4 @@ def past(h, m, s):
         m = m * 60000
     if s != 0:
         s = s * 1000
-
     return s + m + h

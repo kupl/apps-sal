@@ -1,12 +1,9 @@
 import math
-
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a.sort()
 b.sort()
-
 min_x = math.inf
 for i in range(len(b)):
     x = (b[i] - a[0]) % m

@@ -1,8 +1,8 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         res = []
         stack = []
-
         for ele in s:
             if ele not in '()':
                 res.append(ele)

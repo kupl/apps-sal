@@ -1,15 +1,11 @@
 import heapq
-
 q = int(input())
-
-minheap = []  # right
-maxheap = []  # left
+minheap = []
+maxheap = []
 heapq.heapify(minheap)
 heapq.heapify(maxheap)
-
 s = 0
 m = 0
-
 for _ in range(0, q):
     token = input().split()
     if len(token) > 1:
@@ -25,4 +21,4 @@ for _ in range(0, q):
             heapq.heappush(minheap, maxv)
             heapq.heappush(maxheap, -minv)
     else:
-        print(('{} {}'.format(-maxheap[0], s + m)))
+        print('{} {}'.format(-maxheap[0], s + m))

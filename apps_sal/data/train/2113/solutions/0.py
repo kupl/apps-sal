@@ -32,14 +32,11 @@ class CumTree:
 
 n = int(sys.stdin.readline())
 p = [int(x) for x in sys.stdin.readline().strip().split()]
-
 ct = CumTree(1, 4096)
-
 vsota = 0
 while len(p) > 0:
     x = p.pop()
     vsota += ct.manjsi(x)
     ct.vstavi(x)
-
-k, d = vsota // 2, vsota % 2
-print("%f" % (4 * k + d))
+(k, d) = (vsota // 2, vsota % 2)
+print('%f' % (4 * k + d))

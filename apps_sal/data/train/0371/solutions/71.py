@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
@@ -31,5 +32,4 @@ class Solution:
                             continue
                         seenStop.add(s)
                         q.append(s)
-
         return -1

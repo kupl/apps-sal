@@ -4,7 +4,7 @@ allW = S.count('W')
 allE = S.count('E')
 numW = S.count('E')
 numE = 0
-ans = 3 * 10**5
+ans = 3 * 10 ** 5
 for i in range(N):
     if S[i] == 'E':
         numW -= 1

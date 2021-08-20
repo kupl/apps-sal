@@ -3,7 +3,7 @@ t = list(map(int, input().split()))
 a = []
 b = []
 c = []
-for i, m in enumerate(t):
+for (i, m) in enumerate(t):
     if m == 1:
         a.append(i + 1)
     elif m == 2:

@@ -29,4 +29,4 @@ for i in order:
         rights[i] = [i, segment_sum]
     if segment_sum > current_max:
         current_max = segment_sum
-print(*results[::-1], sep="\n")
+print(*results[::-1], sep='\n')

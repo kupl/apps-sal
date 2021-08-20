@@ -1,8 +1,7 @@
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 m = [[] for _ in range(h)]
 for y in range(h):
     m[y] = list(input())
-
 ans = 0
 for y in range(1 << h):
     for x in range(1 << w):

@@ -8,7 +8,7 @@ def main():
     maisons = {}
     nbType = 0
     for maison in ville:
-        if maison != "\n" and maison not in maisons:
+        if maison != '\n' and maison not in maisons:
             maisons[maison] = 0
             nbType += 1
     nbZeros = nbType - 1
@@ -22,7 +22,6 @@ def main():
             if maisons[ville[inf]] == 0:
                 nbZeros += 1
             inf += 1
-
         else:
             sup += 1
             if n > sup:

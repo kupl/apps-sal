@@ -1,10 +1,8 @@
-# cook your dish here
 try:
+
     def find_gcd(x, y):
-
-        while(y):
-            x, y = y, x % y
-
+        while y:
+            (x, y) = (y, x % y)
         return x
     for _ in range(int(input())):
         n = int(input())

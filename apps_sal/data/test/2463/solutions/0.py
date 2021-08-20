@@ -2,10 +2,7 @@ def mi():
     return map(int, input().split())
 
 
-'''
-5
-1 2 3 4 5
-'''
+'\n5\n1 2 3 4 5\n'
 for _ in range(1):
     n = int(input())
     a = list(mi())

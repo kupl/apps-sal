@@ -1,5 +1,4 @@
 R = int(input())
-
 if R < 1200:
     print('ABC')
 elif 1200 <= R and R < 2800:

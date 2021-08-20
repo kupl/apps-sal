@@ -8,18 +8,13 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 s = input()
-
 tmp = 0
 res = 0
-
 if 97 <= ord(s) <= 122:
-    res = "a"
+    res = 'a'
 else:
-    res = "A"
-
+    res = 'A'
 print(res)

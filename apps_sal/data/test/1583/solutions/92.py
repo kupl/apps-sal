@@ -1,6 +1,5 @@
 import math
-a, b, x = map(int, input().split())
-
+(a, b, x) = map(int, input().split())
 if a * a * b / 2 > x:
     h = x / b * 2 / a
     deg = math.atan(h / b)

@@ -1,7 +1,4 @@
-
-
 n = int(input())
-
 for _ in range(n):
     x = int(input())
     found = False
@@ -12,6 +9,6 @@ for _ in range(n):
             break
         a += 1
     if found:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

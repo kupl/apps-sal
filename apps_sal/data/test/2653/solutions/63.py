@@ -1,20 +1,17 @@
 import sys
-sys.setrecursionlimit(10**8)
-
-n, q = map(int, input().split())
+sys.setrecursionlimit(10 ** 8)
+(n, q) = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(n - 1)]
 px = [list(map(int, input().split())) for _ in range(q)]
-
 t = dict()
 for i in range(1, n + 1):
     t[i] = set()
-for a, b in ab:
+for (a, b) in ab:
     t[a].add(b)
     t[b].add(a)
-
 cnt = [0] * n
 s = set()
-for p, x in px:
+for (p, x) in px:
     cnt[p - 1] += x
 
 

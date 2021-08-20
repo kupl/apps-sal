@@ -1,9 +1,6 @@
 import math
-
-N, D = map(int, input().split())
-
+(N, D) = map(int, input().split())
 X = [list(map(int, input().split())) for _ in range(N)]
-
 result = 0
 for i in range(N):
     for j in range(N):
@@ -14,5 +11,4 @@ for i in range(N):
             distance = math.sqrt(distance)
             if distance == int(distance):
                 result += 1
-
 print(result)

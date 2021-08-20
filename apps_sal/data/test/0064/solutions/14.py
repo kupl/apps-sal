@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 d = dict()
 arr = input()
 for i in range(len(arr)):

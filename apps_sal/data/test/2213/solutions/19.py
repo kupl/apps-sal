@@ -1,9 +1,8 @@
 from collections import *
 from math import *
-
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = []
-if(k == 0):
+if k == 0:
     for i in range(m):
         for j in range(i + 1, m):
             a.append([i + 1, j + 1])

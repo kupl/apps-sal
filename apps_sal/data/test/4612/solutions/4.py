@@ -6,11 +6,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b = Input()
+    (a, b) = Input()
     print(math.ceil((a + b) / 2))
 
 

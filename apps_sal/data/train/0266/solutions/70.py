@@ -1,6 +1,7 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
-        cur, h = Counter(), Counter(s)
+        (cur, h) = (Counter(), Counter(s))
         cnt = 0
         for c in s:
             h[c] -= 1

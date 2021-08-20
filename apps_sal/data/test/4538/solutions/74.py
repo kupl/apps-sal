@@ -1,10 +1,9 @@
 import sys
 import math
-
 index = 0
 count = 0
 for input in sys.stdin:
-    formattedInput = input.replace("\n", "").split(" ")
+    formattedInput = input.replace('\n', '').split(' ')
     if index == 0:
         N = int(formattedInput[0])
         D = int(formattedInput[1])
@@ -14,5 +13,4 @@ for input in sys.stdin:
     if D >= root:
         count += 1
     index += 1
-
 print(count)

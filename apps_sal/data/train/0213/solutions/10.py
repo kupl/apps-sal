@@ -1,4 +1,5 @@
 class Solution:
+
     def myPow(self, x, n):
         """
         :type x: float
@@ -11,7 +12,7 @@ class Solution:
         product = x
         m = abs(n)
         while m != 0 and power != m:
-            if (power + power_applied * 2) < m:
+            if power + power_applied * 2 < m:
                 product = product * product
                 power_applied = power_applied * 2
                 power = power + power_applied

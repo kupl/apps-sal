@@ -1,8 +1,8 @@
 def check_alive(health):
     if health <= 0:
-        return (False)
+        return False
     else:
-        return (True)
+        return True
 
 
 check_alive(10)

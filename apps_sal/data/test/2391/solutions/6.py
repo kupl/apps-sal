@@ -1,9 +1,7 @@
 def solve(n, aaa, bbb):
-    ccc = [a1 ^ a2 for a1, a2 in zip(aaa, aaa[1:])] + [aaa[-1] ^ aaa[0]]
-    ddd = [b1 ^ b2 for b1, b2 in zip(bbb, bbb[1:])] + [bbb[-1] ^ bbb[0]]
-
+    ccc = [a1 ^ a2 for (a1, a2) in zip(aaa, aaa[1:])] + [aaa[-1] ^ aaa[0]]
+    ddd = [b1 ^ b2 for (b1, b2) in zip(bbb, bbb[1:])] + [bbb[-1] ^ bbb[0]]
     ans = []
-
     m = 2147483647
     g = 1000000007
     s = 0
@@ -25,4 +23,4 @@ n = int(input())
 aaa = list(map(int, input().split()))
 bbb = list(map(int, input().split()))
 ans = solve(n, aaa, bbb)
-print((''.join('{} {}\n'.format(*answer) for answer in ans)))
+print(''.join(('{} {}\n'.format(*answer) for answer in ans)))

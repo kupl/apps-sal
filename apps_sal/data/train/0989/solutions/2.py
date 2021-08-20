@@ -1,10 +1,9 @@
-# cook your dish here
 t = int(input())
-while(t > 0):
-    x, y, k = map(int, input().split())
+while t > 0:
+    (x, y, k) = map(int, input().split())
     a = (x + y) // k
     if a % 2 == 0:
-        print("Chef")
+        print('Chef')
     else:
-        print("Paja")
+        print('Paja')
     t -= 1

@@ -1,6 +1,5 @@
 n = int(input())
 words = [input() for _ in range(n)]
-
 abc = list('qwertyuiopasdfghjklzxcvbnm')
 ans = 0
 for i in range(len(abc)):

@@ -1,14 +1,15 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, a = read()
+(n, a) = read()
 t = list(read())
 ans = 0
 for d in range(n):
-    i, j = a - d - 1, a + d - 1
+    (i, j) = (a - d - 1, a + d - 1)
     if i == j:
         ans += t[i]
-    elif i >= 0 and j < n and t[i] == t[j]:
+    elif i >= 0 and j < n and (t[i] == t[j]):
         ans += t[i] + t[j]
     elif i < 0 and j < n:
         ans += t[j]

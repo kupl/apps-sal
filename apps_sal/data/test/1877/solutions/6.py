@@ -6,13 +6,13 @@ def getCoord(x, y, t):
 
 n = int(input())
 s = input()
-x, y = getCoord(0, 0, s[0])
+(x, y) = getCoord(0, 0, s[0])
 t = 1
 if x < y:
     t = 0
 ans = 0
 for ch in s[1:]:
-    x, y = getCoord(x, y, ch)
+    (x, y) = getCoord(x, y, ch)
     if x == y:
         continue
     nt = 1

@@ -7,4 +7,3 @@ def who_is_paying(name):
         return [name[0] + name[1]]
     else:
         return [name, name[0] + name[1]]
-    # your code here

@@ -1,11 +1,9 @@
 def main():
-
-    D, T, S = map(int, input().split())
-
+    (D, T, S) = map(int, input().split())
     if D / S <= T:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

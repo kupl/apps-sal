@@ -12,14 +12,12 @@ def p_divs(n):
     return _a
 
 
-l, r, x, y = list(map(int, input().split()))
-
+(l, r, x, y) = list(map(int, input().split()))
 if y % x != 0:
     print(0)
 else:
     m = y // x
     divs = p_divs(m)
-
     d = dict()
     for p in divs:
         if p in d:
@@ -29,15 +27,14 @@ else:
     p = []
     for k in d:
         p.append((k, d[k]))
-
     ans = 0
-    for i in range(2**len(p)):
-        a, b = x, x
+    for i in range(2 ** len(p)):
+        (a, b) = (x, x)
         for k in range(len(p)):
-            if (i // (2**k)) % 2 == 1:
-                a *= p[k][0]**p[k][1]
+            if i // 2 ** k % 2 == 1:
+                a *= p[k][0] ** p[k][1]
             else:
-                b *= p[k][0]**p[k][1]
-        if a >= l and a <= r and b >= l and b <= r:
+                b *= p[k][0] ** p[k][1]
+        if a >= l and a <= r and (b >= l) and (b <= r):
             ans += 1
     print(ans)

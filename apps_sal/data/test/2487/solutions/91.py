@@ -1,7 +1,5 @@
 import sys
-
 input = sys.stdin.readline
-
 n = int(input())
 num_edge = 0
 num_vertex = 0
@@ -16,5 +14,4 @@ for i in range(1, n):
     num_edge += u * (n - v + 1)
     num_vertex += i * (n - i + 1)
 num_vertex += n
-
-print((num_vertex - num_edge))
+print(num_vertex - num_edge)

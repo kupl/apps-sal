@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.children = []
         self.pathSums = []
@@ -12,7 +13,6 @@ class Solution:
                 graph[n1] = set([n2])
             else:
                 graph[n1].add(n2)
-
             if n2 not in graph:
                 graph[n2] = set([n1])
             else:
@@ -24,7 +24,7 @@ class Solution:
             if child != parent:
                 self.postOrder(graph, child, v)
                 self.children[v] += self.children[child]
-                self.pathSums[v] += (self.children[child] + self.pathSums[child])
+                self.pathSums[v] += self.children[child] + self.pathSums[child]
 
     def preOrder(self, graph, v, parent):
         for child in graph[v]:
@@ -37,7 +37,6 @@ class Solution:
             return []
         elif N == 1:
             return [0]
-
         graph = self.buildGraph(edges)
         self.children = [1 for node in graph]
         self.pathSums = [0 for node in graph]

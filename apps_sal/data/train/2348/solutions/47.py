@@ -18,16 +18,16 @@ def calc():
         dbl.append(tmp)
     q = int(input())
     for _ in range(q):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if a > b:
-            a, b = b, a
+            (a, b) = (b, a)
         l = 0
         r = b - a + 1
         while r - l != 1:
             mid = (l + r) // 2
             tmp = a
             for i in range(mid.bit_length()):
-                if mid & (1 << i):
+                if mid & 1 << i:
                     tmp = dbl[i][tmp]
             if tmp >= b:
                 r = mid

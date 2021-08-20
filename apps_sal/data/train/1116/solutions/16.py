@@ -8,7 +8,7 @@ def countsumzero(lst):
             freq[y] += 1
         else:
             freq[y] = 1
-    return sum(v * (v - 1) // 2 for v in freq.values())
+    return sum((v * (v - 1) // 2 for v in freq.values()))
 
 
 m = int(input())

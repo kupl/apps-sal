@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         n = len(mat)
         m = len(mat[0])
@@ -11,7 +12,6 @@ class Solution:
                     mat[i][j] = c
                 else:
                     c = 0
-
         for j in range(m):
             for i in range(n):
                 if mat[i][j]:

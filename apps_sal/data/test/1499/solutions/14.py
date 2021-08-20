@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 op = []
 if m <= 2 * n:
     for i in range(1, m + 1):

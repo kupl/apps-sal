@@ -1,7 +1,6 @@
 def main():
-    s = (input())
-    t = (input())
-
+    s = input()
+    t = input()
     arrS = [0] * 70
     arrT = [0] * 70
     count = 0
@@ -26,7 +25,6 @@ def main():
         arrS[i] -= temp
         arrT[i - 32] -= temp
         count2 += temp
-
     print(count, count2)
 
 

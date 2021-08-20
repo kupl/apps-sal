@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 sum = 0
 for b in range(k + 1, n + 1):
     re = n // b

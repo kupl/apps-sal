@@ -1,10 +1,8 @@
 def answer(a: str, b: str) -> str:
     if a == b:
         return 'EQUAL'
-
     if a < b or len(a) < len(b):
         return 'LESS'
-
     if a > b or len(a) > len(b):
         return 'GREATER'
 

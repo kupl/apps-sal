@@ -27,6 +27,6 @@ def check(a):
 
 a = input()
 if check(a):
-    print("Correct")
+    print('Correct')
 else:
-    print("Too weak")
+    print('Too weak')

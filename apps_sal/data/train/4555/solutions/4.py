@@ -1,7 +1,7 @@
 def string_color(name):
     first_char = length = other_chars = sum_chars = 0
     prod_chars = 1
-    for i, a in enumerate(name):
+    for (i, a) in enumerate(name):
         current = ord(a)
         length += 1
         if i == 0:
@@ -12,6 +12,4 @@ def string_color(name):
         sum_chars += current
     if length < 2:
         return None
-    return '{:02X}{:02X}{:02X}'.format(
-        sum_chars % 256, prod_chars % 256, abs(first_char - other_chars) % 256
-    )
+    return '{:02X}{:02X}{:02X}'.format(sum_chars % 256, prod_chars % 256, abs(first_char - other_chars) % 256)

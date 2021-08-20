@@ -1,4 +1,4 @@
-x, k = list(map(int, input().split()))
+(x, k) = list(map(int, input().split()))
 s = set()
 for i in range(k):
     a = list(map(int, input().split()))
@@ -10,7 +10,7 @@ for i in range(k):
 smax = set()
 smin = set()
 for i in range(1, x):
-    if not i in s and not i + 1 in s and not i in smin:
+    if not i in s and (not i + 1 in s) and (not i in smin):
         smin.add(i + 1)
     if not i in s:
         smax.add(i)

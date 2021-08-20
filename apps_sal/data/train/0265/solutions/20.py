@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         prefix_sum = count = 0
         seen = {0}

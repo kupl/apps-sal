@@ -1,6 +1,5 @@
-# 992. Subarrays with K Different Integers
-
 class Window:
+
     def __init__(self):
         self.count = {}
 
@@ -28,7 +27,7 @@ def count_below(arr, k):
             while right < len(arr) and window.added_size(arr[right]) <= k:
                 window.add(arr[right])
                 right += 1
-            satisfactory += (right - left)
+            satisfactory += right - left
             window.remove(arr[left])
         return satisfactory
 
@@ -39,5 +38,6 @@ def subarrays_with_k_distinct(arr, k):
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         return subarrays_with_k_distinct(A, K)

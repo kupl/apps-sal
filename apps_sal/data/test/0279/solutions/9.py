@@ -1,7 +1,7 @@
-u1, u2 = map(int, input().split())
-t, d = map(int, input().split())
+(u1, u2) = map(int, input().split())
+(t, d) = map(int, input().split())
 if u1 > u2:
-    u1, u2 = u2, u1
+    (u1, u2) = (u2, u1)
 s = [u1 for i in range(t - 1)]
 s.append(u2)
 l = 1

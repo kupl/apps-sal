@@ -1,9 +1,9 @@
 from heapq import heappush, heappop
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = [0] * n
 e = [[] for i in range(n)]
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     u -= 1
     v -= 1
     d[u] += 1
@@ -14,7 +14,7 @@ for i in range(n):
         heappush(pq, -i)
 ind = n
 ans = [0] * n
-while(pq):
+while pq:
     u = -heappop(pq)
     ans[u] = ind
     ind -= 1
@@ -22,4 +22,4 @@ while(pq):
         d[v] -= 1
         if d[v] == 0:
             heappush(pq, -v)
-print(' '.join(str(x) for x in ans))
+print(' '.join((str(x) for x in ans)))

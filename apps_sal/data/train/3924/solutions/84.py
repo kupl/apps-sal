@@ -5,7 +5,7 @@ def reverse_words(text):
     split = text.split(' ')
     for x in split:
         list_2 = []
-        if x == "":
+        if x == '':
             list_3.append(x)
         else:
             length = len(x)

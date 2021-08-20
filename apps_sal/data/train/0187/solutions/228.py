@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
         def cal(k, p):
@@ -7,7 +8,6 @@ class Solution:
             else:
                 p += k * boardingCost - runningCost
             return p
-
         ans = 0
         p = 0
         w = 0
@@ -30,5 +30,4 @@ class Solution:
                 ans = p
                 itop = i
             w -= k
-
         return itop

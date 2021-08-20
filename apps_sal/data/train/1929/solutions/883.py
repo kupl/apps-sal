@@ -1,15 +1,17 @@
 class TrieNode:
+
     def __init__(self, end=False):
         self.end = end
         self.lnk = {}
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.head = TrieNode()
         for w in words:
             x = self.head
-            for i, c in enumerate(w):
+            for (i, c) in enumerate(w):
                 if c not in x.lnk:
                     y = TrieNode()
                     x.lnk[c] = y
@@ -28,7 +30,3 @@ class StreamChecker:
                 found |= q.end
         self.ptrs = new_ptrs
         return found
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

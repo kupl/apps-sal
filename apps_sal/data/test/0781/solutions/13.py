@@ -9,7 +9,6 @@ for row in board:
             break
     if l is False:
         break
-
 if l:
     print('YES')
 else:

@@ -9,14 +9,13 @@ for i in range(1, n):
     else:
         if d is None:
             d = s
-        else:
-            if (s != d):
-                print("NO")
-                break
+        elif s != d:
+            print('NO')
+            break
         s = 1
         c = x[i]
 else:
-    if (d is None) or (s == d):
-        print("YES")
+    if d is None or s == d:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

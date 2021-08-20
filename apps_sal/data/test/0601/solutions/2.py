@@ -2,9 +2,9 @@ from sys import stdin
 input = stdin.readline
 q = int(input())
 for _ in range(q):
-    p, f = map(int, input().split())
-    ns, na = map(int, input().split())
-    s, a = map(int, input().split())
+    (p, f) = map(int, input().split())
+    (ns, na) = map(int, input().split())
+    (s, a) = map(int, input().split())
     wynik = 0
     for ps in range(ns + 1):
         if ps * s > p:

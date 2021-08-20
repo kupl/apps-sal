@@ -2,7 +2,6 @@ n = int(input())
 a = []
 for i in range(n):
     a.append(list(map(int, input().split())))
-
 for i in range(n):
     is_dif = True
     for j in range(n):

@@ -1,5 +1,5 @@
-mod = 10**9 + 7
-n, m, k = map(int, input().split())
+mod = 10 ** 9 + 7
+(n, m, k) = map(int, input().split())
 nm = n * m
 fact = [1] * (nm - 1)
 inv = [1] * (nm - 1)

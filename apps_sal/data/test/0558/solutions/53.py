@@ -1,4 +1,5 @@
 class CombMod:
+
     def __init__(self, V, mod):
         self.fact = [1] * V
         self.finv = [1] * V
@@ -13,10 +14,9 @@ class CombMod:
         return self.fact[a] * self.finv[b] % mod * self.finv[a - b] % mod
 
 
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 mod = 998244353
 tool = CombMod(N + 1, mod)
-
 ans = 0
 for k in range(K + 1):
     val = M * tool.comb(N - 1, k) % mod * pow(M - 1, N - 1 - k, mod) % mod

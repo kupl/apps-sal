@@ -11,4 +11,4 @@ def solve(xs):
 
 
 xs = [list(map(int, input().split())) for i in range(int(input()))]
-print(" ".join(map(str, solve(xs))))
+print(' '.join(map(str, solve(xs))))

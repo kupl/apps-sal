@@ -8,7 +8,7 @@ for _ in range(T):
     M = int(input())
     PS = [list(map(int, input().split())) for _ in range(M)]
     L = [0] * (N + 1)
-    for p, s in PS:
+    for (p, s) in PS:
         L[s] = max(L[s], p)
     for i in range(N - 1, -1, -1):
         L[i] = max(L[i], L[i + 1])
@@ -26,5 +26,4 @@ for _ in range(T):
             ma = a
         cnt += 1
     Ans.append(ans)
-
-print("\n".join(map(str, Ans)))
+print('\n'.join(map(str, Ans)))

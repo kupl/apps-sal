@@ -1,4 +1,3 @@
-# cook your dish here
 def solution(a, n, f):
     idxs = []
     i = 0
@@ -7,7 +6,7 @@ def solution(a, n, f):
             idxs.append(i)
         i += 1
     if len(idxs) == 0:
-        print("impossible")
+        print('impossible')
         return
     mn = 1000000000
     for k in idxs:
@@ -29,7 +28,6 @@ def solution(a, n, f):
                 pts += a[elm]
                 left = (left + 1) // 2
                 sleft *= 2
-
             if right % 2 == 0:
                 last -= slast
                 right //= 2
@@ -38,7 +36,6 @@ def solution(a, n, f):
                 slast *= 2
                 left -= 1
                 right = (right + 1) // 2
-
         while right > 2:
             if right % 2 == 0:
                 last -= slast
@@ -55,7 +52,7 @@ def solution(a, n, f):
             idx = k
             if pts == 0:
                 break
-    print("possible")
+    print('possible')
     print(idx + 1, mn + f)
 
 

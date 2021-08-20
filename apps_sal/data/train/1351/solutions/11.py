@@ -10,7 +10,6 @@ try:
                 new.append(i)
             else:
                 new.append(0)
-
         print(*new)
 except:
     pass

@@ -1,12 +1,14 @@
 import sys
 import math
 from heapq import heappush, heappop
-
 readline = sys.stdin.readline
-def mr(): return map(int, readline().split())
 
 
-n, k = mr()
+def mr():
+    return map(int, readline().split())
+
+
+(n, k) = mr()
 tmp = list(mr())
 a = int(readline())
 cost = list(mr())

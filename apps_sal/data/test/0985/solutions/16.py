@@ -1,7 +1,7 @@
 n = int(input())
 ar = []
 for i in range(n):
-    a, b = [int(i) for i in input().split()]
+    (a, b) = [int(i) for i in input().split()]
     ar.append((a - b, a + b))
 c = [[0, 0] for i in range(2001)]
 for i in range(n):

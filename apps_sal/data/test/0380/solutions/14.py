@@ -1,8 +1,7 @@
-points = [tuple(int(x) for x in input().split()) for _ in range(3)]
+points = [tuple((int(x) for x in input().split())) for _ in range(3)]
 points.sort()
-p1, p2, p3 = points
-
-if (p1[0] == p2[0] and p2[0] == p3[0]) or (p1[1] == p2[1] and p2[1] == p3[1]):
+(p1, p2, p3) = points
+if p1[0] == p2[0] and p2[0] == p3[0] or (p1[1] == p2[1] and p2[1] == p3[1]):
     print(1)
 elif p1[0] == p2[0]:
     if min(p1[1], p2[1]) < p3[1] < max(p1[1], p2[1]):

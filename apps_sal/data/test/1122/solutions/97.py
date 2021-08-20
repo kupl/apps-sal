@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 oddflag = True
 for i in range(1, m + 1):
     mid = (1 + n) // 2

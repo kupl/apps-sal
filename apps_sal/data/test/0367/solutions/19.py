@@ -1,15 +1,12 @@
-#!/usr/bin/env python3
-
 def solve(s):
     cnt = dict()
     for c in s:
         if c not in cnt:
             cnt[c] = 0
         cnt[c] += 1
-
     num_odd = 0
     odds = []
-    for k, v in list(cnt.items()):
+    for (k, v) in list(cnt.items()):
         if v % 2:
             num_odd += 1
             odds.append(k)
@@ -24,12 +21,11 @@ def solve(s):
 
 
 def create_palin(cnt):
-    total = sum(v for k, v in list(cnt.items()))
+    total = sum((v for (k, v) in list(cnt.items())))
     p = [None] * total
-
     lo = 0
     hi = total - 1
-    for k, v in sorted(cnt.items()):
+    for (k, v) in sorted(cnt.items()):
         while v > 0:
             p[lo] = k
             p[hi] = k
@@ -40,10 +36,10 @@ def create_palin(cnt):
 
 
 def create_palin_odd(cnt):
-    total = sum(v for k, v in list(cnt.items()))
-    odd = [k for k, v in list(cnt.items()) if v % 2 == 1][0]
+    total = sum((v for (k, v) in list(cnt.items())))
+    odd = [k for (k, v) in list(cnt.items()) if v % 2 == 1][0]
     p = []
-    for k, v in sorted(cnt.items()):
+    for (k, v) in sorted(cnt.items()):
         how = v // 2
         p += [k] * (v // 2)
     p = p + [odd] + list(reversed(p))

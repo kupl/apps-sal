@@ -1,4 +1,3 @@
-
 def func(t, l, r):
     if t == 'U':
         try:
@@ -41,9 +40,8 @@ def func(t, l, r):
 n = eval(input())
 a = list(map(int, input().split()))
 q = eval(input())
-
 for i in range(q):
-    t, l, r = input().split()
+    (t, l, r) = input().split()
     try:
         func(t, int(l), int(r))
     except:

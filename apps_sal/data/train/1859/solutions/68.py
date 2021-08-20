@@ -1,4 +1,5 @@
 class Solution:
+
     def dobra(self, x, i, j, red_matrice):
         for k in range(i, i + red_matrice):
             for l in range(j, j + red_matrice):
@@ -10,7 +11,6 @@ class Solution:
         m = len(matrix)
         n = len(matrix[0])
         res = 0
-
         for i in range(m):
             for j in range(n):
                 for red_matrice in range(1, min(m, n) + 1):

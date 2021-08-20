@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -17,7 +18,6 @@ class Solution:
                         break
             current = A[i]
             i += 1
-
         while stack:
             moves += current + 1 - stack.pop()
             current += 1

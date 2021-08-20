@@ -32,7 +32,7 @@ for i in range(1, N):
         if M >= 0:
             cnt2 = -1
             break
-        num += -((-a[N - i - 1] + a[N - i]) // (-M))
+        num += -((-a[N - i - 1] + a[N - i]) // -M)
         if num < 0 or num > 2 * N:
             cnt2 = -1
             break

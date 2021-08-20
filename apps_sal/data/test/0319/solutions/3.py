@@ -1,4 +1,4 @@
-'''n = int(input())
+"""n = int(input())
 a = list(map(int,input().split()))
 t = 0
 t2 = 0
@@ -6,8 +6,8 @@ for i in range(n//2):
     t+=abs(2*i+1-a[i])
     t2+=abs(2*i+2-a[i])
 print(min(t,t2))
-'''
-n, m = list(map(int, input().split()))
+"""
+(n, m) = list(map(int, input().split()))
 a = []
 for i in range(n):
     a.append(input())

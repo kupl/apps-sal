@@ -1,9 +1,8 @@
 s = input().rstrip()
 n = len(s)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [0] * 4
 dp[0] = 1
-
 for i in range(n):
     next = [0] * 4
     if s[i] == 'A':
@@ -24,8 +23,7 @@ for i in range(n):
     next[1] += dp[1]
     next[2] += dp[2]
     next[3] += dp[3]
-
     for j in range(4):
         next[j] %= mod
     dp = next
-print((dp[3]))
+print(dp[3])

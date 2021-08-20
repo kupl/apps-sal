@@ -1,7 +1,7 @@
 from sys import stdin
 input = stdin.readline
 for _ in range(int(input())):
-    n, r, x, y = map(int, input().split())
+    (n, r, x, y) = map(int, input().split())
     if x != 0:
         prev_yrs = list(map(int, input().split()))
     else:

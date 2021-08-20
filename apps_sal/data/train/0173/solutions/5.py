@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         recDict = {}
         for i in range(0, k):

@@ -9,4 +9,4 @@ for i in range(0, count):
         tmp = tmp ^ number[j]
         if tmp > max:
             max = tmp
-print("%d" % max)
+print('%d' % max)

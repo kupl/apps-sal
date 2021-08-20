@@ -1,5 +1,5 @@
-n, k = [int(i) for i in input().split()]
-r, s, p = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
+(r, s, p) = [int(i) for i in input().split()]
 t = list(input())
 ans = 0
 dic = {'p': s, 's': r, 'r': p}

@@ -16,4 +16,4 @@ def most_money(students):
     if all == False:
         return timdeo.name
     if all == True:
-        return "all"
+        return 'all'

@@ -12,11 +12,9 @@ class Solution:
                 if counter >= balls:
                     return True
             cur += 1
-
         return False
 
     def maxDistance(self, position: List[int], m: int) -> int:
-
         result = 0
         position = sorted(position)
         minvalue = sys.maxsize
@@ -24,7 +22,6 @@ class Solution:
         for value in position:
             minvalue = min(minvalue, value)
             maxvalue = max(maxvalue, value)
-
         left = 1
         right = maxvalue - minvalue
         while left <= right:
@@ -35,5 +32,4 @@ class Solution:
                 result = mid
             else:
                 right = mid - 1
-
         return result

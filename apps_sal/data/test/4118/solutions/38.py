@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict, Counter
 from itertools import product, groupby, count, permutations, combinations
 from math import pi, sqrt
@@ -8,10 +7,10 @@ from string import ascii_lowercase
 from functools import lru_cache
 import sys
 sys.setrecursionlimit(500000)
-INF = float("inf")
-YES, Yes, yes, NO, No, no = "YES", "Yes", "yes", "NO", "No", "no"
-dy4, dx4 = [0, 1, 0, -1], [1, 0, -1, 0]
-dy8, dx8 = [0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1]
+INF = float('inf')
+(YES, Yes, yes, NO, No, no) = ('YES', 'Yes', 'yes', 'NO', 'No', 'no')
+(dy4, dx4) = ([0, 1, 0, -1], [1, 0, -1, 0])
+(dy8, dx8) = ([0, -1, 0, 1, 1, -1, -1, 1], [1, 0, -1, 0, 1, 1, -1, -1])
 
 
 def inside(y, x, H, W):
@@ -38,11 +37,11 @@ def lcm(a, b):
 
 
 def solve():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     if 1 <= A <= 9 and 1 <= B <= 9:
-        print((A * B))
+        print(A * B)
     else:
-        print((-1))
+        print(-1)
 
 
 def main():

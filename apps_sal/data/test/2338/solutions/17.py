@@ -1,13 +1,16 @@
 import sys
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n,) = I()
 seg = [I() for _ in range(n)]
 seg = sorted(seg, key=lambda x: abs(x[0]) + abs(x[1]))
 res = []
-for x, y in seg:
+for (x, y) in seg:
     if x > 0:
         res.append('1 %d %c' % (x, 'R'))
     if x < 0:

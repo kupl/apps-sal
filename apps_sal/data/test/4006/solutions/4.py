@@ -1,5 +1,4 @@
 x = int(input())
-
 seen = set()
 
 
@@ -13,5 +12,4 @@ def f(x):
 while x not in seen:
     seen.add(x)
     x = f(x)
-
 print(len(seen))

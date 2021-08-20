@@ -1,8 +1,8 @@
 ans = 'NO'
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 memo = []
-for i in range(1, 10**9):
-    tmp = (a * i) % b
+for i in range(1, 10 ** 9):
+    tmp = a * i % b
     if tmp == c:
         ans = 'YES'
         break

@@ -1,4 +1,4 @@
-from sys import*
+from sys import *
 input = stdin.readline
 t = int(input())
 for _ in range(t):
@@ -7,8 +7,8 @@ for _ in range(t):
         d = i
         for j in range(i + 1):
             if d > 0:
-                print("*", end="")
+                print('*', end='')
                 d -= 1
             else:
-                print(j, end="")
+                print(j, end='')
         print()

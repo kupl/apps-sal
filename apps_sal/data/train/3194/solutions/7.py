@@ -9,7 +9,6 @@ def berserk_rater(l):
             score -= 2
         else:
             score -= 1
-
     if score < 0:
         return 'worstest episode ever'
     elif score > 10:

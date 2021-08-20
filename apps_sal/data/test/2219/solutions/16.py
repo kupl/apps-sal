@@ -14,5 +14,5 @@ def solve(n, k):
 
 
 for query in range(t):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     print(solve(n, k))

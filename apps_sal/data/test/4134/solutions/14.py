@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = []
 for i in range(n):
     a.append(list(map(int, input().split())))
@@ -9,8 +9,7 @@ if n > m:
         for j in range(n):
             d[i].append(a[j][i])
     a = d
-    n, m = m, n
-
+    (n, m) = (m, n)
 b = []
 for i in range(n):
     temp = []
@@ -37,17 +36,16 @@ for i in range(n):
 for i in range((n + m + 1) // 2):
     for j in range(min(i + 1, m, n)):
         if i == 0:
-            c[(n - 1) - j][(m - 1) - (i - j)].append(k)
+            c[n - 1 - j][m - 1 - (i - j)].append(k)
         elif j == 0:
-            c[(n - 1) - j][(m - 1) - (i - j)].append(c[(n - 1) - j][(m - 1) - (i - j - 1)][0] ^ a[(n - 1) - j][(m - 1) - (i - j - 1)])
+            c[n - 1 - j][m - 1 - (i - j)].append(c[n - 1 - j][m - 1 - (i - j - 1)][0] ^ a[n - 1 - j][m - 1 - (i - j - 1)])
         elif j == i:
-            c[(n - 1) - j][(m - 1) - (i - j)].append(c[(n - 1) - (j - 1)][(m - 1) - (i - j)][0] ^ a[(n - 1) - (j - 1)][(m - 1) - (i - j)])
+            c[n - 1 - j][m - 1 - (i - j)].append(c[n - 1 - (j - 1)][m - 1 - (i - j)][0] ^ a[n - 1 - (j - 1)][m - 1 - (i - j)])
         else:
-            for x in c[(n - 1) - j][(m - 1) - (i - j - 1)]:
-                c[(n - 1) - j][(m - 1) - (i - j)].append(x ^ a[(n - 1) - j][(m - 1) - (i - j - 1)])
-            for x in c[(n - 1) - (j - 1)][(m - 1) - (i - j)]:
-                c[(n - 1) - j][(m - 1) - (i - j)].append(x ^ a[(n - 1) - (j - 1)][(m - 1) - (i - j)])
-
+            for x in c[n - 1 - j][m - 1 - (i - j - 1)]:
+                c[n - 1 - j][m - 1 - (i - j)].append(x ^ a[n - 1 - j][m - 1 - (i - j - 1)])
+            for x in c[n - 1 - (j - 1)][m - 1 - (i - j)]:
+                c[n - 1 - j][m - 1 - (i - j)].append(x ^ a[n - 1 - (j - 1)][m - 1 - (i - j)])
 wae = 0
 i = (n + m) // 2 - 1
 for j in range(min(m, n)):
@@ -64,5 +62,4 @@ for j in range(min(m, n)):
     for key in list(d.keys()):
         if key in d and key in e:
             wae += d[key] * e[key]
-
 print(wae)

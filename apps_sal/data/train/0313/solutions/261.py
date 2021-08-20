@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
         def isValid(val):
@@ -15,18 +16,14 @@ class Solution:
                 else:
                     tmp = 0
             return False
-
         ls = len(bloomDay)
         if m * k > ls:
             return -1
-
-        l, r = min(bloomDay), max(bloomDay)
-
+        (l, r) = (min(bloomDay), max(bloomDay))
         while l < r:
             mid = (l + r) // 2
             if isValid(mid):
                 r = mid
             else:
                 l = mid + 1
-
         return l

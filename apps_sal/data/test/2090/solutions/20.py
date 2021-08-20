@@ -1,9 +1,8 @@
 from heapq import heappush, heappop
-
-N, K = [int(s) for s in input().split()]
+(N, K) = [int(s) for s in input().split()]
 songs = []
 for _ in range(N):
-    t, b = [int(s) for s in input().split()]
+    (t, b) = [int(s) for s in input().split()]
     songs.append((t, b))
 songs.sort(key=lambda x: x[1], reverse=True)
 max_pleasure = 0

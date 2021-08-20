@@ -8,39 +8,41 @@ import heapq
 import decimal
 import copy
 import operator
-
-# sys.setrecursionlimit(10000001)
 INF = 10 ** 20
 MOD = 10 ** 9 + 7
-# MOD = 998244353
-# buffer.readline()
 
 
-def ni(): return int(sys.stdin.readline())
-def ns(): return list(map(int, sys.stdin.readline().split()))
-def na(): return list(map(int, sys.stdin.readline().split()))
-def na1(): return list([int(x) - 1 for x in sys.stdin.readline().split()])
+def ni():
+    return int(sys.stdin.readline())
 
 
-# ===CODE===
+def ns():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def na1():
+    return list([int(x) - 1 for x in sys.stdin.readline().split()])
+
+
 def main():
     s = input()
-
-    if s[0] == "0" or s[-1] == "1":
-        print((-1))
-        return()
-
+    if s[0] == '0' or s[-1] == '1':
+        print(-1)
+        return ()
     s = s[:-1]
     n = len(s)
     for i in range(n):
         if s[i] != s[n - 1 - i]:
-            print((-1))
+            print(-1)
             return
-
     pool = []
     idx = 0
     for i in range(1, n):
-        if s[i] == "1":
+        if s[i] == '1':
             print((idx + 1, i + 1))
             idx = i
             for pi in pool:

@@ -1,5 +1,4 @@
-# Binary Indexed Tree (Fenwick Tree)
-class BIT():
+class BIT:
     """区間加算、一点取得クエリをそれぞれO(logN)で答える
     add: 区間[l, r)にvalを加える
     get_val: i番目の値を求める
@@ -30,13 +29,12 @@ class BIT():
         self._add(l, -val)
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
-
 bit = BIT(2 * m + 10)
 cnt = 0
 for i in range(n - 1):
-    l, r = a[i], a[i + 1]
+    (l, r) = (a[i], a[i + 1])
     if l > r:
         r += m
     cnt += r - l
@@ -48,13 +46,11 @@ for i in range(n - 1):
         bit.add(l, r, 1)
         bit.add(r, r + 1, -(r - l))
         continue
-
 imos = [0] * (2 * m + 2)
 for i in range(2 * m + 2):
     imos[i] += bit.get_val(i)
     if i - 1 >= 0:
         imos[i] += imos[i - 1]
-
 ans = [0] * (m + 1)
 for i in range(1, m + 1):
     ans[i] = imos[i] + imos[i + m]

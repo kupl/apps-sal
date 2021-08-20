@@ -1,5 +1,4 @@
-n, m = [int(i) for i in input().split()]
-
+(n, m) = [int(i) for i in input().split()]
 while n != 0 and m != 0:
     if n >= 2 * m:
         k = n // (2 * m)

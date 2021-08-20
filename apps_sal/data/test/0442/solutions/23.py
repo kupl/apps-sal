@@ -2,13 +2,12 @@ r = int(input())
 
 
 def factorise(n):
-    # n is an odd number and we've ruled out 1 already
     factors = []
     guess = 3
     while guess < n:
         exponent = 1
         while n % guess == 0:
-            factors.append(guess**exponent)
+            factors.append(guess ** exponent)
             n //= guess
             factors.append(n)
             exponent += 1
@@ -22,15 +21,7 @@ if r % 2 == 1:
     if y > 0:
         print(x, y)
     else:
-        print("NO")
+        print('NO')
 else:
-    '''r -= 1
-    # solve x(x + 2y + 1)
-    factors = factorise(r)
-    for x in factors:
-        y = (-x -1 + 15/x)/2
-        if y % 1 == 0:
-            print(x, y)
-            return
-    else:'''
-    print("NO")
+    'r -= 1\n    # solve x(x + 2y + 1)\n    factors = factorise(r)\n    for x in factors:\n        y = (-x -1 + 15/x)/2\n        if y % 1 == 0:\n            print(x, y)\n            return\n    else:'
+    print('NO')

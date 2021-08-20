@@ -1,6 +1,6 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 answer = 0
-while (a >= 1 and b >= 2) or (b >= 1 and a >= 2):
+while a >= 1 and b >= 2 or (b >= 1 and a >= 2):
     if a < b:
         a += 1
         b -= 2

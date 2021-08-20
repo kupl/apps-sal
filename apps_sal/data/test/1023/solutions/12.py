@@ -1,11 +1,11 @@
-t = list(map(int, input().split(" ")))
+t = list(map(int, input().split(' ')))
 n = t[0]
 m = t[1]
 ta = t[2]
 tb = t[3]
 k = t[4]
-a = list(map(int, input().split(" ")))
-b = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
+b = list(map(int, input().split(' ')))
 b1 = []
 j = 0
 q = 0

@@ -1,3 +1,3 @@
 for ii in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     print(a + b)

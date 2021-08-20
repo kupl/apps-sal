@@ -1,9 +1,10 @@
 class Solution:
+
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
         lrs = len(req_skills)
         skills = collections.defaultdict(list)
         peo_skills = []
-        for i, skill in enumerate(people):
+        for (i, skill) in enumerate(people):
             for s in skill:
                 skills[s].append(i)
         self.res = [0] * (lrs + 1)

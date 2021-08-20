@@ -9,10 +9,8 @@ def memoize(f):
     return helper
 
 
-n, d, *_ = list(map(int, input().split()))
-*x, = list(map(int, input().split()))
-
-
+(n, d, *_) = list(map(int, input().split()))
+(*x,) = list(map(int, input().split()))
 x.sort()
 
 

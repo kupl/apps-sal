@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
 import sys
 f = sys.stdin
-
-n, m, k = map(int, f.readline().strip().split())
-
+(n, m, k) = map(int, f.readline().strip().split())
 s = f.readline().strip()
 sp = [0] * m
-
 for i in range(1, n):
     s = f.readline().strip()
     for l in range(m):
@@ -21,6 +17,4 @@ for i in range(1, n):
             mi = l - i
             if mi >= 0:
                 sp[mi] += 1
-    #print(i, s, sp)
-
 print(' '.join([str(it) for it in sp]))

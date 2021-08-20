@@ -1,7 +1,7 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = dict()
 ans = 0
-A = [list(map(int, input().split()))for i in range(N)]
+A = [list(map(int, input().split())) for i in range(N)]
 A.sort()
 for i in range(N):
     if M > A[i][1]:

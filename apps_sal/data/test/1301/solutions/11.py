@@ -1,10 +1,7 @@
 import re
-
 n = int(input())
 s = input()
-
-l = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]
-
+l = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon', 'sylveon']
 for p in l:
     if len(p) != len(s):
         continue

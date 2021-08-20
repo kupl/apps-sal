@@ -2,14 +2,12 @@ import sys
 
 
 def main():
-    N, *S = map(int, open(0).read().split())
+    (N, *S) = map(int, open(0).read().split())
     S = sorted(S)
-
     g = [S.pop(-1)]
-
     for gen in range(N):
         tmp = []
-        for p in g[:2**gen]:
+        for p in g[:2 ** gen]:
             while S:
                 s = S.pop(-1)
                 if p > s:

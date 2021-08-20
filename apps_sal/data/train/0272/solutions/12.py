@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         s = [b for b in initialBoxes if status[b]]
         found_boxes = set([b for b in initialBoxes if not status[b]])

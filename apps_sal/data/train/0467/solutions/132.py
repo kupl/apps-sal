@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         import math
 
@@ -13,7 +14,6 @@ class Solution:
                 if n % i == 0:
                     return False
             return True
-
         ans = 0
         for num in nums:
             if num < 6:
@@ -28,13 +28,12 @@ class Solution:
                 if i == 0 or i == 1:
                     continue
                 if num % i == 0:
-                    if (num / i) % i == 0:
+                    if num / i % i == 0:
                         break
                     if not divisors == 0:
                         divisors = 0
                         break
                     divisors = i
-            if (not divisors == 0) and isprime(num / divisors) and isprime(divisors):
-                ans += (divisors + 1) * ((num / divisors) + 1)
-
+            if not divisors == 0 and isprime(num / divisors) and isprime(divisors):
+                ans += (divisors + 1) * (num / divisors + 1)
         return int(ans)

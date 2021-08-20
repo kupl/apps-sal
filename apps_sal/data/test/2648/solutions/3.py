@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int, input().rstrip().split(" ")))
+A = list(map(int, input().rstrip().split(' ')))
 A.sort()
 ans = N
 for i in range(N - 1):

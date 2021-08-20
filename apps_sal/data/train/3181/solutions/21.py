@@ -6,6 +6,7 @@ def check_alive(health):
 
 
 class TestCheckAlive(unittest.TestCase):
+
     def test_should_return_true_when_health_is_greater_than_0(self):
         self.assertEqual(check_alive(health=1), True)
 

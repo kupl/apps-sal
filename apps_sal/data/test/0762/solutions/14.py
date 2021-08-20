@@ -1,9 +1,9 @@
-n, B = list(map(int, input().split()))
+(n, B) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
 def solve(a, B):
-    diff, k = [], 0
+    (diff, k) = ([], 0)
     for i in range(0, len(a) - 1):
         if a[i] % 2 == 0:
             k += 1

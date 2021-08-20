@@ -2,7 +2,6 @@ f = [0, 1, 2, 0, 2, 1, 0]
 l = [int(i) for i in input().split()]
 mn = min([l[i] // f.count(i) for i in range(3)])
 l = [l[i] - mn * f.count(i) for i in range(3)]
-
 mx = 0
 for i in range(7):
     tmp = l.copy()

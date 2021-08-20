@@ -1,14 +1,13 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
-    W, H, N = list(map(int, input().split()))
+    (W, H, N) = list(map(int, input().split()))
     X = [0, W]
     Y = [0, H]
     for i in range(N):
-        x, y, a = list(map(int, input().split()))
+        (x, y, a) = list(map(int, input().split()))
         if a == 1:
             X[0] = max(x, X[0])
         elif a == 2:

@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         count = 0
         square1 = [e ** 2 for e in nums1]

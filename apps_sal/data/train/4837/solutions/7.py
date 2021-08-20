@@ -10,12 +10,12 @@ def parse(crontab):
         state = 0
         for c in s:
             if c == ',':
-                if not(dig3):
+                if not dig3:
                     dig3 = '1'
                 out.append([dig1, dig2, dig3])
                 dig1 = dig2 = dig3 = ''
                 state = 0
-            elif not(state):
+            elif not state:
                 dig1 += c
                 state = 1
             elif state == 1:
@@ -32,7 +32,7 @@ def parse(crontab):
                     state = 3
             elif state == 3:
                 dig3 += c
-        if not(dig3):
+        if not dig3:
             dig3 = '1'
         out.append([dig1, dig2, dig3])
         return out

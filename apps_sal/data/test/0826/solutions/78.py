@@ -1,8 +1,6 @@
 n = int(input())
-
 num = n + 1
 k = 0
-
 high = n + 1
 low = 1
 while n > 0:
@@ -16,9 +14,5 @@ while n > 0:
         if high == n:
             break
         high = n
-
-# print(low)
-# print(high)
 n = (low + high) // 2
-# print(n)
 print(num - n)

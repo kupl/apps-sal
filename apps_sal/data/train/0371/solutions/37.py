@@ -1,18 +1,17 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         graph = collections.defaultdict(list)
-        for i, j in enumerate(routes):
+        for (i, j) in enumerate(routes):
             for stops in j:
                 graph[stops].append(i)
-
         q = collections.deque(graph[S])
         visited = set()
         steps = 0
         while q:
             temp = []
-
             for bus in q:
                 if bus in visited:
                     continue

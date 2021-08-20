@@ -5,11 +5,10 @@ def main():
     with open(0) as f:
         N = int(f.readline())
         A = [list(map(int, line.split())) for line in f.readlines()]
-
     possible = True
     ans = 0
     r = range(N)
-    for i, j in product(r, r):
+    for (i, j) in product(r, r):
         if j <= i:
             continue
         for k in r:

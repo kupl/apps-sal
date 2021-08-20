@@ -1,5 +1,4 @@
 n = int(input())
-
 rows = [0] * n
 cols = [0] * n
 
@@ -21,10 +20,9 @@ def nC2(count):
 
 
 for row in range(n):
-    for col, ch in enumerate(input()):
-        if ch == "C":
+    for (col, ch) in enumerate(input()):
+        if ch == 'C':
             rows[row] += 1
             cols[col] += 1
-
 res = sum((nC2(num) for num in rows)) + sum((nC2(num) for num in cols))
 print(res)

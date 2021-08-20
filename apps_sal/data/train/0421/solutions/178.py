@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         char_max = max(s)
         ind = s.find(char_max)

@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
 left = k - 1
 right = n - k
 if left < right:

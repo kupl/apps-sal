@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = list(map(int, input().split()))
 if k == 1:
     print(len(set(t)))
@@ -12,4 +12,4 @@ else:
         p[j].add(i)
     for j in range(1, 30):
         p[j] -= p[j - 1]
-    print(sum(len(i) for i in p))
+    print(sum((len(i) for i in p)))

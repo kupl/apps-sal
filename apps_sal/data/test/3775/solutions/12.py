@@ -13,7 +13,7 @@ matches1 = {}
 matches2 = {}
 for i in parr1:
     for j in parr2:
-        if (i[0] == j[0] and i[1] == j[1]) or (i[0] == j[1] and i[1] == j[0]):
+        if i[0] == j[0] and i[1] == j[1] or (i[0] == j[1] and i[1] == j[0]):
             continue
         elif i[0] == j[0] or i[0] == j[1]:
             if matches1.get(i) == None or matches1.get(i) == i[0]:

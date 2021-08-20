@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-
-
 def main():
     N = input()
-
     ans = ''
     for n in N:
         if n == '1':

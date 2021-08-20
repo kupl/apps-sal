@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-mod = int(1e9) + 7
+mod = int(1000000000.0) + 7
 S = 0
 for i in range(n):
     S += (2 * i + 1 - n) * x[i]

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ids = []
 pr = list(map(int, input().split()))
 pr.pop(0)
@@ -15,7 +15,6 @@ for _ in range(n - 1):
     ids.append(list(map(int, input().split())))
 for i in ids:
     i.pop(0)
-
 for i in ids:
     if common_member(pr, i) >= k:
         relatives.append(i)
@@ -31,5 +30,4 @@ while y >= 0:
                 y += 1
     if y == 0:
         y = -1
-
 print(len(relatives) + 1)

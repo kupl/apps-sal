@@ -3,16 +3,13 @@ from collections import defaultdict
 
 
 def atoi(s):
-    return ord(s) - ord("a") + 1
+    return ord(s) - ord('a') + 1
 
 
 N = int(input())
 S = input()
-
 mod = (1 << 61) - 1
 b = random.randint(10000, mod - 1)
-
-
 l = 0
 r = (N + 1) // 2 + 1
 while r - l > 1:
@@ -34,5 +31,4 @@ while r - l > 1:
         l = d
     else:
         r = d
-
 print(l)

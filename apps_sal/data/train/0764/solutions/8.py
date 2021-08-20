@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 for i in range(x):
     y = list(map(str, input().split()))[:4]
@@ -9,6 +8,6 @@ for i in range(x):
             if y[j] == z[k]:
                 m += 1
     if m >= 2:
-        print("similar")
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')

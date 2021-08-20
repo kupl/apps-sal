@@ -1,16 +1,25 @@
-# Date [ 2020-10-11 23:52:10 ]
-# Problem [ d.py ]
-# Author Koki_tkg
-
 import sys
 from collections import Counter
 
 
-def read_str(): return sys.stdin.readline().strip()
-def read_int(): return int(sys.stdin.readline().strip())
-def read_ints(): return list(map(int, sys.stdin.readline().strip().split()))
-def read_str_split(): return list(sys.stdin.readline().strip())
-def read_int_list(): return list(map(int, sys.stdin.readline().strip().split()))
+def read_str():
+    return sys.stdin.readline().strip()
+
+
+def read_int():
+    return int(sys.stdin.readline().strip())
+
+
+def read_ints():
+    return list(map(int, sys.stdin.readline().strip().split()))
+
+
+def read_str_split():
+    return list(sys.stdin.readline().strip())
+
+
+def read_int_list():
+    return list(map(int, sys.stdin.readline().strip().split()))
 
 
 def Main():

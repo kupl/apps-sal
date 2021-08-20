@@ -1,9 +1,9 @@
 n = input()
-a, b, c, d, e, f = list(map(int, n))
+(a, b, c, d, e, f) = list(map(int, n))
 
 
 def g(a, b, c, s):
-    m1, m2, m3 = sorted([a, b, c])
+    (m1, m2, m3) = sorted([a, b, c])
     if s == a + b + c:
         return 0
     elif s > a + b + c:
@@ -25,5 +25,4 @@ def g(a, b, c, s):
 ll = []
 for s in range(28):
     ll.append(g(a, b, c, s) + g(d, e, f, s))
-
 print(min(ll))

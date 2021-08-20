@@ -1,12 +1,12 @@
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 A.insert(0, 0)
 B = list(map(int, input().split()))
 B.insert(0, 0)
 G = {i: [] for i in range(1, N + 1)}
 for _ in range(M):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     G[c].append(d)
     G[d].append(c)
 Col = [-1 for _ in range(N + 1)]
@@ -36,6 +36,6 @@ for c in Mem:
         flag = 1
         break
 if flag == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

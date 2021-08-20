@@ -1,5 +1,5 @@
 def bs(a, t, d):
-    l, r = 0, len(a)
+    (l, r) = (0, len(a))
     while l < r:
         mid = l + (r - l) // 2
         if abs(a[mid] - t) <= d:
@@ -12,6 +12,7 @@ def bs(a, t, d):
 
 
 class Solution:
+
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
         total = 0
         arr2.sort()

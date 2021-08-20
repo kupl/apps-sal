@@ -26,7 +26,7 @@ def main():
         heapq.heappush(q, -1 * a[i])
         if i < 2 * n:
             back[i] += heapq.heappop(q)
-    ans = -float("inf")
+    ans = -float('inf')
     for i in range(n - 1, 2 * n):
         ans = max(ans, frnt[i] - back[i + 1])
     print(ans)

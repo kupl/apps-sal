@@ -10,7 +10,7 @@ def main():
         s = [next(ints) for i in range(n)]
         P = None
         for x in s:
-            p = set(x ^ y for y in s)
+            p = set((x ^ y for y in s))
             if P == None:
                 P = p
             else:

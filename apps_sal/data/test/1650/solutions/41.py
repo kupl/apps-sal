@@ -1,8 +1,4 @@
-#!python3
-
-# input
 L = input()
-
 MOD = 10 ** 9 + 7
 MAX = 10 ** 5 + 5
 p3 = [None] * MAX
@@ -20,10 +16,8 @@ def main():
     w = 1
     ans = 0
     for i in range(n):
-        if L[i] == "1":
-            # 両方0にする場合
+        if L[i] == '1':
             ans = (ans + w * p3[n - i - 1]) % MOD
-            # 片方1にする場合
             w = 2 * w % MOD
     ans = (ans + w) % MOD
     print(ans)

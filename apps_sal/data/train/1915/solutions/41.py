@@ -1,9 +1,9 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        # greedy
         res = []
         seq = list(target)
-        m, n = len(stamp), len(target)
+        (m, n) = (len(stamp), len(target))
 
         def check(i):
             changed = False
@@ -11,16 +11,14 @@ class Solution:
             for j in range(m):
                 if seq[i + j] == '?':
                     continue
+                elif target[i + j] == stamp[j]:
+                    changed = True
                 else:
-                    if target[i + j] == stamp[j]:
-                        changed = True
-                    else:
-                        full = False
+                    full = False
             if changed and full:
                 seq[i:i + m] = ['?'] * m
                 return True
             return False
-
         changed = True
         while changed:
             changed = False

@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.result = False
 
@@ -10,7 +11,7 @@ class Solution:
         elif visited[start][end] != -1:
             return visited[start][end]
         else:
-            a, b = 0, 0
+            (a, b) = (0, 0)
             if count % 2 == 0:
                 a = max(self.backtrack(arr, start + 1, end, alex + arr[start], lee, count + 1, visited), self.backtrack(arr, start, end - 1, alex + arr[end], lee, count + 1, visited))
             else:
@@ -23,7 +24,6 @@ class Solution:
         visited = [-1 for i in range(n)]
         for i in range(n):
             visited[i] = [-1 for i in range(n)]
-
         if self.backtrack(piles, 0, len(piles) - 1, 0, 0, 0, visited):
             return True
         return False

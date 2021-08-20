@@ -2,7 +2,4 @@ employees = [{'first_name': 'Ollie', 'last_name': 'Hepburn', 'role': 'Boss'}, {'
 
 
 def find_employees_role(name):
-    return next(
-        (d['role'] for d in employees if '{0[first_name]} {0[last_name]}'.format(d) == name),
-        'Does not work here!'
-    )
+    return next((d['role'] for d in employees if '{0[first_name]} {0[last_name]}'.format(d) == name), 'Does not work here!')

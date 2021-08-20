@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         max_queue = collections.deque()
         min_queue = collections.deque()
@@ -19,5 +20,4 @@ class Solution:
                 if min_queue[0][1] < l:
                     min_queue.popleft()
             max_len = max(max_len, r - l)
-
         return max_len

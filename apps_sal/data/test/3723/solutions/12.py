@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 t = max(a)
 k = [0] * (t + 2)
 for el in a:

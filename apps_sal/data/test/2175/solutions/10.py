@@ -7,7 +7,7 @@ l = []
 for i in range(m):
     q = list(map(int, input().split()))
     if q[0] == 1:
-        p, x = q[1], q[2]
+        (p, x) = (q[1], q[2])
         u = []
         j = p - 1
         while j < n:
@@ -24,6 +24,5 @@ for i in range(m):
             f[z] = j
     else:
         l.append(v[q[1] - 1])
-
 for i in l:
     print(i)

@@ -1,6 +1,6 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # print(math.ceil(7/3))
         high = sum(nums)
         if high <= threshold:
             return 1
@@ -12,7 +12,6 @@ class Solution:
                 if su > threshold:
                     return False
             return True
-
         low = 1
         while low < high:
             mid = low + (high - low) // 2
@@ -20,5 +19,4 @@ class Solution:
                 high = mid
             else:
                 low = mid + 1
-
         return low

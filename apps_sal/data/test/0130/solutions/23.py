@@ -1,5 +1,5 @@
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     matrix = list()
     minR = n
     minC = m

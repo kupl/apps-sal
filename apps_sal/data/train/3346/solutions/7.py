@@ -15,5 +15,4 @@ def gap(g, m, n):
                 if p == g:
                     return [i - g, i]
             d = 3
-
     return None

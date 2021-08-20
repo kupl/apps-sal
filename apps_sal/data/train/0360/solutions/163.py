@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def fun(t):
@@ -10,10 +11,9 @@ class Solution:
                     d = d + 1
                     s = weights[i]
             return d
-
         n = len(weights)
-        lo, hi = max(weights), sum(weights)
-        while(lo <= hi):
+        (lo, hi) = (max(weights), sum(weights))
+        while lo <= hi:
             c = lo + (hi - lo) // 2
             if fun(c) < D:
                 hi = c - 1

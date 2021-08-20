@@ -1,4 +1,3 @@
-# cook your dish here
 for t in range(int(input())):
     str1 = input()
     new = str1.replace('abc', '')

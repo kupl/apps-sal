@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.n = n
         self.fa = list(range(n))
@@ -9,7 +10,7 @@ class DSU:
             r = self.fa[r]
         i = x
         while i != r:
-            i, self.fa[i] = self.fa[i], r
+            (i, self.fa[i]) = (self.fa[i], r)
         return r
 
     def join(self, x, y):
@@ -20,6 +21,7 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
         n = len(p)
         e = []
@@ -29,9 +31,7 @@ class Solution:
                     continue
                 d = abs(p[i][0] - p[j][0]) + abs(p[i][1] - p[j][1])
                 e.append((d, i, j))
-
         e.sort()
-
         dsu = DSU(n)
         had = 0
         ans = 0

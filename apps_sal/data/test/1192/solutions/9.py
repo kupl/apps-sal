@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 
 
@@ -16,15 +16,14 @@ def inv_in_perms(a, count):
         ans = 0
         for l in range(n):
             for r in range(l, n):
-                a[l: r + 1] = a[l: r + 1][::-1]
+                a[l:r + 1] = a[l:r + 1][::-1]
                 ans += inv_in_perms(a, count - 1)
-                a[l: r + 1] = a[l: r + 1][::-1]
-        return(ans)
+                a[l:r + 1] = a[l:r + 1][::-1]
+        return ans
     else:
-        return(count_invs(a))
+        return count_invs(a)
 
 
 total = (n * (n + 1) // 2) ** k
 perms = 0
-
 print(inv_in_perms(p, k) / total)

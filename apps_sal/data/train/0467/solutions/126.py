@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
 
         def check(n):
@@ -20,8 +21,5 @@ class Solution:
                 return res
             else:
                 return 0
-
-        # print (check(21))
-        # return 1
-        res = sum(check(n) for n in nums)
+        res = sum((check(n) for n in nums))
         return res

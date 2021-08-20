@@ -12,5 +12,5 @@ for i in range(2, n + 1):
             else:
                 dic[j] = 1
 for v in dic.values():
-    ans = (ans * (v + 1)) % (10**9 + 7)
+    ans = ans * (v + 1) % (10 ** 9 + 7)
 print(ans)

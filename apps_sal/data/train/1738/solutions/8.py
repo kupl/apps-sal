@@ -8,7 +8,7 @@ def area_triang(a, b, c):
 
 
 def calc_area(triangle):
-    A, B, C = triangle
+    (A, B, C) = triangle
     c = sqrt(distance_sq(A, B))
     b = sqrt(distance_sq(A, C))
     a = sqrt(distance_sq(B, C))
@@ -16,9 +16,9 @@ def calc_area(triangle):
 
 
 def distance_sq(point1, point2):
-    x1, y1, z1, = point1
-    x2, y2, z2 = point2
-    return (x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2
+    (x1, y1, z1) = point1
+    (x2, y2, z2) = point2
+    return (x1 - x2) ** 2 + (y1 - y2) ** 2 + (z1 - z2) ** 2
 
 
 def combin(point_list, i):
@@ -27,7 +27,7 @@ def combin(point_list, i):
 
 def is_point_in_sphere(vert, center, r):
     dd = distance_sq(vert, center)
-    return dd - r**2 < 0 and abs((sqrt(dd) - r) / r) > pow(10, -10)
+    return dd - r ** 2 < 0 and abs((sqrt(dd) - r) / r) > pow(10, -10)
 
 
 def to_tup(point_list):
@@ -38,7 +38,7 @@ def to_tup(point_list):
 
 
 def triang_to_list(triang):
-    pointA, pointB, pointC = triang
+    (pointA, pointB, pointC) = triang
     return [list(pointA), list(pointB), list(pointC)]
 
 
@@ -69,7 +69,7 @@ def biggest_triang_int(point_list, center, radius):
     max_area = max(triangs_area.values())
     res = [num_triangs, max_area]
     sol = []
-    for triang, area in triangs_area.items():
+    for (triang, area) in triangs_area.items():
         if abs((area - max_area) / area) < pow(10, -10):
             sol.append(list(triang))
     if len(sol) == 1:

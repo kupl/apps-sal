@@ -4,6 +4,6 @@ for i in range(n):
     x = input()
     if x not in s:
         s.append(x)
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

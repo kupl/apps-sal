@@ -2,12 +2,12 @@ n = int(input())
 ans = [0] * 10
 s = input()
 for i in range(len(s)):
-    if s[i] == "L":
+    if s[i] == 'L':
         f = 0
         while ans[f] != 0:
             f += 1
         ans[f] = 1
-    elif s[i] == "R":
+    elif s[i] == 'R':
         f = 9
         while ans[f] != 0:
             f -= 1

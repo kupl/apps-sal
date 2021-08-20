@@ -1,10 +1,12 @@
 class node:
+
     def __init__(self):
         self.children = {}
         self.end = 0
 
 
 class Trie:
+
     def __init__(self):
         self.root = node()
 
@@ -16,6 +18,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.trie = Trie()
         self.s = deque()

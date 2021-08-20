@@ -1,6 +1,5 @@
 import math
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 str = input()
 l = []
 for elem in str:

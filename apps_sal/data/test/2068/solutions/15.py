@@ -22,5 +22,4 @@ while queue:
     for nei in adj_dict[current]:
         deep[nei] = deep[current] + 1
         queue.append(nei)
-
 print(max(deep.values()) + 1)

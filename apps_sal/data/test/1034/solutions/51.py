@@ -2,7 +2,7 @@ from heapq import heappush, heappop, heappushpop, heapify, heapreplace, merge
 
 
 def solve():
-    X, Y, Z, K = map(int, input().split())
+    (X, Y, Z, K) = map(int, input().split())
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     C = list(map(int, input().split()))

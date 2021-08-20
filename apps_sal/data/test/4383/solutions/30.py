@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,12 +9,10 @@ MOD = 1000000007
 
 def main():
     X = int(readline())
-
     if X in (7, 5, 3):
         print('YES')
     else:
         print('NO')
-
     return
 
 

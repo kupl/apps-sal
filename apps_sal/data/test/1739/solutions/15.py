@@ -1,9 +1,9 @@
 from collections import Counter
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 gcd = sum(l[:n - 1])
-m = 10**9 + 7
+m = 10 ** 9 + 7
 s = sum(l)
 l1 = []
 for i in l:

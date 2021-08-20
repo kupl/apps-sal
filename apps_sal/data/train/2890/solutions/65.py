@@ -4,5 +4,4 @@ def multiples(m, n):
     for a in range(m):
         result.append(count * n)
         count += 1
-
     return result

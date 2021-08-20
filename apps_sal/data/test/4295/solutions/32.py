@@ -1,5 +1,4 @@
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 result = N % K
 if result <= abs(result - K):
     print(result)

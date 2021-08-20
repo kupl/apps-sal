@@ -8,11 +8,9 @@ for i in range(n):
             q.append(a[i])
         else:
             q.appendleft(a[i])
+    elif i & 1:
+        q.appendleft(a[i])
     else:
-        if i & 1:
-            q.appendleft(a[i])
-        else:
-            q.append(a[i])
-
+        q.append(a[i])
 for i in q:
-    print(i, end=" ")
+    print(i, end=' ')

@@ -1,5 +1,5 @@
-a, A = list(map(int, input().split()))
-b, B = list(map(int, input().split()))
+(a, A) = list(map(int, input().split()))
+(b, B) = list(map(int, input().split()))
 c = input()
 c = int(c[:2]) * 60 + int(c[-2:])
 d = 0

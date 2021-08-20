@@ -1,6 +1,4 @@
 import string
-
-
 str1 = string.ascii_uppercase
 str2 = '@8(D3F6#!JK1MN0PQR$7UVWXY2'
 

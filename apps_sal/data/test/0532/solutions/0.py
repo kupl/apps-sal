@@ -1,4 +1,4 @@
-now = "a"
+now = 'a'
 ans = 0
 S = input()
 for s in S:

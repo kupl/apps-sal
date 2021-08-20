@@ -13,7 +13,7 @@ class UnionFind:
         return self.parents[x]
 
     def union(self, x, y):
-        xp, yp = self.find(x), self.find(y)
+        (xp, yp) = (self.find(x), self.find(y))
         if xp == yp:
             return
         if self.ranks[xp] < self.ranks[yp]:
@@ -26,18 +26,15 @@ class UnionFind:
 
 
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
+    def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
-
         n = max(A)
         dsu = UnionFind(n + 1)
-
         for a in A:
-            for k in range(2, int(a**0.5) + 1):
+            for k in range(2, int(a ** 0.5) + 1):
                 if a % k == 0:
                     dsu.union(a, k)
                     dsu.union(a, a // k)
-
         return max(Counter([dsu.find(a) for a in A]).values())

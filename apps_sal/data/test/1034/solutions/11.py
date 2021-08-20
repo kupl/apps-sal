@@ -1,8 +1,7 @@
-X, Y, Z, K = map(int, input().split())
+(X, Y, Z, K) = map(int, input().split())
 A = sorted(list(map(int, input().split())), reverse=True)
 B = sorted(list(map(int, input().split())), reverse=True)
 C = sorted(list(map(int, input().split())), reverse=True)
-
 ans = []
 for i in range(X):
     for j in range(Y):

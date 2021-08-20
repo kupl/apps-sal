@@ -1,4 +1,4 @@
-n, a, x, b, y = map(int, input().split())
+(n, a, x, b, y) = map(int, input().split())
 a -= 1
 b -= 1
 x -= 1
@@ -10,5 +10,4 @@ while a != x and b != y:
     if b != y:
         b = (b - 1) % n
     res |= a == b
-
-print("YES" if res else "NO")
+print('YES' if res else 'NO')

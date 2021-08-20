@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-ans = "No"
+(n, m) = list(map(int, input().split()))
+ans = 'No'
 if n == m:
-    ans = "Yes"
+    ans = 'Yes'
 print(ans)

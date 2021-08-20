@@ -31,7 +31,7 @@ def solve(mid):
 q = int(input())
 ans = [0] * q
 for qi in range(q):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     info = [list(map(int, input().split())) for i in range(n)]
     ok = 0
     ng = s + 1

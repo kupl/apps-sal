@@ -1,7 +1,7 @@
 def f(n, k):
     md = 10 ** 9 + 7
     if k % 2:
-        print((0))
+        print(0)
         return
     k //= 2
     dp = [[[0] * (n + 2) for _ in range(n ** 2)] for __ in range(n + 1)]
@@ -12,13 +12,11 @@ def f(n, k):
             for s in range(j, k + 1):
                 dpi1sj = dpi1[s - j]
                 if j:
-                    # 両方保留、片側、水平、両方上
                     dp[i][s][j] = (dpi1sj[j] * (j * 2 + 1) + dpi1sj[j + 1] * (j + 1) ** 2 + dpi1sj[j - 1]) % md
                 else:
-                    # 片側、水平、両方上
                     dp[i][s][j] = (dpi1sj[j] * (j * 2 + 1) + dpi1sj[j + 1] * (j + 1) ** 2) % md
-    print((dp[n][k][0]))
+    print(dp[n][k][0])
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 f(n, k)

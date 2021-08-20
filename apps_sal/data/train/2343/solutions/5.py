@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    d, m = [int(i) for i in input().split()]
+    (d, m) = [int(i) for i in input().split()]
     tot = 0
     p = 1
     while p <= d:

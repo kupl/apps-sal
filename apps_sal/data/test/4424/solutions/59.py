@@ -1,6 +1,6 @@
-k, x = map(int, input().split())
+(k, x) = map(int, input().split())
 money = k * 500
 if x <= money:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

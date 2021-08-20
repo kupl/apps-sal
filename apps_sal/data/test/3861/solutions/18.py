@@ -7,6 +7,6 @@ for i in a:
         if not sqrt(i).is_integer():
             if i > max:
                 max = i
-    elif(i > max):
+    elif i > max:
         max = i
 print(max)

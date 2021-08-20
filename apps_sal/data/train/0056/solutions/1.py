@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     odp = [[0] * n for i in range(n)]
     cur = [0, 0]
     zap = 0
@@ -18,4 +18,4 @@ for _ in range(q):
     else:
         print(2)
     for i in range(n):
-        print("".join(list(map(str, odp[i]))))
+        print(''.join(list(map(str, odp[i]))))

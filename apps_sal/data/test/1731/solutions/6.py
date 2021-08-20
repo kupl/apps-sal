@@ -1,12 +1,8 @@
 import sys
 readline = sys.stdin.readline
-
-MOD = 10**9 + 7
-
-N, M = map(int, readline().split())
-
+MOD = 10 ** 9 + 7
+(N, M) = map(int, readline().split())
 dp = [0] + [1] * N
-
 for _ in range(2 * M):
     dp2 = dp[:]
     for i in range(1, N + 1):

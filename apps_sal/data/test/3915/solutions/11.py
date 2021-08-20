@@ -1,7 +1,6 @@
-p, q = map(int, input().split())
+(p, q) = map(int, input().split())
 L = 2 * 10 ** 6 + 10 ** 5
 P = [0] * L
-
 for i in range(2, L, 1):
     if P[i] == 0:
         for j in range(i * i, L, i):

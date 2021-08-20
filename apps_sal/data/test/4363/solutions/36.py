@@ -1,5 +1,5 @@
 def main():
-    K, S = map(int, input().split())
+    (K, S) = map(int, input().split())
     ans = 0
     ListK = [i for i in range(K + 1)]
     for x in ListK:

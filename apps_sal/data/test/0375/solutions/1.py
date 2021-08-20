@@ -1,9 +1,7 @@
 import sys
-
 n = int(sys.stdin.readline())
 s = sys.stdin.readline().strip()
 t = sys.stdin.readline().strip()
-
 can1 = 1
 can2 = 1
 ft = -1

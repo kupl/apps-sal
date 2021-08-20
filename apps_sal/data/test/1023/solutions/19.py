@@ -1,4 +1,4 @@
-n, m, ta, tb, k = list(map(int, input().split()))
+(n, m, ta, tb, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 d = {}

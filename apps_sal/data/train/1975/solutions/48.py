@@ -5,7 +5,7 @@ class CustomStack:
         self.size = maxSize
 
     def push(self, x: int) -> None:
-        if(len(self.arr) == self.size):
+        if len(self.arr) == self.size:
             pass
         else:
             self.arr.append(x)
@@ -21,12 +21,5 @@ class CustomStack:
         for i in self.arr:
             self.arr[ctr] += val
             ctr += 1
-            if(ctr == k):
+            if ctr == k:
                 break
-
-
-# Your CustomStack object will be instantiated and called as such:
-# obj = CustomStack(maxSize)
-# obj.push(x)
-# param_2 = obj.pop()
-# obj.increment(k,val)

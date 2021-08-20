@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
 class lq(list):
+
     def __init__(self):
         self.value = []
         self.lenght = 0
@@ -21,14 +19,13 @@ class lq(list):
         else:
             rv = self.value[self.startPos]
             self.lenght -= 1
-            self.value[0:(self.startPos + 1)] = []
+            self.value[0:self.startPos + 1] = []
             self.startPos = 0
             return rv
 
 
 n = int(input())
 s = input()
-
 qforD = lq()
 qforR = lq()
 for i in range(n):

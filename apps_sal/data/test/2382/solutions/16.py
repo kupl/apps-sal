@@ -3,12 +3,9 @@ def main():
     S = list(map(int, input().split()))
     INF = float('inf')
     n = 2 ** N + 1
-
     S.sort()
-
     parents = [S[-1]]
     S[-1] = INF
-
     for _ in range(N):
         checking = 2
         parents.sort()

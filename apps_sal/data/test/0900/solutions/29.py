@@ -13,7 +13,7 @@ def main():
         for j in range(10):
             p[j] = 1
     for i in range(1, len(s)):
-        multiplier = (10 * multiplier) % 13
+        multiplier = 10 * multiplier % 13
         if s[i] != '?':
             r = int(s[i]) * multiplier
             for j in list13:

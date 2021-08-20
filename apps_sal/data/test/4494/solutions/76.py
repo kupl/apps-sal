@@ -1,7 +1,6 @@
 def main() -> None:
     s = input()
-
-    print(('ARC' if s == 'ABC' else 'ABC'))
+    print('ARC' if s == 'ABC' else 'ABC')
     return
 
 

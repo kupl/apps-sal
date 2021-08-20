@@ -1,8 +1,4 @@
-#n = int(input())
-w, a, b = list(map(int, input().split()))
-#l = list(map(int,input().split()))
-#l = [list(map(int,input().split())) for i in range(n)]
-
+(w, a, b) = list(map(int, input().split()))
 if a <= b:
     ans = max(0, b - (a + w))
 else:

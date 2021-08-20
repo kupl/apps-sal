@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [-1] * n
         self.cnt = n
@@ -19,7 +20,7 @@ class UnionFind:
         y = self.root(y)
         if x != y:
             if self.parent[x] > self.parent[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parent[x] += self.parent[y]
             self.parent[y] = x
             self.cnt -= 1
@@ -34,13 +35,11 @@ class UnionFind:
         return self.cnt
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 info = [list(map(int, input().split())) for i in range(m)]
 uf = UnionFind(n)
-
-for a, b in info:
+for (a, b) in info:
     uf.merge(a - 1, b - 1)
-
 ans = 0
 i = 0
 while True:

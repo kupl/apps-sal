@@ -9,12 +9,11 @@ def nQueen(n):
         L1 = [2 * i - 1 for i in range(1, n // 2 + 1)]
     else:
         L1 = [2 * i - 1 for i in range(1, n // 2 + 2)]
-
     if r == 8:
         for i in range(1, len(L1), 2):
-            L1[i - 1], L1[i] = L1[i], L1[i - 1]
+            (L1[i - 1], L1[i]) = (L1[i], L1[i - 1])
     if r == 2:
-        L1[0], L1[1] = L1[1], L1[0]
+        (L1[0], L1[1]) = (L1[1], L1[0])
         L1.remove(5)
         L1.append(5)
     if r == 3 or r == 9:

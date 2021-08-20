@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split(" ")))
+(n, k) = list(map(int, input().split(' ')))
 if 2 * k + 1 > n:
     print(-1)
 else:

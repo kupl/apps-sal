@@ -1,10 +1,9 @@
 mod = 998244353
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = []
 for i in range(N):
     a = [int(i) for i in input().split()]
     A.append(a)
-
 memo = [1]
 for i in range(1, 52):
     num = memo[-1]
@@ -12,9 +11,8 @@ for i in range(1, 52):
 
 
 class UnionFind:
+
     def __init__(self, n):
-        # 負  : 根であることを示す。絶対値はランクを示す
-        # 非負: 根でないことを示す。値は親を示す
         self.table = [-1] * n
 
     def _root(self, x):
@@ -38,7 +36,6 @@ class UnionFind:
         r2 = self._root(y)
         if r1 == r2:
             return
-        # ランクの取得
         d1 = self.table[r1]
         d2 = self.table[r2]
         if d1 <= d2:
@@ -51,7 +48,6 @@ class UnionFind:
 
 uni1 = UnionFind(N)
 uni2 = UnionFind(N)
-
 for i in range(N - 1):
     for j in range(i + 1, N):
         cur1 = 0
@@ -65,9 +61,8 @@ for i in range(N - 1):
             uni1.union(i, j)
         if cur2 == N:
             uni2.union(i, j)
-
 lsnum = []
-set1, set2 = set(), set()
+(set1, set2) = (set(), set())
 for i in range(N):
     if uni1._root(i) not in set1:
         lsnum.append(uni1.count(i))
@@ -75,7 +70,6 @@ for i in range(N):
     if uni2._root(i) not in set2:
         lsnum.append(uni2.count(i))
         set2.add(uni2._root(i))
-
 ans = 1
 for num in lsnum:
     ans = ans * memo[num] % mod

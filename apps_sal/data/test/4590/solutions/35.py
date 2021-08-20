@@ -1,5 +1,5 @@
-n, m, k = map(int, input().split())
-A, B = eval("[0]+[*map(int,input().split())]," * 2)
+(n, m, k) = map(int, input().split())
+(A, B) = eval('[0]+[*map(int,input().split())],' * 2)
 s = t = x = 0
 j = m
 for i in range(n + 1):

@@ -1,29 +1,18 @@
-# coding: utf-8
-# Your code here!
 from math import hypot
 import sys
 read = sys.stdin.read
 readline = sys.stdin.readline
-
-xs, ys, xt, yt = list(map(int, readline().split()))
-n, = list(map(int, readline().split()))
-
+(xs, ys, xt, yt) = list(map(int, readline().split()))
+(n,) = list(map(int, readline().split()))
 xyr = [tuple(map(int, readline().split())) for _ in range(n)] + [(xs, ys, 0), (xt, yt, 0)]
-
-
-"""
-d: 隣接行列に対する Dijkstra
-O(N^2)
-"""
+'\nd: 隣接行列に対する Dijkstra\nO(N^2)\n'
 
 
 def Dijkstra_matrix(d, start):
     n = len(d)
-    #INF = 1<<61
-    INF = float("inf")
-    dist = d[start][:]  # startからの最短距離
-
-    used = [0] * n  # 最短距離が決まった頂点
+    INF = float('inf')
+    dist = d[start][:]
+    used = [0] * n
     used[start] = 1
     for _ in range(n - 1):
         d0 = INF
@@ -42,9 +31,6 @@ def Dijkstra_matrix(d, start):
     return dist
 
 
-d = [[max(0.0, hypot((xi - xj), (yi - yj)) - ri - rj) for xj, yj, rj in xyr] for xi, yi, ri in xyr]
-
-# print(d)
+d = [[max(0.0, hypot(xi - xj, yi - yj) - ri - rj) for (xj, yj, rj) in xyr] for (xi, yi, ri) in xyr]
 dist = Dijkstra_matrix(d, n)
-print((dist[-1]))
-# print(dist)
+print(dist[-1])

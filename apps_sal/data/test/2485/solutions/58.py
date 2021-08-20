@@ -1,4 +1,4 @@
-H, W, M = map(int, input().split())
+(H, W, M) = map(int, input().split())
 bombs = {}
 rows = []
 cols = []
@@ -7,12 +7,10 @@ for i in range(H):
 for i in range(W):
     cols.append([i, 0])
 for i in range(M):
-    y, x = map(lambda x: x - 1, map(int, input().split()))
-    bombs[(y, x)] = True
+    (y, x) = map(lambda x: x - 1, map(int, input().split()))
+    bombs[y, x] = True
     rows[y][1] += 1
     cols[x][1] += 1
-
-
 rows = sorted(rows, key=lambda x: x[1], reverse=True)
 cols = sorted(cols, key=lambda x: x[1], reverse=True)
 answer = 0

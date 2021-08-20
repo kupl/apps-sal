@@ -1,6 +1,7 @@
 class Solution:
+
     def matrixScore(self, A: List[List[int]]) -> int:
-        N, M = len(A), len(A[0])
+        (N, M) = (len(A), len(A[0]))
         res = 0
         for jj in range(M):
             num = 0

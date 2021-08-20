@@ -1,9 +1,6 @@
-# cook your dish here
-'''
+"""
 https://www.codechef.com/INOIPRAC/problems/INOI1501
-'''
-
-#inputFile = open('input.txt', 'r')
+"""
 n = int(input())
 a = list(map(int, input().rstrip().split()))
 b = list(map(int, input().rstrip().split()))
@@ -26,6 +23,4 @@ for i in range(1, n):
     halfmaxwraparound[i] = max(halfmaxwraparound[i - 1], a[i] + presumb[i - 1])
 for i in range(1, n):
     ans = max(ans, halfmaxwraparound[i - 1] + a[i] + totalarraysumb - presumb[i])
-
-
 print(ans)

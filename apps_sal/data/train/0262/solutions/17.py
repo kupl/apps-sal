@@ -1,7 +1,8 @@
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         max_len = len(result)
-        if max(len(w) for w in words) > max_len:
+        if max((len(w) for w in words)) > max_len:
             return False
         words = [word.rjust(max_len, '#') for word in words]
         result = result.rjust(max_len, '#')
@@ -26,11 +27,9 @@ class Solution:
                         del assignments[t]
                         used_digits.remove(guess)
                     return False
-
-            s = sum(assignments[c] for c in equations[eqn_index][1:]) + carry
+            s = sum((assignments[c] for c in equations[eqn_index][1:])) + carry
             if s % 10 != assignments[equations[eqn_index][0]]:
                 return False
             else:
                 return isSAT(eqn_index - 1, s // 10)
-
         return isSAT(max_len - 1, 0)

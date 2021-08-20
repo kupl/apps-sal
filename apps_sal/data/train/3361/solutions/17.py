@@ -10,5 +10,5 @@ def sum_of_minimums(numbers):
         x += 1
     res = [sum(i) for i in zip(*answer)]
     stringres = [str(i) for i in res]
-    finalres = int("".join(stringres))
+    finalres = int(''.join(stringres))
     return int(finalres)

@@ -6,12 +6,10 @@ def f(x, k):
 
 
 t = input()
-s, k = set(), t.count('?')
-
+(s, k) = (set(), t.count('?'))
 for i in t:
     if i >= 'A':
         s.add(i)
-
 if t[0] in '123456789':
     print(f(len(s), 11) * 10 ** k)
 elif t[0] == '?':

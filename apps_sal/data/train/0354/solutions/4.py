@@ -1,6 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         dp = [[1] * 6 for i in range(n)]
         for i in range(1, n):
             for j in range(6):

@@ -1,12 +1,11 @@
 from collections import defaultdict
-n, W = list(map(int, input().split()))
+(n, W) = list(map(int, input().split()))
 dd = defaultdict(list)
 for i in range(n):
-    weight, value = list(map(int, input().split()))
+    (weight, value) = list(map(int, input().split()))
     dd[weight].append(value)
-
 a = min(dd.keys())
-b, c, d = a + 1, a + 2, a + 3
+(b, c, d) = (a + 1, a + 2, a + 3)
 Vcum = defaultdict(lambda: [0])
 for k in [a, b, c, d]:
     s = 0
@@ -14,7 +13,6 @@ for k in [a, b, c, d]:
     for val in dd[k]:
         s += val
         Vcum[k].append(s)
-
 ans = 0
 for w in range(len(dd[a]) + 1):
     for x in range(len(dd[b]) + 1):

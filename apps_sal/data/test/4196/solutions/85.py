@@ -1,6 +1,6 @@
-from math import*
+from math import *
 N = int(input())
-*A, = map(int, input().split())
+(*A,) = map(int, input().split())
 R = [0]
 r = A[-1]
 for a in A[::-1]:

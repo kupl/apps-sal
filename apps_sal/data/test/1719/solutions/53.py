@@ -2,11 +2,9 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     n = int(readline())
-
     A = 0
     T = 1
     G = 2
@@ -18,15 +16,15 @@ def main():
             for k in range(4):
                 for l in range(4):
                     for m in range(4):
-                        if j == A and k == G and l == C:
+                        if j == A and k == G and (l == C):
                             pass
-                        elif j == A and k == C and l == G:
+                        elif j == A and k == C and (l == G):
                             pass
-                        elif j == G and k == A and l == C:
+                        elif j == G and k == A and (l == C):
                             pass
-                        elif m == A and k == G and l == C:
+                        elif m == A and k == G and (l == C):
                             pass
-                        elif m == A and j == G and l == C:
+                        elif m == A and j == G and (l == C):
                             pass
                         else:
                             dp[i][j][k][l] += dp[i - 1][m][j][k]
@@ -36,7 +34,6 @@ def main():
             for l in range(4):
                 ans += dp[n][j][k][l]
                 ans %= mod
-
     print(ans)
 
 

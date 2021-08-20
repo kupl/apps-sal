@@ -1,16 +1,16 @@
 q = int(input())
 for re in range(q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a >= 4:
-        print("YES")
+        print('YES')
     else:
         if a == 1:
             if b == 1:
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')
         if a == 2 or a == 3:
             if b in [1, 2, 3]:
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')

@@ -1,6 +1,5 @@
-x, k, d = list(map(int, input().split()))
+(x, k, d) = list(map(int, input().split()))
 x = abs(x)
-
 if x < k * d:
     step = x // d
     k -= step
@@ -11,5 +10,4 @@ if x < k * d:
 else:
     x -= k * d
     ans = x
-
 print(ans)

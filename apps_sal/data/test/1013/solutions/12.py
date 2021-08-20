@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = 4
 if '1' in input():
     ans = 2

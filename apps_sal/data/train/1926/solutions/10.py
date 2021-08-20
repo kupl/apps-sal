@@ -1,5 +1,5 @@
-
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         x = num + 1
         y = num + 2
@@ -8,7 +8,6 @@ class Solution:
             if x % i == 0:
                 a.append([i, x // i])
                 break
-
         for j in range(int(y ** 0.5) + 1, -1, -1):
             if y % j == 0:
                 a.append([j, y // j])

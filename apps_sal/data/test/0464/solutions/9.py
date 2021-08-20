@@ -2,9 +2,9 @@ def gns():
     return list(map(int, input().split()))
 
 
-r, c = gns()
+(r, c) = gns()
 m = [[0] * c for i in range(r)]
-rm, cm = [0] * r, [0] * c
+(rm, cm) = ([0] * r, [0] * c)
 for i in range(r):
     x = input()
     for j in range(c):
@@ -12,7 +12,7 @@ for i in range(r):
             m[i][j] = 1
             rm[i] += 1
             cm[j] += 1
-x, y = 0, 0
+(x, y) = (0, 0)
 for i in range(r):
     if rm[i] >= 3:
         x = i
@@ -20,7 +20,7 @@ for j in range(c):
     if cm[j] >= 3:
         y = j
 ans = 1
-if (x == 0 or x == r - 1 or y == 0 or y == c - 1) or m[x][y] + m[x - 1][y] + m[x + 1][y] + m[x][y - 1] + m[x][y + 1] < 5:
+if (x == 0 or x == r - 1 or y == 0 or (y == c - 1)) or m[x][y] + m[x - 1][y] + m[x + 1][y] + m[x][y - 1] + m[x][y + 1] < 5:
     print('NO')
     quit()
 j = y - 1

@@ -10,12 +10,9 @@ for k in range(d):
         ans += '0'
     else:
         ans += b[k]
-
-
 if d < len(b):
     ans += '.'
     ans += b[d:]
-
 i1 = ans.find('.')
 bo = True
 if i1 == -1:
@@ -27,16 +24,12 @@ else:
 
 
 def cl1(ans1):
-
     k = 0
     while k < len(ans1) - 1:
-
         if ans1[k] != '0':
-
             break
         else:
             ans1 = ans1[k + 1:]
-
     if ans1 == None:
         ans1 = 0
     return ans1
@@ -52,7 +45,6 @@ def cl2(ans2):
 
 
 if bo:
-
     ans1 = cl1(ans1)
     ans2 = cl2(ans2)
     total = ans1 + '.' + ans2
@@ -61,5 +53,4 @@ if bo:
     else:
         print(total)
 else:
-
     print(cl1(ans1))

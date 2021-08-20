@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(eval(input()))
 for i in range(t):
     inp = list(map(int, input().split()))
@@ -12,9 +11,9 @@ for i in range(t):
         bef_count = 0
         af_count = 0
         for q in range(len(inp)):
-            if(q > p and inp[q] < inp[p]):
+            if q > p and inp[q] < inp[p]:
                 af_count += 1
-            elif(q < p and inp[q] < inp[p]):
+            elif q < p and inp[q] < inp[p]:
                 bef_count += 1
         ans += af_count * (k * (k + 1)) // 2
         ans += bef_count * (k * (k - 1)) // 2

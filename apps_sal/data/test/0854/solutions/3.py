@@ -1,4 +1,3 @@
-
 def buy(n, t, c, s):
     if len(c) == 0:
         return 0
@@ -19,10 +18,9 @@ def buy(n, t, c, s):
 
 
 def main():
-    n, t = [int(x) for x in input().split(" ")]
-    c = list([int(x) for x in input().split(" ")])
+    (n, t) = [int(x) for x in input().split(' ')]
+    c = list([int(x) for x in input().split(' ')])
     s = sum(c)
-
     print(buy(n, t, c, s))
 
 

@@ -1,20 +1,18 @@
-n, m, x = [int(i) for i in input().split()]
+(n, m, x) = [int(i) for i in input().split()]
 c = []
 arr = [[] for i in range(n)]
 for i in range(n):
     l = [int(i) for i in input().split()]
     c.append(l[0])
     arr[i] = l[1:]
-
-inf = 10**18
+inf = 10 ** 18
 ans = inf
-
-limit = 2**n
+limit = 2 ** n
 for bit in range(1, limit):
     sum = [0 for i in range(m)]
     cost = 0
     for i in range(n):
-        if (1 << i & bit):
+        if 1 << i & bit:
             cost += c[i]
             for j in range(m):
                 sum[j] += arr[i][j]
@@ -29,4 +27,4 @@ for bit in range(1, limit):
 if ans != inf:
     print(ans)
 else:
-    print((-1))
+    print(-1)

@@ -1,9 +1,10 @@
 def dithering(width, height):
+
     def rec(v, x, y):
         if not (x < width and y < height):
             return
         if not (x + v < width or y + v < height):
-            yield x, y
+            yield (x, y)
             return
         for k in rec(2 * v, x, y):
             yield k

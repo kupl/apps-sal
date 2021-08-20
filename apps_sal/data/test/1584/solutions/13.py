@@ -1,9 +1,7 @@
 from bisect import *
 N = int(input())
-*L, = tuple(sorted(map(int, input().split())))
-
+(*L,) = tuple(sorted(map(int, input().split())))
 r = 0
-
 for a in range(N):
     for b in range(a + 1, N):
         x = L[a]

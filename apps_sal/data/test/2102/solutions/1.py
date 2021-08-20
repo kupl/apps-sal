@@ -8,7 +8,7 @@ for i in range(n):
 b.sort()
 cs = {}
 i = j = 0
-ans = 10**18
+ans = 10 ** 18
 
 
 def dd(w):

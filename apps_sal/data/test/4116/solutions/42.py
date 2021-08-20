@@ -6,7 +6,6 @@ for i in range(1, 10):
             y += 1
         else:
             pass
-
 if y >= 1:
     print('Yes')
 else:

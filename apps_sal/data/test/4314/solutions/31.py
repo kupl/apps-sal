@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 table = []
 for i in range(h):
     table.append(list(input()))

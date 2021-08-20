@@ -26,13 +26,12 @@ def split_all_even_numbers(numbers, way):
     for i in numbers:
         if i % 2:
             result += [i]
+        elif way == 0:
+            result += split_even_number0(i)
+        elif way == 1:
+            result += split_even_number1(i)
+        elif way == 2:
+            result += split_even_number2(i)
         else:
-            if way == 0:
-                result += split_even_number0(i)
-            elif way == 1:
-                result += split_even_number1(i)
-            elif way == 2:
-                result += split_even_number2(i)
-            else:
-                result += split_even_number3(i)
+            result += split_even_number3(i)
     return result

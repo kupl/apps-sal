@@ -5,6 +5,6 @@ for i in a:
     if i % 2 == 0:
         c += 1
 if c > n - c:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

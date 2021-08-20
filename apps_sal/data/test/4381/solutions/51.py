@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,10 +8,8 @@ MOD = 1000000007
 
 
 def main():
-    X, Y = list(map(int, readline().split()))
-
-    print((X + Y // 2))
-
+    (X, Y) = list(map(int, readline().split()))
+    print(X + Y // 2)
     return
 
 

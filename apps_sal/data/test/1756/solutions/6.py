@@ -6,12 +6,12 @@ def get_sum(l, r):
     return sm(r) - sm(l - 1)
 
 
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 d = [int(i) for i in input().split()]
 d = d[:] + d[:]
 n *= 2
 pre = [d[0]]
-month, day, days, tot = n - 1, d[n - 1] + 1, 0, 0
+(month, day, days, tot) = (n - 1, d[n - 1] + 1, 0, 0)
 ans = 0
 for i in range(n - 1, -1, -1):
     while days < x and month >= 0:

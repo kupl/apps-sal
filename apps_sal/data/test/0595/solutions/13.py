@@ -1,8 +1,8 @@
 def leap(x):
-    return x % 400 == 0 or x % 4 == 0 and x % 100 != 0
+    return x % 400 == 0 or (x % 4 == 0 and x % 100 != 0)
 
 
-y, v = int(input()), 0
+(y, v) = (int(input()), 0)
 l = leap(y)
 while True:
     v = (v + 1 + leap(y)) % 7

@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 def ri():
     return list(map(int, input().split()))
 
 
-n, m = ri()
-
+(n, m) = ri()
 pol = set()
 eny = set()
 for i in range(n):
@@ -18,12 +16,11 @@ for word in pol_copy:
         adding += 1
         eny.remove(word)
         pol.remove(word)
-
 if adding % 2:
     adding = 1
 else:
     adding = 0
 if len(pol) + adding > len(eny):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

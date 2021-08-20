@@ -1,4 +1,4 @@
-N, R = map(int, input().split())
+(N, R) = map(int, input().split())
 ans = 0
 if N >= 10:
     ans += R

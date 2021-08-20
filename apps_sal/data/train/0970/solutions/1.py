@@ -1,4 +1,3 @@
-
 def binary(arr, s):
     low = 0
     high = n - 1
@@ -18,7 +17,7 @@ for _ in range(int(input())):
     q = int(input())
     arr.sort()
     for i in range(q):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         s = x + y
         if arr[0] > s:
             print(0)
@@ -31,5 +30,3 @@ for _ in range(int(input())):
             print(-1)
         else:
             print(index + 1)
-
-            # TODO: write code...

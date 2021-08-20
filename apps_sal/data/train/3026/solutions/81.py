@@ -9,5 +9,5 @@ def min_value(digits):
             lista.append(i)
     heap = heapq.nsmallest(99, lista)
     heap_string = [str(i) for i in heap]
-    convert = "".join(heap_string)
+    convert = ''.join(heap_string)
     return int(convert)

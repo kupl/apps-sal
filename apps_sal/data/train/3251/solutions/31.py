@@ -1,7 +1,7 @@
 def primeFactors(n):
     i = 2
     li = []
-    s = ""
+    s = ''
     while n != 1:
         count = 0
         while n % i == 0:
@@ -13,7 +13,7 @@ def primeFactors(n):
         i = i + 1
     for i in li:
         if i[1] != 1:
-            s = s + "(" + str(i[0]) + "**" + str(i[1]) + ")"
+            s = s + '(' + str(i[0]) + '**' + str(i[1]) + ')'
         else:
-            s = s + "(" + str(i[0]) + ")"
+            s = s + '(' + str(i[0]) + ')'
     return s

@@ -1,6 +1,6 @@
-n, k, m, t = map(int, input().split())
+(n, k, m, t) = map(int, input().split())
 for i in range(t):
-    bj, p = map(int, input().split())
+    (bj, p) = map(int, input().split())
     if bj == 0:
         n1 = p
         n2 = n - p

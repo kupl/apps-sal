@@ -8,9 +8,9 @@ while True:
             dic[x[i]] = 1
     if len(dic) == len(x):
         if x.isalnum() == True:
-            print("Valid")
+            print('Valid')
             break
         else:
-            print("Invalid")
+            print('Invalid')
     else:
-        print("Invalid")
+        print('Invalid')

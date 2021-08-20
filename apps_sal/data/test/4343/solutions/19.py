@@ -4,7 +4,7 @@ import io
 
 def arr(ls):
     l = [0] * len(ls)
-    for i, v in enumerate(ls):
+    for (i, v) in enumerate(ls):
         l[i] = ord(v) - 97
     return l
 
@@ -39,16 +39,21 @@ def add(ls1, ls2, n):
     return ls1
 
 
-# input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
-# input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
-def kk(): return list(map(int, input().split()))
-def k2(): return [int(x) - 1 for x in input().split()]
-def ll(): return list(kk())
+def kk():
+    return list(map(int, input().split()))
 
 
-n, w1, w2 = int(input()), list(input().strip()), list(input().strip())
-ls1, ls2 = arr(w1), arr(w2)
+def k2():
+    return [int(x) - 1 for x in input().split()]
+
+
+def ll():
+    return list(kk())
+
+
+(n, w1, w2) = (int(input()), list(input().strip()), list(input().strip()))
+(ls1, ls2) = (arr(w1), arr(w2))
 subtr(ls2, ls1, n)
 div2(ls2, n)
 add(ls1, ls2, n)
-print("".join([chr(97 + x) for x in [x for x in ls1]]))
+print(''.join([chr(97 + x) for x in [x for x in ls1]]))

@@ -1,8 +1,7 @@
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
-    l, r = 1, 0
+    (l, r) = (1, 0)
     t = A[0]
     n = 1
     while l < N:
@@ -16,4 +15,4 @@ def main():
     return n
 
 
-print((main()))
+print(main())

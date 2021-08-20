@@ -1,12 +1,10 @@
 n = int(input())
 a = []
 p = []
-
 for i in range(n):
-    ai, pi = list(map(int, input().split()))
+    (ai, pi) = list(map(int, input().split()))
     a.append(ai)
     p.append(pi)
-
 cost = 0
 meat = 0
 for i in range(n):
@@ -18,7 +16,5 @@ for i in range(n):
                 break
             cost += p[i] * a[j]
             meat += a[j]
-
     meat -= a[i]
-
 print(cost)

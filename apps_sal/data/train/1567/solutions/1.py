@@ -1,12 +1,9 @@
 T = int(input())
-
 for _ in range(T):
     N = int(input())
     S = input()
-
     if N <= 2:
-        print("YES")
-
+        print('YES')
     else:
         unique_c = {}
         for c in S:
@@ -19,14 +16,12 @@ for _ in range(T):
         for c in list(unique_c.keys()):
             if unique_c[c] % 2 != 0:
                 no_odd += 1
-
         if N // 2 % 2 == 1:
             if no_odd == 2 or no_odd == 0:
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')
+        elif no_odd != 0:
+            print('NO')
         else:
-            if no_odd != 0:
-                print("NO")
-            else:
-                print("YES")
+            print('YES')

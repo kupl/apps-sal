@@ -1,6 +1,7 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        comp_dict = {i: set(v) for i, v in enumerate(favoriteCompanies)}
+        comp_dict = {i: set(v) for (i, v) in enumerate(favoriteCompanies)}
         res = []
         for i in range(len(favoriteCompanies)):
             subset = True

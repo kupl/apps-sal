@@ -1,13 +1,10 @@
 import bisect
-
-N, Q = list(map(int, input().split()))
+(N, Q) = list(map(int, input().split()))
 ws = list(map(int, input().split()))
 qs = list(map(int, input().split()))
-
 cums = [0]
 for w in ws:
     cums.append(cums[-1] + w)
-
 damage = 0
 for q in qs:
     damage += q

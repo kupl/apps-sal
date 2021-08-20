@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         left -= 1
         right -= 1
@@ -22,5 +23,5 @@ class Solution:
                     heapq.heappop(heap)
         acc = 0
         for _ in range(right - left + 1):
-            acc = (acc - heapq.heappop(heap)) % (10**9 + 7)
+            acc = (acc - heapq.heappop(heap)) % (10 ** 9 + 7)
         return acc

@@ -3,9 +3,16 @@ from collections import defaultdict
 from copy import copy
 
 
-def R(t=int): return t(input())
-def RL(t=int): return [t(x) for x in input().split()]
-def RLL(n, t=int): return [RL(t) for _ in range(n)]
+def R(t=int):
+    return t(input())
+
+
+def RL(t=int):
+    return [t(x) for x in input().split()]
+
+
+def RLL(n, t=int):
+    return [RL(t) for _ in range(n)]
 
 
 def solve():

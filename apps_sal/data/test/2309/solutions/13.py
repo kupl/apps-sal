@@ -1,5 +1,4 @@
 vowelList = ['a', 'e', 'i', 'o', 'u']
-
 r = int(input())
 stringArr = []
 for i in range(r):
@@ -28,10 +27,7 @@ for i in range(r):
         n = stringArr[i][2]
         currentArr = []
     currentArr.append(stringArr[i])
-
 equalNumVowels.append(currentArr)
-
-
 for ar in equalNumVowels:
     aArr = []
     eArr = []
@@ -39,13 +35,13 @@ for ar in equalNumVowels:
     oArr = []
     uArr = []
     for item in ar:
-        if item[1] == "a":
+        if item[1] == 'a':
             aArr.append(item)
-        elif item[1] == "e":
+        elif item[1] == 'e':
             eArr.append(item)
-        elif item[1] == "i":
+        elif item[1] == 'i':
             iArr.append(item)
-        elif item[1] == "o":
+        elif item[1] == 'o':
             oArr.append(item)
         else:
             uArr.append(item)
@@ -84,14 +80,12 @@ for ar in equalNumVowels:
         m = leftOver.pop()
         n = leftOver.pop()
         correspondingFirstPairs.append([m, n])
-
 print(min(len(correspondingSecondPairs), len(correspondingFirstPairs) + (len(correspondingSecondPairs) - len(correspondingFirstPairs)) // 2))
 while len(correspondingFirstPairs) >= 1 and len(correspondingSecondPairs) >= 1:
     a = correspondingFirstPairs.pop()
     b = correspondingSecondPairs.pop()
-    print(str(a[0][0]) + " " + str(b[0][0]) + "\n" + str(a[1][0]) + " " + str(b[1][0]))
-
+    print(str(a[0][0]) + ' ' + str(b[0][0]) + '\n' + str(a[1][0]) + ' ' + str(b[1][0]))
 while len(correspondingSecondPairs) >= 2:
     a = correspondingSecondPairs.pop()
     b = correspondingSecondPairs.pop()
-    print(str(a[0][0]) + " " + str(b[0][0]) + "\n" + str(a[1][0]) + " " + str(b[1][0]))
+    print(str(a[0][0]) + ' ' + str(b[0][0]) + '\n' + str(a[1][0]) + ' ' + str(b[1][0]))

@@ -6,11 +6,9 @@ for _ in range(t):
     As = list(map(int, input().split()))
     left = 0
     right = n - 1
-
     a += As[0]
     left = 1
     min = As[0]
-
     curr = 0
     turn = False
     count = 1

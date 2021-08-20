@@ -3,5 +3,5 @@ def candles(m, n):
     l = 0
     while m:
         total += m
-        m, l = divmod(m + l, n)
+        (m, l) = divmod(m + l, n)
     return total

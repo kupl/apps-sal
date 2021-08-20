@@ -1,4 +1,4 @@
-A, B, X, Y = map(int, input().split())
+(A, B, X, Y) = map(int, input().split())
 x = A * 2
 y = B * 2 + 1
 l = abs(y - x)

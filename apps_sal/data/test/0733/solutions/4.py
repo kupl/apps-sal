@@ -13,7 +13,7 @@ def __starting_point():
     a = int(arr[2])
     b = int(arr[3])
     g = gcd(min(x, y), max(x, y))
-    l = (x * y) // g
+    l = x * y // g
     i = 0
     for i in range(a, a + l + 1):
         if i > b:

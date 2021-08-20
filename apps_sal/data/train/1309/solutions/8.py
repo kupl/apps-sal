@@ -1,10 +1,8 @@
-# cook your dish here
-t = int(eval(input("")))
-while(t != 0):
-    k = int(eval(input("")))
+t = int(eval(input('')))
+while t != 0:
+    k = int(eval(input('')))
     s = ''
     for i in range(k, 0, -1):
-        # print(i)
         for j in range(k, 0, -1):
             if i >= k and j == i:
                 s = s + str(j)

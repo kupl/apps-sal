@@ -1,5 +1,4 @@
 class Solution:
-
     dictionary = {}
 
     def climbStairs(self, n):

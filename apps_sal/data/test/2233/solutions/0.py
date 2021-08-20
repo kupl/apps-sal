@@ -7,7 +7,7 @@ for i in range(k):
     for i in range(n):
         if s1[i] != s2[i]:
             if q is None:
-                q = s1[i], s2[i]
+                q = (s1[i], s2[i])
             elif q == (s1[i], s2[i]):
                 q = 1
             else:
@@ -15,6 +15,6 @@ for i in range(k):
                 break
     else:
         if q == 1:
-            print('Yes')  # isinstance(q, tuple):
+            print('Yes')
         else:
             print('No')

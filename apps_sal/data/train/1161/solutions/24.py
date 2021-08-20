@@ -3,9 +3,9 @@ for _ in range(t):
     s = input()
     if len(s) == 1:
         if s[0] == 'm':
-            print("mongooses")
+            print('mongooses')
         else:
-            print("snakes")
+            print('snakes')
     else:
         sc = 0
         mc = 0
@@ -34,8 +34,8 @@ for _ in range(t):
                     else:
                         s[i - 1] = 'b'
         if sc > mc:
-            print("snakes")
+            print('snakes')
         elif sc < mc:
-            print("mongooses")
+            print('mongooses')
         else:
-            print("tie")
+            print('tie')

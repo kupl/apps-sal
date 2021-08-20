@@ -1,15 +1,11 @@
 import math
-
-N, M = [int(x) for x in input().split()]
+(N, M) = [int(x) for x in input().split()]
 edges = [[int(x) for x in input().split()] for _ in range(M)]
-
 forward_edges = {n + 1: [] for n in range(N)}
 reverse_edges = {n + 1: [] for n in range(N)}
 for e in edges:
     forward_edges[e[0]].append(e[1])
     reverse_edges[e[1]].append(e[0])
-# print(  forward_edges)
-# print(  reverse_edges)
 estimated_distance = {n + 1: None for n in range(N)}
 estimated_distance[N] = 0
 probability = {n + 1: None for n in range(N)}
@@ -42,9 +38,7 @@ for n in range(1, N):
     if len(forward_edges[n]) == 1:
         continue
     distances = [get_distance(m) for m in forward_edges[n]]
-    distance_diff = sum(distances) / len(distances) - (
-        sum(distances) - max(distances)) / (len(distances) - 1)
+    distance_diff = sum(distances) / len(distances) - (sum(distances) - max(distances)) / (len(distances) - 1)
     decrease = get_probability(n) * distance_diff
     max_decrease = max(max_decrease, decrease)
-
-print((before_distance - max_decrease))
+print(before_distance - max_decrease)

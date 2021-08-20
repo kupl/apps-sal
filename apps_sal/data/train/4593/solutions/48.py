@@ -5,7 +5,6 @@ def merge_arrays(a, b):
         if a[i] not in x:
             x.append(a[i])
         i += 1
-
     i = 0
     while len(b) > i:
         if b[i] not in x:

@@ -1,11 +1,10 @@
 def interpreter(code, iterations, width, height):
     matrix = [[0 for i in range(width)] for i in range(height)]
-    i = 0  # code position
+    i = 0
     iteration = 0
-    p = [0, 0]  # data pointer
-    s = []  # stack (used for loops)
-    mate = {}  # Paired [ / ] (used for loops)
-
+    p = [0, 0]
+    s = []
+    mate = {}
     for k in range(len(code)):
         c = code[k]
         if c == '[':
@@ -14,7 +13,6 @@ def interpreter(code, iterations, width, height):
             m = s.pop()
             mate[m] = k
             mate[k] = m
-
     while iteration < iterations and i < len(code):
         c = code[i]
         if c == '*':
@@ -34,8 +32,7 @@ def interpreter(code, iterations, width, height):
             if matrix[p[1]][p[0]]:
                 i = mate[i]
         else:
-            iteration -= 1  # Ignore iteration on unknown command
+            iteration -= 1
         i += 1
         iteration += 1
-
     return '\r\n'.join([''.join([str(matrix[y][x]) for x in range(width)]) for y in range(height)])

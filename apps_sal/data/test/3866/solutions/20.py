@@ -1,6 +1,6 @@
 def prnt(j):
     for i in range(j):
-        print(i, end=" ")
+        print(i, end=' ')
     print()
     return
 
@@ -13,9 +13,9 @@ def triplet(n):
             num = i + i
             if num >= n:
                 num = num - n
-            print(num, end=" ")
+            print(num, end=' ')
     else:
-        print("-1")
+        print('-1')
 
 
 n = int(input())

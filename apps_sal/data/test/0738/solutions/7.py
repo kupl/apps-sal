@@ -1,4 +1,4 @@
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 sol = 0
 z = c
 sm = min(c - b, b - a)
@@ -14,7 +14,7 @@ while b + c >= z and z <= d:
     if mn <= z and m1 > z:
         foo = z + 1 - mn
         sol += maxi
-        sol -= ((foo) * (foo + 1)) // 2
+        sol -= foo * (foo + 1) // 2
     if m1 <= z and m2 > z:
         foo = sm * (sm + 1)
         foo //= 2
@@ -24,6 +24,6 @@ while b + c >= z and z <= d:
         sol += maxi
     if m2 <= z and mx > z:
         foo = mx - z
-        sol += (foo * (foo + 1)) // 2
+        sol += foo * (foo + 1) // 2
     z += 1
 print(sol)

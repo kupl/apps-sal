@@ -16,7 +16,6 @@ def dfs(cur, last3, n, m, mod):
     for c in 'ACGT':
         if ok(last3 + c):
             ret = (ret + dfs(cur + 1, last3[1:] + c, n, m, mod)) % mod
-
     m[cur][last3] = ret
     return ret
 
@@ -24,10 +23,8 @@ def dfs(cur, last3, n, m, mod):
 def main():
     n = int(input())
     mod = 10 ** 9 + 7
-
     m = [{} for _ in range(n + 1)]
     ans = dfs(0, 'TTT', n, m, mod)
-
     print(ans)
 
 

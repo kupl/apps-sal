@@ -2,14 +2,11 @@ import random
 
 
 def miller_rabin(n, k):
-
     if n == 2 or n == 3:
         return True
-
     if n % 2 == 0:
         return False
-
-    r, s = 0, n - 1
+    (r, s) = (0, n - 1)
     while s % 2 == 0:
         r += 1
         s //= 2
@@ -28,7 +25,7 @@ def miller_rabin(n, k):
 
 
 pows = {1: 2}
-n, k = list(map(int, input().split(' ')))
+(n, k) = list(map(int, input().split(' ')))
 T = pow(2, n)
 if miller_rabin(n, 6):
     print((T - 2) % k)
@@ -54,5 +51,4 @@ else:
                         break
                 pows[i] = pow(2, i) - w
                 m += pows[i]
-
     print((T - m - 2) % k)

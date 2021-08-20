@@ -2,7 +2,7 @@ import numpy as np
 
 
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(h)]
     b = [list(map(int, input().split())) for _ in range(h)]
     n = 80 * (80 + 80) + 10
@@ -27,7 +27,7 @@ def main():
             elif 0 < j:
                 dp[i][j][x:] |= dp[i][j - 1][:n - x]
                 dp[i][j][:n - x] |= dp[i][j - 1][x:]
-    ans = float("inf")
+    ans = float('inf')
     for i in range(m - 80 - 1, m + 80 + 2):
         if dp[h - 1][w - 1][i]:
             ans = min(ans, abs(m - i))

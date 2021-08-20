@@ -9,14 +9,13 @@ def check(arr, n, mid):
 
 
 for u in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
-    x, y = 1, max(l)
-    while(x != y):
+    (x, y) = (1, max(l))
+    while x != y:
         m = (x + y) // 2
         s = check(l, n, m)
-
-        if(s <= k):
+        if s <= k:
             y = m
         else:
             x = m + 1

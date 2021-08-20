@@ -1,7 +1,7 @@
 def find_longest(st):
-    res, pos = 0, [0]
-    for i, b in enumerate(st, 1):
-        if b == "(":
+    (res, pos) = (0, [0])
+    for (i, b) in enumerate(st, 1):
+        if b == '(':
             pos.append(i)
         else:
             try:

@@ -10,7 +10,7 @@ def unflatten(flat_array, depth):
 def _unflatten(flat_array, direction):
     q = flat_array[:]
     r = []
-    while(q):
+    while q:
         if direction > 0:
             x = q.pop(0)
         else:

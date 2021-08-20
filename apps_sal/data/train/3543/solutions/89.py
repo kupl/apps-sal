@@ -3,6 +3,6 @@ def increment_string(strng):
     tail = strng[len(head):]
     print(head)
     print(tail)
-    if tail == "":
-        return strng + "1"
+    if tail == '':
+        return strng + '1'
     return head + str(int(tail) + 1).zfill(len(tail))

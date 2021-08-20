@@ -1,6 +1,5 @@
 N = int(input())
 nums = [int(i) for i in input().split()]
-
 before = 0
 ans = 0
 for i in range(N):
@@ -11,5 +10,4 @@ for i in range(N):
         ans += before - nums[i]
     else:
         before = nums[i]
-
 print(ans)

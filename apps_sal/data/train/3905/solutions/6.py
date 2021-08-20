@@ -1,6 +1,6 @@
 def missing(s):
     for nd in range(1, min(7, len(s) // 2 + 1)):
-        guess, miss = s[:nd], ''
+        (guess, miss) = (s[:nd], '')
         n = int(guess)
         while len(guess) < len(s):
             n += 1

@@ -1,15 +1,14 @@
 import sys
 input = sys.stdin.readline
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = dict()
 need = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 for i in range(m):
     if need[a[i]] not in d:
         d[need[a[i]]] = a[i]
-    else:
-        if a[i] > d[need[a[i]]]:
-            d[need[a[i]]] = a[i]
+    elif a[i] > d[need[a[i]]]:
+        d[need[a[i]]] = a[i]
 d = list(d.items())
 d.sort()
 m = len(d)
@@ -47,5 +46,3 @@ ans = str()
 for i in reversed(list(range(1, 10))):
     ans += str(i) * dp[-1][i]
 print(ans)
-# print(d)
-# print(dp[-1])

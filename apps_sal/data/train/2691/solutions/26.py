@@ -8,5 +8,4 @@ def solve(s):
             result += ' '
     return max(int(x) for x in result.split())
     """
-
-    return max(int(x) for x in ''.join(c if c in '0123456789' else ' ' for c in s).split())
+    return max((int(x) for x in ''.join((c if c in '0123456789' else ' ' for c in s)).split()))

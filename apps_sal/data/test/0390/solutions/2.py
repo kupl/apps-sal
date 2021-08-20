@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 A = list(map(int, input().split()))
 B = A[::-1]
 cheapest = min(a, b)
@@ -13,9 +13,8 @@ for i in range(n):
                 cost += a
             else:
                 cost += b
-    else:
-        if A[i] == 2:
-            cost += cheapest
+    elif A[i] == 2:
+        cost += cheapest
 if bad:
     print(-1)
 else:

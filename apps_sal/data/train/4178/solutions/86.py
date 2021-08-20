@@ -7,4 +7,4 @@ def min_sum(arr):
             sumlist.append(max(arr) * min(arr))
             arr.remove(max(arr))
             arr.remove(min(arr))
-    return(sum(sumlist))
+    return sum(sumlist)

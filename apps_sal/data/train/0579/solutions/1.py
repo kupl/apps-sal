@@ -1,9 +1,8 @@
-# cook your dish here
 tests = int(input())
 for _ in range(tests):
-    n, k = [int(j) for j in input().split()]
+    (n, k) = [int(j) for j in input().split()]
     nums = [int(j) for j in input().split()]
-    check = [(j - (j & k)) != 0 for j in nums]
+    check = [j - (j & k) != 0 for j in nums]
     impossible = check[0] and check[-1]
     for i in range(n - 1):
         impossible = impossible or (check[i] and check[i + 1])
@@ -25,11 +24,11 @@ for _ in range(tests):
         if answer == k:
             for i in range(n):
                 if check[i]:
-                    print(i + 1, end=" ")
+                    print(i + 1, end=' ')
             for i in range(start, start + n):
                 if not check[i % n]:
-                    print(i % n + 1, end=" ")
-            print("")
+                    print(i % n + 1, end=' ')
+            print('')
         else:
             print(-1)
     else:
@@ -42,8 +41,8 @@ for _ in range(tests):
                     answer = answer | nums[j]
                 if answer == k:
                     for j in range(i, i + n):
-                        print((j + n) % n + 1, end=" ")
-                    print("")
+                        print((j + n) % n + 1, end=' ')
+                    print('')
                 else:
                     print(-1)
                 impossible = True
@@ -58,8 +57,8 @@ for _ in range(tests):
                     answer = answer | ss[j]
                 if answer == k:
                     for j in range(i, i + n):
-                        print((j % n) + 1, end=" ")
-                    print("")
+                        print(j % n + 1, end=' ')
+                    print('')
                     impossible = True
                     break
         if not impossible:

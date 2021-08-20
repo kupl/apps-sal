@@ -1,7 +1,5 @@
 n = int(input())
-
 a = list(map(int, input().split()))
-
 if len(a) == 1:
     if a[0] == 1:
         print('YES')

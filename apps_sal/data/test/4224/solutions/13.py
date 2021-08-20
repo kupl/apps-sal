@@ -5,5 +5,4 @@ for i in a:
     while i % 2 == 0:
         i = i // 2
         ans += 1
-
 print(ans)

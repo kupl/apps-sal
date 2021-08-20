@@ -1,4 +1,3 @@
-# coding: utf-8
 s = input()
 t = input()
 pos = 0

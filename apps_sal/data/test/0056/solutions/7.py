@@ -1,7 +1,5 @@
-
 def __starting_point():
-    #n, m = list(map(int, input().split()))
-    n, t = map(int, input().split())
+    (n, t) = map(int, input().split())
     A = [[0] * 11 for _ in range(11)]
     ans = 0
     A[0][0] = t

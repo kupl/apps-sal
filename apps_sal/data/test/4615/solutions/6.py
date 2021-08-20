@@ -1,4 +1,4 @@
-a, b, c, d, e, f = map(int, input().split())
+(a, b, c, d, e, f) = map(int, input().split())
 W = set()
 S = set()
 sa = 0
@@ -21,5 +21,5 @@ S.remove(0)
 for i in W:
     for j in S:
         if e / (100 + e) >= j / (i + j) > sa / wsa and i + j <= f:
-            sa, wsa = j, i + j
+            (sa, wsa) = (j, i + j)
 print(wsa, sa)

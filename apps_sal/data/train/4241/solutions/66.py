@@ -4,5 +4,4 @@ def sequence_sum(begin_number, end_number, step):
     while num <= end_number:
         result += num
         num += step
-
     return result

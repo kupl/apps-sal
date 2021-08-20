@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class Comb:
+
     def __init__(self, n, mod=pow(10, 9) + 7, f=True, i=False):
         self.n = n
         self.mod = mod
@@ -53,11 +54,9 @@ class Comb:
                 res %= mod
             return res
         if self.inverse_table == None:
-            res = self.factorial_table[n] * pow(self.factorial_table[n - k], -1, mod) % mod\
-                * pow(self.factorial_table[k], -1, mod) % mod
+            res = self.factorial_table[n] * pow(self.factorial_table[n - k], -1, mod) % mod * pow(self.factorial_table[k], -1, mod) % mod
         else:
-            res = self.factorial_table[n] * self.inverse_table[n - k] % mod\
-                * self.inverse_table[k] % mod
+            res = self.factorial_table[n] * self.inverse_table[n - k] % mod * self.inverse_table[k] % mod
         return res
 
     def recomb(self, n, k):
@@ -67,24 +66,18 @@ class Comb:
 
 
 def main():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     mod = pow(10, 9) + 7
-
     comb = Comb(n * m, i=True)
-
     ans = 0
-
     for i in range(n):
-        ans += (i) * (n - i) * m**2
+        ans += i * (n - i) * m ** 2
         ans %= mod
-
     for i in range(m):
-        ans += (i) * (m - i) * n**2
+        ans += i * (m - i) * n ** 2
         ans %= mod
-
     ans *= comb.comb(n * m - 2, k - 2)
     ans %= mod
-
     print(ans)
 
 

@@ -1,48 +1,6 @@
-s = """
-
-Hydrogen	H	Niobium	Nb	Thallium	Tl
-Helium	He	Molybdenum	Mo	Lead	Pb
-Lithium	Li	Technetium	Tc	Bismuth	Bi
-Beryllium	Be	Ruthenium	Ru	Polonium	Po
-Boron	B	Rhodium	Rh	Astatine	At
-Carbon	C	Palladium	Pd	Radon	Rn
-Nitrogen	N	Silver	Ag	Francium	Fr
-Oxygen	O	Cadmium	Cd	Radium	Ra
-Fluorine	F	Indium	In	Actinium	Ac
-Neon	Ne	Tin	Sn	Thorium	Th
-Sodium	Na	Antimony	Sb	Protactinium	Pa
-Magnesium	Mg	Tellurium	Te	Uranium	U
-Aluminum	Al	Iodine	I	Neptunium	Np
-Silicon	Si	Xenon	Xe	Plutonium	Pu
-Phosphorus	P	Cesium	Cs	Americium	Am
-Sulfur	S	Barium	Ba	Curium	Cm
-Chlorine	Cl	Lanthanum	La	Berkelium	Bk
-Argon	Ar	Cerium	Ce	Californium	Cf
-Potassium	K	Praseodymium	Pr	Einsteinium	Es
-Calcium	Ca	Neodymium	Nd	Fermium	Fm
-Scandium	Sc	Promethium	Pm	Mendelevium	Md
-Titanium	Ti	Samarium	Sm	Nobelium	No
-Vanadium	V	Europium	Eu	Lawrencium	Lr
-Chromium	Cr	Gadolinium	Gd	Rutherfordium	Rf
-Manganese	Mn	Terbium	Tb	Dubnium	Db
-Iron	Fe	Dysprosium	Dy	Seaborgium	Sg
-Cobalt	Co	Holmium	Ho	Bohrium	Bh
-Nickel	Ni	Erbium	Er	Hassium	Hs
-Copper	Cu	Thulium	Tm	Meitnerium	Mt
-Zinc	Zn	Ytterbium	Yb	Darmstadtium	Ds
-Gallium	Ga	Lutetium	Lu	Roentgenium	Rg
-Germanium	Ge	Hafnium	Hf	Copernicium	Cn
-Arsenic	As	Tantalum	Ta	Nihonium	Nh
-Selenium	Se	Tungsten	W	Flerovium	Fl
-Bromine	Br	Rhenium	Re	Moscovium	Mc
-Krypton	Kr	Osmium	Os	Livermorium	Lv
-Rubidium	Rb	Iridium	Ir	Tennessine	Ts
-Strontium	Sr	Platinum	Pt	Oganesson	Og
-Yttrium	Y	Gold	Au
-Zirconium	Zr	Mercury	Hg
-"""
+s = '\n\nHydrogen\tH\tNiobium\tNb\tThallium\tTl\nHelium\tHe\tMolybdenum\tMo\tLead\tPb\nLithium\tLi\tTechnetium\tTc\tBismuth\tBi\nBeryllium\tBe\tRuthenium\tRu\tPolonium\tPo\nBoron\tB\tRhodium\tRh\tAstatine\tAt\nCarbon\tC\tPalladium\tPd\tRadon\tRn\nNitrogen\tN\tSilver\tAg\tFrancium\tFr\nOxygen\tO\tCadmium\tCd\tRadium\tRa\nFluorine\tF\tIndium\tIn\tActinium\tAc\nNeon\tNe\tTin\tSn\tThorium\tTh\nSodium\tNa\tAntimony\tSb\tProtactinium\tPa\nMagnesium\tMg\tTellurium\tTe\tUranium\tU\nAluminum\tAl\tIodine\tI\tNeptunium\tNp\nSilicon\tSi\tXenon\tXe\tPlutonium\tPu\nPhosphorus\tP\tCesium\tCs\tAmericium\tAm\nSulfur\tS\tBarium\tBa\tCurium\tCm\nChlorine\tCl\tLanthanum\tLa\tBerkelium\tBk\nArgon\tAr\tCerium\tCe\tCalifornium\tCf\nPotassium\tK\tPraseodymium\tPr\tEinsteinium\tEs\nCalcium\tCa\tNeodymium\tNd\tFermium\tFm\nScandium\tSc\tPromethium\tPm\tMendelevium\tMd\nTitanium\tTi\tSamarium\tSm\tNobelium\tNo\nVanadium\tV\tEuropium\tEu\tLawrencium\tLr\nChromium\tCr\tGadolinium\tGd\tRutherfordium\tRf\nManganese\tMn\tTerbium\tTb\tDubnium\tDb\nIron\tFe\tDysprosium\tDy\tSeaborgium\tSg\nCobalt\tCo\tHolmium\tHo\tBohrium\tBh\nNickel\tNi\tErbium\tEr\tHassium\tHs\nCopper\tCu\tThulium\tTm\tMeitnerium\tMt\nZinc\tZn\tYtterbium\tYb\tDarmstadtium\tDs\nGallium\tGa\tLutetium\tLu\tRoentgenium\tRg\nGermanium\tGe\tHafnium\tHf\tCopernicium\tCn\nArsenic\tAs\tTantalum\tTa\tNihonium\tNh\nSelenium\tSe\tTungsten\tW\tFlerovium\tFl\nBromine\tBr\tRhenium\tRe\tMoscovium\tMc\nKrypton\tKr\tOsmium\tOs\tLivermorium\tLv\nRubidium\tRb\tIridium\tIr\tTennessine\tTs\nStrontium\tSr\tPlatinum\tPt\tOganesson\tOg\nYttrium\tY\tGold\tAu\nZirconium\tZr\tMercury\tHg\n'
 elems = []
-for idx, token in enumerate(s.split()):
+for (idx, token) in enumerate(s.split()):
     if idx % 2 == 1:
         elems.append(token.upper())
 
@@ -58,6 +16,6 @@ def check(s):
 
 s = input()
 if check(s):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

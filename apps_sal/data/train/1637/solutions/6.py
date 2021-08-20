@@ -1,6 +1,6 @@
 def encode(s):
     if not s:
-        return("", 0)
+        return ('', 0)
     acc = []
     for i in range(len(s)):
         acc.append(s[-i:] + s[:-i])
@@ -8,13 +8,13 @@ def encode(s):
     r = []
     for a in acc:
         r.append(a[-1])
-    return("".join(r), acc.index(s))
+    return (''.join(r), acc.index(s))
 
 
 def decode(s, n):
     if not s:
-        return ""
-    res = [""] * len(s)
+        return ''
+    res = [''] * len(s)
     for _ in range(len(s)):
         u = []
         for i in range(len(s)):

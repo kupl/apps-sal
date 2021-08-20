@@ -1,7 +1,9 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
 
         class UF:
+
             def __init__(self, n):
                 self.p = list(range(n))
 
@@ -12,10 +14,8 @@ class Solution:
                 if x != self.p[x]:
                     self.p[x] = self.find(self.p[x])
                 return self.p[x]
-
-        uf, res, m = UF(len(s)), [], collections.defaultdict(list)
-
-        for x, y in pairs:
+        (uf, res, m) = (UF(len(s)), [], collections.defaultdict(list))
+        for (x, y) in pairs:
             uf.union(x, y)
         for i in range(len(s)):
             m[uf.find(i)].append(s[i])

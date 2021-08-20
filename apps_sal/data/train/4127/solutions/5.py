@@ -2,11 +2,11 @@ def diviseurs_stricts(nombre):
     diviseurs = [1, nombre]
     candidat = 2
     while candidat < nombre // candidat:
-        if nombre % candidat == 0:   # candidat est un diviseur de nombre
+        if nombre % candidat == 0:
             diviseurs.append(candidat)
             diviseurs.append(nombre // candidat)
         candidat += 1
-    if candidat * candidat == nombre:  # nombre est un carré
+    if candidat * candidat == nombre:
         diviseurs.append(candidat)
     return len(diviseurs)
 

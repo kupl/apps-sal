@@ -11,4 +11,4 @@ k = 0
 for i in list(d.values()):
     p += i // 2
     k -= i % 2 - 1
-print((n - (p - k // 2) * 2))
+print(n - (p - k // 2) * 2)

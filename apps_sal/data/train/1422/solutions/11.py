@@ -7,13 +7,11 @@ for i in range(0, x):
     for e in build:
         list1.append(e)
     for i in range(0, len_s):
-
         if list1[i] == '1':
-
             list1[i] == 'R'
-            if (i - 1) >= 0:
+            if i - 1 >= 0:
                 list1[i - 1] = 'R'
-            if i != (len_s - 1):
+            if i != len_s - 1:
                 if list1[i + 1]:
                     if list1[i + 1] != '1':
                         list1[i + 1] = 'R'

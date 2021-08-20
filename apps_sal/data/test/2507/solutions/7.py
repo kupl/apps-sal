@@ -1,13 +1,11 @@
 import sys
 import numpy as np
 readline = sys.stdin.readline
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
-#mod = 998244353
-INF = 10**18
-eps = 10**-7
-
-n, k = map(int, input().split())
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
+INF = 10 ** 18
+eps = 10 ** (-7)
+(n, k) = map(int, input().split())
 a = np.array(readline().split(), np.int64)
 f = np.array(readline().split(), np.int64)
 a.sort()
@@ -27,5 +25,4 @@ while l + 1 < r:
         r = mid
     else:
         l = mid
-
 print(r)

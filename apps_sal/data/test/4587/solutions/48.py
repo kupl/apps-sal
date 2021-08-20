@@ -1,21 +1,22 @@
-def II(): return int(input())
-def LII(): return list(map(int, input().split()))
+def II():
+    return int(input())
+
+
+def LII():
+    return list(map(int, input().split()))
 
 
 n = II()
 alist = LII()
 blist = LII()
 clist = LII()
-
 alist.sort()
 blist.sort()
 clist.sort()
 
-# あるbより小さいaの数
-
 
 def count_a(b):
-    ok, ng = -1, n
+    (ok, ng) = (-1, n)
 
     def is_ok(i):
         return alist[i] < b
@@ -29,7 +30,7 @@ def count_a(b):
 
 
 def count_c(b):
-    ok, ng = n, -1
+    (ok, ng) = (n, -1)
 
     def is_ok(i):
         return clist[i] > b
@@ -45,5 +46,4 @@ def count_c(b):
 result = 0
 for b in blist:
     result += count_a(b) * count_c(b)
-
 print(result)

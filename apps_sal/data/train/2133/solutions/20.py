@@ -1,5 +1,5 @@
 grp = int(input())
-tab = [""] * grp
+tab = [''] * grp
 for _ in range(grp):
     tab[_] = input()
 m = 0

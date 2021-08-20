@@ -1,5 +1,5 @@
 def longest_subsequence(_list):
-    return "".join(map(str, _list))
+    return ''.join(map(str, _list))
 
 
 def __starting_point():

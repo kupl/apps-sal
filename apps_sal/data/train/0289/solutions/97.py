@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
-        '''
+        """
         Input: A = [0,6,5,2,2,5,1,9,4], L = 1, M = 2
         9 + (6+5) = 20
 
@@ -40,8 +41,7 @@ class Solution:
 
           0 6 5 2 2 5 1 9 4, 1, 2
 
-        '''
-
+        """
         arr = self.preprocess(A)
 
         def helper(arr, n1, n2):
@@ -52,7 +52,6 @@ class Solution:
                     val2 = arr[j] - arr[j - n2]
                     max_val = max(val1 + val2, max_val)
             return max_val
-
         return max(helper(arr, L, M), helper(arr, M, L))
 
     def preprocess(self, A):

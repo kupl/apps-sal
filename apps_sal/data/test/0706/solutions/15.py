@@ -8,9 +8,8 @@ def our_sum(a, n):
         return (our_sum(a, n - 1) + pow(a, n - 1, mod)) % mod
 
 
-a, b, n, x = map(int, input().split())
+(a, b, n, x) = map(int, input().split())
 mod = 10 ** 9 + 7
-#n %= mod
 res = pow(a, n, mod) * x
 res %= mod
 if a != 1:

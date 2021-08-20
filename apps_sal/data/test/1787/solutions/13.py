@@ -1,5 +1,5 @@
 s = input()
-m = 10**9 + 7
+m = 10 ** 9 + 7
 l = list()
 count = 0
 for c in s:
@@ -12,5 +12,5 @@ if count > 0:
     l.append(count)
 ans = 1
 for i in l:
-    ans = (ans * (i + 1)) % m
+    ans = ans * (i + 1) % m
 print(ans - 1)

@@ -1,4 +1,5 @@
 class Solution:
+
     def findDuplicate(self, nums):
         """
         :type nums: List[int]
@@ -13,7 +14,5 @@ class Solution:
             if nums[ind] < 0:
                 return i
             else:
-
                 nums[ind] = -nums[ind]
-
         return extra

@@ -1,4 +1,4 @@
-w, b = "white", "black"
+(w, b) = ('white', 'black')
 keyboard = [w, b, w, w, b, w, b, w, w, b, w, b]
 
 

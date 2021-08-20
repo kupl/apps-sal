@@ -1,5 +1,5 @@
 from collections import Counter
-N, P = list(map(int, input().split()))
+(N, P) = list(map(int, input().split()))
 S = [int(i) for i in input()]
 
 
@@ -24,4 +24,4 @@ def solve(S, N, P):
     return ans
 
 
-print((solve(S, N, P)))
+print(solve(S, N, P))

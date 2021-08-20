@@ -25,7 +25,7 @@ for i in range(1, n + 1):
 cur = 0
 left = set([])
 for i in range(n):
-    if(c[a[i]] > 1):
+    if c[a[i]] > 1:
         if s1[cur] < a[i] or a[i] in left:
             c[a[i]] -= 1
             a[i] = s1[cur]

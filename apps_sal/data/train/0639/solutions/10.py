@@ -4,11 +4,8 @@ for i in range(n):
     res = []
     for i in set(s):
         res.append(s.count(i))
-
     res.sort()
-
     if len(res) < 3 or res[-1] == res[-2] + res[-3]:
-        print("Dynamic")
-
+        print('Dynamic')
     else:
-        print("Not")
+        print('Not')

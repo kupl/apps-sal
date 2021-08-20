@@ -9,16 +9,14 @@ for i in range(n):
     a = int(input())
     l.append(a)
 l.sort(reverse=True)
-
 for i in range(n):
-    if(l[i] != 0):
+    if l[i] != 0:
         for j in range(1, n):
-            if(l[j] != 0):
-                if(l[j] * 2 <= l[i]):
+            if l[j] != 0:
+                if l[j] * 2 <= l[i]:
                     box = box + 1
                     l[i] = 0
                     l[j] = 0
                     break
-
 l = remove_values_from_list(l, 0)
 print(box + len(l))

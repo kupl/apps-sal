@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-n, M = list(map(int, input().split()))
+(n, M) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 f = [0 for _ in range(101)]
 a = []

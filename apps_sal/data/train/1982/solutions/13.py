@@ -1,7 +1,8 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         pairs = {}
-        for a, b in dislikes:
+        for (a, b) in dislikes:
             if not a in pairs:
                 pairs[a] = set()
             if not b in pairs:
@@ -13,7 +14,7 @@ class Solution:
             if i in seen:
                 continue
             curr = set([i])
-            A, B = set(), set()
+            (A, B) = (set(), set())
             A.add(i)
             flag = 1
             while len(curr):

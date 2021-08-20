@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def feasible(capacity):
             days = 1
             total = 0
@@ -11,8 +13,7 @@ class Solution:
                 if days > D:
                     return False
             return True
-
-        left, right = max(weights), sum(weights)
+        (left, right) = (max(weights), sum(weights))
         while left < right:
             mid = left + (right - left) // 2
             if feasible(mid):

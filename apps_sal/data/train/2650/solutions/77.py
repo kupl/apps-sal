@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 string_list = [input() for i in range(n)]
 string_list.sort()
 ans = string_list[0]

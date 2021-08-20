@@ -11,5 +11,4 @@ for i in range(n):
             a[i + 1] = 0
     elif a[i] > b[i]:
         a[i] -= b[i]
-
 print(q - sum(a))

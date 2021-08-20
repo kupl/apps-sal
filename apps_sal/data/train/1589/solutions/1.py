@@ -13,4 +13,4 @@ for i in range(int(input())):
         if arr[i] % 2 == 0:
             num = num + arr[i] * (i + 1)
             den = den + i + 1
-    print(c, "{:.2f}".format(num / den))
+    print(c, '{:.2f}'.format(num / den))

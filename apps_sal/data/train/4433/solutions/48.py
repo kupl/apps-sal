@@ -1,7 +1,4 @@
-dict = {
-    True: 1,
-    False: 2
-}
+dict = {True: 1, False: 2}
 
 
 def logical_calc(array, op):
@@ -10,7 +7,7 @@ def logical_calc(array, op):
     length = len(array)
     for x in array:
         arrn.append(dict[x])
-    if op == "XOR":
+    if op == 'XOR':
         if sum(arrn) == 1:
             return True
         elif sum(arrn) == 2:
@@ -25,11 +22,11 @@ def logical_calc(array, op):
                 return False
             else:
                 return True
-    elif sum(arrn) == length and op == "AND":
+    elif sum(arrn) == length and op == 'AND':
         return True
     elif array.count(False) == length:
         return False
-    elif (sum(arrn) != length or sum(arrn) != length * 2) and op == "OR":
+    elif (sum(arrn) != length or sum(arrn) != length * 2) and op == 'OR':
         return True
     else:
         return False

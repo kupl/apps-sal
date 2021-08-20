@@ -1,9 +1,7 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 A = list(map(int, readline().split()))
-
 Ans = []
 one = []
 tt = []
@@ -20,7 +18,7 @@ for i in range(N - 1, -1, -1):
             Ans = None
             break
         else:
-            oi, _ = one.pop()
+            (oi, _) = one.pop()
             Ans.append((oi, i))
             tt.append((oi, i))
             continue
@@ -30,20 +28,19 @@ for i in range(N - 1, -1, -1):
                 Ans = None
                 break
             else:
-                oi, wi = one.pop()
+                (oi, wi) = one.pop()
                 Ans.append((i, wi))
                 Ans.append((i, i))
                 tt.append((i, i))
         else:
-            oi, wi = tt.pop()
+            (oi, wi) = tt.pop()
             Ans.append((i, wi))
             Ans.append((i, i))
             tt.append((i, i))
         continue
-
 if Ans is None:
     print(-1)
 else:
     print(len(Ans))
     if Ans:
-        print('\n'.join(f'{a+1} {b+1}' for a, b in Ans))
+        print('\n'.join((f'{a + 1} {b + 1}' for (a, b) in Ans)))

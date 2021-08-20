@@ -11,8 +11,7 @@ def exclude(i, n, m):
     return True
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 for i in range(n):
     s = input()
     for j in range(m):

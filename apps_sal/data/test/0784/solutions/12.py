@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 pred = [str(b)]
 while a != b and b > a:
     if b % 10 == 1 and b != 1:

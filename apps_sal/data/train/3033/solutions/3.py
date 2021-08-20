@@ -8,9 +8,10 @@ def interpreter(tape):
 
 
 class Memory(object):
+
     def __init__(self):
-        self.cells, self.cur, self.output = defaultdict(int), 0, ""
-        self.command = {">": self.nxt, "<": self.prv, "+": self.inc, "*": self.write}
+        (self.cells, self.cur, self.output) = (defaultdict(int), 0, '')
+        self.command = {'>': self.nxt, '<': self.prv, '+': self.inc, '*': self.write}
 
     def read(self, tape):
         [self.command[c]() for c in tape if c in self.command]
@@ -25,4 +26,4 @@ class Memory(object):
         self.cells[self.cur] += 1
 
     def write(self):
-        self.output = f"{self.output}{chr(self.cells[self.cur] % 256)}"
+        self.output = f'{self.output}{chr(self.cells[self.cur] % 256)}'

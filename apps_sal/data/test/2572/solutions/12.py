@@ -2,23 +2,22 @@ t = int(input())
 
 
 def f(*a):
-    ans = int(1e19)
+    ans = int(1e+19)
     for i in a:
-        ans = min(ans, sum(abs(n - i) for n in a))
-    # print(a, ans)
+        ans = min(ans, sum((abs(n - i) for n in a)))
     return ans
 
 
 for tt in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = []
     for i in range(n):
         a.append(list(map(int, input().split())))
-    i, j = 0, n - 1
-    k, l = 0, m - 1
+    (i, j) = (0, n - 1)
+    (k, l) = (0, m - 1)
     ans = 0
     while i <= j:
-        k, l = 0, m - 1
+        (k, l) = (0, m - 1)
         while k <= l:
             if i != j and k != l:
                 ans += f(a[i][k], a[i][l], a[j][k], a[j][l])

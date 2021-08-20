@@ -11,6 +11,6 @@ for i in range(q):
         if arr[j] - 1 != (arr[0] - 1 - j) % n:
             back = False
     if forwards == True or back == True:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -3,7 +3,7 @@ def get_strings(city):
     res = []
     for x in city:
         c = city.count(x)
-        st = f"{x}:{'*'*c}"
-        if x.isalpha() and not st in res:
+        st = f"{x}:{'*' * c}"
+        if x.isalpha() and (not st in res):
             res.append(st)
-    return ",".join(res)
+    return ','.join(res)

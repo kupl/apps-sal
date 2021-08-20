@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         lo = 1
         hi = max(piles)
@@ -15,7 +16,7 @@ class Solution:
     def check(self, mid, piles, H):
         i = 0
         count = 0
-        new = piles[::]
+        new = piles[:]
         while i < len(new):
             if count > H:
                 return False

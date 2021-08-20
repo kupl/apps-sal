@@ -3,7 +3,7 @@ import numpy as np
 
 
 def main():
-    INF = 10**12
+    INF = 10 ** 12
     N = int(input())
     A = [list(map(int, input().split(' '))) for _ in range(N)]
     wf = floyd_warshall(A)

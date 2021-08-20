@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = ['0'] + list(input())
 beauty = 0
 i = 0

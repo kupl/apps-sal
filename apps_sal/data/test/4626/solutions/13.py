@@ -1,7 +1,7 @@
 test = int(input())
 for _ in range(test):
-    ans = 10**10
-    a, b, c = map(int, input().split())
+    ans = 10 ** 10
+    (a, b, c) = map(int, input().split())
     for i in range(-1, 2):
         for j in range(-1, 2):
             for k in range(-1, 2):

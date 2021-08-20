@@ -1,6 +1,5 @@
 from collections import defaultdict
 import math
-
 for t in range(int(input())):
     n = int(input())
     store = list(map(int, input().split()))
@@ -9,7 +8,6 @@ for t in range(int(input())):
     cStore = defaultdict()
     maxi = 0
     second = 0
-
     for i in range(n):
         if store[i] == 0:
             if curr > 0:
@@ -24,9 +22,8 @@ for t in range(int(input())):
                 second = curr
             curr = 0
     if second != 0 and math.ceil(maxi / 2) < second:
-        print("No")
+        print('No')
+    elif maxi % 2 == 0:
+        print('No')
     else:
-        if maxi % 2 == 0:
-            print("No")
-        else:
-            print("Yes")
+        print('Yes')

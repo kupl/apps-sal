@@ -1,5 +1,5 @@
 def is_power2(num):
-    return ((num & (num - 1)) == 0)
+    return num & num - 1 == 0
 
 
 def maybeAdd(dot, peers):
@@ -13,18 +13,14 @@ n = int(input())
 dots = list(map(int, input().split()))
 m = min(dots)
 M = max(dots)
-
 l = {}
 for dot in dots:
     l[dot] = True
-
 ans = []
 att = []
-
 for dot in dots:
     att = [dot]
     maxpow = max(abs(dot - m), abs(dot - M)).bit_length()
-
     diff = 1
     for pow in range(maxpow):
         if dot - diff in l:
@@ -32,9 +28,7 @@ for dot in dots:
         if dot + diff in l:
             maybeAdd(dot + diff, att)
         diff *= 2
-
     if len(att) > len(ans):
         ans = att
-
 print(len(ans))
 print(*ans)

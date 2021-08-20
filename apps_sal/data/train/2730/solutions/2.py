@@ -1,11 +1,9 @@
 def tickets(people):
     change = 'YES'
-    twentyfive, fifty, onehundred = 0, 0, 0
-
+    (twentyfive, fifty, onehundred) = (0, 0, 0)
     for cash in people:
         if change == 'NO':
             break
-
         if cash == 25:
             twentyfive += 1
         elif cash == 50 and twentyfive > 0:
@@ -23,5 +21,4 @@ def tickets(people):
                 change = 'NO'
         else:
             change = 'NO'
-
     return change

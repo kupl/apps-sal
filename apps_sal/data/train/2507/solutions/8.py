@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         op = 0
         for ele in words:
@@ -8,4 +9,4 @@ class Solution:
                     count += 1
             if count == len(ele):
                 op += len(ele)
-        return (op)
+        return op

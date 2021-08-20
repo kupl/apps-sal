@@ -1,12 +1,10 @@
-__author__ = "zabidon"
-
-l, r = map(int, input().split())
+__author__ = 'zabidon'
+(l, r) = map(int, input().split())
 
 
 def alg_evk(a, b):
-    while(a % b):
-        b, a = a % b, b
-
+    while a % b:
+        (b, a) = (a % b, b)
     return b
 
 
@@ -25,8 +23,7 @@ for a in range(r + 1)[l:]:
                     found = True
                     result = (a, b, c)
                     break
-
-if(found):
-    print("{} {} {}".format(result[0], result[1], result[2]))
+if found:
+    print('{} {} {}'.format(result[0], result[1], result[2]))
 else:
     print(-1)

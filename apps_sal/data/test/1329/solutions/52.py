@@ -1,6 +1,5 @@
 from collections import Counter
 N = int(input())
-
 l = []
 for i in range(1, N + 1):
     while i % 2 == 0:
@@ -15,10 +14,9 @@ for i in range(1, N + 1):
             f += 2
     if i != 1:
         l.append(i)
-
 c = Counter(l)
 m = c.most_common()
-c_75, c_25, c_15, c_5, c_3 = 0, 0, 0, 0, 0
+(c_75, c_25, c_15, c_5, c_3) = (0, 0, 0, 0, 0)
 for a in m:
     if a[1] >= 74:
         c_75 += 1
@@ -30,9 +28,8 @@ for a in m:
         c_5 += 1
     if a[1] >= 2:
         c_3 += 1
-
 ans = c_75
 ans += c_25 * (c_3 - 1)
 ans += c_15 * (c_5 - 1)
-ans += (c_5 * (c_5 - 1) // 2) * (c_3 - 2)
+ans += c_5 * (c_5 - 1) // 2 * (c_3 - 2)
 print(ans)

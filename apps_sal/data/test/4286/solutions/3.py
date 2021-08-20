@@ -3,10 +3,9 @@ def read_nums():
 
 
 class UnionFind:
+
     def __init__(self, size):
         self._parents = list(range(size))
-
-        # number of elements rooted at i
         self._sizes = [1 for _ in range(size)]
 
     def _root(self, a):
@@ -19,8 +18,7 @@ class UnionFind:
         return self._root(a) == self._root(b)
 
     def union(self, a, b):
-        a, b = self._root(a), self._root(b)
-
+        (a, b) = (self._root(a), self._root(b))
         if self._sizes[a] < self._sizes[b]:
             self._parents[a] = b
             self._sizes[b] += self._sizes[a]
@@ -32,7 +30,7 @@ class UnionFind:
 def count_result(num_vertex, edges):
     uf = UnionFind(num_vertex)
     res = 0
-    for start, end, cost in edges:
+    for (start, end, cost) in edges:
         if uf.find(start, end):
             continue
         else:
@@ -42,7 +40,7 @@ def count_result(num_vertex, edges):
 
 
 def main():
-    n, m = read_nums()
+    (n, m) = read_nums()
     vertex_nums = read_nums()
     edges = []
     for i in range(m):
@@ -50,7 +48,6 @@ def main():
         nums[0] -= 1
         nums[1] -= 1
         edges.append(tuple(nums))
-
     min_index = min([x for x in zip(vertex_nums, list(range(n)))], key=lambda x: x[0])[1]
     for i in range(n):
         if i != min_index:

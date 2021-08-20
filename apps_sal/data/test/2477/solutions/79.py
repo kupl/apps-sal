@@ -1,16 +1,14 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = tuple(map(int, input().split()))
 A = sorted(A, reverse=True)
-
 l = 0
 r = max(A) + 1
 
 
 def cut(l, k):
-    # 長さlの丸太を最大とすることができるかどうかを返す
     for a in A:
         if a > l:
-            k -= (-(-a // l) - 1)
+            k -= -(-a // l) - 1
     return k >= 0
 
 

@@ -3,7 +3,7 @@ def max_number(n):
     while n > 0:
         resfornow.append(n % 10)
         n = n // 10
-    res = ""
+    res = ''
     for i in reversed(sorted(resfornow)):
         res += str(i)
     return int(res)

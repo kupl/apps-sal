@@ -1,5 +1,5 @@
 def main():
-    n, m, k, x, y = list(map(int, input().split()))
+    (n, m, k, x, y) = list(map(int, input().split()))
     A = [[0] * m for i in range(n)]
     MOD = (2 * n - 2) * m
     if n > 1:

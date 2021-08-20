@@ -9,7 +9,7 @@ def GCD(x, y):
 try:
     while True:
         n = int(input())
-        val = list(map(int, input().split(" ")))
+        val = list(map(int, input().split(' ')))
         res = val[0]
         for i in range(n - 1):
             res = GCD(res, val[i + 1])
@@ -26,6 +26,6 @@ try:
                     break
             if not ans:
                 break
-        print("Yes" if ans else "No")
+        print('Yes' if ans else 'No')
 except EOFError:
     pass

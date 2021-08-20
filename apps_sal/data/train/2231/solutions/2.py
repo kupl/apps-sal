@@ -1,16 +1,13 @@
 import sys
-
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     grid = []
     for _ in range(h):
         line = input().rstrip('\n')
         tmp = [line[i] == 'A' for i in range(w)]
         grid.append(tmp)
-
     ok = 0
     all_A = 1
     for i in range(h):
@@ -25,7 +22,6 @@ for _ in range(t):
     if all_A:
         print(0)
         continue
-
     all_True = 1
     for i in range(w):
         if not grid[0][i]:
@@ -34,7 +30,6 @@ for _ in range(t):
     if all_True:
         print(1)
         continue
-
     all_True = 1
     for i in range(w):
         if not grid[-1][i]:
@@ -43,7 +38,6 @@ for _ in range(t):
     if all_True:
         print(1)
         continue
-
     all_True = 1
     for i in range(h):
         if not grid[i][0]:
@@ -52,7 +46,6 @@ for _ in range(t):
     if all_True:
         print(1)
         continue
-
     all_True = 1
     for i in range(h):
         if not grid[i][-1]:
@@ -61,11 +54,9 @@ for _ in range(t):
     if all_True:
         print(1)
         continue
-
     if grid[0][0] | grid[0][-1] | grid[-1][0] | grid[-1][-1]:
         print(2)
         continue
-
     flg = 0
     for i in range(1, h - 1):
         if sum(grid[i]) == w:
@@ -83,7 +74,6 @@ for _ in range(t):
     if flg:
         print(2)
         continue
-
     any_True = 0
     for i in range(w):
         if grid[0][i]:
@@ -102,5 +92,4 @@ for _ in range(t):
     if any_True:
         print(3)
         continue
-
     print(4)

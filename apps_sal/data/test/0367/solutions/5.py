@@ -1,4 +1,4 @@
-x = "abcdefghijklmnopqrstuvwxyz"
+x = 'abcdefghijklmnopqrstuvwxyz'
 d = dict.fromkeys(x, 0)
 s = input()
 for i in s:
@@ -13,16 +13,16 @@ i = len(x) - 1
 while count > 0:
     if d[x[i]] % 2:
         j = 0
-        while not (d[x[j]] % 2):
+        while not d[x[j]] % 2:
             j += 1
         d[x[j]] += 1
         d[x[i]] -= 1
         count -= 2
     i -= 1
-s = ""
-flag = ""
+s = ''
+flag = ''
 for i in x:
     if d[i] % 2:
         flag = i
     s += i * (d[i] // 2)
-print(s, flag, s[-1::-1], sep="")
+print(s, flag, s[-1::-1], sep='')

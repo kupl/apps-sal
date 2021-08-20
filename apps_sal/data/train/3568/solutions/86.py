@@ -1,11 +1,10 @@
 def bumps(road):
-    # your code here
     road_list = list(road)
     bump_number = 0
     for segment in road_list:
         if segment == 'n':
             bump_number += 1
     if bump_number <= 15:
-        return "Woohoo!"
+        return 'Woohoo!'
     else:
-        return "Car Dead"
+        return 'Car Dead'

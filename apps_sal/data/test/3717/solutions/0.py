@@ -14,16 +14,14 @@ def excl_min_list(a):
 
 n = int(input())
 rectangles = [tuple(map(int, input().split())) for i in range(n)]
-lefts = [l for l, d, r, u in rectangles]
-rights = [r for l, d, r, u in rectangles]
-downs = [d for l, d, r, u in rectangles]
-ups = [u for l, d, r, u in rectangles]
-
+lefts = [l for (l, d, r, u) in rectangles]
+rights = [r for (l, d, r, u) in rectangles]
+downs = [d for (l, d, r, u) in rectangles]
+ups = [u for (l, d, r, u) in rectangles]
 max_lefts = excl_max_list(lefts)
 max_downs = excl_max_list(downs)
 min_rights = excl_min_list(rights)
 min_ups = excl_min_list(ups)
-
 for i in range(n):
     if max_lefts[i] <= min_rights[i] and max_downs[i] <= min_ups[i]:
         print(max_lefts[i], max_downs[i])

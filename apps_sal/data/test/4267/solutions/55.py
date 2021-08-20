@@ -1,2 +1,2 @@
 n = int(input())
-print(('YNeos'[n < 30::2]))
+print('YNeos'[n < 30::2])

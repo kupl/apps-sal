@@ -1,5 +1,5 @@
 def contamination(text, char):
-    res = ""
+    res = ''
     i = 0
     while i < len(text):
         i += 1

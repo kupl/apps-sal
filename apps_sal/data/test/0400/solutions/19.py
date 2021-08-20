@@ -1,15 +1,14 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 
 
 def f(a):
-    return (a / 10 + 1 - a / 10.0)
+    return a / 10 + 1 - a / 10.0
 
 
 x = sorted(x)
-x = sorted(x, key=lambda a: (int(a / 10) + 1 - a / 10.0))
-improved, i, flag = 0, 0, 0
-
+x = sorted(x, key=lambda a: int(a / 10) + 1 - a / 10.0)
+(improved, i, flag) = (0, 0, 0)
 while k > 0:
     if i == n or x[i] == 100:
         break

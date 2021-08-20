@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         res = 0
         hashmap = {}
@@ -13,7 +14,7 @@ class Solution:
                 if item % 2 == 0:
                     new.append(item - item // 2)
                 if item % 3 == 0:
-                    new.append(item - ((item // 3) * 2))
+                    new.append(item - item // 3 * 2)
                 hashmap[item] = res
                 new.append(item - 1)
             res += 1

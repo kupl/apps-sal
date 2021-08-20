@@ -6,8 +6,8 @@ for i in range(testcases):
     for i in range(n):
         l[x[i]] += 1
     for i in range(n):
-        if(l[i] > 0):
-            print(i, end=" ")
+        if l[i] > 0:
+            print(i, end=' ')
         else:
-            print(0, end=" ")
+            print(0, end=' ')
     print()

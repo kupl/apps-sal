@@ -1,9 +1,7 @@
-
-
 def solve():
     twopow = {}
     for i in range(31):
-        twopow[i] = 2**i
+        twopow[i] = 2 ** i
     for _ in range(int(input())):
         n = int(input())
         a = list(map(int, input().split()))
@@ -23,8 +21,7 @@ def solve():
             p = b[x]
             if p > 0:
                 if p > n - p:
-                    change += (p - (n - p)) * (twopow[x])
-
+                    change += (p - (n - p)) * twopow[x]
         original_tot -= change
         print(original_tot)
 

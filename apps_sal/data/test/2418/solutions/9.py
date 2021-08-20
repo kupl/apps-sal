@@ -1,5 +1,3 @@
-# Python Template
-
 from sys import stdin, stdout
 from math import ceil
 
@@ -14,18 +12,14 @@ def main():
         start = a[0]
         for i in range(n - 1):
             diffs[i] = a[i + 1] - a[i]
-
         upstep = 0
         for d in diffs:
             if d > 0:
                 upstep += d
         val = ceil((start + upstep) / 2.0)
-        # print(diffs)
         print(val)
-        # print()
-
         for _ in range(q):
-            l, r, x = [int(i) for i in stdin.readline().split()]
+            (l, r, x) = [int(i) for i in stdin.readline().split()]
             l -= 1
             r -= 1
             if l == 0:
@@ -46,12 +40,7 @@ def main():
                     upstep -= old
                 if new > 0:
                     upstep += new
-            #print("Steps: {0}".format(upstep))
-            # print(diffs)
-            #print("Start: {0}".format(start))
-
             val = ceil((start + upstep) / 2.0)
-            #print("Answer: {0}".format(val))
             print(val)
 
 

@@ -16,7 +16,7 @@ for i in range(3):
     arr[6] += q[0]
     arr[7] += q[1]
     arr[8] += q[2]
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 x %= 3
 y %= 3
 if x == 1:
@@ -33,13 +33,12 @@ elif x == 2:
         pos = 4
     else:
         pos = 5
+elif y == 1:
+    pos = 6
+elif y == 2:
+    pos = 7
 else:
-    if y == 1:
-        pos = 6
-    elif y == 2:
-        pos = 7
-    else:
-        pos = 8
+    pos = 8
 if '.' in arr[pos]:
     for i in range(9):
         if arr[pos][i] == '.':
@@ -49,7 +48,6 @@ else:
         for j in range(9):
             if arr[i][j] == '.':
                 arr[i][j] = '!'
-
 ans = []
 for i in range(3):
     q = ''

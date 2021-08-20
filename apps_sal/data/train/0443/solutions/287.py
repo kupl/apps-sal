@@ -1,5 +1,7 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
+
         def loop(prev, remains, i):
             res = 0
             if i >= len(rating):

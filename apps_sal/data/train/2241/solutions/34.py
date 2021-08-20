@@ -1,7 +1,7 @@
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 A = [int(a) for a in input().split()]
 B = [int(a) for a in input().split()]
-P = 10**9 + 7
+P = 10 ** 9 + 7
 Y = [[pow(i, j, P) for j in range(401)] for i in range(401)]
 for i in range(1, 401):
     for j in range(401):

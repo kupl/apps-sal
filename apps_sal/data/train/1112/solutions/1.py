@@ -1,5 +1,3 @@
-# cook your dish here
-
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -7,9 +5,9 @@ for i in range(t):
         print(1)
     else:
         count = 1
-        while(n > 0):
+        while n > 0:
             for j in range(1, n + 1):
-                print(count, end="")
+                print(count, end='')
                 count += 1
             n -= 1
             print()

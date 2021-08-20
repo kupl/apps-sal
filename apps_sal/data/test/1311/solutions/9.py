@@ -1,11 +1,11 @@
 def on(l1, l2):
-    return(abs(l1[0] - l2[0]) >= l1[1] + l2[1])
+    return abs(l1[0] - l2[0]) >= l1[1] + l2[1]
 
 
 n = int(input())
 inf = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     inf.append([a + b, a - b])
 inf.sort()
 res = 1

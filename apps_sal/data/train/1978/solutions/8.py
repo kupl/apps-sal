@@ -1,5 +1,7 @@
 class Solution:
+
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
+
         def match(list1, pattern):
             for i in range(len(pattern)):
                 if list1[i] != pattern[i]:
@@ -18,7 +20,6 @@ class Solution:
                 else:
                     arr.append(dict[i])
             return arr
-
         pat = number_arr(pattern)
         ans = []
         for word in words:

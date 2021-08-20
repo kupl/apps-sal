@@ -1,4 +1,5 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         orderarr = sorted(arr)
         index = (len(arr) - 1) // 2
@@ -7,7 +8,6 @@ class Solution:
         for i in range(len(orderarr) - 1, -1, -1):
             curabs = abs(orderarr[i] - mid)
             dic[curabs].append(orderarr[i])
-
         res = []
         keys = sorted(dic.keys())
         for i in range(len(keys) - 1, -1, -1):

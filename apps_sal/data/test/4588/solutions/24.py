@@ -1,5 +1,4 @@
-X, Y = input().split()
-
+(X, Y) = input().split()
 if X < Y:
     print('<')
 elif X > Y:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 k = int(input())
 
 
@@ -13,6 +12,6 @@ n = 1
 d = 0
 for _ in range(k):
     print(n)
-    if snuke(n + 10**d) > snuke(n + 10**(d + 1)):
+    if snuke(n + 10 ** d) > snuke(n + 10 ** (d + 1)):
         d += 1
-    n += 10**d
+    n += 10 ** d

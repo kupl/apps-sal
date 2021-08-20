@@ -29,7 +29,7 @@ def merge(a, b, k):
         return k
     k -= 1
     if size[pred_a] > size[pred_b]:
-        pred_a, pred_b = pred_b, pred_a
+        (pred_a, pred_b) = (pred_b, pred_a)
     pred[pred_a] = pred_b
     size[pred_b] = max(size[pred_b], size[pred_a] + 1)
     return k

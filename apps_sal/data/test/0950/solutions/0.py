@@ -1,22 +1,37 @@
 import math
 import re
 import itertools as it
-def prime(n): return len([i for i in range(2, int(math.sqrt(n) + 1)) if n % i == 0]) == 0
 
 
-def gcd(a, b): return gcd(b, a % b) if b else a
-def fact(x): return x * fact(x - 1) if x else 1
+def prime(n):
+    return len([i for i in range(2, int(math.sqrt(n) + 1)) if n % i == 0]) == 0
 
 
-def bino(n, k): return fact(n) / fact(k) / fact(n - k)
-def fib11(n): return 1 if n < 2 else fib11(n - 1) + fib11(n - 2)
+def gcd(a, b):
+    return gcd(b, a % b) if b else a
 
 
-def fib01(n): return 0 if n == 0 else 1 if n == 1 else fib01(n - 1) + fib01(n - 2)
-def sumofd(x): return x if x < 10 else sumofd(x // 10) + x % 10
+def fact(x):
+    return x * fact(x - 1) if x else 1
 
 
-n, m = map(int, input().split(' '))
+def bino(n, k):
+    return fact(n) / fact(k) / fact(n - k)
+
+
+def fib11(n):
+    return 1 if n < 2 else fib11(n - 1) + fib11(n - 2)
+
+
+def fib01(n):
+    return 0 if n == 0 else 1 if n == 1 else fib01(n - 1) + fib01(n - 2)
+
+
+def sumofd(x):
+    return x if x < 10 else sumofd(x // 10) + x % 10
+
+
+(n, m) = map(int, input().split(' '))
 a = []
 dp = []
 sc = st = sl = 1000000
@@ -30,14 +45,7 @@ for _ in range(n):
             t = min(t, i, len(a[-1]) - i)
         if 'a' <= a[-1][i] <= 'z':
             l = min(l, i, len(a[-1]) - i)
-    '''if c == t == 1000000 or c == l == 1000000 or l == t == 1000000:
-		if c == t == 1000000:
-			sl = 0
-		if c == l == 1000000:
-			st = 0
-		if l == t == 1000000:
-			sc = 0
-		continue'''
+    'if c == t == 1000000 or c == l == 1000000 or l == t == 1000000:\n\t\tif c == t == 1000000:\n\t\t\tsl = 0\n\t\tif c == l == 1000000:\n\t\t\tst = 0\n\t\tif l == t == 1000000:\n\t\t\tsc = 0\n\t\tcontinue'
     dp.append([c, t, l])
 mm = 1000000
 kk = it.permutations(list(range(n)), 3)

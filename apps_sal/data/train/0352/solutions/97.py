@@ -1,4 +1,3 @@
-
 def is_pre(s1, s2):
     c = 0
     i = 0
@@ -11,6 +10,7 @@ def is_pre(s1, s2):
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=len)
         n = len(words)

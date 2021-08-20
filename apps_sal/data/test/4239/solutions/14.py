@@ -7,7 +7,6 @@ def cal(n, x):
 
 
 N = int(input())
-
 ans = N
 for i in range(N + 1):
     ans = min(ans, cal(i, 6) + cal(N - i, 9))

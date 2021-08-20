@@ -2,11 +2,12 @@ from operator import add
 
 
 class Stree:
+
     def __init__(self, f, n, default, init_data):
-        self.ln = 2**(n - 1).bit_length()
+        self.ln = 2 ** (n - 1).bit_length()
         self.data = [default] * (self.ln * 2)
         self.f = f
-        for i, d in init_data.items():
+        for (i, d) in init_data.items():
             self.data[self.ln + i] = d
         for j in range(self.ln - 1, 0, -1):
             self.data[j] = f(self.data[j * 2], self.data[j * 2 + 1])
@@ -19,6 +20,7 @@ class Stree:
             self.data[p] = self.f(self.data[p * 2], self.data[p * 2 + 1])
 
     def get(self, i, j):
+
         def _get(l, r, p):
             if i <= l and j >= r:
                 return self.data[p]
@@ -33,6 +35,7 @@ class Stree:
         return _get(0, self.ln, 1)
 
     def find_value(self, v):
+
         def _find_value(l, r, p, v):
             if r == l + 1:
                 return l
@@ -54,7 +57,7 @@ def main():
         sval = stree.find_value(s)
         pp.append(sval)
         stree.update(sval, 0)
-    print(*(reversed(pp)))
+    print(*reversed(pp))
 
 
 def __starting_point():

@@ -8,11 +8,11 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, x, m = read_ints()
+    (n, x, m) = read_ints()
     lo = x
     hi = x
     for i in range(m):
-        l, r = read_ints()
+        (l, r) = read_ints()
         if min(r, hi) >= max(lo, l):
             lo = min(lo, l)
             hi = max(hi, r)

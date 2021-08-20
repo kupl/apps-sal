@@ -1,8 +1,8 @@
-a, b = map(int, input().split())
-c, d = map(int, input().split())
+(a, b) = map(int, input().split())
+(c, d) = map(int, input().split())
 l = 0
 r = 10 ** 10
-if (a * d == b * c):
+if a * d == b * c:
     print(0)
 else:
     for i in range(10000):
@@ -19,7 +19,7 @@ else:
         mxa = max(a1, a2, a3, a4)
         mnb = min(b1, b2, b3, b4)
         mxb = max(b1, b2, b3, b4)
-        if (mxa >= mnb and mxb >= mna):
+        if mxa >= mnb and mxb >= mna:
             r = x
         else:
             l = x

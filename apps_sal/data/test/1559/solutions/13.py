@@ -1,7 +1,6 @@
 L = int(input())
 A = input()
 N = len(A)
-
 if N % L != 0 or A == '9' * N:
     K = N // L + 1
     for _ in range(K):

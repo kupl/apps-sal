@@ -3,14 +3,11 @@ from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellma
 import numpy as np
 import sys
 input = sys.stdin.readline
-
-
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 costs = []
 for i in range(10):
     cost = list(map(int, input().split()))
     costs.append(cost)
-
 cost_array = np.array(costs)
 counter = [0] * 10
 for i in range(H):

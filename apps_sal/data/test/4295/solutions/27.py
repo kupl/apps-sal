@@ -1,6 +1,5 @@
 def __starting_point():
-
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = set()
     n = n % k
     while True:

@@ -1,18 +1,16 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 bits = [0 for i in range(128)]
 tmp = n
 sumBits = 0
-
 for i in range(64):
     if tmp % 2 == 1:
         bits[63 - i] = 1
         sumBits += 1
     tmp = tmp >> 1
 if sumBits > k:
-    print("No")
+    print('No')
 elif sumBits == k:
-    print("Yes")
+    print('Yes')
     res = []
     for i in range(63, -1, -1):
         if bits[63 - i] == 1:
@@ -44,7 +42,7 @@ else:
                 bits[i] = 1
             bits += [1] * (k - sumBits + first - 128)
             bits[-1] = 2
-    print("Yes")
+    print('Yes')
     res = []
     for i in range(len(bits)):
         if bits[i] != 0:

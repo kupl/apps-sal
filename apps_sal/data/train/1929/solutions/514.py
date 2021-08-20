@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val=None, is_end=False):
         self.child = dict()
         self.val = val
@@ -30,8 +31,3 @@ class StreamChecker:
             if tmp.is_end:
                 return True
         return tmp.is_end
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

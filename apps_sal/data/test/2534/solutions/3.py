@@ -1,5 +1,4 @@
-# cook your dish here
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 k = []
 for _ in range(r):
     a = []
@@ -15,7 +14,7 @@ for j in range(c):
         if b < k[i][j]:
             b = k[i][j]
     cmax.append(b)
-if(set(rmin).intersection(set(cmax))):
+if set(rmin).intersection(set(cmax)):
     print(*set(rmin).intersection(set(cmax)))
 else:
     print('GUESS')

@@ -1,4 +1,4 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 cake = [input().strip() for _ in range(r)]
 ans = 0
 for i in range(r):

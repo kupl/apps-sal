@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         oddCounts = []
         oddCount = 0

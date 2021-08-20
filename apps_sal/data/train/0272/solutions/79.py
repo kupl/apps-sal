@@ -1,6 +1,7 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        keyHold = set([idx for idx, b in enumerate(status) if b == 1])
+        keyHold = set([idx for (idx, b) in enumerate(status) if b == 1])
         boxHold = set(initialBoxes)
         opened = set()
         while True:
@@ -24,4 +25,4 @@ class Solution:
                 boxHold.add(b)
             for b in opened:
                 boxHold.discard(b)
-        return sum([c for idx, c in enumerate(candies) if idx in opened])
+        return sum([c for (idx, c) in enumerate(candies) if idx in opened])

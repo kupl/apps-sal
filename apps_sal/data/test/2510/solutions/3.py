@@ -11,7 +11,7 @@ class UnionFind:
         if x == y:
             return 0
         if self.parent[x] > self.parent[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parent[x] += self.parent[y]
         self.parent[y] = x
         return self.parent[x]
@@ -39,14 +39,14 @@ class UnionFind:
         return list(groups.values())
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 uf = UnionFind(n)
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     uf.merge(a - 1, b - 1)
 grp = uf.groups()
 ans = 0
 for i in range(len(grp)):
-    if (len(grp[i]) > ans):
+    if len(grp[i]) > ans:
         ans = len(grp[i])
 print(ans)

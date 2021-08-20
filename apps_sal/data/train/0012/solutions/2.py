@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -9,10 +8,10 @@ for _ in range(t):
     pos = neg = False
     ok = True
     for i in range(n):
-        if a[i] > b[i] and not neg:
+        if a[i] > b[i] and (not neg):
             ok = False
             break
-        if a[i] < b[i] and not pos:
+        if a[i] < b[i] and (not pos):
             ok = False
             break
         if a[i] == -1:

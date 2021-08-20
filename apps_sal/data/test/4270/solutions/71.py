@@ -8,7 +8,6 @@ def cumsum(n, A):
 
 n = int(input())
 v = sorted(list(map(int, input().split())))
-
 for i in range(n - 1):
     s = cumsum(n, v)
 print(s[-1])

@@ -1,5 +1,4 @@
-L, A, B, M = list(map(int, input().split()))
-
+(L, A, B, M) = list(map(int, input().split()))
 ten = 0
 
 
@@ -7,10 +6,10 @@ def pow_(x, t):
     if t == 0:
         return 1
     if t % 2 == 1:
-        return (pow_(x, t - 1) * x) % M
+        return pow_(x, t - 1) * x % M
     else:
         y = pow_(x, t // 2)
-        return (y * y) % M
+        return y * y % M
 
 
 def f(l):
@@ -45,32 +44,27 @@ ten = 10
 for _ in range(18):
     l = ten // 10
     r = ten - 1
-
     if last < l:
         ten *= 10
         continue
     if A > r:
         ten *= 10
         continue
-    na = 0  # 初項
-    nl = 0  # 長さ
-
+    na = 0
+    nl = 0
     if A >= l:
         na = A
     else:
         na = (l - A + B - 1) // B * B + A
         na = min(na, last)
-
     nlast = 0
     if last <= r:
         nlast = last
     else:
         nlast = (r - A) // B * B + A
     nl = (nlast - na) // B + 1
-
     ans *= pow_(ten, nl) % M
-    ans += (na * f(nl)) % M
+    ans += na * f(nl) % M
     ans += g(nl) % M
     ten *= 10
-
-print((ans % M))
+print(ans % M)

@@ -1,7 +1,6 @@
 n = int(input())
 hl = list(map(int, input().split()))
 flg = True
-
 hmax = hl[0]
 for h in hl:
     hmax = max(hmax, h)
@@ -9,7 +8,6 @@ for h in hl:
         continue
     else:
         flg = False
-
 if flg:
     print('Yes')
 else:

@@ -1,11 +1,11 @@
 def grimper(M):
     k = 1
     while M[k] < M[k - 1]:
-        M[k], M[k - 1] = M[k - 1], M[k]
+        (M[k], M[k - 1]) = (M[k - 1], M[k])
         k += 1
     k = n - 1
     while M[k] < M[k - 1]:
-        M[k], M[k - 1] = M[k - 1], M[k]
+        (M[k], M[k - 1]) = (M[k - 1], M[k])
         k -= 1
     return M
 

@@ -5,7 +5,6 @@ class Solution:
         if n == 0:
             return 0
         m = len(grid[0])
-
         top = Solution.fill_top(grid, n, m)
         left = Solution.fill_left(grid, n, m)
         bottom = Solution.fill_bottom(grid, n, m)
@@ -16,19 +15,15 @@ class Solution:
 
         def bottom_right(i, j):
             return min(bottom[i][j], right[i][j])
-
         square = 0
-
         for i in range(n):
             for j in range(m):
                 sliding = top_left(i, j)
-
                 for s in range(sliding - 1, -1, -1):
                     k = i - s
                     l = j - s
-                    if bottom_right(k, l) >= (s + 1):
+                    if bottom_right(k, l) >= s + 1:
                         square = max(square, s + 1)
-
         return square ** 2
 
     @staticmethod
@@ -38,7 +33,6 @@ class Solution:
     @staticmethod
     def fill_top(grid, n, m):
         top = Solution.empty(n, m)
-
         for i in range(n):
             if i == 0:
                 for j in range(m):
@@ -51,7 +45,6 @@ class Solution:
     @staticmethod
     def fill_left(grid, n, m):
         left = Solution.empty(n, m)
-
         for j in range(m):
             if j == 0:
                 for i in range(n):
@@ -64,7 +57,6 @@ class Solution:
     @staticmethod
     def fill_bottom(grid, n, m):
         bottom = Solution.empty(n, m)
-
         for i in range(n - 1, -1, -1):
             if i == n - 1:
                 for j in range(m):
@@ -77,7 +69,6 @@ class Solution:
     @staticmethod
     def fill_right(grid, n, m):
         right = Solution.empty(n, m)
-
         for j in range(m - 1, -1, -1):
             if j == m - 1:
                 for i in range(n):

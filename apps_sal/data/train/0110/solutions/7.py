@@ -10,7 +10,7 @@ def rl():
 
 
 def solve():
-    n, k = rl()
+    (n, k) = rl()
     A = rl()
     peaks = []
     for i in range(1, n - 1):
@@ -18,7 +18,6 @@ def solve():
             peaks.append(1)
         else:
             peaks.append(0)
-
     best = sum(peaks[:k - 2])
     curr = best
     best_l = 0
@@ -28,7 +27,7 @@ def solve():
         if curr > best:
             best = curr
             best_l = i
-    return best + 1, best_l + 1
+    return (best + 1, best_l + 1)
 
 
 t = ri()

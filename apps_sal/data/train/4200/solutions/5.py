@@ -1,5 +1,5 @@
 from itertools import chain
-vowel = set("aeiouAEIOU").__contains__
+vowel = set('aeiouAEIOU').__contains__
 
 
 def vowel_shift(text, n):
@@ -10,4 +10,4 @@ def vowel_shift(text, n):
         return text
     n %= len(L)
     it = chain(L[-n:], L[:-n])
-    return ''.join(next(it) if vowel(c) else c for c in text)
+    return ''.join((next(it) if vowel(c) else c for c in text))

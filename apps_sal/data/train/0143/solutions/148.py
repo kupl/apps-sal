@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         deq = []
         currentTwo = set()
@@ -23,7 +24,5 @@ class Solution:
                 temp = deq[-1][1]
                 deq.append((e, 1))
                 temp += 1
-
             result = max(result, temp)
-
         return result

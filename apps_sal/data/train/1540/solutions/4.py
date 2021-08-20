@@ -3,7 +3,7 @@ while T > 0:
     N = int(input())
     K = int(input())
     if K % N == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     T = T - 1

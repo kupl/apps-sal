@@ -14,15 +14,9 @@ class ProductOfNumbers:
 
     def getProduct(self, k: int) -> int:
         prev = self.hash[len(self.hash) - 1][0]
-        low, up = (len(self.hash) - 1) - k + 1, len(self.hash) - 1
+        (low, up) = (len(self.hash) - 1 - k + 1, len(self.hash) - 1)
         if low <= prev <= up:
             return 0
         top = len(self.hash) - 1 - k
         end = len(self.hash) - 1
         return int(self.hash[end][1] / self.hash[top][1]) if k != len(self.hash) else self.hash[k - 1][1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

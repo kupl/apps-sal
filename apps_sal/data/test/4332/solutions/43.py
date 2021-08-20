@@ -1,5 +1,4 @@
 N = input()
-
 tmp = 0
 for i in range(len(N)):
     tmp += int(N[i])

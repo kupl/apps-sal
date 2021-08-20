@@ -1,9 +1,7 @@
 from decimal import *
-
 getcontext().prec = 128
-
 xs = input()
-xs = [x for x in xs.split("e")]
+xs = [x for x in xs.split('e')]
 a = Decimal(xs[0])
 b = 10 ** int(xs[1])
 s = str(a * b)

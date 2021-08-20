@@ -4,4 +4,4 @@ def check_alive(health):
     elif health > 0 and health <= 10:
         return True
     else:
-        return "Impossible!"
+        return 'Impossible!'

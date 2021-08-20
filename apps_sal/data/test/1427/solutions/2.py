@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 mod = 1000000007
 
 
@@ -9,7 +8,7 @@ def add(a, b):
 
 
 def mul(a, b):
-    return (a * b) % mod
+    return a * b % mod
 
 
 def pow(p, k):
@@ -41,16 +40,13 @@ for i in range(n):
                 ai //= p
             lcm[p] = max(lcm.get(p, 0), ps[i][p])
         p = p + 1 if p * p < ai else ai
-
 lcmv = 1
 for p in lcm:
     lcmv = mul(lcmv, pow(p, lcm[p]))
-
 ret = 0
 for i in range(n):
     prod = lcmv
     for p in ps[i]:
         prod = mul(prod, inv(p, ps[i][p]))
     ret = add(ret, prod)
-
 print(ret)

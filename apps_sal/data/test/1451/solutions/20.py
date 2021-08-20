@@ -7,5 +7,5 @@ def nld(n):
     return val
 
 
-n, k = (int(x) for x in input().split())
-print(sum(1 for x in (int(x) for x in input().split()) if nld(x) <= k))
+(n, k) = (int(x) for x in input().split())
+print(sum((1 for x in (int(x) for x in input().split()) if nld(x) <= k)))

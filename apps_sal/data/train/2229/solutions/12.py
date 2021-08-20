@@ -1,9 +1,9 @@
 def main():
-    s, w = ['', *input()], input()
+    (s, w) = (['', *input()], input())
     l = list(map(int, input().split()))
-    lo, hi = 0, len(s) - len(w)
+    (lo, hi) = (0, len(s) - len(w))
     while lo < hi:
-        mid, t = (lo + hi) // 2, s[:]
+        (mid, t) = ((lo + hi) // 2, s[:])
         for i in l[:mid]:
             t[i] = ''
         try:

@@ -1,11 +1,8 @@
 import sys
 import collections
-
-N, *A = map(int, open(0).read().split())
-
+(N, *A) = map(int, open(0).read().split())
 B = collections.Counter(A).most_common()
 B.sort(key=lambda x: x[0])
-
 ans = 0
 for i in range(len(B)):
     count = B[i][1]

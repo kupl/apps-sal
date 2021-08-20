@@ -1,6 +1,6 @@
 n = int(input())
 t = input()
-s, i = 0, 0
+(s, i) = (0, 0)
 while i < n:
     x = t[i]
     i += 1

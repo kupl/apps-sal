@@ -1,19 +1,15 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
 def ri():
     return list(map(int, stdin.readline().split()))
-#lines = stdin.readlines()
 
 
 n = int(input())
 a = list(ri())
-
 for i in range(n):
     if a[i] != 0:
         a[i] = -1
-
 for i in range(n):
     if a[i] != 0:
         continue
@@ -27,5 +23,4 @@ for i in range(n):
             break
         if a[j] == -1 or a[j] > i - j:
             a[j] = i - j
-
-print(" ".join(map(str, a)))
+print(' '.join(map(str, a)))

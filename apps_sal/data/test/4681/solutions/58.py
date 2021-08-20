@@ -9,7 +9,6 @@ def lucas(x):
     if x == 1:
         return 1
     else:
-
         return lucas(x - 1) + lucas(x - 2)
 
 

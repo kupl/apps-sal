@@ -1,4 +1,3 @@
-
 p = 10 ** 9 + 7
 
 
@@ -25,6 +24,5 @@ def sum_special(n):
     return (sum_odd(s[0]) + sum_even(s[1])) % p
 
 
-l, r = list(map(int, input().split()))
-
+(l, r) = list(map(int, input().split()))
 print((p + sum_special(r) - sum_special(l - 1)) % p)

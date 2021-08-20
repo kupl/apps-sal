@@ -8,7 +8,7 @@ def odd(s):
             d2 = l.index('d', d1 + 1)
         except ValueError:
             return odd
-        if o > -1 and d1 > -1 and d2 > -1:
+        if o > -1 and d1 > -1 and (d2 > -1):
             l.pop(d2)
             l.pop(d1)
             l.pop(o)

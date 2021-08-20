@@ -16,8 +16,8 @@ class Task:
     def solve(self):
         sentences = self.sentences
         for current in sentences:
-            matcherFirst = re.search('^miao\.', current)
-            matcherSecond = re.search('lala\.$', current)
+            matcherFirst = re.search('^miao\\.', current)
+            matcherSecond = re.search('lala\\.$', current)
             if matcherFirst != None and matcherSecond == None:
                 self.answer += ["Rainbow's"]
                 continue

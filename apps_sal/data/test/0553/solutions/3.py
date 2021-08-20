@@ -1,6 +1,4 @@
-
 count = int(input())
-
 if count == 1:
     print('6')
 else:
@@ -16,9 +14,6 @@ else:
             distance += 0 if new_code[3] == code[3] else 1
             distance += 0 if new_code[4] == code[4] else 1
             distance += 0 if new_code[5] == code[5] else 1
-
             hamming = min(hamming, distance)
-
         codes.append(new_code)
-
     print(int(hamming / 2 - 0.5))

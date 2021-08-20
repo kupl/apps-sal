@@ -1,9 +1,9 @@
-a, b, c = map(int, input().split("/"))
+(a, b, c) = map(int, input().split('/'))
 if a > 2019:
-    print("TBD")
+    print('TBD')
 elif a < 2019:
-    print("Heisei")
+    print('Heisei')
 elif b <= 4:
-    print("Heisei")
+    print('Heisei')
 else:
-    print("TBD")
+    print('TBD')

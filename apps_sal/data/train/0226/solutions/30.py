@@ -2,11 +2,12 @@ from math import sqrt
 
 
 class Solution:
+
     def numSquarefulPerms(self, A: List[int]) -> int:
         return self.backtrack(A, 0, set())
 
     def isPerfect(self, num):
-        return int(sqrt(num))**2 == num
+        return int(sqrt(num)) ** 2 == num
 
     def backtrack(self, permutation, j, seen):
         permutation_tuple = (j,) + tuple(permutation)
@@ -24,4 +25,4 @@ class Solution:
         return total
 
     def swap(self, array, i, j):
-        array[i], array[j] = array[j], array[i]
+        (array[i], array[j]) = (array[j], array[i])

@@ -1,7 +1,7 @@
 x = eval(input())
-while(x > 0):
+while x > 0:
     x -= 1
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     tot = 0
     ans = 1

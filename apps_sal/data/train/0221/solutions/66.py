@@ -1,4 +1,5 @@
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
         n = len(S)
         chars = [ord(c) - 97 for c in S]
@@ -6,7 +7,7 @@ class Solution:
         MOD = (1 << 63) - 1
         POWS = [1] * n
         for i in range(1, n):
-            POWS[i] = (POWS[i - 1] * BASE) % MOD
+            POWS[i] = POWS[i - 1] * BASE % MOD
 
         def search(k):
             seen = set()
@@ -20,8 +21,7 @@ class Solution:
                     return i
                 seen.add(h)
             return -1
-
-        l, r = 0, n - 1
+        (l, r) = (0, n - 1)
         while l <= r:
             m = (l + r) // 2
             if search(m) >= 0:

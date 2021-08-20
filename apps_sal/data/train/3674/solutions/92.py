@@ -5,4 +5,4 @@ def add_binary(a, b):
         result.append(str(i % 2))
         i //= 2
     result.append(str(i % 2))
-    return(''.join(result[::-1]))
+    return ''.join(result[::-1])

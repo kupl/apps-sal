@@ -1,7 +1,4 @@
-# cook your dish here
 from sys import stdin, stdout
-
-# Taken from geeksforgeeks
 BitsSetTable256 = [0] * 256
 
 
@@ -12,16 +9,12 @@ def initialize():
 
 
 def countSetBits(n):
-    return (BitsSetTable256[n & 0xff]
-      + BitsSetTable256[(n >> 8) & 0xff]
-      + BitsSetTable256[(n >> 16) & 0xff]
-            + BitsSetTable256[n >> 24])
+    return BitsSetTable256[n & 255] + BitsSetTable256[n >> 8 & 255] + BitsSetTable256[n >> 16 & 255] + BitsSetTable256[n >> 24]
 
 
 initialize()
-
 for _ in range(int(stdin.readline())):
-    N, Q = list(map(int, stdin.readline().split(' ')))
+    (N, Q) = list(map(int, stdin.readline().split(' ')))
     inpList = list(map(int, stdin.readline().split(' ')))
     queryList = []
     resList = []
@@ -37,9 +30,6 @@ for _ in range(int(stdin.readline())):
         q = int(stdin.readline())
         setBits = countSetBits(q)
         if setBits % 2 != 0:
-            stdout.write("{} {}\n".format(even, odd))
+            stdout.write('{} {}\n'.format(even, odd))
         else:
-            stdout.write("{} {}\n".format(odd, even))
-
-    #stdout.write("{} {} {} {} ".format(N,Q,inpList,*queryList))
-    # cook your dish here
+            stdout.write('{} {}\n'.format(odd, even))

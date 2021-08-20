@@ -1,8 +1,6 @@
 import sys
-
 n = int(input())
-d, x = list(map(int, input().split()))
-
+(d, x) = list(map(int, input().split()))
 for i in range(n):
     a = int(input())
     for j in range(1, sys.maxsize, 1):

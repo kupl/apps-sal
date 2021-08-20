@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder, key=lambda e: len(e))
         res = set()

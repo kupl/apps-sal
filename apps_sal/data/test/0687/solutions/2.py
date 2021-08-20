@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n == m - 1:
     print(n, m)
 elif n == m:

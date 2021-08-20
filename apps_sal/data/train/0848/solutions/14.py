@@ -5,10 +5,10 @@ for _ in range(int(input())):
     x.append(x[1])
     n += 2
     s = 0
-    if(n <= 3):
+    if n <= 3:
         print(sum(x))
         continue
     for i in range(n - 3):
-        if(sum(x[i:i + 3]) > s):
+        if sum(x[i:i + 3]) > s:
             s = sum(x[i:i + 3])
     print(s)

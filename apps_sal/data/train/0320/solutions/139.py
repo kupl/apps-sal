@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         res = 0
         max_len = 0
         for num in nums:

@@ -1,5 +1,4 @@
-# cook your dish here
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 co = 0
 for i in range(n):
     l = list(map(int, input().split()))

@@ -1,12 +1,11 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         count = {}
-
         for i in tiles:
             if i not in count:
                 count[i] = 0
             count[i] += 1
-
         op = set()
         for ch in count:
             tempString = ch
@@ -15,7 +14,6 @@ class Solution:
             tempCount = count.copy()
             buildString(tempString, tempCount, op)
             count[ch] += 1
-
         return len(op)
 
 
@@ -27,16 +25,13 @@ def buildString(currString, count, op):
             break
     if flag:
         return
-
     for ch in count:
         if count[ch] == 0:
             continue
         tempString = currString
         tempString += ch
-
         op.add(tempString)
         count[ch] -= 1
-
         tempCount = count.copy()
         buildString(tempString, tempCount, op)
         count[ch] += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         MAX = 300 * 1000 * 10
         N = len(jobDifficulty)

@@ -5,4 +5,4 @@ def check_alive(health):
         return True
 
 
-print((check_alive(-1)))
+print(check_alive(-1))

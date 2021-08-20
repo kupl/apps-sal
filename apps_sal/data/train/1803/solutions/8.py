@@ -5,11 +5,11 @@ from collections import Counter
 
 def max_palindrome(num):
     counter = Counter(str(num))
-    one = [int(x) for x, v in list(counter.items()) if v % 2 == 1]
+    one = [int(x) for (x, v) in list(counter.items()) if v % 2 == 1]
     if 0 < len(one):
         one = str(max(one))
     else:
-        one = ""
+        one = ''
     more = []
     for x in counter:
         while 2 <= counter[x]:
@@ -17,8 +17,8 @@ def max_palindrome(num):
             counter[x] -= 2
     more.sort()
     if 0 < len(more) and more[-1] == '0':
-        more = ""
-    more = "".join(more)
+        more = ''
+    more = ''.join(more)
     res = more[::-1] + one + more
     return int(res)
 
@@ -31,7 +31,6 @@ def numeric_palindrome(*args):
         args.append(1)
     if 1 < one:
         args.append(1)
-
     for n in range(2, len(args) + 1):
         comb = list(combinations(args, n))
         for c in comb:

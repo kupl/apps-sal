@@ -8,4 +8,4 @@ def not_prime(x):
 
 
 def odd_not_prime(n):
-    return sum(not_prime(x) for x in range(1, n + 1, 2))
+    return sum((not_prime(x) for x in range(1, n + 1, 2)))

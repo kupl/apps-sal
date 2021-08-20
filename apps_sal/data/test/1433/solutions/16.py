@@ -9,7 +9,7 @@ B. Прожекторы
 вывод
 стандартный вывод
 
-Театральная сцена представляет собой прямоугольное поле размером n × m. Директор театра выдал вам план сцены, согласно
+Театральная сцена представляет собой прямоугольное поле размером n\u2009×\u2009m. Директор театра выдал вам план сцены, согласно
 которому на ней будут располагаться актёры. На плане отмечено в каких клетках будут стоять актёры, а в каких нет.
 
 Прожектор, установленный на сцену, будет светить в одном из четырёх направлений (если смотреть на план сцены сверху) —
@@ -27,7 +27,7 @@ B. Прожекторы
 или направление, в котором он светит.
 Входные данные
 
-В первой строке следует два целых положительных числа n и m (1 ≤ n, m ≤ 1000) —
+В первой строке следует два целых положительных числа n и m (1\u2009≤\u2009n,\u2009m\u2009≤\u20091000) —
 количество строк и количество столбцов в плане.
 
 В следующих n строках следует по m целых чисел, каждое равно либо 0, либо 1, —
@@ -76,7 +76,6 @@ B. Прожекторы
 Таким образом, в данном примере всего 9 хороших позиций.
 """
 import random
-# import time
 
 
 def print_arrary(temp_array):
@@ -101,10 +100,9 @@ def count_best_positions():
                 end = j
         if found:
             if start != end:
-                # result += start + ((count_cols - 1) - end) + ((end - 1) - start - (result_hor - 1)) * 2
                 result += count_cols - start + end - 1 - result_hor * 2
             else:
-                result += start + ((count_cols - 1) - end)
+                result += start + (count_cols - 1 - end)
     for j in range(count_cols):
         found = False
         start = -1
@@ -120,41 +118,21 @@ def count_best_positions():
                 end = i
         if found:
             if start != end:
-                # result += start + ((count_rows - 1) - end) + ((end - 1) - start - (result_vert - 1)) * 2
                 result += count_rows - start + end - 1 - result_vert * 2
             else:
-                result += start + ((count_rows - 1) - end)
+                result += start + (count_rows - 1 - end)
     return result
 
 
 input_array = []
-# file = open('./input.txt')
-# temp_array_string = file.readline().split()
 temp_array_string = input().split()
-count_rows = int(temp_array_string[0])  # i == n
-count_cols = int(temp_array_string[1])  # j == m
+count_rows = int(temp_array_string[0])
+count_cols = int(temp_array_string[1])
 for row in range(count_rows):
-    # temp_array_string = [int(cell) for cell in file.readline().split()]
     temp_array_string = [int(cell) for cell in input().split()]
     temp_row = []
     for col in range(count_cols):
         temp_row.append(temp_array_string[col])
     input_array.append(temp_row)
 print(count_best_positions())
-# print('Generation array.')
-# input_array = []
-# count_rows = 1000
-# count_cols = 1
-# for i in range(count_rows):
-#     input_array.append([])
-#     for j in range(count_cols):
-#         input_array[i].append(random.randint(0, 0))
-# input_array[999][0] = 1
-# print('Array is Generated.')
-# start_time = time.time()
-# print(count_best_positions())
-# end_time = time.time()
-# print('Time = %s ms' % ((end_time - start_time) * 1000))
-# file.close()
-
 print()

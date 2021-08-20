@@ -1,4 +1,5 @@
 class Solution:
+
     def angleClock(self, hour: int, minutes: int) -> float:
         minutes_num = minutes / 5
         hour += minutes / 60

@@ -1,4 +1,5 @@
 class Solution:
+
     def uniqueOccurrences(self, arr: List[int]) -> bool:
         l = list(set(arr))
         for i in range(len(l)):

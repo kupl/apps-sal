@@ -3,7 +3,9 @@ MOD = 1000000009
 
 def AlternateSum(n, a, b, k, s):
     res = 0
-    def inv(x): return pow(x, MOD - 2, MOD)
+
+    def inv(x):
+        return pow(x, MOD - 2, MOD)
     q = pow(b, k, MOD) * inv(pow(a, k, MOD)) % MOD
     max_pow = pow(a, n, MOD)
     c = b * inv(a) % MOD
@@ -21,6 +23,6 @@ def AlternateSum(n, a, b, k, s):
     return z * res % MOD
 
 
-n, a, b, k = [int(x) for x in input().split()]
+(n, a, b, k) = [int(x) for x in input().split()]
 s = input()
 print(AlternateSum(n, a, b, k, s))

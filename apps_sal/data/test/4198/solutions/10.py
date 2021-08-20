@@ -1,4 +1,4 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 
 
 def f(n):
@@ -13,9 +13,8 @@ def test(n):
 
 
 l = 0
-r = 10**9
+r = 10 ** 9
 flag = True
-
 while flag:
     mid = (r + l) // 2
     if test(mid):

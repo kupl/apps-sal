@@ -12,11 +12,11 @@ def alphabet():
         flag = True
         for i in w:
             if i not in d:
-                print("No")
+                print('No')
                 flag = False
                 break
         if flag:
-            print("Yes")
+            print('Yes')
 
 
 alphabet()

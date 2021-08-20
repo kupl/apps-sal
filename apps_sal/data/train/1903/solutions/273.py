@@ -1,15 +1,13 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
 
-        def dist(i, j):  # 求两个点之间的距离
+        def dist(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-
-        ds = [float('inf')] * n  # 一点到其他所有点的距离
-
-        for i in range(1, n):  # 此时0到其他所有点的距离
+        ds = [float('inf')] * n
+        for i in range(1, n):
             ds[i] = dist(0, i)
-
         res = 0
         for i in range(1, n):
             cost = min(ds)

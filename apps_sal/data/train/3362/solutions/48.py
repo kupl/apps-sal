@@ -3,5 +3,4 @@ def sum_mix(arr):
     for i in arr:
         i = int(i)
         nums.append(i)
-
     return sum(nums)

@@ -4,11 +4,8 @@ import bisect
 from bisect import bisect_left, bisect_right
 import sys
 from math import gcd, sqrt
-sys.setrecursionlimit(10**7)
-inf = float("inf")
-# n=int(input())
-# n,m=map(int,input().split())
-# l=list(map(int,input().split()))
+sys.setrecursionlimit(10 ** 7)
+inf = float('inf')
 
 
 def get_factors(x):
@@ -52,12 +49,11 @@ def fun(k, x):
         print(x)
         return
     fac = list(dict.values())
-
     new_list = [1] * k
     theta = min_generator(fac, k, 0, new_list)
     print(theta)
 
 
 for i in range(int(input())):
-    k, x = map(int, input().split())
+    (k, x) = map(int, input().split())
     fun(k, x)

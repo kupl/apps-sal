@@ -1,7 +1,6 @@
 a = input()
 b = input()
 c = input()
-
 d = 'A'
 while True:
     if d == 'A':

@@ -1,4 +1,3 @@
-# 0,1,2 = グー、パー、チョキ
 def janken(h1, h2):
     handdet = (h2 - h1) % 3
     if handdet == 1:
@@ -7,7 +6,7 @@ def janken(h1, h2):
         return h1
 
 
-def jankenOnce(handls):  # 偶数。みんなにじゃんけんしてもらう
+def jankenOnce(handls):
     wonhand = []
     L = len(handls)
     for pair in range(L // 2):
@@ -15,7 +14,7 @@ def jankenOnce(handls):  # 偶数。みんなにじゃんけんしてもらう
     return wonhand
 
 
-def getWinner(handls):  # 2のべき乗である必要がある
+def getWinner(handls):
     if len(handls) % 2 == 1:
         return handls
     else:
@@ -23,24 +22,22 @@ def getWinner(handls):  # 2のべき乗である必要がある
         return getWinner(winnersList)
 
 
-n, k = [int(hoge) for hoge in input().split()]
+(n, k) = [int(hoge) for hoge in input().split()]
 S = input()
 hands = []
 for s in S:
-    if s == "R":
+    if s == 'R':
         hands.append(0)
-    elif s == "P":
+    elif s == 'P':
         hands.append(1)
-    elif s == "S":
+    elif s == 'S':
         hands.append(2)
-
 if n % 2:
     n *= 2
     hands = hands + hands
-
 newhands = hands
 for i in range(k):
     newhands = jankenOnce(newhands)
     newhands += newhands
-JK = ["R", "P", "S"]
+JK = ['R', 'P', 'S']
 print(JK[newhands[0]])

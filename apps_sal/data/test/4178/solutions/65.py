@@ -1,9 +1,7 @@
 n = int(input())
 H = list(map(int, input().split()))
-
 ans = 'Yes'
 m = H[0]
-
 if n == 1:
     ans
 else:

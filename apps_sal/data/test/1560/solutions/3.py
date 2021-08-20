@@ -8,11 +8,10 @@ for i in range(n):
             br['b'] += 1
         else:
             rb['r'] += 1
+    elif m[i] == 'r':
+        br['r'] += 1
     else:
-        if m[i] == 'r':
-            br['r'] += 1
-        else:
-            rb['b'] += 1
+        rb['b'] += 1
 rbs = min(rb['b'], rb['r']) + abs(rb['b'] - rb['r'])
 brs = min(br['b'], br['r']) + abs(br['b'] - br['r'])
 print(min(rbs, brs))

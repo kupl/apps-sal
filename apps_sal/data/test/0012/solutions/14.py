@@ -1,6 +1,5 @@
 n = int(input())
 s = input() + 'SS'
-
 d = []
 silv = 0
 gold = 0
@@ -17,8 +16,6 @@ for c in s:
         if gold > 0:
             l.append(gold)
         gold = 0
-
-
 if len(d) == 0:
     print(0)
 elif len(d) == 1:

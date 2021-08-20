@@ -10,8 +10,8 @@ def find_a(array, n):
         bp = b2
         i = 3
         while i < n:
-            ak, ap = 3 * ak - bk - ap, ak
-            bk, bp = 3 * bk - ap - bp, bk
+            (ak, ap) = (3 * ak - bk - ap, ak)
+            (bk, bp) = (3 * bk - ap - bp, bk)
             i += 1
         return ak
     else:
@@ -21,7 +21,7 @@ def find_a(array, n):
         bp = b1
         i = 0
         while i > n:
-            ak, ap = 3 * ak - bk - ap, ak
-            bk, bp = 3 * bk - ap - bp, bk
+            (ak, ap) = (3 * ak - bk - ap, ak)
+            (bk, bp) = (3 * bk - ap - bp, bk)
             i -= 1
         return ak

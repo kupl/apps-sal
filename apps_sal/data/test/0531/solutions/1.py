@@ -10,9 +10,7 @@ t = [0 for i in range(3)]
 for i in a:
     t[i] += 1
 c1 = t[1] - t[1] % 2
-
 c2 = min(t[0], t[2]) * 2
-
 print('{}'.format(n - max(c1, c2)))
 if c1 > c2:
     print('{} '.format(a_min) * (t[0] + t[1] // 2), '{} '.format(a_max) * (t[2] + t[1] // 2), '{} '.format(a_min + 1) * (t[1] % 2), sep='')

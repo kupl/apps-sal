@@ -1,31 +1,29 @@
 import sys
 import queue
-
 input_methods = ['clipboard', 'file', 'key']
 using_method = 0
 input_method = input_methods[using_method]
 
 
-def tin(): return map(int, input().split())
-def lin(): return list(tin())
+def tin():
+    return map(int, input().split())
+
+
+def lin():
+    return list(tin())
 
 
 mod = 1000000007
 
-# +++++
-
 
 def main():
-    #a = int(input())
-    n, m = tin()
-    #s = input()
+    (n, m) = tin()
     al = [-1] + lin()
     bb = [[] for _ in range(n + 1)]
     for _ in range(m):
-        a, b = tin()
+        (a, b) = tin()
         bb[a].append(b)
         bb[b].append(a)
-
     ll = []
     is_open = [0] * (n + 1)
     for i in range(n + 1):
@@ -41,9 +39,7 @@ def main():
             for v in bb[pp]:
                 q.put(v)
         ll.append(t)
-
     ret = 0
-    # pa(ll)
     for t in ll:
         st = set(t)
         for v in t:
@@ -52,7 +48,6 @@ def main():
     print(ret)
 
 
-# +++++
 isTest = False
 
 
@@ -73,7 +68,9 @@ def __starting_point():
     if sys.platform == 'ios':
         if input_method == input_methods[0]:
             ic = input_clipboard()
-            def input(): return ic.__next__()
+
+            def input():
+                return ic.__next__()
         elif input_method == input_methods[1]:
             sys.stdin = open('inputFile.txt')
         else:
@@ -81,8 +78,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
-
     ret = main()
     if ret is not None:
         print(ret)

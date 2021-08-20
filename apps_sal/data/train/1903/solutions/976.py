@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, V):
         self.parent = [-1] * V
 
@@ -7,11 +8,8 @@ class UnionFind:
         r2 = self.find(v2)
         if r1 == r2:
             return
-
         s1 = self.size(r1)
         s2 = self.size(r2)
-
-        # Weighted Union: to keep the height of sets as small as possible
         if s1 <= s2:
             self.parent[r1] = r2
             self.parent[r2] -= s1
@@ -23,13 +21,10 @@ class UnionFind:
         r = v
         while self.parent[r] >= 0:
             r = self.parent[r]
-
-        # Path Compression: to keep the height of sets as small as possible
         while v != r:
             new_v = self.parent[v]
             self.parent[v] = r
             v = new_v
-
         return r
 
     def size(self, v):
@@ -39,6 +34,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         edges = []
@@ -46,7 +42,6 @@ class Solution:
             for v in range(u + 1, n):
                 dist = abs(points[u][0] - points[v][0]) + abs(points[u][1] - points[v][1])
                 edges.append([dist, u, v])
-
         res = 0
         uf = UnionFind(n)
         for e in sorted(edges):

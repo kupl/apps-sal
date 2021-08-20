@@ -10,7 +10,6 @@ try:
                 s.add(ele)
         for i in range(n):
             l[i] = 0
-
         for i in range(0, n):
             if i in s:
                 l[i] = i

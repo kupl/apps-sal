@@ -1,6 +1,5 @@
 from collections import deque
-
-p = 10**9 + 7
+p = 10 ** 9 + 7
 
 
 def primelist(n):
@@ -26,8 +25,8 @@ def main():
         q = l.pop()
         s = 0
         c = 1
-        while n // (q**c):
-            s += n // (q**c)
+        while n // q ** c:
+            s += n // q ** c
             c += 1
         ans = ans * (s + 1) % p
     print(ans)

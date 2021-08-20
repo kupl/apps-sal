@@ -1,30 +1,32 @@
-
-# -*- coding: utf-8 -*-
-# @Date    : 2019-06-11 10:26:57
-# @Author  : raj lath (oorja.halt@gmail.com)
-# @Link    : link
-# @Version : 1.0.0
-
 from collections import deque
 import sys
-sys.setrecursionlimit(10**5 + 1)
-
+sys.setrecursionlimit(10 ** 5 + 1)
 inf = int(10 ** 20)
 max_val = inf
 min_val = -inf
 
 
-def RW(): return sys.stdin.readline().strip()
-def RI(): return int(RW())
-def RMI(): return [int(x) for x in sys.stdin.readline().strip().split()]
-def RWI(): return [x for x in sys.stdin.readline().strip().split()]
+def RW():
+    return sys.stdin.readline().strip()
+
+
+def RI():
+    return int(RW())
+
+
+def RMI():
+    return [int(x) for x in sys.stdin.readline().strip().split()]
+
+
+def RWI():
+    return [x for x in sys.stdin.readline().strip().split()]
 
 
 for _ in range(RI()):
-    n, m = RMI()
+    (n, m) = RMI()
     a = [[] for i in range(n + 1)]
     for i in range(m):
-        x, y = RMI()
+        (x, y) = RMI()
         a[x].append(y)
         a[y].append(x)
     col = [-1] * (n + 1)

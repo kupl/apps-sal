@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
         @lru_cache(None)
@@ -16,5 +17,4 @@ class Solution:
             if cons < rollMax[val]:
                 total_ways += roll(val, cons + 1, roll_left - 1)
             return total_ways
-
-        return roll(0, 0, n) % (10**9 + 7)
+        return roll(0, 0, n) % (10 ** 9 + 7)

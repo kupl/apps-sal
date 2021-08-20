@@ -1,21 +1,17 @@
 3
-
 MOD = 998244353
 
 
 def solve(N, A):
     ans = 0
-
     k = 1
     ans += k * A[-1]
     ans %= MOD
-
     for i in range(N - 2, -1, -1):
         ans += k * (N + 1 - i) * A[i]
         ans %= MOD
         k *= 2
         k %= MOD
-
     return ans
 
 

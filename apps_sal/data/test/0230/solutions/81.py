@@ -3,8 +3,7 @@ from typing import List
 
 class RollingHash:
     """Rolling Hash"""
-
-    __slots__ = ["_base", "_mod", "_hash", "_power"]
+    __slots__ = ['_base', '_mod', '_hash', '_power']
 
     def __init__(self, source: str, base: int = 1007, mod: int = 10 ** 9 + 7):
         self._base = base
@@ -15,7 +14,7 @@ class RollingHash:
     def _build_hash_from_zero(self, source: str) -> List[int]:
         """Compute hash of interval [0, right)."""
         res = [0] * (len(source) + 1)
-        for i, c in enumerate(source, 1):
+        for (i, c) in enumerate(source, 1):
             res[i] = (res[i - 1] * self._base + ord(c)) % self._mod
         return res
 
@@ -28,18 +27,14 @@ class RollingHash:
 
     def get_hash(self, left: int, right: int):
         """Return hash of interval [left, right)."""
-        return (
-            self._hash[right] - self._hash[left] * self._power[right - left]
-        ) % self._mod
+        return (self._hash[right] - self._hash[left] * self._power[right - left]) % self._mod
 
 
 def abc141_e():
-    # https://atcoder.jp/contests/abc141/tasks/abc141_e
     N = int(input())
     S = input().rstrip()
-
     rh = RollingHash(S)
-    ok, ng = 0, N // 2 + 1
+    (ok, ng) = (0, N // 2 + 1)
     while ng - ok > 1:
         mid = (ok + ng) // 2
         flg = False
@@ -50,11 +45,10 @@ def abc141_e():
                 flg = True
                 break
         if flg:
-            ok = mid  # next mid will be longer
+            ok = mid
         else:
-            ng = mid  # next mid will be shorter
-
-    print(ok)  # max length of substrings appeared twice or more
+            ng = mid
+    print(ok)
 
 
 def __starting_point():

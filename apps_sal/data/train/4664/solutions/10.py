@@ -1,5 +1,4 @@
 def conference_picker(cities_visited, cities_offered):
-
     SECSR = list(cities_visited)
     confPicker = list(cities_offered)
     shortList = list()

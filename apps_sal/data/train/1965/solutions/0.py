@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         if len(edges) == 0:
             return 0 if n == 0 else -1
@@ -13,17 +14,17 @@ class Solution:
                 p[ind] = res
                 return res
         cnt = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 3:
-                pu, pv = getP(u - 1), getP(v - 1)
+                (pu, pv) = (getP(u - 1), getP(v - 1))
                 if pu != pv:
                     p[pv] = pu
                     cnt += 1
-        if cnt != (n - 1):
+        if cnt != n - 1:
             pa = list(p)
-            for t, u, v in edges:
+            for (t, u, v) in edges:
                 if t == 1:
-                    pu, pv = getP(u - 1), getP(v - 1)
+                    (pu, pv) = (getP(u - 1), getP(v - 1))
                     if pu != pv:
                         p[pv] = pu
                         cnt += 1
@@ -32,9 +33,9 @@ class Solution:
                 if getP(v) != targetP:
                     return -1
             p = pa
-            for t, u, v in edges:
+            for (t, u, v) in edges:
                 if t == 2:
-                    pu, pv = getP(u - 1), getP(v - 1)
+                    (pu, pv) = (getP(u - 1), getP(v - 1))
                     if pu != pv:
                         p[pv] = pu
                         cnt += 1

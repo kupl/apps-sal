@@ -1,14 +1,12 @@
-'''input
+"""input
 11
 (R)R(R)Ra)c
-'''
-
-# MODIFIED SEGMENT TREE (MIN = MINIMUM PREFIX SUM instead of MINIMUM ELEMENT IN PREFIX)
-
+"""
 from sys import stdin
 
 
 class SegmentTree:
+
     def __init__(self, n, arr=[]):
         self.n = n
         self.tsum = [0] * (2 * n)
@@ -25,7 +23,6 @@ class SegmentTree:
         self.tsum[p] = val
         self.tmin[p] = val
         self.tmax[p] = val
-
         i = p
         while i > 1:
             self.tsum[i >> 1] = self.tsum[i] + self.tsum[i ^ 1]
@@ -34,13 +31,7 @@ class SegmentTree:
             i >>= 1
 
 
-'''
-import math
-array = [1,3,5,7,9,11]
-n = 2 ** math.ceil(math.log(len(array), 2))
-st = SegmentTree(n, array)
-st.update(0, 2)
-'''
+'\nimport math\narray = [1,3,5,7,9,11]\nn = 2 ** math.ceil(math.log(len(array), 2))\nst = SegmentTree(n, array)\nst.update(0, 2)\n'
 
 
 def input():
@@ -49,11 +40,8 @@ def input():
 
 n = int(input())
 s = input()
-
-#n = 2 ** math.ceil(math.log(n, 2))
 n = 1048576
 st = SegmentTree(n)
-
 maxit = -1
 currentit = 0
 output = []
@@ -70,7 +58,6 @@ for c in s:
             st.update(currentit, -1)
         else:
             st.update(currentit, 0)
-
     vmax = st.tmax[1]
     vmin = st.tmin[1]
     vsum = st.tsum[1]
@@ -78,5 +65,4 @@ for c in s:
         output.append(vmax)
     else:
         output.append(-1)
-
 print(' '.join(map(str, output)))

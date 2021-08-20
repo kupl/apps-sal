@@ -1,5 +1,4 @@
 import unittest
-
 JAVA = 'Java'
 COFFEE = 'Coffee'
 SCRIPT = 'Script'
@@ -21,6 +20,7 @@ def caffeineBuzz(n):
 
 
 class TestCaffeineBuzz(unittest.TestCase):
+
     def test_should_return_java_when_given_n_is_divisible_by_3(self):
         n = 3
         actual = caffeineBuzz(n)

@@ -1,22 +1,16 @@
 import sys
-
 read = sys.stdin.buffer.read
 readline = sys.stdin.buffer.readline
 readlines = sys.stdin.buffer.readlines
-
 n = int(readline())
 xy = list(map(int, read().split()))
 XY = list(zip(xy, xy))
-
 max_num = 10 ** 5
 delta = 10 ** 5 + 10
-
 graph = [[] for _ in range(max_num + delta + 1)]
-
-for x, y in XY:
+for (x, y) in XY:
     graph[x].append(delta + y)
     graph[delta + y].append(x)
-
 x_used = [False] * (max_num + 1)
 y_used = [False] * (max_num + 1)
 
@@ -34,14 +28,8 @@ def dfs(idx):
     while stack:
         v = stack.pop()
         if v >= delta:
-            # if y_used[v % delta]:
-            #     continue
-            # y_used[v % delta] = True
             y_res += 1
         else:
-            # if x_used[v]:
-            #     continue
-            # x_used[v] = True
             x_res += 1
         for u in graph[v]:
             if u >= delta:
@@ -64,12 +52,10 @@ for i in range(max_num + 1):
         continue
     temp = dfs(i)
     ans += temp
-
 for i in range(max_num + 1):
     if y_used[i]:
         continue
     i += delta
     temp = dfs(i)
     ans += temp
-
-print((ans - n))
+print(ans - n)

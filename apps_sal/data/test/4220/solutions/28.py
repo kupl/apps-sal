@@ -5,5 +5,5 @@ if len(lines) <= num:
     print(line)
 else:
     for i in range(num):
-        print(lines[i], end="")
-    print("...")
+        print(lines[i], end='')
+    print('...')

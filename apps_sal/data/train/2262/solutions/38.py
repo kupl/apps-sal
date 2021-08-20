@@ -1,15 +1,11 @@
-R, C, N = list(map(int, input().split()))
-UP, RIGHT, DOWN, LEFT = [], [], [], []
+(R, C, N) = list(map(int, input().split()))
+(UP, RIGHT, DOWN, LEFT) = ([], [], [], [])
 for i in range(N):
-    x1, y1, x2, y2 = list(map(int, input().split()))
-
-    # 2つとも周上にない
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     if 0 < x1 < R and 0 < y1 < C:
         continue
     if 0 < x2 < R and 0 < y2 < C:
         continue
-
-    # 2つとも周回上にある
     if x1 == 0:
         UP.append([i, y1])
     elif x1 == R:
@@ -18,7 +14,6 @@ for i in range(N):
         LEFT.append([i, x1])
     elif y1 == C:
         RIGHT.append([i, x1])
-
     if x2 == 0:
         UP.append([i, y2])
     elif x2 == R:
@@ -27,23 +22,15 @@ for i in range(N):
         LEFT.append([i, x2])
     elif y2 == C:
         RIGHT.append([i, x2])
-
-
-# 時計回りに探索できるようにする
 UP.sort(key=lambda x: x[1])
 RIGHT.sort(key=lambda x: x[1])
 DOWN.sort(key=lambda x: x[1], reverse=True)
 LEFT.sort(key=lambda x: x[1], reverse=True)
-
-# 全体を連結
 Numbers = UP + RIGHT + DOWN + LEFT
-
-# 時計回りに探索
 stack = []
-for n, z in Numbers:
+for (n, z) in Numbers:
     if stack and stack[-1] == n:
         stack.pop()
-
     else:
         stack.append(n)
-print(("NO" if stack else "YES"))
+print('NO' if stack else 'YES')

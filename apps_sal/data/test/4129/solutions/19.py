@@ -1,12 +1,11 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 sys.setrecursionlimit(50000)
-
-# 強連結成分分解(SCC): グラフGに対するSCCを行う
-# 入力: <N>: 頂点サイズ, <G>: 順方向の有向グラフ, <RG>: 逆方向の有向グラフ
-# 出力: (<ラベル数>, <各頂点のラベル番号>)
 
 
 def scc(N, G, RG):
@@ -36,9 +35,7 @@ def scc(N, G, RG):
         if not used[s]:
             rdfs(s, label)
             label += 1
-    return label, group
-
-# 縮約後のグラフを構築
+    return (label, group)
 
 
 def construct(N, G, label, group):
@@ -52,23 +49,23 @@ def construct(N, G, label, group):
                 continue
             G0[lbs].append(lbt)
         GP[lbs].append(v)
-    return G0, GP
+    return (G0, GP)
 
 
-n, m, s = map(int, input().split())
+(n, m, s) = map(int, input().split())
 s -= 1
-edge = [[]for _ in range(n)]
-redge = [[]for _ in range(n)]
+edge = [[] for _ in range(n)]
+redge = [[] for _ in range(n)]
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     edge[a].append(b)
     redge[b].append(a)
-label, group = scc(n, edge, redge)
-a, b = construct(n, redge, label, group)
+(label, group) = scc(n, edge, redge)
+(a, b) = construct(n, redge, label, group)
 ans = 0
 for i in range(label):
     if len(a[i]) == 0:
-        ans += (i != group[s])
+        ans += i != group[s]
 print(ans)

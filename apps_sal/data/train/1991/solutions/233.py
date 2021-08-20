@@ -1,10 +1,10 @@
 class Solution:
-    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
+    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
         dp = [[-1] * (fuel + 1) for _ in range(n)]
         ans = self.dfs(locations, start, finish, fuel, dp)
-        return (ans)
+        return ans
 
     def dfs(self, location, curr_city, finish, fuel, dp):
         if fuel < 0:
@@ -14,7 +14,6 @@ class Solution:
         ans = 0
         if curr_city == finish:
             ans = 1
-        # even after adding to ans, continue processing
         for next_city in range(len(location)):
             if next_city == curr_city:
                 continue

@@ -8,11 +8,12 @@ def p(f):
     return r
 
 
-def scan(): return map(int, input().split())
+def scan():
+    return map(int, input().split())
 
 
-a, b, c, d = scan()
-n, m = scan()
+(a, b, c, d) = scan()
+(n, m) = scan()
 f = list(scan())
 g = list(scan())
 r1 = p(f)

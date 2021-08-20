@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     ans = 0
     while b >= 1 and c >= 2:
         ans += 3

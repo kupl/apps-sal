@@ -1,14 +1,10 @@
 s = input()
-
 cntodda = 0
 cntoddb = 0
-
 cntevena = 0
 cntevenb = 0
-
 evencnt = 0
 oddcnt = 0
-
 for i in range(len(s)):
     oddcnt += 1
     if i % 2 == 0:

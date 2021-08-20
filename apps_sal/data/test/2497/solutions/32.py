@@ -1,13 +1,11 @@
 import numpy as np
-
 N = int(input())
-
 x_min = [np.inf] * 4
 x_max = [-np.inf] * 4
 y_min = [np.inf] * 4
 y_max = [-np.inf] * 4
 for _ in range(N):
-    x, y, d = input().split()
+    (x, y, d) = input().split()
     x = int(x)
     y = int(y)
     i = {'R': 0, 'L': 1, 'U': 2, 'D': 3}[d]
@@ -15,7 +13,6 @@ for _ in range(N):
     x_max[i] = max(x_max[i], x)
     y_min[i] = min(y_min[i], y)
     y_max[i] = max(y_max[i], y)
-
 x_max_ = max(x_max[2], x_max[3])
 x_min_ = min(x_min[2], x_min[3])
 y_max_ = max(y_max[0], y_max[1])
@@ -38,25 +35,9 @@ def WH(t):
     return W(t) * H(t)
 
 
-ts = [
-    0,
-    (x_max[1] - x_max[0]) / 2,
-    (x_min[1] - x_min[0]) / 2,
-    (y_max[3] - y_max[2]) / 2,
-    (y_min[3] - y_min[2]) / 2,
-    x_max_ - x_max[0],
-    -(x_max_ - x_max[1]),
-    x_min_ - x_min[0],
-    -(x_min_ - x_min[1]),
-    y_max_ - y_max[2],
-    -(y_max_ - y_max[3]),
-    y_min_ - y_min[2],
-    -(y_min_ - y_min[3]),
-]
-
+ts = [0, (x_max[1] - x_max[0]) / 2, (x_min[1] - x_min[0]) / 2, (y_max[3] - y_max[2]) / 2, (y_min[3] - y_min[2]) / 2, x_max_ - x_max[0], -(x_max_ - x_max[1]), x_min_ - x_min[0], -(x_min_ - x_min[1]), y_max_ - y_max[2], -(y_max_ - y_max[3]), y_min_ - y_min[2], -(y_min_ - y_min[3])]
 result = np.inf
 for t in ts:
     if t >= 0:
         result = min(result, WH(t))
-
 print(result)

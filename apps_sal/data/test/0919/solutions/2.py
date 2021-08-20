@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 d = [False] * 26
 for c in s:
@@ -6,14 +6,14 @@ for c in s:
 w = 0
 l = 0
 i = 0
-while (i < 26) and (l < k):
+while i < 26 and l < k:
     if d[i]:
         w += i + 1
         l += 1
         i += 2
     else:
         i += 1
-if (l == k):
+if l == k:
     print(w)
 else:
     print(-1)

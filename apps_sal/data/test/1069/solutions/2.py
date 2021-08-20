@@ -4,8 +4,7 @@ if len(n) < 5:
         print(4)
     else:
         print(0)
+elif int(n[-2:]) % 4 == 0:
+    print(4)
 else:
-    if int(n[-2:]) % 4 == 0:
-        print(4)
-    else:
-        print(0)
+    print(0)

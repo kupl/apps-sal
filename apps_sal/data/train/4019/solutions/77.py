@@ -3,4 +3,4 @@ def max_multiple(divisor, bound):
     for i in range(1, bound + 1):
         if i % divisor == 0:
             a.append(i)
-    return (max(a))
+    return max(a)

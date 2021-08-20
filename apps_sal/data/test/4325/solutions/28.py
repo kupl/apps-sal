@@ -2,9 +2,7 @@ import math
 
 
 def takoyaki():
-    # 入力
-    N, X, T = map(int, input().split())
-    # 処理
+    (N, X, T) = map(int, input().split())
     count = math.ceil(N / X)
     return count * T
 

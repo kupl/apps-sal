@@ -16,6 +16,6 @@ if m == num:
     print(5)
     i -= 5
     for j in range(5):
-        print(i + j, end=" ")
+        print(i + j, end=' ')
 else:
     print(0)

@@ -1,6 +1,6 @@
 s = input()
 o = s.find('^')
-a = list(int(s[i]) if s[i].isdigit() else 0 for i in range(len(s)))
+a = list((int(s[i]) if s[i].isdigit() else 0 for i in range(len(s))))
 summa = 0
 for i in range(len(s)):
     summa += (i - o) * a[i]

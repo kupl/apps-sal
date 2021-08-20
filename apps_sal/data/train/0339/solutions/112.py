@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, num1: List[int], num2: List[int]) -> int:
         dic1 = {}
         for i in range(len(num1)):

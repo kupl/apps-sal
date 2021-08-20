@@ -1,6 +1,4 @@
 S = input()
-
-X = "abcdefghijklmnopqrstuvwxyz"
-
+X = 'abcdefghijklmnopqrstuvwxyz'
 M = X.index(S)
 print(X[M + 1])

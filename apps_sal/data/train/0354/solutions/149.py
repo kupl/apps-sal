@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
 
         @lru_cache(maxsize=None)
@@ -12,5 +13,4 @@ class Solution:
                 elif k + 1 <= rollMax[j]:
                     ans += dfs(n - 1, j, k + 1)
             return ans
-
-        return sum(dfs(n - 1, i, 1) for i in range(6)) % 1000000007
+        return sum((dfs(n - 1, i, 1) for i in range(6))) % 1000000007

@@ -21,12 +21,11 @@ def count(s, n):
 ac = count(a, n)
 bc = count(b, n)
 cc = count(c, n)
-
 if ac > bc and ac > cc:
-    print("Kuro")
+    print('Kuro')
 elif bc > ac and bc > cc:
-    print("Shiro")
+    print('Shiro')
 elif cc > bc and cc > ac:
-    print("Katie")
+    print('Katie')
 else:
-    print("Draw")
+    print('Draw')

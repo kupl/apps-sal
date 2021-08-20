@@ -4,7 +4,7 @@ def main():
     for i in range(1, n + 1):
         ki[i] = []
     for i in range(n - 1):
-        u, v, w = list(map(int, input().split()))
+        (u, v, w) = list(map(int, input().split()))
         ki[u] += [[v, w % 2]]
         ki[v] += [[u, w % 2]]
     cl = [-1 for i in range(n)]
@@ -22,7 +22,7 @@ def main():
                 cl[v[0] - 1] = cl[q]
                 que.append(v[0] - 1)
     for i in range(n):
-        print((cl[i]))
+        print(cl[i])
 
 
 def __starting_point():

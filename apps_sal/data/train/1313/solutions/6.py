@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     n = int(input())
@@ -12,7 +11,7 @@ for _ in range(int(input())):
         print(2)
     else:
         ans = 0
-        for i in range(3, int(s**0.5) + 1):
+        for i in range(3, int(s ** 0.5) + 1):
             if s % i == 0:
                 ans = i
                 break

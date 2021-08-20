@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 a = [0] * 26
 for c in s:
@@ -6,10 +6,10 @@ for c in s:
 a.sort(reverse=True)
 ans = 0
 for i in range(26):
-    if(k <= a[i]):
-        ans += k**2
+    if k <= a[i]:
+        ans += k ** 2
         break
     else:
-        ans += a[i]**2
+        ans += a[i] ** 2
         k -= a[i]
 print(ans)

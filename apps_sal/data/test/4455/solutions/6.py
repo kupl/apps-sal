@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 person_to_skill = {}
 skill_to_numMentor = {}
@@ -14,12 +14,12 @@ for i in range(len(arr)):
 for person in range(n):
     person_to_numMentor[person] = skill_to_numMentor[person_to_skill[person]]
 for quarrel in range(k):
-    p1, p2 = list(map(int, input().split()))
+    (p1, p2) = list(map(int, input().split()))
     if person_to_skill[p1 - 1] > person_to_skill[p2 - 1]:
         person_to_numMentor[p1 - 1] -= 1
     if person_to_skill[p2 - 1] > person_to_skill[p1 - 1]:
         person_to_numMentor[p2 - 1] -= 1
-s = ""
+s = ''
 s += str(person_to_numMentor[0])
 for i in range(1, n):
     s += ' ' + str(person_to_numMentor[i])

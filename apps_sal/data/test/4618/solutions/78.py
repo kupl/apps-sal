@@ -3,7 +3,7 @@ import string
 s = input()
 K = int(input())
 location = defaultdict(list)
-for i, s_i in enumerate(s):
+for (i, s_i) in enumerate(s):
     location[s_i].append(i)
 count = 0
 s_list = []

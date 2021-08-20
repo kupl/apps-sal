@@ -8,17 +8,12 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 s = input()
 t = input()
-
 tmp = 0
-res = "No"
-
+res = 'No'
 if s == t[:-1]:
-    res = "Yes"
-
+    res = 'Yes'
 print(res)

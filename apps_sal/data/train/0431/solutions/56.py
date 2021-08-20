@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         result = 0
         tempDq = []

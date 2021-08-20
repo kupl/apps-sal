@@ -4,8 +4,7 @@ import math
 import itertools
 from collections import defaultdict
 input = sys.stdin.readline
-
-X, Y = list(map(int, input().split()))
+(X, Y) = list(map(int, input().split()))
 ans = 0
 for i in range(X, X + 100):
     now = i

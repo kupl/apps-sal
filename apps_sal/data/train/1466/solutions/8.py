@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 v = [0 for x in range(n)]
 v[0] = l[0]

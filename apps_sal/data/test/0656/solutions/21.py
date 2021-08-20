@@ -5,26 +5,23 @@ import sys
 inp = sys.stdin.readline
 
 
-def input(): return inp().strip()
+def input():
+    return inp().strip()
 
 
 flush = sys.stdout.flush
-# import threading
-# sys.setrecursionlimit(10**6)
-# threading.stack_size(2**25)
 
 
-def iin(): return int(input())
+def iin():
+    return int(input())
 
 
-def lin(): return list(map(int, input().split()))
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, input().split()))
 
 
 def main():
-    n, k = lin()
+    (n, k) = lin()
     a = lin()
     a1 = [0] * n
     for i in range(n):
@@ -47,7 +44,6 @@ def main():
         ext = []
         if ch and i + 1 - ch:
             ext = [ch, 1 + i - ch, 1]
-        # print(lft, ext)
         lft.sort()
         a2 = lft + ([ext] if ext else [])
         a2.sort()
@@ -55,10 +51,9 @@ def main():
         def check(a):
             if not a:
                 return 0
-            # print(a)
             s1 = sm
             ans = 0
-            for i, j, k in a:
+            for (i, j, k) in a:
                 if s1 < i:
                     break
                 s1 -= i
@@ -67,18 +62,15 @@ def main():
         if check(a2) > check(lft):
             lft = a2
         lft = lft[::-1]
-        # print(sm, a1)
-        # print(lft)
         while sm and lft:
-            ch, i, asd = lft.pop()
+            (ch, i, asd) = lft.pop()
             if sm < ch:
                 continue
-            while sm and ch and i < n:
+            while sm and ch and (i < n):
                 a1[i] = 1
                 i += 1
                 sm -= 1
                 ch -= 1
-        # print(a1)
         ans = 0
         a1 = [0] + a1
         for i in range(1, n + 1):
@@ -88,4 +80,3 @@ def main():
 
 
 main()
-# threading.Thread(target=main).start()

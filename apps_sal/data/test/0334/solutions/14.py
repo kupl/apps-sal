@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-c, d = map(int, input().split())
+(a, b) = map(int, input().split())
+(c, d) = map(int, input().split())
 s = {b - d}
 while b != d:
     if b < d:

@@ -1,6 +1,6 @@
 def count_deaf_rats(town):
     twn = town.replace(' ', '').split('P')
-    return sum(find_d(e, [['O', '~'], ['~', 'O']][i]) for i, e in enumerate(twn))
+    return sum((find_d(e, [['O', '~'], ['~', 'O']][i]) for (i, e) in enumerate(twn)))
 
 
 def find_d(r, w):

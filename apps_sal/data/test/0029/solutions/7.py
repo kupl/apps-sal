@@ -13,7 +13,6 @@ while dif < 0:
     else:
         dif += min(-dif, max(b))
         b[b.index(max(b))] = 0
-
 c = b[:]
 b = a[:]
 a = c[:]
@@ -25,5 +24,4 @@ while dif > 0:
     else:
         dif -= min(dif, max(b))
         b[b.index(max(b))] = 0
-
 print(cnt)

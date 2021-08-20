@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 exams = []
 for i in range(m):
     e = list(map(int, input().split()))
@@ -6,7 +6,7 @@ for i in range(m):
     e.append(i + 1)
     exams.append(e)
 exams.sort()
-now, have, f, ans, c = 0, [], True, [], 0
+(now, have, f, ans, c) = (0, [], True, [], 0)
 for i in range(1, n + 1):
     while now < m and exams[now][0] == i:
         have.append(exams[now][1:])

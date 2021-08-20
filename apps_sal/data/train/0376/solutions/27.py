@@ -1,4 +1,5 @@
 class Solution:
+
     def minScoreTriangulation(self, A: List[int]) -> int:
 
         def helper(i, j):
@@ -8,9 +9,7 @@ class Solution:
             if j - i < 2:
                 return 0
             ans = float('inf')
-
             for k in range(i + 1, j):
-
                 lans = helper(i, k)
                 rans = helper(k, j)
                 ans = min(ans, lans + rans + A[i] * A[j] * A[k])

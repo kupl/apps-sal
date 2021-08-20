@@ -1,4 +1,4 @@
-ans, col, mod = 1, 0, 1000000007
+(ans, col, mod) = (1, 0, 1000000007)
 C = [[1 if i <= j else 0 for i in range(1001)] for j in range(1001)]
 for i in range(1, 1001):
     for j in range(1, i + 1):

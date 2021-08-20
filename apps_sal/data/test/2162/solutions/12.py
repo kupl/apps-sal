@@ -1,5 +1,5 @@
 def main():
-    k1, k2, k3 = map(int, input().split())
+    (k1, k2, k3) = map(int, input().split())
     n = k1 + k2 + k3
     arr = [0 for _ in range(n)]
     a = list(map(int, input().split()))

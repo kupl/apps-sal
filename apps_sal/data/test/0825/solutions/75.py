@@ -1,14 +1,14 @@
-'''
+"""
 Created on 2020/08/23
 
 @author: harurun
-'''
+"""
 
 
 def f(n):
     arr = []
     temp = n
-    for c in range(2, int(-(-n**0.5 // 1)) + 1):
+    for c in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % c == 0:
             cnt = 0
             while temp % c == 0:
@@ -26,7 +26,6 @@ def main():
     pin = sys.stdin.readline
     pout = sys.stdout.write
     perr = sys.stderr.write
-
     N = int(pin())
     r = f(N)
     ans = 0

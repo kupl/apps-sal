@@ -1,4 +1,5 @@
 class Solution:
+
     def pancakeSort(self, arr: List[int]) -> List[int]:
         n = len(arr)
         ans = []

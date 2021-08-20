@@ -1,7 +1,5 @@
 def list_depth(L):
-
     dep = []
-
     if type(L) is not list:
         return 0
     elif len(L) == 0:

@@ -1,4 +1,4 @@
-a, b, c, d, e, f = map(int, input().split())
+(a, b, c, d, e, f) = map(int, input().split())
 midp = [-1 for i in range(f + 1)]
 mizu = []
 midp[0] = 0
@@ -19,14 +19,13 @@ for i in mizu:
     maxsa = 0
     for j in range(sai + 1):
         if sadp[j] != -1:
-            if j + c <= sai and i + j + c <= f and sadp[j + c] != 0:
+            if j + c <= sai and i + j + c <= f and (sadp[j + c] != 0):
                 sadp[j + c] = 0
                 maxsa = max(maxsa, j + c)
-            if j + d <= sai and i + j + d <= f and sadp[j + d] != 0:
+            if j + d <= sai and i + j + d <= f and (sadp[j + d] != 0):
                 sadp[j + d] = 0
                 maxsa = max(maxsa, j + d)
     if ans < maxsa / (i + maxsa):
         ans = maxsa / (i + maxsa)
         cou = [i + maxsa, maxsa]
-
 print(*cou)

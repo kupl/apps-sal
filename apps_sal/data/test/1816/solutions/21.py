@@ -2,7 +2,6 @@ from bisect import bisect
 from itertools import permutations, combinations
 n = int(input())
 a = list(map(int, input().split()))
-
 cnt = 1
 b = []
 for x in a:

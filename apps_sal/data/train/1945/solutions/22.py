@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         c = Counter()
         for row in matrix:

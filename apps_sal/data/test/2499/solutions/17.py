@@ -5,11 +5,11 @@ a = np.bitwise_xor.reduce(A)
 for i in range(60):
     bit = 1 << i
     if bit & a:
-        A ^= (A & bit)
+        A ^= A & bit
 for k in range(60, -1, -1):
     bit = 1 << k
-    one = (A & bit != 0)
-    i = np.where(one & (A < (1 << (k + 1))))[0]
+    one = A & bit != 0
+    i = np.where(one & (A < 1 << k + 1))[0]
     if len(i) == 0:
         continue
     i = i[0]

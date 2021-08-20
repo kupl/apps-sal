@@ -1,6 +1,7 @@
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        dp, res = [0 for _ in range(len(arr))], 1
+        (dp, res) = ([0 for _ in range(len(arr))], 1)
         lookup = {}
         for i in range(len(arr)):
             if arr[i] not in lookup:

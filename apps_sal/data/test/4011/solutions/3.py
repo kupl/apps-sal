@@ -10,7 +10,7 @@ def main():
                     break
                 n[j] = f[n[j]]
             break
-    print(''.join(str(x) for x in n))
+    print(''.join((str(x) for x in n)))
 
 
 main()

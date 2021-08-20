@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 clr = [-1 for i in range(0, n)]
 eds = []
 
@@ -24,7 +24,7 @@ def dfs():
 
 g = [[] for i in range(0, n)]
 for i in range(0, m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     u -= 1
     v -= 1
     g[u].append(v)
@@ -32,7 +32,7 @@ for i in range(0, m):
     eds.append((u, v))
 clr[0] = 0
 if dfs():
-    print("YES")
-    print("".join("1" if clr[u] < clr[v] else "0" for (u, v) in eds))
+    print('YES')
+    print(''.join(('1' if clr[u] < clr[v] else '0' for (u, v) in eds)))
 else:
-    print("NO")
+    print('NO')

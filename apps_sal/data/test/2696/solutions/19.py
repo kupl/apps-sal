@@ -1,6 +1,3 @@
-# Good judgment comes from experience, and experience comes from bad judgment. Rita Mae Brown
-# by : Blue Edge - Create some chaos
-
 n = int(input())
 a = list(map(int, input().split()))
 i = n - 1

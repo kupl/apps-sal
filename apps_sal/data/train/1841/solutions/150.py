@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         print(len(arr))

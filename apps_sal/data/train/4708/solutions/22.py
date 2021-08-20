@@ -1,5 +1,4 @@
 from functools import partial
-
 infinity = float('inf')
 
 
@@ -14,10 +13,11 @@ class AgeConversionsMeta(type):
         attr_name = namespace.pop('_attr_name_', 'normalized_age')
         conversions = namespace.pop('_conversions_', {})
         if conversions:
+
             def as_(self, year_to_multiplier):
                 age = getattr(self, attr_name)
                 converted_age = previous_year = 0
-                for year, multiplier in year_to_multiplier:
+                for (year, multiplier) in year_to_multiplier:
                     is_older = age > year
                     years_difference = (year if is_older else age) - previous_year
                     converted_age += multiplier * years_difference
@@ -25,20 +25,18 @@ class AgeConversionsMeta(type):
                         break
                     previous_year = year
                 return converted_age
-
-            for name, year_to_multiplier in conversions.items():
+            for (name, year_to_multiplier) in conversions.items():
                 namespace['from_' + name] = classmethod(partial(meta.__from, year_to_multiplier=year_to_multiplier))
                 namespace['as_' + name] = property(partial(as_, year_to_multiplier=year_to_multiplier))
 
         def __init__(self, normalized_age):
             setattr(self, attr_name, normalized_age)
         namespace['__init__'] = __init__
-
         return super().__new__(meta, name, bases, namespace)
 
     def __from(cls, age, year_to_multiplier):
         normalized_age = previous_year = 0
-        for year, multiplier in year_to_multiplier:
+        for (year, multiplier) in year_to_multiplier:
             years_difference = year - previous_year
             max_age_in_range = multiplier * years_difference
             if age <= max_age_in_range:
@@ -51,14 +49,4 @@ class AgeConversionsMeta(type):
 
 
 class Age(metaclass=AgeConversionsMeta):
-    _conversions_ = {
-        'human': ((infinity, 1),),
-        'cat': (
-            (1, 15),
-            (2, 9),
-            (infinity, 4)),
-        'dog': (
-            (1, 15),
-            (2, 9),
-            (infinity, 5))
-    }
+    _conversions_ = {'human': ((infinity, 1),), 'cat': ((1, 15), (2, 9), (infinity, 4)), 'dog': ((1, 15), (2, 9), (infinity, 5))}

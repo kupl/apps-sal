@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
 import sys
-
-#lines = stdin.readlines()
 
 
 def rint():
@@ -25,7 +22,6 @@ for i in range(n - 2):
     for j in range(3):
         if q[j] in m:
             m[q[j]] = m[q[j]] + [i]
-
         else:
             m[q[j]] = [i]
 start = []
@@ -53,6 +49,4 @@ for i in range(2, n):
         else:
             next = next1
     ans.append(next)
-
-
 print(*ans)

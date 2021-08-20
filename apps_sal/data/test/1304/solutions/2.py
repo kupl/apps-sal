@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 def main():
     field = []
     for _ in range(3):
@@ -18,7 +14,7 @@ def main():
         s = input()
         s = s.replace(' ', '')
         field.append(list(s))
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     x %= 3
@@ -42,7 +38,7 @@ def main():
                     field[i][j] = '!'
     for i in range(9):
         print(' '.join([''.join(field[i][:3]), ''.join(field[i][3:6]), ''.join(field[i][6:])]))
-        if not (i + 1) % 3 and not i == 8:
+        if not (i + 1) % 3 and (not i == 8):
             print()
 
 

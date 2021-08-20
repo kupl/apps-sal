@@ -2,7 +2,7 @@ from sys import stdin
 n = int(stdin.readline())
 g = dict()
 for i in range(n - 1):
-    u, v = map(int, stdin.readline().split())
+    (u, v) = map(int, stdin.readline().split())
     g.setdefault(u - 1, []).append(v - 1)
     g.setdefault(v - 1, []).append(u - 1)
 st = [0]

@@ -3,27 +3,19 @@ from math import sqrt
 
 
 def solve():
-    s = input()  # Oleg's letters
-    t = input()  # Igor's letters
+    s = input()
+    t = input()
     n = len(s)
-
     s = sorted(s)[:(n + 1) // 2]
     t = sorted(t, reverse=True)[:n // 2]
-
-    '''
-    print(s)
-    print(t)
-    '''
-
+    '\n    print(s)\n    print(t)\n    '
     ans = [None] * n
     ansl = 0
     ansr = n - 1
-
     olgl = 0
     olgr = len(s) - 1
     igol = 0
     igor = len(t) - 1
-
     for i in range(n):
         if i % 2 == 0:
             if igol > igor or s[olgl] < t[igol]:
@@ -45,11 +37,7 @@ def solve():
                 ansr -= 1
                 igor -= 1
             pass
-
-        # print(ans)
-
     ans = ''.join(ans)
-
     print(ans)
 
 

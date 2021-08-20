@@ -1,6 +1,6 @@
 input = __import__('sys').stdin.readline
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     s = sorted(map(int, input().split()), reverse=True)
     i = ans = 0
     c = 1

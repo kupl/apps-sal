@@ -9,11 +9,10 @@ def __starting_point():
         attempts.add(attempt)
         firsts.add(attempt[0])
         lasts.add(attempt[1])
-
     if password in attempts or (password[0] in lasts and password[1] in firsts):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

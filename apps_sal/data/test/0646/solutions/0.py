@@ -1,7 +1,5 @@
-# import numpy as npy
 import functools
 import math
-
 n = int(input())
 x = [0 for i in range(n + 2)]
 y = [0 for i in range(n + 2)]
@@ -9,7 +7,7 @@ adj = [[] for i in range(n + 2)]
 idx = []
 idy = []
 for i in range(n):
-    x[i], y[i] = map(int, input().split())
+    (x[i], y[i]) = map(int, input().split())
     idx.append(i)
     idy.append(i)
 
@@ -45,28 +43,23 @@ def cmpy(a, b):
 idx = sorted(idx, key=functools.cmp_to_key(cmpx))
 idy = sorted(idy, key=functools.cmp_to_key(cmpy))
 
-# print(idx)
-# print(idy)
-
 
 def disx(a, b):
     if x[a] != x[b]:
-        return 1e18
+        return 1e+18
     return y[b] - y[a]
 
 
 def disy(a, b):
     if y[a] != y[b]:
-        return 1e18
+        return 1e+18
     return x[b] - x[a]
 
 
 l = 0
 r = 2000000000
 ans = -1
-
 while l <= r:
-    # print(l,r)
     mid = (l + r) // 2
     for i in range(n):
         adj[i] = []
@@ -74,11 +67,9 @@ while l <= r:
         if disx(idx[i], idx[i + 1]) <= mid:
             adj[idx[i]].append(idx[i + 1])
             adj[idx[i + 1]].append(idx[i])
-            # print(idx[i],idx[i+1])
         if disy(idy[i], idy[i + 1]) <= mid:
             adj[idy[i]].append(idy[i + 1])
             adj[idy[i + 1]].append(idy[i])
-            # print(idy[i],idy[i+1])
     col = [0 for i in range(n)]
     cur = 0
 
@@ -99,7 +90,7 @@ while l <= r:
     if cur == 2:
         for i in range(n):
             for j in range(i + 1, n):
-                if (col[i] != col[j]):
+                if col[i] != col[j]:
                     d1 = abs(x[i] - x[j])
                     d2 = abs(y[i] - y[j])
                     if d1 == 0 or d2 == 0:
@@ -117,7 +108,7 @@ while l <= r:
                         d1 = abs(y[px] - y[j])
                         d2 = abs(y[py] - y[j])
                         d3 = abs(x[px] - x[j])
-                        if d1 <= mid and d2 <= mid and d3 <= mid:
+                        if d1 <= mid and d2 <= mid and (d3 <= mid):
                             ok = 1
         for i in range(n - 1):
             px = idy[i]
@@ -128,7 +119,7 @@ while l <= r:
                         d1 = abs(x[px] - x[j])
                         d2 = abs(x[py] - x[j])
                         d3 = abs(y[px] - y[j])
-                        if d1 <= mid and d2 <= mid and d3 <= mid:
+                        if d1 <= mid and d2 <= mid and (d3 <= mid):
                             ok = 1
     if cur == 4:
         for i in range(n - 1):
@@ -145,7 +136,7 @@ while l <= r:
                                 d2 = abs(y[py] - y[pz])
                                 d3 = abs(x[pz] - x[px])
                                 d4 = abs(x[pw] - x[px])
-                                if d1 <= mid and d2 <= mid and d3 <= mid and d4 <= mid:
+                                if d1 <= mid and d2 <= mid and (d3 <= mid) and (d4 <= mid):
                                     ok = 1
     if ok:
         ans = mid

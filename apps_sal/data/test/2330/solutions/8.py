@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = list(map(int, input().split()))
     if m < n or n == 2:
-        print("-1")
+        print('-1')
         continue
-    L = [[l[i], i + 1]for i in range(n)]
+    L = [[l[i], i + 1] for i in range(n)]
     L.sort()
     ans1 = 2 * sum(l)
     ans1 += (L[0][0] + L[1][0]) * (m - n)

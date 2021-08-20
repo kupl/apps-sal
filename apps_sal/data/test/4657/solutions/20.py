@@ -1,4 +1,4 @@
-'''input
+"""input
 3
 2 1
 1 1
@@ -6,7 +6,7 @@
 1 2 3 4 5
 6 2
 1 2 8 4 10 2
-'''
+"""
 from copy import deepcopy
 from bisect import bisect_right
 from itertools import combinations
@@ -15,8 +15,7 @@ from sys import stdin
 
 def dis(first, second, remain):
     if second[0] > first[0]:
-        first[0], second[0] = second[0], first[0]
-
+        (first[0], second[0]) = (second[0], first[0])
     if remain > first[0] - second[0]:
         remain -= first[0] - second[0]
         second[0] = first[0]
@@ -26,10 +25,9 @@ def dis(first, second, remain):
         return second[0] + remain
 
 
-# main starts
 q = int(stdin.readline().strip())
 for _ in range(q):
-    n, k = list(map(int, stdin.readline().split()))
+    (n, k) = list(map(int, stdin.readline().split()))
     arr = list(map(int, stdin.readline().split()))
     temp = 0
     count = 0
@@ -44,18 +42,17 @@ for _ in range(q):
         i += 1
     if len(ans) == 0:
         if sum(arr) % 2 == 1 and k == 1:
-            print("YES")
+            print('YES')
             print(n)
         else:
-            print("NO")
-
+            print('NO')
     elif sum(arr[ans[-1]:]) % 2 == 1:
         ans.append(n)
         count += 1
         if count == k:
-            print("YES")
+            print('YES')
             print(*ans)
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

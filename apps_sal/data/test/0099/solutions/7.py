@@ -1,6 +1,5 @@
-B1, Q, L, M = list(map(int, input().split()))
+(B1, Q, L, M) = list(map(int, input().split()))
 As = set(map(int, input().split()))
-
 Bs = []
 tmp = B1
 cnt = 0

@@ -7,7 +7,7 @@ def abundant(h):
 
 
 def sigma(x):
-    sq, s, i = x**.5, 1, 2
+    (sq, s, i) = (x ** 0.5, 1, 2)
     while i <= sq:
         if x % i == 0:
             s += i + x / i

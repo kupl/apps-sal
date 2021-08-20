@@ -4,5 +4,3 @@ def number(bus_stops):
         num = i[0] - i[1]
         sum = sum + num
     return sum
-
-    # Good Luck!

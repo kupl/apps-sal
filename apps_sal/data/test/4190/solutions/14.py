@@ -1,5 +1,5 @@
 from collections import Counter
-n, a, b = int(input()), [int(i) for i in input().split()], [int(i) for i in input().split()]
+(n, a, b) = (int(input()), [int(i) for i in input().split()], [int(i) for i in input().split()])
 c = Counter(b)
 nex = list(range(1, n)) + [0]
 ans = []

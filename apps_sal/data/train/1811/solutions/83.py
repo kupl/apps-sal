@@ -5,15 +5,9 @@ class StockSpanner:
         self.topStocks = []
 
     def next(self, price: int) -> int:
-
-        while(len(self.topStocks) > 0 and self.stocks[self.topStocks[-1]] <= price):
+        while len(self.topStocks) > 0 and self.stocks[self.topStocks[-1]] <= price:
             self.topStocks.pop()
         flag = self.topStocks[-1] if len(self.topStocks) > 0 else -1
         self.topStocks.append(len(self.stocks))
         self.stocks.append(price)
         return len(self.stocks) - flag - 1
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

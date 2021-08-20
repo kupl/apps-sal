@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         n = len(nums)
@@ -15,8 +16,6 @@ class Solution:
             if co == n:
                 return ans
             for i in range(n):
-                nums[i] = (nums[i] // 2)
+                nums[i] = nums[i] // 2
             ans += 1
-            # print(nums, ans, co)
-
         return ans

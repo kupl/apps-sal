@@ -14,6 +14,5 @@ while cur < n:
         cur -= 1
         size -= 1
     b.append(size)
-
 print(len(b))
-print(" ".join(map(str, b)))
+print(' '.join(map(str, b)))

@@ -1,8 +1,6 @@
 __author__ = 'zhan'
-
 [a1, b1] = [int(i) for i in input().split()]
 [a2, b2] = [int(i) for i in input().split()]
-
 q = [[[a1, b1, 0]], [[a2, b2, 0]]]
 total = [0, 0]
 tested = [[], []]
@@ -28,11 +26,9 @@ def equal(t, q):
 def expand(i):
     ans = equal(total[i], q[(i + 1) % 2])
     if ans:
-        print(
-            str(ans[2] + q[i][0][2]) + "\n" + str(q[i][0][0]) + " " + str(q[i][0][1]) + "\n" + str(ans[0]) + " " + str(
-                ans[1]))
+        print(str(ans[2] + q[i][0][2]) + '\n' + str(q[i][0][0]) + ' ' + str(q[i][0][1]) + '\n' + str(ans[0]) + ' ' + str(ans[1]))
     else:
-        if not (q[i][0][0] & 1):
+        if not q[i][0][0] & 1:
             tt = [q[i][0][0] // 2, q[i][0][1], q[i][0][2] + 1]
             if not tt[0] * tt[1] in tested[i]:
                 q[i].append(tt)
@@ -42,7 +38,7 @@ def expand(i):
             if not tt[0] * tt[1] in tested[i]:
                 q[i].append(tt)
                 tested[i].append(tt[0] * tt[1])
-        if not (q[i][0][1] & 1):
+        if not q[i][0][1] & 1:
             tt = [q[i][0][0], q[i][0][1] // 2, q[i][0][2] + 1]
             if not tt[0] * tt[1] in tested[i]:
                 q[i].append(tt)
@@ -65,8 +61,7 @@ while True:
         elif total[0] < total[1]:
             expand(1)
         else:
-            print(str(q[0][0][2] + q[1][0][2]) + "\n" + str(q[0][0][0]) + " " + str(q[0][0][1]) + "\n" + str(
-                q[1][0][0]) + " " + str(q[1][0][1]))
+            print(str(q[0][0][2] + q[1][0][2]) + '\n' + str(q[0][0][0]) + ' ' + str(q[0][0][1]) + '\n' + str(q[1][0][0]) + ' ' + str(q[1][0][1]))
             break
     else:
         print(-1)

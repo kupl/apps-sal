@@ -1,4 +1,4 @@
-W, H, N = map(int, input().split())
+(W, H, N) = map(int, input().split())
 xya = [list(map(int, input().split())) for i in range(N)]
 X = Y = 0
 for i in range(N):

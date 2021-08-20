@@ -1,4 +1,3 @@
-# cook your dish here
 def check(arr, n):
     for a in range(len(arr)):
         if a < len(arr) - 1:
@@ -18,10 +17,10 @@ def __starting_point():
         l[j].sort(reverse=True)
     for k in range(t):
         res = check(l[k], n[k])
-        if (res):
-            print("ne krasivo")
+        if res:
+            print('ne krasivo')
         else:
-            print("prekrasnyy")
+            print('prekrasnyy')
 
 
 __starting_point()

@@ -1,9 +1,7 @@
 s = input()
 t = input()
-
 cycle_to = [''] * 26
 cycle_from = [''] * 26
-
 for i in range(len(s)):
     if cycle_to[ord(s[i]) - 97] == t[i]:
         continue
@@ -12,7 +10,6 @@ for i in range(len(s)):
     else:
         print('No')
         break
-
     if cycle_from[ord(t[i]) - 97] == s[i]:
         continue
     if cycle_from[ord(t[i]) - 97] == '':

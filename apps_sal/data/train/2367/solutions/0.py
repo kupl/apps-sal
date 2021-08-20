@@ -3,19 +3,15 @@ for _ in range(q):
     n = int(input())
     s = input()
     t = input()
-
     x = set(s)
     y = set(t)
-
     if x != y:
-        print("NO")
+        print('NO')
         continue
-
     if len(x) == n:
         a = [0] * n
-        for i, c in enumerate(t):
+        for (i, c) in enumerate(t):
             a[i] = s.find(c)
-
         yeet = 0
         vis = [False] * n
         for i in range(n):
@@ -27,14 +23,11 @@ for _ in range(q):
                 cyc += 1
                 vis[j] = True
                 j = a[j]
-            # print('>> ', i, cyc)
             yeet += (cyc - 1) % 2
             yeet %= 2
-
         if yeet == 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
         continue
-
-    print("YES")
+    print('YES')

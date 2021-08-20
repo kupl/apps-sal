@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         n = len(words)
         a = sorted(words, key=len)
@@ -6,11 +7,10 @@ class Solution:
 
         def helper(a1, b1):
             s = 0
-
             n = len(b1)
             i = 0
             j = 0
-            while(i < n and j < n + 1):
+            while i < n and j < n + 1:
                 if a1[j] == b1[i]:
                     i += 1
                     j += 1
@@ -20,7 +20,6 @@ class Solution:
                 else:
                     return 0
             return 1
-
         for i in range(1, n):
             for j in range(i - 1, -1, -1):
                 if len(a[j]) == len(a[i]):

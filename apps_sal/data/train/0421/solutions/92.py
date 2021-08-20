@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         max_ord = 0
         if s.count(s[0]) == len(s):
@@ -11,5 +12,4 @@ class Solution:
             substr = s[s.find(start):]
             result = max(result, substr)
             s = s[s.find(start) + 1:]
-
         return result

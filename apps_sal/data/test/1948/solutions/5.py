@@ -14,10 +14,10 @@ def mints():
     return list(map(int, minp().split()))
 
 
-n, x = mints()
+(n, x) = mints()
 e = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = mints()
+    (a, b) = mints()
     e[a - 1].append(b - 1)
     e[b - 1].append(a - 1)
 x -= 1
@@ -37,14 +37,6 @@ while ql < qr:
             p[v] = u
             q[qr] = v
             qr += 1
-#v = 0
-#u = 1
-# while v != -1:
-#	if d[v] >= u:
-#		d[v] = 0
-#	v = p[v]
-#	u += 1
-# print(d)
 dd = [0] * n
 ql = 0
 qr = 1
@@ -58,7 +50,6 @@ while ql < qr:
             dd[v] = dd[u] + 1
             q[qr] = v
             qr += 1
-
 r = 0
 for i in range(n):
     if d[i] < dd[i]:

@@ -1,4 +1,4 @@
-n, a, b, c, d = list(map(int, input().split()))
+(n, a, b, c, d) = list(map(int, input().split()))
 arr = [0] * 4
 arr[0] = a + b
 arr[1] = a + c

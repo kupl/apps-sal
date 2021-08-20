@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         dp = [float('-inf')] * n
@@ -8,7 +9,6 @@ class Solution:
                 return 0
             if dp[i] != float('-inf'):
                 return dp[i]
-
             ssum = 0
             for j in range(3):
                 if i + j < n:

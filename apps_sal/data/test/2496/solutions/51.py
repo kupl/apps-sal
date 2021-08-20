@@ -11,9 +11,9 @@ M = max(a)
 
 
 class Sieve_of_Eratosthenes:
+
     def __init__(self, N):
         self.sieve = [-1] * (N + 1)
-
         for i in range(2, N + 1):
             if self.sieve[i] == -1:
                 for j in range(1, 1 + N // i):
@@ -35,20 +35,17 @@ class Sieve_of_Eratosthenes:
 
 
 sofe = Sieve_of_Eratosthenes(M)
-
 judge = set([])
-
 for i in a:
     if not pc:
         break
     asf = sofe.factorization(i)
-
     if judge & asf != set():
         pc = False
     judge |= asf
 if pc:
-    print("pairwise coprime")
+    print('pairwise coprime')
 elif g == 1:
-    print("setwise coprime")
+    print('setwise coprime')
 else:
-    print("not coprime")
+    print('not coprime')

@@ -1,11 +1,26 @@
 from sys import stdin, stdout
 from collections import *
 from math import ceil, floor, log, gcd
-def st(): return list(stdin.readline().strip())
-def li(): return list(map(int, stdin.readline().split()))
-def mp(): return list(map(int, stdin.readline().split()))
-def inp(): return int(stdin.readline())
-def pr(n): return stdout.write(str(n) + "\n")
+
+
+def st():
+    return list(stdin.readline().strip())
+
+
+def li():
+    return list(map(int, stdin.readline().split()))
+
+
+def mp():
+    return list(map(int, stdin.readline().split()))
+
+
+def inp():
+    return int(stdin.readline())
+
+
+def pr(n):
+    return stdout.write(str(n) + '\n')
 
 
 mod = 1000000007

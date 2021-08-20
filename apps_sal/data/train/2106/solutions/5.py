@@ -1,12 +1,13 @@
 import sys
 from functools import reduce
-
 for n in sys.stdin:
     n = int(n)
     cards = [list(map(int, input().split()[1:])) for i in range(n)]
     mid = []
-    a, b = 0, 0
-    def add(x=0, y=0): return x + y
+    (a, b) = (0, 0)
+
+    def add(x=0, y=0):
+        return x + y
     for c in cards:
         s = len(c)
         m = s >> 1

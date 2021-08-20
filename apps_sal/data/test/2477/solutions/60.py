@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
@@ -28,4 +28,4 @@ while mn <= mx:
         ans.append(m)
     else:
         mn = m + 1
-print((min(ans)))
+print(min(ans))

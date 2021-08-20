@@ -1,4 +1,5 @@
 class DisjointSets:
+
     def __init__(self, n: int):
         self.p = n * [-1]
         self.s = n * [1]
@@ -8,7 +9,7 @@ class DisjointSets:
         while self.p[r] != -1:
             r = self.p[r]
         while i != r:
-            self.p[i], i = r, self.p[i]
+            (self.p[i], i) = (r, self.p[i])
         return r
 
     def merge(self, i: int, j: int) -> int:
@@ -16,15 +17,16 @@ class DisjointSets:
         j = self.find(j)
         if i != j:
             if self.s[i] < self.s[j]:
-                i, j = j, i
+                (i, j) = (j, i)
             self.p[j] = i
             self.s[i] += self.s[j]
         return i
 
 
 class Solution:
+
     def largestComponentSize(self, a: List[int]) -> int:
-        n, m = len(a), max(a)
+        (n, m) = (len(a), max(a))
         acnt = (m + 1) * [0]
         for ai in a:
             acnt[ai] += 1
@@ -42,7 +44,7 @@ class Solution:
             p = -1
             for j in range(i, m + 1, i):
                 isp[j] = False
-                for k in ainv[acnt[j - 1]: acnt[j]]:
+                for k in ainv[acnt[j - 1]:acnt[j]]:
                     if p >= 0:
                         djs.merge(p, k)
                     p = k

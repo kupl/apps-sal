@@ -14,12 +14,11 @@ def reads():
 
 
 setrecursionlimit(1 << 30)
-
 N = read()
 edges = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = reads()
-    a, b = a - 1, b - 1
+    (a, b) = reads()
+    (a, b) = (a - 1, b - 1)
     edges[a].append(b)
     edges[b].append(a)
 
@@ -35,11 +34,9 @@ def dist(u, d):
 
 distf = dist(0, [0] + [-1] * (N - 1))
 dists = dist(N - 1, [-1] * (N - 1) + [0])
-
-numf = sum(distf[i] <= dists[i] for i in range(N))
+numf = sum((distf[i] <= dists[i] for i in range(N)))
 nums = N - numf
-
 if numf > nums:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

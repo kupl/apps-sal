@@ -10,13 +10,12 @@ def main():
                 flipped = False
                 flips += 1
                 continue
+        elif flipped:
+            continue
         else:
-            if flipped:
-                continue
-            else:
-                flipped = True
-                flips += 1
-                continue
+            flipped = True
+            flips += 1
+            continue
     print(flips)
 
 

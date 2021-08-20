@@ -1,6 +1,5 @@
 import re
-
-options = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]
+options = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon', 'sylveon']
 input()
 matcher = re.compile('^' + input().strip() + '$')
 for a in options:

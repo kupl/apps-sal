@@ -6,9 +6,8 @@ for i in range(n):
     if i % 2 == 1:
         if o != 0:
             o = 3 - o
-    else:
-        if o != 2:
-            o = 1 - o
+    elif o != 2:
+        o = 1 - o
 if o == m:
     print(0)
 else:
@@ -17,9 +16,8 @@ else:
         if i % 2 == 1:
             if o != 0:
                 o = 3 - o
-        else:
-            if o != 2:
-                o = 1 - o
+        elif o != 2:
+            o = 1 - o
     if o == m:
         print(1)
     else:

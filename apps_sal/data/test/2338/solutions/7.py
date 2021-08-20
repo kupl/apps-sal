@@ -1,11 +1,15 @@
 from bisect import bisect_left as bl, bisect_right as br, insort
 import sys
 import heapq
-#from math import *
 from collections import defaultdict as dd, deque
-def data(): return sys.stdin.readline().strip()
-def mdata(): return list(map(int, data().split()))
-# sys.setrecursionlimit(100000)
+
+
+def data():
+    return sys.stdin.readline().strip()
+
+
+def mdata():
+    return list(map(int, data().split()))
 
 
 n = int(data())
@@ -13,11 +17,11 @@ A = []
 ans = []
 d = dd(list)
 for i in range(n):
-    x, y = mdata()
+    (x, y) = mdata()
     A.append((x, y))
 A.sort(key=lambda x: abs(x[0]) + abs(x[1]))
 for i in A:
-    x, y = i
+    (x, y) = i
     if x > 0:
         ans.append('1 %d R' % x)
     elif x < 0:

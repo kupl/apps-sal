@@ -1,12 +1,11 @@
-
 def counting_valleys(s):
     c = 0
     t = 0
     test = []
     for a in range(len(s)):
-        if s[a] == "F":
+        if s[a] == 'F':
             test.append(t)
-        elif s[a] == "U":
+        elif s[a] == 'U':
             test.append(t + 1)
             t += 1
         else:
@@ -16,5 +15,4 @@ def counting_valleys(s):
         if test[a] == -1 and test[a + 1] == 0:
             c += 1
     return c
-
     pass

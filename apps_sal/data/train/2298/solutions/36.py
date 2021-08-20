@@ -1,6 +1,6 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 a = list(map(int, input().split()))
-m = 10**10
+m = 10 ** 10
 M = 0
 k = []
 for i in range(n):

@@ -2,17 +2,16 @@ from collections import defaultdict as d
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # define a range as [l,r]
-        left = dict()  # left[r]=l
-        right = dict()  # right[l]=r
-        cntLengths = d(lambda: 0)  # cntLengths[length]=cnts
+        left = dict()
+        right = dict()
+        cntLengths = d(lambda: 0)
         ans = -1
         for i in range(len(arr)):
             num = arr[i]
             lower = num
             upper = num
-
             if num + 1 in right.keys():
                 upper = right[num + 1]
                 right.pop(num + 1)
@@ -24,8 +23,6 @@ class Solution:
             left[upper] = lower
             right[lower] = upper
             cntLengths[upper - lower + 1] += 1
-
             if cntLengths[m] > 0:
                 ans = i + 1
-
         return ans

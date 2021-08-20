@@ -1,17 +1,14 @@
 N = int(input())
 xy = [[] for _ in range(N)]
-
 for i in range(N):
     A = int(input())
     for _ in range(A):
         xy[i].append(list(map(int, input().split())))
-lst = [[0 for j in range(N)] for k in range(2**N)]
-
-for l in range(2**N):
+lst = [[0 for j in range(N)] for k in range(2 ** N)]
+for l in range(2 ** N):
     for m in range(N):
-        if (l >> m) & 1:
+        if l >> m & 1:
             lst[l][m] = 1
-
 ans = 0
 for n in lst:
     flag = True

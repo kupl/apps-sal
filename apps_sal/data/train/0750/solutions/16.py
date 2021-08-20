@@ -1,4 +1,3 @@
-# cook your dish here
 while int(input()) != 0:
     l = list(map(int, input().split()))
     ln = len(l)
@@ -7,6 +6,6 @@ while int(input()) != 0:
         k = l[i]
         ll[k - 1] = i + 1
     if l == ll:
-        print("ambiguous")
+        print('ambiguous')
     else:
-        print("not ambiguous")
+        print('not ambiguous')

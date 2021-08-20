@@ -1,4 +1,4 @@
-n, p = [int(x) for x in input().split()]
+(n, p) = [int(x) for x in input().split()]
 guys = [input() == 'halfplus' for i in range(n)]
 cur = 0
 S = 0

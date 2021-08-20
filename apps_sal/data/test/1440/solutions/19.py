@@ -11,10 +11,8 @@ for i in range(x + 1):
             a[i] -= t * (3 - j)
             ans += t
             sum12[j] -= t
-
     ans += a[i] // 3
     a[i] %= 3
     if a[i] != 0:
         sum12[1] += a[i]
-
 print(ans)

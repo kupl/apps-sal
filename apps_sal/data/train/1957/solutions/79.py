@@ -1,20 +1,17 @@
 class Solution:
 
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-
-        length, width = len(grid), len(grid[0])
-        # (l,w,steps,k)
+        (length, width) = (len(grid), len(grid[0]))
         que = collections.deque([])
         que.append((0, 0, 0, k))
         visited = set()
         visited.add((0, 0, k))
         directions = ([-1, 0], [0, 1], [1, 0], [0, -1])
         while len(que):
-            x, y, steps, eliminates = que.popleft()
-            # BFS 保证第一个visit是steps最少的
+            (x, y, steps, eliminates) = que.popleft()
             if x == length - 1 and y == width - 1:
                 return steps
-            for dx, dy in directions:
+            for (dx, dy) in directions:
                 next_x = x + dx
                 next_y = y + dy
                 if self.isValid(next_x, next_y, grid) and (next_x, next_y, eliminates) not in visited:
@@ -27,7 +24,7 @@ class Solution:
         return -1
 
     def isValid(self, next_x, next_y, grid):
-        if next_x >= 0 and next_x < len(grid) and next_y >= 0 and next_y < len(grid[0]):
+        if next_x >= 0 and next_x < len(grid) and (next_y >= 0) and (next_y < len(grid[0])):
             return True
         else:
             return False

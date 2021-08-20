@@ -1,4 +1,4 @@
-s = "Christmas"
+s = 'Christmas'
 d = int(input())
 t = 25 - d
-print(s + " Eve" * t)
+print(s + ' Eve' * t)

@@ -1,10 +1,8 @@
 def solution(s):
-    st = ""
-
+    st = ''
     for c in s:
         if c.upper() == c:
-            st += " " + c
+            st += ' ' + c
         else:
             st += c
-
     return st

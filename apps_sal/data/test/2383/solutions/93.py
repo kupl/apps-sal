@@ -7,7 +7,7 @@ for i in s:
         set += 1
         con += 1
 if set == 0:
-    print((-1))
+    print(-1)
 else:
     ans = len(s) - set
     print(ans)

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         self.n = len(text1)
         self.m = len(text2)
@@ -10,7 +11,7 @@ class Solution:
         return self.longest(0, 0)
 
     def longest(self, i, j):
-        if (i == self.n) or (j == self.m):
+        if i == self.n or j == self.m:
             return 0
         if self.table[i][j] != -1:
             return self.table[i][j]

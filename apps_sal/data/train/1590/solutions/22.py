@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
     for i in range(t):
@@ -6,11 +5,11 @@ try:
         r = l.index(max(l))
         s = 0
         for j in l:
-            if(j != l[r]):
+            if j != l[r]:
                 s += j
-        if(s + 1 >= l[r]):
-            print("Yes")
+        if s + 1 >= l[r]:
+            print('Yes')
         else:
-            print("No")
+            print('No')
 except:
     pass

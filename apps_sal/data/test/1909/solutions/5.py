@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = [int(x) for x in input().split(' ')]
 num = 10000000000
 for i in range(0, k):

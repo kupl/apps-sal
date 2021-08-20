@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):
         ret = 0
         collected_keys = set()

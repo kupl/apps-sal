@@ -6,6 +6,6 @@ for _ in range(t):
     while f < n and s[f] != '8':
         f += 1
     if f == n or n - f < 11:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

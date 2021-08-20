@@ -1,6 +1,7 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
-        p, q, ans = Counter(), Counter(s), 0
+        (p, q, ans) = (Counter(), Counter(s), 0)
         for c in s[:-1]:
             p[c] += 1
             q[c] -= 1

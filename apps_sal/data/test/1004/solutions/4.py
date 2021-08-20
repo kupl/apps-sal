@@ -1,10 +1,8 @@
 from collections import defaultdict
 n = int(input())
 l = [*map(int, input().split())]
-
 valid = True
 res = []
-
 cnt = defaultdict(int)
 cur = 0
 for e in l:
@@ -19,10 +17,9 @@ for e in l:
         res.append(2 * cur)
         cnt.clear()
         cur = 0
-
     if not valid:
         break
-valid &= cur == 0 and not cnt
+valid &= cur == 0 and (not cnt)
 if not valid:
     print(-1)
 else:

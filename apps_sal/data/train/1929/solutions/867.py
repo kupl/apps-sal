@@ -15,7 +15,7 @@ class StreamChecker:
         self.trie = dict()
         for word in words:
             self.build_trie(word)
-        print((self.trie))
+        print(self.trie)
         self.temp = []
         self.temp2 = []
 

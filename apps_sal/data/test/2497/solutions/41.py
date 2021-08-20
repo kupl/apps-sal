@@ -1,10 +1,10 @@
 def main():
-    R_edge, L_edge, U_edge, D_edge = [None] * 3, [None] * 3, [None] * 3, [None] * 3
+    (R_edge, L_edge, U_edge, D_edge) = ([None] * 3, [None] * 3, [None] * 3, [None] * 3)
     n = int(input())
     xyd = [input().split() for _ in [0] * n]
-    xyd = [(int(x), int(y), d) for x, y, d in xyd]
-    for x, y, d in xyd:
-        if d in ["R", "L"]:
+    xyd = [(int(x), int(y), d) for (x, y, d) in xyd]
+    for (x, y, d) in xyd:
+        if d in ['R', 'L']:
             if U_edge[1] is None:
                 U_edge[1] = y
             else:
@@ -22,7 +22,7 @@ def main():
                 L_edge[1] = x
             else:
                 L_edge[1] = min(L_edge[1], x)
-        for p, q, r in [[R_edge, "R", x], [L_edge, "L", x], [U_edge, "U", y], [D_edge, "D", y]]:
+        for (p, q, r) in [[R_edge, 'R', x], [L_edge, 'L', x], [U_edge, 'U', y], [D_edge, 'D', y]]:
             if d == q:
                 if p[0] is None:
                     p[0] = r
@@ -32,7 +32,7 @@ def main():
                     p[2] = max(p[2], r)
 
     def area(t):
-        RL, UD = [], []
+        (RL, UD) = ([], [])
         if R_edge[0] is not None:
             RL += [t + R_edge[0], t + R_edge[2]]
         if R_edge[1] is not None:
@@ -53,13 +53,12 @@ def main():
             return 0
         else:
             return (max(RL) - min(RL)) * (max(UD) - min(UD))
-
     t = [0]
     for edge in [R_edge, L_edge, U_edge, D_edge]:
         if None not in edge:
             t.append(abs(edge[1] - edge[0]))
             t.append(abs(edge[1] - edge[2]))
-    for edge1, edge2 in [[R_edge, L_edge], [U_edge, D_edge]]:
+    for (edge1, edge2) in [[R_edge, L_edge], [U_edge, D_edge]]:
         if None not in [edge1[1], edge2[0]]:
             t.append(abs(edge1[1] - edge2[0]))
             t.append(abs(edge1[1] - edge2[2]))
@@ -70,8 +69,7 @@ def main():
             for i in [0, 2]:
                 for j in [0, 2]:
                     t.append(abs(edge2[i] - edge1[j]) / 2)
-
-    print((min([area(i) for i in t])))
+    print(min([area(i) for i in t]))
 
 
 main()

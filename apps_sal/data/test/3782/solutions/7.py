@@ -1,14 +1,11 @@
-# coding: utf-8
-# Your code here!
 import sys
 readline = sys.stdin.readline
 read = sys.stdin.read
-
-n, k, Q = map(int, readline().split())
-*a, = map(int, readline().split())
-*sa, = sorted(a)
+(n, k, Q) = map(int, readline().split())
+(*a,) = map(int, readline().split())
+(*sa,) = sorted(a)
 a.append(-1)
-ans = 10**9
+ans = 10 ** 9
 for i in sa:
     q = []
     v = []
@@ -20,10 +17,8 @@ for i in sa:
             v.clear()
         else:
             v.append(j)
-
     if len(q) < Q:
         break
     q.sort()
     ans = min(ans, q[Q - 1] - q[0])
-
 print(ans)

@@ -1,12 +1,10 @@
 from sys import stdin, stdout
 from math import sin, tan, cos, pi, atan2, sqrt, acos, atan, factorial
 from random import randint
-
 n = int(stdin.readline())
 s = list(stdin.readline().strip())
-a, b, c = s.count('0'), s.count('1'), s.count('2')
+(a, b, c) = (s.count('0'), s.count('1'), s.count('2'))
 d = n // 3
-
 for i in range(len(s)):
     if s[i] == '2' and c > d:
         if a < d:
@@ -22,7 +20,6 @@ for i in range(len(s)):
             s[i] = '0'
             a += 1
             b -= 1
-
 for i in range(len(s) - 1, -1, -1):
     if s[i] == '1' and b > d:
         if c < d:
@@ -38,6 +35,4 @@ for i in range(len(s) - 1, -1, -1):
             s[i] = '1'
             a -= 1
             b += 1
-
-
 stdout.write(''.join(s))

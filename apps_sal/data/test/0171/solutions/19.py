@@ -9,11 +9,11 @@ def main():
             upper = upper or c.isupper()
             digit = digit or c.isdigit()
         if lower and upper and digit:
-            print("Correct")
+            print('Correct')
         else:
-            print("Too weak")
+            print('Too weak')
     else:
-        print("Too weak")
+        print('Too weak')
 
 
 main()

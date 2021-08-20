@@ -1,9 +1,9 @@
 x = int(input())
 if x == 3:
-    print("YES")
+    print('YES')
 elif x == 5:
-    print("YES")
+    print('YES')
 elif x == 7:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
 
         def helper(i, j, a):
@@ -10,10 +11,8 @@ class Solution:
             a = max(helper(i + 1, j, x), helper(i - 1, j, x), helper(i, j + 1, x), helper(i, j - 1, x))
             grid[i][j] = y
             return a
-
         ans = -1
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 ans = max(ans, helper(i, j, 0))
-
         return ans

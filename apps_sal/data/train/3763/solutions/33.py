@@ -1,12 +1,11 @@
 def calculator(x, y, op):
-    if isinstance(x, int) or isinstance(x, float) and isinstance(y, int) or isinstance(y, float):
+    if isinstance(x, int) or (isinstance(x, float) and isinstance(y, int)) or isinstance(y, float):
         while True:
             try:
                 if op == '*':
                     sumMUL = float(x * y)
                     print(sumMUL)
                     return sumMUL
-
                 if op == '+':
                     sumADD = float(x + y)
                     return sumADD
@@ -18,9 +17,9 @@ def calculator(x, y, op):
                     sumDIV = float(x / y)
                     return sumDIV
                 else:
-                    return "unknown value"
+                    return 'unknown value'
                 break
             except TypeError:
-                return "unknown value"
+                return 'unknown value'
     else:
-        return "unknown value"
+        return 'unknown value'

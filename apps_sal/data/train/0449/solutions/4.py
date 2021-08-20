@@ -1,4 +1,5 @@
 class Solution:
+
     def findMin(self, nums):
         if len(nums) == 0:
             return -1
@@ -14,7 +15,4 @@ class Solution:
                 low = mid + 1
             mid = (low + high) // 2
         return nums[low]
-        """
-         :type nums: List[int]
-         :rtype: int
-         """
+        '\n         :type nums: List[int]\n         :rtype: int\n         '

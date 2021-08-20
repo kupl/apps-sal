@@ -42,8 +42,7 @@ class PlayerMovement:
         self.update_directions()
         if len(self.directions) == 0:
             pass
-        elif self.directions[-1] != self.Dir.get_dir(self.direction) \
-                or self.directions[-1] not in directions_before:
+        elif self.directions[-1] != self.Dir.get_dir(self.direction) or self.directions[-1] not in directions_before:
             self.direction = self.Dir.get_key(self.directions[-1])
         else:
             move = self.Dir.get_move(self.directions[-1])

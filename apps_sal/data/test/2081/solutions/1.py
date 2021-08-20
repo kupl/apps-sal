@@ -7,6 +7,7 @@ right1 = [None for _ in range(n)]
 
 
 class Stack(object):
+
     def __init__(self):
         self.c = []
 
@@ -76,7 +77,6 @@ calculleft()
 calculright()
 calculleft1()
 calculright1()
-
 res2 = 0
 for i in range(n):
     res += (i - left[i]) * (right[i] - i) * a[i]

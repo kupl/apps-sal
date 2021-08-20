@@ -2,7 +2,7 @@ testcases = int(input())
 results = []
 for i in range(0, testcases):
     friends = int(input())
-    l, b = list(map(int, input().split()))
+    (l, b) = list(map(int, input().split()))
     over = False
     if b > l:
         temp = b
@@ -18,11 +18,9 @@ for i in range(0, testcases):
                 temp = b
                 b = l
                 l = temp
-
     if over:
-        results.append("No")
+        results.append('No')
     else:
-        results.append("Yes " + str(l * b))
-
+        results.append('Yes ' + str(l * b))
 for i in range(0, testcases):
     print(results[i])

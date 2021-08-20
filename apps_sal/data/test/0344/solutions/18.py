@@ -19,19 +19,18 @@ def readlist():
     return list(map(int, input().split()))
 
 
-vowel = {"a", "u", "i", "e", "o"}
+vowel = {'a', 'u', 'i', 'e', 'o'}
 S = input()
 is_vowel = True
 for char in S:
     if not is_vowel and char not in vowel:
-        print("NO")
+        print('NO')
         quit()
-    if char in vowel or char == "n":
+    if char in vowel or char == 'n':
         is_vowel = True
     else:
         is_vowel = False
 if not is_vowel:
-    print("NO")
+    print('NO')
     quit()
-
-print("YES")
+print('YES')

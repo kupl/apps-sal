@@ -1,7 +1,7 @@
 n = int(input())
 p = []
 for i in range(n):
-    s, t, j = input().split()
+    (s, t, j) = input().split()
     t = int(t)
     j = int(j)
     p.append([t, 'a', s])

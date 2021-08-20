@@ -1,1 +1,2 @@
-def score(n): return 2**n.bit_length() - 1
+def score(n):
+    return 2 ** n.bit_length() - 1

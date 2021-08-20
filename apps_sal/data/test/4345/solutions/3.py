@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-
-n, a = int(input()), list(map(int, input().split())) + [0, ]
-
-ans, inc, dec = [0] * n, -1, 1e7
+(n, a) = (int(input()), list(map(int, input().split())) + [0])
+(ans, inc, dec) = ([0] * n, -1, 10000000.0)
 for i in range(n):
     if inc < a[i] < dec:
         if a[i] < a[i + 1]:

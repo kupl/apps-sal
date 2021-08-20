@@ -6,16 +6,26 @@ from math import gcd
 import math
 import sys
 sys.setrecursionlimit(1000000000)
-def lcm(a, b): return a * b // gcd(a, b)
 
 
-def ii(): return int(input())
-def mis(): return list(map(int, input().split()))
-def lmis(): return list(mis())
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+
+def ii():
+    return int(input())
+
+
+def mis():
+    return list(map(int, input().split()))
+
+
+def lmis():
+    return list(mis())
 
 
 INF = float('inf')
-N1097 = 10**9 + 7
+N1097 = 10 ** 9 + 7
 
 
 def meg(f, ok, ng):
@@ -32,14 +42,14 @@ def get_inv(n, modp):
     return pow(n, modp - 2, modp)
 
 
-def factorials_list(n, modp):    # 10**6
+def factorials_list(n, modp):
     fs = [1]
     for i in range(1, n + 1):
         fs.append(fs[-1] * i % modp)
     return fs
 
 
-def invs_list(n, fs, modp):     # 10**6
+def invs_list(n, fs, modp):
     invs = [get_inv(fs[-1], modp)]
     for i in range(n, 1 - 1, -1):
         invs.append(invs[-1] * i % modp)
@@ -60,17 +70,15 @@ def comb(n, k, modp):
 def comb_from_list(n, k, modp, fs, invs):
     return fs[n] * invs[n - k] * invs[k] % modp
 
-#
-
 
 class UnionFindEx:
+
     def __init__(self, size):
-        # 正なら根の番号、負ならグループサイズ
         self.roots = [-1] * size
 
     def getRootID(self, i):
         r = self.roots[i]
-        if r < 0:  # 負なら根
+        if r < 0:
             return i
         else:
             r = self.getRootID(r)
@@ -81,12 +89,12 @@ class UnionFindEx:
         return -self.roots[self.getRootID(i)]
 
     def connect(self, i, j):
-        r1, r2 = self.getRootID(i), self.getRootID(j)
+        (r1, r2) = (self.getRootID(i), self.getRootID(j))
         if r1 == r2:
             return False
         if self.getGroupSize(r1) < self.getGroupSize(r2):
-            r1, r2 = r2, r1
-        self.roots[r1] += self.roots[r2]  # サイズ更新
+            (r1, r2) = (r2, r1)
+        self.roots[r1] += self.roots[r2]
         self.roots[r2] = r1
         return True
 
@@ -109,28 +117,25 @@ def main():
             else:
                 h -= 1
                 b = min(b, h)
-        #
         if h >= 0:
             up.append((h, b))
         else:
             down.append((h, b))
-    #
     up.sort(key=lambda t: t[1], reverse=True)
     down.sort(key=lambda t: t[0] - t[1], reverse=True)
     H = 0
-    for h, b in up:
+    for (h, b) in up:
         if H + b >= 0:
             H += h
         else:
             print(No)
             return
-    for h, b in down:
+    for (h, b) in down:
         if H + b >= 0:
             H += h
         else:
             print(No)
             return
-    #
     if H == 0:
         print(Yes)
     else:

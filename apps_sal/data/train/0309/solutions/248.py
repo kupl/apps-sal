@@ -1,13 +1,10 @@
 class Solution:
-    def longestArithSeqLength(self, A: List[int]) -> int:
-        # find step between number, and count max of consequence index.
-        # step: [arr], # preserve order?
 
+    def longestArithSeqLength(self, A: List[int]) -> int:
         if not A:
             return 0
         if len(A) == 2:
             return 2
-
         dp = [{} for a in range(len(A))]
         max_len = 0
         for i in range(1, len(A)):

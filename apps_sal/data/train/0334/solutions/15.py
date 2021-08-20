@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         i = 0
         j = 1
@@ -15,5 +16,4 @@ class Solution:
             else:
                 i = j
                 j += 1
-
         return p

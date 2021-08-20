@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -11,7 +10,6 @@ from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations
 from operator import add, mul, sub
-
 sys.setrecursionlimit(10000)
 
 
@@ -50,17 +48,14 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
 @mt
 def slv(N, K, A):
     A.sort()
-
     s = 0
     ans = N
     for i in range(N - 1, -1, -1):
@@ -72,7 +67,7 @@ def slv(N, K, A):
 
 
 def main():
-    N, K = read_int_n()
+    (N, K) = read_int_n()
     A = read_int_n()
     print(slv(N, K, A))
 

@@ -1,4 +1,5 @@
 class Cons:
+
     def __init__(self, value, tail):
         self.value = value
         self.tail = tail

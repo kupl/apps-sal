@@ -1,5 +1,5 @@
 def main():
-    n, mods = 0, [1] + [0] * 2019
+    (n, mods) = (0, [1] + [0] * 2019)
     d = 1
     for i in reversed(input()):
         n = (n + int(i) * d) % 2019

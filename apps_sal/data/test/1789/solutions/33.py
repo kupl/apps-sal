@@ -1,4 +1,4 @@
-a, b, x, y = map(int, input().split())
+(a, b, x, y) = map(int, input().split())
 if a == b:
     print(x)
 elif a < b:
@@ -8,5 +8,4 @@ elif a < b:
 else:
     ans1 = (a - b - 1) * y + x
     ans2 = (a - b - 1) * x * 2 + x
-    # print(ans1,ans2)
     print(min(ans1, ans2))

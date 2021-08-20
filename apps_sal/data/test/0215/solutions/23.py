@@ -9,5 +9,4 @@ for c in s:
     else:
         chars.add(c)
 maxval = max(maxval, len(chars))
-
 print(maxval)

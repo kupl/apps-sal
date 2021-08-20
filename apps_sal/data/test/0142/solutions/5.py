@@ -10,11 +10,10 @@ def li():
     return list(mi())
 
 
-n, L = mi()
+(n, L) = mi()
 C = li()
 for i in range(1, n):
     C[i] = min(C[i], C[i - 1] * 2)
-
 x = 2 ** (n - 1)
 y = 0
 z = 10 ** 18

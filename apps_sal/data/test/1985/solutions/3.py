@@ -1,9 +1,7 @@
 import sys
-
-K, N = [int(x) for x in sys.stdin.readline().split()]
+(K, N) = [int(x) for x in sys.stdin.readline().split()]
 a_s = [int(x) for x in sys.stdin.readline().split()]
 b_s = [int(x) for x in sys.stdin.readline().split()]
-
 poss = set([])
 start = 1
 for b in b_s:
@@ -16,5 +14,4 @@ for b in b_s:
         start = 0
     else:
         poss = set.intersection(poss, locls)
-
 print(len(poss))

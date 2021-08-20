@@ -2,26 +2,31 @@ import sys
 import math
 import os
 from io import BytesIO, IOBase
-#data = BytesIO(os.read(0,os.fstat(0).st_size)).readline
-# from bisect import bisect_left as bl, bisect_right as br, insort
-# from heapq import heapify, heappush, heappop
 from collections import defaultdict as dd, deque, Counter
-# from itertools import permutations,combinations
-# from decimal import Decimal
-def data(): return sys.stdin.readline().strip()
-def mdata(): return list(map(int, data().split()))
-def outl(var): sys.stdout.write(' '.join(map(str, var)) + '\n')
-def out(var): sys.stdout.write(str(var) + '\n')
 
 
-#sys.setrecursionlimit(100000 + 1)
-INF = 10**9
+def data():
+    return sys.stdin.readline().strip()
+
+
+def mdata():
+    return list(map(int, data().split()))
+
+
+def outl(var):
+    sys.stdout.write(' '.join(map(str, var)) + '\n')
+
+
+def out(var):
+    sys.stdout.write(str(var) + '\n')
+
+
+INF = 10 ** 9
 mod = 998244353
-
-n, k = mdata()
-a, b, c, d = [], [], [], []
+(n, k) = mdata()
+(a, b, c, d) = ([], [], [], [])
 for i in range(n):
-    t1, a1, b1 = mdata()
+    (t1, a1, b1) = mdata()
     if a1 == 1 and b1 == 1:
         c.append(t1)
     elif a1 == 1:

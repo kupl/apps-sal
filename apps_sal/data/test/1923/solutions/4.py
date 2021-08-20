@@ -1,5 +1,5 @@
 input()
 a = list(map(int, input().split()))
 a.sort()
-ans = sum([min(a[2 * i: 2 * i + 2]) for i in range(len(a) // 2)])
+ans = sum([min(a[2 * i:2 * i + 2]) for i in range(len(a) // 2)])
 print(ans)

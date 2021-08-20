@@ -1,7 +1,5 @@
-# cook your dish here
 from sys import stdin, stdout
-
-s = ""
+s = ''
 t = int(stdin.readline())
 for _ in range(t):
     n = int(stdin.readline())
@@ -14,6 +12,5 @@ for _ in range(t):
     x = a[n - 2] + a[n - 1] + a[0]
     if m < x:
         m = x
-    s += str(m) + "\n"
-
+    s += str(m) + '\n'
 stdout.write(s)

@@ -1,10 +1,11 @@
 class Solution:
+
     def countSubstrings(self, s):
         """
         :type s: str
         :rtype: int
         """
-        ss = "$#"
+        ss = '$#'
         for i in s:
             ss += i + '#'
         ss += '@'
@@ -18,8 +19,7 @@ class Solution:
                 r[i] = 1
             while ss[i + r[i]] == ss[i - r[i]]:
                 r[i] += 1
-            # print(i, r[i])
             if r[i] + i > ma:
-                pos, ma = i, r[i] + i
-        ans = sum(int(l / 2) for l in r)
+                (pos, ma) = (i, r[i] + i)
+        ans = sum((int(l / 2) for l in r))
         return ans

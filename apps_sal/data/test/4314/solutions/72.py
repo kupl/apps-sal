@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 a = [input() for i in range(H)]
 b = [0] * W
 c = [0] * H
@@ -9,7 +9,6 @@ for i in range(H):
             b[j] += 1
             cnt += 1
     c[i] = cnt
-
 for i in range(H):
     if c[i] == 0:
         continue

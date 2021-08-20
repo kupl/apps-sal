@@ -8,7 +8,7 @@ def main():
     A = [0] + list(map(int, input().split()))
     G = [[] for _ in range(N + 1)]
     for _ in range(N - 1):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         G[u].append(v)
         G[v].append(u)
     L = [A[1]]
@@ -30,7 +30,7 @@ def main():
                 dfs(u)
                 L[idx] = old
     dfs(1)
-    print(("\n".join(map(str, Ans[1:]))))
+    print('\n'.join(map(str, Ans[1:])))
 
 
 main()

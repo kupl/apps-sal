@@ -14,7 +14,7 @@ for i in range(0, t):
     c = a[0]
     for j in range(1, len(a)):
         c = gcd(c, a[j])
-    if(c == 1):
+    if c == 1:
         print(k)
     else:
         print(-1)

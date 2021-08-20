@@ -14,4 +14,4 @@ for t in range(int(input())):
             a[i] = b[ind]
             ind += 1
     a = [str(i) for i in a]
-    print(" ".join(a))
+    print(' '.join(a))

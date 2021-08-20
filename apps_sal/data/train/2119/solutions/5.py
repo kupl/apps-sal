@@ -36,8 +36,6 @@ for i in rem:
         root = mergeChunks(i, i + 1)
     ms = max(ms, chunks[root][1])
     ans.append(ms)
-
 for i in range(1, size):
     print(ans[-i - 1])
-
 print(0)

@@ -1,5 +1,5 @@
 for tcase in range(int(input())):
-    nitems, coins, k = list(map(int, input().split()))
+    (nitems, coins, k) = list(map(int, input().split()))
     ls = list(map(int, input().split()))
     ls.sort()
     if ls[0] > coins:
@@ -15,7 +15,6 @@ for tcase in range(int(input())):
         spent += ls[ptr]
         ptr += 1
     best = ptr
-
     spent = ls[0]
     ptr = 1
     while ptr + 1 < nitems and spent + ls[ptr + 1] <= coins:

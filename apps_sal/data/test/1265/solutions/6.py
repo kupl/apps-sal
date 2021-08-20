@@ -1,4 +1,4 @@
-a, b = input(), input()
+(a, b) = (input(), input())
 if len(a) != len(b):
     print('NO')
 else:

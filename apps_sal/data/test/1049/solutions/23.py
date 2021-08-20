@@ -1,5 +1,4 @@
-n, d = [int(x) for x in input().split()]
-
+(n, d) = [int(x) for x in input().split()]
 L = [0] * (d + 1)
 for i in range(d):
     X = input()

@@ -1,17 +1,15 @@
 class Solution:
+
     def isPerfectSquare(self, num):
         """
         :type num: int
         :rtype: bool
         """
-
         i = 1
-        while(True):
+        while True:
             if num / i < i:
-                # print num / i
                 return False
+            elif num / i == i:
+                return True
             else:
-                if num / i == i:
-                    return True
-                else:
-                    i += 1
+                i += 1

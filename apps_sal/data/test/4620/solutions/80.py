@@ -1,9 +1,8 @@
 n = int(input())
-route, ans = [], []
+(route, ans) = ([], [])
 for i in range(n - 1):
     a = list(map(int, input().split()))
     route.append(a)
-
 for i in range(n - 1):
     c = route[i][0] + route[i][1]
     for j in range(i + 1, n - 1):

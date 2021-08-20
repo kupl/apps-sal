@@ -1,5 +1,5 @@
 s = input()
-a, b, c = int(s[0]), int(s[1]), int(s[2])
+(a, b, c) = (int(s[0]), int(s[1]), int(s[2]))
 count = 0
 if a == 1:
     count += 1

@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, a, b, c, d, p, q, y = list(map(int, input().split()))
+    (n, a, b, c, d, p, q, y) = list(map(int, input().split()))
     lst = list(map(int, input().split()))
     dist1 = abs(lst[a - 1] - lst[b - 1])
     walk = dist1 * p
@@ -10,7 +10,7 @@ for _ in range(t):
     cdtime = dist2 * q
     bdtime = dist3 * p
     train = y + cdtime + bdtime
-    if(acdist <= y):
+    if acdist <= y:
         print(min(walk, train))
     else:
         print(walk)

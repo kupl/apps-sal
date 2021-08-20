@@ -3,28 +3,28 @@ from collections import defaultdict as dd, Counter
 from math import ceil
 from math import gcd
 import sys
-INF = 10**20
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+INF = 10 ** 20
+MOD = 10 ** 9 + 7
 
 
-"""
-Facts and Data representation
-Constructive? Top bottom up down
-"""
+def I():
+    return list(map(int, input().split()))
+
+
+'\nFacts and Data representation\nConstructive? Top bottom up down\n'
 
 
 def check(s):
     t = 'abacaba'
     ans = 0
     for i in range(len(s)):
-        if s[i: i + 7] == t:
+        if s[i:i + 7] == t:
             ans += 1
     return ans
 
 
 def solve():
-    n, = I()
+    (n,) = I()
     s = input()
     t = 'abacaba'
     cnt = check(s)
@@ -40,9 +40,9 @@ def solve():
         print(''.join(s))
     else:
         s = list(s)
-        ok = s[::]
+        ok = s[:]
         for i in range(n - 6):
-            ok = s[::]
+            ok = s[:]
             for j in range(7):
                 if s[i + j] == t[j]:
                     continue
@@ -63,7 +63,7 @@ def solve():
         print('No')
 
 
-t, = I()
+(t,) = I()
 while t:
     t -= 1
     solve()

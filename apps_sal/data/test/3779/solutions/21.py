@@ -7,7 +7,7 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for i in range(n):
     a[i] = a[i] % k
@@ -18,6 +18,5 @@ for i in range(n + 1):
 c = []
 for i in range(0, k, b):
     c.append(i)
-
 print(len(c))
 print(*c)

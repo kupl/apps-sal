@@ -17,9 +17,9 @@ for test in range(int(input())):
             max = count
         prev = mp[i][0]
     if 2 * max > n:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
         x = [0] * n
         for i in range(n):
             x[(i + max) % n] = mp[i][0]

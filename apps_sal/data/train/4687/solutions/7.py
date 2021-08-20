@@ -1,9 +1,9 @@
 def primes(n):
     primes = [2]
     for i in range(3, n + 1):
-        if all(i % p != 0 for p in primes) == True:
+        if all((i % p != 0 for p in primes)) == True:
             primes.append(i)
-    return(primes)
+    return primes
 
 
 def decomp(n):
@@ -20,6 +20,6 @@ def decomp(n):
                 if i == 1:
                     break
     res = ''
-    for x, y in factors.items():
+    for (x, y) in factors.items():
         res += '{0}^{1} * '.format(x, y) if y != 1 else '{0} * '.format(x)
-    return(res[:-3])
+    return res[:-3]

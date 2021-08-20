@@ -10,6 +10,6 @@ for i in range(n):
         else:
             odd += 1
     if odd == 0 or (odd == num and num % 2 == 0):
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -5,7 +5,7 @@ for i in range(col):
         a = line[0]
         b = line[1]
         if a == b:
-            print("NO")
+            print('NO')
             break
     st = 0
     ed = col - 1
@@ -19,7 +19,7 @@ for i in range(col):
         st += 1
         ed -= 1
     if st <= ed:
-        print("NO")
+        print('NO')
         break
 else:
     print('YES')

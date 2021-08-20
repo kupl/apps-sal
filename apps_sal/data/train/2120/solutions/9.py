@@ -19,4 +19,4 @@ for x in range(n):
         a[ele - 1] += a[ele]
         a[ele] = 0
     ans[x] = str(s / ele)
-print("\n".join(ans))
+print('\n'.join(ans))

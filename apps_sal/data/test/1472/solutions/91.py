@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
 def main():
     from collections import deque
-
-    N, X, Y = list(map(int, input().split()))
-
+    (N, X, Y) = list(map(int, input().split()))
     G = [[1]] + [[x - 1, x + 1] for x in range(1, N - 1)] + [[N - 2]]
     G[X - 1].append(Y - 1)
     G[Y - 1].append(X - 1)
-
     dist = [[-1] * N for _ in [0] * N]
     for s in range(N):
         q = deque([s])
@@ -23,7 +19,7 @@ def main():
         for j in range(i + 1, N):
             res[dist[i][j]] += 1
     for d in range(1, N):
-        print((res[d]))
+        print(res[d])
 
 
 def __starting_point():

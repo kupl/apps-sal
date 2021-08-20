@@ -13,4 +13,4 @@ def whatday(Vaðlaheiðarvegavinnuverkfærageymsluskúraútidyralyklakippuhringu
         return 'Friday'
     elif Vaðlaheiðarvegavinnuverkfærageymsluskúraútidyralyklakippuhringur == 7:
         return 'Saturday'
-    return "Wrong, please enter a number between 1 and 7"
+    return 'Wrong, please enter a number between 1 and 7'

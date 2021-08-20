@@ -17,17 +17,11 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         nodes = {}
         self.nodes[self.index] = self.trie
-        for i, node in list(self.nodes.items()):
+        for (i, node) in list(self.nodes.items()):
             try:
                 nodes[i] = node[letter]
             except KeyError:
                 pass
-
         self.nodes = nodes
         self.index += 1
-        return any('$' in node for node in list(nodes.values()))
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('$' in node for node in list(nodes.values())))

@@ -5,6 +5,6 @@ for _ in range(int(input())):
     for i in range(n):
         t -= 1
         for j in range(t, 0, -1):
-            print(r, end="")
+            print(r, end='')
             r += 1
         print()

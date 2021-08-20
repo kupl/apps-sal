@@ -1,5 +1,5 @@
 n = int(input())
-cord = [[*map(int, input().split())]for _ in range(n)]
+cord = [[*map(int, input().split())] for _ in range(n)]
 c = [*map(int, input().split())]
 k = [*map(int, input().split())]
 plant = set()
@@ -7,7 +7,7 @@ covered = set()
 parent = [-1] * n
 sum = 0
 for _ in range(n):
-    cost, idx = min([cost, idx] for idx, cost in enumerate(c) if idx not in covered)
+    (cost, idx) = min(([cost, idx] for (idx, cost) in enumerate(c) if idx not in covered))
     sum += cost
     covered.add(idx)
     if parent[idx] == -1:
@@ -23,7 +23,7 @@ print('{}\n{}'.format(sum, len(plant)))
 print(*map(lambda x: x + 1, plant))
 links = 0
 out = ''
-for i, _ in enumerate(parent):
+for (i, _) in enumerate(parent):
     if _ != -1:
         links += 1
         out += '\n' + str(_ + 1) + ' ' + str(i + 1)

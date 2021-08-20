@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 bad = 0
 for _ in range(m):
     v = [0] * (n + 1)
@@ -12,5 +11,4 @@ for _ in range(m):
             ok = 1
     if not ok:
         bad = 1
-
-print("YES" if bad else "NO")
+print('YES' if bad else 'NO')

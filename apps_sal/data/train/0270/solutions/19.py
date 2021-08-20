@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
         s = ''
         l = ['a', 'b', 'c']
@@ -7,12 +8,12 @@ class Solution:
 
         def alls(n, s, k):
             for i in l:
-                if(len(s) != 0):
-                    if(s[-1] == i):
+                if len(s) != 0:
+                    if s[-1] == i:
                         continue
-                if(n == 0):
+                if n == 0:
                     self.count += 1
-                    if(self.count == k):
+                    if self.count == k:
                         self.res = s
                         return self.res
                     break

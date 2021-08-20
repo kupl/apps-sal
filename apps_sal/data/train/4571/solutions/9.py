@@ -11,5 +11,5 @@ def decompose(n):
         if m == 1:
             break
         r.append(m)
-        n -= x**m
+        n -= x ** m
     return [r, n]

@@ -1,6 +1,6 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 matrix = [[0] * i for i in range(1, n + 1)]
-norma = 2**n
+norma = 2 ** n
 for time in range(t):
     matrix[0][0] += norma
     for i in range(n):
@@ -17,4 +17,3 @@ for i in range(n):
         if matrix[i][j] == norma:
             counter += 1
 print(counter)
-# print(matrix)

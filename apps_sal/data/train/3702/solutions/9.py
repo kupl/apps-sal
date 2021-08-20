@@ -1,19 +1,19 @@
 import math
-one = "abdegopqADOPQR"
+one = 'abdegopqADOPQR'
 
 
 def olympic_ring(string):
     c = 0
     for x in string:
-        if x == "B":
+        if x == 'B':
             c = c + 2
         if x in one:
             c = c + 1
     c = math.floor(c / 2)
     if c > 3:
-        return "Gold!"
+        return 'Gold!'
     if c == 3:
-        return "Silver!"
+        return 'Silver!'
     if c == 2:
-        return "Bronze!"
-    return "Not even a medal!"
+        return 'Bronze!'
+    return 'Not even a medal!'

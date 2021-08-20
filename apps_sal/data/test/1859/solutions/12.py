@@ -11,7 +11,6 @@ def li():
 
 
 MX = 10 ** 5
-
 n = ii()
 if n % 2 == 0:
     ans = n // 2

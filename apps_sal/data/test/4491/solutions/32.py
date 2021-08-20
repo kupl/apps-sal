@@ -1,7 +1,6 @@
 N = int(input())
-A = list(map(int, input().split()))  # 上段
-B = list(map(int, input().split()))  # 下段
-
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
 dp = [[] for i in range(N)]
 dp[0] = A[0] + B[0]
 UpSum = A[0]

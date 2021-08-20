@@ -1,9 +1,8 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
 
+    def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [float('inf')] * (amount + 1)
         dp[0] = 0
-
         for i in range(1, amount + 1):
             tmp = float('inf')
             for c in coins:
@@ -11,5 +10,4 @@ class Solution:
                     if tmp > dp[i - c] + 1:
                         tmp = dp[i - c] + 1
             dp[i] = tmp
-
         return dp[amount] if dp[amount] != float('inf') else -1

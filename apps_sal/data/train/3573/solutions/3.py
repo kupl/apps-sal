@@ -5,5 +5,5 @@ def score(a, b, c):
 
 
 def solve(arr):
-    a, b, c = arr
+    (a, b, c) = arr
     return min(score(a, b, c), score(b, c, a), score(c, a, b))

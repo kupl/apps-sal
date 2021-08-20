@@ -3,24 +3,22 @@ def readpts():
     return [(min(ip[i], ip[i + 1]), max(ip[i], ip[i + 1])) for i in range(0, len(ip), 2)]
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 pts1 = readpts()
 pts2 = readpts()
-# print(pts1)
-# print(pts2)
 
 
 def psb(a, b):
     if a == b:
         return False
-    return any(i in b for i in a)
+    return any((i in b for i in a))
 
 
 def sb(a, b):
     for i in a:
         if i in b:
             return i
-    return -1  # should not happen
+    return -1
 
 
 def ipsv(pts1, pts2):

@@ -1,5 +1,8 @@
 base = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-def fact(n): return fact(n - 1) * n if n else 1
+
+
+def fact(n):
+    return fact(n - 1) * n if n else 1
 
 
 def dec2FactString(nb, i=1):

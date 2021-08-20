@@ -2,14 +2,14 @@ t = int(input())
 for i in range(0, t):
     n = int(input())
     if n % 2 == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
-        s = "0"
+        print('YES')
+        s = '0'
         for j in range(0, n // 2):
-            s += "1"
+            s += '1'
         for j in range(0, n - (n // 2 + 1)):
-            s += "0"
+            s += '0'
         for j in range(0, n):
             print(s)
             c = s[n - 1]

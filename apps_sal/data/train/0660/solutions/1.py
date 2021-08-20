@@ -3,48 +3,26 @@ from collections import Counter
 import string
 import math
 import sys
-# sys.setrecursionlimit(10**6)
 
 
 def isprime(x):
-
-    # check for numbers from 2
-    # to sqrt(x) if it is divisible
-    # return false
     i = 2
-    while(i * i <= x):
-        if (x % i == 0):
+    while i * i <= x:
+        if x % i == 0:
             return 0
         i += 1
     return 1
 
 
 def isSumOfKprimes(N, K):
-
-    # N < 2K directly return false
-    if (N < 2 * K):
+    if N < 2 * K:
         return 0
-
-    # If K = 1 return value depends
-    # on primality of N
-    if (K == 1):
+    if K == 1:
         return isprime(N)
-
-    if (K == 2):
-
-        # if N is even directly
-        # return true;
-        if (N % 2 == 0):
+    if K == 2:
+        if N % 2 == 0:
             return 1
-
-        # If N is odd, then one
-        # prime must be 2. All
-        # other primes are odd
-        # and cannot have a pair
-        # sum as even.
         return isprime(N - 2)
-
-    # If K >= 3 return true;
     return 1
 
 

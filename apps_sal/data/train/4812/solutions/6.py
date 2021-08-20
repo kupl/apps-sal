@@ -1,2 +1,2 @@
 def nth_floyd(n):
-    return int((2 * n)**.5 + .5)
+    return int((2 * n) ** 0.5 + 0.5)

@@ -1,15 +1,14 @@
 def main():
-    def F(): return map(int, input().split())
 
+    def F():
+        return map(int, input().split())
     n = int(input())
     groups = [list(F())[::-1] + [i] for i in range(n)]
     k = int(input())
     tables = list(F())
-
     tables = [[tables[i], i] for i in range(k)]
     tables = sorted(tables)
     groups = sorted(groups)
-
     count = 0
     SUM = 0
     res = []
@@ -28,8 +27,6 @@ def main():
 
 
 answer = main()
-
 print(answer[0], answer[1])
-
 for x in answer[2]:
     print(x[0] + 1, x[1] + 1)

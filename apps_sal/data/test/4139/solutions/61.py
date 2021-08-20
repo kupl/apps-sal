@@ -1,4 +1,3 @@
-# coding:UTF-8
 import sys
 from math import factorial
 
@@ -18,7 +17,7 @@ def resultSur97(x):
 def dfs(s, n):
     if int(s) > n:
         return 0
-    if all(s.count(c) > 0 for c in "753"):
+    if all((s.count(c) > 0 for c in '753')):
         ret = 1
     else:
         ret = 0
@@ -28,18 +27,8 @@ def dfs(s, n):
 
 
 def __starting_point():
-    # ------ 入力 ------#
-    # 1行入力
-    a = int(input())    # 数字
-
-    # ------ 処理 ------#
-
-    # ------ 出力 ------#
-    print(("{}".format(dfs("0", a))))
-    # if flg == 0:
-    #     print("YES")
-    # else:
-    #     print("NO")
+    a = int(input())
+    print('{}'.format(dfs('0', a)))
 
 
 __starting_point()

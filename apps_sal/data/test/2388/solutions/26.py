@@ -1,11 +1,11 @@
 mod = 998244353
 n = int(input())
-l = [tuple(map(int, input().split())) for _ in range(n)] + [(10**10, 0)]
+l = [tuple(map(int, input().split())) for _ in range(n)] + [(10 ** 10, 0)]
 l.sort()
 st = [n]
 nex = [n] * n
 for i in range(n - 1, -1, -1):
-    x, d = l[i]
+    (x, d) = l[i]
     v = x + d
     while l[st[-1]][0] < v:
         st.pop()

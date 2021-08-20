@@ -1,4 +1,3 @@
-# cook your dish here
 def maxSum(arr, n, k):
     res = 0
     for i in range(k):
@@ -11,6 +10,6 @@ def maxSum(arr, n, k):
 
 
 for _ in range(int(input())):
-    N, K = map(int, input().split(" "))
-    lst = list(map(int, input().split(" ")))
+    (N, K) = map(int, input().split(' '))
+    lst = list(map(int, input().split(' ')))
     print(maxSum(lst, N, K))

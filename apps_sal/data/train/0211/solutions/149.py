@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
         ans = 0
@@ -11,14 +12,13 @@ class Solution:
                 if C[char] > 1:
                     return False
             return True
-
         curr = []
 
         def dfs(i):
             nonlocal ans
             if i == n:
                 C = Counter(curr)
-                if (check(C)):
+                if check(C):
                     ans = max(ans, len(list(C.keys())))
                 return
             for j in range(i, n):

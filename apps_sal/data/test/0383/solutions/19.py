@@ -1,8 +1,5 @@
-# 431C
-
 from sys import stdin
 import math
-
 __author__ = 'artyom'
 
 
@@ -10,8 +7,7 @@ def read_int_ary():
     return map(int, stdin.readline().strip().split())
 
 
-n, k, d = read_int_ary()
-
+(n, k, d) = read_int_ary()
 cache = {0: {}, 1: {}}
 
 
@@ -19,9 +15,9 @@ def f(a, has_d):
     calced = cache[has_d].get(a)
     if calced:
         return calced
-    if a < d and not has_d:
+    if a < d and (not has_d):
         return 0
-    if a <= 1 or (a <= d and not has_d):
+    if a <= 1 or (a <= d and (not has_d)):
         return 1
     sum = 0
     x = 1

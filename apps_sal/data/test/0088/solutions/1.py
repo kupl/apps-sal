@@ -12,7 +12,7 @@ def f(x):
 
 
 def main():
-    a, b = [int(i) for i in input().split()]
+    (a, b) = [int(i) for i in input().split()]
     print(f(b) - f(a - 1))
 
 

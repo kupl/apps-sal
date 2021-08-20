@@ -10,7 +10,7 @@ r1i = set()
 r2i = set()
 otv = 0
 for i in range(n):
-    x, y = map(int, sys.stdin.readline().split())
+    (x, y) = map(int, sys.stdin.readline().split())
     if x == l1:
         l1i.add(i)
     elif x > l1 and x < l2:
@@ -46,8 +46,7 @@ if len(l2i & r1i) > 0:
         print(b[1] - a[1])
     else:
         print(0)
+elif max(b[0] - a[1], b[1] - a[0]) > 0:
+    print(max(b[0] - a[1], b[1] - a[0]))
 else:
-    if max(b[0] - a[1], b[1] - a[0]) > 0:
-        print(max(b[0] - a[1], b[1] - a[0]))
-    else:
-        print(0)
+    print(0)

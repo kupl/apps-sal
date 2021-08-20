@@ -1,21 +1,11 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         A = [-1] + A
         B = [-1] + B
-
-        # 142
-        # 121
-
-        # 0000
-        # 0111
-        # 0111
-        # 0122
-
         w = len(A)
         h = len(B)
-
         dp_table = [[0 for _ in range(w)] for _ in range(h)]
-
         for x in range(1, w):
             for y in range(1, h):
                 if A[x] == B[y]:

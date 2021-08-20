@@ -1,8 +1,7 @@
 import sys
 f = sys.stdin
-n, k = list(map(int, f.readline().strip().split()))
-
-if 2 * k > (n - 1):
+(n, k) = list(map(int, f.readline().strip().split()))
+if 2 * k > n - 1:
     print('-1')
 else:
     r = [str(n * k)]

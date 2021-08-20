@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 n = int(input())
 d = defaultdict(dict)
 for i in range(n):
@@ -32,5 +31,5 @@ while ver:
 l = list(ans.items())
 print(len(l))
 l.sort()
-for k, v in l:
+for (k, v) in l:
     print(k, v)

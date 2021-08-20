@@ -1,5 +1,5 @@
 def abc126_e():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     par = [x for x in range(n)]
     rank = [0] * n
 
@@ -21,14 +21,11 @@ def abc126_e():
             par[y] = x
             if rank[x] == rank[y]:
                 rank[x] += 1
-
     for _ in range(m):
-        x, y, z = map(int, input().split())
+        (x, y, z) = map(int, input().split())
         unite(x - 1, y - 1)
-
     for i in range(n):
         _ = find(i)
-
     ans = len(set(par))
     print(ans)
 

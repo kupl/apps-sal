@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 koord = list(map(int, input().split()))
 ans = 2
 sums = []

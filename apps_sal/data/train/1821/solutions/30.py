@@ -33,15 +33,14 @@ def get_equal_numbers(arr, target):
 def q_sort(arr):
     if len(arr) <= 1:
         return arr
-
     pivot = arr[len(arr) // 2]
     less = get_less_numbers(arr, pivot)
     greater = get_greater_numbers(arr, pivot)
     mypivot = get_equal_numbers(arr, pivot)
-
     return q_sort(less) + mypivot + q_sort(greater)
 
 
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         return q_sort(nums)

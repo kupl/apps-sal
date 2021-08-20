@@ -1,9 +1,10 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        pre_index, curr_sum = 0, 0
+        (pre_index, curr_sum) = (0, 0)
         f = [100001] * (len(arr) + 1)
         ans = 100001
-        for index, a in enumerate(arr):
+        for (index, a) in enumerate(arr):
             curr_sum += a
             while curr_sum > target:
                 curr_sum -= arr[pre_index]

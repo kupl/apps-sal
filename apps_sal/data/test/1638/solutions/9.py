@@ -1,5 +1,4 @@
 N = int(input())
-
 m = list(map(int, input().split()))
 ans = 0
 
@@ -23,7 +22,6 @@ for i in range(N):
     if ans < X:
         ans = X
         ans_idx = i
-
 l = r = m[ans_idx]
 for i in range(ans_idx + 1, N):
     if m[i] < r:

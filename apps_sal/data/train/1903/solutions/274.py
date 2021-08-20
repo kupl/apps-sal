@@ -2,16 +2,14 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-
         n = len(points)
-
         ques = []
         final = (1 << n) - 1
         for i in range(n):
             for j in range(i + 1, n):
                 heapq.heappush(ques, (abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j))
-
         p = [i for i in range(n)]
         k = [1 for i in range(n)]
         components = n
@@ -29,14 +27,10 @@ class Solution:
             else:
                 k[y] += k[x]
                 p[x] = y
-
         while components != 1:
-
-            dist, one, two = heapq.heappop(ques)
+            (dist, one, two) = heapq.heappop(ques)
             pone = findp(one)
             ptwo = findp(two)
-            # print(dist, one, two)
-            # print(p)
             if pone != ptwo:
                 union(pone, ptwo)
                 components -= 1

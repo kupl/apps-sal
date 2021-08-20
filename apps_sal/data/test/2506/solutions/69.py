@@ -2,10 +2,10 @@ from bisect import bisect_left
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
-    L, R = 0, 2 * 10**5 + 1
+    (L, R) = (0, 2 * 10 ** 5 + 1)
     while L + 1 < R:
         P = (L + R) // 2
         cnt = 0

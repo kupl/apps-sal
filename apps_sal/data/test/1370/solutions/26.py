@@ -1,9 +1,5 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 a = [list(map(int, list(input()))) for _ in range(h)]
-
 ret = 100000
 for i in range(2 ** (h - 1)):
     hi = [0] * h

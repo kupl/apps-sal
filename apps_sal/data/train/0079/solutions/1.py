@@ -1,7 +1,6 @@
-
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -25,8 +24,10 @@ def isPrimeMR(n):
 def findFactorRho(n):
     m = 1 << n.bit_length() // 8
     for c in range(1, 99):
-        def f(x): return (x * x + c) % n
-        y, r, q, g = 2, 1, 1, 1
+
+        def f(x):
+            return (x * x + c) % n
+        (y, r, q, g) = (2, 1, 1, 1)
         while g == 1:
             x = y
             for i in range(r):
@@ -68,7 +69,7 @@ def primeFactor(n):
         if i == 101 and n >= 2 ** 20:
             while n > 1:
                 if isPrimeMR(n):
-                    ret[n], n = 1, 1
+                    (ret[n], n) = (1, 1)
                 else:
                     rhoFlg = 1
                     j = findFactorRho(n)
@@ -77,7 +78,6 @@ def primeFactor(n):
                         n //= j
                         k += 1
                     ret[j] = k
-
     if n > 1:
         ret[n] = 1
     if rhoFlg:
@@ -92,7 +92,7 @@ def divisors(pf):
         ret = []
         for i in range(pf[p] + 1):
             for r in ret_prev:
-                ret.append(r * (p ** i))
+                ret.append(r * p ** i)
     return sorted(ret)
 
 
@@ -105,15 +105,11 @@ for _ in range(T):
         print(*dv[1:])
         print(1)
         continue
-
     if len(pf) == 1:
         print(*dv[1:])
         print(0)
         continue
-
     lpf = list(pf)
-    # print("lpf =", lpf)
-
     X = [[] for _ in range(len(pf))]
     S = {1}
     if len(lpf) == 2:
@@ -121,13 +117,12 @@ for _ in range(T):
         X[1].append(N)
         S.add(lpf[0] * lpf[1])
         S.add(N)
-        for i, p in enumerate(lpf):
+        for (i, p) in enumerate(lpf):
             for j in range(1, pf[p] + 1):
                 X[i].append(p ** j)
                 S.add(p ** j)
     else:
-        for i, p in enumerate(lpf):
-            # print("i, p, pf[p] =", i, p, pf[p])
+        for (i, p) in enumerate(lpf):
             X[i].append(lpf[i - 1] * p)
             S.add(lpf[i - 1] * p)
             for j in range(1, pf[p] + 1):
@@ -135,11 +130,10 @@ for _ in range(T):
                 S.add(p ** j)
     for a in dv:
         if a not in S:
-            for i, p in enumerate(lpf):
+            for (i, p) in enumerate(lpf):
                 if a % p == 0:
                     X[i].append(a)
                     break
-    # print("X =", X)
     ANS = []
     for x in X:
         for y in x:

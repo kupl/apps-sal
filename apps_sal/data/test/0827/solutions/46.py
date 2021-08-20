@@ -1,31 +1,31 @@
 n = int(input())
 t = input()
 if n == 1:
-    if t == "0":
+    if t == '0':
         print(10 ** 10)
     else:
         print(2 * 10 ** 10)
 elif n == 2:
-    if t == "00":
+    if t == '00':
         print(0)
-    elif t == "01":
+    elif t == '01':
         print(10 ** 10 - 1)
-    elif t == "10":
+    elif t == '10':
         print(10 ** 10)
-    else:  # 11
+    else:
         print(10 ** 10)
 else:
     repeat_num = (n + 6) // 3
-    ref = "110" * repeat_num
+    ref = '110' * repeat_num
     num_in_ref = 0
     flag_over = 0
     if ref[:n] == t:
         num_in_ref = 1
         if n % 3 == 0:
             flag_over = 1
-    if ref[1: n + 1] == t:
+    if ref[1:n + 1] == t:
         num_in_ref = 1
-    if ref[2: n + 2] == t:
+    if ref[2:n + 2] == t:
         num_in_ref = 1
         if n % 3 == 2:
             flag_over = -1

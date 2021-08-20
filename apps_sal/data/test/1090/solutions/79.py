@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-edge, inside, cnt, ix = 0, 0, 0, 0
+(edge, inside, cnt, ix) = (0, 0, 0, 0)
 if s[0] == 'R' or s[-1] == 'R':
     edge += 1
 temp = ''

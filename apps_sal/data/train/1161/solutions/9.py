@@ -1,6 +1,5 @@
 for _ in range(int(input())):
     a = list(input())
-
     for i in range(len(a) - 1):
         if a[i] == 's':
             if a[i + 1] == 'm':
@@ -10,17 +9,15 @@ for _ in range(int(input())):
             if a[i + 1] == 's':
                 a[i + 1] = 'd'
                 a[i] = 'e'
-
     votes = 0
     for creature in a:
         if creature == 'm' or creature == 'e':
             votes += 1
         elif creature == 's':
             votes -= 1
-
     if votes > 0:
-        print("mongooses")
+        print('mongooses')
     elif votes < 0:
-        print("snakes")
+        print('snakes')
     else:
-        print("tie")
+        print('tie')

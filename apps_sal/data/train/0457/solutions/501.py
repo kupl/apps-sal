@@ -1,17 +1,15 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # Use a queue to maintain current possible paths towards amount
         if amount == 0:
             return 0
         que = deque()
         seen = set()
         res = -1
-
         for coin in coins:
             if coin <= amount:
                 que.append(coin)
                 seen.add(coin)
-
         count = 1
         while que:
             prev = len(que)

@@ -1,10 +1,11 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         maxd = []
         mind = []
         left = 0
         sol = 1
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             while maxd and nums[maxd[-1]] < num:
                 maxd.pop()
             while mind and nums[mind[-1]] > num:
@@ -18,5 +19,4 @@ class Solution:
                     mind.pop(0)
                 left += 1
             sol = max(sol, i - left + 1)
-            # print(maxd,mind,sol,left)
         return sol

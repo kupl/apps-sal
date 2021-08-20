@@ -1,13 +1,10 @@
 import collections
 N = int(input())
 S = []
-
 for i in range(N):
     S.append(input())
-
 c = collections.Counter(S).most_common()
 ans = []
-
 if len(c) == 1:
     ans = c
 else:

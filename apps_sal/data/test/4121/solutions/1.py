@@ -9,11 +9,10 @@ for i in range(n):
             b -= 1
 if n % 2 == 0:
     if b == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
+elif b == 0 or b == 1:
+    print('YES')
 else:
-    if b == 0 or b == 1:
-        print("YES")
-    else:
-        print("NO")
+    print('NO')

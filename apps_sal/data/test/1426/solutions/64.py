@@ -12,7 +12,7 @@ def bfs():
     dist[3 * S] = 0
     while q:
         p = q.popleft()
-        v, r = divmod(p, 3)
+        (v, r) = divmod(p, 3)
         nr = (r + 1) % 3
         for nv in g[v]:
             np = 3 * nv + nr
@@ -23,10 +23,10 @@ def bfs():
     return dist[3 * T] // 3
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 g = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     g[a].append(b)
-S, T = [int(x) - 1 for x in input().split()]
-print((bfs()))
+(S, T) = [int(x) - 1 for x in input().split()]
+print(bfs())

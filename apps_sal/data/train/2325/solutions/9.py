@@ -18,7 +18,7 @@ for i in t:
     T.append(d)
 q = int(input())
 for i in range(q):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     x = S[b] - S[a - 1]
     y = T[d] - T[c - 1]
     if (x - y) % 3 == 0:

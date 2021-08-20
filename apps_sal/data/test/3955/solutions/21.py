@@ -1,6 +1,6 @@
-n, k, x = list(map(int, input().split()))
+(n, k, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-c = x**k
+c = x ** k
 pr = [0]
 su = [0]
 b = 0

@@ -1,5 +1,4 @@
-x, k, d = map(int, input().split())
-
+(x, k, d) = map(int, input().split())
 count = 0
 local = x
 

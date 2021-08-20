@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        i, j = 0, 0
+        (i, j) = (0, 0)
         res = 0
         d = {}
         while j < len(tree):

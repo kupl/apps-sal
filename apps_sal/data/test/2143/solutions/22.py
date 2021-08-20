@@ -2,7 +2,6 @@ n = int(input())
 s = [int(x) for x in input().split()]
 somas = {}
 most = 0
-
 for i in range(n - 1):
     for j in range(i + 1, n):
         soma = s[i] + s[j]
@@ -12,5 +11,4 @@ for i in range(n - 1):
             somas[soma] = 1
         if somas[soma] > most:
             most = somas[soma]
-
 print(most)

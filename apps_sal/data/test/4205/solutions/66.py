@@ -5,6 +5,6 @@ for n in range(N):
     if n + 1 != p[n]:
         count += 1
 if count in [0, 2]:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

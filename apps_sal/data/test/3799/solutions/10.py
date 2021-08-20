@@ -1,5 +1,4 @@
 import sys
-# input = sys.stdin.readline
 s = str(input())
 n = len(s)
 if s[0] == s[n - 1]:

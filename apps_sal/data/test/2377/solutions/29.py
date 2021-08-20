@@ -1,12 +1,11 @@
-N, H = map(int, input().split())
+(N, H) = map(int, input().split())
 l = []
 A = []
 B = []
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     A.append(a)
     B.append(b)
-
 B.sort(reverse=True)
 ans = 0
 n = max(A)

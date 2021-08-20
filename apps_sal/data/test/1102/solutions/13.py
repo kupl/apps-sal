@@ -4,7 +4,7 @@ sys.setrecursionlimit(20000)
 
 
 def main():
-    n, he = map(int, input().split())
+    (n, he) = map(int, input().split())
     he -= 1
     l = [int(i) for i in input().split()]
     ans = l[he]

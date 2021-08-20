@@ -3,8 +3,6 @@ import re
 import sys
 3
 
-# BEGIN template
-
 
 def dbg(x, y=''):
     if len(y) > 0:
@@ -13,8 +11,7 @@ def dbg(x, y=''):
     sys.stderr.flush()
 
 
-oo = 0x3f3f3f3f3f3f3f3f
-# END template
+oo = 4557430888798830399
 
 
 def minn(x, y):
@@ -37,7 +34,7 @@ def main():
     power = [1]
     for i in range(1, 61):
         power.append(power[i - 1] * n)
-    dp = [(int(1e70), int(1e70))] * 65
+    dp = [(int(1e+70), int(1e+70))] * 65
     dp[m + 1] = (0, 0)
     for i in range(m, 0, -1):
         if s[i] == '0':

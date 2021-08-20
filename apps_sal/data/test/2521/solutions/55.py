@@ -19,7 +19,7 @@ mx = b1[0]
 for i in b1:
     mx = max(mx, i)
     accu.append(mx)
-ans = -10**16
+ans = -10 ** 16
 mx = b2[0]
 for i in range(n + 1):
     mx = max(mx, b2[i])

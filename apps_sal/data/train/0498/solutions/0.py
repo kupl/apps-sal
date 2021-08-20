@@ -1,4 +1,5 @@
 class Solution:
+
     def rob(self, nums):
         """
         :type nums: List[int]
@@ -13,5 +14,5 @@ class Solution:
     def helper(self, nums):
         now = prev = 0
         for nxt in nums:
-            now, prev = max(nxt + prev, now), now
+            (now, prev) = (max(nxt + prev, now), now)
         return now

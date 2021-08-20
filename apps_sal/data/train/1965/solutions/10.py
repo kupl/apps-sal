@@ -1,20 +1,18 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         self.father_alice = [i for i in range(n + 1)]
         self.father_bob = [i for i in range(n + 1)]
-
         res = 0
-        for type, u, v in edges:
+        for (type, u, v) in edges:
             if type == 3:
                 res += self.connect(u, v, True)
                 self.connect(u, v, False)
-
-        for type, u, v in edges:
+        for (type, u, v) in edges:
             if type == 1:
                 res += self.connect(u, v, True)
             elif type == 2:
                 res += self.connect(u, v, False)
-
         if self.check_valid(True) and self.check_valid(False):
             return res
         return -1
@@ -25,7 +23,6 @@ class Solution:
                 return self.father_alice[x]
             self.father_alice[x] = self.find(self.father_alice[x], True)
             return self.father_alice[x]
-
         else:
             if self.father_bob[x] == x:
                 return self.father_bob[x]
@@ -40,7 +37,6 @@ class Solution:
                 self.father_alice[max(root_a, root_b)] = min(root_a, root_b)
                 return 0
             return 1
-
         else:
             root_a = self.find(a, False)
             root_b = self.find(b, False)
@@ -56,7 +52,6 @@ class Solution:
                 if self.find(i, True) != root:
                     return False
             return True
-
         else:
             root = self.find(1, False)
             for i in range(1, len(self.father_bob)):

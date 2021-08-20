@@ -1,10 +1,10 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         from collections import defaultdict
         s_f = defaultdict(int)
         t_f = defaultdict(int)
         c = 0
-
         for x in s:
             s_f[x] += 1
         for y in t:

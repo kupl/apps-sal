@@ -4,9 +4,9 @@ import collections
 def primeFactors(n):
     ret = []
     pows = {}
-    st = ""
+    st = ''
     i = 2
-    while(i < n):
+    while i < n:
         if n % i == 0:
             n /= i
             ret.append(i)
@@ -19,7 +19,7 @@ def primeFactors(n):
     pows = collections.OrderedDict(sorted(pows.items()))
     for key in pows:
         if pows[key] > 1:
-            st += "(" + str(key) + "**" + str(pows[key]) + ")"
+            st += '(' + str(key) + '**' + str(pows[key]) + ')'
         else:
-            st += "(" + str(key) + ")"
+            st += '(' + str(key) + ')'
     return st

@@ -1,4 +1,5 @@
 class Solution:
+
     def count_chars(self, s):
         count = {}
         for c in s:
@@ -15,13 +16,11 @@ class Solution:
             del d[c]
 
     def numSplits(self, s: str) -> int:
-        left, right = s[0], s[1:]
+        (left, right) = (s[0], s[1:])
         left_chars = set([left])
         right_chars = self.count_chars(right)
-
         num_splits = 0
         while right:
-
             if len(left_chars) == len(right_chars.keys()):
                 num_splits += 1
             c = right[0]
@@ -29,5 +28,4 @@ class Solution:
             left_chars.add(c)
             left += c
             right = right[1:]
-
         return num_splits

@@ -1,4 +1,4 @@
-x, y, x0, y0 = [int(x) for x in input().split()]
+(x, y, x0, y0) = [int(x) for x in input().split()]
 x0 -= 1
 y0 -= 1
 commands = input()
@@ -27,4 +27,4 @@ for i in range(l):
 for i in range(x):
     for j in range(y):
         a[field[i][j]] += 1
-print(' '.join(str(x) for x in a))
+print(' '.join((str(x) for x in a)))

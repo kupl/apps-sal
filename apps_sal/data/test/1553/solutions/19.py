@@ -1,4 +1,3 @@
-#print('HARE KRISHNA')
 def I():
     return int(input())
 
@@ -19,7 +18,7 @@ def ISL():
     return list(input())
 
 
-n, h = IM()
+(n, h) = IM()
 l = IL()
 
 
@@ -32,11 +31,9 @@ def can_put(mi):
         req += z[0]
         for i in range(1, mi + 1, 2):
             req += max(z[i], z[i + 1])
-        # req+=z[mi-1]
     else:
         for i in range(0, mi + 1, 2):
             req += max(z[i], z[i + 1])
-    # print(z,req)
     return req <= h
 
 
@@ -44,7 +41,7 @@ lo = 0
 hi = n - 1
 ans = 0
 while lo <= hi:
-    mi = (lo + hi) >> 1
+    mi = lo + hi >> 1
     if can_put(mi):
         ans = mi
         lo = mi + 1

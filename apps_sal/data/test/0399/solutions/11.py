@@ -7,14 +7,12 @@ elif x == 0 and y > 1:
     print('No')
 elif x != 0 and y <= 1:
     print('No')
-else:
-    if y >= 1:
-        if y - 1 > x:
-            print('No')
-        else:
-            if (x - y + 1) % 2 == 0:
-                print('Yes')
-            else:
-                print('No')
+elif y >= 1:
+    if y - 1 > x:
+        print('No')
+    elif (x - y + 1) % 2 == 0:
+        print('Yes')
     else:
         print('No')
+else:
+    print('No')

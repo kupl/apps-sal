@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseVowels(self, s):
         """
         :type s: str
@@ -6,7 +7,6 @@ class Solution:
         """
         if not s or len(s) == 1:
             return s
-
         vowels = set('aeiouAEIOU')
         s = list(s)
         left = 0
@@ -16,7 +16,7 @@ class Solution:
                 left += 1
             while left < right and s[right] not in vowels:
                 right -= 1
-            s[left], s[right] = s[right], s[left]
+            (s[left], s[right]) = (s[right], s[left])
             left += 1
             right -= 1
         return ''.join(s)

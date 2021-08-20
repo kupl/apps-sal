@@ -1,12 +1,10 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 s = set()
 for el in a:
     s.add(el)
     if len(s) > 3:
         break
-
 if len(s) <= 2:
     print('YES')
 elif len(s) > 3:

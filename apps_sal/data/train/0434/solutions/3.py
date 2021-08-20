@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         n = len(nums)
         if n == 0:
@@ -29,9 +30,7 @@ class Solution:
                     num_z -= 1
             q.append(i)
             num_z += 1
-
         if is_0 == 0:
             return n - 1
         maxx = max(len(q) - num_z, maxx)
-
         return maxx

@@ -1,4 +1,2 @@
-def check(seq,
-          elem):
-
+def check(seq, elem):
     return elem in seq

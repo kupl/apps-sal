@@ -1,4 +1,5 @@
 class partial_keys(dict):
+
     def __getitem__(self, key):
         if key in self:
             return super().__getitem__(key)

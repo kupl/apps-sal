@@ -5,6 +5,7 @@ def gcd(a, b):
 
 
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         res = []
         for i in range(1, n + 1):

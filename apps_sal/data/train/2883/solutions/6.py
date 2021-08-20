@@ -16,7 +16,7 @@ def to_pretty(seconds):
         extra = '' if hours == 1 else 's'
         hours = 'an' if hours == 1 else hours
         return '{} hour{} ago'.format(hours, extra)
-    elif seconds // (60):
+    elif seconds // 60:
         minutes = seconds // 60
         extra = '' if minutes == 1 else 's'
         minutes = 'a' if minutes == 1 else minutes

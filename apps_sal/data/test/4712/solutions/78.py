@@ -1,11 +1,11 @@
-x, y = input().split()
+(x, y) = input().split()
 x = int(x)
 y = int(y)
 a = [input() for i in range(x)]
-c = ""
+c = ''
 for i in range(y + 2):
-    c = c + "#"
+    c = c + '#'
 print(c)
 for i in range(x):
-    print("#" + a[i] + "#")
+    print('#' + a[i] + '#')
 print(c)

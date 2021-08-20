@@ -1,5 +1,4 @@
 from math import gcd
-
 n = int(input())
 a = sorted(map(int, input().split()))
 ans = 0

@@ -1,8 +1,7 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
-        # ref:
-        # https://leetcode.com/problems/shortest-bridge/discuss/189293/C%2B%2B-BFS-Island-Expansion-%2B-UF-Bonus
-        R, C = len(A), len(A[0])
+        (R, C) = (len(A), len(A[0]))
 
         def inside(i, j):
             return 0 <= i < R and 0 <= j < C
@@ -25,18 +24,15 @@ class Solution:
                     A[ii][jj] = color
 
         def paint_2():
-            for i, row in enumerate(A):
-                for j, ele in enumerate(row):
+            for (i, row) in enumerate(A):
+                for (j, ele) in enumerate(row):
                     if ele == 1:
                         dfs_paint_2(i, j)
                         return
         paint_2()
-
-        # now the island I have touched is in color-2
-        # the other one, untouched, is in color-1
         for color in range(2, max(R, C) + 2):
-            for i, row in enumerate(A):
-                for j, ele in enumerate(row):
+            for (i, row) in enumerate(A):
+                for (j, ele) in enumerate(row):
                     if ele == color:
                         if neighbor_is_1(i, j):
                             return color - 2

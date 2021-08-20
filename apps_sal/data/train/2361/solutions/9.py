@@ -3,14 +3,12 @@ input = sys.stdin.readline
 
 
 def construct(A, count, MAX):
-    # print(ANS,A,count,MAX)
     B = []
     NMAX = 0
-    for l, r in A:
+    for (l, r) in A:
         if r - l + 1 == MAX:
             ANS[(r + l) // 2] = count
             count += 1
-
             if l <= (r + l) // 2 - 1:
                 NMAX = max(NMAX, (r + l) // 2 - l)
                 B.append((l, (r + l) // 2 - 1))

@@ -1,10 +1,10 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         for i in range(1, len(mat)):
             for j in range(len(mat[0])):
                 if mat[i][j]:
                     mat[i][j] += mat[i - 1][j]
-
         ans = 0
         for i in range(len(mat)):
             stack = []
@@ -17,5 +17,4 @@ class Solution:
                 cnt += mat[i][j]
                 ans += cnt
                 stack.append(j)
-
         return ans

@@ -1,5 +1,5 @@
 import bisect
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 divd = []
 i = 1
 while i * i <= M:
@@ -10,4 +10,4 @@ while i * i <= M:
     i += 1
 divd.sort()
 k = bisect.bisect_left(divd, N)
-print((M // divd[k]))
+print(M // divd[k])

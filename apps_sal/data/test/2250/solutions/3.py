@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     x = int(input())
     s = input()
-    if 'R' in s and "L" in s:
+    if 'R' in s and 'L' in s:
         A = []
         if s[0] == 'R':
             A.append([1, 1])
@@ -13,11 +13,10 @@ for _ in range(int(input())):
                     A[-1][1] += 1
                 else:
                     A.append([2, 1])
+            elif s[i] == 'L':
+                A[-1][1] += 1
             else:
-                if s[i] == 'L':
-                    A[-1][1] += 1
-                else:
-                    A.append([1, 1])
+                A.append([1, 1])
         if A[0][0] == A[-1][0]:
             A[0][1] += A[-1][1]
             A.pop()

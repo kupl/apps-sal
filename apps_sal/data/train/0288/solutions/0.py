@@ -1,4 +1,5 @@
 class Solution:
+
     def flipLights(self, n, m):
         """
         :type n: int
@@ -16,5 +17,4 @@ class Solution:
                         three = op_odd % 2
                         four = (op_even + op_all + op_third) % 2
                         states.add((one, two, three, four)[:n])
-
         return len(states)

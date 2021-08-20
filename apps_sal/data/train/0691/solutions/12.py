@@ -1,6 +1,5 @@
 from sys import stdin
 from numpy import arange, array
-
 for _ in arange(int(stdin.readline())):
     N = int(stdin.readline())
     a = array(list(map(int, stdin.readline().split())))

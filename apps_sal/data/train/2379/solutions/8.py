@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve():
@@ -10,7 +10,7 @@ def solve():
     sm = 0
     for i in range(n):
         if s[i] == '1':
-            if(len(s0) < 1):
+            if len(s0) < 1:
                 sm += 1
                 s1.append(sm)
                 vec.append(sm)
@@ -18,15 +18,14 @@ def solve():
                 vec.append(s0[len(s0) - 1])
                 s1.append(s0[len(s0) - 1])
                 s0.pop()
+        elif len(s1) < 1:
+            sm += 1
+            s0.append(sm)
+            vec.append(sm)
         else:
-            if (len(s1) < 1):
-                sm += 1
-                s0.append(sm)
-                vec.append(sm)
-            else:
-                vec.append(s1[len(s1) - 1])
-                s0.append(s1[len(s1) - 1])
-                s1.pop()
+            vec.append(s1[len(s1) - 1])
+            s0.append(s1[len(s1) - 1])
+            s1.pop()
     print(sm)
     print(*vec, sep=' ')
 

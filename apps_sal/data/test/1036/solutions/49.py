@@ -24,43 +24,38 @@ sys.setrecursionlimit(5000000)
 mod = pow(10, 9) + 7
 al = [chr(ord('a') + i) for i in range(26)]
 direction = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
 
 
 def check(a, b):
     if a == b:
         return 0
-    else:
-        if a == "R":
-            if b == "P":
-                return 1
-            else:
-                return 0
-        elif a == "P":
-            if b == "S":
-                return 1
-            else:
-                return 0
+    elif a == 'R':
+        if b == 'P':
+            return 1
         else:
-            if b == "R":
-                return 1
-            else:
-                return 0
+            return 0
+    elif a == 'P':
+        if b == 'S':
+            return 1
+        else:
+            return 0
+    elif b == 'R':
+        return 1
+    else:
+        return 0
 
 
 lst = s
 for i in range(k):
-    sanka = 2**(k - i)
+    sanka = 2 ** (k - i)
     tmp = []
     if len(lst) % 2:
         lst = lst + lst
-    # print(lst)
     m = min(len(lst), sanka)
-    # print(i,m)
     for j in range(m // 2):
         kk = check(lst[2 * j], lst[2 * j + 1])
         tmp.append(lst[2 * j + kk])
-    lst = tmp[::]
+    lst = tmp[:]
 print(lst[0])

@@ -1,26 +1,20 @@
 from bisect import bisect_left, bisect_right
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**6)
-
-N, M = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(N, M) = map(int, input().split())
 AB = [[0, 0]] + [[int(i) for i in input().split()] for _ in range(N)] + [[1 << 40, 0]]
 LR = [[int(i) for i in input().split()] for _ in range(M)]
-
 N += 2
-
-# 座圧
-compressed = sorted([a for a, b in AB])
+compressed = sorted([a for (a, b) in AB])
 bomb = [0] * N
-for a, b in AB:
+for (a, b) in AB:
     a = bisect_left(compressed, a)
     bomb[a] = b
 diff = [bomb[i - 1] ^ bomb[i] for i in range(1, N)]
-
-# 辺を貼る
 vec = [[] for _ in range(N)]
 convert = {}
-for i, (l, r) in enumerate(LR):
+for (i, (l, r)) in enumerate(LR):
     if compressed[-1] < l or r < compressed[0]:
         continue
     l = bisect_left(compressed, l) - 1
@@ -29,9 +23,7 @@ for i, (l, r) in enumerate(LR):
         continue
     vec[l].append(r)
     vec[r].append(l)
-    convert[(l, r)] = i
-
-# 全域木の構築
+    convert[l, r] = i
 visited = [False] * N
 parent = [-1] * N
 ret = []
@@ -48,7 +40,7 @@ def dfs(pre, cur):
     if diff[cur] == 1:
         diff[cur] ^= 1
         diff[pre] ^= 1
-        ret.append(convert[(min(pre, cur), max(pre, cur))] + 1)
+        ret.append(convert[min(pre, cur), max(pre, cur)] + 1)
     return True
 
 

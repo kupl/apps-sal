@@ -5,7 +5,7 @@ def two_sort(array):
     print(array)
     min_value = 10000
     min_value2 = 10000
-    min_string = " "
+    min_string = ' '
     for x in array:
         if len(x) < 2:
             y = ord(x[0])
@@ -26,4 +26,4 @@ def two_sort(array):
                     continue
             else:
                 continue
-    return "***".join(min_string)
+    return '***'.join(min_string)

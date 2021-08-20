@@ -17,4 +17,4 @@ for i in range(len(s) - 1, -1, -1):
         if tp == -1:
             break
 lp.reverse()
-print(max([(l - f) for (l, f) in zip(lp, fp)]) - 1)
+print(max([l - f for (l, f) in zip(lp, fp)]) - 1)

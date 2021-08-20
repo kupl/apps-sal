@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 rooms = [0] + [int(i) for i in input().split()]
 for i in range(2, n + 1):
     rooms[i] += rooms[i - 1]

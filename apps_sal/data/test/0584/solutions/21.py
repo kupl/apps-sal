@@ -1,6 +1,5 @@
 input()
 s = input()
-
 f = False
 a = []
 for c in s:

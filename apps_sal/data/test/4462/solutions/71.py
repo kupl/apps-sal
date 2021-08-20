@@ -1,5 +1,5 @@
 input()
-a, b1, b2, b4, r = list(map(int, input().split())), 0, 0, 0, 'NYoe s'
+(a, b1, b2, b4, r) = (list(map(int, input().split())), 0, 0, 0, 'NYoe s')
 for i in a:
     if i % 2 != 0:
         b1 += 1

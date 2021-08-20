@@ -1,7 +1,5 @@
-
-
 def main():
-    N, M = [int(x) for x in input().split()]
+    (N, M) = [int(x) for x in input().split()]
     arrs = []
     for _ in range(M):
         arrs.append([int(x) - 1 for x in input().split()])
@@ -11,21 +9,16 @@ def main():
 def solve(N, M, arrs):
     next_arr = [None] * N
     arr = arrs[0]
-    for r, nr in zip(arr, arr[1:]):
+    for (r, nr) in zip(arr, arr[1:]):
         next_arr[r] = nr
-    # print(next_arr)
     for i in range(1, M):
         read = arrs[i]
         next_arr_new = [None] * N
-        for r, nr in zip(read, read[1:]):
-            # print("zipping ", r, nr)
+        for (r, nr) in zip(read, read[1:]):
             next_arr_new[r] = nr
-        for r, nr in enumerate(next_arr_new):
+        for (r, nr) in enumerate(next_arr_new):
             if next_arr[r] != nr:
                 next_arr[r] = None
-                # print("fail", r, nr)
-    # print(next_arr)
-
     starts = []
     cycs = []
     curr = 0
@@ -39,17 +32,11 @@ def solve(N, M, arrs):
             curr = 0
     if curr > 0:
         cycs.append(curr)
-
     assert len(starts) == len(cycs)
-    # for s, c in zip(starts, cycs):
-    #     print("start ", s, "cyc", c)
-
     s = 0
     for c in cycs:
         s += c * (c + 1) // 2
     s += N
-
-    # print(s)
     return s
 
 

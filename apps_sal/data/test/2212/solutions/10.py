@@ -1,5 +1,3 @@
-#!/usr/bin/env	python
-# -*-coding:utf-8 -*-
 n = int(input())
 i = j = n >> 1
 a = 1
@@ -12,8 +10,8 @@ for _ in range(n):
         else:
             c = b
             b += 2
-        print(c, end=' 'if n - 1 > y else'\n')
+        print(c, end=' ' if n - 1 > y else '\n')
     i -= 1
     j += 1
     if 0 > i:
-        i, j = n - 2, 1
+        (i, j) = (n - 2, 1)

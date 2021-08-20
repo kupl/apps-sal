@@ -10,14 +10,13 @@ def create_report(names):
         if words == ['LABRADOR', 'DUCK']:
             return ['Disqualified data']
         if 1 <= len(words) <= 3:
-            code = ''.join(word[:6 // len(words)] for word in words)
+            code = ''.join((word[:6 // len(words)] for word in words))
         elif len(words) == 4:
             code = words[0][0] + words[1][0] + words[2][:2] + words[3][:2]
         else:
             print(name, 'has', len(words), 'words')
-        # print(words,code)
         data[code] += number
     result = []
-    for code, number in sorted(data.items()):
+    for (code, number) in sorted(data.items()):
         result += [code, number]
     return result

@@ -1,4 +1,5 @@
 class Solution:
+
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         n = len(fronts)
         dupes = {fronts[i] for i in range(n) if fronts[i] == backs[i]}

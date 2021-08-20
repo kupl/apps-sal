@@ -1,6 +1,6 @@
 def sigma1(n):
     ans = 0
-    for i in xrange(1, int(n**0.5) + 1):
+    for i in xrange(1, int(n ** 0.5) + 1):
         if n % i == 0:
             ans += i + n / i
     return ans if n ** 0.5 % 1 != 0 else ans - int(n ** 0.5)

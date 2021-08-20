@@ -1,7 +1,7 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = [['0'] * n for _ in range(n)]
-    for y, row in enumerate(l):
+    for (y, row) in enumerate(l):
         if not k:
             break
         k -= 1

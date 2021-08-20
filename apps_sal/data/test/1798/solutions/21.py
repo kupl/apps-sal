@@ -4,11 +4,9 @@ from collections import defaultdict
 def main():
     n = int(input())
     a = list(map(int, input().split(' ')))
-
     m = defaultdict(list)
     for i in range(n):
         m[a[i]].append(i)
-
     ret = []
     for k in m:
         if len(m[k]) == 1:
@@ -21,10 +19,9 @@ def main():
                 d = v[i] - v[i - 1]
                 if diff == None:
                     diff = d
-                else:
-                    if diff != d:
-                        good = False
-                        break
+                elif diff != d:
+                    good = False
+                    break
             if i == len(v) - 1 and good:
                 ret.append((k, diff))
     ret = sorted(ret, key=lambda x: x[0])

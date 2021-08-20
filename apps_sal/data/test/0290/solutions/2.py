@@ -1,5 +1,5 @@
 n = int(input())
-w, h = 0, 0
+(w, h) = (0, 0)
 width = True
 while w * h < n:
     if width:

@@ -1,9 +1,8 @@
-n, a, b, k = list(map(int, input().split()))
+(n, a, b, k) = list(map(int, input().split()))
 A = input()
 B = A.split('1')
 C = []
 l = 1
-
 for i in B:
     if len(i) >= b:
         for j in range(b - 1, len(i), b):

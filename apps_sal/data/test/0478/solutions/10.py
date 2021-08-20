@@ -2,11 +2,12 @@ from sys import stdin, stdout
 import traceback
 import math
 from collections import Counter
-
-
 read = stdin.readline
 write = stdout.write
-def writeln(x): return write(str(x) + "\n")
+
+
+def writeln(x):
+    return write(str(x) + '\n')
 
 
 def reads(typ=int):
@@ -14,6 +15,7 @@ def reads(typ=int):
 
 
 class Sol:
+
     @classmethod
     def input(cls):
         s = cls()
@@ -25,7 +27,7 @@ class Sol:
         self.s = s
         counts = [0] * 26
         for c in s:
-            i = ord(c) - ord("a")
+            i = ord(c) - ord('a')
             counts[i] += 1
         for i in range(25, 0, -1):
             if counts[i] == 0:
@@ -39,9 +41,9 @@ class Sol:
 
     def try_remove_one(self, ci):
         s = self.s
-        ch = chr(ci + ord("a"))
-        chl = chr(ci - 1 + ord("a"))
-        for i, c in enumerate(s):
+        ch = chr(ci + ord('a'))
+        chl = chr(ci - 1 + ord('a'))
+        for (i, c) in enumerate(s):
             if c != ch:
                 continue
             if i > 0 and s[i - 1] == chl:
@@ -57,7 +59,7 @@ def __starting_point():
     try:
         writeln(Sol.input().solve())
     except Exception as e:
-        print("Got exception:", repr(e))
+        print('Got exception:', repr(e))
         print(traceback.format_exc())
 
 

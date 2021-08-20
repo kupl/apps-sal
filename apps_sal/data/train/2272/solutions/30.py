@@ -1,11 +1,9 @@
-# seishin.py
 from bisect import bisect
 N = int(input())
-*A, = map(int, input().split())
-*B, = map(int, input().split())
-
+(*A,) = map(int, input().split())
+(*B,) = map(int, input().split())
 M = 32
-MOD = [(2 << i) for i in range(M + 1)]
+MOD = [2 << i for i in range(M + 1)]
 
 
 def make(B, mode):
@@ -14,8 +12,7 @@ def make(B, mode):
     get = s.get
     for b in B:
         s[b] = get(b, 0) ^ 1
-    S[M - 1] = sorted(b for b in s if s[b])
-
+    S[M - 1] = sorted((b for b in s if s[b]))
     for i in range(M - 2, -1, -1):
         t = S[i + 1]
         l = len(t)
@@ -24,6 +21,7 @@ def make(B, mode):
         p = 0
         if q < l:
             if p < mid:
+
                 def gen(p, q):
                     u = t[p]
                     v = t[q]
@@ -38,20 +36,20 @@ def make(B, mode):
                             p += 1
                             u = t[p] if p < mid else None
                         else:
-                            yield v - m
+                            yield (v - m)
                             q += 1
                             v = t[q] if q < l else None
                     while p < mid:
                         yield t[p]
                         p += 1
                     while q < l:
-                        yield t[q] - m
+                        yield (t[q] - m)
                         q += 1
-                *S[i], = gen(p, q)
+                (*S[i],) = gen(p, q)
             else:
-                *S[i], = (u - m for u in t)
+                (*S[i],) = (u - m for u in t)
         else:
-            *S[i], = t
+            (*S[i],) = t
     if mode:
         for i in range(M):
             m = MOD[i]
@@ -61,13 +59,11 @@ def make(B, mode):
 
 S = make(A, 0)
 T = make(B, 1)
-
 ans = 0
 if 0 in S[0]:
     ans ^= 1 in T[0]
 if 1 in S[0]:
     ans ^= 0 in T[0]
-
 for i in range(1, M):
     s = S[i]
     ls = len(S)
@@ -77,13 +73,11 @@ for i in range(1, M):
     p = MOD[i - 1]
     P = p + m
     Q = 2 * m
-
     if lt:
         c = 0
         f = lt
         while P <= t[f - 1]:
             f -= 1
-
         u = f
         v = lt
         for a in s:
@@ -91,7 +85,7 @@ for i in range(1, M):
                 u -= 1
             while v > 0 and Q <= a + t[v - 1]:
                 v -= 1
-            c += (v - u)
+            c += v - u
         if c & 1:
             ans ^= 1 << i
 print(ans)

@@ -1,10 +1,9 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         memo = [[0] * len(A) for _ in range(len(B))]
-
         for i in range(len(memo)):
             for j in range(len(memo[0])):
-
                 if B[i] == A[j]:
                     memo[i][j] = 1
                     if i - 1 >= 0 and j - 1 >= 0:

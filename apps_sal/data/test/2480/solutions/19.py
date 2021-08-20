@@ -1,5 +1,5 @@
 from collections import defaultdict
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 B = [0] * (N + 1)
 for i in range(N):

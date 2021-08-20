@@ -1,10 +1,9 @@
-# cook your dish here
 def cp(l, d):
     l.sort()
     count = 0
     i = 0
     while i < len(l) - 1:
-        if (l[i + 1] - l[i]) <= d:
+        if l[i + 1] - l[i] <= d:
             count += 1
             i += 2
         else:
@@ -12,6 +11,6 @@ def cp(l, d):
     return count
 
 
-n, d = map(int, input().split())
-l = list(int(input()) for _ in range(n))
+(n, d) = map(int, input().split())
+l = list((int(input()) for _ in range(n)))
 print(cp(l, d))

@@ -6,4 +6,4 @@ def duty_free(price, discount, holiday_cost):
     return math.floor(holiday_cost / percent)
 
 
-print((duty_free(12, 50, 1000)))
+print(duty_free(12, 50, 1000))

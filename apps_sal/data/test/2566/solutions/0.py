@@ -28,13 +28,13 @@ for it in range(t):
         for j in range(i, 7):
             pp += 1
             cc -= a[j]
-            if(cc == 0):
+            if cc == 0:
                 break
-        if(cc == 0):
+        if cc == 0:
             zz.append(pp)
             continue
         kl = cc % s
-        if(kl == 0):
+        if kl == 0:
             nm = cc // s - 1
         else:
             nm = cc // s
@@ -42,7 +42,7 @@ for it in range(t):
         nm = nm * 7
         pp += nm
         for j in range(0, 7):
-            if(cc == 0):
+            if cc == 0:
                 break
             pp += 1
             cc -= a[j]

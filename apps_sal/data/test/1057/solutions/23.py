@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 curr_left = s[0]
 curr_right = s[-1]
 s_left = 0
@@ -13,7 +12,6 @@ i = len(s) - 1
 while curr_right == s[i]:
     s_right += 1
     i += -1
-
 if curr_left == curr_right:
     print((s_left + 1) * (s_right + 1) % 998244353)
 else:

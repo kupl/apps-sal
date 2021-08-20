@@ -2,7 +2,6 @@ from itertools import combinations
 
 
 def sat(f: Formula):
-
     literals = set()
     allLiterals(f, literals)
     all_lit = list(literals)
@@ -15,7 +14,6 @@ def sat(f: Formula):
 
 
 def evaluate(f: Formula, inter):
-
     if f.is_literal():
         if f in inter:
             return True
@@ -32,11 +30,10 @@ def evaluate(f: Formula, inter):
             flag = flag or evaluate(i, inter)
         return flag
     else:
-        return (not evaluate(f.args[0], inter))
+        return not evaluate(f.args[0], inter)
 
 
 def allLiterals(f: Formula, lit_set):
-
     for i in f.args:
         if i.is_literal():
             lit_set.add(i)

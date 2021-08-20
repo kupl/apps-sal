@@ -1,11 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 F = []
 for i in range(n):
     F.append(list(map(int, input().split())))
-
 F = sorted(F, key=lambda x: x[0])
 f_factor = 0
 j = 0

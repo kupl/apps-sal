@@ -7,14 +7,13 @@ def interpret(s):
 
 
 class Befunge93:
-
     instructions = {}
 
     def __init__(self, plane):
         self.plane = [list(row) for row in plane]
         self.stack = []
         self.direction = [0, 1]
-        self.row, self.col = 0, 0
+        (self.row, self.col) = (0, 0)
         self.running = True
         self.output = []
         self.number = 0
@@ -27,7 +26,7 @@ class Befunge93:
         return self.plane[self.row][self.col]
 
     def string_literal(self):
-        self.stack.extend(ord(ch) for ch in iter(self.forward, '"'))
+        self.stack.extend((ord(ch) for ch in iter(self.forward, '"')))
 
     def run(self):
         while self.running:
@@ -36,6 +35,7 @@ class Befunge93:
 
 
 def pop_push_on(ch):
+
     def deco(f):
         nargs = len(inspect.getargspec(f).args)
 
@@ -46,7 +46,8 @@ def pop_push_on(ch):
     return deco
 
 
-def on(ch): return lambda f: Befunge93.instructions.__setitem__(ch, f)
+def on(ch):
+    return lambda f: Befunge93.instructions.__setitem__(ch, f)
 
 
 pop_push_on('+')(lambda a, b: a + b)

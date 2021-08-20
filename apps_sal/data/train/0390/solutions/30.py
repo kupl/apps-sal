@@ -1,7 +1,7 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
-        # Solution 1: DP by myself (9532ms: 5.06%)
-        '''
+        """
         ele = [item**2 for item in range(1, int(math.sqrt(n))+1)]
         memo = {}
         def helper(amount, person):
@@ -22,27 +22,11 @@ class Solution:
             memo[(amount, person)] = False
             return False
         return helper(n, 1)
-        '''
-        # Solution 2: TLE!!
-        '''
-        dp = [False]*(n+1)
-        def check(n):
-            if n==0:
-                return False
-            if n==1:
-                dp[1] = True
-                return True
-            for i in range(int(math.sqrt(n)), 0, -1):
-                if not check(n-i*i):
-                    dp[n] = True
-                    return True
-            return False
-        return check(n)
-        '''
-        # Solution 3: DP from discussion (2132ms: 44.64%)
+        """
+        '\n        dp = [False]*(n+1)\n        def check(n):\n            if n==0:\n                return False\n            if n==1:\n                dp[1] = True\n                return True\n            for i in range(int(math.sqrt(n)), 0, -1):\n                if not check(n-i*i):\n                    dp[n] = True\n                    return True\n            return False\n        return check(n)\n        '
         dp = [False] * (n + 1)
         for i in range(1, n + 1):
-            for j in range(1, int(i**0.5) + 1):
+            for j in range(1, int(i ** 0.5) + 1):
                 if not dp[i - j * j]:
                     dp[i] = True
                     break

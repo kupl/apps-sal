@@ -5,7 +5,7 @@ def c(n, m):
     return factorial(n) // (factorial(n - m) * factorial(m))
 
 
-def factor(n):  # Amount of prime numbers
+def factor(n):
     factors = {}
     max = int(sqrt(n) + 1)
     f = 2

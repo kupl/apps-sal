@@ -2,12 +2,13 @@ import math
 
 
 class Solution:
-    def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        def candidate(val):
-            res = sum(math.ceil(v / val) for v in nums)
-            return res <= threshold
 
-        lo, hi = 1, max(nums)
+    def smallestDivisor(self, nums: List[int], threshold: int) -> int:
+
+        def candidate(val):
+            res = sum((math.ceil(v / val) for v in nums))
+            return res <= threshold
+        (lo, hi) = (1, max(nums))
         while lo < hi:
             med = lo + (hi - lo) // 2
             if candidate(med):

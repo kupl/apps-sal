@@ -1,5 +1,5 @@
 def capitalize(s):
-    word = ""
+    word = ''
     output = []
     for n in range(0, len(s)):
         if n % 2 == 0:

@@ -1,8 +1,6 @@
 n = int(input())
 s = list(input())
-
 cnt = 0
-
 while True:
     for i in range(cnt, len(s) - 2):
         if s[i:i + 3] == ['f', 'o', 'x']:
@@ -11,5 +9,4 @@ while True:
             break
     else:
         break
-
-print((len(s)))
+print(len(s))

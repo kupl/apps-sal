@@ -2,6 +2,7 @@ from collections import defaultdict as dt
 
 
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         self.total = self.valid = 0
         fact = [1] * 50
@@ -17,16 +18,6 @@ class Solution:
                 self.valid += times * int(c1 == c2)
             else:
                 for x in range(balls[idx] + 1):
-                    run(
-                        b1 + x,
-                        b2 + (balls[idx] - x),
-                        c1 + int(x > 0),
-                        c2 + int((balls[idx] - x) > 0),
-                        p1 * fact[x],
-                        p2 * fact[balls[idx] - x],
-                        idx + 1,
-                        n
-                    )
-
+                    run(b1 + x, b2 + (balls[idx] - x), c1 + int(x > 0), c2 + int(balls[idx] - x > 0), p1 * fact[x], p2 * fact[balls[idx] - x], idx + 1, n)
         run(0, 0, 0, 0, 1.0, 1.0, 0, sum(balls))
         return self.valid / self.total

@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,7 +9,7 @@ MOD = 1000000007
 
 
 class UnionFindWeighted:
-    # Reference: https://note.nkmk.me/python-union-find/
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -28,13 +27,10 @@ class UnionFindWeighted:
     def union(self, x, y, w):
         rx = self.find(x)
         ry = self.find(y)
-
         if rx == ry:
             return
-
         if self.parents[rx] > self.parents[ry]:
-            x, y, rx, ry, w = y, x, ry, rx, -w
-
+            (x, y, rx, ry, w) = (y, x, ry, rx, -w)
         self.parents[rx] += self.parents[ry]
         self.parents[ry] = rx
         self.weight[ry] = self.weight[x] - self.weight[y] - w
@@ -47,10 +43,9 @@ class UnionFindWeighted:
 
 
 def main():
-    N, M, *LRD = list(map(int, read().split()))
-
+    (N, M, *LRD) = list(map(int, read().split()))
     uf = UnionFindWeighted(N)
-    for l, r, d in zip(*[iter(LRD)] * 3):
+    for (l, r, d) in zip(*[iter(LRD)] * 3):
         l -= 1
         r -= 1
         if uf.same(l, r) and uf.diff(l, r) != d:
@@ -58,7 +53,6 @@ def main():
             return
         else:
             uf.union(l, r, d)
-
     print('Yes')
     return
 

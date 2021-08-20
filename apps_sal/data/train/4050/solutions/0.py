@@ -1,21 +1,12 @@
 import re
 from functools import reduce
+_ACRONYMS = {'KPI': 'key performance indicators', 'EOD': 'the end of the day', 'EOP': 'the end of the day', 'TBD': 'to be decided', 'WAH': 'work at home', 'IAM': 'in a meeting', 'OOO': 'out of office', 'NRN': 'no reply necessary', 'CTA': 'call to action', 'SWOT': 'strengths, weaknesses, opportunities and threats'}
+_ACRONYM_PATTERN = re.compile('\\b[A-Z]{3,}\\b')
+_CAPITAL_PATTERN = re.compile('(?:\\. |^)([a-z])')
 
-_ACRONYMS = {
-    'KPI': 'key performance indicators',
-    'EOD': 'the end of the day',
-    'EOP': 'the end of the day',    # snafu in the tests?
-    'TBD': 'to be decided',
-    'WAH': 'work at home',
-    'IAM': 'in a meeting',
-    'OOO': 'out of office',
-    'NRN': 'no reply necessary',
-    'CTA': 'call to action',
-    'SWOT': 'strengths, weaknesses, opportunities and threats'}
 
-_ACRONYM_PATTERN = re.compile(r'\b[A-Z]{3,}\b')
-_CAPITAL_PATTERN = re.compile(r'(?:\. |^)([a-z])')
-def _CAPITAL_FIX(match): return '{}'.format(match.group(0).upper())
+def _CAPITAL_FIX(match):
+    return '{}'.format(match.group(0).upper())
 
 
 def acronym_buster(message):

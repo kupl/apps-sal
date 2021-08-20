@@ -1,8 +1,6 @@
 import sys
-
 T = int(input())
-
-result = ""
+result = ''
 
 
 def getMin(matrix, N, M):
@@ -20,10 +18,9 @@ for i in range(0, T):
     for j in range(0, N):
         text = input()
         for c in text:
-            if(c == "a"):
+            if c == 'a':
                 matrix[j][0] += 1
             else:
                 matrix[j][1] += 1
-    result += str(getMin(matrix, N, 2)) + "\n"
-
+    result += str(getMin(matrix, N, 2)) + '\n'
 print(result)

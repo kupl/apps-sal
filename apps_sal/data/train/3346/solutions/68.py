@@ -8,11 +8,9 @@ def gap(g, m, n):
         for j in range(2, math.floor(math.sqrt(i) + 1)):
             if i % j == 0:
                 primeFlag = False
-
-        if primeFlag:  # if i prime
+        if primeFlag:
             if 1 != prime and i - prime == g:
                 return [prime, i]
             else:
                 prime = i
     return None
-    # your code

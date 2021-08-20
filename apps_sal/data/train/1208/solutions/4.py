@@ -8,7 +8,7 @@ n = 1000005
 Array = [1]
 f = 1
 for j in range(1, n + 1):
-    Array.append((f * j * Array[j - 1]) % M)
-    f = (f * j) % M
+    Array.append(f * j * Array[j - 1] % M)
+    f = f * j % M
 for i in range(T):
-    print(str(Array[int(input())]) + "\n")
+    print(str(Array[int(input())]) + '\n')

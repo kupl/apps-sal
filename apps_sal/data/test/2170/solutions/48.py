@@ -1,4 +1,5 @@
-class Factorial():
+class Factorial:
+
     def __init__(self, n, mod):
         self.mod = mod
         self.fct = [0 for _ in range(n + 1)]
@@ -29,17 +30,11 @@ class Factorial():
 
 
 MOD = 1000000007
-
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 f = Factorial(M, MOD)
-
 res = f.perm(M, N)
-
 for k in range(1, N + 1):
-    res -= (-1)**(k - 1) * f.comb(N, k) * f.perm(M - k, N - k)
-
+    res -= (-1) ** (k - 1) * f.comb(N, k) * f.perm(M - k, N - k)
 res *= f.perm(M, N)
 res %= MOD
-
 print(res)

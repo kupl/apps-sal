@@ -1,5 +1,5 @@
 from string import ascii_lowercase
-trans = str.maketrans(ascii_lowercase, "bcdEfghIjklmnOpqrstUvwxyzA")
+trans = str.maketrans(ascii_lowercase, 'bcdEfghIjklmnOpqrstUvwxyzA')
 
 
 def changer(string):

@@ -5,7 +5,7 @@ for i in range(t):
     mi = 10000000
     ans = 0
     i = n - 1
-    while (i >= 0):
+    while i >= 0:
         if a[i] > mi:
             ans += 1
         if a[i] < mi:

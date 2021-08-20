@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         count_pass = trips[len(trips) - 1][2] * [0]
         for i in trips:

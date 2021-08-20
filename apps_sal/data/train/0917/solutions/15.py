@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     list1 = list(map(int, input().split()))
     list1.sort()
     min1 = 100000000001
@@ -7,7 +7,6 @@ for _ in range(int(input())):
     for i in range(len(list1)):
         for j in range(i + 1, len(list1)):
             temp = abs(list1[i] + list1[j] - k)
-
             if temp < min1:
                 min1 = min(min1, temp)
                 maxsum = list1[i] + list1[j]
@@ -18,7 +17,6 @@ for _ in range(int(input())):
     if min1 != 0:
         cand1 = k + min1
         cand2 = k - min1
-
         s = list()
         cnt = 0
         for i in list1:

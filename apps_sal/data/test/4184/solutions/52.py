@@ -10,7 +10,6 @@ def answer(n: int, w: List[int]) -> int:
         w_left += i
         w_right -= i
         abs_of_difference = min(abs_of_difference, abs(w_left - w_right))
-
     return abs_of_difference
 
 

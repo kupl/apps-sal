@@ -1,7 +1,7 @@
 import math
 input()
 a = list(map(int, input().split()))
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 s = 0
 for i in a:
     if i > x:

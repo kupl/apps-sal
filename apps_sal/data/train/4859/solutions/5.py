@@ -8,7 +8,4 @@ def ssc_forperm(arr):
     nPerms = fact(len(arr)) // reduce(int.__mul__, map(fact, cnt.values()), 1)
     sIdx = -~len(arr) * len(arr) >> 1
     arr = sorted(arr)
-    return [{"total perm": nPerms},
-            {"total ssc": sum(v * sIdx * nPerms // len(arr) for v in arr)},
-            {"max ssc": sum(v * i for i, v in enumerate(arr, 1))},
-            {"min ssc": sum(v * i for i, v in enumerate(reversed(arr), 1))}]
+    return [{'total perm': nPerms}, {'total ssc': sum((v * sIdx * nPerms // len(arr) for v in arr))}, {'max ssc': sum((v * i for (i, v) in enumerate(arr, 1)))}, {'min ssc': sum((v * i for (i, v) in enumerate(reversed(arr), 1)))}]

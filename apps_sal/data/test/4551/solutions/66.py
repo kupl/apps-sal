@@ -1,11 +1,11 @@
-a, b, c, d = input().split()
+(a, b, c, d) = input().split()
 a = int(a)
 b = int(b)
 c = int(c)
 d = int(d)
 if a + b == c + d:
-    print("Balanced")
+    print('Balanced')
 if a + b > c + d:
-    print("Left")
+    print('Left')
 if a + b < c + d:
-    print("Right")
+    print('Right')

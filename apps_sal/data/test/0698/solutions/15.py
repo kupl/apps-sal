@@ -1,6 +1,4 @@
-#! /usr/bin/env python3.3
-
-x, k = list(map(int, input().split()))
+(x, k) = list(map(int, input().split()))
 a = [False] * x
 for i in range(k):
     o = list(map(int, input().split()))

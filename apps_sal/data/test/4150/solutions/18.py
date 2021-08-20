@@ -1,9 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 pos = {}
 pre = [i - 1 for i in range(n + 2)]
 nex = [i + 1 for i in range(n + 2)]
-for i, j in enumerate(a):
+for (i, j) in enumerate(a):
     pos[j] = i + 1
 group = 1
 taken = [0 for _ in range(n + 2)]

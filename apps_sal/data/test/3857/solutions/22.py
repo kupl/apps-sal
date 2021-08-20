@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import math
 n = int(input())
 box = [int(x) for x in input().split()]

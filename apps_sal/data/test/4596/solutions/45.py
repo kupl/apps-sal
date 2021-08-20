@@ -9,8 +9,6 @@ while flag:
         else:
             flag = False
             break
-
         if i == len(list_a) - 1:
             ans += 1
-
 print(ans)

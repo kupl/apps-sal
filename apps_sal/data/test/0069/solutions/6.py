@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     s = input()
     y = s.count('0') - s.count('1')
     z = 0

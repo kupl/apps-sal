@@ -1,7 +1,7 @@
 import hashlib
 
 
-class Random():
+class Random:
     HASH_MAX = (1 << 32 * 4) - 1
 
     def __init__(self, seed):

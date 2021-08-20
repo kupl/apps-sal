@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         def cost(i, j):
             return abs(locations[i] - locations[j])
 
@@ -10,12 +12,9 @@ class Solution:
             ans = 0
             if finish == i:
                 ans += 1
-
             for j in range(len(locations)):
                 if i == j:
                     continue
-                ans += (dfs(j, fuel - cost(i, j)))
-
+                ans += dfs(j, fuel - cost(i, j))
             return ans
-
-        return dfs(start, fuel) % (10**9 + 7)
+        return dfs(start, fuel) % (10 ** 9 + 7)

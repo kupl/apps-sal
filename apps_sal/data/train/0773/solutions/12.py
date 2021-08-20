@@ -1,7 +1,5 @@
-
 T = int(input())
-
-while (T > 0):
+while T > 0:
     T -= 1
     k = int(input())
     perm = []

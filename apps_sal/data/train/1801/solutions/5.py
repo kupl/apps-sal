@@ -1,21 +1,24 @@
 def interpreter(code, iterations, width, height):
     inter = Inter(code, width, height)
     inter.run(iterations)
-    return '\r\n'.join(''.join(e) for e in inter.grid)
+    return '\r\n'.join((''.join(e) for e in inter.grid))
 
 
 class Inter:
     _instruct = {'w': 'moveW', 'e': 'moveE', 'n': 'moveN', 's': 'moveS', '*': 'flip', '[': 'jumpP', ']': 'jumpB'}
-    def _nonC(x): return None
+
+    def _nonC(x):
+        return None
 
     def __init__(self, code, w, h):
         self.com = code
         self.grid = [['0'] * w for e in range(h)]
-        self.x, self.y = 0, 0
-        self.w, self.h = w, h
-        self.i, self.it = 0, 0
+        (self.x, self.y) = (0, 0)
+        (self.w, self.h) = (w, h)
+        (self.i, self.it) = (0, 0)
 
     def countIteration(f):
+
         def wrap(cls):
             cls.it += 1
             return f(cls)
@@ -59,7 +62,7 @@ class Inter:
     def _jump(self, way, need, past, nest=0):
         while way:
             self.i += way
-            if self.com[self.i] == need and not nest:
+            if self.com[self.i] == need and (not nest):
                 break
             if self.com[self.i] == need and nest:
                 nest -= 1

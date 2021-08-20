@@ -7,17 +7,23 @@ import itertools
 import fractions
 import pprint
 from typing import Union
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 n = inp()
 s = list(input())
 res = []
-for i, x in enumerate(s):
+for (i, x) in enumerate(s):
     res.append(x)
     ln = len(res)
     if ln >= 3 and res[ln - 3:ln] == ['f', 'o', 'x']:

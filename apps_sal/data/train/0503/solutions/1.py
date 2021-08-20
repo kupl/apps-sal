@@ -1,4 +1,5 @@
 class Solution:
+
     def arrangeWords(self, text: str) -> str:
         text = text[0].lower() + text[1:]
         words = []
@@ -12,7 +13,7 @@ class Solution:
             else:
                 word += char
                 word_len += 1
-        if (word_len > 0):
+        if word_len > 0:
             words.append((word_len, word))
         words.sort(key=lambda tup: tup[0])
         output = ''

@@ -1,16 +1,11 @@
-
 def z_advanced(s):
     """An advanced computation of Z-values of a string."""
-
     Z = [0] * len(s)
     Z[0] = len(s)
-
     rt = 0
     lt = 0
-
     for k in range(1, len(s)):
         if k > rt:
-            # If k is outside the current Z-box, do naive computation.
             n = 0
             while n + k < len(s) and s[n] == s[n + k]:
                 n += 1
@@ -19,11 +14,8 @@ def z_advanced(s):
                 lt = k
                 rt = k + n - 1
         else:
-            # If k is inside the current Z-box, consider two cases.
-
-            p = k - lt  # Pair index.
+            p = k - lt
             right_part_len = rt - k + 1
-
             if Z[p] < right_part_len:
                 Z[k] = Z[p]
             else:
@@ -31,7 +23,6 @@ def z_advanced(s):
                 while i < len(s) and s[i] == s[i - k]:
                     i += 1
                 Z[k] = i - k
-
                 lt = k
                 rt = i - 1
     return Z
@@ -46,11 +37,10 @@ def kmptab(s):
             tab[i] = j + 1
             i += 1
             j += 1
+        elif j != 0:
+            j = tab[j - 1]
         else:
-            if j != 0:
-                j = tab[j - 1]
-            else:
-                i += 1
+            i += 1
     return tab
 
 
@@ -68,27 +58,22 @@ def __starting_point():
         V.append(i)
         dict[i] = 0
     Z = z_advanced(s)
-
     v = []
     V.sort()
     my_tab = [0] * (len(s) + 1)
-    # print(Z)
     for i in Z:
         my_tab[i] += 1
     somme = 0
-    # print(my_tab)
     for i in range(len(my_tab) - 1, -1, -1):
-
         my_tab[i] += somme
         somme = my_tab[i]
-    # print(my_tab)
     for i in dict:
         dict[i] = my_tab[i]
         v.append((dict[i], i))
     v.sort(key=lambda tup: tup[1])
     print(len(v))
     for i in v:
-        print(str(i[1]) + " " + str(i[0]))
+        print(str(i[1]) + ' ' + str(i[0]))
 
 
 __starting_point()

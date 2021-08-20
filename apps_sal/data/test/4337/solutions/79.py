@@ -1,7 +1,6 @@
 N = input()
 arare = list(map(str, input().split()))
-
-if "Y" in arare:
-    print("Four")
+if 'Y' in arare:
+    print('Four')
 else:
-    print("Three")
+    print('Three')

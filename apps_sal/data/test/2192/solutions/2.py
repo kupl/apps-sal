@@ -7,10 +7,8 @@ def cmp(a):
 
 n = int(input())
 W = [list(map(float, input().split(' '))) for i in range(n)]
-
 A = [[0 for i in range(n)] for j in range(n)]
 B = [[0 for i in range(n)] for j in range(n)]
-
 for i in range(n):
     for j in range(n):
         if i != j:
@@ -29,20 +27,15 @@ for i in range(n):
         else:
             A[i][j] = W[i][j]
             B[i][j] = 0
-
-s = ""
+s = ''
 for i in range(n):
     for j in range(n):
-        s += str(A[i][j]) + " "
-    s += "\n"
-
+        s += str(A[i][j]) + ' '
+    s += '\n'
 print(s)
-
-
-s = ""
+s = ''
 for i in range(n):
     for j in range(n):
-        s += str(B[i][j]) + " "
-    s += "\n"
-
+        s += str(B[i][j]) + ' '
+    s += '\n'
 print(s)

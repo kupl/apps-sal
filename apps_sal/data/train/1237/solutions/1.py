@@ -1,7 +1,6 @@
-# cook your dish here
 test = int(input())
 for _ in range(test):
-    a, b, c = [int(x) for x in input().split()]
+    (a, b, c) = [int(x) for x in input().split()]
     t = s = 0
     m = 100 * a + b
     while a * 100 + b > c and t <= 10000:

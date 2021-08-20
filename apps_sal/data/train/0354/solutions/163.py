@@ -1,7 +1,8 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        MOD = 10**9 + 7
-        memoi = [[1] + ([0] * (limit - 1)) for limit in rollMax]
+        MOD = 10 ** 9 + 7
+        memoi = [[1] + [0] * (limit - 1) for limit in rollMax]
         for _ in range(1, n):
             sumVal = sum(map(sum, memoi)) % MOD
             newMemoi = []

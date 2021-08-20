@@ -1,14 +1,13 @@
 def main():
-    h, w, m = map(int, input().split())
+    (h, w, m) = map(int, input().split())
     row = [0] * (h + 1)
     col = [0] * (w + 1)
     d = set({})
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         row[a] += 1
         col[b] += 1
         d.add((a, b))
-
     max_row = max(row)
     max_col = max(col)
     max_row_d = set({})
@@ -19,7 +18,6 @@ def main():
     for i in range(1, w + 1):
         if col[i] == max_col:
             max_col_d.add(i)
-
     sm = max_row + max_col
     for i in max_row_d:
         for j in max_col_d:
@@ -31,7 +29,6 @@ def main():
         break
     else:
         sm -= 1
-
     print(sm)
 
 

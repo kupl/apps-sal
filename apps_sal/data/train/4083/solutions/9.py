@@ -6,7 +6,7 @@ def performant_smallest(arr, n):
     total = 0
     num_max = 0
     result = []
-    for item, count in sorted(counts.items()):
+    for (item, count) in sorted(counts.items()):
         if total + count >= n:
             maximum = item
             max_max = n - total

@@ -1,16 +1,9 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def main():
     from math import sqrt
     t = 1
     t = int(input())
     for _ in range(t):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         if n % 2 == 0:
             print(n + k * 2)
         else:

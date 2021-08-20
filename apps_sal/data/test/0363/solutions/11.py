@@ -3,7 +3,7 @@ __author__ = 'KostikBigOne'
 
 def main():
     n = int(input())
-    power, cnt = 1, 9
+    (power, cnt) = (1, 9)
     ans = 0
     length = 1
     while True:

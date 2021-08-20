@@ -1,5 +1,5 @@
 def interpreter(tape):
-    a, stack, out = 0, [0], []
+    (a, stack, out) = (0, [0], [])
     while a < len(tape):
         command = tape[a]
         if command == '^':

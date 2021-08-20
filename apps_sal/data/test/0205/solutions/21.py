@@ -2,12 +2,19 @@ import math
 from decimal import Decimal
 
 
-def list_int_input(inp): return list(map(int, inp.split()))
-def int_input(inp): return int(inp)
-def string_to_list_input(inp): return list(inp)
+def list_int_input(inp):
+    return list(map(int, inp.split()))
 
 
-n, b = list(map(int, input().split()))
+def int_input(inp):
+    return int(inp)
+
+
+def string_to_list_input(inp):
+    return list(inp)
+
+
+(n, b) = list(map(int, input().split()))
 facts = []
 sqt = int(math.sqrt(b))
 for i in range(2, sqt + 1):
@@ -21,7 +28,7 @@ for i in range(2, sqt + 1):
         break
 if b != 1:
     facts.append((b, 1))
-summ = 10**18
+summ = 10 ** 18
 for i in facts:
     num = i[0]
     times = i[1]

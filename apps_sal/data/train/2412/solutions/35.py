@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         if S.count(S[0]) == len(S):
             if len(S) % 2 == 0:

@@ -10,6 +10,5 @@ for i in itertools.combinations(l, 1):
     if flag and sum(list(i)) * 2 == sum(l):
         print('Yes')
         flag = False
-
 if flag:
     print('No')

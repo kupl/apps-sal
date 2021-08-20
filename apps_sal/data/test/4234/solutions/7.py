@@ -12,12 +12,11 @@ for i in range(1, n):
     else:
         flag = 1
         now = i + 1
-ans = ""
+ans = ''
 for i in range(n):
     if use[i]:
         ans += s[i]
 if len(ans) % 2 == 1:
     ans = ans[:-1]
-
 print(n - len(ans))
 print(ans)

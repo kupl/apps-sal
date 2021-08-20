@@ -1,10 +1,10 @@
-operand = set("0123456789")
+operand = set('0123456789')
 operator = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
 
 def to_postfix(infix):
-    stack, res = [], []
-    for c in "({})".format(infix):
+    (stack, res) = ([], [])
+    for c in '({})'.format(infix):
         if c in operand:
             res.append(c)
         elif c == '(':
@@ -18,5 +18,5 @@ def to_postfix(infix):
                 res.append(stack.pop())
             stack.append(c)
         else:
-            raise Exception("Character {} unknown".format(c))
+            raise Exception('Character {} unknown'.format(c))
     return ''.join(res)

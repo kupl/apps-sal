@@ -21,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 mm = 1000000007
@@ -37,8 +37,8 @@ mm = 1000000007
 def solve():
     t = nu()
     for tt in range(t):
-        a, b = num()
-        if(a <= b):
+        (a, b) = num()
+        if a <= b:
             dd = b - a
             pq = dd // 5
             yp = dd % 5
@@ -46,7 +46,7 @@ def solve():
             yu = yp % 2
             print(pq + yu + yo)
         else:
-            a, b = b, a
+            (a, b) = (b, a)
             dd = b - a
             pq = dd // 5
             yp = dd % 5

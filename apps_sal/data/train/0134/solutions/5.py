@@ -1,20 +1,17 @@
 class Solution:
+
     def numDupDigitsAtMostN(self, N: int) -> int:
         digits = []
         M = N + 1
         while M > 0:
             digits.append(M % 10)
             M //= 10
-
         part_1 = 0
         prod = 9
         i_1 = 9
-
         n = len(digits)
-
         for i in range(n - 1):
             part_1 += prod
-            # print(i,part_1,prod)
             if i_1 > 1:
                 if i > 0:
                     i_1 -= 1
@@ -34,7 +31,6 @@ class Solution:
                 j_1 -= 1
             i_1 -= 1
             part_1 += prod
-
             if digit in seen:
                 break
             else:

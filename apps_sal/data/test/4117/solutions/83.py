@@ -4,11 +4,11 @@ def solve(n, l):
     for i in range(n):
         for j in range(i + 1, n):
             for k in range(j + 1, n):
-                if (l[i] < l[j] < l[k]) and (l[i] + l[j] > l[k]):
+                if l[i] < l[j] < l[k] and l[i] + l[j] > l[k]:
                     ans += 1
     return ans
 
 
 n = int(input())
 l = list(map(int, input().split()))
-print((solve(n, l)))
+print(solve(n, l))

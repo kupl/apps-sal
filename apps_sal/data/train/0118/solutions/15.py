@@ -1,9 +1,12 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = sorted([int(x) for x in input().split()])
     ans = 0
     while a and a[-1] >= x:

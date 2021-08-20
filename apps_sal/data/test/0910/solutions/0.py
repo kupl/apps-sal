@@ -1,9 +1,8 @@
-# You lost the game.
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 dem = n // 2 + n % 2
 i = 1
 while dem > 0 and i <= a:
-    dem -= b // 2 + (i % 2) * (b % 2)
+    dem -= b // 2 + i % 2 * (b % 2)
     i += 1
 if dem > 0:
     print(-1)
@@ -19,12 +18,12 @@ else:
         e = l
         for j in range(b):
             if e and d < dem:
-                print(demo[d], end=" ")
+                print(demo[d], end=' ')
                 d += 1
             elif e == 0 and r < n // 2:
-                print(rep[r], end=" ")
+                print(rep[r], end=' ')
                 r += 1
             else:
-                print(0, end=" ")
+                print(0, end=' ')
             e = 1 - e
         print()

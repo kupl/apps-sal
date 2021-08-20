@@ -1,4 +1,5 @@
 class Solution:
+
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         d = {}
         Aset = set(A)
@@ -11,7 +12,7 @@ class Solution:
                     k = A[i] // A[j]
                     if k in set(A):
                         d[A[i]] += d[A[j]] * d[k]
-                        d[A[i]] %= 10**9 + 7
+                        d[A[i]] %= 10 ** 9 + 7
             ans += d[A[i]]
-            ans %= 10**9 + 7
+            ans %= 10 ** 9 + 7
         return ans

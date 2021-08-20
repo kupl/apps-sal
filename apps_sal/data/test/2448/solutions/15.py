@@ -1,7 +1,7 @@
 q = int(input())
 for re in range(q):
     n = int(input())
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     st = input()
     odp = [0] * n
     wyn = 0
@@ -30,11 +30,11 @@ for re in range(q):
                 c -= 1
                 odp[i] = 'S'
     if wyn >= (n + 1) // 2:
-        print("YES")
+        print('YES')
         for i in range(n):
             if i < n - 1:
-                print(odp[i], end="")
+                print(odp[i], end='')
             else:
                 print(odp[i])
     else:
-        print("NO")
+        print('NO')

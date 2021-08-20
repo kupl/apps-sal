@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 i = abs(a - b)
 j = abs(a - c)
 k = abs(b - c)

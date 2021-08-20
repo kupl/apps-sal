@@ -1,11 +1,12 @@
 class Harshad:
+
     @staticmethod
     def is_valid(number):
         a = list(str(number))
         shu = 0
         for i in a:
             shu += int(i)
-        return True if not (number % shu) else False
+        return True if not number % shu else False
 
     @staticmethod
     def get_next(number):

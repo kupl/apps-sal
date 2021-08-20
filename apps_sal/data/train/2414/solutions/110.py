@@ -1,4 +1,5 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         pair = dict()
         for p in (a, b, c):
@@ -14,7 +15,7 @@ class Solution:
                         pair[p][i].add(j)
         ans = 0
         empty = set()
-        for i, js in list(pair[a].items()):
+        for (i, js) in list(pair[a].items()):
             for j in js:
                 ans += len(pair[b].get(j, empty) & pair[c].get(i, empty))
         return ans

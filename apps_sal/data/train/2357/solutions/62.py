@@ -1,6 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 S = sum(A)
 
 

@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         prev_seq = collections.defaultdict(int)
         max_seq = 1

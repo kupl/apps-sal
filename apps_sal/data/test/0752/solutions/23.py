@@ -1,4 +1,3 @@
-# 1
 n = int(input())
 a = []
 b = []
@@ -8,11 +7,11 @@ for i in range(n):
 for i in range(n):
     b.append(input())
 for i in range(n):
-    if(not(a[i] in b)):
+    if not a[i] in b:
         d += 1
     else:
         for j in range(n):
-            if(b[j] == a[i]):
+            if b[j] == a[i]:
                 b.remove(b[j])
                 break
 print(d)

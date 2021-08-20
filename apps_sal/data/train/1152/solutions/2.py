@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 d = dict()
 for _ in range(n):
@@ -17,6 +16,6 @@ for _ in range(q):
                 value = d[i]
                 recep = i
     if recep == None:
-        print("NO")
+        print('NO')
     else:
         print(recep)

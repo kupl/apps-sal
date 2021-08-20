@@ -41,7 +41,7 @@ for _ in range(t):
         while cur + 1 in st:
             st.remove(cur + 1)
             cur += 1
-        if cur == l1 or cur == l2 and len(st) == 0:
+        if cur == l1 or (cur == l2 and len(st) == 0):
             ans.add((cur, n - cur))
     print(len(ans))
     for val in ans:

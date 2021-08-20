@@ -1,4 +1,4 @@
-m, b = map(int, input().split(" "))
+(m, b) = map(int, input().split(' '))
 sm = 0
 for y in range(0, b + 1):
     x = m * (b - y)

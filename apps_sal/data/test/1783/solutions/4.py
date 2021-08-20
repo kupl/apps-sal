@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 pref = [0 for i in range(n - k + 1)]
 pref[0] = sum(a[:k])

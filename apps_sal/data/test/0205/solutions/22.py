@@ -18,11 +18,10 @@ def decompose(n):
 
 
 def main():
-    n, b = list(map(int, input().split()))
-    # print(n, b)
+    (n, b) = list(map(int, input().split()))
     require = decompose(b)
-    ans = 10**18
-    for key, val in list(require.items()):
+    ans = 10 ** 18
+    for (key, val) in list(require.items()):
         n2 = n
         acc = 0
         while n2 > 0:

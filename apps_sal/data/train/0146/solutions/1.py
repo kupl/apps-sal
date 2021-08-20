@@ -1,4 +1,5 @@
 class Solution:
+
     def decodeString(self, s):
         """
         :type s: str
@@ -20,7 +21,6 @@ class Solution:
                     else:
                         result.pop()
                         break
-
                 digit_char = []
                 r2m = len(result)
                 for j in range(r2m - 1, -1, -1):
@@ -28,5 +28,5 @@ class Solution:
                         digit_char.insert(0, result.pop())
                     else:
                         break
-                result += char_temp * (int(''.join(digit_char)))
+                result += char_temp * int(''.join(digit_char))
         return ''.join(result)

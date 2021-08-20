@@ -8,8 +8,6 @@ def eprint(*args):
 
 
 zz = 1
-#from math import *
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -51,13 +49,13 @@ while t > 0:
             e += 1
         d[i] = 1
     if o % 2 == 0:
-        print("YES")
+        print('YES')
         continue
     flag = 0
     for i in a:
         if i + 1 in d or i - 1 in d:
-            print("YES")
+            print('YES')
             flag = 1
             break
     if flag == 0:
-        print("NO")
+        print('NO')

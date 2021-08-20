@@ -1,6 +1,5 @@
-# cook your dish here
 def index(n, val):
-    while(val >= n):
+    while val >= n:
         val = val // 2
     return n - val
 

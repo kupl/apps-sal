@@ -1,5 +1,5 @@
 def main():
-    n, a, x, b, y = list(map(int, input().split()))
+    (n, a, x, b, y) = list(map(int, input().split()))
     same = False
     while True:
         if a != x:
@@ -14,10 +14,8 @@ def main():
             a = 1
         if b == 0:
             b = n
-
         if a == b:
             break
-
     if a == b:
         print('YES')
     else:

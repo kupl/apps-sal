@@ -10,11 +10,9 @@ def readmap():
     return map(int, input().split())
 
 
-N, K = readmap()
+(N, K) = readmap()
 A = readlist()
-
 A.sort()
-
 count = 0
 same = 1
 for i in range(N - 1):
@@ -25,5 +23,4 @@ for i in range(N - 1):
         same = 1
     else:
         same = 1
-
 print(N - count)

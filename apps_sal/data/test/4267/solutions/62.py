@@ -1,5 +1,5 @@
 X = int(input())
-ans = "No"
+ans = 'No'
 if X >= 30:
-    ans = "Yes"
+    ans = 'Yes'
 print(ans)

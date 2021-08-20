@@ -18,5 +18,5 @@ for i in range(q):
                 b[cell] = d
                 used[cell] = False
     for i in range(n):
-        print(c[b[i]], end=" ")
+        print(c[b[i]], end=' ')
     print()

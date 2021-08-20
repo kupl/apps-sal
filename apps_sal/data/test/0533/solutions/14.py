@@ -1,7 +1,7 @@
-a1, a2, k1, k2, n = int(input()), int(input()), int(input()), int(input()), int(input())
+(a1, a2, k1, k2, n) = (int(input()), int(input()), int(input()), int(input()), int(input()))
 max1 = 0
 if k1 > k2:
-    a1, a2, k1, k2 = a2, a1, k2, k1
+    (a1, a2, k1, k2) = (a2, a1, k2, k1)
 if a1 * k1 >= n:
     max1 = n // k1
 else:

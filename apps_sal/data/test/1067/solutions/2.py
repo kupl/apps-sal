@@ -12,11 +12,9 @@ for i in range(n):
     else:
         num += abs(a[i]) - 1
         mi += 1
-
 if zero > 0:
     print(num)
+elif mi % 2 != 0:
+    print(num + 2)
 else:
-    if mi % 2 != 0:
-        print(num + 2)
-    else:
-        print(num)
+    print(num)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ans = []
 for i in range(1, m + 1):
     ans.append(i)
@@ -8,4 +8,4 @@ for i in range(n):
     del a[0]
     a = set(a)
     ans = ans & a
-print((len(ans)))
+print(len(ans))

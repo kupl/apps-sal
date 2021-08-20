@@ -1,6 +1,6 @@
 from sys import stdin
 input = stdin.readline
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 mat = [list(input()) for i in range(r)]
 dasie = True
 wiersze = []
@@ -45,7 +45,7 @@ else:
         pod = wiersze[i]
         if pod != [-1, -1] and nad[0] > pod[1] or nad[1] < pod[0]:
             wyn += 1
-    if (zerok == 0 and zerow > 0) or (zerow == 0 and zerok > 0):
+    if zerok == 0 and zerow > 0 or (zerow == 0 and zerok > 0):
         print(-1)
     else:
         print(wyn)

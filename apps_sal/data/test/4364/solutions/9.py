@@ -1,11 +1,10 @@
 S = input()
 if 1 <= int(S[0:2]) <= 12:
     if 1 <= int(S[2:4]) <= 12:
-        print("AMBIGUOUS")
+        print('AMBIGUOUS')
     else:
-        print("MMYY")
+        print('MMYY')
+elif 1 <= int(S[2:4]) <= 12:
+    print('YYMM')
 else:
-    if 1 <= int(S[2:4]) <= 12:
-        print("YYMM")
-    else:
-        print("NA")
+    print('NA')

@@ -10,7 +10,7 @@ class StreamChecker:
                 d[c] = _d
                 d = _d
             d['.'] = True
-        print((self.trie))
+        print(self.trie)
 
     def query(self, letter: str) -> bool:
         next_check = []
@@ -23,7 +23,3 @@ class StreamChecker:
                 next_check.append(_d)
         self.check = next_check
         return found
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, r = list(map(int, input().split()))
+    (n, r) = list(map(int, input().split()))
     x = min(n - 1, r)
     p = 0
     if r >= n:

@@ -1,4 +1,5 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         s = self.remove_invalid(s)
         s = self.remove_invalid(s[::-1], ')')

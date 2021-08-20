@@ -5,10 +5,10 @@ for _ in range(q):
     n = int(input())
     l = list(map(int, input().split()))
     if sum(l) == 0:
-        print("NO")
+        print('NO')
     else:
         l.sort()
         if sum(l) > 0:
             l.reverse()
-        print("YES")
+        print('YES')
         print(*l)

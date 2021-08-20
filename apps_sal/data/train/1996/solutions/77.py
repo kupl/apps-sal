@@ -1,7 +1,8 @@
 class Solution:
+
     def eventualSafeNodes(self, graph):
         degrees = {}
-        safe, unsafe = set(), set()
+        (safe, unsafe) = (set(), set())
         adj = {}
         for node in range(len(graph)):
             nodes = graph[node]

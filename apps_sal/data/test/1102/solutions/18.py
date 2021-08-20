@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 criminals = list(map(int, input().split()))
 i = j = a - 1
 amount = 0

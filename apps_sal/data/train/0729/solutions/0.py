@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     d = {}
     e = {}
     l = []
@@ -15,7 +15,6 @@ for _ in range(t):
             if l[i][j] == '1':
                 d[i] = 1
                 e[j] = 1
-    # ans=[]
     if sum(d.values()) + sum(e.values()) == 0:
         k = [-1] * m
         for i in range(n):
@@ -28,12 +27,11 @@ for _ in range(t):
             for j in range(m):
                 if l[i][j] == '1':
                     ans[i][j] = 0
+                elif d[i] or e[j]:
+                    ans[i][j] = 1
                 else:
-                    if (d[i] or e[j]):
-                        ans[i][j] = 1
-                    else:
-                        ans[i][j] = 2
+                    ans[i][j] = 2
         for i in range(n):
             for j in range(m):
-                print(ans[i][j], end=" ")
+                print(ans[i][j], end=' ')
             print()

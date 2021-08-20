@@ -4,9 +4,8 @@ input = sys.stdin.readline
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     xy = [list(map(int, input().split())) for i in range(N)]
-    # 座標圧縮
     xs = []
     ys = []
     xy = sorted(xy, key=lambda x: x[0])
@@ -17,17 +16,15 @@ def main():
     for i in range(N):
         ys.append(xy[i][1])
         xy[i][1] = i + 1
-    # 2次元累積和
     sum_ = np.zeros((N + 1, N + 1), dtype=int)
     for i in range(N):
-        x, y = xy[i]
+        (x, y) = xy[i]
         sum_[y][x] = 1
     for i in range(1, N + 1):
         sum_[i] += sum_[i - 1]
     for i in range(1, N + 1):
         sum_[:, i] += sum_[:, i - 1]
-    # 全探索
-    ans = int(1e20)
+    ans = int(1e+20)
     for l in range(1, N + 1):
         no_three = True
         for r in range(N, l, -1):
@@ -51,7 +48,6 @@ def main():
                 no_three = False
         if no_three:
             break
-
     print(ans)
 
 

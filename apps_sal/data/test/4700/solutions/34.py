@@ -1,10 +1,9 @@
 def main():
     import collections
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     hs = list(map(int, input().split()))
     nmap = [0] * n
     cnt = 0
-
     for j in range(m):
         v = input().split()
         v0 = int(v[0]) - 1
@@ -23,7 +22,7 @@ def main():
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

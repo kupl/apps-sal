@@ -1,12 +1,12 @@
 from collections import deque
-INF = 1_000_000_000
+INF = 1000000000
 
 
 def main():
-    n, m = map(int, input().split(" "))
+    (n, m) = map(int, input().split(' '))
     to = [[] for _ in range(n)]
     for _ in range(m):
-        a, b = map(lambda i: int(i) - 1, input().split(" "))
+        (a, b) = map(lambda i: int(i) - 1, input().split(' '))
         to[a].append(b)
         to[b].append(a)
     que = deque()
@@ -22,7 +22,7 @@ def main():
             d[i] = d[v] + 1
             prev[i] = v
             que.append(i)
-    print("Yes")
+    print('Yes')
     for i in range(n):
         if i == 0:
             continue

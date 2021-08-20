@@ -5,7 +5,6 @@ speed = 0
 n = int(input())
 for e in range(n):
     inp = list(map(int, input().split()))
-    # print(inp)
     if inp[0] == 4:
         overtakes.append(True)
     elif inp[0] == 6:
@@ -17,7 +16,6 @@ for e in range(n):
         while speed > speeds[-1]:
             count += 1
             speeds.pop()
-
     elif inp[0] == 2:
         while not overtakes[-1]:
             count += 1
@@ -27,13 +25,5 @@ for e in range(n):
             count += 1
             speeds.pop()
         speed = inp[1]
-
 print(count)
-"""
-Polycarp changes the speed of his car to specified (this event comes with a positive integer number);
-Polycarp's car overtakes the other car;
-Polycarp's car goes past the "speed limit" sign (this sign comes with a positive integer);
-Polycarp's car goes past the "overtake is allowed" sign;
-Polycarp's car goes past the "no speed limit";
-Polycarp's car goes past the "no overtake allowed";
-"""
+'\nPolycarp changes the speed of his car to specified (this event comes with a positive integer number);\nPolycarp\'s car overtakes the other car;\nPolycarp\'s car goes past the "speed limit" sign (this sign comes with a positive integer);\nPolycarp\'s car goes past the "overtake is allowed" sign;\nPolycarp\'s car goes past the "no speed limit";\nPolycarp\'s car goes past the "no overtake allowed";\n'

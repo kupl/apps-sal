@@ -7,7 +7,7 @@ def greatest_pow2_divisor(x):
 
 def parent(x):
     pow2 = greatest_pow2_divisor(x)
-    if ((x + pow2) // (pow2 * 2)) % 2 == 1:
+    if (x + pow2) // (pow2 * 2) % 2 == 1:
         return x + pow2
     return x - pow2
 
@@ -19,7 +19,7 @@ def left(x):
 
 
 def right(x):
-    if (x % 2 == 1):
+    if x % 2 == 1:
         return x
     return x + greatest_pow2_divisor(x) // 2
 
@@ -35,8 +35,8 @@ for i in range(q):
         if c == 'U':
             if u != root:
                 u = parent(u)
-        if (c == 'L'):
+        if c == 'L':
             u = left(u)
-        if (c == 'R'):
+        if c == 'R':
             u = right(u)
     print(u)

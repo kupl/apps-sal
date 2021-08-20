@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 p = 0.08
 q = 0.1
 a = 0 - -A // p

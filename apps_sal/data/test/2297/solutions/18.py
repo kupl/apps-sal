@@ -1,6 +1,6 @@
 def solve(n):
-    even = (n // 2) * (n // 2 + 1)
-    odd = ((n + 1) // 2) * ((n + 1) // 2)
+    even = n // 2 * (n // 2 + 1)
+    odd = (n + 1) // 2 * ((n + 1) // 2)
     return even - odd
 
 

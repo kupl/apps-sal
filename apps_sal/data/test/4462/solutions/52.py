@@ -11,8 +11,8 @@ for i in range(n):
     else:
         c_2 += 1
 if c_ki <= c_4:
-    print("Yes")
+    print('Yes')
 elif c_ki - 1 == c_4 and c_2 == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

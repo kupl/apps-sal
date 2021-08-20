@@ -6,9 +6,9 @@ def __starting_point():
         if x % 2 != 0:
             total += 1
     if total % 2 == 0 and total != 0:
-        print("Second")
+        print('Second')
     else:
-        print("First")
+        print('First')
 
 
 __starting_point()

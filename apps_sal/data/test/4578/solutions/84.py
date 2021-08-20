@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 sweet = [0] * N
 for l in range(N):
     sweet[l] = int(input())

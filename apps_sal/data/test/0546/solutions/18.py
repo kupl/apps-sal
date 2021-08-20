@@ -20,9 +20,8 @@ def qw(c):
                     if e in a:
                         t = False
                 w += b - 1
-            else:
-                if s[j] != c[w]:
-                    t = False
+            elif s[j] != c[w]:
+                t = False
             if t == False:
                 break
     except IndexError:

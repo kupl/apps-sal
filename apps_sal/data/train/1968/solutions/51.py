@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder_subs = []
         folder_k = sorted(folder, key=len)
@@ -10,5 +11,4 @@ class Solution:
                     break
             if not flag:
                 folder_subs.append(f)
-
         return folder_subs

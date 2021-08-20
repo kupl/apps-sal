@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 tl = m
 tr = n
 while tr - tl > 1:

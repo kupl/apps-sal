@@ -6,6 +6,6 @@ for i in range(q):
     k = int(input())
     for j in range(n):
         for l in range(j, n):
-            if(min(x[j:l + 1]) == k):
+            if min(x[j:l + 1]) == k:
                 c += 1
     print(c)

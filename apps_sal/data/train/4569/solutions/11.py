@@ -1,5 +1,5 @@
 def next_item(xs, item):
-    ans, trap = None, False
+    (ans, trap) = (None, False)
     for i in xs:
         if trap:
             return i

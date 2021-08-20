@@ -1,7 +1,7 @@
 s = input()
 l = list(set(s))
 ans = 1
-if (len(l) > 4) or (len(l) <= 1):
+if len(l) > 4 or len(l) <= 1:
     ans = 0
 else:
     if len(l) == 2:
@@ -12,9 +12,9 @@ else:
                 c0 += 1
             else:
                 c1 += 1
-        if (c1 < 2) or (c0 < 2):
+        if c1 < 2 or c0 < 2:
             ans = 0
-    if (len(l) == 3):
+    if len(l) == 3:
         c1 = 0
         c2 = 0
         c0 = 0
@@ -25,9 +25,9 @@ else:
                 c1 += 1
             if s[i] == l[2]:
                 c2 += 1
-        if (c1 + c2 + c0) < 4:
+        if c1 + c2 + c0 < 4:
             ans = 0
-if (ans == 0):
+if ans == 0:
     print('No')
 else:
     print('Yes')

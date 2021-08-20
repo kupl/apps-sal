@@ -1,9 +1,8 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 is_gov = [0] * (n + 1)
 prt = [0] * (n + 1)
 cnt_gov = [0] * (n + 1)
 adj = [[] for _ in range(n + 1)]
-
 if k == 1:
     arr = [int(input())]
 else:
@@ -11,7 +10,7 @@ else:
 for i in arr:
     is_gov[i] = 1
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     adj[u].append(v)
     adj[v].append(u)
 
@@ -19,7 +18,7 @@ for i in range(m):
 def dfs(u, p, ID):
     stk = [(u, p, ID)]
     while stk:
-        u, p, ID = stk[-1]
+        (u, p, ID) = stk[-1]
         stk.pop()
         if prt[u] != 0:
             continue
@@ -33,7 +32,7 @@ def dfs(u, p, ID):
 for i in range(1, n + 1):
     if is_gov[i] == 1:
         dfs(i, -1, i)
-max_nodes, res = 0, 0
+(max_nodes, res) = (0, 0)
 for i in range(1, n + 1):
     if is_gov[i] == 1:
         res += cnt_gov[i] * (cnt_gov[i] - 1) // 2

@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         child_list = defaultdict(list)
         for i in range(n):
@@ -13,7 +14,5 @@ class Solution:
             children = child_list[eid]
             if not children:
                 return 0
-
-            return informTime[eid] + max(step(cid) for cid in children)
-
+            return informTime[eid] + max((step(cid) for cid in children))
         return step(headID)

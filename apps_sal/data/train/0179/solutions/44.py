@@ -1,5 +1,7 @@
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+
         @lru_cache(None)
         def counter(start, last, last_cnt, left):
             if left < 0:

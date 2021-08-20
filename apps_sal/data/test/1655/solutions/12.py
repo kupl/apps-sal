@@ -11,7 +11,6 @@ while i >= 0:
         l = max(min(l, i - a[i]), 0)
     if r <= l - 1:
         i -= 1
-
 ans = 0
 for i in b:
     if i:

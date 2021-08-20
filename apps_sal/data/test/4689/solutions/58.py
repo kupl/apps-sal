@@ -1,5 +1,5 @@
 def resolve():
-    k, n = map(int, input().split())
+    (k, n) = map(int, input().split())
     a = list(map(int, input().split()))
     l = a[0] + k - a[-1]
     for i in range(1, n):

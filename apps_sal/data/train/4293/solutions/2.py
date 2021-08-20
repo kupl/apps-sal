@@ -1,8 +1,13 @@
-def epley(w, r): return w * (1 + r / 30)
-def mcGlothin(w, r): return 100 * w / (101.3 - 2.67123 * r)
+def epley(w, r):
+    return w * (1 + r / 30)
 
 
-def lombardi(w, r): return w * r**0.10
+def mcGlothin(w, r):
+    return 100 * w / (101.3 - 2.67123 * r)
+
+
+def lombardi(w, r):
+    return w * r ** 0.1
 
 
 def calculate_1RM(w, r):

@@ -1,8 +1,7 @@
 from collections import Counter
 import math
-mod = (pow(10, 9) + 7)
+mod = pow(10, 9) + 7
 t = int(input())
-
 for _ in range(t):
     s = input()
     p = 1

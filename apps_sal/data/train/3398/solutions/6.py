@@ -12,7 +12,6 @@ def solve(arr):
             diffs.append(diff)
         elif diff % (l - 1) == 0:
             diffs.append(diff)
-
     progs = []
     for diff in diffs:
         for i in range(-1, 2):
@@ -28,12 +27,11 @@ def solve(arr):
                         seq = list(np.arange(fst + i, lst + j + k, diff / (l - 1)))
                     if len(seq) == l:
                         progs.append(seq)
-
     changes = []
     for seq in progs:
         change = 0
         complete = True
-        for a, b in zip(seq, arr):
+        for (a, b) in zip(seq, arr):
             diff = abs(a - b)
             if diff > 1:
                 complete = False
@@ -42,7 +40,6 @@ def solve(arr):
                 change += 1
         if complete:
             changes.append(change)
-
     if len(changes) == 0:
         return -1
     return min(changes)

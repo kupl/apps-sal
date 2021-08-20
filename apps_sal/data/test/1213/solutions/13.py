@@ -1,4 +1,4 @@
-n, k = list(map(int, input('').split()))
+(n, k) = list(map(int, input('').split()))
 lozung = list(input())
 if n - k < k:
     for i in range(k, n):
@@ -8,7 +8,6 @@ if n - k < k:
         if i != 0:
             print('LEFT')
 else:
-    #    print('2')
     for i in reversed(list(range(0, k - 1))):
         print('LEFT')
     for i in range(n):

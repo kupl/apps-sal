@@ -1,4 +1,3 @@
-
 def __starting_point():
     N = int(input())
     L = [0, 0, 0, 0, 0, 0, 0, 0]
@@ -21,7 +20,7 @@ def __starting_point():
             if len(Tl) == 3:
                 break
         if len(Tl) == 3:
-            ans.append(str(Tl[0]) + " " + str(Tl[1]) + " " + str(Tl[2]))
+            ans.append(str(Tl[0]) + ' ' + str(Tl[1]) + ' ' + str(Tl[2]))
         else:
             fnd = False
             break
@@ -29,7 +28,7 @@ def __starting_point():
         for a in ans:
             print(a)
     else:
-        print("-1")
+        print('-1')
 
 
 __starting_point()

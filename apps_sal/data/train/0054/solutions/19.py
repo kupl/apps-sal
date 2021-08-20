@@ -5,9 +5,7 @@ for i in range(q):
     s = list(map(int, stdin.readline().strip().split()))
     flag = False
     for j in range(12):
-
-        x = 2**j
-
+        x = 2 ** j
         s1 = []
         cnt = 0
         for k in range(len(s)):
@@ -21,6 +19,6 @@ for i in range(q):
         s1 = s1 + [x * 2] * y
         s = s1.copy()
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

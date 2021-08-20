@@ -1,4 +1,4 @@
-s = ""
+s = ''
 L = []
 s = input()
 k = 0
@@ -15,11 +15,8 @@ elif s[0] == 'f':
 r = s.find('ru', 1)
 L.append(s[:r])
 L.append('.ru')
-
 k = r + 2
-
 if k < len(s):
     L.append('/')
     L.append(s[k:])
-
 print(''.join(L))

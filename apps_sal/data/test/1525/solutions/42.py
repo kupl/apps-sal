@@ -1,5 +1,5 @@
-h, w, k = map(int, input().split())
-p = 10**9 + 7
+(h, w, k) = map(int, input().split())
+p = 10 ** 9 + 7
 DP = [[0 for j in range(w + 1)] for i in range(h + 1)]
 DP[0][0] = 1
 F = [1, 2, 3, 5, 8, 13, 21][:w] + [1]

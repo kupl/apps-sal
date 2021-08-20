@@ -1,6 +1,5 @@
 x = int(input())
-
-hh, mm = map(int, input().split())
+(hh, mm) = map(int, input().split())
 
 
 def ch(hh, mm):

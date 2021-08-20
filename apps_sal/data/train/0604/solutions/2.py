@@ -4,20 +4,18 @@ def adjacent(i, j, r, c):
             return 2
         else:
             return 3
+    elif j == 0 or j == c - 1:
+        return 3
     else:
-        if j == 0 or j == c - 1:
-            return 3
-        else:
-            return 4
+        return 4
 
 
-# cook your dish here
 for _ in range(int(input())):
-    r, c = map(int, input().split(" "))
+    (r, c) = map(int, input().split(' '))
     grid = []
     flag = 0
     for i in range(r):
-        grid.append(list(map(int, input().split(" "))))
+        grid.append(list(map(int, input().split(' '))))
     for i in range(r):
         for j in range(c):
             if adjacent(i, j, r, c) <= grid[i][j]:
@@ -26,6 +24,6 @@ for _ in range(int(input())):
         if flag == 1:
             break
     if flag == 1:
-        print("Unstable")
+        print('Unstable')
     else:
-        print("Stable")
+        print('Stable')

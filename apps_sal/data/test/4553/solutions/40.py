@@ -1,6 +1,5 @@
-# Postal Code
-A, B = map(int, input().split())
-d = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+(A, B) = map(int, input().split())
+d = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 S = input()
 total = 0
 for i in range(A):
@@ -9,7 +8,7 @@ for i in range(A):
     else:
         total = 1
 S = S[A:]
-if S[0] != "-":
+if S[0] != '-':
     total = 1
 S = S[1:]
 for i in range(B):
@@ -18,6 +17,6 @@ for i in range(B):
     else:
         total = 1
 if total == 1:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

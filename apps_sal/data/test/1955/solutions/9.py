@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from sys import stdin, stdout
 
 
@@ -25,11 +24,10 @@ def solve(ee):
         return 1
 
 
-n, m = ri()
+(n, m) = ri()
 d = list(ri())
 a = list(ri())
 d = [i - 1 for i in d]
-
 s = 0
 e = n
 while s < e:

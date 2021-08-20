@@ -7,8 +7,8 @@ def f(x):
 n = int(input())
 for i in range(n):
     a = input()
-    ans = ((len(a) - 1) * 9)
+    ans = (len(a) - 1) * 9
     a1 = f(a)
-    a1, a = int(a1), int(a)
+    (a1, a) = (int(a1), int(a))
     ans += a // a1
     print(ans)

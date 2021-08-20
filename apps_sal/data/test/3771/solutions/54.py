@@ -2,8 +2,9 @@ from collections import deque
 
 
 class Dinic:
+
     def __init__(self, n: int):
-        self.INF = 10**9 + 7
+        self.INF = 10 ** 9 + 7
         self.n = n
         self.graph = [[] for _ in range(n)]
 
@@ -26,7 +27,7 @@ class Dinic:
         self.level[s] = 0
         while q:
             _from = q.popleft()
-            for to, capacity, _ in self.graph[_from]:
+            for (to, capacity, _) in self.graph[_from]:
                 if capacity > 0 and self.level[to] < 0:
                     self.level[to] = self.level[_from] + 1
                     q.append(to)
@@ -38,7 +39,7 @@ class Dinic:
         if _from == t:
             return f
         for edge in self.itr[_from]:
-            to, capacity, reverse_edge = edge
+            (to, capacity, reverse_edge) = edge
             if capacity > 0 and self.level[_from] < self.level[to]:
                 d = self.dfs(to, t, min(f, capacity))
                 if d > 0:
@@ -64,22 +65,20 @@ class Dinic:
         return flow
 
 
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = [list(input()) for i in range(h)]
-
 di = Dinic(h + w + 2)
 for i in range(h):
     for j in range(w):
-        if a[i][j] == "o":
+        if a[i][j] == 'o':
             di.add_edge(i, h + j, 1)
             di.add_edge(h + j, i, 1)
-        if a[i][j] == "S":
+        if a[i][j] == 'S':
             di.add_edge(h + w, i, 10 ** 5)
             di.add_edge(h + w, h + j, 10 ** 5)
-        if a[i][j] == "T":
+        if a[i][j] == 'T':
             di.add_edge(i, h + w + 1, 10 ** 5)
             di.add_edge(h + j, h + w + 1, 10 ** 5)
-
 ans = di.max_flow(h + w, h + w + 1)
 if ans >= 10 ** 5:
     print(-1)

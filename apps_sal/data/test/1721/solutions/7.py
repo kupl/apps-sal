@@ -2,13 +2,11 @@ from collections import defaultdict
 N = int(input())
 S = input()
 T = S[::-1]
-
 dic = defaultdict(lambda: [])
-for i, t in enumerate(T):
+for (i, t) in enumerate(T):
     dic[t].append(i)
 for k in list(dic.keys()):
     dic[k].reverse()
-
 arr = []
 for c in S:
     arr.append(dic[c].pop())
@@ -20,13 +18,13 @@ def inversion(inds):
     def bit_add(x, w):
         while x <= N:
             bit[x] += w
-            x += (x & -x)
+            x += x & -x
 
     def bit_sum(x):
         ret = 0
         while x > 0:
             ret += bit[x]
-            x -= (x & -x)
+            x -= x & -x
         return ret
     inv = 0
     for ind in reversed(inds):

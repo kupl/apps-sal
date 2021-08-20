@@ -12,12 +12,10 @@ def powermod(base, power):
     return ret
 
 
-x, k = list(map(int, input().split()))
-
+(x, k) = list(map(int, input().split()))
 b = x * 2 - 1
 ans = b * powermod(2, k) + 1
 ans %= 1000000007
-
 if x == 0:
     ans = 0
 print(ans)

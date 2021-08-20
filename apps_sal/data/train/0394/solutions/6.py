@@ -1,4 +1,5 @@
 class Solution:
+
     def minMoves2(self, nums):
         """
         :type nums: List[int]
@@ -14,14 +15,12 @@ class Solution:
                 final = final + abs(nums[med] - nums[j])
             for g in range(med, len(nums)):
                 final = final + abs(nums[med] - nums[g])
-
         else:
             med = int(len(nums) / 2)
             for k in range(med):
                 final = final + abs(nums[med] - nums[k])
             for t in range(med, len(nums)):
                 final = final + abs(nums[med] - nums[t])
-
             med = int(len(nums) / 2) - 1
             for h in range(med):
                 final1 = final1 + abs(nums[med] - nums[h])

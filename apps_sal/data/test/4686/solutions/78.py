@@ -1,5 +1,4 @@
 w = input()
-
 for i in w:
     count = 0
     for j in w:

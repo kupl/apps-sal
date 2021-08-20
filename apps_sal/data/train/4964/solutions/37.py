@@ -2,8 +2,8 @@ import string as str
 
 
 def is_uppercase(inp):
-    res = str.ascii_uppercase + " "
-    ret = " "
+    res = str.ascii_uppercase + ' '
+    ret = ' '
     for i in inp:
         if i in res or i in str.punctuation or i in str.digits:
             ret = True

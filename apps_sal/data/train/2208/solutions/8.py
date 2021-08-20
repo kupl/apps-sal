@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.size = [1] * n
@@ -24,7 +25,6 @@ class UnionFind:
         if x == y:
             self.edge[x] += 1
             return
-
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -37,16 +37,16 @@ class UnionFind:
                 self.rank[x] += 1
 
 
-n, k = [int(item) for item in input().split()]
-UF = UnionFind(2 * 10**5)
+(n, k) = [int(item) for item in input().split()]
+UF = UnionFind(2 * 10 ** 5)
 for i in range(k):
-    a, b = [int(item) for item in input().split()]
+    (a, b) = [int(item) for item in input().split()]
     a -= 1
     b -= 1
     UF.union(a, b)
-seen = [False] * (2 * 10**5)
+seen = [False] * (2 * 10 ** 5)
 ans = 0
-for i in range(2 * 10**5):
+for i in range(2 * 10 ** 5):
     par = UF.find(i)
     if seen[par]:
         continue

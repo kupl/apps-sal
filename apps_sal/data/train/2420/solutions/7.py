@@ -1,4 +1,5 @@
 class Solution:
+
     def isAnagram(self, s, t):
         word = dict()
         for i in s:
@@ -6,13 +7,11 @@ class Solution:
                 word[i] = 1
             else:
                 word[i] += 1
-
         for i in t:
             if i not in word:
                 return False
             else:
                 word[i] -= 1
-
         for i in word:
             if word[i] != 0:
                 return False

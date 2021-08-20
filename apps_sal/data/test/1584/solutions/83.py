@@ -1,9 +1,6 @@
 from bisect import bisect_left
-
-
-N, *L = list(map(int, open(0).read().split()))
+(N, *L) = list(map(int, open(0).read().split()))
 L.sort()
-
 ans = 0
 for i in range(N - 2):
     for j in range(i + 1, N - 1):

@@ -1,4 +1,5 @@
 def find_difference(a, b):
+
     def mul(li):
         car = 1
         for i in li:

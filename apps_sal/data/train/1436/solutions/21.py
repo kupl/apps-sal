@@ -1,4 +1,3 @@
-# cook your dish here
 """
 This is a tricky problem
 
@@ -21,8 +20,7 @@ def is_palindrome(s):
 testcase = int(input())
 for z in range(testcase):
     s = input()
-    if (is_palindrome(s)):
+    if is_palindrome(s):
         print(1)
-
     else:
         print(2)

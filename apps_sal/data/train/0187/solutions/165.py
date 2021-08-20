@@ -1,7 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         curr_waiting = 0
-        curr_profit, max_profit, curr_op, max_profit_ops = 0, 0, 0, 0
+        (curr_profit, max_profit, curr_op, max_profit_ops) = (0, 0, 0, 0)
         for c in customers:
             curr_op += 1
             curr_waiting += c
@@ -19,4 +20,4 @@ class Solution:
             if curr_profit > max_profit:
                 max_profit = curr_profit
                 max_profit_ops = curr_op
-        return max_profit_ops if max_profit > 0 else - 1
+        return max_profit_ops if max_profit > 0 else -1

@@ -13,8 +13,8 @@ def divisors(n):
 def solve(p):
     for d in sorted(divisors(p - 1)):
         if pow(10, d, p) == 1:
-            return "{}-sum".format(d)
+            return '{}-sum'.format(d)
             break
         elif pow(10, d, p) == p - 1:
-            return "{}-altsum".format(d)
+            return '{}-altsum'.format(d)
             break

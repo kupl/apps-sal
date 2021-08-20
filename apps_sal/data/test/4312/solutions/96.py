@@ -8,9 +8,7 @@
 先に自分のモンスターの体力が 0 以下になった方の負け、そうでない方の勝ちです。
 高橋君が勝つなら Yes、負けるなら No を出力してください。
 """
-
-A, B, C, D = list(map(int, input().split()))
-
+(A, B, C, D) = list(map(int, input().split()))
 while A > 0 and B > 0:
     C -= B
     if C <= 0:

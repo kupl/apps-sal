@@ -1,6 +1,6 @@
 from sys import stdout
 s = input()
-result = [""] * len(s)
+result = [''] * len(s)
 l = 0
 r = len(s) - 1
 for i in range(len(s)):

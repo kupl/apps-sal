@@ -12,36 +12,55 @@ import random
 import time
 import copy
 import functools
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-gosa = 1.0 / 10**10
-mod = 10**9 + 7
-
-
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+gosa = 1.0 / 10 ** 10
+mod = 10 ** 9 + 7
 
 
-class Seg():
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+class Seg:
+
     def __init__(self, na, default, func):
         if isinstance(na, list):
             n = len(na)
         else:
             n = na
         i = 1
-        while 2**i <= n:
+        while 2 ** i <= n:
             i += 1
         self.D = default
         self.H = i
-        self.N = 2**i
+        self.N = 2 ** i
         if isinstance(na, list):
-            self.A = [default] * (self.N) + na + [default] * (self.N - n)
+            self.A = [default] * self.N + na + [default] * (self.N - n)
             for i in range(self.N - 1, 0, -1):
                 self.A[i] = func(self.A[i * 2], self.A[i * 2 + 1])
         else:
@@ -78,7 +97,6 @@ class Seg():
                 res = self.merge(res, A[r])
             l >>= 1
             r >>= 1
-
         return res
 
 
@@ -90,11 +108,9 @@ def main():
         if a < b:
             return a
         return b
-
-    s1 = Seg([c if i % 2 == 0 else inf for c, i in zip(a, list(range(n)))], inf, sf)
-    s2 = Seg([c if i % 2 == 1 else inf for c, i in zip(a, list(range(n)))], inf, sf)
+    s1 = Seg([c if i % 2 == 0 else inf for (c, i) in zip(a, list(range(n)))], inf, sf)
+    s2 = Seg([c if i % 2 == 1 else inf for (c, i) in zip(a, list(range(n)))], inf, sf)
     d = {}
-
     for i in range(n):
         d[a[i]] = i
 
@@ -116,18 +132,16 @@ def main():
         if ui < r - 1:
             nl.append((ui + 1, r))
         return ((t, u), nl)
-
     q = []
     heapq.heappush(q, f(0, n))
     r = []
     while q:
-        t, nl = heapq.heappop(q)
+        (t, nl) = heapq.heappop(q)
         r.append(t[0])
         r.append(t[1])
-        for t, u in nl:
+        for (t, u) in nl:
             heapq.heappush(q, f(t, u))
-
     return ' '.join(map(str, r))
 
 
-print((main()))
+print(main())

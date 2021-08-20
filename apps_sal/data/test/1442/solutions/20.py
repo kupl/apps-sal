@@ -1,7 +1,7 @@
 s = input()
-n, d = int(s.split()[0]), int(s.split()[1])
-b, s = {}, {}
-wb, ws = [], []
+(n, d) = (int(s.split()[0]), int(s.split()[1]))
+(b, s) = ({}, {})
+(wb, ws) = ([], [])
 for i in range(0, n):
     st = input().split()
     st[1] = int(st[1])
@@ -20,8 +20,8 @@ for i in range(0, n):
             s[st[1]] += st[2]
         if st[1] not in ws:
             ws.append(st[1])
-ws.sort()  # [:d]#.sort(reverse=True)
-wb.sort(reverse=True)  # [:d]
+ws.sort()
+wb.sort(reverse=True)
 ws = ws[:d]
 wb = wb[:d]
 ws.sort(reverse=True)

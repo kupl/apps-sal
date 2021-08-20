@@ -8,8 +8,8 @@ for i in range(1, n + 1):
     flag = 0
     k = i
     ans = -1
-    while(flag == 0):
-        if(arr1[arr[k]] == 1):
+    while flag == 0:
+        if arr1[arr[k]] == 1:
             ans = arr[k]
             flag = 1
             break

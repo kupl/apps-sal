@@ -5,8 +5,7 @@ for i in range(n):
     for j in range(i + 1, n):
         if i == j:
             continue
-        if a[i] < a[j] and not vis[j]:
+        if a[i] < a[j] and (not vis[j]):
             vis[j] = True
             break
-
 print(sum([fact for fact in vis]))

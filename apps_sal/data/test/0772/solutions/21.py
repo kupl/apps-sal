@@ -1,5 +1,4 @@
 G = [[1] * 5 for i in range(5)]
-
 D = [(0, 0), (-1, 0), (1, 0), (0, -1), (0, 1)]
 
 
@@ -13,7 +12,6 @@ for i in range(1, 4):
     for j in range(1, 4):
         if n[j - 1] % 2 == 1:
             toggle(i, j)
-
 for i in range(1, 4):
     for j in range(1, 4):
         print(G[i][j], end='')

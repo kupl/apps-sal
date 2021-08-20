@@ -1,6 +1,5 @@
 s = input()
-
-now = ""
+now = ''
 ans = 0
 for i in range(len(s)):
     if i == 0:

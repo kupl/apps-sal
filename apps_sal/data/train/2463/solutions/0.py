@@ -1,4 +1,5 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         if len(A) <= 2:
             return False

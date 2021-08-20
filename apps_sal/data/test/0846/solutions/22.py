@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 a = [0] * (n + 1)
 minb = n + 1

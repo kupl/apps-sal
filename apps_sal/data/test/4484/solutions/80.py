@@ -1,11 +1,10 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 new_n = min(n, m)
 new_m = max(n, m)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ans(n, m):
-
     if n == m:
         return 2 * kaijyou(n, mod) * kaijyou(m, mod)
     elif m - n == 1:

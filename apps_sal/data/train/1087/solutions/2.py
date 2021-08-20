@@ -10,11 +10,11 @@ def main():
             b = int(b)
             p[a] = p[a] + 1
             p[b] = p[b] + 1
-            if (p[a] >= 3 or p[b] >= 3):
-                print("NO")
+            if p[a] >= 3 or p[b] >= 3:
+                print('NO')
                 return 0
             m = m - 1
-        print("YES")
+        print('YES')
     except:
         return 0
 

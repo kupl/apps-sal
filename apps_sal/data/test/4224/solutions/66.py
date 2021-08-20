@@ -15,12 +15,9 @@ def factorize(n):
 
 
 input = sys.stdin.readline
-
 n = int(input())
 a_list = list(map(int, input().split()))
-
 count_2 = 0
 for a in a_list:
     count_2 += len(factorize(a))
-
 print(count_2)

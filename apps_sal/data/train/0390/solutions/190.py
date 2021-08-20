@@ -1,6 +1,6 @@
 class Solution:
-    def winnerSquareGame(self, n: int) -> bool:
 
+    def winnerSquareGame(self, n: int) -> bool:
         memo = {0: False}
 
         def wing(x):
@@ -17,5 +17,4 @@ class Solution:
                 i += 1
             memo[x] = ans
             return ans
-
         return wing(n)

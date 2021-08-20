@@ -1,6 +1,7 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
-        q_max, ans = deque([(nums[0], 0)]), nums[0]
+        (q_max, ans) = (deque([(nums[0], 0)]), nums[0])
         for i in range(1, len(nums)):
             nums[i] += max(q_max[0][0], 0)
             if q_max[0][1] <= i - k:

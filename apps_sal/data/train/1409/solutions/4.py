@@ -12,6 +12,5 @@ t = int(input())
 values = []
 for _ in range(t):
     values.append(input())
-
 for value in values:
     print(bin_one(int(value)))

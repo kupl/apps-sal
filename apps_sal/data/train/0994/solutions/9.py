@@ -1,4 +1,3 @@
-# cook your dish here
 from math import sqrt
 t = int(input())
 
@@ -13,7 +12,7 @@ def get_factors(x):
 
 
 for _ in range(t):
-    n, k = list([int(x) for x in input().split()])
+    (n, k) = list([int(x) for x in input().split()])
     a = list([int(x) for x in input().split()])
     factors = get_factors(k)
     total = 0
@@ -26,7 +25,6 @@ for _ in range(t):
         freq[s] = 1
         for i in range(factor, len(a)):
             sliding_window = sliding_window[1:] + [a[i]]
-
             s = sum(sliding_window)
             if s > k / factor:
                 continue
@@ -34,5 +32,5 @@ for _ in range(t):
                 freq[s] = 0
             freq[s] += 1
         for s in freq:
-            total += freq.get((k // factor) - s, 0) * freq[s]
+            total += freq.get(k // factor - s, 0) * freq[s]
     print(total)

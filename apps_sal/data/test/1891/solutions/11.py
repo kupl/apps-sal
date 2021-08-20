@@ -1,6 +1,5 @@
 from bisect import bisect_left, bisect_right
-
-n, k, a, b = [int(x) for x in input().split()]
+(n, k, a, b) = [int(x) for x in input().split()]
 pos = [int(x) for x in input().split()]
 na = {}
 v = {}

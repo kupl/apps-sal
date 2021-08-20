@@ -1,7 +1,7 @@
-n, s = [int(i) for i in input().split()]
+(n, s) = [int(i) for i in input().split()]
 l = [int(i) for i in input().split()]
 l.sort()
 if sum(l[:-1]) <= s:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

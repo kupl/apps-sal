@@ -1,18 +1,19 @@
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
-        self.parent = [i for i in range(n)]  # 親
-        self.rank = [1] * n  # 木の高さ
-        self.size = [1] * n  # size[i] は i を根とするグループのサイズ
+        self.parent = [i for i in range(n)]
+        self.rank = [1] * n
+        self.size = [1] * n
 
-    def find(self, x):  # x の根を返す
+    def find(self, x):
         if self.parent[x] == x:
             return x
         else:
-            self.parent[x] = self.find(self.parent[x])  # 経路圧縮
+            self.parent[x] = self.find(self.parent[x])
             return self.parent[x]
 
-    def unite(self, x, y):  # x, y の属する集合を併合する
+    def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
         if x != y:
@@ -25,34 +26,32 @@ class UnionFind:
                 if self.rank[x] == self.rank[y]:
                     self.rank[x] += 1
 
-    def is_same(self, x, y):  # x, y が同じ集合に属するか判定する
+    def is_same(self, x, y):
         return self.find(x) == self.find(y)
 
-    def group_size(self, x):  # x が属する集合の大きさを返す
+    def group_size(self, x):
         return self.size[self.find(x)]
 
-    def group_members(self, x):  # x が属する集合の要素を返す
+    def group_members(self, x):
         root = self.find(x)
         return [i for i in range(self.n) if self.find(i) == root]
 
-    def roots(self):  # すべての根をリストで返す
-        return [i for i, x in enumerate(self.parent) if i == x]
+    def roots(self):
+        return [i for (i, x) in enumerate(self.parent) if i == x]
 
-    def group_count(self):  # 木の数を返す
+    def group_count(self):
         return len(self.roots())
 
-    def all_group_members(self):  # すべての木の要素を辞書で返す
+    def all_group_members(self):
         return {r: self.group_members(r) for r in self.roots()}
 
-    def __str__(self):  # print 表示用
-        return '\n'.join('{}: {}'.format(r, self.group_members(r)) for r in self.roots())
+    def __str__(self):
+        return '\n'.join(('{}: {}'.format(r, self.group_members(r)) for r in self.roots()))
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 uf = UnionFind(n + 1)
-
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     uf.unite(a, b)
-
 print(max(uf.size))

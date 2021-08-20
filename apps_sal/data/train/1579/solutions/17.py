@@ -1,4 +1,3 @@
-
 t = int(input())
 for k in range(t):
     n = int(input())
@@ -7,7 +6,7 @@ for k in range(t):
     for i in range(n):
         if arr[i] in set1:
             f = 1
-            print("NO")
+            print('NO')
             break
         else:
             f = 0
@@ -16,7 +15,7 @@ for k in range(t):
             arr[i] = arr[i] | arr[j]
             if arr[i] in set1:
                 f = 1
-                print("NO")
+                print('NO')
                 break
             else:
                 set1.append(arr[i])
@@ -24,4 +23,4 @@ for k in range(t):
         if f == 1:
             break
     if f == 0:
-        print("YES")
+        print('YES')

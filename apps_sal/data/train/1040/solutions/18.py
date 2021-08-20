@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     s = input()
     dp = [0] * (n + 1)
     for i in range(n - 2):
@@ -10,11 +10,11 @@ for _ in range(t):
         else:
             dp[i + 1] = dp[i]
     for _ in range(q):
-        l, r = map(int, input().split())
-        if n < 3 or (r - l) < 2:
-            print("NO")
+        (l, r) = map(int, input().split())
+        if n < 3 or r - l < 2:
+            print('NO')
             continue
         if dp[r - 2] - dp[l - 1] > 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

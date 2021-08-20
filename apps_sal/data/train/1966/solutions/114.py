@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         ans = 0
         N = len(mat)

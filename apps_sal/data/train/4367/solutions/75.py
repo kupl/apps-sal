@@ -1,7 +1,6 @@
 def area_or_perimeter(l, w):
-    l = int(l)  # need to specify it as a integer otherwise it concatanets it and treats it as a string
+    l = int(l)
     w = int(w)
-
     if l == w:
         return l * w
     else:

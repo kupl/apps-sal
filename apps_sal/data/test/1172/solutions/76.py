@@ -1,15 +1,22 @@
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 S = sr()[::-1]
 MOD = 10 ** 9 + 7
 answer = 0
-dp = [0, 0, 1]  # Cの数, BC数, 総数
+dp = [0, 0, 1]
 for i in range(len(S)):
     s = S[i]
     if s == 'A':

@@ -3,13 +3,12 @@ for _ in range(int(input())):
     a = []
     b = []
     for i in range(n):
-        ai, bi = list(map(int, input().split()))
+        (ai, bi) = list(map(int, input().split()))
         a.append(ai)
         b.append(bi)
     if n == 1:
         print(0)
+    elif max(a) < min(b):
+        print(0)
     else:
-        if max(a) < min(b):
-            print(0)
-        else:
-            print(max(a) - min(b))
+        print(max(a) - min(b))

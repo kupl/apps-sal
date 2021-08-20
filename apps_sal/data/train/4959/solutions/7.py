@@ -15,20 +15,15 @@ def split(scales, next):
             return next[0]
         else:
             return next[1]
-
     lock_size = (len(next) + 1) // 3
-
     l = next[:lock_size]
     r = next[lock_size:lock_size + lock_size]
     f = next[lock_size + lock_size:]
-
     return find(scales, f, l, r)
 
 
 def find(scales, free, first, second):
-
     w = scales.get_weight(first, second)
-
     if w == 0:
         return split(scales, free)
     elif w == -1:

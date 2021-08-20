@@ -17,6 +17,6 @@ for i in range(2):
     if a != b or b != c or c != a:
         flg = False
 if flg:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

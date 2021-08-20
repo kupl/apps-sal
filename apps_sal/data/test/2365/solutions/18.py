@@ -1,4 +1,5 @@
 class Solution:
+
     def parseBoolExpr(self, expression: str) -> bool:
         expression = list(expression)
 
@@ -14,18 +15,14 @@ class Solution:
                     idxs.append(i)
                 elif braket == 0:
                     break
-
             for i in idxs:
                 expression[i] = logical
-
-        for idx, char in enumerate(expression):
+        for (idx, char) in enumerate(expression):
             if char == '|':
                 expression[idx] = ''
                 replace(idx + 2, 'or')
             elif char == '&':
                 expression[idx] = ''
                 replace(idx + 2, 'and')
-
         expr = ' '.join(expression).replace('t', 'True').replace('f', 'False').replace('!', 'not')
-
         return eval(expr)

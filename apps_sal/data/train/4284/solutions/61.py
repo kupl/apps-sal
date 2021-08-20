@@ -1,5 +1,5 @@
 def array_leaders(numbers):
-    count, res = 0, []
+    (count, res) = (0, [])
     while count < len(numbers):
         if len(numbers[count + 1:]) >= 0:
             if numbers[count] > sum(numbers[count + 1:]):

@@ -3,7 +3,8 @@ import sys
 input = sys.stdin.readline
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -21,7 +22,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -30,7 +31,7 @@ class UnionFind():
 
 
 def main():
-    N, Q = list(map(int, input().split()))
+    (N, Q) = list(map(int, input().split()))
     kouji = [list(map(int, input().split())) for _ in range(N)]
     D = [int(input()) for _ in range(Q)]
     ans = [-1] * Q
@@ -38,7 +39,7 @@ def main():
     uf = UnionFind(Q)
     kouji.sort(key=lambda x: x[2])
     for i in range(N):
-        S, T, X = kouji[i]
+        (S, T, X) = kouji[i]
         L = S - X
         R = T - X - 1
         L_idx = bisect_left(D, L)
@@ -60,7 +61,7 @@ def main():
                 if nxt[par] < p:
                     nxt[par] = p
     for i in range(Q):
-        print((ans[i]))
+        print(ans[i])
 
 
 def __starting_point():

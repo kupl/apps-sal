@@ -1,9 +1,9 @@
 n = int(input())
-m = n**2
+m = n ** 2
 L = [list(map(int, input().split())) for _ in range(m)]
 H = [0 for _ in range(n)]
 V = [0 for _ in range(n)]
-R = ""
+R = ''
 for k in range(m):
     i = L[k][0] - 1
     j = L[k][1] - 1

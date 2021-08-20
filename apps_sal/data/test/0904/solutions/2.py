@@ -1,9 +1,7 @@
 import string
 n = int(input())
 t = input().split(' ')
-
 result = 0
-
 for item in t:
     current = 0
     for letter in item:

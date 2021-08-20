@@ -1,4 +1,5 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         minimum = 0
         maximum = 0

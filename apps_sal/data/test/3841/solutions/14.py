@@ -1,4 +1,4 @@
-p, k = list(map(int, input().split()))
+(p, k) = list(map(int, input().split()))
 a = []
 for i in range(99):
     v = p % k

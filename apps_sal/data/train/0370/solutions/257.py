@@ -3,6 +3,7 @@ from collections import Counter
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         parent = [i for i in range(len(A))]
         size = [1 for i in range(len(A))]
@@ -24,15 +25,12 @@ class Solution:
                 if n % i == 0:
                     return primes_set(n // i) | set([i])
             return set([n])
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             pr_set = primes_set(num)
             for q in pr_set:
                 primes[q] = primes.get(q, []) + [i]
-
-        for i, nodes in list(primes.items()):
+        for (i, nodes) in list(primes.items()):
             nodes = list(set(nodes))
             for j in range(len(nodes) - 1):
                 union(nodes[j], nodes[j + 1])
-
         return max(Counter([find_parent(i) for i in range(len(A))]).values())

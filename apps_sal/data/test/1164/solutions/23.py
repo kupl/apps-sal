@@ -7,16 +7,16 @@ d = print
 U = sum
 S = re.findall
 l = o()
-e = S("[\d\.]+", l)
+e = S('[\\d\\.]+', l)
 
 
 def p(u):
     u = u.split('.')
     if C(u[-1]) == 2 and C(u) > 1:
         G = u[-1]
-        return E("".join(u[:-1]) + "." + G)
+        return E(''.join(u[:-1]) + '.' + G)
     else:
-        return F("".join(u))
+        return F(''.join(u))
 
 
 def V(flo):
@@ -26,5 +26,5 @@ def V(flo):
         return '{:,.2f}'.format(flo).replace(',', '.')
 
 
-e = [p(num)for num in e]
+e = [p(num) for num in e]
 d(V(U(e)))

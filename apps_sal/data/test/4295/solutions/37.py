@@ -1,7 +1,6 @@
 def main() -> None:
-    n, k = list(map(int, input().split()))
-
-    print((min(n % k, abs(n % k - k))))
+    (n, k) = list(map(int, input().split()))
+    print(min(n % k, abs(n % k - k)))
     return
 
 

@@ -8,4 +8,4 @@ if S[:2] == '01' and S == S[::-1]:
         if S[i - 1] == '1' and i < (N + 1) // 2 + 2:
             before = i
 else:
-    print((-1))
+    print(-1)

@@ -1,7 +1,8 @@
 from collections import deque
 
 
-class Treap():  # self.priority_comparator(root.priority, descendant.priority) == True
+class Treap:
+
     def __init__(self, key, priority, prrty_cmprtr):
         self.key = key
         self.priority = priority
@@ -9,7 +10,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
         self.left = None
         self.right = None
 
-    def merge(self, right):  # self a.k.a. left <= right ========= tested
+    def merge(self, right):
         if right is None:
             return self
         if self.priority_comparator(self.priority, right.priority):
@@ -23,23 +24,23 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
             root.left = self.merge(right.left)
         return root
 
-    def split(self, key):                   # tested
+    def split(self, key):
         if self.key <= key:
             left = self
             if left.right is not None:
-                left.right, right = left.right.split(key)
+                (left.right, right) = left.right.split(key)
             else:
-                left.right, right = None, None
+                (left.right, right) = (None, None)
         else:
             right = self
             if right.left is not None:
-                left, right.left = right.left.split(key)
+                (left, right.left) = right.left.split(key)
             else:
-                left, right.left = None, None
+                (left, right.left) = (None, None)
         return (left, right)
 
-    def insert(self, element):     # tested
-        left, right = self.split(element.key)
+    def insert(self, element):
+        (left, right) = self.split(element.key)
         if left is not None:
             t = left.merge(element)
         else:
@@ -48,9 +49,9 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
             return t.merge(right)
         return t
 
-    def delete(self, key):        # UN!tested
-        left, right = self.split(key)
-        left, middle = left.split(key - 1)
+    def delete(self, key):
+        (left, right) = self.split(key)
+        (left, middle) = left.split(key - 1)
         if left is not None:
             return left.merge(right)
         return right
@@ -70,7 +71,7 @@ class Treap():  # self.priority_comparator(root.priority, descendant.priority) =
                 pos = pos.right
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 first = [deque() for i in range(n)]
 for i in range(n):
@@ -81,7 +82,7 @@ if not first[a[0] - 1]:
 else:
     priority = first[a[0] - 1][0]
 treap = Treap(a[0], priority, lambda x, y: x >= y)
-l, res = 1, 1
+(l, res) = (1, 1)
 for i in range(1, n):
     first[a[i] - 1].popleft()
     if not first[a[i] - 1]:

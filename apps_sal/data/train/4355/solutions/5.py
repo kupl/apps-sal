@@ -25,4 +25,4 @@ def ex_euler(n):
         x += h
     z[len(z) - 1] = Y(x)
     A = [abs(y[i] - z[i]) / z[i] for i in range(n + 1)]
-    return round(1e-6 * trunc(1e6 * (np.mean(A, dtype=np.float32))), 6)
+    return round(1e-06 * trunc(1000000.0 * np.mean(A, dtype=np.float32)), 6)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [0 for i in range(n)]
 b = [list(map(int, input().split())) for i in range(m)]
 f = [0 for i in range(m)]

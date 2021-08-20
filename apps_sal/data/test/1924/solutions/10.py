@@ -1,10 +1,10 @@
-MOD = int(1e9) + 7
+MOD = int(1000000000.0) + 7
 
 
 def fact(x):
     k = 1
     for i in range(1, x + 1):
-        k = (k * i) % MOD
+        k = k * i % MOD
     return k
 
 
@@ -13,8 +13,8 @@ def inverse(b):
     e = MOD - 2
     while e:
         if e % 2 == 1:
-            r = (r * b) % MOD
-        b = (b * b) % MOD
+            r = r * b % MOD
+        b = b * b % MOD
         e >>= 1
     return r
 

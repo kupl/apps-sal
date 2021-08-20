@@ -1,6 +1,6 @@
-n, A, B, C = map(int, input().split())
+(n, A, B, C) = map(int, input().split())
 Q = [int(input()) for ii in range(n)]
-inf = 10**15
+inf = 10 ** 15
 
 
 def dfs(now, a, b, c):

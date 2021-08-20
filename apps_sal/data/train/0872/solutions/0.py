@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    n, a, b, k = map(int, input().split())
+    (n, a, b, k) = map(int, input().split())
     solvedbychef = 0
     solvedbyappy = 0
     for i in range(n + 1):
@@ -11,6 +11,6 @@ for t in range(int(input())):
             solvedbychef += 1
     totalsolved = solvedbychef + solvedbyappy
     if totalsolved >= k:
-        print("Win")
+        print('Win')
     else:
-        print("Lose")
+        print('Lose')

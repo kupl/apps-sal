@@ -1,7 +1,7 @@
 def count_inversions(a):
     res = 0
     counts = [0] * (len(a) + 1)
-    rank = {v: i + 1 for i, v in enumerate(sorted(a))}
+    rank = {v: i + 1 for (i, v) in enumerate(sorted(a))}
     for x in reversed(a):
         i = rank[x] - 1
         while i:

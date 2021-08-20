@@ -7,5 +7,4 @@ else:
         ans = int(n / 4)
     else:
         ans = int(n / 4 - 1)
-
 print(ans)

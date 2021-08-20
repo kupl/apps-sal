@@ -1,4 +1,3 @@
-
 mod = 1000000007
 
 
@@ -14,5 +13,5 @@ def power(n, m):
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
-    print((n * (n - 1) * power(n - 1, m - 1)) % mod)
+    (n, m) = list(map(int, input().split()))
+    print(n * (n - 1) * power(n - 1, m - 1) % mod)

@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if n > k * (k - 1):
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     cnt = 0
     for delta in range(k):
         for c in range(1, k + 1):

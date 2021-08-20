@@ -4,17 +4,16 @@ from collections import Counter
 
 
 class Task:
-    n, m = 0, 0
+    (n, m) = (0, 0)
     petyaScore = 0
     vasyaScore = 0
 
     def getData(self):
-        self.n, self.m = [int(x) for x in input().split(" ")]
+        (self.n, self.m) = [int(x) for x in input().split(' ')]
 
     def solve(self):
         n = self.n
         m = self.m
-
         if n != m:
             self.vasyaScore = min(n, m)
         else:

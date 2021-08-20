@@ -1,7 +1,7 @@
 n = int(input())
 pos = {}
 for _ in range(n):
-    L, R = list(map(int, input().split()))
+    (L, R) = list(map(int, input().split()))
     if L in pos:
         pos[L] += 1
     else:

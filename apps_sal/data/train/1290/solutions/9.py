@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 c = 0
 while n > 0:
@@ -12,4 +11,4 @@ elif c == 2:
 elif c == 3:
     print(3)
 else:
-    print("More than 3 digits")
+    print('More than 3 digits')

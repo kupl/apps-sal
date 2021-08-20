@@ -2,7 +2,9 @@ from collections import Counter
 
 
 class Solution:
+
     def subsets(self, words: List[str]) -> List[List[str]]:
+
         def subsetsHelper(words: List[str]) -> List[List[str]]:
             if len(words) == 0:
                 return [[]]
@@ -16,6 +18,7 @@ class Solution:
         return subsetsHelper(words)
 
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
+
         def getScores(wordSet: List[str]) -> int:
             scoreCount = 0
             counter = Counter(letters)
@@ -26,7 +29,6 @@ class Solution:
                     counter[c] -= 1
                     scoreCount += score[ord(c) - ord('a')]
             return scoreCount
-
         ans = 0
         for wordSet in self.subsets(words):
             currentScore = getScores(wordSet)

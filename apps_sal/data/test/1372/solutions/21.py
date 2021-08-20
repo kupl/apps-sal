@@ -1,34 +1,30 @@
 import sys
-
 import numba as nb
 import numpy as np
-
 input = sys.stdin.readline
 
 
-@nb.njit("i8(i8,i8,i8[:,:])", cache=True)
+@nb.njit('i8(i8,i8,i8[:,:])', cache=True)
 def solve(H, N, AB):
     INF = 10 ** 18
-    dp = np.full(shape=(H + 1), fill_value=INF, dtype=np.int64)
+    dp = np.full(shape=H + 1, fill_value=INF, dtype=np.int64)
     dp[0] = 0
     for i in range(N):
-        A, B = AB[i]
+        (A, B) = AB[i]
         for d in range(H + 1):
             if d < A:
                 dp[d] = min(dp[d], B)
             else:
                 dp[d] = min(dp[d], dp[d - A] + B)
-
     ans = dp[-1]
     return ans
 
 
 def main():
-    H, N = list(map(int, input().split()))
+    (H, N) = list(map(int, input().split()))
     AB = np.zeros(shape=(N, 2), dtype=np.int64)
     for i in range(N):
         AB[i] = input().split()
-
     ans = solve(H, N, AB)
     print(ans)
 

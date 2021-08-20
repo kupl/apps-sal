@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
@@ -6,7 +7,7 @@ class Solution:
         dic_buses = collections.defaultdict(set)
         dic_stops = collections.defaultdict(set)
         visited_buses = set()
-        for i, stops in enumerate(routes):
+        for (i, stops) in enumerate(routes):
             dic_buses[i] = set(stops)
             if S in dic_buses[i]:
                 if T in dic_buses[i]:

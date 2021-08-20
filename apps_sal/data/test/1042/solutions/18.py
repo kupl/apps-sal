@@ -5,14 +5,14 @@ def mul(x, y):
     rt = 1
     while y > 0:
         if y % 2 == 1:
-            rt = (rt * x) % p
-        x = (x * x) % p
+            rt = rt * x % p
+        x = x * x % p
         y = y // 2
     return rt
 
 
-x, y = list(map(int, input().split()))
-if(y % x != 0):
+(x, y) = list(map(int, input().split()))
+if y % x != 0:
     print(0)
 else:
     y /= x
@@ -24,7 +24,7 @@ else:
             d.add(y / i)
         i += 1
     d = sorted(list(d))
-    dp = d[::]
+    dp = d[:]
     for i in range(len(d)):
         dp[i] = mul(2, d[i] - 1)
         for j in range(i):

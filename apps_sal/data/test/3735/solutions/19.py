@@ -32,14 +32,14 @@ def printr(arr):
     cout('')
 
 
-def find_lt(a, x):  # 'Find rightmost value less than x'
+def find_lt(a, x):
     i = bisect_left(a, x)
     if i:
         return a[i - 1]
     raise ValueError
 
 
-def find_gt(a, x):  # 'Find leftmost value greater than x'
+def find_gt(a, x):
     i = bisect_right(a, x)
     if i != len(a):
         return a[i]
@@ -59,8 +59,6 @@ def binary_search(arr, x):
 
 MOD2 = 998244353
 
-# ----------------FUncs
-
 
 def sm(x):
     x = str(x)
@@ -69,8 +67,6 @@ def sm(x):
         s += int(n)
     return s
 
-
-# -------------------------sdpt,sdpt131[Sudipta Banik]---------------------
 
 n = int(input())
 a = 0

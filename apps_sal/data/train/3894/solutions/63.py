@@ -1,7 +1,6 @@
 def solve(s):
     l = 0
     u = 0
-
     for i in s:
         if i.islower():
             l += 1

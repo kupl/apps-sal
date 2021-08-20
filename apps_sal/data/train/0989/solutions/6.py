@@ -3,8 +3,7 @@ for _ in range(int(input())):
     x = int(a[0])
     y = int(a[1])
     k = int(a[2])
-
-    if ((x + y) // k) % 2:
-        print("Paja")
+    if (x + y) // k % 2:
+        print('Paja')
     else:
-        print("Chef")
+        print('Chef')

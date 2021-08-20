@@ -4,7 +4,7 @@ for t in range(int(input())):
     c = 2
     m = 0
     for i in range(2, n):
-        if (a[i] == a[i - 1] + a[i - 2]):
+        if a[i] == a[i - 1] + a[i - 2]:
             c += 1
         else:
             m = max(c, m)

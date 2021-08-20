@@ -1,4 +1,4 @@
-W, H, N = map(int, input().split())
+(W, H, N) = map(int, input().split())
 x = []
 y = []
 a = []
@@ -6,7 +6,7 @@ X = [1] * W
 Y = [1] * H
 ans = 0
 for _ in range(N):
-    i, j, k = map(int, input().split())
+    (i, j, k) = map(int, input().split())
     x.append(i)
     y.append(j)
     a.append(k)

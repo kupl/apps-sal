@@ -5,4 +5,4 @@ def triple_trouble(one, two, three):
         result.append(one[x])
         result.append(two[x])
         result.append(three[x])
-    return "".join(result)
+    return ''.join(result)

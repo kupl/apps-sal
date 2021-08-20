@@ -9,6 +9,6 @@ for _ in range(t):
         else:
             gets = True
     if gets:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

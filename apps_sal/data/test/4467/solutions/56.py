@@ -1,9 +1,7 @@
 n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
 cd = [list(map(int, input().split())) for _ in range(n)]
-
 g = [[0 for _ in range(2 * n + 2)] for _ in range(2 * n + 2)]
-
 for (i, (a, b)) in enumerate(ab):
     fr = i + 2
     g[0][fr] = 1
@@ -12,7 +10,6 @@ for (i, (a, b)) in enumerate(ab):
         g[to][1] = 1
         if a < c and b < d:
             g[fr][to] = 1
-
 used = [False for _ in range(2 * n + 2)]
 path = []
 goal = 1

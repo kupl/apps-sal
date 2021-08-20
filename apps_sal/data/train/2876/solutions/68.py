@@ -1,4 +1,4 @@
-'''🔟'''
+"""🔟"""
 
 
 def check(array, number):

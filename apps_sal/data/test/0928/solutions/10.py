@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 left = 0
 ans = 0
 sum = 0

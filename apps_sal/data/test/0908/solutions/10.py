@@ -9,16 +9,13 @@ def cmp(a, b, c):
 n = int(input())
 cs = list(map(int, input().split()))
 dp = [[-1, -1] for i in range(n)]
-
 dp[0][0] = 0
 dp[0][1] = cs[0]
-
 last = input()
 for i in range(1, n):
     s = input()
     rlast = last[::-1]
     rs = s[::-1]
-
     if s >= last:
         dp[i][0] = cmp(dp[i][0], dp[i - 1][0], 0)
     if s >= rlast:
@@ -27,9 +24,7 @@ for i in range(1, n):
         dp[i][1] = cmp(dp[i][1], dp[i - 1][0], cs[i])
     if rs >= rlast:
         dp[i][1] = cmp(dp[i][1], dp[i - 1][1], cs[i])
-
     last = s
-
 if dp[n - 1][0] == -1:
     print(dp[n - 1][1])
 elif dp[n - 1][1] == -1:

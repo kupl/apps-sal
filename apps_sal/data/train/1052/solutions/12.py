@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Apr 23 17:13:53 2019
 
@@ -15,8 +14,7 @@ def digit_sum(n):
 
 
 for _ in range(int(input())):
-    n, d = map(int, input().strip().split())
-
+    (n, d) = map(int, input().strip().split())
     q = []
     ma = {}
     q.append((n, 0))
@@ -30,7 +28,6 @@ for _ in range(int(input())):
                 ma[t[0]] = t[1]
         else:
             q.append((digit_sum(t[0]), t[1] + 1))
-
         q.append((t[0] + d, t[1] + 1))
         i += 1
     k = sorted(list(ma.keys()))

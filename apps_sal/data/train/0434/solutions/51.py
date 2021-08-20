@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, a: List[int]) -> int:
         ones = 0
         old_ones = 0
@@ -11,5 +12,4 @@ class Solution:
             else:
                 old_ones = ones
                 ones = 0
-
         return maxlen if ones < n else n - 1

@@ -10,7 +10,7 @@ def getCombi(a, n):
     b = min(a, n - a)
     ret = 1
     for i in range(1, b + 1):
-        ret = (ret * (n + 1 - i)) // i
+        ret = ret * (n + 1 - i) // i
     return ret % N
 
 

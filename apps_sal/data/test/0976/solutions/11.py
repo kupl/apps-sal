@@ -1,8 +1,8 @@
 def main():
-    n, x = list(map(int, input().split()))
-    tot, t = 0, 1
+    (n, x) = list(map(int, input().split()))
+    (tot, t) = (0, 1)
     for _ in range(n):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         t1 = r
         r -= t - 1
         l -= t

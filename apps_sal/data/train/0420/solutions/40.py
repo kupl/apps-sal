@@ -1,6 +1,6 @@
 class Solution:
-    def findTheLongestSubstring(self, s: str) -> int:
 
+    def findTheLongestSubstring(self, s: str) -> int:
         seen = {(0, 0, 0, 0, 0): -1}
         vowel = 'aeiou'
         count = [0] * 5

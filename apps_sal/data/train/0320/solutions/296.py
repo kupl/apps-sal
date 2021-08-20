@@ -1,14 +1,14 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         count = 0
         onesCount = 0
         aboveOneIdxs = []
-        for idx, n in enumerate(nums):
+        for (idx, n) in enumerate(nums):
             if n == 1:
                 onesCount += 1
             elif n > 1:
                 aboveOneIdxs.append(idx)
-
         while onesCount + len(aboveOneIdxs) != 0:
             count += onesCount
             onesCount = 0
@@ -23,7 +23,6 @@ class Solution:
                 else:
                     newAboveOneIdxs.append(idx)
             if len(aboveOneIdxs) > 0:
-                count += 1  # multiplied by 2
+                count += 1
             aboveOneIdxs = newAboveOneIdxs
-
         return count

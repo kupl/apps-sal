@@ -7,6 +7,6 @@ for i in S:
     else:
         break
 if con >= K:
-    print((1))
+    print(1)
 else:
     print(i)

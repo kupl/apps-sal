@@ -1,6 +1,4 @@
-#! /usr/bin/env python3
-
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 A = list(map(int, input().split()))
 pu = -1
 SPU = set([])
@@ -15,5 +13,4 @@ for i in A[:-1][::-1]:
         b = A[pu] - i
         SPD += [b]
     c += 1
-
 print(min(len(SPU), SPD.count(b)))

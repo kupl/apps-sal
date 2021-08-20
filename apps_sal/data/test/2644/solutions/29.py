@@ -9,10 +9,10 @@ for i in range(N):
     start = pos[i]
     for j in range(start, cur, -1):
         ans.append(j)
-        pos[P[j]], pos[P[j - 1]] = pos[P[j - 1]], pos[P[j]]
-        P[j], P[j - 1] = P[j - 1], P[j]
+        (pos[P[j]], pos[P[j - 1]]) = (pos[P[j - 1]], pos[P[j]])
+        (P[j], P[j - 1]) = (P[j - 1], P[j])
     cur = max(cur, start)
-if all(i == P[i] for i in range(N)) and cur == N - 1:
-    print(("\n".join(map(str, ans))))
+if all((i == P[i] for i in range(N))) and cur == N - 1:
+    print('\n'.join(map(str, ans)))
 else:
-    print((-1))
+    print(-1)

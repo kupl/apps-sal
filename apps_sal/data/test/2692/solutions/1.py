@@ -1,7 +1,6 @@
 t = int(input())
 for i in range(t):
-    # n for number of cookies and b for crumbs
-    n, b = map(int, input().split(" "))
+    (n, b) = map(int, input().split(' '))
     if n == b:
         print(n)
     elif n % b == 0:

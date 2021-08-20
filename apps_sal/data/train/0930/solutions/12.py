@@ -1,9 +1,7 @@
-# cook your dish here
 t = int(input())
 for z in range(0, t):
     N = int(input())
     li = [[i for i in range(0, N)] for j in range(0, N)]
-    # print(li)
     c = 1
     for j1 in range(0, N):
         i = 0
@@ -23,5 +21,5 @@ for z in range(0, t):
             c += 1
     for i in range(0, N):
         for j in range(0, N):
-            print(li[i][j], end=" ")
+            print(li[i][j], end=' ')
         print()

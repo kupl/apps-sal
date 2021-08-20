@@ -26,12 +26,13 @@ def solve(n, m):
 
 
 def main(sc):
-    n, m = sc.next_ints(2)
+    (n, m) = sc.next_ints(2)
     ans = solve(n, m)
     print(ans)
 
 
 class Scanner:
+
     def __init__(self):
         self.idx = 0
         self.tokens = []

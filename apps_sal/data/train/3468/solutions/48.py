@@ -1,5 +1,5 @@
 import string
-alphabet = {key: idx for idx, key in enumerate(string.ascii_lowercase)}
+alphabet = {key: idx for (idx, key) in enumerate(string.ascii_lowercase)}
 
 
 def scramble(s1, s2):

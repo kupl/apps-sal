@@ -1,4 +1,4 @@
-n, p, q, r = map(int, input().split())
+(n, p, q, r) = map(int, input().split())
 a = list(map(int, input().split()))
 max_pa_i = [0] * n
 max_pa_i[0] = a[0] * p

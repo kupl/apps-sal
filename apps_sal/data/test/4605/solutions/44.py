@@ -1,6 +1,5 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 ans = 0
-
 for i in range(1, n + 1):
     sum = 0
     x = i
@@ -9,5 +8,4 @@ for i in range(1, n + 1):
         x //= 10
     if a <= sum and sum <= b:
         ans += i
-
 print(ans)

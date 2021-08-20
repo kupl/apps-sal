@@ -1,5 +1,5 @@
 with open(0) as f:
-    N, S = f.read().split()
+    (N, S) = f.read().split()
 N = int(N)
 S += '_'
 left = 0

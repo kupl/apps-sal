@@ -1,9 +1,9 @@
 from itertools import *
 from numpy import *
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 k = 2 * k + 1
 s = input()
-x = [0] * (s[0] == "0") + [len(list(v))for k, v in groupby(s)] + [0] * (s[-1] == "0")
+x = [0] * (s[0] == '0') + [len(list(v)) for (k, v) in groupby(s)] + [0] * (s[-1] == '0')
 x1 = array(x[k:])
 x2 = array(x[:-k])
 x3 = sum(x[:k])

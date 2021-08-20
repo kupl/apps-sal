@@ -4,27 +4,23 @@ import os
 
 
 def main():
-    N, M = read_ints()
+    (N, M) = read_ints()
     A = read_ints()
     print(*solve(N, M, A))
 
 
 def solve(N, M, A):
     A.sort()
-
     R = [0] * M
     s = 0
     ans = [0] * N
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         s += a
         s += R[i % M]
         R[i % M] += a
         ans[i] = s
-
     return ans
 
-
-###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

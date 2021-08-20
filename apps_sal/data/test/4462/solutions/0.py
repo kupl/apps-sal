@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-
 n = int(input())
 a = list(map(int, input().split()))
-
 n2 = 0
 n4 = 0
 for i in range(n):
@@ -10,7 +7,6 @@ for i in range(n):
         n4 += 1
     elif a[i] % 2 == 0:
         n2 += 1
-
 ok = True
 if n2 == 0:
     if n4 >= n // 2:
@@ -25,7 +21,6 @@ else:
         ok = True
     else:
         ok = False
-
 if ok:
     print('Yes')
 else:

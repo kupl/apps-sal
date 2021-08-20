@@ -1,7 +1,4 @@
 import sys
-
-# sys.stdin = open('ivo.in')
-
 mem = []
 for i in range(32):
     mem.append([[-1] * 52 for u in range(32)])
@@ -28,7 +25,6 @@ def solve(x, y, z):
                 continue
             if res == -2 or res > t1 + t2 + y * y:
                 res = t1 + t2 + y * y
-
     for j in range(1, y // 2 + 1):
         for eaten in range(z + 1):
             t1 = mem[x][j][eaten] if mem[x][j][eaten] != -1 else solve(x, j, eaten)
@@ -39,12 +35,11 @@ def solve(x, y, z):
                 continue
             if res == -2 or res > t1 + t2 + x * x:
                 res = t1 + t2 + x * x
-
     mem[x][y][z] = res
     return mem[x][y][z]
 
 
 t = int(sys.stdin.readline())
 for it in range(t):
-    n, m, k = list(map(int, sys.stdin.readline().split()))
+    (n, m, k) = list(map(int, sys.stdin.readline().split()))
     print(solve(n, m, k))

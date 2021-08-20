@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         Nums = np.array(nums)
         low = 1

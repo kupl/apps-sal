@@ -1,9 +1,6 @@
 import sys
 from collections import deque, defaultdict
-
-# stdin = open("testdata.txt", "r")
-n, k = map(int, sys.stdin.readline().split())
-
+(n, k) = map(int, sys.stdin.readline().split())
 a = list(map(int, sys.stdin.readline().split()))
 dq = deque()
 on_dq = defaultdict(int)

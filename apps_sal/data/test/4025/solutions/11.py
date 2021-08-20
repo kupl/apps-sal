@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 cnt = 0
 cnt += min(a // 3, b // 2, c // 2)
 a -= 3 * cnt
@@ -8,7 +8,7 @@ sas = 0
 Q = [0, 1, 2, 0, 2, 1, 0]
 for first_day in range(7):
     heh = 0
-    aa, bb, cc = a, b, c
+    (aa, bb, cc) = (a, b, c)
     W = [a, b, c]
     while W[Q[first_day]]:
         if Q[first_day] == 0:

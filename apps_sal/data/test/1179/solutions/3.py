@@ -1,11 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 k -= 1
 a = list(map(int, input().split()))
 tri = [1]
-
 for x in range(2, n + 1):
     tri.append(tri[-1] + x)
-
 if k == 0:
     print(a[0])
 else:
@@ -17,7 +15,5 @@ else:
             hi = mid
         else:
             lo = mid
-
-    # in bucket hi
     index = k - tri[hi - 1]
     print(a[index])

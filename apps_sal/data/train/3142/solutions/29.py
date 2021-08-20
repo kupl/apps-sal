@@ -1,6 +1,6 @@
 def seven_ate9(string):
     answ = []
-    for i, item in enumerate(string):
+    for (i, item) in enumerate(string):
         if i == 0 or i == len(string) - 1:
             answ.append(item)
         elif item == '9':

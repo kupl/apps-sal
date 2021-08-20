@@ -3,6 +3,7 @@ import numpy as np
 
 
 class Solution:
+
     def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
         cars = sorted(range(len(position)), key=lambda i: position[i])
 

@@ -10,7 +10,7 @@ for i in range(n):
     kek.add(ar[i] - i)
 ahah.sort()
 A = [[] for _ in range(n)]
-for a, b in ahah:
+for (a, b) in ahah:
     A[b].append(a)
 dp = [ar[i] for i in range(n)]
 for i in range(n):

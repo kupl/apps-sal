@@ -1,28 +1,25 @@
 from itertools import groupby
 
 
-# RUN LENGTH ENCODING str -> tuple
 def runLengthEncode(S: str):
     grouped = groupby(S)
     res = []
-    for k, v in grouped:
+    for (k, v) in grouped:
         res.append((k, str(len(list(v)))))
     return res
 
 
-# RUN LENGTH DECODING tuple -> str
-def runLengthDecode(L: "list[tuple]"):
-    res = ""
-    for c, n in L:
+def runLengthDecode(L: 'list[tuple]'):
+    res = ''
+    for (c, n) in L:
         res += c * int(n)
     return res
 
 
-# RUN LENGTH ENCODING str -> list
 def rle_list(S: str):
     grouped = groupby(S)
-    res = ""
-    for k, v in grouped:
+    res = ''
+    for (k, v) in grouped:
         res += k
     return res
 

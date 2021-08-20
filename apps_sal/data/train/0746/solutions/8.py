@@ -6,11 +6,11 @@ def Left(i):
 
 
 def Right(i):
-    return (2 * i) + 1
+    return 2 * i + 1
 
 
 def levelOf(x):
-    return int(math.floor((math.log10(x) / math.log10(2)) + 1))
+    return int(math.floor(math.log10(x) / math.log10(2) + 1))
 
 
 def treeProduct(numList, n, i):
@@ -19,10 +19,10 @@ def treeProduct(numList, n, i):
     else:
         tpl = treeProduct(numList, n, Left(i))
         tpr = treeProduct(numList, n, Right(i))
-        if (tpl > tpr):
-            return ((numList[i] * tpl))
+        if tpl > tpr:
+            return numList[i] * tpl
         else:
-            return ((numList[i] * tpr))
+            return numList[i] * tpr
 
 
 def main():

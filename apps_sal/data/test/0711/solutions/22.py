@@ -18,8 +18,8 @@ def prime_factorize(n):
     return a
 
 
-MOD = 10**9 + 7
-n, m = map(int, input().split())
+MOD = 10 ** 9 + 7
+(n, m) = map(int, input().split())
 c = Counter(prime_factorize(m))
 cv = list(c.values())
 ans = 1

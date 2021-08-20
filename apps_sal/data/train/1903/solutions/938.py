@@ -1,4 +1,5 @@
-class DisjointSet():
+class DisjointSet:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [1] * n
@@ -22,22 +23,20 @@ class DisjointSet():
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
 
         def ManhattanDistance(p1, p2):
-            x1, y1 = p1
-            x2, y2 = p2
+            (x1, y1) = p1
+            (x2, y2) = p2
             return abs(x2 - x1) + abs(y2 - y1)
-
         edges = [(ManhattanDistance(points[i], points[j]), i, j) for i in range(n) for j in range(i + 1, n)]
         edges.sort()
-
         graph = DisjointSet(n)
         ans = 0
-        for cost, u, v in edges:
+        for (cost, u, v) in edges:
             if graph.find(u) != graph.find(v):
                 graph.union(u, v)
                 ans += cost
-
         return ans

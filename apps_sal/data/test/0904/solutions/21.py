@@ -7,5 +7,4 @@ for i in e:
         if j.isupper():
             loc += 1
     best = max(best, loc)
-
 print(best)

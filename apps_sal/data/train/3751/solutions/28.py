@@ -1,7 +1,7 @@
 def bool_to_word(boolean):
     if boolean == True:
-        return "Yes"
+        return 'Yes'
     elif boolean == False:
-        return "No"
+        return 'No'
     else:
-        return "error, neither True nor False"
+        return 'error, neither True nor False'

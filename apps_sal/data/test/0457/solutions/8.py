@@ -20,9 +20,8 @@ def pwrmod(a, n):
     return pwrmod(a, n - 1) * a % MOD
 
 
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-
 ans = 1
 for d in prime_divs(x):
     pwrsum = 0

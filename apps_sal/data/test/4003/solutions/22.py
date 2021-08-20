@@ -1,5 +1,5 @@
 def solve(p, q, r):
-    ans = ""
+    ans = ''
     current = r
     i = p
     j = q
@@ -7,12 +7,12 @@ def solve(p, q, r):
         if j < i:
             break
         if current < num[i] < num[j] or num[j] <= current < num[i]:
-            ans += "L"
+            ans += 'L'
             current = num[i]
             i += 1
             continue
         if current < num[j] < num[i] or num[i] <= current < num[j]:
-            ans += "R"
+            ans += 'R'
             current = num[j]
             j -= 1
             continue
@@ -20,9 +20,9 @@ def solve(p, q, r):
             ans1 = solve(i, j - 1, num[i])
             ans2 = solve(i + 1, j, num[i])
             if len(ans1) > len(ans2):
-                ans += "R" + ans1
+                ans += 'R' + ans1
             else:
-                ans += "L" + ans2
+                ans += 'L' + ans2
         break
     return ans
 

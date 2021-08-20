@@ -10,13 +10,11 @@ else:
     for i in range(n):
         lis.append(int(input()))
     lis.sort()
-
     if n == 1:
         print('YES')
         print(lis[0])
         print(3 * lis[0])
         print(3 * lis[0])
-
     if n == 2:
         if lis[1] - lis[0] > 2 * lis[0]:
             print('NO')

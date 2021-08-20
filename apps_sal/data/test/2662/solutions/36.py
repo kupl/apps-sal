@@ -5,4 +5,4 @@ for _ in range(N):
     a = -int(input())
     n = bisect(dp, a)
     dp[n] = a
-print(sum(1 for i in dp if i <= 0))
+print(sum((1 for i in dp if i <= 0)))

@@ -1,5 +1,5 @@
 def palindrome(num, s):
-    if not isinstance(num, int) or not isinstance(s, int) or num < 0 or s < 0:
+    if not isinstance(num, int) or not isinstance(s, int) or num < 0 or (s < 0):
         return 'Not valid'
     lst = []
     while len(lst) < s:

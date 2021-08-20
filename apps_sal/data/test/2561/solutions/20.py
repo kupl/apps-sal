@@ -1,10 +1,10 @@
 def solve(x):
     k = 0
     while x > 0:
-        if (x % 2 == 1):
+        if x % 2 == 1:
             k += 1
         x //= 2
-    return (2**k)
+    return 2 ** k
 
 
 l = int(input())

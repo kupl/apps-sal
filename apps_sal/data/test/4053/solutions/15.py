@@ -1,42 +1,24 @@
 def f(s):
-    X = ""
+    X = ''
     k = []
-    '''for i in L:
-        l = len(i)
-        if s[n-l:] in k:
-            X += "S"
-        elif s[:l] == s[n-l:]:
-            k.append(s[:l])
-            X += "P"
-        else:
-            if s[:l] == i:
-                X += "P"
-                continue
-            if s[n-l:] == i:
-                X += "S"
-                continue
-            return 0
-    if len(X) == 2*n-2:
-        print(X)
-        return 1'''
+    'for i in L:\n        l = len(i)\n        if s[n-l:] in k:\n            X += "S"\n        elif s[:l] == s[n-l:]:\n            k.append(s[:l])\n            X += "P"\n        else:\n            if s[:l] == i:\n                X += "P"\n                continue\n            if s[n-l:] == i:\n                X += "S"\n                continue\n            return 0\n    if len(X) == 2*n-2:\n        print(X)\n        return 1'
     for i in L:
         l = len(i)
         if l in k:
             if s[:l] == s[n - l:]:
-                X += "S"
+                X += 'S'
+            elif s[:l] == i:
+                X += 'P'
+            elif s[n - l:] == i:
+                X += 'S'
             else:
-                if s[:l] == i:
-                    X += "P"
-                elif s[n - l:] == i:
-                    X += "S"
-                else:
-                    return 0
+                return 0
         else:
             k.append(l)
             if s[:l] == i:
-                X += "P"
+                X += 'P'
             elif s[n - l:] == i:
-                X += "S"
+                X += 'S'
             else:
                 return 0
     print(X)

@@ -1,6 +1,5 @@
 from heapq import *
 import sys
-
 MOD = 1000000181
 
 
@@ -9,17 +8,17 @@ def addM(a, b):
 
 
 def mulM(a, b):
-    return (a * b) % MOD
+    return a * b % MOD
 
 
 def dijk(adj, n, s):
-    dist = [10**18] * n
+    dist = [10 ** 18] * n
     ways = [0] * n
     frontier = []
     dist[s] = 0
     ways[s] = 1
     heappush(frontier, (0, s))
-    while (len(frontier) > 0):
+    while len(frontier) > 0:
         x = heappop(frontier)
         if x[0] != dist[x[1]]:
             continue
@@ -34,30 +33,27 @@ def dijk(adj, n, s):
     return (dist, ways)
 
 
-n, m, s, t = map(int, sys.stdin.readline().split())
+(n, m, s, t) = map(int, sys.stdin.readline().split())
 s -= 1
 t -= 1
 adj = [[] for i in range(n)]
 jda = [[] for i in range(n)]
 edges = []
-
 for i in range(m):
-    a, b, l = map(int, sys.stdin.readline().split())
+    (a, b, l) = map(int, sys.stdin.readline().split())
     a -= 1
     b -= 1
     adj[a].append((b, l))
     jda[b].append((a, l))
     edges.append((a, b, l))
-
 one = dijk(adj, n, s)
 two = dijk(jda, n, t)
-
 for i in edges:
     if one[0][i[0]] + i[2] + two[0][i[1]] == one[0][t] and mulM(one[1][i[0]], two[1][i[1]]) == one[1][t]:
-        sys.stdout.write("YES\n")
+        sys.stdout.write('YES\n')
     else:
         x = one[0][t] - 1 - one[0][i[0]] - two[0][i[1]]
         if x <= 0:
-            sys.stdout.write("NO\n")
+            sys.stdout.write('NO\n')
         else:
-            sys.stdout.write("CAN " + str(i[2] - x) + "\n")
+            sys.stdout.write('CAN ' + str(i[2] - x) + '\n')

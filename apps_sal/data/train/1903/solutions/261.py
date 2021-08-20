@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         result = 0
@@ -9,8 +10,7 @@ class Solution:
         treeId = []
         for i in range(len(points)):
             treeId.append(i)
-
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             if treeId[u] != treeId[v]:
                 result += w
                 oldId = treeId[u]

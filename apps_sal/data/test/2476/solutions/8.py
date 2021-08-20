@@ -3,7 +3,6 @@ n = int(input())
 a = list(map(int, input().split()))
 c = list(Counter(a).values())
 c.sort()
-
 ans = n
 cnt = 0
 for i in range(n):

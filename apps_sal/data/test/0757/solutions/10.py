@@ -1,13 +1,10 @@
-
 def foo():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a = sorted(a, reverse=True)
-
     if m <= k:
         print(0)
         return
-
     i = 0
     for x in a:
         k += x - 1

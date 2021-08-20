@@ -1,5 +1,4 @@
 N = int(input())
-
 count = 0
 y = 0
 x = 0
@@ -8,5 +7,4 @@ while count != N:
     if count % 15 == 0:
         y += 200
     x += 800
-
-print((x - y))
+print(x - y)

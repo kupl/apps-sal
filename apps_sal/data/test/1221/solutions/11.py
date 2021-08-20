@@ -1,8 +1,11 @@
 pt = lambda *a, **k: print(*a, **k, flush=True)
-def rd(): return map(int, input().split())
 
 
-n, m = rd()
+def rd():
+    return map(int, input().split())
+
+
+(n, m) = rd()
 an = list(rd())
 bn = list(rd())
 a1 = max(an)
@@ -15,7 +18,7 @@ if c1 > c2:
     an.remove(a1)
 else:
     an.remove(a2)
-r = -0x3f3f3f3f3f3f3f3f
+r = -4557430888798830399
 for i in an:
     for j in bn:
         if i * j > r:

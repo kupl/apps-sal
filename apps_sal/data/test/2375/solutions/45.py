@@ -1,17 +1,19 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def MI(): return map(int, sys.stdin.readline().split())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
 
 
 def main():
-    x, y = MI()
+    (x, y) = MI()
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     if y > x + 1:
-        print("Alice")
+        print('Alice')
     else:
-        print("Brown")
+        print('Brown')
 
 
 main()

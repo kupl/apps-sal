@@ -1,7 +1,7 @@
 t = int(input())
 i = 0
 while i < t:
-    n, d = input().split()
+    (n, d) = input().split()
     n = int(n)
     d = int(d)
     a = []

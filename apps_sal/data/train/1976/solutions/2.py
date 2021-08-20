@@ -4,8 +4,6 @@ class MagicDictionary:
         """
         Initialize your data structure here.
         """
-        # use a hash to store len(word) => list of workds
-        # then in search only need to search those that are the same length
         self.hsh = collections.defaultdict(list)
 
     def buildDict(self, dict):
@@ -23,10 +21,4 @@ class MagicDictionary:
         :type word: str
         :rtype: bool
         """
-        return any(sum(x != y for x, y in zip(word, candidate)) == 1 for candidate in self.hsh[len(word)])
-
-
-# Your MagicDictionary object will be instantiated and called as such:
-# obj = MagicDictionary()
-# obj.buildDict(dict)
-# param_2 = obj.search(word)
+        return any((sum((x != y for (x, y) in zip(word, candidate))) == 1 for candidate in self.hsh[len(word)]))

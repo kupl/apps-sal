@@ -5,7 +5,6 @@ def main():
     n = int(input())
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
-
     out = set()
     j = 0
     result = 0

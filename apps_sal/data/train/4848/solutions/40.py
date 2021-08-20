@@ -1,1 +1,1 @@
-char_freq = __import__("collections").Counter
+char_freq = __import__('collections').Counter

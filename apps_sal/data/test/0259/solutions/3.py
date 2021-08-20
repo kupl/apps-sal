@@ -1,9 +1,9 @@
 def main():
-    n, t = map(int, input().split())
+    (n, t) = map(int, input().split())
     mi = 1000000
     ans = 0
     for i in range(n):
-        s, d = map(int, input().split())
+        (s, d) = map(int, input().split())
         L = -1
         R = 1000000
         while R - L != 1:

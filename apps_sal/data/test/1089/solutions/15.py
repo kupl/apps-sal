@@ -1,10 +1,8 @@
-n, m, k = map(int, input().split())
-mod = 10**9 + 7
-
+(n, m, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 fac = [1] * n * m
 finv = [1] * n * m
 inv = [1] * n * m
-
 ans = 0
 
 
@@ -23,7 +21,7 @@ def COM(n, k):
 
 COMinit()
 for i in range(1, n):
-    ans += (COM(n * m - 2, k - 2)) * ((n - i) * i * m**2) % mod
+    ans += COM(n * m - 2, k - 2) * ((n - i) * i * m ** 2) % mod
 for j in range(1, m):
-    ans += (COM(n * m - 2, k - 2)) * ((m - j) * j * n**2) % mod
+    ans += COM(n * m - 2, k - 2) * ((m - j) * j * n ** 2) % mod
 print(ans % mod)

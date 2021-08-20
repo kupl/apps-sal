@@ -13,16 +13,12 @@ for i in range(n):
         local = i
         maxi = temp
 ans = 0
-
 for i in range(local + 1):
     if s[i] == 'A':
         ans += p[i]
-
-
 for i in range(local + 1, n):
     if s[i] == 'B':
         ans += p[i]
-
 maxi = 0
 temp = 0
 local = -1
@@ -43,5 +39,4 @@ for i in range(local + 1):
 for i in range(local + 1, n):
     if s[i] == 'B':
         ans1 += p[i]
-
 print(max(ans, ans1))

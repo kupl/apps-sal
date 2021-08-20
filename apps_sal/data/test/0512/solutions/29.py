@@ -6,30 +6,30 @@ def main():
     s_left = set()
     s_right = set()
     s = set()
-    for a, b in ab:
+    for (a, b) in ab:
         if a == -1 and b == -1:
             continue
         elif a == -1:
             if b in s:
-                print("No")
+                print('No')
                 return 0
             s_right.add(b)
             s.add(b)
         elif b == -1:
             if a in s:
-                print("No")
+                print('No')
                 return 0
             s_left.add(a)
             s.add(a)
         elif a > b:
-            print("No")
+            print('No')
             return 0
         else:
             if a in s:
-                print("No")
+                print('No')
                 return 0
             if b in s:
-                print("No")
+                print('No')
                 return 0
             d_left[a] = b
             d_right[b] = a
@@ -63,14 +63,13 @@ def main():
         return True
     dp = [False] * (n + 1)
     dp[0] = True
-
     for i in range(1, n + 1):
         for j in range(i - 1, -1, -1):
             if dp[j]:
                 if check(2 * j + 1, 2 * i + 1):
                     dp[i] = True
                     break
-    print(["No", "Yes"][dp[-1]])
+    print(['No', 'Yes'][dp[-1]])
 
 
 main()

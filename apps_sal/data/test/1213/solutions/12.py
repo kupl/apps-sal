@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 S = input()
 k -= 1
 if k >= (n - 1) / 2:

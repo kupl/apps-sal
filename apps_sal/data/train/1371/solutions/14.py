@@ -1,7 +1,6 @@
 test = int(input())
-
 for _ in range(0, test):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     lister = list(map(int, input().split()))
     count = 0
     for x in lister:

@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[36]:
-
-
 import math
 
 
@@ -18,14 +12,14 @@ def UnusualSeq(a, b):
                 d.add(i)
                 d.add(b // i)
         d = sorted(list(d))
-        f = d[::]
+        f = d[:]
         for i in range(len(f)):
-            f[i] = pow(2, d[i] - 1, (10**9 + 7))
+            f[i] = pow(2, d[i] - 1, 10 ** 9 + 7)
             for j in range(i):
                 if d[i] % d[j] == 0:
                     f[i] -= f[j]
-        print(f[-1] % (10**9 + 7))
+        print(f[-1] % (10 ** 9 + 7))
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 UnusualSeq(a, b)

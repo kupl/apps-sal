@@ -20,5 +20,5 @@ def div(n):
     return cnt + 1
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(div(gcd(a, b)))

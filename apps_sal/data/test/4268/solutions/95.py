@@ -4,11 +4,11 @@ import math
 def solve(y, z):
     res = 0
     for i in range(len(y)):
-        res += (y[i] - z[i])**2
+        res += (y[i] - z[i]) ** 2
     return math.sqrt(res)
 
 
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 x = [list(map(int, input().split())) for _ in range(n)]
 ans = 0
 for i in range(n - 1):

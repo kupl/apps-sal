@@ -16,7 +16,7 @@ l.sort()
 p = len(l)
 res = 0
 for i in range(p - 1):
-    if (l[i] + 1 in u):
+    if l[i] + 1 in u:
         l1 = len(u[l[i]])
         l2 = len(u[l[i] + 1])
         j1 = 0
@@ -24,9 +24,7 @@ for i in range(p - 1):
         t1 = 0
         t2 = 0
         for j in range(l1 + l2):
-            #print(j1, j2);
-            #print(l1, l2)
-            if (j1 == l1):
+            if j1 == l1:
                 t2 += 1
                 j2 += 1
                 res -= t1
@@ -34,7 +32,7 @@ for i in range(p - 1):
                 t1 += 1
                 j1 += 1
                 res += t2
-            elif (u[l[i]][j1] < u[l[i] + 1][j2]):
+            elif u[l[i]][j1] < u[l[i] + 1][j2]:
                 t1 += 1
                 j1 += 1
                 res += t2

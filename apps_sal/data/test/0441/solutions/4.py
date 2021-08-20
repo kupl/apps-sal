@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 total = a + b
 s = input()
 prev_took = 'none'

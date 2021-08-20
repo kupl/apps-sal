@@ -1,5 +1,4 @@
 import re
-
 colors = dict.fromkeys('0123456789', 'orange')
 colors.update(F='pink', L='red', R='green')
 

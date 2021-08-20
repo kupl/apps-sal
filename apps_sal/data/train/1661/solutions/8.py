@@ -1,5 +1,5 @@
 def execute(code):
-    x, y = 0, 1
+    (x, y) = (0, 1)
     direction = 1
     visited = {(x, y)}
     loops = []
@@ -25,7 +25,7 @@ def execute(code):
                 continue
             loops.append((i, reps - 1))
         elif c == ')':
-            start, reps = loops.pop()
+            (start, reps) = loops.pop()
             if reps:
                 loops.append((start, reps - 1))
                 i = start
@@ -44,15 +44,15 @@ def execute(code):
             direction = (direction + steps) % 4
         elif c == 'L':
             direction = (direction - steps) % 4
-    min_x = min(x for x, y in visited)
-    min_y = min(y for x, y in visited)
-    width = max(x for x, y in visited) - min_x + 1
-    height = max(y for x, y in visited) - min_y + 1
+    min_x = min((x for (x, y) in visited))
+    min_y = min((y for (x, y) in visited))
+    width = max((x for (x, y) in visited)) - min_x + 1
+    height = max((y for (x, y) in visited)) - min_y + 1
     grid = [[' '] * width for _ in range(height)]
-    for x, y in visited:
+    for (x, y) in visited:
         grid[y - min_y][x - min_x] = '*'
-    return '\r\n'.join(''.join(row) for row in grid)
+    return '\r\n'.join((''.join(row) for row in grid))
 
 
-dx = 0, 1, 0, -1
-dy = -1, 0, 1, 0
+dx = (0, 1, 0, -1)
+dy = (-1, 0, 1, 0)

@@ -7,7 +7,7 @@ for _ in range(int(input())):
     a.sort()
     b.sort()
     i = j = c = 0
-    while(True):
+    while True:
         if ord(a[i]) < ord(b[j]):
             i += 1
         elif ord(a[i]) > ord(b[j]):

@@ -1,10 +1,9 @@
-
 def pair_apply(a, fn):
     """
     Apply a funtion to each pair of consecutive 
     values in the array and return the resultant array
     """
-    return [fn(x, y) for x, y in zip(a, a[1:])]
+    return [fn(x, y) for (x, y) in zip(a, a[1:])]
 
 
 def run_length_encode(a):
@@ -28,7 +27,7 @@ def descriptions(arr):
     deltas = pair_apply(arr, lambda x, y: y - x)
     rle_deltas = run_length_encode(deltas)
     result = 1
-    for delta, count in rle_deltas:
+    for (delta, count) in rle_deltas:
         if delta == 1:
             result *= 2 ** count
     return result

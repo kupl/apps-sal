@@ -2,10 +2,10 @@ import math
 
 
 def solve(array, r):
-    i, res, tmp1, tmp2 = 0, 1, 1, 1
+    (i, res, tmp1, tmp2) = (0, 1, 1, 1)
     while i * r < len(array):
         res *= array[i * r]
-        res %= 10**9 + 7
+        res %= 10 ** 9 + 7
         tmp1 = float(array[i * r]) / 10 ** int(math.log(array[i * r], 10))
         tmp2 *= tmp1
         tmp2 = float(tmp2) / 10 ** int(math.log(tmp2, 10))
@@ -23,7 +23,7 @@ def frjump():
         if query[0] == 1:
             friendliness[query[1] - 1] = query[2]
         else:
-            types, R = query
+            (types, R) = query
             print(solve(friendliness, R))
 
 

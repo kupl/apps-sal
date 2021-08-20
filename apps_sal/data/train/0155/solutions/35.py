@@ -1,10 +1,11 @@
 class Solution:
+
     def maxJumps(self, A: List[int], d: int) -> int:
         dp = [1] * len(A)
-        steps = [(v, i) for i, v in enumerate(A)]
+        steps = [(v, i) for (i, v) in enumerate(A)]
         steps.sort()
         print(steps)
-        for val, i in steps:
+        for (val, i) in steps:
             maxVal = val
             for j in range(i + 1, min(i + d + 1, len(steps))):
                 if A[j] > maxVal:

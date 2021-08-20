@@ -5,5 +5,5 @@ def split_in_parts(s, p):
         k = s[i:i + p]
         l.append(k)
         i += p
-    res = " ".join(l)
+    res = ' '.join(l)
     return res

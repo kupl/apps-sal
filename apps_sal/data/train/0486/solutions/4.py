@@ -1,4 +1,5 @@
 class Solution:
+
     def queryString(self, S: str, N: int) -> bool:
         if '1' not in S:
             return False

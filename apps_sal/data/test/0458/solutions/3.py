@@ -6,15 +6,14 @@ def s(x):
     return res
 
 
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 ans = []
 for i in range(100):
-    x = b * (i**a) + c
+    x = b * i ** a + c
     if x < 0:
         continue
-    if s(x) == i and 0 < x < 10**9:
+    if s(x) == i and 0 < x < 10 ** 9:
         ans.append(x)
-
 ans.sort()
 print(len(ans))
 if len(ans) != 0:

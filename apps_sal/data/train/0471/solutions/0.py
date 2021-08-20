@@ -1,11 +1,12 @@
 class Solution:
+
     def expandIsland(self, grid, i, j):
         edges = [(i, j)]
         while edges:
             next_edges = []
             for edge in edges:
-                ei, ej = edge
-                if ei >= 0 and ei < len(grid) and ej >= 0 and ej < len(grid[ei]) and grid[ei][ej] == '1':
+                (ei, ej) = edge
+                if ei >= 0 and ei < len(grid) and (ej >= 0) and (ej < len(grid[ei])) and (grid[ei][ej] == '1'):
                     grid[ei][ej] = '2'
                     next_edges.append((ei + 1, ej))
                     next_edges.append((ei, ej + 1))

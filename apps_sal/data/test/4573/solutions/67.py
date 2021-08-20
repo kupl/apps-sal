@@ -3,7 +3,6 @@ def main():
     X = list(map(int, input().split()))
     Y = X.copy()
     Y.sort()
-
     if N % 2 == 0:
         mid1 = Y[N // 2]
         mid2 = Y[N // 2 - 1]

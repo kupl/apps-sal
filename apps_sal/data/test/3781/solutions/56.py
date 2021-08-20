@@ -7,11 +7,11 @@ def solve(n, a):
             cnt[x] += 1
         for v in cnt.values():
             if v % 2:
-                print("First")
+                print('First')
                 return
-        print("Second")
+        print('Second')
         return
-    print("Second")
+    print('Second')
 
 
 def main():

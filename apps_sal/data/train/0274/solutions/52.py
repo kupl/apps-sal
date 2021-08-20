@@ -1,12 +1,9 @@
 class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
-        # Solution 1: Use two heaps
-        # Time O(NogN)
-        # Space O(N)
 
-        maxq, minq = [], []
+    def longestSubarray(self, nums: List[int], limit: int) -> int:
+        (maxq, minq) = ([], [])
         res = i = 0
-        for j, a in enumerate(nums):
+        for (j, a) in enumerate(nums):
             heapq.heappush(maxq, [-a, j])
             heapq.heappush(minq, [a, j])
             while -maxq[0][0] - minq[0][0] > limit:

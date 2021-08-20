@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 t = input()
-
 if '*' not in s:
     if s == t:
         print('YES')

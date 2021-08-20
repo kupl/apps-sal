@@ -5,7 +5,7 @@ A = list(map(int, input().split()))
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):
@@ -14,7 +14,6 @@ def lcm(*numbers):
 
 ans = 0
 lcm = lcm(*A)
-
 for a in A:
     ans += (lcm - 1) % a
 print(ans)

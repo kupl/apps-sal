@@ -1,11 +1,11 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         L = len(rating)
         result = 0
-
         for i in range(1, L - 1):
             pivot = rating[i]
-            loL, hiL, loR, hiR = 0, 0, 0, 0
+            (loL, hiL, loR, hiR) = (0, 0, 0, 0)
             for j in range(i):
                 if rating[j] > pivot:
                     hiL += 1
@@ -17,5 +17,4 @@ class Solution:
                 else:
                     loR += 1
             result += loL * hiR + loR * hiL
-
         return result

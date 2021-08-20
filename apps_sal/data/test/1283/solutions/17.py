@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 f = [list(input()) for _ in range(n)]
-
 ans = (1, 1)
 r = [[0 for _ in range(n)] for _ in range(n)]
 for i in range(n):
@@ -20,7 +19,6 @@ for i in range(n):
             c[i][j] = 1
         else:
             c[i][j] = c[i][j - 1] + 1
-
 s = [[0 for _ in range(n)] for _ in range(n)]
 for i in range(n):
     for j in range(n):

@@ -8,18 +8,54 @@ import random
 from heapq import heappush, heappop, heapify
 from collections import deque, defaultdict, Counter
 from itertools import permutations, combinations, groupby
-def Golf(): *a, = map(int, open(0))
-def I(): return int(input())
-def S_(): return input()
-def IS(): return input().split()
-def LS(): return [i for i in input().split()]
-def LI(): return [int(i) for i in input().split()]
-def LI_(): return [int(i) - 1 for i in input().split()]
-def NI(n): return [int(input()) for i in range(n)]
-def NI_(n): return [int(input()) - 1 for i in range(n)]
-def StoLI(): return [ord(i) - 97 for i in input()]
-def ItoS(n): return chr(n + 97)
-def LtoS(ls): return ''.join([chr(i + 97) for i in ls])
+
+
+def Golf():
+    (*a,) = map(int, open(0))
+
+
+def I():
+    return int(input())
+
+
+def S_():
+    return input()
+
+
+def IS():
+    return input().split()
+
+
+def LS():
+    return [i for i in input().split()]
+
+
+def LI():
+    return [int(i) for i in input().split()]
+
+
+def LI_():
+    return [int(i) - 1 for i in input().split()]
+
+
+def NI(n):
+    return [int(input()) for i in range(n)]
+
+
+def NI_(n):
+    return [int(input()) - 1 for i in range(n)]
+
+
+def StoLI():
+    return [ord(i) - 97 for i in input()]
+
+
+def ItoS(n):
+    return chr(n + 97)
+
+
+def LtoS(ls):
+    return ''.join([chr(i + 97) for i in ls])
 
 
 def GI(V, E, ls=None, Directed=False, index=1):
@@ -33,10 +69,10 @@ def GI(V, E, ls=None, Directed=False, index=1):
         else:
             inp = ls[i]
         if len(inp) == 2:
-            a, b = inp
+            (a, b) = inp
             c = 1
         else:
-            a, b, c = inp
+            (a, b, c) = inp
         if index == 1:
             a -= 1
             b -= 1
@@ -45,31 +81,31 @@ def GI(V, E, ls=None, Directed=False, index=1):
         g[a].append(bb)
         if not Directed:
             g[b].append(aa)
-    return g, org_inp
+    return (g, org_inp)
 
 
 def GGI(h, w, search=None, replacement_of_found='.', mp_def={'#': 1, '.': 0}, boundary=1):
-    # h,w,g,sg=GGI(h,w,search=['S','G'],replacement_of_found='.',mp_def={'#':1,'.':0}) # sample usage
     mp = [boundary] * (w + 2)
     found = {}
     for i in range(h):
         s = input()
         for char in search:
             if char in s:
-                found[char] = ((i + 1) * (w + 2) + s.index(char) + 1)
+                found[char] = (i + 1) * (w + 2) + s.index(char) + 1
                 mp_def[char] = mp_def[replacement_of_found]
         mp += [boundary] + [mp_def[j] for j in s] + [boundary]
     mp += [boundary] * (w + 2)
-    return h + 2, w + 2, mp, found
+    return (h + 2, w + 2, mp, found)
 
 
-def TI(n): return GI(n, n - 1)
+def TI(n):
+    return GI(n, n - 1)
 
 
 def bit_combination(k, n=2):
     rt = []
-    for tb in range(n**k):
-        s = [tb // (n**bt) % n for bt in range(k)]
+    for tb in range(n ** k):
+        s = [tb // n ** bt % n for bt in range(k)]
         rt += [s]
     return rt
 
@@ -81,14 +117,17 @@ def show(*inp, end='\n'):
 
 YN = ['YES', 'NO']
 Yn = ['Yes', 'No']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
-# sys.setrecursionlimit(10**7)
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 class Tree:
+
     def __init__(self, inp_size=None, init=True):
         self.LCA_init_stat = False
         self.ETtable = []
@@ -101,12 +140,12 @@ class Tree:
             self.size = int(input())
         else:
             self.size = inp_size
-        self.edges, _ = GI(self.size, self.size - 1, index=index)
+        (self.edges, _) = GI(self.size, self.size - 1, index=index)
         return
 
     def listin(self, ls, index=0):
         self.size = len(ls) + 1
-        self.edges, _ = GI(self.size, self.size - 1, ls, index=index)
+        (self.edges, _) = GI(self.size, self.size - 1, ls, index=index)
         return
 
     def __str__(self):
@@ -119,7 +158,7 @@ class Tree:
         v[x] = root_v
         while q:
             c = q.pop()
-            for nb, d in self.edges[c]:
+            for (nb, d) in self.edges[c]:
                 if v[nb] == -1:
                     q.append(nb)
                     v[nb] = func(v[c], nb, d)
@@ -141,7 +180,7 @@ class Tree:
                 ce = ~c
             else:
                 ce = c
-                for nb, d in self.edges[ce]:
+                for (nb, d) in self.edges[ce]:
                     if self.depth[nb] == None:
                         q.append(~ce)
                         q.append(nb)
@@ -164,15 +203,16 @@ class Tree:
     def LCA(self, root, x, y):
         if self.LCA_init_stat == False:
             self.LCA_init(root)
-        xin, xout = self.ETin[x], self.ETout[x]
-        yin, yout = self.ETin[y], self.ETout[y]
+        (xin, xout) = (self.ETin[x], self.ETout[x])
+        (yin, yout) = (self.ETin[y], self.ETout[y])
         a = min(xin, yin)
         b = max(xout, yout, xin, yin)
         id_of_min_dep_in_et = self.st.query_id(a, b + 1)
         return self.ETtable[id_of_min_dep_in_et]
 
 
-class SparseTable:  # O(N log N) for init, O(1) for query(l,r)
+class SparseTable:
+
     def __init__(self, ls, init_func=min, init_idl=float('inf')):
         self.func = init_func
         self.idl = init_idl
@@ -181,27 +221,21 @@ class SparseTable:  # O(N log N) for init, O(1) for query(l,r)
         self.table = [ls[:]]
         self.index = [list(range(self.size))]
         self.lg = [0] * (self.size + 1)
-
         for i in range(2, self.size + 1):
             self.lg[i] = self.lg[i >> 1] + 1
-
         for i in range(self.N0):
             tmp = [self.func(self.table[i][j], self.table[i][min(j + (1 << i), self.size - 1)]) for j in range(self.size)]
             tmp_id = [self.index[i][j] if self.table[i][j] == self.func(self.table[i][j], self.table[i][min(j + (1 << i), self.size - 1)]) else self.index[i][min(j + (1 << i), self.size - 1)] for j in range(self.size)]
             self.table += [tmp]
             self.index += [tmp_id]
 
-    # return func of [l,r)
     def query(self, l, r):
-        # N=(r-l).bit_length()-1
         N = self.lg[r - l]
         return self.func(self.table[N][l], self.table[N][r - (1 << N)])
 
-    # return index of which val[i] = func of v among [l,r)
     def query_id(self, l, r):
-        # N=(r-l).bit_length()-1
         N = self.lg[r - l]
-        a, b = self.index[N][l], self.index[N][r - (1 << N)]
+        (a, b) = (self.index[N][l], self.index[N][r - (1 << N)])
         if self.table[0][a] == self.func(self.table[N][l], self.table[N][r - (1 << N)]):
             b = a
         return b
@@ -217,14 +251,13 @@ class SparseTable:  # O(N log N) for init, O(1) for query(l,r)
 show_flg = False
 show_flg = True
 ans = 0
-
 T = I()
 for _ in range(T):
-    a, b = LI()
-    c, d = LI()
+    (a, b) = LI()
+    (c, d) = LI()
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     if c > d:
-        c, d = d, c
+        (c, d) = (d, c)
     ans = 'Yes' if b == d and a + c == b else 'No'
     print(ans)

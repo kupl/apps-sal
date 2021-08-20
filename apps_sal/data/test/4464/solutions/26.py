@@ -1,6 +1,5 @@
 import copy
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 x = copy.deepcopy(a)
 visited = [False] * (b + 1)
 flg = True

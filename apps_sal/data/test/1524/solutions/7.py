@@ -9,11 +9,9 @@ for i in range(1, len(s)):
 memo2.append(len(s))
 n = len(memo1)
 ans = [0] * len(s)
-
 for i in range(n):
     r = memo1[i] - memo2[i]
     l = memo2[i + 1] - memo1[i]
-
     if (r + l) % 2 == 0:
         ans[memo1[i]] = (r + l) // 2
         ans[memo1[i] - 1] = (r + l) // 2

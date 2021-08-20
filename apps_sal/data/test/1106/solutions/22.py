@@ -1,4 +1,4 @@
-n = 2**(int(input()) + 1) - 1
+n = 2 ** (int(input()) + 1) - 1
 a = [0, 0] + list(map(int, input().split()))
 r = 0
 while n > 1:

@@ -7,15 +7,15 @@ for _ in range(t):
     lmax = []
     for i in range(n):
         num = l[i]
-        l[i] += (num % 3)
+        l[i] += num % 3
     if n % 2 == 0:
         for i in range(n - 1):
-            l[i], l[i + 1] = l[i + 1], l[i]
+            (l[i], l[i + 1]) = (l[i + 1], l[i])
     else:
         for i in range(n - 2):
-            l[i], l[i + 1] = l[i + 1], l[i]
+            (l[i], l[i + 1]) = (l[i + 1], l[i])
     for i in range(int(n / 2)):
-        l[i], l[n - 1 - i] = l[n - 1 - i], l[i]
+        (l[i], l[n - 1 - i]) = (l[n - 1 - i], l[i])
     for i in range(len(l)):
         if l[i] < m:
             lmin.append(l[i])

@@ -1,13 +1,11 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         m = 0
         f = 0
         for x in nums:
-
             if x == 0:
                 continue
-
             c = 0
             mm = 0
             baz = x
@@ -22,6 +20,5 @@ class Solution:
             f += 1 + c
             m = max(m, mm)
             print(m)
-
         f += m
         return f

@@ -2,17 +2,31 @@ import sys
 stdin = sys.stdin
 
 
-def ip(): return int(sp())
-def fp(): return float(sp())
+def ip():
+    return int(sp())
 
 
-def lp(): return list(map(int, stdin.readline().split()))
-def sp(): return stdin.readline().rstrip()
-def yp(): return print('Yes')
-def np(): return print('No')
+def fp():
+    return float(sp())
 
 
-n, a, b = lp()
+def lp():
+    return list(map(int, stdin.readline().split()))
+
+
+def sp():
+    return stdin.readline().rstrip()
+
+
+def yp():
+    return print('Yes')
+
+
+def np():
+    return print('No')
+
+
+(n, a, b) = lp()
 x = lp()
 ans = 0
 for i in range(n - 1):

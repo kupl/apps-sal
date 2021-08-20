@@ -1,8 +1,8 @@
 import heapq
-N, M = map(int, input().split())
-AB = [[]for i in range(10**5 + 1)]
+(N, M) = map(int, input().split())
+AB = [[] for i in range(10 ** 5 + 1)]
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     AB[a].append(-b)
 q = []
 heapq.heapify(q)

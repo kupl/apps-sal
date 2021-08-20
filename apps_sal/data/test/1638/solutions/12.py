@@ -13,5 +13,4 @@ for top in range(n):
     if totalmax < total:
         ans = lst
         totalmax = total
-
-print(*ans, sep=" ")
+print(*ans, sep=' ')

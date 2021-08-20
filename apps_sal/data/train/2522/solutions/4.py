@@ -1,4 +1,5 @@
 class Solution:
+
     def countAndSay(self, n):
         if n < 1:
             raise ValueError('Input should be greater than or equal to 1')

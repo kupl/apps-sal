@@ -1,5 +1,7 @@
 class StreamChecker:
+
     class TrieNode:
+
         def __init__(self):
             self.d = {}
             self.word = False
@@ -27,7 +29,3 @@ class StreamChecker:
         if letter in self.root.d:
             self.tries.append(self.root.d[letter])
         return any([e.word for e in self.tries])
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

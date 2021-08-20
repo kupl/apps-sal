@@ -1,23 +1,21 @@
-# https://wentao-shao.gitbook.io/leetcode/graph-search/1239.maximum-length-of-a-concatenated-string-with-unique-characters
-
 class Solution:
+
     def maxLength1(self, arr: List[str]) -> int:
 
         def dfs(start, seen):
             nonlocal res
             if start == len(arr):
-                res = max(res, sum(len(arr[i]) for i in seen))
+                res = max(res, sum((len(arr[i]) for i in seen)))
             else:
                 is_end = True
                 for i in graph[start]:
-                    if all(len(arr[j].intersection(arr[i])) == 0 for j in seen):
+                    if all((len(arr[j].intersection(arr[i])) == 0 for j in seen)):
                         is_end = False
                         seen.append(i)
                         dfs(i, seen)
                         seen.pop()
                 if is_end:
-                    res = max(res, sum(len(arr[i]) for i in seen))
-
+                    res = max(res, sum((len(arr[i]) for i in seen)))
         arr = [item for item in arr if len(item) == len(set(item))]
         arr = list(map(set, arr))
         graph = collections.defaultdict(list)
@@ -25,7 +23,6 @@ class Solution:
             for j in range(i + 1, len(arr)):
                 if len(arr[i].intersection(arr[j])) == 0:
                     graph[i].append(j)
-
         res = 0
         for i in range(len(arr)):
             dfs(i, [i])
@@ -37,14 +34,13 @@ class Solution:
             nonlocal res
             is_end = True
             for i in graph[seen[-1]]:
-                if all(len(arr[j].intersection(arr[i])) == 0 for j in seen):
+                if all((len(arr[j].intersection(arr[i])) == 0 for j in seen)):
                     is_end = False
                     seen.append(i)
                     dfs(seen)
                     seen.pop()
             if is_end:
-                res = max(res, sum(len(arr[i]) for i in seen))
-
+                res = max(res, sum((len(arr[i]) for i in seen)))
         arr = [item for item in arr if len(item) == len(set(item))]
         arr = list(map(set, arr))
         graph = collections.defaultdict(list)
@@ -52,7 +48,6 @@ class Solution:
             for j in range(i + 1, len(arr)):
                 if len(arr[i].intersection(arr[j])) == 0:
                     graph[i].append(j)
-
         res = 0
         for i in range(len(arr)):
             dfs([i])

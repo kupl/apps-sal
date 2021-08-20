@@ -1,7 +1,7 @@
 import math
 s = input()
 l = s.split()
-n, m, k = (int(i) for i in l)
+(n, m, k) = (int(i) for i in l)
 s = input()
 a = s.split()
 s = input()
@@ -16,7 +16,6 @@ for i in a:
     if h2[t_n] == 0:
         h2[t_n] = k
     count += 1
-
 ans = 0
 for i in b:
     num = int(i)
@@ -29,10 +28,10 @@ for i in b:
         h2[int(a[cn - 1])] = 1
         h1[num] -= 1
         h2[num] = k
-        a[cn - 1], a[cn] = (a[cn], a[cn - 1])
+        (a[cn - 1], a[cn]) = (a[cn], a[cn - 1])
     else:
         cn = k * (h1[num] - 1) + h2[num] - 1
         h2[num] -= 1
         h2[int(a[cn - 1])] += 1
-        a[cn - 1], a[cn] = (a[cn], a[cn - 1])
+        (a[cn - 1], a[cn]) = (a[cn], a[cn - 1])
 print(ans)

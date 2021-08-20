@@ -1,11 +1,9 @@
 from collections import defaultdict
 from sys import stdin
-
 input = stdin.readline
 
 
 def solve():
-
     n = int(input())
     left = 1
     right = n + 1

@@ -1,4 +1,4 @@
-K, N = list(map(int, input().split()))
+(K, N) = list(map(int, input().split()))
 if K % 2 == 0:
     ans = [K // 2]
     for i in range(N - 1):
@@ -14,4 +14,4 @@ else:
             ans[-1] -= 1
             while len(ans) < N:
                 ans.append(K)
-print((' '.join(map(str, ans))))
+print(' '.join(map(str, ans)))

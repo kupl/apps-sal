@@ -1,1 +1,2 @@
-def no_space(p): return p.replace(" ", "")
+def no_space(p):
+    return p.replace(' ', '')

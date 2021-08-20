@@ -1,11 +1,11 @@
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
-n, m, k = list(map(int, input().split()))
-if (2 * n * m) % k == 0:
+(n, m, k) = list(map(int, input().split()))
+if 2 * n * m % k == 0:
     c = 0
     if k % 2 != 0:
         c = 1
@@ -20,10 +20,10 @@ if (2 * n * m) % k == 0:
         else:
             a *= 2
     if a > n or b > m:
-        a, b = b, a
-    print("YES")
-    print("0 0")
-    print("0", b)
-    print(a, "0")
+        (a, b) = (b, a)
+    print('YES')
+    print('0 0')
+    print('0', b)
+    print(a, '0')
 else:
-    print("NO")
+    print('NO')

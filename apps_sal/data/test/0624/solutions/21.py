@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
 hau = sum(A)

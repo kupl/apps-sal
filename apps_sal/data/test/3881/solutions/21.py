@@ -1,8 +1,8 @@
 from itertools import product
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 ops = dict()
 for _ in range(q):
-    a, b = input().split()
+    (a, b) = input().split()
     ops[a] = b
 count = 0
 for t in product('abcdef', repeat=n):

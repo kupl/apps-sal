@@ -7,7 +7,7 @@ def solve(s, f, t):
     i = current = 0
     while s != f:
         current += 1
-        ti, l, r = t[i] if i < len(t) else (-1, -1, -1)
+        (ti, l, r) = t[i] if i < len(t) else (-1, -1, -1)
         if ti == current:
             i += 1
             if l <= s <= r or l <= s + step <= r:
@@ -19,8 +19,10 @@ def solve(s, f, t):
 
 
 def __starting_point():
-    def parse(): return list(map(int, input().split()))
-    n, m, s, f = parse()
+
+    def parse():
+        return list(map(int, input().split()))
+    (n, m, s, f) = parse()
     l = [parse() for _ in range(m)]
     print(solve(s, f, l))
 

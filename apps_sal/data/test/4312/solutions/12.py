@@ -1,5 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
-
+(a, b, c, d) = list(map(int, input().split()))
 while True:
     c -= b
     if c <= 0:

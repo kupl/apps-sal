@@ -1,6 +1,6 @@
 def gcd(a, b):
     if a < b:
-        a, b = b, a
+        (a, b) = (b, a)
     if b == 0:
         return a
     elif b > 0:

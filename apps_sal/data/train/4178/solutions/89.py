@@ -11,4 +11,4 @@ def min_sum_helper(arr):
     """
     if len(arr) == 2:
         return arr[0] * arr[-1]
-    return (arr[0] * arr[-1]) + min_sum_helper(arr[1:-1])
+    return arr[0] * arr[-1] + min_sum_helper(arr[1:-1])

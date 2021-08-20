@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         B = (2 * N + 0.25) ** 0.5 + 0.5
         B = ceil(B)
@@ -11,5 +12,4 @@ class Solution:
                 m = c // 2
                 if m > 0:
                     ans += 1
-                    #print(m, k)
         return ans

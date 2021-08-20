@@ -1,7 +1,6 @@
 def unlucky_days(year):
     from datetime import datetime as dt
     from datetime import timedelta
-
     cnt = 0
     x = dt(year, 1, 1)
     while x.year == year:

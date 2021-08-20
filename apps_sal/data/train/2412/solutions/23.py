@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         st = list(S)
         ud = 1

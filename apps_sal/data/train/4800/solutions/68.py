@@ -1,4 +1,3 @@
-
 def hot(n, i):
     if n == 1:
         return i

@@ -1,7 +1,6 @@
 import bisect
-
 cl = list(map(int, input().split()))
-n, h = cl[0], cl[1]
+(n, h) = (cl[0], cl[1])
 potok = []
 pos = 0
 smlist = []
@@ -18,12 +17,9 @@ for i in range(n):
         sm += int(s[0]) - pos
         smlist.append(sm)
     pos = int(s[1])
-
 for i in range(n):
     pos = bisect.bisect_left(smlist, smlist[i] + h)
     res = potok[pos] - potok[i] + h
     if res > mx:
         mx = res
-
-
 print(mx)

@@ -2,6 +2,7 @@ import math as m
 
 
 class Solution:
+
     def check_time(piles, speed):
         hrs = 0
         for i in piles:
@@ -15,7 +16,7 @@ class Solution:
             high = max(high, i)
         if H == len(piles):
             return high
-        while(low <= high):
+        while low <= high:
             mid = (low + high) // 2
             hrs = Solution.check_time(piles, mid)
             if hrs > H:

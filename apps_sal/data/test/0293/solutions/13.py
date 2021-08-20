@@ -6,7 +6,6 @@ Problem 599 D. Spongebob and Squares
 @author yamaton
 @date 2015-11-20
 """
-
 import itertools as it
 import functools
 import operator
@@ -16,12 +15,12 @@ import sys
 
 
 def solve(x):
+
     def find_p(n):
         return (6 * x // (n * (n + 1)) - 2 * n - 1) // 3
 
     def f(n, p):
         return n * (n + 1) * (2 * n + 3 * p + 1) - 6 * x
-
     result = []
     for n in it.count(1):
         p = find_p(n)
@@ -33,10 +32,6 @@ def solve(x):
                 result.append((n + p, n))
     result.sort()
     return result
-
-
-# def p(*args, **kwargs):
-#     return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

@@ -1,6 +1,5 @@
 import numpy as np
 T = int(input())
-
 for case in range(T):
     n = int(input())
     l = []

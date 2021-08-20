@@ -3,8 +3,8 @@ import string
 MOD = pow(10, 9) + 7
 p = 23
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
-    number = [(d)] * (n)
+    (n, d) = list(map(int, input().split()))
+    number = [d] * n
     C = [0] * (n + n)
     s = len(C) - 1
     for j in range(n - 1, -1, -1):
@@ -29,5 +29,5 @@ for _ in range(int(input())):
     C = C[jump:]
     ans = 0
     for i in range(len(C)):
-        ans += (pow(p, i, MOD) * int(C[i])) % MOD
+        ans += pow(p, i, MOD) * int(C[i]) % MOD
     print(ans % MOD)

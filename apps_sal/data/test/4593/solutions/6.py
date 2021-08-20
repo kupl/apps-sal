@@ -1,8 +1,5 @@
-
 X = int(input())
-
 i = 2
-
 ans = 1
 while i < X:
     power = 2

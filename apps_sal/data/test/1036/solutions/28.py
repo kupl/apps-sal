@@ -1,19 +1,19 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = input()
 
 
 def judge(a, b):
     win = a
-    if a + b == "RP":
+    if a + b == 'RP':
         win = b
-    elif a + b == "PS":
+    elif a + b == 'PS':
         win = b
-    elif a + b == "SR":
+    elif a + b == 'SR':
         win = b
     return win
 
 
-memo = [[""] * (N + 5) for _ in range(K + 5)]
+memo = [[''] * (N + 5) for _ in range(K + 5)]
 
 
 def rec(k, i):

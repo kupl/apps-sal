@@ -1,7 +1,7 @@
 def iroha():
-    a, b, c = input().split()
+    (a, b, c) = input().split()
     num = int(a + b + c)
-    print(("YES" if num % 4 == 0 else "NO"))
+    print('YES' if num % 4 == 0 else 'NO')
 
 
 def __starting_point():

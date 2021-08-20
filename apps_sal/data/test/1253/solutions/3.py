@@ -1,11 +1,11 @@
 l = input().split(' ')
-n, k = int(l[0]), int(l[1])
+(n, k) = (int(l[0]), int(l[1]))
 l = input().split(' ')
 answer = 0
 m = 10000
 for i in range(0, n):
     a = int(l[i])
-    if (a >= 0):
+    if a >= 0:
         answer += a
         if a < m:
             m = a

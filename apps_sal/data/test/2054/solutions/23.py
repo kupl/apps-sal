@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     if min(a, b) * 2 <= max(a, b):

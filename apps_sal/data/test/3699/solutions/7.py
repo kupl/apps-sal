@@ -1,12 +1,8 @@
 from math import sqrt
-
-ax, ay, bx, by, tx, ty = map(int, input().split())
-
+(ax, ay, bx, by, tx, ty) = map(int, input().split())
 n = int(input())
-
 ans = 0
-
-p1, p2, beg, end = [0] * n, [0] * n, [0] * n, [0] * n
+(p1, p2, beg, end) = ([0] * n, [0] * n, [0] * n, [0] * n)
 
 
 def sqr(x):
@@ -26,24 +22,19 @@ def ex(x):
 
 
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     d = sqrt(sqr(x - tx) + sqr(y - ty))
     d1 = sqrt(sqr(x - ax) + sqr(y - ay))
     d2 = sqrt(sqr(x - bx) + sqr(y - by))
     ans += d + d
-    p1[i], p2[i] = d - d1, d - d2
-
+    (p1[i], p2[i]) = (d - d1, d - d2)
 beg[0] = p1[0]
 for i in range(1, n):
     beg[i] = max(beg[i - 1], p1[i])
-
 end[n - 1] = p1[n - 1]
 for i in range(n - 2, -1, -1):
     end[i] = max(end[i + 1], p1[i])
-
-res = 1e220
-
+res = 1e+220
 for i in range(0, n):
     res = min(res, min(ans - p2[i] - ex(i), ans - max(p1[i], p2[i])))
-
 print(res)

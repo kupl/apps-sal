@@ -1,4 +1,5 @@
 class Solution:
+
     def possible(self, capacity):
         ret = 0
         cur = 0
@@ -17,12 +18,9 @@ class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         self.weights = weights
         self.D = D
-
-        # print(self.possible(15))
-        lo, hi = 1, 0x3f3f3f3f
+        (lo, hi) = (1, 1061109567)
         while lo <= hi:
-            mid = lo + ((hi - lo) >> 1)
-
+            mid = lo + (hi - lo >> 1)
             if self.possible(mid):
                 hi = mid - 1
             else:

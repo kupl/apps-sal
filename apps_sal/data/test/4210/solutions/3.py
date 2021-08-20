@@ -1,8 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 sz = []
 t = [1] * 11
-
 cnt = dict()
 for i in range(n):
     sz.append(len(str(a[i])))
@@ -11,11 +10,9 @@ for i in range(n):
         cnt[tmp] += 1
     else:
         cnt[tmp] = 1
-
 t[0] = 1
 for i in range(1, 11):
-    t[i] = (t[i - 1] * 10) % k
-
+    t[i] = t[i - 1] * 10 % k
 ans = 0
 for i in range(n):
     for l in range(1, 11):
@@ -23,6 +20,6 @@ for i in range(n):
         tmp = (l, cur)
         if tmp in cnt:
             ans += cnt[tmp]
-        if (sz[i] == l and cur == a[i] % k):
+        if sz[i] == l and cur == a[i] % k:
             ans -= 1
 print(ans)

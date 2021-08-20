@@ -2,10 +2,8 @@ n = int(input())
 a = int(input())
 b = int(input())
 c = int(input())
-
 house = 'rab'
 answer = 0
-
 for i in range(n - 1):
     if house == 'rab':
         if a < b:
@@ -21,12 +19,10 @@ for i in range(n - 1):
         else:
             house = 'eey'
             answer += c
+    elif b < c:
+        house = 'rab'
+        answer += b
     else:
-        if b < c:
-            house = 'rab'
-            answer += b
-        else:
-            house = 'owl'
-            answer += c
-
+        house = 'owl'
+        answer += c
 print(answer)

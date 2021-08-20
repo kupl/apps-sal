@@ -1,5 +1,5 @@
-def max_less_prime_divisor(n):  # 1 for primes
-    d, max_d = 2, 1
+def max_less_prime_divisor(n):
+    (d, max_d) = (2, 1)
     while d * d <= n:
         while n % d == 0:
             max_d = d
@@ -14,7 +14,7 @@ answer = m
 is_prime = [True] * m
 for i in range(2, m):
     if is_prime[i]:
-        d = (m - 1) - (m - 1) % i
+        d = m - 1 - (m - 1) % i
         if d + i <= n:
             answer = min(answer, d + 1)
         for j in range(i * i, m, i):

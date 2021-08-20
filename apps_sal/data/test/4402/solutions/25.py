@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 if A < 6:
     print(0)
 elif A < 13:

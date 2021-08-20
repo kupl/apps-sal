@@ -4,12 +4,12 @@ input = sys.stdin.readline
 
 
 def main():
-    h, w, k = map(int, input().split())
-    x1, y1, x2, y2 = map(lambda x: int(x) - 1, input().split())
+    (h, w, k) = map(int, input().split())
+    (x1, y1, x2, y2) = map(lambda x: int(x) - 1, input().split())
     v1 = x1 * (w + 1) + y1
     v2 = x2 * (w + 1) + y2
-    C = "".join(input().rstrip() + "@" for _ in range(h))
-    dist = [-1 if c == "@" else 10**10 for c in C]
+    C = ''.join((input().rstrip() + '@' for _ in range(h)))
+    dist = [-1 if c == '@' else 10 ** 10 for c in C]
     ans = 0
     que = deque()
     que.append(v1)

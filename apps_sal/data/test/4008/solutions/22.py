@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = list(set(a))
 m = [0] * 5005
@@ -14,10 +14,10 @@ for i in s:
     if m[i] > k:
         f = 1
 if f == 1:
-    print("NO")
+    print('NO')
 else:
     j = 0
-    print("YES")
+    print('YES')
     for i in range(n):
         ans[k1[i][1]] = i % k + 1
     print(*ans)

@@ -1,4 +1,5 @@
 class Subset:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [0] * n
@@ -19,6 +20,7 @@ class Subset:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         subset = Subset(n)

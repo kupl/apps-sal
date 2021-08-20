@@ -1,12 +1,12 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        if (boardingCost << 2) <= runningCost:
+        if boardingCost << 2 <= runningCost:
             return -1
         waitingCustomers = 0
         curProfit = 0
         maxProfit = 0
         maxProfitTurns = 0
-
         curTurn = 0
         for nCust in customers:
             curTurn += 1
@@ -19,10 +19,9 @@ class Solution:
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 maxProfitTurns = curTurn
-
         fullLoads = waitingCustomers >> 2
-        remLoad = waitingCustomers & 0b11
-        curProfit += ((fullLoads * boardingCost) << 2) - runningCost * fullLoads
+        remLoad = waitingCustomers & 3
+        curProfit += (fullLoads * boardingCost << 2) - runningCost * fullLoads
         curTurn += fullLoads
         if curProfit > maxProfit:
             maxProfit = curProfit
@@ -33,10 +32,8 @@ class Solution:
             if curProfit > maxProfit:
                 maxProfit = curProfit
                 maxProfitTurns = curTurn
-
         if curProfit > maxProfit:
             return curTurn
-
         if maxProfit == 0:
             return -1
         else:

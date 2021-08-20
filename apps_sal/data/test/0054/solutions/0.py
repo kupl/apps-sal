@@ -1,8 +1,6 @@
-w, m = map(int, input().split())
-
+(w, m) = map(int, input().split())
 bb = True
-
-while(m > 0 and bb):
+while m > 0 and bb:
     x = m % w
     if x == 1:
         m -= 1
@@ -11,8 +9,7 @@ while(m > 0 and bb):
     elif x != 0:
         bb = False
     m //= w
-
 if bb:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -11,7 +11,7 @@ for i in range(26):
 t = [s[i] not in good for i in range(l)]
 end = [0] * l
 sumbad = 0
-i, j = 0, 0
+(i, j) = (0, 0)
 while i < l:
     if j < l:
         sumbad += t[j]
@@ -27,6 +27,6 @@ while i < l:
 for i in range(len(s)):
     t = 0
     for j in range(i, end[i]):
-        t = (t * 29 + ord(s[j]) - 96) & 1152921504606846975
+        t = t * 29 + ord(s[j]) - 96 & 1152921504606846975
         string.add(t)
 print(len(string))

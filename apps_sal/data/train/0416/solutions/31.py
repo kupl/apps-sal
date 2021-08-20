@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
         n = len(graph)
         dp = [[[-1] * (2 * n) for _ in range(n)] for _ in range(n)]
@@ -13,7 +14,7 @@ class Solution:
             elif x == y:
                 res = 2
             elif z % 2 == 0:
-                draw, res = False, None
+                (draw, res) = (False, None)
                 for nx in graph[x]:
                     ans = self.search(graph, dp, nx, y, z + 1)
                     if ans == 1:
@@ -21,9 +22,9 @@ class Solution:
                         break
                     elif ans == 0:
                         draw = True
-                res = res if res else (0 if draw else 2)
+                res = res if res else 0 if draw else 2
             else:
-                draw, res = False, None
+                (draw, res) = (False, None)
                 for ny in graph[y]:
                     if ny == 0:
                         continue
@@ -33,6 +34,6 @@ class Solution:
                         break
                     elif ans == 0:
                         draw = True
-                res = res if res else (0 if draw else 1)
+                res = res if res else 0 if draw else 1
             dp[x][y][z] = res
         return dp[x][y][z]

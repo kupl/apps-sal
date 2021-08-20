@@ -1,5 +1,5 @@
 n = int(input())
-i, t = 0, 0
+(i, t) = (0, 0)
 r = []
 while 1:
     i += 1
@@ -11,4 +11,4 @@ while 1:
     r += [(m + i, i), (i, m + i)][m == 0:] * (m * t == n)
 print(len(r))
 for p in sorted(r):
-    print("%d %d" % p)
+    print('%d %d' % p)

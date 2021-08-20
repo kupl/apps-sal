@@ -2,7 +2,7 @@ import string
 
 
 def rot13(message):
-    q = ""
+    q = ''
     p = list(string.ascii_lowercase)
     for i in message:
         if i.isalpha() == True:
@@ -10,11 +10,11 @@ def rot13(message):
             if i.isupper() == True:
                 if a > 25:
                     a -= 26
-                q += (p[a]).upper()
+                q += p[a].upper()
             else:
                 if a > 25:
                     a -= 26
-                q += (p[a]).lower()
+                q += p[a].lower()
         else:
             q += i
     return q

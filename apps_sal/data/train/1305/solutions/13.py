@@ -11,6 +11,6 @@ for ts in range(int(input())):
             f = 0
             break
     if f == 0:
-        print("UNSAFE")
+        print('UNSAFE')
     else:
-        print("SAFE")
+        print('SAFE')

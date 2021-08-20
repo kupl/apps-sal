@@ -5,16 +5,14 @@ readline = sys.stdin.readline
 
 def main():
     INF = float('inf')
-
     N = int(readline())
     conn = [[] for _ in range(N)]
     for _ in range(N - 1):
-        a, b = list(map(int, readline().split()))
+        (a, b) = list(map(int, readline().split()))
         a -= 1
         b -= 1
         conn[a].append(b)
         conn[b].append(a)
-
     dist = [INF] * N
     prev = [-1] * N
     dist[0] = 0
@@ -26,17 +24,14 @@ def main():
                 dist[y] = dist[x] + 1
                 prev[y] = x
                 q.append(y)
-
     path = deque([])
     t = N - 1
     while t >= 0:
         path.appendleft(t)
         t = prev[t]
-
-    a, b = path[dist[-1] // 2], path[dist[-1] // 2 + 1]
+    (a, b) = (path[dist[-1] // 2], path[dist[-1] // 2 + 1])
     conn[a].remove(b)
     conn[b].remove(a)
-
     blacks = 0
     visited_b = [False] * N
     q_b = deque([0])
@@ -48,7 +43,6 @@ def main():
             if not visited_b[y]:
                 visited_b[y] = True
                 q_b.append(y)
-
     whites = 0
     visited_w = [False] * N
     q_w = deque([N - 1])
@@ -60,8 +54,7 @@ def main():
             if not visited_w[y]:
                 visited_w[y] = True
                 q_w.append(y)
-
-    print(("Fennec" if blacks > whites else "Snuke"))
+    print('Fennec' if blacks > whites else 'Snuke')
 
 
 def __starting_point():

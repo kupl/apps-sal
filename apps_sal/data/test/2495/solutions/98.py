@@ -18,7 +18,6 @@ for i in range(1, n):
         is_plus = tmp > 0
     else:
         is_plus = tmp > 0
-
 ans2 = abs(a[0]) + 1
 if a[0] == 0:
     ans2 = 1
@@ -38,5 +37,4 @@ for i in range(1, n):
         is_plus = tmp > 0
     else:
         is_plus = tmp > 0
-
-print((min(ans1, ans2)))
+print(min(ans1, ans2))

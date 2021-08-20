@@ -1,4 +1,5 @@
 class Solution:
+
     def validMountainArray(self, A: List[int]) -> bool:
         climb = True
         cs = 0

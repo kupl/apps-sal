@@ -1,8 +1,5 @@
-#     Educational Codeforces Round 45 (Rated for Div. 2)
 import collections
 from functools import cmp_to_key
-#key=cmp_to_key(lambda x,y: 1 if x not in y else -1 )
-
 import sys
 
 
@@ -10,12 +7,9 @@ def getIntList():
     return list(map(int, input().split()))
 
 
-n, K = getIntList()
-
+(n, K) = getIntList()
 z = getIntList()
 z.sort()
-
-
 res = 0
 last = -1
 lastc = 0
@@ -29,7 +23,5 @@ for x in z:
         res += lastc
         last = x
         lastc = 1
-
 res += lastc
-
 print(res)

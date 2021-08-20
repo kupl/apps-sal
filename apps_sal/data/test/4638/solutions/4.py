@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 aa = list(map(int, input().split()))
 bb = list(map(int, input().split()))
 dp = [[0, c] for i in range(n)]

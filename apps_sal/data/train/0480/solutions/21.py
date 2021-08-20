@@ -1,7 +1,8 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         maxPos = min(steps, arrLen)
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         f = [[0] * maxPos for _ in range(steps + 1)]
         f[1][0] = 1
         f[1][1] = 1

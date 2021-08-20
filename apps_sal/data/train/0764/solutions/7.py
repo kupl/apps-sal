@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     a = list(input().split())
@@ -8,7 +7,6 @@ while t:
         for j in range(len(b)):
             if a[i] == b[j]:
                 count = count + 1
-
     if count > 1:
         print('similar')
     else:

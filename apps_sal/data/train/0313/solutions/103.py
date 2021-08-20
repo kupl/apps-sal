@@ -1,8 +1,9 @@
 class Solution:
+
     def checkL(self, arr, t, k):
         ans = 0
         temp = 0
-        for i, n in enumerate(arr):
+        for (i, n) in enumerate(arr):
             if t >= n:
                 temp += 1
             else:

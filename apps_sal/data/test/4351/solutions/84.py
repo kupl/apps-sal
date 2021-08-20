@@ -2,6 +2,6 @@ n = input()
 t = list(n)
 s = list(reversed(n))
 if s == t:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

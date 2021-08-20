@@ -1,5 +1,5 @@
 def reverse_letter(string):
-    s = ""
+    s = ''
     for c in string[::-1]:
         if c.isalpha():
             s += c

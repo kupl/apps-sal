@@ -2,11 +2,11 @@ import re
 
 
 def encoder(s):
-    d, out, it = {}, [], iter(s)
+    (d, out, it) = ({}, [], iter(s))
     for c in it:
-        i, k = 0, c
+        (i, k) = (0, c)
         while k in d:
-            i, c = d[k], next(it, '')
+            (i, c) = (d[k], next(it, ''))
             if not c:
                 break
             k += c
@@ -17,6 +17,6 @@ def encoder(s):
 
 def decoder(s):
     d = ['']
-    for m in re.finditer(r'(\d+)(\D?)', s):
+    for m in re.finditer('(\\d+)(\\D?)', s):
         d.append(d[int(m[1])] + m[2])
     return ''.join(d)

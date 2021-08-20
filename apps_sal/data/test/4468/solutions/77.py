@@ -1,9 +1,9 @@
-'''
+"""
 Created on 2020/08/16
 
 @author: harurun
-'''
-N, T = map(int, input().split())
+"""
+(N, T) = map(int, input().split())
 t = list(map(int, input().split()))
 ans = T
 s = t[0]

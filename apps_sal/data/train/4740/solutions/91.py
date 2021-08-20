@@ -6,5 +6,4 @@ def row_sum_odd_numbers(n):
     for idx in range(n):
         odd_numbers.append(odd_number)
         odd_number += 2
-
     return sum(odd_numbers)

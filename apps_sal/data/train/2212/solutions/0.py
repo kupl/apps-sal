@@ -7,7 +7,7 @@ def query(n, q):
     d = 2 * n - q
     while d % 2 == 0:
         d //= 2
-    return (n - d // 2)
+    return n - d // 2
 
 
 for qi in qis:

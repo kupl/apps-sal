@@ -1,9 +1,10 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         tree = collections.defaultdict(set)
         res = [0] * N
         count = [1] * N
-        for i, j in edges:
+        for (i, j) in edges:
             tree[i].add(j)
             tree[j].add(i)
 

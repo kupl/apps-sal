@@ -1,7 +1,3 @@
-# d_n= [C_m+A_n*B_m] for m in range()
-# A=[ ->> ]
-# B=[ <<- ]
-
 def intersection(p, q):
     return (q[1] - p[1]) / (p[0] - q[0])
 
@@ -9,15 +5,14 @@ def intersection(p, q):
 def tree_cutting(n, A, B):
     I = [[0, 0] for _ in range(n)]
     C = [0 for _ in range(n)]
-
     C[0] = 0
-    I[0][0] = -float("inf")
-    I[0][1] = float("inf")
+    I[0][0] = -float('inf')
+    I[0][1] = float('inf')
     C[1] = C[0] + A[1] * B[0]
     hull = [[B[0], C[0]], [B[1], C[1]]]
     I[0][1] = intersection(hull[-1], hull[-2])
     I[1][0] = I[0][1]
-    I[1][1] = float("inf")
+    I[1][1] = float('inf')
     curr = 1
     k = 0
     for i in range(2, n):
@@ -29,7 +24,6 @@ def tree_cutting(n, A, B):
                 break
         C[i] = hull[k][1] + A[i] * hull[k][0]
         p = [B[i], C[i]]
-
         while intersection(p, hull[-2]) <= intersection(hull[-1], hull[-2]):
             hull.pop()
             curr -= 1
@@ -40,9 +34,9 @@ def tree_cutting(n, A, B):
             I[curr][1] = intersection(hull[-1], hull[-2])
             curr += 1
             I[curr][0] = intersection(hull[-1], hull[-2])
-            I[curr][1] = +float("inf")
+            I[curr][1] = +float('inf')
         else:
-            I[curr][1] = +float("inf")
+            I[curr][1] = +float('inf')
     return C[n - 1]
 
 

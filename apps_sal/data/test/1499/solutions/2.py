@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [[0] * 4 for i in range(n)]
 for i in range(m):
     if i < 2 * n:
@@ -6,11 +6,10 @@ for i in range(m):
             a[i // 2][0] = i + 1
         else:
             a[i // 2][1] = i + 1
+    elif i % 2 == 0:
+        a[(i - 2 * n) // 2][2] = i + 1
     else:
-        if i % 2 == 0:
-            a[(i - 2 * n) // 2][2] = i + 1
-        else:
-            a[(i - 2 * n) // 2][3] = i + 1
+        a[(i - 2 * n) // 2][3] = i + 1
 j = 0
 while j < m:
     for i in range(n):

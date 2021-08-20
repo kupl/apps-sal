@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
         dp = [[0] * 201 for i in range(n)]
@@ -15,5 +16,5 @@ class Solution:
                         temp = temp + dp[mid][fuel - dis]
                 if start == finish:
                     temp = temp + 1
-                dp[start][fuel] = temp % (10**9 + 7)
+                dp[start][fuel] = temp % (10 ** 9 + 7)
         return dp[start0][fuel0]

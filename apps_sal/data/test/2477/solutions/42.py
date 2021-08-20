@@ -1,8 +1,6 @@
 import math
-
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 An = [int(i) for i in input().split()]
-
 left = 0
 right = max(An)
 
@@ -20,5 +18,4 @@ while right - left != 1:
         right = x
     else:
         left = x
-
 print(right)

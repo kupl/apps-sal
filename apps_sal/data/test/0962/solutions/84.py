@@ -1,12 +1,11 @@
 import sys
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 g = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = list(map(int, input().split()))
-    u, v = u - 1, v - 1
+    (u, v) = list(map(int, input().split()))
+    (u, v) = (u - 1, v - 1)
     g[u].append(v)
-
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def func(loop):
@@ -25,9 +24,9 @@ def func(loop):
             else:
                 ary = loop[j:i + 1]
             func(ary)
-    print((len(loop)))
+    print(len(loop))
     for x in loop:
-        print((x + 1))
+        print(x + 1)
     return
 
 
@@ -53,4 +52,4 @@ def dfs(v, par):
 while mi:
     v = mi.pop()
     dfs(v, [-1] * n)
-print((-1))
+print(-1)

@@ -1,7 +1,6 @@
 a = list(input())
 b = list(input())
 c = list(input())
-
 t = a.pop(0)
 l = 0
 while True:
@@ -17,5 +16,4 @@ while True:
         if len(c) == 0:
             break
         t = c.pop(0)
-
 print(t.upper())

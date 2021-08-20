@@ -1,12 +1,13 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         a = mat
-        m, n = len(a), len(a[0])
+        (m, n) = (len(a), len(a[0]))
 
         def hist(h):
             ret = [0] * n
             s = []
-            for i, x in enumerate(h):
+            for (i, x) in enumerate(h):
                 while s and h[s[-1]] >= x:
                     s.pop()
                 if s:

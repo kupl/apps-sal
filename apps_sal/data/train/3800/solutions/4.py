@@ -3,14 +3,14 @@ import re
 
 
 def spreadsheet(s):
-    if re.match(r"^R\d+C\d+$", s):
+    if re.match('^R\\d+C\\d+$', s):
         return convert_to_ss(s)
     else:
         return convert_to_rc(s)
 
 
 def convert_to_rc(s: str) -> str:
-    ind = re.search(r"\d", s).span()[0]
+    ind = re.search('\\d', s).span()[0]
     letters = s[:ind]
     nums = s[ind:]
     cols = 0
@@ -18,18 +18,18 @@ def convert_to_rc(s: str) -> str:
         if i != len(letters) - 1:
             cols += (string.ascii_uppercase.find(letters[i]) + 1) * 26 ** (len(letters) - i - 1)
         else:
-            cols += (string.ascii_uppercase.find(letters[i]) + 1)
-    return f"R{nums}C{cols}"
+            cols += string.ascii_uppercase.find(letters[i]) + 1
+    return f'R{nums}C{cols}'
 
 
 def convert_to_ss(s: str) -> str:
-    ind = s.find("C")
+    ind = s.find('C')
     rows = s[1:ind]
     cols = int(s[ind + 1:])
-    res_col = ""
+    res_col = ''
     while cols > 0:
-        cols, rem = cols // 26, cols % 26
-        if res_col and res_col[0] == "Z":
+        (cols, rem) = (cols // 26, cols % 26)
+        if res_col and res_col[0] == 'Z':
             if rem == 1:
                 break
             else:
@@ -37,4 +37,4 @@ def convert_to_ss(s: str) -> str:
         else:
             res_col = string.ascii_uppercase[rem - 1] + res_col
         print(cols, rem)
-    return f"{res_col}{rows}"
+    return f'{res_col}{rows}'

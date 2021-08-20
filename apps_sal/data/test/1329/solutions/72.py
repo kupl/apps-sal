@@ -6,11 +6,17 @@ import math
 import itertools
 import fractions
 import pprint
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 def conb(n, r):
@@ -43,7 +49,6 @@ d = defaultdict(int)
 for i in range(1, n + 1):
     for x in prime_factorize(i):
         d[x] += 1
-
 valist = list(d.values())
 c = [2, 4, 14, 24, 74]
 cnt = [0] * 5
@@ -58,7 +63,6 @@ for x in valist:
         cnt[1] += 1
     elif x >= 2:
         cnt[0] += 1
-# print(cnt)
 res = 0
 a = sum(cnt[1:])
 b = cnt[0]

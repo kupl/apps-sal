@@ -11,10 +11,9 @@ for _ in range(int(input())):
                 _max = 0
             _ones.append(_max)
         return max(_ones)
-
     a = list(map(int, input().split()))
     b = maxConsequtiveOnes(a)
-    if (b % 2 == 0):
-        print("No")
+    if b % 2 == 0:
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

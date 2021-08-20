@@ -1,7 +1,7 @@
 n = int(input())
 s = list(input())
 cur = 'X'
-start, end = 0, 0
+(start, end) = (0, 0)
 i = 0
 ans = 0
 while i < n:

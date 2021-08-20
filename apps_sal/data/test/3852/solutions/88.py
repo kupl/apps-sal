@@ -1,8 +1,6 @@
 def main():
-
     N = int(input())
     A = list(map(int, input().split()))
-
     ans = []
     if min(A) >= 0:
         v = float('-inf')
@@ -11,7 +9,6 @@ def main():
             if A[i] > v:
                 max_i = i
                 v = A[i]
-
         ans.append([max_i, 0])
         for i in range(1, N):
             ans.append([i - 1, i])
@@ -53,10 +50,9 @@ def main():
         ans.append([min_i, N - 1])
         for i in range(N - 2, -1, -1):
             ans.append([i + 1, i])
-
     print(len(ans))
-    for i, j in ans:
-        print(str(i + 1) + " " + str(j + 1))
+    for (i, j) in ans:
+        print(str(i + 1) + ' ' + str(j + 1))
 
 
 def __starting_point():

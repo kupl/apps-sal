@@ -1,7 +1,5 @@
-# cook your dish here
 n = int(input())
-
-while(n):
+while n:
     ls = input()
     flag1 = 0
     for i in range(1, len(ls)):
@@ -11,7 +9,7 @@ while(n):
             flag1 = 1
             break
     if flag1 == 0:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')
     n = n - 1

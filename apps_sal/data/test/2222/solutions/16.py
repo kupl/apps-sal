@@ -5,7 +5,6 @@ tree = [[] for i in range(n)]
 for i in range(n - 1):
     tree[parent[i]].append(i + 1)
 l = sum([1 for i in range(n) if len(tree[i]) == 0])
-
 l1 = [-1] * n
 for i in range(n - 1, -1, -1):
     if len(tree[i]) == 0:

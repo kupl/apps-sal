@@ -1,11 +1,11 @@
 from copy import copy
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**6)
-n, u, v = map(int, input().split())
-node = [[]for _ in range(n)]
+sys.setrecursionlimit(10 ** 6)
+(n, u, v) = map(int, input().split())
+node = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     node[a - 1].append(b - 1)
     node[b - 1].append(a - 1)
 
@@ -18,7 +18,7 @@ def dfs(i):
             dfs(x)
 
 
-inf = 10**9
+inf = 10 ** 9
 dis = [inf] * n
 dis[u - 1] = 0
 visited = [0] * n

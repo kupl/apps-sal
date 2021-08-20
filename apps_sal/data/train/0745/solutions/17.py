@@ -12,5 +12,5 @@ for I in range(t):
     for i in range(1, n + 1):
         ht = min(L[i], R[i])
         max_height = max(max_height, ht)
-    ans = sum(a) - max_height**2
+    ans = sum(a) - max_height ** 2
     print(ans)

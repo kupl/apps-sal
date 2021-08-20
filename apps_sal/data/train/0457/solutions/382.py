@@ -2,9 +2,9 @@ import math
 
 
 class Solution:
+
     def __init__(self):
         self.trellis = None
-    # O(S*n), O(S) for memoisation table
 
     def coinChange(self, coins: List[int], amount: int) -> int:
         if self.trellis == None:
@@ -12,7 +12,6 @@ class Solution:
             self.trellis[0] = 0
         if self.trellis[amount] != math.inf:
             return self.trellis[amount]
-
         minVal = math.inf
         for coin in coins:
             required = amount - coin

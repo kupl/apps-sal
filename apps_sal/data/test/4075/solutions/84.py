@@ -1,7 +1,4 @@
-#m = int(input())
-n, m = list(map(int, input().split()))
-#al = list(map(int, input().split()))
-#al=[list(input()) for i in range(n)]
+(n, m) = list(map(int, input().split()))
 switch = []
 kl = []
 for i in range(m):
@@ -9,16 +6,13 @@ for i in range(m):
     kl.append(temp[0])
     switch.append(temp[1:])
 pl = list(map(int, input().split()))
-# print(switch)
-
-pattern = [[0 for _ in range(n)] for _1 in range(2**n)]
-for i in range(2**n):
+pattern = [[0 for _ in range(n)] for _1 in range(2 ** n)]
+for i in range(2 ** n):
     for j in range(n):
-        if ((i >> j) & 1):  # 二進数iの下から数えてj桁目が1か否か
+        if i >> j & 1:
             pattern[i][j] = 1
-
 ans = 0
-for ptnum, spt in enumerate(pattern):
+for (ptnum, spt) in enumerate(pattern):
     islit = True
     for lightnum in range(m):
         count = 0

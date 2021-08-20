@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 arr = list(map(int, input().split()))
 summ = t
 for i in range(n - 1):

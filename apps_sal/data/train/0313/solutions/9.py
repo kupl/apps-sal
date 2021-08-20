@@ -1,11 +1,11 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         left = min(bloomDay)
         right = max(bloomDay)
         n = len(bloomDay)
         if m * k > n:
             return -1
-
         while left <= right:
             mid = (left + right) // 2
             c = 0

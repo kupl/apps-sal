@@ -8,7 +8,6 @@ def idx_cmb(n, r):
 def main():
     n = int(input())
     s_lst = [str(input()) for _ in range(n)]
-
     march = [0] * 5
     for i in range(n):
         s = s_lst[i]
@@ -22,7 +21,6 @@ def main():
             march[3] += 1
         elif s[0] == 'H':
             march[4] += 1
-
     idx_lst = idx_cmb(5, 3)
     x = 0
     for i in range(len(idx_lst)):
@@ -33,7 +31,6 @@ def main():
         number2 = march[idx2]
         number3 = march[idx3]
         x += number1 * number2 * number3
-
     print(x)
 
 

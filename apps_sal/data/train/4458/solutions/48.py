@@ -2,7 +2,7 @@ def time_correct(time):
     if not time:
         return time
     try:
-        hours, minutes, seconds = time.split(':')
+        (hours, minutes, seconds) = time.split(':')
     except ValueError:
         return None
     for time in (hours, minutes, seconds):

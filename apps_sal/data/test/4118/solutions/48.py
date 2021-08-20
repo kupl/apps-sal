@@ -1,5 +1,5 @@
 def resolve():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if 1 <= a <= 9 and 1 <= b <= 9:
         print(a * b)
     else:

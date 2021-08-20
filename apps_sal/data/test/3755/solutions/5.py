@@ -1,27 +1,23 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     N = int(input())
     A = list(map(int, input().split()))
-
     even = sum([max(A[i], 0) for i in range(0, N, 2)])
     odd = sum([max(A[i], 0) for i in range(1, N, 2)])
-
     if even == odd == 0:
         a = max(A)
         print(a)
-        print((N - 1))
+        print(N - 1)
         flg = 1
         for i in range(N - 1):
             if A[i] == a:
                 flg = 0
             if flg:
-                print((1))
+                print(1)
             else:
-                print((N - i))
+                print(N - i)
         return
-
     ans = []
     i = 0
     if odd > even:
@@ -30,10 +26,9 @@ def main():
             N -= 1
         ans.append(1)
         i = 1
-    else:
-        if N % 2 == 0:
-            ans.append(N)
-            N -= 1
+    elif N % 2 == 0:
+        ans.append(N)
+        N -= 1
     flg = 1
     while True:
         if flg:
@@ -59,8 +54,8 @@ def main():
                 break
     if ans[-1] == 3:
         ans.append(2)
-    print((max(odd, even)))
-    print((len(ans)))
+    print(max(odd, even))
+    print(len(ans))
     for x in ans:
         print(x)
 

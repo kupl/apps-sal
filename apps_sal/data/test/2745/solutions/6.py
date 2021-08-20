@@ -1,4 +1,5 @@
 class Solution:
+
     def findSubstring(self, s, words):
         """
         :type s: str
@@ -10,7 +11,6 @@ class Solution:
         lwords = n * lword
         if not s or not lwords:
             return
-
         res = []
         dic = {}
         for key in words:

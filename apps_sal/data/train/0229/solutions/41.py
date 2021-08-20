@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         A.sort()
         s = defaultdict(int)
@@ -13,11 +14,10 @@ class Solution:
                         del s[2 * a]
                 else:
                     s[a] += 1
+            elif a % 2 == 0 and a // 2 in s:
+                s[a // 2] -= 1
+                if not s[a // 2]:
+                    del s[a // 2]
             else:
-                if a % 2 == 0 and a // 2 in s:
-                    s[a // 2] -= 1
-                    if not s[a // 2]:
-                        del s[a // 2]
-                else:
-                    s[a] += 1
+                s[a] += 1
         return not s

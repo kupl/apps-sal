@@ -23,13 +23,13 @@ while t > 0:
         if n - k < m - k:
             j = k - 1
             flag = 0
-            while s - m >= 0 and j >= 0 and n - j - 1 >= 0:
+            while s - m >= 0 and j >= 0 and (n - j - 1 >= 0):
                 ways = ways + c(m - 1, j) * c(s - m, n - j - 1)
                 j -= 1
         else:
             j = k
             flag = 1
-            while s - m >= 0 and j < m and n - j - 1 >= 0:
+            while s - m >= 0 and j < m and (n - j - 1 >= 0):
                 ways = ways + c(m - 1, j) * c(s - m, n - j - 1)
                 j += 1
         p = ways / c(s - 1, n - 1)

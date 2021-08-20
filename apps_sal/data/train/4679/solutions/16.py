@@ -1,6 +1,6 @@
 def to_freud(sentence):
-    n = sentence.count(" ")
-    s = "sex"
+    n = sentence.count(' ')
+    s = 'sex'
     for i in range(0, n):
-        s += " sex"
+        s += ' sex'
     return s

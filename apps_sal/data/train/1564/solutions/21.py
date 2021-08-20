@@ -1,5 +1,4 @@
 import sys
-
 t = eval(input())
 for _ in range(t):
     s = list(map(str, sys.stdin.readline().split()))[0]

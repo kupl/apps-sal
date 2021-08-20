@@ -8,12 +8,10 @@ for i in range(N):
         minus = 1 - minus
     elif A[i] == 0:
         zero = True
-
 A.sort(reverse=True)
 if zero == True:
-    print((sum(A)))
+    print(sum(A))
+elif minus == 0:
+    print(sum(A))
 else:
-    if minus == 0:
-        print((sum(A)))
-    else:
-        print((sum(A[0:N - 1]) - A[-1]))
+    print(sum(A[0:N - 1]) - A[-1])

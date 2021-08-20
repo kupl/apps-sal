@@ -1,5 +1,5 @@
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     a = [0] + list(map(int, input().split())) + [100000]
     d = {}
     for i in range(1, n):

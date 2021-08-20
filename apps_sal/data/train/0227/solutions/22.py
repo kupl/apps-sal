@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, a: List[int], K: int) -> int:
         i = 0
         j = 0

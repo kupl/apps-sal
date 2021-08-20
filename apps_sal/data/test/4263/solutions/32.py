@@ -1,7 +1,6 @@
 S = input()
-
 acgt = ['A', 'C', 'G', 'T']
-ans, cnt = 0, 0
+(ans, cnt) = (0, 0)
 for i in range(len(S)):
     if S[i] in acgt:
         cnt += 1

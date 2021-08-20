@@ -6,6 +6,5 @@ try:
         for i in range(len(m)):
             l += str(int(m[i]) - 2)
         print(l)
-
 except:
     pass

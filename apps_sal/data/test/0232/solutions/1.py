@@ -1,12 +1,8 @@
 from collections import Counter
-
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 ns = list(map(int, input().split()))
 ms = list(map(int, input().split()))
-
-target = Counter({i: m for i, m in enumerate(ms, 1) if m != 0})
+target = Counter({i: m for (i, m) in enumerate(ms, 1) if m != 0})
 
 
 def check():

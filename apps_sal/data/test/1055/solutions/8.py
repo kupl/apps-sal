@@ -6,6 +6,5 @@ def cek(arr):
 
 
 n = int(input())
-
 seq = list(map(int, input().split()))
 print(cek(seq))

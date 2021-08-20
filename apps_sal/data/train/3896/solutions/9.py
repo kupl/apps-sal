@@ -6,4 +6,4 @@ def solution(number):
             multiples.append(i)
     for x in multiples:
         sum += x
-    return(sum)
+    return sum

@@ -6,5 +6,5 @@ def lose_weight(gender, weight, duration):
     if duration <= 0:
         return 'Invalid duration'
     factor = 0.985 if gender == 'M' else 0.988
-    expected_weight = factor**duration * weight
+    expected_weight = factor ** duration * weight
     return round(expected_weight, 1)

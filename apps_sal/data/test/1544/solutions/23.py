@@ -3,7 +3,7 @@ ans = 0
 t = n + 4
 w = 5
 q = 1
-while (w > 0):
+while w > 0:
     q *= t
     t -= 1
     w -= 1

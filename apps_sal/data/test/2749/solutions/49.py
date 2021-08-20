@@ -1,9 +1,7 @@
 from collections import deque
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 a = list(map(int, input().split()))
-
-# print(a)
 j = 1
 for i in range(H):
     x = deque()
@@ -16,5 +14,5 @@ for i in range(H):
             x.appendleft(str(j))
         if a[j - 1] == 0:
             j += 1
-    A = " ".join(list(x))
+    A = ' '.join(list(x))
     print(A)

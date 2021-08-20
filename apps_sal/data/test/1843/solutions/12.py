@@ -1,6 +1,3 @@
-# import sys
-# sys.stdin = open('cf598a.in')
-
 def smaller_power(n):
     cpow = -1
     while n:
@@ -10,7 +7,6 @@ def smaller_power(n):
 
 
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     sum_full = n * (n + 1) // 2

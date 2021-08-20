@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 sh = sorted([int(input()) for i in range(n)], reverse=True)
 sumh = sum(sh)
 

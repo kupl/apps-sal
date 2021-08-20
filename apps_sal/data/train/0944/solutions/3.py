@@ -35,13 +35,10 @@ while t != 0:
                 if j % 2 == 0:
                     if (eve[sec - 1] - eve[fir]) % 2 == 0:
                         jk = su[sec - 1] - su[fir]
-
                         if jk > ans:
                             ans = jk
-                else:
-                    if (odd[sec - 1] - odd[fir]) % 2 != 0 and (odd[sec - 1] != 0 or odd[fir] != 0):
-                        jk = su[sec - 1] - su[fir]
-
-                        if jk > ans:
-                            ans = jk
+                elif (odd[sec - 1] - odd[fir]) % 2 != 0 and (odd[sec - 1] != 0 or odd[fir] != 0):
+                    jk = su[sec - 1] - su[fir]
+                    if jk > ans:
+                        ans = jk
     print(ans)

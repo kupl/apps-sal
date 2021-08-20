@@ -6,14 +6,14 @@ def f(k, c):
                 e += 1
             else:
                 s += 1
-    #print(k, c, e,s)
     return abs(e - s)
 
 
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, k = read()
+(n, k) = read()
 a = list(read())
 mx = 0
 for c in range(0, k):

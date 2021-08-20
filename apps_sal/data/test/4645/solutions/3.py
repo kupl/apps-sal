@@ -5,7 +5,7 @@ for aoaoao in range(t):
         print(1)
     elif n < 5:
         if n == 4:
-            print("3 1 4 2")
+            print('3 1 4 2')
         else:
             print(-1)
     else:
@@ -17,10 +17,10 @@ for aoaoao in range(t):
         a[4] = [1, 3, 5, 9, 7, 4, 2, 6, 8]
         f = -1
         for x in a[n % 5]:
-            print(x, end=" ")
+            print(x, end=' ')
         f = max(a[n % 5])
         while f < n:
             for x in a[0]:
-                print(f + x, end=" ")
+                print(f + x, end=' ')
             f += 5
         print()

@@ -12,7 +12,7 @@ class Datamining:
             numerator += (M1[i] - x_mean) * (M2[i] - y_mean)
             denominator += (M1[i] - x_mean) ** 2
         self.n = numerator / denominator
-        self.o = y_mean - (self.n * x_mean)
+        self.o = y_mean - self.n * x_mean
 
     def predict(self, x):
         return x * self.n + self.o

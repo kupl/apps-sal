@@ -1,4 +1,5 @@
 class Solution:
+
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         mod = 10 ** 9 + 7
         A.sort()

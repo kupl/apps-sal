@@ -1,8 +1,8 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 A = []
 B = []
 for i in range(a):
-    q, w = map(int, input().split())
+    (q, w) = map(int, input().split())
     if w < 0:
         q = max(q, -w)
         B.append([q + w, q, w])

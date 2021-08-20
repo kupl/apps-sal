@@ -1,5 +1,7 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
+
         @lru_cache(None)
         def select(n, r):
             if r > n:
@@ -35,14 +37,13 @@ class Solution:
                 cnt += n % 2
                 n = n // 2
             return cnt
-
         k = len(balls)
         tot = sum(balls)
         k2 = 1 << k
         valid = 0
         for i in range(k2):
             for j in range(k2):
-                if (i | j != k2 - 1) or numsplits(i) != numsplits(j):
+                if i | j != k2 - 1 or numsplits(i) != numsplits(j):
                     continue
                 valid += dputil(i, j, k - 1, 0)
         return float(valid) / float(select(tot, tot // 2))

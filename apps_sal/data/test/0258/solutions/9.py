@@ -11,15 +11,13 @@ for i in range(n // 2, n):
         right += 1
     else:
         diff -= int(ticket[i])
-
 if left > right:
     temp = left
     left = right
     right = temp
     diff = -diff
-
-bad = ((right - left) // 2) * 9
+bad = (right - left) // 2 * 9
 if diff == bad:
-    print("Bicarp")
+    print('Bicarp')
 else:
-    print("Monocarp")
+    print('Monocarp')

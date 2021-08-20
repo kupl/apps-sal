@@ -1,7 +1,7 @@
 def cal(s):
     ts = 0
     for i in s:
-        c, t = i, 0
+        (c, t) = (i, 0)
         if '/' in i:
             f = i.find('/')
             c = i.replace(i[f - 1:f + 1], 'X')
@@ -22,10 +22,9 @@ def bowling_score(frames):
             r.append(frames[i])
             continue
         elif frames[i][0] == 'X':
-            r.append(''.join(frames[i: i + 3])[:3])
+            r.append(''.join(frames[i:i + 3])[:3])
         elif '/' in frames[i]:
-            r.append(''.join(frames[i: i + 2])[:3])
-
+            r.append(''.join(frames[i:i + 2])[:3])
         else:
             r.append(frames[i])
     return cal(r)

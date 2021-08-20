@@ -10,7 +10,6 @@ def ans():
         product = product * num
         if product > 10 ** 18:
             return print(-1)
-
     print(product)
 
 

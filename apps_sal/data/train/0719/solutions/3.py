@@ -23,9 +23,8 @@ distances = []
 numLines = int(input())
 for each in range(0, numLines):
     line = input()
-    result = [int(x) for x in re.findall('\d+', line)]
+    result = [int(x) for x in re.findall('\\d+', line)]
     if result != []:
         juices.append(result[0])
         distances.append(result[1])
-
 print(isCirlePossible(juices, distances))

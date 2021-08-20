@@ -20,5 +20,5 @@ for i in range(1, sqrt_n):
             if d != 1:
                 continue
             else:
-                res = res + (n // (i * i + j * j))
+                res = res + n // (i * i + j * j)
 print(res)

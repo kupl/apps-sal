@@ -1,4 +1,5 @@
 class Solution:
+
     def countSegments(self, s):
         """
         :type s: str
@@ -12,7 +13,7 @@ class Solution:
             if seen_character and char == ' ':
                 count += 1
                 seen_character = False
-            elif seen_character == False and char != " ":
+            elif seen_character == False and char != ' ':
                 seen_character = True
         if seen_character:
             count += 1

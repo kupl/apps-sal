@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         queue = [[n, 0]]
         seen = set()
-        for i, d in queue:
+        for (i, d) in queue:
             if i == 0:
                 return d
             seen.add(i)

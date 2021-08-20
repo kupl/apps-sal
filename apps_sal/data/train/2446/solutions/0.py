@@ -1,4 +1,5 @@
 class Solution:
+
     def findLHS(self, nums):
         """
         :type nums: List[int]
@@ -9,5 +10,4 @@ class Solution:
         for i in count:
             if i + 1 in count:
                 ret = max(ret, count[i] + count[i + 1])
-
         return ret

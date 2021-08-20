@@ -9,9 +9,8 @@ for i in range(q):
             break
         if i == 0:
             area = a[i] * a[-i - 1]
-        else:
-            if area != a[i] * a[-i - 1]:
-                print('NO')
-                break
+        elif area != a[i] * a[-i - 1]:
+            print('NO')
+            break
     else:
         print('YES')

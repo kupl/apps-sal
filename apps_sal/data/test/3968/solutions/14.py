@@ -9,23 +9,12 @@ for i in range(q):
             k=bisect.bisect_right(price,m,0,shop)
             print(len(price)-len(price[k:]))
 """
-"""
-import math
-n,k=map(int,input().split())
-lis=[]
-for i in range(n):
-            p,t=map(int,input().split())
-            lis.append([p,t])
-lis=sorted(lis,key=lambda x,y:(cmp(x[0],y[0]),cmp(y[1],x[1])),reverse=True)
-m=lis[k-1]
-print(lis.count(m))
-print(lis)
-"""
+'\nimport math\nn,k=map(int,input().split())\nlis=[]\nfor i in range(n):\n            p,t=map(int,input().split())\n            lis.append([p,t])\nlis=sorted(lis,key=lambda x,y:(cmp(x[0],y[0]),cmp(y[1],x[1])),reverse=True)\nm=lis[k-1]\nprint(lis.count(m))\nprint(lis)\n'
 n = int(input())
 lis = input().split()
-twos = lis.count("2")
+twos = lis.count('2')
 ones = n - twos
-if(twos == 0 or ones == 0):
+if twos == 0 or ones == 0:
     print(' '.join(lis))
 else:
-    print("2 1" + " 2" * (twos - 1) + " 1" * (ones - 1))
+    print('2 1' + ' 2' * (twos - 1) + ' 1' * (ones - 1))

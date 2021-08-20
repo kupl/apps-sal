@@ -1,8 +1,8 @@
 import collections
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 rs = []
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     rs.append((u - 1, v - 1))
 d = dict()
 for v in range(n):

@@ -1,7 +1,7 @@
 class Solution:
-    def shipWithinDays(self, weights: List[int], D: int) -> int:
-        l, r = max(weights), sum(weights)
 
+    def shipWithinDays(self, weights: List[int], D: int) -> int:
+        (l, r) = (max(weights), sum(weights))
         while l < r:
             mid = (r - l) // 2 + l
             day = self.weightWhetherWork(weights, mid)

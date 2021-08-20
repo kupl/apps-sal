@@ -1,7 +1,7 @@
 n = int(input())
-hlists, alists = list(), list()
+(hlists, alists) = (list(), list())
 for i in range(n):
-    h, a = input().split(' ')
+    (h, a) = input().split(' ')
     hlists.append(h)
     alists.append(a)
-print(sum(alists.count(e) for e in hlists))
+print(sum((alists.count(e) for e in hlists)))

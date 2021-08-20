@@ -2,9 +2,9 @@ from itertools import permutations
 
 
 def rearranger(k, *args):
-    min_d = [10e50, None]
+    min_d = [1e+51, None]
     for p in permutations(args):
-        n = int(''.join(str(x) for x in p))
+        n = int(''.join((str(x) for x in p)))
         if n % k == 0:
             if n < min_d[0]:
                 min_d = [n, set({', '.join(map(str, p))})]

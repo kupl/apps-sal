@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()))
-c, m, l, r = 0, 0, [], 0
+(n, k) = list(map(int, input().split()))
+(c, m, l, r) = (0, 0, [], 0)
 for e in [int(i) for i in input().split()]:
     d = m - c * (n - c - 1) * e
     r += 1

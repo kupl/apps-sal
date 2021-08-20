@@ -3,4 +3,4 @@ def directions(goal):
     g = [0, 0]
     for d in goal:
         g[MOVES[d][0]] += MOVES[d][1]
-    return ["SN"[g[0] >= 0]] * abs(g[0]) + ["WE"[g[1] >= 0]] * abs(g[1])
+    return ['SN'[g[0] >= 0]] * abs(g[0]) + ['WE'[g[1] >= 0]] * abs(g[1])

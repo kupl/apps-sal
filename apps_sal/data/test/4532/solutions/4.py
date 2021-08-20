@@ -8,15 +8,15 @@ for you in range(t):
     li = [int(i) for i in l]
     maxa = []
     for i in li:
-        if(i % k):
-            z = k - (i % k)
-            if(z in hashi):
+        if i % k:
+            z = k - i % k
+            if z in hashi:
                 hashi[z] += 1
             else:
                 hashi[z] = 1
     for i in hashi:
         maxa.append((hashi[i] - 1) * k + i)
-    if(maxa == []):
+    if maxa == []:
         print(0)
         continue
     print(max(maxa) + 1)

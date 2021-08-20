@@ -6,7 +6,7 @@ def num_primorial(n):
     from functools import reduce
     lst = []
     i = 2
-    while (len(lst) != n):
+    while len(lst) != n:
         for j in range(2, i):
             if i % j == 0:
                 break

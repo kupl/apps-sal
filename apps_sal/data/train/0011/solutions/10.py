@@ -1,7 +1,5 @@
 t = int(input())
-
 for _ in range(0, t):
-
     a = list(input())
     nowx = 0
     nowy = 0
@@ -18,13 +16,11 @@ for _ in range(0, t):
     widthd = 0
     widtha = 0
     for i in range(0, len(a)):
-
         if a[i] == 'W':
             nowy += 1
             if nowy >= maxy:
                 maxy = nowy
                 tmaxy = i
-
         elif a[i] == 'S':
             nowy -= 1
             if nowy <= miny:
@@ -40,13 +36,12 @@ for _ in range(0, t):
             if nowx <= minx:
                 minx = nowx
                 tminx = i
-
         highw = max(highw, nowy - miny)
         highs = max(highs, maxy - nowy)
         widthd = max(widthd, nowx - minx)
         widtha = max(widtha, maxx - nowx)
     y1 = max(highw, highs)
-    y2 = max(highw != 0 or highs != 0, y1 - ((highw != highs)))
+    y2 = max(highw != 0 or highs != 0, y1 - (highw != highs))
     x1 = max(widthd, widtha)
-    x2 = max(widthd != 0 or widtha != 0, x1 - ((widthd != widtha)))
+    x2 = max(widthd != 0 or widtha != 0, x1 - (widthd != widtha))
     print(min((y1 + 1) * (x2 + 1), (1 + y2) * (x1 + 1)))

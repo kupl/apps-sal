@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -43,13 +51,13 @@ def solve():
     b = []
     c = []
     for _ in range(n):
-        x, y, z = LI()
+        (x, y, z) = LI()
         a.append(x)
         b.append(y)
         c.append(z)
     v = [[] for i in range(n)]
     for _ in range(n - 1):
-        x, y = LI()
+        (x, y) = LI()
         x -= 1
         y -= 1
         v[x].append(y)
@@ -76,7 +84,7 @@ def solve():
                 q.append(y)
                 q2.append((x, y))
     while q2:
-        x, y = q2.pop()
+        (x, y) = q2.pop()
         p[x][0] += p[y][0]
         p[x][1] += p[y][1]
         m = min(p[x])
@@ -85,8 +93,6 @@ def solve():
         p[x][1] -= m
     print(ans * 2)
     return
-
-# Solve
 
 
 def __starting_point():

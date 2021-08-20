@@ -4,11 +4,10 @@ class Solution:
         return interval_2[0] <= interval_1[0] and interval_2[1] >= interval_1[1]
 
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
-
         i = 0
-        while (i < len(intervals)):
+        while i < len(intervals):
             j = 0
-            while (j < len(intervals)):
+            while j < len(intervals):
                 print((len(intervals), i, j))
                 if j == i or intervals[j][0] > intervals[i][0]:
                     j += 1
@@ -21,5 +20,4 @@ class Solution:
                     j += 1
                     continue
             i += 1
-
         return len(intervals)

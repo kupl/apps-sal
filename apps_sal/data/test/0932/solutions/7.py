@@ -1,8 +1,8 @@
-'''
+"""
 Created on 11-Nov-2014
 
 @author: akash
-'''
+"""
 
 
 def transform(a, n, m):
@@ -52,16 +52,15 @@ for i in range(n):
     lst = line.split()
     for j in range(m):
         inp[i][j] = True if int(lst[j]) == 1 else False
-
 mat = transform(inp, n, m)
 if isvlid(inp, mat, m, n):
-    print("YES")
+    print('YES')
     for i in range(n):
         for j in range(m):
             if mat[i][j]:
-                print("1", end=" ")
+                print('1', end=' ')
             else:
-                print("0", end=" ")
+                print('0', end=' ')
         print()
 else:
-    print("NO")
+    print('NO')

@@ -11,7 +11,7 @@ for _ in range(t):
     l = list(map(int, input().split()))
     l = list(set(l))
     n = len(l)
-    if(len(l) == 1):
+    if len(l) == 1:
         print(l[0] * 2)
         continue
     p = [0 for x in range(n)]
@@ -23,15 +23,12 @@ for _ in range(t):
     s[n - 1] = l[n - 1]
     for i in range(n - 2, -1, -1):
         s[i] = gcd(l[i], s[i + 1])
-    # print(p)
-    # print(s)
     for i in range(n):
-        if(i == 0):
+        if i == 0:
             ans = s[i + 1] + l[0]
-        elif(i == n - 1):
+        elif i == n - 1:
             ans = p[n - 2] + l[n - 1]
         else:
             ans = gcd(p[i - 1], s[i + 1]) + l[i]
-        # print(ans)
         ans1 = max(ans1, ans)
     print(ans1)

@@ -1,7 +1,6 @@
 import re
 from functools import reduce
-
-HH_MM_SS_PATTERN = re.compile(r'\A(\d\d):([0-5]\d):([0-5]\d)\Z')
+HH_MM_SS_PATTERN = re.compile('\\A(\\d\\d):([0-5]\\d):([0-5]\\d)\\Z')
 
 
 def to_seconds(time):

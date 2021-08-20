@@ -5,7 +5,5 @@ def sum_str(a, b):
         b = 0
     a = int(a)
     b = int(b)
-
     c = a + b
-
     return str(c)

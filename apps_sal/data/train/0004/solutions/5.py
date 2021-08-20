@@ -7,7 +7,7 @@ for _ in range(t):
         pos[a[i]] = i
     ans = [-1 for i in range(n)]
     ans[0] = 1
-    l, r = pos[1], pos[1]
+    (l, r) = (pos[1], pos[1])
     for i in range(2, n + 1):
         l = min(l, pos[i])
         r = max(r, pos[i])
@@ -15,4 +15,4 @@ for _ in range(t):
             ans[i - 1] = 1
         else:
             ans[i - 1] = 0
-    print("".join(map(str, ans)))
+    print(''.join(map(str, ans)))

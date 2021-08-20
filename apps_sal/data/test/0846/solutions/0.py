@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 b = list(map(int, input().split()))
 ans = [-1] * 101
 for bb in b:

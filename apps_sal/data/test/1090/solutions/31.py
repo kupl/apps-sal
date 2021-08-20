@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import sys
 import re
 from collections import deque, defaultdict
@@ -18,11 +17,9 @@ def solve(S, N, K, LR):
         if prev is None:
             prev = (s, i)
             continue
-
         if prev[0] == s:
             continue
-
-        happy += (i - 1) - prev[1]
+        happy += i - 1 - prev[1]
         if prev[0] == LR:
             if prev[1] == 0 and i - 1 == N - 1:
                 pass
@@ -31,25 +28,17 @@ def solve(S, N, K, LR):
             else:
                 two += 1
         prev = (s, i)
-
     spans = [2] * two + [1] * one
     if spans:
         happy += sum(spans[:min(K, len(spans))])
-
     return happy
 
 
 def main():
     input = sys.stdin.readline
-    #N, M = map(int, input().split())
-    #N, K = map(int, input().split())
-    #ps = list(map(int, input().split()))
-
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     S = input().strip()
-
-    S += 'D'  # dummy
-
+    S += 'D'
     happy = max([solve(S, N, K, 'L'), solve(S, N, K, 'R')])
     print(happy)
 

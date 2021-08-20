@@ -1,10 +1,11 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         res = 0
         for i in range(len(mat)):
             for j in range(len(mat[0])):
-                if mat[i][j] == 1:  # this could be a top-left
+                if mat[i][j] == 1:
                     right_edge = n
                     for res_i in range(i, m):
                         if mat[res_i][j] == 0:

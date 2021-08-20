@@ -1,4 +1,3 @@
-
 def find_num(n):
     c = 0
     k = -1

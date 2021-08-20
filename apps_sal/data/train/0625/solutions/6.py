@@ -6,13 +6,12 @@ def solve(n, l):
     cumSum = 0
     for i in range(n):
         cumSum = cumSum + l[i]
-        d[((cumSum % k) + k) % k] = d[((cumSum % k) + k) % k] + 1
+        d[(cumSum % k + k) % k] = d[(cumSum % k + k) % k] + 1
     result = 0
     for i in range(k):
-        if (d[i] > 1):
-            result = result + (d[i] * (d[i] - 1)) // 2
+        if d[i] > 1:
+            result = result + d[i] * (d[i] - 1) // 2
     result = result + d[0]
-
     return result
 
 

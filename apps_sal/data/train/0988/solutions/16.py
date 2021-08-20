@@ -5,7 +5,7 @@ for _ in range(int(input())):
     for i in range(32):
         c = 0
         for x in l:
-            if x & (1 << i):
+            if x & 1 << i:
                 c += 1
         if c > n // 2:
             ans |= 1 << i

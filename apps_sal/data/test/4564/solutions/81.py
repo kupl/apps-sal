@@ -1,9 +1,9 @@
 S = list(input())
-ans = "yes"
+ans = 'yes'
 for i in range(len(S)):
     ch = S[i]
-    S[i] = "-1"
+    S[i] = '-1'
     if ch in S:
-        ans = "no"
+        ans = 'no'
         break
 print(ans)

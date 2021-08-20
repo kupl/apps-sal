@@ -1,9 +1,10 @@
-'''
+"""
 https://leetcode.com/problems/continuous-subarray-sum/
-'''
+"""
 
 
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         d = {0: 1}
         runningSum = 0

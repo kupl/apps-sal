@@ -1,5 +1,5 @@
 import itertools as it
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 d = []
 for i in range(n):
     d.append(input())
@@ -18,7 +18,7 @@ for i in z:
     for j in p:
         cur = q[j]
         st = [st[0] + cur[0], st[1] + cur[1]]
-        if st[0] < 0 or st[0] >= n or st[1] < 0 or st[1] >= m or d[st[0]][st[1]] == '#':
+        if st[0] < 0 or st[0] >= n or st[1] < 0 or (st[1] >= m) or (d[st[0]][st[1]] == '#'):
             break
         if st == et:
             break

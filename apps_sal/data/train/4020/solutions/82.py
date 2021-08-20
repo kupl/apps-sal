@@ -3,5 +3,4 @@ def validate_hello(greetings):
     for i in lista:
         if i.lower() in greetings.lower():
             return True
-
     return False

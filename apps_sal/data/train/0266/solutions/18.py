@@ -1,4 +1,5 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         characters = []
         possibleSplits = 0

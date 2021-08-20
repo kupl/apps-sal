@@ -1,11 +1,10 @@
 import sys
 readline = sys.stdin.readline
-
 T = int(readline())
 MOD = 998244353
 Ans = [None] * T
 for qu in range(T):
-    N, K = map(int, readline().split())
+    (N, K) = map(int, readline().split())
     A = [0] + list(map(int, readline().split())) + [0]
     B = list(map(int, readline().split()))
     C = [None] * (N + 1)

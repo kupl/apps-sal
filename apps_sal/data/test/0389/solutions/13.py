@@ -5,7 +5,7 @@ import fractions
 def pFactors(n):
     """Finds the prime factors of 'n'"""
     from math import sqrt
-    pFact, limit, check, num = [], int(sqrt(n)) + 1, 2, n
+    (pFact, limit, check, num) = ([], int(sqrt(n)) + 1, 2, n)
     if n == 1:
         return []
     for check in range(2, limit):
@@ -18,7 +18,7 @@ def pFactors(n):
 
 
 def solve():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a == b:
         print(0)
         return
@@ -45,7 +45,6 @@ def solve():
     for val in bf:
         bres *= val
     if ares != a or bres != b:
-        #print(ares, bres)
         print(-1)
         return
     print(res)

@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-e = set(tuple(map(int, input().split())) for _ in range(m))
+(n, m) = map(int, input().split())
+e = set((tuple(map(int, input().split())) for _ in range(m)))
 a = set(range(1, n + 1))
 q = []
 r = 0

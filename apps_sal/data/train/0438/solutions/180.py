@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n, m):
         self.p = [i for i in range(n + 1)]
         self.c = [0 for _ in range(n + 1)]
@@ -6,14 +7,13 @@ class UF:
         self.m = m
 
     def union(self, i, j):
-        pi, pj = self.find(i), self.find(j)
+        (pi, pj) = (self.find(i), self.find(j))
         if pi != pj:
             self.p[pj] = pi
             if self.c[pj] == self.m:
                 self.m_cnt -= 1
             if self.c[pi] == self.m:
                 self.m_cnt -= 1
-            #self.c[pj] += self.c[pi]
             self.c[pi] += self.c[pj]
             if self.c[pi] == self.m:
                 self.m_cnt += 1
@@ -30,11 +30,12 @@ class UF:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UF(n, m)
         ans = -1
-        for i, num in enumerate(arr, 1):
+        for (i, num) in enumerate(arr, 1):
             uf.mark(num)
             if num - 1 >= 1 and uf.c[num - 1]:
                 uf.union(num - 1, num)

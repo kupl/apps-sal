@@ -1,4 +1,5 @@
 class Solution:
+
     def flipgame(self, fronts: List[int], backs: List[int]) -> int:
         N = len(fronts)
         impossible = set([fronts[i] for i in range(N) if fronts[i] == backs[i]])

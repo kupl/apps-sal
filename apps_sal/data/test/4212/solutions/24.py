@@ -9,17 +9,16 @@ def backtrack(nums, N, cur_state, result):
 
 
 def solve():
-    N, M, Q = [int(i) for i in input().split()]
+    (N, M, Q) = [int(i) for i in input().split()]
     quads = []
     for i in range(Q):
         quads.append([int(i) for i in input().split()])
     candidates = []
     backtrack(list(range(1, M + 1)), N, [], candidates)
-
     ans = 0
     for candidate in candidates:
         score = 0
-        for a, b, c, d in quads:
+        for (a, b, c, d) in quads:
             if candidate[b - 1] - candidate[a - 1] == c:
                 score += d
         ans = max(score, ans)

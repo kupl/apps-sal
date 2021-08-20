@@ -1,9 +1,7 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 ans = [0 for i in range(8)]
 rate_3200 = 0
-
 for i in l:
     if 1 <= i <= 399:
         ans[0] += 1
@@ -23,10 +21,9 @@ for i in l:
         ans[7] += 1
     elif 3200 <= i:
         rate_3200 += 1
-
 if rate_3200 == 0:
     num = 8 - ans.count(0)
-    print(("{} {}".format(num, num)))
+    print('{} {}'.format(num, num))
 else:
     count_0 = ans.count(0)
     if count_0 == 8:
@@ -35,4 +32,4 @@ else:
     else:
         min_num = 8 - count_0
         max_num = 8 - count_0 + rate_3200
-    print(("{} {}".format(min_num, max_num)))
+    print('{} {}'.format(min_num, max_num))

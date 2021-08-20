@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 d = 1073741824
 p = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 t = [{} for i in range(101)]
@@ -28,5 +28,4 @@ for i in range(1, a + 1):
                     y = y * (q.get(x, 0) + t[k].get(x, 0) + 1)
                 ans[ijk] = y
                 s += y
-
 print(s)

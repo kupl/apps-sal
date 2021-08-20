@@ -1,10 +1,10 @@
 s = input()
-a = ""
+a = ''
 for i in s:
     if a.find(i) == -1:
         a += i
     else:
-        print("no")
+        print('no')
         break
 else:
-    print("yes")
+    print('yes')

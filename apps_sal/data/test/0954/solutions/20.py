@@ -1,7 +1,5 @@
 s = input()
-
 n = len(s)
-
 i = 0
 a = []
 while i < 50:

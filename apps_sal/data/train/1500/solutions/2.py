@@ -1,14 +1,12 @@
-# cook your dish here
 def F(S):
     balance = 0
     max_balance = 0
     for i in S:
-        if (i == '('):
+        if i == '(':
             balance += 1
-        elif(i == ')'):
+        elif i == ')':
             balance -= 1
         max_balance = max(max_balance, balance)
-
     return max_balance
 
 

@@ -1,8 +1,6 @@
-
 t = int(input())
-
 for i in range(t):
-    n, p, k = list(map(int, input().split()))
+    (n, p, k) = list(map(int, input().split()))
     goods = list(map(int, input().split()))
     goods.sort()
     if goods[0] > p:
@@ -20,7 +18,7 @@ for i in range(t):
             even_index_sums.append(even_index_sums[-1] + goods[i])
         else:
             odd_index_sums.append(odd_index_sums[-1] + goods[i])
-    while (lo < hi - 1):
+    while lo < hi - 1:
         mid = lo + (hi - lo) // 2
         if mid % 2 == 0:
             cost = even_index_sums[mid // 2]

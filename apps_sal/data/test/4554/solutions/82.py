@@ -1,4 +1,4 @@
-W, a, b = map(int, input().split())
+(W, a, b) = map(int, input().split())
 ans = 0
 if a + W < b:
     ans = b - (a + W)

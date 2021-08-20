@@ -1,9 +1,9 @@
 from bisect import bisect_right
 from bisect import bisect_left
-H, W, N = list(map(int, input().split()))
+(H, W, N) = list(map(int, input().split()))
 matrix = []
 for _ in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     matrix.append([x, y])
@@ -15,15 +15,14 @@ for l in matrix:
         for y_r in [-2, -1, 0]:
             nowx = l[0] + x_r
             nowy = l[1] + y_r
-            if nowx < 0 or nowy < 0 or nowx + 2 >= H or nowy + 2 >= W:
+            if nowx < 0 or nowy < 0 or nowx + 2 >= H or (nowy + 2 >= W):
                 continue
-            # ここで起点(左上)nowx, nowy として　 9マスに着目する
             name = str(nowx) + ' ' + str(nowy)
             try:
                 cand[name] += 1
             except:
                 cand[name] = 1
-tmp = ((H - 2) * (W - 2))
+tmp = (H - 2) * (W - 2)
 for x in list(cand.values()):
     ans[x] += 1
     tmp -= 1

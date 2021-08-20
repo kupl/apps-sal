@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
     s = input()
@@ -13,4 +12,4 @@ for _ in range(int(input())):
     su = sum
     for i in range(26):
         su = su // (math.factorial(a[i]) * math.factorial(b[i]))
-    print(su % (10**9 + 7))
+    print(su % (10 ** 9 + 7))

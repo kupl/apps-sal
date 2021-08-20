@@ -1,8 +1,7 @@
-# cook your dish here
 t = int(input())
 while t:
     t -= 1
-    b, k = list(map(int, input().split()))
+    (b, k) = list(map(int, input().split()))
     x = bin(b)[2:]
     n = len(x)
     for j in range(k):
@@ -13,11 +12,11 @@ while t:
                 if i <= n:
                     r = n - i + 1
                     if x[r - 1] == '0':
-                        print("OFF")
+                        print('OFF')
                     else:
-                        print("ON")
+                        print('ON')
                 else:
-                    print("OFF")
+                    print('OFF')
             elif qu == 2:
                 if i <= n:
                     r = n - i + 1
@@ -29,9 +28,8 @@ while t:
                 if i <= n:
                     r = n - i + 1
                     x = x[0:r - 1] + '0' + x[r:n]
-
         else:
-            p, q = list(map(int, input().split()))
+            (p, q) = list(map(int, input().split()))
             if p <= n and q <= n:
                 r1 = n - p + 1
                 r2 = n - q + 1
@@ -41,7 +39,6 @@ while t:
                     x = x[0:r2 - 1] + t1 + x[r2:n]
                 if x[r1 - 1] != t2:
                     x = x[0:r1 - 1] + t2 + x[r1:n]
-
             elif p <= n:
                 r1 = n - p + 1
                 p1 = x[r1 - 1]

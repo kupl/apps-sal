@@ -1,5 +1,4 @@
 t = int(input())
-
 for i in range(1, t + 1):
     n = int(input())
     lst = list(map(int, input().split()))
@@ -12,6 +11,5 @@ for i in range(1, t + 1):
             s += lst[j]
         else:
             break
-
     ans = l + s
     print(ans)

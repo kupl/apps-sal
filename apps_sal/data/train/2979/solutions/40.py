@@ -1,4 +1,3 @@
 def get_age(age):
-    # your code here
-    ages = age.split(" ")
+    ages = age.split(' ')
     return int(age[0])

@@ -3,4 +3,3 @@ def pre_fizz(n):
     for i in range(2, n + 1):
         array.append(i)
     return array
-    # your code here

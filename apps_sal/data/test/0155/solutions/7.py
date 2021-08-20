@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 if k < n:
     print(k + 1, 1)
 else:
@@ -6,5 +6,5 @@ else:
     m -= 1
     mo = k % (2 * m)
     if mo >= m:
-        mo = (2 * m - 1) - mo
+        mo = 2 * m - 1 - mo
     print(n - k // m, 2 + mo)

@@ -1,5 +1,5 @@
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = [tuple(map(int, input().split())) for i in range(n)]
     p.sort()
     ans = 4000000000000000000

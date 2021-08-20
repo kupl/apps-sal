@@ -4,7 +4,7 @@ for t in range(cas):
     n = int(input())
     dq = deque(list(map(int, input().split())))
     possible = True
-    element = (2**31) + 1
+    element = 2 ** 31 + 1
     while dq:
         left_element = dq[0]
         right_element = dq[-1]

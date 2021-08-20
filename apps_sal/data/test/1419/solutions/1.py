@@ -18,12 +18,10 @@ def f(xs, n, c):
 
 l = 1
 r = sum(xs)
-
 while l + 1 < r:
     c = (l + r) // 2
     if f(xs, n, c):
         r = c
     else:
         l = c
-
 print(r)

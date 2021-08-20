@@ -1,4 +1,5 @@
 class Solution:
+
     def hasAlternatingBits(self, n):
         """
         :type n: int
@@ -11,5 +12,4 @@ class Solution:
                 return False
             prev = curr
             n //= 2
-
         return True

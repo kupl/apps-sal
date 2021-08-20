@@ -5,7 +5,7 @@ def comb(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = sorted(list(map(int, input().split())), reverse=1)
 tmp = sum(v[:a])
 ans = (tmp, a)
@@ -20,6 +20,6 @@ for i in range(a, b):
 print(ans[0] / ans[1])
 ans = 0
 for i in x:
-    a, b = v.count(v[i]), v[i + 1:].count(v[i])
+    (a, b) = (v.count(v[i]), v[i + 1:].count(v[i]))
     ans += comb(a, b)
 print(ans)

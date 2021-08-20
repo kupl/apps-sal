@@ -6,17 +6,15 @@ def check(s, tail):
     if i == -1:
         return float('inf')
     s = s[:i] + s[i + 1:]
-
     j = s.find(tail[0])
     if j == -1:
         return float('inf')
     s = s[:j] + s[j + 1:]
-
     if not s:
         return i + j
     if s == '0' * len(s):
         return float('inf')
-    return i + j + next(i for i, c in enumerate(reversed(s)) if c != '0')
+    return i + j + next((i for (i, c) in enumerate(reversed(s)) if c != '0'))
 
 
 def solve(n):

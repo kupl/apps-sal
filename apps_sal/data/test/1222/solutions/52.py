@@ -21,6 +21,5 @@ def DFS(n):
 
 for i in range(1, 10):
     DFS(i)
-
 a = sorted(a)
 print(a[K - 1])

@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         q = deque()
         visited = [0 for _ in range(len(leftChild))]

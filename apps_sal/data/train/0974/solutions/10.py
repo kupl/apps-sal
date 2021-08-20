@@ -1,21 +1,20 @@
-# cook your dish here
 import math
 p = int(input())
-while(p > 0):
-    a, b, c, d = input().split()
+while p > 0:
+    (a, b, c, d) = input().split()
     a = int(a)
     b = int(b)
     c = int(c)
     d = int(d)
     if d == c:
         if a == b:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        m = ((a - b) % (c - d))
-        if(m == 0):
-            print("YES")
+        m = (a - b) % (c - d)
+        if m == 0:
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     p = p - 1

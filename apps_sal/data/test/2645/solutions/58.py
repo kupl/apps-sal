@@ -5,7 +5,7 @@ def abc046_d():
         return 0
     gc = [0] * n
     pc = [0] * n
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         gc[i] = gc[i - 1] + c.count('g')
         pc[i] = pc[i - 1] + c.count('p')
     ans = (gc[-1] - pc[-1]) // 2

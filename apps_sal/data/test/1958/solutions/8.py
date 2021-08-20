@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
 for i in range(n):
     s = input()
@@ -22,7 +22,7 @@ def check(x):
 
 
 l = 0
-r = 2**100
+r = 2 ** 100
 while l < r - 0.1:
     x = (l + r) / 2
     if check(x):

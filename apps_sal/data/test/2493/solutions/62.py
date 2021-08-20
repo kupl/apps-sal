@@ -9,10 +9,10 @@ def memfact(a, m):
 def comb(n, r, m):
     if r == 0:
         return 1
-    return (memf[n] * pow(memf[r], m - 2, m) * pow(memf[n - r], m - 2, m)) % m
+    return memf[n] * pow(memf[r], m - 2, m) * pow(memf[n - r], m - 2, m) % m
 
 
-n, *a = map(int, open(0).read().split())
+(n, *a) = map(int, open(0).read().split())
 m = 1000000007
 checker = set()
 for i in range(n + 1):

@@ -1,16 +1,15 @@
 def elevator(l, r, c):
-
     if l == c and r != c:
-        return "left"
+        return 'left'
     elif r == c:
-        return "right"
+        return 'right'
     elif c > r and r > l:
-        return "right"
+        return 'right'
     elif r > c and c > l:
-        return "right"
+        return 'right'
     elif r == l and r != c:
-        return "right"
+        return 'right'
     elif l > c and l > r:
-        return "right"
+        return 'right'
     else:
-        return "left"
+        return 'left'

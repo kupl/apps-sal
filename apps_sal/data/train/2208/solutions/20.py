@@ -1,4 +1,3 @@
-#!python3
 """
 11
  22
@@ -13,7 +12,6 @@
 23
 34
 """
-
 from collections import deque, Counter
 import array
 from itertools import combinations, permutations
@@ -28,20 +26,17 @@ def read_int():
 def read_int_array():
     return [int(i) for i in input().strip().split(' ')]
 
-######################################################
 
-
-n, k = read_int_array()
+(n, k) = read_int_array()
 adj = [[] for _ in range(n)]
 edges = set()
 for _ in range(k):
-    x, y = read_int_array()
-    x, y = (y, x) if y < x else (x, y)
+    (x, y) = read_int_array()
+    (x, y) = (y, x) if y < x else (x, y)
     if (x, y) not in edges:
         edges.add((x, y))
         adj[x - 1] += [y - 1]
         adj[y - 1] += [x - 1]
-
 marked = set()
 
 
@@ -59,8 +54,6 @@ def bfs(s):
         for w in adj[v]:
             if w not in marked:
                 queue += [w]
-    # if len(tree) > 1:
-        # print(' '.join(str(i) for i in tree))
     return count
 
 
@@ -69,12 +62,5 @@ for v in range(n):
     if v not in marked:
         m = bfs(v)
         count += m - 1
-
 print(k - count)
-
-"""
-0 1
-3 2
-0 3
-2 3
-"""
+'\n0 1\n3 2\n0 3\n2 3\n'

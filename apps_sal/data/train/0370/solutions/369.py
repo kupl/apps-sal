@@ -13,17 +13,16 @@ class Solution:
             f = self._factorize(x)
             primes |= f
             factors[x] = list(f)
-
         uf = UF(primes, A)
         for x in A:
             for j in range(len(factors[x])):
                 uf.union(x, factors[x][j])
             uf.sz[uf.root(x)] += 1
-
-        return max([v for _, v in uf.sz.items()])
+        return max([v for (_, v) in uf.sz.items()])
 
 
 class UF:
+
     def __init__(self, primes, A):
         self.parent = {p: p for p in primes}
         for p in A:
@@ -43,7 +42,6 @@ class UF:
         r_v = self.root(v)
         if r_u == r_v:
             return
-
         if self.sz[r_u] > self.sz[r_v]:
             self.parent[r_v] = r_u
             self.sz[r_u] += self.sz[r_v]

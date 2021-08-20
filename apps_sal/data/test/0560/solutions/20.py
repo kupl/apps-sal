@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-s, p = 0, [[0] * b for i in range(a)]
+(a, b) = map(int, input().split())
+(s, p) = (0, [[0] * b for i in range(a)])
 for i in range(a):
     t = input()
     if 'S' in t:

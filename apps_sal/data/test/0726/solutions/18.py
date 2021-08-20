@@ -31,14 +31,14 @@ def printr(arr):
     cout('')
 
 
-def find_lt(a, x):  # 'Find rightmost value less than x'
+def find_lt(a, x):
     i = bisect_left(a, x)
     if i:
         return a[i - 1]
     raise ValueError
 
 
-def find_gt(a, x):  # 'Find leftmost value greater than x'
+def find_gt(a, x):
     i = bisect_right(a, x)
     if i != len(a):
         return a[i]
@@ -55,29 +55,23 @@ def binary_search(arr, x):
         return -1
     return i
 
-# ---------------------Template ends-------------sdpt,sdpt131[Sudipta Banik]---------------------
 
-
-n, d = readline()
+(n, d) = readline()
 a = readlist()
-
 mp = {}
 for i in range(n):
     left = a[i] - d
     right = a[i] + d
-    if (i == 0):
+    if i == 0:
+        mp[left] = 1
+    elif abs(left - a[i - 1]) >= d:
         mp[left] = 1
     else:
-        if abs(left - a[i - 1]) >= d:
-            mp[left] = 1
-        else:
-            pass
-
+        pass
     if i == n - 1:
         mp[right] = 1
+    elif abs(right - a[i + 1]) >= d:
+        mp[right] = 1
     else:
-        if(abs(right - a[i + 1])) >= d:
-            mp[right] = 1
-        else:
-            pass
+        pass
 print(len(mp))

@@ -1,3 +1,3 @@
 def greet(name):
     a = name.capitalize()
-    return ('Hello' + ' ' + a + '!')
+    return 'Hello' + ' ' + a + '!'

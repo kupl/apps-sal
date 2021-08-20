@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     dis = abs(a - b)
     sp = abs(c - d)
     if sp != 0:

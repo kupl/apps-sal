@@ -1,6 +1,4 @@
-# coding: utf-8
-
-height, width = map(int, input().split())
+(height, width) = map(int, input().split())
 for i in range(height):
     str = input()
     print(str)

@@ -1,10 +1,7 @@
-
-
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
-
         div_sum = 0
-
         for num in nums:
             divs = set()
             for i in range(1, floor(sqrt(num)) + 1):

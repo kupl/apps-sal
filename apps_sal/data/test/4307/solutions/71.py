@@ -1,7 +1,5 @@
 n = int(input())
-
 ans = 0
-
 for i in range(1, n + 1):
     x = 0
     if i % 2 == 1:
@@ -10,5 +8,4 @@ for i in range(1, n + 1):
                 x += 1
     if x == 8:
         ans += 1
-
 print(ans)

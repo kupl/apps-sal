@@ -1,7 +1,7 @@
 import sys
 test_cases = int(input())
 for i in range(0, test_cases):
-    count_r, count_g, count_b = input().split()
+    (count_r, count_g, count_b) = input().split()
     count_r = int(count_r)
     count_g = int(count_g)
     count_b = int(count_b)

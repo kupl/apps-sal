@@ -1,7 +1,6 @@
 def resolve():
     N = int(input())
     A = list(map(int, input().split()))
-
     mp = dict()
     ans = 0
     for i in range(N):

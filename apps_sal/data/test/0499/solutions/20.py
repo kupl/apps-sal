@@ -1,18 +1,18 @@
 n = int(input())
 s = input()
 d = {}
-B, G, R = s.count('B'), s.count('G'), s.count('R')
+(B, G, R) = (s.count('B'), s.count('G'), s.count('R'))
 if B == 0 and G == 0:
     print('R')
 elif B == 0 and R == 0:
     print('G')
 elif G == 0 and R == 0:
     print('B')
-elif B == 0 and G == 1 and R == 1:
+elif B == 0 and G == 1 and (R == 1):
     print('B')
-elif B == 1 and G == 0 and R == 1:
+elif B == 1 and G == 0 and (R == 1):
     print('G')
-elif B == 1 and G == 1 and R == 0:
+elif B == 1 and G == 1 and (R == 0):
     print('R')
 elif B == 0 and G == 1:
     print('BG')

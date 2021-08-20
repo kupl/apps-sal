@@ -1,8 +1,8 @@
 import sys
-n, m = map(int, sys.stdin.readline().split())
+(n, m) = map(int, sys.stdin.readline().split())
 tab = [False] * m
 for loop in range(n):
-    d, f = map(int, sys.stdin.readline().split())
+    (d, f) = map(int, sys.stdin.readline().split())
     for i in range(d - 1, f, 1):
         tab[i] = True
 out = list()

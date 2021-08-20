@@ -9,9 +9,9 @@ def solve(a, b):
     dp = Counter([('11', '11')])
     for i in range(n - 1):
         new = Counter()
-        for p in '11', '12', '21', '22':
-            for q in '11', '12', '21', '22':
-                for x, y in (a[i], b[i]), (b[i], a[i]):
+        for p in ('11', '12', '21', '22'):
+            for q in ('11', '12', '21', '22'):
+                for (x, y) in ((a[i], b[i]), (b[i], a[i])):
                     if x == '2' and p == '22' or (y == '2' and q == '22'):
                         continue
                     if x == '1' and p == '12' or (y == '1' and q == '12'):
@@ -22,10 +22,10 @@ def solve(a, b):
                     new[m, n] %= mod
         dp = new
     ans = 0
-    for i in '11', '21', :
-        for j in '11', '21':
+    for i in ('11', '21'):
+        for j in ('11', '21'):
             ans += dp[i, j]
-    return (ans * 2) % mod
+    return ans * 2 % mod
 
 
 t = int(input())

@@ -1,11 +1,8 @@
 n = input()
 s = list(input())
-
-x, y = 0, 0
+(x, y) = (0, 0)
 k = 0
-
 cc = 0
-
 for m in s:
     nk = k
     if m == 'U':
@@ -19,5 +16,4 @@ for m in s:
     if nk * k == -1:
         cc += 1
     k = nk
-
 print(cc)

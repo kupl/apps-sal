@@ -1,14 +1,12 @@
 from math import ceil
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 c = list(map(int, input().split()))
-
 v = []
 for i in range(n):
-    v.append(2**i)
+    v.append(2 ** i)
 
 
 def sl(n, l, c, bl):
-    #print(n, l, c, bl)
     s = []
     for i in range(n):
         if i not in bl:

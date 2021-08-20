@@ -4,7 +4,7 @@ Sls = [0]
 Fls = [0]
 lsans = []
 for i in range(1, N):
-    c, s, f = map(int, input().split())
+    (c, s, f) = map(int, input().split())
     Cls.append(c)
     Sls.append(s)
     Fls.append(f)
@@ -16,7 +16,7 @@ for i in range(1, N):
         elif t % Fls[j] == 0:
             t += Cls[j]
         else:
-            t += Fls[j] - (t % Fls[j]) + Cls[j]
+            t += Fls[j] - t % Fls[j] + Cls[j]
     lsans.append(t)
 lsans.append(0)
 for i in lsans:

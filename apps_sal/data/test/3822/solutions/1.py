@@ -1,4 +1,4 @@
-n, L, v1, v2, k = list(map(int, input().split()))
+(n, L, v1, v2, k) = list(map(int, input().split()))
 n = (n + k - 1) // k * 2
 dif = v2 - v1
 p1 = (n * v2 - dif) * L

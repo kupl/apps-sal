@@ -1,7 +1,5 @@
-n, q = [int(x) for x in input().split()]
-
+(n, q) = [int(x) for x in input().split()]
 p = []
-
 for _ in range(q):
     p.append([int(x) - 1 for x in input().split()])
 
@@ -26,13 +24,12 @@ def pre(ind):
             res[i] = 0
     for i in range(1, n):
         res[i] += res[i - 1]
-    return total, res
+    return (total, res)
 
 
 best = 0
-
 for i in range(q):
-    total, table = pre(i)
+    (total, table) = pre(i)
     for j in range(q):
         if j == i:
             continue
@@ -40,5 +37,4 @@ for i in range(q):
         if p[j][0] > 0:
             count -= table[p[j][0] - 1]
         best = max(best, total - count)
-
 print(best)

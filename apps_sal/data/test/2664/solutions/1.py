@@ -1,6 +1,5 @@
 import os
 from sys import *
-
 print('1')
 stdout.flush()
 print('4 1 2 2 3')

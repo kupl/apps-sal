@@ -1,16 +1,16 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 ans = True
-if s.find("G") > s.find("T"):
+if s.find('G') > s.find('T'):
     s = s[::-1]
-s = s[s.find("G")::k]
-if s.find("T") != -1:
-    s = s[:s.find("T") + 1]
-    if "#" in s:
+s = s[s.find('G')::k]
+if s.find('T') != -1:
+    s = s[:s.find('T') + 1]
+    if '#' in s:
         ans = False
 else:
     ans = False
 if ans:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

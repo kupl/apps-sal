@@ -1,4 +1,4 @@
-A, B, C, D = input().split()
+(A, B, C, D) = input().split()
 a = int(A)
 b = int(B)
 c = int(C)
@@ -10,7 +10,7 @@ lista[c][d] = 1
 s = input()
 k = len(s)
 l = 1
-print("1 ", end="")
+print('1 ', end='')
 for i in range(k):
     if i + 1 == k:
         print(a * b - l)
@@ -24,12 +24,11 @@ for i in range(k):
     elif s[i] == 'R':
         if d < b - 1:
             d += 1
-    else:
-        if d:
-            d -= 1
+    elif d:
+        d -= 1
     if lista[c][d] == 0:
-        print("1 ", end="")
+        print('1 ', end='')
         l += 1
     else:
-        print("0 ", end="")
+        print('0 ', end='')
     lista[c][d] = 1

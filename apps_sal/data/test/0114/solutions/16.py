@@ -21,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 mm = 1000000007
@@ -38,7 +38,7 @@ yp = 0
 def solve():
     t = 1
     for tt in range(t):
-        n, m = num()
+        (n, m) = num()
         a = [0] * n
         xx = []
         fl = True
@@ -48,7 +48,7 @@ def solve():
             b[i] = [0] * m
         for i in range(n - 1):
             for j in range(m - 1):
-                if(a[i][j] == 1 and a[i][j + 1] == 1 and a[i + 1][j] == 1 and a[i + 1][j + 1] == 1):
+                if a[i][j] == 1 and a[i][j + 1] == 1 and (a[i + 1][j] == 1) and (a[i + 1][j + 1] == 1):
                     xx.append((i, j))
                     b[i][j] = 1
                     b[i][j + 1] = 1
@@ -56,9 +56,9 @@ def solve():
                     b[i + 1][j + 1] = 1
         for i in range(n):
             for j in range(m):
-                if(a[i][j] != b[i][j]):
+                if a[i][j] != b[i][j]:
                     fl = False
-        if(fl):
+        if fl:
             print(len(xx))
             for i in range(len(xx)):
                 print(xx[i][0] + 1, xx[i][1] + 1)

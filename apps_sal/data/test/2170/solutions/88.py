@@ -1,15 +1,8 @@
-# atcoder template
 def main():
     import sys
     imput = sys.stdin.readline
-    # 文字列入力の時は上記はerrorとなる。
-    # ここにコード
-    # input
-    n, m = list(map(int, input().split()))
-
-    # output
+    (n, m) = list(map(int, input().split()))
     mod = pow(10, 9) + 7
-
     n_ = 5 * pow(10, 5) + 5
     fun = [1] * (n_ + 1)
     for i in range(1, n_ + 1):
@@ -28,11 +21,6 @@ def main():
         if n < 0 or r < 0 or r > n:
             return 0
         return fun[n] * rev[n - r] % mod
-
-    # Aを1, 2, ..., nとする。
-    # 求める写像の総数をs(n, m)とする。
-    # s(n, m) = sum(k=0, n)(cmb(n, k)* (-1)^k * cmb(m-k, n-k)*(n-k)!)
-
     import math
     answer = 0
     for i in range(n + 1):
@@ -42,9 +30,7 @@ def main():
             answer += temp
         else:
             answer -= temp
-    print((answer % mod))
-
-    # N = 1のときなどcorner caseを確認！
+    print(answer % mod)
 
 
 def __starting_point():

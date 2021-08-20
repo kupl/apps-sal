@@ -23,7 +23,7 @@ else:
             u[1] += 1
         else:
             u[2] += 1
-    if (min(u[0], u[1]) * 2 > u[2]):
+    if min(u[0], u[1]) * 2 > u[2]:
         while min1 == a[k] and max1 == a[-1 - k]:
             x += [sred, sred]
             a[k] = -200001

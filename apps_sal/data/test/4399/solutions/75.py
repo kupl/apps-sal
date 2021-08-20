@@ -1,6 +1,6 @@
 s = input()
-count = s.count("B")
+count = s.count('B')
 if count == 3 or count == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

@@ -1,9 +1,8 @@
 from collections import deque
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 ES = []
 D = {}
-
-*parent, = list(range(M))
+(*parent,) = list(range(M))
 
 
 def root(x):
@@ -24,7 +23,7 @@ def unite(x, y):
 
 E = {}
 for i in range(M):
-    p, q, c = list(map(int, input().split()))
+    (p, q, c) = list(map(int, input().split()))
     p -= 1
     q -= 1
     ES.append((p, q, c))
@@ -36,25 +35,21 @@ for i in range(M):
         unite(D[q, c], i)
     D[q, c] = i
     E.setdefault(q, set()).add(c)
-#P = [[] for i in range(M)]
 P = {}
 for i in range(M):
     j = root(i)
-    p, q, c = ES[i]
+    (p, q, c) = ES[i]
     s = P.setdefault(j, set())
     s.add(p)
     s.add(q)
-
 que = deque([(0, 0, 0)])
-INF = 10**18
+INF = 10 ** 18
 dist = [INF] * N
 dist[0] = 0
 gdist = [INF] * M
-
 while que:
-    cost, v, t = que.popleft()
+    (cost, v, t) = que.popleft()
     if t:
-        # edge
         if gdist[v] < cost or v not in P:
             continue
         for w in P[v]:
@@ -62,7 +57,6 @@ while que:
                 dist[w] = cost + 1
                 que.append((cost + 1, w, 0))
     else:
-        # node
         if dist[v] < cost or v not in E:
             continue
         for c in E[v]:
@@ -70,5 +64,4 @@ while que:
             if cost < gdist[w]:
                 gdist[w] = cost
                 que.appendleft((cost, w, 1))
-
-print((dist[N - 1] if dist[N - 1] < INF else -1))
+print(dist[N - 1] if dist[N - 1] < INF else -1)

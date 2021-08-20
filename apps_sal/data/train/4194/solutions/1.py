@@ -6,4 +6,4 @@ def next_version(version):
         else:
             tab[-x] += 1
             break
-    return '.'.join((list(map(str, tab))))
+    return '.'.join(list(map(str, tab)))

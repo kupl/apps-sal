@@ -17,6 +17,6 @@ def check(n):
 
 
 n = int(input())
-s = 10**len(str(n))
-m = sorted(i for i in check(n + s) if i >= n)
+s = 10 ** len(str(n))
+m = sorted((i for i in check(n + s) if i >= n))
 print(m[0])

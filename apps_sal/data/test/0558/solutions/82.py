@@ -1,6 +1,5 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 MOD = 998244353
-
 MAXN = N + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

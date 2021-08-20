@@ -24,21 +24,40 @@ def sieve(n):
 def divs(n, start=1):
     r = []
     for i in range(start, int(math.sqrt(n) + 1)):
-        if (n % i == 0):
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 r.append(i)
             else:
                 r.extend([i, n // i])
     return r
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def wr(arr): return ''.join(map(str, arr))
-def revn(n): return str(n)[::-1]
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def wr(arr):
+    return ''.join(map(str, arr))
+
+
+def revn(n):
+    return str(n)[::-1]
 
 
 def prime(n):
@@ -63,7 +82,7 @@ def convn(number, base):
 
 t = ii()
 for _ in range(t):
-    n, m = mi()
+    (n, m) = mi()
     a = li()
     if n > m or n == 2:
         print(-1)

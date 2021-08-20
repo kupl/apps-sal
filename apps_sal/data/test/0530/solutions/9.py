@@ -8,8 +8,6 @@ for i in range(2 * n):
         s_1 += 1
     if t[i] == '1':
         t_1 += 1
-
-
 first = 0
 second = 0
 r = 0

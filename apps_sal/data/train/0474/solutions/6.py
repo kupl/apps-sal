@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         n = len(words)
         m = len(letters)
@@ -9,7 +10,6 @@ class Solution:
             for combine in combinations:
                 tempScore = self.calculateScore(''.join(combine), letters, score)
                 ans = max(tempScore, ans)
-
         return ans
 
     def calculateScore(self, s, letters, score):
@@ -18,7 +18,5 @@ class Solution:
         for ch in counter:
             if counter[ch] > letters[ch]:
                 return float('-inf')
-
             ans += counter[ch] * score[ord(ch) - ord('a')]
-
         return ans

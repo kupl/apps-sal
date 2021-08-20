@@ -8,7 +8,6 @@ j = n - 1
 i = 0
 ans = 0
 while j >= 0:
-
     for i in range(q[0]):
         ans = ans + a[j]
         j = j - 1

@@ -1,9 +1,10 @@
 class Solution:
+
     def maxNumberOfFamilies(self, n: int, reserved: List[List[int]]) -> int:
         reserved.sort()
         result = 2 * n
         state = [1, 1, 1]
-        for idx, (row, col) in enumerate(reserved):
+        for (idx, (row, col)) in enumerate(reserved):
             if idx > 0 and row != reserved[idx - 1][0]:
                 if not state[0] or not state[2]:
                     result -= 1

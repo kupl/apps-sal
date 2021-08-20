@@ -28,15 +28,15 @@ def f(a, s):
 def __starting_point():
     t = int(input())
     numbers = [0] * 50
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     for i in range(1, 51):
         numbers[i - 1] = i
     for i in range(t):
-        n, s = map(int, input().split())
+        (n, s) = map(int, input().split())
         a = list(map(int, input().split()))
-        ans, ss = 0, 0
+        (ans, ss) = (0, 0)
         for x in range(len(a)):
-            if(a[x] != -1):
+            if a[x] != -1:
                 ss += a[x]
         x = f(a, s - ss)
         for i in x:

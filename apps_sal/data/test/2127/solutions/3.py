@@ -1,4 +1,4 @@
-x, y = 0, 0
+(x, y) = (0, 0)
 res = ''
 n = int(input())
 for _ in range(n):

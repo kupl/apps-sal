@@ -11,7 +11,6 @@ for i in range(1, n):
         A[per2] = i
         A[per2 + n - i] = i
         per2 += 1
-
 A[-1] = n
 if n % 2 == 1:
     A[n // 2] = n

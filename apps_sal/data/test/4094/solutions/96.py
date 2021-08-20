@@ -1,7 +1,6 @@
 k = int(input())
-
 if 7 % k == 0:
-    print((1))
+    print(1)
 else:
     a = []
     a.append(7 % k)
@@ -15,4 +14,4 @@ else:
             a.append(x)
             t += 1
     if t == k - 1:
-        print((-1))
+        print(-1)

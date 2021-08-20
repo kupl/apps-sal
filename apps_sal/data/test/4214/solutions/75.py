@@ -6,11 +6,11 @@ ans = 0
 
 
 def z(p, q, r, s):
-    return ((p - r)**2 + (q - s)**2)**0.5
+    return ((p - r) ** 2 + (q - s) ** 2) ** 0.5
 
 
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a.append(x)
     b.append(y)
 for i in range(n):

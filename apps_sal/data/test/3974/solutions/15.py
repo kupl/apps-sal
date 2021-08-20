@@ -10,12 +10,10 @@ for letter in s:
         else:
             plus += 1
             minus -= 1
+    elif plus == 0:
+        minus += 1
+        seen += 1
     else:
-        if plus == 0:
-            minus += 1
-            seen += 1
-        else:
-            minus += 1
-            plus -= 1
-
+        minus += 1
+        plus -= 1
 print(seen)

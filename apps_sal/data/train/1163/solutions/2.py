@@ -1,15 +1,12 @@
 from sys import stdin
 tc = int(input())
-
-
 lines = stdin.readlines()
-out = ""
+out = ''
 i = 0
 for line in lines:
     if i % 2 == 0:
         i += 1
         continue
-
     nn = list(map(int, line.split()))
     greatest = 0
     least = nn[0]
@@ -19,10 +16,9 @@ for line in lines:
             diff = n - least
         elif n < least:
             least = n
-
     if diff > 0:
-        out += str(diff) + "\n"
+        out += str(diff) + '\n'
     else:
-        out += "UNFIT\n"
+        out += 'UNFIT\n'
     i += 1
 print(out)

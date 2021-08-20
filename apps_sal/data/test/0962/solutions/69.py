@@ -1,19 +1,15 @@
-#!python3
-
 import sys
 sys.setrecursionlimit(10 ** 6)
 
 
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-# input
-N, M = LI()
+(N, M) = LI()
 AB = [LI() for _ in range(M)]
-
-# params
 link = [[] for _ in range(N)]
-for a, b in AB:
+for (a, b) in AB:
     link[a - 1].append(b - 1)
 impossible = [False] * N
 
@@ -44,9 +40,9 @@ def solve(l):
                 if (i + 1) % n == j:
                     continue
                 if j < i:
-                    l = l[j: i + 1]
+                    l = l[j:i + 1]
                 else:
-                    l = l[: i + 1] + l[j:]
+                    l = l[:i + 1] + l[j:]
                 return solve(l)
     return l
 
@@ -58,13 +54,12 @@ def main():
         if t is not None:
             break
     if t is None:
-        print((-1))
+        print(-1)
         return
-
     ans = solve(t)
-    print((len(ans)))
+    print(len(ans))
     for x in ans:
-        print((x + 1))
+        print(x + 1)
 
 
 def __starting_point():

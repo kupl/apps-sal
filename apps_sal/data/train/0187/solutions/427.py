@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        cust, p, max_p = 0, (0, 0), (float('-inf'), 0)
+        (cust, p, max_p) = (0, (0, 0), (float('-inf'), 0))
         idx = 0
         while idx < len(customers) or cust > 0:
             if idx < len(customers):

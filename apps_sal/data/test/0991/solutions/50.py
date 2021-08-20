@@ -1,27 +1,31 @@
-# coding: utf-8
 import sys
 from heapq import heapify, heappop, heappush
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-# 銀貨を何枚持っているかの状態数、N*2501の都市, dijkstra
-N, M, S = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(N, M, S) = lr()
 limit = 2500
 S = min(S, limit)
-graph = [[] for _ in range((N + 1) * (limit + 1))]  # 1-indexed
+graph = [[] for _ in range((N + 1) * (limit + 1))]
 for _ in range(M):
-    u, v, a, b = lr()
+    (u, v, a, b) = lr()
     for x in range(a, limit + 1):
-        graph[u * (limit + 1) + x].append(((v * (limit + 1) + x - a), b))
-        graph[v * (limit + 1) + x].append(((u * (limit + 1) + x - a), b))
-
+        graph[u * (limit + 1) + x].append((v * (limit + 1) + x - a, b))
+        graph[v * (limit + 1) + x].append((u * (limit + 1) + x - a, b))
 for i in range(N):
     i += 1
-    c, d = lr()
+    (c, d) = lr()
     for x in range(limit - c + 1):
         graph[i * (limit + 1) + x].append((i * (limit + 1) + x + c, d))
 
@@ -32,10 +36,10 @@ def dijkstra(start):
     dist[start] = 0
     que = [(0, start)]
     while que:
-        d, prev = heappop(que)
+        (d, prev) = heappop(que)
         if dist[prev] < d:
             continue
-        for next, time in graph[prev]:
+        for (next, time) in graph[prev]:
             d1 = d + time
             if dist[next] > d1:
                 dist[next] = d1

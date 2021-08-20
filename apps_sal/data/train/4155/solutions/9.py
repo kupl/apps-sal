@@ -1,4 +1,3 @@
-
 def solve(a, b):
     count = 0
     for num in range(a, b):

@@ -1,4 +1,5 @@
 class Matrix:
+
     def __init__(self, data):
         self._data = data
         self._rows = len(data)
@@ -7,7 +8,6 @@ class Matrix:
     @classmethod
     def empty(cls, rows, columns):
         data = [[None for _ in range(columns)] for _ in range(rows)]
-
         return cls(data)
 
     def __getitem__(self, key):
@@ -37,17 +37,14 @@ class Matrix:
         str_rows = []
         for row in self._data:
             str_rows.append('  '.join(map(str, row)))
-
-        return "\n".join(str_rows)
+        return '\n'.join(str_rows)
 
     def __mul__(self, matrix):
         result = Matrix.empty(self.rows, self.columns)
-
         for result_row in range(result.rows):
             for result_column in range(result.columns):
                 current_row = self.row(result_row)
                 current_column = matrix.column(result_column)
-
                 result_element = 0
                 while True:
                     try:
@@ -56,9 +53,7 @@ class Matrix:
                     except StopIteration:
                         break
                     result_element += row_element * column_element
-
                 result[result_row][result_column] = result_element
-
         return result
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def isValidSudoku(self, board):
         """
         :type board: List[List[str]]
@@ -34,5 +35,4 @@ class Solution:
                                 return False
                             else:
                                 seen |= 1 << int(val)
-
         return True

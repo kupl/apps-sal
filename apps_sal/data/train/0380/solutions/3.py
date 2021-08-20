@@ -1,6 +1,7 @@
 class Solution:
+
     def isIPv4(self, IP):
-        IP = IP.split(".")
+        IP = IP.split('.')
         if len(IP) != 4:
             return False
         for ip in IP:
@@ -13,7 +14,7 @@ class Solution:
         return True
 
     def isIPv6(self, IP):
-        IP = IP.split(":")
+        IP = IP.split(':')
         if len(IP) != 8:
             return False
         for ip in IP:
@@ -28,20 +29,17 @@ class Solution:
         return True
 
     def validIPAddress(self, IP):
-        f1, f2 = 0, 0
-        if ":" in IP:
+        (f1, f2) = (0, 0)
+        if ':' in IP:
             f1 = 1
-        if "." in IP:
+        if '.' in IP:
             f2 = 1
         if f1 and f2:
-            return "Neither"
+            return 'Neither'
         if self.isIPv4(IP):
-            return "IPv4"
+            return 'IPv4'
         elif self.isIPv6(IP):
-            return "IPv6"
+            return 'IPv6'
         else:
-            return "Neither"
-        """
-         :type IP: str
-         :rtype: str
-         """
+            return 'Neither'
+        '\n         :type IP: str\n         :rtype: str\n         '

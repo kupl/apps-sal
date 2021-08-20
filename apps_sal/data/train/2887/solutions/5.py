@@ -1,6 +1,5 @@
 import base64
 import random
-
 PREFIX = 'https://adf.ly/go.php?u='
 
 
@@ -16,7 +15,7 @@ def adFly_decoder(sc):
 
 
 def adFly_encoder(url):
-    adfly_url = f"{random.randint(0,99):02d}{PREFIX}{base64.b64encode(url.encode('utf-8')).decode('utf-8')}"
+    adfly_url = f"{random.randint(0, 99):02d}{PREFIX}{base64.b64encode(url.encode('utf-8')).decode('utf-8')}"
     adfly_url = base64.b64encode(adfly_url.encode('utf-8')).decode('utf-8')
     half1 = adfly_url[:(len(adfly_url) + 1) // 2]
     half2 = adfly_url[(len(adfly_url) + 1) // 2:]

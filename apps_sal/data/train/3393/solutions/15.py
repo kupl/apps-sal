@@ -9,7 +9,7 @@ def list_squared(m, n):
             if number % divisor == 0:
                 divisors.add(divisor)
                 divisors.add(number // divisor)
-        divisorsum = sum(x * x for x in divisors)
-        if (sqrt(divisorsum)) % 1 == 0:
+        divisorsum = sum((x * x for x in divisors))
+        if sqrt(divisorsum) % 1 == 0:
             result.append([number, divisorsum])
     return result

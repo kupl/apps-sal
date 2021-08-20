@@ -2,7 +2,7 @@ def LI():
     return list(map(int, input().split()))
 
 
-a, b, x, y = LI()
+(a, b, x, y) = LI()
 ans = abs(a - b) * y + x
 if a > b:
     ans -= y

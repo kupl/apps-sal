@@ -10,10 +10,8 @@ for k in [0, 1]:
             if s <= 0:
                 tmp += abs(s) + 1
                 s = 1
-        else:
-            if s >= 0:
-                tmp += abs(s) + 1
-                s = -1
+        elif s >= 0:
+            tmp += abs(s) + 1
+            s = -1
     num = min(tmp, num)
-
 print(num)

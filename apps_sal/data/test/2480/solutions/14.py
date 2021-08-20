@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 cum = [0] * (N + 1)
 for i in range(1, N + 1):

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = set(map(int, input().split()))
 ret = list()
 t = 1
@@ -11,4 +11,4 @@ while True:
     t += 1
 print(len(ret))
 if ret:
-    print(" ".join(map(str, ret)))
+    print(' '.join(map(str, ret)))

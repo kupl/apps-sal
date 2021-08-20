@@ -1,7 +1,6 @@
 n = int(input())
 l = [98, 57, 31, 45, 46]
 a = 'abcdefghijklmnopqrstuvwxyz'
-
 for i in range(n):
     s = input().strip().lower()
     ans = ''

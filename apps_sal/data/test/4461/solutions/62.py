@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 if h % 3 == 0 or w % 3 == 0:
     print(0)
 else:

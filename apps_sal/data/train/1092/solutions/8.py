@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, k, e, m = list(map(int, input().split()))
+    (n, k, e, m) = list(map(int, input().split()))
     stu = n - k - 1
     sum_list = []
     for i in range(n - 1):
@@ -12,4 +12,4 @@ for i in range(int(input())):
     if x < m:
         print(x)
     else:
-        print("Impossible")
+        print('Impossible')

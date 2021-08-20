@@ -1,13 +1,12 @@
 from collections import deque
 import sys
-sys.setrecursionlimit(10**5)
-n, m, s = map(int, input().split())
+sys.setrecursionlimit(10 ** 5)
+(n, m, s) = map(int, input().split())
 s -= 1
 graph = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     graph[u - 1].append(v - 1)
-
 seen = [False] * n
 li = deque()
 

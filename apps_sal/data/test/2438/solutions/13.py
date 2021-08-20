@@ -21,10 +21,8 @@ for i in range(n):
         if a[i] == 'A':
             if is_b >= i:
                 arr -= 1
-        else:
-            if is_a >= i:
-                arr -= 1
+        elif is_a >= i:
+            arr -= 1
     if index[i] != -1:
         arr += n - index[i]
-
 print(arr)

@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
-
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ab = [list(map(int, input().split())) for i in range(m)]
-    ans = "IMPOSSIBLE"
+    ans = 'IMPOSSIBLE'
     list_1 = []
     list_n = []
     for i in range(m):
@@ -12,7 +10,7 @@ def main():
         elif ab[i][1] == n:
             list_n.append(ab[i][0])
     if len(set(list_1) & set(list_n)) > 0:
-        ans = "POSSIBLE"
+        ans = 'POSSIBLE'
     print(ans)
 
 

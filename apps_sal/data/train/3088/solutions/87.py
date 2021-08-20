@@ -4,5 +4,5 @@ def nba_extrap(ppg, mpg):
     else:
         full_time = 48
         average_points = ppg / mpg
-        total_ppg = round((average_points * full_time), 1)
+        total_ppg = round(average_points * full_time, 1)
         return total_ppg

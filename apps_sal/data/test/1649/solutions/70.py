@@ -1,6 +1,5 @@
-A, B, C, D = sorted(map(int, input().split()))
-
+(A, B, C, D) = sorted(map(int, input().split()))
 if A + B + C == D or A + D == B + C:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

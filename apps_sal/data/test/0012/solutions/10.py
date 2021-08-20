@@ -8,7 +8,7 @@ for left in range(n):
     if right < left:
         right = left - 1
         nGCur = 0
-    while right + 1 < n and ((seq[right + 1] == 'G' and (right - left + 1 - nGCur == 0 or nGCur + 2 <= nGTotal)) or (seq[right + 1] == 'S' and right + 1 - left + 1 - nGCur <= 1 and nGCur + 1 <= nGTotal)):
+    while right + 1 < n and (seq[right + 1] == 'G' and (right - left + 1 - nGCur == 0 or nGCur + 2 <= nGTotal) or (seq[right + 1] == 'S' and right + 1 - left + 1 - nGCur <= 1 and (nGCur + 1 <= nGTotal))):
         right += 1
         if seq[right] == 'G':
             nGCur += 1

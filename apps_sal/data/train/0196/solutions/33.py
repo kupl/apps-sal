@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         maxSubarraySum = [i for i in A]
         minSubarraySum = [i for i in A]

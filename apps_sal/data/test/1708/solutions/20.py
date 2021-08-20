@@ -1,14 +1,13 @@
 import sys
-n, m = [int(tmp) for tmp in sys.stdin.readline().split()]
+(n, m) = [int(tmp) for tmp in sys.stdin.readline().split()]
 a = [0] + [int(tmp) for tmp in sys.stdin.readline().split()]
 c = [0] + [int(tmp) for tmp in sys.stdin.readline().split()]
-
 co = [tmp for tmp in range(n + 1)]
 co.sort(key=lambda z: c[z])
 cop = 1
 nb = False
 for i in range(m):
-    t, d = [int(tmp) for tmp in sys.stdin.readline().split()]
+    (t, d) = [int(tmp) for tmp in sys.stdin.readline().split()]
     if nb:
         print(0)
         continue

@@ -1,10 +1,10 @@
 from sys import stdin
-d, res, elem = {}, '', '0101010101'
+(d, res, elem) = ({}, '', '0101010101')
 for _ in range(int(stdin.readline())):
-    c, x = map(str, stdin.readline().split())
+    (c, x) = map(str, stdin.readline().split())
     if c != '?':
         x = [*x]
-        x = [elem[int(y)] for i, y in enumerate(x)]
+        x = [elem[int(y)] for (i, y) in enumerate(x)]
         x = ''.join(x)
     x = x[x.find('1'):]
     if c == '+':
@@ -13,9 +13,8 @@ for _ in range(int(stdin.readline())):
         d[x] += 1
     elif c == '-':
         d[x] -= 1
+    elif d.get(x) == None:
+        res += '0' + '\n'
     else:
-        if d.get(x) == None:
-            res += '0' + '\n'
-        else:
-            res += str(d[x]) + '\n'
+        res += str(d[x]) + '\n'
 print(res)

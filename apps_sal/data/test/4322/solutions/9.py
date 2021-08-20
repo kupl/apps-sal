@@ -34,7 +34,7 @@ for i in range(dis - 1, -1, -1):
         break
 print(result)
 for i in range(pos, dis + 1):
-    print(i, end=" ")
+    print(i, end=' ')
 for i in range(dis, pos - 1, -1):
     for j in range(1, c[i]):
-        print(i, end=" ")
+        print(i, end=' ')

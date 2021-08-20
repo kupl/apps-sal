@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 ary = str(list(range(a, b + 1)))
 zero = ary.count('0')
 one = ary.count('1')

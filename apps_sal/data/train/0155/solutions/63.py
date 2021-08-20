@@ -2,6 +2,7 @@ import functools
 
 
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
 
         @functools.lru_cache(None)
@@ -15,4 +16,4 @@ class Solution:
                     else:
                         break
             return res + 1
-        return max(jump(index) for index in range(len(arr)))
+        return max((jump(index) for index in range(len(arr))))

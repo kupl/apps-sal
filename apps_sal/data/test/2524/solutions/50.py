@@ -1,14 +1,18 @@
-# create date: 2020-07-05 10:13
-
 import sys
 stdin = sys.stdin
+mod = 10 ** 9 + 7
 
-mod = 10**9 + 7
+
+def ns():
+    return stdin.readline().rstrip()
 
 
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(ns())
-def na(): return list(map(int, stdin.readline().split()))
+def ni():
+    return int(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -18,9 +22,9 @@ def main():
     for i in range(61):
         cnt = 0
         for ai in a:
-            if (ai >> i) & 1:
+            if ai >> i & 1:
                 cnt += 1
-        ans += ((cnt * (n - cnt)) * 2**i) % mod
+        ans += cnt * (n - cnt) * 2 ** i % mod
     ans %= mod
     print(ans)
 

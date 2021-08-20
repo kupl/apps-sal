@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     t -= 1
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     l = list(map(int, input().split()))
     l.sort()
     l.reverse()

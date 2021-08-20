@@ -12,7 +12,7 @@ def divisor(n):
 
 def gcd(a, b):
     while b != 0:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -22,9 +22,9 @@ def lcm(a, b):
 
 def solve():
     inf = 1 << 60
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     if a == b:
         return 0
     ma = min(a, b)

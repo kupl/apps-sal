@@ -1,8 +1,6 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 A = sorted(a, reverse=True)
 alice = sum(A[0::2])
 bob = sum(A[1::2])
-
 print(alice - bob)

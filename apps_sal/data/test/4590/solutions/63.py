@@ -1,21 +1,17 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 b = 0
 tb = 0
-
 for i in range(M):
     if tb + B[i] > K:
         break
     tb += B[i]
     b = i + 1
-
 ans = [0, b]
 m = b
 a = 0
 ta = 0
-
 for i in range(N):
     if ta + A[i] > K:
         break
@@ -32,5 +28,4 @@ for i in range(N):
                 m = a + b
                 ans = [a, b]
             break
-
-print((ans[0] + ans[1]))
+print(ans[0] + ans[1])

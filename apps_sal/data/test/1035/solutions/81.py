@@ -1,5 +1,5 @@
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 gcd = math.gcd(a, b)
 
 
@@ -12,7 +12,7 @@ def prime_factorization(n):
         while n % i == 0:
             n //= i
     i += 1
-    k = int(n**0.5) + 1
+    k = int(n ** 0.5) + 1
     for j in range(i, k + 1, 2):
         if n % j == 0:
             n //= j

@@ -1,5 +1,5 @@
 def solve(arr, n):
-    c, l = 0, len(arr)
+    (c, l) = (0, len(arr))
     for i in range(l):
         if arr[i] == 'C':
             a = max(0, i - n)

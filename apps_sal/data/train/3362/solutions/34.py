@@ -5,5 +5,4 @@ def sum_mix(arr):
             total += int(num)
         else:
             total += num
-
     return total

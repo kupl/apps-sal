@@ -6,7 +6,7 @@ def next_version(version):
     add_value = 1
     while last_index >= 0:
         value_last_part_version = int(array_version[last_index]) + add_value
-        if "0" in str(value_last_part_version):
+        if '0' in str(value_last_part_version):
             if last_index != 0:
                 array_version[last_index] = str(0)
             else:
@@ -19,4 +19,4 @@ def next_version(version):
             add_value = 0
             array_version[last_index] = str(value_last_part_version)
         last_index -= 1
-    return ".".join(array_version)
+    return '.'.join(array_version)

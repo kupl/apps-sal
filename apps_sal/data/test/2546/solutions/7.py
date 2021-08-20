@@ -13,19 +13,15 @@ def getList():
 
 
 def solve():
-    ls, rs = [], []
-    n, money = getList()
+    (ls, rs) = ([], [])
+    (n, money) = getList()
     sals = []
     for _ in range(n):
-        a, b = getList()
+        (a, b) = getList()
         sals.append((a, b))
-
-    # ls.sort()
-    # rs.sort()
-    ans_mx = 10**10
+    ans_mx = 10 ** 10
     ans_mn = 0
-    while(ans_mx - ans_mn > 1):
-        # print(ans_mx, ans_mn)
+    while ans_mx - ans_mn > 1:
         tmp = 0
         heap = []
         mid = (ans_mn + ans_mx) // 2
@@ -34,66 +30,48 @@ def solve():
                 tmp += sal[0]
             else:
                 heapq.heappush(heap, (-sal[0], -sal[1]))
-
-        # print(len(heap))
         if len(heap) < (n + 1) // 2:
             ans_mx = mid
             continue
-
         high = 0
         tgt = n // 2
-        # print(heap)
-        while(heap):
+        while heap:
             sal_cur = heapq.heappop(heap)
             if high <= tgt:
                 tmp += max(mid, -sal_cur[0])
                 high += 1
             else:
                 tmp += -sal_cur[0]
-
         if tmp <= money:
             ans_mn = mid
-
         else:
             ans_mx = mid
-        # print(tmp)
-
-# ================================
-#     print(ans_mx, ans_mn)
     tmp = 0
     heap = []
     mid = ans_mx
-    # print("mid", mid)
     for sal in sals:
         if sal[1] < mid:
             tmp += sal[0]
         else:
             heapq.heappush(heap, (-sal[0], -sal[1]))
-
     if len(heap) < (n + 1) // 2:
         print(ans_mn)
         return
-
     high = 0
     tgt = n // 2
-    # print(heap)
-    while (heap):
+    while heap:
         sal_cur = heapq.heappop(heap)
-        # print(sal_cur)
         if high <= tgt:
             tmp += max(mid, -sal_cur[0])
             high += 1
         else:
             tmp += -sal_cur[0]
-        # print(tmp)
     if tmp <= money:
         print(mid)
         return
-
     else:
         print(ans_mn)
         return
-    # print(tmp)
 
 
 def main():
@@ -106,34 +84,5 @@ def __starting_point():
     main()
 
 
-"""
-1
-3 26
-10 12
-1 4
-10 11
-
-1
-1 100
-1 1
-
-1
-3 6
-1 1000
-2 1000
-3 1000
-
-
-1
-9 100
-2 4
-3 5
-8 100
-25 100
-2 39
-1 2
-23 40
-1 20
-2 10
-"""
+'\n1\n3 26\n10 12\n1 4\n10 11\n\n1\n1 100\n1 1\n\n1\n3 6\n1 1000\n2 1000\n3 1000\n\n\n1\n9 100\n2 4\n3 5\n8 100\n25 100\n2 39\n1 2\n23 40\n1 20\n2 10\n'
 __starting_point()

@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     n = int(input())
     a = list(map(int, input().split()))
     c = 0
@@ -7,7 +7,7 @@ while(t > 0):
         d = a.count(i)
         for j in range(1, d):
             a.remove(i)
-        if(d >= 2):
+        if d >= 2:
             c += d // 2
     print(c // 2)
     t -= 1

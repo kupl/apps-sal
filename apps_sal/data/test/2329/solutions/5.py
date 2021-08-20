@@ -1,7 +1,8 @@
 import sys
 
 
-class UnionFindVerSize():
+class UnionFindVerSize:
+
     def __init__(self, N):
         self._parent = [n for n in range(0, N)]
         self._size = [1] * N
@@ -17,7 +18,6 @@ class UnionFindVerSize():
         gy = self.find_root(y)
         if gx == gy:
             return
-
         if self._size[gx] < self._size[gy]:
             self._parent[gx] = gy
             self._size[gy] += self._size[gx]
@@ -41,36 +41,30 @@ class UnionFindVerSize():
 
 
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 t = [t[i] - 1 for i in range(n)]
 query = []
 for i in range(m - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     query.append((a - 1, b - 1))
-
 tower = [[] for i in range(m)]
 for i in range(n):
     id = t[i]
     if not tower[id]:
         tower[id].append((i + 1, i + 1))
     else:
-        start, end = tower[id].pop()
+        (start, end) = tower[id].pop()
         if end + 1 == i + 1:
             tower[id].append((start, i + 1))
         else:
             tower[id].append((start, end))
             tower[id].append((i + 1, i + 1))
-
-# print(tower)
 test = []
 for i in range(m):
-    for start, end in tower[i]:
+    for (start, end) in tower[i]:
         if end != n:
             test.append((t[start - 1], t[end]))
-
-# print(test)
 start = [-1] * len(test)
 end = [m - 1] * len(test)
 temp = [[] for i in range(m)]
@@ -82,11 +76,11 @@ for i in range(len(test)):
 def parabisect():
     uf = UnionFindVerSize(m)
     for i in range(m - 1):
-        a, b = query[i]
+        (a, b) = query[i]
         uf.unite(a, b)
         while temp[i]:
             j = temp[i].pop()
-            id1, id2 = test[j]
+            (id1, id2) = test[j]
             if uf.is_same_group(id1, id2):
                 end[j] = i
             else:
@@ -98,13 +92,10 @@ def parabisect():
 
 for i in range(20):
     parabisect()
-
 res = [0] * m
 for i in range(len(test)):
     res[end[i] + 1] -= 1
-
 for i in range(1, m):
     res[i] += res[i - 1]
-
 for i in range(m):
     print(len(test) + res[i])

@@ -1,4 +1,5 @@
 class BalancingTree:
+
     def __init__(self, n):
         self.N = n
         self.root = self.node(1 << n, 1 << n)
@@ -8,10 +9,9 @@ class BalancingTree:
         nd = self.root
         while True:
             if v == nd.value:
-
                 return 0
             else:
-                mi, ma = min(v, nd.value), max(v, nd.value)
+                (mi, ma) = (min(v, nd.value), max(v, nd.value))
                 if mi < nd.pivot:
                     nd.value = ma
                     if nd.left:
@@ -73,11 +73,10 @@ class BalancingTree:
                     nd = nd.left
                 else:
                     return prev - 1
+            elif nd.right:
+                nd = nd.right
             else:
-                if nd.right:
-                    nd = nd.right
-                else:
-                    return prev - 1
+                return prev - 1
 
     @property
     def max(self):
@@ -100,12 +99,11 @@ class BalancingTree:
                     nd = nd.left
                 else:
                     return
+            elif nd.right:
+                nd = nd.right
             else:
-                if nd.right:
-                    nd = nd.right
-                else:
-                    return
-        if (not nd.left) and (not nd.right):
+                return
+        if not nd.left and (not nd.right):
             if nd.value < prev.value:
                 prev.left = None
             else:
@@ -128,6 +126,7 @@ class BalancingTree:
         return self.find_r(v - 1) == v
 
     class node:
+
         def __init__(self, v, p):
             self.value = v
             self.pivot = p
@@ -137,23 +136,20 @@ class BalancingTree:
 
 n = int(input())
 s = input()
-
-alice = [int(s[i] == "0") for i in range(n)]
-bob = [int(s[i] == "1") for i in range(n)]
+alice = [int(s[i] == '0') for i in range(n)]
+bob = [int(s[i] == '1') for i in range(n)]
 for i in range(1, n):
     alice[i] += alice[i - 1]
     bob[i] += bob[i - 1]
 alice.append(0)
 bob.append(0)
-
 update_que = [[] for i in range(n)]
-
 alice_win = []
 id = 0
 while id < n:
-    if s[id] != "0":
+    if s[id] != '0':
         pos = id
-        while pos < n and s[pos] != "0":
+        while pos < n and s[pos] != '0':
             pos += 1
         update_que[pos - id - 1].append(id)
         id = pos
@@ -162,18 +158,16 @@ while id < n:
 bob_win = []
 id = 0
 while id < n:
-    if s[id] != "1":
+    if s[id] != '1':
         pos = id
-        while pos < n and s[pos] != "1":
+        while pos < n and s[pos] != '1':
             pos += 1
         update_que[pos - id - 1].append(id)
         id = pos
     else:
         id += 1
-
 bst = BalancingTree(20)
 bst.append(n)
-
 ans = [0] * n
 for i in range(n - 1, -1, -1):
     for id in update_que[i]:
@@ -194,5 +188,4 @@ for i in range(n - 1, -1, -1):
                 pos = npos + i + 1
                 res += 1
     ans[i] = res
-
 print(*ans)

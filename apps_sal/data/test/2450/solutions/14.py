@@ -1,5 +1,5 @@
 def solve():
-    n, m, x, y = map(int, input().split())
+    (n, m, x, y) = map(int, input().split())
     y = min(y, x * 2)
     a = [input() for _ in range(n)]
     ans = 0

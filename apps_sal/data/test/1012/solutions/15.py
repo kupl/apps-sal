@@ -5,4 +5,4 @@ for i in range(n):
     if u == u[::-1]:
         print(-1)
     else:
-        print("".join(u))
+        print(''.join(u))

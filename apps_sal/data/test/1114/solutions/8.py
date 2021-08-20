@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 f = []
 b = []
 x = []
@@ -18,12 +18,11 @@ for i in range(m):
         amb = 1
     elif x[b[i] - 1] == 0:
         imp = 1
-
 if imp > 0:
-    print("Impossible")
+    print('Impossible')
 elif amb > 0:
-    print("Ambiguity")
+    print('Ambiguity')
 elif 1 == 1:
-    print("Possible")
+    print('Possible')
     for i in range(m):
-        print(str(y[b[i] - 1]) + " ", end="")
+        print(str(y[b[i] - 1]) + ' ', end='')

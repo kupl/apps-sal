@@ -9,8 +9,8 @@ def find_numbers(chaos):
         if char.isnumeric():
             buffer.append(char)
         elif char.isalpha() and buffer:
-            numbers.append(int("".join(buffer)))
+            numbers.append(int(''.join(buffer)))
             buffer = []
     if buffer:
-        numbers.append(int("".join(buffer)))
+        numbers.append(int(''.join(buffer)))
     return numbers

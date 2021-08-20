@@ -1,9 +1,7 @@
 from sys import stdin
-
 for _ in range(int(stdin.readline())):
-    #n = int(stdin.readline())
-    n, x = list(map(int, stdin.readline().split()))
-    d, l = list(map(str, stdin.readline().split()))
+    (n, x) = list(map(int, stdin.readline().split()))
+    (d, l) = list(map(str, stdin.readline().split()))
     if d == 'R':
         x = n - x + 1
     if l == 'H':
@@ -11,8 +9,7 @@ for _ in range(int(stdin.readline())):
             print(x, 'E')
         else:
             print(x, 'H')
+    elif x % 2 == 0:
+        print(x, 'H')
     else:
-        if x % 2 == 0:
-            print(x, 'H')
-        else:
-            print(x, 'E')
+        print(x, 'E')

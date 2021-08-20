@@ -1,7 +1,7 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 ls = []
 for i in range(1, 10):
-    l, r = 10**(i - 1), 10**i - 1
+    (l, r) = (10 ** (i - 1), 10 ** i - 1)
     y = (x - b * i) // a
     for _ in range(10000):
         m = (l + r) / 2

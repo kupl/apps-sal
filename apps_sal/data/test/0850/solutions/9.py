@@ -6,16 +6,15 @@ import operator
 import functools
 import fractions
 import collections
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 RI = lambda x=' ': list(map(int, input().split(x)))
 RS = lambda x=' ': input().rstrip().split(x)
 dX = [-1, 1, 0, 0, -1, 1, -1, 1]
 dY = [0, 0, -1, 1, 1, -1, -1, 1]
-mod = int(1e9 + 7)
-eps = 1e-6
+mod = int(1000000000.0 + 7)
+eps = 1e-06
 pi = math.acos(-1.0)
 MAX = 100
-#################################################
 k = RI()
 d = RI()
 cnt = [0] * 5
@@ -39,7 +38,7 @@ if cnt[2]:
     a.append(cnt[2])
 if cnt[3]:
     a.append(cnt[3])
-elif not cnt[2] and not cnt[3] and cnt[4]:
+elif not cnt[2] and (not cnt[3]) and cnt[4]:
     a.append(cnt[4])
 print(len(a))
 print(*a)

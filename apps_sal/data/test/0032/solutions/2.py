@@ -1,9 +1,7 @@
 n = int(input())
-
 cur = 0
-
 for i in range(n):
-    dist, typ = input().split()
+    (dist, typ) = input().split()
     dist = int(dist)
     if typ in ['West', 'East']:
         if cur in [0, 20000]:

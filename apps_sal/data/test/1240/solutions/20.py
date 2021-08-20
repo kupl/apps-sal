@@ -4,20 +4,16 @@ import re
 import itertools
 import pprint
 import collections
-ri, rai = lambda: int(input()), lambda: list(map(int, input().split()))
-
+(ri, rai) = (lambda: int(input()), lambda: list(map(int, input().split())))
 n = ri()
 a = [rai() for i in range(n)]
-
 s = 0
-for l, r in a:
+for (l, r) in a:
     s += l - r
-
 res = 0
 sres = abs(s)
-
 for i in range(n):
-    l, r = a[i]
+    (l, r) = a[i]
     s -= l - r
     s += r - l
     if abs(s) > sres:
@@ -25,5 +21,4 @@ for i in range(n):
         sres = abs(s)
     s -= r - l
     s += l - r
-
 print(res)

@@ -20,10 +20,10 @@ def leo(oscar):
         - test.assert_equals(leo(89),"Leo got one already!")
     """
     if oscar > 88:
-        return "Leo got one already!"
+        return 'Leo got one already!'
     elif oscar == 88:
-        return "Leo finally won the oscar! Leo is happy"
+        return 'Leo finally won the oscar! Leo is happy'
     elif oscar == 86:
-        return "Not even for Wolf of wallstreet?!"
+        return 'Not even for Wolf of wallstreet?!'
     else:
-        return "When will you give Leo an Oscar?"
+        return 'When will you give Leo an Oscar?'

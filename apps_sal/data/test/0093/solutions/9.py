@@ -1,7 +1,8 @@
 3
 
 
-def readln(): return list(map(int, input().split()))
+def readln():
+    return list(map(int, input().split()))
 
 
 def main():

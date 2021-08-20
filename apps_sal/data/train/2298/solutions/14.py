@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     A = list(map(int, input().split()))
     MAXl = [A[-1]]
     for i in range(1, N - 1):
@@ -18,7 +18,6 @@ def main():
         elif p > profit:
             profit = p
             count = 1
-
     print(count)
 
 

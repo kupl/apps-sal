@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-w, m, k = readln()
+(w, m, k) = readln()
 s = 1
 ans = 0
 while w:

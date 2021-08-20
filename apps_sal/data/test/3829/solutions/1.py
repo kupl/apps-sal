@@ -2,7 +2,7 @@ __author__ = 'Jacob Dlougach'
 
 
 def __starting_point():
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     result = 0
     for i in range(m):
         result += ((i + 1) / m) ** n

@@ -1,7 +1,5 @@
 import math
-
-a, b, c = list(map(int, input().split()))
-# a, b, c = 1, 30, 200
+(a, b, c) = list(map(int, input().split()))
 D = math.sqrt(b * b - 4 * a * c)
 x1 = (-b + D) / (2 * a)
 x2 = (-b - D) / (2 * a)

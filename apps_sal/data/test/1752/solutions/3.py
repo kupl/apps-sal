@@ -1,5 +1,4 @@
 n = int(input())
-
 seq = sorted(map(int, input().split()))
 if n <= 3:
     print(' '.join(map(str, seq)))

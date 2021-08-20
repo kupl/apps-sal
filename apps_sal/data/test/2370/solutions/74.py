@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     m = [list(map(int, input().split())) for _ in range(n)]
-
     ans = 0
     for i in range(n - 1):
         for j in range(i + 1, n):
@@ -11,7 +10,7 @@ def main():
                     continue
                 t = m[i][k] + m[k][j]
                 if t < d:
-                    print((-1))
+                    print(-1)
                     return
                 if t == d:
                     break

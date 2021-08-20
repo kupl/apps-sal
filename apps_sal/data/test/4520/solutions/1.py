@@ -1,13 +1,8 @@
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 L = [list(map(int, input().split())) for i in range(n)]
-
 for i in range(n):
     L[i].append(i)
-
 L.sort(key=lambda x: x[1])
-
-# print(L)
 
 
 def c(x):
@@ -30,9 +25,7 @@ while i < n:
     else:
         A.append(L[i][2] + 1)
         ans += 1
-
     i += 1
-# print(T)
 A.sort()
 print(ans)
-print(" ".join([str(i) for i in A]))
+print(' '.join([str(i) for i in A]))

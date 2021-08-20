@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = 0
 syaku = 0
@@ -11,7 +11,6 @@ for i in range(n - 1):
         else:
             a[i] = sa - a[i + 1]
             a[i + 1] = 0
-
 if n != 2 and a[n - 2] + a[n - 1] >= x:
     sa = a[i] + a[i + 1] - x
     ans += sa

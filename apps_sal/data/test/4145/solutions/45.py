@@ -2,7 +2,7 @@ x = int(input())
 
 
 def f():
-    for i in range(x, 10**10):
+    for i in range(x, 10 ** 10):
         c = 0
         for j in range(2, i):
             if i % j != 0:

@@ -3,7 +3,7 @@ t = int(input())
 
 
 def CountSquares(b):
-    return (math.floor(math.sqrt(b)))
+    return math.floor(math.sqrt(b))
 
 
 for i in range(t):
@@ -12,6 +12,6 @@ for i in range(t):
     l = CountSquares(n)
     c = 0
     for i in range(2, l + 1):
-        if(i % 3 == 0):
+        if i % 3 == 0:
             c += 1
     print(l - c)

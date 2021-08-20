@@ -1,28 +1,16 @@
-#	!/usr/bin/env python3
-#	encoding: UTF-8
-#	Modified: <06/Apr/2019 05:10:59 PM>
-
-
-#	✪ H4WK3yE乡
-#	Mohd. Farhan Tahir
-#	Indian Institute Of Information Technology (IIIT),Gwalior
-
-
-# ///==========Libraries, Constants and Functions=============///
-
-
 import sys
 
 
-def get_array(): return list(map(int, sys.stdin.readline().split()))
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def get_ints(): return list(map(int, sys.stdin.readline().split()))
+def get_ints():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def input(): return sys.stdin.readline()
-
-# ///==========MAIN=============///
+def input():
+    return sys.stdin.readline()
 
 
 def main():

@@ -10,7 +10,6 @@ for i in range(n):
                 d[s] += 1
             else:
                 d[s] = 1
-
 ans = 0
 for i in list(d.values()):
     ans = max(ans, i)

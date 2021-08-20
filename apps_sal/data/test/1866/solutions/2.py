@@ -15,6 +15,6 @@ else:
                 break
             for k in range(d):
                 Ans.append((j + k, j + k + d))
-    Ans = Ans + [(N + 1 - a, N + 1 - b) for a, b in Ans]
+    Ans = Ans + [(N + 1 - a, N + 1 - b) for (a, b) in Ans]
     print(len(Ans))
-    print('\n'.join('{} {}'.format(*a) for a in Ans))
+    print('\n'.join(('{} {}'.format(*a) for a in Ans)))

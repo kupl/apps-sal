@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 lst = list(map(int, input().split()))
 weight = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 DP = [-1] * (n + 1)

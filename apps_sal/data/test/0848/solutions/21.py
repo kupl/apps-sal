@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = n * (n - 1) // 2
-if(n * k > a):
+if n * k > a:
     print(-1)
 else:
     l = set()

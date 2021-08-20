@@ -3,4 +3,4 @@ def string_to_number(s):
     return transformar
 
 
-string_to_number("1234")
+string_to_number('1234')

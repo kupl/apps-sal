@@ -1,7 +1,7 @@
 n = int(input())
-a, b = [], []
+(a, b) = ([], [])
 c = []
-if(n % 2 != 0):
+if n % 2 != 0:
     for i in range(n):
         a += [i]
         b += [i]

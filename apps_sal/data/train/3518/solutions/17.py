@@ -1,19 +1,19 @@
 def linux_type(file_attribute):
     f_att = file_attribute[0]
     if f_att == '-':
-        return "file"
+        return 'file'
     elif f_att == 'd':
-        return "directory"
+        return 'directory'
     elif f_att == 'l':
-        return "symlink"
+        return 'symlink'
     elif f_att == 'c':
-        return "character_file"
+        return 'character_file'
     elif f_att == 'b':
-        return "block_file"
+        return 'block_file'
     elif f_att == 'p':
-        return "pipe"
+        return 'pipe'
     elif f_att == 's':
-        return "socket"
+        return 'socket'
     elif f_att == 'D':
-        return "door"
+        return 'door'
     return None

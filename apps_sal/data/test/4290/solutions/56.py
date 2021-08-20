@@ -1,5 +1,5 @@
 import math
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 
 
 def C(x):

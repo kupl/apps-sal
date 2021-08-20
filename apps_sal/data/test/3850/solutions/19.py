@@ -11,15 +11,13 @@ def good(n, k, p, a, b, x):
     return c == n
 
 
-n, k, p = [int(x) for x in input().split(' ')]
+(n, k, p) = [int(x) for x in input().split(' ')]
 a = [int(x) for x in input().split(' ')]
 b = [int(x) for x in input().split(' ')]
 a.sort()
 b.sort()
-
 l = -1
 r = 2 * 10 ** 9
-
 while r - l > 1:
     m = (l + r) // 2
     if good(n, k, p, a, b, m):

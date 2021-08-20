@@ -1,7 +1,8 @@
 class Node:
+
     def __init__(self, val):
         self.val = val
-        self.right, self.down = None, None
+        (self.right, self.down) = (None, None)
 
 
 class Skiplist:
@@ -9,11 +10,9 @@ class Skiplist:
     def __init__(self):
         self.head = [Node(float('-inf')) for _ in range(16)]
         self.tail = [Node(float('inf')) for _ in range(16)]
-
-        for h, t in zip(self.head, self.tail):
+        for (h, t) in zip(self.head, self.tail):
             h.right = t
-
-        for up, down in zip(self.head, self.head[1:]):
+        for (up, down) in zip(self.head, self.head[1:]):
             up.down = down
 
     def search(self, target: int) -> bool:
@@ -40,11 +39,10 @@ class Skiplist:
         while stack:
             current = stack.pop()
             node = Node(num)
-            node.right, current.right = current.right, node
+            (node.right, current.right) = (current.right, node)
             if prev:
                 node.down = prev
             prev = node
-
             if random.randint(0, 1):
                 break
 

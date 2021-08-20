@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ris = 0
 for cont in range(0, n):
     num = input()

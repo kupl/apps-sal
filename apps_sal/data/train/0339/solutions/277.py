@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         from collections import defaultdict
         count = 0
@@ -13,7 +14,6 @@ class Solution:
                     x = num // nums2[j]
                     Dict[x] += 1
         Dict.clear()
-        # print(count)
         for i in range(len(nums2)):
             num = nums2[i] * nums2[i]
             Dict.clear()

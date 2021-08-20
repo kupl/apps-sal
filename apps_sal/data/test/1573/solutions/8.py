@@ -1,16 +1,13 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 friends = [tuple(map(int, input().split())) for i in range(n)]
-
 friends = sorted(friends, key=lambda f: f[0])
 sums = []
 curr = 0
 for i in range(n):
     curr += friends[i][1]
     sums.append(curr)
-
 res = 0
 for i in range(n):
-    # binary search
     low = i
     high = n - 1
     curr = friends[i][0]
@@ -21,5 +18,4 @@ for i in range(n):
         else:
             low = mid
     res = max(res, sums[low] - (0 if i == 0 else sums[i - 1]))
-
 print(res)

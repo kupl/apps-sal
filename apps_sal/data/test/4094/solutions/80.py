@@ -1,7 +1,6 @@
 k = int(input())
-
 if k % 2 == 0 or k % 5 == 0:
-    print((-1))
+    print(-1)
 else:
     s = 1
     a = 7

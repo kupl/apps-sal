@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n: int = len(stoneValue)
         dp: List[int] = [0 for _ in range(n + 1)]

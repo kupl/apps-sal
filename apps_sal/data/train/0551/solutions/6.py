@@ -11,9 +11,9 @@ for i in range(t):
         dict1[i] = 0
     for i in list1:
         dict1[i] += 1
-        if(dict1[i] > 1):
-            print("yes")
+        if dict1[i] > 1:
+            print('yes')
             flag = 1
             break
-    if(flag == 0):
-        print("no")
+    if flag == 0:
+        print('no')

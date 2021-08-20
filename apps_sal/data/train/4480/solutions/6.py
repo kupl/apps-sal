@@ -7,7 +7,7 @@ def parse(data):
         elif command == 'd':
             value -= 1
         elif command == 's':
-            value = value**2
+            value = value ** 2
         elif command == 'o':
             result.append(value)
     return result

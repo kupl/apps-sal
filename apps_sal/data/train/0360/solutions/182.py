@@ -1,4 +1,5 @@
 class Solution:
+
     def numD(self, arr, n):
         count = 0
         ans = 0
@@ -15,13 +16,10 @@ class Solution:
         for i in range(len(weights)):
             if weights[i] > l:
                 l = weights[i]
-            # r+=weights[i]
-
         while l <= r:
             mid = (l + r) // 2
             if self.numD(weights, mid) <= D:
                 r = mid - 1
             elif self.numD(weights, mid) > D:
                 l = mid + 1
-
         return l

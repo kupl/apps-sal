@@ -1,4 +1,4 @@
-n, a, b, c, t = map(int, input().split())
+(n, a, b, c, t) = map(int, input().split())
 tt = [t - int(i) for i in input().split()]
 ans = 0
 if b >= c:

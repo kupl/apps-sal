@@ -1,7 +1,6 @@
 class Solution:
-    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
-        # add type 3 first
+    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         if n == 1:
             return True
         parentsA = {}
@@ -14,13 +13,12 @@ class Solution:
             return parentsA[p]
 
         def unionA(p, q):
-            i, j = findA(p), findA(q)
+            (i, j) = (findA(p), findA(q))
             if i != j:
                 parentsA[i] = j
 
         def isconnectedA(p, q):
             return findA(p) == findA(q)
-
         parentsB = {}
 
         def findB(p):
@@ -31,18 +29,15 @@ class Solution:
             return parentsB[p]
 
         def unionB(p, q):
-            i, j = findB(p), findB(q)
+            (i, j) = (findB(p), findB(q))
             if i != j:
                 parentsB[i] = j
 
         def isconnectedB(p, q):
             return findB(p) == findB(q)
-
         edges.sort(reverse=True)
-        # first add in best edges
-
         skip = 0
-        for typ, fr, to in edges:
+        for (typ, fr, to) in edges:
             if typ == 3:
                 if isconnectedA(fr, to) and isconnectedB(fr, to):
                     skip += 1
@@ -59,20 +54,12 @@ class Solution:
                     skip += 1
                 else:
                     unionB(fr, to)
-            # print(typ, fr, to, parentsB)
-
-        # print(parentsA)
-        # print(parentsB)
-
         allpA = set()
         for i in range(1, n + 1):
             allpA.add(findA(i))
-
         allpB = set()
         for i in range(1, n + 1):
             allpB.add(findB(i))
-
-        # print(allpB)
         if len(allpA) == 1 and len(allpB) == 1:
             return skip
         return -1

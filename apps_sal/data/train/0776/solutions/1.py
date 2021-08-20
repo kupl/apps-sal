@@ -3,8 +3,8 @@ for _ in range(int(input())):
     P = 10 ** 5 - 2
     a = []
     if D == 0:
-        print("1")
-        print("1")
+        print('1')
+        print('1')
     else:
         while D > 0:
             P = min(P, D)

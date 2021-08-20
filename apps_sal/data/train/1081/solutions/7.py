@@ -6,7 +6,7 @@ for i in range(0, n):
     for z in range(0, len(s)):
         k = ord(s[z]) - 65
         k = k + l[z]
-        req = k % (26)
+        req = k % 26
         req = req + 65
         f = f + chr(req)
     print(f)

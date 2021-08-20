@@ -1,7 +1,6 @@
 from collections import Counter
-N, M = map(int, input().split())
-MOD = 10**9 + 7
-
+(N, M) = map(int, input().split())
+MOD = 10 ** 9 + 7
 MAXN = N + 100
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

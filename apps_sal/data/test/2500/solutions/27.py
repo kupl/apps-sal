@@ -6,4 +6,4 @@ def f(n):
 
 
 d = {0: 1, 1: 2}
-print(f(int(input())) % (10**9 + 7))
+print(f(int(input())) % (10 ** 9 + 7))

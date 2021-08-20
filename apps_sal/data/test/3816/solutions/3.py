@@ -1,4 +1,4 @@
-a, b, c, l = map(int, input().split())
+(a, b, c, l) = map(int, input().split())
 ans = (l + 3) * (l + 2) // 2 * (l + 1) // 3
 for z in (a, b, c):
     s = 2 * z - a - b - c

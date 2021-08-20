@@ -1,12 +1,11 @@
-# cook your dish here
 T = int(input())
 while T > 0:
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     c_e_a = 0
     c_e_b = 0
     c_o_a = 0
     c_o_b = 0
-    if(x == 1 and y == 1):
+    if x == 1 and y == 1:
         print(1)
         break
     for i in range(1, x + 1):

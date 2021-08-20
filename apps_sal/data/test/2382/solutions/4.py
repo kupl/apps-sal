@@ -1,12 +1,9 @@
 def main():
     n = int(input())
     s = list(map(int, input().split(' ')))
-
     s = sorted(s)[::-1]
-
     slimes = [s[0]]
     s = s[1:]
-
     for i in range(n):
         make_slimes = []
         rest_slimes = []
@@ -21,13 +18,13 @@ def main():
             make_idx = tmp_make_idx + 1
         rest_slimes += s[make_idx:]
         if len(make_slimes) < 2 ** i:
-            print("No")
+            print('No')
             return
         slimes += make_slimes
         s = rest_slimes
         slimes = sorted(slimes)[::-1]
         s = sorted(s)[::-1]
-    print("Yes")
+    print('Yes')
 
 
 main()

@@ -1,6 +1,9 @@
 import sys
 from collections import deque
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def solve():
@@ -8,7 +11,6 @@ def solve():
     A = [deque for _ in range(N)]
     for i in range(N):
         A[i] = deque(list([int(x) - 1 for x in input().split()]))
-
     days = 0
     ta = [i for i in range(N)]
     while True:
@@ -29,17 +31,15 @@ def solve():
             ta = ta2
         else:
             break
-
     empty = True
     for i in range(N):
         if len(A[i]) != 0:
             empty = False
             break
-
     if empty:
         print(days)
     else:
-        print((-1))
+        print(-1)
 
 
 def __starting_point():

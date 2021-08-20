@@ -6,4 +6,4 @@ for _ in range(n):
         cnt_l[a] ^= 1
     else:
         cnt_l[a] = 1
-print((sum(cnt_l.values())))
+print(sum(cnt_l.values()))

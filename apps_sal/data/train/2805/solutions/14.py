@@ -1,10 +1,10 @@
 def productFibAux(current, nxt, prod):
     res = []
-    while (current * nxt < prod):
+    while current * nxt < prod:
         k = nxt
         nxt = nxt + current
         current = k
-    if (prod == current * nxt):
+    if prod == current * nxt:
         return [current, nxt, True]
     else:
         return [current, nxt, False]

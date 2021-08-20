@@ -1,7 +1,8 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
 cnt = []
@@ -12,7 +13,7 @@ for s in list(input() + '#'):
         cnt[-1][1] += 1
 ans = []
 tmp = []
-for s, c in cnt:
+for (s, c) in cnt:
     if c == 1:
         for _ in range(len(tmp)):
             if _ % 2 == 0:

@@ -1,12 +1,10 @@
 import sys
-
 input = sys.stdin.readline
 P = 10 ** 9 + 7
 
 
 def main():
-    N, K = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
     ans = 0
     n_gcd = dict.fromkeys(list(range(K + 1)), 0)
     for k in reversed(list(range(1, K + 1))):
@@ -14,7 +12,6 @@ def main():
         for m in range(2, K // k + 1):
             n_gcd[k] = (n_gcd[k] - n_gcd[k * m]) % P
         ans = (ans + k * n_gcd[k]) % P
-
     print(ans)
 
 

@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split(' ')))
+(n, a, b) = list(map(int, input().split(' ')))
 seals = []
 for x in range(n):
     seals.append(list(map(int, input().split(' '))))
@@ -10,7 +10,7 @@ def condition(x, y):
     for i in [0, 1]:
         for j in [0, 1]:
             for k in [0, 1]:
-                if x[i] + y[j] <= ls[k] and x[1 - i] <= ls[1 - k] and y[1 - j] <= ls[1 - k]:
+                if x[i] + y[j] <= ls[k] and x[1 - i] <= ls[1 - k] and (y[1 - j] <= ls[1 - k]):
                     return True
     return False
 

@@ -7,4 +7,4 @@ for i in range(1, N - 1):
     a = max([A[i], A[i + 1]])
     if a > b:
         A[A.index(a)] = b
-print((sum(A)))
+print(sum(A))

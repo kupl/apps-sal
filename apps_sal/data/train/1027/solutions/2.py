@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, p = list(map(int, input().split()))
+    (n, p) = list(map(int, input().split()))
     if p == 1 or p == 2:
         print('impossible')
     else:

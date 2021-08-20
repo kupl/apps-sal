@@ -24,14 +24,12 @@ def solve(max_v, votes, m):
     return ans
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 votes = [[] for x in range(m)]
-
 for i in range(n):
-    p, c = (int(x) for x in input().split())
+    (p, c) = (int(x) for x in input().split())
     p -= 1
     votes[p].append(c)
-
 for i in range(m):
     L = len(votes[i])
     if L > 1:

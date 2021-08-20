@@ -6,4 +6,4 @@ for i in range(1, n):
         v.pop()
     else:
         v.append(a[i])
-print("NO" if len(v) > 1 else "YES")
+print('NO' if len(v) > 1 else 'YES')

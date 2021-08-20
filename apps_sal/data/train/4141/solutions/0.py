@@ -2,4 +2,4 @@ sb_primes = [2, 3, 5, 7, 13, 17, 19, 37, 73, 97, 109, 163, 193, 257, 433, 487, 5
 
 
 def solve(x, y):
-    return sum(x <= p < y for p in sb_primes)
+    return sum((x <= p < y for p in sb_primes))

@@ -10,12 +10,9 @@ def sum_cache(n):
 
 
 def list_squared(m, n):
-    # your code
-
     result = []
     for j in range(m, n + 1):
         summ = sum_cache(j)
         if (summ ** 0.5).is_integer():
             result.append([j, summ])
-
     return result

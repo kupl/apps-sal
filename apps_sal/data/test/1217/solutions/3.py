@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 resb = dict()

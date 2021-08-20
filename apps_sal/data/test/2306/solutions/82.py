@@ -17,20 +17,19 @@ for i in range(N):
     vj = vlist[i + 1]
     if vi <= vj:
         if vi - speed <= ti:
-            x += ti * vi - ((vi - speed)**2) / 2
+            x += ti * vi - (vi - speed) ** 2 / 2
             speed = vi
         else:
-            x += ti * (speed + ti) - (ti**2) / 2
+            x += ti * (speed + ti) - ti ** 2 / 2
             speed += ti
+    elif speed + ti <= vj:
+        x += ti * (speed + ti) - ti ** 2 / 2
+        speed += ti
+    elif 2 * vi - speed - vj <= ti:
+        x += ti * vi - (vi - speed) ** 2 / 2 - (vi - vj) ** 2 / 2
+        speed = vj
     else:
-        if speed + ti <= vj:
-            x += ti * (speed + ti) - (ti**2) / 2
-            speed += ti
-        elif 2 * vi - speed - vj <= ti:
-            x += ti * vi - ((vi - speed)**2) / 2 - ((vi - vj)**2) / 2
-            speed = vj
-        else:
-            a = (ti + vj - speed) / 2
-            x += a * (2 * speed + a) / 2 + (ti - a) * (2 * vj + ti - a) / 2
-            speed = vj
+        a = (ti + vj - speed) / 2
+        x += a * (2 * speed + a) / 2 + (ti - a) * (2 * vj + ti - a) / 2
+        speed = vj
 print(x)

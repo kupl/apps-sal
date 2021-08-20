@@ -1,12 +1,13 @@
 class User(object):
+
     def __init__(self):
-        self.ranks, self.cur_rank, self.progress = [-8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8], 0, 0
+        (self.ranks, self.cur_rank, self.progress) = ([-8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8], 0, 0)
 
     def get_rank(self):
         return self.ranks[self.cur_rank]
 
     def set_rank(self, arg):
-        '''Nope'''
+        """Nope"""
     rank = property(get_rank, set_rank)
 
     def inc_progress(self, k_rank):

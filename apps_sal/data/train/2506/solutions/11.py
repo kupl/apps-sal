@@ -1,4 +1,5 @@
 class Solution:
+
     def isIsomorphic(self, s, t):
         """
         :type s: str
@@ -7,7 +8,7 @@ class Solution:
         """
         if len(s) != len(t):
             return False
-        dic1, dic2 = {}, {}
+        (dic1, dic2) = ({}, {})
         for i in range(len(s)):
             if s[i] in dic1 and dic1[s[i]] != t[i]:
                 return False

@@ -1,1 +1,2 @@
-def arr(_=0): return [*range(_)]
+def arr(_=0):
+    return [*range(_)]

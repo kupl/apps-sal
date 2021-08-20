@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSizeSlices(self, slices: List[int]) -> int:
         n = len(slices)
         idx = min(range(n), key=lambda x: slices[x])

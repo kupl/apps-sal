@@ -1,5 +1,4 @@
 N = int(input())
-
 if 64 <= N:
     print(64)
 elif 32 <= N:

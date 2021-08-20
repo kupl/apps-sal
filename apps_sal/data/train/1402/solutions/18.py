@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a = '0b' + input()
     b = '0b' + input()

@@ -13,7 +13,7 @@ def solve():
         return 0
     ans = 0
     for i in range(n):
-        if s[i] == "-" or s[i - 1] == '-':
+        if s[i] == '-' or s[i - 1] == '-':
             ans += 1
     print(ans)
 

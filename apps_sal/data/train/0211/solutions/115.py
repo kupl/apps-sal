@@ -1,8 +1,8 @@
 class Solution:
+
     def dfs(self, s, req_l, segs, cur, hs):
         if cur >= len(s):
             return segs == req_l
-
         for pos in range(cur, len(s)):
             ts = s[cur:pos + 1]
             if ts in hs:

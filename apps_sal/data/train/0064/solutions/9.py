@@ -1,10 +1,11 @@
-def y(): return [*map(int, input().split())]
+def y():
+    return [*map(int, input().split())]
 
 
 for _ in range(int(input())):
-    n, t = map(int, input().split())
+    (n, t) = map(int, input().split())
     a = [0] + y() + [t]
-    l, h = 0, n + 1
+    (l, h) = (0, n + 1)
     tl = th = 0
     while h - l > 1:
         dl = (a[l + 1] - a[l]) / (l + 1)
@@ -15,8 +16,8 @@ for _ in range(int(input())):
         else:
             tl += dl
             l += 1
-    sh, sl = n + 2 - h, l + 1
+    (sh, sl) = (n + 2 - h, l + 1)
     if tl > th:
-        tl, th = th, tl
-        sh, sl = sl, sh
+        (tl, th) = (th, tl)
+        (sh, sl) = (sl, sh)
     print(th + (a[h] - a[l] - (th - tl) * sl) / (sh + sl))

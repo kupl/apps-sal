@@ -1,4 +1,3 @@
-# cook your dish here
 from multiprocessing import SimpleQueue as queue
 from collections import defaultdict
 from operator import itemgetter
@@ -36,13 +35,4 @@ for el in height:
         minimi[v] = min(minimo, wealth[v])
         diff[v] = max(max([diff[u] for u in sons[v]]), wealth[v] - minimo)
 print(diff[boss])
-
-
-'''
-coda=queue()
-for i in range(n):
-    if len(sons[i])==0:
-        coda.put(i)
-        visited[i]=1
-while len(coda)>0:
-    '''
+'\ncoda=queue()\nfor i in range(n):\n    if len(sons[i])==0:\n        coda.put(i)\n        visited[i]=1\nwhile len(coda)>0:\n    '

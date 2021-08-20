@@ -6,12 +6,10 @@ for i in range(n):
         num_map[a[i]] = 1
     else:
         num_map[a[i]] += 1
-
 res = 0
-for key, value in list(num_map.items()):
+for (key, value) in list(num_map.items()):
     if key <= value:
         res += value - key
     else:
         res += value
-
 print(res)

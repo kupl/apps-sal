@@ -12,4 +12,4 @@ for i in range(4):
 if sum(is_awesome) == 1:
     print(chr(ord('A') + is_awesome.index(1)))
 else:
-    print("C")
+    print('C')

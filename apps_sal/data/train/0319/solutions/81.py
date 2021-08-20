@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         l = len(stoneValue)
         dp = [0] * (l + 1)

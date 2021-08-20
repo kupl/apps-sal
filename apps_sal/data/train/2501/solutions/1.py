@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseStr(self, s, k):
         res = ''
         i = 0

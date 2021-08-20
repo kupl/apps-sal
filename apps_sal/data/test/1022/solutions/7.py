@@ -3,9 +3,7 @@ def main():
     left = [int(x) for x in input().strip().split()]
     right = [int(x) for x in input().strip().split()]
     rank = [x + y for (x, y) in zip(left, right)]
-    arr = [(n - r) for r in rank]
-
-    # check left
+    arr = [n - r for r in rank]
     for i in range(n):
         more = 0
         for j in range(i):
@@ -14,8 +12,6 @@ def main():
         if more != left[i]:
             print('NO')
             return
-
-    # check right
     for i in range(n):
         more = 0
         for j in range(i + 1, n):
@@ -24,7 +20,6 @@ def main():
         if more != right[i]:
             print('NO')
             return
-
     print('YES')
     for x in arr:
         print(x, end=' ')

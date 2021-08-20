@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         for i in range(1, len(A)):
             A[i] += A[i - 1]
-        pre_min, pre_max = float('inf'), float('-inf')
-        res1, res2 = A[0], A[0]
+        (pre_min, pre_max) = (float('inf'), float('-inf'))
+        (res1, res2) = (A[0], A[0])
         for a in A:
             res1 = max(res1, a - pre_min)
             res2 = min(res2, a - pre_max)

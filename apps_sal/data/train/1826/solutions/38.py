@@ -1,5 +1,7 @@
 class Solution:
+
     def matrixBlockSum(self, mat: list, K: int):
+
         def calc_surround(r, c):
             nonlocal mat, K
             total = 0
@@ -24,7 +26,6 @@ class Solution:
                 if 0 <= i < len(mat) and 0 <= c + K < len(mat[0]):
                     total += mat[i][c + K]
             return total
-
         grid = [[0] * len(mat[0]) for _ in range(len(mat))]
         for i in range(len(mat)):
             cache = 0

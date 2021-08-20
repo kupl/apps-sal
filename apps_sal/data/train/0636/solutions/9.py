@@ -1,7 +1,6 @@
-# cook your dish here
 from operator import itemgetter
 inp = list(map(int, input().split()))
-n, t = inp[0], inp[1]
+(n, t) = (inp[0], inp[1])
 array = inp[2:]
 somme = []
 for i in range(n - 1):

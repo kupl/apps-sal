@@ -13,11 +13,10 @@ def solve(s):
                 i = i + 1
             else:
                 i = i + 1
+        elif s[j] != ' ':
+            pos[i] = s[j]
+            j = j - 1
+            i = i + 1
         else:
-            if s[j] != ' ':
-                pos[i] = s[j]
-                j = j - 1
-                i = i + 1
-            else:
-                j = j - 1
+            j = j - 1
     return ''.join(pos)

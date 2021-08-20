@@ -8,4 +8,4 @@ def f(lst, v=1):
             for j in f(x, v + 1):
                 yield j
         else:
-            yield x**v
+            yield (x ** v)

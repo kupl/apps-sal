@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         res = 0
         q = deque()
@@ -7,10 +8,9 @@ class Solution:
                 if A[i] == 1:
                     res += 1
                     q.append(i + K - 1)
-            else:
-                if A[i] == 0:
-                    res += 1
-                    q.append(i + K - 1)
+            elif A[i] == 0:
+                res += 1
+                q.append(i + K - 1)
             if q and q[0] == i:
                 q.popleft()
             if q and q[-1] >= len(A):

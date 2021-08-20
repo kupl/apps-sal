@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 res = 1
 num = int(m ** 0.5) + 1
 for i in range(1, num):

@@ -19,16 +19,10 @@ def lm():
 
 
 n = nn()
-
 l = lm()
-
 q = nn()
-
 qs = lm()
-
 l.sort()
-
 s = sum(l)
-
 for c in qs:
     print(s - l[-c])

@@ -1,4 +1,4 @@
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 plane = []
 neig = [[0] * 12 for x in range(n)]
 count = [0, 0, 0]
@@ -14,22 +14,19 @@ for i in range(n):
                 count_all += 1
         if s[j] == '.':
             c = 2
-            if (j > 0 and s[j - 1] != 'S') or j == 0:
+            if j > 0 and s[j - 1] != 'S' or j == 0:
                 c -= 1
-            if (j < 11 and s[j + 1] != 'S') or j == 11:
+            if j < 11 and s[j + 1] != 'S' or j == 11:
                 c -= 1
             count[c] += 1
             neig[i][j] = c
-# print(count)
 k1 = k
 for i in range(3):
     if k1 >= count[i]:
-        k1, count[i] = k1 - count[i], count[i]
+        (k1, count[i]) = (k1 - count[i], count[i])
     else:
-        k1, count[i] = 0, k1
-# print(count_all, count)
+        (k1, count[i]) = (0, k1)
 print(count_all + count[1] + 2 * count[2])
-# print(plane[12])
 for i in range(n):
     for j in range(12):
         if plane[i][j] == '.':

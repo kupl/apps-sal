@@ -8,4 +8,4 @@ def factorial(n):
 def strong_num(num):
     rs = list(map(int, str(num)))
     r = [factorial(i) for i in rs]
-    return "STRONG!!!!" if sum(r) == num else "Not Strong !!"
+    return 'STRONG!!!!' if sum(r) == num else 'Not Strong !!'

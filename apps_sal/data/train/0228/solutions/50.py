@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         c = Counter(s[:k])
         m = sum([c[x] for x in 'aeiou'])

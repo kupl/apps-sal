@@ -1,5 +1,5 @@
 def gordon(a):
-    out, vowels = '', 'eiou'
+    (out, vowels) = ('', 'eiou')
     for i in a:
         if i == 'a':
             out += '@'

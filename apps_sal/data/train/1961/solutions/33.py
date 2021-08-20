@@ -1,4 +1,3 @@
-# O(1) time and O(n) space, use a list
 class BrowserHistory:
 
     def __init__(self, homepage: str):
@@ -23,10 +22,3 @@ class BrowserHistory:
     def forward(self, steps: int) -> str:
         self.i = min(self.bound, self.i + steps)
         return self.urls[self.i]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

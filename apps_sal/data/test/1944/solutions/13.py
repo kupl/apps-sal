@@ -1,7 +1,7 @@
 n = int(input())
 if n == 1:
     (a, b) = list(map(int, input().split()))
-    print("Poor Alex")
+    print('Poor Alex')
 else:
     x = [0] * n
     for i in range(n):
@@ -14,6 +14,6 @@ else:
             ans = True
             break
     if ans == True:
-        print("Happy Alex")
+        print('Happy Alex')
     else:
-        print("Poor Alex")
+        print('Poor Alex')

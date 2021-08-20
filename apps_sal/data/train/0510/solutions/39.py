@@ -1,15 +1,13 @@
 from bisect import bisect_left
 import string
-
 dic = {c: [] for c in string.ascii_lowercase}
 N = int(input())
 S = list(input())
 Q = int(input())
 for i in range(len(S)):
     dic[S[i]].append(i + 1)
-
 for i in range(Q):
-    a, b, c = list(map(str, input().split()))
+    (a, b, c) = list(map(str, input().split()))
     if a == '1':
         if S[int(b) - 1] == c:
             continue
@@ -22,7 +20,7 @@ for i in range(Q):
         S[b - 1] = c
     else:
         ans = 0
-        b, c = int(b), int(c)
+        (b, c) = (int(b), int(c))
         for j in string.ascii_lowercase:
             d = bisect_left(dic[j], b)
             if d < len(dic[j]):

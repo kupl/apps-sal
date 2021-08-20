@@ -1,5 +1,5 @@
 def main():
-    n, m, a, b = list(map(int, input().split(' ')))
+    (n, m, a, b) = list(map(int, input().split(' ')))
     c = 0
     if b / m < a:
         c += n // m * b

@@ -8,7 +8,6 @@ for _ in range(int(input())):
         m.append(l.count(i))
     if max(m) > a:
         print(-1)
-
     else:
         x = a
         y = x + a

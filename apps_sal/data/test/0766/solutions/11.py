@@ -1,5 +1,5 @@
 s = input()
-d, m, l = dict(), set(), list()
+(d, m, l) = (dict(), set(), list())
 for i in s:
     try:
         d[i] += 1

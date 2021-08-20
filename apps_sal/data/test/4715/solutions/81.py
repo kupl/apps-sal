@@ -1,5 +1,3 @@
 import numpy as np
 a = list(map(int, input().split()))
-
-
-print((len(set(a))))
+print(len(set(a)))

@@ -1,6 +1,6 @@
 from sys import *
 for _ in range(int(stdin.readline())):
-    a, b = list(map(int, stdin.readline().rstrip().split()))
+    (a, b) = list(map(int, stdin.readline().rstrip().split()))
     l = list(map(int, stdin.readline().split()))
     k = []
     c = 0
@@ -10,13 +10,13 @@ for _ in range(int(stdin.readline())):
             c += 1
     j = c
     if j < b:
-        print("NO")
+        print('NO')
     else:
         t = j - b
         if t & 1 == 0:
-            print("YES")
+            print('YES')
             for x in range(b - 1):
-                print(k[x], end=" ")
+                print(k[x], end=' ')
             print(a)
         else:
-            print("NO")
+            print('NO')

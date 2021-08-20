@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.par = list(range(n))
         self.arr = list(map(int, input().split()))
@@ -11,18 +12,16 @@ class DSU:
         while nn != self.par[nn]:
             nn = self.par[nn]
         while n != nn:
-            self.par[n], n = nn, self.par[n]
+            (self.par[n], n) = (nn, self.par[n])
         return n
 
     def union(self, a, b):
         a = self.find(a)
         b = self.find(b)
-
         if a == b:
             return
-
         if self.siz[a] < self.siz[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         self.par[b] = a
         self.siz[a] += self.siz[b]
         self.arr[a] += self.arr[b]

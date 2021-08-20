@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n == 0:
     print(0, 1)
     print(0, m)
@@ -20,14 +20,13 @@ elif m >= n:
         print(0, 0)
         print(0, m)
         print(n, 0)
+elif 2 * ((m - 1) ** 2 + n ** 2) ** 0.5 >= n + (m ** 2 + n ** 2) ** 0.5:
+    print(0, 1)
+    print(n, m)
+    print(0, 0)
+    print(n, m - 1)
 else:
-    if 2 * ((m - 1) ** 2 + n ** 2) ** 0.5 >= n + (m ** 2 + n ** 2) ** 0.5:
-        print(0, 1)
-        print(n, m)
-        print(0, 0)
-        print(n, m - 1)
-    else:
-        print(n, m)
-        print(0, 0)
-        print(n, 0)
-        print(0, m)
+    print(n, m)
+    print(0, 0)
+    print(n, 0)
+    print(0, m)

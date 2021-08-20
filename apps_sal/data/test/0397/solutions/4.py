@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 c = 1
 while c * (c + 1) // 2 < k:
     c += 1

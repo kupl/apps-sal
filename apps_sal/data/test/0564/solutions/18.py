@@ -1,9 +1,7 @@
-n, s = [int(i) for i in input().split()]
+(n, s) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-result = "NO"
-
+result = 'NO'
 m = max(a)
 if sum(a) - m <= s:
-    result = "YES"
-
+    result = 'YES'
 print(result)

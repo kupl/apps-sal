@@ -9,5 +9,4 @@ for i in range(N):
         que.appendleft(A[i])
     else:
         que[k - 1] = A[i]
-
 print(len(que))

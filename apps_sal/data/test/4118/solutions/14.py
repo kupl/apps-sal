@@ -1,4 +1,4 @@
-x, n = map(int, input().split())
+(x, n) = map(int, input().split())
 if n > 9 or x > 9:
     print(-1)
 else:

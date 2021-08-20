@@ -7,4 +7,4 @@ def get_digit_count(n):
 
 
 def multiply(n):
-    return n * (5**get_digit_count(abs(n)))
+    return n * 5 ** get_digit_count(abs(n))

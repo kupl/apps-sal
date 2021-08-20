@@ -1,5 +1,5 @@
 def socialist_distribution(population, minimum):
-    if sum(population) < (minimum * len(population)):
+    if sum(population) < minimum * len(population):
         return []
     if min(population) >= minimum:
         return population

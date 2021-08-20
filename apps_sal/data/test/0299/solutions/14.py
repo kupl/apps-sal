@@ -9,15 +9,12 @@ for i in range(variant):
         biceps += A[i - 1]
     else:
         back += A[i - 1]
-
 if chest > biceps:
     if chest > back:
-        print("chest")
+        print('chest')
     else:
-        print("back")
-
+        print('back')
+elif biceps > back:
+    print('biceps')
 else:
-    if biceps > back:
-        print("biceps")
-    else:
-        print("back")
+    print('back')

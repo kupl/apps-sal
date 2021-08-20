@@ -1,4 +1,5 @@
 class Solution:
+
     def shoppingOffers(self, price, special, needs):
         """
         :type price: List[int]
@@ -26,5 +27,4 @@ class Solution:
                     res = min(res, minp(need2, d) + s[-1])
             d[str(needs)] = res
             return res
-
         return minp(needs, d)

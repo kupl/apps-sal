@@ -1,12 +1,11 @@
-# cook your code here
 t = eval(input())
 while t:
     s1 = input().lower()
     s2 = input().lower()
     if s1 < s2:
-        print("first")
+        print('first')
     elif s1 > s2:
-        print("second")
+        print('second')
     else:
-        print("equal")
+        print('equal')
     t -= 1

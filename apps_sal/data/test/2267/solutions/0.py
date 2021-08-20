@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from functools import cmp_to_key
 
 
@@ -21,7 +19,6 @@ def compare(a, b):
     c = cmpEqLen(a[:l], b[:l])
     if c != 0:
         return c
-
     if alen > blen:
         return -compare(a[:l], a[l:])
     else:

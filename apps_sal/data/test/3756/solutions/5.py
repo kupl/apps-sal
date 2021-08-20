@@ -1,8 +1,7 @@
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     b = list(input())
     p = b.index('.')
-
     if int(b[p + 1]) > 4:
         del b[p:n]
         b = list(b)

@@ -8,9 +8,9 @@ def palindrom(s):
 
 s = input()
 n = len(s)
-words = "abcdefghjklmnpoqrstvwxyziuy"
+words = 'abcdefghjklmnpoqrstvwxyziuy'
 yes = 0
-s1 = ""
+s1 = ''
 for i in range(n + 1):
     for j in words:
         if palindrom(s[:i] + j + s[i:]) == 1:
@@ -19,7 +19,7 @@ for i in range(n + 1):
             break
     if yes == 1:
         break
-if s1 == "":
-    print("NA")
+if s1 == '':
+    print('NA')
 else:
     print(s1)

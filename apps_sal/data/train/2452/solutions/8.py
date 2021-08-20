@@ -1,4 +1,5 @@
 class Solution:
+
     def lastStoneWeight(self, stones: List[int]) -> int:
         stones = [-s for s in stones]
         heapq.heapify(stones)
@@ -8,5 +9,4 @@ class Solution:
             if s1 != s2:
                 s = s1 - s2
                 heapq.heappush(stones, s)
-
         return -stones.pop() if stones else 0

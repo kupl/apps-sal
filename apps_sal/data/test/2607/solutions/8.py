@@ -26,4 +26,4 @@ for x in range(a):
             prev = str[i]
             res.append(prev)
     if ch == 0:
-        print(''.join(y for y in res))
+        print(''.join((y for y in res)))

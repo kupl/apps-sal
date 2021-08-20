@@ -1,5 +1,4 @@
 import sys
-
 q = int(sys.stdin.readline().strip())
 for Q in range(0, q):
     s = sys.stdin.readline().strip()
@@ -17,7 +16,7 @@ for Q in range(0, q):
             j = j + 1
             alpha[k] = alpha[k] + 1
     if i != len(s):
-        print("NO")
+        print('NO')
     else:
         while j < len(t):
             k = ord(t[j]) - ord('a')
@@ -29,6 +28,6 @@ for Q in range(0, q):
             j = j + 1
             alpha[k] = alpha[k] - 1
         if max(alpha) > 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPrefix(self, s: str) -> str:
         solution = ''
         for i in range(len(s)):

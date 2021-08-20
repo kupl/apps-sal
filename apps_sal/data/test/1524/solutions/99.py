@@ -1,5 +1,4 @@
 s = input()
-
 ans = [0] * len(s)
 s += 'R'
 present = 'R'
@@ -18,7 +17,7 @@ for i in range(len(s) - 1):
         present = 'R'
         rl = r - start
         ll = end - l
-        ans[r] = 1 + rl // 2 + (-(-ll // 2))
-        ans[l] = 1 + (-(-rl // 2)) + ll // 2
+        ans[r] = 1 + rl // 2 + -(-ll // 2)
+        ans[l] = 1 + -(-rl // 2) + ll // 2
         start = i + 1
 print(' '.join(map(str, ans)))

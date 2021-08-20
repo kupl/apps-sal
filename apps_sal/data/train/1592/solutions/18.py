@@ -9,7 +9,7 @@ for _ in range(int(input())):
             s += sum(l[:n // 2])
         else:
             l1.append(l)
-    l2, l3 = [], []
+    (l2, l3) = ([], [])
     for i in range(len(l1)):
         l2.append(sum(l1[i][:len(l1[i]) // 2]))
         l2.append(sum(l1[i][:len(l1[i]) // 2 + 1]))

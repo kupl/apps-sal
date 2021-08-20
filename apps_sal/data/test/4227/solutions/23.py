@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 G = [[] for _ in range(N)]
 seen = [False] * N
 for i in range(M):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     G[a].append(b)
     G[b].append(a)
 

@@ -3,7 +3,7 @@ for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     if n % 2:
-        print("Second")
+        print('Second')
         continue
     d = dict()
     for num in a:
@@ -16,6 +16,6 @@ for _ in range(t):
         if d[num] % 2:
             ok = False
     if ok:
-        print("Second")
+        print('Second')
     else:
-        print("First")
+        print('First')

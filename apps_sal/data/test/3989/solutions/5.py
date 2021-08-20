@@ -20,7 +20,7 @@ def main():
                 buf.append(i)
                 m = (10 * m + i) % 7
                 num += 1
-    m = (m * 10000) % 7
+    m = m * 10000 % 7
     mp = [9681, 1896, 9861, 1698, 6891, 6981, 6819]
     buf.append(mp[m])
     num += 4

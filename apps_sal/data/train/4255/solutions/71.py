@@ -3,4 +3,4 @@ def make_upper_case(s):
     return list.upper()
 
 
-print(make_upper_case("bahs"))
+print(make_upper_case('bahs'))

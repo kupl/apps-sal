@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         biggest = A[0]
         newbiggest = A[0]
@@ -9,7 +10,6 @@ class Solution:
             if itr < biggest:
                 lenL = total
                 biggest = newbiggest
-            else:
-                if itr > newbiggest:
-                    newbiggest = itr
+            elif itr > newbiggest:
+                newbiggest = itr
         return lenL

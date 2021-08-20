@@ -1,7 +1,6 @@
 s = input()
 n = int(s[:-1]) - 1
 s = s[-1]
-
 res = n // 4 * (6 * 2 + 4)
 if n % 2 == 1:
     res += 7

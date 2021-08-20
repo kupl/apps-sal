@@ -1,8 +1,4 @@
-a, b, k = map(int, input().split())
-# A - Kを求める
+(a, b, k) = map(int, input().split())
 takahashi = [0, a - k]
-
-# A - K < 0 なら Bの分も食べる
 aoki = [0, b + min(takahashi)]
-
-print("{takahashi} {aoki}".format(takahashi=max(takahashi), aoki=max(aoki)))
+print('{takahashi} {aoki}'.format(takahashi=max(takahashi), aoki=max(aoki)))

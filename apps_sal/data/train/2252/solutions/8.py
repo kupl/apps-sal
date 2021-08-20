@@ -1,4 +1,4 @@
-aw = [2**i for i in range(26)]
+aw = [2 ** i for i in range(26)]
 n = int(input())
 d = dict()
 ans = 0

@@ -1,7 +1,6 @@
 for _ in range(int(input())):
-    x, y = tuple(map(int, input().split()))
-    a, b = tuple(map(int, input().split()))
-
+    (x, y) = tuple(map(int, input().split()))
+    (a, b) = tuple(map(int, input().split()))
     if a * 2 <= b:
         print((x + y) * a)
     else:

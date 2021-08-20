@@ -12,9 +12,7 @@ for i in range(n):
     k = input().split(' ')
     k = list(map(int, k))
     a.append(k)
-
 ans = True
-
 for i in range(n):
     for j in range(n):
         if a[i][j] == 1:
@@ -30,8 +28,7 @@ for i in range(n):
                 break
     if ans == False:
         break
-
 if ans == True:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

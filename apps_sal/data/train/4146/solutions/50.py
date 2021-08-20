@@ -8,6 +8,6 @@ def is_sorted_and_how(arr):
             desc = False
         else:
             asc = False
-        if not asc and not desc:
+        if not asc and (not desc):
             return 'no'
     return 'yes, ascending' if asc else 'yes, descending'

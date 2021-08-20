@@ -7,7 +7,6 @@ def main():
     ans = 1
     for i in range(2, n):
         ans *= i
-
     print(ans // (n // 2))
 
 

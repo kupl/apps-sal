@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 mark = [0 for x in range(1 << 18 + 1)]
 mark[x] = 1
 cur = 0

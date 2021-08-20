@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         f = [0, 0]
         ans = 0
@@ -10,5 +11,4 @@ class Solution:
             else:
                 f = [0, 0]
             ans = max(ans, f[0])
-        # print(f)
         return ans

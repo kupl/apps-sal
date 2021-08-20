@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         cap = [capacity] * 1000
         for trip in trips:

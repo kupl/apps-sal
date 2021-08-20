@@ -1,6 +1,5 @@
 def calculate_years(principal, interest, tax, desired):
-
-    if(principal >= desired):
+    if principal >= desired:
         return 0
     else:
         gain = principal * interest

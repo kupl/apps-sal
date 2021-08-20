@@ -1,6 +1,5 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 L = list(map(int, input().split()))
-
 current = 0
 cnt = 1
 for l in L:
@@ -8,5 +7,4 @@ for l in L:
     if current > X:
         break
     cnt += 1
-
 print(cnt)

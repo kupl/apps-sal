@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 nums = [0] * 100005
 for x in a:
     nums[x] += 1
-even, odd = [], []
+(even, odd) = ([], [])
 for p in nums:
     if p % 2 == 1 and p > 1:
         odd.append(p)

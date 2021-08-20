@@ -1,5 +1,4 @@
 n = int(input())
-
 ans = 0
 if n % 2 == 1:
     ans = 0
@@ -9,5 +8,4 @@ else:
     while n > 1:
         ans += n // 5
         n = n // 5
-        # print(n)
 print(ans)

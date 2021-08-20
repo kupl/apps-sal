@@ -15,9 +15,8 @@ def solve1(x):
 
 
 def solve2(x):
-    return int(x, 2) * pow(2, (len(x) - 1), M) % M
+    return int(x, 2) * pow(2, len(x) - 1, M) % M
 
 
 x = input()
-# print(solve1(x))
 print(solve2(x))

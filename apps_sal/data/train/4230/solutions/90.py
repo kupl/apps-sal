@@ -7,4 +7,4 @@ def reverse_letter(string):
             pass
         else:
             newlst.append(item)
-    return "".join(newlst)
+    return ''.join(newlst)

@@ -1,12 +1,8 @@
-# rjohari23
-
 n = eval(input())
 a = list(map(int, input().split()))
 q = eval(input())
 while q:
-
     s = input().split()
-    # print s
     if s[0] == 'U':
         l = int(s[1])
         v = int(s[2])
@@ -33,5 +29,4 @@ while q:
         r = int(s[2])
         A = sorted(a[l - 1:r])
         print(A[1])
-
     q -= 1

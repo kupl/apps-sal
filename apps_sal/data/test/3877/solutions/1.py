@@ -22,8 +22,8 @@ def solve(n, l, r):
     elif l > mid:
         return solve(n // 2, l - mid, r - mid)
     else:
-        return (n % 2) + solve(n // 2, l, mid - 1) + solve(n // 2, 1, r - mid)
+        return n % 2 + solve(n // 2, l, mid - 1) + solve(n // 2, 1, r - mid)
 
 
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 print(solve(n, l, r))

@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 a = [int(x) for x in input().split()]
 mx = [0] * n
 mx[-1] = a[-1]

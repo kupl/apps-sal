@@ -11,7 +11,7 @@ def gcd_list(numbers):
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):

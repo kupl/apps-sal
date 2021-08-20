@@ -1,5 +1,5 @@
 N = int(input())
-A = list(map(int, (input().split())))
+A = list(map(int, input().split()))
 suma = 0
 sumabs = 0
 for i in range(N):

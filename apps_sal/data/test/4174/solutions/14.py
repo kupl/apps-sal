@@ -1,4 +1,4 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 li = list(map(int, input().split()))
 d = 0
 c = 1

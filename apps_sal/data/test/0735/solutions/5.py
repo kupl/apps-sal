@@ -21,7 +21,6 @@ while i < len(a):
             i += 1
         e = i - 1
         b = a[0:s] + list(reversed(a[s:e + 1])) + a[e + 1:]
-
         break
 if isSorted(b):
     print('yes')

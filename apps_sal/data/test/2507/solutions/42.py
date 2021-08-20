@@ -1,5 +1,5 @@
 import numpy as np
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = np.array(input().split(), dtype=np.int64)
 F = np.array(input().split(), dtype=np.int64)
 A = np.sort(A)
@@ -15,10 +15,9 @@ left = -1
 right = 10 ** 12 + 1
 while right > left + 1:
     mid = (right + left) // 2
-    if C(mid):  # 食べきれる場合
+    if C(mid):
         right = mid
     else:
         left = mid
-
 ans = right
 print(ans)

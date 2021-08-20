@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         minRotation = 0
         MaxProfit = 0
@@ -24,8 +25,8 @@ class Solution:
         print(waiting)
         if waiting:
             temp = waiting
-            print(((waiting // 4) * 4, int(waiting / 4)))
-            profit += (waiting // 4) * 4 * boardingCost - runningCost * int(waiting / 4)
+            print((waiting // 4 * 4, int(waiting / 4)))
+            profit += waiting // 4 * 4 * boardingCost - runningCost * int(waiting / 4)
             if profit > MaxProfit:
                 MaxProfit = profit
                 minRotation = len(customers) + int(waiting / 4)

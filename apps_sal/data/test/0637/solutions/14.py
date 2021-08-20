@@ -22,6 +22,6 @@ if fx == -1:
 elif fx != cnt:
     kek = -1
 if kek == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

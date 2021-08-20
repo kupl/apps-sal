@@ -3,8 +3,8 @@ from copy import deepcopy
 
 def insertItem(bag, item, coord):
     bag = deepcopy(bag)
-    height, width = len(item), len(item[0])
-    y, x = coord
+    (height, width) = (len(item), len(item[0]))
+    (y, x) = coord
     for i in range(y, y + height):
         for j in range(x, x + width):
             if item[i - y][j - x] != 0:
@@ -13,8 +13,8 @@ def insertItem(bag, item, coord):
 
 
 def isCorrectVariant(bag, item, coord):
-    height, width = len(item), len(item[0])
-    y, x = coord
+    (height, width) = (len(item), len(item[0]))
+    (y, x) = coord
     for i in range(y, y + height):
         for j in range(x, x + width):
             if bag[i][j] and item[i - y][j - x] != 0:
@@ -34,7 +34,6 @@ def bags_variants(bag, item):
 def solve(bag, items):
     if not items:
         return bag
-
     for temp_bag in bags_variants(bag, items[0]):
         r = solve(temp_bag, items[1:])
         if r:

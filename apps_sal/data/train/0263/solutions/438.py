@@ -13,20 +13,15 @@ class Solution:
 
     def knightDialer(self, n: int) -> int:
         mem = defaultdict(int)
-
         for j in range(10):
-            mem[(1, j)] = 1
-
+            mem[1, j] = 1
         for i in range(1, n):
             for j in range(10):
                 for num in self.dic[j]:
-                    mem[(i + 1, num)] += mem[(i, j)]
-                    mem[(i + 1, num)] = mem[(i + 1, num)] % (10**9 + 7)
-
+                    mem[i + 1, num] += mem[i, j]
+                    mem[i + 1, num] = mem[i + 1, num] % (10 ** 9 + 7)
         res = 0
-
         for i in range(10):
-            res += mem[(n, i)]
-            res = res % (10**9 + 7)
-
+            res += mem[n, i]
+            res = res % (10 ** 9 + 7)
         return res

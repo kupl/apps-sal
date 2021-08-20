@@ -2,11 +2,11 @@ import collections
 
 
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
-        # return max(collections.Counter(tuple(x ^ r[0] for x in r) for r in matrix).values())
         values = {}
         for row in matrix:
-            s1, s2 = '', ''
+            (s1, s2) = ('', '')
             for c in row:
                 s1 += str(c ^ 0)
                 s2 += str(c ^ 1)

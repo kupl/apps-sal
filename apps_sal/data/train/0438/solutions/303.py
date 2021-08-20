@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [-1 for i in range(n)]
         self.size = [0 for _ in range(n)]
@@ -25,7 +26,7 @@ class UnionFind:
             return
         if p == -1 or q == -1:
             return
-        father, son = p, q
+        (father, son) = (p, q)
         self.parent[son] = father
         self.size_count[self.size[son]] -= 1
         self.size_count[self.size[father]] -= 1
@@ -39,12 +40,13 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UnionFind(n + 1)
         step = -1
-        for idx, num in enumerate(arr):
-            left, right = num - 1, num + 1
+        for (idx, num) in enumerate(arr):
+            (left, right) = (num - 1, num + 1)
             uf.init(num)
             if left >= 1:
                 uf.union(left, num)

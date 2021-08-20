@@ -1,4 +1,5 @@
 class Transaction:
+
     def __init__(self, name, time, amount, city):
         self.name = name
         self.time = int(time)
@@ -10,14 +11,15 @@ class Transaction:
 
 
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         transactions = [Transaction(*t.split(',')) for t in transactions]
         transactions.sort(key=lambda x: x.time)
         nameMap = collections.defaultdict(list)
-        for i, t in enumerate(transactions):
+        for (i, t) in enumerate(transactions):
             nameMap[t.name].append(i)
         invalid = []
-        for name, idxLst in nameMap.items():
+        for (name, idxLst) in nameMap.items():
             left = 0
             right = 0
             for idx in idxLst:

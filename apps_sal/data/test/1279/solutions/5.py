@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     odd = 0
     even = 0
@@ -15,10 +15,9 @@ def main():
             if even:
                 even -= 1
                 ans += 1
-        else:
-            if odd:
-                odd -= 1
-                ans += 1
+        elif odd:
+            odd -= 1
+            ans += 1
     print(ans)
     return 0
 

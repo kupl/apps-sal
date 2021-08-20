@@ -1,15 +1,12 @@
 __author__ = 'Rakshak.R.Hegde'
-"""
-Created on Dec 30 2014 PM 08:30
-
-@author: Rakshak.R.Hegde
-"""
+'\nCreated on Dec 30 2014 PM 08:30\n\n@author: Rakshak.R.Hegde\n'
 
 
-def mint(): return map(int, input().split())
+def mint():
+    return map(int, input().split())
 
 
-n, t = mint()
+(n, t) = mint()
 a = list(mint())
 curr = 1
 while curr < t:

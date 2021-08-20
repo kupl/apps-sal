@@ -8,21 +8,39 @@ from collections import *
 from functools import reduce, cmp_to_key
 import sys
 input = sys.stdin.readline
-
-
 M = mod = 998244353
-def factors(n): return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0))))
-def inv_mod(n): return pow(n, mod - 2, mod)
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def st(): return input().rstrip('\n')
-def val(): return int(input().rstrip('\n'))
-def li2(): return [i for i in input().rstrip('\n')]
-def li3(): return [int(i) for i in input().rstrip('\n')]
+def factors(n):
+    return sorted(set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0))))
+
+
+def inv_mod(n):
+    return pow(n, mod - 2, mod)
+
+
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def st():
+    return input().rstrip('\n')
+
+
+def val():
+    return int(input().rstrip('\n'))
+
+
+def li2():
+    return [i for i in input().rstrip('\n')]
+
+
+def li3():
+    return [int(i) for i in input().rstrip('\n')]
 
 
 class Node:
+
     def __init__(self, s, e):
         self.start = s
         self.end = e
@@ -36,7 +54,7 @@ def build(nums, l, r):
         temp = Node(l, l)
         temp.val = nums[l]
     else:
-        mid = (l + r) >> 1
+        mid = l + r >> 1
         temp = Node(l, r)
         temp.left = build(nums, l, mid)
         temp.right = build(nums, mid + 1, r)
@@ -66,18 +84,13 @@ def query(root, start, end):
 
 n = val()
 s = st()
-
 index = defaultdict(deque)
-
 for i in range(n):
     index[s[i]].append(i)
-
 s1 = s[::-1]
 N = 2 * 10 ** 5 + 10
-root = build([0] * (N), 0, N - 1)
-
+root = build([0] * N, 0, N - 1)
 ans = 0
-# print(s, s1)
 pointer = 0
 myset = set()
 for i in range(n):

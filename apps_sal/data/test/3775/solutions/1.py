@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p1 = list(map(int, input().split()))
 p2 = list(map(int, input().split()))
 cand = set()
@@ -6,8 +6,8 @@ cc = [set() for i in range(n)]
 dd = [set() for i in range(m)]
 for i in range(n):
     for j in range(m):
-        a, b = p1[2 * i], p1[2 * i + 1]
-        c, d = p2[2 * j], p2[2 * j + 1]
+        (a, b) = (p1[2 * i], p1[2 * i + 1])
+        (c, d) = (p2[2 * j], p2[2 * j + 1])
         if a not in (c, d) and b not in (c, d):
             continue
         if a in (c, d) and b in (c, d):
@@ -21,8 +21,7 @@ for i in range(n):
         dd[j].add(kandidat)
 if len(cand) == 1:
     print(cand.pop())
-elif max(len(cc[i]) for i in range(n)) <= 1 and\
-        max(len(dd[i]) for i in range(m)) <= 1:
+elif max((len(cc[i]) for i in range(n))) <= 1 and max((len(dd[i]) for i in range(m))) <= 1:
     print(0)
 else:
     print(-1)

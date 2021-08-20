@@ -6,11 +6,9 @@ def main():
     n = int(input())
     m = list(map(int, input().split()))
     r = list(map(int, input().split()))
-
     k = 1
     for x in m:
-        k = (x * k) // gcd(x, k)
-
+        k = x * k // gcd(x, k)
     a = 0
     for i in range(k):
         f = 0
@@ -19,7 +17,6 @@ def main():
                 f = 1
                 break
         a += f
-
     print(a / k)
 
 

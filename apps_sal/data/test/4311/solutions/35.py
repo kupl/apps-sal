@@ -1,5 +1,4 @@
 s = int(input())
-
 A = [s]
 idx = 1
 while True:

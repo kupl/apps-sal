@@ -4,7 +4,6 @@ for case in range(int(input())):
     list2 = [list1[0]]
     for i in range(1, num):
         list2.append(list1[i] + list2[i - 1])
-    # print(list2)
     know = 1
     day = 0
     while know < num:

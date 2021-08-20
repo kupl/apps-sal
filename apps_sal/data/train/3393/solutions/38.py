@@ -7,11 +7,11 @@ def getDivisors(x):
     i = 1
     while i * i <= x:
         if x % i == 0:
-            result.append(i**2)
+            result.append(i ** 2)
             if x / i != i:
-                result.append((x / i)**2)
+                result.append((x / i) ** 2)
         i += 1
-    return (result)
+    return result
 
 
 def isSquaredDivisor(n):

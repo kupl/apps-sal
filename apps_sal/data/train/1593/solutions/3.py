@@ -3,15 +3,15 @@ for _ in range(int(input())):
     n = int(input())
     c = 0
     for i in l:
-        if(n >= i):
+        if n >= i:
             r = n / i
-            if(type(r) == int):
+            if type(r) == int:
                 print(r)
                 break
             else:
                 r = int(r)
                 c += r
-                n = n - (i * r)
-        if(n == 0):
+                n = n - i * r
+        if n == 0:
             break
     print(c)

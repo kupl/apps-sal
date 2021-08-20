@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, n = map(int, input().split())
+    (a, b, n) = map(int, input().split())
     cnt = 0
     while a <= n or b <= n:
         if a > b:

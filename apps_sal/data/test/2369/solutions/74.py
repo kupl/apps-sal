@@ -1,13 +1,13 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
-p = 10**9 + 7
+p = 10 ** 9 + 7
 
 
 def fact(n, p):
     a = [[] for _ in range(n + 1)]
     a[0] = 1
     for i in range(n):
-        a[i + 1] = (a[i] * (i + 1)) % p
+        a[i + 1] = a[i] * (i + 1) % p
     return a
 
 

@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-tot_sum, curr_sum, d = 0, 0, {}
+(n, m) = map(int, input().split())
+(tot_sum, curr_sum, d) = (0, 0, {})
 arr = list(map(int, input().split()))
 for x in arr:
     tot_sum += x

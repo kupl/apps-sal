@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-mod = 10**9 + 7
+(n, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 ans = [0] * (k + 1)
 anss = 0
 for i in reversed(range(1, k + 1)):

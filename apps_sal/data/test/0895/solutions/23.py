@@ -2,7 +2,6 @@ n = int(input())
 l = list(map(int, input().split()))
 t = int(input())
 l.sort()
-
 mx = 1
 i = 0
 j = 0
@@ -15,11 +14,8 @@ while j < n - 1:
             count += 1
             i += 1
         else:
-
             break
     if count > mx:
-
         mx = count
     j += 1
-
 print(mx)

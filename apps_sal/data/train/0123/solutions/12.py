@@ -1,5 +1,7 @@
 class Solution:
+
     def numMusicPlaylists(self, N: int, L: int, K: int) -> int:
+
         @lru_cache(None)
         def unique(length, uni):
             if uni == 0:
@@ -9,10 +11,7 @@ class Solution:
                     return N
                 else:
                     return 0
-
             ret = unique(length - 1, uni - 1) * (N - uni + 1)
             ret += unique(length - 1, uni) * max(0, uni - K)
-
-            return ret % (10**9 + 7)
-
+            return ret % (10 ** 9 + 7)
         return unique(L, N)

@@ -1,4 +1,5 @@
 class Solution:
+
     def hIndex(self, citations):
         """
         :type citations: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         citations = sorted(citations)
         h = 0
-        for index, c in enumerate(citations):
+        for (index, c) in enumerate(citations):
             if c <= len(citations) - index:
                 if c > h:
                     h = c

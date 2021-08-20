@@ -2,22 +2,21 @@ from collections import deque
 
 
 class Solution:
-    def catMouseGame(self, graph):
 
+    def catMouseGame(self, graph):
         arr = [[[0] * 2 for j in range(55)] for i in range(55)]
         q = deque()
         for i in range(1, len(graph)):
-            arr[i][i][0], arr[i][i][1] = 2, 2
-            arr[i][0][0], arr[i][0][1] = 1, 1
+            (arr[i][i][0], arr[i][i][1]) = (2, 2)
+            (arr[i][0][0], arr[i][0][1]) = (1, 1)
             q.append((i, 0, 0))
             q.append((i, 0, 1))
             q.append((i, i, 0))
             q.append((i, i, 1))
         while q:
-            c, m, turn = q.popleft()
+            (c, m, turn) = q.popleft()
             s = arr[c][m][turn]
             if turn == 0:
-
                 for pre_move in graph[m]:
                     if arr[c][pre_move][1] != 0:
                         continue

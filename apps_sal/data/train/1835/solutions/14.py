@@ -1,4 +1,5 @@
 class Solution:
+
     def numsSameConsecDiff(self, n, k):
         d = {}
         for i in range(10):
@@ -8,12 +9,10 @@ class Solution:
             if i - k >= 0:
                 temp.add(i - k)
             d[i] = list(temp)
-
         res = []
         for i in range(1, 10):
             for neighbor in d[i]:
                 res.append([i, neighbor])
-
         if n > 2:
             n -= 2
             while n > 0:
@@ -24,6 +23,5 @@ class Solution:
                 n -= 1
                 res = temp
         for i in range(len(res)):
-            res[i] = int(''.join(str(ele) for ele in res[i]))
-
+            res[i] = int(''.join((str(ele) for ele in res[i])))
         return res

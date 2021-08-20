@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         exists = set()
         last = collections.defaultdict(int)

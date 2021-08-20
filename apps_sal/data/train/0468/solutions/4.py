@@ -1,14 +1,15 @@
 class Solution:
+
     def fractionToDecimal(self, numerator, denominator):
-        res = ""
+        res = ''
         if numerator * denominator < 0:
-            res = res + "-"
+            res = res + '-'
         if numerator % denominator == 0:
             return str(numerator // denominator)
         numerator = abs(numerator)
         denominator = abs(denominator)
         res = res + str(numerator // denominator)
-        res = res + "."
+        res = res + '.'
         numerator = numerator % denominator
         table = {}
         i = len(res)
@@ -17,15 +18,11 @@ class Solution:
                 table[numerator] = i
             else:
                 i = table[numerator]
-                res = res[:i] + "(" + res[i:] + ")"
+                res = res[:i] + '(' + res[i:] + ')'
                 return res
             numerator = numerator * 10
             res = res + str(numerator // denominator)
             numerator = numerator % denominator
             i = i + 1
         return res
-        """
-         :type numerator: int
-         :type denominator: int
-         :rtype: str
-         """
+        '\n         :type numerator: int\n         :type denominator: int\n         :rtype: str\n         '

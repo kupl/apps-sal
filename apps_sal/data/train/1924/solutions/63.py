@@ -2,11 +2,12 @@ import collections
 
 
 class Solution:
+
     def invalidTransactions(self, transactions: List[str]) -> List[str]:
         byName = collections.defaultdict(list)
         invalids = set()
         for transaction in transactions:
-            name, t_min, amt, city = transaction.split(',')
+            (name, t_min, amt, city) = transaction.split(',')
             byName[name].append((int(t_min), int(amt), city, transaction))
             if int(amt) > 1000:
                 invalids.add(transaction)

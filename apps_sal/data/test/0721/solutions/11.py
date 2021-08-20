@@ -1,12 +1,13 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, d = readln()
+(n, d) = readln()
 a = sorted(readln())
-m, = readln()
+(m,) = readln()
 if m <= n:
     print(sum(a[:m]))
 else:

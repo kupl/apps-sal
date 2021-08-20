@@ -2,14 +2,13 @@ from itertools import accumulate
 from bisect import bisect, bisect_left
 import sys
 read = sys.stdin.read
-#readlines = sys.stdin.readlines
 
 
 def main():
     data = list(map(int, read().split()))
     n = data[0]
     a = data[1:n + 1]
-    b = data[n + 1: n * 2 + 1]
+    b = data[n + 1:n * 2 + 1]
     c = data[n * 2 + 1:]
     a.sort()
     b.sort()

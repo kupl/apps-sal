@@ -1,4 +1,3 @@
-# cook your dish here
 from numba import njit
 import numpy as np
 
@@ -15,7 +14,7 @@ def minstairs(n, k):
             curr = stairsHeight[i]
         else:
             if (stairsHeight[i] - curr) % k == 0:
-                stairs += ((stairsHeight[i] - curr) // k) - 1
+                stairs += (stairsHeight[i] - curr) // k - 1
             else:
                 stairs += (stairsHeight[i] - curr) // k
             curr = stairsHeight[i]
@@ -24,5 +23,5 @@ def minstairs(n, k):
 
 T = int(input())
 for i in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     print(minstairs(n, k))

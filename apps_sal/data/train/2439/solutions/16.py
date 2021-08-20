@@ -24,11 +24,9 @@ class Solution:
             if text[i] == pattern[j]:
                 i += 1
                 j += 1
-
             if j == len(pattern):
                 ans.append(i - len(pattern))
                 j = t[j - 1]
-
             elif i < len(text) and text[i] != pattern[j]:
                 if j > 0:
                     j = t[j - 1]
@@ -46,12 +44,3 @@ class Solution:
             return 0
         ans = self.find(haystack, needle)
         return ans[0] if ans else -1
-        # for i in range(len(haystack) - len(needle) + 1):
-        #     if haystack[i: i + len(needle)] == needle:
-        #         return i
-        # return -1
-
-        # for i in range(len(haystack) - len(needle) + 1):
-        #     if haystack[i : i + len(needle)] == needle:
-        #         return i
-        # return -1

@@ -19,7 +19,7 @@ def haha(t):
     return [p, l]
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = ''
 for i in range(1, n + 1):
     s += str(i)

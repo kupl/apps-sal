@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 ANS = []
 for _ in range(t):
@@ -30,5 +29,4 @@ for _ in range(t):
     if cnt:
         ans += 1
     ANS.append(ans)
-
 print('\n'.join(map(str, ANS)))

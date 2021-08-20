@@ -1,6 +1,5 @@
 n_k = list(map(int, input().split()))
 numbers = list(map(int, input().split()))
-
 output = 0
 for i in range(len(numbers)):
     i_str = str(numbers[i])

@@ -16,12 +16,12 @@ def Check(st, ms):
         if st == ms[i:i + len(st)]:
             t = True
             if i > 0:
-                if ms[i - 1] == ' ' or ms[i - 1] == '.' or ms[i - 1] == ',' or ms[i - 1] == '?' or ms[i - 1] == '!':
+                if ms[i - 1] == ' ' or ms[i - 1] == '.' or ms[i - 1] == ',' or (ms[i - 1] == '?') or (ms[i - 1] == '!'):
                     e = 0
                 else:
                     t = False
             if i < len(ms) - len(st):
-                if (ms[i + len(st)] == ' ' or ms[i + len(st)] == '.' or ms[i + len(st)] == ',' or ms[i + len(st)] == '?' or ms[i + len(st)] == '!'):
+                if ms[i + len(st)] == ' ' or ms[i + len(st)] == '.' or ms[i + len(st)] == ',' or (ms[i + len(st)] == '?') or (ms[i + len(st)] == '!'):
                     e = 0
                 else:
                     t = False
@@ -30,24 +30,24 @@ def Check(st, ms):
     return False
 
 
-def R(): return list(map(int, input().split(' ')))
+def R():
+    return list(map(int, input().split(' ')))
 
 
-#r, w = open("input.txt", "r"), open("output.txt", "w")
 T = int(input())
 while T:
     n = int(input())
     users = input().split(' ')
     m = int(input())
     possible = [[] for i in range(m)]
-    sender, message = [], []
+    (sender, message) = ([], [])
     for i in range(m):
         s = input().split(':')
         sender.append(s[0])
         message.append(s[1])
     for i in range(m):
         if sender[i] == '?':
-            unallow = " "
+            unallow = ' '
             if i > 0 and len(possible[i - 1]) == 1:
                 unallow = possible[i - 1][0]
             for j in users:
@@ -69,7 +69,7 @@ while T:
     done = False
     for i in possible:
         if len(i) == 0:
-            print("Impossible")
+            print('Impossible')
             done = True
             break
     if not done:

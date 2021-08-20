@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def canship(cap):
@@ -13,18 +14,14 @@ class Solution:
                 if d > D:
                     return False
             return True
-
         M = max(weights)
         if D == len(weights):
             return M
-
-        lo, hi = M - 1, sum(weights)
-
+        (lo, hi) = (M - 1, sum(weights))
         while hi - lo > 1:
             h = (hi + lo) // 2
             if canship(h):
                 hi = h
             else:
                 lo = h
-
         return hi

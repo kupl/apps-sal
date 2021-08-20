@@ -1,15 +1,13 @@
 from heapq import heappop, heappush
 import sys
 input = sys.stdin.readline
-
 q = int(input())
 query = [list(map(int, input().split())) for _ in range(q)]
-inf = 10**12
+inf = 10 ** 12
 left = [inf]
 left_sum = 0
 right = [inf]
 right_sum = 0
-
 cnt = 0
 b = 0
 for i in range(q):

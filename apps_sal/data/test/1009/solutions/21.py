@@ -1,5 +1,5 @@
-n, k = map(int, input().split(" "))
-s = list(map(int, input().split(" ")))
+(n, k) = map(int, input().split(' '))
+s = list(map(int, input().split(' ')))
 result = s[-1]
 while k * 2 > n:
     n -= 1

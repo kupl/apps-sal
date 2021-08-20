@@ -7,4 +7,4 @@ l = sorted(l)
 ans = []
 for j in range(n):
     ans.append(str(l[j][1]))
-print(" ".join(ans))
+print(' '.join(ans))

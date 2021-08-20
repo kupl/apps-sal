@@ -1,4 +1,5 @@
 class Solution:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
         m = len(A)
         total = sum(A)
@@ -12,7 +13,6 @@ class Solution:
             if i == len(A):
                 return False
             return dfs(k - 1, i + 1, sum_b - A[i]) or dfs(k, i + 1, sum_b)
-
         for k in range(1, m // 2 + 1):
             if total * k % m == 0:
                 if dfs(k, 0, total * k // m):

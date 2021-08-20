@@ -35,7 +35,6 @@ class Line(Segment):
     def sub_segment(self, t):
         P0 = np.array(self._control_points[0:2])
         P1 = self.point_at(t)
-
         return Line(*P0, *P1)
 
 
@@ -52,7 +51,7 @@ class Quad(Segment):
         P0 = np.array(self._control_points[0:2])
         P1 = np.array(self._control_points[2:4])
         P2 = np.array(self._control_points[4:])
-        return (1 - t)**2 * P0 + 2 * (1 - t) * t * P1 + t**2 * P2
+        return (1 - t) ** 2 * P0 + 2 * (1 - t) * t * P1 + t ** 2 * P2
 
     def sub_segment(self, t):
         P0 = np.array(self._control_points[0:2])
@@ -61,7 +60,6 @@ class Quad(Segment):
         P1_new = l1.point_at(t)
         P2 = np.array(self._control_points[4:])
         P2_new = self.point_at(t)
-
         return Quad(*P0, *P1_new, *P2_new)
 
 
@@ -79,7 +77,7 @@ class Cubic(Segment):
         P1 = np.array(self._control_points[2:4])
         P2 = np.array(self._control_points[4:6])
         P3 = np.array(self._control_points[6:])
-        return (1 - t)**3 * P0 + 3 * (1 - t)**2 * t * P1 + 3 * (1 - t) * t**2 * P2 + t**3 * P3
+        return (1 - t) ** 3 * P0 + 3 * (1 - t) ** 2 * t * P1 + 3 * (1 - t) * t ** 2 * P2 + t ** 3 * P3
 
     def sub_segment(self, t):
         P0 = np.array(self._control_points[0:2])

@@ -1,7 +1,6 @@
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 s = input() + '!'
 lets = set(input().split())
-
 ans = 0
 cnt = 0
 for i in s:
@@ -10,5 +9,4 @@ for i in s:
     else:
         ans += cnt * (cnt + 1) // 2
         cnt = 0
-
 print(ans)

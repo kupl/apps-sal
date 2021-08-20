@@ -1,4 +1,3 @@
-
 s = input().split()
 n = int(s[0])
 m = int(s[1])
@@ -8,7 +7,6 @@ mp = list(map(int, input().split()))
 for j in mp:
     a.append(j)
 a.sort(reverse=True)
-
 if k >= m:
     print(0)
 else:

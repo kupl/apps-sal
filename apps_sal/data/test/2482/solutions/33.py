@@ -1,9 +1,10 @@
 from collections import Counter
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -21,10 +22,9 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
-    # 木の深さじゃなくxを含む集合の要素数
 
     def size(self, x):
         return -self.parents[self.find(x)]
@@ -37,7 +37,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x > 0]
+        return [i for (i, x) in enumerate(self.parents) if x > 0]
 
     def group_count(self):
         return len(self.roots())
@@ -46,21 +46,19 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-n, k, l = map(int, input().split())
+(n, k, l) = map(int, input().split())
 load = UnionFind(n + 1)
 tetsu = UnionFind(n + 1)
 for _ in range(k):
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     load.union(p, q)
 for _ in range(l):
-    r, s = map(int, input().split())
+    (r, s) = map(int, input().split())
     tetsu.union(r, s)
-
 count = [(load.find(i), tetsu.find(i)) for i in range(1, n + 1)]
-# print(count)
 C = Counter(count)
 ans = []
 for i in range(n):

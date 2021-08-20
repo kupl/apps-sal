@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, a, b, c, d = map(int, input().split())
+    (n, a, b, c, d) = map(int, input().split())
     flag = 0
     if n * (a - b) > c + d or n * (a + b) < c - d:
         flag = 1

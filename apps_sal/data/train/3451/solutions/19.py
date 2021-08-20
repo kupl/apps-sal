@@ -5,7 +5,7 @@ def triangle(s):
         return s
     else:
         for i in range(n - 1):
-            f = ["R", "G", "B"]
+            f = ['R', 'G', 'B']
             if s[i] == s[i + 1]:
                 out.append(s[i])
             else:

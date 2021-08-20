@@ -1,4 +1,4 @@
-tgt = (2048).bit_length() - 1
+tgt = 2048 .bit_length() - 1
 for _ in range(int(input())):
     n = int(input())
     c = [0] * 31

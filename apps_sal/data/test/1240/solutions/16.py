@@ -1,5 +1,4 @@
 import sys
-
 fin = sys.stdin
 fout = sys.stdout
 results = []
@@ -8,7 +7,7 @@ columns = [0] * n
 allL = 0
 allR = 0
 for i in range(n):
-    l, r = list(map(int, fin.readline().split()))
+    (l, r) = list(map(int, fin.readline().split()))
     columns[i] = (l, r)
     allL += l
     allR += r

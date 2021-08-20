@@ -1,7 +1,8 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         b_dict = {}
-        for idx, b in enumerate(B):
+        for (idx, b) in enumerate(B):
             if b not in b_dict:
                 b_dict[b] = []
             b_dict[b].append(idx)
@@ -12,7 +13,7 @@ class Solution:
             if a in b_dict:
                 a_ptrs = a_ptrs + b_dict[a]
         lis = []
-        for idx, a in enumerate(a_ptrs):
+        for (idx, a) in enumerate(a_ptrs):
             lis_len = 0
             for i in reversed(range(idx)):
                 if a_ptrs[i] < a:

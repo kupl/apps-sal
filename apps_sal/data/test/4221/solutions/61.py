@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 def main():
     a = str(input())
     if a[-1] == 's':
-        print((a + 'es'))
+        print(a + 'es')
     else:
-        print((a + 's'))
+        print(a + 's')
 
 
 def __starting_point():

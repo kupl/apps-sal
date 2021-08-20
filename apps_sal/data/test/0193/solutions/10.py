@@ -1,14 +1,14 @@
 __author__ = 'Данила'
-a, b = list(map(int, input().split()))
-c, d = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
 
 
 def solve(x, y, z):
-    if y**2 - 4 * z * x < 0:
-        return -10**27
+    if y ** 2 - 4 * z * x < 0:
+        return -10 ** 27
     else:
-        disi = y**2 - 4 * z * x
-        return min(abs((-y + disi**.5) / 2 * x), abs((-y - disi**.5) / 2 * x))
+        disi = y ** 2 - 4 * z * x
+        return min(abs((-y + disi ** 0.5) / 2 * x), abs((-y - disi ** 0.5) / 2 * x))
 
 
 if a * d - b * c == 0:

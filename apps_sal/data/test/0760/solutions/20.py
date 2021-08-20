@@ -1,7 +1,6 @@
 s = input()
 k = int(input())
 n = len(s)
-
 if k >= n:
     print(int(2 * ((n + k) // 2)))
     raise SystemExit
@@ -12,7 +11,6 @@ for i in range(k + 1):
             if l > ll:
                 ll = l
             break
-
 j = ll
 while 2 * j <= n:
     j = j + 1

@@ -2,10 +2,10 @@ T = int(input())
 for i in range(0, T):
     Ch = str(input())
     if Ch == 'B' or Ch == 'b':
-        print("BattleShip")
+        print('BattleShip')
     if Ch == 'C' or Ch == 'c':
-        print("Cruiser")
+        print('Cruiser')
     if Ch == 'D' or Ch == 'd':
-        print("Destroyer")
+        print('Destroyer')
     if Ch == 'F' or Ch == 'f':
-        print("Frigate")
+        print('Frigate')

@@ -1,4 +1,3 @@
-
 def check(a, x):
     a = set(a)
     a = list(a)

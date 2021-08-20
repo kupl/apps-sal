@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         n = len(A)
         dp = [0] * (n + 1)
@@ -9,5 +10,4 @@ class Solution:
                     break
                 max_val = max(max_val, A[i - w])
                 dp[i] = max(dp[i], dp[i - w] + max_val * w)
-
         return dp[-1]

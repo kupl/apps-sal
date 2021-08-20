@@ -1,4 +1,5 @@
 class Solution:
+
     def pivotIndex(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         ret = sum(nums)
         left = 0
-        for k, v in enumerate(nums):
+        for (k, v) in enumerate(nums):
             if left * 2 + v == ret:
                 return k
             left += v

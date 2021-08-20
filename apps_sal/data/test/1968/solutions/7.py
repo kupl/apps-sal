@@ -14,7 +14,6 @@ for x in range(sellers):
     if money > mini:
         c += 1
         slist.append(x + 1)
-
 string = ''
 for element in slist:
     string += str(element)

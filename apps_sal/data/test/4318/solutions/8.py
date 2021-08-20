@@ -6,5 +6,4 @@ for i in li:
     if i >= min:
         cnt += 1
         min = i
-
 print(cnt)

@@ -25,7 +25,6 @@ for i in range(1, N)[::-1]:
     if C[i] >= 26:
         C[i] -= 26
         C[i - 1] += 1
-
 t = 0
 for i in range(N):
     if C[i] % 2:
@@ -34,8 +33,7 @@ for i in range(N):
     else:
         C[i] = (C[i] + t) // 2
         t = 0
-
-u = ""
+u = ''
 for c in C:
     u += itos(c)
 print(u)

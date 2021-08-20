@@ -4,7 +4,7 @@ t = int(input())
 def divider(n):
     i = 2
     j = 0
-    while i**2 <= n and j != 1:
+    while i ** 2 <= n and j != 1:
         if n % i == 0:
             j = 1
         i += 1
@@ -15,8 +15,8 @@ def divider(n):
 
 
 for i in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a - b == 1 and divider(a + b):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

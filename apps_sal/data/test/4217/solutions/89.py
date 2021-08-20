@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = [0] * (m + 1)
 count = 0
 for i in range(n):

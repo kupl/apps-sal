@@ -7,5 +7,5 @@ for i in range(N):
     else:
         A[s] = 1
 s_max = max(A.values())
-for j in sorted(k for k in A if A[k] == s_max):
+for j in sorted((k for k in A if A[k] == s_max)):
     print(j)

@@ -10,4 +10,4 @@ def points(dice):
         return 40
     if val == {2, 3}:
         return 30
-    return 20 * (val == {1, 1, 1, 1, 1} and all(cnt[a] for a in '345'))
+    return 20 * (val == {1, 1, 1, 1, 1} and all((cnt[a] for a in '345')))

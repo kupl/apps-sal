@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 ct = [list(map(int, input().split())) for i in range(n)]
 flag = 0
 ans = ct[0][0]
@@ -9,6 +9,6 @@ for i in range(n):
     else:
         pass
 if flag == 0:
-    print("TLE")
+    print('TLE')
 else:
     print(ans)

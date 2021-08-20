@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, A: List[int], m: int) -> int:
         A.sort()
 
@@ -12,10 +13,7 @@ class Solution:
                 if cnt >= m:
                     return True
             return False
-
-        #print(valid(1), valid(2), valid(3), valid(4))
-        l, r = 1, A[-1]
-
+        (l, r) = (1, A[-1])
         while l < r:
             mid = (l + r) // 2
             if valid(mid):

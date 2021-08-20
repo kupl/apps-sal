@@ -5,13 +5,14 @@ from functools import lru_cache
 def find_ns(rating, i, n, bigger):
     res = []
     while i < len(rating):
-        if bigger and rating[i] > n or not bigger and rating[i] < n:
+        if bigger and rating[i] > n or (not bigger and rating[i] < n):
             res.append(i)
         i += 1
     return res
 
 
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         rating = tuple(rating)
         i = 0

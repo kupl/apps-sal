@@ -1,4 +1,5 @@
 class King:
+
     def __init__(self, name):
         self.name = name
         self.children = dict()
@@ -32,14 +33,6 @@ class ThroneInheritance:
             child = tree[king]
             for c in child.children:
                 inorder(c, res)
-
         king = self.king
         inorder(king.name, res)
         return res
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

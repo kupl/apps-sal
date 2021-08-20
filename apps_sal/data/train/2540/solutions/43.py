@@ -1,4 +1,5 @@
 class Solution:
+
     def largestPerimeter(self, A: List[int]) -> int:
         res = 0
         A.sort()
@@ -8,7 +9,7 @@ class Solution:
                 target = A[j]
                 lower = abs(target - source)
                 upper = source + target
-                if (upper * 2 < res):
+                if upper * 2 < res:
                     continue
                 for t in range(j + 1, len(A)):
                     if lower < A[t] < upper:

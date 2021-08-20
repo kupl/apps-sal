@@ -1,8 +1,7 @@
 import math
 n = int(input())
-pi = 3.141592653589793238462643383279
+pi = 3.141592653589793
 xy = [list(map(int, input().split())) for _ in range(n)]
-
 atan = [math.atan2(x[0], x[1]) for x in xy]
 d = []
 
@@ -10,13 +9,12 @@ d = []
 def hoge(a):
     ret = 0
     if a % (2 * pi) < pi:
-        ret = (a % pi)
+        ret = a % pi
     elif a % (2 * pi) > pi:
-        ret = (a % pi) - pi
+        ret = a % pi - pi
     else:
-        ret = (a)
-    #assert pi <= ret <= pi, 'range over'
-    return ret  # -pi <= a <= pi
+        ret = a
+    return ret
 
 
 def seikika(A):
@@ -44,8 +42,7 @@ for g in gyoukaku:
     anglist = seikika(anglist)
     finalxy = []
     for i in range(n):
-        if -pi / 2 - 0.000001 <= anglist[i] <= pi / 2 + 0.000001:
+        if -pi / 2 - 1e-06 <= anglist[i] <= pi / 2 + 1e-06:
             finalxy.append(xy[i])
     d.append(dist(finalxy))
-
-print((max(d)))
+print(max(d))

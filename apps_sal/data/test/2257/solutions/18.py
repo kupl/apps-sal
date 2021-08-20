@@ -1,8 +1,8 @@
-n, a, b, x, y = map(int, input().split())
+(n, a, b, x, y) = map(int, input().split())
 li = [[0, 0]]
 for _ in range(n):
-    p, q = map(int, input().split())
-    li.append([(a - p)**2 + (b - q)**2, (x - p)**2 + (y - q)**2])
+    (p, q) = map(int, input().split())
+    li.append([(a - p) ** 2 + (b - q) ** 2, (x - p) ** 2 + (y - q) ** 2])
 li = sorted(li)
 mn = 1000000000000000000000000
 for i in range(n + 1):

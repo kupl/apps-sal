@@ -9,7 +9,6 @@ for j in s:
         tmp_map[j] += 1
 for j in list(tmp_map.keys()):
     res_map[j] = tmp_map[j]
-
 for i in range(n - 1):
     s = input()
     tmp_map = dict()
@@ -23,10 +22,8 @@ for i in range(n - 1):
             res_map[j] = min(res_map[j], tmp_map[j])
         else:
             res_map[j] = 0
-
-res = ""
+res = ''
 for i in list(res_map.keys()):
     res += i * res_map[i]
-
 res = sorted(res)
-print(("".join(res)))
+print(''.join(res))

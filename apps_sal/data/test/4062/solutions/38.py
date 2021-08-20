@@ -1,5 +1,4 @@
-a, b, c, d = list(map(lambda x: int(x), input().split()))
-
+(a, b, c, d) = list(map(lambda x: int(x), input().split()))
 ac = a * c
 ad = a * d
 bc = b * c

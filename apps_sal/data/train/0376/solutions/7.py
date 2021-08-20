@@ -1,5 +1,7 @@
 class Solution:
+
     def minScoreTriangulation(self, A: List[int]) -> int:
+
         @lru_cache(None)
         def dfs(i, j):
             if j < i + 2:

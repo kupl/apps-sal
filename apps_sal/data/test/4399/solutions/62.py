@@ -1,1 +1,1 @@
-print(" NYoe s"[len(set(input()))::2])
+print(' NYoe s'[len(set(input()))::2])

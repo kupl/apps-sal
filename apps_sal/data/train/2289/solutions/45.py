@@ -1,12 +1,7 @@
 def main():
-    # import sys
-    # readline = sys.stdin.readline
-    # readlines = sys.stdin.readlines
-
     A = input()
     N = len(A)
     a = ord('a')
-
     INF = N
     na = [[INF] * 26 for _ in range(N + 1)]
     for i in range(N - 1, -1, -1):
@@ -14,7 +9,6 @@ def main():
         for j in range(26):
             na[i][j] = na[i + 1][j]
         na[i][c] = i
-
     dp = [INF] * (N + 1)
     dp[N] = 1
     recon = [None] * (N + 1)
@@ -28,20 +22,13 @@ def main():
             elif dp[i] > dp[ni + 1] + 1:
                 dp[i] = dp[ni + 1] + 1
                 recon[i] = (chr(a + j), ni + 1)
-
-    # k =
-    # for j in range(26):
-    #     ni = na[0][j]
-    #     if dp[i] > dp[ni] + 1:
-
     i = 0
     ans = []
     while i < N:
-        c, ni = recon[i]
+        (c, ni) = recon[i]
         ans.append(c)
         i = ni
-
-    print((''.join(ans)))
+    print(''.join(ans))
 
 
 def __starting_point():

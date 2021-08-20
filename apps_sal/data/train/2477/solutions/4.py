@@ -2,12 +2,13 @@ from collections import Counter
 
 
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         lst = []
         for word in A:
             evens = []
             odds = []
-            for i, l in enumerate(word):
+            for (i, l) in enumerate(word):
                 if i % 2 == 0:
                     evens.append(l)
                 else:

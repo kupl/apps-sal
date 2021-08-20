@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         n = int(file.readline())
         a = list(map(int, file.readline().split()))
         b = file.readline()
@@ -9,7 +9,7 @@ def read(type=1):
         n = int(input().strip())
         a = list(map(int, input().strip().split()))
         b = input().strip()
-    return n, a, b
+    return (n, a, b)
 
 
 def solve():
@@ -18,15 +18,15 @@ def solve():
     big = 0
     g = 0
     for i in range(n):
-        if b[i] == "W":
+        if b[i] == 'W':
             big = 1
             sol += 3 * a[i]
             e += a[i]
-        if b[i] == "G":
+        if b[i] == 'G':
             sol += 5 * a[i]
             e += a[i]
             g += 2 * a[i]
-        if b[i] == "L":
+        if b[i] == 'L':
             sol += a[i]
             e -= a[i]
             if e < 0:
@@ -38,10 +38,10 @@ def solve():
         g = min(e, g)
     if e:
         sol -= 2 * g
-        sol -= (e - g)
+        sol -= e - g
     return int(sol)
 
 
-n, a, b = read(0)
+(n, a, b) = read(0)
 sol = solve()
 print(sol)

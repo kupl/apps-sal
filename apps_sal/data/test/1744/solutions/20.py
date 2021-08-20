@@ -1,7 +1,6 @@
 from heapq import *
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = [int(a) for a in input().split()]
-
 h = []
 s = 0
 k = 0

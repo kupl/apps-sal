@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(input())
-ans, cnt = list(list()), 0
+(ans, cnt) = (list(list()), 0)
 while True:
     cur = list()
     for i in range(n - 1):
@@ -10,7 +10,7 @@ while True:
     if len(cur) > 0:
         ans.append(cur.copy())
         for i in cur:
-            a[i], a[i + 1] = a[i + 1], a[i]
+            (a[i], a[i + 1]) = (a[i + 1], a[i])
     else:
         break
 if len(ans) > k or cnt < k:
@@ -18,9 +18,9 @@ if len(ans) > k or cnt < k:
 else:
     lst = list()
     dumb = k - len(ans)
-    w, p = 0, 0
+    (w, p) = (0, 0)
     while dumb > 0:
-        lst.append("1 " + str(ans[w][p] + 1) + "\n")
+        lst.append('1 ' + str(ans[w][p] + 1) + '\n')
         dumb -= 1
         p += 1
         if p == len(ans[w]):
@@ -28,11 +28,11 @@ else:
             w += 1
             dumb += 1
     while w < len(ans):
-        lst.append(str(len(ans[w]) - p) + " ")
+        lst.append(str(len(ans[w]) - p) + ' ')
         while p < len(ans[w]):
-            lst.append(str(ans[w][p] + 1) + " ")
+            lst.append(str(ans[w][p] + 1) + ' ')
             p += 1
-        lst.append("\n")
+        lst.append('\n')
         w += 1
         p = 0
-    print("".join(lst))
+    print(''.join(lst))

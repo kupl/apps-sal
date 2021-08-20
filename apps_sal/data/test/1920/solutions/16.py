@@ -2,7 +2,7 @@ M = [0 for i in range(367)]
 F = [0 for i in range(367)]
 n = int(input())
 for i in range(n):
-    a, b, c = input().split()
+    (a, b, c) = input().split()
     b = int(b)
     c = int(c)
     if a == 'M':
@@ -11,9 +11,6 @@ for i in range(n):
     else:
         for j in range(b, c + 1):
             F[j] += 1
-# print(F)
-# print(M)
-
 m = 0
 for i in range(1, 367):
     x = min(M[i], F[i])

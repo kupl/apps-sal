@@ -1,6 +1,6 @@
 n = int(input()) // 2
 s = input()
 if s[:n] == s[n:]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

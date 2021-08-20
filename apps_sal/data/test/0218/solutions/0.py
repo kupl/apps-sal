@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split(' '))
+(a, b, c) = map(int, input().split(' '))
 x = input()
 for i in range(105):
     for j in range(105):

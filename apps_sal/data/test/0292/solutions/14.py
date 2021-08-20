@@ -1,4 +1,4 @@
-h, n = list(map(int, input().split()))
+(h, n) = list(map(int, input().split()))
 h -= 1
 n -= 1
 l = 0
@@ -11,7 +11,7 @@ while r - l > 1:
     if ll == (n < m):
         ans += 1
     else:
-        ans += 1 << (h - i + 1)
+        ans += 1 << h - i + 1
     if n < m:
         r = m
         ll = False

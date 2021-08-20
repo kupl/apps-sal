@@ -1,8 +1,8 @@
 t = input()
 if t[0] == 'h':
-    ans, t = 'http://', t[4:]
+    (ans, t) = ('http://', t[4:])
 else:
-    ans, t = 'ftp://', t[3:]
+    (ans, t) = ('ftp://', t[3:])
 k = t.find('ru', 1)
 ans += t[:k] + '.ru'
 if len(t) > k + 2:

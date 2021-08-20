@@ -6,5 +6,4 @@ def solve(a, b):
     for i in b:
         if i not in a:
             unique.append(i)
-
-    return "".join(unique)
+    return ''.join(unique)

@@ -20,7 +20,7 @@ def g(d):
     return ret
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = f(n)
 b = f(m)
 if a + b > 7:

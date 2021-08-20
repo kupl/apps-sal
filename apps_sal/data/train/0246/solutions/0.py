@@ -1,4 +1,5 @@
 class Solution:
+
     def replaceWords(self, dt, sentence):
         """
         :type dict: List[str]
@@ -13,16 +14,7 @@ class Solution:
                     t[c] = {}
                 t = t[c]
             t['#'] = w
-
-        # result = []
-
-#         for word in sentence.split():
-#             result.append(self.replace(word, trie))
-
-#         return " ".joinresult
-
-#     OR
-        return " ".join([self.replace(i, trie) for i in sentence.split()])
+        return ' '.join([self.replace(i, trie) for i in sentence.split()])
 
     def replace(self, word, trie):
         cur = trie
@@ -30,17 +22,15 @@ class Solution:
             if letter not in cur:
                 break
             cur = cur[letter]
-            if "#" in cur:
+            if '#' in cur:
                 return cur['#']
         return word
-
-        setenceAsList = sentence.split(" ")
+        setenceAsList = sentence.split(' ')
         for i in range(len(setenceAsList)):
             for j in dt:
                 if setenceAsList[i].startswith(j):
                     setenceAsList[i] = j
-        return " ".join(setenceAsList)
-
+        return ' '.join(setenceAsList)
         arrs = sentence.split()
         for i in range(len(arrs)):
             w = arrs[i]

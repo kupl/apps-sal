@@ -10,8 +10,8 @@ for i in range(n):
     if i & 1 and a != b:
         cnt += 1
         if a > b:
-            l[i], a = 'b', b
+            (l[i], a) = ('b', b)
         else:
-            l[i], b = 'a', a
+            (l[i], b) = ('a', a)
 print(cnt)
 print(''.join(l))

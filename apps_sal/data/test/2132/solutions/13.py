@@ -12,7 +12,7 @@ for i in range(num):
             slimit.pop(-1)
     elif a[0] == 2:
         if olimit != 1:
-            ans += (1 - olimit)
+            ans += 1 - olimit
             olimit = 1
     elif a[0] == 3:
         slimit.append(a[1])

@@ -14,5 +14,4 @@ for i in range(14):
         if j % 2 == 0:
             sc += j
     m = max(m, sc)
-    # print(b)
 print(m)

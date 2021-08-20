@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartition(self, nums):
         """
         :type nums: List[int]
@@ -15,10 +16,10 @@ class Solution:
         def check(nums, target):
             if target in nums:
                 return True
-            if (not nums) or (nums[0] > target):
+            if not nums or nums[0] > target:
                 return False
             res = False
-            tag = "@"
+            tag = '@'
             for i in range(len(nums)):
                 if tag != nums[i]:
                     tag = nums[i]

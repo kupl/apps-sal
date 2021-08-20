@@ -1,4 +1,4 @@
-n, a, b, c, d = list(map(int, input().split()))
+(n, a, b, c, d) = list(map(int, input().split()))
 num = 0
 i = 0
 while n > i:

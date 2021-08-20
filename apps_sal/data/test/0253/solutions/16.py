@@ -1,8 +1,7 @@
 def solve(k):
     if min(k) > 3:
-        print("NO")
+        print('NO')
         return
-
     x = [0, 0, 0]
     for x[0] in range(3):
         for x[1] in range(3):
@@ -17,10 +16,9 @@ def solve(k):
                 for i in range(3, 15):
                     is_possible = is_possible and a[i]
                 if is_possible:
-                    print("YES")
-                    # print(" ".join(map(str, x)))
+                    print('YES')
                     return
-    print("NO")
+    print('NO')
 
 
 k = list(map(int, input().split()))

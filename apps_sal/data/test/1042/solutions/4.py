@@ -2,7 +2,7 @@ import operator
 import math
 import itertools
 import functools
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 
 
 def factor(n):
@@ -31,7 +31,7 @@ def comp(n):
     return c
 
 
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 if y % x == 0:
     print(comp(y // x))
 else:

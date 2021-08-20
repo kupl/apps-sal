@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = []
 for i in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a.append([x, y])
 a.sort(key=lambda x: x[1])
 ans = 0

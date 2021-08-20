@@ -1,5 +1,5 @@
 for test_i in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     arr = list(map(int, input().split()))
     if sum(arr) % x != 0:
         print(n)

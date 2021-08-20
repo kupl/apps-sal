@@ -1,9 +1,7 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 s = input()
-
 last = ''
 total = 0
-
 for c in s:
     if c == '.':
         if not last in ['a', 'b']:
@@ -24,14 +22,12 @@ for c in s:
                 b -= 1
             else:
                 last = '.'
+        elif a > 0:
+            last = 'a'
+            total += 1
+            a -= 1
         else:
-            if a > 0:
-                last = 'a'
-                total += 1
-                a -= 1
-            else:
-                last = '.'
+            last = '.'
     else:
         last = c
-
 print(total)

@@ -1,5 +1,5 @@
 n = int(input())
-mas = list(map(int, input().split(" ")))
+mas = list(map(int, input().split(' ')))
 p = 0
 res = 0
 for i in range(n):

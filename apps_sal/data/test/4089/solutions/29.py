@@ -1,6 +1,5 @@
 def main():
     n = int(input())
-
     alphabets = 'zabcdefghijklmnopqrstuvwxy'
     answer_reversed = ''
     for i in range(100):
@@ -14,7 +13,7 @@ def main():
             n = n // 26
         else:
             break
-    print((answer_reversed[::-1]))
+    print(answer_reversed[::-1])
 
 
 def __starting_point():

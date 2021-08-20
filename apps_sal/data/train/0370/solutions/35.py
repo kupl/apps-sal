@@ -1,31 +1,27 @@
 class UnionFind:
+
     def __init__(self, nodes):
         self.parents = [-1] * len(nodes)
-        self.map = {node: idx for idx, node in enumerate(nodes)}
+        self.map = {node: idx for (idx, node) in enumerate(nodes)}
 
     def find(self, node):
-
         idx = self.map[node]
-
         orig = idx
-        while(self.parents[idx] >= 0):
+        while self.parents[idx] >= 0:
             idx = self.parents[idx]
-
-        parent, rank = idx, abs(self.parents[idx])
-        while(self.parents[orig] >= 0):
+        (parent, rank) = (idx, abs(self.parents[idx]))
+        while self.parents[orig] >= 0:
             temp_parent = self.parents[orig]
             self.parents[orig] = parent
             orig = temp_parent
-        return parent, rank
+        return (parent, rank)
 
     def union(self, n1, n2):
-        idx1, idx2 = self.map[n1], self.map[n2]
-        parent1, rank1 = self.find(n1)
-        parent2, rank2 = self.find(n2)
-
+        (idx1, idx2) = (self.map[n1], self.map[n2])
+        (parent1, rank1) = self.find(n1)
+        (parent2, rank2) = self.find(n2)
         if parent1 == parent2:
             return
-
         if rank1 >= rank2:
             self.parents[parent1] -= rank2
             self.parents[parent2] = parent1
@@ -38,8 +34,8 @@ class UnionFind:
 
 
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
+    def largestComponentSize(self, A: List[int]) -> int:
         max_num = max(A)
         primes_nodes = collections.defaultdict(set)
 
@@ -47,36 +43,22 @@ class Solution:
             original = n
             result = set()
             while n % 2 == 0:
-
                 n = n // 2
                 result.add(2)
-
-            # n must be odd at this point
-            # so a skip of 2 ( i = i + 2) can be used
             for i in range(3, int(math.sqrt(n)) + 1, 2):
-
-                # while i divides n , print i ad divide n
                 while n % i == 0:
                     result.add(i)
                     n = n // i
-
-            # Condition if n is a prime
-            # number greater than 2
             if n > 2:
                 result.add(n)
-
             return result
-
         uf_obj = UnionFind(A)
         factor_first_multiple_map = {}
         for node in A:
             p_factors = prime_factors(node)
-
             for pf in p_factors:
-                # if pf already a prime factor of prev encountered num, union with that num the curr num
                 if pf in factor_first_multiple_map:
                     uf_obj.union(node, factor_first_multiple_map[pf])
                 else:
                     factor_first_multiple_map[pf] = node
-
         return uf_obj.get_max_rank()

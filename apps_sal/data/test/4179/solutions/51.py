@@ -1,8 +1,6 @@
-N, M, C = list(map(int, input().split()))
+(N, M, C) = list(map(int, input().split()))
 B = [int(i) for i in input().split()]
-
 cnt = 0
-
 for i in range(N):
     A = [int(i) for i in input().split()]
     sum = C
@@ -12,5 +10,4 @@ for i in range(N):
     if sum > 0:
         cnt += 1
     i += 1
-
 print(cnt)

@@ -14,11 +14,9 @@ def go(s, t):
 
 s = input()
 t = input()
-
 si = 0
 f = go(s, t)
 s = [x for x in reversed(s)]
 t = [x for x in reversed(t)]
 l = go(s, t)
-
-print((len(t) - l[1] - 1) - f[1] if f and l and (len(t) - l[1] - 1) - f[1] > 0 else 0)
+print(len(t) - l[1] - 1 - f[1] if f and l and (len(t) - l[1] - 1 - f[1] > 0) else 0)

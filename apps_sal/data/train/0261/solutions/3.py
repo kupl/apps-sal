@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthLargest(self, nums, k):
         """
         :type nums: List[int]
@@ -8,7 +9,6 @@ class Solution:
         if not nums:
             return -1
         pq = []
-
         for num in nums:
             if len(pq) < k:
                 heapq.heappush(pq, num)
@@ -18,5 +18,4 @@ class Solution:
                     heapq.heappush(pq, num)
                 else:
                     heapq.heappush(pq, popped)
-
         return heapq.heappop(pq)

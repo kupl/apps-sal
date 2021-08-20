@@ -1,6 +1,5 @@
 import math
-n, d = list(map(int, input().split()))
-
+(n, d) = list(map(int, input().split()))
 xx = []
 for i in range(n):
     xx.append(list(map(int, input().split())))
@@ -9,7 +8,7 @@ for i in range(n):
 def distance(xx, d, i, j):
     ans = 0
     for u in range(d):
-        ans += ((xx[i][u] - xx[j][u])**2)
+        ans += (xx[i][u] - xx[j][u]) ** 2
     if math.sqrt(ans).is_integer():
         return 1
     else:

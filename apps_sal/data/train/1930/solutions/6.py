@@ -1,7 +1,6 @@
 class Cashier:
 
     def __init__(self, n: int, discount: int, products: List[int], prices: List[int]):
-
         self.productsTable = {}
         for i in range(len(products)):
             self.productsTable[products[i]] = prices[i]
@@ -14,14 +13,7 @@ class Cashier:
         self.count += 1
         for i in range(len(product)):
             bill += self.productsTable[product[i]] * amount[i]
-
         if self.count == self.n:
-
             self.count = 0
-            return bill - ((self.discount * bill) / 100)
+            return bill - self.discount * bill / 100
         return bill
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

@@ -1,7 +1,6 @@
 N = int(input())
 A = [int(input()) for c in range(N)]
 A = sorted(A)
-
 tmp = 1
 cnt = 0
 for i in range(N):
@@ -13,5 +12,4 @@ for i in range(N):
             tmp = 1
     else:
         cnt += tmp % 2
-
 print(cnt)

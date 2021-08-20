@@ -1,5 +1,7 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+
         def find(i, parents):
             if parents[i] != i:
                 parents[i] = find(parents[i], parents)
@@ -15,35 +17,28 @@ class Solution:
                 else:
                     parents[p_i] = p_j
             return groups
-
         alice = []
         bob = []
         res = 0
-
         parents = list(range(n + 1))
         groups = n
-
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 1:
                 alice.append((a, b))
             elif t == 2:
                 bob.append((a, b))
+            elif find(a, parents) == find(b, parents):
+                res += 1
             else:
-                if find(a, parents) == find(b, parents):
-                    res += 1
-                else:
-                    groups = union(a, b, parents, groups)
-
+                groups = union(a, b, parents, groups)
         if groups == 1:
             return res + len(alice) + len(bob)
-
         ga = groups
         gb = groups
         pa = parents[:]
         pb = parents[:]
-
         while alice:
-            i, j = alice.pop()
+            (i, j) = alice.pop()
             if find(i, pa) == find(j, pa):
                 res += 1
             else:
@@ -51,12 +46,10 @@ class Solution:
             if ga == 1:
                 res += len(alice)
                 break
-
         if ga != 1:
             return -1
-
         while bob:
-            i, j = bob.pop()
+            (i, j) = bob.pop()
             if find(i, pb) == find(j, pb):
                 res += 1
             else:
@@ -64,8 +57,6 @@ class Solution:
             if gb == 1:
                 res += len(bob)
                 break
-
         if gb != 1:
             return -1
-
         return res

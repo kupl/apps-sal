@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(i) for i in input().split()]
 a = [0] + a + [0]
 i = 1
@@ -10,13 +10,12 @@ while i <= n:
         j += 1
     tot += 1
     if a[i - 1] == a[j]:
-        cnt[a[i]] += 2  # gain a strain of 2 if we remove a[i]
+        cnt[a[i]] += 2
     else:
         cnt[a[i]] += 1
     i = j
 tot -= 1
 ans = tot
-# print(cnt)
 for i in range(1, k + 1):
     if ans > tot - cnt[i]:
         ans = tot - cnt[i]

@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 sum = y + z + z
 if x < sum:
     print(0)
@@ -7,5 +7,4 @@ else:
     while sum <= x:
         sum += y + z
         ans += 1
-
     print(ans - 1)

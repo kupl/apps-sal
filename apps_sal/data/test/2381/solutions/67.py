@@ -1,18 +1,14 @@
 from collections import deque
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 table = list(map(int, input().split()))
-jnum = K - sum(1 for i in table if i >= 0)
-num_mins = sum(1 for i in table if i < 0)
+jnum = K - sum((1 for i in table if i >= 0))
+num_mins = sum((1 for i in table if i < 0))
 q_plus = deque(sorted([i for i in table if i >= 0], reverse=True))
 q_mins = deque(sorted([-i for i in table if i < 0], reverse=True))
 s_plus = []
 s_mins = []
 total = 1
-
-
-# if jnum < 0 or jnum % 2 == 0:
-if (K % 2 == 1 and N == num_mins) or (N == K and num_mins % 2 == 1):
+if K % 2 == 1 and N == num_mins or (N == K and num_mins % 2 == 1):
     for i in range(K):
         if not q_plus:
             total = -total * q_mins.pop() % (10 ** 9 + 7)
@@ -45,6 +41,4 @@ else:
     s_plus.extend(s_mins)
     for j in s_plus:
         total = total * j % (10 ** 9 + 7)
-
-
 print(total)

@@ -13,7 +13,7 @@ def get_date(m, d):
 n = int(r.readline())
 used = [0] * 366
 for i in range(n):
-    m, d, p, t = list(map(int, r.readline().split()))
+    (m, d, p, t) = list(map(int, r.readline().split()))
     date = get_date(m, d)
     for i in range(max(0, date - t), date):
         used[i] += p

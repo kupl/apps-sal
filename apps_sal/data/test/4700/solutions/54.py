@@ -1,8 +1,8 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 h = [int(x) for x in input().split()]
-a, b = [], []
+(a, b) = ([], [])
 for i in range(m):
-    a1, b1 = [int(x) for x in input().split()]
+    (a1, b1) = [int(x) for x in input().split()]
     a.append(a1 - 1)
     b.append(b1 - 1)
 ans = [1] * n
@@ -18,5 +18,4 @@ c = 0
 for i in range(n):
     if ans[i] == 1:
         c += 1
-# print(ans)
 print(c)

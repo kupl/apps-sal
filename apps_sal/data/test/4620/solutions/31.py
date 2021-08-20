@@ -3,13 +3,11 @@ c = []
 s = []
 f = []
 for _ in range(n - 1):
-    _c, _s, _f = list(map(int, input().split()))
+    (_c, _s, _f) = list(map(int, input().split()))
     c.append(_c)
     s.append(_s)
     f.append(_f)
-
 ans = 0
-
 for i in range(n):
     ans = 0
     for j in range(i, n - 1):
@@ -19,5 +17,4 @@ for i in range(n):
             ans += c[j]
         else:
             ans += f[j] - ans % f[j] + c[j]
-
     print(ans)

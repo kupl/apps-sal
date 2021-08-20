@@ -7,5 +7,4 @@ def obtain_max_number(arr):
                 arr.remove(n)
                 arr.remove(n)
                 arr.append(n * 2)
-
     return max(arr)

@@ -1,4 +1,5 @@
 class MemoryManager:
+
     def __init__(self, memory):
         """
         @constructor Creates a new memory manager for the provided array.
@@ -7,7 +8,7 @@ class MemoryManager:
         self._memory = memory
         self._capacity = len(memory)
         self._allocated = {i: False for i in range(self._capacity)}
-        self._pointers = dict()  # Holds all current valid pointers, index -> size
+        self._pointers = dict()
 
     def allocate(self, size):
         """
@@ -17,16 +18,13 @@ class MemoryManager:
         @raises If it is not possible to allocate a block of the requested size.
         """
         if size > self._capacity:
-            raise Exception("Request exceeds max system capacity")
-
+            raise Exception('Request exceeds max system capacity')
         block_start = self._find_empty_block(size)
         if block_start is None:
-            raise Exception("No free block of sufficient size found")
-
+            raise Exception('No free block of sufficient size found')
         self._pointers[block_start] = size
         for i in range(size):
             self._allocated[block_start + i] = True
-
         return block_start
 
     def release(self, pointer):
@@ -36,12 +34,10 @@ class MemoryManager:
         @raises If the pointer does not point to an allocated block.
         """
         if pointer not in self._pointers:
-            raise Exception("Pointer was not allocated")
-
+            raise Exception('Pointer was not allocated')
         pointer_size = self._pointers[pointer]
         for i in range(pointer_size):
             self._allocated[pointer + i] = False
-
         del self._pointers[pointer]
 
     def read(self, pointer):
@@ -52,8 +48,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if not self._allocated[pointer]:
-            raise Exception("Memory space not allocated")
-
+            raise Exception('Memory space not allocated')
         return self._memory[pointer]
 
     def write(self, pointer, value):
@@ -64,8 +59,7 @@ class MemoryManager:
         @raises If pointer is in unallocated memory.
         """
         if not self._allocated[pointer]:
-            raise Exception("Cannot write at unallocated memory space")
-
+            raise Exception('Cannot write at unallocated memory space')
         self._memory[pointer] = value
 
     def _find_empty_block(self, size):
@@ -77,7 +71,6 @@ class MemoryManager:
         contiguous_size = 0
         index = 0
         start_index = None
-
         while index < self._capacity:
             if index in self._pointers:
                 start_index = None
@@ -87,12 +80,8 @@ class MemoryManager:
             else:
                 if start_index is None:
                     start_index = index
-
                 contiguous_size += 1
-
                 if contiguous_size == size:
                     return start_index
-
                 index += 1
-
         return None

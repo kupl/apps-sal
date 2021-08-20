@@ -1,5 +1,5 @@
 from math import sqrt as S
-n, b = map(int, input().split())
+(n, b) = map(int, input().split())
 temp = b
 pf = []
 for i in range(2, int(S(b)) + 1):
@@ -18,16 +18,15 @@ def chk(z, p):
     ct = 0
     k = p
     while z // k > 0:
-        ct += (z // k)
+        ct += z // k
         k = k * p
     return ct
 
 
-mini = 10**50
+mini = 10 ** 50
 for i in range(plen):
     currp = pf[i][1]
     cnt = pf[i][0]
     cur = chk(n, currp)
-    # print(cur)
     mini = min(mini, cur // cnt)
 print(mini)

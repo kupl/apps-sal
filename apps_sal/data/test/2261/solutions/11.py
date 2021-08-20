@@ -1,5 +1,5 @@
 def f(k):
-    if(k == '+'):
+    if k == '+':
         return '*'
     else:
         return '+'
@@ -13,7 +13,7 @@ def g(k):
 
 
 def solve(k):
-    if(k == 0):
+    if k == 0:
         return ['+']
     else:
         h = solve(k - 1)

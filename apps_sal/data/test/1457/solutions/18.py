@@ -1,10 +1,4 @@
 a = input()
 b = input()
-'''n = len(a)
-m = len(b)
-cnt = 0
-fl = False
-for i in range(n - m):
-
-'''
+'n = len(a)\nm = len(b)\ncnt = 0\nfl = False\nfor i in range(n - m):\n\n'
 print(a.count(b))

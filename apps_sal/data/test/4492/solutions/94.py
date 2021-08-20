@@ -1,5 +1,5 @@
 import math
-N, x = list(map(int, input().split()))
+(N, x) = list(map(int, input().split()))
 L = [int(x) for x in input().split()]
 ans = 0
 for i in range(1, N):

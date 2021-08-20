@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         self.rank = [1 for _ in range(n)]
@@ -11,7 +12,7 @@ class Solution:
         distance.sort(key=lambda x: x[0])
         ans = 0
         count = 0
-        for dis, u, v in distance:
+        for (dis, u, v) in distance:
             if self.find(u) == self.find(v):
                 continue
             ans += dis

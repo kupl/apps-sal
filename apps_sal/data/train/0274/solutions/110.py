@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         if not nums:
             return 0
@@ -9,7 +10,6 @@ class Solution:
         l = 0
         r = 1
         max_l = 1
-
         while l <= r and r < len(nums):
             cur_max = max(cur_max, nums[r])
             cur_min = min(cur_min, nums[r])

@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.p = [i for i in range(n + 1)]
         self.counts = Counter()
@@ -25,7 +26,7 @@ class UF:
         pj = self.getParent(j)
         if pi != pj:
             self.p[pi] = pj
-            ri, rj = self.rank[pi], self.rank[pj]
+            (ri, rj) = (self.rank[pi], self.rank[pj])
             self.counts[ri] -= 1
             self.counts[rj] -= 1
             self.counts[ri + rj] += 1
@@ -33,12 +34,12 @@ class UF:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UF(n)
-
         result = -1
-        for i, e in enumerate(arr, start=1):
+        for (i, e) in enumerate(arr, start=1):
             uf.set(e)
             if uf.isSet(e - 1):
                 uf.connect(e - 1, e)
@@ -46,5 +47,4 @@ class Solution:
                 uf.connect(e, e + 1)
             if uf.getCount(m) != 0:
                 result = i
-
         return result

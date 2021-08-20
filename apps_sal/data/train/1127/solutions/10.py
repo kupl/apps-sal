@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -10,12 +9,12 @@ def do():
     if c == 0:
         s = s.capitalize()
         print(s)
-    elif(c == 1):
+    elif c == 1:
         f = s.split()[0]
         l = s.split()[1]
         l = l.capitalize()
         print(f[0].capitalize(), '. ', l, sep='')
-    elif(c == 2):
+    elif c == 2:
         f = s.split()[0]
         m = s.split()[1]
         l = s.split()[2]

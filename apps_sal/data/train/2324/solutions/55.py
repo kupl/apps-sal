@@ -13,11 +13,10 @@ def dfs(x):
 N = int(input())
 G = [set() for _ in range(N + 1)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a].add(b)
     G[b].add(a)
-
-d1, dn = dfs(1), dfs(N)
+(d1, dn) = (dfs(1), dfs(N))
 num = 0
 for i in range(1, N + 1):
     if d1[i] <= dn[i]:

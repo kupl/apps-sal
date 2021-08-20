@@ -1,5 +1,5 @@
 s = input()
-alfabet = "abcdefghijklmnopqrstuvwxyz"
+alfabet = 'abcdefghijklmnopqrstuvwxyz'
 rot = 0
 curr = 0
 for c in s:

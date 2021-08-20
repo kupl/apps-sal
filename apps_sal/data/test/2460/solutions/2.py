@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 xs = [int(k) for k in input().split()]
 ts = [int(k) for k in input().split()]
 pos = [-1 for i in range(n + m)]
@@ -16,9 +16,9 @@ rightC = 0
 for i in range(n + m):
     if ts[i] == 0:
         right = max(i, right)
-        while right + 1 < n + m and not ts[right]:
+        while right + 1 < n + m and (not ts[right]):
             right += 1
-        mP, mD = 0, 20000000
+        (mP, mD) = (0, 20000000)
         if ts[left]:
             mP = pos[left]
             mD = xs[i] - xs[left]

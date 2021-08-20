@@ -1,1 +1,2 @@
-def repeat_str(r, s): return s * r
+def repeat_str(r, s):
+    return s * r

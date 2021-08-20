@@ -17,7 +17,7 @@ for i in range(0, len(s)):
         else:
             ans[one].append(i + 1)
 if p == False or one != -1:
-    print("-1")
+    print('-1')
 else:
     print(len(ans))
-    print("\n".join([str(len(sub)) + " " + " ".join(map(str, sub)) for sub in ans]))
+    print('\n'.join([str(len(sub)) + ' ' + ' '.join(map(str, sub)) for sub in ans]))

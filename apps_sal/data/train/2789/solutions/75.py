@@ -1,10 +1,10 @@
 def bmi(w, h):
     b = w / (h * h)
     if b <= 18.5:
-        return "Underweight"
+        return 'Underweight'
     if b <= 25.0:
-        return "Normal"
+        return 'Normal'
     if b <= 30.0:
-        return "Overweight"
+        return 'Overweight'
     if b > 30:
-        return "Obese"
+        return 'Obese'

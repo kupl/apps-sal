@@ -1,6 +1,6 @@
 def main():
-    n, m = map(int, input().split())
-    res, delta = 0, 1
+    (n, m) = map(int, input().split())
+    (res, delta) = (0, 1)
     while n < m:
         res += 1
         n *= 2

@@ -14,15 +14,11 @@ def gcd(nums):
     return functools.reduce(euclid, nums)
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 a.append(k)
 a.sort()
-
 sa = []
-
 for i in range(1, n + 1):
     sa.append(a[i] - a[i - 1])
-
-
-print((gcd(sa)))
+print(gcd(sa))

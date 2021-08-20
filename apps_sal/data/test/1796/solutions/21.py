@@ -7,5 +7,4 @@ while n > 0:
     else:
         S -= 1
     n -= 1
-
 print(S)

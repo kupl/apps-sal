@@ -1,6 +1,7 @@
 class Solution:
+
     def specialArray(self, nums: List[int]) -> int:
-        low, high = 0, len(nums)
+        (low, high) = (0, len(nums))
         while low <= high:
             mid = (low + high) // 2
             cnt = 0

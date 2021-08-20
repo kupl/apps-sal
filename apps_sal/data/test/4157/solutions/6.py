@@ -2,7 +2,7 @@ n = int(input())
 t = [*map(int, input().split())]
 x = []
 for i in t:
-    twoCnt, threeCnt = 0, 0
+    (twoCnt, threeCnt) = (0, 0)
     tt = i
     while tt % 2 == 0:
         tt //= 2

@@ -1,5 +1,5 @@
 from copy import deepcopy
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 if n > m:
     print('YES')

@@ -4,12 +4,12 @@ input = sys.stdin.readline
 
 
 def main():
-    N, M, RR = map(int, input().split())
+    (N, M, RR) = map(int, input().split())
     R = list(map(int, input().split()))
-    INF = float("inf")
+    INF = float('inf')
     T = [[INF] * N for _ in range(N)]
     for _ in range(M):
-        a, b, c = tuple(map(int, input().split()))
+        (a, b, c) = tuple(map(int, input().split()))
         T[a - 1][b - 1] = c
         T[b - 1][a - 1] = c
     for k in range(N):

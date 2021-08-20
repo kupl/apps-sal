@@ -1,19 +1,15 @@
 import sys
 import math
-
-n, k = list(map(int, sys.stdin.readline().strip().split(' ')))
+(n, k) = list(map(int, sys.stdin.readline().strip().split(' ')))
 grid = []
 for n0 in range(n):
     grid.append([char for char in sys.stdin.readline().strip()])
-
 res = [[0 for i in range(n)] for j in range(n)]
-
 for i in range(n):
     for j in range(n):
         if grid[i][j] == '#':
             continue
-        ii, jj = i, j
-
+        (ii, jj) = (i, j)
         cpt = 0
         while ii < n and cpt < k:
             if grid[ii][j] == '#':
@@ -24,7 +20,6 @@ for i in range(n):
         if cpt == k:
             for ii in range(i, i + k):
                 res[ii][j] += 1
-
         cpt = 0
         while jj < n and cpt < k:
             if grid[i][jj] == '#':

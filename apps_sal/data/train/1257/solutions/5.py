@@ -9,7 +9,6 @@ def Fact(n):
 
 
 N = int(sys.stdin.readline())
-
 for i in range(N):
     T = int(sys.stdin.readline())
     print(Fact(T))

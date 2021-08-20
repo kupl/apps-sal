@@ -1,7 +1,6 @@
 from _collections import deque
-
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ar = list(map(int, input().split()))
     picks = 0
     lol = deque([])

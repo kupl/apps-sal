@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/31 20:42
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Lunar New Year and Number Division.py
-
-
 def main():
     n = int(input())
     a = list(map(int, input().split()))

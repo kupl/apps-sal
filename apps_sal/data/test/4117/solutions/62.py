@@ -1,4 +1,4 @@
-n, *l = map(int, open(0).read().split())
+(n, *l) = map(int, open(0).read().split())
 ans = 0
 l.sort()
 for i in range(n):

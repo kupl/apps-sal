@@ -1,9 +1,9 @@
 ans = 0
 n = 0
-n = int(input(""))
-l = input("")
+n = int(input(''))
+l = input('')
 st = []
-for x in l.split(" "):
+for x in l.split(' '):
     st.append(int(x))
 st.sort()
 i = n - 1

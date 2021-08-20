@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, Q = map(int, input().split())
+    (N, Q) = map(int, input().split())
     S = input()
     Z = [0 for x in range(N)]
     LC = 0
@@ -8,12 +8,11 @@ for _ in range(int(input())):
             LC += 1
         Z[I] = LC
     for I in range(Q):
-        L, R = map(int, input().split())
+        (L, R) = map(int, input().split())
         F = 0
         if R - L < 2:
             print('NO')
+        elif Z[R - 1] == Z[L]:
+            print('NO')
         else:
-            if Z[R - 1] == Z[L]:
-                print('NO')
-            else:
-                print('YES')
+            print('YES')

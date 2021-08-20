@@ -3,7 +3,6 @@ import sys
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     n = int(input())
     index = list(map(int, input().split()))
     index.sort()

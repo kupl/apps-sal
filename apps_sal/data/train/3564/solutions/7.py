@@ -1,7 +1,7 @@
 def stringy(size):
-    str = ""
+    str = ''
     while len(str) < size:
-        str += "1"
+        str += '1'
         if len(str) < size:
-            str += "0"
+            str += '0'
     return str

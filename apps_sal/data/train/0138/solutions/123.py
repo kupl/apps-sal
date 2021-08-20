@@ -1,11 +1,12 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         pos = 0
         neg = 0
         res = 0
         for num in nums:
             if num == 0:
-                pos, neg = 0, 0
+                (pos, neg) = (0, 0)
                 continue
             elif num > 0:
                 if neg > 0:
@@ -22,6 +23,6 @@ class Solution:
                     new_pos = neg + 1
                 else:
                     new_pos = 0
-            pos, neg = new_pos, new_neg
+            (pos, neg) = (new_pos, new_neg)
             res = max(res, pos)
         return res

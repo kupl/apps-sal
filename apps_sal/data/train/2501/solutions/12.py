@@ -1,11 +1,11 @@
 class Solution:
+
     def reverseStr(self, s, k):
         """
         :type s: str
         :type k: int
         :rtype: str
         """
-
         ls = [c for c in s]
         for i in range(0, len(s), 2 * k):
             start = i
@@ -18,5 +18,4 @@ class Solution:
                 ls[end] = swp
                 start += 1
                 end -= 1
-
-        return "".join(ls)
+        return ''.join(ls)

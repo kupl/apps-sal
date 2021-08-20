@@ -3,4 +3,4 @@ def find_digit(num, nth):
         return -1
     num = abs(num)
     d = nth - 1
-    return (num // pow(10, d)) % 10
+    return num // pow(10, d) % 10

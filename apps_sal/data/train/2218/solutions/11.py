@@ -1,4 +1,5 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -16,6 +17,6 @@ for i in range(q - 1, -1, -1):
         ax[p[i][1] - 1] = max(temp, p[i][2])
 for i in range(0, n):
     if ax[i] == -1:
-        print(max(temp, a[i]), end=" ")
+        print(max(temp, a[i]), end=' ')
     else:
-        print(ax[i], end=" ")
+        print(ax[i], end=' ')

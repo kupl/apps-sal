@@ -11,9 +11,9 @@ def seive():
     for i in range(4, 1000010, 2):
         isprime[i] = 1
     for i in range(3, 1000010, 2):
-        if(not isprime[i]):
+        if not isprime[i]:
             all_prime.append(i)
-            if(i <= limit):
+            if i <= limit:
                 for j in range(i * i, 1000010, i * 2):
                     isprime[j] = 1
 
@@ -22,9 +22,9 @@ seive()
 prime = 0
 for i in range(1000000):
     next_prime[i] = all_prime[prime]
-    if(all_prime[prime] == i):
+    if all_prime[prime] == i:
         prime += 1
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 input_matrix = []
 move = []
 for i in range(r):

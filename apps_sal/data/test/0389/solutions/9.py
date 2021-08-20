@@ -1,17 +1,15 @@
-# -*- coding: utf-8 -*-
-
 def gcd(a, b):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     while True:
         t = b % a
         if t == 0:
             return a
-        a, b = t, a
+        (a, b) = (t, a)
     return 1
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 g = gcd(a, b)
 m = a / g * b / g
 n = 0

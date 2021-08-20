@@ -7,7 +7,6 @@ readlines = sys.stdin.readlines
 def main():
     N = int(readline())
     a = list(map(int, readline().split()))
-
     ans = []
     MAX = max(a)
     MIN = min(a)
@@ -31,9 +30,8 @@ def main():
                 ans.append((min_idx + 1, i + 1))
         for i in reversed(list(range(1, N))):
             ans.append((i + 1, i))
-
-    print((len(ans)))
-    for i, j in ans:
+    print(len(ans))
+    for (i, j) in ans:
         print((i, j))
 
 

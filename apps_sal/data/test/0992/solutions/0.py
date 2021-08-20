@@ -1,5 +1,5 @@
 import numpy as np
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 a = list(map(int, input().split()))
 mod = 998244353
 dp = np.zeros([n + 1, s + 1], int)

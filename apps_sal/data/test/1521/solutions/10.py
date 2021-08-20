@@ -1,4 +1,4 @@
-p, n = map(int, input().split())
+(p, n) = map(int, input().split())
 x = [0 for i in range(n)]
 for i in range(n):
     x[i] = int(input())

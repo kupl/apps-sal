@@ -3,9 +3,10 @@ readline = sys.stdin.readline
 
 
 class Segtree:
+
     def __init__(self, A, intv, initialize=True, segf=max):
         self.N = len(A)
-        self.N0 = 2**(self.N - 1).bit_length()
+        self.N0 = 2 ** (self.N - 1).bit_length()
         self.intv = intv
         self.segf = segf
         if initialize:
@@ -23,7 +24,7 @@ class Segtree:
             self.data[k] = self.segf(self.data[2 * k], self.data[2 * k + 1])
 
     def query(self, l, r):
-        L, R = l + self.N0, r + self.N0
+        (L, R) = (l + self.N0, r + self.N0)
         s = self.intv
         while L < R:
             if R & 1:
@@ -37,8 +38,8 @@ class Segtree:
         return s
 
     def binsearch(self, l, r, check, reverse=False):
-        L, R = l + self.N0, r + self.N0
-        SL, SR = [], []
+        (L, R) = (l + self.N0, r + self.N0)
+        (SL, SR) = ([], [])
         while L < R:
             if R & 1:
                 R -= 1
@@ -48,9 +49,8 @@ class Segtree:
                 L += 1
             L >>= 1
             R >>= 1
-
         if reverse:
-            for idx in (SR + SL[::-1]):
+            for idx in SR + SL[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -62,7 +62,7 @@ class Segtree:
                     idx = 2 * idx
             return idx
         else:
-            for idx in (SL + SR[::-1]):
+            for idx in SL + SR[::-1]:
                 if check(self.data[idx]):
                     break
             else:
@@ -79,12 +79,10 @@ N = int(readline())
 A = list(map(int, readline().split()))
 B = [2 * a for a in A]
 B *= 3
-inf = 2 * 10**9
+inf = 2 * 10 ** 9
 B.append(-2)
 T = Segtree(B, inf, True, min)
-
 NN = T.N0
-
 J = [0] * (NN + 1)
 J[3 * N] = inf
 KK = [None] * (NN + 1)
@@ -93,7 +91,6 @@ for i in range(3 * N - 1, -1, -1):
     k = T.binsearch(i, NN, lambda x: x < a, reverse=False)
     KK[i] = k
     J[i] = min(J[i + 1], k)
-
 Ans = [-1] * N
 for i in range(N):
     j = J[i]

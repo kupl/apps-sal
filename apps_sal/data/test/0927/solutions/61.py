@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 l = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 dp = [0] + [-1] * (9 * n)

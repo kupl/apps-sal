@@ -5,11 +5,9 @@ ans = 0
 for j in range(n):
     if a[j] == 'R':
         if 'L' in s:
-
             ans += 1
             s = set()
         s.add(a[j])
-
     elif a[j] == 'L':
         if 'R' in s:
             ans += 1
@@ -25,5 +23,4 @@ for j in range(n):
             ans += 1
             s = set()
         s.add(a[j])
-
 print(ans + 1)

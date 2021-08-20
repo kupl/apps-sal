@@ -1,5 +1,5 @@
-n, m = input().split()
-n, m = int(n), int(m)
+(n, m) = input().split()
+(n, m) = (int(n), int(m))
 i = 0
 while True:
     if n > m:

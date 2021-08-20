@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
+
         @lru_cache(None)
         def compress(now, prev_ch, prev_count, left):
             if left < 0:
@@ -15,5 +17,4 @@ class Solution:
             keep = 1 + compress(now + 1, s[now], 1, left)
             delete = compress(now + 1, prev_ch, prev_count, left - 1)
             return min(keep, delete)
-
         return compress(0, '', 0, k)

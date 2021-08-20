@@ -1,7 +1,5 @@
 import sys
-
 N = int(input())
-
 if N % 2 == 0:
     k = N // 2
     tmp = 5

@@ -11,7 +11,7 @@ def main():
                 continue
             b = min(list(map(sum, list(zip(A[i], A[j])))))
             if A[i][j] > b:
-                print((-1))
+                print(-1)
                 return
             if b > A[i][j]:
                 ans += A[i][j]

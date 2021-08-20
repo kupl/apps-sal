@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 i = 1
 m = -1
 ans = -1
@@ -11,5 +10,4 @@ for x in a:
     else:
         i = i + 1
         m = max(m, x)
-
 print(ans)

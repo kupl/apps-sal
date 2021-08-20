@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for j in range(t):
     n = int(input())
     x = list(map(int, input().split()))
     up = [1] * (n + 1)
     dn = [1] * (n + 1)
-    up[-1], dn[-1] = 0, 0
+    (up[-1], dn[-1]) = (0, 0)
     for i in reversed(range(n - 1)):
         if x[i] <= x[i + 1]:
             dn[i] += up[i + 1]

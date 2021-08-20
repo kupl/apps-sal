@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 po = 0
 ans = 0
 L = list(map(int, input().split()))
@@ -13,9 +13,8 @@ for i in L:
             po -= 1
         else:
             ans += 1
+    elif b > 0:
+        b -= 1
     else:
-        if b > 0:
-            b -= 1
-        else:
-            ans += 2
+        ans += 2
 print(ans)

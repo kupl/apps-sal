@@ -1,24 +1,20 @@
-#!/usr/bin/env python3
-
-
 def solve():
     n = int(input())
     y = 0
     for _ in range(n):
-        dist, direction = input().split()
+        (dist, direction) = input().split()
         dist = int(dist)
-        if direction == "South":
+        if direction == 'South':
             y += dist
-        elif direction == "North":
+        elif direction == 'North':
             y -= dist
-        else:
-            if y == 0 or y == 20000:
-                return "NO"
+        elif y == 0 or y == 20000:
+            return 'NO'
         if y < 0 or y > 20000:
-            return "NO"
+            return 'NO'
     if y != 0:
-        return "NO"
-    return "YES"
+        return 'NO'
+    return 'YES'
 
 
 def __starting_point():

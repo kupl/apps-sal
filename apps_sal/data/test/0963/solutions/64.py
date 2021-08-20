@@ -1,13 +1,12 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 mod = 998244353
 dp = [0] * (N + 1)
 R = []
 L = []
 for i in range(K):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     L.append(l)
     R.append(r)
-
 dp[1] = 1
 s = [0] * (N + 1)
 s[1] = 1

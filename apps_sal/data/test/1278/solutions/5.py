@@ -1,11 +1,10 @@
-# @author
-
 import sys
 
 
 class ACityDay:
+
     def solve(self):
-        n, x, y = [int(_) for _ in input().split()]
+        (n, x, y) = [int(_) for _ in input().split()]
         a = [int(_) for _ in input().split()]
         for d in range(n):
             ok = True
@@ -15,7 +14,6 @@ class ACityDay:
                 if a[j] <= a[d]:
                     ok = False
                     break
-
             if ok:
                 print(d + 1)
                 break
@@ -23,5 +21,4 @@ class ACityDay:
 
 solver = ACityDay()
 input = sys.stdin.readline
-
 solver.solve()

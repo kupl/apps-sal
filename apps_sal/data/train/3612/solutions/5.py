@@ -8,6 +8,6 @@ def search(coins, x, n=0):
     m = 9999
     for c in coins:
         if x >= c:
-            q, r = divmod(x, c)
+            (q, r) = divmod(x, c)
             m = min(m, search(coins, r, n + q))
     return m

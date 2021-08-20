@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = []
@@ -12,6 +11,6 @@ for _ in range(int(input())):
             else:
                 d[l[0]] = l[1]
     s = 0
-    for i, j in list(d.items()):
+    for (i, j) in list(d.items()):
         s = s + j
     print(s)

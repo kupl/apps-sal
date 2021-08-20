@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [0] * (n + 1)
 b = [int(i) for i in input().split()]
 for i in b:

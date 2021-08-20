@@ -1,6 +1,6 @@
 n = int(input())
 arr = list(map(int, input().split()))
-win = 2  # who wins
+win = 2
 turn = 1
 for i in range(n):
     if arr[i] != 1:

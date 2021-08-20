@@ -1,7 +1,9 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, m = map(int, input().split())
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, m) = map(int, input().split())
     r = m // 2
     s = 1
     e = 2 * r + 1
@@ -9,7 +11,6 @@ def main():
         print(s, e)
         s += 1
         e -= 1
-
     s = n - 2 * (m - r) + 1
     e = n
     for _ in range(m - r):

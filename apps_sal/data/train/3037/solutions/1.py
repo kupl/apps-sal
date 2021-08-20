@@ -5,7 +5,7 @@ def obtain_max_number(arr):
     arr = sorted(arr)
     while True:
         prev = -1
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             if x == prev:
                 break
             prev = x

@@ -1,1 +1,1 @@
-print("ABC{}".format(input()))
+print('ABC{}'.format(input()))

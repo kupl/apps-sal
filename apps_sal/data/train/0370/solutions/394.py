@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         parent = [i for i in range(max(A) + 1)]
@@ -16,7 +17,6 @@ class Solution:
                 return px
             parent[py] = px
             return px
-
         for a in A:
             for k in range(2, int(sqrt(a)) + 1, 1):
                 if a % k == 0:

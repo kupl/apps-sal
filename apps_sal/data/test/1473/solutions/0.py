@@ -2,7 +2,7 @@ n = int(input())
 d = {}
 d1 = {}
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d[a] = b
     d1[b] = a
 r = [0] * n

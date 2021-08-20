@@ -1,9 +1,8 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 cost = []
 for i in range(m):
     cost.append(list(map(int, input().split())))
-
-if (m <= 5):
+if m <= 5:
     c = 97
     s = []
     for i in range(n):
@@ -11,8 +10,7 @@ if (m <= 5):
     l = []
 
     def gen(x, c, ln):
-        # print x, c, ln
-        if (ln >= m):
+        if ln >= m:
             l.append((c, x))
         else:
             for i in range(n):

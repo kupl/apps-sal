@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfCanBreak(self, s1: str, s2: str) -> bool:
         l1 = list(s1)
         l2 = list(s2)

@@ -1,5 +1,4 @@
-# cook your dish here
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 l = list()
 pair = 0
 for _ in range(n):

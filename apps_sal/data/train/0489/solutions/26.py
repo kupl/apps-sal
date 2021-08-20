@@ -1,4 +1,5 @@
 class Solution:
+
     def maxWidthRamp(self, A: List[int]) -> int:
         res = 0
         m = float('inf')

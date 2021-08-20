@@ -7,8 +7,8 @@ readline = sys.stdin.readline
 
 def main():
     n = int(readline())
-    t, v = (list(map(int, l.split())) for l in read().splitlines())
-    vi = [(x, i + 1) for i, x in enumerate(v)]
+    (t, v) = (list(map(int, l.split())) for l in read().splitlines())
+    vi = [(x, i + 1) for (i, x) in enumerate(v)]
     x = [0] * (n + 2)
     y = [0] * (n + 1)
     x[0] = 0

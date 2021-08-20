@@ -1,13 +1,13 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         if len(tree) <= 2:
             return len(tree)
-
         n = len(tree)
-        res, l = 0, 0
+        (res, l) = (0, 0)
         while l < n:
-            type1, type2 = -1, -1
-            next_l = -1  # this denote where we should place l in next subarray
+            (type1, type2) = (-1, -1)
+            next_l = -1
             for r in range(l, n):
                 if type1 == -1:
                     type1 = tree[r]

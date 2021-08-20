@@ -1,4 +1,4 @@
-n, h, m = list(map(int, input().split()))
+(n, h, m) = list(map(int, input().split()))
 maksi = [h] * n
 tab = [[] for i in range(m)]
 for i in range(m):
@@ -10,5 +10,5 @@ for i in range(m):
         maksi[j] = min(maksi[j], tab[i][2])
 wyn = 0
 for i in range(n):
-    wyn += maksi[i]**2
+    wyn += maksi[i] ** 2
 print(wyn)

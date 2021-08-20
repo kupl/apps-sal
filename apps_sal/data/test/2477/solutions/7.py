@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 logs = list(map(int, input().split()))
 maxL = max(logs)
 
@@ -6,7 +6,6 @@ maxL = max(logs)
 def binsearch(minz, maxz):
     if minz >= maxz:
         return minz
-
     mid = (maxz + minz) // 2
     ncut = 0
     for i in range(N):
@@ -14,10 +13,8 @@ def binsearch(minz, maxz):
         ncut += thiscut
         if ncut > K:
             return binsearch(mid + 1, maxz)
-
     if ncut < K:
         return binsearch(minz, mid)
-    # else ncut == K
     maxx = 0
     for i in range(N):
         thiscut = int((logs[i] + mid - 1) / mid) - 1

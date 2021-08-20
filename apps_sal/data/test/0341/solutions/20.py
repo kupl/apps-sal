@@ -1,11 +1,8 @@
-n, k = map(int, input().split())
-R, S, P = map(int, input().split())
+(n, k) = map(int, input().split())
+(R, S, P) = map(int, input().split())
 t = input()
-
 v = {'r': P, 's': R, 'p': S}
-
 ans = 0
-
 for i in range(k):
     check = t[i]
     ans += v[check]
@@ -18,6 +15,4 @@ for i in range(k):
         else:
             ans += v[t[i]]
             check = t[i]
-
-
 print(ans)

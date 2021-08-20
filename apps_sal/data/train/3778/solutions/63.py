@@ -4,4 +4,3 @@ def find_smallest_int(arr):
         if i < res:
             res = i
     return res
-    # Code here

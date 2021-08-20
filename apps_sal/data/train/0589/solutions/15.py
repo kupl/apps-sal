@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     arr = input()
@@ -13,7 +12,7 @@ for _ in range(t):
             i += 1
         if count != 0 and count not in temp:
             temp.append(count)
-    check, day = -1, 0
+    (check, day) = (-1, 0)
     for ele in temp:
         if ele > check:
             day += 1

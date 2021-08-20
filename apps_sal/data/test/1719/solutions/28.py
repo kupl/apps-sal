@@ -1,18 +1,29 @@
 import sys
 import itertools
-
 sys.setrecursionlimit(10 ** 8)
-def ni(): return int(sys.stdin.readline())
-def nm(): return list(map(int, sys.stdin.readline().split()))
-def nl(): return list(nm())
-def ns(): return sys.stdin.readline().rstrip()
+
+
+def ni():
+    return int(sys.stdin.readline())
+
+
+def nm():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def nl():
+    return list(nm())
+
+
+def ns():
+    return sys.stdin.readline().rstrip()
 
 
 N = ni()
 MOD = 10 ** 9 + 7
-AGCT3 = ["".join(x) for x in itertools.product("AGCT", repeat=3)]
+AGCT3 = [''.join(x) for x in itertools.product('AGCT', repeat=3)]
 M = 64
-blacklist3 = {"AGC", "ACG", "GAC"}
+blacklist3 = {'AGC', 'ACG', 'GAC'}
 
 
 def solve():
@@ -31,9 +42,9 @@ def solve():
                 q2 = q3[1:]
                 if not p3.startswith(q2):
                     continue
-                if p3[1] == "G" and p3[2] == "C" and q3[0] == "A":
+                if p3[1] == 'G' and p3[2] == 'C' and (q3[0] == 'A'):
                     continue
-                if p3[0] == "G" and p3[2] == "C" and q3[0] == "A":
+                if p3[0] == 'G' and p3[2] == 'C' and (q3[0] == 'A'):
                     continue
                 dp[i][j] += dp[i - 1][k]
                 dp[i][j] %= MOD
@@ -43,4 +54,4 @@ def solve():
     return ans
 
 
-print((solve()))
+print(solve())

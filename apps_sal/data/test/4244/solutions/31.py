@@ -6,5 +6,5 @@ for i in x:
 p = int(s / n + 0.5)
 result = 0
 for i in x:
-    result += (i - p)**2
+    result += (i - p) ** 2
 print(result)

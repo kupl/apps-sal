@@ -11,23 +11,21 @@ def get_factors(num):
 
 
 def string_builder(count_dict):
-    s = ""
+    s = ''
     for element in count_dict:
         if count_dict[element] == 1:
-            s += f"({element})"
+            s += f'({element})'
         else:
-            s += f"({element}**{count_dict[element]})"
+            s += f'({element}**{count_dict[element]})'
     return s
 
 
 def primeFactors(n):
     factors = [n]
     count_dict = Counter()
-
     while factors:
         result = get_factors(factors.pop())
         count_dict[result[0]] += 1
         if result[1]:
             factors.append(result[1])
-
     return string_builder(count_dict)

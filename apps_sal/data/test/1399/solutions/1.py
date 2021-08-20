@@ -3,8 +3,9 @@ from bisect import *
 
 
 class Point:
+
     def __init__(self, x, y):
-        self.x, self.y = x, y
+        (self.x, self.y) = (x, y)
 
     def __repr__(self):
         return 'Point' + repr((self.x, self.y))
@@ -37,14 +38,14 @@ class Point:
 
 
 def intPoints(x1, y1, x2, y2):
-    dx, dy = abs(x2 - x1), abs(y2 - y1)
+    (dx, dy) = (abs(x2 - x1), abs(y2 - y1))
     return gcd(dx, dy) + 1
 
 
 def crosspoint(L1, L2):
-    A, B = Point(L1[0], L1[1]), Point(L1[2], L1[3])
-    C, D = Point(L2[0], L2[1]), Point(L2[2], L2[3])
-    S1, S2 = Point.det(C - A, D - A), Point.det(C - D, B - A)
+    (A, B) = (Point(L1[0], L1[1]), Point(L1[2], L1[3]))
+    (C, D) = (Point(L2[0], L2[1]), Point(L2[2], L2[3]))
+    (S1, S2) = (Point.det(C - A, D - A), Point.det(C - D, B - A))
     delta = (B - A) * S1
     if S2 == 0 or delta.x % S2 != 0 or delta.y % S2 != 0:
         return None
@@ -56,18 +57,9 @@ def crosspoint(L1, L2):
     return (P.x, P.y)
 
 
-'''
-while True:
-    x1, y1, x2, y2 = map(int, input().split())
-    A, B = Point(x1, y1), Point(x2, y2)
-    x1, y1, x2, y2 = map(int, input().split())
-    C, D = Point(x1, y1), Point(x2, y2)
-    print(crosspoint(A, B, C, D))
-'''
-
+'\nwhile True:\n    x1, y1, x2, y2 = map(int, input().split())\n    A, B = Point(x1, y1), Point(x2, y2)\n    x1, y1, x2, y2 = map(int, input().split())\n    C, D = Point(x1, y1), Point(x2, y2)\n    print(crosspoint(A, B, C, D))\n'
 n = int(input())
-lines = [tuple(int(z) for z in input().split())
-         for i in range(n)]
+lines = [tuple((int(z) for z in input().split())) for i in range(n)]
 count = dict()
 for i in range(n):
     for j in range(i):
@@ -78,9 +70,7 @@ for i in range(n):
             count[P] = 1
         else:
             count[P] += 1
-
-
-answer = sum(intPoints(*L) for L in lines)
+answer = sum((intPoints(*L) for L in lines))
 tri = [x * (x + 1) // 2 for x in range(n + 1)]
 for z in count:
     k = bisect_right(tri, count[z])

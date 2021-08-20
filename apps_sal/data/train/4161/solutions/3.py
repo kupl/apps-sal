@@ -7,8 +7,8 @@ def rat_at(n):
         i = i >> 1
         print(i)
         base += 1
-    path = str(bin(n - 2**(base) + 1))[2:]
-    path = '0' * (base - len(path)) + path  # buffer left side w/ 0s
+    path = str(bin(n - 2 ** base + 1))[2:]
+    path = '0' * (base - len(path)) + path
     a = b = 1
     path = [x == '1' for x in path]
     for p in path:
@@ -22,14 +22,14 @@ def rat_at(n):
 def index_of(a, b):
     if a == b == 1:
         return 0
-    path = ""
+    path = ''
     while a != 1 or b != 1:
-        if a > b:  # from the left, going right
+        if a > b:
             a -= b
-            path = "1" + path
-        else:  # from the right, going left
+            path = '1' + path
+        else:
             b -= a
-            path = "0" + path
-    base = 2**len(path) - 2  # int('1'*(count),2)
+            path = '0' + path
+    base = 2 ** len(path) - 2
     addon = int(path, 2) + 1
     return base + addon

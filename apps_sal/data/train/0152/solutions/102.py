@@ -1,6 +1,3 @@
-# 1552. Magnetic Force Between Two Balls
-# Binary search
-
 def can_distribute(baskets, ball_count, min_dist):
     last = []
     for basket in baskets:
@@ -39,5 +36,6 @@ def max_dist(baskets, ball_count):
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         return max_dist(position, m)

@@ -1,5 +1,5 @@
-a, b, c = map(int, input().split())
-x, y, z = map(int, input().split())
+(a, b, c) = map(int, input().split())
+(x, y, z) = map(int, input().split())
 s = (0 if a > x else x - a) + (0 if b > y else y - b) + (0 if c > z else z - c)
 t = ((a - x) // 2 if a > x else 0) + ((b - y) // 2 if b > y else 0) + ((c - z) // 2 if c > z else 0)
 print('Yes' if t >= s else 'No')

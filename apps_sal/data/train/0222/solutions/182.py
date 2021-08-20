@@ -1,6 +1,7 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
-        seen, n = {}, len(A)
+        (seen, n) = ({}, len(A))
         A_set = set(A)
 
         def find_lens(ind, prev, curr):

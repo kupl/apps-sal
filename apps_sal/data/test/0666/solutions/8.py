@@ -1,5 +1,5 @@
 n = int(input())
-ans = int((n * 2)**0.5)
+ans = int((n * 2) ** 0.5)
 while ans * (ans + 1) // 2 > n:
     ans -= 1
 if ans * (ans + 1) // 2 == n:

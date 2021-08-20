@@ -1,6 +1,5 @@
 s = input()
 ss = set(s)
-
 if len(s) >= 4:
     if len(ss) in (3, 4):
         print('Yes')

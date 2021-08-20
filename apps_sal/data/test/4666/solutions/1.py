@@ -1,9 +1,9 @@
 def __starting_point():
     n = int(input())
     if n % 2 == 1 or 6 <= n <= 20:
-        print("Weird")
+        print('Weird')
     else:
-        print("Not Weird")
+        print('Not Weird')
 
 
 __starting_point()

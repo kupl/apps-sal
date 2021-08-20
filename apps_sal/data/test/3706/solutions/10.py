@@ -1,16 +1,11 @@
-# 815A
-
-inpt = input().split(" ")
+inpt = input().split(' ')
 n = int(inpt[0])
 m = int(inpt[1])
-
 arr = []
-
 for i in range(n):
-    inpt = input().split(" ")
+    inpt = input().split(' ')
     inpt = list(map(int, inpt))
     arr.append(inpt)
-
 sol = []
 
 
@@ -77,18 +72,17 @@ if n < m:
         print(len(sol))
         for i in sol:
             if i <= n:
-                print("row", i)
+                print('row', i)
             else:
-                print("col", i - n)
+                print('col', i - n)
     else:
-        print("-1")
+        print('-1')
+elif solver2(arr, sol):
+    print(len(sol))
+    for i in sol:
+        if i <= n:
+            print('row', i)
+        else:
+            print('col', i - n)
 else:
-    if solver2(arr, sol):
-        print(len(sol))
-        for i in sol:
-            if i <= n:
-                print("row", i)
-            else:
-                print("col", i - n)
-    else:
-        print("-1")
+    print('-1')

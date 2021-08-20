@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations, permutations
@@ -10,7 +8,6 @@ import sys
 from queue import PriorityQueue
 import operator as op
 from functools import reduce
-
 mod = 1000000007
 
 
@@ -32,8 +29,8 @@ def printIn(ob):
 
 def powerLL(n, p):
     result = 1
-    while (p):
-        if (p & 1):
+    while p:
+        if p & 1:
             result = result * n % mod
         p = int(p / 2)
         n = n * n % mod
@@ -47,15 +44,13 @@ def ncr(n, r):
     return numer // denom
 
 
-# --------------------------------------
-
 def myCode():
-    n, x = In()
+    (n, x) = In()
     lst = L()
     count = 0
     lst.sort()
     for i in lst:
-        if (x >= i):
+        if x >= i:
             count += 1
             x = max(x, 2 * i)
         else:
@@ -73,7 +68,6 @@ def main():
 
 
 def __starting_point():
-
     main()
 
 

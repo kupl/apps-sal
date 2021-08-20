@@ -1,10 +1,9 @@
-N, M = map(int, input().split())
-A, B = {}, []
+(N, M) = map(int, input().split())
+(A, B) = ({}, [])
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     A[i] = a
     B.append(b)
-
 A = sorted(A.items(), key=lambda x: x[1])
 ans = 0
 num = 0
@@ -19,5 +18,4 @@ for i in range(N):
             break
     if flag:
         break
-
 print(ans)

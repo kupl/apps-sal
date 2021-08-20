@@ -8,7 +8,7 @@ def perm(s, a, d, j):
     else:
         for i in range(0, l):
             d[j] = s[i]
-            perm(s[0:i:] + s[i + 1::], a, d, j + 1)
+            perm(s[0:i] + s[i + 1:], a, d, j + 1)
 
 
 def per(N, a):
@@ -25,10 +25,10 @@ per(N, a)
 x = [0] * N
 y = [0] * N
 for i in range(0, N):
-    x[i], y[i] = map(int, input().split())
+    (x[i], y[i]) = map(int, input().split())
 M = len(a)
 S = 0
 for j in range(0, M):
     for i in range(0, N - 1):
-        S += math.sqrt((x[a[j][i] - 1] - x[a[j][i + 1] - 1])**2 + (y[a[j][i] - 1] - y[a[j][i + 1] - 1])**2)
+        S += math.sqrt((x[a[j][i] - 1] - x[a[j][i + 1] - 1]) ** 2 + (y[a[j][i] - 1] - y[a[j][i + 1] - 1]) ** 2)
 print(S / M)

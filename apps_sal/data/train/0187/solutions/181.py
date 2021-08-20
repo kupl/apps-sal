@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         waiting = peak_at = peak = delta = profit = t = 0
         while waiting or t < len(customers):

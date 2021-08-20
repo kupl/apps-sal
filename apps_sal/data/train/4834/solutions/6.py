@@ -11,7 +11,6 @@ def isPrime(n):
 
 def backwardsPrime(start, stop):
     backwardsPrimes = []
-
     for i in range(start, stop + 1):
         if isPrime(i) == True:
             reversedPrime = int(str(i)[::-1])

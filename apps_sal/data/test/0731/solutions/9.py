@@ -1,9 +1,8 @@
 from math import log10
-
-w, m, k = list(map(int, input().split()))
+(w, m, k) = list(map(int, input().split()))
 d = 0
 z = int(log10(m))
-zlom = 10**z
+zlom = 10 ** z
 while w > 0:
     z += 1
     zlom *= 10
@@ -13,6 +12,6 @@ while w > 0:
         d += x
         break
     w -= c
-    d += (zlom - m)
+    d += zlom - m
     m = zlom
 print(d)

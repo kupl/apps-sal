@@ -1,7 +1,7 @@
 def prime_detector(x):
     if x >= 2:
         for y in range(2, int(x / 2)):
-            if (x % y) == 0:
+            if x % y == 0:
                 return False
         return True
     else:

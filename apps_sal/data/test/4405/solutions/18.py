@@ -12,7 +12,7 @@ book.insert(0, 0)
 ans = 0
 l = len(book)
 for i in range(1, book[1] + 1):
-    pos, cur, tem = 2, i, i
+    (pos, cur, tem) = (2, i, i)
     while cur & 1 == 0 and pos < l:
         cur >>= 1
         if book[pos] < cur:

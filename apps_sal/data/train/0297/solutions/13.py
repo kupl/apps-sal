@@ -1,6 +1,6 @@
 class Solution:
-    def numTilePossibilities(self, tiles: str) -> int:
 
+    def numTilePossibilities(self, tiles: str) -> int:
         res = set()
 
         def backtrack(path, curr):
@@ -9,6 +9,5 @@ class Solution:
                     res.add(path)
                 for i in range(len(curr)):
                     backtrack(path + curr[i], curr[:i] + curr[i + 1:])
-
         backtrack('', tiles)
         return len(res)

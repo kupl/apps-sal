@@ -8,14 +8,12 @@ def alphabet_war(fight):
         if char in left_letters:
             number1 = left_letters[char]
             sum_left += number1
-
         elif char in right_letters:
             number2 = right_letters[char]
             sum_right += number2
-
     if sum_left > sum_right:
-        return "Left side wins!"
+        return 'Left side wins!'
     elif sum_right > sum_left:
-        return "Right side wins!"
+        return 'Right side wins!'
     else:
         return "Let's fight again!"

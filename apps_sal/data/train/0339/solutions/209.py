@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
         d1 = collections.defaultdict(int)
@@ -10,7 +11,6 @@ class Solution:
         for i in nums2:
             if i in d1:
                 res += d1[i]
-
         d2 = collections.defaultdict(int)
         for i in range(len(nums2)):
             for j in range(i + 1, len(nums2)):

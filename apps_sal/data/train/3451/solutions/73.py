@@ -1,5 +1,5 @@
 def triangle(x):
-    c, r = ["R", "G", "B"], []
+    (c, r) = (['R', 'G', 'B'], [])
     if len(x) == 1:
         return x[0]
     for i in range(len(x) - 1):

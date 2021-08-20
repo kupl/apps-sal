@@ -6,9 +6,9 @@ for _ in range(t):
     coo = 0
     for i in range(n):
         a = input()
-        co += a.count("1")
-        coo += a.count("0")
-        it.append([a.count("1"), a.count("0")])
+        co += a.count('1')
+        coo += a.count('0')
+        it.append([a.count('1'), a.count('0')])
     it.sort(key=lambda x: x[0] + x[1])
     ans = 0
     for i in range(n):

@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         passIn = [[item[1], item[0]] for item in trips]
         passOut = [[item[2], -item[0]] for item in trips]

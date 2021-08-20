@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 d = 0
 A = []
 okashi = [0] * N

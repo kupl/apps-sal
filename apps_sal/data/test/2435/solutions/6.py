@@ -21,13 +21,12 @@ def lm():
 
 
 q = nn()
-
 for _ in range(q):
-    n, x, m = mi()
+    (n, x, m) = mi()
     minx = x
     maxx = x
     for i in range(m):
-        l, r = mi()
+        (l, r) = mi()
         if l < minx and r >= minx:
             minx = l
         if r > maxx and l <= maxx:

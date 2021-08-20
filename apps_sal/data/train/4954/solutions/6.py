@@ -2,6 +2,7 @@ from itertools import zip_longest
 
 
 class WordDictionary:
+
     def __init__(self):
         self.d = set()
 
@@ -10,6 +11,6 @@ class WordDictionary:
 
     def search(self, s):
         for w in self.d:
-            if all((a == b or b == '.') and a for a, b in zip_longest(w, s)):
+            if all(((a == b or b == '.') and a for (a, b) in zip_longest(w, s))):
                 return 1
         return 0

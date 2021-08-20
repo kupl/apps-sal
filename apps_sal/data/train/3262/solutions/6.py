@@ -7,5 +7,4 @@ def group_cities(seq):
                 break
         else:
             result.append([element])
-
     return sorted(result, key=len, reverse=True)

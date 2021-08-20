@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifference(self, nums: List[int]) -> int:
         if len(nums) <= 4:
             return 0
@@ -20,10 +21,5 @@ class Solution:
                     heapq.heappushpop(smallest_four, -n)
             smallest_four = sorted([-x for x in smallest_four])
             largest_four = sorted(largest_four)
-
-            diff_arr = [largest_four[0] - smallest_four[0],
-                        largest_four[3] - smallest_four[3],
-                        largest_four[1] - smallest_four[1],
-                        largest_four[2] - smallest_four[2]]
-
+            diff_arr = [largest_four[0] - smallest_four[0], largest_four[3] - smallest_four[3], largest_four[1] - smallest_four[1], largest_four[2] - smallest_four[2]]
         return min(diff_arr)

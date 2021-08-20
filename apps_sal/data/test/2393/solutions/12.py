@@ -24,7 +24,6 @@ for _ in range(t):
                             r.add(i + 3)
                     else:
                         r.add(i + 2)
-
     print(len(r))
     for el in r:
         print(el, end=' ')

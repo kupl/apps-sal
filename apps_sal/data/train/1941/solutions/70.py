@@ -1,5 +1,7 @@
 class Solution:
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
+
         def generate(n):
             res = [0]
             cur = 1
@@ -13,7 +15,7 @@ class Solution:
         def to_bit(w):
             res = 0
             for c in w:
-                res |= 1 << (ord(c) - ord('a'))
+                res |= 1 << ord(c) - ord('a')
             return res
         m = collections.defaultdict(dict)
         for w in words:
@@ -29,10 +31,9 @@ class Solution:
                     m[c][b] += 1
         res = []
         for w in puzzles:
-            s1, count = m[w[0]], 0
+            (s1, count) = (m[w[0]], 0)
             for i in generate(to_bit(w)):
                 if i in s1:
                     count += s1[i]
             res.append(count)
-
         return res

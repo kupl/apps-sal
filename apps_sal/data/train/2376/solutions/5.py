@@ -7,7 +7,7 @@ def crop_set(s, n):
 
 
 class Vertex:
-    __slots__ = ("vertexes", "leaves", "graph")
+    __slots__ = ('vertexes', 'leaves', 'graph')
 
     def __init__(self, graph):
         self.vertexes = set()
@@ -28,6 +28,7 @@ class Vertex:
 
 
 class Tree:
+
     def __init__(self, n, k):
         self.k = k
         self.lc = [set() for _ in range(n // k + 1)]
@@ -41,14 +42,12 @@ class Tree:
 
     def __setitem__(self, key, value):
         value = value // self.k
-
         if self.max == self.dlc[key] > value:
             self.lc[self.max].discard(key)
             while not self.lc[self.max]:
                 self.max -= 1
         else:
             self.lc[self.dlc[key]].discard(key)
-
         if value > self.max:
             self.max = value
         self.dlc[key] = value
@@ -60,24 +59,20 @@ def to_int_decrement(s):
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     tree = Tree(n, k)
     graph = [Vertex(tree) for _ in range(n)]
-
     for _ in range(n - 1):
-        a, b = map(to_int_decrement, input().split())
+        (a, b) = map(to_int_decrement, input().split())
         graph[a].vertexes.add(graph[b])
         graph[b].vertexes.add(graph[a])
-
     if k == 1:
         print(n - 1)
         return
-
     for v in graph:
         tree.add_vertex(v)
     for v in graph:
         v.try_to_leave()
-
     c = 0
     while tree.max > 0:
         v = tree.lc[tree.max].pop()

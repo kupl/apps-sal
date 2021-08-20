@@ -5,13 +5,13 @@ for _ in range(t):
     ans = [0, []]
     for i in range(len_s):
         if s[i] == 'o':
-            if i >= 2 and s[i - 1] == 'w' and s[i - 2] == 't' and i + 2 < len_s and s[i + 1] == 'n' and s[i + 2] == 'e':
+            if i >= 2 and s[i - 1] == 'w' and (s[i - 2] == 't') and (i + 2 < len_s) and (s[i + 1] == 'n') and (s[i + 2] == 'e'):
                 ans[0] += 1
                 ans[1].append(i + 1)
-            elif i >= 2 and s[i - 1] == 'w' and s[i - 2] == 't':
+            elif i >= 2 and s[i - 1] == 'w' and (s[i - 2] == 't'):
                 ans[0] += 1
                 ans[1].append(i)
-            elif i + 2 < len_s and s[i + 1] == 'n' and s[i + 2] == 'e':
+            elif i + 2 < len_s and s[i + 1] == 'n' and (s[i + 2] == 'e'):
                 ans[0] += 1
                 ans[1].append(i + 2)
     print(ans[0])

@@ -5,15 +5,13 @@ RESULTS = ['Let us play again.', 'The first card won.', 'The second card won.', 
 def f(c1, c2, trump):
     if c1 == c2:
         return -1
-
     if c1 == 'joker':
         return 1
     elif c2 == 'joker':
         return 2
-
-    cards = c1, c2
-    n1, n2 = (ORDERS.index(c[:-1]) for c in cards)
-    s1, s2 = (c[-1] for c in cards)
+    cards = (c1, c2)
+    (n1, n2) = (ORDERS.index(c[:-1]) for c in cards)
+    (s1, s2) = (c[-1] for c in cards)
     won = 0
     if s1 == s2:
         if n1 > n2:

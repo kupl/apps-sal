@@ -5,12 +5,12 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a / gcd(a, b)) * b
+    return a / gcd(a, b) * b
 
 
 t = int(input())
 for items in range(t):
-    n, y = list(map(int, input().split()))
+    (n, y) = list(map(int, input().split()))
     if n == y:
         print('0')
     else:

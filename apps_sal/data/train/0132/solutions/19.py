@@ -1,12 +1,10 @@
 class Solution:
+
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         if not days:
             return 0
-
         dp = [0] * len(days)
 
-        # given a day, find the dp index should look for
-        # include start, not include end
         def search(start: int, end: int, day: int) -> int:
             if start == end - 1:
                 if day >= days[start]:
@@ -14,15 +12,12 @@ class Solution:
                 else:
                     return -1
             m = int((end - start) / 2) + start
-
             if day >= days[m]:
                 return search(m, end, day)
             else:
                 return search(start, m, day)
-
-        m = {day: i for i, day in enumerate(days)}
-
-        for i, day in enumerate(days):
+        m = {day: i for (i, day) in enumerate(days)}
+        for (i, day) in enumerate(days):
             prev_1 = day - 1
             prev_7 = day - 7
             prev_30 = day - 30
@@ -41,7 +36,5 @@ class Solution:
                 c_30 += dp[m[prev_30]]
             elif prev_30 >= 0 and prev_30 >= days[0]:
                 c_30 += dp[search(0, i, prev_30)]
-
             dp[i] = min(c_1, c_7, c_30)
-
         return dp[-1]

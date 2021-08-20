@@ -1,8 +1,6 @@
-# cook your dish here
 import bisect
-
 for _ in range(int(input())):
-    w, k = map(str, input().split())
+    (w, k) = map(str, input().split())
     k = int(k)
     n = len(w)
     w = list(w)
@@ -38,10 +36,9 @@ for _ in range(int(input())):
             for j in range(i + 1, l):
                 p = l1[j] - l1[i]
                 if p <= k:
-                    temp += (l2[j] * l1[j])
+                    temp += l2[j] * l1[j]
                 else:
                     p1 = p - k
-                    temp += (l2[j] * (l1[j] - p1))
-            ans = min(ans, (n - temp))
-
+                    temp += l2[j] * (l1[j] - p1)
+            ans = min(ans, n - temp)
         print(ans)

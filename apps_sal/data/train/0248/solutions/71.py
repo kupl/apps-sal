@@ -1,4 +1,5 @@
 class Solution:
+
     def rec(self, i, j, char, prev):
         if self.grid[i][j] != char:
             return False
@@ -6,14 +7,12 @@ class Solution:
             return True
         else:
             self.matrix[i][j] = True
-
         l = (i, j - 1)
         r = (i, j + 1)
         u = (i - 1, j)
         d = (i + 1, j)
-
         for c in [l, r, u, d]:
-            if 0 <= c[0] < self.row and 0 <= c[1] < self.col and c != prev:
+            if 0 <= c[0] < self.row and 0 <= c[1] < self.col and (c != prev):
                 if self.rec(c[0], c[1], char, (i, j)):
                     return True
         return False
@@ -22,9 +21,7 @@ class Solution:
         self.grid = grid
         self.row = len(grid)
         self.col = len(grid[0])
-
         self.matrix = [[False for i in range(self.col)] for j in range(self.row)]
-
         for i in range(self.row):
             for j in range(self.col):
                 if not self.matrix[i][j]:

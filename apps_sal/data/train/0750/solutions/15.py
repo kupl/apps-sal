@@ -6,6 +6,6 @@ while int(input()) != 0:
         k = x[i]
         length[k - 1] = i + 1
     if x == length:
-        print("ambiguous")
+        print('ambiguous')
     else:
-        print("not ambiguous")
+        print('not ambiguous')

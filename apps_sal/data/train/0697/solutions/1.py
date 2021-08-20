@@ -4,7 +4,6 @@ def call(lst, m):
     maxs = 0
     for i in range(m, len(lst)):
         maxs = max(maxsum, maxs)
-        # print(maxsum,lst[j],lst[i])
         maxsum -= lst[j]
         maxsum += lst[i]
         j = j + 1
@@ -13,8 +12,8 @@ def call(lst, m):
 
 
 t = int(input())
-while(t):
+while t:
     t = t - 1
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     lst = list(map(int, input().split()))
     print(call(lst, m))

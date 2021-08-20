@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = 1
 for i in range(1, 4 * 10000):
     if M % i:

@@ -7,12 +7,10 @@ for x in cl:
         a += 1
     if x < 0:
         b += 1
-
 if n % 2 == 0:
     k = n // 2
 else:
     k = n // 2 + 1
-
 if a >= k:
     print(1)
 elif b >= k:

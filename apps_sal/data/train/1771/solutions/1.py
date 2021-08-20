@@ -2,7 +2,7 @@ from heapq import *
 
 
 def closure_gen(*s):
-    keys, seen = set(s), set(s)
+    (keys, seen) = (set(s), set(s))
     q = sorted(seen)
     while q:
         curr = heappop(q)

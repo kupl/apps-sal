@@ -27,7 +27,7 @@ def ans(s):
         elif s.startswith(a[j]) and s.endswith(a[i]):
             l[j] = 'P'
             l[i] = 'S'
-    if any(i == '' for i in l):
+    if any((i == '' for i in l)):
         return None
     return ''.join(l)
 

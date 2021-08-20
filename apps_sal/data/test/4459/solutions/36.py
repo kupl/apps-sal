@@ -2,10 +2,8 @@ N = int(input())
 A = list(map(int, input().split()))
 ans = 0
 A.sort()
-
 count = 0
 m = 0
-
 for i in range(N):
     if count == 0:
         m = A[i]
@@ -19,10 +17,8 @@ for i in range(N):
             ans += count - m
         count = 1
         m = A[i]
-
 if m > count:
     ans += count
 else:
     ans += count - m
-
 print(ans)

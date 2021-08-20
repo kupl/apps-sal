@@ -7,4 +7,4 @@ for i in range(n):
         subst.add(s[i:i + j + 1])
 ls = list(subst)
 ls.sort()
-print((ls[k - 1]))
+print(ls[k - 1])

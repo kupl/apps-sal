@@ -1,18 +1,14 @@
 import numpy as np
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 H = list(map(int, input().split()))
 sortedH = np.hstack((np.zeros(1, dtype=np.int64), np.sort(H)))
-
 dic = {}
-for i, h in enumerate(sortedH):
+for (i, h) in enumerate(sortedH):
     dic[h] = i
-
-inf = 10**15
+inf = 10 ** 15
 dp = np.full((302, len(sortedH) + 1), inf, dtype=np.int64)
 dp[0, 0] = 0
-
-for i, h in enumerate(H):
+for (i, h) in enumerate(H):
     for k in range(i + 1, -1, -1):
         dp[k + 1] = np.minimum(dp[k + 1], dp[k])
         idx = dic[h]

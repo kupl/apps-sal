@@ -1,13 +1,13 @@
 for nt in range(int(input())):
     s = input()
     n = len(s)
-    if s[0] == "1":
+    if s[0] == '1':
         count = 1
     else:
         count = 0
     groups = []
     for i in range(1, n):
-        if s[i] == "1":
+        if s[i] == '1':
             count += 1
         else:
             if count:

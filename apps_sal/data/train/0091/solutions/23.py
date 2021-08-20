@@ -17,13 +17,12 @@ for q in range(w):
                 break
             r[i] = ei
             e[ei] = 0
+        elif e[a[i]] == 1:
+            e[a[i]] = 0
+            r[i] = a[i]
         else:
-            if e[a[i]] == 1:
-                e[a[i]] = 0
-                r[i] = a[i]
-            else:
-                print(-1)
-                fr = 0
-                break
+            print(-1)
+            fr = 0
+            break
     if fr:
         print(*r)

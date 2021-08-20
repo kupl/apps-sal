@@ -1,8 +1,8 @@
-X, Y, A, B, C = map(int, input().split())
+(X, Y, A, B, C) = map(int, input().split())
 P = sorted(map(int, input().split()), reverse=True)[:X]
 Q = sorted(map(int, input().split()), reverse=True)[:Y]
 R = sorted(map(int, input().split()), reverse=True)[:X + Y]
-i, j = X - 1, Y - 1
+(i, j) = (X - 1, Y - 1)
 for r in R:
     if i == -1 and j == -1:
         break
@@ -24,10 +24,9 @@ for r in R:
             j -= 1
         else:
             break
+    elif r > P[i]:
+        P[i] = r
+        i -= 1
     else:
-        if r > P[i]:
-            P[i] = r
-            i -= 1
-        else:
-            break
+        break
 print(sum(P) + sum(Q))

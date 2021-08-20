@@ -1,6 +1,7 @@
 class Solution:
+
     def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
-        res, a, b = [], 0, 0
+        (res, a, b) = ([], 0, 0)
         while a < len(A) and b < len(B):
             if A[a][1] < B[b][0]:
                 a += 1

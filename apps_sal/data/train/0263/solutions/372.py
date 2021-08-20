@@ -1,7 +1,7 @@
 class Solution:
-    def knightDialer(self, n: int) -> int:
 
-        MOD = 10**9 + 7
+    def knightDialer(self, n: int) -> int:
+        MOD = 10 ** 9 + 7
         poss = {}
         poss[1] = [6, 8]
         poss[2] = [7, 9]
@@ -15,12 +15,10 @@ class Solution:
         poss[0] = [4, 6]
 
         def helper(numb, i):
-            # print('numb is ', numb)
-            # print('at i ',i)
             if i == n:
                 return 1
             if (numb, i) in mem:
-                return mem[(numb, i)]
+                return mem[numb, i]
             out = 0
             child = poss[numb]
             nchild = len(child)
@@ -28,11 +26,10 @@ class Solution:
                 val = child[j]
                 out += helper(val, i + 1)
                 out = out % MOD
-            mem[(numb, i)] = out
+            mem[numb, i] = out
             return out
         res = 0
         mem = {}
         for i in range(10):
-            # print('starting at ',i)
             res += helper(i, 1)
         return res % MOD

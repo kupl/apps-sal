@@ -1,5 +1,4 @@
 import math
-
 from scipy.special import comb
 
 
@@ -20,7 +19,7 @@ def Bornoulli(i):
 def series(k, nb):
     if k >= 2:
         if k % 2 == 1:
-            return sum(1 / i**k for i in range(1, nb + 1))
+            return sum((1 / i ** k for i in range(1, nb + 1)))
         else:
             return 0.5 * abs(Bornoulli(k)) * (2 * math.pi) ** k / math.factorial(k)
     elif k < -1:

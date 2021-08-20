@@ -7,12 +7,11 @@ def is_leap_year(year):
             else:
                 return False
         return True
-
     return False
 
 
 def year_days(year):
     if is_leap_year(year):
-        return f"{year} has 366 days"
+        return f'{year} has 366 days'
     else:
-        return f"{year} has 365 days"
+        return f'{year} has 365 days'

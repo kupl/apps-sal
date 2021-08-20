@@ -5,7 +5,6 @@ for i in b[1:]:
     if i != c[-1]:
         c.append(i)
 a = len(c)
-
 dpa = []
 dpb = [0] * (a + 1)
 for i in range(2, a + 1):
@@ -15,5 +14,5 @@ for i in range(2, a + 1):
             dp.append(min(dpb[j], dpb[j + 1], dpa[j + 1]) + 1)
         else:
             dp.append(min(dpb[j], dpb[j + 1]) + 1)
-    dpa, dpb = dpb, dp
+    (dpa, dpb) = (dpb, dp)
 print(dpb[0])

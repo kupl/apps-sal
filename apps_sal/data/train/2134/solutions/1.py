@@ -18,7 +18,7 @@ def main():
         small = vals[parent]
         for child in children[parent]:
             if len(children[child]) > 0:
-                mini = min(s[guy] for guy in children[child])
+                mini = min((s[guy] for guy in children[child]))
             else:
                 mini = small
             if mini < small:

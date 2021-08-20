@@ -1,8 +1,5 @@
 import string
-
-
 s = input()
-
 a = 'a'
 ans = 0
 for c in s:
@@ -11,5 +8,4 @@ for c in s:
     i = min(i, 26 - i)
     a = c
     ans += i
-
 print(ans)

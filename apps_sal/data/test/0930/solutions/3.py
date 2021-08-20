@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mod = 1000000007
 
 
@@ -15,7 +15,6 @@ finv = [1] * (n + 1)
 for i in range(1, n + 1):
     fac[i] = fac[i - 1] * i % mod
     finv[i] = pow(fac[i], mod - 2, mod)
-
 ans = 0
 for i in range(min(k + 1, n)):
     ans += comb(n, i) * comb(n - 1, i) % mod

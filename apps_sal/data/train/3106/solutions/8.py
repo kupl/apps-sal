@@ -1,4 +1,3 @@
-# particiok szama
 def makec():
     dp = [[-1] * 801 for _ in range(801)]
     for n in range(801):
@@ -20,7 +19,7 @@ c = makec()
 
 def combs_non_empty_boxes(n, k):
     if k > n:
-        combs = "It cannot be possible!"
+        combs = 'It cannot be possible!'
     else:
         combs = c(n, k)
     return combs

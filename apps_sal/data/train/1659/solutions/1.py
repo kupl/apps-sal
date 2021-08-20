@@ -1,4 +1,5 @@
 class Memoize:
+
     def __init__(self, func):
         self.func = func
         self.cache = {}
@@ -17,7 +18,7 @@ def exp_sum(n):
     k = 1
     sign = 1
     while True:
-        pent = (3 * k**2 - k) // 2
+        pent = (3 * k ** 2 - k) // 2
         if pent > n:
             break
         result += sign * exp_sum(n - pent)

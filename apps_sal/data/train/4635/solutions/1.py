@@ -1,8 +1,5 @@
 def face(size, m, n):
-    return [
-        [abs(r - m) + abs(c - m) <= n for c in range(size)]
-        for r in range(size)
-    ]
+    return [[abs(r - m) + abs(c - m) <= n for c in range(size)] for r in range(size)]
 
 
 def create_octahedron(size):

@@ -6,18 +6,42 @@ import itertools
 import math
 import string
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
 INF = float('inf')
-def I(): return int(input())
-def F(): return float(input())
-def SS(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LSS(): return input().split()
+
+
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def SS():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LSS():
+    return input().split()
 
 
 def primeFactorization(n):
@@ -33,8 +57,6 @@ def primeFactorization(n):
 def resolve():
     N = I()
     A = LI()
-
-    # pairwise判定
     is_pc = True
     D = primeFactorization(max(A))
     pf = set()
@@ -50,8 +72,6 @@ def resolve():
             break
         else:
             pf |= fact
-
-    # setwise判定
     is_sc = False
     if not is_pc:
         gcd = A[0]
@@ -59,7 +79,6 @@ def resolve():
             gcd = math.gcd(i, gcd)
         if gcd == 1:
             is_sc = True
-
     if is_pc:
         print('pairwise coprime')
     elif is_sc:

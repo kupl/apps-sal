@@ -9,22 +9,19 @@ def f(SW, ox, prev):
                 return 'S'
             else:
                 return 'W'
+        elif prev == 'S':
+            return 'W'
         else:
-            if prev == 'S':
-                return 'W'
-            else:
-                return 'S'
+            return 'S'
+    elif ox == 'o':
+        if prev == 'S':
+            return 'W'
+        else:
+            return 'S'
+    elif prev == 'S':
+        return 'S'
     else:
-        if ox == 'o':
-            if prev == 'S':
-                return 'W'
-            else:
-                return 'S'
-        else:
-            if prev == 'S':
-                return 'S'
-            else:
-                return 'W'
+        return 'W'
 
 
 combination = [('S', 'S'), ('S', 'W'), ('W', 'S'), ('W', 'W')]
@@ -35,7 +32,7 @@ for j in range(4):
     ans = []
     for i in range(N):
         if i == 0:
-            first, last = combination[j]
+            (first, last) = combination[j]
             ans.append(first)
             now = first
             next_ = f(now, S[i], last)
@@ -49,7 +46,6 @@ for j in range(4):
                 break
         ans.append(next_)
         next_ = f(next_, S[i], ans[-2])
-
 if ok == 1:
     print(''.join(ans))
 else:

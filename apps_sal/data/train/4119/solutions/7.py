@@ -1,4 +1,4 @@
-rank = {x: i for i, x in enumerate([':D', ':)', ':|', ':(', 'T_T'])}
+rank = {x: i for (i, x) in enumerate([':D', ':)', ':|', ':(', 'T_T'])}
 
 
 def sort_emotions(arr, order):

@@ -1,4 +1,4 @@
-N, M, X = map(int, input().split())
+(N, M, X) = map(int, input().split())
 A = [*map(int, input().split())]
 l = [i < X for i in A]
 r = [i > X for i in A]

@@ -1,4 +1,5 @@
 class Solution:
+
     def counts(self, collect):
         answer = 1
         for char in collect:

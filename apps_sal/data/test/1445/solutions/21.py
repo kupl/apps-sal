@@ -29,5 +29,4 @@ if n % 2 == 0:
     newl = newl + help[::-1]
 else:
     newl = newl[:-1] + help[::-1]
-
 print(*newl)

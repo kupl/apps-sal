@@ -8,9 +8,8 @@ def array_info(x):
                 whitespaces += 1
             else:
                 strings += 1
+        elif float(e).is_integer():
+            ints += 1
         else:
-            if float(e).is_integer():
-                ints += 1
-            else:
-                floats += 1
+            floats += 1
     return [[c or None] for c in (len(x), ints, floats, strings, whitespaces)]

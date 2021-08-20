@@ -1,8 +1,8 @@
-H, N = map(int, input().split())
+(H, N) = map(int, input().split())
 A = []
 B = []
 for i in range(N):
-    n, a = input().split()
+    (n, a) = input().split()
     A.append(int(n))
     B.append(int(a))
 

@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 arr = [list(map(int, input().split())) for _ in range(n)]
 acumr = [0, arr[0][1] - arr[0][0]]
 acuml = [0, arr[-1][1] - (c - arr[-1][0])]

@@ -1,6 +1,5 @@
 def problem(a):
-    # Easy Points ^_^
     if a == str(a):
-        return "Error"
+        return 'Error'
     elif a == float(a):
-        return (a * 50) + 6
+        return a * 50 + 6

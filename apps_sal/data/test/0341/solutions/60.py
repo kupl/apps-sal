@@ -11,8 +11,8 @@ def point(x, y, r, s, p):
     return ceil(x / 2) * y
 
 
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 t = list(input())
 ans = 0
 for _ in range(k):

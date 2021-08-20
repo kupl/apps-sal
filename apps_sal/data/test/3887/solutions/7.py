@@ -25,7 +25,7 @@ for i in range(len(ls)):
         ls[i] += min(n - 1, n - val)
         val += min(n - 1, n - val)
 if val != n:
-    print("Impossible")
+    print('Impossible')
 else:
-    print("Possible")
-    print("".join([(" + " if v > 0 else " - ") + str(abs(v)) for v in ls])[3:] + " = " + str(n))
+    print('Possible')
+    print(''.join([(' + ' if v > 0 else ' - ') + str(abs(v)) for v in ls])[3:] + ' = ' + str(n))

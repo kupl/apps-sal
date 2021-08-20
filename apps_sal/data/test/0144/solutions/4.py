@@ -13,9 +13,8 @@ for i in range(n):
             if j == n - 1:
                 ans = 1
                 break
-            else:
-                if a[j + 1] != '0':
-                    currs = 0
+            elif a[j + 1] != '0':
+                currs = 0
 if ans:
     print('YES')
 else:

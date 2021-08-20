@@ -5,5 +5,4 @@ def min_sum(arr):
         x = arr.pop(0)
         y = arr.pop()
         n += x * y
-
     return n

@@ -1,5 +1,4 @@
 num = input()
-
 cnt = 0
 for _ in range(int(num)):
     a = input()
@@ -11,6 +10,5 @@ for _ in range(int(num)):
             break
     else:
         cnt = 0
-
 if cnt <= 2:
     print('No')

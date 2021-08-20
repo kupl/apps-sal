@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
 import sys
 import collections
-
 input = sys.stdin.readline
 
 
@@ -26,11 +24,9 @@ A = LI()
 A.sort()
 cnt = collections.Counter(A)
 end = A[-1] + 1
-
 for a in A:
     if cnt[a] >= 2:
         del cnt[a]
     for i in range(a * 2, end, a):
         del cnt[i]
-
-print((sum(cnt.values())))
+print(sum(cnt.values()))

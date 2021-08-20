@@ -1,13 +1,13 @@
 from collections import defaultdict
 m = 1000000007
-
 f = [0] * 15001
 f[0] = 1
 for i in range(1, 15001):
-    f[i] = (f[i - 1] * i) % m
+    f[i] = f[i - 1] * i % m
 
 
-def c(n, k): return (f[n] * pow((f[k] * f[n - k]) % m, m - 2, m)) % m
+def c(n, k):
+    return f[n] * pow(f[k] * f[n - k] % m, m - 2, m) % m
 
 
 def prime(n):
@@ -15,7 +15,7 @@ def prime(n):
     t = [1] * (n + 1)
     for i in range(3, m):
         if t[i]:
-            t[i * i:: 2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
+            t[i * i::2 * i] = [0] * ((n - i * i) // (2 * i) + 1)
     return [2] + [i for i in range(3, n + 1, 2) if t[i]]
 
 
@@ -35,13 +35,11 @@ def g(n):
 
 n = int(input()) - 1
 a = list(map(int, input().split()))
-
 for i in a:
     g(i)
 if 1 in s:
     s.pop(1)
-
 d = 1
 for k in list(s.values()):
-    d = (d * c(k + n, n)) % m
+    d = d * c(k + n, n) % m
 print(d)

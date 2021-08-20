@@ -1,5 +1,4 @@
 import math
-
 k = int(input())
 wa = 0
 aa = 0

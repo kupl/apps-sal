@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 A = list(map(int, input().split()))
 DP = [[0] * 3 for _ in range(n + 1)]
 ans = 0

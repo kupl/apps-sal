@@ -1,13 +1,10 @@
 import sys
 fin = sys.stdin
-
-n, m = map(int, fin.readline().split())
-
+(n, m) = map(int, fin.readline().split())
 noRoad = [tuple(map(int, fin.readline().split())) for i in range(m)]
 canBeCenter = [True] * n
-for i, j in noRoad:
+for (i, j) in noRoad:
     canBeCenter[i - 1] = canBeCenter[j - 1] = False
-
 for i in range(n):
     if canBeCenter[i]:
         print(n - 1)

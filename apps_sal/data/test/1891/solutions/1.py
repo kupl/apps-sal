@@ -1,9 +1,9 @@
 from bisect import bisect_left
 import sys
-sys.setrecursionlimit(10**6)
-N, K, A, B = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(N, K, A, B) = map(int, input().split())
 k = sorted(map(int, input().split()))
-base_length = 2**N
+base_length = 2 ** N
 
 
 def hoge(l, r):

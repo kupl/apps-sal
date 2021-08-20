@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ops = 0
 
@@ -18,6 +19,5 @@ class Solution:
                 nums[i] /= 2
             ops += 1
             it()
-
         it()
         return ops

@@ -27,9 +27,8 @@ for i in range(N):
     maxP -= 1
 if ans == -1:
     print(ans)
+elif len(Nset) == N - 1:
+    for n in Nset:
+        print(n)
 else:
-    if len(Nset) == N - 1:
-        for n in Nset:
-            print(n)
-    else:
-        print(-1)
+    print(-1)

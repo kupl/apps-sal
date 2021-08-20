@@ -2,7 +2,7 @@ n = int(input())
 s = input()
 count = 0
 kindom = 0
-x, y = 0, 0
+(x, y) = (0, 0)
 for i in s:
     if i == 'U':
         y += 1

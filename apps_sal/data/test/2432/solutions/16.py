@@ -1,6 +1,6 @@
 n = int(input())
 n = list(bin(n)[2:])
-n = (6 - len(n)) * ["0"] + n
+n = (6 - len(n)) * ['0'] + n
 n_t = n.copy()
 n[1] = n_t[5]
 n[2] = n_t[3]

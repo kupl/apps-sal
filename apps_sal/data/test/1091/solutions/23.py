@@ -3,7 +3,7 @@ def second_maximum(lst):
     for i in range(len(lst)):
         b.append(tuple([lst[i], i + 1]))
     d = sorted(b, key=lambda x: x[0])
-    return d[len(d) - 1][1], d[len(d) - 2][0]
+    return (d[len(d) - 1][1], d[len(d) - 2][0])
 
 
 n = int(input())

@@ -1,10 +1,11 @@
-inp = [
-    (10, 10, 98), (1, 58, 62, 71, 55, 4, 20, 17, 25, 29)
-]
-def read(): return tuple(map(int, input().split()))
+inp = [(10, 10, 98), (1, 58, 62, 71, 55, 4, 20, 17, 25, 29)]
 
 
-n, k, x = read()
+def read():
+    return tuple(map(int, input().split()))
+
+
+(n, k, x) = read()
 l = sorted(read())
 if k > 10:
     k = k % 4 + 4

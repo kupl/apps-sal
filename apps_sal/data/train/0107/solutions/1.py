@@ -6,23 +6,23 @@ for you in range(t):
     c = int(l[2])
     d = int(l[3])
     z = a + b
-    if(z % 2 == 0):
-        print("Tidak Tidak", end=" ")
-        if(b > 0 or c > 0):
-            print("Ya", end=" ")
+    if z % 2 == 0:
+        print('Tidak Tidak', end=' ')
+        if b > 0 or c > 0:
+            print('Ya', end=' ')
         else:
-            print("Tidak", end=" ")
-        if(a > 0 or d > 0):
-            print("Ya")
+            print('Tidak', end=' ')
+        if a > 0 or d > 0:
+            print('Ya')
         else:
-            print("Tidak")
+            print('Tidak')
     else:
-        if(a > 0 or d > 0):
-            print("Ya", end=" ")
+        if a > 0 or d > 0:
+            print('Ya', end=' ')
         else:
-            print("Tidak", end=" ")
-        if(b > 0 or c > 0):
-            print("Ya", end=" ")
+            print('Tidak', end=' ')
+        if b > 0 or c > 0:
+            print('Ya', end=' ')
         else:
-            print("Tidak", end=" ")
-        print("Tidak Tidak")
+            print('Tidak', end=' ')
+        print('Tidak Tidak')

@@ -5,8 +5,8 @@ input = reader.__next__
 
 def gift():
     for _ in range(t):
-        a, b, c = list(map(int, input().split()))
-        yield a + b + c - 1
+        (a, b, c) = list(map(int, input().split()))
+        yield (a + b + c - 1)
 
 
 def __starting_point():
@@ -15,5 +15,4 @@ def __starting_point():
     print(*ans, sep='\n')
 
 
-#"{} {} {}".format(maxele,minele,minele)
 __starting_point()

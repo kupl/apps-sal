@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, N):
         self.root = [-1 for _ in range(N)]
         self.size = [1 for _ in range(N)]
@@ -21,14 +22,12 @@ class UnionFind:
             self.size[x] += self.size[y]
 
 
-N, M = [int(_) for _ in input().split()]
+(N, M) = [int(_) for _ in input().split()]
 uf = UnionFind(N)
-
 for i in range(M):
-    X, Y, Z = [int(_) for _ in input().split()]
+    (X, Y, Z) = [int(_) for _ in input().split()]
     uf.union(X - 1, Y - 1)
-
 ans = set()
 for i in range(N):
     ans.add(uf.find(i))
-print((len(ans)))
+print(len(ans))

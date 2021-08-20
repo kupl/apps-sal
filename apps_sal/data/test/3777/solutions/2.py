@@ -17,7 +17,7 @@ def unite(u, v):
     if u == v:
         return
     if rank[u] < rank[v]:
-        u, v = v, u
+        (u, v) = (v, u)
     par[v] = u
     if rank[u] == rank[v]:
         rank[u] += 1
@@ -31,7 +31,7 @@ def kruskal(edges):
     tree = [[] for _ in range(N)]
     used = [False] * M
     weight = 0
-    for i, (w, u, v) in enumerate(edges):
+    for (i, (w, u, v)) in enumerate(edges):
         if same(u, v):
             continue
         unite(u, v)
@@ -39,14 +39,14 @@ def kruskal(edges):
         tree[u].append((w, v))
         tree[v].append((w, u))
         used[i] = True
-    return weight, tree, used
+    return (weight, tree, used)
 
 
 def dfs(v=0, p=-1, d=0, w=0):
     parent[0][v] = p
     depth[v] = d
     max_w[0][v] = w
-    for w, u in T[v]:
+    for (w, u) in T[v]:
         if u == p:
             continue
         dfs(u, v, d + 1, w)
@@ -54,7 +54,7 @@ def dfs(v=0, p=-1, d=0, w=0):
 
 def lca(u, v):
     if depth[u] > depth[v]:
-        u, v = v, u
+        (u, v) = (v, u)
     tmp = 0
     while depth[v] > depth[u]:
         diff = depth[v] - depth[u]
@@ -81,17 +81,17 @@ def modpow(x, p):
     return modpow(x * x % mod, p // 2) % mod
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 logN = (N - 1).bit_length()
 X = int(input())
 E = [tuple()] * M
 for i in range(M):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     E[i] = (w, u - 1, v - 1)
 E = sorted(E, key=lambda x: x[0])
 par = list(range(N))
 rank = [1] * N
-W, T, F = kruskal(E)
+(W, T, F) = kruskal(E)
 depth = [0] * N
 parent = [[0] * N for _ in range(logN + 1)]
 max_w = [[0] * N for _ in range(logN + 1)]
@@ -104,21 +104,19 @@ for k in range(logN):
         else:
             parent[k + 1][v] = parent[k][parent[k][v]]
             max_w[k + 1][v] = max(max_w[k][v], max_w[k][parent[k][v]])
-
 le = 0
 eq = 0
 ge = 0
-for i, (w, u, v) in enumerate(E):
+for (i, (w, u, v)) in enumerate(E):
     s = W
     if not F[i]:
-        s += (w - lca(u, v))
+        s += w - lca(u, v)
     if s < X:
         le += 1
+    elif s == X:
+        eq += 1
     else:
-        if s == X:
-            eq += 1
-        else:
-            ge += 1
+        ge += 1
 ans = 0
 if eq != 0:
     if le == 0:

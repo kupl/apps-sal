@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNumber(self, nums):
         """
         :type nums: List[int]
@@ -12,6 +13,6 @@ class Solution:
                 if mydict[i] >= 2:
                     return i
                 mydict[i] = mydict[i] + 1
-        for key, value in mydict.items():
+        for (key, value) in mydict.items():
             if value != 2:
                 return key

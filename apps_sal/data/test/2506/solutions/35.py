@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = list(map(int, input().split()))
 arr = sorted(arr, reverse=True)
 acum = [arr[0]]
 for i in range(1, n):
     acum.append(acum[-1] + arr[i])
 l = 0
-r = 2 * 10**5 + 1
+r = 2 * 10 ** 5 + 1
 while r - l != 1:
     mid = (l + r) // 2
     tmp = 0

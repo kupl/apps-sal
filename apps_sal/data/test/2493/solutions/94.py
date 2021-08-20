@@ -1,6 +1,5 @@
-MOD = 10**9 + 7
-MOD_t_MAX = 10**5 + 10
-
+MOD = 10 ** 9 + 7
+MOD_t_MAX = 10 ** 5 + 10
 fac = [None] * MOD_t_MAX
 finv = [None] * MOD_t_MAX
 inv = [None] * MOD_t_MAX
@@ -28,8 +27,8 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     p = [-1] * (n + 1)
-    l, r = -1, -1
-    for i, v in enumerate(a):
+    (l, r) = (-1, -1)
+    for (i, v) in enumerate(a):
         if p[v] == -1:
             p[v] = i
         else:

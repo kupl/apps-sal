@@ -1,4 +1,4 @@
-'''
+"""
 a=input()
 string=input()
 n=int(input())
@@ -28,12 +28,10 @@ while n>0:
     n -= 1
 
 print(score)
-'''
-
+"""
 final = 0
 n = int(input())
 list1 = []
-
 for i in range(n):
     list1.append(int(input()))
 list1.sort()

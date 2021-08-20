@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 c = min(a, b)
 cnt = 0
 ans = []

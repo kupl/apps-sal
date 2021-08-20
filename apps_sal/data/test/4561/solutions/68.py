@@ -1,11 +1,10 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 a = int(a)
 b = int(b)
 c = int(c)
-if (b - c) >= 0:
-    print("delicious")
+if b - c >= 0:
+    print('delicious')
+elif b - c >= -a:
+    print('safe')
 else:
-    if (b - c) >= -a:
-        print("safe")
-    else:
-        print("dangerous")
+    print('dangerous')

@@ -1,5 +1,5 @@
-X, Y = list(map(int, input().split()))
+(X, Y) = list(map(int, input().split()))
 if abs(X - Y) <= 1:
-    print("Brown")
+    print('Brown')
 else:
-    print("Alice")
+    print('Alice')

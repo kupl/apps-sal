@@ -7,14 +7,14 @@ Author: striker
 def main():
     for _ in range(int(input().strip())):
         college_name = input().strip().lower()
-        if "berhampore" in college_name and "serampore" in college_name:
-            print("Both")
-        elif "berhampore" in college_name:
-            print("GCETTB")
-        elif "serampore" in college_name:
-            print("GCETTS")
+        if 'berhampore' in college_name and 'serampore' in college_name:
+            print('Both')
+        elif 'berhampore' in college_name:
+            print('GCETTB')
+        elif 'serampore' in college_name:
+            print('GCETTS')
         else:
-            print("Others")
+            print('Others')
 
 
 def __starting_point():

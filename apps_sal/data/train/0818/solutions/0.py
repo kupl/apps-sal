@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -9,13 +8,13 @@ for _ in range(int(input())):
         a[i] = sum
     q = int(input())
     while q:
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         if l != 1:
             c = a[r - 1] - a[l - 2]
         else:
             c = a[r - 1]
         if c == 0:
-            print("ODD")
+            print('ODD')
         else:
-            print("EVEN")
+            print('EVEN')
         q -= 1

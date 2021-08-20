@@ -1,13 +1,20 @@
-# cook your dish here
 from collections import defaultdict
 import sys
 import math as mt
 import random
+sys.setrecursionlimit(10 ** 6)
 
-sys.setrecursionlimit(10**6)
-def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
-def get_ints(): return list(map(int, sys.stdin.readline().strip().split()))
-def input(): return sys.stdin.readline().strip()
+
+def get_array():
+    return list(map(int, sys.stdin.readline().strip().split()))
+
+
+def get_ints():
+    return list(map(int, sys.stdin.readline().strip().split()))
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 for _ in range(int(input())):
@@ -23,7 +30,7 @@ for _ in range(int(input())):
             for i in range(l[1] + 1):
                 visited[hts[i]] = True
             for i in range(l[1] + 1, n):
-                if hts[i] > hts[l[1]] and not visited[hts[i]]:
+                if hts[i] > hts[l[1]] and (not visited[hts[i]]):
                     ans = hts[i]
                     break
             print(ans)

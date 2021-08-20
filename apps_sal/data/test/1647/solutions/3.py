@@ -1,8 +1,6 @@
 n = int(input())
-
 t = input()
 v = input()
-
 s = list(set(list(t)).union(set(list(v))))
 uf = [i for i in range(len(s))]
 
@@ -20,10 +18,9 @@ res = []
 for i in range(n):
     ti = s.index(t[i])
     vi = s.index(v[i])
-    if (find(uf, ti) != find(uf, vi)):
+    if find(uf, ti) != find(uf, vi):
         union(uf, ti, vi)
         res.append((t[i], v[i]))
-
 print(len(res))
 for i in range(len(res)):
     print(res[i][0], res[i][1])

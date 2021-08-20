@@ -1,5 +1,3 @@
-# ABC140
-# Buffet
 n = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))

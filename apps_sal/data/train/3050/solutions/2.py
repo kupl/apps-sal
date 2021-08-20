@@ -5,4 +5,4 @@ def lcs(x, y):
         if item in x[i:]:
             res += [item]
             i = x.index(item) + 1
-    return "".join(res)
+    return ''.join(res)

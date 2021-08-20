@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(n):
     a.append(input())
@@ -7,7 +7,7 @@ p = list(a[b[0] - 1])
 for i in range(1, len(b)):
     s = a[b[i] - 1]
     if len(s) != len(p):
-        print("No")
+        print('No')
         raise SystemExit
     for j in range(len(s)):
         if s[j] != p[j] and p[j] != '?':
@@ -26,7 +26,7 @@ for i in range(n):
                 f = False
                 break
     if f:
-        print("No")
+        print('No')
         raise SystemExit
-print("Yes")
+print('Yes')
 print(''.join(p))

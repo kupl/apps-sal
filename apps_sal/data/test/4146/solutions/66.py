@@ -1,7 +1,6 @@
 from collections import Counter
 N = int(input())
-*V, = map(int, input().split())
-
+(*V,) = map(int, input().split())
 c1 = Counter(V[0::2]).most_common() + [(0, 0)]
 c2 = Counter(V[1::2]).most_common() + [(0, 0)]
 if c1[0][0] != c2[0][0]:

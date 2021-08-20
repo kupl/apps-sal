@@ -7,15 +7,30 @@ import math
 import numpy
 import string
 import sys
-def I(): return int(sys.stdin.readline().rstrip())
-def MI(): return map(int, sys.stdin.readline().rstrip().split())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-def S(): return sys.stdin.readline().rstrip()
-def LS(): return list(sys.stdin.readline().rstrip().split())
+
+
+def I():
+    return int(sys.stdin.readline().rstrip())
+
+
+def MI():
+    return map(int, sys.stdin.readline().rstrip().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+def S():
+    return sys.stdin.readline().rstrip()
+
+
+def LS():
+    return list(sys.stdin.readline().rstrip().split())
 
 
 mod = 10 ** 9 + 7
-N, K = MI()
+(N, K) = MI()
 
 
 def num(self):

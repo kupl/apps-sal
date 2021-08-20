@@ -6,7 +6,7 @@ while y < i:
     y += 1
 l1 = sorted(l, key=lambda x: x[0])
 l2 = sorted(l, key=lambda x: x[1])
-if(l1 != l2):
-    print("Happy Alex")
+if l1 != l2:
+    print('Happy Alex')
 else:
-    print("Poor Alex")
+    print('Poor Alex')

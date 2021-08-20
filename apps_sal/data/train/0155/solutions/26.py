@@ -1,8 +1,9 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         l = len(arr)
-        self.check, self.seen = [[] for _ in range(l)], dict()
-        for i, v in enumerate(arr):
+        (self.check, self.seen) = ([[] for _ in range(l)], dict())
+        for (i, v) in enumerate(arr):
             for sign in (1, -1):
                 for x in range(sign, (d + 1) * sign, sign):
                     if i + x not in list(range(l)) or v <= arr[i + x]:
@@ -10,7 +11,7 @@ class Solution:
                     self.check[i].append(i + x)
             if not self.check[i]:
                 self.seen[i] = 1
-        return max(self.helper(i) for i in range(l))
+        return max((self.helper(i) for i in range(l)))
 
     def helper(self, p):
         if p not in self.seen:

@@ -1,15 +1,48 @@
 import collections
-def mp(): return map(int, input().split())
-def lt(): return list(map(int, input().split()))
-def pt(x): print(x)
-def ip(): return input()
-def it(): return int(input())
-def sl(x): return [t for t in x]
-def spl(x): return x.split()
-def aj(liste, item): liste.append(item)
-def bin(x): return "{0:b}".format(x)
-def listring(l): return ' '.join([str(x) for x in l])
-def ptlist(l): print(' '.join([str(x) for x in l]))
+
+
+def mp():
+    return map(int, input().split())
+
+
+def lt():
+    return list(map(int, input().split()))
+
+
+def pt(x):
+    print(x)
+
+
+def ip():
+    return input()
+
+
+def it():
+    return int(input())
+
+
+def sl(x):
+    return [t for t in x]
+
+
+def spl(x):
+    return x.split()
+
+
+def aj(liste, item):
+    liste.append(item)
+
+
+def bin(x):
+    return '{0:b}'.format(x)
+
+
+def listring(l):
+    return ' '.join([str(x) for x in l])
+
+
+def ptlist(l):
+    print(' '.join([str(x) for x in l]))
 
 
 n = it()
@@ -18,7 +51,6 @@ a = lt()
 b = lt()
 m = it()
 c = lt()
-
 shirt = list(zip(p, a, b))
 shirt.sort()
 pointer = [-1, 0, 0, 0]

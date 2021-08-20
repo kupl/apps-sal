@@ -1,9 +1,12 @@
 import heapq
-def r(): return map(int, input().split())
+
+
+def r():
+    return map(int, input().split())
 
 
 def main():
-    n, = r()
+    (n,) = r()
     a = list(r())
     if len(a) % 2 == 0:
         a.append(0)

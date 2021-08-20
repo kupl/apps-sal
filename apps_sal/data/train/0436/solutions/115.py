@@ -1,6 +1,7 @@
 class Solution:
 
     def minDays(self, n: int) -> int:
+
         def recur(n: int) -> int:
             if n <= 1:
                 return n
@@ -11,8 +12,6 @@ class Solution:
             else:
                 ans = self.arr[n]
             return ans
-
         self.N = min(100000, n)
         self.arr = [-1] * self.N
-
         return recur(n)

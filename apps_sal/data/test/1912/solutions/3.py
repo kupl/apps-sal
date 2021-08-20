@@ -12,9 +12,9 @@ def count():
 
 
 for nt in range(int(input())):
-    r, g, b, w = map(int, input().split())
+    (r, g, b, w) = map(int, input().split())
     if count() >= 3:
-        print("Yes")
+        print('Yes')
         continue
     if min(r, g, b) > 0:
         r -= 1
@@ -22,8 +22,8 @@ for nt in range(int(input())):
         b -= 1
         w += 3
         if count() >= 3:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
         continue
-    print("No")
+    print('No')

@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSum(self, a: List[int]) -> int:
         max_so_far = -sys.maxsize
         max_ending_here = 0

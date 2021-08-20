@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class DSU:
+
     def __init__(self, arr):
         self.p = {}
         self.n = 0
@@ -21,8 +22,9 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        '''
+        """
         d = DSU([])
         edge = []
         ans = 0
@@ -40,8 +42,7 @@ class Solution:
             if d.n == 0:
                 break
         return ans
-        '''
-
+        """
         comb = list(combinations(points, 2))
         edges = []
         ans = 0

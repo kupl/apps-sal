@@ -1,14 +1,13 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-
 N = int(input())
 A = [int(input()) for _ in range(N)]
-INF = 10**18
+INF = 10 ** 18
 arr = deque([])
 for a in A:
-    l, r = -1, len(arr)
-    while (r - l) > 1:
+    (l, r) = (-1, len(arr))
+    while r - l > 1:
         mid = (r + l) // 2
         if arr[mid] < a:
             l = mid

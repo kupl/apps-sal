@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum2(self, candidates, target):
 
         def dfs(i, val, path):
@@ -15,7 +16,6 @@ class Solution:
                 while i < len(candidates) - 1 and candidates[i] == candidates[i + 1]:
                     i += 1
                 i += 1
-
         candidates = sorted(candidates)
         ans = []
         dfs(0, 0, [])

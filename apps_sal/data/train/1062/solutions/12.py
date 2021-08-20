@@ -1,5 +1,5 @@
 n = int(input())
-l = [[1], ]
+l = [[1]]
 if n == 1:
     pass
 else:

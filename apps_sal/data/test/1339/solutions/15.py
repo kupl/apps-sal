@@ -4,7 +4,7 @@ k = []
 mi = 100000000000
 ma = 0
 for i in range(num):
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     if a < mi:

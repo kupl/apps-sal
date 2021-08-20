@@ -1,15 +1,11 @@
 class Solution:
+
     def frequencySort(self, s):
         """
         :type s: str
         :rtype: str
         """
-        '''
-         cnt = collections.Counter(s)
-         tmp = list(k*v for k, v in cnt.items())
-         res = sorted(tmp, key=len, reverse=True)
-         return ''.join(res)
-         '''
+        "\n         cnt = collections.Counter(s)\n         tmp = list(k*v for k, v in cnt.items())\n         res = sorted(tmp, key=len, reverse=True)\n         return ''.join(res)\n         "
         res = ''
         cnt = collections.Counter(s)
         tmps = cnt.most_common()

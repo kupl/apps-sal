@@ -3,5 +3,5 @@ def chinese_zodiac(year):
     ANIMALS = ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig']
     ELEMENTS = ['Wood', 'Fire', 'Earth', 'Metal', 'Water']
     year -= EPOCH
-    res = ELEMENTS[(year // 2) % len(ELEMENTS)], ANIMALS[year % len(ANIMALS)]
-    return " ".join(res)
+    res = (ELEMENTS[year // 2 % len(ELEMENTS)], ANIMALS[year % len(ANIMALS)])
+    return ' '.join(res)

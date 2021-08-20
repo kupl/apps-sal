@@ -1,6 +1,7 @@
 class Solution:
+
     def longestWord(self, words):
-        ret, m = '', {''}
+        (ret, m) = ('', {''})
         for w in sorted(words):
             if w[:-1] in m:
                 m.add(w)

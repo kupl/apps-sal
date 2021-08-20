@@ -1,4 +1,5 @@
-class UnionFind():  # 0インデックス
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():  # 0インデックス
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -28,18 +26,16 @@ class UnionFind():  # 0インデックス
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     unionFind = UnionFind(n)
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         unionFind.union(a, b)
-
     value = 0
     for i in range(n):
         value = max(value, unionFind.size(i))
-
     print(value)
 
 

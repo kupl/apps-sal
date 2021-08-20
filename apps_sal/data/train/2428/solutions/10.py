@@ -1,4 +1,5 @@
 class Solution:
+
     def singleNumber(self, nums):
         """
         :type nums: List[int]
@@ -10,6 +11,6 @@ class Solution:
                 dic[num] = 1
             else:
                 dic[num] += 1
-        for key, val in list(dic.items()):
+        for (key, val) in list(dic.items()):
             if val == 1:
                 return key

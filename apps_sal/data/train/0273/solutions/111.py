@@ -1,4 +1,5 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         been = set()
         steps = 0
@@ -6,7 +7,7 @@ class Solution:
         while queue:
             print(len(queue))
             newQueue = set()
-            for pos, speed in queue:
+            for (pos, speed) in queue:
                 if pos == 0:
                     return steps
                 been.add((pos, speed))

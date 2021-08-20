@@ -4,15 +4,15 @@ h = max(s)
 ss = [0] * (h + 1)
 for i in s:
     ss[i] += 1
-f, x = [0] * h, 0
+(f, x) = ([0] * h, 0)
 for j in reversed(ss):
     x += j
     f.append(x)
 f.reverse()
 res = []
-for i, x in enumerate(ss):
+for (i, x) in enumerate(ss):
     if x:
-        summ, x = 0, f[i]
+        (summ, x) = (0, f[i])
         for j in range(i, h + 1, i):
             o = f[j + i]
             summ += (x - o) * j

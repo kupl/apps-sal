@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 cnt = list([0] * (n + 1))
 for i in range(m):
     votes = [int(num) for num in input().split()]

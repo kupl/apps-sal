@@ -12,6 +12,6 @@ else:
             x[i] += 1
 a.sort()
 if x == a:
-    print(pow(2, (n // 2), 10**9 + 7))
+    print(pow(2, n // 2, 10 ** 9 + 7))
 else:
     print(0)

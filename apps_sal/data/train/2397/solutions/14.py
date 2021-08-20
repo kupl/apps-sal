@@ -5,13 +5,13 @@ input = sys.stdin.readline
 def stringminus(s):
     i = -1
     n = len(s)
-    s2 = ["0"] * n
+    s2 = ['0'] * n
     for j in range(n):
         s2[j] = s[j]
-    while s[i] == "0":
-        s2[i] = "1"
+    while s[i] == '0':
+        s2[i] = '1'
         i -= 1
-    s2[i] = "0"
+    s2[i] = '0'
     sol = s2[0]
     for i in range(1, n):
         sol += s2[i]
@@ -21,13 +21,13 @@ def stringminus(s):
 def stringplus(s):
     i = -1
     n = len(s)
-    s2 = ["0"] * n
+    s2 = ['0'] * n
     for j in range(n):
         s2[j] = s[j]
-    while s[i] == "1":
-        s2[i] = "0"
+    while s[i] == '1':
+        s2[i] = '0'
         i -= 1
-    s2[i] = "1"
+    s2[i] = '1'
     sol = s2[0]
     for i in range(1, n):
         sol += s2[i]
@@ -36,11 +36,11 @@ def stringplus(s):
 
 for f in range(int(input())):
     rem = set()
-    med = "0"
+    med = '0'
     isc = 0
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     for i in range(m - 1):
-        med += "1"
+        med += '1'
     for i in range(n):
         s = input()
         s = s[0:m]

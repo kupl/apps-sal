@@ -1,8 +1,9 @@
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.n = [-1] * n
         self.r = [0] * n
@@ -40,9 +41,9 @@ class UnionFind:
         return self.siz
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 uf = UnionFind(n)
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     uf.unite(x - 1, y - 1)
 print(uf.size())

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPrefix(self, s: str) -> str:
         n = len(s)
         i = 0

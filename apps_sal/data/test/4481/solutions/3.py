@@ -10,6 +10,6 @@ ma = max(d.values())
 d2 = sorted(d.items())
 d.clear()
 d.update(d2)
-for k, v in list(d.items()):
+for (k, v) in list(d.items()):
     if v == ma:
         print(k)

@@ -1,15 +1,10 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def maxAncestorDiff(self, root: TreeNode) -> int:
         stack = [[root, [root.val]]]
         res = 0
         while stack:
-            node, ancestors = stack[0]
+            (node, ancestors) = stack[0]
             res = max(res, abs(node.val - ancestors[0]), abs(node.val - ancestors[-1]))
             for i in range(len(ancestors)):
                 if node.val >= ancestors[i]:
@@ -22,4 +17,4 @@ class Solution:
             if node.right != None:
                 stack.append([node.right, new_ancestors])
             stack = stack[1:]
-        return(res)
+        return res

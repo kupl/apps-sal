@@ -1,14 +1,12 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     N = int(input())
     P = list(map(int, input().split()))
     X = list(map(int, input().split()))
-
     child = [[] for _ in range(N + 1)]
     par = [-1] * (N + 1)
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         child[p].append(i + 2)
         par[i + 2] = p
     child_num = [len(child[i]) for i in range(N + 1)]
@@ -32,8 +30,8 @@ def main():
         dp2 = [[False] * (x + 1) for _ in range(len(child[v]) + 1)]
         dp2[0][0] = True
         S = 0
-        for i, u in enumerate(child[v]):
-            a, b = dp[u]
+        for (i, u) in enumerate(child[v]):
+            (a, b) = dp[u]
             S += a + b
             for j in range(x + 1):
                 if dp2[i][j]:
@@ -50,7 +48,6 @@ def main():
         if finish:
             ok = 0
             break
-
     if ok:
         print('POSSIBLE')
     else:

@@ -1,5 +1,5 @@
 def smash(words):
-    s = ""
+    s = ''
     for x in words:
-        s = s + x + " "
+        s = s + x + ' '
     return s[:-1]

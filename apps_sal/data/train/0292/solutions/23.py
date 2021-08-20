@@ -1,6 +1,7 @@
 class Solution:
+
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
-        x, y = arr1, arr2
+        (x, y) = (arr1, arr2)
         maxCase1 = maxCase2 = maxCase3 = maxCase4 = -float('inf')
         minCase1 = minCase2 = minCase3 = minCase4 = float('inf')
         for i in range(len(x)):

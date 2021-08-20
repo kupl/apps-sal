@@ -1,9 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = list(map(int, input().split()))
-
 if k >= 2:
-    m = min(d[: -1])
+    m = min(d[:-1])
     print(max(sum(a) - m, a[-1] - d[-1], 0))
 elif k == 0:
     rightans = [0] * n
@@ -14,7 +13,7 @@ elif k == 0:
         rightans[i] = max(cursum - d[i], 0)
     print(max(rightans))
 else:
-    leftd = int(1e9)
+    leftd = int(1000000000.0)
     leftsum = 0
     rightans = [0] * n
     cursum = 0
@@ -29,9 +28,8 @@ else:
         leftsum += a[i]
         curans = max(leftsum - leftd, 0) + rightans[i + 1]
         ans = max(ans, curans)
-
     cursum = 0
-    rightmin = int(1e9)
+    rightmin = int(1000000000.0)
     for i in range(n - 1, -1, -1):
         cursum += a[i]
         ans = max(ans, cursum - rightmin - d[i])

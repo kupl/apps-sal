@@ -1,18 +1,9 @@
-
 def main1(n, a):
-    # n個の数字。パターン1の操作で1個減る。パターン2の操作で2個減る
-    # n<=2000
-    # パターン1だけするとき。max(a)が最大
-    # パターン2を1回するとき。max(a)かmax(a[i]+a[i+2])が最大
-    # パターン2を2回するとき。max(a)かmax(a[i]+a[i+2])かmax(a[i]+a[i+4])かmax(a[i]+a[i+2]+a[i+4])が最大
-    # パターン2を3回するとき。max(a[i]+a[i+6])かmax(a[i]+a[i+4]+a[i+6])max(a[i]+a[i+2]+a[i+6])かmax(a[i]+a[i+2]+a[i+4]+a[i+6])が最大
-    # 偶奇が異なるidxの要素が足されることがあるか？　ない
-    # idx奇数の部分和で最大、つまり、負以外すべて足す。これを偶数でもする
     odary = []
     odnum = 0
     evary = []
     evnum = 0
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         if x <= 0:
             continue
         if i % 2 == 0:
@@ -22,8 +13,8 @@ def main1(n, a):
             odary.append(i)
             odnum += x
     if odnum == 0 and evnum == 0:
-        mv, mi = a[0], 0
-        for i, x in enumerate(a):
+        (mv, mi) = (a[0], 0)
+        for (i, x) in enumerate(a):
             if mv < x:
                 mv = x
                 mi = i
@@ -37,7 +28,6 @@ def main1(n, a):
         ary = evary
     retary = []
     m = n
-    # print(ary)
     for i in reversed(range(len(ary) - 1)):
         t = ary[i + 1] - ary[i]
         t //= 2
@@ -50,7 +40,7 @@ def main1(n, a):
     for _ in range(n - 1 - ary[-1]):
         retary.append(m)
         m -= 1
-    return ret, retary
+    return (ret, retary)
 
 
 def __starting_point():

@@ -22,7 +22,6 @@ def prime_factorize(n):
 L = prime_factorize(n)
 M = L.copy()
 M = list(set(M))
-
 cnt = 0
 for x in M:
     m = L.count(x)
@@ -30,5 +29,4 @@ for x in M:
         if m - i - 1 >= 0:
             m -= i + 1
             cnt += 1
-
 print(cnt)

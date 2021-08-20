@@ -4,5 +4,4 @@ def adjacent_element_product(array):
         product = array[i] * array[i + 1]
         if product > maxProduct:
             maxProduct = product
-
     return maxProduct

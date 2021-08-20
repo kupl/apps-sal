@@ -1,13 +1,13 @@
 class Solution:
+
     def minimumMoves(self, grid: List[List[int]]) -> int:
         vis = set()
         q = collections.deque([(0, 0, 0, 0)])
         d = [[0, 1], [1, 0]]
         n = len(grid)
         while q:
-            # print(q)
             node = q.popleft()
-            if node[0] == (n - 1) and node[1] == (n - 2) and node[2] == 0:
+            if node[0] == n - 1 and node[1] == n - 2 and (node[2] == 0):
                 return node[3]
             snake = [[node[0], node[1]], [node[0] + d[node[2]][0], node[1] + d[node[2]][1]]]
             for i in d:
@@ -15,7 +15,7 @@ class Solution:
                 for c in snake:
                     nx = c[0] + i[0]
                     ny = c[1] + i[1]
-                    if nx < 0 or ny < 0 or nx >= n or ny >= n:
+                    if nx < 0 or ny < 0 or nx >= n or (ny >= n):
                         possible = False
                         break
                     if grid[nx][ny] != 0:

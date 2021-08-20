@@ -1,4 +1,4 @@
-BRACES = {"(": ")", "{": "}", "[": "]"}
+BRACES = {'(': ')', '{': '}', '[': ']'}
 
 
 def validBraces(string):

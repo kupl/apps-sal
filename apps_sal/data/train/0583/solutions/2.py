@@ -1,7 +1,7 @@
 for i in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    a, b = 0, 0
+    (a, b) = (0, 0)
     if n == 1:
         if l[0] >= 0:
             print('YES')

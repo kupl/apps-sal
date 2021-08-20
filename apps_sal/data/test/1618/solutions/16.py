@@ -6,7 +6,7 @@ a = list(map(int, input().split()))
 m = int(input())
 M = -float('inf')
 for i in range(m):
-    w, h = list(map(int, input().split()))
+    (w, h) = list(map(int, input().split()))
     if a[w - 1] < M:
         print(M)
         M += h

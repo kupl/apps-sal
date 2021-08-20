@@ -1,7 +1,8 @@
 class Solution:
+
     def watchedVideosByFriends(self, videos: List[List[str]], friends: List[List[int]], me: int, level: int) -> List[str]:
         visit = set()
-        queue, arr = [me], []
+        (queue, arr) = ([me], [])
         while level:
             level -= 1
             size = len(queue)

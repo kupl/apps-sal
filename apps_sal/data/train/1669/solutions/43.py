@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         counted = {}
         for i in hand:
@@ -11,7 +12,6 @@ class Solution:
                 return True
             if len(numbers) < W:
                 return False
-
             if numbers[W - 1] - numbers[0] > W:
                 return False
             else:
@@ -21,6 +21,5 @@ class Solution:
                         counted.pop(numbers[i])
                         numbers.remove(numbers[i])
             return containStrait(numbers, counted, W)
-
         numbers = sorted(counted.keys())
         return containStrait(numbers, counted, W)

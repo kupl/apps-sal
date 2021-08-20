@@ -1,14 +1,28 @@
-#!/usr/bin/env python3
 import sys
-sys.setrecursionlimit(10**8)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return [LIST() for _ in range(n)]
+sys.setrecursionlimit(10 ** 8)
 
 
-INF = float("inf")
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return [LIST() for _ in range(n)]
+
+
+INF = float('inf')
 
 
 def main():
@@ -17,12 +31,11 @@ def main():
     for i in range(N):
         ans += (N - i) * (N - i + 1) // 2
     uv = ZIP(N - 1)
-    for u, v in uv:
+    for (u, v) in uv:
         if v < u:
-            u, v = v, u
+            (u, v) = (v, u)
         ans -= u * (N - v + 1)
     print(ans)
-
     return
 
 

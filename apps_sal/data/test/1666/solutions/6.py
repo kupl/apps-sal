@@ -1,4 +1,4 @@
-x, y, a, b = (int(x) for x in input().split())
+(x, y, a, b) = (int(x) for x in input().split())
 val = []
 for i in range(max(a, b + 1), x + 1):
     for j in range(b, min(i - 1, y) + 1):

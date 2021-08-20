@@ -2,7 +2,6 @@ N = int(input())
 A = [int(i) for i in input().split()]
 B = [int(i) for i in input().split()]
 B.append(0)
-
 ans = 0
 for i in range(N + 1):
     taosukazu1 = min(A[i], B[i])

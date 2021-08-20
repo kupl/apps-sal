@@ -1,4 +1,3 @@
-# cook your dish here
 def countsumzero(lst):
     prefixsums = [0]
     for x in lst:
@@ -9,11 +8,9 @@ def countsumzero(lst):
             freq[y] += 1
         else:
             freq[y] = 1
+    return sum((v * (v - 1) // 2 for v in list(freq.values())))
 
-    return sum(v * (v - 1) // 2 for v in list(freq.values()))
 
-
-# Driver code
 try:
     n = int(input())
     a = list(map(int, input().split()))

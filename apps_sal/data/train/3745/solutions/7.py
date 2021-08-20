@@ -1,7 +1,9 @@
-def encode(message, key, shift): return cipher(message, key, shift, 1)
+def encode(message, key, shift):
+    return cipher(message, key, shift, 1)
 
 
-def decode(message, key, shift): return cipher(message, key, -shift, 0)
+def decode(message, key, shift):
+    return cipher(message, key, -shift, 0)
 
 
 def cipher(message, key, shift, mode):

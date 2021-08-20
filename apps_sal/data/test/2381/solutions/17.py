@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 M = []
 m = []
@@ -7,13 +7,11 @@ for a in A:
         m.append(abs(a))
     else:
         M.append(a)
-
 i = 0
 j = 0
 tmp = 1
-P = 10**9 + 7
-
-if (K % 2 == 0 and (len(m) // 2 * 2 + len(M) // 2 * 2) >= K) or (K % 2 == 1 and (len(M) + len(m) // 2 * 2) >= K and len(M) > 0):
+P = 10 ** 9 + 7
+if K % 2 == 0 and len(m) // 2 * 2 + len(M) // 2 * 2 >= K or (K % 2 == 1 and len(M) + len(m) // 2 * 2 >= K and (len(M) > 0)):
     m.sort(reverse=True)
     M.sort(reverse=True)
     while K > 0:
@@ -61,5 +59,4 @@ else:
         tmp %= P
     tmp *= -1
     tmp %= P
-
 print(tmp)

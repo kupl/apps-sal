@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.father = [i for i in range(n)]
         self.size = [1 for _ in range(n)]
@@ -9,7 +10,7 @@ class UnionFind:
         return self.father[x]
 
     def union(self, x, y):
-        fx, fy = self.find(x), self.find(y)
+        (fx, fy) = (self.find(x), self.find(y))
         if fx == fy:
             return
         self.father[fx] = fy
@@ -21,6 +22,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         n = len(bloomDay)
         if m * k > n:
@@ -31,8 +33,8 @@ class Solution:
         bloomed = [False] * n
         for idx in sort_indexes:
             bloomed[idx] = True
-            left, right = idx - 1, idx + 1
-            left_size, right_size = 0, 0
+            (left, right) = (idx - 1, idx + 1)
+            (left_size, right_size) = (0, 0)
             if left >= 0 and bloomed[left]:
                 left_size = uf.get_size(left)
                 uf.union(left, idx)
@@ -41,7 +43,6 @@ class Solution:
                 uf.union(right, idx)
             cur_size = uf.get_size(idx)
             bouquets += cur_size // k - (left_size // k + right_size // k)
-            # print(bouquets, bloomed, left_size, right_size, cur_size)
             if bouquets >= m:
                 return bloomDay[idx]
         return -1

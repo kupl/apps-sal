@@ -7,7 +7,7 @@ ans = []
 for i in range(m):
     q = [int(i) for i in input().split()]
     if q[0] == 1:
-        p, x = q[1], q[2]
+        (p, x) = (q[1], q[2])
         xyz = []
         j = p - 1
         while j < n:
@@ -24,6 +24,5 @@ for i in range(m):
             f[z] = j
     else:
         ans.append(v[q[1] - 1])
-
 for i in ans:
     print(i)

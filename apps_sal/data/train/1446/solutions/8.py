@@ -16,5 +16,5 @@ for _ in range(int(input())):
         print(-1)
         continue
     t_2 = t_1.count('1')
-    t_3 = ((2**(t_2 - 1)) - 1)
+    t_3 = 2 ** (t_2 - 1) - 1
     print(t_3)

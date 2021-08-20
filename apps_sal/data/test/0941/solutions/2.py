@@ -1,9 +1,16 @@
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(mi())
+def ii():
+    return int(input())
 
 
-b, k = mi()
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(mi())
+
+
+(b, k) = mi()
 a = li()
 b = b % 2
 c = 1

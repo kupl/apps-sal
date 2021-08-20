@@ -1,9 +1,8 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         if not nums:
             return 0
-
-        # index of last neg accumulated product
         last_neg_i = -1
         acc_product = 1
         bound = -1
@@ -14,14 +13,11 @@ class Solution:
                 last_neg_i = -1
                 bound = i
                 continue
-
             acc_product = acc_product * nums[i]
             if last_neg_i == -1 and acc_product < 0:
                 last_neg_i = i
-
             if acc_product < 0:
                 max_len = max(max_len, i - last_neg_i)
             else:
                 max_len = max(max_len, i - bound)
-
         return max_len

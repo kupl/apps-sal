@@ -9,5 +9,5 @@ for t in range(int(input())):
         d[num] += 1
     ans = 0
     for s in d:
-        ans += (d[s] * (d[s] - 1) // 2)
+        ans += d[s] * (d[s] - 1) // 2
     print(ans)

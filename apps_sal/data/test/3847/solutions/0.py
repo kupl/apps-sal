@@ -1,5 +1,5 @@
 import bisect
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 L1 = list(map(int, input().split()))
 L2 = list(map(int, input().split()))
 x = int(input())

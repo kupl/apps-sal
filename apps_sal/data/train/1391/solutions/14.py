@@ -1,14 +1,13 @@
 t = int(input())
 while t > 0:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     temp = {}
     for i in range(n):
-        s, f, p = map(int, input().split())
+        (s, f, p) = map(int, input().split())
         if p in temp:
             temp[p].append([s, f])
         else:
             temp[p] = [[s, f]]
-
     cnt = 0
     for k in temp.keys():
         temp[k].sort(key=lambda x: x[1])

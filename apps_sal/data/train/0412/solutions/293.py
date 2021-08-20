@@ -1,6 +1,5 @@
 class Solution:
-
-    MODULO = 10**9 + 7
+    MODULO = 10 ** 9 + 7
     table = {}
 
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:

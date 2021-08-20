@@ -1,16 +1,22 @@
 from collections import defaultdict, Counter
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
 
 
-h, w, n = list(map(int, input().split()))
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
+
+
+(h, w, n) = list(map(int, input().split()))
 d = defaultdict(int)
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     for i in range(a - 2, a + 1):
         for j in range(b - 2, b + 1):
             if 1 <= i <= h - 2 and 1 <= j <= w - 2:
@@ -23,4 +29,4 @@ for i in range(1, 10):
         ans[i] = c[i]
     else:
         ans[i] = 0
-write("\n".join(map(str, ans)))
+write('\n'.join(map(str, ans)))

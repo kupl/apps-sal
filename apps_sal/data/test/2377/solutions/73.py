@@ -1,8 +1,8 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 alst = []
 blst = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     alst.append(a)
     blst.append(b)
 blst.sort(reverse=True)
@@ -17,7 +17,6 @@ for num in blst:
         h -= num
         if h <= 0:
             break
-
 else:
     ans += (h - 1) // a + 1
 print(ans)

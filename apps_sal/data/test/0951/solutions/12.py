@@ -1,7 +1,5 @@
 k = int(input())
 num = [int(i) for i in input()]
-
-
 num.sort()
 q = k - sum(num)
 w = 0

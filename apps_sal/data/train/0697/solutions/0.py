@@ -1,4 +1,3 @@
-# cook your dish here
 def func(arr, k):
     sumi = 0
     for j in range(k):
@@ -12,6 +11,6 @@ def func(arr, k):
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = [int(x) for x in input().split()]
     print(func(arr, k))

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 ai.sort()
 last = ai[n - 1]

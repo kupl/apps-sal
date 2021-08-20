@@ -1,5 +1,4 @@
 from math import ceil
-
 table = []
 for i in range(3):
     var = []
@@ -8,9 +7,9 @@ for i in range(3):
     table.append(var)
     if i != 2:
         input()
-y, x = [int(x) for x in input().split()]
-x1 = (x % 3) - 1
-y1 = (y % 3) - 1
+(y, x) = [int(x) for x in input().split()]
+x1 = x % 3 - 1
+y1 = y % 3 - 1
 for i in range(3):
     if '.' in table[y1][i][x1]:
         for j in range(3):

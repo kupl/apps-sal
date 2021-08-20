@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A):
         bar = -1
         res = 0

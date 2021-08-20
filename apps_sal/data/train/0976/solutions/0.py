@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 stringa = list(map(int, input().split()))
 counter = 0

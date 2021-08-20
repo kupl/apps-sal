@@ -20,8 +20,7 @@ for i in range(n):
     if l[i] != ll or rr != r[i]:
         fl = 0
         break
-
-if fl == 1 and l[0] == 0 and r[n - 1] == 0:
+if fl == 1 and l[0] == 0 and (r[n - 1] == 0):
     print('YES')
     print(*s)
 else:

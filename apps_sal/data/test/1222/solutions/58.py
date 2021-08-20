@@ -5,7 +5,6 @@ for i in range(1, 10):
     q.put(i)
 lunlun = list(range(1, 10))
 cnt = 9
-
 while cnt <= k:
     v = q.get()
     last = v % 10

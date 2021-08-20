@@ -1,11 +1,12 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         g = {}
         for i in range(lo, hi + 1):
             p = self.power(i, 0)
             g[i] = p
         s = sorted(list(g.items()), key=lambda x: x[1])
-        return(s[k - 1][0])
+        return s[k - 1][0]
 
     def power(self, num, count):
         if num == 1:

@@ -1,3 +1,2 @@
 s = input().strip()
-
-print(sum(s.count(c) for c in 'aeiou13579'))
+print(sum((s.count(c) for c in 'aeiou13579')))

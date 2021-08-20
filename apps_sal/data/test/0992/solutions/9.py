@@ -1,7 +1,6 @@
 import numpy as np
 p = 998244353
-
-N, S = [int(i) for i in input().split()]
+(N, S) = [int(i) for i in input().split()]
 A = [int(i) for i in input().split()]
 dp = np.zeros(S + 1)
 dp[0] = 1

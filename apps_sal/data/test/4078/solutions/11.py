@@ -1,10 +1,8 @@
-#
 import collections
 import atexit
 import math
 import sys
 import bisect
-
 sys.setrecursionlimit(1000000)
 
 
@@ -13,40 +11,33 @@ def getIntList():
 
 
 try:
-    #raise ModuleNotFoundError
     import numpy
 
     def dprint(*args, **kwargs):
-        #print(*args, **kwargs, file=sys.stderr)
-        # in python 3.4 **kwargs is invalid???
         print(*args, file=sys.stderr)
     dprint('debug mode')
 except Exception:
+
     def dprint(*args, **kwargs):
         pass
-
-
 inId = 0
 outId = 0
 if inId > 0:
     dprint('use input', inId)
     try:
         f = open('input' + str(inId) + '.txt', 'r')
-        sys.stdin = f  # 标准输出重定向至文件
+        sys.stdin = f
     except Exception:
         dprint('invalid input file')
 if outId > 0:
     dprint('use output', outId)
     try:
         f = open('stdout' + str(outId) + '.txt', 'w')
-        sys.stdout = f  # 标准输出重定向至文件
+        sys.stdout = f
     except Exception:
         dprint('invalid output file')
-
-    atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
-
-N, M = getIntList()
-# print(N)
+    atexit.register(lambda: sys.stdout.close())
+(N, M) = getIntList()
 za = getIntList()
 omin = min(za)
 sg = [0 for i in range(N * 4)]
@@ -67,7 +58,6 @@ def built_sg(root, left, right):
 def update(root, left, right, qleft, qright, dif):
     if qright < left or right < qleft:
         return sg[root]
-
     if qleft <= left and right <= qright:
         de[root] += dif
         sg[root] += dif
@@ -90,7 +80,7 @@ built_sg(0, 0, N - 1)
 zm = []
 zz = [0, N]
 for i in range(M):
-    l, r = getIntList()
+    (l, r) = getIntList()
     l -= 1
     r -= 1
     zm.append((l, r))
@@ -120,9 +110,7 @@ for i in range(len(zz) - 1):
         if x[0] <= a <= x[1]:
             continue
         update(0, 0, N - 1, x[0], x[1], 1)
-    assert(omin == sg[0])
-
-
+    assert omin == sg[0]
 print(r)
 print(len(zr))
 for x in zr:

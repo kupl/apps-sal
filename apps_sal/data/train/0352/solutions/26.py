@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = {}
         cnt = [[] for i in range(16)]
@@ -6,7 +7,6 @@ class Solution:
         for i in words:
             min_l = min([min_l, len(i)])
             cnt[len(i) - 1].append(i)
-        # print(cnt)
 
         def match(a, b):
             i = j = 0
@@ -25,7 +25,6 @@ class Solution:
                 return 1
             if curr_words in dp:
                 return dp[curr_words]
-
             dp[curr_words] = 1
             for i in cnt[len(curr_words)]:
                 if match(curr_words, i):
@@ -40,6 +39,4 @@ class Solution:
                     ans = max([ans, dp[j]])
                 else:
                     ans = max([ans, topdown(j)])
-                # print(dp,i)
-
         return ans

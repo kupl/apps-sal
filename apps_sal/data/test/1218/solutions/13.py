@@ -1,8 +1,7 @@
 import sys
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 k -= 1
-lo, hi = 0, int(1e9)
+(lo, hi) = (0, int(1000000000.0))
 while lo < hi:
     m = (lo + hi + 1) // 2
     if 1 + k * (k + 1) // 2 - m * (m + 1) // 2 >= n:

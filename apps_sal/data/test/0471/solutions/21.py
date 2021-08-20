@@ -1,5 +1,5 @@
 def solve():
-    n, a = list(map(int, input().split()))
+    (n, a) = list(map(int, input().split()))
     x = list(map(int, input().split()))
     x.append(a)
     x.sort()

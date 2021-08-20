@@ -1,6 +1,7 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         dp = [[0 for _ in range(10)] for _ in range(n)]
         for i in range(10):
             dp[0][i] = 1
@@ -30,7 +31,6 @@ class Solution:
             for j in range(10):
                 for k in check(j):
                     dp[i][j] = (dp[i][j] + dp[i - 1][k]) % mod
-
         ans = 0
         for i in range(10):
             ans = (ans + dp[n - 1][i]) % mod

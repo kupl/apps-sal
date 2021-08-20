@@ -13,5 +13,5 @@ def recursion(n):
 
 
 sys.setrecursionlimit(10000000)
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 print(recursion(n))

@@ -18,7 +18,7 @@ def ip_to_int32(ip):
     ip_to_int32("128.32.10.1") => 2149583361
 
     """
-    addr = ip.split(".")
+    addr = ip.split('.')
     res = int(addr[0]) << 24
     res += int(addr[1]) << 16
     res += int(addr[2]) << 8

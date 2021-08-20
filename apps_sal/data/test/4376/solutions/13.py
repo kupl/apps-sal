@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 prefix = [0]
@@ -13,7 +13,7 @@ def binsearch(x, a):
     right = len(prefix)
     while left != right - 1:
         mid = (left + right) // 2
-        if (x[mid] < a):
+        if x[mid] < a:
             left = mid
         else:
             right = mid

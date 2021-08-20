@@ -1,7 +1,9 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def subarraysWithDictinctAtMost(A: List[int], K: int) -> int:
-            left, right = 0, 0
+            (left, right) = (0, 0)
             ans = 0
             counter = dict()
             while right < len(A):
@@ -13,7 +15,6 @@ class Solution:
                     if counter[A[left]] == 0:
                         counter.pop(A[left])
                     left += 1
-
                 ans += right - left + 1
                 right += 1
             return ans

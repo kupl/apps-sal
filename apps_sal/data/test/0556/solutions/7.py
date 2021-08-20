@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-l, r, k = read()
+(l, r, k) = read()
 cur = 1
 flag = 0
 while cur <= r:

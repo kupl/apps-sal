@@ -1,12 +1,10 @@
 N = int(input())
 alist = [0] + list(map(int, input().split()))
 xlist = list(range(1, N + 1))
-# print(alist,xlist)
-
-# Ford-Fulkerson algorithm
 
 
 class FordFulkerson:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -29,8 +27,8 @@ class FordFulkerson:
         used = self.used
         used[v] = 1
         for e in self.G[v]:
-            w, cap, rev = e
-            if cap and not used[w]:
+            (w, cap, rev) = e
+            if cap and (not used[w]):
                 d = self.dfs(w, t, min(f, cap))
                 if d:
                     e[1] -= d
@@ -40,7 +38,7 @@ class FordFulkerson:
 
     def flow(self, s, t):
         flow = 0
-        f = INF = 10**9 + 7
+        f = INF = 10 ** 9 + 7
         N = self.N
         while f:
             self.used = [0] * N
@@ -50,7 +48,6 @@ class FordFulkerson:
 
 
 asum_pos = 0
-# 点数N、辺数M、始点s、終点t
 ff = FordFulkerson(N + 2)
 for i in range(1, N + 1):
     a = alist[i]
@@ -59,10 +56,8 @@ for i in range(1, N + 1):
     else:
         ff.add_edge(i, N + 1, a)
         asum_pos += a
-
 for i in range(1, N + 1):
     for j in range(2 * i, N + 1, i):
-        ff.add_edge(i, j, float("inf"))
-
+        ff.add_edge(i, j, float('inf'))
 penalty = ff.flow(0, N + 1)
 print(asum_pos - penalty)

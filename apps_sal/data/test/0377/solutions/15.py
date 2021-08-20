@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if m <= 1:
     print(1)
 elif m <= n // 2:

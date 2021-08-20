@@ -1,11 +1,9 @@
 import heapq
 from collections import defaultdict
-# python template for atcoder1
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
-
-X, Y = list(map(int, input().split()))
+(X, Y) = list(map(int, input().split()))
 
 
 def primeFact_set(n):
@@ -24,7 +22,7 @@ def primeFact_set(n):
 
 
 X_prime = primeFact_set(X)
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 ans = 1
 for p in X_prime:
     tmp = p

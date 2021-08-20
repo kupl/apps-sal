@@ -11,15 +11,15 @@ a = min(l[z[0] - 1])
 while x < n:
     u = l[z[x] - 1][0]
     v = l[z[x] - 1][1]
-    if(u < a and v < a):
+    if u < a and v < a:
         y = False
         break
-    elif(u > a and v > a):
+    elif u > a and v > a:
         a = min(u, v)
     else:
         a = max(u, v)
     x += 1
-if(y):
-    print("YES")
+if y:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

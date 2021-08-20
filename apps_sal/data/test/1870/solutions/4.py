@@ -1,6 +1,6 @@
 import sys
 import math
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ctr = 1
 z = list(map(int, input().split()))
 for i in range(1, n):

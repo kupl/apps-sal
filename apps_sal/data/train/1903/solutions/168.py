@@ -1,6 +1,6 @@
 class Solution:
+
     def minCostConnectPoints(self, A: List[List[int]]) -> int:
-        # prim O(N^2)
         inf = float('inf')
         n = len(A)
         cost_sum = 0

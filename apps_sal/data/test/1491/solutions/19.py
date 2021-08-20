@@ -21,7 +21,7 @@ if s > n - s:
     else:
         ans += 2 * (delta - (s - zero)) + (s - zero)
 else:
-    delta = ((n - s) - s) // 2
+    delta = (n - s - s) // 2
     a.sort()
     ans = sum(a[:delta])
 print(ans)

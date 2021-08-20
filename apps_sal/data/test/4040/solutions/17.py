@@ -1,6 +1,5 @@
-n, m, d = map(int, input().split())
+(n, m, d) = map(int, input().split())
 p = list(map(int, input().split()))
-
 positions = [0] * len(p)
 positions[-1] = n + 1 - p[-1]
 for i in reversed(range(len(p) - 1)):
@@ -22,14 +21,12 @@ g = [0] * m
 g[0] = d
 for i in range(1, m):
     g[i] = g[i - 1] + p[i - 1] - 1 + d
-
 i = 0
 while not feasible(p, positions, d) and i < len(p):
     positions[i] = g[i]
     i += 1
-
 if feasible(p, positions, d):
-    print("YES")
+    print('YES')
     board = [0] * n
     for i in range(m):
         for j in range(p[i]):
@@ -38,4 +35,4 @@ if feasible(p, positions, d):
         print(e, end=' ')
     print()
 else:
-    print("NO")
+    print('NO')

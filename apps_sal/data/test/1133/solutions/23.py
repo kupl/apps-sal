@@ -2,7 +2,6 @@ words = []
 n = int(input().strip())
 for i in range(n):
     words.append(input().strip())
-
 let = [chr(i) for i in range(ord('a'), ord('z') + 1)]
 max_tot_len = 0
 for i in range(len(let)):

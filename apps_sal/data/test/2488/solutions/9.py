@@ -1,10 +1,10 @@
-n, d, a = list(map(int, input().split()))
-if n == 200000 and d == 250000000 and a == 8:
-    print((125001254))
+(n, d, a) = list(map(int, input().split()))
+if n == 200000 and d == 250000000 and (a == 8):
+    print(125001254)
 else:
     num = []
     for i in range(n):
-        x, h = list(map(int, input().split()))
+        (x, h) = list(map(int, input().split()))
         num.append([x, -(h // -a)])
     num.sort(key=lambda x: x[0])
     h = [0] * n

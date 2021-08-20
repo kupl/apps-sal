@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind:
     def unite(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.par[x] > self.par[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.par[x] += self.par[y]
         self.par[y] = x
 
@@ -27,23 +25,19 @@ class UnionFind:
         return -self.par[self.find(x)]
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(n)]
-
 uf1 = UnionFind(n)
 uf2 = UnionFind(n)
-
 mod = 998244353
-
 fct = [1]
 for i in range(1, 101):
     fct.append(fct[-1] * i % mod)
-
 for i in range(n - 1):
     for j in range(i + 1, n):
-        if all(A[c][i] + A[c][j] <= k for c in range(n)):
+        if all((A[c][i] + A[c][j] <= k for c in range(n))):
             uf1.unite(i, j)
-        if all(A[i][c] + A[j][c] <= k for c in range(n)):
+        if all((A[i][c] + A[j][c] <= k for c in range(n))):
             uf2.unite(i, j)
 ans = 1
 for i in range(n):

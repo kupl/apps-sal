@@ -1,14 +1,11 @@
-#!/usr/bin/env python3
-
 def main():
-    n, needed = list(map(int, input().split()))
+    (n, needed) = list(map(int, input().split()))
     costs = list(map(int, input().split()))
-
     done = False
     while not done:
         done = True
         cur = costs[0]
-        for i, x in enumerate(costs[1:], 1):
+        for (i, x) in enumerate(costs[1:], 1):
             cur <<= 1
             if cur < x:
                 costs[i] = cur
@@ -27,15 +24,13 @@ def main():
                 if i < n:
                     result += costs[i]
                 else:
-                    result += costs[-1] << (i - n + 1)
+                    result += costs[-1] << i - n + 1
         return result
-
     result = calc(needed)
     for i in range(30, -1, -1):
-        x = (needed >> i | 0x1) << i
+        x = (needed >> i | 1) << i
         if x >= needed:
             result = min(result, calc(x))
-
     print(result)
 
 

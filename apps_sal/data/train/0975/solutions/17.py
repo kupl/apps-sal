@@ -3,7 +3,7 @@ while t > 0:
     t -= 1
     preplayers = []
     plagplayers = []
-    n, r, x, y = map(int, input().split(' '))
+    (n, r, x, y) = map(int, input().split(' '))
     if x:
         preplayers = [int(x) for x in input().split(' ')]
     if y:

@@ -1,6 +1,5 @@
-a, b, c = list(map(int, input().strip().split()))
+(a, b, c) = list(map(int, input().strip().split()))
 n = int(input().strip())
-
 cnt = 0
 cifre = list(map(int, input().strip().split()))
 for e in cifre:

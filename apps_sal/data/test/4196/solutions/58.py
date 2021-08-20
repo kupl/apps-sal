@@ -5,7 +5,7 @@ ans = 0
 
 def gcd(x, y):
     if x < y:
-        x, y = y, x
+        (x, y) = (y, x)
     if y == 0:
         return x
     while y > 0:
@@ -17,7 +17,6 @@ def gcd(x, y):
 
 L = [0]
 R = 0
-
 for i in range(N - 1):
     L.append(gcd(A[i], L[i]))
 for i in range(N):
@@ -25,5 +24,4 @@ for i in range(N):
     R = gcd(R, A[N - i - 1])
     if ans < temp:
         ans = temp
-
 print(ans)

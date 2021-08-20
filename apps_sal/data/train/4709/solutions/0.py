@@ -1,1 +1,2 @@
-def sequence(n): return int(format(n, 'b'), 3)
+def sequence(n):
+    return int(format(n, 'b'), 3)

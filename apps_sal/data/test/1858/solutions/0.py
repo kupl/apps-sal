@@ -1,8 +1,8 @@
 n = int(input())
 if n <= 2:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
     print(1, (n + 1) // 2)
     ans = []
     for i in range(1, n + 1):

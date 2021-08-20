@@ -6,4 +6,4 @@ for _ in range(t):
     if len(x) == 0:
         print(n)
     else:
-        print(max(max(i + 1 + i + 1, n - i + n - i) for i in x))
+        print(max((max(i + 1 + i + 1, n - i + n - i) for i in x)))

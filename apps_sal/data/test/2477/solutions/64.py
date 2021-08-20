@@ -1,7 +1,5 @@
 from math import ceil
-
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
@@ -12,12 +10,11 @@ def f(x):
     return True if cnt <= K else False
 
 
-OK, NG = 10**9, 0
+(OK, NG) = (10 ** 9, 0)
 while OK - NG > 1:
     mid = (OK + NG) // 2
     if f(mid):
         OK = mid
     else:
         NG = mid
-
 print(OK)

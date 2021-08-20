@@ -1,4 +1,5 @@
 class Solution:
+
     def getDivisors(self, x):
         if x == 1:
             return [1]

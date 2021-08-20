@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 matrix = []
 for i in range(n):
     arr = list(map(int, input().split()))

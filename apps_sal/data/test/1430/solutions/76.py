@@ -1,8 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
-
 a = []
-
 i = 0
 while i < n:
     j = 1
@@ -14,13 +12,10 @@ if a[0][0] == '0':
     a = [('1', 0)] + a
 if a[-1][0] == '1':
     a.append(('0', 0))
-
 while len(a) < k * 2:
     a.append(('1', 0))
     a.append(('0', 0))
 m = len(a)
-
-
 s = [0] * (m + k * 5 + 1)
 for i in range(m + k * 2):
     if i < m:

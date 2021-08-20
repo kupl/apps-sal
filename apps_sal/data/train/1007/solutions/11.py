@@ -5,11 +5,9 @@ def gcd(firstNumber, secondNumber):
         smaller = firstNumber
     else:
         smaller = secondNumber
-
     for i in range(1, smaller + 1):
-        if (firstNumber % i == 0) and (secondNumber % i == 0):
+        if firstNumber % i == 0 and secondNumber % i == 0:
             gcd = i
-
     return gcd
 
 
@@ -25,6 +23,5 @@ for _ in range(int(input())):
             flag = 1
             print(count)
             break
-
     if flag == 0:
         print(-1)

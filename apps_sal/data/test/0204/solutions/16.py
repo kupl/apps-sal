@@ -1,7 +1,5 @@
 import fractions
-
-a, b, x, y = list(map(int, input().split()))
-
+(a, b, x, y) = list(map(int, input().split()))
 d = fractions.gcd(x, y)
 x //= d
 y //= d

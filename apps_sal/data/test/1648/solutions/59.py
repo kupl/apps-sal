@@ -1,5 +1,5 @@
 class ModCalc:
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
 
     def __init__(self, n):
         self.n = n
@@ -20,7 +20,6 @@ class ModCalc:
             return 0
         if n < 0 or r < 0:
             return 0
-
         return self.fac[n] * self.finv[r] % self.mod * self.finv[n - r] % self.mod
 
     def perm(self, n, r):
@@ -28,18 +27,15 @@ class ModCalc:
             return 0
         if n < 0 or r < 0:
             return 0
-
         return self.fac[n] * self.finv[n - r] % self.mod
 
     def fact(self, n):
         return self.fac[n]
 
 
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 mc = ModCalc(n)
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 for i in range(1, k + 1):
     tmp = mc.comb(n - k + 1, i)
-    print((mc.comb(k - 1, i - 1) * tmp % mod))
+    print(mc.comb(k - 1, i - 1) * tmp % mod)

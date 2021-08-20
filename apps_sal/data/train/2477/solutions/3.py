@@ -1,4 +1,5 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         for i in range(len(A)):
             A[i] = sorted(list(A[i][::2])) + sorted(list(A[i][1::2]))

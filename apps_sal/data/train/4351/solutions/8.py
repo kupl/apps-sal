@@ -9,7 +9,7 @@ def find_middle(string):
             result *= int(c)
     if count:
         if len(str(result)) % 2 == 0:
-            final = str(result)[(len(str(result)) // 2) - 1: (len(str(result)) // 2) + 1]
+            final = str(result)[len(str(result)) // 2 - 1:len(str(result)) // 2 + 1]
             if final[0] == '0':
                 return int(final[1])
             else:

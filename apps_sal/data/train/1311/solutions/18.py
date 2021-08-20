@@ -1,12 +1,8 @@
-# cook your dish here
-# Let's hack this code.
-
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations
 from collections import defaultdict
 from bisect import bisect_left, bisect_right
-
 mod = 1000000007
 
 
@@ -28,18 +24,16 @@ def printIn(ob):
 
 def powerLL(n, p):
     result = 1
-    while (p):
-        if (p & 1):
+    while p:
+        if p & 1:
             result = result * n % mod
         p = int(p / 2)
         n = n * n % mod
     return result
 
-# --------------------------------------
-
 
 def myCode():
-    n, k = In()
+    (n, k) = In()
     seq = []
     for i in range(1, n + 1):
         if i % 2 == 0:
@@ -49,7 +43,7 @@ def myCode():
     if k == math.ceil(n / 2):
         print(*seq)
     elif k < math.ceil(n / 2):
-        req = abs(k - (math.ceil(n / 2)))
+        req = abs(k - math.ceil(n / 2))
         for i in range(n - 1, -1, -1):
             if seq[i] > 0:
                 seq[i] = -1 * seq[i]
@@ -58,7 +52,7 @@ def myCode():
                 break
         print(*seq)
     else:
-        req = abs(k - (math.ceil(n / 2)))
+        req = abs(k - math.ceil(n / 2))
         for i in range(n - 1, -1, -1):
             if seq[i] < 0:
                 seq[i] = -1 * seq[i]

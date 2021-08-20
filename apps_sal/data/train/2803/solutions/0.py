@@ -3,9 +3,9 @@ from fractions import gcd
 
 def DPC_sequence(s):
     n = 1
-    for i, c in enumerate(s, 1):
+    for (i, c) in enumerate(s, 1):
         if c == 'D':
-            n = (n * i) // gcd(n, i)
+            n = n * i // gcd(n, i)
         elif c == 'P':
             if gcd(n, i) != 1:
                 return -1

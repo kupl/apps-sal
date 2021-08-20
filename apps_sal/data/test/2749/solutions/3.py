@@ -1,7 +1,6 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
 a = list(map(int, input().split()))
-
 c = [[0 for i in range(W)] for i in range(H)]
 k = 0
 for i in range(H):

@@ -1,4 +1,4 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 n *= 2
 arr = list(map(int, input().split()))
 arr.sort()

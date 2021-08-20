@@ -11,7 +11,6 @@ class CombinationIterator:
         ret = ''
         for n in self.nums:
             ret += self.characters[n]
-
         self.nums[-1] += 1
         if self.nums[-1] == self.s:
             carry = True
@@ -23,21 +22,12 @@ class CombinationIterator:
                     cnt -= 1
                 else:
                     carry = False
-
             if cnt < -self.len:
                 self.is_next = False
             else:
                 for i in range(cnt + 1, 0, 1):
                     self.nums[i] = self.nums[i - 1] + 1
-
-        # print(self.nums)
         return ret
 
     def hasNext(self) -> bool:
         return self.is_next
-
-
-# Your CombinationIterator object will be instantiated and called as such:
-# obj = CombinationIterator(characters, combinationLength)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()

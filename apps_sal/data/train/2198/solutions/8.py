@@ -11,6 +11,5 @@ for w in words:
             for i in range(len(w)):
                 if 'u' == w[i:i + 1]:
                     w = w[:i] + 'oo' + w[i + 1:]
-
     s.add(w)
 print(len(s))

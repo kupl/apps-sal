@@ -13,5 +13,5 @@ def strong_num(number):
     for i in nb:
         r += fac(i)
     if number == r:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

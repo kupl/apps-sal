@@ -17,22 +17,19 @@ def shift_add(a, mul, b):
 
 a = [0, 1]
 b = [1]
-
 for i in range(n - 1):
     c = shift_add(a, 1, b)
     if max(c) <= 1 and min(c) >= -1:
-        a, b = c, a
+        (a, b) = (c, a)
     else:
         c = shift_add(a, -1, b)
         if max(c) <= 1 and min(c) >= -1:
-            a, b = c, a
+            (a, b) = (c, a)
         else:
             print('> <')
-
 if a[-1] == -1:
     a = list([-x for x in a])
 if b[-1] == -1:
     b = list([-x for x in b])
-
 print_poly(a)
 print_poly(b)

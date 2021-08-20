@@ -1,4 +1,5 @@
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
         visited = set()
         m = len(grid)
@@ -13,7 +14,7 @@ class Solution:
             visited.add(curr)
             for dirn in dirs:
                 nei = (dirn[0] + curr[0], dirn[1] + curr[1])
-                if 0 <= nei[0] < m and 0 <= nei[1] < n and nei != prev and grid[nei[0]][nei[1]] == grid[curr[0]][curr[1]]:
+                if 0 <= nei[0] < m and 0 <= nei[1] < n and (nei != prev) and (grid[nei[0]][nei[1]] == grid[curr[0]][curr[1]]):
                     if dfs(curr, nei):
                         return True
             return False
@@ -23,12 +24,3 @@ class Solution:
                     if dfs(None, (i, j)):
                         return True
         return False
-
-#     for each cell, if not in visited, do a DFS
-
-#     DFS (prev->(x,y), curx, cury, visited):
-#         if cur is visited: return True
-#         for each cell,
-#             if nei is not prev and nei == cur:
-#                 if (DFS on the nei) return True
-#         return False

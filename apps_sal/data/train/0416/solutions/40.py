@@ -1,8 +1,12 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
-        # encode = lambda p, c, m: (c << 7) | (m << 1) | p
-        def encode(p, c, m): return (p, c, m)
-        def decode(c): return (c & 0x1, c >> 7, (c >> 1) & 0x3f)
+
+        def encode(p, c, m):
+            return (p, c, m)
+
+        def decode(c):
+            return (c & 1, c >> 7, c >> 1 & 63)
         n = len(graph)
         g = collections.defaultdict(list)
         outcomes = {}
@@ -16,11 +20,10 @@ class Solution:
                             outcomes[status] = 1
                         elif m == 0:
                             outcomes[status] = -1
-                    else:
-                        if m == 0:
-                            outcomes[status] = 1
-                        elif c == m:
-                            outcomes[status] = -1
+                    elif m == 0:
+                        outcomes[status] = 1
+                    elif c == m:
+                        outcomes[status] = -1
                     if outcomes.get(status, 0):
                         continue
                     if p == 0:
@@ -35,9 +38,6 @@ class Solution:
                             st = encode((p + 1) % 2, c, i)
                             g[st].append(status)
                             degrees[status] += 1
-        # for st, nei in g.items():
-        #     print(st, nei)
-        # print(outcomes)
 
         def dfs(status):
             visited.add(status)
@@ -59,7 +59,6 @@ class Solution:
                     st = encode(p, c, m)
                     if outcomes.get(st, 0) and st not in visited:
                         dfs(st)
-
         o = outcomes.get(encode(1, 2, 1), 0)
         if o == -1:
             o = 2

@@ -1,4 +1,3 @@
-
 s = input().split()
 n = int(s[0])
 m = int(s[1])
@@ -10,9 +9,8 @@ for k in mp:
         neg += 1
     else:
         pos += 1
-
 mine = min(neg, pos)
-ans = ""
+ans = ''
 while m > 0:
     m -= 1
     st = input().split()
@@ -20,7 +18,7 @@ while m > 0:
     r = int(st[1])
     dif = r - l + 1
     if dif % 2 == 0 and dif // 2 <= mine:
-        ans += "1\n"
+        ans += '1\n'
     else:
-        ans += "0\n"
+        ans += '0\n'
 print(ans)

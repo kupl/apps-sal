@@ -16,4 +16,4 @@ while b > -1:
         b = b - 1
     else:
         array[b] = sorting(array[b], array[b + 1])
-print("\n".join(array))
+print('\n'.join(array))

@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        cnt, ans = 0, -1
-        start_end, end_start = {}, {}
-        for i, n in enumerate(arr, start=1):
-            start, end = n, n
+        (cnt, ans) = (0, -1)
+        (start_end, end_start) = ({}, {})
+        for (i, n) in enumerate(arr, start=1):
+            (start, end) = (n, n)
             if n - 1 in end_start:
                 start = end_start[n - 1]
                 del end_start[n - 1]

@@ -1,8 +1,7 @@
 def cookie(x):
-    # Good Luck
     if type(x) == bool:
-        return "Who ate the last cookie? It was the dog!"
+        return 'Who ate the last cookie? It was the dog!'
     if isinstance(x, str):
-        return "Who ate the last cookie? It was Zach!"
+        return 'Who ate the last cookie? It was Zach!'
     if isinstance(x, int) or isinstance(x, float):
-        return "Who ate the last cookie? It was Monica!"
+        return 'Who ate the last cookie? It was Monica!'

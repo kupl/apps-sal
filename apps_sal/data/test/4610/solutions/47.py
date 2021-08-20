@@ -1,6 +1,6 @@
 import operator
 from collections import Counter
-n, k = [int(_) for _ in input().split()]
+(n, k) = [int(_) for _ in input().split()]
 D = Counter([int(_) for _ in input().split()])
 D = dict(sorted(list(D.items()), key=operator.itemgetter(1), reverse=True))
 c = 0

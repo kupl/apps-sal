@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         sum_ = sum(weights)
         max_weight = max(weights)
@@ -31,5 +32,4 @@ class Solution:
                 else:
                     left = mid
             return right
-
         return binary_search(weights, D, sum_, max_weight)

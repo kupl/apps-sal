@@ -1,6 +1,6 @@
 n = int(input()) + 1
 flag = 0
-while(n <= 987654321):
+while n <= 987654321:
     digits = [str(x) for x in str(n)]
     if '0' in digits:
         n += 1

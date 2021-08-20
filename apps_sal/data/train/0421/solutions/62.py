@@ -1,11 +1,9 @@
 class Solution:
-    def lastSubstring(self, s: str) -> str:
 
+    def lastSubstring(self, s: str) -> str:
         if len(s) == 1:
             return s
-
         res = []
-
         max_char = s[0]
         res.append(0)
         i = 1
@@ -17,7 +15,6 @@ class Solution:
                 if s[i - 1] != max_char:
                     res.append(i)
             i += 1
-
         while len(res) > 1:
             p0 = res[0]
             p1 = res[1]
@@ -35,5 +32,4 @@ class Solution:
                     count += 1
             if p0 + count == p1:
                 res.pop(1)
-
         return s[res[0]:]

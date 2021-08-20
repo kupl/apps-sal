@@ -1,5 +1,4 @@
 import sys
-
 fin = sys.stdin
 fout = sys.stdout
 cur = fin.readline().split()

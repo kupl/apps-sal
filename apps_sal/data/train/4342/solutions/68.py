@@ -4,5 +4,4 @@ def no_space(x):
     for el in lst:
         if el:
             strin += el
-
     return strin

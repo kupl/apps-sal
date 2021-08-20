@@ -1,5 +1,5 @@
-n, d, h = list(map(int, input().split()))
-if d > 2 * h or d < h or (d == 1 and d == h and n > 2):
+(n, d, h) = list(map(int, input().split()))
+if d > 2 * h or d < h or (d == 1 and d == h and (n > 2)):
     print(-1)
 elif d != h:
     for i in range(1, h + 1):

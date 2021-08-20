@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         stack = []
         bound = [[0, 0] for x in range(0, len(A))]
@@ -27,5 +28,5 @@ class Solution:
         sum = 0
         for i in range(0, len(bound)):
             sum += A[i] * (i - bound[i][0]) * (bound[i][1] - i)
-            sum %= (10**9 + 7)
+            sum %= 10 ** 9 + 7
         return sum

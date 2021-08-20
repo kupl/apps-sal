@@ -1,6 +1,5 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 hp_list = list(map(int, input().split()))
-
 if N <= K:
     print(0)
 else:

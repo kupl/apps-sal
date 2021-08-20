@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 our = [input() for i in range(n)]
 first = -1
 for i in range(n):

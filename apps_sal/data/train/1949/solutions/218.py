@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxGoldHelper(self, visited, grid, curx, cury):
         if (curx, cury) in visited:
             return 0
@@ -6,7 +7,7 @@ class Solution:
         ret = grid[cury][curx]
         max_recur = 0
         for (nextx, nexty) in [(curx - 1, cury), (curx + 1, cury), (curx, cury - 1), (curx, cury + 1)]:
-            if nextx < 0 or nextx >= len(grid[0]) or nexty < 0 or nexty >= len(grid):
+            if nextx < 0 or nextx >= len(grid[0]) or nexty < 0 or (nexty >= len(grid)):
                 continue
             if grid[nexty][nextx] > 0:
                 max_recur = max(max_recur, self.getMaxGoldHelper(visited, grid, nextx, nexty))

@@ -4,7 +4,7 @@ for cas in range(T):
     a = [int(e) for e in input().split()]
     ok = False
     b = []
-    for i, j in enumerate(a):
+    for (i, j) in enumerate(a):
         if j % 2 == 0:
             print(1)
             print(i + 1)

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         waiting = 0
@@ -8,20 +9,12 @@ class Solution:
         for customer in customers:
             customer += waiting
             rotation += 1
-            # if customer>=4:
-            #     profit += 4*boardingCost - runningCost
-            #     waiting = customer-4
-            # else:
-            #     profit = customer*boardingCost - runningCost
-            #     waiting = 0
             onboarding = min(4, customer)
             profit += onboarding * boardingCost - runningCost
             waiting = customer - onboarding
-
             if max_profit < profit:
                 max_pprofit = profit
                 ans = rotation
-
         if 4 * boardingCost - runningCost > 0:
             steps = waiting // 4
             profit += steps * (4 * boardingCost - runningCost)
@@ -32,5 +25,4 @@ class Solution:
             if max_profit < profit:
                 max_pprofit = profit
                 ans = rotation + steps
-
         return ans if ans else -1

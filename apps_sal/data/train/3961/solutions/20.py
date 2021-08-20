@@ -1,1 +1,2 @@
-def say_hello(n): return "Hello, %s" % n
+def say_hello(n):
+    return 'Hello, %s' % n

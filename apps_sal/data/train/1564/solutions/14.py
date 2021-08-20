@@ -3,9 +3,9 @@ def bck():
     for i in range(t):
         s = input()
         l = []
-        ch = ""
+        ch = ''
         i = 0
-        while(i != len(s) - 1):
+        while i != len(s) - 1:
             ch = s[i] + s[i + 1]
             l.append(ch)
             i = i + 1

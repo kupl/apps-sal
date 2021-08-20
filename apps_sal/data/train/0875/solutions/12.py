@@ -1,12 +1,10 @@
 for i in range(int(input())):
-    n, a, b = [int(c) for c in input().split()]
+    (n, a, b) = [int(c) for c in input().split()]
     impossible = 0
     arr = [abs(int(x)) for x in input().split()]
-
-    if a in arr or -a in arr or b in arr or -b in arr:
+    if a in arr or -a in arr or b in arr or (-b in arr):
         print(1)
         continue
-
     if a == 0 or b == 0:
         print(2)
         continue
@@ -22,5 +20,4 @@ for i in range(int(input())):
         else:
             print(2)
             continue
-
     print(0)

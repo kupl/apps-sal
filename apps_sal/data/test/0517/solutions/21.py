@@ -1,5 +1,5 @@
-n, d, h = map(int, input().split())
-if d > h * 2 or (n > 2 and d == 1 and h == 1):
+(n, d, h) = map(int, input().split())
+if d > h * 2 or (n > 2 and d == 1 and (h == 1)):
     print(-1)
 else:
     ans = []

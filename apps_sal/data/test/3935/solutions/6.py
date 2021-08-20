@@ -1,17 +1,25 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -35,8 +43,6 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
     n = I()
@@ -44,17 +50,14 @@ def A():
     d = defaultdict(lambda: 0)
     for i in s:
         d[i] += 1
-    ans = [1] * d["n"]
-    d["o"] -= d["n"]
-    ans += [0] * d["o"]
+    ans = [1] * d['n']
+    d['o'] -= d['n']
+    ans += [0] * d['o']
     print(*ans)
     return
 
-# B
-
 
 def B():
-
     n = I()
     m = LIR(n)
     f = [0] * n
@@ -65,11 +68,9 @@ def B():
             f[i] += math.log(m[i][j], 10)
     F = sum(f)
     p = F / (2 * (n - 1))
-    a = [round(10**((f[i] - p) / (n - 2))) for i in range(n)]
+    a = [round(10 ** ((f[i] - p) / (n - 2))) for i in range(n)]
     print(*a)
     return
-
-# C
 
 
 def C():
@@ -78,10 +79,10 @@ def C():
     g = [0] * n
     m = 26
     f = [set() for i in range(n)]
-    f[ord(s[0]) - ord("a")].add(0)
+    f[ord(s[0]) - ord('a')].add(0)
     for i in range(1, n):
         lis = set()
-        k = ord(s[i]) - ord("a")
+        k = ord(s[i]) - ord('a')
         for j in range(k):
             lis |= f[j]
         for j in range(100):
@@ -91,12 +92,10 @@ def C():
         f[k].add(j)
     for i in g:
         if i == 0:
-            print("Mike")
+            print('Mike')
         else:
-            print("Ann")
+            print('Ann')
     return
-
-# D
 
 
 def D():
@@ -107,7 +106,7 @@ def D():
     for i in l:
         d[i] += 1
     m = [0, 0]
-    for i, j in list(d.items()):
+    for (i, j) in list(d.items()):
         if m[1] < j:
             m = [i, j]
     ans = []
@@ -118,29 +117,19 @@ def D():
     print(*ans)
     return
 
-# E
-
 
 def E():
-
     return
-
-# F
 
 
 def F():
-
     return
-
-# G
 
 
 def G():
-
     return
 
 
-# Solve
 def __starting_point():
     D()
 

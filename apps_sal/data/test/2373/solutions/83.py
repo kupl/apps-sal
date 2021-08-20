@@ -3,7 +3,6 @@ import math
 import collections
 import itertools
 input = sys.stdin.readline
-
 N = int(input())
 p = list(map(int, input().split()))
 pa = []

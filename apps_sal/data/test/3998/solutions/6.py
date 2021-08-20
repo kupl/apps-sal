@@ -1,10 +1,9 @@
-# coding=utf-8
 """Codeforces 730a solution."""
-
 from operator import itemgetter
 
 
 class CodeforcesTask730ASolution:
+
     def __init__(self):
         self.result = ''
         self.players = 0
@@ -12,10 +11,9 @@ class CodeforcesTask730ASolution:
 
     def read_input(self):
         self.players = int(input())
-        self.rating = [int(x) for x in input().split(" ")]
+        self.rating = [int(x) for x in input().split(' ')]
 
     def process_task(self):
-
         if self.players > 2:
             moves = []
             players = [[x + 1, self.rating[x]] for x in range(self.players)]
@@ -34,14 +32,11 @@ class CodeforcesTask730ASolution:
                         added = True
                         break
                 if not added:
-                    #print("edge case 1")
-                    # print(players)
                     moves.append([players[-1][0], players[0][0]])
                     players[0][1] = max(0, players[0][1] - 1)
                     players[-1][1] = max(0, players[-1][1] - 1)
                     players.sort(key=itemgetter(1), reverse=True)
                     while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                        # print(players)
                         players[0][1] = max(0, players[0][1] - 1)
                         players[1][1] = max(0, players[1][1] - 1)
                         moves.append([players[0][0], players[1][0]])
@@ -55,14 +50,11 @@ class CodeforcesTask730ASolution:
                                 added = True
                                 break
                         if not added:
-                            # print(players)
-                            #print("edge case 2")
                             moves.append([players[-1][0], players[0][0]])
                             players[0][1] = max(0, players[0][1] - 1)
                             players[-1][1] = max(0, players[-1][1] - 1)
                             players.sort(key=itemgetter(1), reverse=True)
                             while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                # print(players)
                                 players[0][1] = max(0, players[0][1] - 1)
                                 players[1][1] = max(0, players[1][1] - 1)
                                 moves.append([players[0][0], players[1][0]])
@@ -76,14 +68,11 @@ class CodeforcesTask730ASolution:
                                         added = True
                                         break
                                 if not added:
-                                    # print(players)
-                                    #print("edge case 3")
                                     moves.append([players[-1][0], players[0][0]])
                                     players[0][1] = max(0, players[0][1] - 1)
                                     players[-1][1] = max(0, players[-1][1] - 1)
                                     players.sort(key=itemgetter(1), reverse=True)
                                     while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                        # print(players)
                                         players[0][1] = max(0, players[0][1] - 1)
                                         players[1][1] = max(0, players[1][1] - 1)
                                         moves.append([players[0][0], players[1][0]])
@@ -97,14 +86,11 @@ class CodeforcesTask730ASolution:
                                                 added = True
                                                 break
                                         if not added:
-                                            # print(players)
-                                            #print("edge case 4")
                                             moves.append([players[-1][0], players[0][0]])
                                             players[0][1] = max(0, players[0][1] - 1)
                                             players[-1][1] = max(0, players[-1][1] - 1)
                                             players.sort(key=itemgetter(1), reverse=True)
                                             while players[0][1] != players[-1][1] and players[1][1] != players[-1][1]:
-                                                # print(players)
                                                 players[0][1] = max(0, players[0][1] - 1)
                                                 players[1][1] = max(0, players[1][1] - 1)
                                                 moves.append([players[0][0], players[1][0]])
@@ -118,23 +104,20 @@ class CodeforcesTask730ASolution:
                                                         added = True
                                                         break
                                                 if not added:
-                                                    # print(players)
-                                                    print("edge case 5")
-
+                                                    print('edge case 5')
             players.sort(key=itemgetter(1), reverse=True)
             print(players[-1][1])
             print(len(moves))
             for m in moves:
-                print("".join(["1" if x + 1 in m else "0" for x in range(self.players)]))
+                print(''.join(['1' if x + 1 in m else '0' for x in range(self.players)]))
+        elif self.rating[0] == self.rating[1]:
+            print(self.rating[0])
+            print('0')
         else:
-            if self.rating[0] == self.rating[1]:
-                print(self.rating[0])
-                print("0")
-            else:
-                print("0")
-                print(max(self.rating))
-                for x in range(max(self.rating)):
-                    print("11")
+            print('0')
+            print(max(self.rating))
+            for x in range(max(self.rating)):
+                print('11')
 
     def get_result(self):
         return self.result

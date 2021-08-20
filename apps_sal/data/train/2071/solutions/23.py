@@ -1,10 +1,10 @@
 from collections import Counter
-x, y, p = Counter(), Counter(), Counter()
+(x, y, p) = (Counter(), Counter(), Counter())
 for _ in range(int(input())):
-    i, j = map(int, input().split())
+    (i, j) = map(int, input().split())
     x[i] += 1
     y[j] += 1
-    p[(i, j)] += 1
+    p[i, j] += 1
 
 
 def cnt(n):

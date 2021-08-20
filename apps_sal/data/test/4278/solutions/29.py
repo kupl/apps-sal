@@ -1,7 +1,7 @@
 import collections
 N = int(input())
 S_ls = []
-cnt, rst = 0, 0
+(cnt, rst) = (0, 0)
 for i in range(N):
     S = list(input())
     S.sort()

@@ -7,11 +7,12 @@ from itertools import accumulate, permutations, combinations
 from sys import stdout
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, m = R()
-nc, mc = n, m
+(n, m) = R()
+(nc, mc) = (n, m)
 n -= 1
 m -= 1
 a = b = 0
@@ -21,7 +22,7 @@ while n:
 while m:
     m //= 7
     b += 1
-a, b = max(1, a), max(1, b)
+(a, b) = (max(1, a), max(1, b))
 if a + b > 7:
     print(0)
 else:
@@ -31,8 +32,8 @@ else:
     for i in range(10):
         bs.append(bs[-1] * 7)
     for pa in permutations(whole, a):
-        if sum(x * y for x, y in zip(bs, pa)) < nc:
+        if sum((x * y for (x, y) in zip(bs, pa))) < nc:
             for pb in permutations([x for x in whole if x not in pa], b):
-                if sum(x * y for x, y in zip(bs, pb)) < mc:
+                if sum((x * y for (x, y) in zip(bs, pb))) < mc:
                     res += 1
     print(res)

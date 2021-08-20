@@ -7,6 +7,5 @@ def calculate_years(principal, interest, tax, desired):
         gain = principal * interest
         taxed = gain * tax
         principal = principal + gain - taxed
-
     return years
-    raise NotImplementedError("TODO: calculate_years")
+    raise NotImplementedError('TODO: calculate_years')

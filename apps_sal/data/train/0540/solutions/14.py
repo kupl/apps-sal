@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     ls = [int(X) for X in input().split()]
     x = ls.count(m)
     ls2 = list(set(ls))

@@ -13,23 +13,21 @@ E問題
 →それぞれの連結成分ごとに、片方にai都市、もう片方にbi都市振り分けられるとすると
 L = [[a1, b1], [a2, b2], ... , [ak, bk]]
 とできて、(sum(A)+sum(B) == n)
-s = Σ[i = 1 to k](aiかbiのどちらかを選んで足す)　としたときに
+s = Σ[i = 1 to k](aiかbiのどちらかを選んで足す)\u3000としたときに
 もっともsがn//2に近くなるようにsを選べばよく、これはdpでO(nk)でできる
 """
 import numpy as np
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
-n, m = map(int, input().split())
+sys.setrecursionlimit(10 ** 7)
+(n, m) = map(int, input().split())
 G = [{i for i in range(n) if i != j} for j in range(n)]
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     G[a].remove(b)
     G[b].remove(a)
-
 seen = [-1] * n
 L = []
 
@@ -41,9 +39,8 @@ def is_bipartite(v, color):
         if seen[i] != -1:
             if seen[i] == color:
                 return False
-        else:
-            if not is_bipartite(i, color ^ 1):
-                return False
+        elif not is_bipartite(i, color ^ 1):
+            return False
     return True
 
 
@@ -56,8 +53,8 @@ for i in range(n):
 else:
     dp = np.zeros((len(L) + 1, n + 1), dtype=bool)
     dp[0, 0] = True
-    for i, ab in enumerate(L):
-        a, b = ab
+    for (i, ab) in enumerate(L):
+        (a, b) = ab
         dp[i + 1, a:] |= dp[i, :n + 1 - a]
         dp[i + 1, b:] |= dp[i, :n + 1 - b]
     temp = n // 2

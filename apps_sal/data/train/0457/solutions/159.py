@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         MAX = amount + 10
         dp = [MAX for i in range(amount + 1)]
@@ -9,5 +10,4 @@ class Solution:
                 prev = curr - coin
                 if prev >= 0:
                     dp[curr] = min(dp[curr], dp[prev] + 1)
-
         return dp[amount] if dp[amount] != MAX else -1

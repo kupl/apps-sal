@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def solve(N: int):
     if N % 2 == 0:
         N = N // 2
@@ -10,10 +7,8 @@ def solve(N: int):
             answer += N // div
             div *= 5
         return answer
-
     else:
         return 0
-
     return answer
 
 

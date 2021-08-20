@@ -1,9 +1,9 @@
 def main():
-    n, k = list(map(int, input().split()))
-    aa, cnt, res = [], {}, 0
+    (n, k) = list(map(int, input().split()))
+    (aa, cnt, res) = ([], {}, 0)
     scale = [10 ** i + 1 for i in range(11)]
     for w in input().split():
-        a, s = int(w), len(w)
+        (a, s) = (int(w), len(w))
         aa.append(a)
         if not a * scale[s] % k:
             res -= 1

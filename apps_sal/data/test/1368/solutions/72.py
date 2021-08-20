@@ -1,7 +1,7 @@
 from functools import reduce
 from operator import mul
 import collections
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 al = list(map(int, input().split()))
 newal = sorted(al, reverse=True)
 ave = 0
@@ -12,7 +12,6 @@ for i in range(a, b + 1):
         ml.append(i)
         ave = max(ave, avet)
 print(ave)
-
 c = collections.Counter(al)
 
 

@@ -1,6 +1,6 @@
 t = int(input())
 for case in range(t):
-    n, m = [int(x) for x in input().split(' ')]
+    (n, m) = [int(x) for x in input().split(' ')]
     a = [[int(x) for x in input().split(' ')] for i in range(n)]
     for i in range(n):
         for j in range(m):

@@ -5,7 +5,6 @@ for i in range(t):
     f = 0
     for i in range(1, n - 1):
         if sum(a[0:i]) == sum(a[i + 1:]):
-
             f = i
             break
     if sum(a[1:]) == 0:

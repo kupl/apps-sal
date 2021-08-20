@@ -1,10 +1,11 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         arr = []
         remain = 0
         for customer in customers:
             remain += customer
-            remain, cust = max(0, remain - 4), min(remain, 4)
+            (remain, cust) = (max(0, remain - 4), min(remain, 4))
             arr.append(cust)
         while remain > 0:
             arr.append(min(4, remain))

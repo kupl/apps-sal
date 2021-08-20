@@ -1,9 +1,9 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 s = [[1 for i in range(w)] for j in range(h)]
 b = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
 alist = []
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     alist.append(a)
     if a == 1:
         for j in range(h):

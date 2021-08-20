@@ -1,4 +1,4 @@
 input()
-cs = list(map(int, input().split(" ")))
+cs = list(map(int, input().split(' ')))
 cs.sort()
-print(" ".join([str(c) for c in cs]))
+print(' '.join([str(c) for c in cs]))

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, k = list(map(int, input().split()))
+    (a, k) = list(map(int, input().split()))
     if '0' in str(a):
         print(a)
     else:

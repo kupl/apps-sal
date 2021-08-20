@@ -1,8 +1,11 @@
 from itertools import *
-def f(): return map(int, input().split())
 
 
-a, b = f()
+def f():
+    return map(int, input().split())
+
+
+(a, b) = f()
 l = list(f())
 m = list(f())
 m_a = l.index(min(l))

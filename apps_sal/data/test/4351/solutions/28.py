@@ -1,7 +1,5 @@
 a = list(input())
-
-
 if str(a) == str(a[::-1]):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

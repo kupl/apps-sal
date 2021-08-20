@@ -1,10 +1,5 @@
-# cook your dish here
-# python programs by sourav
-
-
 for _ in range(int(input())):
-    l, r = map(int, input().split())
-
+    (l, r) = map(int, input().split())
     c = 0
     while l <= r:
         i = 1

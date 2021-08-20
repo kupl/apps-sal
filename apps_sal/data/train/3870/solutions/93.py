@@ -10,11 +10,10 @@ def solve(arg):
             break
         print('space found at', index)
         listIndex = listIndex + [index]
-        index += 1  # +2 because len('ll') == 2
+        index += 1
     print(listIndex)
     arg = arg.replace(' ', '')
     arg = arg[::-1]
-
     for i in listIndex:
         arg = arg[:i] + ' ' + arg[i:]
         print(i)

@@ -1,5 +1,5 @@
-M = 10**9 + 7
-a, b = list(map(int, input().split()))
+M = 10 ** 9 + 7
+(a, b) = list(map(int, input().split()))
 if b % a:
     print(0)
 else:
@@ -10,7 +10,7 @@ else:
             d.add(i)
             d.add(b // i)
     d = sorted(list(d))
-    f = d[::]
+    f = d[:]
     for i in range(len(f)):
         f[i] = pow(2, d[i] - 1, M)
         for j in range(i):

@@ -1,16 +1,15 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 fac = [1, 1]
 
 
 def prepare(n, mod):
     for i in range(2, n + 1):
-        fac.append((fac[-1] * i) % mod)
+        fac.append(fac[-1] * i % mod)
 
 
 def modcmb(n, r, mod):
     if n < 0 or r < 0 or r > n:
         return 0
-
     return fac[n] * pow(fac[r], mod - 2, mod) * pow(fac[n - r], mod - 2, mod) % mod
 
 
@@ -23,12 +22,10 @@ def g(x, y):
 
 
 def main():
-    prepare(2 * 10**6 + 10, MOD)
-    r1, c1, r2, c2 = list(map(int, input().split()))
-
+    prepare(2 * 10 ** 6 + 10, MOD)
+    (r1, c1, r2, c2) = list(map(int, input().split()))
     ans = g(r2, c2) - g(r1 - 1, c2) - g(r2, c1 - 1) + g(r1 - 1, c1 - 1)
     ans %= MOD
-
     print(ans)
 
 

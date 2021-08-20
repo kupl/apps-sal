@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
 
@@ -17,13 +18,11 @@ class Solution:
                     prev = position[idx]
                     left -= 1
             return True
-
         position.sort()
         min_gap = 1
         max_gap = position[-1] - position[0]
         while min_gap < max_gap:
             cur_gap = (min_gap + max_gap + 1) // 2
-
             prev = position[0]
             idx = 0
             left = m - 1
@@ -36,10 +35,8 @@ class Solution:
                 else:
                     prev = position[idx]
                     left -= 1
-
             if res:
                 min_gap = cur_gap
             else:
                 max_gap = cur_gap - 1
-
         return min_gap

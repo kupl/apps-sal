@@ -1,28 +1,18 @@
-
 arr = input()
-
-N, B = [int(x) for x in arr.split(' ')]
-
+(N, B) = [int(x) for x in arr.split(' ')]
 arr = input()
 A = [int(x) for x in arr.split(' ')]
-
-
 base = []
-
 for i in range(B):
     arr = input()
-    H, G = [int(x) for x in arr.split(' ')]
-
+    (H, G) = [int(x) for x in arr.split(' ')]
     base.append([H, G])
-
 base.sort()
-
 idx = sorted(range(len(A)), key=lambda k: A[k])
 A.sort()
-# print(base)
 s = 0
 k = -1
-ans = [0] * (N)
+ans = [0] * N
 for i in range(N):
     attack = A[i]
     while k < B - 1:
@@ -31,9 +21,6 @@ for i in range(N):
             k += 1
         else:
             break
-
-    # print(attack,s)
     ans[idx[i]] = s
-
 for num in ans:
     print(num, end=' ')

@@ -1,5 +1,3 @@
-#! python3
-
 def is_good(a, n, i, j):
     c = set([])
     for x in range(n):
@@ -14,14 +12,13 @@ n = int(input())
 a = []
 for _ in range(n):
     a.append([int(x) for x in input().strip().split(' ')])
-
 good = True
 for i in range(n):
     for j in range(n):
-        if a[i][j] != 1 and not is_good(a, n, i, j):
+        if a[i][j] != 1 and (not is_good(a, n, i, j)):
             good = False
             break
 if good:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

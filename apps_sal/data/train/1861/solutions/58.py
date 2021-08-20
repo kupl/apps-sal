@@ -1,4 +1,5 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         table = {}
         mark = []
@@ -6,16 +7,15 @@ class Solution:
         for i in points:
             if i[0] not in table:
                 table[i[0]] = [[i[1]], []]
-            else:
-                if i[1] not in table[i[0]][0]:
-                    for j in table[i[0]][0]:
-                        if j < i[1]:
-                            table[i[0]][1].append((j, i[1]))
-                        else:
-                            table[i[0]][1].append((i[1], j))
-                    table[i[0]][0].append(i[1])
-                    if len(table[i[0]][0]) == 2:
-                        mark.append(i[0])
+            elif i[1] not in table[i[0]][0]:
+                for j in table[i[0]][0]:
+                    if j < i[1]:
+                        table[i[0]][1].append((j, i[1]))
+                    else:
+                        table[i[0]][1].append((i[1], j))
+                table[i[0]][0].append(i[1])
+                if len(table[i[0]][0]) == 2:
+                    mark.append(i[0])
         g = {}
         if len(mark) < 2:
             return 0

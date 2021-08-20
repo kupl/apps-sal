@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-l1, r1, l2, r2, k = read()
+(l1, r1, l2, r2, k) = read()
 R = min(r1, r2)
 L = max(l1, l2)
 ans = max(R - L + 1, 0)

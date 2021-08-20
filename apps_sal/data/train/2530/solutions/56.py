@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         dct = {}
         count = 0

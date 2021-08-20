@@ -1,4 +1,4 @@
-n, i0, i1 = list(map(int, input().split()))
+(n, i0, i1) = list(map(int, input().split()))
 i0 -= 1
 
 

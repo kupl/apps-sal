@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 import sys
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 input = sys.stdin.readline
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 MAX_N = 2000
 
 
@@ -19,5 +18,5 @@ def single_mod_nCr(n, r):
     return ret
 
 
-n, m = [int(item) for item in input().split()]
+(n, m) = [int(item) for item in input().split()]
 print(single_mod_nCr(n + m * 2 - 1, m * 2))

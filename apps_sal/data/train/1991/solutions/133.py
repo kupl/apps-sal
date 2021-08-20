@@ -1,6 +1,7 @@
 class Solution:
+
     def countRoutes(self, a: List[int], start: int, finish: int, fuel: int) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         ans = 0
         start = a[start]
         finish = a[finish]
@@ -17,5 +18,4 @@ class Solution:
                     continue
                 ans += solve(x, f - abs(x - c))
             return ans % mod
-
         return solve(start, fuel)

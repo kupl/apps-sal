@@ -7,7 +7,6 @@ for _ in range(N):
         if lst[i] == 0:
             ans += 1
             lst[i] += 1
-
     if sum(lst) == 0:
         ans += 1
     print(ans)

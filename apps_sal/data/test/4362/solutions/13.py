@@ -1,8 +1,6 @@
 import re
-
 a = input()
-a = re.match(r'[a-z]', a)
-
+a = re.match('[a-z]', a)
 if a is None:
     print('A')
 else:

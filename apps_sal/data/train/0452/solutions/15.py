@@ -1,14 +1,13 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         jc = len(jobDifficulty)
         if d > jc:
             return -1
         dp = [[-1 for i in range(jc + 1)] for i in range(d + 1)]
         dp[1][1] = jobDifficulty[0]
-
         for i in range(2, jc + 1):
             dp[1][i] = max(dp[1][i - 1], jobDifficulty[i - 1])
-
         for i in range(2, d + 1):
             for j in range(i, jc + 1):
                 dp[i][j] = dp[i - 1][j - 1] + jobDifficulty[j - 1]

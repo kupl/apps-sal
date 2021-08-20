@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         ans = 0
         total = 0
@@ -9,7 +10,6 @@ class Solution:
                 total += arr[i]
             if float(total / k) >= threshold:
                 ans += 1
-
             i = k
             while i < len(arr):
                 total += arr[i] - arr[i - k]

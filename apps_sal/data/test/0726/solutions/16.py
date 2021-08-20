@@ -1,4 +1,4 @@
-n, d = map(int, input().strip().split())
+(n, d) = map(int, input().strip().split())
 city = list(map(int, input().strip().split()))
 count = 2
 for i in range(1, n):

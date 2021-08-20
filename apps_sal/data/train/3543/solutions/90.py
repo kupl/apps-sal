@@ -5,8 +5,8 @@ def increment_string(string):
     if string:
         num = []
         word = ''
-        for i, s in enumerate(string[::-1]):
-            if re.findall('\d', s):
+        for (i, s) in enumerate(string[::-1]):
+            if re.findall('\\d', s):
                 num.insert(0, s)
                 i = i + 1
             else:

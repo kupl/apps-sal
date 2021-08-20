@@ -4,7 +4,6 @@ def mango(quantity, price):
     while buy < quantity:
         buy += 3
         bill += price * 2
-
     if buy == quantity:
         return bill
     elif buy - quantity == 1:

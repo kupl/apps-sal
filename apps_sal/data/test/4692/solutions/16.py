@@ -1,2 +1,2 @@
 N = int(input())
-print((24 - N + 24))
+print(24 - N + 24)

@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-
-
 def main():
-    x, t = list(map(int, input().split()))
+    (x, t) = list(map(int, input().split()))
     markers = [1] * (x - 1)
     for c in range(t):
         r = [int(n) for n in input().split()]
@@ -18,11 +15,11 @@ def main():
             continue
         if c:
             max_num += c
-            min_num += ((c + 1) >> 1)
+            min_num += c + 1 >> 1
         c = 0
     if c:
         max_num += c
-        min_num += ((c + 1) >> 1)
+        min_num += c + 1 >> 1
     print(min_num, max_num)
 
 

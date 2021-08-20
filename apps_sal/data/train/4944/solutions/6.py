@@ -3,9 +3,10 @@ import operator
 
 
 class Vector:
+
     def __init__(self, *args):
-        self.x, self.y, self.z = self.args = tuple(args[0] if len(args) == 1 else args)
-        self.magnitude = math.sqrt(sum(i ** 2 for i in self.args))
+        (self.x, self.y, self.z) = self.args = tuple(args[0] if len(args) == 1 else args)
+        self.magnitude = math.sqrt(sum((i ** 2 for i in self.args)))
 
     def __str__(self):
         return '<{}>'.format(', '.join(map(str, self.args)))
@@ -26,8 +27,4 @@ class Vector:
         return self.args
 
     def cross(self, other):
-        return Vector(
-            self.y * other.z - self.z * other.y,
-            self.z * other.x - self.x * other.z,
-            self.x * other.y - self.y * other.x,
-        )
+        return Vector(self.y * other.z - self.z * other.y, self.z * other.x - self.x * other.z, self.x * other.y - self.y * other.x)

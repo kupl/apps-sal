@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    c, m, x = map(int, input().split())
+    (c, m, x) = map(int, input().split())
     if min(c, m) <= x:
         print(min(c, m))
     else:

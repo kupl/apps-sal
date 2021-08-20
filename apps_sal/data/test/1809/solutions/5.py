@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 w = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ans = list()
@@ -13,7 +13,6 @@ for i in range(len(b)):
     for j in range(len(ans)):
         if ans[j] == b[i]:
             top = ans[j]
-
             for k in range(j, 0, -1):
                 ans[k] = ans[k - 1]
                 anss += w[ans[k - 1] - 1]

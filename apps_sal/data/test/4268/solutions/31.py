@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.special import comb
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 x = []
 total = 0
 for i in range(n):

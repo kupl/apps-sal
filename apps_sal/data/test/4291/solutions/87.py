@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 s = input()
 sl = [0]
 for i in range(1, n):
@@ -6,7 +6,6 @@ for i in range(1, n):
         sl.append(sl[i - 1] + 1)
     else:
         sl.append(sl[i - 1])
-
 for _ in range(q):
-    l, r = list(map(int, input().split()))
-    print((sl[r - 1] - sl[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(sl[r - 1] - sl[l - 1])

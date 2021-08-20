@@ -1,10 +1,10 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 p = [0]
 q = [w]
 r = [0]
 s = [h]
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         p.append(x)
     elif a == 2:

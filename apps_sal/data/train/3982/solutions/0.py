@@ -1,12 +1,12 @@
 def stat(strg):
 
     def get_time(s):
-        '''Returns the time, in seconds, represented by s.'''
-        hh, mm, ss = [int(v) for v in s.split('|')]
+        """Returns the time, in seconds, represented by s."""
+        (hh, mm, ss) = [int(v) for v in s.split('|')]
         return hh * 3600 + mm * 60 + ss
 
     def format_time(time):
-        '''Returns the given time as a string in the form "hh|mm|ss".'''
+        """Returns the given time as a string in the form "hh|mm|ss"."""
         hh = time // 3600
         mm = time // 60 % 60
         ss = time % 60
@@ -20,9 +20,7 @@ def stat(strg):
 
     def get_median(times):
         middle = len(times) >> 1
-        return (times[middle] if len(times) & 1 else
-                (times[middle - 1] + times[middle]) // 2)
-
+        return times[middle] if len(times) & 1 else (times[middle - 1] + times[middle]) // 2
     if strg == '':
         return strg
     times = [get_time(s) for s in strg.split(', ')]

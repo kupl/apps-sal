@@ -6,5 +6,4 @@ for i in range(len(s)):
         a = min(a, i)
     if s[i] == 'Z':
         z = max(z, i)
-
-print((z - a + 1))
+print(z - a + 1)

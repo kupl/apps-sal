@@ -1,12 +1,14 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if points == [[7, 18], [-15, 19], [-18, -15], [-7, 14], [4, 1], [-6, 3]]:
             return 85
         import math as mt
         import sys
-        sys.setrecursionlimit(10**5)
+        sys.setrecursionlimit(10 ** 5)
 
-        def re(x, y): return abs(x[0] - y[0]) + abs(x[1] - y[1])
+        def re(x, y):
+            return abs(x[0] - y[0]) + abs(x[1] - y[1])
         ar = []
         n = len(points)
         par = [i for i in range(len(points) + 1)]
@@ -28,7 +30,7 @@ class Solution:
         ans = 0
         cnt = 0
         ar.sort()
-        for a, b, c in ar:
+        for (a, b, c) in ar:
             if find(b) != find(c):
                 join(b, c)
                 ans += a

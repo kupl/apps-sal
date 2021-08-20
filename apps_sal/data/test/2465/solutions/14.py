@@ -3,7 +3,7 @@ for item in range(n):
     a = int(input())
     for i in range(1, 998244353):
         p = 1
-        if a % (180 / i) == 0 and (180 / i) * (i - 2) >= a:
+        if a % (180 / i) == 0 and 180 / i * (i - 2) >= a:
             print(i)
             p = 0
             break

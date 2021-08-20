@@ -1,7 +1,7 @@
 N = int(input())
 Dic = dict()
 for i in range(N):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     if B not in Dic:
         Dic[B] = A
     else:

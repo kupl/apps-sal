@@ -1,10 +1,11 @@
 class Solution:
+
     def maxChunksToSorted(self, a):
         """
         :type arr: List[int]
         :rtype: int
         """
-        max_seen, total_seen, res_count = 0, 0, 0
+        (max_seen, total_seen, res_count) = (0, 0, 0)
         for num in a:
             max_seen = max(max_seen, num)
             total_seen += 1

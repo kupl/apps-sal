@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 cnt = 0
 for X in range(2, 2 * N + 1):
     Y = X - K

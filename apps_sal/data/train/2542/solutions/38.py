@@ -1,10 +1,9 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         if not A or len(A) < 2:
             return True
-
         self.direction = None
-
         return self.isMonotonicHelper(A, 0, len(A) - 1)
 
     def isMonotonicHelper(self, A, start, end):

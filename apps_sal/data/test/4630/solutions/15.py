@@ -3,14 +3,10 @@ def solve():
     a = list(map(int, input().split()))
     for i in range(n):
         a[i] -= 1
-
     ans = dict()
-
     for i in range(n):
-        # st = i + 1
         if i not in ans:
             p = []
-
             j = i
             p.append(j)
             ca = 0
@@ -22,9 +18,8 @@ def solve():
                     for x in p:
                         ans[x] = ca
                     break
-
     for i in range(n):
-        print(ans[i], end=" ")
+        print(ans[i], end=' ')
     print()
 
 

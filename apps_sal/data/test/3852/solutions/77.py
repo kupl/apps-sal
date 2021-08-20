@@ -2,7 +2,7 @@ n = int(input())
 l = list(map(int, input().split()))
 m = min(l)
 ma = max(l)
-print((2 * n - 1))
+print(2 * n - 1)
 if m < 0 and abs(m) > abs(ma):
     idx = l.index(m) + 1
     for i in range(1, n + 1):

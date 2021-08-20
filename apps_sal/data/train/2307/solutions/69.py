@@ -1,11 +1,10 @@
 import sys
 input = sys.stdin.readline
-
 mod = 1000000007
 
 
 def main():
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     X = list(map(int, input().split()))
     useb = b // a
     ans = 0
@@ -15,7 +14,6 @@ def main():
             ans += b
         else:
             ans += d * a
-
     print(ans)
 
 

@@ -4,6 +4,7 @@ qs = [input().split() for i in range(Q)]
 
 
 class Heapq:
+
     def __init__(self, arr, desc=False):
         if desc:
             arr = [-a for a in arr]
@@ -26,19 +27,18 @@ class Heapq:
 
 lq = Heapq([], True)
 rq = Heapq([], False)
-
 ofs = 0
 for q in qs:
     if q[0] == '2':
         print(lq.top(), ofs)
         continue
-    _, a, b, = q
-    a, b = int(a), int(b)
+    (_, a, b) = q
+    (a, b) = (int(a), int(b))
     ofs += b
     lq.push(a)
     rq.push(a)
     if lq.top() > rq.top():
-        l, r = lq.pop(), rq.pop()
+        (l, r) = (lq.pop(), rq.pop())
         ofs += abs(l - r)
         lq.push(r)
         rq.push(l)

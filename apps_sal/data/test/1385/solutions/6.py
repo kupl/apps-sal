@@ -1,22 +1,20 @@
 cmd = input()
 lexems = []
-
-tmp = ""
+tmp = ''
 bracket = False
 word = False
-
 for i in range(len(cmd)):
-    if cmd[i] == " ":
+    if cmd[i] == ' ':
         if bracket:
             tmp += cmd[i]
         elif word:
             lexems.append(tmp)
-            tmp = ""
+            tmp = ''
             word = False
     elif cmd[i] == '"':
         if bracket:
             lexems.append(tmp)
-            tmp = ""
+            tmp = ''
             word = False
             bracket = False
         else:
@@ -25,8 +23,7 @@ for i in range(len(cmd)):
     else:
         tmp += cmd[i]
         word = True
-if tmp != "":
+if tmp != '':
     lexems.append(tmp)
-
 for i in lexems:
-    print("<", i, ">", sep="")
+    print('<', i, '>', sep='')

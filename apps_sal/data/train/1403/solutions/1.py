@@ -1,5 +1,6 @@
 t = int(input())
 for i in range(t):
+
     def numDecodings(A):
         if A[0] == '0':
             return 0
@@ -16,7 +17,6 @@ for i in range(t):
                 d[i + 1] = d[i] + d[i - 1]
             else:
                 d[i + 1] = d[i]
-
         return d[len(A)] % 1000000007
     digits = input()
     print(numDecodings(digits))

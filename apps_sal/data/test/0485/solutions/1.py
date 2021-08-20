@@ -1,7 +1,7 @@
 n = int(input())
 l = [list(map(int, input().split())) for _ in range(4 * n + 1)]
-x, y = list(map(list, list(zip(*l))))
-hx, lx, hy, ly = max(x), min(x), max(y), min(y)
+(x, y) = list(map(list, list(zip(*l))))
+(hx, lx, hy, ly) = (max(x), min(x), max(y), min(y))
 
 
 def find(w, i):

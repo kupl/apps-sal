@@ -6,7 +6,7 @@ def countWays(n):
     B[0] = 0
     B[1] = 1
     for i in range(2, n + 1):
-        if (i % 2):
+        if i % 2:
             B[i] = (A[i - 1] + B[i - 2]) % 12345787
             A[i] = (A[i - 2] + 2 * B[i] + 2 * B[i - 1]) % 12345787
         else:

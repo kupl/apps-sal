@@ -1,10 +1,10 @@
 def main():
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     ab = [list(map(int, input().split())) for _ in range(n - 1)]
     tree = [list() for _ in range(n)]
     score = [0] * n
-    for a, b in ab:
-        a, b = a - 1, b - 1
+    for (a, b) in ab:
+        (a, b) = (a - 1, b - 1)
         tree[a].append(b)
         tree[b].append(a)
     e = [0]
@@ -14,7 +14,7 @@ def main():
             tree[j].remove(i)
             e.append(j)
     px = [list(map(int, input().split())) for _ in range(q)]
-    for p, x in px:
+    for (p, x) in px:
         p -= 1
         score[p] += x
     add(tree, score)

@@ -1,4 +1,3 @@
-
 def solve(n, p):
     cnt = 2 * n + p
     for i in range(1, n + 1):
@@ -12,7 +11,7 @@ def solve(n, p):
 def main():
     t = int(input())
     for _ in range(t):
-        n, p = map(int, input().split())
+        (n, p) = map(int, input().split())
         solve(n, p)
 
 

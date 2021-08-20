@@ -1,1 +1,2 @@
-def automorphic(n): return ['Not!!', 'Automorphic'][str(n * n).endswith(str(n))]
+def automorphic(n):
+    return ['Not!!', 'Automorphic'][str(n * n).endswith(str(n))]

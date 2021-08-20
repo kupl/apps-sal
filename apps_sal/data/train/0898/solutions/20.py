@@ -1,5 +1,5 @@
 for _ in range(0, int(input())):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     l = [9, 99, 999, 9999, 99999, 999999, 9999999, 99999999]
     t = 0
     if 9 <= n < 99:

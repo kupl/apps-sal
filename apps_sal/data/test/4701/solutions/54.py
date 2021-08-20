@@ -1,4 +1,3 @@
-# 76B
 n = int(input())
 k = int(input())
 f = 1

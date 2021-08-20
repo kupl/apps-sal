@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 powk = [k ** i for i in range(1, 60)]
 a = list(map(int, input().split()))
 s = 0

@@ -1,5 +1,5 @@
 def elevator(left, right, call):
-    closest = "left"
+    closest = 'left'
     if abs(right - call) <= abs(left - call):
-        closest = "right"
+        closest = 'right'
     return closest

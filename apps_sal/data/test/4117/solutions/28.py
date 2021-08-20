@@ -1,6 +1,5 @@
 N = int(input())
 L = list(map(int, input().split()))
-
 count = 0
 for i in range(N - 2):
     a = L[i]
@@ -12,7 +11,6 @@ for i in range(N - 2):
             c = L[i + j + k + 2]
             if a == c or b == c:
                 continue
-            if a + b > c and b + c > a and c + a > b:
+            if a + b > c and b + c > a and (c + a > b):
                 count += 1
-
 print(count)

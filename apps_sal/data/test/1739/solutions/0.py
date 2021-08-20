@@ -1,9 +1,8 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = [int(x) for x in input().split()]
 
 
 def solve(a, s):
-    #print (a)
     a.append((-1, 0))
     a.sort()
     b = []
@@ -19,7 +18,6 @@ def solve(a, s):
             t //= x
             cnt += 1
         b[i] = (b[i][0] + cnt, t)
-    #print (b)
     z = min(min(b)[0], s)
     if z == 0:
         return 0
@@ -27,4 +25,4 @@ def solve(a, s):
 
 
 s = sum(a)
-print(pow(x, solve([(s - x, 1) for x in a], s), 10**9 + 7))
+print(pow(x, solve([(s - x, 1) for x in a], s), 10 ** 9 + 7))

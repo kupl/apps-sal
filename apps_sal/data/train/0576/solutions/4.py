@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     stringa = input()
@@ -7,4 +6,4 @@ for _ in range(t):
     for char in stringa:
         if char == 'a':
             a += 1
-    print(2**(len(stringa) - a) * (2**a - 1))
+    print(2 ** (len(stringa) - a) * (2 ** a - 1))

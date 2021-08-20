@@ -1,16 +1,9 @@
 import sys
 sys.setrecursionlimit(8001)
 s = input()
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 S = list(map(len, s.split('T')))
 N = len(S)
-# if N == 1:
-#   print(['No', 'Yes'][X == S[0] and Y == 0])
-#   return
-# elif N == 2:
-#   print(['No', 'Yes'][X == S[0] and abs(Y) == S[1]])
-#   return
-
 x = S[0]
 y = 0
 xmoves = S[2::2]
@@ -33,7 +26,7 @@ def process(a, l, i, v, d, memo, r):
         ret = True
     else:
         ret = process(a, l, i + 1, v + a[i], d, memo, r - a[i]) or process(a, l, i + 1, v - a[i], d, memo, r - a[i])
-    memo[(i, v)] = ret
+    memo[i, v] = ret
     return ret
 
 

@@ -7,17 +7,12 @@ Language: Python 3.3.4
 
 
 def main():
-    res_str = ["Malvika", "Akshat"]
-    n, m = read()
+    res_str = ['Malvika', 'Akshat']
+    (n, m) = read()
     print(res_str[min(n, m) % 2])
-
-# NON-SOLUTION STUFF BELOW
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -27,15 +22,19 @@ def read(mode=2):
         return map(int, inputs.split())
 
 
-def read_str(): return read(0)
-def read_int(): return read(1)
+def read_str():
+    return read(0)
 
 
-def write(s="\n"):
+def read_int():
+    return read(1)
+
+
+def write(s='\n'):
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 main()

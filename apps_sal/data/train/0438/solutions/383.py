@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         groups = defaultdict(set)
@@ -28,7 +29,6 @@ class Solution:
             sizes[check] -= 1
             if sizes[check] == 0:
                 sizes.pop(check)
-
         arr = [i - 1 for i in arr]
         step = 0
         ans = -1

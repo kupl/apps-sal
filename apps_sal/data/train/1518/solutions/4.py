@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 import math
 T = int(input())
@@ -12,7 +11,7 @@ def is_prime(x):
 
 
 for t in range(T):
-    row = list(int(x) for x in input().split())
+    row = list((int(x) for x in input().split()))
     N = row[0]
     K = row[1]
     if K == 1:

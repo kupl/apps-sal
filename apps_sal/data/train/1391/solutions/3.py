@@ -1,11 +1,10 @@
-# cook your dish here
 def Max_cust(T):
     for i in range(T):
         count = 0
         cus_prefer = {}
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         for j in range(n):
-            s, f, p = map(int, input().split())
+            (s, f, p) = map(int, input().split())
             if p not in cus_prefer:
                 cus_prefer[p] = [(s, f)]
             else:

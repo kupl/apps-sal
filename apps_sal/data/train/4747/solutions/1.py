@@ -1,5 +1,5 @@
 def repeat_str(a, b):
-    '''crazy
+    """crazy
 i am a crazy
 i am a crazy
 i am a crazy
@@ -3153,7 +3153,6 @@ i am a crazy
 i am a crazy
 i am a crazy
 i am a crazy
-i am a crazy'''
+i am a crazy"""
     return b * a
-
     return

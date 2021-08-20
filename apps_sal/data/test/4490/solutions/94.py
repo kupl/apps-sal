@@ -1,5 +1,4 @@
 s = input()
-
 if s == 'A':
     print('T')
 elif s == 'T':

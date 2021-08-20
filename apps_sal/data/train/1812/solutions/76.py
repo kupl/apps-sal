@@ -30,7 +30,3 @@ class MajorityChecker:
             else:
                 high = mid - 1
         return low
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

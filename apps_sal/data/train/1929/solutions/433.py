@@ -2,12 +2,14 @@ from collections import deque
 
 
 class Node:
+
     def __init__(self):
         self.isLast = False
         self.child = {}
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node()
 
@@ -17,7 +19,6 @@ class Trie:
         if ind == len(word):
             node.isLast = True
         else:
-            # print(word)
             if word[ind] not in node.child:
                 node.child[word[ind]] = Node()
             self.insert(ind + 1, word, node.child[word[ind]])
@@ -25,13 +26,10 @@ class Trie:
     def isPrefix(self, ind, word, node=None):
         if node == None:
             node = self.root
-
         if node.isLast:
             return True
-
         if ind == len(word):
             return False
-
         if word[ind] in node.child:
             return self.isPrefix(ind + 1, word, node.child[word[ind]])
         return False
@@ -43,14 +41,8 @@ class StreamChecker:
         self.trie = Trie()
         for word in words:
             self.trie.insert(0, word[::-1])
-
         self.stream = deque()
 
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
         return self.trie.isPrefix(0, self.stream)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

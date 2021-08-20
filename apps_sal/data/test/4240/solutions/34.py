@@ -1,7 +1,6 @@
 S = input()
 T = input()
 flag = False
-
 for i in range(len(S)):
     if flag:
         break

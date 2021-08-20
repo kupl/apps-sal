@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 ans = []
 L = [a] * b
 x = a * b - n

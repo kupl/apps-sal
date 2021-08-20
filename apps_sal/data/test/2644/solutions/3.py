@@ -1,6 +1,5 @@
 import sys
 from collections import defaultdict
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -45,8 +44,7 @@ def resolve():
     if len(res) != n - 1:
         print(-1)
         return
-
-    print(*res, sep="\n")
+    print(*res, sep='\n')
 
 
 def __starting_point():

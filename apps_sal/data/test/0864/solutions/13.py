@@ -5,7 +5,7 @@ def check(x):
     return ans >= n
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 cnt = [0] * 101
 for elem in a:

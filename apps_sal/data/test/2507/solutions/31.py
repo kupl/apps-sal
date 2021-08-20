@@ -2,14 +2,13 @@ def main():
     import numpy as np
     import sys
     input = sys.stdin.readline
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = np.sort(list(map(int, input().split())))
     F = np.sort(list(map(int, input().split())))[::-1]
     mul = A * F
     if K >= np.sum(A) * N:
         print(0)
         return
-
     ma = A[-1] * F[0]
     mi = 0
     while ma != mi:

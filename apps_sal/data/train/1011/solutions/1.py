@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 
 
 def do():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     upper = 0
     lower = 0
@@ -14,9 +13,9 @@ def do():
             lower += 1
     if lower > k and upper <= k:
         print('chef')
-    elif(upper > k and lower <= k):
+    elif upper > k and lower <= k:
         print('brother')
-    elif(upper <= k and lower <= k):
+    elif upper <= k and lower <= k:
         print('both')
     else:
         print('none')

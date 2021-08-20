@@ -15,15 +15,14 @@ for i in range(n):
     lr.append(0)
 cnt = 0
 for i in range(maxl):
-    if(dp[i][0] != -1):
+    if dp[i][0] != -1:
         ll[dp[i][0]] = 1
         lr[dp[i][1]] = 1
         cnt += 1
 ans = 0
-
 for i in range(n):
-    if(lr[i] == 1):
+    if lr[i] == 1:
         cnt -= 1
-    if(ll[i] == 1):
+    if ll[i] == 1:
         ans += cnt
 print(ans)

@@ -1,5 +1,5 @@
 def main():
-    X, Y = list(map(int, input().split()))
+    (X, Y) = list(map(int, input().split()))
     ans = 1
     cnt = X
     for _ in range(300):

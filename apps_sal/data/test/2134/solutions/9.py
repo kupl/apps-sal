@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -10,7 +9,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 def main():
@@ -31,13 +30,12 @@ def main():
     for i in list(f.keys()):
         if f[i] > 1:
             for j in range(n):
-                if i | a[j] == i and not used[j]:
+                if i | a[j] == i and (not used[j]):
                     used[j] = 1
     for i in range(n):
         if used[i]:
             ans += b[i]
     print(ans)
-
     return
 
 

@@ -1,5 +1,5 @@
-N, X = map(int, input().split())
-minN = 10**5
+(N, X) = map(int, input().split())
+minN = 10 ** 5
 for i in range(N):
     crt = int(input())
     if minN > crt:

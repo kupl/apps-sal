@@ -1,7 +1,7 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         from functools import lru_cache
-
         n = len(arr)
 
         @lru_cache(maxsize=None)
@@ -18,5 +18,4 @@ class Solution:
                 else:
                     break
             return res
-
-        return max(f(_) for _ in range(n))
+        return max((f(_) for _ in range(n)))

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         if 1 not in nums:
             return 0
@@ -7,10 +8,10 @@ class Solution:
         new = []
         i = 0
         n = len(nums)
-        while(i < n):
+        while i < n:
             if nums[i] == 1:
                 cnt = 0
-                while(i < n and nums[i] == 1):
+                while i < n and nums[i] == 1:
                     cnt += 1
                     i += 1
                 new.append(cnt)

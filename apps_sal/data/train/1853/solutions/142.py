@@ -1,7 +1,8 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         g = {}
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             if u in g:
                 g[u].append((v, w))
             else:
@@ -15,12 +16,12 @@ class Solution:
             minheap = [(0, city)]
             dist = {}
             while minheap:
-                currw, u = heapq.heappop(minheap)
+                (currw, u) = heapq.heappop(minheap)
                 if u != city:
                     dist[u] = currw
                 if u not in g:
                     continue
-                for v, w in g[u]:
+                for (v, w) in g[u]:
                     if v in dist:
                         continue
                     if currw + w <= distanceThreshold:

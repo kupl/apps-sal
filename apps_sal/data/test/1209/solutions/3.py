@@ -7,7 +7,7 @@ for i in a:
     cur += 1
     if '.' in i:
         curi = i.split('.')
-        if curi[1].count("0") == len(curi[1]):
+        if curi[1].count('0') == len(curi[1]):
             ans.append(int(curi[0]))
             continue
         ch[cur] = True

@@ -9,4 +9,4 @@ else:
         if l1[i] >= 0:
             l1[i] = -1 * l1[i] - 1
     l1[l1.index(min(l1))] = l1[l1.index(min(l1))] * -1 - 1
-print(' '.join(str(x) for x in l1))
+print(' '.join((str(x) for x in l1)))

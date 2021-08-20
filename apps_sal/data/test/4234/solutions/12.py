@@ -11,7 +11,6 @@ for q in range(1, n):
             count += 1
     else:
         ans += string[q]
-
 if len(ans) % 2 != 0:
     print(count + 1)
     print(ans[:-1])

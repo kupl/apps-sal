@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPerformance(self, n, speed, efficiency, k):
         teams = sorted(zip(efficiency, speed), reverse=True)
         pq = []

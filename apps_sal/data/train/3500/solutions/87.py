@@ -3,4 +3,4 @@ def remove_exclamation_marks(s):
     for i in s:
         if i != '!':
             s1.append(i)
-    return "".join(s1)
+    return ''.join(s1)

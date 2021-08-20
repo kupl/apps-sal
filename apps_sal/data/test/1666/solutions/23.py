@@ -1,4 +1,4 @@
-x, y, a, b = list(map(int, input().split()))
+(x, y, a, b) = list(map(int, input().split()))
 results = []
 for i in range(a, x + 1):
     for j in range(b, y + 1):
@@ -7,5 +7,5 @@ for i in range(a, x + 1):
         results.append((i, j))
 print(len(results))
 results.sort()
-for a, b in results:
+for (a, b) in results:
     print(a, b)

@@ -1,4 +1,4 @@
-n, m, k = [int(s) for s in input().split()]
+(n, m, k) = [int(s) for s in input().split()]
 a = [int(s) for s in input().split()]
 ans = 0
 boxi = 0
@@ -14,5 +14,4 @@ for i in range(n - 1, -1, -1):
             rem_size = k
     rem_size -= a[i]
     ans += 1
-
 print(ans)

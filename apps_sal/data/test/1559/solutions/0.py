@@ -17,5 +17,5 @@ else:
             print(temp * per)
         else:
             temp = '1' + '0' * (l - 1)
-            temp *= (per + 1)
+            temp *= per + 1
             print(temp)

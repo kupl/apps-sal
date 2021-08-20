@@ -1,5 +1,5 @@
 class Solution:
-    '''
+    """
     DP formula:
     calc(d, target) = calc(d-1, target - 1) + calc(d-1, target - 2) + ... + calc(d-1, target - f)
     example:
@@ -23,18 +23,15 @@ class Solution:
                 ways to get 3 from first dice and getting 3 from second dice +
                 ways to get 4 from first dice and getting 2 from second dice +
                 ways to get 5 from first dice and getting 1 from second dice
-    '''
+    """
 
     def numRollsToTarget(self, d, f, target):
         mod_v = 10 ** 9 + 7
         dp = [[0] * (target + 1) for _ in range(d + 1)]
-
         for i in range(1, f + 1):
             if i > target:
                 break
-            # print(i)
             dp[1][i] = 1
-        # print(dp)
         for i in range(2, d + 1):
             for j in range(i, target + 1):
                 for k in range(1, f + 1):
@@ -43,5 +40,4 @@ class Solution:
                         dp[i][j] %= mod_v
                     else:
                         break
-        # print(dp)
         return dp[d][target]

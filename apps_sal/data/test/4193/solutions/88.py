@@ -19,4 +19,4 @@ if a[0][0] and a[1][1] and a[2][2]:
     bingo = True
 if a[0][2] and a[1][1] and a[2][0]:
     bingo = True
-print(('Yes' if bingo else 'No'))
+print('Yes' if bingo else 'No')

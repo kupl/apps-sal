@@ -8,19 +8,17 @@ for string in strings:
     f = True
     answers = []
     while i < n - 2:
-        if string[i:i + 3] == "one":
+        if string[i:i + 3] == 'one':
             answers.append(i + 2)
             i += 3
             continue
-        else:
-            if i < n - 4 and string[i:i + 5] == "twone":
-                answers.append(i + 3)
-                i += 5
-                continue
-            else:
-                if string[i:i + 3] == "two":
-                    answers.append(i + 2)
-                    i += 3
-                    continue
+        elif i < n - 4 and string[i:i + 5] == 'twone':
+            answers.append(i + 3)
+            i += 5
+            continue
+        elif string[i:i + 3] == 'two':
+            answers.append(i + 2)
+            i += 3
+            continue
         i += 1
     print(*answers)

@@ -1,9 +1,8 @@
 def string_clean(s):
-    new = ""
+    new = ''
     for char in s:
         if char.isdigit():
-            new += ""
+            new += ''
         else:
             new += char
-
     return new

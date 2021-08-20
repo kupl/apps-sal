@@ -7,11 +7,10 @@ def isValid(f):
         return False
     elif 5 in f and 6 not in f:
         return False
-    elif 5 in f and 6 in f and 7 in f:
+    elif 5 in f and 6 in f and (7 in f):
         return True
-    elif 5 in f and 6 in f and 8 in f:
+    elif 5 in f and 6 in f and (8 in f):
         return True
-
     elif 7 in f or 8 in f:
         return True
     else:

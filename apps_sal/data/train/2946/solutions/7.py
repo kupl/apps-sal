@@ -1,6 +1,6 @@
 def reverse_sentence(sentence):
     words = sentence.split()
-    s = ""
+    s = ''
     for w in words:
-        s = s + w[::-1] + " "
+        s = s + w[::-1] + ' '
     return s[:-1]

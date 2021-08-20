@@ -14,12 +14,11 @@ def binary_search(arr, num):
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     a_books = list(map(int, input().split()))
     b_books = list(map(int, input().split()))
     a_cum_sum = [0] * (n + 1)
     b_cum_sum = [0] * (m + 1)
-
     for i in range(n):
         a_cum_sum[i + 1] = a_cum_sum[i] + a_books[i]
     for i in range(m):

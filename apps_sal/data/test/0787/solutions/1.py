@@ -4,7 +4,7 @@ if len(set(q)) >= N:
     print('YES')
     chars = list(set(q))
     start = False
-    for index, c in enumerate(q):
+    for (index, c) in enumerate(q):
         if c in chars:
             if start is not False:
                 print(q[start:index])
@@ -15,6 +15,5 @@ if len(set(q)) >= N:
             start = index
     else:
         print(q[start:])
-
 else:
     print('NO')

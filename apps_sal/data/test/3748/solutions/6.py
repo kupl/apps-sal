@@ -1,4 +1,4 @@
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 G = [list(input()) for i in range(H)]
 G_t = [list(x) for x in list(zip(*G))]
 
@@ -29,24 +29,22 @@ def Check(G, H, W):
                         Paired_y[y1] = True
                         Paired_y[y2] = True
                         break
-            else:
-                if Paired_x.count(False) == 0:
-                    Paired_y[y1] = True
-                    Paired_y[y2] = True
-                    break
+            elif Paired_x.count(False) == 0:
+                Paired_y[y1] = True
+                Paired_y[y2] = True
+                break
     if H % 2 == 1:
         if Paired_y.count(False) == 1:
             return True
         else:
             return False
+    elif Paired_y.count(False) == 0:
+        return True
     else:
-        if Paired_y.count(False) == 0:
-            return True
-        else:
-            return False
+        return False
 
 
 if Check(G, H, W) and Check(G_t, W, H):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

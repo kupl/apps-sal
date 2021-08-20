@@ -3,13 +3,12 @@ from numba import jit
 
 @jit
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = list(map(int, input().split()))
     c = list(map(int, input().split()))
-
-    ans = -10**18
+    ans = -10 ** 18
     for i in range(n):
-        start, count = i, 1
+        (start, count) = (i, 1)
         val = c[start]
         while p[start] - 1 != i:
             start = p[start] - 1

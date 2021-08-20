@@ -13,7 +13,6 @@ def go():
         print('YES')
         print(a[len(a) - 1] + a[len(a) - 2])
         return
-
     print('NO')
 
 

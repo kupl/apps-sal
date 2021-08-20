@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 x -= 1
 y -= 1
 half = (x + y) // 2
@@ -15,4 +15,4 @@ for i in range(n):
         else:
             ans[j - i] += 1
 for i in range(1, n):
-    print((ans[i]))
+    print(ans[i])

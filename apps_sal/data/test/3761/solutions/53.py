@@ -1,4 +1,3 @@
-
 def search(arr, start):
     s = set()
     s.add(start)
@@ -13,15 +12,12 @@ def search(arr, start):
 
 def main():
     t = 0
-    xd, yd = [], []
-
+    (xd, yd) = ([], [])
     inst = list(input())
-    x, y = list(map(int, input().split()))
-
+    (x, y) = list(map(int, input().split()))
     xcum = 0
     ycum = 0
     first = True
-
     startx = 0
     for s in inst:
         if s == 'T':
@@ -38,11 +34,10 @@ def main():
             if ycum > 0:
                 yd.append(ycum)
                 ycum = 0
+        elif t == 0:
+            xcum += 1
         else:
-            if t == 0:
-                xcum += 1
-            else:
-                ycum += 1
+            ycum += 1
     if first:
         startx = xcum
     elif xcum > 0:
@@ -51,10 +46,6 @@ def main():
     if ycum > 0:
         yd.append(ycum)
         ycum = 0
-
-    # print(startx)
-    # print(xd, yd)
-    # print(search(xd, startx), search(yd, 0))
     if x in search(xd, startx) and y in search(yd, 0):
         print('Yes')
     else:

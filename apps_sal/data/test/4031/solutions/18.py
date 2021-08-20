@@ -9,8 +9,8 @@ for i in range(n - 1):
         f = False
         break
 if f:
-    print("YES")
+    print('YES')
     for i in range(n):
         print(a[i])
 else:
-    print("NO")
+    print('NO')

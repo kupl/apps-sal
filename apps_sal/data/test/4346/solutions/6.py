@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    dest, v, l, r = map(int, input().split())
+    (dest, v, l, r) = map(int, input().split())
     tot = dest // v
     upto_l = (l - 1) // v
     upto_r = r // v

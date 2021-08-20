@@ -1,6 +1,5 @@
 import bisect
-
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 ans = []
@@ -13,7 +12,6 @@ for x in range(0, 2001):
             break
     else:
         ans.append(x)
-
 ans.sort()
 print(len(ans))
 print(*ans)

@@ -1,5 +1,3 @@
-
-
 def __starting_point():
     s1 = input()
     s2 = input()

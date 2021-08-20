@@ -1,12 +1,12 @@
-d, g = map(int, input().split())
+(d, g) = map(int, input().split())
 p = []
 c = []
 for i in range(d):
-    P, C = map(int, input().split())
+    (P, C) = map(int, input().split())
     p.append(P)
     c.append(C)
 ans = sum(p)
-for i in range(2**d):
+for i in range(2 ** d):
     z = i
     x = []
     for j in range(d):
@@ -18,7 +18,7 @@ for i in range(2**d):
         if x[j] == 1:
             po += 100 * (j + 1) * p[j] + c[j]
             m += p[j]
-    q = [[] for j in range(d)]  # 残りp、c
+    q = [[] for j in range(d)]
     s = 0
     for j in range(d):
         if x[j] == 0:

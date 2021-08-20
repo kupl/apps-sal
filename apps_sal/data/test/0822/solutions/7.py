@@ -8,5 +8,5 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-a, b, time = map(int, stdin.readline().split())
+(a, b, time) = map(int, stdin.readline().split())
 stdout.write(str(time // (a * b // gcd(a, b))))

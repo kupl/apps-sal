@@ -7,7 +7,7 @@ def __starting_point():
     if n < 3:
         print(-1)
         return
-    res = (210 - (10**(n - 1) % 210)) + 10**(n - 1)
+    res = 210 - 10 ** (n - 1) % 210 + 10 ** (n - 1)
     print(res)
 
 

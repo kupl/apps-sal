@@ -1,4 +1,5 @@
 class Solution:
+
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
         hi = len(arr) - 1
         lo = 0

@@ -1,6 +1,6 @@
 def get_issuer(number):
     num = str(number)
-    if num.startswith('34') or num.startswith('37') and len(num) == 15:
+    if num.startswith('34') or (num.startswith('37') and len(num) == 15):
         return 'AMEX'
     elif num.startswith('6011') and len(num) == 16:
         return 'Discover'

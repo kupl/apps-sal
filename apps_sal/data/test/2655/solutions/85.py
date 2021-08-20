@@ -1,8 +1,6 @@
 from collections import deque
-
 n = int(input())
 a = sorted(list(map(int, input().split())), reverse=True)
-
 q = deque()
 q.append(a[0])
 ans = 0

@@ -3,10 +3,8 @@ from math import sqrt
 
 
 def __starting_point():
-
     getcontext().prec = 50
-    a, b, c = map(Decimal, input().split())
-
+    (a, b, c) = map(Decimal, input().split())
     d = Decimal(sqrt(b * b - 4 * a * c))
     res1 = (d - b) / (2 * a)
     res2 = (-d - b) / (2 * a)

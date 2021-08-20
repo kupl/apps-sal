@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         rank = collections.defaultdict(int)
         parent = collections.defaultdict(int)
@@ -22,16 +23,12 @@ class Solution:
 
         def prime_set(n):
             for i in range(2, int(sqrt(n)) + 1):
-                # print(n, i)
                 if n % i == 0:
                     return prime_set(n // i) | set([i])
             return set([n])
-
         primes = defaultdict(list)
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             ps = prime_set(num)
-            # print(ps)
             for p in ps:
                 primes[p].append(i)
         print(primes)
@@ -39,5 +36,5 @@ class Solution:
             pairs = primes[p]
             for i in range(len(primes[p]) - 1):
                 union(A[pairs[i]], A[pairs[i + 1]])
-        print((Counter(find(A[i]) for i in range(len(A)))))
-        return max(Counter(find(A[i]) for i in range(len(A))).values())
+        print(Counter((find(A[i]) for i in range(len(A)))))
+        return max(Counter((find(A[i]) for i in range(len(A)))).values())

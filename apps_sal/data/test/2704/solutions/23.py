@@ -1,6 +1,5 @@
-# cook your dish here
-n, q = list(map(int, (input()).split()))
-a = list(map(int, (input()).split()))
+(n, q) = list(map(int, input().split()))
+a = list(map(int, input().split()))
 l = []
 for j in range(1, max(a) + 1):
     if min(a) <= j and j <= max(a):
@@ -8,6 +7,6 @@ for j in range(1, max(a) + 1):
 for i in range(q):
     t = int(input())
     if t in l:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

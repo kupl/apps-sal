@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = set()
 yes = False
 for i in range(n):
@@ -14,6 +14,6 @@ for w in a:
         if count == k:
             yes = True
 if yes:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

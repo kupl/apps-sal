@@ -1,4 +1,4 @@
-'''n, m, k = [int(x) for x in input().split()]
+"""n, m, k = [int(x) for x in input().split()]
 
 trees = tuple([int(x) for x in input().split()])
 
@@ -22,24 +22,14 @@ for i in range(1, len(dp)):
                 if k == l:
                     dp[i][j][k] = dp[i - 1][j][k] + cost[i][k]
                 else:
-                    dp[i][j][k] = dp[i - 1][j - 1][l] + cost[i][k]'''
-
-
-n, m = [int(x) for x in input().split()]
+                    dp[i][j][k] = dp[i - 1][j - 1][l] + cost[i][k]"""
+(n, m) = [int(x) for x in input().split()]
 plant = [int(input().split()[0]) for x in range(n)]
 dp = [1 for x in range(n)]
-
-
 for i in range(len(plant)):
     for j in range(0, i):
         if plant[j] > plant[i]:
             continue
         dp[i] = max(dp[i], dp[j] + 1)
-# print(dp)
 print(n - max(dp))
-
-
-'''for i in range(1, n):
-    for k in range(plant[i], 0, -1):
-        dp[plant[i]] = max(dp[plant[i]], 1 + dp[k])
-print(n - max(dp) - 1)'''
+'for i in range(1, n):\n    for k in range(plant[i], 0, -1):\n        dp[plant[i]] = max(dp[plant[i]], 1 + dp[k])\nprint(n - max(dp) - 1)'

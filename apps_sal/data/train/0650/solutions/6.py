@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     md = {}
     for i in range(n):
-        s, e, p = list(map(int, input().split()))
+        (s, e, p) = list(map(int, input().split()))
         if p in md:
             md[p].append((s, e))
         else:

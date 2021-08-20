@@ -7,13 +7,11 @@ def f(n):
         return x
     elif n == 2:
         return x + min(x, y)
+    elif n % 2 == 0:
+        return f(n // 2) + min(y, x * (n - n // 2))
     else:
-        if n % 2 == 0:
-            return f(n // 2) + min(y, x * (n - n // 2))
-        else:
-            return min(f(n + 1), f(n - 1)) + x
+        return min(f(n + 1), f(n - 1)) + x
 
 
-n, x, y = map(int, input().split())
-
+(n, x, y) = map(int, input().split())
 print(f(n))

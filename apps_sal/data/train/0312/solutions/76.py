@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         dq = deque()
         pre = [0]
@@ -15,5 +16,4 @@ class Solution:
             while dq and pre[dq[0]] + K <= pre[i]:
                 ans = min(ans, i - dq.popleft())
             dq.append(i)
-        # print(ans)
-        return (ans if ans < l + 1 else -1)
+        return ans if ans < l + 1 else -1

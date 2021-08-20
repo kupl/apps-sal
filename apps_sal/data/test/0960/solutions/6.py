@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mod = k - 1
 while n // mod != n / mod:
     mod -= 1

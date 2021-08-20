@@ -3,14 +3,12 @@ A = [list(map(int, input().split())) for _ in range(3)]
 A = sum(A, [])
 N = int(input())
 B = [int(input()) for _ in range(N)]
-
 for b in B:
-    tmp = [i for i, x in enumerate(A) if x == b]
+    tmp = [i for (i, x) in enumerate(A) if x == b]
     for t in tmp:
         table[t // 3][t % 3] = 1
-
 flag = False
-n1, n2 = 0, 0
+(n1, n2) = (0, 0)
 for i in range(3):
     if sum(table[i]) == 3:
         flag = True

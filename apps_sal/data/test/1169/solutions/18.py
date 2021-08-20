@@ -1,7 +1,5 @@
 import math
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 MINANS = max(0, n - m * 2)
 
 
@@ -12,10 +10,5 @@ def combi(m):
 for i in range(int(math.sqrt(2 * m)), n + 1):
     if combi(i) >= m:
         break
-
 MAXANS = n - i
-# n*(n-1)/2=m
-# n^2-n+2m=0
-
-
 print(MINANS, MAXANS)

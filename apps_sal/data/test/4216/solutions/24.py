@@ -7,7 +7,6 @@ def __starting_point():
             f = max(len(str(i)), len(str(N // i)))
             ans = min(f, ans)
         i += 1
-
     print(ans)
 
 

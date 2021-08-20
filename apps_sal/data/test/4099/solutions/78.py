@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 a = list(map(int, input().split()))
 if sum(a) + k < m * n:
     print(-1)

@@ -1,4 +1,4 @@
 def solution(nums):
-    if(nums):
+    if nums:
         return sorted(list(nums))
     return []

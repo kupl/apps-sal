@@ -7,7 +7,6 @@ for i in range(n):
         l1.append(la[i])
     else:
         l2.append(la[i])
-
 if n % 2 == 0:
     for i in reversed(l2):
         print(i, end=' ')

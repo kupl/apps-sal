@@ -1,5 +1,5 @@
 from sys import stdin
-n, m = list(map(int, stdin.readline().strip().split()))
+(n, m) = list(map(int, stdin.readline().strip().split()))
 s = list(map(int, stdin.readline().strip().split()))
 ans = [0 for i in range(n)]
 sm = [0 for i in range(n)]

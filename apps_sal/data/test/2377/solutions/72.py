@@ -1,18 +1,14 @@
 import math
-
-N, H = list(map(int, input().split()))
+(N, H) = list(map(int, input().split()))
 A = []
 B = []
 for i in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     A.append(a)
     B.append(b)
-
 A.sort(reverse=True)
 B.sort(reverse=True)
-
 a_max = A[0]
-
 ans = 0
 bi = 0
 while H > 0:

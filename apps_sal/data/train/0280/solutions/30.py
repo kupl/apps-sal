@@ -1,4 +1,4 @@
-'''
+"""
 Dfs: either create new palindrome or expand
 
 If expanding recurse down (num swaps and divides):
@@ -12,15 +12,16 @@ j-i = 1
 j-i = 2
 
 Caching mechanism
-'''
+"""
 
 
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         n = len(s)
         memo = {}
 
-        def cost(s, i, j):  # calculate the cost of transferring one substring into palindrome string
+        def cost(s, i, j):
             r = 0
             while i < j:
                 if s[i] != s[j]:
@@ -31,55 +32,14 @@ class Solution:
 
         def dfs(i, k):
             if (i, k) in memo:
-                return memo[(i, k)]  # case already in memo
-            if n - i == k:  # base case that each substring just have one character
+                return memo[i, k]
+            if n - i == k:
                 return 0
-            if k == 1:  # base case that need to transfer whole substring into palidrome
+            if k == 1:
                 return cost(s, i, n - 1)
             res = float('inf')
-            for j in range(i + 1, n - k + 2):  # keep making next part of substring into palidrome
-                res = min(res, dfs(j, k - 1) + cost(s, i, j - 1))  # compare different divisions to get the minimum cost
-            memo[(i, k)] = res
+            for j in range(i + 1, n - k + 2):
+                res = min(res, dfs(j, k - 1) + cost(s, i, j - 1))
+            memo[i, k] = res
             return res
         return dfs(0, k)
-
-
-#             for j in range(i, self.length):
-#                 t = self.dp.get((i,j+1))
-#                 if not t:
-#                     count = cost(i,j)
-#                 else:
-#                     count = t
-
-
-#                 dfs(j+1,ch+count,nk-1) #  case where you split
-
-#         dfs(0,0,k)
-
-#         return self.r
-
-
-# #         n = len(s)
-# #         memo = {}
-
-# #         def cost(s,i,j): #calculate the cost of transferring one substring into palindrome string
-# #             r = 0
-# #             while i < j:
-# #                 if s[i] != s[j]:
-# #                     r += 1
-# #                 i += 1
-# #                 j -= 1
-# #             return r
-
-# #         def dfs(i, k):
-# #             if (i, k) in memo: return memo[(i, k)] #case already in memo
-# #             if n - i == k: #base case that each substring just have one character
-# #                 return 0
-# #             if k == 1:    #base case that need to transfer whole substring into palidrome
-# #                 return cost(s, i, n - 1)
-# #             res = float('inf')
-# #             for j in range(i + 1, n - k + 2): # keep making next part of substring into palidrome
-# #                 res = min(res, dfs(j, k - 1) + cost(s,i, j - 1)) #compare different divisions to get the minimum cost
-# #             memo[(i, k)] = res
-# #             return res
-# #         return dfs(0 , k)

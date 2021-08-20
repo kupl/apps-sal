@@ -1,5 +1,3 @@
-# https://codeforces.com/contest/1265/problem/B
-
 def main():
     n = int(input())
     p = list(map(int, input().split()))

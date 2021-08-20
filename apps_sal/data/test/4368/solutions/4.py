@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 count = 0
 while True:
     if N >= pow(K, count):

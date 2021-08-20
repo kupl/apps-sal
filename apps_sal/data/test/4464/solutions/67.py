@@ -1,11 +1,10 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 judge = False
 for i in range(b):
     if a * i % b == c:
         judge = True
         break
-
 if judge:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

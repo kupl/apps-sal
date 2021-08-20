@@ -4,13 +4,13 @@ ans = 0
 for f in s:
     if f in '{[<(':
         d.append(f)
-    elif f == ')' and d and d[-1] == '(':
+    elif f == ')' and d and (d[-1] == '('):
         d.pop()
-    elif f == '}' and d and d[-1] == '{':
+    elif f == '}' and d and (d[-1] == '{'):
         d.pop()
-    elif f == ']' and d and d[-1] == '[':
+    elif f == ']' and d and (d[-1] == '['):
         d.pop()
-    elif f == '>' and d and d[-1] == '<':
+    elif f == '>' and d and (d[-1] == '<'):
         d.pop()
     elif not d:
         print('Impossible')

@@ -7,5 +7,5 @@ for i in range(n):
 a.sort()
 c = 0
 for i in range(n):
-    c = c + abs((i + 1) - a[i])
+    c = c + abs(i + 1 - a[i])
 print(c)

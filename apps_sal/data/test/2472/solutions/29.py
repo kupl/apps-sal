@@ -8,6 +8,6 @@ for i in range(N):
     if A[i][1] < S:
         T = False
 if T == True:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

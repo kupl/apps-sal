@@ -14,7 +14,7 @@ for l in 'abcdefghijklmnopqrstuvwxyz':
     dic[l] = m[i]
     i += 1
 high = 1
-big = 10**9 + 7
+big = 10 ** 9 + 7
 for i in range(2, n + 1):
     z = i - 1
     x = i - dic[s[i]]

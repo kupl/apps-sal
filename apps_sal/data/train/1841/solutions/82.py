@@ -13,7 +13,6 @@ class Solution:
                 else:
                     strong = arr[j]
                 dp[i][j] = strong
-
         for line in dp:
             print(line)
         print()

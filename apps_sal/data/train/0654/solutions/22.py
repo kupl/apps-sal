@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for cases in range(t):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     if c > b and c > a:
         if b > a:
             print(b)
@@ -12,9 +11,8 @@ for cases in range(t):
             print(c)
         else:
             print(a)
+    elif b > c:
+        print(b)
     else:
-        if b > c:
-            print(b)
-        else:
-            print(c)
+        print(c)
     print()

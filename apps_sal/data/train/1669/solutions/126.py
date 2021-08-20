@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         c = collections.Counter(hand)
         for i in sorted(c):

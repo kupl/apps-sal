@@ -1,12 +1,6 @@
 import sys
 3
-
-MAPPING = {
-    'U': (0, 1),
-    'D': (0, -1),
-    'L': (-1, 0),
-    'R': (1, 0),
-}
+MAPPING = {'U': (0, 1), 'D': (0, -1), 'L': (-1, 0), 'R': (1, 0)}
 
 
 def read_ints():
@@ -23,7 +17,7 @@ def get_vectors(moves):
 
 
 def mul(pair, a):
-    return pair[0] * a, pair[1] * a
+    return (pair[0] * a, pair[1] * a)
 
 
 def is_achievable(diff, period):
@@ -45,7 +39,7 @@ def is_achievable(diff, period):
 
 
 def main():
-    a, b = read_ints()
+    (a, b) = read_ints()
     moves = input().strip()
     vectors = list(get_vectors(moves))
     period = vectors[-1]

@@ -1,6 +1,5 @@
-
 mod = 1000000007
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = [0] * (k + 1)
 for i in range(1, k + 1):
     d[i] = pow(k // i, n, mod)

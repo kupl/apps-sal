@@ -1,5 +1,5 @@
 def words_to_marks(word):
-    s = " abcdefghijklmnopqrstuvwxyz"
+    s = ' abcdefghijklmnopqrstuvwxyz'
     a = 0
     for el in word:
         a = a + s.index(el)

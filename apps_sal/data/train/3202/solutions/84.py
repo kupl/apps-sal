@@ -1,6 +1,5 @@
 def greet(name, owner):
-    #print(name, owner)
     if name == owner:
-        return("Hello boss")
+        return 'Hello boss'
     else:
-        return("Hello guest")
+        return 'Hello guest'

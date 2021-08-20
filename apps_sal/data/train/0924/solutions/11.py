@@ -1,17 +1,6 @@
-# cook your dish here
 from collections import defaultdict
 from math import sqrt
-
-"""def isprime(n):
-    if n==2:
-        return True
-    elif n>2:
-        for i in range(2,int(sqrt(n))+1):
-            if n%i==0:
-                return False
-    elif n<2:
-        return False
-    return True"""
+'def isprime(n):\n    if n==2:\n        return True\n    elif n>2:\n        for i in range(2,int(sqrt(n))+1):\n            if n%i==0:\n                return False\n    elif n<2:\n        return False\n    return True'
 
 
 def primefact(n):
@@ -30,12 +19,12 @@ def primefact(n):
     return pf
 
 
-K, Q = map(int, input().split())
+(K, Q) = map(int, input().split())
 prime_range = {}
 pfk = primefact(K)
 for i in range(Q):
     query = input().split()
-    if query[0] == "!":
+    if query[0] == '!':
         l = int(query[1])
         r = int(query[2])
         start = l
@@ -52,11 +41,11 @@ for i in range(Q):
                 continue
             if end >= i[0]:
                 endrange = i[0] - 1
-            if (startrange <= endrange):
-                prime_range[(startrange, endrange)] = int(query[3])
+            if startrange <= endrange:
+                prime_range[startrange, endrange] = int(query[3])
                 start = max(endrange + 1, i[1] + 1)
         if start <= end:
-            prime_range[(start, end)] = int(query[3])
+            prime_range[start, end] = int(query[3])
     else:
         l = int(query[1])
         r = int(query[2])
@@ -64,27 +53,12 @@ for i in range(Q):
         count = 0
         for primenum in pfk:
             for currRange in prime_range:
-                if (not (r < currRange[0] or l > currRange[1])):
+                if not (r < currRange[0] or l > currRange[1]):
                     num = prime_range[currRange]
-                    if (num % primenum == 0):
+                    if num % primenum == 0:
                         count += 1
                         break
         res.append(count)
         for r in res:
             print(r)
-        '''for i in prime_range:
-            if l>=i[0] and l<=i[1]:
-                x = prime_range[(i[0],i[1])]
-                pf = primefact(x)
-                for p in pf:
-                    if p in pfk and p not in pfc:
-                        pfc.append(p)
-                continue
-            if r>=i[0] and r<=i[1]:
-                x = prime_range[(i[0],i[1])]
-                pf = primefact(x)
-                for p in pf:
-                    if p in pfk and p not in pfc:
-                        pfc.append(p)
-        print(len(pfc))
-       #print(prime_range)'''
+        'for i in prime_range:\n            if l>=i[0] and l<=i[1]:\n                x = prime_range[(i[0],i[1])]\n                pf = primefact(x)\n                for p in pf:\n                    if p in pfk and p not in pfc:\n                        pfc.append(p)\n                continue\n            if r>=i[0] and r<=i[1]:\n                x = prime_range[(i[0],i[1])]\n                pf = primefact(x)\n                for p in pf:\n                    if p in pfk and p not in pfc:\n                        pfc.append(p)\n        print(len(pfc))\n       #print(prime_range)'

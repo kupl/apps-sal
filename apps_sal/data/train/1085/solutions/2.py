@@ -6,13 +6,13 @@ for i in range(26):
     char = chr(i + ord('a'))
     temp = list(map(int, input().split()))
     for j in range(26):
-        if (temp[j] == 1):
+        if temp[j] == 1:
             follow = chr(j + ord('a'))
             d[follow].append(char)
 
 
 def f(char, i, n, count):
-    if (i == n):
+    if i == n:
         return count + 1
     else:
         ans = 0
@@ -22,6 +22,6 @@ def f(char, i, n, count):
 
 
 for q in range(int(input())):
-    c, n = input().split()
+    (c, n) = input().split()
     n = int(n)
     print(f(c, 1, n, 0))

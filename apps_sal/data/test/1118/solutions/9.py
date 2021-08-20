@@ -1,6 +1,6 @@
 def lcs(a, b):
     c = [[0 for i in range(len(a) + 1)] for i in range(len(b) + 1)]
-    for i in range((len(b) + 1)):
+    for i in range(len(b) + 1):
         for j in range(len(b) + 1):
             if i == 0 or j == 0:
                 c[i][j] = 0
@@ -17,7 +17,7 @@ b = [a[0]]
 for i in range(1, n):
     if a[i] != a[i - 1]:
         b.append(a[i])
-a = b[:: -1]
+a = b[::-1]
 c = lcs(a, b)
 ans = 0
 n = len(a)

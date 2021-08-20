@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         res = 0
 
@@ -11,6 +12,5 @@ class Solution:
                     before_res.add(cur_s[:i + 1])
                     dfs(before_res, cur_s[i + 1:])
                     before_res.remove(cur_s[:i + 1])
-
         dfs(set(), s)
         return res

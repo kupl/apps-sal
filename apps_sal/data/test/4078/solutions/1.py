@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mass = list(map(int, input().split()))
 lr = []
 for t in range(m):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     lr.append([l, r])
 mq = 0
 mdel = []
@@ -15,7 +15,7 @@ for a in range(len(mass)):
         delete = []
         itog = 0
         for x in range(len(lr)):
-            l, r = lr[x][0], lr[x][1]
+            (l, r) = (lr[x][0], lr[x][1])
             if l <= b + 1 <= r and (a + 1 < l or a + 1 > r):
                 q += 1
                 delete.append(x + 1)

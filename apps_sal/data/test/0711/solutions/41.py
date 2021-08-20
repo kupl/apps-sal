@@ -1,6 +1,5 @@
-MOD = 10**9 + 7
-MOD_t_MAX = 3 * (10**5)
-
+MOD = 10 ** 9 + 7
+MOD_t_MAX = 3 * 10 ** 5
 fac = [None] * MOD_t_MAX
 finv = [None] * MOD_t_MAX
 inv = [None] * MOD_t_MAX
@@ -25,7 +24,7 @@ def MOD_COM(n, k):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     MOD_COM_init()
     dic = {}
     x = 2

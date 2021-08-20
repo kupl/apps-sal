@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [-1] * n
         self.cnt = n
@@ -20,7 +21,7 @@ class UnionFind:
         if x == y:
             return
         if self.parent[x] > self.parent[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parent[x] += self.parent[y]
         self.parent[y] = x
         self.cnt -= 1
@@ -36,15 +37,12 @@ class UnionFind:
 
 
 t = int(input())
-alph = "abcdefghijklmnopqrstuvwxyz"
-to_ind = {char: i for i, char in enumerate(alph)}
-
-
+alph = 'abcdefghijklmnopqrstuvwxyz'
+to_ind = {char: i for (i, char) in enumerate(alph)}
 for _ in range(t):
     n = int(input())
     a = list(input())
     b = list(input())
-
     flag = False
     for i in range(n):
         if a[i] > b[i]:
@@ -53,7 +51,6 @@ for _ in range(t):
             break
     if flag:
         continue
-
     uf = UnionFind(26)
     for i in range(n):
         u = to_ind[a[i]]

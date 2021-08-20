@@ -1,5 +1,5 @@
 import sys
-t, k = (int(x) for x in sys.stdin.readline().split())
+(t, k) = (int(x) for x in sys.stdin.readline().split())
 mod = 1000000007
 l = [0] * 100001
 l[0] = 1
@@ -8,5 +8,5 @@ for i in range(1, 100001):
 for i in range(1, 100001):
     l[i] = (l[i] + l[i - 1]) % mod
 for line in sys.stdin.readlines():
-    a, b = (int(x) for x in line.split())
+    (a, b) = (int(x) for x in line.split())
     print((l[b] - l[a - 1] + mod) % mod)

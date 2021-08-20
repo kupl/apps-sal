@@ -27,17 +27,16 @@ def recursion(result, step, max_step, start, pix_map):
         recursion(result, step * 2, max_step, (start[0] + step, start[1] + step), pix_map)
         recursion(result, step * 2, max_step, (start[0], start[1] + step), pix_map)
         recursion(result, step * 2, max_step, (start[0] + step, start[1]), pix_map)
-
-    if len(pix_map) > start[0] and len(pix_map[start[0]]) > start[1] and pix_map[start[0]][start[1]] == 0:
+    if len(pix_map) > start[0] and len(pix_map[start[0]]) > start[1] and (pix_map[start[0]][start[1]] == 0):
         pix_map[start[0]][start[1]] = num_gen.__next__()
         result.append((start[1], start[0]))
-    if len(pix_map) > start[0] + step and len(pix_map[start[0]]) > start[1] + step and pix_map[start[0] + step][start[1] + step] == 0:
+    if len(pix_map) > start[0] + step and len(pix_map[start[0]]) > start[1] + step and (pix_map[start[0] + step][start[1] + step] == 0):
         pix_map[start[0] + step][start[1] + step] = num_gen.__next__()
         result.append((start[1] + step, start[0] + step))
-    if len(pix_map) > start[0] and len(pix_map[start[0]]) > start[1] + step and pix_map[start[0]][start[1] + step] == 0:
+    if len(pix_map) > start[0] and len(pix_map[start[0]]) > start[1] + step and (pix_map[start[0]][start[1] + step] == 0):
         pix_map[start[0]][start[1] + step] = num_gen.__next__()
         result.append((start[1] + step, start[0]))
-    if len(pix_map) > start[0] + step and len(pix_map[start[0]]) > start[1] and pix_map[start[0] + step][start[1]] == 0:
+    if len(pix_map) > start[0] + step and len(pix_map[start[0]]) > start[1] and (pix_map[start[0] + step][start[1]] == 0):
         pix_map[start[0] + step][start[1]] = num_gen.__next__()
         result.append((start[1], start[0] + step))
 

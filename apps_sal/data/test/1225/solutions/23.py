@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
 def main():
     H = int(input())
-
     res = 1
     ans = 1
     while H > 1:

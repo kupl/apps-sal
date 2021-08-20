@@ -1,11 +1,11 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         d = collections.Counter(A)
         if 0 in d:
             if d[0] & 1 == 1:
                 return False
             d.pop(0)
-
         keys = sorted(d.keys())
         for i in keys:
             if i in d:

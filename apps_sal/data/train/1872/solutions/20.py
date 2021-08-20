@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxLevelSum(self, root: TreeNode) -> int:
         levelSum = defaultdict(int)
         curLevel = 0
@@ -15,9 +16,7 @@ class Solution:
                     q.insert(0, cur.left)
                 if cur.right:
                     q.insert(0, cur.right)
-
             curLevel += 1
-
         maxSumm = max(levelSum.values())
         for l in range(len(levelSum)):
             if levelSum[l] == maxSumm:

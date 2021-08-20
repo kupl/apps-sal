@@ -8,6 +8,6 @@ for i in b:
     if i % 2 == 1:
         f = 1
 if f:
-    print("Conan")
+    print('Conan')
 else:
-    print("Agasa")
+    print('Agasa')

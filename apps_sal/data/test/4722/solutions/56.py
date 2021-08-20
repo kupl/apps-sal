@@ -1,5 +1,5 @@
-a, b = [int(x) for x in input().split()]
+(a, b) = [int(x) for x in input().split()]
 if a % 3 == 0 or b % 3 == 0 or (a + b) % 3 == 0:
-    print("Possible")
+    print('Possible')
 else:
-    print("Impossible")
+    print('Impossible')

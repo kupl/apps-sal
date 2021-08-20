@@ -1,4 +1,5 @@
 class Solution:
+
     def hIndex(self, citations):
         """
         :type citations: List[int]
@@ -7,7 +8,7 @@ class Solution:
         c = citations
         if not c:
             return 0
-        s, e = 0, len(c) - 1
+        (s, e) = (0, len(c) - 1)
         if c[s] >= len(c):
             return len(c)
         if c[e] < 1:

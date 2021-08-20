@@ -1,9 +1,8 @@
 import heapq
-
 n = int(input())
 a = list(map(int, input().split()))
 score = [[0, 0] for _ in range(n + 1)]
-h1 = a[0: n]
+h1 = a[0:n]
 h2 = [-a[2 * n + i] for i in range(n)]
 maxscore = sum(h1)
 minscore = -sum(h2)

@@ -2,7 +2,7 @@ import heapq
 
 
 def abc151d_maze_master():
-    h, w = map(int, input().split())
+    (h, w) = map(int, input().split())
     s = []
     max_val = 0
     for i in range(h):
@@ -16,13 +16,11 @@ def abc151d_maze_master():
             q = [(0, hi, wi)]
             heapq.heapify(q)
             while len(q) > 0:
-                d, hj, wj = heapq.heappop(q)
-                for dh, dw in zip([0, 0, 1, -1], [1, -1, 0, 0]):
-                    if 0 <= hj + dh < h and 0 <= wj + dw < w and s[hj + dh][wj + dw] != '#' and \
-                            (flg[hj + dh][wj + dw] == -1 or flg[hj + dh][wj + dw] > flg[hj][wj] + 1):
+                (d, hj, wj) = heapq.heappop(q)
+                for (dh, dw) in zip([0, 0, 1, -1], [1, -1, 0, 0]):
+                    if 0 <= hj + dh < h and 0 <= wj + dw < w and (s[hj + dh][wj + dw] != '#') and (flg[hj + dh][wj + dw] == -1 or flg[hj + dh][wj + dw] > flg[hj][wj] + 1):
                         heapq.heappush(q, (d + 1, hj + dh, wj + dw))
                         flg[hj + dh][wj + dw] = flg[hj][wj] + 1
-                # print(q)
             max_val = max(max_val, max([max(v) for v in flg]))
     print(max_val)
 

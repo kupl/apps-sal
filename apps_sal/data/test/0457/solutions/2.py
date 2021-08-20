@@ -20,8 +20,8 @@ def primes(x):
     return l
 
 
-mo = 10**9 + 7
-x, n = list(map(int, input().split()))
+mo = 10 ** 9 + 7
+(x, n) = list(map(int, input().split()))
 pi = primes(x)
 s = 1
 for p in pi:

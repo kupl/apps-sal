@@ -3,9 +3,9 @@ dou = 0
 fir = []
 sec = []
 non = []
-d, f, s, n = 0, 0, 0, 0
+(d, f, s, n) = (0, 0, 0, 0)
 for i in [0] * m:
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a == 11:
         dou += b
         d += 1
@@ -20,7 +20,7 @@ for i in [0] * m:
         n += 1
 fir.sort(reverse=True)
 sec.sort(reverse=True)
-if not (d + f * s):
+if not d + f * s:
     print(0)
     quit()
 else:

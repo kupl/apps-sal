@@ -4,7 +4,7 @@ for i in range(3, 1000000, 2):
 
 
 def branch(n):
-    layer = int((1 + (n - 1)**0.5) // 2 + 1)
-    for branch, coner_number in enumerate(memo[layer]):
+    layer = int((1 + (n - 1) ** 0.5) // 2 + 1)
+    for (branch, coner_number) in enumerate(memo[layer]):
         if n <= coner_number:
             return branch

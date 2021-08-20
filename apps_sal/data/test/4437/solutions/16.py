@@ -3,7 +3,6 @@ string = input()
 ar = []
 for x in range(len(string)):
     ar.append(string[x])
-
 first = 'a'
 second = 'a'
 count = 0
@@ -20,4 +19,4 @@ for x in range(len(ar)):
             new_ar.append('a')
             new_ar.append('b')
 print(count)
-print(''.join(str(i) for i in new_ar))
+print(''.join((str(i) for i in new_ar)))

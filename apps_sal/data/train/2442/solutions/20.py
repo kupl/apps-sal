@@ -1,4 +1,5 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         s = list(s)
         ans = ''

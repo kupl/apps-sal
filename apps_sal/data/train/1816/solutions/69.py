@@ -1,7 +1,8 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         times = collections.defaultdict(list)
-        for name, time in zip(keyName, keyTime):
+        for (name, time) in zip(keyName, keyTime):
             times[name].append(time)
         res = []
 

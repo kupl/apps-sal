@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPower(self, s: str) -> int:
         count = 0
         max_count = 0

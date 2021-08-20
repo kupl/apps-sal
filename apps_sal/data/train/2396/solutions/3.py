@@ -1,5 +1,4 @@
 def find(st, count, ans, low, high, char):
-    # print(st,low,high,"ss")
     if high - low == 0:
         if chr(char) == st[high]:
             ans.append(count)

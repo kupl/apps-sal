@@ -1,6 +1,6 @@
 import sys
 sys.setrecursionlimit(3000)
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 
 
 def comb(n, k):
@@ -16,7 +16,7 @@ def comb(n, k):
 
 
 R = N - K
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 A = K - 1
 B = R - 1
 if N == K:

@@ -10,4 +10,4 @@ for __ in range(int(input())):
     maxval = 0
     for i in range(1, N + 1):
         maxval = max(maxval, min(L[i], R[i]))
-    print(sum(arr) - maxval**2)
+    print(sum(arr) - maxval ** 2)

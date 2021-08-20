@@ -5,7 +5,6 @@ for t in range(len(lst) - 1):
     diffs.append(lst[t + 1] - lst[t])
 diffs.append(lst[0] - lst[-1])
 lista = [x for x in diffs if x < 0]
-
 if len(lista) != 1:
     if max(diffs) == 0:
         print(0)

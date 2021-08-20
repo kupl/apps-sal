@@ -14,7 +14,7 @@ anskey = -1
 for key in dic:
     cnt = 0
     last = -1
-    for a, b in sorted(dic[key]):
+    for (a, b) in sorted(dic[key]):
         if a > last:
             cnt += 1
             last = b
@@ -25,12 +25,12 @@ for key in dic:
         anskey = key
 last = -1
 tmp = []
-for a, b in sorted(dic[anskey]):
+for (a, b) in sorted(dic[anskey]):
     if a > last:
         last = b
-        tmp.append(str(a + 1) + " " + str(b + 1))
+        tmp.append(str(a + 1) + ' ' + str(b + 1))
     elif b < last:
         last = b
         tmp.pop()
-        tmp.append(str(a + 1) + " " + str(b + 1))
+        tmp.append(str(a + 1) + ' ' + str(b + 1))
 print(ans, '\n'.join(tmp), sep='\n')

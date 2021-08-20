@@ -1,9 +1,8 @@
 import itertools
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 li = []
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     li.append([a, b])
 count = 0
 for comb in itertools.permutations(range(n), n):
@@ -15,7 +14,7 @@ for comb in itertools.permutations(range(n), n):
             break
         a = comb[i] + 1
         b = comb[i + 1] + 1
-        if ([a, b] in li) or ([b, a] in li):
+        if [a, b] in li or [b, a] in li:
             continue
         else:
             judge = False

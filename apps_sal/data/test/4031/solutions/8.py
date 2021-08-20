@@ -15,24 +15,4 @@ if fl:
         print(i[1])
 else:
     print('NO')
-'''
-n, k = map(int, input().split())
-arr = list(map(int, input().split()))
-for i in range(n):
-    arr[i] = (arr[i], i + 1)
-arr.sort()
-
-cur = -1
-ans = []
-for i in range(n):
-    if arr[i][0] != cur:
-        ans.append(arr[i][1])
-        cur = arr[i][0]
-    if len(ans) == k:
-        break
-if len(ans) == k:
-    print('YES')
-    print(*ans)
-else:
-    print('NO')
-    '''
+"\nn, k = map(int, input().split())\narr = list(map(int, input().split()))\nfor i in range(n):\n    arr[i] = (arr[i], i + 1)\narr.sort()\n\ncur = -1\nans = []\nfor i in range(n):\n    if arr[i][0] != cur:\n        ans.append(arr[i][1])\n        cur = arr[i][0]\n    if len(ans) == k:\n        break\nif len(ans) == k:\n    print('YES')\n    print(*ans)\nelse:\n    print('NO')\n    "

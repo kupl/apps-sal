@@ -6,7 +6,7 @@ def solve():
     inp = list(map(int, input().split()))
     mx = max([inp.count(i) for i in inp])
     ans = min([x for x in inp if inp.count(x) == mx])
-    print(str(ans) + " " + str(inp.count(ans)))
+    print(str(ans) + ' ' + str(inp.count(ans)))
 
 
 t = int(input())

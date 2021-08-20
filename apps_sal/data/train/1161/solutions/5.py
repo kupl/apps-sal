@@ -5,14 +5,14 @@ for i in range(T):
     d = S.count('m')
     j = 0
     while j < len(S) - 1:
-        if S[j] == 's' and S[j + 1] == 'm' or S[j] == 'm' and S[j + 1] == 's':
+        if S[j] == 's' and S[j + 1] == 'm' or (S[j] == 'm' and S[j + 1] == 's'):
             j += 2
             c -= 1
         else:
             j += 1
     if c > d:
-        print("snakes")
+        print('snakes')
     elif d > c:
-        print("mongooses")
+        print('mongooses')
     else:
-        print("tie")
+        print('tie')

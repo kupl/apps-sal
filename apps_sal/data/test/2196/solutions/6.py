@@ -12,7 +12,7 @@ for i in map(int, stdin.readline().split()):
             y += 1
         if i > y:
             s += i - y
-            x, y = 1, i
+            (x, y) = (1, i)
         else:
             x += 1
 while x:

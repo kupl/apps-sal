@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     t = t - 1
@@ -7,7 +6,7 @@ while t:
     l.reverse()
     c = 0
     for i in range(n):
-        if(c >= l[i]):
+        if c >= l[i]:
             pass
         else:
             c = l[i]

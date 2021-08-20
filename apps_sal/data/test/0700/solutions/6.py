@@ -1,4 +1,3 @@
-# codeforces.com/contest/958/problem/A1
 def flipH(A, N):
     B = [[0 for i in range(N)] for j in range(N)]
     for i in range(N):
@@ -48,6 +47,6 @@ for i in range(4):
         B = rotate90(B)
         C = rotate90(C)
 if flag:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

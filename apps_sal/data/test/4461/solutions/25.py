@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 pattern = [h // 2 + w // 3 + 1, h // 3 + w // 2 + 1, h, w]
 if h % 3 == 0 or w % 3 == 0:
     pattern += [0]

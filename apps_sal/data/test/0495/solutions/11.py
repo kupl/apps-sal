@@ -23,7 +23,6 @@ def f(x1, k1):
                 x[m] = x[m - 1]
                 x[m - 1] = h
                 m -= 1
-
         i += 1
     return int(''.join(x))
 
@@ -32,8 +31,6 @@ x = input()
 i = len(x) - 1
 while x[i] != ' ':
     i -= 1
-
 k = int(x[i + 1:])
 x = list(x[:i])
-
 print(f(x, k))

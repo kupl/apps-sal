@@ -3,9 +3,10 @@ def isOdd(num):
 
 
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         items = [-1]
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if isOdd(num):
                 items.append(i)
         cnt = 0
@@ -15,5 +16,4 @@ class Solution:
                 left = items[i] - items[i - 1]
                 right = items[i + k] - items[i + k - 1]
                 cnt += left * right
-
         return cnt

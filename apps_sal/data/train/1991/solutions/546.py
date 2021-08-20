@@ -1,6 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         n = len(locations)
         DP = [[-1] * (fuel + 1) for i in range(n)]
         DP[finish][0] = 1
@@ -14,10 +15,6 @@ class Solution:
             toEnd = abs(pos - pos_finish)
             if toEnd > fuel:
                 return 0
-            # elif toEnd == fuel:
-            #    DP[loc][fuel]=1
-            #    return 1
-            # toEnd >= fuel
             for loc2 in range(n):
                 if loc2 == loc:
                     continue

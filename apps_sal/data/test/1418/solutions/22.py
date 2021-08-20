@@ -8,7 +8,7 @@ def __starting_point():
             for j in range(i * i, len(a), i):
                 a[j] = m
             m += 1
-    print(" ".join([str(a[x]) for x in range(2, len(a))]))
+    print(' '.join([str(a[x]) for x in range(2, len(a))]))
 
 
 __starting_point()

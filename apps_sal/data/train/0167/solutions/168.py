@@ -1,7 +1,7 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         max_floors = [0 for _ in range(N + 1)]
-
         for k in range(1, K + 1):
             next_max_floors = [0 for _ in range(N + 1)]
             for t in range(1, N + 1):

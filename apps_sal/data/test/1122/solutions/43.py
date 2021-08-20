@@ -1,9 +1,7 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 a = n // 2
 b = a + 1
 abset = set()
-
 for i in range(m):
     print(a, b)
     abset.add(b - a)

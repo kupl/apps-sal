@@ -1,4 +1,4 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 v = list(map(int, input().split()))
 sm = sum(v)
 sm -= s

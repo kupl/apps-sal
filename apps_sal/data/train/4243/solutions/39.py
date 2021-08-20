@@ -1,1 +1,2 @@
-def find_average(lst): return sum(lst) // len(lst)
+def find_average(lst):
+    return sum(lst) // len(lst)

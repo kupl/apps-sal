@@ -5,4 +5,4 @@ def alternateCase(s):
             news.append(s[i].upper())
         else:
             news += s[i].lower()
-    return(''.join(news))
+    return ''.join(news)

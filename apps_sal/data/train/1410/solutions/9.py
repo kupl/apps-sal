@@ -10,22 +10,20 @@ def main():
                 c[i][j] = c[i - 1][j] + c[i - 1][j - 1]
     t = int(input())
     for i in range(t):
-        s, n, m, k = list(map(int, input().split(' ')))
+        (s, n, m, k) = list(map(int, input().split(' ')))
         D = float(c[s - 1][n - 1])
-        # print D
-        N = 0.000000
+        N = 0.0
         if s == n:
-            print(1.000000)
+            print(1.0)
             continue
         if k > n:
-            print(0.000000)
+            print(0.0)
             continue
         upper = min(m, n)
         for j in range(k, upper):
             N += c[m - 1][j] * c[s - m][n - 1 - j]
-        # print N
         ans = float(N / D)
-        print("%f" % ans)
+        print('%f' % ans)
 
 
 main()

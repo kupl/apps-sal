@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums):
         n = len(nums)
         last_zero = None
@@ -10,13 +11,12 @@ class Solution:
                 if last_one is None:
                     last_one = i
                 cnt += 1
+            elif last_zero is None:
+                last_zero = i
             else:
-                if last_zero is None:
-                    last_zero = i
-                else:
-                    last_one = last_zero + 1
-                    last_zero = i
-                    cnt = i - last_one
+                last_one = last_zero + 1
+                last_zero = i
+                cnt = i - last_one
             res = max(res, cnt)
         if res == n:
             return n - 1

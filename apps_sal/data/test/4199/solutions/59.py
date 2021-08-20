@@ -1,4 +1,4 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 shin = list(map(int, input().split()))
 count = 0
 for i in shin:

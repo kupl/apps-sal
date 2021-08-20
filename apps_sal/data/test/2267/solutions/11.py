@@ -11,7 +11,7 @@ def cmp(a, b):
     return 1
 
 
-n, a = int(input()), []
+(n, a) = (int(input()), [])
 for i in range(n):
     a.append(input())
 a.sort(key=cmp_to_key(cmp))

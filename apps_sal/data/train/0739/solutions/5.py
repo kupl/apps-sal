@@ -1,21 +1,18 @@
-# input must be invalid because no runtime error after handling invalid input
-
 def parse(movestr):
     moves = []
-    acc = ""
+    acc = ''
     for char in movestr:
         char = char.upper()
-        if char == "R" or char == "L":
-            if acc != "":
+        if char == 'R' or char == 'L':
+            if acc != '':
                 moves.append(int(acc))
-            acc = ""
+            acc = ''
             moves.append(char)
         elif char.isdigit():
             acc += char
         elif len(acc) > 0:
             moves.append(int(acc))
-            acc = ""
-
+            acc = ''
     if len(acc) > 0:
         moves.append(int(acc))
     return moves
@@ -23,65 +20,59 @@ def parse(movestr):
 
 def make_move(x, y, direc, dist):
     if direc == 0:
-        # north
         y += dist
     elif direc == 1:
-        # west
         x -= dist
     elif direc == 2:
-        # south
         y -= dist
     elif direc == 3:
-        # east
         x += dist
-    return x, y
+    return (x, y)
 
 
 def calc(moves):
-    x, y = 0, 0
+    (x, y) = (0, 0)
     direc = 0
     for move in moves:
-        if move == "L":
+        if move == 'L':
             direc = (direc + 1) % 4
-        elif move == "R":
+        elif move == 'R':
             direc = (direc - 1) % 4
         else:
-            x, y = make_move(x, y, direc, move)
-    return x, y
+            (x, y) = make_move(x, y, direc, move)
+    return (x, y)
 
 
 def string(dist):
     d = str(dist)
-    k = d.find(".")
+    k = d.find('.')
     return d[:k + 2]
 
 
 cases = int(input())
 for case in range(cases):
-    movestr = input().replace(" ", "")
+    movestr = input().replace(' ', '')
     moves = parse(movestr)
-    x, y = calc(moves)
-    dist = (x**2 + y**2)**0.5
-
+    (x, y) = calc(moves)
+    dist = (x ** 2 + y ** 2) ** 0.5
     if x == 0:
         if y == 0:
-            direc = ""
+            direc = ''
         elif y < 0:
-            direc = "S"
+            direc = 'S'
         else:
-            direc = "N"
+            direc = 'N'
     elif x < 0:
         if y == 0:
-            direc = "W"
+            direc = 'W'
         elif y < 0:
-            direc = "SW"
+            direc = 'SW'
         else:
-            direc = "NW"
+            direc = 'NW'
+    elif y == 0:
+        direc = 'E'
+    elif y < 0:
+        direc = 'SE'
     else:
-        if y == 0:
-            direc = "E"
-        elif y < 0:
-            direc = "SE"
-        else:
-            direc = "NE"
-    print("%s%s" % (string(dist), direc))
+        direc = 'NE'
+    print('%s%s' % (string(dist), direc))

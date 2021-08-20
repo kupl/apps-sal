@@ -1,19 +1,17 @@
 from sys import stdin
 n = int(stdin.readline())
 a = [int(x) for x in stdin.readline().split()]
-
 q = int(stdin.readline())
 
 
 def gcd(a, b):
     while a != 0:
-        a, b = b % a, a
+        (a, b) = (b % a, a)
     return b
 
 
 totals = {}
 new = {}
-
 for x in a[::-1]:
     old = new
     new = {}
@@ -32,8 +30,6 @@ for x in a[::-1]:
             totals[y] += new[y]
         else:
             totals[y] = new[y]
-
-
 for x in range(q):
     c = int(stdin.readline())
     if c in totals:

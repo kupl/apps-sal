@@ -3,7 +3,7 @@ import copy
 
 def right(a):
     d = a[1] - a[0]
-    res, f = 0, True
+    (res, f) = (0, True)
     for i in range(2, len(a)):
         if a[i] - a[i - 1] == d + 1:
             a[i] -= 1

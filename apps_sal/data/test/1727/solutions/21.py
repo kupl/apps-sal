@@ -2,7 +2,7 @@ n = int(input())
 x = [0] * n
 h = [0] * n
 for i in range(n):
-    x[i], h[i] = map(int, input().split())
+    (x[i], h[i]) = map(int, input().split())
 ans = min(n, 2)
 k = x[0]
 for i in range(1, n - 1):

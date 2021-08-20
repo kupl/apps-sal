@@ -1,4 +1,5 @@
 class Solution:
+
     @lru_cache(None)
     def winnerSquareGame(self, n: int) -> bool:
         if n == 0:

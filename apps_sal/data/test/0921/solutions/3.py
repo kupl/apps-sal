@@ -1,4 +1,4 @@
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 a = list(map(int, input().split()))
 b = []
 for i in range(n):
@@ -8,7 +8,7 @@ if w < 0:
     print(-1)
 else:
     while w > 0:
-        m = a[0], 0
+        m = (a[0], 0)
         for i in range(n):
             if a[i] > m[0]:
                 m = [a[i], i]

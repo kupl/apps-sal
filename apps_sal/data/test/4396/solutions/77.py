@@ -1,9 +1,8 @@
 N = int(input())
-
 JPY = 0
 BTC = 0
 for i in range(N):
-    a, b = input().split()
+    (a, b) = input().split()
     if b == 'JPY':
         JPY += float(a)
     else:

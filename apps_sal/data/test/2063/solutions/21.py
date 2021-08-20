@@ -1,5 +1,5 @@
-MAXN = 10**9 + 10**5
-n, m, w = map(int, input().split())
+MAXN = 10 ** 9 + 10 ** 5
+(n, m, w) = map(int, input().split())
 a = [*map(int, input().split())]
 
 

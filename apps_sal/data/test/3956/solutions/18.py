@@ -1,5 +1,5 @@
 mod = 998244353
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 
 
 def modinv(n):

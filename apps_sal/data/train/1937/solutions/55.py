@@ -17,7 +17,7 @@ class ThroneInheritance:
 
         def succeed(x, currentOrder):
             if x:
-                if len(self.g[x]) == 0 or all(i in currentOrder for i in self.g[x]):
+                if len(self.g[x]) == 0 or all((i in currentOrder for i in self.g[x])):
                     if x == self.ROOT:
                         return None
                     else:
@@ -27,7 +27,6 @@ class ThroneInheritance:
                         if i not in currentOrder:
                             return i
             return None
-
         st = [self.ROOT]
         currentOrder = set()
         while st[-1] not in currentOrder:
@@ -38,10 +37,3 @@ class ThroneInheritance:
                 st.append(nn)
         res = [i for i in st if i not in self.deathS]
         return res
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

@@ -1,4 +1,4 @@
-n, p, q = list(map(int, input().split(" ")))
+(n, p, q) = list(map(int, input().split(' ')))
 s = input()
 asdf = False
 for i in range(n // p + 1):

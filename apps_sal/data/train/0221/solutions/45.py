@@ -1,7 +1,8 @@
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
         n = len(S)
-        modulus = 2**32
+        modulus = 2 ** 32
         a = 26
         nums = [ord(c) - ord('a') for c in S]
 
@@ -18,14 +19,12 @@ class Solution:
                     return start
                 seen.add(h)
             return -1
-
-        l, r = 1, n
+        (l, r) = (1, n)
         while l <= r:
-            mid = (l + r) >> 1
+            mid = l + r >> 1
             if search(mid) != -1:
                 l = mid + 1
             else:
                 r = mid - 1
-
         start = search(r)
         return S[start:start + r]

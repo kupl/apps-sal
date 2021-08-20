@@ -1,6 +1,6 @@
 def subseq(s, b):
     h = iter(b)
-    return all(any(l == ch for l in h) for ch in s)
+    return all((any((l == ch for l in h)) for ch in s))
 
 
 t = input()
@@ -10,7 +10,7 @@ st = []
 l = 0
 r = len(num)
 ans = r + 1
-while (l <= r):
+while l <= r:
     mid = (l + r) // 2
     st = list(t)
     c = num[:mid]

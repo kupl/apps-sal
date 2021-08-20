@@ -1,7 +1,6 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # 先算每一对点的距离
-        # 最小生成树, union find
         edges = []
         n = len(points)
         if n == 1:

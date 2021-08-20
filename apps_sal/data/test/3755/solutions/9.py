@@ -1,9 +1,9 @@
 from collections import deque
 N = int(input())
 As = [int(i) for i in input().split()]
-neg_odd, neg_even = deque([]), deque([])
-S_odd, S_even = 0, 0
-for i, A in enumerate(As):
+(neg_odd, neg_even) = (deque([]), deque([]))
+(S_odd, S_even) = (0, 0)
+for (i, A) in enumerate(As):
     if i % 2 == 0:
         if A >= 0:
             S_even += A

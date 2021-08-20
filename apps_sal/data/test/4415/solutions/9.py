@@ -1,6 +1,5 @@
 N = int(input())
 A = sorted([int(a) for a in input().split()])
-
 pre = -1
 c = 0
 I = []
@@ -9,7 +8,7 @@ for i in range(N):
     if A[i] == pre:
         c += 1
         if c > 2:
-            print("NO")
+            print('NO')
             break
         D.append(A[i])
     else:
@@ -17,7 +16,7 @@ for i in range(N):
         pre = A[i]
         c = 1
 else:
-    print("YES")
+    print('YES')
     print(len(I))
     print(*I)
     print(len(D))

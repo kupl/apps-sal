@@ -13,5 +13,5 @@ def g(r, c):
     return (comb(r + c + 2, c + 1) - 1) % MOD
 
 
-r1, c1, r2, c2 = list(map(int, input().split()))
-print(((g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)) % MOD))
+(r1, c1, r2, c2) = list(map(int, input().split()))
+print((g(r2, c2) - g(r2, c1 - 1) - g(r1 - 1, c2) + g(r1 - 1, c1 - 1)) % MOD)

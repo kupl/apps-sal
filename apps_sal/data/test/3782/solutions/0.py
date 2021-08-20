@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
 import random
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -38,7 +46,7 @@ mod = 1000000007
 
 
 def solve():
-    n, k, q = LI()
+    (n, k, q) = LI()
     a = LI()
     b = [[a[i], i] for i in range(n)]
     b.sort()
@@ -63,8 +71,6 @@ def solve():
             ans = m
     print(ans)
     return
-
-# Solve
 
 
 def __starting_point():

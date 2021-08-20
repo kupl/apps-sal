@@ -1,13 +1,12 @@
 class Solution(object):
+
     def sumOfDistancesInTree(self, N, edges):
         if N == 0 or not edges:
             return [0]
-
         graph = {i: set() for i in range(N)}
-        for n1, n2 in edges:
+        for (n1, n2) in edges:
             graph[n1].add(n2)
             graph[n2].add(n1)
-
         count = [1] * N
         subSums = [0] * N
 
@@ -17,7 +16,6 @@ class Solution(object):
                 countSubTree(child, node)
                 count[node] += count[child]
                 subSums[node] += subSums[child] + count[child]
-
         countSubTree(0, None)
         result = [0] * N
         result[0] = subSums[0]

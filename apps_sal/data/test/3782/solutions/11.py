@@ -1,4 +1,4 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = list(map(int, input().split()))
 
 
@@ -23,8 +23,7 @@ def parse(b):
     return ret
 
 
-ans = 10**10
-
+ans = 10 ** 10
 for b in set(a):
     lis = parse(b)
     if len(lis) < q:
@@ -32,5 +31,4 @@ for b in set(a):
     lis.sort()
     ans_tmp = lis[q - 1] - lis[0]
     ans = min(ans, ans_tmp)
-
 print(ans)

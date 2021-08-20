@@ -3,7 +3,7 @@ def eq_sum_powdig(hMax, exp):
     for n in range(100, hMax + 1):
         product = 0
         for l in str(n):
-            product += int(l)**exp
+            product += int(l) ** exp
         if n == product:
             list.append(n)
     return list

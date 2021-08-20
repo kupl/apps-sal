@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 t = int(input())
 for _ in range(t):
@@ -21,16 +20,15 @@ for _ in range(t):
             flag = 0
             break
     if flag == 1:
-        print(int((n * (n + 1)) / 2))
+        print(int(n * (n + 1) / 2))
         continue
-
     for i in range(2, n):
         for j in range(0, n):
             nl = []
-            if (j + i) > n:
+            if j + i > n:
                 break
             s = sum(ind[j:j + i])
             f = min(ind[j:j + i])
-            if (s - i * f) == (int(((i - 1) * (i)) / 2)):
+            if s - i * f == int((i - 1) * i / 2):
                 count += 1
     print(count)

@@ -1,6 +1,6 @@
 T = int(input())
 for t in range(T):
-    a, b, c = sorted(map(int, input().strip().split()))
+    (a, b, c) = sorted(map(int, input().strip().split()))
     d = c - b
     v = a
     if d > a:

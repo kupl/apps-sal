@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     m = input()
     flag = False
     l = []
@@ -13,18 +13,16 @@ for _ in range(t):
                 flag = False
             else:
                 continue
+        elif m[i] == '0':
+            continue
         else:
-            if m[i] == '0':
-                continue
-            else:
-                flag = True
-                prev = i
+            flag = True
+            prev = i
     if flag:
         l.append((prev, len(m) - 1))
-    # print(l)
-    if(len(l) == 1):
+    if len(l) == 1:
         print(a)
-    elif (len(l) == 0):
+    elif len(l) == 0:
         print(0)
     else:
         ans = a

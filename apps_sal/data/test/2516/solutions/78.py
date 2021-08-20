@@ -1,5 +1,5 @@
 from collections import Counter
-N, P = list(map(int, input().split()))
+(N, P) = list(map(int, input().split()))
 S = input()
 ans = 0
 if P == 2 or P == 5:
@@ -19,5 +19,5 @@ else:
         c[t % P] += 1
         p %= P
     for a in list(c.values()):
-        ans += (a * (a - 1)) // 2
+        ans += a * (a - 1) // 2
 print(ans)

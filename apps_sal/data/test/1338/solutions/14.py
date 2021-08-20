@@ -1,5 +1,4 @@
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def gen(n, m, now):
@@ -12,5 +11,4 @@ def gen(n, m, now):
 
 
 p = 2 ** (n - 2)
-
 print(' '.join(map(str, gen(n, m, 1))))

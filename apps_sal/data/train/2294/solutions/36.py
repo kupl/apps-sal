@@ -1,15 +1,10 @@
 N = int(input())
-balls = sorted(tuple(sorted(map(int, input().split()))) for i in range(N))
-
-# Rmin=MIN, Bmax=MAX
+balls = sorted((tuple(sorted(map(int, input().split()))) for i in range(N)))
 maxmin = balls[-1][0]
 minmin = balls[0][0]
-maxmax = max(b[1] for b in balls)
-minmax = min(b[1] for b in balls)
-
+maxmax = max((b[1] for b in balls))
+minmax = min((b[1] for b in balls))
 v1 = (maxmin - minmin) * (maxmax - minmax)
-
-# Rmin=MIN, Rmax=MAX
 best = float('inf')
 cur_max = maxmin
 for b in balls:
@@ -18,7 +13,5 @@ for b in balls:
         break
     best = min(best, cur_max - b[0])
     cur_max = max(cur_max, b[1])
-
 v2 = (maxmax - minmin) * best
-
 print(min(v1, v2))

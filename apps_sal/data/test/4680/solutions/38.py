@@ -1,13 +1,16 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
     x = list(map(int, input().split()))
     if x.count(5) == 2 and x.count(7) == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

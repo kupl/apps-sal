@@ -13,7 +13,6 @@ class DinnerPlates:
         if not self.PQ:
             self.S.append([])
             heapq.heappush(self.PQ, len(self.S) - 1)
-
         tmp = heapq.heappop(self.PQ)
         self.M = max(self.M, tmp)
         self.S[tmp].append(val)
@@ -22,7 +21,7 @@ class DinnerPlates:
 
     def pop(self) -> int:
         tmp = self.M
-        while tmp > 0 and not self.S[tmp]:
+        while tmp > 0 and (not self.S[tmp]):
             tmp -= 1
         self.M = tmp
         if not self.S[tmp]:
@@ -38,10 +37,3 @@ class DinnerPlates:
             return self.S[index].pop()
         else:
             return -1
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

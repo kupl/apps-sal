@@ -15,7 +15,7 @@ for i in range(0, m):
         pass
     else:
         dict_red[list_t[i]] = list_t.count(list_t[i])
-for key, value in dict_blue.items():
+for (key, value) in dict_blue.items():
     if key in dict_red.keys():
         list_ans.append(value - dict_red[key])
     else:

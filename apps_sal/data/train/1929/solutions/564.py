@@ -8,7 +8,6 @@ class StreamChecker:
             self._insert(w)
             self._insert_reverse(w[::-1])
             self.max_size = max(self.max_size, len(w))
-
         self.q = collections.deque([], self.max_size)
         self.curr = self.tire
 
@@ -37,23 +36,15 @@ class StreamChecker:
                     return True
             else:
                 return False
-
         return False
 
     def query(self, letter: str) -> bool:
         self.q.append(letter)
-
         if letter in self.curr:
             self.curr = self.curr[letter]
             if '$' in self.curr:
                 return True
             else:
                 self.curr = self.tire
-
         w = [c for c in self.q]
         return self._search(w[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

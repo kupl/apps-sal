@@ -1,10 +1,10 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 L = list(range(2, 14)) + [1]
 a = L.index(x)
 b = L.index(y)
 if a > b:
-    print("Alice")
+    print('Alice')
 elif a == b:
-    print("Draw")
+    print('Draw')
 else:
-    print("Bob")
+    print('Bob')

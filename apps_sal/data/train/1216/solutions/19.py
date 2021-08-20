@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, X = (map(int, input().split(' ')))
+    (n, X) = map(int, input().split(' '))
     l = list(map(int, input().split(' ')))
     count = 0
     flag = 0

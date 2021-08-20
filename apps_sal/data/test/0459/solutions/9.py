@@ -12,20 +12,13 @@ def transform(T, a):
 def generate_transformation(delta):
     ans0 = [x for x in range(0, 24)]
     ans1 = [x for x in range(0, 24)]
-    for k, v in delta.items():
+    for (k, v) in delta.items():
         ans0[k - 1] = v - 1
         ans1[v - 1] = k - 1
     return (ans0, ans1)
 
 
-facegroup = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16],
-    [17, 18, 19, 20],
-    [21, 22, 23, 24]
-]
+facegroup = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16], [17, 18, 19, 20], [21, 22, 23, 24]]
 
 
 def check_done(facegroup, faces):
@@ -43,9 +36,7 @@ td = {15: 7, 16: 8, 7: 19, 8: 20, 19: 23, 20: 24, 23: 15, 24: 16, 9: 10, 10: 12,
 tf = {5: 6, 6: 7, 7: 8, 8: 6, 14: 9, 16: 10, 9: 19, 10: 17, 19: 4, 17: 3, 4: 14, 3: 16}
 tb = {23: 21, 21: 22, 22: 24, 24: 23, 2: 13, 1: 15, 13: 11, 15: 12, 11: 20, 12: 18, 20: 2, 18: 1}
 t = [tl, tr, tt, td, tf, tb]
-
 ok = False
-
 for trans in t:
     (u, v) = generate_transformation(trans)
     if check_done(facegroup, transform(u, original)):
@@ -54,8 +45,7 @@ for trans in t:
     if check_done(facegroup, transform(v, original)):
         ok = True
         break
-
 if ok:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

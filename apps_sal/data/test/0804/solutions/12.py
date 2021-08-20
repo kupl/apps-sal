@@ -1,6 +1,5 @@
 string = input()
 k = int(input())
-
 if k > len(string):
     print('impossible')
 else:

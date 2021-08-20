@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 for i in range(q):
     s = list(map(int, input().split()))
@@ -10,7 +10,7 @@ for i in range(q):
         while True:
             if j >= len(l):
                 break
-            if l[j] > val and j - ind <= 100 and jump > 0:
+            if l[j] > val and j - ind <= 100 and (jump > 0):
                 val = l[j]
                 jump -= 1
                 ind = j

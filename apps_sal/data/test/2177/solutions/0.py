@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     b = -1
     B += 1
     while B:

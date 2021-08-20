@@ -6,11 +6,6 @@ def product(l):
         return None
     if 0 in l:
         return 0
-#     l=sorted(l)
-#     if len(l)<20:
-#         print(l)
-#     if len(l)>20:
-#         print(len(l))
     if len(l) == 1:
         return l[0]
     p = 1

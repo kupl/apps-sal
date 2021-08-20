@@ -7,7 +7,7 @@ def main():
         height = 0
         bottom = 0
         for c in s:
-            if c == "(":
+            if c == '(':
                 height += 1
             else:
                 height -= 1
@@ -19,21 +19,21 @@ def main():
     up_lines.sort(reverse=True, key=lambda line: line[0])
     down_lines.sort(reverse=True, key=lambda line: line[0])
     left = 0
-    for bottom, height in up_lines:
+    for (bottom, height) in up_lines:
         if left + bottom < 0:
-            print("No")
+            print('No')
             return
         left += height
     right = 0
-    for bottom, height in down_lines:
+    for (bottom, height) in down_lines:
         if right + bottom < 0:
-            print("No")
+            print('No')
             return
         right += height
     if left == right:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

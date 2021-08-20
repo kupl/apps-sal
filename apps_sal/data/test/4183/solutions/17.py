@@ -5,7 +5,7 @@ t = [int(input()) for _ in range(n)]
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):

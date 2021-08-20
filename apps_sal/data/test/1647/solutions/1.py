@@ -33,13 +33,11 @@ def same(x, y):
 rec = []
 num = 0
 for i in range(n):
-    a, b = ord(v[i]) - ord("a"), ord(t[i]) - ord("a")
-
+    (a, b) = (ord(v[i]) - ord('a'), ord(t[i]) - ord('a'))
     if not same(a - 1, b - 1):
         unite(a - 1, b - 1)
         rec.append((v[i], t[i]))
         num += 1
-
 print(num)
-for p, q in rec:
+for (p, q) in rec:
     print(p, q)

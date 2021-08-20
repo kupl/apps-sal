@@ -15,5 +15,5 @@ for each in tree:
 tree.sort(key=len)
 for each in tree:
     sub = list(map(lambda x: q[x - 1], each[1:]))
-    count += (1 - sub.count(q[each[0] - 1]))
+    count += 1 - sub.count(q[each[0] - 1])
 print(count)

@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 clock = list(map(int, input().split()))
 clock.sort()
 unlock = [1] * n

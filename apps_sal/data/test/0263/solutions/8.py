@@ -1,4 +1,4 @@
-n, m = int(input()), int(input())
+(n, m) = (int(input()), int(input()))
 a = []
 for i in range(n):
     a.append(int(input()))

@@ -1,4 +1,3 @@
-# stdin = open("testdata.txt", "r")
 from sys import stdin
 
 
@@ -7,21 +6,18 @@ def input():
 
 
 t = int(input())
-
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     weight = list(map(int, input().split()))
-    # print(weight)
     edges = [(i, (i + 1) % n) for i in range(n)]
-    edges.sort(key=lambda x: (weight[x[0]] + weight[x[1]]))
-    total = sum(weight[u] + weight[v] for u, v in edges)
-    # print(edges)
+    edges.sort(key=lambda x: weight[x[0]] + weight[x[1]])
+    total = sum((weight[u] + weight[v] for (u, v) in edges))
     if m < n:
         print(-1)
     elif n == 2:
         print(-1)
     else:
-        u, v = edges[0]
+        (u, v) = edges[0]
         total += (weight[u] + weight[v]) * (m - n)
         print(total)
         for i in range(n):

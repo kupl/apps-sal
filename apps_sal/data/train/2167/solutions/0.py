@@ -1,30 +1,30 @@
 def read_data():
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     As = list(map(int, input().split()))
     LRs = []
     for i in range(q):
-        L, R = list(map(int, input().split()))
+        (L, R) = list(map(int, input().split()))
         LRs.append((L, R))
-    return n, q, As, LRs
+    return (n, q, As, LRs)
 
 
 def solve(n, q, As, LRs):
     difs = calc_difs(As)
     Ls = get_Ls(difs)
     Rs = get_Rs_allow_ties(difs)
-    for L, R in LRs:
+    for (L, R) in LRs:
         print(calc(L - 1, R - 2, Ls, Rs, difs))
 
 
 def calc_difs(As):
-    difs = [abs(a0 - a1) for a0, a1 in zip(As, As[1:])]
+    difs = [abs(a0 - a1) for (a0, a1) in zip(As, As[1:])]
     return difs
 
 
 def get_Ls(Vs):
     L = []
     st = []
-    for i, v in enumerate(Vs):
+    for (i, v) in enumerate(Vs):
         while st and Vs[st[-1]] < v:
             st.pop()
         if st:
@@ -38,7 +38,7 @@ def get_Ls(Vs):
 def get_Ls_allow_ties(Vs):
     L = []
     st = []
-    for i, v in enumerate(Vs):
+    for (i, v) in enumerate(Vs):
         while st and Vs[st[-1]] <= v:
             st.pop()
         if st:
@@ -72,5 +72,5 @@ def calc(L, R, Ls, Rs, difs):
     return ans
 
 
-n, q, As, LRs = read_data()
+(n, q, As, LRs) = read_data()
 solve(n, q, As, LRs)

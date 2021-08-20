@@ -17,4 +17,4 @@ for ii in range(0, 100):
         else:
             r = mid
 if not succ:
-    print("-1")
+    print('-1')

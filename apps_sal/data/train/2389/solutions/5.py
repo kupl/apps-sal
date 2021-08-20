@@ -1,10 +1,10 @@
 from sys import stdin, stdout
 input = stdin.readline
 for _ in range(int(input())):
-    x = 10**5
-    n, k = list(map(int, input().split()))
+    x = 10 ** 5
+    (n, k) = list(map(int, input().split()))
     s = input()
-    a = 10**9
+    a = 10 ** 9
     ans = [[0] * n for i in range(3)]
     curr = ['R', 'G', 'B']
     for l in range(3):
@@ -23,5 +23,4 @@ for _ in range(int(input())):
     for l in range(3):
         for j in range(1, n - k + 2):
             a = min(a, ans[l][j + k - 1] - ans[l][j - 1])
-   # print(ans)
     print(a)

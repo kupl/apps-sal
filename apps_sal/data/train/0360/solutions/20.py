@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def helper(c):
             s = 0
             d = 1

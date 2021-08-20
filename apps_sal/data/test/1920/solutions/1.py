@@ -7,11 +7,10 @@ for i in range(n):
     tmp[1] = int(tmp[1])
     tmp[2] = int(tmp[2])
     ppl.append(tmp)
-
 ans = 0
 for day in range(1, 367):
     for p in ppl:
-        gender, a, b = p
+        (gender, a, b) = p
         if a <= day <= b:
             if gender == 'M':
                 m[day] += 1

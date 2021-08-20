@@ -1,6 +1,6 @@
 def prime_table(n):
     arr = [True] * (n + 1)
-    arr[0], arr[1] = False, False
+    (arr[0], arr[1]) = (False, False)
     for i in range(2, N + 1):
         if not arr[i]:
             continue
@@ -11,7 +11,7 @@ def prime_table(n):
     return arr
 
 
-N = 10**5
+N = 10 ** 5
 pt = prime_table(N)
 cum = [0] * (N + 1)
 for i in range(1, N + 1, 2):
@@ -22,6 +22,6 @@ for i in range(1, N + 1):
 Q = int(input())
 ans = []
 for _ in range(Q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ans.append(cum[r] - cum[l - 1])
-print(*ans, sep="\n")
+print(*ans, sep='\n')

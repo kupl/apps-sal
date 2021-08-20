@@ -2,7 +2,6 @@ t = int(input())
 for i in range(t):
     n = int(input())
     a = set(map(int, input().split()))
-    # print(a)
     even_numbers = {x for x in a if x % 2 == 0}
     used_numbers = set()
     k = 0

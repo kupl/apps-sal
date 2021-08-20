@@ -1,9 +1,6 @@
-#! /usr/bin/env python3
-
 def main():
     input()
     nums = map(int, input().split())
-
     nums = sorted(nums)
     length = len(nums)
     count = 0
@@ -19,7 +16,6 @@ def main():
                 count += 1
                 last_num = nums[j]
                 nums[j] = None
-
     print(count)
 
 

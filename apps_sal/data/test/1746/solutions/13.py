@@ -1,6 +1,5 @@
 from itertools import permutations
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def main():
@@ -15,12 +14,11 @@ def main():
         leafs_cnt[parent[i]] += is_leaf[i]
     for i in range(n):
         if not is_leaf[i] and leafs_cnt[i] < 3:
-            print("No")
+            print('No')
             return
-    print("Yes")
+    print('Yes')
 
 
 while 1:
     main()
     break
-# input()

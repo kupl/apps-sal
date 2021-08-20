@@ -1,5 +1,5 @@
 mi = -100000000000
-dp = [[mi] * (505) for i in range(505)]
+dp = [[mi] * 505 for i in range(505)]
 
 
 def steps(i, j, lis1, lis2):
@@ -18,13 +18,13 @@ def steps(i, j, lis1, lis2):
             best = max(lis1[_] * lis2[j], best)
         dp[i][j] = best
         return best
-
     best = max(steps(i - 1, j, lis1, lis2), steps(i, j - 1, lis1, lis2), lis1[i] * lis2[j] + steps(i - 1, j - 1, lis1, lis2), lis1[i] * lis2[j])
     dp[i][j] = best
     return dp[i][j]
 
 
 class Solution:
+
     def maxDotProduct(self, lis1: List[int], lis2: List[int]) -> int:
         n = len(lis1)
         m = len(lis2)

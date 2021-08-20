@@ -2,6 +2,7 @@ import heapq
 
 
 class Solution:
+
     def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
         point = 0
         level = 0
@@ -10,7 +11,7 @@ class Solution:
             return level
         heap = []
         stations.append([target + 1, float('inf')])
-        for pos, gas_add in stations:
+        for (pos, gas_add) in stations:
             if gas >= pos:
                 heapq.heappush(heap, -gas_add)
             else:

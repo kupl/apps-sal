@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, A: List[int], target: int) -> int:
         A.sort()
         l = 0

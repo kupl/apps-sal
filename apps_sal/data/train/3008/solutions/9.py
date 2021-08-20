@@ -1,6 +1,6 @@
 def sort_array(value):
     lst = []
-    str = ""
+    str = ''
     for i in value:
         lst.append(i)
         lst.sort()

@@ -2,22 +2,18 @@ import itertools
 import os
 import sys
 from collections import deque, defaultdict
-
-if os.getenv("LOCAL"):
-    sys.stdin = open("_in.txt", "r")
-
+if os.getenv('LOCAL'):
+    sys.stdin = open('_in.txt', 'r')
 sys.setrecursionlimit(2147483647)
-INF = float("inf")
+INF = float('inf')
 IINF = 10 ** 18
 MOD = 10 ** 9 + 7
-
-H, W = list(map(int, sys.stdin.readline().split()))
+(H, W) = list(map(int, sys.stdin.readline().split()))
 table = [list(sys.stdin.readline().rstrip()) for _ in range(H)]
-
 S = H + W
 T = H + W + 1
 graph = [[] for _ in range(H + W + 2)]
-for h, w in itertools.product(list(range(H)), list(range(W))):
+for (h, w) in itertools.product(list(range(H)), list(range(W))):
     if table[h][w] == '.':
         continue
     if table[h][w] == 'S':
@@ -31,12 +27,13 @@ for h, w in itertools.product(list(range(H)), list(range(W))):
 
 
 class Dinic:
+
     def __init__(self, graph=None, residual=None):
         """
         :param list of (list of (int, int)) graph: (to, cap) の隣接リスト
         :param list of (list of (list of (int|list))) residual: (to, cap, rev) の残余グラフ
         """
-        assert (graph and not residual) or (not graph and residual)
+        assert graph and (not residual) or (not graph and residual)
         if graph:
             self.graph = self.residual_graph(graph)
         else:
@@ -52,7 +49,7 @@ class Dinic:
         """
         ret = [[] for _ in range(len(graph))]
         for v in range(len(graph)):
-            for u, cap in graph[v]:
+            for (u, cap) in graph[v]:
                 rev = [v, 0]
                 edge = [u, cap, rev]
                 rev.append(edge)
@@ -70,8 +67,8 @@ class Dinic:
         ret[s] = 0
         que = deque([(s, 0)])
         while que:
-            v, d = que.popleft()
-            for u, cap, _ in self.graph[v]:
+            (v, d) = que.popleft()
+            for (u, cap, _) in self.graph[v]:
                 if ret[u] < 0 < cap:
                     ret[u] = d + 1
                     que.append((u, d + 1))
@@ -89,7 +86,7 @@ class Dinic:
             return flow
         while iter[s] < len(self.graph[s]):
             edge = self.graph[s][iter[s]]
-            to, cap, rev = edge
+            (to, cap, rev) = edge
             if dist[s] < dist[to] and cap > 0:
                 f = self._dfs(to, t, dist, iter, min(flow, cap))
                 if f > 0:
@@ -121,6 +118,6 @@ class Dinic:
 
 mf = Dinic(graph=graph).maximum_flow(S, T)
 if mf >= IINF:
-    print((-1))
+    print(-1)
 else:
     print(mf)

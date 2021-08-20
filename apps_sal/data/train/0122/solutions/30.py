@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         length = len(cardPoints)
         total = sum(cardPoints)
@@ -15,5 +16,4 @@ class Solution:
             temp = min(temp, curr)
             curr -= cardPoints[left]
             left += 1
-
         return total - temp

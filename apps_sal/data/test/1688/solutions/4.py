@@ -3,7 +3,8 @@ reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
 
-class Binary_Indexed_Tree():
+class Binary_Indexed_Tree:
+
     def __init__(self, n):
         self.n = n
         self.data = [0] * (n + 1)
@@ -30,7 +31,7 @@ class Binary_Indexed_Tree():
         if w <= 0:
             return 0
         i = 0
-        k = 1 << (self.n.bit_length())
+        k = 1 << self.n.bit_length()
         while k:
             if i + k <= self.n and self.data[i + k] < w:
                 w -= self.data[i + k]
@@ -40,14 +41,15 @@ class Binary_Indexed_Tree():
 
 
 class RangeMinimumQuery:
-    def __init__(self, n, func=min, inf=float("inf")):
-        self.n0 = 2**(n - 1).bit_length()
+
+    def __init__(self, n, func=min, inf=float('inf')):
+        self.n0 = 2 ** (n - 1).bit_length()
         self.op = func
         self.inf = inf
         self.data = [self.inf] * (2 * self.n0)
 
     def construct(self, lis):
-        for i, x in enumerate(lis):
+        for (i, x) in enumerate(lis):
             self.data[i + self.n0 - 1] = x
         for i in range(self.n0 - 2, -1, -1):
             self.data[i] = self.op(self.data[2 * i + 1], self.data[2 * i + 2])
@@ -74,13 +76,12 @@ a = [i * 2 for i in a]
 BIT = Binary_Indexed_Tree(2 * n)
 RMQ = RangeMinimumQuery(2 * n)
 RMQ.construct(a + a)
-
-b = [[j, i] for i, j in enumerate(a)]
+b = [[j, i] for (i, j) in enumerate(a)]
 b.sort(reverse=True)
 ans = [0] * n
-for j, i in b:
+for (j, i) in b:
     cnt = BIT.sum(2 * n - i)
-    tmp = float("inf")
+    tmp = float('inf')
     if cnt:
         p = 2 * n - BIT.lower_bound(cnt)
         tmp = p - i + ans[p % n]
@@ -97,5 +98,5 @@ for j, i in b:
                 left = mid
         tmp = min(tmp, right - i - 1)
     ans[i] = tmp
-ans = [i if i != float("inf") else -1 for i in ans]
+ans = [i if i != float('inf') else -1 for i in ans]
 print(*ans)

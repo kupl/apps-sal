@@ -1,12 +1,12 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         bus_dic = defaultdict(set)
-        for i, r in enumerate(routes):
+        for (i, r) in enumerate(routes):
             for s in r:
                 bus_dic[s].add(i)
-
         seen = {S}
         av_bus = bus_dic[S]
         for bus in bus_dic[S]:

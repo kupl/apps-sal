@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheDifference(self, s, t):
         """
         :type s: str
@@ -18,5 +19,5 @@ class Solution:
             else:
                 t_map[char] = 1
         for char in t_map:
-            if (char not in s_map) or (t_map[char] > s_map[char]):
+            if char not in s_map or t_map[char] > s_map[char]:
                 return char

@@ -1,4 +1,5 @@
 class Solution:
+
     def toGoatLatin(self, S: str) -> str:
         result = ''
         vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
@@ -22,9 +23,7 @@ class Solution:
             if maAppend == '' and (not c in vowel):
                 maAppend = c + 'ma'
                 continue
-
             newWord += c
         if lastC != ' ':
             result += newWord + maAppend + aAppend
-
         return result

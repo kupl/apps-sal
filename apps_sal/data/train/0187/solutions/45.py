@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         q = 0
         profit = 0
@@ -15,7 +16,6 @@ class Solution:
             if ans < profit:
                 ans = profit
                 res = index
-
         while q > 0:
             board = q if q < 4 else 4
             q -= board
@@ -25,5 +25,4 @@ class Solution:
             if ans < profit:
                 ans = profit
                 res = index
-
         return res

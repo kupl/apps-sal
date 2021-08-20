@@ -1,8 +1,7 @@
-#КОДФОРСЫ, УРА
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
-if (a[0] == 1):
+if a[0] == 1:
     a[0] = 0
 else:
     a[0] = 2

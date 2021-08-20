@@ -1,7 +1,6 @@
 S = input()
 T = input()
-
 if T[:-1] == S:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 l = input()
 wyn = 0
 for i in range(n):

@@ -10,11 +10,11 @@ for _ in range(int(input())):
             i = i + 1
         c = 0
         for i in range(len(l) // 2):
-            if l[2 * i] == "H" and l[(2 * i) + 1] == "T":
+            if l[2 * i] == 'H' and l[2 * i + 1] == 'T':
                 c += 2
         if c == len(l):
-            print("Valid")
+            print('Valid')
         else:
-            print("Invalid")
+            print('Invalid')
     else:
-        print("Invalid")
+        print('Invalid')

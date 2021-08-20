@@ -1,4 +1,4 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 
 
 def is_ok(arg):
@@ -15,4 +15,4 @@ def meguru(ng, ok):
     return ok
 
 
-print(meguru(10**9 + 1, 0))
+print(meguru(10 ** 9 + 1, 0))

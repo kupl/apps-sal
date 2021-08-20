@@ -1,21 +1,17 @@
 def main():
-    s, t = input(), input()
-    s_info, t_info = fast_counter(s), fast_counter(t)
-
+    (s, t) = (input(), input())
+    (s_info, t_info) = (fast_counter(s), fast_counter(t))
     queries = int(input())
     answer = ''
     for _ in range(queries):
-        l1, r1, l2, r2 = list(map(int, input().split()))
-        l1, l2 = l1 - 1, l2 - 1
-
+        (l1, r1, l2, r2) = list(map(int, input().split()))
+        (l1, l2) = (l1 - 1, l2 - 1)
         from_mask = (s_info[1][r1] - s_info[1][l1], min(r1 - l1, s_info[0][r1]))
         to_mask = (t_info[1][r2] - t_info[1][l2], min(r2 - l2, t_info[0][r2]))
-
         if can_transform(from_mask, to_mask):
             answer += '1'
         else:
             answer += '0'
-
     print(answer)
 
 
@@ -39,7 +35,7 @@ def mask(l, r, info):
 
 
 def fast_counter(s):
-    a_last, b_count = [0], [0]
+    (a_last, b_count) = ([0], [0])
     for c in s:
         if c == 'A':
             a_last.append(a_last[-1] + 1)

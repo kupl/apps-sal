@@ -2,7 +2,7 @@ import re
 
 
 def increment_string(s):
-    number = re.findall(r'\d+', s)
+    number = re.findall('\\d+', s)
     if number:
         s_number = number[-1]
         s = s.rsplit(s_number, 1)[0]

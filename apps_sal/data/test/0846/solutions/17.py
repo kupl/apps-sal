@@ -1,5 +1,5 @@
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     bottoms = list(map(int, input().split()))
     lamps = [[0] * N][0]
     for i in range(M):

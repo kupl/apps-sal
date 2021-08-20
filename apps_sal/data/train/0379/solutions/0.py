@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         d2 = {nums2[i]: i for i in range(len(nums2))}
         _nums1 = []
         _nums2 = []
-        prev_i, prev_j = 0, 0
+        (prev_i, prev_j) = (0, 0)
         for i in range(len(nums1)):
             if nums1[i] in d2:
                 _nums1.append(sum(nums1[prev_i:i]))
@@ -20,4 +21,4 @@ class Solution:
         ans = 0
         for i in range(n):
             ans += max(_nums1[i], _nums2[i])
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

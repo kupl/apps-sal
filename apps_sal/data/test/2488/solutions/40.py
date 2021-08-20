@@ -1,19 +1,16 @@
 from collections import deque
-N, D, A = map(int, input().split())
+(N, D, A) = map(int, input().split())
 X = [0] * N
 for i in range(N):
-    x, h = map(int, input().split())
+    (x, h) = map(int, input().split())
     X[i] = (x, h)
 X = sorted(X)
-
-
 q = deque()
-
 ans = 0
 total = 0
 for i in range(N):
-    x, h = X[i]
-    while (len(q) > 0 and q[0][0] < x):
+    (x, h) = X[i]
+    while len(q) > 0 and q[0][0] < x:
         total -= q[0][1]
         q.popleft()
     h -= total

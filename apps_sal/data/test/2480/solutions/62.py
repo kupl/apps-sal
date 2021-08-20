@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = [0] + list(map(int, input().split()))
 for i in range(n):
     a[i + 1] += a[i]

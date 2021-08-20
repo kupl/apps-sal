@@ -6,4 +6,4 @@ elif N < 100:
 elif N < 1000:
     print(3)
 else:
-    print("More than 3 digits")
+    print('More than 3 digits')

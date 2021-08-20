@@ -3,7 +3,7 @@ import math
 
 def find_interleavings_2(a, b, i, j):
     try:
-        return lev_memo[(i, j)]
+        return lev_memo[i, j]
     except KeyError:
         pass
     to_return = []
@@ -20,20 +20,18 @@ def find_interleavings_2(a, b, i, j):
             to_return.append([b[j]] + leaf)
         for leaf in find_interleavings_2(a, b, i + 1, j):
             to_return.append([a[i]] + leaf)
-    lev_memo[(i, j)] = to_return
+    lev_memo[i, j] = to_return
     return to_return
 
 
 for _ in range(int(input())):
-    n, m, k = list(map(int, input().split(" ")))
-    a = list(map(int, input().split(" ")))
-    b = list(map(int, input().split(" ")))
+    (n, m, k) = list(map(int, input().split(' ')))
+    a = list(map(int, input().split(' ')))
+    b = list(map(int, input().split(' ')))
     res = 0
-
     lev_memo = dict()
     ils = find_interleavings_2(a, b, 0, 0)
     ils = [tuple(x) for x in ils]
-    # print(ils)
     memo = dict()
     for c in ils:
         try:
@@ -47,11 +45,9 @@ for _ in range(int(input())):
             if i != prev:
                 num_blocks += 1
             prev = i
-        # num_blocks += 1
         if num_blocks == k:
             res += 1
             memo[c] = 1
         else:
             memo[c] = 0
-
     print(res)

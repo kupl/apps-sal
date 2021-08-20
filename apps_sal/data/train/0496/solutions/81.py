@@ -1,6 +1,6 @@
 class Solution:
-    def minIncrementForUnique(self, A: List[int]) -> int:
 
+    def minIncrementForUnique(self, A: List[int]) -> int:
         n = {}
 
         def find(x):

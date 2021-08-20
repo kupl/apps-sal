@@ -5,7 +5,7 @@ def count_inversions(collection):
     for i in range(lenghts - 1):
         for j in range(lenghts - i - 1):
             if collection[j] > collection[j + 1]:
-                collection[j], collection[j + 1] = collection[j + 1], collection[j]
+                (collection[j], collection[j + 1]) = (collection[j + 1], collection[j])
                 swapped = True
                 swapped_counter += 1
         if not swapped:

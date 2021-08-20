@@ -1,4 +1,4 @@
-z, r = list(map(int, input().split()))
+(z, r) = list(map(int, input().split()))
 a = []
 cnt = 0
 for i in range(z):
@@ -21,4 +21,3 @@ for i in range(len(a)):
         if j >= a[i][0] and j + a[i][1] >= 0:
             dp[i][j] = max(dp[i][j], dp[i - 1][j + a[i][1]] + 1)
 print(cnt + dp[len(a) - 1][r])
-#print(dp, a)

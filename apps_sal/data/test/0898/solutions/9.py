@@ -1,7 +1,8 @@
 def main():
     import sys
 
-    def input(): return sys.stdin.readline().rstrip()
+    def input():
+        return sys.stdin.readline().rstrip()
 
     def divisor(m):
         arr = [1, m]
@@ -14,8 +15,7 @@ def main():
             i += 1
         arr.sort()
         return arr
-
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = divisor(m)
     for x in a:
         if x >= n:

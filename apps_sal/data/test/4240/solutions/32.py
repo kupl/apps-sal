@@ -7,6 +7,6 @@ for i in range(len(s)):
         k = 1
         break
 if k == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

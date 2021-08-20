@@ -8,7 +8,7 @@ def min_length_num(num_dig, ord_max):
         else:
             s = 0
             for i in range(1, n):
-                s += i**(n - i)
+                s += i ** (n - i)
             r.append(s)
         if len(str(s)) == num_dig:
             return [True, n]

@@ -11,8 +11,6 @@ while a:
     else:
         ans += [a]
         a = 0
-
-print(len(ans), end=" ")
-
+print(len(ans), end=' ')
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

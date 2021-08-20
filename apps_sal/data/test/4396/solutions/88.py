@@ -1,7 +1,7 @@
 n = int(input())
 ans = 0
 for _ in range(n):
-    v, t = input().split()
+    (v, t) = input().split()
     if t == 'JPY':
         ans += int(v)
     else:

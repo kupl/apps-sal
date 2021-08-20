@@ -6,5 +6,4 @@ def diamonds_and_toads(sentence, fairy):
     elif fairy == 'evil':
         res['python'] = sentence.count('p') + sentence.count('P') * 2
         res['squirrel'] = sentence.count('s') + sentence.count('S') * 2
-
     return res

@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         n = len(arr)
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         ans = 0
         p = [0] * (n + 1)
         counter = Counter([0])

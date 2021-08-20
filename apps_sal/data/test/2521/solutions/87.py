@@ -1,5 +1,4 @@
 import heapq
-
 n = int(input())
 a1 = []
 b1 = []
@@ -18,7 +17,6 @@ suma = [sum(a1)]
 sumb = [sum(b1)]
 heapq.heapify(a1)
 heapq.heapify(b1)
-
 for i in range(0, n):
     heapq.heappush(a1, a2[i])
     k = heapq.heappop(a1)
@@ -29,7 +27,6 @@ for i in range(0, n):
     k = heapq.heappop(b1)
     l = sumb[-1]
     sumb.append(l + b2[i] - k)
-
 ma = -1000000000000000
 for i in range(n + 1):
     ma = max(ma, suma[i] + sumb[-i - 1])

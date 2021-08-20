@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def numSplits(self, s: str) -> int:
         left_counts = {s[0]: 1}
         right_counts = Counter(s[1:])

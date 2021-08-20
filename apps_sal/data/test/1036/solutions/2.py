@@ -7,13 +7,12 @@ def win(x, y):
         return 'S'
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(input()[::-1]) * 2
-
 for _ in range(k):
     tmp = []
     while s:
-        i, j = s.pop(), s.pop()
+        (i, j) = (s.pop(), s.pop())
         tmp.append(win(i, j))
     s = tmp[::-1] * 2
-print((s.pop()))
+print(s.pop())

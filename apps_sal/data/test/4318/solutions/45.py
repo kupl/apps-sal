@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-
-# input = stdin.readline
-
-
 def main():
     N = int(input())
     h = list(map(int, input().split()))

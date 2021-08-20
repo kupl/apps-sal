@@ -3,7 +3,7 @@ def woow(l, oned):
         return False
     else:
         for i in range(2, len(l) - 1):
-            if (l.count(i) > oned):
+            if l.count(i) > oned:
                 lm = l.count(i) // i
                 for tp in range(1, lm):
                     if i + tp in l:
@@ -17,6 +17,6 @@ for tcc in range(1, tc + 1):
     oned = int(input())
     l = list(map(int, input().split()))
     if woow(l, oned) == True:
-        print("Possible")
+        print('Possible')
     else:
-        print("Impossible")
+        print('Impossible')

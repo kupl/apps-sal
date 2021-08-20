@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    a, k = map(int, input().split())
+    (a, k) = map(int, input().split())
     while '0' not in str(a) and k > 1:
         mi = 10
         ma = -1

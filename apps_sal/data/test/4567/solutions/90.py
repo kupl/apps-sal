@@ -1,8 +1,8 @@
-'''
+"""
 Created on 2020/10/01
 
 @author: harurun
-'''
+"""
 import sys
 pin = sys.stdin.readline
 

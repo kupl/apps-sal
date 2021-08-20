@@ -10,10 +10,10 @@ def get_min(p, l, r, x):
         return False
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 p = list(map(int, input().split()))
 for _ in range(m):
-    l, r, x = map(int, input().split())
+    (l, r, x) = map(int, input().split())
     if x <= r and x >= l:
         if get_min(p, l, r, x):
             print('Yes')

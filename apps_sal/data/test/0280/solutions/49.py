@@ -1,17 +1,11 @@
 import itertools
 import bisect
-
-N, M = [int(n) for n in input().split()]
+(N, M) = [int(n) for n in input().split()]
 W = [int(n) for n in input().split()]
-bridges = [[int(n) for n in input().split()] for _ in range(M)]  # [length_i, weight_i]
-
-# sort by weight
+bridges = [[int(n) for n in input().split()] for _ in range(M)]
 bridges.sort(key=lambda x: x[1])
-
-limits = [v for l, v in bridges]
-len_rm = list(itertools.accumulate([l for l, v in bridges], max))  # running maximum
-# len_rm[i]: the maximum length of the bridges whose load limit <= limits[i]
-
+limits = [v for (l, v) in bridges]
+len_rm = list(itertools.accumulate([l for (l, v) in bridges], max))
 ans = -1
 if max(W) <= min(limits):
     for W_perm in itertools.permutations(W):
@@ -19,21 +13,18 @@ if max(W) <= min(limits):
         for i in range(N):
             w_ij = W_perm[i]
             for j in range(i + 1, N):
-                w_ij += W_perm[j]  # w_ij: total weight between i and j (inclusive)
+                w_ij += W_perm[j]
                 idx = bisect.bisect_left(limits, w_ij)
-                if idx == 0:  # all bridge accepts w_ij
+                if idx == 0:
                     x_ij = 0
-                else:  # bridges[0] ... bridges[i-1] cannot accept w_ij
+                else:
                     x_ij = len_rm[idx - 1]
                 lengths[j] = max(lengths[j], lengths[i] + x_ij)
-
                 if idx == M:
                     break
-
         candidate = lengths[-1]
         if ans == -1:
             ans = candidate
         else:
             ans = min(ans, candidate)
-
 print(ans)

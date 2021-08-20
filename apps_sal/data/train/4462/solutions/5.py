@@ -6,7 +6,6 @@ def adjacent_element_product(array):
             sum *= array[e] * array[e + 1]
             new_list.append(sum)
             sum = 1
-
         elif e in range(1, len(array) - 1):
             sum *= array[e - 1] * array[e]
             new_list.append(sum)
@@ -14,8 +13,6 @@ def adjacent_element_product(array):
             sum *= array[e + 1] * array[e]
             new_list.append(sum)
             sum = 1
-
         else:
             sum *= array[e] * array[e - 1]
-
     return max(new_list)

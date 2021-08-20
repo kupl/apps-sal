@@ -1,4 +1,4 @@
-table = str.maketrans("abcdefghijklmnopqrstuvwxyz", "bcdEfghIjklmnOpqrstUvwxyzA")
+table = str.maketrans('abcdefghijklmnopqrstuvwxyz', 'bcdEfghIjklmnOpqrstUvwxyzA')
 
 
 def changer(stg):

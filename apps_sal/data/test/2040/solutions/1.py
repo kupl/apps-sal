@@ -4,7 +4,7 @@ n = int(input())
 def get_sum(x):
     result = 0
     while x > 0:
-        d, m = divmod(x, 10)
+        (d, m) = divmod(x, 10)
         result += m
         x = d
     return result
@@ -15,7 +15,7 @@ def dec(x):
     t = x
     mult = 1
     while True:
-        d, m = divmod(x, 10)
+        (d, m) = divmod(x, 10)
         if m != 0:
             return t + (10 - m) * mult
         x = d
@@ -40,7 +40,7 @@ def get_next(prev_x, prev_sum, sum):
                 s += chr(a + ord('0'))
             required -= a
             i += 1
-        x = int("".join(reversed(s)))
+        x = int(''.join(reversed(s)))
         if x != t:
             return x
         prev_x = dec(prev_x)

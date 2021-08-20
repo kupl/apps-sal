@@ -10,4 +10,4 @@ def strong_num(n):
             out[i] = out[i - 1] * i
         return out
     d = get_f(n)
-    return "STRONG!!!!" if n == sum([d[int(x)] for x in str(n)]) else "Not Strong !!"
+    return 'STRONG!!!!' if n == sum([d[int(x)] for x in str(n)]) else 'Not Strong !!'

@@ -1,5 +1,5 @@
 N = int(input())
-a = tuple(int(input()) for _ in range(N))
+a = tuple((int(input()) for _ in range(N)))
 log = set()
 i = 0
 count = 1

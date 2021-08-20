@@ -1,27 +1,24 @@
 def main():
     s = input()
-    a = ""
+    a = ''
     for i in s:
         if i != 'a':
             a += i
-
     if len(a) & 1:
-        print(":(")
+        print(':(')
         return 0
-
     n = len(a) >> 1
     A = a[:n]
     B = a[n:]
     if A != B:
-        print(":(")
+        print(':(')
         return 0
-
     N = len(s)
     if s[N - n:] == A:
         print(s[:N - n])
         return 0
     else:
-        print(":(")
+        print(':(')
         return 0
 
 

@@ -3,8 +3,8 @@ def main():
         n = int(input())
         numberFound = False
         sevens = 0
-        while (sevens <= n):
-            if ((n - sevens) % 7 == 0):
+        while sevens <= n:
+            if (n - sevens) % 7 == 0:
                 numberFound = True
                 print(n - sevens)
                 break

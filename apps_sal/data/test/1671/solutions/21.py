@@ -12,7 +12,7 @@ for i in range(n):
 k = sm // n
 for i in range(n):
     b.append(k)
-    if (i < sm % n):
+    if i < sm % n:
         b[i] += 1
 a.sort()
 b.sort()

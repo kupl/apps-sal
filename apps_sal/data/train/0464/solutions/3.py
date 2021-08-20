@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, n: int) -> int:
         c = 0
         for i in range(n // 2):

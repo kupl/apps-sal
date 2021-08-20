@@ -1,10 +1,11 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         mem = {}
 
         def game(n):
             if n in mem:
-                return mem[(n)]
+                return mem[n]
             if n == 0:
                 return False
             k = 1
@@ -15,6 +16,5 @@ class Solution:
                     break
                 k += 1
             return mem[n]
-
         game(n)
         return mem[n]

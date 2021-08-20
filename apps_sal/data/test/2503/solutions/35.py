@@ -1,10 +1,10 @@
 import itertools
 import numpy as np
-N, K, *XYC = open(0).read().split()
+(N, K, *XYC) = open(0).read().split()
 N = int(N)
 K = int(K)
 board = np.zeros((4 * K + 1, 4 * K + 1), dtype=np.uint16)
-for x, y, c in zip(XYC[::3], XYC[1::3], XYC[2::3]):
+for (x, y, c) in zip(XYC[::3], XYC[1::3], XYC[2::3]):
     x = int(x)
     y = int(y)
     if c == 'W':
@@ -23,6 +23,5 @@ for j in range(1, 1 + 4 * K):
     board[:, j] += board[:, j - 1]
 for j in range(1, 1 + 4 * K):
     board[j, :] += board[j - 1, :]
-ans = np.max(board[K:3 * K, K:3 * K] + board[:2 * K, :2 * K]
-             - board[:2 * K, K:3 * K] - board[K:3 * K, :2 * K])
+ans = np.max(board[K:3 * K, K:3 * K] + board[:2 * K, :2 * K] - board[:2 * K, K:3 * K] - board[K:3 * K, :2 * K])
 print(ans)

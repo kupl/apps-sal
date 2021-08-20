@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
         @lru_cache(None)
@@ -13,5 +14,4 @@ class Solution:
                 if i != start:
                     res += h(i, finish, fuel - abs(locations[i] - locations[start]))
             return res
-
-        return h(start, finish, fuel) % (10**9 + 7)
+        return h(start, finish, fuel) % (10 ** 9 + 7)

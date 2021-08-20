@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         key_set = set()
         box_set = set()
@@ -20,17 +21,9 @@ class Solution:
                     box_set.add(futureBox)
                 for futureKey in keys[box]:
                     key_set.add(futureKey)
-
                 for futureBox in box_set:
                     if futureBox in key_set or status[futureBox] == 1:
                         queue.append(futureBox)
-                # for newBox in toBeOpenBox:
-                #     queue.append(newBox)
-                #     if newBox in key_set:
-                #         key_set.remove(newBox)
-                #     if newBox in box_set:
-                #         box_set.remove(newBox)
             else:
                 box_set.add(box)
-
         return ans

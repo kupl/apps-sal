@@ -4,7 +4,6 @@ N = int(input())
 def solve_function(N):
     if N % 2 == 1:
         return 0
-
     n = 10
     ans = 0
     while True:

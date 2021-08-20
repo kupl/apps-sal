@@ -1,6 +1,5 @@
 L = []
 l = []
-
 x = int(input())
 for i in range(x):
     y = input()

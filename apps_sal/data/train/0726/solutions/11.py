@@ -5,11 +5,11 @@ for _ in range(int(input())):
         s = input()
         a = list(s)
         l = l + a
-    m = ["o", "d", "h", "f"]
+    m = ['o', 'd', 'h', 'f']
     n = []
-    x = l.count("c")
+    x = l.count('c')
     n.append(x // 2)
-    y = l.count("e")
+    y = l.count('e')
     n.append(y // 2)
     for j in range(4):
         a = l.count(m[j])

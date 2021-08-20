@@ -9,4 +9,4 @@ def array_leaders(numbers):
     Returns:
         Leader integers.
     """
-    return [x for i, x in enumerate(numbers) if x > sum(numbers[i + 1:])]
+    return [x for (i, x) in enumerate(numbers) if x > sum(numbers[i + 1:])]

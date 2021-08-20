@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         n = len(nums)
-        zero, one, two = [0] * (n + 1), [0] * (n + 1), [0] * (n + 1)
+        (zero, one, two) = ([0] * (n + 1), [0] * (n + 1), [0] * (n + 1))
         one[0] = two[0] = float('-inf')
         for i in range(1, n + 1):
             if nums[i - 1] % 3 == 0:

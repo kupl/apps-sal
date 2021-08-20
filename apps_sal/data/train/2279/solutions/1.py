@@ -1,8 +1,6 @@
 import os
 import sys
 from io import BytesIO, IOBase
-
-# region fastio
 BUFSIZE = 8192
 
 
@@ -14,7 +12,7 @@ class FastIO(IOBase):
         self.os = os
         self._fd = file.fileno()
         self.buffer = BytesIO()
-        self.writable = "x" in file.mode or "r" not in file.mode
+        self.writable = 'x' in file.mode or 'r' not in file.mode
         self.write = self.buffer.write if self.writable else None
 
     def read(self):
@@ -23,48 +21,49 @@ class FastIO(IOBase):
             if not b:
                 break
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines = 0
         return self.buffer.read()
 
     def readline(self):
         while self.newlines == 0:
             b = self.os.read(self._fd, max(self.os.fstat(self._fd).st_size, BUFSIZE))
-            self.newlines = b.count(b"\n") + (not b)
+            self.newlines = b.count(b'\n') + (not b)
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines -= 1
         return self.buffer.readline()
 
     def flush(self):
         if self.writable:
             self.os.write(self._fd, self.buffer.getvalue())
-            self.buffer.truncate(0), self.buffer.seek(0)
+            (self.buffer.truncate(0), self.buffer.seek(0))
 
 
 class IOWrapper(IOBase):
+
     def __init__(self, file):
         self.buffer = FastIO(file)
         self.flush = self.buffer.flush
         self.writable = self.buffer.writable
-        self.write = lambda s: self.buffer.write(s.encode("ascii"))
-        self.read = lambda: self.buffer.read().decode("ascii")
-        self.readline = lambda: self.buffer.readline().decode("ascii")
+        self.write = lambda s: self.buffer.write(s.encode('ascii'))
+        self.read = lambda: self.buffer.read().decode('ascii')
+        self.readline = lambda: self.buffer.readline().decode('ascii')
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-def input(): return sys.stdin.readline().rstrip("\r\n")
+(sys.stdin, sys.stdout) = (IOWrapper(sys.stdin), IOWrapper(sys.stdout))
 
-"""
-New numbers are only lonely if prime.
-When does a prime stop being lonely
 
-"""
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
+
+
+'\nNew numbers are only lonely if prime.\nWhen does a prime stop being lonely\n\n'
 
 
 def get_p(n):
     """ Returns  a list of primes < n """
-    z = int(n**0.5) + 1
+    z = int(n ** 0.5) + 1
     for s in range(4, len(sieve), 2):
         sieve[s] = False
     for i in range(3, z, 2):
@@ -75,13 +74,13 @@ def get_p(n):
     return
 
 
-lim = 10**6
+lim = 10 ** 6
 sieve = [True] * (lim + 1)
 sq_primes = set()
 sq_primes.add(4)
 get_p(lim + 1)
 ans = [0, 1]
-for i in range(2, 10**6 + 1):
+for i in range(2, 10 ** 6 + 1):
     tmp = ans[-1]
     if sieve[i]:
         tmp += 1
@@ -98,4 +97,3 @@ def solve():
 
 
 solve()
-# print(time.time()-start_time)

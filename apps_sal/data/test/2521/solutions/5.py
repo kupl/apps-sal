@@ -1,22 +1,17 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 b = list(enumerate(a))
-
 l = sorted(b[:2 * n], key=lambda x: x[1], reverse=True)
 r = sorted(b[n:], key=lambda x: x[1])
-
 big = [0] * (3 * n)
 small = [0] * (3 * n)
-
-for i, (pos, z) in enumerate(l):
+for (i, (pos, z)) in enumerate(l):
     big[pos] = i
-for i, (pos, z) in enumerate(r):
+for (i, (pos, z)) in enumerate(r):
     small[pos] = i
-
 first = sum(a[:n])
 second = 0
-for pos, z in r[:n]:
+for (pos, z) in r[:n]:
     second += z
 i = 2 * n
 j = n - 1

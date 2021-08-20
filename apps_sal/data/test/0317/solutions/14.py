@@ -9,6 +9,6 @@ def ok(x):
 a = int(input())
 b = input()
 if ok(b):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,15 +1,12 @@
 from bisect import bisect_right
 s = input()
 t = input()
-
 n = len(s)
-
-if set(list(t)) != (set(list(s)) & set(list(t))):
+if set(list(t)) != set(list(s)) & set(list(t)):
     ans = -1
 else:
     dct = {}
-
-    for i, ss in enumerate(s):
+    for (i, ss) in enumerate(s):
         if ss in dct:
             dct[ss].append(i)
         else:
@@ -24,5 +21,4 @@ else:
         else:
             idx = dct[tt][m]
     ans += idx + 1
-
 print(ans)

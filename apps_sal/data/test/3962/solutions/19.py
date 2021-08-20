@@ -2,7 +2,7 @@ n = int(input())
 leftSpaces = []
 rightSpaces = []
 for i in range(n):
-    left, right = map(int, input().split(" "))
+    (left, right) = map(int, input().split(' '))
     leftSpaces += [left]
     rightSpaces += [right]
 leftSpaces.sort()

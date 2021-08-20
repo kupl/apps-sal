@@ -21,8 +21,7 @@ else:
         quit()
     if first < second:
         print('second')
+    elif last > 0:
+        print('first')
     else:
-        if last > 0:
-            print('first')
-        else:
-            print('second')
+        print('second')

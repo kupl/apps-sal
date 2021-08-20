@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(100000)
 
 
@@ -10,7 +9,7 @@ def dfs(cur, dep=0):
     return dfs(trie[cur][0], dep + 1) ^ dfs(trie[cur][1], dep + 1)
 
 
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 trie = [[-1, -1] for _ in range(100001)]
 idx = 1
 for s in (input() for _ in range(n)):
@@ -20,6 +19,5 @@ for s in (input() for _ in range(n)):
             trie[cur][c] = idx
             idx += 1
         cur = trie[cur][c]
-
 xor = dfs(trie[0][0]) ^ dfs(trie[0][1])
-print(('Alice' if xor else 'Bob'))
+print('Alice' if xor else 'Bob')

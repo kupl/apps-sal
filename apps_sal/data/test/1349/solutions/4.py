@@ -1,7 +1,7 @@
 t = int(input())
 INF = 548
 for z in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = [INF] * n
     c = [int(x) for x in input().split()]
     for i in c:

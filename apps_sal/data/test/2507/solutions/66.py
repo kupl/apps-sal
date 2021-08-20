@@ -1,5 +1,5 @@
 import numpy as np
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 As = np.sort(list(map(int, input().split())))
 Fs = np.sort(list(map(int, input().split())))[::-1]
 l = As * Fs

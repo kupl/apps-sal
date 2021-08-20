@@ -1,4 +1,4 @@
-n, m, mi, ma = map(int, input().split())
+(n, m, mi, ma) = map(int, input().split())
 t = list(map(int, input().split()))
 mit = min(t)
 mat = max(t)

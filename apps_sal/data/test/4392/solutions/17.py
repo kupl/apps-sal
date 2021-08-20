@@ -2,7 +2,7 @@ from sys import stdin
 
 
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     u = [0] * n
     p = list(map(int, input().split()))
@@ -21,12 +21,12 @@ def solve():
         curmx = max(a[i], curmx)
         if i == p[pos]:
             if curmn < prevmx:
-                return print("NO")
+                return print('NO')
             prevmx = curmx
             curmx = -1
             curmn = 101
             pos += 1
-    print("YES")
+    print('YES')
 
 
 for i in range(int(input())):

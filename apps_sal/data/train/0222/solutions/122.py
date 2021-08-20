@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         if len(A) <= 2:
             return 0
@@ -9,10 +10,9 @@ class Solution:
             while j >= 0:
                 v = A[i] - A[j]
                 if v < A[j] and (A[j], v) in dp:
-                    maxx = max(maxx, dp[(A[j], v)] + 1)
-                    dp[(A[i], A[j])] = dp[(A[j], v)] + 1
+                    maxx = max(maxx, dp[A[j], v] + 1)
+                    dp[A[i], A[j]] = dp[A[j], v] + 1
                 else:
-                    dp[(A[i], A[j])] = 2
+                    dp[A[i], A[j]] = 2
                 j -= 1
-            # print(dp)
         return maxx

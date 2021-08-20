@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 l = list(map(int, input().split()))
 not_used = [0 for k in range(n + 1)]
 current = [0 for k in range(n + 1)]

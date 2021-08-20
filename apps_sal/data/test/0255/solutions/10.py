@@ -1,13 +1,9 @@
-#!/usr/bin/env python
-
 nb = int(input())
 boys = list(map(int, input().split(' ')))
 ng = int(input())
 girls = list(map(int, input().split(' ')))
-
-
 matches = [[] for i in range(nb)]
-for bi, boy in enumerate(boys):
+for (bi, boy) in enumerate(boys):
     for i in range(ng):
         if girls[i] >= boy - 1 and girls[i] <= boy + 1:
             matches[bi].append(i)
@@ -26,11 +22,10 @@ def find(idx, taken, tried):
 def getmax():
     result = 0
     taken = {}
-    for bi, boy in enumerate(boys):
+    for (bi, boy) in enumerate(boys):
         tried = set()
         if find(bi, taken, tried):
             result += 1
-
     return result
 
 

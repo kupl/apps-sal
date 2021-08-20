@@ -1,4 +1,3 @@
-# cook your dish here
 def permutation(n, p):
     r = 26
     if n == 1:
@@ -7,12 +6,11 @@ def permutation(n, p):
         return 52
     elif n == 3:
         return 728
+    elif n % 2 == 0:
+        return 2 * (bin_expo(r, n // 2 + 1, p) - r) * bin_expo(25, 1000000005, p) % p
     else:
-        if n % 2 == 0:
-            return ((2 * (bin_expo(r, ((n // 2) + 1), p) - r) * bin_expo(25, 1000000005, p))) % p
-        else:
-            n = n + 1
-            return ((2 * ((bin_expo(r, (n // 2 + 1), p) - r) * bin_expo(r - 1, 1000000005, p))) - bin_expo(26, n // 2, p)) % p
+        n = n + 1
+        return (2 * ((bin_expo(r, n // 2 + 1, p) - r) * bin_expo(r - 1, 1000000005, p)) - bin_expo(26, n // 2, p)) % p
 
 
 def bin_expo(x, n, p):
@@ -22,11 +20,11 @@ def bin_expo(x, n, p):
         return x % p
     else:
         temp = bin_expo(x, n // 2, p)
-        temp = (temp * temp) % p
+        temp = temp * temp % p
         if n % 2 == 0:
             return temp
         else:
-            return ((x % p) * temp) % p
+            return x % p * temp % p
 
 
 test = int(input())

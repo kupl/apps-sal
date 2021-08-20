@@ -3,7 +3,8 @@ from functools import reduce
 from collections import defaultdict
 
 
-class Disjoint():
+class Disjoint:
+
     def __init__(self, N):
         self.parent = list(range(N))
         self.size = [1] * N
@@ -14,9 +15,9 @@ class Disjoint():
         return self.parent[node]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px != py:
-            sx, sy = self.size[px], self.size[py]
+            (sx, sy) = (self.size[px], self.size[py])
             if sx > sy:
                 self.parent[py] = px
                 self.size[px] += sy
@@ -26,13 +27,13 @@ class Disjoint():
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         if not A:
             return 0
-
         fac_to_ind = defaultdict(int)
         un = Disjoint(len(A))
-        for ind, num in enumerate(A):
+        for (ind, num) in enumerate(A):
             for fac in range(2, int(math.sqrt(num) + 1)):
                 if num % fac:
                     continue

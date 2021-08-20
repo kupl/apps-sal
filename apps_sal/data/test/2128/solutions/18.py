@@ -3,5 +3,4 @@ exp = 0
 M = 998244353
 for pi in map(int, input().split()):
     exp = (exp + 1) * 100 * pow(pi, M - 2, M) % M
-
 print(int(exp % M))

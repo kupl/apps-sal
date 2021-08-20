@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
-if ((b - a) >= 10):
+(a, b) = list(map(int, input().split()))
+if b - a >= 10:
     print(0)
 else:
     k = 1

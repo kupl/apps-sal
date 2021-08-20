@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ng = [tuple(map(int, input().split())) for _ in range(m)]
-
 for i in range(1000):
     i = str(i)
     if len(i) != n:
@@ -12,4 +11,4 @@ for i in range(1000):
         print(i)
         break
 else:
-    print((-1))
+    print(-1)

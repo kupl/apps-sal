@@ -25,12 +25,11 @@ def main():
                 ans *= 3
             i += 2
         ans %= MOD
-
     if S1[0] == S2[0]:
         ans *= 3
     else:
         ans *= 6
-    print((ans % MOD))
+    print(ans % MOD)
 
 
 def __starting_point():

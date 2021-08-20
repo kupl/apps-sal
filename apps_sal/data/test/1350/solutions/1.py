@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, k = read()
+(n, k) = read()
 s = input()
 c = [0] * 26
 for i in range(n):

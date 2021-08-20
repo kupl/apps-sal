@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.mem = {}
 
@@ -15,6 +16,6 @@ class Solution:
         Sum = 0
         for i in range(1, f + 1):
             Sum += self.numRollsToTarget(d - 1, f, target - i)
-            Sum %= (10**9 + 7)
+            Sum %= 10 ** 9 + 7
         self.mem[key] = Sum
-        return (self.mem[key])
+        return self.mem[key]

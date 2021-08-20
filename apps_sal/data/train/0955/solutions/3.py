@@ -30,7 +30,7 @@ arr = []
 for i in range(2, 10000):
     if l[i] > 0:
         arr.append(i)
-lis = [0] * (10001)
+lis = [0] * 10001
 for i in arr:
     for j in arr:
         if i + 2 * j <= 10000:

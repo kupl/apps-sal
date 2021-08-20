@@ -3,13 +3,13 @@ s = input()
 
 def first_A(s):
     for i in range(len(s)):
-        if s[i] == "A":
+        if s[i] == 'A':
             return i
 
 
 def last_Z(s):
     for i in range(len(s)):
-        if s[-(i + 1)] == "Z":
+        if s[-(i + 1)] == 'Z':
             return -(i + 1) + len(s)
 
 

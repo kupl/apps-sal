@@ -1,13 +1,12 @@
 n = int(input())
 a = sorted(set(map(int, input().split())))
 if len(a) > 3:
-    print("NO")
+    print('NO')
 elif len(a) == 1:
-    print("YES")
+    print('YES')
 elif len(a) == 2:
     print('YES')
+elif (a[0] + a[2]) / 2 != a[1]:
+    print('NO')
 else:
-    if ((a[0] + a[2]) / 2 != a[1]):
-        print('NO')
-    else:
-        print('YES')
+    print('YES')

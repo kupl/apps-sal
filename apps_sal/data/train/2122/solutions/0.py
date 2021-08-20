@@ -2,14 +2,12 @@ from bisect import bisect_left, insort_left
 a = []
 n = int(input())
 for _ in range(n):
-    # print(a)
-    s, d = list(map(int, input().split()))
+    (s, d) = list(map(int, input().split()))
     if len(a) == 0:
         print(s, s + d - 1)
         a.append((s, s + d - 1))
         continue
     p = bisect_left(a, (s, s + d - 1))
-    #print('p', p)
     ok = True
     if p > 0 and a[p - 1][1] >= s:
         ok = False
@@ -27,12 +25,11 @@ for _ in range(n):
                     a = [(1, d)] + a
                     ok = True
                     break
-            else:
-                if a[i - 1][1] + d < a[i][0]:
-                    print(a[i - 1][1] + 1, a[i - 1][1] + d)
-                    insort_left(a, (a[i - 1][1] + 1, a[i - 1][1] + d))
-                    ok = True
-                    break
+            elif a[i - 1][1] + d < a[i][0]:
+                print(a[i - 1][1] + 1, a[i - 1][1] + d)
+                insort_left(a, (a[i - 1][1] + 1, a[i - 1][1] + d))
+                ok = True
+                break
         if not ok:
             print(a[-1][1] + 1, a[-1][1] + d)
             insort_left(a, (a[-1][1] + 1, a[-1][1] + d))

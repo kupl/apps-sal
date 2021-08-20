@@ -1,2 +1,2 @@
 def derive(coeff, exp):
-    return f"{coeff * exp}x^{exp - 1}"
+    return f'{coeff * exp}x^{exp - 1}'

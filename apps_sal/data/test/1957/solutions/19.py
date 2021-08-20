@@ -1,4 +1,4 @@
-n, A, B = list(map(int, input().split()))
+(n, A, B) = list(map(int, input().split()))
 otv = list(map(int, input().split()))
 one = otv.pop(0)
 otv.sort()

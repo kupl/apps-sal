@@ -1,6 +1,5 @@
-n, m, k = [int(x) for x in input().split()]
-
+(n, m, k) = [int(x) for x in input().split()]
 if m >= n and k >= n:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         ret = defaultdict(int)
         for i in range(len(s)):
@@ -11,7 +12,6 @@ class Solution:
                     ret[temp] += 1
                 elif len(char) > maxLetters or len(temp) > maxSize:
                     break
-
         if len(ret) == 0:
             return 0
         return max(ret.values())

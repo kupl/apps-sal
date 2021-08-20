@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     l = [int(i) for i in input().split()]
     d = {}
     ind = {}

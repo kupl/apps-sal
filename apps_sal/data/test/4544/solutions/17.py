@@ -9,7 +9,7 @@ def main():
         cnt[an - 1] += 1
         cnt[an] += 1
         cnt[an + 1] += 1
-    print((max(cnt.values())))
+    print(max(cnt.values()))
 
 
 def __starting_point():

@@ -1,7 +1,9 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def canCarry(cap):
-            cur, d = 0, 1
+            (cur, d) = (0, 1)
             for w in weights:
                 if w > cap:
                     return False
@@ -12,8 +14,7 @@ class Solution:
                 if d > D:
                     return False
             return cur <= cap
-
-        l, r = max(weights), sum(weights)
+        (l, r) = (max(weights), sum(weights))
         while l < r:
             m = (l + r) // 2
             if canCarry(m):

@@ -2,8 +2,6 @@ import math
 import sys
 import collections
 
-# imgur.com/Pkt7iIf.png
-
 
 def getdict(n):
     d = {}
@@ -23,10 +21,20 @@ def getdict(n):
     return d
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
 
 
 t = ii()

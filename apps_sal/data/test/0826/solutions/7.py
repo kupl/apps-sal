@@ -1,5 +1,5 @@
 n = int(input())
-ok, ng = 1, n + 1
+(ok, ng) = (1, n + 1)
 
 
 def is_ok(x):
@@ -15,5 +15,4 @@ while abs(ok - ng) > 1:
         ok = mid
     else:
         ng = mid
-
 print(n + 1 - ok)

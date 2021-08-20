@@ -1,19 +1,11 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
 from collections import Counter
 from math import gcd
 
 
 def __starting_point():
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
-
     dp = [[-1, -1, -1] for i in range(n)]
-
     dp[0][0] = a[0]
     dp[0][1] = x * a[0]
     dp[0][2] = a[0]

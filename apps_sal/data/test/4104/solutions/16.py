@@ -1,5 +1,5 @@
 s = map(lambda c: ord(c) - 48, input())
-r, t, f = 0, 0, 1
+(r, t, f) = (0, 0, 1)
 for x in s:
     if x < 0:
         r += f * t

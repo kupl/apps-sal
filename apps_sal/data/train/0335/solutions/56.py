@@ -3,10 +3,10 @@ from copy import copy
 
 
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
         memo = defaultdict(int)
         memo[0] = 0
-
         for rod in rods:
             temp_memo = defaultdict(int)
             keys = list(memo.keys())

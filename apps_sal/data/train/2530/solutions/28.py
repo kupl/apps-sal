@@ -1,9 +1,9 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         res = 0
         unique = Counter(time)
         time = list(set(time))
-
         for i in range(len(time)):
             if unique[time[i]] > 1:
                 if 2 * time[i] % 60 == 0:

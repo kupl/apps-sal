@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-ans = [[0 for i in range(n)]for j in range(n)]
+(n, k) = map(int, input().split())
+ans = [[0 for i in range(n)] for j in range(n)]
 cur = 1
 sum_k = 0
 for i in range(n):

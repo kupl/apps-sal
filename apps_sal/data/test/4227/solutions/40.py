@@ -1,11 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 Edge = [tuple(map(int, input().split())) for _ in range(M)]
-
 Graph = [[] for _ in range(N)]
-for a, b in Edge:
+for (a, b) in Edge:
     Graph[a - 1].append(b - 1)
     Graph[b - 1].append(a - 1)
-
 seen = set()
 
 

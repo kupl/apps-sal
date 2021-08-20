@@ -1,11 +1,11 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 B = list(map(int, input().split()))
 S = list(input())
 A = [[] for i in range(k)]
 for i in range(n):
-    if S[i] == "s":
+    if S[i] == 's':
         A[i % k].append(0)
-    elif S[i] == "p":
+    elif S[i] == 'p':
         A[i % k].append(1)
     else:
         A[i % k].append(2)

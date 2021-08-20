@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self._n = n
         self._table = [-1] * n
@@ -13,11 +14,11 @@ class UnionFind:
         return x
 
     def unite(self, x, y):
-        x, y = self._root(x), self._root(y)
+        (x, y) = (self._root(x), self._root(y))
         if x == y:
             return
         if x > y:
-            x, y = y, x
+            (x, y) = (y, x)
         self._table[x] += self._table[y]
         self._table[y] = x
 
@@ -37,11 +38,11 @@ class UnionFind:
         return repr([self._root(i) for i in range(self._n)])
 
 
-n, m, *AB = map(int, open(0).read().split())
+(n, m, *AB) = map(int, open(0).read().split())
 ans = 0
 for i in range(m):
     uf = UnionFind(n)
-    for j, (a, b) in enumerate(zip(AB[::2], AB[1::2])):
+    for (j, (a, b)) in enumerate(zip(AB[::2], AB[1::2])):
         if i == j:
             continue
         uf.unite(a - 1, b - 1)

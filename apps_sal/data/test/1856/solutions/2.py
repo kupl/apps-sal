@@ -2,6 +2,7 @@ import sys
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [-1] * n
         self.cnt = n
@@ -18,7 +19,7 @@ class UnionFind:
         y = self.root(y)
         if x != y:
             if self.parent[x] > self.parent[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parent[x] += self.parent[y]
             self.parent[y] = x
             self.cnt -= 1
@@ -34,24 +35,20 @@ class UnionFind:
 
 
 input = sys.stdin.readline
-
 n = int(input())
 s = [set(input()) for i in range(n)]
-
 init_set = set([])
 for i in range(n):
     s[i].remove('\n')
     init_set |= s[i]
-
 uf = UnionFind(len(init_set))
 to_int = {}
-for i, char in enumerate(init_set):
+for (i, char) in enumerate(init_set):
     to_int[char] = i
-
 for i in range(n):
     char1 = s[i].pop()
     for char in s[i]:
-        a, b = to_int[char1], to_int[char]
+        (a, b) = (to_int[char1], to_int[char])
         if not uf.is_same(a, b):
             uf.merge(a, b)
 print(uf.get_cnt())

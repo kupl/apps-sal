@@ -14,7 +14,6 @@ def LI():
     return list(map(int, stdin.readline().rstrip().split()))
 
 
-# main part
 n = int(I())
 a = LI()
 ans = 0

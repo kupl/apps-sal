@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         f = {}
         t = {}
@@ -31,19 +32,18 @@ class Solution:
                 return False
             t[tfind(a)] = t[tfind(b)]
             return True
-
-        for ty, a, b in edges:
+        for (ty, a, b) in edges:
             if ty != 3:
                 continue
             tunion(a, b)
             if not funion(a, b):
                 ans += 1
-        for ty, a, b in edges:
+        for (ty, a, b) in edges:
             if ty != 1:
                 continue
             if not funion(a, b):
                 ans += 1
-        for ty, a, b in edges:
+        for (ty, a, b) in edges:
             if ty != 2:
                 continue
             if not tunion(a, b):

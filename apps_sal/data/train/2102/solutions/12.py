@@ -1,4 +1,4 @@
-n, k = 0, int(input())
+(n, k) = (0, int(input()))
 p = [['0'] * 100 for i in range(100)]
 while k:
     for i in range(n):

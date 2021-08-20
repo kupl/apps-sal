@@ -1,14 +1,15 @@
 import sys
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 N = int(input())
-
 ans = 1
-a, b = 0, 0
-
+(a, b) = (0, 0)
 for _ in range(N):
-    c, d = inpl()
+    (c, d) = inpl()
     candi = []
     if a == b:
         ans -= 1
@@ -24,5 +25,5 @@ for _ in range(N):
         maxi = max(candi)
         mini = min(candi)
         ans += maxi - mini + 1
-    a, b = c, d
+    (a, b) = (c, d)
 print(ans)

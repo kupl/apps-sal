@@ -1,12 +1,15 @@
 import heapq as hp
-def R(): return map(int, input().split())
 
 
-n, k = R()
+def R():
+    return map(int, input().split())
+
+
+(n, k) = R()
 xs = list(R())
-a, r, h = int(input()), 0, []
+(a, r, h) = (int(input()), 0, [])
 cs = list(R())
-for i, x in enumerate(xs):
+for (i, x) in enumerate(xs):
     hp.heappush(h, cs[i])
     while x > k and h:
         s = hp.heappop(h)

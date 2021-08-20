@@ -2,8 +2,8 @@ from collections import deque
 
 
 def snap(f, t):
-    f, t = list(map(deque, (f, t)))
-    m, snap = [], 0
+    (f, t) = list(map(deque, (f, t)))
+    (m, snap) = ([], 0)
     while t:
         for dq in (f, t):
             m.append(dq.popleft())

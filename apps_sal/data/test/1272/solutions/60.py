@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 bridge = []
 size = [1] * (N + 1)
 tree = list(range(N + 1))
@@ -14,11 +14,11 @@ def find(a):
 
 
 for i in range(M):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     bridge.append((A, B))
 Ans = N * (N - 1) // 2
 ans = []
-for a, b in bridge[::-1]:
+for (a, b) in bridge[::-1]:
     aroot = find(a)
     broot = find(b)
     if aroot == broot:

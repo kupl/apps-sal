@@ -1,14 +1,11 @@
 def main():
     import sys
     input = sys.stdin.readline
-
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     L = list(map(int, input().split()))
-
     if sum(L) < N:
         print(-1)
         return
-
     ans = [0] * M
     left = N
     for i in range(M - 1, -1, -1):

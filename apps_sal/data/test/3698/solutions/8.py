@@ -7,15 +7,14 @@ def Numb(a, k):
     if k == 1:
         return m + 1
     if m + 1 == k:
-        return Numb(a & ((1 << m) - 1), k - 1)
-    return C[m][k] + Numb(a & ((1 << m) - 1), k - 1)
+        return Numb(a & (1 << m) - 1, k - 1)
+    return C[m][k] + Numb(a & (1 << m) - 1, k - 1)
 
 
 s = input()
 nDec = int(s, 2)
 n = len(s)
 k = int(input())
-
 C = [[1], [1, 1]]
 for i in range(n):
     tmp = [1]
@@ -23,7 +22,6 @@ for i in range(n):
         tmp.append(C[-1][j - 1] + C[-1][j])
     tmp.append(1)
     C.append(tmp)
-
 if k == 0:
     print(1)
 else:
@@ -36,4 +34,4 @@ else:
             res += Numb(nDec, i)
     if k == 1:
         res -= 1
-    print(res % (10**9 + 7))
+    print(res % (10 ** 9 + 7))

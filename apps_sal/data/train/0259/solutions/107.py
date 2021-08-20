@@ -11,8 +11,9 @@ def eval(nums, i, thold):
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        lo, hi = 1, 100000000000
+        (lo, hi) = (1, 100000000000)
         while lo < hi:
             mid = lo + (hi - lo) // 2
             if eval(nums, mid, threshold):

@@ -1,10 +1,9 @@
 from collections import deque
-
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 a = sorted(a)
 a = deque(a)
-first = - 10e7
+first = -100000000.0
 r = deque([])
 s = 0
 result = 0
@@ -24,6 +23,4 @@ while n > 0:
         s += 1
     a.popleft()
     n -= 1
-    # print(e, c, s, r, result)
-
 print(result)

@@ -1,11 +1,10 @@
 from math import *
-
 c = int(input())
 x = [0] * c
 y = [0] * c
 vu = [False] * c
 for i in range(c):
-    x[i], y[i] = [int(s) for s in input().split()]
+    (x[i], y[i]) = [int(s) for s in input().split()]
 prix = [int(s) for s in input().split()]
 fil = [int(s) for s in input().split()]
 anc = [-1] * c
@@ -18,7 +17,7 @@ tot = 0
 for i in range(c):
     pmina = 100000000000000000000000
     for j in range(c):
-        if (not vu[j]) and pmin[j] < pmina:
+        if not vu[j] and pmin[j] < pmina:
             pmini = j
             pmina = pmin[j]
     vu[pmini] = True
@@ -35,7 +34,7 @@ for i in range(c):
             anc[j] = pmini
 print(tot)
 print(v)
-print(" ".join(pl))
+print(' '.join(pl))
 print(e)
 for i in ppl:
-    print(" ".join(i))
+    print(' '.join(i))

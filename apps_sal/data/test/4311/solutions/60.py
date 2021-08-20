@@ -4,10 +4,8 @@ input = sys.stdin.readline
 
 def main():
     S = int(input())
-
     x = set()
     x.add(S)
-
     i = 1
     prev = S
     while True:
@@ -16,11 +14,9 @@ def main():
             prev = prev // 2
         else:
             prev = prev * 3 + 1
-
         if prev in x:
             print(i)
             return
-
         x.add(prev)
 
 

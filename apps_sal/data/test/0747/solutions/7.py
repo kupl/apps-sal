@@ -1,7 +1,7 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 can = [[], []]
 for i in range(n):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     can[a].append((b, c))
 ans = 0
 for nturn in range(2):
@@ -16,7 +16,7 @@ for nturn in range(2):
         mx = -1
         bj = -1
         for j in range(len(can[turn])):
-            if not u[turn][j] and can[turn][j][0] <= nx and can[turn][j][1] > mx:
+            if not u[turn][j] and can[turn][j][0] <= nx and (can[turn][j][1] > mx):
                 bj = j
                 mx = can[turn][j][1]
         if bj != -1:
@@ -28,6 +28,4 @@ for nturn in range(2):
         turn = (turn + 1) % 2
     ans = max(ans, nw)
 print(ans)
-
-
 pass

@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 a = []
 for i in range(0, n):
@@ -7,7 +6,7 @@ for i in range(0, n):
 for i in range(0, n):
     c = 0
     s = 0
-    while (a[i] != 0):
+    while a[i] != 0:
         c = a[i] % 10
         s = s * 10 + c
         a[i] = a[i] // 10

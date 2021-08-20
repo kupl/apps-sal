@@ -3,7 +3,7 @@ a = list(range(n))
 h = list(range(n))
 m = 2
 for i in range(n):
-    a[i], h[i] = [int(s) for s in input().split()]
+    (a[i], h[i]) = [int(s) for s in input().split()]
 if n < 3:
     m = n
 else:
@@ -15,5 +15,4 @@ else:
             a[j] = a[j] + h[j]
         else:
             continue
-
 print(m)

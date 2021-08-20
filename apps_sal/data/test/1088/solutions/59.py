@@ -7,12 +7,12 @@ for i in range(nn):
 fainv[-1] = pow(fa[-1], mod - 2, mod)
 for i in range(nn)[::-1]:
     fainv[i] = fainv[i + 1] * (i + 1) % mod
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 X = [[int(a) for a in input().split()] for _ in range(N)]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.PA = [-1] * n
@@ -27,7 +27,7 @@ class UnionFind():
         return a
 
     def unite(self, a, b):
-        ra, rb = self.root(a), self.root(b)
+        (ra, rb) = (self.root(a), self.root(b))
         if ra != rb:
             if self.PA[rb] >= self.PA[ra]:
                 self.PA[ra] += self.PA[rb]
@@ -37,7 +37,7 @@ class UnionFind():
                 self.PA[ra] = rb
 
     def size(self, a):
-        return - self.PA[self.root(a)]
+        return -self.PA[self.root(a)]
 
     def groups(self):
         G = [[] for _ in range(self.n)]
@@ -64,7 +64,6 @@ for i in range(N):
             uf1.unite(i, j)
 for a in uf1.group_size():
     ans = ans * fa[a] % mod
-
 uf2 = UnionFind(N)
 s = 0
 for i in range(N):
@@ -76,5 +75,4 @@ for i in range(N):
             uf2.unite(i, j)
 for a in uf2.group_size():
     ans = ans * fa[a] % mod
-
 print(ans)

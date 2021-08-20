@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         rs = [0]
         for n in A:
@@ -9,7 +10,7 @@ class Solution:
         print(rs)
         q = deque()
         mn = float('inf')
-        for i, s in enumerate(rs):
+        for (i, s) in enumerate(rs):
             while q and s <= rs[q[-1]]:
                 q.pop()
             while q and s - rs[q[0]] >= K:

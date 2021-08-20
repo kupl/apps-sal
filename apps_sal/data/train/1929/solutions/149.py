@@ -1,10 +1,12 @@
 class Node:
+
     def __init__(self):
         self.list = [None] * 26
         self.period = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node()
 
@@ -37,7 +39,6 @@ class StreamChecker:
         self.trie = Trie()
         self.query_list = []
         self.words = words
-
         for word in words:
             self.trie.add(word)
 
@@ -47,8 +48,3 @@ class StreamChecker:
 
     def update_queries(self, letter):
         self.query_list.append(letter)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

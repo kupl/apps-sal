@@ -1,6 +1,3 @@
-# coding: utf-8
-
-
 def main():
     ans = 'No'
     c = [list(map(int, input().split())) for _ in range(3)]
@@ -14,9 +11,8 @@ def main():
                     flgs[1] = True
                 if c[0][2] - i == c[1][2] - j and c[0][2] - i == c[2][2] - k:
                     flgs[2] = True
-                if (all(flgs)):
+                if all(flgs):
                     ans = 'Yes'
-
     print(ans)
 
 

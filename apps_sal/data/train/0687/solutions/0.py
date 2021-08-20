@@ -24,6 +24,6 @@ for _ in range(t):
     arr = list(map(int, stdin.readline().split()))
     result = count(n, arr)
     if result:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -9,5 +9,4 @@ for t in range(T):
     diff = list(range(N - 1))
     for i in range(N - 1):
         diff[i] = abs(S[i] - S[i + 1])
-
     print(min(diff))

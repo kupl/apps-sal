@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistToClosest(self, seats: List[int]) -> int:
         n = len(seats)
         dips = [0 for _ in range(n)]
@@ -11,7 +12,6 @@ class Solution:
             dist += 1
         print(dist, dips)
         dist = n
-
         minimum = 0
         for i in range(n - 1, -1, -1):
             if seats[i] == 1:

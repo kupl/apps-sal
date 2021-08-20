@@ -1,4 +1,5 @@
 class Solution:
+
     def sub(self, h, h2):
         nh = h.copy()
         for k in h2:
@@ -14,10 +15,9 @@ class Solution:
             if c not in h:
                 h[c] = 0
             h[c] = h[c] + 1
-
         ct = 0
         h2 = {}
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c not in h2:
                 h2[c] = 0
             h2[c] = h2[c] + 1

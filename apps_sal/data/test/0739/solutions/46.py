@@ -1,9 +1,8 @@
 import numpy as np
-
-L, A, B, M = (int(i) for i in input().split())
+(L, A, B, M) = (int(i) for i in input().split())
 keta = [0] * 18
 for i in range(18):
-    keta[i] = min((10**i - A - 1) // B, L - 1)
+    keta[i] = min((10 ** i - A - 1) // B, L - 1)
 keta.reverse()
 for i in range(18):
     if keta[i] < 0:
@@ -37,7 +36,7 @@ for i in range(18):
     if mi >= L:
         break
     t = np.array([ans, (A + B * mi) % M, 1])
-    g = np.array([10**N % M, 0, 0, 1, 1, 0, 0, B % M, 1]).reshape(3, 3)
+    g = np.array([10 ** N % M, 0, 0, 1, 1, 0, 0, B % M, 1]).reshape(3, 3)
     g = power(g, ma - mi + 1, M)
     g = np.dot(t, g)
     ans = g[0] % M

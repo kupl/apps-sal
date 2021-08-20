@@ -14,6 +14,6 @@ for _ in range(int(input())):
                 break
             r = list(s)
     if w == 1:
-        print("YES")
+        print('YES')
     elif w == 2:
-        print("NO")
+        print('NO')

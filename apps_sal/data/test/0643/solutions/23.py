@@ -10,7 +10,7 @@ def check(np, nq):
 
 
 for _ in range(int(input())):
-    a, b, p, q = list(map(int, input().split()))
+    (a, b, p, q) = list(map(int, input().split()))
     l = 0
     r = 10000000000
     if check(p * r, q * r) == False:

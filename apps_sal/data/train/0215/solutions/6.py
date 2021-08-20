@@ -1,4 +1,5 @@
 class Solution:
+
     def gcd(self, a, b):
         if a == 0:
             return b
@@ -7,7 +8,7 @@ class Solution:
         if a == 1 or b == 1:
             return 1
         while b != 0:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
 
     def isGoodArray(self, nums: List[int]) -> bool:
@@ -19,7 +20,7 @@ class Solution:
                 return True
             else:
                 while n:
-                    g, n = n, g % n
+                    (g, n) = (n, g % n)
             if g == 1:
                 return True
         return False

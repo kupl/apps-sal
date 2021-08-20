@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicates(self, s: str, k: int) -> str:
         st = [['*', 0]]
         for c in s:
@@ -9,6 +10,6 @@ class Solution:
                 if st[-1][1] == k:
                     st.pop()
         res = ''
-        for c, v in st:
+        for (c, v) in st:
             res += c * v
         return res

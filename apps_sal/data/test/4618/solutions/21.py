@@ -1,10 +1,7 @@
 import sys
-
 sys.setrecursionlimit(10 ** 9)
-
 S = input()
 K = int(input())
-
 chars = sorted(set(S))
 checked = set()
 

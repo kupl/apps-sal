@@ -1,8 +1,7 @@
 import sys
 my_file = sys.stdin
-#my_file = open("input.txt", "r")
 my_file.readline()
-nums = [int(i) for i in my_file.readline().split(" ")]
+nums = [int(i) for i in my_file.readline().split(' ')]
 speaking = 0
 for i in nums:
     if i > 0:

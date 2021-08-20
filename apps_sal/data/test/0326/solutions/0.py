@@ -1,4 +1,5 @@
-def it(): return list(map(int, input().strip().split()))
+def it():
+    return list(map(int, input().strip().split()))
 
 
 INF = float('inf')
@@ -10,11 +11,10 @@ def solve():
     R = []
     C = []
     for _ in range(N):
-        s, c = input().strip().split()
+        (s, c) = input().strip().split()
         S.append(s)
         R.append(s[::-1])
         C.append(int(c))
-
     vis = set()
     mem = dict()
 
@@ -25,10 +25,9 @@ def solve():
             return 0
         if (s, p) in vis:
             return INF
-
         ans = INF
         vis.add((s, p))
-        for i, t in enumerate(S if p else R):
+        for (i, t) in enumerate(S if p else R):
             if len(t) >= len(s) and t.startswith(s):
                 ans = min(ans, dp(t[len(s):], p ^ 1) + C[i])
             elif len(s) > len(t) and s.startswith(t):
@@ -36,7 +35,6 @@ def solve():
         vis.discard((s, p))
         mem[s, p] = ans
         return ans
-
     ans = INF
     for i in range(N):
         ans = min(ans, dp(S[i], 0) + C[i])

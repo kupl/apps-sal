@@ -5,9 +5,7 @@ def shift(s, n):
     return s[n:] + s[:n]
 
 
-table = str.maketrans(
-    ascii_letters,
-    shift(ascii_lowercase, 13) + shift(ascii_uppercase, 13))
+table = str.maketrans(ascii_letters, shift(ascii_lowercase, 13) + shift(ascii_uppercase, 13))
 
 
 def rot13(message):

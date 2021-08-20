@@ -8,18 +8,18 @@ def main():
     n = len(string)
     dp = [[0, 0, 0, 0] for _ in range(n + 1)]
     dp[0][0] = 1
-    for i, s in enumerate(string):
-        if s == "A":
+    for (i, s) in enumerate(string):
+        if s == 'A':
             dp[i + 1][0] = dp[i][0]
             dp[i + 1][1] = dp[i][1] + dp[i][0]
             dp[i + 1][2] = dp[i][2]
             dp[i + 1][3] = dp[i][3]
-        elif s == "B":
+        elif s == 'B':
             dp[i + 1][0] = dp[i][0]
             dp[i + 1][1] = dp[i][1]
             dp[i + 1][2] = dp[i][2] + dp[i][1]
             dp[i + 1][3] = dp[i][3]
-        elif s == "C":
+        elif s == 'C':
             dp[i + 1][0] = dp[i][0]
             dp[i + 1][1] = dp[i][1]
             dp[i + 1][2] = dp[i][2]

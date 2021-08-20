@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         self.points = points
         n = len(points)
@@ -13,7 +14,7 @@ class Solution:
         e = 0
         for i in range(n - 1):
             while e < len(edges):
-                d, i, j = edges[e]
+                (d, i, j) = edges[e]
                 e += 1
                 ii = self.find(i)
                 jj = self.find(j)

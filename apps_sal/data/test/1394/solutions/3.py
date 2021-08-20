@@ -1,15 +1,15 @@
 s = input()
 l = len(s)
-a = s.count("a")
+a = s.count('a')
 if (l + a) % 2 == 1:
-    print(":(")
+    print(':(')
 else:
     og = s[:(l + a) // 2]
-    newg = ""
+    newg = ''
     for char in og:
-        if char != "a":
+        if char != 'a':
             newg += char
     if newg == s[(l + a) // 2:]:
         print(og)
     else:
-        print(":(")
+        print(':(')

@@ -1,12 +1,21 @@
 import numpy as np
 import sys
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+
+
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 def resolve():
-    N, K = lr()
+    (N, K) = lr()
     A = np.sort(np.array(lr(), np.int64))
     z = A[A == 0]
     p = A[A > 0]
@@ -21,7 +30,6 @@ def resolve():
         cnt -= np.count_nonzero(A * A <= x)
         assert cnt % 2 == 0
         return cnt // 2
-
     l = -10 ** 18
     r = 10 ** 18
     while l + 1 < r:
@@ -30,7 +38,6 @@ def resolve():
             r = x
         else:
             l = x
-
     print(r)
 
 

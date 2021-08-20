@@ -1,6 +1,6 @@
 import math
 from functools import reduce
-n, m = input().split()
+(n, m) = input().split()
 a = list(map(int, input().split()))
 b = [0] * int(n)
 for i in range(len(a)):
@@ -8,7 +8,7 @@ for i in range(len(a)):
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm_list(numbers):
@@ -16,16 +16,14 @@ def lcm_list(numbers):
 
 
 c = 0
-
 x = lcm_list(b)
 for i in range(int(n)):
-    if (x // b[i]) % 2 == 0:
+    if x // b[i] % 2 == 0:
         c = -1
         break
     else:
         continue
-
 if c == -1:
-    print((0))
+    print(0)
 else:
-    print((math.floor(((int(m) / x) + 1) / 2)))
+    print(math.floor((int(m) / x + 1) / 2))

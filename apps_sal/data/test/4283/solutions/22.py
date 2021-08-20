@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(x) for x in input().split()]
 a.sort()
-p1, p2 = 0, 0
+(p1, p2) = (0, 0)
 r = 1
 while p2 < n - 1:
     p2 += 1

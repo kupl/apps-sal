@@ -3,7 +3,7 @@ l = input().split()
 x = 1
 for j in sorted(l):
     x *= int(j)
-    if x > 1e18:
+    if x > 1e+18:
         x = -1
         break
 print(x)

@@ -1,5 +1,5 @@
 from sys import stderr
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def readints():
@@ -15,17 +15,17 @@ def combk(n, k, MOD=MOD, tbl=[]):
 
 
 def main():
-    n, k = readints()
+    (n, k) = readints()
     pairs = [readints() for _ in range(n)]
-    oplist = [p for l, r in pairs for p in (2 * l, 2 * r + 1)]
+    oplist = [p for (l, r) in pairs for p in (2 * l, 2 * r + 1)]
     oplist.sort()
     count = total = 0
     pos = oplist[0] // 2
     for op in oplist:
         if op & 1:
-            i, delta = (op + 1) // 2, -1
+            (i, delta) = ((op + 1) // 2, -1)
         else:
-            i, delta = op // 2, 1
+            (i, delta) = (op // 2, 1)
         total = (total + combk(count, k) * (i - pos)) % MOD
         pos = i
         count += delta

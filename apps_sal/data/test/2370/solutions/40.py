@@ -4,7 +4,7 @@ A = [np.array(list(map(int, input().split()))) for i in range(N)]
 ans = sum([sum(A[i]) for i in range(N)])
 ans //= 2
 for i in range(N):
-    A[i][i] = 10**10
+    A[i][i] = 10 ** 10
 
 
 def main(ans):

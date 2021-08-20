@@ -3,16 +3,4 @@ def am_i_wilson(n):
         return True
     else:
         return False
-    '''
-    if n <= 2:
-        return False
-    fact=math.factorial(n-1)
-    if (fact+1)%n==0:
-        x = (fact+1)%(n**2)
-        if x==0:
-            return True
-        else:
-            return False
-    else:
-        return False
-    '''
+    '\n    if n <= 2:\n        return False\n    fact=math.factorial(n-1)\n    if (fact+1)%n==0:\n        x = (fact+1)%(n**2)\n        if x==0:\n            return True\n        else:\n            return False\n    else:\n        return False\n    '

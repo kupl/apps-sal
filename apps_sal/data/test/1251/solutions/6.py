@@ -4,7 +4,7 @@ ar = []
 
 
 def solve(l, r, val):
-    if(r < l):
+    if r < l:
         return 0
     indx = l + ar[l:r + 1].index(min(ar[l:r + 1]))
     tot = r - l + 1

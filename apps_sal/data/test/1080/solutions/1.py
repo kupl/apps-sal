@@ -2,4 +2,4 @@ n = int(input())
 a = [*list(map(int, input().split()))]
 sa = sum(a)
 ma = max(a)
-print("YNEOS"[(sa % 2 or ma > sa - ma)::2])
+print('YNEOS'[sa % 2 or ma > sa - ma::2])

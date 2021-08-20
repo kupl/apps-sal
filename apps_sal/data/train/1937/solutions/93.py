@@ -1,7 +1,6 @@
 class ThroneInheritance:
 
     def __init__(self, kingName: str):
-
         self.root = kingName
         self.alive = {}
         self.alive[kingName] = 0
@@ -9,7 +8,6 @@ class ThroneInheritance:
 
     def birth(self, parentName: str, childName: str) -> None:
         self.alive[childName] = self.alive[parentName] + 1
-
         if parentName in self.edges:
             self.edges[parentName].append(childName)
             if childName not in self.edges:
@@ -23,7 +21,6 @@ class ThroneInheritance:
         del self.alive[name]
 
     def getInheritanceOrder(self) -> List[str]:
-
         hierarchy = []
 
         def dfs(cur, parent=-1):
@@ -35,8 +32,3 @@ class ThroneInheritance:
                     dfs(i, cur)
         dfs(self.root)
         return hierarchy
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

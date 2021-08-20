@@ -1,6 +1,7 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
-        cost_to_digit = {val: str(index + 1) for index, val in enumerate(cost)}
+        cost_to_digit = {val: str(index + 1) for (index, val) in enumerate(cost)}
         cost = sorted(cost_to_digit.keys())
 
         @lru_cache(None)
@@ -16,8 +17,6 @@ class Solution:
                     continue
                 curr_number = ''.join(sorted(cost_to_digit[c] + curr_number, reverse=True))
                 max_number = curr_number if max_number is None or len(curr_number) > len(max_number) or (len(curr_number) == len(max_number) and curr_number > max_number) else max_number
-            #print(target, max_number)
             return max_number
-
         ans = helper(target)
         return ans if ans else '0'

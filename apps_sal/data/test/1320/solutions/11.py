@@ -1,5 +1,5 @@
 def f(n):
-    return (n * (n - 1)) // 2
+    return n * (n - 1) // 2
 
 
 n = int(input())
@@ -16,5 +16,4 @@ for i in ver:
     ans += f(i)
 for i in gor:
     ans += f(i)
-
 print(ans)

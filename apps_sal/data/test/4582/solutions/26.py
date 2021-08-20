@@ -1,20 +1,12 @@
-# A - HonestOrDishonest
-# https://atcoder.jp/contests/abc056/tasks/abc056_a
-
-a, b = list(map(str, input().split()))
-
+(a, b) = list(map(str, input().split()))
 h = 'H'
 d = 'D'
-
 result = h
-
 if a == h:
     if b == d:
         result = d
+elif b == h:
+    result = d
 else:
-    if b == h:
-        result = d
-    else:
-        result = h
-
+    result = h
 print(result)

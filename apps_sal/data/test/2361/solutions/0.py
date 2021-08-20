@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     player = n // k
     jok_pla = min(n // k, m)
     jok_re = m - jok_pla

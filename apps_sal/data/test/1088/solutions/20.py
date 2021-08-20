@@ -24,12 +24,12 @@ sys.setrecursionlimit(5000000)
 mod = 998244353
 al = [chr(ord('a') + i) for i in range(26)]
 direction = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(n)]
 
 
 class WeightedUnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
@@ -69,10 +69,8 @@ class WeightedUnionFind:
         return self.sizes[self.find(x)]
 
 
-# print(a)
 retsu = WeightedUnionFind(n)
 gyo = WeightedUnionFind(n)
-
 for i in range(n):
     for j in range(i + 1, n):
         for l in range(n):
@@ -81,7 +79,6 @@ for i in range(n):
         else:
             if not retsu.same(i, j):
                 retsu.union(i, j)
-# print(retsu)
 for i in range(n):
     for j in range(i + 1, n):
         for l in range(n):
@@ -90,7 +87,6 @@ for i in range(n):
         else:
             if not gyo.same(i, j):
                 gyo.union(i, j)
-
 ans = 1
 
 
@@ -99,9 +95,6 @@ def keisan(ans, m):
         ans *= i + 1
         ans %= mod
     return ans
-
-# print(retsu.par)
-# print(gyo.par)
 
 
 for i in range(n):

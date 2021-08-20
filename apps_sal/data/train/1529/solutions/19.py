@@ -7,9 +7,9 @@ for _ in range(int(input())):
     for i in range(n):
         s = s + a[i]
     s = s * (f // n)
-    r, i, k = 0, 1, 1
+    (r, i, k) = (0, 1, 1)
     while i <= n:
-        r = r + (k * s)
+        r = r + k * s
         k = k * 10
         i = i + 1
     print(r)

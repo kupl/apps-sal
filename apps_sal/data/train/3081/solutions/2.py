@@ -15,4 +15,4 @@ def rand_range(n, mn, mx):
 
 
 def primes(n):
-    return list(islice((a for a in count(2) if all(a % b != 0 for b in range(2, 1 + int(a ** 0.5)))), n))
+    return list(islice((a for a in count(2) if all((a % b != 0 for b in range(2, 1 + int(a ** 0.5))))), n))

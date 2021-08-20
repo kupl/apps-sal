@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     for i in range(60, -1, -1):
         m = k ** i
@@ -8,7 +8,7 @@ for _ in range(t):
             if a[j] >= m:
                 a[j] -= m
                 break
-    if all(i == 0 for i in a):
+    if all((i == 0 for i in a)):
         print('YES')
     else:
         print('NO')

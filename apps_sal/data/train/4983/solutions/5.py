@@ -1,8 +1,7 @@
 def merge(*dicts):
     merged = {}
-
     for dict in dicts:
-        for key, value in dict.items():
+        for (key, value) in dict.items():
             if key not in merged:
                 merged[key] = [value]
             else:

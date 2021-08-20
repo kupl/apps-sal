@@ -1,9 +1,9 @@
 def replace_zero(a):
     li1 = []
-    for i, j in enumerate(a):
+    for (i, j) in enumerate(a):
         if j == 0:
             temp = a[:]
-            t, t1, li, temp[i] = i, i + 1, [], 1
+            (t, t1, li, temp[i]) = (i, i + 1, [], 1)
             while t >= 0 and temp[t] == 1:
                 li.append(temp[t])
                 t -= 1

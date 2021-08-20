@@ -1,16 +1,17 @@
 class Solution:
+
     def recursion(self, coins, remain, dic):
-        if(remain < 0):
+        if remain < 0:
             return float('inf')
-        if(remain == 0):
+        if remain == 0:
             return 0
-        if(remain in dic.keys()):
+        if remain in dic.keys():
             return dic[remain]
         min_coin = float('inf')
         for coin in coins:
             number_coin = None
             prev_num = self.recursion(coins, remain - coin, dic)
-            if(prev_num == float('inf')):
+            if prev_num == float('inf'):
                 number_coin = prev_num
             else:
                 number_coin = prev_num + 1
@@ -23,7 +24,7 @@ class Solution:
         count = 0
         dic = {}
         number = self.recursion(coins, remain, dic)
-        if(number == float('inf')):
+        if number == float('inf'):
             return -1
         else:
             return number

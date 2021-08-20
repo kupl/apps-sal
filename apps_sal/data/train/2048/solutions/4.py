@@ -1,15 +1,18 @@
 from sys import *
-def f(): return map(int, stdin.readline().split())
 
 
-n, k = f()
+def f():
+    return map(int, stdin.readline().split())
+
+
+(n, k) = f()
 t = sorted(f())
 s = [0] * (n + 1)
 for i in range(n):
     s[i + 1] = s[i] + t[i]
 t = [0] + t
 d = s[n]
-l, r = 0, n
+(l, r) = (0, n)
 while l < r:
     m = l + r + 1 >> 1
     if t[m] * m - s[m] > k:
@@ -17,7 +20,7 @@ while l < r:
     else:
         l = m
 x = l
-l, r = 0, n
+(l, r) = (0, n)
 while l < r:
     m = l + r >> 1
     if d - s[m] - t[m] * (n - m) > k:

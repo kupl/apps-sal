@@ -1,14 +1,13 @@
 def main():
     import sys
-    sys.setrecursionlimit(10**5)
+    sys.setrecursionlimit(10 ** 5)
     from collections import deque
-    n, m, s = map(int, input().split())
+    (n, m, s) = map(int, input().split())
     s -= 1
     graph = [[] for _ in range(n)]
     for _ in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         graph[u - 1].append(v - 1)
-
     seen = [False] * n
     li = deque()
 
@@ -24,7 +23,6 @@ def main():
             seen[node] = True
             for c_node in graph[node]:
                 visit2(c_node)
-
     for i in range(n):
         visit(i)
     seen = [False] * n

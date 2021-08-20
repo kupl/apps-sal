@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         if len(arr) == 0:
             return 0
@@ -6,7 +7,6 @@ class Solution:
         for el in arr:
             if self.isUnique(el):
                 currRes.append(el)
-
         for el in arr:
             for subSeq in currRes:
                 if self.isUnique(el + subSeq):

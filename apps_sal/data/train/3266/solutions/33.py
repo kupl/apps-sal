@@ -5,6 +5,6 @@ def my_first_kata(a, b):
         if type(a) == dict or type(b) == dict:
             return False
         else:
-            return (a % b + b % a)
+            return a % b + b % a
     except ZeroDivisionError:
         pass

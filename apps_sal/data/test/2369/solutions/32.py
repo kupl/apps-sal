@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 p = [1]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(n):
     p.append(p[-1] * (i + 1) % mod)
 p.pop()

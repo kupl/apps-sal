@@ -3,7 +3,7 @@ def main():
     l = list(map(int, input().split()))
     seive = [False, True] * max(l)
     a = len(seive)
-    for i in range(3, int(a ** .5) + 1, 2):
+    for i in range(3, int(a ** 0.5) + 1, 2):
         if seive[i]:
             for j in range(i * i, a, i):
                 seive[j] = False
@@ -18,7 +18,7 @@ def main():
             print(len(res))
             print(*res)
             return
-    l0, l1 = [], []
+    (l0, l1) = ([], [])
     for a in l:
         if a != 1:
             if a & 1:

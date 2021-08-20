@@ -1,8 +1,8 @@
 def replace_dots(str):
-    output = ""
+    output = ''
     for element in str:
-        if element == ".":
-            output += "-"
+        if element == '.':
+            output += '-'
         else:
             output += element
     return output

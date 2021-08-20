@@ -1,5 +1,5 @@
-# O(nlogn)  S(n)
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         A = [a % k for a in arr]
         A.sort()

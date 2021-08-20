@@ -11,6 +11,6 @@ def needed(months):
 
 def match(usefulness, months):
     if current(usefulness) < needed(months):
-        return "No match!"
+        return 'No match!'
     else:
-        return "Match!"
+        return 'Match!'

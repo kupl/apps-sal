@@ -1,7 +1,7 @@
 q = int(input())
 for fwefe in range(q):
     wyn = 0
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     while b > 0 and c > 1:
         b -= 1
         c -= 2

@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
         results = []
         letters = 'abc'
@@ -18,6 +19,5 @@ class Solution:
                 s += letters[i]
                 backtrack(s)
                 s = s[0:-1]
-
         backtrack('')
         return results[-1] if len(results) == k else ''

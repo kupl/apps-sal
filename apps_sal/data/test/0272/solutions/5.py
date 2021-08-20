@@ -12,11 +12,10 @@ for i in range(len(a)):
     else:
         ans[a[i]] = b[i]
         ans[b[i]] = a[i]
-
 if t:
     an = []
     for i in ans.keys():
-        if i != ans[i] and i not in an and ans[i] not in an:
+        if i != ans[i] and i not in an and (ans[i] not in an):
             an.append(i)
             an.append(ans[i])
     print(len(an) // 2)

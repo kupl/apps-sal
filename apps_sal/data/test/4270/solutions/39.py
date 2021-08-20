@@ -1,6 +1,5 @@
 N = int(input())
 v = list(map(int, input().split()))
-
 v.sort()
 while True:
     x = v[0]
@@ -14,6 +13,4 @@ while True:
         break
     else:
         pass
-
-
 print(z)

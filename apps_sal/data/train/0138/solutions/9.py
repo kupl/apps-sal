@@ -1,5 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         def solve(nums):
             cnt = 0
             for n in nums:
@@ -16,7 +18,6 @@ class Solution:
                     last = i
                     break
             return max(last, len(nums) - first - 1)
-
         l = 0
         ans = 0
         nums.append(0)

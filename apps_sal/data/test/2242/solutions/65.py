@@ -1,13 +1,11 @@
 from collections import Counter
 S = input()
-
 cs = [0]
 r = 1
 for c in S[::-1]:
     cs.append((cs[-1] + r * int(c)) % 2019)
     r *= 10
     r %= 2019
-
 ctr = Counter(cs)
 ans = 0
 for v in ctr.values():

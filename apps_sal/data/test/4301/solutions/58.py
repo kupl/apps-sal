@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(input()) for _ in range(n)]
-m1, m2 = -1, -1
+(m1, m2) = (-1, -1)
 for i in range(n):
     if m1 < a[i]:
         m2 = m1

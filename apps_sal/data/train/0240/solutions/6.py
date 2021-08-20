@@ -1,4 +1,5 @@
 class Solution:
+
     def frequencySort(self, s):
         """
         :type s: str
@@ -10,7 +11,7 @@ class Solution:
             if c not in charToFreq:
                 charToFreq[c] = 0
             charToFreq[c] += 1
-        for key, value in list(charToFreq.items()):
+        for (key, value) in list(charToFreq.items()):
             if value not in freqToChar:
                 freqToChar[value] = []
             freqToChar[value].append(key)
@@ -19,4 +20,4 @@ class Solution:
             if key in freqToChar:
                 for char in freqToChar[key]:
                     result += [char] * key
-        return "".join(result)
+        return ''.join(result)

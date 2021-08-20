@@ -1,8 +1,8 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     V = list(map(int, input().split()))
     ans = -1
-    for i in range(c := min(n, k) + 1):
+    for i in range((c := (min(n, k) + 1))):
         for j in range(c - i):
             A = V[:i] + V[-j:] if j != 0 else V[:i]
             A.sort(reverse=True)

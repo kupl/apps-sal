@@ -1,11 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = max(arr)
         dp = [1] * n
         steps = n
         if m == n:
             return steps
-
         for a in reversed(arr):
             steps -= 1
             i = a - 1

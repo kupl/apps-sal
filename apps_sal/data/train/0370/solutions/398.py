@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         d = {}
         for i in range(len(A)):
@@ -13,9 +14,8 @@ class Solution:
             if A[i] not in d:
                 d[A[i]] = []
             d[A[i]].append(i)
-
         self.father = list(range(len(A)))
-        for k, v in list(d.items()):
+        for (k, v) in list(d.items()):
             if len(v) > 1:
                 for i in range(len(v) - 1):
                     self.union(v[i], v[i + 1])

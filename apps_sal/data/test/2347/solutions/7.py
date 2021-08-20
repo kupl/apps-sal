@@ -1,4 +1,3 @@
-
 t = int(input())
 for nt in range(t):
     s = input()
@@ -12,6 +11,6 @@ for nt in range(t):
             isok = True
             break
     if isok:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

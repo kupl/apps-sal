@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         res = []
         dic = {}
@@ -6,8 +7,7 @@ class Solution:
             if num in dic:
                 res.append((dic[num], num))
                 continue
-
-            steps, tmp = 0, num
+            (steps, tmp) = (0, num)
             while num > 1:
                 if num in dic:
                     steps += dic[num]
@@ -17,7 +17,6 @@ class Solution:
                 else:
                     num //= 2
                 steps += 1
-
             dic[tmp] = steps
             res.append((steps, tmp))
         res.sort()

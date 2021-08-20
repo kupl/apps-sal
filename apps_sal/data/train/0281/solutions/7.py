@@ -1,4 +1,5 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         d = {}
         m1 = [0, 0]
@@ -13,5 +14,4 @@ class Solution:
                 d[diff] += 1
                 m1 = max(m1, [d[diff], diff])
         m2 = 26 * (m1[0] - 1) + m1[1]
-       # print(m2)
         return k >= m2

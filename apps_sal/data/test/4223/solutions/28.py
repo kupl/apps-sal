@@ -1,6 +1,6 @@
 N = int(input())
 S = input()
-tmp, rst = '', []
+(tmp, rst) = ('', [])
 for i in S:
     if tmp != i:
         rst.append(i)

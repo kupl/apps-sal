@@ -1,6 +1,6 @@
 t = int(input())
 for q in range(t):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     used = [0] * 301
     a = list(map(int, input().split()))
     for i in range(n):

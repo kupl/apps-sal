@@ -1,6 +1,5 @@
 import math
-n, k = [int(s) for s in input().split()]
-
+(n, k) = [int(s) for s in input().split()]
 a = [int(s) for s in input().split()]
 
 
@@ -17,18 +16,16 @@ def check():
                     sum0 += 1
             else:
                 if i == n - 1:
-                    sum0 += math.ceil((a[i]) / k)
+                    sum0 += math.ceil(a[i] / k)
                 else:
-                    sum0 += int((a[i]) / k)
+                    sum0 += int(a[i] / k)
                 res = a[i] % k
         else:
             if i == n - 1:
                 sum0 += math.ceil((a[i] + res) / k)
             else:
                 sum0 += max(int((a[i] + res) / k), 1)
-            #print(res, max(int((a[i] + res) / k), 1))
             res = (a[i] + res) % k if a[i] + res >= k else 0
-        # print(res0,sum0)
     print(sum0)
 
 

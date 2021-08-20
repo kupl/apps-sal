@@ -7,7 +7,7 @@ for i in range(N):
     if l[i][0] != l[i][1]:
         k = 0
     if k == 3:
-        print("Yes")
+        print('Yes')
         break
 else:
-    print("No")
+    print('No')

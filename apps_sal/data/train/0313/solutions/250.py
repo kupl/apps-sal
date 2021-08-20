@@ -1,14 +1,12 @@
 class Solution:
+
     def minDays(self, A: List[int], m: int, k: int) -> int:
         if m * k > len(A):
             return -1
-
-        left, right = 1, max(A)
-
+        (left, right) = (1, max(A))
         while left < right:
-            mid = (left + right) >> 1
+            mid = left + right >> 1
             flow = bouq = 0
-
             for a in A:
                 flow = 0 if a > mid else flow + 1
                 if flow >= k:

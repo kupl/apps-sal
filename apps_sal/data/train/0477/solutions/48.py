@@ -1,4 +1,5 @@
 class Solution:
+
     def invert(self, t):
         ret = ''
         for i in t:

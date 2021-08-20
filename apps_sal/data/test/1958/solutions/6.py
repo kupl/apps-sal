@@ -1,4 +1,4 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 a = [input() for i in range(n)]
 cur = 1
 cnt = 1

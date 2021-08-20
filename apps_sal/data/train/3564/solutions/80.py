@@ -1,5 +1,5 @@
 def stringy(size):
-    r = ""
+    r = ''
     for i in range(size):
         if i % 2 == 0:
             r += '1'

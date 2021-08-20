@@ -2,11 +2,9 @@ from sys import stdin
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    n, m = map(int, readline().split())
+    (n, m) = map(int, readline().split())
     s = readline().strip()
-
     ans = []
     flag = False
     i = n
@@ -17,18 +15,15 @@ def main():
                 ans.append(sa)
                 flag = True
                 break
-            else:
-                if s[i - sa] == "0":
-                    max_i = i - sa
+            elif s[i - sa] == '0':
+                max_i = i - sa
         if flag:
             break
+        elif max_i != i:
+            ans.append(i - max_i)
+            i = max_i
         else:
-            if max_i != i:
-                ans.append(i - max_i)
-                i = max_i
-            else:
-                break
-
+            break
     if flag:
         ans.reverse()
         print(*ans)

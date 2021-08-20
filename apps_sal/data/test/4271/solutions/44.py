@@ -9,5 +9,4 @@ for i in range(N):
         ans += C[cnt - 1]
     cnt = A[i]
     ans += B[A[i] - 1]
-
 print(ans)

@@ -47,5 +47,4 @@ def check_all_p(balls):
 
 input()
 balls = sorted([int(x) for x in input().split()])
-
 print(check_all_p(balls))

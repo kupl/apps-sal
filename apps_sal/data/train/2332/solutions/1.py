@@ -20,12 +20,12 @@ def dfs(s, t, Edge):
 T = int(readline())
 Ans = [None] * T
 for qu in range(T):
-    N, M, A, B = map(int, readline().split())
+    (N, M, A, B) = map(int, readline().split())
     A -= 1
     B -= 1
     Edge = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = map(int, readline().split())
+        (a, b) = map(int, readline().split())
         a -= 1
         b -= 1
         Edge[a].append(b)
@@ -34,7 +34,7 @@ for qu in range(T):
     sb = dfs(B, A, Edge)
     ca = 0
     cb = 0
-    for fa, fb in zip(sa, sb):
+    for (fa, fb) in zip(sa, sb):
         if fa == fb:
             continue
         if fa:

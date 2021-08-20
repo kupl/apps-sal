@@ -12,7 +12,6 @@ def sort_nested_list(a):
                 putter(lst[i])
             else:
                 lst[i] = next(elts)
-
-    a, elts = deepcopy(a), iter(sorted(seeker(a)))
+    (a, elts) = (deepcopy(a), iter(sorted(seeker(a))))
     putter(a)
     return a

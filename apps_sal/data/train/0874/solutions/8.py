@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    n, m, s = (int(i) for i in input().split())
-    li = list(int(i) for i in input().split())
+    (n, m, s) = (int(i) for i in input().split())
+    li = list((int(i) for i in input().split()))
     c = 0
     d = m
     for i in li:

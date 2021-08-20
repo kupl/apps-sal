@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
 
         def kadane(A):
@@ -14,7 +15,7 @@ class Solution:
         s = sum(A)
         y = kadane(A)
         if y == s:
-            y = -1e10
+            y = -10000000000.0
         else:
             y = -s + y
         return max(x, y)

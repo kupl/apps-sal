@@ -1,13 +1,12 @@
 import math
 N = int(input())
-
-ans = ""
+ans = ''
 if N == 1:
-    print("1")
+    print('1')
 elif N == 0:
-    print("0")
+    print('0')
 elif N == -1:
-    print("10")
+    print('10')
 else:
     while True:
         r = N % 2
@@ -16,5 +15,4 @@ else:
         if N == 0 or N == 1:
             ans = str(int(N)) + ans
             break
-
     print(ans)

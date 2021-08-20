@@ -1,20 +1,20 @@
 for i in range(int(input())):
     trn = int(input())
-    tr = input().split(" ")
+    tr = input().split(' ')
     drn = int(input())
-    dr = input().split(" ")
+    dr = input().split(' ')
     tsn = int(input())
-    ts = input().split(" ")
+    ts = input().split(' ')
     dsn = int(input())
-    ds = input().split(" ")
+    ds = input().split(' ')
     for j in ts:
         if j not in tr:
-            print("no")
+            print('no')
             break
     else:
         for k in ds:
             if k not in dr:
-                print("no")
+                print('no')
                 break
         else:
-            print("yes")
+            print('yes')

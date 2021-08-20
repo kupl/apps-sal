@@ -1,7 +1,8 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-b, q, i, m = R()
+(b, q, i, m) = R()
 a = set(R())
 c = 0
 for _ in range(99):
@@ -10,4 +11,4 @@ for _ in range(99):
     if b not in a:
         c += 1
     b *= q
-print(c if c < 32 else'inf')
+print(c if c < 32 else 'inf')

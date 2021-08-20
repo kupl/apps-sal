@@ -6,9 +6,7 @@ def main():
     n = int(input())
     t = list(map(int, input().split()))
     v = list(map(int, input().split()))
-
     length = sum(t) * 2
-
     dp = [0] * (length + 1)
     border = v[0]
     count = t[0] * 2
@@ -22,7 +20,6 @@ def main():
             index += 1
             border = v[index]
             count = t[index] * 2
-
     dp[length] = 0
     border = v[n - 1]
     count = t[n - 1] * 2
@@ -36,11 +33,9 @@ def main():
             index -= 1
             border = v[index]
             count = t[index] * 2
-
     ans = 0
     for i in range(length):
         ans += (dp[i] + dp[i + 1]) / 4
-
     print(ans)
 
 

@@ -1,5 +1,7 @@
 class ThroneInheritance:
+
     class FamilyMember:
+
         def __init__(self, name: str):
             self.name = name
             self.children = []
@@ -12,7 +14,6 @@ class ThroneInheritance:
 
         def kill(self):
             self.is_alive = False
-
     king = None
     family = {}
     inheritenceOrder = []
@@ -41,10 +42,3 @@ class ThroneInheritance:
         self.inheritenceOrder = []
         self.buildInheritanceOrder(self.king)
         return self.inheritenceOrder
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

@@ -8,7 +8,7 @@ for _ in range(t):
         print(1, 1)
     else:
         z = 0
-        for i in range(ceil((x / 3)**0.5), ceil(x**0.5)):
+        for i in range(ceil((x / 3) ** 0.5), ceil(x ** 0.5)):
             if x % i == 0 and (x // i - i) % 2 == 0:
                 n = (i + x // i) // 2
                 k = (x // i - i) // 2

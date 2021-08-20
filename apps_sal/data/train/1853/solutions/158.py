@@ -4,23 +4,20 @@ import math
 
 
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-
         graph = defaultdict(list)
-
         for i in range(len(edges)):
             graph[edges[i][0]].append([edges[i][1], edges[i][2]])
             graph[edges[i][1]].append([edges[i][0], edges[i][2]])
-
         res = [0] * n
-
         for i in range(n):
             visited = [False] * n
             distance = [math.inf] * n
             distance[i] = 0
             stack = [[0, i]]
             count = 0
-            while(len(stack) != 0):
+            while len(stack) != 0:
                 p = heappop(stack)
                 if p[0] > distanceThreshold:
                     break
@@ -41,5 +38,4 @@ class Solution:
             if res[i] <= m:
                 m = res[i]
                 pos = i
-
         return pos

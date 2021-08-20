@@ -1,12 +1,12 @@
 import queue
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 nds = [[] for _ in range(N)]
 vstd = [False for _ in range(N)]
-ans = "Yes"
+ans = 'Yes'
 for i in range(M):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     c -= 1
     d -= 1
     nds[c].append(d)
@@ -17,7 +17,6 @@ for i in range(N):
     q = queue.Queue()
     q.put(i)
     vstd[i] = True
-
     a = 0
     b = 0
     while not q.empty():
@@ -30,5 +29,5 @@ for i in range(N):
             vstd[e] = True
             q.put(e)
     if a != b:
-        ans = "No"
+        ans = 'No'
 print(ans)

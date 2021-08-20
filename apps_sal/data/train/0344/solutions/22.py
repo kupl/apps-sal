@@ -1,10 +1,9 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         N = len(A)
         wordLen = len(A[0])
-
         table = [1 for _ in range(wordLen)]
-
         for i in range(wordLen - 2, -1, -1):
             subAnsSet = set()
             for k in range(i + 1, wordLen):

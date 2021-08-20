@@ -9,7 +9,7 @@ for i in range(t):
         w = s
     else:
         w = q
-    num = float("inf")
+    num = float('inf')
     for j in range(7):
         tmp = 0
         cnt = 0
@@ -21,8 +21,7 @@ for i in range(t):
                 break
     if n - s <= 0:
         print(num)
+    elif q == 0:
+        print(7 * (p - 1) + num)
     else:
-        if q == 0:
-            print(7 * (p - 1) + num)
-        else:
-            print(7 * p + num)
+        print(7 * p + num)

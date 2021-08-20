@@ -1,4 +1,4 @@
-w, h, x, y = map(int, input().split())
+(w, h, x, y) = map(int, input().split())
 if x * 2 == w and y * 2 == h:
     c = 1
 else:

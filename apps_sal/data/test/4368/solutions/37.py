@@ -4,5 +4,5 @@ def Base_10_to_n(X, n):
     return str(X % n)
 
 
-N, K = list(map(int, input().split()))
-print((len(Base_10_to_n(N, K))))
+(N, K) = list(map(int, input().split()))
+print(len(Base_10_to_n(N, K)))

@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 k = int(input())
-w = "codeforces"
+w = 'codeforces'
 nums = [1] * 10
 prod = 1
 i = 0
@@ -12,7 +12,7 @@ while prod < k:
     i += 1
     if i == 10:
         i = 0
-sol = ""
+sol = ''
 for i in range(10):
     for j in range(nums[i]):
         sol += w[i]

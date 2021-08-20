@@ -15,4 +15,4 @@ def b2d(str):
     return ans
 
 
-print((b2d(str) * pow(2, l - 1)) % MOD)
+print(b2d(str) * pow(2, l - 1) % MOD)

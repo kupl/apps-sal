@@ -1,5 +1,4 @@
 import sys
-# sys.setrecursionlimit(100000)
 
 
 def input():
@@ -15,13 +14,12 @@ def input_int_list():
 
 
 def main():
-    n, a, b = input_int_list()
+    (n, a, b) = input_int_list()
     X = input_int_list()
-    dp = [0] * (n)
+    dp = [0] * n
     for i in range(1, n):
         dp[i] = min(dp[i - 1] + (X[i] - X[i - 1]) * a, dp[i - 1] + b)
-
-    print((dp[n - 1]))
+    print(dp[n - 1])
     return
 
 

@@ -6,12 +6,12 @@ for i in range(4):
         for k in range(j + 1, 6):
             h = arr[i] + arr[j] + arr[k]
             if s - h == h:
-                print("YES")
+                print('YES')
                 flag = 1
                 break
         if flag == 1:
             break
     if flag == 1:
         break
-if (flag == 0):
-    print("NO")
+if flag == 0:
+    print('NO')

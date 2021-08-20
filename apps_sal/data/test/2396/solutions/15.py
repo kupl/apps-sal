@@ -5,9 +5,9 @@ for i in range(n):
     ch = input()
     c = eval(ch)
     l.append(c)
-    if (c in d):
+    if c in d:
         d[c] += 1
     else:
         d[c] = 1
 for i in range(n):
-    print(d[l[i]], end=" ")
+    print(d[l[i]], end=' ')

@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    c, sum = map(int, input().split())
+    (c, sum) = map(int, input().split())
     k = sum // c
     cnt1 = sum % c
     cnt2 = c - cnt1

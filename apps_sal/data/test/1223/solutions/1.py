@@ -2,6 +2,7 @@ import bisect
 
 
 class SqrtSet:
+
     def __init__(self, block_limit=201):
         self.key = []
         self.child = [[]]
@@ -45,8 +46,8 @@ class SqrtSet:
 
     def dump(self):
         for b in self.child:
-            print(len(b), end=" ")
-        print("")
+            print(len(b), end=' ')
+        print('')
 
 
 def main():
@@ -55,7 +56,7 @@ def main():
     idx = [0] * n
     for i in range(0, n):
         idx[i] = i
-    idx.sort(key=lambda i: - p[i])
+    idx.sort(key=lambda i: -p[i])
     t = SqrtSet()
     t.insert(-1)
     t.insert(n)

@@ -3,9 +3,9 @@ def main():
     days = list(map(int, input().split()))
     if n == 1:
         if days[0] == 15:
-            print("DOWN")
+            print('DOWN')
         elif days[0] == 0:
-            print("UP")
+            print('UP')
         else:
             print(-1)
         return
@@ -19,9 +19,9 @@ def main():
         if last == 0 or last == 15:
             now = (now + 1) % 2
     if now == 1:
-        print("DOWN")
+        print('DOWN')
     else:
-        print("UP")
+        print('UP')
 
 
 main()

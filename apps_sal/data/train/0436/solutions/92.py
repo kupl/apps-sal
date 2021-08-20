@@ -1,9 +1,8 @@
 class Solution:
-    def minDays(self, n: int) -> int:
 
+    def minDays(self, n: int) -> int:
         c = {n: 0}
         q = collections.deque([n])
-
         while 1:
             x = q.popleft()
             if x == 0:

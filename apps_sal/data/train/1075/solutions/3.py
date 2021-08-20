@@ -17,11 +17,10 @@ for _ in range(int(input())):
                 return nim
             nim += 1
             nim %= 4
-
     x = 0
     for aa in a:
         x ^= nimber(aa)
     if x != 0:
-        print("Henry")
+        print('Henry')
     else:
-        print("Derek")
+        print('Derek')

@@ -1,6 +1,5 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 if a + b + c >= 22:
-    print("bust")
+    print('bust')
 else:
     print('win')

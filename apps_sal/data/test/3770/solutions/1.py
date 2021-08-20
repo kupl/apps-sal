@@ -1,8 +1,8 @@
-# Dinic's algorithm
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -27,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = map(iter, self.G)
+            (*self.it,) = map(iter, self.G)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -60,11 +60,10 @@ class Dinic:
         return flow
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 edge = [tuple(map(int, input().split())) for i in range(M)]
-
 G = Dinic(2 * N + 2)
 res = 0
 for i in range(1, N + 1):
@@ -78,12 +77,9 @@ for i in range(1, N + 1):
         res += -B[i - 1]
         G.add_edge(N + i, 2 * N + 1, -B[i - 1])
         G.add_edge(N + i, i, A[i - 1])
-    G.add_edge(i, N + i, 10**15)
-
-for u, v in edge:
-    G.add_edge(u, N + v, 10**15)
-    G.add_edge(v, N + u, 10**15)
-
+    G.add_edge(i, N + i, 10 ** 15)
+for (u, v) in edge:
+    G.add_edge(u, N + v, 10 ** 15)
+    G.add_edge(v, N + u, 10 ** 15)
 res -= G.flow(0, 2 * N + 1)
-
 print(res)

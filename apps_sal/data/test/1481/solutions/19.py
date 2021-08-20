@@ -11,15 +11,13 @@ for i in range(0, n):
         for c in range(0, 4):
             x = i + difx[c]
             y = j + dify[c]
-            if x < 0 or x >= n or y < 0 or y >= n:
+            if x < 0 or x >= n or y < 0 or (y >= n):
                 continue
             if grid[x][y] == 'o':
                 count += 1
         if count % 2 != 0:
             p = 0
-
-
 if p == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

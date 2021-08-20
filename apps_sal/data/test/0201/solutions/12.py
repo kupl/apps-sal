@@ -1,4 +1,4 @@
-C, Hr, Hb, Wr, Wb = map(int, input().split())
+(C, Hr, Hb, Wr, Wb) = map(int, input().split())
 ans = 0
 for i in range(5 * 10 ** 5):
     if Wr * i <= C:

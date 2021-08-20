@@ -1,7 +1,6 @@
-n, m = input().split()
+(n, m) = input().split()
 n = int(n)
 m = int(m)
-
 l = set()
 for i in range(n):
     ll = list(map(int, input().split()))

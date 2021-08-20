@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 k = set()
-s = ""
-ans = ""
+s = ''
+ans = ''
 for i in range(n):
     new_s = input()
     if new_s[::-1] in k:

@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 
 
 def sort(a):
@@ -31,12 +31,12 @@ def sf():
 
 
 def main():
-    N, Z, W = _sd()
+    (N, Z, W) = _sd()
     a = sa()
-    if(N > 1):
-        print((max(abs(a[N - 1] - W), abs(a[N - 2] - a[N - 1]))))
+    if N > 1:
+        print(max(abs(a[N - 1] - W), abs(a[N - 2] - a[N - 1])))
     else:
-        print((abs(a[0] - W)))
+        print(abs(a[0] - W))
 
 
 main()

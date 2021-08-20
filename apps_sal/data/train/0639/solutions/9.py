@@ -7,6 +7,6 @@ for _ in range(int(input())):
         l.append(st.count(i))
     l.sort()
     if len(l) < 3 or l[-1] == l[-2] + l[-3]:
-        print("Dynamic")
+        print('Dynamic')
     else:
-        print("Not")
+        print('Not')

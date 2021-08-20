@@ -2,7 +2,6 @@ n = int(input())
 a = int(input())
 b = int(input())
 c = int(input())
-
 l = 0
 while n >= a or n >= b:
     if n >= b and b - c < a:
@@ -15,5 +14,4 @@ while n >= a or n >= b:
         nl = n // a
         l += nl
         n -= a * nl
-
 print(l)

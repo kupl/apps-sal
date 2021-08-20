@@ -7,21 +7,32 @@ from collections import defaultdict, deque, OrderedDict
 from os import path
 import random
 import bisect as bi
-def yes(): print('YES')
-def no(): print('NO')
 
 
-if (path.exists('input.txt')):
-    #------------------Sublime--------------------------------------#
+def yes():
+    print('YES')
+
+
+def no():
+    print('NO')
+
+
+if path.exists('input.txt'):
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
-    def I(): return (int(input()))
-    def In(): return(map(int, input().split()))
+
+    def I():
+        return int(input())
+
+    def In():
+        return map(int, input().split())
 else:
-    #------------------PYPY FAst I/o--------------------------------#
-    def I(): return (int(stdin.readline()))
-    def In(): return(map(int, stdin.readline().split()))
-# sys.setrecursionlimit(1500)
+
+    def I():
+        return int(stdin.readline())
+
+    def In():
+        return map(int, stdin.readline().split())
 
 
 def dict(a):
@@ -35,7 +46,7 @@ def dict(a):
 
 
 def find_gt(a, x):
-    'Find leftmost value greater than x'
+    """Find leftmost value greater than x"""
     i = bi.bisect_right(a, x)
     if i != len(a):
         return i
@@ -44,7 +55,7 @@ def find_gt(a, x):
 
 
 def find_ge(a, x):
-    'Find leftmost item greater than or equal to x'
+    """Find leftmost item greater than or equal to x"""
     i = bi.bisect_left(a, x)
     if i != len(a):
         return i
@@ -54,7 +65,7 @@ def find_ge(a, x):
 
 def main():
     try:
-        n, Q = In()
+        (n, Q) = In()
         l = list(In())
         l.sort()
         pre = [0]
@@ -62,16 +73,13 @@ def main():
         for x in range(n):
             su += l[x]
             pre.append(su)
-        # print(pre)
         for x in range(Q):
             q = I()
             q *= 2
             pos = find_ge(l, q)
-            # print(pos)
             if pos == -1:
                 print(0)
             else:
-                # print(pos)
                 ans = pre[-1] - pre[pos]
                 print(ans)
     except:
@@ -83,7 +91,6 @@ P = 1000000007
 
 
 def __starting_point():
-    #for _ in range(I()):main()
     for _ in range(1):
         main()
 

@@ -1,17 +1,12 @@
 import math
-
-N, K = [int(x) for x in input().split()]
-
+(N, K) = [int(x) for x in input().split()]
 res = 0
 sum = 0
-
 arr = [int(x) for x in input().split()]
 arrK = [int(x) - 1 for x in input().split()]
-
 for i in range(0, N):
     res += arr[i] * arr[i - 1]
     sum += arr[i]
-
 dictU = {}
 used = 0
 for i in arrK:
@@ -29,11 +24,8 @@ for i in arrK:
         tmp += arr[pre]
     if next in dictU:
         tmp += arr[next]
-
     test = arr[cur] * (sum - arr[cur] - arr[pre] - arr[next] - used + tmp)
     res += test
     dictU[cur] = True
-    #print(res, test, cur)
     used += arr[cur]
-
 print(res)

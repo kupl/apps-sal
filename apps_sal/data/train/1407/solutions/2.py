@@ -25,7 +25,7 @@ def print_output(A, k, n, m):
 t = int(input())
 A = fill_grid_max()
 for test in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     if n == 1 and m == 1:
         print(1)
         print(1)

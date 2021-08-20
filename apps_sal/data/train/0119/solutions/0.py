@@ -6,7 +6,7 @@ for _ in range(t):
     ab = [list(map(int, input().split())) for i in range(n - 1)]
     graph = [[] for i in range(n + 1)]
     deg = [0] * (n + 1)
-    for a, b in ab:
+    for (a, b) in ab:
         graph[a].append(b)
         graph[b].append(a)
         deg[a] += 1

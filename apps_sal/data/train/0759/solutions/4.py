@@ -1,15 +1,11 @@
 def prime(num):
     if n > 1:
-        for i in range(2, int(num**0.5) + 1):
-
-            # If num is divisible by any number between
-            # 2 and n / 2, it is not prime
-            if (num % i) == 0:
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
                 return False
                 break
         else:
             return True
-
     else:
         return False
 
@@ -22,8 +18,8 @@ for k in range(t):
     s = max(l)
     a1 = [0] * (s + 1)
     i = 2
-    while(i <= s):
-        if (prime(i)):
+    while i <= s:
+        if prime(i):
             for j in range(i, s + 1, i):
                 a1[j] = i
         i += 1
@@ -40,10 +36,8 @@ for k in range(t):
             if ti >= ma:
                 ma = ti
                 nu = a[j - 1]
-
             ti = 1
     if ti >= ma:
         ma = ti
         nu = a[n - 1]
-
     print(nu)

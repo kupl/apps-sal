@@ -4,4 +4,4 @@ def get_strings(city):
         n = city.lower().count(i)
         if i + ':' + '*' * n not in string and i.isalpha():
             string.append(i + ':' + '*' * n)
-    return ",".join(string)
+    return ','.join(string)

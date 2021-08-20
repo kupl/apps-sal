@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -11,15 +10,12 @@ MOD = 1000000007
 def main():
     K = int(readline())
     N = 50
-
-    q, r = divmod(K, N)
+    (q, r) = divmod(K, N)
     A = [N - 1 + (N + 1) * q - K] * N
-
     for i in range(r):
         A[i] += N + 1
-
     print(N)
-    print((' '.join(map(str, A))))
+    print(' '.join(map(str, A)))
     return
 
 

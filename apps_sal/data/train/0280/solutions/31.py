@@ -1,10 +1,11 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         if len(s) <= k:
             return 0
 
-        def num_change(w):  # number need to change to become palindrome
-            l, r = 0, len(w) - 1
+        def num_change(w):
+            (l, r) = (0, len(w) - 1)
             count = 0
             while l < r:
                 if w[l] != w[r]:
@@ -18,9 +19,8 @@ class Solution:
                 if k == 1:
                     memo[i, k] = num_change(s[:i + 1])
                 else:
-                    memo[i, k] = min(dp(j, k - 1) + num_change(s[j + 1:i + 1]) for j in range(k - 2, i))
+                    memo[i, k] = min((dp(j, k - 1) + num_change(s[j + 1:i + 1]) for j in range(k - 2, i)))
             return memo[i, k]
-
         memo = {}
         n = len(s)
         return dp(n - 1, k)

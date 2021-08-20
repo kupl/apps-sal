@@ -1,11 +1,11 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
         i = 0
         ans = float('-inf')
         while i < n:
             s = i
-
             while s < n and nums[s] == 0:
                 s += 1
             e = s

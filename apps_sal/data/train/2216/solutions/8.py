@@ -2,7 +2,7 @@ from sys import stdin, stdout
 
 
 def readIn():
-    return (map(int, input().split()))
+    return map(int, input().split())
 
 
 s = input()
@@ -17,11 +17,10 @@ for i in range(sz - 1):
         cnt[i + 1][1] += 1
     else:
         cnt[i + 1][2] += 1
-
 n = int(input())
 res = []
 for _ in range(n):
-    l, r = readIn()
+    (l, r) = readIn()
     tmp = [cnt[r][i] - cnt[l - 1][i] for i in range(3)]
     res.append('YES' if r - l < 2 or max(tmp) - min(tmp) < 2 else 'NO')
 print('\n'.join(res))

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 board = [input() for _ in range(n)]
 columns = [[0] * n for _ in range(n)]
 rows = [[0] * n for _ in range(n)]
@@ -12,9 +12,8 @@ for i in range(n):
             if board[i][pos] == 'B':
                 first = pos
                 flag = True
-        else:
-            if board[i][pos] == 'B':
-                last = pos
+        elif board[i][pos] == 'B':
+            last = pos
     if first == -1:
         whites += 1
         continue
@@ -32,9 +31,8 @@ for i in range(n):
             if board[pos][i] == 'B':
                 first = pos
                 flag = True
-        else:
-            if board[pos][i] == 'B':
-                last = pos
+        elif board[pos][i] == 'B':
+            last = pos
     if first == -1:
         whites += 1
         continue

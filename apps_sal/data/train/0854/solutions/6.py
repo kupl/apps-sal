@@ -7,6 +7,6 @@ for _ in range(int(input())):
             c = 1
             break
     if c == 0:
-        print("prekrasnyy")
+        print('prekrasnyy')
     else:
-        print("ne krasivo")
+        print('ne krasivo')

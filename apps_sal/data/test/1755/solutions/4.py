@@ -3,7 +3,7 @@ import sys
 import os
 import io
 input = sys.stdin.readline
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [-float('inf')] + list(map(int, input().split())) + [float('inf')]
 if K:
     B = [0] + list(map(int, input().split())) + [N + 1]
@@ -11,7 +11,7 @@ else:
     B = [0, N + 1]
 ans = N - K
 for k in range(K + 1):
-    left, right = B[k], B[k + 1]
+    (left, right) = (B[k], B[k + 1])
     if A[left] - left > A[right] - right:
         print(-1)
         break

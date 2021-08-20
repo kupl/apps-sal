@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     s = abs(a - b)
     x = s // 5
     s %= 5

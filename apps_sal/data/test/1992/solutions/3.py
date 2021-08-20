@@ -1,4 +1,4 @@
-n, m, k = input().split()
+(n, m, k) = input().split()
 n = int(n)
 m = int(m)
 k = int(k)
@@ -14,12 +14,11 @@ for i in p:
     j += 1
 for i in o:
     ind = pos[i]
-    g += ((ind) // k) + 1
+    g += ind // k + 1
     if ind > 0:
         tmp = val[ind - 1]
         val[ind - 1] = i
         pos[i] = ind - 1
         val[ind] = tmp
         pos[tmp] = ind
-
 print(g)

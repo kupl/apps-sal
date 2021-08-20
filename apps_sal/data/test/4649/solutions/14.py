@@ -1,6 +1,6 @@
 q = int(input())
 for t in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     rgb = input()
     dp = [0] * 3
     dp[0] = [0] * (n + 1)

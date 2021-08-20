@@ -1,5 +1,4 @@
-
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 if m == 1:
     while n % 2 != 1:
         n = n / 2

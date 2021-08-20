@@ -1,9 +1,9 @@
 from sys import stdin, stdout
-
-INF = int(1e9)
+INF = int(1000000000.0)
 
 
 class Point:
+
     def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
@@ -44,25 +44,20 @@ def stripClosest(point_set, left, right, mid, min_dist):
 def closestUtil(point_set, left, right):
     if right - left <= 3:
         return bruteForce(point_set, left, right)
-
     mid = (left + right) // 2
     dist_left = closestUtil(point_set, left, mid)
     dist_right = closestUtil(point_set, mid + 1, right)
     dist_min = min(dist_left, dist_right)
-
     return min(dist_min, stripClosest(point_set, left, right, mid, dist_min))
 
 
 n = int(stdin.readline())
 a = list(map(int, stdin.readline().split()))
-
 pref = [0]
 for i in range(n):
     pref.append(pref[i] + a[i])
-
 point_set = []
 for i in range(n):
     point_set.append(Point(i, pref[i + 1]))
-
 ans = closestUtil(point_set, 0, n)
 stdout.write(str(ans))

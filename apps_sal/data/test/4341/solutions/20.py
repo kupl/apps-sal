@@ -16,25 +16,19 @@ def bfs(v):
     k.append(w)
 
 
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 g = [[] for i in range(n + 1)]
 p = [0] * (n + 1)
 k = [[]]
-
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     g[a].append(b)
     g[b].append(a)
-
-
 c = 0
 for v in range(1, n + 1):
     if p[v] == 0:
         c += 1
         bfs(v)
-
-
 ans = 0
 for i in range(1, len(k)):
     fl = True
@@ -43,5 +37,4 @@ for i in range(1, len(k)):
             fl = False
     if fl:
         ans += 1
-
 print(ans)

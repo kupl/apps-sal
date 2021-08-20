@@ -1,9 +1,9 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         greater = defaultdict(int)
         less = defaultdict(int)
         ans = 0
-
         for i in range(len(rating) - 1):
             for j in range(i + 1, len(rating)):
                 if rating[j] > rating[i]:
@@ -16,5 +16,4 @@ class Solution:
                     ans += greater[j]
                 else:
                     ans += less[j]
-
         return ans

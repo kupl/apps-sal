@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         n = len(nums)
@@ -9,7 +10,7 @@ class Solution:
                 if nums[i] & 1:
                     ans += 1
                     nums[i] -= 1
-                if nums[i] != 0 and not (nums[i] & 1):
+                if nums[i] != 0 and (not nums[i] & 1):
                     nums[i] //= 2
                     if flag:
                         ans += 1

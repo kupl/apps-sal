@@ -1,15 +1,19 @@
 import sys
 from collections import defaultdict
 from copy import copy
+MOD = 10 ** 9 + 7
 
-MOD = 10**9 + 7
+
+def R(t=int):
+    return t(input())
 
 
-def R(t=int): return t(input())
-def RL(t=int): return [t(x) for x in input().split()]
-def RLL(n, t=int): return [RL(t) for _ in range(n)]
+def RL(t=int):
+    return [t(x) for x in input().split()]
 
-# primes up to n
+
+def RLL(n, t=int):
+    return [RL(t) for _ in range(n)]
 
 
 def primes(n):

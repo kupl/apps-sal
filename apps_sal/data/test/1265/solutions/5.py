@@ -1,8 +1,8 @@
-a, b = input(), input()
+(a, b) = (input(), input())
 if len(a) != len(b):
     print('NO')
 else:
-    u, v = 0, 0
+    (u, v) = (0, 0)
     for i in a:
         if i == '1':
             u = 1

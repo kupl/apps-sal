@@ -1,12 +1,12 @@
 from itertools import count
 from functools import lru_cache
-
 L = list(range(11))
 S = set(L)
 
 
 @lru_cache(maxsize=None)
-def to_set(x): return set(str(x))
+def to_set(x):
+    return set(str(x))
 
 
 def find_num(n):

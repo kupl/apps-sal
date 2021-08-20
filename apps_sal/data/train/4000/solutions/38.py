@@ -10,4 +10,4 @@ def strong_num(number):
     numLst = [int(x) for x in str(number)]
     for i in range(len(numLst)):
         result += factorial(numLst[i])
-    return "STRONG!!!!" if result == number else "Not Strong !!"
+    return 'STRONG!!!!' if result == number else 'Not Strong !!'

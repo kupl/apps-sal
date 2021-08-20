@@ -1,4 +1,4 @@
-n, c = [int(x) for x in input().split()]
+(n, c) = [int(x) for x in input().split()]
 t = [int(x) for x in input().split()]
 s = 1
 for i in range(n - 1):

@@ -20,4 +20,4 @@ def time_correct(time):
             hours += 1
         while hours >= 24:
             hours -= 24
-        return str("{:02d}".format(hours)) + ':' + str("{:02d}".format(minutes)) + ':' + str("{:02d}".format(seconds))
+        return str('{:02d}'.format(hours)) + ':' + str('{:02d}'.format(minutes)) + ':' + str('{:02d}'.format(seconds))

@@ -1,4 +1,4 @@
-a, b, x = [int(i) for i in input().split()]
+(a, b, x) = [int(i) for i in input().split()]
 left = 0
 right = 10 ** 9 + 1
 while right - left > 1:

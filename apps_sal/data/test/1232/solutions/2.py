@@ -1,5 +1,5 @@
-na, nb = list(map(int, input().split()))
-k, m = list(map(int, input().split()))
+(na, nb) = list(map(int, input().split()))
+(k, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 max = a[k - 1]

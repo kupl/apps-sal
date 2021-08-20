@@ -6,7 +6,7 @@ def same_col_seq(val, k, col):
     while len(results) < k:
         if colors(values(term)) == col:
             results.append(values(term))
-        elif values(term) >= (2 * k * val) and len(results) == 0:
+        elif values(term) >= 2 * k * val and len(results) == 0:
             return []
         term += 1
     return results
@@ -14,9 +14,9 @@ def same_col_seq(val, k, col):
 
 def values(term):
     if term % 2 == 0:
-        return int(((term / 2) * term) + (term / 2))
+        return int(term / 2 * term + term / 2)
     else:
-        return int((((term + 1) / 2) * term))
+        return int((term + 1) / 2 * term)
 
 
 def colors(term):

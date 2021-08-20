@@ -2,13 +2,9 @@ n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
-# リストをソート
 a = sorted(a)
 b = sorted(b)
 c = sorted(c)
-
-# x以上のイテレータを
 
 
 def lower_bound(arr, x):
@@ -16,7 +12,6 @@ def lower_bound(arr, x):
     r = len(c)
     for j in range(30):
         mid = (l + r) // 2
-        # print(l , r , mid)
         if x <= arr[mid]:
             r = mid
         else:
@@ -29,5 +24,4 @@ for i in range(n):
     a_count = lower_bound(a, b[i])
     c_count = len(c) - lower_bound(c, b[i] + 1)
     count += a_count * c_count
-
 print(count)

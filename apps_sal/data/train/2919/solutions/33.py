@@ -8,7 +8,7 @@ def encode(message, key):
         dict_ = {alphabet[i]: i + 1}
         dicti.update(dict_)
     for letter in letters:
-        for k, v in dicti.items():
+        for (k, v) in dicti.items():
             if k == letter:
                 code.append(v)
     key_list = list(str(key))
@@ -21,5 +21,4 @@ def encode(message, key):
             ans.append(new_code)
         elif j == len(message):
             break
-    # print(ans)
     return ans

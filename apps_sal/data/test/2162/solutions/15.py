@@ -1,11 +1,10 @@
-k = [int(i) for i in input().split(" ")]
+k = [int(i) for i in input().split(' ')]
 n = sum(k)
 a = [0] * n
 for I in range(3):
-    line = [int(i) for i in input().split(" ")]
+    line = [int(i) for i in input().split(' ')]
     for item in line:
         a[item - 1] = I
-
 dp = [1] * n
 cur = [-1, -1, -1]
 for i in range(n):

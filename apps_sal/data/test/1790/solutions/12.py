@@ -2,7 +2,7 @@ n = int(input())
 a = set(list(map(int, input().split()))[1:])
 for i in range(n - 1):
     a = a & set(list(map(int, input().split()))[1:])
-out = ""
+out = ''
 for guy in a:
-    out += str(guy) + " "
+    out += str(guy) + ' '
 print(out[:-1])

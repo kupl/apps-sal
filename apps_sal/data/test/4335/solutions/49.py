@@ -3,8 +3,8 @@ S = input()
 if N % 2 == 0:
     T = S[0:int(N / 2)]
     if T + T == S:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
-    print("No")
+    print('No')

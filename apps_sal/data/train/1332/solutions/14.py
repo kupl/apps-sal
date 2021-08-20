@@ -1,7 +1,6 @@
 import sys
-
 for q in range(int(sys.stdin.readline())):
-    n1, n2 = list(map(int, sys.stdin.readline().split()))
+    (n1, n2) = list(map(int, sys.stdin.readline().split()))
     count = 0
     while n1 != n2:
         while n1 > n2:

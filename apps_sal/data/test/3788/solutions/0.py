@@ -45,6 +45,6 @@ for i in range(n):
             ans = True
             break
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -2,9 +2,10 @@ import heapq
 
 
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
-        pos, neg = [0] * n, [0] * n
+        (pos, neg) = ([0] * n, [0] * n)
         if nums[0] > 0:
             pos[0] = 1
         if nums[0] < 0:

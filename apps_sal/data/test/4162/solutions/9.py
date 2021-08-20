@@ -6,7 +6,7 @@ a = list(map(int, input().split()))
 def lcm(A):
     x = A[0]
     for i in range(1, len(a)):
-        x = (x * A[i]) // gcd(x, A[i])
+        x = x * A[i] // gcd(x, A[i])
     return x
 
 

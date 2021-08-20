@@ -4,7 +4,7 @@ for i in range(0, t):
     l = len(s)
     ans = 0
     for j in range(0, l):
-        if s[j] == 'a' or s[j] == 'e' or s[j] == 'i' or s[j] == 'o' or s[j] == 'u':
+        if s[j] == 'a' or s[j] == 'e' or s[j] == 'i' or (s[j] == 'o') or (s[j] == 'u'):
             c = 1
         else:
             c = 0

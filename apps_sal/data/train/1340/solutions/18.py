@@ -8,7 +8,6 @@ for tc in range(int(input())):
         if arr[i] >= 0:
             p += 1
             ans += arr[i]
-
     for i in range(p):
         if arr[i] < 0:
             x.append(i + 1)

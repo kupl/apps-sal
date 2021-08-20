@@ -16,6 +16,6 @@ for i in a:
 b_1 = list(b_1)
 b_2 = list(b_2)
 if switch == 0:
-    print((' '.join(list(map(str, b_1)))))
+    print(' '.join(list(map(str, b_1))))
 else:
-    print((' '.join(list(map(str, b_2)))))
+    print(' '.join(list(map(str, b_2))))

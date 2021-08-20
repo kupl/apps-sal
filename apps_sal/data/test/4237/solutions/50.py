@@ -1,5 +1,5 @@
 import math as m
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 A -= 1
 g = C * D // m.gcd(C, D)
 x = B // C - A // C

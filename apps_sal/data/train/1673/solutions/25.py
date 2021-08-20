@@ -1,9 +1,9 @@
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         if not arr:
             return 0
-        rows, cols = len(arr), len(arr[0])
-
+        (rows, cols) = (len(arr), len(arr[0]))
         for r in range(1, rows):
             for c in range(cols):
                 val = float('inf')

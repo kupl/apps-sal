@@ -1,5 +1,5 @@
 q = int(input())
-alth = "qwertyuiopasdfghjklzxcvbnm"
+alth = 'qwertyuiopasdfghjklzxcvbnm'
 for i in range(q):
     s = input()
     t = input()
@@ -7,23 +7,19 @@ for i in range(q):
     s1 = [0] * 26
     p1 = [0] * 26
     t1 = [0] * 26
-
     for i in s:
         s1[alth.find(i)] += 1
-
     for i in p:
         p1[alth.find(i)] += 1
-
     for i in t:
         t1[alth.find(i)] += 1
-
     ans = 1
     for i in range(26):
         if s1[i] + p1[i] < t1[i]:
             ans = 0
             break
     if ans == 0:
-        print("NO")
+        print('NO')
     else:
         n = len(s)
         m = len(t)
@@ -35,8 +31,7 @@ for i in range(q):
             j += 1
         if i != n:
             ans = 0
-
         if ans == 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

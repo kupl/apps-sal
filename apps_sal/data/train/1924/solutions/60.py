@@ -1,10 +1,9 @@
 class Solution:
-    def invalidTransactions(self, transactions: List[str]) -> List[str]:
 
+    def invalidTransactions(self, transactions: List[str]) -> List[str]:
         temp = []
         for t in transactions:
             temp.append(t.split(','))
-
         res = []
         for i in range(len(temp)):
             if int(temp[i][2]) > 1000 and ','.join(temp[i]) not in res:

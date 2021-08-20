@@ -31,7 +31,7 @@ def corr(arr, n, m):
     return stopprocs
 
 
-n, m, k = list(map(int, input().split(' ')))
+(n, m, k) = list(map(int, input().split(' ')))
 arr = []
 for c in range(n):
     arr.append(tuple(map(int, input().split(' '))))

@@ -2,7 +2,7 @@ def f(s):
     return int(s) - 1
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(f, input().split()))
 c = [[0] * n for i in range(n)]

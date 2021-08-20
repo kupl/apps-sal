@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-b, v, ans = [], [], 0
+(b, v, ans) = ([], [], 0)
 for i in a:
     c = int(i ** (1 / 2))
     if c * c == i or (c + 1) * (c + 1) == i or (c - 1) * (c - 1) == i:

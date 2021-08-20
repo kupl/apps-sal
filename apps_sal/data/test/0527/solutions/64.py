@@ -20,4 +20,4 @@ def solve():
     return ans
 
 
-print((solve()))
+print(solve())

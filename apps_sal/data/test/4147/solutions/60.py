@@ -1,4 +1,4 @@
-N, A, B, C = list(map(int, input().split()))
+(N, A, B, C) = list(map(int, input().split()))
 l = [int(input()) for i in range(N)]
 
 
@@ -12,5 +12,4 @@ def dfs(cur, a, b, c):
     return min(r1, r2, r3, r4)
 
 
-print((dfs(0, 0, 0, 0)))
-# 全てのバリエーション試す、dfs
+print(dfs(0, 0, 0, 0))

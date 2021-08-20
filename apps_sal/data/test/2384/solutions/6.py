@@ -10,20 +10,33 @@ from bisect import bisect, bisect_left
 from fractions import gcd
 from heapq import heappush, heappop
 from functools import reduce
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
-INF = float("inf")
+INF = float('inf')
 mod = 10 ** 9 + 7
-
 N = INT()
 A = LIST()
-
 dp = [[0] * 3 for _ in range(N + 1)]
 dp[0][0] = -INF
 dp[1][0] = -INF
@@ -36,5 +49,4 @@ for i in range(2, N + 1):
     else:
         dp[i][0] = max(dp[i - 1][1], dp[i - 2][0] + A[i - 1])
         dp[i][1] = max(dp[i - 1][2], dp[i - 2][1] + A[i - 1])
-
-print((dp[N][1]))
+print(dp[N][1])

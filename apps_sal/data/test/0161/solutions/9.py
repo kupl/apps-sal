@@ -1,5 +1,5 @@
 x = int(input())
-prop = {2**i - 1 for i in range(1, 40)}
+prop = {2 ** i - 1 for i in range(1, 40)}
 ans = 0
 Ans = []
 while x not in prop:

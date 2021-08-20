@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     n = int(input())
     a = [int(i) for i in input().split()]
@@ -12,7 +11,7 @@ for i in range(int(input())):
     for j in range(len(x) - 1):
         if x[j] < x[j + 1]:
             c = c + 1
-    if(c == b - 1):
-        print("Yes")
+    if c == b - 1:
+        print('Yes')
     else:
-        print("No")
+        print('No')

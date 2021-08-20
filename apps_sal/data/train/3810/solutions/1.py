@@ -11,4 +11,4 @@ def greatest_product(list):
     while len(list) >= 5:
         res.append(product(list[:5]))
         list = list[1:]
-    return(max(res))
+    return max(res)

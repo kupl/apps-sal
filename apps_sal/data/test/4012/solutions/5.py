@@ -6,7 +6,7 @@ dz[2].add(2)
 for k in range(3, 13337):
     i = 2
     cyk = 0
-    while i**2 <= k:
+    while i ** 2 <= k:
         if k % i == 0:
             cyk = 1
             break
@@ -26,7 +26,7 @@ for k in range(3, 13337):
             dupa.add(j * dzi)
         dz[k] = dz[k // i].union(dupa)
 for _ in range(q):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     bestie = [a, b, c]
     best = 34739174893
 

@@ -1,8 +1,6 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
-
 for _ in range(T):
     D = list(map(int, input().split()))
     ans = 0
@@ -10,7 +8,6 @@ for _ in range(T):
         if D[i]:
             D[i] -= 1
             ans += 1
-
     D.sort(reverse=True)
     for i in range(2):
         for j in range(i + 1, 3):
@@ -20,5 +17,4 @@ for _ in range(T):
                 ans += 1
     if D[0] and D[1] and D[2]:
         ans += 1
-
     print(ans)

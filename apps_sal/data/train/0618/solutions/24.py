@@ -1,6 +1,5 @@
-# cook your dish her
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
 
     def ki(v, n, k):
@@ -11,12 +10,9 @@ for _ in range(int(input())):
         e = k - 1
         for i in range(k):
             su += v[i]
-
         for i in range(k, n + k):
             su += v[i % n] - v[(i - k) % n]
             if su > a:
                 a = su
-
         print(a)
-
     ki(l, n, k)

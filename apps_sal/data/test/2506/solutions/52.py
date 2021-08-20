@@ -1,10 +1,10 @@
 from bisect import bisect_left
 from itertools import accumulate
-N, M, *A = map(int, open(0).read().split())
+(N, M, *A) = map(int, open(0).read().split())
 A.sort()
 B = list(accumulate(A[::-1]))
 l = -1
-r = 10**9
+r = 10 ** 9
 while l + 1 < r:
     s = (l + r) // 2
     cnt = 0

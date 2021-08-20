@@ -9,19 +9,19 @@ j = 1
 val = [True for _ in range(n)]
 i = 0
 cnt = n
-if (n == 1):
+if n == 1:
     print(1)
-elif (lis[0] == lis[n - 1]):
+elif lis[0] == lis[n - 1]:
     print(n)
 else:
-    while (i < n and j < n):
-        if (val[i] != True):
+    while i < n and j < n:
+        if val[i] != True:
             i += 1
             continue
-        if (val[j] != True):
+        if val[j] != True:
             j += 1
             continue
-        if (lis[j] * 2 <= lis[i]):
+        if lis[j] * 2 <= lis[i]:
             val[i] = False
             val[j] = False
             i += 1

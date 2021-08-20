@@ -1,12 +1,8 @@
 n = int(input())
-
 l = input().split()
 l = [int(i) for i in l]
-
 hacked = []
-
 turns = -1
-
 while len(hacked) < n:
     new = []
     for i in range(len(l)):
@@ -17,5 +13,4 @@ while len(hacked) < n:
         l.pop(i)
     l.reverse()
     turns += 1
-
 print(turns)

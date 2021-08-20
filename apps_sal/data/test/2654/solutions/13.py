@@ -4,12 +4,11 @@ N = int(input())
 AB = [tuple(map(int, input().split())) for i in range(N)]
 A = []
 B = []
-for a, b in AB:
+for (a, b) in AB:
     A.append(a)
     B.append(b)
 A.sort()
 B.sort()
-
 if N % 2 == 0:
     m = N // 2
     b = B[m] + B[m - 1]

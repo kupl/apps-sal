@@ -1,12 +1,10 @@
 class Solution:
-    def longestAwesome(self, s: str) -> int:
-        bit_mask_mapping = {
-            tuple([0] * 10): -1,
-        }
 
+    def longestAwesome(self, s: str) -> int:
+        bit_mask_mapping = {tuple([0] * 10): -1}
         bit_mask = [0] * 10
         max_len = 0
-        for ch_i, ch in enumerate(s):
+        for (ch_i, ch) in enumerate(s):
             cur_int = int(ch)
             bit_mask[cur_int] ^= 1
             bit_mask_str = tuple(bit_mask)

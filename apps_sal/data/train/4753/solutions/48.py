@@ -1,5 +1,5 @@
 from itertools import filterfalse
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
 
 
 def goose_filter(birds):

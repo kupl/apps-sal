@@ -1,2 +1,2 @@
 n = str(input())
-print(("ABC" + n))
+print('ABC' + n)

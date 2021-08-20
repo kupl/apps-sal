@@ -1,4 +1,5 @@
 class Dog(object):
+
     def __init__(self, breed):
         self.breed = breed
 
@@ -6,4 +7,4 @@ class Dog(object):
         return 'Woof'
 
 
-snoopy, scoobydoo = Dog("Beagle"), Dog("Great Dane")
+(snoopy, scoobydoo) = (Dog('Beagle'), Dog('Great Dane'))

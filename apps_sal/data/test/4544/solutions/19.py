@@ -1,7 +1,6 @@
 import numpy as np
 N = int(input())
 A = np.array(input().split(), dtype=np.int32)
-
 counter = np.bincount(A)
 if len(counter) <= 2:
     answer = counter.sum()

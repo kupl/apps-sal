@@ -1,7 +1,7 @@
 def triangle(row):
-    place, y = 0, ''
+    (place, y) = (0, '')
     while len(row) > 1:
-        place, y = 0, ''
+        (place, y) = (0, '')
         while place < len(row) - 1:
             if row[place] == row[place + 1]:
                 y += row[place]

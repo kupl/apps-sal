@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    n, a, b = list(map(int, sys.stdin.readline().split()))
+    (n, a, b) = list(map(int, sys.stdin.readline().split()))
     x = list(map(int, sys.stdin.readline().split()))
     c = 0
     ans = 0
@@ -18,12 +18,10 @@ def main():
                 c -= 1
             else:
                 ans += 1
+        elif b != 0:
+            b -= 1
         else:
-            if b != 0:
-                b -= 1
-            else:
-                ans += 2
-
+            ans += 2
     print(ans)
 
 

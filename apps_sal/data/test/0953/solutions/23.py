@@ -1,5 +1,4 @@
 """http://codeforces.com/problemset/problem/500/B"""
-
 from collections import defaultdict
 
 
@@ -30,7 +29,7 @@ def solve(n, p, m):
         d.dfs(i)
         for j in range(i):
             if j in d.visited and p[i] < p[j]:
-                p[i], p[j] = p[j], p[i]
+                (p[i], p[j]) = (p[j], p[i])
     return ' '.join(map(str, p))
 
 

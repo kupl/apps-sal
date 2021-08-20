@@ -1,2 +1,2 @@
 def angle(ip):
-    return((ip - 2) * 180)
+    return (ip - 2) * 180

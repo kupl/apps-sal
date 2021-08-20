@@ -6,7 +6,7 @@ def hoge(n):
     t = [0, 0, 1]
     for i in range(4, n + 1):
         a = t[-1] + t[-3]
-        a = a % (10**9 + 7)
+        a = a % (10 ** 9 + 7)
         t.append(a)
     return t[-1]
 

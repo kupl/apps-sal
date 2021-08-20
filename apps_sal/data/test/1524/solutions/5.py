@@ -4,7 +4,7 @@ Sl = len(S)
 ans = [0] * Sl
 RL = 0
 count = -1
-for _, v in groupby(S):
+for (_, v) in groupby(S):
     x = list(v)
     xl = len(x)
     if RL == 0:
@@ -26,4 +26,4 @@ for _, v in groupby(S):
         RL = 0
         count += xl
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

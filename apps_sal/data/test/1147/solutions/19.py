@@ -4,9 +4,9 @@ import bisect
 def lower_bound(A, x):
     low = 0
     high = len(A)
-    while(low < high):
+    while low < high:
         mid = (low + high) // 2
-        if(int(A[mid]) < x):
+        if int(A[mid]) < x:
             low = mid + 1
         else:
             high = mid
@@ -16,9 +16,9 @@ def lower_bound(A, x):
 def upper_bound(A, x):
     low = 0
     high = len(A)
-    while(low < high):
+    while low < high:
         mid = (low + high) // 2
-        if(int(A[mid]) <= x):
+        if int(A[mid]) <= x:
             low = mid + 1
         else:
             high = mid
@@ -31,7 +31,6 @@ x = int(line[1])
 k = int(line[2])
 a = [int(x) for x in input().split()]
 a.sort()
-
 ans = 0
 for i in a:
     left = (i + x - 1) // x * x
@@ -39,5 +38,4 @@ for i in a:
     left = left + (k - 1) * x
     left = max(left, i)
     ans = ans + bisect.bisect_right(a, right) - bisect.bisect_left(a, left)
-    # print(left, right, ans)
 print(ans)

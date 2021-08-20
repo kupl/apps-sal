@@ -1,6 +1,5 @@
-# cook your dish here
 a = input()
-initial, final = 1, 1
+(initial, final) = (1, 1)
 cinitial = 1
 prev = -1
 sum = 0
@@ -20,4 +19,4 @@ if sum > max:
     max = sum
     initial = cinitial
     final = len(a)
-print(max, ":", initial, "-", final, sep="")
+print(max, ':', initial, '-', final, sep='')

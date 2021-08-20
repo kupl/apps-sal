@@ -6,5 +6,4 @@ for _ in range(N):
         S.remove(a)
     else:
         S.add(a)
-
-print((len(S)))
+print(len(S))

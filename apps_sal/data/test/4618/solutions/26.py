@@ -1,6 +1,6 @@
 s = list(input())
 k = int(input())
-s.append((''))
+s.append('')
 Dict = {}
 dict_keys = []
 for left in range(len(s)):

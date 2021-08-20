@@ -1,14 +1,10 @@
-
 from collections import OrderedDict
 
 
 def main():
-
-    n, x, y = map(int, input().split())
-
+    (n, x, y) = map(int, input().split())
     table = []
-
-    ix, iy = 1, 1
+    (ix, iy) = (1, 1)
     while ix <= x or iy <= y:
         if ix * x < iy * y:
             table.append(1)
@@ -19,10 +15,9 @@ def main():
         else:
             table += [0, 0]
             break
-
     for _ in range(n):
         h = (int(input()) - 1) % len(table)
-        print(["Both", "Vova", "Vanya"][table[h]])
+        print(['Both', 'Vova', 'Vanya'][table[h]])
 
 
 def __starting_point():

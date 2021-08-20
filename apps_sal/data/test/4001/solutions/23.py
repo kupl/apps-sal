@@ -9,4 +9,4 @@ for i in range(1, 10001):
 for i in x_yakusuu:
     d.remove(i)
 d.sort(reverse=True)
-print(str(x) + " " + str(d[0]))
+print(str(x) + ' ' + str(d[0]))

@@ -15,4 +15,4 @@ if flag:
     ans = ans * arr[0] / (arr[0] - 1)
     print(ans - mass)
 else:
-    print("-1")
+    print('-1')

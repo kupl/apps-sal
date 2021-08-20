@@ -1,4 +1,4 @@
-n = "\n"
+n = '\n'
 
 
 def vert_mirror(s):

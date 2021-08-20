@@ -1,8 +1,7 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 s = sum(l)
-
 ans = 0
 for i in range(n + 1):
     mi = m - s * i

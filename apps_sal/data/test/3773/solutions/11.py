@@ -12,8 +12,7 @@ def grundy(a,k): #石 a 個、最大 x//k までとれる
 import sys
 
 
-def grundy(a, k):  # 石 a 個、最大 x//k までとれる
-    # print(a,k)
+def grundy(a, k):
     if a < k:
         return 0
     q = a // k
@@ -21,47 +20,19 @@ def grundy(a, k):  # 石 a 個、最大 x//k までとれる
     if r == 0:
         return a // k
     v = (a - q * k) // (q + 1) + 1
-    # print(a,k,q,v)
     return grundy(a - (q + 1) * v, k)
 
 
-"""
-K = 10
-N = 50
-V = 5
-for k in range(V,V+1):
-    a = [0]*N
-    for i in range(1,N):
-        s = set()
-        for j in range(1,1+i//k):
-            s.add(a[i-j])
-        for j in range(N):
-            if j not in s:
-                a[i] = j
-                break
-    
-    #print(k,a)
-    #for i in range(N//V):
-    #    print(a[i*V:(i+1)*V])
-
-    
-    b = [grundy(i,k) for i in range(N)]
-    print(a)
-    print(b)
-    assert a==b
-"""
-# coding: utf-8
-# Your code here!
+'\nK = 10\nN = 50\nV = 5\nfor k in range(V,V+1):\n    a = [0]*N\n    for i in range(1,N):\n        s = set()\n        for j in range(1,1+i//k):\n            s.add(a[i-j])\n        for j in range(N):\n            if j not in s:\n                a[i] = j\n                break\n    \n    #print(k,a)\n    #for i in range(N//V):\n    #    print(a[i*V:(i+1)*V])\n\n    \n    b = [grundy(i,k) for i in range(N)]\n    print(a)\n    print(b)\n    assert a==b\n'
 readline = sys.stdin.readline
 read = sys.stdin.read
-sys.setrecursionlimit(10**8)
-
-n, = list(map(int, readline().split()))
+sys.setrecursionlimit(10 ** 8)
+(n,) = list(map(int, readline().split()))
 g = 0
 for _ in range(n):
-    a, k = list(map(int, readline().split()))
+    (a, k) = list(map(int, readline().split()))
     g ^= grundy(a, k)
 if g:
-    print("Takahashi")
+    print('Takahashi')
 else:
-    print("Aoki")
+    print('Aoki')

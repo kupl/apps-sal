@@ -1,4 +1,5 @@
 class User(object):
+
     def __init__(self, name, balance, checking_account):
         self.name = name
         self.balance = balance

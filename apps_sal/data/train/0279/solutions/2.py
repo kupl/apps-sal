@@ -8,10 +8,10 @@ class Solution:
         :rtype: str
         """
         a = 0
-        options = ""
+        options = ''
         for i in range(n):
             options += str(i + 1)
-        ans = ""
+        ans = ''
         while n > 0:
             x = math.factorial(n - 1)
             while k > x:

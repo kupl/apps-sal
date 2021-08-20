@@ -15,14 +15,13 @@ def combine(sl, sr, m):
     return seql
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
 seqs = subseq(s, n, k)
 if len(seqs) < k - 1:
     print(-1)
 else:
-    slengths = map((lambda x: n - len(x)), seqs)
+    slengths = map(lambda x: n - len(x), seqs)
     result = sum(slengths)
     if len(seqs) == k - 1:
         result += n

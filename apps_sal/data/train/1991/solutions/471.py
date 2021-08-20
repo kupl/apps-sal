@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
         def recurssion(start, finish, fuel):
@@ -12,17 +13,15 @@ class Solution:
                     if fuel - abs(locations[i] - locations[start]) < 0:
                         continue
                     if (i, finish, fuel - abs(locations[i] - locations[start])) in ht:
-                        r = ht[(i, finish, fuel - abs(locations[i] - locations[start]))]
+                        r = ht[i, finish, fuel - abs(locations[i] - locations[start])]
                     else:
                         r = recurssion(i, finish, fuel - abs(locations[i] - locations[start]))
                     if r > 0:
                         res += r
-            # print(start,finish,fuel,res)
             if (start, finish, fuel) not in ht:
-                ht[(start, finish, fuel)] = res
-                ht[(finish, start, fuel)] = res
+                ht[start, finish, fuel] = res
+                ht[finish, start, fuel] = res
             return res
-
         ht = {}
         l = len(locations)
         res = 0

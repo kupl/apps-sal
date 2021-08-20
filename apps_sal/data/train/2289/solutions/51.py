@@ -20,10 +20,9 @@ def solve(s):
                 if dp[i] > 1:
                     dp[i] = 1
                     recon[i] = chr(ord('a') + j)
-            else:
-                if dp[nx[i][j] + 1] + 1 < dp[i]:
-                    dp[i] = dp[nx[i][j] + 1] + 1
-                    recon[i] = chr(ord('a') + j)
+            elif dp[nx[i][j] + 1] + 1 < dp[i]:
+                dp[i] = dp[nx[i][j] + 1] + 1
+                recon[i] = chr(ord('a') + j)
     res = ''
     idx = 0
     while idx <= n:

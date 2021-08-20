@@ -8,12 +8,10 @@ def next_numb(val):
         val += 1
     if val % 2 == 0:
         val += 3
-
     while not unique_digits(val):
         val += 6
         if val > 9876543210:
             break
     else:
         return val
-
-    return "There is no possible number that fulfills those requirements"
+    return 'There is no possible number that fulfills those requirements'

@@ -1,7 +1,6 @@
 for _ in range(int(input())):
     x = int(input())
     r = [int(x) for x in input().split()]
-
     is_s = False
     last_z = 0
     tot = 0
@@ -12,8 +11,7 @@ for _ in range(int(input())):
                 last_z = 0
             else:
                 last_z = 0
-        else:
-            if is_s:
-                last_z += 1
-                tot += 1
+        elif is_s:
+            last_z += 1
+            tot += 1
     print(tot - last_z)

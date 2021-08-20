@@ -1,8 +1,6 @@
 import math
-
-a, b, x = map(int, input().split())
-
-maxv = 10**9
+(a, b, x) = map(int, input().split())
+maxv = 10 ** 9
 minv = 1
 
 
@@ -24,8 +22,6 @@ if canbuy(1):
         else:
             maxv = midv - 1
         midv = math.ceil((maxv + minv) / 2)
-        # print(maxv,midv,minv)
-
     print(midv)
 else:
     print(0)

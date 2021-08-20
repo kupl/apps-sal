@@ -5,8 +5,8 @@ class Solution:
         ma = 0
         for n in nums:
             k = 0
-            while(n != 0):
-                if(n % 2 == 0):
+            while n != 0:
+                if n % 2 == 0:
                     k += 1
                     n = n // 2
                 else:

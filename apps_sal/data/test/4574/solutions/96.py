@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(x) for x in input().split()]
-
 pair = []
 unpair = set()
 for a in A:
@@ -9,7 +8,6 @@ for a in A:
         unpair.remove(a)
     else:
         unpair.add(a)
-
 pair.sort()
 pair.reverse()
 if len(pair) <= 1:

@@ -1,6 +1,6 @@
 class Solution:
-    def maxDistance(self, A, m: int) -> int:
 
+    def maxDistance(self, A, m: int) -> int:
         A.sort()
 
         def test(mid):
@@ -15,7 +15,6 @@ class Solution:
                 if cnt == 0:
                     return True
             return False
-
         mi = 1
         ma = (A[-1] - A[0]) // (m - 1)
         while mi <= ma:

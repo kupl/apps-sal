@@ -1,11 +1,10 @@
 for _ in range(int(input())):
     n = int(input())
-    *arr, = list(map(int, input().split()))
-    *locks, = list(map(int, input().split()))
-
+    (*arr,) = list(map(int, input().split()))
+    (*locks,) = list(map(int, input().split()))
     locked = []
     unlocked = []
-    for v, is_locked in zip(arr, locks):
+    for (v, is_locked) in zip(arr, locks):
         if not is_locked:
             unlocked.append(v)
     unlocked.sort(reverse=True)

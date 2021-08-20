@@ -1,7 +1,7 @@
-def hello(name=""):
+def hello(name=''):
     name = name.lower()
     name = name.title()
-    if name != "":
-        return f"Hello, {name}!"
+    if name != '':
+        return f'Hello, {name}!'
     else:
-        return f"Hello, World!"
+        return f'Hello, World!'

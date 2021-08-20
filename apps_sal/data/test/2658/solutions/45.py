@@ -5,8 +5,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, k, *a = map(int, read().split())
-
+    (n, k, *a) = map(int, read().split())
     cur = 1
     path = [0] * (n + 1)
     while k:

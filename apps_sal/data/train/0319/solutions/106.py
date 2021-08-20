@@ -2,9 +2,11 @@ from functools import lru_cache
 
 
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
+
         @lru_cache(None)
-        def getScore(idx, aliceNext):  # score = Alice-Bob
+        def getScore(idx, aliceNext):
             if idx == n:
                 return 0
             if aliceNext:
@@ -30,9 +32,7 @@ class Solution:
         for i in range(n - 1, -1, -1):
             getScore(i, True)
             getScore(i, False)
-
         ans = getScore(0, True)
-
         ans2 = 'Tie'
         if ans > 0:
             ans2 = 'Alice'

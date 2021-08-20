@@ -15,7 +15,6 @@ a = li()
 b = li()
 a.sort()
 b.sort()
-
 x = y = 0
 for t in range(n):
     if not b:
@@ -26,7 +25,6 @@ for t in range(n):
         x += a.pop()
     else:
         b.pop()
-
     if not a:
         y += b.pop()
     elif not b:

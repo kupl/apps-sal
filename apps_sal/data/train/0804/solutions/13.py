@@ -2,18 +2,17 @@ p2 = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 3276
 for _ in range(int(input())):
     n = int(input()) - 1
     a = [int(x) for x in input().split()]
-    f, l = int(input()), []
+    (f, l) = (int(input()), [])
     for i in range(n):
         if a[i] <= f:
             l.append(i)
         if i % 2 == 0:
             a.append(a[i])
     if len(l) == 0:
-        print("impossible")
+        print('impossible')
         continue
-    print("possible")
-    d, p = 10**12, -1
-#	print(*a)
+    print('possible')
+    (d, p) = (10 ** 12, -1)
     for i in l:
         x = -1 + n - i + (i + 1) // 2
         last = i + x
@@ -27,5 +26,5 @@ for _ in range(int(input())):
             if la + p2[j - 1] > last:
                 td += a[la]
         if td < d:
-            d, p = td, i + 1
+            (d, p) = (td, i + 1)
     print(p, d)

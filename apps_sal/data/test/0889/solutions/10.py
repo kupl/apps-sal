@@ -4,7 +4,7 @@ for i in range(4):
 
 
 def ch(a, b, c, d):
-    return(int(bool(a == b == c or b == c == d or c == d == a or a == b == d)))
+    return int(bool(a == b == c or b == c == d or c == d == a or (a == b == d)))
 
 
 check = 0

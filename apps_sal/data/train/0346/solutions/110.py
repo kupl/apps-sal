@@ -1,5 +1,7 @@
 class Solution:
+
     def numberOfSubarrays(self, A, k):
+
         @lru_cache(None)
         def atMost(k):
             res = i = 0
@@ -10,5 +12,4 @@ class Solution:
                     i += 1
                 res += j - i + 1
             return res
-
         return atMost(k) - atMost(k - 1)

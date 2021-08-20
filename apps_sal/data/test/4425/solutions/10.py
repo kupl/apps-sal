@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 rate = 0
 for i in range(1, n + 1):
     score = i

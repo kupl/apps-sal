@@ -1,7 +1,7 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-    L, R = 0, max(arr)
+    (L, R) = (0, max(arr))
     while L + 1 < R:
         P = (L + R + 1) // 2
         cnt = 0

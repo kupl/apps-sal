@@ -1,4 +1,5 @@
 class Solution:
+
     def distinctEchoSubstrings(self, text: str) -> int:
         res = set()
         n = len(text)
@@ -11,7 +12,6 @@ class Solution:
                 else:
                     cur = 0
                 if cur == sz:
-                    # print(text[l-sz+1:l+1])
                     res.add(text[l - sz + 1:l + 1])
                     cur -= 1
                 r += 1

@@ -1,5 +1,5 @@
 import itertools
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 i = [2] * n
 j = [2] * m
 p = list(itertools.combinations(i, 2))

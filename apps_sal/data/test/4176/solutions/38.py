@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 C = A
 D = B
 for i in range(B):
@@ -8,5 +8,5 @@ for i in range(B):
     else:
         C = D
         D = K
-ans = (A * B) // D
+ans = A * B // D
 print(ans)

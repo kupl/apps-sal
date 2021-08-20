@@ -2,30 +2,22 @@ import sys
 
 
 def main():
-    # sys.stdin = open("in.txt", "r")
-    # sys.stdout = open("out.txt", "w")
-
     it = iter(map(int, sys.stdin.read().split()))
-
     t = next(it)
     for _ in range(t):
         n = next(it)
         m = next(it)
-
         total_node = 3 * n
         is_node_covered = [False for _ in range(total_node + 1)]
         is_edge_in_matching = [False for _ in range(m + 1)]
         matching_edge_count = 0
-
         for i in range(1, m + 1):
             u = next(it)
             v = next(it)
-
-            if (not is_node_covered[u]) and (not is_node_covered[v]):
+            if not is_node_covered[u] and (not is_node_covered[v]):
                 is_node_covered[u] = is_node_covered[v] = True
                 is_edge_in_matching[i] = True
                 matching_edge_count += 1
-
         ansL = []
         if matching_edge_count >= n:
             ansL.append('Matching\n')
@@ -45,7 +37,6 @@ def main():
                     node_taken += 1
                     if node_taken == n:
                         break
-
         ansL.append('\n')
         sys.stdout.write(''.join(ansL))
 

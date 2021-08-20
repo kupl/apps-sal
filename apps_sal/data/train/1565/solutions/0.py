@@ -1,8 +1,5 @@
-# Problem: http://www.codechef.com/JULY09/submit/CUBESUM/
-# Author: Susam Pal
-
 def computeA():
-    X, Y, Z = [int(x) for x in input().split()]
+    (X, Y, Z) = [int(x) for x in input().split()]
     B = []
     for x in range(X):
         B.append([])
@@ -16,7 +13,6 @@ def computeA():
                         result += B[x - 1][y - 1][z]
                         if z:
                             result -= B[x - 1][y - 1][z - 1]
-
                 if y:
                     result -= B[x][y - 1][z]
                     if z:

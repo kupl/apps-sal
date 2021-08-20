@@ -1,5 +1,7 @@
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
+
         @lru_cache(None)
         def isPrime(n):
             if n == 1:
@@ -12,7 +14,6 @@ class Solution:
 
         def isPalindrome(n):
             return n == int(str(n)[::-1])
-
         while True:
             if isPalindrome(N) and isPrime(N):
                 return N

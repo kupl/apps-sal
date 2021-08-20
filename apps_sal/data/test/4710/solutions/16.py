@@ -1,7 +1,6 @@
 S = int(input())
-
 if S < 1200:
-    result = "ABC"
+    result = 'ABC'
 else:
-    result = "ARC"
+    result = 'ARC'
 print(result)

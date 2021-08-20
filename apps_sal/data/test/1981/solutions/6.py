@@ -6,7 +6,6 @@ Problem 580 C. Kefa and Park
 @author yamaton
 @date 2015-09-22
 """
-
 import itertools as it
 import functools
 import operator
@@ -16,31 +15,20 @@ import sys
 
 
 def solve(cats, edges, n, m):
-
     connected = collections.defaultdict(set)
-    for a, b in edges:
+    for (a, b) in edges:
         connected[a].add(b)
         connected[b].add(a)
 
-    # This is O(n^2)...
     def connected_to(v, visited):
         return connected[v] - visited
-
-    # print_stderr('tree:', tree)
-    # print_stderr('leaves: ', leaves)
-
-    # # n ... # of vertices
-    # # m ... max # of consecutive cats still OK
-    # # 1-based index
-
-    cats = {i: cat for i, cat in enumerate(cats, 1)}
-
+    cats = {i: cat for (i, cat) in enumerate(cats, 1)}
     states = {(1, cats[1])}
     visited = {1}
     count = 0
     while states:
         next_states = set()
-        for s, cat_count in states:
+        for (s, cat_count) in states:
             children = connected_to(s, visited)
             visited |= children
             if not children:
@@ -50,11 +38,9 @@ def solve(cats, edges, n, m):
                     next_cat_count = cat_count + cats[x]
                 else:
                     next_cat_count = 0
-
                 if next_cat_count <= m:
-                    newstate = x, next_cat_count
+                    newstate = (x, next_cat_count)
                     next_states.add(newstate)
-
         states = next_states
     return count
 
@@ -67,7 +53,7 @@ def main():
     [n, m] = [int(i) for i in input().strip().split()]
     cats = [int(i) for i in input().strip().split()]
     assert len(cats) == n
-    edges = [tuple(int(i) for i in input().strip().split()) for _ in range(n - 1)]
+    edges = [tuple((int(i) for i in input().strip().split())) for _ in range(n - 1)]
     result = solve(cats, edges, n, m)
     print(result)
 

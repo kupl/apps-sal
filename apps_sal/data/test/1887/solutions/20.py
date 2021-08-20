@@ -7,5 +7,4 @@ for i in range(n - 1, -1, -1):
         l[j][i] += m[j ^ 1]
         mm[j] = max(m[j], l[j][i])
     m = mm
-
 print(max(m))

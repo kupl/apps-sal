@@ -1,11 +1,10 @@
 def ApplePie():
-    N, L = input().split()
+    (N, L) = input().split()
     N = int(N)
     L = int(L)
     flavors = []
     for i in range(N):
         flavors.append(L + i)
-
     if 0 in flavors:
         flavors.remove(0)
         result = 0

@@ -19,10 +19,10 @@ def main():
         if ans[i] == 1:
             a.append(i + 1)
     if len(a) == 0:
-        print((0))
+        print(0)
     else:
-        print((len(a)))
-        print((' '.join(list(map(str, a)))))
+        print(len(a))
+        print(' '.join(list(map(str, a))))
 
 
 def __starting_point():

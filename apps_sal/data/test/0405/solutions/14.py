@@ -11,5 +11,4 @@ for x in listy[::-1]:
         count += 1
     else:
         break
-
 print(count)

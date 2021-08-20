@@ -1,20 +1,34 @@
 import sys
-
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
+
+
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
 
 
 def solve():
-    n, k = nm()
-    a, b = nm()
-    c, d = nm()
+    (n, k) = nm()
+    (a, b) = nm()
+    (c, d) = nm()
     if d < b:
-        a, b, c, d = c, d, a, b
+        (a, b, c, d) = (c, d, a, b)
     if a <= c <= b:
         cur = (b - c) * n
         if (d - a) * n > k:
@@ -30,7 +44,7 @@ def solve():
             ans = (d - c) * n - cur
             print(ans + (k - (d - c) * n) * 2)
     else:
-        ans = 10**18
+        ans = 10 ** 18
         cur = 0
         for i in range(n):
             cur += c - b
@@ -44,8 +58,6 @@ def solve():
         print(ans)
     return
 
-
-# solve()
 
 T = ni()
 for _ in range(T):

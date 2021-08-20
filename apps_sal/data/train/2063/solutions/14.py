@@ -1,9 +1,9 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     f = [1] * n
     lang = [set(map(int, input().split()[1:])) for _ in range(n)]
-    for i, langi in enumerate(lang):
-        for j, langj in enumerate(lang[:i]):
+    for (i, langi) in enumerate(lang):
+        for (j, langj) in enumerate(lang[:i]):
             if f[j] and langj.intersection(langi):
                 f[j] = 0
                 langi.update(langj)

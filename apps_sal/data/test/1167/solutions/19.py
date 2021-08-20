@@ -1,6 +1,6 @@
 import math
 for _ in range(int(input())):
-    a, b, c, d, k = list(map(int, input().split(' ')))
+    (a, b, c, d, k) = list(map(int, input().split(' ')))
     tot = 0
     a = math.ceil(a / c)
     b = math.ceil(b / d)

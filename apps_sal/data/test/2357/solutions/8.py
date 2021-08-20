@@ -1,4 +1,4 @@
-inf = 10**18
+inf = 10 ** 18
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))

@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split())) + [0]
-s, sb, val = [], 0, 0
+(s, sb, val) = ([], 0, 0)
 for i in range(1, n + 1):
     if a[i] <= a[i - 1]:
         s.append((sb, i - 1))

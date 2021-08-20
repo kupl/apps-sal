@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import numpy as np
 import sys
 input = sys.stdin.readline
@@ -9,7 +8,6 @@ def main():
     numbers = list(map(int, input().split()))
     numbers = np.array(numbers)
     count = 0
-
     if np.all(numbers % 2 == 1):
         print(0)
         return

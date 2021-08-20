@@ -1,10 +1,7 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
 def factorization(n):
-    primen, degree, primend = [], [], []
+    (primen, degree, primend) = ([], [], [])
     temp = n
-    for i in range(2, int(-(-n**0.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
@@ -22,15 +19,14 @@ def factorization(n):
         degree.append(1)
         primend.append([n, 1])
     return degree
-#    return primen,degree
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     if M == 1:
         print(1)
     else:
-        mod = 10**9 + 7               # mod素数
+        mod = 10 ** 9 + 7
         Mf = factorization(M)
         l = max(Mf)
         Comb = [1] * (l + 1)

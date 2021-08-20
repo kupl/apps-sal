@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
 from_start = 0
 RtoL = 0
 LtoR = 0

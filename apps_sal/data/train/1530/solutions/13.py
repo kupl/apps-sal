@@ -5,5 +5,5 @@ for i in range(n):
     for j in range(1, a + 1):
         k = k + j
         for l in range(k, k - j, -1):
-            print(l, end="")
-        print()  # cook your dish here
+            print(l, end='')
+        print()

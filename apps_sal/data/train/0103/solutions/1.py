@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     mat = [list(map(int, input().split())) for i in range(r)]
     row = 0
     for i in mat:
@@ -15,6 +15,6 @@ for _ in range(q):
             col += 1
     cyk = min(row, col)
     if cyk % 2 == 0:
-        print("Vivek")
+        print('Vivek')
     else:
-        print("Ashish")
+        print('Ashish')

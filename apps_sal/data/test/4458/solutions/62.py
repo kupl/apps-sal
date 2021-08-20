@@ -1,7 +1,6 @@
-# C
 N = int(input())
 P = list(map(int, input().split()))
-min_p = 10**10
+min_p = 10 ** 10
 ans = 0
 for i in range(N):
     if min_p >= P[i]:

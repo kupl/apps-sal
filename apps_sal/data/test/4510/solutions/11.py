@@ -4,8 +4,7 @@ import bisect
 import math
 from itertools import combinations, permutations
 from collections import deque
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().rstrip().split()))
 ans = deque()
 p = df(int)
@@ -14,15 +13,13 @@ for i in range(n):
 for i in a:
     if p[i] > 0:
         pass
-
+    elif len(ans) >= k:
+        g = ans.pop()
+        ans.appendleft(i)
+        p[i] += 1
+        p[g] -= 1
     else:
-        if len(ans) >= k:
-            g = ans.pop()
-            ans.appendleft(i)
-            p[i] += 1
-            p[g] -= 1
-        else:
-            ans.appendleft(i)
-            p[i] += 1
+        ans.appendleft(i)
+        p[i] += 1
 print(len(ans))
 print(*ans)

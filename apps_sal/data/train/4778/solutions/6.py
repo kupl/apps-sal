@@ -1,4 +1,5 @@
 class Wallet(Student):
+
     def __init__(self, sn):
         super().__init__(sn.name, sn.fives, sn.tens, sn.twenties)
 
@@ -6,7 +7,8 @@ class Wallet(Student):
         return sum([self.fives * 5, self.tens * 10, self.twenties * 20])
 
 
-class Money():
+class Money:
+
     def __init__(self, students):
         self.sns = students
         self.wallets = [Wallet(sn) for sn in students]

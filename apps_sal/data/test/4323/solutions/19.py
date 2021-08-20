@@ -1,14 +1,11 @@
-# from math import ceil
-#from sys import stdout
-
-t = 1  # int(input())
+t = 1
 for test in range(1, t + 1):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = 0
     b = 0
     c = []
     for i in range(n):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         a += l
         b += r
         c.append(l - r)

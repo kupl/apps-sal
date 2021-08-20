@@ -1,14 +1,11 @@
-
 def valid(step, tx, ty, nx, ny, s, d):
     fx = 0
     fy = 0
     for i in range(len(s)):
-        # insert
         c = s[i]
         fx += d[c][0]
         fy += d[c][1]
         if i >= step:
-            # remove
             c = s[i - step]
             fx -= d[c][0]
             fy -= d[c][1]
@@ -20,24 +17,16 @@ def valid(step, tx, ty, nx, ny, s, d):
 
 
 def main():
-    d = {
-        "U": (0, 1),
-        "D": (0, -1),
-        "L": (-1, 0),
-        "R": (1, 0)
-    }
+    d = {'U': (0, 1), 'D': (0, -1), 'L': (-1, 0), 'R': (1, 0)}
     nx = 0
     ny = 0
-
     n = int(input())
     s = input()
-    tx, ty = [int(x) for x in input().split(" ")]
-
+    (tx, ty) = [int(x) for x in input().split(' ')]
     diff = abs(tx) + abs(ty)
     if diff > len(s) or (diff - len(s)) % 2 == 1:
         print(-1)
         return
-
     for c in s:
         nx += d[c][0]
         ny += d[c][1]
@@ -47,7 +36,6 @@ def main():
     l = 0
     r = len(s)
     ans = r
-
     while l < r:
         m = (l + r) // 2
         if valid(m, tx, ty, nx, ny, s, d):

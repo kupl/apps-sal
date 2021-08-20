@@ -1,6 +1,5 @@
 import math
-
-a, b = [int(x) for x in input().split()]
+(a, b) = [int(x) for x in input().split()]
 cnt = 0
 ab = a + b
 k = 2

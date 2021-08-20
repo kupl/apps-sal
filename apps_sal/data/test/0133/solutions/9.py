@@ -8,7 +8,6 @@ def qp(a, b):
         return ans * ans % 1000000007
 
 
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 ans = qp(qp(2, m) - 1, n)
 print(ans)

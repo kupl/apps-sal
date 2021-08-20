@@ -2,7 +2,7 @@ s = input()
 l = 0
 r = s.count(')')
 result = []
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     if c == '(':
         if l < r:
             result.append(i + 1)

@@ -1,4 +1,5 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         size = len(arr)
         visited = [[0] * 2 for _ in range(size)]

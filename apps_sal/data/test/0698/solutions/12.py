@@ -1,4 +1,4 @@
-x, k = list(map(int, input().split()))
+(x, k) = list(map(int, input().split()))
 a = [0] * x
 q = x - 1
 for i in range(k):

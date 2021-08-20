@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         res = None
         while N > 0:

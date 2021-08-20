@@ -1,12 +1,13 @@
 class Solution:
+
     def numDecodings(self, s):
         """
         :type s: str
         :rtype: int
         """
         alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        char_code = {k: str(v) for k, v in zip(alphabet, list(range(1, 27)))}
-        code_char = {v: k for k, v in list(char_code.items())}
+        char_code = {k: str(v) for (k, v) in zip(alphabet, list(range(1, 27)))}
+        code_char = {v: k for (k, v) in list(char_code.items())}
 
         def numDecodingsHelper(s, hist={}):
             if not s:

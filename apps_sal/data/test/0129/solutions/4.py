@@ -1,4 +1,4 @@
-n, m, k, l = map(int, input().split())
+(n, m, k, l) = map(int, input().split())
 c = (k + l) // m
 if (k + l) % m != 0:
     c += 1

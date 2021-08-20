@@ -3,7 +3,7 @@ s = set()
 for i in range(n):
     k = input()
     if k in s:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     s.add(k)

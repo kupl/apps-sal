@@ -5,16 +5,14 @@ Author  : chaotic_iak
 Language: Python 3.5.2
 """
 
-# SOLUTION
-
 
 def main():
-    k, = read()
+    (k,) = read()
     n = input()
     s = [0] * 10
     for c in n:
         s[ord(c) - 48] += 1
-    k -= sum(i * s[i] for i in range(10))
+    k -= sum((i * s[i] for i in range(10)))
     ct = 0
     for i in range(9):
         if k <= 0:
@@ -24,19 +22,17 @@ def main():
         k -= tm * (9 - i)
     return ct
 
-# HELPERS
-
 
 def read(callback=int):
     return list(map(callback, input().strip().split()))
 
 
-def write(value, end="\n"):
+def write(value, end='\n'):
     if value is None:
         return
     try:
         if not isinstance(value, str):
-            value = " ".join(map(str, value))
+            value = ' '.join(map(str, value))
     except:
         pass
     print(value, end=end)

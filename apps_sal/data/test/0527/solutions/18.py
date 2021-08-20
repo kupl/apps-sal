@@ -1,6 +1,5 @@
 from collections import defaultdict
 from bisect import bisect
-
 s = input()
 S = len(s)
 t = input()
@@ -8,11 +7,9 @@ T = len(t)
 D = defaultdict(list)
 Dc = defaultdict(int)
 Exists = True
-
 for i in range(S):
     D[s[i]].append(i + 1)
     Dc[s[i]] += 1
-
 ans = 0
 temp = 0
 for i in range(T):
@@ -26,7 +23,6 @@ for i in range(T):
     else:
         ans += D[t[i]][j] - temp
         temp = D[t[i]][j]
-
 if Exists:
     print(ans)
 else:

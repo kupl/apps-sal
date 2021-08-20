@@ -1,7 +1,5 @@
 import math
-
-m, R = map(int, input().split())
-
+(m, R) = map(int, input().split())
 D = math.sqrt(2) * R
 result = 0
 
@@ -20,5 +18,4 @@ for i in range(1, m + 1):
         result += sum_dist(i - 2)
     if m - i - 1 > 0:
         result += sum_dist(m - i - 1)
-
 print(result / m / m)

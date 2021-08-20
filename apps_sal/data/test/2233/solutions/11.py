@@ -8,12 +8,12 @@ for da in range(k):
         if s1[i] != s2[i]:
             a.append(i)
     if len(a) == 0:
-        print("Yes")
+        print('Yes')
         continue
     if len(a) != 2:
-        print("No")
+        print('No')
         continue
     if s1[a[0]] == s1[a[1]] and s2[a[0]] == s2[a[1]]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

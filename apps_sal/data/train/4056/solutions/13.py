@@ -1,6 +1,6 @@
 def leaderboard_sort(lb, chn):
     for name in chn:
-        nm, diff = tuple(name.split())
+        (nm, diff) = tuple(name.split())
         diff = int(diff)
         ind = lb.index(nm)
         if diff > 0:

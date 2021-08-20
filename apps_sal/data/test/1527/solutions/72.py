@@ -1,12 +1,10 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 C = [list(input()) for i in range(h)]
 startls = []
-
 for i in range(h):
     for j in range(w):
         if C[i][j] == '.':
             startls.append([i, j])
-
 dy_dx = [[1, 0], [0, 1], [-1, 0], [0, -1]]
 ans = 0
 for start in startls:

@@ -13,7 +13,7 @@ class UnionFind:
         return self.data[x]
 
     def union(self, x, y):
-        ix, iy = self.find(x), self.find(y)
+        (ix, iy) = (self.find(x), self.find(y))
         if ix != iy:
             self.data[ix] = iy
             self.size[iy] += self.size[ix]
@@ -21,6 +21,7 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
 
         def prime_set(num):
@@ -35,29 +36,25 @@ class Solution:
             if num > 2:
                 res.add(num)
             return res
-
         n = len(A)
         uf = UnionFind(n)
         primes_dict = collections.defaultdict(list)
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             pr_set = prime_set(num)
             for p in pr_set:
                 primes_dict[p].append(i)
         for indices in primes_dict.values():
             for j in range(1, len(indices)):
                 uf.union(indices[j - 1], indices[j])
-
         return max(uf.size)
 
     def gcd_with_bfs(self, A: List[int]) -> int:
         graph = collections.defaultdict(set)
-
         for i in range(len(A)):
             for j in range(i, len(A)):
                 if math.gcd(A[i], A[j]) > 1:
                     graph[A[i]].add(A[j])
                     graph[A[j]].add(A[i])
-
         res = 0
         seen = set()
         for a in A:

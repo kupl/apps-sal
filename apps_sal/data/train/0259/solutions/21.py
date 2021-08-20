@@ -27,7 +27,8 @@ def bSearch(l, r, nums, threshold):
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         if sum(nums) <= threshold:
             return 1
-        return bSearch(2, 10**7, nums, threshold)
+        return bSearch(2, 10 ** 7, nums, threshold)

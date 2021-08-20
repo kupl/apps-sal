@@ -6,4 +6,4 @@ def super_size(n):
     numnum = sorted(num)
     numnum.reverse()
     for i in numnum:
-        return int(''.join(str(i) for i in numnum))
+        return int(''.join((str(i) for i in numnum)))

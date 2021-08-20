@@ -1,8 +1,3 @@
-# coding: utf-8
-# author: ismdeep
-# dateime: 2019-03-08 17:07:47
-# filename: a.py
-# blog: https://ismdeep.com
 n = int(input())
 a = list(map(int, input().split()))
 v = []

@@ -1,5 +1,4 @@
 def rot_energies(rot, energy_min, energy_max):
-    # We're programmers, not scientists or mathematicians, we can use legible variable names.
     if rot <= 0:
         return []
     else:

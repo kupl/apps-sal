@@ -2,10 +2,9 @@ def mp():
     return map(int, input().split())
 
 
-n, m = mp()
+(n, m) = mp()
 a = list(mp())
 b = list(mp())
-
 n1 = n2 = c1 = c2 = 0
 for i in a:
     if i % 2 == 0:

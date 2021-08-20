@@ -1,6 +1,5 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 t = list(map(int, input().split()))
-
 sum_t = sum(t)
 joke_time = (n - 1) * 10
 if sum_t + joke_time <= d:

@@ -1,9 +1,6 @@
-INF = float("inf")
-
-N, K, *XY = map(int, open(0).read().split())
-
-X, Y = zip(*sorted(zip(*[iter(XY)] * 2)))
-
+INF = float('inf')
+(N, K, *XY) = map(int, open(0).read().split())
+(X, Y) = zip(*sorted(zip(*[iter(XY)] * 2)))
 ans = INF
 for k in range(K, N + 1):
     for i in range(N - k + 1):
@@ -13,5 +10,4 @@ for k in range(K, N + 1):
             dy = YY[j + K - 1] - YY[j]
             if ans > dx * dy:
                 ans = dx * dy
-
 print(ans)

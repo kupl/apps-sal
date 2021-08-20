@@ -22,7 +22,6 @@ for a in set(A):
             D[a] = (x, 0)
     else:
         D[a] = (0, 0)
-
 for a in A:
     t = D[a]
-    print((s - t[0] + t[1]))
+    print(s - t[0] + t[1])

@@ -1,6 +1,6 @@
 d = input()
 s = input()
-A = "qwertyuiopasdfghjkl;zxcvbnm,./"
+A = 'qwertyuiopasdfghjkl;zxcvbnm,./'
 sout = ''
 if d == 'R':
     for i in range(len(s)):

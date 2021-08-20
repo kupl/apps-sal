@@ -29,19 +29,5 @@ def switch_it_up(n):
 
     def nine():
         return 'Nine'
-
-    options = {
-        None: zero,
-        0: zero,
-        1: one,
-        2: two,
-        3: three,
-        4: four,
-        5: five,
-        6: six,
-        7: seven,
-        8: eight,
-        9: nine,
-    }
-
+    options = {None: zero, 0: zero, 1: one, 2: two, 3: three, 4: four, 5: five, 6: six, 7: seven, 8: eight, 9: nine}
     return options[n]()

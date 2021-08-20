@@ -1,6 +1,6 @@
 n = int(input())
 a = [s.split(')')[::-1] for s in input().split('(')]
-x, y = 0, 0
+(x, y) = (0, 0)
 for i in range(len(a)):
     if len(a[i]) == 2:
         for s in a[i][1].split('_'):

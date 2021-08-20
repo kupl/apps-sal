@@ -1,6 +1,5 @@
 import collections
 import math
-
 n = int(input())
 a = list(map(int, input().split()))
 a.sort(reverse=True)
@@ -20,10 +19,8 @@ def sieve():
 
 
 sieve()
-# print(primes_sieve[:20])
 d = collections.defaultdict(int)
 z = collections.defaultdict(int)
-
 ans = []
 primes = []
 for i in range(n * 2):
@@ -42,5 +39,4 @@ for i in range(len(primes)):
     else:
         z[primes_arr[primes[i]]] += 1
         ans.append(primes[i])
-
 print(*ans)

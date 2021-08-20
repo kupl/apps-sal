@@ -1,7 +1,8 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
-        a, e, i, o, u = 1, 1, 1, 1, 1
-        kMod = 1e9 + 7
+        (a, e, i, o, u) = (1, 1, 1, 1, 1)
+        kMod = 1000000000.0 + 7
         for k in range(2, n + 1):
             aa = (e + i + u) % kMod
             ee = (a + i) % kMod

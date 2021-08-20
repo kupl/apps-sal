@@ -1,5 +1,5 @@
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     g = []
     for i in range(n):
         g.append(input())
@@ -11,7 +11,6 @@ def main():
                 cnt += 1 if g[i][j] == '.' else 0
         print(cnt)
         return
-    # count row
     for i in range(n):
         cnt = 0
         for j in range(m):

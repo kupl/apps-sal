@@ -7,7 +7,6 @@ def f(pairs):
         pairs.pop(0)
     while pairs and pairs[-1] == 0:
         pairs.pop()
-
     count = 0
     parity = False
     tmp_count = 0
@@ -25,7 +24,6 @@ def f(pairs):
                 tmp_count = 0
             if tmp_count == 0:
                 parity = False
-
     count += tmp_count
     return count
 

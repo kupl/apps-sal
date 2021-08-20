@@ -1,5 +1,5 @@
 from math import gcd
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 X = list(map(int, input().split()))
 X.append(x)
 X.sort()

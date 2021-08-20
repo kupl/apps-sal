@@ -1,11 +1,10 @@
 from collections import defaultdict as dc
 dic = dc(lambda: 0)
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 siv = [0] * (max(s) + 1)
 ln = len(siv)
 siv[1] = 1
-
 for n in range(2, ln):
     if siv[n] == 0:
         siv[n] = n
@@ -20,7 +19,6 @@ def prf(x):
         d = siv[x]
         dic[siv[x]] += 1
         x //= siv[x]
-
     return dic
 
 
@@ -32,7 +30,7 @@ def req(dic, k):
         cur[n] = (k - cur[n]) % k
     tot = 1
     for n in cur:
-        tot *= (n**cur[n])
+        tot *= n ** cur[n]
     return tot
 
 
@@ -42,8 +40,7 @@ def conv(x, k):
         dicc[n] %= k
     tot = 1
     for n in dicc:
-        tot *= (n**dicc[n])
-
+        tot *= n ** dicc[n]
     return tot
 
 
@@ -52,5 +49,4 @@ for n in s:
     re = req(prf(n), y)
     res += dic[re]
     dic[conv(n, y)] += 1
-
 print(res)

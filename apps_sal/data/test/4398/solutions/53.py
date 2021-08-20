@@ -1,5 +1,5 @@
 N = int(input())
-S, T = input().split()
+(S, T) = input().split()
 
 
 def new():
@@ -7,7 +7,7 @@ def new():
     for i in range(N):
         text.append(S[i])
         text.append(T[i])
-    return "".join(text)
+    return ''.join(text)
 
 
 print(new())

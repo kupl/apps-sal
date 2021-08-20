@@ -1,5 +1,5 @@
-N = 2 * 10**5 + 3
-mod = 10**9 + 7
+N = 2 * 10 ** 5 + 3
+mod = 10 ** 9 + 7
 fac = [1] * (N + 1)
 for i in range(1, N + 1):
     fac[i] = fac[i - 1] * i % mod
@@ -15,7 +15,7 @@ def nCr(n, r):
     return fac[n] * inv_fac[r] % mod * inv_fac[n - r] % mod
 
 
-h, w, a, b = map(int, input().split())
+(h, w, a, b) = map(int, input().split())
 ans = nCr(h + w - 2, h - 1)
 for i in range(b):
     ans = (ans - nCr(h - a + i - 1, i) * nCr(a + w - i - 2, a - 1)) % mod

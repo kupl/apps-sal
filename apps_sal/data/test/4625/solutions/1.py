@@ -1,5 +1,5 @@
 for eps in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = input()
     a = list(map(int, input().split()))
     a.sort()
@@ -8,7 +8,7 @@ for eps in range(int(input())):
     for i in range(n):
         while j < m and i >= a[j]:
             j += 1
-        ans[ord(s[i]) - ord("a")] += m - j + 1
+        ans[ord(s[i]) - ord('a')] += m - j + 1
     for elem in ans:
-        print(elem, end=" ")
+        print(elem, end=' ')
     print()

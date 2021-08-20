@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [0] * n
 b = ['0'] * n
 c = []

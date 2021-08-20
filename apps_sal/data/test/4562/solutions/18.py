@@ -5,4 +5,4 @@ for i in range(N + 1):
         ans = i
     else:
         break
-print((ans**2))
+print(ans ** 2)

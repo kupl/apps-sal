@@ -1,13 +1,10 @@
 from collections import Counter
-
 t = int(input())
-
 for _ in range(t):
     q = int(input())
     orig_set = set()
     orig_set.add(0)
-    E, O = 0, 0
-
+    (E, O) = (0, 0)
     for row in range(q):
         x = int(input())
         if x in orig_set:
@@ -21,7 +18,6 @@ for _ in range(t):
                 else:
                     E += 1
                 l.append(elem)
-
             for e in l:
                 orig_set.add(e)
             print(E, O)

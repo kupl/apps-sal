@@ -1,5 +1,4 @@
 S = input()
-
 flag = 1
 c_count = 0
 ans = 'AC'

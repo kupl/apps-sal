@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         tails = [0] * len(nums)
         size = 0
-
         for x in nums:
             i = 0
             j = size
@@ -17,8 +17,6 @@ class Solution:
                     i = mid + 1
                 else:
                     j = mid
-
             tails[i] = x
             size = max(size, i + 1)
-
         return size

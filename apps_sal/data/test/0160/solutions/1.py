@@ -11,7 +11,7 @@ def Divisor_Set(n):
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a_sum = sum(a)
     st = Divisor_Set(a_sum)

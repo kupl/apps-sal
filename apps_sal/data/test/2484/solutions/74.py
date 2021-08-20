@@ -1,11 +1,9 @@
 N = int(input())
 A = [0] + list(map(int, input().split()))
-
 ans = 0
 S = 0
 X = 0
 end = 0
-
 for i in range(1, N + 1):
     S -= A[i - 1]
     X ^= A[i - 1]
@@ -25,5 +23,4 @@ for i in range(1, N + 1):
         if j == N:
             end = j
     ans += end - i + 1
-
 print(ans)

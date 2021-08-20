@@ -1,13 +1,11 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x = list(map(int, input().split()))
 neg_num = n
-
 for i in range(n):
     if x[i] > 0:
         neg_num = i
         break
 pos_num = n - neg_num
-
 l = min(k, neg_num)
 res = 10 ** 13
 for i in range(l, -1, -1):

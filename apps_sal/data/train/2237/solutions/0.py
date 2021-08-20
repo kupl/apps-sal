@@ -3,7 +3,8 @@ reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
 
-class Binary_Indexed_Tree():
+class Binary_Indexed_Tree:
+
     def __init__(self, n):
         self.n = n
         self.data = [0] * (n + 1)
@@ -30,7 +31,7 @@ class Binary_Indexed_Tree():
         if w <= 0:
             return 0
         i = 0
-        k = 1 << (self.n.bit_length())
+        k = 1 << self.n.bit_length()
         while k:
             if i + k <= self.n and self.data[i + k] < w:
                 w -= self.data[i + k]
@@ -41,11 +42,10 @@ class Binary_Indexed_Tree():
 
 n = int(input())
 a = list(map(int, input().split()))
-d = {j: i for i, j in enumerate(a)}
+d = {j: i for (i, j) in enumerate(a)}
 BIT1 = Binary_Indexed_Tree(n)
 BIT2 = Binary_Indexed_Tree(n)
 BIT3 = Binary_Indexed_Tree(n)
-
 tentou = 0
 ans = []
 for i in range(n):
@@ -54,7 +54,6 @@ for i in range(n):
     inv_p = n - p
     tentou += BIT1.sum(inv_p)
     BIT1.add(inv_p, 1)
-
     BIT2.add(p + 1, 1)
     BIT3.add(p + 1, p + 1)
     m = i // 2 + 1

@@ -14,6 +14,6 @@ for i in range(n):
             if not l:
                 t = 1
 if t:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

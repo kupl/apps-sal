@@ -1,6 +1,6 @@
 class Solution:
-    def numberOfSubarrays(self, nums: List[int], k: int) -> int:
 
+    def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         l = len(nums)
 
         def atmost(k):

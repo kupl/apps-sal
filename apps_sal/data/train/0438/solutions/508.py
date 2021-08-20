@@ -1,4 +1,5 @@
-class Union_Find():
+class Union_Find:
+
     def __init__(self):
         self.father = {}
         self.count = collections.defaultdict(int)
@@ -18,6 +19,7 @@ class Union_Find():
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = Union_Find()
         result = -1

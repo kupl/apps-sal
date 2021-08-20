@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, a1: List[int], a2: List[int]) -> int:
         d = {}
         n1 = len(a1)
@@ -20,9 +21,7 @@ class Solution:
                     e[a2[i] * a2[j]] += 1
                 else:
                     e[a2[i] * a2[j]] = 1
-
         for x in a1:
             if x * x in list(e.keys()):
                 c += e[x * x]
-
         return c

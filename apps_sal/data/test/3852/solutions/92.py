@@ -1,18 +1,11 @@
-# 設定
 from collections import defaultdict
 import sys
 input = sys.stdin.buffer.readline
-
-# ライブラリインポート
-
 con = 10 ** 9 + 7
-# 入力受け取り
 
 
 def getlist():
     return list(map(int, input().split()))
-
-# 処理内容
 
 
 def main():
@@ -26,19 +19,18 @@ def main():
         print(N - 1)
         for i in range(N - 1):
             print(i + 1, i + 2)
+    elif abs(M) > abs(m):
+        print(2 * N - 1)
+        for i in range(N):
+            print(p + 1, i + 1)
+        for i in range(N - 1):
+            print(i + 1, i + 2)
     else:
-        if abs(M) > abs(m):
-            print(2 * N - 1)
-            for i in range(N):
-                print(p + 1, i + 1)
-            for i in range(N - 1):
-                print(i + 1, i + 2)
-        else:
-            print(2 * N - 1)
-            for i in range(N):
-                print(q + 1, i + 1)
-            for i in range(N - 1):
-                print(N - i, N - 1 - i)
+        print(2 * N - 1)
+        for i in range(N):
+            print(q + 1, i + 1)
+        for i in range(N - 1):
+            print(N - i, N - 1 - i)
 
 
 def __starting_point():

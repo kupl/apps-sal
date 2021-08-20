@@ -1,4 +1,5 @@
 class Solution:
+
     def search(s, e, m, l):
         mid = (s + e) // 2
         if s > e:

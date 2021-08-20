@@ -1,3 +1,2 @@
 def position(letter):
-
-    return f"Position of alphabet: {ord(letter) - 96}"
+    return f'Position of alphabet: {ord(letter) - 96}'

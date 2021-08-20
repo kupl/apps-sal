@@ -1,11 +1,17 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
 
 
 class BitSum:
+
     def __init__(self, n):
         self.n = n + 3
         self.table = [0] * (self.n + 1)
@@ -28,7 +34,7 @@ class BitSum:
 def InversionNumber(lst):
     bit = BitSum(max(lst))
     res = 0
-    for i, a in enumerate(lst):
+    for (i, a) in enumerate(lst):
         res += i - bit.sum(a)
         bit.update(a, 1)
     return res
@@ -37,7 +43,7 @@ def InversionNumber(lst):
 def main():
     s = input()
     n = len(s)
-    ord_a = ord("a")
+    ord_a = ord('a')
     cnts = [0] * 26
     s_code = []
     flag_odd = False
@@ -46,7 +52,7 @@ def main():
         s_code.append(code)
         cnts[code] += 1
     odd_code = -1
-    for code, cnt in enumerate(cnts):
+    for (code, cnt) in enumerate(cnts):
         if cnt % 2 == 1:
             if flag_odd:
                 print(-1)
@@ -64,13 +70,11 @@ def main():
             tois[code].append(n + 1 - new_idx)
             cnts[code] -= 1
             new_idx += 1
+        elif flag_odd and code == odd_code:
+            to_sort_idx.append(n // 2 + 1)
+            flag_odd = False
         else:
-            if flag_odd and code == odd_code:
-                to_sort_idx.append(n // 2 + 1)
-                flag_odd = False
-            else:
-                to_sort_idx.append(tois[code].pop())
-    # print(to_sort_idx)
+            to_sort_idx.append(tois[code].pop())
     print(InversionNumber(to_sort_idx))
 
 

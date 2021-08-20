@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def minOperations(self, n: int) -> int:
         res = 0
         for i in range(n):

@@ -6,7 +6,7 @@ def gen(k, n, p):
     gen(k + 1, n, p + [0])
 
 
-n, l, r, x = list(map(int, input().split()))
+(n, l, r, x) = list(map(int, input().split()))
 m = list(map(int, input().split()))
 ans = []
 count = 0
@@ -21,6 +21,6 @@ for i in range(len(ans)):
     for i in now:
         sum += i
     if len(now) > 0:
-        if now[-1] - now[0] >= x and sum >= l and sum <= r:
+        if now[-1] - now[0] >= x and sum >= l and (sum <= r):
             count += 1
 print(count)

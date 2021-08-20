@@ -25,9 +25,8 @@ def main():
         d = a[1] - a[0]
         c1 = a[0]
         c2 = a[2] - 2 * d
-        #print(d, c1, c2)
         for i in range(3, n):
-            if (a[i] == i * d + c1) or (a[i] == i * d + c2):
+            if a[i] == i * d + c1 or a[i] == i * d + c2:
                 pass
             else:
                 f = False
@@ -39,9 +38,8 @@ def main():
         d = a[2] - a[1]
         c1 = a[1] - d
         c2 = a[0]
-        #print(d, c1, c2)
         for i in range(3, n):
-            if (a[i] == i * d + c1) or (a[i] == i * d + c2):
+            if a[i] == i * d + c1 or a[i] == i * d + c2:
                 pass
             else:
                 f = False
@@ -53,10 +51,8 @@ def main():
         d = (a[2] - a[0]) / 2
         c1 = a[0]
         c2 = a[1] - d
-        #print(d, c1, c2)
         for i in range(3, n):
-            #print(a[i], i * d + c1, i * d + c2)
-            if (a[i] == i * d + c1) or (a[i] == i * d + c2):
+            if a[i] == i * d + c1 or a[i] == i * d + c2:
                 pass
             else:
                 f = False

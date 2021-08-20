@@ -18,13 +18,11 @@ def digsumf(n):
 def getnext(bnum, last):
     if last == 0:
         return getnum(bnum)
-
     k = last + 1
     digsum = digsumf(k)
     diff = bnum - digsum
     if diff >= 0 and 9 - k % 10 >= diff:
         return k + diff
-
     omitsum = 0
     startdigsum = digsumf(last)
     lastl = [int(i) for i in str(last)]
@@ -34,11 +32,11 @@ def getnext(bnum, last):
     while True:
         if i == 1 and len(str(l)) - 1 <= len(lastl):
             omitsum += lastl[-(len(str(l)) - 1)]
-        if (last // l) % 10 + i > 9:
+        if last // l % 10 + i > 9:
             l *= 10
             i = 1
             continue
-        k = (last // l) * l + l * i
+        k = last // l * l + l * i
         digsum = startdigsum - omitsum + i
         diff = bnum - digsum
         r = getnum(diff)

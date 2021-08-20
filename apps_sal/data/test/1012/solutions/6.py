@@ -1,5 +1,5 @@
 def solve(s):
-    s = "".join(sorted(s))
+    s = ''.join(sorted(s))
     if s == s[::-1]:
         return -1
     else:

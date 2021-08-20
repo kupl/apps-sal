@@ -7,10 +7,10 @@ class linkedNode:
 
 
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         head = linkedNode(-1)
         pointer = head
-
         for i in range(1, m + 1):
             newLN = linkedNode(i)
             newLN.prev = pointer
@@ -18,7 +18,6 @@ class Solution:
             pointer = pointer.next
         pointer.next = linkedNode(-1)
         pointer.next.prev = pointer
-
         ans = []
         for query in queries:
             i = 0
@@ -27,13 +26,10 @@ class Solution:
                 pointer = pointer.next
                 i += 1
             ans.append(i)
-
             pointer.prev.next = pointer.next
             pointer.next.prev = pointer.prev
-
             pointer.next = head.next
             head.next.prev = pointer
             head.next = pointer
             pointer.prev = head
-
         return ans

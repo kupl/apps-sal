@@ -1,10 +1,13 @@
 from itertools import product
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    h, w, k = map(int, input().split())
+    (h, w, k) = map(int, input().split())
     C = [input() for _ in range(h)]
     comb_list = list(product([False, True], repeat=h + w))
     ans = 0

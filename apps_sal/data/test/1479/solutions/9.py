@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-n, m, k = I()
+(n, m, k) = I()
 f = [['.' for _ in range(m)] for _ in range(n)]
 for i in range(n):
     s = input()

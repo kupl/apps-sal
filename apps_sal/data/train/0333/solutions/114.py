@@ -1,4 +1,5 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         from collections import deque, defaultdict
         d = defaultdict(set)

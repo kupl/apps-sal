@@ -11,9 +11,8 @@ for _ in range(M):
     s = input()
     if s in bag:
         bag[s] -= 1
-
-d_swap = {v: k for k, v in list(bag.items())}
+d_swap = {v: k for (k, v) in list(bag.items())}
 if max(d_swap) < 0:
-    print((0))
+    print(0)
 else:
-    print((max(d_swap)))
+    print(max(d_swap))

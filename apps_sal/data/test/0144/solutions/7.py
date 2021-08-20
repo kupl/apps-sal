@@ -6,7 +6,6 @@ def check(a, count):
             return False
         elif ks == count:
             ks = 0
-
     return True
 
 

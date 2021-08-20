@@ -1,11 +1,12 @@
 def bel(mask, bit):
-    return (mask & (1 << bit)) != 0
+    return mask & 1 << bit != 0
 
 
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, k = read()
+(n, k) = read()
 f = [0] * 100
 for i in range(n):
     cur = int(''.join(input().split()), 2)
@@ -45,6 +46,6 @@ if k == 4:
         if f[i]:
             for j in range(16):
                 if f[j]:
-                    if (i | j) == 15:
+                    if i | j == 15:
                         ans = 'YES'
 print(ans)

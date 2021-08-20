@@ -1,5 +1,4 @@
-A, B = map(int, input().split())
-
+(A, B) = map(int, input().split())
 if A < B:
     if A == 1:
         ans = 'Alice'
@@ -12,5 +11,4 @@ elif B < A:
         ans = 'Alice'
 else:
     ans = 'Draw'
-
 print(ans)

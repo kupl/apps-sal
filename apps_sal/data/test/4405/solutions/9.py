@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 d = {}
 powers = []
 for i in range(32):
-    powers.append(2**i)
+    powers.append(2 ** i)
 for i in arr:
     if i in list(d.keys()):
         d[i] += 1
@@ -20,7 +20,7 @@ for i in range(1, len(arr1)):
         maxx = max(maxx, arr1[i] * (powers[i + 1] - 1))
         curr = arr1[i]
     else:
-        maxx = max(maxx, (curr // 2) * (powers[i + 1] - 1))
+        maxx = max(maxx, curr // 2 * (powers[i + 1] - 1))
         curr = curr // 2
     if curr == 0:
         break

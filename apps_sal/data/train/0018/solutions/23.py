@@ -2,7 +2,7 @@ import math as m
 
 
 def fu(a):
-    return (a / 180) * m.pi
+    return a / 180 * m.pi
 
 
 t = int(input())

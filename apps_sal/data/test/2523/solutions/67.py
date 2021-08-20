@@ -1,6 +1,5 @@
 from collections import deque
-
-x, y = deque(), deque()
+(x, y) = (deque(), deque())
 s = deque(list(input()))
 n = len(s)
 m = s[n // 2]

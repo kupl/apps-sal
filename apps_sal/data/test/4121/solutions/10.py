@@ -8,6 +8,6 @@ for i in l:
     else:
         st.append(d)
 if len(st) < 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

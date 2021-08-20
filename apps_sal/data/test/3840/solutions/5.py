@@ -3,7 +3,7 @@ line = input()
 lis = line.split()
 lis = [int(i) for i in lis]
 if t == 1 or t % 2 == 0:
-    print("-1")
+    print('-1')
     quit()
 count = 0
 i = t

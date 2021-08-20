@@ -1,4 +1,5 @@
-def age(cur): return int(sum(cur) == 1 or cur == (0, 1, 1))
+def age(cur):
+    return int(sum(cur) == 1 or cur == (0, 1, 1))
 
 
 def rule30(l, n):

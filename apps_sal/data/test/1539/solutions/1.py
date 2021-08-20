@@ -2,7 +2,7 @@ def read_data():
     n = int(input())
     Ls = list(map(int, input().split()))
     Ds = list(map(int, input().split()))
-    return n, Ls, Ds
+    return (n, Ls, Ds)
 
 
 def solve(n, Ls, Ds):
@@ -16,7 +16,7 @@ def solve(n, Ls, Ds):
     record = float('inf')
     cost_long = 0
     cost_me = 0
-    for L, D in LDs:
+    for (L, D) in LDs:
         if prevL != L:
             n -= ni
             record = min(record, cost_long + calc_cost(ni, n, freqD))
@@ -37,7 +37,7 @@ def calc_cost(ni, n, freqD):
     if n < ni:
         return 0
     cost = 0
-    for d, f in enumerate(freqD):
+    for (d, f) in enumerate(freqD):
         if n - f >= ni:
             cost += f * d
             n -= f
@@ -47,5 +47,5 @@ def calc_cost(ni, n, freqD):
     return float('inf')
 
 
-n, Ls, Ds = read_data()
+(n, Ls, Ds) = read_data()
 print(solve(n, Ls, Ds))

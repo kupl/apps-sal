@@ -1,4 +1,3 @@
-#import sys
 import pprint
 from collections import defaultdict
 from functools import lru_cache
@@ -9,12 +8,7 @@ import itertools
 from collections import deque
 import math
 MOD = 10 ** 9 + 7
-INFI = 10**10
-#input = sys.stdin.readline
-#import bisect
-
-# oo=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-# ko=list("abcdefghijklmnopqrstuvwxyz")
+INFI = 10 ** 10
 
 
 def sosuhante(n):
@@ -31,10 +25,8 @@ def cmb(n, r):
         return 1
     if r == 1:
         return n
-
     numerator = [n - r + k + 1 for k in range(r)]
     denominator = [k + 1 for k in range(r)]
-
     for p in range(2, r + 1):
         pivot = denominator[p - 1]
         if pivot > 1:
@@ -42,12 +34,10 @@ def cmb(n, r):
             for k in range(p - 1, r, p):
                 numerator[k - offset] /= pivot
                 denominator[k] /= pivot
-
     result = 1
     for k in range(r):
         if numerator[k] > 1:
             result *= int(numerator[k])
-
     return result
 
 
@@ -61,9 +51,6 @@ def my_index(l, x, default=False):
         return l.index(x)
     else:
         return default
-
-#    h,w,a,b = map(int, input().split())
-#    c = [[0 for j in range(n)] for i in range(n)]
 
 
 def ret(a):
@@ -84,7 +71,6 @@ def soinsubunkai(n):
         if n % i == 0 and i != 1:
             a.append(i)
             n = n // i
-
         if n % i != 0 or i == 1:
             i += 1
     nokori = [n]
@@ -92,7 +78,7 @@ def soinsubunkai(n):
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -104,15 +90,14 @@ def make_divisors(n):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     graph = [[] for _ in range(n + 1)]
     for i in range(m):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         graph[a].append(b)
         graph[b].append(a)
     stack = []
     visited = [0 for _ in range(n + 1)]
-
     zones = 0
     count = 0
 
@@ -126,7 +111,6 @@ def main():
                 for i in graph[s]:
                     if visited[i] == 0:
                         stack.append(i)
-
                 visited[s] = 1
                 c += 1
             if len(stack) == 0:
@@ -142,13 +126,10 @@ def main():
                 zones += 1
         else:
             continue
-
-#    print(n,count,zones)
     print(n - count + zones)
 
 
 def __starting_point():
-
     main()
 
 

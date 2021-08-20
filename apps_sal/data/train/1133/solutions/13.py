@@ -1,7 +1,5 @@
-# cook your dish here
 from fractions import gcd
 from functools import reduce
-
 t = int(input())
 for i in range(0, t):
     n = int(input())

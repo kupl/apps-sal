@@ -1,9 +1,9 @@
-n, a, b = map(int, input().split())
-mod = 10**9 + 7
+(n, a, b) = map(int, input().split())
+mod = 10 ** 9 + 7
 
 
 def cmb(n, r):
-    p, q = 1, 1
+    (p, q) = (1, 1)
     for i in range(r):
         p = p * (n - i) % mod
         q = q * (i + 1) % mod

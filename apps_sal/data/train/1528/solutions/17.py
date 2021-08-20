@@ -1,7 +1,5 @@
 for _ in range(int(input())):
-    # n = int(input())
-    # s = input()
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     f = input().split()
     leftovers = f[:n - k]
     removed = f[n - k:]

@@ -10,7 +10,7 @@ for i in range(1, n + 1):
     for j in t:
         if j > max:
             max = j
-    for l, j in enumerate(t):
+    for (l, j) in enumerate(t):
         if j == max:
-            print(str(l) + " " + str(j))
+            print(str(l) + ' ' + str(j))
             break

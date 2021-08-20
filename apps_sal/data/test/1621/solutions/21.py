@@ -12,7 +12,7 @@ def solve():
     mm = max(w)
     ans = 0
     for i in range(len(s) + k):
-        if (i < len(s)):
+        if i < len(s):
             ans = ans + w[ord(s[i]) - ord('a')] * (i + 1)
         else:
             ans = ans + mm * (i + 1)

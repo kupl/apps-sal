@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         total = sum(weights)
         maxW = max(weights)
@@ -17,7 +18,6 @@ class Solution:
                 else:
                     curr -= w
             return count <= D
-
         while low != high:
             mid = (low + high) // 2
             if isok(weights, D, mid):

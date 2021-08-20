@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         dis = [math.inf] * n
@@ -6,7 +7,7 @@ class Solution:
         ans = 0
         dis[0] = 0
         for i in range(0, n):
-            d, j = min((d, j) for j, d in enumerate(dis))
+            (d, j) = min(((d, j) for (j, d) in enumerate(dis)))
             dis[j] = math.inf
             visited[j] = True
             ans += d

@@ -7,5 +7,4 @@ for i in range(n):
     tmp += sum(b[i:])
     if max < tmp:
         max = tmp
-
 print(max)

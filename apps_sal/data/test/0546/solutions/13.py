@@ -11,22 +11,21 @@ for _ in range(n):
         elif len(nl) == len(c) + 1:
             nl = nl.replace('*', '')
     if len(c) != len(nl):
-        a.append("NO")
+        a.append('NO')
     else:
         for i in range(len(c)):
             if nl[i] == '*':
                 if c[i] in l:
-                    a.append("NO")
+                    a.append('NO')
                     break
             elif nl[i] == '?':
                 if c[i] not in l:
-                    a.append("NO")
+                    a.append('NO')
                     break
-            else:
-                if nl[i] != c[i]:
-                    a.append("NO")
-                    break
+            elif nl[i] != c[i]:
+                a.append('NO')
+                break
         else:
-            a.append("YES")
+            a.append('YES')
 for i in a:
     print(i)

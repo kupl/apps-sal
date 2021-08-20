@@ -1,4 +1,4 @@
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 l = [None for _ in range(k)]
 for i in range(k):
     l[i] = [int(x) for x in input().split()[1:]]

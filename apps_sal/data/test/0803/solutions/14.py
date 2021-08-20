@@ -1,10 +1,7 @@
 input()
-pos = [(c == 'X') for c in input()]
-
+pos = [c == 'X' for c in input()]
 b = pos.count(True) - len(pos) // 2
-
 print(abs(b))
-
 if b < 0:
     for p in range(len(pos)):
         if not pos[p]:
@@ -19,6 +16,4 @@ elif b > 0:
             b -= 1
             if b == 0:
                 break
-
-
-print(''.join('X' if p else 'x' for p in pos))
+print(''.join(('X' if p else 'x' for p in pos)))

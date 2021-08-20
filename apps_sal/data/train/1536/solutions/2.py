@@ -18,11 +18,11 @@ for _ in range(int(input())):
     aux_1 = Counter(aux)
     aux = list(set(aux))
     if len(aux) > 1 and len(aux) == 3:
-        a, b, c = aux[0], aux[1], aux[2]
-        if a + b == (2 * c):
+        (a, b, c) = (aux[0], aux[1], aux[2])
+        if a + b == 2 * c:
             t_1 = new_seq(l, c, l[0])
             print(*t_1)
-        elif a + c == (2 * b):
+        elif a + c == 2 * b:
             t_1 = new_seq(l, b, l[0])
             print(*t_1)
         else:

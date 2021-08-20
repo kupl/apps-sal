@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 mod = 998244853
 fact = [1]
 invfact = [1]
@@ -6,9 +6,9 @@ invfact = [1]
 
 def pw(x, y):
     ans = 1
-    while (y):
-        if (y & 1):
-            ans = (ans * x) % mod
+    while y:
+        if y & 1:
+            ans = ans * x % mod
         x = x * x % mod
         y >>= 1
     return ans
@@ -37,6 +37,6 @@ ways[n + 1] = ways_to(n - m)
 for i in range(1, n + 1):
     ans += i * (ways[i + 1] - ways[i])
     ans %= mod
-if (ans < 0):
+if ans < 0:
     ans += mod
 print(ans)

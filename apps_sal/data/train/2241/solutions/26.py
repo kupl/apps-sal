@@ -1,9 +1,9 @@
-N, C = map(int, input().split())
+(N, C) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 DP = [[0] * (C + 1) for i in range(N + 1)]
 DP[0][0] = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 X = [[0] for i in range(401)]
 for i in range(401):
     for j in range(401):

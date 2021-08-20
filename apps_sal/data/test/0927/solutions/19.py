@@ -1,6 +1,5 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
-
 T = [0, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 B = []
 for i in A:
@@ -9,17 +8,12 @@ B = sorted(list(set(B)))
 dp = [0 for i in range(N + 1)]
 AB = [[i, T[i]] for i in A]
 AB = sorted(AB, reverse=True)
-
 for i in range(1, N + 1):
     for j in B:
         if i - j >= 0 and dp[i - j] != -1:
             dp[i] = max(dp[i], dp[i - j] + 1)
-            # print(i,j,dp[i])
     if dp[i] == 0:
         dp[i] = -1
-# print(dp)
-# print(AB)
-
 c = N
 U = [0 for i in range(8)]
 while c > 0:
@@ -28,9 +22,7 @@ while c > 0:
             U[AB[i][1]] += 1
             c -= AB[i][1]
             break
-# print(U)
-
-ans = ""
+ans = ''
 if 9 in A:
     ans += '9' * U[6]
     U[6] = 0
@@ -52,5 +44,4 @@ if 2 in A:
     ans += '2' * U[5]
 if 1 in A:
     ans += '1' * U[2]
-
 print(ans)

@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 
 
 def work():
-    c, d = set(), set()
+    (c, d) = (set(), set())
     r = [0]
     for x in a:
         r[-1] += 1

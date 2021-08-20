@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, list(input())))
     right = [0] * (n + 1)
     count = 0
@@ -20,9 +20,3 @@ for _ in range(int(input())):
         else:
             count = 0
     print(ans)
-
-# 2
-# 13 2
-# 0101110000101
-# 6 3
-# 100001

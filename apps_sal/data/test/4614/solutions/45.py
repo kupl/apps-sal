@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if a == b & b != c:
     print(c)
 elif a == c & c != b:

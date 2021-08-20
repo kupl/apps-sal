@@ -10,7 +10,7 @@ for i in range(length):
 result = length * ['a']
 left = 0
 right = length - 1
-mina, minb, maxa, maxb = 0, 0, 25, 25
+(mina, minb, maxa, maxb) = (0, 0, 25, 25)
 exclude = length // 2
 for i in range(25, -1, -1):
     if exclude <= 0:
@@ -25,7 +25,6 @@ for i in range(26):
     while exclude > 0 and b_count[i] != 0:
         exclude -= 1
         b_count[i] -= 1
-
 while a_count[mina] == 0 and mina < 25:
     mina += 1
 while b_count[minb] == 0 and minb < 25:
@@ -36,7 +35,7 @@ while b_count[maxb] == 0 and maxb > 0:
     maxb -= 1
 i = 0
 while i < length:
-    if i & 1 == 0:  # Alice
+    if i & 1 == 0:
         if mina < maxb:
             result[left] = chr(ord('a') + mina)
             left += 1
@@ -49,18 +48,17 @@ while i < length:
             a_count[maxa] -= 1
             while a_count[maxa] == 0 and maxa > 0:
                 maxa -= 1
+    elif mina < maxb:
+        result[left] = chr(ord('a') + maxb)
+        left += 1
+        b_count[maxb] -= 1
+        while b_count[maxb] == 0 and maxb > 0:
+            maxb -= 1
     else:
-        if mina < maxb:
-            result[left] = chr(ord('a') + maxb)
-            left += 1
-            b_count[maxb] -= 1
-            while b_count[maxb] == 0 and maxb > 0:
-                maxb -= 1
-        else:
-            result[right] = chr(ord('a') + minb)
-            right -= 1
-            b_count[minb] -= 1
-            while b_count[minb] == 0 and minb < 25:
-                minb += 1
+        result[right] = chr(ord('a') + minb)
+        right -= 1
+        b_count[minb] -= 1
+        while b_count[minb] == 0 and minb < 25:
+            minb += 1
     i += 1
 print(''.join(result))

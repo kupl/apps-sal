@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 b = []
 ans = 0
@@ -16,6 +16,6 @@ for i in range(n - m + 1):
         if cnt == m * m:
             ans = 1
 if ans == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

@@ -1,10 +1,10 @@
 def main():
-    n, m = input().split(' ')
+    (n, m) = input().split(' ')
     n = int(n)
     m = int(m)
     res = 0
     if n < m:
-        print("-1")
+        print('-1')
     else:
         if n % 2 != 0:
             n -= 1

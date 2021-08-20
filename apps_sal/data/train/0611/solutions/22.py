@@ -8,14 +8,13 @@ while t:
     boo = False
     se = set(a)
     for i in range(len(a)):
-        if (a[i] in se and a[a[i] - 1] in dd):
+        if a[i] in se and a[a[i] - 1] in dd:
             for j in dd[a[a[i] - 1]]:
                 if a[i] != j:
                     boo = True
                     break
         if boo:
             break
-
         dd[a[a[i] - 1]].append(a[i])
     if boo:
         print('Truly Happy')

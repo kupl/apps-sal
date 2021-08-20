@@ -16,20 +16,20 @@ def main():
     def write(*args, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in args) + end)
+        stdout.write(sep.join((str(a) for a in args)) + end)
 
     def write_array(array, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in array) + end)
+        stdout.write(sep.join((str(a) for a in array)) + end)
 
     def prime_sieve(n):
         """returns a sieve of primes >= 5 and < n"""
         flag = n % 6 == 2
         sieve = bytearray((n // 3 + flag >> 3) + 1)
         for i in range(1, int(n ** 0.5) // 3 + 1):
-            if not (sieve[i >> 3] >> (i & 7)) & 1:
-                k = (3 * i + 1) | 1
+            if not sieve[i >> 3] >> (i & 7) & 1:
+                k = 3 * i + 1 | 1
                 for j in range(k * k // 3, n // 3 + flag, 2 * k):
                     sieve[j >> 3] |= 1 << (j & 7)
                 for j in range(k * (k - 2 * (i & 1) + 4) // 3, n // 3 + flag, 2 * k):
@@ -45,12 +45,9 @@ def main():
             res.append(3)
         if n > 4:
             sieve = prime_sieve(n + 1)
-            res.extend(
-                3 * i + 1 | 1 for i in range(1, (n + 1) // 3 + (n % 6 == 1)) if not (sieve[i >> 3] >> (i & 7)) & 1)
+            res.extend((3 * i + 1 | 1 for i in range(1, (n + 1) // 3 + (n % 6 == 1)) if not sieve[i >> 3] >> (i & 7) & 1))
         return res
-
-    primes = prime_list(10**6)
-
+    primes = prime_list(10 ** 6)
     t = read_int()
     for _ in range(t):
         n = read_int()
@@ -67,12 +64,10 @@ def main():
                     options += 1
                     x2 //= p
                 should_have *= options
-
         if should_have != n + 2:
             write(-1)
             continue
-
-        l, r = 0, len(divisors) - 1
+        (l, r) = (0, len(divisors) - 1)
         while l <= r:
             if divisors[l] * divisors[r] != x:
                 write(-1)

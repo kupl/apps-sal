@@ -1,5 +1,4 @@
-n, k, x = list(map(int, input().split()))
-
+(n, k, x) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 
 
@@ -17,13 +16,10 @@ def fl(x, e, c):
                 del s[i]
                 del s[i]
                 break
-
     return len(s)
 
 
 m = 0
-
 for i in range(n):
     m = max(m, n - fl(s, i, x))
-
 print(m)

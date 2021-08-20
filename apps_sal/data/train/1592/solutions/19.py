@@ -5,8 +5,8 @@ for _ in range(int(input())):
         li = [int(i) for i in input().split()]
         li.pop(0)
         if len(li) % 2 == 0:
-            n = (len(li)) // 2
+            n = len(li) // 2
         else:
-            n = (len(li) // 2) + 1
+            n = len(li) // 2 + 1
         sum1 += sum(li[:n])
     print(sum1)

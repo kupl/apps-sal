@@ -6,7 +6,7 @@ m = 1
 count = 0
 for i in range(n):
     for j in range(i, n):
-        if (a[j] - a[i] <= t):
+        if a[j] - a[i] <= t:
             count += 1
     m = max(count, m)
     count = 0

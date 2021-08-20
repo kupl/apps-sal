@@ -18,7 +18,6 @@ def primenum(N, a):
     for i in range(3, N):
         if b[i] == 1 and b[(i + 1) // 2] == 1:
             d[i] = 1
-
     for i in range(1, N):
         c.append(c[i - 1] + d[i - 1])
     return c
@@ -28,7 +27,7 @@ Q = int(input())
 l = [0] * Q
 r = [0] * Q
 for i in range(0, Q):
-    l[i], r[i] = map(int, input().split())
+    (l[i], r[i]) = map(int, input().split())
 c = []
 c = primenum(110000, c)
 for g in range(0, Q):

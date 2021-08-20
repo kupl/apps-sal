@@ -1,6 +1,3 @@
-# array de indices em ordem crescente
-# quantos 2**b precisa para 2**v-1 (soma de sequencia)
-
 import math
 
 
@@ -8,7 +5,6 @@ def main():
     n = int(input())
     a = input().split()
     a = [int(x) for x in a]
-
     p = 0
     carry = 0
     ok = 0

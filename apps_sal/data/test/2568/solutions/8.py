@@ -15,6 +15,6 @@ for _ in range(q):
             pierszyminus[-pref[j]] = j
     wyn = 0
     for i in range(1, n + 1):
-        wyn += (pierszyminus[i] + 1)
+        wyn += pierszyminus[i] + 1
     wyn += n
     print(wyn)

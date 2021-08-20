@@ -11,4 +11,4 @@ i += 1
 while i < N:
     c[i] = str(N - i + A)
     i += 1
-print(" ".join(c))
+print(' '.join(c))

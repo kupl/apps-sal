@@ -5,7 +5,7 @@ def main():
     angles = []
     for i in range(n):
         (x, y) = list(map(float, stdin.readline().strip().split(' ')))
-        angles.append((atan2(y, x) * 180 / pi) % 360)
+        angles.append(atan2(y, x) * 180 / pi % 360)
     angles = sorted(angles)
     m = 0
     for i in range(n - 1):

@@ -1,10 +1,10 @@
-n, size = map(int, input().split())
+(n, size) = map(int, input().split())
 s = input()
 ans = []
 for f in s:
     if ord(f) - ord('a') > ord('z') - ord(f) and ord(f) - ord('a') < size:
         ans.append('a')
-        size -= (ord(f) - ord('a'))
+        size -= ord(f) - ord('a')
     elif ord('z') - ord(f) > ord(f) - ord('a') and ord('z') - ord(f) < size:
         ans.append('z')
         size -= ord('z') - ord(f)

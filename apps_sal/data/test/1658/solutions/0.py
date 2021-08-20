@@ -1,7 +1,9 @@
-# fast io
 from sys import stdin
 _data = iter(stdin.read().split('\n'))
-def input(): return next(_data)
+
+
+def input():
+    return next(_data)
 
 
 N = 101
@@ -11,18 +13,18 @@ MOD = 1000000007
 def mul_vec_mat(v, a):
     c = [0] * N
     for i in range(N):
-        c[i] = sum(a[j][i] * v[j] % MOD for j in range(N)) % MOD
+        c[i] = sum((a[j][i] * v[j] % MOD for j in range(N))) % MOD
     return c
 
 
 def mul_vec_sparse_mat(v, a):
     c = [0] * N
     for i in range(N):
-        c[i] = sum(x * v[j] % MOD for j, x in a[i]) % MOD
+        c[i] = sum((x * v[j] % MOD for (j, x) in a[i])) % MOD
     return c
 
 
-_, x = [int(v) for v in input().split()]
+(_, x) = [int(v) for v in input().split()]
 a = [[0] * N for i in range(N)]
 a[0][0] = 1
 a[N - 1][0] = 1
@@ -52,4 +54,4 @@ for i in range(2, N):
 b = [0] * N
 b[0] = 1
 b[N - 1] = 1
-print(sum(r[N - 1][i] * b[i] % MOD for i in range(N)) % MOD)
+print(sum((r[N - 1][i] * b[i] % MOD for i in range(N))) % MOD)

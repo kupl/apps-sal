@@ -4,7 +4,7 @@ def main():
     pos = [-1] * len(s)
     x = None
     for i in range(len(s)):
-        if s[i] == "L":
+        if s[i] == 'L':
             if x is None:
                 x = i
             pos[i] = x
@@ -12,7 +12,7 @@ def main():
             x = None
     x = None
     for i in reversed(range(len(s))):
-        if s[i] == "R":
+        if s[i] == 'R':
             if x is None:
                 x = i
             pos[i] = x
@@ -22,13 +22,12 @@ def main():
         dist = abs(pos[i] - i)
         if dist % 2 == 0:
             ans[pos[i]] += 1
+        elif s[i] == 'L':
+            ans[pos[i] - 1] += 1
         else:
-            if s[i] == "L":
-                ans[pos[i] - 1] += 1
-            else:
-                ans[pos[i] + 1] += 1
+            ans[pos[i] + 1] += 1
     for v in ans:
-        print(v, end=" ")
+        print(v, end=' ')
 
 
 def __starting_point():

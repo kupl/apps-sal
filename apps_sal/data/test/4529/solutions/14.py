@@ -2,22 +2,22 @@ for _ in range(int(input())):
     n = int(input())
     s = list(input())
     d1 = {}
-    d1[(0, 0)] = [0]
-    x, y = 0, 0
+    d1[0, 0] = [0]
+    (x, y) = (0, 0)
     i = 1
     for c in s:
-        if c == "L":
+        if c == 'L':
             x -= 1
-        if c == "R":
+        if c == 'R':
             x += 1
-        if c == "U":
+        if c == 'U':
             y += 1
-        if c == "D":
+        if c == 'D':
             y -= 1
         if (x, y) in d1:
-            d1[(x, y)].append(i)
+            d1[x, y].append(i)
         else:
-            d1[(x, y)] = [i]
+            d1[x, y] = [i]
         i += 1
     answer = -1
     answer_coord = [0, 0]

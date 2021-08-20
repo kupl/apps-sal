@@ -2,15 +2,16 @@ from collections import defaultdict
 
 
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
-        mp = defaultdict(int)  # key: elem_value, value: number_of_complement_elements
+        mp = defaultdict(int)
         mask = (1 << 16) - 1
         for x in A:
             y = mask ^ x
             s = y
             while s:
                 mp[s] += 1
-                s = (s - 1) & y
+                s = s - 1 & y
         n = len(A)
         cnt = 0
         for i in range(n):

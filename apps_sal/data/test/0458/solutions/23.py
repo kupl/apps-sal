@@ -6,10 +6,10 @@ def sumofdigits(n):
     return ans
 
 
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 ans = []
 for s in range(1, 82):
-    d = b * s**a + c
+    d = b * s ** a + c
     if sumofdigits(d) == s and 0 < d < 1000000000:
         ans.append(d)
 print(len(ans), '\n', ' '.join(map(str, ans)), sep='')

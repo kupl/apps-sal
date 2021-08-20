@@ -1,7 +1,7 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-
         left = 1
         right = (position[-1] - position[0]) // (m - 1)
 
@@ -15,12 +15,10 @@ class Solution:
                     if count == m:
                         return True
             return False
-
         while left < right:
             mid = (left + right + 1) // 2
             if placeable(mid):
                 left = mid
             else:
                 right = mid - 1
-
         return left

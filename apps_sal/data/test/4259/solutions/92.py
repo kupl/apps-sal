@@ -1,5 +1,5 @@
 K = int(input())
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 C = A // K
 D = B // K
 E = A % K

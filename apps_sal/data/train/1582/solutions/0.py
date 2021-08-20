@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 s = [i for i in input()]
 count = 0

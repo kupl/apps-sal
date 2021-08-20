@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.child = [None] * 26
         self.is_leaf = False
@@ -35,8 +36,3 @@ class StreamChecker:
                 return True
             index -= 1
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

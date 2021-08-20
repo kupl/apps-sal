@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         teams_all = list(itertools.combinations(rating, 3))
         valid_teams = []

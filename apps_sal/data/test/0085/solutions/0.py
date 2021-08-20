@@ -1,5 +1,5 @@
-a, b = list(map(int, input().split()))
-c, d = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
 e = a * b
 f = c * d
 n = 0
@@ -12,7 +12,7 @@ while f % 2 == 0:
 while f % 3 == 0:
     f = f // 3
 if e != f:
-    print("-1")
+    print('-1')
 else:
     i = 0
     j = 0

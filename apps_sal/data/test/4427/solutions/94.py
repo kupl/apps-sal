@@ -1,4 +1,4 @@
-r, d, x = list(map(int, input().split()))
+(r, d, x) = list(map(int, input().split()))
 su = 0
 for i in range(10):
     su = r * x - d

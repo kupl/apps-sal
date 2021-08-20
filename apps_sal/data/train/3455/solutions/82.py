@@ -4,5 +4,5 @@ def disarium_number(number):
     for i in str(number):
         n.append(int(i))
     for i in range(len(n)):
-        a += int(n[i])**int(i + 1)
-    return "Disarium !!" if a == number else "Not !!"
+        a += int(n[i]) ** int(i + 1)
+    return 'Disarium !!' if a == number else 'Not !!'

@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
-String = [str(0) for _ in range(N)]  # indexは0からに注意
+(N, M) = map(int, input().split())
+String = [str(0) for _ in range(N)]
 flag = 1
 for _ in range(M):
-    s, c = map(int, input().split())
+    (s, c) = map(int, input().split())
     if c != String[s - 1] and String[s - 1] != str(0):
         flag = 0
     String[s - 1] = c

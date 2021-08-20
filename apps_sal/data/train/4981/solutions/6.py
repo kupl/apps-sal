@@ -3,7 +3,7 @@ import math
 
 def predict(candidates, polls):
     t = {}
-    for i, j in enumerate(candidates):
+    for (i, j) in enumerate(candidates):
         m = 0
         n = 0
         for z in polls:

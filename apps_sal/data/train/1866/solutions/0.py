@@ -1,10 +1,12 @@
 class Solution:
+
     def fullJustify(self, words, maxWidth):
         """
         :type words: List[str]
         :type maxWidth: int
         :rtype: List[str]
         """
+
         def make_str(buffer, length, last):
             if last:
                 return ' '.join(buffer) + ' ' * (maxWidth - length)
@@ -18,10 +20,9 @@ class Solution:
                 for i in range(space % cnt):
                     spaces[i] += 1
                 spaces.append(0)
-                for s, b in zip(spaces, buffer):
+                for (s, b) in zip(spaces, buffer):
                     tmp += b + ' ' * s
             return tmp
-
         res = []
         buffer = []
         length = 0
@@ -43,5 +44,4 @@ class Solution:
         if len(buffer) > 0:
             tmp = make_str(buffer, length, True)
             res.append(tmp)
-
         return res

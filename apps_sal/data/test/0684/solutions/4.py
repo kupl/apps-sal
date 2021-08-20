@@ -21,15 +21,11 @@ def rlinput():
 
 def YES(flag):
     if flag:
-        return "YES"
-    return "NO"
+        return 'YES'
+    return 'NO'
 
 
 def main():
-    #n = int(sys.stdin.readline().strip())
-    # n = iinput()
-    # n, k = rinput()
-    # n, m, k = rinput()
     q = rlinput()
     print(q[1], q[2], q[2])
 

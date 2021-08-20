@@ -1,6 +1,6 @@
 q = int(input())
 q -= 1
-a, s = list(map(int, input().split()))
+(a, s) = list(map(int, input().split()))
 if s == 1:
     z = 1900
     x = 9000000000
@@ -10,7 +10,7 @@ else:
 z += a
 x += a
 for j in range(0, q):
-    a, s = list(map(int, input().split()))
+    (a, s) = list(map(int, input().split()))
     if s == 1:
         z = max(1900, z)
     else:

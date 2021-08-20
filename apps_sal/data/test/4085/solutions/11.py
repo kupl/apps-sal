@@ -45,7 +45,7 @@ for i in range(t):
             if z == 0:
                 d = u * 2 - 2
             else:
-                d = (u // (z + 1)) * (z + 2) - 2
+                d = u // (z + 1) * (z + 2) - 2
             if d == n:
                 print(y)
             else:

@@ -1,5 +1,4 @@
-n, l = map(int, input().split())
-
+(n, l) = map(int, input().split())
 apple = []
 diff = 1001001001
 minus = False
@@ -11,7 +10,6 @@ for i in range(1, n + 1):
             minus = True
         else:
             minus = False
-
 if minus:
     print(sum(apple) + diff)
 else:

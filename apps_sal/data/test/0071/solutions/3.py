@@ -35,11 +35,11 @@ def sv(N, M, K, X, Y):
         gd = [[rounds] * M]
         for m in range(rem):
             gd[0][m] += 1
-    a1 = max(max(x) for x in gd)
-    a2 = min(min(x) for x in gd)
+    a1 = max((max(x) for x in gd))
+    a2 = min((min(x) for x in gd))
     a3 = gd[X][Y]
     print(a1, a2, a3)
 
 
-N, M, K, X, Y = list(map(int, input().split()))
+(N, M, K, X, Y) = list(map(int, input().split()))
 sv(N, M, K, X, Y)

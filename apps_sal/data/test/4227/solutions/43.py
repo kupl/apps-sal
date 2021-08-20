@@ -1,8 +1,8 @@
 import itertools
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 num = [[] for _ in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     num[a - 1].append(b)
     num[b - 1].append(a)
 cnt = list(itertools.permutations(list(range(2, n + 1))))

@@ -5,19 +5,15 @@ def ii():
     return list(map(int, input().split()))
 
 
-maxv = int(2e5) + 1
-n, k = ii()
+maxv = int(200000.0) + 1
+(n, k) = ii()
 cnt = defaultdict(int)
-
 for a in ii():
     cnt[a] += 1
-
 for i in range(maxv, -1, -1):
     cnt[i] += cnt[i + 1]
-
-cur, ans = 0, 0
+(cur, ans) = (0, 0)
 i = maxv
-
 while True:
     if cnt[i] == n:
         if cur:
@@ -28,5 +24,4 @@ while True:
         cur = 0
     cur += cnt[i]
     i -= 1
-
 print(ans)

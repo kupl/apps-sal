@@ -1,5 +1,4 @@
-H, W = list(map(int, input().split()))
-
+(H, W) = list(map(int, input().split()))
 for h in range(H):
     C = input()
     print(C)

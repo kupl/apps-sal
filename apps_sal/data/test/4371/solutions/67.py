@@ -9,4 +9,4 @@ def answer(s: str) -> int:
     return answer
 
 
-print((answer(s)))
+print(answer(s))

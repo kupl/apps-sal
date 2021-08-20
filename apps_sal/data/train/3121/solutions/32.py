@@ -5,7 +5,6 @@ def solve(arr):
         for j in range(len(arr)):
             if arr[i] == -arr[j]:
                 pair = True
-        if (not pair):
+        if not pair:
             result = arr[i]
-
     return result

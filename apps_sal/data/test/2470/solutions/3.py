@@ -2,15 +2,14 @@ import numpy as np
 
 
 class Solution:
+
     def makeArrayIncreasing(self, arr1: List[int], arr2: List[int]) -> int:
         m = len(arr1)
         arr2 = sorted(np.unique(arr2))
         n = len(arr2)
-
         keep = [float('inf')] * m
         keep[0] = 0
         swap = [1] * n
-
         for i in range(1, m):
             min_keep = float('inf')
             min_swap = float('inf')
@@ -27,8 +26,7 @@ class Solution:
                 temp[j] = min(temp[j], min_swap)
                 keep[i] = min(keep[i], min_keep)
             for j in range(n):
-                temp[j], swap[j] = swap[j], temp[j]
-
+                (temp[j], swap[j]) = (swap[j], temp[j])
         s = min(swap)
         k = keep[-1]
         ans = min(s, k)

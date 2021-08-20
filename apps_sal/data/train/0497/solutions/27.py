@@ -1,4 +1,5 @@
 class JOB:
+
     def __init__(self, start, end, profit):
         self.start = start
         self.end = end
@@ -6,10 +7,11 @@ class JOB:
 
 
 class Solution:
+
     def binsearch(self, job, start_index):
         lo = 0
         hi = start_index - 1
-        while(lo <= hi):
+        while lo <= hi:
             mid = lo + (hi - lo) // 2
             if job[mid].end <= job[start_index].start:
                 if job[mid + 1].end <= job[start_index].start:

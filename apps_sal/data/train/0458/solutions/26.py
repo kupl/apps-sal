@@ -1,16 +1,15 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         min_l = float('inf')
         accu = 0
         c = sum(nums) % p
         dic = {}
-        # print(c)
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             accu += num
             ci = accu % p
             dic[ci] = i
             t = (ci - c) % p
-            # print(ci, t, dic)
             if t in dic:
                 min_l = min(min_l, i - dic[t])
             if i != len(nums) - 1 and ci == c:

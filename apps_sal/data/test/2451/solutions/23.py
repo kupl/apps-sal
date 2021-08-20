@@ -1,6 +1,6 @@
-n, h, a, b, k = list(map(int, input().split()))
+(n, h, a, b, k) = list(map(int, input().split()))
 for i in range(k):
-    ta, fa, tb, fb = list(map(int, input().split()))
+    (ta, fa, tb, fb) = list(map(int, input().split()))
     if ta == tb:
         print(abs(fa - fb))
     elif a <= fa <= b:

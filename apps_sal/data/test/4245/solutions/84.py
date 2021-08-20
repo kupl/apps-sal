@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 cnt = 1
 ans = 0
 while cnt < B:

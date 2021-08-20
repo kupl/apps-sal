@@ -1,7 +1,7 @@
-'''
+"""
 codeforces.com/problemset/problem/859/C
 author: latesum
-'''
+"""
 n = int(input())
 v = list(map(int, input().split()))
 v.reverse()

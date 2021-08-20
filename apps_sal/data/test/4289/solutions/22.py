@@ -1,5 +1,5 @@
 n = int(input())
-t, a = map(float, input().split())
+(t, a) = map(float, input().split())
 h = list(map(float, input().split()))
 best = 10 ** 5
 ans = -1

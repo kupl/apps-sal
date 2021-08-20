@@ -10,8 +10,8 @@ for i in range(n):
         fails = 1
     else:
         k += 1
-        fails += (a[i] < 0)
+        fails += a[i] < 0
 if sum(ans) < n:
     ans.append(k)
 print(len(ans))
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

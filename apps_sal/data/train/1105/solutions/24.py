@@ -3,7 +3,6 @@ d = []
 for i in range(t):
     n = int(input())
     d.append(list(map(int, input().split())))
-
 output = []
 for arr in d:
     arr.sort(reverse=True)
@@ -24,6 +23,5 @@ for arr in d:
             arr[i] -= t
             t = 0
     output.append(time)
-
 for i in output:
     print(i)

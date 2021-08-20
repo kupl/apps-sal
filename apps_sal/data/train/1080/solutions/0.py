@@ -1,10 +1,9 @@
 def res(s):
     if len(s) == 2:
         if s[0] == s[1]:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
-
+            print('YES')
     elif s[0] != s[1]:
         counte = 0
         for i in range(2, len(s)):
@@ -12,17 +11,15 @@ def res(s):
                 if s[i] != s[0]:
                     counte = 1
                     break
-            else:
-                if s[i] != s[1]:
-                    counte = 1
-                    break
-
+            elif s[i] != s[1]:
+                counte = 1
+                break
         if counte == 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

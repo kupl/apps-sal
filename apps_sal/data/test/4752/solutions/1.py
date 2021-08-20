@@ -1,4 +1,5 @@
 class Solution:
+
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -6,15 +7,14 @@ class Solution:
         :rtype: List[int]
         """
         d = {}
-        for i, num in enumerate(nums):
-            if (target - num) in d:
+        for (i, num) in enumerate(nums):
+            if target - num in d:
                 return [d[target - num], i]
             d[num] = i
-
         new = sorted(nums)
-        i, j = 0, -1
+        (i, j) = (0, -1)
         for num in new:
-            a, b = new[i], new[j]
+            (a, b) = (new[i], new[j])
             if a + b > target:
                 j = j - 1
             elif a + b < target:
@@ -27,4 +27,4 @@ class Solution:
                     nums.remove(a)
                     n = nums.index(b)
                     ans = [m, n + 1]
-                return (ans)
+                return ans

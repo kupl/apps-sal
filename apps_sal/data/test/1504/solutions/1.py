@@ -5,9 +5,9 @@ def inter(l1, r1, l2, r2):
 
 
 def solve():
-    n, k = map(int, input().split())
-    al, ar = map(int, input().split())
-    bl, br = map(int, input().split())
+    (n, k) = map(int, input().split())
+    (al, ar) = map(int, input().split())
+    (bl, br) = map(int, input().split())
     res = inter(al, ar, bl, br) * n
     goodt = max(ar, br) - min(al, bl) - inter(al, ar, bl, br)
     minhodi = 1000000000000

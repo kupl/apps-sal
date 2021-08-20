@@ -2,7 +2,7 @@ from math import ceil
 
 
 def union_jack(n):
-    if not isinstance(n, int) and not isinstance(n, float):
+    if not isinstance(n, int) and (not isinstance(n, float)):
         return False
     n = max(7, ceil(n))
     data = [['-'] * n for _ in range(n)]
@@ -14,4 +14,4 @@ def union_jack(n):
         data[cr] = ['X'] * n
         for y in range(n):
             data[y][cr] = 'X'
-    return '\n'.join(''.join(d) for d in data)
+    return '\n'.join((''.join(d) for d in data))

@@ -1,4 +1,4 @@
-n, m, x, y = list(map(int, input().split()))
+(n, m, x, y) = list(map(int, input().split()))
 print(x, y)
 print(1, y)
 for i in range(1, m + 1):

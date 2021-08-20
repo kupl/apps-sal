@@ -17,7 +17,7 @@ def main():
             heapq.heappushpop(fl, A[N + i])
         f.append(s)
         s = l[-1]
-        if - A[2 * N - 1 - i] > ll[0]:
+        if -A[2 * N - 1 - i] > ll[0]:
             s = s + ll[0] + A[2 * N - 1 - i]
             heapq.heappushpop(ll, -A[2 * N - 1 - i])
         l.append(s)
@@ -27,4 +27,4 @@ def main():
     return r
 
 
-print((main()))
+print(main())

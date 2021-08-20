@@ -4,9 +4,9 @@ from collections import deque
 def dbl_linear(n):
     h = 1
     cnt = 0
-    q2, q3 = deque([]), deque([])
+    (q2, q3) = (deque([]), deque([]))
     while True:
-        if (cnt >= n):
+        if cnt >= n:
             return h
         q2.append(2 * h + 1)
         q3.append(3 * h + 1)

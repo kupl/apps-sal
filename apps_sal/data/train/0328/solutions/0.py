@@ -1,4 +1,5 @@
 class Solution:
+
     def find132pattern(self, nums):
         """
         :type nums: List[int]
@@ -22,7 +23,6 @@ class Solution:
 
         return False
         """
-
         if len(nums) < 3:
             return False
         stack = [[nums[0], nums[0]]]

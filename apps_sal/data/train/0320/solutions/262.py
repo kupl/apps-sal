@@ -1,11 +1,11 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         steps = 0
         nums = sorted(nums)
         j = -1
-        while(j < len(nums) - 1):  # not every elements are 0
-            s = j + 1  # calculate steps for next non_zero item
+        while j < len(nums) - 1:
+            s = j + 1
             while s < len(nums):
                 if nums[s] == 0:
                     j += 1
@@ -21,5 +21,4 @@ class Solution:
                     nums[s] //= 2
                 s += 1
             steps += 1
-
         return steps - 1

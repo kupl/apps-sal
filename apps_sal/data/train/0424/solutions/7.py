@@ -1,6 +1,7 @@
 class Solution:
+
     def largestOverlap(self, A: List[List[int]], B: List[List[int]]) -> int:
-        counts, best = {}, 0
+        (counts, best) = ({}, 0)
         size = len(A[0])
         for x1 in range(size):
             for y1 in range(size):

@@ -1,6 +1,5 @@
 import re
-
-pattern = re.compile(r"(Ha)+|(ha)+")
+pattern = re.compile('(Ha)+|(ha)+')
 
 
 def kooka_counter(laughing):

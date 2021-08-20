@@ -11,7 +11,7 @@ def main():
         x += a[i]
         y += a[n - i - 1]
         i += 1
-    if (n % 2):
+    if n % 2:
         x += a[i]
     print(x * x + y * y)
 

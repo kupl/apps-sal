@@ -2,7 +2,7 @@ from collections import deque
 n = int(input())
 uv = [[] for _ in range(n + 1)]
 for i in range(n - 1):
-    u, v, w = list(map(int, input().split()))
+    (u, v, w) = list(map(int, input().split()))
     uv[u].append([v, w])
     uv[v].append([u, w])
 stack = [1]
@@ -17,6 +17,5 @@ while stack:
             else:
                 ans[j[0]] = (ans[x] + 1) % 2
             stack.append(j[0])
-
 for k in range(1, n + 1):
-    print((ans[k]))
+    print(ans[k])

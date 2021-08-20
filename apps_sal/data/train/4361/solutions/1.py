@@ -7,7 +7,7 @@ def is_per(n):
 
 
 def next_perfectsq_perm(lower_limit, k):
-    perfect = [i**2 for i in range(2000) if '0' not in str(i**2) if i**2 > lower_limit]
+    perfect = [i ** 2 for i in range(2000) if '0' not in str(i ** 2) if i ** 2 > lower_limit]
     for i in perfect:
         if i > lower_limit:
             num = set()

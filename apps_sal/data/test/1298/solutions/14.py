@@ -1,4 +1,3 @@
-
 def main():
     input()
     s = input()
@@ -9,7 +8,6 @@ def main():
             one += 1
         else:
             zero += 1
-
     print(abs(one - zero))
 
 

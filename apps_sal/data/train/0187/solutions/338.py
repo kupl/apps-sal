@@ -1,6 +1,6 @@
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         waiting = 0
         rotations = 0
@@ -13,42 +13,34 @@ class Solution:
             if gondola_customers:
                 coming_down = gondola_customers.popleft()
                 onboard -= coming_down
-
             total = arrival
             if waiting > 0:
                 total = waiting + arrival
-
-            # if onboard == 0 and total == 0:
-            #    continue
-
             if total <= 4:
-                profit += ((total * boardingCost) - runningCost)
+                profit += total * boardingCost - runningCost
                 onboard += total
                 gondola_customers.append(total)
                 waiting = max(0, waiting - total)
             else:
-                profit += ((4 * boardingCost) - runningCost)
+                profit += 4 * boardingCost - runningCost
                 onboard += 4
                 gondola_customers.append(4)
-                waiting += (arrival - 4)
-
+                waiting += arrival - 4
             rotations += 1
             if profit > maxprofit:
                 maxprofit = profit
                 max_rotation = rotations
         print((maxprofit, max_rotation, waiting))
-        profit += ((waiting // 4) * ((4 * boardingCost) - runningCost))
-        rotations += (waiting // 4)
+        profit += waiting // 4 * (4 * boardingCost - runningCost)
+        rotations += waiting // 4
         if profit > maxprofit:
             maxprofit = profit
             max_rotation = rotations
         print((maxprofit, max_rotation, waiting % 4))
-
-        profit += (((waiting % 4) * boardingCost) - runningCost)
-        rotations += ((waiting % 4) > 0)
+        profit += waiting % 4 * boardingCost - runningCost
+        rotations += waiting % 4 > 0
         if profit > maxprofit:
             maxprofit = profit
             max_rotation = rotations
         print((maxprofit, max_rotation))
-
         return max_rotation if maxprofit > 0 else -1

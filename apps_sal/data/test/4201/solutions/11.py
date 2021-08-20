@@ -1,10 +1,9 @@
 import itertools
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 c = []
 ans = 0
 for i in range(h):
     c.append(list(input()))
-
 for i in range(2 ** h - 1):
     c2 = []
     x = str(bin(i))[2:].zfill(h)

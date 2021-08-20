@@ -1,12 +1,15 @@
 import heapq
 import math
-
 import sys
 input = sys.stdin.readline
 
 
-def li(): return [int(i) for i in input().rstrip('\n').split()]
-def value(): return int(input())
+def li():
+    return [int(i) for i in input().rstrip('\n').split()]
+
+
+def value():
+    return int(input())
 
 
 def typ(a):
@@ -32,6 +35,6 @@ for _ in range(int(input())):
     if currline == 0:
         ans = 0
     if ans:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -6,5 +6,5 @@ def graceful_tipping(bill):
     if bill < 10:
         return ceil(bill)
     e = int(log10(bill))
-    unit = (10 ** e) / 2
+    unit = 10 ** e / 2
     return ceil(bill / unit) * unit

@@ -1,19 +1,23 @@
-# coding: utf-8
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-# しゃくとり法
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
 N = ir()
 A = lr()
 answer = 0
 left = 0
 right = 0
-
 temp = A[left]
 while left < N:
     while right < N - 1:
@@ -26,5 +30,4 @@ while left < N:
     answer += right - left + 1
     temp -= A[left]
     left += 1
-
 print(answer)

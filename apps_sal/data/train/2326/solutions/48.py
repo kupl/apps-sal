@@ -18,7 +18,6 @@ def getList():
     return list(map(int, input().split()))
 
 
-# sys.setrecursionlimit(1000000)
 INF = 10 ** 17
 MOD = 10 ** 9 + 7
 
@@ -43,7 +42,6 @@ def getyaku(n):
         if n % i == 0:
             ret.append(i)
             ret.append(n // i)
-
     return ret
 
 
@@ -60,18 +58,16 @@ def find(x, a):
 def main():
     n = getN()
     nums = getList()
-    nums = [(x, i + 1) for i, x in enumerate(nums)]
+    nums = [(x, i + 1) for (i, x) in enumerate(nums)]
     nums.append((0, INF))
     nums.sort(key=lambda x: -x[0] * INF + x[1])
-    # print(nums)
     mx = INF
     ans = [0 for i in range(n + 1)]
     tmp_tgt = INF
     through = 0
-    for a, b in nums:
+    for (a, b) in nums:
         if a != mx:
             diff = mx - a
-
             if mx != INF:
                 ans[tmp_tgt] += through * diff
             mx = a

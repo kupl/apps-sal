@@ -1,4 +1,3 @@
-# ABC 164 C
 N = int(input())
 dic = {}
 for i in range(N):

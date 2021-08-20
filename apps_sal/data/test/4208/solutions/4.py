@@ -54,14 +54,13 @@ while i < 27 or j < 27:
         i += 1
     elif j < 27 and len(r[j]) == 0:
         j += 1
+    elif i == j or i == 26 or j == 26:
+        best += 1
+        res[rp] = (l[i].pop() + 1, r[j].pop() + 1)
+        rp += 1
     else:
-        if i == j or i == 26 or j == 26:
-            best += 1
-            res[rp] = (l[i].pop() + 1, r[j].pop() + 1)
-            rp += 1
-        else:
-            l[i].pop() + 1
-            r[j].pop() + 1
+        l[i].pop() + 1
+        r[j].pop() + 1
 print(best)
 for i in range(rp):
     print(*res[i])

@@ -28,14 +28,14 @@ n = int(input())
 for i in range(n):
     p = int(input())
     prices = list(map(int, input().split()))
-    x, a = map(int, input().split())
-    y, b = map(int, input().split())
+    (x, a) = map(int, input().split())
+    (y, b) = map(int, input().split())
     prices.sort()
     k = int(input())
     L = 0
     R = p
     if y > x:
-        x, a, y, b = y, b, x, a
+        (x, a, y, b) = (y, b, x, a)
     while R - L > 1:
         m = (R + L) // 2
         if check(m, a, b, prices.copy(), k, x, y):

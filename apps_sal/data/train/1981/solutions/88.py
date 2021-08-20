@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSumRangeQuery(self, a: List[int], r: List[List[int]]) -> int:
         r1 = []
-        for s, e in r:
+        for (s, e) in r:
             r1.extend([(s, 1), (e, -1)])
         r = r1
         r.sort(reverse=True)
@@ -21,5 +22,4 @@ class Solution:
             op -= cl
         cnt.sort()
         a.sort()
-        # print(cnt, a)
-        return sum(x * y for x, y in zip(cnt, a)) % (10**9 + 7)
+        return sum((x * y for (x, y) in zip(cnt, a))) % (10 ** 9 + 7)

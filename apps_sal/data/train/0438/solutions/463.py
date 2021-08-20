@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         size = {i: 1 for i in range(n)}
@@ -17,10 +18,9 @@ class Solution:
             if i != dp[i]:
                 dp[i] = find(dp[i])
             return dp[i]
-
         curr = [0] * n
         size_count = [0] * (n + 1)
-        for k, i in enumerate([x - 1 for x in arr]):
+        for (k, i) in enumerate([x - 1 for x in arr]):
             curr[i] = 1
             size_count[1] += 1
             if i < n - 1 and curr[i + 1]:
@@ -29,5 +29,4 @@ class Solution:
                 union(i, i - 1)
             if size_count[m] > 0:
                 res = k + 1
-
         return res

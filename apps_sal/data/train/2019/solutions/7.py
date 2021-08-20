@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 a = [int(x) for x in input().split()]
 a.sort(reverse=True)
@@ -13,7 +12,7 @@ while low < high:
         if t >= a[i]:
             t = mid
             break
-        t += (mid - a[i])
+        t += mid - a[i]
         i += 1
     if t >= mid:
         high = mid

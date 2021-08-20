@@ -1,4 +1,4 @@
-n, c = (int(i) for i in input().split())
+(n, c) = (int(i) for i in input().split())
 l = list(map(int, input().split()))
 ans = 1
 for i in range(1, n):

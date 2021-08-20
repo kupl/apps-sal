@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = set(map(int, input().split()))
-
 y = 2 ** n
 mk = [0] * (2 * y)
 cur = 0
@@ -26,5 +25,4 @@ for x in a:
             if v in a:
                 push(v)
     cur += 1
-
 print(cur)

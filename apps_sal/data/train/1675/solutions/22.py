@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     TC = int(input())
     for _ in range(TC):
@@ -6,7 +5,7 @@ def __starting_point():
         N = int(input())
         arr = []
         for _ in range(N):
-            x, y = list(map(int, input().strip().split()))
+            (x, y) = list(map(int, input().strip().split()))
             arr.append((x, y))
         arr.sort(key=lambda a: (a[0], a[1] * -1))
         dist = 0
@@ -17,8 +16,7 @@ def __starting_point():
             y2 = arr[i - 1][1]
             d = ((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)) ** 0.5
             dist += d
-
-        print("{:0.2f}".format(dist))
+        print('{:0.2f}'.format(dist))
 
 
 __starting_point()

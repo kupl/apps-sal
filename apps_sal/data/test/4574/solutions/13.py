@@ -1,8 +1,6 @@
 import sys
-
 N = int(input())
 A = list(map(int, input().split()))
-
 d = {}
 a = []
 for i in A:
@@ -13,7 +11,6 @@ for i in A:
             d[i] = 0
     else:
         d[i] = 1
-
 a.sort()
 if len(a) < 2:
     print(0)

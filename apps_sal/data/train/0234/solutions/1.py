@@ -1,6 +1,7 @@
 class Solution:
+
     def minAddToMakeValid(self, S: str) -> int:
-        res, need = 0, 0
+        (res, need) = (0, 0)
         for i in range(len(S)):
             if S[i] == '(':
                 need += 1

@@ -1,16 +1,14 @@
-INF = int(1e18)
+INF = int(1e+18)
 
 
 def read_int():
     return list(map(int, input().split()))
 
 
-n, l = read_int()
+(n, l) = read_int()
 costs = read_int()
-
-bottles = [(1 << i, c) for i, c in enumerate(costs)]
+bottles = [(1 << i, c) for (i, c) in enumerate(costs)]
 bottles.sort(key=lambda b: (b[1] / b[0], 1 / b[1]))
-
 min_cost = dict()
 
 

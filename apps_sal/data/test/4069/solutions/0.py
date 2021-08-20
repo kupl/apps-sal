@@ -1,4 +1,4 @@
-x, k, d = map(int, input().split())
+(x, k, d) = map(int, input().split())
 if x < 0:
     x *= -1
 cnt = min(k, x // d + 1)

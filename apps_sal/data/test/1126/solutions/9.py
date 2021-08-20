@@ -1,13 +1,5 @@
 import sys
-
-# import numpy as np
-# from numba import njit
-#
-# read = sys.stdin.read
 readline = sys.stdin.readline
-
-
-# readlines = sys.stdin.readlines
 
 
 def solve(n, x, m):
@@ -25,15 +17,13 @@ def solve(n, x, m):
         else:
             a.append(ai)
             a_set.add(ai)
-
     if n - 1 <= lall:
         ans = sum(a[:n])
     else:
-        q, r = divmod(n - lall, lloop)
+        (q, r) = divmod(n - lall, lloop)
         ans = sum(a) + sum(loop) * q + sum(loop[:r])
-
     return ans
 
 
-n, x, m = map(int, readline().split())
+(n, x, m) = map(int, readline().split())
 print(solve(n, x, m))

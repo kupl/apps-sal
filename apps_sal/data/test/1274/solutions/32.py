@@ -1,9 +1,9 @@
 def resolve():
     import heapq
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ab = [list(map(int, input().split())) for _ in range(n)]
-    b = [[] for _ in range(10**5 + 1)]
-    for i, j in ab:
+    b = [[] for _ in range(10 ** 5 + 1)]
+    for (i, j) in ab:
         b[i].append(-j)
     q = []
     ans = 0

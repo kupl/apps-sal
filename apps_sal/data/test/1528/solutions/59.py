@@ -1,5 +1,5 @@
 def solve():
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = [1]
     nu = [1]
     for i in range(n):
@@ -17,8 +17,7 @@ def solve():
         elif hl // 2 + 1 <= b:
             return nu[a - 1] + 1 + chris(a - 1, b - (hl // 2 + 1))
         return chris(a - 1, b - 1)
-
-    print((chris(n, x)))
+    print(chris(n, x))
 
 
 solve()

@@ -9,6 +9,6 @@ for i in range(n):
         cnt += b[i]
         a[i + 1] = a[i + 1] - (b[i] - a[i])
     else:
-        cnt += (a[i] + a[i + 1])
+        cnt += a[i] + a[i + 1]
         a[i + 1] = 0
 print(cnt)

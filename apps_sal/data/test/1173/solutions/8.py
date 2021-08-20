@@ -16,9 +16,8 @@ while flag:
     visited = [False for i in range(n)]
     sub = False
     for i in range(n):
-        # nowリストのうち日ありからi+1番目のものについての一致条件の確認
         K = now[i]
-        if now[K - 1] == i + 1 and not(visited[i] or visited[K - 1]) and not(finished[i] or finished[K - 1]):
+        if now[K - 1] == i + 1 and (not (visited[i] or visited[K - 1])) and (not (finished[i] or finished[K - 1])):
             visited[i] = True
             visited[K - 1] = True
             index[i] += 1
@@ -45,6 +44,6 @@ if judge:
     print(ans)
 else:
     if not semi:
-        print((-1))
+        print(-1)
     if semi:
-        print((499500))
+        print(499500)

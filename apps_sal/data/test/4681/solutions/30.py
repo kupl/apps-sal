@@ -1,5 +1,4 @@
 N = int(input())
-
 L = [2, 1]
 if N < 2:
     print(L[N])

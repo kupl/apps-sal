@@ -2,4 +2,4 @@ import re
 
 
 def debug(s):
-    return re.sub(r'bug(?!s)', '', s)
+    return re.sub('bug(?!s)', '', s)

@@ -1,5 +1,4 @@
 import queue
-
 N = int(input())
 
 
@@ -18,7 +17,6 @@ def common_divisors(n):
 
 ans = 0
 ans += len(common_divisors(N - 1)) - 1
-
 for i in common_divisors(N):
     if i == 1:
         continue

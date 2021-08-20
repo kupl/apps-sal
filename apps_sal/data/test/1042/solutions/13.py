@@ -1,8 +1,7 @@
-
-modulo = 10**9 + 7
-num1, num2 = list(map(int, input().split()))
+modulo = 10 ** 9 + 7
+(num1, num2) = list(map(int, input().split()))
 if num2 % num1:
-    print("0")
+    print('0')
 else:
     num2 = num2 // num1
     arr = set()
@@ -11,7 +10,7 @@ else:
             arr.add(i)
             arr.add(num2 // i)
     arr = sorted(list(arr))
-    cop2 = arr[::]
+    cop2 = arr[:]
     for i in range(len(cop2)):
         cop2[i] = pow(2, arr[i] - 1, modulo)
         for j in range(i):

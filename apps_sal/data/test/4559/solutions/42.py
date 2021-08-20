@@ -7,7 +7,7 @@ if a[0] == 0:
 else:
     for i in a:
         p *= i
-        if p > 10**18:
+        if p > 10 ** 18:
             ans = -1
             break
         ans = p

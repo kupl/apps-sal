@@ -1,6 +1,6 @@
 b = input()
-le = ("abcdefghijklmnopqrstuvwxyz")
+le = 'abcdefghijklmnopqrstuvwxyz'
 if b in le:
-    print("a")
+    print('a')
 else:
-    print("A")
+    print('A')

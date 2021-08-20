@@ -1,9 +1,9 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         n = len(A)
         if n < 1:
             return 0
-
         result = 0
         fc = Counter()
         c = Counter()
@@ -19,7 +19,6 @@ class Solution:
                     break
                 c[A[r]] += 1
                 r += 1
-            #print(c, l, fr, r)
             if len(c) == K:
                 result += r - fr + 1
             fc[A[l]] -= 1
@@ -30,5 +29,4 @@ class Solution:
                 del c[A[l]]
             l += 1
             print('c', l, r)
-
         return result

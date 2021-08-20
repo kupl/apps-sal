@@ -1,4 +1,4 @@
-def super_pad(string, width, fill=" "):
+def super_pad(string, width, fill=' '):
     if width == 0:
         return ''
     diff = width - len(string)
@@ -18,17 +18,16 @@ def super_pad(string, width, fill=" "):
                 return string + (f * width)[:width - len(string)]
         else:
             return (f * width)[:width - len(string)] + string
+    elif f[0] == '<':
+        f = fill[1:]
+        return string[len(string) - width:]
+    elif f[0] == '^':
+        f = fill[1:]
+        a = abs(width - len(string)) // 2
+        b = abs(width - len(string)) - a
+        return string[:a] + string[:-b]
+    elif f[0] == '>':
+        f = fill[1:]
+        return string[:width - len(string)]
     else:
-        if f[0] == '<':
-            f = fill[1:]
-            return string[len(string) - width:]
-        elif f[0] == '^':
-            f = fill[1:]
-            a = abs(width - len(string)) // 2
-            b = abs(width - len(string)) - a
-            return string[:a] + string[:-b]
-        elif f[0] == '>':
-            f = fill[1:]
-            return string[:width - len(string)]
-        else:
-            return string[len(string) - width:]
+        return string[len(string) - width:]

@@ -1,7 +1,6 @@
-class Graph():
+class Graph:
 
     def __init__(self, vertices_num):
-        # number of nodes (integer)
         self.v = vertices_num
 
     def sort_adj_list(self, lst):
@@ -12,13 +11,12 @@ class Graph():
 
     def adjmat_2_graph(self, adjm):
         if len(adjm) != self.v:
-            return "Dimension error"
-        # list of nodes from "A0", "A1" ... to "A index (vertices_num - 1)"
+            return 'Dimension error'
         nodes = ['A' + str(i) for i in range(0, self.v)]
         graph = {}
-        for n, v in enumerate(nodes):
+        for (n, v) in enumerate(nodes):
             voisin = []
-            for i, dist in enumerate(adjm[n]):
+            for (i, dist) in enumerate(adjm[n]):
                 if dist != 0:
                     voisin.append((nodes[i], dist))
             graph[v] = voisin
@@ -31,7 +29,7 @@ class Graph():
         for node in nodes:
             L = [0] * len(nodes)
             parcours = graph[node]
-            for voisin, dist in parcours:
+            for (voisin, dist) in parcours:
                 L[nodes.index(voisin)] = dist
             adjm.append(L)
         return adjm
@@ -42,7 +40,7 @@ class Graph():
 
     def list_2_graph(self, lst):
         if len(lst) != self.v:
-            return "Dimension error"
+            return 'Dimension error'
         dct = {}
         for l in lst:
             dct[l[0]] = l[1]
@@ -50,12 +48,12 @@ class Graph():
 
     def mat_2_list(self, mat):
         if len(mat) != self.v:
-            return "Dimension error"
+            return 'Dimension error'
         return self.graph_2_list(self.adjmat_2_graph(mat))
 
     def list_2_mat(self, lst):
         if len(lst) != self.v:
-            return "Dimension error"
+            return 'Dimension error'
         return self.graph_2_mat(self.list_2_graph(lst))
 
     def find_all_paths_aux(self, start, end, path=[]):
@@ -76,5 +74,5 @@ class Graph():
     def find_all_paths(self, graph, start, end):
         self.graph = graph
         paths = self.find_all_paths_aux(start, end)
-        paths = list(["-".join(x) for x in paths])
+        paths = list(['-'.join(x) for x in paths])
         return sorted(sorted(paths, key=str), key=len)

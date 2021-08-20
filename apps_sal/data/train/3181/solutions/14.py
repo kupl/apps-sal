@@ -1,1 +1,1 @@
-check_alive = 0..__lt__
+check_alive = 0.0.__lt__

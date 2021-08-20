@@ -4,9 +4,9 @@ def packets(it, n):
 
 
 def encode(string):
-    return ''.join(x * 3 for c in string for x in f"{ord(c):08b}")
+    return ''.join((x * 3 for c in string for x in f'{ord(c):08b}'))
 
 
 def decode(bits):
-    tmp = ''.join(s[0] if s[0] in s[1:] else s[1] for s in packets(bits, 3))
-    return ''.join(chr(int(x, 2)) for x in packets(tmp, 8))
+    tmp = ''.join((s[0] if s[0] in s[1:] else s[1] for s in packets(bits, 3)))
+    return ''.join((chr(int(x, 2)) for x in packets(tmp, 8)))

@@ -1,4 +1,4 @@
-class dsu():
+class dsu:
     """Data structures and algorithms for disjoint set union problems.
 
     Given an undirected graph, it processes the following queries in O(alpha(n)) time (amortized).
@@ -11,8 +11,7 @@ class dsu():
 
     When two connected components are merged by edge addition, one of the two representatives of these connected components becomes the representative of the new connected component.
     """
-
-    __slots__ = ["_n", "parent_or_size"]
+    __slots__ = ['_n', 'parent_or_size']
 
     def __init__(self, n):
         """
@@ -49,15 +48,13 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
-        # assert 0 <= b < self._n
         x = self.leader(a)
         y = self.leader(b)
         if x == y:
             return x
         else:
             if self.parent_or_size[y] < self.parent_or_size[x]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parent_or_size[x] += self.parent_or_size[y]
             self.parent_or_size[y] = x
 
@@ -77,8 +74,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
-        # assert 0 <= b < self._n
         return self.leader(a) == self.leader(b)
 
     def leader(self, a):
@@ -95,7 +90,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
         path = []
         while self.parent_or_size[a] >= 0:
             path.append(a)
@@ -118,7 +112,6 @@ class dsu():
 
         >   O(alpha(n)) amortized
         """
-        # assert 0 <= a < self._n
         return -self.parent_or_size[self.leader(a)]
 
     def groups(self):
@@ -144,17 +137,14 @@ class dsu():
 
 MOD = 998244353
 table_len = 110
-
 fac = [1, 1]
 for i in range(2, table_len):
     fac.append(fac[-1] * i % MOD)
-
 finv = [0] * table_len
 finv[-1] = pow(fac[-1], MOD - 2, MOD)
 for i in range(table_len - 1, 0, -1):
     finv[i - 1] = finv[i] * i % MOD
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 As = [list(map(int, input().split())) for _ in range(N)]
 
 
@@ -176,4 +166,4 @@ def solve_row(mat):
 
 
 tAs = list(map(list, list(zip(*As))))
-print((solve_row(As) * solve_row(tAs) % MOD))
+print(solve_row(As) * solve_row(tAs) % MOD)

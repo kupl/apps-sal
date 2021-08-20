@@ -1,17 +1,13 @@
 t = int(input())
-
 for e in range(t):
     n = int(input())
-    chocolates = input().strip().split(" ")
-
-    # Sequence is working
+    chocolates = input().strip().split(' ')
     sequence = []
     for x in range(len(chocolates) - 2):
         if int(chocolates[x]) + int(chocolates[x + 1]) == int(chocolates[x + 2]):
             sequence.append(1)
         else:
             sequence.append(0)
-
     inSequence = 0
     gSequence = 0
     end = 0
@@ -26,7 +22,6 @@ for e in range(t):
                 gSequence = inSequence
                 end = x
             inSequence = 0
-
-    space = " "
+    space = ' '
     output = chocolates[end - gSequence:end + 2]
     print(len(output))

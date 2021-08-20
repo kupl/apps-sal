@@ -8,7 +8,7 @@ def lcm(a, b):
     return a * (b // gcd(a, b))
 
 
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 
 
 def ext_gcd(a, b, x, y):
@@ -36,5 +36,5 @@ for x in vs:
 l = l % mod
 ans = 0
 for x in vs:
-    ans = (ans + ((l * mod_inv(x)) % mod)) % mod
+    ans = (ans + l * mod_inv(x) % mod) % mod
 print(ans)

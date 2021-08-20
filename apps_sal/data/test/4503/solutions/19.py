@@ -8,6 +8,6 @@ c = int(a[0])
 for b in range(n - 1):
     c = c + int(a[b + 1])
 if h > c:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

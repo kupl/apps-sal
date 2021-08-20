@@ -1,64 +1,13 @@
 s = input()
 cnt = 0
-m = 10**9 + 7
+m = 10 ** 9 + 7
 t = 0
-
 for i in range(len(s)):
     if s[~i] == 'a':
         cnt = (cnt + t) % m
-        t = (t * 2) % m
+        t = t * 2 % m
     else:
         t += 1
 print(cnt)
-
-"""s = raw_input()
-m = 0
-n = 0
-twop = 1
-ans = 0
-mold = [0,0]
-isbool1 = True
-isbool2 = False
-
-def twopower(x):
-    d = {0:1}
-    if x in d:
-        return d[x]
-    else:
-        if x%2 == 0:
-            d[x] = twopower(x/2)**2
-            return d[x]
-        else:
-            d[x] = twopower(x-1)*2
-            return d[x]
-
-for char in s:
-    if char == "a":
-        m += 1
-    else:
-        ans += twopower(m)-1
-        ans = ans%(10**9+7)
-
-print ans%(10**9+7)"""
-
-"""
-for char in s:
-    if char == "a":
-        m += 1
-        if isbool == True:
-            twop *= twopower(m-mold[1])
-            ans += n*(twop-1)
-            isbool = False
-            n = 0
-    else:
-        mold = [mold[1],m]
-        n += 1
-        isbool = True
-
-if s[-1] == "a":
-    print ans
-else:
-    twop *= twopower(m-mold[0])
-    ans += n*(twop-1)
-    print ans
-"""
+'s = raw_input()\nm = 0\nn = 0\ntwop = 1\nans = 0\nmold = [0,0]\nisbool1 = True\nisbool2 = False\n\ndef twopower(x):\n    d = {0:1}\n    if x in d:\n        return d[x]\n    else:\n        if x%2 == 0:\n            d[x] = twopower(x/2)**2\n            return d[x]\n        else:\n            d[x] = twopower(x-1)*2\n            return d[x]\n\nfor char in s:\n    if char == "a":\n        m += 1\n    else:\n        ans += twopower(m)-1\n        ans = ans%(10**9+7)\n\nprint ans%(10**9+7)'
+'\nfor char in s:\n    if char == "a":\n        m += 1\n        if isbool == True:\n            twop *= twopower(m-mold[1])\n            ans += n*(twop-1)\n            isbool = False\n            n = 0\n    else:\n        mold = [mold[1],m]\n        n += 1\n        isbool = True\n\nif s[-1] == "a":\n    print ans\nelse:\n    twop *= twopower(m-mold[0])\n    ans += n*(twop-1)\n    print ans\n'

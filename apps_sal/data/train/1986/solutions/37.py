@@ -1,9 +1,9 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         ans = []
-        lastNumberSet = set([start ^ (1 << i) for i in range(n)])
-        nMax = 2**n
-
+        lastNumberSet = set([start ^ 1 << i for i in range(n)])
+        nMax = 2 ** n
         visited = set()
         visited.add(start)
 
@@ -13,7 +13,7 @@ class Solution:
                     return True
                 return False
             for i in range(n):
-                nextNum = preNum ^ (1 << i)
+                nextNum = preNum ^ 1 << i
                 if nextNum not in visited:
                     visited.add(nextNum)
                     if helper(nextNum, ni + 1):
@@ -21,6 +21,5 @@ class Solution:
                         return True
                     visited.remove(nextNum)
             return False
-
         helper(start, 1)
         return [start] + ans[::-1]

@@ -1,12 +1,10 @@
 n = int(input())
 l = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     l.append([x, y, i])
-
 lx = sorted(l)
 ly = sorted(l, key=lambda x: x[1])
-
 e = []
 for i in range(n - 1):
     e.append([lx[i + 1][0] - lx[i][0], lx[i + 1][2], lx[i][2]])
@@ -34,7 +32,7 @@ class Unionfind:
         if x == y:
             return
         if self.uf[x] > self.uf[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.uf[x] += self.uf[y]
         self.uf[y] = x
 

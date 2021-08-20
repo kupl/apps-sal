@@ -1,9 +1,13 @@
-def r(): return int(input())
-def ra(): return [*list(map(int, input().split()))]
+def r():
+    return int(input())
+
+
+def ra():
+    return [*list(map(int, input().split()))]
 
 
 a = []
-t, q, mq, s = 0, 0, 0, 0
+(t, q, mq, s) = (0, 0, 0, 0)
 n = r()
 for i in range(n):
     a.append(ra())

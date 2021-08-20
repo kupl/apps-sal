@@ -1,9 +1,11 @@
 import sys
 import math
 input = sys.stdin.readline
-# sys.setrecursionlimit(1000000)
 mod = int(1000000007)
-def i(): return map(int, input().split())
+
+
+def i():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -18,11 +20,11 @@ def build(n):
         for i in range(n):
             if i + (1 << j) - 1 > n - 1:
                 break
-            t[i][j] = max(t[i][j - 1], t[i + (1 << (j - 1))][j - 1])
+            t[i][j] = max(t[i][j - 1], t[i + (1 << j - 1)][j - 1])
 
 
 def query(p, q):
-    p, q = int(p), int(q)
+    (p, q) = (int(p), int(q))
     log = int(math.log2(q - p + 1))
     m = t[p][log]
     n = t[q - (1 << log) + 1][log]

@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     n = int(buf)
@@ -10,7 +9,7 @@ def main():
     count = -1
     max_count = 0
     last_number = None
-    for i, number in enumerate(a):
+    for (i, number) in enumerate(a):
         if last_number == None:
             pass
         elif number == last_number + 1:

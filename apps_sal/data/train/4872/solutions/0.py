@@ -2,8 +2,12 @@ import operator as o
 
 
 class v:
-    def __init__(s, a, b): s.a, s.b = a, b
-    def compute(s): return getattr(o, type(s).__name__)(s.a, s.b)
+
+    def __init__(s, a, b):
+        (s.a, s.b) = (a, b)
+
+    def compute(s):
+        return getattr(o, type(s).__name__)(s.a, s.b)
 
 
 class value(int):

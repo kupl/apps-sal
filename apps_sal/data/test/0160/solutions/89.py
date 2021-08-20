@@ -1,9 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 S = sum(A)
 ans = 1
 div = []
-for i in range(1, int(S**0.5) + 2):
+for i in range(1, int(S ** 0.5) + 2):
     if S % i == 0:
         if S // i != i:
             div.append(S // i)
@@ -32,7 +32,7 @@ for i in range(len(div)):
             mod2.append(t)
             u = mod3[j - 1] + mod_dash[j]
             mod3.append(u)
-        c = 10**10
+        c = 10 ** 10
         for j in range(1, len(mod2)):
             c = min(c, max(mod2[len(mod2) - j - 1], mod3[len(mod3) - 1] - mod3[len(mod3) - j - 1]))
         if c <= k:

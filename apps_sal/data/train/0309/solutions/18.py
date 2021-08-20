@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         N = len(A)
         dp = [defaultdict(lambda: 1) for _ in range(N)]

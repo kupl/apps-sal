@@ -3,7 +3,7 @@ from math import gcd
 n = int(sys.stdin.readline())
 matrix = [[] for _ in range(n)]
 for i in range(n):
-    matrix[i] = bin((1 << n) | int(sys.stdin.readline(), 16))[3:]
+    matrix[i] = bin(1 << n | int(sys.stdin.readline(), 16))[3:]
 i = ans = 0
 while i < n:
     j = i + 1

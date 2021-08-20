@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k, x = map(int, input().split())
+    (n, k, x) = map(int, input().split())
     a = []
     if k % 2 == 0:
         for i in range(1, k):
@@ -18,5 +17,5 @@ for _ in range(int(input())):
         b.append(a[j])
         j = j + 1
     for i in b:
-        print(i, "", end="")
+        print(i, '', end='')
     print()

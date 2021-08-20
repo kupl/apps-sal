@@ -1,7 +1,7 @@
 def tetris(arr) -> int:
-    bd, lines = [0] * 9, 0
-    for n, d, m in arr:
-        i = int(m) * (-1)**(d == 'R')
+    (bd, lines) = ([0] * 9, 0)
+    for (n, d, m) in arr:
+        i = int(m) * (-1) ** (d == 'R')
         bd[i] += int(n)
         if bd[i] > 29:
             h = min(bd)

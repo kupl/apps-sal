@@ -17,16 +17,13 @@ def find_prime(max_value):
     return result
 
 
-module = int(10e8) + 7
-
+module = int(1000000000.0) + 7
 n = int(stdin.readline())
 A = list(map(int, stdin.readline().split()))
 number = [0 for i in range(70)]
 for item in A:
     number[item - 1] += 1
-
 prime_list = find_prime(70)
-
 prime_map = {}
 for i in range(2, 70 + 1):
     result = 0
@@ -38,7 +35,6 @@ for i in range(2, 70 + 1):
             cur = int(cur / item)
         result = result * 2 + num % 2
     prime_map[i] = result
-
 number_dic = {0: 1}
 sum_time = 0
 for i in range(2, 70 + 1):
@@ -46,17 +42,15 @@ for i in range(2, 70 + 1):
         mask = prime_map[i]
         state = 1
         new_number_dic = number_dic.copy()
-        for key, value in list(new_number_dic.items()):
+        for (key, value) in list(new_number_dic.items()):
             new_key = key ^ mask
             if new_key in number_dic:
                 number_dic[new_key] += value
             else:
                 number_dic[new_key] = value
             number_dic[new_key] %= module
-        sum_time += (number[i - 1] - 1)
-
+        sum_time += number[i - 1] - 1
 result = number_dic[0]
-
 for j in range(number[0] + sum_time):
     result *= 2
     result %= module

@@ -7,5 +7,4 @@ def encode(message, key):
         else:
             k = i
         arr.append(encr + int(str(key)[k]))
-
     return arr

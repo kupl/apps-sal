@@ -23,15 +23,13 @@ if b != 2:
             b = 2
             break
 if b != 2:
-    ipd = [myc(0, 0, 1, 1, 2, 2), myc(1, 1, 2, 2, 3, 3), myc(1, 0, 2, 1, 3, 2), myc(0, 1, 1, 2, 2, 3),
-           myc(0, 2, 1, 1, 2, 0), myc(0, 3, 1, 2, 2, 1), myc(1, 2, 2, 1, 3, 0), myc(1, 3, 2, 2, 3, 1)]
+    ipd = [myc(0, 0, 1, 1, 2, 2), myc(1, 1, 2, 2, 3, 3), myc(1, 0, 2, 1, 3, 2), myc(0, 1, 1, 2, 2, 3), myc(0, 2, 1, 1, 2, 0), myc(0, 3, 1, 2, 2, 1), myc(1, 2, 2, 1, 3, 0), myc(1, 3, 2, 2, 3, 1)]
     for i in ipd:
-        if 'x.x' in i or 'xx.' in i or '.xx' in i and b == 0:
+        if 'x.x' in i or 'xx.' in i or ('.xx' in i and b == 0):
             b = 1
         if 'ooo' in i:
             b = 2
             break
-
 if b == 0 or b == 2:
     print('NO')
 else:

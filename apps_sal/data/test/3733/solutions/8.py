@@ -1,10 +1,10 @@
 from sys import stdin
 input = stdin.readline
-n, I = map(int, input().split())
+(n, I) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
 key = []
 k = min(I * 8 // n, 20)
-K = min(2**k, n)
+K = min(2 ** k, n)
 last = -1
 for i in range(n):
     if a[i] == last:

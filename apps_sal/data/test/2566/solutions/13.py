@@ -1,12 +1,12 @@
 _ = int(input())
 for __ in [0] * _:
     day = int(input())
-    sche = [int(i)for i in input().split()]
+    sche = [int(i) for i in input().split()]
     week = sum(sche)
     left = day % week + week
     total = day // week * 7 - 7
     last = sche.index(1)
-    s = []  # intervals
+    s = []
     for i in range(sche.index(1) + 1, 7):
         if sche[i]:
             s.append(i - last - 1)

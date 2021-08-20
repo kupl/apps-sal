@@ -1,7 +1,8 @@
 class Solution:
+
     def isSubsequence(self, s, t):
         t = iter(t)
-        return all(c in t for c in s)
+        return all((c in t for c in s))
 
     def isSubsequenceFei(self, s, t):
         """
@@ -9,7 +10,7 @@ class Solution:
         :type t: str
         :rtype: bool
         """
-        p, l = 0, len(s)
+        (p, l) = (0, len(s))
         if l == p:
             return True
         for c_t in t:

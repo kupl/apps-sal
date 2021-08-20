@@ -1,4 +1,3 @@
-
 x = int(input())
 if x in [1, 2]:
     print(-1)

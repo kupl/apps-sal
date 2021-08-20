@@ -12,7 +12,7 @@ def main():
     T = read_int()
     for _ in range(T):
         N = read_int()
-        A, B, C = read_ints()
+        (A, B, C) = read_ints()
         S = inp()
         ans = solve(N, A, B, C, S)
         if not ans:
@@ -38,10 +38,8 @@ def solve(N, A, B, C, S):
             sol[i] = 'S'
             C -= 1
             wins += 1
-
     if wins < (N + 1) // 2:
         return None
-
     for i in range(N):
         if sol[i] is None:
             if A > 0:
@@ -53,12 +51,8 @@ def solve(N, A, B, C, S):
             else:
                 sol[i] = 'S'
                 C -= 1
-
     return ''.join(sol)
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

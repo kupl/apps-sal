@@ -2,6 +2,7 @@ from collections import deque, defaultdict
 
 
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         stack = deque()
         nbr = dict()
@@ -23,7 +24,6 @@ class Solution:
                     stack.append(p)
                     if p not in nbr:
                         nbr[p] = lvl
-
         res = defaultdict(int)
         for person_id in nbr:
             if nbr[person_id] == level:

@@ -8,7 +8,6 @@ def main():
     k = int(t[2])
     line = sys.stdin.readline()
     x = list(map(int, line.split()))
-
     res = 0
     cur = 0
     for i in range(n):
@@ -29,7 +28,6 @@ def main():
         else:
             cur = 0
             res += v
-
     print(res)
 
 

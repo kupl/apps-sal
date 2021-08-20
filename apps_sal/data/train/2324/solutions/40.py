@@ -2,7 +2,7 @@ from collections import deque
 n = int(input())
 graph = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     graph[a].append(b)
@@ -32,6 +32,6 @@ for i in range(n):
     if distfrom1[i] <= distfromn[i]:
         F += 1
 if F > n - F:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

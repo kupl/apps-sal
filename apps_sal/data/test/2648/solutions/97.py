@@ -4,9 +4,9 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, *a = map(int, read().split())
+    (n, *a) = map(int, read().split())
     r = len(set(a))
-    r -= (n - r) & 1
+    r -= n - r & 1
     print(r)
 
 

@@ -1,5 +1,5 @@
 T = int(input())
-while(T):
+while T:
     xy = [int(x) for x in input().split()]
     st = 0
     n = xy[0] // xy[1]

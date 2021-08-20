@@ -21,7 +21,6 @@ for _ in range(t):
     dp = [[0] * n for j in range(n)]
     for i in range(n):
         dp[i][i] = [int(arr[2 * i])]
-
     n = len(arr)
     for i in range(3, n + 1, 2):
         for j in range(0, n - i + 1, 2):

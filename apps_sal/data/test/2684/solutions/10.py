@@ -8,7 +8,7 @@ def palin(s):
 try:
     N = int(input())
     S = input()
-    es = [S[i: j] for i in range(len(S)) for j in range(i + 1, len(S) + 1)]
+    es = [S[i:j] for i in range(len(S)) for j in range(i + 1, len(S) + 1)]
     length = 1
     b = S[0]
     for i in es:

@@ -1,5 +1,5 @@
 n = int(input())
-w = [tuple(input().split())for _ in range(n)]
+w = [tuple(input().split()) for _ in range(n)]
 x = dict()
 y = dict()
 z = dict()
@@ -13,7 +13,7 @@ def add(e, d):
 
 
 def pr(d):
-    return sum(u * (u - 1) / 2 for u in list(d.values()))
+    return sum((u * (u - 1) / 2 for u in list(d.values())))
 
 
 for a in w:

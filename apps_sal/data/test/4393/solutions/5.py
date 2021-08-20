@@ -1,9 +1,9 @@
 n = int(input())
 s = str(input())
 i = 0
-ans = ""
+ans = ''
 count = 1
-while(i < n):
+while i < n:
     ans += s[i]
     i += count
     count += 1

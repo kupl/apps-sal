@@ -6,12 +6,12 @@ def check(n2, n3, k):
     q3 -= q6
     lo = n2 - q2
     hi = q3 + q6 - n3
-    return lo <= hi and lo <= q6 and 0 <= hi
+    return lo <= hi and lo <= q6 and (0 <= hi)
 
 
 def go(n2, n3):
     lo = -1
-    hi = int(6e7)
+    hi = int(60000000.0)
     while lo + 1 < hi:
         k = (lo + hi) // 2
         if check(n2, n3, k):
@@ -21,5 +21,5 @@ def go(n2, n3):
     return hi
 
 
-n2, n3 = list(map(int, input().split()))
+(n2, n3) = list(map(int, input().split()))
 print(go(n2, n3))

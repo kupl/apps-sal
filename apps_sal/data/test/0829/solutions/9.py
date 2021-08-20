@@ -1,6 +1,5 @@
 n = int(input())
 a = input()
-
 z = 0
 o = 0
 for i in a:

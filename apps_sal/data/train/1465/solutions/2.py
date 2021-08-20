@@ -6,7 +6,7 @@ def powc(x, n, m):
     xx = x
     while n:
         if n & 1:
-            res = (res * xx) % m
+            res = res * xx % m
         xx = xx * xx % m
         n >>= 1
     return res
@@ -35,14 +35,14 @@ T = int(sys.stdin.readline())
 for _ in range(T):
     is_bad = False
     empty = 0
-    n, Q = list(map(int, sys.stdin.readline().split()))
+    (n, Q) = list(map(int, sys.stdin.readline().split()))
     for _ in range(n - 1):
         sys.stdin.readline()
     paths = []
     V = list(map(list, [[]] * n))
     E = []
     for q in range(Q):
-        u, v, x = list(map(int, sys.stdin.readline().split()))
+        (u, v, x) = list(map(int, sys.stdin.readline().split()))
         u -= 1
         v -= 1
         if (v, x ^ 1) in V[u]:
@@ -76,4 +76,4 @@ for _ in range(T):
         if is_bad:
             print(0)
         else:
-            print(powc(2, n - 1 - (Q - empty), 10**9 + 7))
+            print(powc(2, n - 1 - (Q - empty), 10 ** 9 + 7))

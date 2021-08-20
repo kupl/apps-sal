@@ -12,7 +12,7 @@ for tc in range(int(input())):
     if n < a[len(a) - 1]:
         print(lub(n))
     else:
-        while(True):
+        while True:
             l = len(a) + 1
             a.append(l * (l + 1) / 2)
             if a[l - 1] > n:

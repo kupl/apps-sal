@@ -15,7 +15,7 @@ for _ in range(t):
     lmaxypos = -1
     x = 0
     y = 0
-    for i, s in enumerate(ss):
+    for (i, s) in enumerate(ss):
         if s == 'W':
             y += 1
             if y > maxy:

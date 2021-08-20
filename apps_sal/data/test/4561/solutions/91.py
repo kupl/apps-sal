@@ -1,17 +1,18 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-X, A, B = LI()
+(X, A, B) = LI()
 
 
 def main():
     x = B - A
     if x <= 0:
-        ans = "delicious"
+        ans = 'delicious'
     elif x <= X:
-        ans = "safe"
+        ans = 'safe'
     else:
-        ans = "dangerous"
+        ans = 'dangerous'
     print(ans)
 
 

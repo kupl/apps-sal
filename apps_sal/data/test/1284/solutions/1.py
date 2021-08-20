@@ -22,7 +22,6 @@ def solve():
             even_total += A[i]
         else:
             odd_total += A[i]
-
     best = 0
     even_before = 0
     odd_before = 0
@@ -38,12 +37,10 @@ def solve():
             odd_before += A[i]
             candidate = odd_before + even_after
         best = max(best, candidate)
-
     print(best)
 
 
 mode = 's'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

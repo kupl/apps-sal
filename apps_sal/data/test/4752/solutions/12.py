@@ -1,8 +1,9 @@
 class Solution(object):
+
     def twoSum(self, nums, target):
-        nums_index = [(v, index) for index, v in enumerate(nums)]
+        nums_index = [(v, index) for (index, v) in enumerate(nums)]
         nums_index.sort()
-        begin, end = 0, len(nums) - 1
+        (begin, end) = (0, len(nums) - 1)
         while begin < end:
             curr = nums_index[begin][0] + nums_index[end][0]
             if curr == target:

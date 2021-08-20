@@ -1,6 +1,6 @@
-xa, ya = list(map(int, input().split()))
-xb, yb = list(map(int, input().split()))
-xc, yc = list(map(int, input().split()))
+(xa, ya) = list(map(int, input().split()))
+(xb, yb) = list(map(int, input().split()))
+(xc, yc) = list(map(int, input().split()))
 a = [(xa, ya), (xb, yb), (xc, yc)]
 a.sort()
 xa = a[0][0]
@@ -13,7 +13,6 @@ b = []
 z = []
 for i in range(1050):
     b.append([0] * 1050)
-
 b[xa][ya] = 1
 b[xb][yb] = 1
 b[xc][yc] = 1

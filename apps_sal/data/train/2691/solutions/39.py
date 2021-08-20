@@ -5,9 +5,6 @@ def solve(s):
             arr.append('*')
         else:
             arr.append(i)
-
     strr = ''.join(arr)
-
     arr = strr.split('*')
-
     return max([int(i) for i in arr if i != ''])

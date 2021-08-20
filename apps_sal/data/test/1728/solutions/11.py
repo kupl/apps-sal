@@ -7,16 +7,14 @@ for i in range(n - 1):
     node = nodess[i]
     coupl[i + 1].append(node)
     coupl[node].append(i + 1)
-
 colors = [int(x) - 1 for x in input().split()]
-
 Q = dq()
 found = set()
 Q.append((0, 0))
 parent = [-1] * n
 order = []
 while Q:
-    node, p = Q.popleft()
+    (node, p) = Q.popleft()
     if node in found:
         continue
     found.add(node)
@@ -24,7 +22,6 @@ while Q:
     order.append(node)
     for nei in coupl[node]:
         Q.append((nei, node))
-
 color = [-1] * n
 count = 0
 for node in order:
@@ -33,5 +30,4 @@ for node in order:
     else:
         count += 1
     color[node] = colors[node]
-
 print(count)

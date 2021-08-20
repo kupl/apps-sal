@@ -10,7 +10,7 @@ def func(a, k):
     return math.floor(a / k) * k + mod * k
 
 
-n, m, k = input().split()
+(n, m, k) = input().split()
 list = input().split()
 k = int(k)
 temp = k
@@ -20,7 +20,6 @@ c = 0
 c2 = 0
 check = 'false'
 used = 0
-
 temp = func(int(list[0]), k)
 for i in range(len(list)):
     list[i] = int(list[i])
@@ -51,6 +50,4 @@ for i in range(len(list)):
                 c += 1
                 check = 'true'
                 used = 1
-
-
 print(answer if check is 'false' else answer + 1)

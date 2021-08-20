@@ -23,6 +23,6 @@ for j in range(n):
         b = True
         break
 if b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

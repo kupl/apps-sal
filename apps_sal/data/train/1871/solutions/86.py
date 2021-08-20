@@ -1,12 +1,6 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
-    def maxAncestorDiff(self, root: TreeNode) -> int:
 
+    def maxAncestorDiff(self, root: TreeNode) -> int:
         self.max_d = 0
 
         def get_distance_list(node, dist_list):
@@ -30,6 +24,5 @@ class Solution:
                 if abs(d) > self.max_d:
                     self.max_d = abs(d)
             return dist_list_new
-
         get_distance_list(root, [])
         return self.max_d

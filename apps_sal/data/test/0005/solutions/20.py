@@ -1,7 +1,5 @@
-n, pos, l, r = [int(i) for i in input().split()]
+(n, pos, l, r) = [int(i) for i in input().split()]
 ans = 0
-
-
 if l == 1 and r == n:
     ans = 0
 elif l == 1:

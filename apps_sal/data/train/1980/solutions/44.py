@@ -20,10 +20,3 @@ class Skiplist:
         idx = bisect.bisect_left(self.nums, num)
         self.nums.pop(idx)
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

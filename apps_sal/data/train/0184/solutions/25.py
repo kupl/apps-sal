@@ -1,4 +1,5 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         count = Counter(text)
         i = 0
@@ -22,7 +23,7 @@ class Solution:
                     diff = j
                     j += 1
             if j == len(text):
-                if count[c] > j - i and not found:
+                if count[c] > j - i and (not found):
                     sol = max(sol, j - i + 1)
                 if count[c] >= j - i:
                     sol = max(sol, j - i)

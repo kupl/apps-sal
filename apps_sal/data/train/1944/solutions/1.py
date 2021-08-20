@@ -1,4 +1,5 @@
 class Solution:
+
     def solveEquation(self, equation):
         """
         :type equation: str
@@ -6,13 +7,12 @@ class Solution:
         """
         left_x = right_x = 0
         left_const = right_const = 0
-
         cur_left = True
         cur_num = 0
         cur_sign = 1
         has_num = False
         for c in equation:
-            if c == "=":
+            if c == '=':
                 left_const += cur_num * cur_sign
                 cur_num = 0
                 cur_sign = 1
@@ -36,16 +36,12 @@ class Solution:
             else:
                 cur_num = cur_num * 10 + int(c)
                 has_num = True
-
-            # print(left_x, right_x, left_const, right_const, cur_num, cur_sign)
-
         right_const += cur_num * cur_sign
         left_x -= right_x
         right_const -= left_const
-
         if left_x == 0 and right_const == 0:
-            return "Infinite solutions"
+            return 'Infinite solutions'
         elif left_x == 0 and right_const != 0:
-            return "No solution"
+            return 'No solution'
         else:
-            return "x=" + str(int(right_const / left_x))
+            return 'x=' + str(int(right_const / left_x))

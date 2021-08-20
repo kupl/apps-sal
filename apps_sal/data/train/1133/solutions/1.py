@@ -1,9 +1,7 @@
 import math
 import copy
 from functools import reduce
-
 t = int(input())
-
 for i in range(t):
     n = input()
     nums = list(map(int, input().split()))

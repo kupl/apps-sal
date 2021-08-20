@@ -1,5 +1,4 @@
 input_1 = int(input())
-
 for i in range(input_1):
     input_2 = int(input())
     arr = list(map(int, input().split()))

@@ -6,18 +6,17 @@ for i in range(len(s)):
     a = min(s[i], s1[i])
     b = max(s[i], s1[i])
     if a != b:
-        if (a in d and d[a] != b) or (b in d and d[b] != a):
+        if a in d and d[a] != b or (b in d and d[b] != a):
             f = False
             break
         else:
             d[a] = b
             d[b] = a
+    elif a in d and d[a] != a:
+        f = False
+        break
     else:
-        if a in d and d[a] != a:
-            f = False
-            break
-        else:
-            d[a] = a
+        d[a] = a
 if f:
     a = []
     for i in list(d.items()):

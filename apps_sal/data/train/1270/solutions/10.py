@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     h = list(map(int, input().split()))
     h.sort(reverse=True)
     h1 = []
@@ -20,7 +20,7 @@ for _ in range(int(input())):
             else:
                 dp[i][j] = min(dp[i - 1][j], h[i - 1] + dp[i - 1][j - h[i - 1]])
     i = 1
-    while(i <= n):
+    while i <= n:
         if h1[i - 1] - dp[i][k] >= k:
             break
         else:

@@ -1,23 +1,12 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
         arr = []
         while head:
             arr.append(head.val)
             head = head.next
-
         t = [-1]
-        pos, cnd = 1, 0
+        (pos, cnd) = (1, 0)
         while pos < len(arr):
             if arr[pos] == arr[cnd]:
                 t.append(t[cnd])
@@ -38,5 +27,4 @@ class Solution:
             while i >= 0 and root.val != arr[i]:
                 i = t[i]
             return dfs(root.left, i + 1) or dfs(root.right, i + 1)
-
         return dfs(root, 0)

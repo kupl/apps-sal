@@ -1,10 +1,10 @@
 class Solution:
+
     def soupServings(self, N: int) -> float:
-        Q, R = divmod(N, 25)
+        (Q, R) = divmod(N, 25)
         N = Q + (R > 0)
         if N >= 500:
             return 1
-
         memo = {}
 
         def dp(x, y):
@@ -15,5 +15,4 @@ class Solution:
                     ans = 0.25 * (dp(x - 4, y) + dp(x - 3, y - 1) + dp(x - 2, y - 2) + dp(x - 1, y - 3))
                 memo[x, y] = ans
             return memo[x, y]
-
         return dp(N, N)

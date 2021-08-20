@@ -1,4 +1,3 @@
-
 n = int(input())
 print(2)
 for i in range(1, n):

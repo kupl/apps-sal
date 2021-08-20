@@ -1,13 +1,12 @@
 import math
 N = int(input())
 T = []
-
 for i in range(N):
     T.append(int(input()))
 
 
 def lcm(m, n):
-    return (m * n) // math.gcd(m, n)
+    return m * n // math.gcd(m, n)
 
 
 def lcm_list(nums):

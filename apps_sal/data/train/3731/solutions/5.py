@@ -2,12 +2,12 @@ from math import sqrt
 
 
 class Graph:
+
     def __init__(self, connections):
         self.n = len(connections)
         self.connections = connections
-        self.adjacency_matrix = [[0] * (self.n) for _ in range(self.n)]
-
-        for i, j in enumerate(self.connections):
+        self.adjacency_matrix = [[0] * self.n for _ in range(self.n)]
+        for (i, j) in enumerate(self.connections):
             for k in j:
                 self.adjacency_matrix[i][k - 1] = 1
 
@@ -20,19 +20,16 @@ class Graph:
                 path.append(curr)
                 if len(path) == self.n:
                     return True
-
                 visited[curr] = True
                 for next in range(self.n):
-                    if self.adjacency_matrix[curr][next] == 1 and not visited[next]:
+                    if self.adjacency_matrix[curr][next] == 1 and (not visited[next]):
                         if _hamilton(next):
                             return True
                 visited[curr] = False
                 path.pop()
                 return False
-
             if _hamilton(i):
                 return [n + 1 for n in path]
-
         return False
 
 
@@ -45,6 +42,5 @@ def square_sums_row(n):
                 temp.append(j)
         connections.append([*temp])
         temp.clear()
-
     g = Graph(connections)
     return g.hamilton()

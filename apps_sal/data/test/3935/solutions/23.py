@@ -1,5 +1,5 @@
 N = int(input())
-*B, = map(int, input().split())
+(*B,) = map(int, input().split())
 C = [0] * 64
 L = [[] for i in range(64)]
 for b in B:

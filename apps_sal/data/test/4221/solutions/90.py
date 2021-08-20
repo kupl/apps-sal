@@ -1,13 +1,13 @@
-import math  # noqa: F401
-from collections import deque  # noqa: F401
-from typing import Deque, Dict, List, Optional, Tuple, Union  # noqa: F401
+import math
+from collections import deque
+from typing import Deque, Dict, List, Optional, Tuple, Union
 
 
 def main(S: str):
-    if S[-1] != "s":
-        print((S + "s"))
+    if S[-1] != 's':
+        print(S + 's')
     else:
-        print((S + "es"))
+        print(S + 'es')
 
 
 def __starting_point():

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         l1 = len(nums1)
         l2 = len(nums2)
@@ -31,10 +32,8 @@ class Solution:
             score1 += nums1[i]
         for i in range(index2, l2):
             score2 += nums2[i]
-
         if score1 < score2:
             maxScore += score2
         else:
             maxScore += score1
-
-        return maxScore % (10**9 + 7)
+        return maxScore % (10 ** 9 + 7)

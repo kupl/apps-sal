@@ -28,7 +28,6 @@ def parse(x):
 def format(y):
     y1 = int(y)
     y2 = round((y - y1) * 100)
-
     y1 = str(y1)
     yy = []
     for i in range(len(y1)):
@@ -37,10 +36,9 @@ def format(y):
             yy.append('.')
     yy.reverse()
     yy = ''.join(yy)
-
     if y2 != 0:
         yy += '.'
-        yy += ('%02d' % y2)
+        yy += '%02d' % y2
     return yy
 
 
@@ -50,13 +48,11 @@ cur = []
 for i in s:
     if '0' <= i <= '9' or i == '.':
         cur.append(i)
-    else:
-        if len(cur) > 0:
-            pr.append(''.join(cur))
-            cur = []
+    elif len(cur) > 0:
+        pr.append(''.join(cur))
+        cur = []
 if len(cur) > 0:
     pr.append(''.join(cur))
-
 sm = 0
 for i in pr:
     sm += parse(i)

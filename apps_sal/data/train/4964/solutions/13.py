@@ -1,1 +1,2 @@
-def is_uppercase(s): return s.isupper()
+def is_uppercase(s):
+    return s.isupper()

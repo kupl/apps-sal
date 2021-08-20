@@ -1,6 +1,6 @@
 def solution(string):
     if string == None:
-        return("")
+        return ''
     else:
         x = string[::-1]
-    return("{}".format(x))
+    return '{}'.format(x)

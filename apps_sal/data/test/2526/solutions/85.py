@@ -1,4 +1,4 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 red = list(map(int, input().split()))
 green = list(map(int, input().split()))
 colorless = list(map(int, input().split()))

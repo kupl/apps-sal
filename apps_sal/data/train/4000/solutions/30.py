@@ -2,7 +2,7 @@ def strong_num(number):
     total = 0
     for n in str(number):
         total += factorial(n)
-    return "STRONG!!!!" if total == number else "Not Strong !!"
+    return 'STRONG!!!!' if total == number else 'Not Strong !!'
 
 
 def factorial(number):

@@ -1,9 +1,9 @@
-n, W = map(int, input().split())
+(n, W) = map(int, input().split())
 w = [0 for i in range(n)]
 v = [[] for i in range(4)]
 dp = [[0] for i in range(4)]
 for i in range(n):
-    w[i], vi = map(int, input().split())
+    (w[i], vi) = map(int, input().split())
     v[w[i] - w[0]].append(vi)
 for i in range(4):
     v[i].sort(reverse=True)
@@ -13,7 +13,7 @@ for i in range(4):
 
 def dfs(i, cost):
     if cost > W:
-        return -10**10
+        return -10 ** 10
     elif i == 4:
         return 0
     else:

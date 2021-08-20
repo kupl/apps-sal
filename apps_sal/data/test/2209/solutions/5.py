@@ -6,7 +6,7 @@ def val(s):
     cnt = 0
     ret = 0
     for c in s:
-        if c == "s":
+        if c == 's':
             cnt += 1
         else:
             ret += cnt
@@ -23,17 +23,12 @@ def cmp(a, b):
     return 0
 
 
-ans = ""
+ans = ''
 s = []
-
 n = int(input())
-
 for i in range(0, n):
     t = input()
     s.append(t)
-
 s = sorted(s, key=cmp_to_key(cmp))
-
-ans = "".join(s)
-
+ans = ''.join(s)
 print(val(ans))

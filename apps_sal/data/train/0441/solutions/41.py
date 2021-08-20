@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         count = 0
         max_k = ceil((2 * N + 1 / 4) ** 0.5 - 0.5) + 1

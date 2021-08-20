@@ -1,6 +1,5 @@
 S = input()
 T = input()
-
 for i in range(len(S)):
     if S == T:
         print('Yes')
@@ -10,6 +9,5 @@ for i in range(len(S)):
         s = lstS.pop()
         a = list(s) + lstS
         S = ''.join(a)
-
 else:
     print('No')

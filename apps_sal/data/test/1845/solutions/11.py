@@ -6,7 +6,6 @@ def __starting_point():
     a = input().split()
     for i in range(n):
         a[i] = int(a[i])
-
     b = sum(a)
     a = list(set(a))
     n = len(a)

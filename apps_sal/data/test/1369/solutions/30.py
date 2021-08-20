@@ -11,11 +11,10 @@ def calc(r):
         for j in range(i + 1, N):
             x2 = XY[j][0]
             y2 = XY[j][1]
-            diff = sqrt((x1 - x2)**2 + (y1 - y2)**2)
+            diff = sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
             if diff > 2 * r:
                 return False
-
-            h = sqrt(r**2 - diff**2 / 4)
+            h = sqrt(r ** 2 - diff ** 2 / 4)
             if x1 == x2:
                 ny = (y1 + y2) / 2
                 lst.append([x1 - h, ny])
@@ -27,19 +26,19 @@ def calc(r):
             else:
                 a = (y2 - y1) / (x2 - x1)
                 b = -1 / a
-                size = sqrt(1 + b**2)
+                size = sqrt(1 + b ** 2)
                 dx = h / size
                 dy = dx * b
                 nx = (x1 + x2) / 2
                 ny = (y1 + y2) / 2
                 lst.append([nx + dx, ny + dy])
                 lst.append([nx - dx, ny - dy])
-    nr = r + 10**(-9)
-    for x, y in lst:
+    nr = r + 10 ** (-9)
+    for (x, y) in lst:
         flag = True
-        for X, Y in XY:
-            tmp = (x - X)**2 + (y - Y)**2
-            if tmp > nr**2:
+        for (X, Y) in XY:
+            tmp = (x - X) ** 2 + (y - Y) ** 2
+            if tmp > nr ** 2:
                 flag = False
                 break
         if flag:

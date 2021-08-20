@@ -1,7 +1,5 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 sunuke = [0] * n
-
 for _ in range(k):
     d = int(input())
     a = list(map(int, input().split()))
@@ -10,6 +8,4 @@ for _ in range(k):
     else:
         for i in range(d):
             sunuke[a[i] - 1] += 1
-
-# print(sunuke)
-print((sunuke.count(0)))
+print(sunuke.count(0))

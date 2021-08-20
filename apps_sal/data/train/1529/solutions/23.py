@@ -11,12 +11,9 @@ def fun():
         x = []
         for j in range(len(l)):
             x += [math.factorial(len(l) - 1) * k * math.pow(10, j) for k in l]
-            # print(x)
         x1 = [int(j) for j in x]
         x = sum(x1)
-        # print(x)
         ans.append(x)
-
     for j in ans:
         print(j)
 

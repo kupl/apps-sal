@@ -4,7 +4,7 @@ defdict = defaultdict(int)
 for _ in range(N):
     st = input()
     fst = st[0]
-    if fst in "MARCH":
+    if fst in 'MARCH':
         defdict[fst] += 1
 V = list(defdict.values())
 NV = len(V)

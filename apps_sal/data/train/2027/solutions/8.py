@@ -1,5 +1,5 @@
 s = input()
-l, r = [], []
+(l, r) = ([], [])
 for x in range(len(s)):
     if s[x] == 'r':
         r.append(x + 1)

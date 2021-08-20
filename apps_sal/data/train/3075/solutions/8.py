@@ -1,4 +1,5 @@
-def fun1(a1, a2): return sum([1 if a1 > i else 0 for i in a2])
+def fun1(a1, a2):
+    return sum([1 if a1 > i else 0 for i in a2])
 
 
 def count_inversions(array):

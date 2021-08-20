@@ -1,5 +1,5 @@
 from collections import defaultdict
-s, a, b = 0, defaultdict(int), defaultdict(int)
+(s, a, b) = (0, defaultdict(int), defaultdict(int))
 for i in input():
     a[i] += 1
 for i in input():

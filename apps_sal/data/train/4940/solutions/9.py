@@ -6,7 +6,7 @@ def shut_the_gate(farm):
     if len(yards) > 1:
         n = len(yards[0])
         yards[-1] += yards[0]
-    for i, yard in enumerate(yards):
+    for (i, yard) in enumerate(yards):
         s = ''
         if 'H' in yard:
             s = 'AV'

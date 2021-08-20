@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         n = len(customers)
         profit = -1
@@ -7,7 +8,7 @@ class Solution:
         num_rotations = 0
         min_rotations = 0
         prev_profit = 0
-        while(wait > 0 or num_rotations < n):
+        while wait > 0 or num_rotations < n:
             i = customers[num_rotations] if num_rotations < n else 0
             wait += i
             if wait >= 4:
@@ -22,7 +23,6 @@ class Solution:
             if profit == temp:
                 min_rotations = min_rotations if prev_profit == profit else num_rotations
                 prev_profit = profit
-
         if profit < 0:
             return -1
         return min_rotations

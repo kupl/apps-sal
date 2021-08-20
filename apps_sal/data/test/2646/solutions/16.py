@@ -24,12 +24,11 @@ def bfs(src):
         print(v)
 
 
-for i in range(1):  # int(stdin.readline())):
-    # n=int(stdin.readline())
+for i in range(1):
     g = defaultdict(list)
-    n, e = list(map(int, stdin.readline().split()))
+    (n, e) = list(map(int, stdin.readline().split()))
     for _ in range(e):
-        a, b = map(int, stdin.readline().split())
+        (a, b) = map(int, stdin.readline().split())
         g[a] += [b]
         g[b] += [a]
     bfs(1)

@@ -14,7 +14,7 @@ def total_dec(n, a):
     if n not in dec:
         dec[n] = {}
     if a not in dec[n]:
-        dec[n][a] = total_dec(n, a - 1) + total_dec(n - 1, a)if a > 0 and n > 0 else 1
+        dec[n][a] = total_dec(n, a - 1) + total_dec(n - 1, a) if a > 0 and n > 0 else 1
     return dec[n][a]
 
 

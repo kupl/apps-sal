@@ -1,11 +1,7 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open("input.txt", "r")
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 n = int(input())
 u = list(map(int, input().split()))
 f = {}
@@ -18,20 +14,17 @@ for i in range(n):
         f[u[i]] += 1
     else:
         f[u[i]] = 1
-
     if f[u[i]] - 1 in ff:
         if ff[f[u[i]] - 1] == 1:
             del ff[f[u[i]] - 1]
         else:
             ff[f[u[i]] - 1] -= 1
-
     if f[u[i]] in ff:
         ff[f[u[i]]] += 1
     else:
         ff[f[u[i]]] = 1
-
     if len(ff) == 2:
-        k1, k2 = sorted(ff.keys())
+        (k1, k2) = sorted(ff.keys())
         if k2 - k1 == 1:
             if ff[k2] == 1:
                 ans = i + 1

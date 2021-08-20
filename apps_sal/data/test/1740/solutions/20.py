@@ -25,15 +25,12 @@ class DisjointSets:
         rank = self.rank
         parent = self.parent
         ls = self.ls
-
         if rank[node] > rank[other]:
             parent[other] = node
             ls[node].extend(ls[other])
-
         elif rank[other] > rank[node]:
             parent[node] = other
             ls[other].extend(ls[node])
-
         else:
             parent[other] = node
             ls[node] += ls[other]
@@ -41,13 +38,10 @@ class DisjointSets:
 
 
 n = int(input())
-
 ds = DisjointSets(n)
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ds.union(a, b)
-# print(ds.rank)
-# print(ds.parent)
 ans = ds.ls[ds.find(1)]
 for a in ans:
-    print(a, end=" ")
+    print(a, end=' ')

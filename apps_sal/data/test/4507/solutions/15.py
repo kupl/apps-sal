@@ -1,9 +1,9 @@
 from audioop import reverse
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 price = list(map(int, input().split()))
 offer = [0] * (k + 1)
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if x <= k:
         offer[x] = max(offer[x], y)
 price.sort()

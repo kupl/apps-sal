@@ -12,6 +12,6 @@ def solve(n, x, arr):
 
 T = int(input())
 for _ in range(T):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     print(solve(n, x, arr))

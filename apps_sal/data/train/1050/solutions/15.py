@@ -5,13 +5,12 @@ for q in range(tc):
     maxx = 0
     counter = 0
     for i in arr:
-
         counter += 1
-        if(i == '<'):
+        if i == '<':
             stack.append(i)
-        elif(i == '>' and len(stack)):
+        elif i == '>' and len(stack):
             stack.pop()
-            if(not stack):
+            if not stack:
                 maxx = counter
         else:
             break

@@ -1,8 +1,8 @@
 from itertools import permutations
 for _ in range(int(input())):
     ans = 0
-    a, b, c = list(map(int, input().split()))
-    for x, y, z in permutations((a, b, c)):
+    (a, b, c) = list(map(int, input().split()))
+    for (x, y, z) in permutations((a, b, c)):
         cnt = 0
         if x:
             cnt += 1
@@ -27,7 +27,5 @@ for _ in range(int(input())):
             cnt += 1
         if x and y and z:
             cnt += 1
-
         ans = max(ans, cnt)
-
     print(ans)

@@ -1,4 +1,5 @@
 class Solution:
+
     def countAndSay(self, n):
         """
         :type n: int
@@ -15,17 +16,16 @@ class Solution:
 
     def _say(self, s):
         s += '*'
-        curr, res = '', ''
+        (curr, res) = ('', '')
         t = 0
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if i == 0:
                 curr = c
                 t = 1
+            elif c == curr:
+                t += 1
             else:
-                if c == curr:
-                    t += 1
-                else:
-                    res = res + str(t) + curr
-                    t = 1
-                    curr = c
+                res = res + str(t) + curr
+                t = 1
+                curr = c
         return res

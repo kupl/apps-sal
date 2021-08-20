@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 w = list(map(int, input().split()))
 l = list(map(int, input().split()))
 k = 0
@@ -15,6 +15,6 @@ for x in l:
                 k += w[f[i]]
             else:
                 break
-        del(f[i])
+        del f[i]
         f = [x] + f
 print(k)

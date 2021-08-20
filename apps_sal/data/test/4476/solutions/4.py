@@ -1,6 +1,6 @@
 t = int(input())
 for z in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ans = 0
     if a > b:
         if (a - b) % 2 == 0:

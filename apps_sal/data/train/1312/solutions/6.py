@@ -1,8 +1,6 @@
 import sys
-
 T = int(sys.stdin.readline())
-
-while(T):
+while T:
     T -= 1
     ins = sys.stdin.readline().split()
     R = int(ins[0])
@@ -14,7 +12,6 @@ while(T):
         horiwords.append(sys.stdin.readline().lower())
         if 'spoon' in horiwords[i]:
             flag = True
-
     if not flag:
         for i in range(C):
             for j in range(R):
@@ -22,8 +19,7 @@ while(T):
             if 'spoon' in vertiwords[i]:
                 flag = True
                 break
-
-    if(flag):
+    if flag:
         print('There is a spoon!')
     else:
         print('There is indeed no spoon!')

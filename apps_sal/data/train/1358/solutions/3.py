@@ -1,8 +1,6 @@
-# cook your dish here
-
 t = int(input())
 while t:
-    w, k = input().split()
+    (w, k) = input().split()
     k = int(k)
     char = {}
     for c in w:
@@ -12,7 +10,6 @@ while t:
             char[c] += 1
     counts = list(char.values())
     counts.sort()
-    #counts = counts[::-1]
     l = len(counts)
     ans = len(w) + 1
     for i in range(l):

@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 pixel = [[] for i in range(h + 2)]
 for i in range(h + 2):
     if i == 0:
@@ -11,4 +11,4 @@ for i in range(h + 2):
         pixel[i].append(s)
         pixel[i].append('#')
 for i in range(h + 2):
-    print(("".join(pixel[i])))
+    print(''.join(pixel[i]))

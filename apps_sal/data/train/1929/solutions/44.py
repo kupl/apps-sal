@@ -1,10 +1,12 @@
 class WordNode:
+
     def __init__(self):
         self.children = [None] * 26
         self.isFront = False
 
 
 class WordTrie:
+
     def __init__(self):
         self.head = WordNode()
 
@@ -35,8 +37,3 @@ class StreamChecker:
             if node.isFront:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

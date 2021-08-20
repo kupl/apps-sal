@@ -1,5 +1,5 @@
 lst = list(map(int, input().split()))
-s, m = sum(lst), max(lst)
+(s, m) = (sum(lst), max(lst))
 if not (3 * m - s) % 2:
     print((3 * m - s) // 2)
 else:

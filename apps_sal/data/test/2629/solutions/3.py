@@ -1,4 +1,5 @@
 class Solution:
+
     def generateMatrix(self, n):
         """
         :type n: int
@@ -8,7 +9,6 @@ class Solution:
             return []
         elif n == 1:
             return [[1]]
-
         cnt = 1
         ret = [[None] * n for _ in range(n)]
 

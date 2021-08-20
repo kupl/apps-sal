@@ -1,12 +1,12 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         ans = [[0] * n for i in range(m)]
         prefix = [[0] * (n + 1) for i in range(m)]
         for i in range(m):
             for j in range(n):
                 prefix[i][j] = prefix[i][j - 1] + mat[i][j]
-
         for i in range(m):
             for j in range(n):
                 for s in range(k + 1):

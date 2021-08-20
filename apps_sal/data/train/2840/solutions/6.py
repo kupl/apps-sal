@@ -7,7 +7,7 @@ def withdraw(n):
                 break
             n -= 100
             bills[0] += 1
-    if n == 50 or n == 70 or n == 90 or n == 130 or n == 110:
+    if n == 50 or n == 70 or n == 90 or (n == 130) or (n == 110):
         while n >= 50:
             if n == 80:
                 break
@@ -19,5 +19,4 @@ def withdraw(n):
         while n > 0:
             n -= 20
             bills[2] += 1
-
     return bills

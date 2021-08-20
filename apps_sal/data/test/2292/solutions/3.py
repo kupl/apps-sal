@@ -9,7 +9,7 @@ for _ in range(q):
         x1 = l1.pop(n // 2)
         x2 = l2.pop(n // 2)
     if x1 != x2:
-        print("No")
+        print('No')
     else:
         if n % 2 == 1:
             n -= 1
@@ -21,6 +21,6 @@ for _ in range(q):
         d1.sort()
         d2.sort()
         if d1 == d2:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

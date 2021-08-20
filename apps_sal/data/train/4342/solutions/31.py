@@ -1,6 +1,6 @@
 def no_space(x):
-    res = ""
+    res = ''
     for char in x:
-        if char != " ":
+        if char != ' ':
             res += char
     return res

@@ -1,4 +1,4 @@
-a, n, k = map(int, input().split())
+(a, n, k) = map(int, input().split())
 arr = [0 for i in range(k)]
 i = 0
 while a != 0 and i < k:

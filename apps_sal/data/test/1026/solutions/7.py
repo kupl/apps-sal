@@ -1,8 +1,6 @@
 from math import *
 import sys
 from queue import *
-
-
 n = int(input())
 a = list(map(int, input().split()))
 d = {}

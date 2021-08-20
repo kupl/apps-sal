@@ -1,4 +1,4 @@
-t, s, q = [int(i) for i in input().split()]
+(t, s, q) = [int(i) for i in input().split()]
 c = (q - 1) / q
 cnt = 1
 time = s

@@ -3,4 +3,4 @@ def string_to_number(s):
     return x
 
 
-print("1234")
+print('1234')

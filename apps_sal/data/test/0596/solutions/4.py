@@ -1,20 +1,16 @@
-#!/usr/local/bin/python3.3 -tt
-
 import datetime
 import sys
 
 
 def __starting_point():
     for l in sys.stdin:
-        a = tuple(int(i) for i in l.strip().split(':'))
+        a = tuple((int(i) for i in l.strip().split(':')))
         s = datetime.date(*a)
         break
-
     for l in sys.stdin:
-        a = tuple(int(i) for i in l.strip().split(':'))
+        a = tuple((int(i) for i in l.strip().split(':')))
         e = datetime.date(*a)
         break
-
     print(abs((e - s).days))
 
 

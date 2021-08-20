@@ -1,13 +1,12 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     input = sys.stdin.readline
-
     for _ in range(int(input())):
-        N, K = list(map(int, input().split()))
+        (N, K) = list(map(int, input().split()))
         if K % N == 0:
             print(0)
         else:
@@ -25,7 +24,7 @@ def main():
                 ans[i][(i + p) % N] = 1
                 cnt += 1
         for i in range(N):
-            print("".join(map(str, ans[i])))
+            print(''.join(map(str, ans[i])))
 
 
 def __starting_point():

@@ -1,9 +1,9 @@
 from collections import defaultdict
 graph = defaultdict(list)
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     graph[u].append(v)
     graph[v].append(u)
 d = {}
@@ -35,7 +35,6 @@ for i in d:
 ans.sort()
 ans[-1] += rem
 tmp = 0
-# print(ans)
 for i in ans:
-    tmp += (i * (i - 1)) // 2
+    tmp += i * (i - 1) // 2
 print(tmp - m)

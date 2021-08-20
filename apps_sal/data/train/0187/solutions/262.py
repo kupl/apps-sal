@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if 4 * boardingCost - runningCost <= 0:
             return -1
@@ -6,8 +7,7 @@ class Solution:
         max_rotation = 0
         cum_profit = 0
         wait = 0
-
-        for i, c in enumerate(customers):
+        for (i, c) in enumerate(customers):
             total = c + wait
             if total <= 4:
                 board = total
@@ -20,9 +20,8 @@ class Solution:
                 max_profit = cum_profit
                 max_rotation = i + 1
         if wait > 0:
-            div, mod = divmod(wait, 4)
+            (div, mod) = divmod(wait, 4)
             cum_profit += div * (4 * boardingCost - runningCost)
-            # cum_profit += max(0, mod * boardingCost -runningCost)
             if cum_profit > max_profit:
                 max_profit = cum_profit
                 max_rotation += div

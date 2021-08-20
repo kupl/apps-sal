@@ -7,21 +7,15 @@ def cusum(a):
 
 def solve1(n, a):
     ans = 0
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     cusum_a = cusum(a)
-
     for i in range(n):
         ans += a[i] * (cusum_a[-1] - cusum_a[i])
-        """
-        print(a[i], "*",
-              "(", a[i+1:], "=", (cusum_a[-1] - cusum_a[i]), ")",
-              "=", a[i] * (cusum_a[-1] - cusum_a[i]))
-        """
+        '\n        print(a[i], "*",\n              "(", a[i+1:], "=", (cusum_a[-1] - cusum_a[i]), ")",\n              "=", a[i] * (cusum_a[-1] - cusum_a[i]))\n        '
         ans %= mod
-
     return ans
 
 
 n = int(input())
-a = list(map(int, input().split(" ")))
-print((solve1(n, a)))
+a = list(map(int, input().split(' ')))
+print(solve1(n, a))

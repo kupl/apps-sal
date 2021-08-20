@@ -1,9 +1,8 @@
 t = int(input())
-
 for t_i in range(t):
     n = int(input())
     P = input().split()
-    l, r = -1, -1
+    (l, r) = (-1, -1)
     for i in range(n):
         P[i] = int(P[i])
         if P[i] == 1:
@@ -13,11 +12,11 @@ for t_i in range(t):
     beaut = ['1']
     for _ in range(n - 1):
         if l == 0:
-            l_cand = 10**8
+            l_cand = 10 ** 8
         else:
             l_cand = P[l - 1]
         if r == n - 1:
-            r_cand = 10**8
+            r_cand = 10 ** 8
         else:
             r_cand = P[r + 1]
         if r_cand > l_cand:

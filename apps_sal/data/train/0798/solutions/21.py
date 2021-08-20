@@ -1,12 +1,11 @@
-# cook your dish here
 import numpy as np
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 dp = np.zeros((n, n))
 forest = np.zeros((n, n))
 for i in range(n):
     forest[i] = list(map(int, input().split()))
 for i in range(m):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     x -= 1
     y -= 1
     for i in range(0, z + 1):
@@ -28,7 +27,7 @@ for i in range(n - 1, -1, -1):
         else:
             dp[i][j] = forest[i][j] + max(dp[i + 1][j], dp[i][j + 1])
 if dp[0][0] > -np.inf:
-    print("YES")
+    print('YES')
     print(int(dp[0][0]))
 else:
-    print("NO")
+    print('NO')

@@ -2,8 +2,8 @@ n = int(input())
 s = input()
 for i in range(n - 1):
     if ord(s[i]) > ord(s[i + 1]):
-        print("YES")
+        print('YES')
         print(i + 1, i + 2)
         break
 else:
-    print("NO")
+    print('NO')

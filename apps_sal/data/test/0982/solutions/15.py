@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     if r >= 2 * l:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

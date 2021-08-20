@@ -1,7 +1,7 @@
 n = int(input())
 li = []
 for i in range(n):
-    string, pri = input().split()
+    (string, pri) = input().split()
     pri = int(pri)
     li.append([string, pri])
 li.sort(key=lambda x: x[1], reverse=True)

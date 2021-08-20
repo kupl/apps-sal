@@ -8,7 +8,6 @@ def C(n, m):
 
 
 def __starting_point():
-
     n = int(input())
     print(C(n, 5) * n * (n - 1) * (n - 2) * (n - 3) * (n - 4))
 

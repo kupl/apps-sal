@@ -1,5 +1,4 @@
 s = input()
-
 ans = 1
 
 
@@ -11,5 +10,4 @@ def f(k):
 
 for i in range(len(s)):
     ans = (ans << 1) + f(s[i])
-
 print(ans - 1)

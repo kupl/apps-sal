@@ -1,4 +1,4 @@
-n, lim, d = map(int, input().split())
+(n, lim, d) = map(int, input().split())
 q = list(map(int, input().split()))
 cur = 0
 counter = 0

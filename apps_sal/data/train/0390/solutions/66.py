@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         sqrs = []
         for j in range(1, n + 1):
@@ -9,7 +10,6 @@ class Solution:
         dp = [False] * (1 + n)
         for s in sqrs:
             dp[s] = True
-
         for i in range(1, n + 1):
             if dp[i]:
                 continue

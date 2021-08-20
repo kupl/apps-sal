@@ -1,7 +1,6 @@
 def epidemic(tm, n, s0, i0, b, a):
     from math import floor
-    S, I = [s0], [i0]
-
+    (S, I) = ([s0], [i0])
     dt = tm / n
     for _ in range(n):
         s = S[-1] - dt * b * S[-1] * I[-1]

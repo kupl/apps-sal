@@ -1,5 +1,5 @@
 n = int(input())
-if "Y" in list(map(str, input().split())):
-    print("Four")
+if 'Y' in list(map(str, input().split())):
+    print('Four')
 else:
-    print("Three")
+    print('Three')

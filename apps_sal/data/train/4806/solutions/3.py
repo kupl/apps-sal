@@ -1,5 +1,5 @@
 class LCG:
-    a, c, m = 2, 3, 10
+    (a, c, m) = (2, 3, 10)
 
     def __init__(self, seed):
         self.seed = seed

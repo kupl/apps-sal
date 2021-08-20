@@ -1,11 +1,9 @@
 from itertools import groupby
-
 t = int(input())
-
 for _ in range(t):
     s = input()
     l = []
-    for k, v in groupby(s):
+    for (k, v) in groupby(s):
         if k == '1':
             l.append(len(list(v)))
     l.sort(reverse=True)

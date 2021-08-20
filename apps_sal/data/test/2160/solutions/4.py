@@ -2,7 +2,7 @@ def ck(p, q):
     return 1 if bpos[p] > fpos[q] else 0
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x = list(map(int, input().split()))
 fpos = [-1 for i in range(100001)]
 bpos = [k + 5 for i in range(100001)]

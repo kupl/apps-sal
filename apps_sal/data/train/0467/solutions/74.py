@@ -1,5 +1,7 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
+
         @lru_cache(None)
         def divisors(v):
             divs = set()
@@ -9,5 +11,4 @@ class Solution:
                 if len(divs) > 4:
                     return 0
             return sum(divs) if len(divs) == 4 else 0
-
         return sum(map(divisors, nums))

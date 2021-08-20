@@ -6,6 +6,6 @@ for i in range(a):
     if b[i] != c[i]:
         d += 1
 if d <= 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

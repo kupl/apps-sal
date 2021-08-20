@@ -14,4 +14,3 @@ for _ in range(int(input())):
             cnt += 1
     print(len(ans))
     print(*ans)
-    # print(l)

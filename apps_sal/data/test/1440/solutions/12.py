@@ -1,8 +1,8 @@
 n = int(input())
 l = list(map(int, input().split()))
-ans, mod = 0, 0
+(ans, mod) = (0, 0)
 for i in range(n):
-    if(mod > 0):
+    if mod > 0:
         a = min(l[i] // 2, mod)
         ans += a
         mod -= a

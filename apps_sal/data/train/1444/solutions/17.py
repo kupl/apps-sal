@@ -7,7 +7,7 @@ for i in range(int(input())):
         dp[i] = dp[i - 1]
         if i - 2 >= 0 and a[i - 2] == 2:
             dp[i] += dp[i - 2]
-        if i - 3 >= 0 and a[i - 3] == 2 and a[i - 2] == 2:
+        if i - 3 >= 0 and a[i - 3] == 2 and (a[i - 2] == 2):
             dp[i] += dp[i - 3]
     dpr = [0] * (n + 3)
     i1 = [0] * n

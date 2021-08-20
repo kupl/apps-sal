@@ -1,21 +1,21 @@
 import sys
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [list(map(int, input().split())) for i in range(M)]
 c = [[] for i in range(N)]
-for a, b in AB:
+for (a, b) in AB:
     c[a - 1].append(b - 1)
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def f2(q):
     s = set(q)
-    for a, b in AB:
+    for (a, b) in AB:
         if a in s and b in s:
             i = q.index(b)
             if q[i - 1] != a:
                 break
-    if a in s and b in s and q[i - 1] != a:
+    if a in s and b in s and (q[i - 1] != a):
         q2 = deque([a, b])
         while q[(i + 1) % len(q)] != a:
             q2.append(q[(i + 1) % len(q)])

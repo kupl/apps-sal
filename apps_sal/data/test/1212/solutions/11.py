@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 num = [int(x) for x in input().split()]
 Min = Sum = Pos = 0
 for i in range(m):

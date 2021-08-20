@@ -14,12 +14,12 @@ def get_int_list():
 
 
 def prog():
-    x, y = get_many_ints()
+    (x, y) = get_many_ints()
     if x >= 4:
-        print("YES")
+        print('YES')
         return
-    ok = (x == 1 and y == 1) or (x in [2, 3] and y <= 3)
-    print("YES" if ok else "NO")
+    ok = x == 1 and y == 1 or (x in [2, 3] and y <= 3)
+    print('YES' if ok else 'NO')
 
 
 q = get_int()

@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
+
         def invert(l):
             result = []
             for item in l:
@@ -8,7 +10,6 @@ class Solution:
                 else:
                     result.append('0')
             return result
-
         string = '0'
         while len(string) < k:
             string = string + '1'
@@ -16,5 +17,4 @@ class Solution:
             addition.reverse()
             addition = ''.join(addition)
             string = string + addition
-
         return string[k - 1]

@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, x = readln()
+(n, x) = readln()
 a = readln()
 m = max(a)
 ans = sum(a) - m
@@ -18,11 +19,9 @@ while True:
     while v % x == 0:
         c += 1
         v //= x
-    #print(cnt, k, cnt[k], c, v)
     if c:
         cnt[k + c] = cnt.get(k + c, 0) + v
         cnt.pop(k)
     else:
         break
-    # print(cnt)
-print(pow(x, ans + min(min(cnt.keys()), m), 10**9 + 7))
+print(pow(x, ans + min(min(cnt.keys()), m), 10 ** 9 + 7))

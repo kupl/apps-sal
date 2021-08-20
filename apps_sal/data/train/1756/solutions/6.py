@@ -12,7 +12,8 @@ def handle(func, success, failure, *exceptions):
         raise e
 
 
-class Injection():
+class Injection:
+
     def __init__(self, opcode, opname, arg, argval, argrepr, offset, starts_line, is_jump_target):
         self.opname = opname
 

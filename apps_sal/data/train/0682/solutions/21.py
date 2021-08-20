@@ -1,6 +1,5 @@
 n = int(input())
 arr = [int(x) for x in input().split()]
-
 i = 0
 l = []
 while i < n - 1:
@@ -16,7 +15,6 @@ if len(l) == 1:
     ll = []
     for i in range(l[0][1] + 1, l[0][0], -1):
         ll.append(i)
-
     if ll == arr[l[0][0]:l[0][1] + 1]:
         print(l[0][0] + 1, l[0][1] + 1)
     else:

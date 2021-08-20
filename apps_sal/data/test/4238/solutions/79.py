@@ -4,7 +4,7 @@ def answer(n: str) -> str:
 
 def main():
     n = input()
-    print((answer(n)))
+    print(answer(n))
 
 
 def __starting_point():

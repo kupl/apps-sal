@@ -7,8 +7,6 @@ gv = z[0]
 bv = z[1]
 for i in range(0, 5):
     ans += max(0.3 * ball[i], (1 - time[i] / 250) * ball[i] - 50 * tries[i])
-
-
 ans += 100 * gv
 ans -= 50 * bv
 print(int(ans))

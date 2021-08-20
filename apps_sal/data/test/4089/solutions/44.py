@@ -1,6 +1,6 @@
 n = int(input())
 nums = []
-ans = ""
+ans = ''
 while n >= 1:
     n -= 1
     ans += chr(ord('a') + n % 26)

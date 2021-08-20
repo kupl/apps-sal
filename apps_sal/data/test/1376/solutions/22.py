@@ -12,32 +12,32 @@ ans = 0
 curr1 = 1
 curr2 = 1
 for i in range(1, n + 1):
-    if(i == 1):
-        ans += (dict1[i][0] - curr1)
-        ans += (dict1[i][1] - curr2)
+    if i == 1:
+        ans += dict1[i][0] - curr1
+        ans += dict1[i][1] - curr2
         curr1 = dict1[i][0]
         curr2 = dict1[i][1]
-    elif(dict1[i][0] > curr1 and dict1[i][0] > curr2):
-        ans += (dict1[i][0] - curr1)
-        ans += (dict1[i][1] - curr2)
+    elif dict1[i][0] > curr1 and dict1[i][0] > curr2:
+        ans += dict1[i][0] - curr1
+        ans += dict1[i][1] - curr2
         curr1 = dict1[i][0]
         curr2 = dict1[i][1]
-    elif(dict1[i][1] < curr1 < curr2):
+    elif dict1[i][1] < curr1 < curr2:
         ans += abs(dict1[i][0] - curr1)
         ans += abs(dict1[i][1] - curr2)
         curr1 = dict1[i][0]
         curr2 = dict1[i][1]
-    elif(dict1[i][0] < curr1 and curr1 < dict1[i][1] < curr2):
+    elif dict1[i][0] < curr1 and curr1 < dict1[i][1] < curr2:
         ans += abs(dict1[i][0] - curr1)
         ans += abs(dict1[i][1] - curr2)
         curr1 = dict1[i][0]
         curr2 = dict1[i][1]
-    elif(dict1[i][0] < curr1 and dict1[i][1] < curr2):
+    elif dict1[i][0] < curr1 and dict1[i][1] < curr2:
         ans += abs(dict1[i][0] - curr1)
         ans += abs(dict1[i][1] - curr2)
         curr1 = dict1[i][0]
         curr2 = dict1[i][1]
-    elif(curr1 < dict1[i][0] < dict1[i][1] < curr2):
+    elif curr1 < dict1[i][0] < dict1[i][1] < curr2:
         ans += abs(dict1[i][0] - curr1)
         ans += abs(dict1[i][1] - curr2)
         curr1 = dict1[i][0]

@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if n >= k * k and n % 2 == k % 2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

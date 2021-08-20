@@ -23,5 +23,4 @@ sm = 0
 for i in range(n):
     if int(s[i]) % 2 == 0:
         sm += i + 1
-
 print(sm)

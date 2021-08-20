@@ -1,9 +1,9 @@
-h, w, n, *l = map(int, open(0).read().split())
+(h, w, n, *l) = map(int, open(0).read().split())
 g = [[] for i in range(h)]
 r = t = 0
-for i, c in enumerate(l):
+for (i, c) in enumerate(l):
     i += 1
-    while c >= (s := w - t):
+    while c >= (s := (w - t)):
         g[r] += [i] * s
         r += 1
         c -= s

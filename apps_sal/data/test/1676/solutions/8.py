@@ -1,8 +1,8 @@
 from collections import deque
 from collections import namedtuple
-Query = namedtuple("Query", ["time", "duration"])
-query_number, max_query_queue_length = list(map(int, input().split()))
-queries = deque(Query(*list(map(int, input().split()))) for i in range(query_number))
+Query = namedtuple('Query', ['time', 'duration'])
+(query_number, max_query_queue_length) = list(map(int, input().split()))
+queries = deque((Query(*list(map(int, input().split()))) for i in range(query_number)))
 results = {}
 query_queue = deque()
 current_time = 0
@@ -22,4 +22,4 @@ while len(results) != query_number:
         else:
             ignored_query = queries.popleft()
             results[ignored_query.time] = -1
-print(" ".join(str(results[time]) for time in sorted(results.keys())))
+print(' '.join((str(results[time]) for time in sorted(results.keys()))))

@@ -2,9 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         edges = defaultdict(list)
-        for p, c in dislikes:
+        for (p, c) in dislikes:
             edges[p].append(c)
             edges[c].append(p)
 
@@ -19,7 +20,6 @@ class Solution:
                     if not dfs(c):
                         return False
             return True
-
         visited = {}
         for i in range(1, N + 1):
             if i not in visited:

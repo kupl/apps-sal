@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         line = int(file.readline())
         file.close()
     else:
@@ -9,7 +9,7 @@ def read(type=1):
         x = line[1]
         y = line[2]
         line = list(map(int, input().strip().split()))
-    return n, x, y, sorted(line, reverse=True)
+    return (n, x, y, sorted(line, reverse=True))
 
 
 def solve():
@@ -30,6 +30,6 @@ def solve():
         return sol
 
 
-n, x, y, a = read(0)
+(n, x, y, a) = read(0)
 sol = solve()
 print(sol)

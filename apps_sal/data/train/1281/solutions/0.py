@@ -6,6 +6,6 @@ for i in range(t):
     rev = a[::-1]
     dup = set(a)
     if rev == a and list(dup) == x:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

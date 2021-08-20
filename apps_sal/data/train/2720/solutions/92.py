@@ -9,5 +9,4 @@ def solution(digits):
         num = int(digits[i:j + 1])
         if num > ans:
             ans = num
-
     return ans

@@ -10,4 +10,4 @@ def pick_peaks(arr):
                     a.append(i)
                     b.append(arr[i])
                     break
-    return {"pos": a, "peaks": b}
+    return {'pos': a, 'peaks': b}

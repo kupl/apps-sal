@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 a = list(map(int, input().split()))
 d = []
@@ -8,10 +7,9 @@ e = []
 for i in range(1, n - 1):
     if a[i] != a[i - 1] and a[i] != a[i + 1]:
         e.append([a[i], i])
-    else:
-        if e != []:
-            d.append(e)
-            e = []
+    elif e != []:
+        d.append(e)
+        e = []
 if e != []:
     d.append(e)
 if len(d) == 0:
@@ -32,7 +30,6 @@ else:
                 e.append(m // 2 + 1)
                 for j in range(m):
                     a[d[i][j][1]] = 1
-
         if d[i][0][0] == 1:
             if len(d[i]) % 2 == 0:
                 m = len(d[i])

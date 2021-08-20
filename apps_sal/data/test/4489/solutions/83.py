@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -19,7 +18,6 @@ def main():
             word_dict[t] -= 1
         else:
             word_dict[t] = -1
-
     if max(word_dict.values()) < 0:
         print(0)
     else:

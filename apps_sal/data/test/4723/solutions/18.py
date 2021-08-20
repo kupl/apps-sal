@@ -1,8 +1,6 @@
 s = input()
 T = input()
-
 s = ''.join([x if x != '?' else '1' for x in list(s)])
-
 start = []
 for i in range(len(s) - len(T) + 1):
     tmp = 0
@@ -11,7 +9,6 @@ for i in range(len(s) - len(T) + 1):
             tmp += 1
     if tmp == len(T):
         start.append(i)
-
 candidates = []
 t = len(T)
 ans = ''
@@ -23,5 +20,4 @@ if len(start):
     ans = candidates[0].replace('1', 'a')
 else:
     ans = 'UNRESTORABLE'
-
 print(ans)

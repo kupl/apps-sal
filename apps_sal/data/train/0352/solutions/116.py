@@ -1,6 +1,6 @@
 class Solution:
-    def longestStrChain(self, words: List[str]) -> int:
 
+    def longestStrChain(self, words: List[str]) -> int:
         if len(words) == 0:
             return 0
 
@@ -18,7 +18,6 @@ class Solution:
                 if len(i) == target:
                     final.append(i)
             return final
-
         dp = collections.defaultdict(int)
         words.sort(key=lambda x: len(x))
         for word in words:
@@ -27,16 +26,8 @@ class Solution:
             if len(compareList) == 0:
                 dp[word] = 1
             else:
-
                 for small in compareList:
                     if isRelate(small, word):
                         maxx = max(maxx, dp[small])
-
                 dp[word] = maxx + 1
-
         return max(dp.values())
-
-
-#         def recur(word:str,words:List[str],remain:List[str],length:int):
-#             if len(word)==len(max(words)) and len(remain)==0:
-#                 return 1

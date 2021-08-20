@@ -1,11 +1,12 @@
 class Solution:
+
     def reverseWords(self, s):
         """
         :type s: str
         :rtype: str
         """
         s = list(s.split())
-        a = ""
+        a = ''
         for i in range(len(s)):
             if i + 1 < len(s):
                 s[i] = list(s[i])
@@ -17,9 +18,9 @@ class Solution:
                     s[i][end] = temp
                     start += 1
                     end -= 1
-                s[i] = "".join(s[i])
+                s[i] = ''.join(s[i])
                 a += s[i]
-                a += " "
+                a += ' '
             else:
                 s[i] = list(s[i])
                 start = 0
@@ -30,6 +31,6 @@ class Solution:
                     s[i][end] = temp
                     start += 1
                     end -= 1
-                s[i] = "".join(s[i])
+                s[i] = ''.join(s[i])
                 a += s[i]
         return a

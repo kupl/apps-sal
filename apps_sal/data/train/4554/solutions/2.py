@@ -6,4 +6,4 @@ def play_if_enough(hand, play):
     available.subtract(Counter(play))
     if min(available.values()) < 0:
         return (False, hand)
-    return (True, "".join(available.elements()))
+    return (True, ''.join(available.elements()))

@@ -1,4 +1,4 @@
-vowel = "aeiou"
+vowel = 'aeiou'
 t = int(input())
 for _ in range(t):
     cnt = 0

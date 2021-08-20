@@ -1,10 +1,11 @@
 class Solution:
+
     def maxSubArray(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        if all(n < 0 for n in nums):
+        if all((n < 0 for n in nums)):
             return max(nums)
         i = 0
         a = 0

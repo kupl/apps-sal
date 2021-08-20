@@ -2,11 +2,9 @@ import sys
 
 
 def main():
-    n, k = map(int, sys.stdin.readline().split())
+    (n, k) = map(int, sys.stdin.readline().split())
     a = list(map(int, sys.stdin.readline().split()))
-
     a = sorted(a)
-
     ans = 0
     for i in range(n):
         if k * 2 >= a[i]:
@@ -20,7 +18,6 @@ def main():
                     t = int(t / 2)
                 ans += 1
             k = a[i]
-
     print(ans)
 
 

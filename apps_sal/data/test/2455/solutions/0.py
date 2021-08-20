@@ -1,5 +1,4 @@
 T = int(input())
-
 for t in range(T):
     s = input()
     ans = 0
@@ -9,20 +8,20 @@ for t in range(T):
         y = 12 // x
         E = []
         for j in range(12):
-            if(j % y == 0):
-                E.append("")
+            if j % y == 0:
+                E.append('')
             E[-1] += s[j]
         for j in range(y):
             c = 0
             for z in range(i):
-                if(E[z][j] == 'X'):
+                if E[z][j] == 'X':
                     c += 1
-            if(c == i):
+            if c == i:
                 ans += 1
                 L.append(i)
                 break
-    print(ans, end=" ")
+    print(ans, end=' ')
     for item in L:
-        print(item, end="x")
-        print(12 // item, end=" ")
+        print(item, end='x')
+        print(12 // item, end=' ')
     print()

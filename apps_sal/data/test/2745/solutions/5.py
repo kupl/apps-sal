@@ -1,18 +1,19 @@
 class Solution:
+
     def findSubstring(self, s, words):
         """
         :type s: str
         :type words: List[str]
         :rtype: List[int]
         """
-        m, n, k, result, wordbase = len(s), len(words), len(words[0]), [], {}
+        (m, n, k, result, wordbase) = (len(s), len(words), len(words[0]), [], {})
         for value in words:
             if value in wordbase:
                 wordbase[value] += 1
             else:
                 wordbase[value] = 1
         for i in range(min(k, m - k * n + 1)):
-            base, starts, startw = {}, i, i
+            (base, starts, startw) = ({}, i, i)
             while starts + k * n <= m:
                 temp = s[startw:startw + k]
                 startw += k

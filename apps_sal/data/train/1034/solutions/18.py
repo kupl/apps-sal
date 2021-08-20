@@ -33,7 +33,7 @@ def recur(arr):
 
 
 for _ in range(int(input())):
-    k, X = list(map(int, input().split()))
+    (k, X) = list(map(int, input().split()))
     p = primes(X)
     if k >= len(p):
         print(sum(p) + (k - len(p)))

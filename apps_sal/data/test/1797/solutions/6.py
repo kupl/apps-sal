@@ -1,10 +1,8 @@
 n = int(input())
 ps = list(map(lambda x: int(x) - 1, input().split()))
-
 sum = 0
 maxest_pipe = 0
 max_pipe = 0
-
 free_points = set(range(n))
 free_points.remove(0)
 start_point = 0
@@ -16,7 +14,6 @@ while True:
     if next_point in free_points:
         free_points.remove(next_point)
     if next_point == start_point:
-
         sum += steps * steps
         if steps > maxest_pipe:
             max_pipe = maxest_pipe
@@ -31,5 +28,4 @@ while True:
             break
     else:
         current_point = next_point
-
 print(sum - max_pipe * max_pipe - maxest_pipe * maxest_pipe + (max_pipe + maxest_pipe) * (max_pipe + maxest_pipe))

@@ -6,7 +6,7 @@ def main():
         enum.append([(a + b) % 10 for b in digits])
     for digits in enum[:10]:
         for j in range(n):
-            if digits[j - 1] and not digits[j]:
+            if digits[j - 1] and (not digits[j]):
                 enum.append(digits[j:] + digits[:j])
     print(''.join(map(str, min(enum))))
 

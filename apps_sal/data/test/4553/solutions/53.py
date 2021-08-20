@@ -1,8 +1,6 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 s = input()
-
 ans = True
-
 for (i, char) in enumerate(s):
     if i == a:
         if char == '-':
@@ -16,7 +14,6 @@ for (i, char) in enumerate(s):
         except:
             ans = False
             break
-
 if ans:
     print('Yes')
 else:

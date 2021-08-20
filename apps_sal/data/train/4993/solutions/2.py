@@ -14,14 +14,14 @@ def temps(v0, slope, d_tot):
     d = 0
     watts = WATTS0
     theta = atan(slope / 100)
-    while(d < d_tot):
+    while d < d_tot:
         t += DELTA_T
         watts -= D_WATTS * DELTA_T
         gamma = G_THRUST * watts / (v * MASS)
         gamma -= GRAVITY_ACC * sin(theta)
         gamma -= DRAG * v * v / MASS
         v += gamma * DELTA_T
-        if v - 3 <= 1e-2:
+        if v - 3 <= 0.01:
             return -1
         d += v * DELTA_T / 60
     return round(t)

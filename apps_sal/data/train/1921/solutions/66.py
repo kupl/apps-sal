@@ -16,7 +16,7 @@ class DinnerPlates:
             heapq.heappop(self.available_stacks)
 
     def remove_empty_stacks_at_the_end(self):
-        while self.stack_list and not self.stack_list[-1]:
+        while self.stack_list and (not self.stack_list[-1]):
             self.stack_list.pop()
         while self.available_stacks and self.available_stacks[0] >= len(self.stack_list):
             heapq.heappop(self.available_stacks)
@@ -26,17 +26,10 @@ class DinnerPlates:
         return self.popAtStack(len(self.stack_list) - 1)
 
     def popAtStack(self, index: int) -> int:
-        if index < 0 or index >= len(self.stack_list) or not self.stack_list[index]:
+        if index < 0 or index >= len(self.stack_list) or (not self.stack_list[index]):
             return -1
         if len(self.stack_list[index]) == self.capacity:
             heapq.heappush(self.available_stacks, index)
         result = self.stack_list[index].pop()
         self.remove_empty_stacks_at_the_end()
         return result
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

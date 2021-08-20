@@ -1,25 +1,23 @@
 for _ in range(int(input())):
-    a, b, c, d = list(map(int, input().split()))
-    st = "YES"
-    sad, spr = 0, 0
+    (a, b, c, d) = list(map(int, input().split()))
+    st = 'YES'
+    (sad, spr) = (0, 0)
     if a == b:
-        st = "YES"
+        st = 'YES'
     elif a > b:
-        sad, spr = max(c, d), min(c, d)
+        (sad, spr) = (max(c, d), min(c, d))
         if sad == spr:
-            st = "NO"
+            st = 'NO'
+        elif (a - b) % (sad - spr) == 0:
+            st = 'YES'
         else:
-            if (a - b) % (sad - spr) == 0:
-                st = "YES"
-            else:
-                st = "NO"
+            st = 'NO'
     else:
-        sad, spr = min(c, d), max(c, d)
+        (sad, spr) = (min(c, d), max(c, d))
         if sad == spr:
-            st = "NO"
+            st = 'NO'
+        elif (-a + b) % (-sad + spr) == 0:
+            st = 'YES'
         else:
-            if (-a + b) % (-sad + spr) == 0:
-                st = "YES"
-            else:
-                st = "NO"
+            st = 'NO'
     print(st)

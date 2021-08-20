@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, val):
         self.val = val
         self.parent = self
@@ -13,6 +14,7 @@ class UnionFind:
 
 
 class Solution:
+
     def primeSet(self, n, cache):
         if n in cache:
             return cache[n]
@@ -31,9 +33,7 @@ class Solution:
             primes = self.primeSet(x, cache)
             for p in primes:
                 primeToNumberMap[p].append(x)
-
         for p in primeToNumberMap:
             for i in range(len(primeToNumberMap[p]) - 1):
                 unionFinds[primeToNumberMap[p][i]].union(unionFinds[primeToNumberMap[p][i + 1]])
-
         return max(Counter([unionFinds[x].find().val for x in A]).values())

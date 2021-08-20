@@ -1,5 +1,4 @@
 import collections
-
 s = input()
 k = int(input())
 b = collections.Counter(s)

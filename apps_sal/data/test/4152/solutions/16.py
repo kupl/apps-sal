@@ -1,12 +1,17 @@
 import math
 from collections import defaultdict
-def getInputList(): return list(input().split())
-def getInputIntList(): return list(map(int, input().split()))
+
+
+def getInputList():
+    return list(input().split())
+
+
+def getInputIntList():
+    return list(map(int, input().split()))
 
 
 n = input()
 arr = getInputIntList()
-
 myset = defaultdict(lambda: 0)
 for i in arr:
     myset[i] += 1
@@ -17,7 +22,6 @@ for i in arr:
         if myset[i] > 1:
             nset.add(i)
     elif int(cb + '0', 2) - i in myset:
-        # print(i,int(cb+'0',2)-i)
         nset.add(i)
         nset.add(int(cb + '0', 2) - i)
 count = 0

@@ -1,5 +1,4 @@
 def sumin(n):
-
     lst = [i for i in range(1, n + 1)]
     summa = sum(lst)
     delta = summa
@@ -16,7 +15,6 @@ def sumax(n):
     for x in lst:
         summa += delta
         delta += x
-
     return summa
 
 

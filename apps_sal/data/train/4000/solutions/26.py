@@ -7,5 +7,5 @@ def strong_num(number):
     for i in arr:
         x += factorial(i)
     if x == number:
-        return "STRONG!!!!"
-    return "Not Strong !!"
+        return 'STRONG!!!!'
+    return 'Not Strong !!'

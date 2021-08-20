@@ -1,5 +1,5 @@
 def main():
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     x -= y + z * 2
     ans = 0
     if x < 0:

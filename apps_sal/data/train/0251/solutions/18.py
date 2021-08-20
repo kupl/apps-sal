@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         op = ['*', '//', '+', '-']
         op_idx = -1

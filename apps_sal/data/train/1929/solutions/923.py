@@ -12,14 +12,11 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         survived = []
         found = False
-
         if letter in self.root:
             self.running.append(self.root)
-
         for node in self.running:
             if letter in node:
                 survived.append(node[letter])
                 found = found or 'is_end' in survived[-1]
-
         self.running = survived
         return found

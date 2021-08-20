@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, length):
         self.storage = [x for x in range(length)]
         self.rank = [0] * length
@@ -19,33 +20,28 @@ class DSU:
 
 
 class Solution:
+
     def distance(self, p1, p2):
         return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        possible_pairs = []  # (from, to, distance)
+        possible_pairs = []
         n = len(points)
         for i in range(n):
             for j in range(i + 1, n):
                 possible_pairs.append((i, j, self.distance(points[i], points[j])))
-
         possible_pairs.sort(key=lambda x: x[2])
-
         result = 0
         index = 0
         count = 0
         dsu = DSU(n)
         while index < len(possible_pairs) and count != n - 1:
-            f, to, d = possible_pairs[index]
-
+            (f, to, d) = possible_pairs[index]
             x = dsu.find(f)
             y = dsu.find(to)
-
             if x != y:
                 count += 1
                 dsu.union(x, y)
                 result += d
-
             index += 1
-
         return result

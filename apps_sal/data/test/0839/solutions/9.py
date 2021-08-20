@@ -8,7 +8,7 @@ for i in range(5):
             for k in range(5):
                 if i != k and j != k:
                     for l in range(5):
-                        if i != l and j != l and k != l:
+                        if i != l and j != l and (k != l):
                             m = 10 - i - j - k - l
                             sum = g[i][j] + g[j][i] + g[j][k] + g[k][j]
                             sum += 2 * (g[k][l] + g[l][k] + g[l][m] + g[m][l])

@@ -5,5 +5,5 @@ for i in range(1, n + 1):
 ans = 0
 for j in range(10):
     for k in range(10):
-        ans += (count[j][k] * count[k][j])
+        ans += count[j][k] * count[k][j]
 print(ans)

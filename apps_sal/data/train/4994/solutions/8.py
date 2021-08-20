@@ -3,9 +3,9 @@ from collections import defaultdict
 
 def word_problem(rules, from_str, to_str, applications):
     d = defaultdict(list)
-    for x, y in rules:
+    for (x, y) in rules:
         d[y].append(x)
-    b, visited = False, set()
+    (b, visited) = (False, set())
 
     def dfs(s, p=0):
         nonlocal b

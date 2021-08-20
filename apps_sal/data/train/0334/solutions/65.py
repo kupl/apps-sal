@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         if len(s) == 1:
             return 0
@@ -8,16 +9,14 @@ class Solution:
             if i == len(s) - 1:
                 if s[i] == s[j]:
                     temp.append([j, i + 1])
-                else:
-                    if (i - j) > 1:
-                        temp.append([j, i])
-            else:
-                if s[j] != s[i]:
-                    if (i - j) > 1:
-                        temp.append([j, i])
-                    j = i
+                elif i - j > 1:
+                    temp.append([j, i])
+            elif s[j] != s[i]:
+                if i - j > 1:
+                    temp.append([j, i])
+                j = i
         res = 0
-        for i, j in temp:
+        for (i, j) in temp:
             new = cost[i:j]
             val = max(new)
             p = 0

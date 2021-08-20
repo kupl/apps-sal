@@ -1,5 +1,5 @@
 def simplify(n):
-    for d in range(int(n ** .5), 0, -1):
+    for d in range(int(n ** 0.5), 0, -1):
         if not n % d ** 2:
             break
     if d * d == n:
@@ -11,5 +11,5 @@ def simplify(n):
 
 
 def desimplify(s):
-    x, _, y = s.partition('sqrt')
+    (x, _, y) = s.partition('sqrt')
     return int(x or '1') ** 2 * int(y or '1')

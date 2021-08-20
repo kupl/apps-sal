@@ -9,8 +9,8 @@ def main():
     for i in range(N):
         dic[S[i]].append(i)
     for _ in range(Q):
-        query, a, c = input().split()
-        if query == "1":
+        (query, a, c) = input().split()
+        if query == '1':
             i = int(a) - 1
             if S[i] == c:
                 continue
@@ -19,10 +19,10 @@ def main():
             insort_left(dic[c], i)
             S[i] = c
         else:
-            l, r = int(a) - 1, int(c) - 1
+            (l, r) = (int(a) - 1, int(c) - 1)
             ans = 0
             for inds in dic.values():
-                if inds and l <= inds[-1] and inds[bisect_left(inds, l)] <= r:
+                if inds and l <= inds[-1] and (inds[bisect_left(inds, l)] <= r):
                     ans += 1
             print(ans)
 

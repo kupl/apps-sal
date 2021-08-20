@@ -4,7 +4,7 @@ def cut_log(p, n):
 
 
 def cut_log_internal(p, n, d):
-    if (n == 0):
+    if n == 0:
         return 0
     elif n in d:
         return d[n]

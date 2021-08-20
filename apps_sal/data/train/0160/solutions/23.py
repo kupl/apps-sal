@@ -1,7 +1,7 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
-
         dp = [[2500001] * (n + 1) for _ in range(n + 1)]
 
         def kmp(i, j):
@@ -10,7 +10,6 @@ class Solution:
             elif dp[i][j] != 2500001:
                 return dp[i][j]
             else:
-
                 parity = (j - i + 1) % 2
                 if parity == 1:
                     dp[i][j] = min(-piles[i] + kmp(i + 1, j), -piles[j] + kmp(i, j - 1))

@@ -1,7 +1,7 @@
-n, W = map(int, input().split())
-wv = [[]for _ in range(4)]
+(n, W) = map(int, input().split())
+wv = [[] for _ in range(4)]
 for i in range(n):
-    w, v = map(int, input().split())
+    (w, v) = map(int, input().split())
     if i == 0:
         r = w
         wv[0].append(v)

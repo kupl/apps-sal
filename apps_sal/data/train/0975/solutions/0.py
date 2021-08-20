@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, r, x, y = map(int, input().split())
+    (n, r, x, y) = map(int, input().split())
     if x > 0:
         a = list(map(int, input().split()))
     if y > 0:

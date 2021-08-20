@@ -1,19 +1,16 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     a.sort()
     count = 0
     for i in range(n):
         if a[i] >= x / 2:
             break
-        # count+=1
     count = i
-
     while 1:
         if a[i] <= x:
             count += 1
             x = 2 * a[i]
-
         else:
             while a[i] > x:
                 x = 2 * x

@@ -1,5 +1,5 @@
 def sea_sick(sea):
-    c, p = 0, sea[0]
+    (c, p) = (0, sea[0])
     for s in sea[1:]:
         if s != p:
             c += 1

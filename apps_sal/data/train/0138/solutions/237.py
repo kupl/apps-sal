@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         dp = [[0] * 2 for _ in range(len(nums))]
         dp[0][0] = nums[0] > 0

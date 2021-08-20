@@ -2,7 +2,7 @@ from copy import deepcopy
 n = int(input())
 H = list(map(int, input().split()))
 ans = 0
-while any(h != 0 for h in H):
+while any((h != 0 for h in H)):
     X = list()
     tmp = list()
     for h in H:
@@ -14,7 +14,7 @@ while any(h != 0 for h in H):
                 tmp += list([y - m for y in X])
                 ans += m
                 X = list()
-            tmp += [0, ]
+            tmp += [0]
     if X:
         m = min(X)
         tmp += list([y - m for y in X])

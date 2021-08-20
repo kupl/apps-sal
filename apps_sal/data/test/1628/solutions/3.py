@@ -5,5 +5,4 @@ if a > b:
     s = 'x' * (a - b)
 else:
     s = 'y' * (b - a)
-
 print(s)

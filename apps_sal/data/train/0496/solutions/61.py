@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -11,5 +12,4 @@ class Solution:
                 move += step
                 a = a + step
             B.append(a)
-
         return move

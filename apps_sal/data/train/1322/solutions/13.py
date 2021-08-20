@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 input = sys.stdin.readline
 t = int(input())
@@ -13,6 +12,6 @@ for you in range(t):
     z = li[k - 1]
     count = 0
     for i in li:
-        if(i >= z):
+        if i >= z:
             count += 1
     print(count)

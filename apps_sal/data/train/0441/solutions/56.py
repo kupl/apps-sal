@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         count = 0
         for n in range(1, math.ceil(-0.5 + math.sqrt(0.25 + 2 * N))):

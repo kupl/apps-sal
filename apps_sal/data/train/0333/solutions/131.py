@@ -2,9 +2,10 @@ from collections import deque, defaultdict
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         idxs = defaultdict(list)
-        for idx, e in enumerate(arr):
+        for (idx, e) in enumerate(arr):
             idxs[e].append(idx)
 
         def bfs(idx):

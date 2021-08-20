@@ -1,6 +1,5 @@
-# cook your dish her
 t = int(input())
-while(t):
+while t:
     a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p']
     n = int(input())
     s = input()

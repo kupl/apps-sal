@@ -2,13 +2,13 @@ import sys
 
 
 def main():
-    n, x, d = list(map(int, input().split()))
+    (n, x, d) = list(map(int, input().split()))
     events_map = {}
     if d == 0:
         if x == 0:
-            print((1))
+            print(1)
         else:
-            print((n + 1))
+            print(n + 1)
         return
     for k in range(n + 1):
         l = (k * x if d > 0 else -k * x) + (k - 1) * k // 2 * abs(d)

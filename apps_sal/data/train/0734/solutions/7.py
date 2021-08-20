@@ -1,4 +1,5 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 for _ in range(int(input())):
@@ -17,11 +18,10 @@ for _ in range(int(input())):
             f = 1
             break
     if f:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
         res = []
-        # print(d)
         for i in L1:
             ind = d[i][1].pop()
             if n % 2 and ind == n - 1:

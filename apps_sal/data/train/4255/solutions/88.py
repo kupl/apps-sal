@@ -1,5 +1,5 @@
 def make_upper_case(s):
-    str = ""
+    str = ''
     for a in s:
-        str += (a.upper())
+        str += a.upper()
     return str

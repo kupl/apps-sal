@@ -21,14 +21,10 @@ def lm():
 
 
 q = nn()
-
 for _ in range(q):
     n = nn()
-
     per = lm()
-
     best = [per[0]]
-
     for i in range(len(per) - 2):
         minper = min(per[i], per[i + 1], per[i + 2])
         maxper = max(per[i], per[i + 1], per[i + 2])

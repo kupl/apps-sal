@@ -1,5 +1,5 @@
 def solve(s):
-    f = [i for i in range(len(s))if s[i] == ' ']
+    f = [i for i in range(len(s)) if s[i] == ' ']
     s = s.replace(' ', '')[::-1]
     g = ''
     for i in range(len(s)):

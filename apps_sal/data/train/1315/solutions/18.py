@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 n = int(input().strip())
 diz = {}
@@ -10,8 +9,7 @@ for _ in range(n):
     if values not in diz:
         diz[values] = 1
         counter += 1
-    else:
-        if diz[values] == 1:
-            counter -= 1
-            diz[values] = 0
+    elif diz[values] == 1:
+        counter -= 1
+        diz[values] = 0
 print(counter)

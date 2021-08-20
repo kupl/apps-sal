@@ -8,9 +8,7 @@ pr = d
 ans = 0
 while skak < n[0] - 1 and pr > 0:
     pr = d
-
     while a[pr + skak] != '1' and pr != 0:
-
         pr -= 1
     skak = pr + skak
     ans += 1

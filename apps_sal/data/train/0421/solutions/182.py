@@ -1,6 +1,7 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
-        i, j = 0, 1
+        (i, j) = (0, 1)
         k = 0
         while j + k < len(s):
             if s[i + k] == s[j + k]:

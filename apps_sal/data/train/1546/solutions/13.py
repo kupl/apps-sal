@@ -6,9 +6,9 @@ for i in range(t):
         s = 'NO'
     else:
         for d in range(3):
-            n = l[d]**2
-            k = l[d - 1]**2
-            j = l[d - 2]**2
+            n = l[d] ** 2
+            k = l[d - 1] ** 2
+            j = l[d - 2] ** 2
             if n == k + j:
                 s = 'YES'
                 break

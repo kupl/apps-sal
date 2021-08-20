@@ -26,7 +26,7 @@ for _ in range(int(input())):
                 if j < num - 1 and arr[j + 1] == 2:
                     dpr[i] = dp[i - 1] * (count + 1) % 1000000007
                 else:
-                    dpr[i] = dp[i - 1] * (count) % 1000000007
+                    dpr[i] = dp[i - 1] * count % 1000000007
             elif count % 2 == 0:
                 dpr[i] = dp[i - 1] * (count - 1) % 1000000007
         ans += (dpr[i] + dp[i]) % 1000000007

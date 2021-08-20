@@ -6,4 +6,4 @@ def factorial(n):
         return None
     if n < 2:
         return 1
-    return reduce((lambda x, y: x * y), range(1, n + 1))
+    return reduce(lambda x, y: x * y, range(1, n + 1))

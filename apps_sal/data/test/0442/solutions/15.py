@@ -1,5 +1,4 @@
 r = int(input())
-
 if r >= 5:
     if r % 2 == 0:
         print('NO')

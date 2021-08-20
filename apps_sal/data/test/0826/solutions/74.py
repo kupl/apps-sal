@@ -1,5 +1,4 @@
 n = int(input())
-
 l = 1
 r = n + 1
 for i in range(1, 100):

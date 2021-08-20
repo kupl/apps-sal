@@ -1,7 +1,5 @@
-a, b, c = map(int, input().split())
-# b/aの商がcより大きければcを出力
+(a, b, c) = map(int, input().split())
 if b // a > c:
     print(c)
-# そうでなければb/aの商を出力
 else:
     print(b // a)

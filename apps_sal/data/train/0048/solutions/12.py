@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, y, k = map(int, input().split())
+    (x, y, k) = map(int, input().split())
     a = (y + 1) * k - 1
     b = x - 1
     if a % b == 0:

@@ -1,6 +1,9 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def decompose(n):
+
             def rec(n, start):
                 for i in range(start, int(math.sqrt(n)) + 1, 2):
                     if n % i == 0:

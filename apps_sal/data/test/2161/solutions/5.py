@@ -9,7 +9,6 @@ for i in range(n):
             d[name].append(s[2 + z])
         else:
             d[name] = [s[2 + z]]
-
 for k in d.keys():
     a = set(d[k])
     a = list(a)

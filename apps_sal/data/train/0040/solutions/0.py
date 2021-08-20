@@ -4,7 +4,7 @@ def main():
         n = int(stdin.readline())
         inp1 = [-1] * (n + 1)
         inp2 = [-1] * (n + 1)
-        for i, ai in enumerate(map(int, stdin.readline().split())):
+        for (i, ai) in enumerate(map(int, stdin.readline().split())):
             if inp1[ai] < 0:
                 inp1[ai] = i
             inp2[ai] = i

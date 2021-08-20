@@ -1,5 +1,5 @@
 def string_clean(s):
-    y = ""
+    y = ''
     for i in s:
         if i.isnumeric():
             continue

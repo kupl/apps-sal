@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 tlist = [int(t) for t in input().split()]
 maxcount = 0
 time = 0
@@ -16,7 +16,4 @@ while j != n:
         time -= tlist[i]
         i += 1
         count -= 1
-
 print(maxcount)
-
-# Время прохода - 2n

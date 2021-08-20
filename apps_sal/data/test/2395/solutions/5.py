@@ -2,7 +2,7 @@ from math import inf
 t = int(input())
 for q in range(t):
     tt = input()
-    s = "01" * len(tt)
+    s = '01' * len(tt)
     one = False
     zero = False
     for i in tt:

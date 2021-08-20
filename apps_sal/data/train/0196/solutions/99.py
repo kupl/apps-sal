@@ -1,10 +1,10 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         pre = 0
         rtn = float('-inf')
         if max(A) <= 0:
             return max(A)
-
         for i in range(len(A)):
             pre += A[i]
             if pre <= 0:

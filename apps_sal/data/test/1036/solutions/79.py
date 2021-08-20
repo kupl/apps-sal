@@ -1,6 +1,4 @@
-# 先頭プレイヤーがS[offset]で始まる部分トーナメントを考える
-# 2^k人の勝者を予想する。
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = input()
 dp = [['?'] * (N + 1) for i in range(K + 1)]
 
@@ -10,7 +8,7 @@ def memo(k, i):
         return S[i]
     if dp[k][i] != '?':
         return dp[k][i]
-    ni = (i + 2**(k - 1)) % N
+    ni = (i + 2 ** (k - 1)) % N
     res = Win(memo(k - 1, i), memo(k - 1, ni))
     dp[k][i] = res
     return dp[k][i]

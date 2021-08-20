@@ -3,11 +3,11 @@ import fractions
 
 def read_data():
     m = int(input())
-    h1, a1 = map(int, input().split())
-    x1, y1 = map(int, input().split())
-    h2, a2 = map(int, input().split())
-    x2, y2 = map(int, input().split())
-    return m, h1, a1, x1, y1, h2, a2, x2, y2
+    (h1, a1) = map(int, input().split())
+    (x1, y1) = map(int, input().split())
+    (h2, a2) = map(int, input().split())
+    (x2, y2) = map(int, input().split())
+    return (m, h1, a1, x1, y1, h2, a2, x2, y2)
 
 
 def solve(m, h1, a1, x1, y1, h2, a2, x2, y2):
@@ -70,25 +70,25 @@ def find_time(u1, s1, u2, s2):
     g = fractions.gcd(s1, s2)
     if abs(u1 - u2) % g:
         return -1
-    k1, k2 = extended_euclid(s1, s2, u2 - u1, g)
+    (k1, k2) = extended_euclid(s1, s2, u2 - u1, g)
     b = s2 // g
-    return (k1 % b) * s1 + u1
+    return k1 % b * s1 + u1
 
 
 def egcd(a, b):
-    x, lastx = 0, 1
-    y, lasty = 1, 0
+    (x, lastx) = (0, 1)
+    (y, lasty) = (1, 0)
     while b:
         q = a // b
-        a, b = b, a % b
-        x, lastx = lastx - q * x, x
-        y, lasty = lasty - q * y, y
-    return lastx, lasty
+        (a, b) = (b, a % b)
+        (x, lastx) = (lastx - q * x, x)
+        (y, lasty) = (lasty - q * y, y)
+    return (lastx, lasty)
 
 
 def extended_euclid(a, b, c, g):
-    x, y = egcd(a, b)
-    return (c // g) * x, (x // g) * y
+    (x, y) = egcd(a, b)
+    return (c // g * x, x // g * y)
 
 
 param = read_data()

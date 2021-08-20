@@ -1,7 +1,7 @@
 def capitalize(s):
     index = 0
-    string1 = ""
-    string2 = ""
+    string1 = ''
+    string2 = ''
     for i in s:
         if index % 2 == 0:
             string1 += i.upper()

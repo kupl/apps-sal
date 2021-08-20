@@ -5,10 +5,9 @@ for i in range(l):
     if i % 2:
         if S[i] == 'R':
             yes = False
-    else:
-        if S[i] == 'L':
-            yes = False
+    elif S[i] == 'L':
+        yes = False
 if yes:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

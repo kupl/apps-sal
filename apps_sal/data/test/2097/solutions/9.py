@@ -8,7 +8,7 @@ for i in range(t):
         if item == 0:
             arr += 1
             s += 1
-    if (s == 0):
+    if s == 0:
         print(arr + 1)
     else:
         print(arr)

@@ -1,11 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
-
 cnt = dict()
 sum = dict()
-
 res = n * 20
-
 for x in a:
     y = x
     cur = 0

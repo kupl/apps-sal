@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         memo = {}
 
@@ -9,7 +10,6 @@ class Solution:
                 return 0
             if m < 0:
                 return float('inf')
-
             if m not in memo:
                 ans = float('inf')
                 for v in coins:

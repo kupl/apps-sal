@@ -2,7 +2,9 @@ from collections import Counter
 
 
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
+
         def issubset(wc, cc):
             for x in wc.keys():
                 cc[x] = cc.get(x, 0) - wc[x]

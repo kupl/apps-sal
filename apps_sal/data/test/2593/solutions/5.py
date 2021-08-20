@@ -24,7 +24,7 @@ def ma():
 
 
 t = int(input())
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
@@ -33,10 +33,10 @@ while(t):
         z = bin(i)[2:]
         z = z.zfill(30)
         for j in range(30):
-            if(z[j] == '1'):
+            if z[j] == '1':
                 b[j] += 1
                 break
     s = 0
     for i in b:
-        s += (i * (i - 1)) // 2
+        s += i * (i - 1) // 2
     print(s)

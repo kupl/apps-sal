@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         monotone = 0
         for i in range(len(A) - 1):

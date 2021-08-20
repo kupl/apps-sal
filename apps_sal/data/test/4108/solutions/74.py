@@ -15,7 +15,6 @@ def solve():
 
 S1 = solve()
 T1 = solve()
-
 if S1 == T1:
     print('Yes')
 else:

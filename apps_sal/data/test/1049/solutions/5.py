@@ -1,7 +1,5 @@
-n, d = [int(x) for x in input().split(' ')]
-
-m, c = 0, 0
-
+(n, d) = [int(x) for x in input().split(' ')]
+(m, c) = (0, 0)
 for i in range(d):
     k = input()
     if k.count('1') == n:
@@ -10,6 +8,5 @@ for i in range(d):
         continue
     else:
         c += 1
-
 m = max(m, c)
 print(m)

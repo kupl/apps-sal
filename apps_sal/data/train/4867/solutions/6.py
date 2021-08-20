@@ -1,14 +1,14 @@
 def check(c):
-    if c[0] in "ACEG":
+    if c[0] in 'ACEG':
         if int(c[1]) % 2 == 0:
-            return "W"
+            return 'W'
         else:
-            return "B"
-    elif c[0] in "BDFH":
+            return 'B'
+    elif c[0] in 'BDFH':
         if int(c[1]) % 2 == 0:
-            return "B"
+            return 'B'
         else:
-            return "W"
+            return 'W'
 
 
 def chess_board_cell_color(cell1, cell2):

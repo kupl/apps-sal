@@ -1,8 +1,7 @@
-# cook your dish here
 for i in range(int(input())):
     s = input()
     s1 = input()
-    k, l, g = 0, 0, 0
+    (k, l, g) = (0, 0, 0)
     gp = []
     f = False
     for i in range(len(s)):

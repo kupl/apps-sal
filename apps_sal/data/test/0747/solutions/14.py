@@ -19,12 +19,10 @@ def main():
             s1.append((h, m))
         else:
             s2.append((h, m))
-
-    s1 = sorted(s1, key=itemgetter(0))  # secondary key, height, ascending
-    s1 = sorted(s1, key=itemgetter(1), reverse=True)  # primary key, mass, descending
+    s1 = sorted(s1, key=itemgetter(0))
+    s1 = sorted(s1, key=itemgetter(1), reverse=True)
     s2 = sorted(s2, key=itemgetter(0))
     s2 = sorted(s2, key=itemgetter(1), reverse=True)
-
     s1A = s1[:]
     s2A = s2[:]
     jumpA = x
@@ -39,7 +37,6 @@ def main():
                 jumpA = jumpA + currentA[i][1]
                 del currentA[i]
                 break
-
         if found == 1:
             if currentA == s1A:
                 currentA = s2A
@@ -47,7 +44,6 @@ def main():
                 currentA = s1A
         else:
             break
-
     s1B = s1[:]
     s2B = s2[:]
     jumpB = x
@@ -62,7 +58,6 @@ def main():
                 jumpB = jumpB + currentB[i][1]
                 del currentB[i]
                 break
-
         if found == 1:
             if currentB == s1B:
                 currentB = s2B
@@ -70,7 +65,6 @@ def main():
                 currentB = s1B
         else:
             break
-
     print(max(candiesA, candiesB))
 
 

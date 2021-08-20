@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 p = [input() for i in range(n)]
-p1 = [[1 if p[i][j] == 'B' else -1 for j in range(m)]
-      for i in range(n)]
+p1 = [[1 if p[i][j] == 'B' else -1 for j in range(m)] for i in range(n)]
 tm = [0 for i in range(m)]
 r = 0
 for i in range(n - 1, -1, -1):

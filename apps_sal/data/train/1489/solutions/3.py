@@ -1,4 +1,4 @@
-s, k = map(int, input().split())
+(s, k) = map(int, input().split())
 a = str(s)
 l = [int(d) for d in str(a)]
 while k > 0:
@@ -10,4 +10,4 @@ while k > 0:
             k -= 1
         if k < 1:
             break
-print(*l, sep="")
+print(*l, sep='')

@@ -1,4 +1,4 @@
-n, price = map(int, input().split())
+(n, price) = map(int, input().split())
 history = []
 ans = 0
 cnt = 0

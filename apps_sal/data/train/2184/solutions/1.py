@@ -1,8 +1,6 @@
 from sys import stdin
-n, q = tuple(int(x) for x in stdin.readline().split())
-
-tpl = tuple(x for x in stdin.readline().split())
-
+(n, q) = tuple((int(x) for x in stdin.readline().split()))
+tpl = tuple((x for x in stdin.readline().split()))
 dic = {}
 amt = {}
 for i in range(n):
@@ -11,7 +9,6 @@ for i in range(n):
         amt[tpl[i]] = 1
     else:
         amt[tpl[i]] += 1
-
 ans = 0
 counter = 0
 while counter < n:
@@ -23,7 +20,6 @@ while counter < n:
             involved.add(tpl[counter])
             right_bound = max(right_bound, dic[tpl[counter]])
         counter += 1
-
-    temp = tuple(amt[x] for x in involved)
+    temp = tuple((amt[x] for x in involved))
     ans += sum(temp) - max(temp)
 print(ans)

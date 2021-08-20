@@ -1,11 +1,10 @@
 def iroha():
-    num = list((input()))
+    num = list(input())
     for i in num:
-        if i == "9":
-            print("Yes")
+        if i == '9':
+            print('Yes')
             return
-
-    print("No")
+    print('No')
 
 
 def __starting_point():

@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         if not nums:
             return 0
@@ -8,7 +9,7 @@ class Solution:
         right = len(nums) - 1
         while left <= right:
             if nums[left] + nums[right] <= target:
-                result += 2**(right - left)
+                result += 2 ** (right - left)
                 left += 1
             else:
                 right -= 1

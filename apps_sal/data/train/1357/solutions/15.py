@@ -14,15 +14,14 @@ for _ in range(T):
                 Fives = Fives - 1
             else:
                 Flag = False
+        elif Tens > 0:
+            Tens = Tens - 1
+        elif Fives > 1:
+            Fives = Fives - 2
         else:
-            if Tens > 0:
-                Tens = Tens - 1
-            elif Fives > 1:
-                Fives = Fives - 2
-            else:
-                Flag = False
-                break
+            Flag = False
+            break
     if Flag == True:
         print('YES')
     else:
-        print("NO")
+        print('NO')

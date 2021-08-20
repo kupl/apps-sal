@@ -11,4 +11,4 @@ for i in range(a):
     if y == 1:
         print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -9,7 +9,7 @@ def ex_euler(n):
 
     def z(x, y):
         return 1 + 0.5 * exp(-4 * x) - 0.5 * exp(-2 * x)
-    x, y = 0, 1
+    (x, y) = (0, 1)
     errors = []
     for _ in range(n + 1):
         errors.append(abs(y - z(x, y)) / z(x, y))

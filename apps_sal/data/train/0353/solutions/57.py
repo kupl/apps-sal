@@ -1,6 +1,6 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
-        # two pointer solution
         nums.sort()
         ans = 0
         for i in range(len(nums)):
@@ -14,5 +14,5 @@ class Solution:
                     hi = mid - 1
                 else:
                     lo = mid + 1
-            ans = (ans + ((1 << (hi - i)))) % (10**9 + 7)
+            ans = (ans + (1 << hi - i)) % (10 ** 9 + 7)
         return ans

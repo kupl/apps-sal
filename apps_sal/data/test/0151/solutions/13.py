@@ -4,7 +4,7 @@ st = []
 for i in range(len(s)):
     if s[i] in d:
         st = []
-        print(s[i], end="")
+        print(s[i], end='')
         continue
     st.append(s[i])
     if st == [s[i], s[i], s[i]]:
@@ -12,6 +12,6 @@ for i in range(len(s)):
         print(s[i], end='')
     elif len(st) == 3:
         st = [s[i]]
-        print(" " + s[i], end="")
+        print(' ' + s[i], end='')
     else:
         print(s[i], end='')

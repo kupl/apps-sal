@@ -1,16 +1,16 @@
 import sys
 import bisect
-def input(): return sys.stdin.readline().rstrip()
 
 
-n, k = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(n, k) = list(map(int, input().split()))
 arr = sorted(map(int, input().split()))
 mid = arr[n // 2]
-
-
 s = mid
-e = int(2e9)
-
+e = int(2000000000.0)
 while s <= e:
     m = (s + e) // 2
     z = 0
@@ -21,5 +21,4 @@ while s <= e:
         e = m - 1
     else:
         s = m + 1
-
 print(e)

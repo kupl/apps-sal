@@ -6,11 +6,10 @@ def FindSumOfDigits(n):
     return Sum
 
 
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 total = 0
 for i in range(N):
     Sum = FindSumOfDigits(i + 1)
     if A <= Sum and Sum <= B:
         total += i + 1
-
 print(total)

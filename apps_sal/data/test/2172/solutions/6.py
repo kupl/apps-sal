@@ -7,7 +7,7 @@ for x in range(int(inp[1])):
     else:
         change[a[0]] = a[0]
 b = input().split(' ')
-out = ""
+out = ''
 c = b.pop(0)
 out = out + change[c]
 for y in b:

@@ -7,11 +7,11 @@ def main():
         for i in range(len(l)):
             if l[i] != 'x':
                 l[i] = 'x'
-        return "".join(str(v) for v in l)
+        return ''.join((str(v) for v in l))
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

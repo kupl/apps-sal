@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 dict1 = {}
 for i in range(n):
@@ -11,10 +11,10 @@ flag = 0
 colors = {}
 for i in list(dict1.keys()):
     colors[i] = [0] * k
-    if(len(dict1[i]) > k):
+    if len(dict1[i]) > k:
         flag = 1
         break
-if(flag == 1):
+if flag == 1:
     print('NO')
 else:
     ansarr = [0] * n
@@ -24,9 +24,9 @@ else:
     val = 0
     for i in list(dict1.keys()):
         for j in dict1[i]:
-            if(ansarr[j] == 0):
+            if ansarr[j] == 0:
                 for l in range(k):
-                    if(colors[i][l] == 0):
+                    if colors[i][l] == 0:
                         ansarr[j] = l + 1
                         colors[i][l] = 1
                         break

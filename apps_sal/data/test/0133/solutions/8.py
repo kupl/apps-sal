@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 mod = 10 ** 9 + 7
 
 
@@ -14,4 +13,4 @@ def binpow(a, n):
     return ans
 
 
-print(binpow((binpow(2, m) - 1), n))
+print(binpow(binpow(2, m) - 1, n))

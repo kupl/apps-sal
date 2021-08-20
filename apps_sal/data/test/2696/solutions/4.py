@@ -1,15 +1,6 @@
 import sys
 import math
 from collections import defaultdict, Counter
-
-# input=sys.stdin.readline
-# def print(x):
-#     sys.stdout.write(str(x)+"\n")
-
-# sys.stdout=open("CP1/output.txt",'w')
-# sys.stdin=open("CP1/input.txt",'r')
-
-# m=pow(10,9)+7
 n = int(input())
 a = list(map(int, input().split()))
 ans = 1

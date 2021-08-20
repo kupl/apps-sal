@@ -6,7 +6,7 @@ for i in range(n):
     qh[i] = []
     qc[i] = 0
 for i in range(n - 2):
-    q1, q2, q3 = list(map(int, input().split()))
+    (q1, q2, q3) = list(map(int, input().split()))
     q.append([q1 - 1, q2 - 1, q3 - 1])
     for d in [q1, q2, q3]:
         qh[d - 1].append(i)
@@ -15,7 +15,7 @@ pp = []
 for i in range(n):
     if qc[i] == 1:
         pp.append(i)
-p1, p2 = pp
+(p1, p2) = pp
 p3 = -1
 p4 = -1
 for i in q[qh[p2][0]]:
@@ -23,7 +23,7 @@ for i in q[qh[p2][0]]:
         p3 = i
     if qc[i] == 2:
         p4 = i
-p5, p6 = -1, -1
+(p5, p6) = (-1, -1)
 for i in q[qh[p1][0]]:
     if qc[i] == 3:
         p5 = i

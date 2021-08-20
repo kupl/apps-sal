@@ -1,11 +1,9 @@
-X, Y, A, B, C = list(map(int, input().split()))
+(X, Y, A, B, C) = list(map(int, input().split()))
 p = sorted(list(map(int, input().split())), reverse=True)
 q = sorted(list(map(int, input().split())), reverse=True)
 r = sorted(list(map(int, input().split())), reverse=True)
-
 red = p[:X]
 green = q[:Y]
-
 red_no_eat = 0
 green_no_eat = 0
 for no in r:
@@ -16,4 +14,4 @@ for no in r:
             red_no_eat += 1
         else:
             green_no_eat += 1
-print((sum(p[:X - red_no_eat]) + sum(q[:Y - green_no_eat]) + sum(r[:red_no_eat + green_no_eat])))
+print(sum(p[:X - red_no_eat]) + sum(q[:Y - green_no_eat]) + sum(r[:red_no_eat + green_no_eat]))

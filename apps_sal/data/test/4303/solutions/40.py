@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 X = list(map(int, input().split()))
 for i in range(N):
     if X[i] < 0:
@@ -21,7 +21,7 @@ for i in range(N):
 else:
     mX = [0] + [-x for x in X[::-1]]
     pX = [0]
-ans = 10**9
+ans = 10 ** 9
 l = K - (len(pX) - 1)
 n = len(mX)
 for i in range(len(pX) - 1, -1, -1):

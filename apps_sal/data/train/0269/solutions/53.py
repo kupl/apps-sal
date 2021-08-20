@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         distance = k
         for num in nums:
@@ -8,5 +9,4 @@ class Solution:
                 distance = 0
             else:
                 distance = distance + 1
-
         return True

@@ -3,6 +3,7 @@ input = sys.stdin.readline
 
 
 class FordFulkerson:
+
     def __init__(self, n):
         self.N = n
         self.G = [[] for _ in range(n)]
@@ -25,8 +26,8 @@ class FordFulkerson:
         used = self.used
         used[v] = 1
         for e in self.G[v]:
-            w, cap, rev = e
-            if cap and not used[w]:
+            (w, cap, rev) = e
+            if cap and (not used[w]):
                 d = self.dfs(w, t, min(f, cap))
                 if d:
                     e[1] -= d
@@ -36,7 +37,7 @@ class FordFulkerson:
 
     def flow(self, s, t):
         flow = 0
-        f = INF = 10**9 + 7
+        f = INF = 10 ** 9 + 7
         N = self.N
         while f:
             self.used = [0] * N
@@ -49,7 +50,6 @@ def main():
     n = int(input())
     red = [list(map(int, input().split())) for _ in range(n)]
     blue = [list(map(int, input().split())) for _ in range(n)]
-
     flow = FordFulkerson(n * 2 + 2)
     for i in range(n):
         flow.add_edge(0, i + 1, 1)
@@ -57,7 +57,6 @@ def main():
         for j in range(n):
             if red[i][0] < blue[j][0] and red[i][1] < blue[j][1]:
                 flow.add_edge(i + 1, n + j + 1, 1)
-
     ans = flow.flow(0, 2 * n + 1)
     print(ans)
 

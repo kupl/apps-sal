@@ -1,6 +1,6 @@
 import numpy as np
 mod = 998244353
-N, S = [int(_) for _ in input().split()]
+(N, S) = [int(_) for _ in input().split()]
 A = [int(_) for _ in input().split()]
 coef = np.zeros(3001, dtype=int)
 ans = 0

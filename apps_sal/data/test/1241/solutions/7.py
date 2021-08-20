@@ -3,9 +3,8 @@ def read_ints():
 
 
 def main():
-    n, k = read_ints()
+    (n, k) = read_ints()
     a = read_ints()
-
     lo = 0
     hi = 0
     count = 0
@@ -23,15 +22,14 @@ def main():
             if a[lo] == 0:
                 count -= 1
             lo += 1
-
     if x != -1:
         print(y - x + 1)
         for i in range(x, y + 1):
             a[i] = 1
-        print(" ".join(map(str, a)))
+        print(' '.join(map(str, a)))
     else:
         print(0)
-        print(" ".join(map(str, a)))
+        print(' '.join(map(str, a)))
 
 
 main()

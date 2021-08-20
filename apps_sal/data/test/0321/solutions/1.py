@@ -1,4 +1,5 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 def prime(x):
@@ -11,8 +12,8 @@ def prime(x):
 
 
 t = int(input())
-res = ""
+res = ''
 for i in range(t):
-    a, b = read()
-    res += "YES\n" if a - b == 1 and prime(a + b) else "NO\n"
+    (a, b) = read()
+    res += 'YES\n' if a - b == 1 and prime(a + b) else 'NO\n'
 print(res)

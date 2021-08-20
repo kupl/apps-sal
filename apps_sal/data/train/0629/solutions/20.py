@@ -1,10 +1,9 @@
 for _ in range(int(input())):
-
-    r, g, b, m = map(int, input().split())
+    (r, g, b, m) = map(int, input().split())
     Rarr = list(map(int, input().split()))
     Garr = list(map(int, input().split()))
     Barr = list(map(int, input().split()))
-    while(m > 0):
+    while m > 0:
         Rmax = max(Rarr)
         Gmax = max(Garr)
         Bmax = max(Barr)

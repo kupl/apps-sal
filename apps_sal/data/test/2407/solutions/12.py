@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
 import sys
-
-#lines = stdin.readlines()
 
 
 def rint():
@@ -17,9 +14,8 @@ def oint():
 
 
 q = oint()
-
 for _ in range(q):
-    n, r = rint()
+    (n, r) = rint()
     x = set(rint())
     x = list(x)
     x.sort()

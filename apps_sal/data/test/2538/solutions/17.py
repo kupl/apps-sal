@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    s, i, e = list(map(int, input().split()))
+    (s, i, e) = list(map(int, input().split()))
     if s + e <= i:
         print(0)
         continue

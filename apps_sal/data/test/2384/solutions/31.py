@@ -4,7 +4,7 @@ import sys
 sys.setrecursionlimit(2000000000)
 N = int(input())
 l = [int(x) for x in input().split()]
-tobi = [0] * (math.ceil(N / 2))
+tobi = [0] * math.ceil(N / 2)
 tobi[0] = l[0]
 for i in range(1, math.ceil(N / 2)):
     tobi[i] = tobi[i - 1] + l[i * 2]

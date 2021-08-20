@@ -5,5 +5,4 @@ for i in range(4):
         ans += 1
     else:
         ans -= 1
-
 print(ans)

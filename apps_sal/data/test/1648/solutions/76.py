@@ -1,6 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 R = N - K
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def cmb(n, r, m):

@@ -16,10 +16,9 @@ def divisorsum(n):
 d = defaultdict(list)
 for i in range(1, 2000 + 1):
     d[Fraction(divisorsum(i), i)].append(i)
-
-xs = [value for key, value in d.items() if len(value) > 1]
+xs = [value for (key, value) in d.items() if len(value) > 1]
 
 
 def solve(a, b):
     ys = [[y for y in x if a <= y < b] for x in xs]
-    return sum(y[0] for y in ys if len(y) > 1)
+    return sum((y[0] for y in ys if len(y) > 1))

@@ -21,11 +21,8 @@ def polynomialize(roots):
             return 'x - ' + str(roots[0]) + ' = 0'
     if len([i for i in roots if i != 0]) == 0:
         return 'x^' + str(len(roots)) + ' = 0'
-
-#    ans =  np.poly(roots)
     ans = poly(roots)
     ans1 = ans[:]
-
     final = []
     for i in range(len(ans[:-1])):
         try:
@@ -50,8 +47,7 @@ def polynomialize(roots):
     if isinstance(final[0], list):
         final = final[-1]
     answer = '+'.join(final)
-
     answer = answer.replace('+-', ' - ')
     answer = answer.replace('+', ' + ')
-    answer = re.sub(" 1x", ' x', answer)
+    answer = re.sub(' 1x', ' x', answer)
     return answer + ' = 0'

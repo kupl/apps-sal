@@ -7,4 +7,4 @@ def test(number, coffee):
 
 def coffee_limits(year, month, day):
     number = year * 10000 + month * 100 + day
-    return [test(number, coffee) for coffee in (0xCAFE, 0xDECAF)]
+    return [test(number, coffee) for coffee in (51966, 912559)]

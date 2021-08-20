@@ -1,8 +1,6 @@
 import random
-
 n = int(input())
 a = list(map(int, input().split()))
-
 limit = min(8, n)
 iterations = [x for x in range(n)]
 random.shuffle(iterations)
@@ -27,24 +25,22 @@ def solve_with_fixed_gcd(arr, gcd):
     result = 0
     for x in arr:
         if x < gcd:
-            result += (gcd - x)
+            result += gcd - x
         else:
             remainder = x % gcd
             result += min(remainder, gcd - remainder)
     return result
 
 
-answer = float("inf")
+answer = float('inf')
 prime_list = set()
 for index in iterations:
     for x in range(-1, 2):
         tmp = factorization(a[index] - x)
         for z in tmp:
             prime_list.add(z)
-
 for prime in prime_list:
     answer = min(answer, solve_with_fixed_gcd(a, prime))
     if answer == 0:
         break
-
 print(answer)

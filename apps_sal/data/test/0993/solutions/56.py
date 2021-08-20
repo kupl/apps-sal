@@ -1,4 +1,4 @@
-n, m = input().split()
+(n, m) = input().split()
 d = {0: 1}
 r = s = 0
 for i in input().split():

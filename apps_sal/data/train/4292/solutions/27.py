@@ -8,4 +8,4 @@ def string_clean(s):
             x = x
         else:
             x.append(s[i])
-    return(''.join(map(str, x)))
+    return ''.join(map(str, x))

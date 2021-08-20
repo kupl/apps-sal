@@ -1,5 +1,5 @@
 def prime_factors(n):
-    s, a = [], 2
+    (s, a) = ([], 2)
     while a * a <= n:
         while n % a == 0:
             s.append(a)
@@ -13,5 +13,5 @@ def prime_factors(n):
 
 
 def find_key(encryption_key):
-    a, b = prime_factors(int(encryption_key, 16))
+    (a, b) = prime_factors(int(encryption_key, 16))
     return (a - 1) * (b - 1)

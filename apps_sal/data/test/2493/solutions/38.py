@@ -1,9 +1,9 @@
-n, *a = map(int, open(0).read().split())
+(n, *a) = map(int, open(0).read().split())
 b = {}
-M = 10**9 + 7
+M = 10 ** 9 + 7
 p = n + 1
 q = r = 1
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     if x in b:
         d = i - b[x]
         break

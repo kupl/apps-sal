@@ -1,6 +1,6 @@
 def solution(string):
     charlist = []
-    res = ""
+    res = ''
     for l in string:
         charlist.append(l)
     charlist.reverse()

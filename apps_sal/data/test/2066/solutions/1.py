@@ -26,13 +26,13 @@ for i in range(T):
             pro = False
             break
     if pro:
-        print(*s1, sep="")
+        print(*s1, sep='')
     else:
         pro = True
         for j in range(k - 1):
             if abs(ord(s3[j]) - ord(s3[j + 1])) == 1:
                 pro = False
         if pro:
-            print(*s3, sep="")
+            print(*s3, sep='')
         else:
-            print("No answer")
+            print('No answer')

@@ -6,7 +6,7 @@ for i in range(1, len(s)):
 wleft = 0
 ans = 0
 for i in range(len(s)):
-    if i > 0 and s[i] == 'v' and s[i - 1] == 'v':
+    if i > 0 and s[i] == 'v' and (s[i - 1] == 'v'):
         wleft += 1
     elif s[i] == 'o':
         ans += wleft * (wtot - wleft)

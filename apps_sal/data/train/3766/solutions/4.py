@@ -5,7 +5,7 @@ import collections
 def getAllPrimeFactors(n):
     if isinstance(n, int) and n > -1:
         if n != 1:
-            listy, m, x = [], n, True
+            (listy, m, x) = ([], n, True)
             while x:
                 for i in range(2, int(math.sqrt(n)) + 1):
                     if n % i == 0:
@@ -26,7 +26,7 @@ def getAllPrimeFactors(n):
 def getUniquePrimeFactorsWithCount(n):
     if isinstance(n, int) and n > -1:
         if n != 1:
-            listy, m, x = [], n, True
+            (listy, m, x) = ([], n, True)
             while x:
                 for i in range(2, int(math.sqrt(n)) + 1):
                     if n % i == 0:
@@ -45,7 +45,7 @@ def getUniquePrimeFactorsWithCount(n):
     resulty_list = [[], []]
     for number in listy:
         fancy_dict[number] += 1
-    for key, value in list(fancy_dict.items()):
+    for (key, value) in list(fancy_dict.items()):
         resulty_list[0].append(key)
         resulty_list[1].append(value)
     return resulty_list
@@ -54,7 +54,7 @@ def getUniquePrimeFactorsWithCount(n):
 def getUniquePrimeFactorsWithProducts(n):
     if isinstance(n, int) and n > -1:
         if n != 1:
-            listy, m, x = [], n, True
+            (listy, m, x) = ([], n, True)
             while x:
                 for i in range(2, int(math.sqrt(n)) + 1):
                     if n % i == 0:
@@ -73,7 +73,7 @@ def getUniquePrimeFactorsWithProducts(n):
     resulty_list = [[], []]
     for number in listy:
         fancy_dict[number] += 1
-    for key, value in list(fancy_dict.items()):
+    for (key, value) in list(fancy_dict.items()):
         resulty_list[0].append(key)
         resulty_list[1].append(value)
-    return [resulty_list[0][i]**resulty_list[1][i] for i in range(len(resulty_list[0]))]
+    return [resulty_list[0][i] ** resulty_list[1][i] for i in range(len(resulty_list[0]))]

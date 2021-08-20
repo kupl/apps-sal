@@ -1,6 +1,7 @@
-class Cat():  # Animal
+class Cat:
+
     def __init__(self, name):
-        self.name = str(name)       # T=cat([2, 4, 6]):    T.speak() -> '[2, 4, 6] meows.'
+        self.name = str(name)
 
     def speak(self):
-        return self.name + " meows."
+        return self.name + ' meows.'

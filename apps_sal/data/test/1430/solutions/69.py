@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = [int(i) for i in input()]
-l1, l0 = [], []
-b, c = 1, 0
+(l1, l0) = ([], [])
+(b, c) = (1, 0)
 for i in s:
     if b == i:
         c += 1
@@ -18,7 +18,7 @@ if b:
 else:
     l0 += [c]
 S = [0]
-for i, j in zip(l1, l0):
+for (i, j) in zip(l1, l0):
     S += [S[-1] + i + j]
 l1 += [0]
 l0 += [0]

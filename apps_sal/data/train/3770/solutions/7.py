@@ -12,5 +12,5 @@ def to_2D(n, size):
     for i in range(size[1]):
         for j in range(size[0]):
             if n == c:
-                return j, i
+                return (j, i)
             c += 1

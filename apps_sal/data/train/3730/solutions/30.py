@@ -1,7 +1,7 @@
 def capitalize(s):
-    even = ""
-    odd = ""
-    for ind, char in enumerate(s):
+    even = ''
+    odd = ''
+    for (ind, char) in enumerate(s):
         if ind % 2 == 0:
             even += char.upper()
             odd += char

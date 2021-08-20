@@ -1,5 +1,7 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+
         def helper(text1, text2, i, j, memo):
             if i == len(text1) or j == len(text2):
                 return 0
@@ -14,9 +16,7 @@ class Solution:
                     memo[i][j + 1] = helper(text1, text2, i, j + 1, memo)
                     memo[i][j] = max(memo[i + 1][j], memo[i][j + 1])
             return memo[i][j]
-
         n = len(text1)
         m = len(text2)
         memo = [[-1 for _ in range(0, m + 1)] for _ in range(0, n + 1)]
-
         return helper(text1, text2, 0, 0, memo)

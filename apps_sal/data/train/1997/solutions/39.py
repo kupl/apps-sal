@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         N = len(intervals)
         intervals.sort(key=lambda x: x[0])
@@ -12,5 +13,4 @@ class Solution:
                     if intervals[i] == [min_x, max_y]:
                         covered.add(j)
                         count += 1
-
         return N - count

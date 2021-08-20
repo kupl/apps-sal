@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 class SegTree:
@@ -11,7 +14,7 @@ class SegTree:
         self.X_f = X_f
 
     def build(self, seq):
-        for i, x in enumerate(seq, self.N):
+        for (i, x) in enumerate(seq, self.N):
             self.X[i] = x
         for i in range(self.N - 1, 0, -1):
             self.X[i] = self.X_f(self.X[i << 1], self.X[i << 1 | 1])
@@ -47,14 +50,14 @@ def orr(x, y):
 def main():
     N = int(input())
     S = input()
-    S = list(map(lambda c: 2**(ord(c) - ord('a')), list(S)))
+    S = list(map(lambda c: 2 ** (ord(c) - ord('a')), list(S)))
     Q = int(input())
     seg = SegTree(N, orr)
     seg.build(S)
     for _ in range(Q):
-        num, x, y = input().split()
+        (num, x, y) = input().split()
         if num == '1':
-            seg.set_val(int(x) - 1, 2**(ord(y) - ord('a')))
+            seg.set_val(int(x) - 1, 2 ** (ord(y) - ord('a')))
         else:
             bits = seg.fold(int(x) - 1, int(y))
             print(sum(map(int, list(bin(bits))[2:])))

@@ -3,13 +3,13 @@ def routne(s):
     for i in range(len(s) - 1):
         if ord(s[i]) > ord(s[i + 1]):
             flag = 0
-            return "no"
+            return 'no'
         else:
             flag = 1
     if flag == 1:
-        return "yes"
+        return 'yes'
     else:
-        return "no"
+        return 'no'
 
 
 for i in range(int(input())):

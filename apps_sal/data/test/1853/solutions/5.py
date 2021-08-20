@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 member = [0 for _ in range(n + 1)]
 linked = set()
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     linked.add(str(a) + '-' + str(b))
     linked.add(str(b) + '-' + str(a))
     member[a] += 1
@@ -12,7 +12,6 @@ for i in range(1, n + 1):
     if member[i] < n - 1:
         num = i
         break
-# print(linked)
 if num:
     for i in range(1, n + 1):
         if i != num:

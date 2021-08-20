@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         m = {0: 0}
         res = 0

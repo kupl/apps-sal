@@ -14,7 +14,6 @@ def prime_fact(num):
 
 n = int(input())
 cnt = Counter(prime_fact(n))
-
 ans = 0
 for c in cnt.values():
     tmp = 1

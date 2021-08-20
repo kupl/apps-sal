@@ -1,5 +1,5 @@
 def solve():
-    x, y, n = map(int, input().split())
+    (x, y, n) = map(int, input().split())
     k = n % x
     if k >= y:
         print(n - k + y)

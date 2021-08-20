@@ -1,6 +1,6 @@
 from math import sqrt
 from math import floor
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = m // n
 ans = 1
 for i in range(1, floor(sqrt(m)) + 1):

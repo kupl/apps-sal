@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-
-
 def solve(S: str):
-    return sum([a != b for a, b in zip(S, reversed(S))]) // 2
+    return sum([a != b for (a, b) in zip(S, reversed(S))]) // 2
 
 
 def main():

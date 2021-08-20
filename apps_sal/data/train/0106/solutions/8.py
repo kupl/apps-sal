@@ -2,11 +2,9 @@ t = int(input())
 for tc in range(t):
     n = int(input())
     l = []
-
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         l.append([i, a, b])
-
     l = sorted(l, key=lambda x: x[1])
     last = l[0][1]
     i = 0
@@ -15,7 +13,6 @@ for tc in range(t):
             break
         last = max(last, l[i][2])
         i += 1
-
     if i == n:
         print(-1)
     else:
@@ -24,4 +21,4 @@ for tc in range(t):
             ind[l[j][0]] = 1
         for i in ind:
             print(i, end=' ')
-        print("")
+        print('')

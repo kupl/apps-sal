@@ -1,7 +1,6 @@
 a = input()
 b = input()
 p = list(map(int, input().split()))
-
 n = len(p)
 h = [0] * n
 for i in range(n):
@@ -14,7 +13,6 @@ def check(s1, s2, g):
     m2 = len(s2)
     j = 0
     i = 0
-
     while j < m1 and i < m2:
         if s1[j] == s2[i] and h[i] > g:
             j = j + 1
@@ -24,14 +22,10 @@ def check(s1, s2, g):
 
 l = -1
 r = n - 1
-
 while l < r:
     md = (l + r + 1) // 2
-    # print(md,p[md],h[p[md]])
     if check(b, a, h[p[md]]):
-        # print(md,p[md],h[p[md]])
         l = md
     else:
         r = md - 1
-
 print(l + 1)

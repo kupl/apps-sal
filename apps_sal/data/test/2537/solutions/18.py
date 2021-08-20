@@ -1,21 +1,14 @@
 import sys
 import math
-#input = sys.stdin.readline
-
 q = int(input())
-
 for x in range(q):
     s = input()
     t = input()
     p = input()
-
     tc = [0] * 26
     pc = [0] * 26
-    # print("yes")
     for i in range(len(p)):
-        #	print(ord(p[i])-97)
         pc[ord(p[i]) - 97] += 1
-
     i = 0
     j = 0
     while i < len(s) and j < len(t):
@@ -24,21 +17,18 @@ for x in range(q):
             j += 1
         else:
             j += 1
-
     if i == len(s):
         for y in range(len(t)):
             tc[ord(t[y]) - 97] += 1
         for y in range(len(s)):
             tc[ord(s[y]) - 97] -= 1
-
         flag = True
         for y in range(26):
             if pc[y] < tc[y]:
                 flag = False
-                print("NO")
+                print('NO')
                 break
         if flag:
-            print("YES")
-
+            print('YES')
     else:
-        print("NO")
+        print('NO')

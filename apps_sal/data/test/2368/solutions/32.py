@@ -1,7 +1,8 @@
 from collections import defaultdict as dd
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * n
@@ -41,7 +42,7 @@ class UnionFind():
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
     uf = UnionFind(n)

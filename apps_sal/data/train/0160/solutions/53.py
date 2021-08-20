@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
         presum = [0] * (n + 1)
@@ -11,10 +12,8 @@ class Solution:
     def solve(self, piles, i, j, presum):
         if self.dp[i][j] > 0:
             return self.dp[i][j]
-
         if i == j:
             return piles[i]
-
         result = piles[i] + presum[j] - presum[i] - self.solve(piles, i + 1, j, presum)
         result = max(result, piles[j] + presum[j - 1] - presum[i - 1] - self.solve(piles, i, j - 1, presum))
         self.dp[i][j] = result

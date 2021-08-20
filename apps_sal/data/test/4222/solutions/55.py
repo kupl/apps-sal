@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 kl = [[] for i in range(k)]
 for i in range(k):
     d = int(input())

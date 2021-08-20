@@ -1,7 +1,7 @@
-n, r, avg = list(map(int, input().split()))
-exams, need, ans = [], avg * n, 0
+(n, r, avg) = list(map(int, input().split()))
+(exams, need, ans) = ([], avg * n, 0)
 for x in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     exams.append([b, a])
     need -= a
 exams.sort()

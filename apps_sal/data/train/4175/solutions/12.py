@@ -4,4 +4,4 @@ def repeater(string, n):
     while k < n:
         a += string
         k += 1
-    return(a)
+    return a

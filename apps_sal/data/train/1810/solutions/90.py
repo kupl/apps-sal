@@ -1,7 +1,7 @@
 class Solution:
-    def getFolderNames(self, names: List[str]) -> List[str]:
-        _map, ans = defaultdict(int), []
 
+    def getFolderNames(self, names: List[str]) -> List[str]:
+        (_map, ans) = (defaultdict(int), [])
         for name in names:
             if _map[name] > 0:
                 print(name)
@@ -13,5 +13,4 @@ class Solution:
             else:
                 _map[name] += 1
                 ans.append(name)
-
         return ans

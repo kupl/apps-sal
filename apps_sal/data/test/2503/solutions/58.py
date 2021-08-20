@@ -1,23 +1,27 @@
-# coding: utf-8
 import sys
 import numpy as np
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-# 縦K、横2*Kの長方形に全ての希望をWとして入れる
-# numpyの累積和、最後にmaxをとる
-N, K = lr()
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
+(N, K) = lr()
 table = [[0] * 2 * K for _ in range(K)]
 for _ in range(N):
-    x, y, c = sr().split()
+    (x, y, c) = sr().split()
     x = int(x)
     y = int(y)
     if c == 'B':
-        x -= K  # ここで全てWとして扱える
+        x -= K
     x %= 2 * K
     y %= 2 * K
     if x >= K and y >= K:
@@ -26,9 +30,7 @@ for _ in range(N):
     elif y >= K:
         x += K
         y -= K
-    # 長方形に入った
     table[y][x] += 1
-
 table = np.array(table, dtype=np.int32)
 table = np.concatenate([table, table], axis=1)
 table2 = np.roll(table, K, axis=1)

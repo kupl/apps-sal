@@ -1,4 +1,5 @@
 class Solution:
+
     def minFallingPathSum(self, A: List[List[int]]) -> int:
         g = [[inf] * len(a) for a in A]
 

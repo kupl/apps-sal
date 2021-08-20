@@ -1,11 +1,11 @@
 class Collatz(object):
+
     def __init__(self):
         self.memory = {1: 1}
 
     def calculate(self, n):
         if n in self.memory:
             return self.memory[n]
-
         result = self.calculate(n // 2) + 1 if n % 2 == 0 else self.calculate(3 * n + 1) + 1
         self.memory[n] = result
         return result

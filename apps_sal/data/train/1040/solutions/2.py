@@ -16,23 +16,23 @@ def precumpute(s, n):
 
 def solve(b, n, l, r):
     if n < 3:
-        print("NO")
+        print('NO')
         return
     x = b[l]
     if x >= l and x <= r - 2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def read():
     t = int(input())
     for j in range(t):
-        n, q = list(map(int, input().strip().split()))
+        (n, q) = list(map(int, input().strip().split()))
         s = input().strip()
         b = precumpute(s, n)
         for i in range(q):
-            l, r = list(map(int, input().strip().split()))
+            (l, r) = list(map(int, input().strip().split()))
             solve(b, n, l - 1, r - 1)
 
 

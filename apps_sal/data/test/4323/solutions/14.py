@@ -1,11 +1,11 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 sumb = 0
 suma = 0
 s = []
 sumschat = 0
 k = 0
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     s.append(a - b)
     sumb = sumb + b
     suma = suma + a

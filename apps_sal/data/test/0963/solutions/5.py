@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 q = [tuple(map(int, input().split())) for _ in range(k)]
 dp = [0] * (n + 5)
 MOD = 998244353

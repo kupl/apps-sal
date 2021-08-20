@@ -1,4 +1,5 @@
 class Solution:
+
     def largestPerimeter(self, A: List[int]) -> int:
         p = 0
         A.sort()

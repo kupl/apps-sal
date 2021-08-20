@@ -2,9 +2,9 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-        # sum/divisor<= threshold
-        # divisor >= sum/threshold
+
         def is_le(divisor):
             count = 0
             for num in nums:
@@ -12,7 +12,6 @@ class Solution:
                 if count > threshold:
                     return False
             return True
-
         low = max(1, math.floor(sum(nums) / threshold))
         high = max(nums)
         while low < high:

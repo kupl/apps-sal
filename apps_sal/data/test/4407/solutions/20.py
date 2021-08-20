@@ -2,10 +2,9 @@ def main():
     d = {}
     nums = [None] * 31
     for i in range(31):
-        nums[i] = 2**i
+        nums[i] = 2 ** i
         d[nums[i]] = 0
-
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     a = list(map(int, input().split()))
     for i in range(n):
         d[a[i]] += 1
@@ -26,7 +25,6 @@ def main():
                     break
         else:
             ans[i] = -1
-
     print('\n'.join(list(map(str, ans))))
 
 

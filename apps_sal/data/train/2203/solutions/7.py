@@ -8,4 +8,4 @@ for i in range(n):
             break
 if p.count(n - 1) == 2:
     p[p.index(n - 1)] = n
-print(" ".join(map(str, p)))
+print(' '.join(map(str, p)))

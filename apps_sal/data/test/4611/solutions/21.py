@@ -7,7 +7,7 @@ def main():
         N = int(f.readline())
         plans = []
         for _ in range(N):
-            t, x, y = map(int, f.readline().split())
+            (t, x, y) = map(int, f.readline().split())
             plans.append(plan(t, x, y))
     current = plan(0, 0, 0)
     for p in plans:
@@ -16,7 +16,7 @@ def main():
         if t < way:
             print('No')
             return None
-        if (t - way) & 1:
+        if t - way & 1:
             print('No')
             return None
         current = p

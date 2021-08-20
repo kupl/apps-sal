@@ -1,16 +1,14 @@
-'''input
+"""input
 5 3
 1 2 3 3 3
-'''
+"""
 from collections import defaultdict as dd
-
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-
 d = dd(list)
 for x in a:
     i = 0
-    while(x):
+    while x:
         d[x].append(i)
         x //= 2
         i += 1

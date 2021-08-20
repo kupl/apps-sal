@@ -1,9 +1,6 @@
 import sys
 3
-
-
 n = int(input())
-
 nums = []
 while n != 0:
     num = 0
@@ -14,7 +11,5 @@ while n != 0:
             n -= pow10
         pow10 *= 10
     nums.append(num)
-    # sys.stdout.write(str(num) + " ")
-
 print(len(nums))
-print(" ".join(map(str, nums)))
+print(' '.join(map(str, nums)))

@@ -2,6 +2,7 @@ import sys
 
 
 def main():
+
     def input():
         return sys.stdin.readline()[:-1]
     t = int(input())
@@ -25,10 +26,10 @@ def main():
                         ans[k] = 2
             if 0 not in ans:
                 flag = 1
-                print(*ans, sep="")
+                print(*ans, sep='')
                 break
         if flag == 0:
-            print("-")
+            print('-')
 
 
 def __starting_point():

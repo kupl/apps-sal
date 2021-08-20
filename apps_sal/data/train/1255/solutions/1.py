@@ -1,14 +1,13 @@
-# cook your dish here
 t = int(input())
 tt = 0
 while tt < t:
     tt = tt + 1
     str = input()
-    s, k = str.split()
+    (s, k) = str.split()
     k = int(k)
     l = len(s)
-    if l >= 14 and (2 * l - k) > 26:
-        print("NOPE")
+    if l >= 14 and 2 * l - k > 26:
+        print('NOPE')
     else:
         thisList = []
         j = 0
@@ -22,7 +21,7 @@ while tt < t:
             b = b - 97
             thisList[b] = 1
             j = j + 1
-        str = ""
+        str = ''
         j = 0
         i = 0
         while j < l:

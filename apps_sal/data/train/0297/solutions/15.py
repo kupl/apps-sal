@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         result = set()
         maxx = len(tiles)

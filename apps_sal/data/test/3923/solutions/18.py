@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 for i in range(n // a + 1):
     if (n - i * a) % b == 0:
         res = []

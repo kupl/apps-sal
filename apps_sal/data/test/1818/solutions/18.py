@@ -16,5 +16,5 @@ for i in l:
     bits[cnt(i)] += 1
 ans = 0
 for i in range(40):
-    ans = ans + (bits[i] * (bits[i] - 1) // 2)
+    ans = ans + bits[i] * (bits[i] - 1) // 2
 print(ans)

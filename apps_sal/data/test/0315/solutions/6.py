@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 m = list(map(int, input().split()))
 s = [m[i] + m[i + 1] for i in range(n - 1)] + [0]
-
 ans = 0
 for i in range(n - 1):
     while s[i] < k:

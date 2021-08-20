@@ -1,4 +1,5 @@
 class Solution:
+
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         seen = [False] * len(rooms)
         seen[0] = True

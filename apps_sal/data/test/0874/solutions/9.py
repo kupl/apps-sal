@@ -12,4 +12,4 @@ else:
             out[i - 1] = i + 1
             t = True
     for i in range(n):
-        print(out[i], end=" ")
+        print(out[i], end=' ')

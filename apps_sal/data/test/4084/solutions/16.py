@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 t = n // (a + b)
 ans = t * a
 s = n % (a + b)

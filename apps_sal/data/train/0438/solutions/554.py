@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         l = len(arr)
         left = [i for i in range(l + 1)]
@@ -11,13 +12,11 @@ class Solution:
             lt = left[a - 1]
             rt = right[a + 1]
             tlen = rt - lt - 1
-
             templeft = a - lt - 1
             tempright = rt - a - 1
             count[templeft] -= 1
             count[tempright] -= 1
             count[tlen] += 1
-
             if count[m] > 0:
                 res = step
             right[lt + 1] = rt

@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         n = int(file.readline())
         a = []
         for i in range(n):
@@ -11,7 +11,7 @@ def read(type=1):
         a = []
         for i in range(n):
             a.append(int(input().strip()))
-    return n, a
+    return (n, a)
 
 
 def check():
@@ -45,8 +45,8 @@ def solve():
 
 
 c = []
-n, a = read(0)
+(n, a) = read(0)
 if solve():
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

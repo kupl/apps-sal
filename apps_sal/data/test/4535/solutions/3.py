@@ -1,6 +1,6 @@
 class Solution:
-    def hammingWeight(self, n: int) -> int:
 
+    def hammingWeight(self, n: int) -> int:
         onebits = 0
         while n > 0:
             if n & 1 == 1:

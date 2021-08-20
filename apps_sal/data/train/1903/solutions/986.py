@@ -17,11 +17,11 @@ class Union:
         return self.parent[idx]
 
     def unite(self, p, q):
-        i, j = self.find(p), self.find(q)
+        (i, j) = (self.find(p), self.find(q))
         if i == j:
             return True
         if self.rank[i] > self.rank[j]:
-            i, j = j, i
+            (i, j) = (j, i)
         self.parent[i] = j
         self.rank[j] += self.rank[i]
         self.count -= 1
@@ -29,18 +29,17 @@ class Union:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        #p_to_cost = {}
         costs = []
         point = Union()
         for i in range(len(points) - 1):
             for j in range(i + 1, len(points)):
                 cost = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-                #p_to_cost[(i, j)] = val
                 costs.append([i, j, cost])
         costs.sort(key=lambda x: x[2])
         res = 0
-        for i, j, c in costs:
+        for (i, j, c) in costs:
             point.add(i)
             point.add(j)
             if not point.unite(i, j):

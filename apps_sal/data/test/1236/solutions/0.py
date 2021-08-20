@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     even = 0
     odd = 0
     for elem in input().split():
@@ -10,19 +10,18 @@ def main():
     turns = n - k
     if turns == 0:
         if odd % 2 == 1:
-            return "Stannis"
+            return 'Stannis'
         else:
-            return "Daenerys"
+            return 'Daenerys'
     if turns % 2 == 0:
         if k % 2 == 1 and even <= turns // 2:
-            return "Stannis"
+            return 'Stannis'
         else:
-            return "Daenerys"
+            return 'Daenerys'
+    elif k % 2 == 0 and even <= turns // 2 or odd <= turns // 2:
+        return 'Daenerys'
     else:
-        if k % 2 == 0 and even <= turns // 2 or odd <= turns // 2:
-            return "Daenerys"
-        else:
-            return "Stannis"
+        return 'Stannis'
 
 
 print(main())

@@ -8,6 +8,7 @@ def getindex(arr):
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         boarding = 0
         rotation = 0

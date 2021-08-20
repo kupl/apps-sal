@@ -1,4 +1,5 @@
 class Solution:
+
     def gcd(self, a, b):
         c = 1
         while c != 0:

@@ -7,7 +7,6 @@ input = sys.stdin.readline
 def main():
     s = input().rstrip()
     opt = [[[[math.inf for _ in range(10)] for _ in range(10)] for _ in range(10)] for _ in range(10)]
-    # opt[x][y][a][b] - x-y counter, transition from a to b
     pairs = [[0 for _ in range(10)] for _ in range(10)]
     for x in range(10):
         for y in range(10):
@@ -19,7 +18,6 @@ def main():
                             opt[x][y][a][dig] = min(opt[x][y][a][dig], cntx + cnty)
     for i in range(1, len(s)):
         pairs[int(s[i - 1])][int(s[i])] += 1
-
     res = [[0 for _ in range(10)] for _ in range(10)]
     for x in range(10):
         for y in range(10):
@@ -31,7 +29,6 @@ def main():
                             res[x][y] = -1
                         elif res[x][y] != -1:
                             res[x][y] += p * (opt[x][y][p1][p2] - 1)
-
     for x in range(10):
         print(*res[x])
 

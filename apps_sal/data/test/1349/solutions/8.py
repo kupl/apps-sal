@@ -1,9 +1,8 @@
 import sys
 import math
-
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     x = list(map(int, input().split()))
     h = [0 for i in range(n)]
     tm = 0

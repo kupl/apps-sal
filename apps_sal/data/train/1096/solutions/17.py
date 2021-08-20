@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
 
@@ -36,10 +35,10 @@ def upper_bound(arr, ele):
 
 
 def main():
-    n, n_x, n_y = list(map(int, stdin.readline().split()))
+    (n, n_x, n_y) = list(map(int, stdin.readline().split()))
     contests = [None] * n
     for i in range(n):
-        start, end = list(map(int, stdin.readline().split()))
+        (start, end) = list(map(int, stdin.readline().split()))
         contests[i] = (start, end)
     V = [int(x) for x in stdin.readline().split()]
     W = [int(x) for x in stdin.readline().split()]

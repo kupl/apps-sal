@@ -2,11 +2,11 @@ import distutils
 
 
 def quick_op(op, old, new):
-    if op == "AND":
+    if op == 'AND':
         return old and new
-    elif op == "OR":
+    elif op == 'OR':
         return old or new
-    elif op == "XOR":
+    elif op == 'XOR':
         return old ^ new
 
 

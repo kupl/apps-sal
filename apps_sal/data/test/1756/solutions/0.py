@@ -2,7 +2,7 @@ def sum_first(di):
     return di * (di + 1) // 2
 
 
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 n *= 2
 d = tuple(map(int, input().split())) * 2
 ans = 0

@@ -1,5 +1,5 @@
 def say_hello(name):
-    s = ("Hello, {}".format(name))
+    s = 'Hello, {}'.format(name)
     return s
 
 

@@ -5,14 +5,14 @@ A = [0] + I[1:1 + N]
 U = [0] + I[1 + N::2]
 V = [1] + I[2 + N::2]
 G = [set() for _ in range(N + 1)]
-for u, v in zip(U, V):
+for (u, v) in zip(U, V):
     G[u].add(v)
     G[v].add(u)
-ans = [10**10] * (N + 1)
+ans = [10 ** 10] * (N + 1)
 stack = [(0, 1, 1, A[1], 0)]
 dp = [-10 ** 10] + [10 ** 10] * N
 while stack:
-    i, j, p, q, d = stack.pop()
+    (i, j, p, q, d) = stack.pop()
     if d:
         dp[p] = q
         continue

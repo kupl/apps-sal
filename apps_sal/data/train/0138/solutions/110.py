@@ -1,6 +1,6 @@
 class Solution:
-    def getMaxLen(self, nums: List[int]) -> int:
 
+    def getMaxLen(self, nums: List[int]) -> int:
         prefixCountNeg = [0]
         prefixCountZeros = [0]
         for num in nums:
@@ -12,7 +12,6 @@ class Solution:
                 prefixCountZeros.append(prefixCountZeros[-1] + 1)
             else:
                 prefixCountZeros.append(prefixCountZeros[-1])
-
         m = {'0,0': 0}
         res = 0
         for i in range(len(nums)):
@@ -21,5 +20,4 @@ class Solution:
                 res = max(res, i + 1 - m[key])
             else:
                 m[key] = i + 1
-
         return res

@@ -1,8 +1,7 @@
-W, H, N = list(map(int, input().split()))
+(W, H, N) = list(map(int, input().split()))
 white = [[1 for _ in range(H)] for _ in range(W)]
-
 for i in range(N):
-    x, y, a = list(map(int, input().split()))
+    (x, y, a) = list(map(int, input().split()))
     if a == 1:
         for i in range(x):
             for j in range(H):
@@ -19,4 +18,4 @@ for i in range(N):
         for i in range(W):
             for j in range(y, H):
                 white[i][j] = 0
-print((sum(sum(x) for x in white)))
+print(sum((sum(x) for x in white)))

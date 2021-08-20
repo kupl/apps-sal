@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if m == n:
             return n
         uf = UnionFindHelper()
         res = -1
-        for i, curr in enumerate(arr):
+        for (i, curr) in enumerate(arr):
             uf.add(curr)
             step = i + 1
             for neighbor in [curr - 1, curr + 1]:
@@ -13,12 +14,11 @@ class Solution:
                     if uf.getrank(neighbor) == m:
                         res = step - 1
                     uf.union(neighbor, curr)
-            # if uf.getrank(curr) == m:
-            #     res = step
         return res
 
 
 class UnionFindHelper:
+
     def __init__(self):
         self.parent = {}
         self.ranks = {}

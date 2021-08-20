@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = []
 for i in range(n):
     a.append(input())
@@ -17,6 +17,4 @@ while n % 2 == 0:
     if flag == False:
         break
     result = n
-
-
 print(result)

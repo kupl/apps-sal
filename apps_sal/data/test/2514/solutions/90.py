@@ -6,9 +6,8 @@ count = 0
 for i in a:
     dic[i] += 1
     count += i
-
 for i in range(q):
-    b, c = map(int, input().split())
+    (b, c) = map(int, input().split())
     count -= b * dic[b]
     dic[c] += dic[b]
     count += c * dic[b]

@@ -15,15 +15,13 @@ for i in range(a):
     ans2 = min(l[2], l[3])
     if ans1 != 0 and ans2 != 0:
         print(2 * ans1 + 2 * ans2)
-        k = 'U' * ans1 + "R" * ans2 + "D" * ans1 + "L" * ans2
+        k = 'U' * ans1 + 'R' * ans2 + 'D' * ans1 + 'L' * ans2
         print(k)
-
+    elif ans2 > 0:
+        print(2)
+        print('RL')
+    elif ans1 > 0:
+        print(2)
+        print('UD')
     else:
-        if ans2 > 0:
-            print(2)
-            print('RL')
-        elif ans1 > 0:
-            print(2)
-            print('UD')
-        else:
-            print(0)
+        print(0)

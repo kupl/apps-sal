@@ -11,7 +11,6 @@ for i in range(40):
             comb[i][j] = 1
         else:
             comb[i][j] = comb[i - 1][j] + comb[i - 1][j - 1]
-
 for dig in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]:
     if cnt[dig] == 0:
         continue
@@ -19,18 +18,17 @@ for dig in [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]:
     dp = [0] * 20
     for lsz in range(20):
         for pick in range(1, cnt[dig] + 1):
-            if (lsz + pick < 20):
+            if lsz + pick < 20:
                 m = lsz + (dig != 0) + pick - 1
                 r = lsz + (dig != 0) - 1
                 ways = 0
-                if (m == r):
+                if m == r:
                     ways = 1
-                elif (r > m or r < 0 or m < 0):
+                elif r > m or r < 0 or m < 0:
                     ways = 0
                 else:
                     ways = comb[m][r]
                 dp[lsz + pick] += odp[lsz] * ways
-
 res = 0
 for i in range(1, 20):
     res += dp[i]

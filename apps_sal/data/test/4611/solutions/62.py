@@ -1,5 +1,5 @@
 N = int(input())
-P = [list(map(int, input().split())) for i in range(N)]  # list of [t, x, y]
+P = [list(map(int, input().split())) for i in range(N)]
 pret = prex = prey = 0
 f = 1
 for i in range(N):
@@ -9,7 +9,7 @@ for i in range(N):
     td = t - pret
     xd = abs(x - prex)
     yd = abs(y - prey)
-    diff = xd + yd  # 最低かかるt
+    diff = xd + yd
     if td < diff:
         f = 0
         break
@@ -22,6 +22,6 @@ for i in range(N):
         f = 0
         break
 if f == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

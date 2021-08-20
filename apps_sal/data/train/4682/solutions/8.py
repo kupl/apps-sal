@@ -6,7 +6,7 @@ def date_correct(date):
     if date is None or date is '':
         return date
     try:
-        day, month, year = date.split('.')
+        (day, month, year) = date.split('.')
         if len(day) is not 2 or len(month) is not 2:
             return None
         day = int(day)

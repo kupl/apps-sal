@@ -14,4 +14,4 @@ for i in range(1, N + 1):
         dp[i] = min(dp[i - a] + 1, dp[i - b] + 1)
     else:
         dp[i] = min([dp[i - a] + 1, dp[i - b] + 1, dp[i - c] + 1])
-print((dp[N]))
+print(dp[N])

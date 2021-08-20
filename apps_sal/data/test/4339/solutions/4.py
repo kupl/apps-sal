@@ -11,8 +11,7 @@ for i in range(n):
             ind -= 1
         else:
             break
-
     if ind <= i:
         ind = min(n - 1, i)
-    wyn += (n - 1 - ind)
+    wyn += n - 1 - ind
 print(wyn)

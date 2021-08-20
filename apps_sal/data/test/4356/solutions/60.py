@@ -1,68 +1,53 @@
-#
-# abc054 b
-#
 import sys
 from io import StringIO
 import unittest
 
 
 class TestClass(unittest.TestCase):
+
     def assertIO(self, input, output):
-        stdout, stdin = sys.stdout, sys.stdin
-        sys.stdout, sys.stdin = StringIO(), StringIO(input)
+        (stdout, stdin) = (sys.stdout, sys.stdin)
+        (sys.stdout, sys.stdin) = (StringIO(), StringIO(input))
         resolve()
         sys.stdout.seek(0)
         out = sys.stdout.read()[:-1]
-        sys.stdout, sys.stdin = stdout, stdin
+        (sys.stdout, sys.stdin) = (stdout, stdin)
         self.assertEqual(out, output)
 
     def test_入力例_1(self):
-        input = """3 2
-#.#
-.#.
-#.#
-#.
-.#"""
-        output = """Yes"""
+        input = '3 2\n#.#\n.#.\n#.#\n#.\n.#'
+        output = 'Yes'
         self.assertIO(input, output)
 
     def test_入力例_2(self):
-        input = """4 1
-....
-....
-....
-....
-#"""
-        output = """No"""
+        input = '4 1\n....\n....\n....\n....\n#'
+        output = 'No'
         self.assertIO(input, output)
 
 
 def resolve():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = [list(input()) for _ in range(N)]
     B = [list(input()) for _ in range(M)]
-
-    ans = "No"
+    ans = 'No'
     for i in range(N - M + 1):
         for j in range(N - M + 1):
-            ans = "Yes"
+            ans = 'Yes'
             for k in range(M):
-                if ans == "No":
+                if ans == 'No':
                     break
                 for l in range(M):
                     if A[i + k][j + l] != B[k][l]:
-                        ans = "No"
+                        ans = 'No'
                         break
-            if ans == "Yes":
+            if ans == 'Yes':
                 break
-        if ans == "Yes":
+        if ans == 'Yes':
             break
-
     print(ans)
 
 
 def __starting_point():
-    # unittest.main()
     resolve()
 
 

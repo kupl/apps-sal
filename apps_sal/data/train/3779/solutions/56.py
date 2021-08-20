@@ -11,4 +11,4 @@ def past(h, m, s):
         pass
     else:
         s = 1000 * s
-    return (h + m + s)
+    return h + m + s

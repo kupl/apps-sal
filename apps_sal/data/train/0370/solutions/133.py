@@ -3,6 +3,7 @@ import collections
 
 
 class Solution:
+
     def primes(self, n):
         for i in range(2, int(math.sqrt(n)) + 1):
             if n % i == 0:
@@ -39,4 +40,4 @@ class Solution:
             temp = list(d[key])
             for x in temp:
                 self.union(temp[0], x)
-        return max([val for key, val in list(collections.Counter([self.find(i) for i in range(len(A))]).items())])
+        return max([val for (key, val) in list(collections.Counter([self.find(i) for i in range(len(A))]).items())])

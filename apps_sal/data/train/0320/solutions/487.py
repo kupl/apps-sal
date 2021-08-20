@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations(self, arr: List[int]) -> int:
-        ret, maxx = 0, 0
+        (ret, maxx) = (0, 0)
         import math
         for i in arr:
             maxx = max(maxx, len(bin(i)) - 3)

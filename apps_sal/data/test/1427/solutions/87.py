@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,10 +6,11 @@ mod = 10 ** 9 + 7
 
 
 class Eratosthenes:
+
     def __init__(self, n):
         self.n = n
         self.min_factor = [-1] * (n + 1)
-        self.min_factor[0], self.min_factor[1] = 0, 1
+        (self.min_factor[0], self.min_factor[1]) = (0, 1)
 
     def get_primes(self):
         primes = []
@@ -43,20 +43,17 @@ def resolve():
     n = int(input())
     A = list(map(int, input().split()))
     MAX_A = max(A) + 1
-
     er = Eratosthenes(MAX_A)
     er.get_primes()
     num = [0] * MAX_A
     for i in range(n):
         pf = er.prime_factorization(A[i])
-        for p, ex in pf:
+        for (p, ex) in pf:
             num[p] = max(num[p], ex)
-
     LCM = 1
     for v in range(2, MAX_A):
         LCM *= pow(v, num[v], mod)
         LCM %= mod
-
     res = 0
     for a in A:
         res += LCM * pow(a, mod - 2, mod)

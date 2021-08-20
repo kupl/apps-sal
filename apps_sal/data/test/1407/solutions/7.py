@@ -2,7 +2,6 @@ def buil_prime_dict(n):
     a = [x for x in range(n + 1)]
     a[1] = 0
     lst = []
-
     i = 2
     while i <= n:
         if a[i] != 0:
@@ -13,7 +12,7 @@ def buil_prime_dict(n):
     return lst
 
 
-prime_dict = buil_prime_dict(10**5 + 100)
+prime_dict = buil_prime_dict(10 ** 5 + 100)
 
 
 def diff_search_number_prime(a, dictionary):
@@ -21,7 +20,7 @@ def diff_search_number_prime(a, dictionary):
     stop_ind = len(dictionary) - 1
     if a == 1:
         return 1
-    while (stop_ind - start_ind) != 1:
+    while stop_ind - start_ind != 1:
         middle_ind = (stop_ind - start_ind) // 2 + start_ind
         if a == dictionary[middle_ind] or a == dictionary[start_ind] or a == dictionary[stop_ind]:
             return 0
@@ -46,8 +45,7 @@ for j in range(n):
 dict_dist = [0, 1]
 for i in range(2, max_num + 1):
     dict_dist.append(diff_search_number_prime(i, prime_dict))
-
-matrix = [[dict_dist[y] for y in i]for i in matrix]
+matrix = [[dict_dist[y] for y in i] for i in matrix]
 results = []
 for x in matrix:
     results.append(sum(x))

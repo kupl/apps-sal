@@ -1,13 +1,12 @@
 from collections import defaultdict
 import sys
 sys.setrecursionlimit(200000)
-
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 roads = defaultdict(list)
 visited = [False for _ in range(n)]
 ans = 0
 for _ in range(m):
-    k, v = list(map(int, input().split(' ')))
+    (k, v) = list(map(int, input().split(' ')))
     roads[k - 1].append(v - 1)
     roads[v - 1].append(k - 1)
 
@@ -29,5 +28,4 @@ for i in range(n):
         continue
     if not search(i):
         ans += 1
-
 print(ans)

@@ -7,6 +7,6 @@ for i in range(n):
     for i in range(len(x)):
         s += '1'
     for i in range(9):
-        if (int(s) * (i + 1) <= la):
+        if int(s) * (i + 1) <= la:
             col += 1
     print(col)

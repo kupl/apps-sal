@@ -1,7 +1,7 @@
-n, h, a, b, k = map(int, input().split())
-while(k):
+(n, h, a, b, k) = map(int, input().split())
+while k:
     k -= 1
-    ta, fa, tb, fb = map(int, input().split())
+    (ta, fa, tb, fb) = map(int, input().split())
     ans = 0
     if ta == tb:
         print(abs(fa - fb))

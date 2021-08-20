@@ -1,6 +1,5 @@
-# ARC072C - Sequence (ABC059C)
 def modify_seq(seq: list, is_positive: bool) -> int:
-    cur, cnt = 0, 0
+    (cur, cnt) = (0, 0)
     for i in seq:
         cur += i
         if is_positive and cur <= 0:
@@ -14,8 +13,8 @@ def modify_seq(seq: list, is_positive: bool) -> int:
 
 
 def main():
-    _, *A = list(map(int, open(0).read().split()))
-    print((min(modify_seq(A, True), modify_seq(A, False))))
+    (_, *A) = list(map(int, open(0).read().split()))
+    print(min(modify_seq(A, True), modify_seq(A, False)))
 
 
 def __starting_point():

@@ -6,7 +6,7 @@ while i < n - 1:
     x = a[i]
     y = a[i + 1]
     while y > 0:
-        x, y = y, x % y
+        (x, y) = (y, x % y)
     if x > 1:
         a = a[:i + 1] + [1] + a[i + 1:]
         i += 2

@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# read = lambda: map(int, input().split())
-
-
-L = int(1e9 + 7)
+L = int(1000000000.0 + 7)
 N = int(input())
 dp = [0 for _ in range(N)]
 dp[0] = 1

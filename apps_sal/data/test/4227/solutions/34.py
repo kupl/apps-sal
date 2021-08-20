@@ -1,7 +1,7 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 G = [[] for i in range(N)]
 for i in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 cnt = [0]
@@ -18,4 +18,4 @@ def dfs(V, s):
 
 
 dfs([0] * N, 0)
-print((cnt[0]))
+print(cnt[0])

@@ -7,7 +7,7 @@ def true_array(b):
 
 t1 = int(input())
 for q in range(t1):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     b = [0 for i in range(n)]
     t = 0

@@ -2,7 +2,7 @@ def readln():
     return tuple(map(int, input().split()))
 
 
-n, m = readln()
+(n, m) = readln()
 ans = [0] * (n + 1)
 for _ in range(m):
     a = readln()

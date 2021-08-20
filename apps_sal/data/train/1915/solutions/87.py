@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         done = set()
         n = len(stamp)
@@ -23,7 +24,6 @@ class Solution:
                 return 0
             else:
                 return 1
-
         while len(done) < m:
             found = 0
             remove = set()
@@ -37,10 +37,8 @@ class Solution:
                     break
                 elif I == 0:
                     remove.add(i)
-
             if not found:
                 return []
             else:
                 candidates.remove(i)
-
         return res[::-1]

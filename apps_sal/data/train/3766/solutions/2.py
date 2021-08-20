@@ -7,8 +7,8 @@ from itertools import chain
 def factors(n):
     if n == 1:
         return [(1, 1)]
-    res, wheel = defaultdict(int), [1, 2, 2, 4, 2, 4, 2, 4, 6, 2, 6]
-    x, y = 2, 0
+    (res, wheel) = (defaultdict(int), [1, 2, 2, 4, 2, 4, 2, 4, 6, 2, 6])
+    (x, y) = (2, 0)
     while x * x <= n:
         if not n % x:
             res[x] += 1
@@ -21,7 +21,7 @@ def factors(n):
 
 
 def getAllPrimeFactors(n):
-    return list(chain.from_iterable([k] * v for k, v in factors(n))) if isinstance(n, int) and n > 0 else []
+    return list(chain.from_iterable(([k] * v for (k, v) in factors(n)))) if isinstance(n, int) and n > 0 else []
 
 
 def getUniquePrimeFactorsWithCount(n):
@@ -29,4 +29,4 @@ def getUniquePrimeFactorsWithCount(n):
 
 
 def getUniquePrimeFactorsWithProducts(n):
-    return [k**v for k, v in factors(n)] if isinstance(n, int) and n > 0 else []
+    return [k ** v for (k, v) in factors(n)] if isinstance(n, int) and n > 0 else []

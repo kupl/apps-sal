@@ -7,18 +7,14 @@ def gcd(a, b):
 
 
 def get_nok(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
-n, a, b, p, q = list(map(int, input().split()))
-
+(n, a, b, p, q) = list(map(int, input().split()))
 if p < q:
-    a, b = b, a
-    p, q = q, p
-
-
+    (a, b) = (b, a)
+    (p, q) = (q, p)
 nok = get_nok(a, b)
-
 t = n // a
 minus = n // nok
 c = n // b

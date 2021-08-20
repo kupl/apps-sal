@@ -1,5 +1,5 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     t -= 1
     nk = list(map(int, input().split()))
     n = int(nk[0])
@@ -11,6 +11,6 @@ while(t > 0):
         arr[temp] = 1
     count = 0
     for i in range(10):
-        if(arr[i] == 1):
+        if arr[i] == 1:
             count += 1
-    print(count**3)
+    print(count ** 3)

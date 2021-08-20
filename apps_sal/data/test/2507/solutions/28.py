@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 f = list(map(int, input().split()))
 a = sorted(a)
@@ -7,7 +7,7 @@ f = sorted(f, reverse=True)
 
 def is_lessthanK(X):
     ans = 0
-    for A, F in zip(a, f):
+    for (A, F) in zip(a, f):
         if A * F > X:
             ans += A - X // F
         if ans > k:

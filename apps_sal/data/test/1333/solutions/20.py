@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [['.' for col in range(m)] for row in range(n)]
 cur = 'L'
 for i in range(0, n, 2):

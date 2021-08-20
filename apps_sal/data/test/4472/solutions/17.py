@@ -16,11 +16,10 @@ for i in range(n // 2):
     elif x == y:
         if u != v:
             c += 1
+    elif u != x and u != y:
+        c += 2
     else:
-        if u != x and u != y:
-            c += 2
-        else:
-            c += 1
+        c += 1
 if n % 2 == 1:
     if a[n // 2] != b[n // 2]:
         c += 1

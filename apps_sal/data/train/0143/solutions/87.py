@@ -1,16 +1,12 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         n = len(tree)
-
         if n < 3:
             return n
-
         max_count = 0
-
         dp = [[set(), 0, set(), 0] for _ in range(n)]
-
         dp[0] = [{tree[0]}, 1, {tree[0]}, 1]
-
         for i in range(1, n):
             if tree[i] in dp[i - 1][2]:
                 set_2 = dp[i - 1][2].copy()
@@ -26,9 +22,6 @@ class Solution:
             else:
                 set_1 = {tree[i]}
                 count_1 = 1
-
             dp[i] = [set_1, count_1, set_2, count_2]
-
             max_count = max(max_count, max(count_1, count_2))
-
         return max_count

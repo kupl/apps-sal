@@ -1,10 +1,10 @@
-from heapq import*
-L, R = [], []
+from heapq import *
+(L, R) = ([], [])
 B = t = 0
-Q, *E = open(0)
+(Q, *E) = open(0)
 for e in E:
-    if' ' in e:
-        _, a, b = map(int, e.split())
+    if ' ' in e:
+        (_, a, b) = map(int, e.split())
         t ^= 1
         a *= 2 * t - 1
         c = heappushpop([L, R][t], a)

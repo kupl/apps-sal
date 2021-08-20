@@ -6,5 +6,5 @@ for i in range(n):
         a[b[j]] += 1
 for i in range(len(a)):
     if a[i] == n:
-        print(i, end=" ")
+        print(i, end=' ')
 print()

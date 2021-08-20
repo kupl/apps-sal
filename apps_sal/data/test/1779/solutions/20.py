@@ -1,5 +1,5 @@
 import string
-a, b, string = input(), input(), input()
+(a, b, string) = (input(), input(), input())
 l = len(string)
 temp = string.lower().translate(string.maketrans(a, b))
 for x in range(l):

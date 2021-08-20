@@ -6,7 +6,6 @@ Problem 598 B Queries on a String
 @author yamaton
 @date 2015-11-12
 """
-
 import itertools as it
 import functools
 import operator
@@ -18,7 +17,7 @@ import sys
 def cycle_shift(s, k):
     n = len(s)
     k %= n
-    return s[(n - k):] + s[:(n - k)]
+    return s[n - k:] + s[:n - k]
 
 
 def solve(triples, s, m):
@@ -34,8 +33,7 @@ def p(*args, **kwargs):
 def main():
     s = input()
     m = int(input())
-    triples = [tuple(int(c) for c in input().strip().split()) for _ in range(m)]
-
+    triples = [tuple((int(c) for c in input().strip().split())) for _ in range(m)]
     result = solve(triples, s, m)
     print(result)
 

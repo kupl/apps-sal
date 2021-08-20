@@ -13,9 +13,8 @@ for i in range(1, al):
         if a[i] == b[i - 1]:
             num2 -= 1
         num2 = num - num2 - 1
-    else:
-        if a[i] != b[i - 1]:
-            num2 -= 1
+    elif a[i] != b[i - 1]:
+        num2 -= 1
     if a[i] != b[i + num - 1]:
         num2 += 1
     num3 += num2

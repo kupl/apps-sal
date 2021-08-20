@@ -1,6 +1,5 @@
 def opposite(number):
     reverse = number - number - number
-
     print(reverse)
     return reverse
 

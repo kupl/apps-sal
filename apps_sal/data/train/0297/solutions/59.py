@@ -1,6 +1,7 @@
 class Solution:
+
     def numTilePossibilities(self, s: str) -> int:
-        ans, C = 0, Counter(s)
+        (ans, C) = (0, Counter(s))
 
         def dfs(C, cur):
             nonlocal ans

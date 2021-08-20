@@ -1,7 +1,6 @@
-# cook your dish here
 xx = int(input(''))
 for j in range(xx):
-    a, b, c = list(map(int, input('').split()))
+    (a, b, c) = list(map(int, input('').split()))
     x = list(map(int, input('').split()))
     t = 0
     k = 0

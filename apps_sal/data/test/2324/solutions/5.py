@@ -1,9 +1,7 @@
 s = input()
 n = len(s)
-
 dp = [[0 for i in range(n - le + 1)] for le in range(n + 1)]
 ans = [0 for i in range(n + 1)]
-
 for le in range(1, n + 1):
     for l in range(0, n - le + 1):
         r = l + le
@@ -23,12 +21,8 @@ for le in range(1, n + 1):
             q = dp[le2][l]
             if q:
                 v = q + 1
-
             ans[v] += 1
             dp[le][l] = v
-
-
 for i in range(n - 1, 0, -1):
     ans[i] += ans[i + 1]
-
 print(*ans[1:])

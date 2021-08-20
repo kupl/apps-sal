@@ -1,7 +1,7 @@
 def main(n, d):
     p = []
     for i in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         p.append([a, b])
     p.sort()
     maxi = 0
@@ -24,5 +24,5 @@ def main(n, d):
                 em += 1
 
 
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 main(n, d)

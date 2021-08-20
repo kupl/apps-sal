@@ -1,16 +1,16 @@
 class Solution:
+
     def divide(self, dividend, divisor):
         """
         :type dividend: int
         :type divisor: int
         :rtype: int
         """
-
         flag = (dividend < 0) is (divisor < 0)
-        dividend, divisor = abs(dividend), abs(divisor)
+        (dividend, divisor) = (abs(dividend), abs(divisor))
         result = 0
         while dividend >= divisor:
-            newDivisor, rate = divisor, 1
+            (newDivisor, rate) = (divisor, 1)
             while dividend >= newDivisor:
                 dividend -= newDivisor
                 result += rate

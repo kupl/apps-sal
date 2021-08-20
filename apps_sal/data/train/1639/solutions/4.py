@@ -17,6 +17,6 @@ def gta(limit, *args):
                     x[i] = x[i][1:]
                 if len(y) == limit:
                     break
-    y, l = list(y), len(y)
+    (y, l) = (list(y), len(y))
     tot = [fac(l) / fac(i) * (sum(y) * 1.0 / l) * (l - i) for i in range(l)]
     return round(sum(tot), 0)

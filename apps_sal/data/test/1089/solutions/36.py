@@ -1,5 +1,5 @@
 MOD = 10 ** 9 + 7
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 
 
 def f(i, j):
@@ -16,4 +16,4 @@ def c(a, b):
     return r * pow(t, MOD - 2, MOD)
 
 
-print(((f(n, m) + f(m, n)) * c(n * m - 2, k - 2) % MOD))
+print((f(n, m) + f(m, n)) * c(n * m - 2, k - 2) % MOD)

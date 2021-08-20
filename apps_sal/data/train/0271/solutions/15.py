@@ -1,10 +1,11 @@
 class Solution:
+
     def canJump(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
-        if (not nums) or (len(nums) == 1):
+        if not nums or len(nums) == 1:
             return True
         status = [False] * (len(nums) - 1) + [True]
         curr = len(nums) - 1

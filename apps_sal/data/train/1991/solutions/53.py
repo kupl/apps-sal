@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @functools.lru_cache(None)
         def dp(start, fuel):
             if fuel < 0:
@@ -12,5 +14,5 @@ class Solution:
             for i in range(len(locations)):
                 if i != start:
                     res += dp(i, fuel - abs(locations[i] - locations[start]))
-            return res % (10**9 + 7)
+            return res % (10 ** 9 + 7)
         return dp(start, fuel)

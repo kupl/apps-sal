@@ -1,20 +1,18 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 adj = [[] for _ in range(n)]
 for _ in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     adj[a].append(b)
     adj[b].append(a)
-
 colour = [None] * n
 bad = False
-
 for i in range(n):
     if colour[i] is None:
         todo = [(i, True)]
         while todo:
-            xi, xc = todo.pop()
+            (xi, xc) = todo.pop()
             if colour[xi] is not None:
                 if colour[xi] == xc:
                     continue
@@ -26,7 +24,6 @@ for i in range(n):
                 todo.append((neighbour, not xc))
     if bad:
         break
-
 if bad:
     print(-1)
 else:
@@ -38,7 +35,6 @@ else:
         else:
             f.append(i + 1)
     print(len(f))
-    print(" ".join(map(str, f)))
-
+    print(' '.join(map(str, f)))
     print(len(t))
-    print(" ".join(map(str, t)))
+    print(' '.join(map(str, t)))

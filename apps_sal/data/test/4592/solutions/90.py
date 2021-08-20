@@ -1,7 +1,4 @@
 n = int(input())
-# a,b=map(int,input().split())
-# l=list(map(int,input().split()))
-#l=[list(map(int,input().split())) for i in range(n)]
 
 
 def prime_factorize(n):
@@ -24,13 +21,12 @@ def prime_factorize(n):
 
 
 ex = {}
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(2, n + 1):
     res = prime_factorize(i)
-    for p, e in res:
+    for (p, e) in res:
         ex[p] = ex.get(p, 0) + e
-
 ans = 1
-for k, v in ex.items():
-    ans = (ans * (v + 1)) % mod
+for (k, v) in ex.items():
+    ans = ans * (v + 1) % mod
 print(ans)

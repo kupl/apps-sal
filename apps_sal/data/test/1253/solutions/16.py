@@ -1,12 +1,11 @@
-# 4286327	 Aug 16, 2013 3:35:51 PM	fuwutu	 262B - Roma and Changing Signs	 Python 3	Accepted	280 ms	5500 KB
 l = input().split(' ')
-n, k = int(l[0]), int(l[1])
+(n, k) = (int(l[0]), int(l[1]))
 l = input().split(' ')
 answer = 0
 m = 10000
 for i in range(0, n):
     a = int(l[i])
-    if (a >= 0):
+    if a >= 0:
         answer += a
         if a < m:
             m = a

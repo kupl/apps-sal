@@ -1,11 +1,8 @@
 from collections import Counter
-
 n = int(input())
 a = list(map(int, input().split()))
-
 c = Counter(a)
 k = sorted(list(c.keys()))
-
 kl = k[-1]
 b = [1] * kl
 cnt = 0

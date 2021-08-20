@@ -1,15 +1,12 @@
-'''input
+"""input
 6
 100011
-'''
+"""
 from sys import stdin, setrecursionlimit
 import math
 from bisect import bisect_left
-
-
-# main starts
 n = int(stdin.readline().strip())
-string = (stdin.readline().strip())
+string = stdin.readline().strip()
 one = 0
 zero = 0
 for i in range(n):
@@ -17,7 +14,6 @@ for i in range(n):
         one += 1
     else:
         zero += 1
-
 if zero != one:
     print(1)
     print(string)

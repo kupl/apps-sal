@@ -9,4 +9,4 @@ def calculator(x, y, op):
         elif op == '/':
             return x / y
     else:
-        return "unknown value"
+        return 'unknown value'

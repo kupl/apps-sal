@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], a: int) -> int:
         l = len(coins)
         mem = []
@@ -14,7 +15,6 @@ class Solution:
                         mem[i][j] = min(1 + mem[i][j - coins[i - 1]], mem[i - 1][j])
                     else:
                         mem[i][j] = mem[i - 1][j]
-        # /print(len(mem),len(mem[0]))4
         if mem[l][a] == float('inf'):
             return -1
         return mem[l][a]

@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 Grid = []
 for i in range(100):
     Grid += [[0] * 100]

@@ -2,22 +2,22 @@ import heapq
 
 
 def coor_neighbor(coor, dxs, dys):
-    x, y = coor
+    (x, y) = coor
     for dx in dxs:
         for dy in dys:
-            yield x + dx, y + dy
+            yield (x + dx, y + dy)
 
 
 def coor_bottoms(coor):
-    return coor_neighbor(coor, (-1, 0, 1), (-1, ))
+    return coor_neighbor(coor, (-1, 0, 1), (-1,))
 
 
 def coor_tops(coor):
-    return coor_neighbor(coor, (-1, 0, 1), (1, ))
+    return coor_neighbor(coor, (-1, 0, 1), (1,))
 
 
 def coor_sibs(coor):
-    return coor_neighbor(coor, (-2, -1, 1, 2), (0, ))
+    return coor_neighbor(coor, (-2, -1, 1, 2), (0,))
 
 
 class Figure:
@@ -28,25 +28,22 @@ class Figure:
         self._stables_max = []
         self._pushed = set()
         self._dropped = set()
-
         cubes = dict()
         self._bots = dict()
         self._tops = dict()
-        for idx, coor in enumerate(coors):
+        for (idx, coor) in enumerate(coors):
             cubes[coor] = idx
             self._coors[idx] = coor
             self._bots[idx] = set()
             self._tops[idx] = set()
-
         coor_set = set(coors)
-        for idx, coor in enumerate(coors):
+        for (idx, coor) in enumerate(coors):
             for bottom in coor_bottoms(coor):
                 if bottom in coor_set:
                     self._bots[idx].add(cubes[bottom])
             for top in coor_tops(coor):
                 if top in coor_set:
                     self._tops[idx].add(cubes[top])
-
         for idx in self._coors:
             if self.isdroppable(idx):
                 self.push(idx)
@@ -61,7 +58,7 @@ class Figure:
         return len(self._bots[idx])
 
     def isdroppable(self, idx):
-        return all(len(self._bots[top_idx]) > 1 for top_idx in self._tops[idx])
+        return all((len(self._bots[top_idx]) > 1 for top_idx in self._tops[idx]))
 
     def push(self, idx):
         if idx not in self._pushed:
@@ -78,12 +75,10 @@ class Figure:
             return False
         self._pushed.remove(idx)
         self._dropped.add(idx)
-
         for bot_idx in self._bots[idx]:
             self._tops[bot_idx].remove(idx)
         for top_idx in self._tops[idx]:
             self._bots[top_idx].remove(idx)
-
         coor = self._coors[idx]
         for bot_idx in self._bots[idx]:
             if self.isdroppable(bot_idx):
@@ -105,7 +100,7 @@ class Figure:
         while True:
             if not self._stables_max:
                 return None
-            max_idx = - heapq.heappop(self._stables_max)
+            max_idx = -heapq.heappop(self._stables_max)
             if self.drop(max_idx):
                 return max_idx
 
@@ -123,7 +118,6 @@ def result_add(result, base, num):
 
 N = int(input())
 coors = [input_tuple() for _ in range(N)]
-
 figure = Figure(coors)
 result = 0
 while True:

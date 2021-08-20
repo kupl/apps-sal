@@ -1,18 +1,14 @@
-D, G = list(map(int, input().split()))
+(D, G) = list(map(int, input().split()))
 pc = []
 for i in range(D):
     pc.append(list(map(int, input().split())))
-
 scoreList = [0 for i in range(D)]
-
 for i in range(D):
     scoreList[i] = (i + 1) * 100 * pc[i][0] + pc[i][1]
-
 choiceList = [[] for i in range(2 ** D)]
 for i in range(2 ** D):
     for j in range(D):
-        choiceList[i].append(i // (2 ** j) % 2)
-
+        choiceList[i].append(i // 2 ** j % 2)
 minCount = 10 ** 8
 for choice in choiceList:
     score = 0

@@ -1,9 +1,9 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         dictionary = {}
-        intervals.sort(key=lambda x: (x[1]))
+        intervals.sort(key=lambda x: x[1])
         j = 0
-
         while j != len(intervals):
             idx = j + 1
             minima = intervals[j][0]

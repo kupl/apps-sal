@@ -1,4 +1,4 @@
-p, s = map(int, input().split())
+(p, s) = map(int, input().split())
 diff = list()
 for i in range(s):
     diff.append([])

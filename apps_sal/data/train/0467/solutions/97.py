@@ -1,4 +1,5 @@
 class Solution:
+
     def divisors(self, n, c={}):
         if n in c:
             return c[n]
@@ -18,4 +19,4 @@ class Solution:
             return 0
 
     def sumFourDivisors(self, nums: List[int]) -> int:
-        return sum(self.divisors(x) for x in nums)
+        return sum((self.divisors(x) for x in nums))

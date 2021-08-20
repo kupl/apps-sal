@@ -4,14 +4,12 @@
 def solve(N, A):
     mn = min(A)
     if mn > N:
-        A = [a - (mn // N * N) for a in A]
-
+        A = [a - mn // N * N for a in A]
     decr = 0
     i = 0
     while True:
         if A[i] - decr <= 0:
             return i + 1
-
         decr += 1
         i += 1
         if i == N:

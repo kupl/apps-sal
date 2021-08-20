@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         memo = {(0, 0): 1}
         N = 10 ** 9 + 7
@@ -11,7 +12,6 @@ class Solution:
                     res = 0
                 else:
                     res = dfs(x + 1, t - 1) + dfs(x, t - 1) + dfs(x - 1, t - 1)
-                memo[(x, t)] = res % N
-            return memo[(x, t)]
-
+                memo[x, t] = res % N
+            return memo[x, t]
         return dfs(0, steps)

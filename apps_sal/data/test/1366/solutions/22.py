@@ -2,7 +2,7 @@ n = int(input())
 k = []
 t = []
 for i in range(n):
-    p, m = map(int, input().split())
+    (p, m) = map(int, input().split())
     k.append(p)
     t.append(m)
 ans = n

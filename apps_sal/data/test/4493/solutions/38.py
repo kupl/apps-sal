@@ -20,7 +20,6 @@ def main():
                 if flag:
                     print('Yes')
                     return
-
     print('No')
 
 

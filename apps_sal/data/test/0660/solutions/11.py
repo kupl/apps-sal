@@ -1,5 +1,5 @@
-n, b, p = map(int, input().split())
-c, v = n, 0
+(n, b, p) = map(int, input().split())
+(c, v) = (n, 0)
 while c > 1:
     k = 2
     while 2 * k <= c:

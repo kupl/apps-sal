@@ -1,31 +1,28 @@
-# author : Tapan Goyal
-#           MNIT Jaipur
-
 import math
 import bisect
 import itertools
 import sys
-def I(): return sys.stdin.readline()
-def one(): return int(I())
 
 
-def more(): return map(int, I().split())
-def linput(): return list(more())
+def I():
+    return sys.stdin.readline()
 
 
-mod = 10**9 + 7
-inf = 10**18 + 1
+def one():
+    return int(I())
 
-'''fact=[1]*100001
-ifact=[1]*100001
-for i in range(1,100001):
-    fact[i]=((fact[i-1])*i)%mod
-    ifact[i]=((ifact[i-1])*pow(i,mod-2,mod))%mod
-def ncr(n,r):
-    return (((fact[n]*ifact[n-r])%mod)*ifact[r])%mod
-def npr(n,r):
-    return (((fact[n]*ifact[n-r])%mod))
-    '''
+
+def more():
+    return map(int, I().split())
+
+
+def linput():
+    return list(more())
+
+
+mod = 10 ** 9 + 7
+inf = 10 ** 18 + 1
+'fact=[1]*100001\nifact=[1]*100001\nfor i in range(1,100001):\n    fact[i]=((fact[i-1])*i)%mod\n    ifact[i]=((ifact[i-1])*pow(i,mod-2,mod))%mod\ndef ncr(n,r):\n    return (((fact[n]*ifact[n-r])%mod)*ifact[r])%mod\ndef npr(n,r):\n    return (((fact[n]*ifact[n-r])%mod))\n    '
 
 
 def merge(a, b):
@@ -43,18 +40,18 @@ def merge(a, b):
             j += 1
     ans += a[i:]
     ans += b[j:]
-    return ans, c
+    return (ans, c)
 
 
 def mergesort(a):
     if len(a) == 1:
-        return a, 0
+        return (a, 0)
     mid = len(a) // 2
-    left, left_inversion = mergesort(a[:mid])
-    right, right_inversion = mergesort(a[mid:])
-    m, c = merge(left, right)
-    c += (left_inversion + right_inversion)
-    return m, c
+    (left, left_inversion) = mergesort(a[:mid])
+    (right, right_inversion) = mergesort(a[mid:])
+    (m, c) = merge(left, right)
+    c += left_inversion + right_inversion
+    return (m, c)
 
 
 def is_prime(num):
@@ -82,7 +79,6 @@ def ceil(a, b):
     return (a + b - 1) // b
 
 
-# /////////////////////////////////////////////////////////////////////////////////////////////////
 def __starting_point():
     for _ in range(1):
         n = one()
@@ -90,9 +86,9 @@ def __starting_point():
         for i in a:
             ans = i ^ 2
             if ans > 0:
-                print(ans, end=" ")
+                print(ans, end=' ')
             else:
-                print(i ^ 3, end=" ")
+                print(i ^ 3, end=' ')
 
 
 __starting_point()

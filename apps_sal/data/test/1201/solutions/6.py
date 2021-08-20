@@ -2,11 +2,11 @@ from sys import stdin
 input = stdin.readline
 n = int(input())
 T = 2001
-t, d, p, idx = [], [], [], []
+(t, d, p, idx) = ([], [], [], [])
 ans = []
 arr = []
 for i in range(n):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     arr.append([a, b, c, i])
 arr.sort(key=lambda x: x[1])
 for i in arr:
@@ -17,7 +17,6 @@ for i in arr:
 dp = [[0 for j in range(n)] for i in range(T)]
 for time in range(1, T):
     for i in range(n):
-        #dp[time][i] = max(dp[time - 1][i], dp[time][i - 1])
         dp[time][i] = dp[time][i - 1]
         if d[i] > time >= t[i]:
             if i:

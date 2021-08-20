@@ -3,7 +3,7 @@ def read():
 
 
 def solve(n, k, A):
-    ans, prev = 0, 0
+    (ans, prev) = (0, 0)
     for a in A:
         total = prev + a
         if prev and total < k:
@@ -18,6 +18,6 @@ def solve(n, k, A):
     return ans
 
 
-n, k = read()
+(n, k) = read()
 A = read()
 print(solve(n, k, A))

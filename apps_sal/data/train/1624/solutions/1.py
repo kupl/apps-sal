@@ -4,7 +4,7 @@ mem = []
 def sq_cub_rev_prime(n):
     x = mem[-1] + 1 if mem else 89
     while len(mem) < n:
-        if is_prime(reverse(x**2)) and is_prime(reverse(x**3)):
+        if is_prime(reverse(x ** 2)) and is_prime(reverse(x ** 3)):
             mem.append(x)
         x += 1
     return mem[n - 1]

@@ -2,12 +2,12 @@ def parse(data):
     value = 0
     res = []
     for c in data:
-        if c == "i":
+        if c == 'i':
             value += 1
-        elif c == "d":
+        elif c == 'd':
             value -= 1
-        elif c == "s":
+        elif c == 's':
             value *= value
-        elif c == "o":
+        elif c == 'o':
             res.append(value)
     return res

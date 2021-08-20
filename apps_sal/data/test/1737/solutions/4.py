@@ -1,5 +1,4 @@
 n = int(input())
-
 names_set = set()
 s = {}
 names = []
@@ -23,7 +22,6 @@ for i in range(n):
         arr[s.get(el)].append(s.get(el2))
     if i != n - 1:
         r = input()
-
 res = []
 q = []
 q.append(0)
@@ -31,7 +29,7 @@ sp = {}
 while len(q):
     el = q[0]
     del q[0]
-    name, vers = names[el].split()
+    (name, vers) = names[el].split()
     if name in names_set:
         try:
             sp[name] = max(int(vers), sp[name])
@@ -44,12 +42,11 @@ while len(q):
             new_el.append(i)
             new_el.append(sp[i])
             res.append(new_el[:])
-            ind = s[str(new_el[0]) + " " + str(new_el[1])]
+            ind = s[str(new_el[0]) + ' ' + str(new_el[1])]
             for j in range(len(arr[ind])):
                 p = arr[ind][j]
                 q.append(p)
         sp = {}
-
 res = res[1:]
 res.sort()
 print(len(res))

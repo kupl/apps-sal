@@ -8,8 +8,7 @@ if n == 1:
         print('NO')
     else:
         print('YES')
+elif a != n - 1:
+    print('NO')
 else:
-    if a != n - 1:
-        print('NO')
-    else:
-        print('YES')
+    print('YES')

@@ -1,10 +1,11 @@
 class Solution:
+
     def matrixScore(self, A: List[List[int]]) -> int:
         maxsum = 0
         power = len(A[0])
         for row in A:
             for i in range(power):
-                maxsum += 2**(power - 1 - i) * row[i]
+                maxsum += 2 ** (power - 1 - i) * row[i]
         while True:
             change = False
             crow = False
@@ -13,7 +14,7 @@ class Solution:
             localsum = maxsum
             for row in range(len(A)):
                 for i in range(power):
-                    term = 2**(power - 1 - i)
+                    term = 2 ** (power - 1 - i)
                     if A[row][i] == 1:
                         cursum -= term
                     else:
@@ -25,7 +26,7 @@ class Solution:
                     num = row
                 cursum = localsum
             for col in range(power):
-                term = 2**(power - 1 - col)
+                term = 2 ** (power - 1 - col)
                 for row in range(len(A)):
                     if A[row][col] == 1:
                         cursum -= term

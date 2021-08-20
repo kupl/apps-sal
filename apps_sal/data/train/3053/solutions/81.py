@@ -5,7 +5,6 @@ def close_compare(a, b, margin=0):
             return 0
         else:
             return 1
-
     if a <= b:
         ress = b - margin
         if ress <= a:

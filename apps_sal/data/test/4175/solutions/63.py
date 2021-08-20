@@ -7,12 +7,12 @@ for i in range(n - 1):
     if w not in s:
         s.add(w)
         if w[0] != l:
-            print("No")
+            print('No')
             break
         else:
             l = w[-1]
     else:
-        print("No")
+        print('No')
         break
 else:
-    print("Yes")
+    print('Yes')

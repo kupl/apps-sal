@@ -1,6 +1,6 @@
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -16,12 +16,10 @@ for i in range(N):
     T.append(a)
 T_set = sorted(list(set(T)))
 M = len(T_set)
-
 ans = T_set[0]
 if M == 1:
     ans = T_set[0]
 else:
     for i in range(1, M):
         ans = lcm(ans, T_set[i])
-
 print(ans)

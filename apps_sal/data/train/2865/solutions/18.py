@@ -10,5 +10,5 @@ def solution(string):
     if len(string) == 1:
         return string[0]
     if len(string) == 0:
-        return ""
+        return ''
     pass

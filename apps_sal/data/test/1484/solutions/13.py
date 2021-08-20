@@ -1,9 +1,9 @@
-# AC
 import sys
 from heapq import heappush, heappop
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0

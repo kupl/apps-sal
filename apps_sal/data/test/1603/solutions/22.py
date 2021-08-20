@@ -8,7 +8,7 @@ for i in range(1, n):
 v.append(0)
 u.append(0)
 for i in range(m):
-    t, l, r = [int(x) for x in input().split()]
+    (t, l, r) = [int(x) for x in input().split()]
     if t == 1:
         print(v[r - 1] - v[l - 2])
     else:

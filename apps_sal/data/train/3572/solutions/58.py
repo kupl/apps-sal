@@ -1,5 +1,4 @@
 def invite_more_women(arr):
-    # your code here
     x = 0
     y = 0
     for l in arr:

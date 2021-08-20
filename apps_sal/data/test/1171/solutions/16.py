@@ -1,8 +1,7 @@
 import heapq
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 d = [int(x) for x in map(int, input().split())]
 e = d[::-1]
-
 res = 0
 num = min(N, K)
 for i in range(num + 1):

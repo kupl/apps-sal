@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -12,7 +11,8 @@ from functools import lru_cache
 import bisect
 
 
-class Scanner():
+class Scanner:
+
     def int():
         return int(sys.stdin.readline().rstrip())
 
@@ -32,14 +32,15 @@ class Scanner():
         return [int(input()) for i in range(n)]
 
 
-class Math():
+class Math:
+
     def gcd(a, b):
         if b == 0:
             return a
         return Math.gcd(b, a % b)
 
     def lcm(a, b):
-        return (a * b) // Math.gcd(a, b)
+        return a * b // Math.gcd(a, b)
 
     def roundUp(a, b):
         return -(-a // b)
@@ -48,15 +49,15 @@ class Math():
         return Math.roundUp(a, x) * x
 
     def toLowerMultiple(a, x):
-        return (a // x) * x
+        return a // x * x
 
     def nearPow2(n):
         if n <= 0:
             return 0
-        if n & (n - 1) == 0:
+        if n & n - 1 == 0:
             return n
         ret = 1
-        while(n > 0):
+        while n > 0:
             ret <<= 1
             n >>= 1
         return ret
@@ -75,12 +76,11 @@ class Math():
         return True
 
 
-MOD = int(1e09) + 7
+MOD = int(1000000000.0) + 7
 
 
 def main():
-    # sys.stdin = open("sample.txt")
-    A, B, C = Scanner.map_int()
+    (A, B, C) = Scanner.map_int()
     ans = 0
     if not A % 2 == B % 2 == C % 2:
         ans += 1

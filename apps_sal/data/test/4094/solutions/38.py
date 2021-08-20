@@ -5,7 +5,7 @@ def calc(K):
     if K % 2 == 0:
         return -1
     seven = 0
-    for i in range(1, 10**6):
+    for i in range(1, 10 ** 6):
         seven *= 10
         seven += 7
         seven %= K
@@ -14,4 +14,4 @@ def calc(K):
     return -1
 
 
-print((calc(K)))
+print(calc(K))

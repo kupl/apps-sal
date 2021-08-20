@@ -14,7 +14,7 @@ for d in range(1, len(lts)):
     cl = min(pl // 2, lts[d])
     if cl == 0:
         break
-    cs = cl * (2**(d + 1) - 1)
+    cs = cl * (2 ** (d + 1) - 1)
     mt.append(cs)
     pl = cl
 print(max(mt))

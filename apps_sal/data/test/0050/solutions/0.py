@@ -1,4 +1,4 @@
-n, m, r = map(int, input().split())
+(n, m, r) = map(int, input().split())
 S = list(map(int, input().split()))
 B = list(map(int, input().split()))
 x = min(S)

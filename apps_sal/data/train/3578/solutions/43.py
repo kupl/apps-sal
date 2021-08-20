@@ -2,7 +2,7 @@ def paperwork(n, m):
     if n < 0 or m < 0:
         return 0
     else:
-        pages = (n * m)
+        pages = n * m
         if pages < 0:
             return 0
         else:

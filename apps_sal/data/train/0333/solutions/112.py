@@ -1,4 +1,5 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) <= 1:
             return 0
@@ -6,11 +7,11 @@ class Solution:
         seen = set()
         seen.add(0)
         G = defaultdict(list)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             G[a].append(i)
         step = 0
         while bfs:
-            cur, bfs = bfs, []
+            (cur, bfs) = (bfs, [])
             for idx in cur:
                 if idx == len(arr) - 1:
                     return step

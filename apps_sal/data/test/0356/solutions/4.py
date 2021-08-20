@@ -1,6 +1,6 @@
 from collections import deque
 from sys import stdin
-lines = deque(line.strip() for line in stdin.readlines())
+lines = deque((line.strip() for line in stdin.readlines()))
 
 
 def nextline():
@@ -8,7 +8,7 @@ def nextline():
 
 
 def types(cast, sep=None):
-    return tuple(cast(x) for x in strs(sep=sep))
+    return tuple((cast(x) for x in strs(sep=sep)))
 
 
 def ints(sep=None):
@@ -20,15 +20,14 @@ def strs(sep=None):
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     n = int(nextline())
     a = ints()
     m = int(nextline())
     b = ints()
     count = 1
-    i, j = 0, 0
-    a_sum, b_sum = 0, 0
-    a_total, b_total = 0, 0
+    (i, j) = (0, 0)
+    (a_sum, b_sum) = (0, 0)
+    (a_total, b_total) = (0, 0)
     while i < n and j < m:
         if a_sum < b_sum:
             a_total += a[i]
@@ -40,14 +39,14 @@ def main():
             j += 1
         if a_sum == b_sum:
             count += 1
-            a_sum, b_sum = 0, 0
+            (a_sum, b_sum) = (0, 0)
     while i < n and a_total < b_total:
         a_total += a[i]
         i += 1
     while j < m and b_total < a_total:
         b_total += b[j]
         j += 1
-    if i == n and j == m and a_total == b_total:
+    if i == n and j == m and (a_total == b_total):
         return count
     return -1
 

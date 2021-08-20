@@ -1,10 +1,11 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 class Node:
+
     def __init__(self, depth):
         self.depth = depth
         self.left = None
@@ -26,6 +27,7 @@ def insert(node, s):
 
 
 class Trie:
+
     def __init__(self):
         self.root = Node(0)
 
@@ -33,7 +35,7 @@ class Trie:
         insert(self.root, s)
 
 
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 S = [input().strip() for _ in range(n)]
 trie = Trie()
 for s in S:

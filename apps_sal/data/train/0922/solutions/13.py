@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     list_n = list(map(int, input().split()))
     list_m = list(map(int, input().split()))
     set_m = set(list_m)

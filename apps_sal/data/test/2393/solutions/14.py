@@ -16,7 +16,6 @@ for j in range(n):
                         Ans_0.append(i)
                 else:
                     Ans_0.append(i)
-
         elif S == 'one' or S == 'two':
             if Ans_0:
                 if Ans_0[-1] != i - 1:

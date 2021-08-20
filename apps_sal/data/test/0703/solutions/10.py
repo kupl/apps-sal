@@ -1,15 +1,6 @@
-k, a, b, v = list(map(int, input().split()))
-
-#k, a, b, v = 3, 10, 1, 3
+(k, a, b, v) = list(map(int, input().split()))
 rezult = 0
-
-
-box = {
-    'sep': 0,
-    'place': 0,
-    'nuts': 0
-}
-
+box = {'sep': 0, 'place': 0, 'nuts': 0}
 while a > 0:
     if b >= 0:
         if b < k:
@@ -27,7 +18,6 @@ while a > 0:
         box['nuts'] = a
         a = 0
     else:
-        a -= (v * box['place'])
+        a -= v * box['place']
     rezult += 1
-
 print(rezult)

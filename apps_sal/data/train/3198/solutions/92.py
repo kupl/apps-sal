@@ -5,7 +5,6 @@ def check_exam(arr1, arr2):
         studentAnswer = arr2[i]
         if studentAnswer == '':
             continue
-
         if studentAnswer == validAnswer:
             score += 4
         else:

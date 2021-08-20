@@ -1,10 +1,8 @@
-# B
-
 n = int(input())
 l = list(input())
 for i in range(n):
     l[i] = int(l[i])
-ans = 10**(n - 1)
+ans = 10 ** (n - 1)
 for i in range(n):
     l = l[1:] + l[:1]
     m = []

@@ -7,10 +7,9 @@ ans = 0
 arry = []
 for i in range(n):
     k = arrx[i] * n
-    if(arr[i] - k <= i):
+    if arr[i] - k <= i:
         k += i + 1
     else:
         k += n + i + 1
     arry.append(k)
-# print(arry)
 print(arry.index(min(arry)) + 1)

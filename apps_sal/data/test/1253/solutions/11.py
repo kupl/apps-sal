@@ -1,4 +1,4 @@
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
 m = [x for x in a if x < 0]
 p = [x for x in a if x >= 0]

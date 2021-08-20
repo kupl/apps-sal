@@ -2,8 +2,8 @@ import copy
 
 
 def main():
-    N, M, Q = [int(n) for n in input().split(" ")]
-    q = [[int(a) for a in input().split(" ")] for i in range(Q)]
+    (N, M, Q) = [int(n) for n in input().split(' ')]
+    q = [[int(a) for a in input().split(' ')] for i in range(Q)]
     all_series = get_series(N, M)
     points = [0]
     for l in all_series:
@@ -16,8 +16,6 @@ def get_score(l, q):
 
 
 def get_series(N, M):
-    # N: number of elms
-    # M: upper limit of val of elm
     all_series = []
     checked = [[0] * M for i in range(N)]
     to_check = [[0, j + 1] for j in range(M)]

@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyDuplicate(self, nums, k):
         """
         :type nums: List[int]
@@ -20,10 +21,10 @@ class Solution:
                         index1 = i
                     elif nums[i] == num and index2 == -1:
                         index2 = i
-                    elif nums[i] == num and index1 != -1 and index2 != -1:
+                    elif nums[i] == num and index1 != -1 and (index2 != -1):
                         index1 = index2
                         index2 = i
                     print(index2, index1)
-                    if index1 != -1 and index2 != -1 and abs(index2 - index1) <= k:
+                    if index1 != -1 and index2 != -1 and (abs(index2 - index1) <= k):
                         return True
         return False

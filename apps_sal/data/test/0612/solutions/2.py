@@ -1,23 +1,18 @@
 def solve():
-    n, k, p = list(map(int, input().split()))
+    (n, k, p) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-
     even = list([x for x in a if x % 2 == 0])
     odd = list([x for x in a if x % 2 == 1])
-
     if (len(odd) - (k - p)) % 2 != 0:
         print('NO')
         return
-
     ans = [[] for _ in range(k)]
-
     for i in range(k - p):
         if odd:
             ans[i].append(odd.pop())
         else:
             print('NO')
             return
-
     for i in range(k - p, k):
         if even:
             ans[i].append(even.pop())
@@ -27,7 +22,6 @@ def solve():
         else:
             print('NO')
             return
-
     ans[0] += even
     ans[0] += odd
     print('YES')

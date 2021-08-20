@@ -1,11 +1,10 @@
 class Solution:
-    def minRemoveToMakeValid(self, s: str) -> str:
 
+    def minRemoveToMakeValid(self, s: str) -> str:
         cnt_left = 0
         rev_left = []
         rev_right = set()
-
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c == ')':
                 if cnt_left == 0:
                     rev_right.add(i)
@@ -16,7 +15,6 @@ class Solution:
                 rev_left.append(i)
                 cnt_left += 1
         rev = rev_right.union(set(rev_left))
-
         res = []
         for i in range(len(s)):
             if i not in rev_right and i not in rev_left:

@@ -1,5 +1,4 @@
 3
-
 s = input()
 k = int(input())
 if len(s) < k:

@@ -12,4 +12,4 @@ for i in l[0]:
             l[j].remove(i)
     else:
         ans.append(i)
-print(*ans, sep="")
+print(*ans, sep='')

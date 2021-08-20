@@ -4,14 +4,14 @@ def bfs(mat, x, y, n):
     n -= 1
     while queue:
         q = queue.pop(0)
-        a, b, c = q[0], q[1], q[2]
+        (a, b, c) = (q[0], q[1], q[2])
         if mark[a][b] == True:
             continue
         mark[a][b] = True
         if b == n:
             return 'YES'
         c += 2
-        e, r, f = 0, 0, 0
+        (e, r, f) = (0, 0, 0)
         p = min(b - 1 + c, n)
         z = min(b + 2 + c, n)
         for i in range(p, z):
@@ -37,8 +37,8 @@ def bfs(mat, x, y, n):
 
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
-    mat = {j: {u: x for u, x in enumerate(input())} for j in range(3)}
+    (n, k) = map(int, input().split())
+    mat = {j: {u: x for (u, x) in enumerate(input())} for j in range(3)}
     if mat[0][0] == 's':
         res = bfs(mat, 0, 0, n)
     elif mat[1][0] == 's':

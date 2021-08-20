@@ -1,15 +1,12 @@
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 wv = list(map(int, input().split()))
 w1 = wv[0]
-
 wvs = [[] for i in range(4)]
 wvs[0].append(wv[1])
-
 for i in range(N - 1):
-    w, v = list(map(int, input().split()))
+    (w, v) = list(map(int, input().split()))
     w -= w1
     wvs[w].append(v)
-
 s = [0] * 4
 for i in range(4):
     wvs[i] = sorted(wvs[i], reverse=True)
@@ -18,8 +15,6 @@ for i in range(4):
         for j in range(1, s[i]):
             wvs[i][j] += wvs[i][j - 1]
     wvs[i].insert(0, 0)
-# print(wvs)
-
 ans = 0
 for i in range(s[0] + 1):
     for j in range(s[1] + 1):
@@ -29,5 +24,4 @@ for i in range(s[0] + 1):
                 if weight <= W:
                     value = wvs[0][i] + wvs[1][j] + wvs[2][k] + wvs[3][l]
                     ans = max(ans, value)
-
 print(ans)

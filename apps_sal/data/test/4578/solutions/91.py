@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 li = []
 for i in range(n):
     li.append(int(input()))

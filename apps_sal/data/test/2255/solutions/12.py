@@ -1,12 +1,15 @@
 from collections import defaultdict
 import heapq
-def inpl(): return list(map(int, input().split()))
 
 
-N, M = inpl()
+def inpl():
+    return list(map(int, input().split()))
+
+
+(N, M) = inpl()
 Edge = defaultdict(lambda: [])
 for _ in range(M):
-    a, b = inpl()
+    (a, b) = inpl()
     if a != b:
         Edge[a].append(b)
         Edge[b].append(a)

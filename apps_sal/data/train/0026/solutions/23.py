@@ -1,14 +1,11 @@
-
-
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     if n == 2 and m == 2:
-        print("YES")
+        print('YES')
+    elif n == 1 or m == 1:
+        print('YES')
     else:
-        if n == 1 or m == 1:
-            print("YES")
-        else:
-            print("NO")
+        print('NO')
 
 
 def __starting_point():

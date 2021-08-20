@@ -1,6 +1,5 @@
 o = input()
 e = input()
-
 pw = ''
 for i in range(len(o)):
     pw += o[i]

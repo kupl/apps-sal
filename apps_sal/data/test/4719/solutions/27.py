@@ -9,4 +9,4 @@ for i in range(n - 1):
             s.remove(j)
     c = t
 c.sort()
-print("".join(c))
+print(''.join(c))

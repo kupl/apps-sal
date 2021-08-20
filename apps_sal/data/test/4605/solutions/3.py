@@ -1,5 +1,4 @@
-n, a, b = list(map(int, input().split()))
-
+(n, a, b) = list(map(int, input().split()))
 ans = 0
 for num in range(1, n + 1):
     p = num

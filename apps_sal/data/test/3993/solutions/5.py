@@ -1,6 +1,5 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 mi = list(map(int, input().split()))
-
 ans = 0
 items_to_del = 0
 shift = 1

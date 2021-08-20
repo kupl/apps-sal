@@ -9,11 +9,11 @@ for i in input().strip().split():
 ans = 0
 for i in d.keys():
     for j in range(1, 31):
-        x = 2**j - i
+        x = 2 ** j - i
         if x < i:
             continue
         elif x == i:
-            ans += (d[i] * (d[i] - 1)) // 2
+            ans += d[i] * (d[i] - 1) // 2
         elif x > i and x in d:
             ans += d[i] * d[x]
 print(ans)

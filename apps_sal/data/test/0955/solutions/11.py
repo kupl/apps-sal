@@ -1,4 +1,3 @@
-# ns=[int(x)for x in input().split()]
 n = int(input())
 d = {}
 for _ in range(n):
@@ -7,7 +6,6 @@ for _ in range(n):
     s[1] = list(s[1])
     s[1].sort()
     s[1] = ''.join(s[1])
-    # s[1]=s[1].sort()
     if s[1] in d:
         d[s[1]] = min(d[s[1]], p)
     else:
@@ -17,7 +15,7 @@ for _ in range(n):
 def get(s):
     if s in d:
         return d[s]
-    return 10**6
+    return 10 ** 6
 
 
 a = get('A')
@@ -28,7 +26,7 @@ bc = get('BC')
 ac = get('AC')
 abc = get('ABC')
 ans = min(a + b + c, a + bc, b + ac, c + ab, abc, ab + bc, ab + ac, ac + bc)
-if ans < 10**6:
+if ans < 10 ** 6:
     print(ans)
 else:
     print(-1)

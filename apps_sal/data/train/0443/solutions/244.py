@@ -7,11 +7,10 @@ class Solution:
             num = tail[0]
             ilen = len(i)
             if ilen == 2:
-                if (i[0] < i[1] and i[1] < num) or (i[0] > i[1] and i[1] > num):
+                if i[0] < i[1] and i[1] < num or (i[0] > i[1] and i[1] > num):
                     result += 1
             elif ilen < 2:
                 head.append(i + [num])
-
         if len(tail) == 1:
             return result
         else:

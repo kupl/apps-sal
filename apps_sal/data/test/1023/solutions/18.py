@@ -10,7 +10,7 @@ def bbin(key, b):
     return r
 
 
-n, m, ta, tb, k = map(int, input().split())
+(n, m, ta, tb, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ans = 0

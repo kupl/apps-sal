@@ -2,6 +2,7 @@ import bisect
 
 
 class BIT:
+
     def __init__(self, node_size):
         self._node = node_size + 1
         self.bit = [0] * self._node
@@ -19,7 +20,7 @@ class BIT:
         return res
 
 
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 a = list(map(int, input().split()))
 ru = [0] * (n + 1)
 ans = 0

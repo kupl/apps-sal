@@ -1,7 +1,5 @@
-n, m, k = map(int, input().split())
-# n*mからk個選ぶ
-# x方向
-mod = 10**9 + 7
+(n, m, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 kaidan = [1] * (n * m + 1)
 gyaku = [1] * (n * m + 1)
 for i in range(1, n * m + 1):
@@ -10,8 +8,8 @@ for i in range(1, n * m + 1):
 
 
 def comb(n, r):
-    if n - r > 0 and n > 0 and r > 0:
-        return (kaidan[n] * gyaku[n - r] * gyaku[r]) % mod
+    if n - r > 0 and n > 0 and (r > 0):
+        return kaidan[n] * gyaku[n - r] * gyaku[r] % mod
     elif n == 0 or r == 0 or n == r:
         return 1
     else:

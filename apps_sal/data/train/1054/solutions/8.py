@@ -1,6 +1,4 @@
-# cook your dish here
 t = int(input())
-
 while t > 0:
     t -= 1
     s = list(input())
@@ -22,6 +20,6 @@ while t > 0:
         l += 1
         r -= 1
     if res:
-        print("".join(s))
+        print(''.join(s))
     else:
         print(-1)

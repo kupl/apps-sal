@@ -1,6 +1,6 @@
 class Solution:
-    def peopleIndexes(self, fv: List[List[str]]) -> List[int]:
 
+    def peopleIndexes(self, fv: List[List[str]]) -> List[int]:
         dic = defaultdict(lambda: set())
         for i in range(len(fv)):
             for cmp in fv[i]:

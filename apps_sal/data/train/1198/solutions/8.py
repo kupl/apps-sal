@@ -1,28 +1,18 @@
-# cook your dish here
 """
   Url: https://www.codechef.com/problems/FUZZYLIN
 """
-
-
-__author__ = "Ronald Kaiser"
-__email__ = "raios dot catodicos at gmail dot com"
-
-
+__author__ = 'Ronald Kaiser'
+__email__ = 'raios dot catodicos at gmail dot com'
 from math import gcd
 from collections import defaultdict
-
-
 N = int(input())
 A = list(map(int, input().split()))
 Q = int(input())
 K = [int(input()) for _ in range(Q)]
-
 D = defaultdict(int)
-
 t = A[0]
 for i in range(1, N):
     t = gcd(t, A[i])
-
 for i in range(N):
     v = A[i]
     for j in range(i, N):
@@ -34,12 +24,10 @@ for i in range(N):
             D[v] += N - j
             break
         D[v] += 1
-
 i = D[1] if 1 in D else 0
 max_k = max(K)
 T = [i for _ in range(max_k + 1)]
-
-for k, v in list(D.items()):
+for (k, v) in list(D.items()):
     if k == 1:
         continue
     j = k
@@ -48,6 +36,5 @@ for k, v in list(D.items()):
         T[j] += v
         x += 1
         j = k * x
-#print(m, D, T)
 for k in K:
     print(T[k])

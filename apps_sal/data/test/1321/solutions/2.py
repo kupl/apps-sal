@@ -18,4 +18,4 @@ for i in range(n):
 answ = []
 for i in range(n):
     answ.append(str((width - men[i][0]) * (height[1] if men[i][1] == height[0] and height[2] == False else height[0])))
-print(" ".join(answ))
+print(' '.join(answ))

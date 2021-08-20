@@ -1,6 +1,5 @@
 import sys
-
-spoon = ["SPOON", "spoon"]
+spoon = ['SPOON', 'spoon']
 
 
 def main():
@@ -18,8 +17,6 @@ def main():
             while i < r:
                 matrix[i] = input()
                 i = i + 1
-
-            # Check row wise
             for m in matrix:
                 for s in m:
                     if s == spoon[0][k] or s == spoon[1][k]:
@@ -30,12 +27,9 @@ def main():
                             break
                     else:
                         k = 0
-
             if flag == 1:
-                print("There is a spoon!")
+                print('There is a spoon!')
                 continue
-
-            # Check column wise
             i = 0
             k = 0
             while i < c:
@@ -51,13 +45,10 @@ def main():
                         k = 0
                     j = j + 1
                 i = i + 1
-
             if flag == 1:
-                print("There is a spoon!")
+                print('There is a spoon!')
                 continue
-
-            print("There is indeed no spoon!")
-
+            print('There is indeed no spoon!')
     except:
         return 0
 

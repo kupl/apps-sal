@@ -1,5 +1,5 @@
 def correct(string):
-    x = "501"
-    y = "SOI"
+    x = '501'
+    y = 'SOI'
     other = string.maketrans(x, y)
-    return(string.translate(other))
+    return string.translate(other)

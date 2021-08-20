@@ -20,9 +20,8 @@ while t > 0:
     for i in a:
         p = p * i
     s = list(divisorGenerator(p))
-
     for j in s:
-        if p % (j**2) == 0:
+        if p % j ** 2 == 0:
             print(j)
             break
     t = t - 1

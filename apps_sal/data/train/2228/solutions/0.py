@@ -18,8 +18,7 @@ def solve(adj, m, k, uv):
     nk = len([1 for i in nn if i >= k])
     res[-1] = nk
     for i in range(m - 1, 0, -1):
-        u1, v1 = uv[i]
-
+        (u1, v1) = uv[i]
         if nn[u1] < k or nn[v1] < k:
             res[i - 1] = nk
             continue
@@ -29,13 +28,11 @@ def solve(adj, m, k, uv):
         if not q and nn[v1] == k:
             q.append(v1)
             nn[v1] -= 1
-
         if not q:
             nn[u1] -= 1
             nn[v1] -= 1
             adj[u1].remove(v1)
             adj[v1].remove(u1)
-
         while q:
             v = q.popleft()
             nk -= 1
@@ -47,14 +44,13 @@ def solve(adj, m, k, uv):
     return res
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = [set() for i in range(n)]
 uv = []
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     a[u - 1].add(v - 1)
     a[v - 1].add(u - 1)
     uv.append((u - 1, v - 1))
-
 res = solve(a, m, k, uv)
 print(str(res)[1:-1].replace(' ', '').replace(',', '\n'))

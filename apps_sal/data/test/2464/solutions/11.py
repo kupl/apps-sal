@@ -1,5 +1,5 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
@@ -7,7 +7,8 @@ def main():
     from collections import deque
     input = sys.stdin.readline
 
-    class UnionFind():
+    class UnionFind:
+
         def __init__(self, n):
             self.n = n
             self.root = [-1] * (n + 1)
@@ -37,20 +38,18 @@ def main():
 
         def size(self, x):
             return -self.root[self.find_root(x)]
-
     N = int(input())
     adj = [[] for _ in range(N + 1)]
     UF0 = UnionFind(N + 1)
     UF1 = UnionFind(N + 1)
     for _ in range(N - 1):
-        a, b, c = list(map(int, input().split()))
+        (a, b, c) = list(map(int, input().split()))
         adj[a].append((b, c))
         adj[b].append((a, c))
         if c == 0:
             UF0.unite(a, b)
         else:
             UF1.unite(a, b)
-
     ans = 0
     roots = set()
     for v in range(1, N + 1):
@@ -59,8 +58,6 @@ def main():
             roots.add(r)
             s = -UF1.root[r]
             ans += s * (s - 1)
-    # print(ans)
-
     roots = set()
     for v in range(1, N + 1):
         r = UF0.find_root(v)
@@ -68,14 +65,12 @@ def main():
             roots.add(r)
             s = -UF0.root[r]
             ans += s * (s - 1)
-    # print(ans)
-
     for v in range(1, N + 1):
         W = 0
         B = 0
         flg0 = 0
         flg1 = 0
-        for u, c in adj[v]:
+        for (u, c) in adj[v]:
             if flg0 and flg1:
                 break
             if c == 0:

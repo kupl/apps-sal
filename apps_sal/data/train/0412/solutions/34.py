@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         D = {}
 
@@ -10,15 +11,10 @@ class Solution:
                 return 0
             if target < 0:
                 return 0
-
             for i in range(1, f + 1):
                 if (d - 1, target - i) not in D:
                     D[d - 1, target - i] = func(d - 1, f, target - i)
                 res += D[d - 1, target - i]
-                res = res % (10**9 + 7)
+                res = res % (10 ** 9 + 7)
             return res
-
-        # d=2
-        # f=6
-        # target=7
         return func(d, f, target)

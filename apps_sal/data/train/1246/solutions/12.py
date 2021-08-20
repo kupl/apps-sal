@@ -4,10 +4,9 @@ try:
         n = int(input())
         l1 = list(map(int, input().split()))
         l2 = list(map(int, input().split()))
-        if(max(l1) != max(l2)):
-            print("YES")
+        if max(l1) != max(l2):
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
 except:
     pass

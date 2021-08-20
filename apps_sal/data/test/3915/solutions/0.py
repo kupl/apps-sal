@@ -10,10 +10,10 @@ def primes2(limit):
             p = i + i + 3
             s = p * (i + 1) + i
             buf[s::p] = [False] * ((lmtbf - s) // p + 1)
-    return [2] + [i + i + 3 for i, v in enumerate(buf) if v]
+    return [2] + [i + i + 3 for (i, v) in enumerate(buf) if v]
 
 
-ps = primes2(12 * 10**6)
+ps = primes2(12 * 10 ** 6)
 
 
 def rub2(n):
@@ -29,9 +29,8 @@ def rub2(n):
     return lst
 
 
-rs = rub2(12 * 10**2)
-
-p, q = map(int, input().split())
+rs = rub2(12 * 10 ** 2)
+(p, q) = map(int, input().split())
 idxp = len(ps) - 1
 idxr = len(rs) - 1
 pi = ps[idxp]

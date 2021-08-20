@@ -1,16 +1,11 @@
 from operator import or_, xor
 import sys
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 t = [list(map(int, input().split()))]
-
 for i in range(n):
     t += [[(or_, xor)[i & 1](t[i][j], t[i][j + 1]) for j in range(0, len(t[i]), 2)]]
-
-# print(t)
-
 for s in sys.stdin:
-    p, b = s.split()
+    (p, b) = s.split()
     p = int(p) - 1
     t[0][p] = int(b)
     for j in range(n):

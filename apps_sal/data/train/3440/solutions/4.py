@@ -1,4 +1,4 @@
-pows = [2**i for i in range(63, -1, -1)]
+pows = [2 ** i for i in range(63, -1, -1)]
 
 
 def powers(n):

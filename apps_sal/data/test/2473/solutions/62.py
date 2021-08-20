@@ -1,5 +1,4 @@
-# 075_D
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 xy = [tuple(map(int, input().split())) for _ in range(n)]
 ans = 10 ** 50
 xy.sort()

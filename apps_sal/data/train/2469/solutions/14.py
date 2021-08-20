@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfExist(self, arr: List[int]) -> bool:
         h_table = set()
         for num in arr:

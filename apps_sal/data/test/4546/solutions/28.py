@@ -1,13 +1,11 @@
 def iroha():
-    a, b, c = list(map(int, input().split()))
-
+    (a, b, c) = list(map(int, input().split()))
     one = b - a
     two = c - b
-
     if one == two:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

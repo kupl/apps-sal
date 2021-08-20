@@ -1,19 +1,16 @@
-class Solution:  # 368 ms
+class Solution:
+
     def numBusesToDestination(self, routes, start, target):
         if start == target:
             return 0
-
         stop2Route = defaultdict(set)
         route2Stop = defaultdict(set)
-        for i, stops in enumerate(routes):
+        for (i, stops) in enumerate(routes):
             for stop in stops:
                 route2Stop[i].add(stop)
                 stop2Route[stop].add(i)
-
-      #  visited = set()
         visitedStop = set()
-
-        curr, other = {start}, {target}
+        (curr, other) = ({start}, {target})
         step = 0
         while curr and other:
             stack = set()
@@ -31,6 +28,5 @@ class Solution:  # 368 ms
                 return step
             curr = stack
             if len(curr) > len(other):
-                curr, other = other, curr
-
+                (curr, other) = (other, curr)
         return -1

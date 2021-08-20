@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     ar = list(map(int, input().strip().split()))
     even = []
     odd = []
@@ -11,7 +11,6 @@ for i in range(t):
         else:
             even.append(0)
             odd.append(ar[i])
-
     dp1 = [0] * n
     dp2 = [0] * n
     dp1[0] = even[0]
@@ -21,7 +20,6 @@ for i in range(t):
             dp1[i] = max(dp1[i - 1], even[i])
         else:
             dp1[i] = max(dp1[i - 1], dp1[i - k - 1] + even[i])
-
     for i in range(1, n):
         if i < k + 1:
             dp2[i] = max(dp2[i - 1], odd[i])

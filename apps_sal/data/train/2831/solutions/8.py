@@ -1,1 +1,2 @@
-def largest_pair_sum(a): return max(a) + sorted(a)[-2]
+def largest_pair_sum(a):
+    return max(a) + sorted(a)[-2]

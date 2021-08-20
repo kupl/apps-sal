@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 td = []
 for _ in range(n):
     td.append(list(map(int, input().split())))
@@ -17,15 +17,14 @@ for tdi in td[:k]:
     else:
         A.append(tdi[1])
     x += tdi[1]
-
 for tdi in td[k:]:
     if NEW[tdi[0]] == 1:
         SUB.append(tdi[1])
         NEW[tdi[0]] = 0
-ans = x + y**2
+ans = x + y ** 2
 for i in range(min(k - 1, len(A), len(SUB))):
     x -= A.pop()
     x += SUB[i]
     y += 1
-    ans = max(ans, x + y**2)
+    ans = max(ans, x + y ** 2)
 print(ans)

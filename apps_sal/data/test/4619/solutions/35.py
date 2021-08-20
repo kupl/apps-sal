@@ -1,10 +1,10 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 b = w
 c = h
 d = 0
 e = 0
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         d = max(x, d)
     elif a == 2:

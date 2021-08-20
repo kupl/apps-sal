@@ -2,10 +2,11 @@ from collections import deque
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         minQue = deque()
         maxQue = deque()
-        start, end = 0, 0
+        (start, end) = (0, 0)
         longest = 1
         while end < len(nums):
             current = nums[end]

@@ -1,7 +1,6 @@
 def get_issuer(number):
     card_str = str(number)
     master_card_prefix = list(range(51, 56))
-
     if card_str[0] == '4':
         if len(card_str) == 13 or len(card_str) == 16:
             return 'VISA'
@@ -22,6 +21,5 @@ def get_issuer(number):
             return 'Mastercard'
         else:
             return 'Unknown'
-
     else:
         return 'Unknown'

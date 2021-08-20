@@ -1,7 +1,6 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 t = int(input())
 for i in range(int(t)):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     C = list(map(int, input().split()))
     D = list(map(int, input().split()))
     for j in range(A * B):

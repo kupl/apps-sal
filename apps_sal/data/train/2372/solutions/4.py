@@ -1,6 +1,3 @@
-# Created by: WeirdBugsButOkay
-# 28-09-2020, 13:44:16
-
 import math
 
 
@@ -9,7 +6,7 @@ def ceil(a, b):
 
 
 def calc(n, a):
-    return (a - 1 + ceil(n - a, a))
+    return a - 1 + ceil(n - a, a)
 
 
 def solve():

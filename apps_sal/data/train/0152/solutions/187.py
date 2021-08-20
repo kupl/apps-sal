@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
         highest_f = int((position[-1] - position[0]) / (m - 1))
@@ -15,9 +16,8 @@ class Solution:
                 else:
                     new_curr_f = int((curr_f + high_f) / 2)
                     return helper(position, m, high_f, curr_f, new_curr_f)
+            elif len(selected_pos) < m:
+                return low_f
             else:
-                if len(selected_pos) < m:
-                    return low_f
-                else:
-                    return curr_f
+                return curr_f
         return int(helper(position, m, highest_f, 1, highest_f))

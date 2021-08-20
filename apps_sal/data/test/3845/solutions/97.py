@@ -1,14 +1,5 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
 inf = float('inf')
 mod = 10 ** 9 + 7
-
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 
 
 def solve(A, B):
@@ -51,21 +42,14 @@ def solve(A, B):
                 B -= 1
         if A + B == 0:
             break
-
     print((100, 100))
     for anss in ans[1:]:
-        print((''.join(anss[1:])))
+        print(''.join(anss[1:]))
 
 
 def __starting_point():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     solve(A, B)
-
-    # # test
-    # from random import randint
-    # import tool.testcase as tt
-    # from tool.testcase import random_str, random_ints
-    # solve()
 
 
 __starting_point()

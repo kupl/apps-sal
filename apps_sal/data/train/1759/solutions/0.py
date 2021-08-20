@@ -3,6 +3,7 @@ from collections import defaultdict
 
 def setter(prep, k, v, supSetter):
     if callable(v):
+
         def wrap(*args):
             f = prep.d[k][len(args)]
             if isinstance(f, int):
@@ -14,16 +15,23 @@ def setter(prep, k, v, supSetter):
 
 
 class Prep(dict):
-    def __init__(self): self.d = defaultdict(lambda: defaultdict(int))
-    def __setitem__(self, k, v): setter(self, k, v, super().__setitem__)
+
+    def __init__(self):
+        self.d = defaultdict(lambda: defaultdict(int))
+
+    def __setitem__(self, k, v):
+        setter(self, k, v, super().__setitem__)
 
 
 class Meta(type):
+
     @classmethod
-    def __prepare__(cls, *args, **kwds): return Prep()
+    def __prepare__(cls, *args, **kwds):
+        return Prep()
 
     def __new__(metacls, name, bases, prep, **kwargs):
         prep['_Meta__DCT'] = prep
         return super().__new__(metacls, name, bases, prep, **kwargs)
 
-    def __setattr__(self, k, v): setter(self.__DCT, k, v, super().__setattr__)
+    def __setattr__(self, k, v):
+        setter(self.__DCT, k, v, super().__setattr__)

@@ -2,7 +2,7 @@ t = int(input())
 for _ in range(t):
     s = input()
     st = set()
-    x, y = 0, 0
+    (x, y) = (0, 0)
     ans = 0
     for c in s:
         if c == 'S':

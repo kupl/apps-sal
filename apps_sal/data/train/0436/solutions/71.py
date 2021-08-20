@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = collections.deque()
         q.append(n)
@@ -17,5 +18,4 @@ class Solution:
                     q.append(num // 2)
                 if num - 1 not in seen:
                     q.append(num - 1)
-
             lvl += 1

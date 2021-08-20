@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().split()))
-
 color = [0] * 9
 for i in range(N):
     if 1 <= a[i] <= 399:
@@ -21,7 +20,6 @@ for i in range(N):
         color[7] += 1
     elif 3200 <= a[i]:
         color[8] += 1
-
 count = 0
 for i in range(8):
     if color[i] != 0:

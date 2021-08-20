@@ -1,5 +1,5 @@
 def recSolve(a, dp, l, r):
-    if(l > r):
+    if l > r:
         return 0
     if dp[l][r] != 0.0:
         return dp[l][r]

@@ -7,7 +7,6 @@ i8 = np.int64
 def solve(a, b, t, K, N):
     t1 = t // K
     d = t % K * 2
-    # b が a から a + d の位置にあれば衝突する
     x = 0
     y = 0
     ans = 0
@@ -27,18 +26,18 @@ def set_ini(DX, K):
     b = DX[1][DX[0] == 2]
     b = np.sort(b)
     b = np.hstack((b, b + K, b + 2 * K, [3 * K]))
-    return a, b
+    return (a, b)
 
 
 def main():
     f = open('/dev/stdin', 'rb')
     vin = np.fromstring(f.read(), i8, sep=' ')
-    N, Q, K = vin[0:3]
+    (N, Q, K) = vin[0:3]
     head = 3
     DX = vin[head:head + 2 * N].reshape(-1, 2).T
-    a, b = set_ini(DX, K)
+    (a, b) = set_ini(DX, K)
     head += 2 * N
-    T = vin[head: head + Q]
+    T = vin[head:head + Q]
     for t in T:
         print(solve(a, b, t, K, N))
 

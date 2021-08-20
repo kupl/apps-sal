@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         graph = [[] for i in range(N)]
         for i in edges:
@@ -21,7 +22,6 @@ class Solution:
                     continue
                 dist[i] = dist[node] - nums[i] + N - nums[i]
                 pre_order(i, node)
-
         post_order(0, -1)
         pre_order(0, -1)
         return dist

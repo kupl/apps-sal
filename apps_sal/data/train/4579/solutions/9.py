@@ -8,5 +8,5 @@ def pattern(n):
         else:
             ptn = ptn[:i + 1] + '9' * (n - i - 1)
         arr.append(''.join(ptn))
-    result = ('\n').join(arr)
+    result = '\n'.join(arr)
     return result

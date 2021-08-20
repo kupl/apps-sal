@@ -9,4 +9,4 @@ def folding(a, b):
             return c + a
         if a == b:
             return c + 1
-        a, b = abs(a - b), min(a, b)
+        (a, b) = (abs(a - b), min(a, b))

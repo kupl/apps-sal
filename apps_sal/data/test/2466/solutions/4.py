@@ -1,4 +1,5 @@
 class Solution:
+
     def permute(self, nums):
         """
         :type nums: List[int]
@@ -18,7 +19,6 @@ class Solution:
             for i in range(index, len(nums)):
                 swap(path, index, i)
                 helper(index + 1, path.copy())
-
         helper(0, nums)
         print(nums)
         return res

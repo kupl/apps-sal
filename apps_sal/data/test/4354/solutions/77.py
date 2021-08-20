@@ -1,13 +1,12 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = [0] * N
 b = [0] * N
 c = [0] * M
 d = [0] * M
 for i in range(N):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
 for i in range(M):
-    c[i], d[i] = map(int, input().split())
-
+    (c[i], d[i]) = map(int, input().split())
 for i in range(N):
     min = 0
     for j in range(M):

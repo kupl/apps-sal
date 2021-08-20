@@ -1,9 +1,8 @@
 from heapq import heappop, heappush
-
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 cs = []
 for i in range(n):
-    l, r = [int(x) for x in input().split()]
+    (l, r) = [int(x) for x in input().split()]
     cs.append((l, r, i + 1))
 cs.sort()
 h = []
@@ -26,12 +25,10 @@ for i in range(k - 1, n):
         push_i = i + 1
         poped = []
     poped.append(heappop(h)[1])
-
 print(l + 1)
 if l == -1:
     for i in range(1, k + 1):
         print(i, end=' ')
-
 else:
     for i in lcs:
         print(i, end=' ')

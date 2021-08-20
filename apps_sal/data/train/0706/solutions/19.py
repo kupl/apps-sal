@@ -1,13 +1,16 @@
-# cook your dish here
 import sys
 
 
-def get_ints(): return map(int, sys.stdin.readline().strip().split())
-def get_array(): return list(map(int, sys.stdin.readline().strip().split()))
+def get_ints():
+    return map(int, sys.stdin.readline().strip().split())
+
+
+def get_array():
+    return list(map(int, sys.stdin.readline().strip().split()))
 
 
 for t in range(int(input())):
-    N, K = get_ints()
+    (N, K) = get_ints()
     B = get_array()
     flag = 1
     w = 0
@@ -21,6 +24,6 @@ for t in range(int(input())):
             w = B[i]
             flag += 1
     if flag == 0:
-        print("-1")
+        print('-1')
     else:
         print(flag)

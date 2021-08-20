@@ -1,4 +1,5 @@
 class SortedList:
+
     def __init__(self, iterable=[], _load=200):
         """Initialize sorted list instance."""
         values = sorted(iterable)
@@ -31,7 +32,6 @@ class SortedList:
         """Return `sum(_fen_tree[:end])`."""
         if self._rebuild:
             self._fen_build()
-
         _fen_tree = self._fen_tree
         x = 0
         while end:
@@ -43,12 +43,11 @@ class SortedList:
         """Return a pair of (the largest `idx` such that `sum(_fen_tree[:idx]) <= k`, `k - sum(_fen_tree[:idx])`)."""
         _list_lens = self._list_lens
         if k < _list_lens[0]:
-            return 0, k
+            return (0, k)
         if k >= self._len - _list_lens[-1]:
-            return len(_list_lens) - 1, k + _list_lens[-1] - self._len
+            return (len(_list_lens) - 1, k + _list_lens[-1] - self._len)
         if self._rebuild:
             self._fen_build()
-
         _fen_tree = self._fen_tree
         idx = -1
         for d in reversed(range(len(_fen_tree).bit_length())):
@@ -56,19 +55,17 @@ class SortedList:
             if right_idx < len(_fen_tree) and k >= _fen_tree[right_idx]:
                 idx = right_idx
                 k -= _fen_tree[idx]
-        return idx + 1, k
+        return (idx + 1, k)
 
     def _delete(self, pos, idx):
         """Delete value at the given `(pos, idx)`."""
         _lists = self._lists
         _mins = self._mins
         _list_lens = self._list_lens
-
         self._len -= 1
         self._fen_update(pos, -1)
         del _lists[pos][idx]
         _list_lens[pos] -= 1
-
         if _list_lens[pos]:
             _mins[pos] = _lists[pos][0]
         else:
@@ -80,59 +77,50 @@ class SortedList:
     def _loc_left(self, value):
         """Return an index pair that corresponds to the first position of `value` in the sorted list."""
         if not self._len:
-            return 0, 0
-
+            return (0, 0)
         _lists = self._lists
         _mins = self._mins
-
-        lo, pos = -1, len(_lists) - 1
+        (lo, pos) = (-1, len(_lists) - 1)
         while lo + 1 < pos:
-            mi = (lo + pos) >> 1
+            mi = lo + pos >> 1
             if value <= _mins[mi]:
                 pos = mi
             else:
                 lo = mi
-
         if pos and value <= _lists[pos - 1][-1]:
             pos -= 1
-
         _list = _lists[pos]
-        lo, idx = -1, len(_list)
+        (lo, idx) = (-1, len(_list))
         while lo + 1 < idx:
-            mi = (lo + idx) >> 1
+            mi = lo + idx >> 1
             if value <= _list[mi]:
                 idx = mi
             else:
                 lo = mi
-
-        return pos, idx
+        return (pos, idx)
 
     def _loc_right(self, value):
         """Return an index pair that corresponds to the last position of `value` in the sorted list."""
         if not self._len:
-            return 0, 0
-
+            return (0, 0)
         _lists = self._lists
         _mins = self._mins
-
-        pos, hi = 0, len(_lists)
+        (pos, hi) = (0, len(_lists))
         while pos + 1 < hi:
-            mi = (pos + hi) >> 1
+            mi = pos + hi >> 1
             if value < _mins[mi]:
                 hi = mi
             else:
                 pos = mi
-
         _list = _lists[pos]
-        lo, idx = -1, len(_list)
+        (lo, idx) = (-1, len(_list))
         while lo + 1 < idx:
-            mi = (lo + idx) >> 1
+            mi = lo + idx >> 1
             if value < _list[mi]:
                 idx = mi
             else:
                 lo = mi
-
-        return pos, idx
+        return (pos, idx)
 
     def add(self, value):
         """Add `value` to sorted list."""
@@ -140,10 +128,9 @@ class SortedList:
         _lists = self._lists
         _mins = self._mins
         _list_lens = self._list_lens
-
         self._len += 1
         if _lists:
-            pos, idx = self._loc_right(value)
+            (pos, idx) = self._loc_right(value)
             self._fen_update(pos, 1)
             _list = _lists[pos]
             _list.insert(idx, value)
@@ -166,7 +153,7 @@ class SortedList:
         """Remove `value` from sorted list if it is a member."""
         _lists = self._lists
         if _lists:
-            pos, idx = self._loc_right(value)
+            (pos, idx) = self._loc_right(value)
             if idx and _lists[pos][idx - 1] == value:
                 self._delete(pos, idx - 1)
 
@@ -179,19 +166,19 @@ class SortedList:
 
     def pop(self, index=-1):
         """Remove and return value at `index` in sorted list."""
-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
+        (pos, idx) = self._fen_findkth(self._len + index if index < 0 else index)
         value = self._lists[pos][idx]
         self._delete(pos, idx)
         return value
 
     def bisect_left(self, value):
         """Return the first index to insert `value` in the sorted list."""
-        pos, idx = self._loc_left(value)
+        (pos, idx) = self._loc_left(value)
         return self._fen_query(pos) + idx
 
     def bisect_right(self, value):
         """Return the last index to insert `value` in the sorted list."""
-        pos, idx = self._loc_right(value)
+        (pos, idx) = self._loc_right(value)
         return self._fen_query(pos) + idx
 
     def count(self, value):
@@ -204,19 +191,19 @@ class SortedList:
 
     def __getitem__(self, index):
         """Lookup value at `index` in sorted list."""
-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
+        (pos, idx) = self._fen_findkth(self._len + index if index < 0 else index)
         return self._lists[pos][idx]
 
     def __delitem__(self, index):
         """Remove value at `index` from sorted list."""
-        pos, idx = self._fen_findkth(self._len + index if index < 0 else index)
+        (pos, idx) = self._fen_findkth(self._len + index if index < 0 else index)
         self._delete(pos, idx)
 
     def __contains__(self, value):
         """Return true if `value` is an element of the sorted list."""
         _lists = self._lists
         if _lists:
-            pos, idx = self._loc_left(value)
+            (pos, idx) = self._loc_left(value)
             return idx < len(_lists[pos]) and _lists[pos][idx] == value
         return False
 
@@ -234,18 +221,14 @@ class SortedList:
 
 
 t = int(input())
-
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     xs = list(map(int, input().split()))
     ys = list(map(int, input().split()))
-
     s = SortedList(xs)
     saved = [None] * n
-    for i, x in enumerate(s):
+    for (i, x) in enumerate(s):
         saved[i] = s.bisect_right(x + k) - s.bisect_left(x)
-    # print(s)
-    # print(saved)
     base = 1
     while base < n:
         base *= 2
@@ -267,9 +250,7 @@ for _ in range(t):
             a //= 2
             b //= 2
         return m
-
     m = 0
     for i in range(n):
-        #print(i,s[i],saved[i] + query(i+saved[i], n))
         m = max(m, saved[i] + query(i + saved[i], n))
     print(m)

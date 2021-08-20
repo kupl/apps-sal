@@ -1,1 +1,2 @@
-def angle(x): return 180 * (x - 2)
+def angle(x):
+    return 180 * (x - 2)

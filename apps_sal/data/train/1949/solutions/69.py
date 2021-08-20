@@ -2,6 +2,7 @@ import copy
 
 
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         self.max = 0
         for i in range(0, len(grid)):
@@ -11,7 +12,7 @@ class Solution:
         return self.max
 
     def helper(self, grid, i, j, goldCount):
-        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] == 0:
+        if i < 0 or i >= len(grid) or j < 0 or (j >= len(grid[0])) or (grid[i][j] == 0):
             self.max = max(self.max, goldCount)
             return
         goldCount += grid[i][j]

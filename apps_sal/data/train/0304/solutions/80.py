@@ -1,9 +1,9 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         age_count = [0] * 121
         for age in ages:
             age_count[age] += 1
-
         res = 0
         print(len(age_count))
         for i in range(121):
@@ -13,6 +13,5 @@ class Solution:
                         continue
                     res += age_count[i] * age_count[j]
                     if i == j:
-                        res -= age_count[i]  # One doesn't send request to himself
-
+                        res -= age_count[i]
         return res

@@ -9,7 +9,6 @@ def p(a, b, d):
 p2 = 1
 while 2 * p2 <= n:
     p2 *= 2
-
 for d in (0, n - p2):
     bit = 1
     while bit < p2:

@@ -1,5 +1,4 @@
 from bisect import bisect_left, bisect_right
-
 n = int(input())
 sh = sorted(list(input()))
 mor = sorted(list(input()))

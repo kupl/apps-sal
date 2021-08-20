@@ -1,15 +1,9 @@
-#    !/usr/bin/env python3
-#    encoding: UTF-8
-#    Last Modified: 13/Nov/19 08:24:06 PM
-
-
 import sys
 
 
 def main():
     from collections import Counter
     from operator import itemgetter
-
     for tc in range(int(input())):
         n = int(input())
         arr = get_array()
@@ -29,13 +23,16 @@ def main():
         print(ans)
 
 
-def get_array(): return list(map(int, sys.stdin.readline().split()))
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def get_ints(): return list(map(int, sys.stdin.readline().split()))
+def get_ints():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def input(): return sys.stdin.readline().strip()
+def input():
+    return sys.stdin.readline().strip()
 
 
 def __starting_point():

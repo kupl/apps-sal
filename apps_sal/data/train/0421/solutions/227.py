@@ -1,14 +1,11 @@
 class Solution:
-    def lastSubstring(self, s: str) -> str:
 
+    def lastSubstring(self, s: str) -> str:
         n = len(s)
         cur = ord(s[0])
         indices = [0, 0]
-
         i = 1
-
         while i < n:
-
             if cur > ord(s[i]):
                 indices[1] += 1
                 i += 1
@@ -34,9 +31,8 @@ class Solution:
                         break
                     i += 1
                     k += 1
-
                 if i == n:
                     indices[1] = n - 1
                 if k == prev:
                     indices[1] = i
-        return s[indices[0]:(indices[1] + 1)]
+        return s[indices[0]:indices[1] + 1]

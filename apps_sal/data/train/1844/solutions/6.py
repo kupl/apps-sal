@@ -1,4 +1,5 @@
 class Solution:
+
     def convertToInt(self, time):
         hours = int(time.split(':')[0])
         mins = int(time.split(':')[1])
@@ -16,7 +17,6 @@ class Solution:
                 return 0
             else:
                 s.add(mins)
-
         result = 12 * 60
         s = sorted(s)
         N = len(s)

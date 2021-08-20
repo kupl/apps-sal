@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
 origB = list(map(int, input().split()))
 b = sorted(origB)
@@ -13,10 +13,8 @@ while i < n and j < m:
     else:
         counts[b[j]] = c
         j = j + 1
-
 while j < m:
     counts[b[j]] = c
     j = j + 1
-
 for j in origB:
     print(counts[j], end=' ')

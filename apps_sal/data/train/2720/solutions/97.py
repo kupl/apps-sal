@@ -4,13 +4,13 @@ def solution(digits):
 
 
 def solution(digits):
-    return int(max(digits[a:a + 5] for a in range(len(digits) - 4)))
+    return int(max((digits[a:a + 5] for a in range(len(digits) - 4))))
 
 
 def solution(digits):
     result = -1
     for i in range(len(digits)):
-        current = int(digits[i: i + 5])
+        current = int(digits[i:i + 5])
         if current >= result:
             result = current
     return result

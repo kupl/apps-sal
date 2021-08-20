@@ -1,5 +1,4 @@
 import sys
-# input=sys.stdin.readline
 
 
 def main():
@@ -8,7 +7,7 @@ def main():
     print(3)
     print('L', 2)
     print('R', 2)
-    print('R', (2 * n) - 1)
+    print('R', 2 * n - 1)
 
 
 main()

@@ -1,9 +1,9 @@
 for _ in range(int(input())):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     c = list(map(int, input().split()))
     c.sort()
     left = 0
-    right = 10**10
+    right = 10 ** 10
     pos = 0
     while left <= right:
         con = 0
@@ -25,7 +25,6 @@ for _ in range(int(input())):
     left = 0
     right = 999999
     pos1 = 0
-    # print(pos)
     while left <= right:
         con = 0
         mid = (left + right) // 2

@@ -7,7 +7,6 @@ import bisect
 import string
 import math
 import time
-#import random
 
 
 def I():
@@ -40,24 +39,23 @@ def show(*inp, end='\n'):
 
 
 YN = ['Yes', 'No']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 ts = time.time()
-# sys.setrecursionlimit(10**6)
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 show_flg = False
 show_flg = True
-
 t = I()
 for _ in range(t):
-    c, s = LI()
+    (c, s) = LI()
     a = s // c
     m = s - c * (s // c)
-    an = (a**2) * (c - m) + m * (a + 1)**2
-
-    # show(an)
+    an = a ** 2 * (c - m) + m * (a + 1) ** 2
     print(an)

@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-# codeforces little elephant and magic square
-
 import sys
-
 row1 = list(map(int, sys.stdin.readline().strip().split(' ')))
 row2 = list(map(int, sys.stdin.readline().strip().split(' ')))
 row3 = list(map(int, sys.stdin.readline().strip().split(' ')))
 rows = [row1, row2, row3]
-
 s1 = sum(row1)
 s2 = sum(row2)
 s3 = sum(row3)
@@ -26,14 +21,6 @@ z = (s2 + s1 - s3) // 2
 y = s1 - z
 x = s3 - y
 vals = [x, y, z]
-
-for ix, r in enumerate(rows):
+for (ix, r) in enumerate(rows):
     P(r, ix, vals[ix])
-
-'''
-T = x + y + z
-y + z = sum(Row1)
-x + z = sum(Row2)
-x + y = sum(Row3)
-
-'''
+'\nT = x + y + z\ny + z = sum(Row1)\nx + z = sum(Row2)\nx + y = sum(Row3)\n\n'

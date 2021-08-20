@@ -1,10 +1,7 @@
 import re
-
 t = int(input())
-
-delimiters = "?", ".", " ", ",", "!", ":"
+delimiters = ('?', '.', ' ', ',', '!', ':')
 regexPattern = '|'.join(map(re.escape, delimiters))
-
 for i in range(t):
     n = int(input())
     usernames = {x for x in str.split(input(), ' ')}
@@ -15,9 +12,8 @@ for i in range(t):
     messages = []
     for j in range(m):
         messages.append(input())
-
     for j in range(m):
-        if (messages[j][0] != '?'):
+        if messages[j][0] != '?':
             messageSplit = re.split(':', messages[j])
             possibilities[j] = {messageSplit[0]}
         else:
@@ -41,15 +37,14 @@ for i in range(t):
     for j in range(m):
         if len(possibilities[j]) == 0:
             worked = False
-
     if not worked:
-        print("Impossible")
+        print('Impossible')
     else:
         for j in range(m):
             poss = next(iter(possibilities[j]))
-            if (messages[j][0] == '?'):
+            if messages[j][0] == '?':
                 print(poss + messages[j][1:])
             else:
                 print(messages[j])
-            if (j < m - 1):
+            if j < m - 1:
                 possibilities[j + 1] = possibilities[j + 1] - {poss}

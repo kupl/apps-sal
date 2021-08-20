@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ans = []
 for i in range(N):
     ab = list(map(int, input().split()))

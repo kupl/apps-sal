@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         count = 1
         ans = [N]

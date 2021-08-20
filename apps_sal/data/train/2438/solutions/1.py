@@ -1,17 +1,10 @@
 class Solution:
+
     def lengthOfLastWord(self, s):
         """
         :type s: str
         :rtype: int
         """
-        '''
-         if s == None: return 0
-         count = 0
-         for item in s[-1::-1]:
-             if item == ' ':
-                 break
-             count += 1
-         return count
-         '''
+        "\n         if s == None: return 0\n         count = 0\n         for item in s[-1::-1]:\n             if item == ' ':\n                 break\n             count += 1\n         return count\n         "
         count = len(s.strip().split(' ')[-1])
         return count

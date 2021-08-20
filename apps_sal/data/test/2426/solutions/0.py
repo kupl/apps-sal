@@ -1,4 +1,3 @@
-# list(map(int,input().split()))
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -16,7 +15,6 @@ for i in range(t):
                 ind2 = j
             else:
                 ind3 = j
-
         if ind == -1:
             print(2)
             print(ind2 + 1, ind3 + 1)

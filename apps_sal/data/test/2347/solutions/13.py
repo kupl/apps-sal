@@ -1,9 +1,8 @@
 from math import *
 from collections import *
 import sys
-sys.setrecursionlimit(10**9)
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 9)
+mod = 10 ** 9 + 7
 t = int(input())
 for y in range(t):
     s = input()
@@ -16,7 +15,7 @@ for y in range(t):
         if Counter(h[i:i + m]) == c:
             key = 1
             break
-    if(key == 1):
-        print("YES")
+    if key == 1:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

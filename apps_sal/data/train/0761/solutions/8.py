@@ -1,20 +1,15 @@
 import sys
 import bisect
-
 t = int(input())
-
 for _ in range(t):
-
-    n, k, m = list(map(int, input().split()))
+    (n, k, m) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     c = list(map(int, input().split()))
     w = list(map(int, input().split()))
     b = list(map(int, input().split()))
     w.sort()
     b.sort()
-
     uncomp = 0
-
     for x in range(n):
         diff = p[x] - c[x]
         i = bisect.bisect_right(w, diff)
@@ -34,5 +29,4 @@ for _ in range(t):
             c[x] += b0
             del b[j - 1]
         uncomp += p[x] - c[x]
-
     print(uncomp)

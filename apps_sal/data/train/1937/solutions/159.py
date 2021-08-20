@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.children = []
         self.name = name
@@ -28,11 +29,9 @@ class ThroneInheritance:
 
         def dfs(x):
             nonlocal results
-
             if x.name not in self.dead:
                 results.append(x.name)
             for y in x.children:
                 dfs(y)
-
         dfs(self.root)
         return results

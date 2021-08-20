@@ -5,7 +5,7 @@ for i in range(t):
     L = sum(C)
     r = 1
     c = 0
-    while(r * L < N * 12):
+    while r * L < N * 12:
         c += N * 12 - r * L
         r += 1
     print(c)

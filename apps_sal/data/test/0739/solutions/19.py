@@ -35,15 +35,15 @@ def matpow(A, k):
     return B
 
 
-l, a, b, mod = map(int, input().split())
+(l, a, b, mod) = map(int, input().split())
 X = [[0], [a], [1]]
 maxdigit = 18
 Idx = [0] * (maxdigit + 1)
 for i in range(maxdigit + 1):
-    if 10**i - 1 < a:
+    if 10 ** i - 1 < a:
         continue
-    Idx[i] = min((10**i - 1 - a) // b + 1, l)
+    Idx[i] = min((10 ** i - 1 - a) // b + 1, l)
 for i in range(1, maxdigit + 1):
-    f = [[10**i, 1, 0], [0, 1, b], [0, 0, 1]]
+    f = [[10 ** i, 1, 0], [0, 1, b], [0, 0, 1]]
     X = matmul(matpow(f, Idx[i] - Idx[i - 1]), X)
 print(X[0][0])

@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         if 1 not in nums:
             return True

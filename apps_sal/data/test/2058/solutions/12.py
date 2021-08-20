@@ -1,8 +1,9 @@
-def read(): return list(map(int, input()))
+def read():
+    return list(map(int, input()))
 
 
-a, b = read(), read()
-n, m = len(a), len(b)
+(a, b) = (read(), read())
+(n, m) = (len(a), len(b))
 cnt1 = [0] * (n + 1)
 cnt0 = [0] * (n + 1)
 if a[0]:

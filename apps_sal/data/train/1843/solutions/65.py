@@ -29,39 +29,4 @@ class TweetCounts:
             d = (time - startTime) // factor
             ans[d] += 1
         return ans
-        '''ans=[]
-        if freq=='minute':
-            q=endTime//60
-            p=startTime//60
-            for j in range(p,q+1):
-                count=0
-                for i in range(len(self.tname)):
-                    if self.tname[i]==tweetName:
-                        if startTime+j*60<=self.t[i]<min(startTime+(j+1)*60,endTime+1):
-                            count+=1
-                ans.append(count)
-        elif freq=='hour':
-            q=endTime//3600
-            p=startTime//3600
-            for j in range(p,q+1):
-                count=0
-                for i in range(len(self.tname)):
-                    if self.tname[i]==tweetName:
-                        if startTime+j*3600<=self.t[i]<min(startTime+(j+1)*3600,endTime+1):
-                            count+=1
-                ans.append(count)
-        else:
-            q=endTime//(3600*24)
-            p=startTime//(3600*24)
-            for j in range(p,q+1):
-                count=0
-                for i in range(len(self.tname)):
-                    if self.tname[i]==tweetName:
-                        if startTime+j*(24*3600)<=self.t[i]<min(startTime+(j+1)*(3600*24),endTime+1):
-                            count+=1
-                ans.append(count)
-        return ans'''
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)
+        "ans=[]\n        if freq=='minute':\n            q=endTime//60\n            p=startTime//60\n            for j in range(p,q+1):\n                count=0\n                for i in range(len(self.tname)):\n                    if self.tname[i]==tweetName:\n                        if startTime+j*60<=self.t[i]<min(startTime+(j+1)*60,endTime+1):\n                            count+=1\n                ans.append(count)\n        elif freq=='hour':\n            q=endTime//3600\n            p=startTime//3600\n            for j in range(p,q+1):\n                count=0\n                for i in range(len(self.tname)):\n                    if self.tname[i]==tweetName:\n                        if startTime+j*3600<=self.t[i]<min(startTime+(j+1)*3600,endTime+1):\n                            count+=1\n                ans.append(count)\n        else:\n            q=endTime//(3600*24)\n            p=startTime//(3600*24)\n            for j in range(p,q+1):\n                count=0\n                for i in range(len(self.tname)):\n                    if self.tname[i]==tweetName:\n                        if startTime+j*(24*3600)<=self.t[i]<min(startTime+(j+1)*(3600*24),endTime+1):\n                            count+=1\n                ans.append(count)\n        return ans"

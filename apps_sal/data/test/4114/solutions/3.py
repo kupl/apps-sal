@@ -1,12 +1,9 @@
 n = int(input())
-
 x = [0] * n
 y = [0] * n
 h = [0] * n
-
 for i in range(n):
-    x[i], y[i], h[i] = map(int, input().split())
-
+    (x[i], y[i], h[i]) = map(int, input().split())
 for cx in range(101):
     for cy in range(101):
         H = -1

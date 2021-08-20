@@ -2,6 +2,7 @@ import numpy as np
 
 
 class ProductOfNumbers:
+
     def __init__(self):
         self.current_list_of_numbers: list = []
         self.prefix = []
@@ -11,7 +12,6 @@ class ProductOfNumbers:
             self.prefix = [num]
             self.current_list_of_numbers.append(num)
         else:
-
             self.prefix = np.array(self.prefix) * num
             self.prefix = np.append(self.prefix, [int(num)], 0)
             self.current_list_of_numbers.append(num)

@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         i = 0
         j = 1
@@ -17,5 +18,4 @@ class Solution:
             i += 1
             j = i + 1
             k = i + 2
-
         return count

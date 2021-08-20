@@ -1,13 +1,12 @@
 def hcf(a, b):
     if b == 0:
-        return (a)
+        return a
     else:
-        return (hcf(b, a % b))
+        return hcf(b, a % b)
 
 
 t = int(input())
 for i in range(t):
-
     n = int(input())
     a = list(map(int, input().strip().split()))
     b = []

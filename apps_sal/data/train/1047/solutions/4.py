@@ -4,7 +4,7 @@ for i in range(T):
     l1 = []
     l2 = []
     for j in range(N):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         l1.append(a - b)
         l2.append(a + b)
     l1.sort()

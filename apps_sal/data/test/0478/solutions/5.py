@@ -1,7 +1,5 @@
 n = int(input())
-
 s = list(input())
-
 letters = [0] * 26
 for c in s:
     letters[ord(c) - ord('a')] += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         keyboard = [[0] * 3 for _ in range(4)]
         k = 1
@@ -8,8 +9,7 @@ class Solution:
                 k += 1
         keyboard[-1][0] = -1
         keyboard[-1][-1] = -1
-
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         count = [[1] * 3 for _ in range(4)]
         count[-1][0] = 0
         count[-1][-1] = 0
@@ -23,9 +23,8 @@ class Solution:
                     for mv in moves:
                         x = i + mv[0]
                         y = j + mv[1]
-                        if 0 <= x < 4 and 0 <= y < 3 and keyboard[x][y] >= 0:
+                        if 0 <= x < 4 and 0 <= y < 3 and (keyboard[x][y] >= 0):
                             tmp_count[x][y] = (tmp_count[x][y] + count[i][j]) % mod
-
             count = tmp_count
         num_count = 0
         for r in count:

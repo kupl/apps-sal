@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, size):
         self.par = list(range(size))
 
@@ -12,12 +13,14 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def distance(u, v):
             return abs(u[0] - v[0]) + abs(u[1] - v[1])
         points_dist = collections.defaultdict(dict)
         edges = []
-        for i, p1 in enumerate(points):
+        for (i, p1) in enumerate(points):
             for j in range(i + 1, len(points)):
                 points_dist[i][j] = distance(points[i], points[j])
                 heapq.heappush(edges, (distance(points[i], points[j]), i, j))
@@ -25,8 +28,8 @@ class Solution:
         count = 0
         dsu = DSU(len(points))
         while count < len(points) - 1:
-            distance, x, y = heapq.heappop(edges)
-            p_x, p_y = dsu.find(x), dsu.find(y)
+            (distance, x, y) = heapq.heappop(edges)
+            (p_x, p_y) = (dsu.find(x), dsu.find(y))
             if p_x != p_y:
                 count += 1
                 res += distance

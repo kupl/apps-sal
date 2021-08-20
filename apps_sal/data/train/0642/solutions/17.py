@@ -1,11 +1,9 @@
-
-
-L, R = 1, 10**16
+(L, R) = (1, 10 ** 16)
 
 
 def ck(m):
     c = 0
-    for i, x in enumerate(l):
+    for (i, x) in enumerate(l):
         if c < x:
             c = x
         if x + d < c:
@@ -15,7 +13,7 @@ def ck(m):
 
 
 def bs():
-    l, r = L, R
+    (l, r) = (L, R)
     while l < r:
         m = (l + r + 1) // 2
         if ck(m):
@@ -26,8 +24,8 @@ def bs():
 
 
 for _ in range(int(input())):
-    n, d = map(int, input().split())
-    d *= 10**6
-    l = sorted(map(lambda x: int(x) * (10**6), input().split()))
+    (n, d) = map(int, input().split())
+    d *= 10 ** 6
+    l = sorted(map(lambda x: int(x) * 10 ** 6, input().split()))
     x = bs()
-    print(x / 10**6)
+    print(x / 10 ** 6)

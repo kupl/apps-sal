@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 rooms = [0] * 10
 for c in S:
     if c == 'L':
@@ -15,5 +14,4 @@ for c in S:
         rooms[i] = 1
     else:
         rooms[int(c)] = 0
-
 print(''.join(map(str, rooms)))

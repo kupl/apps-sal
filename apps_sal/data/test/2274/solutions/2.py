@@ -1,5 +1,5 @@
 def solv():
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     grid = [input() for n in range(x)]
     res = 0
     for n in range(x - 1):
@@ -8,7 +8,6 @@ def solv():
     for n in range(y - 1):
         if grid[-1][n] != 'R':
             res += 1
-
     print(res)
 
 

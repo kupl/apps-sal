@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         for u in favoriteCompanies:
             u.sort()
@@ -7,7 +8,7 @@ class Solution:
 
         def check(i, j):
             if (i, j) in dic:
-                return dic[(i, j)]
+                return dic[i, j]
             else:
                 stack1 = favoriteCompanies[i].copy()
                 stack2 = favoriteCompanies[j].copy()
@@ -18,10 +19,10 @@ class Solution:
                         stack1.pop(0)
                         stack2.pop(0)
                 if not stack1:
-                    dic[(i, j)] = True
+                    dic[i, j] = True
                     return True
                 else:
-                    dic[(i, j)] = False
+                    dic[i, j] = False
                     return False
         ans = []
         for i in range(L):

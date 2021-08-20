@@ -1,7 +1,5 @@
 mod = 1000000007
 
-# gcd(a, m) = 1
-
 
 def inv_mod(a, m):
     a %= m
@@ -19,4 +17,4 @@ for c in a:
         d %= mod
     i *= 2
     i %= mod
-print(d * (pow(2, (k * t) % (mod - 1), mod) - 1) * inv_mod(pow(2, t, mod) - 1, mod) % mod)
+print(d * (pow(2, k * t % (mod - 1), mod) - 1) * inv_mod(pow(2, t, mod) - 1, mod) % mod)

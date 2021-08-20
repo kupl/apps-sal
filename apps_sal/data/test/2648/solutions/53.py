@@ -14,4 +14,4 @@ Sieve = set()
 extra = 0
 for a in A:
     extra += count(a, Sieve)
-print((N - extra if not extra & 1 else N - extra - 1))
+print(N - extra if not extra & 1 else N - extra - 1)

@@ -12,11 +12,11 @@ b.append(m + 1)
 while l:
     if l <= 0:
         break
-    if((l) & 1 == 1):
+    if l & 1 == 1:
         for i in range(b[l - 1] - 1, b[l] - 1):
             tem = s[i]
             s[i] = s[k - i]
             s[k - i] = tem
     l -= 1
 for i in range(0, k + 1):
-    print(s[i], end="")
+    print(s[i], end='')

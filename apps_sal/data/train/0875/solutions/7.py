@@ -1,6 +1,6 @@
 from collections import defaultdict
 for t in range(int(input())):
-    n, z1, z2 = list(map(int, input().split()))
+    (n, z1, z2) = list(map(int, input().split()))
     seq = list(map(int, input().split()))
     c = 0
     dic = defaultdict(int)

@@ -8,4 +8,4 @@ def find_middle(string):
     for i in numbers:
         prod *= i
     prod_str = str(prod)
-    return int(prod_str[(len(prod_str) // 2) - 1:(len(prod_str) // 2) + 1]) if len(prod_str) % 2 == 0 else int(prod_str[len(prod_str) // 2])
+    return int(prod_str[len(prod_str) // 2 - 1:len(prod_str) // 2 + 1]) if len(prod_str) % 2 == 0 else int(prod_str[len(prod_str) // 2])

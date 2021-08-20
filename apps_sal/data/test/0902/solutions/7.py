@@ -4,7 +4,6 @@ if k >= 10 * (n - 1):
     print(max(a))
 else:
     winner = a.pop(0)
-
     conseq_win = 0
     while conseq_win != k:
         u = winner

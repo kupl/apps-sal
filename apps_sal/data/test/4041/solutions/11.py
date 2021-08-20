@@ -12,7 +12,6 @@ def subseq(a, b):
 s = input()
 t = input()
 ans = 0
-
 for i in range(len(s)):
     for j in range(i, len(s)):
         cur = s[:i] + s[j + 1:len(s)]

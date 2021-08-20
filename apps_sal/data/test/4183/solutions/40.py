@@ -12,5 +12,4 @@ for i in range(N - 1):
     T2 = int(input())
     ans = lcm(ans, T2)
     T1 = T2
-
 print(ans)

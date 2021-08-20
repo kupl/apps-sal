@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 t = [0] * (s + 1)
 m = 998244353
 a = list(map(int, input().split()))

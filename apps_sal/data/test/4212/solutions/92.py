@@ -1,6 +1,5 @@
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 L = [list(map(int, input().split())) for _ in range(Q)]
-
 ans = 0
 for a in range(M):
     for b in range(a, M):
@@ -17,7 +16,5 @@ for a in range(M):
                                         for q in range(Q):
                                             if tmp[L[q][1] - 1] - tmp[L[q][0] - 1] == L[q][2]:
                                                 tmp_ans += L[q][3]
-
                                         ans = max(ans, tmp_ans)
-
 print(ans)

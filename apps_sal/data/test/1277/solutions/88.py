@@ -1,9 +1,9 @@
-N, u, v = (int(i) for i in input().split())
+(N, u, v) = (int(i) for i in input().split())
 adj = []
 for i in range(N + 1):
     adj.append([])
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     adj[a] += [b]
     adj[b] += [a]
 
@@ -23,13 +23,8 @@ def distances(sommet):
 
 t = distances(u)
 a = distances(v)
-
-# ~ print(t)
-# ~ print(a)
-
 ans = -1
 for i in range(1, N + 1):
     if t[i] < a[i]:
         ans = max(ans, a[i] - 1)
-
 print(ans)

@@ -1,5 +1,5 @@
 def ones(x):
-    return 0 if x == 0 else 1 + ones(x & (x - 1))
+    return 0 if x == 0 else 1 + ones(x & x - 1)
 
 
 def twos(x):
@@ -11,6 +11,7 @@ def twos(x):
 
 
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         o = 0
         t = 0

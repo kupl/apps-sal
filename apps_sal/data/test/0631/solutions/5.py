@@ -1,14 +1,6 @@
-#   ==========     //\\       //||     ||====//||
-#       ||        //  \\        ||     ||   // ||
-#       ||       //====\\       ||     ||  //  ||
-#       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====||
-#  code
-
 def solve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
-
     if sum(a) == m:
         print('YES')
     else:

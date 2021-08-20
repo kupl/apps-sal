@@ -1,6 +1,6 @@
 w = [int(x) for x in input().split()]
 c = [{} for i in range(26)]
-val, s = 0, 0
+(val, s) = (0, 0)
 for i in [ord(ch) - ord('a') for ch in input()]:
     if s - w[i] in c[i]:
         val += c[i][s - w[i]]

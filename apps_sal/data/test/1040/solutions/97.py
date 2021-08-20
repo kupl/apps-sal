@@ -7,5 +7,4 @@ for x in s:
         ss = ss[:-2]
     else:
         ss += x
-
 print(len(ss))

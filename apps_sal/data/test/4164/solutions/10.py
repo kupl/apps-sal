@@ -1,2 +1,2 @@
 R = int(input())
-print(R**2)
+print(R ** 2)

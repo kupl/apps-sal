@@ -6,7 +6,7 @@ class ProductOfNumbers:
 
     def add(self, num: int) -> None:
         n = self.n
-        self.d[(n, n)] = num
+        self.d[n, n] = num
         self.n += 1
 
     def getProduct(self, k: int) -> int:
@@ -16,13 +16,8 @@ class ProductOfNumbers:
         d = self.d
         h = self.h
         if (i, j) in d:
-            return d[(i, j)]
+            return d[i, j]
         m = (i + j) // 2
         x = h(i, m) * h(m + 1, j)
-        d[(i, j)] = x
+        d[i, j] = x
         return x
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

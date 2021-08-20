@@ -1,5 +1,5 @@
 from itertools import combinations_with_replacement as cwr
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 ABCD = []
 for _ in range(Q):
     ABCD.append(list(map(int, input().split())))

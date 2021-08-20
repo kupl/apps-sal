@@ -1,6 +1,7 @@
 class Solution:
+
     def profitableSchemes(self, G: int, P: int, group: List[int], profit: List[int]) -> int:
-        mod = int(10**9) + 7
+        mod = int(10 ** 9) + 7
         N = len(group)
         dp = [[[None] * (G + 1) for _ in range(P + 1)] for _ in range(N + 1)]
 

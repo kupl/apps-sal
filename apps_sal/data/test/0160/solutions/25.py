@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -16,33 +15,27 @@ def divisors(n):
             lower.append(i)
             if i != n // i:
                 upper.append(n // i)
-
     lower.extend(reversed(upper))
     return lower
 
 
 def main():
-    N, K, *A = list(map(int, read().split()))
-
+    (N, K, *A) = list(map(int, read().split()))
     total = sum(A)
     div = divisors(total)
-
     for d in reversed(div):
         vec = [a % d for a in A]
         vec.sort()
-
         M = len(vec)
         csum_sub = [0] * (M + 1)
         csum_add = [0] * (M + 1)
         for i in range(M):
             csum_sub[i + 1] = csum_sub[i] + vec[i]
             csum_add[i + 1] = csum_add[i] + d - vec[i]
-
         for i in range(M + 1):
             if csum_sub[i] <= K and csum_sub[i] == csum_add[M] - csum_add[i]:
                 print(d)
                 return
-
     return
 
 

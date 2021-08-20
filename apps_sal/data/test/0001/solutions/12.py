@@ -1,5 +1,3 @@
-# This code is dedicated to Olya S.
-
 def e(x):
     s = 0
     while x > 0:
@@ -17,10 +15,9 @@ n = input()
 if len(n) > 1 and n[1] == '9':
     print(n[0], end='')
     n = n[1:]
-    while len(n) > 1 and n[0] == '9' and n[1] == '9':
+    while len(n) > 1 and n[0] == '9' and (n[1] == '9'):
         print('9', end='')
         n = n[1:]
-
 if e(int(n)) >= e(int(down(n))):
     print(n)
 else:

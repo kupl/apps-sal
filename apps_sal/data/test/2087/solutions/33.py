@@ -1,5 +1,5 @@
 ans = 0
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 
 
 def ss(n):

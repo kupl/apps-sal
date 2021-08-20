@@ -3,7 +3,6 @@ def chef(n, a):
     for i in range(len(a) - 1):
         if a[i] == a[i + 1]:
             c += 1
-
     return c
 
 

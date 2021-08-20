@@ -1,8 +1,8 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 c = list(map(int, input().split()))
 for i in range(1, n):
     c[i] += c[i - 1]
-x, y = -1, 0
+(x, y) = (-1, 0)
 m = 0
 while y < n:
     if x == -1:

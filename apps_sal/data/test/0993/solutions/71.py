@@ -1,5 +1,5 @@
 import collections
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 L = list(map(int, input().split()))
 R = [0]
 sums = 0

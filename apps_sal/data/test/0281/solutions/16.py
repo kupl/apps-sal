@@ -1,7 +1,5 @@
 import math
-
-r, n = map(int, input().split())
-
+(r, n) = map(int, input().split())
 if n - r >= 5:
     print(0)
 else:

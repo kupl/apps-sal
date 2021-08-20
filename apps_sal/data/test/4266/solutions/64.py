@@ -4,7 +4,7 @@ def answer(k: int, x: int) -> str:
 
 
 def main():
-    k, x = map(int, input().split())
+    (k, x) = map(int, input().split())
     print(answer(k, x))
 
 

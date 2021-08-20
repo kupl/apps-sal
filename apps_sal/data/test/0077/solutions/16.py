@@ -1,9 +1,9 @@
 import math
-(n) = list(map(int, input().split()))
+n = list(map(int, input().split()))
 alist = list(map(int, input().split()))
 sumpos = 0
-maxNegOdd = -1e9
-maxPosODD = 1e9
+maxNegOdd = -1000000000.0
+maxPosODD = 1000000000.0
 for i in alist:
     if i > 0:
         sumpos += i

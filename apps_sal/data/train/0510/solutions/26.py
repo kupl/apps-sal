@@ -1,9 +1,7 @@
 from bisect import bisect_left, bisect_right, insort_left
-
 n = int(input())
 s = list(input())
 q = int(input())
-
 d = {}
 flag = {}
 for i in list('abcdefghijklmnopqrstuvwxyz'):
@@ -12,7 +10,7 @@ for i in list('abcdefghijklmnopqrstuvwxyz'):
 for i in range(n):
     d.setdefault(s[i], []).append(i)
 for i in range(q):
-    q1, q2, q3 = list(map(str, input().split()))
+    (q1, q2, q3) = list(map(str, input().split()))
     if q1 == '1':
         q2 = int(q2) - 1
         if s[q2] != q3:
@@ -24,9 +22,9 @@ for i in range(q):
         q2 = int(q2) - 1
         q3 = int(q3) - 1
         if q2 == q3:
-            print((1))
+            print(1)
             continue
-        for string, l in list(d.items()):
+        for (string, l) in list(d.items()):
             res = 0
             if d[string] != [-1]:
                 left = bisect_left(l, q2)
@@ -44,5 +42,4 @@ for i in range(q):
                 if right - left > right2 - left2:
                     res = 1
             ans += res
-            # print(string,l,res)
         print(ans)

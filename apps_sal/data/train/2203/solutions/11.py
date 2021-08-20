@@ -3,7 +3,6 @@ pole = []
 for i in range(n):
     s = list(map(int, input().split()))
     pole.append(s)
-
 ans = [0] * n
 for number in range(1, n + 1):
     for i in range(n):

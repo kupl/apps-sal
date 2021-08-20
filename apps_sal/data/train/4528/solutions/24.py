@@ -4,6 +4,6 @@ def my_languages(results):
     print(results)
     res = []
     for item in results:
-        if(item[1] >= 60):
+        if item[1] >= 60:
             res.append(item[0])
     return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         hashMap = {}
         windowStart = 0
@@ -8,7 +9,6 @@ class Solution:
             if A[windowEnd] not in hashMap:
                 hashMap[A[windowEnd]] = 0
             hashMap[A[windowEnd]] += 1
-
             while sum(hashMap.values()) - hashMap[1] > K:
                 hashMap[A[windowStart]] -= 1
                 windowStart += 1

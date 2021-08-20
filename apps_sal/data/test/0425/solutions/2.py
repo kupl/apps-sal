@@ -1,4 +1,4 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 ans = 1
 n2 = n
 while n2 > 0:

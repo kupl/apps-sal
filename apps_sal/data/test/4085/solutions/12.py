@@ -11,11 +11,9 @@ for i in range(t):
         if a % d != 0:
             c = 1
             break
-
     if c == 1:
         print(-1)
         continue
-    # ile divisors
     fac = []
     i = 2
     for p in prime:

@@ -23,12 +23,11 @@ def way(come, row, side=True):
         return abs(come - right[row]) + between
 
 
-n, m, k, q = [int(x) for x in input().split()]
+(n, m, k, q) = [int(x) for x in input().split()]
 right = [-1] * n
 left = [-1] * n
-
 for i in range(k):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     if right[a] == -1:
         right[a] = left[a] = b
     else:
@@ -46,8 +45,6 @@ while right[n - 1] == -1:
     n -= 1
 last = 0
 for i in range(1, n):
-    # print(last)
-    # print(L, R)
     L += 1
     R += 1
     if right[i] == -1:
@@ -62,8 +59,7 @@ for i in range(1, n):
     for c in rcolumns:
         left_way = min(left_way, R + way(c, i, False) + abs(c - right[last]))
         right_way = min(right_way, R + way(c, i, True) + abs(c - right[last]))
-    # print(left_way, right_way)
     L = left_way
     R = right_way
     last = i
-print(min(L, R))  # + (n - 1))
+print(min(L, R))

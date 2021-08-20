@@ -1,4 +1,4 @@
-n, b = [int(x) for x in input().split()]
+(n, b) = [int(x) for x in input().split()]
 i = 2
 ans = -1
 

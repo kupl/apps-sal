@@ -16,7 +16,7 @@ def divisors_squared_sum(integer):
     squared_divisors_sum = 1
     for number in range(2, integer + 1):
         if integer % number == 0:
-            squared_divisors_sum += number**2
+            squared_divisors_sum += number ** 2
     return squared_divisors_sum
 
 

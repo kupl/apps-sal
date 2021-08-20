@@ -1,10 +1,7 @@
-# import numpy as npy
-# idx=sorted(idx,key=functools.cmp_to_key(cmpx))
 import bisect
 import array
 import functools
 import math
-
 n = int(input())
 a = array.array('i', map(int, input().split()))
 s = 0
@@ -23,7 +20,7 @@ for i in range(1, s + 2):
     g = [[10000000 for i in range(82)] for i in range(3500)]
     for j in range(i - 1, rlim + 1):
         for S in range(m + 1):
-            if (f[S][j] < 1000000):
+            if f[S][j] < 1000000:
                 for k in range(j + 1, rlim + 1):
                     nv = f[S][j] + (k - j - 1) * (k - j - 2) // 2
                     nS = S + abs(k - q[i])

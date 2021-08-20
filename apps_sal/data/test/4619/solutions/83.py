@@ -1,8 +1,8 @@
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 answ = set(range(w + 1))
 ansh = set(range(w + 1))
 for i in range(n):
-    x, y, a = map(int, input().split())
+    (x, y, a) = map(int, input().split())
     if a == 1:
         answ = answ & set(range(x, w + 1))
     elif a == 2:

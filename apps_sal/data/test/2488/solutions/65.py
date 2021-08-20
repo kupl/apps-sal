@@ -1,13 +1,10 @@
 from collections import deque
-n, d, a = map(int, input().split())
-
+(n, d, a) = map(int, input().split())
 hit = []
-
 for i in range(n):
-    x, h = map(int, input().split())
+    (x, h) = map(int, input().split())
     hit.append([x, h])
 hit.sort()
-
 que = []
 ans = 0
 bomb = 0

@@ -1,10 +1,9 @@
 from collections import deque
-
-N, K = map(int, input().split())
-mod = 10**9 + 7
+(N, K) = map(int, input().split())
+mod = 10 ** 9 + 7
 G = [[] for _ in range(N)]
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 
@@ -33,16 +32,14 @@ def bfs(s):
     return color
 
 
-MAX, start = 0, -1
+(MAX, start) = (0, -1)
 for i in range(N):
     if len(G[i]) > MAX:
         MAX = len(G[i])
         start = i
-
 color = bfs(start)
 ans = 1
 for i in range(N):
     ans *= color[i]
     ans %= mod
-
 print(ans)

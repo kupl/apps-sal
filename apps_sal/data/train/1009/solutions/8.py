@@ -5,15 +5,12 @@ def GCD(a, b):
 def game(cPose, cGCD):
     if cPose == n:
         return 1 if cGCD == 1 else 0
-
     if cGCD == 1:
-        return 2**(n - cPose)
-
+        return 2 ** (n - cPose)
     if (cPose, cGCD) in dp:
-        return dp[(cPose, cGCD)]
-
-    dp[(cPose, cGCD)] = game(cPose + 1, cGCD) + game(cPose + 1, GCD(cGCD, l[cPose]))
-    return dp[(cPose, cGCD)]
+        return dp[cPose, cGCD]
+    dp[cPose, cGCD] = game(cPose + 1, cGCD) + game(cPose + 1, GCD(cGCD, l[cPose]))
+    return dp[cPose, cGCD]
 
 
 for _ in range(int(input())):

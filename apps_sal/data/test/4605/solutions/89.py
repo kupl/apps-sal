@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 
 
 def aaa(n):
@@ -10,7 +10,6 @@ def aaa(n):
 
 
 sum = 0
-
 for i in range(1, N + 1):
     a = aaa(i)
     if A <= a <= B:

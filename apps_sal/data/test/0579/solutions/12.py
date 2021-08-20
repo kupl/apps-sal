@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
-ans = -10**18
+ans = -10 ** 18
 flag = dict()
 for i in range(n):
     if i in flag:
@@ -20,7 +20,6 @@ for i in range(n):
             flag[cur] += 1
     l = len(accum) // 2
     accum = [0] + accum
-    # print(accum)
     for x in range(1, l + 1):
         if accum[x + l - 1] - accum[x - 1] <= 0 or k // l < 1:
             ans = max(ans, max(accum[x:x + min(k, l)]) - accum[x - 1])

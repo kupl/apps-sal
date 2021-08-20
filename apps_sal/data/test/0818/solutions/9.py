@@ -9,4 +9,4 @@ else:
         x += 7
     while (x + 1) % 3 != 0 or x % 5 != 0:
         x += 14
-    print(10**(n - 1) + x)
+    print(10 ** (n - 1) + x)

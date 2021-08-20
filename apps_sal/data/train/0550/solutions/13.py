@@ -1,13 +1,13 @@
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     ab = bin(a)[2:]
     bb = bin(b)[2:]
     n = abs(len(bb) - len(ab))
     if n > 0:
         if len(bb) > len(ab):
-            ab = "0" * n + ab
+            ab = '0' * n + ab
         else:
-            bb = "0" * n + bb
+            bb = '0' * n + bb
     m = 0
     count = 0
     for i in range(len(bb)):
@@ -17,5 +17,4 @@ for _ in range(int(input())):
             count = i
         bb = bb[-1] + bb
         bb = bb[:-1]
-
     print(count, m)

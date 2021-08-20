@@ -8,13 +8,11 @@ for i in arr:
         s += i
     else:
         s -= i
-
 if n == 1:
     print(arr[0])
-elif ((k < 0 and h >= 0)):
+elif k < 0 and h >= 0:
     print(s)
+elif k >= 0:
+    print(s - 2 * k)
 else:
-    if (k >= 0):
-        print(s - 2 * k)
-    else:
-        print(s + 2 * h)
+    print(s + 2 * h)

@@ -1,7 +1,7 @@
 def main():
     import sys
     input = sys.stdin.readline
-    n, m = [int(i) for i in input().split()]
+    (n, m) = [int(i) for i in input().split()]
     x1 = n - 1
     x2 = 0
     y1 = m - 1

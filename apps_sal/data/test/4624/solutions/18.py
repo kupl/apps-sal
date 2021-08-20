@@ -1,7 +1,7 @@
 t = int(input())
 while t:
     t -= 1
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     ans = 1
     total = 2
     if n <= 2:

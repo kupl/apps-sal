@@ -24,5 +24,4 @@ else:
     s = s + '_' * k
     n = len(s) // 2
     ans = get_max_tandem_repeat(s, n)
-
 print(ans)

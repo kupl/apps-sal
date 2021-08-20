@@ -4,7 +4,7 @@ def getDivisors(num):
     for i in range(1, num + 1):
         if num % i == 0:
             res.append(i)
-            sum += i**2
+            sum += i ** 2
     return (res, sum)
 
 

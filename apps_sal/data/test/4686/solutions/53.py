@@ -1,6 +1,5 @@
 w = input()
 ans = True
-
 for i in w:
     cnt = 0
     for j in w:
@@ -9,8 +8,7 @@ for i in w:
     if cnt % 2 != 0:
         ans = False
         break
-
 if ans:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

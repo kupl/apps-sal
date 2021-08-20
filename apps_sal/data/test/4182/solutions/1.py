@@ -1,9 +1,8 @@
-
-url = "https://atcoder.jp//contests/abc110/tasks/abc110_b"
+url = 'https://atcoder.jp//contests/abc110/tasks/abc110_b'
 
 
 def main():
-    n, m, x, y = list(map(int, input().split()))
+    (n, m, x, y) = list(map(int, input().split()))
     xs = list(map(int, input().split()))
     ys = list(map(int, input().split()))
     xs.sort()

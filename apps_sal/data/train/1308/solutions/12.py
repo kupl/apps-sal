@@ -3,11 +3,11 @@ while True:
     if len(a):
         if a.isalnum():
             if len(a) == len(set(list(a))):
-                print("Valid")
+                print('Valid')
                 break
             else:
-                print("Invalid")
+                print('Invalid')
         else:
-            print("Invalid")
+            print('Invalid')
     else:
         break

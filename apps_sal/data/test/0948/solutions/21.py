@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 grid = [list(input()) for i in range(n)]
 cnt = 0
 for r in range(n - 1):

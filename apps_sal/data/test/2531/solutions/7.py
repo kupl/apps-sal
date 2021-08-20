@@ -2,7 +2,7 @@ N = int(input())
 A = sorted([int(input()) for _ in range(N)])
 rets = 0
 for i in range(N):
-    x, y = 0, N - 1
+    (x, y) = (0, N - 1)
     curr = 2 * A[i]
     while x < y:
         sums = A[x] + A[y]

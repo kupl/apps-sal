@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def eventualSafeNodes(self, graph):
         state = defaultdict(int)
 

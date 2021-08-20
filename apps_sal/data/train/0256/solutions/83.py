@@ -1,4 +1,5 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
         n = len(piles)
         if n >= H:
@@ -10,7 +11,7 @@ class Solution:
                 ret += p // m + (p % m != 0)
             return ret
         upper = max(piles)
-        lo, hi = 1, upper
+        (lo, hi) = (1, upper)
         while lo <= hi:
             mid = (lo + hi) // 2
             if check(mid) <= H:

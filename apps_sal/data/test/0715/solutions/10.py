@@ -7,9 +7,9 @@ for i in range(4):
     c1 = 0
     c2 = 0
     for z in range(3):
-        if(now / dub[z] >= 2):
+        if now / dub[z] >= 2:
             c1 += 1
-        elif (dub[z] / now >= 2):
+        elif dub[z] / now >= 2:
             c2 += 1
     if c1 == 3 or c2 == 3:
         zamechat = i

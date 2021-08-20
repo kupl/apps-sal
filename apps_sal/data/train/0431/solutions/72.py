@@ -1,10 +1,11 @@
 class Solution:
+
     def previousLessNumber(self, A: List[int]) -> List[int]:
         plmStack = []
         plmResult = [-1] * len(A)
         i = 0
-        while (i < len(A)):
-            while(len(plmStack) > 0 and A[plmStack[-1]] > A[i]):
+        while i < len(A):
+            while len(plmStack) > 0 and A[plmStack[-1]] > A[i]:
                 plmStack.pop()
             plmResult[i] = -1 if len(plmStack) == 0 else plmStack[-1]
             plmStack.append(i)
@@ -15,8 +16,8 @@ class Solution:
         nlmStack = []
         nlmResult = [-1] * len(A)
         i = len(A) - 1
-        while (i >= 0):
-            while(len(nlmStack) > 0 and A[nlmStack[-1]] >= A[i]):
+        while i >= 0:
+            while len(nlmStack) > 0 and A[nlmStack[-1]] >= A[i]:
                 nlmStack.pop()
             nlmResult[i] = -1 if len(nlmStack) == 0 else nlmStack[-1]
             nlmStack.append(i)
@@ -33,11 +34,10 @@ class Solution:
                 leftDist = i + 1
             else:
                 leftDist = i - plmResult[i]
-
             rightDist = 0
             if nlmResult[i] == -1:
                 rightDist = len(A) - i
             else:
                 rightDist = nlmResult[i] - i
-            sum = (sum + (A[i] * leftDist * rightDist)) % (10**9 + 7)
+            sum = (sum + A[i] * leftDist * rightDist) % (10 ** 9 + 7)
         return sum

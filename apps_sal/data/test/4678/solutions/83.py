@@ -1,11 +1,9 @@
-
 def main(A):
     ans = 0
     max_num = A[0]
     for a in A:
         max_num = max(max_num, a)
         ans += max_num - a
-
     return ans
 
 

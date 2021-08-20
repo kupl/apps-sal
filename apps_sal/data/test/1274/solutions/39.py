@@ -1,6 +1,5 @@
 import heapq
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ab = []
 for i in range(n):
     ab.append(list(map(int, input().split())))

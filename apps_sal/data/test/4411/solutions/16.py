@@ -1,8 +1,8 @@
 import heapq
-N, K = [int(x) for x in input().split()]
+(N, K) = [int(x) for x in input().split()]
 h = [[] for i in range(200000)]
 for i in range(N):
-    l, r = [int(x) for x in input().split()]
+    (l, r) = [int(x) for x in input().split()]
     h[l - 1].append([-(r - 1), i + 1])
 g = []
 t = []

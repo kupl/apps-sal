@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
         return shortest_subarray(A, K)
 
@@ -10,7 +11,7 @@ def shortest_subarray(A: List[int], K: int) -> int:
         sums[i + 1] = sums[i] + A[i]
     result = n + 1
     q = deque()
-    for i, total in enumerate(sums):
+    for (i, total) in enumerate(sums):
         while q and total < sums[q[-1]]:
             q.pop()
         while q and total - sums[q[0]] >= K:

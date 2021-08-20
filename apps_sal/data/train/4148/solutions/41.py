@@ -7,4 +7,4 @@ def sum_digits(number):
                 num_lst.append(int(num))
         except:
             continue
-    return(sum(num_lst))
+    return sum(num_lst)

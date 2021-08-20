@@ -1,15 +1,14 @@
 class Harshad:
+
     @staticmethod
     def get_list(n):
-        '''得到位数字的列表'''
+        """得到位数字的列表"""
         result = []
         while n:
             result.append(n % 10)
             n = n // 10
-        # 逆序，按正常的顺序返回
         result.reverse()
         return result
-        # print(result)
 
     @staticmethod
     def is_valid(number):
@@ -47,5 +46,4 @@ class Harshad:
             if len(ser_list) == count:
                 break
             start += 1
-
         return ser_list

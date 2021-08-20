@@ -1,1 +1,2 @@
-def replace_dots(s): return s.replace('.', '-')
+def replace_dots(s):
+    return s.replace('.', '-')

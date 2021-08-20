@@ -18,8 +18,8 @@ def factor(n):
 def divs(n):
     rtn = [1]
     arr = factor(n)
-    for p, q in arr:
-        ds = [p**i for i in range(1, q + 1)]
+    for (p, q) in arr:
+        ds = [p ** i for i in range(1, q + 1)]
         tmp = rtn[:]
         for d in ds:
             for t in tmp:
@@ -27,7 +27,7 @@ def divs(n):
     return list(sorted(rtn))
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ds = divs(n)
 l = 0
 r = len(ds) - 1
@@ -37,7 +37,6 @@ while l + 1 < r:
         l = c
     else:
         r = c
-
 if l == 0 and n < k * (k + 1) // 2:
     print(-1)
 else:

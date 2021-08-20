@@ -1,12 +1,13 @@
 class Solution:
+
     def partition(self, arr, start, end):
         follower = leader = start
         while leader < end:
             if arr[leader] <= arr[end]:
-                arr[leader], arr[follower] = arr[follower], arr[leader]
+                (arr[leader], arr[follower]) = (arr[follower], arr[leader])
                 follower += 1
             leader += 1
-        arr[follower], arr[end] = arr[end], arr[follower]
+        (arr[follower], arr[end]) = (arr[end], arr[follower])
         return follower
 
     def quicksort(self, arr, start, end):

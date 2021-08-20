@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, M = [int(x) for x in input().split()]
+    (N, M) = [int(x) for x in input().split()]
     List = []
     for i in range(N):
         Temp = [x for x in input()]
@@ -8,8 +8,8 @@ for _ in range(int(input())):
     for i in range(N):
         for j in range(M):
             x = 1
-            while(i + x < N and j + x < M):
-                if(List[i][j] == List[i][j + x] == List[i + x][j] == List[i + x][j + x]):
+            while i + x < N and j + x < M:
+                if List[i][j] == List[i][j + x] == List[i + x][j] == List[i + x][j + x]:
                     Ans += 1
                 x += 1
     print(Ans)

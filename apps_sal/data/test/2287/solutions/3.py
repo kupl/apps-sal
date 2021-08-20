@@ -6,5 +6,5 @@ for _ in range(int(input())):
             temp.append(i)
     ans = 0
     for i in range(1, len(temp)):
-        ans += (temp[i] - temp[i - 1] - 1)
+        ans += temp[i] - temp[i - 1] - 1
     print(ans)

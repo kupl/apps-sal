@@ -1,15 +1,15 @@
 def main():
     from sys import stdin
-    w, h, n = list(map(int, stdin.readline().split()))
-    res, vrt, hor = [], [], []
+    (w, h, n) = list(map(int, stdin.readline().split()))
+    (res, vrt, hor) = ([], [], [])
     vh = (vrt, hor)
-    for i, s in enumerate(stdin.read().splitlines()):
+    for (i, s) in enumerate(stdin.read().splitlines()):
         x = int(s[2:])
         flag = s[0] == 'V'
         vh[flag].append(i)
         res.append([x, flag])
     dim = []
-    for tmp, m in zip(vh, (h, w)):
+    for (tmp, m) in zip(vh, (h, w)):
         tmp.sort(key=lambda e: res[e][0])
         u = [None, [0]]
         dim.append(u)
@@ -29,10 +29,10 @@ def main():
         if z < m - j:
             z = m - j
         dim.append(z)
-    l, r, wmax, u, d, hmax = dim
+    (l, r, wmax, u, d, hmax) = dim
     whmax = [wmax, hmax]
     for i in range(n - 1, -1, -1):
-        x, flag, link = res[i]
+        (x, flag, link) = res[i]
         u = whmax[flag]
         res[i] = u * whmax[not flag]
         link[0][2] = link[2]

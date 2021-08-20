@@ -1,7 +1,7 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         my_coins = 0
-
         piles.sort()
         count = len(piles) / 3
         i = 0
@@ -13,5 +13,4 @@ class Solution:
             j -= 2
             k -= 2
             count -= 1
-
         return my_coins

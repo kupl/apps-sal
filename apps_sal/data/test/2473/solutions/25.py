@@ -1,7 +1,5 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 xy = [list(map(int, input().split())) for _ in range(N)]
-
-
 xy.sort()
 ans = 2000000000 * (xy[-1][0] - xy[0][0])
 for i in range(K - 1, N):
@@ -11,5 +9,4 @@ for i in range(K - 1, N):
         ylst.sort()
         ynow = min([ylst[k + K - 1] - ylst[k] for k in range(i + 2 - K)])
         ans = min(ans, xnow * ynow)
-
 print(ans)

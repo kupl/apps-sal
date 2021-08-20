@@ -1,6 +1,5 @@
-N, M, K = map(int, input().split())
-MOD = 10**9 + 7
-
+(N, M, K) = map(int, input().split())
+MOD = 10 ** 9 + 7
 MAXN = N * M + 5
 fac = [1, 1] + [0] * MAXN
 finv = [1, 1] + [0] * MAXN

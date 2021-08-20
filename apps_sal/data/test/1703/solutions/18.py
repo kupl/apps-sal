@@ -8,7 +8,7 @@ for i in range(n):
     o = 0
     e = 1
     for y in r:
-        if y == ")":
+        if y == ')':
             c = c + 1
         else:
             o = o + 1
@@ -19,22 +19,22 @@ for i in range(n):
     o1 = 0
     e1 = 0
     for u in r1:
-        if u == ")":
+        if u == ')':
             c1 = c1 + 1
         else:
             o1 = o1 + 1
-        if (o1 > c1):
+        if o1 > c1:
             e1 = 1
-    if (o == c and e == 1):
+    if o == c and e == 1:
         reg = reg + 1
-    elif (o > c and e == 1):
+    elif o > c and e == 1:
         openw[o - c] = openw[o - c] + 1
-    elif (o < c and e1 == 0):
+    elif o < c and e1 == 0:
         closew[c - o] = closew[c - o] + 1
     else:
         continue
 ans = 0
 for j in range(0, 300001):
     ans = ans + closew[j] * openw[j]
-ans = ans + reg**2
+ans = ans + reg ** 2
 print(ans)

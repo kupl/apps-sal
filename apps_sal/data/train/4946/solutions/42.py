@@ -5,5 +5,5 @@ def house_numbers_sum(inp):
             z.append(x)
         else:
             break
-    return (sum(z))
+    return sum(z)
     pass

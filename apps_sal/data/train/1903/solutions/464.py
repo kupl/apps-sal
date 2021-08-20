@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         npoints = len(points)
         if npoints == 1:
@@ -6,10 +7,8 @@ class Solution:
         edges = dict()
         for i in range(npoints):
             for j in range(i + 1, npoints):
-                edges[(i, j)] = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-
-        sortededges = {k: v for k, v in sorted(edges.items(), key=lambda item: item[1])}
-
+                edges[i, j] = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
+        sortededges = {k: v for (k, v) in sorted(edges.items(), key=lambda item: item[1])}
         parent = [i for i in range(npoints)]
         mincost = 0
         numedges = 0

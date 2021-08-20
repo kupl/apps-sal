@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 ans = 0
-k1, k2 = 0, -1
+(k1, k2) = (0, -1)
 for i in range(1, n):
     if s[i] != s[0]:
         k1 = i

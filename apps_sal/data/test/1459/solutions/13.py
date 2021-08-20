@@ -1,6 +1,6 @@
 n = int(input())
-l = [int(i) for i in input().split(" ")]
-p = [int(i) for i in input().split(" ")]
+l = [int(i) for i in input().split(' ')]
+p = [int(i) for i in input().split(' ')]
 sum1 = 0
 sum2 = 0
 a = max(p)

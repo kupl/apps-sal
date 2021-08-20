@@ -1,6 +1,6 @@
 from collections import Counter
 n = int(input())
-s = list(input() for i in range(n))
+s = list((input() for i in range(n)))
 c = Counter(s)
 m = max(c.values())
 s = sorted(list(set(s)))

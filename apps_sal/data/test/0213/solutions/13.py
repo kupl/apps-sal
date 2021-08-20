@@ -1,6 +1,6 @@
 def first(n, m, line):
     for i in range(0, n):
-        k, f = list(map(int, input().split()))
+        (k, f) = list(map(int, input().split()))
         res = []
         for j in range(1, 101):
             if j * f >= k and j * (f - 1) < k:
@@ -21,13 +21,12 @@ def check(n, m, hz):
     return hz
 
 
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 line = []
 line = first(n, m, line)
 hz = []
 hz = check(n, m, hz)
 ans = []
-
 for element in hz:
     if m % element == 0:
         ans.append(m // element)

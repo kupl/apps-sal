@@ -15,18 +15,16 @@ def get_min_val(heap):
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         l = 0
         r = 0
         ans = 0
         max_heap = []
         min_heap = []
-
         while l < len(nums) and r < len(nums):
-            # print(l,r)
             add_to_max_heap(max_heap, (-nums[r], r))
             add_to_min_heap(min_heap, (nums[r], r))
-
             max_val = -get_max_val(max_heap)
             min_val = get_min_val(min_heap)
             if abs(max_val - min_val) <= limit:

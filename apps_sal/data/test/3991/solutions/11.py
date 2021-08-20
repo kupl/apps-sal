@@ -1,4 +1,4 @@
-n, x = int(input()), list(sorted(list(map(int, input().split()))))
+(n, x) = (int(input()), list(sorted(list(map(int, input().split())))))
 kk = 1
 a = 0
 for i in range(len(x)):

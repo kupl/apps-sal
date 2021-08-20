@@ -1,7 +1,7 @@
-n, p, k = [int(x) for x in input().split()]
+(n, p, k) = [int(x) for x in input().split()]
 s = ''
 if p > k + 1:
-    s += "<< "
+    s += '<< '
 for i in range(max(1, p - k), p):
     s += str(i) + ' '
 s += '(' + str(p) + ') '

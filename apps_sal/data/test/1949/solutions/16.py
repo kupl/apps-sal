@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     buflist = buf.split()
@@ -7,7 +6,6 @@ def main():
     buf = input()
     buflist = buf.split()
     a = list(map(int, buflist))
-
     a = list(sorted(a))
     pos = 0
     neg = 0

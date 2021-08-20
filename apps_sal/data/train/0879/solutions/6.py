@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ans = 0
     y = a // b
     x = b

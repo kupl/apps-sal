@@ -6,7 +6,7 @@ blue = [list(map(int, input().split())) for i in range(N)]
 blue.sort()
 ans = 0
 for i in range(N):
-    x, y = blue[i]
+    (x, y) = blue[i]
     l = []
     for j in range(N):
         try:

@@ -1,4 +1,5 @@
 class Solution:
+
     def mctFromLeafValues(self, A: List[int]) -> int:
         res = 0
         while len(A) > 1:

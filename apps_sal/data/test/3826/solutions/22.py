@@ -1,10 +1,12 @@
-''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1208B_live
+""" بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ """
 from collections import Counter
-def gi(): return list(map(int, input().split()))
 
 
-n, = gi()
+def gi():
+    return list(map(int, input().split()))
+
+
+(n,) = gi()
 l = gi()
 occ = Counter(l)
 mid = 0
@@ -28,7 +30,7 @@ def f(x):
     return 0
 
 
-lo, hi = 0, n
+(lo, hi) = (0, n)
 while lo <= hi:
     mid = (lo + hi) // 2
     if f(mid):

@@ -1,14 +1,12 @@
-#!/usr/bin/env python3
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 triple = []
 indexes = [[] for _ in range(n)]
 cnt = [0] * n
 abc = []
 for i in range(n - 2):
-    a, b, c = [int(item) - 1 for item in input().split()]
+    (a, b, c) = [int(item) - 1 for item in input().split()]
     abc.append((a, b, c))
     indexes[a].append(i)
     indexes[b].append(i)
@@ -17,7 +15,6 @@ for i in range(n - 2):
     cnt[b] += 1
     cnt[c] += 1
 tmp = cnt[:]
-
 ans = []
 node = cnt.index(1)
 visited = [0] * (n - 2)
@@ -28,8 +25,8 @@ while True:
             continue
         nxt = item
         visited[nxt] = 1
-    a, b, c = abc[nxt]
-    if cnt[a] == 1 and cnt[b] == 1 and cnt[c] == 1:
+    (a, b, c) = abc[nxt]
+    if cnt[a] == 1 and cnt[b] == 1 and (cnt[c] == 1):
         break
     ans.append(node + 1)
     cnt[a] -= 1
@@ -41,7 +38,6 @@ while True:
         node = b
     elif cnt[c] == 1:
         node = c
-
 for item in abc[nxt]:
     if tmp[item] == 3:
         ans.append(item + 1)
@@ -51,5 +47,4 @@ for item in abc[nxt]:
 for item in abc[nxt]:
     if tmp[item] == 1:
         ans.append(item + 1)
-
-print(" ".join([str(item) for item in ans]))
+print(' '.join([str(item) for item in ans]))

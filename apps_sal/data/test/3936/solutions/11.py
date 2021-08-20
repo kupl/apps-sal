@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 t = input()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 1
 if s[0] == t[0]:
     ans *= 3
@@ -15,7 +15,6 @@ while idx < n:
     if s[idx] == t[idx]:
         if flag:
             idx += 1
-
         else:
             ans = ans * 2 % mod
             idx += 1
@@ -27,5 +26,4 @@ while idx < n:
             ans = ans * 2 % mod
         idx += 2
         flag = 1
-
 print(ans)

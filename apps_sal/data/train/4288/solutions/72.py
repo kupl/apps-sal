@@ -1,2 +1,2 @@
 def quote(fighter):
-    return ["I am not impressed by your performance.", "I'd like to take this chance to apologize.. To absolutely NOBODY!"][len(fighter) == 14]
+    return ['I am not impressed by your performance.', "I'd like to take this chance to apologize.. To absolutely NOBODY!"][len(fighter) == 14]

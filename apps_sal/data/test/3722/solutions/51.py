@@ -1,6 +1,6 @@
 N = int(input())
 X = 0
-mod = int(1e9) + 7
+mod = int(1000000000.0) + 7
 for i in range(4):
     X <<= 1
     X += ord(input()) - 65
@@ -10,9 +10,9 @@ FB = {4, 10, 11, 12}
 if X in F1:
     print(1)
 elif X in FF:
-    a, b = 1, 1
+    (a, b) = (1, 1)
     for i in range(N - 2):
-        a, b = b, a + b
+        (a, b) = (b, a + b)
         b %= mod
     print(a % mod)
 elif X in FB:

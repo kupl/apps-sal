@@ -5,10 +5,10 @@ def solve(arr):
         x.remove(i)
         stack.append(([i], x))
     while True:
-        a, b = stack.pop(0)
+        (a, b) = stack.pop(0)
         v = a[-1]
-        a1, a2 = a[:], a[:]
-        b1, b2 = b[:], b[:]
+        (a1, a2) = (a[:], a[:])
+        (b1, b2) = (b[:], b[:])
         if v * 2 in b:
             a1.append(v * 2)
             b1.remove(v * 2)

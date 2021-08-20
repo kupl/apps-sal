@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = [1 if i < f else 0 for i in range(target)]
         for n in range(2, d + 1):
@@ -10,5 +11,4 @@ class Solution:
                     cumsum -= dp[i - f]
                 new_dp[i + 1] = cumsum
             dp = new_dp
-            # print(n, dp)
-        return dp[-1] % (10**9 + 7)
+        return dp[-1] % (10 ** 9 + 7)

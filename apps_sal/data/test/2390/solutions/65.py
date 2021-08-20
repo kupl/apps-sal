@@ -2,9 +2,9 @@ import sys
 input = sys.stdin.readline
 l = [[0, 0, 0]]
 r = [[0, 0, 0]]
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 for i in range(n):
-    x, v = list(map(int, input().split()))
+    (x, v) = list(map(int, input().split()))
     r.append([x, v])
     l.append([c - x, v])
 r.sort()

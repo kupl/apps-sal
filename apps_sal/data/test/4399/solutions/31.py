@@ -1,5 +1,5 @@
 S = input()
-if S != "AAA" and S != "BBB":
-    print("Yes")
+if S != 'AAA' and S != 'BBB':
+    print('Yes')
 else:
-    print("No")
+    print('No')

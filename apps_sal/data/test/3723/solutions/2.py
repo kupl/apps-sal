@@ -17,9 +17,7 @@ def factor(n):
 
 
 num = int(input())
-
 poks = list(map(int, input().split()))[:num]
-
 c = dict()
 for p in poks:
     for d in factor(p):
@@ -27,7 +25,6 @@ for p in poks:
             c[d] += 1
         else:
             c[d] = 1
-
 if c:
     print(max(c.values()))
 else:

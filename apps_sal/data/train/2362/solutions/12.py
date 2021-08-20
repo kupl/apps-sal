@@ -1,23 +1,22 @@
 from sys import stdin
 from math import inf
-
 q = int(stdin.readline())
 
 
 class Rect:
+
     def __init__(self, x1=-inf, y1=-inf, x2=inf, y2=inf):
         if x1 > x2:
-            x1, x2 = x2, x1
+            (x1, x2) = (x2, x1)
         if y1 > y2:
-            y1, y2 = y2, y1
-
+            (y1, y2) = (y2, y1)
         self.x1 = x1
         self.y1 = y1
         self.x2 = x2
         self.y2 = y2
 
     def __str__(self):
-        return "(%f, %f, %f, %f)" % (self.x1, self.y1, self.x2, self.y2)
+        return '(%f, %f, %f, %f)' % (self.x1, self.y1, self.x2, self.y2)
 
 
 def intersect(r1, r2):
@@ -32,10 +31,9 @@ def intersect(r1, r2):
 
 for i in range(q):
     n = int(stdin.readline())
-
     inter = Rect()
     for i in range(n):
-        x, y, f1, f2, f3, f4 = list(map(int, stdin.readline().split()))
+        (x, y, f1, f2, f3, f4) = list(map(int, stdin.readline().split()))
         curRect = Rect()
         if f1 == 0:
             curRect.x1 = x
@@ -47,6 +45,6 @@ for i in range(q):
             curRect.y1 = y
         inter = intersect(inter, curRect)
     if inter is None:
-        print("0")
+        print('0')
     else:
-        print("1 %d %d" % (int(max(inter.x1, -10**5)), int(max(inter.y1, -10**5))))
+        print('1 %d %d' % (int(max(inter.x1, -10 ** 5)), int(max(inter.y1, -10 ** 5))))

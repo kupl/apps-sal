@@ -22,8 +22,7 @@ while q:
             b += 1
     if a % 2 == 0:
         print(n)
+    elif b > 0:
+        print(n)
     else:
-        if b > 0:
-            print(n)
-        else:
-            print(n - 1)
+        print(n - 1)

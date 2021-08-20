@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 print(k * (2 * (3 * n) - 1))
 now = 1
 m = 2

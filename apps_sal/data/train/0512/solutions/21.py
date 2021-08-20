@@ -1,11 +1,15 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**8)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 8)
 
 
 class LCA(object):
+
     def __init__(self, to, root=0):
         self.__n = len(to)
         self.__to = to
@@ -19,7 +23,7 @@ class LCA(object):
         self.__doubling()
 
     def __dfs(self, v):
-        for u, c, d in self.__to[v]:
+        for (u, c, d) in self.__to[v]:
             if self.__depth[u] != -1:
                 continue
             self.__parents[0][u] = v
@@ -45,10 +49,10 @@ class LCA(object):
     def get(self, u, v):
         dd = self.__depth[v] - self.__depth[u]
         if dd < 0:
-            u, v = v, u
+            (u, v) = (v, u)
             dd *= -1
         for i in range(self.__logn):
-            if dd & (2 ** i):
+            if dd & 2 ** i:
                 v = self.__parents[i][v]
         if v == u:
             return v
@@ -56,42 +60,39 @@ class LCA(object):
             pu = self.__parents[i][u]
             pv = self.__parents[i][v]
             if pu != pv:
-                u, v = pu, pv
+                (u, v) = (pu, pv)
         return self.__parents[0][u]
 
 
 def resolve():
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     to = [[] for _ in range(n)]
     for _ in range(n - 1):
-        a, b, c, d = map(int, input().split())
+        (a, b, c, d) = map(int, input().split())
         a -= 1
         b -= 1
         to[a].append((b, c, d))
         to[b].append((a, c, d))
-
     G = LCA(to)
     Query = [[] for _ in range(n)]
     for i in range(q):
-        # idx, color, mag, coef
-        x, y, u, v = map(int, input().split())
+        (x, y, u, v) = map(int, input().split())
         u -= 1
         v -= 1
         c = G.get(u, v)
         Query[u].append((i, x, y, 1))
         Query[v].append((i, x, y, 1))
         Query[c].append((i, x, y, -2))
-
     ans = [0] * q
     S = [[0, 0] for _ in range(n)]
 
     def dfs(v, p=-1):
-        for idx, color, mag, coef in Query[v]:
+        for (idx, color, mag, coef) in Query[v]:
             x = G.dist[v]
             x -= S[color][1]
             x += mag * S[color][0]
             ans[idx] += x * coef
-        for nv, color, d in to[v]:
+        for (nv, color, d) in to[v]:
             if nv == p:
                 continue
             S[color][0] += 1
@@ -100,7 +101,7 @@ def resolve():
             S[color][0] -= 1
             S[color][1] -= d
     dfs(0)
-    print(*ans, sep="\n")
+    print(*ans, sep='\n')
 
 
 resolve()

@@ -2,18 +2,17 @@ def main():
     s = input()
     a = b = c = 0
     for elem in s:
-        if elem == "B":
+        if elem == 'B':
             a += 1
-        elif elem == "S":
+        elif elem == 'S':
             b += 1
         else:
             c += 1
-    na, nb, nc = map(int, input().split())
-    pa, pb, pc = map(int, input().split())
+    (na, nb, nc) = map(int, input().split())
+    (pa, pb, pc) = map(int, input().split())
     k = int(input())
-
     l = 0
-    r = 10**13
+    r = 10 ** 13
     while r - l > 1:
         m = (l + r) // 2
         cntA = max(0, a * m - na)

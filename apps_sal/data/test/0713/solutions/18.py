@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 s = min(n, m)
 print(s + 1)
 for x in range(s + 1):

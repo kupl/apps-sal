@@ -5,9 +5,8 @@ for i in ip:
     if i > high:
         if i < 0:
             high = i
+        elif i ** 0.5 % 1 == 0:
+            pass
         else:
-            if (i**0.5) % 1 == 0:
-                pass
-            else:
-                high = i
+            high = i
 print(high)

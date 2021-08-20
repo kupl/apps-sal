@@ -8,7 +8,6 @@ def sum_points(s):
 
 def alphabet_war(fight):
     suma = sum_points(fight)
-
     if suma > 0:
         return 'Left side wins!'
     elif suma < 0:

@@ -1,3 +1,3 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 h = list(map(int, input().split()))
-print((sum(x >= K for x in h)))
+print(sum((x >= K for x in h)))

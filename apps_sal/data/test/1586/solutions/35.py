@@ -8,5 +8,5 @@ else:
     while tmp > 0:
         ans += tmp
         i += 1
-        tmp = N // (2 * 5**i)
+        tmp = N // (2 * 5 ** i)
     print(ans)

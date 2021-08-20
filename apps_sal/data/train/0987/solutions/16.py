@@ -1,13 +1,10 @@
-# cook your dish here
 import math
 for i in range(int(input())):
-    s, d, a, b = map(float, input().split())
-    # For Tiger
+    (s, d, a, b) = map(float, input().split())
     distance = s + d
     tiger = math.sqrt(2 * distance / a)
-    # For Usain Bolt
-    bolt = (s / b)
+    bolt = s / b
     if tiger <= bolt:
-        print("Tiger")
+        print('Tiger')
     else:
-        print("Bolt")
+        print('Bolt')

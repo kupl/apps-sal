@@ -1,7 +1,6 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
-r, s, ans = 0, 0, 0
+(r, s, ans) = (0, 0, 0)
 for l in range(N):
     while r < N and s < K:
         s += A[r]
@@ -12,5 +11,4 @@ for l in range(N):
     s -= A[l]
     if l == r:
         r += 1
-
 print(ans)

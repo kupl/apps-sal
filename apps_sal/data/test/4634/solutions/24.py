@@ -10,7 +10,6 @@ def readList(func=int):
 
 
 t = read()
-
 for _ in range(t):
     n = read()
     A = readList()
@@ -25,7 +24,6 @@ for _ in range(t):
         num = A[i]
         if num == 1:
             start = True
-        if num == 0 and start and i < ri:
+        if num == 0 and start and (i < ri):
             count += 1
-
     print(count)

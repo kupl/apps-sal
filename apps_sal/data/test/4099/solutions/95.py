@@ -1,4 +1,4 @@
-N, K, M = map(int, input().split())
+(N, K, M) = map(int, input().split())
 arr = list(map(int, input().split()))
 num = sum(arr)
 ideal = N * M

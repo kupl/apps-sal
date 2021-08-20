@@ -14,10 +14,7 @@ class Solution:
             if id not in dic:
                 self.res = max(self.res, cur)
                 return
-
             for employee in dic[id]:
                 dfs(dic, employee[0], cur + employee[1])
-
         dfs(dic, -1, 0)
-
         return self.res

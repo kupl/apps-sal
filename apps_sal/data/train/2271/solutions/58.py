@@ -1,15 +1,21 @@
 import sys
-def input(): return sys.stdin.readline().strip()
-def mapint(): return map(int, input().split())
 
 
-sys.setrecursionlimit(10**9)
+def input():
+    return sys.stdin.readline().strip()
 
-N, M = mapint()
+
+def mapint():
+    return map(int, input().split())
+
+
+sys.setrecursionlimit(10 ** 9)
+(N, M) = mapint()
 Ps = [p - 1 for p in list(mapint())]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -24,13 +30,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -45,20 +48,17 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
 
 uf = UnionFind(N)
 for _ in range(M):
-    x, y = mapint()
+    (x, y) = mapint()
     uf.union(x - 1, y - 1)
-
 roots = uf.roots()
 root_set = [set() for _ in range(N)]
-
 for i in range(N):
     root_set[uf.find(i)].add(i)
-
 ans = 0
 for i in range(N):
     p = Ps[i]

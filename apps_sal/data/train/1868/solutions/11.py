@@ -1,4 +1,5 @@
 class Solution:
+
     def beautifulArray(self, N: int) -> List[int]:
         res = [1]
         while len(res) < N:

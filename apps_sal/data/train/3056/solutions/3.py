@@ -1,5 +1,5 @@
 def palindrome(num, s):
-    if type(num) != int or type(s) != int or num < 0 or s < 0:
+    if type(num) != int or type(s) != int or num < 0 or (s < 0):
         return 'Not valid'
     res = []
     i = max(11, num)

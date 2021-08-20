@@ -8,4 +8,4 @@ def order_weight(strng):
             x = x // 10
         solution.append(result)
         result = 0
-    return ' '.join([x for _, x in sorted(zip(solution, [str(x) for x in numbers_list]))])
+    return ' '.join([x for (_, x) in sorted(zip(solution, [str(x) for x in numbers_list]))])

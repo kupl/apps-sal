@@ -1,62 +1,29 @@
 import sys
-sys.setrecursionlimit(10**8)
-def ii(): return int(sys.stdin.readline())
-def mi(): return map(int, sys.stdin.readline().split())
-def li(): return list(map(int, sys.stdin.readline().split()))
-def li2(N): return [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-def dp2(ini, i, j): return [[ini] * i for _ in range(j)]
+sys.setrecursionlimit(10 ** 8)
 
 
-# import bisect #bisect.bisect_left(B, a)
-# from collections import defaultdict #d = defaultdict(int) d[key] += value
-# from collections import Counter # a = Counter(A).most_common()
-# from itertools import accumulate #list(accumulate(A))
-'''
-N = ii()
-A = li2(N)
-B = li2(N)
+def ii():
+    return int(sys.stdin.readline())
 
-A = sorted(A, key=lambda x:x[0])
-B = sorted(B, key=lambda x:x[0])
 
-a_ind = 0
-b_ind = 0
-cnt = 0
+def mi():
+    return map(int, sys.stdin.readline().split())
 
-while b_ind < N:
-    if A[a_ind][0] < B[b_ind][0] and  A[a_ind][1] < B[b_ind][1]:
-        cnt += 1
-        a_ind += 1
-        b_ind += 1
-    else:
-        b_ind += 1
 
-print(cnt)
-'''
-'''
-#nonlocal ans
-ans = 0
+def li():
+    return list(map(int, sys.stdin.readline().split()))
 
-def dfs(a_ind, b_ind, cnt):
-    if a_ind >= N or b_ind >= N:
-        nonlocal ans
-        ans = max(ans, cnt)
-        return
-    if A[a_ind][0] < B[b_ind][0] and  A[a_ind][1] < B[b_ind][1]:
-        dfs(a_ind+1, b_ind+1, cnt+1)
-    else:
-        dfs(a_ind+1, b_ind, cnt)
-        dfs(a_ind, b_ind+1, cnt)
-        dfs(a_ind+1, b_ind+1, cnt)
 
-dfs(0, 0, 0)
+def li2(N):
+    return [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
 
-print(ans)
-'''
 
-# XとYの二部グラフの最大マッチング X={0,1,2,...|X|-1} Y={0,1,2,...,|Y|-1}
-#   edges[x]: xとつながるYの頂点のset
-#   matched[y]: yとマッチングされたXの頂点(暫定)
+def dp2(ini, i, j):
+    return [[ini] * i for _ in range(j)]
+
+
+'\nN = ii()\nA = li2(N)\nB = li2(N)\n\nA = sorted(A, key=lambda x:x[0])\nB = sorted(B, key=lambda x:x[0])\n\na_ind = 0\nb_ind = 0\ncnt = 0\n\nwhile b_ind < N:\n    if A[a_ind][0] < B[b_ind][0] and  A[a_ind][1] < B[b_ind][1]:\n        cnt += 1\n        a_ind += 1\n        b_ind += 1\n    else:\n        b_ind += 1\n\nprint(cnt)\n'
+'\n#nonlocal ans\nans = 0\n\ndef dfs(a_ind, b_ind, cnt):\n    if a_ind >= N or b_ind >= N:\n        nonlocal ans\n        ans = max(ans, cnt)\n        return\n    if A[a_ind][0] < B[b_ind][0] and  A[a_ind][1] < B[b_ind][1]:\n        dfs(a_ind+1, b_ind+1, cnt+1)\n    else:\n        dfs(a_ind+1, b_ind, cnt)\n        dfs(a_ind, b_ind+1, cnt)\n        dfs(a_ind+1, b_ind+1, cnt)\n\ndfs(0, 0, 0)\n\nprint(ans)\n'
 
 
 def dfs(v, visited):
@@ -75,25 +42,15 @@ def dfs(v, visited):
     return False
 
 
-# 標準入力からのグラフ読み取り
-#xn, yn, e = map(int, input().split())
 N = ii()
 xn = N
 yn = N
 edges = [set() for _ in range(xn)]
 matched = [-1] * yn
-
-# for _ in range(e):
-#x, y = map(int, input().split())
-# edges[x].add(y)
-
 A = li2(N)
 B = li2(N)
-
 for i in range(N):
     for j in range(N):
         if A[i][0] < B[j][0] and A[i][1] < B[j][1]:
             edges[i].add(j)
-
-# 増大路発見に成功したらTrue(=1)。合計することでマッチング数となる
-print(sum(dfs(s, set()) for s in range(xn)))
+print(sum((dfs(s, set()) for s in range(xn))))

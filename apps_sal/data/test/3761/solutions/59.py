@@ -1,8 +1,6 @@
 s = input()
-x, y = map(int, input().split())
-
-tInd = [i for i, x in enumerate(s) if x == 'T']
-
+(x, y) = map(int, input().split())
+tInd = [i for (i, x) in enumerate(s) if x == 'T']
 xs = []
 ys = [0]
 answer = 'No'
@@ -10,7 +8,6 @@ xa = False
 firstT = False
 if s[0] == 'T':
     firstT = True
-
 start = 0
 isx = 1
 for i in tInd:
@@ -24,11 +21,10 @@ if isx == 1:
     xs.append(len(s) - start)
 else:
     ys.append(len(s) - start)
-
 cset = {0}
-for index, item in enumerate(xs):
+for (index, item) in enumerate(xs):
     tcset = set()
-    if index == 0 and not firstT:
+    if index == 0 and (not firstT):
         tcset.add(item)
     else:
         for c in cset:
@@ -37,7 +33,6 @@ for index, item in enumerate(xs):
     cset = tcset
 if x in cset:
     xa = True
-
 if xa:
     cset = {0}
     for item in ys:
@@ -48,5 +43,4 @@ if xa:
         cset = tcset
     if y in cset:
         answer = 'Yes'
-
 print(answer)

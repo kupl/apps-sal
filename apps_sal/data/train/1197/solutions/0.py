@@ -3,7 +3,7 @@ for _ in range(int(input())):
     n = int(input())
     sum = 0
     for i in range(n):
-        print(lst[i], end=" ")
+        print(lst[i], end=' ')
         sum += lst[i]
     print()
     print(sum)

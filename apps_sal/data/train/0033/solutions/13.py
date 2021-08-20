@@ -3,7 +3,6 @@ ns = []
 for _ in range(t):
     n = int(input())
     ns.append(n)
-
 for n in ns:
     print(2)
     print(n - 1, n)

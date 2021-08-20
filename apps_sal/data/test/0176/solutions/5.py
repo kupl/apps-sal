@@ -6,7 +6,7 @@ def f(a, b, k):
     return res
 
 
-k, a, b = [int(i) for i in input().split()]
+(k, a, b) = [int(i) for i in input().split()]
 if b <= 0:
     res = f(-b, -a, k)
 elif a < 0:

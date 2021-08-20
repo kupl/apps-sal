@@ -1,7 +1,6 @@
 import math
 import bisect
 import heapq
-
 from collections import defaultdict
 
 
@@ -9,12 +8,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, x, y = egcd(b % a, a)
-        return (g, y - (b // a) * x, x)
+        (g, x, y) = egcd(b % a, a)
+        return (g, y - b // a * x, x)
 
 
 def mulinv(b, n):
-    g, x, _ = egcd(b, n)
+    (g, x, _) = egcd(b, n)
     if g == 1:
         return x % n
 
@@ -44,10 +43,8 @@ def f(p=0):
 
 n = f()
 cl = f(2)
-
 count = 0
 sm = 0
-
 for i in range(n):
     a = sm
     b = cl[i] // 2
@@ -59,5 +56,4 @@ for i in range(n):
     c = cl[i] // 3
     sm -= c * 3
     count += c
-
 print(count)

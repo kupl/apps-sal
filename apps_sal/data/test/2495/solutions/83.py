@@ -2,7 +2,7 @@ import sys
 
 
 def func(alst, sign):
-    cur, res = 0, 0
+    (cur, res) = (0, 0)
     for i in alst:
         cur += i
         if sign and cur <= 0:
@@ -16,7 +16,7 @@ def func(alst, sign):
 
 
 def main():
-    n, *alst = map(int, sys.stdin.read().split())
+    (n, *alst) = map(int, sys.stdin.read().split())
     print(min(func(alst, True), func(alst, False)))
 
 

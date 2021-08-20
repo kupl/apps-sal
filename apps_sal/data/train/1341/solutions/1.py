@@ -31,6 +31,5 @@ for t in range(int(input())):
         if first_range_last_index >= 0:
             res += (first_range_last_index + 1) * (len(a) - (n + 1))
     else:
-        res = (((n) * (n + 1)) // 2) - 1
-
+        res = n * (n + 1) // 2 - 1
     print(res)

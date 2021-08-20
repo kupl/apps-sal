@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = []
     for i in range(n):
         l.append(input())

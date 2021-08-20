@@ -4,8 +4,8 @@ move = ['left', 'up', 'right', 'down']
 def robot_walk(a):
     if len(a) <= 3:
         return False
-    left, upper, right, lower = 0, a[0], a[1], a[0] - a[2]
-    for i, x in enumerate(a[3:]):
+    (left, upper, right, lower) = (0, a[0], a[1], a[0] - a[2])
+    for (i, x) in enumerate(a[3:]):
         m = move[i % 4]
         if m == 'left':
             if right - x <= left:

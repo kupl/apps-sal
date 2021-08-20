@@ -4,11 +4,9 @@ def increment_string(foo):
         if not foo[i] in '0123456789':
             break
         index = i
-
     if index == -1:
         foo = foo + '1'
     else:
         a = len(foo[index:])
-        foo = foo[:index] + ("{:0>" + str(a) + "d}").format(int(foo[index:]) + 1)
-
-    return(foo)
+        foo = foo[:index] + ('{:0>' + str(a) + 'd}').format(int(foo[index:]) + 1)
+    return foo

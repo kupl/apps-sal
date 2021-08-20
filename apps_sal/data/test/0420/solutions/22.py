@@ -12,7 +12,7 @@ def mirror(row, matrix):
 
 
 def __starting_point():
-    n, m = list(map(int, sys.stdin.readline().split()))
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     matrix = [list(map(int, i.split())) for i in sys.stdin.readlines()]
     print(mirror(n, matrix))
 

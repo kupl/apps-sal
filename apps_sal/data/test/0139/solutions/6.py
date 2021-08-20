@@ -1,19 +1,17 @@
-
-
 def my_solve(n, m, graph, mask):
     if do_dfs_bool(n, graph, mask.copy()):
         c = get_cyclic(n, graph, mask)
-        for u, v in c:
+        for (u, v) in c:
             graph[u].remove(v)
             if not do_dfs_bool(n, graph, mask.copy()):
                 return 'YES'
             graph[u].append(v)
-        return "NO"
-    return "YES"
+        return 'NO'
+    return 'YES'
 
 
 def get_cyclic(n, graph, mask):
-    c, v = do_dfs(n, graph, mask)
+    (c, v) = do_dfs(n, graph, mask)
     path = []
     i = 0
     begin = False
@@ -58,7 +56,7 @@ def do_dfs(n, graph, mask):
     for u in graph.keys():
         if not u in mask.keys():
             c = {}
-            p, v = dfs(u, graph, mask, c, colors)
+            (p, v) = dfs(u, graph, mask, c, colors)
             if p and v:
                 return (p, v)
 
@@ -70,7 +68,7 @@ def dfs(u, graph, mask, c, colors):
             return (c, v)
         if colors[v] == 0:
             c[v] = u
-            p, w = dfs(v, graph, mask, c, colors)
+            (p, w) = dfs(v, graph, mask, c, colors)
             if w:
                 return (p, w)
     colors[u] = 2
@@ -83,7 +81,7 @@ def dfs(u, graph, mask, c, colors):
 def test(n, m, edges):
     graph = {}
     mask = {}
-    for u, v in edges:
+    for (u, v) in edges:
         if u not in graph.keys():
             graph[u] = []
         graph[u].append(v)
@@ -93,10 +91,10 @@ def test(n, m, edges):
 
 
 def __starting_point():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     edges = []
     for i in range(0, m):
-        u, v = [int(x) for x in input().split()]
+        (u, v) = [int(x) for x in input().split()]
         edges.append((u, v))
     print(test(n, m, edges))
 

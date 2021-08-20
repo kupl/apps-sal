@@ -1,1 +1,1 @@
-print("ATCG"["TAGC".index(input())])
+print('ATCG'['TAGC'.index(input())])

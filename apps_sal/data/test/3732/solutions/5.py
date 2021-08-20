@@ -1,8 +1,6 @@
 s = input().split()
-x, y, m = (int(i) for i in s)
-
+(x, y, m) = (int(i) for i in s)
 ans = 0
-
 if x >= m or y >= m:
     print(0)
 elif x <= 0 and y <= 0:
@@ -16,12 +14,10 @@ else:
         q = abs(y // x)
         ans += q
         y += x * q
-
     while x < m and y < m:
         ans += 1
         if x < y:
             x = x + y
         else:
             y = x + y
-
     print(ans)

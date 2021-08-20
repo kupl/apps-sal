@@ -1,4 +1,5 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -15,10 +16,9 @@ for i in range(n):
 s = sum(a)
 for i in range(n):
     if maxx != a[i]:
-        if 2 * maxx == (s - a[i]):
+        if 2 * maxx == s - a[i]:
             c.append(i + 1)
-    else:
-        if s - a[i] == 2 * smax:
-            c.append(i + 1)
+    elif s - a[i] == 2 * smax:
+        c.append(i + 1)
 print(len(c))
 print(*c)

@@ -18,25 +18,21 @@ for i in range(n):
         chk.append((m, e))
     else:
         res.append((-1 * e + m, -1 * e))
-
 res.sort(key=itemgetter(0), reverse=True)
 chk.sort(key=itemgetter(0), reverse=True)
 ans = 'Yes'
 st = 0
-for i, j in chk:
+for (i, j) in chk:
     if i + st < 0:
         ans = 'No'
         break
     st += j
-
 sr = 0
-for i, j in res:
+for (i, j) in res:
     if i + sr < 0:
         ans = 'No'
         break
     sr += j
-
 if st != sr:
     ans = 'No'
-
 print(ans)

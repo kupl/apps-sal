@@ -12,5 +12,4 @@ def gcd(p, q):
 g = gcd(a[0], a[1])
 for i in range(2, n):
     g = gcd(g, a[i])
-
 print(g)

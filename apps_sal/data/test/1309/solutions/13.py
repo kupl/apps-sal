@@ -1,7 +1,6 @@
 n = int(input())
-
 w = sorted(map(int, input().split()))
-ans = 1e100
+ans = 1e+100
 for i in range(2 * n):
     for j in range(i + 1, 2 * n):
         prev = -1

@@ -45,13 +45,13 @@ def check(i, j, direct, temp, flag):
         i += 1
     if rs[i][j] == 'X':
         temp += 1
-        if(temp > 4):
+        if temp > 4:
             return 1
         return check(i, j, direct, temp, flag)
     elif rs[i][j] == '.' and flag == 1:
         temp += 1
         flag = 0
-        if(temp > 4):
+        if temp > 4:
             return 1
         return check(i, j, direct, temp, flag)
     else:
@@ -69,6 +69,6 @@ def result():
 
 
 if result() == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

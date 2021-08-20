@@ -1,21 +1,21 @@
 def get_planet_name(num):
     if num == 1:
-        return "Mercury"
+        return 'Mercury'
     elif num == 2:
-        return "Venus"
+        return 'Venus'
     elif num == 3:
-        return "Earth"
+        return 'Earth'
     elif num == 4:
-        return "Mars"
+        return 'Mars'
     elif num == 5:
-        return "Jupiter"
+        return 'Jupiter'
     elif num == 6:
-        return "Saturn"
+        return 'Saturn'
     elif num == 7:
-        return "Uranus"
+        return 'Uranus'
     elif num == 8:
-        return "Neptune"
+        return 'Neptune'
     elif num == 9:
-        return "Pluto"
+        return 'Pluto'
     else:
-        return "Not in range"
+        return 'Not in range'

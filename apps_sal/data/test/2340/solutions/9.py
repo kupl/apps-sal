@@ -1,7 +1,7 @@
 q = int(input())
 for i in range(q):
-    h, n = [int(x) for x in input().split()]
-    a = [int(x) for x in input().split()] + [10**10]
+    (h, n) = [int(x) for x in input().split()]
+    a = [int(x) for x in input().split()] + [10 ** 10]
     counter = 0
     arr = 0
     for i in range(1, n + 1):

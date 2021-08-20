@@ -8,7 +8,7 @@ def __starting_point():
     for line in sys.stdin:
         if line.strip() == '':
             break
-        n, m = [int(i) for i in line.strip().split()]
+        (n, m) = [int(i) for i in line.strip().split()]
         if n not in path:
             path[n] = [m]
         else:

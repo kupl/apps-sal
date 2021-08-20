@@ -24,17 +24,17 @@ for i in range(1, n):
 
 def count(a, b):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     res = 0
     for i in range(n):
         if a >= b:
             return res
         c = max(0, bisect_left(next_hotel[a], b) - 1)
         a = next_hotel[a][c]
-        res += 2**c
+        res += 2 ** c
 
 
 Q = int(input())
 for _ in range(Q):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(count(a - 1, b - 1))

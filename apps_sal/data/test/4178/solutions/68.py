@@ -9,5 +9,4 @@ for i in range(n):
         continue
     else:
         ans = False
-
-print("Yes" if ans == True else "No")
+print('Yes' if ans == True else 'No')

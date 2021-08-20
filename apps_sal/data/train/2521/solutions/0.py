@@ -1,7 +1,8 @@
 class Solution:
+
     def reformat(self, s: str) -> str:
         n = [str(i) for i in range(0, 10)]
-        a, b = [], []
+        (a, b) = ([], [])
         for i in s:
             if i in n:
                 b.append(i)

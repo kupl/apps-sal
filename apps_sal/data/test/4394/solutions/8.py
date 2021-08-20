@@ -1,7 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 class edge:
+
     def __init__(self, U, V, W):
         self.u = U
         self.v = V
@@ -10,7 +11,7 @@ class edge:
 
 l = []
 for i in range(m):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     l.append(edge(u, v, w))
 l.sort(key=lambda x: x.w)
 f = [i for i in range(0, n + 1)]

@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
-
-a, b, c, d = list(map(int, input().split()))
-
-m = max(3 * a // 10, a - (a // 250) * c)
-v = max(3 * b // 10, b - (b // 250) * d)
-
+(a, b, c, d) = list(map(int, input().split()))
+m = max(3 * a // 10, a - a // 250 * c)
+v = max(3 * b // 10, b - b // 250 * d)
 if m > v:
-    print("Misha")
+    print('Misha')
 elif m < v:
-    print("Vasya")
+    print('Vasya')
 else:
-    print("Tie")
+    print('Tie')

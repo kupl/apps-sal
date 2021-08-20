@@ -1,6 +1,5 @@
 s = input().split()[0]
 wos = []
-
 sum_w = 0
 sum_o = 0
 for i in range(len(s)):
@@ -13,7 +12,6 @@ for i in range(len(s)):
             pass
         else:
             sum_w += 1
-
 answer = 0
 for i in range(len(s)):
     if s[i] == 'o':
@@ -23,5 +21,4 @@ for i in range(len(s)):
             pass
         else:
             answer += wos[i]
-
 print(answer)

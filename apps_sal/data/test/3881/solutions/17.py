@@ -1,8 +1,7 @@
-# You lost the game.
-n, q = map(int, input().split())
-L = [list(str(input()).split(" ")) for _ in range(q)]
+(n, q) = map(int, input().split())
+L = [list(str(input()).split(' ')) for _ in range(q)]
 A = [[] for _ in range(6)]
-B = "abcdef"
+B = 'abcdef'
 for i in range(q):
     e = B.index(L[i][1])
     A[e] = A[e] + [L[i][0]]

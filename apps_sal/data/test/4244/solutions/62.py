@@ -10,14 +10,14 @@ def main():
         p = i
         cur = 0
         for j in range(len(x)):
-            cur += (x[j] - p)**2
+            cur += (x[j] - p) ** 2
         if cur < sofar:
             sofar = cur
     return sofar
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

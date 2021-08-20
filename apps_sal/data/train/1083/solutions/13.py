@@ -1,6 +1,6 @@
 def func(n, m, z, l, r, b):
     l = l + r
-    if(l >= n * (m - 1)):
+    if l >= n * (m - 1):
         return min(n * m, l + z + b)
     x = l / (m - 1)
     ans = x * (m - 1)
@@ -10,12 +10,12 @@ def func(n, m, z, l, r, b):
     x = l % (m - 1)
     ans = ans + x
     x = m - x
-    x = min((x / 2) + (x % 2), b)
+    x = min(x / 2 + x % 2, b)
     ans = ans + x
     b = b - x
-    x = n - (l / (m - 1))
+    x = n - l / (m - 1)
     x = x - 1
-    x = min(b, x * ((m / 2) + (m % 2)))
+    x = min(b, x * (m / 2 + m % 2))
     ans = ans + x
     z = min(z, n * m - ans)
     ans = ans + z
@@ -24,7 +24,7 @@ def func(n, m, z, l, r, b):
 
 def func2(n, m, z, l, r, b):
     l = l + r
-    if(l >= n * (m - 1)):
+    if l >= n * (m - 1):
         return min(n * m, l + z + b)
     x = l / (m - 1)
     ans = x * (m - 1)
@@ -40,7 +40,7 @@ def func2(n, m, z, l, r, b):
     ans1 = ans + func(n2, m, z, l, 0, b)
     ans2 = 0
     ans3 = 0
-    if(l > 0):
+    if l > 0:
         ans2 = ans + l
         x = min(z, n2 - l)
         ans2 = ans2 + x
@@ -60,7 +60,7 @@ def func2(n, m, z, l, r, b):
 
 t = eval(input())
 for _ in range(0, t):
-    n, m, z, l, r, b = list(map(int, input().split()))
+    (n, m, z, l, r, b) = list(map(int, input().split()))
     a = func(n, m, z, l, r, b)
     a = max(a, func2(n, m, z, l, r, b))
     print(a)

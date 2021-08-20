@@ -1,11 +1,8 @@
 n = input()
 s = input()
-
-
 if len(s) == 1:
-    print("Yes")
+    print('Yes')
+elif len(s) == len(set(s)):
+    print('No')
 else:
-    if len(s) == len(set(s)):
-        print("No")
-    else:
-        print("Yes")
+    print('Yes')

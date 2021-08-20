@@ -1,7 +1,6 @@
 import math
-x, y = map(int, input().split())
-
-mod = 10**9 + 7
+(x, y) = map(int, input().split())
+mod = 10 ** 9 + 7
 fac = [1, 1]
 finv = [1, 1]
 inv = [0, 1]

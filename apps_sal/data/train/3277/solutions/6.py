@@ -1,9 +1,9 @@
 def calc_type(a, b, res):
     if a + b == res:
-        return "addition"
+        return 'addition'
     elif a - b == res:
-        return "subtraction"
+        return 'subtraction'
     elif a * b == res:
-        return "multiplication"
+        return 'multiplication'
     else:
-        return "division"
+        return 'division'

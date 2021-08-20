@@ -1,5 +1,3 @@
-# coding: utf-8
-
 def count(i, g):
     cost = ord(g) - ord(i)
     if cost < 0:
@@ -10,7 +8,7 @@ def count(i, g):
 
 
 s = input().strip()
-i = "a"
+i = 'a'
 cnt = 0
 for c in s:
     cnt += count(i, c)

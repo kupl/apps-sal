@@ -1,6 +1,5 @@
 from math import *
-
-MOD = int(1e9) + 7
+MOD = int(1000000000.0) + 7
 
 
 def nextInt():
@@ -12,15 +11,15 @@ def nextInts():
 
 
 def YN(x):
-    return "YES" if x else "NO"
+    return 'YES' if x else 'NO'
 
 
 def solve():
-    n, r = nextInts()
+    (n, r) = nextInts()
     pos = []
     neg = []
     for i in range(n):
-        a, b = nextInts()
+        (a, b) = nextInts()
         a = max(a, -b)
         if b >= 0:
             pos.append((a, b))
@@ -33,10 +32,8 @@ def solve():
         if r >= t[0]:
             r += t[1]
             ans += 1
-
     dp = [-MOD] * 60001
     dp[r] = ans
-
     for t in neg:
         for j in range(t[0], 60001):
             dp[j + t[1]] = max(dp[j + t[1]], dp[j] + 1)
@@ -44,7 +41,3 @@ def solve():
 
 
 print(solve())
-
-# q = nextInt()
-# for i in range(q):
-#     print(YN(solve()))

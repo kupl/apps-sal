@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for z in range(t):
     a = [int(x) for x in input().split()]
@@ -8,6 +7,6 @@ for z in range(t):
     for i in a:
         s += i * p
     if s > 120:
-        print("Yes")
+        print('Yes')
     else:
         print('No')

@@ -9,18 +9,18 @@ for i in range(len(a)):
     a[i] = a[i].split(' ')
     a[i] = list(map(int, a[i]))
 for i in range(len(a)):
-    for j in list(reversed(range(i + 1, len(a)))):  # sort the circles by their radius
+    for j in list(reversed(range(i + 1, len(a)))):
         if a[i][2] < a[j][2]:
-            a[i], a[j] = a[j], a[i]
+            (a[i], a[j]) = (a[j], a[i])
 
 
-def dis(x, y):  # short for distance
-    return math.sqrt((x[0] - y[0])**2 + (x[1] - y[1])**2)
+def dis(x, y):
+    return math.sqrt((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2)
 
 
 b = []
 for i in range(len(a)):
-    b.append(a[i][2]**2)
+    b.append(a[i][2] ** 2)
     for j in list(reversed(range(i))):
         if dis(a[i], a[j]) < a[j][2]:
             a[i].append(j)

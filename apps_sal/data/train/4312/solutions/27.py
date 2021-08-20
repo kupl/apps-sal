@@ -13,7 +13,7 @@ def pick_peaks(arr):
     def fill_res(pos, peaks):
         res['pos'].append(pos)
         res['peaks'].append(peaks)
-    for index, value in enumerate(arr):
+    for (index, value) in enumerate(arr):
         if index not in [0, len(arr) - 1]:
             if arr[index] > arr[index - 1] and next_different_value(arr, index):
                 fill_res(index, value)

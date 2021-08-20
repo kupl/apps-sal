@@ -6,7 +6,6 @@ Problem 597B. Restaurant
 @author yamaton
 @date 2015-11-11
 """
-
 import math
 import operator
 import random
@@ -37,12 +36,12 @@ def solve0(pairs):
 
 
 def p(*args, **kwargs):
-    return print(file=sys.stderr, *args, **kwargs)
+    return print(*args, file=sys.stderr, **kwargs)
 
 
 def main():
     n = int(input())
-    pairs = [tuple(int(i) for i in input().strip().split()) for _ in range(n)]
+    pairs = [tuple((int(i) for i in input().strip().split())) for _ in range(n)]
     result = solve(pairs)
     print(result)
 

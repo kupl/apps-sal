@@ -1,16 +1,11 @@
-# -*- coding: utf-8 -*-
-
 a = []
 k = []
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 for i in range(n + 1):
     if i < n:
         a.append(input())
     k.append([0 for j in range(m + 1)])
-
 ans = 0
-
 for i in range(n - 1, -1, -1):
     add = 0
     for j in range(m - 1, -1, -1):
@@ -22,5 +17,4 @@ for i in range(n - 1, -1, -1):
             ans += 1
             add += sign - k[i][j]
             k[i][j] = sign
-
 print(ans)

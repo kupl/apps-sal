@@ -1,4 +1,5 @@
 class Solution(object):
+
     def subarrayBitwiseORs(self, A):
         ans = set()
         cur = {0}

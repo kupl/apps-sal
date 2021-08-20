@@ -20,9 +20,9 @@ for i in range(m):
     es.append((i + 1, i + 2, 1 << i))
 t = L - (1 << m)
 for i in range(20):
-    if (t >> i) & 1:
+    if t >> i & 1:
         L -= 1 << i
         es.append((i + 1, 20, L))
 print((20, len(es)))
-for u, v, c in es:
+for (u, v, c) in es:
     print((u, v, c))

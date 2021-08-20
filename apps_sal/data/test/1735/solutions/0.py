@@ -1,8 +1,6 @@
 s = input()
-
 l = []
 t = 0
-
 for i in range(len(s)):
     if len(l) > 0:
         if s[i] == l[-1]:
@@ -12,8 +10,7 @@ for i in range(len(s)):
             l.append(s[i])
     else:
         l.append(s[i])
-
 if t % 2 == 0:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

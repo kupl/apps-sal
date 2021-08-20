@@ -9,4 +9,4 @@ class Solution:
         median = sorted_arrs[(n - 1) // 2]
         vals = [(abs(val - median), val) for val in arr]
         vals.sort()
-        return [val for comp, val in vals[-k:]]
+        return [val for (comp, val) in vals[-k:]]

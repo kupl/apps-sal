@@ -1,10 +1,17 @@
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+def ii():
+    return int(input())
 
 
-x, y, z = mi()
-a, b, c = mi()
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
+
+
+(x, y, z) = mi()
+(a, b, c) = mi()
 ok = 0
 if a >= x:
     a -= x

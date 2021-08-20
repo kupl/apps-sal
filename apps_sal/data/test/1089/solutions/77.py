@@ -1,5 +1,5 @@
-n, m, k = map(int, input().split())
-mod = 10**9 + 7
+(n, m, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 rng = n * m + 10
 fctr = [1]
 finv = [1]
@@ -17,7 +17,7 @@ def cmb(n, k):
 
 
 cost = [[0 for i in range(m + 1)] for j in range(n + 1)]
-cost[1][1] = ((n - 1) + (m - 1)) * n * m // 2
+cost[1][1] = (n - 1 + (m - 1)) * n * m // 2
 for i in range(1, n + 1):
     for j in range(1, m + 1):
         if j > 1:

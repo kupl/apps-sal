@@ -6,5 +6,4 @@ def L():
 
 
 [n, k] = L()
-
 print(math.floor(math.log(n, k)) + 1)

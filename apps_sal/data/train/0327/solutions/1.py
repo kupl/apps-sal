@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
@@ -8,7 +9,7 @@ class Solution:
         longest_start = 0
         longest_end = -1
         current_start = 0
-        for char_index, char in enumerate(s):
+        for (char_index, char) in enumerate(s):
             if char not in helper_dict or helper_dict[char] < current_start:
                 helper_dict[char] = char_index
             else:

@@ -2,4 +2,4 @@ import re
 
 
 def no_space(x):
-    return re.sub(r'\s+', '', x, 0)
+    return re.sub('\\s+', '', x, 0)

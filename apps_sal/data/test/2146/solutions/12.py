@@ -4,7 +4,6 @@ for i in range(n):
     a[i] -= 1
     if a[i] <= i + 1:
         a[i] = None
-
 m = [-1] * n
 m[0] = 0
 now = [0]
@@ -25,5 +24,4 @@ while True:
             next.append(i + 1)
     now = next
     next = []
-
 print(' '.join(map(str, m)))

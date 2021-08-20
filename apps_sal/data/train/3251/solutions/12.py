@@ -3,7 +3,7 @@ def factors(n):
     while n % 2 == 0:
         res.append(2)
         n /= 2
-    for i in range(3, int(n**.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         while n % i == 0:
             res.append(int(i))
             n /= i
@@ -19,8 +19,8 @@ def primeFactors(n):
             factor[i] = 1
         else:
             factor[i] += 1
-    res = ""
-    for a, b in factor.items():
+    res = ''
+    for (a, b) in factor.items():
         if b == 1:
             res += f'({a})'
         else:

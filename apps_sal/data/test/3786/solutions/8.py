@@ -6,10 +6,10 @@ def bfs(d, n):
     res = [0 for i in range(n)]
     while queue:
         q = queue.pop(0)
-        x, level = q[0], q[1]
+        (x, level) = (q[0], q[1])
         lev = level + 1
         res[level] = (res[level] + 1) % 2
-        for i, y in enumerate(d[x]):
+        for (i, y) in enumerate(d[x]):
             if mark[y] == False:
                 mark[y] = True
                 queue.append([y, lev])
@@ -19,7 +19,7 @@ def bfs(d, n):
 n = int(input())
 lst = list(map(int, input().split()))
 d = {1: []}
-for i, x in enumerate(lst):
+for (i, x) in enumerate(lst):
     d[x].append(i + 2)
     d[i + 2] = []
 bfs(d, n)

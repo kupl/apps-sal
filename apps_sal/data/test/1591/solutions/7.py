@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 favdrs = [0] * (k + 1)
 for i in range(n):
     temp = int(input())

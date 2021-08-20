@@ -1,11 +1,11 @@
-'''input
+"""input
 5
 5009
 7
 9876
 10000
 10
-'''
+"""
 
 
 def solve():
@@ -19,7 +19,7 @@ def solve():
         ln -= 1
     print(len(ans))
     for i in ans:
-        print(i, end=" ")
+        print(i, end=' ')
     print()
     return
 

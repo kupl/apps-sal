@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 for i in range(M, 0, -2):
     cur_start = (M - i) // 2
     print(cur_start + 1, cur_start + i + 1)

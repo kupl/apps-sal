@@ -1,7 +1,6 @@
 from sys import stdin
-
 for _ in range(int(stdin.readline())):
-    m, n = list(map(int, stdin.readline().split()))
+    (m, n) = list(map(int, stdin.readline().split()))
     final = []
     for j in range(m):
         ans = list(map(str, stdin.readline().split()))
@@ -24,16 +23,15 @@ for _ in range(int(stdin.readline())):
                         final[-1][0] = start
                     else:
                         start = final[-1][0]
+                elif final[-1][1] < end:
+                    final[-1][1] = end
                 else:
-                    if final[-1][1] < end:
-                        final[-1][1] = end
-                    else:
-                        end = final[-1][1]
+                    end = final[-1][1]
                 final.append([start, end])
     if len(final) == 0:
         print(0)
     else:
         count = 0
         for ele in final:
-            count += (ele[1] - ele[0] + 1)
+            count += ele[1] - ele[0] + 1
         print(count - 1)

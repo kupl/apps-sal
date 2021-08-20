@@ -12,7 +12,7 @@ def calc(i):
     if len(C[i]) == 0:
         DP[i] = 1
     elif T[i]:
-        mi = 10**10
+        mi = 10 ** 10
         for j in C[i]:
             mi = min(mi, DP[j])
         DP[i] = mi
@@ -25,5 +25,4 @@ def calc(i):
 
 for i in range(N)[::-1]:
     calc(i)
-
 print(len(L) - DP[0] + 1)

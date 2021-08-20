@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if (10 * b + c) % 4 == 0:
     print('YES')
 else:

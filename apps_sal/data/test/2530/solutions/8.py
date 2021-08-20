@@ -1,9 +1,9 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 s = {}
 s1 = {}
 s2 = {}
 for i in range(x):
-    a, b = input().split()
+    (a, b) = input().split()
     s[a] = b
 for i in range(y):
     a = input()
@@ -11,13 +11,13 @@ for i in range(y):
     s2[s[a]] = s2.get(s[a], 0) + 1
 m1 = max(s2.values())
 c = []
-for a, b in s2.items():
-    if(b == m1):
+for (a, b) in s2.items():
+    if b == m1:
         c.append(a)
 print(min(c))
 r = max(s1.values())
 d = []
-for a, b in s1.items():
-    if(b == r):
+for (a, b) in s1.items():
+    if b == r:
         d.append(a)
 print(min(d))

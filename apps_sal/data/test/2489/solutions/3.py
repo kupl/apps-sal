@@ -6,7 +6,7 @@ readlines = sys.stdin.readlines
 
 def main():
     a = np.array(read().split(), np.int32)[1:]
-    count = np.zeros(10**6 + 1, np.int32)
+    count = np.zeros(10 ** 6 + 1, np.int32)
     for ae in a:
         if count[ae] <= 1:
             count[::ae] += 1

@@ -1,4 +1,5 @@
 class Hero(object):
+
     def __init__(self, name=None):
         if name is None:
             name = 'Hero'

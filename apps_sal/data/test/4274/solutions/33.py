@@ -3,7 +3,7 @@ setrecursionlimit(1000000000)
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     if n == m:
         print('Yes')
     else:

@@ -1,7 +1,7 @@
 n = int(input())
 arr = []
 for _ in range(n):
-    d1, d2 = input().split()
+    (d1, d2) = input().split()
     if d1 == d2:
         arr.append(True)
     else:

@@ -10,13 +10,14 @@ def v():
         p = (p << 4) + 5
     ss = list(format(p, 'b').zfill(n))
     res = 0
-    for a, b in zip(s, ss):
+    for (a, b) in zip(s, ss):
         d = int(b) - int(a)
         res = res if d == 0 else res + d
     print(res)
 
 
-def __starting_point(): v()
+def __starting_point():
+    v()
 
 
 __starting_point()

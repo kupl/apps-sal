@@ -1,7 +1,7 @@
-units = " I II III IV V VI VII VIII IX".split(" ")
-tens = " X XX XXX XL L LX LXX LXXX XC".split(" ")
-hundreds = " C CC CCC CD D DC DCC DCCC CM".split(" ")
-thousands = " M MM MMM".split(" ")
+units = ' I II III IV V VI VII VIII IX'.split(' ')
+tens = ' X XX XXX XL L LX LXX LXXX XC'.split(' ')
+hundreds = ' C CC CCC CD D DC DCC DCCC CM'.split(' ')
+thousands = ' M MM MMM'.split(' ')
 
 
 def solution(n):

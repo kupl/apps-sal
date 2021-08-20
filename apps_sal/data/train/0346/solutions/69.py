@@ -1,6 +1,7 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-        front, end = 0, 0
+        (front, end) = (0, 0)
         tot = 0
         output = 0
         ct = 0

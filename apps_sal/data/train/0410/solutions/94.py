@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         heap = []
         for i in range(lo, hi + 1):
@@ -10,7 +11,7 @@ class Solution:
         result = []
         k_now = 1
         while heap:
-            new_power, i = heapq.heappop(heap)
+            (new_power, i) = heapq.heappop(heap)
             if k_now == k:
                 return i
             k_now += 1
@@ -28,7 +29,6 @@ class Solution:
     def computer_power(self, val):
         if val == 1:
             return 0
-
         if val % 2 == 0:
             return 1 + self.computer_power(val // 2)
         else:

@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -12,7 +11,6 @@ def main():
         ans += t
         s.append(t)
     s.sort()
-
     if ans % 10 == 0:
         for i in range(n):
             if s[i] % 10 != 0:

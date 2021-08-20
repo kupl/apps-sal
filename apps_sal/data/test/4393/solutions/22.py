@@ -3,7 +3,7 @@ s = input().strip()
 ans = ''
 i = 0
 k = 1
-while (i < n):
+while i < n:
     ans += s[i]
     i += k
     k += 1

@@ -10,19 +10,19 @@ def main():
     year = dateis[2]
     ans = date(year, month, day).weekday()
     if ans == 0:
-        print("Monday")
+        print('Monday')
     elif ans == 1:
-        print("Tuesday")
+        print('Tuesday')
     elif ans == 2:
-        print("Wednesday")
+        print('Wednesday')
     elif ans == 3:
-        print("Thursday")
+        print('Thursday')
     elif ans == 4:
-        print("Friday")
+        print('Friday')
     elif ans == 5:
-        print("Saturday")
+        print('Saturday')
     else:
-        print("Sunday")
+        print('Sunday')
 
 
 def __starting_point():

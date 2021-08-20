@@ -1,6 +1,5 @@
-A, B = list(map(int, input().split()))
-
+(A, B) = list(map(int, input().split()))
 if A + B <= 23:
-    print((A + B))
+    print(A + B)
 else:
-    print(((A + B) - 24))
+    print(A + B - 24)

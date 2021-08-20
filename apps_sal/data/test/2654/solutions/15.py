@@ -1,5 +1,4 @@
 import sys
-
 import bisect
 
 
@@ -12,7 +11,7 @@ def main():
     A = []
     B = []
     for i in range(N):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         A.append(a)
         B.append(b)
     pass
@@ -22,12 +21,12 @@ def main():
         n = N // 2
         mini = (A[n] + A[n - 1]) / 2
         maxi = (B[n] + B[n - 1]) / 2
-        print((int((maxi - mini) * 2) + 1))
+        print(int((maxi - mini) * 2) + 1)
     else:
         n = N // 2
         mini = A[n]
         maxi = B[n]
-        print((maxi - mini + 1))
+        print(maxi - mini + 1)
 
 
 def __starting_point():

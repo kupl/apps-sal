@@ -1,8 +1,6 @@
 from sys import stdin, stdout
-
-n, U = [int(i) for i in input().split()]
+(n, U) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
-
 k = 0
 ans = -1
 for i in range(n):

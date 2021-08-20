@@ -18,7 +18,6 @@ for x in S:
     if p != 1:
         S1 = S1 + 'a'
         p = p - 1
-
 if S1.count('a') == len(S1) and c == 1:
     S1 = S1[:len(S) - 2] + 'z'
 print(S1)

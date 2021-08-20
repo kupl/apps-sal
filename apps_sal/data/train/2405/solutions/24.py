@@ -1,4 +1,5 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         direction = (0, 1)
         start = [0, 0]
@@ -14,5 +15,5 @@ class Solution:
                     if (start[0] + direction[0], start[1] + direction[1]) not in obstacleSet:
                         start[1] += direction[1]
                         start[0] += direction[0]
-                        ans = max(ans, start[0]**2 + start[1]**2)
+                        ans = max(ans, start[0] ** 2 + start[1] ** 2)
         return ans

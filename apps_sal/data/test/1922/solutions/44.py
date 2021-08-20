@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 if n >= 3 and m >= 3:
     a = n * m
     b = n * 2 + m * 2 - 4
@@ -12,5 +11,4 @@ elif n == 1 or m == 1:
     ans = a - b
 elif n == 2 or m == 2:
     ans = 0
-
 print(ans)

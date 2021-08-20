@@ -1,10 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
     cloned_target = None
 
@@ -29,11 +22,7 @@ class Solution:
                 nodes_level.append(curr_node.left)
             if curr_node.right:
                 nodes_level.append(curr_node.right)
-            # nodes_level = [curr_node.left, curr_node.right]
         return None
 
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
-        # self.traverse_tree(cloned, target)
         return self.itr_traverse_tree(cloned, target)
-
-        # return target

@@ -1,8 +1,5 @@
-# ABC060 B:Choose Integers
-
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 ans = 'NO'
-
 for i in range(b):
     num = i * a
     mod = num % b

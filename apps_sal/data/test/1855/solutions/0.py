@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 L = list(map(int, input().split()))
 ind = []
 for i in range(n):
@@ -6,6 +6,6 @@ for i in range(n):
         ind.append(i)
 m = 1
 for i in range(len(ind) - 1):
-    m *= (ind[i + 1] - ind[i])
+    m *= ind[i + 1] - ind[i]
     m %= 998244353
-print(((n * (n + 1) // 2) - ((n - k) * ((n - k) + 1)) // 2), m)
+print(n * (n + 1) // 2 - (n - k) * (n - k + 1) // 2, m)

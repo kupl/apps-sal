@@ -38,7 +38,6 @@ else:
         for j in range(ord(b[0]) - oo, 10):
             for k in range(d[j]):
                 B.append(chr(ord('0') + j))
-
         C.append(chr(oo + t))
         for j in range(min(ord(b[0]) - oo + 1, 10)):
             for k in range(d[j]):
@@ -47,15 +46,11 @@ else:
         for j in range(ord(b[0]) - oo + 1, 10):
             for k in range(d[j]):
                 C.append(chr(ord('0') + j))
-
     ans = []
     if len(A) > 0:
         ans.append(''.join(A))
-
     if len(B) > 0:
         ans.append(''.join(B))
-
     if len(C) > 0:
         ans.append(''.join(C))
-
     print(min(ans))

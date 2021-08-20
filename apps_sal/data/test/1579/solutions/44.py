@@ -1,11 +1,11 @@
-V = 10**5 + 5
+V = 10 ** 5 + 5
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
-        # use for n=2*V
         self.xSize = [1 if i < V else 0 for i in range(n)]
         self.ySize = [0 if i < V else 1 for i in range(n)]
 
@@ -37,12 +37,8 @@ class UnionFind:
 n = int(input())
 xy = [tuple(map(int, input().split())) for _ in range(n)]
 uf = UnionFind(V * 2)
-for xi, yi in xy:
+for (xi, yi) in xy:
     uf.union(xi, yi + V)
-
-# for i in range(V*2):
-#     uf.find(i)
-
 ans = 0
 used = set()
 for i in range(V * 2):
@@ -50,4 +46,4 @@ for i in range(V * 2):
     if rooti not in used:
         used.add(rooti)
         ans += uf.xSize[rooti] * uf.ySize[rooti]
-print((ans - n))
+print(ans - n)

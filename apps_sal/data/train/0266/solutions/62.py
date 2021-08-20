@@ -1,4 +1,5 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         right = collections.Counter(s)
         left = collections.defaultdict(int)

@@ -1,14 +1,13 @@
 from collections import defaultdict
 from sys import setrecursionlimit
-
-setrecursionlimit(10**6)
-
-N, M, K = map(int, input().split())
+setrecursionlimit(10 ** 6)
+(N, M, K) = map(int, input().split())
 F = [list(map(int, input().split())) for _ in range(M)]
 B = [list(map(int, input().split())) for _ in range(K)]
 
 
-class UFTree():
+class UFTree:
+
     def __init__(self, n):
         self.length = n + 1
         self.roots = list(range(self.length))
@@ -33,7 +32,7 @@ class UFTree():
     def setli(self):
         self.findall()
         d = defaultdict(set)
-        for i, r in enumerate(self.roots):
+        for (i, r) in enumerate(self.roots):
             if i:
                 d[r].add(i)
         return list(d.values())
@@ -45,21 +44,18 @@ class UFTree():
 
 
 t = UFTree(N)
-for a, b in F:
+for (a, b) in F:
     t.union(a, b)
-
 s = [0] * (N + 1)
-for a, b in F:
+for (a, b) in F:
     s[a] -= 1
     s[b] -= 1
-for c, d in B:
+for (c, d) in B:
     if t.sameroot(c, d):
         s[c] -= 1
         s[d] -= 1
-
 for u in t.setli():
     l = len(u)
     for i in u:
         s[i] += l - 1
-
 print(*s[1:])

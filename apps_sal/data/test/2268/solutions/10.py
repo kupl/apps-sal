@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 k = []
 a = ['' for i in range(m)]
@@ -10,8 +10,7 @@ d = {}
 for i in range(26):
     d[chr(ord('a') + i)] = 0
 for i in range(m):
-    a[i], b[i] = list(map(str, input().split()))
-
+    (a[i], b[i]) = list(map(str, input().split()))
 for i in range(26):
     cur = chr(ord('a') + i)
     for j in range(m):
@@ -27,4 +26,4 @@ for i in range(26):
         if s[j] == chr(ord('a') + i) and used[j] == True:
             ans[j] = d[chr(ord('a') + i)]
             used[j] = False
-print(''.join(str(i) for i in ans))
+print(''.join((str(i) for i in ans)))

@@ -1,9 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 s = a[0]
 t = sum(a) - a[0]
-
 i = 0
 ans = abs(s - t)
 for i in range(1, n - 1):

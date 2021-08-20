@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for nt in range(int(input())):
-    n, k, z = map(int, input().split())
+    (n, k, z) = map(int, input().split())
     a = list(map(int, input().split()))
     a = a[0:k + 1]
     n = len(a)
@@ -29,9 +29,6 @@ for nt in range(int(input())):
         maxx.append(s)
         left.append(t)
         start.append(curr)
-    # print (maxx)
-    # print (left)
-    # print (start)
     ans = 0
     for i in range(n):
         ans = max(ans, maxx[i] + (pref[start[i] + left[i]] - pref[start[i]]))

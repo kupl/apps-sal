@@ -1,11 +1,10 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 MOD = 998244353
-
 P = N + K
 fact = [1] * (P + 1)
 rfact = [1] * (P + 1)
 for i in range(P):
-    fact[i + 1] = r = ((i + 1) * fact[i]) % MOD
+    fact[i + 1] = r = (i + 1) * fact[i] % MOD
     rfact[i + 1] = pow(r, MOD - 2, MOD)
 
 
@@ -16,9 +15,8 @@ def comb(n, k):
 V = [1] * (P + 1)
 r = 1
 for i in range(P):
-    r = (r * 2) % MOD
+    r = r * 2 % MOD
     V[i + 1] = r * rfact[i + 1] % MOD
-
 memo = {}
 
 
@@ -31,7 +29,6 @@ def calc(A):
         p = K - 2 * M + N - 2
         for m in range(max(0, 2 * M + 2 - K), min(M, N - 1) + 1):
             r += V[m] * rfact[M - m] * (fact[p] * rfact[N - m] + fact[p - 1] * rfact[N - m - 1]) * rfact[p - N + m] % MOD
-
         if 2 * M + 2 - K <= N <= M:
             r += V[N] * rfact[M - N] % MOD
         r *= fact[M]

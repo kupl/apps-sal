@@ -2,7 +2,10 @@ import sys
 import numpy as np
 from collections import defaultdict
 from numba import njit
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 @njit('i8[:](i8[:],i8[:,:])')
@@ -18,10 +21,10 @@ def koushin(dp, item):
 
 
 def main():
-    R, C, K = list(map(int, input().split()))
+    (R, C, K) = list(map(int, input().split()))
     items = defaultdict(list)
     for _ in range(K):
-        r, c, v = list(map(int, input().split()))
+        (r, c, v) = list(map(int, input().split()))
         items[r - 1].append([c - 1, v])
     dp = np.zeros(C, dtype='int64')
     for RR in range(R):
@@ -29,7 +32,7 @@ def main():
             continue
         items[RR].sort(key=lambda x: x[0])
         dp = koushin(dp, np.array(items[RR], dtype='int64'))
-    print((dp[-1]))
+    print(dp[-1])
 
 
 def __starting_point():

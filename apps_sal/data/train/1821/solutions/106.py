@@ -1,5 +1,7 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def sort(ls1, ls2):
             i = j = 0
             sortedList = []
@@ -23,34 +25,4 @@ class Solution:
             ls1 = divide(ls[:middle])
             ls2 = divide(ls[middle:])
             return sort(ls1, ls2)
-
         return divide(nums)
-
-#                 def merge(arr):
-#             # base case
-#             if len(arr) <= 1:
-#                 return arr
-
-#             pivot = int(len(arr)/2)
-#             left = merge(arr[:pivot])
-#             right = merge(arr[pivot:])
-
-#             return sort(left, right)
-
-
-#         def sort(left, right):
-#             left_cur = right_cur = 0
-#             sorted_arr = []
-#             while (left_cur < len(left) and right_cur < len(right)):
-#                 if left[left_cur] > right[right_cur]:
-#                     sorted_arr.append(right[right_cur])
-#                     right_cur += 1
-#                 else:
-#                     sorted_arr.append(left[left_cur])
-#                     left_cur += 1
-
-#             sorted_arr += left[left_cur:] + right[right_cur:]
-
-#             return sorted_arr
-
-#         return merge(nums)

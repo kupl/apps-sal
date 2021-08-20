@@ -1,9 +1,6 @@
-n, a, b = map(int, input().split())
-
+(n, a, b) = map(int, input().split())
 c = 0
-
 ans = 0
-
 for v in map(int, input().split()):
     if v == 1:
         if a:
@@ -15,10 +12,8 @@ for v in map(int, input().split()):
             c -= 1
         else:
             ans += 1
+    elif b:
+        b -= 1
     else:
-        if b:
-            b -= 1
-        else:
-            ans += 2
-
+        ans += 2
 print(ans)

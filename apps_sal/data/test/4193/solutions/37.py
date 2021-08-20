@@ -9,7 +9,7 @@ def resolve():
             a[a.index(r)] = 0
     ans = 'No'
     for i in bingo:
-        if a[i[0]] == 0 and a[i[1]] == 0 and a[i[2]] == 0:
+        if a[i[0]] == 0 and a[i[1]] == 0 and (a[i[2]] == 0):
             ans = 'Yes'
     print(ans)
 

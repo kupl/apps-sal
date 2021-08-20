@@ -1,7 +1,6 @@
 N = int(input())
 D = {}
 res = 0
-
 for i in range(N):
     A = list(input())
     A.sort()
@@ -10,5 +9,4 @@ for i in range(N):
         D[str(A)] += 1
     else:
         D[str(A)] = 1
-
 print(res)

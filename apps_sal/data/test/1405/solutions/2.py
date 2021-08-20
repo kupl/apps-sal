@@ -1,5 +1,5 @@
 def go(a, b):
-    res, c = 0, a + b
+    (res, c) = (0, a + b)
     if d.get(c) and d[c] > 0:
         d[c] -= 1
         res = go(b, c) + 1

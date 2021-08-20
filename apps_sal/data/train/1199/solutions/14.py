@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    s, n = map(int, input().split())
+    (s, n) = map(int, input().split())
     if s < n:
         if s == 1:
             coins = 1

@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = input()
@@ -6,14 +5,13 @@ while t:
     i = 0
     z = 1
     while i < len(l) - 2:
-
         if len(set(l[i:i + 3])) == 1:
             z = 0
             break
         else:
             i += 1
     if z == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     t -= 1

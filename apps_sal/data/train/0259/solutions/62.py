@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         high = math.ceil(max(nums) * len(nums) / threshold)
         low = math.ceil(sum(nums) / threshold)

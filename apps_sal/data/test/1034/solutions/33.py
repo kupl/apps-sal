@@ -1,5 +1,5 @@
 from heapq import heapify, heappop, heappush
-x, y, z, k = list(map(int, input().split()))
+(x, y, z, k) = list(map(int, input().split()))
 a = sorted(list(map(int, input().split())), reverse=True)
 b = sorted(list(map(int, input().split())), reverse=True)
 c = sorted(list(map(int, input().split())), reverse=True)
@@ -14,4 +14,4 @@ for ci in c:
     for ansi in ans:
         heappush(ans1, ansi - ci)
 for i in range(k):
-    print((-heappop(ans1)))
+    print(-heappop(ans1))

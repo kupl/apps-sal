@@ -17,10 +17,10 @@ class T:
 
 
 n = int(input())
-r, m = T(), T()
+(r, m) = (T(), T())
 q = [(r, m, 0), (m, r, 0)]
 while q:
-    x, y, i = q.pop()
+    (x, y, i) = q.pop()
     for j in y.f(i):
         y.p[j] = -1
         for k in x.f(j):

@@ -6,6 +6,6 @@ def halving_sum(n):
             total += 1
             break
         else:
-            total += (n // divisor)
+            total += n // divisor
             divisor *= 2
-    return(total)
+    return total

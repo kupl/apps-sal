@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
 
         def find(node):
@@ -22,14 +23,12 @@ class Solution:
                 tmp = parent[p2]
                 parent[p2] = p1
                 parent[p1] += tmp
-
         n = len(arr)
         ans = -1
-
         parent = [-1] * (n + 1)
         bitvalue = [0] * (n + 1)
-        for count, i in enumerate(arr, 1):
-            if i + 1 <= n and bitvalue[i + 1] == 1 and i - 1 > 0 and bitvalue[i - 1] == 1:
+        for (count, i) in enumerate(arr, 1):
+            if i + 1 <= n and bitvalue[i + 1] == 1 and (i - 1 > 0) and (bitvalue[i - 1] == 1):
                 if abs(parent[find(i + 1)]) == m or abs(parent[find(i - 1)]) == m:
                     ans = count - 1
                 union(i, i + 1)
@@ -45,5 +44,4 @@ class Solution:
             bitvalue[i] = 1
             if abs(parent[find(i)]) == m:
                 ans = count
-            # print(parent)
         return ans

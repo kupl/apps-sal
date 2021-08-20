@@ -8,7 +8,7 @@ def puzzle_solver(puzzle, w, h):
         rl = []
         for i in range(w):
             if i == 0:
-                lu, ld = None, None
+                (lu, ld) = (None, None)
             else:
                 lu = sol[i - 1, j][0][1]
                 ld = sol[i - 1, j][1][1]

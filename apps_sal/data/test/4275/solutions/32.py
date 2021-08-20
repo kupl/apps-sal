@@ -1,11 +1,9 @@
 def __starting_point():
-
     s = input()
-
     if s[2] == s[3] and s[4] == s[5]:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 __starting_point()

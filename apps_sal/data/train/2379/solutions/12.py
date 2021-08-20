@@ -1,14 +1,10 @@
-# import sys; input = sys.stdin.buffer.readline
-# sys.setrecursionlimit(10**7)
 from collections import defaultdict
 con = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
     return list(map(int, input().split()))
-
-# 処理内容
 
 
 def main():
@@ -35,19 +31,17 @@ def main():
                     one_len -= 1
                     zeroend.append(itr)
                     zero_len += 1
+            elif zero_len == 0:
+                val += 1
+                ans[i] = val
+                oneend.append(val)
+                one_len += 1
             else:
-                if zero_len == 0:
-                    val += 1
-                    ans[i] = val
-                    oneend.append(val)
-                    one_len += 1
-                else:
-                    itr = zeroend.pop()
-                    ans[i] = itr
-                    zero_len -= 1
-                    oneend.append(itr)
-                    one_len += 1
-
+                itr = zeroend.pop()
+                ans[i] = itr
+                zero_len -= 1
+                oneend.append(itr)
+                one_len += 1
         print(val)
         print(*ans)
 

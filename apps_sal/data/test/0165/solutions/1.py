@@ -1,9 +1,9 @@
 def c(ans, b, d, s):
-    return(min(ans, 3 * max(b, d, s) - b - d - s))
+    return min(ans, 3 * max(b, d, s) - b - d - s)
 
 
-b, d, s = list(map(int, input().split()))
-ans = 10**19
+(b, d, s) = list(map(int, input().split()))
+ans = 10 ** 19
 m = min(b, d, s)
 b = b - m
 d = d - m

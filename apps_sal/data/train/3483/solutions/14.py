@@ -1,6 +1,6 @@
 def string_parse(string):
     if type(string) != str:
-        return "Please enter a valid string"
+        return 'Please enter a valid string'
     try:
         out = string[:2]
         temp = ''
@@ -16,4 +16,4 @@ def string_parse(string):
             out += '[' + temp + ']'
         return out
     except:
-        return "Please enter a valid string"
+        return 'Please enter a valid string'

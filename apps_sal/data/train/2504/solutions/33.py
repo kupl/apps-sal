@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
         total = 0
         subArrLen = 1
@@ -14,5 +15,4 @@ class Solution:
                 i += 1
                 j += 1
             subArrLen += 2
-
         return total

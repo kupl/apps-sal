@@ -2,16 +2,13 @@ songs = [{'artist': 'Marillion', 'title': 'Keyleigh', 'playback': '03:36'}, {'ar
 
 
 def seconds(ms):
-    m, s = map(int, ms.split(':'))
+    (m, s) = map(int, ms.split(':'))
     return m * 60 + s
 
 
 def longest_possible(playback):
     try:
-        song = max(
-            [song for song in songs if seconds(song['playback']) <= playback],
-            key=lambda song: seconds(song['playback'])
-        )
+        song = max([song for song in songs if seconds(song['playback']) <= playback], key=lambda song: seconds(song['playback']))
     except ValueError:
         return False
     return song['title']

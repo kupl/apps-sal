@@ -1,6 +1,5 @@
 a = int(input())
 b = int(input())
-
 dist = abs(a - b)
 half = dist // 2
 if dist % 2 == 0:

@@ -7,11 +7,11 @@ for i in range(n):
     s = [list(map(int, input().split())) for _ in range(a)]
     xy.append(s)
 ans = 0
-for j in range(2**n):
+for j in range(2 ** n):
     num = 0
     d = []
     for k in range(n):
-        if((j >> k) & 1) == 1:
+        if j >> k & 1 == 1:
             d.append(1)
         else:
             d.append(0)

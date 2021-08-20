@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         count = collections.Counter(A)
         for i in sorted(count, key=abs):

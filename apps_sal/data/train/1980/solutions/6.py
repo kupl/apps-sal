@@ -3,6 +3,7 @@ import random
 
 
 class Node:
+
     def __init__(self, val):
         self.next = None
         self.prev = None
@@ -39,7 +40,7 @@ class Skiplist:
     def print_lvls(self):
         x = self.topleft
         for i in range(self.lvls):
-            print((self.ll_to_list(x)))
+            print(self.ll_to_list(x))
             x = x.down
         print()
 
@@ -58,7 +59,7 @@ class Skiplist:
 
     def insert(self, x, num):
         n = Node(num)
-        p, q = x, x.__next__
+        (p, q) = (x, x.__next__)
         p.next = n
         n.prev = p
         n.next = q
@@ -88,7 +89,7 @@ class Skiplist:
                 break
 
     def delete(self, x):
-        p, q, r = x.prev, x, x.__next__
+        (p, q, r) = (x.prev, x, x.__next__)
         p.next = r
         if r:
             r.prev = p

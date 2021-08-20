@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 d = {}
 for i in range(n - 1):
     vertex = list(map(int, input().split()))

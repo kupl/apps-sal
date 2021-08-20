@@ -6,7 +6,7 @@ for i in range(n):
     lindex[ord(s[i]) - 97].append(i)
 q = int(input())
 for i in range(q):
-    q1, q2, q3 = input().split()
+    (q1, q2, q3) = input().split()
     if q1 == '1':
         q2 = int(q2) - 1
         idx = bisect_left(lindex[ord(s[q2]) - 97], q2)

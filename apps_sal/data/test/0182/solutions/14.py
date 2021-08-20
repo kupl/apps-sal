@@ -7,6 +7,6 @@ def f(x):
 (n, m, k) = (a - x, b - y, c - z)
 ans = f(n) + f(m) + f(k)
 if ans >= 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

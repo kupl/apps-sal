@@ -1,4 +1,5 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         frontier = [id]
         seen = {id}
@@ -19,5 +20,4 @@ class Solution:
             depth += 1
             if depth == level:
                 return sorted(count.keys(), key=lambda x: [count[x], x])
-
         return []

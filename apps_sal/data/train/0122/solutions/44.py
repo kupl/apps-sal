@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, A: List[int], k: int) -> int:
         su = sum(A[:k])
         res = su

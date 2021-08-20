@@ -3,10 +3,10 @@ def read_nums():
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     nums = read_nums()
     a = [max(n - i - 1, i) for i in range(n)]
-    k = min(num // val for num, val in zip(nums, a))
+    k = min((num // val for (num, val) in zip(nums, a)))
     print(k)
 
 

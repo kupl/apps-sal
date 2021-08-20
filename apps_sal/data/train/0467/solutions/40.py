@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         res = 0
         for i in range(len(nums)):
@@ -15,5 +16,4 @@ class Solution:
             if len(divisors) == 4:
                 res += sum(divisors)
             print(divisors)
-
         return res

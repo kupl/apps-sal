@@ -6,7 +6,7 @@ def main():
         p.append(int(input()))
     max_p = max(p)
     p[p.index(max_p)] = max_p / 2
-    print((int(sum(p))))
+    print(int(sum(p)))
 
 
 def __starting_point():

@@ -14,6 +14,6 @@ for i in s:
     else:
         k1 += 1
 if k1 >= 1 and k0 >= 6:
-    print("yes")
+    print('yes')
 else:
-    print("no")
+    print('no')

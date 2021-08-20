@@ -2,7 +2,7 @@ from math import ceil, sqrt
 
 
 def squared(l):
-    return [x**2 for x in l]
+    return [x ** 2 for x in l]
 
 
 def divisors(m):

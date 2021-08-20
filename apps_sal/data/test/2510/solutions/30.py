@@ -1,7 +1,6 @@
 import sys
 sys.setrecursionlimit(10 ** 9)
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 root = [-1] * N
 
 
@@ -28,10 +27,9 @@ def size(x):
 
 
 for i in range(M):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     A -= 1
     B -= 1
     union(A, B)
-
 ans = max(map(size, range(N)))
 print(ans)

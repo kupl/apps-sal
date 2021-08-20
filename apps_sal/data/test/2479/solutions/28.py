@@ -2,10 +2,11 @@ import sys
 
 
 class F:
+
     def __init__(self, x):
         self.bit = x
         for i in range(len(x)):
-            j = i | (i + 1)
+            j = i | i + 1
             if j < len(x):
                 x[j] += x[i]
 
@@ -32,16 +33,19 @@ class F:
 
 
 z = sys.stdin.readline
-def y(): return map(int, z().split())
 
 
-n, q = y()
+def y():
+    return map(int, z().split())
+
+
+(n, q) = y()
 v = F([0] * (n - 2))
 h = F([0] * (n - 2))
 w = j = n - 2
 s = 0
 for _ in range(q):
-    a, b = y()
+    (a, b) = y()
     if a < 2:
         if b - 2 < w:
             h.update(n - 2 - j, w - b + 2)

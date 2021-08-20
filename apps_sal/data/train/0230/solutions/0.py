@@ -1,4 +1,5 @@
 class Solution:
+
     def removeKdigits(self, num, k):
         """
         :type num: str
@@ -7,8 +8,8 @@ class Solution:
         """
         out = []
         for digit in num:
-            while k and out and out[-1] > digit:
+            while k and out and (out[-1] > digit):
                 out.pop()
                 k -= 1
             out.append(digit)
-        return ''.join(out[:-k or None]).lstrip('0') or "0"
+        return ''.join(out[:-k or None]).lstrip('0') or '0'

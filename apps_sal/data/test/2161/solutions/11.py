@@ -18,4 +18,4 @@ for i in p:
             o[i].append(x[1])
 print(len(o))
 for i in o:
-    print(i + ' ' + str(len(o[i])) + ' ' + ' '.join(x[::-1] for x in o[i]))
+    print(i + ' ' + str(len(o[i])) + ' ' + ' '.join((x[::-1] for x in o[i])))

@@ -11,24 +11,19 @@ class DinnerPlates:
     def push(self, val: int) -> None:
         if not self.stacks:
             self.stacks.append([val])
+        elif self.toPush and self.toPush[0] < len(self.stacks):
+            i = heapq.heappop(self.toPush)
+            self.stacks[i].append(val)
         else:
-            if self.toPush and self.toPush[0] < len(self.stacks):
-                i = heapq.heappop(self.toPush)
-                self.stacks[i].append(val)
-            else:
-                self.stacks[-1].append(val)
-
+            self.stacks[-1].append(val)
         if len(self.stacks[-1]) == self.capacity:
             self.stacks.append([])
 
     def pop(self) -> int:
-        while self.stacks and not self.stacks[-1]:
+        while self.stacks and (not self.stacks[-1]):
             self.stacks.pop()
-            # self.toPush = min(self.toPush, len(self.stacks)-1)
-
         if not self.stacks:
             return -1
-
         return self.stacks[-1].pop()
 
     def popAtStack(self, index: int) -> int:

@@ -1,7 +1,7 @@
-n, c = map(int, input().split())
-d = [list(map(int, input().split()))for _ in range(c)]
-cc = [list(map(int, input().split()))for _ in range(n)]
-ans = 10**15
+(n, c) = map(int, input().split())
+d = [list(map(int, input().split())) for _ in range(c)]
+cc = [list(map(int, input().split())) for _ in range(n)]
+ans = 10 ** 15
 cnt = [[0] * c for _ in range(3)]
 for i in range(n):
     for j in range(n):

@@ -1,4 +1,4 @@
-e = 10**-2
+e = 10 ** (-2)
 
 
 def count_squareable(n):

@@ -1,6 +1,5 @@
-N, X = map(int, input().split())
-*A, = map(int, input().split())
-
+(N, X) = map(int, input().split())
+(*A,) = map(int, input().split())
 B = [a if a <= X else X for a in A]
 c = sum(A) - sum(B)
 for i in range(N - 1):

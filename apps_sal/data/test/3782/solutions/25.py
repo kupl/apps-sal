@@ -1,7 +1,6 @@
-N, K, Q = list(map(int, input().split()))
+(N, K, Q) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 ans = 10 ** 10
-
 for a in A:
     candidates = []
     tmp = []

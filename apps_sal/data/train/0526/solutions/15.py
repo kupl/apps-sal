@@ -6,8 +6,8 @@ try:
         p = 8
         t = 0
         for i in range(1, l):
-            if(s[i] == s[i - 1]):
-                if(t == 0):
+            if s[i] == s[i - 1]:
+                if t == 0:
                     p += 32
                     t = 1
             else:

@@ -28,7 +28,5 @@ class Solution:
                     queueSet[setDict[t2]].extend(queueSet[setDict[t1]])
                     for ch in queueSet[setDict[t1]]:
                         setDict[ch] = setDict[t2]
-
                     setDict[t1] = setDict[t2]
-
         return totalCost

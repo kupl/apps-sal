@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         len1 = int(len(arr) * 0.25)
         count = 0

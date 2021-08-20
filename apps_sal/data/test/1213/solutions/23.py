@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 st = input()
-if (2 * k) <= n:
+if 2 * k <= n:
     for i in range(k - 1):
         print('LEFT')
     naprav = 'RIGHT'

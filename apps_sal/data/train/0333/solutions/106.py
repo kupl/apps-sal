@@ -2,19 +2,19 @@ from collections import *
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) <= 1:
             return 0
         mapper = defaultdict(set)
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             mapper[x].add(i)
         end = len(arr) - 1
         queue = deque([(arr[0], 0, 0)])
         vis = set()
         vis.add(0)
         while queue:
-            # print(queue)
-            num, index, count = queue.popleft()
+            (num, index, count) = queue.popleft()
             if index == end:
                 return count
             if num in mapper:

@@ -1,8 +1,8 @@
 N = int(input())
 Rest = dict()
-Parg = [0] * (101)
+Parg = [0] * 101
 for i in range(N):
-    S, P = map(str, input().split())
+    (S, P) = map(str, input().split())
     P = int(P)
     if S not in Rest:
         Rest[S] = [P]

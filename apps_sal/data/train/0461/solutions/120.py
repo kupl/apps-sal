@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.result = -1
         self.reports_map = defaultdict(list)
@@ -12,10 +13,7 @@ class Solution:
                 self.notifyReport(report, timeSpent + informTime[managerID], informTime)
 
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-
         for i in range(0, len(manager)):
             self.reports_map[manager[i]].append(i)
-
         self.notifyReport(headID, 0, informTime)
-
         return self.result

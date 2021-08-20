@@ -1,5 +1,5 @@
 def autocorrect(s):
-    s, n = s.split(), []
+    (s, n) = (s.split(), [])
     for i in s:
         if i == 'you' or i == 'u':
             n.append('your sister')

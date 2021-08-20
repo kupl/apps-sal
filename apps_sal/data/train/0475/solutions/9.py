@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         l = 1
         ans = {0: [x for x in nums]}
@@ -13,5 +14,4 @@ class Solution:
                 sums.append(prev[i] + nums[i + l])
             ans[l] = nxt
             l += 1
-        # print(sums)
-        return sum(sorted(sums)[left - 1: right]) % 1000000007
+        return sum(sorted(sums)[left - 1:right]) % 1000000007

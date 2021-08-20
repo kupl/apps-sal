@@ -2,10 +2,10 @@ def main():
     line1 = input()
     line2 = input()
     line3 = input()
-    n, m, k = list(map(int, line1.split()))
+    (n, m, k) = list(map(int, line1.split()))
     a = [0] + list(map(int, line2.split()))
     b = [0] + list(map(int, line3.split()))
-    mark1, mark2 = 0, 0
+    (mark1, mark2) = (0, 0)
     for i in range(1, len(a)):
         a[i] += a[i - 1]
         if a[i] > k:
@@ -24,7 +24,7 @@ def main():
     for i in range(len(a)):
         target = k - a[i]
         tmp = 0
-        low, high = 0, len(b)
+        (low, high) = (0, len(b))
         while low < high:
             mid = (low + high) // 2
             if b[mid] <= target:

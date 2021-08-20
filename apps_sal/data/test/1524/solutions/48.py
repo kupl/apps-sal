@@ -4,9 +4,9 @@ x = [0]
 y = [0]
 c = 1
 for i in range(1, n):
-    if s[i - 1] == "R" and s[i] == "L":
+    if s[i - 1] == 'R' and s[i] == 'L':
         x.append(i)
-    if s[i - 1] == "L" and s[i] == "R":
+    if s[i - 1] == 'L' and s[i] == 'R':
         y.append(i)
 y.append(n)
 z = [0] * n

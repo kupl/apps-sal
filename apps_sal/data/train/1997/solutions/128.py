@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         intervals.sort(key=lambda x: x[0])
         i = 1
@@ -13,7 +14,7 @@ class Solution:
                 i += 1
         i = len(intervals) - 2
         print(i)
-        print((len(intervals)))
+        print(len(intervals))
         while i >= 0:
             a = intervals[i][0]
             b = intervals[i][1]

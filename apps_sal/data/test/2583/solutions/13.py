@@ -28,10 +28,10 @@ def solve(n):
             prime = False
             break
         idx += 1
-    return m >= 2 or (not prime)
+    return m >= 2 or not prime
 
 
 t = read_int()
 for case_num in range(t):
     n = read_int()
-    print("Ashishgup" if solve(n) else "FastestFinger")
+    print('Ashishgup' if solve(n) else 'FastestFinger')

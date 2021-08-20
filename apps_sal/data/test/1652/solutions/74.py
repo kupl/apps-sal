@@ -32,7 +32,6 @@ while 1:
                         s = []
                     continue
     break
-
 if s == []:
     print('YES')
 else:

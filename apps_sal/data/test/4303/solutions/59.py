@@ -1,13 +1,13 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x = list(map(int, input().split()))
-pos, nega = [], []
+(pos, nega) = ([], [])
 for v in x:
     if v >= 0:
         pos.append(v)
     else:
         nega.append(-v)
 nega.sort()
-ans = 10**9
+ans = 10 ** 9
 if k <= len(pos):
     ans = min(ans, pos[k - 1])
 if k <= len(nega):

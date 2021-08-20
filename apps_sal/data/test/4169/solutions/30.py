@@ -1,6 +1,5 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = sorted([list(map(int, input().split())) for _ in range(N)])
-
 ans = 0
 num = 0
 for i in range(N):
@@ -15,5 +14,4 @@ for i in range(N):
             break
     if flag:
         break
-
 print(ans)

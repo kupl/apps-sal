@@ -12,13 +12,12 @@ class Solution:
                 else:
                     n5 -= 1
                     n10 += 1
+            elif n10 > 0 and n5 > 0:
+                n10 -= 1
+                n5 -= 1
+            elif n5 >= 3:
+                n5 -= 3
             else:
-                if n10 > 0 and n5 > 0:
-                    n10 -= 1
-                    n5 -= 1
-                elif n5 >= 3:
-                    n5 -= 3
-                else:
-                    return False
+                return False
         else:
             return True

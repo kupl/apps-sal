@@ -1,4 +1,4 @@
-'''
+"""
 abc abc
 a abc bc
 ab abc c
@@ -12,13 +12,13 @@ aabcbc
 2 [a]
 3 [b]
 
-'''
+"""
 
 
 class Solution:
+
     def isValid(self, s: str) -> bool:
         stack = list()
-
         for ch in s:
             if ch == 'a':
                 stack.append('a')
@@ -34,5 +34,4 @@ class Solution:
                     return False
             else:
                 return False
-
-        return (len(stack) == 0)
+        return len(stack) == 0

@@ -3,6 +3,7 @@ sys.setrecursionlimit(2 * 10 ** 5)
 
 
 class TrieNode:
+
     def __init__(self, char):
         self.char = char
         self.nextnode = dict()
@@ -10,13 +11,14 @@ class TrieNode:
 
 
 class Trie:
+
     def __init__(self, charset):
         self.charset = charset
         self.root = TrieNode('')
 
     def add(self, a_str):
         node = self.root
-        for i, char in enumerate(a_str):
+        for (i, char) in enumerate(a_str):
             if char not in node.nextnode:
                 node.nextnode[char] = TrieNode(char)
             node = node.nextnode[char]
@@ -24,7 +26,7 @@ class Trie:
                 node.is_indict = True
 
     def dfs(self, node, dep):
-        ret, cnt = 0, 0
+        (ret, cnt) = (0, 0)
         if node.is_indict:
             return 0
         for s in '01':
@@ -49,9 +51,8 @@ class Trie:
             self.debug_output(n, now + n.char)
 
 
-N, L = list(map(int, input().split()))
+(N, L) = list(map(int, input().split()))
 T = Trie('01')
 for _ in range(N):
     T.add(input())
-# T.debug_output(T.root, '')
-print(("Alice" if T.dfs(T.root, 0) else "Bob"))
+print('Alice' if T.dfs(T.root, 0) else 'Bob')

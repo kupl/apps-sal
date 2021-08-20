@@ -1,5 +1,5 @@
-N, K, Q, *A = map(int, open(0).read().split())
-ans = 10**10
+(N, K, Q, *A) = map(int, open(0).read().split())
+ans = 10 ** 10
 for i in range(N - K + 1):
     c = min(A[i:i + K])
     ls = []

@@ -1,15 +1,11 @@
 from itertools import permutations
-
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 S = []
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     S.append([a, b])
-
 vertex = (i + 1 for i in range(N))
 all_path = list(permutations(vertex))
-
 ans = 0
 for p in all_path:
     flag = True
@@ -20,5 +16,4 @@ for p in all_path:
                 break
         if flag:
             ans += 1
-
 print(ans)

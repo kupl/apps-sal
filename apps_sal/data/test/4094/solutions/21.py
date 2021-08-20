@@ -10,4 +10,4 @@ for i in range(k):
         print(c)
         break
 if t:
-    print((-1))
+    print(-1)

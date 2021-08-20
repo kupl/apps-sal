@@ -11,10 +11,9 @@ def main():
         if d[l[i]][1] == False:
             d[l[i]][1] = True
             continue
-        else:
-            if (d[l[i]][0] + 1) != i:
-                d1[l[i]] += 1
-                d[l[i]][0] = i
+        elif d[l[i]][0] + 1 != i:
+            d1[l[i]] += 1
+            d[l[i]][0] = i
     maxi = 0
     for i in d1.values():
         if i > maxi:

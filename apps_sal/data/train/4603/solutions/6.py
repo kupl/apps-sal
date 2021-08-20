@@ -3,4 +3,4 @@ def deepAck(m, n):
 
 
 def Ackermann(m, n):
-    return None if not isinstance(m, int) or not isinstance(n, int) or m < 0 or n < 0 else deepAck(m, n)
+    return None if not isinstance(m, int) or not isinstance(n, int) or m < 0 or (n < 0) else deepAck(m, n)

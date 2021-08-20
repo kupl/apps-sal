@@ -1,4 +1,4 @@
-s, f = input().strip().split()
+(s, f) = input().strip().split()
 n = int(input())
 rot = ['^', '>', 'v', '<']
 d = {'^': 0, '>': 1, 'v': 2, '<': 3}

@@ -1,8 +1,8 @@
-a, b = map(int, input().split())
-c, d = map(int, input().split())
+(a, b) = map(int, input().split())
+(c, d) = map(int, input().split())
 if b > d:
-    b, d = d, b
-    a, c = c, a
+    (b, d) = (d, b)
+    (a, c) = (c, a)
 d -= b
 for i in range(1000000):
     if (c * i + d) % a == 0:

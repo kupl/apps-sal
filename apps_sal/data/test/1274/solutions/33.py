@@ -1,13 +1,10 @@
 import heapq
 from collections import defaultdict
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 cnt = defaultdict(list)
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     cnt[a].append(b)
-
 t = []
 heapq.heapify(t)
 ans = 0
@@ -16,5 +13,4 @@ for i in range(1, m + 1):
         heapq.heappush(t, -j)
     if t:
         ans -= heapq.heappop(t)
-
 print(ans)

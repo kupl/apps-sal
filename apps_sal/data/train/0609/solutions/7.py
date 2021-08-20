@@ -1,7 +1,7 @@
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     q = [int(z) for z in input().split()]
-    carry, flag = 0, 0
+    (carry, flag) = (0, 0)
     for i in range(n):
         if q[i] + carry >= k:
             carry += q[i] - k

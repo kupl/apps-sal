@@ -8,6 +8,6 @@ for _ in range(int(input())):
             fl = False
             break
     if fl:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

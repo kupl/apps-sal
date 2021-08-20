@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 p.reverse()
 ans = 0

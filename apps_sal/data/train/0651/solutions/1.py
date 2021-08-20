@@ -1,4 +1,3 @@
-
 def ans(n, dic):
     count = 0
     remain = 0

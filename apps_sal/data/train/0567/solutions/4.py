@@ -4,12 +4,12 @@ for i in range(t):
     l = list(map(int, input().split()))
     flag = 0
     for j in range(n - 2):
-        if(l[j] == l[j + 1] == l[j + 2]):
+        if l[j] == l[j + 1] == l[j + 2]:
             flag = 1
             break
         else:
             continue
-    if(flag == 1):
-        print("Yes")
+    if flag == 1:
+        print('Yes')
     else:
-        print("No")
+        print('No')

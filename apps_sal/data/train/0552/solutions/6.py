@@ -1,7 +1,7 @@
 t = int(input())
-while(t > 0):
+while t > 0:
     t -= 1
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     curr = sorted(arr)
     div1 = sum(curr[k:]) - sum(curr[:k])

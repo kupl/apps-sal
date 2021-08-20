@@ -1,10 +1,7 @@
 import sys
-
 fin = sys.stdin
 fout = sys.stdout
-
-b, s, d = list(map(int, fin.readline().split()))
-
+(b, s, d) = list(map(int, fin.readline().split()))
 wars = []
 
 

@@ -7,7 +7,7 @@ def checkval(m, n):
         if m == 2:
             return 1
         return 0
-    if (not(n & 1) or not(m & 1)):
+    if not n & 1 or not m & 1:
         return 1
     return 0
 
@@ -15,10 +15,10 @@ def checkval(m, n):
 t = int(input())
 while t:
     t -= 1
-    n, m = input().split()
+    (n, m) = input().split()
     n = int(n)
     m = int(m)
-    if(checkval(m, n)):
-        print("Yes")
+    if checkval(m, n):
+        print('Yes')
     else:
-        print("No")
+        print('No')

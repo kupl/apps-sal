@@ -1,10 +1,10 @@
 class Solution:
-    def totalFruit(self, tree: List[int]) -> int:
 
+    def totalFruit(self, tree: List[int]) -> int:
         store = collections.defaultdict(lambda: 0)
         ans = 0
         i = 0
-        for k, val in enumerate(tree):
+        for (k, val) in enumerate(tree):
             store[val] += 1
             while len(store) > 2:
                 store[tree[i]] -= 1

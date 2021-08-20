@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 prefix = [0]
 summ = 0

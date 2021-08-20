@@ -20,7 +20,7 @@ for _ in range(n):
     p_.append(get_input_list())
 d = {}
 for i in p_:
-    if (str(max(i))) in d:
+    if str(max(i)) in d:
         d[str(max(i))].append(i)
     else:
         d[str(max(i))] = [i]
@@ -40,13 +40,10 @@ for i_ in l:
     a2 = distance(right, left_)
     b2 = distance(right, right_)
     c = distance(p[0], p[-1])
-
     sl = sleft
     sr = sright
-
     sleft = min(sr + a1, sl + a2) + c
     sright = min(sr + b1, sl + b2) + c
-
     left = left_
     right = right_
 print(min(sleft, sright))

@@ -1,4 +1,4 @@
-class SparseTable():
+class SparseTable:
     """区間取得クエリをO(1)で答えるデータ構造をO(NlogN)で構築する
     query(l, r): 区間[l, r)に対するクエリに答える
     """
@@ -6,21 +6,15 @@ class SparseTable():
     def __init__(self, array, n):
         n = len(array)
         self.row_size = n.bit_length()
-
-        # log_tableを構築する
-        # log_table = [0, 0, 1, 1, 2, 2, 2, 2, ...]
         self.log_table = [0] * (n + 1)
         for i in range(2, n + 1):
             self.log_table[i] = self.log_table[i // 2] + 1
-
-        # sparse_tableを構築する
         self.sparse_table = [[0] * n for _ in range(self.row_size)]
         for i in range(n):
             self.sparse_table[0][i] = array[i]
         for row in range(1, self.row_size):
             for i in range(n - (1 << row) + 1):
-                self.sparse_table[row][i] = self._merge(self.sparse_table[row - 1][i],
-                                                        self.sparse_table[row - 1][i + (1 << row - 1)])
+                self.sparse_table[row][i] = self._merge(self.sparse_table[row - 1][i], self.sparse_table[row - 1][i + (1 << row - 1)])
 
     def _merge(self, num1, num2):
         """クエリの内容"""
@@ -32,15 +26,13 @@ class SparseTable():
         return self._merge(self.sparse_table[row][l], self.sparse_table[row][r - (1 << row)])
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 MOD = 998244353
-
 sp = SparseTable(a, n)
 to_ind = {}
 for i in range(n):
     to_ind[a[i]] = i
-
 dp = [[-1] * (n + 1) for i in range(n + 1)]
 
 

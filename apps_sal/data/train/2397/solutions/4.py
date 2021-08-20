@@ -22,7 +22,7 @@ def solve2(mid):
 
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = set([int(input(), 2) for i in range(n)])
     ng = -1
     ok = 2 ** m + 2

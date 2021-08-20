@@ -1,14 +1,14 @@
-N = int(2e5)
+N = int(200000.0)
 n = int(input())
 cb = [x * x * x for x in range(2, N)]
 
 
 def valid(m):
-    return sum(m // i for i in cb) < n
+    return sum((m // i for i in cb)) < n
 
 
 def binary_search():
-    l, r = 0, int(1e16)
+    (l, r) = (0, int(1e+16))
     while l < r:
         m = (l + r) // 2
         if valid(m):
@@ -19,4 +19,4 @@ def binary_search():
 
 
 res = binary_search()
-print(res if sum(res // i for i in cb) == n else -1)
+print(res if sum((res // i for i in cb)) == n else -1)

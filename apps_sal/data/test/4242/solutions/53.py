@@ -1,5 +1,5 @@
 def __starting_point():
-    A, B, K = list(map(int, input().split()))
+    (A, B, K) = list(map(int, input().split()))
     a_ans = []
     b_ans = []
     for a in range(1, A + 1):
@@ -10,8 +10,7 @@ def __starting_point():
             b_ans.append(b)
     ans = list(set(a_ans) & set(b_ans))
     ans.sort(reverse=True)
-
-    print((ans[K - 1]))
+    print(ans[K - 1])
 
 
 __starting_point()

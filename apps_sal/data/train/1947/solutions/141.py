@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         d = {}
         for e in B:
@@ -8,20 +9,17 @@ class Solution:
                     tmp.update({c: 1})
                 else:
                     tmp[c] += 1
-            if (not d) or (not tmp):
+            if not d or not tmp:
                 d.update(tmp)
             else:
-                for k, v in list(tmp.items()):
+                for (k, v) in list(tmp.items()):
                     if k in d:
                         if v > d[k]:
                             d[k] = v
                     else:
                         d.update({k: v})
-        # print(d)
-
         if not d:
             return A
-
         ans = []
         for a in A:
             tmp = {}
@@ -31,7 +29,7 @@ class Solution:
                     tmp.update({e: 1})
                 else:
                     tmp[e] += 1
-            for k, v in list(d.items()):
+            for (k, v) in list(d.items()):
                 if k in tmp:
                     if v <= tmp[k]:
                         pass
@@ -43,5 +41,4 @@ class Solution:
                     break
             if f:
                 ans.append(a)
-
         return ans

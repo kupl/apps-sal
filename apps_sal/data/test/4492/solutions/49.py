@@ -1,6 +1,5 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = 0
 for i in range(n - 1):
     pre = a[i]
@@ -13,5 +12,4 @@ for i in range(n - 1):
         else:
             a[i] -= many - post
             a[i + 1] = 0
-
 print(ans)

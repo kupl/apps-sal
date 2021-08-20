@@ -1,13 +1,12 @@
-ip = input().split(" ")
+ip = input().split(' ')
 n = int(ip[0])
 a = int(ip[1])
 b = int(ip[2])
-
 m = 1000000007
 
 
 def modMul(a, b, mod):
-    return (a * b) % mod
+    return a * b % mod
 
 
 def fastExp(b, exp, mod):

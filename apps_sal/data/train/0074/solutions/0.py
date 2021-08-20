@@ -8,10 +8,10 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, k = read_ints()
+    (n, k) = read_ints()
     p = []
     for i in range(n):
-        ai, bi = read_ints()
+        (ai, bi) = read_ints()
         p.append((bi, ai, i + 1))
     p.sort()
     dp = [[0 for j in range(k + 1)] for i in range(n + 1)]

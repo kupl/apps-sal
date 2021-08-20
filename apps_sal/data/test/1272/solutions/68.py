@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, N):
         self.N = N
         self.parent = [-1] * N
@@ -16,7 +17,7 @@ class UnionFind:
         if i == j:
             return
         if i > j:
-            i, j = j, i
+            (i, j) = (j, i)
         self.parent[i] += self.parent[j]
         self.parent[j] = i
 
@@ -33,20 +34,17 @@ class UnionFind:
         return len(set(self.roots()))
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 forest = UnionFind(N)
-
 edges = []
 for _ in range(M):
     edges.append([int(e) - 1 for e in input().split()])
-
 inconvenience = N * (N - 1) // 2
 score = []
-for a, b in edges[::-1]:
+for (a, b) in edges[::-1]:
     score.append(inconvenience)
     if not forest.same(a, b):
         inconvenience -= forest.size(a) * forest.size(b)
     forest.unite(a, b)
-
 for s in score[::-1]:
     print(s)

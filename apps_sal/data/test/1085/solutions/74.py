@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -16,7 +15,8 @@ import queue
 import decimal
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -42,9 +42,8 @@ class Scanner():
         return [Scanner.int() for i in range(n)]
 
 
-# MOD = int(1e09) + 7
 MOD = 998244353
-INF = int(1e15)
+INF = int(1000000000000000.0)
 
 
 def divisor(N):
@@ -76,12 +75,6 @@ def solve():
 
 
 def main():
-    # sys.setrecursionlimit(1000000)
-    # sys.stdin = open("sample.txt")
-    # T = Scanner.int()
-    # for _ in range(T):
-    #     solve()
-    # print('YNeos'[not solve()::2])
     solve()
 
 

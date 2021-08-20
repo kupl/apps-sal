@@ -4,4 +4,4 @@ def nb_year(p0, percent, aug, p):
     while n < p:
         n = n + n * (percent / 100) + aug
         nb += 1
-    return(nb)
+    return nb

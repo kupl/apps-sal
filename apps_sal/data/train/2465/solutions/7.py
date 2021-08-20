@@ -1,4 +1,5 @@
 class Solution:
+
     def divisorGame(self, n: int) -> bool:
         return self.helper(n, {})
 
@@ -18,12 +19,11 @@ class Solution:
     def factors(self, n):
         l = []
         i = 1
-        while i**2 <= n:
+        while i ** 2 <= n:
             if n % i == 0:
                 l.append(i)
             i += 1
         for num in l:
-            if num**2 < n and num > 1:
+            if num ** 2 < n and num > 1:
                 l.append(int(n / num))
-
         return l

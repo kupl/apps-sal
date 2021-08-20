@@ -1,6 +1,6 @@
 def solve(s):
     vals = {}
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c not in vals:
             vals[c] = [i, i]
         else:

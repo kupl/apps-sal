@@ -1,9 +1,8 @@
 import statistics
 n = int(input())
-
-la, lb = [], []
+(la, lb) = ([], [])
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     la.append(a)
     lb.append(b)
 c = statistics.median(la)

@@ -7,11 +7,11 @@ def solve(N, A, B):
             s += int(ns[j])
         if A <= s and s <= B:
             nums.append(n)
-    print((sum(nums)))
+    print(sum(nums))
 
 
 def __starting_point():
-    N, A, B = list(map(int, input().split()))
+    (N, A, B) = list(map(int, input().split()))
     solve(N, A, B)
 
 

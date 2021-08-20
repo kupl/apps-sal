@@ -1,6 +1,5 @@
 n = int(input())
 a = sorted(list(map(int, input().split())))
-
 maxe = max(a)
 cnt = []
 cur = 1
@@ -20,7 +19,6 @@ while i < n:
 cnt.append(0)
 cnt.append(0)
 maxe = len(cnt) - 1
-
 maxk = cnt[1]
 was = False
 for l in range(maxk):
@@ -37,8 +35,7 @@ for l in range(maxk):
             ok = False
             break
     if ok:
-        print(l + 1, end=" ")
+        print(l + 1, end=' ')
         was = True
-
 if not was:
     print(-1)

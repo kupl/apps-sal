@@ -1,4 +1,5 @@
 class Solution:
+
     def findSubstring(self, s, words):
         """
         :type s: str
@@ -20,7 +21,7 @@ class Solution:
             strStart = i
             wordStart = strStart
             while strStart + lenSubstring <= len(s):
-                word = s[wordStart: wordStart + lenWord]
+                word = s[wordStart:wordStart + lenWord]
                 wordStart += lenWord
                 if word not in dic:
                     strStart = wordStart
@@ -31,7 +32,7 @@ class Solution:
                     else:
                         curr[word] = 1
                     while curr[word] > dic[word]:
-                        curr[s[strStart: strStart + lenWord]] -= 1
+                        curr[s[strStart:strStart + lenWord]] -= 1
                         strStart += lenWord
                     if wordStart - strStart == lenSubstring:
                         result.append(strStart)

@@ -4,7 +4,6 @@ def expression_matter(a, b, c):
     f = a + b * c
     g = (a + b) * c
     h = a + b + c
-
     if (e >= d and e >= h) and (e >= f and e >= g):
         return e
     elif (d >= e and d >= h) and (d >= f and d >= g):

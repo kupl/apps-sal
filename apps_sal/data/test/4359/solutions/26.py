@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import numpy as np
 import sys
 input = sys.stdin.readline
@@ -12,14 +11,13 @@ def main():
     s_menu = sorted(np_menu, key=lambda x: x % 10)
     time_counter = 0
     last_add = 0
-
     for time in s_menu:
         if time % 10 == 0:
             time_counter += time
         elif last_add == 0:
             last_add += time
         else:
-            tmp = 10 - (time % 10)
+            tmp = 10 - time % 10
             time_counter += time + tmp
     time_counter += last_add
     print(time_counter)

@@ -1,10 +1,8 @@
 n = int(input())
 a = input()
 b = input()
-
 pr = {}
 ans = []
-
 for i in range(0, 26):
     pr[i] = i
 
@@ -27,7 +25,6 @@ for i in range(len(a)):
     if pa == pb:
         continue
     union_set(pa, pb)
-
 print(len(ans))
 for i in ans:
     print(chr(97 + i[0]), chr(97 + i[1]))

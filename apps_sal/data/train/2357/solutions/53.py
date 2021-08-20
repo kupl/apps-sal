@@ -1,6 +1,6 @@
 def main():
     mod = 1000000007
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     A = list(map(int, input().split()))
     s = sum(A)
     if s > m:

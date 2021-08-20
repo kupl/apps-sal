@@ -15,9 +15,9 @@ def solve():
         queue.append((cur[0] - 1, cur[1] + 1))
         queue.append((cur[0] + 1, cur[1] + 1))
         queue.append((a[cur[0]], cur[1] + 1))
-    print(" ".join(map(str, ans)))
+    print(' '.join(map(str, ans)))
 
 
 if sys.hexversion == 50659824:
-    sys.stdin = open("input.txt")
+    sys.stdin = open('input.txt')
 solve()

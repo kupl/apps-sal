@@ -15,13 +15,11 @@ for _ in range(int(input())):
             nech += 1
         else:
             ch += 1
-
     if nech % 2 != ch % 2:
         print('NO')
+    elif nech % 2 == 0:
+        print('YES')
+    elif f1:
+        print('YES')
     else:
-        if nech % 2 == 0:
-            print('YES')
-        elif f1:
-            print('YES')
-        else:
-            print('NO')
+        print('NO')

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestConsecutive(self, nums):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution:
             return maps[x]
 
         def join(x, y, maps):
-            i, j = find(x, maps), find(y, maps)
+            (i, j) = (find(x, maps), find(y, maps))
             if i != j:
                 if i < j:
                     maps[j] = i

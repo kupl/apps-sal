@@ -8,7 +8,6 @@ def main():
     for x in a:
         if worst < x and x < best:
             ans += 1
-
     print(ans)
 
 

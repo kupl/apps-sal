@@ -1,4 +1,4 @@
-n, a, b, c = [int(i) for i in input().split()]
+(n, a, b, c) = [int(i) for i in input().split()]
 if n % 4 == 0:
     print(0)
 if n % 4 == 1:

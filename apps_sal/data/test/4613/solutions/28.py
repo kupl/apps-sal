@@ -1,9 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 graph = [[] for i in range(N)]
-
 for i in range(M):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     graph[a].append(b)
     graph[b].append(a)
 
@@ -24,7 +23,6 @@ for i in range(len(graph)):
         gn = graph[0:i] + [t[0:j] + t[j + 1:]] + graph[i + 1:]
         vis = [0] * N
         dfs(0, gn)
-        if not(all(vis)):
-            # print(i+1, graph[i][j]+1,gn,vis)
+        if not all(vis):
             ans += 1
 print(ans)

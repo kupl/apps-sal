@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 for i in range(n):
     a = [int(x) for x in input().split()]
 d = []

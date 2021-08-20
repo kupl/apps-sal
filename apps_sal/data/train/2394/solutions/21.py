@@ -6,9 +6,8 @@ for _ in range(int(input())):
     for i in s:
         if i == '(':
             q += 1
+        elif q > 0:
+            q -= 1
         else:
-            if q > 0:
-                q -= 1
-            else:
-                ans += 1
+            ans += 1
     print(ans)

@@ -1,7 +1,6 @@
 import sys
 import numpy as np
-
-n, a, *x = map(int, sys.stdin.read().split())
+(n, a, *x) = map(int, sys.stdin.read().split())
 
 
 def main():

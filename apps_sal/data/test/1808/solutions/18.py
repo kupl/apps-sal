@@ -1,6 +1,7 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, k, x = R()
+(n, k, x) = R()
 a = list(R())
 print(sum(a[:n - k]) + k * x)

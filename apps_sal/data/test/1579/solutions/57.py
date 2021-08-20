@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, size):
         self.rank = [0 for i in range(size)]
         self.p = [0 for i in range(size)]
@@ -30,13 +31,13 @@ class DisjointSet:
 
 
 def __starting_point():
-    maxxy = 10**5
+    maxxy = 10 ** 5
     N = int(input())
     ds = DisjointSet(maxxy * 2 + 1)
     left = [0 for i in range(maxxy * 2 + 1)]
     right = [0 for i in range(maxxy * 2 + 1)]
     for i in range(N):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         ds.unite(x, maxxy + y)
     for i in range(maxxy + 1):
         left[ds.findSet(i)] += 1

@@ -13,13 +13,16 @@ from pprint import pprint
 from types import FunctionType
 from typing import List, Any
 from sys import stdin
-
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 
 
-def inp(): return stdin.readline().rstrip()
-def lmi(): return list(map(int, stdin.readline().split()))
+def inp():
+    return stdin.readline().rstrip()
+
+
+def lmi():
+    return list(map(int, stdin.readline().split()))
 
 
 def narray(*shape, init: Any = 0):
@@ -31,12 +34,12 @@ def narray(*shape, init: Any = 0):
 
 
 def comb(N, k):
-    if (k > N) or (N < 0) or (k < 0):
+    if k > N or N < 0 or k < 0:
         return 0
-    N, k = list(map(int, (N, k)))
+    (N, k) = list(map(int, (N, k)))
     top = N
     val = 1
-    while top > (N - k):
+    while top > N - k:
         val *= top
         top -= 1
     n = 1
@@ -52,14 +55,14 @@ def cmb(x, y):
     bunsi = 1
     bunbo = 1
     for i in range(1, y + 1):
-        bunsi = (bunsi * (x + 1 - i)) % mod
-        bunbo = (bunbo * i) % mod
+        bunsi = bunsi * (x + 1 - i) % mod
+        bunbo = bunbo * i % mod
     res = bunsi * pow(bunbo, mod - 2, mod) % mod
     return res
 
 
 def main():
-    N, M = lmi()
+    (N, M) = lmi()
     A = lmi()
     ans = cmb((M + N) % mod, (N + sum(A)) % mod) % mod
     print(ans)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mat = list(map(int, input().split()))
 auction = list(map(int, input().split()))
 aucpoint = [mat[i - 1] for i in auction]

@@ -12,7 +12,7 @@ def lcm(a, b):
 
 
 for _ in range(int(input())):
-    x, y = [int(x) for x in input().split()]
+    (x, y) = [int(x) for x in input().split()]
     l = lcm(x, y)
     s = int(l / x)
     t = int(l / y)

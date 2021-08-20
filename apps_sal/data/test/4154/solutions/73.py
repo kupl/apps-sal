@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 left = set()
 right = set()
 for i in range(m):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     left.add(l)
     right.add(r)
 mini = max(left)

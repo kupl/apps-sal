@@ -1,8 +1,11 @@
 M = 1000000009
-def inv(x): return pow(x, M - 2, M)
 
 
-n, a, b, k = list(map(int, input().split()))
+def inv(x):
+    return pow(x, M - 2, M)
+
+
+(n, a, b, k) = list(map(int, input().split()))
 s = input()
 c = inv(a) * b % M
 q = pow(c, k, M)
@@ -12,5 +15,5 @@ x = pow(a, n, M)
 r = 0
 for i in range(k):
     r = (r + [-1, 1][s[i] == '+'] * x * p) % M
-    x = (x * c) % M
+    x = x * c % M
 print(r)

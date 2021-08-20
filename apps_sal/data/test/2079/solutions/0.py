@@ -10,10 +10,10 @@ def main():
         b.append([a[i], i + 1])
     b.sort()
     ans = []
-    count1, count2 = 0, 0
+    (count1, count2) = (0, 0)
     c = deque([])
     for i in range(2 * n):
-        if (s[i] == '0'):
+        if s[i] == '0':
             ans.append(b[count1][1])
             c.append(b[count1][1])
             count1 += 1

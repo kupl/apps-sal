@@ -1,13 +1,10 @@
-#!python3
 """
 Author: w1ld [at] inbox [dot] ru
 """
-
 from collections import deque, Counter
 import array
 from itertools import combinations, permutations
 from math import sqrt
-# import unittest
 
 
 def read_int():
@@ -17,10 +14,9 @@ def read_int():
 def read_int_array():
     return [int(i) for i in input().strip().split(' ')]
 
-######################################################
-
 
 class Node:
+
     def __init__(self, c):
         self.c = c
         self.l = None
@@ -28,7 +24,6 @@ class Node:
 
 
 tests = read_int()
-
 for test in range(tests):
     s = input().strip()
     left = Node(s[0])
@@ -56,9 +51,8 @@ for test in range(tests):
         else:
             found = False
             break
-
     if not found:
-        print("NO")
+        print('NO')
     else:
         ans = []
         x = left
@@ -68,5 +62,5 @@ for test in range(tests):
         for c in 'abcdefghijklmnopqrstuvwxyz':
             if c not in used:
                 ans.append(c)
-        print("YES")
+        print('YES')
         print(''.join(ans))

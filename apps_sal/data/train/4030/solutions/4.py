@@ -6,8 +6,8 @@ def radix_tree(*W):
     Z = {}
     for k in D:
         T = radix_tree(*D[k])
-        if len(T) == 1 and ''not in D[k]:
+        if len(T) == 1 and '' not in D[k]:
             for j in T:
-                k, T = k + j, T[j]
+                (k, T) = (k + j, T[j])
         Z[k] = T
     return Z

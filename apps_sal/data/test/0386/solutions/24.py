@@ -3,7 +3,7 @@ l = -2000000001
 r = 2000000001
 while T > 0:
     T -= 1
-    A, B, C = input().split()
+    (A, B, C) = input().split()
     b = int(B)
     if C == 'N':
         if A == '>=':

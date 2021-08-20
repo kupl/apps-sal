@@ -1,8 +1,6 @@
 import sys
-
 fin = sys.stdin
 fout = sys.stdout
-
 a = list(map(int, fin.readline().strip().split()))
 a.sort()
 ans = 0

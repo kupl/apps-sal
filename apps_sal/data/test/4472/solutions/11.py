@@ -1,7 +1,6 @@
 n = int(input())
 s1 = input()
 s2 = input()
-
 x = []
 i = 0
 j = n - 1
@@ -9,7 +8,6 @@ while i < j:
     x += [[s1[i], s1[j], s2[i], s2[j]]]
     i += 1
     j -= 1
-
 count = 0
 for elem in x:
     a1 = elem[0]
@@ -23,7 +21,7 @@ for elem in x:
     elif len(q) == 4:
         count += 2
     elif len(q) == 3:
-        if a1 == b2 or a2 == b1 or a1 == b1 or a2 == b2 or b1 == b2:
+        if a1 == b2 or a2 == b1 or a1 == b1 or (a2 == b2) or (b1 == b2):
             count += 1
         else:
             count += 2

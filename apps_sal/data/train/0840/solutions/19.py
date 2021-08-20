@@ -8,9 +8,8 @@ for _ in range(t):
                     print('*', end='')
                 elif i < j:
                     print(' ', end='')
-            else:
-                if i + j == k - 1:
-                    print('*', end='')
-                elif i > j:
-                    print(' ', end='')
+            elif i + j == k - 1:
+                print('*', end='')
+            elif i > j:
+                print(' ', end='')
         print()

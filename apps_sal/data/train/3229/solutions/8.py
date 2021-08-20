@@ -8,7 +8,7 @@ def am_i_wilson(P):
         for x in range(2, P):
             if P % x == 0:
                 return False
-        if ((math.factorial(P - 1)) + 1) % (P * P) == 0:
+        if (math.factorial(P - 1) + 1) % (P * P) == 0:
             return True
         else:
             return False

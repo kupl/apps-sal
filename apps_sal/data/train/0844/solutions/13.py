@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 def main():
-    N, K = list(map(int, input().strip().split()[:2]))
+    (N, K) = list(map(int, input().strip().split()[:2]))
     T = [0] * N
     for k in range(K):
         X = input().strip().split()

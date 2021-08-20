@@ -1,5 +1,4 @@
 N = int(input())
-
 divs = set()
 n = 1
 while n * n <= N:
@@ -7,15 +6,13 @@ while n * n <= N:
         divs.add(n)
         divs.add(N // n)
     n += 1
-
 divs2 = set()
 n = 1
-while n * n <= (N - 1):
+while n * n <= N - 1:
     if (N - 1) % n == 0:
         divs2.add(n)
         divs2.add((N - 1) // n)
     n += 1
-
 ans = len(divs2) - 1
 for d in divs:
     if d == 1:
@@ -31,5 +28,4 @@ for d in divs:
             if n % d == 1:
                 ans += 1
             break
-
 print(ans)

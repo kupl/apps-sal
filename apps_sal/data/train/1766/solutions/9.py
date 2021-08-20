@@ -1,37 +1,34 @@
 def to_dec(binary):
     sum = 0
     binary = binary[::-1]
-    for index, bit in enumerate(binary):
-        sum += int(bit) and (-2)**index or 0
+    for (index, bit) in enumerate(binary):
+        sum += int(bit) and (-2) ** index or 0
     return sum
 
 
 def test_to_dec():
-    assert to_dec("00000") == 0
-    assert to_dec("00001") == 1
-    assert to_dec("00010") == -2
-    assert to_dec("00011") == -1
-    assert to_dec("00100") == 4
-    assert to_dec("00101") == 5
-    assert to_dec("00110") == 2
-    assert to_dec("00111") == 3
-    assert to_dec("01000") == -8
-    assert to_dec("01001") == -7
-    assert to_dec("01010") == -10
-    assert to_dec("10000") == 16
-    assert to_dec("10001") == 17
-    assert to_dec("10010") == 14
-    assert to_dec("11000") == 8
-    assert to_dec("11001") == 9
-    assert to_dec("11010") == 6
-    assert to_dec("1001101") == 61
-    assert to_dec("0111111") == -21
+    assert to_dec('00000') == 0
+    assert to_dec('00001') == 1
+    assert to_dec('00010') == -2
+    assert to_dec('00011') == -1
+    assert to_dec('00100') == 4
+    assert to_dec('00101') == 5
+    assert to_dec('00110') == 2
+    assert to_dec('00111') == 3
+    assert to_dec('01000') == -8
+    assert to_dec('01001') == -7
+    assert to_dec('01010') == -10
+    assert to_dec('10000') == 16
+    assert to_dec('10001') == 17
+    assert to_dec('10010') == 14
+    assert to_dec('11000') == 8
+    assert to_dec('11001') == 9
+    assert to_dec('11010') == 6
+    assert to_dec('1001101') == 61
+    assert to_dec('0111111') == -21
 
 
-BINARIES = dict(
-    [(to_dec(binary[2:]), binary[2:])
-     for binary in map(bin, range(2**15))
-     ])
+BINARIES = dict([(to_dec(binary[2:]), binary[2:]) for binary in map(bin, range(2 ** 15))])
 
 
 def to_binary(decimal):
@@ -39,25 +36,25 @@ def to_binary(decimal):
 
 
 def test_to_binary():
-    assert to_binary(to_dec("00000")) == "0"        # 0
-    assert to_binary(to_dec("00001")) == "1"        # 1
-    assert to_binary(to_dec("00010")) == "10"       # -2
-    assert to_binary(to_dec("00011")) == "11"       # -1
-    assert to_binary(to_dec("00100")) == "100"  # 4
-    assert to_binary(to_dec("00101")) == "101"  # 5
-    assert to_binary(to_dec("00110")) == "110"  # 2
-    assert to_binary(to_dec("00111")) == "111"  # 3
-    assert to_binary(to_dec("01000")) == "1000"  # -8
-    assert to_binary(to_dec("01001")) == "1001"  # -7
-    assert to_binary(to_dec("01010")) == "1010"  # -10
-    assert to_binary(to_dec("10000")) == "10000"
-    assert to_binary(to_dec("10001")) == "10001"
-    assert to_binary(to_dec("10010")) == "10010"
-    assert to_binary(to_dec("11000")) == "11000"
-    assert to_binary(to_dec("11001")) == "11001"
-    assert to_binary(to_dec("11010")) == "11010"
-    assert to_binary(to_dec("1001101")) == "1001101"
-    assert to_binary(to_dec("0111111")) == "111111"
+    assert to_binary(to_dec('00000')) == '0'
+    assert to_binary(to_dec('00001')) == '1'
+    assert to_binary(to_dec('00010')) == '10'
+    assert to_binary(to_dec('00011')) == '11'
+    assert to_binary(to_dec('00100')) == '100'
+    assert to_binary(to_dec('00101')) == '101'
+    assert to_binary(to_dec('00110')) == '110'
+    assert to_binary(to_dec('00111')) == '111'
+    assert to_binary(to_dec('01000')) == '1000'
+    assert to_binary(to_dec('01001')) == '1001'
+    assert to_binary(to_dec('01010')) == '1010'
+    assert to_binary(to_dec('10000')) == '10000'
+    assert to_binary(to_dec('10001')) == '10001'
+    assert to_binary(to_dec('10010')) == '10010'
+    assert to_binary(to_dec('11000')) == '11000'
+    assert to_binary(to_dec('11001')) == '11001'
+    assert to_binary(to_dec('11010')) == '11010'
+    assert to_binary(to_dec('1001101')) == '1001101'
+    assert to_binary(to_dec('0111111')) == '111111'
 
 
 def skrzat(base, number):

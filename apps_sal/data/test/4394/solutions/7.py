@@ -1,9 +1,10 @@
 a = input().split()
-n, m = int(a[0]), int(a[1])
+(n, m) = (int(a[0]), int(a[1]))
 f = [i for i in range(0, n + 1)]
 
 
 class edge:
+
     def __init__(self, U, V, W):
         self.u = U
         self.v = V
@@ -13,7 +14,7 @@ class edge:
 l = []
 for i in range(m):
     a = input().split()
-    u, v, w = int(a[0]), int(a[1]), int(a[2])
+    (u, v, w) = (int(a[0]), int(a[1]), int(a[2]))
     l.append(edge(u, v, w))
 l.sort(key=lambda x: x.w)
 

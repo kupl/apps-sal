@@ -1,4 +1,4 @@
-w, a, b = map(int, input().split())
+(w, a, b) = map(int, input().split())
 if b <= a + w <= b + w or b <= a <= b + w:
     print(0)
 else:

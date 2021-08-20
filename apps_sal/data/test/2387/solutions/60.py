@@ -8,18 +8,16 @@ def main():
     sum_r = 0
     for i in range(n):
         s = input()
-        left, right = 0, 0
+        (left, right) = (0, 0)
         for j in range(len(s)):
             if s[j] == '(':
                 right += 1
+            elif right > 0:
+                right -= 1
             else:
-                if right > 0:
-                    right -= 1
-                else:
-                    left += 1
+                left += 1
         if left == right == 0:
             continue
-
         if left == 0:
             l_0.append((left, right))
         elif right == 0:
@@ -30,56 +28,39 @@ def main():
             ls_minus.append((left, right))
         sum_l += left
         sum_r += right
-
     if len(ls_plus) == len(ls_minus) == len(l_0) == len(r_0) == 0:
-        print("Yes")
+        print('Yes')
         return
-
     if len(l_0) == 0 or len(r_0) == 0:
-        print("No")
+        print('No')
         return
     if sum_l != sum_r:
-        print("No")
+        print('No')
         return
-
-    # r-lの大きい順
     ls_plus.sort(key=lambda x: x[1] - x[0], reverse=True)
-    # lの小さい順
     ls_plus.sort(key=lambda x: x[0])
-
-    # l-rの小さい順
     ls_minus.sort(key=lambda x: x[0] - x[1])
-    # lの大さい順
     ls_minus.sort(key=lambda x: x[0], reverse=True)
-
     now_r = 0
     for ll in l_0:
         now_r += ll[1]
-
-    # now_l = 0
     for i in range(len(ls_plus)):
-        # l = ls[i][0]
         r = ls_plus[i][1]
         x = now_r - ls_plus[i][0]
         if x >= 0:
-            # now_l = now_l
             now_r = x + r
         else:
-            print("No")
+            print('No')
             return
-
     for i in range(len(ls_minus)):
-        # l = ls[i][0]
         r = ls_minus[i][1]
         x = now_r - ls_minus[i][0]
         if x >= 0:
-            # now_l = now_l
             now_r = x + r
         else:
-            print("No")
+            print('No')
             return
-
-    print("Yes")
+    print('Yes')
 
 
 main()

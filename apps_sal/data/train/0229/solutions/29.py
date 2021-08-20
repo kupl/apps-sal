@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, arr: List[int]) -> bool:
         dicti = dict()
         for var in arr:
@@ -10,7 +11,7 @@ class Solution:
         for var in arr:
             if dicti[var] == 0:
                 continue
-            if(2 * var not in list(dicti.keys())):
+            if 2 * var not in list(dicti.keys()):
                 return False
             if dicti[2 * var] <= 0:
                 return False

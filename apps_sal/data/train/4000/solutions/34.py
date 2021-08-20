@@ -5,7 +5,6 @@ def strong_num(number):
             return 1
         else:
             return n * factorial(n - 1)
-
     if sum([factorial(int(i)) for i in str(number)]) == number:
         return 'STRONG!!!!'
     else:

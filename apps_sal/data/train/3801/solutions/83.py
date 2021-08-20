@@ -4,5 +4,4 @@ def words_to_marks(s):
     res = 0
     for letter in s:
         res += dic.get(letter, 0)
-        # dict.get(key, defaultvalue)
     return res

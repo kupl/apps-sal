@@ -4,7 +4,7 @@ l = list(map(int, input().split()))
 for i in range(1, n + 1):
     s = s + i
 p = sum(l)
-if(sum(l) == s):
-    print("YES")
+if sum(l) == s:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

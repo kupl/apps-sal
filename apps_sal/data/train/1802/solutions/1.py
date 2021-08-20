@@ -1,13 +1,5 @@
 from math import gcd as builtin_gcd
-
-"""
-This problem could be seen as finding the Frobenius number
-Algorithm used
-https://brg.a2hosted.com/?page_id=563
-based on
-The Money Changing Problem Revisited: Computing the Frobenius Number in Time O(ka1), by Sebastian Bocker and Zsuzsanna Liptak, June 2004, Technical Report number 2004-2, University of Bielefeld, Technical Faculty.
-
-"""
+'\nThis problem could be seen as finding the Frobenius number\nAlgorithm used\nhttps://brg.a2hosted.com/?page_id=563\nbased on\nThe Money Changing Problem Revisited: Computing the Frobenius Number in Time O(ka1), by Sebastian Bocker and Zsuzsanna Liptak, June 2004, Technical Report number 2004-2, University of Bielefeld, Technical Faculty.\n\n'
 
 
 def gcd(a, *r):
@@ -23,13 +15,14 @@ def lcm(a, *r):
 
 
 def frobenius_number(a):
+
     def __residue_table(a):
         n = [0] + [None] * (a[0] - 1)
         for i in range(1, len(a)):
             d = gcd(a[0], a[i])
             for r in range(d):
                 try:
-                    nn = min(n[q] for q in range(r, a[0], d) if n[q] is not None)
+                    nn = min((n[q] for q in range(r, a[0], d) if n[q] is not None))
                 except ValueError:
                     continue
                 if nn is not None:
@@ -39,7 +32,6 @@ def frobenius_number(a):
                         nn = min(nn, n[p]) if n[p] is not None else nn
                         n[p] = nn
         return n
-
     if len(a) < 2 or gcd(*a) > 1:
         return -1
     return max(__residue_table(sorted(a))) - min(a)

@@ -3,18 +3,36 @@ import heapq as hq
 import itertools
 import math
 import collections
-def ma(): return map(int, input().split())
-def lma(): return list(map(int, input().split()))
-def tma(): return tuple(map(int, input().split()))
-def ni(): return int(input())
-def yn(fl): return print("Yes") if fl else print("No")
-def ips(): return input().split()
+
+
+def ma():
+    return map(int, input().split())
+
+
+def lma():
+    return list(map(int, input().split()))
+
+
+def tma():
+    return tuple(map(int, input().split()))
+
+
+def ni():
+    return int(input())
+
+
+def yn(fl):
+    return print('Yes') if fl else print('No')
+
+
+def ips():
+    return input().split()
 
 
 ceil = math.ceil
 gcd = math.gcd
 RL = sys.stdin.readline
-INF = 10**15
+INF = 10 ** 15
 
 
 def ceilab(a, b):

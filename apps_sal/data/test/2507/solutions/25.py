@@ -9,13 +9,12 @@ def is_ok(mid, k):
         return False
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = np.array(list(map(int, input().split())))
 f = np.array(list(map(int, input().split())))
 a = np.sort(a)
 f = np.sort(f)[::-1]
-
-l, r = -1, np.max(a * f)  # l:ng, r:ok
+(l, r) = (-1, np.max(a * f))
 while l + 1 < r:
     mid = (l + r) // 2
     if is_ok(mid, k):

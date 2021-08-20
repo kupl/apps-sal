@@ -1,4 +1,4 @@
-k, n = list(map(int, input().split()))
+(k, n) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 x.sort()
 sum = 0

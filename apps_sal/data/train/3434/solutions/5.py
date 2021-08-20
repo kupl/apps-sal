@@ -1,5 +1,5 @@
 def decimalToBinary(n):
-    return bin(n).replace("0b", "")
+    return bin(n).replace('0b', '')
 
 
 def bin_mul(m, n):

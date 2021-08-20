@@ -14,8 +14,7 @@ def li():
 
 
 alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-n, k = mi()
+(n, k) = mi()
 s = input().strip()
 c = Counter(s)
 mn = 10 ** 9

@@ -29,5 +29,4 @@ for _ in range(int(input())):
                     j += 1
             else:
                 i += 1
-
         print(*new)

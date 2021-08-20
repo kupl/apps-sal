@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self):
         self.p = {}
         self.r = {}
@@ -20,7 +21,7 @@ class DSU:
         if x == y:
             return self.r[x]
         if self.r[x] > self.r[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.count[self.r[x]] -= 1
         self.count[self.r[y]] -= 1
         self.count[self.r[x] + self.r[y]] += 1
@@ -30,13 +31,13 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         dsu = DSU()
         bits = [0] * (n + 2)
         ans = -1
-
-        for i, bit in enumerate(arr, 1):
+        for (i, bit) in enumerate(arr, 1):
             dsu.add(bit)
             bits[bit] = 1
             if bits[bit - 1] == 1:
@@ -45,5 +46,4 @@ class Solution:
                 dsu.unite(bit, bit + 1)
             if dsu.count[m] > 0:
                 ans = i
-
         return ans

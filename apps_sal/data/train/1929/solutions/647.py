@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.is_word = False
@@ -26,10 +27,4 @@ class StreamChecker:
             node = node.children[c]
             if node.is_word:
                 return True
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

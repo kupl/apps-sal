@@ -1,7 +1,6 @@
 a = int(input())
-
 if a == 1:
-    print("0")
+    print('0')
 else:
     s = 1
     t = a
@@ -19,7 +18,6 @@ else:
             s += 1
             t -= 1
         q += [s]
-
     i = 0
     wyn = 0
     while i < len(q) - 1:

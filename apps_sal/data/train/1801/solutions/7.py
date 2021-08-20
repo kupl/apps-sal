@@ -1,4 +1,5 @@
 class Memory:
+
     def __init__(self, width, height):
         self.__x = 0
         self.__y = 0
@@ -13,7 +14,7 @@ class Memory:
         return self.mem[self.y][self.x]
 
     def to_string(self):
-        return '\r\n'.join(''.join(map(str, row)) for row in self.mem)
+        return '\r\n'.join((''.join(map(str, row)) for row in self.mem))
 
     @property
     def x(self):
@@ -37,19 +38,16 @@ def interpreter(code, iterations, width, height):
     mem = Memory(width, height)
     jumps = {}
     bracket = []
-
-    for i, op in enumerate(code):
+    for (i, op) in enumerate(code):
         if op == '[':
             bracket.append(i)
         elif op == ']':
             jumps[bracket[-1]] = i
             jumps[i] = bracket.pop()
-
     while iterations and op_ptr < len(code):
         op = code[op_ptr]
         if op in 'nesw*[]':
             iterations -= 1
-
         if op == 'n':
             mem.y -= 1
         elif op == 'e':
@@ -64,7 +62,5 @@ def interpreter(code, iterations, width, height):
             op_ptr = jumps[op_ptr]
         elif op == ']' and mem.get() != 0:
             op_ptr = jumps[op_ptr]
-
         op_ptr += 1
-
     return mem.to_string()

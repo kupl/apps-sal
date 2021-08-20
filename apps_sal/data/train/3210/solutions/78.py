@@ -6,11 +6,10 @@ def get_strings(city):
         if letter not in emptystr:
             if letter == ' ':
                 continue
+            elif letter is not city[-1]:
+                emptystr += letter + ':' + str(num * '*') + ','
             else:
-                if letter is not city[-1]:
-                    emptystr += letter + ':' + str(num * '*') + ','
-                else:
-                    emptystr += letter + ':' + str(num * '*') + ','
+                emptystr += letter + ':' + str(num * '*') + ','
         else:
             pass
     if emptystr[-1] == ',':

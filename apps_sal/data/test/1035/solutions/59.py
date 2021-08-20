@@ -14,12 +14,11 @@ def prime_factorize(n):
         ret.append([n, 1])
     if len(ret) == 0:
         ret.append([n, 1])
-
     return ret
 
 
 def main():
-    A, B = [int(x) for x in input().split(" ")]
+    (A, B) = [int(x) for x in input().split(' ')]
     g = math.gcd(A, B)
     pg = prime_factorize(g)
     if pg[0][0] == 1:

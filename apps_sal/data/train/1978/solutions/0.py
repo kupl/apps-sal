@@ -1,4 +1,5 @@
 class Solution:
+
     def findAndReplacePattern(self, words: List[str], pattern: str) -> List[str]:
         out = []
         for word in words:
@@ -14,10 +15,9 @@ class Solution:
                         else:
                             can_be = False
                             break
-                    else:
-                        if pat_dict[word[i]] != pattern[i]:
-                            can_be = False
-                            break
+                    elif pat_dict[word[i]] != pattern[i]:
+                        can_be = False
+                        break
                 if can_be == True:
                     out.append(word)
         return out

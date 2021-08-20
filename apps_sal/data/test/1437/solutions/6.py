@@ -1,4 +1,5 @@
 def main():
+
     def f1(c):
         x = ord(c)
         if ord('0') <= x <= ord('9'):
@@ -18,7 +19,8 @@ def main():
         res = '0' * (6 - len(res)) + res
         return res
 
-    def read(): return list(map(int, input().split()))
+    def read():
+        return list(map(int, input().split()))
     s = input()
     mod = 10 ** 9 + 7
     n = len(s)

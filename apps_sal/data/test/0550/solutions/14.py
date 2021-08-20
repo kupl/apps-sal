@@ -8,12 +8,9 @@ def unify_login(login):
 
 s = unify_login(input())
 n = int(input())
-
 logins = set()
-
 for i in range(n):
     logins.add(unify_login(input()))
-
 if s in logins:
     print('No')
 else:

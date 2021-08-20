@@ -12,7 +12,7 @@ def prepare(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-    return factorials, invs
+    return (factorials, invs)
 
 
 def solve(n, k):
@@ -22,11 +22,9 @@ def solve(n, k):
         for i in range(2, n + 1):
             ans = ans * i % MOD
         return ans
-
     if k > n - 1:
         return 0
-
-    facts, invs = prepare(n, MOD)
+    (facts, invs) = prepare(n, MOD)
     use_row = n - k
     t = 1
     ans = 0
@@ -36,5 +34,5 @@ def solve(n, k):
     return ans * 2 * facts[n] * invs[use_row] * invs[n - use_row] % MOD
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 print(solve(n, k))

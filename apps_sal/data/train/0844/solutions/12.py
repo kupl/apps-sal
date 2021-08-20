@@ -15,6 +15,6 @@ for t in range(k):
         tweet[s - 1] = 1
     ans = 0
     for i in range(k):
-        if(tweet[i] == 1):
+        if tweet[i] == 1:
             ans += 1
     print(ans)

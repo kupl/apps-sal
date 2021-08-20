@@ -1,5 +1,2 @@
-# 145-A
-
 r = int(input())
-
-print((r**2))
+print(r ** 2)

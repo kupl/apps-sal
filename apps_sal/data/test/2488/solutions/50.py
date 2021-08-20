@@ -1,16 +1,16 @@
 import math
 
 
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, d, a = I()
+(n, d, a) = I()
 l = []
 for _ in range(n):
-    x, y = I()
+    (x, y) = I()
     l.append([x, y])
 l.sort()
-
 j = 0
 limit = []
 for i in range(n):
@@ -20,7 +20,6 @@ for i in range(n):
             break
     j -= 1
     limit.append(j)
-
 ans = 0
 num = [0] * (n + 1)
 cnt = 0

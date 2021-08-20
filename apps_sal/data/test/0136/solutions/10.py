@@ -17,7 +17,6 @@ def delL(inp):
 
 a = delL(a)
 b = delL(b)
-
 if len(a) > len(b):
     print('>')
 elif len(a) < len(b):

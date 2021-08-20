@@ -8,7 +8,6 @@ for _ in range(50):
 def num_of_patties(n, x):
     if n == 0:
         return 1
-
     if x == 1:
         return 0
     elif x <= a[n - 1] + 1:
@@ -21,4 +20,4 @@ def num_of_patties(n, x):
         return b[n]
 
 
-print((num_of_patties(*[int(i) for i in input().split()])))
+print(num_of_patties(*[int(i) for i in input().split()]))

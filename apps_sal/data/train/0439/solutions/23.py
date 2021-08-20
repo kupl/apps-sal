@@ -1,5 +1,7 @@
 class Solution(object):
+
     def maxTurbulenceSize(self, A):
+
         def cmp(a, b):
             if a == b:
                 return 0

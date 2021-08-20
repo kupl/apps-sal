@@ -9,9 +9,9 @@ def answer(N: int, T: int, t: List[int]) -> int:
 
 
 def main():
-    N, T = list(map(int, input().split()))
+    (N, T) = list(map(int, input().split()))
     t = list(map(int, input().split()))
-    print((answer(N, T, t)))
+    print(answer(N, T, t))
 
 
 def __starting_point():

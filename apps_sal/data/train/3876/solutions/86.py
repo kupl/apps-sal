@@ -1,5 +1,4 @@
 def find(n):
-    # Code here
     return sum(filter(is_multiple_of_3_or_5, range(n + 1)))
 
 

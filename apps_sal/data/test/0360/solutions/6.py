@@ -1,7 +1,7 @@
 n = int(input())
 a = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a.append(y)
 p = int(input())
 for i in range(n):

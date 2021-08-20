@@ -4,7 +4,7 @@ graph = [[] for i in range(n + 1)]
 visited = [0 for i in range(n + 1)]
 root = 1
 stack = [root]
-for a, b in ab:
+for (a, b) in ab:
     graph[a].append(b)
     graph[b].append(a)
 visited[0] = -1
@@ -39,6 +39,6 @@ while stack:
             stack.append(y)
 snk = n - fen
 if fen > snk:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

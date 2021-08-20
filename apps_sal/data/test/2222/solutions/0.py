@@ -24,14 +24,14 @@ def dfs(x, y):
 que = deque()
 que.append([0, 0])
 while que:
-    aa, bb = que.popleft()
+    (aa, bb) = que.popleft()
     dfs(aa, bb)
 hukai = []
 for i in range(n):
     hukai.append([kyo[i], i])
 hukai.sort(key=lambda x: -x[0])
 dp = [1 << 30] * n
-for j, i in hukai:
+for (j, i) in hukai:
     if len(g[i]) == 0:
         dp[i] = 0
         continue

@@ -6,6 +6,6 @@ for i in range(t):
     rever = a[::-1]
     dupli = set(a)
     if rever == a and list(dupli) == x:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

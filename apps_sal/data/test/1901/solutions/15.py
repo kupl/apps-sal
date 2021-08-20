@@ -1,6 +1,6 @@
 from collections import defaultdict
 merge_matrix = defaultdict(list)
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 price_list = [int(x) for x in input().split()]
 summary = 0
 visited = set()
@@ -22,7 +22,7 @@ def dfs(edge):
 
 
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     merge_matrix[x].append(y)
     merge_matrix[y].append(x)
 for i in range(1, n + 1):

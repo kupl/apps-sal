@@ -1,6 +1,5 @@
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
-
 c = 0
 res = []
 for x in a:

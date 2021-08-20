@@ -1,7 +1,7 @@
-n, n1, n2 = map(int, input().split())
+(n, n1, n2) = map(int, input().split())
 A = list(map(int, input().split()))
 if n1 > n2:
-    n2, n1 = n1, n2
+    (n2, n1) = (n1, n2)
 A.sort()
 sums1 = 0
 sums2 = 0

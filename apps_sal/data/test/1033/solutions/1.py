@@ -1,6 +1,5 @@
-
 def get(a):
-    if (a <= h):
+    if a <= h:
         return a * (a + 1) // 2
     tmp = a - h + 1
     re = h * (h - 1) // 2
@@ -13,10 +12,10 @@ def get(a):
 
 lo = 1
 hi = 1000000000000000001
-n, h = list(map(int, input().split()))
-while (lo < hi):
+(n, h) = list(map(int, input().split()))
+while lo < hi:
     mi = (lo + hi) // 2
-    if (get(mi) < n):
+    if get(mi) < n:
         lo = mi + 1
     else:
         hi = mi

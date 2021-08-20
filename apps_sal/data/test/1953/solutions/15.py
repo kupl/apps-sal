@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 n = int(input())
 T = sorted(list(map(int, input().split())))
-
 total_time = 0
 ans = 0
 for i in range(n):

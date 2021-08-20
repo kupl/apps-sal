@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseOnlyLetters(self, S: str) -> str:
         stack = [char for char in S if char.isalpha()]
         result = ''

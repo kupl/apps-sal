@@ -1,4 +1,5 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         if not arr or k == 0:
             return 0
@@ -10,7 +11,7 @@ class Solution:
         s = accu[-1]
         accuMaxL = max(accu)
         accuMaxR = s - min(accu)
-        a0, sMax = 0, 0
+        (a0, sMax) = (0, 0)
         for a in accu:
             a0 = min(a, a0)
             sMax = max(sMax, a - a0)

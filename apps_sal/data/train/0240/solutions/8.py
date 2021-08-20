@@ -1,4 +1,5 @@
 class Solution:
+
     def frequencySort(self, s):
         """
         :type s: str
@@ -12,7 +13,7 @@ class Solution:
         for c in s:
             letter_to_feq[c] += 1
         max_count = -1
-        for k, v in letter_to_feq.items():
+        for (k, v) in letter_to_feq.items():
             feq_to_letter[v].append(k)
             if v > max_count:
                 max_count = v
@@ -21,9 +22,4 @@ class Solution:
                 for c in feq_to_letter[i]:
                     result = result + [c] * i
         return ''.join(result)
-        '''hashmap = defaultdict(lambda: 0)
-         for c in s:
-             hashmap[c] += 1
-         for k, v in sorted(hashmap.items(), key=itemgetter(1), reverse=True):
-             result = result + [k] * v
-         return ''.join(result)'''
+        "hashmap = defaultdict(lambda: 0)\n         for c in s:\n             hashmap[c] += 1\n         for k, v in sorted(hashmap.items(), key=itemgetter(1), reverse=True):\n             result = result + [k] * v\n         return ''.join(result)"

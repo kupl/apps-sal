@@ -1,14 +1,11 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 edge = [[] for _ in [0] * n]
 for i in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     edge[u - 1].append(v - 1)
     edge[v - 1].append(u - 1)
-
-# -1:not used -2:used plus:group max
 ma = [-1] * n
 for i in range(n):
     if ma[i] != -1:
@@ -26,7 +23,6 @@ for i in range(n):
                     tank.append(go)
         new = tank
     ma[i] = tmp
-# print(ma)
 res = 0
 p = -1
 for i in range(n):

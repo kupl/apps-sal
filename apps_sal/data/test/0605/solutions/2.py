@@ -15,16 +15,15 @@ def main(a, b, c, d, info=0):
     i = max(3 * a // 10, a - a // 250 * c)
     j = max(3 * b // 10, b - b // 250 * d)
     if i == j:
-        print("Tie")
+        print('Tie')
     elif i > j:
-        print("Misha")
+        print('Misha')
     else:
-        print("Vasya")
+        print('Vasya')
 
 
 def main_input(info=0):
-    a, b, c, d = list(map(int, input().split()))
-    #t = [(int(x)-1,i+1) for i,x in enumerate(input().split())]
+    (a, b, c, d) = list(map(int, input().split()))
     main(a, b, c, d, info=info)
 
 

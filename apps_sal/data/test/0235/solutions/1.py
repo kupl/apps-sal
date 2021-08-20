@@ -9,15 +9,12 @@ def consumed(n, k):
 
 
 n = int(input())
-
 lo = 1
 high = (n + 1) // 2
-
 while lo != high:
     mid = (lo + high) // 2
     if consumed(n, mid) * 2 >= n:
         high = mid
     else:
         lo = mid + 1
-
 print(lo)

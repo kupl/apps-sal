@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 pre = ''
 ans = 0
 for c in s:

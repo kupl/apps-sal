@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, s: List[int]) -> int:
         m = 0
         arr = {}

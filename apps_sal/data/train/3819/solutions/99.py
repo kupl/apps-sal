@@ -1,2 +1,2 @@
 def smash(words):
-    return ''.join(word + ' ' for word in words)[:-1]
+    return ''.join((word + ' ' for word in words))[:-1]

@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = [[] for i in range(m)]
 for i in range(n):
     a = input().split()
-    x, y = int(a[1]), int(a[2])
+    (x, y) = (int(a[1]), int(a[2]))
     l[x - 1].append([y, a[0]])
 for i in range(m):
     l[i].sort()

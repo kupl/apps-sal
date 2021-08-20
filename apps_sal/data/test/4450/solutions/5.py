@@ -1,11 +1,11 @@
 import heapq
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 connectionList = []
 for _ in range(n):
     connectionList.append([])
 edgeList = []
 for _ in range(m):
-    x, y, w = list(map(int, input().split()))
+    (x, y, w) = list(map(int, input().split()))
     edgeList.append((x, y, w))
 edgeList.sort(key=lambda x: x[2])
 if k < m:
@@ -17,9 +17,8 @@ colorVertex = []
 for i in range(n):
     colorList[i] = [i]
     colorVertex.append(i)
-
 for i in range(min(m, k)):
-    x, y, w = edgeList[i]
+    (x, y, w) = edgeList[i]
     connectionList[x - 1].append((y - 1, w))
     connectionList[y - 1].append((x - 1, w))
     if colorVertex[x - 1] != colorVertex[y - 1]:
@@ -35,7 +34,6 @@ for i in range(min(m, k)):
                 colorVertex[elem] = colorVertex[y - 1]
                 colorList[colorVertex[y - 1]].append(elem)
             del colorList[prevColor]
-
 pathList = []
 for key in colorList:
     vertexList = colorList[key]
@@ -51,7 +49,7 @@ for key in colorList:
             heapq.heappush(vertexPQueue, (elem[1], elem[0]))
             distanceDic[elem[0]] = elem[1]
         while vertexPQueue:
-            distance, curVertex = heapq.heappop(vertexPQueue)
+            (distance, curVertex) = heapq.heappop(vertexPQueue)
             if isCovered[curVertex]:
                 continue
             elif distance >= maxDist:

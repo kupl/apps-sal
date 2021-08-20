@@ -1,4 +1,4 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 L = [0] * N
 for i in range(N):
     L[i] = int(input())
@@ -12,7 +12,6 @@ def dfs(times, a, b, c):
     a_pattern = dfs(times + 1, a + L[times], b, c) + 10
     b_pattern = dfs(times + 1, a, b + L[times], c) + 10
     c_pattern = dfs(times + 1, a, b, c + L[times]) + 10
-
     return min(no_pattern, a_pattern, b_pattern, c_pattern)
 
 

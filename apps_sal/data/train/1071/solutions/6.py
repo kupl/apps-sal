@@ -1,12 +1,11 @@
 def make_31(string):
     if len(string) < 31:
         string = (31 - len(string)) * '0' + string
-
     return string
 
 
 for _ in range(int(input())):
-    x, Q = list(map(int, input().split()))
+    (x, Q) = list(map(int, input().split()))
     b = make_31(bin(x)[2:])
     b = list(b.strip())
     for qqq in range(Q):
@@ -21,7 +20,7 @@ for _ in range(int(input())):
             p = int(input())
             b[31 - p] = '0'
         else:
-            p, q = list(map(int, input().split()))
+            (p, q) = list(map(int, input().split()))
             temp = b[31 - q]
             b[31 - q] = b[31 - p]
             b[31 - p] = temp

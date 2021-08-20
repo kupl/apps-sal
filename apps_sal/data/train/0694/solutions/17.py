@@ -8,6 +8,6 @@ def compute_lcm(x, y):
 T = int(input())
 for i in range(T):
     N = int(input())
-    x, y, z = list(map(int, input().strip().split()))
+    (x, y, z) = list(map(int, input().strip().split()))
     lcm = compute_lcm(compute_lcm(x, y), z)
-    print((N * 24) // lcm)
+    print(N * 24 // lcm)

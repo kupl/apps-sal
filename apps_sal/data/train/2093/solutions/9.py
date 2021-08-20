@@ -1,4 +1,5 @@
 class CodeforcesTask847BSolution:
+
     def __init__(self):
         self.result = ''
         self.n = 0
@@ -6,7 +7,7 @@ class CodeforcesTask847BSolution:
 
     def read_input(self):
         self.n = int(input())
-        self.sequence = [int(x) for x in input().split(" ")]
+        self.sequence = [int(x) for x in input().split(' ')]
 
     def process_task(self):
         mx = 2000001
@@ -34,7 +35,7 @@ class CodeforcesTask847BSolution:
                     id = r
                 ans[id].append(self.sequence[x])
                 crf[id] = self.sequence[x]
-        self.result = "\n".join([" ".join([str(x) for x in row]) for row in ans[:cnt + 1]])
+        self.result = '\n'.join([' '.join([str(x) for x in row]) for row in ans[:cnt + 1]])
 
     def get_result(self):
         return self.result

@@ -1,6 +1,5 @@
-# cook your dish here
 for h in range(int(input())):
-    x, y, k = map(int, input().split())
+    (x, y, k) = map(int, input().split())
     c = (x + y) // k
     if c % 2 == 0:
         print('Chef')

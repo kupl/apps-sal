@@ -1,6 +1,6 @@
 class Solution:
-    def winnerSquareGame(self, n: int) -> bool:
 
+    def winnerSquareGame(self, n: int) -> bool:
         dp = [False] * (n + 1)
         for i in range(n + 1):
             for j in range(1, i + 1):

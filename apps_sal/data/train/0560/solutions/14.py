@@ -6,21 +6,19 @@ def win(arr1, arr2, n):
             index_a = ind
         if arr2[ind] == b:
             index_b = ind
-
     arr1[index_a] = 0
     arr2[index_b] = 0
-    sum_a, sum_b = 0, 0
+    (sum_a, sum_b) = (0, 0)
     for i in range(n):
         sum_a += arr1[i]
     for j in range(n):
         sum_b += arr2[j]
-
     if sum_a < sum_b:
-        print("Alice")
+        print('Alice')
     elif sum_a > sum_b:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')
 
 
 t = int(input())

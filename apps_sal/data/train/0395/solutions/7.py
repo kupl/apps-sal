@@ -1,4 +1,5 @@
 class Solution:
+
     def getIndex(self, val, arr):
         start = 0
         end = len(arr) - 1
@@ -17,18 +18,13 @@ class Solution:
         even = [False] * items
         odd = [False] * items
         goodindex = 1
-        even[-1], odd[-1] = True, True
+        (even[-1], odd[-1]) = (True, True)
         vals = [[A[-1], items - 1]]
-
         for index in range(items - 2, -1, -1):
             insind = self.getIndex(A[index], vals)
-
-            # odd jump
             if insind < len(vals):
                 eind = vals[insind][1]
                 odd[index] = even[eind]
-
-            # even jump
             eq = False
             if insind < len(vals) and vals[insind][0] == A[index]:
                 oind = vals[insind][1]
@@ -37,7 +33,6 @@ class Solution:
             elif insind > 0:
                 oind = vals[insind - 1][1]
                 even[index] = odd[oind]
-
             if eq:
                 vals[insind][1] = index
             else:

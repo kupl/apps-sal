@@ -1,11 +1,11 @@
 def from_base(string, base, alphabet='0123456789abcdef'):
-    return sum(alphabet.index(c) * base ** i for i, c in enumerate(string.lower()[::-1]))
+    return sum((alphabet.index(c) * base ** i for (i, c) in enumerate(string.lower()[::-1])))
 
 
 def to_base(n, base, alphabet='0123456789abcdef'):
     s = ''
     while n:
-        n, m = divmod(n, base)
+        (n, m) = divmod(n, base)
         s = alphabet[m] + s
     return s or alphabet[0]
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def removeDuplicateLetters(self, s):
         """
         :type s: str
@@ -14,9 +15,8 @@ class Solution:
             if c in visited:
                 continue
             visited.add(c)
-            while stack and stack[-1] > c and count[stack[-1]] > 0:
+            while stack and stack[-1] > c and (count[stack[-1]] > 0):
                 visited.remove(stack[-1])
                 stack.pop()
             stack.append(c)
-
         return ''.join(stack)

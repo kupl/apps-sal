@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
-
 ans = V[0]
 for l in range(min(K, N) + 1):
     for r in range(min(K, N) - l + 1):

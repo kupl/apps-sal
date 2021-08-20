@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 num = {1: 2, 2: 5, 3: 5, 4: 4, 5: 5, 6: 6, 7: 3, 8: 7, 9: 6}
 a = list(map(int, input().split()))
 a.sort(reverse=True)
@@ -15,4 +15,4 @@ while match > 0:
             match -= num[i]
             ans.append(str(i))
             break
-print("".join(ans))
+print(''.join(ans))

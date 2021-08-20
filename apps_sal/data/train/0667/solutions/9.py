@@ -1,5 +1,3 @@
-#
-
 def getAns(d, arr):
     latestDate = 0
     tempToMatch = d
@@ -12,7 +10,7 @@ def getAns(d, arr):
 def __starting_point():
     t = int(input())
     for _ in range(t):
-        N, D = input().split()
+        (N, D) = input().split()
         Arr = list(map(int, input().strip().split()))
         print(getAns(int(D), Arr[::-1]))
 

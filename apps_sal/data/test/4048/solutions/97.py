@@ -10,11 +10,9 @@ def divisor(n):
 
 N = int(input())
 m = N
-
 if len(divisor(N)) == 1:
     print(N - 1)
-
 else:
-    for i, j in divisor(N):
+    for (i, j) in divisor(N):
         m = min(m, i + j)
     print(m - 2)

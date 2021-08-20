@@ -1,8 +1,8 @@
 def available_moves(pos):
     if type(pos) != str or pos[0] not in 'ABCDEFGH' or pos[1:] not in '12345678':
         return []
-    i, j = int(pos[1]) - 1, 'ABCDEFGH'.index(pos[0])
-    final = sorted(set([f"{i}{pos[1]}"for i in 'ABCDEFGH'] + [f"{pos[0]}{i}"for i in range(1, 9)] + find(i, j) + find(i, j, 1, -1)))
+    (i, j) = (int(pos[1]) - 1, 'ABCDEFGH'.index(pos[0]))
+    final = sorted(set([f'{i}{pos[1]}' for i in 'ABCDEFGH'] + [f'{pos[0]}{i}' for i in range(1, 9)] + find(i, j) + find(i, j, 1, -1)))
     final.remove(pos)
     return final
 

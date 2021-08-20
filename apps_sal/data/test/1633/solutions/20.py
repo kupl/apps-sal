@@ -11,13 +11,13 @@ for i in range(k):
         continue
     (x, y) = x.split(maxsplit=100)
     (x, y) = (int(x) - 1, int(y) - 1)
-    if(mapp[x][y] == 1):
+    if mapp[x][y] == 1:
         continue
     else:
         mapp[x][y] += 1
         for j in range(4):
             try:
-                assert(x + u[j][0] >= 0 and y + u[j][1] >= 0)
+                assert x + u[j][0] >= 0 and y + u[j][1] >= 0
                 maqq[x + u[j][0]][y + u[j][1]] += 1
                 if maqq[x + u[j][0]][y + u[j][1]] == 4:
                     print(i + 1)

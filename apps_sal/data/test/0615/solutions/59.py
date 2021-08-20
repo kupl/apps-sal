@@ -1,13 +1,11 @@
 import sys
 from itertools import accumulate
 from bisect import bisect_left as bi_l
-
-n, *a = map(int, sys.stdin.read().split())
+(n, *a) = map(int, sys.stdin.read().split())
 
 
 def main():
     s = list(accumulate(a))
-
     ans = float('inf')
     for center in range(1, n - 2):
         pq = s[center]
@@ -19,7 +17,6 @@ def main():
                 left -= 1
             p = s[left]
         q = pq - p
-
         rt = s[-1] - pq
         right = bi_l(s, pq + rt / 2)
         if right == center + 1:
@@ -29,10 +26,8 @@ def main():
                 right -= 1
             r = s[right] - pq
         t = rt - r
-
         res = sorted([p, q, r, t])
         ans = min(ans, res[-1] - res[0])
-
     return ans
 
 

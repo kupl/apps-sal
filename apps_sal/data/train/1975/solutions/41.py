@@ -19,15 +19,8 @@ class CustomStack:
 
     def increment(self, k: int, val: int) -> None:
         tstack = []
-        while(self.stack and k > 0):
+        while self.stack and k > 0:
             tstack.append(self.stack.popleft() + val)
             k -= 1
-        while(tstack):
+        while tstack:
             self.stack.appendleft(tstack.pop())
-
-
-# Your CustomStack object will be instantiated and called as such:
-# obj = CustomStack(maxSize)
-# obj.push(x)
-# param_2 = obj.pop()
-# obj.increment(k,val)

@@ -1,2 +1,2 @@
 n = int(input())
-print((len(set(list([int(input()) for i in range(n)])))))
+print(len(set(list([int(input()) for i in range(n)]))))

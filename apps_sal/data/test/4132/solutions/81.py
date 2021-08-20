@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 l = 0
 while True:
     A = sorted(A)
@@ -10,6 +9,5 @@ while True:
     l = A.count(0)
     if l == N - 1:
         break
-
 A = sorted(A)
 print(A[-1])

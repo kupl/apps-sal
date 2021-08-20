@@ -8,7 +8,7 @@ def calculate_tip(amount, rating):
     elif rating.title() == 'Poor':
         return math.ceil(amount * 0.05)
     elif rating.title() == 'Good':
-        return math.ceil(amount * 0.10)
+        return math.ceil(amount * 0.1)
     elif rating.title() == 'Great':
         return math.ceil(amount * 0.15)
     elif rating.title() == 'Excellent':

@@ -1,6 +1,6 @@
 from math import fabs
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def f(x):
@@ -13,7 +13,7 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 li = list(map(int, input().split()))
 li = list(map(f, li))
 result = li[0]

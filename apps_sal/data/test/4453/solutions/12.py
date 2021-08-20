@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 q = int(input())
 
 
@@ -18,19 +17,13 @@ def Union(x, y):
 for testcases in range(q):
     n = int(input())
     P = list(map(int, input().split()))
-
     Group = [i for i in range(n)]
-
     for i in range(n):
         Union(i, P[i] - 1)
-
     G = [find(i) for i in range(n)]
-
     count = [0] * n
-
     for g in G:
         count[g] += 1
-
     for i in range(n):
-        print(count[G[i]], end=" ")
+        print(count[G[i]], end=' ')
     print()

@@ -1,6 +1,6 @@
 fi = open('input.txt', 'r')
-n, k = map(int, fi.readline().split())
+(n, k) = map(int, fi.readline().split())
 a = sorted(zip(map(int, fi.readline().split()), range(1, n + 1)))
 fo = open('output.txt', 'w')
 print(str(a[n - k][0]), file=fo)
-print(' '.join(str(ai[1]) for ai in a[n - k:]), file=fo)
+print(' '.join((str(ai[1]) for ai in a[n - k:])), file=fo)

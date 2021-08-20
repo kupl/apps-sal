@@ -1,6 +1,4 @@
-
-# code from gfg: https://www.geeksforgeeks.org/count-sub-arrays-sum-divisible-k/
-while(1):
+while 1:
     for _ in range(int(input())):
         n = int(input())
         l = list(map(int, input().split()))
@@ -17,12 +15,11 @@ while(1):
         cs = 0
         for i in range(n):
             cs = cs + g[i]
-            m[((cs % k) + k) % k] = m[((cs % k) + k) % k] + 1
+            m[(cs % k + k) % k] = m[(cs % k + k) % k] + 1
         r = 0
         for i in range(k):
-            if (m[i] > 1):
-                r = r + (m[i] * (m[i] - 1)) // 2
+            if m[i] > 1:
+                r = r + m[i] * (m[i] - 1) // 2
         r = r + m[0]
-
         print(r)
     break

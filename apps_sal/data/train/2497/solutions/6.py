@@ -1,7 +1,8 @@
 class Solution:
+
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         a = 0
-        while(a < len(arr) - 2):
+        while a < len(arr) - 2:
             if arr[a] & 1 and arr[a + 1] & 1 and arr[a + 2] & 1:
                 return True
             elif arr[a + 2] & 1 == 0:

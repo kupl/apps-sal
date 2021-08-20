@@ -5,8 +5,6 @@ def find_missing_number(sequence):
         for i in range(len(nums)):
             if nums[i] != i + 1:
                 return i + 1
-
         return 0
-
     except:
         return 1

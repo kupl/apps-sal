@@ -10,7 +10,7 @@ for _ in range(t):
             ev += 1
         s[i] = ev
     for i in range(q):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         l -= 1
         r -= 1
         if arr[l] % 2 == 0 or arr[r] % 2 == 0:

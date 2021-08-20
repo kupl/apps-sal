@@ -8,8 +8,8 @@ for i in range(n):
     else:
         x = 0
     if x == 3:
-        print("Yes")
+        print('Yes')
         y += 1
         break
 if y == 0:
-    print("No")
+    print('No')

@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 Alist = list(map(int, input().split()))
 already = [1]
 alreadyset = {1}

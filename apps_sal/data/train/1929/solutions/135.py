@@ -3,7 +3,6 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         self.stream = deque([])
         self.trie = {}
-
         for word in words:
             node = self.trie
             for char in word[::-1]:
@@ -21,10 +20,4 @@ class StreamChecker:
             if char not in node:
                 return False
             node = node[char]
-
         return '$' in node
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

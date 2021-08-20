@@ -2,7 +2,7 @@ def func(n):
     return n[1]
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = [[a[i], i] for i in range(len(a))]
 b.sort(reverse=True)

@@ -4,7 +4,7 @@ dis = []
 ind = []
 ii = []
 for i in range(n):
-    if(s[i] != '*'):
+    if s[i] != '*':
         dis.append(s[i])
         ii.append(i)
     else:
@@ -16,10 +16,10 @@ for i in range(m):
     t = list(input())
     dp = 0
     for j in ii:
-        if(t[j] != s[j]):
+        if t[j] != s[j]:
             dp = 1
             break
-    if(dp == 0):
+    if dp == 0:
         q = []
         for j in ind:
             q.append(t[j])
@@ -27,10 +27,9 @@ for i in range(m):
         oo = len(q)
         q = q - di
         ooo = len(q)
-        if(len(q) != 0 and oo == ooo):
+        if len(q) != 0 and oo == ooo:
             c.append(q)
-
-if(len(c) == 0):
+if len(c) == 0:
     print(0)
 else:
     ss = c[0]

@@ -20,22 +20,19 @@ def main():
                     j = j + 1
                     flag = 0
                     break
-        # print(j, "")
         if flag == 1:
             p = 0
             for k in range(j, j + 26):
-                if s[k] == "?":
+                if s[k] == '?':
                     while a[p] != 0:
                         p += 1
                     s[k] = chr(x + p)
                     p += 1
             for i in range(n):
-                if s[i] == "?":
+                if s[i] == '?':
                     s[i] = 'A'
-            print("".join(s))
-
+            print(''.join(s))
             return
-
     print(-1)
 
 

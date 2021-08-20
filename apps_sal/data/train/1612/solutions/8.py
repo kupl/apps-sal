@@ -10,14 +10,12 @@ def prod(a):
 
 
 def score(a):
-    return sum(n**a.count(n) for n in reversed(sorted(set(a)))) * len(a)
+    return sum((n ** a.count(n) for n in reversed(sorted(set(a))))) * len(a)
 
 
 def find_spec_prod_part(n, com):
     there_are_new = True
-
     partitions = partition(n)
-
     while there_are_new:
         there_are_new = False
         new_partitions = []
@@ -30,20 +28,15 @@ def find_spec_prod_part(n, com):
                         new_partitions.append(p + new)
             else:
                 new_partitions.append(p)
-
         partitions = new_partitions
-
     if len(partitions) <= 1:
-        return ("It is a prime number")
-
+        return 'It is a prime number'
     result = None
     result_score = None
-
     for p in partitions:
         if len(p) > 1:
             s = score(p)
-            if (com == "max" and (not result_score or result_score < s)) or (com == "min" and (not result_score or result_score > s)):
+            if com == 'max' and (not result_score or result_score < s) or (com == 'min' and (not result_score or result_score > s)):
                 result = p
                 result_score = s
-
     return [result, result_score]

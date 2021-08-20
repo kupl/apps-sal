@@ -1,6 +1,7 @@
 class Solution:
+
     def minimumSwap(self, s1: str, s2: str) -> int:
-        cntxy, cntyx, n = 0, 0, len(s1)
+        (cntxy, cntyx, n) = (0, 0, len(s1))
         for i in range(n):
             if s1[i] == 'x' and s2[i] == 'y':
                 cntxy += 1

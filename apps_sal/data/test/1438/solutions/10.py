@@ -1,9 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 lo = 0
-hi = 2 * 1e9
+hi = 2 * 1000000000.0
 
 
 def p(cookies):
@@ -11,7 +10,7 @@ def p(cookies):
     for i in range(len(b)):
         have = b[i]
         one = a[i]
-        remainder = have - (one * cookies)
+        remainder = have - one * cookies
         if remainder < 0:
             powder += remainder
     if powder >= 0:

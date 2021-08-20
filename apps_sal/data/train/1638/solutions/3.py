@@ -1,8 +1,8 @@
-'''
+"""
     Write a function that returns the longest contiguous palindromic substring in s. 
     In the event that there are multiple longest palindromic substrings, return the 
     first to occur.
-'''
+"""
 import re
 
 
@@ -13,7 +13,6 @@ def longest_palindrome(string):
     LPS = [0 for _ in range(len(string))]
     C = 0
     R = 0
-
     for i in range(len(string)):
         iMirror = 2 * C - i
         if R > i:
@@ -25,10 +24,8 @@ def longest_palindrome(string):
                 LPS[i] += 1
         except:
             pass
-
         if i + LPS[i] > R:
             C = i
             R = i + LPS[i]
-
-    r, c = max(LPS), LPS.index(max(LPS))
-    return string[c - r: c + r].replace("|", "")
+    (r, c) = (max(LPS), LPS.index(max(LPS)))
+    return string[c - r:c + r].replace('|', '')

@@ -13,5 +13,5 @@ def map_string():
     return input().split()
 
 
-a, b = map_input()
+(a, b) = map_input()
 print(factorial(min(a, b)))

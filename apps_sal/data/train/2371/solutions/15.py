@@ -1,5 +1,4 @@
 from sys import stdin
-
 t = int(stdin.readline().strip())
 for i in range(t):
     n = int(stdin.readline().strip())

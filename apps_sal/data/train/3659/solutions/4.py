@@ -7,4 +7,4 @@ def mean(x):
 
 def variance(words):
     x = [len(word) for word in words]
-    return round(mean([num**2 for num in x]) - mean(x)**2, 4)
+    return round(mean([num ** 2 for num in x]) - mean(x) ** 2, 4)

@@ -1,16 +1,11 @@
 import sys
 input = sys.stdin.readline
-
 MOD = 998244353
-
-
 MAX = 5 * 10 ** 5 + 5
-
 fact = [1]
 for i in range(1, MAX + 1):
     new = fact[-1] * i
     fact.append(new % MOD)
-
 invL = pow(fact[MAX], MOD - 2, MOD)
 factInv = [invL] * (MAX + 1)
 for i in range(MAX - 1, -1, -1):
@@ -30,13 +25,12 @@ def choose(a, b):
     return res
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 events = []
 for i in range(n):
-    s, e = list(map(int, input().split()))
+    (s, e) = list(map(int, input().split()))
     events.append(2 * s + 0)
     events.append(2 * e + 1)
-
 events.sort()
 count = 0
 out = 0
@@ -47,5 +41,4 @@ for t in events:
         out %= MOD
     else:
         count -= 1
-
 print(out)

@@ -3,7 +3,7 @@ from bisect import bisect_left
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     sum_a = sum(a)
     st = set()
@@ -19,8 +19,8 @@ def main():
         for i in range(n - 1):
             a_mod_t[i + 1] += a_mod_t[i]
         for i in range(n):
-            sum_L, sum_R = a_mod_t[i], a_mod_t[-1] - a_mod_t[i]
-            len_L, len_R = i + 1, n - i - 1
+            (sum_L, sum_R) = (a_mod_t[i], a_mod_t[-1] - a_mod_t[i])
+            (len_L, len_R) = (i + 1, n - i - 1)
             if sum_L == target * len_R - sum_R:
                 if sum_L <= k:
                     if ans < target:

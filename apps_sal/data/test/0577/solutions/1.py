@@ -12,28 +12,27 @@ def merge(A, B):
     return res
 
 
-N, K = map(int, readline().split())
+(N, K) = map(int, readline().split())
 R = 0
 B = 0
-
 flag = False
 table = [0] * K
 table[0] = 1
 for _ in range(N):
-    r, b = map(int, readline().split())
+    (r, b) = map(int, readline().split())
     R += r
     B += b
     if r >= K and b >= K:
         flag = True
     elif r + b >= K:
-        st, en = max(0, K - b), min(K, r)
+        (st, en) = (max(0, K - b), min(K, r))
         t2 = [0] * K
         for i in range(st, en + 1):
             t2[i % K] = 1
         table = merge(table, t2)
 if flag:
     print((R + B) // K)
-elif (R // K + B // K == (R + B) // K):
+elif R // K + B // K == (R + B) // K:
     print((R + B) // K)
 else:
     pr = R % K

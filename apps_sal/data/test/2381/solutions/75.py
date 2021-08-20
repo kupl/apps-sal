@@ -1,10 +1,10 @@
 from copy import deepcopy
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 mod = 10 ** 9 + 7
 ans = 1
-i, j = 0, n - 1
+(i, j) = (0, n - 1)
 k2 = deepcopy(k)
 while k2 > 1:
     if a[i] * a[i + 1] > a[j] * a[j - 1]:

@@ -1,11 +1,11 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 sm = sum(a)
-l, r = -1, 10 ** 20
+(l, r) = (-1, 10 ** 20)
 
 
 def check(m):
-    return round((sm + k * m) / (n + m) + 0.000001) >= k
+    return round((sm + k * m) / (n + m) + 1e-06) >= k
 
 
 while r - l > 1:

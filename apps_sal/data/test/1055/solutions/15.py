@@ -9,5 +9,5 @@ def f(a):
             return max(f(a[:k]), f(a[k:]), f(a[k + 1:]), f(a[k + 1:]))
 
 
-n, a = int(input()), list(map(int, input().split()))
+(n, a) = (int(input()), list(map(int, input().split())))
 print(f(a))

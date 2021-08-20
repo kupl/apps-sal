@@ -1,4 +1,4 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = [int(input()) for n in range(N)]
 inf = 10 ** 18
 
@@ -9,7 +9,6 @@ def dfs(cur, a, b, c):
             return abs(A - a) + abs(B - b) + abs(C - c) - 30
         else:
             return inf
-
     res0 = dfs(cur + 1, a, b, c)
     res1 = dfs(cur + 1, a + l[cur], b, c) + 10
     res2 = dfs(cur + 1, a, b + l[cur], c) + 10

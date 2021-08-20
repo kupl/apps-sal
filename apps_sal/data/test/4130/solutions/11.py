@@ -1,6 +1,5 @@
 n = int(input())
 ls = list(map(int, input().split()))
-
 ls.sort()
 res = set()
 for elt in ls:
@@ -10,5 +9,4 @@ for elt in ls:
         res.add(elt)
     elif elt + 1 not in res:
         res.add(elt + 1)
-
 print(len(res))

@@ -1,15 +1,18 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-def permutation(n, r, mod=10**9 + 7):  # 順列数
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def permutation(n, r, mod=10 ** 9 + 7):
     permutation = 1
     for i in range(r):
         permutation = permutation * (n - i) % mod
     return permutation
 
 
-def combination(n, r, mod=10**9 + 7):  # 組み合わせ数
+def combination(n, r, mod=10 ** 9 + 7):
     r = min(n - r, r)
     bunshi = permutation(n, r, mod)
     bunbo = 1
@@ -19,9 +22,9 @@ def combination(n, r, mod=10**9 + 7):  # 組み合わせ数
 
 
 def main():
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     mod2 = 998244353
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     A = list(map(int, input().split()))
     ans = 1
     for AA in A:
@@ -32,7 +35,7 @@ def main():
         print(0)
     else:
         nokori = m - sum(A)
-        print(combination(m + n, sumA + n, mod=10**9 + 7))
+        print(combination(m + n, sumA + n, mod=10 ** 9 + 7))
 
 
 def __starting_point():

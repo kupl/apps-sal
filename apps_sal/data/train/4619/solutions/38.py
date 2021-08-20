@@ -3,5 +3,4 @@ def whoseMove(lastPlayer, win):
         opp = 'black'
     else:
         opp = 'white'
-
     return lastPlayer if win else opp

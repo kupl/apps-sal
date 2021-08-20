@@ -1,6 +1,5 @@
 N = int(input())
 v = list(map(int, input().split()))
-
 vs = sorted(v)
 alc = 0
 for i in range(N):

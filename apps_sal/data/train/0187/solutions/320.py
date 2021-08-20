@@ -1,9 +1,9 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         hi = 0
         if not customers:
             return 0
-
         i = wait = tot = 0
         n = len(customers)
         r = 1
@@ -20,5 +20,4 @@ class Solution:
                 r += 1
                 if wait <= 0:
                     break
-
         return ans if hi > 0 else -1

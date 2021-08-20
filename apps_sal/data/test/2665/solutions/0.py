@@ -10,13 +10,12 @@ def main(arr):
     for i in range(len(arr)):
         for j in range(i + 1, len(arr)):
             need = 2
-            x1, y1 = arr[i]
-            x2, y2 = arr[j]
+            (x1, y1) = arr[i]
+            (x2, y2) = arr[j]
             xc = (x1 + x2) / 2
             yc = (y1 + y2) / 2
             xd = (x1 - x2) / 2
             yd = (y1 - y2) / 2
-
             x3 = xc - yd
             y3 = yc + xd
             x4 = xc + yd

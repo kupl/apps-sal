@@ -2,15 +2,14 @@ from sys import stdin, stdout
 t = int(stdin.readline())
 while t > 0:
     t -= 1
-    n, m = stdin.readline().split()
+    (n, m) = stdin.readline().split()
     n = int(n)
     m = int(m)
     b = [1] * (n + 1)
     c = [1] * (n + 1)
-
     while m > 0:
         m -= 1
-        i, j, k = stdin.readline().split()
+        (i, j, k) = stdin.readline().split()
         i = int(i)
         j = int(j)
         k = int(k)
@@ -22,7 +21,7 @@ while t > 0:
     for i in range(n):
         ar[i] = ar[i - 1]
         ar[i] *= b[i]
-        ar[i] /= (c[i])
+        ar[i] /= c[i]
     Sum = 0
     for i in range(n):
         Sum += ar[i]

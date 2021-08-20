@@ -6,9 +6,8 @@ last_r = -1
 for i in range(len(l)):
     if s[i] == 'R':
         last_r = i
-    else:
-        if last_r != -1:
-            ans = min(ans, (l[i] - l[last_r]) // 2)
+    elif last_r != -1:
+        ans = min(ans, (l[i] - l[last_r]) // 2)
 if ans == 10 ** 18:
     print(-1)
 else:

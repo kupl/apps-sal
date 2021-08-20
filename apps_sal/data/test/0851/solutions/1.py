@@ -15,8 +15,8 @@ def check(p):
 
 
 def bs(l, r):
-    while(l < r):
-        mid = (l + r) >> 1
+    while l < r:
+        mid = l + r >> 1
         if check(mid):
             r = mid
         else:
@@ -24,7 +24,6 @@ def bs(l, r):
     return l
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 tm = input()
-
 print(bs(0, n))

@@ -2,6 +2,7 @@ import heapq
 
 
 class Heapq:
+
     def __init__(self, arr, desc=False):
         if desc:
             arr = [-a for a in arr]
@@ -19,13 +20,10 @@ class Heapq:
         return self.hq[0] * self.sign
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 q = Heapq(A, True)
-
 for i in range(M):
     x = q.pop()
     q.push(x // 2)
-
-print((sum([q.pop() for _ in range(N)])))
+print(sum([q.pop() for _ in range(N)]))

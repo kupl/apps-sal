@@ -9,8 +9,8 @@ for i in range(1, len(a)):
         continue
     num.append(a[i])
     cnt.append(1)
-ans = "Agasa"
+ans = 'Agasa'
 for i in cnt:
     if i % 2 == 1:
-        ans = "Conan"
+        ans = 'Conan'
 print(ans)

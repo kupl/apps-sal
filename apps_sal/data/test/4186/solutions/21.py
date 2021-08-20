@@ -1,5 +1,4 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
-t = 1  # int(input())
+t = 1
 for test in range(t):
     n = int(input())
     a = list(map(int, input().split()))

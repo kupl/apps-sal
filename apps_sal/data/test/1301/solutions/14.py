@@ -1,7 +1,6 @@
-# -- code beginning
 n = int(input())
 s = input()
-vrs = ["vaporeon", "jolteon", "flareon", "espeon", "umbreon", "leafeon", "glaceon", "sylveon"]
+vrs = ['vaporeon', 'jolteon', 'flareon', 'espeon', 'umbreon', 'leafeon', 'glaceon', 'sylveon']
 
 
 def match(a, b):
@@ -19,5 +18,3 @@ for i in vrs:
     if match(s, i):
         print(i)
         break
-
-# -- code end

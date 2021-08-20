@@ -1,5 +1,4 @@
 n = int(input())
-
 dp = {1: 2, 2: 3}
 
 
@@ -10,8 +9,6 @@ def cost(i):
 
 
 ans = 1
-
 while cost(ans) <= n:
     ans += 1
-
 print(ans - 1)

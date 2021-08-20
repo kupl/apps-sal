@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-n, m = map(int, stdin.readline().split())
+(n, m) = map(int, stdin.readline().split())
 if m < n - 1:
     stdout.write('-1')
 elif m == n - 1:

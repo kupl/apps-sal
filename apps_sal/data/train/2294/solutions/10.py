@@ -1,15 +1,15 @@
 n = int(input())
 lis = []
-a, b = [], []
+(a, b) = ([], [])
 for i in range(n):
-    X, Y = map(int, input().split())
+    (X, Y) = map(int, input().split())
     lis.append([min(X, Y), max(X, Y)])
     a.append(min(X, Y))
     b.append(max(X, Y))
 lis.sort()
 answer = (max(a) - min(a)) * (max(b) - min(b))
-a_max, b_min = max(a), min(b)
-current = float("inf")
+(a_max, b_min) = (max(a), min(b))
+current = float('inf')
 for i in range(n):
     if lis[i][0] > b_min:
         current = min(current, a_max - b_min)

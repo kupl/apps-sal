@@ -2,10 +2,10 @@ n = int(input())
 A = list(map(int, input().split()))
 A = sorted(A)
 if A[n - 1] >= A[n - 2] + A[n - 3]:
-    print("NO")
+    print('NO')
 else:
     used = [0] * n
-    print("YES")
+    print('YES')
     for i in range(n):
         if i % 2 == n % 2:
             print(A[i], end=' ')

@@ -11,7 +11,6 @@ for testCase in range(t):
         array2.append(list(map(int, input().split())))
     for i in range(n):
         array.append(i)
-#	print array2,"     ",array1
     for i in range(n):
         print(array[i] + 1, end=' ')
     print()
@@ -19,7 +18,7 @@ for testCase in range(t):
     max = 0
     answer = []
     temp = []
-    while k < (1 << 6):
+    while k < 1 << 6:
         k += 1
         for i in range(n):
             rand = random.randint(0, len(array) - 1)
@@ -29,12 +28,11 @@ for testCase in range(t):
         count = 0
         for i in range(n):
             for j in range(n):
-                if(array1[i][j] and array2[array[i]][array[j]]):
+                if array1[i][j] and array2[array[i]][array[j]]:
                     count += 1
-        if(count > max):
+        if count > max:
             answer = array
             max = count
-            # print max,count
     for x in answer:
         print(x + 1, end=' ')
     print()

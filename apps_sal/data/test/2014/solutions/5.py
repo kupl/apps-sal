@@ -1,22 +1,13 @@
-#   ==========     //\\       //||     ||====//||
-#       ||        //  \\        ||     ||   // ||
-#       ||       //====\\       ||     ||  //  ||
-#       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====||
-#  code
-
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     c = [[-1 for i in range(n + 1)] for i in range(k)]
     dp = [0 for i in range(n + 1)]
     a = []
-
     for i in range(k):
         b = list(map(int, input().split()))
-        for j, v in enumerate(b):
+        for (j, v) in enumerate(b):
             c[i][v] = j
         a.append(b)
-
     for i in range(n):
         curpos = a[0][i]
         dp[i] = 1
@@ -35,7 +26,6 @@ def solve():
 
 def main():
     t = 1
-    # t = int(input())
     for _ in range(t):
         solve()
 

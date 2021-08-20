@@ -1,7 +1,4 @@
-# A - Double Helix
-
 b = input()
-
 if b == 'A':
     print('T')
 elif b == 'T':

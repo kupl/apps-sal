@@ -4,5 +4,5 @@ if N % 2 == 1:
 else:
     ans = 0
     for i in range(1, 50):
-        ans += (N // 2) // 5**i
+        ans += N // 2 // 5 ** i
 print(ans)

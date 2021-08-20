@@ -1,5 +1,4 @@
-A, B, K = map(int, input().split())
-
+(A, B, K) = map(int, input().split())
 num = []
 if A == B:
     print(A)

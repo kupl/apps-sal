@@ -1,10 +1,10 @@
-n, v = [int(i) for i in input().split()]
+(n, v) = [int(i) for i in input().split()]
 a = [0] * n
 b = [0] * n
 days1 = [0] * 3001
 days2 = [0] * 3001
 for i in range(n):
-    a[i], b[i] = [int(j) for j in input().split()]
+    (a[i], b[i]) = [int(j) for j in input().split()]
     days1[a[i] - 1] += b[i]
     days2[a[i]] += b[i]
 res = 0

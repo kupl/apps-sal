@@ -9,7 +9,6 @@ def read_numbers():
 
 def get_original_array(n, numbers):
     cnt = Counter(numbers)
-
     array = []
     for new_number in sorted(numbers, reverse=True):
         if cnt[new_number]:
@@ -24,23 +23,13 @@ def get_original_array(n, numbers):
 
 def test(n):
     print(n)
-    array = [randint(0, 10**9) for _ in range(n)]
+    array = [randint(0, 10 ** 9) for _ in range(n)]
     table = [gcd(a, b) for a in array for b in array]
     shuffle(table)
     print(sorted(array) == sorted(get_original_array(n, table)))
 
 
 def __starting_point():
-    #    n = 4
-    #    numbers = [2, 1, 2, 3, 4, 3, 2, 6, 1, 1, 2, 2, 1, 2, 3, 2]
-    #    print(get_original_array(n, numbers))
-    #    test(10)
-    #    test(100)
-    #    test(200)
-    #    test(300)
-    #    test(400)
-    #    test(500)
-    # else:
     n = int(input())
     numbers = read_numbers()
     print(' '.join(map(str, get_original_array(n, numbers))))

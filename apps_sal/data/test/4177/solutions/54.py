@@ -1,4 +1,3 @@
 s = input()
-
 sn = len(s)
-print(("x" * sn))
+print('x' * sn)

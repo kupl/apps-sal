@@ -1,7 +1,8 @@
-def readln(): return list(map(int, input().rstrip().split()))
+def readln():
+    return list(map(int, input().rstrip().split()))
 
 
-n, x = readln()
+(n, x) = readln()
 data = list(readln())
 data.sort()
 count = 0

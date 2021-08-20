@@ -1,10 +1,11 @@
 class Solution:
+
     def trips(self, l, c):
         currSum = 0
-        t, i = 0, 0
+        (t, i) = (0, 0)
         n = len(l)
-        while(i < n):
-            if(currSum + l[i] > c):
+        while i < n:
+            if currSum + l[i] > c:
                 currSum = 0
                 t = t + 1
             else:
@@ -15,9 +16,9 @@ class Solution:
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         low = max(weights)
         high = sum(weights)
-        while(low < high):
+        while low < high:
             mid = int(low + (high - low) / 2)
-            if(self.trips(weights, mid) <= D):
+            if self.trips(weights, mid) <= D:
                 high = mid
             else:
                 low = mid + 1

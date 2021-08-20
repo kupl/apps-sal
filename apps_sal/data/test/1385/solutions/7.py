@@ -1,5 +1,5 @@
 end = {'q': '"', 'w': ' '}
-l, cur, st = [], [], 'n'
+(l, cur, st) = ([], [], 'n')
 for ch in input() + ' ':
     if st in 'wq':
         if ch == end[st]:

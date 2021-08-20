@@ -19,4 +19,4 @@ kolvo = 0
 for i in list(koor.values()):
     if i == 1:
         kolvo += 1
-print((w * 2) / kolvo)
+print(w * 2 / kolvo)

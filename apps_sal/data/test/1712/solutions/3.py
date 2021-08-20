@@ -1,5 +1,4 @@
 __author__ = 'zhan'
-
 [n, x, y] = [int(i) for i in input().split()]
 inpu = [0] * n
 for i in range(n):
@@ -24,16 +23,15 @@ while i <= loop:
         x += ox
         y += oy
         i += 2
-final = [""] * n
+final = [''] * n
 i = 0
 for inp in inpu:
     k = inp % loop
     if hits[k] == 0:
-        final[i] = "Vanya"
+        final[i] = 'Vanya'
     elif hits[k] == 1:
-        final[i] = "Vova"
+        final[i] = 'Vova'
     else:
-        final[i] = "Both"
+        final[i] = 'Both'
     i += 1
-
-print("\n".join(final))
+print('\n'.join(final))

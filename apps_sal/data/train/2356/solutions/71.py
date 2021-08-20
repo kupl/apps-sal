@@ -1,16 +1,25 @@
-#from collections import deque,defaultdict
-def printn(x): return print(x, end='')
-def inn(): return int(input())
+def printn(x):
+    return print(x, end='')
 
 
-def inl(): return list(map(int, input().split()))
-def inm(): return map(int, input().split())
-def ins(): return input().strip()
+def inn():
+    return int(input())
 
 
-DBG = True  # and False
-BIG = 10**18
-#R = 10**9 + 7
+def inl():
+    return list(map(int, input().split()))
+
+
+def inm():
+    return map(int, input().split())
+
+
+def ins():
+    return input().strip()
+
+
+DBG = True
+BIG = 10 ** 18
 R = 998244353
 
 
@@ -19,7 +28,7 @@ def ddprint(x):
         print(x)
 
 
-n, k = inm()
+(n, k) = inm()
 dp = [[0] * (n + 1) for i in range(n + 1)]
 dp[0][0] = 1
 for i in range(1, n + 1):

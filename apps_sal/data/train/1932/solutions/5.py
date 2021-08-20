@@ -1,11 +1,7 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -> bool:
+
         def countNodes(node):
             left = 0
             if node == None:
@@ -29,7 +25,6 @@ class Solution:
                 if tmp:
                     return tmp
             return None
-
         node = searchNode(root, x)
         left = countNodes(node.left)
         right = countNodes(node.right)

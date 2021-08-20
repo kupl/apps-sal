@@ -20,7 +20,7 @@ def getTransIntList(n):
 
 n = int(input())
 if n > 1:
-    u, v = getTransIntList(n - 1)
+    (u, v) = getTransIntList(n - 1)
     for i in range(n - 1):
         u[i] -= 1
         v[i] -= 1
@@ -29,7 +29,7 @@ if n > 1:
 def solve1(n, u, v):
     nears = [set() for _ in range(n)]
     for i in range(n - 1):
-        v1, v2 = u[i], v[i]
+        (v1, v2) = (u[i], v[i])
         nears[v1].add(v2)
         nears[v2].add(v1)
     prev = [0] * n
@@ -55,9 +55,7 @@ def solve1(n, u, v):
     while len(AllVerts) > 0:
         vert = AllVerts.pop()
         for v1 in nexts[vert]:
-            #print(cutFlag[vert], cutFlag[v1]);
             cutFlag[vert] = cutFlag[v1] == cutFlag[vert]
-            # print(cutFlag[vert])
         if cutFlag[vert]:
             result += 1
     return result

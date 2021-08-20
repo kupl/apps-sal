@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.chars = {}
         self.isEnd = False
@@ -35,8 +36,3 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         return self.trie.searchNext(letter)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

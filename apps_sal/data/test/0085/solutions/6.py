@@ -15,9 +15,8 @@ def fact_remove(a, b):
     return c
 
 
-a1, b1 = list(map(int, input().split(' ')))
-a2, b2 = list(map(int, input().split(' ')))
-
+(a1, b1) = list(map(int, input().split(' ')))
+(a2, b2) = list(map(int, input().split(' ')))
 if fact_remove(a1, b1) != fact_remove(a2, b2):
     print(-1)
 else:
@@ -26,24 +25,22 @@ else:
     c2 = a2 * b2
     k1 = fact(c1, 3)
     k2 = fact(c2, 3)
-
     if k1 > k2:
         ans[1] = k1 - k2
-        c1 /= 3**ans[1]
-        c1 *= 2**ans[1]
+        c1 /= 3 ** ans[1]
+        c1 *= 2 ** ans[1]
     elif k1 < k2:
         ans[3] = k2 - k1
-        c2 /= 3**ans[3]
-        c2 *= 2**ans[3]
-
+        c2 /= 3 ** ans[3]
+        c2 *= 2 ** ans[3]
     k1 = fact(c1, 2)
     k2 = fact(c2, 2)
     if k1 > k2:
         ans[0] = k1 - k2
-        c1 /= 2**ans[0]
+        c1 /= 2 ** ans[0]
     elif k1 < k2:
         ans[2] = k2 - k1
-        c2 /= 2**ans[2]
+        c2 /= 2 ** ans[2]
     if c1 != c2:
         print(-1)
     else:

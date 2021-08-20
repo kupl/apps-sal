@@ -1,5 +1,7 @@
 def handle(func, success, failure, *exceptions):
+
     class manager:
+
         def __enter__(self):
             pass
 

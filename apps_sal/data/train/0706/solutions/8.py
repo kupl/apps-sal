@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     w = list(map(int, input().split()))
     count = 0
     while w != []:

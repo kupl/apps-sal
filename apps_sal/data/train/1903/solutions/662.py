@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         edges = []
@@ -11,13 +12,14 @@ class Solution:
         edges.sort()
         unionfind = UnionFind(N)
         for edge in edges:
-            dis, i, j = edge
+            (dis, i, j) = edge
             if unionfind.union(i, j):
                 res += dis
         return res
 
 
 class UnionFind:
+
     def __init__(self, n: int):
         self.parent = list(range(n))
         self.size = [1] * n
@@ -28,12 +30,11 @@ class UnionFind:
         return self.parent[x]
 
     def union(self, x, y):
-        rx, ry = self.find(x), self.find(y)
+        (rx, ry) = (self.find(x), self.find(y))
         if rx == ry:
             return False
         if self.size[rx] < self.size[y]:
-            rx, ry = ry, rx
-
+            (rx, ry) = (ry, rx)
         self.parent[ry] = rx
         self.size[rx] += self.size[ry]
         return True

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         l = len(nums)
         if l == 1:
@@ -17,13 +18,10 @@ class Solution:
             while max_list[0][1] < i:
                 heappop(max_list)
             return max_list[0][1]
-
         min_list = []
         max_list = []
-
         heappush(min_list, (nums[0], 0))
         heappush(max_list, (-nums[0], 0))
-
         while l > j >= i:
             heappush(min_list, (nums[j], j))
             heappush(max_list, (-nums[j], j))

@@ -3,6 +3,7 @@ from bisect import *
 
 
 class Doubling:
+
     def __init__(self, A, K_max, decrement=True):
         """
         :param A: 写像 A:i->j を定義
@@ -13,9 +14,8 @@ class Doubling:
         self.n = len(A)
         self.decrement = decrement
         self.doubling = [[-1] * self.n for _ in range(self.k_max)]
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             self.doubling[0][i] = a - self.decrement
-
         for i in range(1, self.k_max):
             for k in range(self.n):
                 if self.doubling[i - 1][k] != -1:
@@ -51,14 +51,11 @@ def binary_search_int(ok, ng, test, a, b):
     return ok
 
 
-######################################################################################
 input = sys.stdin.readline
-
 N = int(input())
 X = list(map(int, input().split()))
 L = int(input())
 Q = int(input())
-
 A = []
 for x in X:
     i = bisect_left(X, x + 1 + L)
@@ -71,8 +68,8 @@ def test(x, a, b):
 
 
 for _ in range(Q):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     print(binary_search_int(0, N, test, a, b) + 1)

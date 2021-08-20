@@ -3,13 +3,12 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     L = pow(2, N)
     Dist = [10 ** 20] * L
-
     Dist[0] = 0
     for _ in range(M):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         bit = 0
         C = [int(c) for c in input().split()]
         for c in C:
@@ -21,7 +20,6 @@ def solve():
         print(-1)
     else:
         print(Dist[L - 1])
-
     return 0
 
 

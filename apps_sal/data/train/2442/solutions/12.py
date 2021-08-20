@@ -1,4 +1,5 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         d = {}
         for c in s:
@@ -8,13 +9,11 @@ class Solution:
                 d[c] += 1
         self.d = d
         self.re = ''
-
-        print((self.d))
+        print(self.d)
         while True:
             if self.d == {}:
                 break
             smallest = min(self.d)
-
             if smallest:
                 self.re += smallest
                 if self.d[smallest] == 1:
@@ -23,7 +22,6 @@ class Solution:
                     self.d[smallest] -= 1
             else:
                 break
-
             while True:
                 nexts = None
                 for key in self.d:
@@ -41,12 +39,9 @@ class Solution:
                 else:
                     break
                 smallest = nexts
-
             if self.d == {}:
                 break
-
             biggest = max(self.d)
-
             if biggest:
                 self.re += biggest
                 if self.d[biggest] == 1:
@@ -55,7 +50,6 @@ class Solution:
                     self.d[biggest] -= 1
             else:
                 break
-
             while True:
                 nexts = None
                 for key in self.d:
@@ -73,6 +67,5 @@ class Solution:
                 else:
                     break
                 biggest = nexts
-
-        print((self.d))
+        print(self.d)
         return self.re

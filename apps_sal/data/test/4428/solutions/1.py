@@ -1,16 +1,12 @@
-
 def mi():
     return map(int, input().split())
 
 
 n = int(input())
 a = list(mi())
-
 i1 = 0
 i2 = n - 1
-
 cand = []
-
 s1 = s2 = 0
 s1 += a[i1]
 s2 += a[i2]

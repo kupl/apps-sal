@@ -10,22 +10,22 @@ def gd(n, k):
             j += 1
             n //= i
         ans *= pow(i, j % k)
-        obrans *= pow(i, (-j) % k)
+        obrans *= pow(i, -j % k)
     ans *= n
-    obrans *= pow(n, (k - 1))
-    return ans, obrans
+    obrans *= pow(n, k - 1)
+    return (ans, obrans)
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 oba = set()
 dct = {}
 for i in list(map(int, input().split())):
-    a, b = gd(i, k)
+    (a, b) = gd(i, k)
     dct[a] = dct.get(a, 0) + 1
-    a, b = min(a, b), max(a, b)
+    (a, b) = (min(a, b), max(a, b))
     oba.add((a, b))
 ans = 0
-for i, j in oba:
+for (i, j) in oba:
     if i == j:
         ans += (dct.get(i, 0) * dct.get(j, 0) - dct.get(i, 0)) // 2
     else:

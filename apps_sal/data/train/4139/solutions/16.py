@@ -1,5 +1,4 @@
 def rental_car_cost(d):
-    # your code
     if d >= 7:
         return d * 40 - 50
     elif d >= 3:

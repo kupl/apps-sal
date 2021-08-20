@@ -1,4 +1,5 @@
 class Solution:
+
     def findTargetSumWays(self, nums, S):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution:
         A >>= 1
         nums = sorted(nums)
         temp = 0
-        for ind, v in enumerate(nums):
+        for (ind, v) in enumerate(nums):
             temp += v
             for i in range(min(temp, A), v - 1, -1):
                 c[i] += c[i - v]

@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 if a + b >= c:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

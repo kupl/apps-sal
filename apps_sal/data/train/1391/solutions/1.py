@@ -1,7 +1,7 @@
 from sys import stdin
 input = stdin.readline
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = []
     c = 0
     for g in range(n):
@@ -9,7 +9,6 @@ for i in range(int(input())):
         l.append(adc)
     l.sort(key=lambda x: x[1])
     l.sort(key=lambda x: x[2])
-    # for i in range(1,len(l)):
     i = 0
     j = 0
     while i < n:
@@ -17,10 +16,9 @@ for i in range(int(input())):
             if l[i][2] != l[i - 1][2]:
                 c += 1
                 j = i
-            else:
-                if (l[i][0]) >= (l[j][1]):
-                    c += 1
-                    j = i
+            elif l[i][0] >= l[j][1]:
+                c += 1
+                j = i
         else:
             c += 1
         i += 1

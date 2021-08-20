@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minOperations(self, n: List[int]) -> int:
         nums = []
         for i in range(len(n)):
@@ -23,7 +24,6 @@ class Solution:
                 if nums[i] == 1:
                     continue
                 nums[i] = nums[i] // 2
-
             count += 1
         count += len(nums)
         return count

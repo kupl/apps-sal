@@ -6,10 +6,9 @@ def Replacing():
     for i in A:
         lis[i - 1] += 1
         res += i
-
     Q = int(input())
     for i in range(Q):
-        b, c = list(map(int, input().split()))
+        (b, c) = list(map(int, input().split()))
         num = lis[b - 1]
         res += (c - b) * num
         lis[b - 1] = 0

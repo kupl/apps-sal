@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
         total = sum(A)
         size = len(A)

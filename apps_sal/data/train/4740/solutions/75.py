@@ -5,5 +5,4 @@ def row_sum_odd_numbers(n):
         print((n, counter))
         counter += n
         n -= 1
-    return (sum(range(1, counter * 2, 2)[-lenth:]))
-    # your code here
+    return sum(range(1, counter * 2, 2)[-lenth:])

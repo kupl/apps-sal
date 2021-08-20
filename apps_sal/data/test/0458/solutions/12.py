@@ -10,7 +10,7 @@ def s(x):
 def main(a, b, c):
     ans = []
     for i in range(82):
-        x = b * (i ** a) + c
+        x = b * i ** a + c
         if 0 < x < 10 ** 9 and s(x) == i:
             ans.append(x)
     print(len(ans))
@@ -18,5 +18,5 @@ def main(a, b, c):
         print(i, end=' ')
 
 
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 main(a, b, c)

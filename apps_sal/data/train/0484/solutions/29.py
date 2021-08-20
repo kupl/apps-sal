@@ -1,13 +1,13 @@
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
-        for i in range(N, 10**7 + 1):
+        for i in range(N, 10 ** 7 + 1):
             if not self.isPalindrome(i):
                 continue
             if not self.isPrime(i):
                 continue
             return i
-
-        for i in range(10**8, 2 * 10**8):
+        for i in range(10 ** 8, 2 * 10 ** 8):
             if not self.isPalindrome(i):
                 continue
             if not self.isPrime(i):

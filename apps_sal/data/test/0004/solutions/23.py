@@ -1,11 +1,6 @@
-
-
 x = list(map(int, input().strip().split()))[0]
-h, m = list(map(int, input().strip().split()))
-
-
+(h, m) = list(map(int, input().strip().split()))
 count = 0
-
 while True:
     a = str(h)
     b = str(m)
@@ -20,5 +15,4 @@ while True:
         m += 60
     if h < 0:
         h += 24
-
 print(count)

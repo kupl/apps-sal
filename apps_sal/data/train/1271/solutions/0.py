@@ -1,13 +1,24 @@
-# fast io
 import sys
-def fop(s): sys.stdout.write(str(s) + '\n')
-def fip(): return sys.stdin.readline()
 
 
-def fintinp(): return int(fip())
-def flistinp(func=int): return list(map(func, fip().split()))
-def fnsepline(n, func=str): return [func(fip()) for _ in range(n)]
-# -------------------code------------------------
+def fop(s):
+    sys.stdout.write(str(s) + '\n')
+
+
+def fip():
+    return sys.stdin.readline()
+
+
+def fintinp():
+    return int(fip())
+
+
+def flistinp(func=int):
+    return list(map(func, fip().split()))
+
+
+def fnsepline(n, func=str):
+    return [func(fip()) for _ in range(n)]
 
 
 def even(x):
@@ -26,7 +37,6 @@ for _ in range(fintinp()):
                 e += 1
             else:
                 o += 1
-
             for n in set(nums):
                 x = n ^ qn
                 if x not in nums:
@@ -34,8 +44,6 @@ for _ in range(fintinp()):
                         e += 1
                     else:
                         o += 1
-
                     nums.add(x)
-
         nums.add(qn)
         print(e, o)

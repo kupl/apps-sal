@@ -1,6 +1,6 @@
 from math import gcd
 from functools import reduce
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 s = [x[i + 1] - x[i] for i in range(n - 1)]

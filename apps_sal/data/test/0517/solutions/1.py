@@ -1,5 +1,5 @@
-n, d, h = (int(i) for i in input().split())
-if h * 2 < d or n < d + 1 or d == 1 and n > 2:
+(n, d, h) = (int(i) for i in input().split())
+if h * 2 < d or n < d + 1 or (d == 1 and n > 2):
     print(-1)
 else:
     for i in range(h):

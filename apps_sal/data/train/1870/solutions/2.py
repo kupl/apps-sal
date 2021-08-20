@@ -1,4 +1,5 @@
 class Solution:
+
     def sampleStats(self, count: List[int]) -> List[float]:
         sosohang = 0
         sobenhat = 0
@@ -17,7 +18,7 @@ class Solution:
             sosohang += count[i]
             if count[i] > count[mode]:
                 mode = i
-            tong += (count[i] * i)
+            tong += count[i] * i
         dem = 0
         print(sosohang)
         print(tong)
@@ -28,29 +29,22 @@ class Solution:
             vitri2 = sosohang // 2 + 1
             vitri2_bool = False
             median = 0
-
             for i in range(0, len(count)):
                 dem += count[i]
                 if vitri2_bool == True and vitri1_bool == True:
                     break
                 if dem >= vitri1 and vitri1_bool == False:
                     median += i
-
                     vitri1_bool = True
                 if dem >= vitri2 and vitri2_bool == False:
                     median += i
-
                     vitri2_bool = True
-
             return [float(sobenhat), float(solonnhat), float(mean), float(median / 2), float(mode)]
         else:
             median = 0
-
             for i in range(0, len(count)):
                 dem += count[i]
-                if dem >= (sosohang // 2 + 1):
+                if dem >= sosohang // 2 + 1:
                     median += i
-
                     break
-
             return [float(sobenhat), float(solonnhat), float(mean), float(median), float(mode)]

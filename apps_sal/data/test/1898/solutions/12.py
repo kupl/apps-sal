@@ -1,11 +1,10 @@
 n = int(input())
-
-s = ""
+s = ''
 for i in range(n):
-    s += "I "
-    s += ("love" if i % 2 else "hate") + ' '
+    s += 'I '
+    s += ('love' if i % 2 else 'hate') + ' '
     if i + 1 < n:
-        s += "that "
+        s += 'that '
     else:
-        s += "it"
+        s += 'it'
 print(s)

@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 cnt = [0 for i in range(100010)]
 arr = list(map(int, input().split()))
 for num in arr:

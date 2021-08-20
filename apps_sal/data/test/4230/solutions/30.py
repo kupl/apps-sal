@@ -1,6 +1,5 @@
-x, n = map(int, input().split())
+(x, n) = map(int, input().split())
 p = [int(s) for s in input().split()]
-
 min_val = 101
 for i in range(102):
     if i not in p:

@@ -9,7 +9,7 @@ while a * x <= n:
         break
     x += 1
 if y == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
-    print(x, y, sep=" ")
+    print('YES')
+    print(x, y, sep=' ')

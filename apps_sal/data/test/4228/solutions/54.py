@@ -3,7 +3,7 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def sum_applepie(list1, l):
@@ -12,7 +12,7 @@ def sum_applepie(list1, l):
 
 
 def main():
-    n, l = Input()
+    (n, l) = Input()
     applepie = sum_applepie(list(range(1, n + 1)), l)
     list2 = []
     for i in range(1, n + 1):

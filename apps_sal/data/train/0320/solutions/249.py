@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         op = 0
         while True:
@@ -15,6 +16,5 @@ class Solution:
                     nums[i] //= 2
             if doDivision == 1:
                 op += 1
-
             if NoZero == 1:
                 return op

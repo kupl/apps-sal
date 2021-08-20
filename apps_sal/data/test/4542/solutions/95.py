@@ -1,2 +1,2 @@
 S = input()
-print(S.count("WB") + S.count("BW"))
+print(S.count('WB') + S.count('BW'))

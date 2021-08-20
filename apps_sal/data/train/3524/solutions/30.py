@@ -1,4 +1,3 @@
 def dna_to_rna(dna):
-    rna = dna.replace('T', 'U')  # Replacing the character 'T' by 'U'
-
+    rna = dna.replace('T', 'U')
     return rna

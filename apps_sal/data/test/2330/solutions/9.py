@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     if arr[0] < arr[1]:
         min1 = arr[0]

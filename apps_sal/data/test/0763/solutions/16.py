@@ -12,8 +12,8 @@ def main():
     for x in range(1, n + 1):
         c = 0
         for i in range(1, n + 1):
-            c = c + (a[i] * (abs(i - x) + abs(i - 1) + abs(1 - x) + abs(x - 1) + abs(1 - i) + abs(i - x)))
-        if (c < minc):
+            c = c + a[i] * (abs(i - x) + abs(i - 1) + abs(1 - x) + abs(x - 1) + abs(1 - i) + abs(i - x))
+        if c < minc:
             res = x
             minc = c
     stdout.write(str(minc))

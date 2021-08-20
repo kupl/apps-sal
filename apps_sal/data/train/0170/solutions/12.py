@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         k = 0
         while k + 1 < len(arr) and arr[k + 1] >= arr[k]:

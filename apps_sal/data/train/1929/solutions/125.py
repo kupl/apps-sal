@@ -1,9 +1,11 @@
 class TrieNode:
+
     def __init__(self):
-        self.children, self.end_node = {}, 0
+        (self.children, self.end_node) = ({}, 0)
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -15,6 +17,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words):
         self.trie = Trie()
         self.Stream = deque()
@@ -32,8 +35,3 @@ class StreamChecker:
             else:
                 break
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

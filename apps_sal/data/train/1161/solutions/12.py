@@ -3,9 +3,9 @@ for _ in range(t):
     string = input()
     string = list(string)
     for i in range(len(string)):
-        if string[i] == 'm' and i > 0 and string[i - 1] == 's':
+        if string[i] == 'm' and i > 0 and (string[i - 1] == 's'):
             string[i - 1] = 'x'
-        elif string[i] == 'm' and i < len(string) - 1 and string[i + 1] == 's':
+        elif string[i] == 'm' and i < len(string) - 1 and (string[i + 1] == 's'):
             string[i + 1] = 'x'
     s_count = 0
     m_count = 0

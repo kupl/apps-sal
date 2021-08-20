@@ -1,4 +1,4 @@
-data = input().split("+")
+data = input().split('+')
 data = [int(x) for x in data]
 ones = 0
 twos = 0
@@ -10,7 +10,7 @@ for number in data:
         twos += 1
     elif number == 3:
         threes += 1
-ans = ""
+ans = ''
 for i in range(ones):
     ans += '1'
     ans += '+'

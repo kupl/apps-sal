@@ -8,7 +8,7 @@ while p:
         p //= kek
     else:
         kek = k
-        lol = kek - (p % kek)
+        lol = kek - p % kek
         while lol >= kek:
             lol -= kek
         res.append(str(lol))

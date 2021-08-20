@@ -11,4 +11,4 @@ for i in a:
     if i != xc:
         a[a.index(i)] = xc
         result -= 1
-print("".join(a))
+print(''.join(a))

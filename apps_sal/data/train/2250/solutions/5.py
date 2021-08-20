@@ -1,14 +1,15 @@
 from sys import *
-def f(): return map(int, stdin.readline().split())
 
 
-n, m, k = f()
-w, h = 2 * n, 2 * m
+def f():
+    return map(int, stdin.readline().split())
 
-inf = 1e11
+
+(n, m, k) = f()
+(w, h) = (2 * n, 2 * m)
+inf = 100000000000.0
 s = [inf] * (w + h)
 a = b = t = 0
-
 while 1:
     if s[b - a] == inf:
         s[b - a] = t - a
@@ -18,8 +19,7 @@ while 1:
     b = (b + d) % h
     if a % n == b % m:
         break
-
 for i in range(k):
-    x, y = f()
-    q = min(s[b - a] + a for a in (x, w - x) for b in (y, h - y))
+    (x, y) = f()
+    q = min((s[b - a] + a for a in (x, w - x) for b in (y, h - y)))
     print(q if q < inf else -1)

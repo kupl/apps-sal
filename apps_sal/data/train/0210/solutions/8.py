@@ -1,10 +1,7 @@
 class Solution:
-    # @param {integer[]} nums
-    # @param {integer} k
-    # @param {integer} t
-    # @return {boolean}
+
     def containsNearbyAlmostDuplicate(self, nums, k, t):
-        if len(nums) == 0 or len(nums) == 1 or k < 1 or t < 0:
+        if len(nums) == 0 or len(nums) == 1 or k < 1 or (t < 0):
             return False
         d = collections.OrderedDict()
         for i in nums:
@@ -15,5 +12,4 @@ class Solution:
             if len(d) == k:
                 d.popitem(False)
             d[key] = i
-
         return False

@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     if n * m <= n + m:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

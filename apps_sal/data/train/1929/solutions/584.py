@@ -16,7 +16,6 @@ class StreamChecker:
         for word in words:
             self.insert(word[::-1])
             self.mx_length = max(self.mx_length, len(word))
-
         self.buffer = ''
 
     def insert(self, word):
@@ -33,14 +32,8 @@ class StreamChecker:
                 return False
             if cur_node.isWord:
                 return True
-
         return False
 
     def query(self, letter: str) -> bool:
         self.buffer += letter
         return self.search(self.buffer[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

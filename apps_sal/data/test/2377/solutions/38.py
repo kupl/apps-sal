@@ -1,7 +1,7 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 num = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     num.append([a, 0])
     num.append([b, 1])
 num.sort(reverse=True, key=lambda x: x[0])

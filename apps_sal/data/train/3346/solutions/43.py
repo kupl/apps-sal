@@ -20,10 +20,6 @@ def create_prime_list(m, n):
 
 
 def gap(g, m, n):
-    # g --> gap we looking for
-    # m --> segment where we start search
-    # n --> segment where we end
-
     prime_nums = create_prime_list(m, n)
     l = []
     l.append(next(prime_nums))
@@ -33,7 +29,6 @@ def gap(g, m, n):
     i = 0
     try:
         while prime_nums:
-
             if l[i + 1] - l[i] == g:
                 return [l[i], l[i + 1]]
             l.append(next(prime_nums))

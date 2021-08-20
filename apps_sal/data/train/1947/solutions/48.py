@@ -1,17 +1,16 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         if not A:
             return []
         word_map_B = self.createMapWordB(B)
         res = []
-
         for word in A:
             if self.searchWord(word, word_map_B):
                 res.append(word)
         return res
 
     def createMapWordB(self, B):
-        # Simplify B to be the combination of all letters
         max_B = [0] * 26
         for b in B:
             temp_B = self.createSingleWordCount(b)

@@ -10,10 +10,9 @@ for i in range(k):
     a[tt[0]][tt[1]] = 1
     if rs == 0:
         if a[tt[0]][tt[1] + 1] == 1:
-            if (a[tt[0] - 1][tt[1]] == 1 and a[tt[0] - 1][tt[1] + 1] == 1) or (a[tt[0] + 1][tt[1]] == 1 and a[tt[0] + 1][tt[1] + 1] == 1):
+            if a[tt[0] - 1][tt[1]] == 1 and a[tt[0] - 1][tt[1] + 1] == 1 or (a[tt[0] + 1][tt[1]] == 1 and a[tt[0] + 1][tt[1] + 1] == 1):
                 rs = i + 1
-
         if a[tt[0]][tt[1] - 1] == 1:
-            if (a[tt[0] - 1][tt[1]] == 1 and a[tt[0] - 1][tt[1] - 1] == 1) or (a[tt[0] + 1][tt[1]] == 1 and a[tt[0] + 1][tt[1] - 1] == 1):
+            if a[tt[0] - 1][tt[1]] == 1 and a[tt[0] - 1][tt[1] - 1] == 1 or (a[tt[0] + 1][tt[1]] == 1 and a[tt[0] + 1][tt[1] - 1] == 1):
                 rs = i + 1
 print(rs)

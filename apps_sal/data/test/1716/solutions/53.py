@@ -1,14 +1,12 @@
-
 def resolve():
-    n, m, q = map(int, input().split())
+    (n, m, q) = map(int, input().split())
     rosen = [[0] * n for _ in range(n)]
     for i in range(m):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         l -= 1
         r -= 1
         rosen[l][r] += 1
-    cum = [[0] * (n + 1) for _ in range((n + 1))]
-
+    cum = [[0] * (n + 1) for _ in range(n + 1)]
     for i in range(n):
         if i == 0:
             cum[0][0] = rosen[0][0]
@@ -19,7 +17,7 @@ def resolve():
             for j in range(1, n):
                 cum[i][j] = cum[i - 1][j] + cum[i][j - 1] - cum[i - 1][j - 1] + rosen[i][j]
     for i in range(q):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         p -= 1
         q -= 1
         if p == 0:

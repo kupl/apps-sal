@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def deductOdd(nums):
             n = len(nums)
             cnt = 0
@@ -17,10 +19,8 @@ class Solution:
                     nums[i] //= 2
                     allZero = False
             return allZero
-
         result = deductOdd(nums)
         while not halfEven(nums):
             result += 1
             result += deductOdd(nums)
-
         return result

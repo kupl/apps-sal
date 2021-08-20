@@ -1,6 +1,6 @@
 def values(n):
     pal = set()
-    for i in range(1, int(n**0.5)):
+    for i in range(1, int(n ** 0.5)):
         sos = i * i
         while sos < n:
             i += 1

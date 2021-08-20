@@ -2,7 +2,6 @@ def __starting_point():
     nums = input().split()
     n = int(nums[0])
     v = int(nums[1])
-
     if n < v + 2:
         print(n - 1)
     else:

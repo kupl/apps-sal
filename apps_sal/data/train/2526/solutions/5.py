@@ -1,4 +1,5 @@
 class Solution:
+
     def trailingZeroes(self, n):
         two = 0
         five = 0
@@ -12,7 +13,4 @@ class Solution:
             two = two + tmp
         res = min(five, two)
         return res
-        """
-         :type n: int
-         :rtype: int
-         """
+        '\n         :type n: int\n         :rtype: int\n         '

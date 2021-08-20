@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 H = list(map(int, input().split()))
-
 H = sorted(H)
 hp = 0
 for i in range(N - K):

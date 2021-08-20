@@ -12,7 +12,7 @@ class StreamChecker:
         self.pointers[self.q_no] = self.trie
         result = False
         to_delete = []
-        for q_no, pointer in list(self.pointers.items()):
+        for (q_no, pointer) in list(self.pointers.items()):
             if letter not in pointer:
                 to_delete.append(q_no)
                 continue
@@ -29,8 +29,3 @@ class StreamChecker:
         if word[i] not in node:
             node[word[i]] = {}
         self.add_word_to_trie(node[word[i]], word, i + 1)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

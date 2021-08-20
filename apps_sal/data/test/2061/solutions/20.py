@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.parents = [-1] * n
         self.size = [0] * n
@@ -21,7 +22,7 @@ class DSU:
         if v == u or -1 in (u, v):
             return
         if self.size[v] < self.size[u]:
-            v, u = u, v
+            (v, u) = (u, v)
         self.parents[u] = v
         self.size[v] += self.size[u]
 
@@ -31,29 +32,24 @@ def get_cart2line(m):
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     g = [list(input()) for _ in range(n)]
-
     ocean = 0
     dsu = DSU(n * m)
     dsu.make(ocean)
-
     line = get_cart2line(m)
-
     for i in range(n):
-        a, b = line(i, 0), line(i, m - 1)
+        (a, b) = (line(i, 0), line(i, m - 1))
         dsu.make(a)
         dsu.make(b)
         dsu.join(ocean, a)
         dsu.join(ocean, b)
-
     for i in range(m):
-        a, b = line(0, i), line(n - 1, i)
+        (a, b) = (line(0, i), line(n - 1, i))
         dsu.make(a)
         dsu.make(b)
         dsu.join(ocean, a)
         dsu.join(ocean, b)
-
     for i in range(n):
         for j in range(m):
             if g[i][j] == '.':
@@ -64,7 +60,6 @@ def main():
                 if i > 0:
                     if g[i - 1][j] == '.':
                         dsu.join(line(i - 1, j), line(i, j))
-
     s = set()
     for i in range(n):
         for j in range(m):

@@ -1,5 +1,5 @@
 for __ in range(int(input())):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     if a == c or b == d:
         print(abs(a - c) + abs(b - d))
     else:

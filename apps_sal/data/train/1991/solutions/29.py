@@ -1,6 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
 
         @lru_cache(None)
         def fn(n, x):
@@ -13,5 +14,4 @@ class Solution:
                 if nn != n:
                     ans += fn(nn, x - abs(locations[n] - locations[nn]))
             return ans
-
         return fn(start, fuel) % MOD

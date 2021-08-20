@@ -1,9 +1,9 @@
-'''input
+"""input
 3
 aa
 jj
 aa
-'''
+"""
 
 
 def list_input():
@@ -26,9 +26,9 @@ for _ in range(n):
     s = s[::-1]
     for i in range(len(s)):
         try:
-            d[s[i]] += 10**i
+            d[s[i]] += 10 ** i
         except:
-            d[s[i]] = 10**i
+            d[s[i]] = 10 ** i
             pos[s[i]] = True
         if i == len(s) - 1:
             pos[s[i]] = False
@@ -41,7 +41,6 @@ for i in d:
 if len(b):
     a.remove(max(b))
 a.sort(reverse=True)
-# print(a)
 ans = 0
 for i in range(len(a)):
     ans += (i + 1) * a[i]

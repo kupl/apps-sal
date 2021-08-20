@@ -1,13 +1,10 @@
 from sys import setrecursionlimit
 setrecursionlimit(10000)
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 a = [[False for j in range(n + 1)] for i in range(n + 1)]
 b = [False for i in range(n + 1)]
-
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     a[x][y] = True
     a[y][x] = True
 

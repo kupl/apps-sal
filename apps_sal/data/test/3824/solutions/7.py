@@ -1,5 +1,5 @@
-x, y = list(map(int, input().split()))
-fx, fy = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
+(fx, fy) = list(map(int, input().split()))
 ans = 0
 if x == fx or y == fy:
     ans = 2

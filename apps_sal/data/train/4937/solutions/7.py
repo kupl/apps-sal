@@ -9,5 +9,4 @@ def martingale(bank, outcomes, bet=BASE_BET):
         else:
             bank -= bet
             bet *= 2
-
     return bank

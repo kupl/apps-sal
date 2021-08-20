@@ -4,7 +4,7 @@ try:
         weights = [int(x) for x in input().strip().split()]
         count = 0
         for x in weights:
-            if(x >= (n / 2)):
+            if x >= n / 2:
                 count += 1
         print(count)
 except:

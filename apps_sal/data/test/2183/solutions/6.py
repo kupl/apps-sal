@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 if int(a) + int(b) == 3:
     print('3')
 if int(a) + int(b) == 4:

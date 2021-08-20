@@ -1,9 +1,15 @@
-M = 0x3b9aca07
-def rd(): return list(map(int, input().split()))
-def inv(x): return (M - M // x) * inv(M % x) % M if x - 1 else 1
+M = 1000000007
 
 
-n, k = rd()
+def rd():
+    return list(map(int, input().split()))
+
+
+def inv(x):
+    return (M - M // x) * inv(M % x) % M if x - 1 else 1
+
+
+(n, k) = rd()
 w = sum(rd()) % M
 modinv = [0, 1]
 for i in range(2, 200005):

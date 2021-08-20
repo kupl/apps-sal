@@ -1,4 +1,4 @@
-m, n, k = list(map(int, input().split()))
+(m, n, k) = list(map(int, input().split()))
 Matrix = []
 for i in range(m):
     s = input()
@@ -18,7 +18,6 @@ for i in range(m):
                 count += 1
         else:
             res = 0
-
 for i in range(n):
     res = 0
     for j in range(m):
@@ -30,5 +29,4 @@ for i in range(n):
             res = 0
 if k == 1:
     count //= 2
-
 print(count)

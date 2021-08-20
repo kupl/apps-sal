@@ -1,4 +1,5 @@
 class Solution:
+
     def lastStoneWeightII(self, stones: List[int]) -> int:
         n = len(stones)
         total = sum(stones)
@@ -6,7 +7,6 @@ class Solution:
         dp = [[False] * (1 + total) for _ in range(1 + n)]
         for i in range(n + 1):
             dp[i][0] = True
-
         for i in range(1, n + 1):
             s = stones[i - 1]
             for j in range(1, 1 + total):

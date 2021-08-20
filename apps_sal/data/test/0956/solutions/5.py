@@ -1,8 +1,8 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 fr = []
 ppl = set()
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     fr.append((a, b))
     ppl.add(a)
     ppl.add(b)
@@ -12,7 +12,6 @@ for i in ppl:
 for i in fr:
     pairs[i[0]].add(i[1])
     pairs[i[1]].add(i[0])
-# print (pairs)
 for i in sorted(ppl):
     tmp = []
     pi = pairs[i]
@@ -22,4 +21,4 @@ for i in sorted(ppl):
             continue
         if len(pi.intersection(pairs[j])) * 100 >= qwe:
             tmp.append(j)
-    print("%d: %d %s" % (i, len(tmp), ' '.join(map(str, sorted(tmp)))))
+    print('%d: %d %s' % (i, len(tmp), ' '.join(map(str, sorted(tmp)))))

@@ -10,4 +10,4 @@ for _ in range(int(input())):
     for i in range(n - 2, -1, -1):
         if h[i] > h[i + 1] + 1:
             h[i] = h[i + 1] + 1
-    print(s - max(h)**2)
+    print(s - max(h) ** 2)

@@ -1,5 +1,6 @@
-class Combination():
-    def __init__(self, n, mod=10**9 + 7):
+class Combination:
+
+    def __init__(self, n, mod=10 ** 9 + 7):
         self.mod = mod
         self.fac = [1] * (n + 1)
         for i in range(1, n + 1):
@@ -24,14 +25,16 @@ class Combination():
 
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, m = map(int, input().split())
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, m) = map(int, input().split())
     c = Combination(m)
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     ans = 0
     for i in range(n + 1):
         tmp = c.combination(n, i) * pow(-1, i % 2) * c.permutation(m, i) % mod
-        tmp *= c.permutation(m - i, n - i)**2
+        tmp *= c.permutation(m - i, n - i) ** 2
         tmp %= mod
         ans += tmp
         ans %= mod

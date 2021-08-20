@@ -1,12 +1,10 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 points = []
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     points.append((x, y))
-
 points.sort()
 ans = float('inf')
-
 for i in range(n - k + 1):
     for j in range(i + k - 1, n):
         y_sorted = sorted(points[i:j + 1], key=lambda x: x[1])

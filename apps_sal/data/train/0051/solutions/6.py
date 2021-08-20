@@ -4,10 +4,7 @@ def doall():
     def solve(n, k, d1, d2):
         if n % 3 == 0:
             r = n - k
-            a = [[0, d1, d1 + d2],
-                 [0, d1, d1 - d2],
-                 [0, -d1, -d1 + d2],
-                 [0, -d1, -d1 - d2]]
+            a = [[0, d1, d1 + d2], [0, d1, d1 - d2], [0, -d1, -d1 + d2], [0, -d1, -d1 - d2]]
             for now in a:
                 mn = min(now)
                 sumn = sum(now)
@@ -17,12 +14,11 @@ def doall():
                 w = max(now)
                 tmp = 3 * w - sumn
                 if tmp <= r and (r - tmp) % 3 == 0:
-
                     return True
         return False
     ans = []
     for i in range(t):
-        n, k, d1, d2 = list(map(int, input().split()))
+        (n, k, d1, d2) = list(map(int, input().split()))
         if solve(n, k, d1, d2):
             ans.append('yes')
         else:

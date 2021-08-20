@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
         let = Counter(letters)
         x = 0
@@ -8,7 +9,7 @@ class Solution:
         while x < len(words):
             dic = Counter(words[x])
             bx = True
-            for k, v in dic.items():
+            for (k, v) in dic.items():
                 if let[k] < v:
                     words.pop(x)
                     bx = False
@@ -29,9 +30,9 @@ class Solution:
                     tmp = dict(let)
                     bx = True
                     d = 0
-                    for k, v in word[words[i]].items():
+                    for (k, v) in word[words[i]].items():
                         let[k] -= v
-                        d += (sc[k] * v)
+                        d += sc[k] * v
                         if let[k] < 0:
                             bx = False
                             break

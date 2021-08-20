@@ -2,7 +2,6 @@ from datetime import date, timedelta
 
 
 def calc(y):
-
     st = date(y, 1, 1)
     fin = date(y, 12, 31)
     numday = timedelta(days=1)

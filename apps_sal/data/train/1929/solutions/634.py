@@ -4,17 +4,16 @@ class StreamChecker:
         self.root = {}
         self.END = '0'
         self.q = ''
-
         for word in words:
             curr_dict = self.root
-            for letter in word[::-1]:  # save in reverse
+            for letter in word[::-1]:
                 curr_dict = curr_dict.setdefault(letter, {})
             curr_dict[self.END] = self.END
 
     def query(self, letter: str) -> bool:
         self.q += letter
         curr_node = self.root
-        for l in self.q[::-1]:  # search in reverse as well
+        for l in self.q[::-1]:
             if l in curr_node:
                 curr_node = curr_node.get(l)
             else:

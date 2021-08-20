@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
 if a[0] > K:
     ans = a[0] - K

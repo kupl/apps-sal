@@ -1,5 +1,5 @@
 def go():
-    a, b, c = [int(i) for i in input().split(' ')]
+    (a, b, c) = [int(i) for i in input().split(' ')]
     x = 0
     while True:
         if a + b > c:

@@ -12,5 +12,4 @@ totalDistance = 0
 for i in range(N - 1):
     for j in range(i + 1, N):
         totalDistance += getDistance(sites[i], sites[j])
-
 print(2 * totalDistance / N)

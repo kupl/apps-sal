@@ -4,7 +4,7 @@ def prime(n):
     elif n % 2 == 0:
         return False
     else:
-        for k in range(3, 1 + int(n ** .5), 2):
+        for k in range(3, 1 + int(n ** 0.5), 2):
             if n % k == 0:
                 return False
     return True
@@ -12,12 +12,11 @@ def prime(n):
 
 t = int(input())
 for i in range(t):
-    a, b = list(map(int, input().split()))
-    n = (a + b)
+    (a, b) = list(map(int, input().split()))
+    n = a + b
     if a - b > 1:
         print('NO')
+    elif prime(n):
+        print('YES')
     else:
-        if prime(n):
-            print('YES')
-        else:
-            print('NO')
+        print('NO')

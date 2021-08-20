@@ -1,9 +1,9 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges = sorted(edges, key=lambda l: l[0], reverse=True)
         uf_a = [i for i in range(n)]
         uf_b = [j for j in range(n)]
-
         cnt = 0
         for edge in edges:
             if edge[0] == 3:
@@ -11,7 +11,7 @@ class Solution:
                 self.union(uf_b, edge[1] - 1, edge[2] - 1)
             elif edge[0] == 1:
                 cnt += self.union(uf_a, edge[1] - 1, edge[2] - 1)
-            else:  # edge[0] == 2
+            else:
                 cnt += self.union(uf_b, edge[1] - 1, edge[2] - 1)
         if not self.connected(uf_a) or not self.connected(uf_b):
             return -1

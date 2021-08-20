@@ -1,4 +1,4 @@
-n, ones, twos = list(map(int, input().split()))
+(n, ones, twos) = list(map(int, input().split()))
 semi = 0
 deny = 0
 humans = list(map(int, input().split()))

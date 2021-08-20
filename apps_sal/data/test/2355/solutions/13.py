@@ -6,14 +6,12 @@ def readints():
 
 
 def solve():
-    n, p = readints()
-    # 2n-3
+    (n, p) = readints()
     viz = [[0] * n for _ in range(n)]
     for j in range(n):
         viz[0][j] = viz[j][0] = 1
     for j in range(n):
         viz[1][j] = viz[j][1] = 1
-    # p+3
     leftover = p + 3
     done = False
     for i in range(n):

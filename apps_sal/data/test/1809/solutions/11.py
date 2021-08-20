@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 w = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 ans = 0
 for i in range(m):
     flag = dict()
@@ -13,5 +10,4 @@ for i in range(m):
         if flag.get(b[j], True):
             ans += w[b[j] - 1]
             flag[b[j]] = False
-
 print(ans)

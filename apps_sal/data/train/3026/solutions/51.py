@@ -1,5 +1,4 @@
 def min_value(digits):
-    # your code here
     new = sorted(digits)
     i = 0
     j = i + 1
@@ -10,5 +9,4 @@ def min_value(digits):
             nodup.append(i)
     for i in nodup:
         stri += str(i)
-
     return int(stri)

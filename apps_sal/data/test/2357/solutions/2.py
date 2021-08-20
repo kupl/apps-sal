@@ -1,7 +1,5 @@
 import math
-
 import collections
-
 a = collections.OrderedDict()
 
 
@@ -10,7 +8,6 @@ def main():
     for i in range(t):
         n = int(input())
         t = tuple([int(x) for x in input().split()])
-
         result = None
         occ = dict()
         for k in range(len(t)):

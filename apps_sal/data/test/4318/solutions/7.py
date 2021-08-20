@@ -1,6 +1,5 @@
 N = int(input())
 H = list(map(int, input().split()))
-
 max_height = 0
 count = 0
 for h in H:

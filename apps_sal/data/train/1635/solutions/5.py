@@ -3,4 +3,4 @@ def middle_permutation(string):
     start = letters.pop(len(string) // 2)
     if len(string) % 2:
         start += letters.pop(len(string) // 2)
-    return start + "".join(letters)
+    return start + ''.join(letters)

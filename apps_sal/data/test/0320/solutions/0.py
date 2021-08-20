@@ -1,9 +1,9 @@
 N = int(input())
 Check = False
 Sum = 0
-Sum_l, Sum_r = 0, 0
+(Sum_l, Sum_r) = (0, 0)
 for i in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     Sum_l += x
     Sum_r += y
     Sum += x + y

@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, t: int) -> int:
         cur = 0
         ans = 0

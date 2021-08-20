@@ -1,31 +1,24 @@
 lip = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds', 'Rg', 'Cn', 'Nh', 'Fl', 'Mc', 'Lv', 'Ts', 'Og']
 for i in range(len(lip)):
     lip[i] = lip[i].upper()
-
 s = input()
-dp = [False] * (len(s))
-
+dp = [False] * len(s)
 for i in range(len(dp)):
-    # print(i)
-    if (s[i] in lip):
-        # print('here1')
-        if (i - 1 >= 0):
-            if (dp[i - 1]):
+    if s[i] in lip:
+        if i - 1 >= 0:
+            if dp[i - 1]:
                 dp[i] = True
         else:
             dp[i] = True
     if i > 0:
-        # print('here2')
         a = s[i - 1] + s[i]
-        # print(a)
-        if (a in lip):
-            if (i - 2 >= 0):
-                if (dp[i - 2]):
+        if a in lip:
+            if i - 2 >= 0:
+                if dp[i - 2]:
                     dp[i] = True
             else:
                 dp[i] = True
-# print(dp)
-if (dp[len(s) - 1]):
+if dp[len(s) - 1]:
     print('YES')
 else:
     print('NO')

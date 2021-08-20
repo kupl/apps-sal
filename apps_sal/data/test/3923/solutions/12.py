@@ -1,14 +1,7 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def main():
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     if a < b:
-        a, b = b, a
+        (a, b) = (b, a)
     s = []
     k = 1
     ok = False

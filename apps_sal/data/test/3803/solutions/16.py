@@ -7,12 +7,13 @@ from itertools import accumulate
 from sys import stdout
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-hy, ay, dy = R()
-hm, am, dm = R()
-ch, ca, cd = R()
+(hy, ay, dy) = R()
+(hm, am, dm) = R()
+(ch, ca, cd) = R()
 res = math.inf
 for ayp in range(1000):
     if ay + ayp > dm:

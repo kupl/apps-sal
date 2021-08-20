@@ -1,16 +1,15 @@
 import sys
-sys.setrecursionlimit(10**7)
-n, k = map(int, input().split())
+sys.setrecursionlimit(10 ** 7)
+(n, k) = map(int, input().split())
 li = [[] for _ in range(n + 1)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = k
-perm = [1] * (n)  # 組み合わせ(k-2)P(要素)
-
+perm = [1] * n
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     li[a].append(b)
     li[b].append(a)
-    perm[i + 1] = (perm[i] * (k - 2 - i)) % mod
+    perm[i + 1] = perm[i] * (k - 2 - i) % mod
 
 
 def dfs(now, before):
@@ -24,7 +23,6 @@ def dfs(now, before):
     else:
         ko = len(li[now]) - 1
         ret = perm[ko] % mod
-
     for i in li[now]:
         if i == before:
             continue
@@ -33,5 +31,4 @@ def dfs(now, before):
 
 
 ans *= dfs(1, 0)
-
 print(ans % mod)

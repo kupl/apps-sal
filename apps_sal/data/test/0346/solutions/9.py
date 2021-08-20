@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 for i in range(len(b)):
@@ -17,7 +17,7 @@ for i in range(len(d)):
 c = sorted(c)
 if sum < c[-1]:
     sum += c[-1]
-    sum *= (2**(len(c) - 1))
+    sum *= 2 ** (len(c) - 1)
 else:
-    sum *= (2**len(c))
+    sum *= 2 ** len(c)
 print(sum)

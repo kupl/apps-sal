@@ -1,4 +1,4 @@
-M = 0x3b800001
+M = 998244353
 wa = 0
 n = int(input())
 a = list(map(int, input().split()))

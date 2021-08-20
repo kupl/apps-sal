@@ -1,6 +1,5 @@
 from sys import stdin
 debug = False
-
 try:
     import os
     if os.environ['COMPUTERNAME'] == 'KRUEGER-PC':
@@ -14,13 +13,13 @@ def debug_print(*foo):
         print(foo)
 
 
-debug_print("debug active")
+debug_print('debug active')
 
 
 def print_array(res, size):
     if size:
         print(len(res))
-    print(" ".join(map(str, res)))
+    print(' '.join(map(str, res)))
 
 
 def input_int_tuple():
@@ -29,9 +28,8 @@ def input_int_tuple():
 
 def input_int_array(size=True):
     if size:
-        # read
         values = stdin.readline().split()
-        assert(len(values) == 1)
+        assert len(values) == 1
     return [x for x in map(int, stdin.readline().split())]
 
 
@@ -41,9 +39,8 @@ def input_string():
 
 def problem():
     import re
-    bear = "bear"
+    bear = 'bear'
     s = input_string()
-
     diffs = []
     prev = 0
     cnt = 0
@@ -51,21 +48,17 @@ def problem():
         cnt += 1
         diffs.append(m.start() - prev)
         prev = m.end()
-
     if cnt > 0:
         diffs.append(len(s) - prev)
     else:
         return 0
-
     res = 0
-    for i, v in enumerate(diffs):
+    for (i, v) in enumerate(diffs):
         if i > 0:
             v += 3
         if i < len(diffs) - 1:
             v += 3
-
         res += (v * v - v) // 2 + v
-
     cor = (len(diffs) - 1) * 3
     res = res - cor
     n = len(s)
@@ -73,8 +66,3 @@ def problem():
 
 
 print(problem())
-
-
-#print_array(problem(), False)
-
-#xx = input_string()

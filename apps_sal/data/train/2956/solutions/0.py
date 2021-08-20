@@ -1,10 +1,10 @@
 def encode(stg):
-    return "".join(digit * 3 for char in stg for digit in f"{ord(char):08b}")
+    return ''.join((digit * 3 for char in stg for digit in f'{ord(char):08b}'))
 
 
 def decode(binary):
     reduced = (get_digit(triplet) for triplet in chunks(binary, 3))
-    return "".join(get_char(byte) for byte in chunks("".join(reduced), 8))
+    return ''.join((get_char(byte) for byte in chunks(''.join(reduced), 8)))
 
 
 def chunks(seq, size):

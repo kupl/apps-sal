@@ -1,10 +1,29 @@
-def wrapper_fun(func, lst): return func(lst)
-def fib(lst): return lst[-1] + lst[-2]
-def tri(lst): return lst[-1] + lst[-2] + lst[-3]
-def tet(lst): return lst[-1] + lst[-2] + lst[-3] + lst[-4]
-def pad(lst): return lst[-2] + lst[-3]
-def pel(lst): return lst[-1] * 2 + lst[-2]
-def jac(lst): return lst[-1] + lst[-2] * 2
+def wrapper_fun(func, lst):
+    return func(lst)
+
+
+def fib(lst):
+    return lst[-1] + lst[-2]
+
+
+def tri(lst):
+    return lst[-1] + lst[-2] + lst[-3]
+
+
+def tet(lst):
+    return lst[-1] + lst[-2] + lst[-3] + lst[-4]
+
+
+def pad(lst):
+    return lst[-2] + lst[-3]
+
+
+def pel(lst):
+    return lst[-1] * 2 + lst[-2]
+
+
+def jac(lst):
+    return lst[-1] + lst[-2] * 2
 
 
 def zozonacci(pattern, length):

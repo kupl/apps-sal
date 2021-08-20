@@ -1,11 +1,11 @@
 x = input().split()
 r = int(x[0])
-mas = ""
+mas = ''
 for i in range(r):
     if i + 1 == r:
         mas = input()
-        mas = mas + "."
-        mas = "." + mas
+        mas = mas + '.'
+        mas = '.' + mas
     else:
         input()
 g = 0

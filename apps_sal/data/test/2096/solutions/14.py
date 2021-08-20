@@ -23,6 +23,6 @@ for i in range(10, 100):
         for j in range(2, len(g[i])):
             r.append(g[i][j])
 for i in range(len(r)):
-    arr[r[i]] = 2 - (i % 2)
+    arr[r[i]] = 2 - i % 2
 print(x * y)
 print(*arr)

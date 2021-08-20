@@ -1,5 +1,5 @@
 def ffb(n):
-    a, b = 1, 1
+    (a, b) = (1, 1)
     for i in range(n):
         if a % 15 == 0:
             yield 'FizzBuzz'
@@ -9,7 +9,7 @@ def ffb(n):
             yield 'Buzz'
         else:
             yield a
-        a, b = b, a + b
+        (a, b) = (b, a + b)
 
 
 def fibs_fizz_buzz(n):

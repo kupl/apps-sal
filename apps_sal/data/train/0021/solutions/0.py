@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
     n = list(input().strip())
     s = list(map(int, input().strip().split()))
-
     check = set(s)
     found = False
     for i in range(1, 1025):

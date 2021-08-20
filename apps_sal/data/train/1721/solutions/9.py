@@ -49,7 +49,7 @@ def to_base(num, base, alphabet):
         num = num // base
     conv.append(alphabet[num])
     conv.reverse()
-    return "".join([str(i) for i in conv])
+    return ''.join([str(i) for i in conv])
 
 
 def decimal(num, alphabet, base):
@@ -62,7 +62,7 @@ def decimal(num, alphabet, base):
     print(dec)
     dec.reverse()
     decimal = 0
-    for i, n in enumerate(dec):
-        decimal += n * base**i
+    for (i, n) in enumerate(dec):
+        decimal += n * base ** i
     print(decimal)
     return decimal

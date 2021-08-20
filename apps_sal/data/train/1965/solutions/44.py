@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         elements = [-1] * (n + 1)
         elements[0] = 0
@@ -23,10 +24,10 @@ class Solution:
             return True
 
         def count(elements):
-            return sum(1 for i in elements if i < 0)
+            return sum((1 for i in elements if i < 0))
         edges.sort(key=lambda k: k[0])
         result = 0
-        for t, u, v in reversed(edges):
+        for (t, u, v) in reversed(edges):
             if t == 3:
                 if not union(elements, u, v):
                     result += 1

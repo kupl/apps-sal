@@ -21,7 +21,7 @@ def destroy(A):
     return A
 
 
-n, k, x = map(int, input().split())
+(n, k, x) = map(int, input().split())
 A = list(map(int, input().split()))
 res = 0
 for i in range(len(A) + 1):

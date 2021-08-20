@@ -1,5 +1,4 @@
-# B
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 min_m = 1000
 count = 0
 for _ in range(n):
@@ -7,6 +6,5 @@ for _ in range(n):
     min_m = min(min_m, m)
     x -= m
     count += 1
-
 count += x // min_m
 print(count)

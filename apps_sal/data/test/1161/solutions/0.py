@@ -3,7 +3,7 @@ a = []
 fl = True
 z = 0
 for i in seq:
-    if i == '<' or i == '[' or i == '{' or i == '(':
+    if i == '<' or i == '[' or i == '{' or (i == '('):
         a.append(i)
     elif i == '>':
         if len(a) and a[-1] == '<':

@@ -1,8 +1,6 @@
 def __starting_point():
-    n, b = (int(x) for x in input().split())
-
+    (n, b) = (int(x) for x in input().split())
     primes = dict()
-
     bcopy = b
     for i in range(2, int(bcopy ** 0.5) + 1):
         cnt = 0
@@ -13,8 +11,6 @@ def __starting_point():
             primes[i] = cnt
     if bcopy > 1:
         primes[bcopy] = 1
-    # print(primes)
-
     prime___npow = {}
     count = 0
     for prime in primes:
@@ -24,10 +20,8 @@ def __starting_point():
             pw += 1
         prime___npow[prime] = count
         count = 0
-    # print(prime___npow)
     MAX = 10 ** 18
     count = MAX
-
     for prime in primes:
         curr = prime___npow[prime] // primes[prime]
         count = min(count, curr)

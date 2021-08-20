@@ -13,7 +13,6 @@ for i in range(N):
         TLE += 1
     elif S == 'RE':
         RE += 1
-
 print('AC x ', AC)
 print('WA x ', WA)
 print('TLE x ', TLE)

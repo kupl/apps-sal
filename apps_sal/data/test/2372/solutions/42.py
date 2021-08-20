@@ -1,14 +1,13 @@
 from collections import deque
-H, W = map(int, input().split())
-c = tuple(int(x) + 1 for x in input().split())
+(H, W) = map(int, input().split())
+c = tuple((int(x) + 1 for x in input().split()))
 d = [int(x) + 1 for x in input().split()]
 maze = [[-1] * (W + 4), [-1] * (W + 4)]
-
 for i in range(H):
     temp = []
     s0 = input()
     s0 = '11' + s0.replace('.', '0').replace('#', '1') + '11'
-    for j, s in enumerate(s0):
+    for (j, s) in enumerate(s0):
         temp.append(-int(s))
     maze.append(temp)
 maze.append([-1] * (W + 4))
@@ -27,16 +26,12 @@ def check(i, j, delta):
         for jj in range(j - 2, j + 3):
             if maze[ii][jj] == 0:
                 dset.add((ii, jj))
-
     else:
         jj = j + 3 * delta[1]
         for ii in range(i - 2, i + 3):
             if maze[ii][jj] == 0:
                 dset.add((ii, jj))
-
     return
-
-# bfs
 
 
 k = 1
@@ -46,8 +41,6 @@ while tempbfs:
     if flag == 1:
         break
     p = tempbfs.popleft()
-
-    # dfs
     if maze[p[0]][p[1]] != 0:
         continue
     maze[p[0]][p[1]] = p[2]
@@ -71,7 +64,6 @@ while tempbfs:
                 break
             temp.append((y, x))
             check(p0[0], p0[1], delta)
-
     if flag == 1:
         break
     for l in dset:
@@ -80,5 +72,4 @@ while tempbfs:
     dset = check55(p[0], p[1])
     for l in dset:
         tempbfs.append([l[0], l[1], p[2] + 1])
-
 print(k - 1 if flag else -1)

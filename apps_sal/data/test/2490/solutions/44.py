@@ -1,8 +1,7 @@
 N = list(map(int, list(input())))[::-1]
 L = len(N)
-
 answer = 0
-for i, n in enumerate(N):
+for (i, n) in enumerate(N):
     if n < 5:
         answer += n
     elif n > 5:
@@ -16,5 +15,4 @@ for i, n in enumerate(N):
         if i < L - 1:
             if N[i + 1] >= 5:
                 N[i + 1] += 1
-
 print(answer)

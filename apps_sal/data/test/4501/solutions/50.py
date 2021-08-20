@@ -1,4 +1,4 @@
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 X = list(map(int, input().split()))
 dp = [[0] * 2501 for _ in range(n + 1)]
 dp[0][0] = 1

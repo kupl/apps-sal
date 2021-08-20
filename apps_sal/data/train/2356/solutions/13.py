@@ -1,10 +1,7 @@
 def solve():
     MOD = 998244353
-
-    N, K = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
     N2 = N - N % 2
-
     dp = [[0] * (N + 1) for _ in range(N - K + 1)]
     accRevDp = [[0] * (N + 1) for _ in range(N - K + 1)]
     dp[0][K] = 1
@@ -16,7 +13,6 @@ def solve():
             dp[i][j] = accRevDp[i - j // 2][j // 2]
             accRevDp[i][j + 1] = accRevDp[i][j + 2]
             accRevDp[i][j] = (accRevDp[i][j + 1] + dp[i][j]) % MOD
-
     ans = sum(dp[N - K]) % MOD
     print(ans)
 

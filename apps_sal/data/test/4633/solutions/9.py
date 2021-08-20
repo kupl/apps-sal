@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     savn = n
     cd = 1
     while cd <= n:

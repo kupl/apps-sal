@@ -1,4 +1,4 @@
-n, q, k = map(int, input().split())
+(n, q, k) = map(int, input().split())
 arr = list(map(int, input().split()))
 query = list(input())
 q_ = len(query)
@@ -9,12 +9,12 @@ if c == n:
         print(0)
 else:
     for i in range(q_):
-        if (i != 0) and (query[i] == '?' and query[i - 1] == '?'):
+        if i != 0 and (query[i] == '?' and query[i - 1] == '?'):
             print(max_c)
         elif query[i] == '?':
             max_c = cnt = 0
             for j in range(n):
-                if (j != n - 1) and (arr[j] == 1 and arr[j + 1] == 1):
+                if j != n - 1 and (arr[j] == 1 and arr[j + 1] == 1):
                     cnt += 1
                 else:
                     max_c = max(max_c, cnt + 1)

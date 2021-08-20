@@ -1,6 +1,6 @@
 t = int(input())
 for k in range(t):
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     c = 0
     e = 2 * n + p
     for i in range(1, n + 1):

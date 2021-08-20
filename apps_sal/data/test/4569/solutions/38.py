@@ -1,5 +1,4 @@
 S = input()
-
 if S == 'Rainy':
     print('Sunny')
 elif S == 'Cloudy':

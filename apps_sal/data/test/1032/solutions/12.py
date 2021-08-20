@@ -1,11 +1,11 @@
 import math
 import sys
 input = sys.stdin.readline
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 a = sorted([int(_) for _ in input().split()])
-inf = 10**18
+inf = 10 ** 18
 bad = dict()
-low, high = 1, inf
+(low, high) = (1, inf)
 opt = [0] * p
 for i in range(n):
     j = (i + 1) % p

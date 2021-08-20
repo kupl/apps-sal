@@ -1,5 +1,5 @@
 input = __import__('sys').stdin.readline
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 ans = []
 cx = cy = 1
 for i in range(x + y - 1):

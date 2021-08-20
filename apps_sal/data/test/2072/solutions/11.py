@@ -1,9 +1,6 @@
-# Binary search
-
 n = int(input())
 x = [int(x) for x in input().strip().split(' ')]
 v = [int(x) for x in input().strip().split(' ')]
-
 p = 0
 q = 1.0 * (max(x) - min(x)) / min(v)
 
@@ -19,8 +16,7 @@ def verify(t):
 
 
 M = max(x)
-while p < q - 0.0000001:
-    #print('%f, %f' % (p, q))
+while p < q - 1e-07:
     m = p + (q - p) / 2
     span = verify(m)
     if len(span) > 0:

@@ -1,11 +1,11 @@
 def main():
-    n, x, m = map(int, input().split())
+    (n, x, m) = map(int, input().split())
     a = [x]
     at = [x]
     aset = set(a)
     i = 1
-    while(True):
-        an = a[-1]**2 % m
+    while True:
+        an = a[-1] ** 2 % m
         if an in aset:
             ca = a.index(an)
             break
@@ -16,13 +16,11 @@ def main():
         if i == n:
             print(at[-1])
             return
-    #aa = a[:ca]
     ata = [0] + at[:ca]
-    #ab = a[ca:]
     atb = [ata[-1]] + at[ca:]
     cb = len(atb) - 1
     na = min(n, ca)
-    nb, nc = divmod(n - na, cb)
+    (nb, nc) = divmod(n - na, cb)
     print(ata[na] + (atb[-1] - ata[-1]) * nb + atb[nc] - ata[-1])
 
 

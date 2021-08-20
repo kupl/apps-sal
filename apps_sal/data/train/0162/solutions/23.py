@@ -1,8 +1,8 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         rows = len(text1)
         cols = len(text2)
-
         dp = [[0 for j in range(cols)] for i in range(rows)]
         if text1[rows - 1] == text2[cols - 1]:
             dp[rows - 1][cols - 1] = 1

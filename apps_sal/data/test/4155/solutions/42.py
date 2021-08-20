@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,8 +8,7 @@ MOD = 1000000007
 
 
 def main():
-    N, *H = list(map(int, read().split()))
-
+    (N, *H) = list(map(int, read().split()))
     ans = 0
     while True:
         changed = changed2 = False
@@ -19,15 +17,13 @@ def main():
                 H[i] -= 1
                 changed = True
                 changed2 = True
-            else:
-                if changed:
-                    ans += 1
-                    changed = False
+            elif changed:
+                ans += 1
+                changed = False
         if changed:
             ans += 1
         if not changed2:
             break
-
     print(ans)
     return
 

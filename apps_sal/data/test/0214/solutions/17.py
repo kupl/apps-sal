@@ -8,23 +8,22 @@ for i in range(n):
             l.append(2)
         else:
             l.append(1)
+    elif r2[i] == 'X':
+        l.append(0)
     else:
-        if r2[i] == 'X':
-            l.append(0)
-        else:
-            l.append(-1)
+        l.append(-1)
 l.append(0)
 s = len(l)
 count = 0
 u = 1
 e = 1
-while(u < s - 1):
+while u < s - 1:
     if l[u] == 2 and e == 1:
         if l[u + 1] == 2:
             e = 2
             u = u + 1
             continue
-        elif (l[u + 1] == 1 or l[u + 1] == -1):
+        elif l[u + 1] == 1 or l[u + 1] == -1:
             count = count + 1
             u = u + 2
             continue

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [input() for i in range(n)]
 b = [input() for i in range(m)]
 ans = False
@@ -8,12 +8,11 @@ for i in range(n - m + 1):
         cnt = 0
         for k in range(m):
             for l in range(n - m + 1):
-                if (part_a[k][l:m + l] == b[k]):
+                if part_a[k][l:m + l] == b[k]:
                     cnt += 1
-        if (cnt == m):
+        if cnt == m:
             ans = True
-
-if (ans):
-    print("Yes")
+if ans:
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,7 +1,7 @@
 class Solution:
-    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        edge_set = set(tuple(x) for x in edges)
 
+    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
+        edge_set = set((tuple(x) for x in edges))
         graphs = [defaultdict(list) for i in range(3)]
         for e in edges:
             graphs[e[0] - 1][e[1]].append(e[2])
@@ -30,9 +30,7 @@ class Solution:
                             visited[x] = nt
                 nt += 1
             return nt
-
         if ct_ccmp(graphs[0]) > 1 or ct_ccmp(graphs[1]) > 1:
             return -1
-
         nt = ct_ccmp(graphs[2])
         return len(edges) - (n - nt) - 2 * (nt - 1)

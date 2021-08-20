@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 D = [int(input()) for i in range(N)]
 
 
@@ -16,7 +16,7 @@ def f(a):
         return False
 
 
-l, r = 0, 10**9
+(l, r) = (0, 10 ** 9)
 for i in range(50):
     mid = (l + r) // 2
     if f(mid):

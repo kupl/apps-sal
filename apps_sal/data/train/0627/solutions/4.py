@@ -1,11 +1,9 @@
-# cook your dish here
 import math
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     dp = [1] * (K + 1)
     for j in range(1, N):
         val = 1

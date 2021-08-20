@@ -1,17 +1,13 @@
 from math import factorial
-
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 V = [int(i) for i in input().split()]
 V.sort(reverse=True)
-
 a = 0
 for i in range(A):
     a += V[i]
 a /= A
 print(a)
-
 c = 0
-
 if V[0] != V[A - 1]:
     r = 0
     while True:
@@ -27,7 +23,6 @@ if V[0] != V[A - 1]:
         n += 1
     n += r
     c = round(factorial(n) / factorial(r) / factorial(n - r))
-
 else:
     n = 0
     while True:
@@ -39,5 +34,4 @@ else:
     B = min(B, n)
     for i in range(B - A + 1):
         c += round(factorial(n) / factorial(A + i) / factorial(n - A - i))
-
 print(c)

@@ -3,8 +3,6 @@ kudaxKudax = input
 kukareku = max
 kokokokoko = print
 kudkudax = range
-
-
 kokoko = KoKoKo(kudaxKudax())
 ko = [KoKoKo(x) for x in kudaxKudax().split()]
 KO = KOKOKO = 0

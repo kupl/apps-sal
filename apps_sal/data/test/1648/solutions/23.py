@@ -8,7 +8,7 @@ def comb(n, k, p):
     a = factorial(n) % p
     b = factorial(k) % p
     c = factorial(n - k) % p
-    return (a * power_func(b, p - 2, p) * power_func(c, p - 2, p)) % p
+    return a * power_func(b, p - 2, p) * power_func(c, p - 2, p) % p
 
 
 def power_func(a, b, p):
@@ -19,9 +19,9 @@ def power_func(a, b, p):
         d = power_func(a, b // 2, p)
         return d * d % p
     if b % 2 == 1:
-        return (a * power_func(a, b - 1, p)) % p
+        return a * power_func(a, b - 1, p) % p
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 for i in range(1, k + 1):
-    print(comb(n - k + 1, i, 10**9 + 7) * comb(k - 1, i - 1, 10**9 + 7) % (10**9 + 7))
+    print(comb(n - k + 1, i, 10 ** 9 + 7) * comb(k - 1, i - 1, 10 ** 9 + 7) % (10 ** 9 + 7))

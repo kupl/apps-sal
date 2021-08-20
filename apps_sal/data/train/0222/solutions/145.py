@@ -1,7 +1,7 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         dp = [collections.defaultdict(int) for _ in range(len(A))]
-
         longest_seq = 0
         s = set(A)
         for i in range(2, len(A)):
@@ -13,7 +13,5 @@ class Solution:
                         dp[i][one_ago] = dp[j][two_ago] + 1
                     else:
                         dp[i][one_ago] = 3
-
                     longest_seq = max(longest_seq, dp[i][one_ago])
-
         return longest_seq

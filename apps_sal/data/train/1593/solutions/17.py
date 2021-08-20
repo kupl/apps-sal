@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     s = 0
@@ -8,10 +7,10 @@ for i in range(t):
     it = 0
     total = 0
     l1 = []
-    while(sum(l1) != n):
+    while sum(l1) != n:
         r = k // l[it]
         total = total + r
-        if(r != 0):
+        if r != 0:
             l1.append(r * l[it])
             k = k % l[it]
         it += 1

@@ -13,7 +13,7 @@ for i in range(n):
         flag = False
         while j != n:
             if lst_a[i] != lst_b[j] and lst_a[j] != lst_b[i]:
-                lst_b[i], lst_b[j] = lst_b[j], lst_b[i]
+                (lst_b[i], lst_b[j]) = (lst_b[j], lst_b[i])
                 flag = True
                 break
             j += 1

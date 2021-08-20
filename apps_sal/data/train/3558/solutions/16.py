@@ -1,5 +1,5 @@
 def capitalize_word(word):
-    final = ""
+    final = ''
     pos = 0
     while pos < len(word):
         if pos == 0:

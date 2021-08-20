@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, N):
         self.par = [i for i in range(N)]
         self.rank = [0 for _ in range(N)]
@@ -9,7 +10,7 @@ class UnionFind:
         y = self.getroot(y)
         if x != y:
             if self.rank[x] < self.rank[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
             self.par[y] = x
@@ -29,11 +30,10 @@ class UnionFind:
         return self.size[self.getroot(x)]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 UF = UnionFind(N + 1)
 p = [0] + list(map(int, input().split()))
 for _ in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     UF.unite(x, y)
-
 print(sum([1 for i in range(1, N + 1) if UF.getroot(i) == UF.getroot(p[i])]))

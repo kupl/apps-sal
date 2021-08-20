@@ -9,10 +9,6 @@ import timeit
 import random
 import string
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 
 def sieve(n):
     if n < 2:
@@ -67,18 +63,39 @@ def flin(d, x, default=-1):
         return (left, right)
 
 
-def ceil(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep=' '): print(sep.join(map(str, a)))
-def dd(): return collections.defaultdict(int)
-def ddl(): return collections.defaultdict(list)
+def ceil(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def prr(a, sep=' '):
+    print(sep.join(map(str, a)))
+
+
+def dd():
+    return collections.defaultdict(int)
+
+
+def ddl():
+    return collections.defaultdict(list)
 
 
 input = sys.stdin.readline
-
 n = ii()
 a = li()
 b = li()
@@ -88,7 +105,6 @@ for i in range(n):
         ar += 1
     elif b[i] == 1 != a[i]:
         br += 1
-
 if ar == 0:
     print(-1)
 else:

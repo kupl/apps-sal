@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         p = [i for i in range(n)]
@@ -11,11 +12,10 @@ class Solution:
             if p[a] == a:
                 return a
             p[a] = find(p[a])
-
             return p[a]
 
         def union(a, b):
-            p_a, p_b = find(a), find(b)
+            (p_a, p_b) = (find(a), find(b))
             if p[p_b] != p[p_a]:
                 p[p_b] = p[p_a]
                 l[p_a] += l[p_b]
@@ -41,9 +41,7 @@ class Solution:
             else:
                 counts[l[find(i)]] += 1
             res.append(counts[m])
-
         for i in range(n - 1, -1, -1):
             if res[i] > 0:
                 return i + 1
-
         return -1

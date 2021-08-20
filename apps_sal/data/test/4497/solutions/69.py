@@ -11,7 +11,6 @@ for i in range(N):
         q = q // 2
         count += 1
     ans.append(count)
-
 if len(ans) > 0:
     max_count = max(ans)
     print(ans.index(max_count) + 2)

@@ -1,7 +1,7 @@
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     h = b - a
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     h -= a * 8
     if h <= 0:
         res = 0

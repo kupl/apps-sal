@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         n = len(arr)
         maxes = [[None for _ in range(n)] for _ in range(n)]
@@ -7,7 +8,6 @@ class Solution:
         for i in range(n):
             for j in range(i + 1, n):
                 maxes[i][j] = max(arr[j], maxes[i][j - 1])
-
         dp = [None for _ in range(n + 1)]
         dp[n] = 0
         for i in range(n - 1, -1, -1):

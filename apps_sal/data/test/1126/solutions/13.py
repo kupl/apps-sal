@@ -1,4 +1,4 @@
-N, X, M = map(int, input().split())
+(N, X, M) = map(int, input().split())
 ans = 0
 A = []
 sa = set(A)
@@ -7,7 +7,7 @@ while N:
         ans += X
         A.append(X)
         sa.add(X)
-        X = X**2 % M
+        X = X ** 2 % M
         N -= 1
     else:
         i = A.index(X)

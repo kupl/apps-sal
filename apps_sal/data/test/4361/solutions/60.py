@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = [int(input()) for _ in range(n)]
 h.sort()
 ans = 1000000007

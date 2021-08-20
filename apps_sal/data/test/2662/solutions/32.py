@@ -25,13 +25,10 @@ sys.setrecursionlimit(5000000)
 mod = pow(10, 9) + 7
 al = [chr(ord('a') + i) for i in range(26)]
 direction = [[1, 0], [0, 1], [-1, 0], [0, -1]]
-
 n = int(input())
 a = [int(input()) for i in range(n)]
-
 now = n
 lst = [-1] * n
-
 for i in range(n):
     tmp = bisect.bisect_left(lst, a[i])
     if tmp == now:
@@ -39,5 +36,4 @@ for i in range(n):
         now -= 1
     else:
         lst[tmp - 1] = a[i]
-# print(lst)
 print(n - now)

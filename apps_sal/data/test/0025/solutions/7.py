@@ -1,15 +1,12 @@
 def maxim():
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     if k < 0:
         print(-1)
         return
-
-    if k > (n**2):
+    if k > n ** 2:
         print(-1)
         return
-
     a = [[0 for _ in range(n)] for _ in range(n)]
-
     for i in range(n):
         if k >= 1:
             a[i][i] = 1
@@ -24,7 +21,6 @@ def maxim():
     if k > 0:
         print(-1)
         return
-
     for i in range(n):
         b = [str(i) for i in a[i]]
         b = ' '.join(b)

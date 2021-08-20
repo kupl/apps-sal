@@ -1,7 +1,6 @@
 from itertools import product
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 l = [int(input()) for i in range(n)]
-
 ans = float('inf')
 for choice in product([0, 1, 2, 3], repeat=n):
     items = [0] * 3
@@ -9,7 +8,7 @@ for choice in product([0, 1, 2, 3], repeat=n):
     temp = 0
     if min([choice.count(i) for i in range(3)]) == 0:
         continue
-    for i, ch in enumerate(choice):
+    for (i, ch) in enumerate(choice):
         if ch == 3:
             continue
         totals[ch] += l[i]

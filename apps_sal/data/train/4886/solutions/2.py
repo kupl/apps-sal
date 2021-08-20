@@ -14,6 +14,6 @@ def find_dups_miss(arr):
                 b = i
             memo.add(i)
             summ += i
-    miss = int((b * (b + 1) / 2 - (a) * (a - 1) / 2) - summ)
+    miss = int(b * (b + 1) / 2 - a * (a - 1) / 2 - summ)
     dups.sort()
     return [miss, dups]

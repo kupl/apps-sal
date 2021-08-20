@@ -1,17 +1,16 @@
 def main():
     import sys
     input = sys.stdin.readline
-    def l(): return list(map(int, input().split()))
-    n, d, a = l()
+
+    def l():
+        return list(map(int, input().split()))
+    (n, d, a) = l()
     xh = []
     for i in range(n):
-        xi, hi = l()
+        (xi, hi) = l()
         xh.append([xi, hi])
     xh.sort()
-
     right_index = []
-
-    # 尺取り法
     tmp = 0
     for i in range(n):
         j = tmp
@@ -22,7 +21,6 @@ def main():
         j -= 1
         right_index.append(j)
         tmp = j
-
     ans = 0
     cnt = 0
     damage = [0] * (n + 1)

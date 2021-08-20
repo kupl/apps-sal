@@ -11,11 +11,10 @@ for _ in range(int(input())):
     else:
         has = 0
         for i in range(2, n - 1):
-            value = (diff[i - 1] - diff[i - 2])
+            value = diff[i - 1] - diff[i - 2]
             value = value + 6
             value = value + diff[-1]
             diff.append(value)
             value = value + arr[-1]
             arr.append(value)
-
-        print(arr[-1] % ((10**9) + 7))
+        print(arr[-1] % (10 ** 9 + 7))

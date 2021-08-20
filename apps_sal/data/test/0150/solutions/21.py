@@ -33,9 +33,8 @@ else:
     isprime = isPrime(n)
     if isprime:
         ans = 1
+    elif isPrime(n - 2):
+        ans = 2
     else:
-        if isPrime(n - 2):
-            ans = 2
-        else:
-            ans = 3
+        ans = 3
 stdout.write(str(ans))

@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         comb = list(combinations(nums, 2))
         maxv = 0

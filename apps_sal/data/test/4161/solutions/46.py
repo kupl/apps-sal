@@ -10,7 +10,6 @@ def main():
             ab = math.gcd(a, b)
             for c in range(1, k + 1):
                 ans = ans + math.gcd(ab, c)
-
     stdout.write(str(ans))
     stdout.write('\n')
 

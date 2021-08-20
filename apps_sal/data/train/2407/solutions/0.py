@@ -1,4 +1,5 @@
 class Solution:
+
     def subtractProductAndSum(self, n: int) -> int:
         stringInt = str(n)
         product = 1

@@ -2,16 +2,31 @@ import math
 from collections import defaultdict as dd
 from sys import stdin, stdout
 input = stdin.readline
-def geti(): return list(map(int, input().strip().split()))
-def getl(): return list(map(int, input().strip().split()))
-def gets(): return input()
-def geta(): return int(input())
-def print_s(s): stdout.write(s + '\n')
+
+
+def geti():
+    return list(map(int, input().strip().split()))
+
+
+def getl():
+    return list(map(int, input().strip().split()))
+
+
+def gets():
+    return input()
+
+
+def geta():
+    return int(input())
+
+
+def print_s(s):
+    stdout.write(s + '\n')
 
 
 def solve():
     for _ in range(geta()):
-        n, k = geti()
+        (n, k) = geti()
         a = getl()
         occur = dd(int)
         ans = 0
@@ -22,7 +37,7 @@ def solve():
         for i in range(k):
             temp += a[i]
             temp_dict[a[i]] += 1
-        if (list(temp_dict.keys())) == (list(occur.keys())):
+        if list(temp_dict.keys()) == list(occur.keys()):
             ans = max(ans, temp)
         for i in range(k, n):
             temp -= a[i - k]
@@ -31,7 +46,7 @@ def solve():
                 del temp_dict[a[i - k]]
             temp += a[i]
             temp_dict[a[i]] += 1
-            if (list(temp_dict.keys())) == (list(occur.keys())):
+            if list(temp_dict.keys()) == list(occur.keys()):
                 ans = max(ans, temp)
         print(ans)
 

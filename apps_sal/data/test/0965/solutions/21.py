@@ -12,9 +12,8 @@ def main():
     ans = 0
     if i == 0:
         ans = a
-    else:
-        if i == 1:
-            ans = 1
+    elif i == 1:
+        ans = 1
     print(ans)
 
 

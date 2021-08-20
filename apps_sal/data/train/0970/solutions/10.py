@@ -2,23 +2,27 @@ import sys
 from sys import stdin, stdout
 from bisect import bisect_right
 from os import path
-# cin=sys.stdin.readline
 cout = sys.stdout.write
-
-if (path.exists('input.txt')):
-    #------------------Sublime--------------------------------------#
+if path.exists('input.txt'):
     sys.stdin = open('input.txt', 'r')
     sys.stdout = open('output.txt', 'w')
-    def cinN(): return (int(input()))
-    def cin(): return(map(int, input().split()))
+
+    def cinN():
+        return int(input())
+
+    def cin():
+        return map(int, input().split())
 else:
-    #------------------PYPY FAst I/o--------------------------------#
-    def cinN(): return (int(stdin.readline()))
-    def cin(): return(map(int, stdin.readline().split()))
+
+    def cinN():
+        return int(stdin.readline())
+
+    def cin():
+        return map(int, stdin.readline().split())
 
 
 def find_le(a, x):
-    'Find rightmost value less than or equal to x'
+    """Find rightmost value less than or equal to x"""
     i = bisect_right(a, x)
     if i:
         return i - 1
@@ -32,18 +36,16 @@ def func():
     l.sort()
     qn = cinN()
     for _ in range(qn):
-        x, y = cin()
+        (x, y) = cin()
         k = x + y
         t = find_le(l, k)
         if t == -1:
-            ans = (0)
+            ans = 0
+        elif l[t] == k:
+            ans = -1
         else:
-            if l[t] == k:
-                ans = (-1)
-            else:
-                ans = (t + 1)
+            ans = t + 1
         print(ans)
-    # cout(str(ans))
 
 
 def __starting_point():

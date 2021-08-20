@@ -1,9 +1,9 @@
-N, W = list(map(int, input().split()))
+(N, W) = list(map(int, input().split()))
 wv = [list(map(int, input().split())) for _ in range(N)]
 mw = wv[0][0]
 wv.sort(key=lambda x: -x[1])
 values = [[] for _ in range(4)]
-for w, v in wv:
+for (w, v) in wv:
     values[w - mw].append(v)
 
 
@@ -19,4 +19,4 @@ def solve(n, w, c):
     return r
 
 
-print((solve(0, 0, 0)))
+print(solve(0, 0, 0))

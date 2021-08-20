@@ -1,7 +1,7 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         req = [0] * (len(nums) + 1)
-        # Adding 1 for all elements in req(r[0]:r[1]+1) costs too much time.
         for r in requests:
             req[r[0]] += 1
             req[r[1] + 1] -= 1

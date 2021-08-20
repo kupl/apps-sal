@@ -4,9 +4,7 @@ for i in range(n):
     _ = list(map(int, input().split()))
     a.append(_)
 a = sorted(a, key=lambda x: x[2], reverse=True)
-
 check = False
-
 for i in range(101):
     for j in range(101):
         b = 0

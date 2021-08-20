@@ -1,6 +1,5 @@
-N, K, C = list(map(int, input().split()))
+(N, K, C) = list(map(int, input().split()))
 S = input()
-
 L = [0] * K
 R = [0] * K
 lpiv = 0
@@ -14,8 +13,7 @@ for i in range(K):
     R[i] = rpiv
     lpiv += C + 1
     rpiv -= C + 1
-
 ans = 0
 for i in range(K):
     if L[i] == R[K - i - 1]:
-        print((L[i] + 1))
+        print(L[i] + 1)

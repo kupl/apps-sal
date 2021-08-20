@@ -1,10 +1,8 @@
 from collections import defaultdict
 import numpy as np
 import sys
-
-
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
+INF = float('inf')
 MOD = 10 ** 9 + 7
 
 
@@ -13,18 +11,17 @@ def input():
 
 
 def main():
-    N, C = list(map(int, input().split()))
+    (N, C) = list(map(int, input().split()))
     MAX = 10 ** 5 + 2
     vals = [0] * MAX
     D = defaultdict(list)
     for _ in range(N):
-        s, t, c = list(map(int, input().split()))
+        (s, t, c) = list(map(int, input().split()))
         D[c].append((s, t))
-
-    for k, v in list(D.items()):
+    for (k, v) in list(D.items()):
         prev = -1
         v.sort(key=lambda x: x[0])
-        for s, t in v:
+        for (s, t) in v:
             if prev == s:
                 vals[prev + 1] += 1
                 vals[t + 1] -= 1
@@ -32,7 +29,6 @@ def main():
                 vals[s] += 1
                 vals[t + 1] -= 1
             prev = t
-
     cumsum = np.cumsum(vals)
     ans = max(cumsum)
     print(ans)

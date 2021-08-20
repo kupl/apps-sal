@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, s = list(map(int, input().split()))
+    (n, m, s) = list(map(int, input().split()))
     arr2 = list(map(int, input().split()))
     count = 0
     arr2.sort()

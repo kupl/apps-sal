@@ -20,16 +20,15 @@ for _ in range(t):
                 not_rm = True
                 last = x
                 lm = x
+        elif x != last + 1:
+            ok = False
+            break
+        elif x == rm:
+            not_rm = False
+            rm = lm - 1
         else:
-            if x != last + 1:
-                ok = False
-                break
-            elif x == rm:
-                not_rm = False
-                rm = lm - 1
-            else:
-                last = x
+            last = x
     if ok:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

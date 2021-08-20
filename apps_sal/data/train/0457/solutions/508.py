@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -9,7 +10,7 @@ class Solution:
         visited = {0}
         step = 0
         while queue:
-            node, step = queue.popleft()
+            (node, step) = queue.popleft()
             for coin in coins:
                 if node + coin in visited:
                     continue

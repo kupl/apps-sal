@@ -1,11 +1,10 @@
 def tri(arr, n):
     li1 = []
-
     arr = sorted(arr)
     z = 0
     for i in range(n - 2):
         li = []
-        if(arr[i] + arr[i + 1] > arr[i + 2]):
+        if arr[i] + arr[i + 1] > arr[i + 2]:
             li.append(arr[i])
             li.append(arr[i + 1])
             li.append(arr[i + 2])
@@ -13,7 +12,7 @@ def tri(arr, n):
         else:
             pass
         li1.append(li)
-    if(z == 0):
+    if z == 0:
         print('NO')
     else:
         print('YES')
@@ -23,5 +22,4 @@ def tri(arr, n):
 
 n = int(input())
 a = [int(x) for x in input().split()]
-#print('YES' if tri(a, n) else 'NO')
 tri(a, n)

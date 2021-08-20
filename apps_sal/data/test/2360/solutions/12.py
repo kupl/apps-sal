@@ -2,9 +2,9 @@ def solve(students):
     k = 1
     for s in students:
         if s[1] < k:
-            print(0, end=" ")
+            print(0, end=' ')
         else:
-            print(max(s[0], k), end=" ")
+            print(max(s[0], k), end=' ')
             if k < s[0]:
                 k = s[0] + 1
             else:

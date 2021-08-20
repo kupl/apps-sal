@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         state = set([n])
         steps = 0

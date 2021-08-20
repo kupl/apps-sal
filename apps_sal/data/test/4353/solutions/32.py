@@ -1,5 +1,5 @@
 def main():
-    print((input().replace(',', ' ')))
+    print(input().replace(',', ' '))
 
 
 def __starting_point():

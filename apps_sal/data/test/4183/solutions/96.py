@@ -3,7 +3,7 @@ from functools import reduce
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm_list(numbers):
@@ -12,5 +12,4 @@ def lcm_list(numbers):
 
 n = int(input())
 nums = [int(input()) for i in range(n)]
-
-print((lcm_list(nums)))
+print(lcm_list(nums))

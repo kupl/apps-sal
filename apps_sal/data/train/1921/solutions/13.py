@@ -15,7 +15,6 @@ class DinnerPlates:
         self.hashmap[slot].append(val)
         if len(self.hashmap[slot]) == self.capacity:
             heapq.heappop(self.leftheap)
-
         if len(self.leftheap) == 0:
             self.ind += 1
             heapq.heappush(self.leftheap, self.ind)
@@ -23,7 +22,7 @@ class DinnerPlates:
     def pop(self) -> int:
         if not self.rightheap:
             return -1
-        while(len(self.hashmap[-self.rightheap[0]]) == 0):
+        while len(self.hashmap[-self.rightheap[0]]) == 0:
             heapq.heappop(self.rightheap)
         slot = -heapq.heappop(self.rightheap)
         value = self.hashmap[slot].pop()
@@ -32,7 +31,6 @@ class DinnerPlates:
         else:
             self.ind = slot - 1
         heapq.heappush(self.leftheap, slot)
-
         return value
 
     def popAtStack(self, index: int) -> int:
@@ -43,10 +41,3 @@ class DinnerPlates:
             if len(self.hashmap[index]) + 1 == self.capacity:
                 heapq.heappush(self.leftheap, index)
             return value
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

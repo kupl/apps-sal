@@ -6,5 +6,4 @@ for i in range(n):
     if m <= q[i]:
         cnt += 1
     m = max(q[i], m)
-
 print(cnt)

@@ -1,4 +1,5 @@
 class C:
+
     def c(self, n, m):
         total = n + m
         noofteams = int(total / 3)

@@ -1,4 +1,3 @@
-#!/usr/bin/pyhton
 MAX = 10000000000
 
 
@@ -17,7 +16,6 @@ def main():
                 min[j] = S[i + 1] - S[i]
             i = i + 1
         j = j + 1
-
     j = 0
     while j < t:
         print(min[j])

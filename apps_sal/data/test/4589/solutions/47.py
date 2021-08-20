@@ -1,4 +1,4 @@
-H, W = (int(x) for x in input().split())
+(H, W) = (int(x) for x in input().split())
 S = [input() for _ in range(H)]
 ans = [''] * H
 for i in range(H):

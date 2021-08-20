@@ -1,11 +1,12 @@
 class Solution:
+
     def findDuplicate(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        low, high = 1, len(nums) - 1
-        while (low < high):
+        (low, high) = (1, len(nums) - 1)
+        while low < high:
             mid = (low + high) // 2
             count = 0
             for i in nums:

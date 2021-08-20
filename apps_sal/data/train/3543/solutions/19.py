@@ -1,6 +1,6 @@
 def increment_string(strng):
     import re
-    match = re.search(r'\d+$', strng)
+    match = re.search('\\d+$', strng)
     if match:
         s = match.group()
         s1 = strng[:len(strng) - len(s)] + str.rjust(str(int(s) + 1), len(s), '0')

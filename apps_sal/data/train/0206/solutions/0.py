@@ -1,4 +1,5 @@
 class Solution:
+
     def PredictTheWinner(self, nums):
         """
         :type nums: List[int]
@@ -9,7 +10,6 @@ class Solution:
         n = len(nums)
         if n & 1 == 0:
             return True
-
         dp = [0] * n
         for i in range(n - 1, -1, -1):
             for j in range(i, n):

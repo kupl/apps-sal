@@ -10,12 +10,11 @@ def mp():
 def main():
     n = int(input())
     a = mp()
-    ans = int(1e9)
+    ans = int(1000000000.0)
     for i in range(n):
         res = 0
         for j in range(n):
             res += a[j] * (2 * i + 2 * abs(i - j) + 2 * j)
-        # print(res)
         ans = min(ans, res)
     print(ans)
 
@@ -26,5 +25,4 @@ if deb:
     input = file.readline
 else:
     input = sys.stdin.readline
-
 main()

@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartition(self, nums):
         """
         :type nums: List[int]
@@ -15,15 +16,13 @@ class Solution:
             return False
         elif t_sum == halfsum:
             return True
-
         llen = len(nums)
         for startpos in range(1, llen):
             curpos = startpos
             while t_sum < halfsum and curpos < llen:
-                if (t_sum + nums[curpos] > halfsum):
+                if t_sum + nums[curpos] > halfsum:
                     curpos += 1
-                elif (t_sum + nums[curpos] == halfsum):
-                    #print(curpos, t_sum,len(nums))
+                elif t_sum + nums[curpos] == halfsum:
                     return True
                 else:
                     t_sum += nums[curpos]

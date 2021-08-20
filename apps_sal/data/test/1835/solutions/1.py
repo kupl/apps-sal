@@ -1,5 +1,4 @@
 from collections import Counter
-
 for _ in range(int(input())):
     n = int(input())
     lens = []
@@ -11,13 +10,13 @@ for _ in range(int(input())):
     pairs = 0
     singles = 0
     for v in list(cnt.values()):
-        div, mod = divmod(v, 2)
+        (div, mod) = divmod(v, 2)
         pairs += div
         singles += mod
     ans = 0
     lens.sort()
     for len_ in lens:
-        div, mod = divmod(len_, 2)
+        (div, mod) = divmod(len_, 2)
         pairs -= div
         if mod:
             if singles:

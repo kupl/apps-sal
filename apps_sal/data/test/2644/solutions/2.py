@@ -23,16 +23,15 @@ def get_min(p):
 
 def solve(n, p):
     p2 = get_min(p)
-    # print(p2)
     left = 0
     ret = []
     while left < n - 1:
         if p[left] < p2[left + 1][1]:
             left += 1
             continue
-        right, m = p2[left + 1]
+        (right, m) = p2[left + 1]
         for i in reversed(list(range(left, right))):
-            p[i], p[i + 1] = p[i + 1], p[i]
+            (p[i], p[i + 1]) = (p[i + 1], p[i])
             ret.append(i + 1)
         for i in range(left, right):
             if i + 1 != p[i]:
@@ -52,4 +51,4 @@ if ans:
     for a in ans:
         print(a)
 else:
-    print((-1))
+    print(-1)

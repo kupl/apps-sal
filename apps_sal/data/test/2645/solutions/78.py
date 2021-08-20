@@ -1,2 +1,2 @@
 s = input()
-print(((s.count('g') - s.count('p')) // 2))
+print((s.count('g') - s.count('p')) // 2)

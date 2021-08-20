@@ -9,5 +9,4 @@ def remove_duplicate_words(s):
         if word not in s_list:
             s_2 += ' ' + word
             s_list.append(word)
-
     return s_2.strip()

@@ -1,16 +1,14 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         arr_len = len(arr)
-        # arr_int = list(set(arr))
         int_dict = {}
         val = []
         for i in arr:
             int_dict[i] = int_dict.setdefault(i, 0) + 1
-
         for i in int_dict:
             val.append(int_dict[i])
         val.sort()
-
         count_num = 0
         loc = 0
         for i in val[::-1]:
@@ -19,6 +17,3 @@ class Solution:
             if count_num >= arr_len / 2:
                 break
         return loc
-        # if len(set(arr)) == arr_len:
-        #     return int(arr_len+0.5)
-        # else:

@@ -1,5 +1,5 @@
 def isDigit(string):
-    string.strip("-")
+    string.strip('-')
     string.strip
     try:
         string = int(string)

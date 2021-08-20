@@ -2,8 +2,8 @@ import sys
 input = sys.stdin.readline
 N = int(input())
 a = list(map(int, input().split()))
-mx = -float("inf")
-mn = float("inf")
+mx = -float('inf')
+mn = float('inf')
 mxi = 0
 mni = 0
 for i in range(N):

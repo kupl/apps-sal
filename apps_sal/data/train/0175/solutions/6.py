@@ -1,4 +1,5 @@
 class Solution:
+
     def findIntegers(self, num):
         """
         :type num: int
@@ -11,24 +12,20 @@ class Solution:
         import math
         bits = int(math.log(num, 2))
         f = [0] * (bits + 1)
-        f[0], f[1], f[2] = 2, 3, 4
+        (f[0], f[1], f[2]) = (2, 3, 4)
         for i in range(3, bits + 1):
             f[i] = f[i - 1] + f[i - 2] - 1
-
         res = 0
         pre = 0
         flag = False
         for i in range(bits + 1):
-            if num & (1 << i):
-
+            if num & 1 << i:
                 if pre:
                     res = f[i] + f[i - 1] - 2
-
                 elif flag:
                     res = f[i] + res - 1
                 else:
                     res = f[i] + res
                     flag = True
-            pre = num & (1 << i)
-            # print(pre)
+            pre = num & 1 << i
         return res

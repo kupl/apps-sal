@@ -1,6 +1,6 @@
 from itertools import accumulate
 from collections import defaultdict
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 acc = [0] + list(accumulate(A, lambda x, y: x + y))
 d = defaultdict(list)

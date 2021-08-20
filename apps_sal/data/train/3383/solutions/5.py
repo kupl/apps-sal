@@ -1,1 +1,2 @@
-def is_even(n): return n | 1 != n
+def is_even(n):
+    return n | 1 != n

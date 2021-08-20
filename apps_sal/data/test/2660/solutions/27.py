@@ -16,7 +16,7 @@ def main():
     for _ in range(Q):
         query = tuple(map(int, input().split()))
         if query[0] == 1:
-            a, b = query[1:]
+            (a, b) = query[1:]
             total_b += b
             total_a += a
             cnt += 1
@@ -31,15 +31,14 @@ def main():
                 p = heappop(right)
                 heappush(left, -p)
                 less_than_middle += p
+        elif cnt % 2 == 0:
+            x = -left[0]
+            ans = total_a - 2 * less_than_middle + total_b
+            print(x, ans)
         else:
-            if cnt % 2 == 0:
-                x = -left[0]
-                ans = total_a - 2 * less_than_middle + total_b
-                print(x, ans)
-            else:
-                x = right[0]
-                ans = total_a - 2 * less_than_middle - x + total_b
-                print(x, ans)
+            x = right[0]
+            ans = total_a - 2 * less_than_middle - x + total_b
+            print(x, ans)
 
 
 def __starting_point():

@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthNumber(self, n, k):
         """
         :type n: int
@@ -15,7 +16,6 @@ class Solution:
             else:
                 cur *= 10
                 k -= 1
-
         return cur
 
     def calSteps(self, n, n1, n2):
@@ -24,5 +24,4 @@ class Solution:
             steps += min(n + 1, n2) - n1
             n1 *= 10
             n2 *= 10
-
         return steps

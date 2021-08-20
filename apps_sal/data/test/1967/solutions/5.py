@@ -4,7 +4,7 @@ def mash(pole):
         s = pole[i]
         new = ''
         for i in s:
-            new += (i * 2)
+            new += i * 2
         ans.append(new)
         ans.append(new)
     return ans
@@ -22,7 +22,7 @@ def change(pole, a, b):
         if i + 1 <= len(pole[0]) // 2:
             fir.append(s)
             continue
-        if i + 1 >= (len(pole[0]) // 2 + x):
+        if i + 1 >= len(pole[0]) // 2 + x:
             sec.append(s)
     for i in range(len(sec[0])):
         s = ''
@@ -45,7 +45,7 @@ def pov(pole, a, b):
     return new
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 pole = []
 for i in range(b):
     s = input()

@@ -1,7 +1,7 @@
 n = int(input())
 C = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     C.append(complex(x, y))
 
 
@@ -42,12 +42,11 @@ def sannbunn_second(mx, MX, my, MY):
         else:
             MX = x2
         cnt -= 1
-    return mx, yy1, v1
+    return (mx, yy1, v1)
 
 
 if n == 2:
     ans = abs(C[0] - C[1]) / 2
 else:
-    rx, ry, ans = sannbunn_second(0, 1000, 0, 1000)
-    # ans = calc_kyori(complex(rx, ry), C)
+    (rx, ry, ans) = sannbunn_second(0, 1000, 0, 1000)
 print(ans)

@@ -9,7 +9,7 @@ for i in s:
 a = []
 b = []
 for i in range(n):
-    c, d = map(int, input().strip().split())
+    (c, d) = map(int, input().strip().split())
     a.append(c)
     b.append(d)
 ans = 0

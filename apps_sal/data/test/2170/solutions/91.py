@@ -1,5 +1,5 @@
 mod = pow(10, 9) + 7
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = 0
 inv = [0, 1]
 fact = [1, 1]
@@ -22,7 +22,7 @@ for i in range(n + 1):
     now = combi(n, i)
     now *= permi(m - i, n - i)
     now %= mod
-    ans += now * (-1)**(i & 1)
+    ans += now * (-1) ** (i & 1)
     ans %= mod
 ans *= permi(m, n)
 ans %= mod

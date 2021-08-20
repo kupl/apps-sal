@@ -3,7 +3,7 @@ for __ in range(eval(input())):
     a = list(map(int, input().split()))
     key = eval(input())
     query = eval(input())
-    maxvisited = x  # maximum visted value
+    maxvisited = x
     j = x - 1
     ans = []
     val = 0
@@ -15,17 +15,13 @@ for __ in range(eval(input())):
             ans.append(val)
         j -= 1
     ans.reverse()
-    # print ans, len(ans)
-
     for ii in range(query):
         W = eval(input())
         print(ans[W], end=' ')
         print(x - W, end=' ')
-        # print maxvisited, W
         if maxvisited > W:
             if True:
                 tt = 1
-                #if not ii: tt = 1
                 print(maxvisited - W + tt)
                 maxvisited = W
         else:

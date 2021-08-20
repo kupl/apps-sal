@@ -5,7 +5,6 @@ cnt = 0
 for i in range(n):
     if a[i] != b[i]:
         cnt += 1
-
 if cnt == 1:
     done = list(range(1, n + 1))
     x = 0
@@ -25,27 +24,25 @@ if cnt == 1:
                 done.remove(b[i])
             except:
                 pass
-    arr = a[::]
+    arr = a[:]
     arr[x] = done[0]
     for i in arr:
         print(i, end=' ')
-
 else:
-    arr = a[::]
+    arr = a[:]
     x = -1
     y = -1
     for i in range(n):
         if a[i] == b[i]:
             pass
+        elif x == -1:
+            x = i
         else:
-            if x == -1:
-                x = i
-            else:
-                y = i
-    br = arr[::]
+            y = i
+    br = arr[:]
     arr[x] = b[x]
     br[y] = b[y]
     if len(set(br)) == n:
-        arr = br[::]
+        arr = br[:]
     for i in arr:
         print(i, end=' ')

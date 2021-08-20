@@ -8,12 +8,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, x, y = egcd(b % a, a)
-        return (g, y - (b // a) * x, x)
+        (g, x, y) = egcd(b % a, a)
+        return (g, y - b // a * x, x)
 
 
 def mulinv(b, n):
-    g, x, _ = egcd(b, n)
+    (g, x, _) = egcd(b, n)
     if g == 1:
         return x % n
 
@@ -44,8 +44,8 @@ n = f()
 s = f(3)
 res = []
 i = 0
-while(i < n - 1):
-    while(i < n - 1 and s[i] == s[i + 1]):
+while i < n - 1:
+    while i < n - 1 and s[i] == s[i + 1]:
         i += 1
     if i == n - 1:
         break
@@ -55,7 +55,6 @@ while(i < n - 1):
     else:
         res.append(s[i])
     i += 2
-
 if len(res) % 2 == 0:
     print(n - len(res))
     print(''.join(res))

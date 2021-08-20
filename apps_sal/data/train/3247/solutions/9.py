@@ -1,5 +1,5 @@
 def sort_by_height(a):
-    h, k = sorted([i for i in a if i != -1]), []
+    (h, k) = (sorted([i for i in a if i != -1]), [])
     for i in a:
         if i != -1:
             k += [h[0]]

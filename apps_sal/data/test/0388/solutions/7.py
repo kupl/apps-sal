@@ -5,9 +5,8 @@ def name(n):
         return chr(n - 26 + ord('A')) + 'a'
 
 
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 data = list([x == 'YES' for x in input().split()])
-
 res = []
 for i in range(k - 1):
     res.append(name(i))

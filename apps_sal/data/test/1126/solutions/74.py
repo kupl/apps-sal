@@ -1,5 +1,5 @@
 def main():
-    n, x, m = list(map(int, input().split()))
+    (n, x, m) = list(map(int, input().split()))
     s = set()
     L = []
     ans = 0
@@ -15,7 +15,7 @@ def main():
         print(ans)
         return
     L = L[L.index(x):]
-    q, r = divmod(n, len(L))
+    (q, r) = divmod(n, len(L))
     ans += sum(L) * q
     ans += sum(L[:r])
     print(ans)

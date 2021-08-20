@@ -2,13 +2,13 @@ from collections import deque
 
 
 def BF(v, start, edges):
-    INF = 10**18
+    INF = 10 ** 18
     nega = False
     d = [INF] * v
     d[start] = 0
     for _ in range(v):
         f = False
-        for a, b, c in edges:
+        for (a, b, c) in edges:
             cost = d[a] + c
             if cost < d[b]:
                 d[b] = cost
@@ -17,7 +17,7 @@ def BF(v, start, edges):
             break
     else:
         nega = True
-    return d, nega
+    return (d, nega)
 
 
 def BFS(N, graph, start):
@@ -34,12 +34,12 @@ def BFS(N, graph, start):
     return d
 
 
-N, M, P = (int(i) for i in input().split())
+(N, M, P) = (int(i) for i in input().split())
 graph = [[] for i in range(N)]
 graphr = [[] for i in range(N)]
 edges = []
 for i in range(M):
-    A, B, C = (int(i) for i in input().split())
+    (A, B, C) = (int(i) for i in input().split())
     graph[A - 1].append(B - 1)
     graphr[B - 1].append(A - 1)
     edges.append((A - 1, B - 1, P - C))
@@ -48,10 +48,10 @@ d_end = BFS(N, graphr, N - 1)
 nodes_start = [i for i in range(N) if d_start[i] >= 0]
 nodes_end = [i for i in range(N) if d_end[i] >= 0]
 new_edges = []
-for A, B, C in edges:
-    if A in nodes_start and B in nodes_start and A in nodes_end and B in nodes_end:
+for (A, B, C) in edges:
+    if A in nodes_start and B in nodes_start and (A in nodes_end) and (B in nodes_end):
         new_edges.append((A, B, C))
-d, Nega = BF(N, 0, new_edges)
+(d, Nega) = BF(N, 0, new_edges)
 if Nega == True:
     print(-1)
 else:

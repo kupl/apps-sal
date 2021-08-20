@@ -1,2 +1,2 @@
 def doors(n):
-    return int(n ** .5)
+    return int(n ** 0.5)

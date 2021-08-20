@@ -1,11 +1,10 @@
-W, a, b = list(map(int, input().split()))
+(W, a, b) = list(map(int, input().split()))
 if b >= a:
     if b - (a + W) < 0:
-        print((0))
+        print(0)
     else:
-        print((b - (a + W)))
+        print(b - (a + W))
+elif a - (b + W) < 0:
+    print(0)
 else:
-    if a - (b + W) < 0:
-        print((0))
-    else:
-        print((a - (b + W)))
+    print(a - (b + W))

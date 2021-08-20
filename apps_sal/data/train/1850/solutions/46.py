@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         if N == 1:
             return [0]
@@ -32,7 +33,7 @@ class Solution:
     def dfs(self, key):
         if not self.tree[key]:
             return
-        dst, num = 0, 0
+        (dst, num) = (0, 0)
         for ch in self.tree[key]['c']:
             self.dfs(ch)
             dst += self.tree[ch]['d'] + self.tree[ch]['n']

@@ -1,4 +1,5 @@
 class Solution:
+
     def findDuplicate(self, nums):
         nums.sort()
         for i in range(1, len(nums)):

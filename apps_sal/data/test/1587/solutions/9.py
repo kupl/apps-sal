@@ -8,7 +8,5 @@ for i in range(len(c)):
 for i in range(len(c)):
     if i + 1 <= allrcnt and c[i] == 'R':
         rcnt += 1
-
 ans = allrcnt - rcnt
-
 print(ans)

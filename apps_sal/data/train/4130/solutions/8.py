@@ -1,7 +1,6 @@
 import re
-
-full_number_regex = re.compile(r"^\d{4} \d{4}$")
-part_number_regex = re.compile(r"\d{4} \d{4}")
+full_number_regex = re.compile('^\\d{4} \\d{4}$')
+part_number_regex = re.compile('\\d{4} \\d{4}')
 
 
 def is_valid_HK_phone_number(number):

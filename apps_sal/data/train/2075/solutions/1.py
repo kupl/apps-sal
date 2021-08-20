@@ -1,7 +1,6 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 a.sort(key=lambda x: -x)
 b.sort(key=lambda x: -x)
 t = False

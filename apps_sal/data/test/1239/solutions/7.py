@@ -9,5 +9,5 @@ for i in range(1, len(a)):
     elif a[i] - a[i - 1] < m:
         m = a[i] - a[i - 1]
         cnt = 1
-ans = str(m) + " " + str(cnt)
+ans = str(m) + ' ' + str(cnt)
 print(ans)

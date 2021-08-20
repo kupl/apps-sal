@@ -1,1 +1,2 @@
-def has_unique_chars(s): return not s[len(set(s)):]
+def has_unique_chars(s):
+    return not s[len(set(s)):]

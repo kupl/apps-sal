@@ -8,7 +8,7 @@ class BellmanFord:
         dist[s] = 0
         for i in range(V):
             for e in E:
-                u, v, cost = e
+                (u, v, cost) = e
                 if dist[u] != INF and dist[v] > dist[u] + cost:
                     dist[v] = dist[u] + cost
                     if i == V - 1 and v == V - 1:
@@ -17,10 +17,10 @@ class BellmanFord:
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     E = []
     for _ in range(M):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         a -= 1
         b -= 1
         E.append((a, b, -c))

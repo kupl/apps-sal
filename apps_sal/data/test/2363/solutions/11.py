@@ -1,11 +1,9 @@
 def larger(a, b, count):
     if b == 0:
         return count
-
     if a > b:
-        a, b = b, a
-
-    count += (b // a)
+        (a, b) = (b, a)
+    count += b // a
     count = larger(a, b % a, count)
     return count
 

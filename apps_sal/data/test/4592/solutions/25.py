@@ -1,5 +1,4 @@
 n = int(input())
-
 ji = {}
 ans = 1
 m = 1000000007
@@ -10,15 +9,11 @@ for i in range(n):
         if tmp % j == 0:
             if not j in ji:
                 ji[j] = 0
-
             ji[j] += 1
             tmp /= j
         else:
             j += 1
-
 for i in list(ji.values()):
-    ans *= (i + 1)
+    ans *= i + 1
     ans %= m
-
-
 print(ans)

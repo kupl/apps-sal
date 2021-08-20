@@ -1,11 +1,8 @@
-# cook your dish here
-# cook your dish here
 def nthMagicNo(n):
-
     pow = 1
     answer = 0
-    while (n):
-        if (n & 1):
+    while n:
+        if n & 1:
             answer += pow
         n >>= 1
         pow = pow * 6

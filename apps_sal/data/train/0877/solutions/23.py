@@ -1,6 +1,5 @@
-
 def readintarray():
-    return [int(s) for s in input().strip().split(" ")]
+    return [int(s) for s in input().strip().split(' ')]
 
 
 def solve(x, y, k, n):
@@ -11,5 +10,5 @@ def solve(x, y, k, n):
 
 
 for _ in range(int(input())):
-    x, y, k, n = readintarray()
-    print("Yes" if solve(x, y, k, n) else "No")
+    (x, y, k, n) = readintarray()
+    print('Yes' if solve(x, y, k, n) else 'No')

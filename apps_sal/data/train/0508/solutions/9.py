@@ -1,20 +1,22 @@
 from heapq import heappush, heappop
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 running = []
 events = []
 delete = set()
-
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 for _ in range(n):
-    s, t, x = map(int, input().split())
+    (s, t, x) = map(int, input().split())
     time = max(s - x, 0)
     if t - x < 0:
         continue
-    events.append((s - x, x, 1))  # 追加イベント
-    events.append((t - x, x, 0))  # 削除イベント
+    events.append((s - x, x, 1))
+    events.append((t - x, x, 0))
 events.sort()
 ans = []
 idx = -1
@@ -22,7 +24,6 @@ for _ in range(q):
     d = int(input())
     if d >= events[-1][0]:
         print(-1)
-        # ans.append(-1)
         continue
     while events[idx + 1][0] <= d:
         idx += 1
@@ -37,7 +38,6 @@ for _ in range(q):
         if x not in delete:
             heappush(running, x)
             print(x)
-            # ans.append(x)
             flag = 0
             break
     if flag:

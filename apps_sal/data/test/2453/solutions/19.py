@@ -1,8 +1,8 @@
-from collections import*
+from collections import *
 n = int(input())
 d = defaultdict(int)
 for _ in [0] * n:
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     d[l] += 1
     d[r + 1] -= 1
 s = p = 0

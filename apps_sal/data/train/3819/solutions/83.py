@@ -1,6 +1,6 @@
 def smash(words):
-    s = ""
+    s = ''
     for w in words:
-        s += str(w) + " "
+        s += str(w) + ' '
     s = s.rstrip()
     return s

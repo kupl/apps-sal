@@ -1,4 +1,5 @@
 class Solution:
+
     def replaceWords(self, dict, sentence):
         """
         :type dict: List[str]
@@ -22,9 +23,8 @@ class Solution:
                         if word[:len(refer)] == refer:
                             if tmp == '':
                                 tmp = refer
-                            else:
-                                if len(tmp) > len(refer):
-                                    tmp = refer
+                            elif len(tmp) > len(refer):
+                                tmp = refer
             if tmp != '':
                 res += tmp + ' '
             else:

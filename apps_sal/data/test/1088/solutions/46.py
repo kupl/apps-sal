@@ -2,6 +2,7 @@ from math import factorial
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parents = [-1] * n
 
@@ -18,7 +19,7 @@ class UnionFind:
         if x == y:
             return False
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
         return True
@@ -31,14 +32,11 @@ class UnionFind:
         return -self.parents[x]
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(n)]
-
 mod = 998244353
-
 UF_h = UnionFind(n)
 UF_w = UnionFind(n)
-
 for i in range(n - 1):
     for j in range(i, n):
         flag = True
@@ -46,10 +44,8 @@ for i in range(n - 1):
             if A[i][l] + A[j][l] > k:
                 flag = False
                 break
-
         if flag:
             UF_h.union(i, j)
-
 for i in range(n - 1):
     for j in range(i, n):
         flag = True
@@ -57,13 +53,10 @@ for i in range(n - 1):
             if A[l][i] + A[l][j] > k:
                 flag = False
                 break
-
         if flag:
             UF_w.union(i, j)
-
 Dh = {UF_h.find(i): UF_h.size(i) for i in range(n)}
 Dw = {UF_w.find(i): UF_w.size(i) for i in range(n)}
-
 ans = 1
 for i in Dh:
     ans *= factorial(Dh[i])
@@ -71,5 +64,4 @@ for i in Dh:
 for i in Dw:
     ans *= factorial(Dw[i])
     ans %= mod
-
 print(ans)

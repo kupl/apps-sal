@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 cd = [list(map(int, input().split())) for i in range(M)]
@@ -30,7 +30,7 @@ for i in range(len(li3)):
         A += a[li3[i][j]]
         B += b[li3[i][j]]
     if A != B:
-        print("No")
+        print('No')
         break
     elif i == len(li3) - 1:
-        print("Yes")
+        print('Yes')

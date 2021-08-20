@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 S = sum(A)
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def comb(n, r):

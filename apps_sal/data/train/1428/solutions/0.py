@@ -1,10 +1,9 @@
-# cook your dish here
 import heapq as hq
 from math import floor
 for _ in range(int(input())):
-    n, a, b, x, y, z = map(int, input().split())
+    (n, a, b, x, y, z) = map(int, input().split())
     arr = [-int(i) for i in input().split()]
-    days = ((z - b - 1) // y)
+    days = (z - b - 1) // y
     ans = 0
     hq.heapify(arr)
     curr = a + days * x
@@ -20,4 +19,4 @@ for _ in range(int(input())):
     if curr >= z:
         print(ans)
     else:
-        print("RIP")
+        print('RIP')

@@ -1,7 +1,8 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         sum = 0
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             j = i + 1
             while j < len(nums):
                 tempSum = (nums[i] - 1) * (nums[j] - 1)

@@ -6,8 +6,7 @@ Q = int(input())
 B = [0] * Q
 C = [0] * Q
 for i in range(Q):
-    B[i], C[i] = map(int, input().split())
-
+    (B[i], C[i]) = map(int, input().split())
 D = collections.Counter(A)
 s = sum(A)
 for i in range(Q):

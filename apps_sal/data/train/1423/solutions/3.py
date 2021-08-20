@@ -5,7 +5,7 @@ def position():
     key = l[pos - 1]
     sortArray = sorted(l)
     for i in range(size):
-        if(sortArray[i] == key):
+        if sortArray[i] == key:
             return i + 1
 
 

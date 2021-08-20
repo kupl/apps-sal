@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(m)]
 p = list(map(int, input().split()))
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     onoffs = [int(j) for j in list(bin(i)[2:].zfill(n))]
     Flag = True
     for lamp in range(m):

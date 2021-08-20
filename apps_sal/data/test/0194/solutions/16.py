@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 data = list(map(int, input().split()))
 h = c = 0
 for i in data:
@@ -12,10 +12,8 @@ for i in data:
             h -= 1
         else:
             c += 1
+    elif b > 0:
+        b -= 1
     else:
-        if b > 0:
-            b -= 1
-        else:
-            c += 2
-
+        c += 2
 print(c)

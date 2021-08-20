@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.ps = [-1] * (n + 1)
 
@@ -15,7 +16,7 @@ class UnionFind:
         if x == y:
             return False
         if self.ps[x] > self.ps[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.ps[x] += self.ps[y]
         self.ps[y] = x
         return True
@@ -29,10 +30,10 @@ class UnionFind:
 
 
 n = int(input())
-v = 10**5 + 5
+v = 10 ** 5 + 5
 uf = UnionFind(v * 2 + 10)
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     uf.unite(x, y + v)
 d = dict()
 for i in range(v * 2):
@@ -41,4 +42,4 @@ for i in range(v * 2):
         if p not in d:
             d[p] = [0, 0]
         d[p][i > v] += 1
-print(sum(x * y for x, y in d.values()) - n)
+print(sum((x * y for (x, y) in d.values())) - n)

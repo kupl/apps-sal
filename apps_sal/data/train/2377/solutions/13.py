@@ -13,7 +13,7 @@ for you in range(t):
     hashi = dict()
     dp = [0 for i in range(n)]
     for i in range(n):
-        if(li[i] - 1 in hashi):
+        if li[i] - 1 in hashi:
             dp[i] = hashi[li[i] - 1] + 1
             hashi[li[i]] = dp[i]
         else:

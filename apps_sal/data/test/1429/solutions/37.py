@@ -1,5 +1,5 @@
-n, s = input().split()
-n = (int)(n)
+(n, s) = input().split()
+n = int(n)
 at = [0] * (n + 1)
 cg = [0] * (n + 1)
 for i in range(n):

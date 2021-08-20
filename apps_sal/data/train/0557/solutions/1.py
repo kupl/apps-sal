@@ -1,7 +1,6 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     p = [10] * n
     for i in range(m):
         l = list(map(int, input().split()))

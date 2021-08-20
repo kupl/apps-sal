@@ -1,4 +1,5 @@
 class Pong:
+
     def __init__(self, max_score):
         self.max_score = max_score
         self.scores = [0, 0]

@@ -1,9 +1,7 @@
-v1, v2 = list(map(int, input().split()))
-t, d = list(map(int, input().split()))
-
+(v1, v2) = list(map(int, input().split()))
+(t, d) = list(map(int, input().split()))
 if v1 > v2:
-    v1, v2 = v2, v1
-
+    (v1, v2) = (v2, v1)
 if d == 0:
     print(t * v1)
 else:

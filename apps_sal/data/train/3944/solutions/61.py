@@ -8,8 +8,7 @@ def sum_triangular_numbers(n):
         num = 1
         max = 2
         result = 1
-
-        while(max <= n):
+        while max <= n:
             num += 1
             cont += 1
             if cont == max:

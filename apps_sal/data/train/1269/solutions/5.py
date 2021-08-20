@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     c = 0
@@ -8,7 +7,7 @@ for i in range(t):
     a.sort()
     b.sort()
     for j in range(len(a)):
-        if(a[j] < b[j]):
+        if a[j] < b[j]:
             c += a[j]
         else:
             c += b[j]

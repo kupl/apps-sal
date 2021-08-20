@@ -2,11 +2,10 @@ import sys
 
 
 def stone(s):
-    n, k = list(map(int, s.split()))
+    (n, k) = list(map(int, s.split()))
     l = list(map(int, sys.stdin.readline().split()))
     if k % 2 == 1:
         k = 1
-
     elif k % 2 == 0 and k != 0:
         k = 2
     else:
@@ -17,7 +16,7 @@ def stone(s):
             l[i] = m - l[i]
     s1 = ''
     for i in range(n):
-        s1 += (str(l[i]) + ' ')
+        s1 += str(l[i]) + ' '
     print(s1)
 
 

@@ -1,5 +1,4 @@
 import sys
-
 n = int(input())
 s = input()
 state = [0] * 10

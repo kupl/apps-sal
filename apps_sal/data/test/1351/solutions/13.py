@@ -1,4 +1,4 @@
-l, r = map(int, input().split())
+(l, r) = map(int, input().split())
 
 
 def alldiff(i):

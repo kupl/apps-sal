@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 def valid(a):
-    X, G, memo = len(a[0]), len(a[0][0]), defaultdict(set)
+    (X, G, memo) = (len(a[0]), len(a[0][0]), defaultdict(set))
     players = {g for group in a[0] for g in group}
     for row in a:
         if len(row) != X:

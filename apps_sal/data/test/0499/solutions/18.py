@@ -2,23 +2,18 @@ from collections import namedtuple
 
 
 def __starting_point():
-
     n = int(input())
     cards = input()
-
     r = 0
     g = 0
     b = 0
     for card in cards:
-        if card == "R":
+        if card == 'R':
             r += 1
-        elif card == "G":
+        elif card == 'G':
             g += 1
-        elif card == "B":
+        elif card == 'B':
             b += 1
-
-    # print(r,g,b)
-
     colornum = 0
     if r:
         colornum += 1
@@ -26,48 +21,45 @@ def __starting_point():
         colornum += 1
     if b:
         colornum += 1
-
-    res = ""
+    res = ''
     if colornum == 3:
-        res = "BGR"
+        res = 'BGR'
     elif colornum == 2:
         if r == 1:
             if b == 1:
-                res = "G"
+                res = 'G'
             elif b > 1:
-                res = "GR"
+                res = 'GR'
             elif g == 1:
-                res = "B"
+                res = 'B'
             elif g > 1:
-                res = "BR"
+                res = 'BR'
         elif g == 1:
             if r == 1:
-                res = "B"
+                res = 'B'
             elif b == 1:
-                res = "R"
+                res = 'R'
             elif r > 1:
-                res = "BG"
+                res = 'BG'
             elif b > 1:
-                res = "GR"
+                res = 'GR'
         elif b == 1:
             if r == 1:
-                res = "G"
+                res = 'G'
             elif g == 1:
-                res = "R"
+                res = 'R'
             elif r > 1:
-                res = "BG"
+                res = 'BG'
             elif g > 1:
-                res = "BR"
+                res = 'BR'
         else:
-            res = "BGR"
-    else:
-        if r:
-            res = "R"
-        elif g:
-            res = "G"
-        elif b:
-            res = "B"
-
+            res = 'BGR'
+    elif r:
+        res = 'R'
+    elif g:
+        res = 'G'
+    elif b:
+        res = 'B'
     print(res)
 
 

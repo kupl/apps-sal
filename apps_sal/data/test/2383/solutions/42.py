@@ -7,8 +7,7 @@ for i in l:
         x += 1
     else:
         ans += 1
-
 if ans == len(l):
-    print((-1))
+    print(-1)
 else:
     print(ans)

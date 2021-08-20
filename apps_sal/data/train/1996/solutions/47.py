@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         notSafe = set()
         safe = set()
@@ -10,7 +11,6 @@ class Solution:
                 return True
             if node in safe:
                 return True
-            # print(node)
             visited.add(node)
             for child in graph[node]:
                 if child in visited:
@@ -26,5 +26,5 @@ class Solution:
         out = []
         for i in range(len(graph)):
             if isSafe(i, set()):
-                out += i,
+                out += (i,)
         return out

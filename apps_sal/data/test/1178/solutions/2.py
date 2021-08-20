@@ -1,8 +1,6 @@
 import numpy as np
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = np.array(input().split(), dtype=np.int)
-
 if k < n:
     dp = np.zeros((n - k, n), dtype=np.int)
     dp[0] = h

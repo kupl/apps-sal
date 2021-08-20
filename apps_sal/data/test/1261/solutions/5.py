@@ -9,5 +9,4 @@ while n:
     print(' '.join([str(i)] * ((n + 1) // 2)), end='')
     i <<= 1
     n >>= 1
-
 print()

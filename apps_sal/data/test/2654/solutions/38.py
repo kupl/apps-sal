@@ -11,12 +11,30 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
-def LIST1(): return list(MAP1())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+def LIST1():
+    return list(MAP1())
 
 
 def solve():
@@ -24,12 +42,11 @@ def solve():
     a = []
     b = []
     for i in range(N):
-        A, B = MAP()
+        (A, B) = MAP()
         a.append(A)
         b.append(B)
     a.sort()
     b.sort()
-
     if N % 2 == 1:
         am = a[(N + 1) // 2 - 1]
         bm = b[(N + 1) // 2 - 1]

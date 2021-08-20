@@ -1,6 +1,6 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        # O(NNS) Solution
         predecessors = dict()
         words = sorted(words, key=len)
         for i in range(len(words)):
@@ -22,16 +22,15 @@ class Solution:
     def isPredecessor(self, word, candidate):
         if len(candidate) + 1 != len(word):
             return False
-        i, j = 0, 0
+        (i, j) = (0, 0)
         wildcard = True
         while i < len(word) and j < len(candidate):
             if word[i] == candidate[j]:
                 i += 1
                 j += 1
+            elif wildcard:
+                i += 1
+                wildcard = False
             else:
-                if wildcard:
-                    i += 1
-                    wildcard = False
-                else:
-                    return False
+                return False
         return i + 1 == len(word) or i == len(word) if wildcard else i == len(word)

@@ -7,5 +7,4 @@ def check_exam(arr1, arr2):
             score -= 1
         else:
             score += 4
-
     return max(score, 0)

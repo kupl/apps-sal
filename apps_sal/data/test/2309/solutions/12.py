@@ -1,4 +1,3 @@
-
 VOWELS = ('a', 'e', 'i', 'o', 'u')
 
 
@@ -10,7 +9,7 @@ def main():
         buf = input()
         s.append(buf)
     word_info = []
-    for i, x in enumerate(s):
+    for (i, x) in enumerate(s):
         vowel_count = 0
         last_vowel = None
         for c in x:
@@ -25,7 +24,7 @@ def main():
     last_last_vowel = None
     last_word = None
     last_word_leftover = None
-    for i, x in enumerate(word_info):
+    for (i, x) in enumerate(word_info):
         if x[1] > last_vowel_count:
             if last_word and last_word_leftover:
                 word_pair_first_only.append((last_word, last_word_leftover))
@@ -52,7 +51,7 @@ def main():
     lyrics = []
     first_only_pointer = 0
     last_word_pair = None
-    for i, x in enumerate(word_pair):
+    for (i, x) in enumerate(word_pair):
         if first_only_pointer < len(word_pair_first_only):
             last_word_pair = word_pair_first_only[first_only_pointer]
             first_only_pointer += 1

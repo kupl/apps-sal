@@ -1,1 +1,1 @@
-print("A" if input().isupper() else "a")
+print('A' if input().isupper() else 'a')

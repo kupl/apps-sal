@@ -1,5 +1,5 @@
 import math
-H, n = [int(i) for i in input().split(' ')]
+(H, n) = [int(i) for i in input().split(' ')]
 d = [int(i) for i in input().split(' ')]
 H_cur = H
 dead = False

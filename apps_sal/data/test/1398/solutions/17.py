@@ -22,11 +22,10 @@ for i in range(1, 5001):
             ret = total - remove
             if remove < minA:
                 minA = remove
-    else:
-        if mark[i] > 0:
-            remove = sumMark[i - 1]
-            ret = total - remove
-            if remove < minA:
-                minA = remove
+    elif mark[i] > 0:
+        remove = sumMark[i - 1]
+        ret = total - remove
+        if remove < minA:
+            minA = remove
 with open('output.txt', 'w') as f:
     f.write(str(minA))

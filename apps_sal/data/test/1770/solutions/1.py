@@ -1,8 +1,8 @@
 df = int(input())
 for _ in range(df):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     d2 = abs(x - y)
-    ans = 3e9
+    ans = 3000000000.0
     if d2 % d == 0:
         ans = d2 // d
     v = abs(x - 1)
@@ -25,7 +25,7 @@ for _ in range(df):
         ans = min(ans, v3 // d + to_e)
     if v4 % d == 0:
         ans = min(ans, v4 // d + to_b)
-    if ans < 2e9:
+    if ans < 2000000000.0:
         print(ans)
     else:
         print(-1)

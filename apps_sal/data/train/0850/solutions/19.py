@@ -1,11 +1,9 @@
-# cook your dish here
-# cook your dish here
 hm = {}
 
 
 def gcd(a, b):
     if b > a:
-        a, b = b, a
+        (a, b) = (b, a)
     if b == 0:
         return a
     else:
@@ -34,9 +32,8 @@ for _ in range(int(input())):
             if l[i] > max1:
                 max2 = max1
                 max1 = l[i]
-            else:
-                if l[i] > max2:
-                    max2 = l[i]
+            elif l[i] > max2:
+                max2 = l[i]
         m1 = max1
         m2 = max2
         l.remove(m1)
@@ -47,8 +44,7 @@ for _ in range(int(input())):
         s1 = gcd(gcd_1, m2) + m1
         s2 = gcd(gcd_1, m1) + m2
         print(max(s1, s2))
+    elif n == 1:
+        print(l[0] * 2)
     else:
-        if n == 1:
-            print(l[0] * 2)
-        else:
-            print(sum(l))
+        print(sum(l))

@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 k = int(input())
 g = [[] for i in range(k)]
 for i in range(k):
@@ -14,7 +14,7 @@ while dq:
     v = dq.popleft()
     if v == 0:
         break
-    for t, cost in g[v]:
+    for (t, cost) in g[v]:
         if res[t] <= res[v] + cost:
             continue
         res[t] = res[v] + cost

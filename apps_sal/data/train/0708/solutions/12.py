@@ -1,6 +1,6 @@
 def solve():
-    N, K = map(int, input().split())
-    mod = 10**9 + 7
+    (N, K) = map(int, input().split())
+    mod = 10 ** 9 + 7
     m = 0
     for i in range(1, N + 1):
         c = pow(K, 2 * i - 1, mod)

@@ -3,7 +3,6 @@ def S(n):
 
 
 K = int(input())
-
 x = 1
 d = 1
 while K > 0:

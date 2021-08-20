@@ -4,5 +4,4 @@ def input_ints():
 
 input()
 xs = input_ints()
-
 print(2 + (xs[2] ^ min(xs)))

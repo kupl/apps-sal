@@ -1,6 +1,7 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
-        '''
+        """
         max_d(i,i+k-1) = 
 
         dp(i, d_left) = 
@@ -17,7 +18,7 @@ class Solution:
 
 
         jobDifficulty = [6,5,4,3,2,1], d = 2
-        '''
+        """
         max_d = [[-1 for _ in range(len(jobDifficulty))] for _ in range(len(jobDifficulty))]
         for i in range(len(jobDifficulty)):
             max_d[i][i] = jobDifficulty[i]
@@ -35,16 +36,12 @@ class Solution:
                 else:
                     return jobDifficulty[i]
             if (i, d_left) in memo.keys():
-                return memo[(i, d_left)]
+                return memo[i, d_left]
             res = float('inf')
             for k in range(1, len(jobDifficulty) - i):
                 res = min(res, dp(i + k, d_left - 1) + max_d[i][i + k - 1])
-
-            memo[(i, d_left)] = res
+            memo[i, d_left] = res
             return res
         memo = {}
-
         ans = dp(0, d)
-        # print(max_d)
-        # print(memo)
         return ans if ans != float('inf') else -1

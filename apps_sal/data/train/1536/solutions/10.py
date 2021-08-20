@@ -27,12 +27,12 @@ for _ in range(t):
                 back.append(back[-1] - target)
             back = back[::-1]
             back.pop()
-            print(*back, end=" ")
+            print(*back, end=' ')
             print(*forth)
         else:
             k = (a[-1] - a[0]) // (n - 1)
             for i in range(n - 1, -1, -1):
-                print(a[-1] - k * i, end=" ")
+                print(a[-1] - k * i, end=' ')
             print()
     else:
         target = -1
@@ -56,5 +56,5 @@ for _ in range(t):
             back.append(back[-1] - target)
         back = back[::-1]
         back.pop()
-        print(*back, end=" ")
+        print(*back, end=' ')
         print(*forth)

@@ -3,7 +3,7 @@ for i in range(t):
     n = input()
     arr = [int(i) for i in input().split()]
     arr.sort()
-    while(len(arr) != 1):
+    while len(arr) != 1:
         w = arr[-1]
         arr.pop()
         e = arr[-1]

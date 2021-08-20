@@ -10,5 +10,4 @@ def skiponacci(n):
             s = s + ' ' + str(num)
         else:
             s += ' skip'
-
     return s

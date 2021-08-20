@@ -1,11 +1,12 @@
 class Solution:
+
     def find(self, parent: List[int], x: int):
         if not parent[x] == x:
             parent[x] = self.find(parent, parent[x])
         return parent[x]
 
     def largestComponentSize(self, A: List[int]) -> int:
-        n, mx, res = 0, max(A), 0
+        (n, mx, res) = (0, max(A), 0)
         valtocnt = collections.Counter()
         parent = list(range(mx + 1))
         for num in A:

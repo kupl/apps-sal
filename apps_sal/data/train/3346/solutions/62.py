@@ -1,7 +1,7 @@
 def gap(g, m, n):
     primes = []
     sieve = [True] * (n + 1)
-    for i in range(3, int((n + 1)**0.5) + 1, 2):
+    for i in range(3, int((n + 1) ** 0.5) + 1, 2):
         if sieve[i]:
             sieve[i * i::2 * i] = [False] * ((n - i * i) // (2 * i) + 1)
     if m % 2 == 0:

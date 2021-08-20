@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 b = [int(i) for i in input().split()]
 if k == 1:
     print(b[-1] - b[0] + 1)

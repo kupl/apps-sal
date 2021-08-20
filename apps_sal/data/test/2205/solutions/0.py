@@ -6,7 +6,7 @@ for i in range(1, n):
 q = 0
 for i in range(n):
     q = q ^ p[i]
-    if (n // (i + 1)) % 2 == 1:
+    if n // (i + 1) % 2 == 1:
         q = q ^ s[i]
     q = q ^ s[n % (i + 1)]
 print(q)

@@ -9,9 +9,9 @@ def divsor(n):
 
 
 n = int(input())
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 for i in range(n - 1):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     a = gcd(c * d, a)
     b = gcd(c * d, b)
 if a != 1:

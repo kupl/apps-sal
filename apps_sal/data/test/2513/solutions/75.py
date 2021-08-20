@@ -3,7 +3,6 @@ n = int(input())
 s = str(input())
 l = [0] * n
 flag = 1
-
 if s[0] == 'x':
     flag = 0
     new_s = ''
@@ -50,71 +49,63 @@ def check(i, l):
             if l[i] == 'S':
                 l[i + 1] = l[i - 1]
                 return check(i + 1, l)
-            else:
-                if l[i - 1] == 'W':
-                    l[i + 1] = 'S'
-                    return check(i + 1, l)
-                else:
-                    l[i + 1] = 'W'
-                    return check(i + 1, l)
-        else:
-            if l[i] == 'W':
-                l[i + 1] = l[i - 1]
+            elif l[i - 1] == 'W':
+                l[i + 1] = 'S'
                 return check(i + 1, l)
             else:
-                if l[i - 1] == 'S':
-                    l[i + 1] = 'W'
-                    return check(i + 1, l)
-                else:
-                    l[i + 1] = 'S'
-                    return check(i + 1, l)
-    else:
-        if s[i] == 'o':
-            if l[i] == 'S':
-                if l[i - 1] == l[0]:
-                    if (l[0] == 'W' and l[i] == l[1]) or (l[0] == 'S' and l[i] != l[1]):
-                        return -1
-                    else:
-                        return l
-                else:
-                    return -1
-            else:
-                if l[i - 1] != l[0]:
-                    if (l[0] == 'W' and l[i] == l[1]) or (l[0] == 'S' and l[i] != l[1]):
-                        return -1
-                    else:
-                        return l
-                else:
-                    return -1
+                l[i + 1] = 'W'
+                return check(i + 1, l)
+        elif l[i] == 'W':
+            l[i + 1] = l[i - 1]
+            return check(i + 1, l)
+        elif l[i - 1] == 'S':
+            l[i + 1] = 'W'
+            return check(i + 1, l)
         else:
-            if l[i] == 'S':
-                if l[i - 1] != l[0]:
-                    if (l[0] == 'W' and l[i] == l[1]) or (l[0] == 'S' and l[i] != l[1]):
-                        return -1
-                    else:
-                        return l
-                else:
+            l[i + 1] = 'S'
+            return check(i + 1, l)
+    elif s[i] == 'o':
+        if l[i] == 'S':
+            if l[i - 1] == l[0]:
+                if l[0] == 'W' and l[i] == l[1] or (l[0] == 'S' and l[i] != l[1]):
                     return -1
+                else:
+                    return l
             else:
-                if l[i - 1] == l[0]:
-                    if (l[0] == 'W' and l[i] == l[1]) or (l[0] == 'S' and l[i] != l[1]):
-                        return -1
-                    else:
-                        return l
-                else:
-                    return -1
+                return -1
+        elif l[i - 1] != l[0]:
+            if l[0] == 'W' and l[i] == l[1] or (l[0] == 'S' and l[i] != l[1]):
+                return -1
+            else:
+                return l
+        else:
+            return -1
+    elif l[i] == 'S':
+        if l[i - 1] != l[0]:
+            if l[0] == 'W' and l[i] == l[1] or (l[0] == 'S' and l[i] != l[1]):
+                return -1
+            else:
+                return l
+        else:
+            return -1
+    elif l[i - 1] == l[0]:
+        if l[0] == 'W' and l[i] == l[1] or (l[0] == 'S' and l[i] != l[1]):
+            return -1
+        else:
+            return l
+    else:
+        return -1
 
 
 ans = check(0, l)
 if ans == -1:
     print(-1)
+elif flag:
+    print(''.join(ans))
 else:
-    if flag:
-        print(''.join(ans))
-    else:
-        for i in range(n):
-            if ans[i] == 'S':
-                ans[i] = 'W'
-            else:
-                ans[i] = 'S'
-        print(''.join(ans))
+    for i in range(n):
+        if ans[i] == 'S':
+            ans[i] = 'W'
+        else:
+            ans[i] = 'S'
+    print(''.join(ans))

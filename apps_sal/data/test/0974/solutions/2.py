@@ -1,8 +1,6 @@
 stack = []
 next_pop_num = 1
 r = 0
-
-
 for _ in range(2 * int(input())):
     command = input()
     if command.startswith('add'):
@@ -15,5 +13,4 @@ for _ in range(2 * int(input())):
         if stack:
             stack.pop(-1)
         next_pop_num += 1
-
 print(r)

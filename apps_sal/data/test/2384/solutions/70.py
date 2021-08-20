@@ -1,13 +1,14 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 n = int(input())
 A = list(map(int, input().split()))
-
 k = 1 + n % 2
 f_inf = float('inf')
-
 dp = [[-f_inf for _ in range(4)] for _ in range(200005)]
 dp[0][0] = 0
 for i in range(n):
@@ -17,6 +18,5 @@ for i in range(n):
         if (i + j) % 2 == 0:
             now += A[i]
         dp[i + 1][j] = max(dp[i + 1][j], now)
-
 ans = dp[n][k]
 print(ans)

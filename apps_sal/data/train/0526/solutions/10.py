@@ -1,19 +1,15 @@
-# cook your dish here
 temp = []
 t = int(input())
 for _ in range(t):
     s = input()
     l = list(s)
     x = len(l) * 8
-
     i = 0
     y = 0
-    while i < (len(l)):
+    while i < len(l):
         count = 0
-        while i < (len(l) - 1) and l[i] == l[i + 1]:
-
+        while i < len(l) - 1 and l[i] == l[i + 1]:
             count += 1
-
             i += 1
         if count == 0:
             y += 8

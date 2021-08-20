@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         lookup = collections.defaultdict(int)
         count = 0

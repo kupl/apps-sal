@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import defaultdict
 for _ in range(int(input())):
     n = int(input())
@@ -10,7 +9,7 @@ for _ in range(int(input())):
     flag = True
     i = 0
     f = False
-    while(i < n):
+    while i < n:
         if flag:
             if a[i] == prev:
                 flag = False
@@ -21,31 +20,28 @@ for _ in range(int(input())):
             else:
                 b.append(a[i])
                 prev = a[i]
+        elif a[i] == nex:
+            flag = True
+            if a[i] == prev:
+                f = True
+                break
+            i -= 1
         else:
-            if a[i] == nex:
-                flag = True
-                if a[i] == prev:
-                    f = True
-                    break
-                i -= 1
-            else:
-                c.append(a[i])
-                nex = a[i]
+            c.append(a[i])
+            nex = a[i]
         i += 1
     flag = True
     b.sort()
     c.sort(reverse=True)
     ans = b[1:] + c[:-1]
-    # print(ans)
     for i in range(1, len(ans)):
         if ans[i] == ans[i - 1]:
             f = True
             break
-
     if f:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         for i in ans:
-            print(i, end=" ")
+            print(i, end=' ')
         print()

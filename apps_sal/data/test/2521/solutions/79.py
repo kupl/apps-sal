@@ -16,7 +16,7 @@ for i in range(n):
     ymax = -hq.heappop(hqy)
     fsum.append(fsum[-1] + a[n + i] - xmin)
     lsum.append(lsum[-1] + a[2 * n - i - 1] - ymax)
-ans = -10**18
+ans = -10 ** 18
 for i in range(n + 1):
     ans = max(ans, fsum[i] - lsum[-i - 1])
 print(ans)

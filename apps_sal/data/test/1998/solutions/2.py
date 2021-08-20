@@ -1,4 +1,4 @@
-n, a, b, k = map(int, input().split())
+(n, a, b, k) = map(int, input().split())
 A = ['1'] + list(input()) + ['1']
 answer = []
 n += 2

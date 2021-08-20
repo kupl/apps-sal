@@ -26,18 +26,14 @@ def bfs(start, goal, g, n, visited):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     g = [[] for _ in range(n + 1)]
-
     for _ in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         g[u].append(v)
-
-    s, t = map(int, input().split())
-
+    (s, t) = map(int, input().split())
     visited = [-1] * (n + 1)
     visited[0] = 0
-
     bfs(s, t, g, n, visited)
     print(visited[t])
 

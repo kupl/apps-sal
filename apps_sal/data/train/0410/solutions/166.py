@@ -1,4 +1,5 @@
 class Solution:
+
     def core(self, num: int, counter: int) -> int:
         if num == 1:
             return counter

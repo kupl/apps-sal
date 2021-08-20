@@ -1,10 +1,11 @@
 class Dog:
+
     def __init__(self, breed):
         self.breed = breed
 
     def bark(self):
-        return "Woof"
+        return 'Woof'
 
 
-snoopy = Dog("Code")
-scoobydoo = Dog("Wars")
+snoopy = Dog('Code')
+scoobydoo = Dog('Wars')

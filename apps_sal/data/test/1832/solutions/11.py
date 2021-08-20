@@ -14,9 +14,7 @@ for _ in range(t):
             current += 'b'
         else:
             current += 'a'
-
         for j in range(num + 1, maxs):
             current += current[j - 1]
-
         ans[i] = current
     print(*ans, sep='\n')

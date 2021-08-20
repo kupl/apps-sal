@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def ship_capacity(weights, D, capacity):
             days = 0
             sum_weights = 0

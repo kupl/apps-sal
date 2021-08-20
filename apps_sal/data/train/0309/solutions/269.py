@@ -1,12 +1,9 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
-
-        #dp[i] = {delta:len}
-
         n = len(A)
         if n < 2:
             return n
-
         dp = [{} for _ in range(n)]
         ans = 1
         dp[0] = {0: 1}
@@ -18,5 +15,4 @@ class Solution:
                 else:
                     dp[i][delta] = 2
                 ans = max(ans, dp[i][delta])
-
         return ans

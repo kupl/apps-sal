@@ -1,4 +1,4 @@
-b, k = map(int, input().split())
+(b, k) = map(int, input().split())
 A = [int(i) for i in input().split()]
 t = 0
 for i in range(k):

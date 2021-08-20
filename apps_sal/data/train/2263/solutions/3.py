@@ -10,7 +10,7 @@ def solve(s):
             return 7
         else:
             return 3
-    if all(a == b for a, b in zip(s, s[1:])):
+    if all((a == b for (a, b) in zip(s, s[1:]))):
         return 1
     dp = [[[0] * 3 for _ in range(3)] for _ in range(2)]
     dp[0][0][0] = 1
@@ -38,8 +38,8 @@ def solve(s):
         ndp[1][2][1] = (dp[0][2][2] + dp[1][0][2] + dp[1][1][2] + dp[1][2][2]) % MOD
         ndp[1][2][2] = (dp[0][2][0] + dp[1][0][0] + dp[1][1][0] + dp[1][2][0]) % MOD
         dp = ndp
-    return (sum(dp[1][x][sum(map(ord, s)) % 3] for x in range(3)) + all(a != b for a, b in zip(s, s[1:]))) % MOD
+    return (sum((dp[1][x][sum(map(ord, s)) % 3] for x in range(3))) + all((a != b for (a, b) in zip(s, s[1:])))) % MOD
 
 
 s = input()
-print((solve(s)))
+print(solve(s))

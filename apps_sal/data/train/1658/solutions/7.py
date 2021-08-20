@@ -3,6 +3,7 @@ from math import floor
 
 
 def float_to_rat(x):
+
     def is_int(x):
         return x == floor(x)
     d = 1

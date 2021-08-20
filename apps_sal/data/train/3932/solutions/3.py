@@ -1,4 +1,5 @@
 def luxhouse(houses):
+
     def f():
         m = 0
         for fl in reversed(houses):

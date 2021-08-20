@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     x = []
     y = []
     for i in range(4 * n - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         x.append(a)
         y.append(b)
     xs = set(x)

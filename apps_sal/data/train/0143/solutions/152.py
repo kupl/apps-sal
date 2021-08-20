@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         if not len(tree):
             return 0
@@ -17,7 +18,6 @@ class Solution:
                     tracking.add(tree[i])
                     f_num = current_num
                     start = last_change
-
                 else:
                     tracking.add(tree[i])
             if tree[i] != current_num:

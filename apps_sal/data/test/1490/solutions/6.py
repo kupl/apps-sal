@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split(' ')))
+(n, m) = list(map(int, input().split(' ')))
 a = sorted(list(map(int, input().split(' '))))
-
 b = []
 j = 0
 for i in range(1, 10 ** 9 + 1):
@@ -11,6 +10,5 @@ for i in range(1, 10 ** 9 + 1):
         m -= i
     if j < n and i == a[j]:
         j += 1
-
 print(len(b))
 print(' '.join(map(str, b)))

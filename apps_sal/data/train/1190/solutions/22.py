@@ -3,12 +3,12 @@ ans = []
 
 
 def fun1(p, i):
-    n = int(p / (2**i))
-    return p - (n * (2**i))
+    n = int(p / 2 ** i)
+    return p - n * 2 ** i
 
 
 def fun2(p, i):
-    n = int(p / (2**i))
+    n = int(p / 2 ** i)
     return n
 
 

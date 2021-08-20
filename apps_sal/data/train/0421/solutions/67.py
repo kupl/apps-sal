@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if not s:
             return ''
@@ -6,7 +7,7 @@ class Solution:
             return s
         largest = max(list(s))
         currmax = ''
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c == largest:
                 if s[i:] > currmax:
                     currmax = s[i:]

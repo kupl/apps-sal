@@ -8,7 +8,6 @@ class StreamChecker:
                 if ch not in root:
                     root[ch] = {}
                 root = root[ch]
-
             root['*'] = True
         self.storech = []
 
@@ -21,9 +20,4 @@ class StreamChecker:
             if letter in ele:
                 storech.append(ele[letter])
         self.storech = storech
-        return any('*' in ele for ele in self.storech)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('*' in ele for ele in self.storech))

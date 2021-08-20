@@ -1,10 +1,7 @@
-#
-# @lc app=leetcode id=1011 lang=python3
-#
-# [1011] Capacity To Ship Packages Within D Days
-#
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def timeConsumption(limit):
             days = totalWeight = 0
             for weight in weights:

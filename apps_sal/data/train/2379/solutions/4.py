@@ -1,15 +1,15 @@
 def solve():
     n = int(input())
     s = input()
-    z, o = [], []
+    (z, o) = ([], [])
     c = 0
     ans = []
 
     def add(x):
         nonlocal z, o, c, ans
-        u, v = z, o
+        (u, v) = (z, o)
         if x == 0:
-            u, v = v, u
+            (u, v) = (v, u)
         if u:
             w = u.pop()
             ans.append(w)

@@ -1,31 +1,30 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = input()
     l = 0
     r = 0
     for i in range(n):
-        if (a[i] == 'G'):
+        if a[i] == 'G':
             l = i
-        elif (a[i] == 'T'):
+        elif a[i] == 'T':
             r = i
-    if (l < r):
-        if ((r - l) % k == 0):
+    if l < r:
+        if (r - l) % k == 0:
             for i in range(l, r + 1, k):
-                if (a[i] == '#'):
-                    print("NO")
+                if a[i] == '#':
+                    print('NO')
                     return
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
+    elif (r - l) % k == 0:
+        for i in range(r, l + 1, k):
+            if a[i] == '#':
+                print('NO')
+                return
+        print('YES')
     else:
-        if ((r - l) % k == 0):
-            for i in range(r, l + 1, k):
-                if (a[i] == '#'):
-                    print("NO")
-                    return
-            print("YES")
-        else:
-            print("NO")
+        print('NO')
 
 
 main()

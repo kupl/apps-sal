@@ -1,5 +1,4 @@
 import re
-
 s = input()
 
 

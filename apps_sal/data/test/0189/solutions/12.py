@@ -8,5 +8,4 @@ for n in range(1, 101):
     if ret[1] > temp:
         ret[0] = n
         ret[1] = temp
-
 print(ret[0], ret[1])

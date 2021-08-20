@@ -1,19 +1,17 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = max(A) + 1
         parent = [i for i in range(n)]
         rank = [0] * n
-
         for a in A:
             for k in range(2, int(sqrt(a)) + 1):
                 if a % k == 0:
                     self.union(parent, a, k, rank)
                     self.union(parent, a, a // k, rank)
-
         counter = collections.Counter()
         for a in A:
             counter[self.find_root(parent, a)] += 1
-
         return max(counter.values())
 
     def find_root(self, parent, x):

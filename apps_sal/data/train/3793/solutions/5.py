@@ -1,6 +1,5 @@
-
 def triangle_type(a, b, c):
-    c, b, a = sorted((a, b, c))
+    (c, b, a) = sorted((a, b, c))
     if a >= b + c:
         return 0
     if a * a < b * b + c * c:

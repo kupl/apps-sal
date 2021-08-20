@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = set(a)
 k = []

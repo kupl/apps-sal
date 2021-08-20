@@ -1,4 +1,3 @@
-# cook your dish here
 from collections import Counter
 for z in range(int(input())):
     n = int(input())
@@ -8,16 +7,16 @@ for z in range(int(input())):
         b.append((a[j], j))
     c = Counter(a)
     m = 0
-    for x, y in c.items():
+    for (x, y) in c.items():
         m = max(y, m)
     if m > n - m:
-        print("No")
+        print('No')
     else:
         d = [0] * n
         b.sort()
         for i in range(n):
             d[b[i][1]] = b[i - m][0]
-        print("Yes")
+        print('Yes')
         for i in d:
-            print(i, end=" ")
+            print(i, end=' ')
         print()

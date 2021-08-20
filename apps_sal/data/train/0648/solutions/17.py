@@ -1,6 +1,4 @@
-
 import sys
-
 ar = list(map(int, input().strip().split(' ')))
 n = ar[0]
 q = ar[1]

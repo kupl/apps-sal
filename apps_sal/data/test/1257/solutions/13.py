@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 g = [[0 for _ in range(n)] for _ in range(n)]
 x = 1
 for i in range(n):
@@ -13,4 +13,4 @@ ret = 0
 for i in range(n):
     ret += g[i][k - 1]
 print(ret)
-print("\n".join([" ".join(map(str, x)) for x in g]))
+print('\n'.join([' '.join(map(str, x)) for x in g]))

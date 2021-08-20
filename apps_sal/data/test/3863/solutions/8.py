@@ -1,14 +1,17 @@
 import sys
-def MI(): return map(int, sys.stdin.readline().rstrip().split())
 
 
-N, K = MI()
-mod = 10**9 + 7
+def MI():
+    return map(int, sys.stdin.readline().rstrip().split())
 
 
-def divisor(n):  # nの約数のリスト
+(N, K) = MI()
+mod = 10 ** 9 + 7
+
+
+def divisor(n):
     res = []
-    for i in range(1, int(n**.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             res.append(i)
             if i != n // i:
@@ -17,21 +20,18 @@ def divisor(n):  # nの約数のリスト
 
 
 A = divisor(N)
-
-d = {}  # d[i] = iの約数のリスト(iはNの約数)
+d = {}
 for a in A:
     d[a] = divisor(a)
-
-prime = []  # Nの素因数のリスト
-for i in range(2, int(N**.5) + 1):
+prime = []
+for i in range(2, int(N ** 0.5) + 1):
     if N % i == 0:
         prime.append(i)
         while N % i == 0:
             N //= i
 if N != 1:
     prime.append(N)
-
-mu = {}  # mu[i] = μ(i) (iはNの約数)
+mu = {}
 for a in A:
     b = a
     r = 1
@@ -42,8 +42,6 @@ for a in A:
                 r = 0
                 break
     mu[a] = r
-
-
 ans = 0
 for a in A:
     for b in d[a]:
@@ -53,5 +51,4 @@ for a in A:
         else:
             ans += mu[a // b] * pow(K, (b + 1) // 2, mod) * a
             ans %= mod
-
 print(ans)

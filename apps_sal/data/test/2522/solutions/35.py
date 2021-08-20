@@ -12,15 +12,15 @@ def main():
         a_s[a - 1] += 1
     for b in blst:
         b_s[b - 1] += 1
-    for a, b in zip(a_s, b_s):
+    for (a, b) in zip(a_s, b_s):
         if a + b > n:
-            print("No")
+            print('No')
             return
-    print("Yes")
+    print('Yes')
     a_total = 0
     b_total = 0
     cor = -100000
-    for a, b in zip(a_s, b_s):
+    for (a, b) in zip(a_s, b_s):
         a_total += a
         cor = max(cor, a_total - b_total)
         b_total += b

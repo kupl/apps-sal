@@ -1,8 +1,9 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         if not mat:
             return 0
-        m, n = len(mat), len(mat[0])
+        (m, n) = (len(mat), len(mat[0]))
         prefix = [[0] * n for _ in range(m)]
         for i in range(m):
             for j in range(n - 1, -1, -1):
@@ -29,5 +30,4 @@ class Solution:
         ans = 0
         for i in range(m):
             ans += sum(count[i])
-
         return ans

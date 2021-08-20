@@ -1,13 +1,14 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, k = R()
+(n, k) = R()
 xs = list(R())
 a = int(input())
 cs = list(R())
 r = j = 0
 try:
-    for i, x in enumerate(xs):
+    for (i, x) in enumerate(xs):
         if x > k:
             while x > k:
                 s = min(cs[:i + 1 - j])

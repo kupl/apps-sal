@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
-    dp = [[0 for i in range(m)]for i in range(n)]
+    (n, m) = list(map(int, input().split()))
+    dp = [[0 for i in range(m)] for i in range(n)]
     f = 0
     mat = []
     for i in range(n):

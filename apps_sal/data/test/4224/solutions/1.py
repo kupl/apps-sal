@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# import sys
-# sys.recursionlimit(10**7)
 from functools import reduce
 
 
@@ -13,17 +10,13 @@ def divideCount(k):
 
 
 def solve(a):
-    return sum(
-        map(
-            divideCount, a
-        )
-    )
+    return sum(map(divideCount, a))
 
 
 def main():
     _ = int(input())
     a = list(map(int, input().split()))
-    print(('{}'.format(solve(a))))
+    print('{}'.format(solve(a)))
 
 
 def __starting_point():

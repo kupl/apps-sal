@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 import re
 s = input()
-
-if re.search(r's$', s):
-    print(s + "es")
+if re.search('s$', s):
+    print(s + 'es')
 else:
-    print(s + "s")
+    print(s + 's')

@@ -1,5 +1,4 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 m = 1
 ds = set()
 while m * m <= M:
@@ -7,7 +6,6 @@ while m * m <= M:
         ds.add(m)
         ds.add(M // m)
     m += 1
-
 ans = 1
 for d in ds:
     if d * N > M:

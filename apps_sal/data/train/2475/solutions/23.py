@@ -1,4 +1,5 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         rows = len(A)
         cols = len(A[0])

@@ -21,6 +21,5 @@ for i in range(1, len(l)):
     c1[i] += c1[i - 1]
     count = (l[i] - l[i - 1]) * c1[i] + c2[i - 1]
     ans[ind[i]] = count
-
 for i in ans:
     print(i)

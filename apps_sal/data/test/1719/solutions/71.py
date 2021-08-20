@@ -27,5 +27,5 @@ ans = 0
 for i in range(4):
     for j in range(4):
         for k in range(4):
-            ans += dp[n][i][j][k] % (10**9 + 7)
-print((ans % (10**9 + 7)))
+            ans += dp[n][i][j][k] % (10 ** 9 + 7)
+print(ans % (10 ** 9 + 7))

@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         n = len(A)
         if n < 2:
@@ -31,16 +32,13 @@ class Solution:
             if x != 1:
                 prime_factors.append(x)
             return prime_factors
-
         prime_list = list_primes(max(A))
         prime_set = set(prime_list)
         d = {x: find_prime_factors(x, prime_list, prime_set) for x in A}
-
         all_factors = set()
         for x in A:
             for f in d[x]:
                 all_factors.add(f)
-
         find_dict = {f: f for f in all_factors}
         sink_size = {f: 1 for f in all_factors}
 
@@ -64,17 +62,12 @@ class Solution:
         def union_hyperedge(hyperedge):
             for i in range(1, len(hyperedge)):
                 union(hyperedge[i], hyperedge[0])
-
         for x in A:
             union_hyperedge(d[x])
-
         sinks = set()
         for f in all_factors:
             sinks.add(find(f))
-
         count = {sink: 0 for sink in sinks}
-
         for x in A:
             count[find(d[x][0])] += 1
-
         return max(count.values())

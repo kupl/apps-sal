@@ -1,10 +1,8 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = []
-
 for i in range(K):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     S.append([l, r])
-
 d = {}
 acc = {}
 
@@ -20,18 +18,13 @@ def get_acc_num(i, l, r):
 
 MOD = 998244353
 for i in range(1, N + 1):
-    # print(f"{i}-------------------")
     if i == 1:
         d[i] = 1
         acc[0] = 0
         acc[i] = 1
     else:
         d[i] = 0
-        for l, r in S:
-            # print(f"{l, r}")
-            # print(get_acc_num(i, l, r))
-            # print(get_acc_num(i, l, r))
+        for (l, r) in S:
             d[i] += get_acc_num(i, l, r) % MOD
             acc[i] = (acc[i - 1] + d[i]) % MOD
-
-print((d[N] % 998244353))
+print(d[N] % 998244353)

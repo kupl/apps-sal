@@ -1,12 +1,9 @@
-n, d = map(int, input().split())
-
-num = 0  # distance from the last step
-v = 0  # value of steps
-a = 1  # flag for excistence
-k = 0  # coord. of the last step variant destination
-
+(n, d) = map(int, input().split())
+num = 0
+v = 0
+a = 1
+k = 0
 st = input()
-
 for i in range(1, n):
     num += 1
     if int(st[i]) == 1:
@@ -18,7 +15,6 @@ for i in range(1, n):
         else:
             a = 0
         k = 0
-
 if a == 1:
     if num % d == 0:
         print(v)

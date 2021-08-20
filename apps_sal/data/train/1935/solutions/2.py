@@ -1,11 +1,12 @@
 class Solution:
+
     def isToeplitzMatrix(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: bool
         """
         diagonals_upper = []
-        x, y = len(matrix[0]), len(matrix)
+        (x, y) = (len(matrix[0]), len(matrix))
         starters = [[0, i] for i in range(x)] + [[i, 0] for i in range(y)]
         for starter in starters:
             for j in range(min(x, y)):

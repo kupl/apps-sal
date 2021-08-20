@@ -4,7 +4,6 @@ a = []
 t = input()
 if sorted(s) != sorted(t):
     print(-1)
-
 else:
     for i in range(len(t)):
         j = i

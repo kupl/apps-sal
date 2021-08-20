@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-f, s = 0, 0
+(n, m) = map(int, input().split())
+(f, s) = (0, 0)
 p = 0
 for i in list(map(int, input().split())):
     p += i

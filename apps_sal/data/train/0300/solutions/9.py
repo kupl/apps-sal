@@ -1,4 +1,5 @@
 class Solution:
+
     def leastOpsExpressTarget(self, x: int, target: int) -> int:
         dp = {}
 
@@ -11,8 +12,7 @@ class Solution:
                 return float('inf')
             div = x ** i
             res = target % div
-            ret = min(dfs(i + 1, target - res) + res * x // div * (i - 1),
-                      dfs(i + 1, target - res + div) + (div - res) * x // div * (i - 1))
+            ret = min(dfs(i + 1, target - res) + res * x // div * (i - 1), dfs(i + 1, target - res + div) + (div - res) * x // div * (i - 1))
             if res == 0:
                 ret = min(ret, target // div * i)
             dp[i] = dp.get(i, {})

@@ -1,4 +1,4 @@
-N, K, C = map(int, input().split())
+(N, K, C) = map(int, input().split())
 S = input()
 dp0 = [0] * K
 dp1 = [0] * K
@@ -25,6 +25,6 @@ for i in range(N - 1, -1, -1):
     else:
         step += 1
 ans = 0
-for i, (a, b) in enumerate(zip(dp0, dp1)):
+for (i, (a, b)) in enumerate(zip(dp0, dp1)):
     if a == b:
         print(a + 1)

@@ -5,8 +5,7 @@ checker = []
 for i in details[:len(details) - 1]:
     for j in details[:len(details) - 1]:
         checker.append(j - i)
-
-if (max(checker) > details[-1]):
-    print(":(")
+if max(checker) > details[-1]:
+    print(':(')
 else:
-    print("Yay!")
+    print('Yay!')

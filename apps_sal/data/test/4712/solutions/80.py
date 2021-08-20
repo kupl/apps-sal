@@ -1,6 +1,5 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 A = [input() for _ in range(H)]
-
 W += 2
 f = '#'
 print(f * W)

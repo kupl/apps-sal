@@ -9,7 +9,7 @@ def gap(g, m, n):
 
 
 def prime_yn(x):
-    for j in range(2, int(x**0.5 + 1)):
+    for j in range(2, int(x ** 0.5 + 1)):
         if x % j == 0:
             return False
     return True

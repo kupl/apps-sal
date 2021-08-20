@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 m = n + 1
 if 2 * k > n - 1:
     print('-1')

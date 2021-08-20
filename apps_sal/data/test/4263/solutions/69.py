@@ -8,7 +8,7 @@ def slove():
     l = 0
     ans = 0
     for i in range(n):
-        if S[i] == "A" or S[i] == "C" or S[i] == "G" or S[i] == "T":
+        if S[i] == 'A' or S[i] == 'C' or S[i] == 'G' or (S[i] == 'T'):
             l += 1
         else:
             ans = max(ans, l)

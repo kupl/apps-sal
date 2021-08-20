@@ -21,10 +21,8 @@ def lm():
 
 
 q = nn()
-
 for _ in range(q):
-    n, m = mi()
-
+    (n, m) = mi()
     mat = []
     for i in range(n):
         row = lm()
@@ -38,8 +36,6 @@ for _ in range(q):
             else:
                 zeros[i + j] += 1
     ops = 0
-    #print(ones, zeros)
     for i in range((m + n - 1) // 2):
         ops += min(zeros[i] + zeros[-i - 1], ones[i] + ones[-i - 1])
-
     print(ops)

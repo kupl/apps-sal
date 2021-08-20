@@ -14,11 +14,11 @@ def printBS(li):
     if not li:
         return
     for i in range(len(li) - 1):
-        stdout.write("%d " % (li[i]))
-    stdout.write("%d\n" % (li[-1]))
+        stdout.write('%d ' % li[i])
+    stdout.write('%d\n' % li[-1])
 
 
-a, b, x, y = listInput()
+(a, b, x, y) = listInput()
 g = gcd(x, y)
 x //= g
 y //= g

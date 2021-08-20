@@ -1,4 +1,5 @@
 class UnionSet:
+
     def __init__(self, n):
         self.par = list(range(n))
         self.ed = list(range(n))
@@ -22,18 +23,14 @@ class UnionSet:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         us = UnionSet(n)
         bits = [0] * n
         result = -1
         cnt = 0
-        for i, pos in enumerate(arr):
-            # print(bits)
-            # print(us.par)
-            # print(us.ed)
-            # print(cnt)
-            # print('-------')
+        for (i, pos) in enumerate(arr):
             pos -= 1
             bits[pos] = 1
             if pos > 0 and bits[pos - 1] == 1:

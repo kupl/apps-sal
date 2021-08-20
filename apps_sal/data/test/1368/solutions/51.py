@@ -6,10 +6,9 @@ def combinations_count(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-n, a, b = list(map(int, input().strip().split()))
+(n, a, b) = list(map(int, input().strip().split()))
 v = list(map(int, input().strip().split()))
 v.sort(reverse=True)
-
 result = 0
 mean_min = statistics.mean(v[0:a])
 for i in range(a, b + 1):

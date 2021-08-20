@@ -24,4 +24,4 @@ for _ in range(int(I())):
             l.append(s[i])
             last = s[i]
     else:
-        print("".join(l))
+        print(''.join(l))

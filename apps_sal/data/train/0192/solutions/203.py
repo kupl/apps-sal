@@ -1,6 +1,7 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
-        if(not piles):
+        if not piles:
             return 0
         piles.sort()
         coins = 0

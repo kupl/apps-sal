@@ -1,15 +1,10 @@
 n = int(input())
 l = list(map(int, input().split()))
-
 lst = []
 for i in range(n):
     lst.append([i, l[i]])
-
-# print(lst)
 p_cnt = n // 2
-
 one = sum(l) // p_cnt
-
 while lst:
     f = lst[-1]
     for i in range(len(lst)):

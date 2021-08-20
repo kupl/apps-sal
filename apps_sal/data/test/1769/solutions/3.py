@@ -6,7 +6,6 @@ s = ''
 for i in range(x, tot + 1):
     s += str(i)
     s += ' '
-
 for I in range(b, 0, -1):
     s += str(I)
     s += ' '

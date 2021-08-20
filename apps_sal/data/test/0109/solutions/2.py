@@ -1,8 +1,11 @@
 from heapq import *
-n, m, r, k = map(int, input().split())
-u, v = n // 2, m // 2
+(n, m, r, k) = map(int, input().split())
+(u, v) = (n // 2, m // 2)
 h = []
-def g(z, l): return min(z + 1, l - z, l - r + 1, r)
+
+
+def g(z, l):
+    return min(z + 1, l - z, l - r + 1, r)
 
 
 def f(x, y):
@@ -14,7 +17,7 @@ def f(x, y):
 f(u, v)
 t = 0
 for i in range(k):
-    s, x, y = heappop(h)
+    (s, x, y) = heappop(h)
     t -= s
     if x <= u:
         f(x - 1, y)

@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         need = sum(nums) % p
         if need == 0:
@@ -6,7 +7,7 @@ class Solution:
         pos = {0: -1}
         total = 0
         ans = float('inf')
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             total = (total + num) % p
             target = (total - need) % p
             if target in pos:

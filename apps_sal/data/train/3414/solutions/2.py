@@ -1,6 +1,6 @@
 def reversi_row(moves):
     row = ['.'] * 8
-    for turn, move in enumerate(moves):
+    for (turn, move) in enumerate(moves):
         tile = '*O'[turn % 2]
         row[move] = tile
         for direction in (-1, 1):
@@ -11,5 +11,5 @@ def reversi_row(moves):
                 other += direction
             else:
                 other = move
-            row[move: other: direction] = [tile] * abs(move - other)
+            row[move:other:direction] = [tile] * abs(move - other)
     return ''.join(row)

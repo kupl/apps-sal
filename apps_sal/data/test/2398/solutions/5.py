@@ -1,6 +1,6 @@
 def solve():
-    a, b, c, d = map(int, input().split())
-    x, y, x1, y1, x2, y2 = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
+    (x, y, x1, y1, x2, y2) = map(int, input().split())
     dx = b - a
     dy = d - c
     if x1 == x2:

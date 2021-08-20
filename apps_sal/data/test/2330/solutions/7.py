@@ -1,6 +1,6 @@
 q = int(input())
 for rwre in range(q):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = list(map(int, input().split()))
     if m < n:
         print(-1)
@@ -13,7 +13,7 @@ for rwre in range(q):
             print(-1)
         else:
             for i in range(n):
-                suma += (l[i - 1] + l[i])
+                suma += l[i - 1] + l[i]
             s1 = ll[0][1]
             s2 = ll[1][1]
             print(suma + (m - n) * (ll[0][0] + ll[1][0]))

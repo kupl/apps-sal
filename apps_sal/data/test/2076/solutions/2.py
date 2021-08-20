@@ -1,7 +1,7 @@
 from sys import stdin
 n = int(stdin.readline().strip())
 for i in range(n):
-    a, b, c = list(map(int, stdin.readline().strip().split()))
+    (a, b, c) = list(map(int, stdin.readline().strip().split()))
     ans = 0
     while c >= 2 and b >= 1:
         c -= 2

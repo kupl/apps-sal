@@ -1,7 +1,7 @@
 import math
 N = int(input())
 A = list(map(int, input().split()))
-B = [0] * (N)
+B = [0] * N
 lcmall = A[0]
 for i in range(1, N):
     gcdall = math.gcd(lcmall, A[i])

@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         sum = 0
         begin = 0
@@ -25,12 +26,12 @@ class Solution:
                     while s[A[end]] > 1:
                         s[A[end]] -= 1
                         end += 1
-                sum += (end - begin + 1)
+                sum += end - begin + 1
             else:
                 s[A[i]] += 1
                 if len(s) == K:
                     while s[A[end]] > 1:
                         s[A[end]] -= 1
                         end += 1
-                    sum += (end - begin + 1)
+                    sum += end - begin + 1
         return sum

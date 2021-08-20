@@ -1,6 +1,7 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
-        h = collections.Counter(i % k for i in arr)
+        h = collections.Counter((i % k for i in arr))
         if 0 in h:
             if h[0] % 2 != 0:
                 return False

@@ -22,6 +22,6 @@ def fib_digits(n):
         num += x[0]
         l.append((count, int(x[0])))
         count = 0
-        x = x.replace(x[0], "")
+        x = x.replace(x[0], '')
     l.sort()
-    return(l[::-1])
+    return l[::-1]

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         cur = [0] + [-1] * 2
         tmp = cur[:]
@@ -7,6 +8,5 @@ class Solution:
                 idx = (i + x) % 3
                 if cur[i] >= 0:
                     tmp[idx] = max(cur[i] + x, cur[idx])
-
             cur = tmp[:]
         return cur[0]

@@ -1,19 +1,18 @@
 s = input()
-
-if s == "RRR":
+if s == 'RRR':
     ans = 3
-if s == "RRS":
+if s == 'RRS':
     ans = 2
-if s == "SRR":
+if s == 'SRR':
     ans = 2
-if s == "RSR":
+if s == 'RSR':
     ans = 1
-if s == "SSR":
+if s == 'SSR':
     ans = 1
-if s == "SRS":
+if s == 'SRS':
     ans = 1
-if s == "RSS":
+if s == 'RSS':
     ans = 1
-if s == "SSS":
+if s == 'SSS':
     ans = 0
 print(ans)

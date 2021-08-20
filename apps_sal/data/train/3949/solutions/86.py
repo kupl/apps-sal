@@ -13,4 +13,4 @@ def calculate_tip(amount, rating):
     elif rating.lower() == 'excellent':
         return ceil(amount * 0.2)
     else:
-        return "Rating not recognised"
+        return 'Rating not recognised'

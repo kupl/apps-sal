@@ -1,5 +1,7 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+
         def find(i):
             l = -1
             r = i - 1

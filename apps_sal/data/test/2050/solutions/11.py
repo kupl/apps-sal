@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 m = 6 * n - 1
 print(m * k)
 for i in range(n):

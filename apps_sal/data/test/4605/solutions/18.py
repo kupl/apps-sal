@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 sum_1 = 0
 for i in range(1, N + 1):
     sum_order = 0

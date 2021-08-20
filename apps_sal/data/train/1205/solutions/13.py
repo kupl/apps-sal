@@ -6,22 +6,20 @@ for _ in range(t):
     for i in range(1, len(s)):
         if s[i] == s[i - 1]:
             k += 1
-    ans = k * ((n * (n + 1)) // 2)
+    ans = k * (n * (n + 1) // 2)
     for i in range(n):
         x = n - i
         if i == 0:
             pass
+        elif s[i] == s[i - 1]:
+            ans -= x
         else:
-            if s[i] == s[i - 1]:
-                ans -= x
-            else:
-                ans += x
+            ans += x
         x = i + 1
         if i == n - 1:
             pass
+        elif s[i + 1] == s[i]:
+            ans -= x
         else:
-            if s[i + 1] == s[i]:
-                ans -= x
-            else:
-                ans += x
+            ans += x
     print(ans)

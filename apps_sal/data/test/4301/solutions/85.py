@@ -1,9 +1,6 @@
-# coding: utf-8
-
 def main():
     N = int(input())
-    fir, fir_i, sec, sec_i = 0, 0, 0, 0
-
+    (fir, fir_i, sec, sec_i) = (0, 0, 0, 0)
     for i in range(N):
         tmp = int(input())
         if tmp > fir:
@@ -14,7 +11,6 @@ def main():
         elif tmp > sec:
             sec = tmp
             sec_i = i
-
     for i in range(N):
         if i != fir_i:
             print(fir)

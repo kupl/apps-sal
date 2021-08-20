@@ -21,7 +21,6 @@ def cal(l, r, x, y):
         return 0
     mid = (x + y) // 2
     res = cal(l, r, x, mid) + cal(l, r, mid + 1, y)
-
     j = mid + 1
     for i in range(x, mid + 1):
         while j <= y and r[j] < l[i]:
@@ -41,7 +40,6 @@ def countOccurrencePairs(a):
             d[a[i]] = 0
         d[a[i]] += 1
         l[i] = d[a[i]]
-
     r = [0 for _ in range(n)]
     d = {}
     for i in range(n - 1, -1, -1):
@@ -49,7 +47,6 @@ def countOccurrencePairs(a):
             d[a[i]] = 0
         d[a[i]] += 1
         r[i] = d[a[i]]
-
     return cal(l, r, 0, n - 1)
 
 

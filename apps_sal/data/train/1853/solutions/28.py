@@ -1,8 +1,9 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
-        graph = [[99999 for j in range(n)]for k in range(n)]
+        graph = [[99999 for j in range(n)] for k in range(n)]
         dict1 = {}
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             graph[u][v] = w
             graph[v][u] = w
         for i in range(n):
@@ -16,10 +17,9 @@ class Solution:
         for i in range(n):
             count = 0
             for j in range(n):
-                if(graph[i][j] <= distanceThreshold):
+                if graph[i][j] <= distanceThreshold:
                     count += 1
-            # print(count)
-            if(count <= min1):
+            if count <= min1:
                 min1 = count
                 ans = i
         return ans

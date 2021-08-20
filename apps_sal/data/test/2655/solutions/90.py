@@ -1,6 +1,5 @@
 N = int(input())
-*A, = sorted(map(int, input().split()), reverse=True)
-
+(*A,) = sorted(map(int, input().split()), reverse=True)
 n = N - 2
 a = A[0]
 i = 1

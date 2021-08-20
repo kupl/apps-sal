@@ -1,5 +1,5 @@
 import sys
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
 for i in range(n):
     a.append(list(map(int, input().split())))
@@ -15,8 +15,8 @@ for i in range(m):
     c2.append(c)
 s = 0
 for i in c1:
-    s += 2**i - 2 + 2**(m - i)
+    s += 2 ** i - 2 + 2 ** (m - i)
 for i in c2:
-    s += 2**i - 2 + 2**(n - i)
+    s += 2 ** i - 2 + 2 ** (n - i)
 s -= n * m
 print(s)

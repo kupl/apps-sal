@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 v = list(map(int, input().split()))
 vv = [0] * (n + 1)
 for i in range(n):

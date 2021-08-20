@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     main = []
     for i in range(n):
         l = list(map(int, input().split()))
@@ -11,8 +11,7 @@ for _ in range(t):
         sum1 = sum(q[0:k])
         i = 0
         j = k - 1
-        while(j < m):
-
+        while j < m:
             if maxi < sum1:
                 maxi = sum1
             j += 1
@@ -24,7 +23,6 @@ for _ in range(t):
     for i in range(m):
         l = [0] * n
         new.append(l)
-
     for i in range(n):
         for j in range(m):
             new[j][i] = main[i][j]
@@ -33,8 +31,7 @@ for _ in range(t):
         sum1 = sum(q[0:k])
         i = 0
         j = k - 1
-        while(j < n):
-
+        while j < n:
             if maxi < sum1:
                 maxi = sum1
             j += 1

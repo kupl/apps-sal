@@ -1,6 +1,5 @@
 n = int(input())
 nums = list(map(int, input().split()))
-
 dp = [0] * n
 dp[0] = 1
 for i in range(1, n):

@@ -4,7 +4,7 @@ a.sort()
 ans = 1
 l = 0
 r = 0
-while(l < n - 1):
+while l < n - 1:
     if l > r:
         r = l
     while r < n - 1:

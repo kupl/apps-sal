@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 a = [y, y, y]
 cnt = 0
 while True:

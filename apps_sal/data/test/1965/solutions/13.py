@@ -1,6 +1,6 @@
 t = int(input())
 for tt in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     if len(set(a)) == 1 and m in a:
         print(0)

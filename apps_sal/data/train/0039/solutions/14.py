@@ -1,9 +1,6 @@
-# import sys
-# input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = input()
     n = len(s)
     dp = [0] * n

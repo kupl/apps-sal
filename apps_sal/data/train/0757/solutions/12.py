@@ -20,12 +20,11 @@ for _ in range(int(input())):
                 print('Yes')
                 kk = 1
                 break
-        if kk == 0 and s[0] in aa and s[n - 1] in aa:
+        if kk == 0 and s[0] in aa and (s[n - 1] in aa):
             print('Yes')
             kk = 1
-
     else:
         kk = 1
-        print("No")
+        print('No')
     if kk == 0:
-        print("No")
+        print('No')

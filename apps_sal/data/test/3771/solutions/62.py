@@ -1,13 +1,14 @@
-# 最大流
 import queue
 NUMERIC_LIMITS = 10 ** 18
 
 
 class maxFlow:
+
     class edge:
+
         def __init__(s, frm, to, cap, flow):
-            s.frm, s.to = frm, to
-            s.cap, s.flow = cap, flow
+            (s.frm, s.to) = (frm, to)
+            (s.cap, s.flow) = (cap, flow)
 
     def __init__(s, n):
         s._n = n
@@ -79,7 +80,6 @@ class maxFlow:
                 if res == up:
                     break
             return res
-
         flow = 0
         while flow < flow_limit:
             bfs()
@@ -102,37 +102,36 @@ class maxFlow:
             p = que.get()
             visited[p] = True
             for e in self.g[p]:
-                if e.cap and not visited[e.to]:
+                if e.cap and (not visited[e.to]):
                     visited[e.to] = True
                     que.put(e.to)
         return visited
 
     class _edge:
+
         def __init__(s, to, rev, cap):
-            s.to, s.rev = to, rev
+            (s.to, s.rev) = (to, rev)
             s.cap = cap
 
 
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 a = [list(input()) for _ in range(H)]
-
 flow = maxFlow(H + W + 2)
 s = H + W
 t = H + W + 1
 for h in range(H):
     for w in range(W):
-        if a[h][w] == "S":
+        if a[h][w] == 'S':
             flow.add_edge(s, h, H + W + 1)
             flow.add_edge(s, H + w, H + W + 1)
-        elif a[h][w] == "T":
+        elif a[h][w] == 'T':
             flow.add_edge(h, t, H + W + 1)
             flow.add_edge(H + w, t, H + W + 1)
-        if a[h][w] != ".":
+        if a[h][w] != '.':
             flow.add_edge(h, H + w, 1)
             flow.add_edge(H + w, h, 1)
-
 ans = flow.flow(s, t)
 if ans > H + W:
-    print((-1))
+    print(-1)
 else:
     print(ans)

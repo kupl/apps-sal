@@ -7,12 +7,11 @@ def fire_and_fury(tweet):
     if set('EFIRUY') < set(tweet):
         m = []
     s = []
-    for x, c in groupby(m):
+    for (x, c) in groupby(m):
         l = len(list(c))
         if x == 'FURY':
             s += ['I am ' + 'really ' * (l - 1) + 'furious.']
         if x == 'FIRE':
             s += ['You ' + 'and you ' * (l - 1) + 'are fired!']
     r = ' '.join(s)
-
-    return r or "Fake tweet."
+    return r or 'Fake tweet.'

@@ -17,13 +17,12 @@ def solve():
     answer = 0
     half = (n + 1) // 2
     for i in range(1, half):
-        ring = (2 * i + 1)**2 - (2 * i - 1)**2
+        ring = (2 * i + 1) ** 2 - (2 * i - 1) ** 2
         answer += i * ring
     print(answer)
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

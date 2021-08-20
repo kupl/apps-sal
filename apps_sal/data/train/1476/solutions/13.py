@@ -1,4 +1,3 @@
-# your code goes here
 from collections import Counter
 
 
@@ -19,7 +18,7 @@ for _ in range(t):
         done[i] = 0
     l = 1
     for i in res:
-        if(done[i] == 0):
+        if done[i] == 0:
             l = l * fact(res[i])
             done[i] = 1
     ans = ans // l

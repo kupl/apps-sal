@@ -1,4 +1,3 @@
-# cook your dish here
 count_per = {}
 per = {}
 count = {}
@@ -17,20 +16,20 @@ for j in range(s[1]):
     except:
         count[count_per[y]] = 1
 a = -1
-for i, j in count.items():
-    if(a < j):
+for (i, j) in count.items():
+    if a < j:
         a = j
         p = i
-    elif(a == j):
-        if(p > i):
+    elif a == j:
+        if p > i:
             p = i
 print(p)
 a = -1
-for i, j in per.items():
-    if(a < j):
+for (i, j) in per.items():
+    if a < j:
         a = j
         p = i
-    elif(a == j):
-        if(p > i):
+    elif a == j:
+        if p > i:
             p = i
 print(p)

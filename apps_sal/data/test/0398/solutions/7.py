@@ -1,6 +1,5 @@
 n = int(input())
 x = list(map(int, input().strip().split(' ')))
-
 x.sort()
 try:
     znak = True
@@ -12,6 +11,5 @@ try:
                 1 / 0
     if znak:
         print('NO')
-
 except:
     pass

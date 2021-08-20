@@ -6,5 +6,4 @@ for i in range(n):
     if c[i] == 'R':
         red += 1
     cnt[i] = red
-
 print(red - cnt[red - 1])

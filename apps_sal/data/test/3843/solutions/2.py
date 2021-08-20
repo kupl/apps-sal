@@ -16,15 +16,13 @@ def fil(n, m, l, r):
     for i in range(l):
         d += [n % 7]
         n //= 7
-
     if len(set(d)) != l + r:
         return 0
     return 1
 
 
-n, m = list(map(int, input().split()))
-l, r = sev(n - 1), sev(m - 1)
-
+(n, m) = list(map(int, input().split()))
+(l, r) = (sev(n - 1), sev(m - 1))
 if l + r > 7:
     print(0)
 else:

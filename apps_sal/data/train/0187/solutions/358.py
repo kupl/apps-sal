@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         maxi = 0
         maxRotate = -1
@@ -16,7 +17,6 @@ class Solution:
             if profit > maxi:
                 maxi = profit
                 maxRotate = rotates
-
         while inQueue > 0:
             rotates += 1
             onBoarded = max(0, onBoarded - 1)
@@ -26,5 +26,4 @@ class Solution:
             if profit > maxi:
                 maxi = profit
                 maxRotate = rotates
-
         return maxRotate

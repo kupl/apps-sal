@@ -1,8 +1,7 @@
 import copy
 s = list(input())
 t = list(input())
-
-t1, t2 = copy.deepcopy(s), copy.deepcopy(s)
+(t1, t2) = (copy.deepcopy(s), copy.deepcopy(s))
 ok = []
 ch = True
 if ch:
@@ -14,7 +13,7 @@ if ch:
         if count == len(t):
             ok.append(i)
 if len(ok) == 0:
-    print("UNRESTORABLE")
+    print('UNRESTORABLE')
     ch = False
 else:
     for i in range(len(t)):
@@ -27,7 +26,7 @@ if ch:
             t1[i] = 'a'
         if t2[i] == '?':
             t2[i] = 'a'
-    an1, an2 = "", ""
+    (an1, an2) = ('', '')
     for i in t1:
         an1 += i
     for i in t2:

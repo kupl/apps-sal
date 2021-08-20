@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 a = list(map(int, sys.stdin.readline().strip().split()))
 b = a[:]
@@ -14,4 +13,4 @@ for i in range(0, 40):
             if x[j] == 1:
                 C[j] = C[j] + 2 ** i
 l = C.index(max(C))
-print(" ".join(list(map(str, [a[l]] + a[0:l] + a[l + 1:]))))
+print(' '.join(list(map(str, [a[l]] + a[0:l] + a[l + 1:]))))

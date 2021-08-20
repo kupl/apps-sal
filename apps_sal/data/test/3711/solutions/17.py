@@ -1,5 +1,5 @@
-n, m, k = [int(s) for s in input().split()]
-n, m = max(n, m), min(n, m)
+(n, m, k) = [int(s) for s in input().split()]
+(n, m) = (max(n, m), min(n, m))
 if n + m - 2 < k:
     print(-1)
 elif n - 1 < k:

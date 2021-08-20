@@ -1,4 +1,5 @@
 class Solution:
+
     def maxWidthRamp(self, A: List[int]) -> int:
         record = [[A[i], i] for i in range(len(A))]
         record.sort(key=lambda x: [x[0], x[1]])

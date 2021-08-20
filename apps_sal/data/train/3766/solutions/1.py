@@ -4,7 +4,7 @@ from collections import Counter
 def getAllPrimeFactors(n):
     if type(n) != int:
         return []
-    li, j = [], 2
+    (li, j) = ([], 2)
     while j * j <= n:
         if n % j:
             j += 1
@@ -19,4 +19,5 @@ def getUniquePrimeFactorsWithCount(n):
     return [list(r.keys()), list(r.values())]
 
 
-def getUniquePrimeFactorsWithProducts(n): return [i**j for i, j in zip(*getUniquePrimeFactorsWithCount(n))]
+def getUniquePrimeFactorsWithProducts(n):
+    return [i ** j for (i, j) in zip(*getUniquePrimeFactorsWithCount(n))]

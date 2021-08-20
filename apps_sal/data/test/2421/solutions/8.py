@@ -1,6 +1,6 @@
 for nt in range(int(input())):
-    y, x = list(map(int, input().split()))
-    c1, c2, c3, c4, c5, c6 = list(map(int, input().split()))
+    (y, x) = list(map(int, input().split()))
+    (c1, c2, c3, c4, c5, c6) = list(map(int, input().split()))
     for i in range(10):
         c2 = min(c2, c1 + c3)
         c3 = min(c3, c2 + c4)
@@ -8,7 +8,6 @@ for nt in range(int(input())):
         c5 = min(c5, c4 + c6)
         c6 = min(c6, c5 + c1)
         c1 = min(c1, c6 + c2)
-    # print (c1,c2,c3,c4,c5,c6)
     if x >= 0:
         if y >= 0:
             m = min(x, y)

@@ -1,7 +1,5 @@
 n = int(input())
-
 niz = input().strip()
-
 count = 0
 i = 0
 while i + 2 < len(niz):
@@ -11,5 +9,4 @@ while i + 2 < len(niz):
         i = 0
     else:
         i += 1
-
 print(count)

@@ -1,1 +1,2 @@
-def summy(s): return sum(map(int, s.split()))
+def summy(s):
+    return sum(map(int, s.split()))

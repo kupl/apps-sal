@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ans = 0
 for B in range(2, 2 * N + 1):
     A = K + B
@@ -7,5 +7,4 @@ for B in range(2, 2 * N + 1):
     a_n = min(A - 1, 2 * N + 1 - A)
     b_n = min(B - 1, 2 * N + 1 - B)
     ans += a_n * b_n
-
 print(ans)

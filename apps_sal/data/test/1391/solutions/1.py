@@ -5,7 +5,7 @@ def readn():
     return map(int, input().split())
 
 
-n, m, a = readn()
+(n, m, a) = readn()
 n = min(n, m)
 m = n
 b = sorted(readn())[-n:]

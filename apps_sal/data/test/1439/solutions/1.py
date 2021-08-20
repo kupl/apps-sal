@@ -1,6 +1,6 @@
 (n, m) = map(int, input().split())
 if n > 2 * m:
-    print("YES")
+    print('YES')
 else:
     t = [0 for i in range(m)]
     s = input().split()
@@ -15,6 +15,6 @@ else:
                 t[j] = 1
         t[h] = 1
     if t[0] == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

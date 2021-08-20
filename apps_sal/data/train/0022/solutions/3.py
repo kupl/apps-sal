@@ -1,8 +1,6 @@
 t = int(input())
-
 for i in range(t):
-    a, b = list(map(int, input().split()))
-
+    (a, b) = list(map(int, input().split()))
     last = -1
     b -= 1
     while last != a and b:
@@ -15,7 +13,5 @@ for i in range(t):
             mini = min(mini, aa % 10)
             maks = max(maks, aa % 10)
             aa = aa // 10
-
         a += mini * maks
-
     print(a)

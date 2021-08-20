@@ -1,8 +1,5 @@
 import math
-
-
 t = int(input())
-
 for q in range(t):
     n = int(input())
     if n % 3 == 0:

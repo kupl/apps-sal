@@ -1,10 +1,9 @@
 import heapq
-
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 l = [int(i) for i in input().split()]
 cnt = [i for i in l if i < 0]
 m = 0
-for a, i in enumerate(l):
+for (a, i) in enumerate(l):
     if i < 0 and m == 0:
         m = 1
     elif i < 0 and l[a - 1] >= 0:

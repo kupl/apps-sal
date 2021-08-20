@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class DSU:
+
     def __init__(self, n):
         self.dic = [i for i in range(n)]
 
@@ -17,6 +18,7 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         cnt = Counter()
         area = Counter()
@@ -32,7 +34,7 @@ class Solution:
             cnt[sa] -= 1
             dsu.union(s, b)
             return sa
-        for i, b in enumerate(arr):
+        for (i, b) in enumerate(arr):
             b -= 1
             fliped[b] = True
             ba = 1
@@ -43,5 +45,4 @@ class Solution:
             cnt[ba] += 1
             if cnt[m] > 0:
                 res.append(i)
-        # print(res)
         return res[-1] + 1 if res else -1

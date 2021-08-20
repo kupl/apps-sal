@@ -1,7 +1,5 @@
 n = int(input())
-data = {
-
-}
+data = {}
 l = list(map(int, input().split()))
 for x in l:
     if x not in data:
@@ -12,5 +10,4 @@ keys.sort()
 ans = 0
 for i in range(1, len(keys) - 1):
     ans = ans + data[keys[i]]
-
 print(ans)

@@ -1,9 +1,10 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        res, val = 0, sum(nums)
+        (res, val) = (0, sum(nums))
         while val:
             val0 = val
-            for i, x in enumerate(nums):
+            for (i, x) in enumerate(nums):
                 if x % 2:
                     nums[i] -= 1
                     val -= 1

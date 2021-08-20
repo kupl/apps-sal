@@ -1,11 +1,11 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         boarded = carry = rotations = max_profit = 0
         ans = -1
         if 4 * boardingCost <= runningCost:
             return -1
-
-        for i, nc in enumerate(customers):
+        for (i, nc) in enumerate(customers):
             nc += carry
             boarded += min(4, nc)
             carry = max(0, nc - 4)

@@ -1,7 +1,5 @@
 import bisect
-
-
-n, u = list(map(int, input().split()))
+(n, u) = list(map(int, input().split()))
 ans = float(-1)
 a = list(map(int, input().split()))
 for i in range(0, n - 2, 1):

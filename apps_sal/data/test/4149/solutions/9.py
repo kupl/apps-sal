@@ -13,7 +13,7 @@ def primes_method5(n):
     out = list()
     sieve = [True] * (n + 1)
     for p in range(2, n + 1):
-        if (sieve[p]):
+        if sieve[p]:
             out.append(p)
             for i in range(p, n + 1, p):
                 sieve[i] = False
@@ -46,12 +46,10 @@ for r in res:
                 else:
                     pass
                 break
-
 for x in arr_prime:
     if dic[x] > 0:
         if prime[x - 1] in arr_primeset and dic[prime[x - 1]] > 0:
             ans.append(x)
             dic[x] -= 1
             dic[prime[x - 1]] -= 1
-
 print(*ans)

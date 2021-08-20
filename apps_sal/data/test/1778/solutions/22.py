@@ -15,15 +15,14 @@ for i in range(2 * n):
         else:
             s_a += a[a_j]
             a_j -= 1
+    elif b_j == -1:
+        a_j -= 1
+    elif a_j == -1:
+        s_b += b[b_j]
+        b_j -= 1
+    elif b[b_j] < a[a_j]:
+        a_j -= 1
     else:
-        if b_j == -1:
-            a_j -= 1
-        elif a_j == -1:
-            s_b += b[b_j]
-            b_j -= 1
-        elif b[b_j] < a[a_j]:
-            a_j -= 1
-        else:
-            s_b += b[b_j]
-            b_j -= 1
+        s_b += b[b_j]
+        b_j -= 1
 print(s_a - s_b)

@@ -1,3 +1,3 @@
 def remove(s):
-    n = s.count("!")
-    return s.replace("!", "") + "!" * n
+    n = s.count('!')
+    return s.replace('!', '') + '!' * n

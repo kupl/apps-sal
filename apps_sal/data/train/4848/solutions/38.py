@@ -1,5 +1,5 @@
 def char_freq(message):
-    ABC = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    ABC = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     count = []
     letters = []
     for l in message:

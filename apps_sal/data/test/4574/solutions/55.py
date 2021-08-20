@@ -1,15 +1,12 @@
 N = int(input())
-A = [int(a) for a in input().split(" ")]
-
+A = [int(a) for a in input().split(' ')]
 A.sort(reverse=True)
 l1 = 0
 c1 = 0
 l2 = 0
 c2 = 0
-
 L1 = 0
 L2 = 0
-
 for i in range(len(A)):
     if L1 and L2:
         break
@@ -29,5 +26,4 @@ for i in range(len(A)):
             c1 = 1
         if c1 == 2:
             L1 = l1
-
 print(L1 * L2)

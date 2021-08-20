@@ -1,7 +1,9 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, k = map(int, input().split())
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, k) = map(int, input().split())
     mod = 10 ** 9 + 7
     table = [0] * (k + 1)
     ans = 0

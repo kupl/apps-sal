@@ -15,9 +15,9 @@ for you in range(t):
         lo = input().split()
         c = int(lo[0])
         d = int(lo[1])
-        if(b == c):
+        if b == c:
             found = 1
-    if(found == 1 and m % 2 == 0):
-        print("YES")
+    if found == 1 and m % 2 == 0:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

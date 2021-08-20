@@ -1,8 +1,8 @@
 from collections import deque
-N, u, v = map(int, input().split())
+(N, u, v) = map(int, input().split())
 g = [[] for _ in range(N)]
 for i in range(N - 1):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     g[A - 1].append(B - 1)
     g[B - 1].append(A - 1)
 
@@ -28,8 +28,6 @@ for i in range(N):
     if len(g[i]) == 1 and U[i] < V[i]:
         List.append(i)
 ans = 0
-
 for i in List:
     ans = max(ans, V[i] - 1)
-
 print(ans)

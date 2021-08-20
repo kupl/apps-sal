@@ -1,7 +1,6 @@
 from functools import reduce
-
 n = int(input())
-a, b = (list(map(int, input().split())) for _ in (None, None))
+(a, b) = (list(map(int, input().split())) for _ in (None, None))
 oq = set(range(4))
 q = oq.copy()
 w = []
@@ -17,7 +16,6 @@ for i in range(n - 1):
     if len(q) == 0:
         possible = False
         break
-
 print('YES' if possible else 'NO')
 if possible:
     y = None
@@ -26,7 +24,7 @@ if possible:
         break
     path = [y]
     for g in reversed(w):
-        for k, u in list(g.items()):
+        for (k, u) in list(g.items()):
             if y in u:
                 y = k
                 break

@@ -5,9 +5,9 @@ def gcd(n, m):
 
 
 def lcm(n, m):
-    return int((n * m) / gcd(n, m))
+    return int(n * m / gcd(n, m))
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     print(lcm(n, m))

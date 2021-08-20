@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, ar: List[int]) -> int:
         l = list(set(ar))
         if len(l) <= 2:
@@ -7,7 +8,6 @@ class Solution:
             m = 0
             for i in range(0, len(ar)):
                 l = [ar[i]]
-                # c=0
                 d = 1
                 for j in range(i + 1, len(ar)):
                     if ar[j] in l:

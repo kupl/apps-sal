@@ -1,14 +1,13 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         memo = {}
 
         def f(i, prev_vowel):
             if i == n:
                 return 1
-
             if (i, prev_vowel) in memo:
-                return memo[(i, prev_vowel)]
-
+                return memo[i, prev_vowel]
             cnt = 0
             if prev_vowel == 'a':
                 cnt += f(i + 1, 'e')
@@ -20,12 +19,9 @@ class Solution:
                 cnt += f(i + 1, 'i') + f(i + 1, 'u')
             else:
                 cnt += f(i + 1, 'a')
-
-            memo[(i, prev_vowel)] = cnt % (10**9 + 7)
+            memo[i, prev_vowel] = cnt % (10 ** 9 + 7)
             return cnt
-
         cnt = 0
         for vowel in ['a', 'e', 'i', 'o', 'u']:
             cnt += f(1, vowel)
-
-        return cnt % (10**9 + 7)
+        return cnt % (10 ** 9 + 7)

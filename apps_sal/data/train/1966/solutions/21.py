@@ -1,8 +1,6 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-
-        # 1
-
         rows = len(mat) - 1
         cols = len(mat[0]) - 1
         total = 0
@@ -21,11 +19,9 @@ class Solution:
                     else:
                         break
                 imax = min(i_cur, imax)
-                local += (imax - i)
+                local += imax - i
                 j_cur += 1
-
             return local
-
         for i in range(rows + 1):
             for j in range(cols + 1):
                 if mat[i][j] == 1:

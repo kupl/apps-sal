@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         parent = [-1] * 100001
 
@@ -15,7 +16,7 @@ class Solution:
                 parent[yp] = xp
         for x in A:
             for i in range(2, int(sqrt(x)) + 1):
-                if(x % i == 0):
+                if x % i == 0:
                     _union(i, x)
                     _union(x, x // i)
         count = 0

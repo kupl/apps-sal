@@ -1,5 +1,4 @@
 s = list(input())
-
 ans = 0
 for i in range(1, len(s)):
     if s[i] == s[i - 1]:
@@ -8,5 +7,4 @@ for i in range(1, len(s)):
             s[i] = '0'
         else:
             s[i] = '1'
-
 print(ans)

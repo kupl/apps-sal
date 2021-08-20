@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         ans = 0
         fn = -1
@@ -15,9 +16,8 @@ class Solution:
                 p *= nums[i]
                 if p < 0 and fn == -1:
                     fn = i
-
                 if p < 0:
-                    ans = max(ans, (i - s + 1) - (fn - s + 1))
+                    ans = max(ans, i - s + 1 - (fn - s + 1))
                 elif p > 0:
                     ans = max(ans, i - s + 1)
         return ans

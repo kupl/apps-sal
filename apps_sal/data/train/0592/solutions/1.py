@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def memo(func):
     cache = {}
 

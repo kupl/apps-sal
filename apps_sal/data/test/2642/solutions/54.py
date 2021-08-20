@@ -1,11 +1,10 @@
 from math import gcd
 n = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 count = {}
-
 num = 0
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a == 0 and b == 0:
         num += 1
         continue
@@ -15,13 +14,11 @@ for _ in range(n):
         g = a
     else:
         g = b
-
-    l = a // g, b // g
+    l = (a // g, b // g)
     count[l] = count.get(l, 0) + 1
-
 mem = set()
 ans = 1
-for (x, y), z in count.items():
+for ((x, y), z) in count.items():
     if x * y == 0:
         k = (y, x)
     else:
@@ -29,7 +26,6 @@ for (x, y), z in count.items():
     if k in mem:
         continue
     mem.add((x, y))
-    ans *= (pow(2, z) + pow(2, count.get(k, 0)) - 1)
+    ans *= pow(2, z) + pow(2, count.get(k, 0)) - 1
     ans %= mod
-
 print((ans + num - 1) % mod)

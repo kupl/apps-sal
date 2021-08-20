@@ -2,10 +2,10 @@ from collections import deque
 n = int(input())
 abc = [[] for _ in range(n + 1)]
 for i in range(n - 1):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     abc[a].append([b, c])
     abc[b].append([a, c])
-q, k = map(int, input().split())
+(q, k) = map(int, input().split())
 visited = [0] * (n + 1)
 distance = [0] * (n + 1)
 que = deque()
@@ -20,5 +20,5 @@ while que:
             visited[y[0]] += 1
             que.appendleft(y[0])
 for j in range(q):
-    c, d = map(int, input().split())
+    (c, d) = map(int, input().split())
     print(distance[c] + distance[d])

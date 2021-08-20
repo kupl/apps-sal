@@ -3,9 +3,9 @@ def show():
         print(' '.join([str(s) for s in a[i]]))
 
 
-n, k = [int(s) for s in input().split()]
+(n, k) = [int(s) for s in input().split()]
 a = [[0 for i in range(n)] for j in range(n)]
-if k > n**2:
+if k > n ** 2:
     print(-1)
 elif k == 0:
     show()

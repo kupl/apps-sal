@@ -1,9 +1,11 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         b = bloomDay
         if m * k > len(b):
             return -1
         else:
+
             def posb(c) -> bool:
                 p = 0
                 l = 0
@@ -15,11 +17,8 @@ class Solution:
                         if l == k:
                             p += 1
                             l = 0
-
-                # print(p,c)
-
                 return p >= m
-            l, r = min(b), max(b)
+            (l, r) = (min(b), max(b))
             while l < r:
                 mid = l + (r - l) // 2
                 if posb(mid):

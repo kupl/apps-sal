@@ -3,7 +3,7 @@ left = None
 right = None
 for i in range(n):
     st = input()
-    op, num, ans = st.split(' ')
+    (op, num, ans) = st.split(' ')
     num = int(num)
     if ans == 'N':
         if op == '>=':
@@ -29,11 +29,10 @@ for i in range(n):
             right = num
         else:
             right = min(right, num)
-    else:  # op == '<'
-        if right == None:
-            right = num - 1
-        else:
-            right = min(right, num - 1)
+    elif right == None:
+        right = num - 1
+    else:
+        right = min(right, num - 1)
 if left == None and right == None:
     print(0)
 elif left == None:

@@ -9,4 +9,4 @@ else:
     for i in range(n // 2 - 1):
         line += [2]
     line += [3]
-print(" ".join(map(str, line)))
+print(' '.join(map(str, line)))

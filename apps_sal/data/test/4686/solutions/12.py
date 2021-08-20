@@ -7,6 +7,6 @@ for i in range(1, 27):
         break
     temp = chr(ord(temp) + 1)
 if flag == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

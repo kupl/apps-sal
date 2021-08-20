@@ -1,10 +1,12 @@
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.isEnd = False
 
 
 class Trie:
+
     def __init__(self, corpus):
         self.root = TrieNode()
         for word in corpus:
@@ -28,7 +30,6 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.stream.appendleft(letter)
-
         node = self.trie.root
         for w in self.stream:
             if node.isEnd:
@@ -38,8 +39,3 @@ class StreamChecker:
             else:
                 node = node.children[w]
         return node.isEnd
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         tot = 0
         totchars = {}
@@ -25,5 +26,4 @@ class Solution:
                 i += count
             if works:
                 tot += len(word)
-
         return tot

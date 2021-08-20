@@ -1,11 +1,6 @@
-#!python3
-
 import numpy as np
-
-# input
-N, S = list(map(int, input().split()))
+(N, S) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 MOD = 998244353
 
 
@@ -23,7 +18,6 @@ def main():
     for i in range(N):
         add_elements(w, i)
         ans = (ans + w[S]) % MOD
-
     print(ans)
 
 

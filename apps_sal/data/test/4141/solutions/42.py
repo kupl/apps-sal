@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 result = 'DENIED'
 for i in A:
     if i % 2 == 0:
@@ -11,5 +10,4 @@ for i in A:
             break
     else:
         result = 'APPROVED'
-
 print(result)

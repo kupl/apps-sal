@@ -1,4 +1,4 @@
-r, c, n, k = list(map(int, input().split()))
+(r, c, n, k) = list(map(int, input().split()))
 g = set([tuple(map(int, input().split())) for _ in range(n)])
 ret = 0
 for i in range(r):

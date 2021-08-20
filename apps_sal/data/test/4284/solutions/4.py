@@ -1,11 +1,7 @@
-# 570_C
-
 import math
-
 cases = int(input())
-
 for i in range(0, cases):
-    ln = [int(i) for i in input().split(" ")]
+    ln = [int(i) for i in input().split(' ')]
     k = ln[0]
     t = ln[1]
     a = ln[2]

@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     s = input() + '-'
     ok = {c: False for c in 'qwertyuiopasdfghjklzxcvbnm'}
@@ -13,7 +12,7 @@ for _ in range(t):
                 ok[p] = True
             cur = 1
             p = c
-    for c, f in sorted(ok.items()):
+    for (c, f) in sorted(ok.items()):
         if f:
             print(c, end='')
     print()

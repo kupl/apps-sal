@@ -8,7 +8,7 @@ s2 = a[1:]
 flag = 0
 fights = 0
 count = 0
-while(len(s1) != 0 and len(s2) != 0):
+while len(s1) != 0 and len(s2) != 0:
     count += 1
     if count > 1000000:
         flag = 1
@@ -23,10 +23,10 @@ while(len(s1) != 0 and len(s2) != 0):
         s2.append(p)
     fights += 1
 if flag == 1:
-    print("-1")
+    print('-1')
 else:
     if len(s1) == 0:
-        won = "2"
+        won = '2'
     else:
-        won = "1"
-    print(fights, won, sep=" ")
+        won = '1'
+    print(fights, won, sep=' ')

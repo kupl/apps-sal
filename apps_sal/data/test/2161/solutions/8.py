@@ -1,5 +1,4 @@
 from sys import stdin, stdout
-
 n = int(stdin.readline().rstrip())
 nameDict = {}
 for _ in range(n):
@@ -9,7 +8,6 @@ for _ in range(n):
         nameDict[name] = set()
     for number in s[2:]:
         nameDict[name].add(number)
-
 for name in list(nameDict.keys()):
     rem = set()
     for no1 in nameDict[name]:
@@ -22,7 +20,6 @@ for name in list(nameDict.keys()):
                 rem.add(no1)
     for no in rem:
         nameDict[name].remove(no)
-
 print(len(list(nameDict.keys())))
 for name in list(nameDict.keys()):
     print(' '.join([name, str(len(nameDict[name]))] + list(nameDict[name])))

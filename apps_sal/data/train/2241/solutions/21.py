@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 mod = pow(10, 9) + 7

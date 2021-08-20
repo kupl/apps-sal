@@ -2,14 +2,14 @@ q = int(input())
 
 
 def check(l):
-    return sum(i * j // 100 for i, j in zip(prices[-l:], sorted(p[:l]))) >= k
+    return sum((i * j // 100 for (i, j) in zip(prices[-l:], sorted(p[:l])))) >= k
 
 
 for i in range(q):
     n = int(input())
     prices = sorted(map(int, input().split()))
-    x, a = list(map(int, input().split()))
-    y, b = list(map(int, input().split()))
+    (x, a) = list(map(int, input().split()))
+    (y, b) = list(map(int, input().split()))
     k = int(input())
     p = [0] * n
     for j in range(n):

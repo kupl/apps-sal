@@ -2,7 +2,9 @@ from math import sqrt
 
 
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
+
         def subgen(start, upper, odd):
             start = int(start)
             for i in range(start, upper):
@@ -55,7 +57,6 @@ class Solution:
                 for i in subgen('10000', 20000, True):
                     if is_prime(i):
                         yield i
-
         for g in generator(N):
             if g >= N:
                 return g

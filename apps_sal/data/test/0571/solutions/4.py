@@ -1,7 +1,4 @@
 import sys
-# import math
-
-# sys.stdin = open('c-test.txt')
 
 
 def check(s):
@@ -32,7 +29,7 @@ else:
     if max(leftcount, rightcount) > needed:
         print(':(')
     else:
-        leftneeded = (n // 2) - leftcount
+        leftneeded = n // 2 - leftcount
         leftadded = 0
         newchars = []
         for char in s:

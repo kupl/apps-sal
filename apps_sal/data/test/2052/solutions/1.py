@@ -19,7 +19,4 @@ for i in range(w - 1):
                 j += 1
             else:
                 break
-    # print(B)
-# print(A)
-# print(B)
 print(sum(B[w - l - 1:]))

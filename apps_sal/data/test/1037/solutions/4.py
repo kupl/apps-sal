@@ -4,10 +4,10 @@ def main():
     n = int(input())
     a = [int(i) for i in input().split()]
     b = [int(i) for i in range(n)]
-    ab = [(x, y) for x, y in zip(a, b)]
+    ab = [(x, y) for (x, y) in zip(a, b)]
     from operator import itemgetter
     ab = sorted(ab, key=itemgetter(0), reverse=True)
-    dp = [[-10**14] * (n + 1) for i in range(n + 1)]
+    dp = [[-10 ** 14] * (n + 1) for i in range(n + 1)]
     dp[0][0] = 0
     for i in range(n):
         for j in range(i + 2):

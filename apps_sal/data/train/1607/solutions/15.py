@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -8,14 +6,8 @@ import time
 import random
 import itertools
 import sys
-
-"""
-created by shhuan at 2017/11/19 21:52
-
-"""
-
+'\ncreated by shhuan at 2017/11/19 21:52\n\n'
 S = input()
-
 N = len(S)
 ans = 0
 for i in range(N):
@@ -27,5 +19,4 @@ for i in range(N):
         for k in range(j + 1, N):
             if S[k] == 'Q':
                 ans += 1
-
 print(ans)

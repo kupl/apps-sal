@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 n = list(map(int, input().split()))
 x = 0
 z = 100000

@@ -1,6 +1,5 @@
 n = int(input())
 x = 0
-
 for i in range(n):
     t = input()
     if t[0] != 'X':

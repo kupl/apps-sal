@@ -1,6 +1,7 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
-        '''
+        """
         ex 1
         arr = [1,2,3,4,5,10,6,7,8,9], k = 5
         (2,8), (1,9), (3,7), (4,6), (5,10)
@@ -29,11 +30,11 @@ class Solution:
         idea 1
         greedy, two pointers
         time - O(nlogn), space - O(n)
-        '''
+        """
         arr_mod = [num % k for num in arr]
         arr_mod.sort()
         n = len(arr_mod)
-        left, right = 0, n - 1
+        (left, right) = (0, n - 1)
         while left < n and arr_mod[left] == 0:
             left += 1
         if left % 2 != 0:

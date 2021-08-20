@@ -1,12 +1,11 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
-    l1, r1 = list(map(int, input().split()))
-    l2, r2 = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
+    (l1, r1) = list(map(int, input().split()))
+    (l2, r2) = list(map(int, input().split()))
     if l1 > l2:
-        l1, r1, l2, r2 = l2, r2, l1, r1
-
+        (l1, r1, l2, r2) = (l2, r2, l1, r1)
     if l2 > r1:
-        ans = float("inf")
+        ans = float('inf')
         for i in range(1, n + 1):
             temp = i * (l2 - r1)
             limit = (r2 - l1) * i

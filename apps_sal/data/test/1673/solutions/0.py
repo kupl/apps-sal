@@ -1,24 +1,13 @@
 from collections import defaultdict
 import sys
 input = sys.stdin.readline
-'''
-for CASES in range(int(input())):
-n, m = map(int, input().split())
-n = int(input())
-A = list(map(int, input().split()))
-S = input().strip()
-sys.stdout.write(" ".join(map(str,ans))+"\n")
-'''
-inf = 100000000000000000  # 1e17
+'\nfor CASES in range(int(input())):\nn, m = map(int, input().split())\nn = int(input())\nA = list(map(int, input().split()))\nS = input().strip()\nsys.stdout.write(" ".join(map(str,ans))+"\n")\n'
+inf = 100000000000000000
 mod = 998244353
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = [0] + sorted(list(map(int, input().split())))
-
 ans = 0
-
 f = [[0] * (n + 10) for _ in range(m + 10)]
-
 for x in range(1, (A[n] - A[1]) // (m - 1) + 1):
     for i in range(1, n + 1):
         f[1][i] = 1
@@ -35,6 +24,3 @@ for x in range(1, (A[n] - A[1]) // (m - 1) + 1):
         ans += f[m][i]
         ans %= mod
 print(ans)
-
-
-# the end

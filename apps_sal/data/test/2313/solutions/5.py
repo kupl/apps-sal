@@ -19,5 +19,5 @@ for i in range(1, n + 1):
         else:
             R -= i
             L = max(0, L - i)
-    res[i - 1] = (temp * inv) % mod
+    res[i - 1] = temp * inv % mod
 print(*res)

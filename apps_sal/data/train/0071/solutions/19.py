@@ -6,10 +6,9 @@ for T in range(int(input())):
     for i in l:
         if i >= 0:
             bal += i
+        elif abs(i) > bal:
+            ans += abs(i) - bal
+            bal = 0
         else:
-            if abs(i) > bal:
-                ans += abs(i) - bal
-                bal = 0
-            else:
-                bal += i
+            bal += i
     print(ans)

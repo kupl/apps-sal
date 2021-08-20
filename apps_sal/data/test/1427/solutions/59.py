@@ -2,6 +2,7 @@ import numpy as np
 
 
 class SieveOfEratosthenes:
+
     def __init__(self, V):
         self.is_prime = np.ones(V + 1, dtype=bool)
         self.is_prime[2::2] = False
@@ -30,28 +31,24 @@ class SieveOfEratosthenes:
         if x > 1:
             result.append((x, 1))
         if return_dict:
-            result = {p: e for p, e in result}
+            result = {p: e for (p, e) in result}
         return result
 
 
 N = int(input())
-M = 10**9 + 7
+M = 10 ** 9 + 7
 A = list(map(int, input().split()))
-
-sieve = SieveOfEratosthenes(10**3)
+sieve = SieveOfEratosthenes(10 ** 3)
 F = [sieve.factorize(a, return_dict=True) for a in A]
-
 lcm = F[0]
 for i in range(1, len(F)):
-    for p, e in list(F[i].items()):
+    for (p, e) in list(F[i].items()):
         if p in lcm:
             lcm[p] = max(lcm[p], e)
         else:
             lcm[p] = e
-
 val = 1
-for p, e in list(lcm.items()):
+for (p, e) in list(lcm.items()):
     val = val * pow(p, e, M) % M
-
 B = [val * pow(a, M - 2, M) % M for a in A]
-print((sum(B) % M))
+print(sum(B) % M)

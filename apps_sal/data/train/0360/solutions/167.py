@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         mi = max(weights)
         ma = sum(weights)
@@ -13,7 +14,6 @@ class Solution:
                     num += 1
                 re -= x
             return num <= D
-
         while mi < ma:
             mid = mi + (ma - mi) // 2
             if canFit(mid):

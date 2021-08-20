@@ -1,5 +1,3 @@
-
-
 def estBissextile(annee):
     if annee % 400 == 0 or (annee % 4 == 0 and annee % 100 != 0):
         return True
@@ -7,7 +5,6 @@ def estBissextile(annee):
 
 
 annee = int(input())
-
 if not estBissextile(annee):
     compteur = 1
     annee += 1
@@ -26,5 +23,4 @@ else:
         else:
             compteur += 1
         annee += 1
-
 print(annee)

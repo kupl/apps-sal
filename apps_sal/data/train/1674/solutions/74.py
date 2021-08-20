@@ -1,9 +1,9 @@
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         presum = list(piles)
         for i in range(1, len(piles)):
             presum[i] += presum[i - 1]
-
         from functools import lru_cache
 
         @lru_cache(None)
@@ -15,5 +15,4 @@ class Solution:
                 me = presum[ind + i - 1] - (presum[ind - 1] if ind > 0 else 0)
                 sm = max(sm, me + presum[-1] - presum[ind + i - 1] - dp(ind + i, max(m, i)))
             return sm
-
         return dp(0, 1)

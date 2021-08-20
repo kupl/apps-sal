@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 a = 0
 i = 0
 j = 1
@@ -10,7 +9,6 @@ while j < n:
         j += 1
     else:
         i += 1
-
     if i == j:
         i += 1
         j += 2

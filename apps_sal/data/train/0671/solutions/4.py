@@ -1,9 +1,8 @@
-# cook your dish here
 for i in range(int(input())):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     p = list(map(int, input().split()))
     c = list(map(int, input().split()))
-    f, d = [], []
+    (f, d) = ([], [])
     for j in range(n):
         if c[j] == 1:
             f.append(j)
@@ -18,6 +17,6 @@ for i in range(int(input())):
                 ans = True
                 break
     if ans:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

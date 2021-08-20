@@ -1,5 +1,5 @@
 for nt in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if b == a:
         print(0)
         continue
@@ -10,9 +10,8 @@ for nt in range(int(input())):
         else:
             print(2)
             continue
+    elif (a - b) % 2 == 0:
+        print(1)
+        continue
     else:
-        if (a - b) % 2 == 0:
-            print(1)
-            continue
-        else:
-            print(2)
+        print(2)

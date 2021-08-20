@@ -11,5 +11,5 @@ for _ in range(int(input())):
     ct2 = 0
     if twos > 1:
         ct2 = twos
-    ans = (n * (n - 1) // 2) - (ct2 * (ct2 - 1) // 2)
+    ans = n * (n - 1) // 2 - ct2 * (ct2 - 1) // 2
     print(ans)

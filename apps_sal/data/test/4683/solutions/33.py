@@ -1,6 +1,5 @@
-# abc177c
 n = int(input())
 a = list(map(int, input().split()))
 s = sum(a)
 t = sum([x * x for x in a])
-print(((s * s - t) // 2 % (10**9 + 7)))
+print((s * s - t) // 2 % (10 ** 9 + 7))

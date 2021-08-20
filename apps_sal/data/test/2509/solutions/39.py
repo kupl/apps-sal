@@ -1,7 +1,5 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 ans = 0
-
 for b in range(k + 1, n + 1):
     s = n // b
     a = n % b
@@ -9,5 +7,4 @@ for b in range(k + 1, n + 1):
     ans += max(a - k + 1, 0)
     if k == 0:
         ans -= 1
-
 print(ans)

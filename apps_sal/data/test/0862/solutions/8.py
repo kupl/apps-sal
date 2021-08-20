@@ -2,8 +2,8 @@ import math
 n = int(input())
 l = list(map(int, input().strip().split()))
 l1 = []
-for x, y in enumerate(l):
-    if (y < x):
+for (x, y) in enumerate(l):
+    if y < x:
         m = 0
     else:
         m = y - x

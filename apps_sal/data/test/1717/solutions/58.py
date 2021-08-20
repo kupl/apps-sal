@@ -5,23 +5,23 @@ import collections as cl
 import bisect as bs
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 Max = sys.maxsize
 
 
-def l():  # intのlist
+def l():
     return list(map(int, input().split()))
 
 
-def m():  # 複数文字
+def m():
     return map(int, input().split())
 
 
-def onem():  # Nとかの取得
+def onem():
     return int(input())
 
 
-def s(x):  # 圧縮
+def s(x):
     a = []
     if len(x) == 0:
         return []
@@ -38,15 +38,15 @@ def s(x):  # 圧縮
     return a
 
 
-def jo(x):  # listをスペースごとに分ける
-    return " ".join(map(str, x))
+def jo(x):
+    return ' '.join(map(str, x))
 
 
-def max2(x):  # 他のときもどうように作成可能
+def max2(x):
     return max(map(max, x))
 
 
-def In(x, a):  # aがリスト(sorted)
+def In(x, a):
     k = bs.bisect_left(a, x)
     if k != len(a) and a[k] == x:
         return True
@@ -64,20 +64,7 @@ def pow_k(x, n):
     return ans
 
 
-"""
-def nibu(x,n,r):
-    ll = 0
-    rr = r
-    while True:
-        mid = (ll+rr)//2
-
-    if rr == mid:
-        return ll
-    if (ここに評価入れる):
-        rr = mid
-    else:
-        ll = mid+1
-"""
+'\ndef nibu(x,n,r):\n    ll = 0\n    rr = r\n    while True:\n        mid = (ll+rr)//2\n\n    if rr == mid:\n        return ll\n    if (ここに評価入れる):\n        rr = mid\n    else:\n        ll = mid+1\n'
 
 
 def gcd(*numbers):
@@ -89,7 +76,7 @@ def gcd_list(numbers):
 
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(*numbers):
@@ -101,9 +88,7 @@ def lcm_list(numbers):
 
 
 n = onem()
-
 ans = 1
-
 for i in range(1, n + 1):
     ans = lcm(ans, i)
 print(ans + 1)

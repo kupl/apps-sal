@@ -1,5 +1,5 @@
 def isPrime(n):
-    return n == 2 or n > 2 and n & 1 and all(n % p for p in range(3, int(n**.5 + 1), 2))
+    return n == 2 or (n > 2 and n & 1 and all((n % p for p in range(3, int(n ** 0.5 + 1), 2))))
 
 
 def prime_product(n):

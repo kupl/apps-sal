@@ -1,6 +1,6 @@
 def check(m):
     dictsums = dict()
-    i, j = 0, 0
+    (i, j) = (0, 0)
     dictsums[series[0]] = 1
     while i < len(series) - 1 and i - j + 1 < d:
         if series[i + 1] not in dictsums and len(dictsums) == m:
@@ -23,7 +23,7 @@ def check(m):
 
 q = int(input())
 for i in range(q):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     series = list(map(int, input().split()))
     L = 0
     R = k

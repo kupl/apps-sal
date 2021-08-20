@@ -6,7 +6,7 @@ def brainfuck_to_c(s):
             s = s.replace(i, '')
     if len(s) == 0:
         return ''
-    t, r, shift = [s[0]], '', 0
+    (t, r, shift) = ([s[0]], '', 0)
     for i in range(1, len(s)):
         if s[i] in t[-1] and s[i] in '+-<>':
             t[-1] += s[i]

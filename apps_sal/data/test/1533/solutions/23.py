@@ -1,10 +1,10 @@
 t = int(input())
 s = set()
-while(t):
+while t:
     t -= 1
     temp = input().strip()
     if temp in s:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     s.add(temp)

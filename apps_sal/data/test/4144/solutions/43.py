@@ -1,5 +1,5 @@
 import numpy as np
-base = 10**9 + 7
+base = 10 ** 9 + 7
 
 
 def pw(x, n):
@@ -8,7 +8,7 @@ def pw(x, n):
     elif n == 1:
         return x
     else:
-        return ((pw(x, n // 2)**2 % base) * pw(x, n % 2) % base)
+        return pw(x, n // 2) ** 2 % base * pw(x, n % 2) % base
 
 
 n = int(input())

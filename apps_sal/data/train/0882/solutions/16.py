@@ -1,10 +1,8 @@
-# cook your dish here
 t = int(input())
 for h in range(t):
     a = input()
     b = input()
     aset = set(a)
-
     c = 0
     for i in aset:
         if i in b:

@@ -1,5 +1,5 @@
 import copy
-n, h, l, r = map(int, input().split())
+(n, h, l, r) = map(int, input().split())
 A = list(map(int, input().split()))
 V = [0] * h
 V[0] = 1

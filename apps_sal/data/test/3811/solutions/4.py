@@ -22,16 +22,15 @@ n = int(f.readline().rstrip('\r\n'))
 inp = []
 gcd = 0
 for i in range(n):
-    a, b = map(int, f.readline().rstrip('\r\n').split())
+    (a, b) = map(int, f.readline().rstrip('\r\n').split())
     c = a * b
     gcd = math.gcd(gcd, c)
 if gcd > 1:
     if gcd <= 10000000000:
-        sys.stdout.write(str(prime_factors(gcd)) + "\n")
+        sys.stdout.write(str(prime_factors(gcd)) + '\n')
+    elif math.gcd(gcd, a) > 1:
+        sys.stdout.write(str(math.gcd(a, gcd)) + '\n')
     else:
-        if (math.gcd(gcd, a) > 1):
-            sys.stdout.write(str(math.gcd(a, gcd)) + "\n")
-        else:
-            sys.stdout.write(str(math.gcd(b, gcd)) + '\n')
+        sys.stdout.write(str(math.gcd(b, gcd)) + '\n')
 else:
-    sys.stdout.write("-1\n")
+    sys.stdout.write('-1\n')

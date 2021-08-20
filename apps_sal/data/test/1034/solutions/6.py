@@ -2,7 +2,7 @@ import numpy as np
 
 
 def main():
-    X, Y, Z, K = list(map(int, input().split(' ')))
+    (X, Y, Z, K) = list(map(int, input().split(' ')))
     A = np.array(list(map(int, input().split(' '))))
     B = np.array(list(map(int, input().split(' '))))
     C = np.array(list(map(int, input().split(' '))))

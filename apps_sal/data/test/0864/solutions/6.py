@@ -16,9 +16,7 @@ def solve(package, n):
             food[f] += 1
         else:
             food[f] = 1
-
     r = list(food.values())
-
     left = 0
     right = 1000
     while right > left + 1:
@@ -27,12 +25,11 @@ def solve(package, n):
             left = mid
         else:
             right = mid
-
     return left
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     package = list(map(int, input().split()))
     print(solve(package, n))
 

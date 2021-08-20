@@ -10,7 +10,6 @@ for i in range(n):
             d[name].append(j)
     else:
         d[name] = arr
-
 print(len(d))
 for name in list(d.keys()):
     print(name)
@@ -19,7 +18,7 @@ for name in list(d.keys()):
     for i in range(len(d[name])):
         le = len(d[name][i])
         for j in range(len(d[name])):
-            if(i != j and le < len(d[name][j]) and d[name][j][-le:] == d[name][i]):
+            if i != j and le < len(d[name][j]) and (d[name][j][-le:] == d[name][i]):
                 break
         else:
             ans.append(d[name][i])

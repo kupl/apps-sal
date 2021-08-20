@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
 import sys
-
-#lines = stdin.readlines()
 
 
 def rint():
@@ -17,7 +14,6 @@ def oint():
 
 
 q = oint()
-
 for _ in range(q):
     n = oint()
     odd = 0
@@ -29,8 +25,7 @@ for _ in range(q):
             odd = 1
     if odd:
         print(n)
+    elif ss.count('1') % 2:
+        print(n - 1)
     else:
-        if ss.count('1') % 2:
-            print(n - 1)
-        else:
-            print(n)
+        print(n)

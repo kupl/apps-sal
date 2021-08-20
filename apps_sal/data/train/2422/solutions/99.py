@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         maxValue = 0
         max_return = 0

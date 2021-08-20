@@ -1,5 +1,5 @@
 def Solve(nCase):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     l = list(set(a))
     p = len(l)
@@ -10,7 +10,7 @@ def Solve(nCase):
         l.append(a[0])
     ans = n * l
     print(len(ans))
-    print(' '.join(str(x) for x in ans))
+    print(' '.join((str(x) for x in ans)))
 
 
 T = int(input())

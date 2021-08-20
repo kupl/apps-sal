@@ -1,20 +1,16 @@
 import sys
 input = sys.stdin.readline
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 t = int(input())
-
 for _ in range(t):
     x = int(input())
     s = list(input())
     n = len(s) - 1
     for i in range(n):
         s[i] = int(s[i])
-
     memo = {}
     for i in range(n):
         memo[i] = s[i]
-
     ans = len(memo)
     pos = i + 1
     for i in range(x):

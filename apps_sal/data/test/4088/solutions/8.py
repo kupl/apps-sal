@@ -7,7 +7,6 @@ for _ in range(q):
     c = Counter(s)
     c = list(c.items())
     c.sort(key=lambda x: x[0])
-
     ans = [None for _ in range(m)]
     while not all(ans):
         indices = []
@@ -23,7 +22,6 @@ for _ in range(q):
                 break
             else:
                 c.pop()
-
         for j in range(m):
             for idx in indices:
                 b[j] -= abs(idx - j)

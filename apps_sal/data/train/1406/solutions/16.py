@@ -4,11 +4,11 @@ for i in range(t):
 
     def countSetBitsRec(num):
         nibble = 0
-        if(0 == num):
+        if 0 == num:
             return num_to_bits[0]
-        nibble = num & 0xf
+        nibble = num & 15
         return num_to_bits[nibble] + countSetBitsRec(num >> 4)
-    n, q = input().split()
+    (n, q) = input().split()
     n = int(n)
     q = int(q)
     A = []
@@ -18,14 +18,14 @@ for i in range(t):
     for j in range(n):
         num = A[j]
         co = countSetBitsRec(num)
-        if(co % 2 == 0):
+        if co % 2 == 0:
             ev += 1
         else:
             od += 1
     for j in range(q):
         p = int(input())
         co = countSetBitsRec(p)
-        if(co % 2 == 0):
+        if co % 2 == 0:
             print(ev, end=' ')
             print(od)
         else:

@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 ans_list = []
-
 for n in A:
     temp = n
     count = 0
@@ -9,5 +8,4 @@ for n in A:
         temp /= 2
         count = count + 1
     ans_list.append(count)
-
 print(min(ans_list))

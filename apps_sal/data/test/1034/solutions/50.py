@@ -1,20 +1,17 @@
 import sys
 import heapq
-
-X, Y, Z, K = map(int, sys.stdin.readline().split())
+(X, Y, Z, K) = map(int, sys.stdin.readline().split())
 A = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
 B = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
 C = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
-
 ans_heapq = []
 i = 0
 j = 0
 k = 0
 heapq.heappush(ans_heapq, [-1 * (A[0] + B[0] + C[0]), i, j, k])
 ijk_list = [[0, 0, 0]]
-
 for _ in range(K):
-    ans, i, j, k = heapq.heappop(ans_heapq)
+    (ans, i, j, k) = heapq.heappop(ans_heapq)
     print(-1 * ans)
     if i < X - 1 and [i + 1, j, k] not in ijk_list:
         abc = -1 * (A[i + 1] + B[j] + C[k])

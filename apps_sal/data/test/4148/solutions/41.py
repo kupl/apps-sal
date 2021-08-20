@@ -6,5 +6,5 @@ for i in range(len(s)):
     if num > 90:
         num -= 26
     ans.append(chr(num))
-ans = "".join(ans)
+ans = ''.join(ans)
 print(ans)

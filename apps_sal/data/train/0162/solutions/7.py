@@ -1,8 +1,8 @@
 class Solution:
-    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        m, n = len(text1), len(text2)
-        dp = [[0] * (n + 1) for i in range(m + 1)]
 
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        (m, n) = (len(text1), len(text2))
+        dp = [[0] * (n + 1) for i in range(m + 1)]
         for i in range(m + 1):
             for j in range(n + 1):
                 if i != 0 and j != 0:

@@ -1,6 +1,6 @@
-l, r = list(map(int, input().split()))
+(l, r) = list(map(int, input().split()))
 c = l
-print("YES")
+print('YES')
 while c < r:
     print(c, c + 1)
     c += 2

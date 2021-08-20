@@ -2,7 +2,7 @@ n = int(input())
 a = {}
 for i in range(1, n + 1):
     a[i] = 0
-max1, max2 = 0, 0
+(max1, max2) = (0, 0)
 for i in map(int, input().split()):
     if i < max1:
         if i > max2:

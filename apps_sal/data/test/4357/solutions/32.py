@@ -12,7 +12,7 @@ from copy import deepcopy
 def main():
     num = list(map(int, input().split()))
     num.sort(reverse=True)
-    print((num[0] * 10 + num[1] + num[2]))
+    print(num[0] * 10 + num[1] + num[2])
 
 
 def __starting_point():

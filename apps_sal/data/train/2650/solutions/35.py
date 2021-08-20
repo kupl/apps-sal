@@ -1,4 +1,4 @@
-N, L = map(int, input().split())
+(N, L) = map(int, input().split())
 array = [str(input()) for i in range(N)]
 array = sorted(array)
 ans = ''

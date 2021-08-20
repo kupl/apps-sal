@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from collections import defaultdict
-
 n = int(input())
 A = list(map(int, input().split()))
 pattern = set()
@@ -20,19 +17,19 @@ def check(v):
     for a in A:
         count = 0
         while a != 0:
-            if v == a or (v % a == 0 and (v // a) & -(v // a) == v // a):
+            if v == a or (v % a == 0 and v // a & -(v // a) == v // a):
                 ret += len(bin(v // a)) - 3
                 break
-            if (v % a == 0 and (v // a) & -(v // a) == v // a) and a < v:
-                return 1e12
+            if (v % a == 0 and v // a & -(v // a) == v // a) and a < v:
+                return 1000000000000.0
             a = a // 2
             ret += 1
         else:
-            return 1e12
+            return 1000000000000.0
     return ret
 
 
-ans = 1e12
+ans = 1000000000000.0
 for p in pattern:
     ret = check(p)
     ans = ans if ans < ret else ret

@@ -1,10 +1,7 @@
-# B - Template Matching
 def main():
-    n, m = map(int, input().split())
-
+    (n, m) = map(int, input().split())
     a_l = [input() for i in range(n)]
     b_l = [input() for i in range(m)]
-
     for i in range(n - m + 1):
         for j in range(n - m + 1):
             ans = 'Yes'

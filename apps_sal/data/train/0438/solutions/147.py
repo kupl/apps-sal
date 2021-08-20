@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         parents = [-1] * n
@@ -15,8 +16,7 @@ class Solution:
             return parents[n]
 
         def union(m, n):
-            pm, pn = find(m), find(n)
-            #print(pm, pn)
+            (pm, pn) = (find(m), find(n))
             if ranks[pm] > ranks[pn]:
                 parents[pn] = pm
                 ranks[pm] += ranks[pn]
@@ -25,7 +25,7 @@ class Solution:
                 ranks[pn] += ranks[pm]
             return True
         visited = set([])
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             a -= 1
             ranks[a] = 1
             for j in [a - 1, a + 1]:
@@ -34,8 +34,5 @@ class Solution:
                         ans = i
                     if j in visited:
                         union(a, j)
-                        # print(parents)
-                        # print(ranks)
             visited.add(a)
-        # print(\"=\"*20)
         return ans

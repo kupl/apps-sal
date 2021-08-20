@@ -1,10 +1,10 @@
 import functools
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 X = list()
 Y = list()
 Z = list()
 for i in range(n):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     X.append(x)
     Y.append(y)
     Z.append(z)
@@ -22,7 +22,7 @@ B.sort()
 C.sort()
 D.sort()
 if m == 0:
-    print((0))
+    print(0)
 else:
     x1 = functools.reduce(lambda x, y: x + y, [A[i] for i in range(m)])
     x2 = functools.reduce(lambda x, y: x + y, [A[-i] for i in range(1, m + 1)])
@@ -32,4 +32,4 @@ else:
     z2 = functools.reduce(lambda x, y: x + y, [C[-i] for i in range(1, m + 1)])
     w1 = functools.reduce(lambda x, y: x + y, [D[i] for i in range(m)])
     w2 = functools.reduce(lambda x, y: x + y, [D[-i] for i in range(1, m + 1)])
-    print((max(abs(x1), abs(x2), abs(y1), abs(y2), abs(z1), abs(z2), abs(w1), abs(w2))))
+    print(max(abs(x1), abs(x2), abs(y1), abs(y2), abs(z1), abs(z2), abs(w1), abs(w2)))

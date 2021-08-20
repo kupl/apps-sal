@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -16,7 +15,8 @@ import queue
 import decimal
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -43,10 +43,10 @@ class Scanner():
 
 
 def solve():
-    H, W, K = Scanner.map_int()
+    (H, W, K) = Scanner.map_int()
     S = Scanner.string_list(H)
-    ans = int(1e15)
-    for i in range(1 << (H - 1)):
+    ans = int(1000000000000000.0)
+    for i in range(1 << H - 1):
         cut = 0
         pc = 1
         whites = [[0 for _ in range(W)] for _ in range(H)]
@@ -81,12 +81,6 @@ def solve():
 
 
 def main():
-    # sys.setrecursionlimit(1000000)
-    # sys.stdin = open("sample.txt")
-    # T = Scanner.int()
-    # for _ in range(T):
-    #     solve()
-    # print('YNeos'[not solve()::2])
     solve()
 
 

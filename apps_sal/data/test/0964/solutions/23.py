@@ -6,7 +6,7 @@ def f(n):
 
 
 t = True
-x1, y1, x2, y2, x3, y3 = map(int, input().split())
+(x1, y1, x2, y2, x3, y3) = map(int, input().split())
 m = [x1, y1, x2, y2, x3, y3]
 m1 = [[x1, y1, 'A'], [x2, y2, 'B'], [x3, y3, 'C']]
 m1.sort(key=f)
@@ -33,33 +33,32 @@ if maxj == maxi and mini + minj <= maxi:
                 matr[i][j] = s2
     else:
         t = False
-else:
-    if maxj == maxi - mini:
-        for i in range(mini, mini + maxj):
-            for j in range(minj):
-                matr[i][j] = s1
-        if maxk == maxj and mink == maxi - minj:
-            for i in range(mini, mini + maxk):
-                for j in range(minj, minj + mink):
-                    matr[i][j] = s2
-        else:
-            t = False
-    elif minj == maxi - mini:
-        for i in range(mini, mini + minj):
-            for j in range(maxj):
-                matr[i][j] = s1
-        if mink == minj and maxk == maxi - maxj:
-            for i in range(mini, mini + mink):
-                for j in range(maxj, maxj + maxk):
-                    matr[i][j] = s2
-        elif maxk == minj and mink == maxi - maxj:
-            for i in range(mini, mini + maxk):
-                for j in range(maxj, maxj + mink):
-                    matr[i][j] = s2
-        else:
-            t = False
+elif maxj == maxi - mini:
+    for i in range(mini, mini + maxj):
+        for j in range(minj):
+            matr[i][j] = s1
+    if maxk == maxj and mink == maxi - minj:
+        for i in range(mini, mini + maxk):
+            for j in range(minj, minj + mink):
+                matr[i][j] = s2
     else:
         t = False
+elif minj == maxi - mini:
+    for i in range(mini, mini + minj):
+        for j in range(maxj):
+            matr[i][j] = s1
+    if mink == minj and maxk == maxi - maxj:
+        for i in range(mini, mini + mink):
+            for j in range(maxj, maxj + maxk):
+                matr[i][j] = s2
+    elif maxk == minj and mink == maxi - maxj:
+        for i in range(mini, mini + maxk):
+            for j in range(maxj, maxj + mink):
+                matr[i][j] = s2
+    else:
+        t = False
+else:
+    t = False
 if t == True:
     print(maxi)
     for i in range(maxi):

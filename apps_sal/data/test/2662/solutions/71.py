@@ -1,6 +1,5 @@
 from random import random
 from sys import setrecursionlimit
-
 setrecursionlimit(10 ** 6)
 
 
@@ -57,25 +56,19 @@ def treap_delete(n, v):
     if n._value < v:
         n._right = treap_delete(n._right, v)
         return n
-
-    # n._value == v
     if n._count > 1:
         n._count -= 1
         return n
-
     if n._left is None and n._right is None:
         return None
-
     if n._left is None:
         n = treap_rotate_left(n)
     elif n._right is None:
         n = treap_rotate_right(n)
+    elif n._left._priority < n._right._priority:
+        n = treap_rotate_right(n)
     else:
-        # n._left is not None and n._right is not None
-        if n._left._priority < n._right._priority:
-            n = treap_rotate_right(n)
-        else:
-            n = treap_rotate_left(n)
+        n = treap_rotate_left(n)
     return treap_delete(n, v)
 
 
@@ -87,25 +80,23 @@ def treap_size(n):
 
 def treap_str(n):
     if n is None:
-        return ""
+        return ''
     result = []
     if n._left is not None:
         result.append(treap_str(n._left))
-    result.append("%d:%d" % (n._value, n._count))
+    result.append('%d:%d' % (n._value, n._count))
     if n._right is not None:
         result.append(treap_str(n._right))
     return ' '.join(result)
 
 
 def treap_search(n, v):
-    # v 未満で最大のノードを検索する. v 未満のノードがなければ None を返す
     if n is None:
         return None
     if n._value >= v:
         if n._left is None:
             return None
         return treap_search(n._left, v)
-    # n._value < v
     if n._right is None:
         return n
     r = treap_search(n._right, v)
@@ -138,11 +129,10 @@ class Treap:
 
 N = int(input())
 A = [int(input()) for _ in range(N)]
-
 t = Treap()
 for a in A:
     n = t.search(a)
     if n is not None:
         t.delete(n._value)
     t.insert(a)
-print((len(t)))
+print(len(t))

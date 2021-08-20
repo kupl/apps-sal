@@ -1,6 +1,5 @@
 from math import atan2, pi
-
-EPS = 0.00000001
+EPS = 1e-08
 
 
 def eq(a, b):
@@ -8,8 +7,9 @@ def eq(a, b):
 
 
 class Vector:
+
     def __init__(self, x2, y2, x1=0, y1=0):
-        self.x = (x2 - x1)
+        self.x = x2 - x1
         self.y = y2 - y1
         self.s = (self.x ** 2 + self.y ** 2) ** 0.5
 
@@ -57,6 +57,7 @@ class Vector:
 
 
 class Line:
+
     def __init__(self, point=None, vector=None, point2=None, a=None, b=None, c=None):
         if a is not None:
             self.v = Vector(a, b).rotate()
@@ -72,16 +73,16 @@ class Line:
         self.v = vector
         self.A = self.v.y
         self.B = -self.v.x
-        self.C = - self.A * self.p.x - self.p.y * self.B
+        self.C = -self.A * self.p.x - self.p.y * self.B
 
     def get_abc(self):
-        return self.A, self.B, self.C
+        return (self.A, self.B, self.C)
 
     def __str__(self):
         return str(self.A) + ' ' + str(self.B) + ' ' + str(self.C)
 
     def check(self, point):
-        return eq(- point.x * self.A - self.B * point.y, self.C)
+        return eq(-point.x * self.A - self.B * point.y, self.C)
 
     def get_s_from_point(self, point):
         v = self.v.norm()
@@ -115,7 +116,7 @@ class Line:
             if eq(self.get_s_from_point(lin.p), 0):
                 return (2,)
             return (0,)
-        t = ((lin.p - self.p) * u) / (self.v * u)
+        t = (lin.p - self.p) * u / (self.v * u)
         v = Vector(self.v.x, self.v.y)
         v.mul_k(t)
         return (1, self.p + v)
@@ -149,7 +150,7 @@ def get_s_from_luch(xp, yp, x1, y1, x2, y2):
     v1 = Vector(x2, y2, x1, y1)
     v.mul_k(a)
     v3 = v + Vector(x1, y1)
-    xh, yh = v3.x, v3.y
+    (xh, yh) = (v3.x, v3.y)
     v4 = Vector(xh, yh, x1, y1)
     b = v1.get_angle(v4)
     if eq(b, 0):
@@ -182,9 +183,9 @@ def peresec_otr(x1, y1, x2, y2, x3, y3, x4, y4):
     yg3 = CD.get_angle(CA)
     yg4 = CD.get_angle(CB)
     flag = False
-    if (yg1 < 0 and yg2 < 0) or (yg1 > 0 and yg2 > 0):
+    if yg1 < 0 and yg2 < 0 or (yg1 > 0 and yg2 > 0):
         flag = True
-    if (yg3 < 0 and yg4 < 0) or (yg3 > 0 and yg4 > 0):
+    if yg3 < 0 and yg4 < 0 or (yg3 > 0 and yg4 > 0):
         flag = True
     if max(min(x1, x2), min(x3, x4)) > min(max(x1, x2), max(x3, x4)):
         flag = True
@@ -196,12 +197,11 @@ def peresec_otr(x1, y1, x2, y2, x3, y3, x4, y4):
 def get_s_from_otr_to_otr(x1, y1, x2, y2, x3, y3, x4, y4):
     if peresec_otr(x1, y1, x2, y2, x3, y3, x4, y4):
         return 0
-    return min(get_s_from_otr(x1, y1, x3, y3, x4, y4), get_s_from_otr(x2, y2, x3, y3, x4, y4),
-               get_s_from_otr(x3, y3, x1, y1, x2, y2), get_s_from_otr(x4, y4, x1, y1, x2, y2))
+    return min(get_s_from_otr(x1, y1, x3, y3, x4, y4), get_s_from_otr(x2, y2, x3, y3, x4, y4), get_s_from_otr(x3, y3, x1, y1, x2, y2), get_s_from_otr(x4, y4, x1, y1, x2, y2))
 
 
 def main():
-    px, py, vx, vy, a, b, c, d = map(int, input().split())
+    (px, py, vx, vy, a, b, c, d) = map(int, input().split())
     P = Vector(px, py)
     V = Vector(vx, vy).norm()
     A = V.mul_kk(b) + P

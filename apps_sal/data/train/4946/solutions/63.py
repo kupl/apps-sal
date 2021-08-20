@@ -5,5 +5,4 @@ def house_numbers_sum(inp):
     while i < ln and inp[i] != 0:
         res += inp[i]
         i += 1
-
     return res

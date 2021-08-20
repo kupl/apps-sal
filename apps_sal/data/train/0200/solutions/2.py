@@ -1,4 +1,5 @@
 class Solution:
+
     def findMinFibonacciNumbers(self, k: int) -> int:
         f = []
         f.append(1)
@@ -9,7 +10,6 @@ class Solution:
             else:
                 break
         f.remove(f[len(f) - 1])
-
         number = 0
         while k != 0:
             if f[len(f) - 1] <= k:
@@ -18,5 +18,4 @@ class Solution:
                 number += 1
             else:
                 f.remove(max(f))
-
         return number

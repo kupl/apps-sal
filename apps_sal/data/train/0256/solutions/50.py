@@ -1,5 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def cnt(k, piles):
             ans = 0
             for p in piles:

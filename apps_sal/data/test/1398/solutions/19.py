@@ -1,7 +1,7 @@
 f = open('input.txt', 'r')
 n = int(f.readline())
 arr = sorted(map(int, f.readline().split()))
-j, res = 0, n - 1
+(j, res) = (0, n - 1)
 for i in range(n):
     while j < n - 1 and 2 * arr[i] >= arr[j + 1]:
         j += 1

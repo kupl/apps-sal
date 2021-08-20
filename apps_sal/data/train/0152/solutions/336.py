@@ -1,7 +1,8 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         lo = 1
-        hi = 10**18
+        hi = 10 ** 18
         position.sort()
 
         def func(mid):
@@ -15,7 +16,6 @@ class Solution:
                 return True
             else:
                 return False
-
         while lo < hi:
             mid = (lo + hi) // 2
             x = func(mid)

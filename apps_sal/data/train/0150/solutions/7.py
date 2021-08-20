@@ -1,9 +1,10 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         n = len(A)
         left = [0 for i in range(n)]
         right = [0 for i in range(n)]
-        left[0], right[n - 1] = A[0], A[n - 1]
+        (left[0], right[n - 1]) = (A[0], A[n - 1])
         for i in range(1, n):
             left[i] = max(left[i - 1], A[i])
         for i in range(n - 2, -1, -1):

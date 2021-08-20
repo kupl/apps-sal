@@ -1,11 +1,11 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         if not mat:
             return 0
         rows = len(mat)
         cols = len(mat[0])
         n = 0
-
         for top in range(rows):
             for left in range(cols):
                 bottom = rows

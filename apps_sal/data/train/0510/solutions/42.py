@@ -1,17 +1,13 @@
 from bisect import bisect_left, bisect_right
 import string
-
 dic = {c: [] for c in string.ascii_lowercase}
-
 n = int(input())
 s = list(input())
 q = int(input())
-
-for i, c in enumerate(s, start=1):
+for (i, c) in enumerate(s, start=1):
     dic[c].append(i)
-
 for i in range(q):
-    p, l, r = list(map(str, input().split()))
+    (p, l, r) = list(map(str, input().split()))
     if p == '1':
         j = int(l)
         if r == s[j - 1]:

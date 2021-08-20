@@ -1,10 +1,10 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = []
 for i in range(n):
     a.append([])
     for j in range(n):
         a[i].append(0)
-m = n**2
+m = n ** 2
 for j in range(n):
     for i in range(n - k + 1):
         a[j][n - i - 1] = m - i

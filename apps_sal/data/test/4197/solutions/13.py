@@ -6,4 +6,4 @@ for i in range(n):
 for i in range(n):
     ans[a[i] - 1] = i + 1
 for i in range(len(ans)):
-    print(ans[i], end=" ")
+    print(ans[i], end=' ')

@@ -1,4 +1,3 @@
-
 import re
 import inspect
 from sys import argv, exit
@@ -33,7 +32,6 @@ def prnt(*args, override=False):
         print(*args)
 
 
-# Faster IO
 pq = []
 
 
@@ -44,12 +42,12 @@ def penq(s):
 
 
 def pdump():
-    s = ('\n'.join(pq)).encode()
+    s = '\n'.join(pq).encode()
     os.write(1, s)
 
 
 def __starting_point():
-    timesteps, ast, mn, mx = rints()
+    (timesteps, ast, mn, mx) = rints()
     to_add = timesteps - ast
     asts = rints()
     for t in asts:
@@ -62,14 +60,12 @@ def __starting_point():
             return
         else:
             to_add -= 1
-
     if mx not in asts:
         if to_add == 0:
             print('Incorrect')
             return
         else:
             to_add -= 1
-
     print('Correct')
 
 

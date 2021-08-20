@@ -1,1 +1,2 @@
-def invert(x): return [-a for a in x]
+def invert(x):
+    return [-a for a in x]

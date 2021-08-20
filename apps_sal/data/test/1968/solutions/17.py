@@ -1,5 +1,4 @@
-n, v = map(int, input().split())
-
+(n, v) = map(int, input().split())
 wins = set()
 for i in range(n):
     s = list(map(int, input().split()))
@@ -8,6 +7,5 @@ for i in range(n):
         if s[j] < v:
             wins.add(i + 1)
             break
-
 print(len(wins))
 print(' '.join(map(str, sorted(wins))))

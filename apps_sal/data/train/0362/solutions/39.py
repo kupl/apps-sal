@@ -2,8 +2,9 @@ import functools as ft
 
 
 class Solution:
+
     def numberWays(self, hats: List[List[int]]) -> int:
-        const = 10**9 + 7
+        const = 10 ** 9 + 7
         cache = {}
         matr = [[False] * 10 for i in range(40)]
         maxx = -1

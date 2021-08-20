@@ -1,7 +1,7 @@
 def plant_doubling(n):
     list = []
     for i in range(64):
-        list.append(2**i)
+        list.append(2 ** i)
     rounds = 0
     while n >= 1:
         relevant_list = []

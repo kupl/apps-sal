@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         if not grid:
             return 0
@@ -6,11 +7,9 @@ class Solution:
         n = len(grid[0])
 
         def get(i, j):
-
-            if i >= 0 and i < m and j >= 0 and j < n and grid[i][j] != 0:
+            if i >= 0 and i < m and (j >= 0) and (j < n) and (grid[i][j] != 0):
                 gold = grid[i][j]
                 grid[i][j] = 0
-
                 maxx = gold + max(get(i + 1, j), get(i - 1, j), get(i, j + 1), get(i, j - 1))
                 grid[i][j] = gold
             else:

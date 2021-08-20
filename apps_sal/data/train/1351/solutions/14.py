@@ -8,5 +8,4 @@ for _ in range(int(input())):
             a.remove(i)
         else:
             arr[i] = 0
-
     print(*arr)

@@ -1,13 +1,11 @@
 S = str(input())
-
 ans = [0] * 13
 ans[0] = 1
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 for i in S:
     dp = [0] * 13
     for j in range(13):
-        dp[(j * 10) % 13] = ans[j] % MOD
+        dp[j * 10 % 13] = ans[j] % MOD
     dp += dp
     if i == '?':
         for j in range(13):
@@ -15,5 +13,4 @@ for i in S:
     else:
         for j in range(13):
             ans[j] = dp[j + 13 - int(i)]
-
 print(ans[5] % MOD)

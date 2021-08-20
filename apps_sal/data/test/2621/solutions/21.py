@@ -10,10 +10,10 @@ def func(m, k, a):
 
 
 for _ in range(int(input())):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     a = list(map(int, input().split()))
     res = func(m, k, a)
     if res:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

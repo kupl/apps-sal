@@ -1,4 +1,3 @@
-# map(int,input().split())
 n = int(input())
 a = list(map(int, input().split()))
 ans = 0
@@ -18,13 +17,12 @@ for i in range(1, n):
             ans += 3
         else:
             ans += 4
+    elif a[i - 1] == 2:
+        print('Infinite')
+        flag = 1
+        break
     else:
-        if a[i - 1] == 2:
-            print('Infinite')
-            flag = 1
-            break
-        else:
-            ans += 4
+        ans += 4
 if flag == 0:
     print('Finite')
     print(ans)

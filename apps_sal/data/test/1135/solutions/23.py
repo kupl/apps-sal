@@ -4,7 +4,6 @@ import sys
 def main():
     n = int(sys.stdin.readline())
     s = sys.stdin.readline().rstrip()
-
     r = ['a'] * n
     if n % 2 == 1:
         p = n // 2
@@ -14,7 +13,6 @@ def main():
             r[p - j] = s[i]
             r[p + j] = s[i + 1]
             j += 1
-
     else:
         p = n // 2 - 1
         j = 1
@@ -22,7 +20,6 @@ def main():
             r[p - j + 1] = s[i]
             r[p + j] = s[i + 1]
             j += 1
-
     print(''.join(r))
 
 

@@ -1,6 +1,5 @@
-n, k = map(int, input().split(' '))
+(n, k) = map(int, input().split(' '))
 p = list(map(int, input().split(' ')))
-
 i = 0
 s = []
 cur = 1
@@ -17,11 +16,9 @@ while True:
         i += 1
     else:
         break
-
 if solution[0] != -1:
     while cur <= n:
         top = s.pop() if len(s) > 0 else n + 1
         solution.extend(reversed(range(cur, top)))
         cur = top + 1
-
-print(' '.join(str(x) for x in solution))
+print(' '.join((str(x) for x in solution)))

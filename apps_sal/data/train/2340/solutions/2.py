@@ -16,8 +16,8 @@ for _ in range(t):
     dp = [0] * (m + 1)
     dp[0] = 1
     for i in range(m):
-        dp[i + 1] = dp[i] | (dp[i] << a[i])
-    if (dp[m] >> n) & 1:
+        dp[i + 1] = dp[i] | dp[i] << a[i]
+    if dp[m] >> n & 1:
         print('YES')
     else:
         print('NO')

@@ -13,7 +13,6 @@ def decompose(n):
         return []
     if n == 0:
         return []
-
     if n == e:
         return [str(n)]
     n -= e
@@ -21,9 +20,9 @@ def decompose(n):
         l = [str(e)]
     else:
         l = []
-    while(n.numerator > 1):
+    while n.numerator > 1:
         e = Fraction(1, int(ceil(1 / n)))
-        l.append(str(e.numerator) + "/" + str(e.denominator))
+        l.append(str(e.numerator) + '/' + str(e.denominator))
         n -= e
-    l.append(str(n.numerator) + "/" + str(n.denominator))
+    l.append(str(n.numerator) + '/' + str(n.denominator))
     return l

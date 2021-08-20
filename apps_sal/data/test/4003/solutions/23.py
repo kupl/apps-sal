@@ -14,26 +14,25 @@ def main():
             if a[i] > last:
                 last = a[i]
                 i += 1
-                anz.append("L")
+                anz.append('L')
             elif a[j] > last:
                 last = a[j]
                 j -= 1
-                anz.append("R")
+                anz.append('R')
             else:
                 break
+        elif a[j] > last:
+            last = a[j]
+            j -= 1
+            anz.append('R')
+        elif a[i] > last:
+            last = a[i]
+            i += 1
+            anz.append('L')
         else:
-            if a[j] > last:
-                last = a[j]
-                j -= 1
-                anz.append("R")
-            elif a[i] > last:
-                last = a[i]
-                i += 1
-                anz.append("L")
-            else:
-                break
+            break
     if i == j and a[i] > last:
-        anz.append("R")
+        anz.append('R')
     if stop:
         l = []
         r = []
@@ -42,27 +41,27 @@ def main():
         while last1 < a[i] and i != j:
             last1 = a[i]
             i += 1
-            l.append("L")
+            l.append('L')
         while last < a[j] and i1 != j:
             last = a[j]
             j -= 1
-            r.append("R")
+            r.append('R')
         if len(l) > len(r):
             print(len(anz) + len(l))
             for elem in anz:
-                print(elem, end="")
+                print(elem, end='')
             for elem in l:
-                print(elem, end="")
+                print(elem, end='')
         else:
             print(len(r) + len(anz))
             for elem in anz:
-                print(elem, end="")
+                print(elem, end='')
             for elem in r:
-                print(elem, end="")
+                print(elem, end='')
     else:
         print(len(anz))
         for elem in anz:
-            print(elem, end="")
+            print(elem, end='')
 
 
 main()

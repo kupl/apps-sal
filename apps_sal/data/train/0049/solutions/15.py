@@ -1,5 +1,4 @@
 from itertools import combinations
-
 all_classy = []
 
 
@@ -21,39 +20,35 @@ for i in range(1, 4):
         this_possible = all_possible(a)
         this_possible = [int(''.join(x)) for x in this_possible]
         all_classy += this_possible
-
 all_classy.sort()
 
 
 def ge(num):
     if num == 1:
         return 0
-    lower, upper = 0, len(all_classy)
+    (lower, upper) = (0, len(all_classy))
     while lower < upper - 1:
-        mid = (lower + upper) >> 1
-        if(all_classy[mid] < num):
+        mid = lower + upper >> 1
+        if all_classy[mid] < num:
             lower = mid
         else:
             upper = mid
-
     return upper
 
 
 def le(num):
-    lower, upper = 0, len(all_classy)
+    (lower, upper) = (0, len(all_classy))
     while lower < upper - 1:
-        mid = (lower + upper) >> 1
+        mid = lower + upper >> 1
         if all_classy[mid] > num:
             upper = mid
         else:
             lower = mid
-
     return lower
 
 
 q = int(input())
-
 for i in range(q):
-    l, r = map(int, input().strip().split())
-    x, y = ge(l), le(r)
+    (l, r) = map(int, input().strip().split())
+    (x, y) = (ge(l), le(r))
     print(y - x + 1)

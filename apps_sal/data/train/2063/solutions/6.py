@@ -1,7 +1,7 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 l = [[]] * n
 for i in range(n):
-    l[i] = set(int(x) for x in input().split()[1:])
+    l[i] = set((int(x) for x in input().split()[1:]))
 while True:
     for i in range(len(l)):
         for j in range(i):

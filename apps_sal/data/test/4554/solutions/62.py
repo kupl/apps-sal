@@ -1,5 +1,4 @@
-w, a, b = map(int, input().split())
-# print(w,a,b)
+(w, a, b) = map(int, input().split())
 if a + w < b:
     print(abs(b - (a + w)))
 elif b + w < a:

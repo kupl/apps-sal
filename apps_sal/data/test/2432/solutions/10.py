@@ -1,8 +1,8 @@
 n = int(input())
 c = bin(n)[2:]
-while(len(c)) < 6:
+while len(c) < 6:
     c = '0' + c
-d = ""
+d = ''
 d = d + c[0]
 d = d + c[5]
 d = d + c[3]

@@ -1,5 +1,5 @@
 from math import gcd
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 x = gcd(a, b)
 cnt = 1
 for i in range(2, int(x ** 0.5) + 1):

@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
-INF = 10**10
+(n, m) = map(int, input().split())
+INF = 10 ** 10
 d = [[INF] * n for _ in range(n)]
 for _ in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     d[a - 1][b - 1] = c
     d[b - 1][a - 1] = c
 nxt = [[[i] for i in range(n)] for _ in range(n)]

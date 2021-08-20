@@ -2,11 +2,26 @@ import heapq as hq
 import itertools
 import math
 import collections
-def ma(): return map(int, input().split())
-def lma(): return list(map(int, input().split()))
-def tma(): return tuple(map(int, input().split()))
-def ni(): return int(input())
-def yn(fl): return print("Yes") if fl else print("No")
+
+
+def ma():
+    return map(int, input().split())
+
+
+def lma():
+    return list(map(int, input().split()))
+
+
+def tma():
+    return tuple(map(int, input().split()))
+
+
+def ni():
+    return int(input())
+
+
+def yn(fl):
+    return print('Yes') if fl else print('No')
 
 
 s = input()
@@ -14,7 +29,7 @@ idxs = [[] for i in range(26)]
 
 
 def wid(w):
-    return ord(w) - ord("a")
+    return ord(w) - ord('a')
 
 
 for i in range(len(s)):

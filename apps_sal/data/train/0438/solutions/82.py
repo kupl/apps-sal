@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         res = -1
@@ -13,5 +14,4 @@ class Solution:
             set_range[set_bit - left_range] = set_range[set_bit + right_range] = set_range[set_bit]
             if left_range == m or right_range == m:
                 res = i
-
         return res

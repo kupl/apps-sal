@@ -1,5 +1,5 @@
 def move_vowels(i):
-    s, v = '', ''
+    (s, v) = ('', '')
     for letter in i:
         if letter in 'aeiou':
             v += letter

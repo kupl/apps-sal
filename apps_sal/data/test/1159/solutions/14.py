@@ -17,7 +17,7 @@ def prime(x):
 
 primes = [0] * 50000
 for i in range(50000):
-    primes[i] = (1 if prime(i) else 0)
+    primes[i] = 1 if prime(i) else 0
 w = (n + 2) // 2
 m = 1
 while w <= n:

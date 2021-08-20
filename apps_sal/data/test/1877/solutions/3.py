@@ -1,12 +1,10 @@
 n = int(input())
 s = input()
-
 place = 0
 res = 0
 prev_place = 0
-
 for c in s:
-    if c == "U":
+    if c == 'U':
         place += 1
     else:
         place -= 1
@@ -14,5 +12,4 @@ for c in s:
         if place * prev_place < 0:
             res += 1
         prev_place = place
-
 print(res)

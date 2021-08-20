@@ -1,4 +1,5 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         if not ages or len(ages) < 2:
             return 0

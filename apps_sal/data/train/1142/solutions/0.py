@@ -5,4 +5,4 @@ for i in range(n):
     arr.append(a)
     arr.sort()
     p = arr.index(a)
-    print((i - p) + 1)
+    print(i - p + 1)

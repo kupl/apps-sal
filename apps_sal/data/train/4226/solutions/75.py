@@ -1,7 +1,6 @@
 def remove_smallest(numbers):
     if numbers == []:
         return []
-
     current_lowest = numbers[0]
     for number in numbers:
         if current_lowest > number:
@@ -14,4 +13,4 @@ def remove_smallest(numbers):
         else:
             removed.append(number)
     return removed
-    raise NotImplementedError("TODO: remove_smallest")
+    raise NotImplementedError('TODO: remove_smallest')

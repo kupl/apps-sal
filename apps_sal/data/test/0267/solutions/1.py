@@ -1,10 +1,9 @@
-
 MOD = 998244353
 
 
 def pop_count(x):
     ans = 0
-    while (x > 0):
+    while x > 0:
         ans = ans + x % 2
         x = x // 2
     return ans
@@ -13,10 +12,10 @@ def pop_count(x):
 def check(x, k):
     mask = 0
     nx = int(x)
-    while (nx > 0):
-        mask = mask | (1 << (nx % 10))
+    while nx > 0:
+        mask = mask | 1 << nx % 10
         nx = nx // 10
-    if (pop_count(mask) <= k):
+    if pop_count(mask) <= k:
         return x
     return 0
 
@@ -37,8 +36,8 @@ def prepare():
     for i in range(1, 20):
         for j in range(1 << 10):
             for use in range(10):
-                w[i][j | (1 << use)] = (w[i][j | (1 << use)] + w[i - 1][j]) % MOD
-                f[i][j | (1 << use)] = (f[i][j | (1 << use)] + w[i - 1][j] * use * p10[i - 1] + f[i - 1][j]) % MOD
+                w[i][j | 1 << use] = (w[i][j | 1 << use] + w[i - 1][j]) % MOD
+                f[i][j | 1 << use] = (f[i][j | 1 << use] + w[i - 1][j] * use * p10[i - 1] + f[i - 1][j]) % MOD
 
 
 def solve(x, k):
@@ -48,18 +47,18 @@ def solve(x, k):
     for i in range(1, n):
         for use in range(1, 10):
             for mask in range(1 << 10):
-                if (pop[(1 << use) | mask] <= k):
+                if pop[1 << use | mask] <= k:
                     ans = (ans + f[i - 1][mask] + use * w[i - 1][mask] % MOD * p10[i - 1]) % MOD
     cmask = 0
     csum = 0
     for i in range(n):
         cdig = sx[i]
         for use in range(cdig):
-            if (i == 0 and use == 0):
+            if i == 0 and use == 0:
                 continue
-            nmask = cmask | (1 << use)
+            nmask = cmask | 1 << use
             for mask in range(1 << 10):
-                if (pop[nmask | mask] <= k):
+                if pop[nmask | mask] <= k:
                     ans = (ans + f[n - i - 1][mask] + (csum * 10 + use) * w[n - i - 1][mask] % MOD * p10[n - i - 1]) % MOD
         cmask |= 1 << cdig
         csum = (10 * csum + cdig) % MOD
@@ -67,6 +66,6 @@ def solve(x, k):
 
 
 prepare()
-l, r, k = list(map(int, input().split()))
+(l, r, k) = list(map(int, input().split()))
 ans = (check(r, k) + solve(r, k) - solve(l, k) + MOD) % MOD
 print(ans)

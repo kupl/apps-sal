@@ -1,7 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 G = {}
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a not in G:
         G[a] = set()
     if b not in G:

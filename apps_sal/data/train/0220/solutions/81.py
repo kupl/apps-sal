@@ -1,6 +1,6 @@
 class Solution:
-    def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
 
+    def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         window = [0] * X
         for a in range(X):
             if grumpy[a] == 1:
@@ -16,5 +16,4 @@ class Solution:
                     maxAdded = sum(window)
             if grumpy[i] == 0:
                 mySum += customers[i]
-
         return mySum + maxAdded

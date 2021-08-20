@@ -1,8 +1,8 @@
 def dna_to_rna(dna):
-    RNA = ""
+    RNA = ''
     for letter in dna:
-        if letter == "T":
-            RNA += "U"
+        if letter == 'T':
+            RNA += 'U'
         else:
             RNA += letter
     return RNA

@@ -1,23 +1,24 @@
 class Solution:
+
     def pathInZigZagTree(self, label: int) -> List[int]:
         n = label
         change = False
         stack = []
         index = -1
-        while(n > 0):
+        while n > 0:
             stack.append(n)
             n = int(n / 2)
             index += 1
         check = False
         output = []
-        while(stack):
+        while stack:
             p = stack.pop(0)
             if not check:
                 output.append(p)
             else:
                 start = pow(2, index)
                 end = pow(2, index + 1) - 1
-                while(start <= end):
+                while start <= end:
                     if p == start:
                         output.append(end)
                         break

@@ -1,10 +1,10 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         A = stoneValue
         N = len(A)
         MIN = -float('inf')
         dp = [0] * (N + 1)
-
         for i in range(N - 1, -1, -1):
             take = A[i]
             dp[i] = take - dp[i + 1]

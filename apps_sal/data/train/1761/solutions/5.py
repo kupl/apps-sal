@@ -10,7 +10,7 @@ def find(n):
     add = 3
     count = 2
     sum = 11
-    while(True):
+    while True:
         if sum + add * len(seq) >= n:
             return math.ceil((n - sum) / len(seq)) + seq[len(seq) - 1]
         seq.append(seq[len(seq) - 1] + add)
@@ -18,5 +18,5 @@ def find(n):
         count -= 1
         if count == 0:
             k += 1
-            add += 1  # seq[k]-seq[k-1]
+            add += 1
             count = seq[k] - seq[k - 1]

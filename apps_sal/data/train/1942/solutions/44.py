@@ -1,4 +1,5 @@
 class Solution:
+
     def _subset(self, fav, result):
         for x in result:
             if not fav - x:
@@ -7,7 +8,7 @@ class Solution:
 
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         favorite_companies = [tuple(sorted(x)) for x in favoriteCompanies]
-        val_to_key = {x: i for i, x in enumerate(favorite_companies)}
+        val_to_key = {x: i for (i, x) in enumerate(favorite_companies)}
         len_to_comp = collections.defaultdict(list)
         for x in favorite_companies:
             len_to_comp[len(x)].append(set(x))

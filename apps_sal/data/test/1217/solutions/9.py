@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [[int(i), 0] for i in input().split()]
 for i in range(m):
@@ -19,4 +19,4 @@ while j < len(b):
     ress[b[j][1]] = res
     j += 1
 for i in ress:
-    print(i, end=" ")
+    print(i, end=' ')

@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-n, k = map_input()
+(n, k) = map_input()
 a = -1
 b = -1
 if k == 0 or k == n:

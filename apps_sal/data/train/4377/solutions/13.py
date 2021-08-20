@@ -1,6 +1,6 @@
 def solve(a, b):
-    alice = sum(x > y for x, y in zip(a, b))
-    bob = sum(x < y for x, y in zip(a, b))
+    alice = sum((x > y for (x, y) in zip(a, b)))
+    bob = sum((x < y for (x, y) in zip(a, b)))
     if alice > bob:
         return '%s, %s: Alice made "Kurt" proud!' % (alice, bob)
     elif bob > alice:

@@ -1,7 +1,7 @@
 def solution():
     n = input()
     ar = list(map(int, input().split()))
-    o, e = False, False
+    (o, e) = (False, False)
     for i in ar:
         if i % 2 == 0:
             o = True

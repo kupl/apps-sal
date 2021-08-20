@@ -1,4 +1,5 @@
 class Grid(object):
+
     def __init__(self):
         self.ps = set()
         self.lx = 100
@@ -10,7 +11,6 @@ class Grid(object):
         self.ps.add((x, y))
         self.lx = min(self.lx, x)
         self.ly = min(self.ly, y)
-
         self.rx = max(self.rx, x)
         self.ry = max(self.ry, y)
 
@@ -18,13 +18,9 @@ class Grid(object):
         return len(self.ps) == (self.rx - self.lx + 1) * (self.ry - self.ly + 1)
 
     def overlap(self, grid):
-        # self on the left grid
         flag = self.rx < grid.lx
-        # self on the upper grid
         flag = flag and self.ry > grid.ly
-        # self on the right grid
         flag = flag and self.lx > grid.rx
-        # self on the bottom grid
         flag = flag and self.ly < grid.ry
         return not flag
 
@@ -41,15 +37,14 @@ class Grid(object):
 
 
 class Solution:
+
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         grids = defaultdict(Grid)
-        for x, row in enumerate(targetGrid):
-            for y, c in enumerate(row):
+        for (x, row) in enumerate(targetGrid):
+            for (y, c) in enumerate(row):
                 grids[c].add(x, y)
-
         colors = grids.keys()
-
-        graph, degree = defaultdict(set), defaultdict(int)
+        (graph, degree) = (defaultdict(set), defaultdict(int))
         vis = set()
         for c1 in colors:
             for c2 in colors:
@@ -59,17 +54,10 @@ class Solution:
                 if grids[c1].contain(grids[c2]):
                     graph[c1].add(c2)
                     degree[c2] += 1
-
-        # for c in colors:
-#             print(c, grids[c])
-#         print(graph)
-#         print(degree)
-
         q = []
         for c in colors:
             if degree[c] == 0:
                 q.append(c)
-
         vis = []
         while q:
             c1 = q.pop()
@@ -78,6 +66,4 @@ class Solution:
                 degree[c2] -= 1
                 if degree[c2] == 0:
                     q.append(c2)
-
-        # print(vis)
         return len(vis) == len(colors)

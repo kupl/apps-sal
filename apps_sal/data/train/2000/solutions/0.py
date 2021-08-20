@@ -1,8 +1,8 @@
 import heapq
-n, m, a, b = map(int, input().split())
+(n, m, a, b) = map(int, input().split())
 graph = {i: [] for i in range(n)}
 for i in range(m):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     graph[u - 1].append((v - 1, w))
     graph[v - 1].append((u - 1, w))
 components = [-1] * n
@@ -45,14 +45,14 @@ for guy in bad[::-1]:
             components[i] -= 1
 comp -= len(bad)
 comp += 1
-dists = [[float("inf") for i in range(2**comp)] for j in range(n)]
+dists = [[float('inf') for i in range(2 ** comp)] for j in range(n)]
 dists[0][0] = 0
 pq = []
 heapq.heappush(pq, [0, 0, 0])
 remaining = n
 visited = [0] * n
 while len(pq) > 0 and remaining > 0:
-    dist, vert, mask = heapq.heappop(pq)
+    (dist, vert, mask) = heapq.heappop(pq)
     if visited[vert] == 0:
         visited[vert] = 1
         remaining -= 1
@@ -61,10 +61,10 @@ while len(pq) > 0 and remaining > 0:
             if components[vert] == components[neigh[0]] and components[vert] != -1:
                 continue
             if components[neigh[0]] != -1:
-                if mask & (2**components[neigh[0]]) > 0:
+                if mask & 2 ** components[neigh[0]] > 0:
                     continue
             if components[vert] != -1:
-                maskn = mask + 2**(components[vert])
+                maskn = mask + 2 ** components[vert]
             else:
                 maskn = mask
         else:
@@ -73,4 +73,4 @@ while len(pq) > 0 and remaining > 0:
             dists[neigh[0]][maskn] = dist + neigh[1]
             heapq.heappush(pq, [dist + neigh[1], neigh[0], maskn])
 optimal = [str(min(dists[i])) for i in range(n)]
-print(" ".join(optimal))
+print(' '.join(optimal))

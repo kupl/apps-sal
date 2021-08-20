@@ -1,9 +1,8 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = 100
 o = set()
 c = set()
-
 for i in range(n):
     if a[i] in o:
         ans = min(ans, 0)

@@ -27,15 +27,12 @@ for key in list(s.keys()):
     s[key] -= element
     if t.get(key):
         t[key] -= element
-
 s = f(s)
 t = f(t)
-
 for key in list(s.keys()):
     element = min(s[key], t.get(key, 0))
     op += element
     s[key] -= element
     if t.get(key):
         t[key] -= element
-
 print(yr, op)

@@ -1,14 +1,14 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-n, k = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 7)
+(n, k) = list(map(int, input().split()))
 edges = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = list([int(x) - 1 for x in input().split()])
+    (a, b) = list([int(x) - 1 for x in input().split()])
     edges[a].append(b)
     edges[b].append(a)
-MOD = 10**9 + 7
-INF = 10**10
+MOD = 10 ** 9 + 7
+INF = 10 ** 10
 dp = [INF] * n
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         groups = {}
         for i in range(0, len(groupSizes)):
@@ -6,17 +7,14 @@ class Solution:
                 groups[groupSizes[i]].append(i)
             else:
                 groups[groupSizes[i]] = [i]
-        # print(groups)
-
         output = []
         for i in groups:
             list1 = []
             for j in groups[i]:
                 list1.append(j)
-                if(len(list1) == i):
+                if len(list1) == i:
                     output.append(list1)
                     list1 = []
-
         return output
 
 

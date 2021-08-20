@@ -22,7 +22,7 @@ def solve(powers):
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     powers = read_nums()
     solve(powers)
 

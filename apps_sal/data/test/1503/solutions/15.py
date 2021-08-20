@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(m):
     a.append(list(map(int, input().split())))
@@ -12,7 +12,8 @@ for i in range(n):
             b[ya - 1].add(a[j][i + 1])
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, size):
         self.table = [-1 for _ in range(size)]
 
@@ -45,5 +46,5 @@ for i in range(n):
     d[UN.find(i)] += 1
 ans = 0
 for i in range(n):
-    ans += (d[i] - 1) * (d[i]) // 2
+    ans += (d[i] - 1) * d[i] // 2
 print(ans + n)

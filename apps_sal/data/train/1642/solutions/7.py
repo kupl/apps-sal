@@ -5,7 +5,6 @@ from functools import reduce
 def factors(n):
     div = 2
     d = dict()
-
     while n > (div - 1) ** 2:
         if n % div == 0:
             n = n // div
@@ -30,7 +29,6 @@ def get_pascal(r):
         return [1]
     elif r == 2:
         return [1, 1]
-
     s = [1, 1]
     while len(s) < r:
         ns = [1]
@@ -53,9 +51,8 @@ def ncr(n, r):
 def get_cases(r, k):
     p = get_pascal(r)
     sum_v = 0
-    for i, v in enumerate(p):
+    for (i, v) in enumerate(p):
         sum_v += v * ncr(k, i + 1)
-    #print(r, k, p, sum_v)
     return sum_v
 
 
@@ -63,7 +60,6 @@ def multiply(n, k):
     if n == 1:
         return 1
     f = factors(n)
-    # print(f)
     s = 1
     for r in f:
         s *= get_cases(r[1], k)

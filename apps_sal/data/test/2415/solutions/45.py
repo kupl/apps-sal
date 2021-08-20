@@ -1,42 +1,27 @@
 GOOD = ['GENIUS', 'IRENE', 'REVOLVER', 'WATSON']
 BAD = ['HOLMES', 'MARY', 'SMARTPHONE', 'DOCTOR']
-
 symbols = ['Ac', 'Ag', 'Al', 'Am', 'Ar', 'As', 'At', 'Au', 'B', 'Ba', 'Be', 'Bh', 'Bi', 'Bk', 'Br', 'C', 'Ca', 'Cd', 'Ce', 'Cf', 'Cl', 'Cm', 'Cn', 'Co', 'Cr', 'Cs', 'Cu', 'Db', 'Ds', 'Dy', 'Er', 'Es', 'Eu', 'F', 'Fe', 'Fl', 'Fm', 'Fr', 'Ga', 'Gd', 'Ge', 'H', 'He', 'Hf', 'Hg', 'Ho', 'Hs', 'I', 'In', 'Ir', 'K', 'Kr', 'La', 'Li', 'Lr', 'Lu', 'Lv', 'Mc', 'Md', 'Mg', 'Mn', 'Mo', 'Mt', 'N', 'Na', 'Nb', 'Nd', 'Ne', 'Nh', 'Ni', 'No', 'Np', 'O', 'Og', 'Os', 'P', 'Pa', 'Pb', 'Pd', 'Pm', 'Po', 'Pr', 'Pt', 'Pu', 'Ra', 'Rb', 'Re', 'Rf', 'Rg', 'Rh', 'Rn', 'Ru', 'S', 'Sb', 'Sc', 'Se', 'Sg', 'Si', 'Sm', 'Sn', 'Sr', 'Ta', 'Tb', 'Tc', 'Te', 'Th', 'Ti', 'Tl', 'Tm', 'Ts', 'U', 'V', 'W', 'Xe', 'Y', 'Yb', 'Zn', 'Zr']
 symbols = [x.upper() for x in symbols]
-
 DP = {}
 
 
 def can(w, i):
     if (w, i) in DP:
-        return DP[(w, i)]
+        return DP[w, i]
     if i == len(w):
         return True
     for s in symbols:
         if w[i:].startswith(s) and can(w, i + len(s)):
-            DP[(w, i)] = True
+            DP[w, i] = True
             return True
-    DP[(w, i)] = False
+    DP[w, i] = False
     return False
 
 
 new = input()
 print('YES' if can(new, 0) else 'NO')
-# if new in GOOD:
-#    print('YES')
-# elif new in BAD:
-#    print('NO')
-# else:
-#    print('YES')
 
 
 def score(w):
     n = [ord(c) - ord('A') + 1 for c in w]
     print(w, n, len([x for x in n if x % 2 == 1]))
-
-#print('== GOOD ==')
-# for w in GOOD:
-#    print(can(w, 0))
-#print('== BAD ==')
-# for w in BAD:
-#    print(can(w, 0))

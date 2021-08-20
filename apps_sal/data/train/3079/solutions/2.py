@@ -14,7 +14,7 @@ print(primecheck(25))
 
 def big_primefac_div(n):
     if int(n) != n:
-        return "The number has a decimal part. No Results"
+        return 'The number has a decimal part. No Results'
     n = abs(n)
     factor = []
     prime = []

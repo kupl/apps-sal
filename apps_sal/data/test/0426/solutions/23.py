@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 S = list(input())
 i = 0
 if n == 1:
@@ -16,12 +16,11 @@ else:
                 continue
             else:
                 S[i] = '1'
+        elif S[i] == '0':
+            i += 1
+            continue
         else:
-            if S[i] == '0':
-                i += 1
-                continue
-            else:
-                S[i] = '0'
+            S[i] = '0'
         k -= 1
         i += 1
     print(''.join(S))

@@ -1,15 +1,15 @@
 t = int(input().strip())
 for i in range(t):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     nums = [int(i) for i in input().strip().split()]
     cur_k = 0
     ans = []
     has = True
     if k == 1:
         if sum(nums) % 2 == 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')
             print(n)
     else:
         for i in range(n):
@@ -25,9 +25,8 @@ for i in range(t):
             if nums[i] % 2 == 1:
                 ans.append(i + 1)
                 cur_k += 1
-        #print("ans ", ans)
         if cur_k < k or not has:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
-            print(' '.join(str(i) for i in ans))
+            print('YES')
+            print(' '.join((str(i) for i in ans)))

@@ -1,5 +1,5 @@
 def self_converge(number):
-    n, cycle = str(number), set()
+    (n, cycle) = (str(number), set())
     while n not in cycle:
         cycle.add(n)
         s = ''.join(sorted(n))

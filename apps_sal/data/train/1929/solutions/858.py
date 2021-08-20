@@ -44,11 +44,4 @@ class StreamChecker:
         return False
 
 
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
-'''
-[[[\"ab\",\"ba\",\"aaab\",\"abab\",\"baa\"]],
-[\"a\"],[\"a\"],[\"a\"],[\"a\"],[\"a\"],[\"b\"],[\"a\"],
-  F     F     F     F     F     T     T
-'''
+'\n[[["ab","ba","aaab","abab","baa"]],\n["a"],["a"],["a"],["a"],["a"],["b"],["a"],\n  F     F     F     F     F     T     T\n'

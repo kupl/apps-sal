@@ -1,4 +1,5 @@
-def fc(x): return 1 if x == 'A' else 2
+def fc(x):
+    return 1 if x == 'A' else 2
 
 
 s = list(map(fc, list(input())))
@@ -15,7 +16,7 @@ tmp = 0
 for x in t:
     tmp += x
     ct.append(tmp)
-for a, b, c, d in abcd:
+for (a, b, c, d) in abcd:
     if (cs[b] - cs[a - 1]) % 3 == (ct[d] - ct[c - 1]) % 3:
         print('YES')
     else:

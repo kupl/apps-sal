@@ -1,4 +1,4 @@
-a, b, c, n = map(int, input().split())
+(a, b, c, n) = map(int, input().split())
 if a + b - c >= n:
     print(-1)
 elif a < c or b < c:

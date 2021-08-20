@@ -31,6 +31,6 @@ while len(tod) > 0:
         if val[x] > 0:
             val[neig[x][1]] += val[x]
 print(ans)
-print(*beg, end=" ")
+print(*beg, end=' ')
 en.reverse()
 print(*en)

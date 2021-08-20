@@ -7,7 +7,7 @@ def diagonal(n, p):
     for i in range(n + 1 - p):
         prod = 1
         for j in range(1, p + 1):
-            prod *= (i + j)
+            prod *= i + j
         prod = prod // f
         s += prod
     return int(s)

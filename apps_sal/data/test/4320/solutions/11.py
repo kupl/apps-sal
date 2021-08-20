@@ -1,8 +1,5 @@
-
-
 def __starting_point():
     n = int(input())
-
     for i in range(n):
         n = int(input())
         k = 4

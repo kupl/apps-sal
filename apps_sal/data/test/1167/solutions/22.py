@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c, d, k = map(int, input().split())
+    (a, b, c, d, k) = map(int, input().split())
     x = (a + c - 1) // c
     y = (b + d - 1) // d
     if x + y <= k:

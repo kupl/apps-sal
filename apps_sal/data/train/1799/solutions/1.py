@@ -6,7 +6,6 @@ def queens(p, s):
             return s - 1
         else:
             return elem - 1
-
     _c = cols.index(p[0])
     _r = rf(int(p[1:]))
 
@@ -36,7 +35,6 @@ def queens(p, s):
             td[ntd] = False
             bd[nbd] = False
         return False
-
     fr = [False for i in range(0, s)]
     ftd = [False for i in range(0, s * 2 - 1)]
     fbd = [False for i in range(0, s * 2 - 1)]
@@ -44,6 +42,5 @@ def queens(p, s):
     ftd[_c - _r + s - 1] = 1
     fbd[-(_c + _r) + s * 2 - 2] = 1
     result = solver(0, _c, fr, ftd, fbd, [_c + _r * s])
-    result = ','.join([(cols[i % s] + str(mf((i // s) + 1))) for i in result])
-
+    result = ','.join([cols[i % s] + str(mf(i // s + 1)) for i in result])
     return result

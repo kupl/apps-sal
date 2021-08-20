@@ -1,11 +1,12 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        '''
+        """
         nums = [1,5]
         1
         5 -> 101
         3 + 3 - 1 = 5
-        '''
+        """
         if nums == [0]:
             return 0
         count = 0

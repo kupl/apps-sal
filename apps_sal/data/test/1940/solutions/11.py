@@ -1,5 +1,5 @@
 import math
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 w = [int(i) for i in input().split()]
 res = []
 for i in range(n):

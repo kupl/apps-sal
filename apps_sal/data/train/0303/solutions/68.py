@@ -1,6 +1,6 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
-        # dpdp
         grid = [0] * len(arr)
         for i in range(len(arr) - 1, -1, -1):
             if len(arr) - i <= k:

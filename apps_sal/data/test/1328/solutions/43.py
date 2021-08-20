@@ -1,8 +1,8 @@
 def main():
-    n, ma, mb = map(int, input().split())
+    (n, ma, mb) = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(n)]
     dp = [{} for _ in range(n + 1)]
-    dp[0][(0, 0)] = 0
+    dp[0][0, 0] = 0
     for i in range(n):
         for ky in dp[i].keys():
             if ky in dp[i + 1]:
@@ -16,14 +16,14 @@ def main():
                     dp[i + 1][t] = dp[i][ky] + arr[i][2]
             else:
                 dp[i + 1][t] = dp[i][ky] + arr[i][2]
-    ans = float("inf")
+    ans = float('inf')
     for i in range(1, 41):
         t = (ma * i, mb * i)
         if t in dp[n]:
             if ans > dp[n][t]:
                 ans = dp[n][t]
-    if ans == float("inf"):
-        print("-1")
+    if ans == float('inf'):
+        print('-1')
     else:
         print(ans)
 

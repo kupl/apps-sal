@@ -4,7 +4,7 @@ from itertools import count
 def f():
     c = count()
     while True:
-        yield 2 ** next(c)
+        yield (2 ** next(c))
 
 
 def powers_of_two(n):

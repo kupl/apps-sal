@@ -1,4 +1,4 @@
-n, z = [int(x) for x in input().split()]
+(n, z) = [int(x) for x in input().split()]
 b = sorted([int(x) for x in input().split()])
 a = []
 for item in b:
@@ -16,5 +16,4 @@ for i in range(n):
             break
     else:
         end = j
-
 print(counter)

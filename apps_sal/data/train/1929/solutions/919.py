@@ -11,6 +11,7 @@ class Trie(dict):
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.t = Trie()
         for w in words:
@@ -21,9 +22,4 @@ class StreamChecker:
         self.s = [t[c] for t in self.s if c in t]
         if c in self.t:
             self.s.append(self.t[c])
-        return any(t.word for t in self.s)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any((t.word for t in self.s))

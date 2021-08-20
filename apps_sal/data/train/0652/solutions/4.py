@@ -1,5 +1,5 @@
 for t in range(eval(input())):
-    s, t = input(), input()
+    (s, t) = (input(), input())
     s = s.lower()
     t = t.lower()
     if s < t:

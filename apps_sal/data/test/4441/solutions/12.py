@@ -1,4 +1,3 @@
-
 def main():
     n = int(input())
     if n == 1:
@@ -6,7 +5,7 @@ def main():
     else:
         a = int(input())
         b = int(input())
-        print((a + b))
+        print(a + b)
 
 
 def __starting_point():

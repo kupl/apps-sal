@@ -1,6 +1,5 @@
 from math import log2, ceil
 from decimal import Decimal
-
 paper_thickness_meters = Decimal('0.0001')
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         myd = {}
         count = 0
@@ -7,10 +8,8 @@ class Solution:
                 myd[i] += 1
             else:
                 myd[i] = 1
-
         for word in words:
             allin = True
-
             for letter in word:
                 if letter in myd.keys():
                     if word.count(letter) > myd[letter]:

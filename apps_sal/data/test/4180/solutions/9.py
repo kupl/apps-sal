@@ -1,6 +1,5 @@
 N = int(input())
-
 for i in range(11):
-    if(1000 * i >= N):
-        print((1000 * i - N))
+    if 1000 * i >= N:
+        print(1000 * i - N)
         break

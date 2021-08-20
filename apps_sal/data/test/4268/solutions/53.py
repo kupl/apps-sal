@@ -1,6 +1,5 @@
-# numpyを使わない解法
 import math
-n, d = (int(i) for i in input().split())
+(n, d) = (int(i) for i in input().split())
 list_x = [[int(i) for i in input().split()] for j in range(0, n)]
 count = 0
 tmp = 0

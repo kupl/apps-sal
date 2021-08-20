@@ -4,5 +4,4 @@ def summation(num):
     for loop in range(num):
         sum += num - count
         count += 1
-
     return sum

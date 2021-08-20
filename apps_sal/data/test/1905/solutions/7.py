@@ -1,11 +1,11 @@
-n, m, q = map(int, input().split())
-nm = ["0"] * (m * n)
+(n, m, q) = map(int, input().split())
+nm = ['0'] * (m * n)
 qq = [input() for _ in range(q)]
 for s in reversed(qq):
-    k, *l = s.split()
-    if k == "3":
+    (k, *l) = s.split()
+    if k == '3':
         nm[(int(l[0]) - 1) * m + int(l[1]) - 1] = l[2]
-    elif k == "2":
+    elif k == '2':
         j = int(l[0]) - 1
         x = nm[j - m]
         for i in range((n - 1) * m + j, j, -m):

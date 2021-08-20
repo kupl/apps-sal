@@ -1,6 +1,6 @@
-n, k, m, t = list(map(int, input().split()))
+(n, k, m, t) = list(map(int, input().split()))
 for i in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a == 1:
         if b <= k:
             k += 1

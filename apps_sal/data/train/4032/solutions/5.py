@@ -1,5 +1,5 @@
 def binomial(n, k):
-    n, k = int(n), int(k)
+    (n, k) = (int(n), int(k))
     if not n >= k >= 0:
         return None
     k = min(k, n - k)

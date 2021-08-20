@@ -1,5 +1,5 @@
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 if A + B + C <= 21:
-    print("win")
+    print('win')
 else:
-    print("bust")
+    print('bust')

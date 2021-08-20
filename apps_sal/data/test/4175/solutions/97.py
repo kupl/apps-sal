@@ -7,4 +7,4 @@ for i in range(1, n):
             check = False
     if w[i - 1][-1] != w[i][0]:
         check = False
-print("Yes" if check else "No")
+print('Yes' if check else 'No')

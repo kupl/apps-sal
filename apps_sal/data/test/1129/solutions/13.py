@@ -1,5 +1,5 @@
 numPoints = int(input())
-points = list(map(int, input().split(" ")))
+points = list(map(int, input().split(' ')))
 points.sort()
 
 
@@ -13,13 +13,7 @@ def calcVal(point, points):
 if len(points) % 2 == 0:
     leftDex = len(points) // 2 - 1
     rightDex = len(points) // 2
-    '''values = [calcVal(points[leftDex], points), calcVal(points[rightDex], points)]
-    minVal = min(values)
-    which = values.index(minVal)
-    if which == 0:
-        print(points[leftDex])
-    else:
-        print(points[rightDex])'''
+    'values = [calcVal(points[leftDex], points), calcVal(points[rightDex], points)]\n    minVal = min(values)\n    which = values.index(minVal)\n    if which == 0:\n        print(points[leftDex])\n    else:\n        print(points[rightDex])'
     print(points[leftDex])
 else:
     index = len(points) // 2

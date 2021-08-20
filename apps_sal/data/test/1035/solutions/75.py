@@ -19,9 +19,7 @@ def prime_factorize(n):
     return s
 
 
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 g = math.gcd(a, b)
 c = collections.Counter(prime_factorize(g))
-
 print(len(c.values()) + 1)

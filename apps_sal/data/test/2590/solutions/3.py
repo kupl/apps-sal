@@ -19,7 +19,7 @@ def nl():
 
 
 def solve():
-    N, X = nl()
+    (N, X) = nl()
     A = nl()
     A.sort(reverse=True)
     SUM = 0

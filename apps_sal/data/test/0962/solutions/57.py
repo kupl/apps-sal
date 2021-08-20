@@ -1,11 +1,10 @@
 import collections
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[] for _ in range(n + 1)]
 cand1 = set()
 cand2 = set()
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a].append(b)
     cand1.add(a)
     cand2.add(b)
@@ -19,7 +18,7 @@ for i in range(1, n + 1):
         q.append((i, [i]))
         checked = [0] * (n + 1)
         while len(q) != 0:
-            v, chain = q.popleft()
+            (v, chain) = q.popleft()
             if v == i and len(chain) != 1:
                 ans = chain[:-1]
             for u in g[v]:

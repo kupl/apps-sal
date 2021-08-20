@@ -5,6 +5,6 @@ for i in range(n - 1):
     if abs(a[i + 1] - a[i]) >= 2:
         b = False
 if b:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

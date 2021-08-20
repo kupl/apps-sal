@@ -1,4 +1,4 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 A = list(map(int, input().split()))
 B = [0] * N
 for i in range(N - 1):

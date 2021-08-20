@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         counter = defaultdict(int)
         for a in arr:

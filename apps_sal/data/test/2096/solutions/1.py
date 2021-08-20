@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 proc = sorted([(a.count(i), i) for i in range(10, 100) if a.count(i) > 0])
-left, right = [], []
-for cnt, val in proc:
+(left, right) = ([], [])
+for (cnt, val) in proc:
     half = cnt // 2
     left.extend([val] * half)
     right.extend([val] * half)

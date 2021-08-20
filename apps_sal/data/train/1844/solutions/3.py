@@ -1,4 +1,5 @@
 class Solution:
+
     def findMinDifference(self, timePoints):
         timePoints = sorted(map(lambda x: [int(n) for n in x.split(':')], timePoints))
         timePoints.append([timePoints[0][0] + 24, timePoints[0][1]])

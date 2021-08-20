@@ -23,7 +23,7 @@ def iAA(numArrs):
 
 def pA(arr):
     for i in range(len(arr)):
-        print(arr[i], end=" ")
+        print(arr[i], end=' ')
     print()
 
 

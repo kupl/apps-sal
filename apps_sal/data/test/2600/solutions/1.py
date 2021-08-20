@@ -1,16 +1,30 @@
 import sys
-
 readline = sys.stdin.readline
 read = sys.stdin.read
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
+
+
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
 
 
 def solve():
-    h, w = nm()
+    (h, w) = nm()
     a = [nl() for _ in range(h)]
     d = dict()
     for i in range(h):
@@ -26,8 +40,6 @@ def solve():
     print(ans)
     return
 
-
-# solve()
 
 T = ni()
 for _ in range(T):

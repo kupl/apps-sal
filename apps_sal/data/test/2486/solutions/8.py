@@ -1,6 +1,5 @@
-N, K = list(map(int, input().split(" ")))
-A = sorted(list(map(int, input().split(" "))), reverse=True)
-
+(N, K) = list(map(int, input().split(' ')))
+A = sorted(list(map(int, input().split(' '))), reverse=True)
 result = 0
 S = sum(A)
 n = len(A)
@@ -15,5 +14,4 @@ else:
             result = n - i - 1
         else:
             s += A[i]
-
 print(result)

@@ -15,8 +15,7 @@ for i in range(len(t)):
             ans *= cur
             ans %= 1000000007
             boo = False
-    else:
-        if t[i] == 'a':
-            cur = 2
-            boo = True
+    elif t[i] == 'a':
+        cur = 2
+        boo = True
 print((ans - 1) % 1000000007)

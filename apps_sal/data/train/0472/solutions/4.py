@@ -1,6 +1,6 @@
 class Solution:
-    def canReach(self, arr: List[int], start: int) -> bool:
 
+    def canReach(self, arr: List[int], start: int) -> bool:
         memo = {}
 
         def dfs(i):
@@ -19,7 +19,5 @@ class Solution:
                 if dfs(new_i):
                     memo[i] = True
                     return True
-
             return memo[i]
-
         return dfs(start)

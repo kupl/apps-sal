@@ -8,4 +8,4 @@ for _ in range(int(input())):
             c += 1
         elif a[i] > 1:
             c += 1
-    print(int((c * (c - 1) / 2) - (t * (t - 1) / 2)))
+    print(int(c * (c - 1) / 2 - t * (t - 1) / 2))

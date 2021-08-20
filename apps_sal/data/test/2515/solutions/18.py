@@ -15,8 +15,7 @@ for j in range(2, 10 ** 5 + 1):
         sl.append(sl[j - 1] + 1)
     else:
         sl.append(sl[j - 1])
-
 q = int(input())
 for _ in range(q):
-    l, r = list(map(int, input().split()))
-    print((sl[r] - sl[l - 1]))
+    (l, r) = list(map(int, input().split()))
+    print(sl[r] - sl[l - 1])

@@ -1,17 +1,14 @@
 n = int(input())
 x = input()
 y = input()
-
-
 ab = []
 ba = []
-for i, (xi, yi) in enumerate(zip(x, y), 1):
+for (i, (xi, yi)) in enumerate(zip(x, y), 1):
     s = xi + yi
     if s == 'ab':
         ab.append(i)
     elif s == 'ba':
         ba.append(i)
-
 if len(ab) % 2 != len(ba) % 2:
     print(-1)
 else:

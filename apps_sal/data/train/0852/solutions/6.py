@@ -5,13 +5,13 @@ for i in range(0, t):
         if j % 2 == 0:
             for k in range(0, n):
                 if k % 2 == 0:
-                    print(0, end="")
+                    print(0, end='')
                 else:
-                    print(1, end="")
+                    print(1, end='')
         else:
             for k in range(0, n):
                 if k % 2 == 0:
-                    print(1, end="")
+                    print(1, end='')
                 else:
-                    print(0, end="")
-        print(" ")
+                    print(0, end='')
+        print(' ')

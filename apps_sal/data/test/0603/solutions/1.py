@@ -1,10 +1,10 @@
-r, g, b = map(int, input().split())
+(r, g, b) = map(int, input().split())
 cr = r // 3
 cg = g // 3
 cb = b // 3
-a, b, c = r % 3, g % 3, b % 3
+(a, b, c) = (r % 3, g % 3, b % 3)
 cc = min(a, b, c)
-if (cc == 0 and a + b + c == 4):
+if cc == 0 and a + b + c == 4:
     if a == 0 and cr > 0:
         cr -= 1
         cc += 2

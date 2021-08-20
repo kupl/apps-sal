@@ -1,5 +1,5 @@
 def apparently(string):
-    a, r = string.split(), []
+    (a, r) = (string.split(), [])
     for i in range(len(a)):
         if a[i] in ('and', 'but') and i == len(a) - 1:
             r.append(a[i] + ' apparently')

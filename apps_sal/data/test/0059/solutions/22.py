@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(x) for x in input().split()]
 rot = input()
-
 stack = []
 pairs = []
 for i in range(len(rot)):
@@ -13,10 +12,6 @@ for i in range(len(rot)):
         stack.clear()
 if len(stack) > 0:
     pairs.append((stack[-1], n))
-
-for l, r in pairs:
+for (l, r) in pairs:
     a[l:r + 1] = sorted(a[l:r + 1])
-# if l != None and r == None:
-##    r = len(rot)
-##    a[l:r+1] = sorted(a[l:r+1])
-print('YNEOS'[not(a == sorted(a))::2])
+print('YNEOS'[not a == sorted(a)::2])

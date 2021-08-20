@@ -1,4 +1,5 @@
 class Solution:
+
     def generateMatrix(self, n):
         """
         :type n: int
@@ -28,7 +29,6 @@ class Solution:
             col_s += 1
             row_e -= 1
             col_e -= 1
-
         if col_s == col_e:
             for i in range(row_s, row_e + 1):
                 matrix[i][col_e] = arr[num]

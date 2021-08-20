@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def an(a, n):
@@ -9,12 +9,7 @@ def an(a, n):
 
 
 N = int(input())
-
-
 A_n0 = an(9, N)
-#A_n9 = an(9,N)
 A_n0n9 = an(8, N)
-
-
-ans = 10**N % MOD - (2 * A_n0 % MOD - A_n0n9)
+ans = 10 ** N % MOD - (2 * A_n0 % MOD - A_n0n9)
 print(ans % MOD)

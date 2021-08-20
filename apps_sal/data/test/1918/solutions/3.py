@@ -1,6 +1,5 @@
 from itertools import accumulate
 import math
-
 n = int(input())
 p = [int(x) for x in input().split()]
 S1 = sum(p)
@@ -10,5 +9,5 @@ for i in range(n):
         p[i] = -p[i]
 prefix = list(accumulate([0] + p))
 S = prefix[-1]
-m, M = min(prefix), max(prefix)
+(m, M) = (min(prefix), max(prefix))
 print((S1 + max(S - 2 * m, 2 * M - S)) // 2)

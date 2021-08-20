@@ -11,6 +11,6 @@ for _ in range(int(input())):
             break
         a.append(to_add)
     if f == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

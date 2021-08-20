@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 m = int(input())
 res = []
 for i in range(m):
-    k, pos = map(int, input().split())
+    (k, pos) = map(int, input().split())
     mas1 = []
     for j in range(n):
         mas1.append(a[j])

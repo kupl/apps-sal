@@ -1,5 +1,5 @@
 def solve(L, A, B, M):
-    ret, digits = 0, 0
+    (ret, digits) = (0, 0)
     for d in range(18, 0, -1):
         lo = 10 ** (d - 1)
         hi = 10 ** d - 1
@@ -13,10 +13,7 @@ def solve(L, A, B, M):
         n = imax - imin + 1
         p = 10 ** d % M
         a = matpow([[1, 0, 1, 0], [0, 1, 0, 1], [0, 0, p, p], [0, 0, 0, p]], n, M)
-        # a[0][3] = sum p^i for i in [0, n-1]
-        # a[1][3] = sum i * p^i for i in [0, n-1]
-        # sum (A + B * (imax - i)) * p^i for i in [0, n-1]
-        sub = (A + B * imax) % M * a[1][3] % M + M - (B * a[0][3] % M)
+        sub = (A + B * imax) % M * a[1][3] % M + M - B * a[0][3] % M
         ret += sub % M * pow10(digits, M) % M
         digits += d * (imax - imin + 1)
     return ret % M
@@ -55,5 +52,5 @@ def matmul(a, b, mod):
     return ret
 
 
-L, A, B, M = list(map(int, input().split()))
-print((solve(L, A, B, M)))
+(L, A, B, M) = list(map(int, input().split()))
+print(solve(L, A, B, M))

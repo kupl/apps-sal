@@ -1,6 +1,6 @@
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
+    def largestComponentSize(self, A: List[int]) -> int:
         parent = [-1] * 1000001
 
         def find(node):
@@ -12,10 +12,8 @@ class Solution:
         def union(X, Y):
             parentX = find(X)
             parentY = find(Y)
-
             if parentX != parentY:
                 parent[parentY] = parentX
-
         for node in A:
             for i in range(2, int(sqrt(node)) + 1):
                 if node % i == 0:
@@ -23,7 +21,6 @@ class Solution:
                     union(node, node // i)
         count = 0
         d = {}
-
         for node in A:
             parentNode = find(node)
             count = max(count, 1 + d.get(parentNode, 0))

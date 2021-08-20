@@ -1,13 +1,13 @@
 from sys import stdin
 input = stdin.readline
-n, a, b, k = map(int, input().split())
+(n, a, b, k) = map(int, input().split())
 l = list(map(int, input().split()))
 
 
 def cost(h):
     h -= (a + b) * ((h - (a + b)) // (a + b))
-    if h > (a + b):
-        h -= (a + b)
+    if h > a + b:
+        h -= a + b
     return (h - 1) // a
 
 

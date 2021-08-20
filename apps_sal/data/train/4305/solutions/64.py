@@ -2,20 +2,19 @@ def order_weight(string):
     strng = string.split()
     for i in range(0, len(strng)):
         for j in range(0, len(strng)):
-            # print(strng[i],strng[j])
-            if (weight(strng[i]) < weight(strng[j])):
+            if weight(strng[i]) < weight(strng[j]):
                 pass
-            elif (weight(strng[i]) == weight(strng[j])):
-                if(strng[i] <= strng[j]):
+            elif weight(strng[i]) == weight(strng[j]):
+                if strng[i] <= strng[j]:
                     pass
                 else:
                     print(strng[i], strng[j])
-                    strng[i], strng[j] = strng[j], strng[i]
+                    (strng[i], strng[j]) = (strng[j], strng[i])
             else:
                 print(strng[i], strng[j])
-                strng[i], strng[j] = strng[j], strng[i]
+                (strng[i], strng[j]) = (strng[j], strng[i])
     strng.reverse()
-    final = " ".join(strng)
+    final = ' '.join(strng)
     return final
 
 

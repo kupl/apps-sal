@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 apple = [l + i for i in range(n)]
 s = 0
 while True:

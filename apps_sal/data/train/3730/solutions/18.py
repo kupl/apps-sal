@@ -1,10 +1,8 @@
 def capitalize(s):
     d = str(s)
-
     w = ''
     f = ''
     g = []
-
     for i in range(len(d)):
         if i % 2 == 0:
             w += d[i].upper()
@@ -17,5 +15,4 @@ def capitalize(s):
             f += d[i].upper()
     g.append(w)
     g.append(f)
-
     return g

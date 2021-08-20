@@ -9,5 +9,4 @@ def testFive(num):
         if num % 10 == 5:
             return False
         num //= 10
-
     return True

@@ -18,12 +18,12 @@ def bfs(v):
     return dist
 
 
-n, m, s, t = map(int, input().split())
+(n, m, s, t) = map(int, input().split())
 s -= 1
 t -= 1
 graph = [[] for i in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     graph[a].append(b)

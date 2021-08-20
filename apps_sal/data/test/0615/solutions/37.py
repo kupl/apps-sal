@@ -2,9 +2,9 @@ from itertools import accumulate
 
 
 def solve(string):
-    n, *a = list(map(int, string.split()))
-    *a, = accumulate(a)
-    l, r, e = 0, 2, a[-1]
+    (n, *a) = list(map(int, string.split()))
+    (*a,) = accumulate(a)
+    (l, r, e) = (0, 2, a[-1])
     ans = e
     for c in a[1:-2]:
         while a[l] + a[l + 1] < c:
@@ -17,7 +17,7 @@ def solve(string):
 
 
 def __starting_point():
-    print((solve('\n'.join([input(), input()]))))
+    print(solve('\n'.join([input(), input()])))
 
 
 __starting_point()

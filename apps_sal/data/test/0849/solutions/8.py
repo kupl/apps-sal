@@ -1,6 +1,5 @@
-# B
 def main():
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     PA = a / b
     PB = c / d
     qA = 1 - PA

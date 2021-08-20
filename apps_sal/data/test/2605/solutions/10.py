@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ci = list(map(int, input().split()))
 idi = list(map(int, input().split()))
 idi += [n + 1]

@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 
-class graph():
+class graph:
+
     def __init__(self, n):
         self.v = n
         self.adj = defaultdict(list)
@@ -31,10 +32,10 @@ class graph():
 t = int(input())
 while t > 0:
     t = t - 1
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     gr = graph(n)
     for i in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         gr.addedge(u, v)
     c = gr.connected()
     print(len(c))

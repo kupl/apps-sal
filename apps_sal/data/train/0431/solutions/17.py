@@ -1,8 +1,8 @@
 class Solution(object):
-    def sumSubarrayMins(self, A):
-        MOD = 10**9 + 7
-        n = len(A)
 
+    def sumSubarrayMins(self, A):
+        MOD = 10 ** 9 + 7
+        n = len(A)
         stack = []
         left = [-1] * n
         for i in range(n):
@@ -11,7 +11,6 @@ class Solution(object):
             if stack:
                 left[i] = stack[-1]
             stack.append(i)
-
         stack = []
         right = [n] * n
         for k in range(n - 1, -1, -1):
@@ -20,5 +19,4 @@ class Solution(object):
             if stack:
                 right[k] = stack[-1]
             stack.append(k)
-
-        return sum((i - left[i]) * (right[i] - i) * A[i] for i in range(n)) % MOD
+        return sum(((i - left[i]) * (right[i] - i) * A[i] for i in range(n))) % MOD

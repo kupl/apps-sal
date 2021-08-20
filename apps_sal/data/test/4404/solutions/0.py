@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,13 +9,11 @@ MOD = 1000000007
 
 def main():
     S = readline().strip()
-
-    y, m, d = list(map(int, S.split('/')))
+    (y, m, d) = list(map(int, S.split('/')))
     if m <= 4:
         print('Heisei')
     elif m > 4:
         print('TBD')
-
     return
 
 

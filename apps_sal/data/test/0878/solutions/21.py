@@ -7,7 +7,7 @@ for i in range(1, n):
         break
     elif a[i] + a[i - 1] == 3:
         ans += 3
-        if i >= 2 and a[i] == 2 and a[i - 2] == 3:
+        if i >= 2 and a[i] == 2 and (a[i - 2] == 3):
             ans -= 1
     else:
         ans += 4

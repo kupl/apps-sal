@@ -1,14 +1,15 @@
 from math import gcd
 
 
-def lcm(a, b): return a * b // gcd(a, b)
+def lcm(a, b):
+    return a * b // gcd(a, b)
 
 
 for _ in range(int(input())):
     n = int(input())
     P = list(map(int, input().split()))
-    x, a = map(int, input().split())
-    y, b = map(int, input().split())
+    (x, a) = map(int, input().split())
+    (y, b) = map(int, input().split())
     k = int(input())
     P.sort(reverse=True)
     l = 0

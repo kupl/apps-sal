@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         for i in range(len(s), 0, -1):
             for j in range(len(s) - i + 1):
@@ -10,5 +11,4 @@ class Solution:
                         break
                 if not has_odd_vowel:
                     return i
-
         return 0

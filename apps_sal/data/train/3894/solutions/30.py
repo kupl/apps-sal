@@ -10,4 +10,4 @@ def solve(s):
         s = s.upper()
     else:
         s = s.lower()
-    return(s)
+    return s

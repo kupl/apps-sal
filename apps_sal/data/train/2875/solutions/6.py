@@ -1,6 +1,6 @@
 def key(pic):
     parts = pic.split('.')
-    return parts[0], int(parts[1][3:])
+    return (parts[0], int(parts[1][3:]))
 
 
 def sort_photos(pics):

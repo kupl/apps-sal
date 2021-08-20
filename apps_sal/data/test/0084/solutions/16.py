@@ -1,7 +1,7 @@
 n = int(input())
 le = len(str(n))
 if n < 5:
-    print((n * (n - 1)) // 2)
+    print(n * (n - 1) // 2)
 elif str(n).count('9') == le:
     print(n // 2)
 else:
@@ -15,5 +15,5 @@ else:
         if t <= n + 1:
             ans += t // 2
         elif t <= n + n - 1:
-            ans += (1 + (n + n - 1 - t) // 2)
+            ans += 1 + (n + n - 1 - t) // 2
     print(ans)

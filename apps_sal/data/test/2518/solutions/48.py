@@ -10,7 +10,7 @@ def isok(arg):
 
 
 def bisect(ng, ok):
-    while (abs(ok - ng) > 1):
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if isok(mid):
             ok = mid
@@ -19,8 +19,8 @@ def bisect(ng, ok):
     return ok
 
 
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 h = []
 for i in range(n):
     h.append(int(input()))
-print((bisect(0, 10**9)))
+print(bisect(0, 10 ** 9))

@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     bada = list(map(int, input().split()))
     a = list()
     for i in range(len(bada)):
@@ -10,7 +10,7 @@ def solve():
             continue
         a.append(bada[i])
     bad = [0] * (k + 1)
-    for i, val in enumerate(a):
+    for (i, val) in enumerate(a):
         if i + 1 >= len(a) and i == 0:
             continue
         if i + 1 >= len(a):
@@ -31,5 +31,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

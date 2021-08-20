@@ -1,10 +1,8 @@
-# cook your dish here
-# code by RAJ BHAVSAR
 for _ in range(int(input())):
     s = str(input())
     dp = [0, 0, len(s), len(s), len(s), len(s)]
     for i in s:
-        if(i == '1'):
+        if i == '1':
             dp[3] = min(dp[3], dp[0])
             dp[0] += 1
             dp[5] = min(dp[5], dp[2])

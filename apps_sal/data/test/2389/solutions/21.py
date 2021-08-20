@@ -1,11 +1,11 @@
 def main():
-    n, a, b, c = map(int, input().split())
+    (n, a, b, c) = map(int, input().split())
     s = [list(input()) for _ in range(n)]
     num = dict(A=a, B=b, C=c)
     t = a + b + c
     ans = []
     if t == 0:
-        print("No")
+        print('No')
         return
     if t == 1:
         for i in range(n):
@@ -19,10 +19,10 @@ def main():
                 num[si[1]] -= 1
                 ans.append(si[0])
             else:
-                print("No")
+                print('No')
                 return
-        print("Yes")
-        print("\n".join(ans))
+        print('Yes')
+        print('\n'.join(ans))
         return
     for i in range(n - 1):
         si = s[i]
@@ -45,17 +45,17 @@ def main():
                 num[si[1]] += 1
                 ans.append(si[1])
         else:
-            print("No")
+            print('No')
             return
     if num[s[n - 1][0]] >= 1:
         ans.append(s[n - 1][1])
     elif num[s[n - 1][1]] >= 1:
         ans.append(s[n - 1][0])
     else:
-        print("No")
+        print('No')
         return
-    print("Yes")
-    print("\n".join(ans))
+    print('Yes')
+    print('\n'.join(ans))
     return
 
 

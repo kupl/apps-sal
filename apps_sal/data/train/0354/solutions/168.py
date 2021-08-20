@@ -1,10 +1,12 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+
         @lru_cache(None)
         def count(n, idxCnt):
             if not n:
                 return 1
-            idx, cnt = idxCnt
+            (idx, cnt) = idxCnt
             out = 0
             for i in range(6):
                 times = rollMax[i]

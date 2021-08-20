@@ -3,7 +3,6 @@ a = list(input())
 ans = n * (n - 1) // 2
 l = 1
 for itr in range(1, n):
-    # print(ans)
     if a[itr] == a[itr - 1]:
         l += 1
     else:

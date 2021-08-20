@@ -1,14 +1,12 @@
 N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 X = []
-for a, b in zip(A, A[1:]):
+for (a, b) in zip(A, A[1:]):
     X.append(a ^ b)
 X.append(A[-1] ^ A[0])
-
 Y = []
-for a, b in zip(B, B[1:]):
+for (a, b) in zip(B, B[1:]):
     Y.append(a ^ b)
 Y.append(B[-1] ^ B[0])
 
@@ -17,7 +15,7 @@ def z_algorithm(s):
     N = len(s)
     ret = [0] * N
     ret[0] = N
-    i, j = 1, 0
+    (i, j) = (1, 0)
     while i < N:
         while i + j < N and s[j] == s[i + j]:
             j += 1

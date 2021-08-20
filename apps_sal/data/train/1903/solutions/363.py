@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         groups = [a for a in range(len(points))]
@@ -15,9 +16,8 @@ class Solution:
             group_a = find(a)
             group_b = find(b)
             if group_a != group_b:
-                return group_a, group_b
+                return (group_a, group_b)
             return
-
         sum = 0
         while len(set(groups)) != 1:
             edge = edges.pop(0)

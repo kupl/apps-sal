@@ -1,6 +1,5 @@
 from re import compile
-
-REGEX = compile(r"^(?:https?:\/\/)?(?:\w+\.)*?codwars\.com(?:$|\/.*$|\?.*$)").fullmatch
+REGEX = compile('^(?:https?:\\/\\/)?(?:\\w+\\.)*?codwars\\.com(?:$|\\/.*$|\\?.*$)').fullmatch
 
 
 def find_codwars(url):

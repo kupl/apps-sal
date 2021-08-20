@@ -11,7 +11,6 @@ def conv(n):
 
 
 def find(n):
-
     x = bin(n)[2:]
     str = ''
     for i in x[::-1]:
@@ -20,10 +19,8 @@ def find(n):
             break
         else:
             str += '0'
-
     return int(str[::-1], 2)
 
 
 for i in range(t):
-
     n = int(input())

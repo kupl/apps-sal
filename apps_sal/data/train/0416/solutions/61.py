@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph):
         mem = [[[-1 for i in range(1 + 2 * len(graph))] for i in range(1 + 2 * len(graph))] for i in range(2 * len(graph))]
 
@@ -6,16 +7,21 @@ class Solution:
             mem[m][c][t] = v
             return mem[m][c][t]
 
-        def mouseWin(m, c, t): return storeRet(m, c, t, 1)
-        def catWin(m, c, t): return storeRet(m, c, t, 2)
-        def draw(m, c, t): return storeRet(m, c, t, 0)
+        def mouseWin(m, c, t):
+            return storeRet(m, c, t, 1)
+
+        def catWin(m, c, t):
+            return storeRet(m, c, t, 2)
+
+        def draw(m, c, t):
+            return storeRet(m, c, t, 0)
 
         def play(m, c, t):
             if mem[m][c][t] != -1:
-                return mem[m][c][t]  # already visited this game state
+                return mem[m][c][t]
             if t >= len(graph) * 2:
-                return 0  # repeated states
-            if not t % 2:  # mouse turn
+                return 0
+            if not t % 2:
                 drawFound = False
                 for n in graph[m]:
                     if n == 0:
@@ -28,7 +34,7 @@ class Solution:
                     if res == 0:
                         drawFound = True
                 return draw(m, c, t) if drawFound else catWin(m, c, t)
-            else:  # cat turn
+            else:
                 drawFound = False
                 for n in graph[c]:
                     if n == m:

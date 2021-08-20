@@ -1,14 +1,15 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        m, n = len(stamp), len(target)
+        (m, n) = (len(stamp), len(target))
         done = [False] * n
         from collections import deque
         ans = []
         queue = deque()
         A = []
         for i in range(n - m + 1):
-            todo, made = set(), set()
-            for j, ch in enumerate(stamp):
+            (todo, made) = (set(), set())
+            for (j, ch) in enumerate(stamp):
                 a = target[i + j]
                 if a == ch:
                     made.add(i + j)
@@ -21,7 +22,6 @@ class Solution:
                     if not done[k]:
                         done[k] = True
                         queue.append(k)
-
         while queue:
             i = queue.popleft()
             for j in range(max(0, i - m + 1), min(i, n - m) + 1):

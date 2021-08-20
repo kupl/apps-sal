@@ -1,16 +1,12 @@
 def main():
-    N, Q = [int(v) for v in input().split()]
-
+    (N, Q) = [int(v) for v in input().split()]
     Query = [[int(v) - 1 for v in input().split()] for _ in range(Q)]
-
     rows = [N - 1] * (N - 1)
     cols = [N - 1] * (N - 1)
-
     black = (N - 2) * (N - 2)
     min_row = N - 1
     min_col = N - 1
-
-    for ty, x in Query:
+    for (ty, x) in Query:
         if ty == 0:
             if x < min_col:
                 rows[x:min_col] = [min_row] * (min_col - x)
@@ -21,7 +17,6 @@ def main():
                 cols[x:min_row] = [min_col] * (min_row - x)
                 min_row = x
             black -= cols[x] - 1
-
     print(black)
 
 

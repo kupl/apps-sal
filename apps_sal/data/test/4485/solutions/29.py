@@ -1,8 +1,7 @@
-N, M = map(int, input().split())
-# 隣接リスト
+(N, M) = map(int, input().split())
 g = [[] for i in range(N)]
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a - 1].append(b)
     g[b - 1].append(a)
 ls = g[0]
@@ -12,7 +11,7 @@ for i in range(len(g[0])):
     for j in range(len(ls2)):
         if ls2[j] == N:
             flag += 1
-            print("POSSIBLE")
+            print('POSSIBLE')
             break
 if flag == 0:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')

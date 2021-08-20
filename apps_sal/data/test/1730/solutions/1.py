@@ -1,10 +1,10 @@
-n, l, k = map(int, input().split())
-c = list([] for i in range(n + 1))
+(n, l, k) = map(int, input().split())
+c = list(([] for i in range(n + 1)))
 for i in range(l):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     c[x].append(y)
     c[y].append(x)
-d = list(0 for i in range(n + 1))
+d = list((0 for i in range(n + 1)))
 d[1] = 1
 now = 1
 time = 1
@@ -23,7 +23,7 @@ while f:
             v = -1
         else:
             v += 1
-g = list(0 for i in range(time - mintime))
+g = list((0 for i in range(time - mintime)))
 for i in range(n + 1):
     if d[i] >= mintime:
         g[d[i] - mintime] = i

@@ -16,7 +16,6 @@ class Solution:
                 else:
                     prev = v
                     count += 1
-
             for element in put_back:
                 heapq.heappush(hand, element)
         return True

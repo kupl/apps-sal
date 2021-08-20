@@ -1,6 +1,6 @@
 def count_ones(x):
     ans = 0
-    while (x > 0):
+    while x > 0:
         if x % 2 == 1:
             ans = ans + 1
         x = x // 2

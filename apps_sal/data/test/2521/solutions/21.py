@@ -23,7 +23,7 @@ for i in range(n, 2 * n):
     s2 -= -x
     B.append(s2)
 B = B[::-1]
-ans = -10**18
+ans = -10 ** 18
 for i in range(len(A)):
     ans = max(ans, A[i] - B[i])
 print(ans)

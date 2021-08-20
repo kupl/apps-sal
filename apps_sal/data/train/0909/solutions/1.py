@@ -8,7 +8,7 @@ for _ in range(int(input())):
     flag = 0
     val = 0
     st = 0
-    if (b[0] < g[0]):
+    if b[0] < g[0]:
         f = 'b'
         ans.append(min(b[0], g[0]))
         ans.append(max(b[0], g[0]))
@@ -20,7 +20,7 @@ for _ in range(int(input())):
         ans.append(max(b[0], g[0]))
     else:
         for i in range(n):
-            if (b[i] < g[i]):
+            if b[i] < g[i]:
                 f = 'b'
                 st = i
                 break
@@ -30,22 +30,21 @@ for _ in range(int(input())):
                 break
             ans.append(b[i])
             ans.append(g[i])
-    if (len(ans) == (2 * n)):
+    if len(ans) == 2 * n:
         val = 1
-    if (n >= 2 and val != 1):
+    if n >= 2 and val != 1:
         for i in range(st, n):
-            if (f == 'b'):
+            if f == 'b':
                 ans.append(b[i])
                 ans.append(g[i])
             else:
                 ans.append(g[i])
                 ans.append(b[i])
-
     for i in range(1, len(ans)):
-        if (ans[i] < ans[i - 1]):
+        if ans[i] < ans[i - 1]:
             flag = 1
             break
-    if (flag):
+    if flag:
         print('NO')
     else:
-        print("YES")
+        print('YES')

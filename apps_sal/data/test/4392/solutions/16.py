@@ -1,6 +1,6 @@
 q = int(input())
 for rwre in range(q):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     ll = l.copy()
     p = list(map(int, input().split()))
@@ -15,6 +15,6 @@ for rwre in range(q):
             l[p[i % m]] = a
     ll.sort()
     if l == ll:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

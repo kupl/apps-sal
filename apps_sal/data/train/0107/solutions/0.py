@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b, c, d = [int(i) for i in input().split(" ")]
+    (a, b, c, d) = [int(i) for i in input().split(' ')]
     sgn = (a + b) % 2
     small = False
     large = False
@@ -21,4 +21,4 @@ for _ in range(t):
     if large:
         okay[1] = False
         okay[2] = False
-    print(" ".join(["Ya" if okay[i] else "Tidak" for i in range(4)]))
+    print(' '.join(['Ya' if okay[i] else 'Tidak' for i in range(4)]))

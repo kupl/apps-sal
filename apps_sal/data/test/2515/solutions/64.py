@@ -1,13 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[18]:
-
-
 import itertools
-
-
-# In[19]:
 
 
 def sieve(x):
@@ -21,27 +12,14 @@ def sieve(x):
     return p
 
 
-p = sieve(10**5)
-
-
-# In[27]:
-
-
-s = set(i for i in p if i < 5 * 10**4)
-l = [0] * (10**5)
+p = sieve(10 ** 5)
+s = set((i for i in p if i < 5 * 10 ** 4))
+l = [0] * 10 ** 5
 for i in p[1:]:
     if i // 2 + 1 in s:
         l[i] = 1
 S = list(itertools.accumulate(l))
-
-
-# In[30]:
-
-
 Q = int(input())
 for _ in range(Q):
-    l, r = list(map(int, input().split()))
-    print((S[r] - S[l - 1]))
-
-
-# In[ ]:
+    (l, r) = list(map(int, input().split()))
+    print(S[r] - S[l - 1])

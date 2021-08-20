@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, s):
         """
         :type s: str
@@ -12,19 +13,15 @@ class Solution:
             c = s[i]
             if c.isdigit():
                 number = number * 10 + int(c)
-
-            elif c == "+":
-
+            elif c == '+':
                 res += number * sign
                 sign = 1
                 number = 0
-
             elif c == '-':
-
                 res += number * sign
                 sign = -1
                 number = 0
-            elif c == "(":
+            elif c == '(':
                 stack.append(res)
                 stack.append(sign)
                 res = 0
@@ -36,7 +33,5 @@ class Solution:
                 res += stack.pop()
                 number = 0
                 sign = 1
-
         res += number * sign
-
         return res

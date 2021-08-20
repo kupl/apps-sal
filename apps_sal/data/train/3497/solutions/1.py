@@ -1,5 +1,5 @@
 def isPP(n):
-    for i in range(2, int(n**.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         number = n
         times = 0
         while number % i == 0:

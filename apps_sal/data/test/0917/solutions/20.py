@@ -1,16 +1,13 @@
 def main():
-    n, h, m = list(map(int, input().split()))
-
+    (n, h, m) = list(map(int, input().split()))
     restrictions = [h for _ in range(n)]
     for i in range(m):
-        l, r, x = list(map(int, input().split()))
+        (l, r, x) = list(map(int, input().split()))
         for j in range(l, r + 1):
             restrictions[j - 1] = min(restrictions[j - 1], x)
-
     res = 0
     for x in range(n):
-        res += restrictions[x]**2
-
+        res += restrictions[x] ** 2
     print(res)
 
 

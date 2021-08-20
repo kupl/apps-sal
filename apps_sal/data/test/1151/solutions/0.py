@@ -1,7 +1,7 @@
 def read_data():
-    n, m = map(int, input().strip().split())
+    (n, m) = map(int, input().strip().split())
     a = list(map(int, list(input().strip().split())))
-    return n, m, a
+    return (n, m, a)
 
 
 def find(start, end, v):
@@ -31,5 +31,5 @@ def solve():
     return val
 
 
-n, m, a = read_data()
+(n, m, a) = read_data()
 print(solve())

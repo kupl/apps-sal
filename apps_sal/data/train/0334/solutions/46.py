@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         if len(cost) < 2:
             return 0
@@ -8,7 +9,6 @@ class Solution:
         while ptr < len(cost):
             delete = False
             while ptr < len(cost) and s[ptr] == s[r]:
-                # print(ptr,r)
                 delete = True
                 ptr += 1
             if delete:
@@ -16,5 +16,4 @@ class Solution:
                 ptr -= 1
             r = ptr
             ptr += 1
-
         return ans

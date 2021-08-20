@@ -7,10 +7,10 @@ def solve(K):
     queue.append((1, 1))
     checked[1] = 1
     while queue:
-        x, n = queue.popleft()
+        (x, n) = queue.popleft()
         if x == 0:
             return n
-        _ = (x * 10) % K
+        _ = x * 10 % K
         if n < checked[_]:
             queue.appendleft((_, n))
             checked[_] = n
@@ -22,4 +22,4 @@ def solve(K):
 
 
 K = int(input())
-print((solve(K)))
+print(solve(K))

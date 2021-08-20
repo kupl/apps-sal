@@ -13,9 +13,8 @@ class Solution:
         def helper(idx):
             if idx >= n:
                 return 0
-            start, end, profit = intervals[idx]
+            (start, end, profit) = intervals[idx]
             not_take_option = helper(idx + 1)
             take_option = profit + helper(bisect(intervals, (end,)))
             return max(not_take_option, take_option)
-
         return helper(0)

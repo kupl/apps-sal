@@ -1,7 +1,5 @@
 for ttt in range(int(input())):
-    #	l = list(map(int, input().split()))
-    #	n = int(input())
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     x = [0] * n
     y = [0] * m
     for i in range(n):

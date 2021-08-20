@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 T = int(input())
 for _ in range(T):
     x = input().strip()
@@ -15,7 +14,7 @@ for _ in range(T):
             c += 1
     j = m - c
     k = 0
-    while (j >= 0):
+    while j >= 0:
         if x[j] == '1':
             print(k)
             break

@@ -6,7 +6,7 @@ for i in range(t):
         break
     for j in range(3, 181):
         if a * j % 180 == 0:
-            if j - (a * j // 180) == 1:
+            if j - a * j // 180 == 1:
                 j *= 2
             print(j)
             break

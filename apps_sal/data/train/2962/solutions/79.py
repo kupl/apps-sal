@@ -5,5 +5,4 @@ def divisible_by(numbers, divisor):
         if item % divisor == 0:
             a.insert(i, item)
             i += 1
-
     return a

@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 s = N // K
 s1 = abs(N - K * s)
 s2 = abs(N - K * (s + 1))

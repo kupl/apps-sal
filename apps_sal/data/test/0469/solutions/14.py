@@ -1,5 +1,5 @@
 import math
-r, h = map(int, input().split())
+(r, h) = map(int, input().split())
 a = h // r * 2
 if 2 * (h % r) >= math.sqrt(3) * r:
     a += 3

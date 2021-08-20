@@ -1,17 +1,32 @@
 from collections import deque
-def INT(): return int(input())
 
 
-def INTM(): return map(int, input().split())
-def STRM(): return map(str, input().split())
-def STR(): return str(input())
+def INT():
+    return int(input())
 
 
-def LIST(): return list(map(int, input().split()))
-def LISTS(): return list(map(str, input().split()))
+def INTM():
+    return map(int, input().split())
 
 
-class Graph():
+def STRM():
+    return map(str, input().split())
+
+
+def STR():
+    return str(input())
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def LISTS():
+    return list(map(str, input().split()))
+
+
+class Graph:
+
     def __init__(self, v):
         from heapq import heappop, heappush
         self.v = v
@@ -27,11 +42,10 @@ def do():
     n = INT()
     g = Graph(n)
     for i in range(n - 1):
-        a, b = INTM()
+        (a, b) = INTM()
         a -= 1
         b -= 1
         g.addEdge(a, b, i)
-
     que = deque()
     check = [True] * n
     clrs = [0] * (n - 1)
@@ -39,10 +53,10 @@ def do():
     check[0] = False
     while que:
         clr = 1
-        now, clr_f = que.popleft()
+        (now, clr_f) = que.popleft()
         if clr_f == 1:
             clr = 2
-        for next, i in g.graph[now]:
+        for (next, i) in g.graph[now]:
             if check[next]:
                 check[next] = False
                 que.append([next, clr])
@@ -50,7 +64,6 @@ def do():
                 clr += 1
                 if clr == clr_f:
                     clr += 1
-
     print(max(clrs))
     for i in range(n - 1):
         print(clrs[i])

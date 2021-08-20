@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     matrix = []
     for i in range(n):
         row = []
@@ -12,7 +11,7 @@ for i in range(int(input())):
     for i in range(m):
         c = 0
         for j in range(n):
-            if(matrix[j][i] == '1'):
+            if matrix[j][i] == '1':
                 c += 1
-        ans += (c * (c - 1) // 2)
+        ans += c * (c - 1) // 2
     print(ans)

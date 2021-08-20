@@ -5,7 +5,7 @@ for _ in range(int(input())):
     ma = min(ar)
     mb = min(br)
     ans = 0
-    for i, j in zip(ar, br):
+    for (i, j) in zip(ar, br):
         r1 = i - ma
         r2 = j - mb
         x = min(r1, r2)

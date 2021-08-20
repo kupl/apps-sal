@@ -1,14 +1,12 @@
 from collections import Counter
-# python template for atcoder1
 import sys
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 input = sys.stdin.readline
 N = int(input())
 A = list(map(int, input().split()))
 C = Counter(A)
 R = C.most_common()[0][0]
 op = []
-
 l = A.index(R)
 r = l
 l -= 1
@@ -31,7 +29,6 @@ while r < N:
     else:
         op.append([2, r + 1, r])
     r += 1
-
 if len(op):
     print(len(op))
     for l in op:

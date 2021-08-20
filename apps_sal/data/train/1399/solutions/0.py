@@ -7,9 +7,8 @@ def solve(n, k, a, l, r):
     for i in range(n):
         for j in range(l[i], r[i]):
             mat[i][j] = 1
-
     ans = np.eye(n, n, dtype=np.int64)
-    while(k > 0):
+    while k > 0:
         if k % 2 == 1:
             ans = np.matmul(mat, ans)
             ans %= 2
@@ -42,8 +41,8 @@ for i in range(t):
         l.append(int(s[0]) - 1)
         r.append(int(s[1]))
     arr = solve(n, k - 1, a, l, r)
-    s = ""
+    s = ''
     for e in arr:
         s += str(e)
-        s += " "
+        s += ' '
     print(s)

@@ -1,5 +1,5 @@
-from numpy import*
-a, b = loadtxt(open(c := 0), 'i', skiprows=1)
+from numpy import *
+(a, b) = loadtxt(open((c := 0)), 'i', skiprows=1)
 l = 1 << 29
 while l:
     u = l

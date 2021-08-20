@@ -1,4 +1,5 @@
 class Solution:
+
     def ladderLength(self, beginWord, endWord, wordList):
         """
         :type beginWord: str
@@ -6,12 +7,10 @@ class Solution:
         :type wordList: List[str]
         :rtype: int
         """
-
         words = set(wordList)
         if endWord not in words:
             return 0
-
-        beginQ, endQ = {beginWord}, {endWord}
+        (beginQ, endQ) = ({beginWord}, {endWord})
         dist = 2
         while beginQ:
             print(('beginQ', beginQ, 'endQ', endQ))
@@ -24,12 +23,9 @@ class Solution:
                             if v in endQ:
                                 return dist
                             newq.add(v)
-
             dist += 1
             beginQ = newq
             if len(beginQ) > len(endQ):
-                beginQ, endQ = endQ, beginQ
-
+                (beginQ, endQ) = (endQ, beginQ)
             words -= beginQ
-
         return 0

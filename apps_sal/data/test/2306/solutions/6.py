@@ -7,9 +7,9 @@ limit = []
 cumt = 0
 for n in range(2 + N):
     if n == 0:
-        lis = [(0.5) * i for i in range(FT)]
+        lis = [0.5 * i for i in range(FT)]
     elif n == 1:
-        lis = [(0.5) * i for i in range(FT)][::-1]
+        lis = [0.5 * i for i in range(FT)][::-1]
     else:
         t = T[n - 2]
         v = V[n - 2]

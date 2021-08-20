@@ -10,10 +10,9 @@ while t > 0:
     m = [int(0)] * 11
     alt = int(-1)
     for i in range(0, n):
-        a, b = input().split(" ")
+        (a, b) = input().split(' ')
         h[i] = int(a)
         m[i] = int(b)
-
     if n == 1:
         print('1')
         print('0 Inf')
@@ -41,20 +40,17 @@ while t > 0:
                     else:
                         state = 0
                         break
+                elif h[i] > h[i - 1]:
+                    alt = 1
                 else:
-                    if h[i] > h[i - 1]:
-                        alt = 1
-                    else:
-                        state = 0
-                        break
-
+                    state = 0
+                    break
             if state == 1:
                 count += 1
                 if index == 0:
                     rangex1 = int(curtime)
                 else:
                     rangex2 = int(curtime)
-
             mintime = int(0)
             found = int(0)
             tt = int(0)
@@ -75,16 +71,13 @@ while t > 0:
                             found = 1
                         elif tt < mintime:
                             mintime = tt
-                else:
-                    if m[i] != m[i - 1]:
-                        tt = 1
-                        if found == 0:
-                            mintime = tt
-                            found = 1
-                        elif tt < mintime:
-                            mintime = tt
-
-            # print found, mintime
+                elif m[i] != m[i - 1]:
+                    tt = 1
+                    if found == 0:
+                        mintime = tt
+                        found = 1
+                    elif tt < mintime:
+                        mintime = tt
             if found == 0:
                 if state == 1:
                     if index == 0:
@@ -102,25 +95,22 @@ while t > 0:
                     else:
                         rangey2 = int(curtime + mintime - 1)
                         index += 1
-
                 curtime += mintime
                 for i in range(0, n):
                     h[i] += m[i] * mintime
-
         if count > 1:
             if rangey1 == rangex2 - 1:
                 rangey1 = rangey2
                 count -= 1
-
         print(count)
         if count >= 1:
             if rangey1 == -1:
-                print('%d Inf' % (rangex1))
+                print('%d Inf' % rangex1)
             else:
                 print(rangex1, rangey1)
         if count >= 2:
             if rangey2 == -1:
-                print('%d Inf' % (rangex2))
+                print('%d Inf' % rangex2)
             else:
                 print(rangey1, rangey2)
     t -= 1

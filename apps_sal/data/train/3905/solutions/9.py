@@ -37,6 +37,6 @@ def inner(s, start_chunk):
         last = int(rest[:chunk])
         rest = rest[chunk:]
         print(nums)
-        if(rip_count) > 1:
+        if rip_count > 1:
             return -1
     return result

@@ -21,4 +21,4 @@ for i in range(n):
     t += heappop(H)
     l[i + 1] = s
     r[~(i + 1)] = t
-print(max(l[i] - r[i] for i in range(n + 1)))
+print(max((l[i] - r[i] for i in range(n + 1))))

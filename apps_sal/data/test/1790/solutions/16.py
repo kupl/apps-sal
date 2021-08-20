@@ -8,4 +8,4 @@ for _ in range(n):
         d[a[i]] += 1
 for i in range(1, 101):
     if d[i] == n:
-        print(i, end=" ")
+        print(i, end=' ')

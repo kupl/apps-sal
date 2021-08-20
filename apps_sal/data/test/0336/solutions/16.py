@@ -1,4 +1,4 @@
-n, a, b, c, d = [int(s) for s in input().split()]
+(n, a, b, c, d) = [int(s) for s in input().split()]
 
 
 def solve(p):
@@ -10,11 +10,7 @@ def solve(p):
     return max(0, n - (max(s) - min(s)))
 
 
-p = [
-    [0, a, 0],
-    [b, 0, c],
-    [0, d, 0],
-]
+p = [[0, a, 0], [b, 0, c], [0, d, 0]]
 res = 0
 for m in range(1, n + 1):
     p[1][1] = m

@@ -1,10 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 acsum = [0]
 for i in range(n):
     acsum.append(acsum[i] + a[i])
-
 cnt = 0
 jj = 0
 for i in range(n):

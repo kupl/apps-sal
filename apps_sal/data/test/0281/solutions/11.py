@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 c = 1
 for i in range(b - a):
     z = (a + i + 1) % 10
@@ -6,5 +6,4 @@ for i in range(b - a):
     c = c % 10
     if c == 0:
         break
-
 print(c)

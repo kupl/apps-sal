@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -53,7 +53,7 @@ class Main:
                 b.append(x[i])
                 i += 1
         print(ml + 1)
-        print(' '.join([str(x) for x in (a + b[::-1])]))
+        print(' '.join([str(x) for x in a + b[::-1]]))
 
 
 def __starting_point():

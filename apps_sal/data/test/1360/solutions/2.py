@@ -1,5 +1,3 @@
-
-
 num = int(input())
 l = list()
 for i in range(num):
@@ -8,7 +6,6 @@ for i in range(num):
     b = f[1]
     tup = (a, b)
     l.append(tup)
-
 l.sort()
 c = 0
 for el in l:
@@ -18,5 +15,4 @@ for el in l:
         c = b
     else:
         c = a
-
 print(c)

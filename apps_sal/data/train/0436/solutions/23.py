@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         last = {n}
         cnt = 0

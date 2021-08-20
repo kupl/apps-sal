@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import math
 import collections
 import bisect
@@ -9,27 +7,19 @@ import random
 import itertools
 import sys
 from typing import List
-
-"""
-created by shhuan at 2020/1/8 22:06
-
-"""
+'\ncreated by shhuan at 2020/1/8 22:06\n\n'
 
 
 def solve(N, A):
     wc = collections.Counter(A)
     if wc[0] > 1:
         return False
-
     if any([v > 2 for v in wc.values()]):
         return False
-
     if len([v for v in wc.values() if v > 1]) > 1:
         return False
-
-    if any([c > 1 and w - 1 in wc for w, c in wc.items()]):
+    if any([c > 1 and w - 1 in wc for (w, c) in wc.items()]):
         return False
-
     taken = sum(A) - N * (N - 1) // 2
     return taken % 2 != 0
 

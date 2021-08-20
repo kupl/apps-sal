@@ -1,5 +1,5 @@
 from collections import deque
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 X = list(map(int, input().split()))
 R = []
 A1 = []
@@ -14,18 +14,17 @@ for i in range(N - 1, -1, -1):
         if not A1:
             ng = 1
             break
-        x, y = A1.pop()
-#        R.append((i+1, y))
+        (x, y) = A1.pop()
         R.append((i + 1, y))
         A2.append((i + 1, y))
     elif X[i] == 3:
         if A2:
-            x, y = A2.pop()
+            (x, y) = A2.pop()
             R.append((x, j))
             R.append((i + 1, j))
             A2.append((i + 1, j))
         elif A1:
-            x, y = A1.pop()
+            (x, y) = A1.pop()
             R.append((x, j))
             R.append((i + 1, j))
             A2.append((i + 1, j))
@@ -35,6 +34,5 @@ if ng:
     print(-1)
 else:
     print(len(R))
-    for x, y in R:
-        #        print(x, y)
+    for (x, y) in R:
         print(N - y + 1, x)

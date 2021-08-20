@@ -1,4 +1,4 @@
-n, m, x, y = map(int, input().split())
+(n, m, x, y) = map(int, input().split())
 x_list = list(map(int, input().split()))
 y_list = list(map(int, input().split()))
 flag = False

@@ -1,5 +1,3 @@
-
-
 def main():
     n = int(input())
     b = input()

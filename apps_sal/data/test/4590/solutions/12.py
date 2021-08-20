@@ -1,7 +1,6 @@
-N, M, K = map(int, input().split())
+(N, M, K) = map(int, input().split())
 lsA = list(map(int, input().split()))
 lsB = list(map(int, input().split()))
-
 lsAN = [0]
 sumA = 0
 for i in range(N):

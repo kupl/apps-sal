@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.name = name
         self.alive = True
@@ -9,6 +10,7 @@ class Node:
 
 
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.king = Node(kingName)
         self.d = {kingName: self.king}
@@ -21,17 +23,10 @@ class ThroneInheritance:
         self.d[name].alive = False
 
     def getInheritanceOrder(self) -> List[str]:
+
         def dfs(node):
             ans = [node.name] * node.alive
             for x in node.childs:
                 ans.extend(dfs(x))
             return ans
-
         return dfs(self.king)
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

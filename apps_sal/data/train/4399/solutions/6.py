@@ -13,28 +13,21 @@ def fold_cube(num_list):
     except:
         return False
     faces.add(face)
-#     print(face.val)
-#     print(face.borders())
-#     for face in faces:
-#         print(face.val, face.z)
-#     return sum(f.z for f in faces) == 0
-    fs = set(f.z for f in faces)
+    fs = set((f.z for f in faces))
     return fs == {1, 2, 3, -1, -2, -3}
 
 
 class Face:
+
     def __init__(self, val, nums, faces, x=F, y=R, z=U):
-        #         print(val, nums)
         self.nums = nums
         self.val = val
         self.z = z
         self.x = x
         self.y = y
-
         for num in self.borders():
             self.nums.remove(num)
-            z, x, y = self.fold(num)
-#             print(z, x, y)
+            (z, x, y) = self.fold(num)
             faces.add(Face(num, self.nums, faces, x=x, y=y, z=z))
 
     def borders(self):
@@ -44,12 +37,8 @@ class Face:
         for num in self.nums:
             dn = (num - 1) // 5
             mn = (num - 1) % 5
-#             print(ds, ms, dn, mn)
-            if ds - dn == 0 and abs(ms - mn) == 1 or ms - mn == 0 and abs(ds - dn) == 1:
+            if ds - dn == 0 and abs(ms - mn) == 1 or (ms - mn == 0 and abs(ds - dn) == 1):
                 borders.append(num)
-#             if abs(self.val - num) in [1, 5]:
-#                 borders.append(num)
-#         print(borders)
         return borders
 
     def fold(self, num):
@@ -70,7 +59,7 @@ class Face:
             z = self.y
             x = self.x
             y = -self.z
-        return z, x, y
+        return (z, x, y)
 
     def __hash__(self):
         return self.val

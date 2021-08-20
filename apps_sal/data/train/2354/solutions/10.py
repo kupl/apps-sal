@@ -1,11 +1,9 @@
 from sys import stdin, stdout
-
 pwd = stdin.readline().rstrip()
 n = int(stdin.readline().rstrip())
 words = []
 for _ in range(n):
     words.append(stdin.readline().rstrip())
-
 if pwd in words:
     print('YES')
 else:

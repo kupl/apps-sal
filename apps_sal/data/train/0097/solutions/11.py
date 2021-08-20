@@ -2,17 +2,25 @@ import sys
 input = sys.stdin.readline
 
 
-def getInt(): return int(input())
-def getVars(): return list(map(int, input().split()))
-def getList(): return list(map(int, input().split()))
-def getStr(): return input().strip()
+def getInt():
+    return int(input())
 
-# -------------------------------
+
+def getVars():
+    return list(map(int, input().split()))
+
+
+def getList():
+    return list(map(int, input().split()))
+
+
+def getStr():
+    return input().strip()
 
 
 n = getInt()
 for i in range(n):
-    s, c = getStr().split()
+    (s, c) = getStr().split()
     p = False
     for i in range(len(s) - 1):
         ch = i

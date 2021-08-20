@@ -1,14 +1,20 @@
 from bisect import bisect_left as bl
-def ii(): return int(input())
 
 
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
+def ii():
+    return int(input())
 
 
-n, m = mi()
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+(n, m) = mi()
 alis = li()
-
 alis.sort()
 ok = 0
 ng = alis[n - 1] * 2 + 1
@@ -22,13 +28,11 @@ while ng - ok > 1:
         outrange = ima - m
     else:
         ng = mid
-
 acu_alis = [0] * n
 ima = 0
 for i in range(n):
     acu_alis[i] = alis[i] + ima
     ima = alis[i] + ima
-
 ans = 0
 for i in range(n):
     tmp = bl(alis, ok - alis[i])

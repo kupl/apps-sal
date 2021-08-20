@@ -1,7 +1,6 @@
 import operator
 from collections import Counter
 from bisect import bisect_left
-
 for _ in range(0, int(input())):
     [a, b, c] = list(map(int, input().strip().split()))
     x1 = list(map(int, input().strip().split()))
@@ -22,9 +21,8 @@ for _ in range(0, int(input())):
         pos = -1
         if s > 0:
             pos = bisect_left(z, p)
-            if (z[pos] != p):
+            if z[pos] != p:
                 pos = pos - 1
-
         if pos > -1:
             tot += p - z[pos]
             zc[z[pos]] -= 1

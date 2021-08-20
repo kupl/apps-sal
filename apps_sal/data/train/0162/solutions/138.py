@@ -1,9 +1,8 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        #     # return self.recursive(text1, text2, 0, 0)
         dp = dict()
         return self.top_down(dp, text1, text2, 0, 0)
-        # return self.bottom_up(text1, text2)
 
     def recursive(self, text1, text2, i, j):
         if i >= len(text1) or j >= len(text2):
@@ -20,15 +19,15 @@ class Solution:
         if text1[i] == text2[j]:
             return 1 + self.top_down(dp, text1, text2, i + 1, j + 1)
         if (i, j) in dp:
-            return dp[(i, j)]
+            return dp[i, j]
         a = self.top_down(dp, text1, text2, i + 1, j)
         b = self.top_down(dp, text1, text2, i, j + 1)
-        dp[(i, j)] = max(a, b)
-        return dp[(i, j)]
+        dp[i, j] = max(a, b)
+        return dp[i, j]
 
     def bottom_up(self, text1, text2):
-        i, j = 0, 0
-        m, n = len(text1), len(text2)
+        (i, j) = (0, 0)
+        (m, n) = (len(text1), len(text2))
         dp = [[0] * (n + 1) for _ in range(m + 1)]
         for i in range(1, m + 1):
             for j in range(1, n + 1):

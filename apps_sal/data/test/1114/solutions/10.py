@@ -1,11 +1,8 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 f = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 f_count = [0 for i in range(n + 1)]
 f_pos = [0 for i in range(n + 1)]
-
 for i in range(n):
     f_pos[f[i]] = i + 1
     f_count[f[i]] += 1
@@ -20,7 +17,6 @@ for i in range(m):
         break
     else:
         Ambiguity = True
-
 if Impossible:
     print('Impossible')
 elif Ambiguity:

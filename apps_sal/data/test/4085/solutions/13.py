@@ -1,5 +1,8 @@
 from collections import Counter
-def R(): return map(int, input().split())
+
+
+def R():
+    return map(int, input().split())
 
 
 def primefactors(n):
@@ -22,8 +25,8 @@ for _ in range(int(input())):
         for k in ct:
             c[k] = max(c[k], ct[k])
     x = 1
-    for k, v in c.items():
-        x *= k**v
+    for (k, v) in c.items():
+        x *= k ** v
     if x == max(dd):
         t = min(dd)
         x *= t

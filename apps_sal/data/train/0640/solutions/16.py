@@ -1,11 +1,11 @@
 def compute_gcd(x, y):
-    while(y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def f_lcm(x, y):
-    lcm = (x * y) // compute_gcd(x, y)
+    lcm = x * y // compute_gcd(x, y)
     return lcm
 
 
@@ -17,7 +17,7 @@ for i in range(t):
     y = x_y[1]
     lcm = f_lcm(x, y)
     temp = lcm
-    if(x == y):
+    if x == y:
         print(0)
     else:
         res += lcm // x - 1

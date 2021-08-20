@@ -1,4 +1,5 @@
 class Solution:
+
     def partitionDisjoint(self, A: List[int]) -> int:
         least = [float('inf')] * len(A)
         for i in range(len(A) - 1, -1, -1):

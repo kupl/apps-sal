@@ -1,13 +1,21 @@
 import sys
 import numpy as np
-
 sys.setrecursionlimit(10 ** 8)
-def ini(): return int(sys.stdin.readline())
-def inl(): return [int(x) for x in sys.stdin.readline().split()]
-def ins(): return sys.stdin.readline().rstrip()
 
 
-debug = lambda *a, **kw: print("\033[33m", *a, "\033[0m", **dict(file=sys.stderr, **kw))
+def ini():
+    return int(sys.stdin.readline())
+
+
+def inl():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def ins():
+    return sys.stdin.readline().rstrip()
+
+
+debug = lambda *a, **kw: print('\x1b[33m', *a, '\x1b[0m', **dict(file=sys.stderr, **kw))
 
 
 def convolve(f, g):
@@ -27,37 +35,24 @@ def convolve(f, g):
     h : np.ndarray
         f,g の積
     """
-    # h の長さ以上の n=2^k を計算
     fft_len = 1
     while 2 * fft_len < len(f) + len(g) - 1:
         fft_len *= 2
     fft_len *= 2
-
-    # フーリエ変換
     Ff = np.fft.rfft(f, fft_len)
     Fg = np.fft.rfft(g, fft_len)
-
-    # 各点積
     Fh = Ff * Fg
-
-    # フーリエ逆変換
     h = np.fft.irfft(Fh, fft_len)
-
-    # 小数になっているので、整数にまるめる
     h = np.rint(h).astype(np.int64)
-
     return h
 
 
-N, M = inl()
+(N, M) = inl()
 A = inl()
-
 power = np.zeros(10 ** 5 + 1, dtype=np.int64)
 for i in range(N):
     power[A[i]] += 1
-
 P = convolve(power, power)
-
 r = M
 ans = 0
 for k in range(len(P) - 1, -1, -1):
@@ -66,5 +61,4 @@ for k in range(len(P) - 1, -1, -1):
     r -= c
     if r <= 0:
         break
-
 print(ans)

@@ -1,14 +1,11 @@
 def main():
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
-
     delim = 0
-
-    for i, e in enumerate(a):
+    for (i, e) in enumerate(a):
         e += delim
-        p, delim = divmod(e, m)
+        (p, delim) = divmod(e, m)
         print(p, end=' ')
-
     print()
 
 

@@ -1,5 +1,7 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
+
         def c(p, m, d):
             b = m - 1
             l = len(p)

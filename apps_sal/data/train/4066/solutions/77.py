@@ -1,6 +1,6 @@
 def string_to_array(s):
     s = s.split()
     if list(s) == []:
-        return['']
+        return ['']
     else:
         return list(s)

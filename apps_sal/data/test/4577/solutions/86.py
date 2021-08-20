@@ -1,10 +1,9 @@
 def iroha():
-    a, b, c = list(map(int, input().split()))
-
+    (a, b, c) = list(map(int, input().split()))
     if a <= c and b >= c:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

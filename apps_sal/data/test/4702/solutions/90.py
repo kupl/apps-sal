@@ -1,6 +1,5 @@
 x = int(input())
-
 if x:
-    print((0))
+    print(0)
 else:
-    print((1))
+    print(1)

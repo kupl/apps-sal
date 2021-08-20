@@ -1,11 +1,9 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 xo = A[0]
 l = 0
 r = 1
 ans = 0
-
 while l < N:
     if r == N:
         ans += r - l

@@ -1,16 +1,18 @@
-
 from heapq import *
 
 
 class Solution:
+
     def minCostConnectPoints(self, points):
         n = len(points)
-        def dist(p0, p1): return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
+
+        def dist(p0, p1):
+            return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
         q = [(0, 0)]
         nodes = set(range(n))
         res = 0
         while q:
-            d, u = heappop(q)
+            (d, u) = heappop(q)
             if u not in nodes:
                 continue
             nodes.remove(u)

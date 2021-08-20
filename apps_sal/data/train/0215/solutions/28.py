@@ -3,7 +3,9 @@ from functools import reduce
 
 
 class Solution:
+
     def isGoodArray(self, nums: List[int]) -> bool:
+
         def find_gcd(list):
             x = reduce(gcd, list)
             return x

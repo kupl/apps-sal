@@ -8,10 +8,10 @@ def dijkstra(n, s, edges):
     cost = [float('inf')] * n
     cost[s] = 0
     while hq:
-        c, v = heapq.heappop(hq)
+        (c, v) = heapq.heappop(hq)
         if c > cost[v]:
             continue
-        for d, u in edges[v]:
+        for (d, u) in edges[v]:
             tmp = d + cost[v]
             if tmp < cost[u]:
                 cost[u] = tmp
@@ -20,7 +20,7 @@ def dijkstra(n, s, edges):
 
 
 def main():
-    xs, ys, xt, yt = map(int, input().split())
+    (xs, ys, xt, yt) = map(int, input().split())
     n = int(input())
     circles = []
     circles.append([xs, ys, 0])
@@ -36,7 +36,6 @@ def main():
             r = circles[i][2] + circles[j][2]
             edges[i].append([max(0, d - r), j])
             edges[j].append([max(0, d - r), i])
-
     ans = dijkstra(n + 2, 0, edges)
     print(ans)
 

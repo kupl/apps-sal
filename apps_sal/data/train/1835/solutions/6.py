@@ -1,4 +1,5 @@
 class Solution:
+
     def numsSameConsecDiff(self, N: int, K: int) -> List[int]:
 
         def dfs(N, K, digit, rst):
@@ -9,7 +10,6 @@ class Solution:
                 dfs(N - 1, K, digit + [digit[-1] + K], rst)
             if digit[-1] - K >= 0:
                 dfs(N - 1, K, digit + [digit[-1] - K], rst)
-
         if N == 1:
             return list(range(10))
         if K == 0:

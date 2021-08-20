@@ -1,10 +1,9 @@
 def main():
-    n, m = [int(i) for i in input().split()]
-
+    (n, m) = [int(i) for i in input().split()]
     if min(n, m) % 2 == 0:
-        print("Malvika")
+        print('Malvika')
     else:
-        print("Akshat")
+        print('Akshat')
 
 
 main()

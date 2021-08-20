@@ -1,9 +1,6 @@
-#from functools import cmp_to_key
-#from collections import deque
 import math
-
-mod = int(10**9 + 7)
-N = int(1e5) + 10
+mod = int(10 ** 9 + 7)
+N = int(100000.0) + 10
 
 
 def main():
@@ -22,7 +19,6 @@ def main():
     d['-'] = i
     d['_'] = i + 1
     s = input()
-
     ans = 1
     temp = [0 for i in range(64)]
     for i in range(64):

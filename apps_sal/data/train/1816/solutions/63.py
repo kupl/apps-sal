@@ -1,8 +1,9 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         result = []
         tracker = {}
-        for person, time in zip(keyName, keyTime):
+        for (person, time) in zip(keyName, keyTime):
             try:
                 if tracker[person] and person not in result:
                     tracker[person].append(time)
@@ -19,7 +20,7 @@ class Solution:
                                 l = int(lh + tracker[person][i - 1].split(':')[1])
                                 c = int(ch + tracker[person][i].split(':')[1])
                                 r = int(rh + tracker[person][i + 1].split(':')[1])
-                                diff = (c - l) + (r - c)
+                                diff = c - l + (r - c)
                                 if diff <= 100:
                                     result.append(person)
                                     break

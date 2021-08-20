@@ -16,6 +16,7 @@ class ThroneInheritance:
         return None
 
     def getInheritanceOrder(self) -> List[str]:
+
         def successor(node, order, order_set):
             if not self.g[node] or set(self.g[node]) & order_set == set(self.g[node]):
                 if node == self.king_name:
@@ -36,10 +37,3 @@ class ThroneInheritance:
             successor(order[-1], order, order_set)
             added = prev_size < len(order)
         return [o for o in order if o not in self.d]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

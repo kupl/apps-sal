@@ -5,6 +5,6 @@ def mean_vs_median(numbers):
     if mean == median:
         return 'same'
     elif mean > median:
-        return "mean"
+        return 'mean'
     else:
-        return "median"
+        return 'median'

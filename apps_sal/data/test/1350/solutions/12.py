@@ -1,6 +1,5 @@
 from collections import Counter
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -9,7 +8,7 @@ if not USE_STDIO:
 
 
 def main():
-    n, k = list(map(int, input().split(' ')))
+    (n, k) = list(map(int, input().split(' ')))
     s = input()
     cnts = Counter(s)
     ans = n

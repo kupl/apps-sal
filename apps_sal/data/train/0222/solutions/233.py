@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A):
         sA = set(A)
         last = A[-1]

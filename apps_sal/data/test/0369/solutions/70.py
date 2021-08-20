@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = input()
 roulette = []
-
 cur = n
 while cur > m:
     for a in range(m):

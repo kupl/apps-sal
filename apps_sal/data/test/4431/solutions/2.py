@@ -2,9 +2,7 @@ from math import *
 import os
 import sys
 from io import BytesIO
-
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 a = set(input().split())
 n += 1

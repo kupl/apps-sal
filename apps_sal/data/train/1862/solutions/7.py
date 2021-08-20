@@ -1,4 +1,5 @@
 class Solution:
+
     def pancakeSort(self, arr: List[int]) -> List[int]:
         res = []
         A = arr
@@ -6,5 +7,4 @@ class Solution:
             i = A.index(x)
             res.extend([i + 1, x])
             A = A[x - 1:i:-1] + A[:i]
-
         return res

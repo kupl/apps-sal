@@ -3,7 +3,7 @@ from sys import stdin
 n = int(input())
 g = defaultdict(list)
 for i in range(n - 1):
-    h, m = list(map(int, stdin.readline().split()))
+    (h, m) = list(map(int, stdin.readline().split()))
     g[h - 1].append(m - 1)
     g[m - 1].append(h - 1)
 vis = [0] * n
@@ -37,6 +37,5 @@ while q:
             c[i] = p[j]
             j += 1
             q.append(i)
-
 print(max(c))
 print(*c)

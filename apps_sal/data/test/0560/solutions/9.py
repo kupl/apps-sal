@@ -3,7 +3,7 @@ import sys
 
 def main():
     cake = []
-    r, c = list(map(int, sys.stdin.readline().split()))
+    (r, c) = list(map(int, sys.stdin.readline().split()))
     for i in range(r):
         cake.append(sys.stdin.readline().strip())
     row_count = 0
@@ -28,7 +28,7 @@ def main():
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

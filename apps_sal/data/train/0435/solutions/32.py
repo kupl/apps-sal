@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def subarraysDivByK(self, nums: List[int], k: int) -> int:
         count = 0
         mods = [0]

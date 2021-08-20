@@ -1,9 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 count = [0] * 100
 b = [0] * 200005
-for i, v in enumerate(a):
+for (i, v) in enumerate(a):
     tot = 0
     while v % 2 == 0:
         v //= 2

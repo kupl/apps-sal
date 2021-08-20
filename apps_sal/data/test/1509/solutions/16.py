@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-
 ans = a[0] * (n - a[0] + 1)
 for i in range(1, n):
     if a[i] > a[i - 1]:

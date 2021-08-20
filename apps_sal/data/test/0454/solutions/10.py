@@ -8,10 +8,10 @@ for i in range(N):
         X.append([num])
     else:
         X[-1].append(num)
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 if k % 2 == 1:
-    print((0))
+    print(0)
 elif len(X[n - 1]) > k // 2:
-    print((X[n - 1][k // 2]))
+    print(X[n - 1][k // 2])
 else:
-    print((0))
+    print(0)

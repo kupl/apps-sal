@@ -1,7 +1,7 @@
 from sys import stdin
 c = int(stdin.readline().strip())
 for cas in range(c):
-    n, m = list(map(int, stdin.readline().strip().split()))
+    (n, m) = list(map(int, stdin.readline().strip().split()))
     s = list(map(int, stdin.readline().strip().split()))
     sm = 0
     ans = []
@@ -16,12 +16,12 @@ for cas in range(c):
             sm = 0
             m -= 1
     if ind == -1:
-        print("NO")
+        print('NO')
         continue
-    sm = sum(s[ind::])
+    sm = sum(s[ind:])
     if sm % 2 != 0:
         ans.append(n)
-        print("YES")
+        print('YES')
         print(*ans)
     else:
-        print("NO")
+        print('NO')

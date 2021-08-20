@@ -2,20 +2,17 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         if len(points) < 4:
             return 0
-        # x1,y2  x2,y2
-        # x1,y1  x2,y1
-
         xp = defaultdict(set)
         yp = defaultdict(set)
-        for x, y in points:
+        for (x, y) in points:
             xp[x].add(y)
             yp[y].add(x)
-
         a_min = None
-        for x1, ys in xp.items():
+        for (x1, ys) in xp.items():
             if len(ys) < 2:
                 continue
             for y1 in ys:

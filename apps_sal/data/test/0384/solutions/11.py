@@ -1,10 +1,10 @@
 n = int(input())
 s = input()
-s = s + "W"
+s = s + 'W'
 l = []
 q = 0
 for i in range(len(s)):
-    if s[i] == "B":
+    if s[i] == 'B':
         q = q + 1
     else:
         if q != 0:
@@ -12,4 +12,4 @@ for i in range(len(s)):
         q = 0
 print(len(l))
 for i in range(len(l)):
-    print(str(l[i]) + " ", end="")
+    print(str(l[i]) + ' ', end='')

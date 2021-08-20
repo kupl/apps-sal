@@ -10,12 +10,13 @@ def f(s):
     return r
 
 
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-t, = R()
+(t,) = R()
 for _ in range(t):
-    n, k = R()
+    (n, k) = R()
     n += 3
-    s = ''.join(f'{x%2}' for x in R())
-    print(min(f(s + c) for c in '01') % n - 1)
+    s = ''.join((f'{x % 2}' for x in R()))
+    print(min((f(s + c) for c in '01')) % n - 1)

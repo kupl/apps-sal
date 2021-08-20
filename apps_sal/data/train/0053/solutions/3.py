@@ -1,13 +1,12 @@
 import sys
-
 Q = int(sys.stdin.readline().strip())
 for q in range(0, Q):
-    n, s = sys.stdin.readline().strip().split()
+    (n, s) = sys.stdin.readline().strip().split()
     n = int(n)
     U = [1]
     D = [1]
     for i in range(0, n - 1):
-        if s[i] == "<":
+        if s[i] == '<':
             U[-1] = U[-1] + 1
             D.append(1)
         else:
@@ -21,7 +20,7 @@ for q in range(0, Q):
             A.append(str(m - U[i] + j + 1))
         m = m - U[i]
         i = i + 1
-    print(" ".join(A))
+    print(' '.join(A))
     m = 0
     i = 0
     A = []
@@ -30,4 +29,4 @@ for q in range(0, Q):
             A.append(str(m + D[i] - j))
         m = m + D[i]
         i = i + 1
-    print(" ".join(A))
+    print(' '.join(A))

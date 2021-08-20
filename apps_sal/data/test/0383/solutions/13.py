@@ -7,7 +7,6 @@ def count(w, k1):
         return 1
     elif w < 0:
         return 0
-
     ans = 0
     for i in range(1, k1 + 1):
         if w - i < 0:
@@ -23,7 +22,7 @@ def count(w, k1):
     return ans
 
 
-n, k, d = map(int, input().split())
+(n, k, d) = map(int, input().split())
 x[0] = 1
 ans = count(n, k)
 b = [False] * 101

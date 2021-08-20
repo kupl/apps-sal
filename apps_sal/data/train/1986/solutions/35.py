@@ -1,12 +1,13 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         used = set()
-        result = [None] * int(2**n)
+        result = [None] * int(2 ** n)
         result[0] = start
         used.add(start)
         for i in range(1, len(result)):
             for x in range(n):
-                bit = bool(result[i - 1] & (1 << x))
+                bit = bool(result[i - 1] & 1 << x)
                 if bit:
                     val = result[i - 1] - (1 << x)
                 else:

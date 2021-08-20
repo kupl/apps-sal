@@ -1,5 +1,4 @@
 def feast(beast, dish):
-    # your code here
     pass
     indexBeast = len(beast)
     indexDish = len(dish)
@@ -7,7 +6,6 @@ def feast(beast, dish):
     beastLast = beast[indexBeast - 1]
     dish1 = dish[0]
     dishLast = dish[indexDish - 1]
-
     if beast1 == dish1 and beastLast == dishLast:
         return True
     else:

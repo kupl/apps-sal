@@ -1,7 +1,6 @@
-w, h = map(int, input().split())
-u1, d1 = map(int, input().split())
-u2, d2 = map(int, input().split())
-
+(w, h) = map(int, input().split())
+(u1, d1) = map(int, input().split())
+(u2, d2) = map(int, input().split())
 while h > 0:
     if h == d1:
         w = max(0, w + h - u1)
@@ -10,5 +9,4 @@ while h > 0:
     else:
         w += h
     h -= 1
-
 print(w)

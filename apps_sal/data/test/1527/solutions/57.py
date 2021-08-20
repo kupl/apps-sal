@@ -1,7 +1,7 @@
 import math
 import sys
 sys.setrecursionlimit(10000)
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 S = []
 for i in range(H):
     S.append(str(input()))
@@ -10,20 +10,20 @@ for i in range(H):
 def main(l, d, cnt):
     tmp = []
     for n in l:
-        i, j = n[0], n[1]
-        if (0 < i) and (S[i - 1][j] == '.'):
+        (i, j) = (n[0], n[1])
+        if 0 < i and S[i - 1][j] == '.':
             if d[i - 1][j] > d[i][j] + 1:
                 d[i - 1][j] = d[i][j] + 1
                 tmp.append([i - 1, j])
-        if (i < H - 1) and (S[i + 1][j] == '.'):
+        if i < H - 1 and S[i + 1][j] == '.':
             if d[i + 1][j] > d[i][j] + 1:
                 d[i + 1][j] = d[i][j] + 1
                 tmp.append([i + 1, j])
-        if (0 < j) and (S[i][j - 1] == '.'):
+        if 0 < j and S[i][j - 1] == '.':
             if d[i][j - 1] > d[i][j] + 1:
                 d[i][j - 1] = d[i][j] + 1
                 tmp.append([i, j - 1])
-        if (j < W - 1) and (S[i][j + 1] == '.'):
+        if j < W - 1 and S[i][j + 1] == '.':
             if d[i][j + 1] > d[i][j] + 1:
                 d[i][j + 1] = d[i][j] + 1
                 tmp.append([i, j + 1])

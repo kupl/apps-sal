@@ -1,7 +1,6 @@
-# cook your dish here
 import math
 for _ in range(int(input())):
-    n, k = [int(j) for j in input().split()]
+    (n, k) = [int(j) for j in input().split()]
     l = list(map(int, input().split()))
     sum = l[0]
     for i in range(n - 1):
@@ -10,12 +9,11 @@ for _ in range(int(input())):
                 sum -= l[i + 1]
             else:
                 sum += l[i + 1]
+        elif sum >= 0:
+            sum += l[i + 1]
         else:
-            if sum >= 0:
-                sum += l[i + 1]
-            else:
-                sum -= l[i + 1]
+            sum -= l[i + 1]
     if math.fabs(sum) >= k:
-        print("1")
+        print('1')
     else:
-        print("2")
+        print('2')

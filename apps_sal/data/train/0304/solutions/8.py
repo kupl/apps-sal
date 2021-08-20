@@ -1,4 +1,4 @@
-'''
+"""
     a -> b if
     a = 10
     b = 12
@@ -39,11 +39,13 @@
     3
     O(nlogn)
     O(1)
-'''
+"""
 
 
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
+
         def invert(a):
             return -1 * a
         ages.sort(key=invert)
@@ -53,9 +55,8 @@ class Solution:
             if age <= 14:
                 break
             num_requests += age_request_map[age]
-            # need to double count for same ages
             age_request_map[age] += 1
-            lowest_age = floor(age * .5 + 7) + 1
+            lowest_age = floor(age * 0.5 + 7) + 1
             for i in range(lowest_age, age + 1):
                 age_request_map[i] += 1
         return num_requests

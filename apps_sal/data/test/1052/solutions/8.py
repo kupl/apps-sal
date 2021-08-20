@@ -1,4 +1,3 @@
-
 """
 while 1:
     n, k = map(int, input().split())
@@ -13,7 +12,7 @@ while 1:
     
     print(solve(n, k))
 """
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 1
 if k >= 2:
     ans += n * (n - 1) // 2

@@ -1,5 +1,4 @@
-n, *h = list(map(int, open(0).read().split()))
-
+(n, *h) = list(map(int, open(0).read().split()))
 ans = 0
 i = 0
 while i < n:

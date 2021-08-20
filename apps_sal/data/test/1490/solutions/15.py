@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 arr = [int(x) for x in input().split()]
 arr.append(1000000002)
 arr = sorted(arr)

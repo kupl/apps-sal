@@ -1,14 +1,16 @@
 import sys
 from math import *
 from fractions import gcd
-def readints(): return list(map(int, input().strip('\n').split()))
+
+
+def readints():
+    return list(map(int, input().strip('\n').split()))
 
 
 n = int(input())
 s = input()
 a = list(readints())
-a = [0] + a  # 1-index
-
+a = [0] + a
 cache = {}
 
 
@@ -18,14 +20,12 @@ def solve(i, j, k):
     if i == j:
         return a[k]
     if (i, j, k) in cache:
-        return cache[(i, j, k)]
-
+        return cache[i, j, k]
     best = a[k] + solve(i + 1, j, 1)
     for x in range(i + 1, j + 1):
         if s[i] == s[x]:
             best = max(best, solve(i + 1, x - 1, 1) + solve(x, j, k + 1))
-    # print(i,j,best)
-    cache[(i, j, k)] = best
+    cache[i, j, k] = best
     return best
 
 

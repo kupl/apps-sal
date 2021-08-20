@@ -1,8 +1,6 @@
-n, k = list(map(int, input().split()))
-
-if (k == 1 and n != 1) or k > n:
+(n, k) = list(map(int, input().split()))
+if k == 1 and n != 1 or k > n:
     print(-1)
-
 elif n == 1:
     print('a')
 else:
@@ -19,11 +17,8 @@ else:
         else:
             s1.append('b')
             s2.append('a')
-
     s1 = s1[::-1]
     s2 = s2[::-1]
-
     s1 = ''.join(s1)
     s2 = ''.join(s2)
-
     print(min(s1, s2))

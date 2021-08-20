@@ -1,9 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 seq = list(map(int, input().split()))
-
 seq = sorted(seq)
-
-
 res = -1
 if k == 0:
     res = seq[0] - 1

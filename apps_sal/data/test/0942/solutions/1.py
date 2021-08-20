@@ -2,10 +2,8 @@ import math
 
 
 def __starting_point():
-
     n = int(input())
     arr = [int(x) for x in input().split()]
-
     ans = []
     d = {}
     c = {}
@@ -31,10 +29,10 @@ def __starting_point():
         if d[i] != 0:
             ans = False
     if ans:
-        print("Possible")
+        print('Possible')
         print(*b)
     else:
-        print("Impossible")
+        print('Impossible')
 
 
 __starting_point()

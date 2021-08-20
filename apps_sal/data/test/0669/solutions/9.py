@@ -1,8 +1,7 @@
 import bisect
-n, m = list(map(int, input().split()))
-# a=list(map(int,input().split()))
+(n, m) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
-a1, a2 = [], []
+(a1, a2) = ([], [])
 n1 = n // 2
 
 
@@ -24,12 +23,9 @@ def sums2(i, sum=0):
 
 sums1(0)
 sums2(n1)
-
 ans = 0
 end = len(a2) - 1
-
 a1 = sorted(set(a1))
-
 for i in a2:
     j = bisect.bisect_left(a1, m - i)
     if ans < a1[j - 1] + i:

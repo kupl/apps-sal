@@ -6,7 +6,7 @@ for i in range(N):
 ans = sum(A)
 Q = int(input())
 for _ in range(Q):
-    B, C = map(int, input().split())
+    (B, C) = map(int, input().split())
     cnt[C] += cnt[B]
     ans += (C - B) * cnt[B]
     cnt[B] = 0

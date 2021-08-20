@@ -6,7 +6,6 @@ def main():
     m = int(input())
     if n < 50:
         m = m % pow(2, n)
-
     print(m)
 
 

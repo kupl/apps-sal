@@ -1,7 +1,8 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        n1, n2 = nums1, nums2
-        s, t, sum1, sum2 = len(n1) - 1, len(n2) - 1, 0, 0
+        (n1, n2) = (nums1, nums2)
+        (s, t, sum1, sum2) = (len(n1) - 1, len(n2) - 1, 0, 0)
         li = []
         ans = 0
         while s >= 0 and t >= 0:
@@ -13,18 +14,11 @@ class Solution:
                 t -= 1
             else:
                 ans += max(sum1 + n1[s], sum2 + n1[s])
-                # li.append((sum1+n1[s],sum2+n1[s]))
                 sum1 = sum2 = 0
                 s -= 1
                 t -= 1
         if s >= 0:
             ans += max(sum1 + sum(n1[:s + 1]), sum2)
-            # li.append((sum1+sum(n1[:s+1]),sum2))
         if t >= 0:
             ans += max(sum1, sum2 + sum(n2[:t + 1]))
-            # li.append((sum1,sum2+sum(n2[:t+1])))
-        # ans = 0
-        # for l in li:
-        #     ans += max(l[0],l[1])
-        #     ans = ans % (10**9+7)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

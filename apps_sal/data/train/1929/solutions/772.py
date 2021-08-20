@@ -22,11 +22,5 @@ class StreamChecker:
                 new_working_list.append(new_working_ptr)
                 if StreamChecker.END in new_working_ptr:
                     is_word = True
-
         self.working_list = new_working_list
         return is_word
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

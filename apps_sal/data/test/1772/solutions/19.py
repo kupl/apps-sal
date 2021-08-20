@@ -11,13 +11,12 @@ for i in range(n):
         ma = k
     else:
         ma = d
-while (k > 2):
+while k > 2:
     k -= 2
     d += 1
-    if (k < d):
+    if k < d:
         if k > ma:
             ma = k
-    else:
-        if d > ma:
-            ma = d
+    elif d > ma:
+        ma = d
 print(ma)

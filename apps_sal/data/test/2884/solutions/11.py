@@ -1,10 +1,12 @@
 class Solution:
+
     def combinationSum2(self, candidates, target):
         """
         :type candidates: List[int]
         :type target: int
         :rtype: List[List[int]]
         """
+
         def backtracing(nums, target, idx, path, ret):
             if not target:
                 if path not in ret:

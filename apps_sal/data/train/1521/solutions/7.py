@@ -1,4 +1,3 @@
-# cook your dish here
 def tourneyscore(a):
     scorelist = []
     for i in range(len(a)):
@@ -22,7 +21,7 @@ def tourneyscore(a):
 for T in range(int(input())):
     singerlist = []
     for N in range(int(input())):
-        L, U = input().split()
-        L, U = int(L), int(U)
+        (L, U) = input().split()
+        (L, U) = (int(L), int(U))
         singerlist.append([L, U])
     tourneyscore(singerlist)

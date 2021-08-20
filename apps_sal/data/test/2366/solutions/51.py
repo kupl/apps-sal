@@ -5,7 +5,6 @@ num = 0
 for i in Alst:
     num = num + Blst[i]
     Blst[i] += 1
-
 for i in Alst:
     k = Blst[i] - 1
     print(num - k)

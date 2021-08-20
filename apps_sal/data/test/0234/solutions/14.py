@@ -1,12 +1,9 @@
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 R = ['.'] * m
 nR = [[0] * n for i in range(m)]
-
 for i in range(m):
     A = list(input())
-    # A.replace('.','0')
     R[i] = A[:]
-
 for i in range(m):
     for j in range(n):
         if R[i][j] == '*':
@@ -16,7 +13,6 @@ for i in range(m):
                         continue
                     if 0 <= i + ii < m and 0 <= j + jj < n:
                         nR[i + ii][j + jj] += 1
-# print(nR)
 v = 1
 for i in range(m):
     for j in range(n):
@@ -28,8 +24,6 @@ for i in range(m):
             continue
         if int(R[i][j]) != nR[i][j]:
             v = 0
-
-
 if v == 1:
     print('YES')
 else:

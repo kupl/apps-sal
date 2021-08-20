@@ -1,11 +1,12 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-t, = R()
+(t,) = R()
 for _ in range(t):
-    n, m = R()
+    (n, m) = R()
     b = [0] * m
     for _ in range(n):
-        a = *R(),
-        b = *map(max, a, (0, *b), b, (*b[1:], 0)),
-        print(''.join('10'[x < y] for x, y in zip(a, b)))
+        a = (*R(),)
+        b = (*map(max, a, (0, *b), b, (*b[1:], 0)),)
+        print(''.join(('10'[x < y] for (x, y) in zip(a, b))))

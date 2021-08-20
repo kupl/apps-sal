@@ -2,9 +2,8 @@ n = int(input())
 pointer = 1
 series = [0] * n
 stack = []
-
 reset = 0
-for i in range(1, (n * 2) + 1):
+for i in range(1, n * 2 + 1):
     inp = input().split(' ')
     if inp[0] == 'add':
         number = int(inp[1])

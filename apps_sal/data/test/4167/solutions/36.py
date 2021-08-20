@@ -1,6 +1,4 @@
-n, k = list(map(int, input().split()))
-
-
+(n, k) = list(map(int, input().split()))
 kcd = 0
 kcd_half = 0
 for i in range(1, n + 1):
@@ -11,5 +9,4 @@ for i in range(1, n + 1):
             kcd += 1
         if i % k == k // 2:
             kcd_half += 1
-
-print((kcd * kcd * kcd + kcd_half * kcd_half * kcd_half))
+print(kcd * kcd * kcd + kcd_half * kcd_half * kcd_half)

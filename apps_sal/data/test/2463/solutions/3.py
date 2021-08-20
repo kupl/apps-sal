@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 x = sorted(list(map(int, input().split())))
-a, b = x[:n // 2], x[n // 2:]
+(a, b) = (x[:n // 2], x[n // 2:])
 tmp = []
 for i in range(n // 2):
     tmp.append(b[i])

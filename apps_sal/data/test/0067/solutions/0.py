@@ -1,4 +1,4 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 if z == 0:
     if x == y:
         print('0')
@@ -6,10 +6,9 @@ if z == 0:
         print('+')
     else:
         print('-')
+elif x > y + z:
+    print('+')
+elif x + z < y:
+    print('-')
 else:
-    if x > y + z:
-        print('+')
-    elif x + z < y:
-        print('-')
-    else:
-        print('?')
+    print('?')

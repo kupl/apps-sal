@@ -1,5 +1,5 @@
-# cook your dish here
 class Graph:
+
     def __init__(self, V):
         self.V = V
         self.adj = [[] for i in range(V)]
@@ -7,7 +7,6 @@ class Graph:
     def dfs(self, temp, v, visited):
         visited[v] = True
         temp.append(v)
-
         for i in self.adj[v]:
             if visited[i] == False:
                 temp = self.dfs(temp, i, visited)
@@ -30,9 +29,9 @@ class Graph:
 
 
 for _ in range(int(input())):
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     g = Graph(N)
     for i in range(M):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         g.addEdge(a, b)
     print(len(g.connectedComponents()))

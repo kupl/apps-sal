@@ -1,5 +1,5 @@
 from math import sqrt
-p, y = map(int, input().split())
+(p, y) = map(int, input().split())
 ans = y
 while ans != 1:
     find = True

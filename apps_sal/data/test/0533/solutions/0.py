@@ -5,7 +5,6 @@ k2 = int(input())
 n = int(input())
 ans1 = 0
 ans2 = 0
-
 if k1 < k2:
     ans1 += min(n // k1, a1)
     ans1 += (n - ans1 * k1) // k2

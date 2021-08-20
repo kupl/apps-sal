@@ -6,4 +6,4 @@ while n >= 4:
 l.append(n)
 l = list(map(str, l))
 print(len(l))
-print(" ".join(l))
+print(' '.join(l))

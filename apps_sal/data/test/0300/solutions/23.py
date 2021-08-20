@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-
 sum = 0
 a = sorted(a)
 for c in a:

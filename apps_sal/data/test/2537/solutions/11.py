@@ -17,7 +17,7 @@ for _ in range(int(input())):
         else:
             j += 1
     if i != ls:
-        print("NO")
+        print('NO')
     else:
         flag = 0
         for i in range(lt):
@@ -31,5 +31,4 @@ for _ in range(int(input())):
                 except:
                     flag = 1
                     break
-        # print(arr,flag)
-        print("YES" if flag == 0 else "NO")
+        print('YES' if flag == 0 else 'NO')

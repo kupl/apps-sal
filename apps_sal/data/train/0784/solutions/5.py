@@ -1,4 +1,4 @@
-n, m, p = (int(e) for e in input().split())
+(n, m, p) = (int(e) for e in input().split())
 
 
 def add(d, k):
@@ -17,22 +17,18 @@ def get(d, k):
 
 dic2 = {}
 dic = {}
-
-
 sumd = {}
 for i in range(n):
     dic[i] = []
     sumd[i] = m - 1
 for i in range(p):
-    a, b = (int(e) for e in input().split())
+    (a, b) = (int(e) for e in input().split())
     if b == 1:
         sumd[a - 1] -= 1
     if b == m:
         sumd[a - 1] += 1
     add(dic2, (a - 1, b - 1))
     dic[a - 1].append(b - 1)
-
-
 for i in range(n):
     if len(dic[i]) <= 1:
         print(sumd[i])

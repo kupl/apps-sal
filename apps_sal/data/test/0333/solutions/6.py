@@ -1,8 +1,5 @@
-
-
 A = input()
 B = input()
-
 if A == B:
     print(-1)
 else:

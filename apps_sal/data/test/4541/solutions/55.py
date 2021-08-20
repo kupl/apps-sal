@@ -1,5 +1,4 @@
 c = str(input())
-
 if c in 'aeiou':
     print('vowel')
 else:

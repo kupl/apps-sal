@@ -1,11 +1,8 @@
 from collections import deque
-
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 connected = [set() for i in range(n + 1)]
-
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     connected[a].add(b)
     connected[b].add(a)
 
@@ -25,6 +22,5 @@ def bfs(x):
 
 print('Yes')
 ans = bfs(1)[2:]
-
 for i in ans:
     print(i)

@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     line = input()
     final = 0

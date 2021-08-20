@@ -1,4 +1,4 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 m = min(A, B)
 l = []
 for i in range(1, m + 1):

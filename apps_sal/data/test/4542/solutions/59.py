@@ -1,8 +1,5 @@
-# 81 C - 一次元リバーシ
 S = input()
-S = S + '1'  # 番兵
-
-# 連続する文字をカウント
+S = S + '1'
 cnt = []
 conti = 1
 for i in range(1, len(S)):

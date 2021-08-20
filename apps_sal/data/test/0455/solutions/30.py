@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import math
 
 
@@ -12,28 +11,28 @@ def binary(n, m):
 
 
 def calc(u, v, m):
-    result = ""
+    result = ''
     u_binary = binary(u, m)
     v_binary = binary(v, m)
     for i in range(m):
         if u_binary[i] == 1 and v_binary[i] == 1:
-            result += "R"
+            result += 'R'
         elif u_binary[i] == 0 and v_binary[i] == 0:
-            result += "L"
+            result += 'L'
         elif u_binary[i] == 1 and v_binary[i] == 0:
-            result += "U"
+            result += 'U'
         else:
-            result += "D"
+            result += 'D'
     return result
 
 
 U = []
 V = []
 N = int(input())
-even, odd = 0, 0
+(even, odd) = (0, 0)
 M = 0
 for p in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     u = x + y
     v = x - y
     U.append(u)
@@ -43,18 +42,16 @@ for p in range(N):
         even += 1
     else:
         odd += 1
-
 if even >= 1 and odd >= 1:
-    print((-1))
-
+    print(-1)
 else:
     m = math.floor(math.log2(M)) + 1 if M != 0 else 1
     lst = [2 ** i for i in range(m - 1, -1, -1)]
     if odd == 0:
         lst.append(1)
-    print((len(lst)))
-    print((" ".join(map(str, lst))))
-    for u, v in zip(U, V):
+    print(len(lst))
+    print(' '.join(map(str, lst)))
+    for (u, v) in zip(U, V):
         u = (u + 2 ** m - 1) // 2
         v = (v + 2 ** m - 1) // 2
-        print((calc(u, v, m) + "R" if odd == 0 else calc(u, v, m)))
+        print(calc(u, v, m) + 'R' if odd == 0 else calc(u, v, m))

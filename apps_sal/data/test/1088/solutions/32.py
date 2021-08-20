@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.rank = [0] * n
@@ -35,16 +36,14 @@ class UnionFind:
         return self.size[x]
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 UFX = UnionFind(N)
 UFY = UnionFind(N)
 mod = 998244353
-
 fact = [1]
 for i in range(1, N + 1):
     fact.append(fact[-1] * i)
-
 for i in range(1, N):
     for j in range(i):
         flag = True
@@ -62,7 +61,6 @@ for i in range(1, N):
         if flag:
             UFX.union(i, j)
 ans = 1
-
 for i in range(N):
     if UFX.find(i) == i:
         ans *= fact[UFX.siz(i)]
@@ -70,5 +68,4 @@ for i in range(N):
     if UFY.find(i) == i:
         ans *= fact[UFY.siz(i)]
         ans %= mod
-
 print(ans)

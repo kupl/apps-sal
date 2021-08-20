@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if n == m:
             return n
         lengths = [0 for _ in range(n + 2)]
         last_seen = -1
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             left_length = lengths[i - 1]
             right_length = lengths[i + 1]
             new_length = left_length + right_length + 1

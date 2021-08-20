@@ -1,8 +1,6 @@
 s = input()
 n = len(s)
-
 N = 0
-
 if n % 2 == 0:
     N = n // 2
 else:
@@ -11,16 +9,16 @@ flag = True
 
 
 def check(l, r):
-    same = ["A", "H", "I", "M", "O", "o", "T", "U", "V", "v", "W", "w", "X", "x", "Y"]
-    if (l == r) and (l in same):
+    same = ['A', 'H', 'I', 'M', 'O', 'o', 'T', 'U', 'V', 'v', 'W', 'w', 'X', 'x', 'Y']
+    if l == r and l in same:
         return True
-    if l == "b" and r == "d":
+    if l == 'b' and r == 'd':
         return True
-    if l == "d" and r == "b":
+    if l == 'd' and r == 'b':
         return True
-    if l == "p" and r == "q":
+    if l == 'p' and r == 'q':
         return True
-    if l == "q" and r == "p":
+    if l == 'q' and r == 'p':
         return True
     return False
 
@@ -30,11 +28,9 @@ for i in range(N):
     right = n - 1 - i
     lc = s[left]
     rc = s[right]
-
-    if (not check(lc, rc)):
+    if not check(lc, rc):
         flag = False
-
 if flag:
-    print("TAK")
+    print('TAK')
 else:
-    print("NIE")
+    print('NIE')

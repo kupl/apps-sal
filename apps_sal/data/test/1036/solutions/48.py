@@ -1,7 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-
-n, s = 2 * n, 2 * s
+(n, s) = (2 * n, 2 * s)
 for _ in range(k):
     tmp = []
     for i in range(0, n, 2):

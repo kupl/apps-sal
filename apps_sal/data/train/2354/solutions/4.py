@@ -8,5 +8,4 @@ for i in range(n):
     for j in range(n):
         if want in l[i] + l[j]:
             works = True
-
-print("YES" if works else "NO")
+print('YES' if works else 'NO')

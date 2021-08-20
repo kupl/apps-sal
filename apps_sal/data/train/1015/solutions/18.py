@@ -1,11 +1,8 @@
-# cook your dish here
-# cook your dish here
 for case in range(int(input())):
     n = int(input())
-
     k = 2
     for i in range(0, n):
         for j in range(0, n):
-            print(k, end="")
+            print(k, end='')
             k += 2
-        print("")
+        print('')

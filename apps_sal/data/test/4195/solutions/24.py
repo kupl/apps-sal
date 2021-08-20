@@ -1,5 +1,5 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 if m != 100:
-    print((100**n) * m)
+    print(100 ** n * m)
 else:
-    print((100**n) * (m + 1))
+    print(100 ** n * (m + 1))

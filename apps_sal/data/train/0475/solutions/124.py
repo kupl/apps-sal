@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         new = []
         for i in range(len(nums)):
@@ -10,5 +11,5 @@ class Solution:
         ans = 0
         for i in range(left - 1, right):
             ans += new[i]
-        ans = ans % (10**9 + 7)
+        ans = ans % (10 ** 9 + 7)
         return ans

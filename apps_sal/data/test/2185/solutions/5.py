@@ -9,12 +9,12 @@ for rwerwe in range(q):
         if c[i] != 0:
             dupa[c[i]] = 0
     if len(dupa) > 1:
-        print("NO")
+        print('NO')
     if len(dupa) == 0:
-        print("YES")
+        print('YES')
     if len(dupa) == 1:
         if sum(c) < 0:
-            print("NO")
+            print('NO')
         else:
             for i in range(n):
                 if c[i] != 0:
@@ -25,6 +25,6 @@ for rwerwe in range(q):
                 if c[j] != 0:
                     end = j
             if (end - start + 1) * c[start] == sum(c):
-                print("YES")
+                print('YES')
             else:
-                print("NO")
+                print('NO')

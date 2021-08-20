@@ -1,6 +1,5 @@
 import string
-
-wp, bp = 0, 0
+(wp, bp) = (0, 0)
 for i in range(8):
     inStr = input()
     for p in list(inStr):
@@ -11,5 +10,4 @@ for i in range(8):
                 wp = wp + points
             else:
                 bp = bp + points
-
-wp > bp and print('White') or wp == bp and print('Draw') or wp < bp and print('Black')
+wp > bp and print('White') or (wp == bp and print('Draw')) or (wp < bp and print('Black'))

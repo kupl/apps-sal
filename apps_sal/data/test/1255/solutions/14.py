@@ -1,7 +1,5 @@
 n = int(input())
-
 r = 1
-
 last = ''
 for i in range(n):
     inp = input()
@@ -11,5 +9,4 @@ for i in range(n):
         x = 1
     r = max(r, x)
     last = inp
-
 print(r)

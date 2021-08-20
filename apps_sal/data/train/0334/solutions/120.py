@@ -2,13 +2,14 @@ import heapq
 
 
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         i = 1
         h = []
         summ = 0
         while i < len(s):
-            if(s[i] == s[i - 1]):
-                while(i < len(s) and s[i] == s[i - 1]):
+            if s[i] == s[i - 1]:
+                while i < len(s) and s[i] == s[i - 1]:
                     heapq.heappush(h, cost[i - 1])
                     i += 1
                 heapq.heappush(h, cost[i - 1])

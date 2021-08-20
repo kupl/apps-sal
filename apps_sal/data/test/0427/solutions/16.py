@@ -1,8 +1,6 @@
 from fractions import gcd
 3
-
-
-cnt1, cnt2, a, b = tuple(map(int, input().split()))
+(cnt1, cnt2, a, b) = tuple(map(int, input().split()))
 lcm = a * b // gcd(a, b)
 
 
@@ -15,10 +13,10 @@ def check(v):
     return rest >= cnt1 + cnt2 - c1 - c2
 
 
-left, right = 1, 10**18
+(left, right) = (1, 10 ** 18)
 while left + 1 < right:
     mid = (left + right) // 2
-    if (check(mid)):
+    if check(mid):
         right = mid
     else:
         left = mid

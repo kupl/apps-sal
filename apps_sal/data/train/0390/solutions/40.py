@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         res = [0] * (n + 1)
         res[1] = 1

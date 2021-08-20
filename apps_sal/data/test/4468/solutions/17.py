@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,8 +8,7 @@ MOD = 1000000007
 
 
 def main():
-    N, T, *t = list(map(int, read().split()))
-
+    (N, T, *t) = list(map(int, read().split()))
     ans = 0
     for i in range(N - 1):
         if t[i] + T > t[i + 1]:
@@ -18,9 +16,7 @@ def main():
         else:
             ans += T
     ans += T
-
     print(ans)
-
     return
 
 

@@ -1,6 +1,6 @@
 q = int(input())
 for __ in [0] * q:
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(input())
     q = k
     p = -1
@@ -15,13 +15,12 @@ for __ in [0] * q:
                 res.append('1')
                 q -= i - p
                 p += 1
+            elif q != 0:
+                res[i - q] = '0'
+                res.append('1')
+                q = 0
             else:
-                if q != 0:
-                    res[i - q] = '0'
-                    res.append('1')
-                    q = 0
-                else:
-                    res.append('0')
+                res.append('0')
         else:
             res.append(a[i])
     ans = ''.join(res)

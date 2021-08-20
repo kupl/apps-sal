@@ -14,7 +14,7 @@ def li():
 
 
 for t in range(ii()):
-    n, k = mi()
+    (n, k) = mi()
     a = [0] + li()
 
     def solve(a, k):
@@ -30,7 +30,6 @@ for t in range(ii()):
                 d.pop()
             d.append((i, dp[i]))
         return d[0][1]
-
     odd = solve([x if x % 2 else 0 for x in a], k)
     even = solve([0 if x % 2 else x for x in a], k)
     print(odd + even)

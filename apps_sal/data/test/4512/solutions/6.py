@@ -1,8 +1,8 @@
-
 from sys import stdin, stdout
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 S = list(stdin.readline().strip())
@@ -33,10 +33,9 @@ def sum(x, idx):
 for i in range(n):
     idx = ord(S[i]) - 97
     add(i + 1, 1, idx)
-
 for _ in range(Q):
     A = stdin.readline().split()
-    a, b, c = int(A[0]), int(A[1]), A[2]
+    (a, b, c) = (int(A[0]), int(A[1]), A[2])
     if a == 1:
         pre = ord(S[b - 1]) - 97
         cur = ord(c) - 97

@@ -1,6 +1,5 @@
 3
-
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [[int(i) for i in input().split()] for j in range(n)]
 s = n * m
 for i in range(n):
@@ -10,7 +9,6 @@ for i in range(n):
     white = m - black
     if white > 1:
         s += 2 ** white - white - 1
-
 b = [[a[i][j] for i in range(n)] for j in range(m)]
 for i in range(m):
     black = sum(b[i])
@@ -19,5 +17,4 @@ for i in range(m):
     white = n - black
     if white > 1:
         s += 2 ** white - white - 1
-
 print(s)

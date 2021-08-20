@@ -1,7 +1,7 @@
 def ind(S):
     L4 = list()
     for i in range(len(S)):
-        if S[len(S) - i - 1] == "1":
+        if S[len(S) - i - 1] == '1':
             L4.append(i)
     return set(L4)
 

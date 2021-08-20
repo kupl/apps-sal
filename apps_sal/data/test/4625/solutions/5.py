@@ -1,8 +1,8 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
     co = [0] * 26
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     reco = [0] * n
     s = input()
     a = list(map(int, input().split()))

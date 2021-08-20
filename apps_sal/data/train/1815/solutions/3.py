@@ -6,7 +6,6 @@ class Solution:
         self.calc_shift_times(shifts)
         for x in range(len(S)):
             ret += self.shift(S[x], shifts[x])
-
         return ret
 
     @classmethod
@@ -14,7 +13,6 @@ class Solution:
         ret = ord(c) + shift_times % 26
         if ret > cls.CODE_Z:
             ret -= 26
-
         return chr(ret)
 
     @staticmethod

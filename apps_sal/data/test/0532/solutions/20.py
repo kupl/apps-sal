@@ -1,7 +1,7 @@
 def solution():
     string = input()
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-    now = "a"
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    now = 'a'
     res = 0
     for i in range(len(string)):
         d = abs(alphabet.find(now) - alphabet.find(string[i]))

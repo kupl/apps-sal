@@ -15,10 +15,10 @@ def get_sum_counts(K):
 
 
 def main(lines):
-    '''
+    """
     S - Z = X + Y
-    '''
-    K, S = list(map(int, lines[0].split()))
+    """
+    (K, S) = list(map(int, lines[0].split()))
     count = 0
     sum_counts = get_sum_counts(K)
     for z in range(min(K, S) + 1):

@@ -1,6 +1,5 @@
 N = int(input())
 a = list(map(int, input().strip().split()))
-
 cnt = 0
 for n in range(N):
     while True:

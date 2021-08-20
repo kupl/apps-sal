@@ -4,19 +4,15 @@ def gcd(a, b):
     return gcd(b % a, a)
 
 
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [gcd(int(x), k) for x in input().split()]
-
 if k == 1:
-    print(((n + 1) * (n + 2)) // 2 - n - 1)
+    print((n + 1) * (n + 2) // 2 - n - 1)
 else:
     s = 0
     e = 0
-    total = ((n + 1) * (n + 2)) // 2 - 1 - n
-    # print(total)
-    #extra = {}
+    total = (n + 1) * (n + 2) // 2 - 1 - n
     c = 1
-
     while e < n:
         flag = False
         while c % k != 0 and e < n:

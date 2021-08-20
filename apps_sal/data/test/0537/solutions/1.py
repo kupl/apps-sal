@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = n // 2
 a = s // (k + 1)
 b = a * k

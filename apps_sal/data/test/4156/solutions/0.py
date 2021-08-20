@@ -1,10 +1,7 @@
-stops, cap = map(int, input().split())
-
+(stops, cap) = map(int, input().split())
 a = list(map(int, input().split()))
-
 start_max = cap
 start_min = 0
-
 current = 0
 for x in a:
     current += x

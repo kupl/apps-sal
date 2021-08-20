@@ -1,8 +1,9 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         subordinates = collections.defaultdict(list)
         self.res = 0
-        for i, v in enumerate(manager):
+        for (i, v) in enumerate(manager):
             subordinates[v].append(i)
 
         def dfs(manager, time):

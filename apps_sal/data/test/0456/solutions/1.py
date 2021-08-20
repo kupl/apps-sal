@@ -1,6 +1,5 @@
 n = int(input())
 s = input().strip()
-
 rez = ''
 i = 0
 while i < len(s):
@@ -13,5 +12,4 @@ while i < len(s):
     else:
         rez += s[i]
         i += 1
-
 print(rez)

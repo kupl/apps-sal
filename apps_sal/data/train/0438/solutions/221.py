@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         mcount = 0
@@ -18,7 +19,7 @@ class Solution:
                     mcount -= 1
                 if end - start + 1 == m:
                     mcount += 1
-                starts[start], ends[end] = end, start
+                (starts[start], ends[end]) = (end, start)
                 starts.pop(index + 1)
                 ends.pop(index - 1)
             elif index - 1 in ends:

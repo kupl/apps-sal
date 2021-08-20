@@ -10,10 +10,9 @@ def isqrt(x):
     n = int(x)
     if n <= 1:
         return n
-
-    r = 1 << ((n.bit_length() + 1) >> 1)
+    r = 1 << (n.bit_length() + 1 >> 1)
     while True:
-        newr = (r + n // r) >> 1
+        newr = r + n // r >> 1
         if newr >= r:
             return r
         r = newr
@@ -22,6 +21,5 @@ def isqrt(x):
 for i in range(int(input())):
     n = int(input())
     x = (isqrt(4 * 2 * n + 1) - 1) // 2
-
     x = x * (x + 1) // 2
     print(n - x)

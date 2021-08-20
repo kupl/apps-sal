@@ -3,13 +3,13 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    n, k = Input()
+    (n, k) = Input()
     s = input()
-    print("".join(ch.lower() if index == k else ch for index, ch in enumerate(s, 1)))
+    print(''.join((ch.lower() if index == k else ch for (index, ch) in enumerate(s, 1))))
 
 
 main()

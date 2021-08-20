@@ -17,11 +17,11 @@ for _ in range(T):
     N = int(input())
     A = list(map(int, input().split()))
     if N & 1:
-        print("Second")
+        print('Second')
     else:
         for v in list(Counter(A).values()):
             if v & 1:
-                print("First")
+                print('First')
                 break
         else:
-            print("Second")
+            print('Second')

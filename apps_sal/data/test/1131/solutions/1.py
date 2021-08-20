@@ -1,9 +1,9 @@
-a, b, w, x, c = list(map(int, input().split()))
+(a, b, w, x, c) = list(map(int, input().split()))
 poc = 0
 s = set()
 s.add(b)
-pa, pb, pc = a, b, c
-while (c > a):
+(pa, pb, pc) = (a, b, c)
+while c > a:
     c -= 1
     if b >= x:
         b = b - x
@@ -24,9 +24,7 @@ else:
     c = pc - poc
     a = pa - roz * kolko
     b = pb
-    # a,b,c,poc=pa,pb,pc,0
-    # print(a,b,w,x,c)
-    while (c > a):
+    while c > a:
         c -= 1
         if b >= x:
             b = b - x
@@ -34,5 +32,4 @@ else:
             a -= 1
             b = w - (x - b)
         poc += 1
-        # print(a,b,w,x,c)
     print(poc)

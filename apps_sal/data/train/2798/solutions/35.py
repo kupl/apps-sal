@@ -2,7 +2,7 @@ import string as str
 
 
 def to_alternating_case(string):
-    res = ""
+    res = ''
     for i in string:
         if i in str.ascii_lowercase:
             res += i.upper()

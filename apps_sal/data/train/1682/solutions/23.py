@@ -1,5 +1,3 @@
-
-# cook your dish here
 a = input().strip()
 r = []
 for i in range(len(a)):
@@ -18,4 +16,4 @@ for i in range(len(r)):
             c = r[j]
             r[j] = r[i]
             r[i] = c
-print("{}:{}-{}".format(r[-1][2], r[-1][0], r[-1][1]))
+print('{}:{}-{}'.format(r[-1][2], r[-1][0], r[-1][1]))

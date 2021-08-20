@@ -12,8 +12,6 @@ for i in range(1, len(a)):
             d = m
         m = 1
         j = i
-
 if m > d:
     d = m
-
 print(len(a) - d)

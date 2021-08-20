@@ -1,9 +1,8 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        mod = 10**9 + 7
-        # dp[i][j] records the value of sequence of i elements with j being the last element
+        mod = 10 ** 9 + 7
         dp = [[0] * 7 for _ in range(n + 1)]
-        # initialize
         dp[0][0] = 1
         for i in range(1, 7):
             dp[1][i] = 1

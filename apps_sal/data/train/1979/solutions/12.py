@@ -1,4 +1,5 @@
 class Solution:
+
     def largestTimeFromDigits(self, arr: List[int]) -> str:
         m1 = -1
         m = 0
@@ -25,35 +26,34 @@ class Solution:
                             m = a2
                             MA = 1
                     if MA == 1:
-                        if (10 * arr[i] + arr[j]) < 24 and (10 * arr[j] + arr[i]) < 24:
+                        if 10 * arr[i] + arr[j] < 24 and 10 * arr[j] + arr[i] < 24:
                             if max(10 * arr[i] + arr[j], 10 * arr[j] + arr[i]) > m1:
                                 m1 = max(10 * arr[i] + arr[j], 10 * arr[j] + arr[i])
                                 dict[m1] = m
                             elif max(10 * arr[i] + arr[j], 10 * arr[j] + arr[i]) == m1:
                                 if dict[m1] < m:
                                     dict[m1] = m
-                        elif (10 * arr[i] + arr[j]) < 24:
-                            if (10 * arr[i] + arr[j]) > m1:
-                                m1 = (10 * arr[i] + arr[j])
+                        elif 10 * arr[i] + arr[j] < 24:
+                            if 10 * arr[i] + arr[j] > m1:
+                                m1 = 10 * arr[i] + arr[j]
                                 dict[m1] = m
-                            elif (10 * arr[i] + arr[j]) == m1:
+                            elif 10 * arr[i] + arr[j] == m1:
                                 if dict[m1] < m:
                                     dict[m1] = m
-                        elif (10 * arr[j] + arr[i]) < 24:
-                            if (10 * arr[j] + arr[i]) > m1:
+                        elif 10 * arr[j] + arr[i] < 24:
+                            if 10 * arr[j] + arr[i] > m1:
                                 m1 = 10 * arr[j] + arr[i]
                                 dict[m1] = m
-                            elif (10 * arr[j] + arr[i]) == m1:
+                            elif 10 * arr[j] + arr[i] == m1:
                                 if dict[m1] < m:
                                     dict[m1] = m
         if m1 == -1:
             return ''
+        elif m1 // 10 == 0 and dict[m1] // 10 == 0:
+            return '0' + str(m1) + ':0' + str(dict[m1])
+        elif m1 // 10 == 0:
+            return '0' + str(m1) + ':' + str(dict[m1])
+        elif dict[m1] // 10 == 0:
+            return str(m1) + ':0' + str(dict[m1])
         else:
-            if m1 // 10 == 0 and dict[m1] // 10 == 0:
-                return '0' + str(m1) + ':0' + str(dict[m1])
-            elif m1 // 10 == 0:
-                return '0' + str(m1) + ':' + str(dict[m1])
-            elif dict[m1] // 10 == 0:
-                return str(m1) + ':0' + str(dict[m1])
-            else:
-                return str(m1) + ':' + str(dict[m1])
+            return str(m1) + ':' + str(dict[m1])

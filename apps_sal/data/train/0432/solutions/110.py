@@ -20,12 +20,12 @@ def is_possible_divide(heap, k):
         return True
     else:
         popped = []
-        prev, min_count = heappop(heap)
+        (prev, min_count) = heappop(heap)
         for i in range(k - 1):
             if not heap:
                 return False
             else:
-                value, count = heappop(heap)
+                (value, count) = heappop(heap)
                 if value != prev + 1:
                     return False
                 else:
@@ -39,10 +39,10 @@ def is_possible_divide(heap, k):
 
 
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
-        # heap = list(Counter(nums).items())
         heap = create_pairs(nums)
         print(heap)
         heapify(heap)

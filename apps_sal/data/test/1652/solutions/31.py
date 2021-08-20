@@ -14,7 +14,6 @@ while idx < n:
             idx += 1
     else:
         break
-
 if idx == n:
     print('YES')
 else:

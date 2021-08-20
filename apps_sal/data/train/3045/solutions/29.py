@@ -5,7 +5,6 @@ def elevator(left, right, call):
         r_dist *= -1
     if l_dist < 0:
         l_dist *= -1
-
     if r_dist <= l_dist:
         return 'right'
     else:

@@ -6,4 +6,4 @@ def parse_float(value):
         return None
 
 
-parse_float("1")
+parse_float('1')

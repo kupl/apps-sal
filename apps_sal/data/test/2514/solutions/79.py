@@ -8,7 +8,7 @@ for _ in range(Q):
     bc.append(list(map(int, input().split())))
 count = Counter(Alist)
 result = 0
-for key, value in count.items():
+for (key, value) in count.items():
     result += key * value
 for i in range(Q):
     if bc[i][0] in count.keys():

@@ -1,4 +1,3 @@
-
 intab = 'ąćęłńóśźż'
 outtab = 'acelnoszz'
 polish = str.maketrans(intab, outtab)

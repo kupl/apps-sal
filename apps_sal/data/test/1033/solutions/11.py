@@ -3,7 +3,7 @@ def sumi(a, b):
 
 
 def main():
-    n, H = list(map(int, input().split()))
+    (n, H) = list(map(int, input().split()))
     volh = (H + 1) * H // 2
     if n < volh:
         low = 0

@@ -2,4 +2,4 @@ def summation(num):
     return sum(range(num + 1))
 
 
-print((summation(5)))
+print(summation(5))

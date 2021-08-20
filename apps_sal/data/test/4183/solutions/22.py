@@ -12,5 +12,4 @@ arr = [int(input()) for _ in range(n)]
 ans = 1
 for i in arr:
     ans = lcm(ans, i)
-
 print(ans)

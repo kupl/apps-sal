@@ -1,8 +1,6 @@
-n, m, k = list(map(int, input().split()))
-
+(n, m, k) = list(map(int, input().split()))
 min_delta = min(k - 1, n - k)
 max_delta = max(k - 1, n - k)
-
 top = ((k - 1) * k + (n - k) * (n - k + 1)) // 2 + (max_delta - min_delta) * min_delta + max_delta + 1
 
 

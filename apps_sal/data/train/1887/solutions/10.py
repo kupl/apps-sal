@@ -18,7 +18,6 @@ class Solution:
             return 0
         n = len(M)
         self.parent = [i for i in range(n)]
-
         for i in range(n):
             for j in range(i + 1, n):
                 if M[i][j] == 1:
@@ -26,6 +25,5 @@ class Solution:
         friend_set = set()
         for i in range(n):
             friend_set.add(self.find(i))
-
         print(self.parent)
         return len(friend_set)

@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -21,7 +19,6 @@ def f(a, i):
         a[j] += t // 14
     for j in range(t % 14):
         a[(i + j + 1) % 14] += 1
-
     return sum((x for x in a if x % 2 == 0))
 
 

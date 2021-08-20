@@ -13,7 +13,6 @@ for i in range(N):
         middles.append(array[middle])
     else:
         one += array[middle]
-
 middles = sorted(middles)
 ONE = True
 for i in range(len(middles) - 1, -1, -1):

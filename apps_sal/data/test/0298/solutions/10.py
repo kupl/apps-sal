@@ -1,7 +1,7 @@
 import sys
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 z = n // k
 if z % 2 == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

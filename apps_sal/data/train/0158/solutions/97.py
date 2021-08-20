@@ -1,5 +1,7 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
+
         @lru_cache(None)
         def nei(x):
             i = 0
@@ -10,10 +12,10 @@ class Solution:
                 if x[j] == B[i]:
                     res.append(x[:i] + x[j] + x[i + 1:j] + x[i] + x[j + 1:])
             return res
-        q, seen = [(A, 0)], {A}
-        for x, d in q:
+        (q, seen) = ([(A, 0)], {A})
+        for (x, d) in q:
             if x == B:
                 return d
             for y in nei(x):
                 if y not in seen:
-                    seen.add(y), q.append((y, d + 1))
+                    (seen.add(y), q.append((y, d + 1)))

@@ -6,7 +6,7 @@ def I():
 
 
 for _ in range(int(I())):
-    n, m = list(map(int, I().split()))
+    (n, m) = list(map(int, I().split()))
     a = list(map(int, I().split()))
     if n > m or n == 2:
         print(-1)
@@ -14,7 +14,7 @@ for _ in range(int(I())):
         s = 2 * sum(a)
         b = sorted(a)
         i = a.index(b[0])
-        a[i] = 1e5
+        a[i] = 100000.0
         j = a.index(b[1])
         m -= n
         s += sum(b[:2]) * m

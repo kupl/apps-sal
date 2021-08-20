@@ -1,8 +1,10 @@
 class Solution:
+
     def __init__(self):
         self.memo = {0: False}
 
     def winnerSquareGame(self, n: int) -> bool:
+
         def rwsg(n, picks):
             if n not in self.memo:
                 out = False

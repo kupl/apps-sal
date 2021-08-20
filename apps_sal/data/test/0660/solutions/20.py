@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 import math
-n, b, p = list(map(int, input().split()))
+(n, b, p) = list(map(int, input().split()))
 b_sum = 0
 p_sum = p * n
 while n > 1:

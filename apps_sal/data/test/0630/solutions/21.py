@@ -1,12 +1,8 @@
-# python3
-# utf-8
-
 def solve():
-    n, k = (int(x) for x in input().split())
+    (n, k) = (int(x) for x in input().split())
     idx___parent = [int(x) - 1 for x in input().split()]
     idx___l_cl = [max(0, idx - k) for idx in range(n)]
     idx___r_op = [min(n, idx + k + 1) for idx in range(n)]
-
     idx___message_count = []
     for idx in range(n):
         curr_l_cl = idx___l_cl[idx]
@@ -25,6 +21,5 @@ def solve():
 
 
 t = 1
-# t = int(input())
 for _ in range(t):
     solve()

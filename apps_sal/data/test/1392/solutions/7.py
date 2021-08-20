@@ -1,4 +1,4 @@
-n, k = list(input().split())
+(n, k) = list(input().split())
 res_n_i = 0
 res = 0
 for i in range(int(n)):

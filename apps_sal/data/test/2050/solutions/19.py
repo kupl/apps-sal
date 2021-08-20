@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 z = []
 print((6 * x - 1) * y)
 for i in range(0, x):

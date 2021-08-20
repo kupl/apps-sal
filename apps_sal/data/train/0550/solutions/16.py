@@ -1,9 +1,9 @@
 import math
 t = int(input())
 for ti in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     mx = max(a, b)
-    bit = int((math.log(mx) / math.log(2)) + 1)
+    bit = int(math.log(mx) / math.log(2) + 1)
     num = pow(2, bit) - 1
     res = a ^ b
     cnt = 0
@@ -19,4 +19,4 @@ for ti in range(t):
         if ans > res:
             res = ans
             rot = cnt
-    print(str(rot) + " " + str(res))
+    print(str(rot) + ' ' + str(res))

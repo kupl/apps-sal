@@ -1,6 +1,5 @@
-n, m, k = [int(_) for _ in input().split()]
+(n, m, k) = [int(_) for _ in input().split()]
 a = [int(_) for _ in input().split()]
-
 b = k
 count = 0
 for obj in a[::-1]:
@@ -16,5 +15,4 @@ for obj in a[::-1]:
     else:
         b -= obj
         count += 1
-
 print(count)

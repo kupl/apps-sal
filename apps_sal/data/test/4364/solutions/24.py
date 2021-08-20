@@ -1,6 +1,5 @@
 S = int(input())
-
-flag = [0, 0]  # [YYMM, MMYY]
+flag = [0, 0]
 l = S // 100
 r = S % 100
 if 1 <= r and r <= 12:
@@ -14,4 +13,4 @@ elif flag == [0, 1]:
 elif flag == [1, 0]:
     print('YYMM')
 elif flag == [1, 1]:
-    print("AMBIGUOUS")
+    print('AMBIGUOUS')

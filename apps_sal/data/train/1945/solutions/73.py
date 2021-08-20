@@ -1,11 +1,12 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         positions = {}
         max_rows = 0
         for i in range(len(matrix)):
             zeros = []
             ones = []
-            for j, coin in enumerate(matrix[i]):
+            for (j, coin) in enumerate(matrix[i]):
                 if coin == 0:
                     zeros.append(j)
                 else:

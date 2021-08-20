@@ -1,8 +1,5 @@
-#!/bin/python3
-
 n = int(input().strip())
 arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
-
 INF = -100
 
 
@@ -16,31 +13,20 @@ answer_str_arr = []
 def dfs(first_index):
     num_we_can_send = arr[first_index]
     arr[first_index] = INF
-
-    #     to_send_arr = []
     for i in range(0, num_we_can_send):
         curr_max_ind = max_ind(arr)
-
         if arr[curr_max_ind] == INF:
             break
-
         answer_str_arr.append(str(first_index + 1) + ' ' + str(curr_max_ind + 1))
-
         dfs(curr_max_ind)
 
 
-# for ind in to_send_arr:
-#         bfs(ind)
-
-# arr[0] = INF
 dfs(0)
-
 is_huis = False
 for el in arr:
     if el > INF:
         is_huis = True
         break
-
 if is_huis:
     print('-1')
 else:

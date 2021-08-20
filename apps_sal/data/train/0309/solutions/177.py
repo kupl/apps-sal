@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A):
         dp = {}
         for i in range(len(A)):

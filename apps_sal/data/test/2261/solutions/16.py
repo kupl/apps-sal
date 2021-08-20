@@ -1,8 +1,7 @@
 def solve():
     K = int(input())
-
-    e = [["++", "**"], ["+*", "*+"]]
-    vs = ["+"]
+    e = [['++', '**'], ['+*', '*+']]
+    vs = ['+']
     for i in range(K):
         nv = []
         for j in range(2):
@@ -12,7 +11,6 @@ def solve():
                     x.append(e[j][0] if c == '+' else e[j][1])
                 nv.append(''.join(x))
         vs = nv
-
     for v in vs:
         print(v)
 

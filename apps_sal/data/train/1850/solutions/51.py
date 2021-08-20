@@ -1,7 +1,8 @@
 class Solution(object):
+
     def sumOfDistancesInTree(self, N, edges):
         graph = collections.defaultdict(set)
-        for u, v in edges:
+        for (u, v) in edges:
             graph[u].add(v)
             graph[v].add(u)
         count = [1] * N
@@ -19,7 +20,6 @@ class Solution(object):
                 if child != parent:
                     ans[child] = ans[node] - count[child] + N - count[child]
                     dfs2(child, node)
-
         dfs()
         dfs2()
         return ans

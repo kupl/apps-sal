@@ -25,20 +25,14 @@ class UnionFind:
         return self.find(x) == self.find(y)
 
 
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 xy = UnionFind(N)
-
 for _ in range(M):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     xy.unit(x, y)
-
 ans = 0
-
 for i in range(N):
     if xy.same_check(p[i], i + 1):
         ans += 1
-
 print(ans)

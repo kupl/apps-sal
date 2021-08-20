@@ -1,4 +1,4 @@
-alth = "abcdefghijklmnopqrstuvwxyz"
+alth = 'abcdefghijklmnopqrstuvwxyz'
 n = int(input())
 s = input()
 temp = [0] * 26

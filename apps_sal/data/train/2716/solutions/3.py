@@ -1,5 +1,5 @@
-tbl1 = str.maketrans("aeiou", "12345")
-tbl2 = str.maketrans("12345", "aeiou")
+tbl1 = str.maketrans('aeiou', '12345')
+tbl2 = str.maketrans('12345', 'aeiou')
 
 
 def encode(st):

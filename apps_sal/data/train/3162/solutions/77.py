@@ -5,9 +5,9 @@ def compare(s1, s2):
     except:
         return True
     if not comp1.isalpha():
-        comp1 = ""
+        comp1 = ''
     if not comp2.isalpha():
-        comp2 = ""
+        comp2 = ''
     comp1sum = 0
     comp2sum = 0
     for i in comp1:

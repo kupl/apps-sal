@@ -1,4 +1,4 @@
-p, n = map(int, input().split())
+(p, n) = map(int, input().split())
 x = [int(input()) for i in range(n)]
 u = [False] * p
 for i in range(min(p + 1, n)):

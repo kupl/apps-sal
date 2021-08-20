@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 q = int(input())
 for i in range(q):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     odd = 0
     for j in range(n):

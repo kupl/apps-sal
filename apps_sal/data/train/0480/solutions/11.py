@@ -1,6 +1,7 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
-        if steps is None or steps < 0 or not arrLen:
+        if steps is None or steps < 0 or (not arrLen):
             return 0
         arrLen = min(arrLen, steps + 1)
         f = [[0] * arrLen for _ in range(steps + 1)]

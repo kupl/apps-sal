@@ -14,5 +14,4 @@ for i in range(N - 2):
                 break
             if side3 != side2:
                 ans += 1
-
 print(ans)

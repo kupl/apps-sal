@@ -1,9 +1,9 @@
-
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
 
-    n, k = map(int, input().split())
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, k) = map(int, input().split())
     s = input()
     n = len(s)
     ans = 0

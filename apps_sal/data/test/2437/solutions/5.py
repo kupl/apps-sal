@@ -1,7 +1,6 @@
 import random
 n = int(input())
 a = list(map(int, input().split()))
-
 primes = set()
 for x in random.choices(a, k=min(n, 30)):
     for y in (x - 1, x, x + 1):
@@ -13,7 +12,6 @@ for x in random.choices(a, k=min(n, 30)):
             d += 1 + (d & 1)
         if y > 1:
             primes.add(y)
-
 ans = float('inf')
 for p in primes:
     cand = 0
@@ -27,5 +25,4 @@ for p in primes:
             break
     else:
         ans = cand
-
 print(ans)

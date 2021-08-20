@@ -1,21 +1,18 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 out = []
-
 for _ in range(t):
     n = int(input())
     pos = []
     for __ in range(n):
         pos.append(tuple(map(int, input().split())))
     pos.sort()
-
     currX = 0
     currY = 0
     s = ''
     works = True
-    for x, y in pos:
+    for (x, y) in pos:
         if currX > x:
             works = False
             break

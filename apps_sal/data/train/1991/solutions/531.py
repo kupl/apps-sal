@@ -1,11 +1,11 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
 
         @functools.lru_cache(None)
         def dfs(src, tar):
-
             if src == finish:
                 if tar == 0:
                     return 1

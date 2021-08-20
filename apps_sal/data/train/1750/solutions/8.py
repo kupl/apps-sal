@@ -11,4 +11,4 @@ def mystery_inv(n):
 
 
 def name_of_mystery():
-    return "Gray code"
+    return 'Gray code'

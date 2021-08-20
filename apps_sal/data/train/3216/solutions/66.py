@@ -3,5 +3,5 @@ def movie(card, ticket, perc):
     B = card + ticket * perc
     while ticket * result < B + 1:
         result += 1
-        B += ticket * perc**result
+        B += ticket * perc ** result
     return result

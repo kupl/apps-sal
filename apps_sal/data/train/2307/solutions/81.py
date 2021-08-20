@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 w = B // A
 v = 0

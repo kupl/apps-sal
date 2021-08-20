@@ -1,5 +1,4 @@
-# cook your dish here
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 l1 = []
 d = {}
 for i in range(K):
@@ -15,5 +14,5 @@ for i in range(K):
 k = max(d, key=d.get)
 s = 0
 for i in range(K):
-    s = s + 2 * (abs(l1[i][1] - k)) + 2 * (abs(l1[i][3] - k)) + (abs(l1[i][0] - l1[i][2]))
+    s = s + 2 * abs(l1[i][1] - k) + 2 * abs(l1[i][3] - k) + abs(l1[i][0] - l1[i][2])
 print(s)

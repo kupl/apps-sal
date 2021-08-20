@@ -9,8 +9,8 @@ for i in a:
         sc += 1
         continue
     sc += abs(i) - 1
-    if(i < 0):
+    if i < 0:
         mi *= -1
-if mi == -1 and not z:
+if mi == -1 and (not z):
     sc += 2
 print(sc)

@@ -1,2 +1,2 @@
 def combine_names(*args: str) -> str:
-    return " ".join(args)
+    return ' '.join(args)

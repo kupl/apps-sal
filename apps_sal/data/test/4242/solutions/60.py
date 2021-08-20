@@ -1,4 +1,4 @@
-a, b, k = list(map(int, input().split()))
+(a, b, k) = list(map(int, input().split()))
 maxint = max(a, b)
 cnt = 0
 for i in range(maxint, 0, -1):

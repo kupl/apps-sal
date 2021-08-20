@@ -14,7 +14,7 @@ while t != 0:
                     md[sub] = 1
                 elif sub in md and md[sub] == c - 1:
                     md[sub] = c
-    res = ""
+    res = ''
     for k in list(md.keys()):
         if md[k] == n:
             if len(k) > len(res):

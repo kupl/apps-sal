@@ -1,12 +1,13 @@
 class DFS:
+
     def __init__(self):
         self.G = []
         self.leave_tree = []
 
     def take_input(self):
         k = int(input())
-        if(k > 1):
-            graph = [int(node) - 1 for (node) in input().split(' ')]
+        if k > 1:
+            graph = [int(node) - 1 for node in input().split(' ')]
             self.G = [[] for _ in range(len(graph) + 1)]
             for i in range(len(graph)):
                 self.G[graph[i]].append(i + 1)

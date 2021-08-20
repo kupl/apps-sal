@@ -1,5 +1,4 @@
 import re
-
 MENU = ['burger', 'fries', 'chicken', 'pizza', 'sandwich', 'onionrings', 'milkshake', 'coke']
 
 

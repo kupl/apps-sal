@@ -1,6 +1,4 @@
 from collections import Counter
-
-
 number_of_words = int(input())
 input_string = input()
 words_dict = Counter(input_string)

@@ -1,4 +1,5 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         r = [0, 1]
         for i in range(1, n):

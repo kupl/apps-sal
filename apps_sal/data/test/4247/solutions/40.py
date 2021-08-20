@@ -7,5 +7,4 @@ for i in range(n - 2):
     num = sorted(List)[1]
     if P == num:
         ans += 1
-
 print(ans)

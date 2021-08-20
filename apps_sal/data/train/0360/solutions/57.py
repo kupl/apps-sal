@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         n = len(weights)
 
@@ -12,7 +13,6 @@ class Solution:
                 else:
                     curr += weights[i]
             return ans
-
         l = max(weights)
         r = sum(weights)
         while l < r:

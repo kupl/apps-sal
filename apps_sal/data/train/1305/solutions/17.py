@@ -1,14 +1,9 @@
-# cook your dish here
 t = int(input())
-
 for xx in range(t):
     n = int(input())
-
     A = []
-
     for i in range(n):
         A.append([int(x) for x in input().split()])
-
     check = 0
     for i in range(n):
         for j in range(n):
@@ -21,8 +16,7 @@ for xx in range(t):
                     break
         if check == 1:
             break
-
     if check == 0:
-        print("SAFE")
+        print('SAFE')
     else:
-        print("UNSAFE")
+        print('UNSAFE')

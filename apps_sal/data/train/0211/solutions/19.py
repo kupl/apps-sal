@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str, seen=()):
         maximum = 0
         if s:

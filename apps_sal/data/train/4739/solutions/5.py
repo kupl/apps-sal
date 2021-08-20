@@ -1,5 +1,5 @@
 def same_col_seq(val, k, col):
-    n_start = int(((1 + 8 * val)**0.5 - 1) / 2) + 1
+    n_start = int(((1 + 8 * val) ** 0.5 - 1) / 2) + 1
 
     def f(n):
         return (1 + n) * n // 2

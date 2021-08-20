@@ -1,7 +1,7 @@
 def fat_fingers(string):
     if type(string) != str:
         return string
-    aCnt, chars = 0, []
+    (aCnt, chars) = (0, [])
     for c in string:
         if c in 'aA':
             aCnt += 1

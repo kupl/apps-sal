@@ -1,6 +1,6 @@
 class Solution:
-    def maxCoins(self, piles: List[int]) -> int:
 
+    def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
         rounds = int(len(piles) / 3)
         max_el = 0

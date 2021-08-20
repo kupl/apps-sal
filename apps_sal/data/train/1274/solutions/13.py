@@ -12,12 +12,11 @@ for i in range(t):
             x = x + 1
         else:
             arr.append(l)
-
     j = 0
     while j < k:
         i = 0
         while i < 2 * k:
-            print(arr[i][j], end="")
+            print(arr[i][j], end='')
             i = i + 1
         print()
         j = j + 1

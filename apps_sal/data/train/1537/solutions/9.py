@@ -4,22 +4,19 @@ primes = []
 def rwh_primes1(n):
     """ Returns  a list of primes < n """
     sieve = [True] * (n // 2)
-    for i in range(3, int(n**0.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         if sieve[i // 2]:
             sieve[i * i // 2::i] = [False] * ((n - i * i - 1) // (2 * i) + 1)
     return [2] + [2 * i + 1 for i in range(1, n // 2) if sieve[i]]
 
 
 primes = rwh_primes1(1000000)
-# print(primes)
 plookup = set(primes)
 S = []
-# print(len(primes))
-prime = 10**9 + 7
+prime = 10 ** 9 + 7
 for i in range(2, 10000):
     if i in plookup:
         S.append(primes[i - 1])
-# print(len(S))
 
 
 def __starting_point():

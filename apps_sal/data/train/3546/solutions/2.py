@@ -10,7 +10,7 @@ def validate_ean(code):
         else:
             return False
     else:
-        new_checksum = 10 - (total % 10)
+        new_checksum = 10 - total % 10
         if new_checksum == checksum:
             return True
         else:

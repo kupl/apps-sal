@@ -1,4 +1,4 @@
-n, k = (int(i) for i in input().split())
+(n, k) = (int(i) for i in input().split())
 l = [int(i) for i in input().split()]
 c = 0
 for i in range(1, n):
@@ -7,4 +7,4 @@ for i in range(1, n):
         c += a
         l[i] += a
 print(c)
-print(' '.join(str(i) for i in l))
+print(' '.join((str(i) for i in l)))

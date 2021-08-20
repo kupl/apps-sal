@@ -1,4 +1,4 @@
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = [i == 'd' for i in input().strip()]
 
 

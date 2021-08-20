@@ -1,4 +1,5 @@
 class Solution:
+
     def trailingZeroes(self, n):
         res = 5
         ans = 0

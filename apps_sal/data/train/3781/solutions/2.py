@@ -10,4 +10,4 @@ def mul_part_gen(n, k=2):
     for i in range(k, n + 1):
         if n % i == 0:
             for part in mul_part_gen(n // i, i):
-                yield [i] + part
+                yield ([i] + part)

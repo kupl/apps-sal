@@ -9,4 +9,4 @@ for i in range(N):
             l[i] = 2
     else:
         l[i] = 4
-print('Yes'if l.count(1) + (1 if l.count(2)else 0) <= 1 + l.count(4)else'No')
+print('Yes' if l.count(1) + (1 if l.count(2) else 0) <= 1 + l.count(4) else 'No')

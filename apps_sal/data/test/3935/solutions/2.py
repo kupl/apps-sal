@@ -6,12 +6,12 @@ for i in range(n):
     right = 72
     while abs(left - right) > 1:
         mid = (left + right) // 2
-        if l[i] % (2**mid) == 0:
+        if l[i] % 2 ** mid == 0:
             left = mid
         else:
             right = mid
     mid = (left + right) // 2
-    if l[i] % (2**(mid + 1)) == 0:
+    if l[i] % 2 ** (mid + 1) == 0:
         wyk[i] = mid + 1
     else:
         wyk[i] = mid

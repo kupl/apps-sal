@@ -1,5 +1,5 @@
 from math import log
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ai = list(map(int, input().split()))
 s = set()
 ai2 = []
@@ -8,8 +8,8 @@ for i in range(n):
         ai2 += [i + 1]
     s.add(ai[i])
 if len(s) >= k:
-    print("YES")
+    print('YES')
     for i in range(k):
-        print(ai2[i], end=" ")
+        print(ai2[i], end=' ')
 else:
-    print("NO")
+    print('NO')

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 ans = n
-
 s = set()
 x = {i: 0 for i in range(1, 100001)}
 y = {}
@@ -31,5 +30,4 @@ for i in range(n):
         if qy == 1:
             if q == p + 1 or q == 1:
                 ans = i + 1
-
 print(ans)

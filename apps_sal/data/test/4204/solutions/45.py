@@ -1,6 +1,5 @@
 S = [int(i) for i in input()]
 K = int(input())
-
 if sum(S) == len(S):
     print(1)
 else:

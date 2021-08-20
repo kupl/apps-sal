@@ -1,6 +1,6 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = list(map(int, input().split()))
-ans = 10**10
+ans = 10 ** 10
 for y in a:
     t = [[]]
     for i in a:

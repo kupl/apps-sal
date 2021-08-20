@@ -7,6 +7,6 @@ for i in range(a):
     def abc(c):
         for j in range(b - 1):
             if c[j] == c[j + 1]:
-                return "YES"
-        return "NO"
+                return 'YES'
+        return 'NO'
     print(abc(c))

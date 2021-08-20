@@ -6,8 +6,8 @@ def answer(a: int, b: int) -> int:
 
 
 def main():
-    a, b = list(map(int, input().split()))
-    print((answer(a, b)))
+    (a, b) = list(map(int, input().split()))
+    print(answer(a, b))
 
 
 def __starting_point():

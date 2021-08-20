@@ -1,12 +1,11 @@
 import sys
-# sys.stdin = open("input.txt")
 
 
 def main():
     T = int(input())
     for ti in range(T):
-        n, k = list(map(int, input().split()))
-        A = set(int(v) for v in input().split())
+        (n, k) = list(map(int, input().split()))
+        A = set((int(v) for v in input().split()))
         if k == 1:
             if len(A) == 1:
                 print(1)

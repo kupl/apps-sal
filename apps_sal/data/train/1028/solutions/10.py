@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for nt in range(int(input())):
     num = int(input())
     sum = 0
@@ -9,8 +7,7 @@ for nt in range(int(input())):
         digit = temp % 10
         sum += digit ** r
         temp //= 10
-
     if num == sum:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

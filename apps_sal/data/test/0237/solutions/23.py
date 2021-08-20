@@ -1,12 +1,10 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 best = 1
 sleva = k - 1
 sprava = n - k
 m -= n
-
 put = 1
-
-while (m >= put):
+while m >= put:
     m -= put
     best += 1
     put += (sleva > 0) + (sprava > 0)
@@ -15,7 +13,6 @@ while (m >= put):
     if sprava:
         sprava -= 1
     if sleva == sprava == 0:
-        best += (m // put)
+        best += m // put
         break
-
 print(best)

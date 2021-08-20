@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 processed = set()
 color = {}
@@ -37,7 +37,7 @@ for i in range(n):
         for j in range(1, k):
             if elt - j < 0:
                 break
-            elif (elt - j) not in processed:
+            elif elt - j not in processed:
                 processed.add(elt - j)
                 new += 1
             elif length[elt - j] + new <= k:

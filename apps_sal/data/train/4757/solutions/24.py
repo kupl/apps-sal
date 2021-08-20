@@ -19,20 +19,17 @@ def lm():
 
 
 q = nn()
-
 for _ in range(q):
-    n, m, a, b = mi()
-
+    (n, m, a, b) = mi()
     if not m * b == n * a:
-        print("NO")
+        print('NO')
         continue
-    print("YES")
+    print('YES')
     for i in range(n):
         row = []
         for j in range(m):
-            if (a * i + j) % (m) < a:
+            if (a * i + j) % m < a:
                 row.append('1')
             else:
                 row.append('0')
-
-        print("".join(row))
+        print(''.join(row))

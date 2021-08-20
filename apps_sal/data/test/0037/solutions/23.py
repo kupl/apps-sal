@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 d = 0
 
 
@@ -7,8 +7,7 @@ def ans(a, b, c, d):
         print('Yes')
         return
     else:
-        a, b = min(a, b), max(a, b)
-        # print(a,b)
+        (a, b) = (min(a, b), max(a, b))
         while d < c:
             d += a
             if (c - d) % b == 0:
@@ -16,7 +15,7 @@ def ans(a, b, c, d):
                 return
             else:
                 continue
-        print("No")
+        print('No')
         return
 
 

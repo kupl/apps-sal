@@ -2,10 +2,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A, K):
+
         def atMostK(K):
-            cnt, res, i = defaultdict(int), 0, 0
-            for j, val in enumerate(A):
+            (cnt, res, i) = (defaultdict(int), 0, 0)
+            for (j, val) in enumerate(A):
                 cnt[val] += 1
                 while len(cnt) > K:
                     X = A[i]

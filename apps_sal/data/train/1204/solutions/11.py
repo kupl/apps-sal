@@ -1,6 +1,5 @@
-# cook your dish here
 t = int(input())
-while (t != 0):
+while t != 0:
     s = input()
     r = input()
     n = len(s)
@@ -11,16 +10,15 @@ while (t != 0):
     j = 0
     a = []
     for i in range(0, n, 1):
-        if (s[i] != r[i]):
-            if(crlen > 0 and j == 1):
+        if s[i] != r[i]:
+            if crlen > 0 and j == 1:
                 a.append(crlen)
                 k = k + 1
-            elif (j == 0):
+            elif j == 0:
                 k = k + 1
             crlen = 0
             j = 1
             c = c + 1
-
         else:
             crlen = crlen + 1
     a.sort()

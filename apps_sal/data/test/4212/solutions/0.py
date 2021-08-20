@@ -1,4 +1,4 @@
-N, M, Q = map(int, input().split())
+(N, M, Q) = map(int, input().split())
 A = []
 for i in range(Q):
     A.append(list(map(int, input().split())))

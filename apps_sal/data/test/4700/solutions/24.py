@@ -3,12 +3,12 @@ pin = sys.stdin.readline
 
 
 def main():
-    N, M = map(int, pin().split())
+    (N, M) = map(int, pin().split())
     H = list(map(int, pin().split()))
     d = [True] * N
     ans = 0
     for _ in [0] * M:
-        A, B = map(int, pin().split())
+        (A, B) = map(int, pin().split())
         if H[A - 1] > H[B - 1]:
             d[B - 1] = False
         elif H[B - 1] > H[A - 1]:

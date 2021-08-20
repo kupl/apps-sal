@@ -1,5 +1,5 @@
-a, b = map(int, input().split())
-c, d = 0, 0
+(a, b) = map(int, input().split())
+(c, d) = (0, 0)
 if a % 2 == 1:
     c = a
     a += 1

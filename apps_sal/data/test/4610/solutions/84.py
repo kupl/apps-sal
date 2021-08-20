@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
 temp = 1
@@ -9,7 +9,6 @@ for i in range(N - 1):
     else:
         V.append(temp)
         temp = 1
-
 V.append(temp)
 V.sort()
 ans = N - sum(V[-K:])

@@ -9,6 +9,5 @@ def missing_angle(h, a, o):
     elif h == 0 and o > 0:
         result = math.atan(o / a)
     else:
-        raise ValueError("Invalid argument(s)")
-
+        raise ValueError('Invalid argument(s)')
     return round(math.degrees(result))

@@ -1,6 +1,5 @@
 from collections import Counter
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = Counter(list(map(int, input().split())))
 a = list(a.items())
 a.sort(key=lambda x: x[1])

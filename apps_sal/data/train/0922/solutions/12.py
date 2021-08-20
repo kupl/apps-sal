@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    m, n = map(int, input().strip().split())
+    (m, n) = map(int, input().strip().split())
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a = set(a)

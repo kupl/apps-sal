@@ -1,1 +1,1 @@
-print(input("ABC"))
+print(input('ABC'))

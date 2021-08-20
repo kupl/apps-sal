@@ -1,18 +1,21 @@
 import math
-def R(): return list(map(int, input().split()))
 
 
-n, sum = R()
+def R():
+    return list(map(int, input().split()))
+
+
+(n, sum) = R()
 x = []
 y = []
 z = []
 dis = []
 for i in range(n):
-    a, b, c = R()
+    (a, b, c) = R()
     x.append(a)
     y.append(b)
     z.append(c)
-    dis.append((math.sqrt(a**2 + b ** 2), i))
+    dis.append((math.sqrt(a ** 2 + b ** 2), i))
 dis.sort()
 i = 0
 while sum < 1000000 and i < n:

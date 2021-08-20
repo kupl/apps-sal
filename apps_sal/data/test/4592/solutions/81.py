@@ -1,8 +1,6 @@
 from math import factorial
-
 n = int(input())
 f = factorial(n)
-
 mod = 10 ** 9 + 7
 
 
@@ -24,5 +22,5 @@ for p in primes(n):
     while f % p == 0:
         temp += 1
         f //= p
-    ans = (ans * temp) % mod
+    ans = ans * temp % mod
 print(ans)

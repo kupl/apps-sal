@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         if not s:
             return 0
@@ -14,11 +15,8 @@ class Solution:
                     sums += cost[j]
                     maxs = max(maxs, cost[j])
                     j += 1
-
-                # print(i,j)
                 res += sums - maxs
                 i = j
-
             else:
                 i += 1
         return res

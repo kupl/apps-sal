@@ -1,5 +1,4 @@
 s = int(input())
-
 ans = 1
 s_st = set()
 while s not in s_st:
@@ -9,5 +8,4 @@ while s not in s_st:
     else:
         s = 3 * s + 1
     ans += 1
-
 print(ans)

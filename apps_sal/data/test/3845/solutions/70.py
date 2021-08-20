@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(41, 100)
 for _ in range(10):
     for _ in range(50):

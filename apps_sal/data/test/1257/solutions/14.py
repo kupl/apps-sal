@@ -10,10 +10,10 @@ for i in range(n):
 x1 = n * n
 x2 = 1
 for i in range(n):
-    for j in range(n - 1, (k - 1) - 1, -1):
+    for j in range(n - 1, k - 1 - 1, -1):
         v[i][j] = x1
         x1 -= 1
-    for j in range(0, (k - 1), 1):
+    for j in range(0, k - 1, 1):
         v[i][j] = x2
         x2 += 1
 nSum = 0

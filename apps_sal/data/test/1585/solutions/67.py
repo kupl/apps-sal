@@ -1,4 +1,4 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 ans = []
 n = X
 while n <= Y:

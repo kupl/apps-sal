@@ -25,5 +25,5 @@ for i in range(len(t)):
     else:
         now = S[j][nex]
     if i == len(t) - 1:
-        ans = count * (len(s)) + now + 1
+        ans = count * len(s) + now + 1
 print(ans)

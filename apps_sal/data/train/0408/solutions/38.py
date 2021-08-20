@@ -1,6 +1,6 @@
 class Solution:
+
     def findBestValue(self, arr: List[int], target: int) -> int:
-        #
         if not arr:
             return 0
         if len(arr) == 1:
@@ -11,12 +11,11 @@ class Solution:
         last_sum = 0
         arr.sort()
         while value < arr[-1]:
-
             current_sum = 0
             while value >= arr[index]:
                 sum_up += arr[index]
                 index += 1
-            current_sum = sum_up + ((len(arr) - index) * value)
+            current_sum = sum_up + (len(arr) - index) * value
             if current_sum == target:
                 return value
             elif current_sum > target:
@@ -27,5 +26,4 @@ class Solution:
             else:
                 last_sum = current_sum
             value += 1
-
         return value

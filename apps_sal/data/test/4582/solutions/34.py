@@ -1,5 +1,5 @@
 s = input().split()
 if s[0] == s[1]:
-    print("H")
+    print('H')
 else:
-    print("D")
+    print('D')

@@ -3,7 +3,6 @@ def main():
     a_lst = list(map(int, input().split()))
     minimum = min(a_lst)
     maximum = max(a_lst)
-
     cost = 10 ** 9
     for i in range(maximum - minimum + 1):
         tmp_cost = 0
@@ -12,7 +11,6 @@ def main():
             a = a_lst[j]
             tmp_cost += (a - std) ** 2
         cost = min(tmp_cost, cost)
-
     print(cost)
 
 

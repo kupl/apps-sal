@@ -1,6 +1,6 @@
 def solution(n):
-    while(n):
-        if((n % 10) & 1 == 0):
+    while n:
+        if n % 10 & 1 == 0:
             return 1
         else:
             n = n // 10

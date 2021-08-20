@@ -15,11 +15,10 @@ def c(start, res):
     elif start >= N:
         memo[start, res] = -INF
     elif res > 1:
-        memo[start, res] = max(A[start] + c(start + 2, res - 1),
-                               c(start + 1, res), c(start + 2, res))
+        memo[start, res] = max(A[start] + c(start + 2, res - 1), c(start + 1, res), c(start + 2, res))
     else:
         memo[start, res] = max(A[start], c(start + 1, res))
     return memo[start, res]
 
 
-print((c(0, N // 2)))
+print(c(0, N // 2))

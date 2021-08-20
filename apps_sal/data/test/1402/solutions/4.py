@@ -1,10 +1,10 @@
 n = int(input())
-C = 10**9 + 7
+C = 10 ** 9 + 7
 a = input()
 s = input()
 d = [[0, 0, 0, 1]]
 for q in range(n):
-    d.append(d[-1][::])
+    d.append(d[-1][:])
     if a[q] != '?' and s[q] != '?':
         if int(a[q]) < int(s[q]):
             d[-1][1] = d[-1][3] = 0

@@ -1,7 +1,8 @@
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort()
-        first, last = 0, len(piles) - 1
+        (first, last) = (0, len(piles) - 1)
         total = 0
         while first < last:
             total += piles[last - 1]

@@ -3,9 +3,9 @@ def run(a, ind, l):
     ans = 0
     for i in range(ind, len(a)):
         newSt += a[i]
-        if int(newSt, 2) == (i - l + 1):
+        if int(newSt, 2) == i - l + 1:
             ans += 1
-        if int(newSt, 2) > (i - l + 1):
+        if int(newSt, 2) > i - l + 1:
             return ans
     return ans
 
@@ -16,7 +16,6 @@ for kkk in range(n):
     uk = [0] * len(st)
     for i in range(len(uk)):
         uk[i] = i
-
     for j in range(len(uk)):
         if st[j] == '1':
             uk[0] = j
@@ -29,9 +28,8 @@ for kkk in range(n):
                 if st[j] == '1':
                     uk[i] = j
                     break
-
     s = 0
     for i in range(len(uk)):
-        if ((uk[i] != i) or st[i] == '1'):
+        if uk[i] != i or st[i] == '1':
             s += run(st, uk[i], i)
     print(s)

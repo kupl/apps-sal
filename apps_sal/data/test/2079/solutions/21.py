@@ -1,12 +1,10 @@
 n = int(input())
 a = [int(i) for i in input().split()]
 s = input()
-
 mp = {}
 for i in range(n):
     mp[a[i]] = i + 1
 a.sort()
-
 intr = 0
 extr = 0
 first = mp[a[0]]

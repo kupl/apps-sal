@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a1 = 0
 a2 = 2 * n
@@ -23,7 +23,6 @@ for x in a:
         s2 += 1
     elif x == 1:
         s1 += 1
-#print(s1, s2, a1, a2, a4)
 while s2:
     if a2:
         a2 -= 1
@@ -35,4 +34,4 @@ while s2:
     else:
         s1 += 2
         s2 -= 1
-print("YES" if flag and a1 + a2 + a4 * 2 >= s1 else "NO")
+print('YES' if flag and a1 + a2 + a4 * 2 >= s1 else 'NO')

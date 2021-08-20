@@ -1,4 +1,3 @@
-# your code goes here
 t = int(input().strip())
 while t:
     n = int(input().strip())
@@ -10,5 +9,5 @@ while t:
         else:
             di[i] = 1
     for key in sorted(di):
-        print("%s: %s" % (key, di[key]))
+        print('%s: %s' % (key, di[key]))
     t -= 1

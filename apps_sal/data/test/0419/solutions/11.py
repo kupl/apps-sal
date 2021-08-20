@@ -1,5 +1,4 @@
 from sys import stdin
-
 a = int(stdin.readline(), 2)
 b = 1
 count = 0

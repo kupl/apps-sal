@@ -1,14 +1,13 @@
 import collections
 import sys
 input = sys.stdin.readline
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = [''] * (n + 1)
 g1 = [[] for _ in range(n + 1)]
 g2 = [[] for _ in range(n + 1)]
 deg = [0] * (n + 1)
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g1[a].append(b)
     g2[b].append(a)
     deg[a] += 1

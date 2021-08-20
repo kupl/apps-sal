@@ -1,6 +1,6 @@
 from collections import deque
 from sys import stdin
-lines = deque(line.strip() for line in stdin.readlines())
+lines = deque((line.strip() for line in stdin.readlines()))
 
 
 def nextline():
@@ -8,7 +8,7 @@ def nextline():
 
 
 def types(cast, sep=None):
-    return tuple(cast(x) for x in strs(sep=sep))
+    return tuple((cast(x) for x in strs(sep=sep)))
 
 
 def ints(sep=None):
@@ -21,10 +21,10 @@ def strs(sep=None):
 
 def intersect(s1, s2):
     if s1[0] >= s2[0] and s1[0] <= s2[1]:
-        return s1[0], min(s1[1], s2[1])
+        return (s1[0], min(s1[1], s2[1]))
     if s2[0] >= s1[0] and s2[0] <= s1[1]:
-        return s2[0], min(s1[1], s2[1])
-    return 0, 0
+        return (s2[0], min(s1[1], s2[1]))
+    return (0, 0)
 
 
 def get_len(segment):
@@ -32,9 +32,8 @@ def get_len(segment):
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     N = int(nextline())
-    segments = list(ints() for _ in range(N))
+    segments = list((ints() for _ in range(N)))
     forwards = [segments[0]]
     backwards = [segments[-1]]
     for i in range(1, N):

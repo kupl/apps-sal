@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 v = list(map(int, input().split()))
 reverse_v = v[::-1]
 lst = [0] * (k + 1)
@@ -7,7 +7,6 @@ right = [[]]
 for i in range(1, n + 1):
     left.append(v[:i])
     right.append(reverse_v[:i])
-
 for cnt in range(1, k + 1):
     rest = k - cnt
     total = 0
@@ -28,6 +27,5 @@ for cnt in range(1, k + 1):
             if value > total:
                 total = value
         lst[cnt] = total
-
 ans = max(lst)
 print(ans)

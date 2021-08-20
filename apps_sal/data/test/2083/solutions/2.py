@@ -1,5 +1,5 @@
 __author__ = 'ruckus'
-n, T, c = input().split()
+(n, T, c) = input().split()
 n = int(n)
 T = int(T)
 c = float(c)

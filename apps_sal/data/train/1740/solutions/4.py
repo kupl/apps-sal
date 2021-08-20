@@ -1,4 +1,5 @@
 class Person:
+
     def __init__(self, name):
         self.name = name
         self.parents = set()
@@ -19,6 +20,7 @@ class Person:
 
 
 class Transaction(list):
+
     def __init__(self):
         list.__init__(self)
 
@@ -39,6 +41,7 @@ class Transaction(list):
 
 
 class Family:
+
     def __init__(self):
         self.people = {}
         self.transaction = Transaction()
@@ -91,7 +94,6 @@ class Family:
             return len(child.parents) < 2 or len(male) | len(female) == 1
         if len(undetermined) < len(child.parents):
             return self._set_gender_of(undetermined[0], len(female) - len(male))
-        # Two possibilities: try one just to see if it leads to a gender-inconsistency
         self.transaction.start()
         success = self._set_gender_of(undetermined[0], 1)
         self.transaction.end(0)
@@ -103,5 +105,5 @@ class Family:
         if person.gender == -gender:
             return False
         person.gender = gender
-        self.transaction.log(lambda: setattr(person, "gender", 0))
-        return all(self._rule_parents(child) for child in person.children)
+        self.transaction.log(lambda: setattr(person, 'gender', 0))
+        return all((self._rule_parents(child) for child in person.children))

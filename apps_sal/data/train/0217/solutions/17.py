@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def subarrayBitwiseORs(self, A: List[int]) -> int:
         ans = {A[0]}
         pre = {A[0]}

@@ -1,9 +1,7 @@
 from itertools import *
-
 N = input()
-P = tuple(input().split(" "))
-Q = tuple(input().split(" "))
-
+P = tuple(input().split(' '))
+Q = tuple(input().split(' '))
 a = 0
 b = 0
 c = 0

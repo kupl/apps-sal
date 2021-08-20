@@ -1,7 +1,8 @@
 class Solution:
+
     def numTeams(self, rating: list) -> int:
-        left_less, left_greater = 0, 0
-        right_less, right_greater = 0, 0
+        (left_less, left_greater) = (0, 0)
+        (right_less, right_greater) = (0, 0)
         count = 0
         for j in range(len(rating)):
             for i in range(j):

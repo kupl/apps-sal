@@ -10,5 +10,4 @@ for i in frequencySweet.values():
         noOfDaysReq += i // 2
     else:
         noOfDaysReq += i // 2 + 1
-
 print(noOfDaysReq)

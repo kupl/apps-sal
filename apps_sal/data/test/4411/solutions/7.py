@@ -1,11 +1,11 @@
 import heapq
-n, k = list(map(int, input().split()))
-length = 2 * (10 ** 5)
+(n, k) = list(map(int, input().split()))
+length = 2 * 10 ** 5
 llist = [[] for x in range(length + 1)]
 rlist = [[] for x in range(length + 1)]
 flag = [0] * (length + 1)
 for i in range(n):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     llist[l].append([i + 1, r])
     rlist[r].append([i + 1, l])
 heap = []
@@ -32,4 +32,4 @@ for i in range(length):
             now -= 1
             flag[currents] = 0
 print(len(ans))
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

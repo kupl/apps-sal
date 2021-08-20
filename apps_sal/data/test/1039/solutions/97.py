@@ -4,10 +4,10 @@ n = int(input())
 d = [-1 for i in range(n)]
 e = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     e[a - 1].append([b - 1, c])
     e[b - 1].append([a - 1, c])
-q, k = map(int, input().split())
+(q, k) = map(int, input().split())
 
 
 def dfs(cur, par, di):
@@ -21,5 +21,5 @@ def dfs(cur, par, di):
 
 dfs(k - 1, -1, 0)
 for i in range(q):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     print(d[x - 1] + d[y - 1])

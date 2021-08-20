@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for i in range(t):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     lis = list(map(int, input().split()))
     costs = [0] * 6
     costs[0] = min(lis[0], lis[1] + lis[5])

@@ -1,4 +1,3 @@
-
 """
 def factorization(n):
     if (n == 1 ):

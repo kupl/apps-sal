@@ -6,4 +6,4 @@ def remove_smallest(numbers):
     for num in numbers:
         if num < smallest:
             smallest = num
-    return [numbers[i] for i in range(len(numbers)) if i != (numbers.index(smallest))]
+    return [numbers[i] for i in range(len(numbers)) if i != numbers.index(smallest)]

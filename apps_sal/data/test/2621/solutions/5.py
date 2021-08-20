@@ -1,9 +1,7 @@
 t = int(input())
-
 for _ in range(t):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     h = list(map(int, input().split()))
-
     possible = True
     cur_h = h[0]
     for next_h in h[1:]:
@@ -16,8 +14,7 @@ for _ in range(t):
         else:
             m += min(cur_h, cur_h - (next_h - k))
         cur_h = next_h
-
     if possible:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

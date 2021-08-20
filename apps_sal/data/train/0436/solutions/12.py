@@ -1,4 +1,5 @@
 class Solution:
+
     def helper(self, n):
         if n in self.dp:
             return self.dp[n]
@@ -15,16 +16,13 @@ class Solution:
         return self.dp[n]
 
     def minDays(self, n: int) -> int:
-        '''
+        """
         # DFS => MLE
         sys.setrecursionlimit(2000000000)
         self.dp = {}
         return self.helper(n)
-        '''
-
-        '''
-        # BFS
-        '''
+        """
+        '\n        # BFS\n        '
         q = [n]
         step = 0
         while q:

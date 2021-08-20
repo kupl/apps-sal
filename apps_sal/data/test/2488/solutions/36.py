@@ -1,11 +1,11 @@
 from collections import deque
-N, D, A = list(map(int, input().split()))
+(N, D, A) = list(map(int, input().split()))
 enemies = [list(map(int, input().split())) for _ in range(N)]
 enemies.sort(key=lambda x: x[0])
 ans = 0
 damage = deque()
 dmg = 0
-for x, h in enemies:
+for (x, h) in enemies:
     if len(damage) == 0:
         bomb = -(-h // A)
         damage.append([x + 2 * D, bomb])
@@ -13,7 +13,7 @@ for x, h in enemies:
         ans += bomb
     else:
         while len(damage) > 0:
-            d, bomb = damage.popleft()
+            (d, bomb) = damage.popleft()
             if x > d:
                 dmg -= bomb * A
             else:
@@ -24,5 +24,4 @@ for x, h in enemies:
             dmg += bomb * A
             damage.append([x + 2 * D, bomb])
             ans += bomb
-
 print(ans)

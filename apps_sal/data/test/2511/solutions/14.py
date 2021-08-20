@@ -1,14 +1,12 @@
-n, k = list(map(int, input().split()))
-mod = 10**9 + 7
+(n, k) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 data = [[] for j in range(n + 1)]
 done = [0] * (n + 1)
 colors = [k - 1] * (n + 1)
-
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     data[min(a, b)].append(max(a, b))
     data[max(a, b)].append(min(a, b))
-
 queue = [1]
 ans = 1
 colors[1] += 1
@@ -26,5 +24,4 @@ while queue != []:
         cnt += 1
         colors[data[idx][i]] -= cnt
         queue.append(data[idx][i])
-
 print(ans)

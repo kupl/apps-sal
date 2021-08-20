@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 x = list(map(int, input().split()))
 ans = abs(x[k - 1]) + 2 * abs(x[0])
 for i in range(n - k + 1):

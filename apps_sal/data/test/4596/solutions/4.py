@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 count = 0
-
 while True:
     odd = False
     for x in range(n):
@@ -13,5 +12,4 @@ while True:
     if odd:
         break
     count += 1
-
 print(count)

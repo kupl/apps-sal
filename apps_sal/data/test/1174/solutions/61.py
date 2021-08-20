@@ -1,6 +1,6 @@
 def main():
-    N, M = [int(x) for x in input().split(" ")]
-    A = [int(a) for a in input().split(" ")]
+    (N, M) = [int(x) for x in input().split(' ')]
+    A = [int(a) for a in input().split(' ')]
     D = []
     for i in range(len(A)):
         tmp = A[i]

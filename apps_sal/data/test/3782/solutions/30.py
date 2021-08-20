@@ -1,16 +1,21 @@
 import sys
-def MI(): return list(map(int, sys.stdin.readline().rstrip().split()))
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
-N, K, Q = MI()
+def MI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
+
+
+(N, K, Q) = MI()
 A = LI()
-
-ans = 10**18
-for i in range(N):  # 取り出す要素の最小値はA[i]
+ans = 10 ** 18
+for i in range(N):
     a = A[i]
-    left, right = 0, 0
-    X = []  # 取り出す数の候補
+    (left, right) = (0, 0)
+    X = []
     while right < N:
         if A[right] >= a:
             right += 1
@@ -31,5 +36,4 @@ for i in range(N):  # 取り出す要素の最小値はA[i]
         continue
     X.sort()
     ans = min(ans, X[Q - 1] - a)
-
 print(ans)

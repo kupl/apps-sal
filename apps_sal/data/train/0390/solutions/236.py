@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dp: List[bool] = [False for _ in range(n + 1)]
         for i in range(1, n + 1):

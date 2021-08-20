@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    L, v, l, r = list(map(int, input().split()))
+    (L, v, l, r) = list(map(int, input().split()))
     q = L // v
     l1 = (l + v - 1) // v
     r1 = r // v

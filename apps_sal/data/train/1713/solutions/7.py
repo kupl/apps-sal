@@ -10,4 +10,4 @@ def count_calls(func, *args, **kwargs):
     sys.settrace(tracefunc)
     rv = func(*args, **kwargs)
     calls = d['calls'] - 1
-    return calls, rv
+    return (calls, rv)

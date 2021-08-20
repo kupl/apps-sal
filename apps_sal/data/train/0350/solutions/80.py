@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         keyCounter = defaultdict(int)
         ALen = len(A)

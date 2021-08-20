@@ -1,11 +1,10 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 ch = []
 re = {}
 limit = len(s)
 c = 1
 for i in range(limit):
-    # print(s[i])
     if s[i] in re:
         re[s[i]] += 1
     else:
@@ -16,7 +15,6 @@ score = []
 for i in range(li):
     score.append(re[ch[i]])
 score.sort(reverse=True)
-# print(score)
 last = len(score)
 out = 0
 for i in range(last):
@@ -31,5 +29,4 @@ for i in range(last):
     elif k < score[i]:
         out += k * k
         break
-   # print(out)
 print(out)

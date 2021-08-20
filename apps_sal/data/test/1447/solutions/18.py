@@ -17,8 +17,7 @@ def binomial(k, n):
 
 
 def P(k, n, m):
-    return k ** 2 / n * binomial(k, n) * product((m - i) / (m * n - i) for i in range(k)) * product(
-        (m * n - i - (m - k)) / (m * n - i) for i in range(k, n))
+    return k ** 2 / n * binomial(k, n) * product(((m - i) / (m * n - i) for i in range(k))) * product(((m * n - i - (m - k)) / (m * n - i) for i in range(k, n)))
 
 
 def product(iterable):
@@ -29,11 +28,11 @@ def product(iterable):
 
 
 def solve(n, m):
-    return sum(P(k, n, m) for k in range(1, min(n, m) + 1))
+    return sum((P(k, n, m) for k in range(1, min(n, m) + 1)))
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     print(solve(n, m))
 
 

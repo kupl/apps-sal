@@ -1,13 +1,14 @@
 class CodeforcesTask815ASolution:
+
     def __init__(self):
         self.result = ''
         self.n_m = []
         self.board = []
 
     def read_input(self):
-        self.n_m = [int(x) for x in input().split(" ")]
+        self.n_m = [int(x) for x in input().split(' ')]
         for x in range(self.n_m[0]):
-            self.board.append([int(y) for y in input().split(" ")])
+            self.board.append([int(y) for y in input().split(' ')])
 
     def process_task(self):
         columns = []
@@ -16,7 +17,6 @@ class CodeforcesTask815ASolution:
             for y in range(self.n_m[0]):
                 column.append(self.board[y][x])
             columns.append(column)
-
         left_board_moves = [min(row) for row in self.board]
         bottom_board_moves = [min(column) for column in columns]
         reduce1 = min(bottom_board_moves)
@@ -29,15 +29,15 @@ class CodeforcesTask815ASolution:
         board_score = sum(left_board_moves) * self.n_m[1] + sum(bottom_board_moves) * self.n_m[0]
         real_board_score = sum([sum(x) for x in self.board])
         if board_score != real_board_score:
-            self.result = "-1"
+            self.result = '-1'
         else:
-            print("{0}".format(moves))
+            print('{0}'.format(moves))
             for x in range(self.n_m[0]):
                 for y in range(left_board_moves[x]):
-                    print("row {0}".format(x + 1))
+                    print('row {0}'.format(x + 1))
             for x in range(self.n_m[1]):
                 for y in range(bottom_board_moves[x]):
-                    print("col {0}".format(x + 1))
+                    print('col {0}'.format(x + 1))
 
     def get_result(self):
         return self.result

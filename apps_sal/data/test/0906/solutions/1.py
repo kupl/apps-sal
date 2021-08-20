@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 if c == -1 and (a + b) % 2 != 0:
     print(0)
 else:

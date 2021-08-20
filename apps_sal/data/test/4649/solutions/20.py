@@ -1,12 +1,12 @@
 q = int(input())
 for i in range(q):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
-    m = 10**4
+    m = 10 ** 4
     for j in range(n):
         if j + k <= n:
-            l1 = ["R", "G", "B"]
-            m1, m2, m3 = 0, 0, 0
+            l1 = ['R', 'G', 'B']
+            (m1, m2, m3) = (0, 0, 0)
             for i in range(j, j + k):
                 if l1[(i - j) % 3] != s[i]:
                     m1 += 1

@@ -1,5 +1,5 @@
 def scramble(s1, s2):
-    j, k = 1, 1
+    (j, k) = (1, 1)
     a = {chr(i): 0 for i in range(97, 123)}
     b = {chr(i): 0 for i in range(97, 123)}
     for i in s1:
@@ -18,4 +18,3 @@ def scramble(s1, s2):
         else:
             return False
     return True
-    # your code here

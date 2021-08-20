@@ -1,8 +1,6 @@
 3
-
-n, m, k = tuple(map(int, input().split()))
+(n, m, k) = tuple(map(int, input().split()))
 a = reversed(sorted(map(int, input().split())))
-
 ans = 0
 for _ in a:
     if m <= k:

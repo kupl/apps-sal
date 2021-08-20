@@ -1,17 +1,32 @@
 from collections import *
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
 
 
-class Dinic():
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+class Dinic:
+
     def __init__(self, n, s, t):
-        self.n, self.s, self.t = n, s, t
+        (self.n, self.s, self.t) = (n, s, t)
         self.to = defaultdict(list)
         self.level = [-1]
         self.max_flow = -1
@@ -22,7 +37,6 @@ class Dinic():
         self.to[u].append([v, cap, u_index_in_to_v])
         self.to[v].append([u, 0, v_index_in_to_u])
 
-    # 無向辺の追加
     def add_undir_edge(self, u, v, cap):
         u_index_in_to_v = len(self.to[v])
         v_index_in_to_u = len(self.to[u])
@@ -36,8 +50,8 @@ class Dinic():
         q = deque()
         q.append([s, 0])
         while q:
-            u, u_level = q.popleft()
-            for v, cap, _ in self.to[u]:
+            (u, u_level) = q.popleft()
+            for (v, cap, _) in self.to[u]:
                 if cap == 0:
                     continue
                 if level[v] != -1:
@@ -56,7 +70,7 @@ class Dinic():
             return flow_to_me
         flow_from_me = 0
         u_level = self.level[u]
-        for utov_i, (v, cap, vtou_i) in enumerate(self.to[u]):
+        for (utov_i, (v, cap, vtou_i)) in enumerate(self.to[u]):
             if self.level[v] != u_level + 1:
                 continue
             if cap == 0:
@@ -75,40 +89,39 @@ class Dinic():
             res += self.dfs()
         return res
 
-    # これが出力用
     def get_max_flow(self):
         if self.max_flow == -1:
             self.max_flow = self.calculation()
         return self.max_flow
 
 
-h, w = MI()
+(h, w) = MI()
 aa = [input() for _ in range(h)]
 
 
 def main():
-    inf = 10**9 + 7
+    inf = 10 ** 9 + 7
     s = h + w
     t = h + w + 1
     mc = Dinic(h + w + 2, s, t)
-    si, sj, ti, tj = -1, -2, -3, -4
-    for i, row in enumerate(aa):
-        for j, a in enumerate(row):
-            if a == "S":
+    (si, sj, ti, tj) = (-1, -2, -3, -4)
+    for (i, row) in enumerate(aa):
+        for (j, a) in enumerate(row):
+            if a == 'S':
                 if i == ti or j == tj:
                     print(-1)
                     return
-                si, sj = i, j
+                (si, sj) = (i, j)
                 mc.add_edge(s, i, inf)
                 mc.add_edge(s, j + h, inf)
-            elif a == "T":
+            elif a == 'T':
                 if i == si or j == sj:
                     print(-1)
                     return
-                ti, tj = i, j
+                (ti, tj) = (i, j)
                 mc.add_edge(i, t, inf)
                 mc.add_edge(j + h, t, inf)
-            elif a == "o":
+            elif a == 'o':
                 mc.add_undir_edge(i, j + h, 1)
     print(mc.get_max_flow())
 

@@ -1,6 +1,6 @@
 from math import *
 for j in range(int(input())):
-    n, b = list(map(int, input().split()))
+    (n, b) = list(map(int, input().split()))
     a = n / (2 * b)
     a1 = ceil(a)
     a2 = floor(a)

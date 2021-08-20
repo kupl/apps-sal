@@ -1,11 +1,14 @@
 from sys import stdin, stdout
 input = stdin.readline
 print2 = stdout.write
-def get_list(): return tuple(map(int, stdin.readline().split()))
+
+
+def get_list():
+    return tuple(map(int, stdin.readline().split()))
 
 
 for _ in range(int(input())):
-    n, k = map(int, stdin.readline().split())
+    (n, k) = map(int, stdin.readline().split())
     event = sorted([get_list() for _ in range(n)])
     occup = {}
     count = 0

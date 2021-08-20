@@ -24,31 +24,30 @@ for _ in range(int(input())):
             zz += 1
         else:
             oo += 1
-    if zz and oo and not oz and not zo:
+    if zz and oo and (not oz) and (not zo):
         print(-1)
         continue
+    elif zo > oz:
+        print((zo - oz) // 2)
+        ans = []
+        need = (zo - oz) // 2
+        i = 0
+        while need:
+            zzz = mass[zos[i] - 1][len(mass[zos[i] - 1]) - 1::-1]
+            if zzz not in ozss:
+                ans.append(zos[i])
+                need -= 1
+            i += 1
+        print(*ans)
     else:
-        if zo > oz:
-            print((zo - oz) // 2)
-            ans = []
-            need = (zo - oz) // 2
-            i = 0
-            while need:
-                zzz = mass[zos[i] - 1][len(mass[zos[i] - 1]) - 1:: -1]
-                if zzz not in ozss:
-                    ans.append(zos[i])
-                    need -= 1
-                i += 1
-            print(*ans)
-        else:
-            print((oz - zo) // 2)
-            ans = []
-            need = (oz - zo) // 2
-            i = 0
-            while need:
-                zzz = mass[ozs[i] - 1][len(mass[ozs[i] - 1]) - 1:: -1]
-                if zzz not in zoss:
-                    ans.append(ozs[i])
-                    need -= 1
-                i += 1
-            print(*ans)
+        print((oz - zo) // 2)
+        ans = []
+        need = (oz - zo) // 2
+        i = 0
+        while need:
+            zzz = mass[ozs[i] - 1][len(mass[ozs[i] - 1]) - 1::-1]
+            if zzz not in zoss:
+                ans.append(ozs[i])
+                need -= 1
+            i += 1
+        print(*ans)

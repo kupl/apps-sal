@@ -10,9 +10,6 @@ class Task:
     def getData(self):
         input()
         self.numbers = [int(x) for x in input().split(' ')]
-        #inFile = open('input.txt', 'r')
-        # inFile.readline().rstrip()
-        #self.childs = inFile.readline().rstrip()
 
     def solve(self):
         firstZero = False
@@ -21,7 +18,7 @@ class Task:
             if x % 100 == 0:
                 self.answer.add(x)
                 continue
-            if x % 10 == 0 and x > 0 and firstZero == False:
+            if x % 10 == 0 and x > 0 and (firstZero == False):
                 self.answer.add(x)
                 firstZero = True
                 continue
@@ -36,9 +33,7 @@ class Task:
 
     def printAnswer(self):
         print(len(self.answer))
-        print(re.sub('[\{\},]', '', str(self.answer)))
-        #outFile = open('output.txt', 'w')
-        # outFile.write(self.answer)
+        print(re.sub('[\\{\\},]', '', str(self.answer)))
 
 
 task = Task()

@@ -16,6 +16,7 @@ def window_sums(bits, width):
 
 
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         bits = (ch in 'aeiou' for ch in s)
         sums = window_sums(bits, k)

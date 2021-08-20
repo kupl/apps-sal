@@ -1,4 +1,4 @@
-n, m, c = (int(i) for i in input().split())
+(n, m, c) = (int(i) for i in input().split())
 list_b = [int(i) for i in input().split()]
 list_a = [[int(i) for i in input().split()] for j in range(0, n)]
 count = 0

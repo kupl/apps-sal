@@ -1,5 +1,4 @@
 __author__ = 'Hacktivist'
-
 test = int(input())
 for testCases in range(test):
     n = int(input())

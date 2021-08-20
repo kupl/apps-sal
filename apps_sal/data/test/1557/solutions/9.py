@@ -1,6 +1,5 @@
-h1, a1, c1 = [int(i) for i in input().split(" ")]
-h2, a2 = [int(i) for i in input().split(" ")]
-
+(h1, a1, c1) = [int(i) for i in input().split(' ')]
+(h2, a2) = [int(i) for i in input().split(' ')]
 ans = []
 while h2 > 0:
     if h2 <= a1:

@@ -1,7 +1,6 @@
 t = int(input())
-
 for _ in range(t):
-    N, D = list(map(int, input().split()))
+    (N, D) = list(map(int, input().split()))
     L = list(map(int, input().split()))
     flag = True
     avg = None
@@ -13,17 +12,14 @@ for _ in range(t):
             numElem += 1
             sumA += L[temp + D]
             temp += D
-
         if sumA % numElem:
             flag = False
             break
-
         if avg == None:
             avg = sumA / numElem
-        elif avg != (sumA / numElem):
+        elif avg != sumA / numElem:
             flag = False
             break
-
     if flag:
         res = 0
         tempDiff = 0
@@ -38,8 +34,6 @@ for _ in range(t):
                     res += tempDiff
                 temp += D
                 tempDiff = L[temp] - avg
-
         print(res)
-
     else:
         print(-1)

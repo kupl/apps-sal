@@ -1,4 +1,5 @@
 class Node(object):
+
     def __init__(self, val, root, n, p):
         self.val = val
         self.n = n
@@ -16,7 +17,6 @@ class Node(object):
                 temp = ''.join(self.val)
                 self.root.val.append(temp)
             return None
-
         if n > 0:
             return Node(self.val + ['('], self.root, n - 1, p + 1)
 
@@ -28,6 +28,7 @@ class Node(object):
 
 
 class Solution:
+
     def generateParenthesis(self, s):
         """
         :type nums: List[int]

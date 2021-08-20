@@ -3,7 +3,7 @@ t = 0
 xy = [0, 0]
 ans = 'Yes'
 for i in range(N):
-    ti, xi, yi = map(int, input().split())
+    (ti, xi, yi) = map(int, input().split())
     dt = ti - t
     dx = abs(xi - xy[0])
     dy = abs(yi - xy[1])

@@ -4,7 +4,7 @@ N = len(S)
 
 def f(k):
     s = S[-k:k]
-    if s == "":
+    if s == '':
         return False
     return s.count(s[0]) != len(s)
 

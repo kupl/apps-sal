@@ -1,5 +1,4 @@
 n = int(input())
-
 while n > 0:
     l = int(input())
     s = input()
@@ -13,5 +12,4 @@ while n > 0:
             one += 1
     subs = one * zero
     print(subs)
-
     n -= 1

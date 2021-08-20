@@ -5,4 +5,4 @@ def is_uppercase(inp):
         return False
 
 
-print((is_uppercase(inp='AMOR')))
+print(is_uppercase(inp='AMOR'))

@@ -1,4 +1,5 @@
 class Solution:
+
     def checkRecord(self, s):
         """
         :type s: str
@@ -17,5 +18,4 @@ class Solution:
                     return False
             else:
                 charL = 0
-
         return True

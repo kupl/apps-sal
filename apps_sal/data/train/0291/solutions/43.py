@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, A):
         count = [1, 0]
         curr = res = 0

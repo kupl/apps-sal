@@ -1,7 +1,7 @@
-r, c, n, k = [int(i) for i in input().split()]
+(r, c, n, k) = [int(i) for i in input().split()]
 a = [[0] * r for i in range(c)]
 for i in range(n):
-    x, y = [int(i) for i in input().split()]
+    (x, y) = [int(i) for i in input().split()]
     a[y - 1][x - 1] = 1
 ct1 = 0
 for i in range(c):

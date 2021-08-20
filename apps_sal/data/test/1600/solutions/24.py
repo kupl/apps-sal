@@ -1,5 +1,5 @@
 n = int(input())
-hs = tuple(int(x) for x in input().split())
+hs = tuple((int(x) for x in input().split()))
 
 
 def blocks(seq):
@@ -18,9 +18,9 @@ def blocks(seq):
 
 
 def solve(n, hs):
-    hhs = sorted((hs[i], i) for i in range(n))
-    hhhs = sorted((i, hhs[i][0], hhs[i][1]) for i in range(n))
-    return blocks(list(h[2] for h in hhhs))
+    hhs = sorted(((hs[i], i) for i in range(n)))
+    hhhs = sorted(((i, hhs[i][0], hhs[i][1]) for i in range(n)))
+    return blocks(list((h[2] for h in hhhs)))
 
 
 print(solve(n, hs))

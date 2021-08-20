@@ -1,6 +1,4 @@
-# MOD = 1000000007
 for _ in range(int(input())):
-    # n,k = map(int,input().split())
     n = int(input())
     coins = list(map(int, input().split()))
     cashier = {5: 0, 10: 0}
@@ -15,14 +13,13 @@ for _ in range(int(input())):
             else:
                 boo = True
                 break
+        elif cashier[10] > 0:
+            cashier[10] -= 1
+        elif cashier[5] >= 2:
+            cashier[5] -= 2
         else:
-            if cashier[10] > 0:
-                cashier[10] -= 1
-            elif cashier[5] >= 2:
-                cashier[5] -= 2
-            else:
-                boo = True
-                break
+            boo = True
+            break
     if boo:
         print('NO')
     else:

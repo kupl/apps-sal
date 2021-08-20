@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, a: List[int]) -> int:
         n = len(a)
         ans = float('-inf')
@@ -6,7 +7,6 @@ class Solution:
         for num in a:
             current = num + max(0, current)
             ans = max(ans, current)
-
         right_sum = [0] * n
         right_sum[-1] = a[-1]
         right_most = [float('-inf')] * n

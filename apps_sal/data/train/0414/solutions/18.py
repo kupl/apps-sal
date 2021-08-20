@@ -1,6 +1,6 @@
 class Solution:
-    def getWinner(self, arr: List[int], k: int) -> int:
 
+    def getWinner(self, arr: List[int], k: int) -> int:
         n = len(arr)
         cur = arr[0]
         win = 0
@@ -11,5 +11,4 @@ class Solution:
             win += 1
             if win == k:
                 return cur
-
         return max(arr)

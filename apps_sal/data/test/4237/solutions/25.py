@@ -1,5 +1,5 @@
 import math
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 e = c * d // math.gcd(c, d)
 if a % c == 0:
     p = b // c - a // c + 1

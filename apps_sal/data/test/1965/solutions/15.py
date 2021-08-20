@@ -1,6 +1,6 @@
 q = int(input())
 for _ in range(q):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     l = list(map(int, input().split()))
     g = l.count(x)
     dup = sum(l)
@@ -9,8 +9,7 @@ for _ in range(q):
             print(1)
         else:
             print(2)
+    elif l == [x] * n:
+        print(0)
     else:
-        if l == [x] * n:
-            print(0)
-        else:
-            print(1)
+        print(1)

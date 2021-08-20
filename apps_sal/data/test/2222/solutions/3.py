@@ -11,7 +11,6 @@ for p in par:
 dp = [0] * (N + 1)
 for i in leaf:
     dp[i] = 1
-
 Q = deque(list(leaf))
 visited = leaf.copy()
 while Q:

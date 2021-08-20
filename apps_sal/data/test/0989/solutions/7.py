@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 li = list(map(int, input().split()))
 d = {}
 l = []
@@ -36,7 +36,6 @@ while k > 0:
             a1 = k // d[l[a]]
             z = 3
             break
-
 if z == 0:
     print(0)
 elif z == 1:

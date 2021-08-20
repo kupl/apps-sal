@@ -1,4 +1,5 @@
 class Solution:
+
     def minScoreTriangulation(self, A: List[int]) -> int:
         n = len(A)
         dp = [[float('inf')] * n for _ in range(n)]

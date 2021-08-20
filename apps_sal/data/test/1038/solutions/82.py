@@ -1,5 +1,5 @@
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
 
     def f(n):
         if n % 4 == 0:
@@ -10,7 +10,7 @@ def main():
             return n + 1
         if n % 4 == 3:
             return 0
-    print((f(b) ^ f(a - 1)))
+    print(f(b) ^ f(a - 1))
 
 
 def __starting_point():

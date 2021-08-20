@@ -3,6 +3,5 @@ def find_average(a):
     avg = 0
     for i in a:
         s += i
-
     avg = s / len(a)
     return avg

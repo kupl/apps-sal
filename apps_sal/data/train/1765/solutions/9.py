@@ -2,7 +2,7 @@ summ = list()
 
 
 def partition(n, k):
-    if n >= 0 and k >= 0 and summ[n][k] > 0:
+    if n >= 0 and k >= 0 and (summ[n][k] > 0):
         return summ[n][k]
     if n < 0:
         return 0

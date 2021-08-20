@@ -20,8 +20,8 @@ def check(x):
 
 low = 0
 high = l
-while(low <= high):
-    mid = (low + high) >> 1
+while low <= high:
+    mid = low + high >> 1
     if check(mid):
         low = mid + 1
     else:

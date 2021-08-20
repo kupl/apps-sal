@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         dic = {5: 0, 10: 0, 20: 0}
         for i in bills:

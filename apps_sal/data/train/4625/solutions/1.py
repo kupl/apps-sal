@@ -5,7 +5,7 @@ def processes(start, end, graph):
     Q = deque([[i, []] for i in graph if i[1] == start])
     visited = set()
     while Q:
-        (p, s, e), path = Q.popleft()
+        ((p, s, e), path) = Q.popleft()
         path.append(p)
         visited.add((s, e))
         if e == end:

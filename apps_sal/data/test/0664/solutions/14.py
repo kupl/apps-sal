@@ -4,8 +4,7 @@ def main():
     im = 1
     while im < n and a[im] >= a[im - 1]:
         im += 1
-
-    if sorted(a[im:] + a[:im]) == (a[im:] + a[:im]):
+    if sorted(a[im:] + a[:im]) == a[im:] + a[:im]:
         print(n - im)
     else:
         print(-1)

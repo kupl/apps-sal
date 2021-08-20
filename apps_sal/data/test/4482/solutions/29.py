@@ -6,8 +6,8 @@ m = int(sum(n) / N)
 def fun(x):
     ans = 0
     for i in n:
-        ans += (i - x)**2
-    return(ans)
+        ans += (i - x) ** 2
+    return ans
 
 
 p = fun(m)

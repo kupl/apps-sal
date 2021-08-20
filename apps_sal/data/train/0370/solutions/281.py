@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n: int) -> None:
         self.parent = [i for i in range(n)]
 
@@ -12,6 +13,7 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = UnionFind(100001)
         for x in A:

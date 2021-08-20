@@ -6,8 +6,8 @@ def main():
     z = [0.0] * (t + 2)
     for i in range(t + 2):
         z[i] = [0] * (n + 2)
-    l = 0.
-    z[0][0] = 1.
+    l = 0.0
+    z[0][0] = 1.0
     for i in range(t + 1):
         for j in range(n + 1):
             if j == n:

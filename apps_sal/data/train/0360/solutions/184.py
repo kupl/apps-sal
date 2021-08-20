@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         l = max(weights)
         r = sum(weights)
@@ -7,7 +8,6 @@ class Solution:
             mid = l + (r - l) // 2
             cur = 0
             toD = 1
-
             for i in range(length):
                 if cur + weights[i] > mid:
                     toD += 1

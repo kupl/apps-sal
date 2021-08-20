@@ -1,8 +1,7 @@
-N, D = list(map(int, input().split()))
+(N, D) = list(map(int, input().split()))
 d = list(map(int, input().split()))
 Q = int(input())
 q = list(map(int, input().split()))
-
 a = [D for i in range(N)]
 b = [1 for i in range(N + 1)]
 for i in range(1, N):
@@ -12,13 +11,11 @@ for i in range(N)[::-1]:
         b[i] = b[i + 1] + d[i]
     else:
         b[i] = b[i + 1]
-
-res = ""
+res = ''
 for i in q:
     if a[i - 1] < b[i]:
-        res += "NO"
+        res += 'NO'
     else:
-        res += "YES"
-    res += "\n"
-
+        res += 'YES'
+    res += '\n'
 print(res)

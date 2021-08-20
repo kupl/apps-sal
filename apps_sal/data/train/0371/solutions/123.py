@@ -1,11 +1,7 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         stops = collections.defaultdict(set)
-        # stops = {1:[0], 2:[0], 7:[0,1], 3:[1], 6:[1]}
-        # seen = 1, 2, 7
-        # res =
-        # q = [2,7]
-        # cur_st = 2
         for i in range(len(routes)):
             for st in routes[i]:
                 stops[st].add(i)
@@ -25,5 +21,4 @@ class Solution:
                             seen.add(new_st)
             res += 1
             q = froniter
-
         return -1

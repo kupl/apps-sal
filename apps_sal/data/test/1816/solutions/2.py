@@ -1,7 +1,5 @@
 import sys
-#fin = open("ecr4b.in", "r")
 fin = sys.stdin
-
 n = int(fin.readline())
 file = [None] * n
 disk = tuple(map(int, input().split()))

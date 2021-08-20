@@ -1,2 +1,2 @@
 def spacify(string):
-    return " ".join(string)
+    return ' '.join(string)

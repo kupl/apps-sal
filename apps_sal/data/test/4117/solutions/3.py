@@ -8,6 +8,6 @@ for i in range(n - 2):
             a = l[i]
             b = l[j]
             c = l[k]
-            if a != b and b != c and c < a + b:
+            if a != b and b != c and (c < a + b):
                 ans += 1
 print(ans)

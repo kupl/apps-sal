@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 threes = []
 twos = []
 out = []
@@ -22,7 +21,6 @@ for i in range(n):
             out.append((i, i))
         else:
             out.append((i, i))
-
         twos.append(i)
     elif a[i] == 3:
         if threes:
@@ -31,7 +29,6 @@ for i in range(n):
             out.append((i, i))
         else:
             out.append((i, i))
-
         threes.append(i)
 if twos or threes:
     print(-1)

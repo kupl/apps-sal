@@ -1,7 +1,7 @@
 n = int(input())
-u, d = 0, 0
+(u, d) = (0, 0)
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x > 0:
         u += 1
     else:

@@ -1,9 +1,9 @@
-mod = 10**9 + 7
-d, n = map(int, input().split())
+mod = 10 ** 9 + 7
+(d, n) = map(int, input().split())
 a = [0] + list(map(int, input().split()))
 tree = [[] for _ in range(n + 1)]
 for _ in range(n - 1):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     tree[u].append(v)
     tree[v].append(u)
 
@@ -18,7 +18,7 @@ def dfs(u, root):
             if a[i] == a[root] and i < root:
                 continue
             dfs(i, root)
-            f[u] = (f[u] * (f[i] + 1)) % (mod)
+            f[u] = f[u] * (f[i] + 1) % mod
 
 
 ans = 0

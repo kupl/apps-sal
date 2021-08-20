@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         s = {0}
         res = 0
@@ -6,7 +7,6 @@ class Solution:
         for x in nums:
             cur += x
             if cur - target in s:
-                # print(x)
                 res += 1
                 cur = 0
                 s = {0}

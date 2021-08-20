@@ -13,21 +13,17 @@ def solve(n, s):
         return -1
     elif s == n:
         return n + 1
-
     for b in range(2, floor(sqrt(n)) + 1):
         if f(b, n) == s:
             return b
-
     for p in reversed(list(range(1, floor(sqrt(n)) + 1))):
         if (n - s) % p == 0:
             b = (n - s) // p + 1
             if f(b, n) == s:
                 return b
-
     return -1
 
 
 n = int(input())
 s = int(input())
-
-print((solve(n, s)))
+print(solve(n, s))

@@ -1,7 +1,7 @@
-def hello(name=""):
-    if name != "":
+def hello(name=''):
+    if name != '':
         name = name.capitalize()
-        return ("Hello, %s!" % name)
+        return 'Hello, %s!' % name
     else:
-        return "Hello, World!"
+        return 'Hello, World!'
     pass

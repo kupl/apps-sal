@@ -11,5 +11,4 @@ for i in range(t):
                 c += 1
                 num += g * j
                 g *= 10
-
     print(c)

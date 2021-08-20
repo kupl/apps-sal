@@ -1,4 +1,4 @@
-code_number, characteristic_code, integer3 = map(int, input().split())
+(code_number, characteristic_code, integer3) = map(int, input().split())
 integer2 = list(map(int, input().split()))
 integer1 = [list(map(int, input().split())) for i in range(code_number)]
 solution = 0

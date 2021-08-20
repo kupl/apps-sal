@@ -1,6 +1,6 @@
 def solve():
     n = int(input())
-    p = [int(x) for x in (input().split())]
+    p = [int(x) for x in input().split()]
     c = dict()
     cnt = 0
     for i in range(n):

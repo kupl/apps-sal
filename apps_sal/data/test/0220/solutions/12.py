@@ -1,4 +1,4 @@
-s, x = list(map(int, input().split()))
+(s, x) = list(map(int, input().split()))
 f = 0
 if s == x:
     f = -2
@@ -7,7 +7,6 @@ if aa % 2 == 1 or aa < 0:
     print(0)
 else:
     a = aa // 2
-    # print(a,s)
     out = 1
     for i in range(64):
         xx = x % 2

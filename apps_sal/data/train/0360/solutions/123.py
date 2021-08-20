@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         sums = [0] * (len(weights) + 1)
         for i in range(len(weights)):
@@ -15,9 +16,7 @@ class Solution:
                     break
                 j += 1
             return backtracking(j, cap, d - 1)
-
-        l, h = max(weights), sum(weights)
-
+        (l, h) = (max(weights), sum(weights))
         while l <= h:
             m = (l + h) // 2
             if backtracking(1, m, D):

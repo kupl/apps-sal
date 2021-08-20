@@ -6,5 +6,4 @@ def sum_mix(arr):
             sum += i
         else:
             sum += i
-
     return sum

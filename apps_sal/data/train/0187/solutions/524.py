@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boarding_cost: int, running_cost: int) -> int:
         max_profit = -1
         cur_profit = 0
@@ -6,7 +7,6 @@ class Solution:
         rotations = 0
         i = 0
         while i < len(customers):
-
             c = customers[i]
             waiting += c
             boarded = min([waiting, 4])

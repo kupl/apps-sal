@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         hm = {}
         uni_nums = []
@@ -8,7 +9,6 @@ class Solution:
                 uni_nums.append(num)
             else:
                 hm[num] += 1
-
         uni_nums = sorted(uni_nums)
         N = len(uni_nums)
         i = 0

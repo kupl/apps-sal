@@ -1,6 +1,6 @@
 def seven_ate9(str_):
     new_strng = ''
-    for i, e in enumerate(str_[:-1]):
+    for (i, e) in enumerate(str_[:-1]):
         try:
             if e != '9':
                 new_strng += e

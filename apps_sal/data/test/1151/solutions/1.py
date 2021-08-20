@@ -4,14 +4,14 @@ from collections import Counter
 from collections import OrderedDict
 from collections import deque
 from itertools import accumulate, product
-
 import math
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-n, u = R()
+(n, u) = R()
 arr = list(R())
 res = -1
 for l in range(n):

@@ -1,4 +1,5 @@
 def check_exam(arr1, arr2):
+
     def grade(a, b):
         if not b:
             return 0

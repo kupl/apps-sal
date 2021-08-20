@@ -1,4 +1,4 @@
 def bonus_time(salary, bonus):
     if bonus:
-        return F"${((salary * 10))}"
-    return F"${salary}"
+        return f'${salary * 10}'
+    return f'${salary}'

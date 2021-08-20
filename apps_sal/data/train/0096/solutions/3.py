@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, T, a, b = mints()
+    (n, T, a, b) = mints()
     h = list(mints())
     c = [0, 0]
     for i in h:
@@ -30,14 +30,13 @@ def solve():
     cmust = 0
     r = 0
     for ii in range(len(t)):
-        tn, i = t[ii]
+        (tn, i) = t[ii]
         if tt < tn - 1:
             tt = tn - 1
             left = tt - tmust
             if left >= 0:
                 ac = min(left // a, c[0])
                 bc = min((left - ac * a) // b, c[1])
-                #print(tt, tmust, left, cmust, ac, bc)
                 r = max(r, cmust + ac + bc)
         if h[i]:
             tmust += b
@@ -45,7 +44,6 @@ def solve():
         else:
             tmust += a
             c[0] -= 1
-        #print("tmust", tmust)
         cmust += 1
     if tt < T:
         tt = T

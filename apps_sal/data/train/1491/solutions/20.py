@@ -1,5 +1,5 @@
 import itertools
-a, b, c, d = list(map(float, input().split()))
+(a, b, c, d) = list(map(float, input().split()))
 li = list(itertools.permutations([a, b, c, d]))
 flag = False
 for i in li:

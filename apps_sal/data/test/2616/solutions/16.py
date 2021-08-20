@@ -4,9 +4,9 @@ for _ in range(int(input())):
     c = a.count(1)
     if c == n:
         if n % 2 == 0:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
     else:
         j = 0
         for i in range(n):
@@ -14,6 +14,6 @@ for _ in range(int(input())):
                 j = i
                 break
         if j % 2 == 0:
-            print("First")
+            print('First')
         else:
-            print("Second")
+            print('Second')

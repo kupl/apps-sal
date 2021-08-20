@@ -1,9 +1,10 @@
 class Solution:
+
     def racecar(self, target):
-        q, cnt, used = [(0, 1)], 0, {(0, 1)}
+        (q, cnt, used) = ([(0, 1)], 0, {(0, 1)})
         while q:
             new = []
-            for pos, speed in q:
+            for (pos, speed) in q:
                 if pos == target:
                     return cnt
                 elif pos > 20000 or -20000 > pos:

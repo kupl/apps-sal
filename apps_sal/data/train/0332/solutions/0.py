@@ -1,17 +1,18 @@
 class Solution:
+
     def countSubstrings(self, s):
         """
         :type s: str
         :rtype: int
         """
         ret = 0
-        left, right = 0, 0
+        (left, right) = (0, 0)
         while left < len(s):
             while right < len(s) and s[right] == s[left]:
                 right += 1
             ret += self.sum(right - left)
-            l, r = left - 1, right
-            while l >= 0 and r < len(s) and s[r] == s[l]:
+            (l, r) = (left - 1, right)
+            while l >= 0 and r < len(s) and (s[r] == s[l]):
                 ret += 1
                 l -= 1
                 r += 1

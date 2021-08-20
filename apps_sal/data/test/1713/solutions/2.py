@@ -1,8 +1,7 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
 l = [int(i) for i in f.readline().strip().split()]
-n, s, t = l[0], l[1], l[2]
+(n, s, t) = (l[0], l[1], l[2])
 p = [int(i) for i in f.readline().strip().split()]
 
 

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 
 
 def f(n):
@@ -8,4 +8,4 @@ def f(n):
 sum = 0
 for i in range(k, n + 2):
     sum += f(n) - f(n - i) - f(i - 1) + 1
-print(int(sum % (10**9 + 7)))
+print(int(sum % (10 ** 9 + 7)))

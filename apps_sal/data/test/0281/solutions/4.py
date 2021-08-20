@@ -1,6 +1,6 @@
 import random
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 r = 1
 if b > a + 6:
     print(0)

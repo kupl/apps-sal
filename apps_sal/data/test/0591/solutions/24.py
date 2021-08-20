@@ -19,7 +19,7 @@ def f(idl, idr, x):
 
 
 fi = open('input.txt', 'r')
-n, k = map(int, fi.readline().split())
+(n, k) = map(int, fi.readline().split())
 a = fi.readline().split()
 a = [[int(a[x]), x + 1] for x in range(n)]
 f(0, n, a)

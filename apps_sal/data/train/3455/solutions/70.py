@@ -3,6 +3,6 @@ def disarium_number(number):
     for i in range(len(str(number))):
         s += int(str(number)[i]) ** (i + 1)
     if s == number:
-        return "Disarium !!"
+        return 'Disarium !!'
     else:
-        return "Not !!"
+        return 'Not !!'

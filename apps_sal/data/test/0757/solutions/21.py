@@ -2,7 +2,6 @@
 n = int(n)
 m = int(m)
 k = int(k)
-
 data = [int(i) for i in input().split()]
 ans = 0
 for i in reversed(sorted(data)):
@@ -11,8 +10,6 @@ for i in reversed(sorted(data)):
         ans += 1
     else:
         break
-
 if k < m:
     ans = -1
-
 print(ans)

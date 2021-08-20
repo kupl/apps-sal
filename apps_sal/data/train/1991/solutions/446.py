@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
         f = [[0] * (fuel + 1) for i in range(n)]
@@ -9,4 +10,4 @@ class Solution:
                     t = abs(locations[i] - locations[j])
                     if i != j and t <= x:
                         f[j][x - t] += f[i][x]
-        return sum(f[finish]) % (10**9 + 7)
+        return sum(f[finish]) % (10 ** 9 + 7)

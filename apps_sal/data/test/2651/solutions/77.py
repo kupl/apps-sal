@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -35,20 +34,18 @@ def C(F, a, b, mod):
 
 def main():
     mod = 10 ** 9 + 7
-    N, M = read_values()
+    (N, M) = read_values()
     X = read_list()
     Y = read_list()
-
     res_x = 0
     for i in range(N - 1):
         res_x += (i + 1) * (N - i - 1) * (X[i + 1] - X[i]) % mod
         res_x %= mod
-
     res_y = 0
     for i in range(M - 1):
         res_y += (i + 1) * (M - i - 1) * (Y[i + 1] - Y[i]) % mod
         res_y %= mod
-    print((res_x * res_y % mod))
+    print(res_x * res_y % mod)
 
 
 def __starting_point():

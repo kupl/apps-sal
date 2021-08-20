@@ -1,4 +1,5 @@
 class Solution:
+
     def countVowelPermutation(self, n: int) -> int:
         dic = {}
         dic['a'] = ['e']
@@ -9,24 +10,12 @@ class Solution:
         vowels = ['a', 'e', 'i', 'o', 'u']
         dp = {}
         for v in vowels:
-            dp[(v, 1)] = 1
-
+            dp[v, 1] = 1
         for i in range(2, n + 1):
             for v in vowels:
                 for followed in dic[v]:
-                    dp[(v, i)] = (dp.get((v, i), 0) + dp[(followed, i - 1)]) % (10**9 + 7)
+                    dp[v, i] = (dp.get((v, i), 0) + dp[followed, i - 1]) % (10 ** 9 + 7)
         res = 0
         for v in vowels:
-            res += dp[(v, n)]
-        return res % (10**9 + 7)
-
-
-#         def helper(vowel,depth):
-#             if depth == 0:
-#                 return 1
-#             res = 0
-#             for v in dic[vowel]:
-#                 res += helper(v, depth-1)
-#             return res
-#         res = 0
-#         for v in ['a']
+            res += dp[v, n]
+        return res % (10 ** 9 + 7)

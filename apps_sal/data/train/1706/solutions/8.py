@@ -3,15 +3,13 @@ from math import floor, sqrt
 
 
 def rectangle_rotation(a, b):
-
     sa = krissx(a)
     sb = krissx(b)
     ena = krisenx(sa)
     enb = krisenx(sb)
     p = krisif(sa)
     m = krisif(sb)
-
-    return (ena * enb) + (ena + p) * (enb + m)
+    return ena * enb + (ena + p) * (enb + m)
 
 
 def krissx(x):

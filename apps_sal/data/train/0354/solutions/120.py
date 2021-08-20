@@ -1,5 +1,5 @@
-
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         self.ans = 0
 
@@ -14,5 +14,4 @@ class Solution:
                 elif num + 1 <= rollMax[i]:
                     ans += rec(index + 1, i, num + 1)
             return ans
-
-        return rec(0, -1, 0) % ((10**9) + 7)
+        return rec(0, -1, 0) % (10 ** 9 + 7)

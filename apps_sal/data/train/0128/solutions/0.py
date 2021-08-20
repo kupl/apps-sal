@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, s):
         """
         :type s: str
@@ -8,7 +9,6 @@ class Solution:
         num = 0
         sign = 1
         stk = []
-
         for c in s:
             if c.isdigit():
                 num = 10 * num + (ord(c) - ord('0'))
@@ -31,7 +31,6 @@ class Solution:
                 res += stk.pop()
                 num = 0
                 sign = 1
-
         if num:
             res += sign * num
         return res

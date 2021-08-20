@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         sum_up_to = [0]
         total = 0
@@ -15,12 +16,10 @@ class Solution:
                 lsum.append(sum_up_to[i] - sum_up_to[i - L])
             else:
                 lsum.append(None)
-
             if i >= M:
                 msum.append(sum_up_to[i] - sum_up_to[i - M])
             else:
                 msum.append(None)
-
         max_sum = 0
         for i in range(len(lsum)):
             if lsum[i] is None:

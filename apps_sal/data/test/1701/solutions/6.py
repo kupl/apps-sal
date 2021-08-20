@@ -11,13 +11,13 @@ def gss():
 
 
 def problem():
-    n, m = gis()
+    (n, m) = gis()
     ip = dict()
     for i in range(n):
-        name, ips = gss()
+        (name, ips) = gss()
         ip[ips] = name
     for i in range(m):
-        command, ips = gss()
+        (command, ips) = gss()
         print(command, ips, '#{}'.format(ip[ips[:-1]]))
 
 

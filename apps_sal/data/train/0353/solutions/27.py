@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
-        MOD = int(1e9 + 7)
+        MOD = int(1000000000.0 + 7)
         pw = [1]
         for i in range(1, 100001):
             pw.append(pw[-1] * 2 % MOD)

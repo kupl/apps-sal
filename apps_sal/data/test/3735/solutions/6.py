@@ -8,4 +8,4 @@ def sumdigs(n):
 n = int(input())
 tens = int(log10(n))
 nines = tens * 9
-print(nines + sumdigs(n - ((10 ** tens) - 1)))
+print(nines + sumdigs(n - (10 ** tens - 1)))

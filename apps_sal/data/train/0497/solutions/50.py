@@ -1,9 +1,10 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(endTime)
         endidx = defaultdict(list)
         maxt = 0
-        for i, t in enumerate(endTime):
+        for (i, t) in enumerate(endTime):
             endidx[t].append(i)
             maxt = max(maxt, t)
         dp = [0] * (maxt + 1)

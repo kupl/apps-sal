@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-idx, cur = 0, 1
+(idx, cur) = (0, 1)
 d = ''
 while idx < n:
     d += s[idx]

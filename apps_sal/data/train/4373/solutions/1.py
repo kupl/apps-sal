@@ -1,7 +1,7 @@
 def count_smileys(arr):
-    eyes = [":", ";"]
-    noses = ["", "-", "~"]
-    mouths = [")", "D"]
+    eyes = [':', ';']
+    noses = ['', '-', '~']
+    mouths = [')', 'D']
     count = 0
     for eye in eyes:
         for nose in noses:

@@ -6,15 +6,15 @@ try:
         a = len(l)
         i = 0
         max = -999999
-        while(i < a):
+        while i < a:
             sum = 0
-            if(i == (a - 1)):
+            if i == a - 1:
                 sum = l[i] + l[0] + l[1]
-            elif(i == (a - 2)):
+            elif i == a - 2:
                 sum = l[i] + l[i + 1] + l[0]
             else:
                 sum = l[i] + l[i + 1] + l[i + 2]
-            if(sum > max):
+            if sum > max:
                 max = sum
             i = i + 1
         print(max)

@@ -9,9 +9,8 @@ def solve(A):
     for i in range(n):
         if A[i] not in d:
             d[A[i]] = i
-        else:
-            if i - d[A[i]] > 1:
-                return True
+        elif i - d[A[i]] > 1:
+            return True
     return False
 
 

@@ -1,4 +1,4 @@
-N, M, L = [int(s) for s in input().split()]
+(N, M, L) = [int(s) for s in input().split()]
 parent_road = list(range(N))
 parent_train = list(range(N))
 rank_road = [0] * N
@@ -6,6 +6,7 @@ rank_train = [0] * N
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [0] * N
@@ -30,16 +31,12 @@ class UnionFind:
 
 edge_road = [[int(s) - 1 for s in input().split()] for _ in range(M)]
 edge_train = [[int(s) - 1 for s in input().split()] for _ in range(L)]
-
 group_road = UnionFind(N)
 group_train = UnionFind(N)
-
-for x, y in edge_road:
+for (x, y) in edge_road:
     group_road.union(x, y)
-
-for x, y in edge_train:
+for (x, y) in edge_train:
     group_train.union(x, y)
-
 group_count = {}
 group_list = []
 for i in range(N):
@@ -47,8 +44,7 @@ for i in range(N):
     gt = group_train.find(i)
     group_list.append((gr, gt))
     if (gr, gt) in list(group_count.keys()):
-        group_count[(gr, gt)] += 1
+        group_count[gr, gt] += 1
     else:
-        group_count[(gr, gt)] = 1
-
-print((' '.join([str(group_count[g]) for g in group_list])))
+        group_count[gr, gt] = 1
+print(' '.join([str(group_count[g]) for g in group_list]))

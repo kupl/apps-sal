@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.rank = [0] * N
@@ -10,7 +11,7 @@ class UnionFind:
         return self.par[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return
         if self.rank[px] < self.rank[py]:
@@ -26,17 +27,17 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         N = max(A)
         primes = []
         res = 0
-        for i in range(2, int(N**0.5) + 1):
+        for i in range(2, int(N ** 0.5) + 1):
             for j in primes:
                 if i % j == 0:
                     break
             else:
                 primes.append(i)
-
         uf = UnionFind(N + 1)
         used_primes = set()
         for a in A:
@@ -52,15 +53,12 @@ class Solution:
                         a //= p
             if a > 1:
                 a_primes.append(a)
-
             idx = uf.find(a_primes[0])
             used_primes.add(a_primes[0])
             uf.size[idx] += 1
             for i in range(1, len(a_primes)):
                 uf.union(a_primes[0], a_primes[i])
-
         for a in used_primes:
             idx = uf.find(a)
             res = max(res, uf.size[idx])
-
         return res

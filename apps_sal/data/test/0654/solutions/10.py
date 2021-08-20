@@ -1,7 +1,7 @@
 mod = 1000000007
 n = int(input())
 cat = [0] * 1100
-f, c, i = 1, 1, 1
+(f, c, i) = (1, 1, 1)
 while i < 1100:
     cat[i] = f
     i += 1

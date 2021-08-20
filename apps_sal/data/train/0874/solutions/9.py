@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m, s = map(int, input().split())
+    (n, m, s) = map(int, input().split())
     ls = list(map(int, input().split()))
     ls.sort()
     ans = 0
@@ -11,7 +10,7 @@ for _ in range(int(input())):
                 m -= 1
             else:
                 break
-        elif ls[i] <= (2 * s):
+        elif ls[i] <= 2 * s:
             if m > 1:
                 ans += 1
                 m -= 2

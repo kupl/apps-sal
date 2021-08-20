@@ -1,12 +1,10 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 ki = [list() for i in range(N)]
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     ki[a].append(b)
-
 K = [-1] * N
 
 

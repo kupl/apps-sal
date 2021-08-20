@@ -1,9 +1,7 @@
 a = list(input())
 b = list(input())
 c = list(input())
-
 tgt = a.pop(0)
-
 while True:
     if tgt == 'a':
         if a:
@@ -17,10 +15,9 @@ while True:
         else:
             ans = 'B'
             break
+    elif c:
+        tgt = c.pop(0)
     else:
-        if c:
-            tgt = c.pop(0)
-        else:
-            ans = 'C'
-            break
+        ans = 'C'
+        break
 print(ans)

@@ -1,19 +1,11 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/8 17:05
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : A. Sushi for Two.py
-
 from collections import Counter
 
 
 def main():
     n = int(input())
     t = list(map(int, input().split()))
-
     counter = Counter()
     counter[t[0]] = 1
-
     ret = 0
     for i in range(1, n):
         if t[i] == t[i - 1]:

@@ -1,21 +1,15 @@
-#!/usr/bin/env python3
-#from collections import defaultdict
-
 def ri():
     return map(int, input().split())
 
 
-n, k = ri()
-
+(n, k) = ri()
 s = list(ri())
 sd = dict()
 for i in range(1, n):
     s[i] = s[i] + s[i - 1]
-
 s.append(0)
-
 ans = 0
-pows = set([k**i for i in range(50)])
+pows = set([k ** i for i in range(50)])
 for i in range(n - 1, -1, -1):
     if not s[i] in sd:
         sd[s[i]] = 1

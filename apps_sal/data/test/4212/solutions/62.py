@@ -1,5 +1,4 @@
-n, m, q = map(int, input().split())
-
+(n, m, q) = map(int, input().split())
 candidate = []
 
 
@@ -17,11 +16,9 @@ def gen(cur):
 for i in range(1, m + 1):
     arr = [i]
     gen(arr)
-
 ask = []
 for _ in range(q):
     ask.append(list(map(int, input().split())))
-
 ans = 0
 for cv in candidate:
     tmp = 0

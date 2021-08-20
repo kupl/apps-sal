@@ -3,7 +3,7 @@ def cal(x, y):
     wk1 = a[1] + y
     wkans = 0
     for k in range(2, n):
-        diff = abs((wk1 + d) - a[k])
+        diff = abs(wk1 + d - a[k])
         if diff == 1:
             wkans += 1
         elif diff > 1:
@@ -14,7 +14,6 @@ def cal(x, y):
 
 n = int(input())
 a = [int(i) for i in input().split()]
-
 if n > 2:
     ans_final = n + 1
     for i in range(-1, 2):

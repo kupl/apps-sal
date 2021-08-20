@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def cal(n, s, t):
-    if(Counter(s) != Counter(t)):
+    if Counter(s) != Counter(t):
         return -1
     ans = 0
     for i in range(n):
@@ -19,5 +19,5 @@ def cal(n, s, t):
 
 for _ in range(int(input())):
     n = int(input())
-    s, t = input(), input()
+    (s, t) = (input(), input())
     print(cal(n, s, t))

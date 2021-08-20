@@ -15,10 +15,9 @@ for i in range(len(s)):
             changed += 1
         else:
             s1 += s[i]
+    elif s[i] != '0':
+        s1 += '0'
+        changed += 1
     else:
-        if s[i] != '0':
-            s1 += '0'
-            changed += 1
-        else:
-            s1 += s[i]
+        s1 += s[i]
 print(s1)

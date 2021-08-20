@@ -1,14 +1,12 @@
 def relations(family_list, target_pair):
     parents = {}
-    for parent, child in family_list:
+    for (parent, child) in family_list:
         parents[child] = parent
-
-    a, b = target_pair
+    (a, b) = target_pair
     ap = parents.get(a)
     app = parents.get(ap)
     bp = parents.get(b)
     bpp = parents.get(bp)
-
     if b == ap:
         return 'Mother'
     if b == app:

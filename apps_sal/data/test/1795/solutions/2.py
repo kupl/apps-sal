@@ -3,7 +3,7 @@ def read_nums():
 
 
 def is_triangle(nums):
-    for index, num in enumerate(nums):
+    for (index, num) in enumerate(nums):
         if nums[nums[num - 1] - 1] - 1 == index:
             return 'YES'
     return 'NO'

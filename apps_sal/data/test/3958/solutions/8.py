@@ -17,7 +17,7 @@ for i in range(0, len(s)):
         else:
             sol[o].append(i + 1)
 if p == False or o != -1:
-    print("-1")
+    print('-1')
 else:
     print(len(sol))
-    print("\n".join([str(len(sub)) + " " + " ".join(map(str, sub)) for sub in sol]))
+    print('\n'.join([str(len(sub)) + ' ' + ' '.join(map(str, sub)) for sub in sol]))

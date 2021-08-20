@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 sch = [0 for i in range(m)]
 p = list(map(int, input().split()))
 s = list(map(int, input().split()))

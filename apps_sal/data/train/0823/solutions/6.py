@@ -4,11 +4,11 @@ for _ in range(int(input())):
     for i in range(1, 16):
         s = 0
         for j in range(4):
-            if i & (1 << j):
+            if i & 1 << j:
                 s += a[j]
         if s == 0:
             c = 1
-            print("Yes")
+            print('Yes')
             break
     if c == 0:
-        print("No")
+        print('No')

@@ -1,10 +1,11 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: list) -> bool:
-        ''' returns True if indices i and j can be found such that A[0]+...+A[i]==A[i+1]+...+A[j]==A[j+1]+...+A[-1]
+        """ returns True if indices i and j can be found such that A[0]+...+A[i]==A[i+1]+...+A[j]==A[j+1]+...+A[-1]
 
         Algo: form [A[0], A[0]+A[1], A[0]+A[1]+A[2], ..., sum(A)]
         if A can be partitioned, then n=sum(A) is a multiple of 3,
-        2*n//3 must appear at some index j, and n//3 must appear at some index i<j'''
+        2*n//3 must appear at some index j, and n//3 must appear at some index i<j"""
         if len(A) < 3:
             return False
         for i in range(1, len(A)):

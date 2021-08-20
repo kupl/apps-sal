@@ -1,5 +1,5 @@
 def services(service_list):
-    hdpt = "Homie dont play that!"
+    hdpt = 'Homie dont play that!'
     names = [req.split()[2].capitalize() + '! ' + hdpt for req in service_list]
     return names
 

@@ -14,6 +14,6 @@ def guess(chars):
 def sha256_cracker(hash, chars):
     for x in guess(chars):
         str = ''.join(x)
-        if (hashit(str) == hash):
+        if hashit(str) == hash:
             return str
     return None

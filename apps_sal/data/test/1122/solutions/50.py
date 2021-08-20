@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 odd_l = 1
 odd_r = M
 even_l = M + 1

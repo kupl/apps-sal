@@ -20,6 +20,6 @@ for _ in range(t):
         a = int(sqrt(y))
         a += 1
         x = a
-        y += (a * a)
+        y += a * a
         k += 1
     print(k - 1)

@@ -1,5 +1,5 @@
 def areYouPlayingBanjo(name):
-    plays = " does not play banjo"
+    plays = ' does not play banjo'
     if name[0].lower() == 'r':
-        plays = " plays banjo"
+        plays = ' plays banjo'
     return name + plays

@@ -1,9 +1,7 @@
 t = int(input())
-
 p2 = [1]
 for i in range(40):
     p2.append(2 * p2[-1])
-
 ff = 'FastestFinger'
 a = 'Ashishgup'
 
@@ -23,11 +21,10 @@ for i in range(t):
         print(a)
     elif n in p2:
         print(ff)
-    elif (n % 4 != 2):
+    elif n % 4 != 2:
         print(a)
     else:
         testp = n // 2
-
         if prime(testp):
             print(ff)
         else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def wiggleMaxLength(self, nums):
         """
         :type nums: List[int]
@@ -14,7 +15,7 @@ class Solution:
             st += 1
             if st == l:
                 return 1
-        one, two = (nums[0], nums[st])
+        (one, two) = (nums[0], nums[st])
         cnt = 2
         for i in range(st + 1, l):
             if nums[i] == two:
@@ -26,11 +27,10 @@ class Solution:
                     one = two
                     two = nums[i]
                     cnt += 1
+            elif nums[i] < two:
+                two = nums[i]
             else:
-                if nums[i] < two:
-                    two = nums[i]
-                else:
-                    one = two
-                    two = nums[i]
-                    cnt += 1
+                one = two
+                two = nums[i]
+                cnt += 1
         return cnt

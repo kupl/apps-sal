@@ -1,11 +1,9 @@
 n = int(input())
-
 s = set()
-
 for i in range(n):
     sl = input()
     if sl not in s:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
     s.add(sl)

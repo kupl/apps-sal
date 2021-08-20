@@ -1,6 +1,6 @@
 q = int(input())
 for ii in range(q):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     l = list(map(int, input().split()))
     par = 0
     npar = 0
@@ -11,17 +11,15 @@ for ii in range(q):
             par += 1
     if x == n:
         if npar % 2 == 1:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
+    elif npar > 0 and par > 0:
+        print('Yes')
+    elif par == 0:
+        if x % 2 == 1:
+            print('Yes')
+        else:
+            print('No')
     else:
-        if npar > 0 and par > 0:
-            print("Yes")
-        else:
-            if par == 0:
-                if x % 2 == 1:
-                    print("Yes")
-                else:
-                    print("No")
-            else:
-                print("No")
+        print('No')

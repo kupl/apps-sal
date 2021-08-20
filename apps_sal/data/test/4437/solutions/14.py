@@ -9,6 +9,5 @@ for i in range(0, n - 1, 2):
             s[i] = 'a'
         else:
             s[i] = 'b'
-
 print(k)
 print(''.join(s))

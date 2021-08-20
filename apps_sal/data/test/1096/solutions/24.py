@@ -1,5 +1,5 @@
 s = input()
-a, b = s[0], s[1]
+(a, b) = (s[0], s[1])
 res = 8
 if a == 'a' or a == 'h':
     res -= 3

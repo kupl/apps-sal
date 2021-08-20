@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 h = n // 2
 d = h // (k + 1)
 c = d * k

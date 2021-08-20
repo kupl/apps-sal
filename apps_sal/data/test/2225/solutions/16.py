@@ -1,7 +1,8 @@
 import sys
 
 
-class SegmTree():
+class SegmTree:
+
     def __init__(self, size):
         N = 1
         while N < size:
@@ -22,19 +23,14 @@ class SegmTree():
             i >>= 1
 
 
-# inf = open('input.txt', 'r')
-# reader = (line.rstrip() for line in inf)
 reader = (line.rstrip() for line in sys.stdin)
 input = reader.__next__
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 st = SegmTree(1 << n)
-for i, value in enumerate(a):
+for (i, value) in enumerate(a):
     st.modify(i, value)
 for _ in range(m):
-    p, b = list(map(int, input().split()))
+    (p, b) = list(map(int, input().split()))
     st.modify(p - 1, b)
     print(st.tree[1])
-
-# inf.close()

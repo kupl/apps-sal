@@ -1,33 +1,18 @@
-#	!/bin/env python3
-#	coding: UTF-8
-
-
-#	✪ H4WK3yE乡
-#	Mohd. Farhan Tahir
-#	Indian Institute Of Information Technology and Management,Gwalior
-
-#	Question Link
-#	https://codeforces.com/problemset/problem/392/B
-#
-
-# ///==========Libraries, Constants and Functions=============///
-
-
 import sys
-
-inf = float("inf")
+inf = float('inf')
 mod = 1000000007
 
 
-def get_array(): return list(map(int, sys.stdin.readline().split()))
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def get_ints(): return list(map(int, sys.stdin.readline().split()))
+def get_ints():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def input(): return sys.stdin.readline()
-
-# ///==========MAIN=============///
+def input():
+    return sys.stdin.readline()
 
 
 def main():
@@ -43,8 +28,7 @@ def main():
                 if frm == to:
                     continue
                 dp[i][frm][to] = dp[i - 1][frm][other] + matrix[frm][to] + dp[i - 1][other][to]
-                c = dp[i - 1][frm][to] + matrix[frm][other] + \
-                    dp[i - 1][to][frm] + matrix[other][to] + dp[i - 1][frm][to]
+                c = dp[i - 1][frm][to] + matrix[frm][other] + dp[i - 1][to][frm] + matrix[other][to] + dp[i - 1][frm][to]
                 dp[i][frm][to] = min(c, dp[i][frm][to])
     print(dp[n][0][2])
 

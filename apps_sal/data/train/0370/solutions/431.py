@@ -1,4 +1,5 @@
 class DS:
+
     def __init__(self, N: int):
         self.p = list(range(N))
         self.size = [1] * N
@@ -10,9 +11,9 @@ class DS:
         return self.p[node]
 
     def union(self, x: int, y: int) -> None:
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px != py:
-            sx, sy = self.size[px], self.size[py]
+            (sx, sy) = (self.size[px], self.size[py])
             if sx < sy:
                 self.p[px] = py
                 self.size[py] += sx
@@ -24,10 +25,11 @@ class DS:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         factor_index = {}
         UF = DS(len(A))
-        for idx, num in enumerate(A):
+        for (idx, num) in enumerate(A):
             for factor in range(2, int(num ** 0.5 + 1)):
                 if num % factor == 0:
                     for fact in (factor, num // factor):

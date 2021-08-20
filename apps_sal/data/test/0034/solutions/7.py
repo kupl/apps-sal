@@ -1,5 +1,4 @@
-n, a, b = [int(v) for v in input().split()]
-
+(n, a, b) = [int(v) for v in input().split()]
 best = 0
 for k in range(1, n):
     fst = k

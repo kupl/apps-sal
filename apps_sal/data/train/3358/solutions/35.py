@@ -1,12 +1,12 @@
 def correct(string):
-    answer = ""
+    answer = ''
     for i in string:
-        if i == "0":
-            answer += "O"
-        elif i == "5":
-            answer += "S"
-        elif i == "1":
-            answer += "I"
+        if i == '0':
+            answer += 'O'
+        elif i == '5':
+            answer += 'S'
+        elif i == '1':
+            answer += 'I'
         else:
             answer += i
     return answer

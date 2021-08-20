@@ -1,16 +1,10 @@
 import sys
-
-n, k = list(map(int, next(sys.stdin).rstrip().split()))
-
+(n, k) = list(map(int, next(sys.stdin).rstrip().split()))
 xs = list(map(int, next(sys.stdin).rstrip().split()))
-
 mapka = {}
 lengths = {}
-
 result = []
-
 for x in xs:
-
     if x in mapka:
         result.append(mapka[x])
     else:
@@ -22,18 +16,12 @@ for x in xs:
                 result.append(potential_left)
                 for y in range(potential_left, x + 1):
                     mapka[y] = potential_left
-
                 lengths[potential_left] = x - potential_left + 1
-
                 break
-            else:
-
-                if lengths[mapka[potential_left]] + (x - potential_left) <= k:
-                    result.append(mapka[potential_left])
-                    for y in range(mapka[potential_left] + lengths[mapka[potential_left]], x + 1):
-                        mapka[y] = mapka[potential_left]
-                        lengths[mapka[potential_left]] += 1
-
-                    break
-
+            elif lengths[mapka[potential_left]] + (x - potential_left) <= k:
+                result.append(mapka[potential_left])
+                for y in range(mapka[potential_left] + lengths[mapka[potential_left]], x + 1):
+                    mapka[y] = mapka[potential_left]
+                    lengths[mapka[potential_left]] += 1
+                break
 print(' '.join(map(str, result)))

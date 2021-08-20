@@ -6,7 +6,7 @@ def fold_to(distance):
         return None
     if distance == 0.0:
         return 0
-    res = .0001
+    res = 0.0001
     folds = 0
     while res < distance:
         res *= 2

@@ -3,5 +3,4 @@ def paperwork(n, m):
         totpag = 0
     else:
         totpag = n * m
-
     return totpag

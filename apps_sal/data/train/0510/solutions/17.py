@@ -1,7 +1,8 @@
 class SegmentTree:
+
     def __init__(self, n, ele=0):
         self.ide_ele = ele
-        self.num = 2**(n - 1).bit_length()
+        self.num = 2 ** (n - 1).bit_length()
         self.seg = [self.ide_ele] * 2 * self.num
 
     def segfunc(self, x, y):
@@ -43,20 +44,17 @@ class SegmentTree:
         return res
 
 
-N, S, Q = int(input()), input(), int(input())
+(N, S, Q) = (int(input()), input(), int(input()))
 d = {'a': 1, 'b': 2, 'c': 4, 'd': 8, 'e': 16, 'f': 32, 'g': 64, 'h': 128, 'i': 256, 'j': 512, 'k': 1024, 'l': 2048, 'm': 4096, 'n': 8192, 'o': 16384, 'p': 32768, 'q': 65536, 'r': 131072, 's': 262144, 't': 524288, 'u': 1048576, 'v': 2097152, 'w': 4194304, 'x': 8388608, 'y': 16777216, 'z': 33554432}
-
 initial = [d[c] for c in list(S)]
-
 ST = SegmentTree(N)
 ST.init(initial)
-
 for _ in range(Q):
-    typ, a, b = input().split()
+    (typ, a, b) = input().split()
     if typ == '1':
-        i, c = int(a), d[b]
+        (i, c) = (int(a), d[b])
         ST.update(i - 1, c)
     else:
-        l, r = int(a) - 1, int(b)
+        (l, r) = (int(a) - 1, int(b))
         x = bin(ST.query(l, r))[2:]
         print(sum(map(int, list(x))))

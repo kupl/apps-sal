@@ -1,10 +1,7 @@
 import sys
 fin = sys.stdin
-
 a = list(map(int, fin.readline().split()))
-
 d = a[1] - a[0]
-
 if a[2] - a[1] == a[3] - a[2] == d:
     print(a[3] + d)
 else:

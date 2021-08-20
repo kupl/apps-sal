@@ -1,8 +1,6 @@
 A = list(map(int, input().split()))
-line = [[0, 1, 2], [0, 2, 1], [1, 0, 2],
-        [1, 2, 0], [2, 0, 1], [2, 1, 0]]
+line = [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]
 ans = sum(A)
-
 for i in range(len(line)):
     tmp = 0
     for j in range(1, 3):

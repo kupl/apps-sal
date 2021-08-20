@@ -6,5 +6,4 @@ for i in range(n):
         num *= 2
     else:
         num += k
-
 print(num)

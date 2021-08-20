@@ -7,17 +7,16 @@ def main():
     lines = sys.stdin.readlines()
     n = int(lines[0])
     s = lines[1]
-
     vals = {}
     for c in string.ascii_lowercase:
-        a = [i for i, ch in enumerate(s) if ch == c]
+        a = [i for (i, ch) in enumerate(s) if ch == c]
         m = len(a)
         b = [0]
         for length in range(1, m + 1):
             best = n
             for i in range(m - length + 1):
                 j = i + length - 1
-                best = min(best, (a[j] - j) - (a[i] - i))
+                best = min(best, a[j] - j - (a[i] - i))
             b.append(best)
         vals[c] = b
     q = int(lines[2])

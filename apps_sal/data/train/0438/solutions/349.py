@@ -1,5 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
+
         def root(x):
             if x == group[x]:
                 return x
@@ -13,13 +15,11 @@ class Solution:
             nonlocal cnt
             x = root(x)
             y = root(y)
-            cnt -= (sz[x] == m)
-            #print(x, y, sz[x], sz[y])
+            cnt -= sz[x] == m
             if sz[x] < sz[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             group[y] = x
             sz[x] += sz[y]
-
         group = [-1 for i in range(len(arr) + 1)]
         sz = [0 for i in range(len(arr) + 1)]
         ones = [False for i in range(len(arr) + 1)]
@@ -38,5 +38,4 @@ class Solution:
                 cnt += 1
             if cnt > 0:
                 latest = i + 1
-            #print(group, sz, ones, cnt)
         return latest

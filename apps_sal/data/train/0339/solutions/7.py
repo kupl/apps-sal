@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         d1 = collections.defaultdict(int)
         d2 = collections.defaultdict(int)

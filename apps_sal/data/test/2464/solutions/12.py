@@ -1,10 +1,13 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(2 * 10**5)
-def I(): return list(map(int, input().split()))
+sys.setrecursionlimit(2 * 10 ** 5)
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n,) = I()
 r = [[1 for i in range(n)], [1 for i in range(n)]]
 p = [[i for i in range(n)], [i for i in range(n)]]
 
@@ -26,7 +29,7 @@ def union(a, b, c):
 
 an = 0
 for i in range(n - 1):
-    a, b, c = I()
+    (a, b, c) = I()
     union(a - 1, b - 1, c)
 vis = [0] * n
 cc = []

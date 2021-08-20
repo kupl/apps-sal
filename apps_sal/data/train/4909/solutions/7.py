@@ -1,7 +1,8 @@
 from datetime import datetime
 
 
-class Random():
+class Random:
+
     def __init__(self, seed):
         self.seed = seed
         self.x = self.next_x(self.seed)
@@ -16,17 +17,17 @@ class Random():
         self.__seed = seed
 
     def next_x(self, x):
-        x = x ^ (x << 13 & 0xFFFFFFFF)
-        x = x ^ (x >> 17 & 0xFFFFFFFF)
-        x = x ^ (x << 15 & 0xFFFFFFFF)
-        return x & 0xFFFFFFFF
+        x = x ^ x << 13 & 4294967295
+        x = x ^ x >> 17 & 4294967295
+        x = x ^ x << 15 & 4294967295
+        return x & 4294967295
 
     def random(self):
         x = self.x
         self.x = self.next_x(x)
-        return x / (2**32)
+        return x / 2 ** 32
 
     def randint(self, start, end):
         x = self.x
         self.x = self.next_x(x)
-        return (end - start) * x // (2**32) + start
+        return (end - start) * x // 2 ** 32 + start

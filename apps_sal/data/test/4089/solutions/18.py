@@ -1,6 +1,6 @@
 n = int(input())
 ans = list()
-x = ord("a")
+x = ord('a')
 while n > 0:
     y = n % 26
     if y == 0:
@@ -9,4 +9,4 @@ while n > 0:
     ans.append(chr(x + y))
     n -= y
     n //= 26
-print(("".join(ans[::-1])))
+print(''.join(ans[::-1]))

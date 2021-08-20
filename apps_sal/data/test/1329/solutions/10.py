@@ -1,8 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-
 def prime_factorization(x):
     """素因数分解"""
     import math
@@ -28,10 +23,6 @@ def cmb(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N):
     pf = []
     for i in range(1, N + 1):
@@ -57,32 +48,19 @@ def solve(N):
         if 2 <= v:
             over2 += 1
     ans = 0
-    # 3-5-5
     ans += (over2 - over4) * cmb(over4, 2)
     ans += cmb(over4, 3) * 3
-
-    # 5-15
     ans += (over4 - over14) * over14
     ans += cmb(over14, 2) * 2
-
-    # 3-25
     ans += (over2 - over24) * over24
     ans += cmb(over24, 2) * 2
-
-    # 75
     ans += over74
-
     print(ans)
 
 
 def __starting_point():
     N = int(input())
     solve(N)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

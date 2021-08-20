@@ -9,12 +9,12 @@ def getAns(num):
         steps += rem // last + 1
         rem = rem % last
         if last > 0:
-            rem = rem + 10**p - last
+            rem = rem + 10 ** p - last
         last = last - 1
         if last == 0:
             p = p - 1
             last = 9
-            if(len(str(rem)) == 1):
+            if len(str(rem)) == 1:
                 rem = 0
             else:
                 rem = int(str(rem)[1:])
@@ -25,15 +25,15 @@ def getAns(num):
 
 for awa in range(int(input())):
     k = int(input())
-    if(k == 1):
+    if k == 1:
         print(0)
-    elif(k == 2):
+    elif k == 2:
         print(9)
-    elif(k == 3):
+    elif k == 3:
         print(10)
     else:
-        low, high, ans = 0, 10**18, 0
-        while(low <= high):
+        (low, high, ans) = (0, 10 ** 18, 0)
+        while low <= high:
             mid = (low + high) // 2
             temp = getAns(mid)
             if int(temp) == k:

@@ -2,8 +2,9 @@ import math
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        profit, bestIteration, customerCount, iteration, boarding = 0, 0, 0, 0, 0
+        (profit, bestIteration, customerCount, iteration, boarding) = (0, 0, 0, 0, 0)
         for i in range(len(customers)):
             customerCount = customerCount + customers[i]
             iteration = iteration + 1

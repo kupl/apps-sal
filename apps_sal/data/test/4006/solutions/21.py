@@ -1,4 +1,5 @@
-def f(x): return str(n + 1).rstrip('0')
+def f(x):
+    return str(n + 1).rstrip('0')
 
 
 n = int(input())

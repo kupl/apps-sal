@@ -2,7 +2,7 @@ import os
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     increase = [-1] * n
     decrease = [-1] * n
@@ -20,12 +20,11 @@ def __starting_point():
         decrease[i] = tmp
     result = []
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
-        result.append("Yes\n" if increase[a] >= decrease[b] else "No\n")
-
-    print("".join(result))
+        result.append('Yes\n' if increase[a] >= decrease[b] else 'No\n')
+    print(''.join(result))
 
 
 __starting_point()

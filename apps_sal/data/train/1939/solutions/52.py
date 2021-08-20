@@ -1,4 +1,5 @@
 class Solution:
+
     def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
         wordset = set(wordlist)
         wordset_lower = set()
@@ -9,7 +10,6 @@ class Solution:
             if code not in code_map:
                 code_map[code] = word
         answer = []
-
         for query in queries:
             if query in wordset:
                 answer.append(query)
@@ -22,7 +22,6 @@ class Solution:
                 answer.append(code_map[encode(query)])
             else:
                 answer.append('')
-
         return answer
 
 

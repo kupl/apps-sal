@@ -23,11 +23,10 @@ cnt = [0] * 10000
 sum = []
 for i in range(2, n + 1):
     sum += prime_factorize(i)
-
 for x in sum:
     cnt[x] += 1
 ans = 1
 for i in range(len(cnt)):
     if cnt[i] > 0:
-        ans *= (cnt[i] + 1)
+        ans *= cnt[i] + 1
 print(ans % MOD)

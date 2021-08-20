@@ -7,7 +7,7 @@ def main():
     x = 0
     for a in A[2:]:
         x ^= a
-    a, b = A[0], A[1]
+    (a, b) = (A[0], A[1])
     if (a ^ b ^ x) & 1 != 0:
         return -1
 
@@ -34,4 +34,4 @@ def main():
     return r
 
 
-print((main()))
+print(main())

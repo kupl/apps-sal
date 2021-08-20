@@ -1,5 +1,4 @@
 def hotpo(n):
-
     temp = n
     time = 0
     while temp != 1:

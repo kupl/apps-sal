@@ -1,4 +1,4 @@
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 if k % 2 == 0:
     ans = [k // 2] + [k] * (n - 1)
 else:

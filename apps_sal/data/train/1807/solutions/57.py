@@ -1,5 +1,7 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
+
         def gcd(a, b):
             for i in range(a):
                 if b % (a - i) == 0 and a % (a - i) == 0:

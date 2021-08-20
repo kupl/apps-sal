@@ -5,7 +5,7 @@ for i in range(T):
     a = 0
     b = 0
     Count = 0
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     S = str(input().lower())
     for j in S:
         if j == 'a':
@@ -13,6 +13,6 @@ for i in range(T):
         elif j == 'b':
             b += 1
             count += a
-    Count = (K * (K - 1) * a * b) // 2
+    Count = K * (K - 1) * a * b // 2
     Count = Count + K * count
     print(Count)

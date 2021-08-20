@@ -1,9 +1,7 @@
 from itertools import count
 n = int(input())
-
 twos = 0
 fives = 0
-
 ans = []
 
 
@@ -23,7 +21,6 @@ for i in count(2):
         ans.append(i)
     elif zeroes > n:
         break
-
 print(len(ans))
 if len(ans) != 0:
     print(*ans)

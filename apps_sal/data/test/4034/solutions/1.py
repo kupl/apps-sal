@@ -12,9 +12,9 @@ for i in range(n):
             can_sort = False
             break
 if not can_sort:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     kol = [-1] * n
     kol[0] = 0
     ind = 0
@@ -25,4 +25,4 @@ else:
             if s[i] < s[ind]:
                 kol[i] = (kol[ind] + 1) % 2
         ind += 1
-    print("".join(map(str, kol)))
+    print(''.join(map(str, kol)))

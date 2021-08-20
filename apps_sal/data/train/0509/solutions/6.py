@@ -1,21 +1,22 @@
 from collections import deque
 import copy
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-n, m = map(int, input().split())
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(n, m) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(m)]
 g = [[] for i in range(n)]
-
-for x, y, z in a:
+for (x, y, z) in a:
     g[x - 1].append((y - 1, z))
     g[y - 1].append((x - 1, z))
 
 
 def tree(s):
-
-    INF = -10**9
+    INF = -10 ** 9
     dis = [INF for i in range(n)]
     ans = [0] * n
     dis[s] = 0
@@ -24,10 +25,8 @@ def tree(s):
     def bfs():
         d = deque()
         d.append(s)
-
         while len(d):
             x = d.popleft()
-
             for i in range(len(g[x])):
                 y = g[x][i][0]
                 if dis[y] == INF:
@@ -41,7 +40,6 @@ def tree(s):
                                 ans[y] = copy.copy(ans[x]) + 1
                         else:
                             ans[y] = copy.copy(g[x][i][1])
-
         return ans
     return bfs()
 

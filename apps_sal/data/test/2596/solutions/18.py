@@ -3,10 +3,10 @@ import sys
 
 def main():
     input = sys.stdin.readline()
-    n, k, m, t = [int(j) for j in input.split()]
+    (n, k, m, t) = [int(j) for j in input.split()]
     for i in range(t):
         input = sys.stdin.readline()
-        d, c = [int(j) for j in input.split()]
+        (d, c) = [int(j) for j in input.split()]
         if d == 0:
             if c < k:
                 n -= c

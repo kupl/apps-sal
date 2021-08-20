@@ -16,9 +16,8 @@ def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
             aSize = sizeByGroup[a]
             bSize = sizeByGroup[b]
             if aSize > bSize:
-                a, b = b, a
-                aSize, bSize = bSize, aSize
-
+                (a, b) = (b, a)
+                (aSize, bSize) = (bSize, aSize)
             groupsByNum[a] = b
             del sizeByGroup[a]
             sizeByGroup[b] += aSize
@@ -28,7 +27,6 @@ def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
                 groupBySize[sizeByGroup[b]].add(b)
             except KeyError:
                 groupBySize[sizeByGroup[b]] = {b}
-
             return True
         else:
             return False
@@ -37,13 +35,13 @@ def joinGroups(a, b, groupsByNum, sizeByGroup, groupBySize):
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         sizeByGroup = dict()
         groupBySize = {1: set()}
         groupsByNum = dict()
-
         result = -1
-        for step, x in enumerate(arr, 1):
+        for (step, x) in enumerate(arr, 1):
             groupsByNum[x] = x
             groupBySize[1].add(x)
             sizeByGroup[x] = 1
@@ -54,5 +52,4 @@ class Solution:
                     result = step
             except KeyError:
                 pass
-
         return result

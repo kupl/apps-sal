@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, z, l, r, b = list(map(int, input().split()))
+    (n, m, z, l, r, b) = list(map(int, input().split()))
     r = r + l
     c = 0
     if m == 1:
@@ -20,8 +20,8 @@ for _ in range(int(input())):
         else:
             c += n
             r -= n
-    b += (r % 2)
-    r -= (r % 2)
+    b += r % 2
+    r -= r % 2
     if m == 1:
         print(min(n * m, z + r + b) + c)
         continue

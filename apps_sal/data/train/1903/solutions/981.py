@@ -1,10 +1,11 @@
 class Solution:
-    def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        def l1(p1, p2):
-            xi, yi = p1
-            xj, yj = p2
-            return abs(xi - xj) + abs(yi - yj)
 
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
+        def l1(p1, p2):
+            (xi, yi) = p1
+            (xj, yj) = p2
+            return abs(xi - xj) + abs(yi - yj)
         inf = float('inf')
         LV = len(points)
         E = [(u, v) for u in range(LV) for v in range(LV) if u != v]
@@ -25,11 +26,9 @@ class Solution:
             b = find_set(b)
             if a != b:
                 parent[b] = a
-
         for v in range(LV):
             parent.append(0)
             make_set(v)
-
         F = []
         cost = 0
         for (u, v) in E:
@@ -37,5 +36,4 @@ class Solution:
                 F.append((u, v))
                 cost += l1(points[u], points[v])
                 union_sets(a, b)
-
         return cost

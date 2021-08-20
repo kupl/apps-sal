@@ -1,5 +1,5 @@
 import sys
-a, b, c, d = sys.stdin.readline().strip().split(' ')
+(a, b, c, d) = sys.stdin.readline().strip().split(' ')
 a = int(a)
 b = int(b)
 c = int(c)

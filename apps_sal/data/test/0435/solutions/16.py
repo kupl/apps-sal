@@ -1,9 +1,12 @@
 from sys import *
-def inp(): return stdin.readline()
+
+
+def inp():
+    return stdin.readline()
 
 
 def solve(x, s, n, k):
-    ans, r, bal = 0, 0, 0
+    (ans, r, bal) = (0, 0, 0)
     for l in range(n):
         while r < n and (s[r] == x or bal < k):
             if s[r] != x:
@@ -16,9 +19,9 @@ def solve(x, s, n, k):
 
 
 def main():
-    n, k = map(int, inp().split())
+    (n, k) = map(int, inp().split())
     s = inp()
-    print(max(solve("a", s, n, k), solve("b", s, n, k)))
+    print(max(solve('a', s, n, k), solve('b', s, n, k)))
 
 
 def __starting_point():

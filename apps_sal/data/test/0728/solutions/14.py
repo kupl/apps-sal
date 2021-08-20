@@ -7,7 +7,7 @@ for i in range(n - 1):
     a[i] = -a[i]
 heapq.heapify(a)
 ans = 0
-while(True):
+while True:
     cur = heapq.heappop(a)
     cur = -cur
     if cur < b:

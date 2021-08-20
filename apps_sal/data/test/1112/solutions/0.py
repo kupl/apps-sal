@@ -1,7 +1,6 @@
 import sys
 f = sys.stdin
-#f = open("input.txt", "r")
-a = [list(map(int, i.split())) for i in f.read().strip().split("\n")]
+a = [list(map(int, i.split())) for i in f.read().strip().split('\n')]
 
 
 def solve():

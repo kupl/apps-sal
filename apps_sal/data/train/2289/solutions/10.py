@@ -7,7 +7,7 @@ def next_position(S):
     for i in range(N - 1, -1, -1):
         for s in range(26):
             next_pos[i][s] = next_pos[i + 1][s]
-        next_pos[i][ord(S[i]) - ord("a")] = i + 1
+        next_pos[i][ord(S[i]) - ord('a')] = i + 1
     return next_pos
 
 
@@ -22,10 +22,9 @@ for i in range(N, -1, -1):
         if dp[next_pos[i][s]] + 1 <= dp[i]:
             dp[i] = dp[next_pos[i][s]] + 1
             recover[i] = (next_pos[i][s], s)
-
 res = []
 i = 0
 while i < N:
-    i, s = recover[i]
-    res.append(chr(s + ord("a")))
-print("".join(res))
+    (i, s) = recover[i]
+    res.append(chr(s + ord('a')))
+print(''.join(res))

@@ -1,7 +1,8 @@
 import re
 
 
-class arrSol():
+class arrSol:
+
     def __init__(self):
         self.N = 0
         self.arr = 0
@@ -11,7 +12,7 @@ class arrSol():
 
     def populateArr(self):
         self.arr = input()
-        self.arr = re.split(" ", self.arr)
+        self.arr = re.split(' ', self.arr)
 
     def findCost(self):
         min = 100001
@@ -22,9 +23,7 @@ class arrSol():
 
 
 T = int(input())
-
 for i in range(T):
-
     myObj = arrSol()
     myObj.updateN(int(input()))
     myObj.populateArr()

@@ -6,7 +6,6 @@ d = {}
 for k in l:
     for i in range(1, 9 + 1):
         for j in range(9 - i + 1):
-
             a = k[j:j + i]
             z = list(d.keys())
             if a in z:

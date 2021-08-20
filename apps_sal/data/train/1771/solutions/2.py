@@ -10,10 +10,10 @@ def closure_gen(*s):
     seq = [1]
     while True:
         m = float('inf')
-        for x, i in indices.items():
+        for (x, i) in indices.items():
             m = min(m, seq[i] * x)
         yield m
         seq.append(m)
-        for x, i in indices.items():
+        for (x, i) in indices.items():
             if seq[i] * x == m:
                 indices[x] += 1

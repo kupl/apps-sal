@@ -1,7 +1,7 @@
 def jumbled_string(s, n):
     a = s
     i = 0
-    while i < n:            # Find the period of string after which it's the same
+    while i < n:
         s = s[::2] + s[1::2]
         i += 1
         if s == a:

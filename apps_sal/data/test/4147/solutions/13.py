@@ -1,4 +1,4 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 l = [int(input()) for i in range(n)]
 
 
@@ -12,9 +12,9 @@ def check(t):
 
 
 def calc(t):
-    A, B, C = 0, 0, 0
+    (A, B, C) = (0, 0, 0)
     d = (t.count('a') - 1 + t.count('b') - 1 + t.count('c') - 1) * 10
-    for i, j in enumerate(t):
+    for (i, j) in enumerate(t):
         if j == 'a':
             A += l[i]
         elif j == 'b':
@@ -39,5 +39,4 @@ def dfs(s):
 
 
 dfs('')
-
 print(min(take))

@@ -1,9 +1,9 @@
 s = input()
 if 0 < int(s[:2]) < 13 and 0 < int(s[2:]) < 13:
-    print("AMBIGUOUS")
+    print('AMBIGUOUS')
 elif 0 < int(s[:2]) < 13:
-    print("MMYY")
+    print('MMYY')
 elif 0 < int(s[2:]) < 13:
-    print("YYMM")
+    print('YYMM')
 else:
-    print("NA")
+    print('NA')

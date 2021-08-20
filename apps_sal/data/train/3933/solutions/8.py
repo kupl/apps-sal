@@ -6,6 +6,6 @@ def hydrate(drink_string):
         except:
             continue
     if n == 1:
-        return "1 glass of water"
+        return '1 glass of water'
     else:
-        return str(n) + " glasses of water"
+        return str(n) + ' glasses of water'

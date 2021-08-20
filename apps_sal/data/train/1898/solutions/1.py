@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
         ans = []
         to_delete = set(to_delete)
@@ -12,7 +7,7 @@ class Solution:
         def dfs(node, has_parent):
             if not node:
                 return False
-            if node.val not in to_delete and not has_parent:
+            if node.val not in to_delete and (not has_parent):
                 ans.append(node)
             if dfs(node.left, node.val not in to_delete):
                 node.left = None

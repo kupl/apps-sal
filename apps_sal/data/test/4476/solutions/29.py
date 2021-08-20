@@ -5,17 +5,10 @@ def mi():
     return map(int, input().split())
 
 
-'''
-5
-2 3
-10 10
-2 4
-7 4
-9 3
-'''
+'\n5\n2 3\n10 10\n2 4\n7 4\n9 3\n'
 n = int(input())
 for i in range(n):
-    a, b = mi()
+    (a, b) = mi()
     if a == b:
         print(0)
     elif (b - a) % 2 == 0 and b > a:

@@ -2,8 +2,7 @@ s = list(input())
 n = len(s)
 s = set(s)
 nn = len(s)
-
 if n == nn:
-    print("yes")
+    print('yes')
 else:
-    print("no")
+    print('no')

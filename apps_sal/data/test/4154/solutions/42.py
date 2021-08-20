@@ -1,10 +1,9 @@
-N, M = map(int, input().split())
-L, R = [], []
+(N, M) = map(int, input().split())
+(L, R) = ([], [])
 for _ in range(M):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     L.append(l)
     R.append(r)
-
 m = max(L)
 M = min(R)
 if m <= M:

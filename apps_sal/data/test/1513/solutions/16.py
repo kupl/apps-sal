@@ -14,7 +14,7 @@ def mints():
     return map(int, minp().split())
 
 
-n, m, k = mints()
+(n, m, k) = mints()
 b = list(mints())
 c = [0] * (n - 1)
 for i in range(1, len(b)):

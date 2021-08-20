@@ -1,4 +1,5 @@
 class Solution:
+
     def validTicTacToe(self, board):
         """
         :type board: List[str]
@@ -37,7 +38,6 @@ class Solution:
                 cross_winning += 1
             elif board[0][2] == 'O':
                 circle_winning += 1
-
         if cross_winning > 0 and circle_winning > 0:
             return False
         if cross_winning > 0 and cross <= circle:

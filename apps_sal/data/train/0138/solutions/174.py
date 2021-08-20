@@ -1,10 +1,10 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         max_len = 0
         start = -1
         is_pos = True
         for i in range(len(nums) + 1):
-
             if i == len(nums) or nums[i] == 0:
                 if is_pos:
                     max_len = max(max_len, i - start - 1)
@@ -22,5 +22,4 @@ class Solution:
                     is_pos = not is_pos
                 if is_pos:
                     max_len = max(max_len, i - start)
-            # print(start, i, is_pos, max_len)
         return max_len

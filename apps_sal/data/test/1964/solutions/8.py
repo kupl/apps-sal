@@ -1,10 +1,9 @@
-# Filename CF1.py
 n = int(input())
-size = [int(i) for i in (input().split())]
+size = [int(i) for i in input().split()]
 m = []
 for i in range(0, n):
     m.append([])
-    m[i] = [int(j) for j in (input().split())]
+    m[i] = [int(j) for j in input().split()]
 ans = [i * 15 for i in size]
 for i in range(0, n):
     sum = 0

@@ -5,5 +5,5 @@ def largest_arrangement(numbers):
             ab = numbers[x] + numbers[j]
             ba = numbers[j] + numbers[x]
             if int(ab) > int(ba):
-                numbers[x], numbers[j] = numbers[j], numbers[x]
+                (numbers[x], numbers[j]) = (numbers[j], numbers[x])
     return int(''.join(numbers))

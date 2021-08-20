@@ -1,15 +1,16 @@
 from collections import Counter
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self):
-        self.uf, self.rank, self.size = {}, {}, {}
+        (self.uf, self.rank, self.size) = ({}, {}, {})
         self.roots = set()
         self.size_cnt = Counter()
 
     def add(self, x):
         if x not in self.uf:
-            self.uf[x], self.rank[x], self.size[x] = x, 0, 1
+            (self.uf[x], self.rank[x], self.size[x]) = (x, 0, 1)
             self.roots.add(x)
             self.size_cnt[1] += 1
 
@@ -20,7 +21,7 @@ class UnionFind():
         return self.uf[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return
         self.size_cnt[self.size[xr]] -= 1
@@ -29,7 +30,7 @@ class UnionFind():
             self.uf[xr] = yr
             self.size[yr] += self.size[xr]
             self.size_cnt[self.size[yr]] += 1
-            self.rank[yr] += (self.rank[xr] == self.rank[yr])
+            self.rank[yr] += self.rank[xr] == self.rank[yr]
             self.roots.discard(xr)
         else:
             self.uf[yr] = xr
@@ -39,9 +40,10 @@ class UnionFind():
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        uf, ans = UnionFind(), -1
-        for step, i in enumerate(arr, 1):
+        (uf, ans) = (UnionFind(), -1)
+        for (step, i) in enumerate(arr, 1):
             if i not in uf.uf:
                 uf.add(i)
             if i - 1 in uf.uf:

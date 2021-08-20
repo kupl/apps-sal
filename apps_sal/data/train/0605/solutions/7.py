@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     command = input()
     maxL = 0
     maxR = 0
@@ -8,23 +8,23 @@ for _ in range(int(input())):
     maxD = 0
     vem = 0
     for co in command:
-        if(co == "L"):
+        if co == 'L':
             hom += 1
-        elif(co == "R"):
+        elif co == 'R':
             hom -= 1
-        elif(co == "U"):
+        elif co == 'U':
             vem += 1
         else:
             vem -= 1
-        if(hom > maxL):
+        if hom > maxL:
             maxL = hom
-        if(hom < maxR):
+        if hom < maxR:
             maxR = hom
-        if(vem > maxU):
+        if vem > maxU:
             maxU = vem
-        if(vem < maxD):
+        if vem < maxD:
             maxD = vem
-    if(maxL - maxR < m and maxU - maxD < n):
-        print("safe")
+    if maxL - maxR < m and maxU - maxD < n:
+        print('safe')
     else:
-        print("unsafe")
+        print('unsafe')

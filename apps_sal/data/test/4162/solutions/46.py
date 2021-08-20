@@ -1,5 +1,4 @@
 import math
-
 N = int(input())
 List = list(map(int, input().split()))
 mid = List[0]

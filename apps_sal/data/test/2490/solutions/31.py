@@ -1,5 +1,4 @@
 n = input().rstrip()
-
 total = 0
 carry = 0
 for i in range(len(n) - 1, -1, -1):
@@ -11,15 +10,13 @@ for i in range(len(n) - 1, -1, -1):
         if i == 0:
             total += 5
             carry = 0
+        elif int(n[i - 1]) >= 5:
+            total += 5
+            carry = 1
         else:
-            if int(n[i - 1]) >= 5:
-                total += 5
-                carry = 1
-            else:
-                total += 5
-                carry = 0
+            total += 5
+            carry = 0
     else:
         total += v
         carry = 0
-
 print(total + carry)

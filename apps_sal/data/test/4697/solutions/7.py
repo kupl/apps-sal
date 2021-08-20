@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n < m:
     print(n + (m - 2 * n) // 4)
 else:

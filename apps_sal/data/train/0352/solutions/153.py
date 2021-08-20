@@ -1,8 +1,10 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def isPred(w1, w2):
-            i, j = 0, 0
-            if len(w1) != (len(w2) - 1):
+            (i, j) = (0, 0)
+            if len(w1) != len(w2) - 1:
                 return False
             while i < len(w1):
                 if w1[i] != w2[j]:
@@ -13,7 +15,6 @@ class Solution:
                     j += 1
                     i += 1
             return True
-
         words = sorted(words, key=lambda x: len(x))
         dp = [1] * len(words)
         for i in range(len(words)):

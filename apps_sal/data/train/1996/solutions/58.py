@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         v = [0] * n
@@ -14,7 +15,6 @@ class Solution:
                     return True
             v[i] = 2
             return False
-
         res = []
         for i in range(n):
             if circle(i):

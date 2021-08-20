@@ -1,5 +1,5 @@
 n = int(input())
-m = (list(int(x) for x in input().split()))
+m = list((int(x) for x in input().split()))
 a = max(m)
 z = min(m)
 ac = m.count(a)

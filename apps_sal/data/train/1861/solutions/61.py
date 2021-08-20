@@ -1,7 +1,8 @@
 class Solution:
+
     def minAreaRect(self, points):
-        seen, ans = set(map(tuple, points)), float('inf')
-        for i, (p1x, p1y) in enumerate(points):
+        (seen, ans) = (set(map(tuple, points)), float('inf'))
+        for (i, (p1x, p1y)) in enumerate(points):
             for (p2x, p2y) in points[i + 1:]:
                 area = abs((p2x - p1x) * (p2y - p1y))
                 if area > ans or area == 0:

@@ -1,32 +1,30 @@
-# Fast I/O template
 import sys
 
 
 def getInt():
     n = sys.stdin.readline()
-    return(int(n))
+    return int(n)
 
 
 def getStr():
     s = sys.stdin.readline()
-    return(s)
+    return s
 
 
 def getArr():
     arr = list(map(int, sys.stdin.readline().split()))
-    return(arr)
+    return arr
 
 
 def getPair():
-    a, b = list(map(int, sys.stdin.readline().split()))
-    return(a, b)
+    (a, b) = list(map(int, sys.stdin.readline().split()))
+    return (a, b)
 
 
 def put(n):
-    sys.stdout.write(str(n) + "\n")
+    sys.stdout.write(str(n) + '\n')
 
 
-# Your code goes here
 a = getArr()
 cc = a[2]
 st = []
@@ -55,6 +53,5 @@ for i in range(a[1]):
     t = l[0]
     for m in range(11):
         lk = (m + t) % (cc + 1)
-        ans += (count[m] * lk)
-        # print(m,lk,ans)
+        ans += count[m] * lk
     print(ans)

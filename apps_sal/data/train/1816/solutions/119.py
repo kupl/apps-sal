@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         d = {}
         for i in range(len(keyName)):

@@ -9,8 +9,7 @@ def increment_string(strng):
     number.reverse()
     zero = len(number)
     if len(number) > 0:
-        result = int("".join(number)) + 1
+        result = int(''.join(number)) + 1
     else:
         result = int(strng) + 1
-
     return strng[:-zero] + '0' * (len(number) - len(str(result))) + str(result)

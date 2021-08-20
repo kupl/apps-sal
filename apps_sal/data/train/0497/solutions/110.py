@@ -1,12 +1,9 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
-        # Approach: dfs with memoization
-
         self.jobs = list()
-
         for i in range(len(startTime)):
             self.jobs.append((startTime[i], endTime[i], profit[i]))
-
         self.jobs.sort()
         self.memo = dict()
         return self.dfs(0)
@@ -16,13 +13,11 @@ class Solution:
             return 0
         if index in self.memo:
             return self.memo[index]
-
         res = 0
         res = max(res, self.dfs(index + 1))
         nextIndex = self.findNext(index)
         res = max(res, self.dfs(nextIndex) + self.jobs[index][2])
         self.memo[index] = res
-
         return res
 
     def findNext(self, index):

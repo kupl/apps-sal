@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         m = collections.defaultdict(int)
         m[0] = 0
@@ -20,5 +21,4 @@ class Solution:
                 res = min(res, 1 + helper(n - 1))
             m[n] = res
             return res
-
         return helper(n)

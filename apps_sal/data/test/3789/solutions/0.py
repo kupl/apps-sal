@@ -2,9 +2,10 @@ from collections import deque
 
 
 class Dinic:
+
     def __init__(self, n: int):
         """頂点数をnとする"""
-        self.INF = float("inf")
+        self.INF = float('inf')
         self.n = n
         self.graph = [[] for _ in range(n)]
 
@@ -27,7 +28,7 @@ class Dinic:
         self.level[s] = 0
         while q:
             _from = q.popleft()
-            for to, capacity, _ in self.graph[_from]:
+            for (to, capacity, _) in self.graph[_from]:
                 if capacity > 0 and self.level[to] < 0:
                     self.level[to] = self.level[_from] + 1
                     q.append(to)
@@ -39,7 +40,7 @@ class Dinic:
         if _from == t:
             return f
         for edge in self.itr[_from]:
-            to, capacity, reverse_edge = edge
+            (to, capacity, reverse_edge) = edge
             if capacity > 0 and self.level[_from] < self.level[to]:
                 d = self.dfs(to, t, min(f, capacity))
                 if d > 0:
@@ -67,7 +68,6 @@ class Dinic:
 
 n = int(input())
 a = list(map(int, input().split()))
-
 dinic = Dinic(n + 2)
 s = 0
 t = n + 1
@@ -83,12 +83,10 @@ for i in range(0, n):
     else:
         dinic.add_edge(s, i + 1, 0)
         dinic.add_edge(i + 1, t, 0)
-
 for i in range(n):
     num = i + 1
     next_num = 2 * num
     while next_num <= n:
-        dinic.add_edge(num, next_num, 10**18)
+        dinic.add_edge(num, next_num, 10 ** 18)
         next_num += num
-
 print(_sum - dinic.max_flow(s, t))

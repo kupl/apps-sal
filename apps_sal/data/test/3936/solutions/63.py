@@ -1,11 +1,9 @@
-# https://atcoder.jp/contests/arc081/tasks/arc081_b
 from collections import defaultdict
 n = int(input())
 s1 = input()
 s2 = input()
 ans = 0
 mod = 10 ** 9 + 7
-
 if s1[0] == s2[0]:
     i = 1
     ans += 3
@@ -27,4 +25,4 @@ while i < n:
             flag = True
             i += 1
     i += 1
-print((ans % mod))
+print(ans % mod)

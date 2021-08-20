@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-out = 1e9 + 1
+out = 1000000000.0 + 1
 for i in range(n):
     good = True
     dc = {}
-    dif = (((b[i] - a[0]) % m) + m) % m
+    dif = ((b[i] - a[0]) % m + m) % m
     for j in range(n):
         if b[j] in dc:
             dc[b[j]] += 1

@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, node):
         self.parent = [-1 for _ in range(node)]
 
@@ -18,7 +19,7 @@ class UnionFind:
         if root_x == root_y:
             return
         if self.parent[root_x] > self.parent[root_y]:
-            root_x, root_y = root_y, root_x
+            (root_x, root_y) = (root_y, root_x)
         self.parent[root_x] += self.parent[root_y]
         self.parent[root_y] = root_x
 
@@ -26,16 +27,16 @@ class UnionFind:
         return -self.parent[self.find(x)]
 
     def get_root(self):
-        return [i for i, root in enumerate(self.parent) if root < 0]
+        return [i for (i, root) in enumerate(self.parent) if root < 0]
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     uf = UnionFind(n)
     for _ in range(m):
-        x, y, _ = [int(x) - 1 for x in input().split()]
+        (x, y, _) = [int(x) - 1 for x in input().split()]
         uf.union(x, y)
-    print((len(uf.get_root())))
+    print(len(uf.get_root()))
 
 
 def __starting_point():

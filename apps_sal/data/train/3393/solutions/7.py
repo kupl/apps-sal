@@ -12,7 +12,7 @@ def divisors(n):
 def list_squared(m, n):
     sq_list = []
     for num in range(m, n):
-        _sum = sum(item**2 for item in divisors(num))
+        _sum = sum((item ** 2 for item in divisors(num)))
         if math.sqrt(_sum).is_integer():
             sq_list.append([num, _sum])
     return sq_list

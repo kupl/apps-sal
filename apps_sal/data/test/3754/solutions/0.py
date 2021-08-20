@@ -1,4 +1,4 @@
-P, a, I = 998244353, 1, input
+(P, a, I) = (998244353, 1, input)
 n = int(I())
 d = list(map(int, I().split()))
 s = sum(d) % P

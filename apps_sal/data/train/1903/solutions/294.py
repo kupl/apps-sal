@@ -1,19 +1,19 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         es = []
         n = len(points)
-        for i, p in enumerate(points):
-            x, y = p
+        for (i, p) in enumerate(points):
+            (x, y) = p
             for j in range(i + 1, n):
                 pb = points[j]
-                x2, y2 = pb
+                (x2, y2) = pb
                 val = abs(x - x2) + abs(y - y2)
                 es.append((val, i, j))
         es.sort()
-        # print(es)
         self.father = {i: i for i in range(n)}
         ans = size = 0
-        for cost, u, v in es:
+        for (cost, u, v) in es:
             if self.find(u) != self.find(v):
                 ans += cost
                 self.union(u, v)

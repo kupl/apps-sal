@@ -1,10 +1,8 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
-
-        # write your code here
         arrLen = min(arrLen, steps + 1)
-        f = [1] + [0] * (arrLen - 1)  # f[0] = 1
-
+        f = [1] + [0] * (arrLen - 1)
         for i in range(1, steps + 1):
             old = 0
             for j in range(arrLen):

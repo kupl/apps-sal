@@ -1,4 +1,4 @@
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def combination(n, k):
@@ -34,12 +34,11 @@ def combination(n, k):
     return ans
 
 
-X, Y = list(map(int, input().split()))
+(X, Y) = list(map(int, input().split()))
 a = X + Y
 b = a // 3
 a = a % 3
-# print(a,b)
 if a == 0 and b <= X <= b * 2:
-    print((combination(b, X - b)))
+    print(combination(b, X - b))
 else:
-    print((0))
+    print(0)

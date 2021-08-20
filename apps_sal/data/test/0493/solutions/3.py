@@ -3,7 +3,7 @@ s = input()
 last = ''
 lasti = -1
 count = 0
-for i, v in enumerate(s):
+for (i, v) in enumerate(s):
     if v == 'R' and lasti == -1:
         count += i
         last = 'R'
@@ -19,9 +19,8 @@ for i, v in enumerate(s):
         count += 0 if (i + lasti) % 2 > 0 else 1
         last = 'L'
         lasti = i
-
 if last == 'L':
-    count += (n - 1) - lasti
+    count += n - 1 - lasti
 if lasti == -1:
     count = n
 print(count)

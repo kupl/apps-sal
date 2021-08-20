@@ -1,9 +1,8 @@
 pas = input()
 count = int(input())
 words = [input() for i in range(count)]
-
 if pas in words:
-    print("YES")
+    print('YES')
 else:
     f1 = False
     f2 = False
@@ -13,6 +12,6 @@ else:
         if pas[1] == word[0]:
             f2 = True
     if f1 and f2:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

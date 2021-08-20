@@ -1,4 +1,5 @@
 class Solution:
+
     def plusOne(self, digits):
         plus = 1
         for i in range(len(digits) - 1, -1, -1):

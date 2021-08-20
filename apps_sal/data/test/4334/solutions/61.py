@@ -1,7 +1,7 @@
-a, b = input().split()
-a_num, b_num = map(int, input().split())
+(a, b) = input().split()
+(a_num, b_num) = map(int, input().split())
 c = input()
-if(c == a):
+if c == a:
     a_num -= 1
 else:
     b_num -= 1

@@ -4,13 +4,13 @@ b = [int(inp[2]), int(inp[3])]
 c = [int(inp[4]), int(inp[5])]
 a.sort()
 a.reverse()
-a.append("A")
+a.append('A')
 b.sort()
 b.reverse()
-b.append("B")
+b.append('B')
 c.sort()
 c.reverse()
-c.append("C")
+c.append('C')
 first = [a, b, c]
 first.sort()
 first.reverse()
@@ -18,8 +18,6 @@ second = [a, b, c]
 second.sort()
 second.reverse()
 third = [a, b, c]
-# print(first)
-# print(second)
 
 
 def swap(a):
@@ -29,18 +27,13 @@ def swap(a):
 
 
 def check_first(x):
-    # print(x)
-    fla = (x[0][0] == x[1][0] + x[2][0])
-    #print(x[0][0], "==", x[1][0], "+", x[2][0])
-    # print(fla)
-    flb = (x[1][1] == x[2][1] == (x[0][0] - x[0][1]))
-    #print(x[1][1], "==", x[2][1], "==", x[0][0] - x[0][1])
-    # print(flb)
+    fla = x[0][0] == x[1][0] + x[2][0]
+    flb = x[1][1] == x[2][1] == x[0][0] - x[0][1]
     return fla and flb
 
 
 def check_second(x):
-    if (x[0][0] == x[1][0]) and (x[0][1] + x[1][1] == x[2][0] == x[0][0]):
+    if x[0][0] == x[1][0] and x[0][1] + x[1][1] == x[2][0] == x[0][0]:
         return True
     else:
         return False
@@ -49,9 +42,8 @@ def check_second(x):
 flag = False
 ind = 0
 res = -1
-s = ""
-
-while (not flag):
+s = ''
+while not flag:
     ind = 1
     if check_first(first):
         break
@@ -70,11 +62,10 @@ while (not flag):
     swap(second[2])
     if check_second(second):
         break
-    if (third[0][0] == third[1][0] == third[2][0]) and (third[0][0] == third[0][1] + third[1][1] + third[2][1]):
+    if third[0][0] == third[1][0] == third[2][0] and third[0][0] == third[0][1] + third[1][1] + third[2][1]:
         ind = 3
         break
     flag = True
-
 if flag:
     print(-1)
 elif ind == 1:
@@ -89,7 +80,6 @@ elif ind == 2:
         print(second[0][2] * second[0][0] + second[2][2] * second[2][0])
     for i in range(second[1][1]):
         print(second[1][2] * second[1][0] + second[2][2] * second[2][0])
-
 elif ind == 3:
     print(third[0][0])
     for i in range(third[0][1]):

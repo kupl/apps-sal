@@ -6,12 +6,12 @@ def f(a):
     return ans
 
 
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 0
 for i in range(1, n + 1):
     b = a[:i].copy()
     x = f(b)
-    if (x <= h):
+    if x <= h:
         ans = i
 print(ans)

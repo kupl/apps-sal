@@ -1,10 +1,10 @@
-n, m = map(int, input().split())
-Graph = [[float("inf")] * n for i in range(n)]
-A, B, C = [], [], []
+(n, m) = map(int, input().split())
+Graph = [[float('inf')] * n for i in range(n)]
+(A, B, C) = ([], [], [])
 for i in range(n):
     Graph[i][i] = 0
 for i in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     Graph[a - 1][b - 1] = c
     Graph[b - 1][a - 1] = c
     A.append(a - 1)

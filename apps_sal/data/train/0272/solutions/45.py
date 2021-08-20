@@ -2,6 +2,7 @@ import queue
 
 
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         ans = 0
         q = queue.Queue()
@@ -9,9 +10,7 @@ class Solution:
         op = set()
         for x in initialBoxes:
             q.put(x)
-
         while not q.empty():
-            # print(q.queue)
             cur = q.get()
             if status[cur] == 1:
                 ans += candies[cur]
@@ -24,5 +23,4 @@ class Solution:
                     q.put(c)
             else:
                 notopen.add(cur)
-
         return ans

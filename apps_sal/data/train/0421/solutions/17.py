@@ -1,9 +1,10 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         n = len(s)
         max_char = max(s)
         max_index = None
-        for i, x in enumerate(s):
+        for (i, x) in enumerate(s):
             if x == max_char:
                 if max_index is None:
                     max_index = i

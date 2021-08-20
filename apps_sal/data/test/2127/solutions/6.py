@@ -1,4 +1,3 @@
-
 QTYPE = 0
 X = 0
 Y = 1
@@ -17,16 +16,14 @@ def main():
             query.append([buflist[0], int(buflist[1]), int(buflist[2])])
         else:
             query.append([buflist[0], int(buflist[2]), int(buflist[1])])
-
     bill_size = [query[0][H], query[0][W]]
     for i in range(n):
         if query[i][QTYPE] == '+':
             bill_size = [max(bill_size[X], query[i][H]), max(bill_size[Y], query[i][W])]
+        elif bill_size[X] <= query[i][H] and bill_size[Y] <= query[i][W]:
+            print('YES')
         else:
-            if bill_size[X] <= query[i][H] and bill_size[Y] <= query[i][W]:
-                print("YES")
-            else:
-                print("NO")
+            print('NO')
 
 
 def __starting_point():

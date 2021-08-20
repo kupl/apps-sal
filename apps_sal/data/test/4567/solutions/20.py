@@ -2,16 +2,15 @@ n = int(input())
 s = []
 for i in range(n):
     s.append(int(input()))
-
 if sum(s) % 10 != 0:
-    print((sum(s)))
+    print(sum(s))
 else:
     s.sort()
     for i in range(n):
         if s[i] % 10 == 0:
             pass
         else:
-            print((sum(s) - s[i]))
+            print(sum(s) - s[i])
             break
     else:
-        print((0))
+        print(0)

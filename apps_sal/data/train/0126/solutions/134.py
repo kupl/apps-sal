@@ -1,6 +1,6 @@
 class Solution:
-    def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
 
+    def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         start = 0
         end = 0
         sub = {}
@@ -26,10 +26,9 @@ class Solution:
             else:
                 result[string] = 1
             self.max_size = max(self.max_size, result[string])
-
         for size in range(minSize, maxSize + 1):
             while start <= len(s) - size:
-                if (end - start) + 1 < size:
+                if end - start + 1 < size:
                     add_sub(end)
                     end += 1
                 else:
@@ -42,5 +41,4 @@ class Solution:
             start = 0
             end = 0
             sub = {}
-
         return self.max_size

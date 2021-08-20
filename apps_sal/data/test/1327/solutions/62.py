@@ -1,11 +1,8 @@
 import itertools
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 ab = [list(map(int, input().split())) for _ in range(n)]
-
 nums = [0, 1]
 ll = list(itertools.product(nums, repeat=3))
-
 res = 0
 for i in ll:
     temp = []
@@ -25,5 +22,4 @@ for i in ll:
         temp.append(x + y + z)
     tempp = list(sorted(temp, reverse=True))
     res = max(res, sum(tempp[:m]))
-
 print(res)

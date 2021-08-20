@@ -2,7 +2,7 @@ n = int(input())
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
 a.sort(reverse=True)
 b.sort()
 if n % 2:

@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dp = [False for i in range(n + 1)]
         dp[0] = True
@@ -11,7 +12,7 @@ class Solution:
                 dp[i] = True
                 continue
             start = 1
-            while(start * start < i):
+            while start * start < i:
                 if not dp[i - start * start]:
                     dp[i] = True
                     break

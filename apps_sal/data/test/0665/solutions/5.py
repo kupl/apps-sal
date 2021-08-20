@@ -1,5 +1,5 @@
 for __ in range(int(input())):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     ar = list(map(int, input().split()))
     if sum(ar) <= s:
         print(0)

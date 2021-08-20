@@ -1,6 +1,5 @@
 a = input()
 b = input()
-
 d = {}
 for e in b:
     if e == '9':
@@ -11,7 +10,6 @@ for e in b:
         d[e] = d[e] + 1
     else:
         d[e] = 1
-
 n = {}
 for e in a:
     if e == '9':
@@ -31,5 +29,4 @@ for e in n:
         temp_result = int(d[e] / n[e])
         if temp_result < result:
             result = temp_result
-
 print(result)

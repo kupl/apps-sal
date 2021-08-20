@@ -3,6 +3,6 @@ def automorphic(n):
     c = len(str(x))
     for i in str(n)[::-1]:
         if i != str(x)[c - 1]:
-            return "Not!!"
+            return 'Not!!'
         c -= 1
-    return "Automorphic"
+    return 'Automorphic'

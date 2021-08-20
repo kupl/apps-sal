@@ -6,4 +6,4 @@ def get_average(marks):
     for i in marks:
         res = i + res
     return math.floor(res / len(marks))
-    raise NotImplementedError("TODO: get_average")
+    raise NotImplementedError('TODO: get_average')

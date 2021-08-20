@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def MOD_perm(n, r):
@@ -17,9 +17,9 @@ def MOD_inv(a):
     while b > 0:
         t = a // b
         a -= t * b
-        a, b = b, a
+        (a, b) = (b, a)
         u -= t * v
-        u, v = v, u
+        (u, v) = (v, u)
     u = u % MOD
     if u < 0:
         u += MOD
@@ -31,7 +31,7 @@ def MOD_COM2(n, r):
 
 
 def main():
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     comb = MOD_COM2(n * m - 2, k - 2)
     ans = 0
     for i in range(1, n + 1):

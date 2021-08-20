@@ -6,7 +6,7 @@ for _ in range(t):
     met = set()
     x = y = 0
     for c in s:
-        dx, dy = d[c]
+        (dx, dy) = d[c]
         xx = x + dx
         yy = y + dy
         if (x, y, xx, yy) in met or (xx, yy, x, y) in met:

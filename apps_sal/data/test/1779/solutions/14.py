@@ -1,15 +1,10 @@
 a = input()
 b = input()
-
 mapping = {}
-
 for I in range(len(a)):
     mapping[a[I]] = b[I]
-
 c = input()
-
-answer = ""
-
+answer = ''
 for I in c:
     if I.isupper():
         answer += mapping[I.lower()].upper()

@@ -6,6 +6,5 @@ try:
         h = int(input())
         print(k[h - 1])
         k.remove(k[h - 1])
-
 except:
     pass

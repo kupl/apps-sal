@@ -1,5 +1,5 @@
-q, w = list(map(int, input().split()))
-z, x = 0, 0
+(q, w) = list(map(int, input().split()))
+(z, x) = (0, 0)
 e = q
 while e % 5 == 0:
     z += 1
@@ -15,4 +15,4 @@ if w > x:
     x = w - x
 else:
     x = 0
-print(q * (5**z) * (2**x))
+print(q * 5 ** z * 2 ** x)

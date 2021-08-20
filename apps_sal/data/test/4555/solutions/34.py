@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 ans = set([])
 for i in range(a, min(a + k, b)):
     ans.add(i)

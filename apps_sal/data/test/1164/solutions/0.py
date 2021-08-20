@@ -1,14 +1,12 @@
 3
-
 s = input()
 alph = ''.join([chr(ord('a') + x) for x in range(26)])
 l = [[]]
 for x in s:
     if x not in alph:
         l[-1].append(x)
-    else:
-        if len(l[-1]):
-            l.append([])
+    elif len(l[-1]):
+        l.append([])
 l = list([''.join(x) for x in l])
 ansa = 0
 ansb = 0
@@ -29,5 +27,5 @@ if last != 0:
     ans.append(ansa[:last])
 ans.reverse()
 if ansb != 0:
-    ans.append("%02d" % ansb)
-print(".".join(ans))
+    ans.append('%02d' % ansb)
+print('.'.join(ans))

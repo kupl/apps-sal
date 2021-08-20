@@ -18,13 +18,13 @@ def main():
         for i in range(k + 1):
             for j in range(1, max(m, n)):
                 if m > j:
-                    r = min(r, n**2 + solve(j, n, i) + solve(m - j, n, k - i))
+                    r = min(r, n ** 2 + solve(j, n, i) + solve(m - j, n, k - i))
                 if n > j:
-                    r = min(r, m**2 + solve(m, j, i) + solve(m, n - j, k - i))
+                    r = min(r, m ** 2 + solve(m, j, i) + solve(m, n - j, k - i))
         memo[n][m][k] = r
         return r
     for _ in range(int(input())):
-        n, m, k = map(int, input().split())
+        (n, m, k) = map(int, input().split())
         ans.append(str(solve(n, m, k)))
     print('\n'.join(ans))
 

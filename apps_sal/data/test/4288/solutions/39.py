@@ -1,10 +1,9 @@
-A, B, C = map(int, input().split())
-
+(A, B, C) = map(int, input().split())
 if A == B and B != C:
-    print("Yes")
+    print('Yes')
 elif B == C and C != A:
-    print("Yes")
+    print('Yes')
 elif C == A and A != B:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

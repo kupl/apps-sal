@@ -1,6 +1,6 @@
-res1 = "{}! Homie dont play that!".format
-res2 = "{} monitoring objections, {} automation, {} deployment pipeline, {} cloud, and {} microservices.".format
-get = __import__("re").compile("We need (\w+) now!").search
+res1 = '{}! Homie dont play that!'.format
+res2 = '{} monitoring objections, {} automation, {} deployment pipeline, {} cloud, and {} microservices.'.format
+get = __import__('re').compile('We need (\\w+) now!').search
 
 
 def nkotb_vs_homie(requirements):

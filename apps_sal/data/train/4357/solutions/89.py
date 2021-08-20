@@ -6,7 +6,7 @@ def sel_sort(array):
             if array[j] < array[m]:
                 m = j
             j = j + 1
-        array[i], array[m] = array[m], array[i]
+        (array[i], array[m]) = (array[m], array[i])
 
 
 def nth_smallest(arr, pos):

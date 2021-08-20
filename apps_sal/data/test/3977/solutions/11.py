@@ -1,19 +1,16 @@
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 l = list(map(int, input().split()))
-
-
 qa = n
 d = [[] for i in range(n + 1)]
 Visited = [False for i in range(n + 1)]
 f = 0
 L = []
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d[a].append(b)
     d[b].append(a)
     L.append([a, b])
 ma = 0
-
 d1 = {}
 for x in l:
     q = [x]
@@ -31,15 +28,12 @@ for x in l:
         del q[0]
     qa -= r
     d1[r] = d1.get(r, []) + [t]
-
-
 for x in L:
     if Visited[x[0]] == Visited[x[1]] == False:
         f += 1
 rr = True
 y = sorted(d1, reverse=True)
 out = -f
-
 for x in y:
     for e in d1[x]:
         if rr:

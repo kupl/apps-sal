@@ -1,7 +1,7 @@
 n = int(input())
 a = []
 for i in range(n):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     a.append((l, r))
 q = int(input())
 k = 0

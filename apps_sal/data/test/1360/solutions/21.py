@@ -1,7 +1,7 @@
 n = int(input())
 p = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     p.append([x, y])
 p = sorted(p)
 day = p[0][1]

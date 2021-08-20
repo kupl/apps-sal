@@ -1,4 +1,4 @@
-K, S = map(int, input().split())
+(K, S) = map(int, input().split())
 ans = 0
 x = S // 3 + 1
 for i in range(x):

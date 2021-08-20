@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if n == 1:
             return 0
@@ -15,9 +16,8 @@ class Solution:
                 start = i
         q = []
         q.append((start, informTime[start]))
-        hi = 0  # max value
-        while (len(q) > 0):
-            # print(q)
+        hi = 0
+        while len(q) > 0:
             out = q.pop(0)
             index = out[0]
             cost = out[1]
@@ -26,5 +26,4 @@ class Solution:
             if index in m:
                 for i in m[index]:
                     q.append((i, cost + informTime[i]))
-
         return hi

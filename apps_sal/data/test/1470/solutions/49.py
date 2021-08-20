@@ -1,5 +1,5 @@
 x = int(input())
-ans = (x // 11) * 2
+ans = x // 11 * 2
 x = x % 11
 if 1 <= x <= 6:
     ans += 1

@@ -15,7 +15,7 @@ class DSU:
         return root
 
     def union(self, x, y):
-        r1, r2 = self.find(x), self.find(y)
+        (r1, r2) = (self.find(x), self.find(y))
         if r1 == r2:
             return
         if self.size[r1] < self.size[r2]:
@@ -30,12 +30,13 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         components = [0 for _ in range(len(arr))]
         ans = -1
         dsu = DSU(len(arr))
         size_count = collections.Counter()
-        for i, n in enumerate(arr, 1):
+        for (i, n) in enumerate(arr, 1):
             n -= 1
             components[n] = 1
             for adj in (n - 1, n + 1):

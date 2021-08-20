@@ -4,21 +4,20 @@ for _ in range(int(input())):
     LR_raw = []
     val = set()
     for _ in range(M):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         LR_raw.append((l, r))
         val.add(l)
         val.add(r)
     val = sorted(list(val))
-    val2idx = {x: i for i, x in enumerate(val)}
+    val2idx = {x: i for (i, x) in enumerate(val)}
     LR = []
     N = len(val)
     segment = [set() for _ in range(N)]
-    for l_, r_ in LR_raw:
+    for (l_, r_) in LR_raw:
         l = val2idx[l_]
         r = val2idx[r_]
         LR.append((l, r))
         segment[l].add(r)
-
     dp = [[0] * N for _ in range(N)]
     for d in range(1, N + 1):
         for l in range(N):

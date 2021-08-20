@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ans = list()
 for i in range(K):
     D = int(input())

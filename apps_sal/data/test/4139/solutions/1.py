@@ -1,5 +1,4 @@
 import itertools
-
 N = input()
 N_len = len(N)
 N_int = int(N)

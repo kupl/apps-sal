@@ -1,10 +1,9 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     abc = list('zyxwvutsrqponmlkjihgfedcba'[26 - m:])
     res = [abc[0]] * (n + 1)
-    res[0], pool, f = 'YES\n', [False] * (n + 1), 0
-    for p, q in zip(list(map(int, input().split())),
-                    list(map(int, input().split()))):
+    (res[0], pool, f) = ('YES\n', [False] * (n + 1), 0)
+    for (p, q) in zip(list(map(int, input().split())), list(map(int, input().split()))):
         if pool[p]:
             f -= 1
         else:

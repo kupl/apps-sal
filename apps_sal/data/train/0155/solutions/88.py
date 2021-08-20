@@ -1,11 +1,12 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         arr.append(10 ** 6)
         n = len(arr)
         dp = [1] * n
         stack = []
         result = 0
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             while stack and arr[stack[-1]] < a:
                 for j in range(len(stack) - 2, -1, -1):
                     if arr[stack[j]] != arr[stack[j + 1]]:

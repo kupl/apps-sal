@@ -1,15 +1,29 @@
 import sys
-
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
 
 
-n_ = 5 * 10**5 + 10
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
+
+
+n_ = 5 * 10 ** 5 + 10
 mod = 998244353
 fun = [1] * (n_ + 1)
 for i in range(1, n_ + 1):
@@ -27,7 +41,7 @@ def nCr(n, r):
 
 
 def solve():
-    n, k = nm()
+    (n, k) = nm()
     res = 0
     for i in range(1, n + 1):
         if i * k > n:
@@ -38,7 +52,3 @@ def solve():
 
 
 solve()
-
-# T = ni()
-# for _ in range(T):
-#     solve()

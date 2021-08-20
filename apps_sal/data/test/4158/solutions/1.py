@@ -3,7 +3,7 @@ def f():
     l = list(map(int, input().split()))
     l = sorted(l)
     d = {}
-    for i, j in enumerate(l):
+    for (i, j) in enumerate(l):
         d[j] = i
     n = 1
     s = ''

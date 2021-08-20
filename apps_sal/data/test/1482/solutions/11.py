@@ -1,4 +1,4 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 s = set(range(1, n * k + 1))
 a = [set([int(i)]) for i in input().split()]
 for aa in a:

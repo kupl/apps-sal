@@ -1,5 +1,4 @@
 def arr(n=0):
-
     array = []
     for i in range(n):
         array.append(i)

@@ -2,6 +2,7 @@ import sys
 
 
 class UnionFind:
+
     def __init__(self, sz):
         self.__ranks = [1] * sz
         self.__sizes = [1] * sz
@@ -33,36 +34,30 @@ class UnionFind:
 
     def size(self, n):
         return self.__sizes[n]
-####
 
 
 def main():
     n = int(input())
-
     edge = {}
     for i in range(n - 1):
-        u, v = list(map(int, sys.stdin.readline().split()))
+        (u, v) = list(map(int, sys.stdin.readline().split()))
         if u not in edge:
             edge[u] = []
         if v not in edge:
             edge[v] = []
         edge[u].append(v)
         edge[v].append(u)
-
     colors = [-1] * (n + 1)
-    for i, c in enumerate(map(int, sys.stdin.readline().split())):
+    for (i, c) in enumerate(map(int, sys.stdin.readline().split())):
         colors[i + 1] = c
-
     uf = UnionFind(n + 1)
     for u in list(edge.keys()):
         for v in edge[u]:
             if colors[u] == colors[v]:
                 uf.unite(u, v)
-
     tree = set()
     for v in range(1, n + 1):
         tree.add(uf.find_parent(v))
-
     target_v = -1
     ok = False
     for u in range(1, n + 1):
@@ -73,12 +68,11 @@ def main():
             ok = True
             target_v = u
             break
-
     if ok:
-        print("YES")
+        print('YES')
         print(target_v)
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

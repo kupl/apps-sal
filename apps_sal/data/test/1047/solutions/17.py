@@ -8,7 +8,6 @@ for i in range(m):
         if int(s[j]) > i:
             ed = True
             print(1, end='')
-        else:
-            if ed:
-                print(0, end='')
+        elif ed:
+            print(0, end='')
     print(' ', end='')

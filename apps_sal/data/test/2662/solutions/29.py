@@ -1,7 +1,6 @@
 import bisect
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
 ans = []
 for i in range(N):
@@ -11,5 +10,4 @@ for i in range(N):
         ans.append(a)
     else:
         ans[ind] = a
-
-print((len(ans)))
+print(len(ans))

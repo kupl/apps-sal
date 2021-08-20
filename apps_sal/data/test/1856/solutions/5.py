@@ -10,6 +10,7 @@ def main():
 
 
 class Node(object):
+
     def __init__(self, v):
         self.v = v
         self.p = self
@@ -47,14 +48,11 @@ def solve(N, S):
                     letters[j] = nodes[i]
                 else:
                     nodes[i].union(letters[j])
-
     ns = set()
     for n in nodes:
         ns.add(n.find().v)
     return len(ns)
 
-
-###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

@@ -1,10 +1,6 @@
-
-
 N = int(input())
-
 upper = list(map(int, input().split()))
 down = list(map(int, input().split()))
-
 scores = []
 for i in range(N):
     score = 0
@@ -19,5 +15,4 @@ for i in range(N):
         elif flag == 1:
             score += down[j]
     scores.append(score)
-
 print(max(scores))

@@ -13,8 +13,8 @@ for _ in range(t):
         print(1, c[0], 0)
         continue
     M = c[0]
-    l, r = 1, n
-    a, b = c[0], 0
+    (l, r) = (1, n)
+    (a, b) = (c[0], 0)
     for i in range(1, 1000000):
         if i % 2 == 0:
             a_tmp = 0

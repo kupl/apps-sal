@@ -1,6 +1,7 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
-        s, res = 'abc', []
+        (s, res) = ('abc', [])
 
         def dfs(s, length, path, res):
             if len(path) == length:
@@ -11,8 +12,6 @@ class Solution:
                     continue
                 else:
                     dfs(s, length, path + s[i], res)
-
         dfs(s, n, '', res)
         res.sort()
-        # print(res)
         return res[k - 1] if k <= len(res) else ''

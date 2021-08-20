@@ -9,4 +9,4 @@ def crusoe(n, d, ang, dist_mult, ang_mult):
         y += d * sin(z)
         d *= dist_mult
         ang *= ang_mult
-    return x, y
+    return (x, y)

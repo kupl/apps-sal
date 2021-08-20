@@ -1,4 +1,5 @@
 class Simplexer:
+
     def __init__(self, expression):
         self.expression = expression
         self.pos = 0
@@ -20,7 +21,7 @@ class Simplexer:
         if self.expression[start] in '+-*/%()=':
             self.pos += 1
             return Token(self.expression[start], 'operator')
-        for typ, func in scans:
+        for (typ, func) in scans:
             if func(self.expression[start]):
                 self.pos = start + 1
                 while self.pos < length and func(self.expression[self.pos]):
@@ -35,9 +36,4 @@ class Simplexer:
 
 
 keywords = {'if', 'else', 'for', 'while', 'return', 'func', 'break'}
-
-scans = (
-    ('integer', lambda c: c.isdigit()),
-    ('whitespace', lambda c: c.isspace()),
-    ('identifier', lambda c: c.isalnum() or c in '$_'),
-)
+scans = (('integer', lambda c: c.isdigit()), ('whitespace', lambda c: c.isspace()), ('identifier', lambda c: c.isalnum() or c in '$_'))

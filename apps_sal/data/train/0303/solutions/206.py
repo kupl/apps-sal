@@ -1,8 +1,8 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         size = len(arr)
         mem = [0] * size
-
         for i in range(size):
             maxArr = 0
             for j in range(0, k):

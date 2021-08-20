@@ -1,5 +1,5 @@
-
 class people:
+
     def __init__(self, name):
         self.name = name
         self.son = []
@@ -14,7 +14,6 @@ class ThroneInheritance:
         self.all_people[kingName] = self.king
 
     def birth(self, parentName: str, childName: str) -> None:
-
         self.all_people[childName] = people(childName)
         p = self.all_people[parentName]
         p.son.append(self.all_people[childName])
@@ -38,10 +37,3 @@ class ThroneInheritance:
             else:
                 p = None
         return ans
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

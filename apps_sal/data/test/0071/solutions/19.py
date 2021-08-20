@@ -1,5 +1,4 @@
-n, m, k, x, y = tuple(map(int, input().split()))
-
+(n, m, k, x, y) = tuple(map(int, input().split()))
 maxq = minq = sergeiq = 0
 if n == 1:
     maxq = k // m
@@ -61,8 +60,8 @@ else:
             sergeiq += 1
             minq += 1
             if x != 1 and x != n:
-                if (remainder - (n * m)) / m >= n - x:
+                if (remainder - n * m) / m >= n - x:
                     sergeiq += 1
-                elif (remainder - (n * m)) / m > n - x - 1 and (remainder - (n * m)) % m >= y:
+                elif (remainder - n * m) / m > n - x - 1 and (remainder - n * m) % m >= y:
                     sergeiq += 1
 print(str(maxq) + ' ' + str(minq) + ' ' + str(sergeiq))

@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         hashmap = defaultdict(int)
         for i in B:
@@ -7,7 +8,6 @@ class Solution:
                 c[p] += 1
             for n in c:
                 hashmap[n] = max(hashmap[n], c[n])
-
         result = []
         for i in A:
             count = defaultdict(int)

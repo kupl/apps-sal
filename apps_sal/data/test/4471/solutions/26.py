@@ -2,6 +2,7 @@ import math
 
 
 class Read:
+
     @staticmethod
     def string():
         return input()
@@ -32,7 +33,6 @@ def solve():
     print('YES' if t == 0 or t == n else 'NO')
 
 
-# query_count = 1
 query_count = Read.int()
 while query_count:
     query_count -= 1

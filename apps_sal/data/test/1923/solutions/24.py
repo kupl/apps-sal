@@ -1,6 +1,6 @@
 n = int(input())
 n *= 2
-lst = input().split(" ")
+lst = input().split(' ')
 for m in range(0, n):
     lst[m] = eval(lst[m])
 for i in range(0, n):
@@ -9,7 +9,6 @@ for i in range(0, n):
             temp = lst[j]
             lst[j] = lst[j + 1]
             lst[j + 1] = temp
-
 result = 0
 for k in range(0, n):
     if k % 2 == 1:

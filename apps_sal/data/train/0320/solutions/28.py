@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
 
         def operate(n):
@@ -10,14 +11,11 @@ class Solution:
                 ans += n % 2
                 n = n // 2
             max_ = max(max_, k - 1)
-            return max_, ans
-
+            return (max_, ans)
         ans = 0
         max_ = 0
         for n in nums:
-            m, o = operate(n)
-            # print(m,n,o)
+            (m, o) = operate(n)
             max_ = max(max_, m)
             ans += o
-
         return ans + max_

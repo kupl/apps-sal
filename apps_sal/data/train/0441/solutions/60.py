@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         k = 1.0
         count = 0

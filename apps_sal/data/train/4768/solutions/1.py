@@ -1,13 +1,14 @@
 class User:
+
     def __init__(self, name, balance, checking_account):
-        self.name, self.balance, self.checking_account = name, balance, checking_account
+        (self.name, self.balance, self.checking_account) = (name, balance, checking_account)
 
     def __str__(self):
-        return "{} has {:d}.".format(self.name, self.balance)
+        return '{} has {:d}.'.format(self.name, self.balance)
 
     def withdraw(self, amount):
         if self.balance < amount:
-            raise ValueError("Not enough money.")
+            raise ValueError('Not enough money.')
         self.balance -= amount
         return str(self)
 
@@ -20,4 +21,4 @@ class User:
             raise ValueError("Can't transfer money from this account.")
         other.withdraw(amount)
         self.add_cash(amount)
-        return "{} and {}".format(str(self)[:-1], other)
+        return '{} and {}'.format(str(self)[:-1], other)

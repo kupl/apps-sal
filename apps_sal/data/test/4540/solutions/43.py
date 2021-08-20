@@ -1,12 +1,9 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 total = 0
 for i in range(1, n):
     total += abs(a[i] - a[i - 1])
-
 total += abs(a[0]) + abs(a[-1])
-
 a.insert(0, 0)
 a.append(0)
 for i in range(1, n + 1):

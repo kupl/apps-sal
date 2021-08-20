@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     if k % 4 == 0:
         for i in range(0, k, 4):
             print(i, i + 1)
@@ -47,4 +47,4 @@ for _ in range(int(input())):
     else:
         print(0, 1)
         print(1, 3)
-        print(3, 00)
+        print(3, 0)

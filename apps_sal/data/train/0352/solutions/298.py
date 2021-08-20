@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         children = collections.defaultdict(set)
         for i in range(len(words)):

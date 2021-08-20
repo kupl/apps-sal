@@ -1,7 +1,7 @@
 mod = 1000000007
-n, q = map(int, input().split())
-pot = pow(2, n, mod)  # 2 to the power n and then mod mod
-e = ((pot - 1) * 2) % mod
+(n, q) = map(int, input().split())
+pot = pow(2, n, mod)
+e = (pot - 1) * 2 % mod
 right = n + 1
 left = n + 1
 top = 1

@@ -1,5 +1,5 @@
 from collections import defaultdict
-SQUARES = [x**2 for x in range(1, 3163)]
+SQUARES = [x ** 2 for x in range(1, 3163)]
 DIGITS = defaultdict(int)
 for sqr in SQUARES:
     DIGITS[''.join(sorted(str(sqr)))] += 1

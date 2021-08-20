@@ -1,7 +1,5 @@
 n = int(input())
 a = [0 for i in range(n + 1)]
-# a[-1]=set
-
 if n % 2 == 0:
     a[n] = 1
     for i in range(n - 1, 0, -1):
@@ -28,7 +26,7 @@ for i in range(1, n + 1):
         c.append(i)
         sc += i
 print(abs(sb - sc))
-print(len(c), end=" ")
+print(len(c), end=' ')
 for i in c:
-    print(i, end=" ")
+    print(i, end=' ')
 print()

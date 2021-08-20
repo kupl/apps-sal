@@ -5,5 +5,4 @@ def solve(arr):
         if elem not in nums:
             out.append(elem)
             nums.add(elem)
-
     return out[::-1]

@@ -1,7 +1,7 @@
-h, m = list(map(int, input().split(':')))
+(h, m) = list(map(int, input().split(':')))
 c = 0
 while True:
-    r = (m % 10) * 10 + m // 10
+    r = m % 10 * 10 + m // 10
     if r == h:
         print(c)
         break

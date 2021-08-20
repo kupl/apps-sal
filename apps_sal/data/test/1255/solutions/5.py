@@ -1,7 +1,7 @@
 n = int(input())
 l = []
 while n:
-    m = [int(i) for i in input().split(" ")]
+    m = [int(i) for i in input().split(' ')]
     l.append((m[0], m[1]))
     n -= 1
 d = {}

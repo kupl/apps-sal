@@ -1,9 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 sum_a = 0
 sum_b = 0
 arr = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     sum_a += a
     sum_b += b
     arr.append(a - b)

@@ -4,7 +4,7 @@ class Skiplist:
         self.data = []
 
     def search(self, target: int) -> bool:
-        return self.data and target <= self.data[-1] and target == self.data[bisect.bisect_left(self.data, target)]
+        return self.data and target <= self.data[-1] and (target == self.data[bisect.bisect_left(self.data, target)])
 
     def add(self, num: int) -> None:
         bisect.insort(self.data, num)
@@ -17,10 +17,3 @@ class Skiplist:
             return False
         self.data = self.data[:i] + self.data[i + 1:]
         return True
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

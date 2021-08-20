@@ -1,15 +1,14 @@
 class Solution:
-    def shortestSubarray(self, A: List[int], K: int) -> int:
 
+    def shortestSubarray(self, A: List[int], K: int) -> int:
         presum = [0]
         for x in A:
             if x >= K:
                 return 1
             presum.append(presum[-1] + x)
-
         q = collections.deque()
         ans = math.inf
-        for i, x in enumerate(A):
+        for (i, x) in enumerate(A):
             while q and presum[i + 1] - presum[q[-1]] <= x:
                 q.pop()
             q.append(i)

@@ -11,8 +11,8 @@ def li():
 
 
 for _ in range(ii()):
-    l, r = mi()
+    (l, r) = mi()
     l -= 1
-    sr = r // 2 + (r % 2) * -r
-    sl = l // 2 + (l % 2) * -l
+    sr = r // 2 + r % 2 * -r
+    sl = l // 2 + l % 2 * -l
     print(sr - sl)

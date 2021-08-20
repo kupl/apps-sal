@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         amount = [0 for i in range(2)]
         for bill in bills:

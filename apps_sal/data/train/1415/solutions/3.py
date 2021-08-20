@@ -12,9 +12,9 @@ def solve():
         i += 1
         j -= 1
     if a == a[::-1] or b == b[::-1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

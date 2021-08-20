@@ -7,8 +7,7 @@ def main():
             ans.discard(a)
         else:
             ans.add(a)
-
-    print((len(ans)))
+    print(len(ans))
 
 
 def __starting_point():

@@ -1,5 +1,7 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
+
         def helper(k):
             for i in range(int(math.sqrt(k)), 0, -1):
                 if k % i == 0:

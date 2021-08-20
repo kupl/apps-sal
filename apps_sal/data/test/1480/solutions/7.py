@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 cur = 0
 x = []
@@ -11,7 +11,6 @@ for i in range(k):
         v += 1
         if v >= n:
             v = v - n
-
     print(x[v], end=' ')
     x.pop(v)
     n -= 1

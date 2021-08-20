@@ -1,9 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ass = list(map(int, input().split()))
 
 
 def done(a):
-    return all(x < y for (x, y) in zip(a[:-1], a[1:]))
+    return all((x < y for (x, y) in zip(a[:-1], a[1:])))
 
 
 maxops = m - 1
@@ -13,7 +13,7 @@ while maxops > minops:
     base = 0
     ok = True
     for a in ass:
-        if base > a and (base - a) > cops:
+        if base > a and base - a > cops:
             ok = False
             break
         elif (base - a) % m > cops:

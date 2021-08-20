@@ -1,9 +1,7 @@
-n, b, d = list(map(int, input().split()))
+(n, b, d) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = 0
 i = 0
-
 while i < n:
     sum = 0
     while sum <= d and i < n:
@@ -12,5 +10,4 @@ while i < n:
         i += 1
     if sum > d:
         ans += 1
-
 print(ans)

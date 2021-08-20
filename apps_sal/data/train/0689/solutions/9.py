@@ -1,10 +1,9 @@
-# cook your dish here
 try:
     t = int(input())
     a = []
     b = []
     for i in range(t):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         a.append(x)
         b.append(y)
     flag = 0
@@ -17,8 +16,8 @@ try:
             if a1 + b1 == a2 and a2 + b2 == a1:
                 flag = 1
     if flag == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 except Exception:
     pass

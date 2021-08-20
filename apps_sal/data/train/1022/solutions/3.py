@@ -1,10 +1,8 @@
-
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
     if n % 2 == 1:
-        print("NO")
+        print('NO')
     else:
         b = a[:n // 2]
         c = a[n // 2:]
@@ -22,11 +20,11 @@ for _ in range(int(input())):
                 c[i] = 1
                 b[i] = 1
         if flag:
-            print("YES")
+            print('YES')
             for x in b:
                 print(x, end=' ')
             for x in c:
                 print(x, end=' ')
             print()
         else:
-            print("NO")
+            print('NO')

@@ -8,15 +8,10 @@ from math import ceil, floor, sqrt, gcd, inf, pi
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 r = int(input())
-
 tmp = 0
 res = 0
-
 res = 2 * r * pi
-
 print(res)

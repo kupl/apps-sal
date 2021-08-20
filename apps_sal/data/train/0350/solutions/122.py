@@ -2,7 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def subArray(k):
             right = 0
             left = 0
@@ -11,7 +13,6 @@ class Solution:
             while right < len(A):
                 freq[A[right]] += 1
                 right += 1
-
                 while len(freq) > k:
                     freq[A[left]] -= 1
                     if freq[A[left]] == 0:

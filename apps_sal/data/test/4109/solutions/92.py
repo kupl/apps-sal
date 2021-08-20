@@ -1,10 +1,10 @@
-n, m, x = list(map(int, input().split()))
-l = [list(map(int, input().split(" "))) for i in range(n)]
+(n, m, x) = list(map(int, input().split()))
+l = [list(map(int, input().split(' '))) for i in range(n)]
 ans = []
 for i in range(1 << n):
     cond = [0] * n
     for j in range(n):
-        if 1 & (i >> j):
+        if 1 & i >> j:
             cond[j] = 1
     count = [0] * (m + 1)
     for k in range(n):
@@ -19,6 +19,6 @@ for i in range(1 << n):
     if flag == 0:
         ans.append(count[0])
 if ans == []:
-    print((-1))
+    print(-1)
 else:
-    print((min(ans)))
+    print(min(ans))

@@ -7,7 +7,7 @@ def movie(card, ticket, perc):
     systemb = card
     while systemb >= systema:
         systema = ticket * x
-        systemb += ticket * perc**x
+        systemb += ticket * perc ** x
         if math.ceil(systemb) < systema:
             break
         else:

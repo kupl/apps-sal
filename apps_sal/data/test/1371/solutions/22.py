@@ -9,10 +9,8 @@ def fact(s, k):
 
 
 s = int(input())
-
 ans = 0
 for i in range(1, s // 3 + 1):
     ans += fact(s, i)
 ans %= mod
-
 print(ans)

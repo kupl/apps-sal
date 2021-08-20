@@ -6,139 +6,121 @@ def area(width, height):
 
 
 def calcul(s1, c, s2):
-    maxx, maxy, minx, miny = 0, 0, 0, 0
-    x, y = 0, 0
+    (maxx, maxy, minx, miny) = (0, 0, 0, 0)
+    (x, y) = (0, 0)
     for k in range(len(s1)):
-        if s1[k] == "W":
+        if s1[k] == 'W':
             y += 1
-        if s1[k] == "S":
+        if s1[k] == 'S':
             y -= 1
-        if s1[k] == "A":
+        if s1[k] == 'A':
             x -= 1
-        if s1[k] == "D":
+        if s1[k] == 'D':
             x += 1
         maxx = max(maxx, x)
         minx = min(minx, x)
-
         maxy = max(maxy, y)
         miny = min(miny, y)
-
-    if c == "W":
+    if c == 'W':
         y += 1
-    elif c == "S":
+    elif c == 'S':
         y -= 1
-    elif c == "A":
+    elif c == 'A':
         x -= 1
-    elif c == "D":
+    elif c == 'D':
         x += 1
     else:
-        print(c, "ok")
-
+        print(c, 'ok')
     maxx = max(maxx, x)
     minx = min(minx, x)
-
     maxy = max(maxy, y)
     miny = min(miny, y)
-
     for k in range(len(s2)):
-        if s2[k] == "W":
+        if s2[k] == 'W':
             y += 1
-        if s2[k] == "S":
+        if s2[k] == 'S':
             y -= 1
-        if s2[k] == "A":
+        if s2[k] == 'A':
             x -= 1
-        if s2[k] == "D":
+        if s2[k] == 'D':
             x += 1
         maxx = max(maxx, x)
         minx = min(minx, x)
-
         maxy = max(maxy, y)
         miny = min(miny, y)
-
     diffx = maxx - minx
     diffy = maxy - miny
     tmp = area(diffx, diffy)
-
     return tmp
 
 
 def pre_calcul(s, moment, pre_avant, date_debut):
-    x, y, maxx, minx, maxy, miny = pre_avant
+    (x, y, maxx, minx, maxy, miny) = pre_avant
     for k in range(date_debut, moment):
-        if s[k] == "W":
+        if s[k] == 'W':
             y += 1
-        if s[k] == "S":
+        if s[k] == 'S':
             y -= 1
-        if s[k] == "A":
+        if s[k] == 'A':
             x -= 1
-        if s[k] == "D":
+        if s[k] == 'D':
             x += 1
         maxx = max(maxx, x)
         minx = min(minx, x)
-
         maxy = max(maxy, y)
         miny = min(miny, y)
-
     return (x, y, maxx, minx, maxy, miny)
 
 
 def calcul2(s, c, moment, precalcul):
-    x, y, maxx, minx, maxy, miny = precalcul
-
-    if c == "W":
+    (x, y, maxx, minx, maxy, miny) = precalcul
+    if c == 'W':
         y += 1
-    elif c == "S":
+    elif c == 'S':
         y -= 1
-    elif c == "A":
+    elif c == 'A':
         x -= 1
-    elif c == "D":
+    elif c == 'D':
         x += 1
     else:
-        print(c, "ok")
-
+        print(c, 'ok')
     maxx = max(maxx, x)
     minx = min(minx, x)
-
     maxy = max(maxy, y)
     miny = min(miny, y)
-
     for k in range(moment, len(s)):
-        if s[k] == "W":
+        if s[k] == 'W':
             y += 1
-        if s[k] == "S":
+        if s[k] == 'S':
             y -= 1
-        if s[k] == "A":
+        if s[k] == 'A':
             x -= 1
-        if s[k] == "D":
+        if s[k] == 'D':
             x += 1
         maxx = max(maxx, x)
         minx = min(minx, x)
-
         maxy = max(maxy, y)
         miny = min(miny, y)
-
     diffx = maxx - minx
     diffy = maxy - miny
     tmp = area(diffx, diffy)
-
     return tmp
 
 
 for _ in range(n):
     s = input()
-    maxx, maxy, minx, miny = 0, 0, 0, 0
-    x, y = 0, 0
-    momentminx, momentmaxx, momentminy, momentmaxy = -1, -1, -1, -1
+    (maxx, maxy, minx, miny) = (0, 0, 0, 0)
+    (x, y) = (0, 0)
+    (momentminx, momentmaxx, momentminy, momentmaxy) = (-1, -1, -1, -1)
     for k in range(len(s)):
-        if s[k] == "W":
+        if s[k] == 'W':
             y += 1
-        if s[k] == "S":
+        if s[k] == 'S':
             y -= 1
-        if s[k] == "A":
+        if s[k] == 'A':
             x -= 1
-        if s[k] == "D":
+        if s[k] == 'D':
             x += 1
-
         if x > maxx:
             momentmaxx = k
         if y > maxy:
@@ -149,12 +131,10 @@ for _ in range(n):
             momentminy = k
         maxx = max(maxx, x)
         minx = min(minx, x)
-
         maxy = max(maxy, y)
         miny = min(miny, y)
     diffx = maxx - minx
     diffy = maxy - miny
-
     tmp = 999999999999999999999999999999999999
     l = [momentmaxx, momentmaxy, momentminx, momentminy]
     l = list(set(l))

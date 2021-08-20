@@ -1,13 +1,12 @@
 def get_planet_name(id):
-    # This doesn't work; Fix it!
-    name1 = "Mercury"
-    name2 = "Venus"
-    name3 = "Earth"
-    name4 = "Mars"
-    name5 = "Jupiter"
-    name6 = "Saturn"
-    name7 = "Uranus"
-    name8 = "Neptune"
+    name1 = 'Mercury'
+    name2 = 'Venus'
+    name3 = 'Earth'
+    name4 = 'Mars'
+    name5 = 'Jupiter'
+    name6 = 'Saturn'
+    name7 = 'Uranus'
+    name8 = 'Neptune'
     if id == 1:
         return name1
     elif id == 2:

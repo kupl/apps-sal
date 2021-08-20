@@ -7,6 +7,6 @@ for i in range(1, n - 1):
         fl = True
         break
 if fl:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

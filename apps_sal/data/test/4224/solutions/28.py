@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 lst = []
 for i in a:
     if i % 2 == 0:
@@ -21,5 +20,4 @@ def half(x):
 ans = 0
 for i in lst:
     ans += half(i)
-
 print(ans)

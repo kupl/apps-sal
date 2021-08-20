@@ -3,9 +3,9 @@ def disarium_number(number):
     res = list(str(number))
     count = 0
     for item in res:
-        total += (int(item) ** (count + 1))
+        total += int(item) ** (count + 1)
         count += 1
-    if(total == number):
-        return "Disarium !!"
+    if total == number:
+        return 'Disarium !!'
     else:
-        return "Not !!"
+        return 'Not !!'

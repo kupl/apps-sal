@@ -6,7 +6,7 @@ def mystery(n):
     begin = time.time()
     end = time.time()
     limit = 0.2
-    while n != 1 and n != 13 and n < 1000000 and end - begin < limit:
+    while n != 1 and n != 13 and (n < 1000000) and (end - begin < limit):
         c += 1
         if n & 1:
             n = n + n + n + n + n + 1

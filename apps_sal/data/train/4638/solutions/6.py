@@ -5,13 +5,12 @@ def fizz_buzz_cuckoo_clock(time):
         return ('Cuckoo ' * (h % 12 or 12))[:-1]
     elif m == 30:
         return 'Cuckoo'
-    else:
-        if m % 3 == 0:
-            if m % 5 == 0:
-                return 'Fizz Buzz'
-            else:
-                return 'Fizz'
-        elif m % 5 == 0:
-            return 'Buzz'
+    elif m % 3 == 0:
+        if m % 5 == 0:
+            return 'Fizz Buzz'
         else:
-            return 'tick'
+            return 'Fizz'
+    elif m % 5 == 0:
+        return 'Buzz'
+    else:
+        return 'tick'

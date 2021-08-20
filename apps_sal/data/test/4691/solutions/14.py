@@ -1,5 +1,5 @@
 N = int(input())
-AC, WA, TLE, RE = 0, 0, 0, 0
+(AC, WA, TLE, RE) = (0, 0, 0, 0)
 for i in range(N):
     S = input()
     if S == 'AC':

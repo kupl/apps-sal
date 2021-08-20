@@ -1,11 +1,9 @@
-# n = list(map(int,unput().split()))
 def print_lst(lst):
-    print(" ".join(map(str, lst)))
+    print(' '.join(map(str, lst)))
 
 
-n, k, p, x, y = list(map(int, input().split()))
+(n, k, p, x, y) = list(map(int, input().split()))
 pi = list(map(int, input().split()))
-
 spi = sum(pi)
 res = []
 c_lm = 0
@@ -18,7 +16,6 @@ for el in pi:
 n_hm = n // 2 + 1 - c_hm
 n_lm = n // 2 - c_lm
 for i in range(n - k):
-
     if n_hm > 0:
         res += [y]
         pi += [y]
@@ -27,7 +24,6 @@ for i in range(n - k):
         res += [1]
         pi += [1]
         n_lm -= 1
-
 pis = sorted(pi)
 if sum(pis) > x:
     print(-1)

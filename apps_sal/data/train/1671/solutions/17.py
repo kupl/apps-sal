@@ -1,4 +1,3 @@
-# ---------------------------iye ha aam zindegi---------------------------------------------
 from io import BytesIO, IOBase
 import os
 import math
@@ -11,13 +10,8 @@ from fractions import Fraction
 import sys
 import threading
 from collections import defaultdict
-# threading.stack_size(10**8)
 mod = 10 ** 9 + 7
 mod1 = 998244353
-
-# ------------------------------warmup----------------------------
-# sys.setrecursionlimit(300000)
-
 BUFSIZE = 8192
 
 
@@ -27,7 +21,7 @@ class FastIO(IOBase):
     def __init__(self, file):
         self._fd = file.fileno()
         self.buffer = BytesIO()
-        self.writable = "x" in file.mode or "r" not in file.mode
+        self.writable = 'x' in file.mode or 'r' not in file.mode
         self.write = self.buffer.write if self.writable else None
 
     def read(self):
@@ -36,41 +30,45 @@ class FastIO(IOBase):
             if not b:
                 break
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines = 0
         return self.buffer.read()
 
     def readline(self):
         while self.newlines == 0:
             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
-            self.newlines = b.count(b"\n") + (not b)
+            self.newlines = b.count(b'\n') + (not b)
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines -= 1
         return self.buffer.readline()
 
     def flush(self):
         if self.writable:
             os.write(self._fd, self.buffer.getvalue())
-            self.buffer.truncate(0), self.buffer.seek(0)
+            (self.buffer.truncate(0), self.buffer.seek(0))
 
 
 class IOWrapper(IOBase):
+
     def __init__(self, file):
         self.buffer = FastIO(file)
         self.flush = self.buffer.flush
         self.writable = self.buffer.writable
-        self.write = lambda s: self.buffer.write(s.encode("ascii"))
-        self.read = lambda: self.buffer.read().decode("ascii")
-        self.readline = lambda: self.buffer.readline().decode("ascii")
+        self.write = lambda s: self.buffer.write(s.encode('ascii'))
+        self.read = lambda: self.buffer.read().decode('ascii')
+        self.readline = lambda: self.buffer.readline().decode('ascii')
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-def input(): return sys.stdin.readline().rstrip("\r\n")
+(sys.stdin, sys.stdout) = (IOWrapper(sys.stdin), IOWrapper(sys.stdout))
 
 
-# -------------------game starts now----------------------------------------------------import math
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
+
+
 class TreeNode:
+
     def __init__(self, k, v):
         self.key = k
         self.value = v
@@ -125,7 +123,6 @@ class AvlTree:
         return x.num_total if x else 0
 
     def _rebalance(self, node):
-
         n = node
         while n:
             lh = self.get_height(n.left)
@@ -134,7 +131,6 @@ class AvlTree:
             balance_factor = lh - rh
             n.num_total = 1 + self.get_num_total(n.left) + self.get_num_total(n.right)
             n.num_left = 1 + self.get_num_total(n.left)
-
             if balance_factor > 1:
                 if self.get_height(n.left.left) < self.get_height(n.left.right):
                     self._rotate_left(n.left)
@@ -226,7 +222,7 @@ class AvlTree:
                 node = node.right
             else:
                 return (node.key, node.value)
-        raise IndexError("Out of ranges")
+        raise IndexError('Out of ranges')
 
     @staticmethod
     def _is_left(node):
@@ -286,15 +282,14 @@ class AvlTree:
         return n
 
 
-# -----------------------------------------------binary seacrh tree---------------------------------------
 class SegmentTree1:
-    def __init__(self, data, default=2**32, func=lambda a, b: min(a, b)):
+
+    def __init__(self, data, default=2 ** 32, func=lambda a, b: min(a, b)):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
@@ -323,7 +318,6 @@ class SegmentTree1:
         stop += 1
         start += self._size
         stop += self._size
-
         res = self._default
         while start < stop:
             if start & 1:
@@ -337,18 +331,17 @@ class SegmentTree1:
         return res
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
-# -------------------game starts now----------------------------------------------------import math
 class SegmentTree:
-    def __init__(self, data, default=2**30 - 1, func=lambda a, b: a & b):
+
+    def __init__(self, data, default=2 ** 30 - 1, func=lambda a, b: a & b):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
@@ -377,7 +370,6 @@ class SegmentTree:
         stop += 1
         start += self._size
         stop += self._size
-
         res = self._default
         while start < stop:
             if start & 1:
@@ -391,11 +383,11 @@ class SegmentTree:
         return res
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
-# -------------------------------iye ha chutiya zindegi-------------------------------------
 class Factorial:
+
     def __init__(self, MOD):
         self.MOD = MOD
         self.factorials = [1, 1]
@@ -404,8 +396,8 @@ class Factorial:
 
     def calc(self, n):
         if n <= -1:
-            print("Invalid argument to calculate n!")
-            print("n must be non-negative value. But the argument was " + str(n))
+            print('Invalid argument to calculate n!')
+            print('n must be non-negative value. But the argument was ' + str(n))
             return
         if n < len(self.factorials):
             return self.factorials[n]
@@ -420,8 +412,8 @@ class Factorial:
 
     def inv(self, n):
         if n <= -1:
-            print("Invalid argument to calculate n^(-1)")
-            print("n must be non-negative value. But the argument was " + str(n))
+            print('Invalid argument to calculate n^(-1)')
+            print('n must be non-negative value. But the argument was ' + str(n))
             return
         p = self.MOD
         pi = n % p
@@ -436,23 +428,24 @@ class Factorial:
 
     def invFactorial(self, n):
         if n <= -1:
-            print("Invalid argument to calculate (n^(-1))!")
-            print("n must be non-negative value. But the argument was " + str(n))
+            print('Invalid argument to calculate (n^(-1))!')
+            print('n must be non-negative value. But the argument was ' + str(n))
             return
         if n < len(self.invFactorial_):
             return self.invFactorial_[n]
-        self.inv(n)  # To make sure already calculated n^-1
+        self.inv(n)
         nextArr = [0] * (n + 1 - len(self.invFactorial_))
         initialI = len(self.invFactorial_)
         prev = self.invFactorial_[-1]
         p = self.MOD
         for i in range(initialI, n + 1):
-            prev = nextArr[i - initialI] = (prev * self.invModulos[i % p]) % p
+            prev = nextArr[i - initialI] = prev * self.invModulos[i % p] % p
         self.invFactorial_ += nextArr
         return self.invFactorial_[n]
 
 
 class Combination:
+
     def __init__(self, MOD):
         self.MOD = MOD
         self.factorial = Factorial(MOD)
@@ -465,7 +458,6 @@ class Combination:
         return f.calc(n) * f.invFactorial(max(n - k, k)) * f.invFactorial(min(k, n - k)) % self.MOD
 
 
-# --------------------------------------iye ha combinations ka zindegi---------------------------------
 def powm(a, n, m):
     if a == 1 or n == 0:
         return 1
@@ -476,16 +468,12 @@ def powm(a, n, m):
         return a * powm(a, n - 1, m) % m
 
 
-# --------------------------------------iye ha power ka zindegi---------------------------------
 def sort_list(list1, list2):
     zipped_pairs = zip(list2, list1)
-
-    z = [x for _, x in sorted(zipped_pairs)]
-
+    z = [x for (_, x) in sorted(zipped_pairs)]
     return z
 
 
-# --------------------------------------------------product----------------------------------------
 def product(l):
     por = 1
     for i in range(len(l)):
@@ -493,33 +481,23 @@ def product(l):
     return por
 
 
-# --------------------------------------------------binary----------------------------------------
 def binarySearchCount(arr, n, key):
     left = 0
     right = n - 1
-
     count = 0
-
-    while (left <= right):
+    while left <= right:
         mid = int((right + left) / 2)
-
-        # Check if middle element is
-        # less than or equal to key
-        if (arr[mid] <= key):
+        if arr[mid] <= key:
             count = mid + 1
             left = mid + 1
-
-        # If key is smaller, ignore right half
         else:
             right = mid - 1
-
     return count
 
 
-# --------------------------------------------------binary----------------------------------------
 def countdig(n):
     c = 0
-    while (n > 0):
+    while n > 0:
         n //= 10
         c += 1
     return c
@@ -527,42 +505,32 @@ def countdig(n):
 
 def binary(x, length):
     y = bin(x)[2:]
-    return y if len(y) >= length else "0" * (length - len(y)) + y
+    return y if len(y) >= length else '0' * (length - len(y)) + y
 
 
 def countGreater(arr, n, k):
     l = 0
     r = n - 1
-
-    # Stores the index of the left most element
-    # from the array which is greater than k
     leftGreater = n
-
-    # Finds number of elements greater than k
-    while (l <= r):
+    while l <= r:
         m = int(l + (r - l) / 2)
-        if (arr[m] >= k):
+        if arr[m] >= k:
             leftGreater = m
             r = m - 1
-
-        # If mid element is less than
-        # or equal to k update l
         else:
             l = m + 1
-
-    # Return the count of elements
-    # greater than k
-    return (n - leftGreater)
+    return n - leftGreater
 
 
-# --------------------------------------------------binary------------------------------------
 class TrieNode:
+
     def __init__(self):
         self.children = [None] * 26
         self.isEndOfWord = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = self.getNode()
 
@@ -591,25 +559,26 @@ class Trie:
                 return False
             pCrawl = pCrawl.children[index]
         return pCrawl != None and pCrawl.isEndOfWord
-# -----------------------------------------trie---------------------------------
 
 
 class Node:
+
     def __init__(self, data):
         self.data = data
         self.count = 0
-        self.left = None  # left node for 0
-        self.right = None  # right node for 1
+        self.left = None
+        self.right = None
 
 
 class BinaryTrie:
+
     def __init__(self):
         self.root = Node(0)
 
     def insert(self, pre_xor):
         self.temp = self.root
         for i in range(31, -1, -1):
-            val = pre_xor & (1 << i)
+            val = pre_xor & 1 << i
             if val:
                 if not self.temp.right:
                     self.temp.right = Node(0)
@@ -625,22 +594,20 @@ class BinaryTrie:
     def query(self, xor):
         self.temp = self.root
         for i in range(31, -1, -1):
-            val = xor & (1 << i)
+            val = xor & 1 << i
             if not val:
                 if self.temp.left and self.temp.left.count > 0:
                     self.temp = self.temp.left
                 elif self.temp.right:
                     self.temp = self.temp.right
-            else:
-                if self.temp.right and self.temp.right.count > 0:
-                    self.temp = self.temp.right
-                elif self.temp.left:
-                    self.temp = self.temp.left
+            elif self.temp.right and self.temp.right.count > 0:
+                self.temp = self.temp.right
+            elif self.temp.left:
+                self.temp = self.temp.left
             self.temp.count -= 1
         return xor ^ self.temp.data
 
 
-# -------------------------bin trie-------------------------------------------
 for ik in range(int(input())):
     n = int(input())
     a = [1] * n

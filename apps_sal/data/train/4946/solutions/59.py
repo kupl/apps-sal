@@ -11,6 +11,7 @@ def house_numbers_sum(inp):
 
 
 class TestHoseNumbersSum(unittest.TestCase):
+
     def test_should_return_0_when_given_inp_first_element_is_0(self):
         inp = [0, 1, 2, 3, 4, 5]
         actual = house_numbers_sum(inp)

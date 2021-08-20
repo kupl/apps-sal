@@ -1,10 +1,9 @@
 import sys
-sys.setrecursionlimit(10**6)
-
-n, g, s = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(n, g, s) = map(int, input().split())
 G = [[] for _ in range(n)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
 
@@ -24,10 +23,8 @@ else:
     vg = [-1] * n
     dfs(vs, s - 1, 0)
     dfs(vg, g - 1, 0)
-
     ans = 0
     for i in range(n):
         if vs[i] > vg[i]:
             ans = max(ans, vs[i])
-
     print(ans - 1)

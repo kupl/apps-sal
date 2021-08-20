@@ -1,6 +1,5 @@
 n = int(input())
 arr = list(map(int, input().split()))
-
 ans = arr.count(0)
 for i in range(1, n + 1):
     one = 0

@@ -7,16 +7,16 @@ def solve(arr):
     ans = 0
     left = arr[:len(arr) // 2]
     right = arr[len(arr) // 2:]
-    val1, lis1 = solve(left)
-    val2, lis2 = solve(right)
-    val, lis = merge(lis1, lis2)
+    (val1, lis1) = solve(left)
+    (val2, lis2) = solve(right)
+    (val, lis) = merge(lis1, lis2)
     return [val + val1 + val2, lis]
 
 
 def merge(left, right):
     ans = []
     final = 0
-    i, j = 0, 0
+    (i, j) = (0, 0)
     n = len(left)
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
@@ -31,7 +31,7 @@ def merge(left, right):
 
 
 for _ in range(t):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     ans = 0
     dic = {i: [] for i in range(d)}
@@ -40,11 +40,10 @@ for _ in range(t):
         if (arr[i] - i - 1) % d != 0:
             found = True
             break
+        elif arr[i] % d == 0:
+            dic[0] += [arr[i] // d - 1]
         else:
-            if arr[i] % d == 0:
-                dic[0] += [arr[i] // d - 1]
-            else:
-                dic[arr[i] % d] += [(arr[i] - (arr[i] % d)) // d]
+            dic[arr[i] % d] += [(arr[i] - arr[i] % d) // d]
     if found:
         print(-1)
     else:

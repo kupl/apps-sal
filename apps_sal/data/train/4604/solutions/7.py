@@ -1,5 +1,5 @@
 def palindrome(n):
-    return 'Not valid' if type(n) != int or n < 0 else any(s == s[::-1] for s in subs(str(n)))
+    return 'Not valid' if type(n) != int or n < 0 else any((s == s[::-1] for s in subs(str(n))))
 
 
 def subs(s):

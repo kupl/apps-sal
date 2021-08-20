@@ -1,7 +1,7 @@
 def riders(stations, station_x):
     r = 1
     d = 0
-    for i, e in enumerate(stations, 1):
+    for (i, e) in enumerate(stations, 1):
         d += e
         if i + 1 == station_x:
             r += 1

@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-# coding: utf-8
-# Last Modified: 12/Dec/19 07:21:47 PM
-
-
 import sys
 
 
 def main():
-    n, k = get_ints()
+    (n, k) = get_ints()
     s = input()
     d = set(input().split())
     ans = 0
@@ -16,19 +11,22 @@ def main():
         if s[i] in d:
             curr += 1
         else:
-            ans += (curr * (curr + 1)) // 2
+            ans += curr * (curr + 1) // 2
             curr = 0
-    ans += (curr * (curr + 1)) // 2
+    ans += curr * (curr + 1) // 2
     print(ans)
 
 
-def get_array(): return list(map(int, sys.stdin.readline().split()))
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def get_ints(): return list(map(int, sys.stdin.readline().split()))
+def get_ints():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def input(): return sys.stdin.readline().strip()
+def input():
+    return sys.stdin.readline().strip()
 
 
 def __starting_point():

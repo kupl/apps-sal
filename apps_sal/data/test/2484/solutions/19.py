@@ -8,7 +8,7 @@ def calculate(n, arr):
     sum = arr[0]
     for left in range(0, n):
         while right + 1 < n:
-            if sum ^ arr[right + 1] == (sum + arr[right + 1]):
+            if sum ^ arr[right + 1] == sum + arr[right + 1]:
                 right = right + 1
                 sum = sum + arr[right]
             else:

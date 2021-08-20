@@ -1,9 +1,7 @@
 import bisect
-
 N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
 ans = 0
 for i in range(29):
     div_ = pow(2, i + 1)
@@ -21,7 +19,7 @@ for i in range(29):
             idx1 -= 1
         while idx3 > 0 and B_tmp[idx3 - 1] >= 3 * tmp - a:
             idx3 -= 1
-        cnt += ((idx2 - idx1) + (N - idx3)) % 2
+        cnt += (idx2 - idx1 + (N - idx3)) % 2
     if cnt % 2 == 1:
         ans += tmp
 print(ans)

@@ -1,13 +1,14 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         max_profit = 0
         res = -1
-        q = deque([c, i] for i, c in enumerate(customers))
+        q = deque(([c, i] for (i, c) in enumerate(customers)))
         i = 0
         while q:
             n = 0
-            while q and q[0][1] <= i and n < 4:
+            while q and q[0][1] <= i and (n < 4):
                 if n + q[0][0] <= 4:
                     n += q.popleft()[0]
                 else:

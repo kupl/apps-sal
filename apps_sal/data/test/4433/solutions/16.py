@@ -1,10 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 adj = [0] * (n + 1)
 for i in range(n + 1):
     adj[i] = []
 s = 0
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     adj[x].append(y)
     adj[y].append(x)
     if len(adj[x]) > len(adj[s]):
@@ -21,10 +21,7 @@ for i in range(len(adj[s])):
         mp[adj[s][i]] = 1
 i = 0
 vis[s] = 1
-# for l in mp:
-# 	print (l)
-
-while(i < len(stk)):
+while i < len(stk):
     k = stk[i][1]
     if vis[k] == 0:
         for j in range(len(adj[k])):

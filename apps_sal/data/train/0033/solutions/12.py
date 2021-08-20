@@ -6,13 +6,10 @@ def main():
     t = int(input())
     for _ in range(t):
         N = int(input())
-
         x = []
         for i in range(1, N + 1):
             x.append(i)
-
         print(2)
-
         while len(x) >= 2:
             a = x.pop()
             b = x.pop()

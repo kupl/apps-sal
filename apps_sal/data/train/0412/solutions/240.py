@@ -1,6 +1,7 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         dp = [[0 for j in range(target + 1)] for i in range(d + 1)]
         dp[0][0] = 1
         for i in range(1, d + 1):

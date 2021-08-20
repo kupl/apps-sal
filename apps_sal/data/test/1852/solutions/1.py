@@ -3,8 +3,6 @@ import os
 import math
 import array
 3
-
-
 DEBUG = 'DEBUG' in os.environ
 
 
@@ -20,23 +18,17 @@ def dprint(*value, sep=' ', end='\n'):
 def solve(N, M, G):
     if N == 2:
         return [0, 1]
-
     degv = [set() for _ in range(5)]
     for i in range(M):
         d = len(G[i])
         if d == 0 or d >= 5:
             return []
         degv[d].add(i)
-
-    layer_vcount = 1 << (N - 1)
+    layer_vcount = 1 << N - 1
     vs = degv[1]
     levels = [0] * M
     ans = []
     for level in range(1, N):
-        #dprint('level', level, [x for x in levels])
-        #dprint('vs', vs)
-        #dprint('layer_vcount', layer_vcount)
-
         if len(vs) not in (layer_vcount - 1, layer_vcount):
             return []
         if len(vs) == layer_vcount - 1:
@@ -48,14 +40,10 @@ def solve(N, M, G):
                 sp_deg_off = 1
         else:
             sp_deg_off = 0
-        #dprint('sp_deg_off', sp_deg_off)
-
         ndeg = 3 if level < N - 1 else 2
         us = set()
         ss = set()
-
         for v in vs:
-            #dprint('v', v)
             levels[v] = level
             p = None
             for u in G[v]:
@@ -64,12 +52,9 @@ def solve(N, M, G):
                         return []
                     p = u
                     break
-            #dprint('  p', p)
             if p is None:
                 return []
             deg = len(G[p])
-            #dprint('  deg', deg)
-
             if deg == ndeg:
                 us.add(p)
             elif deg == ndeg + sp_deg_off:
@@ -78,17 +63,12 @@ def solve(N, M, G):
                 ss.add(p)
             else:
                 return []
-
-        #dprint('us', us)
-        #dprint('ss', ss)
-
         if sp_deg_off != 0:
             if len(ss) != 1:
                 return []
             (sp,) = list(ss)
             ans = [sp]
             us.add(sp)
-
         if sp_deg_off == 0:
             if level == N - 2:
                 if ss:
@@ -99,10 +79,8 @@ def solve(N, M, G):
                     return li
             if len(ss) > 1:
                 return []
-
         vs = us
         layer_vcount >>= 1
-
     return ans
 
 
@@ -111,10 +89,9 @@ def main():
     M = (1 << N) - 2
     G = [[] for _ in range(M)]
     for _ in range(M - 1):
-        a, b = [int(e) - 1 for e in inp().split()]
+        (a, b) = [int(e) - 1 for e in inp().split()]
         G[a].append(b)
         G[b].append(a)
-
     ans = solve(N, M, G)
     print(len(ans))
     if ans:

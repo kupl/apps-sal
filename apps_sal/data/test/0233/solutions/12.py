@@ -2,7 +2,7 @@ n = int(input())
 m_win = 0
 c_win = 0
 for i in range(n):
-    m, c = list(map(int, input().split()))
+    (m, c) = list(map(int, input().split()))
     if m > c:
         m_win += 1
     if c > m:

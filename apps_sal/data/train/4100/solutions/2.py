@@ -1,7 +1,6 @@
 def reverse_alternate(string):
-    # your code here
-    if string == "":
-        return ""
+    if string == '':
+        return ''
     else:
         new_list = []
         for i in range(len(string.split())):
@@ -9,4 +8,4 @@ def reverse_alternate(string):
                 new_list.append(string.split()[i][::-1])
             else:
                 new_list.append(string.split()[i])
-        return " ".join(new_list)
+        return ' '.join(new_list)

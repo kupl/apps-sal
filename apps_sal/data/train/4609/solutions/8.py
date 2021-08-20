@@ -1,4 +1,5 @@
 class Chicken:
+
     def __init__(self, lifespan):
         self.eggs = 300
         self.lifespan = lifespan
@@ -6,7 +7,7 @@ class Chicken:
 
     def birthday(self):
         self.age -= 1
-        self.eggs //= (10 / 8)
+        self.eggs //= 10 / 8
         self.eggs = 0 if self.age == 0 else self.eggs
         return self
 

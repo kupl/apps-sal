@@ -2,20 +2,14 @@ import numpy as np
 from scipy.sparse.csgraph import dijkstra
 import sys
 input = sys.stdin.readline
-
-"""
-最小カット
-"""
-
+'\n最小カット\n'
 N = int(input())
 start = 0
 goal = N + 1
-
 A = [0] + [int(x) for x in input().split()]
-
 INF = 10 ** 12
 graph = np.zeros((N + 2, N + 2), dtype=np.int64)
-for i, a in enumerate(A[1:], 1):
+for (i, a) in enumerate(A[1:], 1):
     if a >= 0:
         graph[start, i] = a
     else:
@@ -29,7 +23,7 @@ for i in range(1, N + 1):
 def max_flow(graph):
     flow = 0
     while True:
-        dist, pred = dijkstra(graph, indices=start, return_predecessors=True, unweighted=True)
+        (dist, pred) = dijkstra(graph, indices=start, return_predecessors=True, unweighted=True)
         if dist[goal] == np.inf:
             return flow
         path = []
@@ -39,12 +33,12 @@ def max_flow(graph):
             v = pred[v]
             if v == start:
                 break
-        add_flow = min(graph[x][y] for x, y in path)
-        for x, y in path:
+        add_flow = min((graph[x][y] for (x, y) in path))
+        for (x, y) in path:
             graph[x][y] -= add_flow
             graph[y][x] += add_flow
         flow += add_flow
 
 
-answer = sum(x for x in A if x > 0) - max_flow(graph)
+answer = sum((x for x in A if x > 0)) - max_flow(graph)
 print(answer)

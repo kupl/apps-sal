@@ -1,5 +1,5 @@
 def main():
-    n, *a = map(int, open(0).read().split())
+    (n, *a) = map(int, open(0).read().split())
     m = n * -~n // 2 + 1 >> 1
     ng = max(a) + 1
     ok = 0

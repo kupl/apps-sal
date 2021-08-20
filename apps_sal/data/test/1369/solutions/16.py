@@ -18,7 +18,7 @@ def distance(x1, y1, x2, y2):
 def check(cx, cy, r, x, y, n):
     for i in range(n):
         d = distance(cx, cy, x[i], y[i])
-        if d - r > 00.1:
+        if d - r > 0.1:
             return False
     return True
 
@@ -27,11 +27,10 @@ def circlebydiaendpoints(x1, y1, x2, y2):
     cx = (x1 + x2) / 2
     cy = (y1 + y2) / 2
     r = distance(cx, cy, x1, y1)
-    return cx, cy, r
+    return (cx, cy, r)
 
 
 def makeCircumcircle(x1, y1, x2, y2, x3, y3):
-
     ox = (min(min(x1, x2), x3) + max(min(x1, x2), x3)) / 2
     oy = (min(min(y1, y2), y3) + max(min(y1, y2), y3)) / 2
     ax = x1 - ox
@@ -46,7 +45,7 @@ def makeCircumcircle(x1, y1, x2, y2, x3, y3):
     cx = ox + x
     cy = oy + y
     r = max(max(distance(cx, cy, x1, y1), distance(cx, cy, x2, y2)), distance(cx, cy, x3, y3))
-    return cx, cy, r
+    return (cx, cy, r)
 
 
 def main():
@@ -54,7 +53,7 @@ def main():
     x = []
     y = []
     for _ in range(n):
-        a, b = input().split(' ')
+        (a, b) = input().split(' ')
         a = float(a)
         b = float(b)
         x.append(a)
@@ -62,26 +61,24 @@ def main():
     ans = -1
     for i in range(n - 1):
         for j in range(i + 1, n):
-            cx, cy, r = circlebydiaendpoints(x[i], y[i], x[j], y[j])
+            (cx, cy, r) = circlebydiaendpoints(x[i], y[i], x[j], y[j])
             if check(cx, cy, r, x, y, n):
                 if ans == -1:
                     ans = r
                 elif ans > r:
                     ans = r
-
     for i in range(n - 2):
         for j in range(i + 1, n - 1):
             for k in range(j + 1, n):
                 if colinear(x[i], y[i], x[j], y[j], x[k], y[k]):
                     continue
                 else:
-                    cx, cy, r = makeCircumcircle(x[i], y[i], x[j], y[j], x[k], y[k])
+                    (cx, cy, r) = makeCircumcircle(x[i], y[i], x[j], y[j], x[k], y[k])
                     if check(cx, cy, r, x, y, n):
                         if ans == -1:
                             ans = r
                         elif ans > r:
                             ans = r
-
     print(ans)
 
 

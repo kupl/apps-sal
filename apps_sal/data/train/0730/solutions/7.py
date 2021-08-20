@@ -11,16 +11,14 @@ for _ in range(int(input())):
             points += 2
         elif len(storage_distinct) >= 6:
             points += 4
-
         if points > max_points[0]:
             max_points[0] = points
             max_points[1] = [player]
         elif points == max_points[0]:
             max_points[1].append(player)
-
     if len(max_points[1]) > 1:
-        print("tie")
+        print('tie')
     elif max_points[1][0] == 0:
-        print("chef")
+        print('chef')
     else:
         print(max_points[1][0] + 1)

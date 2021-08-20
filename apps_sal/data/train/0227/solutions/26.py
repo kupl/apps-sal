@@ -1,10 +1,11 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         begins = [-1] * (K + 1)
         cur = [0] * (K + 1)
         maxL = 0
         curMax = 0
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             if a == 0:
                 maxL = max(maxL, curMax)
                 begins.pop(0)

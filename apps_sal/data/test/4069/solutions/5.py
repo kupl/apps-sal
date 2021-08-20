@@ -1,5 +1,4 @@
-# 175 C
-X, K, D = list(map(int, input().split()))
+(X, K, D) = list(map(int, input().split()))
 div = abs(X) // D
 mod = abs(X) % D
 if abs(X) > K * D:

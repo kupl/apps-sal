@@ -14,7 +14,7 @@ def mirror(matrx):
     return matrix[:mid]
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 matrix = []
 for i in range(n):
     matrix.append(list(map(int, input().split())))

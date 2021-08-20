@@ -1,4 +1,4 @@
-n, b, d = [int(i) for i in input().strip().split()]
+(n, b, d) = [int(i) for i in input().strip().split()]
 a = [int(i) for i in input().strip().split()]
 ans = 0
 curr_size = 0

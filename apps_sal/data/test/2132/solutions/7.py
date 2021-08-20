@@ -2,12 +2,10 @@ MAX_SPEED = 300
 n = int(input())
 actions = [list(map(int, input().split())) for _ in range(n)]
 speed = [0 for i in range(n)]
-
 for i in range(n):
     if actions[i][0] == 1:
         lastSpeed = actions[i][1]
     speed[i] = lastSpeed
-
 ignored = 0
 overtook = False
 maxSpeed = -1
@@ -29,5 +27,4 @@ for i in range(n - 1, -1, -1):
     elif actions[i][0] == 6:
         if overtook:
             ignored += 1
-
 print(ignored)

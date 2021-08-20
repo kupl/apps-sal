@@ -1,5 +1,4 @@
 def add(a, b):
-    # Your Code Here
     add = a + b
     return add
 
@@ -20,13 +19,10 @@ def mod(a, b):
 
 
 def exponent(a, b):
-    exp = a**b
+    exp = a ** b
     return exp
 
 
 def subt(a, b):
     subtraction = a - b
     return subtraction
-# Make more functions. Refer to the description for function names.
-# The code will NOT WORK IF YOU USE names other than the ones
-# from the description

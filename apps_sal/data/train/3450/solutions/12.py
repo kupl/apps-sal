@@ -1,4 +1,4 @@
 def array(string: str) -> str:
-    array = string.split(",")
+    array = string.split(',')
     if len(array) > 2:
-        return " ".join(array[1:-1])
+        return ' '.join(array[1:-1])

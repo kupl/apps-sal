@@ -1,1 +1,2 @@
-def derive(coefficient, exponent): return f'{coefficient*exponent}x^{exponent-1}'
+def derive(coefficient, exponent):
+    return f'{coefficient * exponent}x^{exponent - 1}'

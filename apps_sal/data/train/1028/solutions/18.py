@@ -4,8 +4,8 @@ for _ in range(t):
     l = len(str(x))
     sum = 0
     for i in str(x):
-        sum = sum + int(i)**int(l)
+        sum = sum + int(i) ** int(l)
     if sum == x:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

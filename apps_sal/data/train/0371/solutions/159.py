@@ -1,6 +1,6 @@
 class Solution:
-    def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
 
+    def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
         n = len(routes)
@@ -51,7 +51,6 @@ class Solution:
         return False
 
     def haveCommonValues(self, A, B):
-
         i = 0
         j = 0
         while i < len(A):

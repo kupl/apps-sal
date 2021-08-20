@@ -1,1 +1,1 @@
-replace_exclamation = lambda s, r=__import__("re").sub: r(r'[aeiouAEIOU]', '!', s)
+replace_exclamation = lambda s, r=__import__('re').sub: r('[aeiouAEIOU]', '!', s)

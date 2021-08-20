@@ -1,5 +1,5 @@
 def to_utf8_binary(s):
-    return ''.join("{:08b}".format(x) for x in bytearray(s, 'utf-8'))
+    return ''.join(('{:08b}'.format(x) for x in bytearray(s, 'utf-8')))
 
 
 def from_utf8_binary(s):

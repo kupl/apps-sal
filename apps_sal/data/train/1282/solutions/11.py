@@ -1,5 +1,3 @@
-# https://www.codechef.com/problems/RGAND
-
 MVAL = 1000000007
 
 
@@ -15,16 +13,15 @@ def rangeand(low, hi):
         ldv //= 2
         hdv //= 2
         if ldv == hdv:
-            ra += ((hi + 1 - low) * (low - lmd)) % MVAL
+            ra += (hi + 1 - low) * (low - lmd) % MVAL
             break
         elif thisbit > 0:
             lmd += thisbit
-            ra += ((p2 - lmd) * thisbit) % MVAL
+            ra += (p2 - lmd) * thisbit % MVAL
     return ra % MVAL
 
 
 t = int(input())
 for ti in range(t):
-    l, r = list(map(int, input().split()))
-
+    (l, r) = list(map(int, input().split()))
     print(rangeand(l, r))

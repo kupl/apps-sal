@@ -1,2 +1,2 @@
-t, x = map(int, input().split())
+(t, x) = map(int, input().split())
 print('{:.10f}'.format(t / x))

@@ -6,7 +6,7 @@ for _ in range(int(input())):
     for i in l:
         lengthOfSet = len(isContinuing)
         isContinuing.add(i)
-        if(lengthOfSet == len(isContinuing)):
+        if lengthOfSet == len(isContinuing):
             ans += 2
             isContinuing.clear()
     print(n - ans)

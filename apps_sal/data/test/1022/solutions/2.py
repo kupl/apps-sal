@@ -19,10 +19,10 @@ for i in range(n):
             guys += 1
     right.append(guys)
 if left == l and right == r:
-    print("YES")
-    candiesstr = ""
+    print('YES')
+    candiesstr = ''
     for i in range(n):
-        candiesstr += str(candies[i]) + " "
+        candiesstr += str(candies[i]) + ' '
     print(candiesstr[:len(candiesstr) - 1])
 else:
-    print("NO")
+    print('NO')

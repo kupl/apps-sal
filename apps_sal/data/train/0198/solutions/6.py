@@ -1,6 +1,6 @@
 class Solution:
-    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
 
+    def equalSubstring(self, s: str, t: str, maxCost: int) -> int:
         start = 0
         ans = 0
         cur = 0
@@ -13,5 +13,4 @@ class Solution:
                 while cur > maxCost:
                     cur -= abs(ord(s[start]) - ord(t[start]))
                     start += 1
-
         return ans

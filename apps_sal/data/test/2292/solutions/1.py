@@ -13,40 +13,23 @@ def Hopcroft_Karp(adj, L):
     """
     N = len(adj)
     matching = [-1 for _ in range(N)]
-
     while True:
-        # If our matching changes, we need another iteration.
         extended = False
-
-        # Do a BFS starting at all unmatched left nodes.
         sources = [v for v in range(N) if matching[v] == -1 and L[v]]
-
-        # Keep track of your immediate predecessor in the BFS.
-        # -1 means an unvisited node. Sources have themselves as predecessor.
         bfs_pred = [-1 for _ in range(N)]
-
-        # Keep track of which BFS source started your subtree.
-        # -1 means an unvisited node.
         bfs_source = [-1 for _ in range(N)]
-
         for v in sources:
             bfs_pred[v] = v
             bfs_source[v] = v
-
         queue = deque(sources)
         while len(queue) > 0:
             cur = queue.popleft()
-
-            # If the node that started this subtree has been matched, stop growing the BFS.
             if matching[bfs_source[cur]] != -1:
                 continue
-
             for nb in adj[cur]:
                 if matching[nb] == -1:
-                    # We have found an augmenting path.
-                    # Use a clever loop to use the path to update the matching.
                     while nb != -1:
-                        matching[nb], matching[cur], nb, cur = cur, nb, matching[cur], bfs_pred[cur]
+                        (matching[nb], matching[cur], nb, cur) = (cur, nb, matching[cur], bfs_pred[cur])
                     extended = True
                     break
                 else:
@@ -57,22 +40,18 @@ def Hopcroft_Karp(adj, L):
                         queue.append(new)
         if not extended:
             break
-
-    return sum(1 for x in matching if x != -1) // 2, matching
+    return (sum((1 for x in matching if x != -1)) // 2, matching)
 
 
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
-
     if n % 2:
         if a[n // 2] != b[n // 2]:
-            print("No")
+            print('No')
             continue
-
     a_pairs = []
     b_pairs = []
     for i in range(n // 2):
@@ -84,15 +63,13 @@ for _ in range(t):
             b_pairs.append((b[i], b[n - i - 1]))
         else:
             b_pairs.append((b[n - i - 1], b[i]))
-
     adj = [[] for _ in range(len(a_pairs) + len(b_pairs))]
-    for i, ap in enumerate(a_pairs):
-        for j, bp in enumerate(b_pairs):
+    for (i, ap) in enumerate(a_pairs):
+        for (j, bp) in enumerate(b_pairs):
             if ap == bp:
                 adj[i].append(len(a_pairs) + j)
                 adj[len(a_pairs) + j].append(i)
-
     if Hopcroft_Karp(adj, [True] * len(a_pairs) + [False] * len(b_pairs))[0] == len(a_pairs):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

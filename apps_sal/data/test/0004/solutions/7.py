@@ -1,5 +1,5 @@
 x = int(input())
-h, m = map(int, input().split())
+(h, m) = map(int, input().split())
 ans = 0
 while 1:
     if '7' in str(h) + str(m):

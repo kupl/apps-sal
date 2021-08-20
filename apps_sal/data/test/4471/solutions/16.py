@@ -10,6 +10,6 @@ for case in range(t):
         else:
             n_odd += 1
     if n_even and n_odd:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

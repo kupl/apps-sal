@@ -1,7 +1,4 @@
-# Grouping 2
-
 N = int(input())
-
 if N < 1 or 1000 < N:
     print('数値が範囲外です')
 elif N < 3:

@@ -13,7 +13,7 @@ class Solution:
             i = 0
             while i < len(bloomDay):
                 if bloomDay[i] <= days:
-                    while i < len(bloomDay) and bloomDay[i] <= days and kk < k:
+                    while i < len(bloomDay) and bloomDay[i] <= days and (kk < k):
                         i += 1
                         kk += 1
                     if kk == k:
@@ -25,8 +25,7 @@ class Solution:
                 if mm == m:
                     return True
             return False
-
-        low, high = 0, max(bloomDay)
+        (low, high) = (0, max(bloomDay))
         while low < high:
             mid = low + (high - low) // 2
             if isGood(mid):

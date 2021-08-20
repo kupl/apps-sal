@@ -8,5 +8,4 @@ for val in range(n):
         s.remove(i)
     else:
         s.add(i)
-
 print(len(s))

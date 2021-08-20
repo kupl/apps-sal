@@ -3,7 +3,6 @@ def main():
     input = sys.stdin.readline
     N = int(input())
     A = list(map(int, input().split()))
-
     tmp = 0
     tmpans1 = 0
     for i in range(N):
@@ -24,7 +23,6 @@ def main():
         elif i % 2 == 1 and tmp <= 0:
             tmpans2 += 1 - tmp
             tmp = 1
-    # print(tmpans1,tmpans2)
     print(min(tmpans1, tmpans2))
 
 

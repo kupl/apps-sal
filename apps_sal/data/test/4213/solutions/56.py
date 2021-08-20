@@ -1,7 +1,5 @@
-# 102b
-
 def atc_102b(N: int, Ai_input: str) -> int:
-    Ai = [int(i) for i in Ai_input.split(" ")]
+    Ai = [int(i) for i in Ai_input.split(' ')]
     return max(Ai) - min(Ai)
 
 

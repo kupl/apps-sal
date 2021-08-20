@@ -22,8 +22,7 @@ for x in range(60):
         s += '1' * (x - i)
         y = vten(int(s), 2)
         ans.append(y)
-
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 answer = 0
 for i in ans:
     if i >= a and i <= b:

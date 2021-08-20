@@ -1,7 +1,6 @@
 for tt in range(int(input())):
-    n, p = list(map(int, input().strip().split()))
-    d, l = list(map(str, input().strip().split()))
-
+    (n, p) = list(map(int, input().strip().split()))
+    (d, l) = list(map(str, input().strip().split()))
     if d == 'L':
         if p & 1:
             print(p, l)
@@ -16,17 +15,15 @@ for tt in range(int(input())):
         if n & 1:
             if p & 1:
                 tl = l
+            elif l == 'E':
+                tl = 'H'
             else:
-                if l == 'E':
-                    tl = 'H'
-                else:
-                    tl = 'E'
+                tl = 'E'
+        elif p & 1:
+            if l == 'E':
+                tl = 'H'
+            else:
+                tl = 'E'
         else:
-            if p & 1:
-                if l == 'E':
-                    tl = 'H'
-                else:
-                    tl = 'E'
-            else:
-                tl = l
+            tl = l
         print(np, tl)

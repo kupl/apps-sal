@@ -15,5 +15,4 @@ for _ in range(int(input())):
         if cur == last:
             last = nxt
             nxt = cur = 0
-
     print(ans)

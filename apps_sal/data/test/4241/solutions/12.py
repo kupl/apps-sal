@@ -1,7 +1,6 @@
 import sys
 line_long = sys.stdin.readline().strip()
 line_sub = sys.stdin.readline().strip()
-
 len_long = len(line_long)
 len_sub = len(line_sub)
 min_cnt = len_sub

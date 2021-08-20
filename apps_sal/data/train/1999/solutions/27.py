@@ -1,32 +1,25 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def removeZeroSumSublists(self, head: ListNode) -> ListNode:
-        if(head is None):
+        if head is None:
             return None
         temp = head
         array = self.createArray(temp)
-
         curSum = 0
         index = 0
-        while(index < len(array)):
+        while index < len(array):
             for i in range(index, len(array)):
                 curSum += array[i]
-                if(curSum == 0):
+                if curSum == 0:
                     self.clearOutArray(array, index, i)
                     index = i + 1
                     curSum = 0
             curSum = 0
             index += 1
-
         finalArray = []
         for num in array:
-            if(num != None):
+            if num != None:
                 finalArray.append(num)
-
         newNode = self.create(finalArray)
         return newNode
 
@@ -36,7 +29,7 @@ class Solution:
         return
 
     def create(self, array):
-        if(len(array) == 0):
+        if len(array) == 0:
             return None
         else:
             node = ListNode(array[0])
@@ -49,7 +42,7 @@ class Solution:
 
     def createArray(self, temp):
         array = []
-        while(temp != None):
+        while temp != None:
             array.append(temp.val)
             temp = temp.__next__
         return array

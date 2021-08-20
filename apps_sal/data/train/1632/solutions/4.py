@@ -4,8 +4,8 @@ import math
 def countOnes(left, right):
 
     def onesRangeDigit(n, digit):
-        ex = 2**digit
-        ones = ex * math.floor((n + 1) / (2 * ex)) + max(((n + 1) % (2 * ex)) - ex, 0)
+        ex = 2 ** digit
+        ones = ex * math.floor((n + 1) / (2 * ex)) + max((n + 1) % (2 * ex) - ex, 0)
         return ones
 
     def onesRange(n):
@@ -15,5 +15,4 @@ def countOnes(left, right):
         for i in range(ex):
             ones += onesRangeDigit(n, i)
         return ones
-
     return onesRange(right) - onesRange(left - 1)

@@ -3,5 +3,4 @@ def lowercase_count(strng):
     for i in range(len(strng)):
         if strng[i].islower() == True:
             sum += 1
-
     return sum

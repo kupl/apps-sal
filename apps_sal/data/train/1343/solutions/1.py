@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
@@ -9,11 +8,11 @@ for _ in range(t):
                 ok = False
                 break
         if ok:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     elif len(s) == 1:
-        print("NO")
+        print('NO')
     else:
         idx1 = 0
         idx2 = len(s) // 2
@@ -37,6 +36,6 @@ for _ in range(t):
         if idx1 == len(s):
             ok = ok or True
         if ok:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

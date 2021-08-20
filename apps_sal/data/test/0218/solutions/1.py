@@ -1,8 +1,6 @@
-n, p, q = list(map(int, input().split(" ")))
+(n, p, q) = list(map(int, input().split(' ')))
 s = input()
-
 c = -1
-
 for i in range(n + 1):
     for j in range(n + 1):
         if p * i + q * j == n:
@@ -11,7 +9,6 @@ for i in range(n + 1):
             break
     if c != -1:
         break
-
 if c == -1:
     print(-1)
 else:

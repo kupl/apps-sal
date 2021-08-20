@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = {}
 
@@ -11,14 +12,11 @@ class Solution:
                 return memo[s]
             if curr == finish:
                 ans += 1
-
             for i in range(len(locations)):
                 nextcity = i
                 if nextcity != curr:
                     ans += find(nextcity, fuel - abs(locations[curr] - locations[i]))
-                    ans %= 10**9 + 7
-
+                    ans %= 10 ** 9 + 7
             memo[s] = ans
             return ans
-
         return find(start, fuel)

@@ -1,12 +1,11 @@
-# Made By Mostafa_Khaled
 from bisect import bisect_left
 bot = True
 m = int(input())
-t, s = [input().split() for i in range(m)], [0] * m
-l, n = 0, int(input())
-for j, i in enumerate(t):
+(t, s) = ([input().split() for i in range(m)], [0] * m)
+(l, n) = (0, int(input()))
+for (j, i) in enumerate(t):
     l += 1 if i[0] == '1' else int(i[1]) * int(i[2])
-    t[j], s[j] = l, i[1] if i[0] == '1' else int(i[1])
+    (t[j], s[j]) = (l, i[1] if i[0] == '1' else int(i[1]))
 F = {}
 
 
@@ -17,7 +16,4 @@ def f(i):
     return F[i]
 
 
-print(' '.join(f(i) for i in map(int, input().split())))
-
-
-# Made By Mostafa_Khaled
+print(' '.join((f(i) for i in map(int, input().split()))))

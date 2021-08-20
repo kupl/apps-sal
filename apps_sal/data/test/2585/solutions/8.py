@@ -3,22 +3,21 @@ from collections import defaultdict as dd, Counter
 from math import ceil
 from math import gcd
 import sys
-INF = 10**20
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+INF = 10 ** 20
+MOD = 10 ** 9 + 7
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 def solve():
-    n, = I()
+    (n,) = I()
     print(n // 2)
 
 
-t, = I()
+(t,) = I()
 while t:
     t -= 1
     solve()
-
-
-"""
-Facts and Data representation
-"""
+'\nFacts and Data representation\n'

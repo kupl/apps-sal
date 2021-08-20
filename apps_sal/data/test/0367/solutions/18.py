@@ -21,7 +21,7 @@ middle_letter = None
 if head == tail and freq[head] % 2 != 0:
     middle_letter = head
     freq[head] -= 1
-output = ""
+output = ''
 for x in string.ascii_lowercase:
     for i in range(freq[x] // 2):
         output += x

@@ -1,6 +1,6 @@
 def substring(strng):
-    best = ""
-    best_end = ""
+    best = ''
+    best_end = ''
     for c in strng:
         best_end += c
         while len(set(best_end + c)) > 2:

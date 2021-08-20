@@ -1,5 +1,5 @@
 import numpy as np
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = np.array(list(map(int, input().split())))
 F = np.array(list(map(int, input().split())))
 A.sort()

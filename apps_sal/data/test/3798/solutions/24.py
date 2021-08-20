@@ -14,24 +14,19 @@ def main():
     n = int(input())
     s = int(input())
     ans = -1
-
     if n < s:
         ans = -1
-
     elif n == s:
         ans = n + 1
-
     else:
         key = []
-        start, first = n, 1
-
+        (start, first) = (n, 1)
         for i in range(1, n):
             first = digit_sum(n, start)
             end = start - n // i // (i + 1)
             if start == end + 1:
                 judge = start
                 break
-
             while end > 1:
                 if digit_sum(n, end) == i * (start - end) + first:
                     end -= 1
@@ -45,21 +40,19 @@ def main():
             start = next_start
             if start == 1:
                 break
-
         for i in range(2, judge + 1):
             sub = digit_sum(n, i)
             if sub == s:
                 ans = i
                 break
         else:
-            for index, start, end, i, first in reversed(key):
+            for (index, start, end, i, first) in reversed(key):
                 if end < s or s < start:
                     continue
                 if (s - start) % i:
                     continue
                 ans = index - (s - first) // i
                 break
-
     print(ans)
 
 

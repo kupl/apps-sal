@@ -1,7 +1,3 @@
-#!/usr/bin/pypy
-# -*- coding: utf-8 -*-
-
-
 def main():
     input()
     nums = sorted(map(int, input().split()))

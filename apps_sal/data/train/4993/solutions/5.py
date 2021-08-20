@@ -9,7 +9,6 @@ def temps(v0, slope, d_tot):
     MASS = 80.0
     WATTS0 = 225.0
     D_WATTS = 0.5
-
     t = 0
     gamma = 0
     v = v0
@@ -24,11 +23,11 @@ def temps(v0, slope, d_tot):
         gamma = -grav - drag
         if watts > 0 < v:
             gamma += G_THRUST * watts / (v * MASS)
-        if abs(gamma) <= 1e-5:
+        if abs(gamma) <= 1e-05:
             gamma = 0
         v = v + gamma * DELTA_T
         d = d + v * DELTA_T / 60
-        if v - 3 <= 1e-2:
+        if v - 3 <= 0.01:
             return -1
     return round(t)
 

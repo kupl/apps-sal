@@ -1,6 +1,6 @@
 class Solution:
-    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
 
+    def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         n_a = {}
         n_b = {}
         for e in edges:
@@ -18,7 +18,6 @@ class Solution:
                 if e[2] not in n_b:
                     n_b[e[2]] = []
                 n_b[e[2]].append(e[1])
-
         visited = set()
         l = list(n_b.keys())
         start = l[0]
@@ -34,7 +33,6 @@ class Solution:
                         q.append(nb)
         if len(visited) != n:
             return -1
-
         visited = set()
         l = list(n_b.keys())
         start = l[0]
@@ -50,7 +48,6 @@ class Solution:
                         q.append(nb)
         if len(visited) != n:
             return -1
-
         parent_a = {}
         parent_b = {}
         for i in range(1, n + 1):
@@ -91,7 +88,6 @@ class Solution:
                 u2 = union_b(e[1], e[2])
                 if u1 == u2 and u1 == 1:
                     count += 1
-
         for e in edges:
             if e[0] == 1:
                 u1 = union_a(e[1], e[2])
@@ -101,5 +97,4 @@ class Solution:
                 u2 = union_b(e[1], e[2])
                 if u2 == 1:
                     count += 1
-
         return count

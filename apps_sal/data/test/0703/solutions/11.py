@@ -1,4 +1,4 @@
-k, a, b, v = map(int, input().split())
+(k, a, b, v) = map(int, input().split())
 ans = 0
 while a > 0:
     ans += 1

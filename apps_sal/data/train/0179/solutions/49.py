@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
 
         @lru_cache(None)
@@ -16,5 +17,4 @@ class Solution:
                 keep = 1 + dfs(start + 1, s[start], 1, k)
                 discard = dfs(start + 1, last_ch, count, k - 1)
                 return min(keep, discard)
-
         return dfs(0, '', 0, k)

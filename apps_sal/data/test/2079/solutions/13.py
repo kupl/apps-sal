@@ -3,7 +3,6 @@ n = int(input())
 w = list(map(int, input().split()))
 w = sorted(range(len(w)), key=w.__getitem__)
 w = iter(w)
-
 e = list(input())
 s = deque()
 for e1 in e:

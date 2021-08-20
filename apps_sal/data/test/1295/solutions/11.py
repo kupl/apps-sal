@@ -1,11 +1,9 @@
-n, m = [int(i) for i in input().strip().split()]
+(n, m) = [int(i) for i in input().strip().split()]
 c = [int(i) for i in input().strip().split()]
 t = [int(i) for i in input().strip().split()]
-
 ci = 0
 ti = 0
 ans = 0
-
 while ci < n:
     if ti == m - 1:
         ans = max(ans, abs(t[-1] - c[ci]), abs(t[-1] - c[-1]))

@@ -1,6 +1,6 @@
 import itertools
 n = int(input())
-m = list("MARCH")
+m = list('MARCH')
 d = [0] * 5
 for i in range(n):
     s = input()

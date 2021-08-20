@@ -1,4 +1,4 @@
-N, W, k = map(int, input().split())
+(N, W, k) = map(int, input().split())
 res = 0
 for i in range(k):
     res += (N + W) * 2 - 4

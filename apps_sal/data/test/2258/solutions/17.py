@@ -5,7 +5,7 @@ for i in range(n):
     x.append([arr[i], i])
 x.sort(reverse=True)
 res = []
-for v, pos in x:
+for (v, pos) in x:
     for i in range(pos):
         if arr[i] > v:
             res.append(str(i + 1) + ' ' + str(pos + 1))

@@ -15,19 +15,18 @@ def func(ary):
     if x != y:
         t = max(abs(x - 1), abs(y - 1))
         return t
+    elif x > 0:
+        x -= 1
+        if x == 0:
+            return 0
+        if x == 1:
+            return 1
+        return x + 1
     else:
-        if x > 0:
-            x -= 1
-            if x == 0:
-                return 0
-            if x == 1:
-                return 1
-            return x + 1
-        else:
-            return abs(x - 1) + 1
+        return abs(x - 1) + 1
 
 
 t = int(input())
 query = [list(map(int, input().split())) for _ in range(t)]
 for x in query:
-    print((func(x)))
+    print(func(x))

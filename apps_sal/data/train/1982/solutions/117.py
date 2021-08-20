@@ -1,9 +1,10 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
+
         def bfsColoring(g, src, colors):
             queue = [src]
             colors[src] = 0
-
             while queue:
                 u = queue.pop(0)
                 for v in g[u]:
@@ -14,13 +15,10 @@ class Solution:
                         queue.append(v)
             print(colors)
             return True
-
         g = collections.defaultdict(set)
-
         for dis in dislikes:
             g[dis[0]].add(dis[1])
             g[dis[1]].add(dis[0])
-
         colors = [-1 for _ in range(N + 1)]
         for i in range(1, N + 1):
             if colors[i] == -1:

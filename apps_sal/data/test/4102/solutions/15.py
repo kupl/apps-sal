@@ -25,4 +25,3 @@ if s != s1[::-1]:
     print('No')
 else:
     print('Yes')
-#print(' '.join([str(i) for i in a]))

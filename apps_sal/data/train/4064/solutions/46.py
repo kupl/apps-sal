@@ -2,4 +2,4 @@ def count_by(x, n):
     """
     Return a sequence of numbers counting by `x` `n` times.
     """
-    return list(x * n for n in range(1, n + 1))
+    return list((x * n for n in range(1, n + 1)))

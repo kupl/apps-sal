@@ -1,19 +1,19 @@
 n = int(input())
 a = input()
 b = input()
-mod = int(1e9 + 7)
-x, y, z = 1, 1, 1
+mod = int(1000000000.0 + 7)
+(x, y, z) = (1, 1, 1)
 for i in range(n):
     if a[i] == '?' and b[i] == '?':
-        x = (x * 55) % mod
-        y = (y * 55) % mod
-        z = (z * 10) % mod
+        x = x * 55 % mod
+        y = y * 55 % mod
+        z = z * 10 % mod
     elif a[i] == '?':
-        x = (x * (10 - int(b[i]))) % mod
-        y = (y * (int(b[i]) + 1)) % mod
+        x = x * (10 - int(b[i])) % mod
+        y = y * (int(b[i]) + 1) % mod
     elif b[i] == '?':
-        x = (x * (int(a[i]) + 1)) % mod
-        y = (y * (10 - int(a[i]))) % mod
+        x = x * (int(a[i]) + 1) % mod
+        y = y * (10 - int(a[i])) % mod
     else:
         if int(a[i]) < int(b[i]):
             x = 0

@@ -1,7 +1,5 @@
 import sys
-
 sin = sys.stdin
-
 w = sin.readline().split()
 w = [int(x) for x in w]
 b1 = sin.readline().split()
@@ -11,8 +9,7 @@ b2 = [int(x) for x in b2]
 
 
 def reduce(w, b):
-    # Fully covered:
-    if b[0] <= w[0] and b[1] <= w[1] and b[2] >= w[2] and b[3] >= w[3]:
+    if b[0] <= w[0] and b[1] <= w[1] and (b[2] >= w[2]) and (b[3] >= w[3]):
         return True
     if b[0] <= w[0] and b[1] <= w[1]:
         if b[2] >= w[2] and b[3] >= w[1]:
@@ -28,10 +25,10 @@ def reduce(w, b):
 
 flag = False
 if reduce(w, b1):
-    print("NO")
+    print('NO')
     flag = True
 elif not flag and reduce(w, b2):
-    print("NO")
+    print('NO')
     flag = True
 if not flag:
-    print("YES")
+    print('YES')

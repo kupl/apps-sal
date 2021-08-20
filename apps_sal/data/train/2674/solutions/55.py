@@ -1,1 +1,2 @@
-def two_sort(list): return "***".join(min(list))
+def two_sort(list):
+    return '***'.join(min(list))

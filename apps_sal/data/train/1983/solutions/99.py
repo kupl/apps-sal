@@ -7,16 +7,15 @@ class ProductOfNumbers:
 
     def add(self, num: int) -> None:
         self.nums.append(num)
-        if(num == 0):
+        if num == 0:
             self.lastZero = len(self.nums)
             self.products.append(0)
         elif len(self.products) == 0:
             self.products.append(num)
+        elif self.products[-1] == 0:
+            self.products.append(num)
         else:
-            if self.products[-1] == 0:
-                self.products.append(num)
-            else:
-                self.products.append(self.products[-1] * num)
+            self.products.append(self.products[-1] * num)
 
     def getProduct(self, k: int) -> int:
         if self.lastZero != -1 and k == len(self.nums):
@@ -28,9 +27,3 @@ class ProductOfNumbers:
             return int(self.products[-1] / divisor)
         else:
             return 0
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

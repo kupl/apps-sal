@@ -1,5 +1,4 @@
-
-n, m = [int(x) for x in input().strip().split(' ')]
+(n, m) = [int(x) for x in input().strip().split(' ')]
 a = []
 for _ in range(n):
     s = input().strip()
@@ -12,7 +11,6 @@ for _ in range(n):
         else:
             b.append(int(s[i]))
     a.append(b)
-# print(a)
 for i in range(n):
     for j in range(m):
         if a[i][j] <= -100:
@@ -33,7 +31,6 @@ for i in range(n):
             if j > 0:
                 a[i][j - 1] -= 1
 ans = True
-# print(a)
 for i in range(n):
     if ans == False:
         break
@@ -42,6 +39,6 @@ for i in range(n):
             ans = False
             break
 if ans:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

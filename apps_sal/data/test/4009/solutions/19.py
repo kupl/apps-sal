@@ -1,6 +1,6 @@
 [n, x, y] = [int(i) for i in input().split()]
 s = input()
-t = ""
+t = ''
 for i in range(x):
     t += s[len(s) - 1 - i]
 ans = 0

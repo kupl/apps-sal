@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, h = read()
+(n, h) = read()
 a = list(read())
-ans = n + sum(i > h for i in a)
+ans = n + sum((i > h for i in a))
 print(ans)

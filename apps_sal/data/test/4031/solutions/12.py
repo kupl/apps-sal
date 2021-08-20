@@ -7,9 +7,9 @@ arr.sort(key=len)
 prev = ''
 for s in arr:
     if prev not in s:
-        print("NO")
+        print('NO')
         break
     prev = s
 else:
-    print("YES")
-    print("\n".join(arr))
+    print('YES')
+    print('\n'.join(arr))

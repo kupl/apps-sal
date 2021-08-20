@@ -17,7 +17,6 @@ for i in range(n):
             if a[i][j] != ch2:
                 fl = False
                 break
-
 if fl:
     print('YES')
 else:

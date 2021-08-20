@@ -7,7 +7,7 @@ for i in range(n):
     y = list(kk)
     for j in y:
         for jj in x:
-            if(j == jj):
+            if j == jj:
                 count = count + 1
                 break
     print(count)

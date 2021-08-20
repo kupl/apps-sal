@@ -1,8 +1,6 @@
-my_health, my_attack, my_potion = [int(x) for x in input().split()]
-boss_health, boss_attack = [int(x) for x in input().split()]
-
+(my_health, my_attack, my_potion) = [int(x) for x in input().split()]
+(boss_health, boss_attack) = [int(x) for x in input().split()]
 actions = []
-
 while boss_health > 0:
     if my_health <= boss_attack and boss_health > my_attack:
         actions.append('HEAL')
@@ -13,6 +11,5 @@ while boss_health > 0:
         if boss_health <= 0:
             break
     my_health -= boss_attack
-
 print(len(actions))
 print('\n'.join(actions))

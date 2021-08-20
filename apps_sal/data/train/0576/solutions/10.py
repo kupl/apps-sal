@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 for i in range(n):
     w = input()
@@ -8,5 +7,5 @@ for i in range(n):
     for i in w:
         if i == 'a':
             a += 1
-            s += 2**(l - a)
+            s += 2 ** (l - a)
     print(s)

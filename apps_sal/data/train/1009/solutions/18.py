@@ -34,5 +34,5 @@ for T in range(int(input())):
                 x = 1
             y = math.gcd(a[i], divisors[j])
             ind = bisect_left(divisors, y)
-            dp[ind] += (x + dp[j])
+            dp[ind] += x + dp[j]
     print(dp[oneIndex])

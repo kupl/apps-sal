@@ -1,5 +1,5 @@
 n = int(input())
-l = input().split(" ")
+l = input().split(' ')
 l = [int(x) for x in l]
 route = []
 route.append(n)
@@ -10,4 +10,4 @@ while True:
         break
     current = l[current - 2]
 for i in range(len(route)):
-    print(route[len(route) - i - 1], end=" ")
+    print(route[len(route) - i - 1], end=' ')

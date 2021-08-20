@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     c = list(map(int, input().split()))
     d = {}
     for i in range(len(c)):
@@ -9,7 +8,7 @@ for _ in range(int(input())):
     profit = 0
     r_1 = 0
     for i in range(n):
-        t_1, t_2, t_3 = list(map(int, input().split()))
+        (t_1, t_2, t_3) = list(map(int, input().split()))
         if d[t_1] > 0:
             profit += t_2
             d[t_1] -= 1

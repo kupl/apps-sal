@@ -1,8 +1,6 @@
 from collections import deque
 K = int(input())
-
 q = deque(list(range(1, 10)))
-
 ans = 0
 num = 0
 for i in range(K):
@@ -13,5 +11,4 @@ for i in range(K):
     q.append(num * 10 + num % 10)
     if num % 10 != 9:
         q.append(num * 10 + (num % 10 + 1))
-
 print(ans)

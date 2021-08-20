@@ -1,4 +1,4 @@
-class union_find():
+class union_find:
 
     def __init__(self, n):
         self.n = n
@@ -33,14 +33,12 @@ class union_find():
         return -self.root[self.find_root(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = union_find(n)
 ans = 0
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g.unite(a, b)
-
 for i in range(1, n + 1):
     ans = max(ans, g.cnt(i))
-
 print(ans)

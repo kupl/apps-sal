@@ -1,10 +1,11 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
 n = int(input())
 cnt1 = cnt2 = 0
 for i in range(n):
-    x, y = read()
+    (x, y) = read()
     if x < 0:
         cnt1 += 1
     else:

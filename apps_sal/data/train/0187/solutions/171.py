@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         res = round = profit = max_profit = remain = i = 0
         while remain or i < len(customers):

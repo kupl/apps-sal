@@ -4,7 +4,6 @@ Red.sort(key=lambda X: X[1], reverse=True)
 Blue = [[int(T) for T in input().split()] for TN in range(0, N)]
 Blue.sort(key=lambda X: X[0])
 Count = 0
-
 for TB in range(0, N):
     DelInd = -1
     for TR in range(0, len(Red)):

@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         parents = [i for i in range(n)]
@@ -27,7 +28,6 @@ class Solution:
                     ans += i[2]
                     union(p1, p2)
             return ans
-
         edges = []
         for i in range(n):
             for j in range(i + 1, n):

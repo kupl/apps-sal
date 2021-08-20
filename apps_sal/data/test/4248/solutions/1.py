@@ -10,15 +10,15 @@ class InputHandlerObject(object):
     inputs = []
 
     def getInput(self, n=0):
-        res = ""
+        res = ''
         inputs = self.inputs
         if not inputs:
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n == 0:
             res = inputs[:]
             inputs[:] = []
         while n > len(inputs):
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n > 0:
             res = inputs[:n]
             inputs[:n] = []
@@ -27,11 +27,9 @@ class InputHandlerObject(object):
 
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
-
-############################## SOLUTION ##############################
 n = int(input())
 sum = 0
 for i in range(n):
-    nx, ny = g()
+    (nx, ny) = g()
     sum += float(ny)
-print(5 + (sum / n))
+print(5 + sum / n)

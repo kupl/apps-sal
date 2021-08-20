@@ -1,5 +1,4 @@
 3
-
 l = int(input())
 p = int(input())
 q = int(input())

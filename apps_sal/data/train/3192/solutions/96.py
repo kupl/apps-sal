@@ -6,4 +6,4 @@ def how_many_dalmatians(n):
     elif n in range(11, 51):
         return 'More than a handful!'
     else:
-        return 'Woah that\'s a lot of dogs!'
+        return "Woah that's a lot of dogs!"

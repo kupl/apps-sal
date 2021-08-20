@@ -1,4 +1,4 @@
-tagname = __import__("re").compile(r"(^|(?<=\s))[^#\.*]").findall
+tagname = __import__('re').compile('(^|(?<=\\s))[^#\\.*]').findall
 
 
 def compare(a, b):

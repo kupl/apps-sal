@@ -1,7 +1,5 @@
 import collections
-
-Exam = collections.namedtuple("Exam", ['a', 'b'])
-
+Exam = collections.namedtuple('Exam', ['a', 'b'])
 n = int(input())
 exams = []
 for i in range(n):

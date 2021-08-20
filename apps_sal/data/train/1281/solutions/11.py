@@ -8,7 +8,7 @@ for i in range(t):
     for i in list1:
         if i not in newlist:
             newlist.append(i)
-    if(newlist == relist and list1 == revlist):
-        print("yes")
+    if newlist == relist and list1 == revlist:
+        print('yes')
     else:
         print('no')

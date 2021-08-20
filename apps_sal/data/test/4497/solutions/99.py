@@ -1,8 +1,12 @@
-def LI(): return list(map(int, input().split()))
-def I(): return map(int, input().split())
+def LI():
+    return list(map(int, input().split()))
 
 
-mod = 10**9 + 7
+def I():
+    return map(int, input().split())
+
+
+mod = 10 ** 9 + 7
 
 
 def main():

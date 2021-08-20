@@ -1,2 +1,1 @@
-# KALAM
-print(["Mahmoud", "Ehab"][(int(input())) & 1])
+print(['Mahmoud', 'Ehab'][int(input()) & 1])

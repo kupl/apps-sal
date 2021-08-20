@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 sqsets = list(range(2, min(n, m) + 1))
 ci = []
 for i in range(n):
@@ -31,7 +31,7 @@ kd = {k: c for k in sqsets}
 def kd_creation(m, n, sqsets):
     cache_creation(m, n)
     for k in sqsets:
-        kd[k] = (10**9) + 1
+        kd[k] = 10 ** 9 + 1
         for y in range(n - k + 1):
             for x in range(m - k + 1):
                 cu = operation(x, y, k)

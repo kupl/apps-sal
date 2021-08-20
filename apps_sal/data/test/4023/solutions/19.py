@@ -1,7 +1,7 @@
 n = int(input())
 b = -1
 a = input().split()
-l, r = [], True
+(l, r) = ([], True)
 for i in a:
     tmp = int(i)
     b = max(b, tmp)
@@ -12,5 +12,4 @@ for i in a:
     else:
         r = False
         break
-
-print("YES" if r and (len(l) == 0 or (len(l) == 1 and l[0] >= b)) else "NO")
+print('YES' if r and (len(l) == 0 or (len(l) == 1 and l[0] >= b)) else 'NO')

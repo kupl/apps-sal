@@ -1,5 +1,4 @@
 from bisect import bisect_left
-
 ns = [n * (n + 1) // 2 for n in range(1000)]
 
 

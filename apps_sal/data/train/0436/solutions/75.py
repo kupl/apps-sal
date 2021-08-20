@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
+
         def nex(n):
             ans = [n - 1]
             if n % 2 == 0:

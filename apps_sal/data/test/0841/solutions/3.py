@@ -9,9 +9,9 @@ def main():
     for _ in range(t):
         ni = int(input())
         cnt3 = 2
-        while (cnt3 * (cnt3 + 1)) // 2 <= ni:
+        while cnt3 * (cnt3 + 1) // 2 <= ni:
             cnt3 += 1
-        rest = ni - (cnt3 * (cnt3 - 1) // 2)
+        rest = ni - cnt3 * (cnt3 - 1) // 2
         print('1' + '33' + '7' * rest + '3' * (cnt3 - 2) + '7')
 
 

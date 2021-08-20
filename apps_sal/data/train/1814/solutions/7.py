@@ -1,4 +1,5 @@
 class Solution:
+
     def exclusiveTime(self, n, logs):
         """
         :type n: int
@@ -10,10 +11,10 @@ class Solution:
         while len(logs) > 2:
             s1 = logs[i].split(':')
             s2 = logs[i + 1].split(':')
-            if s1[1] == 'start' and s2[1] == 'end' and s1[0] == s2[0]:
+            if s1[1] == 'start' and s2[1] == 'end' and (s1[0] == s2[0]):
                 spent[int(s1[0])] += int(s2[2]) - int(s1[2]) + 1
                 if i > 0:
-                    spent[int(logs[i - 1].split(':')[0])] -= (int(s2[2]) - int(s1[2]) + 1)
+                    spent[int(logs[i - 1].split(':')[0])] -= int(s2[2]) - int(s1[2]) + 1
                 if i == 0:
                     logs = logs[2:]
                 else:

@@ -1,9 +1,9 @@
 class Solution(object):
+
     def shortestSubarray(self, A, K):
         n = len(A)
         d = collections.deque([(A[0], 0)])
         res = n + 1
-
         for i in range(1, n):
             A[i] += A[i - 1]
         A = [0] + A
@@ -14,5 +14,4 @@ class Solution(object):
             while d and A[i] - d[0][0] >= K:
                 res = min(res, i - d[0][1])
                 d.popleft()
-
         return res if res <= n else -1

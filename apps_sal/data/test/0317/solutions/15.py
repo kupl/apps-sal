@@ -9,7 +9,7 @@ for i in n[:-1]:
     j = j - 65
     a[j] = 1
     if sum(a) == 26:
-        print("YES")
+        print('YES')
         break
 if sum(a) != 26:
-    print("NO")
+    print('NO')

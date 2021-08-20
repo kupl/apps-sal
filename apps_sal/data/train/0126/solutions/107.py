@@ -3,6 +3,7 @@ from collections import Counter
 
 
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         dic = defaultdict(int)
         for i in range(0, len(s) - minSize + 1):
@@ -15,7 +16,6 @@ class Solution:
                     continue
                 else:
                     dic[cur_str] += 1
-
         res = 0
         for s in dic:
             res = max(res, dic[s])

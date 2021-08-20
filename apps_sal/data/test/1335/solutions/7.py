@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = [[0] for i in range(k)]
 c = [0] * k
@@ -24,8 +24,6 @@ for i in range(k):
         while pp <= r:
             if p[pp] == pp - l:
                 ans += 1
-                #print(i, j)
                 break
             pp += 1
 print(ans)
-#print(b, p, sep='\n')

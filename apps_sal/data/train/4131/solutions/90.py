@@ -4,4 +4,4 @@ def how_much_water(w, l, c):
     elif l > c:
         return 'Not enough clothes'
     else:
-        return round(w * 1.1**(c - l), 2)
+        return round(w * 1.1 ** (c - l), 2)

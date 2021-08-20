@@ -1,4 +1,3 @@
-# cook your dish here
 import bisect
 
 
@@ -22,14 +21,12 @@ def recur(s_i, e_i, end_i):
     return v_l[s_i] + v_l[e_i] + outside + inside
 
 
-n, k, *l = map(int, input().split())
-v_l, b_l = l[:n], l[n:]
-
+(n, k, *l) = map(int, input().split())
+(v_l, b_l) = (l[:n], l[n:])
 b_inv = {key: [] for key in range(2 * k)}
 for i in range(n):
     b_l[i] -= 1
     b_inv[b_l[i]].append(i)
-
 dp = [{} for _ in range(n)]
 ans = 0
 for i in range(n):
@@ -39,5 +36,4 @@ for i in range(n):
             if i < ind:
                 dp[i][n + 1] = recur(i, ind, n + 1)
                 ans = max(ans, dp[i][n + 1])
-# print(dp)
 print(ans)

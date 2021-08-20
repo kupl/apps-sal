@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         total_trip = [0 for _ in range(1000)]
         for tt in trips:

@@ -3,12 +3,11 @@ class CombinationFermat:
     def __init__(self):
         """O(MAX)で前計算しておく→以降comb(a,b)はO(1)で取得可能
         """
-        MOD = 10**9 + 7
-        MAX = 2 * 10**5
-
-        self.fac = [0] * MAX   # self.fac[n]:  (n!) mod p
-        self.finv = [0] * MAX  # self.finv[n]: (n!)^-1 mod p
-        self.inv = [0] * MAX   # inv[n]:  (n)^-1 mod -p
+        MOD = 10 ** 9 + 7
+        MAX = 2 * 10 ** 5
+        self.fac = [0] * MAX
+        self.finv = [0] * MAX
+        self.inv = [0] * MAX
         self.fac[0] = self.fac[1] = 1
         self.finv[0] = self.finv[1] = 1
         self.inv[1] = 1
@@ -18,7 +17,7 @@ class CombinationFermat:
             self.finv[i] = self.finv[i - 1] * self.inv[i] % MOD
 
     def comb(self, n: int, r: int) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         if n < r:
             return 0
         if n < 0 or r < 0:
@@ -26,11 +25,10 @@ class CombinationFermat:
         return self.fac[n] * (self.finv[r] * self.finv[n - r] % MOD) % MOD
 
 
-H, W, A, B = list(map(int, input().split()))
+(H, W, A, B) = list(map(int, input().split()))
 c = CombinationFermat()
 ans = 0
-MOD = 10**9 + 7
-
+MOD = 10 ** 9 + 7
 for i in range(H - A):
     x = c.comb(B - 1 + i, i)
     a = H - 1 - i

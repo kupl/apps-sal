@@ -14,12 +14,10 @@ def readintslist(n):
 
 
 def main():
-    a, b, c, x, y = readints()
-
+    (a, b, c, x, y) = readints()
     a_pizza = [a * i for i in range(x + 1)]
     b_pizza = [b * i for i in range(y + 1)]
     ab_pizza = [2 * c * i for i in range(max(x, y) + 1)]
-
     ans = []
     for i in range(max(x, y) + 1):
         ans.append(a_pizza[max(x - i, 0)] + b_pizza[max(y - i, 0)] + ab_pizza[i])

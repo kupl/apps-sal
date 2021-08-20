@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, n: int, cuts: List[int]) -> int:
         cache = dict()
 
@@ -15,7 +16,6 @@ class Solution:
                     first = recurse(start, cut)
                     second = recurse(cut, end)
                     minCost = min(minCost, len + first + second)
-
             if minCost == float('inf'):
                 minCost = 0
             cache[key] = minCost

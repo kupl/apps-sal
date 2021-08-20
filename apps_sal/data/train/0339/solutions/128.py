@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def helper(nums1: List[int], nums2: List[int]) -> int:
             res = 0
             counter = Counter(nums2)
@@ -12,5 +14,4 @@ class Solution:
                         if n1 == n2:
                             res -= 1
             return res
-
         return int((helper(nums1, nums2) + helper(nums2, nums1)) / 2)

@@ -1,7 +1,8 @@
 mod = 10 ** 9 + 7
 
 
-class nCr():
+class nCr:
+
     def __init__(self, n):
         self.n = n
         self.fa = [1] * (self.n + 1)
@@ -18,7 +19,7 @@ class nCr():
         return self.fa[n] * self.fi[r] % mod * self.fi[n - r] % mod
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 ans = 0
 c = nCr(n * m)
 for i in range(n):

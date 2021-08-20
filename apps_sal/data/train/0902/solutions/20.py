@@ -1,7 +1,7 @@
 t = int(input())
-names = 'Dee', 'Dum'
+names = ('Dee', 'Dum')
 for _ in range(t):
-    n, s = input().split()
+    (n, s) = input().split()
     n = int(n)
     s = names.index(s)
     c = [0, 0]

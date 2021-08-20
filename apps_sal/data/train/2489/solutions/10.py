@@ -1,11 +1,11 @@
 class Solution:
+
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
         n = len(prices)
-
         return self.count_profit(prices, 0, n - 1)
 
     def count_profit(self, prices, left, right):

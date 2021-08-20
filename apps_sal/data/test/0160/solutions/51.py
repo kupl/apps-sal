@@ -4,11 +4,11 @@ import numpy as np
 def getDivisor(n):
     divisor = []
     tmp = n
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         cnt = 1
-        d = [1, ]
+        d = [1]
         while tmp % i == 0:
-            d.append(i**cnt)
+            d.append(i ** cnt)
             tmp //= i
             cnt += 1
         if cnt > 1:
@@ -17,7 +17,6 @@ def getDivisor(n):
         divisor.append([1, tmp])
     if divisor == []:
         divisor.append([1, n])
-
     divisor_mat = np.matrix(1)
     for d in divisor:
         d = np.matrix(d)
@@ -31,9 +30,8 @@ def getDivisor(n):
     return divisor_mat
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 a = np.array(a)
 sum_a = a.sum()
 divisor = getDivisor(sum_a)

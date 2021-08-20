@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLongestSubstring(self, s):
         """
         :type s: str
@@ -6,7 +7,7 @@ class Solution:
         """
         dic = {}
         start = max_len = 0
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c in dic and start <= dic[c]:
                 start = dic[c] + 1
             else:

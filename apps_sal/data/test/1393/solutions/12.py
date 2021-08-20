@@ -1,22 +1,17 @@
 x = input()
 y = input()
-
 g1 = {}
 g2 = {}
 g3 = {}
 g4 = {}
-
 for i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
     g2[i] = 0
     g4[i] = 0
-
 for i in 'abcdefghijklmnopqrstuvwxyz':
     g1[i] = 0
     g3[i] = 0
-
 e = 0
 f = 0
-
 u = []
 l = []
 u2 = []
@@ -28,7 +23,6 @@ for i in x:
     else:
         l.append(i)
         g1[i] += 1
-
 for i in y:
     if i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
         u2.append(i)
@@ -36,7 +30,6 @@ for i in y:
     else:
         l2.append(i)
         g3[i] += 1
-
 for i in g1:
     ct = g1[i]
     can = g3[i]
@@ -49,8 +42,6 @@ for i in g1:
             g3[i] = can - ct
             e += g1[i]
             g1[i] = 0
-
-
 for i in g2:
     ct = g2[i]
     can = g4[i]
@@ -63,7 +54,6 @@ for i in g2:
             g4[i] = can - ct
             e += g2[i]
             g2[i] = 0
-
 for i in g1:
     ct = g1[i]
     can = g4[i.upper()]
@@ -76,8 +66,6 @@ for i in g1:
             g4[i.upper()] = can - ct
             f += g1[i]
             g1[i] = 0
-
-
 for i in g2:
     ct = g2[i]
     can = g3[i.lower()]
@@ -90,6 +78,4 @@ for i in g2:
             g3[i.lower()] = can - ct
             f += g2[i]
             g2[i] = 0
-
-
 print(e, f)

@@ -3,7 +3,7 @@ n = int(input())
 
 def countd(n):
     d = 0
-    while n >= 10**d:
+    while n >= 10 ** d:
         d += 1
     count = 0
     while d > 0:

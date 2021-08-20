@@ -18,7 +18,6 @@ def check_cell(i, j, n):
 
 n = int(input())
 field = []
-
 for i in range(n):
     temp = [int(x) for x in input()]
     field.append(temp)
@@ -27,10 +26,9 @@ for i in range(n):
 def main():
     for i in range(n):
         for j in range(n):
-            if field[i][j] and not field[i][j] == check_cell(i, j, n):
+            if field[i][j] and (not field[i][j] == check_cell(i, j, n)):
                 print('No')
                 return 0
-
     print('Yes')
 
 

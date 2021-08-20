@@ -8,12 +8,12 @@ def weight_words(nam):
 def rank(st, we, n):
     index = 0
     if len(st) == 0:
-        return "No participants"
+        return 'No participants'
     lst_st = st.split(',')
     if n > len(lst_st):
-        return "Not enough participants"
+        return 'Not enough participants'
     res = []
-    for name, w in zip(lst_st, we):
+    for (name, w) in zip(lst_st, we):
         res.append((weight_words(name.lower()) * w, name))
     res = sorted(res, reverse=True)
     while index < len(res) - 1:
@@ -21,7 +21,7 @@ def rank(st, we, n):
         tmp_next = res[index + 1]
         if tmp[0] == tmp_next[0]:
             if tmp[1] > tmp_next[1]:
-                res[index], res[index + 1] = res[index + 1], res[index]
+                (res[index], res[index + 1]) = (res[index + 1], res[index])
             else:
                 index = index + 1
         else:

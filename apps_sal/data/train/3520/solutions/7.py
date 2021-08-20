@@ -7,6 +7,6 @@ def prime(n):
 
 def step(g, m, n):
     for num in range(m, n + 1):
-        if prime(num) and prime(num + g) and num + g <= n:
+        if prime(num) and prime(num + g) and (num + g <= n):
             return [num, num + g]
     return None

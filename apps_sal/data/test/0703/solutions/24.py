@@ -1,5 +1,4 @@
 from sys import stdin
-
 __author__ = 'artyom'
 
 
@@ -11,8 +10,8 @@ def ceildiv(a, b):
     return -(-a // b)
 
 
-k, a, b, v = read_next_line()
+(k, a, b, v) = read_next_line()
 s = ceildiv(a, v)
 t = k - 1
-d = (b // t) * k + b % t + 1
+d = b // t * k + b % t + 1
 print(ceildiv(s, k) if s <= d else s - d + b // t + 1)

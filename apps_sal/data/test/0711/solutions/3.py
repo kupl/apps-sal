@@ -1,8 +1,8 @@
 from collections import defaultdict
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 count = defaultdict(int)
 p = 2
-while p <= 10**4.5 + 5:
+while p <= 10 ** 4.5 + 5:
     if M % p == 0:
         count[p] += 1
         M //= p
@@ -36,7 +36,7 @@ def cmb(n, r):
 
 
 ans = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in count.keys():
     ans *= cmb(N - 1 + count[i], count[i])
     ans %= mod

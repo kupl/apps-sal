@@ -10,4 +10,4 @@ for i in range(1, n):
 ans1.append(s[-1])
 print(ans)
 for i in ans1:
-    print(i, end=" ")
+    print(i, end=' ')

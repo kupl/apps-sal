@@ -1,9 +1,9 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
 
     def check(mid):
-        d, left = {}, 0
+        (d, left) = ({}, 0)
         for i in range(mid):
             if a[i] > k:
                 if a[i] not in d:
@@ -26,11 +26,9 @@ for _ in range(int(input())):
                 return True
             left += 1
         return False
-
-    lo, hi = 0, n
+    (lo, hi) = (0, n)
     while lo <= hi:
         mid = (lo + hi) // 2
-        # print(mid,lo,hi)
         if check(mid):
             res = mid
             lo = mid + 1

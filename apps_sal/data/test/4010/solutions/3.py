@@ -1,39 +1,33 @@
-from sys import stdin, stdout                           #
-import math                                            #
-import heapq                                           #
-#
-t = 1                                                  #
+from sys import stdin, stdout
+import math
+import heapq
+t = 1
 
 
-def aint():                                            #
-    return int(input().strip())                        #
+def aint():
+    return int(input().strip())
 
 
-def lint():                                            #
-    return list(map(int, input().split()))              #
+def lint():
+    return list(map(int, input().split()))
 
 
-def fint():                                            #
-    return list(map(int, stdin.readline().split()))     #
-    #
-########################################################
+def fint():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
     n = aint()
     l = lint()
-    ans = "NO"
+    ans = 'NO'
     for i in range(n):
         for j in range(i + 2, n):
             if l[i] == l[j]:
-                ans = "YES"
+                ans = 'YES'
                 break
     print(ans)
-    # solve
 
 
 t = int(input())
-
-########################################################
-for i in range(t):                                     #
-    main()                                             #
+for i in range(t):
+    main()

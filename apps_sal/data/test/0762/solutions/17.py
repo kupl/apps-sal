@@ -1,4 +1,4 @@
-n, b = [int(x) for x in input().strip().split(' ')]
+(n, b) = [int(x) for x in input().strip().split(' ')]
 a = [int(x) for x in input().strip().split(' ')]
 odd = 0
 eve = 0
@@ -8,7 +8,7 @@ for i in range(n):
         odd += 1
     else:
         eve += 1
-    if i < (n - 1) and odd == eve:
+    if i < n - 1 and odd == eve:
         c.append(abs(a[i + 1] - a[i]))
 c.sort()
 l = len(c)

@@ -1,4 +1,5 @@
 class MemoryManager:
+
     def __init__(self, memory):
         """
         @constructor Creates a new memory manager for the provided array.
@@ -17,7 +18,7 @@ class MemoryManager:
         """
         if size > len(self.memory):
             raise 'Cannot allocate more memory than exists'
-        for pointer, block_size in list(self.free_memory.items()):
+        for (pointer, block_size) in list(self.free_memory.items()):
             if block_size >= size:
                 self.allocated[pointer] = size
                 self.free_memory[pointer + size] = block_size - size
@@ -33,7 +34,7 @@ class MemoryManager:
         """
         self.free_memory[pointer] = self.allocated[pointer]
         del self.allocated[pointer]
-        for p, b_size in sorted(self.free_memory.items()):
+        for (p, b_size) in sorted(self.free_memory.items()):
             if self.free_memory.get(p + b_size):
                 self.free_memory[p] += self.free_memory[p + b_size]
                 del self.free_memory[p + b_size]
@@ -45,7 +46,7 @@ class MemoryManager:
         @returns {number} The value at that location.
         @raises If pointer is in unallocated memory.
         """
-        for p, b_size in list(self.allocated.items()):
+        for (p, b_size) in list(self.allocated.items()):
             if p <= pointer < p + b_size:
                 return self.memory[pointer]
         raise 'No memory has been allocated'
@@ -57,7 +58,7 @@ class MemoryManager:
         @param {number} value - The value to write.
         @raises If pointer is in unallocated memory.
         """
-        for p, b_size in list(self.allocated.items()):
+        for (p, b_size) in list(self.allocated.items()):
             if p <= pointer < p + b_size:
                 self.memory[pointer] = value
                 return None

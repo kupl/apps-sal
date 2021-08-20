@@ -1,8 +1,6 @@
 from sys import stdin, stdout
-
 n = int(stdin.readline().rstrip())
 p = list(map(int, stdin.readline().rstrip().split()))
-
 if n == 1:
     print(p[0])
 else:
@@ -25,5 +23,4 @@ else:
         if removeDict[i] > maxRemove:
             maxN = i
             maxRemove = removeDict[i]
-
     print(maxN)

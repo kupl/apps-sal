@@ -1,5 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def simulate(k):
             hours = 0
             for pile in piles:

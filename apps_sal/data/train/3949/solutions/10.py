@@ -5,4 +5,4 @@ def calculate_tip(amount, rating):
     rating = rating.lower()
     if rating not in d:
         return 'Rating not recognised'
-    return __import__('math').ceil(amount * (d[rating]))
+    return __import__('math').ceil(amount * d[rating])

@@ -1,8 +1,8 @@
 def make_negative(number):
     if number > 0:
         number *= -1
-        return(number)
+        return number
     elif number < 0:
-        return(number)
+        return number
     else:
-        return(number)
+        return number

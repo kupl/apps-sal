@@ -2,7 +2,7 @@ def primeFactors(n):
     c = 0
     m = 2
     r = []
-    while(True):
+    while True:
         if n == 1:
             r.append('(' + str(m) + ')')
             return ''.join(r)

@@ -13,12 +13,12 @@ for i in range(t):
     list3 = []
     list2 = [min1, min2, min3]
     list3 = [max1, max2, max3]
-    if((list2 not in list1) or (list3 not in list1)):
-        print("no")
-    elif((list2 in list1) and (list3 in list1)):
+    if list2 not in list1 or list3 not in list1:
+        print('no')
+    elif list2 in list1 and list3 in list1:
         list1.remove(list2)
         list1.remove(list3)
-        if(list1[0] != list2 and list1[0] != list3):
-            print("yes")
+        if list1[0] != list2 and list1[0] != list3:
+            print('yes')
         else:
-            print("no")
+            print('no')

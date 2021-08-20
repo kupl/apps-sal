@@ -4,7 +4,6 @@ import threading
 
 def main():
     n = int(input())
-
     a = [int(x) for x in input().split()]
     if a[0] < a[-1]:
         a = a[::-1]
@@ -23,12 +22,11 @@ def main():
             two = strokes(ind + 1, a[ind]) + a[ind] - height
             mem[ind][height] = min(one, two)
             return mem[ind][height]
-
     print(strokes(0, 0))
 
 
 setrecursionlimit(10000)
-threading.stack_size(10**8)
+threading.stack_size(10 ** 8)
 t = threading.Thread(target=main)
 t.start()
 t.join()

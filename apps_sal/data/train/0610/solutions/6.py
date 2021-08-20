@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l1 = list(map(int, input().split()))
@@ -12,6 +11,6 @@ for _ in range(int(input())):
             flag = 1
             break
     if flag == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

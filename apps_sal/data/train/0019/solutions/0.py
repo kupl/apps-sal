@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     s = {}
     for q in range(d):

@@ -1,6 +1,4 @@
-
 import sys
-
 a = [int(i) for i in sys.stdin.readline().split()]
 cc = a[2]
 st = []
@@ -31,8 +29,6 @@ for i in range(a[1]):
     t = l[0]
     for m in range(11):
         lk = (m + t) % (cc + 1)
-        ans += (count[m] * lk)
-        # print(m,lk,ans)
+        ans += count[m] * lk
     anss.append(str(ans))
-print("\n".join(anss))
-# break
+print('\n'.join(anss))

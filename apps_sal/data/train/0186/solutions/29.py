@@ -1,4 +1,5 @@
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
         Memo = {}
         Min = min(cost)
@@ -12,7 +13,7 @@ class Solution:
                 return [0, 0, 0, 0, 0, 0, 0, 0, 0, -10000000]
             Max = [0, 0, 0, 0, 0, 0, 0, 0, 0, -10000000]
             flag = False
-            for i, c in enumerate(cost):
+            for (i, c) in enumerate(cost):
                 tmp = dfs(remain - c)
                 if tmp[-1] != -10000000:
                     flag = True

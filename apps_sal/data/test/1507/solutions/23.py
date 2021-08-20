@@ -1,9 +1,7 @@
-n, k = [int(i) for i in input().split(' ')]
+(n, k) = [int(i) for i in input().split(' ')]
 guests = input()
 flag = 'NO'
-
 guards = [' '] * k
-
 for i in range(0, n):
     if guests[i] in guards:
         continue

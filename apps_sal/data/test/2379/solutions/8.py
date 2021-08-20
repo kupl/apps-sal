@@ -1,7 +1,6 @@
 def main():
-    N, K, C = list(map(int, input().split()))
+    (N, K, C) = list(map(int, input().split()))
     S = input()
-
     i = 0
     c = 0
     p = [-1] * N
@@ -11,7 +10,6 @@ def main():
             c += 1
             i += C
         i += 1
-
     i = N - 1
     c = K - 1
     q = [-1] * N
@@ -21,10 +19,9 @@ def main():
             c -= 1
             i -= C
         i -= 1
-
     for i in range(N):
         if ~p[i] and p[i] == q[i]:
-            print((i + 1))
+            print(i + 1)
 
 
 def __starting_point():

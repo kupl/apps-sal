@@ -1,12 +1,10 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
-        # K * n
         temp = list(arr)
         temp.sort()
         median = 0
-
         median = temp[(len(temp) - 1) // 2]
-
         l = 0
         r = len(arr) - 1
         res = []

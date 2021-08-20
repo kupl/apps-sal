@@ -1,5 +1,5 @@
 def lower(a):
-    if 'A' <= a <= "Z":
+    if 'A' <= a <= 'Z':
         return chr(ord(a) + 32)
     else:
         return a
@@ -17,7 +17,7 @@ def main():
     people = ['polycarp']
     res = [1] * (n + 1)
     for i in range(1, n + 1):
-        a, b, c = map(ToLower, input().split())
+        (a, b, c) = map(ToLower, input().split())
         res[i] = res[people.index(c)] + 1
         people.append(a)
     print(max(res))

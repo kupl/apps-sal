@@ -13,11 +13,11 @@ def issubstring(a, b):
 b = True
 for x in range(n):
     for y in range(x):
-        if(not issubstring(s[y], s[x])):
+        if not issubstring(s[y], s[x]):
             b = False
 if b:
-    print("YES")
+    print('YES')
     for x in s:
         print(x)
 else:
-    print("NO")
+    print('NO')

@@ -1,10 +1,13 @@
-M = 10**9 + 7
-def R(): return map(int, input().split())
+M = 10 ** 9 + 7
+
+
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
 for i in range(n):
-    n, m = R()
+    (n, m) = R()
     L = [[0 for i in range(m)] for j in range(n)]
     a = []
     for i in range(n):
@@ -23,7 +26,7 @@ for i in range(n):
                 c += 1
         for j in range(n):
             L[j][i] += c
-    mi = 10**9
+    mi = 10 ** 9
     k = []
     for i in range(n):
         for j in range(m):

@@ -38,7 +38,6 @@ for c in range(t):
                 first_left = last_left = i + 1
             elif current_x == left_max:
                 last_left = i + 1
-
     h = up_max - down_max + 1
     w = right_max - left_max + 1
     ans = h * w
@@ -50,5 +49,4 @@ for c in range(t):
         ans = min(ans, h * (w - 1))
     if horizontal_count > 1 and last_left < first_right:
         ans = min(ans, h * (w - 1))
-
     print(ans)

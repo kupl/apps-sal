@@ -7,7 +7,7 @@ def fact(n):
 
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = list(map(int, input().split()))
     arr.sort()
     tot = 0
@@ -17,7 +17,6 @@ for _ in range(t):
     for i in range(n):
         if arr[i] == arr[k - 1]:
             count += 1
-
     orig_count = 0
     for i in range(k):
         if arr[i] == arr[k - 1]:

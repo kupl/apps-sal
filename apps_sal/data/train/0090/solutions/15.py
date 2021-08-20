@@ -1,7 +1,6 @@
 from math import inf, ceil
 from heapq import *
 from collections import defaultdict
-
 for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))

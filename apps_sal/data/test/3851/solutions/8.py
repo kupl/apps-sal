@@ -1,6 +1,6 @@
 from math import gcd
-n, k = map(int, input().split())
-a, b = map(int, input().split())
+(n, k) = map(int, input().split())
+(a, b) = map(int, input().split())
 t = n * k
 m = [(a + b) % k, (a - b) % k, (b - a) % k, (-a - b) % k]
 mi = 999999999999

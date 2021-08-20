@@ -3,15 +3,15 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         mapping = defaultdict(set)
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             mapping[val].add(i)
-
         queue = deque([(0, 0)])
         visited = set([0])
         while queue:
-            curr_cost, ci = queue.popleft()
+            (curr_cost, ci) = queue.popleft()
             if ci == len(arr) - 1:
                 return curr_cost
             if ci + 1 < len(arr) and ci + 1 not in visited:

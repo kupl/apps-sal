@@ -1,18 +1,11 @@
-#!/usr/bin/env python3
 from collections import Counter
-# from numba import njit
-
-# input = stdin.readline
-
-# @njit
 
 
 def solve(n, v):
-    if all(x == v[0] for x in v):
+    if all((x == v[0] for x in v)):
         return n // 2
     v_even = v[::2]
     v_odd = v[1::2]
-
     d_even = list(sorted(list(Counter(v_even).items()), key=lambda x: x[1], reverse=True))
     d_odd = list(sorted(list(Counter(v_odd).items()), key=lambda x: x[1], reverse=True))
     e0 = d_even[0]
@@ -26,9 +19,8 @@ def solve(n, v):
 
 def main():
     N = int(input())
-    # N,M = map(int,input().split())
     v = list(map(int, input().split()))
-    print((solve(N, v)))
+    print(solve(N, v))
     return
 
 

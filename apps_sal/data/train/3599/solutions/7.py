@@ -1,5 +1,5 @@
 def less_than(n, k):
-    return all(int(x) < k for x in str(n))
+    return all((int(x) < k for x in str(n)))
 
 
 def has_all(n, k):

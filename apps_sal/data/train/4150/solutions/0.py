@@ -1,4 +1,5 @@
 def rot13(message):
+
     def decode(c):
         if 'a' <= c <= 'z':
             base = 'a'
@@ -7,4 +8,4 @@ def rot13(message):
         else:
             return c
         return chr((ord(c) - ord(base) + 13) % 26 + ord(base))
-    return "".join(decode(c) for c in message)
+    return ''.join((decode(c) for c in message))

@@ -4,6 +4,6 @@ def digitsum(n):
 
 N = int(input())
 if N % digitsum(N) == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

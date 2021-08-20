@@ -1,8 +1,8 @@
-'''
+"""
 Created on Oct 15, 2015
 
 @author: Ismael
-'''
+"""
 from collections import Counter
 n = int(input())
 

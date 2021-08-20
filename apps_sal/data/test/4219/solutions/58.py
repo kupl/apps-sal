@@ -7,7 +7,7 @@ for i in range(N):
     xy = [list(map(int, input().split())) for j in range(a)]
     XY.append(xy)
 ans = 0
-for i in range(2**N):
+for i in range(2 ** N):
     b = [i >> j & 1 for j in range(N)]
     f = 0
     for j in range(N):

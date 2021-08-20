@@ -17,8 +17,7 @@ def warn_the_sheep(queue):
                 if sheep_count == 0:
                     return message_one
                 else:
-                    return ('Oi! Sheep number ' + num_to_str(sheep_count) +
-                            '! You are about to be eaten by a wolf!')
+                    return 'Oi! Sheep number ' + num_to_str(sheep_count) + '! You are about to be eaten by a wolf!'
         sheep_count += 1
         out_count += 1
 
@@ -48,5 +47,5 @@ def num_to_str(num):
     str_num = ''
     while num > 0:
         str_num = nums[num % 10] + str_num
-        num = (num - (num % 10)) // 10
+        num = (num - num % 10) // 10
     return str_num

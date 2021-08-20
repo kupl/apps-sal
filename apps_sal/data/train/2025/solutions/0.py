@@ -12,9 +12,8 @@ def main():
             while j <= n:
                 result.append(j)
                 j *= i
-
     print(len(result))
-    print(' '.join(str(i) for i in result))
+    print(' '.join((str(i) for i in result)))
 
 
 main()

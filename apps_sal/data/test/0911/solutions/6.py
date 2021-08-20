@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 p1 = list(map(int, input().split()))
 p2 = p1[::-1]
 t = list(map(int, input().split()))
@@ -13,8 +13,8 @@ for i in range(n):
     s1 += max(0, p1[i] - c * t1[i])
     s2 += max(0, p2[i] - c * t2[i])
 if s1 == s2:
-    print("Tie")
+    print('Tie')
 if s1 > s2:
-    print("Limak")
+    print('Limak')
 if s1 < s2:
-    print("Radewoosh")
+    print('Radewoosh')

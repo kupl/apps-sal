@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 ans_ls = [0] * (n - 1)
 for start in range(1, n):
     for end in range(start + 1, n + 1):

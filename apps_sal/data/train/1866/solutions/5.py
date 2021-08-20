@@ -1,4 +1,5 @@
 class Solution:
+
     def fullJustify(self, words, maxWidth):
         """
         :type words: List[str]
@@ -6,7 +7,7 @@ class Solution:
         :rtype: List[str]
         """
         res = []
-        i, n = 0, len(words)
+        (i, n) = (0, len(words))
         while i < n:
             count = len(words[i])
             last = i + 1
@@ -17,17 +18,17 @@ class Solution:
             temp = words[i]
             if last == n or diff == 0:
                 for j in range(i + 1, last):
-                    temp += " "
+                    temp += ' '
                     temp += words[j]
-                temp += " " * (maxWidth - len(temp))
+                temp += ' ' * (maxWidth - len(temp))
             else:
-                m, re = divmod(maxWidth - count, diff)
+                (m, re) = divmod(maxWidth - count, diff)
                 for j in range(i + 1, last):
-                    temp += " " * m
+                    temp += ' ' * m
                     if re > 0:
-                        temp += " "
+                        temp += ' '
                         re -= 1
-                    temp += " "
+                    temp += ' '
                     temp += words[j]
             i = last
             res.append(temp)

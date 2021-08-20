@@ -1,10 +1,8 @@
 nw = input().split()
 numCandies = int(nw[0])
 weight = int(nw[1])
-
 thm1 = []
 thm2 = []
-
 for i in range(numCandies):
     val = input().split()
     val = [int(x) for x in val]

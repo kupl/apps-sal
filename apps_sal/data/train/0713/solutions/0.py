@@ -25,7 +25,7 @@ while i < t:
             break
         j += 1
     if c == 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     i += 1

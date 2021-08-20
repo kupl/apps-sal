@@ -1,4 +1,5 @@
 class Solution(object):
+
     def wordSubsets(self, A, B):
         s = set(A)
         letters_required = {}
@@ -7,7 +8,6 @@ class Solution(object):
                 count = i.count(j)
                 if j not in letters_required or count > letters_required[j]:
                     letters_required[j] = count
-
         for i in A:
             for j in letters_required:
                 if i.count(j) < letters_required[j]:

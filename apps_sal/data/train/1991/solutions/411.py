@@ -1,12 +1,12 @@
 import numpy
 import heapq
 import sys
-
 from collections import defaultdict
 from typing import List
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dims = (len(locations), fuel + 1)
         dp = numpy.zeros(dims)
@@ -24,7 +24,5 @@ class Solution:
                         continue
                     if f < distance:
                         continue
-
                     dp[j][f - distance] = (dp[j][f - distance] + dp[city][f]) % module
-
         return int(sum(dp[finish]) % module)

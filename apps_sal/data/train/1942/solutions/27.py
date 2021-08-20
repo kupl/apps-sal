@@ -1,8 +1,9 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         dic = collections.defaultdict(list)
         fc = favoriteCompanies
-        for i, p in enumerate(fc):
+        for (i, p) in enumerate(fc):
             for c in p:
                 dic[c].append(i)
         n = len(fc)
@@ -18,5 +19,4 @@ class Solution:
                 if counter[i][j] == len(fc[i]):
                     ans.add(i)
                     break
-
         return sorted(set(range(n)) - ans)

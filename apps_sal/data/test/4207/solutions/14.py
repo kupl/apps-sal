@@ -1,8 +1,8 @@
-'''input
+"""input
 3
 1 2 -1
 -6 -12 6
-'''
+"""
 from math import gcd
 import sys
 from collections import defaultdict as dd
@@ -12,7 +12,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -25,18 +25,7 @@ def ri(flag=0):
 n = ri(1)
 a = ri()
 b = ri()
-
 k = dd(int)
-
-
-# for i in range(n):
-# 	if a[i]!=0:
-# 		temp=(b[i]*pow(a[i],mod-2,mod))%mod
-# 		k[temp]+=1
-# 	if a[i]==0 and b[i]==0:
-# 		k[0]+=1
-
-
 k[0, 0, 0] = 0
 for i in range(n):
     ok = gcd(a[i], b[i])
@@ -54,10 +43,7 @@ for i in range(n):
         pass
     if a[i] == 0 and b[i] == 0:
         k[0, 0, 0] += 1
-
 ans = b.count(0)
-
-
 for i in k:
     if i == (0, 0, 0):
         ans = max(ans, k[i])

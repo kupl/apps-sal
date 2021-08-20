@@ -2,10 +2,8 @@ class Solution:
     count = 0
 
     def dfs(self, arr, i, visited):
-
         for index in range(i + 1, len(arr)):
             visit = True
-
             for j in range(0, len(arr[index])):
                 if arr[index][j] in visited:
                     for k in range(0, j):
@@ -14,12 +12,9 @@ class Solution:
                     break
                 else:
                     visited.add(arr[index][j])
-
             if visit:
                 self.count = max(self.count, len(visited))
-
             self.dfs(arr, index, visited)
-
             for char in arr[index]:
                 if char in visited and visit:
                     visited.remove(char)

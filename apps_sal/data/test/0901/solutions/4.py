@@ -1,8 +1,6 @@
 from sys import stdin, stdout
-
 doomed = False
-n, m = list(map(int, stdin.readline().rstrip().split()))
-
+(n, m) = list(map(int, stdin.readline().rstrip().split()))
 for _ in range(m):
     groupInfo = [int(a) for a in stdin.readline().rstrip().split()]
     groupSet = set()
@@ -15,8 +13,7 @@ for _ in range(m):
             groupSet.add(i)
     if doomGroup:
         doomed = True
-
 if doomed:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

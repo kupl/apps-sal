@@ -1,13 +1,11 @@
-# Engines
 import cmath
 import math
 N = int(input())
 Engines = []
 ans = 0
-
-sumx, sumy = 0, 0
+(sumx, sumy) = (0, 0)
 for _ in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     z = complex(x, y)
     arg_deg = cmath.phase(z)
     sumx += x
@@ -20,7 +18,7 @@ for i in range(N):
         sub_x = 0
         sub_y = 0
         for k in range(i, j + 1):
-            deg, dx, dy = Engines[k]
+            (deg, dx, dy) = Engines[k]
             sub_x += dx
             sub_y += dy
         ans = max(ans, math.hypot(sub_x, sub_y))

@@ -3,6 +3,7 @@ from heapq import heappush, heappop, heapify
 
 
 class Node:
+
     def __init__(self, parent, value):
         self.parent = parent
         self.rank = 0
@@ -11,8 +12,9 @@ class Node:
 
 
 class UnionFind:
+
     def __init__(self, nodes):
-        self.subsets = [Node(i, v) for i, v in enumerate(nodes)]
+        self.subsets = [Node(i, v) for (i, v) in enumerate(nodes)]
         self.maxSubsetSize = 1
 
     def union(self, i, j):
@@ -20,7 +22,6 @@ class UnionFind:
         jrep = self.find(j)
         if irep == jrep:
             return
-        # union by rank
         if self.subsets[irep].rank > self.subsets[jrep].rank:
             self.subsets[jrep].parent = irep
             self.subsets[irep].size += self.subsets[jrep].size
@@ -35,12 +36,12 @@ class UnionFind:
 
     def find(self, i):
         if self.subsets[i].parent != i:
-            # path compression
             self.subsets[i].parent = self.find(self.subsets[i].parent)
         return self.subsets[i].parent
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = UnionFind(list(range(len(arr))))
         lengthMsets = set()

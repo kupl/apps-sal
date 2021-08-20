@@ -5,7 +5,7 @@ def word_problem(r, s1, s2, c):
     for _ in range(c):
         xi = set()
         for s in ix:
-            for x, y in r:
+            for (x, y) in r:
                 if x in s:
                     i = s.find(x)
                     while i != -1:

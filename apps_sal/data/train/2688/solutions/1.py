@@ -1,5 +1,5 @@
 def F(n):
-    return sum(int(d)**2 for d in str(n))
+    return sum((int(d) ** 2 for d in str(n)))
 
 
 def repeat_sequence_len(n):

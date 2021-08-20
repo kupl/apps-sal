@@ -1,11 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 bc = []
 for i in range(m):
     bc.append(list(map(int, input().split())))
 bc.sort(key=lambda x: x[1], reverse=True)
-
 for i in bc:
     if a[0] < i[1]:
         for j in range(i[0]):
@@ -16,5 +15,4 @@ for i in bc:
                 break
     else:
         break
-
-print((sum(a)))
+print(sum(a))

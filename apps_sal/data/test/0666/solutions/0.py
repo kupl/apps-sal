@@ -3,7 +3,7 @@ def f(m):
 
 
 n = int(input())
-l, r = 0, n
+(l, r) = (0, n)
 while r - l > 1:
     m = (r + l) // 2
     if f(m) >= n:

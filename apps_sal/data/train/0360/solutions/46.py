@@ -1,7 +1,9 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def countDays(weights, capacity):
-            l, r, cnt, sumv = 0, 0, 0, 0
+            (l, r, cnt, sumv) = (0, 0, 0, 0)
             while r < len(weights):
                 sumv += weights[r]
                 if sumv > capacity:
@@ -13,8 +15,8 @@ class Solution:
             if sumv:
                 cnt += 1
             return cnt
-        maxv, sumv = max(weights), sum(weights)
-        left, right = maxv, sumv
+        (maxv, sumv) = (max(weights), sum(weights))
+        (left, right) = (maxv, sumv)
         while left < right:
             mid = (left + right) // 2
             days = countDays(weights, mid)

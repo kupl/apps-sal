@@ -1,1 +1,1 @@
-print({"ABC": "ARC", "ARC": "ABC"}[input()])
+print({'ABC': 'ARC', 'ARC': 'ABC'}[input()])

@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 RA = sorted(A)
 RA = RA[::-1]
@@ -12,6 +12,3 @@ for i in range(N):
     else:
         ans = 0
 print(ans)
-# 反例
-# 5 12
-# 6 4 3 2 1

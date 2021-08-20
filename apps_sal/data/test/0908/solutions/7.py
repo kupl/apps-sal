@@ -25,7 +25,6 @@ for i in range(n - 1):
             dp[i][2] = min(dp[i - 1][:2]) + prices[i + 1]
         if strings[i][::-1] <= strings[i + 1][::-1]:
             dp[i][3] = min(dp[i - 1][2:]) + prices[i + 1]
-
 if min(dp[n - 2]) >= INF:
     stdout.write('-1')
 else:

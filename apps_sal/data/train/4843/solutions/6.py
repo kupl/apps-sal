@@ -7,10 +7,10 @@ def choose_best_sum(t, k, ls):
     res = []
     for c in combinations(ls, k):
         s = reduce(lambda x, y: x + y, c)
-        if ((s >= mx) and (s <= t)):
+        if s >= mx and s <= t:
             res = [c, s]
             mx = s
-    if (res == []):
+    if res == []:
         return None
     else:
         return res[1]

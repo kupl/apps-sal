@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 0
 while k >= min(a):
@@ -9,7 +9,6 @@ while k >= min(a):
             k -= i
             s += i
             count += 1
-    ans += (k // s) * count + count
-    k -= (k // s) * s
-    # print(k,ans)
+    ans += k // s * count + count
+    k -= k // s * s
 print(ans)

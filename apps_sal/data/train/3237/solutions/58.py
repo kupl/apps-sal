@@ -1,8 +1,8 @@
 def even_or_odd(number):
     if int(number / 2) == float(number / 2):
-        return "Even"
+        return 'Even'
     else:
-        return "Odd"
+        return 'Odd'
 
 
 num = 10024001232

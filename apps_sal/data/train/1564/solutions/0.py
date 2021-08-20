@@ -1,6 +1,5 @@
-#import set
 t = eval(input())
-while(t):
+while t:
     s = input()
     set1 = set()
     j = 0

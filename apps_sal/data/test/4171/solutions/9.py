@@ -1,9 +1,6 @@
 from math import log
-
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-
 ans = 0
 a = [[] for i in range(200001)]
 for i in range(n):

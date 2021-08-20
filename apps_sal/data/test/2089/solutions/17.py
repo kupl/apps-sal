@@ -1,12 +1,9 @@
-# Project name: Fight Against Traffic
-
-n, m, s, t = map(int, input().split())
+(n, m, s, t) = map(int, input().split())
 a = [0] * (n + 1)
 b = list(a)
 g = [[] for i in range(n + 1)]
-
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u] += [v]
     g[v] += [u]
 
@@ -24,7 +21,6 @@ def bfs(x, a):
 
 bfs(s, a)
 bfs(t, b)
-
 r = 0
 for i in range(1, n + 1):
     for j in range(i + 1, n + 1):

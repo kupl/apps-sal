@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyDuplicate(self, nums, k):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         :rtype: bool
         """
         d = {}
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if num in d and i - d[num] <= k:
                 return True
             d[num] = i

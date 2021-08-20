@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         left = 0
         cost = 0
@@ -10,9 +11,8 @@ class Solution:
             left += customers[i]
             if left >= 4:
                 left -= 4
-                cost = 4 * (boardingCost) - runningCost
+                cost = 4 * boardingCost - runningCost
                 step += 1
-
             else:
                 cost = left * boardingCost - runningCost
                 step += 1
@@ -22,7 +22,6 @@ class Solution:
         costl = leftc * boardingCost - runningCost
         cost = cost + left * boardingCost - runningCost * lefts
         step += lefts
-
         if cost > 0:
             if costl > 0:
                 return step + 1

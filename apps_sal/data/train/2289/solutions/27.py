@@ -1,5 +1,5 @@
 from collections import defaultdict
-inf = 10**10
+inf = 10 ** 10
 A = list(map(lambda x: ord(x) - ord('a'), list(input())))
 N = len(A)
 abc = 'abcdefghijklmbopqrstuvwxyz'

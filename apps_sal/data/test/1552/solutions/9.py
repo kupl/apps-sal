@@ -1,8 +1,7 @@
 n = int(input())
 t = [int(s) for s in input().split()]
-
 teams = [[0, 0, 0] for i in range(n)]
-n1, n2, n3 = 0, 0, 0
+(n1, n2, n3) = (0, 0, 0)
 for i in range(n):
     if t[i] == 1:
         teams[n1][0] = i + 1

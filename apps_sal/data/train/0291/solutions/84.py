@@ -1,6 +1,6 @@
 class Solution:
-    def numOfSubarrays(self, arr: List[int]) -> int:
 
+    def numOfSubarrays(self, arr: List[int]) -> int:
         odd = 0
         even = 1
         cnt = 0
@@ -15,5 +15,4 @@ class Solution:
             else:
                 res = (res + odd) % mod
                 even += 1
-
         return int(res)

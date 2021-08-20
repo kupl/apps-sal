@@ -1,6 +1,6 @@
 def div_num(a, b):
     if a > b:
-        return "Error"
+        return 'Error'
     if a == 1 and b == 2:
         return 2
     number = None
@@ -9,11 +9,11 @@ def div_num(a, b):
         diviseurs = [1, nombre]
         candidat = 2
         while candidat < nombre // candidat:
-            if nombre % candidat == 0:   # candidat est un diviseur de nombre
+            if nombre % candidat == 0:
                 diviseurs.append(candidat)
                 diviseurs.append(nombre // candidat)
             candidat += 1
-        if candidat * candidat == nombre:  # nombre est un carré
+        if candidat * candidat == nombre:
             diviseurs.append(candidat)
         if precedente < len(diviseurs):
             number = nombre

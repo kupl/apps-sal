@@ -1,11 +1,12 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         states = [None] * len(arr)
         numSizeM = 0
         latestM = -1
         for i in range(len(arr)):
             ind = arr[i] - 1
-            if ind != 0 and ind != len(arr) - 1 and states[ind - 1] != None and states[ind + 1] != None:
+            if ind != 0 and ind != len(arr) - 1 and (states[ind - 1] != None) and (states[ind + 1] != None):
                 leftInd = ind - states[ind - 1][0]
                 rightInd = ind + states[ind + 1][1]
                 if states[leftInd][1] == m:

@@ -4,6 +4,6 @@ def which_note(key_press_count):
     if key_press_count % 88 == 0:
         return 'C'
     elif key_press_count % 88 in black_key:
-        return(str(dict_white[(key_press_count - 1) % 88]) + '#')
+        return str(dict_white[(key_press_count - 1) % 88]) + '#'
     else:
-        return str(dict_white[(key_press_count) % 88])
+        return str(dict_white[key_press_count % 88])

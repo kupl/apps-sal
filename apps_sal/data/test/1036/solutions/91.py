@@ -13,13 +13,12 @@ def junken(c_left, c_right):
             return 'P'
         else:
             return 'S'
+    elif c_right == 'R':
+        return 'R'
+    elif c_right == 'P':
+        return 'S'
     else:
-        if c_right == 'R':
-            return 'R'
-        elif c_right == 'P':
-            return 'S'
-        else:
-            return 'S'
+        return 'S'
 
 
 def main(n, k, s):
@@ -31,11 +30,11 @@ def main(n, k, s):
             new_s.append(junken(t[i * 2], t[i * 2 + 1]))
         prev_s = new_s
         new_s = []
-    print((prev_s[0]))
+    print(prev_s[0])
 
 
 def __starting_point():
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     s = input()
     main(n, k, s)
 

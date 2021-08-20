@@ -1,9 +1,8 @@
-'''
+"""
 Created on 2019. 9. 21.
 
 @author: kkhh88
-'''
-
+"""
 s = ''
 le = [0]
 for i in range(1, 22000):
@@ -17,7 +16,6 @@ def sol(k):
         if le[i] > k:
             d = i - 1
             break
-
     k = k - le[d]
     if k == 0:
         return str(d)[-1]

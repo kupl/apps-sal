@@ -1,5 +1,5 @@
 import sys
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 a = s.index('G')
 b = s.index('T')

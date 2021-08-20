@@ -1,15 +1,8 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def main():
     t = 1
     t = int(input())
     for _ in range(t):
-        n, a, b, c, d = map(int, input().split())
+        (n, a, b, c, d) = map(int, input().split())
         if n * (a + b) >= c - d and n * (a - b) <= c + d:
             print('Yes')
         else:

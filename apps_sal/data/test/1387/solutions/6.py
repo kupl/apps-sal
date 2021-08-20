@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 l = input().split()
 for i in range(n - 1):
     l[i] = int(l[i])
@@ -12,8 +12,7 @@ while 1:
     if now == t:
         ans = 1
         break
-
 if ans == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

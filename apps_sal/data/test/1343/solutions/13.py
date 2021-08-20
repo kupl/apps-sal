@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-
 try:
     while True:
-        n, m, k = list(map(int, input().split()))
+        (n, m, k) = list(map(int, input().split()))
         edges = [tuple(map(int, input().split())) for i in range(m)]
         if k == 0:
             print(-1)
@@ -10,20 +8,18 @@ try:
             bachery = [False] * n
             for x in map(int, input().split()):
                 bachery[x - 1] = True
-            result = 1e10
-            for u, v, length in edges:
+            result = 10000000000.0
+            for (u, v, length) in edges:
                 u -= 1
                 v -= 1
                 if bachery[u]:
                     if not bachery[v]:
                         result = min(result, length)
-                elif bachery[v] and not bachery[u]:
+                elif bachery[v] and (not bachery[u]):
                     result = min(result, length)
-
-            if result > 5e9:
+            if result > 5000000000.0:
                 print(-1)
             else:
                 print(result)
-
 except EOFError:
     pass

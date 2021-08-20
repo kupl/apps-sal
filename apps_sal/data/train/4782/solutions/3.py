@@ -1,8 +1,9 @@
 def unwrap(obj, x):
-    return obj.do(x) if hasattr(obj, "do") else obj
+    return obj.do(x) if hasattr(obj, 'do') else obj
 
 
 class Placeholder:
+
     def __init__(self, action=lambda x: x.pop(0)):
         self.do = action
 

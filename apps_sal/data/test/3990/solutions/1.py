@@ -1,13 +1,13 @@
 def read_data():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     Es = [[] for i in range(n)]
     for i in range(m):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         u -= 1
         v -= 1
         Es[u].append(v)
         Es[v].append(u)
-    return n, m, Es
+    return (n, m, Es)
 
 
 def solve(n, m, Es):
@@ -20,7 +20,7 @@ def solve(n, m, Es):
 
 def trans(n, Es):
     Emat = [[False] * n for i in range(n)]
-    for i, row in enumerate(Es):
+    for (i, row) in enumerate(Es):
         for j in row:
             Emat[i][j] = True
     nEs = [[] for i in range(n)]
@@ -54,5 +54,5 @@ def shortestpath(n, Es):
     return -1
 
 
-n, m, Es = read_data()
+(n, m, Es) = read_data()
 print(solve(n, m, Es))

@@ -1,8 +1,9 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         N = len(A)
         dp = [[2] * N for _ in range(N)]
-        a = {val: i for i, val in enumerate(A)}
+        a = {val: i for (i, val) in enumerate(A)}
         for i in range(1, len(A)):
             for j in range(i):
                 diff = A[i] - A[j]

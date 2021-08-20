@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def largestValsFromLabels(self, values, labels, num_wanted, use_limit):
         if not values or not labels:
             return 0

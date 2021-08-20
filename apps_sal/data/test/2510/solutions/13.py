@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def dfs(v, visited, counter):
@@ -13,15 +13,13 @@ def dfs(v, visited, counter):
     return
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 G = [[] for _ in range(n)]
 visited = [0] * n
-
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a - 1].append(b - 1)
     G[b - 1].append(a - 1)
-
 max_friends = 0
 for i in range(n):
     if visited[i]:
@@ -29,5 +27,4 @@ for i in range(n):
     friends = []
     dfs(i, visited, friends)
     max_friends = max(max_friends, sum(friends) + 1)
-
 print(max_friends)

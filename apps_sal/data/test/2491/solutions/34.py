@@ -1,10 +1,9 @@
-N, M, *L = map(int, open(0).read().split())
+(N, M, *L) = map(int, open(0).read().split())
 dic = [[] for i in range(N + 1)]
 rdic = [[] for i in range(N + 1)]
-for a, b, c in zip(*[iter(L)] * 3):
+for (a, b, c) in zip(*[iter(L)] * 3):
     dic[a].append(b)
     rdic[b].append(a)
-
 ok1 = [False] * (N + 1)
 ok1[1] = True
 q = [1]
@@ -23,14 +22,14 @@ while q:
         if not ok2[v]:
             ok2[v] = True
             q.append(v)
-ok = [a & b for a, b in zip(ok1, ok2)]
+ok = [a & b for (a, b) in zip(ok1, ok2)]
 cnt = 0
-dist = [-10**20] * (N + 1)
+dist = [-10 ** 20] * (N + 1)
 dist[1] = 0
 while True:
     flag = True
-    for a, b, c in zip(*[iter(L)] * 3):
-        if ok[a] & ok[b] and ok[a] != -10**20 and dist[b] < dist[a] + c:
+    for (a, b, c) in zip(*[iter(L)] * 3):
+        if ok[a] & ok[b] and ok[a] != -10 ** 20 and (dist[b] < dist[a] + c):
             flag = False
             dist[b] = dist[a] + c
     if flag:

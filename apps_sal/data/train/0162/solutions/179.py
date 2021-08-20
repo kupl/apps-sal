@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Solution:
+
     def longestCommonSubsequence(self, answer_text: str, source_text: str) -> int:
         longest = 0
         answer_text = ' ' + answer_text

@@ -1,7 +1,8 @@
-class FileMaster():
+class FileMaster:
+
     def __init__(self, filepath):
         self.f_file = filepath.split('/')
-        self.f_name, self.extn = self.f_file[-1].split('.')
+        (self.f_name, self.extn) = self.f_file[-1].split('.')
 
     def extension(self):
         return self.extn

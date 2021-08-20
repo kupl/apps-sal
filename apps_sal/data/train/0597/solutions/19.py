@@ -1,7 +1,7 @@
 t = int(input())
 for _ in range(t):
     n = int(input())
-    x, p = [], []
+    (x, p) = ([], [])
     for __ in range(n):
         line = list(map(int, input().split()))
         x.append(line[0])

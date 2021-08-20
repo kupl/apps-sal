@@ -2,7 +2,7 @@ from itertools import permutations
 
 
 def mastermind(game):
-    colors = ["Red", "Blue", "Green", "Orange", "Purple", "Yellow"]
+    colors = ['Red', 'Blue', 'Green', 'Orange', 'Purple', 'Yellow']
     counts = []
     good = []
     for color in colors:

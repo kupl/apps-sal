@@ -3,7 +3,6 @@ if N == 0:
     P = []
 else:
     P = [int(i) for i in input().split()]
-
 if P.count(X) == 0:
     print(X)
 else:

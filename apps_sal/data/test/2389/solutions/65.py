@@ -1,21 +1,19 @@
 3
-# -*- coding: utf-8 -*-
 
 
 def check(s):
     if dict_x[s[0]] == 0 and dict_x[s[1]] == 0:
-        return "NOT"
+        return 'NOT'
     elif dict_x[s[0]] > 0 and dict_x[s[1]] == 0:
         return s[1]
     elif dict_x[s[0]] == 0 and dict_x[s[1]] > 0:
         return s[0]
     elif dict_x[s[0]] == 1 and dict_x[s[1]] == 1:
-        return "EVEN"
+        return 'EVEN'
+    elif dict_x[s[0]] > dict_x[s[1]]:
+        return s[1]
     else:
-        if dict_x[s[0]] > dict_x[s[1]]:
-            return s[1]
-        else:
-            return s[0]
+        return s[0]
 
 
 def update(s, mozi):
@@ -27,8 +25,8 @@ def update(s, mozi):
         dict_x[s[1]] -= 1
 
 
-n, a, b, c = map(int, input().split())
-dict_x = {"A": a, "B": b, "C": c}
+(n, a, b, c) = map(int, input().split())
+dict_x = {'A': a, 'B': b, 'C': c}
 s_list = []
 ans_list = []
 flag = 1
@@ -40,7 +38,7 @@ if a + b + c == 0:
 elif a + b + c == 1:
     for s in s_list:
         x = check(s)
-        if x == "NOT":
+        if x == 'NOT':
             flag = 0
             break
         else:
@@ -50,23 +48,22 @@ elif a + b + c == 2:
     i = 0
     for s in s_list:
         x = check(s)
-        if x == "NOT":
+        if x == 'NOT':
             flag = 0
             break
-        elif x == "EVEN":
+        elif x == 'EVEN':
             if i == len(s_list) - 1:
                 ans_list.append(s[0])
                 update(s, x)
             elif s == s_list[i + 1]:
                 ans_list.append(s[0])
                 update(s, x)
+            elif s[0] in s_list[i + 1]:
+                ans_list.append(s[0])
+                update(s, s[0])
             else:
-                if s[0] in s_list[i + 1]:
-                    ans_list.append(s[0])
-                    update(s, s[0])
-                else:
-                    ans_list.append(s[1])
-                    update(s, s[1])
+                ans_list.append(s[1])
+                update(s, s[1])
         else:
             ans_list.append(x)
             update(s, x)
@@ -74,19 +71,18 @@ elif a + b + c == 2:
 else:
     for s in s_list:
         x = check(s)
-        if x == "NOT":
+        if x == 'NOT':
             flag = 0
             break
-        elif x == "EVEN":
+        elif x == 'EVEN':
             ans_list.append(s[0])
             update(s, s[0])
         else:
             ans_list.append(x)
             update(s, x)
-
 if flag == 1:
-    print("Yes")
+    print('Yes')
     for ans in ans_list:
         print(ans)
 else:
-    print("No")
+    print('No')

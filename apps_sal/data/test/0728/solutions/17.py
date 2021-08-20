@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 cnt = 0
 while max(a[1:]) >= a[0]:
     i = 0

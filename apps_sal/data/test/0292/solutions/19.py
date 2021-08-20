@@ -12,16 +12,15 @@ def obx(lvl, ind, kl, current):
         return
     all = 0
     for i in range(lvl + 1):
-        all += 2**i
+        all += 2 ** i
     all -= 1
-
-    if ind > (2**(lvl)) / 2:
+    if ind > 2 ** lvl / 2:
         if current == 1:
             kl += all / 2 + 1
         else:
             kl += 1
             current *= -1
-        obx(lvl - 1, ind - (2**lvl) / 2, kl, current)
+        obx(lvl - 1, ind - 2 ** lvl / 2, kl, current)
     else:
         if current == -1:
             kl += all / 2 + 1

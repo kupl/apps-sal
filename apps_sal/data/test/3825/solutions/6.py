@@ -1,5 +1,4 @@
 n = int(input())
-
 if n > 20:
     print(733 + (n - 20) * 49)
 else:

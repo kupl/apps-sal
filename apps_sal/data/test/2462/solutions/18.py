@@ -3,7 +3,7 @@ input = sys.stdin.readline
 for f in range(int(input())):
     n = int(input())
     if n > 30:
-        print("YES")
+        print('YES')
         if n - 30 not in [6, 10, 14]:
             print(6, 10, 14, n - 30)
         else:
@@ -14,4 +14,4 @@ for f in range(int(input())):
             if n - 30 == 14:
                 print(6, 10, 13, 15)
     else:
-        print("NO")
+        print('NO')

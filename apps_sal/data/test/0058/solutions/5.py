@@ -10,7 +10,7 @@ while True:
     while len > 0:
         resa = len - min(int(len / a), na) * a
         resb = len - min(int(len / b), nb) * b
-        if resa < resb and na > 0 and len >= a:
+        if resa < resb and na > 0 and (len >= a):
             len -= a
             na -= 1
         elif nb > 0 and len >= b:

@@ -1,10 +1,8 @@
 import sys
 readline = sys.stdin.readline
-sys.setrecursionlimit(10**6)
-
+sys.setrecursionlimit(10 ** 6)
 N = int(readline())
-
-*p, = range(N)
+(*p,) = range(N)
 xs = [0] * N
 sz = [1] * N
 
@@ -34,7 +32,7 @@ def unite(x, y):
 
 
 for i in range(N - 1):
-    x, y = map(int, readline().split())
+    (x, y) = map(int, readline().split())
     unite(x - 1, y - 1)
 cur = 0
 ds = [0] * N

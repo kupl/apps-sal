@@ -1,5 +1,5 @@
-#from collections import Counter
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         if len(A) <= 2:
             return len(A)

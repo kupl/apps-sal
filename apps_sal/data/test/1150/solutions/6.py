@@ -50,11 +50,11 @@ def square(l):
         for j in range(i + 1, 4):
             distances.append(dist(l[i], l[j]))
     distances.sort()
-    if distances[0] < 0.000001:
-        return False  # same point
+    if distances[0] < 1e-06:
+        return False
     different = 0
     for i in range(len(distances) - 1):
-        if abs(distances[i] - distances[i + 1]) > 0.000001:
+        if abs(distances[i] - distances[i + 1]) > 1e-06:
             different += 1
     return different == 1
 
@@ -64,6 +64,5 @@ def dist(a, b):
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
-# print(rot(rot(rot(rot([-11, -22, 2, 3])))))
+    sys.stdin = open('test.txt')
 solve()

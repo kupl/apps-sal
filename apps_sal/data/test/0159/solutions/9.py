@@ -1,12 +1,12 @@
 def prost(a, b):
-    a, b = max(a, b), min(a, b)
+    (a, b) = (max(a, b), min(a, b))
     while b != 0:
         a = a % b
-        a, b = b, a
+        (a, b) = (b, a)
     if a == 1:
-        return (0)
+        return 0
     else:
-        return (1)
+        return 1
 
 
 n = int(input())
@@ -17,4 +17,4 @@ for i in range(len(s) - 1):
         s[i] = s[i] + ' ' + '1'
         k = k + 1
 print(k)
-print(' '.join(x for x in s))
+print(' '.join((x for x in s)))

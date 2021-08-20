@@ -12,21 +12,42 @@ import random
 import time
 import copy
 import functools
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+eps = 1.0 / 10 ** 15
+mod = 10 ** 9 + 7
 
-sys.setrecursionlimit(10**7)
-inf = 10**20
-eps = 1.0 / 10**15
-mod = 10**9 + 7
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def LI_(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-def LF(): return [float(x) for x in sys.stdin.readline().split()]
-def LS(): return sys.stdin.readline().split()
-def I(): return int(sys.stdin.readline())
-def F(): return float(sys.stdin.readline())
-def S(): return input()
-def pf(s): return print(s, flush=True)
+def LI_():
+    return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+
+def LF():
+    return [float(x) for x in sys.stdin.readline().split()]
+
+
+def LS():
+    return sys.stdin.readline().split()
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def F():
+    return float(sys.stdin.readline())
+
+
+def S():
+    return input()
+
+
+def pf(s):
+    return print(s, flush=True)
 
 
 def divisions(n):
@@ -42,16 +63,13 @@ def divisions(n):
             d[i] += 1
         else:
             i += 2
-
     if n > 1:
         d[n] += 1
-
     r = [1]
-    for k, v in d.items():
+    for (k, v) in d.items():
         for c in r[:]:
             for i in range(1, v + 1):
-                r.append(c * (k**i))
-
+                r.append(c * k ** i)
     return sorted(r)
 
 
@@ -62,11 +80,11 @@ def main():
     for i in range(n, 0, -1):
         d = divisions(i)
         ld = len(d)
-        for j in range(1, 2**ld):
+        for j in range(1, 2 ** ld):
             c = []
             ff = True
             for k in range(ld):
-                if j & (1 << k):
+                if j & 1 << k:
                     f = True
                     for e in c:
                         if d[k] % e == 0:
@@ -99,7 +117,6 @@ def main():
                         break
                 if f:
                     a[j - 1] = 0
-
     return sum(a)
 
 

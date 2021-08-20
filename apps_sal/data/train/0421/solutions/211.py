@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         max = 0
         i = 1
@@ -13,5 +14,4 @@ class Solution:
             else:
                 j = 0
                 i = i + 1
-
         return s[max:]

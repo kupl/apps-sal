@@ -1,2 +1,2 @@
-n, s = input(), input()
-print(s[:s.count("R")].count("W"))
+(n, s) = (input(), input())
+print(s[:s.count('R')].count('W'))

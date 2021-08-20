@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         s = {}
         a = [(arr[0], 0)]
@@ -22,5 +23,4 @@ class Solution:
             if nmove == 0:
                 bisect.insort_right(a, (arr[i], i))
             s[i] = (move, nmove)
-            # print(s)
         return min(s[n - 1][0], s[n - 1][1])

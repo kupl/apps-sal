@@ -1,8 +1,7 @@
 for _ in range(int(input())):
-    n, k, d = [int(a) for a in input().split()]
+    (n, k, d) = [int(a) for a in input().split()]
     blocks = [int(a) for a in input().split()]
     lanes = list(map(int, input().split()))
-
     Flag = 0
     z = -10000000000000
     for i in range(n - 1):

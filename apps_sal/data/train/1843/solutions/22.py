@@ -11,17 +11,8 @@ class TweetCounts:
         d = self.delta[freq]
         ans = []
         arr = self.store[tweetName]
-
         for st_time in range(startTime, endTime + 1, d):
             left = bisect_left(arr, st_time)
             right = bisect_right(arr, min(endTime, st_time + d - 1))
-
             ans.append(right - left)
-
         return ans
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

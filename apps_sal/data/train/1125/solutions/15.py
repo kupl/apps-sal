@@ -1,15 +1,7 @@
-''' PROBLEM A  '''
-
-
-'''   PROBLEM B   '''
-
-
-'''   PROBLEM C   '''
-
-
-'''   PROBLEM D    '''
-
-
+""" PROBLEM A  """
+'   PROBLEM B   '
+'   PROBLEM C   '
+'   PROBLEM D    '
 n = int(input())
 for i in range(0, n):
     p = input().rstrip().split(' ')

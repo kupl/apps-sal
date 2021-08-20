@@ -1,9 +1,9 @@
 class Solution:
-    # hash map, time O(n), space O(n)
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         records = collections.defaultdict(list)
-        for name, time in zip(keyName, keyTime):
-            minutes, seconds = int(time[:2]), int(time[-2:])
+        for (name, time) in zip(keyName, keyTime):
+            (minutes, seconds) = (int(time[:2]), int(time[-2:]))
             records[name].append(60 * minutes + seconds)
         res = []
         for name in records:

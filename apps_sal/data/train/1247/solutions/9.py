@@ -4,12 +4,12 @@ sys.setrecursionlimit(10000000)
 
 def mergeSortInversions(arr):
     if len(arr) == 1:
-        return arr, 0
+        return (arr, 0)
     larr = len(arr)
     a = arr[:larr // 2]
     b = arr[larr // 2:]
-    a, ai = mergeSortInversions(a)
-    b, bi = mergeSortInversions(b)
+    (a, ai) = mergeSortInversions(a)
+    (b, bi) = mergeSortInversions(b)
     c = []
     i = 0
     j = 0
@@ -22,29 +22,26 @@ def mergeSortInversions(arr):
         else:
             c.append(b[j])
             j += 1
-            inversions += (la - i)
+            inversions += la - i
     c += a[i:]
     c += b[j:]
-    return c, inversions
+    return (c, inversions)
 
 
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     p = [int(o) for o in input().split()]
     array = [[] for i in range(d)]
     flag = 0
     for i in range(n):
         array[i % d].append(p[i])
-        if p[i] % ((i % d) + 1) != 0:
+        if p[i] % (i % d + 1) != 0:
             flag = 1
-    # print(array)
     if flag == 1:
-        print("-1")
+        print('-1')
     else:
         ans = 0
         for i in range(d):
-            #  print(array[i])
-            g, v = mergeSortInversions(array[i])
-            #  print(array[i],v)
+            (g, v) = mergeSortInversions(array[i])
             ans += v
         print(ans)

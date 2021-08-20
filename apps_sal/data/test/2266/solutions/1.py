@@ -1,18 +1,16 @@
 import math
 import sys
 input = sys.stdin.readline
-inf = int(1e9)
-n, m, d = list(map(int, input().split()))
+inf = int(1000000000.0)
+(n, m, d) = list(map(int, input().split()))
 l = [0] * (n - 1)
 r = [0] * (n - 1)
 g = [[] for _ in range(n)]
-
 station = [int(_) - 1 for _ in input().split()]
 for i in range(n - 1):
-    l[i], r[i] = [int(i) - 1 for i in input().split()]
+    (l[i], r[i]) = [int(i) - 1 for i in input().split()]
     g[l[i]].append(i)
     g[r[i]].append(i)
-
 queue = []
 dist = [inf] * n
 need = [True] * (n - 1)
@@ -21,7 +19,7 @@ for i in station:
     dist[i] = 0
 cur = 0
 while cur < len(queue):
-    x, cur = queue[cur], cur + 1
+    (x, cur) = (queue[cur], cur + 1)
     for edge in g[x]:
         y = l[edge] ^ r[edge] ^ x
         if dist[y] > 1 + dist[x]:

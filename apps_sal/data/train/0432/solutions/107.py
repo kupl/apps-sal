@@ -1,10 +1,11 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         count = collections.Counter(nums)
         que = collections.deque()
         last_required = 0
         last_num = 0
-        for num, num_count in sorted(count.items()):
+        for (num, num_count) in sorted(count.items()):
             if last_required > 0 and last_num + 1 != num or num_count < last_required:
                 return False
             que.append(num_count - last_required)

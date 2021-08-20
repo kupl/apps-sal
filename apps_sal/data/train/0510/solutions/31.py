@@ -1,4 +1,3 @@
-# Segment tree (Bitwise Or)
 from operator import or_
 
 
@@ -34,6 +33,7 @@ class SegmentTree:
             data[i] = f(data[i * 2 + 1], data[i * 2 + 2])
 
     def query(self, start, stop):
+
         def iter_segments(data, l, r):
             while l < r:
                 if l & 1 == 0:
@@ -43,8 +43,7 @@ class SegmentTree:
                 l = l // 2
                 r = (r - 1) // 2
         f = self._f
-        it = iter_segments(self._data, start + self._offset,
-                           stop + self._offset)
+        it = iter_segments(self._data, start + self._offset, stop + self._offset)
         result = next(it)
         for e in it:
             result = f(result, e)
@@ -52,22 +51,20 @@ class SegmentTree:
 
 
 def conv(c):
-    return 1 << (ord(c) - ord('a'))
+    return 1 << ord(c) - ord('a')
 
 
 N = int(input())
 S = input()
-
 st = SegmentTree(N, or_)
-st.build(conv(c) for c in S)
-
+st.build((conv(c) for c in S))
 Q = int(input())
 for _ in range(Q):
     q = input().split()
     if q[0] == '1':
-        i, c = q[1:]
+        (i, c) = q[1:]
         i = int(i) - 1
         st.update(i, conv(c))
     elif q[0] == '2':
-        l, r = list(map(int, q[1:]))
-        print((bin(st.query(l - 1, r)).count('1')))
+        (l, r) = list(map(int, q[1:]))
+        print(bin(st.query(l - 1, r)).count('1'))

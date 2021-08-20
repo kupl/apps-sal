@@ -9,4 +9,4 @@ for i in range(2, n + 2):
             arr[j] += 1
             last = max(last, arr[j])
 print(last)
-print(" ".join(map(str, arr[2:])))
+print(' '.join(map(str, arr[2:])))

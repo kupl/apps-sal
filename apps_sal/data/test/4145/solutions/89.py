@@ -1,10 +1,8 @@
-
 X = int(input())
-
 if X == 2:
     print(X)
 else:
-    while(1):
+    while 1:
         if X % 2 == 0:
             X += 1
             continue
@@ -15,6 +13,5 @@ else:
             else:
                 print(X)
                 break
-
             X += 1
             continue

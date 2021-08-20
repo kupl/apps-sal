@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 parent = [i + 1 for i in range(n)]
 rank = [0 for i in range(n)]
 size = [1 for i in range(n)]
@@ -38,7 +37,7 @@ for i in range(m):
 ab.reverse()
 ans = [0]
 for i in range(m):
-    a, b = ab[i][0], ab[i][1]
+    (a, b) = (ab[i][0], ab[i][1])
     num_a = size[find(a) - 1]
     num_b = size[find(b) - 1]
     unite(a, b)

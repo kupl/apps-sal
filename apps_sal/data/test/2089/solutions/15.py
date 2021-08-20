@@ -1,11 +1,11 @@
-n, m, s, t = [int(x) for x in input().split()]
+(n, m, s, t) = [int(x) for x in input().split()]
 s -= 1
 t -= 1
 graph = []
 for i in range(n):
     graph.append([])
 for i in range(m):
-    v, u = [int(x) - 1 for x in input().split()]
+    (v, u) = [int(x) - 1 for x in input().split()]
     graph[u].append(v)
     graph[v].append(u)
 head = 0
@@ -40,6 +40,6 @@ short = ds[t]
 count = 0
 for v in range(n):
     for u in range(v, n):
-        if dt[u] + ds[v] + 1 >= short and ds[u] + dt[v] + 1 >= short and u != v and v not in graph[u]:
+        if dt[u] + ds[v] + 1 >= short and ds[u] + dt[v] + 1 >= short and (u != v) and (v not in graph[u]):
             count += 1
 print(count)

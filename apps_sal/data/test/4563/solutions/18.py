@@ -8,22 +8,31 @@ from copy import deepcopy
 from string import ascii_lowercase, ascii_uppercase, digits
 
 
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 MOD = 10 ** 9 + 7
-
 N = INT()
 TA = [LIST() for _ in range(N)]
 vote_T = 1
 vote_A = 1
-for x, y in TA:
+for (x, y) in TA:
     n = max((vote_T + x - 1) // x, (vote_A + y - 1) // y)
     vote_T = x * n
     vote_A = y * n
-print((vote_A + vote_T))
+print(vote_A + vote_T)

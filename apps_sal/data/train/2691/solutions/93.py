@@ -8,7 +8,6 @@ def solve(s):
             if next_number > largest_number:
                 largest_number = next_number
             next_number = 0
-
     if next_number > largest_number:
         largest_number = next_number
     return largest_number

@@ -1,7 +1,5 @@
 N = int(input())
-
 a = map(int, input().split())
-
 count = 0
 for i in a:
     if i == count + 1:

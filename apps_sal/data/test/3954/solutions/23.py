@@ -1,7 +1,6 @@
-# HEY STALKER
-n, kr = map(int, input().split())
+(n, kr) = map(int, input().split())
 l = list(map(int, input().split()))
-ans = -2e18
+ans = -2e+18
 for i in range(n):
     for j in range(i, n):
         k = kr

@@ -2,7 +2,6 @@ N = int(input())
 intervals = []
 for i in range(N):
     intervals.append(list(map(int, input().split()))[-1::-1])
-
 intervals.sort()
 mx = intervals[0][0]
 count = 1

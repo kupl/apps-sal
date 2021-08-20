@@ -1,6 +1,5 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = sorted([int(a) for a in input().split()])
-
 if N > M:
     print(0)
 else:

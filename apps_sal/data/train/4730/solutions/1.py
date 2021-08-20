@@ -1,6 +1,6 @@
 def prime_bef_aft(num):
     m = 2 - (num % 2 == 0)
-    return [next(n for n in range(i, int(i * r), s) if is_prime(n)) for i, r, s in ((max(2, num - m), 0.8, -2), (num + m, 1.2, 2))]
+    return [next((n for n in range(i, int(i * r), s) if is_prime(n))) for (i, r, s) in ((max(2, num - m), 0.8, -2), (num + m, 1.2, 2))]
 
 
 def is_prime(n):

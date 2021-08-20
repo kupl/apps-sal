@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
         memo = [[] for _ in range(n)]
@@ -17,5 +18,4 @@ class Solution:
                         memo[i].append(sub | set([s[j + 1:i + 1]]))
             return memo[i]
         sublen = [len(lst) for lst in unique_split(n - 1)]
-        # print(memo)
         return max(sublen)

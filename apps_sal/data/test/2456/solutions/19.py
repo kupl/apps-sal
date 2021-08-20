@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, r = list(map(int, input().split()))
+    (n, r) = list(map(int, input().split()))
     ans = 0
     if n <= r:
         ans += 1

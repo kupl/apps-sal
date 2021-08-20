@@ -1,4 +1,5 @@
 class Machine:
+
     def __init__(self):
         _actions = ACTIONS()
         self.actions = {}

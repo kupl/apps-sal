@@ -1,5 +1,5 @@
 n = int(input())
-ls, rs = [], []
+(ls, rs) = ([], [])
 
 
 def check(sl):
@@ -14,7 +14,7 @@ def check(sl):
 
 total = 0
 for i in range(n):
-    b, h = 0, 0
+    (b, h) = (0, 0)
     S = input()
     for s in S:
         if s == '(':
@@ -29,4 +29,4 @@ for i in range(n):
     total += h
 ls.sort(key=lambda x: x[0], reverse=True)
 rs.sort(key=lambda x: x[0], reverse=True)
-print('Yes' if check(ls) and check(rs) and total == 0 else 'No')
+print('Yes' if check(ls) and check(rs) and (total == 0) else 'No')

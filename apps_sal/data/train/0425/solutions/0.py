@@ -1,4 +1,5 @@
 class Solution:
+
     def get_half(self, dividend, divisor):
         abs_dividend = abs(dividend)
         abs_divisor = abs(divisor)
@@ -6,12 +7,12 @@ class Solution:
         num_temp = 0
         result = 1
         result_temp = 0
-        while (num <= dividend):
+        while num <= dividend:
             num_temp = num
             num += num
             result_temp = result
             result += result
-        return num_temp, result_temp
+        return (num_temp, result_temp)
 
     def divide(self, dividend, divisor):
         """
@@ -28,11 +29,10 @@ class Solution:
             return 0
         minus_flag = (dividend is abs_dividend) is (divisor is abs_divisor)
         final_result = 0
-        while(abs_dividend >= abs_divisor):
-            num, result = self.get_half(abs_dividend, abs_divisor)
+        while abs_dividend >= abs_divisor:
+            (num, result) = self.get_half(abs_dividend, abs_divisor)
             abs_dividend -= num
             final_result += result
-
         if minus_flag == 1:
             if final_result > MAX_INT:
                 return MAX_INT

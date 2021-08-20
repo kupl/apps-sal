@@ -1,9 +1,9 @@
 def bitLen(int_type):
     length = 0
-    while (int_type):
+    while int_type:
         int_type >>= 1
         length += 1
-    return(length)
+    return length
 
 
 def rot(b):
@@ -16,7 +16,7 @@ for __ in range(int(input())):
     r = 0
     x = 0
     c = 0
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a >= b:
         r = bitLen(a)
         b = (bitLen(a) - bitLen(b)) * '0' + bin(b).replace('0b', '')

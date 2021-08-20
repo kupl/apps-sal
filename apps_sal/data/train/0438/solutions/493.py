@@ -1,10 +1,11 @@
 class UnionFind:
+
     def __init__(self):
         self.parents = defaultdict(lambda: -1)
         self.ranks = defaultdict(lambda: 1)
 
     def join(self, a, b):
-        pa, pb = self.find(a), self.find(b)
+        (pa, pb) = (self.find(a), self.find(b))
         if pa == pb:
             return
         if self.ranks[pa] > self.ranks[pb]:
@@ -22,12 +23,13 @@ class UnionFind:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = UnionFind()
         cnt = 0
         ret = -1
         lst = [0] * len(arr)
-        for idx, i in enumerate(arr):
+        for (idx, i) in enumerate(arr):
             i -= 1
             lst[i] = 1
             if i - 1 >= 0 and lst[i - 1]:

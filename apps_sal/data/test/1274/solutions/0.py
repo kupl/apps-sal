@@ -4,8 +4,8 @@ from functools import lru_cache
 import numpy as np
 import heapq
 from collections import defaultdict
-sys.setrecursionlimit(10**9)
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 9)
+MOD = 10 ** 9 + 7
 
 
 def input():
@@ -30,17 +30,14 @@ def lcm(a, b):
 
 
 def main():
-    N, M = mi()
-    A, B = i2(N)
+    (N, M) = mi()
+    (A, B) = i2(N)
     ans = 0
-
     d = defaultdict(list)
     for i in range(N):
         d[A[i]].append(B[i])
-
     h = []
     heapq.heapify(h)
-
     for i in range(1, M + 1):
         for v in d[i]:
             heapq.heappush(h, -v)
@@ -48,7 +45,6 @@ def main():
             ans -= heapq.heappop(h)
         else:
             continue
-
     print(ans)
 
 

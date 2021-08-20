@@ -5,12 +5,11 @@ def shortestPath(topology, startPoint, endPoint):
     q = queue.Queue()
     q.put([startPoint, [startPoint], 0])
     routes = []
-
     while not q.empty():
-        current_node, path, cost = q.get()
+        (current_node, path, cost) = q.get()
         if current_node == endPoint:
             routes.append((path, cost))
-        for point, distance in list(topology[current_node].items()):
+        for (point, distance) in list(topology[current_node].items()):
             new_path = path.copy()
             if point not in path:
                 new_path += [point]

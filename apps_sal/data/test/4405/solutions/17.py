@@ -27,7 +27,6 @@ def main():
     l = list(dic.values())
     l.sort(reverse=True)
     ans = [0] * (l[0] + 1)
-
     for i in range(1, l[0] + 1):
         ans[i] = calc(i, l)
     print(max(ans))

@@ -1,6 +1,5 @@
 import sys
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 setofa = set(a)
 s = []
@@ -23,7 +22,6 @@ for i in range(1, n + 1):
             s += a[ai:k]
             ai = k
         ans.append(i)
-
 if f:
     print(-1)
 else:

@@ -1,18 +1,17 @@
 def abc168d_double_dots():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     path_dict = {}
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if b not in path_dict.keys():
             path_dict[b] = [a]
         else:
             path_dict[b].append(a)
-        a, b = b, a
+        (a, b) = (b, a)
         if b not in path_dict.keys():
             path_dict[b] = [a]
         else:
             path_dict[b].append(a)
-
     q = [1]
     cnt = 0
     ans = [0] * n
@@ -24,7 +23,6 @@ def abc168d_double_dots():
                 ans[next_room - 1] = no
                 q.append(next_room)
                 cnt += 1
-
     if cnt != n - 1:
         print('No')
         return

@@ -17,14 +17,13 @@ def bfs(edges, start):
                 if done[n] != 2:
                     done[n] = 1
                     waiting.append(n)
-    # print(done,c)
     return c
 
 
-N, M = [int(a) for a in input().split()]
+(N, M) = [int(a) for a in input().split()]
 edge = [[] for _ in range(N)]
 for _ in range(M):
-    a, b = [int(a) for a in input().split()]
+    (a, b) = [int(a) for a in input().split()]
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
 done = [0] * N

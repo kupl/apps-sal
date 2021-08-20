@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 cnt = 0
 for i in range(a, b + 1):
     str_i = str(i)

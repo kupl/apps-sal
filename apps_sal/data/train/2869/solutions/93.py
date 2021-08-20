@@ -6,5 +6,4 @@ def distinct(seq):
     seq = Counter(seq)
     for i in list(seq.items()):
         listt.append(i[0])
-
     return listt

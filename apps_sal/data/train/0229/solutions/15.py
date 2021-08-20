@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         pos = [x for x in A if x >= 0]
         neg = [x for x in A if x < 0]

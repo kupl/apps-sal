@@ -6,9 +6,9 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-t, = rl()
+(t,) = rl()
 for _ in range(t):
-    n, x = rl()
+    (n, x) = rl()
     a = rl()
     if sum(a) % x:
         print(n)

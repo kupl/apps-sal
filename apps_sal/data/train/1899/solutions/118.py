@@ -17,7 +17,7 @@ def color(A, i, j):
 
 
 def expand(A):
-    for l in range(2, len(A)**2):
+    for l in range(2, len(A) ** 2):
         for i in range(len(A)):
             for j in range(len(A)):
                 if A[i][j] == l:
@@ -44,6 +44,7 @@ def expand(A):
 
 
 class Solution:
+
     def shortestBridge(self, A):
         length = len(A)
         found = 0
@@ -55,7 +56,5 @@ class Solution:
                     break
             if found == 1:
                 break
-
         expansion = expand(A)
-
         return expansion

@@ -2,8 +2,8 @@ from collections import Counter
 
 
 class Solution:
-    def isPossibleDivide(self, nums: List[int], k: int) -> bool:
 
+    def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         d = Counter(nums)
         for x in sorted(nums):
             if x in d:

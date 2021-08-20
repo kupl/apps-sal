@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-blacksX, blacksY = [], []
+(n, m) = list(map(int, input().split()))
+(blacksX, blacksY) = ([], [])
 count = 0
 for x in range(n):
     inp = input()

@@ -1,7 +1,6 @@
-n, x = input().split()
+(n, x) = input().split()
 n = int(n)
 X = int(x)
-
 if X > n ** 2:
     print(0)
 else:

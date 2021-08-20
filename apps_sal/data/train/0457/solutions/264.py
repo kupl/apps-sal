@@ -1,5 +1,7 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
+
         def helper(amount, minAmounts):
             if amount == 0:
                 return 0
@@ -12,7 +14,6 @@ class Solution:
                 minAmount = min(minAmount, helper(amount - coin, minAmounts) + 1)
             minAmounts[amount] = minAmount
             return minAmount
-
         minAmounts = dict()
         x = helper(amount, minAmounts)
         if x == math.inf:

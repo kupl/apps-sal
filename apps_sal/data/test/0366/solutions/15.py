@@ -1,7 +1,4 @@
-#a = [int(i) for i in input().split()]
-#n = input()
-n, s = map(int, input().split())
-
+(n, s) = map(int, input().split())
 if s % n == 0:
     print(s // n)
 else:

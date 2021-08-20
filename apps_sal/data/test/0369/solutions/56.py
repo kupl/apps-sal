@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 S = input()
 S = S[::-1]
 now = 0
@@ -18,6 +18,5 @@ while True:
         break
     if now == N:
         break
-
 if ok == 1:
     print(' '.join(history[::-1]))

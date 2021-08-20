@@ -1,6 +1,5 @@
 p = str(input())
-
 if p.isupper() == True:
-    print("A")
+    print('A')
 else:
-    print("a")
+    print('a')

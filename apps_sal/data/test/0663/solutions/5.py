@@ -5,7 +5,6 @@ x0 = int(line[1])
 y0 = int(line[2])
 x1 = int(line[3])
 y1 = int(line[4])
-
 while True:
     if x0 == x1 and y0 == y1:
         print('0')

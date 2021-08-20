@@ -6,4 +6,4 @@ def remove_duplicate_words(s):
         if w not in visited:
             res.append(w)
             visited.add(w)
-    return " ".join(res)
+    return ' '.join(res)

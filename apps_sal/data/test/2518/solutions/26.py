@@ -1,14 +1,10 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 h = [int(input()) for i in range(n)]
 maxim_h = max(h)
-
 ok = (maxim_h + a - 1) // a * n
 ng = 0
 while abs(ok - ng) > 1:
-
     X = (ok + ng) // 2
-    # X回爆発を起こす必要があると仮定する
-
     cnt = 0
     flag = 1
     for val in h:
@@ -16,12 +12,9 @@ while abs(ok - ng) > 1:
             continue
         temp = (val - b * X + a - b - 1) // (a - b)
         cnt += temp
-
         if cnt > X:
             flag = 0
             break
-
-    #print(X, cnt, ok)
     if flag:
         ok = X
     else:

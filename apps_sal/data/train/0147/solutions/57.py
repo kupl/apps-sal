@@ -1,5 +1,5 @@
 class Solution:
-    # O(nlogn + 2nlogk) time, no unnecessary max comparison, O(n) space
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         mod = 10 ** 9 + 7
         eff_speed = sorted(zip(efficiency, speed), reverse=True)
@@ -21,7 +21,6 @@ class Solution:
             max_perf = max(max_perf, cur_efficiency * speed_sum)
         return max_perf % mod
 
-    # O(nlogn + 2nlogk) time, O(n) space
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         mod = 10 ** 9 + 7
         eff_speed = sorted(zip(efficiency, speed), reverse=True)
@@ -29,7 +28,7 @@ class Solution:
         speed_h = []
         speed_sum = 0
         max_perf = 0
-        for e, s in eff_speed:
+        for (e, s) in eff_speed:
             heapq.heappush(speed_h, s)
             speed_sum += s
             if len(speed_h) > k:

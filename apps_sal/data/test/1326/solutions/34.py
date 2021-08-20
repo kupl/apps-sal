@@ -27,11 +27,11 @@ def main(N):
                 count += 1
                 n //= spf[n]
             else:
-                fk *= (count + 1)
+                fk *= count + 1
                 before = spf[n]
                 count = 1
                 n //= spf[n]
-        fk *= (count + 1)
+        fk *= count + 1
         ans += k * fk
     print(ans)
 

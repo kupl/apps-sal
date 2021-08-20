@@ -7,10 +7,10 @@ for i in range(n):
     a.append(A)
     l.append(L)
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     b = [0] * n
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             b[j] = 1
     for k in range(n):
         for h in range(a[k]):
@@ -23,5 +23,4 @@ for i in range(2**n):
         break
     else:
         ans = max(ans, sum(b))
-
 print(ans)

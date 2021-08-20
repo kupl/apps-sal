@@ -5,7 +5,6 @@ def main():
     g = []
     for i in range(5):
         g.append(list(map(int, input().split())))
-
     already = []
     smax = 0
     for q1 in range(5):

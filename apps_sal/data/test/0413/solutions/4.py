@@ -3,7 +3,6 @@ t = input()
 loc = t.split(' ')
 n = int(loc[0])
 m = int(loc[1])
-
 b = math.ceil(math.log2(m / n))
 c = 0
 temp = m
@@ -16,7 +15,5 @@ else:
         else:
             c = c + 1
             temp = (temp + 1) / 2
-
     d = c + n - temp + b
-
 print(int(d))

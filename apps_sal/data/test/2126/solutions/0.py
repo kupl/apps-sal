@@ -1,5 +1,5 @@
 def main():
-    n, m, h = map(int, input().split())
+    (n, m, h) = map(int, input().split())
     row = list(map(int, input().split()))
     col = list(map(int, input().split()))
     mat = [list(map(int, input().split())) for _ in range(n)]

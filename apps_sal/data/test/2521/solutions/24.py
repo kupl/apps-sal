@@ -22,8 +22,8 @@ def main():
         fdl[i] = fdl[i - 1] + a[n + i - 1] - fmn
         ldl[i] = ldl[i - 1] + b[n + i - 1] - lmn
     ldl.reverse()
-    dif = max([x + y for x, y in zip(fdl, ldl)])
-    print((fs + ls + dif))
+    dif = max([x + y for (x, y) in zip(fdl, ldl)])
+    print(fs + ls + dif)
 
 
 def __starting_point():

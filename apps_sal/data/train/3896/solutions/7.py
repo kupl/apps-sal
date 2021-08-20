@@ -1,4 +1,5 @@
 class Multiples:
+
     def __init__(self, maximum):
         self.maximum = maximum
 

@@ -10,5 +10,4 @@ def move(a, b):
 ans = 0
 for i in range(N):
     ans += move(int(S1[i]), int(S2[i]))
-
 print(ans)

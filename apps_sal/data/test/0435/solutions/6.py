@@ -2,18 +2,18 @@ def solve(n, k, l):
     ki = i = s = 0
     po = 1
     for j in range(n):
-        s += (l[j] == 0)
+        s += l[j] == 0
         while s > k:
-            s -= (l[i] == 0)
+            s -= l[i] == 0
             i += 1
         if j - i > ki - po:
-            po, ki = i, j
+            (po, ki) = (i, j)
     return ki - po + 1
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-list1, list2 = [], []
+(list1, list2) = ([], [])
 for i in range(n):
     if s[i] == 'a':
         list1.append(1)

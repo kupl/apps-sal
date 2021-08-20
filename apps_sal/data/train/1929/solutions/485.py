@@ -1,4 +1,5 @@
-class Trie():
+class Trie:
+
     def __init__(self):
         self.isWord = False
         self.children = {}
@@ -30,13 +31,7 @@ class StreamChecker:
         node = self.StreamChecker
         word = word[::-1]
         for letter in word:
-
             if letter not in node.children:
                 node.children[letter] = Trie()
             node = node.children[letter]
         node.isWord = True
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

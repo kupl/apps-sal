@@ -3,5 +3,4 @@ def divisible_by(numbers, divisor):
     for num in numbers:
         if num % divisor == 0:
             c.append(num)
-
     return c

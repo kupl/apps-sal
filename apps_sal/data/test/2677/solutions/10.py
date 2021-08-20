@@ -1,4 +1,3 @@
-# cook your dish here
 v = ['a', 'e', 'i', 'o', 'u']
 c = []
 vo = 0
@@ -19,8 +18,7 @@ for i in range(len(x)):
         k = k + [x[i]]
 k = list(set(k))
 p = list(filter(lambda x: x >= 3, p))
-# print(p)
 if len(p) >= 1 and len(k) >= 5:
-    print("GOOD")
+    print('GOOD')
 else:
     print(-1)

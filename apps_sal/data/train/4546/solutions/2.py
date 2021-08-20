@@ -1,4 +1,3 @@
-# wow this is very long :)
 def find_children(people):
     string = []
     answer = []
@@ -34,7 +33,7 @@ def find_children(people):
         dex = -1
         index += 1
         symbol = string[index]
-        if symbol == '?' or symbol == "!":
+        if symbol == '?' or symbol == '!':
             continue
         for num in range(len(alphabet)):
             dex += 1
@@ -46,7 +45,7 @@ def find_children(people):
             string = ' '.join([str(i) for i in string]).replace(alphabet[dex], '?').split(' ')
         else:
             answer.append(alphabet[dex])
-    return (''.join([str(i) for i in answer]))
+    return ''.join([str(i) for i in answer])
 
 
-print(find_children("aabAB"))
+print(find_children('aabAB'))

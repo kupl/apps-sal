@@ -1,4 +1,4 @@
-X, Y = (int(x) for x in input().split())
+(X, Y) = (int(x) for x in input().split())
 Flag = False
 for A in range(0, X + 1):
     B = X - A

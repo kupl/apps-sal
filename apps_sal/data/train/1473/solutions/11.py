@@ -17,11 +17,11 @@ def get_result(r, c, dims):
 def __starting_point():
     num = int(input())
     for i in range(num):
-        R, C, M, K, J = [int(x) for x in input().split()]
-        if(get_result(R, C, [M, K, J])):
-            print("Yes")
+        (R, C, M, K, J) = [int(x) for x in input().split()]
+        if get_result(R, C, [M, K, J]):
+            print('Yes')
         else:
-            print("No")
+            print('No')
 
 
 __starting_point()

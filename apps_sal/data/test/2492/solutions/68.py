@@ -8,7 +8,7 @@ def get_Negative(K, pos, neg):
     while r - l > 1:
         m = (l + r) // 2
         target = m // pos
-        x = np.searchsorted(neg, target, side="right").sum()
+        x = np.searchsorted(neg, target, side='right').sum()
         if x >= K:
             r = m
         else:
@@ -26,12 +26,12 @@ def get_Positive(K, pos, neg):
         cnt = 0
         if len(pos) > 1:
             t1 = m // pos
-            x1 = np.searchsorted(pos, t1, side="right")
+            x1 = np.searchsorted(pos, t1, side='right')
             x1 = np.maximum(0, x1 - tmp_pos - 1)
             cnt += x1.sum()
         if len(neg) > 0:
             t2 = m // neg
-            x2 = np.searchsorted(neg, t2, side="right")
+            x2 = np.searchsorted(neg, t2, side='right')
             x2 = np.maximum(0, x2 - tmp_neg - 1)
             cnt += x2.sum()
         if cnt >= K:
@@ -42,18 +42,15 @@ def get_Positive(K, pos, neg):
 
 
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = np.array(input().split(), dtype=np.int64)
-
     positive = A[A > 0]
     negative = -A[A < 0]
     positive.sort()
     negative.sort()
-
     Npos = len(positive)
     Nneg = len(negative)
     Nzero = N - Npos - Nneg
-
     P_neg = Npos * Nneg
     P_pos = 0
     if Npos:
@@ -61,7 +58,6 @@ def main():
     if Nneg:
         P_pos += Nneg * (Nneg - 1) // 2
     P_zero = N * (N - 1) // 2 - P_pos - P_neg
-
     if K <= P_neg:
         ans = get_Negative(K, positive, negative)
         return ans

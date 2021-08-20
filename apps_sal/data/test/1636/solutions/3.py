@@ -2,7 +2,7 @@ n = int(input())
 MAX = 100000
 coord = [list() for i in range(2 * MAX + 1)]
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     coord[y - x - MAX].append((x, y))
 w = list(map(int, input().split()))
 for i in range(2 * MAX + 1):
@@ -18,7 +18,7 @@ for i in range(n):
         if last_x[y] == x - 1 and last_y[x] == y - 1:
             last_x[y] += 1
             last_y[x] += 1
-            ans[i] = x, y
+            ans[i] = (x, y)
             coord[w[i] - MAX].pop(0)
         else:
             possible = False
@@ -27,7 +27,7 @@ for i in range(n):
         possible = False
         break
 if possible:
-    print("YES")
-    print("\n".join([" ".join(map(str, coords)) for coords in ans]))
+    print('YES')
+    print('\n'.join([' '.join(map(str, coords)) for coords in ans]))
 else:
-    print("NO")
+    print('NO')

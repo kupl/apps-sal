@@ -7,7 +7,7 @@ def f(b, n):
     if n < b:
         return n
     else:
-        return f(b, n // b) + (n % b)
+        return f(b, n // b) + n % b
 
 
 def abc(N, S):

@@ -10,11 +10,10 @@ for _ in range(int(input())):
         oc += i % 2
     if oc:
         if oc % 2:
-            print("YES")
+            print('YES')
+        elif n - oc:
+            print('YES')
         else:
-            if n - oc:
-                print("YES")
-            else:
-                print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

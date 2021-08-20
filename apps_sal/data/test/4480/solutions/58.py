@@ -1,11 +1,11 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         n = len(A)
         sum_a = sum(A)
         if sum_a % 3 != 0:
             return False
         target = sum_a // 3
-
         output = []
         temp_sum = 0
         temp_output = []

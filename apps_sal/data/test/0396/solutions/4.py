@@ -5,6 +5,6 @@ n = 0
 for i in range(0, 33):
     for j in range(0, 33):
         cur = pow(2, i) * pow(3, j)
-        if (cur >= l and cur <= r):
+        if cur >= l and cur <= r:
             n += 1
 print(n)

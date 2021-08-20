@@ -1,7 +1,5 @@
-
 k = int(input())
 q = input()
-
 i = 0
 met = []
 ts = []
@@ -12,7 +10,6 @@ while i < len(q):
         met.append(q[i])
         ts.append(i)
 ts.append(len(q))
-
 if len(ts) >= k + 1:
     print('YES')
     for i in range(len(ts) - 1):

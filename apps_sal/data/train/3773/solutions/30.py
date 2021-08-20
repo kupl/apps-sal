@@ -3,7 +3,6 @@ def isValid(formula):
     t = []
 
     def mat1_mat2():
-        # material1 and material2 cannot be selected at the same time
         count = 0
         for i in formula:
             if i == 1:
@@ -18,7 +17,6 @@ def isValid(formula):
             t.append(False)
 
     def mat3_mat4():
-        # material3 and material4 cannot be selected at the same time
         count = 0
         for i in formula:
             if i == 3:
@@ -33,7 +31,6 @@ def isValid(formula):
             t.append(False)
 
     def mat5_mat6():
-        # material5 and material6 must be selected at the same time
         count = 0
         for i in formula:
             if i == 5:
@@ -48,7 +45,6 @@ def isValid(formula):
             t.append(True)
 
     def mat7_mat8():
-        # material7 or material8 must be selected(at least one, or both)
         count = 0
         for i in formula:
             if i == 7:
@@ -61,10 +57,8 @@ def isValid(formula):
             t.append(True)
         else:
             t.append(False)
-
     mat1_mat2()
     mat3_mat4()
     mat5_mat6()
     mat7_mat8()
-
     return all(t)

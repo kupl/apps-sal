@@ -1,14 +1,10 @@
-# D - Equal Cut
 import bisect
-
 N = int(input())
-A = list(int(a) for a in input().split())
-
+A = list((int(a) for a in input().split()))
 Acum = [0] * (N + 1)
 for i in range(N):
     Acum[i + 1] = Acum[i] + A[i]
-
-ans = 10**18
+ans = 10 ** 18
 for i in range(2, N - 1):
     B = bisect.bisect_left(Acum, Acum[i] // 2) - 1
     if abs(Acum[B] * 2 - Acum[i]) > abs(Acum[B + 1] * 2 - Acum[i]):

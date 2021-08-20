@@ -1,9 +1,6 @@
 a = input()
-
-if a[-1] == "s":
-    a += "es"
+if a[-1] == 's':
+    a += 'es'
 else:
-    a += "s"
-
-
+    a += 's'
 print(a)

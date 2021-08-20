@@ -1,4 +1,5 @@
-def val(x): return x * (x + 1) >> 1
+def val(x):
+    return x * (x + 1) >> 1
 
 
 def solution(number):

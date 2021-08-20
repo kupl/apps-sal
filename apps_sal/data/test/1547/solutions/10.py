@@ -1,16 +1,14 @@
-n, m, k = list(map(int, input().split()))
-
+(n, m, k) = list(map(int, input().split()))
 rows = [[0, 0] for i in range(n)]
 cols = [[0, 0] for i in range(m)]
 for i in range(k):
-    typ, p, x = list(map(int, input().split()))
+    (typ, p, x) = list(map(int, input().split()))
     if typ == 1:
         rows[p - 1] = [x, i + 1]
     elif typ == 2:
         cols[p - 1] = [x, i + 1]
     else:
         print('WTF?!')
-
 for i in range(n):
     line = []
     for j in range(m):

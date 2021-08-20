@@ -18,7 +18,6 @@ l1 = [i for i in d1.values()]
 l2 = [i for i in d2.values()]
 l1.sort()
 l2.sort()
-
 if l1 == l2:
     print('Yes')
 else:

@@ -1,5 +1,5 @@
 from numpy import *
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 x = []
 for i in range(r):
     y = list(map(int, input().split()))
@@ -12,15 +12,15 @@ for i in x:
     a = min(i)
     ab = 0
     for k in range(len(i)):
-        if(i[k] == a):
+        if i[k] == a:
             c.append(k)
     for k in c:
         d = max(list(b[k]))
-        if(a == d):
+        if a == d:
             print(a)
             ab += 1
             break
-    if(ab > 0):
+    if ab > 0:
         break
 else:
-    print("GUESS")
+    print('GUESS')

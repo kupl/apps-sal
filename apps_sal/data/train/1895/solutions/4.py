@@ -1,10 +1,11 @@
 class Solution:
+
     def validTicTacToe(self, board):
         """
         :type board: List[str]
         :rtype: bool
         """
-        O, X = 0, 0
+        (O, X) = (0, 0)
         for r in board:
             for c in r:
                 if c == 'O':
@@ -37,5 +38,4 @@ class Solution:
                 return False
             if board[2][0] == board[1][1] == board[0][2] == 'O':
                 return False
-
         return True

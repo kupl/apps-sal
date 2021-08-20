@@ -1,10 +1,11 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, k = readln()
+(n, k) = readln()
 a = readln()
 ans = 0
 for i in range(k):

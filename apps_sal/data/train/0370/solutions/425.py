@@ -10,20 +10,22 @@ class DisjointSetUnion:
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return px
         if self.size[px] > self.size[py]:
-            px, py = py, px
+            (px, py) = (py, px)
         self.parent[px] = py
         self.size[py] += self.size[px]
         return py
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def getDistinctPrimeFactors(num):
-            factor, primeFactors = 2, set()
+            (factor, primeFactors) = (2, set())
             while num >= factor * factor:
                 if num % factor:
                     factor += 1
@@ -39,7 +41,7 @@ class Solution:
             factorMap[num] = primeFactors[0]
             for i in range(len(primeFactors) - 1):
                 dsu.union(primeFactors[i], primeFactors[i + 1])
-        maxSize, groupCount = 0, defaultdict(int)
+        (maxSize, groupCount) = (0, defaultdict(int))
         for num in A:
             groupId = dsu.find(factorMap[num])
             groupCount[groupId] += 1

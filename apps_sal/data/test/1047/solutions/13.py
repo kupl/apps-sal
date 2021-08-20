@@ -1,5 +1,3 @@
-
-
 def main(k):
     num = list(map(int, k))
     res = []
@@ -15,9 +13,9 @@ def main(k):
                 st.append('0')
         if not flag:
             break
-        res.append(str(int("".join(st))))
+        res.append(str(int(''.join(st))))
     print(str(len(res)))
-    print(" ".join(res))
+    print(' '.join(res))
 
 
 def __starting_point():

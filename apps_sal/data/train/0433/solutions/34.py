@@ -1,6 +1,7 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
-        l, r = 0, k - 1
+        (l, r) = (0, k - 1)
         temp = 0
         for i in range(l, r + 1):
             temp += arr[i]

@@ -1,11 +1,12 @@
 class Solution:
+
     def fractionToDecimal(self, numerator, denominator):
         """
         :type numerator: int
         :type denominator: int
         :rtype: str
         """
-        res = ""
+        res = ''
         if numerator * denominator < 0:
             res += '-'
         if numerator % denominator == 0:

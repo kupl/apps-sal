@@ -1,4 +1,4 @@
-N, K = map(int, input().rstrip().split())
+(N, K) = map(int, input().rstrip().split())
 if N % K == 0:
     print(0)
 else:

@@ -1,18 +1,17 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
-    p, q = input().split()
-    char = ""
+    (n, k) = map(int, input().split())
+    (p, q) = input().split()
+    char = ''
     pos = 0
-    if p == "L":
+    if p == 'L':
         pos = k
     else:
         pos = n - k + 1
     if pos & 1 == 1:
         char = q
+    elif q == 'H':
+        char = 'E'
     else:
-        if q == 'H':
-            char = "E"
-        else:
-            char = "H"
+        char = 'H'
     print(pos, char)

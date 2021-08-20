@@ -1,4 +1,4 @@
-n, t, p = int(input()), set(input().split()), []
+(n, t, p) = (int(input()), set(input().split()), [])
 if '100' in t:
     p.append('100')
     t.remove('100')

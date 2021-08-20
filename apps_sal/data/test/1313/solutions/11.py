@@ -1,6 +1,5 @@
-n, m, a, b = list(map(int, input().split()))
-
+(n, m, a, b) = list(map(int, input().split()))
 if m >= n:
-    print("Second")
+    print('Second')
 else:
-    print("First")
+    print('First')

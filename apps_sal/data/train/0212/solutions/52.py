@@ -1,9 +1,9 @@
 class Solution:
+
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         if len(A) <= 1:
             return len(A)
-
-        N, MOD = len(A), 10 ** 9 + 7
+        (N, MOD) = (len(A), 10 ** 9 + 7)
         trees = {}
         ans = 0
         A.sort()

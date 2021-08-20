@@ -1,8 +1,7 @@
 for _ in range(int(input())):
-    n, u, d = list(map(int, input().split()))
+    (n, u, d) = list(map(int, input().split()))
     hills = list(map(int, input().split()))
     u *= -1
-
     curr = hills[0]
     count = 0
     para = True
@@ -14,7 +13,5 @@ for _ in range(int(input())):
             para = False
         else:
             break
-
         curr = h
-
     print(count + 1)

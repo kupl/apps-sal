@@ -1,6 +1,6 @@
-def numeric_formatter(template, digits="1234567890"):
+def numeric_formatter(template, digits='1234567890'):
     counter = 0
-    formatted = ""
+    formatted = ''
     for char in template:
         if counter >= len(digits):
             counter = 0

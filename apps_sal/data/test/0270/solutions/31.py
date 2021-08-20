@@ -1,25 +1,21 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ST = [tuple(map(int, input().split())) for i in range(M)]
-
 es = [[] for _ in range(N)]
-for s, t in ST:
-    s, t = s - 1, t - 1
+for (s, t) in ST:
+    (s, t) = (s - 1, t - 1)
     es[s].append(t)
-
 dp = [0] * N
 for i in range(N - 2, -1, -1):
     s = 0
     for to in es[i]:
         s += dp[to]
     dp[i] = 1 + s / len(es[i])
-
 pp = [0] * N
 pp[0] = 1.0
 for i in range(N - 1):
     l = len(es[i])
     for to in es[i]:
         pp[to] += pp[i] / l
-
 ans = dp[0]
 for i in range(N - 1):
     l = len(es[i])

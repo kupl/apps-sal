@@ -5,5 +5,4 @@ def multiply(n):
         m = str(c)
     else:
         m = str(n)
-
-    return n * 5**len(m)
+    return n * 5 ** len(m)

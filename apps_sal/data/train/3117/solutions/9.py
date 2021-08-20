@@ -1,6 +1,5 @@
 from re import compile
-
-r = compile("[aeiou]+")
+r = compile('[aeiou]+')
 
 
 def solve(s: str):

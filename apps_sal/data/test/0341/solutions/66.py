@@ -1,9 +1,9 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = list(map(int, input().split()))
     t = input()
     s = 'rsp'
-    dp = [[-10**10] * (n + k) for _ in range(3)]
+    dp = [[-10 ** 10] * (n + k) for _ in range(3)]
     for i in range(k):
         for j in range(3):
             dp[j][i] = 0

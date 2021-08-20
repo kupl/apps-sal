@@ -3,7 +3,7 @@ x = list(map(int, input().split()))
 v = list(map(int, input().split()))
 left = 0
 right = 10 ** 9
-while right - left > 0.0000001:
+while right - left > 1e-07:
     mid = (left + right) / 2
     a = min(x)
     b = max(x)

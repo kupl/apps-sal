@@ -1,4 +1,5 @@
 class DFS:
+
     def __init__(self, n):
         self.p = list(range(n))
 
@@ -8,11 +9,12 @@ class DFS:
         return self.p[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         self.p[xr] = yr
 
 
 class Solution:
+
     def prime_sets(self, n):
         for i in range(2, int(math.sqrt(n)) + 1):
             if n % i == 0:
@@ -22,14 +24,11 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         UF = DFS(len(A))
         primes = collections.defaultdict(list)
-
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             prime_sets = self.prime_sets(n)
             for q in prime_sets:
                 primes[q].append(i)
-
-        for _, items in primes.items():
+        for (_, items) in primes.items():
             for i in range(len(items) - 1):
                 UF.union(items[i], items[i + 1])
-
         return max(Counter([UF.find(i) for i in range(len(A))]).values())

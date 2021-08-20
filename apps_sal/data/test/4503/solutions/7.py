@@ -1,6 +1,6 @@
-h, n = map(int, input().split())
+(h, n) = map(int, input().split())
 xlist = list(map(int, input().split()))
 if sum(xlist) >= h:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

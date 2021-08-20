@@ -1,9 +1,7 @@
-# cook your dish here
-
 mod = 1000000007
 t = int(input())
 while t:
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     ans = 0
     if l == r:
         print(l % mod)

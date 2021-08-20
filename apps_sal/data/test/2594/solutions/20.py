@@ -8,5 +8,5 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, m = read_ints()
+    (n, m) = read_ints()
     print((n * m + 1) // 2)

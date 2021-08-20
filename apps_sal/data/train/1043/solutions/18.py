@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     word = list(input().split())
     li = []
     for x in range(k):
@@ -8,7 +7,7 @@ for _ in range(int(input())):
         li += l
     for x in word:
         if x in li:
-            print("YES", end=" ")
+            print('YES', end=' ')
         else:
-            print("NO", end=" ")
+            print('NO', end=' ')
     print()

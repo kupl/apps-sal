@@ -11,9 +11,9 @@ if (s - 11) // 2 >= counter:
 elif (s - 11) // 2 < counter:
     if array[0] > (s - 11) // 2:
         print('NO')
-    elif array[(s - 11) // 2] - ((s - 11) // 2) <= (s - 11) // 2:
+    elif array[(s - 11) // 2] - (s - 11) // 2 <= (s - 11) // 2:
         print('YES')
-    elif array[(s - 11) // 2] - ((s - 11) // 2) > (s - 11) // 2:
+    elif array[(s - 11) // 2] - (s - 11) // 2 > (s - 11) // 2:
         print('NO')
 else:
     print('YES')

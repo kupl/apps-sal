@@ -1,17 +1,17 @@
 def main():
-    n, m, k = list(map(int, input().split()))
-    ff, tt = [], []
+    (n, m, k) = list(map(int, input().split()))
+    (ff, tt) = ([], [])
     for _ in range(m):
-        d, f, t, c = list(map(int, input().split()))
+        (d, f, t, c) = list(map(int, input().split()))
         if f:
             ff.append((d, f, c))
         else:
             tt.append((-d, t, c))
-    for ft in ff, tt:
-        cnt, costs = n, [1000001] * (n + 1)
+    for ft in (ff, tt):
+        (cnt, costs) = (n, [1000001] * (n + 1))
         ft.sort(reverse=True)
         while ft:
-            day, city, cost = ft.pop()
+            (day, city, cost) = ft.pop()
             oldcost = costs[city]
             if oldcost > cost:
                 costs[city] = cost
@@ -25,7 +25,7 @@ def main():
         total = sum(costs) - 1000001
         l = [(day, total)]
         while ft:
-            day, city, cost = ft.pop()
+            (day, city, cost) = ft.pop()
             oldcost = costs[city]
             if oldcost > cost:
                 total -= oldcost - cost
@@ -38,12 +38,12 @@ def main():
             ff = l
         else:
             tt = l
-    l, k = [], -k
-    d, c = tt.pop()
+    (l, k) = ([], -k)
+    (d, c) = tt.pop()
     try:
-        for day, cost in ff:
+        for (day, cost) in ff:
             while d + day >= k:
-                d, c = tt.pop()
+                (d, c) = tt.pop()
             if d + day < k:
                 l.append(c + cost)
     except IndexError:

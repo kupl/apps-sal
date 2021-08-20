@@ -1,11 +1,10 @@
 from itertools import combinations
-
 N = int(input())
 st = input()
 n = len(st)
 mx = []
 ans = False
-a = [st[x:y] for x, y in combinations(range(len(st) + 1), r=2)]
+a = [st[x:y] for (x, y) in combinations(range(len(st) + 1), r=2)]
 for i in a:
     for j in range(len(i) // 2):
         if i[j] == i[-1 - j]:
@@ -15,7 +14,6 @@ for i in a:
             break
     if ans == True:
         mx.append(i)
-
 m = max(mx, key=len)
 print(len(m))
 print(m)

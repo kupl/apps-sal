@@ -1,4 +1,4 @@
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 a = list(map(int, input().split()))
 c = [0] * (s + 1)
 ans = 0
@@ -11,5 +11,4 @@ for i in range(n):
         c[a[i]] += i + 1
     ans += c[s]
     ans %= mod
-
 print(ans)

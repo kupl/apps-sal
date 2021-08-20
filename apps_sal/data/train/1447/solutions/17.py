@@ -1,10 +1,7 @@
-# cook your dish here
 t = int(input())
-
 for _ in range(t):
     n = int(input())
-    a = list(map(int, input().split(" ")))
-
+    a = list(map(int, input().split(' ')))
     d = {}
     flag = 0
     for i in range(n):
@@ -14,19 +11,15 @@ for _ in range(t):
             temp = d[a[i]][1]
             d[a[i]] = [i, temp + 1]
         else:
-            print("NO")
+            print('NO')
             flag = 1
             break
-
-    # print(d)
     vals = list(d.values())
     dist = []
     for i in vals:
-        # print(i)
         dist.append(i[1])
-
     if flag == 0:
         if len(dist) == len(set(dist)):
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

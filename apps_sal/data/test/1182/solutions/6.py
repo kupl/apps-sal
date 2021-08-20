@@ -1,7 +1,7 @@
-r, c, n, k = [int(x) for x in input().split()]
+(r, c, n, k) = [int(x) for x in input().split()]
 mus = [[0 for j in range(c)] for i in range(r)]
 for t in range(n):
-    x, y = [int(s) - 1 for s in input().split()]
+    (x, y) = [int(s) - 1 for s in input().split()]
     mus[x][y] = 1
 ans = 0
 for i1 in range(r):

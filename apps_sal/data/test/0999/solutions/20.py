@@ -3,7 +3,7 @@ n = int(input())
 min = sys.maxsize
 max1 = 0
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if min > b:
         min = b
     if max1 < a:
@@ -12,7 +12,7 @@ m = int(input())
 max = 0
 min1 = sys.maxsize
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if max < a:
         max = a
     if min1 > b:

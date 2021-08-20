@@ -1,10 +1,9 @@
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
     n = list(map(int, list(input())))
     n.reverse()
-    # print(n)
     n.append(0)
     N = len(n) - 1
     DP = [[INF, INF] for i in range(N + 2)]
@@ -12,9 +11,7 @@ def main():
     for i in range(N + 1):
         DP[i][0] = min(DP[i - 1][0] + (9 - n[i]), DP[i - 1][1] + (10 - n[i]))
         DP[i][1] = min(DP[i - 1][0] + n[i] + 1, DP[i - 1][1] + n[i])
-
     ans = min(DP[-2])
-    # print(DP)
     print(ans)
 
 

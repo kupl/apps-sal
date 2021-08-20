@@ -1,7 +1,7 @@
 def main():
-    A, B = input().split('e')
+    (A, B) = input().split('e')
     B = int(B)
-    s1, s2 = A.split('.')
+    (s1, s2) = A.split('.')
     if B == 0:
         if s2 == '0':
             print(s1)

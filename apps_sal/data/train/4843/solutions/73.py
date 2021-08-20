@@ -18,13 +18,11 @@ def _choose_best_sum(t, k, ls):
     las_sum = sum(ls[-k:])
     if las_sum < t:
         return las_sum
-
     r = None
     for i in range(1, len(ls) - k + 2):
         val = ls[-i]
         if val > t:
             continue
-
         l = ls[:]
         del l[-i]
         result = _choose_best_sum(t - val, k - 1, l)

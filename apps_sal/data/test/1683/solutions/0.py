@@ -1,10 +1,7 @@
 from sys import stdin, stdout, exit
-
 mod = 998244353
-
 n = int(stdin.readline())
 a = list(map(int, stdin.readline().split()))
-
 ans = 0
 
 
@@ -21,10 +18,10 @@ for x in a:
 
 def space_out(x, l):
     ans = []
-    for i, c in enumerate(reversed(str(x))):
+    for (i, c) in enumerate(reversed(str(x))):
         ans.append(c)
         if i < l:
-            ans.append("0")
+            ans.append('0')
     return int(''.join(reversed(ans)))
 
 
@@ -34,14 +31,11 @@ for i in range(n):
     cur = x
     prev = x
     for l in range(11):
-        #        print(cur, cur_head)
         if l > 0:
-            ans += lens[l] * (cur + 10 * prev)  # space_out(x,l)
+            ans += lens[l] * (cur + 10 * prev)
             ans %= mod
         prev = cur
-        cur -= cur_head * 10**(2 * l + 1)
-        cur += cur_head * 10**(2 * l + 2)
+        cur -= cur_head * 10 ** (2 * l + 1)
+        cur += cur_head * 10 ** (2 * l + 2)
         cur_head //= 10
-
-
-stdout.write(str(ans) + "\n")
+stdout.write(str(ans) + '\n')

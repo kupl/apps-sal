@@ -10,4 +10,4 @@ for _ in range(n):
     t = input()
     if make_hash(t) == s:
         good = False
-print("Yes" if good else "No")
+print('Yes' if good else 'No')

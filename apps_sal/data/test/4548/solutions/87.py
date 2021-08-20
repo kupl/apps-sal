@@ -1,4 +1,4 @@
-n, m, x = map(int, input().split())
+(n, m, x) = map(int, input().split())
 li = list(map(int, input().split()))
 cnt = 0
 cou = 0

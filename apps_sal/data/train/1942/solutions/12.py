@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
         fev_set = []
         for i in favoriteCompanies:
@@ -7,9 +8,9 @@ class Solution:
                 tmp.add(j)
             fev_set.append(tmp)
         ans = []
-        for ind, i in enumerate(fev_set):
+        for (ind, i) in enumerate(fev_set):
             flag = 0
-            for i2, j in enumerate(fev_set):
+            for (i2, j) in enumerate(fev_set):
                 if i2 != ind and i <= j:
                     flag = 1
                     break

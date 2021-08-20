@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def check(day):
             flowers = list(map(lambda d: d <= day, bloomDay))
             mm = 0

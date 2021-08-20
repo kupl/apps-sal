@@ -1,8 +1,7 @@
 from operator import itemgetter
 import sys
 input = sys.stdin.readline
-
-X, Y, N = map(int, input().split())
+(X, Y, N) = map(int, input().split())
 U = []
 D = []
 R = []
@@ -10,7 +9,7 @@ L = []
 
 
 def mustconsider(x, y):
-    return (x in [0, X]) or (y in [0, Y])
+    return x in [0, X] or y in [0, Y]
 
 
 def divide(x, y, i):
@@ -25,34 +24,29 @@ def divide(x, y, i):
 
 
 for i in range(N):
-    x1, y1, x2, y2 = map(int, input().split())
+    (x1, y1, x2, y2) = map(int, input().split())
     if mustconsider(x1, y1) and mustconsider(x2, y2):
         divide(x1, y1, i)
         divide(x2, y2, i)
-
 D.sort()
 R.sort()
 U.sort(reverse=True)
 L.sort(reverse=True)
-
 Arounds = []
-for _, ind in D:
+for (_, ind) in D:
     Arounds.append(ind)
-for _, ind in R:
+for (_, ind) in R:
     Arounds.append(ind)
-for _, ind in U:
+for (_, ind) in U:
     Arounds.append(ind)
-for _, ind in L:
+for (_, ind) in L:
     Arounds.append(ind)
-
 stack = []
 for a in Arounds:
     if not stack:
         stack.append(a)
+    elif stack[-1] == a:
+        stack.pop()
     else:
-        if stack[-1] == a:
-            stack.pop()
-        else:
-            stack.append(a)
-
-print("YES" if not stack else "NO")
+        stack.append(a)
+print('YES' if not stack else 'NO')

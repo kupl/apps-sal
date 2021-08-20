@@ -2,7 +2,8 @@ import sys
 readline = sys.stdin.readline
 
 
-class UF():
+class UF:
+
     def __init__(self, num):
         self.par = [-1] * num
 
@@ -23,7 +24,7 @@ class UF():
         ry = self.find(y)
         if rx != ry:
             if self.par[rx] > self.par[ry]:
-                rx, ry = ry, rx
+                (rx, ry) = (ry, rx)
             self.par[rx] += self.par[ry]
             self.par[ry] = rx
             return True
@@ -33,7 +34,7 @@ class UF():
 T = int(readline())
 Ans = [None] * T
 for qu in range(T):
-    N, M = list(map(int, readline().split()))
+    (N, M) = list(map(int, readline().split()))
     Edge = [tuple([int(x) - 1 for x in readline().split()]) for _ in range(M)]
     if N & 1:
         res = N * (N - 1) // 2 - M
@@ -44,9 +45,8 @@ for qu in range(T):
         continue
     else:
         T = UF(N)
-        for u, v in Edge:
+        for (u, v) in Edge:
             T.union(u, v)
-
         S = set([T.find(0), T.find(N - 1)])
         odd = 0
         even = 0
@@ -74,28 +74,22 @@ for qu in range(T):
                     ans = 0
                 else:
                     ans = 0
+            elif not even & 1:
+                ans = 1
             else:
-                if not even & 1:
-                    ans = 1
-                else:
-                    ans = 1
+                ans = 1
+        elif odd % 4 == 0:
+            ans = 1
+        elif odd % 4 == 1:
+            ans = 1
+        elif odd % 4 == 2:
+            if not even & 1:
+                ans = 1
+            else:
+                ans = 1
+        elif not even & 1:
+            ans = 1
         else:
-            if odd % 4 == 0:
-                ans = 1
-            elif odd % 4 == 1:
-                ans = 1
-            elif odd % 4 == 2:
-                if not even & 1:
-                    ans = 1
-                else:
-                    ans = 1
-            else:
-                if not even & 1:
-                    ans = 1
-                else:
-                    ans = 0
-
+            ans = 0
         Ans[qu] = 'First' if ans else 'Second'
-
-
-print(('\n'.join(Ans)))
+print('\n'.join(Ans))

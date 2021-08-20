@@ -1,7 +1,7 @@
 def build_jump_table(code):
     jumps = {}
     stack = []
-    for i, c in enumerate(code):
+    for (i, c) in enumerate(code):
         if c == '[':
             stack.append(i)
         elif c == ']':
@@ -12,6 +12,7 @@ def build_jump_table(code):
 
 
 class Interpreter:
+
     def __init__(self, code, width, height):
         self.code = code
         self.jumps = build_jump_table(code)
@@ -49,7 +50,7 @@ class Interpreter:
                 pc = self.jumps[pc]
             pc += 1
             iterations -= op in '*nswe[]'
-        return '\r\n'.join(''.join(map(str, row)) for row in self.cells)
+        return '\r\n'.join((''.join(map(str, row)) for row in self.cells))
 
 
 def interpreter(code, iterations, width, height):

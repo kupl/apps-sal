@@ -1,18 +1,17 @@
-mod = 10**9 + 7
-
-r1, c1, r2, c2 = map(int, input().split())
+mod = 10 ** 9 + 7
+(r1, c1, r2, c2) = map(int, input().split())
 
 
 def inv(x):
     m = mod
     u = 1
     v = 0
-    while(m):
+    while m:
         t = x // m
         x -= t * m
-        x, m = m, x
+        (x, m) = (m, x)
         u -= t * v
-        u, v = v, u
+        (u, v) = (v, u)
     u %= mod
     if u < 0:
         u += mod

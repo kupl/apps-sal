@@ -1,7 +1,7 @@
 class Solution:
-    def minOperations(self, A):
 
-        steps, n = 0, len(A)
+    def minOperations(self, A):
+        (steps, n) = (0, len(A))
         while True:
             zeros = 0
             for i in range(n):

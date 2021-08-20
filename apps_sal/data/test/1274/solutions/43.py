@@ -2,11 +2,11 @@ import heapq
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     data = {}
     priorityQ = []
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if a <= m:
             if a in data:
                 data[a].append(b)

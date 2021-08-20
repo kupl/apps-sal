@@ -4,14 +4,24 @@ from collections import *
 from itertools import *
 
 
-def int_arr(): return list(map(int, input().split()))
-def str_arr(): return list(map(str, input().split()))
-def two_int(): return map(int, input().split())
-def two_str(): return map(str, input().split())
+def int_arr():
+    return list(map(int, input().split()))
 
 
-mod = 10**9 + 7
-sys.setrecursionlimit(10**9)
+def str_arr():
+    return list(map(str, input().split()))
+
+
+def two_int():
+    return map(int, input().split())
+
+
+def two_str():
+    return map(str, input().split())
+
+
+mod = 10 ** 9 + 7
+sys.setrecursionlimit(10 ** 9)
 
 
 def solve(s, p):
@@ -30,7 +40,6 @@ def solve(s, p):
             if s == p:
                 flag = 1
                 break
-
     if flag == 1:
         return 'Yes'
     else:

@@ -1,9 +1,8 @@
 n = int(input())
 v = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 vc = []
-for i, j in zip(v, c):
+for (i, j) in zip(v, c):
     vc.append(i - j)
 vc = sorted(vc, reverse=True)
 ans = 0

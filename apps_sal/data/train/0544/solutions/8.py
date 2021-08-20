@@ -1,4 +1,3 @@
-# cook your code here
 zz = int(input(''))
 for j in range(zz):
     xx = int(input(''))
@@ -9,7 +8,7 @@ for j in range(zz):
         t = 3
         c = 0
         for k in range(4):
-            c = c + (int(x[kk]) * (2**t))
+            c = c + int(x[kk]) * 2 ** t
             kk = kk + 1
             t = t - 1
         sos = sos + chr(c + 97)

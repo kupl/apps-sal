@@ -7,8 +7,8 @@ while t != 0:
     for i in ls:
         p = {i | y for y in p} | {i}
         res |= p
-    if len(res) == (n * (n + 1)) // 2:
-        print("YES")
+    if len(res) == n * (n + 1) // 2:
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t -= 1

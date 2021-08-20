@@ -1,6 +1,6 @@
 def main():
-    n, m = input().split(' ')
-    n, m = int(n), int(m)
+    (n, m) = input().split(' ')
+    (n, m) = (int(n), int(m))
     str1 = '#' * m
     str2 = '.' * (m - 1) + '#'
     str3 = '#' + '.' * (m - 1)

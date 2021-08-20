@@ -5,6 +5,4 @@ def count_by(x, n):
         last_entry += x
         list_result.append(last_entry)
     return list_result
-    """
-    Return a sequence of numbers counting by `x` `n` times.
-    """
+    '\n    Return a sequence of numbers counting by `x` `n` times.\n    '

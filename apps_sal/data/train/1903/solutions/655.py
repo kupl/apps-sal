@@ -1,4 +1,5 @@
 class Union:
+
     def __init__(self, vertices):
         self.parent = [i for i in range(vertices)]
 
@@ -14,6 +15,7 @@ class Union:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         uf = Union(n)
@@ -29,7 +31,7 @@ class Solution:
         i = 0
         s = 0
         while s < n - 1:
-            u, v, cost = costs[i]
+            (u, v, cost) = costs[i]
             i += 1
             x = uf.find(u)
             y = uf.find(v)

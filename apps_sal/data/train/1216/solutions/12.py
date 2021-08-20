@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     f = 0
     for i in a:
@@ -9,7 +8,7 @@ while t > 0:
             f = 1
             break
     if f == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t = t - 1

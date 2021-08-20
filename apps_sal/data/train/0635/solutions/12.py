@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations
@@ -23,19 +22,18 @@ P = 1000000007
 
 
 def main():
-    n, k = In()
+    (n, k) = In()
     arr = L()
     ans = 0
     dict1 = {}
     v = min(k + 1, len(list(set(arr))))
-
     for i in range(n):
         if arr[i] in list(dict1.keys()):
             dict1[arr[i]] += 1
         else:
             dict1[arr[i]] = 1
     l1 = [-1] + list(dict1.keys())
-    dp = [[0 for i in range(v + 1)]for i in range(len(l1))]
+    dp = [[0 for i in range(v + 1)] for i in range(len(l1))]
     dp[0][0] = 1
     for i in range(1, len(l1)):
         dp[i][0] = 1

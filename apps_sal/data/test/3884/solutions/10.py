@@ -1,5 +1,3 @@
-
-
 i = input
 i()
 m = int(i())

@@ -1,7 +1,7 @@
 from collections import deque
 N = int(input())
 P = [int(i) for i in input().split()]
-inf = 10**20
+inf = 10 ** 20
 table = [[0] * (N + 2) for i in range(N + 2)]
 for i in range(1, N + 1):
     if P[i - 1] > 0:
@@ -42,7 +42,6 @@ ans = 0
 while True:
     visit = [-1] * (N + 2)
     bfs(0)
-    # print(table,visit)
     if visit[N + 1] == -1:
         break
     while True:
@@ -50,6 +49,5 @@ while True:
         if df == 0:
             break
         ans += df
-        # print(ans)
 num = sum([p for p in P if p > 0])
 print(num - ans)

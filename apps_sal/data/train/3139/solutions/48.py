@@ -3,5 +3,5 @@ def index(array, n):
         x = array[n]
     except IndexError:
         return -1
-    y = x**n
+    y = x ** n
     return y

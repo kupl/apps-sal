@@ -1,18 +1,16 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
-
 tot = 0
-
 row = []
 col = []
 n1 = 'row'
 n2 = 'col'
 for _ in range(n):
-    a += [[int(f)for f in input().split()]]
+    a += [[int(f) for f in input().split()]]
 if n > m:
     a = list(map(list, list(zip(*a))))
-    n, m = m, n
-    n1, n2 = n2, n1
+    (n, m) = (m, n)
+    (n1, n2) = (n2, n1)
 for x in range(n):
     for y in range(min(a[x])):
         row += [x + 1]

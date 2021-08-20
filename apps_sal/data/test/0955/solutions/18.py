@@ -6,19 +6,18 @@ u = []
 
 def rf(x, y):
     if x > y:
-        return(y)
-    return (x)
+        return y
+    return x
 
 
 for i in range(n):
-    k, s = input().split()
+    (k, s) = input().split()
     k = int(k)
     s = list(s)
     s.sort()
     a = 'A' in s
     b = 'B' in s
     c = 'C' in s
-    #print(a, b, c)
     if a:
         abc[0] = rf(abc[0], k)
     if b:

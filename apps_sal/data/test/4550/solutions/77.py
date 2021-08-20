@@ -1,7 +1,4 @@
-# 入力
-a, b, c = map(int, input().split())
-
-# 処理
+(a, b, c) = map(int, input().split())
 if a + b == c:
     print('Yes')
 elif a + c == b:

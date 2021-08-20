@@ -7,7 +7,6 @@ import bisect
 import string
 import math
 import time
-#import random
 
 
 def I():
@@ -40,23 +39,25 @@ def show(*inp, end='\n'):
 
 
 YN = ['Yes', 'No']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 ts = time.time()
-sys.setrecursionlimit(10**5)
-def input(): return sys.stdin.readline().rstrip()
+sys.setrecursionlimit(10 ** 5)
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 show_flg = False
 show_flg = True
-
 OR = ['OBEY', 'REBEL']
 
 
 def gcd(x, y):
-    y, x = max(x, y), min(x, y)
+    (y, x) = (max(x, y), min(x, y))
     if y % x == 0:
         return x
     return gcd(x, y % x)
@@ -65,12 +66,10 @@ def gcd(x, y):
 t = I()
 for _ in range(t):
     ans = 0
-    r, b, k = LI()
-    r, b = max(r, b), min(r, b)
-
+    (r, b, k) = LI()
+    (r, b) = (max(r, b), min(r, b))
     g = gcd(r, b)
-    r, b = r // g, b // g
-
+    (r, b) = (r // g, b // g)
     if (r - 2) // b >= k - 1:
         if r == b and k == 1:
             a = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         curr = 0
         max1 = 0
@@ -6,9 +7,8 @@ class Solution:
         for i in range(len(customers)):
             if i < X:
                 curr += customers[i]
-            else:
-                if grumpy[i] == 0:
-                    curr += customers[i]
+            elif grumpy[i] == 0:
+                curr += customers[i]
         max1 = curr
         for i in range(X, len(customers)):
             if grumpy[i] == 1:

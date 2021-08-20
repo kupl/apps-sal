@@ -1,13 +1,9 @@
 """
   Url: https://www.codechef.com/problems/BUCKETS
 """
-
-
-__author__ = "Ronald Kaiser"
-__email__ = "raios dot catodicos at gmail dot com"
-
-
-N, K = list(map(int, input().split()))
+__author__ = 'Ronald Kaiser'
+__email__ = 'raios dot catodicos at gmail dot com'
+(N, K) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = sum(a)
 p = list([v / s for v in a])

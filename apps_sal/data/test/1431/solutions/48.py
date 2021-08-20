@@ -10,7 +10,6 @@ for i in range(N):
         c %= 2
     if A[k] != c:
         B[k] = 1
-
 print(sum(B))
 for i in range(len(B)):
     if B[i] == 1:

@@ -1,4 +1,4 @@
-n, k1, k2 = list(map(int, input().split()))
+(n, k1, k2) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 bi = list(map(int, input().split()))
 ci = [0] * n
@@ -34,13 +34,12 @@ for i in range(j, 0, -1):
 if temp2 != -1:
     ans = 0
     for i in range(temp3):
-        ans += ci3[i] * (ci2[i]**2)
-    print(ans + (ci3[temp3] - temp2) * (ci2[temp3]**2) + temp2 * ((ci2[temp3] - 1))**2)
+        ans += ci3[i] * ci2[i] ** 2
+    print(ans + (ci3[temp3] - temp2) * ci2[temp3] ** 2 + temp2 * (ci2[temp3] - 1) ** 2)
+elif k >= ci3[0] * ci2[0]:
+    k -= ci3[0] * ci2[0]
+    print(k % 2)
 else:
-    if k >= ci3[0] * ci2[0]:
-        k -= ci3[0] * ci2[0]
-        print(k % 2)
-    else:
-        temp = k // ci3[0]
-        temp2 = k % ci3[0]
-        print((ci3[0] - temp2) * ((ci2[0] - temp)**2) + temp2 * ((ci2[0] - temp - 1))**2)
+    temp = k // ci3[0]
+    temp2 = k % ci3[0]
+    print((ci3[0] - temp2) * (ci2[0] - temp) ** 2 + temp2 * (ci2[0] - temp - 1) ** 2)

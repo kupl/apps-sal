@@ -1,5 +1,5 @@
-n, m = list(map(int, input().split()))
-if (2 * m + 1 > n):
+(n, m) = list(map(int, input().split()))
+if 2 * m + 1 > n:
     print(-1)
 else:
     print(n * m)

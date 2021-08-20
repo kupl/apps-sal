@@ -1,4 +1,3 @@
-# Jewels And Stones
 def common(s1, s2):
     n = 0
     done = []

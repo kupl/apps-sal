@@ -6,19 +6,43 @@ import itertools
 import math
 import string
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
 INF = float('inf')
 MOD = 10 ** 9 + 7
-def I(): return int(input())
-def F(): return float(input())
-def SS(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LSS(): return input().split()
+
+
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def SS():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LSS():
+    return input().split()
 
 
 def primeFactorization(n):
@@ -27,7 +51,7 @@ def primeFactorization(n):
     while temp % 2 == 0:
         ans.append(2)
         temp //= 2
-    for i in range(3, int(n**0.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2):
         while temp % i == 0:
             ans.append(i)
             temp //= i
@@ -46,15 +70,12 @@ def combMod(n, r, p):
 
 
 def resolve():
-    N, M = LI()
-
+    (N, M) = LI()
     pf = primeFactorization(M)
-    # 素因数ごとに、N個のグループにどう振り分けるかを計算する
     ans = 1
     for i in list(pf.values()):
         ans *= combMod(i + N - 1, i, MOD)
         ans %= MOD
-
     print(ans)
 
 

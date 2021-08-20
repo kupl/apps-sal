@@ -1,5 +1,5 @@
 n = int(input())
-MAXN = 10**6 + 20
+MAXN = 10 ** 6 + 20
 bit = [0] * MAXN
 for s in input().split(' '):
     ss = int(s)

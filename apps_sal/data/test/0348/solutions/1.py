@@ -1,4 +1,4 @@
-n, m, L, R = map(int, input().split())
+(n, m, L, R) = map(int, input().split())
 mod = 998244353
 if n * m % 2:
     print(pow(R - L + 1, n * m, mod))

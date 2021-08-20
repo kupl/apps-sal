@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def process(N, S):
     C = 0
     for i in range(1, N + 1):

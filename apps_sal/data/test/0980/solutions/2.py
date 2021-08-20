@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 nn = []
 ans = ''
 for i in range(n):
@@ -14,7 +11,7 @@ for i in range(n):
 if len(nn) == 1:
     ans = nn[0]
     ans = list(ans)
-    ans[0], ans[1] = ans[1], ans[0]
+    (ans[0], ans[1]) = (ans[1], ans[0])
     print(''.join(ans))
 else:
     diff = []
@@ -40,7 +37,6 @@ else:
                     check = True
                     print('-1')
                     break
-
             if check:
                 break
         diff = [l for l in range(k) if nn[0][l] != nn[1][l]]
@@ -51,7 +47,6 @@ else:
                 check2 = True
                 break
             mid.append(nn[0][i])
-        # print(diff)
         if not check:
             res = list(nn[0])
             check = False
@@ -61,13 +56,11 @@ else:
                 for j in range(k):
                     if i == j:
                         continue
-                    res[diff[i]], res[j] = res[j], res[diff[i]]
+                    (res[diff[i]], res[j]) = (res[j], res[diff[i]])
                     ans = ''.join(res)
-                    # print(ans)
                     check = True
                     for x in range(n):
                         mid = [ans[y] for y in range(k) if nn[x][y] != ans[y]]
-                        # print(len(diff))
                         if len(mid) == 2:
                             continue
                         elif len(mid) == 0 and check2:
@@ -78,6 +71,6 @@ else:
                         print(ans)
                         check = True
                         break
-                    res[diff[i]], res[j] = res[j], res[diff[i]]
+                    (res[diff[i]], res[j]) = (res[j], res[diff[i]])
             if not check:
                 print('-1')

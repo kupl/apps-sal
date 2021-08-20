@@ -1,10 +1,8 @@
 s = input()
 t = input()
-
-S = "".join(sorted(list(s)))
-T = "".join(sorted(list(t), reverse=True))
-
+S = ''.join(sorted(list(s)))
+T = ''.join(sorted(list(t), reverse=True))
 if S < T:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
         difficulty_price = sorted(list(zip(difficulty, profit)), key=lambda x: (x[0], x[1]))
         max_prices = []

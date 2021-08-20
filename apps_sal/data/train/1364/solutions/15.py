@@ -1,10 +1,10 @@
 for _ in range(int(input())):
     d = dict()
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     numCheckPoints = 0
     moves = 0
     for _ in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         dif = x - y
         mod = x % c
         if dif not in d:

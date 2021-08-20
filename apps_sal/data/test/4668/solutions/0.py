@@ -1,5 +1,3 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-
 import math
 
 
@@ -20,10 +18,7 @@ def abs_val(a):
 
 
 def cross(a, b):
-    c = [a[1] * b[2] - a[2] * b[1],
-         a[2] * b[0] - a[0] * b[2],
-         a[0] * b[1] - a[1] * b[0]]
-
+    c = [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]
     return c
 
 
@@ -31,23 +26,17 @@ a_str_ar = input().strip().split()
 b_str_ar = input().strip().split()
 c_str_ar = input().strip().split()
 d_str_ar = input().strip().split()
-
 a = list(map(float, a_str_ar))
 b = list(map(float, b_str_ar))
 c = list(map(float, c_str_ar))
 d = list(map(float, d_str_ar))
-
 ab = custom_diff(b, a)
 bc = custom_diff(c, b)
 cd = custom_diff(d, c)
-
 x = cross(ab, bc)
 y = cross(bc, cd)
-
 cosphi_top = dot_product(x, y)
 cosphi_bottom = abs_val(x) * abs_val(y)
 cosphi = cosphi_top / cosphi_bottom
-
 res = math.degrees(math.acos(cosphi))
-
-print(("%.2f" % res))
+print('%.2f' % res)

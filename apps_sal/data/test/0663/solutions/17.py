@@ -1,5 +1,5 @@
 from math import sqrt as S
-r, x, y, X, Y = list(map(int, input().split()))
+(r, x, y, X, Y) = list(map(int, input().split()))
 D = (x - X) * (x - X) + (y - Y) * (y - Y)
 d = S(D)
 r *= 2

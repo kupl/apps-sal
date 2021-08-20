@@ -1,10 +1,12 @@
 class TrieNode:
+
     def __init__(self):
         self.child = {}
         self.isword = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -35,15 +37,10 @@ class StreamChecker:
         for word in words:
             self.trie.insert(word[::-1])
         self.stack = []
-        self.size = max(len(word) for word in words)
+        self.size = max((len(word) for word in words))
 
     def query(self, letter: str) -> bool:
         if len(self.stack) >= self.size:
             self.stack.pop(0)
         self.stack.append(letter)
         return self.trie.search(''.join(self.stack[::-1]))
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

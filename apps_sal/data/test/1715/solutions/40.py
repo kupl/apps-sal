@@ -1,14 +1,11 @@
 import bisect
-a, b, q = list(map(int, input().split()))
-INF = 10**18
-shrines = [-INF] + [int(input())for _ in range(a)]
-temples = [-INF] + [int(input())for _ in range(b)]
-
+(a, b, q) = list(map(int, input().split()))
+INF = 10 ** 18
+shrines = [-INF] + [int(input()) for _ in range(a)]
+temples = [-INF] + [int(input()) for _ in range(b)]
 for _ in range(q):
     x = int(input())
-
     ans = INF
-    # 神社→寺
     Ri = bisect.bisect_left(shrines, x)
     Li = Ri - 1
     if Ri != a + 1:
@@ -33,8 +30,6 @@ for _ in range(q):
             d = min(d, x - temples[Lj])
         if d < ans:
             ans = d
-
-    # 寺→神社
     Ri = bisect.bisect_left(temples, x)
     Li = Ri - 1
     if Ri != b + 1:
@@ -59,5 +54,4 @@ for _ in range(q):
             d = min(d, x - shrines[Lj])
         if d < ans:
             ans = d
-
     print(ans)

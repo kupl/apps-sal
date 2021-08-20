@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, a: List[List[int]]) -> int:
-        '''
+        """
             1 0 1
             1 1 0
             1 1 0
@@ -14,7 +15,7 @@ class Solution:
 
             2 + 1 + 1 + 2 + 2 + 2 + 1 + 2
                 = 13                                
-        '''
+        """
         m = len(a)
         n = len(a[0])
 
@@ -28,16 +29,12 @@ class Solution:
                     l = l + 1
                 res += l
             return res
-
         count = 0
         for r1 in range(0, m):
             isAll1 = a[r1]
             for r2 in range(r1, m):
-
                 for c in range(0, n):
                     if a[r2][c] == 0:
                         isAll1[c] = 0
-
                 count += oneDHelper(isAll1)
-
         return count

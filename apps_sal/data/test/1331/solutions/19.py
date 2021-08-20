@@ -1,4 +1,4 @@
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 alarms = [int(x) for x in input().split()]
 alarms.sort()
 al2 = []

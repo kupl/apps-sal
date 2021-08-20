@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 t = list(map(int, input().split()))
 
@@ -20,9 +20,8 @@ for i in range(m):
     if g % t[i] == 0:
         idx = i
         break
-
 if idx == -1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     print(a[0], idx + 1)

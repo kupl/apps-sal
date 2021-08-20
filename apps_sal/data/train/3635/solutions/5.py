@@ -17,6 +17,6 @@ def sflpf_data(a, b):
                         lis1.append(temp)
                     break
             con = lis1[0] + lis1[len(lis1) - 1]
-            if con == a and (len(lis1) != 1):
+            if con == a and len(lis1) != 1:
                 lis.append(i)
     return lis

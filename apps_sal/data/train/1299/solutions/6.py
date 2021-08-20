@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
         s1 = int(input())
@@ -13,7 +12,7 @@ try:
         bun = 0
         cop = po[0]
         for x in range(1, len(po)):
-            if(po[x] != cop or x - bun > 1):
+            if po[x] != cop or x - bun > 1:
                 sa.append(po[x])
                 bun = x
                 cop = po[x]

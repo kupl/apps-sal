@@ -1,6 +1,7 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
-        '''
+        """
         # Top down: Time O(KN log(N)) Space O(KN)
         import functools
         @functools.lru_cache(None)
@@ -16,9 +17,8 @@ class Solution:
             else:
                 l = mid + 1
         return l
-        '''
-        # Bottom up: Time O(Klog(N)) Space O(K)
-        dp, ndp = {}, {}
+        """
+        (dp, ndp) = ({}, {})
         for m in range(1, N + 1):
             for k in range(1, K + 1):
                 if m == 1:
@@ -29,4 +29,4 @@ class Solution:
                     ndp[k] = dp[k - 1] + dp[k] + 1
                 if ndp[k] >= N:
                     return m
-            dp, ndp = ndp, {}
+            (dp, ndp) = (ndp, {})

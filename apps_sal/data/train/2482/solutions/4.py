@@ -1,4 +1,5 @@
 class Solution:
+
     def canPlaceFlowers(self, flowerbed, n):
         """
         :type flowerbed: List[int]
@@ -12,8 +13,7 @@ class Solution:
             return False
         if L == 1:
             return flowerbed[0] == 0
-
-        cnt, i = 0, 0
+        (cnt, i) = (0, 0)
         while i < L:
             if flowerbed[i] == 1:
                 i += 2

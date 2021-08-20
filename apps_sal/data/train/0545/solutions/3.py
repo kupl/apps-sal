@@ -1,5 +1,5 @@
 for q in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     test = []
     z = []
     f = 0
@@ -13,7 +13,7 @@ for q in range(int(input())):
             c[j] += 1
     for i in range(1, k + 1):
         if c[i] == 0:
-            print("sad")
+            print('sad')
             f = 1
             break
     if f == 1:
@@ -24,7 +24,7 @@ for q in range(int(input())):
             if c[j] != 1:
                 cnt += 1
         if cnt == len(z[i]):
-            print("some")
+            print('some')
             break
     else:
-        print("all")
+        print('all')

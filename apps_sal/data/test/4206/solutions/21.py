@@ -1,27 +1,26 @@
-# codeforces_1005D_live
 s = input()
 ans = 0
-stack = ""
-revStack = ""
+stack = ''
+revStack = ''
 cursor = 0
 for e in s:
-    if e == "0":
+    if e == '0':
         ans += 1
-        stack = ""
+        stack = ''
     elif int(e) % 3 == 0:
         ans += 1
-        stack = ""
+        stack = ''
     else:
         stack += e
-        if (int(stack) % 3 == 0):
+        if int(stack) % 3 == 0:
             ans += 1
-            stack = ""
+            stack = ''
         elif len(stack) > 2:
             cursor = -1
-            revStack = ""
+            revStack = ''
             while -cursor < len(stack):
                 revStack = stack[cursor] + revStack
                 if int(revStack) % 3 == 0:
                     ans += 1
-                    stack = ""
+                    stack = ''
 print(ans)

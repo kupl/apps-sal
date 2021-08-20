@@ -5,7 +5,7 @@ def string_clean(s):
     liste = list(s)
     el = []
     for elem in liste:
-        if elem in "1234567890":
+        if elem in '1234567890':
             pass
         else:
             el.append(elem)

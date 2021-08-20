@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         n = len(A)
         count = [0] * n
@@ -16,9 +17,9 @@ class Solution:
             while len(s) > 0 and A[i] < A[s[-1]]:
                 s.pop()
             if len(s) == 0:
-                count[i] *= (n - i)
+                count[i] *= n - i
             else:
-                count[i] *= (s[-1] - i)
+                count[i] *= s[-1] - i
             s.append(i)
         res = 0
         for i in range(n):

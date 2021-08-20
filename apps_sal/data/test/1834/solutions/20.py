@@ -1,7 +1,6 @@
 N = int(input())
 a = list(map(int, input().split()))
 a.sort()
-
 ans = []
 for n in range(N):
     r = n // 2

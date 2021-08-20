@@ -2,8 +2,8 @@ from queue import Queue
 
 
 class Solution:
-    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
 
+    def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         memo = {}
 
         def countMemo(currLocation, currFuel):
@@ -16,9 +16,7 @@ class Solution:
                 for l in locations:
                     if currFuel - abs(currLocation - l) >= 0 and l != currLocation:
                         result += countMemo(l, currFuel - abs(currLocation - l))
-                memo[(currLocation, currFuel)] = result
+                memo[currLocation, currFuel] = result
                 return result
-
-        r = countMemo(locations[start], fuel) % ((10 ** 9) + 7)
-        # (memo)
+        r = countMemo(locations[start], fuel) % (10 ** 9 + 7)
         return r

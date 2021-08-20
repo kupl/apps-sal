@@ -1,4 +1,4 @@
-p, q, l, r = list(map(int, input().split(' ')))
+(p, q, l, r) = list(map(int, input().split(' ')))
 P = []
 Q = []
 for i in range(p):

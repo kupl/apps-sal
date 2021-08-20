@@ -3,8 +3,8 @@ num = {'1': 'One', '2': 'Two', '3': 'Three', '4': 'Four', '5': 'Five', '6': 'Six
 
 
 def expression_out(e):
-    a, b, c = e.split()
+    (a, b, c) = e.split()
     try:
         return num[a] + ' ' + op[b] + num[c]
     except:
-        return 'That\'s not an operator!'
+        return "That's not an operator!"

@@ -1,8 +1,7 @@
 import sys
 input = sys.stdin.readline
-
-mod = 10**9 + 7
-N, C = map(int, input().split())
+mod = 10 ** 9 + 7
+(N, C) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 dp = [0] * (C + 1)

@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 N = int(input())
 branch = defaultdict(set)
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     branch[a] |= {b}
@@ -45,6 +45,6 @@ for i in range(N):
                 checked |= visited
                 break
 if len(OK) > N // 2:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

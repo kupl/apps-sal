@@ -1,4 +1,4 @@
-n, b, a = list(map(int, input().split()))
+(n, b, a) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 aa = a
 for i in range(n):
@@ -13,11 +13,10 @@ for i in range(n):
     if l[i] == 1:
         if a == aa:
             a -= 1
+        elif b > 0:
+            b -= 1
+            a = min(aa, a + 1)
         else:
-            if b > 0:
-                b -= 1
-                a = min(aa, a + 1)
-            else:
-                a -= 1
+            a -= 1
     if i == n - 1:
         print(n)

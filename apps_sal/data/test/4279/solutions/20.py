@@ -3,7 +3,7 @@ import math
 
 def get(k):
     n = (-1 + math.sqrt(1 + 8 * k)) // 2
-    z, last = True, 1
+    (z, last) = (True, 1)
     length = 0
     while z:
         length = length + len(str(last))
@@ -12,7 +12,6 @@ def get(k):
             last += 1
         else:
             z = False
-
     last = 1
     while k > 0:
         k -= len(str(last))

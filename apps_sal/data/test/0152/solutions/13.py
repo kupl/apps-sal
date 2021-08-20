@@ -1,6 +1,6 @@
 from sys import stdin, stdout
-n, m, k = list(map(int, stdin.readline().split()))
-x, s = list(map(int, stdin.readline().split()))
+(n, m, k) = list(map(int, stdin.readline().split()))
+(x, s) = list(map(int, stdin.readline().split()))
 a = list(map(int, stdin.readline().split()))
 b = list(map(int, stdin.readline().split()))
 c = list(map(int, stdin.readline().split()))
@@ -14,7 +14,7 @@ for it in range(m + 1):
     mana = s - b[it]
     if mana < 0:
         continue
-    lo, hi = 0, k
+    (lo, hi) = (0, k)
     while lo != hi:
         mid = (lo + hi + 1) // 2
         if d[mid] <= mana:

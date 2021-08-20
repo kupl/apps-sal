@@ -1,12 +1,10 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
     li = []
-    c, o, d, e, h, f = 0, 0, 0, 0, 0, 0
+    (c, o, d, e, h, f) = (0, 0, 0, 0, 0, 0)
     for i in range(0, n):
         s = input()
-
         for i in range(len(s)):
             if s[i] == 'c':
                 c = c + 1

@@ -1,5 +1,5 @@
 check = int(input()) + 1
-while(check <= 987654321):
+while check <= 987654321:
     val = str(check)
     temp = set(val)
     if len(temp) == len(val) and '0' not in temp:

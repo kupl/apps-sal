@@ -7,4 +7,4 @@ for _ in range(int(input())):
         a = q
     else:
         a = q + 1
-    print("9" * (n - a) + "8" * a)
+    print('9' * (n - a) + '8' * a)

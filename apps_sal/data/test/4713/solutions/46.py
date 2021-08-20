@@ -3,7 +3,7 @@ S = input()
 a = []
 total = 0
 for i in range(len(S)):
-    if S[i] == "I":
+    if S[i] == 'I':
         total += 1
         a.append(total)
     else:

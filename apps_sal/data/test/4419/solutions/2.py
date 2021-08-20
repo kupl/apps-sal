@@ -20,5 +20,5 @@ def SI():
 
 t = II()
 for q in range(t):
-    a, b = MI()
+    (a, b) = MI()
     print(math.ceil(abs(a - b) / 10))

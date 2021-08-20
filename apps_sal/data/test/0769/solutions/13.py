@@ -1,5 +1,5 @@
 V = set()
-a, b, c = (int(i) for i in input().split())
+(a, b, c) = (int(i) for i in input().split())
 i = 1
 d = -1
 shit = True

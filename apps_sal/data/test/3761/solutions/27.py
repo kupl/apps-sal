@@ -1,7 +1,7 @@
 s = input()
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 sl = [len(i) for i in s.split('T')]
-a, b = {0: 1}, {0: 1}
+(a, b) = ({0: 1}, {0: 1})
 for i in sl[2::2]:
     if i == 0:
         continue

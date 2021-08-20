@@ -4,8 +4,8 @@ t = int(input())
 
 def distance(x, y, p, q):
     a = abs(x - y)
-    b = sqrt((p - x)**2 + q**2)
-    c = sqrt((p - y)**2 + q**2)
+    b = sqrt((p - x) ** 2 + q ** 2)
+    c = sqrt((p - y) ** 2 + q ** 2)
     angle = acos((c ** 2 + b ** 2 - a ** 2) / (2 * b * c))
     return angle
 
@@ -14,7 +14,7 @@ def main():
     for _ in range(t):
         n = int(input())
         c = [int(x) for x in input().split()]
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         c.sort()
         l = 0
         h = n - 1

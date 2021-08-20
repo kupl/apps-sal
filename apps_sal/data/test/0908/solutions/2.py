@@ -8,7 +8,7 @@ for i in range(n - 1):
     cur_pos = (i + 1) % 2
     prev_pos = i % 2
     s_cur = input().strip()
-    a, b = 0, 0
+    (a, b) = (0, 0)
     if dp[prev_pos][0] != -1 and s_prev <= s_cur:
         a = dp[prev_pos][0]
     else:
@@ -25,7 +25,6 @@ for i in range(n - 1):
         dp[cur_pos][0] = a
     else:
         dp[cur_pos][0] = min(a, b)
-
     if dp[prev_pos][0] != -1 and s_prev <= s_cur[::-1]:
         a = dp[prev_pos][0] + e[i + 1]
     else:
@@ -42,9 +41,7 @@ for i in range(n - 1):
         dp[cur_pos][1] = a
     else:
         dp[cur_pos][1] = min(a, b)
-
     s_prev = s_cur
-
 a = dp[(n + 1) % 2][0]
 b = dp[(n + 1) % 2][1]
 if a == -1 and b == -1:

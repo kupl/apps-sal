@@ -18,5 +18,4 @@ left = factorial(n // 2)
 right = left
 left = left // (n // 2)
 right = right // (n // 2)
-# print(left_choice,left,right)
 print(left_choice * left * right)

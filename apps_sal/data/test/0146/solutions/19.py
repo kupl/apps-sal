@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mas = list(map(int, input().split()))
 ans = 0
 for b in range(k):

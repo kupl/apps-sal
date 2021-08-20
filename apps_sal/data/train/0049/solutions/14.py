@@ -3,7 +3,7 @@ import math
 
 def check(x):
     cnt = 0
-    while(x):
+    while x:
         cnt = cnt + (x % 10 != 0)
         x = math.floor(x / 10)
     return cnt <= 3
@@ -33,16 +33,15 @@ def c(x, y):
 def cal1(x, y):
     ans = 0
     for i in range(1, min(x, y) + 1):
-        ans = ans + c(x, i) * (9**i)
+        ans = ans + c(x, i) * 9 ** i
     return ans + 1
 
 
 def revers(x):
     ans = 0
-    while(x):
+    while x:
         ans = ans * 10 + x % 10
         x = x.__floordiv__(10)
-
     return ans
 
 
@@ -52,11 +51,10 @@ def cal2(x):
     cnt = 0
     l = 0
     l_ = 0
-    while(x):
+    while x:
         l = l + 1
         x = x.__floordiv__(10)
-
-    while(rx):
+    while rx:
         now = rx % 10
         rx = rx.__floordiv__(10)
         l_ = l_ + 1
@@ -65,16 +63,12 @@ def cal2(x):
         else:
             continue
         ans = ans + (now - 1) * cal1(l - l_, 3 - cnt) + cal1(l - l_, 3 - cnt + 1)
-
         if cnt >= 3:
             break
-
     return ans
 
 
 T = int(input())
 for i in range(T):
-
-    x, y = list(map(int, input().split()))
-
+    (x, y) = list(map(int, input().split()))
     print(int(cal2(y) - cal2(x - 1)))

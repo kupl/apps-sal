@@ -1,9 +1,10 @@
 class Solution:
+
     def largestValsFromLabels(self, values: List[int], labels: List[int], num_wanted: int, use_limit: int) -> int:
         from heapq import heapify, heappop
         from collections import Counter
         counter = Counter()
-        pq, ans = [[-value, label] for value, label in zip(values, labels)], []
+        (pq, ans) = ([[-value, label] for (value, label) in zip(values, labels)], [])
         heapify(pq)
         while pq:
             cur = heappop(pq)

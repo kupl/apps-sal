@@ -1,5 +1,5 @@
-'''
-\"aabcaca\"
+"""
+"aabcaca"
  0123456
   x
  
@@ -14,10 +14,11 @@ devide conquer
 可以给出最短match路径
 
 
-'''
+"""
 
 
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         ans = []
         offset = 0
@@ -26,16 +27,12 @@ class Solution:
             if x == -1:
                 return []
             ans.append(x + offset)
-
-            can_stamp, indices = self.moveLeft(stamp, target[:x], offset)
+            (can_stamp, indices) = self.moveLeft(stamp, target[:x], offset)
             if not can_stamp:
                 return []
             ans.extend(indices)
-
-            offset, target, indices = self.moveRight(stamp, target[x + len(stamp):],
-                                                     offset + x + len(stamp))
+            (offset, target, indices) = self.moveRight(stamp, target[x + len(stamp):], offset + x + len(stamp))
             ans.extend(indices)
-
         return ans[::-1]
 
     def moveLeft(self, stamp, s, offset):
@@ -46,16 +43,14 @@ class Solution:
                 if ind > len(s):
                     if offset == 0:
                         continue
-
                     additional = ind - len(s)
-
                 if stamp[additional:ind] == s[-ind:]:
                     ans.append(offset + len(s) - ind)
                     s = s[:-ind]
                     break
             else:
-                return False, []
-        return True, ans
+                return (False, [])
+        return (True, ans)
 
     def moveRight(self, stamp, s, offset):
         ans = []
@@ -67,5 +62,5 @@ class Solution:
                     s = s[ind:]
                     break
             else:
-                return offset, s, ans
-        return offset, s, ans
+                return (offset, s, ans)
+        return (offset, s, ans)

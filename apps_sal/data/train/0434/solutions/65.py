@@ -1,8 +1,9 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         s = []
         i = 0
-        while i < (len(nums)):
+        while i < len(nums):
             if nums[i] == 0:
                 s.append(0)
                 i += 1
@@ -14,7 +15,6 @@ class Solution:
                     j += 1
                 s.append(cnt)
                 i = j
-        # print(s)
         if s[0] == len(nums):
             return len(nums) - 1
         maxYet = max(s[0], s[len(s) - 1])

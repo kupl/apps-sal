@@ -1,18 +1,15 @@
 class Solution:
+
     def dieSimulator(self, n, rollMax):
         if n == 1:
             return 6
-        mod = int(1e9 + 7)
-        # init
+        mod = int(1000000000.0 + 7)
         dp = [[0] * 6 for i in range(n)]
         for j in range(6):
             dp[0][j] = 1
         sums = [0] * n
         sums[0] = 6
-        # main process
         for i in range(1, n):
-            # base case
-            # sums[i-1]
             for j in range(6):
                 invalid = 0
                 k = i - rollMax[j]

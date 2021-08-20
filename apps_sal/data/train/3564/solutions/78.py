@@ -1,15 +1,15 @@
 def stringy(size):
-    res = ""
+    res = ''
     n = 0
     while n < size:
         if n == size:
             break
         else:
-            res += "1"
+            res += '1'
             n += 1
         if n == size:
             break
         else:
-            res += "0"
+            res += '0'
             n += 1
     return res

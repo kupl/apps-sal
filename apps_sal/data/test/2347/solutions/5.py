@@ -4,11 +4,11 @@ for _ in range(t):
     h = input()
     works = False
     for i in range(len(h)):
-        ls = [h[x] if x < len(h) else "" for x in range(i, i + len(w))]
+        ls = [h[x] if x < len(h) else '' for x in range(i, i + len(w))]
         if sorted(ls) == sorted(w):
             works = True
             break
     if works:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

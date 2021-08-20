@@ -10,7 +10,7 @@ while k < 10000:
     i += 6
     a.append(b)
     k += 1
-n, k = tuple(map(int, input().split()))
+(n, k) = tuple(map(int, input().split()))
 print(a[n - 1][3] * k)
 for i in range(0, n):
     print(a[i][0] * k, a[i][1] * k, a[i][2] * k, a[i][3] * k)

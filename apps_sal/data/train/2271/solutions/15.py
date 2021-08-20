@@ -1,15 +1,13 @@
 from collections import deque
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 plst = list(map(int, input().split()))
 edges = [[] for _ in range(n)]
 for _ in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     y -= 1
     edges[x].append(y)
     edges[y].append(x)
-
 check = [False for _ in range(n)]
 uni = [0 for _ in range(n)]
 pos = 0

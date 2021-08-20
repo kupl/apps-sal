@@ -1,2 +1,2 @@
 def position(ch):
-    return f"Position of alphabet: {ord(ch)-ord('a')+1}"
+    return f"Position of alphabet: {ord(ch) - ord('a') + 1}"

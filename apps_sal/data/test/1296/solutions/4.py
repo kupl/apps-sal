@@ -7,22 +7,22 @@ def proverka(k, a, s):
     b.sort()
     cnt = 0
     index = 0
-    while(cnt < k and s - b[index] >= 0):
+    while cnt < k and s - b[index] >= 0:
         cnt += 1
         s -= b[index]
         index += 1
-    if(cnt < k):
+    if cnt < k:
         return False
     else:
         return True
 
 
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 l = 0
 r = n + 1
-while(l + 1 < r):
-    if(proverka((l + r) // 2, a, s)):
+while l + 1 < r:
+    if proverka((l + r) // 2, a, s):
         l = (l + r) // 2
     else:
         r = (l + r) // 2
@@ -31,7 +31,7 @@ for i in range(n):
 a.sort()
 qwer = 0
 index = 0
-while(index < l and qwer + a[index] <= s):
+while index < l and qwer + a[index] <= s:
     qwer += a[index]
     index += 1
 print(l, qwer)

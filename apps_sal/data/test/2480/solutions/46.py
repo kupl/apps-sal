@@ -1,6 +1,6 @@
 from collections import defaultdict as d
 from itertools import accumulate as ac
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [0] + list(ac(list(map(int, input().split()))))
 b = d(int)
 c = 0

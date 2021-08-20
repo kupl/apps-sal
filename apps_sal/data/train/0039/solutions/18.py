@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = input()
     dp = [0 for i in range(len(s))]
     for j in range(len(s) - 2, -1, -1):
@@ -9,11 +9,10 @@ for i in range(int(input())):
                     dp[j] = b
                 else:
                     dp[j] = dp[j + 1] + b
+            elif dp[j + 1] == 0:
+                dp[j] = a
             else:
-                if dp[j + 1] == 0:
-                    dp[j] = a
-                else:
-                    dp[j] = dp[j + 1] + a
+                dp[j] = dp[j + 1] + a
         else:
             dp[j] = dp[j + 1]
     ans = 1

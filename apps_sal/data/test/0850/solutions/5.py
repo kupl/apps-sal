@@ -1,4 +1,3 @@
-
 def check(a, b):
     while a and b:
         if a % 10 and b % 10:
@@ -10,12 +9,10 @@ def check(a, b):
 
 K = int(input())
 d = sorted(map(int, input().split()))
-
 flag = False
-if d and not d[0]:
+if d and (not d[0]):
     flag = True
     del d[0]
-
 ans = [d[0]] if d else []
 for i in range(len(d)):
     for j in range(i):

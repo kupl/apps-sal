@@ -6,8 +6,6 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-n, a, b, p, q = list(map(int, input().split()))
+(n, a, b, p, q) = list(map(int, input().split()))
 l = [n // a, n // b, n // (a * b // gcd(a, b))]
 print((l[0] - l[2]) * p + (l[1] - l[2]) * q + l[2] * max(p, q))
-#print(l[0], l[1], l[2])
-#print(gcd(a, b))

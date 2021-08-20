@@ -4,31 +4,25 @@ input = sys.stdin.readline
 
 
 def main():
-    n, q = map(int, input().split())
-
+    (n, q) = map(int, input().split())
     key = []
     for i in range(n):
-        s, t, x = map(int, input().split())
-        l, r = max(0, s - x), max(0, t - x)
+        (s, t, x) = map(int, input().split())
+        (l, r) = (max(0, s - x), max(0, t - x))
         key.append((l, -1, x))
         key.append((r, 1, x))
-
     key.sort()
     judge = []
     already = dict()
     search = []
-
     for i in range(n * 2):
-        s, j, x = key[i]
-
+        (s, j, x) = key[i]
         if j == -1:
             heappush(judge, x)
+        elif x in already:
+            already[x] += 1
         else:
-            if x in already:
-                already[x] += 1
-            else:
-                already[x] = 1
-
+            already[x] = 1
         if i == n * 2 - 1 or key[i][0] != key[i + 1][0]:
             while judge:
                 if judge[0] in already and already[judge[0]] > 0:
@@ -40,7 +34,6 @@ def main():
                 search.append((s, judge[0]))
             else:
                 search.append((s, -1))
-
     size = len(search)
     index = 0
     answer = []

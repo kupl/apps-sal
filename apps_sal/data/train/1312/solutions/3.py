@@ -1,6 +1,6 @@
 t = int(input().strip())
 for i in range(t):
-    R, C = list(map(int, input().strip().split()))
+    (R, C) = list(map(int, input().strip().split()))
     hit = [''] * R
     for j in range(R):
         hit[j] = input().strip().lower()

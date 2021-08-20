@@ -3,7 +3,6 @@ listx = list(map(int, input().split(' ')))
 sumx = sum(listx)
 if sumx % 3 != 0:
     print(0)
-
 else:
     num1 = 0
     num2 = 0

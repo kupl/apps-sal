@@ -1,14 +1,14 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 graph = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     graph[u - 1].append(v - 1)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 s -= 1
 t -= 1
 q = deque([s])
-INF = 10**10
+INF = 10 ** 10
 dist = [[INF] * 3 for _ in range(n)]
 dist[s][0] = 0
 while q:

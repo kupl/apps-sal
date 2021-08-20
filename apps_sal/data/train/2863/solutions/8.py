@@ -5,6 +5,5 @@ def alan_annoying_kid(s):
     if a[2] == "didn't":
         negative = True
     if not negative:
-        return "I don't think you " + ' '.join(a[2::]) + " today, I think you didn't " + str(a[2][:-2]) + " at all!"
-
-    return "I don't think you didn't " + ' '.join(a[3::]) + " today, I think you did " + str(a[3]) + " it!"
+        return "I don't think you " + ' '.join(a[2:]) + " today, I think you didn't " + str(a[2][:-2]) + ' at all!'
+    return "I don't think you didn't " + ' '.join(a[3:]) + ' today, I think you did ' + str(a[3]) + ' it!'

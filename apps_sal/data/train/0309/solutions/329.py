@@ -1,4 +1,4 @@
-'''
+"""
 
 brute force - 2 for loops, find diff of i and i+1, then find next elem j where j-(i+i) is the same
 keep track of max len found
@@ -27,10 +27,11 @@ max = 4
 -19
 
 
-'''
+"""
 
 
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         maps = [{} for i in range(len(A))]
         maxlen = 0

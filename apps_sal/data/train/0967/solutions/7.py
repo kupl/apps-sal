@@ -1,15 +1,11 @@
-# cook your dish here
 def subset_sum(numbers, target, partial=[]):
     count = 0
     s = sum(partial)
-
-    # check if the partial sum is equals to target
     if s == target:
         count += 1
         return 1
     if s >= target:
-        return 0  # if we reach the number why bother to continue
-
+        return 0
     for i in range(len(numbers)):
         n = numbers[i]
         remaining = numbers[i + 1:]

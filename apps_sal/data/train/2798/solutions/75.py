@@ -1,6 +1,5 @@
 def to_alternating_case(string):
     soln = ''
-
     for char in string:
         if char == char.lower():
             soln += char.upper()

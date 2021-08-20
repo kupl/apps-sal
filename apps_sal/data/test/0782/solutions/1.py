@@ -1,10 +1,8 @@
 from fractions import gcd
 from functools import reduce
-
 m = int(input())
 a = list(map(int, input().split()))
 ans = []
-
 if reduce(gcd, a) == a[0]:
     for i in range(1, m):
         ans.append(a[0])

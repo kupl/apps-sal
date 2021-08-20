@@ -18,32 +18,31 @@ def bfs_(main, co, flag):
                     co.append(y)
                 else:
                     main.append(y)
-    return main, co
+    return (main, co)
 
 
 def bfs():
-    main, co, ans = deque(), deque(), 0
+    (main, co, ans) = (deque(), deque(), 0)
     for i in range(n):
         if inedge[i] == 0:
             if is_co[i]:
                 co.append(i)
             else:
                 main.append(i)
-
     while main or co:
-        main, co = bfs_(main, co, True)
+        (main, co) = bfs_(main, co, True)
         if co:
             ans += 1
-        main, co = bfs_(main, co, False)
+        (main, co) = bfs_(main, co, False)
     return ans
 
 
-n, m = put()
+(n, m) = put()
 is_co = list(put())
 graph = [[] for i in range(n)]
-inedge, vis = [0] * n, [0] * n
+(inedge, vis) = ([0] * n, [0] * n)
 for _ in range(m):
-    x, y = put()
+    (x, y) = put()
     graph[y].append(x)
     inedge[x] += 1
 print(bfs())

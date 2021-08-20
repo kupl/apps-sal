@@ -1,8 +1,10 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def power(x):
             res = 0
-            while(x != 1):
+            while x != 1:
                 if x % 2 == 0:
                     x = x >> 1
                 else:

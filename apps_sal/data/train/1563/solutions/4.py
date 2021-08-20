@@ -1,6 +1,6 @@
-t = int(input(""))
+t = int(input(''))
 for i in range(t):
-    s1, s2 = (input("").split())
+    (s1, s2) = input('').split()
     s1 = str(int(s1))
     s2 = str(int(s2))
     s1 = s1[::-1]

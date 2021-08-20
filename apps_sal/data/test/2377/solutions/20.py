@@ -1,4 +1,4 @@
-N, H = map(int, input().split())
+(N, H) = map(int, input().split())
 ab = [list(map(int, input().split())) for i in range(N)]
 ab = list(zip(*ab))
 a = sorted(ab[0], reverse=True)

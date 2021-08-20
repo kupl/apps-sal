@@ -1,4 +1,5 @@
 class Solution:
+
     def findLongestWord(self, s, d):
         """
         :type s: str

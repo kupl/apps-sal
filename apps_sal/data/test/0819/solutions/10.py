@@ -1,6 +1,5 @@
 a = int(input().split()[1])
 list1 = list(map(int, input().split()))
-
 if a == 1:
     min1 = list1[0]
     for i in list1:

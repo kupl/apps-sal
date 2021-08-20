@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         total_people = 0
         comp_people = 0
@@ -16,14 +17,9 @@ class Solution:
                 comp_people += gondola_size
             else:
                 comp_people += customer
-
             rotates += 1
-            current_profit.append((comp_people * boardingCost) - (rotates * runningCost))
-
-        #rotates+= math.ceil(waitlist/gondola_size)
-        #print(total_people, comp_people, waitlist, rotates, current_profit)
+            current_profit.append(comp_people * boardingCost - rotates * runningCost)
         while waitlist > 0:
-
             rotates += 1
             if waitlist > 4:
                 waitlist -= gondola_size
@@ -31,10 +27,7 @@ class Solution:
             else:
                 comp_people += waitlist
                 waitlist = 0
-
-            current_profit.append((comp_people * boardingCost) - (rotates * runningCost))
-
-        #print(total_people, comp_people, waitlist, rotates, current_profit )
+            current_profit.append(comp_people * boardingCost - rotates * runningCost)
         res = current_profit.index(max(current_profit))
         if res == 0:
             return -1

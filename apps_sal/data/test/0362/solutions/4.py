@@ -19,10 +19,7 @@ def lm():
 
 
 n = nn()
-
 total = 0
-
 for i in range(n - 2):
     total = total + 1 * (i + 2) * (i + 3)
-
 print(total)

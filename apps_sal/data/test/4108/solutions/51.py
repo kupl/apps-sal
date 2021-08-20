@@ -18,6 +18,6 @@ for i in range(26):
         ans = 1
         break
 if ans == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,16 +1,13 @@
-X, N = list(map(int, input().split()))
+(X, N) = list(map(int, input().split()))
 flg = False
 i = 1
-
 if N == 0:
     Ans = X
 else:
     S = list(map(int, input().split()))
-#  S.sort()
     if X not in S:
         Ans = X
         flg = True
-
     while not flg:
         if X - i not in S:
             Ans = X - i
@@ -22,5 +19,4 @@ else:
             break
         else:
             i += 1
-
 print(Ans)

@@ -12,7 +12,7 @@ for i in range(1, n + 1):
         f = False
         break
 if not f:
-    print("Impossible")
+    print('Impossible')
 else:
     t = 1
     ans = [0] * n
@@ -26,5 +26,5 @@ else:
                 if y == i:
                     t += 1
                     y = 0
-    print("Possible")
+    print('Possible')
     print(*ans)

@@ -1,7 +1,7 @@
 n = int(input())
 x = []
 for i in range(n):
-    a, b = input().split()
+    (a, b) = input().split()
     if b == 'JPY':
         x.append(int(a))
     else:

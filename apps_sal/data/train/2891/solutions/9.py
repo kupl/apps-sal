@@ -3,7 +3,6 @@ def find_the_key(msg, code):
     msg = [ord(i) - 96 for i in msg]
     keys = [code[i] - msg[i] for i in range(len(code))]
     key = ''.join([str(i) for i in keys])
-
     i = 1
     while True:
         a = cycle(key[:i])

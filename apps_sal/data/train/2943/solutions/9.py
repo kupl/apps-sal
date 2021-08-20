@@ -2,6 +2,7 @@ import math
 
 
 class BST:
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
@@ -37,12 +38,10 @@ def bst_from_arr(arr):
         tree = BST(arr[root_index])
     else:
         return BST(arr[0])
-
     if len(arr[:root_index]) > 1:
         tree.left = bst_from_arr(arr[:root_index])
     if len(arr[:root_index]) == 1:
         tree.left = BST(arr[0])
-
     if len(arr[root_index + 1:]) > 1:
         tree.right = bst_from_arr(arr[root_index + 1:])
     if len(arr[root_index + 1:]) == 1:
@@ -55,7 +54,7 @@ def get_root_index(arr):
     levels = math.floor(math.log(len(arr), 2))
     for i in range(0, levels):
         if not i == levels - 1:
-            left_subtree += 2**i
+            left_subtree += 2 ** i
         else:
-            left_subtree += min(int((2**levels) / 2), len(arr) - (2**(levels) - 1))
+            left_subtree += min(int(2 ** levels / 2), len(arr) - (2 ** levels - 1))
     return left_subtree

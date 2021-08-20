@@ -1,5 +1,4 @@
 from sys import stdin
-
 for _ in range(int(stdin.readline())):
     inp = int(stdin.readline())
     if inp < 4:

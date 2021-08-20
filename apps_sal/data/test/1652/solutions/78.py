@@ -1,19 +1,17 @@
-#!/usr/bin/env python3
 import sys
-INF = float("inf")
-
-sys.setrecursionlimit(10**5)
+INF = float('inf')
+sys.setrecursionlimit(10 ** 5)
 
 
 def yes():
-    print("YES")  # type: str
+    print('YES')
 
 
 def no():
-    print("NO")  # type: str
+    print('NO')
 
 
-template = ["dream", "dreamer", "erase", "eraser"]
+template = ['dream', 'dreamer', 'erase', 'eraser']
 
 
 def dfs(s, i):
@@ -31,7 +29,6 @@ def solve(S: str):
         yes()
     else:
         no()
-
     return
 
 
@@ -42,7 +39,7 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    S = next(tokens)  # type: str
+    S = next(tokens)
     solve(S)
 
 

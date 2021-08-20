@@ -1,6 +1,5 @@
 s = input()
 t = input()
-
 ls = len(s)
 lt = len(t)
 check = False

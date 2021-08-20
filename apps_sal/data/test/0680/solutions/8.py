@@ -1,6 +1,6 @@
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
-x3, y3 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
+(x3, y3) = list(map(int, input().split()))
 a = [[x1, y1], [x2, y2], [x3, y3]]
 a.sort()
 ans = []

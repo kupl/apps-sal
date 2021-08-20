@@ -6,4 +6,4 @@ for i in a:
         d[i] = 1
     else:
         d[i] += 1
-print(sum([j if i > j else j - i for i, j in d.items()]))
+print(sum([j if i > j else j - i for (i, j) in d.items()]))

@@ -1,10 +1,10 @@
 def main():
     n = int(input())
     res = 0
-    la, lb = 0, 0
+    (la, lb) = (0, 0)
     max_draw = -1
     for _ in range(n):
-        a, b = [int(x) for x in input().split()]
+        (a, b) = [int(x) for x in input().split()]
         mx = max(la, lb)
         mn = min(a, b)
         if mx <= max_draw:
@@ -12,7 +12,7 @@ def main():
         if mx <= mn:
             res += mn - mx + 1
             max_draw = mn
-        la, lb = a, b
+        (la, lb) = (a, b)
     print(res)
 
 

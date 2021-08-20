@@ -1,8 +1,8 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 a = [0] * n
 listy = 0
 for i in range(n - 1):
-    c, d = list(map(int, input().split()))
+    (c, d) = list(map(int, input().split()))
     a[c - 1] += 1
     a[d - 1] += 1
     if a[c - 1] == 1:

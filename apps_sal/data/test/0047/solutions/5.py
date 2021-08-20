@@ -1,8 +1,6 @@
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 a_list = list(map(int, input().split()))
-
 dp = [[0] * 5 for _ in range(303030)]
-
 for i in range(N):
     a = a_list[i]
     dp[i + 1][0] = 0

@@ -2,15 +2,12 @@ def getUsefulWeight(coef, uw):
     if coef == 1:
         print(-1)
         return
-    uw += (uw / (coef - 1))
+    uw += uw / (coef - 1)
     return uw
 
 
-#n = int(input().strip())
-#x = int(input().strip())
-n, x = list(map(int, input().strip().split(" ")))
-
-a = list(map(int, input().strip().split(" ")))
+(n, x) = list(map(int, input().strip().split(' ')))
+a = list(map(int, input().strip().split(' ')))
 d = {}
 ret = 3
 for y in a:
@@ -26,8 +23,7 @@ for y in a:
     d[y] = 0
     if val not in d:
         d[val] = 1
-
 if ret == 3:
-    print("-1")
+    print('-1')
 else:
     print(ret)

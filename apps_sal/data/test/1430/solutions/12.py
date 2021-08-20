@@ -1,8 +1,5 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
 def main():
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     S = input()
     A = []
     if S[0] == '1':

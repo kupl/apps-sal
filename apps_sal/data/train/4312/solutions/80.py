@@ -1,4 +1,3 @@
-
 def pick_peaks(arr):
     pos = []
     peaks = []
@@ -8,7 +7,6 @@ def pick_peaks(arr):
                 pos.append(x)
                 peaks.append(arr[x])
             elif arr[x] > arr[x - 1] and arr[x] >= arr[x + 1]:
-
                 for y in arr[x:]:
                     print((y, x, arr[x], arr[x:]))
                     if arr[x] > y:
@@ -17,5 +15,4 @@ def pick_peaks(arr):
                         break
                     elif arr[x] < y:
                         break
-
-    return {"pos": pos, "peaks": peaks}
+    return {'pos': pos, 'peaks': peaks}

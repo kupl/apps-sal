@@ -1,5 +1,5 @@
 def fizz_buzz_cuckoo_clock(time):
-    hours, minutes = map(int, time.split(':'))
+    (hours, minutes) = map(int, time.split(':'))
     hours = hours - 12 * (hours > 12) or 12
     if not minutes % 30:
         return ' '.join(['Cuckoo'] * (hours if not minutes else 1))

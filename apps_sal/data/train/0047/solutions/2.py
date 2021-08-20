@@ -1,21 +1,12 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
-
 for tests in range(t):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     A = list(map(int, input().split()))
-    #Q=[tuple(map(int,input().split())) for i in range(q)]
-
     DP0 = [0] * n
     DP1 = [0] * n
-
     for i in range(n):
         DP0[i] = max(DP0[i - 1], DP1[i - 1] + A[i])
         DP1[i] = max(DP1[i - 1], DP0[i - 1] - A[i])
-
-    # print(DP0)
-    # print(DP1)
-
     print(DP0[-1])

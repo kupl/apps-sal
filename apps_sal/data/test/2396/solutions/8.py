@@ -1,8 +1,6 @@
 from fractions import gcd
-
 ans = []
 dic = {}
-
 n = int(input())
 for i in range(n):
     word = input()
@@ -18,11 +16,11 @@ for i in range(n):
     y = denumerator // gcd(numerator, denumerator)
     ans.append((x, y))
     if (x, y) in dic:
-        dic[(x, y)] += 1
+        dic[x, y] += 1
     else:
-        dic[(x, y)] = 1
+        dic[x, y] = 1
 for i in range(n):
     if i > 0:
         print(' ', end='')
     print(dic[ans[i]], end='')
-print("\n", end='')
+print('\n', end='')

@@ -12,7 +12,7 @@ for _ in range(int(input())):
         print('YES')
         continue
     if max(c1.values()) >= 2:
-        print("YES")
+        print('YES')
         continue
     p1 = 0
     p2 = 0
@@ -22,4 +22,4 @@ for _ in range(int(input())):
                 p1 += 1
             if t[i] > t[j]:
                 p2 += 1
-    print('YES' if p1 % 2 == p2 % 2 else "NO")
+    print('YES' if p1 % 2 == p2 % 2 else 'NO')

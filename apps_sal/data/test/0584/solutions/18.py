@@ -21,7 +21,7 @@ def main():
     n = int(input())
     text = input()
     balance = 0
-    text = re.split(r'[()]', text)
+    text = re.split('[()]', text)
     q = 0
     l = 0
     for i in text:

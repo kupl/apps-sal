@@ -1,7 +1,7 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 canbe = []
 for i in range(0, n):
-    numb, et = map(int, input().split())
+    (numb, et) = map(int, input().split())
     can = []
     for j in range(1, 101):
         if j * et >= numb and j * (et - 1) < numb:

@@ -2,14 +2,13 @@ import sys
 import string
 import cmath
 import math
-
 T = int(input())
 for i in range(T):
-    N, D = list(map(int, input().split()))
+    (N, D) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     s = sum(A)
     ans = 0
-    if (s % N) == 0:
+    if s % N == 0:
         x = s / N
         for j in range(N - D):
             if A[j] < x:
@@ -25,5 +24,4 @@ for i in range(T):
                 ans = -1
     else:
         ans = -1
-
     print(ans)

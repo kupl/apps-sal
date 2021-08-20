@@ -1,15 +1,11 @@
 import sys
-
-n, rooks = map(int, input().split())
-
+(n, rooks) = map(int, input().split())
 rows = [False for _ in range(n + 1)]
 columns = [False for _ in range(n + 1)]
-
 empty_rows = n
 empty_columns = n
-
 for i in range(rooks):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if not rows[x]:
         rows[x] = True
         empty_rows -= 1

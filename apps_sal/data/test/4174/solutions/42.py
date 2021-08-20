@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 ans = 1
 p = 0
 l = [int(x) for x in input().split()]
@@ -8,5 +8,4 @@ for i in range(n):
         break
     else:
         ans += 1
-
 print(ans)

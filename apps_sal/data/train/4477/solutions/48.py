@@ -5,7 +5,6 @@ def reverse_number(number):
         splitted.reverse()
         splitted.insert(0, '-')
         return int(''.join(splitted))
-
     else:
         splitted.reverse()
         return int(''.join(splitted))

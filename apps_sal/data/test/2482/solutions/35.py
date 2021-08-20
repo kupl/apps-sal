@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -19,7 +20,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,7 +35,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -43,17 +44,17 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
 
-n, k, l = map(int, input().split())
+(n, k, l) = map(int, input().split())
 uf1 = UnionFind(n)
 for _ in range(k):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     uf1.unite(u - 1, v - 1)
 uf2 = UnionFind(n)
 for _ in range(l):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     uf2.unite(u - 1, v - 1)
 d = defaultdict(int)
 for i in range(n):
-    d[(uf1.find(i), uf2.find(i))] += 1
-ans = [d[(uf1.find(i), uf2.find(i))] for i in range(n)]
+    d[uf1.find(i), uf2.find(i)] += 1
+ans = [d[uf1.find(i), uf2.find(i)] for i in range(n)]
 print(*ans)

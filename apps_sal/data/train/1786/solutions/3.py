@@ -1,5 +1,3 @@
-# Monotone chain method
-
 def cross(a, b, o):
     return (a[0] - o[0]) * (b[1] - o[1]) - (b[0] - o[0]) * (a[1] - o[1])
 
@@ -20,4 +18,4 @@ def convex_hull_area(points):
     points = sorted(points)
     hl = hull(points) + hull(points[::-1])
     hl.append(hl[0])
-    return round(sum(x1 * y2 - y1 * x2 for (x1, y1), (x2, y2) in zip(hl, hl[1:])) / 2, 2)
+    return round(sum((x1 * y2 - y1 * x2 for ((x1, y1), (x2, y2)) in zip(hl, hl[1:]))) / 2, 2)

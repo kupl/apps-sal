@@ -1,15 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 N = int(input())
-
-
-# In[12]:
-
-
 ans = N
 for i in range(N + 1):
     x = 0
@@ -23,6 +12,3 @@ for i in range(N + 1):
         y //= 9
     ans = min(x, ans)
 print(ans)
-
-
-# In[ ]:

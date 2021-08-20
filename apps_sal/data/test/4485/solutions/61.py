@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 X = [list(map(int, input().split())) for i in range(m)]
 a_list = []
 b_list = []
@@ -9,6 +9,6 @@ for i in range(m):
         b_list.append(X[i][0])
 c_set = set(a_list) & set(b_list)
 if len(c_set) == 0:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')
 else:
-    print("POSSIBLE")
+    print('POSSIBLE')

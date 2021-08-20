@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 t = 0
 while a > 0 and b > 0:
     if a > b or (b == 1 and a != 1):

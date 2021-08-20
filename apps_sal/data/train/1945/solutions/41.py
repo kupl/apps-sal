@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         groups = {}
         for row in matrix:
@@ -14,5 +15,4 @@ class Solution:
             if row != rev_row and rev_row in groups:
                 group_max += groups[rev_row]
             max_equal = max(max_equal, group_max)
-
         return max_equal

@@ -2,15 +2,11 @@ import os
 from io import BytesIO
 import sys
 import threading
-
-
 sys.setrecursionlimit(10 ** 9)
 threading.stack_size(67108864)
 
 
 def main():
-
-    # input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
 
     def ad(i, j):
         nonlocal g
@@ -28,7 +24,6 @@ def main():
         for el in g[v]:
             if not used[el]:
                 dfs(el)
-
     for _ in range(int(input())):
         n = int(input())
         cnt = [set() for i in range(n)]
@@ -36,7 +31,7 @@ def main():
         used = [False] * n
         triangles = []
         for i in range(n - 2):
-            a, b, c = map(int, input().split())
+            (a, b, c) = map(int, input().split())
             a -= 1
             b -= 1
             c -= 1

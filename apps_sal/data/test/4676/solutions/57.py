@@ -1,6 +1,5 @@
 o = str(input())
 e = str(input())
-
 ans = ''
 for i in range(len(e)):
     ans += o[i]

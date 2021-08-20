@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossible(self, position, m, force):
         lastKept = position[0]
         m -= 1
@@ -11,7 +12,7 @@ class Solution:
 
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        left, right = 1, 10 ** 9 + 1
+        (left, right) = (1, 10 ** 9 + 1)
         result = -1
         while left <= right:
             mid = (left + right) // 2

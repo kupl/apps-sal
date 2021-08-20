@@ -4,7 +4,6 @@ Solution to the 320B problem on CodeForces.
 # pylint: disable = C0325
 # pylint: disable = W0611
 """
-
 from collections import deque
 
 
@@ -12,8 +11,7 @@ def filter_intervals(intv, input_list):
     """
     Filters the list for all the intervals that are valid.
     """
-    return ((x, y) for x, y in input_list if (int(intv[0]) > int(x) and int(intv[0]) < int(y))
-                                             or (int(intv[1]) > int(x) and int(intv[1]) < int(y)))
+    return ((x, y) for (x, y) in input_list if int(intv[0]) > int(x) and int(intv[0]) < int(y) or (int(intv[1]) > int(x) and int(intv[1]) < int(y)))
 
 
 def interval_search(intv, target, input_list):
@@ -42,16 +40,15 @@ def main():
     num_inputs = int(input())
     interval_list = []
     for _ in range(num_inputs):
-        input_type, beg, end = input().split()
+        (input_type, beg, end) = input().split()
         beg = int(beg)
         end = int(end)
         if int(input_type) == 1:
             interval_list.append((beg, end))
+        elif interval_search(interval_list[beg - 1], interval_list[end - 1], interval_list):
+            print('YES')
         else:
-            if interval_search(interval_list[beg - 1], interval_list[end - 1], interval_list):
-                print("YES")
-            else:
-                print("NO")
+            print('NO')
 
 
 def __starting_point():

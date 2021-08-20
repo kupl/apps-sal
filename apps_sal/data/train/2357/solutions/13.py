@@ -1,23 +1,20 @@
-#!/usr/bin/env python3
 import sys
 from collections import deque, Counter
 from heapq import heappop, heappush
 from bisect import bisect_right
 from itertools import accumulate
-
-sys.setrecursionlimit(10**6)
-INF = 10**12
-p = 10**9 + 7
+sys.setrecursionlimit(10 ** 6)
+INF = 10 ** 12
+p = 10 ** 9 + 7
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     S = sum(A)
     if M < S:
-        print((0))
+        print(0)
         return
-    # 答えは(M+N)C(S+N)=(M+N)C(M-S)
     ans = 1
     div = 1
     for i in range(N + S):
@@ -25,8 +22,7 @@ def main():
         div *= N + S - i
         ans %= p
         div %= p
-        # print(ans, div)
-    print((ans * pow(div, p - 2, p) % p))
+    print(ans * pow(div, p - 2, p) % p)
 
 
 def __starting_point():

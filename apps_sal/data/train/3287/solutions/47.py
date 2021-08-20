@@ -2,8 +2,7 @@ import re
 
 
 def mouth_size(animal):
-
-    pattern = re.match(r'alligator', animal, re.I)
+    pattern = re.match('alligator', animal, re.I)
     if pattern:
-        return "small"
-    return "wide"
+        return 'small'
+    return 'wide'

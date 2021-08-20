@@ -1,7 +1,7 @@
 def minimum(arr):
     min = 9999999999999999999
     for i in arr:
-        if(min > i):
+        if min > i:
             min = i
     return min
 
@@ -9,6 +9,6 @@ def minimum(arr):
 def maximum(arr):
     max = -9999999999999999999
     for i in arr:
-        if(max < i):
+        if max < i:
             max = i
     return max

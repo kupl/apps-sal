@@ -1,7 +1,6 @@
 n = int(input())
-
 if n <= 999:
-    ans = "ABC"
+    ans = 'ABC'
 else:
-    ans = "ABD"
+    ans = 'ABD'
 print(ans)

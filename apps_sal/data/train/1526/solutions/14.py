@@ -5,10 +5,10 @@ start_time = time.time()
 
 def main():
     import math as m
-    ryt = m.log(10**7, 2)
-    lyt = m.log(0.0000009, 2)
+    ryt = m.log(10 ** 7, 2)
+    lyt = m.log(9e-07, 2)
     t = int(input())
-    v = {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1}
+    v = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
     for qwer in range(t):
         l = int(input())
         a = []
@@ -31,22 +31,6 @@ def main():
                 b.append(s)
             else:
                 a.append(s)
-        # for _ in range(l):
-        #     flag = False
-        #     s = input()
-        #     for i in range(len(s)-2):
-        #         if s[i] not in vowels:
-        #             if s[i+1] not in vowels or s[i+2] not in vowels:
-        #                 flag = True
-        #                 break
-        #         else:
-        #             if s[i+1] not in vowels and s[i+2] not in vowels:
-        #                 flag = True
-        #                 break
-        #     if flag:
-        #         b.append(s)
-        #     else:
-        #         a.append(s)
         xa = {}
         fxa = {}
         xb = {}
@@ -83,16 +67,15 @@ def main():
                     fxb[u1] = d[u1]
         ans = 0
         for y in xa:
-            ans += m.log(xa[y], 2) - ka * (m.log(fxa[y], 2))
+            ans += m.log(xa[y], 2) - ka * m.log(fxa[y], 2)
         for r in xb:
-            ans += kb * (m.log(fxb[r], 2)) - m.log(xb[r], 2)
+            ans += kb * m.log(fxb[r], 2) - m.log(xb[r], 2)
         if ans > ryt:
-            print("Infinity")
+            print('Infinity')
         elif ans < lyt:
             print(0)
         else:
-            print(2**ans)
+            print(2 ** ans)
 
 
 main()
-# print(time.time()-start_time)

@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 if 2 * k > b - a:
     for i in range(a, b + 1):
         print(i)

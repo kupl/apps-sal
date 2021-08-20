@@ -1,7 +1,7 @@
-'''input
+"""input
 5 4 1 0
 00000
-'''
+"""
 from sys import stdin
 import collections
 import math
@@ -19,28 +19,23 @@ def get_working(string):
             if first == None:
                 first = i
             elif first != None:
-                aux.append([first, i, (i - first - 1)])
+                aux.append([first, i, i - first - 1])
                 first = i
     if first != None:
-        aux.append([first, len(string), (len(string) - first) - 1])
-
+        aux.append([first, len(string), len(string) - first - 1])
     return aux
 
 
-# main starts
-n, a, b, k = list(map(int, stdin.readline().split()))
+(n, a, b, k) = list(map(int, stdin.readline().split()))
 string = list(stdin.readline().strip())
-
 ans = 0
 working = get_working(string)
-# print(working)
 current = a
 flag = 0
 for i in working:
     if flag == 1:
         break
-    start, end, gap = i
-
+    (start, end, gap) = i
     j = end - 1
     if gap // b > 0:
         while j > start:
@@ -62,21 +57,13 @@ for i in range(len(string)):
             count += 1
         else:
             count = 1
-
         if count == b:
             string[i] = 'b'
             ans.append(i + 1)
             count = 0
-
-
 for i in range(len(string)):
     if string[i] == '2':
         ans.append(i + 1)
         break
-# print(string)
 print(len(ans))
 print(*ans)
-# print(ans)
-# for i in range(n):
-# 	if string[i] == 'b':
-# 		print(i + 1, end = ' ')

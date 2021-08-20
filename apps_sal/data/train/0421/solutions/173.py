@@ -1,10 +1,12 @@
 class Node:
+
     def __init__(self, val=None, is_end=False, children=None):
         self.val = val
         self.children = children if children else {}
 
 
 class Solution:
+
     def add_suffix(self, root: Node, s: str):
         for c in s:
             if c not in root.children:
@@ -19,11 +21,7 @@ class Solution:
     def lastSubstring(self, s: str) -> str:
         c = max(s)
         res = ''
-        for i, x in enumerate(s):
+        for (i, x) in enumerate(s):
             if x == c:
                 res = max(res, s[i:])
         return res
-        # root = Node('')
-        # for i in range(len(s)):
-        #     self.add_suffix(root, s[i:])
-        # return ''.join(self.get_last_substring(root))

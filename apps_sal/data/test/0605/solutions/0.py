@@ -1,10 +1,9 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 misha = max(3 * a / 10, a - a / 250 * c)
 vasya = max(3 * b / 10, b - b / 250 * d)
-
 if misha > vasya:
-    print("Misha")
+    print('Misha')
 elif vasya > misha:
-    print("Vasya")
+    print('Vasya')
 else:
-    print("Tie")
+    print('Tie')

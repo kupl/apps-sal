@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 matrix = [[0 for i in range(n)] for j in range(n)]
 cur_number = 1
 for i in range(n):

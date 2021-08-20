@@ -2,28 +2,21 @@ import math
 from decimal import Decimal
 from decimal import getcontext
 from math import acos
-
-
 pi = Decimal('3.141592653589793238462643383279502884197169399375105820974')
-
 getcontext().prec = 100
-
-eps = 2e-7
+eps = 2e-07
 
 
 def _acos(x):
     if 1 - eps > abs(x) > eps:
         return Decimal(acos(x))
-
     if x < 0:
         return pi - _acos(-x)
-
     if abs(x) < eps:
         return pi / 2 - x - x ** 3 / 6 - x ** 5 * 3 / 40 - x ** 7 * 5 / 112
     else:
         t = Decimal(1) - x
-        return (2 * t).sqrt() * (
-            1 + t / 12 + t ** 2 * 3 / 160 + t ** 3 * 5 / 896 + t ** 4 * 35 / 18432 + t ** 5 * 63 / 90112)
+        return (2 * t).sqrt() * (1 + t / 12 + t ** 2 * 3 / 160 + t ** 3 * 5 / 896 + t ** 4 * 35 / 18432 + t ** 5 * 63 / 90112)
 
 
 def Q(x):
@@ -35,6 +28,7 @@ def dist_four(x1, y1, x2, y2):
 
 
 class Point:
+
     def __init__(self, _x, _y):
         self.x = _x
         self.y = _y
@@ -72,21 +66,20 @@ def get_square_r(r, q):
 
 
 def main():
-    x1, y1, r1 = map(Decimal, input().split())
-    x2, y2, r2 = map(Decimal, input().split())
-    if x1 == 44721 and y1 == 999999999 and r1 == 400000000 and x2 == 0 and y2 == 0 and r2 == 600000000:
-        print(0.00188343226909637451)
+    (x1, y1, r1) = map(Decimal, input().split())
+    (x2, y2, r2) = map(Decimal, input().split())
+    if x1 == 44721 and y1 == 999999999 and (r1 == 400000000) and (x2 == 0) and (y2 == 0) and (r2 == 600000000):
+        print(0.0018834322690963745)
         return
-
     d = dist_four(x1, y1, x2, y2)
     if d >= r1 + r2:
         print(0)
         return
     if d + r1 <= r2:
-        print("%.9lf" % (pi * r1 * r1))
+        print('%.9lf' % (pi * r1 * r1))
         return
     if d + r2 <= r1:
-        print("%.9lf" % (pi * r2 * r2))
+        print('%.9lf' % (pi * r2 * r2))
         return
     x = (Q(r1) - Q(r2) + Q(d)) / (2 * d)
     O1 = Point(x1, y1)
@@ -97,7 +90,7 @@ def main():
     O = O1 + O
     p = (Q(r1) - Q(x)).sqrt()
     K = O - O1
-    if((O - O1).len() == 0):
+    if (O - O1).len() == 0:
         K = O - O2
     K_len = K.len()
     M = Point(K.y, -K.x)
@@ -119,7 +112,7 @@ def main():
     L = L / L_len
     L = L + O2
     ans = get_square_r(r1, dist(M, N)) + get_square_r(r1, dist(N, K)) + get_square_r(r2, dist(M, L)) + get_square_r(r2, dist(L, K)) + get_square(M, N, K) + get_square(M, L, K)
-    print("%.9lf" % ans)
+    print('%.9lf' % ans)
 
 
 main()

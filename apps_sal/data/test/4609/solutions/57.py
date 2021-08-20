@@ -7,6 +7,6 @@ for _ in range(N):
     else:
         d[a] = 1
 ans = 0
-for k, v in d.items():
+for (k, v) in d.items():
     ans += v % 2
 print(ans)

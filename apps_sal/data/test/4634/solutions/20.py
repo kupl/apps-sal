@@ -3,10 +3,16 @@ import math
 import itertools
 from collections import Counter, deque, defaultdict
 from bisect import bisect_left, bisect_right
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 for _ in range(inp()):
@@ -21,7 +27,6 @@ for _ in range(inp()):
         if a[i]:
             la = i
             break
-
     ch = False
     res = 0
     for i in range(st, la + 1):
@@ -31,9 +36,8 @@ for _ in range(inp()):
                 continue
             ch = False
             res += 1
+        elif x:
+            ch = True
         else:
-            if x:
-                ch = True
-            else:
-                res += 1
+            res += 1
     print(res)

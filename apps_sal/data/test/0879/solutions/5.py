@@ -8,4 +8,4 @@ while k != 1:
     answ.appendleft(k)
     k = a[k - 2]
 answ.appendleft(k)
-print(" ".join(str(x) for x in answ))
+print(' '.join((str(x) for x in answ)))

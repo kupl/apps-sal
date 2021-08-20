@@ -1,8 +1,7 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 if c < a:
-    print("NO")
+    print('NO')
+elif c > a + b:
+    print('NO')
 else:
-    if c > a + b:
-        print("NO")
-    else:
-        print("YES")
+    print('YES')

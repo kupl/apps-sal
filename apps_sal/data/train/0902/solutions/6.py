@@ -1,11 +1,9 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, s = input().split()
+    (n, s) = input().split()
     n = int(n)
     b = []
     for i in range(n):
         b.append(input())
-
     zero = 0
     one = 0
     for i in range(n):
@@ -13,14 +11,12 @@ for _ in range(int(input())):
             zero += b[i].count('0')
         else:
             one += b[i].count('1')
-
     if s == 'Dee':
         if zero > one:
-            print("Dee")
+            print('Dee')
         else:
-            print("Dum")
+            print('Dum')
+    elif one > zero:
+        print('Dum')
     else:
-        if one > zero:
-            print("Dum")
-        else:
-            print("Dee")
+        print('Dee')

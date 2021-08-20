@@ -9,5 +9,5 @@ def calc(n, h1, h2, w1, w2):
     return answer
 
 
-n, hR, hB, wR, wB = map(int, input().split())
+(n, hR, hB, wR, wB) = map(int, input().split())
 print(max(calc(n, hR, hB, wR, wB), calc(n, hB, hR, wB, wR)))

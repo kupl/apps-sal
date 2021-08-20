@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 sunukes = [0 for k in range(N)]
 for k in range(K):
     d = int(input())

@@ -1,5 +1,4 @@
-N, K = list(map(int, input().split()))
-
+(N, K) = list(map(int, input().split()))
 ans = 0
 for ac in range(1 - N, N):
     db = ac - K

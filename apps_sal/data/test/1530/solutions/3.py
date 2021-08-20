@@ -1,4 +1,4 @@
-class RedBlackTree():
+class RedBlackTree:
     _nil = (None, False, None, None, None)
 
     def __init__(self):
@@ -72,9 +72,9 @@ class RedBlackTree():
         y[4] = x
 
     def search(self, key, s):
-        x, g = self._root, RedBlackTree._nil
+        (x, g) = (self._root, RedBlackTree._nil)
         while x is not RedBlackTree._nil:
-            g, x = x, x[2 if key < x[0] else 3]
+            (g, x) = (x, x[2 if key < x[0] else 3])
         return g
 
     def search2(self, key):
@@ -82,56 +82,55 @@ class RedBlackTree():
         x = self._root
         while x is not RedBlackTree._nil and key != x[0]:
             if key < x[0]:
-                a, x = x, x[2]
+                (a, x) = (x, x[2])
             else:
-                b, x = x, x[3]
+                (b, x) = (x, x[3])
         if key != x[0]:
-            return a, b
+            return (a, b)
 
 
 def main():
     input()
-    a, *aa = list(map(int, input().split()))
+    (a, *aa) = list(map(int, input().split()))
     t = RedBlackTree()
     t.insert_key([a, 0, 0])
     e = []
     for a in aa:
-        o, u = t.search2([a, 0, 0])
+        (o, u) = t.search2([a, 0, 0])
         if u is None:
             e.append(o[0][0])
             o[0][2 - (o[0][0] > a)] = 1
         elif o is None:
             e.append(u[0][0])
             u[0][2 - (u[0][0] > a)] = 1
-        else:
-            if o[0][0] > a < u[0][0]:
-                if o[0][1] == 0:
-                    o[0][1] = 1
-                    e.append(o[0][0])
-                else:
-                    u[0][1] = 1
-                    e.append(u[0][0])
-            elif o[0][0] < a < u[0][0]:
-                if o[0][2]:
-                    u[0][1] = 1
-                    e.append(u[0][0])
-                else:
-                    o[0][2] = 1
-                    e.append(o[0][0])
-            elif o[0][0] > a > u[0][0]:
-                if o[0][1]:
-                    u[0][2] = 1
-                    e.append(u[0][0])
-                else:
-                    o[0][1] = 1
-                    e.append(o[0][0])
-            elif o[0][0] < a > u[0][0]:
-                if o[0][2]:
-                    u[0][2] = 1
-                    e.append(u[0][0])
-                else:
-                    o[0][2] = 1
-                    e.append(o[0][0])
+        elif o[0][0] > a < u[0][0]:
+            if o[0][1] == 0:
+                o[0][1] = 1
+                e.append(o[0][0])
+            else:
+                u[0][1] = 1
+                e.append(u[0][0])
+        elif o[0][0] < a < u[0][0]:
+            if o[0][2]:
+                u[0][1] = 1
+                e.append(u[0][0])
+            else:
+                o[0][2] = 1
+                e.append(o[0][0])
+        elif o[0][0] > a > u[0][0]:
+            if o[0][1]:
+                u[0][2] = 1
+                e.append(u[0][0])
+            else:
+                o[0][1] = 1
+                e.append(o[0][0])
+        elif o[0][0] < a > u[0][0]:
+            if o[0][2]:
+                u[0][2] = 1
+                e.append(u[0][0])
+            else:
+                o[0][2] = 1
+                e.append(o[0][0])
         t.insert_key([a, 0, 0])
     print(*e)
 

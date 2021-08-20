@@ -16,9 +16,7 @@ def simplify(it, prevOp='+'):
             if not lst and c.isalpha():
                 lst.append('+')
             lst.append(c)
-
     s = ''.join(lst)
     if prevOp == '-':
         s = s.translate(SWAPPER)
-
     return s

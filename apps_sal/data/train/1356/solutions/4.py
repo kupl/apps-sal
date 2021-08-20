@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-
 BELL = []
 for i in range(1000):
     BELL.append([0] * 1000)
 BELL[0][0] = 1
-
 for r in range(1, 1000):
     BELL[r][0] = BELL[r - 1][r - 1]
     for c in range(1, r + 1):

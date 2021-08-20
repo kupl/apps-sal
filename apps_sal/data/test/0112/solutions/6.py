@@ -10,10 +10,10 @@ for i in range(n):
     for j in range(n):
         for k in range(6):
             for k2 in range(6):
-                if(i != j):
+                if i != j:
                     mb.add(data[i][k] * 10 + data[j][k2])
                     mb.add(data[i][k] + data[j][k2] * 10)
-if (n == 3):
+if n == 3:
     for k1 in range(6):
         for k2 in range(6):
             for k3 in range(6):

@@ -8,5 +8,5 @@ def s(x):
 
 n = input()
 ans = 9 * (len(n) - 1)
-n = int(n) - 10**(len(n) - 1) + 1
+n = int(n) - 10 ** (len(n) - 1) + 1
 print(ans + s(n))

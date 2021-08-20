@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        if(S == T):
+        if S == T:
             return 0
         routes = [set(r) for r in routes]
         graph = defaultdict(list)
@@ -15,16 +16,16 @@ class Solution:
                         graph[i].append(j)
                         break
         queue = []
-        for i, poss in enumerate(routes):
-            if(S in poss):
+        for (i, poss) in enumerate(routes):
+            if S in poss:
                 queue.append((i, 1))
         seen = set()
-        while(queue):
-            cur, cost = queue.pop(0)
-            if(T in routes[cur]):
+        while queue:
+            (cur, cost) = queue.pop(0)
+            if T in routes[cur]:
                 return cost
             seen.add(cur)
             for child in graph[cur]:
-                if(child not in seen):
+                if child not in seen:
                     queue.append((child, cost + 1))
         return -1

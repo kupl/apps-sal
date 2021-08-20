@@ -1,18 +1,26 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 from itertools import permutations, accumulate
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -52,20 +60,18 @@ def solve():
             f[i].append(f[f[i][j]][j])
     q = I()
     for _ in range(q):
-        a, b = LI()
+        (a, b) = LI()
         a -= 1
         b -= 1
         if b < a:
-            a, b = b, a
+            (a, b) = (b, a)
         ans = 0
         for i in range(h)[::-1]:
             if f[a][i] < b:
                 a = f[a][i]
                 ans += 1 << i
-        print((ans + 1))
+        print(ans + 1)
     return
-
-# Solve
 
 
 def __starting_point():

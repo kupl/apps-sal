@@ -1,5 +1,5 @@
 def scf(arr):
-    div, all_div, diz = [], [], {}
+    (div, all_div, diz) = ([], [], {})
     for x in arr:
         for i in range(2, x + 1):
             if not x % i:
@@ -8,4 +8,4 @@ def scf(arr):
         all_div.extend(div)
         div = []
     all_div = sorted(set(all_div))
-    return next((x for x in all_div if all(x in diz[it] for it in diz)), 1)
+    return next((x for x in all_div if all((x in diz[it] for it in diz))), 1)

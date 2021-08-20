@@ -1,5 +1,3 @@
-
-
 def main():
     count_of_friends = int(input())
     list_of_friends_chances = [float(i) for i in input().split(' ')]

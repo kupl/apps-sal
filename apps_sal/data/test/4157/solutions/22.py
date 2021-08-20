@@ -1,5 +1,3 @@
-# Project name: CF-479-D
-
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -8,7 +6,6 @@ def func(x):
     b = list(a)
     r = []
     for i in range(n):
-
         if x % 3 == 0 and x // 3 in b:
             x //= 3
             b.remove(x)

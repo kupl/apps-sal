@@ -1,13 +1,12 @@
 import sys
 sys.setrecursionlimit(1000000)
-
 T = int(input())
 for _ in range(T):
     n = int(input())
     a = [int(x) - 1 for x in input().split()]
     prev = [-1 for _ in range(n)]
     val = [1 for _ in range(n)]
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         delta = i - prev[x]
         val[x] = max(val[x], delta)
         prev[x] = i

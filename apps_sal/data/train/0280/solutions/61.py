@@ -2,7 +2,7 @@ def ch(a):
     l = len(a)
     c = 0
     for i in range(l // 2):
-        c += (a[i] != a[l - i - 1])
+        c += a[i] != a[l - i - 1]
     return c
 
 
@@ -26,7 +26,8 @@ def f(s, ci, k, d):
 
 
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         l = len(s)
-        d = [[-1for i in range(k + 1)] for j in range(l)]
+        d = [[-1 for i in range(k + 1)] for j in range(l)]
         return f(s, 0, k, d)

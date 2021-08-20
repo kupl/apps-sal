@@ -1,4 +1,4 @@
-x, y, z = list(map(int, input().split()))
+(x, y, z) = list(map(int, input().split()))
 a = x - y
 if abs(a) - z > 0:
     if a < 0:

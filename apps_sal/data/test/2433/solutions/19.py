@@ -1,7 +1,7 @@
 t = int(input())
 while t:
-    b, p, f = map(int, input().split())
-    h, c = map(int, input().split())
+    (b, p, f) = map(int, input().split())
+    (h, c) = map(int, input().split())
     ans = 0
     if h > c:
         ans += min(b // 2, p) * h

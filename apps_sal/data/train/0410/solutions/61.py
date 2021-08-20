@@ -7,6 +7,7 @@ def fun(x):
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         lst = sorted([(x, fun(x)) for x in range(lo, hi + 1)], key=lambda x: (x[1], x[0]))
         print(lst, k)

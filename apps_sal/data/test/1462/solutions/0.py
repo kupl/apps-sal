@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = [0] * 26
 s = input()
 aux = ord('A')

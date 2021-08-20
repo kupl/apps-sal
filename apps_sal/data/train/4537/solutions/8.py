@@ -16,7 +16,7 @@ def l2i(l):
 
 def bin2gray(bits):
     bits = l2i(bits)
-    return i2l(bits ^ (bits >> 1))
+    return i2l(bits ^ bits >> 1)
 
 
 def gray2bin(bits):

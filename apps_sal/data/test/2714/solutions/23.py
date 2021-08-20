@@ -26,9 +26,8 @@ def get(graph):
                         else:
                             vis[x] = 1
                         q.append(x)
-                    else:
-                        if vis[x] == vis[a]:
-                            return 0
+                    elif vis[x] == vis[a]:
+                        return 0
             l.append([even, odd])
     m = len(l)
     x = pow(2, l[0][0], mod)
@@ -46,12 +45,10 @@ def get(graph):
 t = int(sys.stdin.readline())
 for _ in range(t):
     graph = defaultdict(list)
-
-    n, m = list(map(int, sys.stdin.readline().split()))
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     for i in range(m):
-        u, v = list(map(int, sys.stdin.readline().split()))
+        (u, v) = list(map(int, sys.stdin.readline().split()))
         graph[u].append(v)
         graph[v].append(u)
-
     z = get(graph)
     print(z)

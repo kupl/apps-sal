@@ -1,6 +1,6 @@
 def remove_chars(s):
-    w = ""
+    w = ''
     for c in s:
-        if c.isalpha() or c == " ":
+        if c.isalpha() or c == ' ':
             w += c
     return w

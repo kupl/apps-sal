@@ -6,5 +6,5 @@ for _ in range(int(input())):
     bn.reverse()
     res = 0
     for i in range(len(bn)):
-        res += (bn[i] == "1") * (pow(2, i + 1) - 1)
+        res += (bn[i] == '1') * (pow(2, i + 1) - 1)
     print(res)

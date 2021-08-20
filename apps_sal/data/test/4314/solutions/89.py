@@ -1,14 +1,11 @@
-# 12 B - Grid Compression
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 a = [list(input()) for _ in range(H)]
-
 i = 0
 while i < len(a):
-    if all(m == '.' for m in a[i]):
+    if all((m == '.' for m in a[i])):
         a.pop(i)
     else:
         i += 1
-# 加工したaにおけるHを保持しなおす
 H_sc = len(a)
 w = 0
 while w < len(a[0]):

@@ -1,4 +1,5 @@
 class Solution:
+
     def helper(self, level, chars):
         if level == len(chars):
             temp1 = ''.join(chars)
@@ -19,11 +20,11 @@ class Solution:
         for i in range(level, len(chars)):
             if chars[i] in seen:
                 continue
-            chars[level], chars[i] = chars[i], chars[level]
+            (chars[level], chars[i]) = (chars[i], chars[level])
             h = self.helper(level + 1, chars)
             if h == 1:
                 return 1
-            chars[level], chars[i] = chars[i], chars[level]
+            (chars[level], chars[i]) = (chars[i], chars[level])
             seen.add(chars[i])
         return 0
 

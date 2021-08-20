@@ -1,6 +1,6 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
-fst, last, sm = [], [], []
+(fst, last, sm) = ([], [], [])
 for i in range(1000005):
     fst.append(0)
     last.append(0)
@@ -12,7 +12,7 @@ for i in range(n):
 for i in range(x + 2):
     if fst[i] == 0:
         fst[i] = n + 1
-l, ans = 0, 0
+(l, ans) = (0, 0)
 for i in range(1, x + 1):
     if fst[i] > l:
         l = max(l, last[i])
@@ -21,7 +21,7 @@ for i in range(1, x + 1):
         break
 for i in range(1, n + 1):
     sm[i] += sm[i - 1]
-l, i = n + 1, x + 1
+(l, i) = (n + 1, x + 1)
 while i > 1:
     if last[i] < l:
         l = min(fst[i], l)

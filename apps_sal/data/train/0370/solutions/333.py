@@ -1,8 +1,9 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         dsu = DSU()
         prime_to_index = {}
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             primes = self.getPrimes(num)
             for prime in primes:
                 if prime in prime_to_index:
@@ -26,6 +27,7 @@ class Solution:
 
 
 class DSU:
+
     def __init__(self):
         self.father = {}
         self.count = {}

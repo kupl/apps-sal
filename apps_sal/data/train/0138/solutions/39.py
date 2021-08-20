@@ -1,5 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         def dfs(start):
             i = start
             if i >= len(nums):
@@ -16,6 +18,5 @@ class Solution:
                 ret = i - start
             else:
                 ret = max(i - 1 - stack[0], stack[-1] - start)
-
             return max(ret, dfs(i + 1))
         return dfs(0)

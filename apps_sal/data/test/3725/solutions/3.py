@@ -1,8 +1,8 @@
 def main():
-    m, tt = int(input()), [0] * 4
-    for i in 0, 2:
-        h, a = list(map(int, input().split()))
-        x, y = list(map(int, input().split()))
+    (m, tt) = (int(input()), [0] * 4)
+    for i in (0, 2):
+        (h, a) = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         ha = (h, a)
         for t in range(1, m * 2):
             h = (h * x + y) % m
@@ -13,17 +13,16 @@ def main():
                         break
                     else:
                         tt[i] = t
+                elif tt[i + 1]:
+                    tt[i] = t - tt[i + 1]
+                    break
                 else:
-                    if tt[i + 1]:
-                        tt[i] = t - tt[i + 1]
-                        break
-                    else:
-                        tt[i + 1] = t
-    step1, shift1, step2, shift2 = tt if tt[0] > tt[2] else tt[2:] + tt[:2]
+                    tt[i + 1] = t
+    (step1, shift1, step2, shift2) = tt if tt[0] > tt[2] else tt[2:] + tt[:2]
     if shift1 == shift2 != 0:
         print(shift1)
         return
-    if step1 and not step2 and shift1 and shift1 <= shift2 and not (shift2 - shift1) % step1:
+    if step1 and (not step2) and shift1 and (shift1 <= shift2) and (not (shift2 - shift1) % step1):
         print(shift2)
         return
     if all(tt):

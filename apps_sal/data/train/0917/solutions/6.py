@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t:
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     arr = [int(x) for x in input().split()]
     num = [[0 for i in range(n)] for j in range(n)]
     i = 0
@@ -26,5 +25,5 @@ while t:
             j = j + 1
         i = i + 1
         j = i
-    print("{} {}".format(min, count))
+    print('{} {}'.format(min, count))
     t = t - 1

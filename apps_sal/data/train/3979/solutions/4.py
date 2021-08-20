@@ -1,7 +1,8 @@
 def match_arrays(v, r):
-    def tool(x): return {tuple(y) if type(y) == list else y for y in x}
+
+    def tool(x):
+        return {tuple(y) if type(y) == list else y for y in x}
     return len(tool(v) & tool(r))
 
 
-# DON'T remove
-verbose = False  # set to True to diplay arrays being tested in the random tests
+verbose = False

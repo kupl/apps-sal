@@ -10,14 +10,13 @@ for i in range(n):
     s = input()
     x = s.count('a') + s.count('e') + s.count('i') + s.count('o') + s.count('u')
     if x > 0:
-
         for c in s[::-1]:
-            if c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u':
+            if c == 'a' or c == 'e' or c == 'i' or (c == 'o') or (c == 'u'):
                 break
         if (x, c) in d1:
-            d1[(x, c)].append(s)
+            d1[x, c].append(s)
         else:
-            d1[(x, c)] = [s]
+            d1[x, c] = [s]
 d2 = {}
 pairs1 = []
 pairs2 = []

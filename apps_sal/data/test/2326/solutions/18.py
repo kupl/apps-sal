@@ -1,7 +1,6 @@
 m = 998244353
 n = int(input())
 u = [1] + [0] * n
-# purvikaurraina
 for a in map(int, input().split()):
     v = u[:]
     if 0 < a < n:

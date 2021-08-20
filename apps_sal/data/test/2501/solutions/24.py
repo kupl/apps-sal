@@ -8,16 +8,12 @@ mod = 10 ** 9 + 7
 def resolve():
     n = int(input())
     A = list(map(int, input().split()))
-
-    A_i, A_j = [], []
+    (A_i, A_j) = ([], [])
     for i in range(n):
         A_i.append(-A[i] - (i + 1))
-
     for j in range(n):
         A_j.append(A[j] - (j + 1))
-
     A_j.sort()
-
     res = 0
     for a in A_i:
         idx_1 = bisect_left(A_j, a)

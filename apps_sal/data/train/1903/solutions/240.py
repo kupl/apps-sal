@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         result = 0
@@ -8,8 +9,7 @@ class Solution:
         dis = [10 ** 9] * n
         dis[0] = 0
         while m < n:
-            w, i = heapq.heappop(q)
-            # print(j, i, w)
+            (w, i) = heapq.heappop(q)
             if visited[i]:
                 continue
             visited[i] = 1

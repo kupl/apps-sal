@@ -11,13 +11,12 @@ def factor(n):
 
 
 while t > 0:
-    x, k = list(map(int, input().split(" ")))
+    (x, k) = list(map(int, input().split(' ')))
     xF = factor(x)
     kF = factor(k)
-
     arr1 = array(xF)
     arr2 = array(kF)
-    xS = arr1**array([k] * len(xF))
+    xS = arr1 ** array([k] * len(xF))
     kS = arr2 * array([x] * len(kF))
     print(sum(xS), sum(kS))
     t -= 1

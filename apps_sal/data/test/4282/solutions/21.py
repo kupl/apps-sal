@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         n = int(file.readline())
         a = []
         for i in range(n):
@@ -11,7 +11,7 @@ def read(type=1):
         a = []
         for i in range(n):
             a.append(list(map(int, input().strip().split())))
-    return n, a
+    return (n, a)
 
 
 def solve():
@@ -37,12 +37,12 @@ def solve():
 
 
 def write(sol):
-    line = ""
+    line = ''
     for v in sol:
-        line += str(v) + " "
+        line += str(v) + ' '
     print(line)
 
 
-n, a = read(0)
+(n, a) = read(0)
 sol = solve()
 write(sol)

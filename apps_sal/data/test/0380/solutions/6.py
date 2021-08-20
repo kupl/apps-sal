@@ -1,10 +1,11 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 def test(a, b, c):
     if a > b:
-        a, b = b, a
-    if not (a <= c <= b):
+        (a, b) = (b, a)
+    if not a <= c <= b:
         return -1
     return 1 if c == a or c == b else 0
 

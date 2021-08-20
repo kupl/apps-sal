@@ -1,6 +1,7 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
-        '''
+        """
         time complexity :
             because of sorting O(Nlog(N))
             the second loop is smaller so we ignore it
@@ -8,12 +9,11 @@ class Solution:
         space complexity:
             because of sorting
             O(N)
-        '''
+        """
         people.sort()
         left = 0
         right = len(people) - 1
         boat_number = 0
-
         while left <= right:
             if left == right:
                 boat_number += 1
@@ -25,5 +25,4 @@ class Solution:
             else:
                 right -= 1
                 boat_number += 1
-
         return boat_number

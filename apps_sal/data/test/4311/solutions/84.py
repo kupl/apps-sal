@@ -1,7 +1,7 @@
 s = int(input())
 l = [s]
 a = set(l)
-for i in range(10**6):
+for i in range(10 ** 6):
     if l[-1] % 2 == 0:
         n = l[-1] // 2
     else:

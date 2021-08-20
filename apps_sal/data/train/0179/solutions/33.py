@@ -1,5 +1,5 @@
-
 class Solution:
+
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         n = len(s)
         dp_cache = dict()
@@ -9,9 +9,8 @@ class Solution:
                 return n
             if i + k >= n:
                 return 0
-
             if (i, k) in dp_cache:
-                return dp_cache[(i, k)]
+                return dp_cache[i, k]
             ans = dp(i + 1, k - 1)
             l = 0
             same = 0
@@ -24,6 +23,6 @@ class Solution:
                 if diff < 0:
                     break
                 ans = min(ans, l + dp(j + 1, k - diff))
-            dp_cache[(i, k)] = ans
+            dp_cache[i, k] = ans
             return ans
         return dp(0, k)

@@ -1,9 +1,10 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
 
         def trial(n):
-            prev, curr, ct = 0, 1, 1
+            (prev, curr, ct) = (0, 1, 1)
             while True:
                 if curr >= len(position):
                     return False
@@ -13,8 +14,7 @@ class Solution:
                 if ct == m:
                     return True
                 curr += 1
-
-        l, r = 1, position[-1] - position[0] + 1
+        (l, r) = (1, position[-1] - position[0] + 1)
         ret = 0
         while l < r:
             mid = (l + r + 1) // 2

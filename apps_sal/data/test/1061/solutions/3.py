@@ -1,4 +1,3 @@
-
 for i in range(5):
     t = input().split()
     if '1' in t:

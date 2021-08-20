@@ -25,7 +25,7 @@ def comb(n, k):
     return fac[n] * rev[k] * rev[n - k] % mod
 
 
-n, k = read_ints()
+(n, k) = read_ints()
 if k >= n:
     print(0)
 else:

@@ -1,8 +1,10 @@
 import sys
 import math
+MOD = int(1000000000.0 + 7)
 
-MOD = int(1e9 + 7)
-def line(): return list(map(int, input().split()))
+
+def line():
+    return list(map(int, input().split()))
 
 
 def solve():

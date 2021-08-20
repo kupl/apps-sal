@@ -1,5 +1,4 @@
 3
-
 n = int(input())
 a = list(map(int, input().split()))
 n = len(a)
@@ -11,5 +10,4 @@ for i in range(1, n):
     else:
         cur = 1
     ans = max(ans, cur)
-
 print(ans)

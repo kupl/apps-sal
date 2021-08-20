@@ -18,6 +18,6 @@ def rps(p1, p2):
         if result[1] == 'scissors':
             return 'Draw!'
         if result[1] == 'paper':
-            return "Player 1 won!"
+            return 'Player 1 won!'
         if result[1] == 'rock':
             return 'Player 2 won!'

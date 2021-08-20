@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 arrays = []
 for i in range(n):
     arrays.append(list(map(int, input().split())))

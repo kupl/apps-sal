@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     l.sort(reverse=True)
     a = l[k - 1]

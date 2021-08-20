@@ -1,7 +1,7 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         indegree = [0 for i in range(n)]
-        # Count in-degree
         for i in range(len(leftChild)):
             if leftChild[i] != -1:
                 indegree[leftChild[i]] += 1
@@ -11,7 +11,6 @@ class Solution:
                 indegree[rightChild[i]] += 1
                 if indegree[rightChild[i]] > 1:
                     return False
-        # Find potential root
         root = -1
         for node in range(len(indegree)):
             if indegree[node] == 0:
@@ -22,7 +21,6 @@ class Solution:
         if root == -1:
             return False
 
-        # Exactly n nodes in single tree
         def countNodes(root, l, r):
             if root is -1:
                 return 0

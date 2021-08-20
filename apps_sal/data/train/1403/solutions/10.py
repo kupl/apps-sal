@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     s = input()
@@ -10,8 +9,7 @@ for _ in range(t):
             dp[i] = dp[i - 1]
         if s[i - 2] == '1' or (s[i - 2] == '2' and s[i - 1] < '7'):
             dp[i] += dp[i - 2]
-
     if s[0] == '0':
         print(0)
     else:
-        print(dp[len(s)] % (10**9 + 7))
+        print(dp[len(s)] % (10 ** 9 + 7))

@@ -6,11 +6,11 @@ def poll(a, k):
     return poll(a * a % 1000000007, k // 2)
 
 
-a, b, n, x = [int(i) for i in input().split()]
+(a, b, n, x) = [int(i) for i in input().split()]
 if a != 1:
     r = poll(a, n)
     rr = r - 1
-    rr *= poll((a - 1), 1000000005)
+    rr *= poll(a - 1, 1000000005)
     rr *= b
     r *= x
     print((r + rr) % 1000000007)

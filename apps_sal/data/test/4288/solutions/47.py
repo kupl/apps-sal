@@ -1,4 +1,4 @@
-A, B, C = input().split()
+(A, B, C) = input().split()
 S = A + B + C
 ans = 'No'
 for i in range(len(S)):

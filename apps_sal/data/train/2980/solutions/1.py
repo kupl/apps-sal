@@ -12,9 +12,7 @@ def number_of_div(n):
             factors.append(i)
     if n > 1:
         factors.append(n)
-
     mu = 1
-    # print(factors)
     po = [i + 1 for i in list(Counter(factors).values())]
     for i in po:
         mu *= i
@@ -22,7 +20,7 @@ def number_of_div(n):
 
 
 def find_min_num(num_div):
-    for i in range(1, num_div**4):
+    for i in range(1, num_div ** 4):
         num = number_of_div(i)
         if num == num_div:
             return i

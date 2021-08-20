@@ -17,13 +17,12 @@ for i in range(q):
             npar += 1
     if not kol:
         if par % 2 == 0 and npar % 2 == 0:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
+    elif par % 2 == 0 and npar % 2 == 0:
+        print('YES')
+    elif par % 2 == 1 and npar % 2 == 1:
+        print('YES')
     else:
-        if par % 2 == 0 and npar % 2 == 0:
-            print("YES")
-        elif par % 2 == 1 and npar % 2 == 1:
-            print("YES")
-        else:
-            print("NO")
+        print('NO')

@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(x) for x in input().strip()]
 b = [int(x) for x in input().strip()]
-p, q, r, s = 0, 0, 0, 0
+(p, q, r, s) = (0, 0, 0, 0)
 for i in range(n):
     if a[i] * 2 + b[i] == 0:
         p += 1

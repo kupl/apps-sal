@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 max_n = A[0]
 ans = 0
 for i in range(N):

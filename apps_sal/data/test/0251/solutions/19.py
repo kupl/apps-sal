@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 L = list(map(int, input().split()))
 ma = max(L)
 f = [0] * (ma + 1)

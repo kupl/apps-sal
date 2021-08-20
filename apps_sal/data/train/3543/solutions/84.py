@@ -5,8 +5,7 @@ def increment_string(strng):
             break
         if i.isdigit():
             numeric_str += i
-
-    if(numeric_str == ''):
+    if numeric_str == '':
         return strng + '1'
     else:
         numeric_str = numeric_str[::-1]

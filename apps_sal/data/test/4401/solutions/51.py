@@ -1,5 +1,4 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 temp = c
 c = b
 b = a

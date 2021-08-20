@@ -1,7 +1,6 @@
 class Solution:
 
     def maxJumps(self, arr: List[int], d: int) -> int:
-
         n = len(arr)
         res = [0] * n
 
@@ -15,5 +14,4 @@ class Solution:
                         break
                     res[i] = max(res[i], dp(j) + 1)
             return res[i]
-
         return max(map(dp, range(n)))

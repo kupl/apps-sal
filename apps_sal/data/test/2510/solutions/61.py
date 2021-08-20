@@ -10,10 +10,10 @@ import bisect
 import sys
 import random
 import time
-inf = 10**9
+inf = 10 ** 9
 
 
-class UnionFind():
+class UnionFind:
 
     def __init__(self, n: int):
         """
@@ -29,11 +29,11 @@ class UnionFind():
         return self.r[x]
 
     def unite(self, x: int, y: int):
-        x, y = self.root(x), self.root(y)
+        (x, y) = (self.root(x), self.root(y))
         if x == y:
             return
         if self.r[x] > self.r[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.r[x] += self.r[y]
         self.r[y] = x
 
@@ -42,12 +42,12 @@ class UnionFind():
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     uf = UnionFind(n)
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         uf.unite(a - 1, b - 1)
-    print((-min(uf.r)))
+    print(-min(uf.r))
 
 
 def __starting_point():

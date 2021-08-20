@@ -17,7 +17,7 @@ def main():
                 return
             ans.append(j)
             r[j - 1] = True
-            p[j - 1], p[j] = p[j], p[j - 1]
+            (p[j - 1], p[j]) = (p[j], p[j - 1])
             c[p[j]] = j
             c[p[j - 1]] = j - 1
             j -= 1

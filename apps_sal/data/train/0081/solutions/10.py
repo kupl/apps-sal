@@ -1,4 +1,3 @@
-
 t = int(input())
 for _ in range(t):
     a = input()
@@ -11,6 +10,6 @@ for _ in range(t):
             continue
         flag = False
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

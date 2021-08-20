@@ -1,11 +1,11 @@
-class Game():
+class Game:
 
     def __init__(self, board):
         self.board = board
 
     def play(self, lines):
         r = set(lines)
-        while(len(r) < 2 * self.board * (self.board + 1)):
+        while len(r) < 2 * self.board * (self.board + 1):
             flag = False
             for i in range(self.board):
                 for j in range(self.board):

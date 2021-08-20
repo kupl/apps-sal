@@ -7,7 +7,7 @@ def is_prime(x, primes):
     return True
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = []
 primes = []
 for i in range(2, 110000):
@@ -25,4 +25,4 @@ for i in range(n):
 for i in range(n):
     for j in range(m):
         a[i][j] = next[a[i][j]] - a[i][j]
-print(min(min(sum(x) for x in a), min(sum(x) for x in zip(*a))))
+print(min(min((sum(x) for x in a)), min((sum(x) for x in zip(*a)))))

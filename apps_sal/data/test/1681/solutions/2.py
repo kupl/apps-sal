@@ -1,6 +1,6 @@
 has = input()
 need = input()
-A, B = [0] * 26, [0] * 26
+(A, B) = ([0] * 26, [0] * 26)
 for i in has:
     A[ord(i) - 97] += 1
 for i in need:

@@ -31,7 +31,6 @@ s = input()
 cnt = 1
 for char in s:
     tmp = decod(char)
-    cnt *= (3 ** zeros(tmp))
+    cnt *= 3 ** zeros(tmp)
     cnt %= 1000000007
-
 print(cnt)

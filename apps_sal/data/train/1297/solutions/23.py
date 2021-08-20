@@ -4,8 +4,8 @@ for k in range(t):
     a = int(line[0])
     b = int(line[1])
     if a < b:
-        print("<")
+        print('<')
     elif a > b:
-        print(">")
+        print('>')
     else:
-        print("=")
+        print('=')

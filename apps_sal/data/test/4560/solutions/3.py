@@ -2,6 +2,6 @@ n = int(input())
 a = int(input())
 mod = n % 500
 if mod > a:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

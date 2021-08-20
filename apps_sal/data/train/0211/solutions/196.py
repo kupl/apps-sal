@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
 
@@ -15,6 +16,6 @@ class Solution:
                     cur.append(cand)
                     dp(i + k, cur)
                     cur.pop()
-        ans, cur = 0, []
+        (ans, cur) = (0, [])
         dp(0, cur)
         return ans

@@ -5,6 +5,6 @@ for _ in range(int(input())):
     ar2.sort()
     m = ar2[0]
     if any([ar1[i] % m != 0 and ar1[i] != ar2[i] for i in range(n)]):
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

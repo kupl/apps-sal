@@ -1,4 +1,5 @@
-class vertex():
+class vertex:
+
     def __init__(self, v, sv, av=0):
         self.v = v
         self.sv = sv
@@ -7,12 +8,13 @@ class vertex():
 
     def sve(self):
         if self.child == []:
-            return(t.vert[pa[self.v - 2]].sv)
+            return t.vert[pa[self.v - 2]].sv
         l = [t.vert[i].sv for i in self.child]
-        return(min(l))
+        return min(l)
 
 
-class tree():
+class tree:
+
     def __init__(self):
         self.vert = {}
 

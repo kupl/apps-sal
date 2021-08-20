@@ -1,5 +1,5 @@
 n = int(input())
-seq = list(map(lambda x: 1 if x == "1" else -1, input().split()))
+seq = list(map(lambda x: 1 if x == '1' else -1, input().split()))
 sums = [seq[0]]
 for i in seq[1:]:
     sums.append(sums[-1] + i)
@@ -19,5 +19,4 @@ for i in range(n):
         counter = -1
     elif counter != -1:
         counter += 1
-
 print(max(sums), sums.index(max(sums)) + 1, m + 2, fin_pos + 1)

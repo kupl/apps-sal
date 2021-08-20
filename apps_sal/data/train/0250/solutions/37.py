@@ -2,6 +2,7 @@ from heapq import heappush, heappop
 
 
 class Solution:
+
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], K: int) -> float:
         if len(wage) >= K:
             worker = []
@@ -14,15 +15,13 @@ class Solution:
             q = []
             while i < K - 1:
                 base += worker[i][1]
-                heappush(q, - worker[i][1])
+                heappush(q, -worker[i][1])
                 i += 1
-            # print(worker)
             res = (base + worker[i][1]) * worker[i][0]
             while i < len(worker):
-                # print((worker[i][0], base, res))
                 rate = worker[i][0]
                 res = min(res, (base + worker[i][1]) * rate)
-                heappush(q, - worker[i][1])
+                heappush(q, -worker[i][1])
                 base += worker[i][1]
                 val = heappop(q)
                 base += val

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 isen = []
 for i in range(m):
     isen.append(0)
@@ -13,6 +13,6 @@ for i in isen:
     if i == 0:
         ok = False
 if ok:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

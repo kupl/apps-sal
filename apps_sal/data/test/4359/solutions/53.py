@@ -14,5 +14,5 @@ for i in range(5):
     elif tmp1[i] == 10:
         ans += x[i]
     else:
-        ans += (x[i] + (10 - tmp1[i]))
+        ans += x[i] + (10 - tmp1[i])
 print(ans + x[m])

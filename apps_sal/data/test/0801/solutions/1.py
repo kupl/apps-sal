@@ -1,4 +1,5 @@
 class SegmentTree:
+
     def __init__(self, init_val, segfunc, ide_ele):
         n = len(init_val)
         self.segfunc = segfunc
@@ -52,12 +53,12 @@ class SegmentTree:
         if Lmin != -1:
             pos = Lmin
             while pos < self.num:
-                pos = (2 * pos if self.tree[2 * pos] <= x else 2 * pos + 1)
+                pos = 2 * pos if self.tree[2 * pos] <= x else 2 * pos + 1
             return pos - self.num
         elif Rmin != -1:
             pos = Rmin
             while pos < self.num:
-                pos = (2 * pos if self.tree[2 * pos] <= x else 2 * pos + 1)
+                pos = 2 * pos if self.tree[2 * pos] <= x else 2 * pos + 1
             return pos - self.num
         else:
             return -1
@@ -88,7 +89,7 @@ init[0] = n
 lastappeared = SegmentTree(init, min, -1)
 for i in range(n):
     lastappeared.update(p[i], i)
-    for l, val in query[i]:
+    for (l, val) in query[i]:
         check = lastappeared.bisect_l(0, n + 2, l - 1)
         if check >= val or check == -1:
             flag[val] = True

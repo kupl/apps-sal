@@ -1,8 +1,8 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 l = list(map(int, input().split()))
 total = 0
 for i in range(n):
-    if i == n - 1:  # last element
+    if i == n - 1:
         total += t
         break
     if l[i + 1] - l[i] >= t:

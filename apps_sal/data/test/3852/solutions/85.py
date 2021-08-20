@@ -11,21 +11,20 @@ def main():
         for i in range(N - 1, 0, -1):
             print(i + 1, i)
         return
+    elif abs(max(A)) >= abs(min(A)):
+        print(2 * N - 1)
+        for i in range(N):
+            print(A.index(max(A)) + 1, i + 1)
+        for i in range(N - 1):
+            print(i + 1, i + 2)
+        return
     else:
-        if abs(max(A)) >= abs(min(A)):
-            print(2 * N - 1)
-            for i in range(N):
-                print(A.index(max(A)) + 1, i + 1)
-            for i in range(N - 1):
-                print(i + 1, i + 2)
-            return
-        else:
-            print(2 * N - 1)
-            for i in range(N):
-                print(A.index(min(A)) + 1, i + 1)
-            for i in range(N - 1, 0, -1):
-                print(i + 1, i)
-            return
+        print(2 * N - 1)
+        for i in range(N):
+            print(A.index(min(A)) + 1, i + 1)
+        for i in range(N - 1, 0, -1):
+            print(i + 1, i)
+        return
 
 
 def __starting_point():

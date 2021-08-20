@@ -6,7 +6,6 @@ def kai():
             c = n - a * b
             if c > 0:
                 ans += 1
-
             else:
                 break
     return ans

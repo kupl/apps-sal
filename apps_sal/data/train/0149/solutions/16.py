@@ -1,5 +1,5 @@
-
 class Solution:
+
     def removeDuplicates(self, s: str, k: int) -> str:
         duplicates = [k * i for i in 'abcdefghijklmnopqrstuvwxyz']
         counter = 0
@@ -7,5 +7,4 @@ class Solution:
             counter = len(s)
             for i in duplicates:
                 s = s.replace(i, '')
-
         return s

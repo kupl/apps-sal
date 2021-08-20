@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         numDict = {}
         for num in nums:
@@ -6,7 +7,6 @@ class Solution:
                 numDict[str(num)] += 1
             else:
                 numDict[str(num)] = 1
-
         for key in sorted(list(numDict.keys()), key=lambda x: int(x)):
             val = numDict[key]
             if val == 0:
@@ -18,5 +18,4 @@ class Solution:
                 if temp < 0:
                     return False
                 numDict[str(int(key) + i)] = temp
-
         return True

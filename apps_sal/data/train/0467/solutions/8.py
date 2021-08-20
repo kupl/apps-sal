@@ -1,8 +1,9 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         ans = 0
         for n in nums:
-            sq = floor(n**0.5)
+            sq = floor(n ** 0.5)
             if sq * sq == n:
                 continue
             divs = 2

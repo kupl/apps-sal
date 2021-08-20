@@ -1,9 +1,9 @@
 def resolve():
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     if c <= a + b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 resolve()

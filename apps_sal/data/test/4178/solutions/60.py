@@ -2,7 +2,7 @@ N = int(input())
 H_ls = list(map(int, input().split(' ')))
 H_ls.reverse()
 tmp = float('inf')
-for i, val in enumerate(H_ls):
+for (i, val) in enumerate(H_ls):
     if tmp < val:
         H_ls[i] -= 1
         val -= 1

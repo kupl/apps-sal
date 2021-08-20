@@ -1,14 +1,14 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         count = [0] * 121
         max_age = 0
         for age in ages:
             count[age] += 1
             max_age = max(max_age, age)
-
         ans = 0
-        for ageA, countA in enumerate(count[:max_age + 2]):
-            for ageB, countB in enumerate(count[:max_age + 2]):
+        for (ageA, countA) in enumerate(count[:max_age + 2]):
+            for (ageB, countB) in enumerate(count[:max_age + 2]):
                 if ageA * 0.5 + 7 >= ageB:
                     continue
                 if ageA < ageB:
@@ -18,5 +18,4 @@ class Solution:
                 ans += countA * countB
                 if ageA == ageB:
                     ans -= countA
-
         return ans

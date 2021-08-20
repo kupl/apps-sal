@@ -1,15 +1,13 @@
 import heapq
-
 for _ in range(int(input())):
     n = int(input())
     voters = []
     for i in range(n):
-        m, p = list(map(int, input().split()))
+        (m, p) = list(map(int, input().split()))
         voters.append((m, -p))
     voters.sort()
     for i in range(n):
         voters[i] = (voters[i][0], -voters[i][1])
-
     ans = 0
     costs = []
     heapq.heapify(costs)
@@ -21,5 +19,4 @@ for _ in range(int(input())):
             ans += heapq.heappop(costs)
             bought += 1
             buysNeeded -= 1
-
     print(ans)

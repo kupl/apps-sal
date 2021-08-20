@@ -1,5 +1,4 @@
-k, p = list(map(int, input().split()))
-
+(k, p) = list(map(int, input().split()))
 i = 1
 S = 0
 while k > 0:

@@ -1,8 +1,7 @@
 n = int(input())
 a = sorted(map(int, input().split()))
-l = [0] * (10**6 + 1)
+l = [0] * (10 ** 6 + 1)
 M = max(a)
-
 for i in a:
     if l[i] == 0:
         l[i] = 1

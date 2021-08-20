@@ -6,6 +6,6 @@ for _ in range(int(input())):
         if seq.count(i) > 1:
             r += 1
     if r == 0:
-        print("prekrasnyy")
+        print('prekrasnyy')
     else:
-        print("ne krasivo")
+        print('ne krasivo')

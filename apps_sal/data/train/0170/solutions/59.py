@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         pointer1 = -1
         n = len(arr)
@@ -11,7 +12,7 @@ class Solution:
         for pointer1 in range(n):
             if pointer1 > 0 and arr[pointer1] < arr[pointer1 - 1]:
                 break
-            while(pointer2 < n and (pointer2 <= pointer1 or arr[pointer2] < arr[pointer1])):
+            while pointer2 < n and (pointer2 <= pointer1 or arr[pointer2] < arr[pointer1]):
                 pointer2 += 1
             res = min(res, pointer2 - pointer1 - 1)
         return res

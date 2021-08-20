@@ -1,4 +1,5 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
         curr = [0, 0]
@@ -15,5 +16,5 @@ class Solution:
                     nexxt = [curr[0] + directions[ori][0], curr[1] + directions[ori][1]]
                     if tuple(nexxt) not in obstacles:
                         curr = nexxt
-                        maxx = max(maxx, curr[0]**2 + curr[1]**2)
+                        maxx = max(maxx, curr[0] ** 2 + curr[1] ** 2)
         return maxx

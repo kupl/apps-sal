@@ -1,11 +1,11 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     cards = [-1 for i in range(n)]
     mg = {}
     for i in range(n):
         mg[i + 1] = []
     for i in range(m):
-        x, y, z = list(map(int, input().split()))
+        (x, y, z) = list(map(int, input().split()))
         mg[x].append(y)
         mg[y].append(x)
     ans = 0

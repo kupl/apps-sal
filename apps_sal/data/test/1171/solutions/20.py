@@ -9,28 +9,39 @@ from string import ascii_lowercase, ascii_uppercase, digits
 from bisect import bisect, bisect_left, insort, insort_left
 from heapq import heappush, heappop
 from functools import reduce, lru_cache
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def TUPLE(): return tuple(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def TUPLE():
+    return tuple(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-#mod = 998244353
-#from decimal import *
-#import numpy as np
-#decimal.getcontext().prec = 10
-
-N, K = MAP()
+(N, K) = MAP()
 V = LIST()
-
 ans = 0
 tmp_sum = 0
-
 for i in range(1, min(K, N) + 1):
     left = K - i
     for j in range(i + 1):
@@ -38,5 +49,4 @@ for i in range(1, min(K, N) + 1):
         tmp.sort()
         idx = bisect_left(tmp, 0)
         ans = max(ans, sum(tmp) - sum(tmp[:min(idx, left)]))
-
 print(ans)

@@ -1,4 +1,4 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 l = []
 for i in range(n):
     l.append(input())
@@ -10,5 +10,4 @@ for i in range(n - 1, -1, -1):
     else:
         apples = apples * 2
     welth += apples * p // 2
-
 print(welth)

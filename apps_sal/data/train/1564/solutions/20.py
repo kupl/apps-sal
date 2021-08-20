@@ -1,12 +1,8 @@
-
-
 import fractions
 import sys
-
 f = sys.stdin
-
 if len(sys.argv) > 1:
-    f = open(sys.argv[1], "rt")
+    f = open(sys.argv[1], 'rt')
 
 
 def calc(s):
@@ -19,10 +15,7 @@ def calc(s):
 
 
 T = int(f.readline().strip())
-
 for case_id in range(1, T + 1):
     s = f.readline().strip()
-
     r = calc(s)
-
     print(r)

@@ -1,1 +1,2 @@
-def move(_, i): return _ + 2 * i
+def move(_, i):
+    return _ + 2 * i

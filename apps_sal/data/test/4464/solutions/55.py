@@ -1,7 +1,5 @@
-
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 dp = [0] * 1000
-
 ans = 'NO'
 cur_A = A
 while 1:

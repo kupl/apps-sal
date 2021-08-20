@@ -1,6 +1,6 @@
 t = int(input())
 for ijk in range(0, t):
-    r, g, b, m = list(map(int, input().strip().split()))
+    (r, g, b, m) = list(map(int, input().strip().split()))
     ra = list(map(int, input().strip().split()))
     rb = list(map(int, input().strip().split()))
     rc = list(map(int, input().strip().split()))

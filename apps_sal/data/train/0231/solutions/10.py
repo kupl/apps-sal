@@ -1,4 +1,5 @@
 class Solution:
+
     def firstMissingPositive(self, nums):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         """
         nums.append(0)
         for i in range(len(nums)):
-            while 0 < nums[i] < len(nums) and nums[i] != i and nums[i] != nums[nums[i]]:
+            while 0 < nums[i] < len(nums) and nums[i] != i and (nums[i] != nums[nums[i]]):
                 temp = nums[nums[i]]
                 nums[nums[i]] = nums[i]
                 nums[i] = temp

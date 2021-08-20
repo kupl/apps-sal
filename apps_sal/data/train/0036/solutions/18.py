@@ -11,10 +11,11 @@ import bisect
 
 
 def timer(f):
+
     def tmp(*args, **kwargs):
         t = time.time()
         res = f(*args, **kwargs)
-        print("Время выполнения функции: %f" % (time.time() - t))
+        print('Время выполнения функции: %f' % (time.time() - t))
         return res
     return tmp
 
@@ -27,33 +28,12 @@ def contains(l, elem):
 
 
 n = int(input())
-
 l = list(map(int, input().split(' ')))
 q = int(input())
 qs = list(map(int, input().split(' ')))
-
-"""
-n = 3
-l = [5, 3, 4]
-q = 12
-qs = [i+1 for i in range(q)]
-"""
-"""
-n = 5
-l = [random.randint(0, 10) for i in range(n)]
-q = random.randint(0, 15)
-qs = [random.randint(0, 10) for i in range(q)]
-l = sorted(l)
-print(l)
-print(qs)
-"""
-
-# print(l)
-# print(qs)
-
+'\nn = 3\nl = [5, 3, 4]\nq = 12\nqs = [i+1 for i in range(q)]\n'
+'\nn = 5\nl = [random.randint(0, 10) for i in range(n)]\nq = random.randint(0, 15)\nqs = [random.randint(0, 10) for i in range(q)]\nl = sorted(l)\nprint(l)\nprint(qs)\n'
 partials = list(itertools.accumulate(l))
-# print(partials)
-
 for i in range(q):
     kuchka = bisect.bisect_left(partials, qs[i])
     print(kuchka + 1)

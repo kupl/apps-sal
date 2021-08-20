@@ -1,6 +1,6 @@
 n = int(input())
 masses = input().split()
-muscle = ["chest", "biceps", "back"]
+muscle = ['chest', 'biceps', 'back']
 i = 0
 res = [0] * 3
 for mass in masses:

@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRepunitDivByK(self, K: int) -> int:
         i = 1
         num = 1
@@ -7,6 +8,6 @@ class Solution:
         while i <= K:
             if num % K == 0:
                 return i
-            num = (num * 10) + 1
+            num = num * 10 + 1
             i += 1
         return -1

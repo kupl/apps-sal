@@ -13,7 +13,7 @@ def iscakewalk(participants, studentswhosolved):
 
 
 for t in range(int(input())):
-    n, p = list(map(int, input().split()))
+    (n, p) = list(map(int, input().split()))
     cakwalkproblems = 0
     hardproblems = 0
     numberlist = list(map(int, input().split()))
@@ -23,6 +23,6 @@ for t in range(int(input())):
         elif iscakewalk(p, numberlist[_]):
             cakwalkproblems += 1
     if cakwalkproblems == 1 and hardproblems == 2:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

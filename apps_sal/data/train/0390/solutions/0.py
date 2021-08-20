@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dp: List[int] = [0] * (n + 1)
         candidates: List[int] = []

@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         return self.num(nums1, nums2) + self.num(nums2, nums1)
 

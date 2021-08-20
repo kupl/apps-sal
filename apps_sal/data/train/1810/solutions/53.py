@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         memo = defaultdict(int)
         res = []

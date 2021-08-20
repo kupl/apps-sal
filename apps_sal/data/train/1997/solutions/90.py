@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         a = self.checkInterval(intervals)
         return len(a)
@@ -11,7 +12,7 @@ class Solution:
             back = self.checkInterval(intervals[1:])
             if not back:
                 return front
-            s, e = front[0], front[1]
+            (s, e) = (front[0], front[1])
             irrelevant = list([interval for interval in back if interval[0] <= s and e <= interval[1]])
             if len(irrelevant):
                 return back

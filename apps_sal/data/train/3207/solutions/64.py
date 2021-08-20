@@ -4,5 +4,5 @@ def reverseWords(s):
     b = a[0]
     a.pop(0)
     for x in a:
-        b = b + " " + x
+        b = b + ' ' + x
     return b

@@ -1,45 +1,28 @@
 import sys
 input = sys.stdin.readline
-n, m, q = list(map(int, input().split()))
-
+(n, m, q) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-
 edges = []
 adj = [[] for _ in range(n)]
-
 for i in range(m):
-    a, b, w = list(map(int, input().split()))
+    (a, b, w) = list(map(int, input().split()))
     a -= 1
     b -= 1
     edges.append((a, b, w))
     adj[a].append((b, w))
     adj[b].append((a, w))
-
-
 INF = 10 ** 18
-
 ans = 0
-
 DP = [-INF] * n
 DP[0] = 0
-
-# Paths are at most m long
 for plen in range(m):
     NDP = [-INF] * n
-
     for i in range(n):
-        for j, w in adj[i]:
+        for (j, w) in adj[i]:
             NDP[j] = max(NDP[j], DP[i] + w)
-
     DP = NDP
     ans = (ans + max(DP)) % MOD
-
-# print(ans)
-# print(DP)
-#assert all(v > 0 for v in DP)
-
-
-""" From PyRival """
+' From PyRival '
 
 
 def convex_hull_trick(K, M, integer=True):
@@ -56,12 +39,14 @@ def convex_hull_trick(K, M, integer=True):
         hull_x: interval j and j + 1 is separated by x = hull_x[j], (hull_x[j] is the last x in interval j)
     """
     if integer:
-        def intersect(i, j): return (M[j] - M[i]) // (K[i] - K[j])
+
+        def intersect(i, j):
+            return (M[j] - M[i]) // (K[i] - K[j])
     else:
-        def intersect(i, j): return (M[j] - M[i]) / (K[i] - K[j])
 
+        def intersect(i, j):
+            return (M[j] - M[i]) / (K[i] - K[j])
     assert len(K) == len(M)
-
     hull_i = []
     hull_x = []
     order = sorted(list(range(len(K))), key=K.__getitem__)
@@ -85,58 +70,37 @@ def convex_hull_trick(K, M, integer=True):
                     hull_i.append(i)
                     hull_x.append(x)
                     break
-    return hull_i, hull_x
+    return (hull_i, hull_x)
 
 
 nedges = []
-slope, intersect = [], []
-for a, b, w in edges:
+(slope, intersect) = ([], [])
+for (a, b, w) in edges:
     i = max(a, b, key=lambda i: DP[i])
-
     assert DP[i] > 0
-
-    #print(f'edge ({a+1}, {b+1}, {w}) usable from {usable_from} with distance {w_at_time}', file=sys.stderr)
     slope.append(w)
     intersect.append(DP[i])
     nedges.append((DP[i], w))
-
-# For each edge, figure out the interval in which it is the best option
-hull_i, hull_x = convex_hull_trick(slope, intersect)
-
-# print(hull_i)
-# print(hull_x)
+(hull_i, hull_x) = convex_hull_trick(slope, intersect)
 
 
 def tri(x):
-    return (x * (x + 1)) // 2
+    return x * (x + 1) // 2
 
 
 lt = 0
-for i, j in enumerate(hull_i):
-    wt, w = nedges[j]
-
+for (i, j) in enumerate(hull_i):
+    (wt, w) = nedges[j]
     until = min(q if i == len(hull_x) else hull_x[i], q - m)
-
     if until <= 0:
         continue
-
-    active = (until - lt)
-    #assert us <= lt
-    #assert until > lt, (until, lt)
-
+    active = until - lt
     ans = (ans + active * wt) % MOD
-
     min_uses = lt
     max_uses = lt + active
-
     times = tri(max_uses) - tri(min_uses)
     ans = (ans + times * w) % MOD
-
-    #print(f'since {lt} to {until} use {(wt, w)} from {min_uses} to {max_uses} ({times}) times')
-    # print(ans)
-
     lt = until
     if lt == q - m:
         break
-
 print(ans)

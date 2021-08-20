@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = tuple(map(int, input().split()))
     if sum(a) % x:
         print(n)

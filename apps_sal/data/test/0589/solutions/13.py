@@ -1,14 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 letters = set(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'])
 
 
 def check(s, i):
     tested_s = str(i)
-    used_letters, used_digits = dict(), dict()
-    for ch, tested_ch in zip(s, tested_s):
+    (used_letters, used_digits) = (dict(), dict())
+    for (ch, tested_ch) in zip(s, tested_s):
         if ch == '?':
             continue
         if ch in letters:
@@ -30,11 +26,9 @@ def check(s, i):
 def __starting_point():
     s = input()
     count = 0
-
-    for i in range(10 ** (len(s) - 1), (10 ** (len(s)))):
+    for i in range(10 ** (len(s) - 1), 10 ** len(s)):
         if check(s, i):
             count += 1
-
     print(count)
 
 

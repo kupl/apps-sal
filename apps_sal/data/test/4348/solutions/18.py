@@ -21,7 +21,7 @@ def getTransIntList(n):
     return result
 
 
-n, k = getIntList()
+(n, k) = getIntList()
 s = input()
 d = dict()
 for l in s:

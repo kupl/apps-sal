@@ -8,7 +8,7 @@ def how_many_bees(hive):
     for column in zip(*hive):
         r += ''.join(column).count('bee')
         r += ''.join(column[::-1]).count('bee')
-    m, n = len(hive), len(hive[0])
+    (m, n) = (len(hive), len(hive[0]))
     for i in range(m):
         for j in range(n):
             if hive[i][j] == 'b':

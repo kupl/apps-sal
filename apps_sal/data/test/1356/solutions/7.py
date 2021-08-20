@@ -6,5 +6,4 @@ for i in s:
         a += 1
     else:
         t += 1
-
 print(a + min(a - 1, t))

@@ -3,14 +3,14 @@ from sys import setrecursionlimit
 setrecursionlimit(10000000)
 
 
-def inpl(): return list(map(int, input().split()))
+def inpl():
+    return list(map(int, input().split()))
 
 
 N = int(input())
 S = int(input())
-
 RN = int(sqrt(N)) + 1
-RN += ((RN + 1)**2 == N)
+RN += (RN + 1) ** 2 == N
 
 
 def func(b, N):
@@ -18,7 +18,7 @@ def func(b, N):
         return -1
     tmp = 0
     while N:
-        N, d = divmod(N, b)
+        (N, d) = divmod(N, b)
         tmp += d
     return tmp
 

@@ -1,16 +1,13 @@
 from collections import defaultdict
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 data = defaultdict(dict)
-
 for _ in range(n):
-    name, region, score = input().split()
+    (name, region, score) = input().split()
     region = int(region)
     score = int(score)
     if region not in data:
         data[region] = defaultdict(list)
-
     data[region][score].append(name)
-
 for r in range(1, m + 1):
     scores = data[r]
     score_list = list(scores)

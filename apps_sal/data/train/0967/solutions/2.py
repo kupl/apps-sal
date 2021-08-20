@@ -1,4 +1,5 @@
 class Solution:
+
     def solve(self, A, target):
         A.sort()
         self.count = 0
@@ -9,7 +10,6 @@ class Solution:
         if _sum == target:
             self.count += 1
             return
-
         for i in range(0, len(A)):
             if _sum + A[i] > target:
                 break

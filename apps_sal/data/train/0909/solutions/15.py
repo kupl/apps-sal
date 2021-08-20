@@ -13,4 +13,4 @@ for _ in range(int(input())):
         ans2[j] += barr[i]
         ans2[j + 1] += garr[i]
         j += 2
-    print("YES") if(ans1 == tarr or ans2 == tarr) else print("NO")
+    print('YES') if ans1 == tarr or ans2 == tarr else print('NO')

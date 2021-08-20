@@ -1,9 +1,9 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = [list(map(int, input().split())) for i in range(M)]
 r = 0
 for m in range(M):
     c = [[] for i in range(N)]
-    for i, (a, b) in enumerate(AB):
+    for (i, (a, b)) in enumerate(AB):
         if i != m:
             c[a - 1].append(b - 1)
             c[b - 1].append(a - 1)

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Dec 19 19:45:35 2019
 
@@ -7,13 +6,13 @@ Created on Thu Dec 19 19:45:35 2019
 
 
 def ceil(num, arr, l, r):
-    if(l > r):
+    if l > r:
         return r + 1
-    if(arr[r] < num):
+    if arr[r] < num:
         return r + 1
-    while(l < r):
+    while l < r:
         m = (l + r) // 2
-        if(arr[m] >= num):
+        if arr[m] >= num:
             r = m
         else:
             l = m + 1
@@ -34,4 +33,4 @@ for i in range(t):
     counter = -1
     for i in range(n):
         counter = max(counter, min(l[i], r[i]))
-    print(sum(arr) - counter**2)
+    print(sum(arr) - counter ** 2)

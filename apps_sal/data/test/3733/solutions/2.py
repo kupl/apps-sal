@@ -1,5 +1,5 @@
 from math import log, floor
-n, I = list(map(int, input().split()))
+(n, I) = list(map(int, input().split()))
 a = [int(s) for s in input().split()]
 b = []
 a.sort()
@@ -11,9 +11,7 @@ for i in range(0, n):
         b.append([a[i], b[-1][1] + 1])
 maxk = I * 8 // n
 maxK = 1 << maxk
-# print(maxk, maxK)
 ans = n
-# print(b)
 if len(b) - 1 < maxK:
     ans = 0
 else:

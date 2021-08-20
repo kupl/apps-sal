@@ -10,6 +10,6 @@ def check(p):
 
 
 if n % check(n) == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

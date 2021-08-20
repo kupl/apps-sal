@@ -5,5 +5,4 @@ def row_weights(array):
             team1 += array[i]
         else:
             team2 += array[i]
-
-    return team1, team2
+    return (team1, team2)

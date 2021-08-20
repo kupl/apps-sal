@@ -1,8 +1,8 @@
 q = int(input())
 for i in range(q):
-    a, b, k = list(map(int, input().split()))
+    (a, b, k) = list(map(int, input().split()))
     if a < b:
-        a, b, = b, a
+        (a, b) = (b, a)
     if a > k:
         print(-1)
     elif a % 2 == b % 2 != k % 2:

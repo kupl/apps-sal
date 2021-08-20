@@ -1,13 +1,12 @@
-H, W, K = list(map(int, input().split()))
+(H, W, K) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-
 factorial = [1, 1]
 inverse = [1, 1]
 invere_base = [0, 1]
 for i in range(2, H * W + 2):
-    factorial.append((factorial[-1] * i) % MOD)
-    invere_base.append((-invere_base[MOD % i] * (MOD // i)) % MOD)
-    inverse.append((inverse[-1] * invere_base[-1]) % MOD)
+    factorial.append(factorial[-1] * i % MOD)
+    invere_base.append(-invere_base[MOD % i] * (MOD // i) % MOD)
+    inverse.append(inverse[-1] * invere_base[-1] % MOD)
 
 
 def nCr(n, r):
@@ -23,5 +22,4 @@ for dh in range(1, H):
 for dw in range(1, W):
     ans += dw * (W - dw) * pow(H, 2, MOD) * nCr(H * W - 2, K - 2) % MOD
     ans %= MOD
-
 print(ans)

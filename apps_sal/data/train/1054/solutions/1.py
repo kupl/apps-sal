@@ -10,12 +10,11 @@ for _ in range(int(input())):
             s[i] = s[n - i - 1]
         elif s[n - i - 1] == '.':
             s[n - i - 1] = s[i]
+        elif s[i] != s[n - i - 1]:
+            f = 1
+            break
         else:
-            if s[i] != s[n - i - 1]:
-                f = 1
-                break
-            else:
-                continue
+            continue
     if f:
         print('-1')
     else:

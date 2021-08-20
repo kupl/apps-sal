@@ -1,10 +1,10 @@
 class Solution:
+
     def singleNonDuplicate(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-
         count = len(nums)
         lo = 0
         hi = int(count / 2)

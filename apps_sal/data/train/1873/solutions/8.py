@@ -1,4 +1,5 @@
 class Solution:
+
     def canTransform(self, start, end):
         """
         :type start: str
@@ -13,7 +14,6 @@ class Solution:
         for i in range(len(end)):
             if end[i] == 'L' or end[i] == 'R':
                 end_helper.append((end[i], i))
-
         if len(start_helper) != len(end_helper):
             return False
         for i in range(len(start_helper)):

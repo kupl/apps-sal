@@ -1,4 +1,4 @@
-f, I, t = list(map(int, input().split()))
+(f, I, t) = list(map(int, input().split()))
 c = [0] * I
 for kitten in range(f):
     s = input()

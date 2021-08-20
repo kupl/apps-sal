@@ -1,4 +1,4 @@
-a, b, c, d, e = map(int, input().split())
+(a, b, c, d, e) = map(int, input().split())
 k = list(map(int, input().split()))
 k.sort()
 i = 0

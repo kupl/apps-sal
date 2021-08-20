@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         @lru_cache(None)
         def rec(i, fs):
             if i == len(s):

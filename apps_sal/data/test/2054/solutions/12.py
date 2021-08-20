@@ -1,6 +1,6 @@
 tests = int(input())
 for _ in range(tests):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x == 0 or y == 0:
         print(0)
         continue

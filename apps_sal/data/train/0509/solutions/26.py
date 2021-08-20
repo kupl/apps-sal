@@ -22,7 +22,7 @@ class Unionfind:
         if x == y:
             return False
         if self.uf[x] > self.uf[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.uf[x] += self.uf[y]
         self.uf[y] = x
         return True
@@ -32,22 +32,21 @@ class Unionfind:
         return -self.uf[x]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 e = [[] for i in range(n + 1)]
 uf = Unionfind(n + 1)
 for i in range(m):
-    u, v, c = map(int, input().split())
+    (u, v, c) = map(int, input().split())
     if uf.same(u, v):
         continue
     e[u].append((v, c))
     e[v].append((u, c))
-
 ans = [-1] * (n + 1)
 ans[1] = 1
 q = deque([[1, 0]])
 while q:
-    now, par = q.popleft()
-    for nex, col in e[now]:
+    (now, par) = q.popleft()
+    for (nex, col) in e[now]:
         if ans[nex] > 0:
             continue
         if ans[now] == col:
@@ -55,6 +54,5 @@ while q:
         else:
             ans[nex] = col
         q.append([nex, now])
-
 for i in ans[1:]:
     print(i)

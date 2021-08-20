@@ -4,7 +4,7 @@ out = sys.stdout
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = list(map(int, input().split()))
     query = n // m
     data = {i: 0 for i in range(n)}
@@ -21,7 +21,7 @@ def main():
             elem = data_stat[cur].pop()
             free.append((elem, i))
         while len(data_stat[cur]) < query and free != []:
-            elem, mmod = free.pop()
+            (elem, mmod) = free.pop()
             data_stat[cur].add(elem)
             a[elem] += i - mmod
             result += i - mmod

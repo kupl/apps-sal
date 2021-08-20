@@ -6,7 +6,7 @@ try:
         b.sort()
         g.sort()
         i = 0
-        flag1, flag2 = 1, 1
+        (flag1, flag2) = (1, 1)
         new1 = []
         new2 = []
         while i < n:
@@ -27,8 +27,8 @@ try:
                 flag2 = 0
                 break
         if flag1 or flag2:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
 except:
     pass

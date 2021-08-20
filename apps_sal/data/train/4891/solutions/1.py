@@ -1,4 +1,3 @@
-
 class Datamining:
 
     def __init__(self, train_set):
@@ -13,7 +12,7 @@ class Datamining:
             numerator += (X[i] - x_mean) * (Y[i] - y_mean)
             denominator += (X[i] - x_mean) ** 2
         self.b1 = numerator / denominator
-        self.b0 = y_mean - (self.b1 * x_mean)
+        self.b0 = y_mean - self.b1 * x_mean
 
     def predict(self, x):
         return x * self.b1 + self.b0

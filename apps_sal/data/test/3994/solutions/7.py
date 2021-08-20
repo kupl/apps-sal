@@ -1,7 +1,7 @@
 n = int(input())
 s = [int(q) for q in input()]
 a = [list(map(int, input().split())) for _ in range(n)]
-d = s[::]
+d = s[:]
 ans = sum(d)
 for q in range(1179):
     for q1 in range(len(a)):

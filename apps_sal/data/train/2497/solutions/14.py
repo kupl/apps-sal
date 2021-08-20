@@ -1,4 +1,5 @@
 class Solution:
+
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         odds = 0
         for i in range(len(arr)):

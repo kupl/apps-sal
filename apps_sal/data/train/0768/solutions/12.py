@@ -1,6 +1,6 @@
 import sys
-input, print = sys.stdin.readline, sys.stdout.write
-sys.setrecursionlimit(10**6)
+(input, print) = (sys.stdin.readline, sys.stdout.write)
+sys.setrecursionlimit(10 ** 6)
 
 
 def ans(dic, n):
@@ -31,4 +31,4 @@ for i in range(int(input())):
         else:
             dic[temp].append(j + 1)
     anss = ans(dic, 1)
-    print(str(anss[0]) + "\n")
+    print(str(anss[0]) + '\n')

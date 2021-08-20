@@ -1,14 +1,12 @@
-#!/usr/bin/env python3
-
 def check(a, t):
     n = len(a)
     for i in range(n):
         if sum(a[i]) != t:
             return False
     for j in range(n):
-        if sum(a[i][j] for i in range(n)) != t:
+        if sum((a[i][j] for i in range(n))) != t:
             return False
-    return sum(a[i][i] for i in range(n)) == sum(a[i][-i - 1] for i in range(n)) == t
+    return sum((a[i][i] for i in range(n))) == sum((a[i][-i - 1] for i in range(n))) == t
 
 
 def main():
@@ -35,7 +33,6 @@ def main():
                             pass
                 a[i][j] = x
                 print(x if x > 0 and check(a, t) else -1)
-
     except EOFError:
         pass
 

@@ -1,12 +1,10 @@
 import heapq as hp
 import sys
 input = sys.stdin.readline
-
-N, K, Q = list(map(int, input().split()))
+(N, K, Q) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 Xs = sorted(list(set(A)))
-
-ans = 10**14
+ans = 10 ** 14
 for x in Xs:
     Ps = []
     tmp = []
@@ -22,7 +20,7 @@ for x in Xs:
     q = []
     for P in Ps:
         P.sort()
-        for i, p in enumerate(P):
+        for (i, p) in enumerate(P):
             q.append(p)
             if len(P) - K - i == 0:
                 break
@@ -30,5 +28,4 @@ for x in Xs:
         break
     q.sort()
     ans = min(ans, q[Q - 1] - x)
-
 print(ans)

@@ -1,10 +1,9 @@
 import sys
 import math
 input = sys.stdin.readline
-
 q = int(input())
 for i in range(q):
-    h, n = list(map(int, input().split()))
+    (h, n) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     arr.append(0)
     count = 0
@@ -12,7 +11,6 @@ for i in range(q):
     now = arr[cur]
     cur = 1
     while cur < n:
-       # print("now", now, "count", count)
         try:
             if now - arr[cur] == 1:
                 if now - arr[cur + 1] == 2:
@@ -26,5 +24,4 @@ for i in range(q):
                 now = arr[cur] + 1
         except:
             break
-
     print(count)

@@ -1,7 +1,8 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        maxd, mind = collections.deque(), collections.deque()
-        l, r, res = 0, 0, 0
+        (maxd, mind) = (collections.deque(), collections.deque())
+        (l, r, res) = (0, 0, 0)
         while r < len(nums):
             while len(maxd) and maxd[-1] < nums[r]:
                 maxd.pop()

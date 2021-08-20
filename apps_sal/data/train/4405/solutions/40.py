@@ -1,9 +1,9 @@
 def is_palindrome(string):
     r = str(string)
-    z = ""
+    z = ''
     for v in r:
         z = v + z
     if z == r:
-        return(True)
+        return True
     else:
-        return(False)
+        return False

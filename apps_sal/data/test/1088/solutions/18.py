@@ -1,11 +1,9 @@
 import math
 from collections import defaultdict
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for i in range(n)]
-
 retu = []
 gyou = []
-
 for i in range(n - 1):
     for j in range(i + 1, n):
         for p in range(n):
@@ -20,7 +18,8 @@ for i in range(n - 1):
             retu.append([i, j])
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -35,13 +34,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -56,7 +52,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -68,27 +64,21 @@ class UnionFind():
         return group_members
 
     def __str__(self):
-        return '\n'.join(f'{r}: {m}' for r, m in self.all_group_members().items())
+        return '\n'.join((f'{r}: {m}' for (r, m) in self.all_group_members().items()))
 
 
 retuuf = UnionFind(n)
 gyouuf = UnionFind(n)
-
 for i in retu:
     retuuf.union(i[0], i[1])
 for i in gyou:
     gyouuf.union(i[0], i[1])
-
 gyouans = 1
 retuans = 1
-
 retulist = list(retuuf.all_group_members().values())
 gyoulist = list(gyouuf.all_group_members().values())
-
-
 for i in retulist:
     retuans *= math.factorial(len(i))
 for i in gyoulist:
     gyouans *= math.factorial(len(i))
-
 print(retuans * gyouans % 998244353)

@@ -1,5 +1,5 @@
 import bisect
-N, M = (int(i) for i in input().split())
+(N, M) = (int(i) for i in input().split())
 A = [int(i) for i in input().split()]
 A.sort(reverse=True)
 As = [0] * (N + 1)
@@ -13,7 +13,7 @@ def flag(x):
     for i in range(N):
         a = x - A[i]
         res = bisect.bisect_left(A, a)
-        ans += (N - res)
+        ans += N - res
     return bool(ans >= M)
 
 
@@ -23,7 +23,7 @@ def an(x):
     for i in range(N):
         a = x - A[i]
         res = bisect.bisect_left(A, a)
-        m += (N - res)
+        m += N - res
         ans += As[N - res]
         ans += A[i] * (N - res)
     ans -= (m - M) * x
@@ -31,8 +31,7 @@ def an(x):
 
 
 low = 0
-high = 10**6
-
+high = 10 ** 6
 while low <= high:
     mid = (low + high) // 2
     if flag(mid):
@@ -43,5 +42,4 @@ while low <= high:
             low = mid + 1
     else:
         high = mid - 1
-
 print(an(ans))

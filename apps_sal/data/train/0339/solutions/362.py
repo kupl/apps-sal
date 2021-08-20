@@ -1,7 +1,8 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        sq1 = Counter([n**2 for n in nums1])
-        sq2 = Counter([n**2 for n in nums2])
+        sq1 = Counter([n ** 2 for n in nums1])
+        sq2 = Counter([n ** 2 for n in nums2])
         triplets = self.count_triplets(sq1, nums2)
         triplets += self.count_triplets(sq2, nums1)
         return triplets

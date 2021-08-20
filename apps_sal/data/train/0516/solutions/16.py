@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     ll = list(map(int, input().split()))
     c1 = 0
     c2 = 0

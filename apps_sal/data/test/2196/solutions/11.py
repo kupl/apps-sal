@@ -1,7 +1,8 @@
 from sys import stdin
 
 
-def read(): return list(map(int, stdin.readline().split()))
+def read():
+    return list(map(int, stdin.readline().split()))
 
 
 read()
@@ -11,5 +12,4 @@ for x in read():
         s.remove(x)
         x += 1
     s.add(x)
-
 print(max(s) - len(s) + 1)

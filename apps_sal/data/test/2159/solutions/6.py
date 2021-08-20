@@ -1,6 +1,4 @@
-# n=int(input())
-# n,k=map(int,input().split())
-'''l=0
+"""l=0
 r=10**13
 while l+1<r:
     mid=(l+r)//2
@@ -8,14 +6,7 @@ while l+1<r:
     if val>money:
         r=mid
     if val<=money:
-        l=mid'''
-# arr=list(map(int,input().split()))
-# n=int(input())
-# if all([size%ele==0 for ele,size in s.items()]):
-# n,k=map(int,input().split())
-# arr=list(map(int,input().split()))
-#from collections import Counter
-#arr=sorted([(n-int(x),i) for i,x in enumerate(input().split())])
+        l=mid"""
 n = int(input())
 arr = [int(q) - 1 for q in input().split()]
 ans = [0] * n
@@ -24,8 +15,7 @@ for i in range(n):
     best = 0
     for j in arr[i:]:
         cnt[j] += 1
-        if cnt[j] > cnt[best] or j < best and cnt[j] == cnt[best]:
+        if cnt[j] > cnt[best] or (j < best and cnt[j] == cnt[best]):
             best = j
         ans[best] += 1
-
 print(*ans)

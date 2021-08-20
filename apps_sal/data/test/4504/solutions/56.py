@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -14,7 +13,6 @@ def main():
         if temps[:(ls - i) // 2] == temps[(ls - i) // 2:]:
             ans = ls - i
             break
-
     print(ans)
 
 

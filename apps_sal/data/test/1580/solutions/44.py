@@ -1,14 +1,6 @@
-#    Copyright 2016-2019 NetworkX developers.
-#    Copyright (C) 2004-2019 by
-#    Aric Hagberg <hagberg@lanl.gov>
-#    Dan Schult <dschult@colgate.edu>
-#    Pieter Swart <swart@lanl.gov>
-#    All rights reserved.
-#    BSD license.
 """
 Union-find data structure.
 """
-
 from networkx.utils import groups
 
 
@@ -52,21 +44,15 @@ class UnionFind:
 
     def __getitem__(self, object):
         """Find and return the name of the set containing the object."""
-
-        # check for previously unknown object
         if object not in self.parents:
             self.parents[object] = object
             self.weights[object] = 1
             return object
-
-        # find path of objects leading to the root
         path = [object]
         root = self.parents[object]
         while root != path[-1]:
             path.append(root)
             root = self.parents[root]
-
-        # compress the path and return
         for ancestor in path:
             self.parents[ancestor] = root
         return root
@@ -90,18 +76,14 @@ class UnionFind:
             [['x', 'y'], ['z']]
 
         """
-        # Ensure fully pruned paths
         for x in list(self.parents.keys()):
-            _ = self[x]  # Evaluated for side-effect only
-
-        # TODO In Python 3.3+, this should be `yield from ...`.
+            _ = self[x]
         for block in list(groups(self.parents).values()):
             yield block
 
     def union(self, *objects):
         """Find the sets containing the objects and merge them all."""
         roots = [self[x] for x in objects]
-        # Find the heaviest root according to its weight.
         heaviest = max(roots, key=lambda r: self.weights[r])
         for r in roots:
             if r != heaviest:
@@ -110,15 +92,12 @@ class UnionFind:
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     XYZ = [list(map(int, input().split())) for _ in range(M)]
-
     u = UnionFind(list(range(1, N + 1)))
-
-    for x, y, z in XYZ:
+    for (x, y, z) in XYZ:
         u.union(x, y)
-
-    print((len(list(u.to_sets()))))
+    print(len(list(u.to_sets())))
 
 
 main()

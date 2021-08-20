@@ -1,12 +1,11 @@
 t = int(input())
 for i in range(t):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     l = [int(i) for i in input().split()]
     cnt = 0
     for i in l:
         if i % x == 0:
             cnt += 1
-
     if cnt == n:
         print(-1)
     else:

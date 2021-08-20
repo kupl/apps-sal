@@ -1,7 +1,7 @@
 t = input().split(',')
-k, m = 0, len(t)
-p, d = [m] * m, [[] for i in range(m)]
-for s, n in zip(t[::2], t[1::2]):
+(k, m) = (0, len(t))
+(p, d) = ([m] * m, [[] for i in range(m)])
+for (s, n) in zip(t[::2], t[1::2]):
     while not p[k]:
         k -= 1
     p[k] -= 1

@@ -1,17 +1,12 @@
-
-
 class Solution:
-    def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
 
+    def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
         if boardingCost * 4 - runningCost < 0:
             return -1
-
         incomes = list()
         incomes.append(0)
-
         it = iter(customers)
         idx = 0
-
         while True:
             try:
                 cnt = next(it)
@@ -21,10 +16,8 @@ class Solution:
                     else:
                         customers[idx + 1] += cnt - 4
                     cnt = 4
-
                 incomes.append(incomes[idx] + boardingCost * cnt - runningCost)
                 idx += 1
             except StopIteration:
                 break
-
         return incomes.index(max(incomes))

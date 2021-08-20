@@ -1,5 +1,5 @@
 def main(verb, noun):
-    return (verb + noun)
+    return verb + noun
 
 
-print((main('take ', 'item')))
+print(main('take ', 'item'))

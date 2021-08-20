@@ -1,5 +1,4 @@
 for i in range(int(input())):
-
     n = int(input())
     moves = 0
     while n % 2 == 0:

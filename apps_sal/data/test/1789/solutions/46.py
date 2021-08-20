@@ -1,5 +1,3 @@
-
-
 from functools import reduce
 from operator import mul
 from collections import Counter
@@ -29,8 +27,6 @@ import array
 import re
 import sys
 sys.setrecursionlimit(500000)
-
-
 input = sys.stdin.readline
 
 
@@ -40,24 +36,7 @@ def eprint(*args, **kwargs):
 
 
 def warizan(a, b):
-    return a // b, a % b
-
-
-# from fractions import gcd
-# from math import gcd
-
-# def lcm(n, m):
-#     return int(n * m / gcd(n, m))
-
-
-# def coprimize(p, q):
-#     common = gcd(p, q)
-#     return (p // common, q // common)
-
-
-# def find_gcd(list_l):
-#     x = reduce(gcd, list_l)
-#     return x
+    return (a // b, a % b)
 
 
 def combinations_count(n, r):
@@ -77,13 +56,10 @@ def combinations_count_mod(n, r):
     return numer * denom % mod
 
 
-# def solve():
-
-
-a, b, x, y = list(map(int, input().strip().split()))
+(a, b, x, y) = list(map(int, input().strip().split()))
 h = abs(a - b)
 if a < b:
-    temp1 = y * (h) + x
+    temp1 = y * h + x
     temp2 = 2 * x * h + x
     eprint('temp1,temp2 ', end=':\n')
     eprint(temp1, temp2)

@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 S = input()
-L = ["RPS".find(s) for s in S]
+L = ['RPS'.find(s) for s in S]
 
 
 def winner(a, b):
@@ -13,4 +13,4 @@ for _ in range(k):
     if len(L) % 2:
         L += L
     L = [winner(L[2 * i], L[2 * i + 1]) for i in range(len(L) // 2)]
-print("RPS"[L[0]])
+print('RPS'[L[0]])

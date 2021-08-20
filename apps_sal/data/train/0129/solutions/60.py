@@ -1,6 +1,7 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
-        res, leftmax, cnt = 0, 0, 0
+        (res, leftmax, cnt) = (0, 0, 0)
         for num in A:
             res = max(res, num + leftmax - cnt)
             if num > leftmax - cnt:

@@ -1,7 +1,6 @@
 n = int(input())
 xs = list(map(int, input().split()))
 vs = list(map(int, input().split()))
-
 l = 0
 r = max(xs) - min(xs) + 1
 for i in range(50):

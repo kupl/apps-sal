@@ -6,7 +6,6 @@ for i in s:
         s1 += i
     else:
         a += 1
-
 if len(s1) % 2 != 0:
     print(':(')
 else:

@@ -6,5 +6,4 @@ def find_average(nums):
         for i in nums:
             x = i + x
         y = x / len(nums)
-
     return y

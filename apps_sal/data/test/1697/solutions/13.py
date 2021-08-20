@@ -1,5 +1,5 @@
 def q():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     p = [k for _ in range(n) for k in input()]
     w = []
     for z in range(n):
@@ -23,7 +23,7 @@ def q():
             elif pol[f] == 1:
                 raise OverflowError
         pol[g] = 2
-    for i, flag in enumerate(pol):
+    for (i, flag) in enumerate(pol):
         if not flag:
             try:
                 zss(i)

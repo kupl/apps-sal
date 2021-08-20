@@ -2,17 +2,17 @@ def dfs(place, target):
     vis[place] = True
     if target == place:
         total[0] += 1
-        return()
+        return ()
     anyAdj = 0
     for i in j[place]:
         if not vis[i]:
             anyAdj = 1
             dfs(i, target)
     if anyAdj == 0:
-        return()
+        return ()
 
 
-v, e = list(map(int, input().split()))
+(v, e) = list(map(int, input().split()))
 edges = []
 for i in range(e):
     edges.append(list(map(int, input().split())))
@@ -30,7 +30,7 @@ for i in colors:
 q = int(input())
 for i in range(q):
     total = [0]
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     for j in colorAdjs:

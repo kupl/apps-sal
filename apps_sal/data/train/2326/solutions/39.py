@@ -1,5 +1,8 @@
 from bisect import bisect_right, bisect_left
-def inpl(): return list(map(int, input().split()))
+
+
+def inpl():
+    return list(map(int, input().split()))
 
 
 N = int(input())
@@ -27,4 +30,4 @@ for n in range(L - 1, 0, -1):
         k[p - 1] += 1
         i -= 1
 for i in range(N):
-    print((ans[i]))
+    print(ans[i])

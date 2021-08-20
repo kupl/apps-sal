@@ -24,17 +24,15 @@ def swapInPlace(list, firstPos, secondPos):
         list[pos - 1] = tmp
 
 
-number, operations = [nbr for nbr in sys.stdin.readline().split()]
+(number, operations) = [nbr for nbr in sys.stdin.readline().split()]
 operations = int(operations)
-
 nbr_list = list(number)
 if operations > 0:
     for pos in range(len(nbr_list) - 1):
         biggerPos = findBiggerInInterval(nbr_list, pos, operations)
         if biggerPos != -1:
             swapInPlace(nbr_list, pos, biggerPos)
-            operations -= (biggerPos - pos)
+            operations -= biggerPos - pos
         if operations == 0:
             break
-
-print("".join(nbr_list))
+print(''.join(nbr_list))

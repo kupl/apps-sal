@@ -1,34 +1,25 @@
-# input
-
 s = str(input())
 k = int(input())
-
-
-# variables
 a = 0
 
 
 def tandem(string):
     if len(string) % 2 == 1:
         return False
+    elif string[:len(string) // 2] == string[len(string) // 2:]:
+        return True
     else:
-        if string[:len(string) // 2] == string[len(string) // 2:]:
-            return True
-        else:
-            return False
+        return False
 
 
-# main
 if len(s) <= k:
     a = 2 * ((len(s) + k) // 2)
 else:
     a = 2 * k
-
 for i in range(0, len(s) - 1):
     for j in range(i + 1, len(s)):
         if tandem(s[i:j + 1]):
             a = max(a, j - i + 1)
-
 for i in range(len(s) - 1):
     if s[i] == s[-1]:
         x = 0
@@ -39,5 +30,4 @@ for i in range(len(s) - 1):
                 break
         if len(s) - i - x - 1 <= k:
             a = max(a, 2 * (len(s) - i - 1))
-
 print(a)

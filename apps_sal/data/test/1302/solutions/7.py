@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 r = list(range(n))
 index = 1
 if k >= 0 and k < n:

@@ -11,7 +11,7 @@ def read_ints():
 
 
 def ilen(ll):
-    return sum(1 for _ in ll)
+    return sum((1 for _ in ll))
 
 
 def solve():
@@ -26,18 +26,18 @@ def solve():
     1 1 1 0
     0
     """
-    n, a, b, k = read_ints()
+    (n, a, b, k) = read_ints()
     s = input().strip()
-    segments = []  # (length, start)
+    segments = []
     maximum_count = 0
-    for start, vals in groupby(enumerate(s), key=lambda p: p[1]):
+    for (start, vals) in groupby(enumerate(s), key=lambda p: p[1]):
         val = next(vals)
         if val[1] == '0':
             segments.append((val[0], 1 + ilen(vals)))
             maximum_count += segments[-1][1] // b
     shots = []
     while maximum_count >= a:
-        start, length = segments.pop()
+        (start, length) = segments.pop()
         if length // b > 0:
             shots.append(start + b - 1)
             segments.append((start + b, length - b))

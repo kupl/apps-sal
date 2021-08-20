@@ -1,23 +1,43 @@
 from collections import deque
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def main():
-    n, k = MI()
+    (n, k) = MI()
     xx = set()
     yy = set()
     xy = []
     for _ in range(n):
-        x, y = MI()
+        (x, y) = MI()
         xy.append((x, y))
         xx.add(x)
         yy.add(y)
@@ -26,7 +46,7 @@ def main():
     yy = list(sorted(yy))
     xn = len(xx)
     yn = len(yy)
-    ans = 10**20
+    ans = 10 ** 20
     for t in range(yn):
         y2 = yy[t]
         for b in range(t):
@@ -34,7 +54,7 @@ def main():
             r = -1
             s = 0
             i = j = 0
-            for l, x1 in enumerate(xx):
+            for (l, x1) in enumerate(xx):
                 while i < n and xy[i][0] < x1:
                     if y1 <= xy[i][1] <= y2:
                         s -= 1

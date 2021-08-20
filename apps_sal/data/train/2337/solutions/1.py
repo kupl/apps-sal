@@ -20,10 +20,8 @@ def solve(N, P):
             j += 1
         C.append(j - i)
         i = j
-
     if N < 10 or len(C) < 3:
-        return 0, 0, 0
-
+        return (0, 0, 0)
     half = N // 2
     g = C[0]
     s = 0
@@ -35,17 +33,15 @@ def solve(N, P):
     while i < len(C) and g >= b:
         b += C[i]
         i += 1
-    if s == 0 or b == 0 or g >= s or g >= b or g + s + b > half:
-        return 0, 0, 0
+    if s == 0 or b == 0 or g >= s or (g >= b) or (g + s + b > half):
+        return (0, 0, 0)
     while i < len(C):
         if g + s + b + C[i] > half:
             break
         b += C[i]
         i += 1
-    return g, s, b
+    return (g, s, b)
 
-
-###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

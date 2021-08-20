@@ -4,11 +4,11 @@ def sam(lst):
 
 n = int(input())
 s = [int(x) for x in input().split()]
-if(sam(s)):
+if sam(s):
     print(0)
 else:
     x = round(sum(s) / n)
     n = 0
     for elem in s:
-        n += (elem - x)**2
+        n += (elem - x) ** 2
     print(n)

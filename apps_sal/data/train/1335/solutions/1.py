@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 a = list(map(int, input().split()))
 v = dict()
@@ -16,8 +15,6 @@ for x in v:
         else:
             count += v[x] // 2
             count += 1
-    else:
-        if v[x] == 1:
-            count += 1
-
+    elif v[x] == 1:
+        count += 1
 print(count)

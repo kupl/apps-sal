@@ -2,7 +2,7 @@ def gns():
     return list(map(int, input().split()))
 
 
-n, k = gns()
+(n, k) = gns()
 ns = gns()
 sm = [ns[-1]]
 for i in reversed(list(range(n - 1))):

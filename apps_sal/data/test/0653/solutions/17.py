@@ -1,8 +1,6 @@
 n = int(input())
-
 o = input()
 k = [False] * 10
-
 for c in o:
     if c.isdigit():
         k[int(c)] = 0

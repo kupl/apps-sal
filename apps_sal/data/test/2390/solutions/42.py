@@ -1,7 +1,7 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 xv = [list(map(int, input().split())) for _ in range(n)]
-l, r, lret, rret = [], [], [], []
-sl, sr = 0, 0
+(l, r, lret, rret) = ([], [], [], [])
+(sl, sr) = (0, 0)
 for i in range(n):
     sl += xv[i][1]
     sr += xv[n - i - 1][1]
@@ -13,10 +13,6 @@ for i in range(1, n):
     lret[i] = max(lret[i], lret[i - 1])
     rret[i] = max(rret[i], rret[i - 1])
 ans = max(0, max(l), max(r))
-# print(l)
-# print(r)
-# print(lret)
-# print(rret)
 for i in range(n - 1):
     ans = max(ans, l[i] + rret[n - i - 2], r[i] + lret[n - i - 2])
 print(ans)

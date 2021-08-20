@@ -13,18 +13,18 @@ def red(frac):
 
 
 def add(i, frac):
-    a, b = frac
+    (a, b) = frac
     a += b * i
     return red((a, b))
 
 
 args = list(map(int, sys.stdin.read().split()))
-p, q = args[0], args[1]
+(p, q) = (args[0], args[1])
 n = args[2]
 s = (args[2 + n], 1)
 for i in range(0, n - 1):
     s = add(args[1 + n - i], (s[1], s[0]))
-if(s == red((p, q))):
+if s == red((p, q)):
     print('YES')
 else:
     print('NO')

@@ -1,5 +1,4 @@
-# cook your dish here
-n, k = input().split()
+(n, k) = input().split()
 n = int(n)
 k = int(k)
 l = [0] * n

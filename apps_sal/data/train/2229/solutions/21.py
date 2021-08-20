@@ -17,12 +17,11 @@ def exist(m):
     return 0
 
 
-l, r = 0, len(s)
+(l, r) = (0, len(s))
 while l < r:
     mid = (l + r + 1) // 2
     if exist(mid):
         l = mid
     else:
         r = mid - 1
-
 print(l)

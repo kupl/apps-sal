@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     x = int(input())
     for _ in range(x):
@@ -17,15 +16,14 @@ try:
                         if a[i] == a[i + 1]:
                             i += 1
                             count += 1
-                        else:
-                            if i + 2 < y:
-                                if a[i] == a[i + 2]:
-                                    i += 2
-                                    count += 1
-                                else:
-                                    break
+                        elif i + 2 < y:
+                            if a[i] == a[i + 2]:
+                                i += 2
+                                count += 1
                             else:
                                 break
+                        else:
+                            break
                     else:
                         break
                 j = j + 1

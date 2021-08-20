@@ -1,4 +1,5 @@
 class Solution:
+
     def histogramCount(self, histograms):
         stack = []
         count = 0
@@ -31,29 +32,28 @@ class Solution:
 
     def memoization(self, grid, i, j, memo):
         if i == len(grid) or j == len(grid[0]):
-            return 0, 0, 0
+            return (0, 0, 0)
         if memo[i][j] is not None:
             return memo[i][j]
         if grid[i][j] == 0:
-            memo[i][j] = 0, 0, 0
+            memo[i][j] = (0, 0, 0)
+        elif i == len(grid) - 1:
+            (_, col, _) = self.memoization(grid, i, j + 1, memo)
+            memo[i][j] = (1, col + 1, col + 1)
+        elif j == len(grid[0]) - 1:
+            (row, _, _) = self.memoization(grid, i + 1, j, memo)
+            memo[i][j] = (row + 1, 1, row + 1)
         else:
-            if i == len(grid) - 1:
-                _, col, _ = self.memoization(grid, i, j + 1, memo)
-                memo[i][j] = 1, col + 1, col + 1
-            elif j == len(grid[0]) - 1:
-                row, _, _ = self.memoization(grid, i + 1, j, memo)
-                memo[i][j] = row + 1, 1, row + 1
-            else:
-                rows, _, _ = self.memoization(grid, i + 1, j, memo)
-                prev = rows + 1
-                out = prev
-                k = j + 1
-                while k < len(grid[0]) and grid[i][k] != 0:
-                    row, _, _ = self.memoization(grid, i, k, memo)
-                    prev = min(prev, row)
-                    out += prev
-                    k += 1
-                memo[i][j] = rows + 1, k - j, out
+            (rows, _, _) = self.memoization(grid, i + 1, j, memo)
+            prev = rows + 1
+            out = prev
+            k = j + 1
+            while k < len(grid[0]) and grid[i][k] != 0:
+                (row, _, _) = self.memoization(grid, i, k, memo)
+                prev = min(prev, row)
+                out += prev
+                k += 1
+            memo[i][j] = (rows + 1, k - j, out)
         return memo[i][j]
 
     def numSubmat(self, mat: List[List[int]]) -> int:
@@ -61,6 +61,6 @@ class Solution:
         out = 0
         for i in range(len(mat)):
             for j in range(len(mat[0])):
-                _, _, val = self.memoization(mat, i, j, memo)
+                (_, _, val) = self.memoization(mat, i, j, memo)
                 out += val
         return out

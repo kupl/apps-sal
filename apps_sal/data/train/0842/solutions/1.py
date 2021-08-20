@@ -7,10 +7,10 @@ try:
         n = 1
         for i in range(k):
             for j in range(k):
-                if (j == x or j == y):
-                    print(n, end="")
+                if j == x or j == y:
+                    print(n, end='')
                 else:
-                    print(" ", end="")
+                    print(' ', end='')
             x += 1
             y -= 1
             n += 1

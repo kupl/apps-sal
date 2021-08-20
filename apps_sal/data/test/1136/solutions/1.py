@@ -1,6 +1,5 @@
 import math
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 mod = pow(10, 9) + 7
 ans = 0
 if n < m:
@@ -14,7 +13,7 @@ for i in range(ns):
         f = 0
         break
     x[i] = n // (i + 1)
-    ans += (n - x[i] * (i + 1))
+    ans += n - x[i] * (i + 1)
     ans %= mod
 for i in range(ns + 1, max(ns + 1, x[-1] + 1)):
     ans += n % i
@@ -24,10 +23,10 @@ if f:
         if x[i + 1] >= m:
             continue
         c = x[i] - x[i + 1]
-        ans += ((n - x[i] * (i + 1)) * c + (i + 1) * c * (c - 1) // 2)
+        ans += (n - x[i] * (i + 1)) * c + (i + 1) * c * (c - 1) // 2
         ans %= mod
         if x[i] >= m > x[i + 1]:
             c = x[i] - m
-            ans -= ((n - x[i] * (i + 1)) * c + (i + 1) * c * (c - 1) // 2)
+            ans -= (n - x[i] * (i + 1)) * c + (i + 1) * c * (c - 1) // 2
             ans %= mod
 print(ans)

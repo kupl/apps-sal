@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, u, d = map(int, input().split())
+    (n, u, d) = map(int, input().split())
     l = list(map(int, input().split()))
     ind = 0
     c = 0
@@ -15,12 +15,11 @@ for i in range(t):
             ans = l[j] - l[j + 1]
             if ans <= d:
                 ind = j + 1
+            elif c == 1:
+                break
             else:
-                if c == 1:
-                    break
-                else:
-                    ind = j + 1
-                    c = c + 1
+                ind = j + 1
+                c = c + 1
         elif l[j] == l[j + 1]:
             ind = j + 1
             continue

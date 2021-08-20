@@ -9,14 +9,14 @@ mod = (1 << 61) - 1
 base = 1000 + random.randint(0, 100)
 power = [1]
 for i in range(1, n):
-    power.append((power[-1] * base) % mod)
+    power.append(power[-1] * base % mod)
 hvalue = [0]
 for i in range(n):
-    hvalue.append((hvalue[-1] + (ord(s[i]) * power[i])) % mod)
+    hvalue.append((hvalue[-1] + ord(s[i]) * power[i]) % mod)
 
 
 def rollinghash(l, r):
-    return ((hvalue[r] - hvalue[l]) * power[n - r]) % mod
+    return (hvalue[r] - hvalue[l]) * power[n - r] % mod
 
 
 def pun(i):

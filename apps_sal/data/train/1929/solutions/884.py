@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self):
         self.children = defaultdict(bool)
 
@@ -16,6 +17,7 @@ class Trie:
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.root = Trie()
         for word in words:

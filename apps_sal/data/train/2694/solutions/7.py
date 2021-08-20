@@ -4,10 +4,10 @@ def paul(x):
     for item in x:
         score += vals[item]
     if score < 40:
-        return "Super happy!"
+        return 'Super happy!'
     elif score < 70:
-        return "Happy!"
+        return 'Happy!'
     elif score < 100:
-        return "Sad!"
+        return 'Sad!'
     else:
-        return "Miserable!"
+        return 'Miserable!'

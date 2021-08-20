@@ -1,10 +1,11 @@
 class Solution:
+
     def hasGroupsSizeX(self, deck: List[int]) -> bool:
+
         def findGCD(a, b):
             if b == 0:
                 return a
             return findGCD(b, a % b)
-
         hash_cards = {}
         for card in deck:
             if card in hash_cards:

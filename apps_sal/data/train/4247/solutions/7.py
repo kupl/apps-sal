@@ -1,5 +1,5 @@
 def odd(s):
-    n, o, d, trying = 0, 0, 0, True
+    (n, o, d, trying) = (0, 0, 0, True)
     while trying:
         try:
             o += s[o:].index('o') + 1

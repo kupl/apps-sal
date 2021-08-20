@@ -1,5 +1,4 @@
 t = int(input())
-
 while t > 0:
     [n, p] = map(int, input().split(' '))
     count = int(0)

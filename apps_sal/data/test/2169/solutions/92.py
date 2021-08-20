@@ -19,13 +19,10 @@ from itertools import accumulate
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
-alf = list("abcdefghijklmnopqrstuvwxyz")
-ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
-INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
-H, W, D = list(map(int, input().split()))
+alf = list('abcdefghijklmnopqrstuvwxyz')
+ALF = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+INF = float('inf')
+(H, W, D) = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(H)]
 table = [[-1, -1] for _ in range(H * W + 1)]
 for i in range(H):
@@ -45,11 +42,10 @@ for i in range(D + 1, H * W + 1):
 Q = int(input())
 ans = 0
 for i in range(Q):
-    L, R = list(map(int, input().split()))
+    (L, R) = list(map(int, input().split()))
     if L == R:
-        print((0))
+        print(0)
+    elif L <= D:
+        print(magic[R - D])
     else:
-        if L <= D:
-            print((magic[R - D]))
-        else:
-            print((magic[R - D] - magic[L - D]))
+        print(magic[R - D] - magic[L - D])

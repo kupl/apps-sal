@@ -1,10 +1,9 @@
-# n,m=int(input().split()[:2])
-n, m = [int(x)for x in input().split()[:2]]
-fd = [[-2 for i in range(m)]for i in range(n)]
+(n, m) = [int(x) for x in input().split()[:2]]
+fd = [[-2 for i in range(m)] for i in range(n)]
 
 
 def inbd(i, j):
-    if i >= 0 and i < n and j >= 0 and j < m:
+    if i >= 0 and i < n and (j >= 0) and (j < m):
         return (i, j)
     else:
         return None
@@ -29,7 +28,7 @@ for i in range(n):
 for i in range(n):
     for j in range(m):
         if fd[i][j] == '*':
-            for x, y in neis(i, j):
+            for (x, y) in neis(i, j):
                 if fd[x][y] == '*':
                     continue
                 fd[x][y] -= 1
@@ -40,7 +39,6 @@ for i in range(n):
             continue
         else:
             fg = False
-# print(fd)
 if fg:
     print('YES')
 else:

@@ -1,11 +1,5 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/3/21 23:56
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Edgy Trees.py
-
-
 class UnionFind(object):
+
     def __init__(self, n):
         self.root = [i for i in range(n)]
         self.size = [1 for _ in range(n)]
@@ -17,11 +11,11 @@ class UnionFind(object):
         return self.root[x]
 
     def union(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return
         if self.size[x] < self.size[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.root[y] = x
         self.size[x] += self.size[y]
 
@@ -37,15 +31,13 @@ def pow_mod(a, b, p):
 
 
 def main():
-    n, k = list(map(int, input().split()))
-
+    (n, k) = list(map(int, input().split()))
     union_find = UnionFind(n + 1)
     for _ in range(n - 1):
-        u, v, c = list(map(int, input().split()))
+        (u, v, c) = list(map(int, input().split()))
         if c == 0:
             union_find.union(u, v)
-
-    p = int(1e9 + 7)
+    p = int(1000000000.0 + 7)
     ret = pow_mod(n, k, p)
     used = set()
     for i in range(1, n + 1):
@@ -58,7 +50,6 @@ def main():
 
 def __starting_point():
     main()
-    # print(pow_mod(4, 4, 3))
 
 
 __starting_point()

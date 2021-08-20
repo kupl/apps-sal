@@ -1,6 +1,6 @@
 arr = []
 for _ in range(int(input())):
-    start, end = [int(x) for x in input().split()]
+    (start, end) = [int(x) for x in input().split()]
     arr.append((start, start + end))
 arr.sort()
 ans = 1

@@ -9,4 +9,4 @@ def count_positives_sum_negatives(arr):
     if len(arr) == 0:
         return []
     else:
-        return[positiveTotal, negativeTotal]
+        return [positiveTotal, negativeTotal]

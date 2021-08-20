@@ -1,11 +1,12 @@
-# O(M*N)
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.isEnd = False
 
 
 class Solution:
+
     def __init__(self):
         self.root = TrieNode()
 

@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         counts = [[0] * len(matrix[0]) for _ in range(len(matrix))]
 
@@ -9,7 +10,6 @@ class Solution:
             if 0 <= r < len(m) and 0 <= c < len(m[0]):
                 return m[r][c]
             return 0
-
         total = 0
         for r in range(len(matrix)):
             for c in range(len(matrix[0])):

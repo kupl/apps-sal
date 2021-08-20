@@ -1,4 +1,3 @@
-
 def str_count(strng, letter):
     if strng in ['']:
         return 0

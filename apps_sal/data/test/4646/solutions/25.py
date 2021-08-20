@@ -1,10 +1,9 @@
 n = int(input())
-
 for _ in range(n):
     input()
     a = list(map(int, input().split()))
-    c_e, c_n = 0, 0
-    for i, x in enumerate(a):
+    (c_e, c_n) = (0, 0)
+    for (i, x) in enumerate(a):
         if i % 2 == 0 and x % 2 == 1:
             c_e += 1
         if i % 2 == 1 and x % 2 == 0:

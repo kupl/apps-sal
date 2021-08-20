@@ -4,7 +4,7 @@ a1 = 0
 b = 0
 b1 = 0
 for i in range(n):
-    t, x, y = list(map(int, input().split()))
+    (t, x, y) = list(map(int, input().split()))
     if t == 1:
         a += x
         a1 += y

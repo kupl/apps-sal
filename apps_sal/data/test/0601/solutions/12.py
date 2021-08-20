@@ -1,11 +1,11 @@
 gans = []
 for _ in range(int(input())):
-    p, f = list(map(int, input().split()))
-    n, m = list(map(int, input().split()))
-    s, w = list(map(int, input().split()))
+    (p, f) = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
+    (s, w) = list(map(int, input().split()))
     if s > w:
-        s, w = w, s
-        n, m = m, n
+        (s, w) = (w, s)
+        (n, m) = (m, n)
     ans = 0
     for i in range(min(n, p // s) + 1):
         j = min(n - i, f // s)

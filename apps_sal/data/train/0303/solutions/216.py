@@ -1,15 +1,11 @@
 class Solution:
-    def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
 
+    def maxSumAfterPartitioning(self, A: List[int], K: int) -> int:
         self.max_sum = float('-inf')
         self.dic = {}
 
-        # @functools.lru_cache(None)
         def getSum(i):
-
             if i >= len(A):
-                # if cur_sum>self.max_sum:
-                #     self.max_sum = cur_sum
                 return 0
             if i in self.dic:
                 return self.dic[i]
@@ -24,5 +20,4 @@ class Solution:
                     break
             self.dic[i] = ret
             return ret
-
         return getSum(0)

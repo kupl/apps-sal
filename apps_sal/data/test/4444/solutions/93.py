@@ -1,3 +1,2 @@
-S, T = input().split()
-
+(S, T) = input().split()
 print(T + S)

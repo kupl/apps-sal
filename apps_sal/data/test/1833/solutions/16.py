@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 seen = [0] * (n + 3)
 long = 1
 for guy in a:
-    if guy**0.5 > long - 50:
+    if guy ** 0.5 > long - 50:
         for i in range(long + 1, 1, -1):
             if guy % i == 0:
                 seen[i] += seen[i - 1]
@@ -12,7 +12,7 @@ for guy in a:
     else:
         facs = []
         bigfacs = []
-        for i in range(1, int(guy**0.5) + 1):
+        for i in range(1, int(guy ** 0.5) + 1):
             if guy % i == 0:
                 facs.append(i)
                 bigfacs.append(guy // i)

@@ -9,7 +9,6 @@ def ss(index, perm):
         perm1 = [i for i in perm]
         perm1[-1] += s[index]
         ss(index + 1, perm1)
-
         perm2 = [i for i in perm]
         perm2.append(s[index])
         ss(index + 1, perm2)

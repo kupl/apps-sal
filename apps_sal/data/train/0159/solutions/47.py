@@ -1,4 +1,5 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         pq = [(-nums[0], 0)]
         res = nums[0]

@@ -27,5 +27,4 @@ for s in S:
         if k == 'U':
             c += 1
         k = 'D'
-
 print(c)

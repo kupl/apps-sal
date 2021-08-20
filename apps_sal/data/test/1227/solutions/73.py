@@ -11,8 +11,8 @@ N = input()
 K = int(input())
 D = len(N)
 score = 0
-for i, a in enumerate(N):
-    if a != "0":
+for (i, a) in enumerate(N):
+    if a != '0':
         score += calc(int(a), D - i, K)
         K -= 1
     if K == 0:

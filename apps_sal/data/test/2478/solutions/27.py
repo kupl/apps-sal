@@ -1,6 +1,5 @@
 N = int(input())
 S = input()
-
 stack = []
 for c in S:
     if len(stack) > 0:
@@ -9,8 +8,6 @@ for c in S:
             stack = stack[:-1]
             continue
     stack.append(c)
-
 left = stack.count(')')
 right = stack.count('(')
-
 print(left * '(' + S + right * ')')

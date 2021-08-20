@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = [int(i) for i in input().split()]
 res = [[] for i in range(n)]
 c = 0
@@ -17,7 +17,7 @@ while True:
         c += 1
         if c > k:
             break
-        for i, j in enumerate(arr):
+        for (i, j) in enumerate(arr):
             if j > 0:
                 arr[i] -= 1
                 res[i].append(c)

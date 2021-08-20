@@ -1,8 +1,8 @@
 s = input()
-ans = ""
+ans = ''
 for char in s:
     if char == 'B':
-        if ans == "":
+        if ans == '':
             pass
         else:
             l = len(ans)

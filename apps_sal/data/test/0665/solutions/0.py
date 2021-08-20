@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
-    n, s = [int(x) for x in input().split()]
+    (n, s) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     need = -1
-    if (sum(a)) <= s:
+    if sum(a) <= s:
         print(0)
     else:
         for i in range(n):

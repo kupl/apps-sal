@@ -1,11 +1,9 @@
 n = int(input())
-
 dd = {}
-
 for _ in range(n):
     l = input()
     if l in dd:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     dd[l] = 1

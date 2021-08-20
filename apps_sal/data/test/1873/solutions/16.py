@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s1 = list(map(int, input().split()))
 a = [0] * m
 for i in range(n):

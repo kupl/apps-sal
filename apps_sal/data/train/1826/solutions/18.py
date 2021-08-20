@@ -1,7 +1,6 @@
 class Solution:
-    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
 
-        # mat2 = mat[:]   # can not 2-d matrix
+    def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         mat2 = copy.deepcopy(mat)
 
         def help(i, j, K):
@@ -11,10 +10,8 @@ class Solution:
                     if 0 <= ii < len(mat) and 0 <= jj < len(mat[0]):
                         res += mat[ii][jj]
             return res
-
         for i in range(len(mat)):
             for j in range(len(mat[0])):
-                # print(mat)
                 if j == 0:
                     mat2[i][j] = help(i, j, K)
                 else:
@@ -27,5 +24,4 @@ class Solution:
                         for ii in range(i - K, i + K + 1):
                             if 0 <= ii < len(mat):
                                 mat2[i][j] -= mat[ii][j - K - 1]
-
         return mat2

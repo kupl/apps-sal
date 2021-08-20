@@ -1,5 +1,4 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 ans = []
 while n > 0:
     ans.append(n % k)

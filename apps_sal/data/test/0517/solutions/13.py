@@ -1,17 +1,13 @@
-
-n, d, h = list(map(int, input().split()))
-
+(n, d, h) = list(map(int, input().split()))
 if d - h > h or (d == 1 and n > 2):
     print('-1')
 else:
     for ver in range(2, h + 2):
         print('{} {}'.format(ver - 1, ver))
-
     prev = 1
     for ver in range(h + 2, h + 2 + (d - h)):
         print('{} {}'.format(prev, ver))
         prev = ver
-
     start = 1
     prev = max(prev, h + 1)
     if h == d:

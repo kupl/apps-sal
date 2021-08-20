@@ -3,6 +3,7 @@ readline = sys.stdin.readline
 
 
 class Node:
+
     def __init__(self, sigma, depth):
         self.end = False
         self.child = [None] * sigma
@@ -29,13 +30,10 @@ def add_trie(S):
 
 
 ans = 0
-
-N, L = map(int, readline().split())
-
+(N, L) = map(int, readline().split())
 for _ in range(N):
     S = list(map(int, readline().strip()))
     add_trie(S)
-
 cnt = 0
 stack = [root]
 while stack:
@@ -46,5 +44,4 @@ while stack:
             cnt ^= -r & r
         else:
             stack.append(vn[i])
-
 print('Alice' if cnt else 'Bob')

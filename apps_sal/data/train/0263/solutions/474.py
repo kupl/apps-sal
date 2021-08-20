@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, N: int) -> int:
         dirs = [(2, 1), (1, 2), (2, -1), (1, -2), (-2, -1), (-1, -2), (-2, 1), (-1, 2)]
         dp = [[0 for j in range(N)] for i in range(10)]
@@ -15,11 +16,11 @@ class Solution:
                 for d in dirs:
                     new_x = x - d[0]
                     new_y = y - d[1]
-                    if new_x < 0 or new_x > 2 or new_y < 0 or new_y > 3:
+                    if new_x < 0 or new_x > 2 or new_y < 0 or (new_y > 3):
                         continue
-                    if (new_x == 0 and new_y == 3) or (new_x == 2 and new_y == 3):
+                    if new_x == 0 and new_y == 3 or (new_x == 2 and new_y == 3):
                         continue
-                    new_num = 0 if (new_x == 1 and new_y == 3) else new_y * 3 + new_x + 1
+                    new_num = 0 if new_x == 1 and new_y == 3 else new_y * 3 + new_x + 1
                     dp[num][i] += dp[new_num][i - 1]
         res = 0
         for num in range(10):

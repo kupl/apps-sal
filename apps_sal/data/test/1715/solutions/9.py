@@ -1,7 +1,6 @@
 import bisect as bi
 import math
-A, B, Q = map(int, input().split())
-
+(A, B, Q) = map(int, input().split())
 Jinja = []
 Tera = []
 Ichi = []
@@ -11,8 +10,6 @@ for i in range(0, B):
     Tera.append(int(input()))
 for i in range(0, Q):
     Ichi.append(int(input()))
-
-
 for i in range(0, Q):
     temp = Ichi[i]
     J = math.inf

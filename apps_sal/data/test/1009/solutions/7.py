@@ -1,5 +1,5 @@
 import math
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 data = list(map(int, input().split()))
 colvo_1_cor = k * 2 - n
 colvo_2_cor = k - colvo_1_cor

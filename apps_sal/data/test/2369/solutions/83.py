@@ -1,11 +1,10 @@
-N, K, *A = [int(_) for _ in open(0).read().split()]
+(N, K, *A) = [int(_) for _ in open(0).read().split()]
 A.sort()
 
 
 class Factorial:
+
     def __init__(self, max_fact, mod):
-        # mod should be prime number
-        # using homogeneous_product(n,r), max_fact ≧ max(n+r-1)
         f = [1] * (max_fact + 1)
         for idx in range(2, max_fact + 1):
             f[idx] = f[idx - 1] * idx
@@ -41,15 +40,14 @@ class Factorial:
         return f[n + r - 1] * fi[r] * fi[n - 1] % self.mod
 
 
-max_fact = 10**6
-mod = 10**9 + 7
+max_fact = 10 ** 6
+mod = 10 ** 9 + 7
 fact_instance = Factorial(max_fact, mod)
 comb = fact_instance.combination
 perm = fact_instance.permutation
 combrep = fact_instance.homogeneous_product
-
 ans = 0
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if i + 1 >= K:
         ans += A[i] * comb(i, K - 1)
     if N - i >= K:

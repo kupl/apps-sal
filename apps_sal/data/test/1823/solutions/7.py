@@ -14,7 +14,7 @@ def mints():
     return list(map(int, minp().split()))
 
 
-n, k = mints()
+(n, k) = mints()
 a = list(mints())
 i = 0
 c = [0] * (k + 1)

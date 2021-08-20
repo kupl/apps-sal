@@ -5,7 +5,7 @@ def format(ans):
     return ans + 5 * (ans // k)
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 freq = {i: 0 for i in range(1, 105)}
 for i in range(n):
     s = input()

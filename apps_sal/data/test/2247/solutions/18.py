@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -24,7 +22,7 @@ def solve(S, A, B, C):
 def main():
     T = int(inp())
     for _ in range(T):
-        S, A, B, C = [int(e) for e in inp().split()]
+        (S, A, B, C) = [int(e) for e in inp().split()]
         print(solve(S, A, B, C))
 
 

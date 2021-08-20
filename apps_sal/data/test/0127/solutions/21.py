@@ -1,8 +1,20 @@
 import sys
-def read(): return sys.stdin.readline().rstrip()
-def readi(): return int(sys.stdin.readline())
-def writeln(x): return sys.stdout.write(str(x) + "\n")
-def write(x): return sys.stdout.write(x)
+
+
+def read():
+    return sys.stdin.readline().rstrip()
+
+
+def readi():
+    return int(sys.stdin.readline())
+
+
+def writeln(x):
+    return sys.stdout.write(str(x) + '\n')
+
+
+def write(x):
+    return sys.stdout.write(x)
 
 
 def getM(k, l):
@@ -23,19 +35,19 @@ def getO(k, l):
         return l
 
 
-N, F = list(map(int, read().split()))
+(N, F) = list(map(int, read().split()))
 days = []
 for i in range(N):
-    K, L = list(map(int, read().split()))
+    (K, L) = list(map(int, read().split()))
     M = getM(K, L)
     O = getO(K, L)
     days.append((M - O, M, O))
 days.sort(key=lambda x: x[0])
 sm = 0
 for i in range(F):
-    _, m, _ = days[-1 - i]
+    (_, m, _) = days[-1 - i]
     sm += m
 for i in range(N - F):
-    _, _, o = days[-1 - F - i]
+    (_, _, o) = days[-1 - F - i]
     sm += o
 writeln(sm)

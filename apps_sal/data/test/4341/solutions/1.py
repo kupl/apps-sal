@@ -1,15 +1,13 @@
 from collections import deque
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 deg = [0] * (n + 1)
 G = [[] for _ in range(n + 1)]
 for _ in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     deg[u] += 1
     deg[v] += 1
     G[u].append(v)
     G[v].append(u)
-
 C = [0] * (n + 1)
 
 
@@ -27,7 +25,7 @@ def dfs(v, cc):
                 C[w] = cc
                 sz += 1
                 q.append(w)
-    return sz, ok
+    return (sz, ok)
 
 
 cc = 0
@@ -35,10 +33,7 @@ cycles = 0
 for v in range(1, n + 1):
     if C[v] == 0:
         cc += 1
-        sz, ok = dfs(v, cc)
+        (sz, ok) = dfs(v, cc)
         if ok and sz > 2:
             cycles += 1
-
 print(cycles)
-
-# print(C)

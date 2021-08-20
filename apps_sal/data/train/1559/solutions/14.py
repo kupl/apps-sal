@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import sys
 m = 1000000007
 
@@ -7,7 +6,7 @@ def dcexpo(b, p):
     if p == 0:
         return 1
     temp = dcexpo(b, p >> 1)
-    temp = temp**2
+    temp = temp ** 2
     if p & 1:
         temp = temp * b
     return temp % m

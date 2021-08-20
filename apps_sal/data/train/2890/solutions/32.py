@@ -1,5 +1,4 @@
 def multiples(m, n):
-    # Implement me! :)
     a = [n]
     i = 2
     l = n
@@ -9,5 +8,4 @@ def multiples(m, n):
         a.append(n)
         m -= 1
         i += 1
-
     return a

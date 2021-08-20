@@ -8,7 +8,7 @@ def bpow(a, b):
         return c * c % mod
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a = [0] + a + [n + 1]
 a = sorted(a)
@@ -25,7 +25,7 @@ for i in range(0, m + 1):
     ans1 *= fa[a[i + 1] - a[i] - 1]
     s += a[i + 1] - a[i] - 1
     ans1 %= mod
-    if i > 0 and i < m and a[i + 1] - a[i] > 1:
+    if i > 0 and i < m and (a[i + 1] - a[i] > 1):
         ans2 *= pow(2, a[i + 1] - a[i] - 2, mod)
         ans2 %= mod
-print((fa[s] * pow(ans1, mod - 2, mod) * ans2) % mod)
+print(fa[s] * pow(ans1, mod - 2, mod) * ans2 % mod)

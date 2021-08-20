@@ -1,9 +1,9 @@
-# Dinic's algorithm
 import sys
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -28,7 +28,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -39,7 +39,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -50,10 +50,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = map(iter, self.G)
+            (*self.it,) = map(iter, self.G)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -63,23 +63,18 @@ class Dinic:
 
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
-
 n = int(input())
 a = list(map(int, input().split()))
-
 score = 0
 INF = float('inf')
 graph = Dinic(n + 2)
-
 for i in range(n):
     if a[i] > 0:
         graph.add_edge(i + 1, n + 1, a[i])
         score += a[i]
     elif a[i] < 0:
         graph.add_edge(0, i + 1, -a[i])
-
 for i in range(1, n // 2 + 1):
     for j in range(2 * i, n + 1, i):
         graph.add_edge(i, j, INF)
-
 print(score - graph.flow(0, n + 1))

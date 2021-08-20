@@ -1,4 +1,4 @@
-a, b, c, x, y = map(int, input().split())
+(a, b, c, x, y) = map(int, input().split())
 p = a * x + b * y
 q = 2 * c * max(x, y)
 r = 2 * c * x + b * (y - x)

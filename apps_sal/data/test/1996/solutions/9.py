@@ -1,9 +1,7 @@
 n = int(input())
-
 s = set()
 for i in range(ord('a'), ord('z') + 1):
     s.add(chr(i))
-
 k = 0
 fl = False
 for i in range(n - 1):
@@ -21,5 +19,4 @@ for i in range(n - 1):
     if len(s) == 1:
         fl = True
 q = input()
-
 print(k)

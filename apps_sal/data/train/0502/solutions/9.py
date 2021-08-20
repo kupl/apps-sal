@@ -1,11 +1,13 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
+
         def dfs(i):
             nodes.add(i)
             for j in range(len(graph[i])):
                 if graph[i][j] and j not in nodes:
                     dfs(j)
-        rank, initial = collections.defaultdict(list), set(initial)
+        (rank, initial) = (collections.defaultdict(list), set(initial))
         for node in sorted(initial):
             nodes = set()
             dfs(node)

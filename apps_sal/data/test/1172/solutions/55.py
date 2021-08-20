@@ -1,9 +1,8 @@
 S = input()
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 dp = [[0, 0, 0] for i in range(len(S) + 1)]
-
 base = 1
-for i, s in enumerate(S, 1):
+for (i, s) in enumerate(S, 1):
     dp[i][0] = dp[i - 1][0]
     dp[i][1] = dp[i - 1][1]
     dp[i][2] = dp[i - 1][2]
@@ -16,7 +15,7 @@ for i, s in enumerate(S, 1):
     elif s == 'C':
         dp[i][2] += dp[i - 1][1]
         dp[i][2] %= MOD
-    else:  # s == '?'
+    else:
         dp[i][0] += 2 * dp[i - 1][0] + base
         dp[i][1] += 2 * dp[i - 1][1] + dp[i - 1][0]
         dp[i][2] += 2 * dp[i - 1][2] + dp[i - 1][1]
@@ -25,5 +24,4 @@ for i, s in enumerate(S, 1):
         dp[i][2] %= MOD
         base *= 3
         base %= MOD
-
 print(dp[-1][2])

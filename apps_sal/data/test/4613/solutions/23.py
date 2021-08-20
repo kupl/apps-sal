@@ -2,12 +2,11 @@ import copy
 
 
 def main():
-    N, M = [int(n) for n in input().split(" ")]
+    (N, M) = [int(n) for n in input().split(' ')]
     edges = [[] for i in range(N)]
-    # edges[i] : edges from vertex i
     r = []
     for i in range(M):
-        a, b = [int(x) for x in input().split(" ")]
+        (a, b) = [int(x) for x in input().split(' ')]
         edges[a - 1].append(b - 1)
         edges[b - 1].append(a - 1)
         r.append([a - 1, b - 1])

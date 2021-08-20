@@ -1,8 +1,6 @@
 import os
 from io import BytesIO
 
-# input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
 
 def check(x, p):
     i = mid - 1
@@ -16,12 +14,12 @@ def check(x, p):
 
 
 for _ in range(int(input())):
-    n, p, k = list(map(int, input().split()))
+    (n, p, k) = list(map(int, input().split()))
     a = sorted(map(int, input().split()))
     L = 0
     R = n + 1
     while R - L > 1:
-        mid = (L + R) >> 1
+        mid = L + R >> 1
         if check(mid, p):
             L = mid
         else:

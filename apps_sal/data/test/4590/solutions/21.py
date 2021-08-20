@@ -1,6 +1,6 @@
 import bisect
 import itertools
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 ca = [0] + list(itertools.accumulate(a))

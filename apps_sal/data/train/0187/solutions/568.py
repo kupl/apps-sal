@@ -1,10 +1,11 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         profit = 0
         maxProfit = -1
         res = -1
         currentCustomer = 0
-        for i, c in enumerate(customers):
+        for (i, c) in enumerate(customers):
             currentCustomer += c
             if currentCustomer <= 4:
                 profit += currentCustomer * boardingCost - runningCost
@@ -15,7 +16,6 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 res = i + 1
-
         rounds = currentCustomer // 4
         left = currentCustomer % 4
         if boardingCost * 4 - runningCost > 0:
@@ -27,5 +27,4 @@ class Solution:
             if profit > maxProfit:
                 maxProfit = profit
                 res += 1
-
         return res

@@ -11,4 +11,4 @@ def repl(m):
 
 
 def AlphaNum_NumAlpha(string):
-    return re.sub(r'[a-z]|\d+', repl, string)
+    return re.sub('[a-z]|\\d+', repl, string)

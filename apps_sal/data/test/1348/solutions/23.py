@@ -1,5 +1,3 @@
-
-
 def read_int():
     return int(input().strip())
 
@@ -9,7 +7,7 @@ def read_ints():
 
 
 def solve():
-    n, k = read_ints()
+    (n, k) = read_ints()
     d = read_ints()
     S = [[] for _ in range(n)]
     for i in range(n):
@@ -41,7 +39,7 @@ def solve():
     if construct_count != n:
         return -1
     print(len(edges))
-    for u, v in edges:
+    for (u, v) in edges:
         print(u + 1, v + 1)
 
 

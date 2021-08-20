@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = [[i for i in range(n)] for j in range(m)]
 
 
@@ -14,8 +14,8 @@ def uni(ci, xi, yi):
 
 
 for i in range(m):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     uni(c - 1, a - 1, b - 1)
 for i in range(int(input())):
-    a, b = list(map(int, input().split()))
-    print(sum(1 if f(i, a - 1) == f(i, b - 1) else 0 for i in range(m)))
+    (a, b) = list(map(int, input().split()))
+    print(sum((1 if f(i, a - 1) == f(i, b - 1) else 0 for i in range(m))))

@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 a = [-1] + a
-
 z = []
 s = []
 f = []
@@ -20,19 +19,15 @@ for i in range(1, n + 1):
         z.append(i)
 zp = 0
 i = 1
-# print(f)
-# print(s)
 for i in range(len(f)):
-    # if i < len(f):
     fin = f[i]
     st = s[i]
-    if (i == len(f) - 1) and len(z) == 1:
+    if i == len(f) - 1 and len(z) == 1:
         a[z[0]] = st
         a[fin] = z[0]
         z.pop()
     else:
         a[fin] = st
-
 if len(z) > 0:
     st = z[0]
     for i in range(len(z)):

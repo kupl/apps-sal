@@ -5,18 +5,16 @@ Author  : chaotic_iak
 Language: Python 3.4.2
 """
 
-# SOLUTION
-
 
 def main():
-    n, = read()
+    (n,) = read()
     p = read()
     dsu = DSU()
     for i in range(n):
         a = read(0)
         dsu.make()
         for j in range(i):
-            if a[j] == "1":
+            if a[j] == '1':
                 dsu.union(j, i)
     used = [0] * n
     res = [0] * n
@@ -31,11 +29,9 @@ def main():
                     indices.append(j)
                     elements.append(p[j])
             elements.sort()
-            for i, e in zip(indices, elements):
+            for (i, e) in zip(indices, elements):
                 res[i] = e
     write(res)
-
-# HELPERS
 
 
 class DSU(object):
@@ -83,16 +79,13 @@ class DSU(object):
             self._rank[xr] += 1
 
     def __str__(self):
-        s = "DSU\n"
+        s = 'DSU\n'
         for i in range(len(self._parent)):
-            s += str(i) + " in set " + str(self.find(i)) + " with rank " + str(self._rank[self.find(i)]) + "\n"
+            s += str(i) + ' in set ' + str(self.find(i)) + ' with rank ' + str(self._rank[self.find(i)]) + '\n'
         return s
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -102,13 +95,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

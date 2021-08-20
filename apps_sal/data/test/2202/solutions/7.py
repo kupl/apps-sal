@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = list(map(int, input().split()))
 s1 = arr[0]
 s2 = sum(arr) - arr[0]

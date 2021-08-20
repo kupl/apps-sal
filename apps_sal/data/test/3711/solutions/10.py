@@ -1,9 +1,9 @@
-n, m, k = map(int, input().split())
-n, m = min(n, m), max(n, m)
+(n, m, k) = map(int, input().split())
+(n, m) = (min(n, m), max(n, m))
 
 
 def p(i, j):
-    return (n // (i + 1)) * (m // (j + 1))
+    return n // (i + 1) * (m // (j + 1))
 
 
 if k < n:

@@ -4,6 +4,6 @@ def f(n):
         n = abs(n)
         for i in range(1, n + 1):
             x.append(i)
-        return (sum(x))
+        return sum(x)
     else:
         return None

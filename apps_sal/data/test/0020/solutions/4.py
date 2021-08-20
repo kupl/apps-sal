@@ -1,13 +1,13 @@
-s = input().split(":")
+s = input().split(':')
 fir = int(s[0])
 sec = int(s[1])
 
 
 def ispal(a, b):
     if len(a) == 1:
-        a = "0" + a
+        a = '0' + a
     if len(b) == 1:
-        b = "0" + b
+        b = '0' + b
     if a[::-1] == b:
         return True
 

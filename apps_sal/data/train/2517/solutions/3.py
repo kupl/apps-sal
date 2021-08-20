@@ -1,4 +1,5 @@
 class Solution:
+
     def tribonacci(self, n: int) -> int:
         T = [0, 1, 1]
         for n in range(3, n + 1):

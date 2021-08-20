@@ -4,4 +4,3 @@ def no_space(x):
         if i != ' ':
             a = a + i
     return a
-    # your code here

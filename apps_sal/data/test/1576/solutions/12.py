@@ -1,5 +1,5 @@
 st = input()
-otv = ""
+otv = ''
 if len(st) % 2 == 0:
     i = 1
     while i <= len(st) // 2:

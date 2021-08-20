@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
-        r0, r1, r2 = 0, 0, 0
+        (r0, r1, r2) = (0, 0, 0)
         for val in nums:
             r = val % 3
             if r == 0:
@@ -15,7 +16,5 @@ class Solution:
                 new_r0 = max(r1 + val, r0) if r1 else r0
                 new_r1 = max(r2 + val, r1) if r2 else r1
                 new_r2 = max(r0 + val, r2)
-
-            r0, r1, r2 = new_r0, new_r1, new_r2
-
+            (r0, r1, r2) = (new_r0, new_r1, new_r2)
         return r0

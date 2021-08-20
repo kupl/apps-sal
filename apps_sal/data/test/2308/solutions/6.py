@@ -14,5 +14,4 @@ for _ in range(n):
         if a[i] == '1':
             inda = i
             break
-
     print(max(inda - indb, 0))

@@ -5,7 +5,8 @@ def determinant(a):
     return round(np.linalg.det(np.matrix(a)))
 
 
-def f(x): return x + [1]
+def f(x):
+    return x + [1]
 
 
 def on_line(points=None):

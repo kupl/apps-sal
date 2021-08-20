@@ -5,7 +5,6 @@ for _ in range(q):
     ans1 = ['1']
     ans2 = ['1']
     is_one = False
-
     for i in x[1:]:
         if i == '0':
             ans1.append('0')
@@ -18,13 +17,12 @@ for _ in range(q):
                 ans1.append('1')
                 ans2.append('0')
                 is_one = True
+        elif is_one:
+            ans1.append('0')
+            ans2.append('2')
         else:
-            if is_one:
-                ans1.append('0')
-                ans2.append('2')
-            else:
-                ans1.append('1')
-                ans2.append('1')
+            ans1.append('1')
+            ans2.append('1')
     for i in ans1:
         print(i, end='')
     print()

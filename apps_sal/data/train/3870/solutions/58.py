@@ -1,6 +1,5 @@
 def solve(s):
     rev_s = ''.join(s.split())[::-1]
-
     res = []
     n = 0
     for i in [len(w) for w in s.split(' ')]:
@@ -9,5 +8,4 @@ def solve(s):
         else:
             res.append(rev_s[n:n + i])
         n += i
-
     return ' '.join(res)

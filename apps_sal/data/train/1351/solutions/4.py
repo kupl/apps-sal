@@ -5,5 +5,4 @@ for _ in range(int(input())):
     for i in range(lens):
         if i in has:
             rets[i] = i
-
     print(*rets)

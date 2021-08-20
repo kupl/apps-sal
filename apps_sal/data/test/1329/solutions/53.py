@@ -1,4 +1,3 @@
-# 素因数分解
 def prime_factorize(n):
     a = []
     while n % 2 == 0:
@@ -17,7 +16,6 @@ def prime_factorize(n):
 
 
 n = int(input())
-
 d = {}
 for i in range(2, n + 1):
     p = prime_factorize(i)
@@ -26,7 +24,6 @@ for i in range(2, n + 1):
             d[cp] += 1
         else:
             d[cp] = 1
-
 cnt = {75: 0, 25: 0, 15: 0, 5: 0, 3: 0}
 for i in d:
     for j in cnt:

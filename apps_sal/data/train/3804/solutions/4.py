@@ -5,7 +5,7 @@ def helper():
     nums[1] = '0'
     nums[2] = '1'
     for i in range(1001):
-        exp, suma = 1, 0
+        (exp, suma) = (1, 0)
         for j in range(i, 0, -1):
             suma += j ** exp
             exp += 1

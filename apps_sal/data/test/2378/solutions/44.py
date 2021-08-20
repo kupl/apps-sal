@@ -1,7 +1,6 @@
 import sys
 sys.setrecursionlimit(10 ** 7)
-
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def MOD_inv(a):
@@ -11,9 +10,9 @@ def MOD_inv(a):
     while b > 0:
         t = a // b
         a -= t * b
-        a, b = b, a
+        (a, b) = (b, a)
         u -= t * v
-        u, v = v, u
+        (u, v) = (v, u)
     u = u % MOD
     if u < 0:
         u += MOD
@@ -22,7 +21,7 @@ def MOD_inv(a):
 
 def cntNode(G, C, crr, pre):
     s = 0
-    for i, nxt in enumerate(G[crr]):
+    for (i, nxt) in enumerate(G[crr]):
         if nxt == pre:
             continue
         else:
@@ -35,8 +34,8 @@ def main():
     n = int(input())
     G = [[] for _ in range(n)]
     for _ in range(n - 1):
-        a, b = map(int, input().split())
-        a, b = a - 1, b - 1
+        (a, b) = map(int, input().split())
+        (a, b) = (a - 1, b - 1)
         G[a].append(b)
         G[b].append(a)
     C = [[-1] * len(G[i]) for i in range(n)]
@@ -49,7 +48,7 @@ def main():
     for i in range(n):
         idx = -1
         s = 0
-        for j, v in enumerate(C[i]):
+        for (j, v) in enumerate(C[i]):
             if v == -1:
                 idx = j
             else:

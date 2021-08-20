@@ -10,5 +10,5 @@ for nt in range(int(input())):
     for i in range(n):
         x = a[i] - m1
         y = b[i] - m2
-        ans += (min(x, y) + (max(x, y) - min(x, y)))
+        ans += min(x, y) + (max(x, y) - min(x, y))
     print(ans)

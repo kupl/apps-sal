@@ -1,19 +1,14 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def smallestFromLeaf(self, root: TreeNode) -> str:
         res = [26]
 
         def dfs(node, current):
             nonlocal res
-            if not node.left and not node.right:
+            if not node.left and (not node.right):
                 current.append(node.val)
                 length = len(res)
-                for i, n in enumerate(current[::-1]):
+                for (i, n) in enumerate(current[::-1]):
                     if i < length and n < res[i]:
                         res = current[::-1]
                         return
@@ -28,7 +23,6 @@ class Solution:
                 dfs(node.left, current[:])
             if node.right:
                 dfs(node.right, current[:])
-
         dfs(root, [])
         li = 'abcdefghijklmnopqrstuvwxyz'
         ans = []

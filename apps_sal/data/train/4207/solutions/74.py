@@ -3,6 +3,6 @@ def sum_cubes(n):
         return 1
     LV = []
     for i in range(n + 1):
-        res = i**3
+        res = i ** 3
         LV.append(res)
     return sum(LV)

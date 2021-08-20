@@ -8,5 +8,4 @@ def square_up(n):
             else:
                 lst.append(0)
         max += 1
-
     return lst

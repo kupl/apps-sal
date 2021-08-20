@@ -1,5 +1,5 @@
-n, a = int(input()), [0] + list(map(int, input().split()))
-l, r = 1, n
+(n, a) = (int(input()), [0] + list(map(int, input().split())))
+(l, r) = (1, n)
 while l <= n and a[l] == l:
     l += 1
 while r >= 1 and a[r] == r:

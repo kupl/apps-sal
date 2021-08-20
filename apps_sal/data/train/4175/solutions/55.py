@@ -1,6 +1,6 @@
 def repeater(string, n):
     i = 0
-    NyttOrd = ""
+    NyttOrd = ''
     while i < n:
         NyttOrd += string
         i += 1

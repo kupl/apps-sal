@@ -1,9 +1,8 @@
 S = input()
-T = "abcdefghijklmnopqrstuvwxyz"
-
+T = 'abcdefghijklmnopqrstuvwxyz'
 for c in T:
     if S.count(c) == 0:
         print(c)
         break
 else:
-    print("None")
+    print('None')

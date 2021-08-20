@@ -23,7 +23,7 @@ def main():
                 t = lut[t + 10]
         for k in list13:
             dpi1[k] %= divisor
-    print((dp[len(s)][5]))
+    print(dp[len(s)][5])
 
 
 main()

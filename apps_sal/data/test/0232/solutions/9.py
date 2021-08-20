@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 z = list(map(int, input().split()))
 ch = 0
@@ -10,7 +10,6 @@ if n == sum(z):
         print('YES')
     else:
         print('NO')
-
 else:
     for i in range(n - sum(z) + 1):
         t = 0

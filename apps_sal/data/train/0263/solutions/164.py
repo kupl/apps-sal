@@ -6,7 +6,7 @@ class Solution:
         if n == 0:
             return 1
         if (i, n) not in self.cache:
-            self.cache[i, n] = sum(self.dfs(val, n - 1) for val in self.d[i])
+            self.cache[i, n] = sum((self.dfs(val, n - 1) for val in self.d[i]))
             if i in [1, 4, 7]:
                 self.cache[i + 2, n] = self.cache[i, n]
             elif i in [3, 6, 9]:
@@ -14,5 +14,5 @@ class Solution:
         return self.cache[i, n]
 
     def knightDialer(self, n: int) -> int:
-        mod = int(1e9) + 7
-        return sum(self.dfs(i, n - 1) for i in range(10)) % mod
+        mod = int(1000000000.0) + 7
+        return sum((self.dfs(i, n - 1) for i in range(10))) % mod

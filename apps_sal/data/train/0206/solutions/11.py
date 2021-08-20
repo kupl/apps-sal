@@ -1,4 +1,5 @@
 class Solution:
+
     def PredictTheWinner(self, nums):
         """
         :type nums: List[int]
@@ -16,5 +17,4 @@ class Solution:
             two = nums[end] - predict(start, end - 1, memo)
             memo[start][end] = max(one, two)
             return memo[start][end]
-
         return predict(0, len(nums) - 1, memo) >= 0

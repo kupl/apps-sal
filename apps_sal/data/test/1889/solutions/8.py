@@ -1,8 +1,8 @@
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 a = [[]]
 for i in range(n):
     a.append([0] + list(map(int, input().split())))
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 a[x][y] = (a[x][y] + 1) % 2
 ma = 0
 curr = 0
@@ -29,7 +29,7 @@ for i in range(1, n + 1):
     curr = 0
 print(ma)
 for i in range(q - 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if a[x][y] == 1:
         j = y - 1
         here = 1

@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-# 標準入力を取得
 N = int(input())
-
-# 求解処理
 
 
 def S(n: int) -> int:
@@ -11,9 +7,7 @@ def S(n: int) -> int:
 
 ans = str()
 if N % S(N) == 0:
-    ans = "Yes"
+    ans = 'Yes'
 else:
-    ans = "No"
-
-# 結果出力
+    ans = 'No'
 print(ans)

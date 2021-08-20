@@ -9,6 +9,6 @@ for i in range(n):
 for i in range(n):
     for j in range(n):
         if j < n - 1:
-            print(mat[i][j], end="")
+            print(mat[i][j], end='')
         else:
             print(mat[i][j])

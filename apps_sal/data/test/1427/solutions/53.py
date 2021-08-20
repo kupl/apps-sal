@@ -1,34 +1,29 @@
-'''
+"""
 研究室PCでの解答
-'''
+"""
 import math
-#import numpy as np
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
-setrecursionlimit(10**7)
-mod = 10**9 + 7
+setrecursionlimit(10 ** 7)
+mod = 10 ** 9 + 7
 dir = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-alp = "abcdefghijklmnopqrstuvwxyz"
+alp = 'abcdefghijklmnopqrstuvwxyz'
 
 
-def rev(n, mod=(10**9 + 7)):
+def rev(n, mod=10 ** 9 + 7):
     ni = n
     nm = 1
     m2 = mod - 2
     while m2 > 0:
         if m2 & 1:
-            nm = (nm * ni) % mod
+            nm = nm * ni % mod
         m2 >>= 1
-        ni = (ni**2) % mod
+        ni = ni ** 2 % mod
     return nm
-
-# 素因数分解
 
 
 def factorization(n):
@@ -36,7 +31,7 @@ def factorization(n):
     ni = n
     pn = 2
     t = 0
-    while pn**2 <= n and ni > 1:
+    while pn ** 2 <= n and ni > 1:
         if ni % pn == 0:
             t += 1
             ni //= pn
@@ -63,16 +58,13 @@ def main():
     for i in a:
         ans += rev(i)
         di = factorization(i)
-        for ki, vi in list(di.items()):
+        for (ki, vi) in list(di.items()):
             d[ki] = max(d[ki], vi)
         ans %= mod
-
-    for ki, vi in list(d.items()):
+    for (ki, vi) in list(d.items()):
         ans *= pow(ki, vi, mod)
         ans %= mod
-
     print(ans)
-
     return None
 
 

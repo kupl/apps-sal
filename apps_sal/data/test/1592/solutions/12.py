@@ -1,4 +1,4 @@
-Messages, Max, Last = 0, 0, 0
+(Messages, Max, Last) = (0, 0, 0)
 for i in range(int(input())):
     X = list(map(int, input().split()))
     Messages = max(0, Messages - (X[0] - Last))
@@ -6,9 +6,3 @@ for i in range(int(input())):
     Max = max(Messages, Max)
     Last = X[0]
 print(Last + Messages, Max)
-
-# UB_CodeForces
-# Advice: Falling down is an accident, staying down is a choice
-# Location: Mashhad for few days
-# Caption: Finally happened what should be happened
-# CodeNumber: 692

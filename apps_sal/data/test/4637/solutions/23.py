@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
     a.sort()

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         res = 0
         maximum = A[0]
@@ -6,5 +7,4 @@ class Solution:
             cur = A[i] - i
             res = max(res, cur + maximum)
             maximum = max(maximum, A[i] + i)
-
         return res

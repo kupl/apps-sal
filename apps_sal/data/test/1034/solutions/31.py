@@ -1,19 +1,18 @@
 import heapq
-x, y, z, k = map(int, input().split())
+(x, y, z, k) = map(int, input().split())
 A = [int(i) for i in input().split()]
 B = [int(i) for i in input().split()]
 C = [int(i) for i in input().split()]
 A.sort(reverse=True)
 B.sort(reverse=True)
 C.sort(reverse=True)
-
 V = {(0, 0, 0)}
 Q = [(-(A[0] + B[0] + C[0]), 0, 0, 0)]
 heapq.heapify(Q)
 
 
 def isIn(tup):
-    return tup[0] < x and tup[1] < y and tup[2] < z
+    return tup[0] < x and tup[1] < y and (tup[2] < z)
 
 
 for i in range(k):

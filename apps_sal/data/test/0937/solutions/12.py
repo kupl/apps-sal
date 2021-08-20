@@ -1,8 +1,8 @@
 def read_data():
-    n, m = map(int, list(input().strip().split()))
+    (n, m) = map(int, list(input().strip().split()))
     a = list(map(int, list(input().strip().split())))
     b = list(map(int, list(input().strip().split())))
-    return n, m, a, b
+    return (n, m, a, b)
 
 
 def solve():
@@ -26,5 +26,5 @@ def solve():
     return max
 
 
-n, k, a, b = read_data()
+(n, k, a, b) = read_data()
 print(solve())

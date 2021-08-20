@@ -2,8 +2,6 @@ import math
 import sys
 import collections
 
-# imgur.com/Pkt7iIf.png
-
 
 def getdict(n):
     d = {}
@@ -23,19 +21,31 @@ def getdict(n):
     return d
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
 
 
 n = ii()
 d = ii()
 e = ii()
-
 r = n % d
 while n >= 5 * e:
-    n = n - (5 * e)
+    n = n - 5 * e
     r = min(r, n % d)
 print(r)

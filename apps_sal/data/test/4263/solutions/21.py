@@ -1,8 +1,7 @@
 s = input()
-char = "ACGT"
+char = 'ACGT'
 now = 0
 ans = 0
-
 for i in s:
     if i in char:
         now += 1

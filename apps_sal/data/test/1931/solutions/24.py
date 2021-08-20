@@ -1,4 +1,4 @@
-'''
+"""
 
 
 5
@@ -10,8 +10,7 @@
 
 
 
-'''
-
+"""
 n = int(input())
 L = [2, 7]
 S = 8
@@ -21,11 +20,11 @@ for i in range(1, 100000):
 for i in range(0, n):
     o = int(input())
     tot = 0
-    while(1):
+    while 1:
         I = 0
         V = -1
         J = len(L) - 1
-        while(I <= J):
+        while I <= J:
             m = (I + J) // 2
             if L[m] > o:
                 J = m - 1

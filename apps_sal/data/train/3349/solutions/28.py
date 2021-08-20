@@ -7,7 +7,7 @@ def find_missing_number(seq):
         return 0
     if seq[0] != 1:
         return 1
-    for i, v in enumerate(seq[:-1]):
+    for (i, v) in enumerate(seq[:-1]):
         if v + 1 != seq[i + 1]:
             return v + 1
     return 0

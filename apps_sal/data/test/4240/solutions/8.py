@@ -1,6 +1,6 @@
 s = input()
 t = input()
-res = "No"
+res = 'No'
 
 
 def rotate(a):
@@ -11,8 +11,7 @@ def rotate(a):
 
 for i in range(len(s)):
     if s == t:
-        res = "Yes"
+        res = 'Yes'
         break
     s = rotate(s)
-
 print(res)

@@ -13,7 +13,7 @@ def solve(a):
         if tmp == s // 2:
             rtn = True
             break
-        elif s // 2 < tmp and (tmp - s // 2) in dic:
+        elif s // 2 < tmp and tmp - s // 2 in dic:
             rtn = True
             break
     return rtn

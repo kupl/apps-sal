@@ -24,7 +24,7 @@ template = input()
 res = template.find('*')
 if res != -1:
     x = template.split('*')
-    start, end = x[0], x[1]
+    (start, end) = (x[0], x[1])
 else:
     start = template
     end = ''
@@ -32,7 +32,6 @@ n = int(input())
 x = {}
 for i in good:
     x[i] = 1
-
 for i in range(n):
     s = input()
     if res == -1 and len(s) > len(start) + len(end):

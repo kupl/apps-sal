@@ -2,10 +2,10 @@ from heapq import heappop, heapify, heappush
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     work = [[] for _ in range(10 ** 5 + 1)]
     for _ in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         work[a].append(b)
     ans = 0
     q = []

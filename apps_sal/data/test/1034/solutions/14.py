@@ -1,4 +1,4 @@
-x, y, z, k = map(int, input().split())
+(x, y, z, k) = map(int, input().split())
 alst = list(map(int, input().split()))
 blst = list(map(int, input().split()))
 clst = list(map(int, input().split()))
@@ -15,4 +15,4 @@ for i in range(x):
                 break
             ans.append(alst[i] + blst[j] + clst[l])
 ans.sort(reverse=True)
-print(*ans[:k], sep="\n")
+print(*ans[:k], sep='\n')

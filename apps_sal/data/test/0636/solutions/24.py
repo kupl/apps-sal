@@ -1,13 +1,10 @@
 line = input().split()
-
 n = int(line[0])
 k = int(line[1])
-
 line = input().split()
 lst = list()
 for i in range(1, n + 1):
     lst.append((int(line[i - 1]), i))
-
 lst.sort()
 s = 0
 c = 0

@@ -10,5 +10,5 @@ for _ in range(q):
     cyk = b[0] + b[1]
     dup = a[1]
     al = sum(a)
-    wyn -= (max(0, dup - cyk)) * 2
+    wyn -= max(0, dup - cyk) * 2
     print(wyn)

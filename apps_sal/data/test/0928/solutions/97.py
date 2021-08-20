@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-r, cnt, tmp = 0, 0, 0
+(r, cnt, tmp) = (0, 0, 0)
 for l in range(n):
     while r < n and tmp + a[r] < k:
         tmp += a[r]

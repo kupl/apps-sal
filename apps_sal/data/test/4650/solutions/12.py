@@ -6,9 +6,9 @@ for i in range(n):
     b = 0
     c = 0
     for i in range(q):
-        if(l[i] % 3 == 0):
+        if l[i] % 3 == 0:
             a += 1
-        elif(l[i] % 3 == 1):
+        elif l[i] % 3 == 1:
             b += 1
         else:
             c += 1

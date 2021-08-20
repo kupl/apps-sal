@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
 
@@ -13,7 +14,6 @@ class Solution:
                     if count == m:
                         return True
             return False
-
         left = 1
         right = max(position)
         while right > left + 1:

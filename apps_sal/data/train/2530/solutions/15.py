@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy601(self, time: List[int]) -> int:
         res = 0
         total = {}
@@ -8,7 +9,6 @@ class Solution:
                 total[temp].append(i)
             except KeyError:
                 total[temp] = [i]
-
         for t in total.keys():
             if t == 0:
                 res = res + len(total[0]) * (len(total[0]) - 1) // 2

@@ -1,17 +1,30 @@
 import sys
 
 
-def read_str(): return sys.stdin.readline().strip()
-def read_int(): return int(sys.stdin.readline().strip())
-def read_ints(): return list(map(int, sys.stdin.readline().strip().split()))
-def read_str_split(): return list(sys.stdin.readline().strip())
-def read_int_list(): return list(map(int, sys.stdin.readline().strip().split()))
+def read_str():
+    return sys.stdin.readline().strip()
+
+
+def read_int():
+    return int(sys.stdin.readline().strip())
+
+
+def read_ints():
+    return list(map(int, sys.stdin.readline().strip().split()))
+
+
+def read_str_split():
+    return list(sys.stdin.readline().strip())
+
+
+def read_int_list():
+    return list(map(int, sys.stdin.readline().strip().split()))
 
 
 def divisors(num):
     lower = []
     upper = []
-    for i in range(1, int(num**0.5) + 1):
+    for i in range(1, int(num ** 0.5) + 1):
         if num % i == 0:
             lower.append(i)
             if i * i != num:

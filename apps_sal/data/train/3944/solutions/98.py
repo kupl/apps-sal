@@ -4,6 +4,6 @@ def sum_triangular_numbers(n):
     total = 0
     a = 0
     for i in range(0, n):
-        a += (i + 1)
+        a += i + 1
         total += a
     return total

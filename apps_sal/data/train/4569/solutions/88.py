@@ -3,7 +3,7 @@ def next_item(xs, item):
         if xs.count(item) == 0:
             return None
         q = xs.index(item)
-        if (q + 1) >= len(xs):
+        if q + 1 >= len(xs):
             return None
         return xs[q + 1]
     else:

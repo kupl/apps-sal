@@ -1,8 +1,6 @@
 from functools import reduce
 from math import gcd
-
 MOD = 10 ** 9 + 7
-
 _ = int(input())
 la = list(map(int, input().split()))
 

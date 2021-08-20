@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         maxx = 0
         rem = 0
@@ -14,13 +15,11 @@ class Solution:
                     else:
                         customers.append(customers[i] - 4)
                         customers[i] = 4
-
                 count = count + customers[i]
-                profit = (count * boardingCost) - ((i + 1) * runningCost)
+                profit = count * boardingCost - (i + 1) * runningCost
                 if profit > maxx:
                     maxx = profit
                     rem = i + 1
-
                 i = i + 1
             else:
                 break

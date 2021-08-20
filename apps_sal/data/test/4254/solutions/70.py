@@ -1,8 +1,8 @@
 def sheep_and_wolves():
-    S, W = map(int, input().split())
-    res = "safe"
+    (S, W) = map(int, input().split())
+    res = 'safe'
     if W >= S:
-        res = "unsafe"
+        res = 'unsafe'
     print(res)
 
 

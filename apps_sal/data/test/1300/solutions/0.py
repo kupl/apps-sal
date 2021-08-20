@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 res1 = [0] * 500001
 res = 0
 for ai in map(int, input().split()):

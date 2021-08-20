@@ -22,7 +22,7 @@ def main():
     gk = 0
     yk = 0
     for i in range(len(l)):
-        if l[i] == "!":
+        if l[i] == '!':
             if i % 4 == rr:
                 rk += 1
             if i % 4 == br:

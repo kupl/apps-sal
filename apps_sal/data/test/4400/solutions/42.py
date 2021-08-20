@@ -1,5 +1,5 @@
 S = input()
-if S == 'RSR' or S == 'RSS' or S == 'SRS' or S == 'SSR':
+if S == 'RSR' or S == 'RSS' or S == 'SRS' or (S == 'SSR'):
     print(1)
 elif S == 'RRS' or S == 'SRR':
     print(2)

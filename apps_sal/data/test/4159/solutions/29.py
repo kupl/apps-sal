@@ -1,4 +1,4 @@
-a, b, k = map(int, input().split())
+(a, b, k) = map(int, input().split())
 if a >= k:
     print(str(a - k) + ' ' + str(b))
 elif a + b >= k:

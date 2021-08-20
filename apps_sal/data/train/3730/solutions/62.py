@@ -1,13 +1,13 @@
 def capitalize(s):
     l = []
-    x = ""
+    x = ''
     for i in range(len(s)):
         if i % 2 == 0:
             j = s[i].capitalize()
             x += j
         else:
             x += s[i]
-    w = ""
+    w = ''
     for i in range(len(s)):
         if not i % 2 == 0:
             k = s[i].capitalize()

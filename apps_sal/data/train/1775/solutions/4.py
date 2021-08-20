@@ -25,7 +25,7 @@ def check_clues(clues, curr_soln):
     for i in range(N - 1, -1, -1):
         c = count([curr_soln[i][j] for j in range(N)])
         visible.append(c)
-    for viz, clue in zip(visible, clues):
+    for (viz, clue) in zip(visible, clues):
         if clue != 0:
             if viz != clue:
                 return False
@@ -35,7 +35,7 @@ def check_clues(clues, curr_soln):
 def r_solve_puzzle(clues, curr_soln, col_avail, row_avail, i, j):
     if i == N:
         if check_clues(clues, curr_soln):
-            return tuple(tuple(row) for row in curr_soln)
+            return tuple((tuple(row) for row in curr_soln))
         else:
             return None
     ni = i + 1 if j == N - 1 else i

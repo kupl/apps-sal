@@ -1,4 +1,4 @@
-n, t = [int(i) for i in input().split()]
+(n, t) = [int(i) for i in input().split()]
 dias = [int(i) for i in input().split()]
 qtd = 0
 for dia in dias:

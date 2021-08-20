@@ -2,11 +2,11 @@ def count_place(s):
     l = list(s)
     l.reverse()
     c = 0
-    for i, each in enumerate(l):
+    for (i, each) in enumerate(l):
         if each == 'o' or each == 'O':
             continue
         if each == 'k':
-            c += 2**i
+            c += 2 ** i
     return c
 
 

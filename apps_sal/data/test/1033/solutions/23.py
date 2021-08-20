@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-
 [n, H] = list(map(int, input().strip().split()))
-
-# first True
 
 
 def bsearch(f, xmin, xmax):
@@ -19,7 +15,7 @@ def f1(x):
     return 2 * n <= x * (x + 1)
 
 
-HH = (H * (H + 1)) // 2
+HH = H * (H + 1) // 2
 
 
 def f2(x):

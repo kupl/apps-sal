@@ -1,10 +1,9 @@
-
-
 from itertools import accumulate, chain
 from functools import reduce
 
 
 class Graph:
+
     def __init__(self, n_vertices, edges, directed=True, weighted=False):
         self.n_vertices = n_vertices
         self.edges = edges
@@ -39,6 +38,7 @@ class Graph:
 
 
 class RootedTree(Graph):
+
     def __init__(self, n_vertices, edges, root_vertex):
         self.root = root_vertex
         super().__init__(n_vertices, edges, False, False)
@@ -67,7 +67,7 @@ class RootedTree(Graph):
             return self._children
         except AttributeError:
             children = [None] * self.n_vertices
-            for v, (l, p) in enumerate(zip(self.adj, self.parent)):
+            for (v, (l, p)) in enumerate(zip(self.adj, self.parent)):
                 children[v] = [u for u in l if u != p]
             self._children = children
             return children
@@ -94,51 +94,40 @@ def rerooting(rooted_tree, merge, identity, finalize):
     parent = rooted_tree.parent
     children = rooted_tree.children
     order = rooted_tree.dfs_order
-
-    # from leaf to parent
     dp_down = [None] * N
     for v in reversed(order[1:]):
-        dp_down[v] = finalize(reduce(merge,
-                                     (dp_down[c] for c in children[v]),
-                                     identity))
-
-    # from parent to leaf
+        dp_down[v] = finalize(reduce(merge, (dp_down[c] for c in children[v]), identity))
     dp_up = [None] * N
     dp_up[0] = identity
     for v in order:
         if len(children[v]) == 0:
             continue
-        temp = (dp_up[v],) + tuple(dp_down[u] for u in children[v]) + (identity,)
+        temp = (dp_up[v],) + tuple((dp_down[u] for u in children[v])) + (identity,)
         left = tuple(accumulate(temp, merge))
         right = tuple(accumulate(reversed(temp[2:]), merge))
-        for u, l, r in zip(children[v], left, reversed(right)):
+        for (u, l, r) in zip(children[v], left, reversed(right)):
             dp_up[u] = finalize(merge(l, r))
-
     res = [None] * N
-    for v, l in enumerate(children):
-        res[v] = reduce(merge,
-                        (dp_down[u] for u in children[v]),
-                        identity)
+    for (v, l) in enumerate(children):
+        res[v] = reduce(merge, (dp_down[u] for u in children[v]), identity)
         res[v] = finalize(merge(res[v], dp_up[v]))
-
     return res
 
 
 def solve(T):
-    MOD = 10**9 + 7
+    MOD = 10 ** 9 + 7
 
     def merge(x, y):
-        return (x * y) % MOD
+        return x * y % MOD
 
     def finalize(x):
         return x + 1
-
     return [v - 1 for v in rerooting(T, merge, 1, finalize)]
 
 
 def __starting_point():
     N = int(input())
-    edges = [(i + 1, p - 1) for i, p in enumerate(map(int, input().split()))]
+    edges = [(i + 1, p - 1) for (i, p) in enumerate(map(int, input().split()))]
     T = RootedTree(N, edges, 0)
     print(*solve(T))
 

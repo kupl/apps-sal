@@ -1,5 +1,4 @@
-A, B, N = list(map(int, input().split()))
-
+(A, B, N) = list(map(int, input().split()))
 ans = 0
 if N < B:
     ans = int(A * N / B) - A * int(N / B)

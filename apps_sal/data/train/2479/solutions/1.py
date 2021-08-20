@@ -1,4 +1,5 @@
 class Solution:
+
     def judgeCircle(self, moves):
         """
         :type moves: str
@@ -8,8 +9,7 @@ class Solution:
             return True
         if len(moves) % 2 == 1:
             return False
-
-        up, left = 0, 0
+        (up, left) = (0, 0)
         for move in moves:
             if move == 'U':
                 up += 1

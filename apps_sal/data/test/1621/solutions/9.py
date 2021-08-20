@@ -6,5 +6,4 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 summ = 0
 for i in range(len(s)):
     summ += wlist[alphabet.index(s[i])] * (i + 1)
-
-print(summ + letter * (k * len(s) + (k + k**2) // 2))
+print(summ + letter * (k * len(s) + (k + k ** 2) // 2))

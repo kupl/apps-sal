@@ -1,14 +1,14 @@
 def __starting_point():
-    n, m = input().split(' ')
+    (n, m) = input().split(' ')
     n = int(n)
     m = int(m)
     x = [int(i) for i in input().split(' ')]
     pre = [0] * (n + 2)
     tmp = 0
     for i in range(m - 1):
-        a, b = x[i], x[i + 1]
+        (a, b) = (x[i], x[i + 1])
         if a > b:
-            a, b = b, a
+            (a, b) = (b, a)
         if a == b:
             continue
         pre[1] += b - a

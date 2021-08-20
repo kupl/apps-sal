@@ -6,7 +6,7 @@ for _ in range(int(input())):
     heapq.heapify(que)
     i = 1
     while que:
-        len, l, r = heapq.heappop(que)
+        (len, l, r) = heapq.heappop(que)
         if len % 2 == 1:
             a[(l + r) // 2] = i
             if r != l:

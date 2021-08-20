@@ -1,7 +1,8 @@
 class Solution:
+
     def compare(self, d, d1):
         for i in d:
-            if(i not in d1 or d[i] > d1[i]):
+            if i not in d1 or d[i] > d1[i]:
                 return False
         return True
 
@@ -27,6 +28,6 @@ class Solution:
                     d1[j] += 1
                 else:
                     d1[j] = 1
-            if(self.compare(bgroup, d1)):
+            if self.compare(bgroup, d1):
                 ans.append(i)
         return ans

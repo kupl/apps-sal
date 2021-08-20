@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 A = list(map(int, input().split()))
 cannot_use = set([-1])
 ans = float('inf')

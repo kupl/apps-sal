@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.p = list(range(N))
         self.r = [0] * N
@@ -9,7 +10,7 @@ class DSU:
         return self.p[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if self.r[xr] < self.r[yr]:
             self.p[xr] = yr
         else:
@@ -18,6 +19,7 @@ class DSU:
 
 
 class Solution:
+
     def primes_set(self, n):
         for i in range(2, int(math.sqrt(n)) + 1):
             if n % i == 0:
@@ -28,13 +30,11 @@ class Solution:
         n = len(A)
         UF = DSU(n)
         primes = defaultdict(list)
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             pr_set = self.primes_set(num)
             for q in pr_set:
                 primes[q].append(i)
-
-        for _, indexes in primes.items():
+        for (_, indexes) in primes.items():
             for i in range(len(indexes) - 1):
                 UF.union(indexes[i], indexes[i + 1])
-
         return max(Counter([UF.find(i) for i in range(n)]).values())

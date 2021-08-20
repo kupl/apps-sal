@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 ruisekiwa = [0 for _ in range(n + 1)]
 for i in range(n):

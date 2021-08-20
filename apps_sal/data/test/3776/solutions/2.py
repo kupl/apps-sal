@@ -12,7 +12,7 @@ def best(h, n, x):
         if len(si) == 1:
             si = '0' + si
         bad = 0
-        for x, y in zip(h, si):
+        for (x, y) in zip(h, si):
             if x != y:
                 bad += 1
         if bad < bestCnt:

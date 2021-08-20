@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 import math
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 input = sys.stdin.readline
-INF = 10**9
-
+INF = 10 ** 9
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -14,7 +12,7 @@ for i in range(t):
         continue
     seen = dict()
     ret = INF
-    for i, item in enumerate(a):
+    for (i, item) in enumerate(a):
         if item not in seen:
             seen[item] = i
         else:

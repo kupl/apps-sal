@@ -6,7 +6,7 @@ for i in range(2 ** n):
     temp = ''
     for j in range(n):
         temp += S[j]
-        if (i >> j) & 1:
+        if i >> j & 1:
             sum += int(temp)
             temp = ''
     sum += int(temp + S[-1])

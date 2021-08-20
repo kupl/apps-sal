@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 
 
 def pol(x, y):
     if y % 2 != 0:
         return False
-    l, r = 0, y - 1
+    (l, r) = (0, y - 1)
     while l < r:
         if a[l][x] != a[r][x]:
             return False

@@ -1,14 +1,13 @@
 import sys
 sys.setrecursionlimit(1000000000)
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 G = [[] for _ in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     G[a].append(b)
     G[b].append(a)
-
 mod = 1000000007
 
 

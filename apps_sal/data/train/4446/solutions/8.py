@@ -1,3 +1,3 @@
 def words_to_sentence(words):
-    s = " "
+    s = ' '
     return s.join(words)

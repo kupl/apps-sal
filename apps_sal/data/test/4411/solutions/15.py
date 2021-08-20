@@ -7,22 +7,22 @@ ftree = [0] * (mmx + 1)
 def uu(i, j, v):
     while i <= mmx:
         ftree[i] += v
-        i += (i & -i)
+        i += i & -i
     j += 1
     while j <= mmx:
         ftree[j] -= v
-        j += (j & -j)
+        j += j & -j
 
 
 def qq(j):
     s = 0
     while j > 0:
         s += ftree[j]
-        j -= (j & -j)
+        j -= j & -j
     return s
 
 
-n, k = [int(i) for i in sys.stdin.readline().split()]
+(n, k) = [int(i) for i in sys.stdin.readline().split()]
 lns = sys.stdin.readlines()
 bds = []
 for j in range(n):
@@ -39,8 +39,8 @@ for i in range(1, mmx + 1):
         heapq.heappush(heap, (-1 * bds[bind][1], bds[bind][2]))
         bind += 1
     while qq(i) > k:
-        bd, bnd = heapq.heappop(heap)
+        (bd, bnd) = heapq.heappop(heap)
         ans.append(str(bnd))
         uu(i, -1 * bd, -1)
 print(len(ans))
-print(" ".join(ans))
+print(' '.join(ans))

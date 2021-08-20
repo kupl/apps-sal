@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     while t > 0:
-        v, w = map(int, input().split())
+        (v, w) = map(int, input().split())
         i = v
         j = 0
         count = 0

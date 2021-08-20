@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 p = [[int(i) for i in input().split()] for y in range(n)]
 
 
@@ -17,5 +17,4 @@ for i in range(n - 1):
         true_kyori = int(kyori)
         if kyori == true_kyori:
             count += 1
-
 print(count)

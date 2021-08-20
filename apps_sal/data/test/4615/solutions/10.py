@@ -1,6 +1,5 @@
-a, b, c, d, e, f = map(int, input().split())
+(a, b, c, d, e, f) = map(int, input().split())
 ans = [-1] * 10000
-# ans[0] = 0
 ans[a * 100] = 0
 ans[b * 100] = 0
 q1 = a * 100
@@ -18,8 +17,6 @@ for i in range(1, f + 1):
     ans[i + b * 100] = max(ans[i + b * 100], ans[i])
     if i != 0:
         if ans[i] / i > p:
-            # print(p,i)
             p = ans[i] / i
             fin = [i, ans[i]]
-# print(ans[190:210])
 print(*fin)

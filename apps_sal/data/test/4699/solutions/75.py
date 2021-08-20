@@ -1,9 +1,7 @@
 from sys import stdin
 input = stdin.readline
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 D = set(map(int, input().split()))
-
 while True:
     tmp = set(str(N))
     b = True
@@ -15,5 +13,4 @@ while True:
         break
     else:
         N += 1
-
 print(N)

@@ -1,11 +1,12 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
         :rtype: bool
         """
-        target, rem = divmod(sum(nums), k)
+        (target, rem) = divmod(sum(nums), k)
         if rem:
             return False
 
@@ -13,7 +14,7 @@ class Solution:
             if not nums:
                 return True
             v = nums.pop()
-            for i, group in enumerate(groups):
+            for (i, group) in enumerate(groups):
                 if group + v <= target:
                     groups[i] += v
                     if dfs(groups):
@@ -23,7 +24,6 @@ class Solution:
                     break
             nums.append(v)
             return False
-
         nums.sort()
         if nums[-1] > target:
             return False

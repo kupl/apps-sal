@@ -1,4 +1,5 @@
 class Solution:
+
     def calculateMinimumHP(self, dungeon):
         """
         :type dungeon: List[List[int]]
@@ -17,5 +18,4 @@ class Solution:
                     needed += min(nextSteps)
                 needed = max(0, needed)
                 best[row][col] = needed
-
         return best[0][0] + 1

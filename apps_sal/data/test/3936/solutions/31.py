@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 n = int(input())
 mod = 10 ** 9 + 7
 s = [list(input()) for _ in range(2)]
@@ -16,17 +10,14 @@ while i < n:
             i += 1
         else:
             if s[0][i - 1] == s[1][i - 1]:
-                ans = (ans * 2) % mod
+                ans = ans * 2 % mod
             i += 1
     else:
         if i == 0:
             ans *= 6
+        elif s[0][i - 1] == s[1][i - 1]:
+            ans = ans * 2 % mod
         else:
-            if s[0][i - 1] == s[1][i - 1]:
-                ans = (ans * 2) % mod
-            else:
-                ans = (ans * 3) % mod
+            ans = ans * 3 % mod
         i += 2
-
-
 print(ans)

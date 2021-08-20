@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = {}
         self.size = [0] * (n + 1)
@@ -15,7 +16,6 @@ class UnionFind:
     def union(self, a, b):
         root_a = self.find(a)
         root_b = self.find(b)
-
         if root_a != root_b:
             self.parent[root_b] = root_a
             self.groups[self.size[root_a]] -= 1
@@ -25,8 +25,8 @@ class UnionFind:
 
 
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         result = 0
         UF = UnionFind(len(arr))
         for i in range(len(arr)):

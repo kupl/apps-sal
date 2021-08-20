@@ -5,15 +5,14 @@ def f(s1, s2):
     b = [0] * 26
     for i in range(n1):
         a[ord(s1[i]) - ord('a')] += 1
-
     for i in range(n2):
         b[ord(s2[i]) - ord('a')] += 1
         if i >= n1:
             b[ord(s2[i - n1]) - ord('a')] -= 1
         if a == b:
-            print("YES")
+            print('YES')
             return
-    print("NO")
+    print('NO')
 
 
 n = int(input())

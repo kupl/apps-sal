@@ -1,4 +1,5 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         parents = {}
 
@@ -11,7 +12,6 @@ class Solution:
 
         def union(parents, i, j):
             parents[find(parents, i)] = find(parents, j)
-
         for u in range(len(graph)):
             if u not in parents:
                 parents[u] = u
@@ -20,14 +20,12 @@ class Solution:
                     parents[v] = v
                 if graph[u][v] == 1:
                     union(parents, u, v)
-
         malware_count = collections.defaultdict(int)
         for i in initial:
             malware_count[find(parents, i)] += 1
         comp_size = collections.defaultdict(int)
         for k in parents.keys():
             comp_size[find(parents, k)] += 1
-
         largest_comp = None
         largest_size = 0
         for i in initial:

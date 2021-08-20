@@ -1,5 +1,5 @@
 def difference(x):
-    a, b = map(int, x.split('-'))
+    (a, b) = map(int, x.split('-'))
     return abs(a - b)
 
 

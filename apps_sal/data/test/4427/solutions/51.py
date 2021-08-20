@@ -6,12 +6,11 @@ def answer(r: int, d: int, x: int) -> List[int]:
     for _ in range(10):
         x = r * x - d
         result.append(x)
-
     return result
 
 
 def main():
-    r, x, d = list(map(int, input().split()))
+    (r, x, d) = list(map(int, input().split()))
     for i in answer(r, x, d):
         print(i)
 

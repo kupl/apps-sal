@@ -1,4 +1,4 @@
-M = 10**5 + 2
+M = 10 ** 5 + 2
 prime = [0] * M
 for i in range(2, M):
     if prime[i]:
@@ -6,11 +6,8 @@ for i in range(2, M):
     for j in range(i, M, i):
         if not prime[j]:
             prime[j] = i
-
 N = int(input())
-
 Edge = [(i, i + 1) for i in range(1, N)] + [(1, N)]
-
 D = N
 Nh = N // 2
 cnt = 1

@@ -8,7 +8,7 @@ def build_trie(*words):
             key = word[:i]
             if key not in branch:
                 branch[key] = None
-            if length and not branch[key]:
+            if length and (not branch[key]):
                 branch[key] = {}
             branch = branch[key]
     return root

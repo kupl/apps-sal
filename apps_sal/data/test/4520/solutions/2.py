@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ar = []
 for i in range(n):
     lolk = list(map(int, input().split()))
@@ -10,7 +10,7 @@ kek = 0
 ans = 0
 ans1 = []
 ksjdfks = set()
-for time, type, end, lol in ar:
+for (time, type, end, lol) in ar:
     if lol not in ksjdfks:
         if type == 0:
             kek += 1

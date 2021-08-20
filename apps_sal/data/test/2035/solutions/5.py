@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
-n, sx, sy = map(int, input().split())
+(n, sx, sy) = map(int, input().split())
 L = [0, 0, 0, 0]
 for i in ' ' * n:
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a - sx > 0:
         L[0] += 1
     if a - sx < 0:

@@ -6,7 +6,6 @@ C = list(map(int, input().split()))
 A.sort()
 B.sort()
 C.sort()
-
 ans = 0
 for i in range(n):
     q = B[i]

@@ -1,8 +1,6 @@
 import sys
 from math import ceil, floor
-
 input = sys.stdin.readline
-
 t = int(input())
 for zzz in range(t):
     s = list(input().strip())
@@ -10,7 +8,7 @@ for zzz in range(t):
     i = 0
     j = len(s) - 1
     valid = True
-    while (i <= j):
+    while i <= j:
         if s[i] != s[j]:
             valid = False
             break

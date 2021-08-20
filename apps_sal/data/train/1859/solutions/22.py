@@ -1,4 +1,5 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         ans = 0
         n = len(matrix)
@@ -17,7 +18,7 @@ class Solution:
                     pre[i][j] -= pre[i - 1][j - 1]
                 c = 2
                 while i - c >= 0 and j - c >= 0:
-                    if pre[i][j] - pre[i][j - c] - pre[i - c][j] + pre[i - c][j - c] == c**2:
+                    if pre[i][j] - pre[i][j - c] - pre[i - c][j] + pre[i - c][j - c] == c ** 2:
                         ans += 1
                     else:
                         break

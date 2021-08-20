@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     ans = ''
     x = []
     for i in range(97, 97 + b):

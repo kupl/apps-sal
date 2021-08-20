@@ -1,6 +1,5 @@
 import sys
 from statistics import median
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')

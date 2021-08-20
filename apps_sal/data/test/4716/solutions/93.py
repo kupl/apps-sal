@@ -1,2 +1,2 @@
-_, k = map(int, input().split())
+(_, k) = map(int, input().split())
 print(sum(sorted(map(int, input().split()))[-k:]))

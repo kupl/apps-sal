@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         dctB = {}
         for word in B:
@@ -9,7 +10,6 @@ class Solution:
             for key in dct:
                 cnt = dctB.get(key)
                 dctB[key] = dct[key] if not cnt else max(cnt, dct[key])
-
         res = []
         for word in A:
             dct = {}

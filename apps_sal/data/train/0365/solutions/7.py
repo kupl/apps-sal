@@ -3,7 +3,7 @@ class Solution:
     def uniqueLetterString(self, s: str) -> int:
         result = 0
         mat = collections.defaultdict(list)
-        for i, ch in enumerate(s):
+        for (i, ch) in enumerate(s):
             if mat[ch]:
                 mat[ch].append(i)
             else:
@@ -27,7 +27,6 @@ class Solution:
                 res += left * right
                 i += 1
             return res
-
         for ch in mat:
             result += helperF(mat[ch], len(s))
         return result

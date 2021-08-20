@@ -1,4 +1,5 @@
 class VigenereCipher(object):
+
     def __init__(self, key, alphabet):
         self.alphabet = alphabet
         self.key = key
@@ -7,7 +8,7 @@ class VigenereCipher(object):
         mx = []
         for i in range(len(text)):
             try:
-                shift = self.alphabet.index(self.key[i % (len(self.key))])
+                shift = self.alphabet.index(self.key[i % len(self.key)])
                 start = self.alphabet.index(text[i])
                 mx.append(self.alphabet[(start + shift) % len(self.alphabet)])
             except:
@@ -18,7 +19,7 @@ class VigenereCipher(object):
         mx = []
         for i in range(len(text)):
             try:
-                shift = self.alphabet.index(self.key[i % (len(self.key))])
+                shift = self.alphabet.index(self.key[i % len(self.key)])
                 start = self.alphabet.index(text[i])
                 mx.append(self.alphabet[(start - shift) % len(self.alphabet)])
             except:

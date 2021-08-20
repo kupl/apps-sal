@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfit(self, k, prices):
         """
         :type k: int
@@ -10,13 +11,12 @@ class Solution:
         if k <= 0:
             return 0
         if k >= len(prices) / 2:
-            return sum(i - j for i, j in zip(prices[1:], prices[:-1]) if i - j > 0)
+            return sum((i - j for (i, j) in zip(prices[1:], prices[:-1]) if i - j > 0))
         buy = []
         sell = []
         for i in range(k):
-            buy.append(-float("inf"))
-            sell.append(-float("inf"))
-
+            buy.append(-float('inf'))
+            sell.append(-float('inf'))
         for i in prices:
             for j in range(k):
                 if j == 0:
@@ -25,5 +25,4 @@ class Solution:
                 else:
                     buy[j] = max(buy[j], sell[j - 1] - i)
                     sell[j] = max(sell[j], i + buy[j])
-
         return sell[-1]

@@ -3,7 +3,6 @@ K = int(input())
 X = list(map(int, input().split()))
 Y = [i for i in range(1, N + 1)]
 ans = 0
-
 for x in X:
     distance_a = x
     distance_b = abs(K - x)
@@ -11,5 +10,4 @@ for x in X:
         ans += distance_a
     else:
         ans += distance_b
-
 print(ans * 2)

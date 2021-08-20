@@ -1,4 +1,4 @@
-N, P = map(int, input().split())
+(N, P) = map(int, input().split())
 S = input()
 list = [0 for _ in range(P)]
 list[0] = 1
@@ -15,8 +15,6 @@ if P == 2 or P == 5:
         else:
             l += 1
     print(a)
-
-
 else:
     b = 1
     h = 0
@@ -24,7 +22,6 @@ else:
         h = h + b * int(s)
         list[h % P] += 1
         b = b * 10 % P
-
     c = 0
     for i in range(len(list)):
         c += list[i] * (list[i] - 1) / 2

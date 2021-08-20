@@ -4,4 +4,4 @@ def diagonal_sum(array):
         for y in range(len(array[x])):
             if x == y:
                 sum = sum + array[x][y]
-    return(sum)
+    return sum

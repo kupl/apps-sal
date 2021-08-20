@@ -1,4 +1,3 @@
 def smash(words):
-    # Begin here
-    ans = " ".join(words)
+    ans = ' '.join(words)
     return ans

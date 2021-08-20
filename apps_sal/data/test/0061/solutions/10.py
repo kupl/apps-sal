@@ -10,9 +10,9 @@ for i in range(len(x)):
     X += x[i] * b ** i
 for i in range(len(y)):
     Y += y[i] * c ** i
-if (X == Y):
-    print("=")
-elif (X < Y):
-    print("<")
+if X == Y:
+    print('=')
+elif X < Y:
+    print('<')
 else:
-    print(">")
+    print('>')

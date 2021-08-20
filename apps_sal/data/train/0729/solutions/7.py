@@ -10,7 +10,7 @@ while t:
         for j in range(m):
             temp.append(int(s[j]))
         a.append(temp)
-    res = [[0 for i in range(m)]for j in range(n)]
+    res = [[0 for i in range(m)] for j in range(n)]
     row = [0] * n
     col = [0] * m
     for i in range(n):
@@ -26,7 +26,6 @@ while t:
     for j in range(m):
         if col[j] == 0:
             c += 1
-
     for i in range(n):
         for j in range(m):
             if r == n and c == m:

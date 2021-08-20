@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
         cnt = 0
         choice = ['a', 'b', 'c']

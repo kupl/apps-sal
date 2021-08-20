@@ -7,16 +7,15 @@ def f(s, t):
         return 1
     elif s[:m] < t[:m]:
         return -1
+    elif len(s) > len(t):
+        return -1
     else:
-        if len(s) > len(t):
-            return -1
-        else:
-            return 1
+        return 1
 
 
 def ms(s, t):
     i = 0
-    for c1, c2 in zip(s, t):
+    for (c1, c2) in zip(s, t):
         if c1 != c2:
             return i
         i += 1
@@ -35,10 +34,10 @@ def xxor(x):
 
 
 def gray(x):
-    return x ^ (x // 2)
+    return x ^ x // 2
 
 
-n, l = list(map(int, input().split()))
+(n, l) = list(map(int, input().split()))
 s = [input() for _ in range(n)]
 s.sort(key=cmp_to_key(f))
 g = gray(l) ^ gray(l - len(s[0]))

@@ -1,13 +1,11 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 c = dict()
-
 for i in a:
     if i in c:
         c[i] += 1
     else:
         c[i] = 1
-
 c = sorted(list(c.values()))
 
 

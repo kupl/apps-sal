@@ -1,4 +1,4 @@
-A, B, K = list(map(int, input().split()))
+(A, B, K) = list(map(int, input().split()))
 
 
 def c_f(A, B):
@@ -9,4 +9,4 @@ def c_f(A, B):
     return common_factor[-K]
 
 
-print((c_f(A, B)))
+print(c_f(A, B))

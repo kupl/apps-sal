@@ -1,21 +1,15 @@
 import bisect
-a, b, q = map(int, input().split())
+(a, b, q) = map(int, input().split())
 s = [int(input()) for i in range(a)]
 s.sort()
 t = [int(input()) for i in range(b)]
 t.sort()
-
-"""
-sとtのどちらを先にするか
-左右どちらに走るか
-の都合4パターンの最小値を選べばよい
-"""
+'\nsとtのどちらを先にするか\n左右どちらに走るか\nの都合4パターンの最小値を選べばよい\n'
 
 
 def minl(x):
-    # sを選択
     idx = bisect.bisect_left(s, x)
-    ret = 3 * 10**10
+    ret = 3 * 10 ** 10
     if idx == 0:
         first = s[0] - x
         now = s[0]
@@ -50,8 +44,6 @@ def minl(x):
             else:
                 second = min(now - t[idx - 1], t[idx] - now)
             ret = min(ret, first + second)
-
-    # tを選択
     idx = bisect.bisect_left(t, x)
     if idx == 0:
         first = t[0] - x

@@ -1,8 +1,9 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dist = []
-        for i, p1 in enumerate(points):
-            for j, p2 in enumerate(points):
+        for (i, p1) in enumerate(points):
+            for (j, p2) in enumerate(points):
                 if i != j:
                     d = abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
                     heapq.heappush(dist, (d, i, j))

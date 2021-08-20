@@ -7,19 +7,19 @@ def solve():
     if n < 3:
         print(0)
         return
-    xs, ys = list(), list()
+    (xs, ys) = (list(), list())
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         xs.append(x)
         ys.append(y)
     mem = [0] * 2002
     for i in range(n):
         slopes = dict()
-        x, y = xs[i], ys[i]
+        (x, y) = (xs[i], ys[i])
         for o in range(n):
             if o != i:
-                xo, yo = xs[o], ys[o]
-                xdiff, ydiff = x - xo, y - yo
+                (xo, yo) = (xs[o], ys[o])
+                (xdiff, ydiff) = (x - xo, y - yo)
                 div = gcd(xdiff, ydiff)
                 xdiff //= div
                 ydiff //= div
@@ -39,7 +39,7 @@ def solve():
 
 
 def fact(n, k):
-    large, small = max(k, n - k), min(k, n - k)
+    (large, small) = (max(k, n - k), min(k, n - k))
     res = 1
     for i in range(large + 1, n + 1):
         res *= i
@@ -49,5 +49,5 @@ def fact(n, k):
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

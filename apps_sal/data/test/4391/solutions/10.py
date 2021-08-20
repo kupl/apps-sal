@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = list(map(int, input().split()))
 find = [0] * n
 for i in range(n):

@@ -1,33 +1,27 @@
-#!/usr/bin/env python3
 def solve():
     _ = input()
     genom = list(input().strip())
-    cntr = {"A": 0, "C": 0, "G": 0, "T": 0, "?": 0}
+    cntr = {'A': 0, 'C': 0, 'G': 0, 'T': 0, '?': 0}
     for g in genom:
         cntr[g] += 1
-
-    q = cntr["?"]
-    del cntr["?"]
-
+    q = cntr['?']
+    del cntr['?']
     maxval = max(cntr.values())
-    needed = sum(maxval - val for val in list(cntr.values()))
+    needed = sum((maxval - val for val in list(cntr.values())))
     if needed > q:
-        return "==="
+        return '==='
     if (q - needed) % 4 != 0:
-        return "==="
+        return '==='
     maxval += (q - needed) // 4
-
-    acgt = ("A", "C", "G", "T")
-
+    acgt = ('A', 'C', 'G', 'T')
     for i in range(len(genom)):
-        if genom[i] == "?":
+        if genom[i] == '?':
             for g in acgt:
                 if cntr[g] < maxval:
                     genom[i] = g
                     cntr[g] += 1
                     break
-
-    return "".join(genom)
+    return ''.join(genom)
 
 
 def __starting_point():

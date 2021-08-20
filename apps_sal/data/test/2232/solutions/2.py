@@ -7,7 +7,7 @@ for i in range(n):
     neighbors[i] = []
     children[i] = []
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     degs[a - 1] += 1
     degs[b - 1] += 1
     neighbors[a - 1].append(b - 1)

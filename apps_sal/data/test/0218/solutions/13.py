@@ -3,10 +3,8 @@ if False:
     inp = open('A.txt', 'r')
 else:
     inp = sys.stdin
-
-n, p, q = list(map(int, inp.readline().split()))
+(n, p, q) = list(map(int, inp.readline().split()))
 string = inp.readline().strip()
-
 length = n
 ans = -1
 for i in range(n // p + 1):

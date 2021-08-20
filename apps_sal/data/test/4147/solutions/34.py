@@ -1,5 +1,5 @@
 def main():
-    n, a, b, c = list(map(int, input().split()))
+    (n, a, b, c) = list(map(int, input().split()))
     L = [int(input()) for _ in range(n)]
     INF = 1000000
 

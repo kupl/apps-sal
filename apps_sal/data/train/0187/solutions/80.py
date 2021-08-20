@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        maxi, max_ind = -1, -1
+        (maxi, max_ind) = (-1, -1)
         p = 0
         suma = 0
         mul = 0
@@ -13,11 +14,10 @@ class Solution:
             else:
                 mul += ex + customers[i]
                 ex = 0
-            p = (mul) * boardingCost - runningCost * (i + 1)
+            p = mul * boardingCost - runningCost * (i + 1)
             if p > maxi:
                 maxi = p
                 max_ind = i + 1
-
         j1 = len(customers)
         while 1:
             if ex >= 4:
@@ -26,8 +26,7 @@ class Solution:
             else:
                 mul += ex
                 ex = 0
-
-            p = (mul) * boardingCost - runningCost * (j1 + 1)
+            p = mul * boardingCost - runningCost * (j1 + 1)
             if p > maxi:
                 maxi = p
                 max_ind = j1 + 1

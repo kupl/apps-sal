@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 mod = 10 ** 9 + 7
-c, b, ans, d, k = 0, 0, 0, [[1]], n - m
+(c, b, ans, d, k) = (0, 0, 0, [[1]], n - m)
 for i in s:
     c += (i == '(') * 2 - 1
     b = min(c, b)

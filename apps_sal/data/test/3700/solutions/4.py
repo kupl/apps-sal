@@ -10,8 +10,7 @@ def li():
     return list(mi())
 
 
-n, k = mi()
-
+(n, k) = mi()
 y = min(n, k - 1)
 x = k - y
 ans = 0

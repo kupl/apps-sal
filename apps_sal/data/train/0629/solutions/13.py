@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    R, G, B, M = map(int, input().split())
+    (R, G, B, M) = map(int, input().split())
     R_list = list(map(int, input().split()))
     G_list = list(map(int, input().split()))
     B_list = list(map(int, input().split()))

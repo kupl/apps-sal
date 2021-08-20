@@ -1,5 +1,5 @@
-# Union Find Tree
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -17,7 +17,7 @@ class UnionFind():
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -32,7 +32,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -41,18 +41,16 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = []
 for i in range(N):
     a = list(map(int, input().split()))
     A.append(a)
-
 UF1 = UnionFind(N)
 UF2 = UnionFind(N)
-
 for i in range(N):
     for j in range(i + 1, N):
         l = 0
@@ -61,7 +59,6 @@ for i in range(N):
                 l = 1
         if l == 0:
             UF1.union(i, j)
-
 for i in range(N):
     for j in range(i + 1, N):
         l = 0
@@ -85,10 +82,8 @@ for i in UF1.parents:
     if i < 0:
         ans *= fac(-i)
         ans %= 998244353
-
 for i in UF2.parents:
     if i < 0:
         ans *= fac(-i)
         ans %= 998244353
-
 print(ans)

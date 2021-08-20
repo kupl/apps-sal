@@ -9,10 +9,15 @@ import heapq
 
 
 def main():
-    def LI(): return [int(x) for x in sys.stdin.readline().split()]
-    def _LI(): return [int(x) - 1 for x in sys.stdin.readline().split()]
-    def NI(): return int(sys.stdin.readline())
 
+    def LI():
+        return [int(x) for x in sys.stdin.readline().split()]
+
+    def _LI():
+        return [int(x) - 1 for x in sys.stdin.readline().split()]
+
+    def NI():
+        return int(sys.stdin.readline())
     N = NI()
     x = LI()
     L = NI()
@@ -31,17 +36,15 @@ def main():
     for k in range(1, m):
         for i in range(N):
             f[k][i] = f[k - 1][f[k - 1][i]]
-
     for _ in range(NI()):
         ans = 0
-        a, b = _LI()
+        (a, b) = _LI()
         if a > b:
-            a, b = b, a
-
+            (a, b) = (b, a)
         for k in range(m - 1, -1, -1):
             if f[k][a] < b:
                 a = f[k][a]
-                ans += 2**k
+                ans += 2 ** k
         print(ans + 1)
 
 

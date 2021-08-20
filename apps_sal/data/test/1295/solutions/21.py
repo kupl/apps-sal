@@ -6,10 +6,9 @@ def read():
 
 
 def main():
-    n, m = read()
+    (n, m) = read()
     a = read()
     b = read()
-
     res = 0
     for i in range(0, n):
         cover_left = -1
@@ -18,7 +17,6 @@ def main():
             cover_left = 0
         elif bi:
             cover_left = a[i] - b[bi - 1]
-
         cover_right = -1
         bi = bisect.bisect_right(b, a[i])
         if bi != m:
@@ -29,7 +27,6 @@ def main():
             res = max(res, cover_right)
         else:
             res = max(res, cover_left)
-
     print(res)
 
 

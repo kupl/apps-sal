@@ -7,10 +7,10 @@ def sonyaAndExhibition(n, m, visitors):
 
 
 def main():
-    n, m = (int(x) for x in input().split())
+    (n, m) = (int(x) for x in input().split())
     visitors = []
     for i in range(m):
-        l, r = (int(x) for x in input().split())
+        (l, r) = (int(x) for x in input().split())
         visitors.append((l, r))
     print(sonyaAndExhibition(n, m, visitors))
 

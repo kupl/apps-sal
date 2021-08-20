@@ -1,6 +1,5 @@
 key = list(input())
 ans = []
-
 for i in key:
     if i == '0' or i == '1':
         ans.append(i)
@@ -8,5 +7,4 @@ for i in key:
         continue
     else:
         del ans[-1]
-
 print(''.join(ans))

@@ -2,4 +2,4 @@ from re import sub
 
 
 def replace_dots(s):
-    return sub(r"\.", "-", s)
+    return sub('\\.', '-', s)

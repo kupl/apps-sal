@@ -1,4 +1,5 @@
 class Solution(object):
+
     def largestSumOfAverages(self, A, K):
         p = [0]
         for x in A:

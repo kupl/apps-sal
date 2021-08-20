@@ -27,22 +27,17 @@ def prime_factorize(n):
 
 N = int(input())
 A = list(map(int, input().split()))
-
 m = 1000000007
-
 prime_table = make_prime_table(10 ** 6)
-
 lcm_factors = {}
 for a in A:
-    for p, e in prime_factorize(a):
+    for (p, e) in prime_factorize(a):
         if p not in lcm_factors or lcm_factors[p] < e:
             lcm_factors[p] = e
-
 lcm = 1
 for p in lcm_factors:
     lcm *= pow(p, lcm_factors[p], m)
     lcm %= m
-
 result = 0
 for i in range(N):
     result += lcm * pow(A[i], m - 2, m)

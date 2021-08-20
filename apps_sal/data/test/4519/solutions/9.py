@@ -1,10 +1,9 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-
 q = int(input())
 for _ in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     ans = deque()
     cnt = 0

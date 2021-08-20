@@ -1,9 +1,7 @@
 import numpy as np
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-
 A = np.array(A)
-
 A_pos = np.sort(A[A > 0])
 A_neg = np.sort(A[A < 0])
 A_neg2 = -A_neg[::-1]
@@ -20,7 +18,7 @@ def position_in_neg(x):
 def position_in_pos(x):
     z = np.searchsorted(A_pos, -(-x // A_pos), side='left')
     w = np.searchsorted(A_neg2, -(-x // A_neg2), side='left')
-    tmp = len(A_pos[A_pos**2 < x]) + len(A_neg2[A_neg2**2 < x])
+    tmp = len(A_pos[A_pos ** 2 < x]) + len(A_neg2[A_neg2 ** 2 < x])
     return (z.sum() + w.sum() - tmp) // 2
 
 
@@ -35,7 +33,7 @@ def position(x):
 
 l = -pow(10, 18)
 r = pow(10, 18)
-while(r - l > 1):
+while r - l > 1:
     mid = (l + r) // 2
     if position(mid) < K:
         l = mid

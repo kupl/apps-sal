@@ -1,4 +1,5 @@
 class FTree:
+
     def __init__(self, f):
         self.n = len(f)
         self.ft = [0] * (self.n + 1)
@@ -8,7 +9,7 @@ class FTree:
                 self.ft[i + self.lsone(i)] += self.ft[i]
 
     def lsone(self, s):
-        return s & (-s)
+        return s & -s
 
     def query(self, i, j):
         if i > 1:
@@ -27,7 +28,7 @@ class FTree:
     def select(self, k):
         lo = 1
         hi = self.n
-        for i in range(19):  # 30
+        for i in range(19):
             mid = (lo + hi) // 2
             if self.query(1, mid) < k:
                 lo = mid
@@ -39,10 +40,10 @@ class FTree:
 n = int(input())
 data = [int(i) for i in input().split()]
 ft = FTree(list(range(1, n + 1)))
-ans = [""] * n
+ans = [''] * n
 for i in range(n - 1, -1, -1):
     val = data[i]
     ind = ft.select(val + 1)
     ans[i] = str(ind)
     ft.update(ind, -ind)
-print(" ".join(ans))
+print(' '.join(ans))

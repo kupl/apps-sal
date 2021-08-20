@@ -1,4 +1,5 @@
 class Solution:
+
     def combinationSum3(self, k, n):
         """
         :type k: int
@@ -13,6 +14,5 @@ class Solution:
         if d == k and s == n:
             res.append(cur)
             return
-
         for i in range(b, 10):
             self.dfs(res, cur + [i], d + 1, s + i, i + 1, k, n)

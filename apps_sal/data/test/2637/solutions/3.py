@@ -1,4 +1,5 @@
 class Solution:
+
     def permuteUnique(self, nums):
         """
         :type nums: List[int]
@@ -20,6 +21,5 @@ class Solution:
                     continue
                 swap(path, index, i)
                 helper(index + 1, path.copy())
-
         helper(0, nums)
         return res

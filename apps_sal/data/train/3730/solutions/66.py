@@ -1,7 +1,7 @@
 def capitalize(s):
     lst = []
     print(s)
-    a, b = '', ''
+    (a, b) = ('', '')
     for i in range(len(s)):
         if i % 2 == 0 or i == 0:
             a = a + s[i].upper()

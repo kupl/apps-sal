@@ -1,10 +1,11 @@
 class Solution:
+
     def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
         if people[0] >= limit:
             return 0
         res = [0]
-        i, j = 0, len(people) - 1
+        (i, j) = (0, len(people) - 1)
         num_people = 0
         while i <= j:
             if res[-1] + people[j] <= limit and num_people < 2:

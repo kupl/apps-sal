@@ -1,6 +1,6 @@
 def condMax(row):
     flag = False
-    ret, cnt = 0, 0
+    (ret, cnt) = (0, 0)
     for x in row:
         if flag == False and x == 1:
             cnt = 1
@@ -15,13 +15,12 @@ def condMax(row):
     return ret
 
 
-N, M, Q = list(map(int, input().split()))
+(N, M, Q) = list(map(int, input().split()))
 board = [list(map(int, input().split())) for _ in range(N)]
 rows = [condMax(row[:]) for row in board]
-
 ans = max(rows)
 for i in range(Q):
-    i, j = [int(x) - 1 for x in input().split()]
+    (i, j) = [int(x) - 1 for x in input().split()]
     board[i][j] ^= 1
     rows[i] = condMax(board[i][:])
     ans = max(rows)

@@ -3,5 +3,4 @@ def distinct(seq):
     for el in seq:
         if el not in lst:
             lst.append(el)
-
     return lst

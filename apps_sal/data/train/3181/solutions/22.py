@@ -1,1 +1,2 @@
-def check_alive(n): return n > 0
+def check_alive(n):
+    return n > 0

@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = []
 for _ in range(N):
     KA = list(map(int, input().split()))

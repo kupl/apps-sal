@@ -1,5 +1,5 @@
 def main():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     if A >= 13:
         return B
     elif 6 <= A <= 12:
@@ -8,4 +8,4 @@ def main():
         return 0
 
 
-print((main()))
+print(main())

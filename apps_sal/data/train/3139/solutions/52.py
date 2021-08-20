@@ -1,5 +1,5 @@
 def index(array, n):
-    if n >= len(array):  # Here, the nth index will be outside the array.
+    if n >= len(array):
         return -1
     else:
         return array[n] ** n

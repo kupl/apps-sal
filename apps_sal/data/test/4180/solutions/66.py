@@ -1,9 +1,9 @@
 num = int(input())
-x = ""
+x = ''
 cnt = 1000
-while x != "pass":
+while x != 'pass':
     if cnt >= num:
-        x = "pass"
+        x = 'pass'
     else:
         cnt += 1000
 print(cnt - num)

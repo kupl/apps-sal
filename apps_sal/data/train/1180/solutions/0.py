@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     a = 0
     b = 0
-    N, K, x, y = map(int, input().split())
+    (N, K, x, y) = map(int, input().split())
     if x == y:
         a = N
         b = N
@@ -20,17 +19,16 @@ for i in range(t):
         else:
             a = x - y
             b = 0
+    elif K % 4 == 1:
+        a = x - y + N
+        b = N
+    elif K % 4 == 2:
+        a = N
+        b = x - y + N
+    elif K % 4 == 3:
+        a = y - x
+        b = 0
     else:
-        if K % 4 == 1:
-            a = x - y + N
-            b = N
-        elif K % 4 == 2:
-            a = N
-            b = x - y + N
-        elif K % 4 == 3:
-            a = y - x
-            b = 0
-        else:
-            a = 0
-            b = y - x
+        a = 0
+        b = y - x
     print(a, b)

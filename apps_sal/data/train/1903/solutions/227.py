@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def __init__(self, n):
         self._parent = [0] * n
         self._size = [1] * n
@@ -26,12 +27,11 @@ class UnionFind(object):
             n = self._parent[n]
         return n
 
-    # def connected(self, p, q):
-    #    return self.find(p) == self.find(q)
-
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def findManhattanDistance(p1, p2):
             return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         if not points:
@@ -42,13 +42,12 @@ class Solution:
             for j in range(i + 1, N):
                 edges.append([i, j, findManhattanDistance(points[i], points[j])])
         edges.sort(key=lambda x: x[2])
-
         uf = UnionFind(N)
-        edge_count, costs = 0, 0
-        for u, v, w in edges:
-            if(uf.union(u, v)):
+        (edge_count, costs) = (0, 0)
+        for (u, v, w) in edges:
+            if uf.union(u, v):
                 costs += w
                 edge_count += 1
-                if(edge_count == N - 1):
+                if edge_count == N - 1:
                     break
         return costs

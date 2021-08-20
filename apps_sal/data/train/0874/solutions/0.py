@@ -1,7 +1,7 @@
 import math
 T = int(input())
 for i in range(T):
-    N, M, S = input().split()
+    (N, M, S) = input().split()
     N = int(N)
     M = int(M)
     S = int(S)
@@ -20,4 +20,3 @@ for i in range(T):
                 if sum <= total_sum:
                     count = count + 1
         print(count)
-# cook your dish here

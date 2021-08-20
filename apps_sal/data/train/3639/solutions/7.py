@@ -1,8 +1,1 @@
-alan = lambda a, s={"Shattered Dreams Parkway",
-                    "Backstabbing Central",
-                    "Disappointment",
-                    "Rejection",
-                    "Norwich",
-                    "London"}: ('No, seriously, run. You will miss it.',
-
-                                'Smell my cheese you mother!')[set(a) & s == s]
+alan = lambda a, s={'Shattered Dreams Parkway', 'Backstabbing Central', 'Disappointment', 'Rejection', 'Norwich', 'London'}: ('No, seriously, run. You will miss it.', 'Smell my cheese you mother!')[set(a) & s == s]

@@ -11,11 +11,10 @@ def prime_maxlength_chain(n):
     P = set(req)
     D = {}
     found = []
-
-    for i, j in enumerate(req):
+    for (i, j) in enumerate(req):
         D[j] = [0, 0]
         for k in list(D):
-            o, p = D[k]
+            (o, p) = D[k]
             if o in P:
                 found.append([o, p])
             if o + j > n:
@@ -23,6 +22,5 @@ def prime_maxlength_chain(n):
                 continue
             D[k][0] += j
             D[k][1] += 1
-
     m = max(found, key=lambda x: x[1])[1]
     return [i[0] for i in found if i[1] == m]

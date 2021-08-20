@@ -1,14 +1,20 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
 
 
-n, k, q = list(map(int, input().split()))
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
+
+
+(n, k, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-arg = [(num, i) for i, num in enumerate(a)]
+arg = [(num, i) for (i, num) in enumerate(a)]
 arg.sort()
 
 
@@ -22,7 +28,7 @@ def sub(x):
     prv = 0
     for ind in index:
         if ind - prv >= k:
-            vals.extend(sorted(a[prv:ind])[:(ind - prv) - k + 1])
+            vals.extend(sorted(a[prv:ind])[:ind - prv - k + 1])
         prv = ind + 1
         if prv >= n:
             break
@@ -33,7 +39,7 @@ def sub(x):
         return vals[q - 1] - arg[x][0]
 
 
-ans = float("inf")
+ans = float('inf')
 for i in range(n):
     res = sub(i)
     if res is not None:

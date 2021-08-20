@@ -1,4 +1,5 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
         rec = set()
         log = {}
@@ -11,8 +12,7 @@ class Solution:
                     return True
                 return check(log[ind], tar)
             return False
-        for ind, (i, j) in enumerate(zip(leftChild, rightChild)):
-            # print(ind, i, j)
+        for (ind, (i, j)) in enumerate(zip(leftChild, rightChild)):
             if i != -1:
                 if i in rec:
                     return False

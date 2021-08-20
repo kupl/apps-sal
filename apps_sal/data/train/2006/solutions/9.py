@@ -5,7 +5,6 @@ def gcd(a, b):
 
 n = int(input())
 t = list(map(int, input().split()))
-
 x = gcd(t[0], t[1])
 for i in t[2:]:
     x = gcd(i, x)

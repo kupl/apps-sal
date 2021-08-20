@@ -5,7 +5,6 @@ def maxSpeed(arr, l):
         if i < Min:
             Min = i
             count += 1
-
     return count
 
 

@@ -1,8 +1,9 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        l, r = max(weights), sum(weights)
-        while(l < r):
-            m, n, c = (l + r) / 2, 1, 0
+        (l, r) = (max(weights), sum(weights))
+        while l < r:
+            (m, n, c) = ((l + r) / 2, 1, 0)
             for z in weights:
                 if c + z > m:
                     n += 1
@@ -13,14 +14,4 @@ class Solution:
             else:
                 r = m
         return int(l)
-        '''left, right = max(weights), sum(weights)
-        while left < right:
-            mid, need, cur = (left + right) / 2, 1, 0
-            for w in weights:
-                if cur + w > mid:
-                    need += 1
-                    cur = 0
-                cur += w
-            if need > D: left = mid + 1
-            else: right = mid
-        return left'''
+        'left, right = max(weights), sum(weights)\n        while left < right:\n            mid, need, cur = (left + right) / 2, 1, 0\n            for w in weights:\n                if cur + w > mid:\n                    need += 1\n                    cur = 0\n                cur += w\n            if need > D: left = mid + 1\n            else: right = mid\n        return left'

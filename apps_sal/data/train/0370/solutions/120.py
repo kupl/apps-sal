@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.reps = [i for i in range(n)]
         self.size = [1] * n
@@ -20,7 +21,9 @@ class UnionFind:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def get_prime_factor(n):
             factors = set()
             while n % 2 == 0:
@@ -36,15 +39,12 @@ class Solution:
             if n > 1:
                 factors.add(n)
             return factors
-
         factor2idx = collections.defaultdict(list)
         for i in range(len(A)):
             for factor in get_prime_factor(A[i]):
                 factor2idx[factor].append(i)
-
         uf = UnionFind(len(A))
-        for factor, indices in list(factor2idx.items()):
+        for (factor, indices) in list(factor2idx.items()):
             for idx in indices[1:]:
                 uf.union(indices[0], idx)
-
         return max(uf.size)

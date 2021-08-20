@@ -1,6 +1,5 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 V = list(map(int, input().split()))
-
 V.sort(reverse=True)
 s = 0
 m = V[a - 1]
@@ -27,6 +26,4 @@ if left == 0:
         ans += combi(cnt, i)
 else:
     ans += combi(cnt, a - left)
-    # if (sum(V[:a])/a).is_integer():
-    #     ans *= pow(2,V.count(int(V[:a]/a)))
 print(ans)

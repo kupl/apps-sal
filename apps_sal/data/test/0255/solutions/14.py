@@ -12,8 +12,7 @@ while i < n and j < m:
     elif ai[i] - 1 > bi[j]:
         while j < m and ai[i] - 1 > bi[j]:
             j += 1
-    if i < n and j < m and (ai[i] == bi[j] or ai[i] - 1 == bi[j] or
-                            ai[i] == bi[j] - 1):
+    if i < n and j < m and (ai[i] == bi[j] or ai[i] - 1 == bi[j] or ai[i] == bi[j] - 1):
         ni += 1
         i += 1
         j += 1

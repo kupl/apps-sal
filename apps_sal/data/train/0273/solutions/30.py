@@ -1,9 +1,10 @@
 class Solution:
+
     def racecar(self, target):
         target *= -1
-        q, used = [(0, 0, -1)], {(0, -1)}
+        (q, used) = ([(0, 0, -1)], {(0, -1)})
         while q:
-            cnt, pos, speed = heapq.heappop(q)
+            (cnt, pos, speed) = heapq.heappop(q)
             if pos == target:
                 return cnt
             elif pos > 20000 or -20000 > pos:

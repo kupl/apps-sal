@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def __init__(self):
         self.sum_ = 0
 

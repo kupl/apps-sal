@@ -3,7 +3,6 @@ def main():
     input = stdin.readline
     from collections import Counter as ct
     from bisect import bisect_left as bl
-
     n = int(input())
     max_a = sorted(ct(list(map(int, input().split()))).values())
     now_a = [i for i in max_a]
@@ -11,7 +10,6 @@ def main():
     cnt = m
     ans = 0
     ans_list = [0] * (n - m)
-
     for use in range(m, 1, -1):
         rest = ans
         nex = now_a[0]

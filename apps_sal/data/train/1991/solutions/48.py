@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, loc: List[int], start: int, finish: int, fuel: int) -> int:
+
         @lru_cache(None)
         def get(cur, left):
             if left < 0:

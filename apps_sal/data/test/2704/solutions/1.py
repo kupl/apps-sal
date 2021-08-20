@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 t = [int(x) for x in input().split()]
 p = min(t)
 q = max(t)

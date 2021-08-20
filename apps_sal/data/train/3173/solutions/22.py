@@ -5,4 +5,4 @@ def create_array(n):
         print(res)
         res.append(i)
         i += 1
-    return (res)
+    return res

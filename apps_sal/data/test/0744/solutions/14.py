@@ -4,16 +4,15 @@ s = 0
 f = 0
 now = d[0]
 for i in range(1, a):
-    if d[i] == "S":
+    if d[i] == 'S':
         if now != d[i]:
             now = d[i]
             f += 1
-    else:
-        if now != d[i]:
-            now = d[i]
-            s += 1
+    elif now != d[i]:
+        now = d[i]
+        s += 1
     now = d[i]
 if s > f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

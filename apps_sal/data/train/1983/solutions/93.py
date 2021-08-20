@@ -4,7 +4,6 @@ class ProductOfNumbers:
         self.products = []
 
     def add(self, num: int) -> None:
-
         if num == 0:
             self.products = []
         else:
@@ -17,9 +16,3 @@ class ProductOfNumbers:
             return self.products[-1]
         else:
             return self.products[-1] // self.products[-k - 1]
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

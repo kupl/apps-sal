@@ -13,9 +13,9 @@ for _ in range(int(input())):
     i2 = 0
     for i in range(len(long)):
         if even[i1] < odd[i2]:
-            print(even[i1], end="")
+            print(even[i1], end='')
             i1 += 1
         else:
-            print(odd[i2], end="")
+            print(odd[i2], end='')
             i2 += 1
     print()

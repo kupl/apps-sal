@@ -3,17 +3,15 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    n, x = Input()
+    (n, x) = Input()
     m = [int(input()) for _ in range(n)]
     ans = n
-
     x -= sum(m)
     ans += x // min(m)
-
     print(ans)
 
 

@@ -22,19 +22,18 @@ else:
             else:
                 no = True
     a = 0
-    while a < 5 and not no:
+    while a < 5 and (not no):
         for i in range(len(children)):
             if len(children[i]) > 1:
                 if sizes[a] == children[i][0] and sizes[a + 1] == children[i][1]:
                     if shirts[sizes[a]] > 0:
                         itog[i] = sizes[a]
                         shirts[sizes[a]] -= 1
+                    elif shirts[sizes[a + 1]] > 0:
+                        itog[i] = sizes[a + 1]
+                        shirts[sizes[a + 1]] -= 1
                     else:
-                        if shirts[sizes[a + 1]] > 0:
-                            itog[i] = sizes[a + 1]
-                            shirts[sizes[a + 1]] -= 1
-                        else:
-                            no = True
+                        no = True
         a += 1
     if not no:
         print('YES')

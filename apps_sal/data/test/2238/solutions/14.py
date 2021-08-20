@@ -5,7 +5,7 @@ for i in range(x):
         a1 = i - add
         b2 = j - add
         if abs(a1) + abs(b2) <= add:
-            print("D", end="")
+            print('D', end='')
         else:
-            print("*", end="")
+            print('*', end='')
     print()

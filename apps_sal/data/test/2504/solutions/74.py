@@ -6,10 +6,10 @@ input = sys.stdin.readline
 
 
 def main():
-    n, m, l = map(int, input().split())
+    (n, m, l) = map(int, input().split())
     F = np.zeros((n, n))
     for _ in range(m):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         a -= 1
         b -= 1
         F[a, b] = c
@@ -26,9 +26,9 @@ def main():
     B = floyd_warshall(ncsr)
     q = int(input())
     for _ in range(q):
-        s, t = map(int, input().split())
+        (s, t) = map(int, input().split())
         k = B[s - 1][t - 1]
-        if k == float("inf"):
+        if k == float('inf'):
             print(-1)
         else:
             print(int(k) - 1)

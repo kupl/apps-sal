@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
 
         def recur(tiles):
@@ -16,7 +17,5 @@ class Solution:
                 temp += tiles[0]
                 tiles = tiles[1:]
             return ans
-
         ans = recur(tiles)
-        # print(ans)
         return len(ans)

@@ -1,7 +1,7 @@
-r, c, n, k = map(int, input().split())
+(r, c, n, k) = map(int, input().split())
 s = [[0] * c for i in range(r)]
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     s[x - 1][y - 1] = 1
 res = 0
 for br in range(r):
@@ -15,5 +15,4 @@ for br in range(r):
                             counter += 1
                 if counter >= k:
                     res += 1
-
 print(res)

@@ -8,7 +8,7 @@ def f(n, a, b):
     return cnt
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 a = []
 for i in range(m + 1):
     a.append(int(input()))

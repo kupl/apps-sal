@@ -1,6 +1,6 @@
 s = input()
-a, b = [int(x) for x in s.split()]
-c, ans = 0, 0
+(a, b) = [int(x) for x in s.split()]
+(c, ans) = (0, 0)
 while True:
     c = min(a, b)
     a = max(a, b)

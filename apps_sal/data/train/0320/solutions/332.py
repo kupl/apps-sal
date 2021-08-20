@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         ans = 0
         peak = 0
         for n in nums:

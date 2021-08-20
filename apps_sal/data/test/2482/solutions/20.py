@@ -17,8 +17,6 @@ class UnionFind:
     def unite(self, x: int, y: int) -> None:
         px = self.find(x)
         py = self.find(y)
-
-        # 一致していないときはリンクをつける
         if px != py:
             self._link(px, py)
 
@@ -38,7 +36,6 @@ class UnionFind:
     def find(self, x: int) -> int:
         if self._parents[x] == x:
             return x
-
         self._parents[x] = self.find(self._parents[x])
         return self._parents[x]
 
@@ -46,31 +43,23 @@ class UnionFind:
         return self._size[self.find(self._parents[x])]
 
 
-N, K, L = map(int, input().split())
-
+(N, K, L) = map(int, input().split())
 road = UnionFind(N + 1)
 rail = UnionFind(N + 1)
 share = UnionFind(N + 1)
-
 roads = [list(map(int, input().split())) for _ in range(K)]
 rails = [list(map(int, input().split())) for _ in range(L)]
-
 for i in range(K):
-    p, q = roads[i]
+    (p, q) = roads[i]
     road.unite(p, q)
-
 for i in range(L):
-    r, s = rails[i]
+    (r, s) = rails[i]
     rail.unite(r, s)
-
 m = {}
-
 for i in range(1, N + 1):
     cnt = m.get((road.find(i), rail.find(i)), 0)
-    m[(road.find(i), rail.find(i))] = cnt + 1
-
+    m[road.find(i), rail.find(i)] = cnt + 1
 ans = [0] * N
 for i in range(N):
-    ans[i] = m[(road.find(i + 1), rail.find(i + 1))]
-
+    ans[i] = m[road.find(i + 1), rail.find(i + 1)]
 print(*ans)

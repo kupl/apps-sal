@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 m = 1
 z = 0

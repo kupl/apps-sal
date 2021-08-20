@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 a = list(map(int, input().split()))
 d = a[1] - a[0]

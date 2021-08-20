@@ -1,7 +1,6 @@
 def encode(n, strng):
     for _ in range(n):
-        wos, spa, new, a = '', [], '', []
-
+        (wos, spa, new, a) = ('', [], '', [])
         for i in range(len(strng)):
             if strng[i] == ' ':
                 spa.append(i)
@@ -18,7 +17,6 @@ def encode(n, strng):
                 tem.insert((j + n) % len(i), i[j])
             a.append(''.join(tem))
         strng = ' '.join(a)
-
     return '{} {}'.format(n, strng)
 
 
@@ -26,7 +24,7 @@ def decode(strng):
     n = int(strng.split(' ')[0])
     strng = strng[len(str(n)) + 1:]
     for _ in range(n):
-        a, spa = [], []
+        (a, spa) = ([], [])
         for i in range(len(strng)):
             if strng[i] == ' ':
                 spa.append(i)
@@ -35,12 +33,10 @@ def decode(strng):
             for j in range(len(i)):
                 tem.insert((j - n) % len(i), i[j])
             a.append(''.join(tem))
-        wos, shifted = ''.join(a), []
-
+        (wos, shifted) = (''.join(a), [])
         for i in range(len(wos)):
             shifted.insert((i - n) % len(wos), wos[i])
-
         for i in spa:
             shifted.insert(i, ' ')
         strng = ''.join(shifted)
-    return(strng)
+    return strng

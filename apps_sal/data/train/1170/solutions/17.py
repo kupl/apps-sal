@@ -1,15 +1,10 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-    res = ""
-
+    res = ''
     for i in range(n):
         if arr[i] % k == 0:
-            res = res + "1"
+            res = res + '1'
         else:
-            res += "0"
-
+            res += '0'
     print(res)
-
-
-# cook your dish here

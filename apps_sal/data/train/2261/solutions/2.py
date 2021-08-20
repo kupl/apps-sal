@@ -4,7 +4,7 @@ class SortedList(list):
         left = -1
         right = len(self)
         while right - left > 1:
-            mid = (right + left) >> 1
+            mid = right + left >> 1
             if other < self[mid]:
                 right = mid
             else:
@@ -12,7 +12,7 @@ class SortedList(list):
         super().insert(right, other)
 
 
-INF = int(3e18)
+INF = int(3e+18)
 
 
 def solve_good(n, m, d, a, b, t):
@@ -24,18 +24,15 @@ def solve_good(n, m, d, a, b, t):
     rborder = INF
     tprev = 0
     ans = 0
-    for ai, bi, ti in zip(a, b, t):
+    for (ai, bi, ti) in zip(a, b, t):
         ans += bi
         dt = ti - tprev
         interval = dt * d
         tprev = ti
-
         lborder += interval
         rborder -= interval
-
         lefta = lborder + ai
         righta = rborder - (n - ai)
-
         if lefta < left[-1]:
             top = left.pop()
             ans -= abs(top - lefta)
@@ -54,12 +51,11 @@ def solve_good(n, m, d, a, b, t):
     return ans
 
 
-n, m, d = [int(elem) for elem in input().split()]
-a, b, t = [], [], []
+(n, m, d) = [int(elem) for elem in input().split()]
+(a, b, t) = ([], [], [])
 for i in range(m):
-    ai, bi, ti = [int(elem) for elem in input().split()]
+    (ai, bi, ti) = [int(elem) for elem in input().split()]
     a.append(ai)
     b.append(bi)
     t.append(ti)
-
 print(solve_good(n, m, d, a, b, t))

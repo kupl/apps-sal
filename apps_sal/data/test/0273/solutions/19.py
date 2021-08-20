@@ -1,4 +1,4 @@
-name, surname = input().split()
+(name, surname) = input().split()
 ans = name[0]
 for i in name[1:]:
     if i < surname[0]:

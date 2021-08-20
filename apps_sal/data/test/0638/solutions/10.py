@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 for i in range(n):
     s = sum(t[:i])
@@ -8,4 +8,4 @@ for i in range(n):
         res += 1
         s -= li[-1]
         li.pop()
-    print(res, end=" ")
+    print(res, end=' ')

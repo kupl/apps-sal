@@ -3,4 +3,4 @@ def row_sum_odd_numbers(n):
         if n == 1:
             return n
         else:
-            return n**3
+            return n ** 3

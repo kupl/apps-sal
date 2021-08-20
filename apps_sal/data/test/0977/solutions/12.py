@@ -20,7 +20,7 @@ def fa(a, x, p):
 
 
 def solve():
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     lst = list(map(int, input().split()))
     lst.sort()
     ans = []

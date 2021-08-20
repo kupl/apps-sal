@@ -1,7 +1,6 @@
 n = int(input())
 ans = 0
 n %= 360
-
 if n <= 45 or n >= 270:
     ans = 0
 if n > 45 and n <= 135:

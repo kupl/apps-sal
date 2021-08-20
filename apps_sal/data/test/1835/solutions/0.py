@@ -3,33 +3,34 @@ import math
 from collections import defaultdict
 from itertools import combinations
 from itertools import permutations
-def input(): return sys.stdin.readline().rstrip()
-def read(): return list(map(int, input().split()))
 
 
-def write(*args, sep="\n"):
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def read():
+    return list(map(int, input().split()))
+
+
+def write(*args, sep='\n'):
     for i in args:
-        sys.stdout.write("{}".format(i) + sep)
+        sys.stdout.write('{}'.format(i) + sep)
 
 
 INF = float('inf')
-MOD = int(1e9 + 7)
-
+MOD = int(1000000000.0 + 7)
 for _ in range(int(input())):
     n = int(input())
     arr = sorted([input() for i in range(n)], key=lambda x: len(x))
-
-    zero_cnt, one_cnt = 0, 0
+    (zero_cnt, one_cnt) = (0, 0)
     for i in arr:
         zero_cnt += i.count('0')
         one_cnt += i.count('1')
-    total = (zero_cnt // 2) + (one_cnt // 2)
-
+    total = zero_cnt // 2 + one_cnt // 2
     ans = 0
-
     for i in arr:
         if total >= len(i) // 2:
             total -= len(i) // 2
             ans += 1
-
     print(ans)

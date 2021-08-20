@@ -3,6 +3,7 @@ import sys
 
 
 class Read:
+
     @staticmethod
     def string():
         return input()
@@ -21,9 +22,8 @@ class Read:
 
 
 def solve():
-    n, T = Read.list_int()
+    (n, T) = Read.list_int()
     a = Read.list_int()
-
     tmp = {}
     res = []
     for i in a:
@@ -34,11 +34,9 @@ def solve():
                 r = '0'
         tmp[i] = r
         res.append(r)
-
     print(' '.join(res))
 
 
-# query_count = 1
 query_count = Read.int()
 while query_count:
     query_count -= 1

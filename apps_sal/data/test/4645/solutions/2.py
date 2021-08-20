@@ -1,10 +1,3 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def main():
     t = int(input())
     for _ in range(t):
@@ -17,7 +10,7 @@ def main():
             continue
         a = [2 * i + 1 for i in range((n + 1) // 2)]
         a.append(a[-1] - 3)
-        if a[-1] + 2 == (n // 2) * 2:
+        if a[-1] + 2 == n // 2 * 2:
             a.append(a[-1] + 2)
         else:
             a.append(a[-1] + 4)

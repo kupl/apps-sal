@@ -1,4 +1,4 @@
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 m = A // D
 n = C // B
 if A % D != 0:
@@ -6,6 +6,6 @@ if A % D != 0:
 if C % B != 0:
     n += 1
 if m >= n:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

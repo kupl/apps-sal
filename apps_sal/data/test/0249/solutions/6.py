@@ -40,20 +40,18 @@ if xcan == True:
     else:
         result = 1
         marks = [y]
+elif ycan == True:
+    result = 1
+    marks = [x]
+elif xycan == True:
+    result = 1
+    marks = [cool + x]
+elif xymoar == True:
+    result = 1
+    marks = [cool2]
 else:
-    if ycan == True:
-        result = 1
-        marks = [x]
-    else:
-        if xycan == True:
-            result = 1
-            marks = [cool + x]
-        elif xymoar == True:
-            result = 1
-            marks = [cool2]
-        else:
-            result = 2
-            marks = [x, y]
+    result = 2
+    marks = [x, y]
 print(result)
 for i in range(len(marks)):
     print(marks[i], end=' ')

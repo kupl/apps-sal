@@ -2,7 +2,7 @@ import sys
 readline = sys.stdin.readline
 T = int(readline())
 Ans = [None] * T
-inf = 10**9 + 7
+inf = 10 ** 9 + 7
 for qu in range(T):
     N = int(readline())
     A = list(map(int, readline().split()))
@@ -21,7 +21,6 @@ for qu in range(T):
     for i in range(N):
         a2 = A2[i]
         idx[geta + a2] = min(idx[geta + a2], i + 1)
-
     ans = inf
     A1 = [0] + A1
     for i in range(N + 1):

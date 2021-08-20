@@ -1,11 +1,9 @@
-#!/usr/bin/env python3
-
 def gcd(a, b):
     return a if b == 0 else gcd(b, a % b)
 
 
 def main():
-    L, a, b = list(map(int, input().split()))
+    (L, a, b) = list(map(int, input().split()))
     c = a // gcd(a, b) * b
     m = min(a, b)
     if c <= m:

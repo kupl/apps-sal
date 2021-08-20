@@ -1,6 +1,3 @@
-#import sys
-#sys.stdin = open('in.txt')
-# sys.setrecursionlimit(10000)
 def isPrefix(sa, sb):
     if len(sa) <= len(sb):
         return False
@@ -10,21 +7,19 @@ def isPrefix(sa, sb):
 def getOrder(sa, sb):
     for i in range(0, min(len(sa), len(sb))):
         if sa[i] != sb[i]:
-            return sa[i], sb[i]
+            return (sa[i], sb[i])
 
 
 test = False
 if test:
-    fp = open("in.txt", 'r')
+    fp = open('in.txt', 'r')
     n = int(fp.readline().strip())
     names = [fp.readline().strip() for i in range(0, n)]
     fp.close()
 else:
     n = int(input().strip())
     names = [input().strip() for i in range(0, n)]
-
 g = [[False] * 26 for i in range(0, 26)]
-
 res = True
 for i in range(1, n):
     if names[i - 1] == names[i] or isPrefix(names[i], names[i - 1]):
@@ -33,8 +28,7 @@ for i in range(1, n):
         res = False
         break
     else:
-        ca, cb = getOrder(names[i - 1], names[i])
-        #print(ca, '<', cb)
+        (ca, cb) = getOrder(names[i - 1], names[i])
         if g[ord(cb) - ord('a')][ord(ca) - ord('a')]:
             res = False
             break
@@ -43,14 +37,13 @@ for i in range(1, n):
 
 
 def printG():
-    print("   abcdefghijklmnopqrstuvwxyz")
+    print('   abcdefghijklmnopqrstuvwxyz')
     for i in range(0, 26):
-        print(chr(ord('a') + i), "".join(["1" if x else "0" for x in g[i]]), sep="")
-# printG()
+        print(chr(ord('a') + i), ''.join(['1' if x else '0' for x in g[i]]), sep='')
 
 
 if not res:
-    print("Impossible")
+    print('Impossible')
 else:
 
     def getZeroIndegreeNode():
@@ -58,12 +51,9 @@ else:
             if not used[i] and indegree[i] == 0:
                 return i
         return -1
-    # topo sort
     theOrder = []
     indegree = [0] * 26
     used = [False] * 26
-
-    # calc indegree
     for i in range(0, 26):
         ithIndegree = 0
         for j in range(0, 26):
@@ -82,6 +72,6 @@ else:
                 if g[zeroIndegreeNode][j]:
                     indegree[j] -= 1
     if not res:
-        print("Impossible")
+        print('Impossible')
     else:
-        print("".join(theOrder))
+        print(''.join(theOrder))

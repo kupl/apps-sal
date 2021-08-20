@@ -15,12 +15,12 @@ for _ in range(t):
         c = 0
         n = 2 ** b - 1 - n
         for i in range(1, b):
-            if (n >> (b - i)) & 1:
+            if n >> b - i & 1:
                 t += 1
                 c += 1
             ans[i] -= t
             t *= 2
-        ans[-1] -= (c + (n & 1))
+        ans[-1] -= c + (n & 1)
         res = [0] * (b - 1)
         for i in range(b - 1):
             res[i] = ans[i + 1] - ans[i]

@@ -3,7 +3,7 @@ d = {}
 
 def odd(n):
     if n == -1:
-        return 10**1000
+        return 10 ** 1000
     r = 0
     while n % 2:
         r += 1

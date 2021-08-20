@@ -1,4 +1,3 @@
-# coding: utf-8
 light = [[0, 0, 0, 0, 0] for i in range(5)]
 for i in range(1, 4):
     s = [int(i) for i in input().split()]

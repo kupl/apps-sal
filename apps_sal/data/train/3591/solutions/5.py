@@ -7,4 +7,5 @@ for i in range(1, n):
     store.append(li)
 
 
-def doors(n): return store[n + 1][:n].count(1)
+def doors(n):
+    return store[n + 1][:n].count(1)

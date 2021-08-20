@@ -1,11 +1,11 @@
-'''input
+"""input
 3 2
 1 3 0
-'''
+"""
 
 
 def solve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     flipVal = (1 << k) - 1
     l = list(map(int, input().split()))
     D = {}
@@ -18,7 +18,6 @@ def solve():
             D[l[i]] += 1
         else:
             D[l[i]] = 1
-    # print(l)
     total = n * (n + 1) // 2
     bad = 0
     for i in D:
@@ -32,7 +31,6 @@ def solve():
 
 
 t = 1
-#t = int(input())
 while t > 0:
     t -= 1
     solve()

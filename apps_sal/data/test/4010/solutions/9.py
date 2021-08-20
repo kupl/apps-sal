@@ -5,8 +5,8 @@ for i in range(t):
     met = []
     for i in data:
         if i in met[:-1]:
-            print("YES")
+            print('YES')
             break
         met.append(i)
     else:
-        print("NO")
+        print('NO')

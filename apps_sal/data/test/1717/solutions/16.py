@@ -1,6 +1,5 @@
 import sys
 from collections import defaultdict
-
 read = sys.stdin.read
 readline = sys.stdin.buffer.readline
 sys.setrecursionlimit(10 ** 8)
@@ -30,11 +29,10 @@ def main():
     d = defaultdict(int)
     for i in range(2, N + 1):
         P = prime_factorize(i)
-        for x, n in P:
+        for (x, n) in P:
             d[x] = max(d[x], n)
-
     ans = 1
-    for x, n in list(d.items()):
+    for (x, n) in list(d.items()):
         ans *= x ** n
     ans += 1
     print(ans)

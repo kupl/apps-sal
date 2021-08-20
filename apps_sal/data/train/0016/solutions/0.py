@@ -2,6 +2,7 @@ from math import sqrt
 
 
 class pro(object):
+
     def __init__(self, dif, sc):
         self.dif = dif
         self.sc = sc
@@ -17,10 +18,10 @@ for i in range(100):
 inf = 1000000007
 for t in range(T):
     n = int(input())
-    effi, tim = list(map(float, input().split()))
+    (effi, tim) = list(map(float, input().split()))
     prob = []
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         prob.append(pro(x, y))
     prob.sort()
     f = [[inf for i in range(n + 1)] for j in range(1001)]

@@ -6,7 +6,7 @@ input = sys.stdin.readline
 class Graph(object):
     """docstring for Graph"""
 
-    def __init__(self, n, d):  # Number of nodes and d is True if directed
+    def __init__(self, n, d):
         self.n = n
         self.graph = [[] for i in range(n)]
         self.parent = [-1 for i in range(n)]
@@ -17,7 +17,7 @@ class Graph(object):
         if not self.directed:
             self.graph[y].append(x)
 
-    def bfs(self, root):  # NORMAL BFS
+    def bfs(self, root):
         queue = [root]
         queue = deque(queue)
         vis = [0] * self.n
@@ -29,9 +29,9 @@ class Graph(object):
                     queue.append(i)
                     self.parent[i] = element
                     vis[i] = 1
-                    dist[i] = dist[element] + w[(element, i)]
+                    dist[i] = dist[element] + w[element, i]
 
-    def bfs2(self, root):  # NORMAL BFS
+    def bfs2(self, root):
         queue = [root]
         queue = deque(queue)
         vis = [0] * self.n
@@ -45,7 +45,7 @@ class Graph(object):
                     vis[i] = 1
                     minn[i] = min(minn[element], dist[i])
 
-    def bfs3(self, root):  # NORMAL BFS
+    def bfs3(self, root):
         queue = [root]
         queue = deque(queue)
         vis = [0] * self.n
@@ -61,11 +61,11 @@ class Graph(object):
                     vis[i] = 1
         return count
 
-    def dfs(self, root, ans):  # Iterative DFS
+    def dfs(self, root, ans):
         stack = [root]
         vis = [0] * self.n
         stack2 = []
-        while len(stack) != 0:  # INITIAL TRAVERSAL
+        while len(stack) != 0:
             element = stack.pop()
             if vis[element]:
                 continue
@@ -75,8 +75,7 @@ class Graph(object):
                 if vis[i] == 0:
                     self.parent[i] = element
                     stack.append(i)
-
-        while len(stack2) != 0:  # BACKTRACING. Modify the loop according to the question
+        while len(stack2) != 0:
             element = stack2.pop()
             m = 0
             for i in self.graph[element]:
@@ -85,7 +84,7 @@ class Graph(object):
             ans[element] = m
         return ans
 
-    def shortestpath(self, source, dest):  # Calculate Shortest Path between two nodes
+    def shortestpath(self, source, dest):
         self.bfs(source)
         path = [dest]
         while self.parent[path[-1]] != -1:
@@ -120,7 +119,6 @@ class Graph(object):
             e = stack[-1]
             if vis[e]:
                 stack.pop()
-                # Reverse_The_Change()
                 continue
             vis[e] = 1
             for i in graph[e]:
@@ -128,7 +126,6 @@ class Graph(object):
                     stack.append(i)
             if self.parent[e] == -1:
                 continue
-            # Change_The_Answers()
 
 
 n = int(input())
@@ -136,9 +133,9 @@ a = list(map(int, input().split()))
 g = Graph(n, False)
 w = {}
 for i in range(n - 1):
-    x, y = map(int, input().split())
-    w[(i + 1, x - 1)] = y
-    w[(x - 1, i + 1)] = y
+    (x, y) = map(int, input().split())
+    w[i + 1, x - 1] = y
+    w[x - 1, i + 1] = y
     g.addEdge(i + 1, x - 1)
 dist = [0] * n
 minn = [0] * n
@@ -148,7 +145,4 @@ remove = [0] * n
 for i in range(1, n):
     if dist[i] - minn[i] > a[i]:
         remove[i] = 1
-# print (dist)
-# print (minn)
-# print (remove)
 print(n - g.bfs3(0))

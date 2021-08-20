@@ -1,22 +1,30 @@
 import sys
-def fop(s, end='\n'): sys.stdout.write(str(s) + end)
-def fip(): return sys.stdin.readline().strip()
 
 
-def fintinp(): return int(fip())
-def flistinp(func=int): return list(map(func, fip().split()))
-def fnsepline(n, func=str): return [func(fip()) for _ in range(n)]
-# -------------------code------------------------
+def fop(s, end='\n'):
+    sys.stdout.write(str(s) + end)
+
+
+def fip():
+    return sys.stdin.readline().strip()
+
+
+def fintinp():
+    return int(fip())
+
+
+def flistinp(func=int):
+    return list(map(func, fip().split()))
+
+
+def fnsepline(n, func=str):
+    return [func(fip()) for _ in range(n)]
 
 
 def byeqs(pqr, abc):
-    # f_ans = 3
-    p, q, r = pqr
-    a, b, c = abc
-    # zeq = a*(r-q) + b*(p-r) + c*(q-p)
-    # m=n=None # for y = mx + n
+    (p, q, r) = pqr
+    (a, b, c) = abc
     muls = []
-    # if zeq==0:
     try:
         if p != q:
             m_ = (a - b) // (p - q)
@@ -53,7 +61,6 @@ def recSolver(pqr, abc, ans=0):
                 if ss & i:
                     pqr_copy[i >> 1] += a
             f_ans = min(f_ans, recSolver(pqr_copy, abc, ans + 1))
-
         for m in muls:
             pqr_copy = list(pqr)
             for i in [1, 2, 4]:

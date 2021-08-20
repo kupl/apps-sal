@@ -25,7 +25,6 @@ for i in B:
         b[4] += 1
     if i == 5:
         b[5] += 1
-
 ans = 0
 f = True
 for i in range(1, 6):

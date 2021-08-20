@@ -1,5 +1,4 @@
 def remove_smallest(numbers):
-
     empty = []
     z = list(numbers)
     if z == []:

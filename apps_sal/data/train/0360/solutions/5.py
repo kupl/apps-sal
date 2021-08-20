@@ -12,6 +12,7 @@ def find(w, m, d, l):
 
 
 class Solution:
+
     def shipWithinDays(self, w: List[int], D: int) -> int:
         l = len(w)
         s = max(w)

@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     x = (a - b + c) // 2
     y = (a - c + b) // 2
     z = (b + c - a) // 2

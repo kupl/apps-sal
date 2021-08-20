@@ -3,23 +3,18 @@ test = list(map(int, input().split()))
 test1 = []
 result = []
 test.sort(reverse=True)
-
 num = test.count(test[0])
-
 test1.append(test[0])
 mark = 0
-
 for i in range(num, len(test)):
     if test[i] != test1[len(test1) - 1]:
         test1.append(test[i])
         mark = 0
+    elif mark > 0:
+        continue
     else:
-        if mark > 0:
-            continue
-        else:
-            test1.append(test[i])
-            mark += 1
-
+        test1.append(test[i])
+        mark += 1
 result.append(test1[0])
 for j in range(1, len(test1)):
     if test1[j] != result[len(result) - 1]:

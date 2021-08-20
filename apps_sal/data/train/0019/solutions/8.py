@@ -9,7 +9,7 @@ def cleanK(q):
 
 
 def test():
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     ans = math.inf
     q = collections.deque()
@@ -19,7 +19,6 @@ def test():
         if arrK[a[i]] == 0:
             sumK += 1
         arrK[a[i]] += 1
-
         if len(q) > d:
             var = q.popleft()
             arrK[var] -= 1
@@ -29,13 +28,8 @@ def test():
             ans = sumK
     cleanK(q)
     print(ans)
-#
-# def print2d(a):
-#     for i in a:
-#       print(' '.join(list(map(str, i))))
 
 
 t = int(input())
-
 for i in range(t):
     test()

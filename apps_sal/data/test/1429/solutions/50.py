@@ -1,6 +1,5 @@
-n, s = input().split()
+(n, s) = input().split()
 n = int(n)
-
 s_l = list(s)
 c = 0
 for i in range(n - 1):

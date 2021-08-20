@@ -2,6 +2,7 @@ import functools
 
 
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n: int = len(piles)
 

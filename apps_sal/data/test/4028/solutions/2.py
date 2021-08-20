@@ -1,4 +1,4 @@
-M = 10**9 + 7
+M = 10 ** 9 + 7
 n = int(input())
 s = [c == '(' for c in input()]
 m = len(s)

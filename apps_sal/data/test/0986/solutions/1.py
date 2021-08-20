@@ -4,13 +4,13 @@ def dist(a, f, i):
             return j
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 books = set()
 l = 0
 pref = [0 for i in range(n)]
 for i in range(n - 1, -1, -1):
-    pref[a[i] - 1] = max(pref[a[i] - 1], i)  # i min == 0
+    pref[a[i] - 1] = max(pref[a[i] - 1], i)
 res = 0
 for i in range(n):
     if a[i] not in books:

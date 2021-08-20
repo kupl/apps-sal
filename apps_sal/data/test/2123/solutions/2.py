@@ -1,17 +1,16 @@
 import itertools
 import math
 import random
-
 import time
 
 
 def timer(f):
+
     def tmp(*args, **kwargs):
         t = time.time()
         res = f(*args, **kwargs)
-        print("Время выполнения функции: %f" % (time.time() - t))
+        print('Время выполнения функции: %f' % (time.time() - t))
         return res
-
     return tmp
 
 
@@ -21,5 +20,4 @@ def genArray(length, lower, upper):
 
 n = int(input())
 array = list(map(int, input().split(' ')))
-
 print(max(array))

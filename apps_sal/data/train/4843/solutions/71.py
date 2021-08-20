@@ -7,4 +7,3 @@ def choose_best_sum(t, k, ls):
         return max(ls)
     else:
         return None
-    # your code

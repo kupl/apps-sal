@@ -1,49 +1,30 @@
-# JMD
-# Nagendra Jha-4096
-
-
 import sys
 import math
-
-#import fractions
-#import numpy
-
-###File Operations###
 fileoperation = 0
-if(fileoperation):
+if fileoperation:
     orig_stdout = sys.stdout
     orig_stdin = sys.stdin
     inputfile = open('W:/Competitive Programming/input.txt', 'r')
     outputfile = open('W:/Competitive Programming/output.txt', 'w')
     sys.stdin = inputfile
     sys.stdout = outputfile
-
-###Defines...###
 mod = 1000000007
-
-###FUF's...###
 
 
 def nospace(l):
-    ans = ''.join(str(i) for i in l)
+    ans = ''.join((str(i) for i in l))
     return ans
 
 
-##### Main ####
 t = int(input())
 for tt in range(t):
-    # n=int(input())
-    n, a, b = map(int, sys.stdin.readline().split(' '))
+    (n, a, b) = map(int, sys.stdin.readline().split(' '))
     a1 = n * a
-    a2 = (n // 2) * b
-    if(n % 2):
+    a2 = n // 2 * b
+    if n % 2:
         a2 += a
     print(min(a1, a2))
-    #a=list(map(int,sys.stdin.readline().split(' ')))
-
-
-#####File Operations#####
-if(fileoperation):
+if fileoperation:
     sys.stdout = orig_stdout
     sys.stdin = orig_stdin
     inputfile.close()

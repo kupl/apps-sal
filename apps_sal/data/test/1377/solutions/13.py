@@ -7,11 +7,9 @@ while j < n:
     if a[j] >= a[j - 1]:
         f = False
     j += 1
-
 j = i - 1
 while j >= 0:
     if a[j] >= a[j + 1]:
         f = False
     j -= 1
-
-print("YES" if f else "NO")
+print('YES' if f else 'NO')

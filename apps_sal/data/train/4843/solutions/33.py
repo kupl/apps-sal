@@ -20,8 +20,7 @@ def choose_best_sum(t, k, ls):
     res = 0
     index = 0
     list = combina(k, ls)
-    for m, i in enumerate(list):
-        #print('i: ' + str(i) + ' sum: ' + str(sum))
+    for (m, i) in enumerate(list):
         sum = 0
         if len(i) == k:
             for j in i:
@@ -30,8 +29,7 @@ def choose_best_sum(t, k, ls):
             if res < sum:
                 res = sum
                 index = m
-
     print(res)
     if res > 0:
-        return(res)
+        return res
     return None

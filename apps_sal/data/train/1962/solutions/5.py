@@ -1,6 +1,6 @@
 class Solution:
-    def dominantIndex(self, nums):
 
+    def dominantIndex(self, nums):
         if len(nums) > 1:
             n = max(nums)
             id = nums.index(n)

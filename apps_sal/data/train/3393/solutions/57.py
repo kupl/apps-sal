@@ -9,17 +9,17 @@ def primesbelow(n):
     n = {0: n, 1: n - 1, 2: n + 4, 3: n + 3, 4: n + 2, 5: n + 1}[n % 6]
     s = [True] * (n // 3)
     s[0] = False
-    for i in range(int(n**0.5) // 3 + 1):
+    for i in range(int(n ** 0.5) // 3 + 1):
         if s[i]:
-            k = (3 * i + 1) | 1
-            s[k * k // 3::2 * k] = [False] * ((n // 6 - (k * k) // 6 - 1) // k + 1)
+            k = 3 * i + 1 | 1
+            s[k * k // 3::2 * k] = [False] * ((n // 6 - k * k // 6 - 1) // k + 1)
             s[(k * k + 4 * k - 2 * k * (i % 2)) // 3::2 * k] = [False] * ((n // 6 - (k * k + 4 * k - 2 * k * (i % 2)) // 6 - 1) // k + 1)
-    return [2, 3] + [(3 * i + 1) | 1 for i in range(1, n // 3 - c) if s[i]]
+    return [2, 3] + [3 * i + 1 | 1 for i in range(1, n // 3 - c) if s[i]]
 
 
 medsize = 100000
 medprimes = set(primesbelow(medsize))
-smallprimes = sorted(p for p in medprimes if p < 1000)
+smallprimes = sorted((p for p in medprimes if p < 1000))
 
 
 def isprime(n, precision=7):
@@ -57,8 +57,8 @@ def pollard_brent(n):
         return 2
     if n % 3 == 0:
         return 3
-    y, c, m = randint(1, n - 1), randint(1, n - 1), randint(1, n - 1)
-    g, r, q = 1, 1, 1
+    (y, c, m) = (randint(1, n - 1), randint(1, n - 1), randint(1, n - 1))
+    (g, r, q) = (1, 1, 1)
     while g == 1:
         x = y
         for i in range(r):
@@ -106,8 +106,8 @@ def factorization(n):
 
 
 def ssd(n):
-    return reduce(mul, ((p**(2 * e + 2) - 1) // (p * p - 1) for p, e in factorization(n).items()), 1)
+    return reduce(mul, ((p ** (2 * e + 2) - 1) // (p * p - 1) for (p, e) in factorization(n).items()), 1)
 
 
 def list_squared(m, n):
-    return [a for a in ([x, ssd(x)] for x in range(m, n + 1)) if (a[1]**0.5).is_integer()]
+    return [a for a in ([x, ssd(x)] for x in range(m, n + 1)) if (a[1] ** 0.5).is_integer()]

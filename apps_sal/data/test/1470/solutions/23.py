@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 x = int(input())
 ans = 0
 m = x // 11

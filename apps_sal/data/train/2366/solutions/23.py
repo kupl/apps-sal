@@ -5,7 +5,7 @@ for i in range(T):
     ans = 0
     s = l[-1]
     for j in reversed(l):
-        if(j > s):
+        if j > s:
             ans += 1
         else:
             s = j

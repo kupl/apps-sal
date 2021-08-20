@@ -2,7 +2,6 @@ import io
 import sys
 import atexit
 import os
-
 import math as ma
 from decimal import Decimal as dec
 from itertools import permutations
@@ -22,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def prod(n):
     s = 1
-    while(n != 0):
+    while n != 0:
         s = s * (n % 10)
         n = n // 10
     return s
@@ -37,7 +36,7 @@ def prod(n):
 
 def check(xp):
     op = sorted(xp)
-    if(op == xp):
+    if op == xp:
         return True
 
 
@@ -51,11 +50,10 @@ def solve():
         xp = [15, 14, 12, 13, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5, 6, 7, 16, 17]
         print(xp[n])
         continue
-        if(n <= 7):
+        if n <= 7:
             print(xp[n])
-        else:
-            if(n == 8):
-                print(30)
+        elif n == 8:
+            print(30)
 
 
 def __starting_point():

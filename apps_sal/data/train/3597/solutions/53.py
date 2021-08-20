@@ -8,7 +8,8 @@ def say_hello(name, city, state):
 
 
 class TestSayHello(unittest.TestCase):
+
     def test_say_hello(self):
-        name, city, state = ['John', 'Smith'], 'Phoenix', 'Arizona'
+        (name, city, state) = (['John', 'Smith'], 'Phoenix', 'Arizona')
         actual = say_hello(name, city, state)
         self.assertEqual(actual, 'Hello, John Smith! Welcome to Phoenix, Arizona!')

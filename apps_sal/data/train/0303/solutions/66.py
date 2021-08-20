@@ -1,15 +1,14 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr, k: int) -> int:
         n = len(arr)
         mask = [[0] * n for i in range(n)]
         for i in range(n):
             for j in range(i, n):
                 mask[i][j] = max(arr[j], mask[i][j - 1] if j > i else 0)
-
         for i in range(n):
             for j in range(i, n):
                 mask[i][j] = (j + 1 - i) * mask[i][j]
-
         dp = [0] * n
         for i in range(n):
             for h in range(1, k + 1):

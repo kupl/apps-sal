@@ -1,5 +1,5 @@
 def oddest(a):
-    if all(n % 2 == 0 for n in a):
+    if all((n % 2 == 0 for n in a)):
         return a[0] if len(a) == 1 else None
     if -1 in a:
         return -1 if a.count(-1) == 1 else None

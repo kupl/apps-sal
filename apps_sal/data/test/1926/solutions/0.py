@@ -18,7 +18,7 @@ aib = [0] * (n + 1)
 
 
 def ultb(x):
-    return -(x ^ (-x)) // 2
+    return -(x ^ -x) // 2
 
 
 def add(p, a, aib, n):

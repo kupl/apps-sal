@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val='.'):
         self.val = val
         self.children = {}
@@ -28,13 +29,9 @@ class StreamChecker:
         root = Node()
         for word in words:
             cur = root
-            for i, ch in enumerate(word):
+            for (i, ch) in enumerate(word):
                 if ch not in cur.children:
                     cur.children[ch] = Node(ch)
                 cur = cur.children[ch]
             cur.is_word = True
         return root
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

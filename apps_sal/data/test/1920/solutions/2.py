@@ -4,4 +4,4 @@ for i in range(int(input())):
     s = int(c[0] == 'M')
     for j in range(int(c[1]), int(c[2]) + 1):
         v[s][j] += 1
-print(2 * max(min(x, y) for x, y in zip(v[0], v[1])))
+print(2 * max((min(x, y) for (x, y) in zip(v[0], v[1]))))

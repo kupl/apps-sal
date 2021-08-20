@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         s = 0
         for k in range(10):
@@ -16,6 +17,6 @@ class Solution:
                 d2[7] = d[2] + d[6]
                 d2[8] = d[1] + d[3]
                 d2[9] = d[2] + d[4]
-                d, d2 = d2, d
+                (d, d2) = (d2, d)
             s += sum(d)
         return s % (10 ** 9 + 7)

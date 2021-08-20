@@ -1,6 +1,5 @@
 import itertools
 import bisect
-
 m = int(input())
 degs = [0 for i in range(5 * m + 6)]
 deg = 5

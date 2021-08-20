@@ -12,5 +12,6 @@ def possible(tiles):
 
 
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         return len(possible(tiles))

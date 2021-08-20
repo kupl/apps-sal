@@ -1,6 +1,7 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
-        x, y = 0, 0
+        (x, y) = (0, 0)
         d = 1
         result = 0
         dxy = [[1, 0], [0, 1], [-1, 0], [0, -1]]

@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 t = list(map(int, input().split()))
 sum_time = (n - 1) * 10 + sum(t)
 if sum_time > d:

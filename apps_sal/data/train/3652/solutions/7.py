@@ -1,8 +1,8 @@
 def button_sequences(r, b):
-    r_on, b_on = False, False
+    (r_on, b_on) = (False, False)
     res = ''
     for i in range(len(r)):
-        ri, bi = int(r[i]), int(b[i])
+        (ri, bi) = (int(r[i]), int(b[i]))
         if not r_on | b_on:
             if ri:
                 res += 'R'

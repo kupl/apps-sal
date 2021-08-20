@@ -4,8 +4,8 @@ l = set()
 s = [list(map(int, input().split())) for _ in range(n)]
 for i in range(n):
     for j in range(i + 1, n):
-        x1, y1 = s[i]
-        x2, y2 = s[j]
+        (x1, y1) = s[i]
+        (x2, y2) = s[j]
         if x1 == x2:
             l.add((float('INF'), x1))
         else:
@@ -14,7 +14,7 @@ for i in range(n):
             l.add((a, b))
 lis = [i[0] for i in l]
 dic = Counter(lis)
-r = len(l)**2 - len(l)
+r = len(l) ** 2 - len(l)
 for i in dic:
-    r -= dic[i]**2 - dic[i]
+    r -= dic[i] ** 2 - dic[i]
 print(r // 2)

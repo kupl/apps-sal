@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         dp = [1] * len(words)
         words.sort(key=len)

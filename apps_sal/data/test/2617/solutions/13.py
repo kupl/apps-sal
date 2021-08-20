@@ -4,7 +4,6 @@ import math
 def process_test_case(i_test):
     n = int(input())
     n_days = math.floor(math.log2(n))
-
     out_list = []
     n_threshold = int(pow(2, n_days) + pow(2, n_days - 1) - 1)
     if n >= n_threshold:
@@ -19,7 +18,6 @@ def process_test_case(i_test):
         b = n_reminder - 2 * a
         out_list.append(str(a))
         out_list.append(str(b))
-
     print(int(n_days))
     print(' '.join(out_list))
 

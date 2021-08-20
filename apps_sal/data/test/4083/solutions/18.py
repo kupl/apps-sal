@@ -10,30 +10,24 @@ def getMoves(arr, num, k):
                 break
             moves += 1
             curr = curr // 2
-
         if curr == num:
             total_moves += moves
             count += 1
-
         if count >= k:
             break
-
-    # print(total_moves,num,count)
     if count >= k:
         return total_moves
-
     return float('inf')
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     min_moves = float('inf')
     arr.sort()
-    for i in range(2 * 10**5 + 1):
+    for i in range(2 * 10 ** 5 + 1):
         moves = getMoves(arr, i, k)
         min_moves = min(min_moves, moves)
-
     print(min_moves)
 
 

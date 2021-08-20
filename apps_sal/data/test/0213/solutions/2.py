@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 for i in range(m):
-    k, f = map(int, input().split())
+    (k, f) = map(int, input().split())
     a.append((k, f))
 fl = []
 ps = 0
@@ -11,12 +11,12 @@ for i in range(1, 1000):
     for j in range(m):
         if (a[j][0] - 1) // i != a[j][1] - 1:
             flag = 0
-    if (flag):
+    if flag:
         ps += 1
         fl.append(i)
 ans = []
 for i in range(len(fl)):
-    ans.append(((n - 1) // fl[i]) + 1)
+    ans.append((n - 1) // fl[i] + 1)
 if not len(ans):
     print(-1)
 else:

@@ -9,6 +9,6 @@ def unlucky_days(year):
     delta = end_date - start_date
     for i in range(delta.days + 1):
         day = start_date + timedelta(days=i)
-        if ((day.strftime('%A') == "Friday") and (day.strftime('%d') == "13")):
+        if day.strftime('%A') == 'Friday' and day.strftime('%d') == '13':
             unlucky += 1
     return unlucky

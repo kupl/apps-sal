@@ -1,7 +1,7 @@
 def sum_str(a, b):
     numbers = []
     for i in (a, b):
-        if i == "":
+        if i == '':
             i = 0
             numbers.append(i)
         else:

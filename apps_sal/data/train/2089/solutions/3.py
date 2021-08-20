@@ -34,24 +34,20 @@ def dump_encoded(s):
         else:
             b += '0'
     ops.append((op, b2n(b)))
-
     print(len(ops))
-    for op, n in ops:
+    for (op, n) in ops:
         print(op, n)
 
 
-# x, y, 0, 1
 m = int(input())
 ops = []
 for i in range(m):
-    op, n = input().split(' ')
+    (op, n) = input().split(' ')
     n = int(n)
     ops.append((op, n))
-
-
 s = 1023
 for i in range(len(ops)):
-    op, n = ops[i]
+    (op, n) = ops[i]
     if op == '&':
         s = s & n
     elif op == '|':
@@ -59,10 +55,9 @@ for i in range(len(ops)):
     elif op == '^':
         s = s ^ n
 b1 = n2b(s)
-
 s = 0
 for i in range(len(ops)):
-    op, n = ops[i]
+    (op, n) = ops[i]
     if op == '&':
         s = s & n
     elif op == '|':
@@ -70,8 +65,6 @@ for i in range(len(ops)):
     elif op == '^':
         s = s ^ n
 b2 = n2b(s)
-
-
 g = ''
 for k in range(10):
     if b1[k] == b2[k]:
@@ -79,10 +72,8 @@ for k in range(10):
             g += '0'
         else:
             g += '1'
+    elif b1[k] == '0':
+        g += 'y'
     else:
-        if b1[k] == '0':
-            g += 'y'
-        else:
-            g += 'x'
-
+        g += 'x'
 dump_encoded(g)

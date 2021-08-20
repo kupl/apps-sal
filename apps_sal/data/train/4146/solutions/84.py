@@ -4,8 +4,8 @@ def is_sorted_and_how(arr):
     p = arr.copy()
     p.sort()
     if arr == p:
-        return "yes, ascending"
+        return 'yes, ascending'
     if arr == h:
-        return "yes, descending"
+        return 'yes, descending'
     else:
         return 'no'

@@ -1,8 +1,8 @@
 def flatten(dictionary):
-    stack = [("", dictionary)]
+    stack = [('', dictionary)]
     result = {}
     while stack:
-        path, current = stack.pop()
+        (path, current) = stack.pop()
         if current:
             if type(current) == dict:
                 if path:
@@ -12,5 +12,5 @@ def flatten(dictionary):
             else:
                 result[path] = current
         elif path:
-            result[path] = ""
+            result[path] = ''
     return result

@@ -11,4 +11,4 @@ ans = []
 for i in a:
     m = n // i
     ans.append(m + i * (m - 1) * m // 2)
-print(" ".join([str(i) for i in sorted(ans)]))
+print(' '.join([str(i) for i in sorted(ans)]))

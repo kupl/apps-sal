@@ -6,7 +6,6 @@ def comp(x):
 
 
 N = int(input())
-
 if N == 4:
     print('YES', '1', '3', '2', '4', sep='\n')
 elif comp(N):

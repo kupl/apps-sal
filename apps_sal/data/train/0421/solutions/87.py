@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         max_ord = 0
         if s.count(s[0]) == len(s):

@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 jobs = [int(s) for s in input().split()]
 cost = [int(s) for s in input().split()]
 d = []

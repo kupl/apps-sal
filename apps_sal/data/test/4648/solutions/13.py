@@ -11,4 +11,4 @@ for _ in range(t):
     if n != 1:
         print(-1)
         continue
-    print((div[1] - div[0]) + (div[1]) if div[1] >= div[0] else -1)
+    print(div[1] - div[0] + div[1] if div[1] >= div[0] else -1)

@@ -8,4 +8,4 @@ def game(a, b):
         b -= i
         i += 1
         if min(a, b) < 0:
-            return ["Mike", "Joe"][a < 0]
+            return ['Mike', 'Joe'][a < 0]

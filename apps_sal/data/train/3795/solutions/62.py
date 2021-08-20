@@ -1,6 +1,6 @@
 def combat(health, damage):
     if health > damage:
         v = health - damage
-        return (v)
+        return v
     else:
-        return (0)
+        return 0

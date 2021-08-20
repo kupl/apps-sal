@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def __init__(self, n=1):
         self.par = [i for i in range(n)]
         self.rank = [0 for _ in range(n)]
@@ -16,7 +17,7 @@ class UnionFind(object):
         y = self.find(y)
         if x != y:
             if self.rank[x] < self.rank[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
             self.par[y] = x
@@ -30,18 +31,14 @@ class UnionFind(object):
         return self.size[x]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 p = list(map(int, input().split()))
-
 uf = UnionFind(N)
-
 for i in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     uf.union(p[x - 1] - 1, p[y - 1] - 1)
-
 ans = 0
 for i in range(N):
     if uf.is_same(p[i] - 1, i):
         ans += 1
-
 print(ans)

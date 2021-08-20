@@ -1,5 +1,5 @@
 v = []
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = 0
 v = [int(x) for x in input().split()]
 s = sum(v)

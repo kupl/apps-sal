@@ -1,12 +1,9 @@
 n = int(input())
 a = input()
 opp = ['UD', 'DU', 'LR', 'RL']
-
 c1 = None
 c2 = None
-
 cnt = 0
-
 for i in range(n):
     if c1 is None:
         c1 = a[i]
@@ -25,5 +22,4 @@ for i in range(n):
         cnt += 1
         c1 = a[i]
         c2 = None
-
 print(cnt + 1)

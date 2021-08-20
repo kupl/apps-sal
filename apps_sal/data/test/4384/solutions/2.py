@@ -1,4 +1,4 @@
 if int(input()) <= 999:
-    print("ABC")
+    print('ABC')
 else:
-    print("ABD")
+    print('ABD')

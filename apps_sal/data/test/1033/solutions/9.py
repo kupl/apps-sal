@@ -1,4 +1,4 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 
 
 def fun(t, h):
@@ -13,7 +13,6 @@ def fun(t, h):
     return ans * (h + ret) // 2 + ret * (ret - 1) // 2
 
 
-# binary search
 l = 1
 r = 1000000000000000000
 while l < r:

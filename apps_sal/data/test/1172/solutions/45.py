@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 s = list(input())
 s = ['-'] + s
 l = len(s)

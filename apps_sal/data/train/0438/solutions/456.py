@@ -1,9 +1,10 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        starts, ends = {}, {}
+        (starts, ends) = ({}, {})
         res = None
         contributors = set()
-        for i, pos in enumerate(arr):
+        for (i, pos) in enumerate(arr):
             if pos - 1 not in ends:
                 l = pos
             else:

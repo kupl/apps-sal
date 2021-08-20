@@ -12,7 +12,4 @@ def pick_peaks(arr):
                 pos.append(cur_pos)
                 peaks.append(cur)
                 cur_pos = 0
-    return {
-        'pos': pos,
-        'peaks': peaks
-    }
+    return {'pos': pos, 'peaks': peaks}

@@ -1,5 +1,5 @@
 def main():
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     t = a + b
     s = input()
     last = -1
@@ -22,7 +22,6 @@ def main():
                 last = -1
         else:
             last = -1
-
     print(t - a - b)
 
 

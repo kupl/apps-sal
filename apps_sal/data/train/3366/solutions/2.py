@@ -13,8 +13,8 @@ def permutations(d):
     if d < 1:
         return []
     if d == 1:
-        return ["0"]
-    return sorted(p[:i] + str(d - 1) + p[i:] for p in permutations(d - 1) for i in range(d))
+        return ['0']
+    return sorted((p[:i] + str(d - 1) + p[i:] for p in permutations(d - 1) for i in range(d)))
 
 
 def nth_perm(n, d):

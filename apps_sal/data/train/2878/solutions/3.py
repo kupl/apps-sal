@@ -2,8 +2,8 @@ def shortest_to_char(s, c):
     if not c:
         return []
     l = []
-    for i, x in enumerate(s):
-        a, b = s[i:].find(c), s[:i + 1][::-1].find(c)
+    for (i, x) in enumerate(s):
+        (a, b) = (s[i:].find(c), s[:i + 1][::-1].find(c))
         if a != -1:
             a = abs(i - i + a)
         else:

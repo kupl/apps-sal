@@ -1,6 +1,6 @@
 class Solution:
-    def maxLength(self, arr: List[str]) -> int:
 
+    def maxLength(self, arr: List[str]) -> int:
         dp = [set()]
         for a in arr:
             if len(set(a)) < len(a):
@@ -10,6 +10,5 @@ class Solution:
                 if a & c:
                     continue
                 dp.append(a | c)
-        return max(len(a) for a in dp)
-
+        return max((len(a) for a in dp))
         return self.m

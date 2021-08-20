@@ -1,6 +1,6 @@
 try:
-    def help(a, s):
 
+    def help(a, s):
         dp = [[0 for i in range(len(a))] for j in range(0, s + 1)]
         for i in range(len(a)):
             dp[0][i] = 1
@@ -14,17 +14,12 @@ try:
                 else:
                     dp[i][j] = dp[i][j - 1]
         return dp[s][len(a) - 1]
-
     test = int(input())
     for i in range(test):
         no1 = int(input())
-
         s = int(input())
-
         a = []
-
         a = [int(x) for x in input().split()]
-
         print(help(a, s))
 except EOFError:
     pass

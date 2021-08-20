@@ -1,4 +1,5 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
         if len(A) <= 2:
             if len(A) == 2 and A[0] == A[1]:

@@ -1,17 +1,16 @@
 import functools
-
 n = int(input())
 dct = {'U': (0, 1), 'D': (0, -1), 'L': (-1, 0), 'R': (1, 0)}
 moves_list = list([dct[x] for x in [*input()]])
-dest_x, dest_y = list(map(int, input().split()))
+(dest_x, dest_y) = list(map(int, input().split()))
 
 
 def add_vectors(a, b):
-    return a[0] + b[0], a[1] + b[1]
+    return (a[0] + b[0], a[1] + b[1])
 
 
 def subtract_vectors(a, b):
-    return a[0] - b[0], a[1] - b[1]
+    return (a[0] - b[0], a[1] - b[1])
 
 
 total = functools.reduce(add_vectors, moves_list)
@@ -40,7 +39,6 @@ while pocz < kon:
         kon = sr
     else:
         pocz = sr + 1
-
 if czy(pocz):
     print(pocz)
 else:

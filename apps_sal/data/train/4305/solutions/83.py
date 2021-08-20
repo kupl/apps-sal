@@ -3,11 +3,10 @@ import operator
 
 
 def order_weight(strng):
-    # your code
-    if strng == "":
-        return ""
+    if strng == '':
+        return ''
     else:
-        x = strng.split(" ")
+        x = strng.split(' ')
         y = []
         weighted_weights = dict()
         for item in range(len(x)):

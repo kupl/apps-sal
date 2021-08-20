@@ -1,15 +1,10 @@
-#!/usr/bin/env python3
-
 from collections import Counter
-
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
-
 tgt = n // m
 b = Counter(a)
-rd = sum(b[x] for x in b if x > m)
+rd = sum((b[x] for x in b if x > m))
 r = 0
-
 for i in range(1, m + 1):
     while rd and b[i] < tgt:
         for j in range(n):
@@ -28,6 +23,5 @@ for i in range(1, m + 1):
                 a[j] = i
                 r += 1
                 break
-
 print(tgt, r)
-print(" ".join(str(x) for x in a))
+print(' '.join((str(x) for x in a)))

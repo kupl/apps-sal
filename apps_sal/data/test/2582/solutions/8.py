@@ -1,5 +1,5 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
@@ -7,6 +7,7 @@ def main():
     input = sys.stdin.readline
 
     class Bit:
+
         def __init__(self, n):
             self.size = n
             self.tree = [0] * (n + 1)
@@ -27,19 +28,17 @@ def main():
             if w <= 0:
                 return 0
             x = 0
-            k = 1 << (self.size.bit_length() - 1)
+            k = 1 << self.size.bit_length() - 1
             while k:
                 if x + k <= self.size and self.tree[x + k] < w:
                     w -= self.tree[x + k]
                     x += k
                 k >>= 1
             return x + 1
-
     N = int(input())
     P = list(map(int, input().split()))
-
     idx = [0] * (N + 1)
-    for i, p in enumerate(P):
+    for (i, p) in enumerate(P):
         idx[p] = i + 1
     bit = Bit(N)
     ans = 0
@@ -61,7 +60,6 @@ def main():
                 if l < idx[p - q] < i:
                     ans += 1
         bit.add(i, 1)
-        #print(l, r)
     print(ans)
 
 

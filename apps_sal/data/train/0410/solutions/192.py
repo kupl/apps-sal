@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         dp = {}
         dp[1] = 0
@@ -11,8 +12,8 @@ class Solution:
             if num % 2 == 0:
                 dp[num] = helper(num // 2) + 1
             else:
-                dp[num] = helper((num * 3) + 1) + 1
-            print((dp[num]))
+                dp[num] = helper(num * 3 + 1) + 1
+            print(dp[num])
             return dp[num]
         res = []
         for i in range(lo, hi + 1):

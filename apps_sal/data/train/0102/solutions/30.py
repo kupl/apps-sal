@@ -8,4 +8,4 @@ while t > 0:
         if int(str(i) * len(str(n))) <= n:
             ans += 1
     arr.append(ans)
-print(*arr, sep="\n")
+print(*arr, sep='\n')

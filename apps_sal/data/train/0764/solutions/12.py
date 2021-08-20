@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 for i in range(0, n):
     c = 0
@@ -8,6 +7,6 @@ for i in range(0, n):
         if x in l2:
             c = c + 1
     if c >= 2:
-        print("similar")
+        print('similar')
     else:
-        print("dissimilar")
+        print('dissimilar')

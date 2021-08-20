@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 G = [0] * n
 parent = list(range(n))
 
@@ -18,14 +18,13 @@ def MergeTwo(i, j):
 
 
 for i in range(m):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     G[a] += 1
     G[b] += 1
     MergeTwo(a, b)
-
 R = {}
 count = 0
 for i in range(n):
@@ -34,8 +33,6 @@ for i in range(n):
         R[a].append(i)
     else:
         R[a] = [i]
-# print(parent)
-# print(G)
 for i in R:
     if len(R[i]) > 2:
         x = 1

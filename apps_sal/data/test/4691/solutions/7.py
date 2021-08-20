@@ -1,10 +1,8 @@
 N = int(input())
-
 C0 = 0
 C1 = 0
 C2 = 0
 C3 = 0
-
 for i in range(N):
     Si = input()
     if Si == 'AC':

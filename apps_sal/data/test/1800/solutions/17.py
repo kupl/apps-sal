@@ -3,6 +3,7 @@ setrecursionlimit(200000)
 
 
 class data:
+
     def __init__(self, a):
         self.data = a
 
@@ -40,12 +41,12 @@ class data:
         self.qsort(ind + 1, r, reverse)
 
 
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = data([int(i) for i in input().split()])
 t = [None] * m
 r = [None] * m
 for i in range(m):
-    t[i], r[i] = [int(j) for j in input().split()]
+    (t[i], r[i]) = [int(j) for j in input().split()]
 Sortlist = []
 Sortcount = 0
 M = 0
@@ -54,13 +55,12 @@ for i in range(m - 1, -1, -1):
         Sortlist.append([r[i], t[i]])
         Sortcount += 1
         M = r[i]
-# a.qsort(0,Sortlist[-1][0]-1,1)
 S = sorted(a.data[0:Sortlist[-1][0]])
 L = 0
 R = M - 1
 for i in range(M - 1, -1, -1):
-    if (Sortcount > 0):
-        if (i < Sortlist[Sortcount - 1][0]):
+    if Sortcount > 0:
+        if i < Sortlist[Sortcount - 1][0]:
             Reverse = Sortlist[Sortcount - 1][1]
             Sortcount -= 1
     if Reverse == 1:
@@ -70,5 +70,5 @@ for i in range(M - 1, -1, -1):
         a.data[i] = S[L]
         L += 1
 for i in a.data[0:-1]:
-    print(str(i) + " ", end="")
+    print(str(i) + ' ', end='')
 print(a.data[-1])

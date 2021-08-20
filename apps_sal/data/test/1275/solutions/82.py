@@ -6,21 +6,27 @@ from heapq import heapify, heappop, heappush
 from itertools import permutations, combinations, product, accumulate
 from collections import defaultdict, deque, Counter
 from functools import lru_cache
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 
 
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
+def ii():
+    return int(input())
 
 
-N, K = mi()
+def mi():
+    return map(int, input().split())
 
+
+def li():
+    return list(map(int, input().split()))
+
+
+(N, K) = mi()
 ans = 0
 ls = []
 for i in range(-N + 1, N):
     if K - i < N and K - i >= -N + 1:
         A = i
         B = K - A
-        ans += ((N - abs(B)) * (N - abs(A)))
+        ans += (N - abs(B)) * (N - abs(A))
 print(ans)

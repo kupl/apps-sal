@@ -1,4 +1,4 @@
-a, b = [i for i in input().split()]
+(a, b) = [i for i in input().split()]
 n = int(input())
 pos = ['v', '<', '^', '>']
 i = pos.index(a)

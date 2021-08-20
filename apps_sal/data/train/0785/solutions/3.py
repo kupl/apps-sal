@@ -1,4 +1,3 @@
-# cook your dish here - pyt3
 def fun(a):
     t1 = 1
     t2 = a
@@ -7,12 +6,12 @@ def fun(a):
     count = 1
     while t2 > t1:
         t2 += a
-        t1 = 1 + (2 * t1)
+        t1 = 1 + 2 * t1
         if t2 - t1 > p:
             p = max(p, t2 - t1)
             pday = count
         count += 1
-    return count - 1, pday + 1
+    return (count - 1, pday + 1)
 
 
 try:

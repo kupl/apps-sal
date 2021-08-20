@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         d = collections.defaultdict(int)
         for i in arr:
@@ -6,7 +7,6 @@ class Solution:
         res = len(arr)
         orig = len(arr)
         count = 0
-
         freq = [(d[i], i) for i in d]
         freq.sort(reverse=True)
         count = 0

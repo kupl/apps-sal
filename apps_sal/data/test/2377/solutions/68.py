@@ -1,7 +1,7 @@
-n, h = map(int, input().split())
-A, B = [0] * n, [0] * n
+(n, h) = map(int, input().split())
+(A, B) = ([0] * n, [0] * n)
 for i in range(n):
-    A[i], B[i] = map(int, input().split())
+    (A[i], B[i]) = map(int, input().split())
 A_max = max(A)
 B.sort(reverse=True)
 ans = 0

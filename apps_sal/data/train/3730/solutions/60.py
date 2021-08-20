@@ -1,5 +1,5 @@
 def capitalize(s):
-    a = ""
+    a = ''
     big = True
     for i in s:
         if big == True:
@@ -8,7 +8,7 @@ def capitalize(s):
         else:
             big = True
         a += i
-    b = ""
+    b = ''
     big = False
     for i in s:
         if big == True:

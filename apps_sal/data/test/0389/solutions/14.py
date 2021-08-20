@@ -10,7 +10,7 @@ def o(n):
     return v if n == 1 else -1
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 f = gcd(a, b)
-v1, v2 = o(a // f), o(b // f)
+(v1, v2) = (o(a // f), o(b // f))
 print(v1 + v2 if v1 >= 0 and v2 >= 0 else -1)

@@ -1,8 +1,8 @@
 from collections import defaultdict, deque
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 g = defaultdict(list)
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     g[a - 1].append(b - 1)
     g[b - 1].append(a - 1)
 
@@ -12,8 +12,7 @@ def dfs(x):
     q = deque()
     q.append((x, 0))
     while q:
-        cur, d = q.popleft()
-
+        (cur, d) = q.popleft()
         if maxd[0] < d:
             maxd[0] = d
             maxnode[0] = cur
@@ -30,6 +29,4 @@ dfs(0)
 vis = [0] * n
 maxd = [0]
 dfs(maxnode[0])
-
-
 print(maxd[0])

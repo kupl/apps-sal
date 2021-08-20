@@ -4,7 +4,7 @@ def check(r0, c0, dr, dc):
     for i in range(5):
         r = r0 + dr * i
         c = c0 + dc * i
-        if r < 0 or 9 < r or c < 0 or 9 < c:
+        if r < 0 or 9 < r or c < 0 or (9 < c):
             break
         elif cells[r][c] == 'X':
             cntx += 1

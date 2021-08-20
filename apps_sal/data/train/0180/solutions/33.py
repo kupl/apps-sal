@@ -1,11 +1,12 @@
 class Solution:
+
     def minRefuelStops(self, target: int, startFuel: int, stations: List[List[int]]) -> int:
         if startFuel >= target:
             return 0
         if not stations:
             return -1
         import heapq
-        queue = [-f for i, f in stations if i <= startFuel]
+        queue = [-f for (i, f) in stations if i <= startFuel]
         heapq.heapify(queue)
         fuel = startFuel
         start = max([i for i in range(len(stations)) if stations[i][0] <= startFuel] + [-1]) + 1

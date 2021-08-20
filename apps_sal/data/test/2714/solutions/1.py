@@ -1,10 +1,10 @@
 from sys import stdin, stdout
 for _ in range(int(input())):
-    n, m = (int(x) for x in stdin.readline().split())
+    (n, m) = (int(x) for x in stdin.readline().split())
     a = [[] for i in range(n + 1)]
     b = []
     for i in range(m):
-        c, d = (int(x) for x in stdin.readline().split())
+        (c, d) = (int(x) for x in stdin.readline().split())
         a[d].append(c)
         a[c].append(d)
         b.append([c, d])

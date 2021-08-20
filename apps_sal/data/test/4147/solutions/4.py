@@ -1,7 +1,7 @@
 def main():
-    n, *target = list(map(int, input().split()))
+    (n, *target) = list(map(int, input().split()))
     l = [int(input()) for _ in range(n)]
-    ans = float("inf")
+    ans = float('inf')
     base = 4
     for i in range(pow(base, n)):
         now_l = [0] * base
@@ -15,7 +15,7 @@ def main():
             continue
         now_ans = sum([abs(target[i] - now_l[i]) for i in range(3)]) + (sum(add[:3]) - 3) * 10
         ans = min(ans, now_ans)
-    print((0 if all(t in l for t in target) else ans))
+    print(0 if all((t in l for t in target)) else ans)
 
 
 def __starting_point():

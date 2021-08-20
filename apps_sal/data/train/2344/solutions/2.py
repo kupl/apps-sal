@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 T = int(input())
 for _ in range(T):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     edges = [0] * m
     for i in range(m):
         edges[i] = tuple(map(int, input().split()))
@@ -10,7 +10,7 @@ for _ in range(T):
     edgess = []
     check = 0
     for i in range(m):
-        if (edges[i][0] not in used) and (edges[i][1] not in used):
+        if edges[i][0] not in used and edges[i][1] not in used:
             edgess.append(i + 1)
             used.add(edges[i][0])
             used.add(edges[i][1])
@@ -18,8 +18,8 @@ for _ in range(T):
     if check >= n:
         useful = edgess[:n]
         edgess = [str(guy) for guy in useful]
-        print("Matching")
-        print(" ".join(edgess))
+        print('Matching')
+        print(' '.join(edgess))
     else:
         indep = []
         for i in range(1, 3 * n + 1):
@@ -27,5 +27,5 @@ for _ in range(T):
                 indep.append(i)
         useful = indep[:n]
         verts = [str(guy) for guy in useful]
-        print("IndSet")
-        print(" ".join(verts))
+        print('IndSet')
+        print(' '.join(verts))

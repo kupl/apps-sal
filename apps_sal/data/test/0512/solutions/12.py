@@ -1,17 +1,17 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def main(n, ab):
     f = [[-1, -1] for _ in range(2 * n)]
     mi = set(range(2 * n))
-    for i, (a, b) in enumerate(ab):
-        a, b = a - 1, b - 1
+    for (i, (a, b)) in enumerate(ab):
+        (a, b) = (a - 1, b - 1)
         if a >= 0 and a not in mi:
             return False
         if b >= 0 and b not in mi:
             return False
-        if a >= 0 and b >= 0 and a >= b:
+        if a >= 0 and b >= 0 and (a >= b):
             return False
         mi.discard(a)
         mi.discard(b)
@@ -30,15 +30,12 @@ def main(n, ab):
         return False
     if f[-1][0] == 1:
         return False
-    # for x in f:
-    #    print(x)
     now = 0
     memo = {}
 
     def chk(l, r):
-        # 区間[l,r]は成り立つか。
         if (l, r) in memo:
-            return memo[(l, r)]
+            return memo[l, r]
         if (r - l) % 2 == 0:
             return False
         ret = True
@@ -52,32 +49,27 @@ def main(n, ab):
         for i in range(l + ci + 1, r + 1):
             if f[i][0] == 1:
                 ret = False
-            if rid[j] != -1 and f[i][1] != -1 and rid[j] != f[i][1]:
+            if rid[j] != -1 and f[i][1] != -1 and (rid[j] != f[i][1]):
                 ret = False
             j += 1
-        memo[(l, r)] = ret
+        memo[l, r] = ret
         return ret
 
     def dp(l):
         if l == 2 * n:
             return True
         ret = False
-        # lを区間の左端としたとき、残りは成り立つか。lより左は成立している。
         for ri in range(l + 1, 2 * n):
             tmp = chk(l, ri)
             if tmp:
                 if dp(ri + 1):
                     return True
         return False
-
     dp(0)
-    # for k,v in memo.items():
-    #    print(k,v)
     return dp(0)
 
 
-# """
 n = int(input())
 ab = [list(map(int, input().split())) for _ in range(n)]
 ret = main(n, ab)
-print(('Yes' if ret else 'No'))
+print('Yes' if ret else 'No')

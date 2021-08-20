@@ -1,4 +1,5 @@
 def step(g, m, n):
+
     def is_prime(n):
         if n == 2:
             return True
@@ -22,7 +23,4 @@ def step(g, m, n):
                 return [current_prime - g, current_prime]
             else:
                 dic[current_prime] = True
-
     return None
-
-    # your code

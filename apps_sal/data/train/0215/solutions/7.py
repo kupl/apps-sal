@@ -1,9 +1,9 @@
 class Solution:
 
     def gcd(self, a: int, b: int) -> int:
-        a, b = max(a, b), min(a, b)
+        (a, b) = (max(a, b), min(a, b))
         while b > 0:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
 
     def isGoodArray(self, nums: List[int]) -> bool:

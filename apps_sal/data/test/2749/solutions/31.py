@@ -1,7 +1,7 @@
 def main():
-    H, W = [int(x) for x in input().split(" ")]
+    (H, W) = [int(x) for x in input().split(' ')]
     N = int(input())
-    A = [int(a) for a in input().split(" ")]
+    A = [int(a) for a in input().split(' ')]
     c = [[0] * W for i in range(H)]
     k = 0
     for i in range(len(c)):
@@ -14,7 +14,7 @@ def main():
                 A[k] -= 1
             if A[k] == 0:
                 k += 1
-    print("\n".join([" ".join(ci) for ci in c]))
+    print('\n'.join([' '.join(ci) for ci in c]))
 
 
 main()

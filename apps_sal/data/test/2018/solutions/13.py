@@ -1,9 +1,7 @@
 import math
 import sys
 input = sys.stdin.readline
-
-n, m, q = list(map(int, input().split()))
-
+(n, m, q) = list(map(int, input().split()))
 GCD = math.gcd(n, m)
 k = n // GCD
 l = m // GCD
@@ -17,9 +15,8 @@ def div(x, y):
 
 
 for testcases in range(q):
-    sx, sy, ex, ey = list(map(int, input().split()))
-
+    (sx, sy, ex, ey) = list(map(int, input().split()))
     if div(sx, sy) == div(ex, ey):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

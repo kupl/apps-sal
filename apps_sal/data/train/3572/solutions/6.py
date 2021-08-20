@@ -1,7 +1,7 @@
 def invite_more_women(arr):
     freq = {}
     for item in arr:
-        if (item in freq):
+        if item in freq:
             freq[item] += 1
         else:
             freq[item] = 1

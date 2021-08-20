@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-
 pre = 0
 ans = 0
 for a in A:

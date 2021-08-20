@@ -15,7 +15,7 @@ while t != 1000:
     if len(dt) == 2:
         tt = False
         for i in range(3):
-            j, k = 0, 0
+            (j, k) = (0, 0)
             while j == i:
                 j += 1
             while k == i or k == j:
@@ -31,10 +31,9 @@ while t != 1000:
                 k = 0
                 while k == i or k == j:
                     k += 1
-                if dt[0] in a[i] and dt[1] in a[j] and dt[2] in a[k]:
+                if dt[0] in a[i] and dt[1] in a[j] and (dt[2] in a[k]):
                     tt = True
         if not tt:
             break
-
     t += 1
 print(t - 1)

@@ -7,12 +7,11 @@ def find(x):
 
 
 def unite(x, y):
-    x, y = find(x), find(y)
+    (x, y) = (find(x), find(y))
     if x == y:
         return False
-
     if par[x] > par[y]:
-        x, y = y, x
+        (x, y) = (y, x)
     par[x] += par[y]
     par[y] = x
     return True
@@ -22,15 +21,15 @@ def size(x):
     return -par[find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ab = []
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ab.append([a - 1, b - 1])
 par = [-1] * n
 ans = n * (n - 1) // 2
 ansl = [ans]
-for a, b in ab[::-1]:
+for (a, b) in ab[::-1]:
     if find(a) != find(b):
         ans -= size(a) * size(b)
     unite(a, b)

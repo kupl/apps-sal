@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         prefix = {0: -1}
         best_till = [math.inf] * len(arr)

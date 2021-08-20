@@ -1,8 +1,8 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
         if len(s) == 1:
             return 0
-
         lmap = collections.Counter(s[0:1])
         rmap = collections.Counter(s[1:])
         ans = 0
@@ -13,5 +13,4 @@ class Solution:
             rmap[s[i]] -= 1
             if not rmap[s[i]]:
                 del rmap[s[i]]
-
         return ans

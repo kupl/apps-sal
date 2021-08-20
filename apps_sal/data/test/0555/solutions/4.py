@@ -7,4 +7,4 @@ for i in range(len(L)):
     L[i] = str(b)
 if L[0] == '0':
     L[0] = '9'
-print("".join(L))
+print(''.join(L))

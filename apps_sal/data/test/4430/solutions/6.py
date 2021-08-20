@@ -1,5 +1,5 @@
 from sys import stdin
-n, m, k = list(map(int, stdin.readline().strip().split()))
+(n, m, k) = list(map(int, stdin.readline().strip().split()))
 s = tuple(map(int, stdin.readline().strip().split()))
 x = 0
 y = 0
@@ -18,5 +18,4 @@ for i in range(n - 1, -1, -1):
     else:
         y += s[i]
         ans += 1
-
 print(ans)

@@ -1,9 +1,7 @@
 n = int(input())
-
 shows = []
 for i in range(n):
     shows.append([int(x) for x in input().split()])
-
 shows = sorted(shows, key=lambda tup: tup[0])
 
 
@@ -15,7 +13,7 @@ def fit(show, tv):
 
 def main():
     if n < 2:
-        print("YES")
+        print('YES')
         return
     tv1 = shows[0]
     tv2 = shows[1]
@@ -25,9 +23,9 @@ def main():
         elif fit(show, tv2):
             tv2 = show
         else:
-            print("NO")
+            print('NO')
             return
-    print("YES")
+    print('YES')
     return
 
 

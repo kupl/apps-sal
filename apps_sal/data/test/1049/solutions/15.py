@@ -1,4 +1,4 @@
-n, d = [int(x) for x in input().split()]
+(n, d) = [int(x) for x in input().split()]
 max_vic = 0
 vic = 0
 test = '1' * n

@@ -1,2 +1,2 @@
-AB, BC, CA = list(map(int, input().split()))
-print((AB * BC // 2))
+(AB, BC, CA) = list(map(int, input().split()))
+print(AB * BC // 2)

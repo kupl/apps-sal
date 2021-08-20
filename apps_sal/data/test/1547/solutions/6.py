@@ -1,12 +1,11 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 t = [[0] * m for i in range(n)]
 used = set()
 a = []
 for i in range(k):
-    q, b, c = tuple(map(int, input().split()))
+    (q, b, c) = tuple(map(int, input().split()))
     b = b - 1
     a.append((q, b, c))
-
 a = a[::-1]
 for i in range(k):
     if a[i][0:2] not in used:

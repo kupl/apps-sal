@@ -6,4 +6,4 @@ def multiple_of_index(arr):
             if i % counter == 0:
                 new_array.append(i)
         counter += 1
-    return(new_array)
+    return new_array

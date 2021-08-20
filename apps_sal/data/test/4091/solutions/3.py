@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = sorted(enumerate(map(int, input().split())), key=lambda x: -x[1])[:k]
 s = 0
 for i in a:

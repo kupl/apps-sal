@@ -1,4 +1,5 @@
 class UFS:
+
     def __init__(self, N):
         self._parent = list(range(N))
 
@@ -8,17 +9,16 @@ class UFS:
         return self._parent[x]
 
     def union(self, x, y):
-        xroot, yroot = self.find(x), self.find(y)
+        (xroot, yroot) = (self.find(x), self.find(y))
         if xroot != yroot:
             self._parent[xroot] = yroot
 
 
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
-        # from time import time
-        # start_time = time()
 
-        def primeFactors(k):  # Prime factor decomposition
+    def largestComponentSize(self, A: List[int]) -> int:
+
+        def primeFactors(k):
             out = set()
             while k % 2 == 0:
                 out.add(2)
@@ -30,25 +30,14 @@ class Solution:
             if k > 2:
                 out.add(k)
             return out
-
         n = len(A)
         maxa = max(A)
-        # print(f\"{maxa=}, {len(A)=}\")
-
         ufs = UFS(maxa + 1)
-
         for cur in A:
             factors = primeFactors(cur)
-            # print(f\"{cur=}, {factors=}\")
-
             for f in factors:
                 ufs.union(f, cur)
-
-        # union_time = time() - start_time
-        # print(f\"{union_time=}\")
-
         count = [0] * (maxa + 1)
         for cur in A:
             count[ufs.find(cur)] += 1
-
         return max(count)

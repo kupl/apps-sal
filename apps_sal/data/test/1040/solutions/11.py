@@ -1,6 +1,5 @@
 N = int(input())
 S = list(input())
-
 L = []
 for s in S:
     if len(L) >= 2 and s == 'x':
@@ -11,5 +10,4 @@ for s in S:
             L.append(s)
     else:
         L.append(s)
-
 print(len(L))

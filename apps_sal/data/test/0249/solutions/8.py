@@ -1,4 +1,4 @@
-n, l, x, y = map(int, input().split())
+(n, l, x, y) = map(int, input().split())
 
 
 def f(t, q):
@@ -38,7 +38,7 @@ def h(t):
         elif d > q:
             i += 1
         else:
-            a, b = t[i] - x, t[j] + x
+            (a, b) = (t[i] - x, t[j] + x)
             if a >= 0:
                 return [a]
             if b <= l:

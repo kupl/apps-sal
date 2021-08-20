@@ -6,11 +6,11 @@ for i in range(n):
     z = int(input())
     a.append(z)
     for j in range(z):
-        s, r = map(int, input().split())
+        (s, r) = map(int, input().split())
         x.append(s)
         y.append(r)
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     t = [0] * n
     j = 0
     k = 0

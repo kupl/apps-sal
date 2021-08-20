@@ -7,4 +7,4 @@ def something_acci(n):
     while True:
         li.append(reduce(mul, li[-3:]) - reduce(mul, li[-6:-3]))
         if len(str(li[-1])) >= n:
-            return len(li), len(str(li[-1]))
+            return (len(li), len(str(li[-1])))

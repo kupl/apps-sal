@@ -1,14 +1,12 @@
-
 from collections import deque
 
 
 def resolve():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     G = [[] for _ in range(N)]
     for _ in range(M):
-        a, b = [int(x) - 1 for x in input().split()]
+        (a, b) = [int(x) - 1 for x in input().split()]
         G[a].append(b)
-
     shortest = N + 1
     res = []
     for s in range(N):
@@ -24,12 +22,11 @@ def resolve():
                     dist[to] = dist[v] + 1
                     pre[to] = v
                     q.append(to)
-
         for t in range(N):
             if t == s or dist[t] == -1:
                 continue
             for to in G[t]:
-                if to == s:  # サイクルになっている頂点
+                if to == s:
                     tmp = [s]
                     cur = t
                     while cur != s:
@@ -38,14 +35,13 @@ def resolve():
                     if shortest > len(tmp):
                         shortest = len(tmp)
                         res = tmp
-
     if shortest == N + 1:
-        print((-1))
+        print(-1)
     else:
-        print((len(res)))
+        print(len(res))
         res.sort()
         for v in res:
-            print((v + 1))
+            print(v + 1)
 
 
 def __starting_point():

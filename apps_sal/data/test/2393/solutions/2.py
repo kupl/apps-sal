@@ -6,13 +6,13 @@ for j in range(t):
     A = []
     i = 0
     while i < l - 2:
-        if s[i:i + 3] == "one":
+        if s[i:i + 3] == 'one':
             ans += 1
             A.append(i + 2)
             i += 3
-        elif s[i:i + 3] == "two":
+        elif s[i:i + 3] == 'two':
             ans += 1
-            if i + 5 <= l and s[i + 2:i + 5] == "one":
+            if i + 5 <= l and s[i + 2:i + 5] == 'one':
                 A.append(i + 3)
                 i += 5
             else:
@@ -21,4 +21,4 @@ for j in range(t):
         else:
             i += 1
     print(ans)
-    print(" ".join(list(map(str, A))))
+    print(' '.join(list(map(str, A))))

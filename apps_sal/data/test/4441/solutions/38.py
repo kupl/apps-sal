@@ -1,8 +1,7 @@
 a = input()
-
-if a == "1":
-    print("Hello World")
-elif a == "2":
+if a == '1':
+    print('Hello World')
+elif a == '2':
     b = int(input())
     c = int(input())
     print(b + c)

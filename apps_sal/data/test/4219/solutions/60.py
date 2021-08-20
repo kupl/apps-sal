@@ -6,10 +6,10 @@ for i in range(n):
     for j in range(a[i]):
         xy[i].append(list(map(int, input().split())))
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     tf = [False for j in range(n)]
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             tf[j] = True
     flag = False
     for j in range(n):

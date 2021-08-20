@@ -7,24 +7,25 @@ def f(n, s, e, ci, di, v):
     for i in range(10):
         if e == 0:
             if not v >> i & 1:
-                eee = v | (1 << i)
+                eee = v | 1 << i
                 a += f(n, s, 0, ci + 1, di, eee)
         else:
             if i > int(s[ci]):
                 break
             if int(s[ci]) == i:
                 if not v >> i & 1:
-                    eee = v | (1 << i)
+                    eee = v | 1 << i
                     a += f(n, s, 1, ci + 1, di, eee)
                 break
             if not v >> i & 1:
-                eee = v | (1 << i)
+                eee = v | 1 << i
                 a += f(n, s, 0, ci + 1, di, eee)
     di[e, ci, v] = a
     return a
 
 
 class Solution:
+
     def numDupDigitsAtMostN(self, n: int) -> int:
         if n <= 10:
             return 0

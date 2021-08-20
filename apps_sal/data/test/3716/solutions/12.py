@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 import itertools
 import functools
@@ -8,16 +7,14 @@ import operator
 
 
 def lcm(a, b):
-    return (a * b) // fractions.gcd(a, b)
+    return a * b // fractions.gcd(a, b)
 
 
 def solve(n):
     if n <= 2:
         return n
-
     if n % 2 == 1:
         return lcm(n, lcm(n - 1, n - 2))
-
     offset = 100
     if n - offset < 0:
         offset = n

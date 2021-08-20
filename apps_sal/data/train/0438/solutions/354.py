@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, A: List[int], m: int) -> int:
         n = len(A)
         arr = [0] * n
@@ -12,9 +13,8 @@ class Solution:
             nonlocal m
             if groupSize[x] == m:
                 groupMap.add(x)
-            else:
-                if x in groupMap:
-                    groupMap.remove(x)
+            elif x in groupMap:
+                groupMap.remove(x)
 
         def find(x):
             if parent[x] != x:
@@ -35,19 +35,15 @@ class Solution:
                     groupSize[px] = 0
                 ugm(px)
                 ugm(py)
-
-        for ind, num in enumerate(A):
+        for (ind, num) in enumerate(A):
             num -= 1
             arr[num] = 1
             groupSize[num] = 1
             ugm(num)
-            # print(arr)
             if num - 1 >= 0 and arr[num - 1]:
                 join(num - 1, num)
-
             if num + 1 < n and arr[num + 1]:
                 join(num, num + 1)
-            # print(groupMap)
             if len(groupMap) > 0:
                 ans = ind + 1
         return ans

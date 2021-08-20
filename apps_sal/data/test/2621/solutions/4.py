@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     ok = 1
     for i in range(n - 1):

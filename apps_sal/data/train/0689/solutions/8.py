@@ -12,4 +12,4 @@ for i in range(n):
     if c != 0:
         break
 if c == 0:
-    print("NO")
+    print('NO')

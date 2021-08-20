@@ -24,7 +24,7 @@ def do(s):
 n = mint()
 for i in range(n):
     s = minp()
-    m = s.find("::")
+    m = s.find('::')
     if m != -1:
         print(do(s[:m]) + ':0000' * (8 - s.count(':')) + ':' + do(s[m + 2:]))
     else:

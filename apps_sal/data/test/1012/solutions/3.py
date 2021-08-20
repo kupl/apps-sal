@@ -5,12 +5,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-3
-aa
-abacaba
-xdd
-'''
+'\n3\naa\nabacaba\nxdd\n'
 for _ in range(int(input())):
     li = list(input())
     s = c(li)

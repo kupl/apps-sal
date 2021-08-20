@@ -1,13 +1,11 @@
 from heapq import *
-X, Y, Z, K = map(int, input().split())
+(X, Y, Z, K) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
-
 A = sorted(A, reverse=True)
 B = sorted(B, reverse=True)
 C = sorted(C, reverse=True)
-
 cake = []
 heapify(cake)
 for x in range(X):

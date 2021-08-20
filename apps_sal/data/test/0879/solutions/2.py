@@ -5,5 +5,4 @@ i = n - 2
 while i >= 0:
     out.append(route[i])
     i = route[i] - 2
-
-print(" ".join(map(str, reversed(out))))
+print(' '.join(map(str, reversed(out))))

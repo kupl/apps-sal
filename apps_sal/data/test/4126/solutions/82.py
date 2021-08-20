@@ -10,7 +10,6 @@ for i in range(int((N - 1) / 4)):
     if s[i] != s[int((N - 1) / 2) - i - 1]:
         t += 1
         break
-
 if t == 0:
     print('Yes')
 else:

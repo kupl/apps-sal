@@ -1,7 +1,5 @@
 n = int(input())
-
 friends = dict()
-
 for _ in range(n):
     line = input().strip().split()
     if line[0] not in friends:
@@ -13,11 +11,9 @@ for _ in range(n):
 def order(S):
     S2 = [(len(e), e) for e in S]
     S2.sort()
-
     real = set()
-
     for i in range(len(S2)):
-        d, e = S2[i]
+        (d, e) = S2[i]
         flag = True
         for j in range(i + 1, len(S2)):
             x = S2[j][1]

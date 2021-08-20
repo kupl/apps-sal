@@ -1,6 +1,6 @@
 from sys import stdin
 from math import pi, sin, tan
-n, r = map(int, stdin.readline().split())
+(n, r) = map(int, stdin.readline().split())
 a = 2 * pi / n
 A = r * r / 2 * (a - sin(a))
 c = n // 2 * 2 * pi / n

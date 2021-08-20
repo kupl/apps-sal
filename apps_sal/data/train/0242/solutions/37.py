@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualFreq(self, nums: List[int]) -> int:
         res = 0
         numToCount = {}
@@ -24,5 +25,4 @@ class Solution:
                 keys = sorted(list(countToNum.keys()))
                 if (keys[0] == 1 and len(countToNum[keys[0]])) == 1 or (keys[0] + 1 == keys[1] and len(countToNum[keys[1]]) == 1):
                     res = i + 1
-            # print(countToNum)
         return res

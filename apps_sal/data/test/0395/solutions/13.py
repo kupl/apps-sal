@@ -11,6 +11,6 @@ for i in range(6):
 if s % 2 == 1:
     b = False
 if b:
-    print("YES")
+    print('YES')
 else:
     print('NO')

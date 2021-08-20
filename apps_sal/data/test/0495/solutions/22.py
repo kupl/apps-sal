@@ -1,4 +1,4 @@
-a, k = input().split()
+(a, k) = input().split()
 k = int(k)
 a = list(a)
 n = len(a)

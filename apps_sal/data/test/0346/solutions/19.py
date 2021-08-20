@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 que = list(map(int, input().split()))
 auc = list(map(int, input().split()))
 s = sum(que)

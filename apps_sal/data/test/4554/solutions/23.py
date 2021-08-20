@@ -1,4 +1,4 @@
-w, a, b = (int(T) for T in input().split())
+(w, a, b) = (int(T) for T in input().split())
 if a + w < b:
     print(b - (a + w))
 elif a <= b <= a + w:

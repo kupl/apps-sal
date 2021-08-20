@@ -5,12 +5,11 @@ def main():
     n = int(input())
     graph = [[] for _ in range(n + 1)]
     for i in range(1, n):
-        a, b = map(int, input().split())
-        d1 = {"id": i, "to": b}
-        d2 = {"id": i, "to": a}
+        (a, b) = map(int, input().split())
+        d1 = {'id': i, 'to': b}
+        d2 = {'id': i, 'to': a}
         graph[a].append(d1)
         graph[b].append(d2)
-
     k = 0
     root = 1
     for i in range(1, n + 1):
@@ -21,14 +20,14 @@ def main():
     q = deque([root])
     color = [[] for _ in range(n + 1)]
     reached = [False] * (n + 1)
-    ans = [0] * (n)
+    ans = [0] * n
     while q:
         current = q.popleft()
         reached[current] = True
         temp = 1
         for dic in graph[current]:
-            id = dic["id"]
-            next = dic["to"]
+            id = dic['id']
+            next = dic['to']
             if reached[next]:
                 continue
             while temp in color[current]:

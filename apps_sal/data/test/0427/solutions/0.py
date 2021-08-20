@@ -1,4 +1,4 @@
-n0, n1, x, y = list(map(int, input().split()))
+(n0, n1, x, y) = list(map(int, input().split()))
 
 
 def f(m, n, x, y):

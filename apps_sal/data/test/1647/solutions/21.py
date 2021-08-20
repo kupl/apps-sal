@@ -1,10 +1,11 @@
-class Union_Find():
+class Union_Find:
+
     def __init__(self, value):
         self.parents = None
         self.value = None
 
     def find_parents(self):
-        if (self.parents == None):
+        if self.parents == None:
             return self
         else:
             self.parents = self.parents.find_parents()
@@ -14,19 +15,17 @@ class Union_Find():
 n = int(input().strip())
 s1 = input().strip()
 s2 = input().strip()
-
 dp = dict()
 for i in s1:
     if i not in dp:
         dp[i] = Union_Find(i)
-for i, v in enumerate(s2):
+for (i, v) in enumerate(s2):
     if v not in dp:
         dp[v] = Union_Find(v)
     fr = dp[v].find_parents()
     to = dp[s1[i]].find_parents()
-    if (fr != to):
+    if fr != to:
         fr.parents = to
-
 ans = dict()
 cnt = 0
 for i in dp:

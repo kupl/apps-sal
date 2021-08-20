@@ -1,6 +1,8 @@
+MOD = 10 ** 9 + 7
 
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+
+def I():
+    return list(map(int, input().split()))
 
 
 def find(s):
@@ -21,7 +23,7 @@ def pre(s):
     return ''.join(k[1:])
 
 
-n, = I()
+(n,) = I()
 d = {'a': 0}
 l = []
 for i in range(n):
@@ -38,7 +40,7 @@ count = 0
 l.sort(key=lambda x: len(x))
 for i in l:
     k = find(i)
-    if i and i[0] != ')' and k in d and d[k] > 0:
+    if i and i[0] != ')' and (k in d) and (d[k] > 0):
         count += 1
         d[k] -= 1
         d[i] -= 1

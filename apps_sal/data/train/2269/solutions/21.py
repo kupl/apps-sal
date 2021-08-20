@@ -1,17 +1,17 @@
 from collections import deque
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 adjL = [set(range(N)) for _ in range(N)]
 for v in range(N):
     adjL[v].remove(v)
 for _ in range(M):
-    A, B = list(map(int, input().split()))
-    A, B = A - 1, B - 1
+    (A, B) = list(map(int, input().split()))
+    (A, B) = (A - 1, B - 1)
     adjL[A].remove(B)
     adjL[B].remove(A)
 
 
 def getSizes(adjList):
+
     def bfs(vSt):
         colors[vSt] = 1
         nums[1] += 1
@@ -27,7 +27,6 @@ def getSizes(adjList):
                     nums[-color] += 1
                     Q.append(v2)
         return True
-
     numV = len(adjList)
     colors = [0] * numV
     anss = []
@@ -42,14 +41,12 @@ def getSizes(adjList):
 
 
 sizes = getSizes(adjL)
-
 if not sizes:
-    print((-1))
+    print(-1)
 else:
     bitset = 1 << N
-    for A, B in sizes:
-        bitset = (bitset >> A) | (bitset >> B)
-
+    for (A, B) in sizes:
+        bitset = bitset >> A | bitset >> B
     minDiff = N
     iMinDiff = -1
     for i in reversed(list(range(N + 1))):
@@ -59,5 +56,4 @@ else:
                 minDiff = diff
                 iMinDiff = i
         bitset >>= 1
-
-    print((iMinDiff * (iMinDiff - 1) // 2 + (N - iMinDiff) * (N - iMinDiff - 1) // 2))
+    print(iMinDiff * (iMinDiff - 1) // 2 + (N - iMinDiff) * (N - iMinDiff - 1) // 2)

@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 f = [int(x) for x in input().split()]
 l = list(sorted(enumerate(f), key=lambda x: x[1]))

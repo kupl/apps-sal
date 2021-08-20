@@ -1,6 +1,6 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # f(amount) = min(f(amount-1), f(amount-2), f(amount-5))
         cap = amount + 1
         dp = [cap] * (amount + 1)
         dp[0] = 0

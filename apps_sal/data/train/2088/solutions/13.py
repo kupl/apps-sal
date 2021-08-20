@@ -4,23 +4,18 @@ A = [int(i) for i in input().split()]
 
 
 def do(i, j):
-    #print('At',i , j)
     if i >= j:
         dp[i][j] = 1
         return 1
-
     if dp[i][j] != -1:
         return dp[i][j]
-
     ans = len(A)
     if A[i] == A[j]:
         ans = min(ans, do(i + 1, j - 1))
     for x in range(i, j):
-
         left = do(i, x)
         right = do(x + 1, j)
         ans = min(ans, left + right)
-
     dp[i][j] = ans
     return ans
 

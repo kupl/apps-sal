@@ -1,9 +1,9 @@
-R, C, N = list(map(int, input().split()))
+(R, C, N) = list(map(int, input().split()))
 pts = []
 for i in range(N):
-    x1, y1, x2, y2 = list(map(int, input().split()))
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     zs = []
-    for x, y in [(x1, y1), (x2, y2)]:
+    for (x, y) in [(x1, y1), (x2, y2)]:
         if y == 0:
             zs.append((x, i))
         elif x == R:
@@ -14,19 +14,15 @@ for i in range(N):
             zs.append((2 * R + 2 * C - y, i))
     if len(zs) == 2:
         pts += zs
-
 pts.sort()
-
 stack = []
-for z, i in pts:
+for (z, i) in pts:
     if not stack:
         stack.append(i)
+    elif stack[-1] == i:
+        stack.pop()
     else:
-        if stack[-1] == i:
-            stack.pop()
-        else:
-            stack.append(i)
-
+        stack.append(i)
 if not stack:
     print('YES')
 else:

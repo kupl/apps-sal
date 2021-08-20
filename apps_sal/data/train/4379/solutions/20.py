@@ -1,1 +1,1 @@
-combine_names = lambda *args: " ".join(args)
+combine_names = lambda *args: ' '.join(args)

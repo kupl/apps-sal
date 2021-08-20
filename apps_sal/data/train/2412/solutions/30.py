@@ -1,5 +1,7 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
+
         def remove(s):
             if len(s) <= 1:
                 return s
@@ -18,11 +20,9 @@ class Solution:
                     i = j
                 i += 1
             return res
-
         prev = S
         cur = remove(S)
         while cur != prev:
             prev = cur
             cur = remove(prev)
-
         return cur

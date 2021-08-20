@@ -1,7 +1,6 @@
 import math
 import numpy as np
 n = int(input())
-
 s = math.sqrt(n)
 i = 2
 f = {}
@@ -10,7 +9,6 @@ while i <= s:
         f[i] = f.get(i, 0) + 1
         n = n // i
     i += 1
-
 ans = 0
 for x in f.values():
     e = 0

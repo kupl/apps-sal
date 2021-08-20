@@ -1,6 +1,5 @@
 import re
-# Use regex to grab domain name
-regex_pattern = "(https?:\/\/)?[w]{0,3}\.?([A-Z,a-z,0-9,-]*).*"
+regex_pattern = '(https?:\\/\\/)?[w]{0,3}\\.?([A-Z,a-z,0-9,-]*).*'
 
 
 def domain_name(url):

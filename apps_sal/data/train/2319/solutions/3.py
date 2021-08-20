@@ -1,16 +1,11 @@
 import sys
 from sys import stdin
-
-
 tt = int(stdin.readline())
 mod = 998244353
-
 for loop in range(tt):
-
-    n, k = map(int, stdin.readline().split())
+    (n, k) = map(int, stdin.readline().split())
     a = list(map(int, stdin.readline().split()))
     b = list(map(int, stdin.readline().split()))
-
     l = [None] * (n + 1)
     r = [None] * (n + 1)
     use = [True] * (n + 1)
@@ -21,7 +16,6 @@ for loop in range(tt):
             l[a[i]] = a[i + 1]
         if i != 0:
             r[a[i]] = a[i - 1]
-
     ans = 1
     for i in range(k):
         now = 0
@@ -31,10 +25,8 @@ for loop in range(tt):
             now += 1
         ans *= now
         ans %= mod
-
         if l[b[i]] != None:
             r[l[b[i]]] = r[b[i]]
         if r[b[i]] != None:
             l[r[b[i]]] = l[b[i]]
-
     print(ans % mod)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, piles):
         choose = 0
         piles = sorted(piles, reverse=True)

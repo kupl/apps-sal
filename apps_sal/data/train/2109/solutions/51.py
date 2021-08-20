@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     left = 0
     right = a * b
     for i in range(100):

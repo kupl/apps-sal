@@ -3,12 +3,12 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b = Input()
-    print("Even" if (a * b) % 2 == 0 else "Odd")
+    (a, b) = Input()
+    print('Even' if a * b % 2 == 0 else 'Odd')
 
 
 main()

@@ -1,9 +1,8 @@
-# cook your dish here
 for _ in range(int(input())):
-    N, K, L = map(int, input().split())
-    if (K * L < N):
+    (N, K, L) = map(int, input().split())
+    if K * L < N:
         print(-1)
-    elif (K == 1 and N > 1):
+    elif K == 1 and N > 1:
         print(-1)
     else:
         s = 1
@@ -14,4 +13,4 @@ for _ in range(int(input())):
             else:
                 print(s, end=' ')
             s = s + 1
-    print("")
+    print('')

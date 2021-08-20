@@ -1,4 +1,4 @@
-n, m = input().split(' ')
+(n, m) = input().split(' ')
 n = int(n)
 m = int(m)
 seq = [1]
@@ -9,6 +9,6 @@ while c != n:
     c += int(line[c - 1])
     seq.append(c)
 if m in seq:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

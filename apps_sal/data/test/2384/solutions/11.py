@@ -1,7 +1,7 @@
 n = int(input())
 a = list(map(int, input().split()))
 if n % 2 == 0:
-    ans, cnt = 0, 0
+    (ans, cnt) = (0, 0)
     for i in range(n):
         if i % 2 == 1:
             ans += a[i]

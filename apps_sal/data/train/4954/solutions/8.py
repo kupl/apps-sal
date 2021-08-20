@@ -10,4 +10,4 @@ class WordDictionary:
         self.words.append(word)
 
     def search(self, pattern):
-        return any(all((a and b == '.') or a == b for a, b in zip_longest(word, pattern)) for word in self.words)
+        return any((all((a and b == '.' or a == b for (a, b) in zip_longest(word, pattern))) for word in self.words))

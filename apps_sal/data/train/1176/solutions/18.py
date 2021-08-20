@@ -5,7 +5,7 @@ while t > 0:
     if len(s) < 4:
         print('NO')
         continue
-    if(s[-4:] != '1000'):
+    if s[-4:] != '1000':
         print('NO')
     else:
         print('YES')

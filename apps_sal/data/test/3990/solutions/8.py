@@ -22,18 +22,16 @@ def bfs(G, rail_connected=False):
     return -1
 
 
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 rails = dfdict(set)
 all_vertice = set([i + 1 for i in range(n)])
 for _ in range(m):
-    xt, yt = [int(i) for i in input().split()]
+    (xt, yt) = [int(i) for i in input().split()]
     rails[xt].add(yt)
     rails[yt].add(xt)
-
 R = False
 if n in rails[1]:
     R = True
 else:
     R = False
-
 print(bfs(rails, R))

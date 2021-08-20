@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    n, m = tuple([int(x) for x in input().split()])
+    (n, m) = tuple([int(x) for x in input().split()])
     w = [int(x) for x in input().split()]
     b = [int(x) - 1 for x in input().split()]
     o = []

@@ -1,5 +1,5 @@
 def isMultiple(a, b, n):
-    print((a / b))
+    print(a / b)
     print(n)
     quot = a / b * 10
     digit = int(quot) % 10

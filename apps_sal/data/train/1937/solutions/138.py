@@ -1,9 +1,11 @@
 class Node:
+
     def __init__(self, val, childs=None):
-        self.val, self.childs = val, childs if childs else []
+        (self.val, self.childs) = (val, childs if childs else [])
 
 
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.root = Node(kingName)
         self.name2node = {kingName: self.root}
@@ -19,6 +21,7 @@ class ThroneInheritance:
         self.dead.add(name)
 
     def getInheritanceOrder(self) -> List[str]:
+
         def helper(r):
             if r.val not in self.dead:
                 ans.append(r.val)
@@ -27,9 +30,3 @@ class ThroneInheritance:
         ans = []
         helper(self.root)
         return ans
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

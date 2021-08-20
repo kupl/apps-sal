@@ -1,10 +1,9 @@
 import collections
-
 n = int(input())
 graph = [[] for i in range(n + 1)]
 flag = [False for i in range(n + 1)]
 for i in range(n - 1):
-    u, v, w = map(int, input().split())
+    (u, v, w) = map(int, input().split())
     graph[u].append([v, w])
     graph[v].append([u, w])
 color = [None for i in range(n + 1)]

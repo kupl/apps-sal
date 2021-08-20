@@ -1,5 +1,4 @@
 t = int(input())
-
 for i in range(t):
     n = int(input())
     s = input().rstrip()
@@ -10,8 +9,7 @@ for i in range(t):
         gb = []
         a = 0
         b = div
-        for i, item in enumerate(sint):
-            # b should take
+        for (i, item) in enumerate(sint):
             if item > div:
                 if b > item:
                     is_ok = False
@@ -25,19 +23,18 @@ for i in range(t):
                 else:
                     a = item
                     ga.append(i)
+            elif a > item:
+                is_ok = False
+                break
             else:
-                if a > item:
-                    is_ok = False
-                    break
-                else:
-                    ga.append(i)
-                    a = item
+                ga.append(i)
+                a = item
         if is_ok:
             break
     if is_ok:
         ans = [1] * n
         for item in gb:
             ans[item] = 2
-        print("".join([str(item) for item in ans]))
+        print(''.join([str(item) for item in ans]))
     else:
-        print("-")
+        print('-')

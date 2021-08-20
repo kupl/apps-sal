@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         from sortedcontainers import SortedList
         n = len(arr)
@@ -11,7 +12,7 @@ class Solution:
             a = arr[j]
             s.add(a)
             i = s.bisect_left(a)
-            le, ri = a - s[i - 1] - 1, s[i + 1] - a - 1
+            (le, ri) = (a - s[i - 1] - 1, s[i + 1] - a - 1)
             if le == m or ri == m:
                 return j
         return -1

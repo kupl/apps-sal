@@ -1,4 +1,4 @@
-n, m = [int(s) for s in input().split()]
+(n, m) = [int(s) for s in input().split()]
 a = input()
 b = input()
 ones = 0
@@ -12,5 +12,4 @@ for i in range(m):
         if a[n - (m - i)] == '1':
             ans += ones
             ans %= 998244353
-
 print(ans)

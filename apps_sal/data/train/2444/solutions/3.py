@@ -1,4 +1,5 @@
 class Solution:
+
     def binaryGap(self, N: int) -> int:
         bit_list = bin(N)[2:]
         stack = []

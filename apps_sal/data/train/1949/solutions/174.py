@@ -1,10 +1,11 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         self.maxgold = 0
 
         def isValid(i, j):
-            if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and grid[i][j] != 0:
+            if 0 <= i < len(grid) and 0 <= j < len(grid[0]) and (grid[i][j] != 0):
                 return True
             else:
                 return False
@@ -19,7 +20,6 @@ class Solution:
                     helper(new_i, new_j, cursum + gold)
                     grid[new_i][new_j] = gold
             self.maxgold = max(self.maxgold, cursum)
-
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 if grid[i][j] != 0:
@@ -27,5 +27,4 @@ class Solution:
                     grid[i][j] = 0
                     helper(i, j, gold)
                     grid[i][j] = gold
-
         return self.maxgold

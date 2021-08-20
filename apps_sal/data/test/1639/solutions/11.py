@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 n = int(input())
 A = list(map(int, input().split()))
-
 count = 0
 ans = 0
 prev = -1
@@ -14,5 +10,4 @@ for a in A:
     else:
         count = 1
     prev = a
-
 print(ans)

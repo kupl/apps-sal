@@ -1,4 +1,4 @@
-n, x = [int(x) for x in input().split()]
+(n, x) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 for i in range(n):
     a[i] = abs(a[i] - x)
@@ -6,7 +6,7 @@ for i in range(n):
 
 def gcd(x, y):
     while y != 0:
-        x, y = y, x % y
+        (x, y) = (y, x % y)
     return x
 
 

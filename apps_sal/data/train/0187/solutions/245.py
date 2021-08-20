@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         maxProfit = 0
         waitingCustomers = 0
@@ -10,21 +11,16 @@ class Solution:
             if i < len(customers):
                 count = customers[i]
                 i += 1
-
             else:
                 count = 0
-
             waitingCustomers += count
             add = min(waitingCustomers, 4)
             waitingCustomers -= add
-            profit += (add * boardingCost) - runningCost
+            profit += add * boardingCost - runningCost
             turns += 1
-            #print((add, profit, maxProfit, turns, waitingCustomers))
             if profit > maxProfit:
                 maxProfit = profit
                 bestTurns = turns
-
         if maxProfit <= 0:
             return -1
-
         return bestTurns

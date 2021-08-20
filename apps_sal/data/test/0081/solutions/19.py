@@ -12,9 +12,8 @@ def lcm(a, b):
     return a * b // gcd(a, b)
 
 
-a, b = mp()
-a, b = min(a, b), max(a, b)
-
+(a, b) = mp()
+(a, b) = (min(a, b), max(a, b))
 x = []
 w = b - a
 dl = 1
@@ -23,7 +22,6 @@ while dl ** 2 <= w:
         x.append(dl)
         x.append(w // dl)
     dl += 1
-
 kk = 0
 m = 10 ** 20
 for d in x:

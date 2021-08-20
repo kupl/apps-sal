@@ -1,7 +1,7 @@
 def bfs(source):
     q = [0] * (n + 1)
     fa = [-1] * n
-    l, r = [1] * 2
+    (l, r) = [1] * 2
     fa[source] = source
     q[1] = source
     while l <= r:
@@ -22,15 +22,14 @@ def bfs(source):
         i -= 1
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 m <<= 1
 t = [int(x) for x in input().split()]
 e = [list() for i in range(n)]
 sum = [0] * n
 dp = [0] * n
-#print(len(e), e)
 for i in range(n - 1):
-    x, y = [int(a) for a in input().split()]
+    (x, y) = [int(a) for a in input().split()]
     e[x - 1].append(y - 1)
     e[y - 1].append(x - 1)
 for x in t:

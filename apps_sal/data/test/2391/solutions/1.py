@@ -1,14 +1,14 @@
 import numpy as np
 
 
-def divisors(M):  # Mの約数列 O(n^(0.5+e))
+def divisors(M):
     import math
     d = []
     i = 1
     while math.sqrt(M) >= i:
         if M % i == 0:
             d.append(i)
-            if i**2 != M:
+            if i ** 2 != M:
                 d.append(M // i)
         i = i + 1
     d.sort()
@@ -26,13 +26,11 @@ for i in range(0, len(d)):
     test = np.roll(A, -d[i])
     if all(test == A):
         perioda = min(perioda, d[i])
-
 periodb = N
 for i in range(0, len(d)):
     test = np.roll(B, -d[i])
     if all(test == B):
         periodb = min(periodb, d[i])
-
 if perioda == periodb:
     A = A[:perioda]
     B = B[:periodb]

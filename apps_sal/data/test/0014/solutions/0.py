@@ -1,8 +1,6 @@
 import sys
-
-#f = open('input', 'r')
 f = sys.stdin
-n, k = list(map(int, f.readline().split()))
+(n, k) = list(map(int, f.readline().split()))
 a = list(map(int, f.readline().split()))
 aset = set(a)
 st = []
@@ -25,7 +23,6 @@ for p in range(1, n + 1):
             st += a[ai:k]
             ai = k
         app.append(p)
-
 if failed:
     print(-1)
 else:

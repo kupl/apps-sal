@@ -11,6 +11,6 @@ def diverse(t):
 
 for _ in range(N):
     if diverse(input()):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 a = [0] * 300
 for i in range(m, 300, m):
     a[i + 1] = 1

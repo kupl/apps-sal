@@ -1,8 +1,7 @@
-n, d = [int(i) for i in input().split()]
+(n, d) = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
 total = 0
 position = 2
-
 for i in range(n - 2):
     l = x[i]
     distance = 1
@@ -14,6 +13,5 @@ for i in range(n - 2):
     else:
         distance = n - i - 1
         position = n
-    total += (distance * (distance - 1)) // 2
-
+    total += distance * (distance - 1) // 2
 print(total)

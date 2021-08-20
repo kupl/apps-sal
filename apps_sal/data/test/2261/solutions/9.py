@@ -20,13 +20,12 @@ def recursion(k):
         return ['+']
     ans = recursion(k - 1)
     ans = ans + ans
-    for i in range(2**(k - 1)):
+    for i in range(2 ** (k - 1)):
         ans[i] = 2 * ans[i]
-        ans[i + 2**(k - 1)] += inverse(ans[i + 2**(k - 1)])
+        ans[i + 2 ** (k - 1)] += inverse(ans[i + 2 ** (k - 1)])
     return ans
 
 
 k = int(inp.readline())
-
 for string in recursion(k):
     print(string)

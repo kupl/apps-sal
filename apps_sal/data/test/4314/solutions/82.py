@@ -1,4 +1,4 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 A = [input() for i in range(H)]
 row = [False] * H
 col = [False] * W

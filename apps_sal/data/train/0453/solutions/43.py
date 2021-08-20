@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         if not houses:
             return 0
@@ -22,6 +23,5 @@ class Solution:
                 temp = dfs(index + 1, t - (p != houses[index]), houses[index])
             memo[key] = temp
             return temp
-
         res = dfs(0, target, -1)
         return res if res < float('inf') else -1

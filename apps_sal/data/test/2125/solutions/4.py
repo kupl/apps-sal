@@ -1,7 +1,5 @@
 import os
 from io import BytesIO, StringIO
-#input = BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
 DEBUG = True
 debug_print = print if DEBUG else lambda *x, **y: None
 
@@ -15,9 +13,8 @@ def array_of(f, *dim):
 
 
 def main():
-    n, m = input_as_list()
+    (n, m) = input_as_list()
     g = [input() for _ in range(n)]
-
     prev_flgs = dict()
     s = 0
     for j in range(m):
@@ -34,17 +31,15 @@ def main():
                 prev = e
                 cnt = 1
         lst.append((e, cnt))
-
         flgs = dict()
         idx = 0
         for i in range(len(lst) - 2):
-            f1, f2, f3 = lst[i], lst[i + 1], lst[i + 2]
+            (f1, f2, f3) = (lst[i], lst[i + 1], lst[i + 2])
             if f1[1] == f2[1] == f3[1]:
                 flgs[idx] = [f1[0] + f2[0] + f3[0], f1[1], 1]
             elif min(f1[1], f2[1], f3[1]) == f2[1]:
                 flgs[idx + f1[1] - f2[1]] = [f1[0] + f2[0] + f3[0], f2[1], 1]
             idx += f1[1]
-
         if prev_flgs:
             for f in flgs:
                 if f in prev_flgs:
@@ -60,7 +55,6 @@ def main():
         else:
             s += len(flgs)
         prev_flgs = flgs
-
     print(s)
 
 

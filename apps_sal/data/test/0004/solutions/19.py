@@ -1,7 +1,7 @@
 x = int(input())
-hh, mm = list(map(int, input().split()))
+(hh, mm) = list(map(int, input().split()))
 i = 0
-while(True):
+while True:
     if str(hh).find('7') >= 0 or str(mm).find('7') >= 0:
         break
     mm -= x

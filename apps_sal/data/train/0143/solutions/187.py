@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         if len(tree) == 1:
             return 1
@@ -15,7 +16,6 @@ class Solution:
                 bmaps[tree[hi]] += 1
             else:
                 bmaps[tree[hi]] = 1
-
             while len(baskets) > 2:
                 if bmaps[tree[lo]] == 1:
                     baskets.remove(tree[lo])

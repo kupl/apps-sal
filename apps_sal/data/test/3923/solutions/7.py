@@ -4,7 +4,7 @@ res = []
 def solve(Ax, A, sum=0):
     for i in range(0, Ax):
         for k in range(0, A):
-            if (k == 0):
+            if k == 0:
                 res.append(sum + A)
             else:
                 res.append(sum + k)
@@ -25,7 +25,7 @@ while 1:
         Bx //= B
         break
     Ax += 1
-if (Ax * A + Bx * B != N):
+if Ax * A + Bx * B != N:
     print('-1')
 else:
     solve(Bx, B, solve(Ax, A))

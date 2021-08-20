@@ -4,7 +4,7 @@ while t:
     n = int(input())
     p = sqrt(n)
     if p * p == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t -= 1

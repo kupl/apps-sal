@@ -1,12 +1,10 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 S = [0]
-for i, a in enumerate(A, 1):
+for (i, a) in enumerate(A, 1):
     S.append(S[i - 1] + a)
 Sn = S[-1]
 ans = Sn
-
 i0 = 1
 k0 = 3
 for j in range(2, N - 1):

@@ -1,6 +1,5 @@
 import sys
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(x) for x in input().split()]
 mod = pow(10, 9) + 7
 zero = 0
@@ -13,8 +12,7 @@ for i in range(n):
         plus.append(a[i])
     else:
         minus.append(a[i])
-
-P, M = len(plus), len(minus)
+(P, M) = (len(plus), len(minus))
 plus.sort(reverse=True)
 minus.sort()
 ans = 1
@@ -44,7 +42,6 @@ else:
         judge.append(minus[2 * i] * minus[2 * i + 1])
     judge.sort(reverse=True)
     for i in range(k // 2):
-        ans *= (judge[i] % mod)
+        ans *= judge[i] % mod
         ans %= mod
-
 print(ans)

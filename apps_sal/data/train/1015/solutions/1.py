@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     k = int(input())
     count = 1

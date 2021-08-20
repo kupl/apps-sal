@@ -2,11 +2,8 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-6 2
-0 1 1 0 0 1
-'''
-n, r = mi()
+'\n6 2\n0 1 1 0 0 1\n'
+(n, r) = mi()
 a = list(mi())
 
 
@@ -18,7 +15,6 @@ def fun(n, a, r):
         if a[j] == 1:
             i = j
     while i < n:
-        #print (i)
         if vis[i] == 1 and vis[min(n, end + r) - 1] == 1:
             break
         if a[i] == 1:
@@ -37,8 +33,6 @@ def fun(n, a, r):
                 i = next
                 continue
         i += 1
-    #print (a)
-    #print (vis)
     if 0 in vis:
         return -1
     else:

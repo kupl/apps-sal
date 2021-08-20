@@ -1,4 +1,4 @@
-n, pos, l, r = map(int, input().split())
+(n, pos, l, r) = map(int, input().split())
 
 
 def solve(n, pos, l, r):
@@ -8,13 +8,12 @@ def solve(n, pos, l, r):
         return abs(pos - r) + 1
     elif r == n:
         return abs(pos - l) + 1
+    elif l <= pos and pos <= r:
+        return abs(r - l) + min(abs(pos - l), abs(pos - r)) + 2
+    elif pos < l:
+        return abs(pos - l) + abs(r - l) + 2
     else:
-        if l <= pos and pos <= r:
-            return abs(r - l) + min(abs(pos - l), abs(pos - r)) + 2
-        elif pos < l:
-            return abs(pos - l) + abs(r - l) + 2
-        else:
-            return abs(pos - r) + abs(r - l) + 2
+        return abs(pos - r) + abs(r - l) + 2
 
 
 print(solve(n, pos, l, r))

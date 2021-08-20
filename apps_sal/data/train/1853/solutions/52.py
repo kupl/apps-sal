@@ -3,23 +3,21 @@ from heapq import heappop, heappush
 
 
 class Solution:
-    def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
 
+    def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         dist = [[float('inf') for _ in range(n)] for _ in range(n)]
         graph = collections.defaultdict(list)
-
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             dist[u][v] = dist[v][u] = w
             graph[u].append(v)
             graph[v].append(u)
         for i in range(n):
             dist[i][i] = 0
         visited = set()
-
         for i in range(n):
             stack = [(0, i)]
             while stack:
-                k, j = heappop(stack)
+                (k, j) = heappop(stack)
                 if (i, j) not in visited and k <= distanceThreshold:
                     visited.add((i, j))
                     for neigh in graph[j]:

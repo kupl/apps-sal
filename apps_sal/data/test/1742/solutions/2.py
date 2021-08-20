@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = tuple(map(int, input().split()))
 r = [{i} for i in range(n + 1)]
 for _ in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     r[u].add(v)
 first = True
 nr = set()

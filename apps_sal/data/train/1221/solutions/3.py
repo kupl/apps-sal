@@ -1,13 +1,12 @@
-# cook your dish here
 import math
 T = int(input())
 for i in range(T):
     x = int(input())
-    temp, count, y = 0, 0, 0
+    (temp, count, y) = (0, 0, 0)
     p = 0
-    while(temp <= x):
+    while temp <= x:
         p = int(math.sqrt(y))
-        if(p * p > y):
+        if p * p > y:
             temp = p
             y += p * p
             count += 1
@@ -16,7 +15,7 @@ for i in range(T):
             temp = p
             y += p * p
             count += 1
-    if(temp > x):
+    if temp > x:
         print(count - 1)
-    elif(temp <= x):
+    elif temp <= x:
         print(count)

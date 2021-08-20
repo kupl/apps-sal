@@ -2,16 +2,14 @@ def gns():
     return list(map(int, input().split()))
 
 
-n, k = gns()
+(n, k) = gns()
 s = input()
-
 if k == 0:
     print(s)
     quit()
 if len(s) == 1:
     print(0)
     quit()
-
 s = [int(x) for x in s]
 if s[0] > 1:
     k -= 1

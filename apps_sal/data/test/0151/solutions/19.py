@@ -5,7 +5,7 @@ i = 2
 gl = {'a', 'e', 'i', 'o', 'u'}
 l = -1
 while i < dl:
-    if s[i - 2] not in gl and s[i - 1] not in gl and s[i] not in gl and s[i - 2:i + 1] != s[i - 2] * 3:
+    if s[i - 2] not in gl and s[i - 1] not in gl and (s[i] not in gl) and (s[i - 2:i + 1] != s[i - 2] * 3):
         if l == -1:
             l = i - 2
     elif l != -1:

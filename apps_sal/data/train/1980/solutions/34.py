@@ -1,5 +1,3 @@
-
-
 class Skiplist:
 
     def __init__(self):

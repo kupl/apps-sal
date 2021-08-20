@@ -1,12 +1,12 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     flav = list(map(int, input().split()))
     ans = []
     res = 0
     k = 0
     for i in range(n):
-        d, f, b = map(int, input().split())
+        (d, f, b) = map(int, input().split())
         if flav[d - 1] == 0:
             res += b
             ans.append(-1)
@@ -21,7 +21,6 @@ for _ in range(t):
             flav[i] -= 1
             k -= 1
             l.append(i + 1)
-
     print(res)
     c = 0
     for i in range(n):

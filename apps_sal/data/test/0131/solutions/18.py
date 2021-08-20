@@ -7,4 +7,4 @@ for x in a:
     suma += x
 for x in b:
     sumb += x
-print("Yes" if suma >= sumb else "No")
+print('Yes' if suma >= sumb else 'No')

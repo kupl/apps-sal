@@ -18,4 +18,4 @@ for k in range(n):
     else:
         seen.add(days[k])
 for day in res:
-    print(" ".join(day))
+    print(' '.join(day))

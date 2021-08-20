@@ -1,13 +1,11 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         n = len(hand)
         if n % W != 0:
             return False
-
         counter = Counter(hand)
-
         nums = sorted(counter.keys())
-
         for num in nums:
             count = counter[num]
             if count == 0:
@@ -20,17 +18,12 @@ class Solution:
         return True
 
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        # [1,2,3,2,3,4]
-        # [1,2,2,3,3,4]
-
         if len(hand) % W != 0:
             return False
-
         counter = Counter(hand)
         q = []
-        for num, freq in list(counter.items()):
+        for (num, freq) in list(counter.items()):
             heapq.heappush(q, (num, freq))
-
         while q and len(q) >= W:
             tmp = []
             for i in range(W):
@@ -38,18 +31,14 @@ class Solution:
                 if tmp and tmp[-1][0] + 1 != x[0]:
                     return False
                 tmp.append(x)
-            for num, freq in tmp:
+            for (num, freq) in tmp:
                 if freq > 1:
                     heapq.heappush(q, (num, freq - 1))
         return 0 == len(q)
 
     def isNStraightHand4(self, hand: List[int], W: int) -> bool:
-        # [1,2,3,2,3,4]
-        # [1,2,2,3,3,4]
-
         if len(hand) % W != 0:
             return False
-
         hand.sort()
         q = []
         for num in hand:
@@ -57,9 +46,6 @@ class Solution:
                 q[-1][1] += 1
             else:
                 q.append([num, 1])
-
-        # [[3,3]]
-        #
         n = len(hand)
         while n > 0:
             if len(q) < W:
@@ -68,9 +54,7 @@ class Solution:
                 if q[i][0] != q[i - 1][0] + 1:
                     return False
             j = 0
-            # print(j)
             for i in range(W):
-                # print(i)
                 if q[j][1] == 1:
                     q.pop(j)
                 else:

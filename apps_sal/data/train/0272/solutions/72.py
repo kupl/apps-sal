@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         maxCandy = 0
         keyset = set()
@@ -17,9 +18,7 @@ class Solution:
                     unopenedBOXES.append(thisbox)
                 for x in containedBoxes[thisbox]:
                     q.append(x)
-
         for unopenedBOX in unopenedBOXES:
             if unopenedBOX in keyset:
                 maxCandy += candies[unopenedBOX]
-
         return maxCandy

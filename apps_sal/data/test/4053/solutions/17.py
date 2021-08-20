@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 n = int(input())
-sp = [[]for i in range(n)]
+sp = [[] for i in range(n)]
 ns = []
 for i in range(2 * n - 2):
     s = input()
@@ -10,7 +7,6 @@ for i in range(2 * n - 2):
     ns.append(s)
 s1 = sp[n - 1][0] + sp[n - 1][1][-1]
 s2 = sp[n - 1][1][0] + sp[n - 1][0]
-
 ss = [s1, s2]
 correct_s = ''
 res = True

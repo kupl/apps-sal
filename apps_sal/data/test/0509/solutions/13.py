@@ -9,6 +9,6 @@ for i in range(n):
     a = st
 r = False
 for i in a:
-    if ((i % 360) + 360) % 360 == 0:
+    if (i % 360 + 360) % 360 == 0:
         r = True
 print('YES' if r else 'NO')

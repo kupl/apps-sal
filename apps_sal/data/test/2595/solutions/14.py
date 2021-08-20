@@ -6,8 +6,8 @@ def I():
 
 
 for tc in range(1, 1 + int(I())):
-    a, b = list(map(int, I().split()))
-    al, bl = 0, 0
+    (a, b) = list(map(int, I().split()))
+    (al, bl) = (0, 0)
     while a > 0 and a % 2 == 0:
         al += 1
         a //= 2

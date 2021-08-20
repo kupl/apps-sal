@@ -2,9 +2,7 @@ n = int(input())
 b = list(map(int, input().split()))
 a = [[b[i], i] for i in range(n)]
 a.sort()
-
 ans = [0] * n
-
 cur = 0
 num = 1
 while cur < n:
@@ -19,14 +17,11 @@ while cur < n:
             break
         else:
             ans[a[cur + i][1]] = num
-
     if ng:
-        print("Impossible")
+        print('Impossible')
         break
-
     num += 1
     cur += n - nec
-
 else:
-    print("Possible")
+    print('Possible')
     print(*ans)

@@ -13,7 +13,7 @@ def find_repeat(g):
     xs = []
     for i in count(1):
         xs.extend(islice(g, 10))
-        if all(len(set(xs[j::i])) == 1 for j in range(i)):
+        if all((len(set(xs[j::i])) == 1 for j in range(i))):
             return ''.join(xs[:i])
 
 

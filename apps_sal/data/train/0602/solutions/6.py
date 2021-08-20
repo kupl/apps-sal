@@ -1,4 +1,4 @@
-lyrics = list(map(str, input().rstrip().split(" ")))
+lyrics = list(map(str, input().rstrip().split(' ')))
 mini1 = lyrics[0]
 for i in lyrics:
     if len(i) < len(mini1):
@@ -12,4 +12,4 @@ while True:
         t += 1
     except IndexError:
         break
-print(" ".join(remix), end="")
+print(' '.join(remix), end='')

@@ -6,6 +6,4 @@ def reverse_bits(n):
     almostanswer = comeonguy[:1:-1]
     answer = int(almostanswer, 2)
     return answer
-
-    # bin(almost)
     pass

@@ -1,15 +1,16 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
-n, m = R()
+(n, m) = R()
 A = []
-while(n > 0):
+while n > 0:
     n -= 1
-    c, t = R()
+    (c, t) = R()
     A.append(c * t)
 i = p = 0
 for v in R():
-    while(p < v):
+    while p < v:
         p += A[i]
         i += 1
     print(i)

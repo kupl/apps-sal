@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def btreeGameWinningMove(self, root: TreeNode, n: int, x: int) -> bool:
         graph = defaultdict(list)
 
@@ -18,7 +13,6 @@ class Solution:
                 graph[s.val].append(child.val)
                 dfs(child)
         dfs(root)
-
         visited = set()
         visited.add(x)
 
@@ -29,12 +23,10 @@ class Solution:
                 if nei not in visited:
                     res += dfs_graph(nei)
             return res
-
         candidates = [dfs_graph(nei) for nei in graph[x]]
         if not candidates:
             return False
         res = max(candidates)
-
         if res > n - res:
             return True
         else:

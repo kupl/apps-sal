@@ -2,7 +2,7 @@ from math import gcd
 
 
 def compute_lcm(x, y):
-    lcm = (x * y) // gcd(x, y)
+    lcm = x * y // gcd(x, y)
     return lcm
 
 

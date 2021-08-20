@@ -1,8 +1,8 @@
 class Solution:
+
     def minDifference(self, A: List[int]) -> int:
         if len(A) <= 4:
             return 0
-
         A = sorted(A)
         res = math.inf
         for i in range(4):

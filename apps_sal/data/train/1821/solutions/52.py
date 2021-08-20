@@ -1,5 +1,7 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def merge(left, right):
             result = []
             while len(left) != 0 and len(right) != 0:
@@ -19,5 +21,4 @@ class Solution:
                 left = mergeSort(arr[:mid])
                 right = mergeSort(arr[mid:])
                 return merge(left, right)
-
         return mergeSort(nums)

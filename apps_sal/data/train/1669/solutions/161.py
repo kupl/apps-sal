@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         hand.sort()
         if len(hand) % W == 0:
@@ -10,6 +11,5 @@ class Solution:
                     else:
                         return False
             return True
-
         else:
             return False

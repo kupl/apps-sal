@@ -7,7 +7,7 @@ def strong_num(number):
             Factorial *= x
         SumFactorial += Factorial
     if SumFactorial == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
         print(number)
-        return "Not Strong !!"
+        return 'Not Strong !!'

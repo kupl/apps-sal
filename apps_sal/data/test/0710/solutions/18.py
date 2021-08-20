@@ -4,7 +4,7 @@ genome = 'ACTG'
 
 
 def cnt(a, b):
-    a, b = ord(a) - 65, ord(b) - 65
+    (a, b) = (ord(a) - 65, ord(b) - 65)
     return min(abs(b - a), 26 - abs(b - a))
 
 

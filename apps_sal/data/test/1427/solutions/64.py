@@ -3,9 +3,9 @@ import math
 import collections
 import itertools
 input = sys.stdin.readline
-m = 10**9 + 7
-"""nを素因数分解"""
-"""2以上の整数n => [[素因数, 指数], ...]の2次元リスト"""
+m = 10 ** 9 + 7
+'nを素因数分解'
+'2以上の整数n => [[素因数, 指数], ...]の2次元リスト'
 
 
 def factorization(n):
@@ -18,21 +18,17 @@ def factorization(n):
             cnt += 1
             temp //= i
         arr.append([i, cnt])
-
-    for i in range(3, int(-(-n**0.5 // 1)) + 1, 2):
+    for i in range(3, int(-(-n ** 0.5 // 1)) + 1, 2):
         if temp % i == 0:
             cnt = 0
             while temp % i == 0:
                 cnt += 1
                 temp //= i
             arr.append([i, cnt])
-
     if temp != 1:
         arr.append([temp, 1])
-
     if arr == []:
         arr.append([n, 1])
-
     return arr
 
 
@@ -44,12 +40,10 @@ for a in A:
     for ar in arr:
         if d[ar[0]] < ar[1]:
             d[ar[0]] = ar[1]
-
 lcm = 1
-for key, val in list(d.items()):
+for (key, val) in list(d.items()):
     lcm = lcm * pow(key, val)
-
 ans = 0
 for a in A:
     ans = ans + lcm // a
-print((ans % m))
+print(ans % m)

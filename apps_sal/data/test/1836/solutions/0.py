@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = [0] * n
 e = []
 for i in range(m):
-    q, w = list(map(int, input().split()))
+    (q, w) = list(map(int, input().split()))
     p[w - 1] += 1
     p[q - 1] += 1
     e.append([min(q, w), max(q, w)])

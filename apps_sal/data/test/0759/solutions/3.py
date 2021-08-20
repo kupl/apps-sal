@@ -1,5 +1,5 @@
-hh, mm = [int(v) for v in input().split()]
-H, D, C, N = [int(v) for v in input().split()]
+(hh, mm) = [int(v) for v in input().split()]
+(H, D, C, N) = [int(v) for v in input().split()]
 
 
 def dvru(a, b):

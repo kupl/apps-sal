@@ -4,7 +4,7 @@ for i in range(int(input())):
     data1 = list(data)
     for j in data:
         if data1.pop(0) in data1:
-            print("ne krasivo")
+            print('ne krasivo')
             break
         elif len(data1) == 0:
-            print("prekrasnyy")
+            print('prekrasnyy')

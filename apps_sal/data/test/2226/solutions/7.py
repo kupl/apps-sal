@@ -1,10 +1,28 @@
 import sys
-def rs(): return sys.stdin.readline().rstrip()
-def ri(): return int(sys.stdin.readline())
-def ria(): return list(map(int, sys.stdin.readline().split()))
-def ws(s): sys.stdout.write(s + '\n')
-def wi(n): sys.stdout.write(str(n) + '\n')
-def wia(a): sys.stdout.write(' '.join([str(x) for x in a]) + '\n')
+
+
+def rs():
+    return sys.stdin.readline().rstrip()
+
+
+def ri():
+    return int(sys.stdin.readline())
+
+
+def ria():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def ws(s):
+    sys.stdout.write(s + '\n')
+
+
+def wi(n):
+    sys.stdout.write(str(n) + '\n')
+
+
+def wia(a):
+    sys.stdout.write(' '.join([str(x) for x in a]) + '\n')
 
 
 MOD = 10 ** 9 + 7
@@ -25,12 +43,14 @@ def convex_hull_trick(K, M, integer=True):
         hull_x: interval j and j + 1 is separated by x = hull_x[j], (hull_x[j] is the last x in interval j)
     """
     if integer:
-        def intersect(i, j): return (M[j] - M[i]) // (K[i] - K[j])
+
+        def intersect(i, j):
+            return (M[j] - M[i]) // (K[i] - K[j])
     else:
-        def intersect(i, j): return (M[j] - M[i]) / (K[i] - K[j])
 
+        def intersect(i, j):
+            return (M[j] - M[i]) / (K[i] - K[j])
     assert len(K) == len(M)
-
     hull_i = []
     hull_x = []
     order = sorted(list(range(len(K))), key=K.__getitem__)
@@ -54,7 +74,7 @@ def convex_hull_trick(K, M, integer=True):
                     hull_i.append(i)
                     hull_x.append(x)
                     break
-    return hull_i, hull_x
+    return (hull_i, hull_x)
 
 
 def nn2(n):
@@ -62,62 +82,47 @@ def nn2(n):
 
 
 def solve(n, m, q, edges):
-    # k < m
-    # dp[v][k] - max path cost ending in v and having k edges
     dp = [[-INF] * (m + 1) for _ in range(n)]
     mk = [0] * (m + 1)
-
     dp[0][0] = 0
-
     for k in range(1, m + 1):
         for e in edges:
             if dp[e[0]][k - 1] == -INF:
                 continue
             dp[e[1]][k] = max(dp[e[1]][k], dp[e[0]][k - 1] + e[2])
             mk[k] = max(mk[k], dp[e[1]][k])
-
     ans = sum(mk) % MOD
     if q > m:
         intersect = [dp[i][m] for i in range(n)]
         slope = [0] * n
-
         for e in edges:
             if e[2] > slope[e[0]]:
                 slope[e[0]] = e[2]
-
-        hull_i, hull_x = convex_hull_trick(slope, intersect)
-
+        (hull_i, hull_x) = convex_hull_trick(slope, intersect)
         lt = 0
-        for i, j in enumerate(hull_i):
+        for (i, j) in enumerate(hull_i):
             wt = intersect[j]
             w = slope[j]
-
             until = min(q if i == len(hull_x) else hull_x[i], q - m)
             if until <= 0:
                 continue
-
-            active = (until - lt)
-
+            active = until - lt
             ans = (ans + active * wt) % MOD
-
             min_uses = lt
             max_uses = lt + active
-
             times = nn2(max_uses) - nn2(min_uses)
             ans = (ans + times * w) % MOD
-
             lt = until
             if lt == q - m:
                 break
-
     return ans
 
 
 def main():
-    n, m, q = ria()
+    (n, m, q) = ria()
     e = []
     for _ in range(m):
-        u, v, w = ria()
+        (u, v, w) = ria()
         u -= 1
         v -= 1
         e.append((u, v, w))

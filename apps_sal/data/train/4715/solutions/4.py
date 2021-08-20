@@ -1,4 +1,5 @@
 def build_palindrome(s, i=0):
+
     def bp(s):
         a = s + s[:i][::-1]
         if a == a[::-1]:

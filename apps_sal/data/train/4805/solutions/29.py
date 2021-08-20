@@ -4,6 +4,6 @@ def check(seq, elem):
         if i == elem:
             grade += 1
     if grade > 0:
-        return(True)
+        return True
     else:
-        return(False)
+        return False

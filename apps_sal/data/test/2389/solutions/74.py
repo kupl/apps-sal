@@ -1,4 +1,4 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 arr = [input() for _ in range(n)]
 ans = []
 for i in range(n):
@@ -15,15 +15,14 @@ for i in range(n):
         elif a == 0 and b == 0:
             print('No')
             break
+        elif a >= b:
+            a -= 1
+            b += 1
+            ans.append('B')
         else:
-            if a >= b:
-                a -= 1
-                b += 1
-                ans.append('B')
-            else:
-                a += 1
-                b -= 1
-                ans.append('A')
+            a += 1
+            b -= 1
+            ans.append('A')
     elif arr[i] == 'AC':
         if a == 1 and c == 1:
             if i == n - 1 or arr[i + 1] == 'AC' or arr[i + 1] == 'AB':
@@ -37,15 +36,14 @@ for i in range(n):
         elif a == 0 and c == 0:
             print('No')
             break
+        elif a >= c:
+            a -= 1
+            c += 1
+            ans.append('C')
         else:
-            if a >= c:
-                a -= 1
-                c += 1
-                ans.append('C')
-            else:
-                a += 1
-                c -= 1
-                ans.append('A')
+            a += 1
+            c -= 1
+            ans.append('A')
     elif arr[i] == 'BC':
         if b == 1 and c == 1:
             if i == n - 1 or arr[i + 1] == 'BC' or arr[i + 1] == 'AB':
@@ -59,15 +57,14 @@ for i in range(n):
         elif b == 0 and c == 0:
             print('No')
             break
+        elif b >= c:
+            b -= 1
+            c += 1
+            ans.append('C')
         else:
-            if b >= c:
-                b -= 1
-                c += 1
-                ans.append('C')
-            else:
-                b += 1
-                c -= 1
-                ans.append('B')
+            b += 1
+            c -= 1
+            ans.append('B')
 else:
     print('Yes')
     for i in range(n):

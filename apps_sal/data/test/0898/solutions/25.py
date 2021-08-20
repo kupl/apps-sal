@@ -1,5 +1,5 @@
 import bisect
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 divd = []
 i = 1
 while i * i <= M:

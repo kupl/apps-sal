@@ -1,4 +1,3 @@
-# cook your dish here
 def check(n):
     l = list(map(int, str(n)))
     t = len(l)
@@ -7,7 +6,6 @@ def check(n):
         if l[i] < l[i - 1]:
             l[i - 1] -= 1
             p = i - 1
-
     for i in range(p + 1, t):
         l[i] = 9
     return int(''.join(map(str, l)))

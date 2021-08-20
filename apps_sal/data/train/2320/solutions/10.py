@@ -6,4 +6,4 @@ a.sort(reverse=True)
 b.sort()
 for i in range(n):
     res[b[i][1]] = a[i]
-print(" ".join(map(str, res)))
+print(' '.join(map(str, res)))

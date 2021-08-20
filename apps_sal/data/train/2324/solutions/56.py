@@ -1,8 +1,7 @@
-# Snuke vs Fennec
 N = int(input())
 tree = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     tree[a].append(b)
@@ -25,15 +24,13 @@ def dist(n, lis):
 
 from_feneck = dist(0, [-1] * N)
 from_Snuke = dist(N - 1, [-1] * N)
-
 feneck = 0
-for i, j in zip(from_feneck, from_Snuke):
+for (i, j) in zip(from_feneck, from_Snuke):
     if i <= j:
         feneck += 1
     else:
         feneck -= 1
-
 if feneck <= 0:
-    print("Snuke")
+    print('Snuke')
 else:
-    print("Fennec")
+    print('Fennec')

@@ -4,9 +4,8 @@ ATSTNG's ejudge Python3 solution template
 """
 import sys
 import queue
-
 try:
-    import dev_act_ffc429465ab634  # empty file in directory
+    import dev_act_ffc429465ab634
     DEV = True
 except:
     DEV = False
@@ -18,7 +17,8 @@ def log(*s):
 
 
 class EJudge:
-    def __init__(self, problem="default", reclim=1 << 30):
+
+    def __init__(self, problem='default', reclim=1 << 30):
         self.problem = problem
         sys.setrecursionlimit(reclim)
 
@@ -52,6 +52,7 @@ class EJudge:
 
 
 class IntReader:
+
     def __init__(self):
         self.ost = queue.Queue()
 
@@ -71,19 +72,19 @@ class IntReader:
         return res
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
 fmap = lambda f, *l: list(map(f, *l))
-def parse_int(): return fmap(int, input().split())
 
 
-# input
-n, t1, t2, t3 = parse_int()
+def parse_int():
+    return fmap(int, input().split())
+
+
+(n, t1, t2, t3) = parse_int()
 t3 = min(t3, t2 + t1, t1 * 3)
 t2 = min(t2, t1 * 2, t3 * 2)
 t1 = min(t1, t3 + t2, t3 * 3)
-
 n = n % 4
 if n == 0:
     ans = 0
@@ -93,5 +94,4 @@ if n == 2:
     ans = t2
 if n == 3:
     ans = t1
-
 print(ans)

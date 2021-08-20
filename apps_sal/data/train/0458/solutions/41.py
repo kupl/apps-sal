@@ -1,10 +1,11 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         ans = len(nums)
         diff = sum(nums) % p
         total = 0
         cmods = {}
-        for i, x in enumerate(nums):
+        for (i, x) in enumerate(nums):
             total += x
             target = (total - diff) % p
             if total % p == diff:

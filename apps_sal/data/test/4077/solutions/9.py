@@ -2,16 +2,21 @@ import math
 import sys
 from collections import defaultdict
 
-# input = sys.stdin.readline
+
+def rt():
+    return list(map(int, input().split()))
 
 
-def rt(): return list(map(int, input().split()))
-def ri(): return int(input())
-def rl(): return list(map(int, input().split()))
+def ri():
+    return int(input())
+
+
+def rl():
+    return list(map(int, input().split()))
 
 
 def main():
-    n, m = rt()
+    (n, m) = rt()
     a = rl()
 
     def greaterCount(m):
@@ -30,7 +35,6 @@ def main():
             res += add
             sums[s] += 1
         return res
-
     print(greaterCount(m) - greaterCount(m + 1))
 
 

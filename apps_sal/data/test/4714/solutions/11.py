@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
 for i in range(a, b + 1):
     num = 0
@@ -9,6 +9,4 @@ for i in range(a, b + 1):
         num = num * 10 + r
     if i == num:
         ans += 1
-
-
 print(ans)

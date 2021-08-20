@@ -2,9 +2,12 @@ import collections
 
 
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
-        def T(): return collections.defaultdict(T)
-        trie, res = T(), 0
+
+        def T():
+            return collections.defaultdict(T)
+        (trie, res) = (T(), 0)
         data = [[trie, set()] for _ in range(len(s) - minSize + 1)]
         for i in range(minSize):
             for j in range(len(s) - minSize + 1):

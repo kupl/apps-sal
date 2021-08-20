@@ -1,4 +1,4 @@
-rest, people = map(int, input().split())
+(rest, people) = map(int, input().split())
 types = list(map(int, input().split()))
 a = dict()
 for elem in types:

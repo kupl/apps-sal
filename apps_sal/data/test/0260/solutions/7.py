@@ -3,7 +3,7 @@ C = [[int(0) for i in range(MX_BIT)] for j in range(MX_BIT)]
 
 
 def ck(x, i):
-    return (x >> i) & 1
+    return x >> i & 1
 
 
 def tot_bits(x):
@@ -30,17 +30,17 @@ def solve(x, k):
 
 
 mkt()
-m, k = list(input().split())
+(m, k) = list(input().split())
 m = int(m)
 k = int(k)
 l = 1
-r = 1e18
+r = 1e+18
 if not m:
     l = 1
 else:
     while l < r:
         mid = int((l + r) // 2)
-        if (solve(2 * mid, k) - solve(mid, k)) < m:
+        if solve(2 * mid, k) - solve(mid, k) < m:
             l = mid + 1
         else:
             r = mid

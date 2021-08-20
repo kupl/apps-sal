@@ -1,4 +1,4 @@
-x, y, k = map(int, input().split(' '))
+(x, y, k) = map(int, input().split(' '))
 
 
 def nxt(lst):
@@ -25,9 +25,8 @@ for i in range(k - 1):
     a4 = a[1]
     a = nxt(a)
     print(2, a1, a2, a3, a4)
-
 xx = []
 print(x * y - 2 * (k - 1), end=' ')
-while (nxt(a) != [-420420, -420]):
+while nxt(a) != [-420420, -420]:
     print(a[0], a[1], end=' ')
     a = nxt(a)

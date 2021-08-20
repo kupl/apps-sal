@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     timetable = list(map(int, input().split()))
     i = 0
     j = d

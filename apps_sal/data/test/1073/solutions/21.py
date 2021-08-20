@@ -15,10 +15,9 @@ for i in range(le):
     l.append(curr[:])
 l2 = []
 for i in range(len(l)):
-    if not(l[i] in l2):
+    if not l[i] in l2:
         l2.append(l[i][:])
 l3 = [0] * len(l2)
-
 for i in range(len(l2)):
     for j in range(len(l) - 1, -1, -1):
         if l2[i] == l[j]:
@@ -26,5 +25,5 @@ for i in range(len(l2)):
             l.pop(j)
 out = 0
 for val in l3:
-    out += (val) * (val - 1) // 2
+    out += val * (val - 1) // 2
 print(out)

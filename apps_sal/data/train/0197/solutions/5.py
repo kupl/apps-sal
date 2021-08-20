@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s: str) -> bool:
         if len(s) % 3 != 0:
             return False
@@ -8,7 +9,7 @@ class Solution:
         for i in s:
             if i != 'c':
                 stack.append(i)
-            elif len(stack) >= 2 and stack[-1] == 'b' and stack[-2] == 'a':
+            elif len(stack) >= 2 and stack[-1] == 'b' and (stack[-2] == 'a'):
                 stack.pop()
                 stack.pop()
             else:

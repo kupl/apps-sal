@@ -1,6 +1,7 @@
 class Solution:
 
     def coinChange(self, coins: List[int], amount: int) -> int:
+
         def helper(coins, amount, dp):
             if amount < 0:
                 return float('inf')
@@ -12,11 +13,8 @@ class Solution:
             for i in range(len(coins)):
                 use_ci = 1 + helper(coins, amount - coins[i], dp)
                 ans.append(use_ci)
-
             dp[amount] = min(ans)
-
             return dp[amount]
-
         if amount <= 0:
             return 0
         dp = {}

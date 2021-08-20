@@ -7,5 +7,5 @@ for i in range(n):
     x.append(s)
 print(6 - len(x))
 for i in a:
-    if(i not in x):
+    if i not in x:
         print(l[a.index(i)])

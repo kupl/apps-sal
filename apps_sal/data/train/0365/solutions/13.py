@@ -1,10 +1,9 @@
 class Solution:
-    def uniqueLetterString(self, s: str) -> int:
 
+    def uniqueLetterString(self, s: str) -> int:
         last = collections.defaultdict(int)
         count = 0
-        for i, char in enumerate(s):
-            # print(last)
+        for (i, char) in enumerate(s):
             for comp in last:
                 if comp != char:
                     count += last[comp][1]

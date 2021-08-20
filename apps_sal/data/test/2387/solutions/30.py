@@ -1,7 +1,4 @@
-# F
-
 N = int(input())
-
 list_plus = []
 list_minus = []
 for i in range(N):
@@ -14,7 +11,6 @@ for i in range(N):
         else:
             state -= 1
         min_state = min(min_state, state)
-
     if state > 0:
         list_plus.append((min_state, state))
     else:
@@ -23,7 +19,7 @@ for i in range(N):
 
 def compute(arr):
     total_state = 0
-    for min_state, state in arr[::-1]:
+    for (min_state, state) in arr[::-1]:
         if total_state + min_state < 0:
             print('No')
             return
@@ -35,5 +31,4 @@ list_plus.sort()
 total_state_plus = compute(list_plus)
 list_minus.sort()
 total_state_minus = compute(list_minus)
-
 print('Yes' if total_state_plus == total_state_minus else 'No')

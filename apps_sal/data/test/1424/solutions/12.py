@@ -1,7 +1,7 @@
 def count_one(n):
     c = 0
-    while(n):
-        n = n & (n - 1)
+    while n:
+        n = n & n - 1
         c = c + 1
     return c
 
@@ -17,6 +17,6 @@ for i in range(m + 1):
     a.append(int(istr))
 ans = 0
 for i in range(m):
-    if(count_one(a[i] ^ a[m]) <= k):
+    if count_one(a[i] ^ a[m]) <= k:
         ans = ans + 1
 print(ans)

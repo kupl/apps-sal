@@ -1,6 +1,6 @@
 N = int(input())
 Xs = list(map(int, input().split()))
-for i, x in enumerate(Xs):
+for (i, x) in enumerate(Xs):
     if i == 0:
         print(Xs[1] - x, Xs[-1] - x)
         continue

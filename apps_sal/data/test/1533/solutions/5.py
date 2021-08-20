@@ -15,7 +15,7 @@ s = set([])
 for _ in range(n):
     x = input()
     if x in s:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     s.add(x)

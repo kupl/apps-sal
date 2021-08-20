@@ -1,7 +1,8 @@
 class Solution:
+
     def maxWidthRamp(self, A: List[int]) -> int:
-        stack, ans = [], 0
-        for i, val in enumerate(A):
+        (stack, ans) = ([], 0)
+        for (i, val) in enumerate(A):
             if not stack or A[stack[-1]] > val:
                 stack.append(i)
         for j in reversed(list(range(len(A)))):

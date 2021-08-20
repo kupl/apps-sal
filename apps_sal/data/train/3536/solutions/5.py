@@ -2,7 +2,7 @@ def cog_RPM(cogs, n):
     output = []
     if n % 2 == 0:
         a = 1
-        if (len(cogs) % 2 - 1) == 0:
+        if len(cogs) % 2 - 1 == 0:
             b = 1
         else:
             b = -1

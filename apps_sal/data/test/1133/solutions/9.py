@@ -1,10 +1,6 @@
 n = int(input())
-
-
 inp = [input() for i in range(n)]
-
 gets = []
-
 for line in inp:
     dt = {}
     for c in line:
@@ -18,9 +14,7 @@ for line in inp:
     if len(dt) > 2:
         continue
     gets.append(dt)
-
 lets = 'abcdefghijklmnopqrstuvwxyz'
-
 ans = -1
 for c1 in lets:
     for c2 in lets:
@@ -37,5 +31,4 @@ for c1 in lets:
             cans += sum(l.values())
         if cans > ans:
             ans = cans
-
 print(ans)

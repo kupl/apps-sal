@@ -19,15 +19,14 @@ def solve():
             if s == set():
                 p[parity(x)] += 1
                 s.add(x)
-            else:
-                if x not in s:
-                    se = set()
-                    for j in s:
-                        se.add(j ^ x)
-                        p[parity(j ^ x)] += 1
-                    s = s.union(se)
-                    s.add(x)
-                    p[parity(x)] += 1
+            elif x not in s:
+                se = set()
+                for j in s:
+                    se.add(j ^ x)
+                    p[parity(j ^ x)] += 1
+                s = s.union(se)
+                s.add(x)
+                p[parity(x)] += 1
             print(p[0], p[1])
 
 

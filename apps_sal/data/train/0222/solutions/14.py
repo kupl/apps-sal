@@ -2,9 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         N = len(A)
-        idx = {n: i for i, n in enumerate(A)}
+        idx = {n: i for (i, n) in enumerate(A)}
         dp = defaultdict(lambda: 2)
         res = 0
         for i in range(N):

@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 s = sum(a)
-if (s % k > 0):
-    print("No")
+if s % k > 0:
+    print('No')
 else:
     p = s / k
     ar = []
@@ -16,8 +16,8 @@ else:
             continue
         cur += a[i]
         if cur > p:
-            print("No")
+            print('No')
             break
     else:
-        print("Yes")
+        print('Yes')
         print(*ar)

@@ -19,7 +19,7 @@ def find(i):
 
 def union(i, j):
     if rank[i] > rank[j]:
-        i, j = j, i
+        (i, j) = (j, i)
     elif rank[i] == rank[j]:
         rank[j] += 1
     p[i] = j
@@ -33,18 +33,17 @@ def dfs(i, p):
             dfs(j, i)
 
 
-n, m, k, w = put()
+(n, m, k, w) = put()
 s = [''] * k
 for i in range(k):
     for j in range(n):
         s[i] += input()
 edge = []
 k += 1
-rank = [0] * (k)
+rank = [0] * k
 p = list(range(k))
 cost = 0
 tree = [[] for i in range(k)]
-
 for i in range(k):
     for j in range(i + 1, k):
         if i == 0:
@@ -52,9 +51,8 @@ for i in range(k):
         else:
             z = diff(i - 1, j - 1) * w
         edge.append((z, i, j))
-
 edge.sort()
-for z, i, j in edge:
+for (z, i, j) in edge:
     u = find(i)
     v = find(j)
     if u != v:
@@ -62,6 +60,5 @@ for z, i, j in edge:
         cost += z
         tree[i].append(j)
         tree[j].append(i)
-
 print(cost)
 dfs(0, -1)

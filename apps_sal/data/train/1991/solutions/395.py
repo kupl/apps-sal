@@ -1,7 +1,7 @@
 class Solution:
-    # dp(loc, fuel) = sum(dp(pre_loc, fuel + abs(loc-pre_loc)))
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
 
         @lru_cache(None)
         def dp(locId, curFuel):
@@ -21,6 +21,5 @@ class Solution:
                     continue
                 count = (count + dp(i, preFuel)) % M
             return count % M
-
         ans = sum([dp(finish, f) % M for f in range(fuel)]) % M
         return ans + 1 if start == finish else ans

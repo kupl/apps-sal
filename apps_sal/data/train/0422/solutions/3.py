@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPalindrome(self, s):
         if s == s[::-1]:
             return s

@@ -1,10 +1,8 @@
 n = input()
 t = list(map(int, input().split()))
-
 n = [0 for _ in range(90)]
 for i in t:
     n[i - 1] = 1
-
 s = 0
 ni = 0
 for i in n:
@@ -15,5 +13,4 @@ for i in n:
     elif i == 0:
         ni += 1
     s += 1
-
 print(s)

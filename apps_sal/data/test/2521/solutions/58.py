@@ -20,7 +20,7 @@ def main():
     for i in range(N):
         x = -heappushpop(H, -A[2 * N - i - 1])
         C[i + 1] = C[i] + A[2 * N - i - 1] - x
-    print(max(b - c for b, c in zip(B, C[::-1])))
+    print(max((b - c for (b, c) in zip(B, C[::-1]))))
 
 
 def __starting_point():

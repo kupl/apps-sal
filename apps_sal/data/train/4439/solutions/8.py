@@ -1,7 +1,7 @@
 def div_num(a, b):
     if a > b:
-        return "Error"
-    return min((-divnum(n), n) for n in range(a, b + 1))[1]
+        return 'Error'
+    return min(((-divnum(n), n) for n in range(a, b + 1)))[1]
 
 
 def divnum(n):

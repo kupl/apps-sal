@@ -9,7 +9,7 @@ for i in c:
         i //= 3
         p += 1
     a += [[] for j in range(p - len(a) + 1)]
-    heappush(a[p], i * 3**p)
+    heappush(a[p], i * 3 ** p)
 o = ''
 n = len(a)
 for i in range(1, n + 1):

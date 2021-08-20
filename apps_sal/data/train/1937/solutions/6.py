@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.name = name
         self.is_dead = False
@@ -6,6 +7,7 @@ class Node:
 
 
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.king_name = kingName
         self.nodes = {kingName: Node(kingName)}
@@ -30,9 +32,3 @@ class ThroneInheritance:
                 getInheritanceOrderRecursive(child)
         getInheritanceOrderRecursive(self.nodes[self.king_name])
         return acc
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

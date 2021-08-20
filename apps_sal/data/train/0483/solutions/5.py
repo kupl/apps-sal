@@ -1,6 +1,7 @@
 class Solution:
+
     def maxArea(self, items):
-        '''
+        """
         Hi Lo Technique
         -----------------------
         Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate 
@@ -15,28 +16,20 @@ class Solution:
         (4) Move the smallest pointer in.
         (5) Repeat steps 2-4
         (6) Return the max area
-        '''
+        """
         max_area = 0
         lo = 0
         hi = len(items) - 1
-
-        while(lo < hi):
-
-            # get value stored for height. calculate width.
+        while lo < hi:
             height_a = items[lo]
             height_b = items[hi]
             width = hi - lo
             height = min(height_a, height_b)
-
-            # calculate area (height * width)
             area = height * width
             if area > max_area:
                 max_area = area
-
-            # move the smaller pointer in
             if height_a < height_b:
                 lo += 1
             else:
                 hi -= 1
-
-        return(max_area)
+        return max_area

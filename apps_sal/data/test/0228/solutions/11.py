@@ -1,11 +1,7 @@
 n = int(input())
-
 arr = [int(x) for x in input().split()]
-
 arr.sort()
-
 x = 1
-
 while True:
     if arr.count(x) > n // 2:
         print('Bob')

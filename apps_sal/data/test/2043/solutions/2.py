@@ -11,12 +11,9 @@ for i in name:
         break
     else:
         left_pos += 1
-
-
 if isfind:
     for i in name[::-1]:
         right_pos = finder.rfind(i, 0, right_pos)
-
 if right_pos >= left_pos and isfind:
     print(right_pos - left_pos + 1)
 else:

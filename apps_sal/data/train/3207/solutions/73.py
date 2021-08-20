@@ -1,8 +1,8 @@
 def reverseWords(s):
     l = []
-    l = s.split(" ")
+    l = s.split(' ')
     l.reverse()
-    f = ""
+    f = ''
     for i in l:
-        f += i + " "
+        f += i + ' '
     return f[:len(f) - 1]

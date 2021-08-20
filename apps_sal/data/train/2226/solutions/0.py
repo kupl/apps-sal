@@ -1,11 +1,11 @@
 class SegmentTree:
+
     def __init__(self, data, default=0, func=max):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(list(range(_size))):
@@ -32,7 +32,6 @@ class SegmentTree:
         """func of data[start, stop)"""
         start += self._size
         stop += self._size
-
         res_left = res_right = self._default
         while start < stop:
             if start & 1:
@@ -43,16 +42,14 @@ class SegmentTree:
                 res_right = self._func(self.data[stop], res_right)
             start >>= 1
             stop >>= 1
-
         return self._func(res_left, res_right)
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
 n = int(input())
 s = input()
-
 pref = []
 curr = 0
 for c in s:
@@ -61,7 +58,6 @@ for c in s:
     else:
         curr = 0
     pref.append(curr)
-
 suff = []
 curr = 0
 for c in s[::-1]:
@@ -71,10 +67,7 @@ for c in s[::-1]:
         curr = 0
     suff.append(curr)
 suff.reverse()
-
-
 st = SegmentTree(suff)
-
 out = 0
 add = 0
 for i in range(n):
@@ -87,7 +80,6 @@ for i in range(n):
                 lo = t
             else:
                 hi = t
-        add += (i - lo)
-    # print(add)
+        add += i - lo
     out += add
 print(out)

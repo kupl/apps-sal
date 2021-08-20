@@ -24,5 +24,5 @@ for i in range(n):
         ans[i] += (cnt + 1) // 2
         ans[i - 1] += cnt // 2
 for i in range(n - 1):
-    print(ans[i], end=" ")
+    print(ans[i], end=' ')
 print(ans[n - 1])

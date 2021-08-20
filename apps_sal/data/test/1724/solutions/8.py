@@ -8,7 +8,6 @@ for k in range(n):
     sum += a[k] * s[k]
 if sum > max:
     max = sum
-
 for i in range(1, n):
     p = s[i]
     q = s[i - 1]
@@ -22,6 +21,4 @@ for i in range(1, n):
             s[j] = 1
         if sum > max:
             max = sum
-
-
 print(max)

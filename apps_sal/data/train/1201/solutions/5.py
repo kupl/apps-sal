@@ -23,15 +23,12 @@ def solve(l, r, c, row, col, po):
     return count
 
 
-# cook your dish here
 for _ in range(int(input())):
-    r, c, q = map(int, input().split())
-
+    (r, c, q) = map(int, input().split())
     l = []
     for i in range(r):
         a = list(map(int, input().split()))
         l.append(a)
-
     for i in range(q):
-        row, col, po = map(int, input().split())
+        (row, col, po) = map(int, input().split())
         print(solve(l, r, c, row - 1, col - 1, po))

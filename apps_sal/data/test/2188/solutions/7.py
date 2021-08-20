@@ -21,10 +21,10 @@ else:
 if small_best == True:
     print(len(small))
     for tup in small:
-        print(idx[tup], end=" ")
+        print(idx[tup], end=' ')
     print()
 else:
     print(len(large))
     for tup in large:
-        print(idx[tup], end=" ")
+        print(idx[tup], end=' ')
     print()

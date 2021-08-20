@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 for i in range(q):
     a = int(input())
     if a % 2 != 0:

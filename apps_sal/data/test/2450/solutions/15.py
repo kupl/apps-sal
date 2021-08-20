@@ -1,7 +1,6 @@
 T = int(input())
-
 for t in range(T):
-    N, M, x, y = [int(_) for _ in input().split()]
+    (N, M, x, y) = [int(_) for _ in input().split()]
     answer = 0
     for i in range(N):
         row = input().split('*')

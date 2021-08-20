@@ -3,17 +3,16 @@ def gen(a, b):
     for i in range(k):
         if a[i] == b[i]:
             gener += a[i]
+        elif 'S' not in (a[i], b[i]):
+            gener += 'S'
+        elif 'E' not in (a[i], b[i]):
+            gener += 'E'
         else:
-            if 'S' not in (a[i], b[i]):
-                gener += 'S'
-            elif 'E' not in (a[i], b[i]):
-                gener += 'E'
-            else:
-                gener += 'T'
+            gener += 'T'
     return gener
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 cards = []
 diff = set()
 for i in range(n):

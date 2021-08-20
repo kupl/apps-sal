@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 num = []
 used = []
 for i in range(n):
@@ -46,7 +46,7 @@ for i in range(1, n - 1):
 fl = True
 for i in range(n):
     for j in range(m):
-        if num[i][j] == '*' and not used[i][j]:
+        if num[i][j] == '*' and (not used[i][j]):
             fl = False
 if not fl:
     print(-1)

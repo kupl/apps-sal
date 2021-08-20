@@ -8,4 +8,4 @@ for char in str:
     else:
         one += 1
 count = min(zero, one)
-print(n - (count * 2))
+print(n - count * 2)

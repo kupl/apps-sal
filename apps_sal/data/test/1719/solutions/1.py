@@ -1,7 +1,6 @@
 n = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 dp = [{} for _ in range(n + 1)]
-
 moji = ['A', 'C', 'G', 'T']
 for c1 in moji:
     for c2 in moji:
@@ -13,7 +12,6 @@ for c1 in moji:
                 dp[3][mojis] += 1
             else:
                 dp[3][mojis] = 1
-
 for i in range(4, n + 1):
     for c in moji:
         for c1 in moji:
@@ -25,9 +23,9 @@ for i in range(4, n + 1):
                     nowmoji = c2 + c3 + c
                     if nowmoji in ['AGC', 'GAC', 'ACG']:
                         continue
-                    if c1 == 'A' and c3 == 'G' and c == 'C':
+                    if c1 == 'A' and c3 == 'G' and (c == 'C'):
                         continue
-                    if c1 == 'A' and c2 == 'G' and c == 'C':
+                    if c1 == 'A' and c2 == 'G' and (c == 'C'):
                         continue
                     if nowmoji in dp[i]:
                         dp[i][nowmoji] += dp[i - 1][mojis] % mod
@@ -35,5 +33,4 @@ for i in range(4, n + 1):
                     else:
                         dp[i][nowmoji] = dp[i - 1][mojis] % mod
                         dp[i][nowmoji] %= mod
-
 print(sum(dp[n].values()) % mod)

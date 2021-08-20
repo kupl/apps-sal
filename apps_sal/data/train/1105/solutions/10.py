@@ -2,7 +2,7 @@ t = int(input())
 while t:
     n = int(input())
     dish = list(map(int, input().split()))
-    b0, b1 = 0, 0
+    (b0, b1) = (0, 0)
     mins = 0
     dish.sort(reverse=True)
     for i in dish:

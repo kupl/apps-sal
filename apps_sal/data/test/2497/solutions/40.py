@@ -3,7 +3,7 @@ import itertools
 
 def enum(a):
     t = [0]
-    for a1, a2 in itertools.combinations(a, 2):
+    for (a1, a2) in itertools.combinations(a, 2):
         t.append(a1[0] - a2[0])
         t.append(a2[0] - a1[0])
         t.append((a1[0] - a2[0]) / 2)
@@ -26,25 +26,23 @@ def calc(x_trip, y_trip, t):
 
 
 n = int(input())
-x_r, x_n, x_l = [], [], []
-y_u, y_n, y_d = [], [], []
+(x_r, x_n, x_l) = ([], [], [])
+(y_u, y_n, y_d) = ([], [], [])
 for _ in range(n):
-    x, y, d = input().strip().split()
-    x, y = int(x), int(y)
-    if d == "R":
+    (x, y, d) = input().strip().split()
+    (x, y) = (int(x), int(y))
+    if d == 'R':
         x_r.append(x)
-    elif d == "L":
+    elif d == 'L':
         x_l.append(x)
     else:
         x_n.append(x)
-
-    if d == "U":
+    if d == 'U':
         y_u.append(y)
-    elif d == "D":
+    elif d == 'D':
         y_d.append(y)
     else:
         y_n.append(y)
-
 x_r.sort()
 x_n.sort()
 x_l.sort()
@@ -62,7 +60,6 @@ def ht(x, d):
 x_list = ht(x_r, 1) + ht(x_n, 0) + ht(x_l, -1)
 y_list = ht(y_u, 1) + ht(y_n, 0) + ht(y_d, -1)
 t = enum(x_list + y_list)
-
 ans = calc(x_list, y_list, 0)
 for t1 in t:
     if t1 < 0:

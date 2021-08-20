@@ -11,4 +11,4 @@ for i in range(1, n + 1):
     ans += s[n] - s[i - 1] - (n - i + 1) * a[i - 1]
 ans = ans * 2 + sum(a)
 ans = Fraction(ans, n)
-print("{0:d} {1:d}".format(ans.numerator, ans.denominator))
+print('{0:d} {1:d}'.format(ans.numerator, ans.denominator))

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     p = list(map(int, input().split()))
     l = list(map(int, input().split()))
     one = 0
@@ -11,11 +11,10 @@ for _ in range(int(input())):
         if l[i] == 0:
             if p[i] < mz:
                 mz = p[i]
-        else:
-            if p[i] < mo:
-                mo = p[i]
+        elif p[i] < mo:
+            mo = p[i]
     ans = s + mo + mz
     if ans <= 100:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

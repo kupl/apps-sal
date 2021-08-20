@@ -8,4 +8,4 @@ def select(memory):
         elif h:
             hates.add(name.lstrip('!'))
             h = False
-    return ', '.join(name for name in memory.split(', ') if name.lstrip('!') not in hates)
+    return ', '.join((name for name in memory.split(', ') if name.lstrip('!') not in hates))

@@ -1,8 +1,6 @@
 import heapq
-
 N = int(input())
 A = [int(a) for a in input().split()]
-
 L = A[:2 * N]
 L.sort()
 s1 = 0
@@ -24,7 +22,6 @@ for i in range(N):
         dic[L[i + N]] = 1
     s2 += A[i + 2 * N]
     heapq.heappush(h2, -A[i + 2 * N])
-
 ans = s1 - s2
 for i in range(2 * N - 1, N - 1, -1):
     if A[i] + h2[0] < 0:
@@ -50,5 +47,4 @@ for i in range(2 * N - 1, N - 1, -1):
     else:
         dic_h[A[i]] -= 1
     ans = max(ans, s1 - s2)
-
 print(ans)

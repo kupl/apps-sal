@@ -2,9 +2,8 @@ from sys import stdin, stdout, maxsize
 from math import sqrt, log, factorial, gcd
 from collections import defaultdict as D
 from bisect import insort
-
 for _ in range(int(input())):
-    x, q = map(int, input().split())
+    (x, q) = map(int, input().split())
     b = list(bin(x))
     b = b[2:]
     b = b[::-1]
@@ -19,13 +18,13 @@ for _ in range(int(input())):
             x = int(input())
             if t == 1:
                 if d[x] == '1':
-                    print("ON")
+                    print('ON')
                 else:
-                    print("OFF")
+                    print('OFF')
             elif t == 2:
-                d[x] = "1"
+                d[x] = '1'
             else:
-                d[x] = "0"
+                d[x] = '0'
         else:
-            p, q = map(int, input().split())
-            d[p], d[q] = d[q], d[p]
+            (p, q) = map(int, input().split())
+            (d[p], d[q]) = (d[q], d[p])

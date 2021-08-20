@@ -2,7 +2,7 @@ n = int(input())
 
 
 def isPrime(x):
-    for j in range(2, round(x**0.5) + 1):
+    for j in range(2, round(x ** 0.5) + 1):
         if not x % j:
             return False
     return True

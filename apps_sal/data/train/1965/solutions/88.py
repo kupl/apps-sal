@@ -1,4 +1,5 @@
 class dsu:
+
     def __init__(self, n):
         self.n = n
         self.par = [i for i in range(n + 1)]
@@ -19,13 +20,14 @@ class dsu:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         gr1 = collections.defaultdict(list)
         gr2 = collections.defaultdict(list)
         edges1 = []
         edges2 = []
         mp = {1: 1, 2: 1, 3: -1}
-        for typ, x, y in edges:
+        for (typ, x, y) in edges:
             if typ == 3 or typ == 1:
                 edges1.append([mp[typ], x, y])
             if typ == 3 or typ == 2:
@@ -36,13 +38,13 @@ class Solution:
         dsu2 = dsu(n)
         oth1 = oth2 = 0
         res = 0
-        for typ, x, y in edges1:
+        for (typ, x, y) in edges1:
             if dsu1.union(x, y):
                 if typ != -1:
                     res += 1
                 else:
                     oth1 += 1
-        for typ, x, y in edges2:
+        for (typ, x, y) in edges2:
             if dsu2.union(x, y):
                 if typ != -1:
                     res += 1

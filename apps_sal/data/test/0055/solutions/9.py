@@ -1,7 +1,7 @@
 from collections import Counter
-bits = (10**18).bit_length()
-n, k = map(int, input().split())
-num = Counter(i for i in range(bits) if (n >> i) & 1)
+bits = (10 ** 18).bit_length()
+(n, k) = map(int, input().split())
+num = Counter((i for i in range(bits) if n >> i & 1))
 k -= len(num)
 if k >= 0:
     print('Yes')

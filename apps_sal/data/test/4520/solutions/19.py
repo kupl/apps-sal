@@ -1,4 +1,4 @@
-scount, badness = [int(x) for x in input().split(' ')]
+(scount, badness) = [int(x) for x in input().split(' ')]
 segments = []
 length = 200
 for i in range(scount):

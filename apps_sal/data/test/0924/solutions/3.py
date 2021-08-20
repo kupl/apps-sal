@@ -1,6 +1,6 @@
 from math import gcd
-la, ra, ta = list(map(int, input().split()))
-lb, rb, tb = list(map(int, input().split()))
+(la, ra, ta) = list(map(int, input().split()))
+(lb, rb, tb) = list(map(int, input().split()))
 g = gcd(ta, tb)
 ra -= la
 temp = rb - lb

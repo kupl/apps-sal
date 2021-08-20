@@ -1,9 +1,21 @@
 from sys import maxsize, stdout, stdin
-mod = int(1e9 + 7)
-def I(): return int(stdin.readline())
-def lint(): return [int(x) for x in stdin.readline().split()]
-def S(): return input().strip()
-def grid(r, c): return [lint() for i in range(r)]
+mod = int(1000000000.0 + 7)
+
+
+def I():
+    return int(stdin.readline())
+
+
+def lint():
+    return [int(x) for x in stdin.readline().split()]
+
+
+def S():
+    return input().strip()
+
+
+def grid(r, c):
+    return [lint() for i in range(r)]
 
 
 for _ in range(I()):
@@ -16,7 +28,7 @@ for _ in range(I()):
     ideal = n // 2
     shift = ideal - idx
     for i in range(n):
-        arr[i] = (ls[(i - shift) % n])
+        arr[i] = ls[(i - shift) % n]
     if m in arr[:n // 2]:
         print(0)
     else:

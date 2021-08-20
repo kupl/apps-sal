@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input()
@@ -12,6 +11,6 @@ for _ in range(int(input())):
         if k == '1':
             c1 += 1
     if c == c1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

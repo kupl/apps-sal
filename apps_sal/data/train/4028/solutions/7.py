@@ -2,7 +2,7 @@ def riders(stations, station_x):
     stations.insert(station_x - 2, stations[station_x - 2])
     riders = 1
     miles = 0
-    for i, m in enumerate(stations):
+    for (i, m) in enumerate(stations):
         miles += m
         if miles > 100:
             miles = m

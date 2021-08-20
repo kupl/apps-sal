@@ -10,5 +10,4 @@ for j in range(N):
     else:
         dic[a] += 1
         ans += dic[a] - 1
-
 print(ans)

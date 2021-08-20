@@ -2,7 +2,6 @@ s = input().split()
 n = int(s[0])
 k = int(s[1])
 L = list(map(int, input().split()))
-
 lx = 0
 while L[lx] == 0:
     lx += 1
@@ -20,7 +19,7 @@ def good(l):
         tot += coeff * A[i]
         if tot >= k:
             return True
-        coeff = (coeff * (n - i - 1 + l)) // (n - i)
+        coeff = coeff * (n - i - 1 + l) // (n - i)
     return False
 
 

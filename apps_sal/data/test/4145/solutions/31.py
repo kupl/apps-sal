@@ -1,6 +1,5 @@
 from math import sqrt
 x = int(input())
-
 while True:
     isP = True
     for i in range(2, int(sqrt(x))):

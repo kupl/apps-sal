@@ -1,8 +1,6 @@
 import sys
 readline = sys.stdin.readline
-
 N = int(readline())
-
 ok = 0
 ng = 10 ** 18 + 1
 
@@ -19,5 +17,4 @@ while abs(ng - ok) > 1:
         ok = mid
     else:
         ng = mid
-
 print(N + 1 - ok)

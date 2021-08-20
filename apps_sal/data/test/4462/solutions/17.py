@@ -18,12 +18,10 @@ def main():
     n = int(input())
     a_lst = list(map(int, input().split()))
     flag = False
-
     multiple_of_4_count = 0
     for i in range(n):
         if multiple_of_4(a_lst[i]):
             multiple_of_4_count += 1
-
     if multiple_of_4_count >= n // 2:
         flag = True
     else:
@@ -33,10 +31,8 @@ def main():
                 even_count += 1
         tmp = n - 2 * multiple_of_4_count
         even_count -= multiple_of_4_count
-
         if even_count >= tmp:
             flag = True
-
     if flag:
         print('Yes')
     else:

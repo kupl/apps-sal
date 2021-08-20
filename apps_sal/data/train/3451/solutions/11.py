@@ -3,20 +3,20 @@ def mod3(n):
     while n % 3 == 0:
         n /= 3
         c += 1
-    return int(n % 3), c
+    return (int(n % 3), c)
 
 
 def triangle(row):
     rgb = {'R': 0, 'G': 1, 'B': 2}
-    RGB = "RGB"
+    RGB = 'RGB'
     n = len(row)
-    x, y = 1, 0
+    (x, y) = (1, 0)
     res = rgb[row[0]]
     for i in range(1, n):
-        xx, yy = mod3(n - i)
+        (xx, yy) = mod3(n - i)
         x = x * xx % 3
         y += yy
-        xx, yy = mod3(i)
+        (xx, yy) = mod3(i)
         x = x * xx % 3
         y -= yy
         if y == 0:

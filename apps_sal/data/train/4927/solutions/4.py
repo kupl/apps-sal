@@ -1,6 +1,5 @@
 from functools import reduce
 from operator import xor
-
 F = [[0] * 11 for i in range(10001)]
 for x in range(1, 11):
     F[x][x] = y = 1

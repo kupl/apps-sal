@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 M = [[0, 0, 0, 0] for i in range(n)]
 for i in range(1, min(m, 2 * n) + 1, 2):
     M[i // 2][1] = i

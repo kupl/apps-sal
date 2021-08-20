@@ -1,7 +1,7 @@
 n = int(input())
 f = [[0] * (n + 1) for i in range(n + 1)]
 g = [[0] * (n + 1) for i in range(n + 1)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(1, n + 1):
     f[0][i] = g[0][i - 1]
     g[0][i] = f[0][i - 1] + 1

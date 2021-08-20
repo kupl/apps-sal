@@ -1,7 +1,7 @@
 def readinput():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     v = list(map(int, input().split()))
-    return n, k, v
+    return (n, k, v)
 
 
 def main(n, k, v):
@@ -14,9 +14,7 @@ def main(n, k, v):
     for i in range(n):
         vv.append((i + 1, v[i]))
     vv.sort(key=lambda x: x[1])
-    # print(vv)
-
-    maxown = -10**7
+    maxown = -10 ** 7
     for kk in range(k + 1):
         if n < kk:
             own = ruisekiL[n]
@@ -24,7 +22,6 @@ def main(n, k, v):
             while m < n and vv[m][1] < 0:
                 own -= vv[i][1]
                 m += 1
-            # print(own)
             maxown = max(maxown, own)
         else:
             for l in range(kk // 2 + 1):
@@ -32,18 +29,15 @@ def main(n, k, v):
                     j = kk - i - l
                     jj = n - j + 1
                     own = ruisekiL[i] + ruisekiR[j]
-                    # print(i,j,own)
                     m = 0
                     mcnt = 0
-                    while(mcnt < l):
+                    while mcnt < l:
                         if i < vv[m][0] and vv[m][0] < jj:
                             m += 1
                             continue
-                        # print(i,jj,vv[m])
                         own -= vv[m][1]
                         mcnt += 1
                         m += 1
-                    # print(own)
                     maxown = max(own, maxown)
     return maxown
 
@@ -58,20 +52,17 @@ def main2(n, k, v):
     for i in range(n):
         vv.append((i + 1, v[i]))
     vv.sort(key=lambda x: x[1])
-    # print(vv)
-
-    maxown = -10**7
+    maxown = -10 ** 7
     for i in range(n + 1):
         for j in range(n + 1):
             if i + j > k or i + j > n:
                 break
             jj = n - j + 1
             own = ruisekiL[i] + ruisekiR[j]
-            # print(i,j,own)
             l = min(i + j, k - i - j)
             m = 0
             mcnt = 0
-            while(mcnt < l):
+            while mcnt < l:
                 if i < vv[m][0] and vv[m][0] < jj:
                     m += 1
                     continue
@@ -80,13 +71,12 @@ def main2(n, k, v):
                 own -= vv[m][1]
                 mcnt += 1
                 m += 1
-            # print(own)
             maxown = max(own, maxown)
     return maxown
 
 
 def __starting_point():
-    n, k, v = readinput()
+    (n, k, v) = readinput()
     ans = main2(n, k, v)
     print(ans)
 

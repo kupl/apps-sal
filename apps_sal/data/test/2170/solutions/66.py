@@ -1,13 +1,10 @@
-MOD = 10**9 + 7
-n, m = list(map(int, input().split()))
-
+MOD = 10 ** 9 + 7
+(n, m) = list(map(int, input().split()))
 U = max(n, m)
 fact = [0] * (U + 1)
 fact[0] = 1
 for i in range(1, U + 1):
     fact[i] = fact[i - 1] * i % MOD
-
-
 invfact = [0] * (U + 1)
 invfact[U] = pow(fact[U], MOD - 2, MOD)
 for i in reversed(list(range(U))):

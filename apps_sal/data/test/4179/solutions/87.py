@@ -1,6 +1,4 @@
-# ABC121
-# B Can you solve this?
-N, M, C = list(map(int, input().split()))
+(N, M, C) = list(map(int, input().split()))
 B = list(map(int, input().split()))
 A = [list(map(int, input().split())) for _ in range(N)]
 ans = 0

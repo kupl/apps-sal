@@ -6,15 +6,15 @@ for j in range(int(input())):
     top_marks = max(a)
     topper = []
     for i in range(len(a)):
-        if(a[i] >= 31):
+        if a[i] >= 31:
             marks += a[i]
-        if(a[i] < 31):
+        if a[i] < 31:
             backlok += 1
-        if(a[i] == top_marks):
+        if a[i] == top_marks:
             topper.append(i)
-    print(backlok, "{:0.2f}".format(marks / len(a), 2))
+    print(backlok, '{:0.2f}'.format(marks / len(a), 2))
     topper.sort(reverse=True)
     for i in topper:
-        print(i, " ")
+        print(i, ' ')
     for i in a:
         print(top_marks - i)

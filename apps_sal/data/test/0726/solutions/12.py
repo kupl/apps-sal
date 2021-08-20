@@ -1,6 +1,5 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = list(map(int, input().split()))
-
 l = set()
 for i in a:
     x = i + d

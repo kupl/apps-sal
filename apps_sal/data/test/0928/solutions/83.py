@@ -1,9 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = 0
 s = 0
-
 r = 0
 for l in range(n):
     while s < k:

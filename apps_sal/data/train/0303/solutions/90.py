@@ -1,9 +1,9 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         n = len(arr)
         dp = [0] * n
         currMax = 0
-
         for i in range(n):
             if i < k:
                 currMax = max(currMax, arr[i])

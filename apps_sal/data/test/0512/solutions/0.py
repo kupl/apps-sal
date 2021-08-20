@@ -1,5 +1,4 @@
 import sys
-
 readline = sys.stdin.readline
 MOD = 10 ** 9 + 7
 INF = float('INF')
@@ -11,33 +10,29 @@ def main():
     L = 2 * N
     floor = [[0, 0] for _ in range(L)]
     com = dict()
-
     for i in range(1, N + 1):
-        A, B = map(int, readline().split())
+        (A, B) = map(int, readline().split())
         com[i] = [-1, -1]
         if A != -1:
             if floor[A - 1][1] == 0:
                 floor[A - 1] = [i, 1]
                 com[i][0] = A - 1
             else:
-                return print("No")
+                return print('No')
         if B != -1:
             if floor[B - 1][1] == 0:
                 floor[B - 1] = [i, 2]
                 com[i][1] = B - 1
             else:
-                return print("No")
+                return print('No')
         if A != -1 and B != -1:
             if A >= B:
-                return print("No")
-
+                return print('No')
     dp = [False] * (L + 1)
-
     if floor[0][1] == 2:
-        return print("No")
+        return print('No')
     else:
         dp[0] = True
-
     for i in range(L):
         if not dp[i]:
             continue
@@ -62,8 +57,7 @@ def main():
                         ok = False
             if ok:
                 dp[j + 1] = True
-
-    print("Yes") if dp[L] else print("No")
+    print('Yes') if dp[L] else print('No')
 
 
 def __starting_point():

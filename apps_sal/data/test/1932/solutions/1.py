@@ -1,5 +1,4 @@
 n = int(input())
-
 r = 0
 for i in range(n):
     s = input().strip()
@@ -13,5 +12,4 @@ for i in range(n):
         r += 12
     elif s == 'Icosahedron':
         r += 20
-
 print(r)

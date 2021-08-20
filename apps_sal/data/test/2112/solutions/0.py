@@ -1,5 +1,5 @@
 def get_val(x, k, y, left_val, right_val, arr):
-    x, y = y, x
+    (x, y) = (y, x)
     if not arr:
         return 0
     if len(arr) < k:
@@ -14,14 +14,14 @@ def get_val(x, k, y, left_val, right_val, arr):
             res += y
         res += n * x
         return res
+    elif max(arr) < max(left_val, right_val):
+        return len(arr) * x
     else:
-        if max(arr) < max(left_val, right_val):
-            return len(arr) * x
-        else:
-            return ((len(arr) - k) * x) + y
+        return (len(arr) - k) * x + y
 
 
 def solve(x, k, y, a, b):
+
     def check(a, b):
         j = 0
         i = 0
@@ -32,10 +32,8 @@ def solve(x, k, y, a, b):
                 i += 1
                 j += 1
         return j == len(b)
-
     if not check(a, b):
         return -1
-
     j = 0
     left_val = -1
     arr = []
@@ -59,8 +57,8 @@ def solve(x, k, y, a, b):
     return res
 
 
-n, m = list(map(int, input().split()))
-x, k, y = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
+(x, k, y) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 print(solve(x, k, y, a, b))

@@ -1,6 +1,6 @@
 class Solution:
+
     def soupServings(self, N: int) -> float:
-        # 5:02 10/4/20
 
         def dfs(a, b):
             if a <= 0 and b <= 0:

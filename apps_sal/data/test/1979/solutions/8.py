@@ -8,7 +8,7 @@ for i in range(n):
 dif = dict()
 for i in range(n):
     x = (i - d[b[i]]) % n
-    if(x in dif):
+    if x in dif:
         dif[x] += 1
     else:
         dif[x] = 1

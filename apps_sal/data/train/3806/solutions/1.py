@@ -14,7 +14,6 @@ def black_and_white(h, w, c):
             continue
         li[j].append([['b', 'w'][i & 1], c[i]])
         i += 1
-
     for i in range(len(li)):
         if li[i][0][0] != 'b':
             li[i].insert(0, ['b', 0])

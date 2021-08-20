@@ -3,7 +3,7 @@ for q in range(T):
     n = int(input())
     d = dict()
     for i in range(n):
-        x, y = input().split()
+        (x, y) = input().split()
         y = int(y)
         if x not in d:
             d[x] = [0, 0]

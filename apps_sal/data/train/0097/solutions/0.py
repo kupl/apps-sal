@@ -4,8 +4,7 @@ input = reader.__next__
 
 
 def solve():
-    s, c = input().split()
-    # i,jでjが複数あるとき
+    (s, c) = input().split()
     n = len(s)
     for i in range(n - 1):
         prev = s[i]
@@ -19,13 +18,13 @@ def solve():
         if prev == s[i]:
             continue
         t = list(s)
-        t[i], t[pos] = prev, s[i]
-        s = "".join(t)
+        (t[i], t[pos]) = (prev, s[i])
+        s = ''.join(t)
         break
     if s < c:
         print(s)
     else:
-        print("---")
+        print('---')
 
 
 t = int(input())

@@ -1,4 +1,5 @@
 class Solution(object):
+
     def monotoneIncreasingDigits(self, N):
         digits = []
         A = list(map(int, str(N)))
@@ -9,5 +10,4 @@ class Solution(object):
                     break
             else:
                 digits.append(9)
-
-        return int("".join(map(str, digits)))
+        return int(''.join(map(str, digits)))

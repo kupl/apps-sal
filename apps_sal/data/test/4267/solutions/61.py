@@ -8,16 +8,11 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 x = int(input())
-
 tmp = 0
-res = "No"
-
+res = 'No'
 if x >= 30:
-    res = "Yes"
-
+    res = 'Yes'
 print(res)

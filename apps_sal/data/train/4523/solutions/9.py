@@ -8,4 +8,4 @@ def solve(n):
         print((i, a))
         if sum(a) == digsum:
             break
-    return int("".join([str(x) for x in a]))
+    return int(''.join([str(x) for x in a]))

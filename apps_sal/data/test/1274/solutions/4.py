@@ -1,13 +1,16 @@
 import sys
 import heapq
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     li = []
     for _ in range(n):
-        b, a = map(int, input().split())
+        (b, a) = map(int, input().split())
         if m - b >= 0:
             li.append([a, m - b])
     li.sort(key=lambda x: x[1])

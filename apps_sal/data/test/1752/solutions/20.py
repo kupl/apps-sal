@@ -1,10 +1,7 @@
-
 n = int(input())
-
 arr = list(map(int, input().strip().split()))
 arr = sorted(arr, reverse=True)
 ans = [0] * n
-
 if n == 2:
     print(*arr)
 else:

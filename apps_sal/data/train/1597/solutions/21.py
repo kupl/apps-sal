@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    a, m = list(map(int, input().split()))
+    (a, m) = list(map(int, input().split()))
     l = m // a
     arr = []
     for i in range(l, 0, -1):
@@ -13,5 +12,5 @@ while t > 0:
             arr.append(i)
     print(len(arr))
     arr = arr[::-1]
-    print(" ".join(map(str, arr)))
+    print(' '.join(map(str, arr)))
     t = t - 1

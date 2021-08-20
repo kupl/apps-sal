@@ -1,15 +1,11 @@
 from sys import stdin
-
 input = stdin.readline
 inf = 1000 * 1000 * 1000
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
-
 b = []
 for i in range(200001):
     b.append([])
-
 for i in a:
     ctr = 0
     while i > 0:
@@ -17,7 +13,6 @@ for i in a:
         i //= 2
         ctr += 1
     b[i].append(ctr)
-
 res = inf
 for i in b:
     if len(i) >= k:
@@ -26,6 +21,4 @@ for i in b:
         for j in range(k):
             tmp += i[j]
         res = min(res, tmp)
-
-
 print(res)

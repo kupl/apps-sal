@@ -1,6 +1,5 @@
 n = int(input())
 sp = list(map(int, input().split()))
-
 m = int(input())
 pos = [-1] * (n + 1)
 m1 = 0
@@ -13,14 +12,11 @@ for i in range(m):
         pos[sp1[1] - 1] = i
     else:
         m1 = max(m1, sp1[1])
-
 maxs = [-1] * (m + 1)
-
 for i in range(m - 1, -1, -1):
     sp1 = mem[i]
-
-    if (sp1[0] == 2):
-        if (i == m - 1 or sp1[1] > maxs[i + 1]):
+    if sp1[0] == 2:
+        if i == m - 1 or sp1[1] > maxs[i + 1]:
             maxs[i] = sp1[1]
         else:
             maxs[i] = maxs[i + 1]

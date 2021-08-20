@@ -1,10 +1,10 @@
 def inputi():
-    a = input().split(" ")
+    a = input().split(' ')
     return [int(i) for i in a]
 
 
-c1, c2, c3, c4 = inputi()
-n, m = inputi()
+(c1, c2, c3, c4) = inputi()
+(n, m) = inputi()
 a = inputi()
 b = inputi()
 sumn = 0

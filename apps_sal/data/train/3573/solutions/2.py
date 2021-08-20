@@ -1,5 +1,5 @@
 def solve(arr):
-    a, b, c = sorted(arr)
+    (a, b, c) = sorted(arr)
     s = a + b
     if s < c:
         return s

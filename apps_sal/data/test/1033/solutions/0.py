@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 def get(x):
@@ -23,5 +23,4 @@ while r - l > 1:
         r = m
     else:
         l = m
-
 print(r)

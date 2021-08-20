@@ -1,4 +1,4 @@
-inf = 10**10
+inf = 10 ** 10
 input()
 nums = [int(x) for x in input().split()]
 
@@ -15,6 +15,5 @@ def run(ns):
 
 
 fw = run(nums)
-rew = (run(reversed(nums)))[::-1]
-
-print(' '.join(str(min(fw[i], rew[i])) for i in range(len(nums))))
+rew = run(reversed(nums))[::-1]
+print(' '.join((str(min(fw[i], rew[i])) for i in range(len(nums)))))

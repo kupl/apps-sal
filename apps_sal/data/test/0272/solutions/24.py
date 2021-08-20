@@ -8,7 +8,6 @@ for j in range(len(s)):
         if A[s[j]] != t[j] or A[t[j]] != s[j]:
             per = 1
             break
-
     elif t[j] in A and s[j] not in A:
         per = 1
         break

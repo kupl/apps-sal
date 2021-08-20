@@ -1,12 +1,12 @@
 class Solution:
+
     def countAndSay(self, n):
         """
         :type n: int
         :rtype: str
         """
         if n == 1:
-            return "1"
-
+            return '1'
         n = n - 1
         string = '1'
         for i in range(n):
@@ -24,5 +24,4 @@ class Solution:
             final += str(count)
             final += s
             string = final
-
         return final

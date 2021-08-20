@@ -1,9 +1,6 @@
-#!/bin/python
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
-a, b = 0, 0
+(a, b) = (0, 0)
 for i in range(n):
     a += p[i]
     x = min(8, a)

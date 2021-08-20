@@ -1,6 +1,5 @@
 from collections import defaultdict as dd
 d = dd(int)
-
 n = int(input())
 for i in range(n):
     s = input()
@@ -18,10 +17,8 @@ for i in range(n):
         d[-ff] += 1
     elif ff == 0:
         d[f] += 1
-
 s = d[0] // 2
-for k, v in list(d.items()):
+for (k, v) in list(d.items()):
     if k > 0:
         s += min(d[k], d[-k])
-
 print(s)

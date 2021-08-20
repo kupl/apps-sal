@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 
 
 def f(t):
@@ -13,5 +13,4 @@ def f(t):
 s = 0
 for y in range(2, 2 * N + 1):
     s += f(y) * f(y + K)
-
 print(s)

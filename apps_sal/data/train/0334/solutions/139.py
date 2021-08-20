@@ -1,9 +1,10 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         inner_array = []
         outer_array = []
         consecutive = False
-        for i, val in enumerate(zip(s, cost)):
+        for (i, val) in enumerate(zip(s, cost)):
             if i == len(cost) - 1:
                 break
             else:
@@ -23,9 +24,7 @@ class Solution:
                     if inner_array:
                         outer_array.append(inner_array)
                         inner_array = []
-
         res = 0
         for i in outer_array:
             res += sum(sorted(i)[:-1])
-
         return res

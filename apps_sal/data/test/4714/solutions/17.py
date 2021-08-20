@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 cnt = 0
 for i in range(A, B + 1):
     if str(i) == str(i)[::-1]:

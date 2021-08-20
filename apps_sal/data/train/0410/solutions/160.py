@@ -1,13 +1,13 @@
 class Solution:
-    def getKth(self, lo: int, hi: int, k: int) -> int:
 
+    def getKth(self, lo: int, hi: int, k: int) -> int:
         p = {}
         for i in range(lo, hi + 1):
             temp = 0
             copy_i = i
             if copy_i == 1:
                 p[i] = 0
-            while (copy_i != 1):
+            while copy_i != 1:
                 if copy_i % 2 == 0:
                     copy_i /= 2
                     temp += 1

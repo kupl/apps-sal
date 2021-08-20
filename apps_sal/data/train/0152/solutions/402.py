@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         position.sort()
@@ -20,10 +21,8 @@ class Solution:
                     curr = 0
                 i += 1
             return j >= num
-
         if m == 2:
             return position[n - 1] - position[0]
-
         start = 1
         end = math.ceil((position[n - 1] - position[0]) / (m - 1))
         mid = (start + end) // 2

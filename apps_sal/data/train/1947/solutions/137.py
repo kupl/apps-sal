@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         universe = defaultdict(int)
         for b in B:
@@ -7,9 +8,6 @@ class Solution:
                 bCount[letter] += 1
             for key in bCount:
                 universe[key] = max(universe[key], bCount[key])
-
-        # print(universe)
-
         result = []
         for a in A:
             aCount = defaultdict(int)
@@ -24,5 +22,4 @@ class Solution:
                     pass
             if isUni:
                 result.append(a)
-
         return result

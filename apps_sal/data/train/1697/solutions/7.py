@@ -2,29 +2,26 @@ from itertools import permutations
 
 
 class Nonogram:
+
     def __init__(self, clues):
         self.cols = clues[0]
         self.rows = clues[1]
         self.dim = len(self.cols)
-
         self.field = [[' ' for j in range(self.dim)] for i in range(self.dim)]
         self.rows_p = [None] * self.dim
         self.cols_p = [None] * self.dim
 
     def __str__(self):
         max_hint_length = (self.dim + 1) // 2
-
         rows = []
         for i in range(max_hint_length):
-            row = [" " if len(self.cols[d]) + i < max_hint_length else str(self.cols[d][len(self.cols[d]) - max_hint_length + i]) for d in range(self.dim)]
-            rows.append(' ' * (max_hint_length) + '|' + ''.join(row))
-        rows.append('-' * (max_hint_length) + '+' + '-' * self.dim)
-
+            row = [' ' if len(self.cols[d]) + i < max_hint_length else str(self.cols[d][len(self.cols[d]) - max_hint_length + i]) for d in range(self.dim)]
+            rows.append(' ' * max_hint_length + '|' + ''.join(row))
+        rows.append('-' * max_hint_length + '+' + '-' * self.dim)
         for i in range(self.dim):
-            row = [" " if len(self.rows[i]) + j < max_hint_length else str(self.rows[i][len(self.rows[i]) - max_hint_length + j]) for j in range(max_hint_length)]
+            row = [' ' if len(self.rows[i]) + j < max_hint_length else str(self.rows[i][len(self.rows[i]) - max_hint_length + j]) for j in range(max_hint_length)]
             row_field = [str(self.field[i][d]) for d in range(self.dim)]
             rows.append(''.join(row) + '|' + ''.join(row_field))
-
         return '\n'.join(rows)
 
     def possibilities(self, clues, sure=None):
@@ -37,7 +34,7 @@ class Nonogram:
         return poss
 
     def sure(self, poss):
-        return ''.join(['X' if all([p[d] == 'X' for p in poss]) else ('.' if all([p[d] == '.' for p in poss]) else ' ') for d in range(self.dim)])
+        return ''.join(['X' if all([p[d] == 'X' for p in poss]) else '.' if all([p[d] == '.' for p in poss]) else ' ' for d in range(self.dim)])
 
     def update_rows_p(self, i, j, s):
         if self.rows_p[i] is not None:
@@ -69,17 +66,13 @@ class Nonogram:
         for i in range(self.dim):
             poss = self.possibilities(clues=self.rows[i])
             self.rows_p[i] = poss
-
             sure = self.sure(poss=poss)
             if not sure.isspace():
                 self.update_field(sure, i=i)
-
         for j in range(self.dim):
             poss = self.possibilities(clues=self.cols[j], sure=[self.field[i][j] for i in range(self.dim)])
             self.cols_p[j] = poss
-
             sure = self.sure(poss=poss)
             if not sure.isspace():
                 self.update_field(sure, j=j)
-
-        return tuple(tuple(0 if c == '.' else 1 for c in r) for r in self.field)
+        return tuple((tuple((0 if c == '.' else 1 for c in r)) for r in self.field))

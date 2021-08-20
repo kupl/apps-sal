@@ -13,13 +13,13 @@ def parse(brackets):
     m = 0
     f = 0
     for c in brackets:
-        if c == "(":
+        if c == '(':
             f += 1
         else:
             f -= 1
         if m > f:
             m = f
-    return m, f
+    return (m, f)
 
 
 def main():
@@ -28,7 +28,7 @@ def main():
     rs = []
     tot = 0
     for _ in range(N):
-        m, f = parse(input().strip())
+        (m, f) = parse(input().strip())
         tot += f
         if f >= 0:
             ls.append([m, f])
@@ -38,7 +38,7 @@ def main():
 
 
 def __starting_point():
-    print(("Yes" if main() else "No"))
+    print('Yes' if main() else 'No')
 
 
 __starting_point()

@@ -3,7 +3,6 @@ rS = S[::-1]
 keys = ['dream', 'dreamer', 'erase', 'eraser']
 reversed_keys = [keys[i][::-1] for i in range(len(keys))]
 i = 0
-
 while i < len(rS):
     if rS[i:i + 5] in reversed_keys:
         i += 5

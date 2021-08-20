@@ -7,4 +7,4 @@ for i in range(q):
     for i in a:
         if i <= 2048:
             s += i
-    print("YES" if s >= 2048 else "NO")
+    print('YES' if s >= 2048 else 'NO')

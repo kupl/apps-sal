@@ -6,9 +6,9 @@ def check(k, A, B, H):
 
 
 def main():
-    N, A, B = list(map(int, input().split(' ')))
+    (N, A, B) = list(map(int, input().split(' ')))
     H = [int(input()) for _ in range(N)]
-    ng, ok = 0, 10**9
+    (ng, ok) = (0, 10 ** 9)
     while ok - ng > 1:
         mid = (ok + ng) // 2
         if check(mid, A, B, H):

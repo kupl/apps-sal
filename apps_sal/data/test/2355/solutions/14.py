@@ -1,15 +1,11 @@
-'''input
+"""input
 1
 6 0
-'''
-# practicing a skill right after sleep improves it a lot quickly
+"""
 from sys import stdin, setrecursionlimit
-
-
-# main starts
 t = int(stdin.readline().strip())
 for _ in range(t):
-    n, p = list(map(int, stdin.readline().split()))
+    (n, p) = list(map(int, stdin.readline().split()))
     count = 0
     flag = 0
     for i in range(1, n + 1):

@@ -1,4 +1,5 @@
 class Solution:
+
     def getRange(self, nums, index):
         prev = index
         after = index
@@ -23,14 +24,13 @@ class Solution:
             return self.getRange(nums, len(nums) - 1)
         elif target == nums[m]:
             return self.getRange(nums, m)
+        elif target < nums[0] or target > nums[-1]:
+            return [-1, -1]
+        elif target < nums[m]:
+            return self.searchRange(nums[:m], target)
         else:
-            if target < nums[0] or target > nums[-1]:
+            tempRange = self.searchRange(nums[m:], target)
+            if tempRange[0] == -1:
                 return [-1, -1]
-            elif target < nums[m]:
-                return self.searchRange(nums[: m], target)
             else:
-                tempRange = self.searchRange(nums[m:], target)
-                if tempRange[0] == -1:
-                    return [-1, -1]
-                else:
-                    return [r + m for r in tempRange]
+                return [r + m for r in tempRange]

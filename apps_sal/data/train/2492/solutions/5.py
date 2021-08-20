@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, logs: List[str]) -> int:
         s = []
         c = 0

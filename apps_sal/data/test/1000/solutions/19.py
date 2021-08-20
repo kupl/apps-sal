@@ -1,8 +1,4 @@
-# Bismillahirahmanirahim
-# Soru 1
-
 nv = list(map(int, input().split()))
-
 n = nv[0] - 1
 v = nv[1]
 if v >= n:

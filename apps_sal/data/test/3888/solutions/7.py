@@ -12,7 +12,7 @@ MEX = {(0, 0): 1, (0, 1): 2, (0, 2): 1, (1, 1): 0, (1, 2): 0, (2, 2): 0}
 
 
 def mex(u, v):
-    return MEX[(min(u, v), max(u, v))]
+    return MEX[min(u, v), max(u, v)]
 
 
 def proc(v):

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = [int(input(), 2) for i in range(n)]
 c = int('1' * m, 2)
 b = True

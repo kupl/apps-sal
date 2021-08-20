@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         n = len(intervals)
         m = n

@@ -1,6 +1,5 @@
 import sys
-
-n, k = list(map(int, sys.stdin.readline().strip().split()))
+(n, k) = list(map(int, sys.stdin.readline().strip().split()))
 A = [0] * (k + 1)
 for i in range(0, n):
     a = int(sys.stdin.readline().strip())

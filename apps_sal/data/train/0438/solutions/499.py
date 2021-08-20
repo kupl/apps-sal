@@ -1,4 +1,5 @@
 class Union_find:
+
     def __init__(self, MAX: int, target):
         self.fa = [i for i in range(MAX)]
         self.cnt = [1 for _ in range(MAX)]
@@ -9,17 +10,15 @@ class Union_find:
     def find(self, u: int) -> int:
         if self.fa[u] == u:
             return u
-
         self.fa[u] = self.find(self.fa[u])
         return self.fa[u]
 
     def union(self, u: int, v: int):
-        u, v = self.find(u), self.find(v)
+        (u, v) = (self.find(u), self.find(v))
         if u == v:
             return None
-
         if self.cnt[u] < self.cnt[v]:
-            u, v = v, u
+            (u, v) = (v, u)
         vn = int(self.cnt[v])
         un = int(self.cnt[u])
         try:
@@ -36,6 +35,7 @@ class Union_find:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         ct = 0
         l = [0 for i in arr]

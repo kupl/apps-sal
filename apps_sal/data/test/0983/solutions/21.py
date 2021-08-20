@@ -1,4 +1,4 @@
-n, p, q, r = map(int, input().split())
+(n, p, q, r) = map(int, input().split())
 a = list(map(int, input().split()))
 dp = [[0, 0, 0] for i in range(n)]
 dp[0][0] = p * a[0]

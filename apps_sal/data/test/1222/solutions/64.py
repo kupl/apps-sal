@@ -9,8 +9,7 @@ while d:
         if 0 <= hitoketa + i <= 9:
             nxt = now * 10 + hitoketa + i
             if nxt <= 3234566667:
-                # print(nxt)
                 num.append(nxt)
                 d.append(nxt)
 num.sort()
-print((num[k - 1]))
+print(num[k - 1])

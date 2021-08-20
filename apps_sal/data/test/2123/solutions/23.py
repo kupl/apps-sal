@@ -4,5 +4,4 @@ ans = 0
 for x in a:
     if ans < x:
         ans = x
-
 print(ans)

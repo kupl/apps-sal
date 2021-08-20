@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysDivByK(self, A: List[int], K: int) -> int:
         sum1 = sum(A)
         count1 = 0
@@ -10,11 +11,9 @@ class Solution:
             rem1 = sum2 % K
             if rem1 < 0:
                 rem1 += k
-
             if rem1 in dict1:
                 count1 += dict1[rem1]
                 dict1[rem1] += 1
-
             else:
                 dict1[rem1] = 1
         print(dict1)

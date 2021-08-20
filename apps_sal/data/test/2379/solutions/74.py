@@ -12,22 +12,14 @@ def do_solve(n, k, c, s):
 def solve(n, k, c, s):
     dp1 = do_solve(n, k, c, s)
     dp2 = do_solve(n, k, c, s[::-1])[::-1]
-
-    # print dp1
-    # print dp2
-
     res = []
     for i in range(n):
         if s[i] == 'x':
             continue
         l = dp1[i - 1] if i - 1 >= 0 else 0
         r = dp2[i + 1] if i + 1 < n else 0
-
-        # print i, l, r
-
         if l + r == k - 1:
             res.append(i + 1)
-    # print res
     return res
 
 
@@ -35,9 +27,7 @@ assert solve(16, 4, 3, 'ooxxoxoxxxoxoxxo') == [11, 16]
 assert solve(11, 3, 2, 'ooxxxoxxxoo') == [6]
 assert solve(5, 1, 0, 'ooooo') == []
 assert solve(5, 2, 3, 'ooxoo') == [1, 5]
-
 (n, k, c) = list(map(int, input().split()))
 s = input().strip()
-
 for num in solve(n, k, c, s):
     print(num)

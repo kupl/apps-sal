@@ -1,5 +1,5 @@
 N = int(input())
-D, X = input().split()
+(D, X) = input().split()
 x = 0
 for n in range(N):
     An = int(input())

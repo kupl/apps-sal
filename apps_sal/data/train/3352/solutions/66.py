@@ -3,5 +3,4 @@ def find_longest(arr, high=''):
         s = str(x)
         if len(s) > len(high):
             high = s
-
     return int(high)

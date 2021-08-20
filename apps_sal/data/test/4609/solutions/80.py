@@ -1,7 +1,6 @@
 N = int(input())
 A = [int(input()) for _ in range(N)]
 A.sort()
-
 i = 0
 ans = 0
 while i < N:
@@ -11,5 +10,4 @@ while i < N:
         count += 1
         i += 1
     ans += count % 2
-
 print(ans)

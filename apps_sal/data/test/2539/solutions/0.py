@@ -1,9 +1,8 @@
-prime_factors = [[] for _ in range(10**6 + 1)]
-primes = [True for i in range(10**6 + 1)]
+prime_factors = [[] for _ in range(10 ** 6 + 1)]
+primes = [True for i in range(10 ** 6 + 1)]
 
 
 def generate_primes(n):
-
     for p in range(2, n + 1):
         if primes[p]:
             prime_factors[p].append(p)
@@ -12,10 +11,10 @@ def generate_primes(n):
                 prime_factors[i].append(p)
 
 
-generate_primes(10**6)
+generate_primes(10 ** 6)
 result = []
 for _ in range(int(input())):
-    x, p, k = map(int, input().split())
+    (x, p, k) = map(int, input().split())
     arr = prime_factors[p]
     to_add = []
     to_subtract = []
@@ -23,10 +22,9 @@ for _ in range(int(input())):
         mul = 1
         count = 0
         for j in range(len(arr)):
-            if (1 << j) & i:
+            if 1 << j & i:
                 count += 1
                 mul *= arr[j]
-
         if count % 2:
             to_add.append(mul)
         else:
@@ -34,14 +32,11 @@ for _ in range(int(input())):
     count_before = 0
     for num in to_add:
         count_before += x // num
-
     for num in to_subtract:
         count_before -= x // num
-
-    k += (x - count_before)
-
+    k += x - count_before
     low = 0
-    high = 10**9
+    high = 10 ** 9
     answer = high
     while low <= high:
         mid = (high + low) // 2
@@ -57,5 +52,4 @@ for _ in range(int(input())):
         else:
             low = mid + 1
     result.append(answer)
-
-print(*result, sep="\n")
+print(*result, sep='\n')

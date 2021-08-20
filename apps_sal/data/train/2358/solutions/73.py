@@ -1,12 +1,12 @@
 import heapq
-INFTY = 10**10
+INFTY = 10 ** 10
 
 
 def f(x, y):
-    return ((x[0] - y[0])**2 + (x[1] - y[1])**2)**0.5
+    return ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5
 
 
-xs, ys, xt, yt = map(int, input().split())
+(xs, ys, xt, yt) = map(int, input().split())
 N = int(input())
 A = [list(map(int, input().split())) for _ in range(N)]
 A.insert(0, [xs, ys, 0])
@@ -17,7 +17,7 @@ heap = [(0, 0)]
 dist[0] = 0
 hist[0] = 1
 while heap:
-    d, x = heapq.heappop(heap)
+    (d, x) = heapq.heappop(heap)
     if dist[x] < d:
         continue
     hist[x] = 1

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 M = list(map(int, input().split()))
 now = 1
 time = 0

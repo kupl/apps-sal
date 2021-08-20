@@ -1,7 +1,6 @@
 import sys
-n, k = map(int, input().split())
-
-if (k * (k - 1)) < n:
+(n, k) = map(int, input().split())
+if k * (k - 1) < n:
     print('NO')
 else:
     print('YES')

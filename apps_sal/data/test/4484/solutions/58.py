@@ -9,11 +9,10 @@ def fac(x):
     return ret
 
 
-N, M = list(map(int, input().split()))
-
+(N, M) = list(map(int, input().split()))
 if N == M:
-    print((fac(N)**2 * 2 % MOD))
+    print(fac(N) ** 2 * 2 % MOD)
 elif abs(N - M) == 1:
-    print((fac(N) * fac(M) % MOD))
+    print(fac(N) * fac(M) % MOD)
 else:
-    print((0))
+    print(0)

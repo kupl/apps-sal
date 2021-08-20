@@ -4,6 +4,6 @@ def finding_k(arr):
         return -1
     for k in range(max(s), 0, -1):
         r = arr[0] % k
-        if all(x % k == r for x in s):
+        if all((x % k == r for x in s)):
             return k
     return -1

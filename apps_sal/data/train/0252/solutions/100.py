@@ -1,8 +1,9 @@
 class Solution:
+
     def minTaps(self, n: int, A: List[int]) -> int:
         dp = [sys.maxsize] * (n + 1)
         dp[0] = 0
-        for i, tap_range in enumerate(A):
+        for (i, tap_range) in enumerate(A):
             left = max(0, i - tap_range)
             right = min(n, i + tap_range)
             for j in range(left, right + 1):

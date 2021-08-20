@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     b = [tuple(map(int, input().split())) for i in range(n)]
     shot_gun = b[0]
     uzi = b[0]

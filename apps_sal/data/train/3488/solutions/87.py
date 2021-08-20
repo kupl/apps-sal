@@ -3,14 +3,14 @@ def eval_object(v):
     b = v['b']
     c = v['operation']
     if c == '+':
-        return(int(a) + int(b))
+        return int(a) + int(b)
     elif c == '-':
-        return(int(a) - int(b))
+        return int(a) - int(b)
     elif c == '/':
-        return(int(a) / int(b))
+        return int(a) / int(b)
     elif c == '*':
-        return(int(a) * int(b))
+        return int(a) * int(b)
     elif c == '%':
-        return(int(a) % int(b))
+        return int(a) % int(b)
     elif c == '**':
-        return(int(a) ** int(b))
+        return int(a) ** int(b)

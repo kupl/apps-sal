@@ -1,5 +1,5 @@
-'''
-\"aabcaca\"
+"""
+"aabcaca"
  0123456
   x
  
@@ -11,28 +11,26 @@ for window_start in range(i - n + 1, i + n):
         todo[window_start].discard(j)
         if canMatch(todo[window_start]):
             que.append(window_start)
-'''
+"""
 
 
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        '''greedy. everytime put the totally matched window to the que
+        """greedy. everytime put the totally matched window to the que
             then update the windows that are affected
             then if updated window is totally matched, append to que.
             keep doing it.
-        '''
-
+        """
         M = len(stamp)
         N = len(target)
         nwin = N - M + 1
         matched = [set() for _ in range(nwin)]
         done = set()
-
         for win_start in range(nwin):
-            for i, (c1, c2) in enumerate(zip(target[win_start: win_start + M], stamp)):
+            for (i, (c1, c2)) in enumerate(zip(target[win_start:win_start + M], stamp)):
                 if c1 == c2:
                     matched[win_start].add(i + win_start)
-
         res = []
         que = deque()
         for win_start in range(nwin):
@@ -40,24 +38,16 @@ class Solution:
                 que.append(win_start)
                 res.append(win_start)
                 done.add(win_start)
-
-        #print(que, matched)
-
         while que:
-            win_start = que.popleft()  # done window
-            # new windows that are affected
-
+            win_start = que.popleft()
             for nws in range(max(0, win_start - M + 1), min(nwin, win_start + M)):
-                # add the pos if not matched in new window yet
                 if nws in done:
                     continue
-                for pos in range(win_start, win_start + M):  # pos in done
+                for pos in range(win_start, win_start + M):
                     if nws <= pos < nws + M:
                         matched[nws].add(pos)
-
                 if len(matched[nws]) == M:
                     que.append(nws)
                     done.add(nws)
                     res.append(nws)
-
         return res[::-1] if all([d in done for d in range(nwin)]) else []

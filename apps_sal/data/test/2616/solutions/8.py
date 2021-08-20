@@ -12,8 +12,7 @@ for _ in range(int(input())):
             print('First')
         else:
             print('Second')
+    elif c % 2 == 0:
+        print('First')
     else:
-        if c % 2 == 0:
-            print('First')
-        else:
-            print('Second')
+        print('Second')

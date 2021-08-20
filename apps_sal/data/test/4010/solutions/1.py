@@ -18,6 +18,6 @@ for rwe in range(q):
             if d[elt][0] != d[elt][1] - 1:
                 dasie = True
     if dasie:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

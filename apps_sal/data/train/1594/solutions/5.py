@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your dish here
 for _ in range(int(input())):
     size = int(input())
     power = []
@@ -11,6 +9,6 @@ for _ in range(int(input())):
             diag = False
             break
     if diag:
-        print((size * (size + 1)) // 2)
+        print(size * (size + 1) // 2)
     else:
         print(size)

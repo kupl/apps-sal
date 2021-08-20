@@ -1,9 +1,6 @@
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 A = [list(input()) for _ in range(H)]
-
-# 一段目
-print(("#" * (W + 2)))
+print('#' * (W + 2))
 for a in A:
-    print(("#" + "".join(a) + "#"))
-# 最終段
-print(("#" * (W + 2)))
+    print('#' + ''.join(a) + '#')
+print('#' * (W + 2))

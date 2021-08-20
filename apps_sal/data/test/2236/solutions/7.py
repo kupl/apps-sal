@@ -1,13 +1,9 @@
 from collections import defaultdict
-
 n = int(input())
 A = list(map(int, input().split()))
-
 d = defaultdict(int)
-
 s = 0
 ans = n - 1
-
 for i in range(n):
     t = A[i]
     s += t

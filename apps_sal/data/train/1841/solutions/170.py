@@ -1,12 +1,13 @@
 class Solution:
+
     def getStrongest(self, l: List[int], k: int) -> List[int]:
         l.sort()
         m = l[(len(l) - 1) // 2]
 
         def fun(a, b):
-            if(abs(a - m) < abs(b - m)):
+            if abs(a - m) < abs(b - m):
                 return 1
-            elif(abs(a - m) > abs(b - m)):
+            elif abs(a - m) > abs(b - m):
                 return -1
             else:
                 return -1

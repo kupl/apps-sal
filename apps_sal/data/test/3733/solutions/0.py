@@ -1,4 +1,4 @@
-N, I = list(map(int, input().split()))
+(N, I) = list(map(int, input().split()))
 A = sorted([int(a) for a in input().split()])
 B = []
 j = 0
@@ -24,9 +24,8 @@ def calc(k):
     return N - ma
 
 
-ans = 10**100
+ans = 10 ** 100
 for i in range(31):
     if i * N <= 8 * I:
         ans = min(ans, calc(i))
-
 print(ans)

@@ -1,4 +1,4 @@
-N, M = map(int, input().rstrip().split(" "))
+(N, M) = map(int, input().rstrip().split(' '))
 if abs(N - M) > 1:
     print(0)
 else:

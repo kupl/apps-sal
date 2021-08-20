@@ -1,10 +1,8 @@
 from collections import Counter
-
-
-N, M = [int(x) for x in input().split()]
+(N, M) = [int(x) for x in input().split()]
 Cnter = Counter([int(x) for x in input().split()])
 for i in range(M):
-    b, c = [int(x) for x in input().split()]
+    (b, c) = [int(x) for x in input().split()]
     Cnter[c] += b
 V = sorted(list(Cnter.most_common()))
 cnt = 0

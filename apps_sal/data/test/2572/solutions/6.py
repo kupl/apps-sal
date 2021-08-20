@@ -1,23 +1,19 @@
 import statistics
-
 T = int(input())
 
 
 def cnt(points):
     med = statistics.median(points)
-    # print('points', points, 'med',med)
-    return int(sum(abs(p - med) for p in points))
+    return int(sum((abs(p - med) for p in points)))
 
 
 for t in range(T):
-    N, m = [int(_) for _ in input().split()]
+    (N, m) = [int(_) for _ in input().split()]
     M = []
     for i in range(N):
         row = [int(_) for _ in input().split()]
         M.append(row)
-
     answer = 0
-
     for i in range(N):
         for j in range(m):
             mir_left = m - j - 1
@@ -35,5 +31,4 @@ for t in range(T):
             if mir_left > j and mir_bot > i:
                 points.append(M[mir_bot][mir_left])
             answer += cnt(points)
-
     print(answer)

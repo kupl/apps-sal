@@ -1,12 +1,14 @@
-#!/usr/bin/pypy3
-
 from sys import stdin, stderr
 import random
 import cProfile
 
 
-def readInts(): return map(int, stdin.readline().strip().split())
-def print_err(*args, **kwargs): print(*args, file=stderr, **kwargs)
+def readInts():
+    return map(int, stdin.readline().strip().split())
+
+
+def print_err(*args, **kwargs):
+    print(*args, file=stderr, **kwargs)
 
 
 def solve(vs):
@@ -14,7 +16,7 @@ def solve(vs):
 
 
 def generate_tree(n, ns):
-    out = [0 for _ in range(2**(n + 1))]
+    out = [0 for _ in range(2 ** (n + 1))]
 
     def gt(nix, left, right, op):
         if left + 1 == right:
@@ -31,11 +33,12 @@ def generate_tree(n, ns):
             v = vL | vR
         out[nix] = v
         return v
-    gt(0, 0, 2**n, n % 2 == 0)
+    gt(0, 0, 2 ** n, n % 2 == 0)
     return out
 
 
 def alter_tree2(n, t, p, b):
+
     def at(nix, width, offp, op):
         if width == 1:
             t[nix] = b
@@ -55,17 +58,16 @@ def alter_tree2(n, t, p, b):
             v = vL | vR
         t[nix] = v
         return v
-    at(0, 2**n, p, n % 2 == 0)
+    at(0, 2 ** n, p, n % 2 == 0)
 
 
 def alter_tree(n, t, p, b):
-    width = 2**n
+    width = 2 ** n
     s = []
     nix = 0
-    op = (n % 2 == 0)
+    op = n % 2 == 0
     while width > 1:
         width //= 2
-        # print(nix)
         if p >= width:
             nix2 = 2 * nix + 2
             s.append((nix, nix2 - 1))
@@ -75,11 +77,10 @@ def alter_tree(n, t, p, b):
             s.append((nix, nix2 + 1))
         nix = nix2
         op = not op
-    # print(nix)
     t[nix] = b
     v = b
     while s:
-        nix, nixO = s.pop()
+        (nix, nixO) = s.pop()
         if op:
             v |= t[nixO]
         else:
@@ -90,11 +91,11 @@ def alter_tree(n, t, p, b):
 
 
 def run():
-    n, m = readInts()
+    (n, m) = readInts()
     axs = list(readInts())
     t = generate_tree(n, axs)
     for _ in range(m):
-        p, b = readInts()
+        (p, b) = readInts()
         alter_tree(n, t, p - 1, b)
         print(t[0])
 
@@ -103,7 +104,7 @@ def test():
     n = 17
     ns = []
     vs100 = list(range(100))
-    for _ in range(2**17):
+    for _ in range(2 ** 17):
         ns.append(random.choice(vs100))
     t = generate_tree(n, ns)
     t2 = generate_tree(n, ns)

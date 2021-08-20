@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         coins_sorted = list(sorted(coins, reverse=True))
         memo = {}
@@ -18,5 +19,4 @@ class Solution:
                     else:
                         memo[amount] = ret + 1
             return memo[amount]
-
         return choose(amount)

@@ -3,10 +3,10 @@ for _ in range(int(input())):
     if n == 1:
         print(1)
         continue
-    ans = ""
+    ans = ''
     ctr = 0
     for i in range(n):
-        ans = ""
+        ans = ''
         for j in range(ctr):
             ans += '*'
         for j in range(n - ctr, 0, -1):

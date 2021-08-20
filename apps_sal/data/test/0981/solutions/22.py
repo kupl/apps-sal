@@ -16,4 +16,4 @@ else:
             q[i] += add
             q[top_digit] -= add
             rem = rem - add * (a[i] - a[top_digit])
-    print("".join([str(i) * q[i] for i in range(9, 0, -1)]))
+    print(''.join([str(i) * q[i] for i in range(9, 0, -1)]))

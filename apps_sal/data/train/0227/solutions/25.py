@@ -1,4 +1,5 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         start = end = 0
         res = 0
@@ -10,5 +11,4 @@ class Solution:
                 start += 1
             res = max(res, end - start + 1)
             end += 1
-
         return res

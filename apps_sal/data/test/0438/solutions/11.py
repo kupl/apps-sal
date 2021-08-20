@@ -6,12 +6,11 @@ for i in range(1, size + 1):
     k += 1
     if n <= i:
         break
-
 print(k)
 L = size
 for i in range(1, L + 1):
     if size - i <= i:
         print(size)
         break
-    print(i, end=" ")
+    print(i, end=' ')
     size -= i

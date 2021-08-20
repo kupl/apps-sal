@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(x) for x in input().split()]
-
 price = 0
 if 0 in a:
     for i in range(n):

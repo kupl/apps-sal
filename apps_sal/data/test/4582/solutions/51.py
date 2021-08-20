@@ -1,7 +1,7 @@
-a, b = input().split()
-x = a == "H"
-y = b == "H"
+(a, b) = input().split()
+x = a == 'H'
+y = b == 'H'
 if x ^ y:
-    print("D")
+    print('D')
 else:
-    print("H")
+    print('H')

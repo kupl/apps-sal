@@ -3,24 +3,24 @@ nums = list(map(int, input().split()))
 
 
 def foo(l, r, prev=0):
-    ans = ""
+    ans = ''
     while l <= r:
         if nums[l] <= prev and nums[r] <= prev:
             break
         if prev < nums[l] < nums[r]:
-            ans += "L"
+            ans += 'L'
             prev = nums[l]
             l += 1
         elif prev < nums[r] < nums[l]:
-            ans += "R"
+            ans += 'R'
             prev = nums[r]
             r -= 1
         elif nums[r] > nums[l]:
-            ans += "R"
+            ans += 'R'
             prev = nums[r]
             r -= 1
         elif nums[r] < nums[l]:
-            ans += "L"
+            ans += 'L'
             prev = nums[l]
             l += 1
         elif l == r:

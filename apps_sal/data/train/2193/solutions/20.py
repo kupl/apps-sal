@@ -7,5 +7,4 @@ for i in range(n - 1):
     y = sum(x)
     if y > q:
         k += 1
-
 print(k)

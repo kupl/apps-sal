@@ -1,5 +1,5 @@
 def main():
-    w, h = list(map(int, input().split()))
+    (w, h) = list(map(int, input().split()))
     a = [input() for i in range(h)]
     for i in range(w):
         b = [a[j][i] * 2 for j in range(h)]

@@ -8,7 +8,7 @@ for i in range(n):
     for j in range(n):
         up = ls[up] - 1
         mls[up] += 1
-        if(mls[up] == 2):
+        if mls[up] == 2:
             rls.append(up + 1)
             break
 print(*rls)

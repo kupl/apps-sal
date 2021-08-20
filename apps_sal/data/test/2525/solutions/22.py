@@ -1,5 +1,4 @@
 from collections import deque
-
 s = input()
 q = int(input())
 a = 1
@@ -15,9 +14,8 @@ for _ in range(q):
                 p.appendleft(c)
             else:
                 p.append(c)
+        elif a == 1:
+            p.append(c)
         else:
-            if a == 1:
-                p.append(c)
-            else:
-                p.appendleft(c)
-print((''.join(p) if a == 1 else ''.join(p)[::-1]))
+            p.appendleft(c)
+print(''.join(p) if a == 1 else ''.join(p)[::-1])

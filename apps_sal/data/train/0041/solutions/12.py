@@ -4,14 +4,14 @@ def replace(i, right_s):
         j += 1
     else:
         for k in range((j - i + 1) // 2):
-            s[i + k], s[j - k] = s[j - k], s[i + k]
+            (s[i + k], s[j - k]) = (s[j - k], s[i + k])
     return j
 
 
 t = int(input())
 operations = []
 for _ in range(t):
-    n, k = input().split()
+    (n, k) = input().split()
     n = int(n)
     k = int(k) - 1
     s = list(input())

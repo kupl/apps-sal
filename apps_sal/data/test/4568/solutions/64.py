@@ -1,7 +1,6 @@
 n = int(input())
 s = input()
 count_list = []
-
 for i in range(1, n):
     x = s[:i]
     y = s[i:]
@@ -12,6 +11,4 @@ for i in range(1, n):
         if j in y:
             count += 1
     count_list.append(count)
-
-
-print((max(count_list)))
+print(max(count_list))

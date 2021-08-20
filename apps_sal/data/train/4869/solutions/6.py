@@ -8,11 +8,11 @@ def has_7_of_7_son(person, parent_is_7=False):
     broken = False
     if person['children']:
         for child in person['children']:
-            if child['gender'] == 'male':  # and
+            if child['gender'] == 'male':
                 counter += 1
             else:
                 broken = True
-            if counter == 7 and not broken:
+            if counter == 7 and (not broken):
                 if parent_is_7:
                     result.append(child['name'])
                 result.extend(has_7_of_7_son(child, True))

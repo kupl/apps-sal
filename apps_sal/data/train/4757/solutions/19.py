@@ -3,20 +3,14 @@ t = int(input())
 
 
 def convert(s):
-
-    # initialization of string to ""
-    new = ""
-
-    # traverse in the string
+    new = ''
     for x in s:
         new += x
-
-    # return string
     return new
 
 
 for i in range(t):
-    n, m, a, b = map(int, input().split())
+    (n, m, a, b) = map(int, input().split())
     if m * b != n * a:
         print('NO')
     else:

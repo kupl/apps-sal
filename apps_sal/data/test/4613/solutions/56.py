@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 c = [[0] * n for i in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     c[a - 1][b - 1] = 1
     c[b - 1][a - 1] = 1
 ans = 0

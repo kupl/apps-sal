@@ -1,7 +1,7 @@
 def two_sort(a):
     a.sort()
     a = a[0]
-    b = ""
+    b = ''
     for x in a:
-        b = f"{b}{x}***"
+        b = f'{b}{x}***'
     return b[:-3]

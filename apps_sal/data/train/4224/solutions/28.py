@@ -4,6 +4,6 @@ def dont_give_me_five(start, end):
         arr.append(i)
     count = 0
     for i in arr:
-        if "5" in str(i):
+        if '5' in str(i):
             count += 1
     return len(arr) - count

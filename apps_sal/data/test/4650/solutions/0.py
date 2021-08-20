@@ -15,5 +15,5 @@ for i in range(int(input())):
     ans += x
     type1 -= x
     type2 -= x
-    ans += (type1 // 3 + type2 // 3)
+    ans += type1 // 3 + type2 // 3
     print(ans)

@@ -1,7 +1,6 @@
 def main():
-    n, a, b = list(map(int, input().split()))
-
-    print((min(n * a, b)))
+    (n, a, b) = list(map(int, input().split()))
+    print(min(n * a, b))
 
 
 def __starting_point():

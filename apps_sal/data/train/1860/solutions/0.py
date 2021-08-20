@@ -1,4 +1,5 @@
 class Solution:
+
     def fallingSquares(self, positions):
         """
         :type positions: List[List[int]]
@@ -8,7 +9,7 @@ class Solution:
         pos = [0]
         res = []
         max_h = 0
-        for left, side in positions:
+        for (left, side) in positions:
             i = bisect.bisect_right(pos, left)
             j = bisect.bisect_left(pos, left + side)
             high = max(height[i - 1:j] or [0]) + side

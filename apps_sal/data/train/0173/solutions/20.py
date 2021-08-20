@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         li = collections.Counter([x % k for x in arr])
         for i in li:

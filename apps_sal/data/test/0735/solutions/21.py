@@ -19,11 +19,10 @@ def menaik(a, i1):
 
 
 a = input()
-a = list(map(int, input().split(" ")))
-
+a = list(map(int, input().split(' ')))
 if len(a) == 1:
-    print("yes")
-    print("1 1")
+    print('yes')
+    print('1 1')
 else:
     reversed_indeks1 = -1
     for x in range(len(a) - 1):
@@ -33,8 +32,8 @@ else:
             pass
         pass
     if reversed_indeks1 == -1:
-        print("yes")
-        print("1 1")
+        print('yes')
+        print('1 1')
     else:
         reversed_indeks2 = len(a) - 1
         for x in range(reversed_indeks1, len(a) - 1):
@@ -58,12 +57,12 @@ else:
                 pass
                 pass
             if kiri and kanan:
-                print("yes")
-                print("%d %d" % (reversed_indeks1 + 1, reversed_indeks2 + 1))
+                print('yes')
+                print('%d %d' % (reversed_indeks1 + 1, reversed_indeks2 + 1))
                 pass
             else:
-                print("no")
+                print('no')
         else:
-            print("no")
+            print('no')
             pass
     pass

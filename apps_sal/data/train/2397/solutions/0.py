@@ -8,7 +8,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, m = read_ints()
+    (n, m) = read_ints()
     a = []
     for i in range(n):
         a.append(int(input(), 2))

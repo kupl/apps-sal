@@ -1,5 +1,4 @@
 from collections import defaultdict, namedtuple
-
 Edge = namedtuple('Edge', ['process_name', 'to'])
 State = namedtuple('State', ['stack', 'visited', 'min_stack'])
 
@@ -13,9 +12,8 @@ def dfs(graph, cur_node, end_node, state):
         state.min_stack.clear()
         state.min_stack.extend(state.stack)
         return
-
     state.visited.add(cur_node)
-    for process, node in graph[cur_node]:
+    for (process, node) in graph[cur_node]:
         state.stack.append(process)
         dfs(graph, node, end_node, state)
         state.stack.pop()
@@ -26,11 +24,8 @@ def processes(start, end, processes):
     if start == end:
         return []
     graph = defaultdict(list)
-
-    for process_name, start_node, end_node in processes:
+    for (process_name, start_node, end_node) in processes:
         graph[start_node].append(Edge(process_name, end_node))
-
     state = State([], set(), [])
     dfs(graph, start, end, state)
-
     return state.min_stack

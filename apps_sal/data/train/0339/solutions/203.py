@@ -1,4 +1,5 @@
 class Solution:
+
     def find(self, nums, target):
         seen = collections.defaultdict(int)
         res = 0

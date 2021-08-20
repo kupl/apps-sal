@@ -1,6 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
-        '''
+        """
         result=set()
         i=0
         j=1
@@ -20,7 +21,7 @@ class Solution:
             else:
                 j+=1
         return len(result)
-        '''
+        """
         seen = set()
         n = len(s)
 
@@ -29,7 +30,7 @@ class Solution:
                 return 0
             res = 1
             for j in range(i + 1, n + 1):
-                if s[i:j] not in seen and s[j:] not in seen and s[i:j] != s[j:]:
+                if s[i:j] not in seen and s[j:] not in seen and (s[i:j] != s[j:]):
                     seen.add(s[i:j])
                     res = max(res, dfs(j) + 1)
                     seen.remove(s[i:j])

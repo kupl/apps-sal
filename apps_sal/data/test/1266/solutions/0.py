@@ -1,15 +1,14 @@
 from collections import defaultdict
 import bisect
-
 n = int(input())
-x0, y0 = list(map(int, input().split(' ')))
+(x0, y0) = list(map(int, input().split(' ')))
 verticale = []
 horizontale = []
 diagonale1 = []
 diagonale2 = []
 for _ in range(n):
-    t, x, y = input().split(' ')
-    x, y = int(x), int(y)
+    (t, x, y) = input().split(' ')
+    (x, y) = (int(x), int(y))
     if x == x0:
         verticale.append((y, t))
     if y == y0:
@@ -18,7 +17,6 @@ for _ in range(n):
         diagonale1.append((x, t))
     if x - y == x0 - y0:
         diagonale2.append((x, t))
-
 dead = False
 v = sorted(verticale)
 if v:
@@ -29,9 +27,8 @@ if v:
     elif l == 0:
         if v[0][1] in {'Q', 'R'}:
             dead = True
-    else:
-        if v[len(v) - 1][1] in {'Q', 'R'}:
-            dead = True
+    elif v[len(v) - 1][1] in {'Q', 'R'}:
+        dead = True
 v = sorted(horizontale)
 if v:
     l = bisect.bisect(v, (x0, 'K'))
@@ -41,9 +38,8 @@ if v:
     elif l == 0:
         if v[0][1] in {'Q', 'R'}:
             dead = True
-    else:
-        if v[len(v) - 1][1] in {'Q', 'R'}:
-            dead = True
+    elif v[len(v) - 1][1] in {'Q', 'R'}:
+        dead = True
 v = sorted(diagonale1)
 if v:
     l = bisect.bisect(v, (x0, 'K'))
@@ -53,9 +49,8 @@ if v:
     elif l == 0:
         if v[0][1] in {'Q', 'B'}:
             dead = True
-    else:
-        if v[len(v) - 1][1] in {'Q', 'B'}:
-            dead = True
+    elif v[len(v) - 1][1] in {'Q', 'B'}:
+        dead = True
 v = sorted(diagonale2)
 if v:
     l = bisect.bisect(v, (x0, 'K'))
@@ -65,9 +60,8 @@ if v:
     elif l == 0:
         if v[0][1] in {'Q', 'B'}:
             dead = True
-    else:
-        if v[len(v) - 1][1] in {'Q', 'B'}:
-            dead = True
+    elif v[len(v) - 1][1] in {'Q', 'B'}:
+        dead = True
 if dead:
     print('YES')
 else:

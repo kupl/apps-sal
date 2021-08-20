@@ -1,16 +1,12 @@
 from bisect import bisect
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**9)
-
-
+sys.setrecursionlimit(10 ** 9)
 n = int(input())
 x = list(map(int, input().split()))
 l = int(input())
-
 depth = [-1] * n
 depth[-1] = 0
-
 m = 20
 par = [[-1] * n for i in range(m)]
 
@@ -28,14 +24,12 @@ def dfs(i):
 
 for i in range(n):
     dfs(i)
-
 for i in range(m - 1):
     for j in range(n):
         par[i + 1][j] = par[i][par[i][j]]
 
 
 def hoge(x, y):
-    # xからk個上の頂点がy以上になる最小のkを求める
     k = 0
     for i in range(m)[::-1]:
         if 0 <= par[i][x] < y:
@@ -47,10 +41,9 @@ def hoge(x, y):
 q = int(input())
 ans = []
 for i in range(q):
-    a, b = map(int, input().split())
-    a, b = a - 1, b - 1
+    (a, b) = map(int, input().split())
+    (a, b) = (a - 1, b - 1)
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans.append(hoge(a, b))
-
-print(*ans, sep="\n")
+print(*ans, sep='\n')

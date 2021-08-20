@@ -1,7 +1,7 @@
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 low = 0
-high = 10**9
-if a * 10**9 + b * 10 <= x:
+high = 10 ** 9
+if a * 10 ** 9 + b * 10 <= x:
     print(high)
 else:
     while high - low > 1:

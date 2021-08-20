@@ -5,7 +5,7 @@ def solve():
         return
     syms = s + '@'
     ans = ['@']
-    for i, sym in enumerate(s):
+    for (i, sym) in enumerate(s):
         if sym != '?':
             ans.append(sym)
             continue
@@ -20,9 +20,8 @@ def solveb():
     n = int(input())
     perm = [int(x) for x in input().split()]
     num___idx = [-1 for _ in range(n + 1)]
-    for i, num in enumerate(perm):
+    for (i, num) in enumerate(perm):
         num___idx[num] = i
-
     curr_max = -1
     curr_min = 2 * n
     num___pretty = [0 for _ in range(n + 1)]
@@ -44,7 +43,6 @@ def solvec():
             last_num = num
             weird_prefsums.append(weird_prefsums[-1])
         weird_prefsums[-1] += 1
-
     gold = weird_prefsums[0]
     silvers = 0
     i = 1
@@ -53,7 +51,6 @@ def solvec():
         if x - gold > gold:
             silvers = x - gold
             break
-
     bronzes = 0
     for j in range(i, len(weird_prefsums)):
         x = weird_prefsums[j]
@@ -64,31 +61,28 @@ def solvec():
     if bronzes == 0 or silvers == 0:
         print(0, 0, 0)
         return
-
     print(gold, silvers, bronzes)
 
 
 def solved():
-    a, b, c, d = (int(x) for x in input().split())
+    (a, b, c, d) = (int(x) for x in input().split())
     ab_len = min(a, b)
     a -= ab_len
     b -= ab_len
     cd_len = min(c, d)
     c -= cd_len
     d -= cd_len
-
-    if a == 1 and cd_len == 0 and d == 0 and c == 0:
+    if a == 1 and cd_len == 0 and (d == 0) and (c == 0):
         print('YES')
         print('0 1 ' * ab_len + '0')
         return
-    if d == 1 and ab_len == 0 and a == 0 and b == 0:
+    if d == 1 and ab_len == 0 and (a == 0) and (b == 0):
         print('YES')
         print('3 ' + '2 3 ' * cd_len)
         return
     if a > 0 or d > 0:
         print('NO')
         return
-
     cb_len = min(b, c)
     b -= cb_len
     c -= cb_len
@@ -100,8 +94,7 @@ def solved():
 
 
 def get_me(prob, mod):
-    # return 100, prob
-    return (100 * pow(prob, mod - 2, mod)) % mod
+    return 100 * pow(prob, mod - 2, mod) % mod
 
 
 def solvee():
@@ -113,12 +106,8 @@ def solvee():
         me = get_me(prob, mod)
         curr_me *= me
         curr_me %= mod
-
         curr_me += me
         curr_me %= mod
-
-    # curr_q_me = pow(curr_q_me, mod - 2, mod)
-
     print(curr_me)
 
 

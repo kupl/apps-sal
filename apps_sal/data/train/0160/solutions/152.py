@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, p: List[int]) -> bool:
         n = len(p)
         dp = [[0] * n for _ in range(n)]

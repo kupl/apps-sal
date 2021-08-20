@@ -1,10 +1,8 @@
 s = input()
 n = len(s)
-
 c = [0]
 tmp = 'R'
 idx = 0
-# count for r,l
 for i in s:
     if tmp == i:
         c[idx] += 1
@@ -12,10 +10,8 @@ for i in s:
         tmp = i
         idx += 1
         c.append(1)
-
-
 for i in range(0, len(c), 2):
-    r, l = c[i], c[i + 1]
+    (r, l) = (c[i], c[i + 1])
     rl = r + l
     for j in range(r - 1):
         print(0, end=' ')

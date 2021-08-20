@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -7,7 +6,6 @@ for i in range(t):
     an = nums[k - 1]
     cn = 0
     for i in range(n):
-        if(nums[i] < an):
+        if nums[i] < an:
             cn += 1
-
     print(cn + 1)

@@ -9,11 +9,11 @@ for i in range(n):
             rl = s[i]
         elif rl != s[i]:
             ans += 1
-            rl, ud = s[i], 0
+            (rl, ud) = (s[i], 0)
     elif s[i] == 'U' or s[i] == 'D':
         if not ud:
             ud = s[i]
         elif ud != s[i]:
             ans += 1
-            rl, ud = 0, s[i]
+            (rl, ud) = (0, s[i])
 print(ans)

@@ -1,4 +1,5 @@
 class Solution:
+
     def kSimilarity(self, A, B):
         out = 0
         q = deque()
@@ -16,10 +17,9 @@ class Solution:
                 if arr[x] == e:
                     nei.append(x)
             return nei
-
         while q:
             for _ in range(len(q)):
-                cur, idx = q.popleft()
+                (cur, idx) = q.popleft()
                 while idx < len(cur):
                     if cur[idx] == A[idx]:
                         idx += 1
@@ -34,5 +34,4 @@ class Solution:
                         new[n] = cur[idx]
                         q.append([new, idx + 1])
             out += 1
-
         return out

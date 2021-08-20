@@ -1,8 +1,8 @@
 class Solution:
+
     def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         s = []
         for i in range(len(dominoes)):
-
             dominoes[i] = sorted(dominoes[i])
             if dominoes[i] not in s:
                 s.append(dominoes[i])
@@ -17,6 +17,5 @@ class Solution:
         for r in s:
             c = dominoes.count(r)
             re += int(fac(c) / (fac(c - 2) * 2))
-
         print(dominoes, s, re)
         return re

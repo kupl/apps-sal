@@ -7,12 +7,11 @@ def is_anagram(str1, str2):
 
 s = input()
 st = input()
-s = s.split(" ")
+s = s.split(' ')
 i = 0
-c = ""
+c = ''
 for sr in s:
     i += 1
     if sr != st and is_anagram(sr, st):
         c = c + str(i)
-
-print("The antidote is found in " + c + '.')
+print('The antidote is found in ' + c + '.')

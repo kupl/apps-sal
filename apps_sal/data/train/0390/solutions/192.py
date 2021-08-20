@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         square = []
         for i in range(1, n + 1):
@@ -6,7 +7,6 @@ class Solution:
                 square.append(i * i)
             else:
                 break
-
         from functools import lru_cache
 
         @lru_cache(None)
@@ -16,7 +16,6 @@ class Solution:
                     return False
                 else:
                     return True
-
             if state == 1:
                 tmp = False
                 for num in square:
@@ -35,7 +34,5 @@ class Solution:
                             return tmp
                     else:
                         break
-
             return tmp
-
         return dp(n, 1)

@@ -1,4 +1,3 @@
-
 def mi():
     return map(int, input().split())
 

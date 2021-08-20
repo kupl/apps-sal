@@ -8,8 +8,8 @@ def dfs(adj, n):
             dfs(adj, i)
 
 
-sys.setrecursionlimit(10**9)
-n, k = map(int, input().split())
+sys.setrecursionlimit(10 ** 9)
+(n, k) = map(int, input().split())
 a = []
 for i in range(n):
     t = list(map(int, input().split()))

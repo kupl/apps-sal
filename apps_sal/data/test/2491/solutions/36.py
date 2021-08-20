@@ -21,15 +21,15 @@ def solve(V, E, r, edges):
     return ans
 
 
-V, E = map(int, input().split())
+(V, E) = map(int, input().split())
 edges = []
 for _ in range(E):
-    s, t, d = map(int, input().split())
+    (s, t, d) = map(int, input().split())
     s -= 1
     t -= 1
     edges.append(tuple((s, t, d)))
 ans = solve(V, E, 0, edges)
 if ans == float('inf'):
-    print("inf")
+    print('inf')
 else:
     print(ans)

@@ -1,7 +1,8 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         ys = {}
-        for x, y in points:
+        for (x, y) in points:
             if y not in ys:
                 ys[y] = set()
             ys[y].add(x)
@@ -24,5 +25,4 @@ class Solution:
                     else:
                         result = min(area, result)
                     x1 = x2
-
         return result if result >= 0 else 0

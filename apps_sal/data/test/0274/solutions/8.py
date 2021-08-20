@@ -1,6 +1,5 @@
 n = int(input())
 s = list(input())
-
 max_len = 0
 cur_len = 0
 for si in s:
@@ -10,7 +9,6 @@ for si in s:
         cur_len -= 1
     if cur_len > max_len:
         max_len = cur_len
-
 cur_len = 0
 size = []
 ans = []
@@ -32,13 +30,11 @@ def draw_bracket(pos, size, picture, open):
         picture[start][pos + 1] = '-'
     else:
         picture[start][pos - 1] = '-'
-
     picture[len(picture) - start - 1][pos] = '+'
     if open:
         picture[len(picture) - start - 1][pos + 1] = '-'
     else:
         picture[len(picture) - start - 1][pos - 1] = '-'
-
     for i in range(start + 1, len(picture) - start - 1):
         picture[i][pos] = '|'
 
@@ -51,10 +47,8 @@ def draw_picture(picture):
 pic_size = 0
 for i in range(n):
     pic_size += 1
-    if i + 1 < n and s[i] == '[' and s[i + 1] == ']':
+    if i + 1 < n and s[i] == '[' and (s[i + 1] == ']'):
         pic_size += 3
-
-
 picture = [[' '] * pic_size for i in range(2 * max_len + 1)]
 pos = 0
 for i in range(n):
@@ -68,6 +62,4 @@ for i in range(n):
     if s[i] == ']':
         draw_bracket(pos, ans[i], picture, False)
         pos += 1
-
-
 draw_picture(picture)

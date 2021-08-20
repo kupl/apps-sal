@@ -1,5 +1,5 @@
 def double_char(s):
-    result = ""
+    result = ''
     for i in s:
         result += i + i
     return result

@@ -7,7 +7,7 @@ while num[i] != mn:
 cur = i
 ans = n
 for i in range(cur + 1, n):
-    if(num[i] == mn):
+    if num[i] == mn:
         ans = min(ans, i - cur)
         cur = i
 print(ans)

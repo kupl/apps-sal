@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -16,7 +17,7 @@ class DisjointSet:
         if x == y:
             return
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -27,9 +28,8 @@ class DisjointSet:
         return -self.parents[self.find(x)]
 
 
-N, M, *ab = list(map(int, open(0).read().split()))
-edges = [(a - 1, b - 1) for a, b in zip(*[iter(ab)] * 2)]
-
+(N, M, *ab) = list(map(int, open(0).read().split()))
+edges = [(a - 1, b - 1) for (a, b) in zip(*[iter(ab)] * 2)]
 ans = 0
 for i in range(M):
     ds = DisjointSet(N)

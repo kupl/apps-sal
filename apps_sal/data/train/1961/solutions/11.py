@@ -18,7 +18,6 @@ class BrowserHistory:
         else:
             self.cur -= steps
             self.f += steps
-
         return self.arr[self.cur]
 
     def forward(self, steps: int) -> str:
@@ -28,12 +27,4 @@ class BrowserHistory:
         else:
             self.cur += steps
             self.f -= steps
-
         return self.arr[self.cur]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

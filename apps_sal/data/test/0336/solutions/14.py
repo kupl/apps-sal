@@ -4,7 +4,7 @@ def solve(n, a, b, c, d):
     minsum = min(sums)
     maxsum = max(sums)
     tmp = minsum + n
-    if (tmp <= maxsum):
+    if tmp <= maxsum:
         return ans
     else:
         ans += n * (tmp - maxsum)

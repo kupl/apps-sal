@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         temp = 0
         increment = False
@@ -12,5 +13,4 @@ class Solution:
                     return False
                 temp = 0
                 one_checked = True
-
         return True

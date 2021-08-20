@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = str(input())
-
 ans = ''
 ans += S[:K - 1]
 if S[K - 1] == 'A':

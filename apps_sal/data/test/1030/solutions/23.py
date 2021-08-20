@@ -1,13 +1,3 @@
-# @Author: Justin Hershberger
-# @Date:   23-03-2017
-# @Filename: 399A.py
-# @Last modified by:   Justin Hershberger
-# @Last modified time: 23-03-2017
-
-
-# Justin Hershberger
-# Py3.5
-
 import fileinput
 
 
@@ -16,24 +6,19 @@ def test():
 
 
 def __starting_point():
-    n, p, k = list(map(int, input().split()))
-
-    output = ""
-
+    (n, p, k) = list(map(int, input().split()))
+    output = ''
     if p - k > 1:
-        output = "<< "
-
+        output = '<< '
     for i in range(p - k, p + k + 1):
         if i == p:
-            output += "(" + str(i) + ") "
+            output += '(' + str(i) + ') '
         elif i > n:
             break
         elif i > 0:
-            output += str(i) + " "
-
+            output += str(i) + ' '
     if p + k < n:
-        output += ">>"
-
+        output += '>>'
     print(output)
 
 

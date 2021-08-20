@@ -1,4 +1,5 @@
 class Solution:
+
     def maxWidthRamp(self, A):
         sorted_idx = [x[0] for x in sorted(enumerate(A), key=lambda x: x[1])]
         res = 0

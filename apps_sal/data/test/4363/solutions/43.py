@@ -1,4 +1,4 @@
-k, s = list(map(int, input().split()))
+(k, s) = list(map(int, input().split()))
 counter = 0
 for x in range(k + 1):
     for y in range(x, k + 1):
@@ -10,5 +10,4 @@ for x in range(k + 1):
                 counter += 3
             else:
                 counter += 6
-
 print(counter)

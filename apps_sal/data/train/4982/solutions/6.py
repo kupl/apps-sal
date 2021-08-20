@@ -1,4 +1,4 @@
-class Game():
+class Game:
 
     def __init__(self, board):
         self._board = board
@@ -10,18 +10,15 @@ class Game():
         self._sqctotal = 0
         self._dot = 0
         self._score = 0
-        self._inner = "X"
-        self._blank = "_"
-
+        self._inner = 'X'
+        self._blank = '_'
         self.createcompleteb()
 
     def play(self, lines):
-        if (lines == []):
+        if lines == []:
             return lines
         self._lines = lines
-
         creategameb(self, self._lines)
-
         breaker = False
         lskip = False
         complete = False
@@ -29,24 +26,23 @@ class Game():
             breaker = False
             lskip = False
             for y in range(len(self._gboard)):
-                if (not lskip):
+                if not lskip:
                     lskip = True
-                    if(y != len(self._gboard) - 1):
+                    if y != len(self._gboard) - 1:
                         for x in range(len(self._gboard)):
-                            if(self._gboard[y][x] != self._dot):
+                            if self._gboard[y][x] != self._dot:
                                 for sqc in self._sqcheck:
-                                    if (self._gboard[y + sqc[0]][x + sqc[1]] != self._blank):
+                                    if self._gboard[y + sqc[0]][x + sqc[1]] != self._blank:
                                         self._sqctotal += 1
-                                if(self._sqctotal == 3):
+                                if self._sqctotal == 3:
                                     for sqc in self._sqcheck:
-                                        if (self._gboard[y + sqc[0]][x + sqc[1]] == self._blank):
+                                        if self._gboard[y + sqc[0]][x + sqc[1]] == self._blank:
                                             self._gboard[y + sqc[0]][x + sqc[1]] = self._cboard[y + sqc[0]][x + sqc[1]]
                                             self._sqctotal = 0
                                             self._score = 1
                                             breaker = True
                                             break
-
-                                elif(self._sqctotal == 4):
+                                elif self._sqctotal == 4:
                                     self._sqctotal = 0
                                     self._score = 1
                                 else:
@@ -57,32 +53,28 @@ class Game():
                         complete = True
                 else:
                     lskip = False
-
-                if(breaker):
+                if breaker:
                     breaker = False
                     break
-
         for y in range(len(self._gboard)):
             for x in range(len(self._gboard)):
-                if(isinstance(self._gboard[y][x], int)):
-                    if(self._gboard[y][x] > 0):
+                if isinstance(self._gboard[y][x], int):
+                    if self._gboard[y][x] > 0:
                         self._flines.append(self._gboard[y][x])
-
-        if(self._score):
+        if self._score:
             return self._flines
         else:
             return self._lines
 
     def createcompleteb(self):
-        # create a complete board
-        switch = 1  # 0 = number 1 = dot/inner
-        doi = 0  # 0 = dot 1 = inner
+        switch = 1
+        doi = 0
         count = 1
         tmp = []
         for y in range(self._board + 1 + self._board):
             for x in range(self._board + 1 + self._board):
-                if (switch):
-                    if (not doi):
+                if switch:
+                    if not doi:
                         tmp.append(self._dot)
                         switch = 0
                     else:
@@ -92,7 +84,7 @@ class Game():
                     tmp.append(count)
                     count += 1
                     switch = 1
-            if(doi == 1):
+            if doi == 1:
                 doi = 0
             else:
                 doi = 1
@@ -101,31 +93,28 @@ class Game():
 
 
 def creategameb(self, lines):
-    # create a game board using provided "lines"
-    switch = 1  # 0 = number 1 = dot/inner
-    doi = 0  # 0 = dot 1 = inner
+    switch = 1
+    doi = 0
     count = 1
     tmp = []
     for y in range(self._board + 1 + self._board):
         for x in range(self._board + 1 + self._board):
-            if (switch):
-                if (not doi):
+            if switch:
+                if not doi:
                     tmp.append(self._dot)
                     switch = 0
                 else:
                     tmp.append(self._inner)
                     switch = 0
+            elif count in lines:
+                tmp.append(count)
+                count += 1
+                switch = 1
             else:
-                if (count in lines):
-                    tmp.append(count)
-                    count += 1
-                    switch = 1
-                else:
-                    tmp.append(self._blank)
-                    count += 1
-                    switch = 1
-
-        if(doi == 1):
+                tmp.append(self._blank)
+                count += 1
+                switch = 1
+        if doi == 1:
             doi = 0
         else:
             doi = 1

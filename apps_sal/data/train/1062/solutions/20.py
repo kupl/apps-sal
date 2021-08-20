@@ -9,7 +9,7 @@ i = 0
 j = n * 2 - 2
 key = n
 m = []
-l = ((n * 2) - 1) * s.split()
+l = (n * 2 - 1) * s.split()
 for i in range(int((n * 2 - 2) / 2) + 1):
     replace(l, key, i, j)
     key -= 1

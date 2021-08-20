@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-l = [list(map(int, input().split()))for i in range(N)]
+(N, K) = map(int, input().split())
+l = [list(map(int, input().split())) for i in range(N)]
 l.sort(key=lambda x: x[0])
 ans = 0
 for i in l:

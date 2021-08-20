@@ -1,5 +1,5 @@
 from bisect import bisect_left as bl, bisect_right as br
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 M = sorted([int(a) for a in input().split()])[::-1]
 C = [0] + [int(a) for a in input().split()]
 ANS = [{}]
@@ -14,7 +14,6 @@ for m in M:
     else:
         ANS[a][m] += 1
     S[a] -= 1
-
 print(len(ANS))
 for ans in ANS:
     L = []

@@ -1,14 +1,11 @@
 def triangle(row):
-
     if len(row) == 1:
         return row
-
     while len(row) > 1:
         N = len(row)
         new_row = []
         i = 0
         while i < N - 1:
-
             word = [row[i], row[i + 1]]
             word.sort()
             word = ''.join(word)
@@ -26,8 +23,6 @@ def triangle(row):
                 new_row.append('B')
             else:
                 return False
-
             i += 1
-
         row = new_row
     return row[0]

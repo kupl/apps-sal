@@ -5,6 +5,6 @@ for i in range(t):
     b = input().split()
     c = input()
     for j in range(len(x)):
-        if(x[j] not in c):
+        if x[j] not in c:
             a = a + int(b[j])
     print(a)

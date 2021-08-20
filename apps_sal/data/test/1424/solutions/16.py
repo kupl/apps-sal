@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 s = 0
 a = []
 for i in range(m + 1):
@@ -8,5 +8,4 @@ for i in range(m):
     d = list(map(int, list(bin(a[i] ^ p)[2:])))
     if sum(d) <= k:
         s += 1
-        # print(a[i])
 print(s)

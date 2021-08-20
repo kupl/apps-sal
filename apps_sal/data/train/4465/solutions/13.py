@@ -5,4 +5,4 @@ def super_size(n):
         return n
     else:
         ans = sorted(str(n), reverse=True)
-        return int("".join(ans))
+        return int(''.join(ans))

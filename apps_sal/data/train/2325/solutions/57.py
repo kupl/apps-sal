@@ -2,7 +2,6 @@ S = input()
 T = input()
 N = int(input())
 abcd = [tuple(map(int, input().split())) for _ in range(N)]
-
 NS = len(S)
 NT = len(T)
 cs0 = [0] * (NS + 1)
@@ -23,8 +22,7 @@ for i in range(NT):
         ct0[i + 1] += 1
     else:
         ct1[i + 1] += 1
-
-for a, b, c, d in abcd:
+for (a, b, c, d) in abcd:
     anum = cs0[b] - cs0[a - 1]
     bnum = cs1[b] - cs1[a - 1]
     num = 0
@@ -43,7 +41,6 @@ for a, b, c, d in abcd:
         num2 = (anum2 - bnum2) % 3
     else:
         num2 = 2 * (bnum2 - anum2) % 3
-
     if num == num2:
         print('YES')
     else:

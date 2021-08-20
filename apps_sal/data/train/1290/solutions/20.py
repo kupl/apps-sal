@@ -1,4 +1,3 @@
-# cook your dish here
 def __starting_point():
     s = int(input())
     if s <= 9:

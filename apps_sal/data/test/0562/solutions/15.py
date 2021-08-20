@@ -1,5 +1,5 @@
 n = int(input())
-a, b = [], []
+(a, b) = ([], [])
 for i in range(n):
     t = [int(i) for i in input().split()]
     a.append(t[0])
@@ -8,20 +8,15 @@ a.sort()
 b.sort()
 i = j = 0
 ans = 0
-
-while ans <= 2 and i < n and j < n:
-    """
-    print(a[i],b[j])
-    print(i,j,'\n')
-    """
+while ans <= 2 and i < n and (j < n):
+    "\n    print(a[i],b[j])\n    print(i,j,'\n')\n    "
     if a[i] <= b[j]:
         ans += 1
         i += 1
     else:
         ans -= 1
         j += 1
-
 if ans > 2:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

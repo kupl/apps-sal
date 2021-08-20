@@ -1,4 +1,5 @@
 class Solution:
+
     def productExceptSelf(self, nums):
         """
         :type nums: List[int]
@@ -10,7 +11,6 @@ class Solution:
             nums0.remove(0)
             for i in nums0:
                 son *= i
-
         pro = 1
         for i in nums:
             pro *= i

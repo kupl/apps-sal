@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -15,11 +14,10 @@ def check(s):
 
 N = int(input())
 S = [input().strip() for i in range(N)]
-
 total = 0
-ps, ms = [], []
+(ps, ms) = ([], [])
 for s in S:
-    h, b = 0, 0
+    (h, b) = (0, 0)
     for c in s:
         if c == '(':
             h += 1
@@ -31,10 +29,9 @@ for s in S:
     else:
         ms.append([b - h, -h])
     total += h
-
 ps.sort(reverse=True)
 ms.sort(reverse=True)
-if check(ps) and check(ms) and total == 0:
+if check(ps) and check(ms) and (total == 0):
     print('Yes')
 else:
     print('No')

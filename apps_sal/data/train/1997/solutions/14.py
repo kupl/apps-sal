@@ -1,9 +1,9 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         n = len(intervals)
         flag = [0] * n
         i = 0
-
         while i < n:
             j = i + 1
             while j < n:
@@ -15,5 +15,4 @@ class Solution:
                         flag[j] = 1
                 j += 1
             i += 1
-
         return flag.count(0)

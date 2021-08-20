@@ -4,4 +4,4 @@ def digit_sum(string):
 
 def order_weight(string):
     weights = sorted(string.split())
-    return " ".join(sorted(weights, key=digit_sum))
+    return ' '.join(sorted(weights, key=digit_sum))

@@ -1,5 +1,5 @@
 def main():
-    n, x, y = map(int, input().split())
+    (n, x, y) = map(int, input().split())
     s = input()
     ans = 0
     for i in range(-1, -x - 1, -1):

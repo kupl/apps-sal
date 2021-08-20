@@ -1,1 +1,2 @@
-def check_for_factor(x, y): return not x % y
+def check_for_factor(x, y):
+    return not x % y

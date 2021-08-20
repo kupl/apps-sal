@@ -4,20 +4,18 @@ try:
     l_b = []
     l_c = []
     for i in range(len(s)):
-        if(s[i] == 'a'):
+        if s[i] == 'a':
             l_a.append(i)
     for i in range(len(s)):
-        if(s[i] == 'b'):
+        if s[i] == 'b':
             l_b.append(i)
     for i in range(len(s)):
-        if(s[i] == 'c'):
+        if s[i] == 'c':
             l_c.append(i)
-    # print(l_a,l_b,l_c)
     maxi = 0
     for i in l_a:
         for j in l_c:
             maxi = max(maxi, abs(i - j))
-            # print(l_c[j])
     for i in l_b:
         for j in l_c:
             maxi = max(maxi, abs(i - j))

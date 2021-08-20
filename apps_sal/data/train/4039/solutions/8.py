@@ -11,11 +11,11 @@ def fouriest(i):
         if fours > highscore:
             highscore = fours
             winner = base
-        elif 4 * base**(highscore) > i:
+        elif 4 * base ** highscore > i:
             break
     n = i
-    result = ""
+    result = ''
     while n > 0:
-        result = str(n % winner) + result if n % winner < 10 else "x" + result
+        result = str(n % winner) + result if n % winner < 10 else 'x' + result
         n //= winner
-    return "{} is the fouriest ({}) in base {}".format(i, result, winner)
+    return '{} is the fouriest ({}) in base {}'.format(i, result, winner)

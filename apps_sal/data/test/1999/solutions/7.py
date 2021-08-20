@@ -13,7 +13,7 @@ def f(x):
 
 for i in range(n):
     x = L[i]
-    while (f(x) != -1):
+    while f(x) != -1:
         L[X[x]] = -1
         out -= 1
         X[x] = -1
@@ -22,6 +22,6 @@ for i in range(n):
     X[x] = i
 print(out)
 for i in range(n):
-    if (L[i] != -1):
-        print(L[i], end=" ")
+    if L[i] != -1:
+        print(L[i], end=' ')
 print()

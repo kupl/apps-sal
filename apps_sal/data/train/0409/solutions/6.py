@@ -1,4 +1,5 @@
 class Solution:
+
     def findMaxSubarray(arr):
         counter = 0
         best = 0
@@ -30,15 +31,10 @@ class Solution:
         no_reps = Solution.findMaxSubarray(arr)
         if k == 1:
             return no_reps
-
         arr_sum = sum(arr)
         best_from_left = Solution.maxFromLeft(arr)
         best_from_right = Solution.maxFromRight(arr)
-
         right_and_left = best_from_right + best_from_left
-
         right_and_k_and_left = best_from_right + (k - 2) * arr_sum + best_from_left
-
         res = max(no_reps, right_and_left, right_and_k_and_left)
-
         return res % (10 ** 9 + 7)

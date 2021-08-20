@@ -9,5 +9,5 @@ def power(a, n):
     return power(a, n - 1) * a
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 print(power(power(2, m) + MOD - 1, n) % MOD)

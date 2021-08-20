@@ -1,7 +1,5 @@
 n = int(input())
-
 m = n // 2 + 1
-
 r = 1
 c = 1
 print(m)

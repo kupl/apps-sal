@@ -11,11 +11,11 @@ class UFset:
         return self.parents[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px == py:
             return False
         if self.ranks[x] > self.ranks[y]:
-            px, py = py, px
+            (px, py) = (py, px)
         self.parents[px] = py
         self.ranks[py] += 1
         self.size += 1
@@ -23,25 +23,26 @@ class UFset:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         alice = UFset(n)
         bob = UFset(n)
         res = 0
-        for type_i, v, w in edges:
+        for (type_i, v, w) in edges:
             v -= 1
             w -= 1
             if type_i == 3:
                 a = alice.union(v, w)
                 b = bob.union(v, w)
-                if not a and not b:
+                if not a and (not b):
                     res += 1
-        for type_i, v, w in edges:
+        for (type_i, v, w) in edges:
             v -= 1
             w -= 1
             if type_i == 1:
                 if not alice.union(v, w):
                     res += 1
-        for type_i, v, w in edges:
+        for (type_i, v, w) in edges:
             v -= 1
             w -= 1
             if type_i == 2:

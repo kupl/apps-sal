@@ -8,4 +8,4 @@ def greatest(x, y, n):
 
 def smallest(x, y, n):
     lcm = x * y // gcd(x, y)
-    return -(- (n + 1) // lcm) * lcm
+    return -(-(n + 1) // lcm) * lcm

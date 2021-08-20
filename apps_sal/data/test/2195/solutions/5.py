@@ -1,6 +1,6 @@
 def solve():
-    x, y = map(int, input().split())
-    a, b = map(int, input().split())
+    (x, y) = map(int, input().split())
+    (a, b) = map(int, input().split())
     d = abs(x - y)
     a1 = a * (x + y)
     a2 = b * min(x, y) + a * d

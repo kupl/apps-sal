@@ -13,6 +13,5 @@ def cmb(n, r):
     return over // under
 
 
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 print(cmb(N, 2) + cmb(M, 2))

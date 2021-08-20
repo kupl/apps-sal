@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumberOfBalloons(self, text: str) -> int:
         memo = defaultdict(int)
         for t in text:

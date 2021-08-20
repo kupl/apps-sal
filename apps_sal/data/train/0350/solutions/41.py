@@ -1,5 +1,5 @@
-
 class Window:
+
     def __init__(self):
         self.num = 0
         self.dic = collections.defaultdict(int)
@@ -18,20 +18,18 @@ class Window:
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         wk = Window()
         wm = Window()
-
         sk = 0
         sm = 0
         e = 0
         ans = 0
-
         while e < len(A):
             ce = A[e]
             nk = wk.add(ce)
             nm = wm.add(ce)
-
             if nk < K:
                 e += 1
             elif nk == K:
@@ -49,5 +47,4 @@ class Solution:
                     sm += 1
                 ans += sm - sk
                 e += 1
-
         return ans

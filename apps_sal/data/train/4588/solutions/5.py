@@ -1,9 +1,11 @@
 class State:
+
     def __init__(self):
         pass
 
 
 class PausedIncreasing(State):
+
     @classmethod
     def handle(cls, e, val):
         nextstate = cls
@@ -14,10 +16,11 @@ class PausedIncreasing(State):
             nextstate = MovingIncreasing
         elif e == 'O':
             nextstate = PausedDecreasing
-        return val, nextstate
+        return (val, nextstate)
 
 
 class PausedDecreasing(State):
+
     @classmethod
     def handle(cls, e, val):
         nextstate = cls
@@ -28,10 +31,11 @@ class PausedDecreasing(State):
             nextstate = MovingDecreasing
         elif e == 'O':
             nextstate = PausedIncreasing
-        return val, nextstate
+        return (val, nextstate)
 
 
 class MovingIncreasing(State):
+
     @classmethod
     def handle(cls, e, val):
         nextstate = cls
@@ -42,10 +46,11 @@ class MovingIncreasing(State):
         elif e == 'O':
             val -= 1
             nextstate = MovingDecreasing
-        return val, nextstate
+        return (val, nextstate)
 
 
 class MovingDecreasing(State):
+
     @classmethod
     def handle(cls, e, val):
         nextstate = cls
@@ -56,16 +61,17 @@ class MovingDecreasing(State):
         elif e == 'O':
             val += 1
             nextstate = MovingIncreasing
-        return val, nextstate
+        return (val, nextstate)
 
 
 class GarageDoor:
+
     def __init__(self):
         self.val = 0
         self.state = PausedIncreasing
 
     def handle(self, e):
-        self.val, self.state = self.state.handle(e, self.val)
+        (self.val, self.state) = self.state.handle(e, self.val)
         if self.val == 0:
             self.state = PausedIncreasing
         elif self.val == 5:
@@ -73,7 +79,7 @@ class GarageDoor:
         return str(self.val)
 
     def get_output(self, events):
-        return ''.join(str(self.handle(e)) for e in events)
+        return ''.join((str(self.handle(e)) for e in events))
 
 
 def controller(events):

@@ -6,10 +6,10 @@ for i in range(testcases):
     if a[0] == a[-1]:
         count += 1
         if count == 3:
-            print("Yes")
+            print('Yes')
             bool = True
             break
     else:
         count = 0
 if not bool:
-    print("No")
+    print('No')

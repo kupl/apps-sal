@@ -4,7 +4,7 @@ from math import gcd
 def readinput():
     n = int(input())
     a = list(map(int, input().split()))
-    return n, a
+    return (n, a)
 
 
 def main(n, a):
@@ -15,7 +15,7 @@ def main(n, a):
 
 
 def __starting_point():
-    n, a = readinput()
+    (n, a) = readinput()
     ans = main(n, a)
     print(ans)
 

@@ -5,7 +5,6 @@ MOD = 10 ** 9 + 7
 sys.setrecursionlimit(100000000)
 input = sys.stdin.readline
 MAXN = 2005
-
 dp0 = [[-1] * MAXN for _ in range(MAXN)]
 dp1 = [[-1] * MAXN for _ in range(MAXN)]
 
@@ -46,9 +45,8 @@ def dfs(i, j, p, z, w, a, n):
 
 
 def main():
-    n, z, w = map(int, input().split())
+    (n, z, w) = map(int, input().split())
     a = list(map(int, input().split()))
-
     ans = dfs(1, 0, 0, z, w, a, n)
     print(ans)
 

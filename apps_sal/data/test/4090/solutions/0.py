@@ -29,12 +29,11 @@ for i in range(n):
                 cur += 1
                 kmp[ind] = cur
                 ind += 1
+            elif cur != 0:
+                cur -= 1
             else:
-                if cur != 0:
-                    cur -= 1
-                else:
-                    kmp[ind] = 0
-                    ind += 1
+                kmp[ind] = 0
+                ind += 1
         ind = 0
         cur = 0
         while ind < n:
@@ -52,7 +51,7 @@ for i in range(n):
         if found > 1:
             res = 0
             for k in temp:
-                res += (lens[k] - 1) * (found)
-            res += (len(temp) - 1) * (found)
+                res += (lens[k] - 1) * found
+            res += (len(temp) - 1) * found
             ans = max(ans, res)
 print(final - ans)

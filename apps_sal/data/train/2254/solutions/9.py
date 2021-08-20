@@ -1,11 +1,11 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 l = []
 a = [[] for _ in range(n)]
 tp = 0
 ans = 0
 anss = []
 for i in range(q):
-    x, b = map(int, input().split())
+    (x, b) = map(int, input().split())
     if x == 1:
         l.append(1)
         a[b - 1].append(len(l) - 1)

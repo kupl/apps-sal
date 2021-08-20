@@ -1,6 +1,7 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n, edges):
-        # Union find
+
         def find(node):
             if parent[node] != node:
                 parent[node] = find(parent[node])
@@ -22,14 +23,12 @@ class Solution:
         rank = [0] * (n + 1)
         edge_added = 0
         edge_can_remove = 0
-
         for edge in edges:
             if edge[0] == 3:
                 if union(edge[1], edge[2]):
                     edge_added += 1
                 else:
                     edge_can_remove += 1
-
         parent_back_up = parent[:]
         alice_edge = 0
         bob_edge = 0

@@ -32,7 +32,6 @@ for i in range(3):
         players.append((j, i))
 players.sort()
 players.append((200001, 0))
-
 count = 0
 r = 0
 for l in range(len(players) - 5):
@@ -43,5 +42,4 @@ for l in range(len(players) - 5):
     r = bin_search(l, len(players) - 1, players[l][0] * 2)
     cur_cmds = cmds_in_range(players[l:r + 1])
     count += cur_cmds - inter_cmds
-
 print(count)

@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     cnt = 0
     while n != 0:
         cnt += n % k

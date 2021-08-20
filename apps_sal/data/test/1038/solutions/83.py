@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -18,7 +17,7 @@ def g(N):
 
 
 def main():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     ans = g(A - 1) ^ g(B)
     print(ans)
 

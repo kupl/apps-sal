@@ -1,21 +1,21 @@
-'''
+"""
 Created on Oct 6, 2014
 
 @author: nod
-'''
-n, m = map(int, input().split())
+"""
+(n, m) = map(int, input().split())
 horizontal = str(input())
 visited = []
 h = []
 vertical = str(input())
 v = []
 for char in horizontal:
-    if char == ">":
+    if char == '>':
         h.append(int(1))
     else:
         h.append(int(-1))
 for char in vertical:
-    if char == "v":
+    if char == 'v':
         v.append(int(1))
     else:
         v.append(int(-1))
@@ -27,11 +27,9 @@ def travel(ni, mi):
     visited.append([ni, mi])
     newn = ni + updown
     newm = mi + leftright
-    if newn >= 0 and newn < n and [newn, mi] not in visited:
-        #        print(newn,mi)
+    if newn >= 0 and newn < n and ([newn, mi] not in visited):
         travel(newn, mi)
-    if newm >= 0 and newm < m and [ni, newm] not in visited:
-        #        print(ni,newm)
+    if newm >= 0 and newm < m and ([ni, newm] not in visited):
         travel(ni, newm)
     return visited
 
@@ -43,11 +41,11 @@ def solve():
         visited.clear()
         vis = travel(l[0], l[1])
         if len(vis) != m * n:
-            print("NO")
+            print('NO')
             return
         visited.clear()
         vis.clear()
-    print("YES")
+    print('YES')
 
 
 solve()

@@ -1,12 +1,12 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         dp = collections.defaultdict(int)
-        i, j = len(nums1) - 2, len(nums2) - 2
+        (i, j) = (len(nums1) - 2, len(nums2) - 2)
         dp[nums1[-1]] = nums1[-1]
         dp[nums2[-1]] = nums2[-1]
         while i >= 0 or j >= 0:
-            v1, v2 = nums1[i] if i >= 0 else -1, nums2[j] if j >= 0 else -1
-            # print(i,j,v1,v2,dp)
+            (v1, v2) = (nums1[i] if i >= 0 else -1, nums2[j] if j >= 0 else -1)
             if v1 > v2:
                 dp[v1] = v1 + dp[nums1[i + 1]]
                 i -= 1

@@ -15,19 +15,16 @@ def junban(dic):
     used = []
     for i in range(N):
         minus = 1
-
         for j in used:
             if dic[i] > j:
                 minus += 1
         order += (dic[i] - minus) * kaijo(N - i - 1)
         used.append(dic[i])
-
-    return(order)
+    return order
 
 
 Porder = junban(P)
 Qorder = junban(Q)
-
 if Porder >= Qorder:
     print(Porder - Qorder)
 else:

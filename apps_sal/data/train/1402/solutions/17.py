@@ -9,5 +9,4 @@ for j in range(t):
         a = u
         b = 2 * v
         i += 1
-
     print(i)

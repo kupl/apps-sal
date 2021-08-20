@@ -1,6 +1,6 @@
 N = int(input())
-mod = 10**9 + 7
-dp = [{}for i in range(N)]
+mod = 10 ** 9 + 7
+dp = [{} for i in range(N)]
 list = ['AGC', 'ACG', 'GAC']
 
 

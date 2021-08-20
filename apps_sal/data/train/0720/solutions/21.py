@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     s = input()
     one = [0] * (len(s) + 1)
@@ -11,7 +10,7 @@ for i in range(int(input())):
     i = 1
     r = 2
     while r <= len(s):
-        r = i + i**2
+        r = i + i ** 2
         j = 0
         while j <= len(s) - r:
             if one[j + r] - one[j] == i:

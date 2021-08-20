@@ -40,27 +40,21 @@ def main():
     動かし方の例は、入力例1参照
     """
     N = int(input())
-    X, Y = zip(*(
-        map(int, input().split())
-        for _ in range(N)
-    ))
-
-    # m, d, w = part_300(N, X, Y)
-    m, d, w = ref(N, X, Y)
-
+    (X, Y) = zip(*(map(int, input().split()) for _ in range(N)))
+    (m, d, w) = ref(N, X, Y)
     if m == -1:
         print(-1)
     else:
         print(m)
         print(*d)
-        print(*w, sep="\n")
+        print(*w, sep='\n')
 
 
 def ex1(N, X, Y):
     m = 2
     d = [1, 2]
-    w = ["RL", "UU", "DR"]
-    return m, d, w
+    w = ['RL', 'UU', 'DR']
+    return (m, d, w)
 
 
 def part_300(N, X, Y):
@@ -82,10 +76,9 @@ def part_300(N, X, Y):
             無理っぽい: 奇数しか作れない
     """
     dists = []
-    for x, y in zip(X, Y):
+    for (x, y) in zip(X, Y):
         dist = abs(x) + abs(y)
         dists.append(dist)
-
     m = -1
     d = []
     w = []
@@ -93,17 +86,15 @@ def part_300(N, X, Y):
     if len(set(mod)) == 1:
         m = max(dists)
         d = [1] * m
-        for x, y, dist in zip(X, Y, dists):
-            x_dir = "R" if x > 0 else "L"
-            y_dir = "U" if y > 0 else "D"
-
+        for (x, y, dist) in zip(X, Y, dists):
+            x_dir = 'R' if x > 0 else 'L'
+            y_dir = 'U' if y > 0 else 'D'
             _w = x_dir * abs(x) + y_dir * abs(y)
             rest = m - len(_w)
             if rest > 0:
-                _w += "LR" * (rest // 2)
+                _w += 'LR' * (rest // 2)
             w.append(_w)
-
-    return m, d, w
+    return (m, d, w)
 
 
 def editorial(N, X, Y):
@@ -160,89 +151,69 @@ def editorial(N, X, Y):
 
 def ref(N, X, Y):
     dists = []
-    for x, y in zip(X, Y):
+    for (x, y) in zip(X, Y):
         dist = (abs(x) + abs(y)) % 2
         dists.append(dist)
-
     m = -1
     d = []
     w = []
     mod = set(map(lambda x: x % 2, dists))
     if len(mod) != 1:
-        return m, d, w
-
+        return (m, d, w)
     for i in range(30, 0 - 1, -1):
         d.append(1 << i)
     if 0 in mod:
         d.append(1)
     m = len(d)
-
-    # w = transform_xy(N, X, Y, d)
     w = no_transform_xy(N, X, Y, d)
-    # print(w)
-
-    return m, d, w
+    return (m, d, w)
 
 
 def transform_xy(N, X, Y, d):
     w = []
-    dirs = {
-        # dir: x', y'
-        (-1, -1): "L",  # 本来の座標(x, y): (-1,  0)
-        (+1, +1): "R",  # 本来の座標(x, y): (+1,  0)
-        (+1, -1): "U",  # 本来の座標(x, y): ( 0, +1)
-        (-1, +1): "D",  # 本来の座標(x, y): ( 0, -1)
-    }
-    for x, y in zip(X, Y):
+    dirs = {(-1, -1): 'L', (+1, +1): 'R', (+1, -1): 'U', (-1, +1): 'D'}
+    for (x, y) in zip(X, Y):
         x_sum = 0
         y_sum = 0
-        _w = ""
+        _w = ''
         for _d in d:
-            # 変換後の座標でx',y'を独立に求めている?
             if x_sum <= x:
                 x_dir = 1
                 x_sum += _d
             else:
                 x_dir = -1
                 x_sum -= _d
-
             if y_sum <= y:
                 y_dir = 1
                 y_sum += _d
             else:
                 y_dir = -1
                 y_sum -= _d
-
-            _w += dirs[(x_dir, y_dir)]
-
+            _w += dirs[x_dir, y_dir]
         w.append(_w)
-
     return w
 
 
 def no_transform_xy(N, X, Y, d):
     w = []
-    for xt, yt in zip(X, Y):
-        x, y = 0, 0
-        _w = ""
+    for (xt, yt) in zip(X, Y):
+        (x, y) = (0, 0)
+        _w = ''
         for _d in d:
             if abs(x - xt) >= abs(y - yt):
                 if x >= xt:
                     x -= _d
-                    _w += "L"
+                    _w += 'L'
                 else:
                     x += _d
-                    _w += "R"
+                    _w += 'R'
+            elif y >= yt:
+                y -= _d
+                _w += 'D'
             else:
-                if y >= yt:
-                    y -= _d
-                    _w += "D"
-                else:
-                    y += _d
-                    _w += "U"
-
+                y += _d
+                _w += 'U'
         w.append(_w)
-
     return w
 
 

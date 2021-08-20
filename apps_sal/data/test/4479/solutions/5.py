@@ -1,9 +1,10 @@
 class Solution:
+
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
         A.sort()
         p = 0
         while A[p] < 0:
-            A[p] = - A[p]
+            A[p] = -A[p]
             p += 1
             K -= 1
             if K == 0:

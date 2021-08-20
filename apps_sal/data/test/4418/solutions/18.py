@@ -10,5 +10,4 @@ for _ in range(1):
         elif c[b[b.index(i) - 1]] > 0:
             c[b[b.index(i) - 1]] -= 1
             c[i] += 1
-
-    print(n - (c[42]) * 6)
+    print(n - c[42] * 6)

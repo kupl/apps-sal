@@ -1,5 +1,5 @@
 import math
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = []
 mod = 998244353
 for _ in range(N):
@@ -13,10 +13,10 @@ def find(x, uf):
 
 
 def union(x, y, uf, rank):
-    px, py = find(x, uf), find(y, uf)
+    (px, py) = (find(x, uf), find(y, uf))
     if px != py:
         if rank[px] > rank[py]:
-            px, py = py, px
+            (px, py) = (py, px)
         rank[py] += rank[px]
         uf[px] = py
 
@@ -27,18 +27,18 @@ rank1 = {i: 1 for i in range(N)}
 rank2 = {i: 1 for i in range(N)}
 for i in range(N):
     for j in range(i + 1, N):
-        if all(a + b <= K for a, b in zip(A[i], A[j])):
+        if all((a + b <= K for (a, b) in zip(A[i], A[j]))):
             union(i, j, uf1, rank1)
 B = list(zip(*A))
 for i in range(N):
     for j in range(i + 1, N):
-        if all(a + b <= K for a, b in zip(B[i], B[j])):
+        if all((a + b <= K for (a, b) in zip(B[i], B[j]))):
             union(i, j, uf2, rank2)
 ans = 1
-for x in set(find(i, uf1) for i in range(N)):
+for x in set((find(i, uf1) for i in range(N))):
     ans *= math.factorial(rank1[x])
     ans %= mod
-for x in set(find(i, uf2) for i in range(N)):
+for x in set((find(i, uf2) for i in range(N))):
     ans *= math.factorial(rank2[x])
     ans %= mod
 print(ans)

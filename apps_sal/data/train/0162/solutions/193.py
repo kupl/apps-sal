@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         dp = [[-1] * (len(text2) + 1) for i in range(len(text1) + 1)]
 
@@ -13,5 +14,4 @@ class Solution:
             else:
                 dp[n - 1][m - 1] = max(LCS(s1, s2, n - 1, m, dp), LCS(s1, s2, n, m - 1, dp))
                 return dp[n - 1][m - 1]
-
-        return (LCS(text1, text2, len(text1), len(text2), dp))
+        return LCS(text1, text2, len(text1), len(text2), dp)

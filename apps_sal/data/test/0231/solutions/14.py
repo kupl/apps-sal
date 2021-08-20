@@ -1,4 +1,4 @@
-x, y = [int(i) for i in input().split()]
+(x, y) = [int(i) for i in input().split()]
 r = 1
 if y % 2 == 0:
     for i in range(x, 1, -2):

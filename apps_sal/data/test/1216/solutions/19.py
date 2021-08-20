@@ -22,19 +22,17 @@ while i < n:
                     flag = 1
                     curRepeat = curVolve
                     ans.append(s[i])
+            elif flag == 0:
+                curRepeat = curVolve
+                flag = 1
+                ans.append(s[i])
+            elif curRepeat == curVolve:
+                ans.append(s[i])
+                flag = 2
             else:
-                if flag == 0:
-                    curRepeat = curVolve
-                    flag = 1
-                    ans.append(s[i])
-                else:
-                    if curRepeat == curVolve:
-                        ans.append(s[i])
-                        flag = 2
-                    else:
-                        curRepeat = curVolve
-                        ans.append(s[i])
-                        flag = 1
+                curRepeat = curVolve
+                ans.append(s[i])
+                flag = 1
         else:
             flag = 0
             ans.append(s[i])
@@ -45,5 +43,4 @@ while i < n:
         flag = 0
         ans.append(s[i])
     i += 1
-
 print(''.join(ans))

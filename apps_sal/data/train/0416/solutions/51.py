@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph):
         mem = [[[-1 for i in range(1 + 2 * len(graph))] for i in range(1 + 2 * len(graph))] for i in range(2 * len(graph))]
 

@@ -11,7 +11,6 @@ def prime(x):
 
 
 n = int(input())
-
 if prime(n):
     print(1)
     print(n)
@@ -25,9 +24,7 @@ else:
     x = n - 4
     while not prime(x):
         x -= 1
-
     rest = n - x
-
     y = rest - 1
     while not prime(y) or not prime(rest - y):
         y -= 1

@@ -1,6 +1,13 @@
-def getint(): return int(input())
-def getints(): return map(int, input().split())
-def getlist(): return list(getints())
+def getint():
+    return int(input())
+
+
+def getints():
+    return map(int, input().split())
+
+
+def getlist():
+    return list(getints())
 
 
 n = getint()

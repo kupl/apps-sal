@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Spyder Editor
 
@@ -12,9 +11,8 @@ a.append(0)
 a.append(n)
 ans = n
 for i in range(1, n):
-    ans = ((ans % mod) * (n - i)) % mod
+    ans = ans % mod * (n - i) % mod
     a.append(ans)
-# print(*a)
 ans = 0
 for i in a:
     ans = (ans % mod + a[-1] % mod - i % mod) % mod

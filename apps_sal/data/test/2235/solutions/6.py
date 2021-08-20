@@ -4,7 +4,6 @@ prix = [0]
 k = 0
 j = 0
 for i in range(n):
-
     trips.append(int(input()))
     while trips[i] - trips[j] >= 90:
         j += 1

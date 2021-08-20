@@ -1,4 +1,4 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 a = [list(map(int, input().split()))]
 k = 0
 na = 0

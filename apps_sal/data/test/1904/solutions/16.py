@@ -1,12 +1,12 @@
 n = int(input())
-a, b, c, d = 0, 0, 0, 0
-for s, x in zip(input(), list(map(int, input().split()))):
-    if(s == 'h'):
+(a, b, c, d) = (0, 0, 0, 0)
+for (s, x) in zip(input(), list(map(int, input().split()))):
+    if s == 'h':
         a = a + x
-    if(s == 'a'):
+    if s == 'a':
         b = min(a, b + x)
-    if(s == 'r'):
+    if s == 'r':
         c = min(b, c + x)
-    if(s == 'd'):
+    if s == 'd':
         d = min(c, d + x)
 print(d)

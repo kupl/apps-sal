@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
-    b, p, f = list(map(int, input().split()))
-    h, c = list(map(int, input().split()))
+    (b, p, f) = list(map(int, input().split()))
+    (h, c) = list(map(int, input().split()))
     if h > c:
         num = min(b // 2, p)
         b -= num * 2

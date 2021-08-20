@@ -1,9 +1,8 @@
 def zfunc(str_):
     if not str_:
         return []
-
     N = len(str_)
-    Z = [N] + ([0] * (N - 1))
+    Z = [N] + [0] * (N - 1)
     right = 0
     left = 0
     for i in range(1, N):
@@ -18,7 +17,6 @@ def zfunc(str_):
         else:
             p = i - left
             q = right - i + 1
-
             if Z[p] < q:
                 Z[i] = Z[p]
             else:

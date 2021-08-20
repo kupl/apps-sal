@@ -1,8 +1,8 @@
-h, w, k = map(int, input().split())
+(h, w, k) = map(int, input().split())
 f = [1, 1, 2, 3, 5, 8, 13, 21]
-m = 10**9 + 7
-dp = [[1] + [0] * (w - 1)for i in range(h + 1)]
-h = 0if w == 1else h
+m = 10 ** 9 + 7
+dp = [[1] + [0] * (w - 1) for i in range(h + 1)]
+h = 0 if w == 1 else h
 for i in range(1, h + 1):
     for j in range(w):
         if j == 0:

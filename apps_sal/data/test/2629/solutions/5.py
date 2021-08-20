@@ -1,4 +1,5 @@
 class Solution:
+
     def generateMatrix(self, n):
         """
         :type n: int
@@ -10,7 +11,6 @@ class Solution:
             temp.append([None] * n)
         rep = int(n / 2) if n % 2 == 0 else int(n / 2) + 1
         k = 1
-
         for i in range(rep):
             for j in range(i, n - i - 1):
                 temp[i][j] = k

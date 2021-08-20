@@ -1,6 +1,5 @@
 n = input()
 a = list(map(int, input().split()))
-
 s = set()
 b = 0
 for i in a:

@@ -2,9 +2,8 @@ import sys
 
 
 def solve():
-    i, nGCars, GCars = 1, 0, []
+    (i, nGCars, GCars) = (1, 0, [])
     ignore = input()
-
     for line in sys.stdin:
         for c in line.split():
             r = int(c)
@@ -14,9 +13,8 @@ def solve():
             GCars.append(str(i))
             nGCars += 1
         i += 1
-
     print(nGCars)
-    print(" ".join(GCars))
+    print(' '.join(GCars))
 
 
 solve()

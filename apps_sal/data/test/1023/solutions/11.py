@@ -1,6 +1,6 @@
 from sys import stdin
 from bisect import bisect_left as bl
-n, m, ta, tb, k = list(map(int, stdin.readline().strip().split()))
+(n, m, ta, tb, k) = list(map(int, stdin.readline().strip().split()))
 s = list(map(int, stdin.readline().strip().split()))
 s1 = list(map(int, stdin.readline().strip().split()))
 ans = -1

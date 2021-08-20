@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 out = [-1] * n
 bulbs = list(map(int, input().split()))
 for i in bulbs:

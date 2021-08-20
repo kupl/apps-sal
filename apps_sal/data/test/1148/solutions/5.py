@@ -1,10 +1,8 @@
 n = int(input())
 nums = list(map(int, input().split()))
 m = min(nums)
-
 x = [num > m for num in nums]
 x = x + x
-
 left = 0
 right = 0
 ans = 0

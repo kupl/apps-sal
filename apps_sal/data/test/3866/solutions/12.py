@@ -1,4 +1,3 @@
-
 n = int(input())
 if n % 2:
     a = [i for i in range(n)]

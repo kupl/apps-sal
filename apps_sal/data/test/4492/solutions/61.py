@@ -1,5 +1,5 @@
 def main():
-    N, x = list(map(int, input().split()))
+    (N, x) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     Acount = sum(A)
     if A[0] > x:

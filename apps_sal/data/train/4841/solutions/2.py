@@ -2,7 +2,9 @@ from math import sin, pi
 
 
 def simpson(n):
-    def f(x): return 1.5 * sin(x)**3
+
+    def f(x):
+        return 1.5 * sin(x) ** 3
     h = pi / float(n)
     s1 = 0
     for i in range(1, int(n / 2) + 1):

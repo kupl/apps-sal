@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
-        if m * k > len(bloomDay):  # 要形成至少需要的花朵数
+        if m * k > len(bloomDay):
             return -1
-        l, r = 1, max(bloomDay)
+        (l, r) = (1, max(bloomDay))
         while l < r:
             mid = (l + r) // 2
             flow = bouq = 0

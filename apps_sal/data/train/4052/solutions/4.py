@@ -12,5 +12,4 @@ def get_num(arr):
             div.append(i)
     lil_div = min(arr)
     big_div = n // lil_div
-
     return [n, amount - 1, lil_div, big_div]

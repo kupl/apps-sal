@@ -5,7 +5,6 @@ r = 1
 l = 0
 now = a[0]
 while l < n:
-
     while True:
         if r < n and now + a[r] == now ^ a[r]:
             now += a[r]

@@ -2,7 +2,7 @@ n = int(input())
 name = ['' for i in range(n)]
 sname = ['' for i in range(n)]
 for i in range(n):
-    name[i], sname[i] = input().split()
+    (name[i], sname[i]) = input().split()
 p = list(map(int, input().split()))
 for i in range(n):
     p[i] -= 1
@@ -20,4 +20,4 @@ for i in range(1, n):
             nm[i] = True
         if sname[p[i]] > sname[p[i - 1]]:
             snm[i] = True
-print("YES" if snm[-1] or nm[-1] else "NO")
+print('YES' if snm[-1] or nm[-1] else 'NO')

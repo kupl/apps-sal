@@ -1,7 +1,6 @@
 t = int(input())
-
 for _ in range(t):
-    n, _ = list(map(int, input().split()))
+    (n, _) = list(map(int, input().split()))
     ks = list(map(int, input().split()))
     s = set()
     c = 0

@@ -2,13 +2,13 @@ from itertools import accumulate
 
 
 class Solution:
+
     def stoneGameIII(self, sv: List[int]) -> str:
         m = len(sv)
         dp = [-sys.maxsize] * m
         dp.append(0)
         ps = list(accumulate(sv))
         sm = sum(sv)
-
         for i in range(m - 1, -1, -1):
             if i == m - 1:
                 dp[i] = sv[i]

@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = defaultdict(int)
 p = '@'
 x = 0

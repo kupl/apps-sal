@@ -1,8 +1,6 @@
 s = input()
 n = len(s)
-
 ans = 0
-
 sub = 0
 judge = False
 for i in range(n - 1, -1, -1):

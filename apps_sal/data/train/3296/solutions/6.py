@@ -10,13 +10,13 @@ def what_century(year):
 
 
 def ordinal_suffix(number):
-    if number // 10 == 1:   # ten or teen
+    if number // 10 == 1:
         return SUFFIX_OTHER
-    elif number % 10 == 1:  # ending 1
+    elif number % 10 == 1:
         return SUFFIX_ONE
-    elif number % 10 == 2:  # ending 2
+    elif number % 10 == 2:
         return SUFFIX_TWO
-    elif number % 10 == 3:  # ending 3
+    elif number % 10 == 3:
         return SUFFIX_THREE
     else:
         return SUFFIX_OTHER

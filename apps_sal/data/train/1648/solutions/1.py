@@ -1,8 +1,6 @@
 def spinning_rings(inner_max, outer_max):
-
     i = inner_max + 1
     j = outer_max + 1
-
     x = 1
     while x < i * j:
         a = -x % i

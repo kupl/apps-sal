@@ -1,10 +1,13 @@
 import sys
-def input(): return sys.stdin.readline().strip("\r\n")
+
+
+def input():
+    return sys.stdin.readline().strip('\r\n')
 
 
 n = int(input())
 ans = []
-for x, y in sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: abs(x[0]) + abs(x[1])):
+for (x, y) in sorted([list(map(int, input().split())) for _ in range(n)], key=lambda x: abs(x[0]) + abs(x[1])):
     if x > 0:
         ans.append('1 %d R' % x)
     if x < 0:

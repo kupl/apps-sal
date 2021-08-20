@@ -5,10 +5,10 @@ s = s.replace('dreamer', '#')
 s = s.replace('dream', '#')
 f = 0
 for i in s:
-    if(i != '#'):
+    if i != '#':
         f = 1
         break
-if(f == 0):
-    print("YES")
+if f == 0:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

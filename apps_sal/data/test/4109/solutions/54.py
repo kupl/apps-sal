@@ -1,8 +1,6 @@
 import itertools as it
-
-N, M, X = map(int, input().split())
+(N, M, X) = map(int, input().split())
 book = [[int(_) for _ in input().split()] for i in range(N)]
-
 combs = it.product([0, 1], repeat=N)
 prices = []
 for comb in combs:
@@ -17,7 +15,6 @@ for comb in combs:
         continue
     else:
         prices.append(bag[0])
-
 if len(prices) == 0:
     print(-1)
 else:

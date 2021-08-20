@@ -1,4 +1,5 @@
 class Solution:
+
     def binaryGap(self, n: int) -> int:
         bins = ''
         maxv = 0
@@ -11,5 +12,4 @@ class Solution:
                 pre = i
             n //= 2
             i += 1
-
         return maxv

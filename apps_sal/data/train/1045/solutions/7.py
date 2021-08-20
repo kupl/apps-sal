@@ -7,7 +7,6 @@ Contest: LockDown Test 4.0
 
 @author: mr._white_hat_
 """
-
 for _ in range(int(input())):
     T = input()
     S = ''

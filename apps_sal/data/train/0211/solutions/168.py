@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
 
         def dfs(i):
@@ -7,13 +8,12 @@ class Solution:
                 ret = max(ret, len(used))
                 return
             for j in range(i + 1, n + 1):
-                w = s[i: j]
+                w = s[i:j]
                 if w in used:
                     continue
                 used.add(w)
                 dfs(j)
                 used.discard(w)
-
         n = len(s)
         used = set()
         ret = 0

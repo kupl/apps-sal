@@ -4,7 +4,7 @@ def spin_solve(sentence):
     for x in words:
         if x.endswith(',') and len(x) > 7:
             x = x[:-1]
-            nu_list.append(f"{x[::-1]},")
+            nu_list.append(f'{x[::-1]},')
         elif x.endswith(',') and len(x) <= 7 or len(x) == 2:
             nu_list.append(x.upper())
         elif len(x) > 6 or x.count('t') >= 2:

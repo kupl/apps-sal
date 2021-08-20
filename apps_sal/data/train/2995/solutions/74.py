@@ -4,4 +4,4 @@ def sum_mul(n, m):
         b = a * (a + 1)
         c = n - 2
         return b + c * (b / 2)
-    return "INVALID"
+    return 'INVALID'

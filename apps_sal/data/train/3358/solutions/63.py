@@ -1,5 +1,5 @@
 def correct(string):
-    r = ""
+    r = ''
     for c in string:
         if c == '0':
             r += 'O'

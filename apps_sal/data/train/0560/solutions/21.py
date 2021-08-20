@@ -7,9 +7,9 @@ for i in range(t):
     b.remove(max(b))
     a1 = sum(a)
     b1 = sum(b)
-    if(a1 > b1):
-        print("Bob")
-    elif(b1 > a1):
-        print("Alice")
+    if a1 > b1:
+        print('Bob')
+    elif b1 > a1:
+        print('Alice')
     else:
-        print("Draw")
+        print('Draw')

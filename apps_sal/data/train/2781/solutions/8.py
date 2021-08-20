@@ -5,13 +5,12 @@ def collatz(n):
         if n in d:
             count += d[n]
             n = 1
+        elif n % 2 == 0:
+            n /= 2
+            count += 1
         else:
-            if n % 2 == 0:
-                n /= 2
-                count += 1
-            else:
-                n = (3 * n + 1) / 2
-                count += 2
+            n = (3 * n + 1) / 2
+            count += 2
     return count
 
 

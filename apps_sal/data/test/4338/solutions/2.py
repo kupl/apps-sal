@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 a = list(map(int, input().split()))
 cnt = 0
 if x > y:

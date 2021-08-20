@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubarray(self, nums: List[int], p: int) -> int:
         s = 0
         ss = sum(nums) % p
@@ -8,11 +9,9 @@ class Solution:
         h[0] = -1
         import sys
         ans = sys.maxsize
-        for i, e in enumerate(nums):
+        for (i, e) in enumerate(nums):
             s += e
-            # s-x-ss
             c = (p - (ss - s) % p) % p
-            # if ss == e % p: ans = 1
             if c in h:
                 ans = min(ans, i - h[c])
             h[s % p] = i

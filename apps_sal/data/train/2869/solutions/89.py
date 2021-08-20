@@ -5,5 +5,4 @@ def distinct(seq):
         if seq[i] not in bob:
             bob.append(seq[i])
         i += 1
-
     return bob

@@ -1,4 +1,4 @@
-a, b = [int(i) for i in input().split()]
+(a, b) = [int(i) for i in input().split()]
 a = max(a, 1)
 b = max(b, 1)
 pr = 1

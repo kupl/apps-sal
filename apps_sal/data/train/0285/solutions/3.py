@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeII(self, A: List[int], K: int) -> int:
         A.sort()
         diff = A[-1] - A[0]

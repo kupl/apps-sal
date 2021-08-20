@@ -1,5 +1,5 @@
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     inlis = list(map(int, input().split()))
     indic = dict()
     cnt = 0
@@ -14,7 +14,6 @@ def main():
         print(0)
     else:
         indic_sort = sorted(indic.items(), key=lambda x: x[1])
-        # print(indic_sort)
         sa = cnt - k
         tmp = 0
         ans = 0

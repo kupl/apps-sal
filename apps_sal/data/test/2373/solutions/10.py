@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 cnt = 0
-for i, a in enumerate(A, 1):
+for (i, a) in enumerate(A, 1):
     if a == i:
         if i != len(A):
             x = A[i - 1]

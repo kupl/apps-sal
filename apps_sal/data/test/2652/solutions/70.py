@@ -1,11 +1,11 @@
-class Union():
+class Union:
+
     def __init__(self, n):
         self.para = [-1] * n
 
     def find(self, n):
         if self.para[n] < 0:
             return n
-
         else:
             self.para[n] = self.find(self.para[n])
             return self.para[n]
@@ -17,8 +17,7 @@ class Union():
             return False
         else:
             if self.para[n] > self.para[m]:
-                n, m = m, n
-
+                (n, m) = (m, n)
             self.para[n] += self.para[m]
             self.para[m] = n
 
@@ -27,9 +26,9 @@ class Union():
 
 
 N = int(input())
-X, Y = [], []
+(X, Y) = ([], [])
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     X.append((x, i))
     Y.append((y, i))
 X.sort()

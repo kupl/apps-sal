@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 used = [False] * n
 nums = list()
 
@@ -19,7 +18,6 @@ def count(i):
 for i in range(n):
     if not used[i]:
         nums.append(count(i))
-
 if n == 1:
     print(1)
 elif n == 2:

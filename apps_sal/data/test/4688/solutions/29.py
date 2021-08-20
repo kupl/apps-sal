@@ -5,5 +5,4 @@ for i in range(a[0]):
         sum = a[1]
     else:
         sum *= a[1] - 1
-
 print(sum)

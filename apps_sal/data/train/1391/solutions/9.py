@@ -1,8 +1,8 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     aux = {}
     for i in range(n):
-        s, f, p = list(map(int, input().split()))
+        (s, f, p) = list(map(int, input().split()))
         if p not in aux:
             aux[p] = []
             aux[p].append([s, f])
@@ -10,7 +10,6 @@ for _ in range(int(input())):
             aux[p].append([s, f])
     tot = 0
     for i in aux:
-        # Sorting by finish time
         if len(aux[i]) > 1:
             aux[i].sort(key=lambda x: x[1])
             t_1 = 0

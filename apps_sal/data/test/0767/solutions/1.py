@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 L = sorted(list(map(int, input().split())))
 B = [True for n in range(N)]
 P = 0

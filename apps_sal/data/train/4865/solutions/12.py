@@ -19,21 +19,19 @@ def add1(a):
     while len(binval) > 0:
         if not convert:
             out = binval[-1] + out
-        else:
-            if carry == 1:
-                if binval[-1] == '0':
-                    convert = False
-                    carry = 0
-                    out = '1' + out
-                else:
-                    out = '0' + out
+        elif carry == 1:
+            if binval[-1] == '0':
+                convert = False
+                carry = 0
+                out = '1' + out
             else:
-                if binval[-1] == '0':
-                    out = '1' + out
-                    convert = False
-                else:
-                    out = '0' + out
-                    carry = 1
+                out = '0' + out
+        elif binval[-1] == '0':
+            out = '1' + out
+            convert = False
+        else:
+            out = '0' + out
+            carry = 1
         binval = binval[:-1]
     if carry == 1:
         out = '1' + out

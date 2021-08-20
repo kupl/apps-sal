@@ -1,12 +1,11 @@
-# Surrounded Nodes
 from collections import deque
 import sys
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 N = int(input())
 G = [[] for i in range(N + 1)]
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G[a].append(b)
     G[b].append(a)
 S = -1
@@ -17,7 +16,6 @@ for i in range(1, N + 1):
 visited = [False for i in range(N + 1)]
 parent = [-1 for i in range(N + 1)]
 count = [1 for i in range(N + 1)]
-
 ans = N * pow(2, N - 1, mod)
 stack = deque()
 
@@ -31,13 +29,12 @@ def dfs(node):
             dfs(child)
 
 
-powers = [1 for i in range(2 * 10**5 + 1)]
-for i in range(1, 2 * 10**5 + 1):
+powers = [1 for i in range(2 * 10 ** 5 + 1)]
+for i in range(1, 2 * 10 ** 5 + 1):
     powers[i] = powers[i - 1] * 2 % mod
-
 dfs(S)
 while stack:
-    mom, child = stack.pop()
+    (mom, child) = stack.pop()
     count[mom] += count[child]
 ans = 0
 for i in range(1, N + 1):

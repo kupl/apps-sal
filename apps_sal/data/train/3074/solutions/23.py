@@ -1,5 +1,5 @@
 def growing_plant(upSpeed, downSpeed, desiredHeight):
-    h, c = upSpeed, 0
+    (h, c) = (upSpeed, 0)
     while h < desiredHeight:
         h = h - downSpeed + upSpeed
         c = c + 1

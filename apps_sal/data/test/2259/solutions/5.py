@@ -7,7 +7,8 @@ from itertools import accumulate, permutations, combinations
 from sys import stdout
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -18,4 +19,4 @@ for x in arr:
     tps.insert(i + 1, (x, tps[i][1] + 1))
     if i + 2 < len(tps) and tps[i + 1][1] >= tps[i + 2][1]:
         del tps[i + 2]
-print(max(x[1] for x in tps))
+print(max((x[1] for x in tps)))

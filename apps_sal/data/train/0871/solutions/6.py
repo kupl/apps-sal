@@ -15,7 +15,7 @@ def find_next(arr):
                 if 'U' in arr[i + 1][j] and '#' not in arr[i][j]:
                     ans[i][j].add('U')
             if '#' in arr[i][j]:
-                ans[i][j].add("#")
+                ans[i][j].add('#')
     return ans
 
 
@@ -30,7 +30,7 @@ def cal(arr):
 
 t = int(input())
 for _ in range(t):
-    r, c = list(map(int, input().split()))
+    (r, c) = list(map(int, input().split()))
     arr = []
     for i in range(r):
         toadd = list(map(set, list(input())))

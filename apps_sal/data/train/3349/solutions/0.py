@@ -2,7 +2,7 @@ def find_missing_number(sequence):
     if not sequence:
         return 0
     try:
-        sequence = set(int(a) for a in sequence.split())
+        sequence = set((int(a) for a in sequence.split()))
     except ValueError:
         return 1
     for b in range(1, max(sequence) + 1):

@@ -10,4 +10,3 @@ def fold_to(distance):
             thickness *= 2
             folds += 1
     return folds
-    # your code here

@@ -3,7 +3,7 @@ N = int(input())
 
 def cd(n):
     ls = []
-    for i in range(1, int(n**(1 / 2)) + 1):
+    for i in range(1, int(n ** (1 / 2)) + 1):
         if n % i == 0:
             ls += [i, n // i]
     return ls

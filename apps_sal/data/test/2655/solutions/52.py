@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 A = sorted(A, reverse=True)
-
 N -= 1
 i = 1
 koko = A[0]

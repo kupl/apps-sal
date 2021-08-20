@@ -1,5 +1,5 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 h = list(map(int, input().split()))
 l = []
 for i in range(0, n):

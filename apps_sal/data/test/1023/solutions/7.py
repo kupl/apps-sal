@@ -1,5 +1,5 @@
 import bisect
-n, m, ta, tb, k = list(map(int, input().split()))
+(n, m, ta, tb, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 maxtime = 0
@@ -10,7 +10,6 @@ else:
     for i in range(n):
         a[i] += ta
     for j in range(0, k + 1):
-
         x = bisect.bisect_left(b, a[j])
         if x + (k - j) >= m:
             flag = 1

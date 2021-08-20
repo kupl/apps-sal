@@ -1,4 +1,5 @@
 class Solution(object):
+
     def findSubstring(self, s, words):
         """
         :type s: str

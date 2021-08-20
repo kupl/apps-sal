@@ -1,37 +1,10 @@
 3
-
-'''
-n, k = map(int, input().split())
-days = list(map(int, input().split()))
-
-nb_bags=0
-crt_cap=0
-for i in range(n):
-	if crt_cap !=0:
-		days[i] = max(days[i]-(k-crt_cap), 0)
-		crt_cap = 0
-		nb_bags += 1
-	nb_bags += int(days[i]/k)
-	crt_cap = days[i]%k
-
-if crt_cap !=0:
-	nb_bags += 1
-
-print(nb_bags)
-'''
-
-
-n, k = map(int, input().split())
+'\nn, k = map(int, input().split())\ndays = list(map(int, input().split()))\n\nnb_bags=0\ncrt_cap=0\nfor i in range(n):\n\tif crt_cap !=0:\n\t\tdays[i] = max(days[i]-(k-crt_cap), 0)\n\t\tcrt_cap = 0\n\t\tnb_bags += 1\n\tnb_bags += int(days[i]/k)\n\tcrt_cap = days[i]%k\n\nif crt_cap !=0:\n\tnb_bags += 1\n\nprint(nb_bags)\n'
+(n, k) = map(int, input().split())
 d = list(map(int, input().split()))
-
 total = sum(d)
-
-
 tab = []
 tab2 = []
-
-#tab[0] = True
-
 som = 0
 nbV = 0
 for d0 in d:
@@ -39,13 +12,9 @@ for d0 in d:
     nbV += 1
     tab.append(som)
     tab2.append(nbV)
-#	tab[som]=True
-#	tab2[som]=nbV
-
 answer_list = []
-
 if total % k != 0:
-    print("No")
+    print('No')
 else:
     d_unit = total // k
     u0 = d_unit
@@ -53,15 +22,14 @@ else:
     while u0 <= total:
         if u0 > total:
             break
-        if not(u0 in tab):
-            #		if tab[u0]==False:
+        if not u0 in tab:
             break
         ind = tab.index(u0)
         answer_list.append(tab2[ind] - v_cpt)
         v_cpt = tab2[ind]
         u0 += d_unit
     if u0 > total:
-        print("Yes")
+        print('Yes')
         print(*answer_list, sep=' ')
     else:
-        print("No")
+        print('No')

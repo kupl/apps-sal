@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     s = list(map(int, input()))
     if 1 not in s:
         print(a * n + b * (n + 1))

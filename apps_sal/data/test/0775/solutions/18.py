@@ -1,10 +1,8 @@
 from bisect import bisect_left
-
-n, m, k = map(int, input().split(' '))
+(n, m, k) = map(int, input().split(' '))
 holes = list(map(int, input().split(' ')))
 curr = 1
 found = False
-
 holes = sorted(holes)
 H = len(holes)
 
@@ -20,7 +18,7 @@ if curr in holes:
     found = True
 else:
     for a0 in range(k):
-        u, v = map(int, input().split(' '))
+        (u, v) = map(int, input().split(' '))
         if u == curr:
             curr = v
             if bins(curr, 0):
@@ -33,6 +31,5 @@ else:
                 print(curr)
                 found = True
                 break
-
 if not found:
     print(curr)

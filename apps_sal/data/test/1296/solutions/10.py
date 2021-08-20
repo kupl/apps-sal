@@ -1,6 +1,5 @@
 from itertools import count
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = [int(num) for num in input().split()]
 
 
@@ -21,5 +20,4 @@ while r - l > 1:
         l = mid
     else:
         r = mid
-
 print(l, calc(l))

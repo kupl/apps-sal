@@ -5,8 +5,8 @@ match = []
 for i in range(N):
     a = list(map(int, input().split()))
     match.append(a)
-day = [0] * (N)
-count = [0] * (N)
+day = [0] * N
+count = [0] * N
 q = deque(range(N))
 while q:
     p = q.popleft()

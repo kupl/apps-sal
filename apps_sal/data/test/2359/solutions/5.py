@@ -1,10 +1,8 @@
 import sys
-
 input = sys.stdin.readline
 flush = sys.stdout.flush
-
 for _ in range(int(input())):
-    h, c, t = list(map(int, input().split()))
+    (h, c, t) = list(map(int, input().split()))
     m = h + c >> 1
     if t <= m:
         print(2)

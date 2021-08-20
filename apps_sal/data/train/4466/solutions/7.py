@@ -175,7 +175,7 @@ def print_number(number, char):
     N = str(number).zfill(5)
     P = [(2, 3), (2, 10), (2, 17), (2, 24), (2, 31)]
     for i in range(5):
-        r, c = P[i]
+        (r, c) = P[i]
         modify(M, int(N[i]), r, c)
     o = ''
     for e in M:

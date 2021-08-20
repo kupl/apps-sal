@@ -1,7 +1,6 @@
 import math
 for _ in range(int(input())):
-    n, d = list(map(int, input().split()))
-
+    (n, d) = list(map(int, input().split()))
     m = list(map(int, input().split()))
     risk = 0
     for i in range(len(m)):

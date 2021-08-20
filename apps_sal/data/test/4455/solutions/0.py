@@ -2,7 +2,7 @@ def ke(i):
     return a[i]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = []
 for i in range(n):
@@ -18,8 +18,8 @@ for i in range(1, n):
         k = 0
         ans[b[i]] = i
 for i in range(m):
-    r1, r2 = map(int, input().split())
-    if (a[r1 - 1] > a[r2 - 1]):
+    (r1, r2) = map(int, input().split())
+    if a[r1 - 1] > a[r2 - 1]:
         ans[r1 - 1] -= 1
     elif a[r1 - 1] < a[r2 - 1]:
         ans[r2 - 1] -= 1

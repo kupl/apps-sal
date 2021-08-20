@@ -1,4 +1,4 @@
-H, W = [int(x) for x in input().split()]
+(H, W) = [int(x) for x in input().split()]
 pic = [list(input()) for _ in range(H)]
 ans = [['#' for i in range(W + 2)] for j in range(H + 2)]
 for i in range(H):

@@ -1,17 +1,17 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        p = open("test.txt", "r")
-    # f.readline()
-    # input()
-    def get(): return [int(x) for x in (p.readline() if mode == "file" else input()).split()]
+    mode = 'filee'
+    if mode == 'file':
+        p = open('test.txt', 'r')
+
+    def get():
+        return [int(x) for x in (p.readline() if mode == 'file' else input()).split()]
     [a, b, c, d, e, f] = get()
-    g = [[a, b, "A"], [c, d, "B"], [e, f, "C"]]
+    g = [[a, b, 'A'], [c, d, 'B'], [e, f, 'C']]
     n = 0
     for i in g:
         n = max(n, max(i[:2]))
     if a * b + c * d + e * f != n * n:
-        print("-1")
+        print('-1')
         return
     h = []
     print(n)
@@ -24,7 +24,7 @@ def main():
     if len(h) > 0:
         for j in range(2):
             for k in range(2):
-                if h[0][j] == h[1][k] and (h[0][1 - j] + h[1][1 - k]) == n:
+                if h[0][j] == h[1][k] and h[0][1 - j] + h[1][1 - k] == n:
                     l1 = h[0][1 - j]
                     l2 = h[1][1 - k]
                     times = h[0][j]
@@ -33,8 +33,7 @@ def main():
                     break
         for i in range(times):
             print(c1 * l1 + c2 * l2)
-
-    if mode == "file":
+    if mode == 'file':
         p.close()
 
 

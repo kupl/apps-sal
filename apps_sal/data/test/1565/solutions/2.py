@@ -1,6 +1,5 @@
 l = int(input())
 s = input()
-
 best = 0
 best2 = None
 for sl in range(1, l):
@@ -10,10 +9,8 @@ for sl in range(1, l):
             best2 = None
         elif max(sl, l - sl) == max(best, l - best):
             best2 = sl
-
 f = s[:best]
 b = s[best:]
-
 res = int(s[:best]) + int(s[best:])
 if best2 is None:
     print(res)

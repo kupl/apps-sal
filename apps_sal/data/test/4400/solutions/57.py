@@ -5,4 +5,4 @@ for i in wealth:
         s = s + 1
     if s >= 2 and wealth[1] == 'S':
         s = 1
-print((int(s)))
+print(int(s))

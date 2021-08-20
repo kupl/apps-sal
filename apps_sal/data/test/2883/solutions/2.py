@@ -1,4 +1,5 @@
 class Solution:
+
     def merge(self, intervals):
         """
         :type intervals: List[Interval]

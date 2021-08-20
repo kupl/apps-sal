@@ -14,5 +14,5 @@ def decrypt(encrypted_text, n):
     if s:
         m = len(s) // 2
         for _ in range(n):
-            s = ''.join(c for s in zip_longest(s[m:], s[:m], fillvalue='') for c in s)
+            s = ''.join((c for s in zip_longest(s[m:], s[:m], fillvalue='') for c in s))
     return s

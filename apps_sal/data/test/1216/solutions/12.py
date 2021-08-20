@@ -7,7 +7,7 @@ ans = []
 while i < n:
     ans.append(s[i])
     if s[i] in a:
-        if s[i] in b and s[i + 1] == s[i] and s[i + 2] != s[i]:
+        if s[i] in b and s[i + 1] == s[i] and (s[i + 2] != s[i]):
             ans.append(s[i])
             i += 2
         else:

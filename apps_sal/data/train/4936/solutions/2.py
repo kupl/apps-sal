@@ -1,6 +1,5 @@
-
 def reverse(lst):
-    empty_list = list()            # use this!
+    empty_list = list()
     result = list()
     while lst:
         result.append(lst.pop())

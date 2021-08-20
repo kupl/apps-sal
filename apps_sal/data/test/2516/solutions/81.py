@@ -1,4 +1,4 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 s = input()
 r = set()
 last = 0
@@ -15,11 +15,9 @@ elif p == 5:
         if int(s[i]) % 5 == 0:
             total += i + 1
     print(total)
-
-
 else:
     power = 1
-    for i in range(len(s) - 1, -1, -1):  # handling of 0's as n and rem
+    for i in range(len(s) - 1, -1, -1):
         n = int(s[i]) * power + rem
         power *= 10
         power = power % p
@@ -29,4 +27,4 @@ else:
         else:
             d[rem] = 1
         total += d[rem] - 1
-    print((total + d[0]))
+    print(total + d[0])

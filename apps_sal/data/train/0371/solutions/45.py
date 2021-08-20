@@ -2,9 +2,10 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         path = defaultdict(list)
-        for i, v in enumerate(routes):
+        for (i, v) in enumerate(routes):
             for bus_stop in v:
                 path[bus_stop].append(i)
         used = set()

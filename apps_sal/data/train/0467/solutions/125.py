@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         ans = 0
         for val in nums:
@@ -13,9 +14,7 @@ class Solution:
         if n != 1:
             L.append(1)
             count += 1
-
-        for i in range(2, int(n**0.5) + 1):
-
+        for i in range(2, int(n ** 0.5) + 1):
             if n % i == 0:
                 L.append(i)
                 count += 1

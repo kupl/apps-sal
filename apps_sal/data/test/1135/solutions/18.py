@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-sr = ""
+sr = ''
 nn = n
 if n % 2 == 1:
     flag = True

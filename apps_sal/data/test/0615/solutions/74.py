@@ -1,8 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 score = [a[0], 0, a[1] + a[2], sum(a[3:])]
-ans = 10**18
-i, k = 1, 3
+ans = 10 ** 18
+(i, k) = (1, 3)
 for j in range(2, n - 1):
     score[1] += a[j - 1]
     score[2] -= a[j - 1]

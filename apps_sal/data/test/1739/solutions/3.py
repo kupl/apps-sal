@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 t = list(map(int, input().split()))
 b = max(t)
 k = t.count(b)

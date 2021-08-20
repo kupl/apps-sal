@@ -6,5 +6,4 @@ if s[0] == 'A':
         t = s[1:a] + s[a + 1:]
         if t.islower():
             answer = 'AC'
-
 print(answer)

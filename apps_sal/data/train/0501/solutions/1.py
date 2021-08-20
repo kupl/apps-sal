@@ -1,4 +1,5 @@
 class Solution:
+
     def prefixTable(self, s):
         t = [0 for _ in s]
         j = 0
@@ -16,9 +17,7 @@ class Solution:
         return t
 
     def shortestPalindrome(self, s):
-        k = s + "#" + s[::-1]
-        # find the longest palindrome from the beginning
-        # catacb # bcatac
+        k = s + '#' + s[::-1]
         t = self.prefixTable(k)
         l = t[-1]
         return s[l:][::-1] + s

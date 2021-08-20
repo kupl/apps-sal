@@ -1,6 +1,6 @@
 class Solution:
-    def maxNonOverlapping(self, nums: List[int], target: int) -> int:
 
+    def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         psum = [0]
         for v in nums:
             psum.append(v + psum[-1])
@@ -14,5 +14,4 @@ class Solution:
                     break
                 d.add(psum[i])
             return ans
-
         return helper(1, target)

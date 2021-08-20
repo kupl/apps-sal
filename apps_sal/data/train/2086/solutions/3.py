@@ -1,13 +1,13 @@
 from collections import deque
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = deque(list(map(int, input().split())))
 b = []
 m = a.index(max(a))
 for i in range(m):
-    a0, a1 = a.popleft(), a.popleft()
+    (a0, a1) = (a.popleft(), a.popleft())
     b.append([a0, a1])
     if a0 < a1:
-        a0, a1 = a1, a0
+        (a0, a1) = (a1, a0)
     a.appendleft(a0)
     a.append(a1)
 for i in range(q):

@@ -15,7 +15,6 @@ def convert_temp(tt, f, t):
         x = tt * 5.0 / 4
     if f == 'Ro':
         x = (tt - 7.5) * 40.0 / 21
-
     if t == 'C':
         y = x
     if t == 'F':
@@ -32,5 +31,4 @@ def convert_temp(tt, f, t):
         y = x * 4.0 / 5
     if t == 'Ro':
         y = x * 21.0 / 40 + 7.5
-
     return round(y)

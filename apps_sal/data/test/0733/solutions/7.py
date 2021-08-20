@@ -1,4 +1,4 @@
-from math import*
+from math import *
 
 
 def gcd(a, b):
@@ -8,8 +8,8 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-x, y, a, b = list(map(int, input().split()))
-nok = (x * y) // gcd(x, y)
+(x, y, a, b) = list(map(int, input().split()))
+nok = x * y // gcd(x, y)
 a += (nok - a % nok) % nok
 b -= b % nok
 print((b - a) // nok + 1)

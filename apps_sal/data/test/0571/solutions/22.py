@@ -7,20 +7,16 @@ def solution(s):
         return ''
     if len(s) % 2 == 1:
         return ':('
-
     if s[0] not in '(?':
         return ':('
     if s[-1] not in ')?':
         return ':('
-
     s = s[1:-1]
     n = len(s)
     n1 = s.count('(')
     n2 = s.count(')')
-
     if n1 > n // 2 or n2 > n // 2:
         return ':('
-
     n1 = n // 2 - n1
     n2 = n // 2 - n2
     ans = []
@@ -32,7 +28,6 @@ def solution(s):
             n1 -= 1
         else:
             ans.append(')')
-
     n = 0
     for c in ans:
         if c == '(':
@@ -41,11 +36,9 @@ def solution(s):
             n -= 1
         if n < 0:
             return ':('
-
     if n != 0:
         return ':('
-
-    return "(%s)" % ''.join(ans)
+    return '(%s)' % ''.join(ans)
 
 
 def parser():

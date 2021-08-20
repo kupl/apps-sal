@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         total = 0
         currentMax = 0
         for n in nums:
@@ -14,6 +14,5 @@ class Solution:
                     total += 1
                 n = n // 2
                 count += 1
-
             currentMax = max(count, currentMax)
         return total + currentMax

@@ -1,5 +1,5 @@
 def find_solution(puzzle):
-    n, sol = len(puzzle), []
+    (n, sol) = (len(puzzle), [])
     for i in range(n):
         if puzzle[i][0] ^ 1:
             sol.append(i)

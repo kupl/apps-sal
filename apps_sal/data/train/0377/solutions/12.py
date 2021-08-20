@@ -10,6 +10,7 @@ def LCM(x, y):
 
 
 class Solution:
+
     def nthMagicalNumber(self, N: int, A: int, B: int) -> int:
         lcm = LCM(A, B)
         div = [0, lcm]
@@ -18,8 +19,6 @@ class Solution:
             while t < lcm:
                 div.append(t)
                 t += i
-
         div = sorted(div)
         cycle = len(div) - 1
-
         return (div[N % cycle] + lcm * (N // cycle)) % 1000000007

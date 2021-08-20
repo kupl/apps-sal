@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, N: int) -> int:
         D = [[0] * 10 for _ in range(2)]
         D[0] = [1] * 10
@@ -15,5 +16,4 @@ class Solution:
             D[idx][8] = P[1] + P[3]
             D[idx][9] = P[2] + P[4]
             D[idx][0] = P[4] + P[6]
-
-        return sum(D[(N + 1) % 2]) % (10**9 + 7)
+        return sum(D[(N + 1) % 2]) % (10 ** 9 + 7)

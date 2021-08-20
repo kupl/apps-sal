@@ -17,7 +17,6 @@ def solve(n):
             x += str(nt)
             if i != l - 1:
                 x += ' '
-
         print(x)
         l += 1
 

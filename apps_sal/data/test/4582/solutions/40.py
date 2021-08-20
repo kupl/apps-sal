@@ -1,5 +1,5 @@
-deck = ["H", "D"]
-a, b = input().split()
+deck = ['H', 'D']
+(a, b) = input().split()
 if deck.index(a) == 0:
     print(b)
 elif deck.index(b) == 0:

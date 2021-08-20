@@ -1,16 +1,10 @@
-# def red(x,a,b):
-#     x%=a+b
-#     if(x==0):
-#         x=a+b
-#     return
-
 def main():
-    n, a, b, k = list(map(int, input().split()))
+    (n, a, b, k) = list(map(int, input().split()))
     arr = [(a + b - 1) // a if x % (a + b) == 0 else (x % (a + b) - 1) // a for x in map(int, input().split())]
     arr.sort()
     ans = 0
     for x in arr:
-        if(k < x):
+        if k < x:
             break
         k -= x
         ans += 1

@@ -1,5 +1,4 @@
 X = int(input())
-
 pos = 0
 i = 0
 while pos < X:

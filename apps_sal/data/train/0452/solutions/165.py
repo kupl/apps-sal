@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jd: List[int], d: int) -> int:
         n = len(jd)
         if n < d:
@@ -14,5 +15,4 @@ class Solution:
                 for r in range(j, i - 1, -1):
                     curMax = max(curMax, jd[r])
                     dp[i][j] = min(dp[i][j], dp[i - 1][r - 1] + curMax)
-
         return dp[d - 1][n - 1]

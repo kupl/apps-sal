@@ -6,6 +6,6 @@ else:
     goal = 0
 can = (start + goal) % 2
 if can == 0:
-    print("Second")
+    print('Second')
 else:
-    print("First")
+    print('First')

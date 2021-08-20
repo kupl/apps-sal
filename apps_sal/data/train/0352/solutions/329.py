@@ -1,10 +1,10 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         wc = {}
         for w in words:
             wc.setdefault(len(w), [])
             wc[len(w)].append(w)
-
         d = {}
         for i in sorted(wc.keys()):
             if i - 1 not in wc:

@@ -3,7 +3,7 @@ def inv(x, mod):
 
 
 def main() -> None:
-    N, M, K = list(map(int, input().split()))
+    (N, M, K) = list(map(int, input().split()))
     MOD = 10 ** 9 + 7
     ans = 0
     for d in range(1, N):
@@ -12,11 +12,10 @@ def main() -> None:
     for d in range(1, M):
         ans += N * N * (M - d) * d
         ans %= MOD
-
     for i in range(K - 2):
-        ans = (ans * (N * M - 2 - i)) % MOD
+        ans = ans * (N * M - 2 - i) % MOD
     for i in range(K - 2):
-        ans = (ans * inv(i + 1, MOD)) % MOD
+        ans = ans * inv(i + 1, MOD) % MOD
     print(ans)
 
 

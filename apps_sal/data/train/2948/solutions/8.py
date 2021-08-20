@@ -5,5 +5,4 @@ def split_by_value(k, elements):
         if i < k:
             l.append(i)
             elem2.remove(i)
-
     return l + elem2

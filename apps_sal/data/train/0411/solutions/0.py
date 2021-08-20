@@ -1,4 +1,5 @@
 class Solution:
+
     def wordBreak(self, s, wordDict):
         n = len(s)
         dp = [False for i in range(n + 1)]

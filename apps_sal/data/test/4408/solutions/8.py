@@ -1,5 +1,5 @@
 def solve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     c = list(map(int, input().split()))
     f = list(map(int, input().split()))
     h = list(map(int, input().split()))
@@ -11,12 +11,12 @@ def solve():
         likecolor.setdefault(f[i], []).append(i)
         cnt[f[i]] = cnt.get(f[i], 0)
     ans = 0
-    for key, v in list(likecolor.items()):
+    for (key, v) in list(likecolor.items()):
         n1 = len(v)
         if cnt[key] >= n1 * k:
             ans += n1 * h[k - 1]
             continue
-        dp = [[-float("INF")] * (cnt[key] + 1) for _ in range(n1 + 1)]
+        dp = [[-float('INF')] * (cnt[key] + 1) for _ in range(n1 + 1)]
         dp[0][0] = 0
         for i in range(n1):
             j = i + 1

@@ -1,10 +1,6 @@
 from sys import stdin
-"""
-n=int(stdin.readline().strip())
-n,m=map(int,stdin.readline().strip().split())
-s=list(map(int,stdin.readline().strip().split()))
-"""
-n, m, x, y = list(map(int, stdin.readline().strip().split()))
+'\nn=int(stdin.readline().strip())\nn,m=map(int,stdin.readline().strip().split())\ns=list(map(int,stdin.readline().strip().split()))\n'
+(n, m, x, y) = list(map(int, stdin.readline().strip().split()))
 r = [y]
 l = [x]
 for i in range(1, m + 1):

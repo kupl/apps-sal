@@ -1,6 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 cnt = {}
 for elem in a:
     if elem in cnt:
@@ -25,12 +24,11 @@ while k > 0:
         else:
             cnt[left][0] += k // cnt[left][1]
             k = 0
+    elif k >= cnt[right][1] * (cnt[right][0] - cnt[right - 1][0]):
+        k -= cnt[right][1] * (cnt[right][0] - cnt[right - 1][0])
+        cnt[right - 1][1] += cnt[right][1]
+        right -= 1
     else:
-        if k >= cnt[right][1] * (cnt[right][0] - cnt[right - 1][0]):
-            k -= cnt[right][1] * (cnt[right][0] - cnt[right - 1][0])
-            cnt[right - 1][1] += cnt[right][1]
-            right -= 1
-        else:
-            cnt[right][0] -= k // cnt[right][1]
-            k = 0
+        cnt[right][0] -= k // cnt[right][1]
+        k = 0
 print(cnt[right][0] - cnt[left][0])

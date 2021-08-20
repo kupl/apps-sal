@@ -1,5 +1,5 @@
 def is_palindrome(s):
-    for i, (a, b) in enumerate(zip(s, s[::-1])):
+    for (i, (a, b)) in enumerate(zip(s, s[::-1])):
         if a != b:
             return False
         if i == len(s) // 2:

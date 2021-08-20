@@ -8,7 +8,7 @@ for i in range(n):
         data[s] = 1
 m = max(list(data.values()))
 ans = []
-for j, k in data.items():
+for (j, k) in data.items():
     if k == m:
         ans.append(j)
 for l in sorted(ans):

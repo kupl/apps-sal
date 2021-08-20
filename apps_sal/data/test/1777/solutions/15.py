@@ -1,5 +1,4 @@
 from collections import Counter
-
 c1 = Counter()
 c2 = Counter()
 for _ in range(int(input())):
@@ -7,7 +6,7 @@ for _ in range(int(input())):
     p = 0
     q = 0
     for c in s:
-        if c == "(":
+        if c == '(':
             p += 1
         else:
             p -= 1

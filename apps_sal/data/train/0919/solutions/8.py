@@ -9,12 +9,11 @@ from math import inf
 def solve(A):
     dp = [-inf for _ in range(len(A) + 1)]
     dp[0] = 0
-    for i, a in enumerate(A):
+    for (i, a) in enumerate(A):
         even = dp[0]
         odd = dp[a]
         dp[a] = max(dp[a], even + 1)
         dp[0] = max(dp[0], odd + 1)
-
     return len(A) - dp[0]
 
 

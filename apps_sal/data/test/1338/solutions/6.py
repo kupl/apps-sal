@@ -11,7 +11,7 @@ def f(a):
     return ans
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ans = max(list(map(f, permutations(list(range(1, n + 1))))))
 for a in permutations(list(range(1, n + 1))):
     m -= f(a) == ans

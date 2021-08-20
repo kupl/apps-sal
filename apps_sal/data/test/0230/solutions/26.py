@@ -16,12 +16,10 @@ def check(l):
 
 ok = 0
 ng = len(s)
-
 while abs(ok - ng) > 1:
     mid = (ok + ng) // 2
     if check(mid):
         ok = mid
     else:
         ng = mid
-
 print(ok)

@@ -2,14 +2,12 @@ import sys
 input = sys.stdin.readline
 T = int(input())
 for _ in range(T):
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     mar = [-1] * 26
     mir = [2000] * 26
     mac = [-1] * 26
     mic = [2000] * 26
-
-    X = [[-1 if a == "." else ord(a) - 97 for a in input()] for i in range(N)]
-    # print(X)
+    X = [[-1 if a == '.' else ord(a) - 97 for a in input()] for i in range(N)]
     ma = -1
     for i in range(N):
         for j in range(M):
@@ -24,7 +22,7 @@ for _ in range(T):
     ans = 1
     ANS = []
     for k in range(ma + 1)[::-1]:
-        if f and mar[k] == -1 and mir[k] == 2000:
+        if f and mar[k] == -1 and (mir[k] == 2000):
             ANS.append(ANS[-1])
         elif mar[k] == mir[k]:
             r = mar[k]
@@ -52,9 +50,9 @@ for _ in range(T):
             ans = 0
             break
     if ans == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         print(len(ANS))
         for a in ANS[::-1]:
             print(*a)

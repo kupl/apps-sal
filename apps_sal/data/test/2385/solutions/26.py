@@ -1,9 +1,7 @@
 def main():
     import sys
-    sys.setrecursionlimit(10**9)
+    sys.setrecursionlimit(10 ** 9)
     input = sys.stdin.readline
-
-    # comb
     mod = 1000000007
 
     def make_fact(n):
@@ -14,22 +12,19 @@ def main():
         ifact[n] = pow(fact[n], mod - 2, mod)
         for i in range(n, 0, -1):
             ifact[i - 1] = ifact[i] * i % mod
-        return fact, ifact
-    fact, ifact = make_fact(2000002)
+        return (fact, ifact)
+    (fact, ifact) = make_fact(2000002)
 
     def comb(n, k):
         if k < 0 or k > n:
             return 0
         return fact[n] * ifact[k] * ifact[n - k] % mod
-
     N = int(input())
     AB = [tuple(map(int, input().split())) for _ in range(N - 1)]
     graph = [[] for _ in range(N + 1)]
-    for a, b in AB:
+    for (a, b) in AB:
         graph[a].append(b)
         graph[b].append(a)
-
-    # dfs
     root = 1
     parent = [0] * (N + 1)
     order = []
@@ -42,11 +37,8 @@ def main():
                 continue
             parent[y] = x
             stack.append(y)
-
-    # 方向ごと？
     size_d = [0] * (N + 1)
     dp_d = [1] * (N + 1)
-
     for v in order[::-1]:
         dp_d[v] *= fact[size_d[v]]
         dp_d[v] %= mod
@@ -55,10 +47,8 @@ def main():
         size_d[p] += s
         dp_d[p] *= ifact[s] * dp_d[v]
         dp_d[p] %= mod
-
     size_u = [N - 2 - x for x in size_d]
     dp_u = [1] * (N + 1)
-
     for v in order[1:]:
         p = parent[v]
         x = dp_d[p]
@@ -69,8 +59,7 @@ def main():
         x *= fact[size_u[v]]
         x *= ifact[size_u[p] + 1]
         dp_u[v] = x % mod
-
-    for xd, xu, sd, su in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
+    for (xd, xu, sd, su) in zip(dp_d[1:], dp_u[1:], size_d[1:], size_u[1:]):
         su += 1
         x = xd * xu * comb(sd + su, su) % mod
         print(x)

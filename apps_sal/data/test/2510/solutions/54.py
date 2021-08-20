@@ -8,18 +8,16 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
-n, m = [int(i) for i in input().split()]
-A = [[int(i) for i in input().split()]for j in range(m)]    # nは行数
-
+(n, m) = [int(i) for i in input().split()]
+A = [[int(i) for i in input().split()] for j in range(m)]
 tmp = 0
 res = 0
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1 for i in range(n)]
@@ -36,7 +34,7 @@ class UnionFind():
         y = self.find(y)
         if x != y:
             if self.parents[x] > self.parents[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parents[x] += self.parents[y]
             self.parents[y] = x
 
@@ -52,7 +50,7 @@ class UnionFind():
 
     @property
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     @property
     def group_count(self):
@@ -63,14 +61,13 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots)
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots))
 
 
 uf = UnionFind(n)
 for i in range(m):
-    x, y = A[i]
+    (x, y) = A[i]
     uf.union(x - 1, y - 1)
 for i in uf.roots:
     res = max(res, uf.size(i))
-
 print(res)

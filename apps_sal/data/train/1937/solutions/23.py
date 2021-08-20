@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, name):
         self.name = name
         self.children = list()
@@ -21,25 +22,20 @@ class ThroneInheritance:
 
     def death(self, name: str) -> None:
         self.map[name].alive = False
-    # @lru_cache(None)
 
     def Successor(self, x):
-        # print(self.map, self.parent)
-        # print(x, self.curOrder)
-        # self.curOrder += [x]
         flag = False
         for child in self.map[x].children:
             if child not in self.currSet:
                 break
         else:
             flag = True
-        if not self.map[x].children or flag:  # all of x's children are in curOrder:
+        if not self.map[x].children or flag:
             if x == self.king:
                 return None
             else:
                 return self.Successor(self.parent[x])
         else:
-            # return x's oldest child who's not in curOrder
             for child in self.map[x].children:
                 if child not in self.currSet:
                     return child
@@ -54,10 +50,3 @@ class ThroneInheritance:
             self.currSet.add(name)
             name = self.Successor(name)
         return [a for a in self.curOrder if self.map[a].alive]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

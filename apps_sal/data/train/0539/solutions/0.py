@@ -1,6 +1,5 @@
-# By Prathmesh Maurya
 t = eval(input())
-while(t != 0):
+while t != 0:
     t -= 1
     n = eval(input())
     if n % 2 == 0:

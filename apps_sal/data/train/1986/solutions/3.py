@@ -1,4 +1,3 @@
-
 from collections import defaultdict, deque
 
 
@@ -12,6 +11,7 @@ def gen_perm(n):
 
 
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         perm = gen_perm(n)
         i = 0

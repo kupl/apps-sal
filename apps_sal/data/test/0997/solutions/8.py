@@ -1,5 +1,4 @@
 a = list(map(str, input().replace(';', ',').split(',')))
-# print(a)
 c = []
 d = []
 for i in a:
@@ -11,16 +10,16 @@ for i in a:
     except:
         d += [i]
 if len(c) == 0:
-    print("-")
+    print('-')
 else:
-    ans = ""
+    ans = ''
     for i in c:
         ans += i + ','
     print('"' + ans[:-1] + '"')
 if len(d) == 0:
-    print("-")
+    print('-')
 else:
-    ans = ""
+    ans = ''
     for i in d:
         ans += i + ','
     print('"' + ans[:-1] + '"')

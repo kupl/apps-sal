@@ -1,6 +1,5 @@
-# cook your dish here
 for u in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     m = 0
     s = set(l)
@@ -11,6 +10,6 @@ for u in range(int(input())):
         for j in range(i, i + k):
             c += l[j]
             d.add(l[j])
-        if(len(d) == r):
+        if len(d) == r:
             m = max(m, c)
     print(m)

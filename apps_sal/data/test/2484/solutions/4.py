@@ -1,12 +1,10 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 sums = [0] * (N + 1)
 xors = [0] * (N + 1)
 for i in range(1, N + 1):
     sums[i] = sums[i - 1] + A[i - 1]
     xors[i] = xors[i - 1] ^ A[i - 1]
-
 ans = 0
 for i in range(N):
     l = i

@@ -1,5 +1,5 @@
 k = int(input())
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 
 
 def sign(x):
@@ -9,11 +9,11 @@ def sign(x):
 if (abs(x) + abs(y)) % 2 == 1 and k % 2 == 0:
     print(-1)
 else:
-    cx, cy = 0, 0
+    (cx, cy) = (0, 0)
     ret = []
     while x != cx or y != cy:
         if abs(x - cx) + abs(y - cy) == k:
-            cx, cy = x, y
+            (cx, cy) = (x, y)
         elif abs(x - cx) + abs(y - cy) <= 2 * k:
             dx = abs(x - cx)
             dy = abs(y - cy)
@@ -24,13 +24,11 @@ else:
             else:
                 cx += (dx + rem // 2) * sign(x - cx)
                 cy += (k - dx - rem // 2) * sign(y - cy)
+        elif abs(x - cx) > abs(y - cy):
+            cx += sign(x - cx) * k
         else:
-            if abs(x - cx) > abs(y - cy):
-                cx += sign(x - cx) * k
-            else:
-                cy += sign(y - cy) * k
+            cy += sign(y - cy) * k
         ret.append((cx, cy))
-
     print(len(ret))
-    for cx, cy in ret:
+    for (cx, cy) in ret:
         print(cx, cy)

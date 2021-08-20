@@ -1,10 +1,10 @@
 class Solution:
+
     def maxSatisfied(self, customers: List[int], grumpy: List[int], X: int) -> int:
         zeroTotal = 0
         for i in range(len(customers)):
             if grumpy[i] == 0:
                 zeroTotal += customers[i]
-
         q = deque()
         oneTotal = 0
         largest = 0

@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
 
     def is_ok(k):
         a = A - k
@@ -9,7 +9,7 @@ for _ in range(T):
             return False
         return a + b >= k
     ok = 0
-    ng = 10**9
+    ng = 10 ** 9
     while ng - ok > 1:
         m = (ok + ng) // 2
         if is_ok(m):

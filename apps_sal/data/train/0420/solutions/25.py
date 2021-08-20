@@ -1,10 +1,10 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         left_states = {'': -1}
         cur_state = set()
         ans = 0
-
-        for i, char in enumerate(s):
+        for (i, char) in enumerate(s):
             if char in 'aeiou':
                 if char in cur_state:
                     cur_state.remove(char)
@@ -15,5 +15,4 @@ class Solution:
                 ans = max(ans, i - left_states[cur_state_str])
             else:
                 left_states[cur_state_str] = i
-
         return ans

@@ -1,11 +1,10 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 p_list = list(map(int, input().split()))
 queries = [list(map(int, input().split())) for i in range(M)]
 paths = [[] for i in range(N + 1)]
-for a, b in queries:
+for (a, b) in queries:
     paths[a].append(b)
     paths[b].append(a)
-
 groups = []
 visited = [False] * (N + 1)
 for start in range(N + 1):
@@ -24,9 +23,7 @@ for start in range(N + 1):
             t_group.add(next)
             visited[next] = True
     groups.append(t_group)
-
 result = 0
-for group in groups[1:]:  # セットの最初は{0}になっているため
-    result += sum(1 for m in group if p_list[m - 1] in group)
-
+for group in groups[1:]:
+    result += sum((1 for m in group if p_list[m - 1] in group))
 print(result)

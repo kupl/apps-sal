@@ -4,10 +4,9 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    n, k = map(int, input().split())
-    r, s, p = map(int, input().split())
+    (n, k) = map(int, input().split())
+    (r, s, p) = map(int, input().split())
     t = input()
-
     dp = [[0] * 3 for _ in range(n + k)]
     for i1 in range(k):
         i2 = i1 + k

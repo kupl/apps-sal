@@ -5,7 +5,6 @@ def f(m):
             b[i] += 1
         else:
             b[i] = 1
-    # print(m,b)
     k = 0
     for i in b:
         if b[i] > 1:
@@ -29,7 +28,6 @@ def f(m):
 
 n = int(input())
 a = list(map(int, input().split()))
-
 l = 0
 r = n
 while r - l > 1:

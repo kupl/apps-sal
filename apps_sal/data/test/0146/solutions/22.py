@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 sume = 0
 sums = 0
@@ -8,7 +8,6 @@ for i in range(n):
         sume += 1
     else:
         sums += 1
-
 for b in range(k):
     tsume = sume
     tsums = sums

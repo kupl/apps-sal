@@ -4,9 +4,6 @@ Codeforces April Fools 2018 Problem C
 Author  : chaotic_iak
 Language: Python 3.5.2
 """
-
-# SOLUTION
-
 import sys
 
 
@@ -15,21 +12,17 @@ def initialize_solution():
 
 
 def main():
-    n, = read()
+    (n,) = read()
     a = read()
     for i in range(n - 1):
         if abs(a[i] - a[i + 1]) >= 2:
-            return "NO"
-    return "YES"
-
-# PROBLEM CONSTANTS
+            return 'NO'
+    return 'YES'
 
 
 READ_FROM_FILE = None
 OUTPUT_PREFIX = None
 INTERACTIVE = False
-
-# HELPERS
 
 
 def read(callback=int, split=True):
@@ -37,7 +30,7 @@ def read(callback=int, split=True):
         ipt = sfile.readline().strip()
     else:
         ipt = input().strip()
-    if INTERACTIVE and ipt == "WRONG_ANSWER":
+    if INTERACTIVE and ipt == 'WRONG_ANSWER':
         return
     if split:
         return list(map(callback, ipt.split()))
@@ -45,12 +38,12 @@ def read(callback=int, split=True):
         return callback(ipt)
 
 
-def write(value, end="\n"):
+def write(value, end='\n'):
     if value is None:
         return
     try:
         if not isinstance(value, str):
-            value = " ".join(map(str, value))
+            value = ' '.join(map(str, value))
     except:
         pass
     if READ_FROM_FILE:
@@ -64,18 +57,18 @@ def write(value, end="\n"):
 sfile = None
 tfile = None
 if READ_FROM_FILE:
-    sfile = open(READ_FROM_FILE + ".in", "r")
+    sfile = open(READ_FROM_FILE + '.in', 'r')
     sfile.seek(0)
-    tfile = open(READ_FROM_FILE + ".out", "w")
+    tfile = open(READ_FROM_FILE + '.out', 'w')
 if OUTPUT_PREFIX is None:
     result = main()
     if result is not None:
         write(result)
 else:
     initialize_solution()
-    TOTAL_CASES, = read()
+    (TOTAL_CASES,) = read()
     for CASE_NUMBER in range(1, TOTAL_CASES + 1):
-        write(OUTPUT_PREFIX.replace("%d", str(CASE_NUMBER)), end="")
+        write(OUTPUT_PREFIX.replace('%d', str(CASE_NUMBER)), end='')
         result = main()
         if result is not None:
             write(result)

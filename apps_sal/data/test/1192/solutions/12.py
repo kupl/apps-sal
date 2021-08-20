@@ -1,12 +1,11 @@
 import sys
-
 TESTING = False
 
 
 def reverse(a, l, r):
     res = list(a)
     while l < r:
-        res[l], res[r] = res[r], res[l]
+        (res[l], res[r]) = (res[r], res[l])
         l += 1
         r -= 1
     return res
@@ -22,7 +21,7 @@ def inversions(a):
 
 
 def solve():
-    n, k = read()
+    (n, k) = read()
     a = read()
     al = list()
     al.append(list(a))
@@ -42,25 +41,25 @@ def solve():
 def read(mode=2):
     inputs = input().strip()
     if mode == 0:
-        return inputs  # String
+        return inputs
     if mode == 1:
-        return inputs.split()  # List of strings
+        return inputs.split()
     if mode == 2:
-        return list(map(int, inputs.split()))  # List of integers
+        return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 def run():
     if TESTING:
-        sys.stdin = open("test.txt")
+        sys.stdin = open('test.txt')
     res = solve()
     write(res)
 

@@ -1,8 +1,7 @@
 def main():
     c = list(map(int, input().split()))
-
     c_set = set(c)
-    print((len(c_set)))
+    print(len(c_set))
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-n, a, b, c = [int(input()) for i in range(4)]
+(n, a, b, c) = [int(input()) for i in range(4)]
 if n == 1:
     print(0)
 else:

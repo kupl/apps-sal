@@ -1,6 +1,5 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a.sort()
 k1 = a[-1]
 k2 = a[-2]

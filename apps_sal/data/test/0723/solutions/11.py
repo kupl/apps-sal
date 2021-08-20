@@ -1,11 +1,14 @@
 import math
-def R(): return map(int, input().split())
+
+
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
 arr = []
 for i in range(n):
-    h, w = R()
+    (h, w) = R()
     arr.append([h, w])
 dp = [[math.inf] * 1001 for i in range(n)] + [[0] * 1001]
 for i in range(n):

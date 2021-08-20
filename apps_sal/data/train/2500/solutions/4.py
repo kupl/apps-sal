@@ -1,8 +1,9 @@
 class Solution:
+
     def maxPower(self, s: str) -> int:
         power = 1
         max_power = 0
-        for idx, i in enumerate(s):
+        for (idx, i) in enumerate(s):
             if len(s) < 2:
                 return len(s)
             if idx == 0:

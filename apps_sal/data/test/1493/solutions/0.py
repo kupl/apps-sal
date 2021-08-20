@@ -1,8 +1,6 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 fin = [list(input().strip()) for i in range(n)]
 ans = [['-' for i in range(m)] for j in range(n)]
-
 for y in range(n):
     for x in range(m):
         if fin[y][x] == '-':

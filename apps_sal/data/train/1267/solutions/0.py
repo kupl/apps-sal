@@ -1,20 +1,20 @@
 def dfs(ind, m, n, k):
-    if(ind == m):
-        return [""]
+    if ind == m:
+        return ['']
     else:
         temp = dfs(ind + 1, m, n, k)
         ans = []
-        if(len(temp) < k):
+        if len(temp) < k:
             for i in temp:
                 for j in range(97, 97 + n):
                     ans += [chr(j) + i]
         else:
             for i in temp:
-                ans += ["z" + i]
+                ans += ['z' + i]
     return ans
 
 
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 p = []
 mr = []
 for _ in range(m):
@@ -22,7 +22,7 @@ for _ in range(m):
     mc = inp[0]
     mi = 0
     for j in range(1, n):
-        if(mc < inp[j]):
+        if mc < inp[j]:
             mc = inp[j]
             mi = j
     p += [inp]
@@ -31,9 +31,9 @@ ans = dfs(0, m, n, k)
 w = []
 for i in ans:
     cst = 0
-    s = ""
+    s = ''
     for j in range(m):
-        if(i[j] != "z"):
+        if i[j] != 'z':
             s += i[j]
             cst += p[j][ord(i[j]) - 97]
         else:

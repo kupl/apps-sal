@@ -5,7 +5,6 @@ for _ in range(n):
     [a, b] = input().strip().split()
     posi.append(int(a))
     high.append(int(b))
-
 if 2 < n:
     ans = 0
     last = posi[0]

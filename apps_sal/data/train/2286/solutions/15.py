@@ -1,4 +1,4 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 if K % 2 == 0:
     print(K // 2, end=' ')
     for i in range(1, N):
@@ -7,6 +7,7 @@ if K % 2 == 0:
         else:
             print(K)
 else:
+
     def superlist(L, n):
         if n % 2 == 1:
             return [L // 2 + 1] + superlist(L, n - 1)

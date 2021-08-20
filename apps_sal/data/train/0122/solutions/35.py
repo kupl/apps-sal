@@ -1,7 +1,8 @@
 class Solution:
+
     def maxScore(self, cardPoints, k: int) -> int:
         N = len(cardPoints)
-        preS, afterS = [0] * (N + 1), [0] * (N + 1)
+        (preS, afterS) = ([0] * (N + 1), [0] * (N + 1))
         ans = 0
         for i in range(1, N + 1):
             preS[i] = preS[i - 1] + cardPoints[i - 1]

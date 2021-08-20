@@ -1,5 +1,4 @@
 n = int(input())
-
 l = 0
 r = n
 
@@ -23,5 +22,4 @@ while r - l > 1:
         r = mid
     else:
         l = mid
-
 print(r)

@@ -1,4 +1,4 @@
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 cur = 0
 colored = 0
 a = [[0] * m for i in range(n)]
@@ -26,7 +26,6 @@ if n % 2 == 1:
         res[cur].append(n - 1)
         res[cur].append(j)
         colored += 1
-
 for i in res:
-    print(len(i) // 2, end=" ")
-    print(" ".join([str(j + 1) for j in i]))
+    print(len(i) // 2, end=' ')
+    print(' '.join([str(j + 1) for j in i]))

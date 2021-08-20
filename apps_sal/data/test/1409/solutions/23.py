@@ -1,13 +1,9 @@
-#!/usr/bin/env python3.3
-# coding=utf-8
-
 def main():
     try:
         t = input()
         s = t.split(' ')
         n = int(s[0])
         k = int(s[1])
-
         t = input()
         s = t.split(' ')
         ans = 0

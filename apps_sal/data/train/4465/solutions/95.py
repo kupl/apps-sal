@@ -5,8 +5,6 @@ def super_size(n):
         n //= 10
     ll = sorted(ll, reverse=True)
     res = 0
-
     for digit in ll:
         res = res * 10 + digit
-
     return res

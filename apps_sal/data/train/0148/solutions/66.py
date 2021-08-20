@@ -2,12 +2,13 @@ from bisect import bisect_right
 
 
 class Solution:
+
     def maxProfitAssignment(self, difficulty: List[int], profit: List[int], worker: List[int]) -> int:
-        dp = [(d, p) for d, p in zip(difficulty, profit)]
+        dp = [(d, p) for (d, p) in zip(difficulty, profit)]
         dp.sort()
         G = []
         C = []
-        for x, y in dp:
+        for (x, y) in dp:
             if not G or G[-1] < x:
                 G.append(x)
                 C.append(y)

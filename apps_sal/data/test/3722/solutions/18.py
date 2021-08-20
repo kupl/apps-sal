@@ -2,12 +2,12 @@ n = int(input())
 c = [input() for _ in range(4)]
 mod = pow(10, 9) + 7
 d = dict()
-d["AA"] = c[0]
-d["AB"] = c[1]
-d["BA"] = c[2]
-d["BB"] = c[3]
+d['AA'] = c[0]
+d['AB'] = c[1]
+d['BA'] = c[2]
+d['BB'] = c[3]
 now = set()
-now.add("AB")
+now.add('AB')
 dp = [1] * max(n + 1, 4)
 for i in range(1, 4):
     x = list(now)
@@ -16,7 +16,7 @@ for i in range(1, 4):
         for j in range(i):
             z = list(y)
             z.insert(j + 1, d[z[j] + z[j + 1]])
-            now0.add("".join(z))
+            now0.add(''.join(z))
     dp[i] = len(list(now0))
     now = now0
 if dp[3] == 3:

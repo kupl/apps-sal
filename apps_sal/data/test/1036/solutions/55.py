@@ -6,11 +6,17 @@ import math
 import itertools
 import fractions
 import pprint
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 INF = float('inf')
-def inp(): return int(sys.stdin.readline())
-def inpl(): return list(map(int, sys.stdin.readline().split()))
+
+
+def inp():
+    return int(sys.stdin.readline())
+
+
+def inpl():
+    return list(map(int, sys.stdin.readline().split()))
 
 
 win = [('R', 'S'), ('S', 'P'), ('P', 'R')]
@@ -24,7 +30,7 @@ def ch(a, b):
     return False
 
 
-n, k = inpl()
+(n, k) = inpl()
 s = list(input())
 for _ in range(k):
     s += s
@@ -34,5 +40,5 @@ for _ in range(k):
             nx.append(s[i])
         else:
             nx.append(s[i + 1])
-    s = nx[::]
+    s = nx[:]
 print(s[0])

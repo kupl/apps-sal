@@ -1,4 +1,5 @@
 class CombinationIterator:
+
     def __init__(self, characters: str, combinationLength: int):
         self.nextCombIt = combinations(characters, combinationLength)
         self.nextComb = next(self.nextCombIt, None)

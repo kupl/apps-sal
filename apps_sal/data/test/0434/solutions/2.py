@@ -25,6 +25,5 @@ while i < n:
         if nxt <= 0 or (a[i3] != -1 and a[i3] != nxt):
             break
         i3 += 1
-
     i = i3
 print(ans)

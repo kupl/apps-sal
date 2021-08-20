@@ -3,21 +3,20 @@ from math import inf
 
 
 def main():
-    n, d = readline()
+    (n, d) = readline()
     a = [0] + list(readline()) + [0]
     x = [0] * n
     y = [0] * n
-    # parent = [-1] * n  #  In case you want to know the path traveled
     for i in range(n):
-        x[i], y[i] = readline()
-    return dijkstra(n, d, a, x, y)  # , parent)
+        (x[i], y[i]) = readline()
+    return dijkstra(n, d, a, x, y)
 
 
 def readline():
     return list(map(int, stdin.readline().strip().split()))
 
 
-def dijkstra(n, d, a, x, y):  # , parent):
+def dijkstra(n, d, a, x, y):
     lower_cost = [inf] * n
     lower_cost[0] = 0
     visited = [False] * n
@@ -31,7 +30,6 @@ def dijkstra(n, d, a, x, y):  # , parent):
                 diff = lower_cost[position] + d * (abs(x[k] - x[position]) + abs(y[k] - y[position])) - a[position]
                 if lower_cost[k] > diff:
                     lower_cost[k] = diff
-                    # parent[k] = position
     return lower_cost[-1]
 
 

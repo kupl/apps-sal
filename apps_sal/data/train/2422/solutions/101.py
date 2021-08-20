@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         maxx = float('-inf')
         for i in range(0, len(nums) - 1):

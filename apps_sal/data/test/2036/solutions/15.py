@@ -1,4 +1,4 @@
-n, m, sx, sy = list(map(int, input().split()))
+(n, m, sx, sy) = list(map(int, input().split()))
 
 
 def do_row(sx, vis):

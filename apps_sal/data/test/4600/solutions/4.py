@@ -14,15 +14,15 @@ def readintslist(n):
 
 
 def main():
-    n, m = readints()
+    (n, m) = readints()
     frag = [False] * (n + 1)
     penalties = [0] * (n + 1)
     for _ in range(m):
-        p, s = input().split()
+        (p, s) = input().split()
         p = int(p)
         if frag[p]:
             continue
-        if s == "AC":
+        if s == 'AC':
             frag[p] = True
         else:
             penalties[p] += 1

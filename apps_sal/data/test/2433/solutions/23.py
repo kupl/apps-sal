@@ -1,11 +1,13 @@
-''' بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ '''
-# codeforces1207A_live
-def gi(): return list(map(int, input().split()))
+""" بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ """
+
+
+def gi():
+    return list(map(int, input().split()))
 
 
 for k in range(gi()[0]):
-    b, p, f = gi()
-    h, c = gi()
+    (b, p, f) = gi()
+    (h, c) = gi()
     ans = 0
     if h > c:
         tmep = min(b // 2, p)

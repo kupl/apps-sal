@@ -1,5 +1,4 @@
 C = input()
-
 if C == 'z':
     print('z')
 else:

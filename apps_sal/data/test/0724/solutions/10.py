@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 arr = [int(x) for x in input().split()]
 arr.sort()
 start = 0
@@ -9,7 +9,5 @@ while end < n:
         end += 1
     mx = max(mx, end - start)
     start += 1
-
 mx = max(mx, n - start)
-
 print(n - mx)

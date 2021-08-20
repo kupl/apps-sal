@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         counter = collections.Counter(A)
         res = 0

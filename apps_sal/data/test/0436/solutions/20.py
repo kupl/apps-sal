@@ -3,8 +3,6 @@ import sys
 import collections
 
 
-# imgur.com/Pkt7iIf.png
-
 def getdict(n):
     d = {}
     if type(n) is list:
@@ -23,10 +21,20 @@ def getdict(n):
     return d
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return list(map(int, input().split()))
-def li(): return list(map(int, input().split()))
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return list(map(int, input().split()))
+
+
+def li():
+    return list(map(int, input().split()))
 
 
 n = ii()
@@ -39,7 +47,6 @@ for i in range(1, n):
     if d[i] <= a // 2:
         r.append(i + 1)
         dr.append(d[i])
-
 if sum(dr) > sum(d) // 2:
     print(len(r))
     print(' '.join(map(str, r)))

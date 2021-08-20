@@ -7,4 +7,4 @@ for num in range(len(A)):
     while A[num] % 2 == 0:
         A[num] = A[num] / 2
         counter[num] += 1
-print((sum(counter)))
+print(sum(counter))

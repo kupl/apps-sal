@@ -1,6 +1,6 @@
 def password(n):
     num = str(n)
-    hack = ""
+    hack = ''
     for i in num:
         hack = hack + str(int(i) - 2)
     print(hack)

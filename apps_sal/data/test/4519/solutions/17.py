@@ -1,17 +1,16 @@
 t = int(input())
 while t > 0:
     t -= 1
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     z = []
     a = list(input())
     for i in range(n):
         if a[i] == '0':
             z.append(i)
     y = 0
-    # print(z)
     for i in range(len(z)):
         if k - (z[i] - y) > 0:
-            k -= (z[i] - y)
+            k -= z[i] - y
             z[i] = y
             y += 1
         else:
@@ -24,4 +23,4 @@ while t > 0:
     for i in range(n):
         if v[i] == 0:
             a[i] = '1'
-    print("".join(a))
+    print(''.join(a))

@@ -1,6 +1,5 @@
 import sys
 3
-# -*- coding: utf-8 -*-
 
 
 def rl(proc=None):
@@ -30,16 +29,13 @@ def main():
     if a[0] < 0:
         print('cslnb')
         return
-
     for i in range(0, len(a) - 1):
         if a[i] == a[i + 1]:
             print('cslnb')
             return
-
-    for i, x in enumerate(a):
+    for (i, x) in enumerate(a):
         cnt += x - i
-
-    print('sjfnb' if (cnt & 1) else 'cslnb')
+    print('sjfnb' if cnt & 1 else 'cslnb')
 
 
 def __starting_point():

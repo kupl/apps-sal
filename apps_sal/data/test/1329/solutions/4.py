@@ -13,7 +13,6 @@ def prime_factorization(n):
                     rec[prime] += cnt
                 else:
                     rec[prime] = cnt
-
         if i != 1:
             if rec.get(i):
                 rec[i] += 1
@@ -26,7 +25,7 @@ rec = dict()
 prime_factorization(n)
 dic = {2: 0, 4: 0, 14: 0, 24: 0, 74: 0}
 cnt = 0
-for key, val in rec.items():
+for (key, val) in rec.items():
     if val >= 2:
         dic[2] += 1
     if val >= 4:
@@ -37,7 +36,6 @@ for key, val in rec.items():
         dic[24] += 1
     if val >= 74:
         dic[74] += 1
-
 for i in [74, 24, 14, 4]:
     temp = dic.get(i)
     if i == 74:

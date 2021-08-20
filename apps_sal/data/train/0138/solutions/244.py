@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         pos_length = 0
         neg_length = 0
@@ -19,6 +20,5 @@ class Solution:
                 pos_length = 0
                 neg_length = 0
             max_length = max(max_length, pos_length)
-#           print(f'num, max_length = {num}, {max_length}')
         max_length = max(max_length, pos_length)
         return max_length

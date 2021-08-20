@@ -5,10 +5,10 @@ for rew in range(q):
     l.sort()
     while True:
         if 2048 in l:
-            print("YES")
+            print('YES')
             break
         if len(l) == 0:
-            print("NO")
+            print('NO')
             break
         if len(l) > 1 and l[0] == l[1]:
             l = [2 * l[0]] + l[2:]

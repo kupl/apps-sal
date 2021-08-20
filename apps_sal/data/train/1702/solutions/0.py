@@ -2,6 +2,7 @@ import math
 
 
 class Sudoku(object):
+
     def __init__(self, board):
         self.board = board
 
@@ -13,18 +14,14 @@ class Sudoku(object):
         if rootN * rootN != n:
             return False
 
-        def isValidRow(r): return (isinstance(r, list)
-                                    and len(r) == n
-                                   and all([type(x) == int for x in r]))
+        def isValidRow(r):
+            return isinstance(r, list) and len(r) == n and all([type(x) == int for x in r])
         if not all(map(isValidRow, self.board)):
             return False
         oneToN = set(range(1, n + 1))
-        def isOneToN(l): return set(l) == oneToN
+
+        def isOneToN(l):
+            return set(l) == oneToN
         tranpose = [[self.board[j][i] for i in range(n)] for j in range(n)]
-        squares = [[self.board[p + x][q + y] for x in range(rootN)
-                    for y in range(rootN)]
-                   for p in range(0, n, rootN)
-                   for q in range(0, n, rootN)]
-        return (all(map(isOneToN, self.board))
-                and all(map(isOneToN, tranpose))
-                and all(map(isOneToN, squares)))
+        squares = [[self.board[p + x][q + y] for x in range(rootN) for y in range(rootN)] for p in range(0, n, rootN) for q in range(0, n, rootN)]
+        return all(map(isOneToN, self.board)) and all(map(isOneToN, tranpose)) and all(map(isOneToN, squares))

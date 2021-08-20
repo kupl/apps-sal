@@ -5,4 +5,4 @@ def capitalize(s, ind):
             newstring.append(s[numero])
         elif numero in range(len(s)):
             newstring.append(s[numero].capitalize())
-    return "".join(newstring)
+    return ''.join(newstring)

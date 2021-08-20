@@ -5,5 +5,4 @@ c = [int(x) for x in input().split()]
 for i in range(n):
     if v[i] > c[i]:
         ans += v[i] - c[i]
-
 print(ans)

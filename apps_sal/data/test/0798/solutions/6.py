@@ -1,12 +1,12 @@
-while(1):
+while 1:
     try:
         a = [0, 0, 0]
-        a[0], a[1], a[2] = list(map(int, input().split()))
+        (a[0], a[1], a[2]) = list(map(int, input().split()))
         b = sorted(a)
         c = sum(b[:2])
         d = (c - b[2]) // 2
         if b[2] > c or (c - b[2]) % 2 != 0:
-            print("Impossible")
+            print('Impossible')
         else:
             ind = a.index(b[2]) + 1
             if ind == 1:

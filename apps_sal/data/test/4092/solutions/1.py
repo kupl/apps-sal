@@ -1,6 +1,5 @@
 n = int(input())
 arr = list(map(int, input().split()))
-
 ans = 0
 pref = [0]
 prefset = {0}
@@ -13,7 +12,4 @@ for i in range(n):
     else:
         pref.append(now)
         prefset.add(now)
-    # print(pref)
-    # print(prefset)
-
 print(ans)

@@ -1,11 +1,10 @@
 def isqrt(num):
-    '''Compute int(sqrt(n)) for n integer > 0
-    O(log4(n)) and no floating point operation, no division'''
-    res, bit = 0, 1
+    """Compute int(sqrt(n)) for n integer > 0
+    O(log4(n)) and no floating point operation, no division"""
+    (res, bit) = (0, 1)
     while bit <= num:
         bit <<= 2
     bit >>= 2
-
     while bit:
         if num >= res + bit:
             num -= res + bit
@@ -16,25 +15,24 @@ def isqrt(num):
 
 
 def factorize(n):
-    for q in 2, 3:
+    for q in (2, 3):
         m = 0
         while not n % q:
             m += 1
             n //= q
         if m:
-            yield q, m
-
-    m, d, q, maxq = 0, 4, 1, isqrt(n)
+            yield (q, m)
+    (m, d, q, maxq) = (0, 4, 1, isqrt(n))
     while q <= maxq:
-        q, d = q + d, 6 - d
+        (q, d) = (q + d, 6 - d)
         while not n % q:
             m += 1
             n //= q
         if m:
-            yield q, m
-            m, d, q, maxq = 0, 4, 1, isqrt(n)
+            yield (q, m)
+            (m, d, q, maxq) = (0, 4, 1, isqrt(n))
     if n > 1:
-        yield n, 1
+        yield (n, 1)
 
 
 def count_factor(n, f):
@@ -45,4 +43,5 @@ def count_factor(n, f):
     return s
 
 
-def trailing_zeros(n, b): return min(count_factor(n, f) // m for f, m in factorize(b))
+def trailing_zeros(n, b):
+    return min((count_factor(n, f) // m for (f, m) in factorize(b)))

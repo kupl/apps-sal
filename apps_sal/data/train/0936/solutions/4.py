@@ -1,8 +1,6 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
-    mat = [list(map(int, input().strip().split()))
-           for i in range(n)]
+    mat = [list(map(int, input().strip().split())) for i in range(n)]
     ans = 0
     equal = True
     for i in range(n - 1, 0, -1):

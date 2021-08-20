@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, l, out = int(input()), list(map(lambda x: int(x) - 1, input().split())), []
+    (n, l, out) = (int(input()), list(map(lambda x: int(x) - 1, input().split())), [])
     ll = sorted([(l[i], i) for i in range(n)])
     swap = (-1, -1)
     newl = [0] * n
@@ -8,16 +8,18 @@ for _ in range(int(input())):
             swap = (ll[i][1], ll[i + 1][1])
     for i in range(n):
         newl[ll[i][1]] = i
-    l, swapN = newl, 0
-    works, done = True, False
+    (l, swapN) = (newl, 0)
+    (works, done) = (True, False)
     for i in range(n):
         for j in range(i + 1, n):
             if l[i] > l[j]:
                 swapN += 1
     if swapN & 1:
-        l[swap[0]], l[swap[1]] = l[swap[1]], l[swap[0]]
+        (l[swap[0]], l[swap[1]]) = (l[swap[1]], l[swap[0]])
 
-    def shift(i): out.append(i + 1); l[i], l[i + 1], l[i + 2] = l[i + 2], l[i], l[i + 1]
+    def shift(i):
+        out.append(i + 1)
+        (l[i], l[i + 1], l[i + 2]) = (l[i + 2], l[i], l[i + 1])
     while not done:
         for i in range(n):
             if l[i] != i:

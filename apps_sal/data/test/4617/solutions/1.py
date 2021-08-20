@@ -1,7 +1,6 @@
 P = input()
 Q = input()
-
 if P[::-1] == Q:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

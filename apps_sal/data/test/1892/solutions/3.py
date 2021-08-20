@@ -1,11 +1,9 @@
 n = int(input())
 a = [input() for _ in range(n)]
-
-MOD = int(1e9 + 7)
+MOD = int(1000000000.0 + 7)
 const = 5001
 levels = [0] * const
 levels[0] = 1
-
 for i in range(n - 1):
     if a[i] == 'f':
         for j in range(const - 2, -1, -1):

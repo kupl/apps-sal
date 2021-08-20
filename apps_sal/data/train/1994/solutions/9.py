@@ -1,9 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class DSU:
+
     def __init__(self, n):
         self.p = list(range(n))
         self.r = [0] * n
@@ -25,13 +21,12 @@ class DSU:
 
 
 class Solution:
+
     def numComponents(self, head: ListNode, G: List[int]) -> int:
         dsu = DSU(max(G) + 1)
-
-        slow, fast = head, head.next
+        (slow, fast) = (head, head.next)
         while slow and fast:
             if slow.val in G and fast.val in G:
                 dsu.union(slow.val, fast.val)
-            slow, fast = slow.next, fast.next
-
+            (slow, fast) = (slow.next, fast.next)
         return len({dsu.find(x) for x in G})

@@ -1,11 +1,8 @@
 N = int(input())
-
 xyh = []
 for i in range(N):
     xyh.append(list(map(int, input().split())))
-
 xyh_sorted = sorted(xyh, key=lambda x: x[2], reverse=True)
-
 answer = [0, 0, 0]
 for cy in range(0, 101):
     for cx in range(0, 101):
@@ -21,6 +18,5 @@ for cy in range(0, 101):
             break
     if flag:
         break
-
-answerString = str(answer[0]) + " " + str(answer[1]) + " " + str(answer[2])
+answerString = str(answer[0]) + ' ' + str(answer[1]) + ' ' + str(answer[2])
 print(answerString)

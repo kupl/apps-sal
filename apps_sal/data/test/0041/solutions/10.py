@@ -1,5 +1,5 @@
 def qa():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if k > n:
         print('-1')
         return
@@ -13,7 +13,7 @@ def qa():
 def qb():
     _ = input()
     d = [*map(int, input().split())]
-    zeroIndex = [0 if v == 0 else len(d) for i, v in enumerate(d)]
+    zeroIndex = [0 if v == 0 else len(d) for (i, v) in enumerate(d)]
     counter = len(d)
     for i in range(len(d)):
         if zeroIndex[i] == 0:

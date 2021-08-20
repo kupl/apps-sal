@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         num1 = num + 1
         num2 = num + 2

@@ -1,9 +1,21 @@
 import sys
 mod = 1000000007
-def get_array(): return list(map(int, sys.stdin.readline().split()))
-def get_ints(): return map(int, sys.stdin.readline().split())
-def input(): return sys.stdin.readline()
-def print_array(a): print(" ".join(map(str, a)))
+
+
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def get_ints():
+    return map(int, sys.stdin.readline().split())
+
+
+def input():
+    return sys.stdin.readline()
+
+
+def print_array(a):
+    print(' '.join(map(str, a)))
 
 
 def maxCost(cost, tree, c, p):
@@ -22,7 +34,7 @@ def main():
     cost = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
     tree = [[] for _ in range(n + 1)]
     for _ in range(n - 1):
-        u, v, c = get_ints()
+        (u, v, c) = get_ints()
         tree[u].append(v)
         tree[v].append(u)
         cost[u][v] = cost[v][u] = c

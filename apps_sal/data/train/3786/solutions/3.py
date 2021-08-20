@@ -11,8 +11,8 @@ def siegfried(week, txt):
         txt = re.sub('ph', matchcase('f'), txt, flags=re.I)
     elif week == 3:
         txt = siegfried(2, txt)
-        txt = re.sub(r'(?<=\w{3})e\b', '', txt)
-        txt = re.sub(r'([a-z])\1', r'\1', txt, flags=re.I)
+        txt = re.sub('(?<=\\w{3})e\\b', '', txt)
+        txt = re.sub('([a-z])\\1', '\\1', txt, flags=re.I)
     elif week == 4:
         txt = siegfried(3, txt)
         txt = re.sub('th', matchcase('z'), txt, flags=re.I)
@@ -22,12 +22,13 @@ def siegfried(week, txt):
         txt = siegfried(4, txt)
         txt = re.sub('ou', 'u', txt)
         txt = re.sub('an', matchcase('un'), txt, flags=re.I)
-        txt = re.sub(r'ing\b', matchcase('ink'), txt, flags=re.I)
-        txt = re.sub(r'\bsm', matchcase('schm'), txt, flags=re.I)
+        txt = re.sub('ing\\b', matchcase('ink'), txt, flags=re.I)
+        txt = re.sub('\\bsm', matchcase('schm'), txt, flags=re.I)
     return txt
 
 
 def matchcase(word):
+
     def replace(m):
         text = m.group()
         if text.isupper():

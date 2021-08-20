@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     n = int(buf)
@@ -8,7 +7,7 @@ def main():
     first_c = None
     all_same = True
     min_number = 1
-    for f, c in list(factor.items()):
+    for (f, c) in list(factor.items()):
         if c > c_max:
             c_max = c
         if first_c == None:
@@ -22,7 +21,7 @@ def main():
         op_count += 1
     if not check_power_of_2(c_max):
         c_max = c_max << 1
-        c_max = c_max & (c_max - 1)
+        c_max = c_max & c_max - 1
     while c_max > 1:
         c_max //= 2
         op_count += 1
@@ -30,7 +29,7 @@ def main():
 
 
 def check_power_of_2(x):
-    return (x != 0) and ((x & (x - 1)) == 0)
+    return x != 0 and x & x - 1 == 0
 
 
 def prime_factorization(number):

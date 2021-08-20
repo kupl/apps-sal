@@ -1,13 +1,12 @@
 from math import inf
 n = int(input())
-
 a = input()
 a = [int(i) for i in a.split()]
 s = input()
 s = [int(i) for i in s.split()]
 ans = inf
 for j in range(1, n - 1):
-    ll, lr = inf, inf
+    (ll, lr) = (inf, inf)
     for q in range(j + 1, n):
         if a[j] < a[q]:
             lr = min(lr, s[q])

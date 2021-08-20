@@ -12,23 +12,21 @@ for i in range(n):
         num_2 += 1
     elif A[i] == 'S' and flag == 0:
         flag = 1
+    elif num_1 + num_2 + 1 <= x:
+        if num_1 + num_2 + 1 > max_num:
+            max_num = num_1 + num_2 + 1
+        num_1 = num_2
+        num_2 = 0
+        flag = 1
     else:
-        if num_1 + num_2 + 1 <= x:
-            if num_1 + num_2 + 1 > max_num:
-                max_num = num_1 + num_2 + 1
-            num_1 = num_2
-            num_2 = 0
-            flag = 1
-        else:
-            if num_2 + num_1 > max_num:
-                max_num = num_1 + num_2
-            num_1 = num_2
-            num_2 = 0
-            flag = 1
+        if num_2 + num_1 > max_num:
+            max_num = num_1 + num_2
+        num_1 = num_2
+        num_2 = 0
+        flag = 1
 if num_1 + num_2 + 1 <= x:
     if num_1 + num_2 + 1 > max_num:
         max_num = num_1 + num_2 + 1
-else:
-    if num_2 + num_1 > max_num:
-        max_num = num_1 + num_2
+elif num_2 + num_1 > max_num:
+    max_num = num_1 + num_2
 print(max_num)

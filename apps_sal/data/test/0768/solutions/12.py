@@ -1,5 +1,4 @@
-# kitten
-f, I, t = map(int, input().split())
+(f, I, t) = map(int, input().split())
 l = []
 for i in range(f):
     l.append(input())

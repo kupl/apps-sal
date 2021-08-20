@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 list01 = input().split()
 list02 = [int(a) for a in list01]
 x = 0

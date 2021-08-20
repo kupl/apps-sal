@@ -1,4 +1,5 @@
 class Solution:
+
     def myAtoi(self, str):
         """
         :type str: str
@@ -7,7 +8,7 @@ class Solution:
         if not str:
             return 0
         str = str.strip()
-        number, flag = 0, 1
+        (number, flag) = (0, 1)
         if str[0] == '-':
             str = str[1:]
             flag = -1

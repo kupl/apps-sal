@@ -1,11 +1,11 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 s = input()
 b = 1
 d = 0
 l = [0] * p
 l[0] = 1
 ans = 0
-for i, c in enumerate(s[::-1]):
+for (i, c) in enumerate(s[::-1]):
     if p == 2 or p == 5:
         if int(c) % p == 0:
             ans += n - i

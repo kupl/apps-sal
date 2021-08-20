@@ -1,6 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
-        words.sort(key=lambda word: (len(word)))
+        words.sort(key=lambda word: len(word))
         lengths = [1] * len(words)
         for i in range(len(words)):
             for j in range(i):
@@ -19,9 +20,8 @@ class Solution:
                     return True
                 if word2[a] == word1[indexOfword1]:
                     indexOfword1 += 1
+                elif differentReached == True:
+                    return False
                 else:
-                    if differentReached == True:
-                        return False
-                    else:
-                        differentReached = True
+                    differentReached = True
             return True

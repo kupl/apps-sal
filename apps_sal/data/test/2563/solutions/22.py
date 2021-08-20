@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
 import sys
-INF = 10**9
-sys.setrecursionlimit(10**8)
-# input = sys.stdin.buffer.readline
-
+INF = 10 ** 9
+sys.setrecursionlimit(10 ** 8)
 n = int(input())
 for i in range(n):
     s = input().rstrip()
@@ -26,4 +23,4 @@ for i in range(n):
         else:
             ans.append(odds[oid])
             oid += 1
-    print("".join([str(item) for item in ans]))
+    print(''.join([str(item) for item in ans]))

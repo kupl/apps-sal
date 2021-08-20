@@ -1,5 +1,5 @@
 try:
-    a, n, k = map(int, input().split())
+    (a, n, k) = map(int, input().split())
     kList = [0 for i in range(k)]
     for i in range(k):
         kList[i] = a % (n + 1)

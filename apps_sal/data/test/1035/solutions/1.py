@@ -4,7 +4,7 @@ import math
 def factrize(num):
     factor = {}
     div = 2
-    s = int(num**0.5) + 1
+    s = int(num ** 0.5) + 1
     while div < s:
         div_cnt = 0
         while num % div == 0:
@@ -18,6 +18,6 @@ def factrize(num):
     return factor
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 g = math.gcd(a, b)
 print(len(factrize(g)) + 1)

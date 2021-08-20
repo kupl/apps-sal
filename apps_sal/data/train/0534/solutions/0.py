@@ -6,10 +6,10 @@ def detect_triangle(adj):
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     graph = [[] for i in range(n)]
     for i in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         graph[u - 1].append(v - 1)
         graph[v - 1].append(u - 1)
     h = []
@@ -22,4 +22,4 @@ for _ in range(int(input())):
     if detect_triangle(graph):
         print(3)
         continue
-    print(h1)    # cook your dish here
+    print(h1)

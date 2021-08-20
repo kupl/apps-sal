@@ -1,4 +1,4 @@
-n, k = input().split()
+(n, k) = input().split()
 k = int(k)
 l = len(n)
 s = list(reversed(list(map(int, n))))

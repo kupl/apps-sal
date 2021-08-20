@@ -16,10 +16,9 @@ def main():
                 if c >= arr[i] and used[i] == False:
                     used[i] = True
                     c += 1
-        napr = not(napr)
+        napr = not napr
         if False in used:
             ans += 1
-
     print(ans)
 
 

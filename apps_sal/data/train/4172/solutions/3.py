@@ -1,8 +1,8 @@
 def solve(s):
     if len(s) % 2:
         return -1
-    count, swap = 0, 0
-    for i, c in enumerate(s):
+    (count, swap) = (0, 0)
+    for (i, c) in enumerate(s):
         count += (c == '(') - (c == ')')
         if count < 0:
             swap += 1

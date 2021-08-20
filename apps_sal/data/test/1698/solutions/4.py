@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 e = 1
 ans = 0
 p = sorted(list(map(int, input().split())), reverse=True)

@@ -6,7 +6,7 @@ min_r2 = 10000000000
 ind1 = 0
 ind2 = 0
 for i in range(n):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     if l >= max_l1:
         max_l2 = max_l1
         max_l1 = l

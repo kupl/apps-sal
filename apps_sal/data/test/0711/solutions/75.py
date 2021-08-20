@@ -1,4 +1,3 @@
-# 素因数分解して列挙する関数、約数列挙ではない！
 from collections import Counter
 
 
@@ -16,7 +15,7 @@ def factorize(n):
     return fct
 
 
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def comb_mod(n, r, mod):
@@ -30,7 +29,7 @@ def comb_mod(n, r, mod):
     return ans
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 fact = factorize(M)
 ans = 1
 for k in fact.values():

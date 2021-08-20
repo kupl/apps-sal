@@ -5,7 +5,7 @@ for _ in range(t):
     nums = [0, 0, 0, 0, 0, 0, 0, 0]
     for i in a:
         nums[i - 1] += 1
-    if(min(nums) == 0):
+    if min(nums) == 0:
         print(0)
     else:
-        print(min(nums))  # cook your dish here
+        print(min(nums))

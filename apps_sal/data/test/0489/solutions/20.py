@@ -7,7 +7,7 @@ c = l1[2]
 if a == b and b == c:
     ans = l.count(a)
     a = ans
-    print((a * (a - 1) * (a - 2)) // 6)
+    print(a * (a - 1) * (a - 2) // 6)
 elif b != c:
     ans = l.count(c)
     c = ans
@@ -15,4 +15,4 @@ elif b != c:
 else:
     ans = l.count(b)
     b = ans
-    print((b * (b - 1)) // 2)
+    print(b * (b - 1) // 2)

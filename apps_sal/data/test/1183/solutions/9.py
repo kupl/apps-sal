@@ -4,7 +4,7 @@ def readIntArray():
 
 t = int(input())
 for _ in range(t):
-    n, x = readIntArray()
+    (n, x) = readIntArray()
     a = readIntArray()
     st = set()
     for val in a:

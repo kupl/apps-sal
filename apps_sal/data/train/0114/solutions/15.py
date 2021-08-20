@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
@@ -8,11 +7,10 @@ for _ in range(t):
     h.sort(reverse=True)
     new_h = []
     prev = 0
-    for p, s in h:
+    for (p, s) in h:
         if s > prev:
             new_h.append((p, s))
             prev = s
-
     h = new_h
     hum = 0
     res = 1
@@ -31,5 +29,4 @@ for _ in range(t):
             hum = 0
             cur = 1
             maxp = mon
-
     print(res)

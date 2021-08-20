@@ -1,6 +1,5 @@
 from math import gcd
-
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 f = abs(a - b)
 d = []
 i = 1
@@ -9,7 +8,6 @@ while i * i <= f:
         d.append(i)
         d.append(f // i)
     i += 1
-
 d = list(set(d))
 d.sort()
 
@@ -26,5 +24,4 @@ for i in d:
     if z < x:
         x = z
         y = k
-
 print(y)

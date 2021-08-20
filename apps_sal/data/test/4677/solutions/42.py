@@ -9,11 +9,10 @@ def main():
             ans.append(s)
         elif s == '1':
             ans.append(s)
+        elif len(ans) == 0:
+            pass
         else:
-            if len(ans) == 0:
-                pass
-            else:
-                ans.pop()
+            ans.pop()
     print(*list(ans), sep='')
 
 

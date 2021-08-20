@@ -1,4 +1,5 @@
-def e(s): return f([*s, '+'])
+def e(s):
+    return f([*s, '+'])
 
 
 def f(s, r=0, o=0, x='', c=0):

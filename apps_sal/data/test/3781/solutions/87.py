@@ -1,9 +1,8 @@
 from collections import Counter
 t = int(input())
-
 for _ in range(t):
     n = int(input())
-    *a, = map(int, input().split())
+    (*a,) = map(int, input().split())
     ca = Counter(a)
     if n % 2:
         print('Second')

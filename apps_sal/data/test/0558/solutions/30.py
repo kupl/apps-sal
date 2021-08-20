@@ -1,4 +1,4 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 MOD = 998244353
 ans = 0
 comb = 1

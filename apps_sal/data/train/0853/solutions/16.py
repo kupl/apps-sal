@@ -1,22 +1,16 @@
 def asc_merge_sort(time, name):
     length = len(time)
     if length > 1:
-        # finding the middle point if the timeay
         if length % 2 == 0:
             mid = length // 2
         else:
             mid = length // 2 + 1
-
-        # for dividing the timeay into two sub parts
         l = time[:mid]
         r = time[mid:]
         ll = name[:mid]
         rr = name[mid:]
-
-        # sorting the both sub timeays
         asc_merge_sort(l, ll)
         asc_merge_sort(r, rr)
-
         i = j = k = 0
         while i < len(l) and j < len(r):
             if l[i] < r[j]:

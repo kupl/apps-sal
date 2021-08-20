@@ -1,6 +1,5 @@
 import math
 import itertools
-
 n = int(input())
 a = list(map(int, input().split()))
 pf = [0] + list(itertools.accumulate(a, math.gcd))

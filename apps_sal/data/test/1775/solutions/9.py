@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding=utf-8
-
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 mCnt = 0
 ans = [0] * m
 start = 0
@@ -34,4 +31,4 @@ for i in range(n):
                 break
         end += 1
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

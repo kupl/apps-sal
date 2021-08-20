@@ -5,7 +5,7 @@ count = 1
 for number in numbers:
     for l in range(1, len(number) + 1):
         for i in range(0, len(number) - l + 1):
-            key = number[i: i + l]
+            key = number[i:i + l]
             if key in telep and telep[key] != count:
                 telep[key] = -1
             else:

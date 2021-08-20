@@ -3,12 +3,10 @@ input = sys.stdin.readline
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     S = input()
-
     ans = []
     check = [False] * (N + 1)
-
     idx = N
     while 0 < idx:
         f = False
@@ -29,7 +27,6 @@ def main():
         if not f:
             print(-1)
             return
-
     for a in ans[::-1]:
         print(a)
 

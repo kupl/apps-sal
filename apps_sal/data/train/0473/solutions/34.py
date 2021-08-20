@@ -1,9 +1,10 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         d = defaultdict(list)
         d[0].append(-1)
-        cur, rst = 0, 0
-        for i, a in enumerate(arr):
+        (cur, rst) = (0, 0)
+        for (i, a) in enumerate(arr):
             cur ^= a
             if i > 0:
                 for j in d[cur]:

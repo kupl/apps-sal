@@ -6,22 +6,22 @@ for _ in range(int(input())):
         a[ord(c) - ord('a')] += 1
     l = []
     for i in range(26):
-        if (a[i] == 1):
+        if a[i] == 1:
             l.append(chr(ord('a') + i))
-    if (len(l) <= 1):
-        print("PANDEY")
+    if len(l) <= 1:
+        print('PANDEY')
     else:
-        shan = ""
+        shan = ''
         for c in s:
-            if (c in l):
+            if c in l:
                 shan = c
                 break
-        anku = ""
+        anku = ''
         for c in t:
-            if (c in l):
+            if c in l:
                 anku = c
                 break
-        if (shan > anku):
-            print("SHANKY")
+        if shan > anku:
+            print('SHANKY')
         else:
-            print("ANKU")
+            print('ANKU')

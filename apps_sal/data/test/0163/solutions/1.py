@@ -1,9 +1,9 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 s = input()
 f = s.find('G')
 t = s.find('T')
 if f < t:
-    f, t = t, f
+    (f, t) = (t, f)
 if (f - t) % k:
     print('NO')
 else:

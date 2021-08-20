@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         from collections import Counter
         dic1 = Counter(s)
@@ -8,7 +9,6 @@ class Solution:
         while k < length:
             c = t[k]
             if dic1[c] > 0:
-
                 dic1[c] -= 1
                 dic2[c] -= 1
             k += 1

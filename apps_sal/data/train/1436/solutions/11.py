@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     h = input()
@@ -7,9 +6,8 @@ while t:
             print(1)
         else:
             print(2)
+    elif h[:int(len(h) / 2)] == h[int(len(h) / 2):][::-1]:
+        print(1)
     else:
-        if h[:int(len(h) / 2)] == h[int(len(h) / 2):][::-1]:
-            print(1)
-        else:
-            print(2)
+        print(2)
     t -= 1

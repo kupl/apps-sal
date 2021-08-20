@@ -1,7 +1,5 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 m = [int(input()) for i in range(N)]
-# print(m)
-
 ans = 0
 X -= sum(m)
 ans += N

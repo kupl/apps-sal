@@ -1,6 +1,6 @@
 data = [int(input()) for i in range(5)]
-if all(i % 10 == 0 for i in data):
-    print((sum(data)))
+if all((i % 10 == 0 for i in data)):
+    print(sum(data))
 else:
     a = 10
     for i in range(len(data)):

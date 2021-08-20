@@ -1,10 +1,11 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount < 0 or not coins:
             return -1
         if not amount:
             return 0
-        stack, lvl, visited = [0], 0, set()
+        (stack, lvl, visited) = ([0], 0, set())
         while stack:
             new_lvl = []
             lvl += 1

@@ -1,7 +1,8 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
-        res, q, n, start = 0, [], len(nums), 0
-        for i, v in enumerate(nums):
+        (res, q, n, start) = (0, [], len(nums), 0)
+        for (i, v) in enumerate(nums):
             if v == 0:
                 start = i + 1
                 q = []

@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         lengths = [len(arr) + 1] * (len(arr) + 1)
         i = 0

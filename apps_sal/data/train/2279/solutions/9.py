@@ -6,7 +6,7 @@ n = max(a) + 1
 spf = [i for i in range(n)]
 for i in range(4, n, 2):
     spf[i] = 2
-for i in range(3, int(n**.5) + 1, 2):
+for i in range(3, int(n ** 0.5) + 1, 2):
     if spf[i] != i:
         continue
     for j in range(i * i, n, i):
@@ -21,7 +21,7 @@ for i in range(1, n):
 
 
 def query(n):
-    return dp[n] - dp[int(n**.5)] + 1
+    return dp[n] - dp[int(n ** 0.5)] + 1
 
 
-print("\n".join(str(dp[n] - dp[int(n**.5)] + 1) for n in a))
+print('\n'.join((str(dp[n] - dp[int(n ** 0.5)] + 1) for n in a)))

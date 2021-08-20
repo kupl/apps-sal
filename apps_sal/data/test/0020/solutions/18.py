@@ -1,4 +1,4 @@
-h, m = [int(x) for x in input().split(":")]
+(h, m) = [int(x) for x in input().split(':')]
 ans = 0
 
 

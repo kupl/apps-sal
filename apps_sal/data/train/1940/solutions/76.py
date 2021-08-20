@@ -1,16 +1,11 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         st1 = []
         ptr = head
         while ptr:
             st1.append(ptr.val)
             ptr = ptr.__next__
-
         st2 = []
         ans = []
         while st1:

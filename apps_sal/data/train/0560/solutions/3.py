@@ -10,9 +10,9 @@ for k in range(t):
     b.remove(max(b))
     s1 = sum(a)
     s2 = sum(b)
-    if (s1 > s2):
-        print("Bob")
-    elif (s2 > s1):
-        print("Alice")
+    if s1 > s2:
+        print('Bob')
+    elif s2 > s1:
+        print('Alice')
     else:
-        print("Draw")
+        print('Draw')

@@ -1,6 +1,4 @@
-# coding: utf-8
 import math
-
 ans = 1
 count = 0
 num1 = int(input())

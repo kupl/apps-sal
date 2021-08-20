@@ -10,12 +10,12 @@ import bisect
 import sys
 import random
 import time
-inf = 10**9
+inf = 10 ** 9
 
 
 def main():
     n = int(input())
-    r = (10**n + 8**n - 2 * (9**n)) % (10**9 + 7)
+    r = (10 ** n + 8 ** n - 2 * 9 ** n) % (10 ** 9 + 7)
     print(r)
 
 

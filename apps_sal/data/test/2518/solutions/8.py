@@ -1,7 +1,7 @@
 def main():
     from math import ceil
     from copy import deepcopy
-    n, a, b, *k = list(map(int, open(0).read().split()))
+    (n, a, b, *k) = list(map(int, open(0).read().split()))
     k.sort()
 
     def check(x):
@@ -12,9 +12,7 @@ def main():
             if p <= 0:
                 break
             cnt += ceil(p / (a - b))
-
         return cnt <= x
-
     l = 0
     r = k[-1]
     m = (l + r) // 2
@@ -24,8 +22,7 @@ def main():
         else:
             l = m
         m = (l + r) // 2
-
-    print((m + 1))
+    print(m + 1)
 
 
 def __starting_point():

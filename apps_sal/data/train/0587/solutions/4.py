@@ -1,4 +1,3 @@
-
 lens = int(input())
 arrs = [int(x) for x in input().split()]
 vals = []

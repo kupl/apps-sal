@@ -1,5 +1,4 @@
-# coding: utf-8
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 languages = []
 ans = 0
 for i in range(n):
@@ -15,7 +14,7 @@ while i < n:
     while j < n:
         if languages[i] & languages[j]:
             languages[i] = languages[i] | languages[j]
-            del(languages[j])
+            del languages[j]
             n -= 1
         else:
             j += 1
@@ -26,7 +25,7 @@ while i < n:
     while j < n:
         if languages[i] & languages[j]:
             languages[i] = languages[i] | languages[j]
-            del(languages[j])
+            del languages[j]
             n -= 1
         else:
             j += 1

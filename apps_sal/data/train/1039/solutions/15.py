@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     z = x - y
     if x > y:
         if z % 2 == 0:

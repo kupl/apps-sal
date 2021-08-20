@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         p = list(range(n))
@@ -10,7 +11,7 @@ class Solution:
             return p[x]
 
         def union(x, y):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return False
             if size[px] > size[py]:
@@ -20,11 +21,10 @@ class Solution:
                 p[px] = py
                 size[py] += size[px]
             return True
-
         if m == len(arr):
             return m
         ans = -1
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             for j in range(i - 1, i + 2):
                 if 0 <= j < n:

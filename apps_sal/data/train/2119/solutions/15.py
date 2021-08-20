@@ -1,25 +1,3 @@
-# Bosdiwale code chap kr kya milega
-# Motherfuckers Don't copy code for the sake of doing it
-# ..............
-# ╭━┳━╭━╭━╮╮
-# ┃┈┈┈┣▅╋▅┫┃
-# ┃┈┃┈╰━╰━━━━━━╮
-# ╰┳╯┈┈┈┈┈┈┈┈┈◢▉◣
-# ╲┃┈┈┈┈┈┈┈┈┈┈▉▉▉
-# ╲┃┈┈┈┈┈┈┈┈┈┈◥▉◤
-# ╲┃┈┈┈┈╭━┳━━━━╯
-# ╲┣━━━━━━┫
-# ……….
-# .……. /´¯/)………….(\¯`\
-# …………/….//……….. …\\….\
-# ………/….//……………....\\….\
-# …./´¯/…./´¯\……/¯ `\…..\¯`\
-# ././…/…/…./|_…|.\….\….\…\.\
-# (.(….(….(…./.)..)...(.\.).).)
-# .\…………….\/../…....\….\/…………/
-# ..\…………….. /……...\………………../
-# …..\…………… (………....)……………./
-
 n = int(input())
 arr = list(map(int, input().split()))
 ind = list(map(int, input().split()))
@@ -49,7 +27,7 @@ def union_set(u, v):
     b = find_set(v)
     if a != b:
         if rank[b] > rank[a]:
-            a, b = b, a
+            (a, b) = (b, a)
         parent[b] = a
         rank[a] += rank[b]
         ans[a] += ans[b]
@@ -68,7 +46,7 @@ for i in range(n - 1, -1, -1):
     temp.append(total)
 temp[-1] = 0
 temp = temp[-1::-1]
-temp = temp[1::]
+temp = temp[1:]
 for i in temp:
     print(i)
 print(0)

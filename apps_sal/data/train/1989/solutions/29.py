@@ -1,7 +1,8 @@
 class Solution:
+
     def longestAwesome(self, s: str) -> int:
-        '''
-        \"3242415\"
+        """
+        "3242415"
 
           9876543210
         0:0000000000    #ith digit is odd
@@ -16,12 +17,10 @@ class Solution:
 
         2: need 0000001100, 0000001101, 0000001110, ...
             add 0000001100
-        '''
+        """
         digit_cnt = [0 for _ in range(len(s) + 1)]
         for i in range(1, len(s) + 1):
-            digit_cnt[i] = digit_cnt[i - 1] ^ (1 << int(s[i - 1]))
-        # print(digit_cnt)
-
+            digit_cnt[i] = digit_cnt[i - 1] ^ 1 << int(s[i - 1])
         res = 1
         indx = {}
         indx[0] = 0
@@ -30,9 +29,8 @@ class Solution:
                 res = max(res, i)
                 continue
             for d in range(10):
-                if digit_cnt[i] ^ (1 << d) in list(indx.keys()):
-                    res = max(res, i - indx[digit_cnt[i] ^ (1 << d)])
+                if digit_cnt[i] ^ 1 << d in list(indx.keys()):
+                    res = max(res, i - indx[digit_cnt[i] ^ 1 << d])
             if not digit_cnt[i] in list(indx.keys()):
                 indx[digit_cnt[i]] = i
-        # print(indx)
         return res

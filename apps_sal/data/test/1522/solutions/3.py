@@ -9,7 +9,7 @@ for i in range(0, 2 * n - 2, 2):
         d[key] = 1
     else:
         d[key] += 1
-    if (dor.lower() not in d) or (d[dor.lower()] == 0):
+    if dor.lower() not in d or d[dor.lower()] == 0:
         ans += 1
     else:
         d[dor.lower()] -= 1

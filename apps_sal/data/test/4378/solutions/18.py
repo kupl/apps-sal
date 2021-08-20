@@ -1,7 +1,7 @@
 n = int(input())
-s = list(input()) + ["*"]
+s = list(input()) + ['*']
 a = ['*']
-l = list("GRB")
+l = list('GRB')
 c = 0
 for i in range(n):
     if s[i] == a[-1]:

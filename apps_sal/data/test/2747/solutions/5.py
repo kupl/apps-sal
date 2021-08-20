@@ -1,14 +1,13 @@
 class Solution:
+
     def searchRange(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        #m = int(len(nums)/2)
-        #upper, lower = nums[:m], nums[m:]
-        s, e = -1, -1
-        l, u = 0, len(nums) - 1
+        (s, e) = (-1, -1)
+        (l, u) = (0, len(nums) - 1)
         if not nums or target > nums[u] or target < nums[l]:
             return [s, e]
         m = int((l + u) / 2)
@@ -17,8 +16,6 @@ class Solution:
                 if m == u:
                     break
                 u = m
-                # if int((l+u)/2) == u:
-                #    break
                 m = int((l + u) / 2)
             elif nums[m] < target:
                 l = m

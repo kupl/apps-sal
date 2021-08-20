@@ -1,32 +1,12 @@
 import re
-rnaDict = '''Phenylalanine (F): UUU, UUC
-Leucine (L): UUA, UUG, CUU, CUC, CUA, CUG
-Isoleucine (I): AUU, AUC, AUA
-Methionine (M): AUG
-Valine (V): GUU, GUC, GUA, GUG
-Serine (S): UCU, UCC, UCA, UCG, AGU, AGC
-Proline (P): CCU, CCC, CCA, CCG
-Threonine (T): ACU, ACC, ACA, ACG
-Alanine(A): GCU, GCC, GCA, GCG
-Tyrosine (Y): UAU, UAC
-Histidine (H): CAU, CAC
-Glutamine (Q): CAA, CAG
-Asparagine (N): AAU, AAC
-Lysine (K): AAA, AAG
-Aspartic Acid (D): GAU, GAC
-Glutamic Acid (E): GAA, GAG
-Cysteine (C): UGU, UGC
-Tryptophan (W): UGG
-Artinine (R): CGU, CGC, CGA, CGG, AGA, AGG
-Glycine (G): GGU, GGC, GGA, GGG
-Stop Codon ('Stop'): UGA, UAA, UAG'''
+rnaDict = "Phenylalanine (F): UUU, UUC\nLeucine (L): UUA, UUG, CUU, CUC, CUA, CUG\nIsoleucine (I): AUU, AUC, AUA\nMethionine (M): AUG\nValine (V): GUU, GUC, GUA, GUG\nSerine (S): UCU, UCC, UCA, UCG, AGU, AGC\nProline (P): CCU, CCC, CCA, CCG\nThreonine (T): ACU, ACC, ACA, ACG\nAlanine(A): GCU, GCC, GCA, GCG\nTyrosine (Y): UAU, UAC\nHistidine (H): CAU, CAC\nGlutamine (Q): CAA, CAG\nAsparagine (N): AAU, AAC\nLysine (K): AAA, AAG\nAspartic Acid (D): GAU, GAC\nGlutamic Acid (E): GAA, GAG\nCysteine (C): UGU, UGC\nTryptophan (W): UGG\nArtinine (R): CGU, CGC, CGA, CGG, AGA, AGG\nGlycine (G): GGU, GGC, GGA, GGG\nStop Codon ('Stop'): UGA, UAA, UAG"
 
 
 def protein(rna):
     transDict = {}
     for line in rnaDict.split('\n'):
         for section in line[line.index(':') + 1:].replace(' ', '').split(','):
-            transDict[section] = re.findall(r'\(+\'?(\w+)', line)[0]
+            transDict[section] = re.findall("\\(+\\'?(\\w+)", line)[0]
     codec = ''
     while len(rna) > 0:
         if transDict[rna[:3]] == 'Stop':

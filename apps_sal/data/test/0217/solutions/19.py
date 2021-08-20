@@ -1,12 +1,9 @@
-a, b, f, k = [int(i) for i in input().split(" ")]
-#p = 0
+(a, b, f, k) = [int(i) for i in input().split(' ')]
 x = f
 y = a - f
 oil = b
 result = 0
 alert = 0
-
-
 if k == 1:
     oil -= x
     if oil < 0:
@@ -24,7 +21,6 @@ else:
     if oil < 2 * y:
         result += 1
         oil = b
-
     if k == 2:
         oil -= 2 * y
         if oil < 0:
@@ -39,14 +35,12 @@ else:
         if oil < 2 * x:
             result += 1
             oil = b
-
 if k > 2:
     k -= 2
     for ii in range(int((k - 1) / 2)):
         oil -= 2 * x
         if oil < 0:
             alert = 1
-
         if oil < 2 * y:
             oil = b
             result += 1

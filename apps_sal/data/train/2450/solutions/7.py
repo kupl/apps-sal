@@ -1,4 +1,5 @@
 class Solution:
+
     def average(self, salary: List[int]) -> float:
         s = salary[:]
         max_ind = 0

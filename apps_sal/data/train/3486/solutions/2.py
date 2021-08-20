@@ -10,8 +10,8 @@ def person(n, m):
 
 
 def coins(n, m):
-    return sum(m + max(i - m, 0) * 2 for i in range(n, 1, -1))
+    return sum((m + max(i - m, 0) * 2 for i in range(n, 1, -1)))
 
 
 def find_last(n, m):
-    return person(n, m), coins(n, m)
+    return (person(n, m), coins(n, m))

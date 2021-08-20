@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def helper(self, x):
         if x == 2:
             return 1
@@ -22,4 +23,3 @@ class Solution:
         powers = [self.helper(x) for x in range(lo, hi + 1)]
         tosort = list(zip(powers, list(range(lo, hi + 1))))
         return sorted(tosort)[k - 1][1]
-        # print(ranks)

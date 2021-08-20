@@ -1,15 +1,14 @@
 S = input()
 T = input()
-
 if S == T:
-    print("Yes")
+    print('Yes')
 else:
-    ans = "No"
+    ans = 'No'
     S = list(S)
     for i in range(len(S)):
         s = S.pop()
         S.insert(0, s)
-        if "".join(S) == T:
-            ans = "Yes"
+        if ''.join(S) == T:
+            ans = 'Yes'
             break
     print(ans)

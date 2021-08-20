@@ -1,10 +1,10 @@
 def main():
     from collections import deque
     a = deque()
-    n, b = map(int, input().split())
+    (n, b) = map(int, input().split())
     next_t = 0
     for i in range(n):
-        c, lo = map(int, input().split())
+        (c, lo) = map(int, input().split())
         while a and a[0] <= c:
             a.popleft()
         if len(a) > b:

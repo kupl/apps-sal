@@ -11,7 +11,7 @@ def binpow(a, n):
         return b * b
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 gcd = a[0]
 for i in range(1, n):

@@ -1,6 +1,6 @@
 class Solution:
-    def numRescueBoats(self, people: List[int], limit: int) -> int:
 
+    def numRescueBoats(self, people: List[int], limit: int) -> int:
         people.sort()
         if len(people) == 0 or len(people) == 1:
             return len(people)
@@ -9,7 +9,7 @@ class Solution:
             rptr = len(people) - 1
             count = 0
             while lptr <= rptr:
-                if((people[lptr] + people[rptr]) <= limit):
+                if people[lptr] + people[rptr] <= limit:
                     count += 1
                     lptr += 1
                     rptr -= 1
@@ -17,18 +17,4 @@ class Solution:
                     rptr -= 1
                     count += 1
             return count
-            '''
-        people.sort()        
-        left = 0
-        right = len(people) - 1
-        
-        counter = 0
-        while left <= right:
-            if people[left] + people[right] <= limit:
-                left += 1
-                right -= 1
-                counter += 1
-            else: # people[left] + people[right] > limit:
-                right -= 1
-                counter += 1
-            return counter'''
+            '\n        people.sort()        \n        left = 0\n        right = len(people) - 1\n        \n        counter = 0\n        while left <= right:\n            if people[left] + people[right] <= limit:\n                left += 1\n                right -= 1\n                counter += 1\n            else: # people[left] + people[right] > limit:\n                right -= 1\n                counter += 1\n            return counter'

@@ -9,7 +9,7 @@ if pointindex == -1:
         print('.' + z, end='')
     if e:
         print('E' + str(e))
-elif (x[:pointindex].lstrip('0') == ''):
+elif x[:pointindex].lstrip('0') == '':
     z = x[pointindex + 1:].rstrip('0')
     for i in range(len(z)):
         if z[i] == '0':
@@ -23,7 +23,6 @@ elif (x[:pointindex].lstrip('0') == ''):
             else:
                 print('E' + str(e))
             break
-
 else:
     y = x[:pointindex].lstrip('0')
     print(y[0], end='')

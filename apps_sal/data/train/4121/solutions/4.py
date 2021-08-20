@@ -7,7 +7,7 @@ cy = ['k', 'K']
 
 
 def fight_resolve(d, a):
-    if (d in p1 and a in p1) or (d in p2 and a in p2):
+    if d in p1 and a in p1 or (d in p2 and a in p2):
         return -1
     if a in ar:
         return d if d in cy else a

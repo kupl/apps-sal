@@ -29,8 +29,7 @@ def dfs(u):
     res = 1
     for v in who[u]:
         res = max(res, dfs(v) + 1)
-
     return res
 
 
-print((dfs(answer_id)))
+print(dfs(answer_id))

@@ -10,4 +10,4 @@ for _ in range(int(input())):
     for i in range(len(a) - 2, -1, -1):
         if a[i] > a[i + 1] + 1:
             a[i] = a[i + 1] + 1
-    print(s - max(a)**2)
+    print(s - max(a) ** 2)

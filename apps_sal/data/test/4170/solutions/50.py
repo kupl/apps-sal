@@ -1,6 +1,5 @@
 n = int(input())
 h = [int(s) for s in input().split()]
-
 max_val = 0
 temp = 0
 for i in range(n - 1):

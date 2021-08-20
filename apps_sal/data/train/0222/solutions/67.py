@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         indexes = {A[i]: i for i in range(len(A))}
         dp = [[2 for i in range(len(A))] for j in range(len(A))]
@@ -11,7 +12,6 @@ class Solution:
                 else:
                     dp[i][idx] = dp[j][i] + 1
             z = max(max(dp[i]), z)
-
         if z < 3:
             return 0
         return z

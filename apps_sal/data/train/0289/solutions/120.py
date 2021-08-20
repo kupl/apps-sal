@@ -1,4 +1,5 @@
 class Solution:
+
     def maxWindowSum(self, A, M):
         acc = [A[0]]
         for i in range(1, len(A)):
@@ -24,6 +25,5 @@ class Solution:
             if n - i - L >= M:
                 right = A[i + L:]
                 maxM = max(maxM, self.maxWindowSum(right, M))
-
             maxSum = max(maxSum, maxL + maxM)
         return maxSum

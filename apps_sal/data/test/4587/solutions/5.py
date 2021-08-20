@@ -10,5 +10,5 @@ ans = 0
 for i in range(len(b)):
     index_a = bisect.bisect_left(a, b[i])
     index_c = bisect.bisect_right(c, b[i])
-    ans += (index_a * (len(c) - index_c))
+    ans += index_a * (len(c) - index_c)
 print(ans)

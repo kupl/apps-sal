@@ -6,10 +6,10 @@ def solve(s):
     l1.reverse()
     for i in s:
         count += 1
-        if(i == " "):
-            l1.remove(" ")
+        if i == ' ':
+            l1.remove(' ')
             l.append(count - 1)
     for j in l:
-        l1.insert(j, " ")
+        l1.insert(j, ' ')
     l1 = ''.join(l1)
     return l1

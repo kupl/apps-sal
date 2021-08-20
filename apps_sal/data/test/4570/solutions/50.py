@@ -3,11 +3,11 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    t, a, b = Input()
+    (t, a, b) = Input()
     print(min(t * a, b))
 
 

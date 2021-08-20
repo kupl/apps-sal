@@ -4,23 +4,22 @@ import itertools
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     lst = input().split()
     d = []
     it = 0
     itd = 0
     for i in range(k):
-        if (it > 25):
+        if it > 25:
             itd += 1
             it = 0
         d.append(chr(65 + itd) + chr(97 + it))
         it += 1
-
     ans = []
     for i in range(k - 1):
         ans.append(d.pop())
     for i in range(k - 1, n):
-        if lst[i - (k - 1)] == "NO":
+        if lst[i - (k - 1)] == 'NO':
             ans.append(ans[i - (k - 1)])
         else:
             ans.append(d.pop())

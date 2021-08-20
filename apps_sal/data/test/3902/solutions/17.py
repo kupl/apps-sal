@@ -1,8 +1,7 @@
 import sys
 sys.setrecursionlimit(10000)
-
 s = input()
-s = s[5:] + " "
+s = s[5:] + ' '
 res = set()
 aux = set()
 
@@ -20,7 +19,6 @@ def getWords(x, y):
 
 
 getWords(len(s) - 1, len(s))
-
 print(len(res))
 for word in sorted(list(res)):
     print(word)

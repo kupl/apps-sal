@@ -1,7 +1,5 @@
-# cook your dish here
-# Author : Ashutosh Wagh, Codechef : ashutosh0903
-
 class Graph:
+
     def __init__(self, V):
         self.V = V
         self.adj = [[] for i in range(V)]
@@ -31,10 +29,10 @@ class Graph:
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     g = Graph(n)
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         g.addEdge(a, b)
     ans = g.connectedComponents()
     print(ans)

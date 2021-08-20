@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def possible(bloomDay, days, m, k):
             bouq = 0
             curr = 0
@@ -21,7 +23,6 @@ class Solution:
                 r = mid
             else:
                 l = mid + 1
-        # print(l, possible(bloomDay, l, m, k))
         if possible(bloomDay, l, m, k):
             return l
         return -1

@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-m = 10**9 + 7
+(N, K) = map(int, input().split())
+m = 10 ** 9 + 7
 d = [0] * K
 for k in range(K, 0, -1):
     d[k - 1] = pow(K // k, N, m)

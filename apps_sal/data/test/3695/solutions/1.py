@@ -1,6 +1,5 @@
 from heapq import heappush, heappop
-
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 food = 0
 tummy = []
 dish = [-int(i) for i in input().split()]

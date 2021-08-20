@@ -4,16 +4,15 @@ import math
 
 def solve():
     n = int(input())
-    l, r = -float('inf'), float('inf')
+    (l, r) = (-float('inf'), float('inf'))
     for line in sys.stdin:
-        c, d = list(map(int, line.split()))
+        (c, d) = list(map(int, line.split()))
         if d == 1:
             l = max(1900, l)
         else:
             r = min(1899, r)
         l += c
         r += c
-
     if r < l:
         return None
     else:

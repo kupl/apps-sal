@@ -1,5 +1,5 @@
 nmq = input().split(' ')
-n, m, q = int(nmq[0]), int(nmq[1]), int(nmq[2])
+(n, m, q) = (int(nmq[0]), int(nmq[1]), int(nmq[2]))
 mt = []
 for i in range(0, n):
     mt.append([])

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         s = set(nums)
         if len(s) == 1 and 0 in s:

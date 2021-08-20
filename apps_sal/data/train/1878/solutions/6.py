@@ -1,4 +1,5 @@
 class Solution:
+
     def maxChunksToSorted(self, arr):
         """
         :type arr: List[int]
@@ -16,5 +17,4 @@ class Solution:
                 else:
                     stack[-1][0] = min(min_so_far, stack[-1][0])
                     break
-
         return len(stack)

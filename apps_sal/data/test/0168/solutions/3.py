@@ -3,7 +3,7 @@ s = input()
 cur = 0
 for a in s:
     cur = max(cur, 0)
-    if(a == '-'):
+    if a == '-':
         cur -= 1
     else:
         cur += 1

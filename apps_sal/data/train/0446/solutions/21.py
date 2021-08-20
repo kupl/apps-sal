@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         import collections
         d = collections.Counter(arr).most_common()[::-1]

@@ -1,6 +1,3 @@
-#!/bin/python3
-# template
-
 import sys
 from collections import Counter
 
@@ -14,14 +11,13 @@ def print_list(l):
 
 
 def sol1(A):
-    A = A.lstrip("0")
+    A = A.lstrip('0')
     cc = Counter(A)
     res = cc['0'] >= 6
-    return "yes" if res else "no"
+    return 'yes' if res else 'no'
 
 
 def __starting_point():
-    #T ,= read_ints()
     for i in range(1):
         A = next(sys.stdin).strip()
         print(sol1(A))

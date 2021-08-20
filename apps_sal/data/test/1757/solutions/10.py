@@ -1,5 +1,3 @@
-
-
 def main():
     d = fib()
     n = int(input())
@@ -18,7 +16,7 @@ def fib():
     f2 = 2
     while f1 < 1010:
         res.add(f1 + f2)
-        f1, f2 = f2, f1 + f2
+        (f1, f2) = (f2, f1 + f2)
     return res
 
 

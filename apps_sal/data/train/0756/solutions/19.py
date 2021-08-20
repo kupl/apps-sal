@@ -1,9 +1,9 @@
 t = int(input())
 for i in range(t):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     sum1 = x + y + 1
     sum2 = sum1
-    while(True):
+    while True:
         if sum1 % 2 != 0:
             for j in range(3, sum1, 2):
                 if sum1 % j == 0:

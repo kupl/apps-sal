@@ -1,6 +1,6 @@
 for _ in range(int(input())):
     n = int(input())
-    l, l1 = [], []
+    (l, l1) = ([], [])
     l3 = []
     s = 0
     for i in range(n):

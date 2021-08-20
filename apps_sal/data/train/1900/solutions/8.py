@@ -1,4 +1,5 @@
 class Solution:
+
     def widthOfBinaryTree(self, root):
         """
         :type root: TreeNode
@@ -6,7 +7,7 @@ class Solution:
         """
         queue = [(root, 0, 0)]
         cur_depth = left = ans = 0
-        for node, depth, pos in queue:
+        for (node, depth, pos) in queue:
             if node:
                 queue.append((node.left, depth + 1, 2 * pos))
                 queue.append((node.right, depth + 1, 2 * pos + 1))

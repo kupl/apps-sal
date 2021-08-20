@@ -1,2 +1,2 @@
 def vowel_back(s):
-    return s.translate(str.maketrans("abcdeghjklmnopqrsuwxyz", "vkbaapqstuvwnyzabpfghi"))
+    return s.translate(str.maketrans('abcdeghjklmnopqrsuwxyz', 'vkbaapqstuvwnyzabpfghi'))

@@ -1,9 +1,10 @@
-N, X, M = map(int, input().split())
+(N, X, M) = map(int, input().split())
 
 
 def calc(n, x, m):
-    def nxt(y): return y**2 % m
 
+    def nxt(y):
+        return y ** 2 % m
     y = x
     r = n
     l = [0] * m
@@ -13,7 +14,6 @@ def calc(n, x, m):
             break
         l[y] = i
         y = nxt(y)
-
     ans = 0
     for i in range(i):
         ans += x
@@ -25,7 +25,6 @@ def calc(n, x, m):
     for i in range(n % r):
         ans += x
         x = nxt(x)
-
     return ans
 
 

@@ -1,8 +1,8 @@
 from collections import defaultdict
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 pairs = defaultdict(set)
 for _ in range(m):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     pairs[l - 1].add(r - 1)
     pairs[r - 1].add(l - 1)
 answers = defaultdict(list)
@@ -21,5 +21,5 @@ for color in range(n):
     y += 1
 for color in range(n):
     print(len(answers[color]))
-    for x, y in answers[color]:
+    for (x, y) in answers[color]:
         print(x, y)

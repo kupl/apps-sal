@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 memory = set()
 d = 31918781974729
 ans = [None] * m
@@ -9,7 +9,7 @@ def Hash(x):
     mul = 1
     for char in x:
         t = (t + ord(char) * mul) % d
-        mul = (mul * 2193) % d
+        mul = mul * 2193 % d
     return t
 
 
@@ -21,7 +21,7 @@ for i in range(n):
         for char in 'abc':
             if string[j] != char:
                 memory.add((t + (ord(char) - ord(string[j])) * mul) % d)
-        mul = (mul * 2193) % d
+        mul = mul * 2193 % d
 for i in range(m):
     string = input()
     t = Hash(string)

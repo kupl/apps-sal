@@ -1,13 +1,10 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep  8 18:25:14 2020
 
 @author: liang
 """
-
 from collections import deque
-H, W = map(int, input().split())
-
+(H, W) = map(int, input().split())
 field = [input() for i in range(H)]
 
 
@@ -16,14 +13,14 @@ def Init():
 
 
 ans = -1
-
 q = deque()
 adj = ((1, 0), (-1, 0), (0, 1), (0, -1))
 
 
 def BFS(y, x):
+
     def isValid(t):
-        if t[0] < 0 or t[0] >= H or t[1] < 0 or t[1] >= W or field[t[0]][t[1]] == "#":
+        if t[0] < 0 or t[0] >= H or t[1] < 0 or (t[1] >= W) or (field[t[0]][t[1]] == '#'):
             return False
         return True
     d = Init()
@@ -38,8 +35,6 @@ def BFS(y, x):
             nex = (cur[0] + a[0], cur[1] + a[1])
             if isValid(nex) and (d[nex[0]][nex[1]] == -1 or d[nex[0]][nex[1]] > d[cur[0]][cur[1]] + 1):
                 d[nex[0]][nex[1]] = d[cur[0]][cur[1]] + 1
-                # if res < d[nex[0]][nex[1]]:
-                #    res = d[nex[0]][nex[1]]
                 res = max(res, d[nex[0]][nex[1]])
                 q.append(nex)
     return res

@@ -1,6 +1,6 @@
 import math
 do_cf = False
-a, b, c = list(map(int, input().split(' ')))
+(a, b, c) = list(map(int, input().split(' ')))
 x = math.floor(c / b)
 dead = x * b
 deaded = b * math.ceil(a / b)
@@ -12,4 +12,4 @@ for i in range(deaded, dead + 1, b):
 if do_cf:
     print(strx)
 else:
-    print("-1")
+    print('-1')

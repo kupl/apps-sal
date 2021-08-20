@@ -1,13 +1,9 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 N = int(input())
-
 a = list(map(int, input().split()))
-
 l_list = []
-
 for i in range(N):
     l_list += [i + 1] * a[i]
-
 judge = 0
 for i in range(H):
     p_list = l_list[i * W:(i + 1) * W]

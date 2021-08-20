@@ -3,4 +3,4 @@ def compare(s1, s2):
         return True
     if s1.isalpha() != s2.isalpha():
         return False
-    return sum(ord(c) for c in s1.upper()) == sum(ord(c) for c in s2.upper())
+    return sum((ord(c) for c in s1.upper())) == sum((ord(c) for c in s2.upper()))

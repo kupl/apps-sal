@@ -1,10 +1,10 @@
 def sum_of_digits_pow(n, e):
-    return sum([i**e for i in map(int, str(n))])
+    return sum([i ** e for i in map(int, str(n))])
 
 
 def sum_pow_dig_seq(start, e, k):
     h = 0
-    cyc_patt_arr, sums = [], []
+    (cyc_patt_arr, sums) = ([], [])
     for i in range(1, k + 1):
         start = sum_of_digits_pow(start, e)
         if not cyc_patt_arr and start in sums:

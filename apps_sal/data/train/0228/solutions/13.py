@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         vowels = ['a', 'e', 'i', 'o', 'u']
         max_cnt = sum([1 for i in range(k) if s[i] in vowels])

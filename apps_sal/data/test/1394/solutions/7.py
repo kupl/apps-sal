@@ -13,7 +13,6 @@ s = input()
 n = len(s)
 c = Counter(list(s))
 m = n - c['a']
-
 if m % 2 != 0:
     print(':(')
 else:

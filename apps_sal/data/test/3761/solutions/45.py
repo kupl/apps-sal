@@ -1,12 +1,12 @@
 s = input().rstrip()
-s += "T"
-x, y = list(map(int, input().split()))
+s += 'T'
+(x, y) = list(map(int, input().split()))
 cnt = 0
 dir = 0
 P = [{0}, {0}]
 first = True
 for i in range(len(s)):
-    if s[i] == "F":
+    if s[i] == 'F':
         cnt += 1
     else:
         tmp = set()
@@ -21,6 +21,6 @@ for i in range(len(s)):
         dir += 1
         cnt = 0
 if x in P[0] and y in P[1]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

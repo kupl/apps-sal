@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         if n <= 1:
@@ -10,16 +11,16 @@ class Solution:
             for j in range(i + 1, n):
                 mhd = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heapq.heappush(hp, (mhd, i, j))
-
         ans = 0
         while ds.count > 1:
-            mhd, i, j = heapq.heappop(hp)
+            (mhd, i, j) = heapq.heappop(hp)
             if ds.union(i, j):
                 ans += mhd
         return ans
 
 
 class UFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.rank = [1] * n
@@ -31,7 +32,7 @@ class UFind:
         return self.parent[x]
 
     def union(self, x, y):
-        x_par, y_par = self.find(x), self.find(y)
+        (x_par, y_par) = (self.find(x), self.find(y))
         if x_par == y_par:
             return False
         else:

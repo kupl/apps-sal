@@ -1,5 +1,7 @@
 class Solution:
+
     def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
+
         def union(origin, destination, parents, rank):
             parent_origin = find(origin, parents)
             parent_destination = find(destination, parents)
@@ -17,10 +19,9 @@ class Solution:
             if parents[x] == x:
                 return parents[x]
             return find(parents[x], parents)
-
         parents = [n for n in range(n)]
         rank = [0 for _ in range(n)]
-        for i, (left, right) in enumerate(zip(leftChild, rightChild)):
+        for (i, (left, right)) in enumerate(zip(leftChild, rightChild)):
             if left != -1:
                 if not union(i, left, parents, rank):
                     return False

@@ -2,34 +2,28 @@ import math
 
 
 def main():
-    g, d, f = map(int, input().split())
+    (g, d, f) = map(int, input().split())
     lst1 = list(map(int, input().split()))
     lst2 = list(map(int, input().split()))
     lst3 = list(map(int, input().split()))
     lst0 = []
     precounted = []
     ans = 0
-
     lst0 += [(c, 1) for c in lst1]
     lst0 += [(c, 2) for c in lst2]
     lst0 += [(c, 3) for c in lst3]
-
     lst0.sort()
-
     for i in range(len(lst0)):
-
         if len(precounted) == 0:
-            a1, a2, a3 = (0, 0, 0)
+            (a1, a2, a3) = (0, 0, 0)
         else:
-            a1, a2, a3 = precounted[len(precounted) - 1]
-
-        if (lst0[i][1] == 1):
+            (a1, a2, a3) = precounted[len(precounted) - 1]
+        if lst0[i][1] == 1:
             a1 += 1
-        elif (lst0[i][1] == 2):
+        elif lst0[i][1] == 2:
             a2 += 1
         else:
             a3 += 1
-
         precounted.append((a1, a2, a3))
 
         def product(iterable):
@@ -49,7 +43,6 @@ def main():
             if r > n // 2:
                 r = n - r
             return npr(n, r) // math.factorial(r)
-
     for i in range(len(lst0) - 1):
         l = i + 1
         r = len(lst0)
@@ -61,14 +54,12 @@ def main():
                 r = m
         max_possible_num = lst0[l][0]
         max_possible_ind = l
-
         a1 = precounted[max_possible_ind][0] - precounted[i][0]
         a2 = precounted[max_possible_ind][1] - precounted[i][1]
         a3 = precounted[max_possible_ind][2] - precounted[i][2]
         n1 = 1
         n2 = 2
         n3 = 3
-
         if lst0[i][1] == 1:
             n1 -= 1
         elif lst0[i][1] == 2:
@@ -76,7 +67,6 @@ def main():
         else:
             n3 -= 1
         ans += ncr(n1, a1) * ncr(n2, a2) * ncr(n3, a3)
-
     print(ans)
 
 

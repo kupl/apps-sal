@@ -1,7 +1,7 @@
 def spoc(sn, cyfry):
     if sn.endswith(cyfry):
         return 0
-    cp, co = cyfry
+    (cp, co) = cyfry
     res = 0
     ico = sn.rfind(co)
     res += len(sn) - ico - 1
@@ -9,7 +9,7 @@ def spoc(sn, cyfry):
     icp = sn.rfind(cp)
     res += len(sn) - icp - 1
     sn = sn[:icp] + sn[icp + 1:]
-    lpz, i = 0, 0
+    (lpz, i) = (0, 0)
     if len(sn) > 0 and len(sn) == sn.count('0'):
         return None
     while sn and sn[i] == '0':
@@ -20,10 +20,10 @@ def spoc(sn, cyfry):
 
 def solve(n):
     print(n)
-    sn, t = str(n), []
+    (sn, t) = (str(n), [])
     if sn.count('0') > 1:
         t.append(spoc(sn, '00'))
-    for p, d in ('25', '50', '75'):
+    for (p, d) in ('25', '50', '75'):
         if p in sn and d in sn:
             x = spoc(sn, p + d)
             if x is not None:

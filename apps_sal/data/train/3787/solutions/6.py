@@ -1,10 +1,10 @@
 def obfuscate(email):
-    obemail = ""
+    obemail = ''
     for l in email:
-        if l == "@":
-            obemail += " [at] "
-        elif l == ".":
-            obemail += " [dot] "
+        if l == '@':
+            obemail += ' [at] '
+        elif l == '.':
+            obemail += ' [dot] '
         else:
             obemail += l
     return obemail

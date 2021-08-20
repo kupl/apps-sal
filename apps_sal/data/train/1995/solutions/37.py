@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         self.remainSeats = capacity
         self.tripsOnBoard = []

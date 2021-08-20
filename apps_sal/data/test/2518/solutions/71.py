@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 H = [int(input()) for _ in range(N)]
 
 
@@ -12,12 +12,10 @@ def solve(k):
 
 left = 0
 right = 10 ** 9 + 1
-
 while left + 1 < right:
     mid = (left + right) // 2
     if solve(mid):
         right = mid
     else:
         left = mid
-
 print(right)

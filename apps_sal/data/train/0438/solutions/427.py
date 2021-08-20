@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, A: List[int], m: int) -> int:
         n = len(A)
         if m == n:
@@ -18,10 +19,9 @@ class Solution:
             if dic[a][0] != a:
                 dic[a] = find(dic[a][0])
             return dic[a]
-
-        ans, t, ret = set(), 0, -1
-        for i, v in enumerate(A):
-            t = t | (1 << (v - 1))
+        (ans, t, ret) = (set(), 0, -1)
+        for (i, v) in enumerate(A):
+            t = t | 1 << v - 1
             dic[v] = [v, 1]
             if v - 1 in dic:
                 if find(v - 1)[1] == m:
@@ -35,5 +35,4 @@ class Solution:
                 ans.add(dic[v][0])
             if ans:
                 ret = i + 1
-            # print(dic, ans)
         return ret

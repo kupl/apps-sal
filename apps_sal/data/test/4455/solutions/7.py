@@ -1,6 +1,6 @@
 [n, k] = [int(x) for x in input().split()]
 r = [int(x) for x in input().split()]
-progs = [[i, x, 0, 0] for i, x in enumerate(r)]
+progs = [[i, x, 0, 0] for (i, x) in enumerate(r)]
 IND = 0
 RATE = 1
 REL = 2
@@ -15,10 +15,7 @@ while i < k:
     if progs[a][RATE] < progs[b][RATE]:
         progs[b][REL] += 1
     i += 1
-
-
 progs = sorted(progs, key=lambda p: p[RATE])
-
 i = 1
 count = 0
 while i < n:
@@ -28,7 +25,6 @@ while i < n:
         count = i
     cur[RES] = count - cur[REL]
     i += 1
-
 progs = sorted(progs, key=lambda p: p[IND])
 for p in progs:
     print(p[RES], end=' ')

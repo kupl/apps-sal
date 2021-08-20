@@ -1,17 +1,16 @@
 import sys
 input = sys.stdin.readline
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 nums = []
 for i in range(N):
-    t, d = list(map(int, input().split()))
+    (t, d) = list(map(int, input().split()))
     nums.append((d, t))
 nums.sort(reverse=True)
 se = set()
 a1 = []
 a2 = []
 rest = []
-for i, n in enumerate(nums):
+for (i, n) in enumerate(nums):
     if i < K:
         if not n[1] in se:
             se.add(n[1])
@@ -28,7 +27,7 @@ for (d, t) in a2:
 ans = points + pow(len(se), 2)
 a2.sort()
 idx2 = 0
-for i, (d, t) in enumerate(rest):
+for (i, (d, t)) in enumerate(rest):
     if t in se:
         continue
     if len(a2) <= idx2:

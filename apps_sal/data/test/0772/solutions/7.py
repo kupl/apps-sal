@@ -9,10 +9,7 @@ def change(n):
 table = []
 for i in range(3):
     table.append(list(map(int, input().split())))
-
 row = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
-
-
 for i in range(3):
     for j in range(3):
         if table[i][j] % 2 == 0:
@@ -55,7 +52,6 @@ for i in range(3):
                 elif j == 2:
                     row[i - 1][j] = change(row[i - 1][j])
                     row[i][j - 1] = change(row[i][j - 1])
-
 for i in range(3):
     rowo = ''
     for j in range(3):

@@ -12,7 +12,7 @@ for i in range(0, n):
     in_str = input().split()
     x = int(in_str[1])
     y = int(in_str[2])
-    cord[(x, y)] = in_str[0]
+    cord[x, y] = in_str[0]
 nearest = []
 for i in range(0, 8):
     nearest.append((1000000000000000000, 0))
@@ -22,16 +22,14 @@ for el in cord.keys():
         if res[1] > 0:
             if abs(res[1]) < nearest[0][0]:
                 nearest[0] = (abs(res[1]), el)
-        else:
-            if abs(res[1]) < nearest[4][0]:
-                nearest[4] = (abs(res[1]), el)
+        elif abs(res[1]) < nearest[4][0]:
+            nearest[4] = (abs(res[1]), el)
     if res[1] == 0:
         if res[0] > 0:
             if abs(res[0]) < nearest[6][0]:
                 nearest[6] = (abs(res[0]), el)
-        else:
-            if abs(res[0]) < nearest[2][0]:
-                nearest[2] = (abs(res[0]), el)
+        elif abs(res[0]) < nearest[2][0]:
+            nearest[2] = (abs(res[0]), el)
     if abs(res[0]) == abs(res[1]):
         if res[0] > 0 and res[1] > 0:
             if abs(res[0]) < nearest[7][0]:
@@ -49,13 +47,11 @@ check = False
 for i in range(8):
     if nearest[i][1] != 0:
         if i in [1, 3, 5, 7]:
-            if cord[nearest[i][1]] == "Q" or cord[nearest[i][1]] == "B":
+            if cord[nearest[i][1]] == 'Q' or cord[nearest[i][1]] == 'B':
                 check = True
-        else:
-            if cord[nearest[i][1]] == "R" or cord[nearest[i][1]] == "Q":
-                check = True
-
+        elif cord[nearest[i][1]] == 'R' or cord[nearest[i][1]] == 'Q':
+            check = True
 if check:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

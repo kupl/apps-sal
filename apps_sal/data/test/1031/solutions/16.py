@@ -20,7 +20,7 @@ x = 0
 a = []
 t = 0
 mx = dict()
-my = 10**9
+my = 10 ** 9
 for i in mints():
     for j in range(i):
         if t == 0:
@@ -37,10 +37,10 @@ for i in mints():
     t ^= 1
 i = 0
 b = []
-while (my + i) in mx:
+while my + i in mx:
     b.append([' '] * (mx[my + i] + 1))
     i += 1
 for i in a:
     b[i[1] - my][i[0]] = i[2]
 for i in b:
-    print(*(i + [' '] * (x - len(i))), sep='')
+    print(*i + [' '] * (x - len(i)), sep='')

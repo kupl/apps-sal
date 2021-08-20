@@ -1,4 +1,4 @@
-s, k = input(), int(input())
+(s, k) = (input(), int(input()))
 ss = set(s)
 if len(s) < k:
     print('impossible')

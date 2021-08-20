@@ -1,9 +1,8 @@
 n = int(input())
 p = list(map(int, input().split()))
 id = [0] * (n + 1)
-for i, p_i in enumerate(p):
+for (i, p_i) in enumerate(p):
     id[p_i] = i
-
 r = list(range(1, n + 1)) + [n, n]
 l = list(range(-1, n - 1)) + [-1, -1]
 ans = 0

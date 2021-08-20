@@ -1,13 +1,14 @@
 import sys
-sys.setrecursionlimit(10**6)
-n, m = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(n, m) = map(int, input().split())
 xy = []
 for _ in range(m):
-    x, y, _ = map(int, input().split())
+    (x, y, _) = map(int, input().split())
     xy.append((x - 1, y - 1))
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.li = list(range(n))
 
@@ -29,7 +30,7 @@ class UnionFind():
 
 
 uf = UnionFind(n)
-for x, y in xy:
+for (x, y) in xy:
     uf.unite(x, y)
 for i in range(n):
     uf.root(i)

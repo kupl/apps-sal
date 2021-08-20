@@ -1,10 +1,10 @@
 import sys
-sys.setrecursionlimit(10**7)
-P = 10**9 + 7
+sys.setrecursionlimit(10 ** 7)
+P = 10 ** 9 + 7
 N = int(input())
 edges = [[] for i in range(N)]
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     edges[a - 1].append((b - 1, i))
     edges[b - 1].append((a - 1, i))
 L = [0] * N

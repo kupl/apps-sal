@@ -1,9 +1,9 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = [True] * (n + 1)
     l[0] = False
     for _ in range(m):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         l[a] = l[b] = False
     center = l.index(True)
     print(n - 1)

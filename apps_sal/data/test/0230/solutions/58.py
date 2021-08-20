@@ -12,14 +12,14 @@ def solve():
         v = 1
         for i in range(l):
             pw[i + 1] = v = v * base % mod
-        return h, pw
+        return (h, pw)
 
     def chk(S, mod, D=[0] * N):
-        h, pw = rolling_hash(S, mod)
+        (h, pw) = rolling_hash(S, mod)
         left = 0
         right = N // 2 + 1
         while left + 1 < right:
-            l = mid = (left + right) >> 1
+            l = mid = left + right >> 1
             p = pw[l]
             for i in range(min(l, N - 2 * l + 1)):
                 D[i] = (h[l + i] - h[i] * p) % mod
@@ -36,8 +36,7 @@ def solve():
             else:
                 right = mid
         return left
-
-    print((chk(S, 10**9 + 9)))
+    print(chk(S, 10 ** 9 + 9))
 
 
 solve()

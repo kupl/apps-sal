@@ -1,12 +1,11 @@
 from math import sin, cos, pi, tan
-
-l3, l4, l5 = map(int, input().split())
+(l3, l4, l5) = map(int, input().split())
 
 
 def f(n, x):
     R = 0.5 * x / sin(pi / n)
-    h = (x**2 - R**2)**0.5
-    base = n * R**2 * sin(2 * pi / n) * 0.5
+    h = (x ** 2 - R ** 2) ** 0.5
+    base = n * R ** 2 * sin(2 * pi / n) * 0.5
     return base * h / 3
 
 

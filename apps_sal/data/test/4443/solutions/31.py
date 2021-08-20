@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def solve(C: str):
     return chr(ord(C) + 1)
 

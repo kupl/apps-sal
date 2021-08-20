@@ -1,7 +1,7 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 friends = [(0, 0)]
 for i in range(n):
-    money, cute = map(int, input().split())
+    (money, cute) = map(int, input().split())
     friends.append((money, cute))
 friends.sort()
 sumcute = [0 for i in range(n + 1)]

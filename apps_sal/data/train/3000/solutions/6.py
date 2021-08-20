@@ -22,6 +22,6 @@ def decompose(n):
 
 def mul_power(n, k):
     r = 1
-    for p, f in decompose(n).items():
+    for (p, f) in decompose(n).items():
         r *= p ** (-f % k)
     return r

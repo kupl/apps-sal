@@ -1,7 +1,6 @@
 T = int(input())
-
 while T > 0:
-    X, N = input().split()
+    (X, N) = input().split()
     X = int(X)
     N = int(N)
     sum = 0

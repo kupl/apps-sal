@@ -1,6 +1,7 @@
 def search_permMult(nMax, k):
+
     def tod(n):
-        return "".join(sorted([d for d in str(n)]))
+        return ''.join(sorted([d for d in str(n)]))
     i = 1
     cnt = 0
     while i <= nMax // k:

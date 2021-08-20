@@ -1,18 +1,6 @@
-a = [
-    'qwertyuiop',
-    'asdfghjkl;',
-    'zxcvbnm,./'
-]
-r = [
-    ' qwertyuiop',
-    ' asdfghjkl;',
-    ' zxcvbnm,./'
-]
-l = [
-    'wertyuiop',
-    'sdfghjkl;',
-    'xcvbnm,./'
-]
+a = ['qwertyuiop', 'asdfghjkl;', 'zxcvbnm,./']
+r = [' qwertyuiop', ' asdfghjkl;', ' zxcvbnm,./']
+l = ['wertyuiop', 'sdfghjkl;', 'xcvbnm,./']
 s = input().strip()
 str = input().strip()
 ans = []

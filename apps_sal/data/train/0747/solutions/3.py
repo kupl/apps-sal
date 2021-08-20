@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -7,7 +6,7 @@ for _ in range(t):
     g.sort()
     arr.sort()
     if len(g) == n:
-        print("YES")
+        print('YES')
         print(*arr)
     else:
         f = 0
@@ -25,7 +24,7 @@ for _ in range(t):
         k = sorted(k, reverse=True)
         g.extend(k)
         if f == 0:
-            print("YES")
+            print('YES')
             print(*g)
         else:
-            print("NO")
+            print('NO')

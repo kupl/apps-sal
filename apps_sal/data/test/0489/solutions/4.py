@@ -26,5 +26,4 @@ for i in range(n):
             break
 if beg < 3:
     ans *= c(n - beg, 3 - beg)
-
 print(ans)

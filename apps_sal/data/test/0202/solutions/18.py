@@ -1,7 +1,5 @@
-# A
-
-xi, yi = map(int, input().split())
-xf, yf = map(int, input().split())
+(xi, yi) = map(int, input().split())
+(xf, yf) = map(int, input().split())
 xf = abs(xf - xi)
 yf = abs(yf - yi)
 steps = 0
@@ -14,5 +12,5 @@ elif yf == 0:
 else:
     reduce = min(xf, yf)
     steps += reduce
-    steps += (max(xf, yf) - reduce)
+    steps += max(xf, yf) - reduce
 print(steps)

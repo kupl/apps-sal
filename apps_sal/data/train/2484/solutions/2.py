@@ -1,5 +1,7 @@
 class Solution:
+
     def gcdOfStrings(self, str1: str, str2: str) -> str:
+
         def diviser(n):
             if n == 4:
                 return [1, 2]
@@ -16,7 +18,7 @@ class Solution:
                 for i in Result1:
                     div = str3[:i]
                     for j in range(i, len(str3), i):
-                        if str3[j:(j + i)] != div:
+                        if str3[j:j + i] != div:
                             break
                         if j == len(str3) - i:
                             Result.append(div)
@@ -24,7 +26,7 @@ class Solution:
         a = str_diviser(str1)
         b = str_diviser(str2)
         if len(a) > len(b):
-            a, b = b, a
+            (a, b) = (b, a)
         Cur = ''
         for i in a:
             if i in b and len(i) > len(Cur):

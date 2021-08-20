@@ -2,16 +2,15 @@ import bisect
 
 
 def main():
-    N, D, A = map(int, input().split())
+    (N, D, A) = map(int, input().split())
     XH = [list(map(int, input().split())) for _ in range(N)]
     XH.sort()
     for i in range(N):
         XH[i][1] = -(-XH[i][1] // A)
-    X = [x for x, a in XH]
+    X = [x for (x, a) in XH]
     far = [0] * N
     for i in range(N):
         far[i] = bisect.bisect_right(X, X[i] + 2 * D) - 1
-
     ans = 0
     carry = 0
     outrange = [0] * (N + 1)

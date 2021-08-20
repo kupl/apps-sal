@@ -3,11 +3,11 @@ def func(mas, n, m):
     flag2 = n - 1
     i = 0
     j = 1
-    while(i < m):
-        if(mas[i][1] == 1):
+    while i < m:
+        if mas[i][1] == 1:
             tmp = mas[i][0] - 1
-            while(j < mas[i][0]):
-                if(mas[i][j] == mas[i][j + 1] - 1):
+            while j < mas[i][0]:
+                if mas[i][j] == mas[i][j + 1] - 1:
                     flag2 -= 1
                     tmp -= 1
                 else:
@@ -20,8 +20,8 @@ def func(mas, n, m):
     return flag1 + flag2
 
 
-n, m = map(int, input().split())
-mas = [[]for i in range(m)]
+(n, m) = map(int, input().split())
+mas = [[] for i in range(m)]
 h = 0
 for i in mas:
     s = input()

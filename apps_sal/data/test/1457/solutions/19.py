@@ -1,6 +1,5 @@
 a = input()
 b = input()
-
 nIndex = 0
 nSum = 0
 while True:

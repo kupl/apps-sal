@@ -1,4 +1,3 @@
-# cook your dish here
 def ConDecBin(num, count):
     count += num % 2
     if num > 1:
@@ -10,5 +9,4 @@ def ConDecBin(num, count):
 for k in range(int(input())):
     num = int(input())
     count = 0
-
     ConDecBin(num, count)

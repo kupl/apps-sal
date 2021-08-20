@@ -1,4 +1,5 @@
 class Solution:
+
     def my_function(self, start: int, end: int) -> int:
         if end - start <= 1:
             return 0
@@ -13,5 +14,4 @@ class Solution:
             for j in range(l - i - 1):
                 a = self.my_function(i, l - j)
                 total += a
-
         return total

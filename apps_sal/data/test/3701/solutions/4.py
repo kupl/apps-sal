@@ -1,6 +1,6 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 s = input()
-cnt, tmp = 0, 0
+(cnt, tmp) = (0, 0)
 for i in s:
     if i == '1':
         if tmp:

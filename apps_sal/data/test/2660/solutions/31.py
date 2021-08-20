@@ -6,9 +6,9 @@ R = []
 for _ in range(Q):
     q = input()
     if q[0] == '1':
-        _, a, b = map(int, q.split())
+        (_, a, b) = map(int, q.split())
         ans += b
-        if len(L) > 0 and not -L[0] <= a <= R[0]:
+        if len(L) > 0 and (not -L[0] <= a <= R[0]):
             ans += min(abs(a + L[0]), abs(a - R[0]))
         l = heapq.heappushpop(L, -a)
         r = heapq.heappushpop(R, a)

@@ -8,7 +8,7 @@ def is_prime(n):
         return True
     if n % 2 == 0:
         return False
-    return all(n % i for i in range(3, int(n**0.5) + 1, 2))
+    return all((n % i for i in range(3, int(n ** 0.5) + 1, 2)))
 
 
 def is_symmetry(n):
@@ -16,13 +16,8 @@ def is_symmetry(n):
 
 
 SPRIMES = [str(i) for i in range(11, 100, 2) if is_prime(i)]
-BASE = [i for i in range(0, 100) if (i * i) % 100 == i]
-candidates = (
-    i + d
-    for i in range(1100, 10000000 + 1, 100)
-    if str(i)[:2] in SPRIMES
-    for d in BASE
-)
+BASE = [i for i in range(0, 100) if i * i % 100 == i]
+candidates = (i + d for i in range(1100, 10000000 + 1, 100) if str(i)[:2] in SPRIMES for d in BASE)
 NS = [x for x in candidates if is_symmetry(x)]
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
         temp = []
         for i in range(len(efficiency)):

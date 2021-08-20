@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         pattern_dict = {}
         for row in matrix:
@@ -12,6 +13,6 @@ class Solution:
             else:
                 pattern_dict[key] = 1
         maxnum = 0
-        for _, num in pattern_dict.items():
+        for (_, num) in pattern_dict.items():
             maxnum = max(maxnum, num)
         return maxnum

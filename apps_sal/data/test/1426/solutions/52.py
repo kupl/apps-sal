@@ -1,10 +1,10 @@
 import collections
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 tree = [[] for _ in range(N)]
 for _ in range(M):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     tree[u - 1].append(v - 1)
-S, T = map(int, input().split())
+(S, T) = map(int, input().split())
 s = S - 1
 t = T - 1
 ischecked = [[0] * 3 for _ in range(N)]
@@ -13,7 +13,7 @@ ans = -1
 q = collections.deque()
 q.append([s, 0])
 while q:
-    v, c = q.popleft()
+    (v, c) = q.popleft()
     if v == t and c % 3 == 0:
         ans = c // 3
         break

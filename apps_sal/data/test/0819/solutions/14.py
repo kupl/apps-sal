@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = input().split()
 max1 = -1000000000
 for i in range(a):

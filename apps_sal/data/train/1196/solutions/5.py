@@ -10,7 +10,7 @@ def maxSum(arr, n, k):
 
 
 for _ in range(int(input())):
-    n, m, k = map(int, input().split())
+    (n, m, k) = map(int, input().split())
     ma = 0
     J = []
     for i in range(n):
@@ -19,7 +19,6 @@ for _ in range(int(input())):
         if ma < s1:
             ma = s1
         J.append(a)
-        # print(J)
     for i in range(m):
         arr = [x[i] for x in J]
         ss = maxSum(arr, n, k)

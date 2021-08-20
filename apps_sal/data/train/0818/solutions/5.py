@@ -11,14 +11,14 @@ for cases in range(t):
         odd[i] += odd[i - 1]
     qu = int(input())
     for q in range(qu):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         l = l - 1
         r = r - 1
         flag = 0
         c = odd[r]
         if l > 0:
             c -= odd[l - 1]
-        if c == (r - l + 1):
-            print("ODD")
+        if c == r - l + 1:
+            print('ODD')
         else:
-            print("EVEN")
+            print('EVEN')

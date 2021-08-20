@@ -7,5 +7,4 @@ def alternateCase(s):
             final.append(l.lower())
         else:
             final.append(' ')
-
     return ''.join(final)

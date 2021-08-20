@@ -1,7 +1,7 @@
 import sys
 import math
 from collections import deque
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def input():
@@ -22,12 +22,10 @@ def i2(n):
 
 
 def main():
-    N, K = mi()
+    (N, K) = mi()
     S = input()
-
     m = S.count('RL') + S.count('LR')
-    x = (N - 1) - m
-
+    x = N - 1 - m
     print(min(x + 2 * K, N - 1))
 
 

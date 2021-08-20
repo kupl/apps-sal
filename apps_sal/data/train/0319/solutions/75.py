@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         memo = {}
@@ -6,7 +7,7 @@ class Solution:
         def helper(i, total):
             if i >= n:
                 return 0
-            elif (i) in memo:
+            elif i in memo:
                 return memo[i]
             res = -math.inf
             for x in range(1, min(4, n - i + 1)):
@@ -14,7 +15,6 @@ class Solution:
                 res = max(res, total - helper(i + x, total - s))
             memo[i] = res
             return res
-
         total = sum(stoneValue)
         a = helper(0, total)
         b = total - a

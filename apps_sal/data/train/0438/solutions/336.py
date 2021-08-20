@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, count):
         self.parent = [i for i in range(count)]
         self.size = [1 for _ in range(count)]
@@ -14,7 +15,7 @@ class DSU:
         return root
 
     def union(self, x, y):
-        r1, r2 = self.find(x), self.find(y)
+        (r1, r2) = (self.find(x), self.find(y))
         if r1 == r2:
             return
         if self.size[r1] < self.size[r2]:
@@ -29,12 +30,13 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         components = [0 for _ in range(len(arr))]
         size_count = collections.Counter()
         dsu = DSU(len(arr))
         ans = -1
-        for i, num in enumerate(arr, 1):
+        for (i, num) in enumerate(arr, 1):
             num -= 1
             components[num] = 1
             for adj in (num - 1, num + 1):
@@ -43,5 +45,5 @@ class Solution:
                     dsu.union(num, adj)
             size_count[dsu.get_size(num)] += 1
             if size_count[m] > 0:
-                ans = i  # step
+                ans = i
         return ans

@@ -15,12 +15,12 @@ def dfs(mat, n):
     vis = {}
     s = [(pos, 0)]
     while s:
-        x, y = s.pop()
+        (x, y) = s.pop()
         if y >= n:
-            return "YES"
+            return 'YES'
         if (x, y) in vis:
             continue
-        vis[(x, y)] = 1
+        vis[x, y] = 1
         for i in [-1, 0, 1]:
             if y + 1 >= n or (y + 1 < n and mat[x][y + 1] == '.' and safe(mat, x + i, y, n)):
                 s.append((x + i, y + 3))
@@ -29,6 +29,6 @@ def dfs(mat, n):
 
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     mat = [input() for i in range(3)]
     print(dfs(mat, n))

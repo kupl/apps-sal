@@ -2,6 +2,7 @@ from math import gcd
 
 
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         ret = []
         for numerator in range(1, n + 1):

@@ -1,6 +1,6 @@
 from math import sqrt
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def f(b, n):
@@ -12,7 +12,6 @@ def f(b, n):
 
 n = int(input())
 s = int(input())
-
 if n < s:
     print(-1)
 elif n == s:

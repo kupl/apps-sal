@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self, char):
         self.char = char
         self.children = {}
@@ -6,6 +7,7 @@ class Trie:
 
 
 class TireTree:
+
     def __init__(self):
         self.root = Trie('')
 
@@ -23,7 +25,6 @@ class TireTree:
         for c in word:
             if c not in cur.children:
                 return False
-
             cur = cur[c]
         return cur.isEnd
 
@@ -44,14 +45,7 @@ class StreamChecker:
             if letter in p.children:
                 node = p.children[letter]
                 nextpaths.append(node)
-
                 if node.isEnd:
                     flag = True
-
         self.paths = nextpaths
         return flag
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         m = {}
         for a in arr:
@@ -8,7 +9,7 @@ class Solution:
                 m[a] += 1
         m = dict(sorted(m.items(), key=lambda x: x[1]))
         count = 0
-        for key, value in m.items():
+        for (key, value) in m.items():
             if value <= k:
                 m[key] = 0
                 k -= value

@@ -1,7 +1,7 @@
 def factrize(num):
     factor = {}
     div = 2
-    s = int(num**0.5) + 1
+    s = int(num ** 0.5) + 1
     while div < s:
         div_cnt = 0
         while num % div == 0:
@@ -17,7 +17,6 @@ def factrize(num):
 
 n = int(input())
 cnt = factrize(n)
-
 ans = 0
 for c in cnt.values():
     tmp = 1

@@ -1,12 +1,10 @@
 class Solution:
-    def lenLongestFibSubseq(self, A: List[int]) -> int:
 
+    def lenLongestFibSubseq(self, A: List[int]) -> int:
         longest = 0
         coll = set(A)
         n = len(A)
-
         lookup = [[None for _ in range(n)] for _ in range(n)]
-
         for i in range(n - 2):
             for j in range(i + 1, n - 1):
                 target = A[i] + A[j]
@@ -20,5 +18,4 @@ class Solution:
                     target += prev
                     prev = temp
                     longest = max(longest, lookup[i][j])
-
         return longest

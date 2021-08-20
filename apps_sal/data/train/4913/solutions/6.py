@@ -1,9 +1,9 @@
 def mutations(alice, bob, word, first):
 
-    def isValid(w): return w not in seen and sum(a == b for a, b in zip(w, word)) == 3 and len(set(w)) == 4
-
-    players, seen = [alice, bob], {word}
-    win, failed, i = -1, -1, first ^ 1
+    def isValid(w):
+        return w not in seen and sum((a == b for (a, b) in zip(w, word))) == 3 and (len(set(w)) == 4)
+    (players, seen) = ([alice, bob], {word})
+    (win, failed, i) = (-1, -1, first ^ 1)
     while 1:
         i ^= 1
         lst = players[i]
@@ -14,7 +14,7 @@ def mutations(alice, bob, word, first):
             failed = i
         else:
             seen.add(found)
-            word, win = found, i
+            (word, win) = (found, i)
             if failed != -1:
                 break
     return win

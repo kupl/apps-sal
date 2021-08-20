@@ -1,23 +1,14 @@
-# E - Smart Infants
-
 import heapq
-M = 2 * (10**5)
-N, Q = list(map(int, input().split()))
+M = 2 * 10 ** 5
+(N, Q) = list(map(int, input().split()))
 enji = []
 for i in range(N):
     enji.append(tuple(map(int, input().split())))
-
-# その園児が今どこの幼稚園にいるか
 belong = [0] * N
-# 幼稚園Kの園児の優先キュー
 K = [[] for _ in range(M)]
-for i, (a, b) in enumerate(enji):
+for (i, (a, b)) in enumerate(enji):
     heapq.heappush(K[b - 1], (-a, i))
     belong[i] = b - 1
-
-# print(K)
-
-# 最強園児の優先キュー
 E = []
 for i in range(M):
     if K[i] != []:
@@ -25,7 +16,6 @@ for i in range(M):
 
 
 def insert_enji(x, y):
-    # 新しい幼稚園の中で最強になれる場合
     if K[y] == [] or K[y][0][0] > enji[x][0] * -1:
         heapq.heappush(K[y], (enji[x][0] * -1, x))
         heapq.heappush(E, (K[y][0][0] * -1, K[y][0][1], belong[K[y][0][1]]))
@@ -54,7 +44,7 @@ def mainte_E():
 
 
 for i in range(Q):
-    c, d = list(map(int, input().split()))
+    (c, d) = list(map(int, input().split()))
     c -= 1
     d -= 1
     old = belong[c]
@@ -62,4 +52,4 @@ for i in range(Q):
     insert_enji(c, d)
     mainte_K(c, old)
     mainte_E()
-    print((E[0][0]))
+    print(E[0][0])

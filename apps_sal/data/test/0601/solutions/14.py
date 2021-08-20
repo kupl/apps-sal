@@ -21,14 +21,14 @@ def check(s, n, v):
 
 
 def solve():
-    p, f = mints()
-    cs, cw = mints()
-    s, w = mints()
+    (p, f) = mints()
+    (cs, cw) = mints()
+    (s, w) = mints()
     best = 0
     for i in range(cs + 1):
         if i * s > p:
             break
-        h = (p - i * s)
+        h = p - i * s
         j = min(h // w, cw)
         hs = cs - i
         hw = cw - j

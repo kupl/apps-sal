@@ -1,5 +1,5 @@
 ans = 1000000000
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 s = input()
 l = len(s)
 d = [k // 2, (k + 1) // 2]

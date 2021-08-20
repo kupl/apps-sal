@@ -1,5 +1,5 @@
-h, m = list(map(int, input().split()))
-H, D, C, N = list(map(int, input().split()))
+(h, m) = list(map(int, input().split()))
+(H, D, C, N) = list(map(int, input().split()))
 after = C * 0.8
 ans = (H + N - 1) // N * C
 tm = h * 60 + m

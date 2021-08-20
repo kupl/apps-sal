@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     (n, k, e, m) = tuple(map(int, input().split()))
@@ -9,9 +8,9 @@ for i in range(t):
     bsc = scores[k - 1]
     msc = sum(list(map(int, input().split())))
     mini = bsc - msc + 1
-    if(mini < 0):
+    if mini < 0:
         print(0)
-    elif(mini > m):
-        print("Impossible")
+    elif mini > m:
+        print('Impossible')
     else:
         print(mini)

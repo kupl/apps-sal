@@ -8,8 +8,7 @@ for i in range(q):
             print((a - 9) // 4 + 1)
         else:
             print(-1)
+    elif a > 2:
+        print(a // 4)
     else:
-        if a > 2:
-            print(a // 4)
-        else:
-            print(-1)
+        print(-1)

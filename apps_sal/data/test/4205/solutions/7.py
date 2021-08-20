@@ -9,6 +9,6 @@ for i in range(n):
     if a[i] != b[i]:
         c = c + 1
 if c <= 2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

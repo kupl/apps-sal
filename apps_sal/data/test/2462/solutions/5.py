@@ -1,9 +1,9 @@
 for _ in range(int(input())):
     n = int(input())
     if n <= 30:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         if n - 30 == 6:
             print(6, 10, 15, 5)
         elif n - 30 == 10:

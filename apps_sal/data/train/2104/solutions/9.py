@@ -8,5 +8,4 @@ for i in range(n, 2 * n):
     xd = a[i - 1] - a[i - n]
     yd = a[-1] - a[0]
     ans = min(ans, xd * yd)
-
 print(ans)

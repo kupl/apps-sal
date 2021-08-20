@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     l = [[int(x) for x in input().strip()] for y in range(x)]
     ans = [[2] * y for k in range(x)]
     temp = 0
@@ -20,7 +20,6 @@ for _ in range(int(input())):
         for var in range(x):
             if ans[var][jj] == 2:
                 ans[var][jj] = 1
-
     if temp == 0:
         ans = [[-1] * y for k in range(x)]
     for li in ans:

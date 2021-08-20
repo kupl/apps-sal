@@ -12,8 +12,8 @@ list.sort()
 for i in range(k, N):
     a = eval(input())
     a = int(a)
-    if(a >= 0):
-        if(a < list[k - 1]):
+    if a >= 0:
+        if a < list[k - 1]:
             list.pop()
             list.append(a)
             list.sort()

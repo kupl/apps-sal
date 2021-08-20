@@ -8,7 +8,7 @@ x = [0, 0, 0, 0]
 for i in range(4):
     x[i] = int(input())
 if x == [0, 1, 1, 0]:
-    print(0)  # 1
+    print(0)
 elif x == [0, 0, 0, 0]:
     print(0)
 elif x == [0, 1, 0, 0]:
@@ -24,7 +24,7 @@ elif x == [1, 1, 0, 0]:
 elif x == [1, 0, 0, 0]:
     print(1)
 elif x == [1, 0, 1, 0]:
-    print(0)  # 1
+    print(0)
 elif x == [1, 1, 1, 0]:
     print(1)
 elif x == [1, 1, 0, 1]:

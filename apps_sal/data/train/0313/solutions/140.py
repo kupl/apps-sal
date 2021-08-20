@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def canCreate(days):
             flowers = [1 if days >= bloom else 0 for bloom in bloomDay]
             bouquets = 0
@@ -15,8 +17,8 @@ class Solution:
                     if bouquets == m:
                         return True
             return False
-        MAX = 10**9 + 1
-        left, right = 1, MAX
+        MAX = 10 ** 9 + 1
+        (left, right) = (1, MAX)
         while left < right:
             mid = (left + right) // 2
             if canCreate(mid):

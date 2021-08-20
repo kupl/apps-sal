@@ -9,5 +9,5 @@ for i in range(len(s) // 2):
         r += 1
         j += 1
     if r % 2 == 1:
-        s[i], s[-i - 1] = s[-i - 1], s[i]
+        (s[i], s[-i - 1]) = (s[-i - 1], s[i])
 print(''.join(s))

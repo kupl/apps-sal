@@ -1,9 +1,8 @@
 from collections import Counter
-
 n = int(input())
 a = tuple((n - int(x) for x in input().split()))
 a1 = [[] for _ in range(n + 2)]
-''' :type: list[list[int]] '''
+' :type: list[list[int]] '
 b = [1] * n
 for i in range(n):
     a1[a[i]].append(i)

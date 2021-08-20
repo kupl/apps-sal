@@ -1,7 +1,8 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
-        ans, count, seen = 0, 0, {}
-        for i, hour in enumerate(hours):
+        (ans, count, seen) = (0, 0, {})
+        for (i, hour) in enumerate(hours):
             count = count + 1 if hour > 8 else count - 1
             if count > 0:
                 ans = i + 1

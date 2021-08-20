@@ -1,5 +1,5 @@
 def string_constructing(a, s):
-    i, r = 0, 1
+    (i, r) = (0, 1)
     for x in s:
         y = a[i % len(a)]
         while x != y:

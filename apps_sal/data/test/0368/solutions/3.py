@@ -11,17 +11,15 @@ S['b'] = -3
 S['n'] = -3
 S['p'] = -1
 S['k'] = 0
-
 score = 0
 for i in range(8):
     x = input()
     for j in x:
         if j in S:
             score += S[j]
-
 if score > 0:
-    print("White")
+    print('White')
 elif score == 0:
-    print("Draw")
+    print('Draw')
 else:
-    print("Black")
+    print('Black')

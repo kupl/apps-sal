@@ -5,7 +5,7 @@ def main():
     n = int(input())
     a = list(map(int, input().split()))
     b = input()
-    l, r = '?', '?'
+    (l, r) = ('?', '?')
     for i in range(1, n):
         if b[i] == '1' and b[i - 1] == '0':
             if l == '?':

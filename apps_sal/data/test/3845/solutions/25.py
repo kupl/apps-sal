@@ -1,13 +1,12 @@
 def main():
-    A, B = (int(i) for i in input().split())
-    grid = [["#" if i < 50 else "."] * 100 for i in range(100)]
-
+    (A, B) = (int(i) for i in input().split())
+    grid = [['#' if i < 50 else '.'] * 100 for i in range(100)]
     for h in range(49):
         if h % 2 == 1:
             continue
         for w in range(0, 100, 2):
             if A > 1:
-                grid[h][w] = "."
+                grid[h][w] = '.'
                 A -= 1
             else:
                 break
@@ -16,13 +15,13 @@ def main():
             continue
         for w in range(0, 100, 2):
             if B > 1:
-                grid[h][w] = "#"
+                grid[h][w] = '#'
                 B -= 1
             else:
                 break
     print((100, 100))
     for r in grid:
-        print(("".join(r)))
+        print(''.join(r))
 
 
 def __starting_point():

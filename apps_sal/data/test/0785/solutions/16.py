@@ -1,8 +1,7 @@
 import math
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 target = 6 * n
-if(target < a * b):
+if target < a * b:
     p = a
     q = b
 else:
@@ -10,13 +9,13 @@ else:
     s = (a + m) * (b + m)
     for i in range(a, m):
         bb = max(math.ceil(target / i), b)
-        if(i * bb < s):
+        if i * bb < s:
             s = i * bb
             p = i
             q = bb
     for j in range(b, m):
         aa = max(math.ceil(target / j), a)
-        if(j * aa < s):
+        if j * aa < s:
             s = j * aa
             p = aa
             q = j

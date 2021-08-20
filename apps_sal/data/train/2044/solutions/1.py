@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mid = n - k - 1
 r = [0] * k
 for i in range(n - 1):
@@ -9,7 +9,7 @@ ans = []
 for i in range(k):
     v0 = 1
     for _ in range(r[i]):
-        ans.append("%d %d" % (v0, v1))
+        ans.append('%d %d' % (v0, v1))
         v0 = v1
         v1 += 1
-print("\n".join(ans))
+print('\n'.join(ans))

@@ -1,5 +1,5 @@
 def sum_array(arr):
-    if(arr == None):
+    if arr == None:
         return 0
     else:
         list.sort(arr)

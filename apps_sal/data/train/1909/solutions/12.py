@@ -1,6 +1,6 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        # depth search
         N = len(grid)
         M = len(grid[0])
         row = copy.deepcopy(grid)
@@ -11,7 +11,7 @@ class Solution:
             for j in range(M):
                 if not prev and grid[i][j]:
                     start = j
-                elif prev and not grid[i][j]:
+                elif prev and (not grid[i][j]):
                     row[i][start:j] = list(range(j - start, 0, -1))
                     start = M
                 prev = grid[i][j]
@@ -22,7 +22,7 @@ class Solution:
             for j in range(N):
                 if not prev and grid[j][i]:
                     start = j
-                elif prev and not grid[j][i]:
+                elif prev and (not grid[j][i]):
                     for k in range(j - start):
                         col[start + k][i] = j - start - k
                     start = N

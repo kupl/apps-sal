@@ -13,5 +13,4 @@ if n % 2 == 1:
     s += s11
 else:
     s += s22
-
 print(s)

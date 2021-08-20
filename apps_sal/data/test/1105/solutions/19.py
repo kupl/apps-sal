@@ -3,18 +3,16 @@ def adds(s, x, k):
         xs = s[k]
         if x <= xs:
             return 0
-        else:
-            if x - 1 == xs:
-                s[k] = x
-                return 0
-            else:
-                return 1
-    else:
-        if x == 0:
-            s[k] = 0
+        elif x - 1 == xs:
+            s[k] = x
             return 0
         else:
             return 1
+    elif x == 0:
+        s[k] = 0
+        return 0
+    else:
+        return 1
 
 
 def corr(v):
@@ -28,7 +26,7 @@ def corr(v):
 n = int(input())
 v = []
 for c in range(n):
-    x, k = map(int, input().split(' '))
+    (x, k) = map(int, input().split(' '))
     v.append((x, k))
 if corr(v):
     print('YES')

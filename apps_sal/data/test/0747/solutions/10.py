@@ -1,22 +1,18 @@
 import copy
-n, xx = map(int, input().split())
+(n, xx) = map(int, input().split())
 firstorig = list()
 secondorig = list()
 for i in range(n):
-    t, h, m = map(int, input().split())
+    (t, h, m) = map(int, input().split())
     if t == 0:
         firstorig.append((h, m))
     else:
         secondorig.append((h, m))
-
-#print(len(firstorig), len(secondorig))
 firstres = 0
 first = copy.deepcopy(firstorig)
 second = copy.deepcopy(secondorig)
 curmaxjump = xx
-
 while True:
-    #print(len(first), len(second), firstres)
     if len(first) > 0:
         i = 0
         weight = 0
@@ -47,14 +43,11 @@ while True:
             break
     else:
         break
-
 secondres = 0
 curmaxjump = xx
 first = copy.deepcopy(firstorig)
 second = copy.deepcopy(secondorig)
-
 while True:
-    #print(len(first), len(second), curmaxjump)
     if len(second) > 0:
         i = 0
         weight = 0
@@ -70,7 +63,6 @@ while True:
             break
     else:
         break
-    #print(len(first), len(second), firstres)
     if len(first) > 0:
         i = 0
         weight = 0
@@ -86,8 +78,4 @@ while True:
             break
     else:
         break
-
-
-# print(firstres)
-#print(firstres, secondres)
 print(max(firstres, secondres))

@@ -1,10 +1,7 @@
 def make_negative(number):
-    output = ""
-
+    output = ''
     if number < 0:
         return number
     else:
-        output = "-" + str(number)
-
+        output = '-' + str(number)
     return int(output)
-    # ...

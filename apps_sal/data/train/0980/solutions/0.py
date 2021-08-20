@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    n, b, m = list(map(int, input().split()))
+    (n, b, m) = list(map(int, input().split()))
     ans = 0
     while n > 0:
         ans += b

@@ -2,4 +2,4 @@ import re
 
 
 def dad_filter(string):
-    return re.sub(r'((?<=\,)\,+|[\s,]+\Z)', '', string)
+    return re.sub('((?<=\\,)\\,+|[\\s,]+\\Z)', '', string)

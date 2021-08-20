@@ -9,4 +9,4 @@ def find_last(n, m):
             last = (m % staying - 1) % staying
             people = people[last + 1:] + people[:last]
             coins += m
-    return people[0], coins
+    return (people[0], coins)

@@ -18,7 +18,6 @@ def gcd(a, b):
 
 for i in range(n):
     ns.append(gns())
-
 a1 = ns[0][1]
 a2 = ns[0][2]
 g = gcd(a1, a2)

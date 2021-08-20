@@ -7,7 +7,7 @@ def alphabet_war(fight):
         leftp += left.get(e, 0)
         rigthp += rigth.get(e, 0)
     if leftp > rigthp:
-        return'Left side wins!'
+        return 'Left side wins!'
     elif rigthp > leftp:
         return 'Right side wins!'
     else:

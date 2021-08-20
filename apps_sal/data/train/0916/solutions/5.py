@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 
 
@@ -9,9 +8,9 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 for i in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     print(lcm(n, m))

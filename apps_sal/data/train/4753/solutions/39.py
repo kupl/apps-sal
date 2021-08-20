@@ -1,4 +1,4 @@
-geese = set(["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"])
+geese = set(['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher'])
 
 
 def goose_filter(birds):

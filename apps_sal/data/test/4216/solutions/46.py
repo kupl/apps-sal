@@ -5,7 +5,7 @@ def digit(a, b):
 
 
 def makedivisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -18,7 +18,7 @@ def makedivisors(n):
 
 n = int(input())
 l = makedivisors(n)
-m = 10**9
+m = 10 ** 9
 for a in range(len(l)):
     for b in range(len(l)):
         if l[a] * l[b] == n:

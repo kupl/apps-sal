@@ -1,16 +1,14 @@
 def solve():
     import sys
     input = sys.stdin.readline
-    N, M, S = map(int, input().split())
+    (N, M, S) = map(int, input().split())
     UVAB = [tuple(map(int, input().split())) for i in range(M)]
     CD = [tuple(map(int, input().split())) for i in range(N)]
-
     es = [[] for _ in range(N)]
-    for u, v, a, b in UVAB:
-        u, v = u - 1, v - 1
+    for (u, v, a, b) in UVAB:
+        (u, v) = (u - 1, v - 1)
         es[u].append((v, a, b))
         es[v].append((u, a, b))
-
     INF = float('inf')
     times = [INF] * (2501 * N)
     start = min(2500, S) * N
@@ -23,14 +21,14 @@ def solve():
     heapq.heapify(hq)
     while hq:
         x = heapq.heappop(hq)
-        t, v = divmod(x, N * 2501)
-        s, i = divmod(v, N)
+        (t, v) = divmod(x, N * 2501)
+        (s, i) = divmod(v, N)
         if ans[i] < 0:
             ans[i] = t
             reached += 1
             if reached == N - 1:
                 break
-        for to, a, b in es[i]:
+        for (to, a, b) in es[i]:
             if a > s:
                 continue
             nv = (s - a) * N + to

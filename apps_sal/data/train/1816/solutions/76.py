@@ -1,11 +1,11 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         names = defaultdict(set)
-        for n, t in zip(keyName, keyTime):
+        for (n, t) in zip(keyName, keyTime):
             names[n].add(t)
         for name in names:
             names[name] = sorted(names[name])
-        # print(names)
 
         def timediff(t1, t2):
             t1 = list(map(int, t1.split(':')))
@@ -13,7 +13,6 @@ class Solution:
             h = t2[0] - t1[0]
             m = (t2[1] - t1[1]) / 60
             return h + m
-
         ans = set()
         for name in names:
             start = 0

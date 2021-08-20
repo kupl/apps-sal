@@ -1,9 +1,9 @@
-a, b, k = list(map(int, input().split()))
+(a, b, k) = list(map(int, input().split()))
 if b - a + 1 < 2 * k:
     for i in range(a, b + 1):
         print(i)
 else:
     for i in range(k):
-        print((a + i))
+        print(a + i)
     for j in range(k):
-        print((b + j - k + 1))
+        print(b + j - k + 1)

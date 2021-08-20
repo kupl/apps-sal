@@ -1,11 +1,11 @@
 import sys
-sys.setrecursionlimit(10**9)
-N, K = map(int, input().split())
+sys.setrecursionlimit(10 ** 9)
+(N, K) = map(int, input().split())
 edges = [[] for _ in range(N)]
 used = [False] * N
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     edges[a].append(b)
@@ -21,7 +21,7 @@ def f(n, c):
             if t <= 0:
                 print(0)
                 return
-            sm = (sm * f(m, 2) * t) % mod
+            sm = sm * f(m, 2) * t % mod
             t -= 1
     return sm
 

@@ -9,7 +9,7 @@ def hanoiArray(n):
     state = [[i for i in range(n, 0, -1)], [], []]
     res = str(state)
     while transitions:
-        from_peg, to_peg = transitions.pop(0)
+        (from_peg, to_peg) = transitions.pop(0)
         state[to_peg].append(state[from_peg].pop())
         res += '\n' + str(state)
     return res

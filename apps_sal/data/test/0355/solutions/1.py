@@ -1,7 +1,7 @@
 z = []
 for i in range(8):
     z.append(input())
-a, b = 9, 9
+(a, b) = (9, 9)
 for i in range(8):
     for j in range(8):
         if z[i][j] == 'W':

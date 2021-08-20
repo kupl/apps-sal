@@ -9,7 +9,7 @@ for item in arrReverse:
     b = item * item * item * 5
     res = a + b
     if res > 400:
-        print(f"f({item}) = MAGNA NIMIS!")
+        print(f'f({item}) = MAGNA NIMIS!')
     else:
         formattedRes = '{:.2f}'.format(res)
-        print(f"f({item}) = {formattedRes}")
+        print(f'f({item}) = {formattedRes}')

@@ -1,8 +1,8 @@
 n = int(input())
 d = []
 for i in range(n):
-    x, y = list(map(int, input().split()))
-    d.append([(x**2 + y**2)**(0.5), x, y])
+    (x, y) = list(map(int, input().split()))
+    d.append([(x ** 2 + y ** 2) ** 0.5, x, y])
 d.sort()
 ans = []
 for i in range(n):

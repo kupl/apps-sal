@@ -1,4 +1,5 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
 
         def impl(s, pos, output):
@@ -24,8 +25,6 @@ class Solution:
                     else:
                         output.pop()
             return False
-
         result = []
         impl(S, 0, result)
-
         return result

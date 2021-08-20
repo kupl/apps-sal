@@ -1,4 +1,5 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         counter = 0
         newS = ''
@@ -18,5 +19,4 @@ class Solution:
                 counter -= 1
             else:
                 ans = c + ans
-
         return ans

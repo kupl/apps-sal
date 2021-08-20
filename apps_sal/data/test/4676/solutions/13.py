@@ -1,6 +1,5 @@
 O = list(input())
 E = list(input())
-
 ans = [0] * (len(O) + len(E))
 for i in range(len(ans)):
     if i % 2 == 0:
@@ -9,5 +8,4 @@ for i in range(len(ans)):
     else:
         ans[i] = E[0]
         del E[0]
-
-print("".join(ans))
+print(''.join(ans))

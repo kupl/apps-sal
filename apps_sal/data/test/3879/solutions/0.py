@@ -12,13 +12,11 @@ def i23(x):
 
 x = int(input())
 y = list(map(int, input().split(' ')))
-
 gcdx = y[0]
 for i in y:
     gcdx = gcd(i, gcdx)
-
 for i in y:
     if not i23(i / gcdx):
-        print("No")
+        print('No')
         quit()
-print("Yes")
+print('Yes')

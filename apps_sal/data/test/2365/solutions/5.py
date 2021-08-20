@@ -1,4 +1,5 @@
 class Solution:
+
     def parseBoolExpr(self, expression: str) -> bool:
         expression = list(expression)
 
@@ -13,8 +14,7 @@ class Solution:
                     expression[i] = 'or'
                 elif braket == 0:
                     break
-
-        for idx, char in enumerate(expression):
+        for (idx, char) in enumerate(expression):
             if char == '|':
                 expression[idx] = ''
                 replace_or(idx + 2)
@@ -26,7 +26,5 @@ class Solution:
                 expression[idx] = 'False'
             elif char == '!':
                 expression[idx] = 'not'
-
         expr = ' '.join(expression).replace(',', 'and')
-
         return eval(expr)

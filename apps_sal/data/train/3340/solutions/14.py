@@ -12,17 +12,14 @@ def splitnumber(x):
 def sharkovsky(a, b):
     x = splitnumber(a)
     y = splitnumber(b)
-
-    if (x[1] == 1) and (y[1] == 1):
+    if x[1] == 1 and y[1] == 1:
         return a > b
-    elif (x[1] != 1) and (y[1] == 1):
+    elif x[1] != 1 and y[1] == 1:
         return True
-    elif (x[1] == 1) and (y[1] != 1):
+    elif x[1] == 1 and y[1] != 1:
         return False
+    elif x[0] == y[0]:
+        return a < b
     else:
-        if x[0] == y[0]:
-            return a < b
-        else:
-            return x[0] < y[0]
-
+        return x[0] < y[0]
     return False

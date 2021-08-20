@@ -1,6 +1,5 @@
 from typing import Callable, Iterator, Optional, TypeVar
-
-S = TypeVar("S")
+S = TypeVar('S')
 
 
 class SegmentTree:
@@ -8,26 +7,17 @@ class SegmentTree:
     References:
         https://github.com/atcoder/ac-library/blob/master/atcoder/segtree.hpp
     """
+    __slots__ = ['_e', '_op', '_n', '_size', '_tree']
 
-    __slots__ = ["_e", "_op", "_n", "_size", "_tree"]
-
-    def __init__(
-        self,
-        initial_values: Optional[Iterator[S]],
-        n: int,
-        e: S,
-        op: Callable[[S, S], S],
-    ) -> None:
+    def __init__(self, initial_values: Optional[Iterator[S]], n: int, e: S, op: Callable[[S, S], S]) -> None:
         self._e = e
         self._op = op
         self._n = n
         self._size = 1 << (self._n - 1).bit_length()
-
         self._tree = [e] * 2 * self._size
         if initial_values is None:
             return
-
-        for i, initial_values in enumerate(initial_values, self._size):
+        for (i, initial_values) in enumerate(initial_values, self._size):
             self._tree[i] = initial_values
         for i in range(self._size - 1, 0, -1):
             self._update(i)
@@ -39,7 +29,6 @@ class SegmentTree:
     def set(self, k: int, x: S) -> None:
         """Assign x to a[k] in O(log n)."""
         assert 0 <= k < self._n
-
         k += self._size
         self._tree[k] = x
         while k:
@@ -56,11 +45,9 @@ class SegmentTree:
         Complexity: O(log n)
         """
         assert 0 <= l <= r <= self._n
-
-        sml, smr = self._e, self._e
+        (sml, smr) = (self._e, self._e)
         l += self._size
         r += self._size
-
         while l < r:
             if l & 1:
                 sml = self._op(sml, self._tree[l])
@@ -91,17 +78,13 @@ class SegmentTree:
         """
         assert 0 <= l <= self._n
         assert f(self._e)
-
         if l == self._n:
             return self._n
-
         l += self._size
         sm = self._e
-
         while True:
             while not l & 1:
                 l >>= 1
-
             if not f(self._op(sm, self._tree[l])):
                 while l < self._size:
                     l *= 2
@@ -109,13 +92,10 @@ class SegmentTree:
                         sm = self._op(sm, self._tree[l])
                         l += 1
                 return l - self._size
-
             sm = self._op(sm, self._tree[l])
             l += 1
-
-            if (l & -l) == l:
+            if l & -l == l:
                 break
-
         return self._n
 
     def min_left(self, r: int, f: Callable[[S], bool]) -> int:
@@ -130,18 +110,14 @@ class SegmentTree:
         """
         assert 0 <= r <= self._n
         assert f(self._e)
-
         if not r:
             return 0
-
         r += self._size
         sm = self._e
-
         while True:
             r -= 1
             while r > 1 and r & 1:
                 r >>= 1
-
             if not f(self._op(self._tree[r], sm)):
                 while r < self._size:
                     r = 2 * r + 1
@@ -149,76 +125,62 @@ class SegmentTree:
                         sm = self._op(self._tree[r], sm)
                         r -= 1
                 return r + 1 - self._size
-
-            if (r & -r) == r:
+            if r & -r == r:
                 break
-
         return 0
 
 
 def staticrmq():
-    # https://judge.yosupo.jp/problem/staticrmq
     import sys
-
     read = sys.stdin.buffer.read
     readline = sys.stdin.buffer.readline
-
-    N, _ = list(map(int, readline().split()))
+    (N, _) = list(map(int, readline().split()))
     A = list(map(int, readline().split()))
     LR = list(map(int, read().split()))
-    tree = SegmentTree(A, N, (10 ** 10) + 1, min)
-    res = [tree.prod(l, r) for l, r in zip(*[iter(LR)] * 2)]
-    print(("\n".join(map(str, res))))
+    tree = SegmentTree(A, N, 10 ** 10 + 1, min)
+    res = [tree.prod(l, r) for (l, r) in zip(*[iter(LR)] * 2)]
+    print('\n'.join(map(str, res)))
 
 
 def practice2_j():
-    # https://atcoder.jp/contests/practice2/tasks/practice2_j
     import sys
-
     readline = sys.stdin.readline
-
-    N, Q = list(map(int, readline().split()))
+    (N, Q) = list(map(int, readline().split()))
     A = list(map(int, readline().split()))
     tree = SegmentTree(A, N, -1, max)
     res = []
     for _ in range(Q):
-        t, x, y = list(map(int, readline().split()))
+        (t, x, y) = list(map(int, readline().split()))
         if t == 1:
             tree.set(x - 1, y)
         elif t == 2:
             res.append(tree.prod(x - 1, y))
         else:
             res.append(tree.max_right(x - 1, lambda n: n < y) + 1)
-    print(("\n".join(map(str, res))))
+    print('\n'.join(map(str, res)))
 
 
 def dsl_2_a():
-    # https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_A
-    N, Q, *X = list(map(int, open(0).read().split()))
+    (N, Q, *X) = list(map(int, open(0).read().split()))
     tree = SegmentTree(None, N, 2 ** 31 - 1, min)
     res = []
-    for com, x, y in zip(*[iter(X)] * 3):
+    for (com, x, y) in zip(*[iter(X)] * 3):
         if com:
             res.append(tree.prod(x, y + 1))
         else:
             tree.set(x, y)
-    print(("\n".join(map(str, res))))
+    print('\n'.join(map(str, res)))
 
 
 def abc125_c():
-    # https://atcoder.jp/contests/abc125/tasks/abc125_c
     from math import gcd
-
-    N, *A = list(map(int, open(0).read().split()))
+    (N, *A) = list(map(int, open(0).read().split()))
     tree = SegmentTree(A, N, 0, gcd)
-    res = max(gcd(tree.prod(0, i), tree.prod(i + 1, N)) for i in range(N))
+    res = max((gcd(tree.prod(0, i), tree.prod(i + 1, N)) for i in range(N)))
     print(res)
 
 
 def __starting_point():
-    # staticrmq()
-    # practice2_j()
-    # dsl_2_a()
     abc125_c()
 
 

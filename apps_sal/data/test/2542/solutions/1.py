@@ -6,16 +6,15 @@ for _ in range(int(input())):
     for a in range(10):
         for b in range(10):
             temp = 0
-            sign = "a"
+            sign = 'a'
             for i in range(n):
-                if sign == "a":
+                if sign == 'a':
                     if s[i] == a:
                         temp += 1
-                        sign = "b"
-                else:
-                    if s[i] == b:
-                        temp += 1
-                        sign = "a"
+                        sign = 'b'
+                elif s[i] == b:
+                    temp += 1
+                    sign = 'a'
             if a == b:
                 ans = max(ans, temp)
             else:

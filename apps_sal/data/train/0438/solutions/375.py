@@ -1,5 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
+
         def find_set(x):
             if parents[x][0] == x:
                 return x
@@ -11,7 +13,6 @@ class Solution:
             y_root = find_set(y)
             parents[y_root][1] += parents[x_root][1]
             parents[x_root][0] = y_root
-
         n = len(arr)
         parents = [[i, 1] for i in range(n)]
         visited = [False for i in range(n)]

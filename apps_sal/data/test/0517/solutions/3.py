@@ -1,5 +1,5 @@
 from sys import *
-n, d, h = (int(z) for z in input().split())
+(n, d, h) = (int(z) for z in input().split())
 
 
 def g(n, d, h):
@@ -9,7 +9,6 @@ def g(n, d, h):
     if d == 1 and n > 2:
         print(-1)
         return
-
     if d == h:
         if n == 2:
             print(1, 2)

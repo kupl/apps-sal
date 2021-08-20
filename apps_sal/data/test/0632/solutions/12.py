@@ -5,11 +5,9 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 while t:
-    # n=int(input())
-    n, k = map(int, input().split())
-    # l=list(map(int,input().split()))
+    (n, k) = map(int, input().split())
     for i in range(2, n + 1):
-        if(n % i == 0):
+        if n % i == 0:
             ind = i
             break
     n = n + i

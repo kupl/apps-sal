@@ -1,12 +1,13 @@
 I = [int(_) for _ in open(0).read().split()]
-N, M = I[:2]
+(N, M) = I[:2]
 A = I[2:2 + N]
 B = I[2 + N:2 + N + N]
 CD = I[2 + N + N:]
-C, D = [CD[_::len('CD')] for _ in range(len('CD'))]
+(C, D) = [CD[_::len('CD')] for _ in range(len('CD'))]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * (n + 1)
@@ -41,9 +42,9 @@ class UnionFind():
 
 
 uf = UnionFind(N)
-for c, d in zip(C, D):
+for (c, d) in zip(C, D):
     uf.unite(c, d)
 sums = [0] * (N + 1)
 for i in range(1, N + 1):
     sums[uf.find(i)] += B[i - 1] - A[i - 1]
-print(('Yes' if all(x == 0 for x in sums) else 'No'))
+print('Yes' if all((x == 0 for x in sums)) else 'No')

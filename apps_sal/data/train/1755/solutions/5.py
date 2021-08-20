@@ -4,7 +4,7 @@ def splitlist(lst):
     lst = sorted(lst, reverse=True)
     optimum = sum(lst) // 2
     if optimum <= lst[0]:
-        return [lst[0]], lst[1:]
+        return ([lst[0]], lst[1:])
     dp = [None] * (optimum + 1)
     dp[0] = []
     for item in lst:
@@ -14,4 +14,4 @@ def splitlist(lst):
     best = next(reversed([option for option in dp if option is not None]))
     for item in best:
         lst.remove(item)
-    return best, lst
+    return (best, lst)

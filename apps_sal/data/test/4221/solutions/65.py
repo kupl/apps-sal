@@ -1,7 +1,6 @@
 s = input()
 List = list(s)
-
 if List[-1] == 's':
-    print((s + "es"))
+    print(s + 'es')
 else:
-    print((s + 's'))
+    print(s + 's')

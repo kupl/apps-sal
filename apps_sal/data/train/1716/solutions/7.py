@@ -1,23 +1,15 @@
 import itertools as it
 import copy
-
 operator = ['+', '-', '*', '/']
 
 
 def gnrt_exp(a, b):
-    return [
-        '({0})*({1})'.format(a, b),
-        '({0})/({1})'.format(a, b),
-        '({0})/({1})'.format(b, a),
-        '({0})+({1})'.format(a, b),
-        '({0})-({1})'.format(a, b),
-        '({0})-({1})'.format(b, a)
-    ]
+    return ['({0})*({1})'.format(a, b), '({0})/({1})'.format(a, b), '({0})/({1})'.format(b, a), '({0})+({1})'.format(a, b), '({0})-({1})'.format(a, b), '({0})-({1})'.format(b, a)]
 
 
 def equal_to_24(a, b, c, d):
     List = [a, b, c, d]
-    for fst, scnd in it.combinations(List, 2):
+    for (fst, scnd) in it.combinations(List, 2):
         temp = copy.deepcopy(List)
         temp.remove(fst)
         temp.remove(scnd)
@@ -26,16 +18,14 @@ def equal_to_24(a, b, c, d):
                 temp1 = copy.deepcopy(temp)
                 temp1.remove(thrd[0])
                 for exp2 in gnrt_exp(exp1, thrd[0]):
-                    #                    print("exp2=",exp2)
                     for exp3 in gnrt_exp(exp2, temp1[0]):
-                        #                        print(exp3)
                         try:
                             rst_final = eval(exp3)
                         except:
                             rst_final = 0
                         if rst_final == 24:
                             return exp3
-    for fst, scnd in it.combinations(List, 2):
+    for (fst, scnd) in it.combinations(List, 2):
         temp = copy.deepcopy(List)
         temp.remove(fst)
         temp.remove(scnd)

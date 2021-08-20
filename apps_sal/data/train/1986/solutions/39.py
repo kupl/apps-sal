@@ -1,11 +1,12 @@
 class Solution:
+
     def backtracking(self, result, visited, n, found):
         if len(result) == 2 ** n:
             diff = result[-1] ^ result[0]
             i = 0
             is_one_bit = 0
             while i < n:
-                if (1 << i) == diff:
+                if 1 << i == diff:
                     is_one_bit = 1
                     break
                 i = i + 1
@@ -16,7 +17,7 @@ class Solution:
             return
         start = result[-1]
         for i in range(n):
-            num = start ^ (1 << i)
+            num = start ^ 1 << i
             if num in visited or num < 0 or num >= 2 ** n:
                 continue
             result.append(num)

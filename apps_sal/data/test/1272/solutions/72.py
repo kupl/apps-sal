@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parent = [i for i in range(n)]
@@ -32,14 +33,14 @@ class UnionFind:
         return self.size[self.find(x)]
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = [0] * m
 x[m - 1] = n * (n - 1) // 2
 uf = UnionFind(n)
 a = [0] * m
 b = [0] * m
 for i in range(m):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
     a[i] -= 1
     b[i] -= 1
 for i in range(m - 1, 0, -1):
@@ -48,4 +49,4 @@ for i in range(m - 1, 0, -1):
     else:
         x[i - 1] = x[i] - uf.group_size(a[i]) * uf.group_size(b[i])
         uf.unite(a[i], b[i])
-print(*x, sep="\n")
+print(*x, sep='\n')

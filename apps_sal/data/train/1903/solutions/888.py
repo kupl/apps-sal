@@ -1,24 +1,23 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         dic = {}
         for i in range(len(points)):
             val = []
             for j in range(len(points)):
                 if points[j] != points[i]:
-                    val = (abs(points[j][0] - points[i][0]) + abs(points[j][1] - points[i][1]))
+                    val = abs(points[j][0] - points[i][0]) + abs(points[j][1] - points[i][1])
                     dic[i, j] = val
-        # print(dic)
         g = Graph(len(points))
-
-        for k, v in list(dic.items()):
+        for (k, v) in list(dic.items()):
             g.addEdge(k[0], k[1], v)
-
         res = g.KruskalMST()
         print(res)
         return res
 
 
 class Graph:
+
     def __init__(self, vertices):
         self.v = vertices
         self.graph = []
@@ -43,17 +42,15 @@ class Graph:
         self.graph = sorted(self.graph, key=lambda e: e[2])
         parent = [-1] * self.v
         while e < self.v - 1:
-            u, v, w = self.graph[i]
+            (u, v, w) = self.graph[i]
             i += 1
             x = self.find(parent, u)
             y = self.find(parent, v)
-            # print(x,y)
             if x != y:
                 e += 1
                 MST.append([u, v, w])
                 self.union(parent, x, y)
-                # print(MST)
         s = 0
-        for u, v, w in MST:
+        for (u, v, w) in MST:
             s += w
         return s

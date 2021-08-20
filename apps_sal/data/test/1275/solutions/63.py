@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 0
 
 
@@ -13,5 +13,4 @@ for A in range(2, 2 * n + 1):
     B = A - k
     if 2 <= B <= 2 * n:
         ans += f(A) * f(B)
-
 print(ans)

@@ -1,21 +1,18 @@
-# solution
-
 import itertools
 import numpy as np
 from scipy.sparse.csgraph import dijkstra
 from scipy.sparse import csr_matrix
 
 
-def int1(x): return int(x) - 1
+def int1(x):
+    return int(x) - 1
 
 
-N, M, R = map(int, input().split())
+(N, M, R) = map(int, input().split())
 T = sorted(list(map(int1, input().split())))
 A = np.array([tuple(map(int, input().split())) for _ in range(M)]).T
-
 matr = csr_matrix((A[2], (A[0] - 1, A[1] - 1)), shape=(N, N))
 way = [dijkstra(matr, indices=t, directed=False)[T].astype(int).tolist() for t in T]
-
 result = float('inf')
 for t in itertools.permutations(range(R)):
     tmp = 0

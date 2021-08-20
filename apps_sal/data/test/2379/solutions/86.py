@@ -1,5 +1,5 @@
-INF = 10**18
-N, K, C = map(int, input().split())
+INF = 10 ** 18
+(N, K, C) = map(int, input().split())
 S = input()
 left = [0] * N
 right = [0] * N
@@ -29,7 +29,6 @@ for i in reversed(range(N)):
             right[i] = right[(i + 1) % N]
     else:
         right[i] = right[(i + 1) % N]
-
 for i in range(N):
     lsum = left[i - 1] if i - 1 >= 0 else 0
     rsum = right[i + 1] if i + 1 < N else 0

@@ -1,10 +1,8 @@
-# cook your dish here
 inp = list(map(int, input().split()))
 N = inp[0]
 T = inp[1]
 array = inp[2:]
 array.sort()
-
 sums = [0 for i in range(T)]
 total = 0
 for i in range(N):

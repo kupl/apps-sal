@@ -1,5 +1,4 @@
 3
-
 n = int(input())
 s = sum(map(int, input().split()))
 ans = 0

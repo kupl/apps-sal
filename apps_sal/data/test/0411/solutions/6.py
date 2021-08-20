@@ -1,4 +1,4 @@
-r, b = map(int, input().split())
+(r, b) = map(int, input().split())
 for i in range(r + b):
     l = input().split()
 if r == b:

@@ -1,8 +1,8 @@
 def main():
-    keys = "qwertyuiopasdfghjkl;zxcvbnm,./"
+    keys = 'qwertyuiopasdfghjkl;zxcvbnm,./'
     direction = input()
     message = input()
-    if direction == "L":
+    if direction == 'L':
         offset = 1
     else:
         offset = -1

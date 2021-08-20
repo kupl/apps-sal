@@ -4,8 +4,7 @@ def main():
     table1 = [0] * 13
     table2 = [0] * 13
     table1[0] = 1
-    pre = [[((10 * i + j) % 13) for j in range(10)] for i in range(13)]
-
+    pre = [[(10 * i + j) % 13 for j in range(10)] for i in range(13)]
     for l in s:
         for i in range(13):
             q = table1[i] % mod
@@ -17,11 +16,9 @@ def main():
             else:
                 k = (10 * i + int(l)) % 13
                 table2[k] += q
-
         table1 = table2
         table2 = [0] * 13
-
-    print((table1[5] % mod))
+    print(table1[5] % mod)
 
 
 def __starting_point():

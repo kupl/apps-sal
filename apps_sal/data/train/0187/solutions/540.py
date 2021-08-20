@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if not customers:
             return -1
@@ -9,20 +10,16 @@ class Solution:
         sum_ppl = 0
         for c in customers:
             sum_ppl += c
-
         cur_w = 0
         for i in range(len(customers)):
             num += 1
             cur_w += customers[i]
             n = 4 if cur_w >= 4 else cur_w
-
             profit += n * boardingCost - runningCost
             cur_w -= n
-
-        rotates, left = cur_w // 4, cur_w % 4
+        (rotates, left) = (cur_w // 4, cur_w % 4)
         num += rotates
         profit += rotates * 4 * boardingCost - runningCost * rotates
-
         if left * boardingCost > runningCost:
             num += 1
             profit += left * boardingCost - runningCost

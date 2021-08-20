@@ -11,14 +11,11 @@ def mark2(z):
 
 
 __debug = None
-
-n, m, kk = map(int, input().split())
+(n, m, kk) = map(int, input().split())
 data = [list(input()) for i in range(n)]
-
 ocean = []
 earth = []
 work = [[] for i in range(m * n)]
-
 for k in range(m):
     if data[0][k] == '.':
         work[m * 0 + k].append(ocean)
@@ -29,7 +26,6 @@ for i in range(n):
         work[m * i + 0].append(ocean)
     if data[i][m - 1] == '.':
         work[m * i + m - 1].append(ocean)
-
 for i in range(n):
     for k in range(m):
         if data[i][k] == '.':
@@ -49,31 +45,28 @@ for i in range(n):
                         zk.append(z)
                     else:
                         z.append(zk)
-
 isl = {}
 no = 1
-
 for i in range(n):
     for k in range(m):
         if data[i][k] == '.':
             if __debug:
-                print(i, end=" ")
+                print(i, end=' ')
             if __debug:
-                print(k, end=": ")
+                print(k, end=': ')
             z = mark2(work[m * i + k])
             if z:
                 isl[z].append((i, k))
                 if __debug:
-                    print(z, end=", old")
+                    print(z, end=', old')
             elif z is not ocean:
                 z.append(no)
                 if __debug:
-                    print(no, end=", new")
+                    print(no, end=', new')
                 isl[no] = [(i, k)]
                 no += 1
             if __debug:
                 print()
-
 if __debug:
     print(isl)
 isl_s = list(isl.values())
@@ -84,13 +77,12 @@ if __debug:
     print(isl_s)
 delta = len(isl_s) - kk
 if __debug:
-    print(len(isl_s), end=" ")
+    print(len(isl_s), end=' ')
 if __debug:
     print(kk)
 for t in range(delta):
-    for i, k in isl_s[t]:
+    for (i, k) in isl_s[t]:
         data[i][k] = '*'
-
 print(sum(map(len, isl_s[:delta])))
 for i in range(n):
-    print("".join(data[i]))
+    print(''.join(data[i]))

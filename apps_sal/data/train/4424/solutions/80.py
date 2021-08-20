@@ -13,5 +13,4 @@ def expression_matter(a, b, c):
     arr.append(h)
     i = a + b + c
     arr.append(i)
-
     return max(arr)

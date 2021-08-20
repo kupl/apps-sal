@@ -12,7 +12,7 @@ def main():
         else:
             r = (r + c * (n + 1) * pow(2, n - 2, mod) * pow(2, N - n, mod)) % mod
         n -= 1
-    return 2**N * r % mod
+    return 2 ** N * r % mod
 
 
-print((main()))
+print(main())

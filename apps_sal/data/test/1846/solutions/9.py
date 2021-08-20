@@ -12,13 +12,11 @@ for i in range(1, n):
         a[i] = a[i - 1] + 1
     else:
         a[i] = a[i - 1]
-
 for i in range(n - 2, -1, -1):
     if l[i + 1] <= 0:
         b[i] = b[i + 1] + 1
     else:
         b[i] = b[i + 1]
-
 ans = n
 for i in range(n - 1):
     ans = min(ans, a[i] + b[i])

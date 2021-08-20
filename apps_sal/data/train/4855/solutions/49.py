@@ -1,5 +1,5 @@
 def vert_mirror(string):
-    mylist = string.split('\n')  # splits into list of the parts
+    mylist = string.split('\n')
     for x in range(len(mylist)):
         mylist[x] = mylist[x][::-1]
     mystring = '\n'.join(mylist)

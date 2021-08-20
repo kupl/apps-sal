@@ -1,12 +1,4 @@
-
-
-#!/usr/bin/env python
-
-# -*- coding: utf-8 -*-
-
-
 s = input()
-
 if len(s) % 2 == 0:
     number = s[len(s) // 2]
     other = s[len(s) // 2 - 1]
@@ -19,17 +11,14 @@ if len(s) % 2 == 0:
                 cnt += 1
             else:
                 break
-    print((p + cnt))
-
-
+    print(p + cnt)
 else:
     number = s[len(s) // 2]
     cnt = 0
     p = len(s) // 2
-
     for i in range(1, len(s) // 2 + 1):
         if s[p - i] == s[p + i] == number:
             cnt += 1
         else:
             break
-    print((p + 1 + cnt))
+    print(p + 1 + cnt)

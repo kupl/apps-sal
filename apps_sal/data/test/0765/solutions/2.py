@@ -1,4 +1,4 @@
-t, s, q = map(int, input().split())
+(t, s, q) = map(int, input().split())
 x = s
 ans = 1
 while x < t:

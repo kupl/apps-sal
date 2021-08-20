@@ -1,5 +1,4 @@
 import math
-
 for _ in range(int(input())):
     s = input()
     n = len(s)
@@ -17,6 +16,6 @@ for _ in range(int(input())):
             ln += 1
             cv *= 2
             cv += s[j] == '1'
-            ans += (ln <= cv) and (ln + npfx >= cv)
+            ans += ln <= cv and ln + npfx >= cv
         npfx = 0
     print(ans)

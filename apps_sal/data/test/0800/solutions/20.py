@@ -1,6 +1,5 @@
 import sys
 import math
-
 n = int(sys.stdin.readline())
 points = []
 for i in range(n):
@@ -9,7 +8,7 @@ for i in range(n):
 points = sorted(points)
 diffs = []
 for i in range(n):
-    if (i == n - 1):
+    if i == n - 1:
         diffs.append(points[0] - points[n - 1] + 2 * math.pi)
     else:
         diffs.append(points[i + 1] - points[i])

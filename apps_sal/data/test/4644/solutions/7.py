@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-    odd, even = False, False
+    (odd, even) = (False, False)
     for i in a:
         if i % 2 == 0:
             even = True
@@ -12,7 +12,7 @@ for i in range(t):
             print('YES')
             break
     else:
-        if odd and (not even) and n % 2 == 1:
+        if odd and (not even) and (n % 2 == 1):
             print('YES')
         else:
             print('NO')

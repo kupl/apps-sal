@@ -8,7 +8,7 @@ def cnt_zeroes(n):
     all_cnt = 0
     while p5 > 1:
         ans += i * (n // p5 - all_cnt)
-        all_cnt += (n // p5 - all_cnt)
+        all_cnt += n // p5 - all_cnt
         p5 //= 5
         i -= 1
     return ans

@@ -1,10 +1,10 @@
 N = int(input())
-T = list(int(input()) for _ in range(N))
+T = list((int(input()) for _ in range(N)))
 
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 

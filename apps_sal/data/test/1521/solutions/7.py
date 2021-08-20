@@ -1,8 +1,7 @@
-p, n = map(int, input().split())
+(p, n) = map(int, input().split())
 xlist = []
 for i in range(n):
     xlist.append(int(input()))
-
 remainderlist = []
 for i in range(n):
     if xlist[i] % p not in remainderlist:
@@ -10,5 +9,4 @@ for i in range(n):
     else:
         print(i + 1)
         quit()
-
 print(-1)

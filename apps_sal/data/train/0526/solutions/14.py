@@ -13,7 +13,6 @@ for _ in range(int(input())):
             original += 32
         else:
             original += 8
-
         if S[i] == a:
             b = 32
         else:

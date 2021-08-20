@@ -1,4 +1,5 @@
 class Monster:
+
     def __init__(self, hp, power):
         self.hp = hp
         self.power = power
@@ -11,26 +12,21 @@ class Monster:
         return self.hp <= 0
 
 
-# 標準入力から A, B, C, D を取得する
-a, b, c, d = map(int, input().split())
-
-takahashi_monster = Monster(a, b)   # 高橋モンスター
-aoki_monster = Monster(c, d)    # 青木モンスター
-result = "ret"
-
+(a, b, c, d) = map(int, input().split())
+takahashi_monster = Monster(a, b)
+aoki_monster = Monster(c, d)
+result = 'ret'
 while True:
-    aoki_monster.fight(b)   # 高橋の攻撃
+    aoki_monster.fight(b)
     if aoki_monster.is_loser():
-        result = "Yes"
+        result = 'Yes'
         break
     else:
         pass
-
-    takahashi_monster.fight(d)  # 青木の攻撃
+    takahashi_monster.fight(d)
     if takahashi_monster.is_loser():
-        result = "No"
+        result = 'No'
         break
     else:
         pass
-
 print(result)

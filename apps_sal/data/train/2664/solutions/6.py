@@ -1,7 +1,6 @@
 def solve(s):
     if s == s[::-1] and len(s) % 2 == 0:
         return False
-
     start = 0
     end = len(s) - 1
     mid = end // 2

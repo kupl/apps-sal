@@ -1,7 +1,5 @@
 L = input()
-
 m = 1000000007
-
 result = 1
 t = 1
 for c in L[::-1]:

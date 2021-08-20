@@ -1,2 +1,2 @@
 n = int(input())
-print((pow(n, 3)))
+print(pow(n, 3))

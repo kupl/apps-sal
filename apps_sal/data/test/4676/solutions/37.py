@@ -1,6 +1,6 @@
 O = input()
 E = input()
-t = ""
+t = ''
 n = min(len(O), len(E))
 for i in range(n):
     t += O[i] + E[i]

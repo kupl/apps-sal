@@ -1,6 +1,7 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        p1, p2, ans, cnt, min_, max_ = 0, 0, 0, {nums[0]: 1}, nums[0], nums[0]
+        (p1, p2, ans, cnt, min_, max_) = (0, 0, 0, {nums[0]: 1}, nums[0], nums[0])
         while True:
             if max_ - min_ <= limit:
                 ans = max(ans, p2 - p1 + 1)

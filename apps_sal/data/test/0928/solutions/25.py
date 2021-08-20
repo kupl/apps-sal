@@ -1,25 +1,11 @@
 import bisect
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(i) for i in input().split()]
 ans = 0
-'''
-r = 0
-l = 0
-s = 0
-for r in range(N) :
-    s += A[r]
-    while s >= K : 
-        ans += N-r
-        s -= A[l]
-        l += 1
-        
-print(ans)
-'''
-
+'\nr = 0\nl = 0\ns = 0\nfor r in range(N) :\n    s += A[r]\n    while s >= K : \n        ans += N-r\n        s -= A[l]\n        l += 1\n        \nprint(ans)\n'
 cusum = [0]
 for i in range(N):
     cusum.append(cusum[i] + A[i])
-
 for i in cusum:
     if i < K:
         continue

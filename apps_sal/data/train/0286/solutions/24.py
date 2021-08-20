@@ -1,6 +1,6 @@
 class Solution:
-    def getProbability(self, balls: List[int]) -> float:
 
+    def getProbability(self, balls: List[int]) -> float:
         total = sum(balls)
         k = len(balls)
 
@@ -26,9 +26,7 @@ class Solution:
             return res
 
         def helper(i, added, cur):
-
             if cur == total // 2:
-
                 if theSame(added):
                     res = 1
                     for i in range(k):
@@ -45,6 +43,5 @@ class Solution:
                 res += helper(i + 1, added, cur + t)
             added[i] = 0
             return res
-
         added = [0] * k
         return helper(0, added, 0) / combination(total, total // 2)

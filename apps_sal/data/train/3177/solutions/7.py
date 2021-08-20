@@ -1,8 +1,8 @@
 def palindrome(num):
     if type(num) != int:
-        return "Not valid"
+        return 'Not valid'
     elif num < 0:
-        return "Not valid"
+        return 'Not valid'
     else:
         l = list(str(num))
         pals = []
@@ -26,4 +26,4 @@ def palindrome(num):
         if pals:
             return sorted(pals)
         else:
-            return "No palindromes found"
+            return 'No palindromes found'

@@ -16,4 +16,4 @@ def collatz_steps(n, s):
         if flag == True:
             return n
         else:
-            n += 2**(len(ans) - 1)
+            n += 2 ** (len(ans) - 1)

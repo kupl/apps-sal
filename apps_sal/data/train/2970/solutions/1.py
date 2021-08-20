@@ -1,8 +1,8 @@
 def allmult(n):
     l = list(range(2, n))
-    l = l[: len(l) // 2 + 1]
+    l = l[:len(l) // 2 + 1]
     m = set()
-    for i, n1 in enumerate(l):
+    for (i, n1) in enumerate(l):
         for n2 in l[i:]:
             if n1 * n2 == n:
                 m.add((n1, n2))
@@ -41,7 +41,7 @@ def lastPart(newpart, n):
 def prod_int_part(n):
     part = allmult(n)
     newpart = part
-    for n1, n2 in part:
+    for (n1, n2) in part:
         newpart = newpart.union(addPart(n1, allmult(n2)))
         newpart = newpart.union(addPart(n2, allmult(n1)))
     lastpart = lastPart(lastPart(newpart, n), n)

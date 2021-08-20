@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, nums: List[int], target: int) -> int:
         cnt = collections.Counter()
         cnt[0] = 1
@@ -11,6 +12,5 @@ class Solution:
                 cnt = collections.Counter()
                 cnt[0] = 0
             cnt[prefix] += 1
-            # print(cnt, ans)
         print('--')
         return ans

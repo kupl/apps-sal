@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         self.prob = 0
         mp = defaultdict(set)
@@ -30,6 +31,5 @@ class Solution:
                     visited.add(edge)
                     backtrack(edge, nowprob / div, currtime + 1, visited)
                     visited.remove(edge)
-
         backtrack(1, 1, 0, visited)
         return self.prob

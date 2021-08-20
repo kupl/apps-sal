@@ -1,12 +1,10 @@
 d = int(input())
-
 if d == 25:
-    ans = "Christmas"
+    ans = 'Christmas'
 elif d == 24:
-    ans = "Christmas Eve"
+    ans = 'Christmas Eve'
 elif d == 23:
-    ans = "Christmas Eve Eve"
+    ans = 'Christmas Eve Eve'
 else:
-    ans = "Christmas Eve Eve Eve"
-
+    ans = 'Christmas Eve Eve Eve'
 print(ans)

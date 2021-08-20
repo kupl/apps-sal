@@ -1,11 +1,11 @@
 class Solution:
+
     def reverseWords(self, s):
         """
         :type s: str
         :rtype: str
         """
-
-        result = ""
+        result = ''
         z = self.spaceindex(s)
         for i in range(0, len(z) - 1):
             word = s[z[i] + 1:z[i + 1]]

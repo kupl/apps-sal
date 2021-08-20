@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mod = 998244353
 dp = [[0] * 6005 for _ in range(3001)]
 dp[0][0] = 1

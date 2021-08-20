@@ -1,4 +1,5 @@
 class Solution:
+
     def dfs(self, graph, s, des, steps, visited):
         if self.res != -1 and steps >= self.res:
             return
@@ -32,8 +33,7 @@ class Solution:
                 if stop not in stop_to_bus:
                     stop_to_bus[stop] = set()
                 stop_to_bus[stop].add(bus)
-
-        for _, v in list(stop_to_bus.items()):
+        for (_, v) in list(stop_to_bus.items()):
             for i in v:
                 for j in v:
                     if i == j:
@@ -41,12 +41,10 @@ class Solution:
                     if i not in graph:
                         graph[i] = set()
                     graph[i].add(j)
-
         self.res = -1
         visited = set()
         for s in starts:
             visited.add(s)
             self.dfs(graph, s, des, 1, visited)
             visited.remove(s)
-
         return self.res

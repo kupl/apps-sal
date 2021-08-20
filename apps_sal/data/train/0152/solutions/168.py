@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position, m) -> int:
         position.sort()
         l = 0
@@ -12,7 +13,6 @@ class Solution:
                     used += 1
                     curr = position[j]
             return used
-
         while l < r:
             d = r - (r - l) // 2
             used = isValid(d)

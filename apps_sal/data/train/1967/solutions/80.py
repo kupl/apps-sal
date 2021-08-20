@@ -1,8 +1,10 @@
 class Solution:
+
     def __init__(self):
         self.res = []
 
     def splitIntoFibonacci(self, S: str) -> List[int]:
+
         def helper(pos, temp):
             if pos == len(S):
                 if len(temp) > 2:
@@ -17,7 +19,7 @@ class Solution:
                 temp.pop()
             else:
                 for i in range(pos + 1, len(S) + 1):
-                    curr = int(S[pos: i])
+                    curr = int(S[pos:i])
                     if len(temp) < 2:
                         temp.append(curr)
                         helper(i, temp)

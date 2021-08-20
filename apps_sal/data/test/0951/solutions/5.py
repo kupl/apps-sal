@@ -11,6 +11,6 @@ if s >= k:
 else:
     term = 0
     while s < k:
-        s += (9 - l[term])
+        s += 9 - l[term]
         term += 1
     print(term)

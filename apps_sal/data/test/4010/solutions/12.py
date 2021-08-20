@@ -1,6 +1,6 @@
 def f(N, L):
     V = [0] * (N + 1)
-    for i, a in enumerate(L):
+    for (i, a) in enumerate(L):
         if V[a] > 0:
             r = V[a]
             if L[i - 1] == a:

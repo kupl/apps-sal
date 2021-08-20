@@ -5,7 +5,7 @@ def solve():
     sum_ = a[:]
     for i in range(1, n):
         sum_[i] += sum_[i - 1]
-    if (sum_[n - 1] % 2):
+    if sum_[n - 1] % 2:
         return False
     half = int(sum_[n - 1] / 2)
     st = set([0])
@@ -13,7 +13,6 @@ def solve():
         if sum_[i] >= half and sum_[i] - half in st:
             return True
         st.add(a[i])
-
     sum_ = a[:]
     for i in range(n - 2, -1, -1):
         sum_[i] += sum_[i + 1]
@@ -31,4 +30,4 @@ while True:
     except:
         break
     a = [int(x) for x in input().split(' ')]
-    print('YES' if solve() else "NO")
+    print('YES' if solve() else 'NO')

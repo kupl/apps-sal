@@ -15,5 +15,4 @@ while j < n:
         if c[s[i]] == 0:
             del c[s[i]]
         i += 1
-
 print(ans)

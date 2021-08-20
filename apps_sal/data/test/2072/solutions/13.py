@@ -1,5 +1,5 @@
 def main(n, x, v):
-    eps = 1e-7
+    eps = 1e-07
 
     def f(p):
         nonlocal n, x, v
@@ -8,7 +8,7 @@ def main(n, x, v):
             t = max(t, abs(x[i] - p) / v[i])
         return t
     low = 0
-    high = 1e9
+    high = 1000000000.0
     while low + eps < high:
         mid = (high + low) / 2
         midd = (mid + high) / 2

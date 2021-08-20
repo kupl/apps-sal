@@ -7,4 +7,4 @@ for i in range(n - 1):
     lst.pop(0)
     lst.append(x)
     lst.sort()
-print((lst[0]))
+print(lst[0])

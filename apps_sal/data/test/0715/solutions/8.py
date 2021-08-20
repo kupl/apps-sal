@@ -5,10 +5,8 @@ finallist = ['A', 'B', 'C', 'D']
 for i in range(4):
     answerlist.append(str(input()))
     lengthlist.append(len(answerlist[i]) - 2)
-
 lengthlist1 = lengthlist[:]
 lengthlist.sort()
-
 if lengthlist[0] * 2 <= lengthlist[1]:
     great = 1
 if lengthlist[3] >= lengthlist[2] * 2:

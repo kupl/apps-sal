@@ -4,4 +4,4 @@ if len(s) % 2 == 0:
 else:
     f = len(s) // 2 + 1
 for i in range(f):
-    print(s[2 * i], end="")
+    print(s[2 * i], end='')

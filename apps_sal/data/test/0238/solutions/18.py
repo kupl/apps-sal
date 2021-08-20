@@ -1,9 +1,7 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 sa = [0] * n
-
 ans = 0
-
 for i in range(n):
     sa[i] = a[i] - k
     s = a[i]
@@ -14,5 +12,4 @@ for i in range(n):
         sa[i] = max(sa[i], s - k)
     sa[i] = max(sa[i], 0)
     ans = max(ans, sa[i])
-
 print(ans)

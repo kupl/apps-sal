@@ -1,6 +1,7 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
-        dp, ans = [], 2
+        (dp, ans) = ([], 2)
         for i in range(len(A)):
             dp.append({})
             for j in range(i - 1, -1, -1):

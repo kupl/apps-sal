@@ -1,9 +1,8 @@
 import sys
-ox, oy = map(int, sys.stdin.readline().split())  # original position
+(ox, oy) = map(int, sys.stdin.readline().split())
 s = sys.stdin.readline()
 h = 0
 v = 0
-# here we calculate the distance to target position after one simulation
 for i in range(len(s)):
     if s[i] == 'R':
         h += 1
@@ -20,15 +19,11 @@ def bs(l, r, a, b, rx, ry):
     r1 = r
     a1 = a
     b1 = b
-  #  print("ox:",a," oy:",b)
-    while (l1 <= r1):
+    while l1 <= r1:
         mid = (l1 + r1) // 2
         a1 = a + h * mid
         b1 = b + v * mid
-        # print ("   a1:",a1," b1:",b1)
-        # print ("   l1:",l1," r1:",r1)
-        # print ("   mid:",mid)
-        if (rx == a1 and ry == b1):
+        if rx == a1 and ry == b1:
             return 0
         if (rx - a1) * h == 0:
             if (ry - b1) * v > 0:
@@ -37,7 +32,6 @@ def bs(l, r, a, b, rx, ry):
                 r1 = mid - 1
             else:
                 return -1
-
         if (ry - b1) * v == 0:
             if (rx - a1) * h > 0:
                 l1 = mid + 1
@@ -45,7 +39,6 @@ def bs(l, r, a, b, rx, ry):
                 r1 = mid - 1
             else:
                 return -1
-
         if (rx - a1) * h != 0 and (ry - b1) * v != 0:
             if (rx - a1) * h > 0 and (ry - b1) * v > 0:
                 l1 = mid + 1
@@ -58,10 +51,10 @@ def bs(l, r, a, b, rx, ry):
 
 a = 0
 b = 0
-pos = bs(0, 10**9, a, b, ox, oy)
+pos = bs(0, 10 ** 9, a, b, ox, oy)
 kt = False
 if pos == 0:
-    print("Yes")
+    print('Yes')
     kt = True
 if kt == False:
     for i in range(len(s)):
@@ -73,10 +66,10 @@ if kt == False:
             b += 1
         if s[i] == 'D':
             b -= 1
-        pos = bs(0, 10**9, a, b, ox, oy)
+        pos = bs(0, 10 ** 9, a, b, ox, oy)
         if pos == 0:
-            print("Yes")
+            print('Yes')
             kt = True
             break
 if kt == False:
-    print("No")
+    print('No')

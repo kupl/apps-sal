@@ -18,11 +18,7 @@ def lm():
     return list(map(int, input().split()))
 
 
-n, m = mi()
-
-
+(n, m) = mi()
 lowend = max(1, m)
-
 highend = n - m
-
 print(min(lowend, highend))

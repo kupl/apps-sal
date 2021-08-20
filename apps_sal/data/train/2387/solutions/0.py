@@ -9,33 +9,32 @@ from collections import deque
 def na():
     n = int(input())
     b = [int(x) for x in input().split()]
-    return n, b
+    return (n, b)
 
 
 def nab():
     n = int(input())
     b = [int(x) for x in input().split()]
     c = [int(x) for x in input().split()]
-    return n, b, c
+    return (n, b, c)
 
 
 def dv():
-    n, m = list(map(int, input().split()))
-    return n, m
+    (n, m) = list(map(int, input().split()))
+    return (n, m)
 
 
 def da():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    return n, m, a
+    return (n, m, a)
 
 
 def dva():
-
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
-    return n, m, b
+    return (n, m, b)
 
 
 def eratosthenes(n):
@@ -57,7 +56,7 @@ def lol(lst, k):
             ret[i] = lst[i + k - len(lst)]
         if i + k < 0:
             ret[i] = lst[i + k + len(lst)]
-    return(ret)
+    return ret
 
 
 def nm():
@@ -65,13 +64,13 @@ def nm():
     b = [int(x) for x in input().split()]
     m = int(input())
     c = [int(x) for x in input().split()]
-    return n, b, m, c
+    return (n, b, m, c)
 
 
 def dvs():
     n = int(input())
     m = int(input())
-    return n, m
+    return (n, m)
 
 
 def fact(n):

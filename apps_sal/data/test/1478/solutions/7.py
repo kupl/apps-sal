@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from collections import defaultdict
 
 
@@ -11,7 +10,6 @@ node = temp[0::2]
 count = temp[1::2]
 count = list(map(int, count))
 level = defaultdict(list)
-
 stack = []
 l = 0
 for j in range(len(node)):
@@ -28,7 +26,6 @@ for j in range(len(node)):
             else:
                 count[stack[-1]] -= 1
                 break
-
 print(len(level))
 for l in level:
     print(' '.join([node[i] for i in level[l]]))

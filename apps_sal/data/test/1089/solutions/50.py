@@ -1,5 +1,5 @@
-n, m, k = [int(i) for i in input().split()]
-mod = 10**9 + 7
+(n, m, k) = [int(i) for i in input().split()]
+mod = 10 ** 9 + 7
 
 
 def kai(x, p=mod):
@@ -26,7 +26,6 @@ ans = 0
 for i in range(1, n):
     ans += i * (n - i) * m ** 2
     ans %= mod
-
 for i in range(1, m):
     ans += i * (m - i) * n ** 2
     ans %= mod

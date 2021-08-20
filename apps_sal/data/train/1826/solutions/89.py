@@ -1,14 +1,13 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        rows, cols = len(mat), len(mat[0])
-        dic, seen = {}, {}
-        for i, row in enumerate(mat):
+        (rows, cols) = (len(mat), len(mat[0]))
+        (dic, seen) = ({}, {})
+        for (i, row) in enumerate(mat):
             prefix_sum = [0] * (cols + 1)
-            for j, num in enumerate(row):
+            for (j, num) in enumerate(row):
                 prefix_sum[j] = prefix_sum[j - 1] + num
-
             dic[i] = prefix_sum
-
         for i in range(rows):
             for j in range(cols):
                 start_col = j - K if j - K >= 0 else 0

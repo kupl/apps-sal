@@ -4,8 +4,8 @@ import itertools
 
 def sha256_cracker(hash, chars):
     for p in itertools.permutations(chars):
-        if(toSHA256("".join(p)) == hash):
-            return "".join(p)
+        if toSHA256(''.join(p)) == hash:
+            return ''.join(p)
     return None
 
 

@@ -1,15 +1,10 @@
-s, b = list(map(int, input().split(' ')))
-
+(s, b) = list(map(int, input().split(' ')))
 ships = list(map(int, input().split(' ')))
 bases = [tuple(map(int, input().split(' '))) for _ in range(b)]
-
 bases.sort()
-
 gold = [0] * (b + 1)
 for i in range(b):
     gold[i + 1] = gold[i] + bases[i][1]
-
-# ships.sort()
 
 
 def find(x, inf, sup):
@@ -19,13 +14,10 @@ def find(x, inf, sup):
             inf = mid + 1
         else:
             sup = mid
-
     return sup - 1
 
 
 attacks = [0] * s
 for (i, ship) in enumerate(ships):
-    # print("{} can attack {} bases".format(i, find(ship, 0, b) + 1))
     attacks[i] = gold[find(ship, 0, b) + 1]
-
 print(' '.join(map(str, attacks)))

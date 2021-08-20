@@ -1,4 +1,4 @@
-n, k, q = list(map(int, input().split(' ')))
+(n, k, q) = list(map(int, input().split(' ')))
 fr_lvl = list(map(int, input().split(' ')))
 lvl = {i + 1: fr_lvl[i] for i in range(len(fr_lvl))}
 online = 0

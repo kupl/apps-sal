@@ -1,6 +1,6 @@
 def capitalize(s):
-    st = ""
-    st1 = ""
+    st = ''
+    st1 = ''
     for i in range(len(s)):
         if i % 2 == 0:
             st += s[i].upper()

@@ -11,9 +11,8 @@ for y in range(4):
             continue
         cnt[int(c)] += 1
         if cnt[int(c)] > 2 * k:
-            print("NO")
+            print('NO')
             flag = True
             break
-
-if not(flag):
-    print("YES")
+if not flag:
+    print('YES')

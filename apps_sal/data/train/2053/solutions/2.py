@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = sorted([int(a) for a in input().split()])[::-1]
 B = sorted([int(a) for a in input().split()])
 if A[0] > B[0]:
@@ -7,7 +7,6 @@ else:
     ans = 0
     for a in A:
         ans += a * M
-
     i = 0
     j = M - 1
     for b in B:

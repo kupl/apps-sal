@@ -1,20 +1,21 @@
 import sys
 import os
-
 if 'local' in os.environ:
     sys.stdin = open('./input.txt', 'r')
 
 
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-def midigit(x): return str(x)
+def midigit(x):
+    return str(x)
 
 
 def solve():
     t = f()[0]
     for _ in range(t):
-        a, k = f()
+        (a, k) = f()
         if k == 1:
             print(a)
             continue

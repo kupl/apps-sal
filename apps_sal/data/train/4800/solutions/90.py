@@ -5,6 +5,6 @@ def hotpo(n):
             n = int(n / 2)
             count = count + 1
         else:
-            n = (3 * n) + 1
+            n = 3 * n + 1
             count = count + 1
     return count

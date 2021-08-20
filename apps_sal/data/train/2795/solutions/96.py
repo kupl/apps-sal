@@ -3,4 +3,3 @@ def cockroach_speed(s):
         return 0
     else:
         return int(s * (100000 / 3600))
-    # Good Luck!

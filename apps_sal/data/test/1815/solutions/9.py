@@ -17,7 +17,7 @@ for i in range(n):
         ar[ui[i]] += 1
         ar2[ar[ui[i]]] += 1
     maxi = max(maxi, ar[ui[i]])
-    if (maxi == mini and mini == 1) or mini == i + 1:
+    if maxi == mini and mini == 1 or mini == i + 1:
         ans = i + 1
     elif maxi == mini + 1 and ar2[maxi] == 1:
         ans = i + 1

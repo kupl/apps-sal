@@ -12,7 +12,7 @@ for _ in range(int(input())):
         aux = [n - 1, n, n - 2]
         ans = []
         c = 1
-        while c <= (n - 3):
+        while c <= n - 3:
             ans.append(c + 1)
             ans.append(c)
             c += 2

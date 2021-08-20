@@ -1,4 +1,4 @@
-A, B, C, X, Y = map(int, input().split())
+(A, B, C, X, Y) = map(int, input().split())
 if 2 * C <= A + B:
     price = 2 * C
 else:

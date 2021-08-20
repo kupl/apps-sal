@@ -1,7 +1,6 @@
-# cook your dish here
 def gcd(a, b):
     while True:
-        if (b == 0):
+        if b == 0:
             return a
         c = b
         b = a % b
@@ -40,17 +39,17 @@ for tes in range(testcase):
                         break
                 if flag2:
                     arr[i].append(num)
-                    num = (p * pnum)
+                    num = p * pnum
                     p += 2
                     flag1 = True
                     break
                 i += 1
             if not flag1:
                 arr.append([i])
-                num = (p * pnum)
+                num = p * pnum
                 p += 2
         else:
-            num = (p * pnum)
+            num = p * pnum
             p += 2
     print(len(arr))
     for ele in arr:

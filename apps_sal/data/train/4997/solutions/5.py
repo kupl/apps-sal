@@ -16,18 +16,13 @@ def equal_sigma1(nMax):
     for num in xrange(528, nMax + 1):
         if num in checked_numbers:
             continue
-
         number = str(num)
         rev_number = number[::-1]
         rev_num = int(rev_number)
-
         checked_numbers.add(num)
         checked_numbers.add(rev_num)
-
         if number == rev_number:
             continue
-
         if find_sum_of_divisors(num) == find_sum_of_divisors(rev_num):
             found_sum += num + (rev_num if rev_num <= nMax else 0)
-
-    return found_sum  # sum of found numbers
+    return found_sum

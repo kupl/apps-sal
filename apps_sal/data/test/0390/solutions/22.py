@@ -1,10 +1,10 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 c = list(map(int, input().split()))
-i, j = 0, n - 1
+(i, j) = (0, n - 1)
 s = 0
 t = True
 while i < j:
-    if c[i] != c[j] and c[i] != 2 and c[j] != 2:
+    if c[i] != c[j] and c[i] != 2 and (c[j] != 2):
         t = False
         break
     elif c[i] == 2 and c[j] == 1:

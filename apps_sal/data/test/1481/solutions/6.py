@@ -9,7 +9,7 @@ for i in range(n):
     s = 'x' + input() + 'x'
     A.append(s)
 A.append(st)
-ans = "YES"
+ans = 'YES'
 for i in range(1, n + 1):
     for j in range(1, n + 1):
         c = 0
@@ -24,6 +24,6 @@ for i in range(1, n + 1):
         if c % 2 == 0:
             continue
         else:
-            ans = "NO"
+            ans = 'NO'
             break
 print(ans)

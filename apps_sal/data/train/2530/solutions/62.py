@@ -1,4 +1,5 @@
 class Solution:
+
     def numPairsDivisibleBy60(self, time: List[int]) -> int:
         res = 0
         time = [x % 60 for x in time]
@@ -8,7 +9,6 @@ class Solution:
                 dicts[element] = 1
             else:
                 dicts[element] += 1
-        #print (dicts)
         for i in range(len(time)):
             dicts[time[i]] -= 1
             target = 60 - time[i]

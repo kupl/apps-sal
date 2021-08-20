@@ -1,4 +1,4 @@
-n, t = [int(i) for i in input().split()]
+(n, t) = [int(i) for i in input().split()]
 list_route = [list(map(int, input().split())) for list_route in range(n)]
 ans = 1001
 for i in range(0, n):
@@ -7,4 +7,4 @@ for i in range(0, n):
 if ans != 1001:
     print(ans)
 else:
-    print("TLE")
+    print('TLE')

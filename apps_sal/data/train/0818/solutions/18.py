@@ -8,8 +8,8 @@ for _ in range(int(input())):
             cur += 1
         MAT.append(cur)
     for i in range(int(input())):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         if MAT[r] - MAT[l - 1] == 0:
-            print("ODD")
+            print('ODD')
         else:
-            print("EVEN")
+            print('EVEN')

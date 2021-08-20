@@ -1,6 +1,6 @@
 T = int(input())
 for i in range(T):
-    N, K, V = list(map(int, input().split()))
+    (N, K, V) = list(map(int, input().split()))
     A = list(map(int, input().split()))[:N]
     S = (N + K) * V
     B = S - sum(A)

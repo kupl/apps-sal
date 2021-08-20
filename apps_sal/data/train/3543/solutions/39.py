@@ -2,10 +2,9 @@ import re
 
 
 def increment_string(strng):
-    pattern = re.compile(r'[0-9]+')
+    pattern = re.compile('[0-9]+')
     match = re.findall(pattern, strng)
     print(strng)
-
     if match:
         found = match[-1]
         length = len(found)

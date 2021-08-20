@@ -1,12 +1,11 @@
-n, k, x = [int(i) for i in input().split()]
+(n, k, x) = [int(i) for i in input().split()]
 l = [int(i) for i in input().split()]
-
 m = 0
 
 
 def scan(l, m):
     if len(l) == 0:
-        return l, m
+        return (l, m)
     mstart = 0
     mle = 1
     start = 0
@@ -26,25 +25,20 @@ def scan(l, m):
         mle = le
         mstart = start
     if mle < 3:
-        return l, m
-    # print(mle,mstart,l)
+        return (l, m)
     m += mle
     l = l[:mstart] + l[mstart + mle:]
-    # print(l)
-    return l, m
+    return (l, m)
 
 
 for i in range(len(l) + 1):
     l2 = l[:]
     m2 = -1
     l2 = l2[:i] + [x] + l2[i:]
-
     while True:
-        l2, m3 = scan(l2, m2)
+        (l2, m3) = scan(l2, m2)
         if m2 == m3:
             break
         m2 = m3
-    # print(m2)
-    # print()
     m = max(m, m2)
 print(m)

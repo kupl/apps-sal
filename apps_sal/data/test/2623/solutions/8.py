@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = list(input())
     s.sort()
     ans = []
@@ -12,8 +12,7 @@ for i in range(t):
             print(ans_s)
         else:
             print(ans_s + s[k])
+    elif s[0] == s[k - 1]:
+        print(s[0] + ''.join(list(map(str, s[k:]))))
     else:
-        if s[0] == s[k - 1]:
-            print(s[0] + "".join(list(map(str, s[k:]))))
-        else:
-            print(s[k - 1])
+        print(s[k - 1])

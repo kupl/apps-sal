@@ -1,5 +1,5 @@
-n, k = input().split()
-k = 10**int(k)
+(n, k) = input().split()
+k = 10 ** int(k)
 a = len(n) - 1
 s = 0
 while int(n) % k != 0:

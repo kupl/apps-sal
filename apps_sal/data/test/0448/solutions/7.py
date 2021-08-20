@@ -1,7 +1,6 @@
 from sys import stdin as cin
 from fractions import gcd
-
-n, m = list(map(int, cin.readline().split()))
+(n, m) = list(map(int, cin.readline().split()))
 a = list(map(int, cin.readline().split()))
 max_index = 0
 if a[0] % m == 0:

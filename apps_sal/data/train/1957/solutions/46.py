@@ -1,13 +1,14 @@
 class Solution:
+
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
         if len(grid) == 1 and len(grid[0]) == 1:
             return 0
         visited = set()
         q = collections.deque([(0, 0, 0, 0)])
-        r, c = len(grid), len(grid[0])
+        (r, c) = (len(grid), len(grid[0]))
         while q:
-            x, y, obs, path = q.popleft()
-            for i, j in [(x, y + 1), (x, y - 1), (x + 1, y), (x - 1, y)]:
+            (x, y, obs, path) = q.popleft()
+            for (i, j) in [(x, y + 1), (x, y - 1), (x + 1, y), (x - 1, y)]:
                 if 0 <= i < r and 0 <= j < c:
                     if grid[i][j] == 0 and (i, j, obs) not in visited:
                         if i == r - 1 and j == c - 1:

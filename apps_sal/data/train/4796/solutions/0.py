@@ -1,4 +1,5 @@
 class Node(object):
+
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -12,5 +13,4 @@ def get_nth(node, index):
         if v == index:
             return n
         n = n.next
-
     raise ValueError

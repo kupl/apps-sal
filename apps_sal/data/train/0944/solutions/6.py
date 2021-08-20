@@ -8,9 +8,9 @@ def Oddnos(l, r):
 
 
 def evennos(l, r):
-    tot = (r - l - 1)
+    tot = r - l - 1
     smm = od[r - 1] - od[l]
-    return ((tot - smm) & 1 == 0)
+    return tot - smm & 1 == 0
 
 
 def getSum(l, r):

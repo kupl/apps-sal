@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
 
         def calculate(divisor):
@@ -6,8 +7,7 @@ class Solution:
             for val in nums:
                 _sum += val // divisor + int(val % divisor != 0)
             return _sum
-
-        start, end = 1, sum(nums)
+        (start, end) = (1, sum(nums))
         while start < end:
             mid = start + (end - start) // 2
             _sum = calculate(mid)

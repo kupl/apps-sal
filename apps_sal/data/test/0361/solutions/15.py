@@ -10,7 +10,6 @@ for i in range(n):
         break
 if s[:10] == 'CODEFORCES':
     ans = True
-
 if ans:
     print('YES')
 else:

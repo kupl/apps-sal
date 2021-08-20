@@ -11,7 +11,8 @@ from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
 
-def VI(): return list(map(int, input().split()))
+def VI():
+    return list(map(int, input().split()))
 
 
 def main(n, k, a):
@@ -19,33 +20,31 @@ def main(n, k, a):
     even = sum([x % 2 == 0 for x in a])
     odd = sum([x % 2 == 1 for x in a])
     d = n - k
-    D = "Daenerys"
-    S = "Stannis"
+    D = 'Daenerys'
+    S = 'Stannis'
     if n == k:
         ans = [S, D][now % 2 == 0]
-    elif d % 2 == 0:  # Daenerys last
+    elif d % 2 == 0:
         if k % 2 == 0:
             ans = D
         elif even <= d // 2:
             ans = S
         else:
             ans = D
-    else:  # Stannis last
-        if k % 2 == 0:
-            if odd <= d // 2 or even <= d // 2:
-                ans = D
-            else:
-                ans = S
+    elif k % 2 == 0:
+        if odd <= d // 2 or even <= d // 2:
+            ans = D
         else:
-            if odd <= d // 2:
-                ans = D
-            else:
-                ans = S
+            ans = S
+    elif odd <= d // 2:
+        ans = D
+    else:
+        ans = S
     print(ans)
 
 
 def main_input(info=0):
-    n, k = VI()
+    (n, k) = VI()
     a = VI()
     main(n, k, a)
 

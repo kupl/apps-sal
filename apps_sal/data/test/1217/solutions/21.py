@@ -6,7 +6,6 @@ Problem 600 B.
 @author yamaton
 @date 2015-11-30
 """
-
 import bisect
 
 
@@ -16,7 +15,7 @@ def solve(xs, ys, n, m):
 
 
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     xs = [int(c) for c in input().split()]
     ys = [int(c) for c in input().split()]
     assert len(xs) == n

@@ -1,9 +1,7 @@
 def any_arrows(arrows):
-    # your code here
     for item in arrows:
-
         try:
-            a = item["damaged"]
+            a = item['damaged']
             if not a:
                 return True
         except:

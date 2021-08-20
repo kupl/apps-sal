@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    s, w1, w2, w3 = list(map(int, input().split()))
+    (s, w1, w2, w3) = list(map(int, input().split()))
     tot = w1 + w2 + w3
     if tot <= s:
         print(1)

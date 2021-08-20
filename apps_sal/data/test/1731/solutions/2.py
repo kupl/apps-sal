@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
-mod = 10**9 + 7
-
+(n, m) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 DP = [0] * (n + 1)
 DP[0] = 1
 for i in range(m):
@@ -11,7 +10,6 @@ for i in range(m):
         cnt %= mod
         nxt[i] = cnt
     DP = nxt
-
 cnt = 0
 ans = 0
 for i in reversed(list(range(1, n + 1))):

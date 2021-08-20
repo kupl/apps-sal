@@ -1,7 +1,8 @@
-def I(): return map(int, input().split())
+def I():
+    return map(int, input().split())
 
 
-w, l = I()
+(w, l) = I()
 a = list(I())
 c = s = sum(a[:l])
 for i in range(w - l - 1):

@@ -9,7 +9,7 @@ def make_tour(people):
     return teams
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 people = []
 ind = 1
 fl = True
@@ -20,7 +20,7 @@ while True:
     if len(teams) == 1:
         break
     for i in range(len(teams)):
-        if teams[i][0] == a and teams[i][1] == b or teams[i][0] == b and teams[i][1] == a:
+        if teams[i][0] == a and teams[i][1] == b or (teams[i][0] == b and teams[i][1] == a):
             fl = False
             print(ind)
             break

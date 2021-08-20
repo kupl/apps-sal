@@ -1,5 +1,5 @@
 a = ['v', '<', '^', '>']
-s, e = input().split()
+(s, e) = input().split()
 n = int(input())
 l = a.index(s)
 r = l

@@ -1,7 +1,6 @@
-h, w, k = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
 dp = [0] * w
 mod = 10 ** 9 + 7
-
 dp[0] = 1
 for i in range(h):
     next = [0] * w
@@ -20,4 +19,4 @@ for i in range(h):
                 elif not moved[j]:
                     next[j] += dp[j]
     dp = next
-print((dp[k - 1] % mod))
+print(dp[k - 1] % mod)

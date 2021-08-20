@@ -1,7 +1,5 @@
 from sys import stdin, stdout
-m, n, k = [int(x) for x in stdin.readline().rstrip().split()]
-
-
+(m, n, k) = [int(x) for x in stdin.readline().rstrip().split()]
 large_prime = 10 ** 9 + 7
 
 

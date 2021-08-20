@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, arr: List[int]) -> bool:
         length = len(arr)
         dec = inc = 1

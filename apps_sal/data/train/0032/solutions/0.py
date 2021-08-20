@@ -22,12 +22,11 @@ for _ in range(int(input())):
             else:
                 n -= 1
                 flag = 1
+        elif flag:
+            chanek += n // 2
+            n //= 2
+            flag = 0
         else:
-            if flag:
-                chanek += n // 2
-                n //= 2
-                flag = 0
-            else:
-                n //= 2
-                flag = 1
+            n //= 2
+            flag = 1
     print(chanek)

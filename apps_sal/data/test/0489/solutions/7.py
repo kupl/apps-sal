@@ -1,5 +1,3 @@
-# 2
-
 def c(x, y):
     a = b = 1
     for i in range(y):
@@ -13,7 +11,7 @@ a = list(map(int, input().split()))
 if n < 3:
     print(0)
 a.sort()
-x1, x2, x3 = a[0], a[1], a[2]
+(x1, x2, x3) = (a[0], a[1], a[2])
 count = 0
 for i in range(n):
     if a[i] == x3:

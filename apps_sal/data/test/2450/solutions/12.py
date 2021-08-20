@@ -1,11 +1,9 @@
 for _ in range(int(input())):
-    n, m, x, y = tuple(map(int, input().split()))
+    (n, m, x, y) = tuple(map(int, input().split()))
     y = min(y, 2 * x)
-
     ans = 0
     for _ in range(n):
         line = [i for i in input()]
-
         i = 0
         while i < m:
             if line[i] == '.':
@@ -17,5 +15,4 @@ for _ in range(int(input())):
                     i += 1
             else:
                 i += 1
-
     print(ans)

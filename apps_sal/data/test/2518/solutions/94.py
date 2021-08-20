@@ -1,14 +1,11 @@
 import sys
 input = sys.stdin.readline
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 R = [int(input()) for i in range(n)]
-
 l = 0
 r = 10 ** 9 + 1
 
 
-# x 回で全滅できるか否か
 def check(x):
     cnt = 0
     for ri in R:
@@ -25,7 +22,6 @@ while True:
         r = mid
     else:
         l = mid
-
 if check(l):
     print(l)
 else:

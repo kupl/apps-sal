@@ -8,10 +8,10 @@ try:
         if s % n == 0:
             each = s // n
         else:
-            each = (s // n) + 1
+            each = s // n + 1
         for i in range(n):
             if arr[i] < each:
-                count += (each - arr[i])
+                count += each - arr[i]
         print(count)
 except EOFError:
     pass

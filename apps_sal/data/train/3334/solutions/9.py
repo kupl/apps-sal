@@ -1,5 +1,5 @@
 def reduce_fraction(fraction):
-    # your code here
+
     def get_gcd(x, y):
         a = min(x, y)
         b = max(x, y)
@@ -7,5 +7,4 @@ def reduce_fraction(fraction):
             return b
         return get_gcd(a, b % a)
     gcd = get_gcd(fraction[0], fraction[1])
-
     return tuple([int(x / gcd) for x in fraction])

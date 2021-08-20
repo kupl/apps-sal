@@ -1,18 +1,16 @@
-# cook your dish here
 def bs1(arr, x):
     low = 0
     high = len(arr) - 1
     p = 0
-    while(low <= high):
+    while low <= high:
         mid = (low + high) // 2
-        if(arr[mid] == x):
+        if arr[mid] == x:
             return arr[mid]
-        elif(arr[mid] < x):
+        elif arr[mid] < x:
             p = mid
             low = mid + 1
         else:
             high = mid - 1
-
     if arr[p] <= x:
         return arr[p]
     else:
@@ -23,11 +21,11 @@ def bs2(arr, x):
     low = 0
     high = len(arr) - 1
     p = 0
-    while(low <= high):
+    while low <= high:
         mid = (low + high) // 2
-        if(arr[mid] == x):
+        if arr[mid] == x:
             return arr[mid]
-        elif(arr[mid] < x):
+        elif arr[mid] < x:
             low = mid + 1
         else:
             p = mid
@@ -38,11 +36,11 @@ def bs2(arr, x):
         return 1000000
 
 
-n, a, b = list(map(int, input().strip().split()))
+(n, a, b) = list(map(int, input().strip().split()))
 s = []
 e = []
 for i in range(n):
-    c, d = list(map(int, input().strip().split()))
+    (c, d) = list(map(int, input().strip().split()))
     s.append(c)
     e.append(d)
 ws = list(map(int, input().strip().split()))
@@ -54,6 +52,6 @@ for i in range(n):
     s1 = bs1(ws, s[i])
     e1 = bs2(vs, e[i])
     r1 = e1 - s1 + 1
-    if(r1 < r):
+    if r1 < r:
         r = r1
 print(r)

@@ -6,5 +6,4 @@ MOD = 1000000007
 for i in range(n - 1):
     ans += l[i] * (s - l[i])
     s -= l[i]
-
-print((ans % MOD))
+print(ans % MOD)

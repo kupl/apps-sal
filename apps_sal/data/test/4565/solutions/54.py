@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
-
 N = int(input())
 S = list(input())
-
 W = [0] * N
 E = [0] * N
-
 W_pre = E_pre = 0
 for i in range(N):
-    if S[i] == "W":
+    if S[i] == 'W':
         W[i] = W_pre + 1
         E[i] = E_pre
     else:
@@ -16,7 +12,6 @@ for i in range(N):
         E[i] = E_pre + 1
     W_pre = W[i]
     E_pre = E[i]
-
 ans = N
 for i in range(N):
     if i > 0:
@@ -24,7 +19,5 @@ for i in range(N):
     else:
         res1 = 0
     res2 = E[N - 1] - E[i]
-    # print(i,res1,res2)
     ans = min(ans, res1 + res2)
-
 print(ans)

@@ -1,8 +1,9 @@
 class Solution:
+
     def find_divisors(self, num):
         cnt = 0
         run_sum = num + 1
-        for i in range(2, int(num**0.5) + 1):
+        for i in range(2, int(num ** 0.5) + 1):
             if i * i == num:
                 return 0
             if cnt > 1:

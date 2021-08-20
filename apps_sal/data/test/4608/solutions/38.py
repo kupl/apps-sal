@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(input()) for i in range(n)]
 cnt = 0
-
 if not a.count(2):
     print('-1')
 else:

@@ -1,15 +1,12 @@
-# fierce battles - codechef oct 2012 - drgnbool.py
-
 t = int(input())
-
 for testCase in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     chakra = [0] * 101
     for i in range(n):
-        c, l = list(map(int, input().split()))
+        (c, l) = list(map(int, input().split()))
         chakra[l] += c
     for i in range(m):
-        p, l = list(map(int, input().split()))
+        (p, l) = list(map(int, input().split()))
         chakra[l] -= p
     boost = 0
     for c in chakra:

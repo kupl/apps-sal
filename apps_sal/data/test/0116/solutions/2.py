@@ -1,5 +1,5 @@
 from math import *
-a, b, c, d, k = map(int, input().split())
+(a, b, c, d, k) = map(int, input().split())
 per1 = max(a, c)
 per2 = min(b, d)
 if per2 >= per1:

@@ -3,7 +3,7 @@ import math
 from functools import lru_cache
 import datetime
 sys.setrecursionlimit(500000)
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def input():
@@ -24,14 +24,12 @@ def i2(n):
 
 
 def main():
-    N, M = mi()
+    (N, M) = mi()
     A = list(mi())
     A.sort()
     BC = [list(mi()) for i in range(M)]
     BC.sort(reverse=True, key=lambda x: x[1])
-
     D = []
-
     for i in range(M):
         for j in range(BC[i][0]):
             D.append(BC[i][1])
@@ -39,11 +37,9 @@ def main():
                 break
         if len(D) == N:
             break
-
     while len(D) < N:
         D.append(0)
-
-    print(sum(max(A[i], D[i]) for i in range(N)))
+    print(sum((max(A[i], D[i]) for i in range(N))))
 
 
 def __starting_point():

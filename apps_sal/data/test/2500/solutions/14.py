@@ -1,5 +1,4 @@
 from functools import lru_cache
-
 mod = 10 ** 9 + 7
 
 

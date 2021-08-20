@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
 
@@ -14,14 +15,9 @@ class Solution:
                 if i > 1:
                     left[i - 1] = min(left[i - 2], left[i - 1])
             return left
-
         left = aux(arr)
         arr.reverse()
         right = aux(arr)
-
-        # print(left)
-        # print(right)
-
         ans = n + 1
         for i in range(n - 1):
             ans = min(ans, left[i] + right[n - 1 - (i + 1)])

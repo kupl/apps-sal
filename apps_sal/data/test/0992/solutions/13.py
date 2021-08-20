@@ -1,6 +1,6 @@
-mod1, mod2 = 10**9 + 7, 998244353
+(mod1, mod2) = (10 ** 9 + 7, 998244353)
 mod = mod2
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 dp = [0] * (s + 1)
 dp[0] = 1
 for a in map(int, input().split()):

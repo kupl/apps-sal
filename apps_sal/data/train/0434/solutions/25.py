@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         start = end = zeros = ones = maxx = 0
         while end < len(nums):
@@ -6,7 +7,6 @@ class Solution:
                 zeros += 1
             else:
                 ones += 1
-
             while zeros > 1:
                 if nums[start] == 0:
                     zeros -= 1

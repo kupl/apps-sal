@@ -1,7 +1,5 @@
 n = int(input())
-
 a = list(map(int, input().split()))
-
 s0 = sum(a)
 if s0 % 3 != 0:
     print(0)

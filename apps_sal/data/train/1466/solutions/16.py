@@ -1,4 +1,4 @@
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 arr = [int(n) for n in input().split()]
 x = arr[0]
 arr1 = []
@@ -7,7 +7,7 @@ for i in range(1, n):
     x = x ^ arr[i]
     arr1.append(x)
 arr1.append(0)
-while(q):
+while q:
     q = q - 1
     x = int(input())
     r = x % (n + 1)

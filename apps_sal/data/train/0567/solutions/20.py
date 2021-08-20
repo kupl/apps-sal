@@ -11,8 +11,8 @@ for _ in range(int(input())):
             prev = i
             count = 1
         if count >= 3:
-            print("Yes")
+            print('Yes')
             f = 1
             break
     if not f:
-        print("No")
+        print('No')

@@ -1,5 +1,5 @@
 def main():
-    m, t, r = list(map(int, input().split()))
+    (m, t, r) = list(map(int, input().split()))
     gh = sorted(map(int, input().split()), reverse=True)
     if r > t:
         print(-1)
@@ -7,7 +7,7 @@ def main():
     l = [False] * 600
     for g in gh:
         g -= t
-        for i in range(g, g + r - sum(l[i] for i in range(g, g + t))):
+        for i in range(g, g + r - sum((l[i] for i in range(g, g + t)))):
             l[i] = True
     print(sum(l))
 

@@ -1,12 +1,10 @@
-# cook your dish here
 from collections import defaultdict as dd
 for _ in range(int(input())):
     cont = dd(list)
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     for i in range(n):
-        x, y = list(map(int, input().split()))
-        cont[(x - y, ((x % c) + c) % c)].append((x, y))
-        #cont[ (x-y,(x%c) ) ].append((x,y))
+        (x, y) = list(map(int, input().split()))
+        cont[x - y, (x % c + c) % c].append((x, y))
     checkpoints = len(cont)
     moves = 0
     for i in cont:

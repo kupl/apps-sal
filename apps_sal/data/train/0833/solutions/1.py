@@ -1,15 +1,14 @@
 arr = {}
-temp = input().split(" ")
+temp = input().split(' ')
 n = int(temp[0])
 m = int(temp[1])
 for i in range(n):
-    temp1 = input().split(" ")
+    temp1 = input().split(' ')
     for j in range(m):
         arr[i, j] = int(temp1[j])
-
 t = eval(input())
 for k in range(int(t)):
-    temp2 = input().split(" ")
+    temp2 = input().split(' ')
     x1 = int(temp2[0])
     y1 = int(temp2[1])
     x2 = int(temp2[2])

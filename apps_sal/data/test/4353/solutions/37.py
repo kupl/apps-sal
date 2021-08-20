@@ -1,10 +1,8 @@
 s = input()
-
-S = ""
+S = ''
 for i in range(len(s)):
     if s[i] == ',':
-        S += " "
+        S += ' '
     else:
         S += s[i]
-
 print(S)

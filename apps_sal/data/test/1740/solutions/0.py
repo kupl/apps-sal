@@ -1,10 +1,7 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 P = [list(map(int, input().split())) for i in range(n - 1)]
-
-
 Group = [i for i in range(n + 1)]
 
 
@@ -20,15 +17,11 @@ def Union(x, y):
 
 
 ANS = [[i] for i in range(n + 1)]
-
-for i, j in P:
+for (i, j) in P:
     if find(j) < find(i):
         ANS[find(j)] += ANS[find(i)]
-
     else:
         ANS[find(i)] += ANS[find(j)]
-
     Union(i, j)
-
 for a in ANS[1]:
-    print(a, end=" ")
+    print(a, end=' ')

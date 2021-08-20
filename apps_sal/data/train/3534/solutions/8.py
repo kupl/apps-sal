@@ -7,12 +7,11 @@ def to_bits(string):
     for x in lst:
         if x.isdigit():
             lst2.append(x)
-#     print(lst2)
     lst3 = [int(i) for i in lst2]
     lst3.sort()
     max(lst3)
     print(len(lst3))
-    print((lst3))
+    print(lst3)
     a = []
     for x in range(5000):
         a.append(0)

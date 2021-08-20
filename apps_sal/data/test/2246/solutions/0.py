@@ -8,11 +8,10 @@ tree = [[] for i in range(n + 1)]
 visit = [-1] * (n + 1)
 length = [-1] * (n + 1)
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     adj[a].append(b)
     adj[b].append(a)
 bfsord = []
-
 Q = deque()
 Q.append(1)
 visit[1] = 0
@@ -25,10 +24,9 @@ while len(Q):
         visit[q] = visit[p] + 1
         Q.append(q)
         tree[p].append(q)
-
 for p in reversed(bfsord):
     if not tree[p]:
         length[p] = D(0)
     else:
-        length[p] = D(1) + sum(length[q] for q in tree[p]) / len(tree[p])
+        length[p] = D(1) + sum((length[q] for q in tree[p])) / len(tree[p])
 print(length[1])

@@ -1,5 +1,5 @@
 from bisect import bisect_left as bi
-n, u = list(map(int, input().split()))
+(n, u) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 c = []

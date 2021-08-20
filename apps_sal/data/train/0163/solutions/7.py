@@ -1,4 +1,5 @@
 class Solution:
+
     def isSubsequence(self, s, t):
         """
         :type s: str
@@ -6,4 +7,4 @@ class Solution:
         :rtype: bool
         """
         t = iter(t)
-        return all(i in t for i in s)
+        return all((i in t for i in s))

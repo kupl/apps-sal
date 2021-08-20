@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 num = list(map(int, input().split()))
 gay = []
 for i in num:
@@ -6,7 +6,6 @@ for i in num:
 number = [0] * 101
 for i in gay:
     number[i] += 1
-# print(number)
 i = 0
 chuj = 1
 wynik = 0

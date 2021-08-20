@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOperations(self, t: List[int]) -> int:
         cnt = t[0]
         for i in range(1, len(t)):

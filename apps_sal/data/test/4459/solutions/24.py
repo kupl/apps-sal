@@ -7,7 +7,7 @@ for i in range(N):
     else:
         d[A[i]] += 1
 ans = 0
-for key, value in list(d.items()):
+for (key, value) in list(d.items()):
     if key <= value:
         ans += value - key
     else:

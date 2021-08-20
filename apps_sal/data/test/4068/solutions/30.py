@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 al = [0] * (n + 2)
 for _ in range(m):
     al[int(input())] += 1
@@ -10,6 +10,4 @@ for i in range(n):
     else:
         dp[i + 1] += dp[i]
         dp[i + 2] += dp[i]
-
-# print(dp)
-print(dp[n] % (10**9 + 7))
+print(dp[n] % (10 ** 9 + 7))

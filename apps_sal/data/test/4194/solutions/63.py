@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
@@ -10,4 +10,4 @@ def answer(N: int, M: int, A: list) -> int:
         return N - A
 
 
-print((answer(N, M, A)))
+print(answer(N, M, A))

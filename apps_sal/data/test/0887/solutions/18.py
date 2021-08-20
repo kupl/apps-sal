@@ -1,5 +1,4 @@
-n, a = int(input()), input().split()
-
+(n, a) = (int(input()), input().split())
 if n == 1:
     if a[0] == '1':
         print('YES')

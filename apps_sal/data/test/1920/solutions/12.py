@@ -3,7 +3,7 @@ m = [0] * 366
 f = [0] * 366
 res = 0
 for i in range(n):
-    x, l, r = [i for i in input().split()]
+    (x, l, r) = [i for i in input().split()]
     l = int(l)
     r = int(r)
     if x == 'M':

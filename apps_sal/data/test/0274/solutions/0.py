@@ -23,9 +23,9 @@ for i in range(h):
     res.append(l)
 for i in range(len(xp)):
     for j in range(h):
-        if xp[i][0] == '[' and j > xp[i][1] and j < h - xp[i][1] - 1:
+        if xp[i][0] == '[' and j > xp[i][1] and (j < h - xp[i][1] - 1):
             res[j][i] = '|'
-        elif xp[i][0] == ']' and j > xp[i][1] and j < h - xp[i][1] - 1:
+        elif xp[i][0] == ']' and j > xp[i][1] and (j < h - xp[i][1] - 1):
             res[j][i] = '|'
         elif xp[i][0] == '[' and (j == xp[i][1] or j == h - xp[i][1] - 1):
             res[j][i] = '+'
@@ -33,6 +33,5 @@ for i in range(len(xp)):
         elif xp[i][0] == ']' and (j == xp[i][1] or j == h - xp[i][1] - 1):
             res[j][i] = '+'
             res[j][i - 1] = '-'
-
 for i in range(h):
     print(''.join(res[i]))

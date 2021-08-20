@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 shed = []
 for i in range(m):
     shed.append(list(map(int, input().split())))

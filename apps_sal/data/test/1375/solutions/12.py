@@ -11,4 +11,4 @@ if s == 3 * a:
         p[i] += p[i - 1]
         if t[i] == a:
             p[i] += 1
-print(sum(p[i] for i in range(1, n - 1) if t[i + 1] == b))
+print(sum((p[i] for i in range(1, n - 1) if t[i + 1] == b)))

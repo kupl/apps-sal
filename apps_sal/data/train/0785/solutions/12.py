@@ -17,5 +17,5 @@ for i in range(0, t):
         sum += a
         count += 1
     max = count
-    print(max, end=" ")
+    print(max, end=' ')
     print(min)

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 snukes = [False] * n
 for _ in range(k):
     d = int(input())

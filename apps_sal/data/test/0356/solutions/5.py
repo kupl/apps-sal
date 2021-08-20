@@ -3,14 +3,14 @@ def __starting_point():
     a1 = [int(__) for __ in input().strip().split()]
     n2 = int(input().strip())
     a2 = [int(__) for __ in input().strip().split()]
-    s1, s2 = sum(a1), sum(a2)
+    (s1, s2) = (sum(a1), sum(a2))
     if a1 == a2:
         print(n1)
     elif sum(a1) != sum(a2):
         print(-1)
     else:
-        s1, s2 = 0, 0
-        e1, e2 = n1 - 1, n2 - 1
+        (s1, s2) = (0, 0)
+        (e1, e2) = (n1 - 1, n2 - 1)
         ans = 0
         while a1[s1] == a2[s2]:
             s1 += 1

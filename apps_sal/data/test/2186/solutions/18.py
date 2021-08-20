@@ -6,11 +6,11 @@ def Hash(s):
     p = 1
     for c in s:
         h = (h + p * (ord(c) - 94)) % M
-        p = (p * 17) % M
+        p = p * 17 % M
     return h
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = set()
 for i in range(n):
     s = input()
@@ -20,7 +20,7 @@ for i in range(n):
         for k in range(97, 100):
             if ord(s[j]) != k:
                 a.add((h + p * (k - ord(s[j]))) % M)
-        p = (p * 17) % M
+        p = p * 17 % M
 ans = []
 for i in range(m):
     s = input()

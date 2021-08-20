@@ -1,2 +1,2 @@
-def goals(*a):  # create a variable that contains all numbers
+def goals(*a):
     return sum(a)

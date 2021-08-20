@@ -1,5 +1,4 @@
-
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 cnt = 1
 total = 0

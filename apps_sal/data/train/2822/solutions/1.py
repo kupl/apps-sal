@@ -8,5 +8,5 @@ def name_that_number(x):
         return ONES[x]
     elif x < 20:
         return TEENS[x]
-    t, o = divmod(x, 10)
-    return " ".join((TENS[t * 10], o and ONES[o] or '')).strip()
+    (t, o) = divmod(x, 10)
+    return ' '.join((TENS[t * 10], o and ONES[o] or '')).strip()

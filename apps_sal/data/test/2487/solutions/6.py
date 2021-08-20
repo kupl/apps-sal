@@ -1,4 +1,3 @@
-
 N = int(input())
 E = []
 for i in range(N - 1):

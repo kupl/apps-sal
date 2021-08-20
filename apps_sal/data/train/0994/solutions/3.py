@@ -1,10 +1,8 @@
 import math
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     a = list(map(int, input().split()))
     count = 0
-    # y=a.copy()
-    # y.sort()
     y = dict()
     for i in range(n):
         if y.get(a[i]):
@@ -29,7 +27,6 @@ for _ in range(int(input())):
         if x % k == 0:
             b.append(k)
         k += 1
-    # print(b)
     for i in b:
         summ = 0
         for j in range(i):
@@ -41,10 +38,7 @@ for _ in range(int(input())):
             summ -= a[p]
             p += 1
             c.append(summ)
-        # c.sort()
         l = len(c)
-        # print(i)
-        # print(c)
         y = dict()
         for j in range(l):
             if y.get(c[j]):
@@ -52,13 +46,12 @@ for _ in range(int(input())):
             else:
                 y[c[j]] = 1
         for j in range(l):
-            if c[j] >= (x // i):
+            if c[j] >= x // i:
                 pass
             else:
-                p = (x // i) - c[j]
+                p = x // i - c[j]
                 if y.get(p):
                     count += y[p]
                 else:
                     pass
-
     print(count)

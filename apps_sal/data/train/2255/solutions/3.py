@@ -1,4 +1,4 @@
-'''
+"""
 n=int(input())
 a=list(map(int,input().split()))#a^b^b=a，b^b=0
 def lastcount(r):
@@ -19,7 +19,7 @@ dp=0
 for i in range(n-1,0,-1):
     dp+=lastcount(i)
 print(dp)
-'''
+"""
 n = int(input())
 a = list(map(int, input().split()))
 o = {}
@@ -27,7 +27,7 @@ e = {}
 t = a[0]
 e[t] = 1
 o[0] = 1
-ans, i = 0, 1
+(ans, i) = (0, 1)
 odd = True
 while i < n:
     t ^= a[i]

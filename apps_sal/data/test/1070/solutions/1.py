@@ -10,8 +10,7 @@ def li():
     return list(mi())
 
 
-# M. The Pleasant Walk
-n, k = mi()
+(n, k) = mi()
 a = li()
 c = p = 0
 ans = 1

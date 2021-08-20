@@ -1,6 +1,6 @@
 class Solution:
-    def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
 
+    def numEquivDominoPairs(self, dominoes: List[List[int]]) -> int:
         for i in range(len(dominoes)):
             dominoes[i] = tuple(sorted(dominoes[i]))
         ans = 0

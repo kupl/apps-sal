@@ -1,5 +1,5 @@
 def segfunc(x, y):
-    return (x | y)
+    return x | y
 
 
 ide_ele = 0
@@ -26,10 +26,8 @@ class SegTree:
         self.ide_ele = ide_ele
         self.num = 1 << (n - 1).bit_length()
         self.tree = [ide_ele] * 2 * self.num
-        # 配列の値を葉にセット
         for i in range(n):
             self.tree[self.num + i] = init_val[i]
-        # 構築していく
         for i in range(self.num - 1, 0, -1):
             self.tree[i] = self.segfunc(self.tree[2 * i], self.tree[2 * i + 1])
 
@@ -52,7 +50,6 @@ class SegTree:
         r: index(0-index)
         """
         res = self.ide_ele
-
         l += self.num
         r += self.num
         while l < r:
@@ -69,22 +66,18 @@ class SegTree:
 n = int(input())
 s = input()
 q = int(input())
-
 ls = []
-
 for ch in s:
-    ls.append(1 << (ord(ch) - 97))
-
+    ls.append(1 << ord(ch) - 97)
 seg = SegTree(ls, segfunc, ide_ele)
-
 for i in range(q):
     que = input().split()
     if que[0] == '1':
         iq = int(que[1])
         cq = que[2]
-        seg.update(iq - 1, 1 << (ord(cq) - 97))
+        seg.update(iq - 1, 1 << ord(cq) - 97)
     else:
         lq = int(que[1])
         rq = int(que[2])
         ret = seg.query(lq - 1, rq)
-        print((str(bin(ret)).count('1')))
+        print(str(bin(ret)).count('1'))

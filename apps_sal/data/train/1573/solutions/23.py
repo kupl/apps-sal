@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
     n = int(input())
     if n % 2 == 0:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         s = ''
         s = s + '0'
         for j in range(n // 2):

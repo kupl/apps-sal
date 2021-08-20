@@ -1,7 +1,8 @@
 class Solution:
+
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         size_map = {}
-        for idx, group_size in enumerate(groupSizes):
+        for (idx, group_size) in enumerate(groupSizes):
             if group_size not in size_map:
                 size_map[group_size] = [[idx]]
             else:
@@ -10,9 +11,8 @@ class Solution:
                         group_list.append(idx)
                         break
                 else:
-                    # new group list
                     size_map[group_size].append([idx])
         ret = []
-        for k, v in list(size_map.items()):
+        for (k, v) in list(size_map.items()):
             ret.extend(v)
         return ret

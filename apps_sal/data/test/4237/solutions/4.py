@@ -1,13 +1,14 @@
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
-def lcm(a, b): return a * b // gcd(a, b)
+def lcm(a, b):
+    return a * b // gcd(a, b)
 
 
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 
 
 def div(x):

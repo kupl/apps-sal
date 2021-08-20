@@ -1,4 +1,5 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
         arr = [float('inf') for _ in range(n + 1)]
         arr[0] = 0

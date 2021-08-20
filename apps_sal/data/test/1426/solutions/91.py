@@ -1,12 +1,12 @@
 from collections import deque
-inf = 10**12
-n, m = map(int, input().split())
-node = [[]for _ in range(n)]
+inf = 10 ** 12
+(n, m) = map(int, input().split())
+node = [[] for _ in range(n)]
 dis = [inf] * (n * 3)
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     node[a - 1].append(b - 1)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 dis[(s - 1) * 3] = 0
 queue = deque([(s - 1) * 3])
 while queue:

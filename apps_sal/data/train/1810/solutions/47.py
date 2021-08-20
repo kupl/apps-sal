@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         mem = collections.defaultdict(int)
         res = []

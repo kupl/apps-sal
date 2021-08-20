@@ -11,5 +11,4 @@ for i in range(m):
             sol = s
         elif s <= d[0]:
             sol = d[0]
-
 print(sol)

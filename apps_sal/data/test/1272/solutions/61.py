@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -8,7 +7,7 @@ INF = 1 << 60
 
 
 class UnionFind:
-    # Reference: https://note.nkmk.me/python-union-find/
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -23,13 +22,10 @@ class UnionFind:
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -44,28 +40,25 @@ class UnionFind:
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
 
 
 def main():
-    N, M, *AB = map(int, read().split())
-
+    (N, M, *AB) = map(int, read().split())
     AB = list(reversed(AB[2:]))
     count = N * (N - 1) // 2
     ans = [count]
     uf = UnionFind(N)
-
-    for a, b in zip(AB[::2], AB[1::2]):
+    for (a, b) in zip(AB[::2], AB[1::2]):
         a -= 1
         b -= 1
         if not uf.same(a, b):
             count -= uf.size(a) * uf.size(b)
             uf.union(a, b)
         ans.append(count)
-
     print('\n'.join(map(str, reversed(ans))), sep='\n')
     return
 

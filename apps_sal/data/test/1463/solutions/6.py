@@ -7,7 +7,6 @@ def main():
     for i in range(n):
         y = list(map(int, sys.stdin.readline().split()))
         x.append(y)
-
     for i in range(n):
         for j in range(n):
             if x[i][j] == 1:
@@ -27,9 +26,9 @@ def main():
                 if found:
                     break
             if not found:
-                print("No")
+                print('No')
                 return
-    print("Yes")
+    print('Yes')
 
 
 main()

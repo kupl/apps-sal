@@ -1,5 +1,5 @@
 x = int(input())
-ans1, mod = divmod(x, 11)
+(ans1, mod) = divmod(x, 11)
 if mod == 0:
     print(ans1 * 2)
 elif 1 <= mod <= 6:

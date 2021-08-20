@@ -1,17 +1,15 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 ds = {int(x) for x in input().split()}
 ns = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} - ds
-# print(ds)
-# print(ns-ds)
 temp = 0
 d = {}
 a = 1
 b = {}
 m = len(str(n)) + 1
 over = False
-while(a <= m and not over):
+while a <= m and (not over):
     c = []
-    d = 10**(a - 1)
+    d = 10 ** (a - 1)
     for v in ns:
         if a > 1:
             for bv in b[a - 1]:
@@ -30,9 +28,5 @@ while(a <= m and not over):
                 print(t)
                 over = True
                 break
-
     b[a] = c
     a += 1
-
-# for j in b:
-#    print(j,b[j])

@@ -14,4 +14,4 @@ maxset = max(range(64), key=lambda x: len(pow2[x]))
 print(n - len(pow2[maxset]))
 for i in range(n):
     if Set[i] != maxset:
-        print(dists[i], end=" ")
+        print(dists[i], end=' ')

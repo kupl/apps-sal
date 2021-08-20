@@ -1,4 +1,4 @@
-n, m, l = list(map(int, input().split(' '))) + [[]]
+(n, m, l) = list(map(int, input().split(' '))) + [[]]
 for i in range(n):
     l.append(list(map(int, input().split(' '))))
 dp = [0] + [m for i in range(m)]

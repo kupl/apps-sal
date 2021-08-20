@@ -1,29 +1,21 @@
 from scipy.sparse.csgraph import floyd_warshall
 from scipy.sparse import csr_matrix
-
 import numpy as np
-
 n = int(input())
 a = np.array([list(map(int, input().split())) for _ in range(n)])
-
 g = csr_matrix(a)
 dist = floyd_warshall(g)
-
 if (dist == a).all():
     sm = a.sum()
     sm //= 2
-
     INF = 10 ** 18 + 1
     for i in range(n):
         a[i, i] = INF
-
     for u in range(n):
         for v in range(u + 1, n):
             mn = np.min(a[u] + a[v])
             if mn == a[u, v]:
                 sm -= a[u, v]
-
     print(sm)
-
 else:
-    print((-1))
+    print(-1)

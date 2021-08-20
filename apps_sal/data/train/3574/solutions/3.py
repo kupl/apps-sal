@@ -1,18 +1,17 @@
 def Dragon(n):
-    # your code here
-    if(type(n) != type(1)):
+    if type(n) != type(1):
         return ''
-    if(n < 0):
+    if n < 0:
         return ''
     if n == 0:
         return 'F'
     ret = 'Fa'
-    while(n > 0):
+    while n > 0:
         temp = ''
         for word in ret:
-            if(word == 'a'):
+            if word == 'a':
                 temp += 'aRbFR'
-            elif(word == 'b'):
+            elif word == 'b':
                 temp += 'LFaLb'
             else:
                 temp += word

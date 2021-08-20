@@ -17,12 +17,13 @@ def zeta(data, merge):
         j = i
         while j < n:
             data[j] = merge(data[j], data[j & ~i])
-            j = (j + 1) | i
+            j = j + 1 | i
         i <<= 1
     return data
 
 
 def solve(A):
+
     def merge(x, y):
         return sorted(x + y)[-2:]
     data = [[a] for a in A]

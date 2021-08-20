@@ -1,10 +1,10 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         edges = {ii: [] for ii in range(1, N + 1)}
-        for ii, jj in dislikes:
+        for (ii, jj) in dislikes:
             edges[ii].append(jj)
             edges[jj].append(ii)
-
         color = {}
 
         def dfs(node, c=0):

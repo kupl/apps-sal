@@ -1,15 +1,12 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     atomlist = [''] * n
     for k in range(m):
         s = []
         s.extend(input().split()[1:])
-        # print(s)
         for w in range(n):
             if str(w) in s:
-                atomlist[w] += "1"
+                atomlist[w] += '1'
             else:
-                atomlist[w] += "0"
-        # print(atomlist)
+                atomlist[w] += '0'
     print(len(set(atomlist)))

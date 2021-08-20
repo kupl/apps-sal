@@ -10,5 +10,5 @@ for tc in range(t):
             if len(ans) >= n:
                 break
     for i in ans:
-        print(i, end=" ")
+        print(i, end=' ')
     print()

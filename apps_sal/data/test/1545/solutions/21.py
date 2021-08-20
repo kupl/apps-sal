@@ -3,11 +3,9 @@ s = input()
 ai = list(map(int, input().split()))
 a = ord('a')
 e = 10 ** 9 + 7
-
 dp = [1] + [0] * n
 dp2 = [0] * (n + 1)
 l = 0
-
 for i in range(1, n + 1):
     dp2[i] = n
     f = i - 1

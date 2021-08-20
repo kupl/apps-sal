@@ -1,5 +1,5 @@
 X = input()
-if X in "753":
-    print("YES")
+if X in '753':
+    print('YES')
 else:
-    print("NO")
+    print('NO')

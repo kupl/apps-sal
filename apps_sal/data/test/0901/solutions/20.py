@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 f = 1
 while m > 0:
     m -= 1
@@ -14,17 +14,17 @@ while m > 0:
             pos.add(i)
     gflag = 0
     for i in pos:
-        if(0 - i in neg):
+        if 0 - i in neg:
             gflag = 1
             break
     for i in neg:
-        if(0 - i in pos):
+        if 0 - i in pos:
             gflag = 1
             break
-    if(gflag == 0):
+    if gflag == 0:
         f = 0
         break
-if(f == 0):
+if f == 0:
     print('YES')
 else:
     print('NO')

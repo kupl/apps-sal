@@ -1,6 +1,6 @@
 def round_it(n):
     addition = 0
-    temp = str(n).split(".")
+    temp = str(n).split('.')
     if len(temp) != 2:
         return n
     if len(temp[0]) < len(temp[1]):

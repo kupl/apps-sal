@@ -1,4 +1,4 @@
-b, _ = [int(x) for x in input().split()]
+(b, _) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 if b % 2 == 0:
     a = a[-1:]

@@ -1,8 +1,8 @@
-# Dinic's algorithm
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -27,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**18
+        INF = 10 ** 18
         G = self.G
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.G))
+            (*self.it,) = list(map(iter, self.G))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -60,11 +60,10 @@ class Dinic:
         return flow
 
 
-N, = list(map(int, input().split()))
-a, b, c = list(map(int, input().split()))
-x, y, z = list(map(int, input().split()))
-#print(min(a, y)+min(b, z)+min(c, x))
-INF = 10**9
+(N,) = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
+(x, y, z) = list(map(int, input().split()))
+INF = 10 ** 9
 dnc = Dinic(8)
 dnc.add_edge(0, 1, a)
 dnc.add_edge(0, 2, b)
@@ -75,7 +74,6 @@ dnc.add_edge(3, 6, INF)
 dnc.add_edge(1, 6, INF)
 dnc.add_edge(2, 4, INF)
 dnc.add_edge(3, 5, INF)
-
 dnc.add_edge(4, 7, x)
 dnc.add_edge(5, 7, y)
 dnc.add_edge(6, 7, z)

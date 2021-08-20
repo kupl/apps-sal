@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = [1] * n
 for i in range(k):
     s = int(input())
@@ -6,4 +6,4 @@ for i in range(k):
     for j in range(s):
         if ans[l[j] - 1] == 1:
             ans[l[j] - 1] = 0
-print((sum(ans)))
+print(sum(ans))

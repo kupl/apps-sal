@@ -4,12 +4,11 @@ def count(lst):
             lst.pop()
         elif lst[0] == 0:
             lst.pop(0)
-
         else:
             break
     xx = lst.count(0)
     if xx == len(lst):
-        print("1")
+        print('1')
     else:
         print(len(lst))
 

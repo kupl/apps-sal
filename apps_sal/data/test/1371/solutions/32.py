@@ -11,4 +11,4 @@ i = 1
 while S // i > 2:
     s += H(i, S - 3 * i)
     i += 1
-print(s % (10**9 + 7))
+print(s % (10 ** 9 + 7))

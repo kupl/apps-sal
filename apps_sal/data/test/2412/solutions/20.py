@@ -8,4 +8,4 @@ for tc in range(t):
             n += 1
         elif n == -1 and c == '8':
             n = 0
-    print("YES" if n >= 10 else "NO")
+    print('YES' if n >= 10 else 'NO')

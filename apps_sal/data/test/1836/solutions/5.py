@@ -1,17 +1,16 @@
 import sys
-
 l = 0
 ady = [[]]
 ady2 = [[]]
 for line in sys.stdin:
     if l == 0:
-        n, m = line.split()
+        (n, m) = line.split()
         n = int(n)
         m = int(m)
         ady = [[] for i in range(n)]
         ady2 = [[] for i in range(n)]
     else:
-        a, b = list(map(int, line.split()))
+        (a, b) = list(map(int, line.split()))
         a = int(a) - 1
         b = int(b) - 1
         ady2[a].append(b)
@@ -21,12 +20,11 @@ for line in sys.stdin:
         else:
             ady[b].append(a)
     l += 1
-
 c = [0] * n
 
 
 def colamaslarga(a):
-    if (len(ady[a]) == 0):
+    if len(ady[a]) == 0:
         c[a] = 1
         return 1
     elif c[a] != 0:
@@ -43,5 +41,4 @@ for i in range(n):
     res = cl * len(ady2[i])
     if res > mx:
         mx = res
-
 print(mx)

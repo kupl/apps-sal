@@ -1,7 +1,7 @@
 def fxn(n):
     k = 2 * n - 1
     half = k // 2
-    print(half * " " + "*")
+    print(half * ' ' + '*')
     if n == 1:
         return
     for i in range(2, n):
@@ -9,8 +9,8 @@ def fxn(n):
         p = j - 2
         r = j // 2
         d = half - r
-        print(d * " " + "*" + " " * p + "*")
-    print(k * "*")
+        print(d * ' ' + '*' + ' ' * p + '*')
+    print(k * '*')
 
 
 t = int(input())

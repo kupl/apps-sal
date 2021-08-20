@@ -1,4 +1,3 @@
-# Linear Congruential Generator (a pseudo random number generator)
 class LCG(object):
     a = 2
     c = 3

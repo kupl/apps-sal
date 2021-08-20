@@ -1,5 +1,4 @@
-N, A, B = map(int, input().split())
-# 何周含まれるかを数える
+(N, A, B) = map(int, input().split())
 count = N // (A + B) * A
 if N % (A + B) < A:
     count += N % (A + B)

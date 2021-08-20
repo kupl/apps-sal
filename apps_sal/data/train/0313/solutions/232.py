@@ -1,9 +1,10 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         A = bloomDay
         if m * k > len(A):
             return -1
-        left, right = 1, max(A)
+        (left, right) = (1, max(A))
         while left < right:
             mid = (left + right) // 2
             flow = bouq = 0

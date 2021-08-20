@@ -1,4 +1,4 @@
-L, R = map(int, input().split())
+(L, R) = map(int, input().split())
 mod = 2019
 ans = 2018
 if R - L >= mod:

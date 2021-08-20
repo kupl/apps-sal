@@ -1,10 +1,7 @@
 def hex_to_dec(s):
-
     convert = ''
     dec = 0
-
     for i in range(len(s)):
-
         if s[len(s) - 1 - i] == '0':
             convert = 0
         if s[len(s) - 1 - i] == '1':
@@ -37,7 +34,5 @@ def hex_to_dec(s):
             convert = 14
         if s[len(s) - 1 - i] == 'f':
             convert = 15
-
-        dec += convert * (16 ** i)
-
+        dec += convert * 16 ** i
     return dec

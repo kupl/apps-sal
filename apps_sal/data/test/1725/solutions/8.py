@@ -14,8 +14,10 @@ def solve(d, l):
 
 
 def __starting_point():
-    def f(): return list(map(int, input().split()))
-    n, m, d = f()
+
+    def f():
+        return list(map(int, input().split()))
+    (n, m, d) = f()
     l = []
     for i in range(n):
         l += f()

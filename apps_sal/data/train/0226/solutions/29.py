@@ -1,4 +1,5 @@
 class Solution:
+
     def numSquarefulPerms(self, A: List[int]) -> int:
         A.sort()
         n = len(A)
@@ -13,9 +14,9 @@ class Solution:
             for i in range(n):
                 if visited[i]:
                     continue
-                if i > 0 and A[i] == A[i - 1] and not visited[i - 1]:
+                if i > 0 and A[i] == A[i - 1] and (not visited[i - 1]):
                     continue
-                if len(curr) > 0 and (int((curr[-1] + A[i]) ** 0.5))**2 != curr[-1] + A[i]:
+                if len(curr) > 0 and int((curr[-1] + A[i]) ** 0.5) ** 2 != curr[-1] + A[i]:
                     continue
                 visited[i] = True
                 dfs(curr + [A[i]])

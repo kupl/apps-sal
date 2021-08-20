@@ -8,5 +8,5 @@ def nok(a, b):
     return m // (a + b)
 
 
-n, k = list(map(int, input().split()))
-print(nok(n, 10**k))
+(n, k) = list(map(int, input().split()))
+print(nok(n, 10 ** k))

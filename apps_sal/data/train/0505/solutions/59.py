@@ -1,4 +1,5 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         counter = 0
         newS = ''
@@ -10,7 +11,6 @@ class Solution:
                     continue
                 counter -= 1
             newS += c
-
         result = ''
         for c in newS[::-1]:
             if c == '(' and counter > 0:

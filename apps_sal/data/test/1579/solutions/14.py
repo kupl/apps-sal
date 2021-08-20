@@ -6,35 +6,42 @@ import math
 import itertools
 import string
 import queue
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 INF = float('inf')
-mod = 10**9 + 7
-eps = 10**-7
-def inpl(): return list(map(int, input().split()))
-def inpl_str(): return list(input().split())
+mod = 10 ** 9 + 7
+eps = 10 ** (-7)
+
+
+def inpl():
+    return list(map(int, input().split()))
+
+
+def inpl_str():
+    return list(input().split())
 
 
 class PotentialUnionFind:
-    def __init__(self, N):  # 頂点数 N
-        self.table = [i for i in range(N)]    # 親 table[x] == x で根
-        self.rank = [1 for i in range(N)]    # 木の長さ
-        self.size = [1 for i in range(N)]    # 集合のサイズ
+
+    def __init__(self, N):
+        self.table = [i for i in range(N)]
+        self.rank = [1 for i in range(N)]
+        self.size = [1 for i in range(N)]
         self.diffweight = [0 for i in range(N)]
 
-    def Find(self, x):  # xの根を返す
+    def Find(self, x):
         if self.table[x] == x:
             return x
         else:
-            root = self.Find(self.table[x])  # 親の更新
+            root = self.Find(self.table[x])
             self.size[x] = self.size[self.table[x]]
             self.diffweight[x] += self.diffweight[self.table[x]]
             self.table[x] = root
             return root
 
-    def Unite(self, x, y, w):  # xとyをDiff(x,y)=W で繋げる
+    def Unite(self, x, y, w):
         w = w - self.Weight(y) + self.Weight(x)
-        x, y = self.Find(x), self.Find(y)
-        sx, sy = self.Size(x), self.Size(y)
+        (x, y) = (self.Find(x), self.Find(y))
+        (sx, sy) = (self.Size(x), self.Size(y))
         if x == y:
             return
         if self.rank[x] > self.rank[y]:
@@ -54,34 +61,30 @@ class PotentialUnionFind:
     def Size(self, x):
         return self.size[self.Find(x)]
 
-    def Weight(self, x):  # 重さ(根からの距離)
+    def Weight(self, x):
         self.Find(x)
         return self.diffweight[x]
 
-    def Diff(self, x, y):  # 繋がってる二点間距離
+    def Diff(self, x, y):
         return self.Weight(y) - self.Weight(x)
 
 
 N = int(input())
-PUF = PotentialUnionFind(10**5 + 1)
-
+PUF = PotentialUnionFind(10 ** 5 + 1)
 xys = [inpl() for _ in range(N)]
 xys.sort()
 tatedict = defaultdict(list)
 xx = set()
-for x, y in xys:
+for (x, y) in xys:
     tatedict[x].append(y)
     xx.add(x)
-
 for x in xx:
     s = tatedict[x][0]
     for t in tatedict[x]:
         if not PUF.Check(s, t):
             PUF.Unite(s, t, 1)
-
 ans = 0
 for x in xx:
     s = tatedict[x][0]
     ans += PUF.Size(s) - len(tatedict[x])
-
 print(ans)

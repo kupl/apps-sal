@@ -1,7 +1,8 @@
 class Node:
+
     def __init__(self, val):
         self.val = val
-        self.next, self.down = None, None
+        (self.next, self.down) = (None, None)
 
 
 class Skiplist:
@@ -46,12 +47,4 @@ class Skiplist:
             if node.__next__ and node.next.val == num:
                 node.next = node.next.__next__
                 found = True
-
         return found
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

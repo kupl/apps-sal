@@ -1,8 +1,7 @@
 t = int(input())
 for i in range(t):
-    n, k, d = map(int, input().split())
+    (n, k, d) = map(int, input().split())
     data = list(map(int, input().split()))
-
     dd = {}
     for j in range(d):
         elem = data[j]

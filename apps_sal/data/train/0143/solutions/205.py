@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        left, right = 0, 0
+        (left, right) = (0, 0)
         res = 0
         cnt = collections.defaultdict(int)
         while right < len(tree):

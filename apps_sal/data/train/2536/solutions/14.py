@@ -1,6 +1,5 @@
-
-
 class Solution:
+
     def findLucky(self, arr: List[int]) -> int:
         lucky = -1
         for elem in set(arr):

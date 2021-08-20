@@ -10,14 +10,14 @@ for _ in range(int(I())):
     a = list(map(int, I().split()))
     m = int(I())
     pl = sorted([list(map(int, I().split())) for _ in range(m)])
-    pln, mxs = [], 0
+    (pln, mxs) = ([], 0)
     for x in pl[::-1]:
         if x[1] > mxs:
             pln.append(x)
         mxs = max(mxs, x[1])
     pl = pln[::-1]
     m = len(pl)
-    p, s = list(map(list, list(zip(*pl))))
+    (p, s) = list(map(list, list(zip(*pl))))
     if max(a) > max(p):
         print(-1)
     else:

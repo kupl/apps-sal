@@ -4,9 +4,8 @@ for t in range(int(input())):
     for i in s:
         if i == 'A':
             stack.append(i)
+        elif stack:
+            stack.pop()
         else:
-            if stack:
-                stack.pop()
-            else:
-                stack.append(i)
+            stack.append(i)
     print(len(stack))

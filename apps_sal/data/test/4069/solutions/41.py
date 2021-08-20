@@ -1,6 +1,5 @@
 def main():
-    X, K, D = list(map(int, input().split()))
-
+    (X, K, D) = list(map(int, input().split()))
     X = abs(X)
     q = X // D
     if q >= K:
@@ -9,7 +8,6 @@ def main():
         X -= q * D
         if (K - q) % 2 == 1:
             X = abs(X - D)
-
     print(X)
     return
 

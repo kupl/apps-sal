@@ -1,11 +1,10 @@
-t, s, x = [int(i) for i in input().split()]
+(t, s, x) = [int(i) for i in input().split()]
 if x < t + s:
     if x == t:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
+elif (x - t) % s == 0 or (x - t) % s == 1:
+    print('YES')
 else:
-    if (x - t) % s == 0 or (x - t) % s == 1:
-        print("YES")
-    else:
-        print("NO")
+    print('NO')

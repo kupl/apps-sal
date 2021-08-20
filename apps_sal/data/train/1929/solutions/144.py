@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self):
         self.children = {}
         self.isend = False
@@ -31,8 +32,3 @@ class StreamChecker:
         node = self.root
         self.char_so_far.appendleft(letter)
         return self.check_word(self.char_so_far)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,5 +1,4 @@
 S = input()
-
 print(3)
 print('L 2')
 print('R 2')

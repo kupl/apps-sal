@@ -1,7 +1,6 @@
 N = int(input())
 A = list([0] * N)
 A = list(map(int, input().split()))
-
 cnt = 0
 flag = False
 while 1:

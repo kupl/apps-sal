@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 
 
@@ -15,7 +14,6 @@ def maximum_subarray_sum(arr, n, k):
 def kadane(a):
     best_sum = float('-inf')
     curr_sum = 0
-
     for i in a:
         curr_sum = curr_sum + i
         best_sum = max(best_sum, curr_sum)
@@ -27,9 +25,8 @@ def kadane(a):
 def __starting_point():
     input = sys.stdin.read()
     data = list(map(int, input.split()))
-    ans = []  # array to store maximum sum of all data sets
-    j = 1  # starting point of first data set
-
+    ans = []
+    j = 1
     t = data[0]
     for i in range(t):
         n = data[j]

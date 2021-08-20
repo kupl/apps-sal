@@ -5,13 +5,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-2
-2 5
--6 4
-7 -2
--1 -3
-'''
+'\n2\n2 5\n-6 4\n7 -2\n-1 -3\n'
 n = int(input())
 c = [0] * n
 for i in range(n):

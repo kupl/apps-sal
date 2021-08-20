@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:
         DP = [0 for _ in range(len(arr) + 1)]
         for i in range(1, len(DP)):

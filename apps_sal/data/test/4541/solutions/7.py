@@ -1,7 +1,6 @@
 c = str(input())
-boin = ["a", "e", "i", "o", "u"]
-
+boin = ['a', 'e', 'i', 'o', 'u']
 if c in boin:
-    print("vowel")
+    print('vowel')
 else:
-    print("consonant")
+    print('consonant')

@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if k % n:
         print(2)
     else:
@@ -10,7 +10,7 @@ for _ in range(t):
     ans = [[0 for i in range(n)] for j in range(n)]
     if k == 0:
         for i in ans:
-            print(*i, sep="")
+            print(*i, sep='')
         continue
     for i in range(n):
         for j in range(n):
@@ -22,4 +22,4 @@ for _ in range(t):
             continue
         break
     for i in ans:
-        print(*i, sep="")
+        print(*i, sep='')

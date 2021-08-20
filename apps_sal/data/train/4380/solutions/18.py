@@ -1,3 +1,3 @@
 def remove_chars(s):
     import re
-    return re.sub('[^a-zA-Z\s]', '', s)
+    return re.sub('[^a-zA-Z\\s]', '', s)

@@ -1,7 +1,5 @@
 s = input()
-
 len_s = len(s)
-
 current = 0
 mod_dict = dict()
 mod_dict[0] = 1
@@ -12,9 +10,7 @@ for i in range(len_s - 1, -1, -1):
         mod_dict[current] += 1
     else:
         mod_dict[current] = 1
-
 count = 0
 for key in mod_dict:
-    count += (mod_dict[key] * (mod_dict[key] - 1)) // 2
-
+    count += mod_dict[key] * (mod_dict[key] - 1) // 2
 print(count)

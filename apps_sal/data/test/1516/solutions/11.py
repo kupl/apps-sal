@@ -1,9 +1,8 @@
-# your code goes here
 a = int(input())
 li = list(map(int, input().split()))
 b = []
 zz = len(str(li[0]))
-op = [10**i for i in range(20)]
+op = [10 ** i for i in range(20)]
 r = 998244353
 for i in li:
     i = str(i)
@@ -17,7 +16,7 @@ for i in li:
         q += j * op[z1]
         z -= 2
         z1 -= 2
-    b.append((((p + q) % r) * (a)) % r)
+    b.append((p + q) % r * a % r)
 ans = 0
 for i in b:
     ans += i % r

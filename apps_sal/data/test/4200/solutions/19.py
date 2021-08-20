@@ -1,7 +1,7 @@
 def readinput():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    return n, m, a
+    return (n, m, a)
 
 
 def main(n, m, a):
@@ -14,7 +14,7 @@ def main(n, m, a):
 
 
 def __starting_point():
-    n, m, a = readinput()
+    (n, m, a) = readinput()
     ans = main(n, m, a)
     print(ans)
 

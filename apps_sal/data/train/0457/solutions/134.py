@@ -10,6 +10,7 @@ def rec(coins, amount, used_coins, res):
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         res = [math.inf]
         rec(sorted(coins), amount, 0, res)

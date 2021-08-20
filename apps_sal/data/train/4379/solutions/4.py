@@ -1,1 +1,2 @@
-def combine_names(*ns): return ' '.join(ns)
+def combine_names(*ns):
+    return ' '.join(ns)

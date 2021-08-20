@@ -1,4 +1,5 @@
 class Solution:
+
     def largestOverlap(self, img1: List[List[int]], img2: List[List[int]]) -> int:
         N = len(img1)
         if N == 1:
@@ -14,7 +15,7 @@ class Solution:
 
         def slide_and_count(slide):
             res = 0
-            left, down = slide
+            (left, down) = slide
             for i in range(min(N, N - left)):
                 i2 = i + left
                 for j in range(min(N, N - down)):
@@ -26,8 +27,6 @@ class Solution:
                             res += 1
                     except:
                         pass
-
             print(slide, res)
             return res
-
-        return max(slide_and_count(slide) for slide in sliders)
+        return max((slide_and_count(slide) for slide in sliders))

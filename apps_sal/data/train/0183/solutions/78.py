@@ -1,6 +1,5 @@
 def maxsub(a, b):
     dp = [[0 for x in range(len(b))] for x in range(len(a))]
-
     for i in range(len(a)):
         for j in range(len(b)):
             dp[i][j] = a[i] * b[j]
@@ -14,5 +13,6 @@ def maxsub(a, b):
 
 
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
         return maxsub(nums1, nums2)

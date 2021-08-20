@@ -1,4 +1,5 @@
 class Solution:
+
     def largestPerimeter(self, A: List[int]) -> int:
 
         def formT(a, b, c):
@@ -9,11 +10,8 @@ class Solution:
             if not a + c > b:
                 return False
             return True
-
         sides = sorted(A)
-
         for i in range(len(sides) - 3, -1, -1):
             if formT(sides[i], sides[i + 1], sides[i + 2]):
                 return sides[i] + sides[i + 1] + sides[i + 2]
-
         return 0

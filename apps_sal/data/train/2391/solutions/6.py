@@ -3,33 +3,27 @@ for _ in range(t):
     n = int(input())
     l = list(map(lambda x: int(x) - 1, input().split()))
     out = []
-
     ll = sorted([(l[i], i) for i in range(n)])
-
     swap = (-1, -1)
     for i in range(n - 1):
         if ll[i][0] == ll[i + 1][0]:
             swap = (ll[i][1], ll[i + 1][1])
-
     newl = [0] * n
     for i in range(n):
         newl[ll[i][1]] = i
-
     l = newl
-
     swapN = 0
     for i in range(n):
         for j in range(i + 1, n):
             if l[i] > l[j]:
                 swapN += 1
-
     if swapN & 1:
-        l[swap[0]], l[swap[1]] = l[swap[1]], l[swap[0]]
+        (l[swap[0]], l[swap[1]]) = (l[swap[1]], l[swap[0]])
 
-    def shift(i): out.append(i + 1); l[i], l[i + 1], l[i + 2] = l[i + 2], l[i], l[i + 1]
-
-    works, done = True, False
-
+    def shift(i):
+        out.append(i + 1)
+        (l[i], l[i + 1], l[i + 2]) = (l[i + 2], l[i], l[i + 1])
+    (works, done) = (True, False)
     while not done:
         for i in range(n):
             if l[i] != i:

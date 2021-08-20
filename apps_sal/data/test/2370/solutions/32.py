@@ -15,7 +15,7 @@ def main():
         for j in range(i + 1, n):
             b = p[i][j]
             if b != np.sort(p[i] + p[j])[2]:
-                d[i][j], d[j][i] = b, b
+                (d[i][j], d[j][i]) = (b, b)
                 ans += b
     s = sp.shortest_path(d)
     if (s == p).all():

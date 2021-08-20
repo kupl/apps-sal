@@ -13,9 +13,9 @@ for i in range(0, t):
     sum2 = 0
     for b in l2:
         sum2 += b
-    if(sum1 < sum2):
-        print("Alice")
-    elif(sum1 > sum2):
-        print("Bob")
+    if sum1 < sum2:
+        print('Alice')
+    elif sum1 > sum2:
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

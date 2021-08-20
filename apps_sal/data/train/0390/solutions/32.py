@@ -16,5 +16,6 @@ def is_winning(n):
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         return is_winning(n)

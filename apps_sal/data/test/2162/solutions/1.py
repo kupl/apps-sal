@@ -16,26 +16,16 @@ def solve(K, A):
     for i in range(3):
         for a in A[i]:
             loc[a - 1] = i
-
     D = [0, 0, 0]
     for i in loc:
         if i == 0:
-            D = [D[0],
-                 min(D[0] + 1, D[1] + 1),
-                 min(D[0] + 1, D[1] + 1, D[2] + 1)]
+            D = [D[0], min(D[0] + 1, D[1] + 1), min(D[0] + 1, D[1] + 1, D[2] + 1)]
         elif i == 1:
-            D = [D[0] + 1,
-                 min(D[0], D[1]),
-                 min(D[0] + 1, D[1] + 1, D[2] + 1)]
+            D = [D[0] + 1, min(D[0], D[1]), min(D[0] + 1, D[1] + 1, D[2] + 1)]
         else:
-            D = [D[0] + 1,
-                 min(D[0] + 1, D[1] + 1),
-                 min(D[0], D[1], D[2])]
+            D = [D[0] + 1, min(D[0] + 1, D[1] + 1), min(D[0], D[1], D[2])]
     return min(D)
 
-
-###############################################################################
-# AUXILIARY FUNCTIONS
 
 DEBUG = 'DEBUG' in os.environ
 

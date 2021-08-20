@@ -1,24 +1,20 @@
 ans = [[False for _ in range(1000)] for _ in range(1000)]
 for _ in range(int(input())):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     count = 0
     for i in range(0, r * c):
         val = 0
         for x in range(0, r * c, i + 1):
             a = x // r
             b = x % r
-
-            # ans.add((a,b))
             if not ans[a][b]:
                 ans[a][b] = True
                 val += 1
             a = x % c
             b = x // c
-            # ans.add((a,b))
             if not ans[a][b]:
                 ans[a][b] = True
                 val += 1
-
         for x in range(0, r * c, i + 1):
             a = x // r
             b = x % r
@@ -26,5 +22,4 @@ for _ in range(int(input())):
             a = x % c
             b = x // c
             ans[a][b] = False
-
-        print(val, end=" ")
+        print(val, end=' ')

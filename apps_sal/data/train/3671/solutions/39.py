@@ -10,4 +10,4 @@ def problem(a):
     if isDigit(a):
         return int(a * 50 + 6)
     else:
-        return "Error"
+        return 'Error'

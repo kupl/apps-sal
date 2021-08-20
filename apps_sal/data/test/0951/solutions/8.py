@@ -7,7 +7,7 @@ n.sort()
 sumval = sum(n)
 counter = 0
 for val in n:
-    if(sumval < k):
+    if sumval < k:
         sumval += 9 - val
         counter += 1
     else:

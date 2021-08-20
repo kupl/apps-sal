@@ -1,9 +1,8 @@
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 k = []
 f = []
 for i in range(m):
-    u, p = list(map(int, input().split()))
+    (u, p) = list(map(int, input().split()))
     k.append(u)
     f.append(p)
 
@@ -17,7 +16,7 @@ def ok(x):
 
 a = []
 for i in range(1, 101):
-    if(ok(i)):
+    if ok(i):
         a.append((n - 1) // i + 1)
 if len(list(set(a))) == 1:
     print(a[0])

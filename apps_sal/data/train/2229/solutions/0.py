@@ -7,7 +7,6 @@ def sub(a, s):
             pa += 1
         else:
             pa += 1
-
     return ps == len(s)
 
 
@@ -38,11 +37,9 @@ def main():
     t = input().strip()
     p = input().strip()
     ord_ar = [0] * len(t)
-
     seq = list(map(int, input().strip().split()))
-    for i, x in enumerate(seq):
+    for (i, x) in enumerate(seq):
         ord_ar[x - 1] = i
-
     ans = bin_s(0, len(t), lambda n: check(t, p, ord_ar, n))
     print(ans)
 

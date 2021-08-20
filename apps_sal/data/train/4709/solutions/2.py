@@ -1,1 +1,2 @@
-def sequence(n): return int(bin(n)[2:], 3)
+def sequence(n):
+    return int(bin(n)[2:], 3)

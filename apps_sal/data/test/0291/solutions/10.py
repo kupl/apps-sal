@@ -1,7 +1,7 @@
-'''input
+"""input
 1 1
-'''
-a, b = map(int, input().split())
+"""
+(a, b) = map(int, input().split())
 k = 0
 while a <= b:
     a *= 3

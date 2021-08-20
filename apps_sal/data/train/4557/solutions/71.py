@@ -6,4 +6,4 @@ def row_weights(array):
             first.append(array[i])
         else:
             second.append(array[i])
-    return sum(first), sum(second)
+    return (sum(first), sum(second))

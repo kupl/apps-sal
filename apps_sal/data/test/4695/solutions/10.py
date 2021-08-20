@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 s1 = [1, 3, 5, 7, 8, 10, 12]
 s2 = [4, 6, 9, 11]
 s3 = [2]

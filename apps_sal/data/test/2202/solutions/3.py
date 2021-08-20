@@ -1,4 +1,4 @@
-N, P = list(map(int, input().split()))
+(N, P) = list(map(int, input().split()))
 src = list(map(int, input().split()))
 K = sum(src) % P
 ans = tmp = 0

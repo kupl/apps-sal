@@ -1,4 +1,3 @@
-# cook your dish here
 def solve(a, b):
     for i in a:
         for j in b:
@@ -11,7 +10,7 @@ t = int(input())
 for _ in range(0, t):
     a = input()
     b = input()
-    if(solve(a, b)):
-        print("Yes")
+    if solve(a, b):
+        print('Yes')
     else:
-        print("No")
+        print('No')

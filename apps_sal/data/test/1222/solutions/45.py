@@ -4,7 +4,6 @@ num = []
 
 
 def dfs(lun):
-    # print(lun)
     num.append(lun)
     if lun > 3234566667:
         return
@@ -17,5 +16,4 @@ def dfs(lun):
 for i in range(1, 10):
     dfs(i)
 num.sort()
-print((num[k - 1]))
-# print(num[0:k])
+print(num[k - 1])

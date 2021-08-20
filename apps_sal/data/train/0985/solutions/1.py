@@ -1,11 +1,9 @@
-#author : dokueki
-
 import sys
 
 
 def IOE():
-    sys.stdin = open("input.txt", "r")
-    sys.stdout = open("output.txt", "w")
+    sys.stdin = open('input.txt', 'r')
+    sys.stdout = open('output.txt', 'w')
 
 
 def dp(a, n):
@@ -24,7 +22,6 @@ def main():
     a = []
     for _ in range(n):
         a.append(int(sys.stdin.readline()))
-    # print(a)
     print(dp(a, n))
 
 

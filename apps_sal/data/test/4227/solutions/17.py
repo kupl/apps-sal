@@ -11,15 +11,11 @@ def dfs(g, v, depth):
     return paths
 
 
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 g = [[] * (n + 1) for _ in range(n + 1)]
-
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     g[a].append(b)
     g[b].append(a)
-
 seen = [False] * (n + 1)
-
 print(dfs(g, 1, 1))

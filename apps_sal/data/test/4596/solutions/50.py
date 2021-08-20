@@ -13,5 +13,4 @@ def cnt(x):
 ans = 30
 for a in A:
     ans = min(ans, cnt(a))
-
 print(ans)

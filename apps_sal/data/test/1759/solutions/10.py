@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 s = [0] * n
 for i in range(m):
     a = list(map(int, input().split()))

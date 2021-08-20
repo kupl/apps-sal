@@ -8,11 +8,10 @@ for i in range(1, n + 1):
             pos = 0
         elif pos == 0:
             pos = 1
-    else:
-        if pos == 2:
-            pos = 1
-        elif pos == 1:
-            pos = 2
+    elif pos == 2:
+        pos = 1
+    elif pos == 1:
+        pos = 2
 if pos == x:
     print(0)
 else:
@@ -23,11 +22,10 @@ else:
                 pos = 0
             elif pos == 0:
                 pos = 1
-        else:
-            if pos == 2:
-                pos = 1
-            elif pos == 1:
-                pos = 2
+        elif pos == 2:
+            pos = 1
+        elif pos == 1:
+            pos = 2
     if pos == x:
         print(1)
     else:

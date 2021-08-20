@@ -1,4 +1,3 @@
-
 def dp(a, i, control):
     if i >= len(a):
         return 0
@@ -14,7 +13,7 @@ def dp(a, i, control):
 
 
 n = int(input())
-dp_list = [list(-1 for i in range(n)), list(-1 for i in range(n))]
-a = list(map(int, input().split(" ")))
+dp_list = [list((-1 for i in range(n))), list((-1 for i in range(n)))]
+a = list(map(int, input().split(' ')))
 res = dp(a, 0, True)
-print("%s %s" % (sum(a) - res, res))
+print('%s %s' % (sum(a) - res, res))

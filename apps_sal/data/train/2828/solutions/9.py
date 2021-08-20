@@ -10,4 +10,4 @@ def power_law(x1y1, x2y2, x3):
     y = y2 / y1
     if x1 == x2:
         return y2
-    return round(y1 * y**(math.log(x3 / x1) / math.log(x)))
+    return round(y1 * y ** (math.log(x3 / x1) / math.log(x)))

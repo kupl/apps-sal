@@ -6,7 +6,7 @@ for i in range(q):
     r = 100000
     b = -100000
     for j in range(n):
-        x, y, f1, f2, f3, f4 = list(map(int, input().split()))
+        (x, y, f1, f2, f3, f4) = list(map(int, input().split()))
         if f1 == 0:
             if l <= x:
                 l = x
@@ -19,7 +19,7 @@ for i in range(q):
         if f4 == 0:
             if b <= y:
                 b = y
-    cx, cy = None, None
+    (cx, cy) = (None, None)
     ans = 1
     if l <= r:
         cx = l

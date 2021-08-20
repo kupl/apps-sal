@@ -1,8 +1,11 @@
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+MOD = 10 ** 9 + 7
 
 
-n, m = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n, m) = I()
 l = I()
 l.sort()
 ans = MOD
@@ -21,5 +24,4 @@ for i in range(n):
         d[k] += i
         if o[k] == m:
             ans = min(ans, d[k])
-
 print(ans)

@@ -11,7 +11,7 @@ AY = []
 BX = []
 BY = []
 for i in range(4):
-    x, y = convert(b[2 * i], b[2 * i + 1])
+    (x, y) = convert(b[2 * i], b[2 * i + 1])
     if x not in BX:
         BX.append(x)
     if y not in BY:
@@ -26,8 +26,8 @@ BX.sort()
 BY.sort()
 for i in range(-111, 111):
     for j in range(-111, 111):
-        I, J = convert(i, j)
-        if AX[0] <= i <= AX[1] and BX[0] <= I <= BX[1] and AY[0] <= j <= AY[1] and BY[0] <= J <= BY[1]:
-            print("YES")
+        (I, J) = convert(i, j)
+        if AX[0] <= i <= AX[1] and BX[0] <= I <= BX[1] and (AY[0] <= j <= AY[1]) and (BY[0] <= J <= BY[1]):
+            print('YES')
             quit()
-print("NO")
+print('NO')

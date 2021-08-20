@@ -1,10 +1,10 @@
 import sys
 sys.setrecursionlimit(10000000)
-n, k = list(map(int, input().split()))
-CONST = 10**9 + 7
+(n, k) = list(map(int, input().split()))
+CONST = 10 ** 9 + 7
 path = {i: list() for i in range(n)}
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     path[a - 1].append(b - 1)
     path[b - 1].append(a - 1)
 used = [0] * n
@@ -27,4 +27,4 @@ def bfs(pos, parent):
     return res % CONST
 
 
-print((bfs(0, 0)))
+print(bfs(0, 0))

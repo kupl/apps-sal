@@ -3,8 +3,6 @@ def string_counter(string, char):
     for i in string:
         if i == char:
             count += 1
-
         else:
             pass
-
     return count

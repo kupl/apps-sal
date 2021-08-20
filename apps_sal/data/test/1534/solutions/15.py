@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 S = input()
 N = len(S)
 T = [[0] * (N + 1) for _ in range(3)]

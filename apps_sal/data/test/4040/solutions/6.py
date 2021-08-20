@@ -1,4 +1,4 @@
-n, m, d = [int(x) for x in input().split(' ')]
+(n, m, d) = [int(x) for x in input().split(' ')]
 list1 = [int(x) for x in input().split(' ')]
 x = (m + 1) * (d - 1) + sum(list1)
 list2 = []
@@ -15,8 +15,8 @@ else:
                 list2.extend(['0'] * (d - 1))
                 a += 1
                 b += 1
-                n0 -= (d - 1)
-            elif 0 < n0 < (d - 1):
+                n0 -= d - 1
+            elif 0 < n0 < d - 1:
                 list2.extend(['0'] * n0)
                 a += 1
                 b += 1

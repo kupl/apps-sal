@@ -1,7 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-cnt, temp = 0, a[0]
-head, tail = 1, 0
+(cnt, temp) = (0, a[0])
+(head, tail) = (1, 0)
 while tail < n:
     if head < n:
         if temp + a[head] < k:

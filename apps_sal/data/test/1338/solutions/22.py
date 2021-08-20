@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 s = 0
 flag = False
 k = 0
@@ -15,13 +15,13 @@ for j in range(n):
     flag = False
     s = 0
     for i in range(n):
-        if s < m <= s + 2**(n - i - 2 - k):
+        if s < m <= s + 2 ** (n - i - 2 - k):
             print(i + 1 + k, end=' ')
             myset.add(i + 1 + k)
             k = i + 1 + k
             flag = True
             break
-        s += (2**(n - i - 2 - k))
+        s += 2 ** (n - i - 2 - k)
     if flag == False:
         print(n, end=' ')
         myset.add(n)

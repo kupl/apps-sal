@@ -8,8 +8,8 @@ for i in range(n):
         mins = min(mins, tmp)
 if sum(s) % 10 == 0:
     if mins == 1000:
-        print((0))
+        print(0)
     else:
-        print((sum(s) - mins))
+        print(sum(s) - mins)
 else:
-    print((sum(s)))
+    print(sum(s))

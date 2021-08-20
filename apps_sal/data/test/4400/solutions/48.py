@@ -1,5 +1,4 @@
 s = input()
-
 if s == 'SSS':
     print(0)
 if s == 'RRR':

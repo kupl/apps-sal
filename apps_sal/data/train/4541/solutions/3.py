@@ -4,5 +4,4 @@ def transform(a):
 
 
 def array_operations(a, k):
-    # After the first iteration, the the array alternates between two patterns
     return transform(a) if k % 2 == 1 else transform(transform(a))

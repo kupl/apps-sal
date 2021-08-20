@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    A, B, C, D = read_ints()
+    (A, B, C, D) = read_ints()
     ans = solve(A, B, C, D)
     if ans:
         print('YES')
@@ -20,12 +20,10 @@ def solve(A, B, C, D):
             ans = build([A, B, C, D], S, l, r)
             if ans:
                 return ans
-
     return None
 
 
 def build(A, S, l, r):
-    #dprint('l', l, 'r', r)
     if A[l] == 0:
         return None
     ans = [l]
@@ -33,7 +31,6 @@ def build(A, S, l, r):
     i = l
     S -= 1
     while S > 0:
-        # dprint(ans)
         if i == 0:
             j = 1
         elif i == 1:
@@ -56,18 +53,14 @@ def build(A, S, l, r):
                 j = 3
         else:
             j = 2
-
         A[j] -= 1
         S -= 1
         ans.append(j)
         if A[j] < 0:
             return None
         i = j
-
     return ans
 
-
-###############################################################################
 
 DEBUG = 'DEBUG' in os.environ
 

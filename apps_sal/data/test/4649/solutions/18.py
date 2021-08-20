@@ -1,6 +1,9 @@
 from math import ceil
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def mismatch(s1, s2):
@@ -13,7 +16,7 @@ def mismatch(s1, s2):
 
 T = int(input())
 for _ in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     check = ''
     for i in range(ceil((k + 2) / 3)):
         check += 'RGB'

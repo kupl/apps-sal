@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 cost = [0, 1, 2, 0, 2, 1, 0]
 dcost = [3, 2, 2]
 weeks = min(a // 3, b // 2, c // 2)

@@ -5,7 +5,7 @@ def check(x, s):
     return x - k >= s
 
 
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 l = 0
 r = n
 while r - l > 1:

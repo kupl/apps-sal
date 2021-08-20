@@ -1,9 +1,8 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 h = list(map(int, input().split()))
-
 index = 0
-ans = 10**10
+ans = 10 ** 10
 cnt = 0
 for i in range(n):
     temp = t - h[i] * 0.006

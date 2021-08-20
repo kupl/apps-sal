@@ -1,6 +1,5 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [x for x in input().split()]
-
 counter = 0
 r = []
 pred = a[0]
@@ -13,7 +12,6 @@ for i in range(1, n):
     pred = a[i]
 if counter != 0:
     r.append(counter + 1)
-
 if r != []:
     print(max(r))
 else:

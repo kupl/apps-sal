@@ -1,5 +1,5 @@
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     w = list(map(int, input().split()))
     if k <= n // 2:
         w.sort()

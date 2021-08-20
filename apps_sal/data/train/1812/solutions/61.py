@@ -15,7 +15,6 @@ class MajorityChecker:
         self.rank = sorted(list(self.count.keys()), key=lambda x: self.count[x], reverse=True)
 
     def query(self, left: int, right: int, threshold: int) -> int:
-
         if right - left < 40:
             dp = defaultdict(int)
             for i in range(left, right + 1):
@@ -35,8 +34,3 @@ class MajorityChecker:
                 else:
                     break
             return -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

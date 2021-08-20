@@ -5,8 +5,8 @@ mx = max(a)
 if mx < 0:
     use[a.index(mx)] = True
 else:
-    evn = sum(max(i, 0) for i in a[::2])
-    odd = sum(max(i, 0) for i in a[1::2])
+    evn = sum((max(i, 0) for i in a[::2]))
+    odd = sum((max(i, 0) for i in a[1::2]))
     mx = max(evn, odd)
     for i in range(int(evn < odd), n, 2):
         if a[i] > 0:

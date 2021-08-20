@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         start_loc = locations[start]
         finish_loc = locations[finish]
@@ -12,8 +13,7 @@ class Solution:
             if abs(locations[cur_pos] - locations[finish_pos]) > left_fuel:
                 return 0
             elif abs(locations[cur_pos] - locations[finish_pos]) == left_fuel:
-                return (2 ** (abs(cur_pos - finish_pos) - 1)) % (10 ** 9 + 7)
-
+                return 2 ** (abs(cur_pos - finish_pos) - 1) % (10 ** 9 + 7)
             res = 1 if cur_pos != finish_pos else 0
             next_pos = cur_pos
             while next_pos - 1 >= 0:
@@ -31,7 +31,5 @@ class Solution:
                     res += next_res
                 else:
                     break
-
             return res % (10 ** 9 + 7)
-
         return dp(start_pos, fuel) if start_pos != finish_pos else (dp(start_pos, fuel) + 1) % (10 ** 9 + 7)

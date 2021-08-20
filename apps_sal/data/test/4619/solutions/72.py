@@ -1,7 +1,7 @@
-W, H, N = map(int, input().split())
+(W, H, N) = map(int, input().split())
 values = [[0], [W], [0], [H]]
 for i in range(N):
-    x, y, a = (map(int, input().split()))
+    (x, y, a) = map(int, input().split())
     if a <= 2:
         values[a - 1].append(x)
     elif a >= 3:

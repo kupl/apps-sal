@@ -1,4 +1,3 @@
-#from collections import defaultdict
 from collections import Counter
 
 
@@ -12,14 +11,12 @@ class Solution:
         return tot
 
     def count_squares(self, nums):
-        c = Counter([elem**2 for elem in nums])
+        c = Counter([elem ** 2 for elem in nums])
         return c
 
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         c1 = self.count_squares(nums1)
         c2 = self.count_squares(nums2)
-
         sol1 = self.check_square(c1, nums2)
         sol2 = self.check_square(c2, nums1)
-
         return sol1 + sol2

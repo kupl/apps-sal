@@ -1,6 +1,5 @@
 from math import sqrt
-
-r, h = list(map(int, input().split()))
+(r, h) = list(map(int, input().split()))
 count = h // r * 2
 h -= h // r * r
 if h >= sqrt(3) / 2 * r:

@@ -1,5 +1,5 @@
-mod = int(1e9 + 7)
-n, m = map(int, input().split())
+mod = int(1000000000.0 + 7)
+(n, m) = map(int, input().split())
 f = [[0 for i in range(60)] for j in range(60)]
 g = [[0 for i in range(60)] for j in range(60)]
 s = [[0 for i in range(60)] for j in range(60)]
@@ -21,7 +21,6 @@ def pow(x, exp):
 
 for i in range(1, n + 1):
     inv.append(pow(i, mod - 2))
-
 for node in range(1, n + 1):
     for cut in range(1, n + 1):
         tmp = 0
@@ -35,7 +34,7 @@ for node in range(1, n + 1):
                     tmp = (tmp + f[ln][lc] * f[node - ln - 1][cut - 1]) % mod
         cnt = 1
         if tmp != 0:
-            cn, cc = 0, 0
+            (cn, cc) = (0, 0)
             for i in range(1, n + 1):
                 cn += node
                 cc += cut
@@ -52,7 +51,6 @@ for node in range(1, n + 1):
                 for j in range(n + 1):
                     f[i][j] = (f[i][j] + g[i][j]) % mod
                     g[i][j] = 0
-
     for cut in range(n, -1, -1):
         s[node][cut] = (s[node][cut + 1] + f[node][cut]) % mod
 print(f[n][m - 1])

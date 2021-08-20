@@ -6,9 +6,9 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-t, = rl()
+(t,) = rl()
 for _ in range(t):
-    n, = rl()
+    (n,) = rl()
     p = rl()
     s = [p[0]]
     for i in range(1, n - 1):

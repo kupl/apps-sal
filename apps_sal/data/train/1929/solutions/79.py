@@ -1,10 +1,10 @@
 from typing import List
-
 root = '@'
 marker = '$'
 
 
 class TrieNode:
+
     def __init__(self, letter):
         self.letter = letter
         self.children = dict()
@@ -16,13 +16,11 @@ class StreamChecker:
         self.spelt = False
         self.root = TrieNode(root)
         self.pointers = [self.root]
-
         for word in words:
             self.trie_insert(word)
 
     def trie_insert(self, word: str):
         current = self.root
-
         for letter in word:
             if letter in current.children:
                 current = current.children[letter]
@@ -41,6 +39,5 @@ class StreamChecker:
                 if marker in advanced_ptr.children:
                     self.spelt = True
                 new_ptrs.append(advanced_ptr)
-
         self.pointers = new_ptrs + [self.root]
         return self.spelt

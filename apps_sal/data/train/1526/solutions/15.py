@@ -8,37 +8,17 @@ def log2(x):
     return math.log(x, 2)
 
 
-MAX = log2(1e7)
-MIN = log2(1e-7)
-
+MAX = log2(10000000.0)
+MIN = log2(1e-07)
 start_time = time.time()
-
 vowels = 'aeiou'
-v = {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1}
+v = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1}
 abets = string.ascii_lowercase
-
 tcs = int(input())
-
 for test in range(tcs):
     l = int(input())
     a = []
     b = []
-    # for _ in range(l):
-    #     flag = False
-    #     s = input()
-    #     for i in range(len(s)-2):
-    #         if s[i] not in vowels:
-    #             if s[i+1] not in vowels or s[i+2] not in vowels:
-    #                 flag = True
-    #                 break
-    #         else:
-    #             if s[i+1] not in vowels and s[i+2] not in vowels:
-    #                 flag = True
-    #                 break
-    #     if flag:
-    #         b.append(s)
-    #     else:
-    #         a.append(s)
     for wer in range(l):
         s = input()
         n = len(s)
@@ -59,7 +39,6 @@ for test in range(tcs):
             a.append(s)
     alen = len(a)
     blen = len(b)
-    # ################ Alice ##############
     achar_dict = {}
     atotal_dict = {}
     for recipe in a:
@@ -75,7 +54,6 @@ for test in range(tcs):
                 achar_dict[ch] += 1
             else:
                 achar_dict[ch] = 1
-    ################ Bob ##############
     bchar_dict = {}
     btotal_dict = {}
     for recipe in b:
@@ -91,20 +69,14 @@ for test in range(tcs):
                 bchar_dict[ch] += 1
             else:
                 bchar_dict[ch] = 1
-    ################## Calculation ##################
     result = 0
     for i in achar_dict:
         result += log2(achar_dict[i]) - alen * log2(atotal_dict[i])
-
     for i in bchar_dict:
         result += blen * log2(btotal_dict[i]) - log2(bchar_dict[i])
-
     if result > MAX:
         print('Infinity')
     elif result < MIN:
         print(0)
     else:
-        print(2**result)
-        # print('%.7f' % 10**result)
-
-# print(time.time() - start_time)
+        print(2 ** result)

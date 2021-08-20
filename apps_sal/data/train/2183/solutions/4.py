@@ -1,10 +1,8 @@
 from collections import defaultdict as dc
-'''from collections import deque as dq
-from bisect import bisect_left,bisect_right,insort_left'''
+'from collections import deque as dq\nfrom bisect import bisect_left,bisect_right,insort_left'
 import sys
 import math
-# define of c++ as inl=input()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def bs(a, x):
@@ -20,7 +18,7 @@ def bs(a, b):
     r = b + 1
     x = b
     ans = 0
-    while(l < r):
+    while l < r:
         mid = (l + r) // 2
         if x | mid > ans:
             ans = x | mid
@@ -32,7 +30,7 @@ def bs(a, b):
 
 def digit(n):
     a = []
-    while(n > 0):
+    while n > 0:
         a.append(n % 10)
         n = n // 10
     return a
@@ -51,7 +49,7 @@ def line():
 def ans(a, p, z, t):
     q = []
     for i in range(len(a)):
-        if p[a[i]] == t and z > 0 and p[a[i][::-1]] == 0:
+        if p[a[i]] == t and z > 0 and (p[a[i][::-1]] == 0):
             q.append(i + 1)
             z = z - 1
     return q
@@ -64,7 +62,7 @@ for i in range(inp()):
     p = n
     for i in range(1, x + 1):
         if s[i - 1] != '1':
-            p = (p % mod + ((p - i) % mod * (int(s[i - 1]) - 1) % mod) % mod) % mod
+            p = (p % mod + (p - i) % mod * (int(s[i - 1]) - 1) % mod % mod) % mod
             if len(s) < x:
                 z = s[i:]
                 s = s + z * (int(s[i - 1]) - 1)

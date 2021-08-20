@@ -7,7 +7,7 @@ b = list(map(int, input().split()))
 i = n - 1
 j = n - 1
 d = {}
-while (i >= 0):
+while i >= 0:
     if a[i] == b[j]:
         i -= 1
         j -= 1
@@ -18,5 +18,4 @@ while (i >= 0):
             ans += 1
         else:
             j -= 1
-
 print(ans)

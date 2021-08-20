@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.p = list(range(n))
         self.rank = [1] * n
@@ -23,6 +24,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         res = 0
@@ -30,14 +32,12 @@ class Solution:
 
         def dis(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
-
-        edges = sorted((dis(i, j), i, j) for i in range(n) for j in range(i + 1, n))
+        edges = sorted(((dis(i, j), i, j) for i in range(n) for j in range(i + 1, n)))
         connected = 0
-        for d, i, j in edges:
+        for (d, i, j) in edges:
             if connected == n:
                 return res
             if uf.union(i, j):
                 connected += 1
                 res += d
-
         return res

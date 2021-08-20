@@ -1,5 +1,5 @@
 N = int(input())
-L1, L2 = 2, 1
+(L1, L2) = (2, 1)
 L3 = 1
 x = 1
 for i in range(N - 1):

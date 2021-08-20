@@ -1,7 +1,9 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
 
         class UniqueCounter(object):
+
             def __init__(self):
                 self.non_zero = 0
                 self.counts = collections.defaultdict(int)
@@ -32,5 +34,4 @@ class Solution:
                 answer += j - i
                 uc.remove(A[i])
             return answer
-
         return subarrays_with_max_K(A, K) - subarrays_with_max_K(A, K - 1)

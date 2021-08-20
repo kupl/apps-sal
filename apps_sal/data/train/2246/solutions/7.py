@@ -12,11 +12,10 @@ def process(n, k, X, a, C):
             while k < X[i]:
                 res += heapq.heappop(A)
                 k += a
-
     return res
 
 
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 X = [int(x) for x in input().split()]
 a = int(input())
 C = [int(x) for x in input().split()]

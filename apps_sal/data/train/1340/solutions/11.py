@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
@@ -8,7 +7,6 @@ for _ in range(int(input())):
         if l[i] >= 0:
             t_sum += l[i]
             count += 1
-
     print(t_sum)
     if count == n or count == 0:
         print(0)

@@ -1,8 +1,8 @@
-n, p, k = map(int, input().split())
+(n, p, k) = map(int, input().split())
 a = list(map(int, input().split()))
 d = {}
 for x in a:
-    v = (x**4 - k * x) % p
+    v = (x ** 4 - k * x) % p
     if v < p:
         v += p
     if v not in d:

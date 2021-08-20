@@ -1,14 +1,12 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 Query = []
 for _ in range(Q):
     N = int(input())
     A = list(map(int, input().split()))
     Query.append((N, A))
-
-for N, A in Query:
+for (N, A) in Query:
     A.sort()
     l = 0
     r = N - 1
@@ -20,4 +18,4 @@ for N, A in Query:
         else:
             ans.append(str(A[r]))
             r -= 1
-    print(" ".join(ans[::-1]))
+    print(' '.join(ans[::-1]))

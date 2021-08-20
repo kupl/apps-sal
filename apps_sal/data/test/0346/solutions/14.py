@@ -5,13 +5,13 @@ MAX = 10000000
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     quest = list(map(int, input().split()))
     auctindex = set(map(int, input().split()))
     aucts = list()
     firstsum = 0
-    for i, q in enumerate(quest):
-        if (i + 1) not in auctindex:
+    for (i, q) in enumerate(quest):
+        if i + 1 not in auctindex:
             firstsum += q
         else:
             aucts.append(q)
@@ -22,5 +22,5 @@ def solve():
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 solve()

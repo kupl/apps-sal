@@ -6,4 +6,4 @@ def reverse_alternate(string):
             res.append(arr[arr.index(i)][::-1])
         else:
             res.append(arr[arr.index(i)])
-    return " ".join(res)
+    return ' '.join(res)

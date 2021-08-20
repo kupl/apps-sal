@@ -1,4 +1,4 @@
-l, r = [int(i) for i in input().split()]
+(l, r) = [int(i) for i in input().split()]
 for x in range(l, r + 1):
     if len(set(str(x))) == len(str(x)):
         print(x)

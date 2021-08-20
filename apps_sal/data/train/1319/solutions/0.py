@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = []
 leng = 0
 for i in range(n + m):
@@ -10,7 +10,6 @@ for i in range(n + m):
             if l[j] > cm:
                 cm = l[j]
                 mi = j
-
         print(cm)
         l[mi] = -1
     else:

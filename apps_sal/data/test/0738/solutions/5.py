@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -15,12 +14,12 @@ def sum2(x):
     k = min(d, c + x - 1)
     l = max(b + x, c)
     if k < l:
-        return(0)
+        return 0
     else:
         return (c + x) * (k - l + 1) - (k + l) * (k - l + 1) // 2
 
 
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 res = 0
 for x in range(a, b + 1):
     res += sum1(x) + sum2(x)

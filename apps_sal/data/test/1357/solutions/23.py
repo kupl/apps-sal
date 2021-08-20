@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [y for y in reversed([int(x) for x in input().split()])]
 t = 0
 cur_pos = 1
@@ -9,5 +9,4 @@ while len(a) > 0:
     elif nxt < cur_pos:
         t += n - (cur_pos - nxt)
     cur_pos = nxt
-
 print(t)

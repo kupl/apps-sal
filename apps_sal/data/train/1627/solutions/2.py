@@ -1,4 +1,4 @@
-CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 
 def from10(n, b):
@@ -13,8 +13,8 @@ def from10(n, b):
 
 def to10(n, b):
     num = 0
-    for i, d in enumerate(str(n)[::-1]):
-        num += int(CHARS.index(d)) * (b**i)
+    for (i, d) in enumerate(str(n)[::-1]):
+        num += int(CHARS.index(d)) * b ** i
     return num
 
 

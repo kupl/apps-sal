@@ -1,6 +1,5 @@
 a_list = [chr(ord('a') + i) for i in range(26)]
 n = int(input())
-
 l_list = []
 ans = ''
 while n > 0:

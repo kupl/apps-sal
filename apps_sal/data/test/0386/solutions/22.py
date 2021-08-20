@@ -1,13 +1,4 @@
-d = {
-    '> Y': (0, 1, max),
-    '>= Y': (0, 0, max),
-    '< N': (0, 0, max),
-    '<= N': (0, 1, max),
-    '< Y': (1, -1, min),
-    '<= Y': (1, 0, min),
-    '> N': (1, 0, min),
-    '>= N': (1, -1, min),
-}
+d = {'> Y': (0, 1, max), '>= Y': (0, 0, max), '< N': (0, 0, max), '<= N': (0, 1, max), '< Y': (1, -1, min), '<= Y': (1, 0, min), '> N': (1, 0, min), '>= N': (1, -1, min)}
 ran = [-2000000000, 2000000000]
 possible = True
 
@@ -25,7 +16,6 @@ for i in range(n):
         analyse(s)
         if ran[0] > ran[1]:
             possible = False
-
 if possible:
     print(ran[0])
 else:

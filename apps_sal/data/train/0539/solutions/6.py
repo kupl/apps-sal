@@ -1,6 +1,4 @@
 import math
-
-
 t = eval(input())
 while t > 0:
     t = t - 1

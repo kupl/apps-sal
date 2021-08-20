@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr1 = list(map(int, input().split()))
 arr2 = list(map(int, input().split()))
 max1 = arr1.index(max(arr1))

@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def possible(day):
             i = temp = b = 0
             while i < len(bloomDay):
@@ -14,11 +16,9 @@ class Solution:
                     temp = 0
                 i += 1
             return False
-
         if len(bloomDay) < m * k:
             return -1
-
-        left, right = min(bloomDay), max(bloomDay)
+        (left, right) = (min(bloomDay), max(bloomDay))
         while left < right:
             mid = left + (right - left) // 2
             if possible(mid):

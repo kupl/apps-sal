@@ -1,18 +1,6 @@
 class Solution:
-    def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
-        # result=[]
-        # for i in range(len(queries)):
-        #     start=queries[i][0]
-        #     end=queries[i][1];val=arr[start]
-        #     while start != end+1:
-        #         if start!=end:
-        #             val=val^arr[start+1]
-        #             start+=1
-        #         else:
-        #             result.append(val)
-        #             break
-        # return result
 
+    def xorQueries(self, arr: List[int], queries: List[List[int]]) -> List[int]:
         prefix = [None] * len(arr)
         res = [None] * len(queries)
         prefix[0] = arr[0]

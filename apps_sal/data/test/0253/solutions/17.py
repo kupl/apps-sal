@@ -3,8 +3,7 @@ ks.sort()
 
 
 def solve(ks):
-    k1, k2, k3 = ks
-
+    (k1, k2, k3) = ks
     if k1 == 1:
         return True
     elif k1 == 2:
@@ -23,4 +22,4 @@ def solve(ks):
         return False
 
 
-print(["NO", "YES"][solve(ks)])
+print(['NO', 'YES'][solve(ks)])

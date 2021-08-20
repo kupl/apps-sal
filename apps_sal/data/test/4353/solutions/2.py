@@ -1,2 +1,2 @@
 s = input()
-print((s.replace(',', ' ')))
+print(s.replace(',', ' '))

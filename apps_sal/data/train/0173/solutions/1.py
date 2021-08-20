@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr, k):
         rem = [0] * k
         for a in arr:

@@ -7,7 +7,7 @@ def I():
 
 t = int(I())
 for _ in range(t):
-    n, r = list(map(int, I().split()))
+    (n, r) = list(map(int, I().split()))
     x = list(map(int, I().split()))
     x.sort()
     ans = 0

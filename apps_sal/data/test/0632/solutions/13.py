@@ -1,12 +1,3 @@
-# test = iter('''0
-# 1 2
-# '''.splitlines())
-#
-#
-# def input():
-#     return next(test)
-
-
 def int_input():
     return int(input())
 
@@ -17,8 +8,8 @@ def ints_input():
 
 t = int_input()
 for _ in range(t):
-    n, k = ints_input()
-    if (n & 1) == 0:
+    (n, k) = ints_input()
+    if n & 1 == 0:
         print(n + k + k)
     else:
         for i in range(3, n + 1, 2):

@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 X = [int(x) for x in input().split()]
 score = 0
 for i in range(N - 1):

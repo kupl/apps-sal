@@ -10,7 +10,7 @@ ans1 = n
 while True:
     if j >= n:
         break
-    if(sh[i] > m[j]):
+    if sh[i] > m[j]:
         j += 1
     else:
         ans1 -= 1
@@ -22,7 +22,7 @@ j = 0
 while True:
     if j >= n:
         break
-    if(sh[i] < m[j]):
+    if sh[i] < m[j]:
         i += 1
         ans2 += 1
         j += 1

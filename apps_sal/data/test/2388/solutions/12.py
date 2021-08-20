@@ -7,7 +7,7 @@ def main():
         dist = sum(ab[i])
         now = i
         while now < n - 1:
-            a1, b1 = ab[now + 1]
+            (a1, b1) = ab[now + 1]
             if a1 < dist:
                 now = next_idx[now + 1]
             else:

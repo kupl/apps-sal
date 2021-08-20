@@ -1,4 +1,4 @@
-H, W = list(map(int, input().split()))
+(H, W) = list(map(int, input().split()))
 a = ''
 for i in range(W + 2):
     a += '#'
@@ -10,4 +10,4 @@ for j in range(H):
     L.append(c)
 L.append(a)
 for k in range(H + 2):
-    print((L[k]))
+    print(L[k])

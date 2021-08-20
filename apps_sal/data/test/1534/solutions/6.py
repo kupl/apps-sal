@@ -1,6 +1,6 @@
 s = input()
-a, b = [0], [0]
-a_count, b_count = 0, 0
+(a, b) = ([0], [0])
+(a_count, b_count) = (0, 0)
 for x in s:
     if x == 'a':
         a_count += 1

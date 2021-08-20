@@ -1,11 +1,7 @@
 def choose_best_sum(t, k, ls):
-
     from itertools import combinations
-
     c = [i for i in combinations(ls, k)]
     l = []
-
     for i in c:
         l.append(sum(i))
-
     return max(list(filter(lambda x: x <= t, l)), default=None)

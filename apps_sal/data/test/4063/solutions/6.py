@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Sep 10 14:46:16 2020
 
 @author: liang
 """
-
 N = int(input())
 d = [int(x) for x in input().split()]
 d.sort()

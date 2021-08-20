@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -12,18 +11,15 @@ def main():
     N = int(readline())
     P = [0] * (2 * N)
     for i in range(N):
-        a, b = list(map(int, readline().split()))
+        (a, b) = list(map(int, readline().split()))
         P[i] = (a, b, 0)
     for i in range(N, 2 * N):
-        c, d = list(map(int, readline().split()))
+        (c, d) = list(map(int, readline().split()))
         P[i] = (c, d, 1)
-
     P.sort(reverse=True)
-
     vec = [0] * (2 * N + 1)
     ans = 0
-
-    for x, y, p in P:
+    for (x, y, p) in P:
         if p == 0:
             for i in range(y + 1, 2 * N + 1):
                 if vec[i] > 0:
@@ -32,7 +28,6 @@ def main():
                     break
         else:
             vec[y] += 1
-
     print(ans)
     return
 

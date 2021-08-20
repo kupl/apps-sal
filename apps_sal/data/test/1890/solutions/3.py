@@ -1,7 +1,5 @@
 mod = 1000000007
 
-# gcd(a, m) = 1
-
 
 def inv_mod(a, m):
     a %= m
@@ -12,7 +10,7 @@ a = input()
 k = int(input())
 t = len(a)
 d = 0
-for i, c in enumerate(a):
+for (i, c) in enumerate(a):
     if not int(c) % 5:
         d += pow(2, i, mod)
         d %= mod

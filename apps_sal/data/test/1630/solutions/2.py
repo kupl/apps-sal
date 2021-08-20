@@ -21,12 +21,9 @@ def sol():
             for j in mp[abc]:
                 if club[j][:2] + city[j] in name:
                     return False
-
                 mp[abc].clear()
-                # name[club[j][:2]+city[j]]=j
                 return rename(club[j][:2] + city[j], j)
         return True
-
     for clubname in mp:
         if len(mp[clubname]) > 1:
             for i in mp[clubname]:
@@ -35,7 +32,6 @@ def sol():
                     return False
                 if not rename(abc, i):
                     return False
-
     for clubname in mp:
         if len(mp[clubname]) == 1:
             for i in mp[clubname]:
@@ -44,7 +40,6 @@ def sol():
 
 
 name = {}
-
 if sol():
     print('YES')
     l = [''] * len(name)

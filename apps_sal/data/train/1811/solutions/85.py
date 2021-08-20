@@ -1,9 +1,8 @@
-
-'''
+"""
 curr=0
 [[inf,0]]
 
-'''
+"""
 from collections import deque
 
 
@@ -15,7 +14,7 @@ class StockSpanner:
         self.stack.append([float('inf'), 0])
 
     def update_stack(self, value):
-        while(value >= self.stack[len(self.stack) - 1][0]):
+        while value >= self.stack[len(self.stack) - 1][0]:
             self.stack.pop()
 
     def next(self, price: int) -> int:
@@ -24,8 +23,3 @@ class StockSpanner:
         diff = abs(self.counter - self.stack[len(self.stack) - 1][1])
         self.stack.append([price, self.counter])
         return diff
-
-
-# Your StockSpanner object will be instantiated and called as such:
-# obj = StockSpanner()
-# param_1 = obj.next(price)

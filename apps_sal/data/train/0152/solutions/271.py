@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         n = len(position)
         pos = sorted(position)
@@ -15,9 +16,8 @@ class Solution:
                 if j == n:
                     return False
             return True
-
         res = -1
-        lo, hi = 1, pos[-1] - pos[0] + 1
+        (lo, hi) = (1, pos[-1] - pos[0] + 1)
         while lo < hi:
             d = (lo + hi) // 2
             print(lo, hi, d)

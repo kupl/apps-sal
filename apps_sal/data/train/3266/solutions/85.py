@@ -7,8 +7,7 @@ def my_first_kata(a, b):
     if type(a) != int or type(b) != int:
         is_number = False
     else:
-        if_is_number = int(a) % int(b) + + int(b) % int(a)
-
+        if_is_number = int(a) % int(b) + +int(b) % int(a)
     if is_number == False:
         return is_number
     else:

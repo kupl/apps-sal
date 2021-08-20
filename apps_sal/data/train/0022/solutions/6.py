@@ -17,7 +17,7 @@ def mind(val):
 t = int(input())
 while t > 0:
     t -= 1
-    a, k = map(int, input().split())
+    (a, k) = map(int, input().split())
     k -= 1
     while k > 0 and mind(a) > 0:
         a = a + mind(a) * maxd(a)

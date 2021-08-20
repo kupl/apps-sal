@@ -5,7 +5,6 @@ def main():
         a = list(map(int, input().split()))
         tot = sum(a)
         scores.append((-tot, i))
-
     scores.sort()
     for i in range(n):
         if scores[i][1] == 0:

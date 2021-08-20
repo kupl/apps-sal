@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from operator import add, itemgetter, mul, xor
 from math import gcd
 from decimal import Decimal
@@ -9,7 +8,7 @@ import itertools
 import heapq
 import bisect
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 
 
 def cmb(n, r, mod):
@@ -18,25 +17,36 @@ def cmb(n, r, mod):
     for i in range(r):
         bunbo = bunbo * (i + 1) % mod
         bunshi = bunshi * (n - i) % mod
-    return (bunshi * pow(bunbo, mod - 2, mod)) % mod
+    return bunshi * pow(bunbo, mod - 2, mod) % mod
 
 
-mod = 10**9 + 7
-def I(): return int(input())
-def LI(): return list(map(int, input().split()))
-def MI(): return list(map(int, input().split()))
-def LLI(n): return [list(map(int, input().split())) for _ in range(n)]
+mod = 10 ** 9 + 7
+
+
+def I():
+    return int(input())
+
+
+def LI():
+    return list(map(int, input().split()))
+
+
+def MI():
+    return list(map(int, input().split()))
+
+
+def LLI(n):
+    return [list(map(int, input().split())) for _ in range(n)]
 
 
 n = I()
 graph = [[] * (n + 1) for i in range(n + 1)]
 ans = [0] * (n + 1)
 for i in range(n - 1):
-    u, v, w = list(map(int, input().split()))
+    (u, v, w) = list(map(int, input().split()))
     w = w % 2
     graph[u].append([v, w])
     graph[v].append([u, w])
-# vをcに塗る。pはvの親
 
 
 def dfs(v, p, c, ans):

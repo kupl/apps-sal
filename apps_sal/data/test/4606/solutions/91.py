@@ -1,3 +1,3 @@
 N = input()
-ans = "ABC" + N
+ans = 'ABC' + N
 print(ans)

@@ -1,7 +1,8 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         dis = [[float('inf')] * n for _ in range(n)]
-        for u, v, w in edges:
+        for (u, v, w) in edges:
             dis[u][v] = dis[v][u] = w
         for k in range(n):
             for i in range(n):

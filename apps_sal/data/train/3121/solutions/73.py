@@ -1,4 +1,3 @@
-
 def solve(arr):
     check = []
     for i in arr:

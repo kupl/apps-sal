@@ -7,11 +7,11 @@ while i < n:
         ans += 1
         i += 1
         continue
-    if i != n - 1 and int(s[i]) % 3 == 1 and int(s[i + 1]) % 3 == 2:
+    if i != n - 1 and int(s[i]) % 3 == 1 and (int(s[i + 1]) % 3 == 2):
         ans += 1
         i += 2
         continue
-    if i != n - 1 and int(s[i]) % 3 == 2 and int(s[i + 1]) % 3 == 1:
+    if i != n - 1 and int(s[i]) % 3 == 2 and (int(s[i + 1]) % 3 == 1):
         ans += 1
         i += 2
         continue
@@ -24,5 +24,4 @@ while i < n:
         i += 3
         continue
     i += 1
-
 print(ans)

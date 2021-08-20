@@ -2,7 +2,7 @@ def f(b, n):
     if n < b:
         return n
     else:
-        q, r = divmod(n, b)
+        (q, r) = divmod(n, b)
         return f(b, q) + r
 
 
@@ -19,13 +19,13 @@ else:
         b += 1
     else:
         p = 1
-        ans = 10**13
+        ans = 10 ** 13
         while p * p <= n:
             b = (n - s) // p + 1
-            if p < b and s - p < b and f(b, n) == s:
+            if p < b and s - p < b and (f(b, n) == s):
                 ans = min(ans, b)
             p += 1
-        if ans == 10**13:
+        if ans == 10 ** 13:
             print(-1)
         else:
             print(ans)

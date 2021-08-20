@@ -8,11 +8,9 @@ dp = [0] * (length + 1)
 end = [0] * 5001
 start = [5001] * 5001
 vis = [0] * 5001
-
 for i in range(1, length + 1):
     start[array[i]] = min(start[array[i]], i)
     end[array[i]] = max(end[array[i]], i)
-
 for i in range(1, length + 1):
     dp[i] = dp[i - 1]
     chk = [0] * 5001

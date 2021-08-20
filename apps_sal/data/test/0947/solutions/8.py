@@ -3,11 +3,15 @@ from collections import deque
 import heapq
 
 
-def input(): return sys.stdin.readline().strip()
+def input():
+    return sys.stdin.readline().strip()
 
 
 ipnut = input
-def pprint(x): return print(' '.join(map(lambda t: str(t + 1), x)))
+
+
+def pprint(x):
+    return print(' '.join(map(lambda t: str(t + 1), x)))
 
 
 def mex():
@@ -30,5 +34,3 @@ for _ in range(int(input())):
         pass
     else:
         print(1, n - 1)
-    # n, m = map(int, input().split())
-    # a = list(map(int, input().split()))

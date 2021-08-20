@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = [int(x) % k for x in input().split()]
 f = {}
 an = 0

@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self):
         self.parent = {}
         self.rank = {}
@@ -13,37 +14,30 @@ class UnionFind:
         return self.parent[x]
 
     def union(self, x, y):
-        xRoot, yRoot = self.find(x), self.find(y)
-
+        (xRoot, yRoot) = (self.find(x), self.find(y))
         if xRoot == yRoot:
             return
-
-        xRank, yRank = self.rank[xRoot], self.rank[yRoot]
+        (xRank, yRank) = (self.rank[xRoot], self.rank[yRoot])
         if xRank < yRank:
-            yRoot, xRoot = xRoot, yRoot
-
+            (yRoot, xRoot) = (xRoot, yRoot)
         self.parent[yRoot] = xRoot
         self.rank[xRoot] += self.rank[yRoot]
-        # if self.rank[ yRoot] == self.rank[xRoot]:
-        #     self.rank[xRoot] += 1
-
         return
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return len(arr)
         if m > len(arr):
             return -1
         uf = UnionFind()
-
         for i in range(1, len(arr) + 1):
             uf.add(i)
         ans = -1
         seen = set()
-
-        for i, n in enumerate(arr):
+        for (i, n) in enumerate(arr):
             uf.rank[n] = 1
             if n - 1 >= 1 and n - 1 in seen:
                 if uf.rank[uf.find(n - 1)] == m:

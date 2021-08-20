@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -21,7 +20,6 @@ def resolve():
     for i in range(1, n + 1):
         if is_prime(i):
             primes.append(i)
-
     fact = []
     for prime in primes:
         ex = 0
@@ -30,7 +28,6 @@ def resolve():
             ex += n // p
             p *= prime
         fact.append(ex)
-
     cnt_74 = cnt_24 = cnt_14 = cnt_4 = cnt_2 = 0
     for i in fact:
         if i >= 74:
@@ -43,11 +40,10 @@ def resolve():
             cnt_4 += 1
         if i >= 2:
             cnt_2 += 1
-
     res1 = max(0, cnt_24 * (cnt_2 - 1))
-    res2 = (cnt_4 * (cnt_4 - 1)) // 2 * max(0, cnt_2 - 2)
+    res2 = cnt_4 * (cnt_4 - 1) // 2 * max(0, cnt_2 - 2)
     res3 = max(0, cnt_14 * (cnt_4 - 1))
-    print((cnt_74 + res1 + res2 + res3))
+    print(cnt_74 + res1 + res2 + res3)
 
 
 def __starting_point():

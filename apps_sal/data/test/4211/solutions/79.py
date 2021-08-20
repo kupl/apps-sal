@@ -7,6 +7,4 @@ for i in range(1, N - 1):
     if B_List[i] <= B_List[i - 1]:
         A_List[i] = B_List[i]
     A_List[i + 1] = B_List[i]
-
-
 print(sum(A_List))

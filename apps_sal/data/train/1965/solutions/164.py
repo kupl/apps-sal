@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges = [(t, i - 1, j - 1) for (t, i, j) in edges]
         bob = [-1 for _ in range(n)]
@@ -24,9 +25,9 @@ class Solution:
         return par[i]
 
     def union(self, par, i, j):
-        i, j = self.find(par, i), self.find(par, j)
+        (i, j) = (self.find(par, i), self.find(par, j))
         if i == j:
             return
         if par[j] < par[i]:
-            i, j = j, i
-        par[i], par[j] = par[i] + par[j], i
+            (i, j) = (j, i)
+        (par[i], par[j]) = (par[i] + par[j], i)

@@ -3,7 +3,7 @@ def main():
     p = list(map(int, input().split()))
     x = list(map(int, input().split()))
     g = [[] for _ in [0] * n]
-    [g[j - 1].append(i + 1) for i, j in enumerate(p)]
+    [g[j - 1].append(i + 1) for (i, j) in enumerate(p)]
     dist = [0] * n
     q = [0]
     while q:
@@ -12,8 +12,8 @@ def main():
             if i != 0:
                 dist[i] = dist[p[i - 1] - 1] + 1
                 q.append(i)
-    dist = sorted([[-j, i] for i, j in enumerate(dist)])
-    dist = [j for i, j in dist]
+    dist = sorted([[-j, i] for (i, j) in enumerate(dist)])
+    dist = [j for (i, j) in dist]
     memo = [[i, 0] for i in x]
     for i in dist:
         if len(g[i]) == 0:
@@ -31,12 +31,10 @@ def main():
             dp = dp2
         memo[i][1] = min(dp)
         if memo[i][1] == 10003:
-            print("IMPOSSIBLE")
+            print('IMPOSSIBLE')
             break
-        # print(dp)
     else:
-        print("POSSIBLE")
-    # print(memo)
+        print('POSSIBLE')
 
 
 def __starting_point():

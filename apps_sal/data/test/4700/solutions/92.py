@@ -1,11 +1,10 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 h = list(map(int, input().split()))
-l = list({i} for i in range(n + 1))
+l = list(({i} for i in range(n + 1)))
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a].add(b)
     l[b].add(a)
-
 for i in range(len(l)):
     l[i] = list(l[i])
 good = set()

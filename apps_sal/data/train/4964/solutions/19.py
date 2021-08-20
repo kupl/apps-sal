@@ -1,1 +1,2 @@
-def is_uppercase(inp): return inp.isupper()
+def is_uppercase(inp):
+    return inp.isupper()

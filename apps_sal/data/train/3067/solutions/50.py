@@ -14,7 +14,7 @@ class Cubiod:
         return self.length * self.width * self.height
 
     def getSA(self):
-        return (self.length * self.height * 2) + (self.length * self.width * 2) + (self.height * self.width * 2)
+        return self.length * self.height * 2 + self.length * self.width * 2 + self.height * self.width * 2
 
     def speedProb(self):
         return 9.87 * min(self.length, self.width, self.height)

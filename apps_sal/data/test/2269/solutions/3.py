@@ -3,7 +3,7 @@ while tt > 0:
     tt -= 1
     s = input()
     n = len(s)
-    o, t, r = [0] * n, [0] * n, [0] * n
+    (o, t, r) = ([0] * n, [0] * n, [0] * n)
     o[0] = t[0] = r[0] = -1
     ans = n + 1
     for i in range(n):

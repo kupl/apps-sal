@@ -1,8 +1,8 @@
 import bisect
-N, D, A = map(int, input().split())
+(N, D, A) = map(int, input().split())
 B = [list(map(int, input().split())) for _ in range(N)]
 C = sorted(B)
-d, E = zip(*C)
+(d, E) = zip(*C)
 Damage = [0] * N
 for i in range(N):
     e = bisect.bisect_right(d, d[i] + 2 * D)

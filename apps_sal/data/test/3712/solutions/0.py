@@ -1,11 +1,8 @@
-#! /usr/bin/env python
-
 n = int(input())
 counts = [0] * 5
 nums = [int(x) for x in input().split()]
 for x in nums:
     counts[x] += 1
-
 s = sum(nums)
 if s > 2 and s != 5:
     ans = 0

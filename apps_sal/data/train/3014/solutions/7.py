@@ -7,5 +7,5 @@ def simple_transposition(text):
             row1.append(text[x])
         else:
             row2.append(text[x])
-    result = "".join(row1) + "".join(row2)
+    result = ''.join(row1) + ''.join(row2)
     return result

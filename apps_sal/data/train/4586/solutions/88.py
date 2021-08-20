@@ -1,8 +1,8 @@
-remote = ["abcde123", "fghij456", "klmno789", "pqrst.@0", "uvwxyz_/"]
+remote = ['abcde123', 'fghij456', 'klmno789', 'pqrst.@0', 'uvwxyz_/']
 
 
 def tv_remote(word):
-    current = find_char("a")
+    current = find_char('a')
     result = 0
     for character in word:
         new = find_char(character)

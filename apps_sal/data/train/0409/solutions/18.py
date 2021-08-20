@@ -1,4 +1,5 @@
 class Solution:
+
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
         n = len(arr)
 
@@ -7,7 +8,7 @@ class Solution:
             ans = local_max
             for i in range(1, len(nums)):
                 local_max = max(nums[i], local_max + nums[i])
-                if (ans < local_max):
+                if ans < local_max:
                     ans = local_max
             return ans if ans > 0 else 0
         normal = kadane(arr)
@@ -18,7 +19,7 @@ class Solution:
         for i in range(2):
             for j in range(n):
                 a.append(arr[j])
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         temp = kadane(a)
         tot = max(0, tot)
         return max(normal, temp, tot * (k - 2) + temp) % mod

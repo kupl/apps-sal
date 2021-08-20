@@ -1,8 +1,8 @@
-R, C, N = map(int, input().split())
+(R, C, N) = map(int, input().split())
 
 
 def outer_pos(x, y):
-    if (0 < x < R) and (0 < y < C):
+    if 0 < x < R and 0 < y < C:
         return -1
     if y == 0:
         return x
@@ -15,7 +15,7 @@ def outer_pos(x, y):
 
 outer = []
 for i in range(N):
-    x1, y1, x2, y2 = map(int, input().split())
+    (x1, y1, x2, y2) = map(int, input().split())
     p1 = outer_pos(x1, y1)
     p2 = outer_pos(x2, y2)
     if p1 < 0 or p2 < 0:
@@ -23,9 +23,8 @@ for i in range(N):
     outer.append((p1, i))
     outer.append((p2, i))
 outer.sort()
-
 stack = []
-for p, i in outer:
+for (p, i) in outer:
     if len(stack) == 0 or stack[-1] != i:
         stack.append(i)
     else:

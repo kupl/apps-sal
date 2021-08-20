@@ -1,6 +1,6 @@
 class Facts:
 
-    def __init__(self, mod=10**9 + 7, n_max=1):
+    def __init__(self, mod=10 ** 9 + 7, n_max=1):
         self.mod = mod
         self.n_max = n_max
         self.fact = [1, 1]
@@ -37,32 +37,12 @@ class Facts:
         self.n_max = t
 
 
-# ABC156 Roaming
 mod = 10 ** 9 + 7
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 ans = 0
 f = Facts(mod)
-
 for i in range(0, min(n - 1, k) + 1):
     ans += f.cmb(n, i) * f.hom(n - i, i) % mod
     if ans >= mod:
         ans -= mod
-
 print(ans)
-
-# ABC167 E 2020/5/11
-# mod = 998244353
-
-# n, m, k = map(int, input().split())
-
-# ans = 0
-# f = Facts(mod)
-# t = m * pow(m-1, n-1-k, mod)
-
-# for i in range(k,-1,-1):
-#   ans += f.cmb(n-1,i) * t % mod
-#   t = t * (m-1) % mod
-
-# print(ans % mod)

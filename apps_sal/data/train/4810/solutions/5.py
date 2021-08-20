@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self):
         self.data = {}
 
@@ -6,7 +7,7 @@ class DisjointSet:
         self.data[v] = v
 
     def find(self, v):
-        if (self.data[v] == v):
+        if self.data[v] == v:
             return v
         else:
             return self.find(self.data[v])
@@ -14,13 +15,11 @@ class DisjointSet:
     def union(self, v, w):
         root_v = self.find(v)
         root_w = self.find(w)
-
         self.data[root_v] = root_w
 
     def in_same_set(self, v, w):
         root_v = self.find(v)
         root_w = self.find(w)
-
         return root_v == root_w
 
 
@@ -28,17 +27,14 @@ def make_spanning_tree(edges, t):
     edges = sorted(edges, key=lambda x: x[1], reverse=t == 'max')
     tree = DisjointSet()
     output = []
-
-    while (edges):
+    while edges:
         edge = edges.pop(0)
-        v, w = edge[0][0], edge[0][1]
-        if (v not in tree.data.keys()):
+        (v, w) = (edge[0][0], edge[0][1])
+        if v not in tree.data.keys():
             tree.add_node(v)
-        if (w not in tree.data.keys()):
+        if w not in tree.data.keys():
             tree.add_node(w)
-
-        if (not tree.in_same_set(v, w)):
+        if not tree.in_same_set(v, w):
             tree.union(v, w)
             output.append(edge)
-
     return output

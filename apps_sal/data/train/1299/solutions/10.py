@@ -1,7 +1,6 @@
-# cook your dish here
 from collections import Counter
 t = int(input())
-while(t):
+while t:
     t -= 1
     n = int(input())
     a = list(map(int, input().split()))
@@ -10,8 +9,8 @@ while(t):
     for i in range(len(keys)):
         ctr = 0
         j = 0
-        while(j < n):
-            if(keys[i] == a[j]):
+        while j < n:
+            if keys[i] == a[j]:
                 ctr += 1
                 j = j + 2
             else:
@@ -20,6 +19,6 @@ while(t):
     x = max(l)
     ll = []
     for i in range(len(l)):
-        if(l[i] == x):
+        if l[i] == x:
             ll.append(keys[i])
     print(min(ll))

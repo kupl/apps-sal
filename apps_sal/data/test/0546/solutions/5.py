@@ -8,7 +8,7 @@ def single_check(p, a):
         return 0
     else:
         for i in range(len(a)):
-            if (p[i] != a[i] and p[i] != '?') or (p[i] == '?' and a[i] not in good):
+            if p[i] != a[i] and p[i] != '?' or (p[i] == '?' and a[i] not in good):
                 break
         else:
             return 1
@@ -24,16 +24,14 @@ for _ in range(n):
     a = input()
     if len(patspl) == 1:
         print('YES' if single_check(pattern, a) else 'NO')
-    else:
-        if len(a) < len(pattern) - 1:
-            print('NO')
-        else:
-            if single_check(patspl[0], a[:len(patspl[0])]) and single_check(patspl[1], a[-len(patspl[1]):]):
-                for c in a[len(patspl[0]):(-len(patspl[1]) or len(a))]:
-                    if c not in bad:
-                        print('NO')
-                        break
-                else:
-                    print('YES')
-            else:
+    elif len(a) < len(pattern) - 1:
+        print('NO')
+    elif single_check(patspl[0], a[:len(patspl[0])]) and single_check(patspl[1], a[-len(patspl[1]):]):
+        for c in a[len(patspl[0]):-len(patspl[1]) or len(a)]:
+            if c not in bad:
                 print('NO')
+                break
+        else:
+            print('YES')
+    else:
+        print('NO')

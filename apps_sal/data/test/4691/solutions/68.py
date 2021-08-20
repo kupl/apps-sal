@@ -1,5 +1,5 @@
 n = int(input())
-a, w, t, r = 0, 0, 0, 0
+(a, w, t, r) = (0, 0, 0, 0)
 for i in range(n):
     g = input()
     if g == 'AC':

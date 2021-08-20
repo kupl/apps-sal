@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     if n >= m:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

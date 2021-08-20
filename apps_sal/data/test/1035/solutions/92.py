@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def prime_factorize(n):
@@ -20,7 +20,6 @@ def prime_factorize(n):
 
 A = set(prime_factorize(a))
 B = set(prime_factorize(b))
-
 cnt = 0
 for i in A:
     if i in B:

@@ -1,6 +1,5 @@
 def isTri(a, b, c):
-    if (a != b and b != c and c != a) and \
-            (a + b > c and b + c > a and c + a > b):
+    if (a != b and b != c and (c != a)) and (a + b > c and b + c > a and (c + a > b)):
         return True
     else:
         return False

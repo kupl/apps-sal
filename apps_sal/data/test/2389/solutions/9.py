@@ -1,4 +1,4 @@
-N, A, B, C = list(map(int, input().split()))
+(N, A, B, C) = list(map(int, input().split()))
 ans = []
 flag = True
 cnt = 0
@@ -81,43 +81,42 @@ while True:
             B += 1
             ans.append('B')
             continue
-    else:
-        if C == A == 0:
-            flag = False
-            break
-        elif C == A == 1:
-            if cnt == N:
-                ans.append('C')
-                break
-            else:
-                cnt += 1
-                s = input()
-                if s == 'AC':
-                    ans.append('C')
-                    ans.append('A')
-                    continue
-                elif s == 'BC':
-                    ans.append('C')
-                    ans.append('B')
-                    A -= 1
-                    B += 1
-                    continue
-                else:
-                    ans.append('A')
-                    ans.append('B')
-                    C -= 1
-                    B += 1
-                    continue
-        elif A >= C:
-            A -= 1
-            C += 1
+    elif C == A == 0:
+        flag = False
+        break
+    elif C == A == 1:
+        if cnt == N:
             ans.append('C')
-            continue
+            break
         else:
-            C -= 1
-            A += 1
-            ans.append('A')
-            continue
+            cnt += 1
+            s = input()
+            if s == 'AC':
+                ans.append('C')
+                ans.append('A')
+                continue
+            elif s == 'BC':
+                ans.append('C')
+                ans.append('B')
+                A -= 1
+                B += 1
+                continue
+            else:
+                ans.append('A')
+                ans.append('B')
+                C -= 1
+                B += 1
+                continue
+    elif A >= C:
+        A -= 1
+        C += 1
+        ans.append('C')
+        continue
+    else:
+        C -= 1
+        A += 1
+        ans.append('A')
+        continue
 if flag:
     print('Yes')
     for item in ans:

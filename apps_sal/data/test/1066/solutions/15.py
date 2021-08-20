@@ -6,11 +6,10 @@ def task1(string):
             return 2 * k - 1
         else:
             return 2 * (k - n // 2)
+    elif k <= n // 2 + 1:
+        return 2 * k - 1
     else:
-        if k <= n // 2 + 1:
-            return 2 * k - 1
-        else:
-            return 2 * (k - n // 2 - 1)
+        return 2 * (k - n // 2 - 1)
 
 
 print(task1(input()))

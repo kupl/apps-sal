@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 st = input()
 a = [0] * 28
 for i in range(len(st)):

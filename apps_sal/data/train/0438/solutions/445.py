@@ -1,10 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         lens = [0] * (n + 2)
         count = [0] * (n + 2)
         res = -1
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             if lens[num]:
                 continue
             l = lens[num - 1]

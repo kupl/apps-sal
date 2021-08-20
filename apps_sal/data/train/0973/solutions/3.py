@@ -4,4 +4,4 @@ for i in range(t):
     n = l[0]
     k = l[1]
     m = list(map(int, input().split()))
-    print(abs((max(m) + k) - (min(m) - k)))
+    print(abs(max(m) + k - (min(m) - k)))

@@ -1,5 +1,4 @@
 n = int(input())
-
 languages = {}
 s = input().split()
 for i in s:
@@ -7,11 +6,9 @@ for i in s:
         languages[i] += 1
     else:
         languages[i] = 1
-
 m = int(input())
 audio = input().split()
 subtitles = input().split()
-
 bestm = 1
 besta = 0
 bests = 0
@@ -24,9 +21,8 @@ for i in range(m):
     sc = 0
     if sb in languages:
         sc = languages[sb]
-    if ac > besta or ac == besta and sc > bests:
+    if ac > besta or (ac == besta and sc > bests):
         bestm = i + 1
         besta = ac
         bests = sc
-
 print(bestm)

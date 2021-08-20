@@ -1,7 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [int(a) for a in input().split()]
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 P = []
 M = []
 z = 0
@@ -12,7 +11,6 @@ for a in A:
         M.append(a)
     else:
         z += 1
-
 P.sort()
 M.sort()
 ans = 1

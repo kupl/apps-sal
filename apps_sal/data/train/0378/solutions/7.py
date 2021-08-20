@@ -1,41 +1,12 @@
 class Solution:
+
     def canPartition(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
-        '''
-         sums = sum(nums)
-         if sums & 1:
-             return False
-         target = sums//2
-         if max(nums) > target:
-             return False
-         elif max(nums) == target:
-             return True
-         target -= max(nums)
-         nums = [num for num in nums if num <= target]
-         if not nums:
-             return False
-         if target in nums:
-             return True
-         pool = set([0])
-         for num in nums:
-             for p in pool.copy():
-                 pool.add(num+p)
-         return target in pool
-         '''
-        '''
-         s = sum(nums)
-         if s & 1:
-             return False
-         target = s//2
-         pool = set([0])
-         for num in nums:
-             for p in pool.copy():
-                 pool.add(num+p)
-         return target in pool
-         '''
+        '\n         sums = sum(nums)\n         if sums & 1:\n             return False\n         target = sums//2\n         if max(nums) > target:\n             return False\n         elif max(nums) == target:\n             return True\n         target -= max(nums)\n         nums = [num for num in nums if num <= target]\n         if not nums:\n             return False\n         if target in nums:\n             return True\n         pool = set([0])\n         for num in nums:\n             for p in pool.copy():\n                 pool.add(num+p)\n         return target in pool\n         '
+        '\n         s = sum(nums)\n         if s & 1:\n             return False\n         target = s//2\n         pool = set([0])\n         for num in nums:\n             for p in pool.copy():\n                 pool.add(num+p)\n         return target in pool\n         '
         s = sum(nums)
         if s & 1:
             return False

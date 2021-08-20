@@ -1,9 +1,8 @@
 res = []
 for _ in range(int(input())):
-    a, b = list(map(str, input().split()))
+    (a, b) = list(map(str, input().split()))
     res.append([a, int(b)])
 res.sort(key=lambda x: x[-1])
-# print(res)
 for _ in range(int(input())):
     check = input().strip()
     f = 1
@@ -13,6 +12,6 @@ for _ in range(int(input())):
             ans = res[i][0]
             break
     if f == 1:
-        print("NO")
+        print('NO')
     elif f == 0:
         print(ans)

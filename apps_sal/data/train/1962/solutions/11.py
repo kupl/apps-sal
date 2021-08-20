@@ -1,4 +1,5 @@
 class Solution:
+
     def dominantIndex(self, nums):
         """
         :type nums: List[int]
@@ -10,7 +11,7 @@ class Solution:
         im = 0
         im2 = 1
         if nums[im2] > nums[im]:
-            im, im2 = im2, im
+            (im, im2) = (im2, im)
         for i in range(2, n):
             if nums[i] > nums[im]:
                 im2 = im

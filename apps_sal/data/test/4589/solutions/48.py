@@ -1,10 +1,7 @@
-m, n = map(int, input().split())
-
+(m, n) = map(int, input().split())
 dx = [1, 1, 0, -1, -1, -1, 0, 1]
 dy = [0, 1, 1, 1, 0, -1, -1, -1]
-
 S = [input() for i in range(m)]
-
 for i in range(m):
     for j in range(n):
         num = 0
@@ -20,7 +17,6 @@ for i in range(m):
                     num += 1
             A = list(S[i])
             A[j] = str(num)
-            S[i] = "".join(A)
-
+            S[i] = ''.join(A)
 for i in range(m):
     print(S[i])

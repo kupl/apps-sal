@@ -1,1 +1,2 @@
-def obfuscate(email): return email.replace("@", " [at] ").replace(".", " [dot] ")
+def obfuscate(email):
+    return email.replace('@', ' [at] ').replace('.', ' [dot] ')

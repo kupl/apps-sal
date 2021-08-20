@@ -1,6 +1,6 @@
 s = input()
 if len(s) < 5:
-    print("Too weak")
+    print('Too weak')
 else:
     a = b = c = False
     for i in range(0, 26):
@@ -11,6 +11,6 @@ else:
         if i < 10 and chr(ord('0') + i) in s:
             c = True
     if a and b and c:
-        print("Correct")
+        print('Correct')
     else:
-        print("Too weak")
+        print('Too weak')

@@ -1,8 +1,6 @@
 n = int(input())
-a = [int(k) for k in input().split(" ")]
-
+a = [int(k) for k in input().split(' ')]
 nn = n
-
 res = 1
 while nn > 1:
     jj = 0
@@ -14,5 +12,4 @@ while nn > 1:
     if res >= nn:
         break
     nn >>= 1
-
 print(res)

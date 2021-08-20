@@ -1,6 +1,5 @@
 MAXN = 200100
-
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 lpos = [-1] * MAXN
 for i in range(n):
@@ -22,8 +21,7 @@ while i < n:
             cnts[a[i]] = 1
         i += 1
     best = 0
-    for k, v in list(cnts.items()):
+    for (k, v) in list(cnts.items()):
         best = max(best, v)
     need += i - start - best
-
 print(need)

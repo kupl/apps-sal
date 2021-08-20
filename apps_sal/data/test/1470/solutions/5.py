@@ -1,5 +1,5 @@
 N = int(input())
-ans = (N // 11) * 2
+ans = N // 11 * 2
 nokori = N % 11
 if nokori == 0:
     ans += 0

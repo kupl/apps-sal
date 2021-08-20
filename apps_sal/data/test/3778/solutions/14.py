@@ -1,13 +1,11 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 twos = []
 threes = []
 pts = []
-for i, q in enumerate(a):
+for (i, q) in enumerate(a):
     i = i + 1
     if q == 0:
-        # no targets
         pass
     elif q == 1:
         if twos:
@@ -26,8 +24,7 @@ for i, q in enumerate(a):
         if threes:
             pts += [(threes.pop(), i)]
         threes += [i]
-
-if not twos and not threes:
+if not twos and (not threes):
     print(len(pts))
     for x in pts:
         print(*x)

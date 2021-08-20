@@ -6,7 +6,6 @@ def possible(t, p, a, n):
     for i in range(len(check)):
         if check[i]:
             s += t[i]
-
     m = len(s)
     lp = len(p)
     c = 0
@@ -23,7 +22,6 @@ p = input()
 a = list(map(int, input().split()))
 for i in range(len(a)):
     a[i] -= 1
-
 low = 0
 high = len(a)
 ans = 0

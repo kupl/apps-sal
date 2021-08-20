@@ -1,7 +1,7 @@
 __author__ = 'Alex'
 n = int(input())
 a = [int(i) for i in input().split()]
-cnt1, cnt2 = [0] * 2
+(cnt1, cnt2) = [0] * 2
 ans = []
 for i in a:
     if i < 0:

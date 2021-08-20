@@ -7,4 +7,4 @@ p.remove(a)
 s = 0
 for i in p:
     s += i
-print((s + a // 2))
+print(s + a // 2)

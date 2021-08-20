@@ -11,10 +11,10 @@ def getPower(i):
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         d = defaultdict(int)
         for i in range(lo, hi + 1):
             d[i] = getPower(i)
-        sd = {k: v for k, v in sorted(list(d.items()), key=lambda item: item[1])}
-
+        sd = {k: v for (k, v) in sorted(list(d.items()), key=lambda item: item[1])}
         return list(sd)[k - 1]

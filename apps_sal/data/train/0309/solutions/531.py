@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -8,11 +9,8 @@ class Solution:
             for j in range(i + 1, len(A)):
                 diff = A[j] - A[i]
                 if (i, diff) not in seen:
-                    seen[(i, diff)] = 1
-
+                    seen[i, diff] = 1
                 if (j, diff) not in seen:
-                    seen[(j, diff)] = 1
-
-                seen[(j, diff)] = max(seen[(j, diff)], seen[(i, diff)] + 1)
-
-        return max([v for k, v in seen.items()])
+                    seen[j, diff] = 1
+                seen[j, diff] = max(seen[j, diff], seen[i, diff] + 1)
+        return max([v for (k, v) in seen.items()])

@@ -3,8 +3,9 @@ import math
 
 
 class Solution:
+
     def largestIsland(self, grid: List[List[int]]) -> int:
-        if grid == None or len(grid) == 0 or grid[0] == None or len(grid[0]) == 0:
+        if grid == None or len(grid) == 0 or grid[0] == None or (len(grid[0]) == 0):
             return 0
         n = len(grid)
         m = len(grid[0])
@@ -19,7 +20,7 @@ class Solution:
             for point in nextPoints:
                 nextX = point[0]
                 nextY = point[1]
-                if nextX < 0 or nextX == m or nextY < 0 or nextY == n:
+                if nextX < 0 or nextX == m or nextY < 0 or (nextY == n):
                     continue
                 if grid[nextY][nextX] == 1:
                     dfs(nextX, nextY, c)
@@ -33,7 +34,7 @@ class Solution:
             for point in nextPoints:
                 nextX = point[0]
                 nextY = point[1]
-                if nextX < 0 or nextX == m or nextY < 0 or nextY == n:
+                if nextX < 0 or nextX == m or nextY < 0 or (nextY == n):
                     continue
                 compNum = grid[nextY][nextX]
                 if compNum >= 2 and compNum not in uniqueCompNums:

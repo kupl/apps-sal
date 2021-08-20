@@ -6,4 +6,4 @@ def main():
     return ans
 
 
-print((main()))
+print(main())

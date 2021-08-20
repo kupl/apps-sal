@@ -61,14 +61,14 @@ def solve(r):
 
 
 f = sys.stdin
-N, M, W, K, R = list(map(int, f.readline().split(' ')))
+(N, M, W, K, R) = list(map(int, f.readline().split(' ')))
 T = [0] * R
 GRID = list(map(list, [[0] * M] * N))
 H = list(map(list, [[1] * M] * N))
 V = list(map(list, [[1] * M] * N))
 Walls = []
 for _ in range(W):
-    x0, y0, x1, y1 = list(map(int, f.readline().split(' ')))
+    (x0, y0, x1, y1) = list(map(int, f.readline().split(' ')))
     x0 -= 1
     x1 -= 1
     y0 -= 1
@@ -80,7 +80,7 @@ for _ in range(W):
     Walls.append([x0, y0, x1, y1])
 Rooms = []
 for i in range(R):
-    x, y, t1, t2 = list(map(int, f.readline().split(' ')))
+    (x, y, t1, t2) = list(map(int, f.readline().split(' ')))
     findRoom(x - 1, y - 1, i + 1)
     Rooms.append([t1, t2])
 C = list(map(list, [[0] * R] * R))
@@ -93,7 +93,6 @@ Stable = [False] * R
 for r in range(R):
     walls_max_price = sum(C[r]) * K
     if walls_max_price <= abs(Rooms[r][0] - Rooms[r][1]):
-        # If we choose the cheaper team, no matter what the next rooms are the walls         we not overprice it.
         T[r] = 1 + (Rooms[r][0] > Rooms[r][1])
         Stable[r] = True
 
@@ -113,5 +112,4 @@ def try_teams():
     print(total_price())
 
 
-# try_teams()
 print(solve(0))

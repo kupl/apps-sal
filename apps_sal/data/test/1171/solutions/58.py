@@ -1,9 +1,9 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 V = list(map(int, input().split()))
-r, ans = min(N, K), 0
+(r, ans) = (min(N, K), 0)
 for a in range(r + 1):
     for b in range(r - a + 1):
-        tmp, minus = 0, []
+        (tmp, minus) = (0, [])
         for i in range(a):
             tmp += V[i]
             if V[i] < 0:

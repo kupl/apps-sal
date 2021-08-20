@@ -1,11 +1,11 @@
-MOD = 10**9 + 7
-n, m = list(map(int, input().split()))
+MOD = 10 ** 9 + 7
+(n, m) = list(map(int, input().split()))
 
 
 def factorization(n):
     retval = []
     tmp = n
-    for i in range(2, int(-(-n**.5 // 1)) + 1):
+    for i in range(2, int(-(-n ** 0.5 // 1)) + 1):
         if tmp % i == 0:
             cnt = 0
             while tmp % i == 0:
@@ -30,6 +30,6 @@ def com(n, r):
 
 fact = factorization(m)
 ans = 1
-for x, p in fact:
+for (x, p) in fact:
     ans *= com(n + p - 1, n - 1)
-print((ans % MOD))
+print(ans % MOD)

@@ -11,16 +11,16 @@ for w in range(a):
     z = 0
     y = 1
     for k in range(d):
-        if(b[k] != c[k]):
+        if b[k] != c[k]:
             r = r + 1
             t = 1
-            if(i != y):
+            if i != y:
                 z = z + 1
                 y = 0
-            if(p > 0):
+            if p > 0:
                 e.append(p)
                 p = 0
-        elif(t == 1 and b[k] == c[k]):
+        elif t == 1 and b[k] == c[k]:
             p = p + 1
             y = 1
     e.sort()
@@ -29,6 +29,6 @@ for w in range(a):
     for it in range(j):
         r = r + e[it]
         z = z - 1
-        if((r * z) < n):
+        if r * z < n:
             n = z * r
     print(n)

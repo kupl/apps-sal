@@ -1,6 +1,6 @@
 from sys import stdin
 s = stdin.readline().rstrip()
 if s[-1] == 's':
-    print((s + 'es'))
+    print(s + 'es')
 else:
-    print((s + 's'))
+    print(s + 's')

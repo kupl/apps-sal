@@ -9,7 +9,7 @@ while i < n:
     if j > i - j:
         k += 1
     elif j == i - j:
-        if s[: j] >= s[j: i]:
+        if s[:j] >= s[j:i]:
             k += 1
         else:
             k = 0

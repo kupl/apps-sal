@@ -1,4 +1,4 @@
-r, D, x = map(int, input().split())
+(r, D, x) = map(int, input().split())
 
 
 def f(r, D, x):

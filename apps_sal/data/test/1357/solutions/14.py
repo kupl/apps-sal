@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 def solve(n, m, b):
     b = [1] + b
     s = 0
@@ -11,12 +9,11 @@ def solve(n, m, b):
 def test():
     assert solve(4, 3, [3, 2, 3]) == 6
     assert solve(4, 3, [2, 3, 3]) == 2
-    print("test passes")
+    print('test passes')
 
 
-# test()
 tmp = input()
-n, m = list(map(int, tmp.split()))
+(n, m) = list(map(int, tmp.split()))
 tmp = input()
 b = list(map(int, tmp.split()))
 print(solve(n, m, b))

@@ -7,8 +7,8 @@ def grundy(a, k):
     return 0
 
 
-n, = map(int, input().split())
+(n,) = map(int, input().split())
 g = 0
 for _ in range(n):
     g ^= grundy(*map(int, input().split()))
-print("Takahashi" if g else "Aoki")
+print('Takahashi' if g else 'Aoki')

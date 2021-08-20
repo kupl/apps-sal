@@ -1,17 +1,5 @@
 import queue
-
-"""
-N = int(input())
-#S = input()
-# (N,M) = (int(i) for i in input().split(" "))
-# A = [int(i) for i in input().split()]
-A = []
-for i in range(N):
-	A.append(int(input()))
-
-print(A)
-
-"""
+'\nN = int(input())\n#S = input()\n# (N,M) = (int(i) for i in input().split(" "))\n# A = [int(i) for i in input().split()]\nA = []\nfor i in range(N):\n\tA.append(int(input()))\n\nprint(A)\n\n'
 
 
 def s(time, maxX, minX, maxY, minY, maxU, minU, maxD, minD, maxL, minL, maxR, minR):
@@ -45,58 +33,49 @@ def s(time, maxX, minX, maxY, minY, maxU, minU, maxD, minD, maxL, minL, maxR, mi
 
 
 N = int(input())
-
-E = [[t if i == 2 else int(t) for i, t in enumerate(input().split(" "))]for _ in range(N)]
-U = [d[0:2] for d in E if d[2] == "U"]
-D = [d[0:2] for d in E if d[2] == "D"]
-L = [d[0:2] for d in E if d[2] == "L"]
-R = [d[0:2] for d in E if d[2] == "R"]
-
+E = [[t if i == 2 else int(t) for (i, t) in enumerate(input().split(' '))] for _ in range(N)]
+U = [d[0:2] for d in E if d[2] == 'U']
+D = [d[0:2] for d in E if d[2] == 'D']
+L = [d[0:2] for d in E if d[2] == 'L']
+R = [d[0:2] for d in E if d[2] == 'R']
 if len(U + D) > 0:
     maxX = max(U + D, key=lambda x: x[0])[0]
     minX = min(U + D, key=lambda x: x[0])[0]
 else:
     maxX = None
     minX = None
-
 if len(L + R) > 0:
     maxY = max(L + R, key=lambda x: x[1])[1]
     minY = min(L + R, key=lambda x: x[1])[1]
 else:
     maxY = None
     minY = None
-
 if len(U) > 0:
     maxU = max(U, key=lambda x: x[1])[1]
     minU = min(U, key=lambda x: x[1])[1]
 else:
     maxU = None
     minU = None
-
 if len(D) > 0:
     maxD = max(D, key=lambda x: x[1])[1]
     minD = min(D, key=lambda x: x[1])[1]
 else:
     maxD = None
     minD = None
-
 if len(L) > 0:
     maxL = max(L, key=lambda x: x[0])[0]
     minL = min(L, key=lambda x: x[0])[0]
 else:
     maxL = None
     minL = None
-
 if len(R) > 0:
     maxR = max(R, key=lambda x: x[0])[0]
     minR = min(R, key=lambda x: x[0])[0]
 else:
     maxR = None
     minR = None
-
 watch = [0]
 min_ans = s(0, maxX, minX, maxY, minY, maxU, minU, maxD, minD, maxL, minL, maxR, minR)
-
 if maxU != None:
     if maxY != None:
         if minY > maxU:
@@ -126,8 +105,6 @@ if maxD != None:
             watch.append(maxD - maxY)
         if maxY < minD:
             watch.append(minD - maxY)
-
-
 if maxR != None:
     if maxX != None:
         if minX > maxR:
@@ -157,10 +134,8 @@ if maxL != None:
             watch.append(maxL - maxX)
         if maxX < minL:
             watch.append(minL - maxX)
-
 for t in watch:
     p = s(t, maxX, minX, maxY, minY, maxU, minU, maxD, minD, maxL, minL, maxR, minR)
     if p < min_ans:
         min_ans = p
-
 print(min_ans)

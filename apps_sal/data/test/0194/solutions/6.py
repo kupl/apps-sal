@@ -1,4 +1,4 @@
-n, a, b = [int(i) for i in input().split()]
+(n, a, b) = [int(i) for i in input().split()]
 t = [int(i) for i in input().split()]
 part = 0
 ans = 0
@@ -13,9 +13,8 @@ for i in t:
             part -= 1
         else:
             ans += 1
+    elif b:
+        b -= 1
     else:
-        if b:
-            b -= 1
-        else:
-            ans += 2
+        ans += 2
 print(ans)

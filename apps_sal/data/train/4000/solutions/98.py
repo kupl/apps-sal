@@ -14,6 +14,6 @@ def strong_num(number):
         tot = tot + fact(digit)
         number = number // 10
     if tot == numberc:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

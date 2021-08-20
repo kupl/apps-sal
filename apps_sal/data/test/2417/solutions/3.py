@@ -13,12 +13,10 @@ for i in range(n):
     if aa[i] > mi:
         tot += 1
     d[aa[i]] = 1
-
     if mi == aa[i]:
         while mi < n:
             if d[mi] == 1:
                 mi += 1
             else:
                 break
-
 print(tot)

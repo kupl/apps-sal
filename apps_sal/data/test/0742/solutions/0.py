@@ -24,6 +24,6 @@ def solve(n, b):
     return a
 
 
-t, = rl()
+(t,) = rl()
 for _ in range(t):
     print(*solve(rl()[0], rl()))

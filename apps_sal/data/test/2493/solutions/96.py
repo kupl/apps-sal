@@ -1,5 +1,5 @@
-L = 10**5 + 3
-MOD = 10**9 + 7
+L = 10 ** 5 + 3
+MOD = 10 ** 9 + 7
 fac = [1] * (L + 1)
 for i in range(1, L + 1):
     fac[i] = fac[i - 1] * i % MOD
@@ -17,7 +17,6 @@ def cmb(n, r):
 
 N = int(input())
 A = list(map(int, input().split()))
-
 used = [0] * N
 for i in range(N + 1):
     a = A[i]
@@ -28,7 +27,6 @@ for i in range(N + 1):
         y = used[a - 1][1]
         z = i
         break
-
 print(N)
 for i in range(2, N + 2):
     ans = cmb(N + 1, i) - cmb(N - z + y, i - 1)

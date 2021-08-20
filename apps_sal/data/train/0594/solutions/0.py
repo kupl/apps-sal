@@ -6,6 +6,6 @@ def solve(a, n):
     return max1
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 print(sum(a) - solve(a, n) + solve(a, n) / k)

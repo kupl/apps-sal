@@ -9,10 +9,10 @@ else:
     x += 1
 c = 0
 for i in range(1, n):
-    if isUp and x == y and st[i] == 'R':
+    if isUp and x == y and (st[i] == 'R'):
         c += 1
         isUp = False
-    elif not isUp and x == y and st[i] == 'U':
+    elif not isUp and x == y and (st[i] == 'U'):
         c += 1
         isUp = True
     if st[i] == 'U':

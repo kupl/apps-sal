@@ -2,8 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
-        MOUSE, CAT, DRAW = 1, 2, 0
+        (MOUSE, CAT, DRAW) = (1, 2, 0)
 
         @lru_cache(None)
         def winner(mouse, cat, turn):
@@ -35,5 +36,4 @@ class Solution:
                     if result == DRAW:
                         answer = DRAW
                 return answer
-
         return winner(1, 2, 0)

@@ -13,23 +13,18 @@ class Solution:
         def union(a, b):
             if (a := ds(a)) != (b := ds(b)):
                 if size[a] < size[b]:
-                    a, b = b, a
+                    (a, b) = (b, a)
                 parent[b] = a
                 size[a] += size[b]
             return a
-
         F = defaultdict(set)
         for a in A:
             for d in factors(a):
                 F[d].add(a)
+        return max((size[reduce(union, fs)] for fs in list(F.values())))
 
-        return max(size[reduce(union, fs)] for fs in list(F.values()))
 
-
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
-          73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151,
-          157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233,
-          239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317]
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317]
 FS = {n: {n} for n in primes}
 FS[1] = {}
 
@@ -46,7 +41,6 @@ def factors(f):
                 FS[f] = {2}
             else:
                 FS[f] = {2} | factors3(n)
-
     return FS.get(f, set())
 
 
@@ -64,5 +58,4 @@ def factors3(f, start=3):
                 break
         else:
             FS[f] = {f}
-
     return FS[f]

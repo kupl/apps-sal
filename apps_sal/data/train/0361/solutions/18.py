@@ -1,6 +1,7 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
-        m, n = min(m, n), max(m, n)
+        (m, n) = (min(m, n), max(m, n))
         self.res = n * m
         self.H = n
         self.search(0, [0] * m)
@@ -15,7 +16,7 @@ class Solution:
             return
         l = heights.index(min_h)
         width = 1
-        while width <= self.H - min_h and l + width - 1 < len(heights) and heights[l + width - 1] == heights[l]:
+        while width <= self.H - min_h and l + width - 1 < len(heights) and (heights[l + width - 1] == heights[l]):
             width += 1
         width -= 1
         for w in range(width, 0, -1):

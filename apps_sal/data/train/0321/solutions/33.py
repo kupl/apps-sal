@@ -1,6 +1,7 @@
 class Solution:
+
     def check(self, d1, d2):
-        for x, y in zip(d1, d2):
+        for (x, y) in zip(d1, d2):
             if x <= y:
                 continue
             return False

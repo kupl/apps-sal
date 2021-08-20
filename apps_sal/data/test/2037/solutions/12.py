@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a2 = set(range(1, n + 1))
 a = list(map(int, input().split()))
 a1 = set()
-ans = ""
+ans = ''
 ns = {}
 for i in a:
     a1.add(i)
@@ -18,7 +18,7 @@ for i in a:
                 nns[i] = ns[i]
         ns = nns
         a1 = set(ns)
-        ans += "1"
+        ans += '1'
     else:
-        ans += "0"
+        ans += '0'
 print(ans)

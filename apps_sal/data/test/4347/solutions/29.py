@@ -11,7 +11,6 @@ def fact(n):
 z = n // 2
 ans = fact(n)
 p = fact(z - 1)
-
 ans *= p * p
 ans /= fact(z)
 ans /= fact(z)

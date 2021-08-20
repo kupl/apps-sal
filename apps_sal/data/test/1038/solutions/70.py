@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 
 
 def solve(A):
@@ -17,4 +17,4 @@ def solve(A):
     return ret
 
 
-print((solve(B) ^ solve(A - 1)))
+print(solve(B) ^ solve(A - 1))

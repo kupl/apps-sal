@@ -15,6 +15,6 @@ for i in range(len(a)):
     if a[i] == 1:
         possible = False
 if possible:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

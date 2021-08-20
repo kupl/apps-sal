@@ -1,4 +1,5 @@
 class Solution:
+
     def get_hours(self, piles, k):
         ans = 0
         for x in piles:
@@ -9,10 +10,10 @@ class Solution:
         return ans
 
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        n, max_val = len(piles), max(piles)
+        (n, max_val) = (len(piles), max(piles))
         if H < n:
             return 1 << 31
-        start, end = 1, max_val
+        (start, end) = (1, max_val)
         while start <= end:
             mid = (end - start) // 2 + start
             h = self.get_hours(piles, mid)
@@ -20,6 +21,4 @@ class Solution:
                 end = mid - 1
             else:
                 start = mid + 1
-
-        # print(start)
         return start if start <= max_val else start - 1

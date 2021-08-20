@@ -1,13 +1,13 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         n = int(file.readline())
         a = file.readline()
         file.close()
     else:
         n = int(input().strip())
         a = input().strip()
-    return n, a
+    return (n, a)
 
 
 def solve():
@@ -15,7 +15,7 @@ def solve():
     vs = []
     v = 0
     for i in range(n):
-        if a[i] == "(":
+        if a[i] == '(':
             v += 1
         else:
             v -= 1
@@ -30,11 +30,11 @@ def solve():
         if vs[n - i - 1] < 0:
             last = n - i - 1
     for i in range(n):
-        if a[i] == "(" and vs[n - 1] == 2:
+        if a[i] == '(' and vs[n - 1] == 2:
             if i:
                 if mins[i] >= 2:
                     sol += 1
-        if a[i] == ")" and vs[n - 1] == -2:
+        if a[i] == ')' and vs[n - 1] == -2:
             if i != n - 1:
                 if mins[i] >= -2:
                     sol += 1
@@ -43,6 +43,6 @@ def solve():
     return sol
 
 
-n, a = read(0)
+(n, a) = read(0)
 sol = solve()
 print(sol)

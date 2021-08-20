@@ -1,23 +1,18 @@
 class Solution:
-    def containsCycle(self, grid: List[List[str]]) -> bool:
 
-        # public solution ... 3384 ms ... 0 % ... 216 MB ... 0 %
-        #  time: O(n*m)
-        # space: O(n*m)
+    def containsCycle(self, grid: List[List[str]]) -> bool:
 
         def dfs(pi, pj, i, j):
             visited[i][j] = True
-            for ni, nj in [(i - 1, j), (i, j - 1), (i, j + 1), (i + 1, j)]:
-                if 0 <= ni < n and 0 <= nj < m and grid[ni][nj] == grid[i][j]:
+            for (ni, nj) in [(i - 1, j), (i, j - 1), (i, j + 1), (i + 1, j)]:
+                if 0 <= ni < n and 0 <= nj < m and (grid[ni][nj] == grid[i][j]):
                     if visited[ni][nj]:
                         if (ni, nj) != (pi, pj):
                             return True
-                    else:
-                        if dfs(i, j, ni, nj):
-                            return True
+                    elif dfs(i, j, ni, nj):
+                        return True
             return False
-
-        n, m = len(grid), len(grid[0])
+        (n, m) = (len(grid), len(grid[0]))
         if n < 2 or m < 2:
             return False
         visited = [[False] * m for _ in range(n)]

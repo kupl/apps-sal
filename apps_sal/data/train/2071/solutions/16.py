@@ -15,17 +15,17 @@ def input2(n):
     dob = {}
     ans = 1
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         dx = inx(x, dx)
         dy = inx(y, dy)
         if (x, y) in dob:
-            dob[(x, y)] += 1
+            dob[x, y] += 1
         else:
-            dob[(x, y)] = 1
-    return dx, dy, dob
+            dob[x, y] = 1
+    return (dx, dy, dob)
 
 
-dx, dy, dob = input2(n)
+(dx, dy, dob) = input2(n)
 
 
 def ans(d):

@@ -1,6 +1,7 @@
 class Solution:
+
     def minDifficulty(self, A, d):
-        n, inf = len(A), float('inf')
+        (n, inf) = (len(A), float('inf'))
         dp = [[inf] * n + [0] for i in range(d + 1)]
         for d in range(1, d + 1):
             for i in range(n - d + 1):

@@ -14,9 +14,9 @@ class Datamining:
         b = 0
         for i in range(total):
             a += (x[i] - xmean) * (y[i] - ymean)
-            b += (x[i] - xmean)**2
+            b += (x[i] - xmean) ** 2
         self.z = a / b
-        self.y = ymean - (self.z * xmean)
+        self.y = ymean - self.z * xmean
 
     def predict(self, x):
         return x * self.z + self.y

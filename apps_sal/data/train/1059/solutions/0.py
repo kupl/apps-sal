@@ -5,14 +5,14 @@ for i in range(n):
 m1 = 0
 m2 = 0
 for e in a:
-    if (e > m1):
+    if e > m1:
         m2 = m1
         m1 = e
-    elif (e > m2 and e != m1):
+    elif e > m2 and e != m1:
         m2 = e
 ans = 0
 for e in a:
     temp = m1 % e
-    if (temp > ans):
+    if temp > ans:
         ans = temp
 print(max(m2 % m1, ans))

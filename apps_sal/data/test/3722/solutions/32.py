@@ -4,13 +4,9 @@ cab = input()
 cba = input()
 cbb = input()
 mod = 10 ** 9 + 7
-group1 = [("A", "A", "A", "A"), ("A", "A", "A", "B"), ("A", "A", "B", "A"),
-          ("A", "A", "B", "B"), ("A", "B", "A", "B"), ("A", "B", "B", "B"),
-          ("B", "B", "A", "B"), ("B", "B", "B", "B")]
-group2 = [("A", "B", "A", "A"), ("B", "A", "B", "A"), ("B", "A", "B", "B"),
-          ("B", "B", "A", "A")]
-group3 = [("A", "B", "B", "A"), ("B", "A", "A", "A"), ("B", "A", "A", "B"),
-          ("B", "B", "B", "A")]
+group1 = [('A', 'A', 'A', 'A'), ('A', 'A', 'A', 'B'), ('A', 'A', 'B', 'A'), ('A', 'A', 'B', 'B'), ('A', 'B', 'A', 'B'), ('A', 'B', 'B', 'B'), ('B', 'B', 'A', 'B'), ('B', 'B', 'B', 'B')]
+group2 = [('A', 'B', 'A', 'A'), ('B', 'A', 'B', 'A'), ('B', 'A', 'B', 'B'), ('B', 'B', 'A', 'A')]
+group3 = [('A', 'B', 'B', 'A'), ('B', 'A', 'A', 'A'), ('B', 'A', 'A', 'B'), ('B', 'B', 'B', 'A')]
 if (caa, cab, cba, cbb) in group1:
     print(1)
 elif (caa, cab, cba, cbb) in group2:

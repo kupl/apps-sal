@@ -1,13 +1,11 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # time complexity: O(m*n)
-        # space complexity: O(m*n)
-        stops = defaultdict(list)  # stop: [buses]
-        for r, s in enumerate(routes):
+        stops = defaultdict(list)
+        for (r, s) in enumerate(routes):
             for i in s:
                 stops[i].append(r)
-
-        q, buses, been = deque([S]), [0] * len(routes), set()
+        (q, buses, been) = (deque([S]), [0] * len(routes), set())
         transfers = 0
         while q:
             size = len(q)
@@ -25,5 +23,4 @@ class Solution:
                         been.add(s)
                         q.append(s)
             transfers += 1
-
         return -1

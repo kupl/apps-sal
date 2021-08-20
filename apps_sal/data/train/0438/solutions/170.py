@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         counter = collections.defaultdict(int)
         count = collections.defaultdict(int)
@@ -17,7 +18,6 @@ class Solution:
                     del counter[i - 1]
                 if i + 1 != right_most:
                     del counter[i + 1]
-
             elif i - 1 in counter:
                 left_most = counter[i - 1]
                 counter[left_most] = i
@@ -26,7 +26,6 @@ class Solution:
                 count[i - left_most + 1] += 1
                 if i - 1 != left_most:
                     del counter[i - 1]
-
             elif i + 1 in counter:
                 right_most = counter[i + 1]
                 counter[right_most] = i
@@ -35,14 +34,10 @@ class Solution:
                 count[right_most - i + 1] += 1
                 if i + 1 != right_most:
                     del counter[i + 1]
-
             else:
                 counter[i] = i
                 count[1] += 1
-
             if m in count and count[m] > 0:
                 ans = term
-
             term += 1
-
         return ans

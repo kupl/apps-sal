@@ -1,4 +1,5 @@
 class Job:
+
     def __init__(self, start, end, profit):
         self.start = start
         self.end = end
@@ -9,6 +10,7 @@ class Job:
 
 
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         n = len(startTime)
         if n == 0:
@@ -27,12 +29,11 @@ class Solution:
         return dp[-1]
 
     def binarySearch(self, arr, i, start):
-        s, e = 0, i - 1
+        (s, e) = (0, i - 1)
         while s <= e:
             m = (s + e) // 2
             if arr[m].end > start:
                 e = m - 1
-            # arr[m].end <= start
             elif m == e or (0 <= m + 1 < i and arr[m + 1].end > start):
                 return m
             else:

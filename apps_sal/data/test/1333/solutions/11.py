@@ -1,12 +1,11 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 R = True
 for I in range(N):
     if (I + 1) % 2:
         print('#' * M)
+    elif R:
+        print('.' * (M - 1) + '#')
+        R = False
     else:
-        if R:
-            print('.' * (M - 1) + '#')
-            R = False
-        else:
-            print('#' + '.' * (M - 1))
-            R = True
+        print('#' + '.' * (M - 1))
+        R = True

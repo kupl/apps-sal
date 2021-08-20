@@ -3,12 +3,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def helper(self, last_num, used, partners, index):
         if index == len(used):
             return 1
         total = 0
-        # print(partners, partners[last_num])
-        for partner, partner_list in partners[last_num].items():
+        for (partner, partner_list) in partners[last_num].items():
             for partner_index in partner_list:
                 if not used[partner_index]:
                     used[partner_index] = True
@@ -30,11 +30,11 @@ class Solution:
                     partners[A[i]][A[j]].add(j)
                     partners[A[j]][A[i]].add(i)
         unique_nums = dict()
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             unique_nums[num] = i
         used = [False for _ in A]
         total = 0
-        for num, i in unique_nums.items():
+        for (num, i) in unique_nums.items():
             used[i] = True
             total += self.helper(num, used, partners, 1)
             used[i] = False

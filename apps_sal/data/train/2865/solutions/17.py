@@ -1,1 +1,2 @@
-def solution(_): return _[::-1]
+def solution(_):
+    return _[::-1]

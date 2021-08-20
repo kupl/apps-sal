@@ -4,6 +4,5 @@ def sum_array(arr=[0]):
             return 0
         else:
             return sum(arr) - (min(arr) + max(arr))
-
     except:
         return 0

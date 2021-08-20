@@ -1,15 +1,15 @@
 import sys
 sys.setrecursionlimit(10 ** 6)
-N, K = map(int, input().split())
-tree = [[]for _ in range(N + 1)]
-MOD = 10**9 + 7
+(N, K) = map(int, input().split())
+tree = [[] for _ in range(N + 1)]
+MOD = 10 ** 9 + 7
 ans = K
-enuk = [1] * (N)
+enuk = [1] * N
 for i in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     tree[a].append(b)
     tree[b].append(a)
-    enuk[i + 1] = (enuk[i] * (K - 2 - i)) % MOD
+    enuk[i + 1] = enuk[i] * (K - 2 - i) % MOD
 
 
 def dfs(a, b):

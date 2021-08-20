@@ -1,6 +1,6 @@
 def add_binary(a, b):
     c = bin(a + b)
-    bin_c = ""
+    bin_c = ''
     bin_lst = []
     for char in c:
         bin_lst.append(char)

@@ -1,15 +1,13 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return 0
-
-        # intuition: BFS
         dic = {}
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             if num not in dic:
                 dic[num] = set()
             dic[num].add(i)
-
         bag = set(list(range(1, len(arr))))
         queue = [0]
         res = 0
@@ -20,7 +18,6 @@ class Solution:
                 node = queue.pop(0)
                 if node == len(arr) - 1:
                     return res
-                # neighbors
                 if node > 0:
                     if node - 1 in bag:
                         queue.append(node - 1)
@@ -37,7 +34,6 @@ class Solution:
                             dic[arr[node - 1]].remove(node - 1)
                             if not dic[arr[node - 1]]:
                                 del dic[arr[node - 1]]
-                # SAME VALUE
                 if arr[node] in dic:
                     for i in dic[arr[node]]:
                         if i in bag:

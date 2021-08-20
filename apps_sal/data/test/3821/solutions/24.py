@@ -1,4 +1,3 @@
-# 442B
 n = int(input())
 p = list(map(float, input().split()))
 p.sort(reverse=True)
@@ -9,7 +8,7 @@ for i in range(n):
     cur_prob = cur_prob * (1 - p[i]) + T * p[i]
     if cur_prob >= prev_prob:
         prev_prob = cur_prob
-        T *= (1 - p[i])
+        T *= 1 - p[i]
     else:
         break
 print(prev_prob)

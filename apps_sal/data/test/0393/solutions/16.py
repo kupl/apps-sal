@@ -7,8 +7,7 @@ if n > 2:
         print('No')
     else:
         print('Yes')
+elif chairs == '00' or chairs == '11' or chairs == '0':
+    print('No')
 else:
-    if chairs == '00' or chairs == '11' or chairs == '0':
-        print('No')
-    else:
-        print('Yes')
+    print('Yes')

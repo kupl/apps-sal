@@ -1,9 +1,6 @@
-r, g, b = (int(x) for x in input().split())
-
-
+(r, g, b) = (int(x) for x in input().split())
 s = 100 * r + 10 * g + b
-
 if s % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

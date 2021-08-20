@@ -1,12 +1,12 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 xi = [[0] * (n + 1) for i in range(2)]
 noti = []
-ans = ""
+ans = ''
 num = 0
 num2 = 0
 num3 = 0
 while q > 0:
-    typ, xt = map(int, input().split())
+    (typ, xt) = map(int, input().split())
     if typ == 1:
         xi[0][xt] += 1
         noti += [xt]
@@ -23,6 +23,6 @@ while q > 0:
         xi[0][xt] = 0
         xi[1][xt] = num2
     ans += str(num)
-    ans += "\n"
+    ans += '\n'
     q -= 1
 print(ans)

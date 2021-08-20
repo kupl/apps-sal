@@ -3,12 +3,12 @@ __author__ = 'epeshk'
 
 def admod(a, b):
     a += b
-    if a > 1e9 + 7:
-        a -= 1e9 + 7
+    if a > 1000000000.0 + 7:
+        a -= 1000000000.0 + 7
     return a
 
 
-n, k, d = list(map(int, input().split()))
+(n, k, d) = list(map(int, input().split()))
 Dp = [[1, 0]]
 for i in range(1, n + 1):
     Dp.append([0, 0])

@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, s: List[int]) -> str:
         i_1 = i_2 = i_3 = 0
         i = len(s) - 1
@@ -13,7 +14,6 @@ class Solution:
             i_2 = i_1
             i_1 = ans
             i -= 1
-
         a = i_1
         if a > 0:
             return 'Alice'

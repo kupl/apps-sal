@@ -35,15 +35,11 @@ class ThroneInheritance:
         def logic(node: Node, result: List[str]):
             if node == None:
                 return
-
             if node.name in self.name_directory:
                 result.append(node.name)
-
             for child in node.children:
                 logic(child, result)
                 pass
-
             return
-
         logic(self.root, result)
         return result

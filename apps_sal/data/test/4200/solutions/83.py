@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A_l = sorted(map(int, input().split()))
 S = sum(A_l)
 ans = 0

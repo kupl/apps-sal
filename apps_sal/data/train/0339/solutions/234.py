@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1 = sorted(nums1)
         nums2 = sorted(nums2)
@@ -12,9 +13,7 @@ class Solution:
     def get_equal_square(self, val, arr):
         count = 0
         m = {}
-        for i, item in enumerate(arr):
-            # if val == 16:
-            #     print(i, item, m, arr)
+        for (i, item) in enumerate(arr):
             if val % item:
                 continue
             tmp = val / item

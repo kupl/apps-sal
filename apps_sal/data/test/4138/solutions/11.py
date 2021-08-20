@@ -9,14 +9,14 @@ def init(maxn):
         lens = 10 ** i - 10 ** (i - 1)
         pre = Single[i - 1]
         Sum[i] = (pre + i + pre + lens * i) * lens // 2 + Sum[i - 1]
-    return Sum, Single
+    return (Sum, Single)
 
 
 def getAns(n, Sum, Single, maxn):
     ans = 0
     minn = n
     index = 0
-    L, R = 1, 10 ** maxn
+    (L, R) = (1, 10 ** maxn)
     while L <= R:
         m = (L + R) // 2
         digit = len(str(m))
@@ -29,9 +29,8 @@ def getAns(n, Sum, Single, maxn):
             L = m + 1
         else:
             R = m - 1
-    #print(index, minn)
     n = minn
-    L, R = 1, index + 11
+    (L, R) = (1, index + 11)
     index = 0
     while L <= R:
         m = (L + R) // 2
@@ -60,7 +59,7 @@ def test():
 
 def main():
     maxn = 10
-    Sum, Single = init(maxn)
+    (Sum, Single) = init(maxn)
     T = int(input())
     for i in range(T):
         n = int(input())

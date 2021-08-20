@@ -3,8 +3,12 @@ from bisect import bisect_right
 
 def same_col_seq(val, k, col, seq=[], colors=[]):
     if not seq:
-        def color(v): return {0: 'blue', 1: 'red', 2: 'yellow'}[v % 3]
-        def next_val(n): return seq[-1] + n
+
+        def color(v):
+            return {0: 'blue', 1: 'red', 2: 'yellow'}[v % 3]
+
+        def next_val(n):
+            return seq[-1] + n
         seq.append(1)
         colors.append('red')
         n = 2

@@ -1,6 +1,5 @@
-# cook your dish here
 from collections import defaultdict
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 b = []
 drel = defaultdict(list)
 ans = 0

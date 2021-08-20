@@ -7,5 +7,4 @@ def powers_of_two(n):
     while i <= n:
         rez.append(math.pow(2, i))
         i += 1
-
     return rez

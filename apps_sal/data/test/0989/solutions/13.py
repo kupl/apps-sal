@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l1 = list(map(int, input().split()))
 l1.sort()
 i = 0
@@ -14,15 +14,13 @@ while i < j and k > 0:
             i += 1
             left += 1
         else:
-            l1[i] += (k) // left
+            l1[i] += k // left
             break
+    elif k >= right * y:
+        k -= right * y
+        j -= 1
+        right += 1
     else:
-        if k >= right * y:
-            k -= right * y
-            j -= 1
-            right += 1
-        else:
-            l1[j] -= (k) // right
-            break
-
+        l1[j] -= k // right
+        break
 print(l1[j] - l1[i])

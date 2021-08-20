@@ -5,10 +5,9 @@ def present(n, a):
         if a[i] == 4 or a[i] == 5:
             num += 1
         else:
-            pr += (num // 3)
+            pr += num // 3
             num = 0
-    pr += (num // 3)
-
+    pr += num // 3
     return pr
 
 

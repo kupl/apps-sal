@@ -7,7 +7,7 @@ for i in range(len(val) - 1):
         if i == j:
             continue
         ans = 0
-        a, b = val[i], val[j]
+        (a, b) = (val[i], val[j])
         val.pop(j)
         val.pop(i)
         ans = 0

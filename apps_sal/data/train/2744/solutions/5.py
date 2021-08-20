@@ -1,7 +1,7 @@
 def poohbear(s):
     st = []
     loops = []
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         if c == 'W':
             st.append(i)
         elif c == 'E':
@@ -11,7 +11,7 @@ def poohbear(s):
     m = 0
     i = 0
     output = ''
-    while(i < len(s)):
+    while i < len(s):
         c = s[i]
         if c == '+':
             cells[p] = (cells[p] + 1) % 256
@@ -32,13 +32,13 @@ def poohbear(s):
             cells[p] = m
         elif c == 'W':
             if cells[p] == 0:
-                for w, e in loops:
+                for (w, e) in loops:
                     if i == w:
                         i = e
                         break
         elif c == 'E':
             if cells[p] != 0:
-                for w, e in loops:
+                for (w, e) in loops:
                     if i == e:
                         i = w
                         break
@@ -47,24 +47,24 @@ def poohbear(s):
         elif c == 'N':
             output += str(cells[p])
         elif c == 'T':
-            cells[p] = (cells[p] * 2) % 256
+            cells[p] = cells[p] * 2 % 256
         elif c == 'Q':
-            cells[p] = (cells[p]**2) % 256
+            cells[p] = cells[p] ** 2 % 256
         elif c == 'U':
-            cells[p] = (int(cells[p]**0.5)) % 256
+            cells[p] = int(cells[p] ** 0.5) % 256
         elif c == 'L':
             cells[p] = (cells[p] + 2) % 256
         elif c == 'I':
             cells[p] = (cells[p] - 2) % 256
         elif c == 'V':
-            cells[p] = (cells[p] // 2) % 256
+            cells[p] = cells[p] // 2 % 256
         elif c == 'A':
             cells[p] = (cells[p] + m) % 256
         elif c == 'B':
             cells[p] = (cells[p] - m) % 256
         elif c == 'Y':
-            cells[p] = (cells[p] * m) % 256
+            cells[p] = cells[p] * m % 256
         elif c == 'D':
-            cells[p] = (cells[p] // m) % 256
+            cells[p] = cells[p] // m % 256
         i += 1
     return output

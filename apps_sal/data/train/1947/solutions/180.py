@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         b_chars = defaultdict(int)
         for b in B:
@@ -8,6 +9,6 @@ class Solution:
         output = []
         for a in A:
             a_chars = Counter(a)
-            if all(a_chars[c] >= b_chars[c] for c in b_chars):
+            if all((a_chars[c] >= b_chars[c] for c in b_chars)):
                 output.append(a)
         return output

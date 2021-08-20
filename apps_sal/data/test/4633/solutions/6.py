@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     for _ in range(t):
-        n, s = input().split(" ")
+        (n, s) = input().split(' ')
         s = int(s)
         total = 0
         for nn in n:

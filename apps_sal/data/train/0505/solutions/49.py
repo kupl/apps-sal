@@ -1,10 +1,11 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         sum = 0
         i = 0
         ans = ''
         opens = []
-        while(i < len(s)):
+        while i < len(s):
             if s[i] == '(':
                 sum += 1
             elif s[i] == ')':
@@ -19,8 +20,7 @@ class Solution:
                 i += 1
         if sum == 0:
             return ans
-        while(sum > 0):
-            # find last index
+        while sum > 0:
             index = opens[-1]
             opens = opens[:-1]
             ans = ans[:index] + ans[index + 1:]

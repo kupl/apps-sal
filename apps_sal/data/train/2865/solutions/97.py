@@ -4,4 +4,4 @@ def solution(string):
     for char in string:
         a[i] = char
         i -= 1
-    return "".join(a)
+    return ''.join(a)

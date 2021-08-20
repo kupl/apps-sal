@@ -1,7 +1,6 @@
-
 def main():
     s = list(map(int, input()))
-    cnt0, cnt1 = 0, 0
+    (cnt0, cnt1) = (0, 0)
     ans = []
     for a in s:
         if a == 1:

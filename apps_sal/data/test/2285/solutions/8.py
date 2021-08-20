@@ -1,5 +1,4 @@
 import re
-
 n = int(input())
 for i in range(n):
     s = input().strip()
@@ -9,7 +8,7 @@ for i in range(n):
     elif group_count == 9:
         s = re.sub('::', ':', s)
     groups = s.split(':')
-    for i, group in enumerate(groups):
+    for (i, group) in enumerate(groups):
         if len(group) < 4:
             groups[i] = (4 - len(group)) * '0' + group
     print(':'.join(groups))

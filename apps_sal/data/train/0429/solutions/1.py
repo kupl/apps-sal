@@ -1,4 +1,5 @@
 class Solution:
+
     def getHint(self, secret, guess):
         """
         :type secret: str
@@ -9,7 +10,7 @@ class Solution:
         friendDict = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
         bulls = 0
         cows = 0
-        for s, g in zip(secret, guess):
+        for (s, g) in zip(secret, guess):
             if s == g:
                 bulls += 1
             else:

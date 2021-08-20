@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 l = []
 for i in range(n):
     l.append(input().strip())
@@ -12,5 +12,4 @@ while len(l) % 2 == 0:
         l = l[:len(l) // 2]
     else:
         break
-
 print(len(l))

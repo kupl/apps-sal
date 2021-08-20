@@ -2,8 +2,9 @@ import functools
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
-        return sorted((get_power_value(x), x) for x in range(lo, hi + 1))[k - 1][1]
+        return sorted(((get_power_value(x), x) for x in range(lo, hi + 1)))[k - 1][1]
 
 
 @functools.lru_cache(maxsize=None)

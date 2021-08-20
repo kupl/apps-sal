@@ -1,20 +1,16 @@
 import sys
 input = sys.stdin.readline
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 graph1 = [[False] * N for _ in range(N)]
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph1[a - 1][b - 1] = True
     graph1[b - 1][a - 1] = True
-
 graph = [[] for _ in range(N)]
 for i in range(N):
     for j in range(N):
-        if i != j and not graph1[i][j]:
+        if i != j and (not graph1[i][j]):
             graph[i].append(j)
-
-
 checked = [-1] * N
 Color = [None] * N
 
@@ -45,7 +41,7 @@ def main():
     Dif = []
     for i in range(N):
         if checked[i] == -1:
-            a, b = bfs(i)
+            (a, b) = bfs(i)
             if a == -1:
                 print(-1)
                 return
@@ -55,13 +51,11 @@ def main():
     for d in Dif:
         for j in reversed(range(d, N + 1)):
             dp[j] = dp[j] or dp[j - d]
-
-    min_dif = 10**15
+    min_dif = 10 ** 15
     S = sum(Dif)
     for j in range(N + 1):
         if dp[j]:
             min_dif = min(min_dif, abs(S - j * 2))
-
     t1 = (N + min_dif) // 2
     t2 = (N - min_dif) // 2
     print(t1 * (t1 - 1) // 2 + t2 * (t2 - 1) // 2)

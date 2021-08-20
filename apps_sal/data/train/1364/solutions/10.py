@@ -19,7 +19,7 @@ for i in range(T):
         L = k
         L.sort()
         w = len(L)
-        A = L[:(w) // 2]
+        A = L[:w // 2]
         B = L[(w + 1) // 2:]
         p += sum(B) - sum(A)
     print(q, p)

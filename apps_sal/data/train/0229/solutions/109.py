@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         d = {}
         for i in A:
@@ -7,17 +8,13 @@ class Solution:
             else:
                 d[i] = 1
         A.sort()
-
         if 0 in d:
             if d[0] % 2 != 0:
                 return False
             d.pop(0)
-
         for i in A:
-            # print(i,d)
             if i not in d:
                 continue
-
             if i * 2 in d:
                 if d[i] > d[i * 2]:
                     d[i] -= d[i * 2]

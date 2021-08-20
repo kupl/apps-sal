@@ -3,4 +3,4 @@ def fly_by(lamps, drone):
     d = len(drone)
     if d >= l:
         return 'o' * l
-    return ('o' * d) + ('x' * (l - d))
+    return 'o' * d + 'x' * (l - d)

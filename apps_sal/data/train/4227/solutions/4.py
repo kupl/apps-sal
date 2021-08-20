@@ -5,7 +5,7 @@ def complexSum(arr):
     real = 0
     img = 0
     for a in arr:
-        for b in re.findall(r'[-+]?\d*i?', a):
+        for b in re.findall('[-+]?\\d*i?', a):
             if not b:
                 continue
             if 'i' in b:
@@ -17,7 +17,6 @@ def complexSum(arr):
                     img += int(b[:-1])
             else:
                 real += int(b)
-
     if img == 0:
         return str(real)
     elif real == 0:

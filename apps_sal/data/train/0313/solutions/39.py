@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def feasible(days):
             bouquets = flowers = 0
             for i in range(len(bloomDay)):
@@ -15,7 +17,7 @@ class Solution:
             return False
         if m * k > len(bloomDay):
             return -1
-        left, right = min(bloomDay), max(bloomDay)
+        (left, right) = (min(bloomDay), max(bloomDay))
         while left < right:
             mid = left + (right - left) // 2
             if feasible(mid):

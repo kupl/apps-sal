@@ -14,17 +14,16 @@ def reads():
     return [int(x) for x in input().split()]
 
 
-N, M = reads()
+(N, M) = reads()
 edges = [[] for _ in range(N)]
 edgesc = defaultdict(lambda: [])
 for _ in range(M):
-    p, q, c = reads()
-    p, q = p - 1, q - 1
+    (p, q, c) = reads()
+    (p, q) = (p - 1, q - 1)
     edges[p].append((q, c))
     edges[q].append((p, c))
     edgesc[p, c].append(q)
     edgesc[q, c].append(p)
-
 INF = 1 << 30
 
 
@@ -54,6 +53,6 @@ def dijkstra(edges, s):
 
 dist = dijkstra(edges, 0)
 try:
-    print(min(d for (u, _), d in dist.items() if u == N - 1))
+    print(min((d for ((u, _), d) in dist.items() if u == N - 1)))
 except ValueError:
     print(-1)

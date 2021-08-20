@@ -1,6 +1,6 @@
-n, a, = map(int, input().split())
+(n, a) = map(int, input().split())
 x = list(map(lambda y: int(y) - a, input().split()))
-w = 2 * n * (max(max(x), a))
+w = 2 * n * max(max(x), a)
 dp = [[0] * (w + 1) for _ in range(n + 1)]
 dp[0][w // 2] = 1
 for i in range(1, n + 1):

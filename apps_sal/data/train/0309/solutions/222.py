@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         res = 0
         dic = {}
@@ -12,5 +13,3 @@ class Solution:
                     dic[i][key] = 2
                 res = max(res, dic[i][key])
         return res
-
-#print (Solution.longestArithSeqLength(Solution, [20,1,15,3,10,5,8]))

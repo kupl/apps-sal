@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = [int(_) for _ in input().split()]
 ans = max(0, a[0] - x)
 a[0] -= ans

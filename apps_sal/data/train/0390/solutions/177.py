@@ -1,4 +1,4 @@
-'''
+"""
     1 - Alice
     2 - Bob
     3 - Alice
@@ -8,10 +8,11 @@
     7 - [1, 4]
     n - Alice
     n+1 -
-'''
+"""
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         if n == 1:
             return True
@@ -22,11 +23,8 @@ class Solution:
             if square <= n:
                 squares.add(square)
                 dp[square] = True
-        # print(squares)
         for i in range(1, n + 1):
             if i not in squares:
                 possible = [not dp[i - square] for square in squares if square < i]
-                # print(i, possible)
                 dp[i] = any(possible)
-        # print(dp)
         return dp[-1]

@@ -7,7 +7,10 @@ fact = [1]
 for i in range(1, 1001):
     fact.append(fact[-1] * i % mod)
 inv = [pow(i, mod - 2, mod) for i in fact]
-def C(k, n): return fact[n] * inv[n - k] * inv[k] % mod
+
+
+def C(k, n):
+    return fact[n] * inv[n - k] * inv[k] % mod
 
 
 def f(n):
@@ -37,6 +40,6 @@ def f(n):
 
 t = int(input())
 for _ in range(t):
-    l, r = input().split()
+    (l, r) = input().split()
     l = str(int(l) - 1)
     print((f(r) - f(l)) % mod)

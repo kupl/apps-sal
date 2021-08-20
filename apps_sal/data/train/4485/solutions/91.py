@@ -8,5 +8,4 @@ def HQ9(code):
         return 'Q'
     if code == '9':
         return x
-
     pass

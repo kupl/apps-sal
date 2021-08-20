@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         dp = list(range(1, N + 1))
         for _ in range(K - 1):

@@ -6,7 +6,7 @@ for i in range(n):
         s += 'a'
     else:
         for j in abc:
-            if ((s[i - 2] + s[i - 1] + j) != (j + s[i - 1] + s[i - 2])):
+            if s[i - 2] + s[i - 1] + j != j + s[i - 1] + s[i - 2]:
                 s += j
                 break
 print(s)

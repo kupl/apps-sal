@@ -7,7 +7,7 @@ def judge(Str, Len):
 
 S = input()
 L = len(S)
-i = 2 - (L % 2)
+i = 2 - L % 2
 S = S[:-i]
 L -= i
 if judge(S, L):

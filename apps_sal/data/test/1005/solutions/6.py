@@ -1,5 +1,5 @@
 for __ in range(int(input())):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     ar = list(map(int, input().split()))
     A = dict()
     num = 0

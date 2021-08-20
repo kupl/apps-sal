@@ -1,2 +1,2 @@
 x = input()
-print("ABC" + x)
+print('ABC' + x)

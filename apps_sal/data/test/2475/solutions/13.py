@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 S = tuple(map(int, input().split()))
 ans = 0

@@ -9,7 +9,8 @@ for i in range(1, n):
     lname = name
 
 
-def l(x): return x[1]
+def l(x):
+    return x[1]
 
 
 sd = sorted(list(dname.items()), key=l, reverse=True)

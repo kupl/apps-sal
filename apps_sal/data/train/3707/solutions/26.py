@@ -4,7 +4,6 @@ import functools
 def cmp(a, b):
     aa = a.lower()
     bb = b.lower()
-
     if aa > bb:
         return 1
     elif bb > aa:

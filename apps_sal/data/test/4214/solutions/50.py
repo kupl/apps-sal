@@ -1,5 +1,4 @@
 from collections import deque
-
 N = int(input())
 xy = [list(map(int, input().split())) for _ in range(N)]
 
@@ -17,7 +16,6 @@ while que:
     for j in range(N):
         if j not in seq:
             que.append(seq + [j])
-
 d = 0
 s = len(perm)
 for p in perm:

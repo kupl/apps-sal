@@ -4,7 +4,7 @@ def zeroes(base, number):
 
 
 def get_factor(n):
-    li, j = [], 2
+    (li, j) = ([], 2)
     while j * j <= n:
         if n % j:
             j += 1
@@ -17,7 +17,7 @@ def get_factor(n):
 
 
 def find_power(k, b):
-    n, c = b, 0
+    (n, c) = (b, 0)
     while k // n:
         c += k // n
         n *= b

@@ -7,8 +7,7 @@ while 1:
             if i < a[i] % n:
                 tour += 1
             a[i] = tour
-        min_tour = float("inf")
-
+        min_tour = float('inf')
         for i in range(n):
             if a[i] < min_tour:
                 answer = i

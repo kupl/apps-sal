@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     dop = list(map(int, input().split()))
     suma = sum(dop)
     mas = []

@@ -15,10 +15,6 @@ for i in range(n // 2):
         b[key_b] = 1
 a = sorted(a.items(), key=lambda x: x[1], reverse=True)
 b = sorted(b.items(), key=lambda x: x[1], reverse=True)
-# a = list(a.items())
-# b = list(b.items())
-# print(a)
-# print(b)
 ca_max = a[0][0]
 cb_max = b[0][0]
 ca_max_num = a[0][1]

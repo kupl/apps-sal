@@ -1,4 +1,4 @@
-class Game():
+class Game:
 
     def __init__(self, arr):
         self.comands = arr
@@ -14,8 +14,7 @@ class Game():
         return self.over(self.fild)
 
     def __values__(self, comand):
-        self.step = 4 + {'R': lambda m: +int(m),
-                         'L': lambda m: -int(m)}[comand[1]](comand[2])
+        self.step = 4 + {'R': lambda m: +int(m), 'L': lambda m: -int(m)}[comand[1]](comand[2])
         return int(comand[0])
 
     def game(self):

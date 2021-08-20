@@ -1,7 +1,8 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        l, res, check = 0, 0, dict()
-        for i, t in enumerate(tree):
+        (l, res, check) = (0, 0, dict())
+        for (i, t) in enumerate(tree):
             check[t] = check.get(t, 0) + 1
             if len(check) <= 2:
                 res = max(res, i - l + 1)

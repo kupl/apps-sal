@@ -7,5 +7,4 @@ if k > 1:
     ans += 1
 if ans % 2 != 0:
     ans += 1
-
 print(ans // 2)

@@ -3,7 +3,7 @@ def s(a):
     for i in range(k - 1):
         for j in range(i, k - 1):
             if a[j] > a[j + 1]:
-                a[j], a[j + 1] = a[j + 1], a[j]
+                (a[j], a[j + 1]) = (a[j + 1], a[j])
     return a
 
 

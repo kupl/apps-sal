@@ -1,5 +1,5 @@
 def no_space(x):
-    x1 = ""
+    x1 = ''
     for i in range(len(x)):
         if x[i].isspace() == True:
             pass

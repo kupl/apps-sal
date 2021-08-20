@@ -1,5 +1,5 @@
 K = int(input())
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 
 
 def ans165(K, A, B):
@@ -8,9 +8,9 @@ def ans165(K, A, B):
         if i % K == 0:
             ans_count += 1
     if ans_count > 0:
-        return "OK"
+        return 'OK'
     else:
-        return "NG"
+        return 'NG'
 
 
-print((ans165(K, A, B)))
+print(ans165(K, A, B))

@@ -1,9 +1,6 @@
-# 11
 from collections import Counter
 N = int(input())
 a = list(map(int, input().split()))
-
-
 mod = 10 ** 9 + 7
 up = [1 for i in range(N + 1)]
 for i in range(2, N + 1):
@@ -21,18 +18,15 @@ def ncr(n, r):
         return up[n] * down[n - r] * down[r] % mod
 
 
-duplicated_number, _cnt = Counter(a).most_common()[0]
+(duplicated_number, _cnt) = Counter(a).most_common()[0]
 index_que = []
-
 for i in range(N + 1):
     if a[i] == duplicated_number:
         index_que.append(i)
-
-A, B = min(index_que), max(index_que)
-
+(A, B) = (min(index_que), max(index_que))
 for k in range(1, N + 2):
     if k == 1:
         print(N)
     else:
         ans = ncr(N - 1, k - 2) + ncr(N - 1, k) + 2 * ncr(N - 1, k - 1) - ncr(N - B + A, k - 1)
-        print((ans % mod))
+        print(ans % mod)

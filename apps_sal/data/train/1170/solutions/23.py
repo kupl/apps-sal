@@ -1,5 +1,5 @@
 for __ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     d = list(map(int, input().split()))
     st1 = ''
     for i in d:

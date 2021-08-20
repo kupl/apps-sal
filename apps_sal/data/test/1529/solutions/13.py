@@ -2,17 +2,18 @@ def main():
     n = int(input())
     for i in range(n):
         s = input()
-        if s.endswith("lala.") and s.endswith("miao.", 0, 5):
+        if s.endswith('lala.') and s.endswith('miao.', 0, 5):
             print("OMG>.< I don't know!")
-        elif s.endswith("lala."):
+        elif s.endswith('lala.'):
             print("Freda's")
-        elif s.endswith("miao.", 0, 5):
+        elif s.endswith('miao.', 0, 5):
             print("Rainbow's")
         else:
             print("OMG>.< I don't know!")
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

@@ -1,7 +1,6 @@
 n = int(input())
 a = [int(x) for x in input().strip().split()]
-
-ans, k = 1, 2
+(ans, k) = (1, 2)
 while k <= n:
     i = 0
     while i < n:
@@ -14,5 +13,4 @@ while k <= n:
             ans = k
         i += k
     k = k * 2
-
 print(ans)

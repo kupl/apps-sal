@@ -5,7 +5,7 @@ try:
         b = int(input())
         c = list(map(int, input().split()))
         if 1 in c:
-            print("Impossible")
+            print('Impossible')
         else:
             c.sort()
             flag = False
@@ -19,8 +19,8 @@ try:
                     break
                 i = i + 1
             if flag:
-                print("Impossible")
+                print('Impossible')
             else:
-                print("Possible")
+                print('Possible')
 except:
     pass

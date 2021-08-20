@@ -1,2 +1,2 @@
 def format_poem(poem):
-    return poem.replace(". ", ".\n")
+    return poem.replace('. ', '.\n')

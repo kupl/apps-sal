@@ -4,10 +4,10 @@ from math import inf
 
 
 def calc_jumps(nums):
-    nums = sorted((a, i) for i, a in enumerate(nums))
+    nums = sorted(((a, i) for (i, a) in enumerate(nums)))
     jumps = [None] * len(nums)
     index_stack = deque([inf])
-    for a, i in reversed(nums):
+    for (a, i) in reversed(nums):
         jumps[i] = index_stack[bisect_left(index_stack, i)]
         while index_stack and index_stack[0] <= i:
             index_stack.popleft()
@@ -16,6 +16,7 @@ def calc_jumps(nums):
 
 
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         odd_jumps = calc_jumps(A)
         even_jumps = calc_jumps([-a for a in A])

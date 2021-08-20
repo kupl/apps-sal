@@ -1,8 +1,8 @@
 def main():
-    t, x, y, ex, ey = list(map(int, input().split()))
+    (t, x, y, ex, ey) = list(map(int, input().split()))
     x -= ex
     y -= ey
-    for i, c in enumerate(input()):
+    for (i, c) in enumerate(input()):
         if x == 0 == y:
             print(i)
             return

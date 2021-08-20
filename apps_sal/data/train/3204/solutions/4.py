@@ -10,11 +10,10 @@ def Guess_it(n, m):
     return a list of all possible combinations of balls based on weight and number
 
     """
-    gMass, rMass, bMass = 5, 4, 3
-    gQ, rQ, bQ = 0, 0, 0
+    (gMass, rMass, bMass) = (5, 4, 3)
+    (gQ, rQ, bQ) = (0, 0, 0)
     massTotal = gMass * gQ + rMass * rQ + bMass * bQ
     total = gQ + rQ + bQ
-
     solutionSet = []
     while gQ <= n:
         rQ = 0

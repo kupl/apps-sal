@@ -7,12 +7,12 @@ def readline():
 
 
 def main():
-    n, d = readline()
+    (n, d) = readline()
     a = [0] + list(readline()) + [0]
     x = [0] * n
     y = [0] * n
     for i in range(n):
-        x[i], y[i] = readline()
+        (x[i], y[i]) = readline()
     lower_cost = [inf] * n
     lower_cost[0] = 0
     visited = [False] * n

@@ -6,8 +6,6 @@ for i in range(n):
     if s[i] == 'x':
         cntx += 1
 cntX = n - cntx
-
-
 if cntx > n // 2:
     c = cntx - n // 2
     print(c)
@@ -17,7 +15,6 @@ if cntx > n // 2:
             c -= 1
         else:
             print(s[i], end='')
-
 else:
     c = cntX - n // 2
     print(c)

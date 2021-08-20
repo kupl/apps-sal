@@ -1,6 +1,5 @@
 def main() -> None:
-    x, y, z = list(map(int, input().split()))
-
+    (x, y, z) = list(map(int, input().split()))
     print(f'{z} {x} {y}')
     return
 

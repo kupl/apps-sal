@@ -1,5 +1,4 @@
 from sys import stdin, stdout
-
 S = [int(z) for z in stdin.readline().strip()]
 n = len(S)
 graph = {}
@@ -13,7 +12,6 @@ if n > 1:
     for i in range(n):
         graph[S[i]].append(i)
     queue = [0]
-
     while len(queue) != 0:
         u = queue.pop(0)
         for v in graph[S[u]]:
@@ -32,8 +30,7 @@ if n > 1:
                 d[u + 1] = d[u] + 1
                 visited[u + 1] = 1
                 queue.append(u + 1)
-
         visited[u] = 1
-    stdout.write("%d\n" % d[n - 1])
+    stdout.write('%d\n' % d[n - 1])
 else:
-    stdout.write("0\n")
+    stdout.write('0\n')

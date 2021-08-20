@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestDistancePair(self, nums, k):
         """
         :type nums: List[int]
@@ -6,8 +7,7 @@ class Solution:
         :rtype: int
         """
         nums.sort()
-        l, r = 0, nums[-1] - nums[0]
-
+        (l, r) = (0, nums[-1] - nums[0])
         while l < r:
             m = l + (r - l) // 2
             count = 0
@@ -15,7 +15,7 @@ class Solution:
             for right in range(len(nums)):
                 while nums[right] - nums[left] > m:
                     left += 1
-                count += (right - left)
+                count += right - left
             if count < k:
                 l = m + 1
             else:

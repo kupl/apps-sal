@@ -12,8 +12,8 @@ def strong_num(number):
         if i == 0:
             result += 1
         else:
-            result += (math.factorial(i))
+            result += math.factorial(i)
     if result == number:
-        return "STRONG!!!!"
+        return 'STRONG!!!!'
     else:
-        return "Not Strong !!"
+        return 'Not Strong !!'

@@ -1,4 +1,5 @@
 class Solution:
+
     def canFinish(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -8,6 +9,7 @@ class Solution:
         from collections import deque
 
         class Vertex(object):
+
             def __init__(self):
                 self.inDegree = 0
                 self.visited = False
@@ -18,25 +20,20 @@ class Solution:
                 print(self.adjList)
                 print(self.invAdjList, self.inDegree)
                 print(self.visited)
-        # initialization
         vertices = []
         for _ in range(numCourses):
             vertices.append(Vertex())
-
         for i in prerequisites:
             pre = i[0]
             post = i[1]
             vertices[pre].adjList.append(post)
             vertices[post].inDegree += 1
             vertices[post].invAdjList.append(pre)
-
-        # BFS
         q = deque()
         coursesLearned = []
         for i in range(numCourses):
             if vertices[i].inDegree == 0:
                 q.append(i)
-
         while q:
             course = q.popleft()
             coursesLearned.append(course)

@@ -1,4 +1,3 @@
 def opposite(number):
-    x = number = -(number)
+    x = number = -number
     return x
-  # your solution here

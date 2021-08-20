@@ -6,17 +6,17 @@ def read_bit(tree, idx):
     s = 0
     while idx > 0:
         s += tree[idx]
-        idx -= (idx & -idx)
+        idx -= idx & -idx
     return s
 
 
 def update_bit(tree, idx, val):
     while idx < len(tree):
         tree[idx] += val
-        idx += (idx & -idx)
+        idx += idx & -idx
 
 
-n, t = list(map(int, stdin.readline().split()))
+(n, t) = list(map(int, stdin.readline().split()))
 a = [int(x) for x in stdin.readline().split()]
 pref = [0] * n
 pref[0] = a[0]

@@ -1,10 +1,9 @@
 class Solution:
+
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
         m = len(str1)
         n = len(str2)
-
         dp = [[0 for x in range(n + 1)] for x in range(m + 1)]
-
         for i in range(m + 1):
             for j in range(n + 1):
                 if i == 0 or j == 0:
@@ -21,15 +20,14 @@ class Solution:
                 s += str1[i - 1]
                 i -= 1
                 j -= 1
-
             elif dp[i - 1][j] > dp[i][j - 1]:
                 i -= 1
             else:
                 j -= 1
         res = s[::-1]
-        i, j, st = 0, 0, 0
+        (i, j, st) = (0, 0, 0)
         final = ''
-        while(i < m and j < n and st < len(res)):
+        while i < m and j < n and (st < len(res)):
             if str1[i] != res[st]:
                 final += str1[i]
                 i += 1
@@ -42,5 +40,4 @@ class Solution:
                 j += 1
                 st += 1
         final += str2[j:] + str1[i:]
-
         return final

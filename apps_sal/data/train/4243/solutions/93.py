@@ -1,4 +1,4 @@
-codewars = ["a", "b", "c"]
+codewars = ['a', 'b', 'c']
 
 
 def find_average(codewars):

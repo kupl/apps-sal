@@ -3,7 +3,6 @@ MAXN = 100005
 factorial = [1]
 for i in range(1, MAXN + 1):
     factorial.append(factorial[-1] * i % MOD)
-
 inv_factorial = [-1] * (MAXN + 1)
 inv_factorial[-1] = pow(factorial[-1], MOD - 2, MOD)
 for i in reversed(range(MAXN)):
@@ -28,9 +27,8 @@ def main():
     for i in range(n + 1):
         dic[a[i]].append(i)
         if len(dic[a[i]]) >= 2:
-            l, r = dic[a[i]][0], dic[a[i]][1]
+            (l, r) = (dic[a[i]][0], dic[a[i]][1])
             break
-
     r = n - r
     print(n)
     for i in range(2, n + 2):

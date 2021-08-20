@@ -1,11 +1,12 @@
 class Solution:
+
     def findMin(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
         min = nums[0]
-        start, end = 0, len(nums) - 1
+        (start, end) = (0, len(nums) - 1)
         while start < end:
             mid = (start + end) // 2
             if nums[mid] > nums[end]:

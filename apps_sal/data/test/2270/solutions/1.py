@@ -14,7 +14,7 @@ for i in range(q):
     x = int(s[1])
     cnt4 -= b[x] // 4
     cnt2 -= b[x] // 2
-    if s[0] == "+":
+    if s[0] == '+':
         b[x] += 1
     else:
         b[x] -= 1
@@ -23,8 +23,8 @@ for i in range(q):
     if cnt4 > 0:
         cnt = cnt2 - 2
         if cnt >= 2:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     else:
-        print("NO")
+        print('NO')

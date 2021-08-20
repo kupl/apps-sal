@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
         dp = {}
         n = len(graph)
@@ -10,11 +11,10 @@ class Solution:
             if im == ic:
                 return 2
             if nmove >= 2 * n + 1:
-                dp[(im, ic, nmove)] = 0
+                dp[im, ic, nmove] = 0
                 return 0
             if (im, ic, nmove) in dp:
-                return dp[(im, ic, nmove)]
-
+                return dp[im, ic, nmove]
             wins = [0, 0, 0]
             ret = None
             if mouse_move:
@@ -36,15 +36,13 @@ class Solution:
                         wins[idx] += 1
                         if idx == 2:
                             break
-
                 if wins[2] > 0:
                     ret = 2
                 elif wins[0] > 0:
                     ret = 0
                 else:
                     ret = 1
-            dp[(im, ic, nmove)] = ret
+            dp[im, ic, nmove] = ret
             return ret
-
         res = dfs(1, 2, 1)
         return res

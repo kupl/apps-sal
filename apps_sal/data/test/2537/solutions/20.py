@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def isSubseq(s, x):
-    i, j = 0, 0
+    (i, j) = (0, 0)
     while True:
         if j == len(x):
             return True
@@ -20,7 +20,7 @@ for _ in range(int(input().strip())):
     if not isSubseq(t, s):
         print('NO')
         continue
-    cs, ct, cp = Counter(s), Counter(t), Counter(p)
+    (cs, ct, cp) = (Counter(s), Counter(t), Counter(p))
     newc = {}
     for key in cs:
         newc[key] = cs[key]

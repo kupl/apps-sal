@@ -1,16 +1,13 @@
 import sys
 readline = sys.stdin.readline
-N, M = list(map(int, readline().split()))
-
+(N, M) = list(map(int, readline().split()))
 Edge = [[] for _ in range(N)]
-
 for _ in range(M):
-    a, b = list(map(int, readline().split()))
+    (a, b) = list(map(int, readline().split()))
     a -= 1
     b -= 1
     Edge[a].append(b)
     Edge[b].append(a)
-
 used = set()
 ans = 0
 mp = -1
@@ -24,7 +21,6 @@ for i in range(N):
         mp = max(mp, i)
     else:
         st = i
-
     stack = [i]
     while stack:
         vn = stack.pop()
@@ -33,5 +29,4 @@ for i in range(N):
                 mp = max(mp, vf)
                 used.add(vf)
                 stack.append(vf)
-
 print(ans)

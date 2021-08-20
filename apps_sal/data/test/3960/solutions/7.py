@@ -1,6 +1,6 @@
 n = int(input())
 a = input().split()
-arr = [abs(int(a[i]) - int(a[i + 1])) * (-1)**i for i in range(n - 1)]
+arr = [abs(int(a[i]) - int(a[i + 1])) * (-1) ** i for i in range(n - 1)]
 maximum = 0
 summ = 0
 for j in arr:

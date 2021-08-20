@@ -1,4 +1,4 @@
-n, l, r, x = list(map(int, input().split()))
+(n, l, r, x) = list(map(int, input().split()))
 cs = list(map(int, input().split()))
 
 
@@ -11,12 +11,11 @@ def subsets(x):
 
 
 sets = subsets(cs)
-
 ans = 0
 for s in sets:
     if len(s) < 2:
         continue
-    if not (l <= sum(s) <= r):
+    if not l <= sum(s) <= r:
         continue
     if max(s) - min(s) < x:
         continue

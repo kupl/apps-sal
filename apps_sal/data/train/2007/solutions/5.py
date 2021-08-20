@@ -25,23 +25,22 @@ def can(d, a, b):
                 y -= 1
                 mi = a[x]
                 ma = a[x]
+        elif abs(ma - mi) + min(abs(b[y] - mi), abs(b[y] - ma)) <= d1:
+            x -= 1
+            if x == -1:
+                break
+            ma = a[x]
         else:
-            if abs(ma - mi) + min(abs(b[y] - mi), abs(b[y] - ma)) <= d1:
-                x -= 1
-                if x == -1:
-                    break
-                ma = a[x]
-            else:
-                y -= 1
-                mi = a[x]
-                ma = a[x]
+            y -= 1
+            mi = a[x]
+            ma = a[x]
     return x == -1
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = list(map(int, input().split()))[::-1]
 s1 = list(map(int, input().split()))[::-1]
-high = (10**10) * 3
+high = 10 ** 10 * 3
 low = 0
 while high - low > 1:
     mid = (high + low) // 2

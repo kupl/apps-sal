@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:
         arr = [[0 for _ in range(len(mat[0]))] for _ in range(len(mat))]
 

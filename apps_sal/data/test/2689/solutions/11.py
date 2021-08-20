@@ -1,15 +1,15 @@
 s = str(input())
-f = ""
+f = ''
 for i in range(len(s)):
     f += s[i]
     if s[i] == '-':
-        f += " "
-g = ""
+        f += ' '
+g = ''
 for i in range(len(f)):
     if f[i].isdigit():
-        g += " "
+        g += ' '
     g += f[i]
-final = ""
+final = ''
 e = g.split()
 for i in range(len(e)):
     z = e[i]
@@ -19,6 +19,6 @@ for i in range(len(e)):
     else:
         final += z
 if final == final[::-1]:
-    print("Return")
+    print('Return')
 else:
-    print("Continue")
+    print('Continue')

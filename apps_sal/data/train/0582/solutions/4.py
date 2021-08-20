@@ -1,9 +1,9 @@
 try:
     tt = int(input())
-    while(tt):
+    while tt:
         tt = tt - 1
         s = input()
-        st1, dicti, i = [], {}, 1
+        (st1, dicti, i) = ([], {}, 1)
         for j in s:
             if j == '(':
                 st1.append(i)
@@ -17,7 +17,7 @@ try:
         q = int(input())
         t = list(map(int, input().split()))
         for i in t:
-            if(i in list(dicti.keys())):
+            if i in list(dicti.keys()):
                 print(dicti[i])
             else:
                 print(-1)

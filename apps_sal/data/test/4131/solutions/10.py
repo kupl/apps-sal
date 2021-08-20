@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 py = [list(map(int, input().split())) for i in range(m)]
-
 ipy = [[0, 0, 0]]
 for i in range(m):
     ipy.append([i] + py[i])

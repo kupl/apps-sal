@@ -1,4 +1,5 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
 n = int(input())
@@ -7,7 +8,7 @@ ans = -1
 cnt = 0
 for i in range(n):
     r = 0
-    while a[i] % (2 ** r) == 0:
+    while a[i] % 2 ** r == 0:
         r += 1
     r -= 1
     if r > ans:

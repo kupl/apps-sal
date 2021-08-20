@@ -1,5 +1,5 @@
 d = 1000000009
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 if (n - m) * k > n:
     print(m)
 else:

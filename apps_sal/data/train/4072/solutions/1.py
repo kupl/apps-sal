@@ -1,5 +1,4 @@
-trans_table = str.maketrans('abcdefghijklmnopqrstuvwxyz',
-                            '0123456789abcdefghijklmnop')
+trans_table = str.maketrans('abcdefghijklmnopqrstuvwxyz', '0123456789abcdefghijklmnop')
 
 
 def permutation_position(perm):

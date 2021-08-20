@@ -1,7 +1,6 @@
 import functools
 import operator
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 
 
 def nCr(n, r):
@@ -13,5 +12,5 @@ def nCr(n, r):
     return num * den % mod
 
 
-mod = 10**9 + 7
-print(((pow(2, n, mod) - nCr(n, a) - nCr(n, b) - 1) % mod))
+mod = 10 ** 9 + 7
+print((pow(2, n, mod) - nCr(n, a) - nCr(n, b) - 1) % mod)

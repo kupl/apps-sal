@@ -3,7 +3,7 @@ from itertools import groupby
 
 def destroy(chain):
     remaining = []
-    for k, v in groupby(chain):
+    for (k, v) in groupby(chain):
         L = list(v)
         if len(L) < 3:
             remaining.extend(L)
@@ -14,7 +14,7 @@ def destroy(chain):
 
 
 def solve():
-    n, k, x = list(map(int, input().split()))
+    (n, k, x) = list(map(int, input().split()))
     balls = list(map(int, input().split()))
     res = 0
     for i in range(n):

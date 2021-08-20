@@ -3,7 +3,7 @@ def choose_best_sum(t, k, ls):
     return res if res > 0 else None
 
 
-minf = float("-inf")
+minf = float('-inf')
 
 
 def cbs(t, k, ls):

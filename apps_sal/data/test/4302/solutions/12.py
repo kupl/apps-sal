@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 ans = 0
 for _ in range(2):
     ans += max(A, B)

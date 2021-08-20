@@ -1,13 +1,12 @@
 def getV(c):
-    if (c == 'a'):
+    if c == 'a':
         return ['b']
-    if (c == 'z'):
+    if c == 'z':
         return ['y']
     return [chr(ord(c) + 1), chr(ord(c) - 1)]
 
 
 T = int(input().strip())
-
 for i in range(T):
     n = int(input().strip())
     s = input().strip()
@@ -19,7 +18,7 @@ for i in range(T):
             if c in first:
                 b = True
                 break
-        if not (b):
+        if not b:
             print('NO')
             break
     else:

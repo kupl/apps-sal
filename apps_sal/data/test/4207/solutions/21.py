@@ -15,9 +15,8 @@ for i in range(N):
             c[k] += 1
         else:
             c[k] = 1
-    else:
-        if B[i] == 0:
-            q += 1
+    elif B[i] == 0:
+        q += 1
 if c:
     print(max(c.values()) + q)
 else:

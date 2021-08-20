@@ -1,19 +1,21 @@
-def kk(): return map(int, input().split())
-def ll(): return list(kk())
+def kk():
+    return map(int, input().split())
 
 
-n, k = kk()
+def ll():
+    return list(kk())
+
+
+(n, k) = kk()
 ls = sorted(ll())
-vs, ne = [0] * n, [-1] * n
+(vs, ne) = ([0] * n, [-1] * n)
 b = 0
 for a in range(n):
     while b < n and ls[b] - ls[a] < 6:
         b += 1
-    vs[a], ne[a] = b - a, b
+    (vs[a], ne[a]) = (b - a, b)
 curr = [0] * (n + 1)
-# print(vs)
 for _ in range(k):
-    # print(curr)
     prev = curr
     curr = [0] * (n + 1)
     for i in range(n):

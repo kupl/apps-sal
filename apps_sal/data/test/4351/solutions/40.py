@@ -1,1 +1,1 @@
-print("YNeos"[(s := input()) != s[::-1]::2])
+print('YNeos'[(s := input()) != s[::-1]::2])

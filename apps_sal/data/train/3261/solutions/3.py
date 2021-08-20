@@ -1,5 +1,5 @@
 def sort_poker(john, uncle):
-    card_order = "23456789TJQKA"
+    card_order = '23456789TJQKA'
     suit_order = [('S', uncle.index('S')), ('D', uncle.index('D')), ('H', uncle.index('H')), ('C', uncle.index('C'))]
     suit_order = [X[0] for X in sorted(suit_order, key=lambda x: x[1])]
     john = john.replace('10', 'T')

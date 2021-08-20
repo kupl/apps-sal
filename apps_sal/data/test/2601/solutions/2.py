@@ -8,10 +8,10 @@ def main():
     bef = alst[0]
     for a in alst[1:]:
         if a >= bef:
-            print("YES")
+            print('YES')
             return
         bef = a
-    print("NO")
+    print('NO')
 
 
 for _ in range(int(input())):

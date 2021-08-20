@@ -10,7 +10,6 @@ for i in range(1, l // 2 + 1):
     if pt < len(b):
         while b[pt] == i:
             pt += 1
-
             t += 1
             if not pt < len(b):
                 break

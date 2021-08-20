@@ -1,8 +1,3 @@
-#  author: ThePonyCoder
-#  created: 19.06.2019, 17:45
-#  filename: a.py
-#  path: C:/Users/User/Desktop/python/Prog/CodeForces/rounds/cf_568/a.py
-
 def ri():
     return [int(i) for i in input().split()]
 
@@ -14,7 +9,7 @@ def fl(a, b):
 def gt_mx(d, l):
     ans = 0
     for i in reversed(range(1, 110)):
-        if(l < 0):
+        if l < 0:
             break
         if d[i] > 0:
             do = min(l // i, d[i])
@@ -23,7 +18,6 @@ def gt_mx(d, l):
             if l > 0 and do < d[i]:
                 l -= i
                 ans += 1
-
     return ans
 
 
@@ -46,10 +40,7 @@ def main(n, m, t):
             print(0, end=' ')
         d[t[i]] += 1
 
-        # print(ans, )
-    # return ans
 
-
-n, m = ri()
+(n, m) = ri()
 t = ri()
 main(n, m, t)

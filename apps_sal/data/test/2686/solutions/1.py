@@ -1,7 +1,7 @@
-n, m = map(int, input().strip().split())
+(n, m) = map(int, input().strip().split())
 connections = {}
 for _ in range(m):
-    x, y = map(int, input().strip().split())
+    (x, y) = map(int, input().strip().split())
     if x not in connections.keys():
         connections[x] = [y]
     else:
@@ -10,7 +10,7 @@ for _ in range(m):
         connections[y] = [x]
     else:
         connections[y].append(x)
-s, t = map(int, input().split())
+(s, t) = map(int, input().split())
 distances = [-1] * (n + 1)
 distances[s] = 0
 unvisited = list(range(1, n + 1))

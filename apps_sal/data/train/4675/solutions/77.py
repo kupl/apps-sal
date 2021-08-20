@@ -3,6 +3,6 @@ def set_alarm(employed, vacation):
         return False
     if employed and vacation:
         return False
-    if employed and not vacation:
+    if employed and (not vacation):
         return True
     return False

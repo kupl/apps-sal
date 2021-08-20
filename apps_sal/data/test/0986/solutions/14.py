@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 inventory = set()
 bought = 0
@@ -19,5 +19,4 @@ for i in range(n):
             inventory.remove(farthest)
         inventory.add(a[i])
         bought += 1
-
 print(bought)

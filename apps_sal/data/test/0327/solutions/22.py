@@ -1,5 +1,4 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 if k == 1:
     ans = n
 else:

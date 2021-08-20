@@ -10,7 +10,7 @@ while t:
         new.append(su)
     i = 0
     ans = 0
-    while(i < n - 1):
+    while i < n - 1:
         i = i + new[i]
         ans += 1
     print(ans)

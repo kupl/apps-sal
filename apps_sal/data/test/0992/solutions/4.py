@@ -1,5 +1,5 @@
 import numpy as np
-N, S = [int(_) for _ in input().split()]
+(N, S) = [int(_) for _ in input().split()]
 A = [int(_) for _ in input().split()]
 mod = 998244353
 coef = np.zeros(3001, dtype=int)
@@ -9,4 +9,4 @@ for a in A:
     coef *= 2
     coef[a:] += coef2
     coef %= mod
-print((coef[S]))
+print(coef[S])

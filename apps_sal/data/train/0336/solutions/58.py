@@ -1,4 +1,5 @@
 class Solution:
+
     def minSteps(self, s: str, t: str) -> int:
         a = {}
         b = {}
@@ -20,4 +21,4 @@ class Solution:
                 v += a[i]
             else:
                 v += 0
-        return(v)
+        return v

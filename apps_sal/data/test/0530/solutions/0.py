@@ -1,5 +1,5 @@
 n = int(input())
-a, b = input(), input()
+(a, b) = (input(), input())
 t = {i + j: 0 for i in '01' for j in '01'}
 for i in range(2 * n):
     t[a[i] + b[i]] += 1

@@ -7,7 +7,7 @@ def is_good(mid, key):
 
 
 def binary_search(key):
-    bad, good = -1, 10 ** 18
+    (bad, good) = (-1, 10 ** 18)
     while good - bad > 1:
         mid = (bad + good) // 2
         if is_good(mid, key):
@@ -17,9 +17,9 @@ def binary_search(key):
     return good
 
 
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = np.array(input().split(), dtype=np.int64)
 F = np.array(input().split(), dtype=np.int64)
 A.sort()
 F[::-1].sort()
-print((binary_search(K)))
+print(binary_search(K))

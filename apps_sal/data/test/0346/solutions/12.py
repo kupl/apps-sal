@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = []
@@ -11,7 +11,7 @@ c.sort()
 c = c[::-1]
 mx = ans
 for i in range(m + 1):
-    x = (sum(c[:i]) + ans) * (2 ** (m - i))
+    x = (sum(c[:i]) + ans) * 2 ** (m - i)
     if x > mx:
         mx = x
 print(mx)

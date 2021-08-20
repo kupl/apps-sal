@@ -8,7 +8,6 @@ from collections import Counter, deque, defaultdict
 from functools import reduce
 from operator import xor
 from typing import List
-
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 
@@ -20,14 +19,13 @@ def lmi():
 def main():
     N = int(input())
     A = lmi()
-    A_dash = [a - (i + 1) for i, a in enumerate(A)]
+    A_dash = [a - (i + 1) for (i, a) in enumerate(A)]
     A_dash.sort()
     b = A_dash[N // 2]
-    ans = sum(abs(a - b) for i, a in enumerate(A_dash))
+    ans = sum((abs(a - b) for (i, a) in enumerate(A_dash)))
     if N // 2 + 1 < len(A_dash):
         b = A_dash[N // 2 + 1]
-        ans = min(ans, sum(abs(a - b) for i, a in enumerate(A_dash)))
-
+        ans = min(ans, sum((abs(a - b) for (i, a) in enumerate(A_dash))))
     print(ans)
 
 

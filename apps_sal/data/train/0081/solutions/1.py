@@ -2,8 +2,8 @@ for _ in range(int(input())):
     a = input()
     b = input()
     c = input()
-    ans = "YES"
+    ans = 'YES'
     for i in range(len(a)):
         if a[i] != c[i] and b[i] != c[i]:
-            ans = "NO"
+            ans = 'NO'
     print(ans)

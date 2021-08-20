@@ -1,13 +1,14 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         from collections import deque
-        m, n = len(stamp), len(target)
+        (m, n) = (len(stamp), len(target))
         queue = deque()
         done = [False] * n
         ans = []
         A = []
         for i in range(n - m + 1):
-            todo, made = set(), set()
+            (todo, made) = (set(), set())
             for j in range(m):
                 if stamp[j] == target[i + j]:
                     made.add(i + j)
@@ -31,5 +32,4 @@ class Solution:
                             if not done[k]:
                                 done[k] = True
                                 queue.append(k)
-
         return ans[::-1] if all(done) else []

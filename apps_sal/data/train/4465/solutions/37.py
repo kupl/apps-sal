@@ -1,5 +1,5 @@
 def super_size(n):
-    bigest = ""
+    bigest = ''
     amount = len(str(n))
     numbers = []
     n = str(n)
@@ -9,4 +9,4 @@ def super_size(n):
     for i in range(amount):
         bigest += numbers[i]
     bigest = int(bigest)
-    return(bigest)
+    return bigest

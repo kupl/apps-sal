@@ -1,6 +1,6 @@
 def test(m):
-    t = [i for i in range(2**m)]
-    for i in range(2**m):
+    t = [i for i in range(2 ** m)]
+    for i in range(2 ** m):
         t.append(i)
     t.sort()
     st = set()
@@ -36,26 +36,25 @@ def test(m):
 
 
 def main():
-    m, k = map(int, input().split())
-#    test(m)
+    (m, k) = map(int, input().split())
     x = 0
-    for i in range(2**m):
+    for i in range(2 ** m):
         if i == k:
             continue
         x ^= i
     if k == 0:
-        for i in range(2**m):
-            print(i, i, end=" ")
+        for i in range(2 ** m):
+            print(i, i, end=' ')
     elif x == k:
-        for i in range(2**m):
+        for i in range(2 ** m):
             if i == k:
                 continue
-            print(i, end=" ")
-        print(k, end=" ")
-        for i in reversed(range(2**m)):
+            print(i, end=' ')
+        print(k, end=' ')
+        for i in reversed(range(2 ** m)):
             if i == k:
                 continue
-            print(i, end=" ")
+            print(i, end=' ')
         print(k)
     else:
         print(-1)

@@ -4,7 +4,7 @@ def pro(g, v):
             return True
         else:
             return False
-    y = 2**100
+    y = 2 ** 100
     ans = 0
     x = g
     while x != 0:
@@ -18,15 +18,13 @@ def pro(g, v):
         return False
 
 
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 mini = 100000
 for i in range(0, 40000):
     if n - p * i < 0:
         break
     x = pro(n - p * i, i)
-    #print (x, i)
-    if (x):
-        #print ("YES")
+    if x:
         mini = min(mini, i)
 if mini == 100000:
     print(-1)

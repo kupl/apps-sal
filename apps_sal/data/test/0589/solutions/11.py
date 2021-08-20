@@ -12,13 +12,12 @@ for i in s:
             c *= 10
     elif i in n:
         pass
-    else:
-        if i not in l:
-            if z:
-                c *= 9
-                l.append(i)
-            else:
-                c *= (10 - len(l))
-                l.append(i)
+    elif i not in l:
+        if z:
+            c *= 9
+            l.append(i)
+        else:
+            c *= 10 - len(l)
+            l.append(i)
     z = False
 print(c)

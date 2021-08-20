@@ -1,13 +1,13 @@
 import copy
-N, Ma, Mb = map(int, input().split())
+(N, Ma, Mb) = map(int, input().split())
 a = [0 for k in range(N)]
 b = [0 for k in range(N)]
 c = [0 for k in range(N)]
 for k in range(N):
-    a[k], b[k], c[k] = map(int, input().split())
+    (a[k], b[k], c[k]) = map(int, input().split())
 Sa = sum(a)
 Sb = sum(b)
-dp = [[[5000 for k in range(Sb + 1)]for k in range(Sa + 1)]for k in range(N + 1)]
+dp = [[[5000 for k in range(Sb + 1)] for k in range(Sa + 1)] for k in range(N + 1)]
 dp[0][0][0] = 0
 for k in range(N):
     listj = []

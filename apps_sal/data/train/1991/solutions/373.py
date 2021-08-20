@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         numCity = len(locations)
         dp = [[None] * (fuel + 1) for _ in range(numCity)]
@@ -9,7 +10,7 @@ class Solution:
             res = dp[city][fuel]
             if res is not None:
                 return res
-            res = (int(city == finish) + sum(helper(city2, fuel - abs(locations[city] - locations[city2])) for city2 in range(numCity) if city != city2)) % (10**9 + 7)
+            res = (int(city == finish) + sum((helper(city2, fuel - abs(locations[city] - locations[city2])) for city2 in range(numCity) if city != city2))) % (10 ** 9 + 7)
             dp[city][fuel] = res
             return res
         return helper(start, fuel)

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     x = a + b
@@ -8,5 +8,5 @@ for _ in range(int(input())):
         dp[x[_]] += 1
     for _ in range(1, len(dp)):
         if dp[_] == 1:
-            print(_, end=" ")
+            print(_, end=' ')
     print()

@@ -20,7 +20,7 @@ def solve():
         ans += 1
         nxt_q = deque()
         while q:
-            i, ai = q.pop()
+            (i, ai) = q.pop()
             if (i, ai) in d:
                 if a[i]:
                     ni = a[i].popleft()
@@ -37,7 +37,7 @@ def solve():
             else:
                 d.add((i, ai))
         q = nxt_q
-    if any(i for i in a):
+    if any((i for i in a)):
         ans = -1
     print(ans)
 

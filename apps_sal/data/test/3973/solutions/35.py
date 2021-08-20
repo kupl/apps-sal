@@ -1,4 +1,3 @@
-
 def main(n, m, a):
     mat = [0] * m
     dat = [set() for _ in range(m)]
@@ -10,7 +9,7 @@ def main(n, m, a):
             continue
         mat[a[i + 1] - 1] += (a[i + 1] - a[i]) % m - 1
         dat[a[i + 1] - 1].add(i + 1)
-        dat[(a[i]) % m].add(-i - 1)
+        dat[a[i] % m].add(-i - 1)
     now = 0
     nowd = set()
     for i in range(m - 1, -1, -1):
@@ -43,10 +42,9 @@ def main(n, m, a):
         for x in delid:
             dat[i].discard(x)
         now = max(now - len(nowd), 0)
-
     return base - max(ret)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-print((main(n, m, a)))
+print(main(n, m, a))

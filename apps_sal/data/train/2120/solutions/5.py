@@ -1,11 +1,11 @@
 def main():
-    n, res, le, tot = int(input()), [], 1, 0
-    l, base = [0] * (n + 2), [0] * (n + 2)
+    (n, res, le, tot) = (int(input()), [], 1, 0)
+    (l, base) = ([0] * (n + 2), [0] * (n + 2))
     for _ in range(n):
         s = input()
         c = s[0]
         if c == '1':
-            a, x = list(map(int, s[2:].split()))
+            (a, x) = list(map(int, s[2:].split()))
             base[a] += x
             tot += a * x
         elif c == '2':
@@ -22,7 +22,6 @@ def main():
             else:
                 le -= 1
             tot -= l[le]
-
         res.append(tot / le)
     print('\n'.join(map(str, res)))
 

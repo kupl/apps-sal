@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for nt in range(int(input())):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     if 2 * l <= r:
         print(l, 2 * l)
     else:

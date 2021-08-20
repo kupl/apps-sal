@@ -2,6 +2,7 @@ from collections import defaultdict, deque
 
 
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         children = {}
         d = defaultdict(set)
@@ -20,14 +21,12 @@ class Solution:
             children[node] = out
             self.dist += e
             return out
-
         check(0, 0)
-
         ans = [0] * N
         visited = {0}
         q = deque([(0, self.dist)])
         while len(q) > 0:
-            cur, total = q.popleft()
+            (cur, total) = q.popleft()
             ans[cur] = total
             for adj in d[cur]:
                 if adj not in visited:

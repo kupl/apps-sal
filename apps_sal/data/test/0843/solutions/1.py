@@ -1,5 +1,3 @@
-
-
 n = int(input())
 s = input()
 l = list(map(int, input().split()))
@@ -17,9 +15,8 @@ for i in range(n):
             ans = 'FINITE'
         else:
             pos -= l[pos]
+    elif pos + l[pos] >= n:
+        ans = 'FINITE'
     else:
-        if pos + l[pos] >= n:
-            ans = 'FINITE'
-        else:
-            pos += l[pos]
+        pos += l[pos]
 print(ans)

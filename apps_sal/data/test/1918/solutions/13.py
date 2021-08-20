@@ -13,7 +13,6 @@ for i in range(n):
     else:
         k += power[i]
     ans = max(ans, k)
-
 k = cnt
 for i in range(n - 1, -1, -1):
     if s[i] == 'B':

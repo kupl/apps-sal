@@ -1,25 +1,25 @@
 def relations(family, target):
     parents = {}
-    for parent, child in family:
+    for (parent, child) in family:
         parents[child] = parent
-    a, b = target
+    (a, b) = target
     ap = parents.get(a)
     app = parents.get(ap)
     bp = parents.get(b)
     bpp = parents.get(bp)
     if b == ap:
-        return "Mother"
+        return 'Mother'
     elif b == app:
-        return "Grandmother"
+        return 'Grandmother'
     elif a == bp:
-        return "Daughter"
+        return 'Daughter'
     elif a == bpp:
-        return "Granddaughter"
+        return 'Granddaughter'
     elif ap == bp:
-        return "Sister"
+        return 'Sister'
     elif app == bpp:
-        return "Cousin"
+        return 'Cousin'
     elif app == bp:
-        return "Aunt"
+        return 'Aunt'
     elif ap == bpp:
-        return "Niece"
+        return 'Niece'

@@ -2,11 +2,10 @@ import sys
 
 
 def main():
-    n, k = list(map(int, sys.stdin.readline().split()))
+    (n, k) = list(map(int, sys.stdin.readline().split()))
     max_odd_pos = int(n / 2)
     if n % 2 == 1:
         max_odd_pos += 1
-
     if k <= max_odd_pos:
         print(k * 2 - 1)
     else:
@@ -14,7 +13,7 @@ def main():
 
 
 def __starting_point():
-    return(main())
+    return main()
 
 
 __starting_point()

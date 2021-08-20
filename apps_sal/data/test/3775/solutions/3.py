@@ -1,10 +1,9 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 can0 = set()
 can1 = [set() for i in range(n)]
 can2 = [set() for i in range(m)]
-
 for i in range(n):
     for j in range(m):
         x1 = a[i * 2]
@@ -12,9 +11,9 @@ for i in range(n):
         y1 = b[j * 2]
         y2 = b[j * 2 + 1]
         if x1 > x2:
-            x1, x2 = x2, x1
+            (x1, x2) = (x2, x1)
         if y1 > y2:
-            y1, y2 = y2, y1
+            (y1, y2) = (y2, y1)
         if x1 == y1 and x2 == y2:
             continue
         if x1 == y1:

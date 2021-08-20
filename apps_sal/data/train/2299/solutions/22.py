@@ -1,10 +1,10 @@
 from heapq import heappop, heappush
-INF = 10**30
+INF = 10 ** 30
 
 
-class Rmin():
+class Rmin:
+
     def __init__(self, size):
-        # the number of nodes is 2n-1
         self.n = 1
         while self.n < size:
             self.n *= 2
@@ -21,9 +21,8 @@ class Rmin():
             self.node[x] = min(self.node[2 * x + 1], self.node[2 * x + 2])
         return
 
-    # [l, r)
     def Get(self, l, r):
-        L, R = l + self.n, r + self.n
+        (L, R) = (l + self.n, r + self.n)
         s = INF
         while L < R:
             if R & 1:
@@ -39,50 +38,43 @@ class Rmin():
 
 n = int(input())
 a = list(map(int, input().split()))
-
-even, odd = Rmin(n), Rmin(n)
+(even, odd) = (Rmin(n), Rmin(n))
 for i in range(n):
     if i % 2 == 0:
-        even.Update(i, a[i] * (10**7) + i)
+        even.Update(i, a[i] * 10 ** 7 + i)
     else:
-        odd.Update(i, a[i] * (10**7) + i)
-
+        odd.Update(i, a[i] * 10 ** 7 + i)
 d = dict()
 
 
 def search(l, r):
     if l % 2 == 0:
         p = even.Get(l, r + 1)
-        q = odd.Get(p % (10**7) + 1, r + 1)
+        q = odd.Get(p % 10 ** 7 + 1, r + 1)
     else:
         p = odd.Get(l, r + 1)
-        q = even.Get(p % (10**7) + 1, r + 1)
-    return p, q
+        q = even.Get(p % 10 ** 7 + 1, r + 1)
+    return (p, q)
 
 
-x, y = search(0, n - 1)
-d[x % (10**7)] = (y, 0, n - 1)
+(x, y) = search(0, n - 1)
+d[x % 10 ** 7] = (y, 0, n - 1)
 que = [x]
 ans = []
-
 while que:
     x = heappop(que)
-    y, l, r = d[x % (10**7)]
-    ans += [x // (10**7), y // (10**7)]
-
-    if l != x % (10**7):
-        p, q = search(l, x % (10**7) - 1)
-        d[p % (10**7)] = (q, l, x % (10**7) - 1)
+    (y, l, r) = d[x % 10 ** 7]
+    ans += [x // 10 ** 7, y // 10 ** 7]
+    if l != x % 10 ** 7:
+        (p, q) = search(l, x % 10 ** 7 - 1)
+        d[p % 10 ** 7] = (q, l, x % 10 ** 7 - 1)
         heappush(que, p)
-
-    if r != y % (10**7):
-        p, q = search(y % (10**7) + 1, r)
-        d[p % (10**7)] = (q, y % (10**7) + 1, r)
+    if r != y % 10 ** 7:
+        (p, q) = search(y % 10 ** 7 + 1, r)
+        d[p % 10 ** 7] = (q, y % 10 ** 7 + 1, r)
         heappush(que, p)
-
-    if x % (10**7) + 1 != y % (10**7):
-        p, q = search(x % (10**7) + 1, y % (10**7) - 1)
-        d[p % (10**7)] = (q, x % (10**7) + 1, y % (10**7) - 1)
+    if x % 10 ** 7 + 1 != y % 10 ** 7:
+        (p, q) = search(x % 10 ** 7 + 1, y % 10 ** 7 - 1)
+        d[p % 10 ** 7] = (q, x % 10 ** 7 + 1, y % 10 ** 7 - 1)
         heappush(que, p)
-
 print(*ans)

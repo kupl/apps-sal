@@ -1,6 +1,6 @@
-a, b, f, k = list(map(int, input().split()))
+(a, b, f, k) = list(map(int, input().split()))
 fuel = b - f
-c, d = 0, [(a - f) << 1, (f) << 1]
+(c, d) = (0, [a - f << 1, f << 1])
 flag = 1
 for i in range(k):
     if fuel < 0:
@@ -13,4 +13,4 @@ for i in range(k):
     fuel -= dis
 if fuel < 0:
     flag = 0
-print(c if flag else "-1")
+print(c if flag else '-1')

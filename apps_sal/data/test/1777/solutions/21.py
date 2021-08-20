@@ -31,11 +31,10 @@ for t in range(n):
                 skobs1[opcnt - clcnt] += 1
             else:
                 skobs1[opcnt - clcnt] = 1
+        elif clcnt - opcnt in skobs2:
+            skobs2[clcnt - opcnt] += 1
         else:
-            if clcnt - opcnt in skobs2:
-                skobs2[clcnt - opcnt] += 1
-            else:
-                skobs2[clcnt - opcnt] = 1
+            skobs2[clcnt - opcnt] = 1
 ans = ptav_cnt // 2
 for t in skobs1:
     if t in skobs2:

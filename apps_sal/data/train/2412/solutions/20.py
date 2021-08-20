@@ -1,8 +1,8 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         while True:
             counter = 0
-
             i = 1
             remove_list = []
             while i < len(S):

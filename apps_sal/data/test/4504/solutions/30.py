@@ -1,6 +1,3 @@
-#!/usr/local/bin/python3
-# https://atcoder.jp/contests/abc066/tasks/abc066_b
-
 S = list(input())[:-2]
 
 
@@ -14,6 +11,6 @@ def check(S):
 
 while True:
     if check(S):
-        print((len(S)))
+        print(len(S))
         break
     S = S[:-2]

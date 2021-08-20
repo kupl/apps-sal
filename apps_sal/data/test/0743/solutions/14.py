@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-while(1):
+while 1:
     T = True
     for i in range(n):
         for j in range(n):

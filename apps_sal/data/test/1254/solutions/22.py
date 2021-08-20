@@ -8,9 +8,9 @@ for sub in subs:
 subs = [sub for sub in subs if sub and sub[0] > 0]
 best = 0
 while subs:
-    best = max(best, sum(sub[0] for sub in subs))
+    best = max(best, sum((sub[0] for sub in subs)))
     for i in reversed(list(range(len(subs)))):
-        if (len(subs[i]) == 1) or (subs[i][0] + subs[i][1] <= 0):
+        if len(subs[i]) == 1 or subs[i][0] + subs[i][1] <= 0:
             subs.pop(i)
         else:
             subs[i][0:2] = [subs[i][0] + subs[i][1]]

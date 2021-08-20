@@ -5,7 +5,7 @@ def __starting_point():
     for iv in inp.split(' '):
         L.append(int(iv))
     vals = [0, 0, 0]
-    ans = "YES"
+    ans = 'YES'
     for iv in L:
         if iv == 25:
             vals[0] += 1
@@ -14,7 +14,7 @@ def __starting_point():
                 vals[0] -= 1
                 vals[1] += 1
             else:
-                ans = "NO"
+                ans = 'NO'
                 break
         if iv == 100:
             if vals[0] > 0 and vals[1] > 0:
@@ -25,7 +25,7 @@ def __starting_point():
                 vals[0] -= 3
                 vals[2] += 1
             else:
-                ans = "NO"
+                ans = 'NO'
                 break
     print(ans)
 

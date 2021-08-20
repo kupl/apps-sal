@@ -1,18 +1,14 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     remain = list(map(int, input().split()))
     cost = list(map(int, input().split()))
-
     stack = []
-
     for i in range(n):
         stack.append((cost[i], i))
-
     stack.sort()
     stack.reverse()
-
     for i in range(m):
-        t, d = list(map(int, input().split()))
+        (t, d) = list(map(int, input().split()))
         cst = 0
         if remain[t - 1] >= d:
             remain[t - 1] -= d
@@ -36,7 +32,6 @@ def main():
                     r -= remain[c[1]]
                     cst += remain[c[1]] * cost[c[1]]
                     remain[c[1]] = 0
-
         print(cst)
 
 

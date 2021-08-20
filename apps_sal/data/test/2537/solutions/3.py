@@ -25,7 +25,7 @@ for _ in range(Q):
         Cs = Counter(s)
         Ct = Counter(t)
         Cp = Counter(p)
-        if all(Ct[k] - Cs[k] <= Cp[k] for k in Ct.keys()):
+        if all((Ct[k] - Cs[k] <= Cp[k] for k in Ct.keys())):
             sys.stdout.write('YES\n')
         else:
             sys.stdout.write('NO\n')

@@ -4,7 +4,6 @@ c = [S.count(s) for s in 'MARCH' if S.count(s)]
 ans = 0
 if len(c) > 2:
     ans += c[0] * c[1] * c[2]
-
 if len(c) > 3:
     for i in c[3:]:
         for j in range(3):

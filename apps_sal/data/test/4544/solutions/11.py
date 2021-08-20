@@ -18,8 +18,6 @@ for j in range(len(bl)):
         tmp += bl[j - 1][1]
     if j != len(bl) - 1 and bl[j][0] == bl[j + 1][0] - 1:
         tmp += bl[j + 1][1]
-
     if tmp > ans:
         ans = tmp
-
 print(ans)

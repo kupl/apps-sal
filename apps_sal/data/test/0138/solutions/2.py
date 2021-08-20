@@ -1,5 +1,5 @@
-n, a, b, c = list(map(int, input().split()))
-ans = int(1e18)
+(n, a, b, c) = list(map(int, input().split()))
+ans = int(1e+18)
 for i in range(4):
     for j in range(2):
         for k in range(4):

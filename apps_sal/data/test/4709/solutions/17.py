@@ -1,4 +1,4 @@
-a, op, b = input().split()
+(a, op, b) = input().split()
 if op == '+':
     ans = int(a) + int(b)
 else:

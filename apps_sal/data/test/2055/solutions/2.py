@@ -3,7 +3,7 @@ while T > 0:
     n = int(input())
     households = list(map(int, input().split()))
     stations = list(map(int, input().split()))
-    l, r = 0, min(households[0], stations[0])
+    (l, r) = (0, min(households[0], stations[0]))
     ans = False
     while l <= r:
         mid = (l + r) // 2
@@ -27,5 +27,4 @@ while T > 0:
         print('YES')
     else:
         print('NO')
-
     T -= 1

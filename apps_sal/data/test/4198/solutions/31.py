@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
 def main():
-    # 二分探索でも解ける
-    A, B, X = list(map(int, input().split()))
+    (A, B, X) = list(map(int, input().split()))
     num_max = 10 ** 9
-
     ok = 0
     ng = num_max + 1
     while abs(ng - ok) > 1:

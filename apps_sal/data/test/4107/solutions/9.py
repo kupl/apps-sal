@@ -1,6 +1,6 @@
 def find(roomcount, radius, string):
     zero_roomcount = [0] * (roomcount + 1)
-    binary_move = 1 << 1000  # сдвиг двоичной единицы на 1000 влево или любое число
+    binary_move = 1 << 1000
     for i in range(roomcount, 0, -1):
         if string[i - 1] == '1':
             binary_move = i
@@ -14,6 +14,6 @@ def find(roomcount, radius, string):
     return dp[roomcount]
 
 
-roomcount, radius = map(int, input().split())
+(roomcount, radius) = map(int, input().split())
 string = input()
 print(find(roomcount, radius, string))

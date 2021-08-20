@@ -1,4 +1,3 @@
-
 def dfs(graph, i):
     visited[i] = True
     for j in graph[i]:
@@ -6,7 +5,7 @@ def dfs(graph, i):
             dfs(graph, j)
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 arr = []
 for i in range(N):
     arr.append(list(map(int, input().split())))

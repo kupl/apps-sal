@@ -4,7 +4,6 @@ AC = 0
 TLE = 0
 WA = 0
 RE = 0
-
 for i in range(0, N):
     S.append(input())
     if S[i] == 'AC':
@@ -15,7 +14,6 @@ for i in range(0, N):
         WA += 1
     elif S[i] == 'RE':
         RE += 1
-
 print('AC x %d' % AC)
 print('WA x %d' % WA)
 print('TLE x %d' % TLE)

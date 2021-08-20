@@ -1,6 +1,5 @@
-# cook your dish here
 s = input()
-if('c' in s or 'k' in s):
+if 'c' in s or 'k' in s:
     print(0)
 else:
     l1 = []
@@ -14,9 +13,8 @@ else:
                 l1.append(count)
             count = 1
         pre = i
-    if(count > 1):
+    if count > 1:
         l1.append(count)
-    # print(l1)
     ans = 1
     for t in l1:
         ans *= (t * t - 3 * t + 6) / 2

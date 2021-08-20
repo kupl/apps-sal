@@ -11,7 +11,6 @@ for i in range(n):
 for i in range(1, n + 1):
     if dostal[i] == 0:
         do_dania.append(i)
-# print(do_dania)
 j = 0
 for i in range(n):
     if l[i] == 0:

@@ -2,8 +2,7 @@ n = int(input())
 arr = list(map(int, input().strip().split(' ')))
 a = arr.count(1)
 b = arr.count(2)
-
-if(b >= a):
+if b >= a:
     print(a)
 else:
     s = b

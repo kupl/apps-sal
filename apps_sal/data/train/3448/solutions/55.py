@@ -5,5 +5,4 @@ def f(n):
         return None
     if n != int(n):
         return None
-
     return n * (n + 1) // 2

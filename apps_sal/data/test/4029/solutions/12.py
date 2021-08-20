@@ -1,7 +1,7 @@
 num = str(input())
 n = len(num)
 num_r = num[::-1]
-s0, s5 = num_r.find('0'), num_r.find('5')
+(s0, s5) = (num_r.find('0'), num_r.find('5'))
 if s0 != -1:
     newnum_r = num_r[:s0] + num_r[s0 + 1:]
     c = []

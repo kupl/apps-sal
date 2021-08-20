@@ -8,16 +8,11 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
-s, w = [int(i) for i in input().split()]
-
+(s, w) = [int(i) for i in input().split()]
 tmp = 0
-res = "safe"
-
+res = 'safe'
 if w >= s:
-    res = "unsafe"
-
+    res = 'unsafe'
 print(res)

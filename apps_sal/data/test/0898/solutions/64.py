@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -16,20 +15,17 @@ def divisors(n):
             lower.append(i)
             if i != n // i:
                 upper.append(n // i)
-
     lower.extend(reversed(upper))
     return lower
 
 
 def main():
-    N, M = list(map(int, readline().split()))
-
+    (N, M) = list(map(int, readline().split()))
     divisor = divisors(M)
     for d in reversed(divisor):
         if M // d >= N:
             ans = d
             break
-
     print(ans)
     return
 

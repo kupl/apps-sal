@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 def pre_calcularion():
     num_max = 10 ** 5
     lst = [True] * (num_max + 1)
@@ -21,8 +20,8 @@ def main():
     Q = int(input())
     lst = pre_calcularion()
     for _ in range(Q):
-        left, right = list(map(int, input().split()))
-        print((lst[right] - lst[left - 1]))
+        (left, right) = list(map(int, input().split()))
+        print(lst[right] - lst[left - 1])
 
 
 def __starting_point():

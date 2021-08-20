@@ -1,8 +1,7 @@
 def encryptor(key, message):
-    upper_alpha = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    lower_alpha = list("abcdefghijklmnopqrstuvwxyz")
-
-    cipher = ""
+    upper_alpha = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    lower_alpha = list('abcdefghijklmnopqrstuvwxyz')
+    cipher = ''
     for x in message:
         if x in upper_alpha:
             cipher += upper_alpha[(upper_alpha.index(x) + key) % 26]

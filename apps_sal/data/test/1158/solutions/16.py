@@ -1,6 +1,6 @@
 from collections import Counter
 from math import ceil
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 d = Counter()
 for i in a:
@@ -8,5 +8,3 @@ for i in a:
 m = ceil(max(d.values()) / k) * len(d) * k
 s = sum(d.values())
 print(m - s)
-# print(d)
-# print(m)

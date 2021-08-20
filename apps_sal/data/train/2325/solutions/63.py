@@ -12,14 +12,9 @@ def parse(s):
 
 cumS = parse(S)
 cumT = parse(T)
-
-#print(S, cumS)
-#print(T, cumT)
-
 for _ in range(N):
-    a, b, c, d = map(int, input().split())
-    a, b, c, d = a - 1, b - 1, c - 1, d - 1
+    (a, b, c, d) = map(int, input().split())
+    (a, b, c, d) = (a - 1, b - 1, c - 1, d - 1)
     vS = (cumS[b + 1] - cumS[a]) % 3
     vT = (cumT[d + 1] - cumT[c]) % 3
-    #print(a, b, c, d, vS, vT)
-    print("YES" if vS == vT else "NO")
+    print('YES' if vS == vT else 'NO')

@@ -1,15 +1,12 @@
 def main():
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     bs = list(map(int, input().split()))
     gs = list(map(int, input().split()))
-
     num_sweets = m * sum(bs)
     b = sorted(bs)
     del bs
     remaining_slots = [m - 1] * n
-
-    for j, g in enumerate(gs):
+    for (j, g) in enumerate(gs):
         lval_index = n - 1
         while lval_index >= 0:
             if b[lval_index] > g:

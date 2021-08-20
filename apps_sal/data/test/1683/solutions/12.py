@@ -11,16 +11,16 @@ def conv(x):
 
 n = int(input())
 x = list(input().split())
-c = Counter(len(v) for v in x)
+c = Counter((len(v) for v in x))
 res = 0
 for v in x:
     u = len(v)
-    for w, k in list(c.items()):
+    for (w, k) in list(c.items()):
         if w >= u:
             res += k * 11 * conv(v)
         else:
             d = u - w
             res += k * 11 * conv(v[d:])
-            res += k * 2 * int(v[:d]) * (10 ** (2 * w))
+            res += k * 2 * int(v[:d]) * 10 ** (2 * w)
     res %= modulo
 print(res)

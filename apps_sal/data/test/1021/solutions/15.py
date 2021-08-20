@@ -25,4 +25,4 @@ def deltas(a):
 n = mint()
 a = list(mints())
 b = list(mints())
-print("Yes") if deltas(a) == deltas(b) and a[0] == b[0] else print("No")
+print('Yes') if deltas(a) == deltas(b) and a[0] == b[0] else print('No')

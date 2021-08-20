@@ -1,5 +1,5 @@
-trans = "abcdefghijklmnopqrstuvwxyz" * 2
-trans += trans.upper() + "0123456789" * 2
+trans = 'abcdefghijklmnopqrstuvwxyz' * 2
+trans += trans.upper() + '0123456789' * 2
 
 
 def ROT135(input):
@@ -10,4 +10,4 @@ def ROT135(input):
         elif c.isdigit():
             c = trans[trans.index(c) + 5]
         output.append(c)
-    return "".join(output)
+    return ''.join(output)

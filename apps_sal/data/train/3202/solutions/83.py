@@ -1,8 +1,8 @@
 def greet(name, owner):
     if name == owner:
-        return('Hello boss')
+        return 'Hello boss'
     if name != owner:
-        return('Hello guest')
+        return 'Hello guest'
     else:
         return None
 

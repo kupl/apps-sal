@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ones_ser_ie = [0 for _ in range(n)]
 cur_ones_ser_ie = 0
 ones_in_tail_i = 0
@@ -11,8 +10,6 @@ for i in reversed(list(range(n))):
     else:
         cur_ones_ser_ie = 0
     ones_ser_ie[i] = cur_ones_ser_ie
-
-
 res = 0
 for i in range(n):
     p = 1

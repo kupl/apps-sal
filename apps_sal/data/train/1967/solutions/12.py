@@ -1,6 +1,7 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
-        exp = 2**31 - 1
+        exp = 2 ** 31 - 1
 
         def works(x, y, i):
             res = [x, y]
@@ -34,5 +35,4 @@ class Solution:
                 res = works(x, y, j + 1)
                 if res:
                     return res
-
         return []

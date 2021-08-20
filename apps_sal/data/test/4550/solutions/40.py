@@ -1,5 +1,4 @@
-a, b, c = map(int, input().split())
-
+(a, b, c) = map(int, input().split())
 if a == b + c:
     print('Yes')
 elif b == a + c:

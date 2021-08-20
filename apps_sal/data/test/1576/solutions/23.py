@@ -11,6 +11,5 @@ for i in range(len(s)):
     else:
         s = s[1:]
         side = -1
-
 for i in range(len(o) - 1, -1, -1):
     print(o[i], end='')

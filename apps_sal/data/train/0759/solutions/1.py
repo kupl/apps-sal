@@ -1,4 +1,3 @@
-# cook your dish here
 """def power(x, y): 
     res = 1
     x=x
@@ -8,18 +7,11 @@
         y = y >> 1
         x = (x * x)
     return res"""
-"""def fact(n):
-    if(n==0):
-        return 1
-    if(n==1):
-        return 1
-    return fact(n-1)+fact(n-2)"""
-
-
-
-
 import math
-def maxPrimeFactors (n):
+'def fact(n):\n    if(n==0):\n        return 1\n    if(n==1):\n        return 1\n    return fact(n-1)+fact(n-2)'
+
+
+def maxPrimeFactors(n):
     Prime = -1
     while n % 2 == 0:
         Prime = 2
@@ -33,17 +25,13 @@ def maxPrimeFactors (n):
     return int(Prime)
 
 
-#import collections
 array = [0] * 100001
 for i in range(1, 100001):
     array[i] = maxPrimeFactors(i)
 t = int(input())
 for _ in range(t):
     n = int(input())
-    # b,g=map(int,input().split())
-    # x2,y2=map(int,input().split())
     arr = list(map(int, input().split()))
-    # m,k=map(int,input().split())
     d = {}
     for i in range(n):
         prime_fact = array[arr[i]]
@@ -54,7 +42,7 @@ for _ in range(t):
     maxCount = max(d.values())
     ans = -1
     for i in d:
-        if(d[i] == maxCount):
-            if(i >= ans):
+        if d[i] == maxCount:
+            if i >= ans:
                 ans = i
     print(ans)

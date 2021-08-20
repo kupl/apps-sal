@@ -1,13 +1,9 @@
 from itertools import *
-
 inStr = next(open('input.txt'))
 n = int(inStr.split()[0])
 m = int(inStr.split()[1])
-
-
 boys = repeat('B', n)
 girls = repeat('G', m)
-
 if n > m:
     pairs = zip_longest(boys, girls)
 else:

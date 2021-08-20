@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
+
         def dfs(idx, visited):
             if arr[idx] == 0:
                 return True
@@ -19,5 +21,4 @@ class Solution:
                 if res:
                     return True
             return False
-
         return dfs(start, set([start]))

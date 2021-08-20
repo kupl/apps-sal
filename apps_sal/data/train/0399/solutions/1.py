@@ -1,4 +1,5 @@
 class Solution:
+
     def numDecodings(self, s):
         """
         :type s: str
@@ -6,10 +7,8 @@ class Solution:
         """
         if not s:
             return 0
-        cipher = dict((str(k + 1), v) for k, v in
-                      enumerate("abcdefghijklmnopqrstuvwxyz"))
-        # funhash = dict((str(k),1) for k,v in cipher.items())
-        funhash = {"": 1}
+        cipher = dict(((str(k + 1), v) for (k, v) in enumerate('abcdefghijklmnopqrstuvwxyz')))
+        funhash = {'': 1}
 
         def helpRec(s):
             if s in funhash:
@@ -22,6 +21,5 @@ class Solution:
                 r2 = helpRec(s[2:])
             rval = r1 + r2
             funhash[s] = rval
-            # print(s,rval)
             return rval
         return helpRec(s)

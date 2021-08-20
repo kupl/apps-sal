@@ -1,6 +1,6 @@
 def main2(a, b):
     if a == b:
-        print("infinity")
+        print('infinity')
         return
     x = a - b
     if b != 0:
@@ -26,7 +26,7 @@ def main2(a, b):
 def main3(a, b):
     from math import ceil, sqrt
     if a == b:
-        print("infinity")
+        print('infinity')
         return
     x = a - b
     if b != 0:
@@ -46,10 +46,10 @@ def main3(a, b):
 def main(a, b, Test=False):
     from math import ceil, sqrt, floor
     if a == b:
-        print("infinity")
+        print('infinity')
         return
     if b > a:
-        print("0")
+        print('0')
         return
     x = a - b
     ans = 0
@@ -78,11 +78,10 @@ def test():
         main(1000000000, 6)
     main(11, 2, Test=0)
     main(15, 3, Test=1)
-# test()
 
 
 def main_input():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     main(a, b)
 
 

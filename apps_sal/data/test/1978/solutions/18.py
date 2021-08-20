@@ -4,7 +4,7 @@ X = [[] for _ in range(N)]
 for i in range(N):
     s = input()
     for j in range(N):
-        if s[j] == "1":
+        if s[j] == '1':
             X[i].append((j, 1))
 
 
@@ -13,11 +13,10 @@ def dijkstra(n, E, i0=0):
     D = [-1] * n
     done = [0] * n
     D[i0] = 0
-
     while h:
-        d, i = hpop(h)
+        (d, i) = hpop(h)
         done[i] = 1
-        for j, w in E[i]:
+        for (j, w) in E[i]:
             nd = d + w
             if D[j] < 0 or D[j] >= nd:
                 if done[j] == 0:
@@ -29,12 +28,8 @@ def dijkstra(n, E, i0=0):
 Y = []
 for i in range(N):
     Y.append(dijkstra(N, X, i))
-
-# print("Y =", Y)
-
 M = int(input())
 V = [int(a) - 1 for a in input().split()]
-
 a = 0
 b = 1
 t = Y[V[a]][V[b]]

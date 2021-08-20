@@ -1,7 +1,6 @@
 def answer(x: int) -> int:
     if x < 4:
         return 1
-
     result = 1
     for b in range(2, x + 1):
         for p in range(2, x + 1):
@@ -10,13 +9,12 @@ def answer(x: int) -> int:
                 result = max(result, exp)
             else:
                 break
-
     return result
 
 
 def main():
     x = int(input())
-    print((answer(x)))
+    print(answer(x))
 
 
 def __starting_point():

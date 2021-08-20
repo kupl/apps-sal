@@ -3,7 +3,7 @@ def put():
 
 
 def safe(x, y, z):
-    return x >= 0 and y >= 0 and z >= 0 and x < n and y < m and z < p
+    return x >= 0 and y >= 0 and (z >= 0) and (x < n) and (y < m) and (z < p)
 
 
 def check(x, y, z):
@@ -13,9 +13,8 @@ def check(x, y, z):
     for i in range(3):
         src = cur.copy()
         src[i] -= 1
-        if (not safe(src[0], src[1], src[2])) or mat[src[0]][src[1]][src[2]] == 0:
+        if not safe(src[0], src[1], src[2]) or mat[src[0]][src[1]][src[2]] == 0:
             continue
-
         for j in range(3):
             des = cur.copy()
             des[j] += 1
@@ -29,7 +28,7 @@ def check(x, y, z):
     return 0
 
 
-n, m, p = put()
+(n, m, p) = put()
 mat = []
 for i in range(n):
     tmp1 = []
@@ -40,14 +39,11 @@ for i in range(n):
             tmp2.append(int(s[k]))
         tmp1.append(tmp2)
     mat.append(tmp1)
-
     if i != n - 1:
         input()
-# print(mat)
 ans = 0
 for i in range(n):
     for j in range(m):
         for k in range(p):
             ans += check(i, j, k)
-
 print(ans)

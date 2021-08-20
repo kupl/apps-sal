@@ -1,11 +1,11 @@
 for t in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     for i in range(1, 501, 2):
         a -= i
         if a < 0:
-            print("Bob")
+            print('Bob')
             break
-        b -= (i + 1)
+        b -= i + 1
         if b < 0:
-            print("Limak")
+            print('Limak')
             break

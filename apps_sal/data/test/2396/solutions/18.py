@@ -1,5 +1,3 @@
-# codeforces.com/contest/958/problem/D1
-
 m = int(input())
 positions = []
 poscount = {}
@@ -30,7 +28,6 @@ for i in range(m):
         poscount[res] += 1
     else:
         poscount[res] = 1
-
 ans = []
 for i in range(m):
     ans.append(poscount[positions[i]])

@@ -14,5 +14,4 @@ while True:
     ans += 1
     a_list = new_list
     new_list = []
-
 print(ans)

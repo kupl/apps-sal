@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 num4 = 0
 num2 = 0
 for i in range(n):
@@ -8,13 +7,9 @@ for i in range(n):
         num4 += 1
     elif a[i] % 2 == 0:
         num2 += 1
-
-#print(num4, num2)
-
-
 if n - num4 * 2 <= 1:
-    print("Yes")
+    print('Yes')
 elif n - num4 * 2 <= num2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -8,9 +8,9 @@ class Datamining:
         for i in range(n):
             sx += train_set[i][0]
             sy += train_set[i][1]
-            sxx += train_set[i][0]**2
+            sxx += train_set[i][0] ** 2
             sxy += train_set[i][0] * train_set[i][1]
-        self.b = (n * sxy - sx * sy) / (n * sxx - sx**2)
+        self.b = (n * sxy - sx * sy) / (n * sxx - sx ** 2)
         self.a = (sy - self.b * sx) / n
 
     def predict(self, x):

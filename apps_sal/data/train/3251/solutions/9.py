@@ -1,5 +1,5 @@
 def primeFactors(n):
-    r = ""
+    r = ''
     pf = 1
     while n > 1:
         pf += 1
@@ -8,6 +8,6 @@ def primeFactors(n):
             n /= pf
             num += 1
         if num > 0:
-            r += "(" + str(pf) + "**" + str(num) + ")"
-    r = r.replace("**1", "")
+            r += '(' + str(pf) + '**' + str(num) + ')'
+    r = r.replace('**1', '')
     return r

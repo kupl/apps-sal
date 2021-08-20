@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 n = int(input())
 a = 0
 for i in input().split():

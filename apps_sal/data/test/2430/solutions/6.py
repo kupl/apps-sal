@@ -11,8 +11,6 @@ else:
             time += len_tree[i] + 1
         if len_tree[i] <= len_tree[i + 1]:
             time += abs(len_tree[i] - len_tree[i + 1]) + 2
-
         elif len_tree[i] > len_tree[i + 1]:
             time += abs(len_tree[i] - len_tree[i + 1]) + 2
-
 print(time)

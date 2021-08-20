@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import time
 from collections import defaultdict, deque
 from heapq import heappush, heappop
@@ -7,29 +6,69 @@ import sys
 import random
 import itertools
 import math
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 input = sys.stdin.readline
 sqrt = math.sqrt
-def LI(): return list(map(int, input().split()))
-def LF(): return list(map(float, input().split()))
-def LI_(): return list([int(x) - 1 for x in input().split()])
-def II(): return int(input())
-def IF(): return float(input())
-def LS(): return list(map(list, input().split()))
-def S(): return list(input().rstrip())
-def IR(n): return [II() for _ in range(n)]
-def LIR(n): return [LI() for _ in range(n)]
-def FR(n): return [IF() for _ in range(n)]
-def LFR(n): return [LI() for _ in range(n)]
-def LIR_(n): return [LI_() for _ in range(n)]
-def SR(n): return [S() for _ in range(n)]
-def LSR(n): return [LS() for _ in range(n)]
+
+
+def LI():
+    return list(map(int, input().split()))
+
+
+def LF():
+    return list(map(float, input().split()))
+
+
+def LI_():
+    return list([int(x) - 1 for x in input().split()])
+
+
+def II():
+    return int(input())
+
+
+def IF():
+    return float(input())
+
+
+def LS():
+    return list(map(list, input().split()))
+
+
+def S():
+    return list(input().rstrip())
+
+
+def IR(n):
+    return [II() for _ in range(n)]
+
+
+def LIR(n):
+    return [LI() for _ in range(n)]
+
+
+def FR(n):
+    return [IF() for _ in range(n)]
+
+
+def LFR(n):
+    return [LI() for _ in range(n)]
+
+
+def LIR_(n):
+    return [LI_() for _ in range(n)]
+
+
+def SR(n):
+    return [S() for _ in range(n)]
+
+
+def LSR(n):
+    return [LS() for _ in range(n)]
 
 
 mod = 1000000007
 inf = float('INF')
-
-# A
 
 
 def A():
@@ -42,21 +81,16 @@ def A():
     print(ans)
     return
 
-# B
-
 
 def B():
-    a, b = LI()
+    (a, b) = LI()
     ans = 0
     b -= 1
     while b > 0:
         b -= a - 1
         ans += 1
     print(ans)
-
     return
-
-# C
 
 
 def C():
@@ -76,15 +110,11 @@ def C():
     print(ans)
     return
 
-# D
-
 
 def D():
     n = II()
-    print((n * (n - 1) // 2))
+    print(n * (n - 1) // 2)
     return
-
-# E
 
 
 def E():
@@ -114,24 +144,20 @@ def E():
                 tern[i] += 1
                 f = False
         if time.time() - start >= 1.8:
-            print((n * (n - 1) // 2))
+            print(n * (n - 1) // 2)
             return
         if f:
             if tern == [n - 1] * n:
-                print((ans - 1))
+                print(ans - 1)
                 return
             else:
-                print((-1))
+                print(-1)
                 return
     return
-
-# F
 
 
 def F():
     return
-
-# Solve
 
 
 def __starting_point():

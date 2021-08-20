@@ -8,7 +8,7 @@ def dis(x):
     for i in range(N - 1):
         aa = arr[x[i]][0] - arr[x[i + 1]][0]
         bb = arr[x[i]][1] - arr[x[i + 1]][1]
-        c += (aa**2 + bb**2)**(0.5)
+        c += (aa ** 2 + bb ** 2) ** 0.5
     return c
 
 
@@ -17,5 +17,4 @@ ans = 0
 for i in permutations(list(range(0, N)), N):
     count += 1
     ans += dis(i)
-
-print((ans / count))
+print(ans / count)

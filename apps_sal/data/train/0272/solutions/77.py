@@ -1,6 +1,7 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-        res, bcache, kcache = 0, set(initialBoxes), set()
+        (res, bcache, kcache) = (0, set(initialBoxes), set())
         for _ in range(999):
             tmp = set()
             for b in bcache:
@@ -11,5 +12,4 @@ class Solution:
                 else:
                     tmp.add(b)
             bcache = tmp
-        # print(f'{bcache} {kcache}')
         return res

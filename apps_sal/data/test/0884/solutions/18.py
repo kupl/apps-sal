@@ -1,10 +1,10 @@
-a, b, c = map(int, input().split(' '))
+(a, b, c) = map(int, input().split(' '))
 p = 998244353
 
 
 def calc(a, b):
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     ans = 0
     tmp = 1
     for i in range(a + 1):
@@ -14,5 +14,4 @@ def calc(a, b):
 
 
 ans = calc(a, b) * calc(b, c) * calc(a, c) % p
-
 print(ans)

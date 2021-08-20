@@ -1,7 +1,7 @@
 def riders(sts, x):
-    st, x, back, n = 0, x - 1, 0, 1
+    (st, x, back, n) = (0, x - 1, 0, 1)
     while True:
-        remain, back = 100 - back, 0
+        (remain, back) = (100 - back, 0)
         while remain >= sts[st]:
             remain -= sts[st]
             st += 1

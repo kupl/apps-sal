@@ -1,8 +1,8 @@
 def multiple(x):
     if x % 15 == 0:
-        return "BangBoom"
+        return 'BangBoom'
     if x % 3 == 0:
-        return "Bang"
+        return 'Bang'
     if x % 5 == 0:
-        return "Boom"
-    return "Miss"
+        return 'Boom'
+    return 'Miss'

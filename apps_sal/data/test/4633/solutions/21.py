@@ -11,7 +11,7 @@ def sm(n):
 
 
 for _ in range(int(input())):
-    n, s = [int(i) for i in input().split()]
+    (n, s) = [int(i) for i in input().split()]
     temp = n
     while sm(n) > s:
         j = 10

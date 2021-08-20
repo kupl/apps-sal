@@ -1,4 +1,4 @@
-x, y, l, r = [int(x) for x in input().split()]
+(x, y, l, r) = [int(x) for x in input().split()]
 p_x = [1]
 p_y = [1]
 for i in range(1, 61):

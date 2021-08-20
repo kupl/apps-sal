@@ -10,12 +10,12 @@ MOD = pow(10, 9) + 7
 
 def IN(f=0):
     if f == 0:
-        return ([int(i) for i in sys.stdin.readline().split()])
+        return [int(i) for i in sys.stdin.readline().split()]
     else:
-        return (int(sys.stdin.readline()))
+        return int(sys.stdin.readline())
 
 
-n, m = IN()
+(n, m) = IN()
 a = []
 b = []
 c = []
@@ -25,10 +25,8 @@ for i in range(n):
     c.append(rr)
 for i in range(n):
     b.append(IN())
-
 fr = [0 for i in range(n)]
 fc = [0 for i in range(m)]
-
 for i in range(n):
     for j in range(m):
         if c[i][j] == b[i][j]:
@@ -37,13 +35,13 @@ for i in range(n):
             c[i][j] = 1
             fr[i] += 1
             fc[j] += 1
-f = "Yes"
+f = 'Yes'
 for i in fr:
     if i % 2 != 0:
-        f = "No"
+        f = 'No'
         break
 for i in fc:
     if i % 2 != 0:
-        f = "No"
+        f = 'No'
         break
 print(f)

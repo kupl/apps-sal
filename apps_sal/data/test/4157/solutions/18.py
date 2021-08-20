@@ -19,7 +19,7 @@ a = list(map(int, input().split()))
 for i in range(n):
     for j in range(i + 1, n):
         if to(a[i]) > to(a[j]):
-            a[i], a[j] = a[j], a[i]
+            (a[i], a[j]) = (a[j], a[i])
         if tr(a[i]) < tr(a[j]):
-            a[i], a[j] = a[j], a[i]
+            (a[i], a[j]) = (a[j], a[i])
 print(*a)

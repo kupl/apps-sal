@@ -1,5 +1,5 @@
 seat = input()
-row, seat = int(seat[:-1]), seat[-1]
+(row, seat) = (int(seat[:-1]), seat[-1])
 row -= 1
 shift = {'f': 1, 'e': 2, 'd': 3, 'a': 4, 'b': 5, 'c': 6}
 time = shift[seat]

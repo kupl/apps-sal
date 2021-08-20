@@ -3,7 +3,7 @@ def delete_digit(n):
     nl = list(str(n))
     for i in range(len(nl)):
         del nl[i]
-        number = int("".join(nl))
+        number = int(''.join(nl))
         numbers.append(number)
         nl = list(str(n))
     numbers.sort()

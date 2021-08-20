@@ -1,4 +1,4 @@
-m, n = [int(x) for x in input().split()]
+(m, n) = [int(x) for x in input().split()]
 s = set()
 for i in range(m):
     L = [int(x) for x in input().split()]

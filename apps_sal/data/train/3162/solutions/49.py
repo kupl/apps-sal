@@ -3,4 +3,4 @@ def compare(s1, s2):
         s1 = ''
     if s2 is None or not s2.isalpha():
         s2 = ''
-    return sum(ord(letter) for letter in s1.upper()) == sum(ord(letter) for letter in s2.upper())
+    return sum((ord(letter) for letter in s1.upper())) == sum((ord(letter) for letter in s2.upper()))

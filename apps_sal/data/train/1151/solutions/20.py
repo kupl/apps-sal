@@ -1,8 +1,8 @@
-# cook your dish here
 from collections import defaultdict
 
 
 class Graph:
+
     def __init__(self, n):
         self.n = n
         self.edge = defaultdict(list)
@@ -28,9 +28,9 @@ class Graph:
 
 
 for _ in range(int(input())):
-    m, n = map(int, input().split())
+    (m, n) = map(int, input().split())
     g = Graph(m)
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         g.addegde(a, b)
     print(g.dfs())

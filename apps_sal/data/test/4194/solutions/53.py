@@ -6,13 +6,9 @@ i 番目の宿題をやるには Ai 日間かかります。
 夏休み中に全ての宿題を終わらせるとき、最大何日間遊ぶことができますか？
 ただし、夏休み中に全ての宿題を終わらせることができないときは、かわりに -1 を出力してください。
 """
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 data = list(map(int, input().split()))
-
-# 全ての宿題にかかる日数 sum(data)
-
 if N - sum(data) < 0:
-    print((-1))
+    print(-1)
 else:
-    print((N - sum(data)))
+    print(N - sum(data))

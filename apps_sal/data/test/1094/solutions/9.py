@@ -13,5 +13,4 @@ a = int(input())
 c = []
 for i in range(a):
     c += [input()]
-
 print(*unique(reversed(c)), sep='\n')

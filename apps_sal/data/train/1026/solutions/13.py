@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
     for jdnkjdew in range(t):

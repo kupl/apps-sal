@@ -1,27 +1,25 @@
 import sys
 import heapq as hq
 from operator import itemgetter
-
 sys.setrecursionlimit(10 ** 7)
 rl = sys.stdin.readline
 
 
 def solve():
-    N, Q = map(int, rl().split())
+    (N, Q) = map(int, rl().split())
     event = []
     for _ in range(N):
-        s, t, x = map(int, rl().split())
+        (s, t, x) = map(int, rl().split())
         event.append((t - x, 0, x))
         event.append((s - x, 1, x))
     for _ in range(Q):
         d = int(rl())
         event.append((d, 2, -1))
     event.sort(key=itemgetter(0, 1))
-
     pos_set = set()
     pos_hq = []
     ans = []
-    for _, com, pos in event:
+    for (_, com, pos) in event:
         if com == 0:
             pos_set.remove(pos)
         elif com == 1:

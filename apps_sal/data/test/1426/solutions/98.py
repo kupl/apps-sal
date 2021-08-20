@@ -1,13 +1,13 @@
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     edge = [[[] for _ in range(3)] for _ in range(N)]
     for i in range(M):
-        u, v = map(int, input().split())
+        (u, v) = map(int, input().split())
         edge[u - 1][0].append([v - 1, 1])
         edge[u - 1][1].append([v - 1, 2])
         edge[u - 1][2].append([v - 1, 0])
     d = [[-1] * 3 for _ in range(N)]
-    S, T = map(int, input().split())
+    (S, T) = map(int, input().split())
     d[S - 1][0] = 0
     que = [[S - 1, 0]]
     while len(que) > 0:

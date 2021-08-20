@@ -2,7 +2,7 @@ import math
 
 
 def is_intersect(l1, r1, l2, r2):
-    return (l1 < l2 and r1 >= l2) or (l1 >= l2 and l1 <= r2)
+    return l1 < l2 and r1 >= l2 or (l1 >= l2 and l1 <= r2)
 
 
 def get_groups(ranges):
@@ -11,9 +11,9 @@ def get_groups(ranges):
     ranges[0][3] = 1
     group1 = ranges[0][:2]
     group2 = None
-    for i, rng in enumerate(ranges[1:]):
-        l, r = rng[:2]
-        if is_intersect(l, r, *group1) and ((group2 is None) or not is_intersect(l, r, group2)):
+    for (i, rng) in enumerate(ranges[1:]):
+        (l, r) = rng[:2]
+        if is_intersect(l, r, *group1) and (group2 is None or not is_intersect(l, r, group2)):
             rng[3] = 1
             group1[0] = min(group1[0], l)
             group1[1] = max(group1[1], r)

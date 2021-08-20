@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     d = {}
     for __ in range(int(input())):

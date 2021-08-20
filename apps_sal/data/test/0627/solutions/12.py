@@ -6,4 +6,4 @@ for i in range(n - 1):
         break
 if len(s) == n:
     s.pop()
-print("".join(s))
+print(''.join(s))

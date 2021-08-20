@@ -7,23 +7,18 @@ def fun(a, b):
     for i in b:
         if i == '1':
             y += 1
-    # print(x,y)
     flag = 0
     ones_so_far = 0
     for i in range(len(a)):
         if a[i] == '1':
             ones_so_far += 1
         if a[i] == '0' and b[i] == '1':
-            #       print(i)
-            #       print(ones_so_far)
             if ones_so_far != x:
                 flag = 1
-    # print(flag)
-    # return
     if x == y and flag == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 for xxx in range(int(input(''))):

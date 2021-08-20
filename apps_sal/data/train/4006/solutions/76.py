@@ -1,12 +1,5 @@
 import operator
-
-
-ops = {
-    "+": operator.add,
-    "-": operator.sub,
-    "*": operator.mul,
-    "/": operator.truediv
-}
+ops = {'+': operator.add, '-': operator.sub, '*': operator.mul, '/': operator.truediv}
 
 
 def basic_op(oper, value1, value2):

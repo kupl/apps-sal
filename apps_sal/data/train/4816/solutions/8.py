@@ -1,6 +1,5 @@
-# Ever so slightly computationally inefficient method :)
-
 def mutations(s):
+
     def flip(c):
         return {'B': 'W', 'W': 'B'}[c]
 
@@ -12,7 +11,6 @@ def mutations(s):
             yield from recurse(ss[1:], n, acc + [ss[0]])
             if n < 2:
                 yield from recurse(ss[1:], n + 1, acc + [flip(ss[0])])
-
     yield from recurse(s, 0, [])
 
 
@@ -22,9 +20,5 @@ def child(bird1, bird2):
 
 
 def grandchild(bird1, bird2):
-    possible = set(
-        grand_child
-        for child in mutations(bird1)
-        for grand_child in mutations(child)
-    )
+    possible = set((grand_child for child in mutations(bird1) for grand_child in mutations(child)))
     return bird2 in possible

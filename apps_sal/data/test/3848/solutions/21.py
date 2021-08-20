@@ -1,8 +1,8 @@
 import sys
-n, p = list(map(int, sys.stdin.readline().split()))
+(n, p) = list(map(int, sys.stdin.readline().split()))
 s = sys.stdin.readline()
 sl = list(s)
-sl.remove("\n")
+sl.remove('\n')
 flag = 0
 for i in range(n - 1, -1, -1):
     c = ord(s[i]) - 96
@@ -21,9 +21,9 @@ for i in range(n - 1, -1, -1):
                 break
         if flag:
             break
-sn = "".join(sl).strip()
+sn = ''.join(sl).strip()
 if s.strip() == sn:
-    print("NO")
+    print('NO')
 else:
     sn = sn[:i + 1]
     while i < n - 1:

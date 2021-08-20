@@ -1,6 +1,6 @@
 t = int(input())
 for q in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     g = {}
     m = k

@@ -1,5 +1,5 @@
 def double_char(s):
-    hold = ""
+    hold = ''
     for x in range(len(s)):
-        hold += (s[x] * 2)
+        hold += s[x] * 2
     return hold

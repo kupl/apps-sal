@@ -1,7 +1,7 @@
 N = int(input())
 L = []
 for i in range(N):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     L.append((A, B))
 L1 = sorted(L, key=lambda x: x[0])
 L2 = sorted(L, key=lambda x: x[1])

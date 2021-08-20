@@ -1,11 +1,11 @@
 from heapq import *
 n = int(input())
-_a = list(map(int, input().split(" ")))
-_t = list(map(int, input().split(" ")))
+_a = list(map(int, input().split(' ')))
+_t = list(map(int, input().split(' ')))
 at = [[0, 0]]
 for i in range(n):
     at.append([_a[i], _t[i]])
-at.append([int(1e11), 0])
+at.append([int(100000000000.0), 0])
 at.sort()
 
 
@@ -23,7 +23,6 @@ def __starting_point():
             cost += s
         s += b[1]
         heappush(Q, -b[1])
-        #print("{}, {}, {}".format(i, s, cost))
     print(cost)
 
 

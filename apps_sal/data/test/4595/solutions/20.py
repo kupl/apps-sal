@@ -3,8 +3,8 @@ def resolve():
     = 一番左のAと一番右のZでできる文字列
     """
     s = input()
-    start_index = s.index("A")
-    end_index = s.rindex("Z")
+    start_index = s.index('A')
+    end_index = s.rindex('Z')
     output = end_index - start_index + 1
     print(output)
 

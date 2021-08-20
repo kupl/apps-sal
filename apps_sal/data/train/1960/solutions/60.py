@@ -1,9 +1,10 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         P = list(range(1, m + 1))
         op = []
         hashP = {}
-        for i, p in enumerate(P):
+        for (i, p) in enumerate(P):
             hashP[p] = i
         for query in queries:
             idx = hashP[query]

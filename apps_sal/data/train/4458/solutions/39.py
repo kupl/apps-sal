@@ -3,10 +3,10 @@ import re
 
 def time_correct(t):
     if t == '':
-        return ""
+        return ''
     if not t:
         return
-    if not re.match(r'\d{2}:\d{2}:\d{2}', t):
+    if not re.match('\\d{2}:\\d{2}:\\d{2}', t):
         return None
     s = int(t[6:])
     m = int(t[3:5])
@@ -19,4 +19,4 @@ def time_correct(t):
         m = m % 60
     if h >= 24:
         h = h % 24
-    return ':'.join(str(i).zfill(2) for i in [h, m, s])
+    return ':'.join((str(i).zfill(2) for i in [h, m, s]))

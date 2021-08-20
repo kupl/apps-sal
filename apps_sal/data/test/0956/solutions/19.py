@@ -1,7 +1,7 @@
-m, k = map(int, input().split())
+(m, k) = map(int, input().split())
 d = {}
 for _ in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     d.setdefault(x, set()).add(y)
     d.setdefault(y, set()).add(x)
 for x in sorted(d):

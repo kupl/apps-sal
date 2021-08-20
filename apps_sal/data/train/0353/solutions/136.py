@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         N = len(nums)
         nums.sort()
@@ -13,8 +14,6 @@ class Solution:
                     high = middle - 1
                 else:
                     low = middle + 1
-
             if current_num + nums[high] <= target:
-                answer += (2 ** (high - i))
-
-        return answer % ((10**9) + 7)
+                answer += 2 ** (high - i)
+        return answer % (10 ** 9 + 7)

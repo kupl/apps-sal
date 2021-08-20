@@ -1,9 +1,8 @@
 str_list = list(input())
-
 count = 0
 max_count = 0
 for char in str_list:
-    if char == 'A' or char == 'C' or char == 'G' or char == 'T':
+    if char == 'A' or char == 'C' or char == 'G' or (char == 'T'):
         count += 1
     else:
         if count > max_count:

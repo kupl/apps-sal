@@ -1,11 +1,11 @@
-R, C, n = list(map(int, input().split()))
+(R, C, n) = list(map(int, input().split()))
 pair = [list(map(int, input().split())) for _ in range(n)]
 u = []
 r = []
 d = []
 l = []
 for i in range(n):
-    x1, y1, x2, y2 = pair[i]
+    (x1, y1, x2, y2) = pair[i]
     if 0 < x1 < R and 0 < y1 < C:
         continue
     if 0 < x2 < R and 0 < y2 < C:
@@ -43,4 +43,4 @@ for i in range(len(urdl)):
         stack.pop()
     else:
         stack.append(urdl[i][1])
-print("YES" if len(stack) == 0 else "NO")
+print('YES' if len(stack) == 0 else 'NO')

@@ -1,5 +1,5 @@
 from fractions import gcd
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 
 
@@ -28,4 +28,4 @@ def solve(N, M, A):
     return ans
 
 
-print((solve(N, M, A)))
+print(solve(N, M, A))

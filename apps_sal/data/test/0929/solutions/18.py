@@ -1,6 +1,5 @@
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(H)]
-
 result = []
 y = 0
 while y < H:
@@ -34,7 +33,5 @@ while y < H:
                 a[y][x - 1] += 1
         x -= 1
     y += 1
-
 print(len(result))
-# print('\n'.join(result))
 print(*result, sep='\n')

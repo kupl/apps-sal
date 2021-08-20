@@ -1,7 +1,8 @@
 from math import ceil
 
 
-def root(n): return ((1 + 8 * n)**.5 - 1) / 2
+def root(n):
+    return ((1 + 8 * n) ** 0.5 - 1) / 2
 
 
 def triangular_range(s, e):

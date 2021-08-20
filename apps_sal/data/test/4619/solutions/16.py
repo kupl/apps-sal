@@ -1,6 +1,6 @@
 import sys
 imput = sys.stdin.read
-w, h, n = map(int, input().split())
+(w, h, n) = map(int, input().split())
 t = [list(map(int, input().split())) for i in range(n)]
 su = []
 st = []

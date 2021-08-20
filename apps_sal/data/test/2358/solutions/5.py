@@ -1,19 +1,19 @@
 s = input()
 n = len(s)
 pre = [0 for i in range(n)]
-if s[n - 1] == ")":
+if s[n - 1] == ')':
     pre[n - 1] = 1
 for i in range(n - 2, -1, -1):
-    if s[i] == ")":
+    if s[i] == ')':
         pre[i] = pre[i + 1] + 1
     else:
         pre[i] = pre[i + 1]
 co = 0
 aa = []
 for i in range(n):
-    if(s[i] == "("):
+    if s[i] == '(':
         co += 1
-        if(pre[i] < co):
+        if pre[i] < co:
             co -= 1
             break
         else:
@@ -27,7 +27,7 @@ else:
     for i in range(n - 1, ind, -1):
         if co == 0:
             break
-        if s[i] == ")":
+        if s[i] == ')':
             aa.append(i + 1)
             co -= 1
     aa.sort()

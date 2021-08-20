@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     if abs(x - y) <= z:
         print(0)
     else:

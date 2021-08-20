@@ -1,16 +1,14 @@
 from itertools import product
 import math
-D, G = map(int, input().split())
+(D, G) = map(int, input().split())
 pc = [list(map(int, input().split())) for _ in range(D)]
-
 ans = []
-
 for lst in product([0, 1], repeat=D):
     temp = 0
     cnt = 0
     max0 = -1
     p = 0
-    for i, j in enumerate(lst):
+    for (i, j) in enumerate(lst):
         temp += (pc[i][0] * 100 * (i + 1) + pc[i][1]) * j
         cnt += pc[i][0] * j
         if j == 0 and max0 < i:
@@ -22,5 +20,4 @@ for lst in product([0, 1], repeat=D):
             temp += p * 100 * (max0 + 1)
     if temp >= G:
         ans.append(cnt)
-
 print(min(ans))

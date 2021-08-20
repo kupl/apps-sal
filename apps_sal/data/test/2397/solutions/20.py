@@ -1,4 +1,4 @@
-n, k = list(map(int, input().strip().split(' ')))
+(n, k) = list(map(int, input().strip().split(' ')))
 a = list(map(int, input().strip().split(' ')))
 cnt = []
 cnt.append(a[-1])
@@ -7,5 +7,5 @@ for i in range(1, n):
 ans = cnt[-1]
 del cnt[-1]
 cnt.sort(reverse=True)
-ans += sum(cnt[:(k - 1)])
+ans += sum(cnt[:k - 1])
 print(ans)

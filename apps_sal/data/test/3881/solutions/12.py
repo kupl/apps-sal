@@ -3,25 +3,22 @@ def search(rules, m):
     for i in range(m - 1):
         nex = []
         for r in ret:
-            r0, tail = r[0], r[1:]
-            for a, b in rules:
+            (r0, tail) = (r[0], r[1:])
+            for (a, b) in rules:
                 if a == r0:
                     nex.append(b + tail)
         ret = nex
-    # print(ret)
     return len(ret)
 
 
 def main():
     line = [int(i) for i in input().split()]
-    m, n = line[0], line[1]
+    (m, n) = (line[0], line[1])
     rules = []
     for i in range(n):
         line = input().split()
         line.reverse()
         rules.append(line)
-    # print(m)
-    # print(rules)
     l = search(rules, m)
     print(l)
 

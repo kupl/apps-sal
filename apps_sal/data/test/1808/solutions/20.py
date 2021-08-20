@@ -1,4 +1,4 @@
-n, k, x = list(map(int, input().split()))
+(n, k, x) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 a.reverse()

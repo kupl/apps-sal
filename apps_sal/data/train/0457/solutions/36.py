@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, denoms: List[int], n: int) -> int:
         if n == 0:
             return 0
@@ -17,6 +18,5 @@ class Solution:
                         next_nodes.add(candidate)
             count += 1
             nodes = next_nodes
-
         return -1
         pass

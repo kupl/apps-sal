@@ -10,10 +10,8 @@ def minit(l):
 
 
 ans = [float('+inf')]
-
 for i in range(n):
     mm = minit(l[:])
     ans = min(mm, ans)
     l = l[1:] + [l[0]]
-
 print(''.join(map(str, ans)))

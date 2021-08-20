@@ -1,7 +1,7 @@
 n = int(input())
 deg = [0 for _ in range(n)]
 for _ in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     deg[a] += 1

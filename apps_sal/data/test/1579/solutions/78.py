@@ -1,10 +1,10 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 n = int(input())
-v = 10**5 + 2
+v = 10 ** 5 + 2
 e = [[] for i in range(2 * v)]
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     y += v
     e[x].append(y)
     e[y].append(x)
@@ -25,4 +25,4 @@ for i in range(v):
         count = [0] * 2
         dfs(i)
         ans += count[0] * count[1]
-print((ans - n))
+print(ans - n)

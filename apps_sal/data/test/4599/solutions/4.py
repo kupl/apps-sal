@@ -12,5 +12,4 @@ else:
         a += c[i * 2]
         b += c[i * 2 + 1]
     a += c[n - 1]
-
 print(a - b)

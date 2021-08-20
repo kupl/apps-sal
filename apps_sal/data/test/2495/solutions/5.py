@@ -10,18 +10,16 @@ def calc(a, t):
         if t < 0:
             ans = 1 - t
             t = 1
-    else:
-        if t >= 0:
-            ans = 1 + t
-            t = -1
+    elif t >= 0:
+        ans = 1 + t
+        t = -1
     if t == 0:
         ans += 1
         if p_flag:
             t = 1
         else:
             t = -1
-
-    return ans, t
+    return (ans, t)
 
 
 ans_p = 0
@@ -43,11 +41,9 @@ else:
     t_p = 1
     ans_m = 1
     t_m = -1
-
 for i in range(1, N):
-    a, t_p = calc(A[i], t_p)
+    (a, t_p) = calc(A[i], t_p)
     ans_p += a
-    a, t_m = calc(A[i], t_m)
+    (a, t_m) = calc(A[i], t_m)
     ans_m += a
-
-print((min(ans_p, ans_m)))
+print(min(ans_p, ans_m))

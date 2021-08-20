@@ -7,7 +7,7 @@ def answer(a: int, b: int, c: int, k: int) -> int:
 
 
 def main():
-    a, b, c, k = map(int, input().split())
+    (a, b, c, k) = map(int, input().split())
     print(answer(a, b, c, k))
 
 

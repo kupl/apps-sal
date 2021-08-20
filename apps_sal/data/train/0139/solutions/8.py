@@ -1,6 +1,7 @@
 class Solution:
+
     def minDeletionSize(self, A):
-        m, n = len(A), len(A[0])
+        (m, n) = (len(A), len(A[0]))
         first = [-1] * m
         res = 0
         for j in range(n):

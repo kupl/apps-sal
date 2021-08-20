@@ -21,9 +21,8 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         if k > self.len:
             return 0
-        prod, idx = 1, len(self.nums) - 1
+        (prod, idx) = (1, len(self.nums) - 1)
         while k > 0:
-            #print(k, idx)
             if isinstance(self.nums[idx], list):
                 k -= self.nums[idx][0]
             else:
@@ -31,9 +30,3 @@ class ProductOfNumbers:
                 k -= 1
             idx -= 1
         return prod
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

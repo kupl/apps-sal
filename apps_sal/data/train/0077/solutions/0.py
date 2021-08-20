@@ -2,8 +2,6 @@ import sys
 import os
 import math
 3
-
-
 DEBUG = 'DEBUG' in os.environ
 
 
@@ -23,9 +21,8 @@ def solve(N, A, B):
     dp = {A[0]: 0, A[0] + 1: B[0], A[0] + 2: B[0] * 2}
     for i in range(1, N):
         ndp = {}
-
         h = A[i]
-        for ph, c in dp.items():
+        for (ph, c) in dp.items():
             for inc in range(3):
                 nh = h + inc
                 if ph == nh:
@@ -33,9 +30,7 @@ def solve(N, A, B):
                 if nh not in ndp:
                     ndp[nh] = INF
                 ndp[nh] = min(ndp[nh], c + B[i] * inc)
-
         dp = ndp
-
     return min(dp.values())
 
 
@@ -46,7 +41,7 @@ def main():
         A = []
         B = []
         for _ in range(N):
-            a, b = [int(e) for e in inp().split()]
+            (a, b) = [int(e) for e in inp().split()]
             A.append(a)
             B.append(b)
         print(solve(N, A, B))

@@ -1,7 +1,4 @@
-# 各数値の取得
-A, B = map(int, input().split())
-
-# 開始時間の計算と出力
+(A, B) = map(int, input().split())
 start = A + B
 if start < 24:
     print(start)

@@ -1,16 +1,13 @@
-problems, days = list(map(int, input().split(" ")))
-difficulties = list(map(int, input().split(" ")))
-
+(problems, days) = list(map(int, input().split(' ')))
+difficulties = list(map(int, input().split(' ')))
 copyDifficulties = difficulties.copy()
 copyDifficulties.sort()
 maxValues = {}
-
 for i in range(days):
     if copyDifficulties[problems - 1 - i] in maxValues:
         maxValues[copyDifficulties[problems - i - 1]] += 1
     else:
         maxValues[copyDifficulties[problems - i - 1]] = 1
-
 gained = 0
 solved = []
 solvedDay = 0
@@ -23,7 +20,7 @@ for i in range(problems):
         solvedDay = 0
 solved[len(solved) - 1] += problems - sum(solved)
 print(gained)
-res = " "
+res = ' '
 for i in solved:
-    res += str(i) + " "
+    res += str(i) + ' '
 print(res.strip())

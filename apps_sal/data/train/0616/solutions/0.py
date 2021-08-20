@@ -1,7 +1,6 @@
 from sys import stdin
-
 for _ in range(int(stdin.readline())):
-    m, n = list(map(int, stdin.readline().split()))
+    (m, n) = list(map(int, stdin.readline().split()))
     final = []
     arr = []
     val = 0
@@ -17,9 +16,8 @@ for _ in range(int(stdin.readline())):
             else:
                 arr.append(['N'] * n)
                 arr.append(ans)
-                extra += (val - 1)
+                extra += val - 1
             val = 0
-
     for j in range(len(arr)):
         ans = arr[j]
         start = -1
@@ -41,30 +39,27 @@ for _ in range(int(stdin.readline())):
                         final[-1][0] = start
                     else:
                         start = final[-1][0]
+                elif final[-1][1] < end:
+                    final[-1][1] = end
                 else:
-                    if final[-1][1] < end:
-                        final[-1][1] = end
-                    else:
-                        end = final[-1][1]
+                    end = final[-1][1]
                 final.append([start, end])
-        else:
-            if len(final) != 0:
-                start, end = 0, n - 1
-                if j % 2 == 0:
-                    if final[-1][0] > start:
-                        final[-1][0] = start
-                    else:
-                        start = final[-1][0]
+        elif len(final) != 0:
+            (start, end) = (0, n - 1)
+            if j % 2 == 0:
+                if final[-1][0] > start:
+                    final[-1][0] = start
                 else:
-                    if final[-1][1] < end:
-                        final[-1][1] = end
-                    else:
-                        end = final[-1][1]
-                final.append([start, end])
+                    start = final[-1][0]
+            elif final[-1][1] < end:
+                final[-1][1] = end
+            else:
+                end = final[-1][1]
+            final.append([start, end])
     if len(final) == 0:
         print(0)
     else:
         count = 0
         for ele in final:
-            count += (ele[1] - ele[0] + 1)
+            count += ele[1] - ele[0] + 1
         print(count - 1 + extra)

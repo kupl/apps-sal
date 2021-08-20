@@ -1,9 +1,9 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         edges1 = defaultdict(list)
         edges2 = defaultdict(list)
-
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if t == 3:
                 edges1[a - 1].append([0, b - 1])
                 edges1[b - 1].append([0, a - 1])
@@ -21,17 +21,16 @@ class Solution:
         que1 = []
         que2 = []
         both = []
-        for a, b in edges1[0]:
+        for (a, b) in edges1[0]:
             if a == 0:
                 both.append(b)
             else:
                 que1.append(b)
-        for a, b in edges1[0]:
+        for (a, b) in edges1[0]:
             if a == 0:
                 continue
             else:
                 que2.append(b)
-
         while both or que1:
             if both:
                 D = both.pop()
@@ -47,18 +46,16 @@ class Solution:
                     dis1[D] = 0
                 else:
                     continue
-            for c, dd in edges1[D]:
+            for (c, dd) in edges1[D]:
                 if c:
                     que1.append(dd)
                 else:
                     both.append(dd)
             edges1[D] = []
-
             if dis2[D] == 0:
-                for c, dd in edges2[D]:
+                for (c, dd) in edges2[D]:
                     if c:
                         que2.append(dd)
-
         while both or que2:
             if both:
                 D = both.pop()
@@ -74,7 +71,7 @@ class Solution:
                     dis2[D] = 0
                 else:
                     pass
-            for c, dd in edges2[D]:
+            for (c, dd) in edges2[D]:
                 if c:
                     que2.append(dd)
                 else:

@@ -1,6 +1,6 @@
 def zfunc(s):
     z = [len(s)] + [0] * (len(s) - 1) if s else []
-    i, j = 1, 0
+    (i, j) = (1, 0)
     while i < len(s):
         while i + j < len(s) and s[j] == s[i + j]:
             j += 1

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     s = input().split()
@@ -18,11 +17,10 @@ for _ in range(int(input())):
         else:
             print('Yes')
     else:
-        m1, m2 = len(l[0]), len(l[1])
+        (m1, m2) = (len(l[0]), len(l[1]))
         if m1 % 2 == 0:
             print('No')
+        elif m1 % 2 and (m1 + 1) / 2 > m2:
+            print('Yes')
         else:
-            if m1 % 2 and (m1 + 1) / 2 > m2:
-                print('Yes')
-            else:
-                print('No')
+            print('No')

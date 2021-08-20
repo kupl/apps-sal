@@ -1,11 +1,11 @@
 def correct(m, n, bits):
-    failed_row, failed_col = -1, -1
+    (failed_row, failed_col) = (-1, -1)
     for row in range(m):
-        if sum(int(c) for c in bits[row * n:(row + 1) * n]) % 2 != int(bits[m * n + row]):
+        if sum((int(c) for c in bits[row * n:(row + 1) * n])) % 2 != int(bits[m * n + row]):
             failed_row = row
             break
     for col in range(n):
-        if sum(int(bits[j]) for j in range(col, len(bits) - n - m, n)) % 2 != int(bits[m * n + m + col]):
+        if sum((int(bits[j]) for j in range(col, len(bits) - n - m, n))) % 2 != int(bits[m * n + m + col]):
             failed_col = col
             break
     if (failed_row, failed_col) == (-1, -1):

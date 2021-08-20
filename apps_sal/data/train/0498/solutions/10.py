@@ -1,4 +1,5 @@
 class Solution:
+
     def rob_prev(self, nums):
         n = len(nums)
         if n == 0:
@@ -19,8 +20,4 @@ class Solution:
         elif n < 3:
             return max(nums)
         return max(self.rob_prev(nums[1:]), self.rob_prev(nums[:len(nums) - 1]))
-
-        """
-         :type nums: List[int]
-         :rtype: int
-         """
+        '\n         :type nums: List[int]\n         :rtype: int\n         '

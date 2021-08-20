@@ -1,12 +1,11 @@
-# cook your dish here
 t = int(input())
-while(t):
+while t:
     t = t - 1
-    N, L = map(int, input().split())
+    (N, L) = map(int, input().split())
     if N == 1:
         print(L)
     elif N == 2:
-        z = (8 * L + 1)**0.5
+        z = (8 * L + 1) ** 0.5
         z = z - 1
         z = z / 2
         if z - int(z) > 0:
@@ -14,4 +13,4 @@ while(t):
         else:
             print(int(z))
     else:
-        print("Fuck me")
+        print('Fuck me')

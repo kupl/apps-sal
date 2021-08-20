@@ -2,7 +2,7 @@ import math
 
 
 def GLR(x):
-    summation_N = (x * (x + 1)) // 2
+    summation_N = x * (x + 1) // 2
     initial = x
     power = 0
     sum_A = 0
@@ -17,7 +17,7 @@ def GLR(x):
 
 
 for _ in range(int(input())):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     if l == 1:
         print(GLR(r))
     else:

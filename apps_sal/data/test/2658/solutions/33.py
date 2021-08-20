@@ -1,8 +1,8 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 B = [0] * N
 point = 1
-m, l = 0, 0
+(m, l) = (0, 0)
 if K > N:
     for i in range(N):
         if B[point - 1] == 0:
@@ -21,5 +21,4 @@ else:
 ans = 1
 for i in range(l + m):
     ans = A[ans - 1]
-
 print(ans)

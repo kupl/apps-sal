@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 import itertools
 import functools
@@ -26,13 +25,10 @@ def solve(s):
     op = s.count('(')
     cl = s.count(')')
     h = s.count('#')
-
     if cl + h > op:
         return FAIL
-
     r = [1] * h
-    r[-1] += (op - cl - h)
-
+    r[-1] += op - cl - h
     if not valid(s, r):
         return FAIL
     return r

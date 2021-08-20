@@ -1,7 +1,7 @@
 def main():
     k = int(input())
     if k == 0:
-        print("0")
+        print('0')
         return
     d = list(map(int, input().split(' ')))
     s = []
@@ -12,19 +12,17 @@ def main():
     for di in d:
         if di == 0 or di == 100:
             se.add(di)
+        elif di < 10:
+            a.add(di)
+        elif '0' in list(str(di)):
+            b.add(di)
         else:
-            if di < 10:
-                a.add(di)
-            else:
-                if "0" in list(str(di)):
-                    b.add(di)
-                else:
-                    c.add(di)
+            c.add(di)
     if len(a) > 0:
         se.add(list(a)[0])
     if len(b) > 0:
         se.add(list(b)[0])
-    if len(a) == 0 and len(b) == 0 and len(c) > 0:
+    if len(a) == 0 and len(b) == 0 and (len(c) > 0):
         se.add(list(c)[0])
     print(len(se))
     print(' '.join(list(map(str, sorted(list(se))))))

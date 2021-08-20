@@ -10,20 +10,20 @@ def find_cycle_optimum(n, m, k, adj):
                 path.append(w)
                 break
             elif len(path) - visited[w] > k:
-                return path[visited[w]::]
+                return path[visited[w]:]
 
 
 def main():
-    n, m, k = [int(i) for i in input().split()]
+    (n, m, k) = [int(i) for i in input().split()]
     adj = [[] for i in range(n + 1)]
     for _ in range(m):
-        u, v = [int(i) for i in input().split()]
+        (u, v) = [int(i) for i in input().split()]
         adj[u].append(v)
         adj[v].append(u)
     c = find_cycle_optimum(n, m, k, adj)
     l = len(c)
     print(l)
-    print(' '.join(str(v) for v in c))
+    print(' '.join((str(v) for v in c)))
 
 
 main()

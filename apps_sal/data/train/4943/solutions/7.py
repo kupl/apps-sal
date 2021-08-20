@@ -1,5 +1,5 @@
 def string_counter(string, char):
-    if char not in string:  # stopping condition
+    if char not in string:
         return 0
     c = string[0]
     if c == char:
@@ -7,4 +7,4 @@ def string_counter(string, char):
     return string_counter(string[1:], char)
 
 
-print((string_counter('Hello World', 'o')))
+print(string_counter('Hello World', 'o'))

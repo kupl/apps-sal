@@ -14,7 +14,6 @@ for i in range(len(s3)):
 a = deque(a)
 b = deque(b)
 c = deque(c)
-
 x = a.popleft()
 while True:
     if x == 'a':

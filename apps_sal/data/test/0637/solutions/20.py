@@ -1,4 +1,3 @@
-
 n = int(input())
 a = input().split()
 for j in range(n):
@@ -6,28 +5,27 @@ for j in range(n):
 i = 1
 last = a[0]
 count = 1
-while (i < n and last == a[i]):
+while i < n and last == a[i]:
     i += 1
     count += 1
-if (i < n):
+if i < n:
     last = a[i]
     buf = 1
     i += 1
     flag = 1
-    while (i < n):
-        if (last == a[i]):
+    while i < n:
+        if last == a[i]:
             buf += 1
+        elif count != buf:
+            flag = 0
+            break
         else:
-            if (count != buf):
-                flag = 0
-                break
-            else:
-                last = a[i]
-                buf = 1
+            last = a[i]
+            buf = 1
         i += 1
-    if ((count != buf) or (flag == 0)):
-        print("NO")
+    if count != buf or flag == 0:
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 else:
-    print("YES")
+    print('YES')

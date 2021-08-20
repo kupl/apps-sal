@@ -1,11 +1,11 @@
 import math
 n = int(input())
 a = [int(i) for i in input().split()]
-op = [0 for i in range(10**6 + 1)]
+op = [0 for i in range(10 ** 6 + 1)]
 gcd = {}
 for i in a:
     gcd[i] = 1
-while(len(a) != 0):
+while len(a) != 0:
     newa = []
     x = a[0]
     for i in a[1:]:
@@ -19,7 +19,7 @@ while(len(a) != 0):
     a = newa
 for i in gcd:
     j = i
-    while(j < 10**6 + 1):
+    while j < 10 ** 6 + 1:
         op[j] += gcd[i]
         j += i
 q = int(input())

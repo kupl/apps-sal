@@ -1,7 +1,7 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-M = 10**6 + 5
+M = 10 ** 6 + 5
 cnt = [0] * M
 for x in A:
     if cnt[x] != 0:

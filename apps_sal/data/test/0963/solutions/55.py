@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 S = []
 for i in range(k):
     s = list(map(int, input().split()))
@@ -9,7 +9,7 @@ DP[1] = 1
 R = [0 for i in range(n + 1)]
 R[1] = 1
 for i in range(2, n + 1):
-    for l, r in S:
+    for (l, r) in S:
         li = i - r
         ri = i - l
         if ri < 0:

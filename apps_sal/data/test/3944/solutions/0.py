@@ -1,17 +1,14 @@
 import numpy as np
 import sys
 input = sys.stdin.readline
-
-
-MOD = 10**9 + 7
-
-N, M, K = map(int, input().split())
+MOD = 10 ** 9 + 7
+(N, M, K) = map(int, input().split())
 
 
 def cumprod(arr):
     L = len(arr)
-    Lsq = int(L**.5 + 1)
-    arr = np.resize(arr, Lsq**2).reshape(Lsq, Lsq)
+    Lsq = int(L ** 0.5 + 1)
+    arr = np.resize(arr, Lsq ** 2).reshape(Lsq, Lsq)
     for n in range(1, Lsq):
         arr[:, n] *= arr[:, n - 1]
         arr[:, n] %= MOD
@@ -21,7 +18,7 @@ def cumprod(arr):
     return arr.ravel()[:L]
 
 
-U = 10**6
+U = 10 ** 6
 x = np.full(U, 2, dtype=np.int64)
 x[0] = 1
 pow2 = cumprod(x)
@@ -40,10 +37,9 @@ fact = cumprod(x)
 x = np.arange(U, 0, -1, dtype=np.int64)
 x[0] = pow(int(fact[-1]), MOD - 2, MOD)
 fact_inv = cumprod(x)[::-1]
-
 L = N + M
 A = np.zeros(N + M, dtype=np.int64)
-A[1:L] = (-1) * pow2[0:L - 1] * pow3_inv[0:L - 1] % MOD
+A[1:L] = -1 * pow2[0:L - 1] * pow3_inv[0:L - 1] % MOD
 A[1:L] *= fact[K + 1:K + L] * fact_inv[K] % MOD * fact_inv[1:L] % MOD
 A %= MOD
 A[1:L] *= pow3_inv[K + 1]
@@ -55,7 +51,6 @@ A *= pow3[:L]
 A %= MOD
 A *= pow2_inv[:L]
 A %= MOD
-
 comb = fact[N - 1:N + M] * fact_inv[:M + 1] % MOD * fact_inv[N - 1] % MOD
 answer = (comb * pow3[K + M:K - 1:-1] % MOD * A[N - 1:N + M] % MOD).sum() % MOD
 print(answer)
