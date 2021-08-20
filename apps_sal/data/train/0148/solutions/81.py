@@ -1,12 +1,13 @@
 class Solution:
+
     def binarySearch(self, l, r, x, li):
-        if (r - l <= 1):
-            if (li[r] <= x):
+        if r - l <= 1:
+            if li[r] <= x:
                 return r
             else:
                 return l
         m = (l + r + 1) // 2
-        if (li[m] <= x):
+        if li[m] <= x:
             return self.binarySearch(m, r, x, li)
         else:
             return self.binarySearch(l, m - 1, x, li)

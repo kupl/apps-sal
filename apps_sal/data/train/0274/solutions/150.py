@@ -1,14 +1,14 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        '''
+        """
         根据要求，子串任意两个数之间的差要小于等于limit
         所以利用递增栈与递减栈记录子串的最大与最小值
         maxs[0]-mins[0] 作为子数组的最大maxdiff
-        '''
+        """
         n = len(nums)
-        maxs = []  # 递减栈
-        mins = []  # 递增栈
-        # maxs[0]-mins[0] 作为子数组的最大maxdiff
+        maxs = []
+        mins = []
         l = res = 0
         for r in range(n):
             while maxs and maxs[-1] < nums[r]:

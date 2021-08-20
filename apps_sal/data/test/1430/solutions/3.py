@@ -1,5 +1,5 @@
 from collections import *
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 q = deque()
 tt = 0
@@ -9,7 +9,7 @@ ans = 0
 tmp = 0
 for i in range(n):
     if f:
-        if s[i] == "0":
+        if s[i] == '0':
             tmp += 1
             tt += 1
             if tmp > ans:
@@ -21,9 +21,8 @@ for i in range(n):
             tmp += 1
             if tmp > ans:
                 ans = tmp
-
     elif f == False:
-        if s[i] == "1":
+        if s[i] == '1':
             tmp += 1
             tt += 1
             if tmp > ans:

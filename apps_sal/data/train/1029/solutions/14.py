@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     job_done = [int(x) for x in input().split()]
     li = []
     for i in range(1, n + 1):
@@ -13,7 +13,6 @@ while t:
             assis.append(li[i])
         else:
             chef.append(li[i])
-
     print(*chef)
     print(*assis)
     t = t - 1

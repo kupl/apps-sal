@@ -1,6 +1,6 @@
 def solve(s):
     r = s[::-1]
-    i = next((i for i, (c1, c2) in enumerate(zip(s, r)) if c1 != c2), None)
+    i = next((i for (i, (c1, c2)) in enumerate(zip(s, r)) if c1 != c2), None)
     if i is None:
         return 'OK'
     j = len(s) - i

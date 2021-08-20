@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         Dislike = collections.defaultdict(list)
         for dislike in dislikes:

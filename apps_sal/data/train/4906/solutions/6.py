@@ -1,8 +1,6 @@
 class TrafficUnit:
 
     def __init__(self, color):
-        # '.': road
-        # 'R'/'G'/'B': light
         self.color = color
         self.t = 0
 
@@ -27,6 +25,7 @@ class TrafficUnit:
 
 
 def traffic_lights(road, n):
+
     def f():
         car_pos = 0
         units = [TrafficUnit(c.replace('C', '.')) for c in road + '.']

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
 
         def dfs(cur):
@@ -14,7 +15,6 @@ class Solution:
                 res = max(dfs(t) + 1, res)
             d[cur] = res
             return d[cur]
-
         s = set(words)
         d = {}
         _max = 0

@@ -1,14 +1,11 @@
 import math
 import numpy as np
-
 time_list = []
 for i in range(5):
     time_list.append(int(input()))
-
 r_list = []
 for i in time_list:
     r_list.append((i - 1) % 10)
-
 x = np.argmin(r_list)
 for i in range(5):
     if i != x:

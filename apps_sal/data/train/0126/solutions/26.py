@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         subs = {}
         i = j = 0
@@ -15,7 +16,6 @@ class Solution:
                     if sub not in subs:
                         subs[sub] = 0
                     subs[sub] += 1
-
                 chars[s[i]] -= 1
                 if chars[s[i]] == 0:
                     del chars[s[i]]

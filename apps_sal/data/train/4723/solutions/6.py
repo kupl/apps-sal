@@ -3,4 +3,4 @@ def greet(name):
     lst.append(name[0].upper())
     for i in range(len(name) - 1):
         lst.append(name[i + 1].lower())
-    return "Hello " + "".join(lst) + "!"
+    return 'Hello ' + ''.join(lst) + '!'

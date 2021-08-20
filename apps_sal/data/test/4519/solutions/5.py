@@ -21,14 +21,14 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 mm = 1000000007
@@ -37,34 +37,34 @@ mm = 1000000007
 def solve():
     t = nu()
     for tt in range(t):
-        n, k = num()
+        (n, k) = num()
         s = list(input())
         ol = [0] * (n + 1)
         move = 0
         last = 0
         ind = -1
         for i in range(n):
-            if(s[i] == "0"):
+            if s[i] == '0':
                 ox = i - last
-                if(k - ox >= 0):
+                if k - ox >= 0:
                     k -= ox
                 else:
                     ind = i
                     break
                 last += 1
-        if(ind == -1):
+        if ind == -1:
             s.sort()
-            print(*s, sep="")
+            print(*s, sep='')
         else:
             op = s[0:ind]
             oz = s[ind:]
             op.sort()
             op += oz
-            while(k > 0):
-                op[ind - 1], op[ind] = op[ind], op[ind - 1]
+            while k > 0:
+                (op[ind - 1], op[ind]) = (op[ind], op[ind - 1])
                 ind -= 1
                 k -= 1
-            print(*op, sep="")
+            print(*op, sep='')
 
 
 def __starting_point():

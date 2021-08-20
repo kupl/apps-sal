@@ -1,4 +1,5 @@
 class LCG(object):
+
     def __init__(self, x):
         self._seed = x
 

@@ -1,17 +1,14 @@
 import os
 import sys
-
 import textwrap
 
 
 def solve():
     L = int(input())
     A = input()
-
     size = len(A)
     div = int(size / L)
     mod = size % L
-
     if size == L:
         if A == '9' * L:
             print(str(10 ** (L - 1)) * (div + 1))
@@ -40,7 +37,7 @@ def solve():
 
 
 def __starting_point():
-    if "PYCHARM_HOSTED" in os.environ:
+    if 'PYCHARM_HOSTED' in os.environ:
         sys.stdin = open('input.in')
     solve()
 

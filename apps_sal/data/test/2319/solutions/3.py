@@ -35,9 +35,8 @@ for case_num in range(t):
         r = n
         while r >= 1 and s[r - 1] == t[r - 1]:
             r -= 1
-        inf = int(1e8)
-        dp = [[0 if i == 0 else inf for j in range(
-            r + 1)] for i in range(r + 1)]
+        inf = int(100000000.0)
+        dp = [[0 if i == 0 else inf for j in range(r + 1)] for i in range(r + 1)]
         for i in range(1, r + 1):
             for j in range(i, r + 1):
                 if s[i - 1] == t[j - 1]:

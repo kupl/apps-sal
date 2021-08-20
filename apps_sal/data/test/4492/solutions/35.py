@@ -1,4 +1,4 @@
-N, x = map(int, input().split())
+(N, x) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = 0
 wa = a[0] + a[1]
@@ -12,5 +12,5 @@ for i in range(1, N - 1):
     wa = a[i] + a[i + 1]
     if wa > x:
         ans += wa - x
-        a[i + 1] -= (wa - x)
+        a[i + 1] -= wa - x
 print(ans)

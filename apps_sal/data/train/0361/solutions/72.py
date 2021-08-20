@@ -1,16 +1,15 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         if n == m:
             return 1
         if m > n:
-            m, n = n, m
-        # ans = float('inf')
+            (m, n) = (n, m)
 
         @lru_cache(None)
         def helper(skyline):
-            if all(h == n for h in skyline):
+            if all((h == n for h in skyline)):
                 return 0
-
             ans = float('inf')
             minh = min(skyline)
             l = skyline.index(minh)
@@ -24,14 +23,5 @@ class Solution:
                     newsl[i] += r - l + 1
                 ans = min(ans, helper(tuple(newsl)))
             return ans + 1
-
-            # for h in range(min(n-minh, r-l+1), 0, -1):
-            #     newsl = list(skyline)
-            #     for i in range(l, l+h):
-            #         newsl[i]+=h
-            #     ans = min(ans, helper(tuple(newsl)))
-
-            # return ans+1
-
-        ans = helper(tuple([0] * m))  # initial skyline
+        ans = helper(tuple([0] * m))
         return ans

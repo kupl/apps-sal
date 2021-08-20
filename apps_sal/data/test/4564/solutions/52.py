@@ -1,7 +1,5 @@
 from typing import List
-
-
-S = list(input())  # type: List[str]
+S = list(input())
 if len(S) == len(set(S)):
     print('yes')
 else:

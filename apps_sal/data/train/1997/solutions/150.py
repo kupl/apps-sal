@@ -1,9 +1,9 @@
-
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         start = len(intervals)
         temp = intervals.copy()
-        for i, item in enumerate(intervals[:-1]):
+        for (i, item) in enumerate(intervals[:-1]):
             if item in temp:
                 for item2 in intervals[i + 1:]:
                     if item2 in temp:

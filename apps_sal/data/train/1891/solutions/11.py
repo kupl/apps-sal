@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.result = []
         self.visited = None
@@ -14,7 +15,7 @@ class Solution:
 
     @staticmethod
     def __not_diagonal(x, y, curr_answer):
-        for c_x, c_y in enumerate(curr_answer):
+        for (c_x, c_y) in enumerate(curr_answer):
             if abs(c_x - x) == abs(c_y - y):
                 return False
         return True
@@ -30,7 +31,6 @@ class Solution:
         if level == n:
             self.result.append(Solution.visualize(curr_answer, n))
             return
-
         for i in range(n):
             if not self.visited[i] and Solution.__not_diagonal(level, i, curr_answer):
                 self.visited[i] = 1

@@ -7,9 +7,8 @@ for _ in range(t):
     for c in s:
         if c == '(':
             curr += 1
+        elif curr:
+            curr -= 1
         else:
-            if curr:
-                curr -= 1
-            else:
-                out += 1
+            out += 1
     print(out)

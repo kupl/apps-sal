@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 s = sum(a)
 nums = {}
 for i in range(n):
@@ -8,9 +7,8 @@ for i in range(n):
         nums[a[i]] += 1
     else:
         nums[a[i]] = 1
-
 for i in range(int(input())):
-    b, c = map(int, input().split())
+    (b, c) = map(int, input().split())
     if b in nums:
         s -= nums[b] * b
         s += nums[b] * c

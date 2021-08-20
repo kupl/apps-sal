@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         cnt = 0
         for i in range(len(rating) - 2):
@@ -8,5 +9,4 @@ class Solution:
                         cnt += 1
                     elif (rating[i] < rating[j]) & (rating[j] < rating[k]):
                         cnt += 1
-                    # print([i, j, k], [rating[i], rating[j], rating[k]], cnt)
         return cnt

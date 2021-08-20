@@ -1,7 +1,6 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 t = list(map(int, input().split()))
-one, ans = 0, 0
-
+(one, ans) = (0, 0)
 for i in t:
     if i == 1:
         if a > 0:
@@ -18,5 +17,4 @@ for i in t:
             b -= 1
         else:
             ans += 2
-
 print(ans)

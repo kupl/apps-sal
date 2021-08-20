@@ -1,35 +1,27 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
-
         distances = []
         for i in range(n - 1):
             for j in range(i + 1, n):
                 distances.append([i, j, self.dist(points[i], points[j])])
-
         distances.sort(key=lambda x: x[2])
-
         parent = []
         for i in range(n):
             parent.append(i)
-
         e = 0
         i = 0
         result = 0
         while e < n - 1:
-            u, v, w = distances[i]
+            (u, v, w) = distances[i]
             i = i + 1
             x = self.find(parent, u)
             y = self.find(parent, v)
-
-            # If including this edge does't cause cycle,
-            # include it in result and increment the index
-            # of result for next edge
             if x != y:
                 e = e + 1
                 result += w
                 self.union(parent, x, y)
-
         return result
 
     def dist(self, p1, p2):
@@ -43,6 +35,5 @@ class Solution:
     def union(self, parent, x, y):
         xroot = self.find(parent, x)
         yroot = self.find(parent, y)
-
         if xroot != yroot:
             parent[yroot] = xroot

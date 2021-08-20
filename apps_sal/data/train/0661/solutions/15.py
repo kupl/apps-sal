@@ -1,12 +1,12 @@
 import math
-t, x = list(map(int, input().split()))
+(t, x) = list(map(int, input().split()))
 for _ in range(t):
     n = int(input())
     if n < 0:
         n = -1 * n
     s = int(math.sqrt(n))
-    diff = n - (s * s)
-    if diff <= ((x * n) / 100):
-        print("yes")
+    diff = n - s * s
+    if diff <= x * n / 100:
+        print('yes')
     else:
-        print("no")
+        print('no')

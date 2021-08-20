@@ -3,7 +3,6 @@ import sys
 
 def main():
     n = int(sys.stdin.readline())
-
     a_sum = 0
     b_sum = 0
     while n > 0:

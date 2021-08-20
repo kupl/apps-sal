@@ -6,9 +6,8 @@ INF = 10 ** 15
 
 
 def main():
-    N, S = map(int, input().split())
+    (N, S) = map(int, input().split())
     A = list(map(int, input().split()))
-
     dp = np.zeros(S + 1, np.int64)
     dp[0] = pow(2, N, MOD)
     inv2 = pow(2, MOD - 2, MOD)

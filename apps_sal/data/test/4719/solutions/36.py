@@ -1,8 +1,6 @@
-# C - 怪文書
 def main():
     n = int(input())
     ans = list(input())
-
     for _ in range(n - 1):
         s = list(input())
         temp = []
@@ -14,7 +12,7 @@ def main():
             ans = temp
     else:
         ans.sort()
-        print((''.join(ans)))
+        print(''.join(ans))
 
 
 def __starting_point():

@@ -1,6 +1,5 @@
-r1, c1, r2, c2 = map(int, input().split())
-
-MOD = 10**9 + 7
+(r1, c1, r2, c2) = map(int, input().split())
+MOD = 10 ** 9 + 7
 MAXN = r2 + c2 + 5
 fac = [1, 1] + [0] * MAXN
 for i in range(2, MAXN + 2):

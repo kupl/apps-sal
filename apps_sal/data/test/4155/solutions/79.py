@@ -11,14 +11,12 @@ def solve(h, water):
     right = left
     while right < len(h) and h[right] != 0:
         right += 1
-
     if left < right:
         h[left:right] = [i - 1 for i in h[left:right]]
     elif left == right and h[left] > 0:
         h[left] = h[left] - 1
     else:
         return water
-
     water = solve(h, water + 1)
     return water
 
@@ -30,7 +28,7 @@ def main():
 
 
 def __starting_point():
-    print((main()))
+    print(main())
 
 
 __starting_point()

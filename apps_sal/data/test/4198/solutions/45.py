@@ -1,8 +1,6 @@
 import math
-
-A, B, X = map(int, input().split())
-
-a = 10**9 + 1
+(A, B, X) = map(int, input().split())
+a = 10 ** 9 + 1
 b = X
 
 
@@ -11,7 +9,7 @@ def is_ok(arg):
 
 
 def bisect(ng, ok):
-    while (abs(ok - ng) > 1):
+    while abs(ok - ng) > 1:
         mid = (ok + ng) // 2
         if is_ok(mid):
             ok = mid

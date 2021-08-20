@@ -5,4 +5,4 @@ def chinese_zodiac(year):
     animalIndex = diff % 12
     eleIndex = diff // 2
     eleIndex = eleIndex % 5
-    return "{} {}".format(elements[eleIndex], animals[animalIndex])
+    return '{} {}'.format(elements[eleIndex], animals[animalIndex])

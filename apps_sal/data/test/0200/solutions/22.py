@@ -1,5 +1,5 @@
-h, g = [int(x) for x in input().split(' ')]
-a, b = [int(x) for x in input().split(' ')]
+(h, g) = [int(x) for x in input().split(' ')]
+(a, b) = [int(x) for x in input().split(' ')]
 ans = 0
 h += 8 * a
 uph = h

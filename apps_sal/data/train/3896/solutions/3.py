@@ -11,6 +11,4 @@ def sum_of_multiples(k, n):
 
 def solution(number):
     number = number - 1
-    return (sum_of_multiples(3, number) +
-        sum_of_multiples(5, number) -
-            sum_of_multiples(3 * 5, number))
+    return sum_of_multiples(3, number) + sum_of_multiples(5, number) - sum_of_multiples(3 * 5, number)

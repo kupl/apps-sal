@@ -1,6 +1,5 @@
 import heapq
 N = int(input())
-
 A = list(map(int, input().split()))
 L = A[:N]
 heapq.heapify(L)
@@ -12,15 +11,12 @@ for i in range(N):
     heapq.heappush(L, A[N + i])
     sum_L -= heapq.heappop(L)
     L_list.append(sum_L)
-
 A = list([-x for x in A[::-1]])
 R = A[:N]
 heapq.heapify(R)
 sum_R = sum(A[:N])
 R_list = []
 R_list.append(sum_R)
-
-
 for i in range(N):
     sum_R += A[N + i]
     heapq.heappush(R, A[N + i])
@@ -30,5 +26,4 @@ maxi = -10000000000000000000000000000
 R_list = R_list[::-1]
 for i in range(N + 1):
     maxi = max(maxi, L_list[i] + R_list[i])
-
 print(maxi)

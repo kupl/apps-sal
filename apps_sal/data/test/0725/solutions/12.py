@@ -2,7 +2,7 @@ CA = ['C', 'M', 'Y']
 
 
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     c = [input().split() for _ in range(n)]
     for i in range(n):
         for j in range(m):

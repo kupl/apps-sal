@@ -21,7 +21,7 @@ def getTransIntList(n):
     return result
 
 
-n, k = getIntList()
+(n, k) = getIntList()
 a = getIntList()
 result = 0
 for x in a:

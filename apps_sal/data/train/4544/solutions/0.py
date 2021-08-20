@@ -11,7 +11,6 @@ def factor_sum(n):
                     break
             else:
                 i += 1
-
         if a != s:
             n = s
         else:

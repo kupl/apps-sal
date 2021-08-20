@@ -1,5 +1,7 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
+
         def gcd(a, b):
             if a < b:
                 return gcd(b, a)

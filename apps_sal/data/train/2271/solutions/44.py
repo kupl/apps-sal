@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 pn = list(map(lambda x: int(x) - 1, input().split()))
 ls = [-1] * n
 for i in pn:
@@ -25,7 +25,7 @@ def unite(x, y):
 
 
 for _ in range(m):
-    x, y = map(lambda x: int(x) - 1, input().split())
+    (x, y) = map(lambda x: int(x) - 1, input().split())
     unite(ls[x], ls[y])
 ans2 = 0
 for i in range(n):

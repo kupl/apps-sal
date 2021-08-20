@@ -2,12 +2,10 @@ import sys
 
 
 def main():
+
     def input():
         return sys.stdin.readline()[:-1]
-
-    N, k = list(map(int, input().split()))
-
-    # union-find
+    (N, k) = list(map(int, input().split()))
     parent = [k for k in range(N)]
 
     def find(x):
@@ -21,7 +19,7 @@ def main():
         parent[find(x)] = find(y)
     ans = 0
     for q in range(k):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         if find(x - 1) == find(y - 1):
             ans += 1
         else:

@@ -4,7 +4,7 @@ def count_red_beads(n):
     else:
         i = 0
         RedCount = -2
-    while(i < n):
+    while i < n:
         RedCount += 2
         i += 1
     return RedCount

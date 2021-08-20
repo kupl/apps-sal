@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         manager2employee = defaultdict(list)
-        for employee, manager in enumerate(manager):
+        for (employee, manager) in enumerate(manager):
             manager2employee[manager].append(employee)
 
         def dfs(manager):

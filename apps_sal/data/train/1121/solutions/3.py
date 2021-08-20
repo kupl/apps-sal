@@ -1,8 +1,7 @@
-# cook your dish here
 import math
 t = int(input())
 for i in range(t):
-    h, m = input().split(':')
+    (h, m) = input().split(':')
     h_pos = int(h) * 30
     if int(h) >= 12:
         h_pos = (int(h) - 12) * 30

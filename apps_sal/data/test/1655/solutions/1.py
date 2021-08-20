@@ -1,7 +1,6 @@
 import math
 import functools as ft
 import itertools as it
-
 n = int(input())
 a = list(map(int, input().split()))
 cur = a[-1]

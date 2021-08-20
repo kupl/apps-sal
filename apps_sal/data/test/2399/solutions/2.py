@@ -1,15 +1,18 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 Q = int(input())
 for _ in range(Q):
-    a, b = list(map(int, input().split()))
-    S = input() + "X"
+    (a, b) = list(map(int, input().split()))
+    S = input() + 'X'
     s = 0
     x = x1 = x2 = x3 = xx = 0
     for i in range(len(S)):
-        if S[i] == "X":
+        if S[i] == 'X':
             if s < b:
                 pass
             elif a <= s < 2 * b:
@@ -23,19 +26,17 @@ for _ in range(Q):
             elif a <= s < a + 2 * b - 1:
                 x1 += 1
             else:
-                # print("a, b, s =", a, b, s)
-                print("NO")
+                print('NO')
                 break
             s = 0
         else:
             s += 1
     else:
-        # print("x, x1, x2, x3 =", x, x1, x2, x3)
         if xx + x1 + x2 + x3 >= 2:
-            print("NO")
+            print('NO')
         elif xx:
-            print("YES")
+            print('YES')
         elif (x + x1 + x2 * 2 + x3 * 3) % 2 == 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

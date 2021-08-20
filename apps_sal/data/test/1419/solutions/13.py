@@ -26,16 +26,14 @@ def calc(k, n):
         else:
             tmp = d[i]
             cnt += 1
-
     return cnt <= n
 
 
-l, r = 0, 10 ** 6 + 1
+(l, r) = (0, 10 ** 6 + 1)
 while r - l > 1:
     mid = (r + l) // 2
     if calc(mid, n):
         r = mid
     else:
         l = mid
-
 print(r)

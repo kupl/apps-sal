@@ -2,7 +2,7 @@ import math
 
 
 def round_it(n):
-    position = str(n).index(".")
+    position = str(n).index('.')
     length = len(str(n)) - 1
     if position < length / 2:
         return math.ceil(n)

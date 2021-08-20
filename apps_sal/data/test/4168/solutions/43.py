@@ -1,12 +1,12 @@
 N = int(input())
-a = ""
+a = ''
 if N == 0:
     a = 0
 while N != 0:
     if N % 2 != 0:
         N -= 1
-        a = "1" + a
+        a = '1' + a
     else:
-        a = "0" + a
+        a = '0' + a
     N = N // -2
 print(a)

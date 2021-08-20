@@ -10,7 +10,7 @@ for _ in range(int(input())):
         else:
             l[x] += 1
     s = set(s)
-    t = ""
+    t = ''
     for x in s:
         t += x
     t = sorted(t, reverse=True)
@@ -30,7 +30,6 @@ for _ in range(int(input())):
                 a[i] -= abs(i - x)
         h[j] = len(cur)
         j += 1
-
     itog = [0] * n
     curi = 0
     for key in h:
@@ -41,5 +40,5 @@ for _ in range(int(input())):
                 itog[i] = t[curi]
         curi += 1
     for x in itog:
-        print(x, end="")
+        print(x, end='')
     print()

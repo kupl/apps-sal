@@ -4,4 +4,4 @@ def problem(a=''):
         a = a * 50 + 6
         return a
     except ValueError:
-        return "Error"
+        return 'Error'

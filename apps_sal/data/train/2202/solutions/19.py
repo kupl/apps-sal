@@ -1,19 +1,9 @@
-# https://codeforces.com/contest/1208/problem/D
-
 from math import log
 from sys import stdin, stdout
 input = stdin.readline
 print = stdout.write
-
-# For every i from N to 1, let's say the value of the si is x.
-# So it means there are k smallest unused numbers whose sum is x.
-# We simply put the (k+1)st number in the output permutation at this i, and continue to move left.
-
-# segment tree and binary search
-
 _ = input()
 x = [int(i) for i in input().split()]
-
 res = []
 
 
@@ -52,26 +42,17 @@ class SegmentTree(object):
 tree = SegmentTree(list(range(1, len(x) + 1)))
 org = len(x)
 while x:
-    # from back to forth
     q = x.pop()
-
     lo = 0
     hi = org - 1
-
     while lo < hi:
         mid = (lo + hi) // 2
-        # print(lo, hi, mid)
         sm = tree.query(0, mid)
-        # print(sm, mid)
         if sm > q:
             hi = mid
         else:
             lo = mid + 1
-    # print(tree.arr, lo, hi)
     idx = tree.arr[lo]
-    # print(idx)
     tree.update(lo, 0)
-    # also from back to forth
     res.append(idx)
-
-print(' '.join(str(i) for i in res[::-1]))
+print(' '.join((str(i) for i in res[::-1])))

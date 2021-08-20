@@ -3,4 +3,4 @@ def reverseWords(str):
     string = []
     for e in s:
         string.insert(0, e)
-    return " ".join(string)
+    return ' '.join(string)

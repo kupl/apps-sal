@@ -1,12 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# FileName: 	D
-# CreatedDate:  2020-08-18 14:44:25 +0900
-# LastModified: 2020-09-11 15:35:56 +0900
-#
-
-
 import os
 import sys
 
@@ -34,7 +25,6 @@ def main():
         elif S[i] != S[i + 1] and floor_chart == 0:
             floor_chart = 1
         i += 1
-
     ans = [0] * len(S)
     one_cool = 0
     hash_one = 0
@@ -49,7 +39,6 @@ def main():
                 ans[pidx] += 1
             else:
                 ans[pidx + 1] += 1
-
         else:
             pidx = change_box[one_cool] + 1
             hash_one = 1
@@ -60,7 +49,7 @@ def main():
                 ans[pidx - 1] += 1
     print(ans[0], end='')
     for i in range(1, len(ans)):
-        print(" {}".format(ans[i]), end='')
+        print(' {}'.format(ans[i]), end='')
     print()
 
 

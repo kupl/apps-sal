@@ -44,7 +44,7 @@ def double_positions(a):
     res = []
     for i in range(len(a)):
         if count[a[i] - 1] != -1:
-            return count[a[i] - 1], i
+            return (count[a[i] - 1], i)
         count[a[i] - 1] = i
 
 

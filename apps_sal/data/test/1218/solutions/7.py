@@ -13,7 +13,7 @@ def calc(m, K):
 
 
 def __starting_point():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     if N == 1:
         print(0)
         return
@@ -23,7 +23,7 @@ def __starting_point():
     left = 0
     right = K + 1
     result = 10 ** 10
-    while (right - left > 1):
+    while right - left > 1:
         med = (right + left) // 2
         res = N - calc(med, K)
         if res == 0:

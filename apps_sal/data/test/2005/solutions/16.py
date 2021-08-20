@@ -1,4 +1,4 @@
-n, n1, n2 = map(int, input().split())
+(n, n1, n2) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
 ans = 0.0
 s = 0.0

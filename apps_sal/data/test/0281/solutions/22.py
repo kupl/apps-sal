@@ -1,6 +1,6 @@
-a, b = list(map(int, input().split()))
-if(b - a) >= 5:
-    print("0")
+(a, b) = list(map(int, input().split()))
+if b - a >= 5:
+    print('0')
 else:
     num_term = b - a
     num = 1

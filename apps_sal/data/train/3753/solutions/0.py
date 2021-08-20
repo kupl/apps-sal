@@ -1,2 +1,2 @@
 def camel_case(string):
-    return string.title().replace(" ", "")
+    return string.title().replace(' ', '')

@@ -2,8 +2,8 @@ import numpy as np
 
 
 class Solution:
-    def nthPersonGetsNthSeat(self, n: int) -> float:
 
+    def nthPersonGetsNthSeat(self, n: int) -> float:
         if n == 1:
             currentsum = 0
         else:

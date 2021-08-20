@@ -1,7 +1,6 @@
 s = map(int, input().split())
 a = tuple(map(int, input().split()))
 b = tuple(map(int, input().split()))
-
 both_have_num = 10
 for i1 in a:
     for i2 in b:

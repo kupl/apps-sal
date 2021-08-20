@@ -15,7 +15,7 @@ def triplets(n, arr):
                 temp.append(array[i + 2])
                 i = 3
                 temp = sorted(temp, reverse=False)
-                for i, num in enumerate(temp):
+                for (i, num) in enumerate(temp):
                     if temp[0] + temp[1] > temp[2]:
                         result.append(sorted(temp, reverse=True))
                 temp = []
@@ -24,7 +24,7 @@ def triplets(n, arr):
     max = 0
     i = 0
     if result:
-        for count, eacharr in enumerate(result):
+        for (count, eacharr) in enumerate(result):
             if eacharr[0] > max:
                 max = eacharr[0]
                 i = count
@@ -37,7 +37,6 @@ def triplets(n, arr):
 
 def main():
     lst = []
-
     n = list(map(int, tokenizedInput[:1]))
     lst = list(map(int, tokenizedInput[1:]))
     return triplets(n, lst)

@@ -2,10 +2,9 @@ from collections import deque
 
 
 class Solution:
-    def longestStrChain(self, words: List[str]) -> int:
 
+    def longestStrChain(self, words: List[str]) -> int:
         return self.run_graph_solution(words)
-        # return self.run_dp_solution(words)
 
     def run_dp_solution(self, words):
         pass
@@ -20,7 +19,6 @@ class Solution:
             lengths[len(word)].append(word)
             min_len = min(len(word), min_len)
             max_len = max(len(word), max_len)
-
         for k in range(min_len, max_len):
             for word1 in lengths[k]:
                 for word2 in lengths[k + 1]:
@@ -28,8 +26,6 @@ class Solution:
                         if word2[:i] + word2[i + 1:] == word1:
                             graph[word1].append(word2)
                             into[word2] = True
-        # return graph
-
         sources = [word for word in words if word not in into]
         max_len = 0
         for s in sources:
@@ -40,11 +36,9 @@ class Solution:
         queue = deque(maxlen=len(list(graph.keys())))
         queue.appendleft((s, 1))
         summary = []
-
         while len(queue) > 0:
-            current_node, cur_len = queue.pop()
+            (current_node, cur_len) = queue.pop()
             for word in graph[current_node]:
                 queue.appendleft((word, cur_len + 1))
             summary.append(cur_len)
-
         return summary[-1]

@@ -1,4 +1,4 @@
-n, d = [int(x) for x in input().split()]
+(n, d) = [int(x) for x in input().split()]
 tr = [int(x) for x in input().split()]
 cash = 0
 flag = False
@@ -22,7 +22,7 @@ else:
     for i in range(n):
         if tr[i] == 0:
             if gr[i] + acash < 0:
-                acash += (d - mx[i] - acash)
+                acash += d - mx[i] - acash
                 if gr[i] + acash < 0:
                     count = -1
                     break

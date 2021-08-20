@@ -15,5 +15,5 @@ def solve(n, a):
 T = int(input())
 for i in range(T):
     N = int(input())
-    *A, = map(int, input().split())
+    (*A,) = map(int, input().split())
     solve(N, A)

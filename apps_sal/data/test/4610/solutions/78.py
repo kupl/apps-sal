@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 import collections
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 C = collections.Counter(A)
 KEY = list(C.keys())
@@ -10,5 +9,4 @@ if len(KEY) > K:
     L = C.most_common()[::-1]
     for ii in range(D):
         count += L[ii][1]
-
 print(count)

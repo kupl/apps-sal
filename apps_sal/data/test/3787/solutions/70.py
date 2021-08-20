@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def make_result(n, a, b):
     result = []
     tail = []
@@ -23,11 +20,9 @@ def make_result(n, a, b):
             result += [n - i for i in range(k - 1, -1, -1)]
             n -= k
             b -= 1
-
     for i in range(b):
         for j in range(a):
             result.append(n - a * (i + 1) + j + 1)
-
     return result + tail
 
 
@@ -36,17 +31,15 @@ def solve(n, a, b):
         return '-1'
     if a * b < n:
         return '-1'
-
     return ' '.join(map(str, make_result(n, a, b)))
 
 
 def main():
-    n, a, b = input().split()
+    (n, a, b) = input().split()
     n = int(n)
     a = int(a)
     b = int(b)
-
-    print((solve(n, a, b)))
+    print(solve(n, a, b))
 
 
 def __starting_point():

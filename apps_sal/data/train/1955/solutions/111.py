@@ -1,4 +1,5 @@
 class UnionFind(object):
+
     def __init__(self, n):
         self._parent = [0] * n
         self._size = [1] * n
@@ -30,6 +31,7 @@ class UnionFind(object):
 
 
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         N = len(s)
         if N < 2:
@@ -37,12 +39,10 @@ class Solution:
         uf = UnionFind(N)
         for pair in pairs:
             uf.union(pair[0], pair[1])
-
         dict = defaultdict(list)
         for i in range(N):
             r = uf.find(i)
             dict[r].append(i)
-
         res = [' '] * N
         for lst in list(dict.values()):
             lst.sort()

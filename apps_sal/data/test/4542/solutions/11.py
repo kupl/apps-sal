@@ -1,7 +1,7 @@
 def main():
     S = input()
     ans = 0
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         if i == 0:
             t = s
             continue

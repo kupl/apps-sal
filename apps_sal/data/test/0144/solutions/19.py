@@ -24,6 +24,6 @@ while i <= max_s:
         res += 1
     i += 1
 if res == 2:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

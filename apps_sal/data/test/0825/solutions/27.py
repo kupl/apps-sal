@@ -27,5 +27,4 @@ for v in D.values():
         i += 1
         total += i
     ans += i
-
 print(ans)

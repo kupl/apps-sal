@@ -7,8 +7,7 @@ if a[2] == 'month':
         print(11)
     else:
         print(7)
+elif a[0] >= 5 and a[0] != 7:
+    print(53)
 else:
-    if a[0] >= 5 and a[0] != 7:
-        print(53)
-    else:
-        print(52)
+    print(52)

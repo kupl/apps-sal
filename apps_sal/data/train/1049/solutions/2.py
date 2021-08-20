@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     a = list(map(int, input().split()))
     s = set(a)
     s = list(s)

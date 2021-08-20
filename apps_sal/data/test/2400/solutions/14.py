@@ -18,5 +18,4 @@ for _ in range(t):
             evenq += 1
         else:
             oddq += 1
-
     print(evenp * evenq + oddp * oddq)

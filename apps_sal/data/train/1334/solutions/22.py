@@ -1,5 +1,5 @@
 from sys import stdin, setrecursionlimit
-setrecursionlimit(10**6)
+setrecursionlimit(10 ** 6)
 
 
 def fn(pos):
@@ -11,7 +11,7 @@ def fn(pos):
     return dp[pos]
 
 
-for _ in range(1):  # int(stdin.readline())):
+for _ in range(1):
     n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
     dp = {}

@@ -16,5 +16,4 @@ for l in range(1, n + 1):
                 hor -= 1
         if hor == 0 and ver == 0:
             res += 1
-
 print(res)

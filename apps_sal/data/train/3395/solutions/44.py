@@ -4,6 +4,5 @@ def remove_duplicate_words(s):
     print(sSplit)
     for i in sSplit:
         if i not in new:
-            new += i + " "
-
+            new += i + ' '
     return new.rstrip()

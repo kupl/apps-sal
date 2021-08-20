@@ -1,7 +1,7 @@
 n = int(input())
 if n % 2:
     a = list(map(int, input().split()))
-    s = [[a[0], 0, 0], [0, a[1], 0], [a[0] + a[2], 0, a[2]]] + [[0, 0, 0]for i in range(3, n)]
+    s = [[a[0], 0, 0], [0, a[1], 0], [a[0] + a[2], 0, a[2]]] + [[0, 0, 0] for i in range(3, n)]
     for i in range(3, n):
         if i % 2:
             s[i][1] = max(s[i - 2][1], s[i - 3][0]) + a[i]

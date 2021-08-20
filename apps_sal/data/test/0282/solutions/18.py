@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = [1000] * (n + 1)
 a[0] = 0
 s = [int(x) for x in input()]

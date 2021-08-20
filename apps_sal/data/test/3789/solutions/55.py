@@ -1,9 +1,9 @@
-
 import sys
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N, inf):
         self.N = N
         self.inf = inf
@@ -29,7 +29,7 @@ class Dinic:
         while deq:
             v = deq.pop()
             lv = self.level[v] + 1
-            for w, cap, _ in self.G[v]:
+            for (w, cap, _) in self.G[v]:
                 if cap > 0 and self.level[w] == -1:
                     self.level[w] = lv
                     deq.appendleft(w)
@@ -38,7 +38,7 @@ class Dinic:
         if v == t:
             return f
         for e in self.iter[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap > 0 and self.level[v] < self.level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d > 0:
@@ -53,32 +53,34 @@ class Dinic:
             self.bfs(s)
             if self.level[t] == -1:
                 return flow
-            *self.iter, = list(map(iter, self.G))
+            (*self.iter,) = list(map(iter, self.G))
             f = self.inf
             while f > 0:
                 f = self.dfs(s, t, self.inf)
                 flow += f
 
 
-sys.setrecursionlimit(10**7)
-def I(): return int(sys.stdin.readline().rstrip())
-def LI(): return list(map(int, sys.stdin.readline().rstrip().split()))  # 空白あり
+sys.setrecursionlimit(10 ** 7)
+
+
+def I():
+    return int(sys.stdin.readline().rstrip())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().rstrip().split()))
 
 
 N = I()
 A = [0] + LI()
-ans = sum(A[i] for i in range(1, N + 1) if A[i] > 0)
-
-inf = 10**18
+ans = sum((A[i] for i in range(1, N + 1) if A[i] > 0))
+inf = 10 ** 18
 Di = Dinic(N + 2, inf)
-s, t = 0, N + 1
-
+(s, t) = (0, N + 1)
 for i in range(1, N + 1):
     Di.add_edge(s, i, max(0, -A[i]))
     Di.add_edge(i, t, max(0, A[i]))
-
 for i in range(1, N // 2 + 1):
     for j in range(2 * i, N + 1, i):
         Di.add_edge(i, j, inf)
-
-print((ans - Di.flow(s, t)))
+print(ans - Di.flow(s, t))

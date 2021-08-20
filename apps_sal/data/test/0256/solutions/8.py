@@ -7,7 +7,7 @@ def check(a, b, c, d):
 a = [0 for i in range(4)]
 b = [0 for i in range(4)]
 for i in range(4):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
 if check(a[0], b[1], a[2], b[3]) and check(a[0], b[1], a[3], b[2]):
     print('Team 1')
 elif check(a[1], b[0], a[2], b[3]) and check(a[1], b[0], a[3], b[2]):

@@ -8,7 +8,7 @@ def vert_mirror(strng):
     vert2 = '\n'
     for i in range(len(vert)):
         vert1.append(vert[i][::-1])
-    return (vert2.join(vert1))
+    return vert2.join(vert1)
 
 
 def hor_mirror(strng):

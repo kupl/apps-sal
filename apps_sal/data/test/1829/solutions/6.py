@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = dict()
 ans = 0
 per1 = 0

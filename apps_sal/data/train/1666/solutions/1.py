@@ -5,4 +5,4 @@ def solution(a):
         b = max(a)
         a.remove(b)
         a.add(b - max(a))
-    return(max(a) * a_len)
+    return max(a) * a_len

@@ -4,9 +4,9 @@ def readinput():
 
 
 def main(n):
-    ureshii = (n // 500) * 1000
+    ureshii = n // 500 * 1000
     n = n % 500
-    ureshii += (n // 5) * 5
+    ureshii += n // 5 * 5
     return ureshii
 
 

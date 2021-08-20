@@ -1,6 +1,6 @@
 t = int(input())
 for ii in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if n % 2 == 0:
         print(n + 2 * k)
     else:

@@ -1,9 +1,8 @@
 n = int(input())
 x = 0
 ans = True
-
 for i in range(n):
-    t, d = input().split()
+    (t, d) = input().split()
     t = int(t)
     if d == 'South' and x + t > 20000:
         ans = False
@@ -15,10 +14,8 @@ for i in range(n):
         x += t
     elif d == 'North':
         x -= t
-
 if x != 0:
     ans = False
-
 if ans:
     print('YES')
 else:

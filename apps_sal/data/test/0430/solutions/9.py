@@ -1,7 +1,7 @@
 n = int(input().strip())
 a = list(map(int, input().split()))
 k = sum(a) / 2
-if (k == int(k)):
+if k == int(k):
     k = int(k)
     f = [0] * (k + 1)
     f[0] = 1

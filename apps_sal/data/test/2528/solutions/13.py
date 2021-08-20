@@ -1,7 +1,7 @@
 add = 0
 n = int(input())
 mx = 0
-arr = input().split(" ")
+arr = input().split(' ')
 a = []
 for elem in arr:
     a.append(int(elem))

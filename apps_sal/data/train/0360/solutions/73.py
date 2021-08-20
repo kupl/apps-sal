@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def can(K):
             i = 0
             days = 0
@@ -10,8 +12,7 @@ class Solution:
                     k -= weights[i]
                     i += 1
             return days <= D
-
-        l, r = max(weights), sum(weights)
+        (l, r) = (max(weights), sum(weights))
         while l < r:
             mid = (l + r) // 2
             if can(mid):

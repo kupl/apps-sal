@@ -1,4 +1,5 @@
 def collatz(n):
+
     def f(n):
         while True:
             yield str(n)

@@ -12,7 +12,6 @@ for i in range(0, len(a), 2):
         print(0)
         res = False
         break
-
-p = 10**9 + 7
+p = 10 ** 9 + 7
 if res:
     print(pow(2, n // 2, p))

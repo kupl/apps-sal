@@ -1,5 +1,5 @@
 def bonus_time(salary, bonus):
     if bonus == True:
-        return f"${salary}0"
+        return f'${salary}0'
     else:
-        return f"${salary}"
+        return f'${salary}'

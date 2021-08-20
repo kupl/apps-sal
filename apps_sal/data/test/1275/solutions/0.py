@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 
 
 def num_pair(m):
@@ -8,9 +8,7 @@ def num_pair(m):
 
 
 K = abs(K)
-
 ans = 0
 for i in range(K + 2, 2 * N + 1):
     ans += num_pair(i) * num_pair(i - K)
-
 print(ans)

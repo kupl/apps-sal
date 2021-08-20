@@ -1,5 +1,4 @@
 from functools import lru_cache
-
 N = int(input())
 K = int(input())
 
@@ -15,7 +14,7 @@ def f(n, k):
             return n
         else:
             return 0
-    a, b = divmod(n, 10)
+    (a, b) = divmod(n, 10)
     return f(a, k) + f(a, k - 1) * b + f(a - 1, k - 1) * (9 - b)
 
 

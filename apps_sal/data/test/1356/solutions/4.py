@@ -1,5 +1,5 @@
 s = input()
-a = s.count("a")
+a = s.count('a')
 b = len(s)
 if a > b / 2:
     print(b)

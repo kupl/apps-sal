@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 a = [0]
 for i in range(n):
@@ -6,7 +6,6 @@ for i in range(n):
     a.append(tmp)
 ans = 0
 for i in range(n + 1):
-    if (a[i] <= x):
+    if a[i] <= x:
         ans = ans + 1
-
 print(ans)

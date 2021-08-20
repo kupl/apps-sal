@@ -1,4 +1,5 @@
-def leap(k): return (k % 4 == 0 and k % 100 != 0) or k % 400 == 0
+def leap(k):
+    return k % 4 == 0 and k % 100 != 0 or k % 400 == 0
 
 
 y = int(input())
@@ -8,7 +9,7 @@ else:
     flag = False
 d = 7
 x = y
-d2, flag2 = d, flag
+(d2, flag2) = (d, flag)
 while 1:
     x += 1
     d2 -= 1

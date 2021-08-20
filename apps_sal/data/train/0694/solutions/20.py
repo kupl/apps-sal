@@ -9,8 +9,6 @@ def lcm(denominators):
 for _ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
-
     res = lcm(arr)
     hrs = 24 * n
-
     print(hrs // res)

@@ -6,11 +6,9 @@ num = 0
 for c in N:
     if c == '(':
         num += 1
+    elif num:
+        num -= 1
     else:
-        if num:
-            num -= 1
-        else:
-            L += 1
+        L += 1
 R = num
-
-print(('(' * L + N + ')' * R))
+print('(' * L + N + ')' * R)

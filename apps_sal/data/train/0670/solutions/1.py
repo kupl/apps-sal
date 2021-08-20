@@ -11,9 +11,8 @@ for i in range(int(input())):
             break
     if m:
         print(n)
+    elif not d:
+        print(a[0] * n)
     else:
-        if not d:
-            print(a[0] * n)
-        else:
-            d = sorted(d)
-            print(n * d[0])
+        d = sorted(d)
+        print(n * d[0])

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     if len(set(arr)) > k:
         print(-1)
@@ -11,7 +11,6 @@ for _ in range(int(input())):
                 break
             if i not in temp:
                 temp.append(i)
-
         for i in range(len(arr)):
             result.extend(temp)
         print(len(result))

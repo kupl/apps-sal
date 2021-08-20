@@ -1,9 +1,9 @@
 from sys import stdin
 inp = stdin.readline
-n, m = map(int, inp().split())
+(n, m) = map(int, inp().split())
 g = {x: [] for x in range(1, n + 1)}
 for _ in range(m):
-    a, b = map(int, inp().split())
+    (a, b) = map(int, inp().split())
     g[a].append(b)
 ans = 0
 for i in range(1, n + 1):

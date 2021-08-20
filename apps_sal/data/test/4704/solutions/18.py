@@ -7,5 +7,4 @@ for i in range(N - 1):
     x += a[i]
     y -= a[i]
     B.append(abs(x - y))
-
 print(min(B))

@@ -1,6 +1,6 @@
 class Solution:
-    def longestPrefix(self, s: str) -> str:
 
+    def longestPrefix(self, s: str) -> str:
         lps = [0]
         for i in range(1, len(s)):
             pos = lps[-1]

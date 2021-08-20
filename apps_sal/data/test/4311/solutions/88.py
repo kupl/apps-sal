@@ -8,10 +8,10 @@ def f(n):
         return 3 * n + 1
 
 
-a = [0] * (10**8)
+a = [0] * 10 ** 8
 a[s] = 1
 cnt = 1
-for _ in range(10**7):
+for _ in range(10 ** 7):
     s = f(s)
     cnt += 1
     if a[s]:

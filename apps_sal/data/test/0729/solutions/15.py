@@ -7,7 +7,7 @@ for i in range(n - 1):
         ans1 = i
         break
 if ans == 1:
-    print("YES")
+    print('YES')
     print(s[i] + s[i + 1])
 else:
-    print("NO")
+    print('NO')

@@ -1,6 +1,5 @@
 import operator
 from collections import Counter
-
 from functools import reduce
 
 
@@ -9,12 +8,10 @@ def solve(primes):
     for x in primes.values():
         products *= x + 1
         products %= 2 * (10 ** 9 + 6)
-
     n = 1
-    for x, y in primes.items():
+    for (x, y) in primes.items():
         n *= pow(x, y * (y + 1) // 2 * products // (y + 1), 10 ** 9 + 7)
-        n %= (10 ** 9 + 7)
-
+        n %= 10 ** 9 + 7
     return n
 
 

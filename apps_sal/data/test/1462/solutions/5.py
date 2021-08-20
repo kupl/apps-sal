@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 a = [0] * 26
 for i in s:
-    a[ord(i) - ord("A")] += 1
+    a[ord(i) - ord('A')] += 1
 a.sort()
 a = a[::-1]
 i = 0

@@ -1,5 +1,5 @@
 def main():
-    a, b, n = map(int, input().split())
+    (a, b, n) = map(int, input().split())
     x = min(b - 1, n)
     floor1 = int(a * x / b)
     floor2 = int(x / b)

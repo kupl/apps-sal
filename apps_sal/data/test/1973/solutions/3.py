@@ -14,18 +14,15 @@ def check(nums):
             if oneof != 0 and (n != oneof or n != maxi - 1):
                 return False
             oneof = n
-
         return True
-
+    elif maxi != 1:
+        if nums.count(1) != 1:
+            return False
+        if nums.count(0) != len(nums) - category - 1:
+            return False
+        return True
     else:
-        if maxi != 1:
-            if nums.count(1) != 1:
-                return False
-            if nums.count(0) != len(nums) - category - 1:
-                return False
-            return True
-        else:
-            return True
+        return True
 
 
 n = int(input())
@@ -35,5 +32,4 @@ for i in range(n):
     NUMS[colors[i] - 1] += 1
     if check(NUMS):
         res = i + 1
-
 print(res)

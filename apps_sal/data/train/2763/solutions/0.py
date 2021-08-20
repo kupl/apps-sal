@@ -10,5 +10,4 @@ def sol_equa(n):
                 x = (i + j) // 2
                 y = (j - i) // 4
                 res.append([x, y])
-
     return res

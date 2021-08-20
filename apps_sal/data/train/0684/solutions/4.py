@@ -1,6 +1,5 @@
 try:
     import math
-    # from collection import Counter
 
     def findAll(n):
         p = 0
@@ -17,32 +16,27 @@ try:
                 n = n / i
         if n > 2:
             temp.append(n)
-
         if p == 1:
             if len(temp) != 1:
                 return True
             else:
                 return False
+        elif len(temp) >= 1:
+            return True
         else:
-            if len(temp) >= 1:
-                return True
-            else:
-                return False
+            return False
     t = int(input())
-    while(t != 0):
+    while t != 0:
         n = int(input())
         if n % 2 != 0 and n != 1:
-            print("Me")
+            print('Me')
         elif n % 2 != 0 and n == 1:
-            print("Grinch")
+            print('Grinch')
         elif n == 2:
-            print("Me")
+            print('Me')
+        elif findAll(n) == True:
+            print('Me')
         else:
-            if findAll(n) == True:
-                print("Me")
-            else:
-                print("Grinch")
-
+            print('Grinch')
 except EOFError:
-    print(" ")
-# This code is contributed by chandan_jnu
+    print(' ')

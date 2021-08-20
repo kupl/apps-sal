@@ -3,7 +3,9 @@ import math
 
 
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
+
         @lru_cache(None)
         def search(i: int, d: int) -> int:
             if i == 0:
@@ -14,5 +16,4 @@ class Solution:
             if rods[i - 1] >= d:
                 ans = max(ans, search(i - 1, rods[i - 1] - d) + rods[i - 1] - d)
             return ans
-
         return search(len(rods), 0)

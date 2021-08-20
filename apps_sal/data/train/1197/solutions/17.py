@@ -5,6 +5,6 @@ for _ in range(t):
     sum = 0
     for j in range(n):
         sum += arr[j]
-        print(arr[j], end=" ")
-    print("")
+        print(arr[j], end=' ')
+    print('')
     print(sum)

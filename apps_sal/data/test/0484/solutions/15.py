@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 l = [[int(j) for j in input().split()] for i in range(n)]
 ms = 0
 for i in range(n):

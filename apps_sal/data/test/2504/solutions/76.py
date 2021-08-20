@@ -1,11 +1,11 @@
 import numpy as np
 from scipy.sparse.csgraph import dijkstra
 from scipy.sparse import csr_matrix
-inf = float("inf")
-N, M, L = list(map(int, input().split()))
+inf = float('inf')
+(N, M, L) = list(map(int, input().split()))
 graph = np.zeros((N, N))
 for _ in range(M):
-    A, B, C = list(map(int, input().split()))
+    (A, B, C) = list(map(int, input().split()))
     graph[A - 1][B - 1] = C
     graph[B - 1][A - 1] = C
 shortest_paths = dijkstra(csr_matrix(graph), directed=False)
@@ -14,7 +14,6 @@ for i in range(N):
     for j in range(N):
         if shortest_paths[i][j] <= L:
             graph[i][j] = 1
-
 Q = int(input())
 
 
@@ -24,5 +23,5 @@ def int_(num_str):
 
 costs = dijkstra(csr_matrix(graph), directed=False)
 for _ in range(Q):
-    s, t = list(map(int_, input().split()))
-    print((int(costs[s][t]) - 1 if costs[s][t] != inf else -1))
+    (s, t) = list(map(int_, input().split()))
+    print(int(costs[s][t]) - 1 if costs[s][t] != inf else -1)

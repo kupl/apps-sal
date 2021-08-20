@@ -1,6 +1,6 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # use DP
         N = len(coins)
         M = amount
         table = [-1] * (M + 1)

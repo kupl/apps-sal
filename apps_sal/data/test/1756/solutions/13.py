@@ -21,7 +21,7 @@ def ans(lm, rm, num):
     return ans
 
 
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 lst = list(map(int, input().split()))
 daysnum = [0] * n * 2
 ansnum = [0] * n * 2

@@ -1,14 +1,14 @@
 def calculator(x, y, op):
-    if op == "+":
+    if op == '+':
         try:
             return int(x + y)
         except:
-            return "unknown value"
-    elif op == "-":
+            return 'unknown value'
+    elif op == '-':
         return x - y
-    elif op == "*":
+    elif op == '*':
         return x * y
-    elif op == "/":
+    elif op == '/':
         return x / y
     else:
-        return "unknown value"
+        return 'unknown value'

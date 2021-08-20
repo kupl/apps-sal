@@ -1,3 +1,3 @@
 x = int(input())
 y = int(input())
-print(x**2 - y)
+print(x ** 2 - y)

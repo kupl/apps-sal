@@ -2,9 +2,9 @@ import heapq
 
 
 class Solution:
+
     def minFallingPathSum(self, arr: List[List[int]]) -> int:
         copy = deepcopy(arr)
-
         for row in range(1, len(arr)):
             smallest = heapq.nsmallest(2, copy[row - 1])
             for col in range(len(arr[0])):

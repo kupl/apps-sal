@@ -1,19 +1,32 @@
 import sys
-
 readline = sys.stdin.readline
 read = sys.stdin.read
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
+
+
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
 
 
 def solve():
-    n, k = nm()
+    (n, k) = nm()
     mini = [tuple(nl() + [i + 1]) for i in range(n)]
     mini.sort(key=lambda x: x[1])
-    # print(mini)
     dp = [-1] * (k + 1)
     dp[0] = 0
     f = [[0] * (k + 1) for _ in range(n)]
@@ -26,7 +39,6 @@ def solve():
                     dp[j + 1] = dp[j] + mini[i][0] + j * mini[i][1]
                     f[i][j + 1] = 1
                 dp[j] += (k - 1) * mini[i][1]
-
     cx = k
     a = list()
     b = list()

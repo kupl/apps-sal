@@ -1,7 +1,6 @@
 def find_missing_number(sequence):
-    if sequence == "":
+    if sequence == '':
         return 0
-
     x = sequence.split()
     result = []
     for i in x:
@@ -9,7 +8,6 @@ def find_missing_number(sequence):
             return 1
         elif i.isdigit() == True:
             result.append(int(i))
-
     result.sort()
     start = 0
     for i in range(len(result)):
@@ -20,5 +18,4 @@ def find_missing_number(sequence):
             break
     else:
         return 0
-
     return prev + 1

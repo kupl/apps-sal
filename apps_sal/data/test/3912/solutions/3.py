@@ -9,7 +9,7 @@ for car in string:
         while z > 1:
             charPair.append(car)
             z -= 2
-        if(z == 1):
+        if z == 1:
             charImpair.append(car)
         char.append(car)
 if len(charImpair) == 0:
@@ -28,19 +28,18 @@ else:
         nbPalin += 2
         charImpair.append(charPair[-1])
         charImpair.append(charPair[-1])
-        del(charPair[-1])
+        del charPair[-1]
     lenPalindrome = n / nbPalin
     Palin = []
     for i in range(nbPalin):
         String2 = ''
-        indice = i * int(((lenPalindrome - 1) / 2))
-        for x in charPair[indice: int(indice + ((lenPalindrome - 1) / 2))]:
+        indice = i * int((lenPalindrome - 1) / 2)
+        for x in charPair[indice:int(indice + (lenPalindrome - 1) / 2)]:
             String2 += x
         String2 += charImpair[i]
-        for x in range(indice + int(((lenPalindrome - 1) / 2)) - 1, indice - 1, -1):  # charPair[i + int(((lenPalindrome-1)/2))-1: i-1 :-1]:
+        for x in range(indice + int((lenPalindrome - 1) / 2) - 1, indice - 1, -1):
             String2 += charPair[x]
         Palin.append(String2)
-
     print(nbPalin)
     String3 = ' '.join(Palin)
     print(String3)

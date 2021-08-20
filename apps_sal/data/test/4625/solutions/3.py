@@ -1,13 +1,10 @@
 import sys
 input = sys.stdin.readline
-
-
-alph = "abcdefghijklmnopqrstuvwxyz"
-to_int = {v: i for i, v in enumerate(alph)}
-
+alph = 'abcdefghijklmnopqrstuvwxyz'
+to_int = {v: i for (i, v) in enumerate(alph)}
 t = int(input())
 for _ in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     s = input()
     p = list(map(int, input().split()))
     num = [[0] * (n + 1) for i in range(26)]

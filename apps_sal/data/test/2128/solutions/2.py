@@ -11,9 +11,7 @@ def frac_mod(a, b):
 
 n = int(input())
 a = input().split()
-
 res = 0
 for v in a:
     res = (res + 1) * 100 * inv_mod(int(v)) % mod
-
 print(res)

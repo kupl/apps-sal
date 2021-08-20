@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 R = n
 C = m
 a = [None] * n
@@ -16,7 +15,6 @@ for i in range(n):
     a[i] = list(a[i])
     for j in range(m):
         a[i][j] = int(a[i][j])
-
     if i % 2 == 0:
         zi[i] = z[:]
         oi[i] = o[:]
@@ -34,9 +32,7 @@ noiz = 0
 for i in range(n):
     noiz = 0
     noio = 0
-
     for j in range(m):
-
         if i == 0:
             if a[i][j] != oi[i][j]:
                 noio += 1
@@ -51,8 +47,6 @@ for i in range(n):
                 noiz += 1
             psaz[i][j] = noiz + psaz[i - 1][j]
             psao[i][j] = noio + psao[i - 1][j]
-
-
 mmm = []
 for i in range(2, min(m, n) + 1):
     c = 0
@@ -64,29 +58,25 @@ for i in range(2, min(m, n) + 1):
             czz2 = 0
             coo = 0
             cor = 0
-            czz += (psaz[j + i - 1][k + i - 1])
-            coo += (psao[j + i - 1][k + i - 1])
-
+            czz += psaz[j + i - 1][k + i - 1]
+            coo += psao[j + i - 1][k + i - 1]
             if k - 1 >= 0:
-                czz -= (psaz[j + i - 1][k - 1])
-                coo -= (psao[j + i - 1][k - 1])
+                czz -= psaz[j + i - 1][k - 1]
+                coo -= psao[j + i - 1][k - 1]
             else:
                 czz += 0
             if j - 1 >= 0:
-                czz -= (psaz[j - 1][k + i - 1])
-                coo -= (psao[j - 1][k + i - 1])
-
+                czz -= psaz[j - 1][k + i - 1]
+                coo -= psao[j - 1][k + i - 1]
             else:
                 czz += 0
             if j - 1 >= 0 and k - 1 >= 0:
-                czz += (psaz[j - 1][k - 1])
-                coo += (psao[j - 1][k - 1])
+                czz += psaz[j - 1][k - 1]
+                coo += psao[j - 1][k - 1]
             else:
                 czz += 0
-
-            ap.append((min((abs(coo)), abs(czz))))
+            ap.append(min(abs(coo), abs(czz)))
     mmm.append(min(ap))
-
 q = int(input())
 lo = [int(pp) for pp in input().split()]
 maxq = max(mmm)

@@ -7,4 +7,4 @@ for i in range(n - 1):
     res += B[i]
     if A[i] + 1 == A[i + 1]:
         res += C[A[i] - 1]
-print((res + B[-1]))
+print(res + B[-1])

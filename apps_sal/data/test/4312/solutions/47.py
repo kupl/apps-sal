@@ -1,6 +1,5 @@
 def main() -> None:
-    a, b, c, d = list(map(int, input().split()))
-
+    (a, b, c, d) = list(map(int, input().split()))
     if a % d == 0:
         turn_t = a // d
     else:
@@ -9,7 +8,7 @@ def main() -> None:
         turn_a = c // b
     else:
         turn_a = c // b + 1
-    print(('Yes' if turn_a <= turn_t else 'No'))
+    print('Yes' if turn_a <= turn_t else 'No')
     return
 
 

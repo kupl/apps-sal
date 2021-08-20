@@ -16,23 +16,21 @@ def main():
     def write(*args, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in args) + end)
+        stdout.write(sep.join((str(a) for a in args)) + end)
 
     def write_array(array, **kwargs):
         sep = kwargs.get('sep', ' ')
         end = kwargs.get('end', '\n')
-        stdout.write(sep.join(str(a) for a in array) + end)
-
-    n, z = read_int_array()
+        stdout.write(sep.join((str(a) for a in array)) + end)
+    (n, z) = read_int_array()
     nums = read_int_array()
     nums.sort()
-
     out = 0
     used = [False] * n
-    i, j = 0, len(nums) // 2
+    (i, j) = (0, len(nums) // 2)
     while i < n:
         used[i] = True
-        while j < n and (used[j] or (nums[j] - nums[i] < z)):
+        while j < n and (used[j] or nums[j] - nums[i] < z):
             j += 1
         if j == n:
             break

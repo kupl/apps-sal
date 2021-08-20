@@ -2,9 +2,9 @@ from collections import Counter
 
 
 def around_fib(n):
-    a, b = 0, 1
+    (a, b) = (0, 1)
     for _ in range(n):
-        a, b = b, a + b
+        (a, b) = (b, a + b)
     s = str(a)
     c = Counter(s)
     max_d = [0, None]

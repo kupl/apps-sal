@@ -15,4 +15,4 @@ def length_sup_u_k(n, k):
 
 
 def comp(n):
-    return sum(k1 < k0 for k0, k1 in zip(list(islice(u1(), 1, n)), list(islice(u1(), 2, n))))
+    return sum((k1 < k0 for (k0, k1) in zip(list(islice(u1(), 1, n)), list(islice(u1(), 2, n)))))

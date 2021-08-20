@@ -1,11 +1,11 @@
-'''input
+"""input
 3
 1 3
 3 1
 010
 101
 010
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -14,7 +14,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -29,8 +29,7 @@ def valid(i, j):
         return 0
     if j < 0 or j >= n:
         return 0
-    # print(i,j,mat)
-    if vis[i][j] == 1 or mat[i][j] == "1":
+    if vis[i][j] == 1 or mat[i][j] == '1':
         return 0
     return 1
 
@@ -44,7 +43,7 @@ def bfs(i, j):
     vis[i][j] = 1
     s = [(i, j)]
     while s:
-        x, y = s.pop(-1)
+        (x, y) = s.pop(-1)
         for k in range(4):
             if valid(x + dx[k], y + dy[k]):
                 vis[x + dx[k]][y + dy[k]] = 1
@@ -54,21 +53,16 @@ def bfs(i, j):
 
 
 n = ri(1)
-x1, y1 = [int(i) - 1 for i in input().split()]
-x2, y2 = [int(i) - 1 for i in input().split()]
-
+(x1, y1) = [int(i) - 1 for i in input().split()]
+(x2, y2) = [int(i) - 1 for i in input().split()]
 mat = []
 vis = [[0 for i in range(n)] for j in range(n)]
-
 for i in range(n):
     mat.append(list(input()))
-
 one = bfs(x1, y1)
 two = bfs(x2, y2)
-
 ans = 999999999999
-
-for i, j in one:
-    for p, q in two:
-        ans = min(ans, (i - p)**2 + (j - q)**2)
+for (i, j) in one:
+    for (p, q) in two:
+        ans = min(ans, (i - p) ** 2 + (j - q) ** 2)
 print(ans)

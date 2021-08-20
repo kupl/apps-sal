@@ -10,10 +10,9 @@ while r - l > 1:
         tmp = s[i:i + mid]
         if tmp not in dic:
             dic[tmp] = i + mid
-        else:
-            if dic[tmp] <= i:
-                flag = True
-                break
+        elif dic[tmp] <= i:
+            flag = True
+            break
     if flag:
         l = mid
     else:

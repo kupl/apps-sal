@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     answer = 0
     x = min(b, c // 2)
     answer += 3 * x

@@ -13,7 +13,6 @@ while per < n:
         cou = 1
         per2 = (cou2 - 1) * 5
         break
-
     per2 = cou2 * 5
 if cou == 1:
     print(5)

@@ -14,7 +14,6 @@ for i in range(2):
     for c in r:
         if c != 'X':
             s2 += c
-
 s2 *= 2
 k = 0
 for i in range(3):

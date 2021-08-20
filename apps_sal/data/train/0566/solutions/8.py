@@ -8,6 +8,6 @@ for x in range(t):
             flag = True
             break
     if flag:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

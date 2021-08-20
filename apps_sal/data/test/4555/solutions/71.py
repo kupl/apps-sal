@@ -1,4 +1,4 @@
-a, b, k = [int(x) for x in input().split()]
+(a, b, k) = [int(x) for x in input().split()]
 res = []
 for i in range(a, min(b, k + a - 1) + 1):
     res.append(i)

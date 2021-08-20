@@ -11,11 +11,10 @@ class Solution:
             for num in piles:
                 numDays += useDays(num, speed)
             return numDays <= H
-
         maxEat = max(piles)
-        left, right = 1, maxEat + 1
+        (left, right) = (1, maxEat + 1)
         while left < right:
-            mid = left + ((right - left) >> 1)
+            mid = left + (right - left >> 1)
             if CanDone(piles, mid, H):
                 right = mid
             else:

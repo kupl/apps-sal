@@ -1,7 +1,5 @@
 def bonus_time(s, bonus):
     if bonus == True:
-        return "$" + str(s * 10)
+        return '$' + str(s * 10)
     else:
-        return "$" + str(s)
-
-    # your code here
+        return '$' + str(s)

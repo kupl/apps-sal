@@ -1,4 +1,5 @@
 class Solution:
+
     def mctFromLeafValues(self, arr: List[int]) -> int:
         n = len(arr)
         dp = [[0 for j in range(n)] for i in range(n)]

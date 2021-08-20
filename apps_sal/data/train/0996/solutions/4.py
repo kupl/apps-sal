@@ -3,7 +3,7 @@ l = []
 x = 0
 y = 0
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     x = x + a
     y = y + b
     l.append(x - y)

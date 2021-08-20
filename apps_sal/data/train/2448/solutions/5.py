@@ -1,10 +1,11 @@
 class Solution:
+
     def longestPalindrome(self, s):
         """
         :type s: str
         :rtype: int
         """
-        base, extra, result = {}, 0, 0
+        (base, extra, result) = ({}, 0, 0)
         for letter in s:
             if letter in base:
                 base[letter] += 1

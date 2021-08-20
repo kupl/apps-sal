@@ -1,2 +1,2 @@
-s = input().split(",")
-print(" ".join(s))
+s = input().split(',')
+print(' '.join(s))

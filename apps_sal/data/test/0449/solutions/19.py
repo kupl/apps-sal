@@ -8,5 +8,4 @@ while n > 0:
     s = n // d[i]
     ans += s
     n -= s * d[i]
-
 print(ans)

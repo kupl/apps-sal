@@ -1,10 +1,9 @@
-# 2.55 +
 def calculate_time(battery, charger):
     max = 100
     time = 0
-    fast = (battery / charger) * .85
-    dcharge = (battery / charger) * .2
-    tcharge = (battery / charger) * .25
+    fast = battery / charger * 0.85
+    dcharge = battery / charger * 0.2
+    tcharge = battery / charger * 0.25
     if max == 100:
         time += fast
         max += -85

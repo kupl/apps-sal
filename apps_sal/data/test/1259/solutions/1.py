@@ -1,13 +1,11 @@
 import sys
 input = sys.stdin.readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 e = [tuple(map(int, input().split())) for _ in range(m)]
 g = [[] for _ in range(n + 1)]
-for u, v in e:
+for (u, v) in e:
     g[u].append(v)
     g[v].append(u)
-
 req = 1
 while req * req < n:
     req += 1
@@ -45,7 +43,7 @@ def dfs():
     return (iset[:req], None)
 
 
-iset, cyc = dfs()
+(iset, cyc) = dfs()
 if iset:
     print(1)
     print(*iset)

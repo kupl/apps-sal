@@ -1,11 +1,11 @@
 def isequal(a, b):
-    return abs(a - b) <= 0.00000001
+    return abs(a - b) <= 1e-08
 
 
-a, b, c = list(map(int, input().split(' ')))
+(a, b, c) = list(map(int, input().split(' ')))
 slopes = []
 for i in range(a):
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     if x == b:
         slopes.append(90001)
     else:

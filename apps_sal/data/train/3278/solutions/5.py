@@ -1,7 +1,7 @@
 def string_expansion(s):
     strin = []
     multiplier = 1
-    result = ""
+    result = ''
     for letter in s:
         try:
             strin.append(int(letter))

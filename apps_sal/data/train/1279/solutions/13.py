@@ -4,7 +4,7 @@ while t:
     n = int(input())
     d = dict()
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         f = d.get(x)
         if f == None:
             d[x] = y

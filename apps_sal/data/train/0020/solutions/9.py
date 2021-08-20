@@ -1,11 +1,11 @@
 q = int(input())
 for rewrew in range(q):
-    n, t0 = map(int, input().split())
+    (n, t0) = map(int, input().split())
     t = []
     l = []
     h = []
     for i in range(n):
-        tt, ll, hh = map(int, input().split())
+        (tt, ll, hh) = map(int, input().split())
         t.append(tt)
         l.append(ll)
         h.append(hh)
@@ -23,6 +23,6 @@ for rewrew in range(q):
             possib[i + 1][0] = possib[i][0] - (t[i + 1] - t[i])
             possib[i + 1][1] = possib[i][1] + (t[i + 1] - t[i])
     if dasie:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

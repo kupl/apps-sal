@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
 
@@ -10,7 +11,6 @@ class Solution:
                 edges.append((dist(points[i], points[j]), i, j))
         edges.sort()
         cost = 0
-        # print(edges)
         parent = [i for i in range(n)]
         size = [1] * n
 
@@ -31,12 +31,11 @@ class Solution:
                 if size[pb] == n:
                     return True
             return False
-
         for e in edges:
-            a, b = e[1], e[2]
-            pa, pb = find(a), find(b)
+            (a, b) = (e[1], e[2])
+            (pa, pb) = (find(a), find(b))
             if pa != pb:
                 cost += e[0]
-                if (union(e[1], e[2])):
+                if union(e[1], e[2]):
                     break
         return cost

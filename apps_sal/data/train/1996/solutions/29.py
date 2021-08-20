@@ -1,13 +1,12 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         res = set()
         for i in range(len(graph)):
             visited = set()
             self.dfs(graph, i, visited, res)
-
         return sorted(list(res))
 
-    # dfs is to check if there's a cycle starting from this point
     def dfs(self, graph, i, visited, res):
         visited.add(i)
         for j in graph[i]:

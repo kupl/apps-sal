@@ -1,11 +1,8 @@
-# cook your code here
 for _ in range(eval(input())):
     n = eval(input())
     ind = 0
     m = 0
-
     for i in range(n):
-
         l = [int(x) for x in input().split()]
         sc = l[0]
         for j in range(1, len(l)):
@@ -15,10 +12,9 @@ for _ in range(eval(input())):
         if sc > m:
             m = sc
             ind = i + 1
-
-    if (ind == -2):
-        print("tie")
-    elif (ind == 1):
-        print("chef")
+    if ind == -2:
+        print('tie')
+    elif ind == 1:
+        print('chef')
     else:
         print(ind)

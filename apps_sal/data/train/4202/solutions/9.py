@@ -7,7 +7,7 @@ def ulam_sequence(U, V, Q):
             while T == S[-1]:
                 S.pop()
         T = S.pop()
-        S.extend(T + V for V in R)
+        S.extend((T + V for V in R))
         R.append(T)
         S.sort(reverse=True)
     return R

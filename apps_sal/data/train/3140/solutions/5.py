@@ -1,5 +1,4 @@
 from functools import lru_cache
-
 visited = set()
 
 
@@ -9,7 +8,7 @@ def happy(n):
         visited.clear()
         return n == 1
     visited.add(n)
-    n = sum(int(digit)**2 for digit in str(n))
+    n = sum((int(digit) ** 2 for digit in str(n)))
     return happy(n)
 
 

@@ -1,13 +1,10 @@
 from collections import defaultdict
-
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 x = [int(i) for i in input().split()]
-
 r = 0
-s = ""
+s = ''
 for i in x:
     r += i
-    s += str(r // m) + " "
+    s += str(r // m) + ' '
     r %= m
-
 print(s)

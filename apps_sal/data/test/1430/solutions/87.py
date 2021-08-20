@@ -1,8 +1,6 @@
 import sys
-
-N, K = map(int, sys.stdin.readline().strip().split())
+(N, K) = map(int, sys.stdin.readline().strip().split())
 S = sys.stdin.readline().strip()
-
 l = x = ans = 0
 for r in range(N):
     if S[r] == '0':

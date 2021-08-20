@@ -9,28 +9,36 @@ from string import ascii_lowercase, ascii_uppercase, digits
 from bisect import bisect, bisect_left
 from heapq import heappush, heappop
 from functools import reduce
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-
-N, H = MAP()
-A, B = [], []
+(N, H) = MAP()
+(A, B) = ([], [])
 for i in range(N):
-    a, b = MAP()
+    (a, b) = MAP()
     A.append(a)
     B.append(b)
-
 max_a = max(A)
 B = sorted(B, reverse=True)
-
 ans = 0
-
 for i in range(N):
     if max_a >= B[i]:
         ans += -(-H // max_a)

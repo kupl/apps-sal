@@ -3,11 +3,7 @@ n = int(n)
 p = []
 substring_maxlen = 0
 str_info = []
-
-_temper = [
-    "abba", "a"
-]
-
+_temper = ['abba', 'a']
 for i in range(n):
     string = input()
     str_info.append(string)
@@ -27,7 +23,6 @@ for i in range(n):
     p.append((string[0], start, string[-1], end, True if strlen == start else False))
 _max_len = 0
 parse = 0
-
 _temp_max = 0
 string = str_info[-1]
 token = string[0]
@@ -42,10 +37,9 @@ while parse < len(string):
             break
     if substring_maxlen < _temp_max:
         substring_maxlen = _temp_max
-
 start_token = []
 end_token = []
-start_token, start_num, end_token, end_num, connected = p[-1]
+(start_token, start_num, end_token, end_num, connected) = p[-1]
 level = 0
 for i in range(1, len(p)):
     if not connected:
@@ -72,8 +66,7 @@ for i in range(1, len(p)):
             if _substring_maxlen < _temp_max:
                 _substring_maxlen = _temp_max
         substring_maxlen = max(substring_maxlen, start_num * (_substring_maxlen + 1) + _substring_maxlen)
-
-        _start_token, _start_num, _end_token, _end_num, _connected = p[-1 - i]
+        (_start_token, _start_num, _end_token, _end_num, _connected) = p[-1 - i]
         if _start_token == start_token:
             start_num = start_num * (_start_num + 1) + _start_num
         if _end_token == end_token:
@@ -81,7 +74,6 @@ for i in range(1, len(p)):
         if not _connected or _start_token != start_token:
             connected = False
         level = i
-# print(start_token, start_num, end_token, end_num, connected, level)
 end_cond = 0
 if start_num > end_num:
     end_cond = 1
@@ -109,5 +101,4 @@ else:
     answer = answer - 1
 if len(p) == 1:
     answer = answer - 1
-
 print(max(answer, substring_maxlen))

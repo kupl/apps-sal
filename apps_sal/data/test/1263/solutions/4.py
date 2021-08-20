@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 s1 = list(map(int, input().split()))
-dp = [[[0 for j in range(10**5)] for l in range(2)] for i in range(n + 1)]
+dp = [[[0 for j in range(10 ** 5)] for l in range(2)] for i in range(n + 1)]
 y = s[0] - s1[0] * k
 if y >= 0:
     dp[0][0][y] = s[0]
@@ -9,10 +9,10 @@ else:
     dp[0][1][-y] = s[0]
 for i in range(1, n):
     y = s[i] - s1[i] * k
-    for j in range(100**2 + 2):
+    for j in range(100 ** 2 + 2):
         for l in range(2):
             dp[i][l][j] = max(dp[i][l][j], dp[i - 1][l][j])
-            if dp[i - 1][l][j] != 0 or (j == 0):
+            if dp[i - 1][l][j] != 0 or j == 0:
                 if l == 1:
                     x = -j + y
                 else:

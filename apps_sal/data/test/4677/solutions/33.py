@@ -5,9 +5,8 @@ for i in range(len(s)):
         data.append('0')
     elif s[i] == '1':
         data.append('1')
+    elif len(data) == 0:
+        continue
     else:
-        if len(data) == 0:
-            continue
-        else:
-            data.pop()
+        data.pop()
 print(*data, sep='')

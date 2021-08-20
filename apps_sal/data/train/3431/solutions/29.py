@@ -7,4 +7,4 @@ def warn_the_sheep(queue):
             if b == 0:
                 return 'Pls go away and stop eating my sheep'
             else:
-                return "Oi! Sheep number {}! You are about to be eaten by a wolf!".format(b)
+                return 'Oi! Sheep number {}! You are about to be eaten by a wolf!'.format(b)

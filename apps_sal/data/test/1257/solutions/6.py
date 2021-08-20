@@ -1,8 +1,5 @@
-# strs = [input() for _ in range(3)]
-
 def main():
-    n, k = map(int, input().split())
-
+    (n, k) = map(int, input().split())
     left = k - 1
     right = n - k + 1
     lcntr = 1
@@ -17,7 +14,6 @@ def main():
         tl = ll + rl
         s += int(tl[left])
         ls.append(' '.join(tl))
-
     print(s)
     print('\n'.join(ls))
 

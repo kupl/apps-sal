@@ -4,9 +4,8 @@ for _ in range(t):
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
     if 0 < sum(b) < len(b):
-        print("Yes")
+        print('Yes')
+    elif a == sorted(a):
+        print('Yes')
     else:
-        if a == sorted(a):
-            print("Yes")
-        else:
-            print("No")
+        print('No')

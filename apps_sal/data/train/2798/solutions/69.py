@@ -4,7 +4,7 @@ def to_alternating_case(string):
         if i.isupper():
             x.append(i.lower())
         elif i.isspace():
-            x.append(" ")
+            x.append(' ')
         else:
             x.append(i.upper())
-    return "".join(x)
+    return ''.join(x)

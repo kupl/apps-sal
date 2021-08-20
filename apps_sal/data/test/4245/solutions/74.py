@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 cnt = 0
 tap = 1
 while tap < b:

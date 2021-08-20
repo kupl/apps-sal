@@ -1,11 +1,11 @@
 from itertools import accumulate
 import sys
 input = sys.stdin.readline
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     S = set()
     i = 1
     while i * i <= n:

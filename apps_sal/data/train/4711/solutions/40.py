@@ -1,4 +1,3 @@
-
 def zeros(n):
     i = 5
     count = 0

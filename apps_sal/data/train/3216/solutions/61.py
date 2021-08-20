@@ -8,5 +8,5 @@ def movie(card, ticket, perc):
     while ceil(priceB) >= priceA:
         n += 1
         priceA += ticket
-        priceB += ticket * (perc**n)
+        priceB += ticket * perc ** n
     return n

@@ -1,22 +1,21 @@
-a, b, c, d = map(int, input().split())
-
-if a == (b + c + d):
+(a, b, c, d) = map(int, input().split())
+if a == b + c + d:
     print('Yes')
-elif b == (a + c + d):
+elif b == a + c + d:
     print('Yes')
-elif c == (a + b + d):
+elif c == a + b + d:
     print('Yes')
-elif d == (a + b + c):
+elif d == a + b + c:
     print('Yes')
-elif (a + b) == (c + d):
+elif a + b == c + d:
     print('Yes')
-elif (a + c) == (b + d):
+elif a + c == b + d:
     print('Yes')
-elif (a + d) == (b + c):
+elif a + d == b + c:
     print('Yes')
-elif (b + c) == (c + d):
+elif b + c == c + d:
     print('Yes')
-elif (b + d) == (a + d):
+elif b + d == a + d:
     print('Yes')
 else:
     print('No')

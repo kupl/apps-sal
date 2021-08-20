@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, U, D = list(map(int, input().split()))
+    (N, U, D) = list(map(int, input().split()))
     H = list(map(int, input().split()))
     jumps = 0
     paracount = 0

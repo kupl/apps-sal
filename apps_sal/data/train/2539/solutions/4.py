@@ -1,4 +1,5 @@
 class Solution:
+
     def missingNumber(self, nums):
         res = len(nums)
         for i in range(len(nums)):

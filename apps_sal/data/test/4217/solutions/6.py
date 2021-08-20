@@ -9,7 +9,7 @@ def answer(n: int, m: int, kas: List[List[int]]) -> int:
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     kas = [list(map(int, input().split())) for _ in range(n)]
     print(answer(n, m, kas))
 

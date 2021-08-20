@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, A: List[int]) -> int:
         count = collections.Counter(A)
         repeat = len(A) // 2

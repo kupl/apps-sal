@@ -3,6 +3,7 @@ from math import inf
 
 
 class event:
+
     def __init__(self, x, type, index):
         self.x = x
         self.type = type
@@ -10,51 +11,38 @@ class event:
 
 
 def custom_sort(a, b):
-    # if a.i == b.i:
-    # 	if a.type == "s" and b.type == "e":
-    # 		return -1
-    # 	if a.type == "e" and b.type == "s":
-    # 		return 1
     if a.x < b.x:
-        return - 1
+        return -1
     if a.x > b.x:
         return 1
-    if a.type == "e" and b.type == "s":
+    if a.type == 'e' and b.type == 's':
         return 1
-    if a.type == "s" and b.type == "e":
+    if a.type == 's' and b.type == 'e':
         return -1
     return 0
 
 
 def __starting_point():
-    line = input().split(" ")
-    n, k = int(line[0]), int(line[1])
-
+    line = input().split(' ')
+    (n, k) = (int(line[0]), int(line[1]))
     events = []
     original_events = []
     for i in range(n):
-        line = input().split(" ")
+        line = input().split(' ')
         s = int(line[0])
         e = int(line[1])
-
-        events.append(event(s, "s", i))
-        events.append(event(e, "e", i))
+        events.append(event(s, 's', i))
+        events.append(event(e, 'e', i))
         original_events.append([s, e])
-
     events.sort(key=functools.cmp_to_key(custom_sort))
-
     active = {}
     ans = []
-
     cnt = 0
     for curr in events:
-        # print(curr.x, curr.type, curr.i, cnt)
-        if curr.type == "s":
+        if curr.type == 's':
             cnt += 1
             active[curr.i] = 1
-
             if cnt > k:
-                # print("over:", curr.i, cnt)
                 to_remove = 0
                 rightmost = -inf
                 for i in active.keys():
@@ -64,14 +52,11 @@ def __starting_point():
                 ans.append(str(to_remove + 1))
                 del active[to_remove]
                 cnt -= 1
-
-        else:
-            if curr.i in active.keys():
-                cnt -= 1
-                del active[curr.i]
-
+        elif curr.i in active.keys():
+            cnt -= 1
+            del active[curr.i]
     print(len(ans))
-    print(" ".join(ans))
+    print(' '.join(ans))
 
 
 __starting_point()

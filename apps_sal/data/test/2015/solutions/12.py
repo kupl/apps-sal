@@ -1,6 +1,6 @@
 T = int(input())
 for t in range(T):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     if max(a, b, c) > a + b + c - max(a, b, c) + 1:
         print('No')
     else:

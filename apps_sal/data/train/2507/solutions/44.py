@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words: List[str], chars: str) -> int:
         c = collections.Counter(chars)
         res = 0
@@ -9,7 +10,6 @@ class Solution:
                 if ch not in c or s[ch] > c[ch]:
                     return False
             return True
-
         for word in words:
             if valid(word):
                 res += len(word)

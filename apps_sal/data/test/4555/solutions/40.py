@@ -1,5 +1,5 @@
-a, b, k = map(int, input().split())
-if (b - a + 1) >= (2 * k):
+(a, b, k) = map(int, input().split())
+if b - a + 1 >= 2 * k:
     for i in range(k):
         print(a + i)
     for i in reversed(range(0, k)):

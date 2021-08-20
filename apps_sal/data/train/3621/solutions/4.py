@@ -4,7 +4,7 @@ def prime_maxlength_chain(n):
         if p[i]:
             for j in range(i * 2, n + 1, i):
                 p[j] = False
-    pn = [i for i, b in enumerate(p) if b]
+    pn = [i for (i, b) in enumerate(p) if b]
     ps = set(pn)
     maxl = [0, []]
     for l in range(6, len(pn)):

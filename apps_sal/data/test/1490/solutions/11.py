@@ -1,4 +1,4 @@
-n, m = (int(z) for z in input().split())
+(n, m) = (int(z) for z in input().split())
 s = [int(z) for z in input().split()]
 t = set(s)
 q = 0

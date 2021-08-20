@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         presum = [0]
         for num in stoneValue:
@@ -15,9 +16,7 @@ class Solution:
                     temp += stoneValue[i + k]
                     remain = presum[-1] - presum[i + k + 1]
                     ans = max(ans, temp + remain - dfs(i + k + 1))
-
             return ans
-
         total = dfs(0)
         if total * 2 > presum[-1]:
             return 'Alice'

@@ -1,7 +1,6 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     n = int(input())
     arr = list(map(int, input().split()))
     idx = arr.index(n)
@@ -13,10 +12,9 @@ def main():
         if arr[i] < arr[i + 1]:
             ok = 0
     if ok:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
     return 0
 
 

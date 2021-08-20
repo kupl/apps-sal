@@ -1,13 +1,9 @@
 n = int(input())
 s = input()
-
 N = n
-
-N0 = 2**(N - 1).bit_length()
+N0 = 2 ** (N - 1).bit_length()
 data = [n] * (2 * N0)
 INF = n
-# 区間[l, r+1)の値をvに書き換える
-# vは(t, value)という値にする (新しい値ほどtは大きくなる)
 
 
 def update(l, r, v):
@@ -17,13 +13,11 @@ def update(l, r, v):
         if R & 1:
             R -= 1
             data[R - 1] = min(v, data[R - 1])
-
         if L & 1:
             data[L - 1] = min(v, data[L - 1])
             L += 1
         L >>= 1
         R >>= 1
-# a_iの現在の値を取得
 
 
 def _query(k):
@@ -34,29 +28,26 @@ def _query(k):
             s = min(s, data[k])
         k = (k - 1) // 2
     return s
-# これを呼び出す
 
 
 def query(k):
     return _query(k)
 
 
-alice = [int(s[i] == "0") for i in range(n)]
-bob = [int(s[i] == "1") for i in range(n)]
+alice = [int(s[i] == '0') for i in range(n)]
+bob = [int(s[i] == '1') for i in range(n)]
 for i in range(1, n):
     alice[i] += alice[i - 1]
     bob[i] += bob[i - 1]
 alice.append(0)
 bob.append(0)
-
 update_que = [[] for i in range(n)]
-
 alice_win = []
 id = 0
 while id < n:
-    if s[id] != "0":
+    if s[id] != '0':
         pos = id
-        while pos < n and s[pos] != "0":
+        while pos < n and s[pos] != '0':
             pos += 1
         update_que[pos - id - 1].append(id)
         id = pos
@@ -65,16 +56,14 @@ while id < n:
 bob_win = []
 id = 0
 while id < n:
-    if s[id] != "1":
+    if s[id] != '1':
         pos = id
-        while pos < n and s[pos] != "1":
+        while pos < n and s[pos] != '1':
             pos += 1
         update_que[pos - id - 1].append(id)
         id = pos
     else:
         id += 1
-
-
 ans = [0] * n
 for i in range(n - 1, -1, -1):
     for id in update_que[i]:
@@ -95,5 +84,4 @@ for i in range(n - 1, -1, -1):
                 pos = npos + i + 1
                 res += 1
     ans[i] = res
-
 print(*ans)

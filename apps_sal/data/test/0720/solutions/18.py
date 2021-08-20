@@ -5,7 +5,7 @@ def change(score1, score2):
     max_2 = max(score1[1], score2[1])
     min_1 = min(score1[0], score2[0])
     min_2 = min(score1[1], score2[1])
-    return max(0, min(max_1, max_2) - max(min_1, min_2) + (not(score1[0] == score1[1])))
+    return max(0, min(max_1, max_2) - max(min_1, min_2) + (not score1[0] == score1[1]))
 
 
 scores = None

@@ -1,11 +1,10 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    ai, bi = list(map(int, input().split()))
+    (ai, bi) = list(map(int, input().split()))
     a[i] = ai
     b[i] = bi
-
 a.sort(reverse=True)
 b.sort(reverse=True)
 b_select = []
@@ -14,7 +13,6 @@ for i in range(n):
         break
     else:
         b_select.append(b[i])
-
 if sum(b_select) >= h:
     for i in range(n):
         h -= b_select[i]
@@ -25,5 +23,4 @@ else:
     h -= sum(b_select)
     counter = len(b_select)
     counter += (h + a[0] - 1) // a[0]
-
 print(counter)

@@ -1,5 +1,4 @@
 import fractions
-
 n = int(input())
 A = [int(x) for x in input().split()]
 B = []

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     N = int(input())
     seq = list(map(int, input().split()))
@@ -7,7 +6,7 @@ for _ in range(int(input())):
     summ = 0
     for i in range(N):
         summ += seq[i]
-        r = summ % (10**9)
+        r = summ % 10 ** 9
         if count.get(r, 0):
             total += count[r]
             count[r] += 1

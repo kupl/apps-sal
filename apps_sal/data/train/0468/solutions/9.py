@@ -1,4 +1,5 @@
 class Solution:
+
     def fractionToDecimal(self, numerator, denominator):
         """
         :type numerator: int
@@ -20,17 +21,16 @@ class Solution:
                 break
             loc = loopDict.get(numerator)
             if loc:
-                loopStr = "".join(numList[loc:])
+                loopStr = ''.join(numList[loc:])
                 break
             loopDict[numerator] = cnt
         ans = numList[0]
-
         if len(numList) > 1:
-            ans += "."
+            ans += '.'
         if loopStr:
-            ans += "".join(numList[1:len(numList) - len(loopStr)]) + "(" + loopStr + ")"
+            ans += ''.join(numList[1:len(numList) - len(loopStr)]) + '(' + loopStr + ')'
         else:
-            ans += "".join(numList[1:])
+            ans += ''.join(numList[1:])
         if negativeFlag:
-            ans = "-" + ans
+            ans = '-' + ans
         return ans

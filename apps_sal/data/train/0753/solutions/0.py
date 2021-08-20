@@ -33,5 +33,4 @@ for t in range(int(input())):
         max = o
     if max < p:
         max = p
-
     print(max)

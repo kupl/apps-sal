@@ -1,12 +1,10 @@
 n = list(map(int, input()))
 keta = len(n)
 satsu = 0
-
 for i in range(keta):
     tmp = n.pop()
     if i == keta - 1:
         n.append(0)
-
     if tmp == 10:
         tmp = 0
         n[-1] = n[-1] + 1
@@ -15,5 +13,4 @@ for i in range(keta):
         n[-1] = n[-1] + 1
     else:
         satsu += tmp
-
-print((satsu + n[0]))
+print(satsu + n[0])

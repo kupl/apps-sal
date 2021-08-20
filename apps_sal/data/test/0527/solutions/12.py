@@ -4,7 +4,7 @@ from bisect import bisect_left
 
 def solve(s, t):
     dd = defaultdict(list)
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         dd[c].append(i)
     inv = 0
     index = 0
@@ -23,7 +23,7 @@ def solve(s, t):
 def main():
     s = input()
     t = input()
-    print((solve(s, t)))
+    print(solve(s, t))
 
 
 def __starting_point():

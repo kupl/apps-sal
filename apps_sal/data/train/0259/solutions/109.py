@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         self.nums = nums
         self.threshold = threshold
@@ -20,5 +21,5 @@ class Solution:
     def validate_divisor(self, divisor):
         if divisor <= 0:
             return False
-        s = sum(math.ceil(x / divisor) for x in self.nums)
+        s = sum((math.ceil(x / divisor) for x in self.nums))
         return s <= self.threshold

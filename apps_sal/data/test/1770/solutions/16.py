@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     x -= 1
     y -= 1
     if x % d == y % d:

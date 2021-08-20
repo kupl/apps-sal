@@ -8,7 +8,7 @@ for i in range(n):
 for i in range(n):
     for j in range(n):
         fl = True
-        if (not used[j]):
+        if not used[j]:
             for k in range(n):
                 if s[k] not in s[j]:
                     fl = False
@@ -20,7 +20,7 @@ for i in range(n):
     if ans[i] == 0:
         q = True
 if not q:
-    print("YES")
+    print('YES')
     print(*ans[::-1], sep='\n')
 else:
-    print("NO")
+    print('NO')

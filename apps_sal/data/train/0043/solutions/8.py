@@ -27,14 +27,12 @@ def readline():
 def solve(a, b, n):
     l = 1
     r = 10 ** 9
-
     while r - l > 1:
         t = (l + r) // 2
         if possible(a, b, n, t):
             r = t
         else:
             l = t
-
     if possible(a, b, n, l):
         return l
     return r
@@ -49,7 +47,6 @@ def possible(a, b, n, t):
 
 
 tests = readint()
-
 for t in range(tests):
     n = readint()
     a = [readint() for _ in range(n)]

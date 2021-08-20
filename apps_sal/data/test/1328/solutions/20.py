@@ -1,9 +1,9 @@
-n, ma, mb = map(int, input().split())
+(n, ma, mb) = map(int, input().split())
 al = []
 bl = []
 cl = []
 for _ in range(n):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     al.append(a)
     bl.append(b)
     cl.append(c)

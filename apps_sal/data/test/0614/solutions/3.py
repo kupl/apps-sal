@@ -1,7 +1,7 @@
 def souvenier_calc(max_weight, weights, value):
     const = len(weights)
     ans = [-1061109567 for x in range(max_weight + 1)]
-    node = [(x, y) for x, y in zip(weights, value)]
+    node = [(x, y) for (x, y) in zip(weights, value)]
     node = sorted(node, key=lambda x: x[1] / x[0], reverse=True)
     weights = [x[0] for x in node]
     value = [x[1] for x in node]
@@ -16,19 +16,18 @@ def souvenier_calc(max_weight, weights, value):
         for weight in range(sum, down - 1, -1):
             ans[weight] = max(ans[weight], ans[weight - weights[i]] + value[i])
             sol = max(sol, ans[weight])
-
     return sol
 
 
 def __starting_point():
-    N, M = list(map(int, input().split()))
-    assert(N <= 10**5 and M <= 3 * (10**5)), 'Out of range'
+    (N, M) = list(map(int, input().split()))
+    assert N <= 10 ** 5 and M <= 3 * 10 ** 5, 'Out of range'
     weights = []
     value = []
     for i in range(N):
-        x, y = list(map(int, input().split()))
-        assert(x >= 1 and x <= 3), 'Out of range'
-        assert(y >= 1 and y <= 10**9), 'Out of range'
+        (x, y) = list(map(int, input().split()))
+        assert x >= 1 and x <= 3, 'Out of range'
+        assert y >= 1 and y <= 10 ** 9, 'Out of range'
         weights.append(x)
         value.append(y)
     print(souvenier_calc(M, weights, value))

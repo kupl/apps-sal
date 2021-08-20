@@ -1,4 +1,5 @@
 class Solution:
+
     def minPathSum(self, grid):
         """
         :type grid: List[List[int]]
@@ -25,10 +26,4 @@ class Solution:
         print(grid)
         print(gridv)
         return gridv[0][0]
-
-        """"
-         if(len(grid)==1 or len(grid[0])==1):
-             return sum(sum(grid,[]))
-         if
-         return grid[0][0]+min(self.minPathSum(grid[1:],x,y+1),self.minPathSum([grids[1:] for grids in grid],x+1,y))
-         """""
+        '"\n         if(len(grid)==1 or len(grid[0])==1):\n             return sum(sum(grid,[]))\n         if\n         return grid[0][0]+min(self.minPathSum(grid[1:],x,y+1),self.minPathSum([grids[1:] for grids in grid],x+1,y))\n         '

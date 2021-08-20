@@ -1,7 +1,8 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         k = {}
-        mod = 10**9 + 7
+        mod = 10 ** 9 + 7
         for i in range(6):
             k[i] = [0 for i in range(rollMax[i])]
             if k[i]:

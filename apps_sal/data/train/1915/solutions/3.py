@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         done = set()
         n = len(stamp)
@@ -19,7 +20,6 @@ class Solution:
                 else:
                     return False
             return count > 0
-
         while len(done) < m:
             found = 0
             for i in range(m - n + 1):
@@ -31,5 +31,4 @@ class Solution:
                     break
             if not found:
                 return []
-
         return res[::-1]

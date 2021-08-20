@@ -1,17 +1,16 @@
 import sys
-sys.setrecursionlimit(10**7)
-N, T, A = list(map(int, input().split()))
-INF = float("inf")
+sys.setrecursionlimit(10 ** 7)
+(N, T, A) = list(map(int, input().split()))
+INF = float('inf')
 T -= 1
-A -= 1  # 0index
+A -= 1
 G = [[] for _ in range(N)]
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
-    b -= 1  # 0index
+    b -= 1
     G[a].append(b)
     G[b].append(a)
-
 disT = [INF for _ in range(N)]
 disT[T] = 0
 disA = [INF for _ in range(N)]
@@ -28,8 +27,6 @@ def dfs(v, L):
 
 dfs(T, disT)
 dfs(A, disA)
-# print(disT)
-# print(disA)
 ans = 0
 for i in range(N):
     if disT[i] < disA[i]:

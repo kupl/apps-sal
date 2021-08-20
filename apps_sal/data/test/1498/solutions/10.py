@@ -1,11 +1,12 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, m = f()
+(n, m) = f()
 s = [0] * n
 for i in range(m):
-    t, k, d = f()
-    j, p = 0, []
+    (t, k, d) = f()
+    (j, p) = (0, [])
     while j < n and len(p) < k:
         if s[j] <= t:
             p.append(j)

@@ -1,4 +1,3 @@
-# Largest Numeric Palindrome
 printit = False
 
 
@@ -28,7 +27,7 @@ def comb(available, used):
         head = available.pop()
         used.append(head)
         if len(used) >= 2:
-            yield(list(used))
+            yield list(used)
         for x in comb(available[:], used[:]):
             yield x
         used.pop()
@@ -70,7 +69,7 @@ def numeric_palindrome(*args):
             if num_count % 2 == 0:
                 for i in range(num_count):
                     sel_nums.append(num)
-            elif num_count % 2 == 1 and not odd_added:
+            elif num_count % 2 == 1 and (not odd_added):
                 for i in range(num_count):
                     sel_nums.append(num)
                     odd_added = True

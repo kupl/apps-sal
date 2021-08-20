@@ -11,22 +11,17 @@ def positive_to_negative(binary):
         elif binary[index] == 1:
             binary[index] = 0
         steps.append(0)
-
         index += 1
     fill = list(steps)
     fill[-1] = 1
-
     index = len(binary) - 1
     while index >= 0:
         if index != len(binary) - 1:
             binary[index] += fill[index] + steps[index + 1]
         else:
             binary[index] += fill[index]
-
         if binary[index] == 2:
             binary[index] -= 2
             steps[index] += 1
-
         index -= 1
-
     return binary

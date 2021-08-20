@@ -1,4 +1,5 @@
 class DisjSet:
+
     def __init__(self, n):
         self.disj_set = [-1] * n
 
@@ -36,7 +37,9 @@ primes = gen_primes(320)
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def factor(n):
             result = set()
             for i in primes:
@@ -51,7 +54,7 @@ class Solution:
         n = len(A)
         disj = DisjSet(n)
         g = {}
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             for f in factor(a):
                 if f == 1:
                     continue

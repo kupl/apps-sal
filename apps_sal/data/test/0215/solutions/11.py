@@ -1,7 +1,5 @@
 input()
-
 ll = list(input())
-
 dd = {}
 
 
@@ -14,8 +12,6 @@ def is_lo(s):
 
 
 ma = 0
-
-
 for i in range(len(ll)):
     if is_up(ll[i]):
         dd = {}
@@ -24,7 +20,5 @@ for i in range(len(ll)):
         if c not in dd:
             dd[c] = 1
         ma = max(len(dd), ma)
-
 ma = max(len(dd), ma)
-
 print(ma)

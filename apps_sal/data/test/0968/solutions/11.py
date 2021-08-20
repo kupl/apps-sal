@@ -8,36 +8,32 @@ for i in range(n):
 p = [0] * n
 for i in range(n):
     p[a[i]] = i
-ans = "YES"
+ans = 'YES'
 choice = 0
 for i in range(n - 1):
     if choice == 0:
         if min(names[a[i]][0], names[a[i]][1]) > max(names[a[i + 1]][0], names[a[i + 1]][1]):
-            ans = "NO"
-        else:
-            if min(names[a[i]][0], names[a[i]][1]) > names[a[i + 1]][0]:
-                choice = 2
-            elif min(names[a[i]][0], names[a[i]][1]) > names[a[i + 1]][1]:
-                choice = 1
+            ans = 'NO'
+        elif min(names[a[i]][0], names[a[i]][1]) > names[a[i + 1]][0]:
+            choice = 2
+        elif min(names[a[i]][0], names[a[i]][1]) > names[a[i + 1]][1]:
+            choice = 1
     elif choice == 1:
         if names[a[i]][0] > max(names[a[i + 1]][0], names[a[i + 1]][1]):
-            ans = "NO"
+            ans = 'NO'
+        elif names[a[i]][0] > names[a[i + 1]][0]:
+            choice = 2
+        elif names[a[i]][0] > names[a[i + 1]][1]:
+            choice = 1
         else:
-            if names[a[i]][0] > names[a[i + 1]][0]:
-                choice = 2
-            elif names[a[i]][0] > names[a[i + 1]][1]:
-                choice = 1
-            else:
-                choice = 0
+            choice = 0
     elif choice == 2:
         if names[a[i]][1] > max(names[a[i + 1]][0], names[a[i + 1]][1]):
-            ans = "NO"
+            ans = 'NO'
+        elif names[a[i]][1] > names[a[i + 1]][0]:
+            choice = 2
+        elif names[a[i]][1] > names[a[i + 1]][1]:
+            choice = 1
         else:
-            if names[a[i]][1] > names[a[i + 1]][0]:
-                choice = 2
-            elif names[a[i]][1] > names[a[i + 1]][1]:
-                choice = 1
-            else:
-                choice = 0
-
+            choice = 0
 print(ans)

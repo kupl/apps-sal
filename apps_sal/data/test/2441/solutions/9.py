@@ -5,13 +5,13 @@ def main():
     n = int(input())
     costs = list(map(int, input().split()))
     input()
-    chlds, prnts = [[] for _ in range(n)], [[] for _ in range(n)]
+    (chlds, prnts) = ([[] for _ in range(n)], [[] for _ in range(n)])
     for total in stdin.read().splitlines():
-        u, v = list(map(int, total.split()))
+        (u, v) = list(map(int, total.split()))
         chlds[u - 1].append(v - 1)
         prnts[v - 1].append(u - 1)
-    total, ways, childless, orphans = sum(costs), 1, [], []
-    for i, cc, pp in zip(list(range(n)), chlds, prnts):
+    (total, ways, childless, orphans) = (sum(costs), 1, [], [])
+    for (i, cc, pp) in zip(list(range(n)), chlds, prnts):
         if not (cc or pp):
             costs[i] = 0
         elif not cc:
@@ -37,7 +37,7 @@ def main():
     while pool:
         u = pool.pop()
         pp = prnts[u]
-        cost, cnt = costs[u], 1
+        (cost, cnt) = (costs[u], 1)
         while pp:
             u = pp.pop()
             if u in pool:
@@ -46,9 +46,9 @@ def main():
                 if costs[u] == cost:
                     cnt += 1
                 elif costs[u] < cost:
-                    cost, cnt = costs[u], 1
+                    (cost, cnt) = (costs[u], 1)
         total += cost
-        ways = (ways * cnt) % 1000000007
+        ways = ways * cnt % 1000000007
     print(total, ways)
 
 

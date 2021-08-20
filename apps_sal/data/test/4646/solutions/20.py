@@ -2,29 +2,17 @@ def mi():
     return map(int, input().split())
 
 
-'''
-4
-4
-3 2 7 6
-3
-3 2 6
-1
-7
-7
-4 9 2 1 18 3 0
-'''
+'\n4\n4\n3 2 7 6\n3\n3 2 6\n1\n7\n7\n4 9 2 1 18 3 0\n'
 for _ in range(int(input())):
     n = int(input())
     a = list(mi())
-
-    o, e = 0, 0
+    (o, e) = (0, 0)
     for i in range(n):
         if i % 2:
             if a[i] % 2 == 0:
                 o += 1
-        else:
-            if a[i] % 2:
-                e += 1
+        elif a[i] % 2:
+            e += 1
     if o == e:
         print(o)
     else:

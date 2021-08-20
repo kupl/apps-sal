@@ -1,6 +1,5 @@
-x, a = list(map(int, input().split()))
-
-if (x < a):
-    print((0))
+(x, a) = list(map(int, input().split()))
+if x < a:
+    print(0)
 else:
-    print((10))
+    print(10)

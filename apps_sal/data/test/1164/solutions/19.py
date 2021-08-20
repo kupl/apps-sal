@@ -11,7 +11,6 @@ c.add('8')
 c.add('9')
 c.add('0')
 c.add('.')
-
 ans = []
 j = 0
 st = ''
@@ -43,7 +42,7 @@ pp = ''
 pk = 0
 pr = 0
 for i in range(len(ans)):
-    for j in range(len(ans[i]) - 1, - 1, -1):
+    for j in range(len(ans[i]) - 1, -1, -1):
         if ans[i][j] == '.':
             x = j
             break
@@ -70,13 +69,9 @@ for i in range(j, -1, -1):
         q = 0
     elif answer[i] != '.':
         q += 1
-if answer[-1] == '0' and answer[-2] == '0' and answer[-3] == '.':
+if answer[-1] == '0' and answer[-2] == '0' and (answer[-3] == '.'):
     answer = answer[:-3]
 if answer[0] == '.':
     answer = answer[1:]
 print(answer)
-
-"""
-        ans[j] = ans[j] * 10 + int(s[i])
-    elif s[i] == '.':
-        ans[j] *= 100"""
+"\n        ans[j] = ans[j] * 10 + int(s[i])\n    elif s[i] == '.':\n        ans[j] *= 100"

@@ -1,2 +1,2 @@
 def step_through_with(s):
-    return any(m == n for m, n in zip(s, s[1:]))
+    return any((m == n for (m, n) in zip(s, s[1:])))

@@ -1,11 +1,11 @@
 class Solution:
+
     def isSubsequence(self, s, t):
         """
         :type s: str
         :type t: str
         :rtype: bool
         """
-
         index = 0
         ans = True
         for i in s:

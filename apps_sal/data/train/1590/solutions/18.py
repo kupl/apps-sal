@@ -1,4 +1,3 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations
@@ -25,14 +24,12 @@ P = 1000000007
 def main():
     try:
         for _ in range(I()):
-            # code here ALL THE BEST
             l = L()
             l.sort()
-            if (l[0] + l[1] >= l[2]):
+            if l[0] + l[1] >= l[2]:
                 print('Yes')
             else:
                 print('No')
-
     except:
         pass
 

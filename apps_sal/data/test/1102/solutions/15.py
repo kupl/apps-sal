@@ -1,5 +1,5 @@
 __author__ = 'Utena'
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 cities = [0] + list(map(int, input().split()))
 p = [0] * n
 c = [0] * n

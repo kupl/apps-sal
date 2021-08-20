@@ -13,4 +13,4 @@ for i in range(t):
         if a & 1 != 0:
             c += 1
         a >>= 1
-    print(2**c)
+    print(2 ** c)

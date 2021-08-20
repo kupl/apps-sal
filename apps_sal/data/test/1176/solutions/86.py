@@ -6,7 +6,7 @@ m = 10 ** 9
 for ai in A:
     if ai <= 0:
         cnt = cnt + 1
-        ai *= (-1)
+        ai *= -1
     s += ai
     if m > ai:
         m = ai

@@ -1,10 +1,11 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
-        digits = {c: i for i, c in enumerate('aeiou')}
+        digits = {c: i for (i, c) in enumerate('aeiou')}
         counters = [0]
         for c in s:
             if c in digits:
-                counters.append(counters[-1] ^ (1 << digits[c]))
+                counters.append(counters[-1] ^ 1 << digits[c])
             else:
                 counters.append(counters[-1])
         for length in range(len(s), 0, -1):

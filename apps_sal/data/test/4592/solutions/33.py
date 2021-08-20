@@ -15,5 +15,5 @@ ans = 1
 for i in range(n + 1):
     if counter[i] > 0:
         ans *= counter[i] + 1
-        ans %= int(1e9 + 7)
+        ans %= int(1000000000.0 + 7)
 print(ans)

@@ -3,8 +3,8 @@ input = sys.stdin.readline
 
 
 def read():
-    N, M = list(map(int, input().strip().split()))
-    return N, M
+    (N, M) = list(map(int, input().strip().split()))
+    return (N, M)
 
 
 def divisor(n):
@@ -33,7 +33,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print(("%s" % str(outputs)))
+        print('%s' % str(outputs))
 
 
 __starting_point()

@@ -6,7 +6,7 @@ try:
         arr = []
         obj = {}
         for i in range(n):
-            x, y = input().split()
+            (x, y) = input().split()
             y = int(y)
             arr.append([x, y])
             if y in obj:

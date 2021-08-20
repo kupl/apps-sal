@@ -1,12 +1,11 @@
 def splitSentence(s):
-    sum = ""
+    sum = ''
     result = []
     for i in s:
-        if i == " ":
+        if i == ' ':
             result.append(sum)
-            sum = ""
+            sum = ''
             continue
         sum = sum + i
     result.append(sum)
-
     return result

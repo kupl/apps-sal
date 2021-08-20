@@ -1,5 +1,3 @@
-# Why do we fall ? So we can learn to pick ourselves up.
-
 from math import acos
 
 
@@ -31,23 +29,4 @@ for i in range(1, n + 1):
         ans.append(i)
 print(len(ans))
 print(*ans)
-
-
-"""
-
-6
-0 0 0 0 0
-1 0 0 0 0
-0 1 0 0 0
-0 0 1 0 0
-0 0 0 1 0
-0 0 0 0 1
-
-
-3
-0 0 1 2 0
-0 0 9 2 0
-0 0 5 9 0
-
-
-"""
+'\n\n6\n0 0 0 0 0\n1 0 0 0 0\n0 1 0 0 0\n0 0 1 0 0\n0 0 0 1 0\n0 0 0 0 1\n\n\n3\n0 0 1 2 0\n0 0 9 2 0\n0 0 5 9 0\n\n\n'

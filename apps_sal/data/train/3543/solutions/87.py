@@ -2,7 +2,7 @@ import re
 
 
 def increment_string(strng):
-    array = re.findall(r'[0-9]+', strng)
+    array = re.findall('[0-9]+', strng)
     if array:
         size = len(array[-1])
         num = str(int(array[-1]) + 1)

@@ -3,8 +3,9 @@ import heapq
 
 
 class SegmentTree(object):
+
     def __init__(self, size):
-        self.capacity = 1 << (len(bin(size - 1)) - 2)
+        self.capacity = 1 << len(bin(size - 1)) - 2
         self.tree = [-1] * self.capacity * 2
         self.tree[0] = size
         self.left = set()
@@ -39,10 +40,10 @@ def read_data():
     n = int(input())
     sxy = collections.defaultdict(list)
     for i in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         heapq.heappush(sxy[y - x], x)
     ws = list(map(int, input().split()))
-    return n, sxy, ws
+    return (n, sxy, ws)
 
 
 def solve(n, sxy, ws):
@@ -64,7 +65,7 @@ def solve(n, sxy, ws):
 def is_valid(path):
     xys = compress(path)
     segtree = SegmentTree(len(xys))
-    for x, y in xys:
+    for (x, y) in xys:
         maxy = segtree.getmax(x)
         if maxy >= y:
             return False
@@ -74,20 +75,20 @@ def is_valid(path):
 
 def compress(path):
     xset = set()
-    for x, y in path:
+    for (x, y) in path:
         xset.add(x)
     xuniq = list(xset)
     xuniq.sort()
-    dic = {x: i for i, x in enumerate(xuniq)}
-    xys = [(dic[x], y) for x, y in path]
+    dic = {x: i for (i, x) in enumerate(xuniq)}
+    xys = [(dic[x], y) for (x, y) in path]
     return xys
 
 
-n, sxy, ws = read_data()
+(n, sxy, ws) = read_data()
 result = solve(n, sxy, ws)
 if result:
     print('YES')
-    for x, y in result:
+    for (x, y) in result:
         print(x, y)
 else:
     print('NO')

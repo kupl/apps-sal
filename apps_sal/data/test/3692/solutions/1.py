@@ -1,6 +1,9 @@
 from math import sqrt
 pt = lambda *a, **k: print(*a, **k, flush=True)
-def rd(): return map(int, input().split())
+
+
+def rd():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -33,49 +36,49 @@ def g(x1, y1, r1, x2, y2, r2):
     y3 = y + h * (x2 - x1) / d
     x4 = x + h * (y2 - y1) / d
     y4 = y - h * (x2 - x1) / d
-    return x3, y3, x4, y4
+    return (x3, y3, x4, y4)
 
 
 if n is 1:
     pt(2)
 if n is 2:
-    x1, y1, r1 = rd()
-    x2, y2, r2 = rd()
+    (x1, y1, r1) = rd()
+    (x2, y2, r2) = rd()
     a = f(x1, y1, r1, x2, y2, r2)
     pt(4 if a is 2 else 3)
 if n is 3:
-    x1, y1, r1 = rd()
-    x2, y2, r2 = rd()
-    x3, y3, r3 = rd()
+    (x1, y1, r1) = rd()
+    (x2, y2, r2) = rd()
+    (x3, y3, r3) = rd()
     a = f(x1, y1, r1, x2, y2, r2)
     b = f(x1, y1, r1, x3, y3, r3)
     c = f(x3, y3, r3, x2, y2, r2)
     t = [a, b, c]
     t.sort()
-    a, b, c = t
-    if a is 1 and b is 1 and c in [1, 3, 4, 5]:
+    (a, b, c) = t
+    if a is 1 and b is 1 and (c in [1, 3, 4, 5]):
         pt(4)
-    if a is 1 and b is 1 and c is 2:
+    if a is 1 and b is 1 and (c is 2):
         pt(5)
-    if a is 1 and b is 2 and c is 2:
+    if a is 1 and b is 2 and (c is 2):
         pt(6)
-    if a is 1 and b is 2 and c in [3, 4, 5]:
+    if a is 1 and b is 2 and (c in [3, 4, 5]):
         pt(5)
     if a is 1 and b in [3, 4, 5]:
         pt(4)
-    if a is 2 and b is 2 and c is 2:
-        x4, y4, x5, y5 = g(x1, y1, r1, x2, y2, r2)
+    if a is 2 and b is 2 and (c is 2):
+        (x4, y4, x5, y5) = g(x1, y1, r1, x2, y2, r2)
         r = 8
-        if abs((x4 - x3) ** 2 + (y4 - y3) ** 2 - r3 ** 2) < 1e-6:
+        if abs((x4 - x3) ** 2 + (y4 - y3) ** 2 - r3 ** 2) < 1e-06:
             r -= 1
-        if abs((x5 - x3) ** 2 + (y5 - y3) ** 2 - r3 ** 2) < 1e-6:
+        if abs((x5 - x3) ** 2 + (y5 - y3) ** 2 - r3 ** 2) < 1e-06:
             r -= 1
         pt(r)
-    if a is 2 and b is 2 and c is 3:
+    if a is 2 and b is 2 and (c is 3):
         pt(6)
-    if a is 2 and b is 2 and c in [4, 5]:
-        x4, y4, x5, y5 = g(x1, y1, r1, x2, y2, r2)
-        if abs((x4 - x3) ** 2 + (y4 - y3) ** 2 - r3 ** 2) < 1e-6 or abs((x5 - x3) ** 2 + (y5 - y3) ** 2 - r3 ** 2) < 1e-6:
+    if a is 2 and b is 2 and (c in [4, 5]):
+        (x4, y4, x5, y5) = g(x1, y1, r1, x2, y2, r2)
+        if abs((x4 - x3) ** 2 + (y4 - y3) ** 2 - r3 ** 2) < 1e-06 or abs((x5 - x3) ** 2 + (y5 - y3) ** 2 - r3 ** 2) < 1e-06:
             pt(6)
         else:
             pt(7)
@@ -85,11 +88,11 @@ if n is 3:
         pt(6)
     if a is 3 and b in [3, 4, 5]:
         pt(4)
-    if a is 4 and b is 4 and c is 4:
+    if a is 4 and b is 4 and (c is 4):
         pt(5)
-    if a is 4 and b is 4 and c is 5:
+    if a is 4 and b is 4 and (c is 5):
         pt(4)
-    if a is 4 and b is 5 and c is 5:
+    if a is 4 and b is 5 and (c is 5):
         pt(5)
-    if a is 5 and b is 5 and c is 5:
+    if a is 5 and b is 5 and (c is 5):
         pt(4)

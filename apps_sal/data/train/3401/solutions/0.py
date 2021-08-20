@@ -7,7 +7,7 @@ def products(n, min_divisor, max_divisor):
     for divisor in range(min_divisor, max_divisor + 1):
         if n % divisor == 0:
             for product in products(n // divisor, divisor, max_divisor):
-                yield product + [divisor]
+                yield (product + [divisor])
 
 
 def eq_dice(set):

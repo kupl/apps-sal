@@ -25,5 +25,4 @@ while len(cards) > 0:
         s = True
         d = False
         cards.pop(t)
-
 print(ps, pd)

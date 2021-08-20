@@ -1,7 +1,7 @@
 def hex_color(codes):
     if codes == '':
         return 'black'
-    r, g, b = map(int, codes.split(' '))
+    (r, g, b) = map(int, codes.split(' '))
     if 0 == r == g == b:
         return 'black'
     if r == g == b:

@@ -1,6 +1,5 @@
-ab = int("".join(input().split()))**0.5
-
+ab = int(''.join(input().split())) ** 0.5
 if ab.is_integer():
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

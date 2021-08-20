@@ -1,5 +1,5 @@
 class Solution:
-    # https://leetcode.com/problems/can-convert-string-in-k-moves/discuss/826856/c%2B%2B-simple-sol...using-maps
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
@@ -10,8 +10,7 @@ class Solution:
                 if diff > k:
                     return False
                 lookup[diff] += 1
-
-        for diff, freq in list(lookup.items()):
+        for (diff, freq) in list(lookup.items()):
             maxCount = (freq - 1) * 26 + diff
             if maxCount > k:
                 return False

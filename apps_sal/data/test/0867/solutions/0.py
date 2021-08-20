@@ -7,7 +7,7 @@ def rnd(x):
     b = x - a
     if b >= 0.5:
         a += 1
-    return(a)
+    return a
 
 
 n = int(input())

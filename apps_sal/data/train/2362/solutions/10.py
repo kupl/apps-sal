@@ -6,7 +6,7 @@ for i in range(q):
     colmnleft = -10 ** 5
     colmnright = 10 ** 5
     for j in range(n):
-        x, y, left, up, right, down = list(map(int, input().split()))
+        (x, y, left, up, right, down) = list(map(int, input().split()))
         if not left:
             colmnleft = max(colmnleft, x)
         if not right:

@@ -1,8 +1,5 @@
-
-N, A, B = map(int, input().split())
-
+(N, A, B) = map(int, input().split())
 ans = 0
-
 for i in range(N + 1):
     x = i % 10
     if i >= 10:
@@ -15,5 +12,4 @@ for i in range(N + 1):
                     x = 1
     if A <= x <= B:
         ans += i
-
 print(ans)

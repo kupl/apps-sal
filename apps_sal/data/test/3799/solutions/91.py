@@ -11,9 +11,9 @@ def solve(s):
     else:
         B = 0
     if A + B == 1:
-        return("Second")
+        return 'Second'
     else:
-        return("First")
+        return 'First'
 
 
 print(solve(s))

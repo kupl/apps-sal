@@ -6,14 +6,14 @@ def intersect_area(x1, y1, x2, y2, x3, y3, x4, y4):
     return 0
 
 
-x1, y1, x2, y2 = map(int, input().split())
-x3, y3, x4, y4 = map(int, input().split())
-x5, y5, x6, y6 = map(int, input().split())
+(x1, y1, x2, y2) = map(int, input().split())
+(x3, y3, x4, y4) = map(int, input().split())
+(x5, y5, x6, y6) = map(int, input().split())
 a = intersect_area(x1, y1, x2, y2, x3, y3, x4, y4)
 b = intersect_area(x1, y1, x2, y2, x5, y5, x6, y6)
 c = intersect_area(x1, y1, x2, y2, max(x3, x5), max(y3, y5), min(x4, x6), min(y4, y6))
 area = (x2 - x1) * (y2 - y1)
 if area - (a + b - c) > 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

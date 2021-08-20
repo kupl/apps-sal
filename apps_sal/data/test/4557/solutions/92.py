@@ -1,10 +1,7 @@
-a, b, x = list(map(int, input().split()))
-
+(a, b, x) = list(map(int, input().split()))
 if a + b < x:
-    print("NO")
-
+    print('NO')
 elif a > x:
-    print("NO")
-
+    print('NO')
 else:
-    print("YES")
+    print('YES')

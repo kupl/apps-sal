@@ -9,7 +9,7 @@ class Solution:
         """
         if n <= 0:
             return None
-        idx2, idx3, idx5 = Solution.idx
+        (idx2, idx3, idx5) = Solution.idx
         while len(Solution.res) < n:
             Solution.res.append(min(Solution.res[idx2] * 2, Solution.res[idx3] * 3, Solution.res[idx5] * 5))
             while idx2 < len(Solution.res) and Solution.res[idx2] * 2 <= Solution.res[-1]:

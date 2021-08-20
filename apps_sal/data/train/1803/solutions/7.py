@@ -23,7 +23,6 @@ def numeric_palindrome(*args):
     l = [l_new]
     if len(l_new) < 2:
         return 0
-
     for i in range(2, len(l_new)):
         l += [tuple_ for tuple_ in combinations(l_new, i)]
     l = [funk(i) for i in l]

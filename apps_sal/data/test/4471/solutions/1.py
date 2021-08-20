@@ -7,6 +7,6 @@ for rwe in range(q):
         if (l[i] - l[i - 1]) % 2 == 1:
             dasie = False
     if dasie:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

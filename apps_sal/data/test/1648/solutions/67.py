@@ -1,7 +1,6 @@
-
 class Combination:
+
     def __init__(self, n_max, mod=10 ** 9 + 7):
-        # O(n_max + log(mod))
         self.mod = mod
         f = 1
         self.fac = fac = [f]
@@ -15,10 +14,7 @@ class Combination:
             facinv.append(f)
         facinv.reverse()
 
-    # "n 要素" は区別できる n 要素
-    # "k グループ" はちょうど k グループ
-
-    def __call__(self, n, r):  # self.C と同じ
+    def __call__(self, n, r):
         return self.fac[n] * self.facinv[r] % self.mod * self.facinv[n - r] % self.mod
 
     def nCr(self, n, r):
@@ -28,15 +24,12 @@ class Combination:
 
 
 def resolve():
-    # 青、赤それぞれの重複組み合わせ
     MOD = 10 ** 9 + 7
-    N, K = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
     CMB = Combination(N + 1)
-
     for i in range(1, K + 1):
         if i > N - K + 1:
-            print((0))
+            print(0)
         else:
             ans = CMB.nCr(N - K + 1, N - K - i + 1)
             ans = ans * CMB.nCr(K - 1, K - i)

@@ -1,6 +1,5 @@
 class Solution:
-    # 思路copied from https://leetcode.com/problems/maximum-profit-of-operating-a-centennial-wheel/discuss/866409/Java-Simple-O(N)-greedy
-    # The solution is based on simply simulating the the rotations and keep track of waiting customers
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         run = 0
         maxRun = 1
@@ -11,7 +10,7 @@ class Solution:
             if i < len(customers):
                 count_ppl += customers[i]
                 i += 1
-            count_bd = min(4, count_ppl)  # boarding people by greedy.
+            count_bd = min(4, count_ppl)
             count_ppl -= count_bd
             prof = prof + count_bd * boardingCost - runningCost
             run += 1

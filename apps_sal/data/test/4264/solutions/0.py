@@ -1,5 +1,4 @@
 n = input()
-
 count = 0
 for i in range(1, int(n) + 1):
     l = len(str(i))

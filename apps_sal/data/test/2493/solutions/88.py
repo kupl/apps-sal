@@ -5,6 +5,7 @@ MOD = 10 ** 9 + 7
 
 
 class Factorial:
+
     def __init__(self, n, mod):
         self.f = [1]
         self.mod = mod
@@ -27,7 +28,6 @@ class Factorial:
 
 N = int(input())
 A = list(map(int, input().split()))
-
 lst = [-1] * (N + 1)
 for i in range(N + 1):
     a = A[i]
@@ -37,12 +37,10 @@ for i in range(N + 1):
         left = lst[a]
         right = i
         break
-# print (left, right)
 F = Factorial(N + 1, MOD).comb
-
 for i in range(1, N + 2):
     if left + N - right >= i - 1:
         tmp = F(N + 1, i) - F(left + (N - right), i - 1)
     else:
         tmp = F(N + 1, i)
-    print((tmp % MOD))
+    print(tmp % MOD)

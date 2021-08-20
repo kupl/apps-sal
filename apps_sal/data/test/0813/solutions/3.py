@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 used = [0] * n

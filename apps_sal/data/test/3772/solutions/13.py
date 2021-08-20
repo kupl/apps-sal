@@ -1,9 +1,9 @@
 def main():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     res = 0
     while b:
         res += a // b
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     print(res)
 
 

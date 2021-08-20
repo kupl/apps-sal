@@ -1,7 +1,4 @@
-# 入力
-A, B = map(int, input().split())
-
-# A,B,A+Bのうちどれか1つでも3で割り切れればPossible
+(A, B) = map(int, input().split())
 if A % 3 == 0:
     print('Possible')
 elif B % 3 == 0:

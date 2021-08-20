@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 alph = [chr(ord('a') + i) for i in range(26)]
 for a in alph:

@@ -5,15 +5,15 @@ hei = 0
 heim = 1000
 n = int(input())
 for i in range(n):
-    w, h = list(map(int, input().split()))
-    if (w > h):
+    (w, h) = list(map(int, input().split()))
+    if w > h:
         x = w
         w = h
         h = x
     wid += w
-    if (hei < h):
+    if hei < h:
         hei = h
-    if (heim > w):
+    if heim > w:
         heim = w
     a.append((h, w))
 last = wid * hei
@@ -23,12 +23,11 @@ for i in range(heim, hei + 1):
     for j in range(0, n):
         if a[j][0] <= i:
             wid1 += a[j][1]
+        elif a[j][1] <= i:
+            wid1 += a[j][0]
         else:
-            if (a[j][1] <= i):
-                wid1 += a[j][0]
-            else:
-                wid1 += 1000000000
-                break
-    if (wid1 * i < last):
+            wid1 += 1000000000
+            break
+    if wid1 * i < last:
         last = wid1 * i
 print(last)

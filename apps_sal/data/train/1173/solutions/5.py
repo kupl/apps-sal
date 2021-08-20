@@ -3,7 +3,6 @@ for _ in range(t):
     n = int(input())
     l = list(map(int, input().split()))
     ans = 0
-
     m = [0] * n
     for i in range(n):
         if i == 0:
@@ -14,7 +13,6 @@ for _ in range(t):
     c = 0
     for i in l:
         c = c ^ i
-
     for i in range(n - 1, -1, -1):
         try:
             x = d[l[i] ^ c]

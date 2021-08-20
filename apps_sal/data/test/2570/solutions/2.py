@@ -20,7 +20,7 @@ def SI():
 
 t = II()
 for q in range(t):
-    n, x = MI()
+    (n, x) = MI()
     a = LI()
     b = LI()
     a.sort()
@@ -30,6 +30,6 @@ for q in range(t):
         if a[i] + b[i] > x:
             boo = False
             break
-    print("Yes" if boo else "No")
+    print('Yes' if boo else 'No')
     if q != t - 1:
         a = input()

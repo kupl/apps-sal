@@ -5,4 +5,4 @@ def solve(arr):
                 arr.remove(-arr[i])
                 arr.remove(arr[i])
                 break
-    return (list(set(arr))[0])
+    return list(set(arr))[0]

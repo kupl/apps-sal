@@ -4,18 +4,18 @@ input = sys.stdin.readline
 
 def gcd(x, y):
     if x < y:
-        x, y = y, x
+        (x, y) = (y, x)
     if y == 0:
         return x
     return gcd(y, x % y)
 
 
-n, m, q = map(int, input().split())
+(n, m, q) = map(int, input().split())
 g = gcd(n, m)
 n_wall = n // g
 m_wall = m // g
 for _ in range(q):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     if a == 1:
         r1 = (b + n_wall - 1) // n_wall
     else:

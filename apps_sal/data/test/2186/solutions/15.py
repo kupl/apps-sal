@@ -6,7 +6,7 @@ def myhash(target):
     p = 1
     for j in target:
         h = (h + p * ord(j)) % M
-        p = (p * 197) % M
+        p = p * 197 % M
     return h
 
 
@@ -25,7 +25,7 @@ def binarysearch(base, tar):
     return 0
 
 
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 hashval = list()
 ans = list()
 for i in range(n):
@@ -36,9 +36,8 @@ for i in range(n):
         for k in range(97, 100):
             if ini[j] != chr(k):
                 hashval.append((h + p * (k - ord(ini[j]))) % M)
-        p = (p * 197) % M
+        p = p * 197 % M
 hashval.sort()
-
 for i in range(m):
     query = input()
     hashtem = myhash(query)
@@ -46,5 +45,4 @@ for i in range(m):
         ans.append('YES')
     else:
         ans.append('NO')
-
 print('\n'.join(ans))

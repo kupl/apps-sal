@@ -4,7 +4,7 @@ def dfs(i):
         used[i] = True
         ret += [i]
     for j in range(n):
-        if a[i][j] == 1 and not used[j]:
+        if a[i][j] == 1 and (not used[j]):
             ret.extend(dfs(j))
     return ret
 
@@ -22,7 +22,6 @@ for i in range(n):
         for j in idx:
             temp.append(p[j])
         temp.sort()
-        for k, j in enumerate(idx):
+        for (k, j) in enumerate(idx):
             ans[j] = temp[k]
-
-print(" ".join(list(map(str, p))))
+print(' '.join(list(map(str, p))))

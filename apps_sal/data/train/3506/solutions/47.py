@@ -1,6 +1,6 @@
 def vowel_indices(word):
     word = word.lower()
-    vowels = "aeiouy"
+    vowels = 'aeiouy'
     l = []
     sum = 1
     for i in word:
@@ -9,5 +9,4 @@ def vowel_indices(word):
             sum = sum + 1
         else:
             sum = sum + 1
-
     return l

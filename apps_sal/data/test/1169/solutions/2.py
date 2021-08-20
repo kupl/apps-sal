@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = 0
 r = n
 for i in range(50):
@@ -7,5 +7,4 @@ for i in range(50):
         l = md
     else:
         r = md
-   # print(l, r, md)
 print(max(0, n - m * 2), n - r)

@@ -1,6 +1,6 @@
 def recurse(sum, ls, level):
     if level == 1:
-        return [(x + sum) for x in ls]
+        return [x + sum for x in ls]
     ary = list(ls)
     totals = []
     for x in ls:

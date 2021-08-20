@@ -1,9 +1,9 @@
-'''input
+"""input
 2
 aa
 
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -13,7 +13,7 @@ from random import randint as rd
 from bisect import bisect_left as bl
 from heapq import heappush as hpush
 from heapq import heappop as hpop
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -26,16 +26,14 @@ def ri(flag=0):
 n = ri(1)
 a = list(input())
 ans = 0
-
 for i in range(0, n, 2):
     if a[i] != a[i + 1]:
         pass
     else:
-        if a[i] == "a":
-            a[i] = "b"
+        if a[i] == 'a':
+            a[i] = 'b'
         else:
-            a[i] = "a"
+            a[i] = 'a'
         ans += 1
-
 print(ans)
-print("".join(a))
+print(''.join(a))

@@ -1,4 +1,4 @@
-t, w, b = map(int, input().split())
+(t, w, b) = map(int, input().split())
 
 
 def gcd(a, b):
@@ -13,17 +13,13 @@ def lcm(a, b):
 
 add = min(w, b) - 1
 l = lcm(w, b)
-
 cnt = t // l
-
 ans = add + cnt + cnt * add
 ans -= max(0, l * cnt + add - t)
-
 g = gcd(ans, t)
 if g != 0:
     ans //= g
     t //= g
-
 print(ans, end='')
 print('/', end='')
 print(t)

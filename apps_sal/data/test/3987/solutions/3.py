@@ -1,8 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 d = [0 for _ in range(4)]
-
 for val in a:
     if val == 1:
         d[0] += 1

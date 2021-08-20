@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
-ans = sum(x >= k for x in l)
+ans = sum((x >= k for x in l))
 print(ans)

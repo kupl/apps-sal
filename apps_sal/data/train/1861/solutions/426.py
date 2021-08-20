@@ -1,4 +1,4 @@
-'''
+"""
 939. Minimum Area Rectangle.  Medium
 
 Given a set of points in the xy-plane, 
@@ -29,16 +29,17 @@ Submissions
 
 NOTE: Clarify: rectangle formed by ALL these points (convex hull)
             v. rectangle formed by ANY four distinct points
-'''
+"""
 
 
 class Solution:
+
     def minAreaRectangularHull(self, points: List[List[int]]) -> int:
         area = 0
         if points:
-            minx, miny = points[0]
-            maxx, maxy = points[0]
-            for x, y in points:
+            (minx, miny) = points[0]
+            (maxx, maxy) = points[0]
+            for (x, y) in points:
                 minx = min(minx, x)
                 miny = min(miny, y)
                 maxx = max(maxx, x)
@@ -47,32 +48,32 @@ class Solution:
         return area
 
     def minAreaRect(self, points):
-        '''
+        """
         Runtime: 1628 ms, faster than 38.40% of Python3 online submissions for Minimum Area Rectangle.
         Memory Usage: 14.4 MB, less than 17.19% of Python3 online submissions for Minimum Area Rectangle.
-        '''
+        """
         S = set(map(tuple, points))
         ans = float('inf')
-        for k, (xB, yB) in enumerate(points):
+        for (k, (xB, yB)) in enumerate(points):
             for j in range(k):
-                xA, yA = points[j]
-                if (xA != xB and yA != yB and (xA, yB) in S and (xB, yA) in S):
+                (xA, yA) = points[j]
+                if xA != xB and yA != yB and ((xA, yB) in S) and ((xB, yA) in S):
                     ans = min(ans, abs((xB - xA) * (yB - yA)))
         return ans if ans < float('inf') else 0
 
 
 class Solution(object):
+
     def minAreaRect(self, points):
         columns = collections.defaultdict(list)
-        for x, y in points:
+        for (x, y) in points:
             columns[x].append(y)
         lastx = {}
         ans = float('inf')
-
         for x in sorted(columns):
             column = columns[x]
             column.sort()
-            for j, y2 in enumerate(column):
+            for (j, y2) in enumerate(column):
                 for i in range(j):
                     y1 = column[i]
                     if (y1, y2) in lastx:

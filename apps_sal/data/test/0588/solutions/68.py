@@ -6,7 +6,7 @@ ans = 0
 for lp in range(n):
     for rg in range(n):
         lf = lp
-        x, y = l[lf]
+        (x, y) = l[lf]
         lf += 1
         if lf == n:
             lf = 0
@@ -16,5 +16,5 @@ for lp in range(n):
             lf += 1
             if lf == n:
                 lf = 0
-        ans = max(ans, (x ** 2 + y ** 2) ** .5)
+        ans = max(ans, (x ** 2 + y ** 2) ** 0.5)
 print(ans)

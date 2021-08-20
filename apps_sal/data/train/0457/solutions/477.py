@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -18,6 +19,6 @@ class Solution:
                     else:
                         visited[nextVal] = True
                         nextStart.append(nextVal)
-            start, nextStart = nextStart, []
+            (start, nextStart) = (nextStart, [])
             numCoins += 1
         return -1

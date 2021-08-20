@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 answ = 0
 for fir in range(1, n):
     sec = n - fir

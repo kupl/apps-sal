@@ -14,7 +14,7 @@ def main():
             newusers[index0] = new
     print(str(len(users)))
     for j in range(len(users)):
-        print(users[j] + " " + newusers[j])
+        print(users[j] + ' ' + newusers[j])
 
 
 main()

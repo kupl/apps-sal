@@ -1,6 +1,6 @@
 s = input()
 t = input()
-a, b, c = 0, 0, 0
+(a, b, c) = (0, 0, 0)
 for item in s:
     if item == '+':
         a += 1

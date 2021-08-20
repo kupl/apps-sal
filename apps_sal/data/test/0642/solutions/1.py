@@ -1,6 +1,6 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 if M > 0:
-    Dirty = list(sorted((list(map(int, input().split())))))
+    Dirty = list(sorted(list(map(int, input().split()))))
     Flag = Dirty[0] != 1 and Dirty[-1] != N
     if Flag:
         Last = Dirty[0]
@@ -15,8 +15,8 @@ if M > 0:
                 Flag = False
                 break
     if Flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 else:
-    print("YES")
+    print('YES')

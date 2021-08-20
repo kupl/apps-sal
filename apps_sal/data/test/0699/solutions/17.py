@@ -1,5 +1,4 @@
-y, k, n = [int(i) for i in input().split()]
-
+(y, k, n) = [int(i) for i in input().split()]
 a = y % k
 m = []
 for i in range(n):

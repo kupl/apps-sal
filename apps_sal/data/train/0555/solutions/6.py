@@ -4,14 +4,14 @@ while tc != 0:
     data = []
     data = list(map(int, input().split()))
     if size == 1:
-        print("1")
+        print('1')
         tc -= 1
         continue
     i = 2
     count = 2
     max = 2
     while i < size:
-        if data[i] == (data[i - 1] + data[i - 2]):
+        if data[i] == data[i - 1] + data[i - 2]:
             count += 1
             if count > max:
                 max = count

@@ -18,7 +18,7 @@ def f():
             j -= 1
         if j - i == outMin - 2:
             ans[j - i] = 1
-    print(''.join(str(i) for i in ans))
+    print(''.join((str(i) for i in ans)))
 
 
 t = int(input())

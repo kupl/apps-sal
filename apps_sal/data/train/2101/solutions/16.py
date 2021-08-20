@@ -1,15 +1,17 @@
 import collections as cc
 import sys
 input = sys.stdin.readline
-# sys.setrecursionlimit(10**9)
-def I(): return list(map(int, input().split()))
 
 
-n, m = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n, m) = I()
 g = [set() for i in range(n + 1)]
 xx = [0] * (n + 1)
 for i in range(m):
-    x, y = I()
+    (x, y) = I()
     g[x].add(y)
     g[y].add(x)
 parent = [i for i in range(n + 1)]
@@ -32,13 +34,10 @@ ff = cc.defaultdict(int)
 used = cc.defaultdict(int)
 for i in range(1, n + 1):
     if find(i) == i:
-
         for j in range(1, n + 1):
             if j not in g[i]:
                 g[i] &= g[j]
         for j in range(1, n + 1):
             if j not in g[i]:
                 union(i, j)
-
-
 print(len(set([find(i) for i in range(1, n + 1)])) - 1)

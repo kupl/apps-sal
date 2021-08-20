@@ -2,10 +2,10 @@ try:
     for _ in range(int(input())):
         n = int(input())
         if n % 2 == 0:
-            print("NO")
+            print('NO')
         else:
-            z = int(((n - 1) / 2))
-            print("YES")
+            z = int((n - 1) / 2)
+            print('YES')
             for i in range(n):
                 cnt = 0
                 N = []
@@ -14,10 +14,9 @@ try:
                     cnt += 1
                 for j in range(n):
                     if j in N:
-                        print(1, end="")
+                        print(1, end='')
                     else:
-                        print(0, end="")
+                        print(0, end='')
                 print()
-
 except EOFError:
     pass

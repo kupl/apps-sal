@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-
-# input = stdin.readline
-
-
 def main():
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
 
     def primeLst(x):
         acc = []

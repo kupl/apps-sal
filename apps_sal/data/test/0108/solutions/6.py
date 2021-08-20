@@ -11,7 +11,6 @@ for i in range(len(arr)):
             d = 1
             break
         c = chr(ord(c) + 1)
-
 if d == 0:
     print(-1)
 else:

@@ -1,6 +1,6 @@
 tc = int(input())
 for it in range(tc):
-    n, k, m = list(map(int, input().split()))
+    (n, k, m) = list(map(int, input().split()))
     cnt = 0
     cntr = k + m
     a = list(map(int, input().split()))
@@ -14,8 +14,8 @@ for it in range(tc):
         cnt = cnt + a[j]
     a.sort()
     c.sort()
-    while(n > 0 and cntr > 0):
-        if(a[n - 1] >= c[cntr - 1]):
+    while n > 0 and cntr > 0:
+        if a[n - 1] >= c[cntr - 1]:
             cnt = cnt - c[cntr - 1]
             cntr = cntr - 1
             n = n - 1

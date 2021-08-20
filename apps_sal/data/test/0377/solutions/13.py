@@ -8,12 +8,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, x, y = egcd(b % a, a)
-        return (g, y - (b // a) * x, x)
+        (g, x, y) = egcd(b % a, a)
+        return (g, y - b // a * x, x)
 
 
 def mulinv(b, n):
-    g, x, _ = egcd(b, n)
+    (g, x, _) = egcd(b, n)
     if g == 1:
         return x % n
 
@@ -40,10 +40,8 @@ def f(p=0):
         return int(input())
 
 
-n, k = f(2)
-
+(n, k) = f(2)
 t = min(k, n - k)
-
 if t == 0:
     if k == 0:
         print(1)

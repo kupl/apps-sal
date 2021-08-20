@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 pwds = [input() for _ in range(N)]
 correct = input()
 pwds = sorted([pwd for pwd in pwds if len(pwd) <= len(correct)], key=len)
@@ -21,4 +21,4 @@ while i < len(pwds) - 1:
         count = 0
     i += 1
 worst = time + 1
-print(str(best) + " " + str(worst))
+print(str(best) + ' ' + str(worst))

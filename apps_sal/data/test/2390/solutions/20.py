@@ -1,6 +1,6 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 XV = [list(map(int, input().split())) for _ in range(n)]
-X, V = zip(*XV)
+(X, V) = zip(*XV)
 dp_I_r = [0] * n
 dp_U_r = [0] * n
 dp_I_l = [0] * n

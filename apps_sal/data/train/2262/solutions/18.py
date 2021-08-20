@@ -1,4 +1,3 @@
-# coding: utf-8
 import array
 import bisect
 import collections
@@ -16,25 +15,33 @@ INF = 10 ** 20
 MOD = 10 ** 9 + 7
 
 
-def II(): return int(input())
-def ILI(): return list(map(int, input().split()))
-def IAI(LINE): return [ILI() for __ in range(LINE)]
-def IDI(): return {key: value for key, value in ILI()}
+def II():
+    return int(input())
+
+
+def ILI():
+    return list(map(int, input().split()))
+
+
+def IAI(LINE):
+    return [ILI() for __ in range(LINE)]
+
+
+def IDI():
+    return {key: value for (key, value) in ILI()}
 
 
 def read():
-    R, C, N = ILI()
+    (R, C, N) = ILI()
     num_point = []
     for __ in range(N):
-        x_1, y_1, x_2, y_2 = ILI()
+        (x_1, y_1, x_2, y_2) = ILI()
         num_point.append([(x_1, y_1), (x_2, y_2)])
-    return R, C, N, num_point
+    return (R, C, N, num_point)
 
 
-# 周上を (0, 0) を原点として反時計回りに 1 本の数直線とした時の point の座標を返す．
-# 周上にあるかの判定も行う．
 def change_edge_point(R, C, point):
-    x, y = point
+    (x, y) = point
     if x == 0:
         return R * 2 + C + (C - y)
     if x == R:
@@ -47,8 +54,8 @@ def change_edge_point(R, C, point):
 
 def solve(R, C, N, num_point):
     point_double = []
-    for ind, point in enumerate(num_point):
-        p_1, p_2 = point
+    for (ind, point) in enumerate(num_point):
+        (p_1, p_2) = point
         if ((p_1[0] == 0 or p_1[0] == R) or (p_1[1] == 0 or p_1[1] == C)) and ((p_2[0] == 0 or p_2[0] == R) or (p_2[1] == 0 or p_2[1] == C)):
             point_double.append((ind + 1, change_edge_point(R, C, p_1)))
             point_double.append((ind + 1, change_edge_point(R, C, p_2)))
@@ -62,16 +69,15 @@ def solve(R, C, N, num_point):
             stack.pop()
         else:
             stack.append(point[0])
-
     if len(stack) == 0:
-        return "YES"
+        return 'YES'
     else:
-        return "NO"
+        return 'NO'
 
 
 def main():
     params = read()
-    print((solve(*params)))
+    print(solve(*params))
 
 
 def __starting_point():

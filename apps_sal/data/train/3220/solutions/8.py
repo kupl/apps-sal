@@ -1,5 +1,4 @@
 from fractions import Fraction as F
-
 cache = {}
 
 
@@ -24,9 +23,8 @@ def solve(a, b):
     for n in range(max(a, 1), b):
         r = F(sum(divisors(n)), n)
         vals.setdefault(r, []).append(n)
-
     result = 0
-    for k, v in vals.items():
+    for (k, v) in vals.items():
         if len(v) >= 2:
             result += v[0]
     return result

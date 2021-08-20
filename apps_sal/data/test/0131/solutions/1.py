@@ -3,10 +3,9 @@ import math
 import random
 from fractions import gcd
 from itertools import permutations
-
 debug = 0
 if debug:
-    f = open("input.txt", "r")
+    f = open('input.txt', 'r')
     input = f.readline
 else:
     input = sys.stdin.readline
@@ -21,9 +20,9 @@ def _main():
     a = mp()
     b = mp()
     if sum(a) < sum(b):
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
 
 
 _main()

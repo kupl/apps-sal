@@ -6,14 +6,14 @@ cells = []
 condition = False
 while True:
     if a < 0 or a >= n:
-        print("FINITE")
+        print('FINITE')
         break
-    if s[a] == ">":
+    if s[a] == '>':
         a += numbers[a]
     else:
         condition = True
         a -= numbers[a]
     if condition and a in cells:
-        print("INFINITE")
+        print('INFINITE')
         break
     cells.append(a)

@@ -9,8 +9,8 @@ for i in list(map(int, input().split())):
     else:
         None
 if N <= d4 * 2 + 1:
-    print("Yes")
+    print('Yes')
 elif N - d4 * 2 <= d2:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

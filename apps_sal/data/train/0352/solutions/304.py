@@ -1,4 +1,5 @@
 class Solution:
+
     def string1(self, s1, s2):
         if abs(len(s1) - len(s2)) > 1 or abs(len(s1) - len(s2)) == 0:
             return False
@@ -27,9 +28,9 @@ class Solution:
         for i in range(len(words)):
             w = words[i]
             m = max([m] + list(d.values()))
-            d = {key: val for key, val in list(d.items()) if len(key) <= len(w) + 1}
+            d = {key: val for (key, val) in list(d.items()) if len(key) <= len(w) + 1}
             d[w] = 1
-            for key, val in list(d.items()):
+            for (key, val) in list(d.items()):
                 if self.string1(key, w):
                     d[w] = max(d[w], d[key] + 1)
             l = len(w)

@@ -1,32 +1,24 @@
 def main():
     import sys
     input = sys.stdin.readline
-    sys.setrecursionlimit(10**7)
+    sys.setrecursionlimit(10 ** 7)
     from collections import Counter, deque
-    #from collections import defaultdict
     from itertools import combinations, permutations, accumulate, groupby
-    #from itertools import product
     from bisect import bisect_left, bisect_right
     from heapq import heapify, heappop, heappush
     from math import floor, ceil
-    #from operator import itemgetter
-
-    #inf = 10**17
-    #mod = 10**9 + 7
-
-    n, W = map(int, input().split())
-    w, v = [], []
+    (n, W) = map(int, input().split())
+    (w, v) = ([], [])
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if i == 0:
             w.append(a)
         else:
             w.append(a - w[0])
         v.append(b)
-    # w1の重さ
     base = w[0]
     w[0] = 0
-    w0, w1, w2, w3 = [], [], [], []
+    (w0, w1, w2, w3) = ([], [], [], [])
     for i in range(n):
         if w[i] == 0:
             w0.append(v[i])
@@ -48,7 +40,6 @@ def main():
     w1 = list(accumulate(w1))
     w2 = list(accumulate(w2))
     w3 = list(accumulate(w3))
-
     res = 0
     for i in range(len(w0)):
         for j in range(len(w1)):

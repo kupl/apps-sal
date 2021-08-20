@@ -5,14 +5,16 @@ import collections as cc
 import math as mt
 import itertools as it
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 def CeilIndex(A, l, r, key):
-    while (r - l > 1):
-
+    while r - l > 1:
         m = l + (r - l) // 2
-        if (A[m] >= key):
+        if A[m] >= key:
             r = m
         else:
             l = m
@@ -25,19 +27,16 @@ def lis(A, size):
     tailTable[0] = A[0]
     len = 1
     for i in range(1, size):
-
-        if (A[i] < tailTable[0]):
+        if A[i] < tailTable[0]:
             tailTable[0] = A[i]
-
-        elif (A[i] > tailTable[len - 1]):
+        elif A[i] > tailTable[len - 1]:
             tailTable[len] = A[i]
             len += 1
-
         else:
             tailTable[CeilIndex(tailTable, -1, len - 1, A[i])] = A[i]
     return len
 
 
-n, = I()
+(n,) = I()
 l = I()
 print(lis(l, n))

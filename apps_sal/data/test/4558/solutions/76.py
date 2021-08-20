@@ -1,4 +1,4 @@
-x, t = map(int, input().split())
+(x, t) = map(int, input().split())
 if t >= x:
     print(0)
 else:

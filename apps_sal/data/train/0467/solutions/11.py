@@ -1,4 +1,5 @@
 class Solution:
+
     def divisors(self, n):
         for i in range(1, int(sqrt(n) + 1)):
             if n % i == 0:

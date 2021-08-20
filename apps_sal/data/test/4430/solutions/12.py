@@ -5,7 +5,7 @@ def minp():
     return sys.stdin.readline().strip()
 
 
-n, mm, k = map(int, minp().split())
+(n, mm, k) = map(int, minp().split())
 a = list(map(int, minp().split()))
 
 
@@ -19,11 +19,6 @@ def tt(x):
                 return False
             c = i
             m -= 1
-            # if i == k:
-            #	if m == 0:
-            #		return False
-            #	m -= 1
-            #	c = 0
         else:
             c += i
     return True

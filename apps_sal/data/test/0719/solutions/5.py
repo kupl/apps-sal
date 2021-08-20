@@ -2,7 +2,7 @@ nums = set()
 
 
 def generate(missing, num):
-    if int(num) > 10**8:
+    if int(num) > 10 ** 8:
         return
     if missing == 0:
         nums.add(int(num))
@@ -12,10 +12,7 @@ def generate(missing, num):
 
 for i in range(1, 10):
     generate(10 - i, str(i))
-
 nums2 = list(nums)
 nums2.sort()
-
 k = int(input())
-
 print(nums2[k - 1])

@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 MOD = 10 ** 9 + 7
 ans = 1
 for i in range(K, N + 1):

@@ -28,8 +28,8 @@ for i in range(0, n):
             else:
                 continue
 if dup:
-    print("No")
+    print('No')
 elif x:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

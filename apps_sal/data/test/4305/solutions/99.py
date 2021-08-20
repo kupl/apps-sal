@@ -1,4 +1,4 @@
-H, A = list(map(int, input().split()))
+(H, A) = list(map(int, input().split()))
 k = 0
 while H > 0:
     H -= A

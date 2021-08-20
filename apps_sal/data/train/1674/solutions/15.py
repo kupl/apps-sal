@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameII(self, piles: List[int]) -> int:
         m = len(piles)
         dp = [[0 for j in range(m + 1)] for i in range(m)]

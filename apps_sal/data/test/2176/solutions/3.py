@@ -5,7 +5,7 @@ p = 998244353
 sil = [0] * 400000
 sil[1] = 1
 for i in range(2, 400000):
-    sil[i] = (sil[i - 1] * i) % p
+    sil[i] = sil[i - 1] * i % p
 
 
 def fun(l):
@@ -14,11 +14,11 @@ def fun(l):
     count = 1
     for i in range(1, len(l)):
         if l[i] != l[i - 1]:
-            wyn = (wyn * sil[count]) % p
+            wyn = wyn * sil[count] % p
             count = 1
         else:
             count += 1
-    wyn = (wyn * sil[count]) % p
+    wyn = wyn * sil[count] % p
     return wyn
 
 
@@ -44,12 +44,10 @@ for i in range(1, len(dolne)):
     if min(dolne[i]) < max(dolne[i - 1]):
         c = 0
         break
-# c = 0 means no overlaps
-
 wyn = fun(xx) + fun(yy)
 if c == 1:
     dupa = 1
     for i in range(len(dolne)):
-        dupa = (dupa * fun(dolne[i])) % p
+        dupa = dupa * fun(dolne[i]) % p
     wyn -= dupa
 print((sil[n] - wyn) % p)

@@ -1,9 +1,7 @@
 def main():
     MOD = 998244353
-
-    N, S = list(map(int, input().split()))
-    *A, = list(map(int, input().split()))
-
+    (N, S) = list(map(int, input().split()))
+    (*A,) = list(map(int, input().split()))
     dp = [0] * (S + 1)
     ans = 0
     for x in A:

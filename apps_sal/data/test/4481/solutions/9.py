@@ -5,7 +5,7 @@ for _ in range(N):
     charnums[input()] += 1
 ans = []
 m = max(charnums.values())
-for key, value in charnums.items():
+for (key, value) in charnums.items():
     if value == m:
         ans.append(key)
 for an in sorted(ans):

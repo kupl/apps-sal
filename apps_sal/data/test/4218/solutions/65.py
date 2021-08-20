@@ -4,4 +4,4 @@ if n % 2 == 0:
 elif n == 1:
     print(1)
 else:
-    print(((n + 1) / 2) / n)
+    print((n + 1) / 2 / n)

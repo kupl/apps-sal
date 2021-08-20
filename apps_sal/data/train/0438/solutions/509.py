@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         a = [x - 1 for x in arr]
         n = len(a)
@@ -12,15 +13,13 @@ class Solution:
             return parent[u]
 
         def union(u, v):
-            x, y = find(u), find(v)
+            (x, y) = (find(u), find(v))
             if x != y:
                 parent[y] = x
                 size[x] += size[y]
-
         res = -1
         bits = [0] * n
-
-        for i, u in enumerate(a, 1):
+        for (i, u) in enumerate(a, 1):
             bits[u] = 1
             size[u] = 1
             count[1] += 1
@@ -35,7 +34,4 @@ class Solution:
                 count[size[find(u)]] += 1
             if count[m] > 0:
                 res = i
-            # print(i, size)
-            # print(i, count)
-
         return res

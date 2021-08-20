@@ -1,7 +1,6 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
+INF = float('inf')
 MOD = 10 ** 9 + 7
 
 
@@ -10,11 +9,10 @@ def input():
 
 
 class WeightedUnionFind:
+
     def __init__(self, n_nodes):
         self.n_nodes = n_nodes
         self.parents = [-1] * n_nodes
-
-        # 親への重みを管理
         self.weights = [0] * n_nodes
 
     def find(self, x):
@@ -26,20 +24,16 @@ class WeightedUnionFind:
             self.parents[x] = parent
             return parent
 
-    # xからyへの重みがw
     def unite(self, x, y, w):
         w += self.weights[x]
         w -= self.weights[y]
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
+            (x, y) = (y, x)
             w *= -1
-
         self.parents[x] += self.parents[y]
         self.parents[y] = x
         self.weights[y] = w
@@ -56,23 +50,21 @@ class WeightedUnionFind:
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     tree = WeightedUnionFind(N)
     for _ in range(M):
-        L, R, D = list(map(int, input().split()))
+        (L, R, D) = list(map(int, input().split()))
         L -= 1
         R -= 1
-
         if tree.is_same(L, R):
             if tree.get_weight(L, R) == D:
                 continue
             else:
-                print("No")
+                print('No')
                 return
         else:
             tree.unite(L, R, D)
-
-    print("Yes")
+    print('Yes')
     return
 
 

@@ -1,9 +1,9 @@
 def weather_info(temp):
     c = convert_to_celsius(temp)
-    if (c > 0):
-        return ("{} is above freezing temperature").format(c)
+    if c > 0:
+        return '{} is above freezing temperature'.format(c)
     else:
-        return ("{} is freezing temperature").format(c)
+        return '{} is freezing temperature'.format(c)
 
 
 def convert_to_celsius(temperature):

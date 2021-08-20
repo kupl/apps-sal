@@ -12,7 +12,7 @@ def sev(n: str) -> int:
     while d > 2:
         for comb in itertools.product(['3', '5', '7'], repeat=d):
             s = ''.join(comb)
-            if '3' in comb and '5' in comb and '7' in comb and int(s) <= int(n):
+            if '3' in comb and '5' in comb and ('7' in comb) and (int(s) <= int(n)):
                 ret += 1
         d -= 1
     return ret

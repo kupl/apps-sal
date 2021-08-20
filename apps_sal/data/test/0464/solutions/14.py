@@ -1,19 +1,18 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = []
 for i in range(n):
     arr.append(input())
-
 seen = set()
 
 
 def get_first_star():
-    r, c = -1, -1
+    (r, c) = (-1, -1)
     for i in range(n):
         for j in range(m):
             if arr[i][j] == '*':
                 seen.add((i, j))
-                return i, j
-    return r, c
+                return (i, j)
+    return (r, c)
 
 
 def vertical_points(r, c):
@@ -46,21 +45,18 @@ def find_horizontal(r, re, c):
 
 
 def find_answer():
-    r, c = get_first_star()
+    (r, c) = get_first_star()
     if c <= 0 or c >= m - 1:
         return -1
-
     re = vertical_points(r, c)
     res = find_horizontal(r, re, c)
     if res == -1:
         return -1
-
     for i in range(n):
         for j in range(m):
             if (i, j) not in seen and arr[i][j] == '*':
                 return -1
-
     return 1
 
 
-print("YES" if find_answer() == 1 else "NO")
+print('YES' if find_answer() == 1 else 'NO')

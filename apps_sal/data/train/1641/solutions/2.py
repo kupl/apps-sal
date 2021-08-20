@@ -11,14 +11,12 @@ def extend(nl, dimension, size, growing_value):
         except TypeError:
             return [nl] * size
         return nl + [growing_value] * (size - s)
-    # dimension > 1
     try:
         s = len(nl)
     except TypeError:
         return [extend(nl, dimension - 1, size, growing_value)] * size
     else:
-        return ([extend(sl, dimension - 1, size, growing_value) for sl in nl] +
-                [extend(growing_value, dimension - 1, size, growing_value)] * (size - s))
+        return [extend(sl, dimension - 1, size, growing_value) for sl in nl] + [extend(growing_value, dimension - 1, size, growing_value)] * (size - s)
 
 
 def dimension(nested_list):

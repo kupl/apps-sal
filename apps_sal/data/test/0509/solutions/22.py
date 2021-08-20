@@ -1,4 +1,3 @@
-
 def main():
     count = int(input())
     arr = []
@@ -12,9 +11,9 @@ def main():
             duplicate.append((y - x) % 360)
         store = duplicate.copy()
     if 0 in store:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 main()

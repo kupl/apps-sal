@@ -1,4 +1,5 @@
 class Solution:
+
     def detectCapitalUse(self, word):
         """
         :type word: str
@@ -10,5 +11,4 @@ class Solution:
             return True
         if word[0].isupper() and word[1:].islower():
             return True
-
         return False

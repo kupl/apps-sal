@@ -6,4 +6,4 @@ def reverse(hernia):
     if power == 0:
         return hernia
     else:
-        return ((hernia % 10) * (10 ** power)) + reverse(hernia // 10)
+        return hernia % 10 * 10 ** power + reverse(hernia // 10)

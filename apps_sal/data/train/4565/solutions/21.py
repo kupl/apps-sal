@@ -5,5 +5,4 @@ def replace_dots(s):
         if s[i] == '.':
             s[i] = '-'
         i += 1
-
     return ''.join(s)

@@ -4,7 +4,7 @@ import math
 def calc_base(k):
     base = k
     for i in range(1, k):
-        base += 9 * i * (10 ** (i - 1))
+        base += 9 * i * 10 ** (i - 1)
     return base
 
 
@@ -24,11 +24,11 @@ def global_offset(k):
 
 
 def local_offset(k, l, base):
-    return l * base + (k * l * (l - 1)) // 2
+    return l * base + k * l * (l - 1) // 2
 
 
 def bs_long(n):
-    l, r = -1, 10
+    (l, r) = (-1, 10)
     while r - l > 1:
         m = (r + l) // 2
         s = global_offset(m)
@@ -42,7 +42,7 @@ def bs_long(n):
 
 
 def bs_short(pos, base, k):
-    l, r = -1, 10 ** k - 10 ** (k - 1)
+    (l, r) = (-1, 10 ** k - 10 ** (k - 1))
     while r - l > 1:
         m = (r + l) // 2
         lb = local_offset(k, m, base)
@@ -64,7 +64,7 @@ def digit_offset(number):
 
 
 def bs_digit(k, x, base, n):
-    l, r = 0, 10 ** k + x + 1
+    (l, r) = (0, 10 ** k + x + 1)
     while r - l > 1:
         m = (r + l) // 2
         lb = digit_offset(m)

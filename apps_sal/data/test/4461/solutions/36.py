@@ -1,5 +1,5 @@
-h, w = map(int, input().split())
-if (h % 3 == 0) or (w % 3 == 0):
+(h, w) = map(int, input().split())
+if h % 3 == 0 or w % 3 == 0:
     print(0)
 else:
     ans = h * w
@@ -24,5 +24,5 @@ else:
         kari = max(a, b, c) - min(a, b, c)
         if ans3 > kari:
             ans3 = kari
-    ans2 = ((max(h, w) // 3 + 1) * min(h, w)) - ((max(h, w) // 3) * min(h, w))
+    ans2 = (max(h, w) // 3 + 1) * min(h, w) - max(h, w) // 3 * min(h, w)
     print(min(ans, ans2, ans3))

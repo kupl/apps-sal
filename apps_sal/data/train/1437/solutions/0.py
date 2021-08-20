@@ -6,7 +6,7 @@ def findnumber(l, n):
     x = l[0] * l[-1]
     vec = []
     i = 2
-    while (i * i) <= x:
+    while i * i <= x:
         if x % i == 0:
             vec.append(i)
             if x // i != i:
@@ -18,7 +18,7 @@ def findnumber(l, n):
     else:
         j = 0
         for it in range(n):
-            if(l[j] != vec[it]):
+            if l[j] != vec[it]:
                 return -1
             else:
                 j += 1

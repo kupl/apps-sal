@@ -1,18 +1,18 @@
 import bisect
-A, B, Q = map(int, input().split())
-s = [-10**15]
-t = [-10**15]
+(A, B, Q) = map(int, input().split())
+s = [-10 ** 15]
+t = [-10 ** 15]
 ans = []
 for _ in range(A):
     s.append(int(input()))
 for _ in range(B):
     t.append(int(input()))
-s.append(10**15)
-t.append(10**15)
+s.append(10 ** 15)
+t.append(10 ** 15)
 
 
 def search(a, b, q):
-    dis = 10**15
+    dis = 10 ** 15
     S = [s[a - 1], s[a]]
     T = [t[b - 1], t[b]]
     for i in range(2):

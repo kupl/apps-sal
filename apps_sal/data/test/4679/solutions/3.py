@@ -6,7 +6,6 @@ def discard(c: str, da: deque, db: deque, dc: deque) -> str:
         c = eval(f'd{c}.popleft()')
     else:
         return c.upper()
-
     return discard(c, da, db, dc)
 
 
@@ -18,7 +17,7 @@ def answer(sa: str, sb: str, sc: str) -> str:
 
 
 def main():
-    sa, sb, sc = [input() for _ in range(3)]
+    (sa, sb, sc) = [input() for _ in range(3)]
     print(answer(sa, sb, sc))
 
 

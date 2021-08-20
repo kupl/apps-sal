@@ -7,7 +7,7 @@ for a in A_list:
     else:
         A_dict[a] += 1
 ans = 0
-for key, val in list(A_dict.items()):
+for (key, val) in list(A_dict.items()):
     temp = 0
     if A_dict.get(key - 1) is not None:
         temp += A_dict.get(key - 1)

@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, k = [i for i in input().split()]
+    (n, k) = [i for i in input().split()]
     k = len(set(n))
     if k == 3:
         print(27)

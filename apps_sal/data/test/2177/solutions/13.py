@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    A, B = list(map(int, input().split()))
+    (A, B) = list(map(int, input().split()))
     ans = 0
     nines = 9
     while nines <= B:

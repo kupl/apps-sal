@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         ans = 0
         for i in range(1, N + 1):
@@ -6,6 +7,5 @@ class Solution:
             if x <= 0:
                 break
             if x == int(x):
-                # print(i,x)
                 ans += 1
         return ans

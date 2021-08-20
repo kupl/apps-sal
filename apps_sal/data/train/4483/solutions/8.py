@@ -4,7 +4,7 @@ FRUIT_NAMES = {'blueberry', 'pear', 'durian', 'ginkgo', 'peach', 'apple', 'canta
 
 
 def cut_fruits(fruits):
+
     def half(f):
         return [f[0:ceil(len(f) / 2)], f[ceil(len(f) / 2):]] if f in FRUIT_NAMES else [f]
-
     return list(chain(*[half(f) for f in fruits]))

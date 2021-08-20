@@ -1,4 +1,4 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 h = [int(i) for i in input().split()]
 edges = [[] for i in range(n)]
 for _ in range(m):
@@ -6,7 +6,6 @@ for _ in range(m):
     edges[edge[0]].append(edge[1])
     edges[edge[1]].append(edge[0])
 cnt = 0
-
 for i in range(n):
     flg = True
     for j in edges[i]:

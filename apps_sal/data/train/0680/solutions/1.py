@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 import re
 import os
@@ -9,7 +8,7 @@ for i in range(int(input())):
     b_s = 0
     M = 998244353
     ans = 0
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a_s = sum(a)
@@ -17,12 +16,12 @@ for i in range(int(input())):
     q = int(input())
     for i in range(0, q):
         I = list(map(int, input().split()))
-        if(I[0] == 3):
-            ans = (a_s * b_s) % M
+        if I[0] == 3:
+            ans = a_s * b_s % M
             print(ans)
         else:
-            t, l, r, x = list(map(int, I))
-            if(t == 1):
-                a_s = (a_s + (x * (r - l + 1))) % M
+            (t, l, r, x) = list(map(int, I))
+            if t == 1:
+                a_s = (a_s + x * (r - l + 1)) % M
             else:
-                b_s = (b_s + (x * (r - l + 1))) % M
+                b_s = (b_s + x * (r - l + 1)) % M

@@ -2,7 +2,7 @@ a = int(input())
 pol1 = []
 pol2 = []
 for i in range(a):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     pol1.append(x)
     pol2.append(y)
 f = 0

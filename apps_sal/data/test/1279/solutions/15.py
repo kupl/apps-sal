@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 A = list(map(lambda x: x % 2, A))

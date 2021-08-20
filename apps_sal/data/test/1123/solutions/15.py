@@ -1,8 +1,6 @@
-n, k = map(int, input().split())
-mod = 10**9 + 7
-"""
-dp[i] := gcd(a1,...,an) = i となるものがいくつあるか
-"""
+(n, k) = map(int, input().split())
+mod = 10 ** 9 + 7
+'\ndp[i] := gcd(a1,...,an) = i となるものがいくつあるか\n'
 dp = [0 for _ in range(k + 1)]
 subdp = [0 for _ in range(k + 1)]
 for i in range(1, k + 1)[::-1]:

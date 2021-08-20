@@ -1,4 +1,5 @@
 class Child:
+
     def __init__(self, name):
         self.name = name
         self.children = []
@@ -10,7 +11,6 @@ def recursive(order):
         out = [order.name]
     else:
         out = []
-
     for i in order.children:
         out += recursive(i)
     return out
@@ -31,12 +31,4 @@ class ThroneInheritance:
         self.dict[name].dead = True
 
     def getInheritanceOrder(self) -> List[str]:
-
         return recursive(self.order)
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

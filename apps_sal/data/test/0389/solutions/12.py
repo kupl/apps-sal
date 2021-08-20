@@ -15,18 +15,18 @@ def main():
     b2 = 0
     b3 = 0
     b5 = 0
-    a, b = map(int, input().split(" "))
+    (a, b) = map(int, input().split(' '))
     if a == b:
         print(0)
         return
         pass
-    at, bt = a, b
-    a2, a = d(a, 2)
-    a3, a = d(a, 3)
-    a5, a = d(a, 5)
-    b2, b = d(b, 2)
-    b3, b = d(b, 3)
-    b5, b = d(b, 5)
+    (at, bt) = (a, b)
+    (a2, a) = d(a, 2)
+    (a3, a) = d(a, 3)
+    (a5, a) = d(a, 5)
+    (b2, b) = d(b, 2)
+    (b3, b) = d(b, 3)
+    (b5, b) = d(b, 5)
     if a != b:
         print(-1)
         return

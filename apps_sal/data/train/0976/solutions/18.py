@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 a = list(map(int, input().split()))
 q = []
@@ -7,8 +6,7 @@ depth = 0
 bracket = [0, 0]
 brac_count = [0, 0]
 brac_ind = [0, 0]
-
-for i, v in enumerate(a):
+for (i, v) in enumerate(a):
     if v == 1 or v == 3:
         if v == 1:
             if brac_count[0] == 0:
@@ -18,7 +16,6 @@ for i, v in enumerate(a):
             if brac_count[1] == 0:
                 brac_ind[1] = i
             brac_count[1] += 1
-
         if not q or v != q[-1]:
             temp += 1
         q.append(v)
@@ -35,5 +32,4 @@ for i, v in enumerate(a):
             brac_count[1] -= 1
             if brac_count[1] == 0:
                 bracket[1] = max(bracket[1], i - brac_ind[1] + 1)
-
 print(depth, bracket[0], bracket[1])

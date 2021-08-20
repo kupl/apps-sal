@@ -26,9 +26,8 @@ def get(graph):
                         else:
                             vis[x] = 1
                         q.append(x)
-                    else:
-                        if vis[x] == vis[a]:
-                            return 0
+                    elif vis[x] == vis[a]:
+                        return 0
             l.append([even, odd])
     m = len(l)
     x = pow(2, l[0][0], mod)
@@ -44,38 +43,15 @@ def get(graph):
     return False
 
 
-'''def count(graph):
-    vis=defaultdict(int)
-    even=0
-    odd=0
-    for i in range(1,n+1):
-        if vis[i]==0:
-            vis[i]=1
-            q=deque()
-            q.append([i,0])
-            while q:
-                a,dis=q.popleft()
-                if dis%2==0:
-                    even+=1
-                else:
-                    odd+=1
-                for x in graph[a]:
-                    if vis[x]==0:
-                        vis[x]=1
-                        q.append([x,dis+1])
-    return (even,odd)'''
+'def count(graph):\n    vis=defaultdict(int)\n    even=0\n    odd=0\n    for i in range(1,n+1):\n        if vis[i]==0:\n            vis[i]=1\n            q=deque()\n            q.append([i,0])\n            while q:\n                a,dis=q.popleft()\n                if dis%2==0:\n                    even+=1\n                else:\n                    odd+=1\n                for x in graph[a]:\n                    if vis[x]==0:\n                        vis[x]=1\n                        q.append([x,dis+1])\n    return (even,odd)'
 t = int(sys.stdin.readline())
 for _ in range(t):
     graph = defaultdict(list)
-
-    n, m = list(map(int, sys.stdin.readline().split()))
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     for i in range(m):
-        u, v = list(map(int, sys.stdin.readline().split()))
+        (u, v) = list(map(int, sys.stdin.readline().split()))
         graph[u].append(v)
         graph[v].append(u)
-    '''if _ == 5:
-        print(graph)
-    #print(graph,'graph')'''
+    "if _ == 5:\n        print(graph)\n    #print(graph,'graph')"
     z = get(graph)
-    # print(z,'z')
     print(z)

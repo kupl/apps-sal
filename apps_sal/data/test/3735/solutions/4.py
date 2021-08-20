@@ -9,13 +9,13 @@ def mainA():
 
 
 def mainB():
+
     def get(n):
         ret = 0
         while n > 0:
             ret += n % 10
             n //= 10
         return ret
-
     n = int(input())
     if n <= 9:
         print(n)

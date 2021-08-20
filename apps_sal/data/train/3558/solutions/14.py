@@ -4,4 +4,4 @@ def capitalize_word(word):
     return word.capitalize()
 
 
-print(capitalize_word("blea"))
+print(capitalize_word('blea'))

@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 A = list(map(int, input().split()))
 c = 0
 ans = 0

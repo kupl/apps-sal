@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         return self.dp(s, 0, 0, [])
 
@@ -11,7 +12,4 @@ class Solution:
             ans.append(s[start:pos + 1])
             a = self.dp(s, pos + 1, pos + 1, list(ans))
             ans.pop()
-        # ans.remove(s[start:pos+1])
-
         return a if a > b else b
-        # return ans

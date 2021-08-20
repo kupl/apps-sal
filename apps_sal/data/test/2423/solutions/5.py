@@ -1,7 +1,7 @@
 n = int(input())
-a, d, f = [], 0, 0
+(a, d, f) = ([], 0, 0)
 for i in range(n - 1):
-    k, l = list(map(int, input().split()))
+    (k, l) = list(map(int, input().split()))
     a.append(k)
     a.append(l)
 for i in range(len(a)):

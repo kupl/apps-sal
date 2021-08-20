@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         l = len(hand)
         if l % W != 0:
@@ -11,7 +12,6 @@ class Solution:
             if l - 1 not in lst and l + 1 not in lst:
                 return False
         while lst:
-            # print(lst)
             begin = lst[0]
             ct[begin] -= 1
             if ct[begin] == 0:

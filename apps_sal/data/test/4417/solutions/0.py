@@ -1,5 +1,5 @@
 for ei in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     A = list(map(int, input().split()))
     ans = min(A) + k
     for i in A:

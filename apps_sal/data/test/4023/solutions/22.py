@@ -12,21 +12,17 @@ for i in range(n):
     if sp > 0:
         if b[sp] > b[sp - 1]:
             f = False
-
         if b[sp] == b[sp - 1]:
             sp = sp - 2
-
 if f == True:
     if sp == 0:
         if b[sp] >= max:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
     elif sp < 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
-
+        print('NO')
 else:
-    print("NO")
+    print('NO')

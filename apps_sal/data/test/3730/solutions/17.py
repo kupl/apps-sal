@@ -4,9 +4,9 @@ def solve():
     dp0 = [1 for i in range(size)]
     dp1 = [1 for i in range(size)]
     for i in range(1, size):
-        dp0[i] = dp0[i - 1] + 1 if (ls[i - 1] < ls[i]) else 1
+        dp0[i] = dp0[i - 1] + 1 if ls[i - 1] < ls[i] else 1
     for i in range(0, size - 1)[::-1]:
-        dp1[i] = dp1[i + 1] + 1 if (ls[i + 1] > ls[i]) else 1
+        dp1[i] = dp1[i + 1] + 1 if ls[i + 1] > ls[i] else 1
     best = max(max(dp0), max(dp1))
     for i in range(0, size):
         if i >= 1:

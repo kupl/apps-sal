@@ -2,6 +2,7 @@ from bisect import bisect_right
 
 
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         arr = [float('-inf')] + arr + [float('inf')]
         if arr == sorted(arr):

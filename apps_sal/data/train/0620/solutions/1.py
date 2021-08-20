@@ -4,10 +4,8 @@ def solve(arr, n, k):
     ans = 0
     m = -1
     f = 0
-
     i = 0
     j = -1
-
     while j < n - 1:
         if arr[j + 1] <= k:
             j += 1
@@ -32,6 +30,6 @@ def solve(arr, n, k):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     print(solve(arr, n, k))

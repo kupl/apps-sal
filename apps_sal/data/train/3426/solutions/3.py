@@ -4,7 +4,7 @@ def tax_calculator(total):
     bands = [(10, 0.1), (10, 0.07), (10, 0.05), (None, 0.03)]
     residue = total
     tax = 0
-    for band_width, rate in bands:
+    for (band_width, rate) in bands:
         if residue == 0:
             break
         if band_width is not None:

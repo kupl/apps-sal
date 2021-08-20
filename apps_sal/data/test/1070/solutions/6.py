@@ -1,6 +1,5 @@
-n, k = list(map(int, input().strip().split()))
+(n, k) = list(map(int, input().strip().split()))
 colors = list(map(int, input().strip().split()))
-
 l = 0
 previ = -1
 for i in range(n - 1):
@@ -9,12 +8,10 @@ for i in range(n - 1):
         if cl > l:
             l = cl
         previ = i
-
 if previ == -1:
     l = n
 else:
-    cl = (n - 1) - previ
+    cl = n - 1 - previ
     if cl > l:
         l = cl
-
 print(l)

@@ -1,4 +1,5 @@
 class Solution:
+
     def isScramble(self, s1, s2):
         """
         :type s1: str
@@ -12,6 +13,6 @@ class Solution:
         dp = self.isScramble
         for i in range(1, len(s1)):
             for j in range(1, len(s2)):
-                if (dp(s1[:i], s2[:j]) and dp(s1[i:], s2[j:])) or (dp(s1[:i], s2[j:]) and dp(s1[i:], s2[:j])):
+                if dp(s1[:i], s2[:j]) and dp(s1[i:], s2[j:]) or (dp(s1[:i], s2[j:]) and dp(s1[i:], s2[:j])):
                     return True
         return False

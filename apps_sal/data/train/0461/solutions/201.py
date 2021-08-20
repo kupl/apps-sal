@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def __init__(self):
         self.ans = 0
 
@@ -14,7 +15,7 @@ class Solution:
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         self.informTime = informTime
         self.graph = defaultdict(list)
-        for idx, i in enumerate(manager):
+        for (idx, i) in enumerate(manager):
             self.graph[i].append(idx)
         self.helper(headID, self.graph[headID], self.informTime[headID])
         return self.ans

@@ -1,6 +1,6 @@
 t = int(input())
 for r in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     k -= 1
     want = '()' * k + '(' * (n // 2 - k) + ')' * (n // 2 - k)
     have = input()

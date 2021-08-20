@@ -1,7 +1,6 @@
 from collections import Counter
 S = input()
 mod = 2019
-
 t = len(S)
 l = [0] * (t + 1)
 for i in range(t - 1, -1, -1):
@@ -13,9 +12,7 @@ def nC2(n):
 
 
 l = list(Counter(l).values())
-
 ans = 0
 for i in l:
     ans += nC2(i)
-
 print(ans)

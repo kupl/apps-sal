@@ -1,15 +1,5 @@
-# https://www.codewars.com/kata/525f4206b73515bffb000b21/train/javascript
-# https://www.codewars.com/kata/51c8e37cee245da6b40000bd/train/python
-# https://www.codewars.com/kata/536e7c7fd38523be14000ca2/train/python
-# https://www.codewars.com/kata/52b7ed099cdc285c300001cd/train/python
-
-# [0, 0, 0, None, None, None, None, None]
-#
-#  занятые
-
-# 2
-
 class MemoryManager:
+
     def __init__(self, memory):
         self.memory = [None] * len(memory)
         self.disk = memory

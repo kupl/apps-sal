@@ -1,7 +1,7 @@
 from collections import defaultdict
 from collections import deque
 from sys import stdin
-lines = deque(line.strip() for line in stdin.readlines())
+lines = deque((line.strip() for line in stdin.readlines()))
 
 
 def nextline():
@@ -9,7 +9,7 @@ def nextline():
 
 
 def types(cast):
-    return tuple(int(x) for x in nextline().split())
+    return tuple((int(x) for x in nextline().split()))
 
 
 def ints():
@@ -21,18 +21,17 @@ def strs():
 
 
 def main():
-    # lines will now contain all of the input's lines in a list
     n = int(nextline())
     graph = defaultdict(list)
     for _ in range(1, n):
-        a, b = ints()
+        (a, b) = ints()
         graph[a].append(b)
         graph[b].append(a)
     stack = [(1, 1, 0)]
     visited = set()
     expected = 0
     while stack:
-        city, denominator, length = stack.pop()
+        (city, denominator, length) = stack.pop()
         visited.add(city)
         choices = [choice for choice in graph[city] if choice not in visited]
         if choices:

@@ -1,6 +1,6 @@
 def evil(n):
-    if f"{n:b}".count("1") % 2:
-        ret = "Odious"
+    if f'{n:b}'.count('1') % 2:
+        ret = 'Odious'
     else:
-        ret = "Evil"
+        ret = 'Evil'
     return f"It's {ret}!"

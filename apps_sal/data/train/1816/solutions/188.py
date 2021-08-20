@@ -2,7 +2,9 @@ from collections import Counter
 
 
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
+
         def _convertTime(x):
             h = int(x[0:2])
             m = int(x[3:5])
@@ -11,8 +13,6 @@ class Solution:
         keyTime = [_convertTime(el) for el in keyTime]
         keys = list(zip(keyTime, keyName))
         keys = sorted(keys)
-
-        # Break keys up into individual names
         people = {}
         for key in keys:
             if key[1] in people:
@@ -20,7 +20,7 @@ class Solution:
             else:
                 people[key[1]] = [key]
         ans = []
-        for person, keys in list(people.items()):
+        for (person, keys) in list(people.items()):
             q = []
             for key in keys:
                 time = key[0]
@@ -31,5 +31,3 @@ class Solution:
                     ans.append(key[1])
                     break
         return sorted(ans)
-
-        # Remove people from q

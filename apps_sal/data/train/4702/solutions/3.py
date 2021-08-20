@@ -1,6 +1,5 @@
 from functools import reduce
 from operator import mul
-
 PRODUCTS = {}
 for n in range(10, 5000):
     dig_prod = reduce(mul, map(int, str(n)))

@@ -1,9 +1,9 @@
 def main():
     import math
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     g = math.gcd(a, b)
     ans = [1]
-    for m in range(2, int(g**0.5) + 1):
+    for m in range(2, int(g ** 0.5) + 1):
         if g % m == 0:
             ans.append(m)
             while g % m == 0:
@@ -12,7 +12,7 @@ def main():
             break
     if g != 1:
         ans.append(g)
-    print((len(ans)))
+    print(len(ans))
 
 
 def __starting_point():

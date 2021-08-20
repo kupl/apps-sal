@@ -1,4 +1,5 @@
 class Solution:
+
     def findPoisonedDuration(self, timeSeries, duration):
         """
         :type timeSeries: List[int]
@@ -7,7 +8,6 @@ class Solution:
         """
         if not timeSeries:
             return 0
-
         previous_time = timeSeries[0]
         total_time = duration
         for time in timeSeries[1:]:
@@ -17,5 +17,4 @@ class Solution:
             else:
                 total_time += duration
                 previous_time = time
-
         return total_time

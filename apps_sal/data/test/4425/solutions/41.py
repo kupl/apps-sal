@@ -8,5 +8,5 @@ for i in range(1, N + 1):
     while x <= K - 1:
         x = x * 2
         n += 1
-    ans += (1 / N) * ((1 / 2)**n)
+    ans += 1 / N * (1 / 2) ** n
 print(ans)

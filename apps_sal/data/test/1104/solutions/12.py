@@ -10,14 +10,13 @@ for i in range(1, n):
     for j in range(4):
         if t[j][i - 1] != -1:
             for k in range(4):
-                if (t[j][i - 1] & k == b[i - 1]) and (t[j][i - 1] | k == a[i - 1]):
+                if t[j][i - 1] & k == b[i - 1] and t[j][i - 1] | k == a[i - 1]:
                     t[j][i] = k
                     break
-
 for j in range(4):
     if t[j][n - 1] != -1:
-        print("YES")
+        print('YES')
         print(*t[j])
         break
 else:
-    print("NO")
+    print('NO')

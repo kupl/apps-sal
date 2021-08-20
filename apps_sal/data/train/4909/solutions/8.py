@@ -1,4 +1,5 @@
-class Random():
+class Random:
+
     def __init__(self, seed):
         self.seed = seed
 

@@ -1,16 +1,17 @@
 import math
 import sys
 from collections import defaultdict
-#input = sys.stdin.readline
-def nt(): return list(map(int, input().split()))
+
+
+def nt():
+    return list(map(int, input().split()))
 
 
 def main():
-    n, r = nt()
+    (n, r) = nt()
     projects = [tuple(nt()) for _ in range(n)]
     positive = [t for t in projects if t[1] > 0]
     negative = [t for t in projects if t[1] <= 0]
-
     ok = True
     for p in sorted(positive):
         if p[0] <= r:
@@ -28,7 +29,6 @@ def main():
             else:
                 ok = False
                 break
-
     print('YES' if ok else 'NO')
 
 

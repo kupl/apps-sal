@@ -22,9 +22,9 @@ for node in g[1]:
             q.append(to)
             seen.add(to)
 if d > len(g[1]) or d < len(comps):
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     rem = 0
     rem2 = []
     for i in g[1]:
@@ -45,4 +45,4 @@ else:
                 continue
             q.append(to)
             seen.add(to)
-            print(v, " ", to)
+            print(v, ' ', to)

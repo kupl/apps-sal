@@ -28,7 +28,7 @@ class Solution:
         self.distance = [0] * N
         self.subtree_count = [0] * N
         self.graph = clc.defaultdict(list)
-        for a, b in edges:
+        for (a, b) in edges:
             self.graph[a].append(b)
             self.graph[b].append(a)
         self.preorder(0)

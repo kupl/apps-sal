@@ -1,5 +1,8 @@
-n, k = list(map(int, input().split()))
-def g(x): return int(x) % k
+(n, k) = list(map(int, input().split()))
+
+
+def g(x):
+    return int(x) % k
 
 
 a = list(map(g, input().split()))
@@ -8,7 +11,7 @@ a = list(map(g, input().split()))
 def nod(a, b):
     while b > 0:
         a %= b
-        a, b = b, a
+        (a, b) = (b, a)
     return a
 
 

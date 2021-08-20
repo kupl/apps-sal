@@ -1,5 +1,5 @@
 n = input()
-s = ""
+s = ''
 for i in range(3):
     if n[i] == '1':
         s = s + '9'

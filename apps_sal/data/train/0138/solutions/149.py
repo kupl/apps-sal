@@ -1,5 +1,7 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
+
         def max_len(i, j):
             if i > j:
                 return 0

@@ -1,7 +1,6 @@
 import re
 import math
-
-REGEX_NUMBERS = r"\d+\.?\d*"
+REGEX_NUMBERS = '\\d+\\.?\\d*'
 RESISTOR_COLORS = {0: 'black', 1: 'brown', 2: 'red', 3: 'orange', 4: 'yellow', 5: 'green', 6: 'blue', 7: 'violet', 8: 'gray', 9: 'white'}
 MULTIPLIER = {'k': 1000, 'M': 1000000}
 
@@ -14,4 +13,4 @@ def encode_resistor_colors(ohms_string):
     for key in MULTIPLIER:
         retrieved_val = float(retrieved_val) * MULTIPLIER.get(key) if key in ohms_string else float(retrieved_val)
     subtract = 2 if needs_trailing_zero else 1
-    return translation + ' ' + (RESISTOR_COLORS[math.floor(math.log10(retrieved_val)) - subtract]) + ' gold'
+    return translation + ' ' + RESISTOR_COLORS[math.floor(math.log10(retrieved_val)) - subtract] + ' gold'

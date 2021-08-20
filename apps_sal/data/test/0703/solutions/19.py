@@ -1,4 +1,4 @@
-k, a, b, v = list(map(int, input().split()))
+(k, a, b, v) = list(map(int, input().split()))
 outcome = 0
 while a > 0:
     outcome += 1

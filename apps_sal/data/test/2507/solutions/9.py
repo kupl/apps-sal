@@ -19,7 +19,7 @@ def solve(n, k, a, f):
     return r
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 f = list(map(int, input().split()))
 print(solve(n, k, a, f))

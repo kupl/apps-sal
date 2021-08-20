@@ -1,4 +1,4 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 k = 1
 a = X
 while a <= Y:

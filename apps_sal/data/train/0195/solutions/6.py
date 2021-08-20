@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         t = 0
         d = {}

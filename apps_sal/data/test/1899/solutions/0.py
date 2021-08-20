@@ -1,12 +1,11 @@
-n, s, m, k = map(int, input().split())
+(n, s, m, k) = map(int, input().split())
 a = list(map(int, input().split()))
 nt = [-1 for i in range(n + 1)]
 for i in range(s):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     l -= 1
     for j in range(l, r):
         nt[j] = max(nt[j], r)
-
 dp = [[0 for i in range(m + 1)] for i in range(n + 1)]
 sum = [0 for i in range(n + 1)]
 
@@ -30,13 +29,12 @@ def solve(mid):
     return dp[n][m]
 
 
-lo, hi, ans = 1, 10**9, -1
+(lo, hi, ans) = (1, 10 ** 9, -1)
 while lo <= hi:
     mid = (lo + hi) // 2
-    if(solve(mid) >= k):
+    if solve(mid) >= k:
         ans = mid
         hi = mid - 1
     else:
         lo = mid + 1
-
 print(ans)

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     topmost = set()
     a = iter(map(int, input().split()))
     b = list(map(int, input().split()))

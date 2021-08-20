@@ -1,14 +1,13 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         val = max(nums)
-
         double = 0
         add = 0
         value = 0
         count = 0
         value = val
         while value != 0:
-
             if value % 2 == 0:
                 value = value // 2
                 double += 1
@@ -28,6 +27,5 @@ class Solution:
                 else:
                     value -= 1
                     add += 1
-
             count += add
         return count

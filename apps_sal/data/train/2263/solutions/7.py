@@ -28,7 +28,7 @@ def main():
         elif c == 'c':
             x += 2
     ans = 0
-    if all(a[i] != a[i + 1] for i in range(l - 1)):
+    if all((a[i] != a[i + 1] for i in range(l - 1))):
         ans += 1
     mod = 998244353
     dp = (1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

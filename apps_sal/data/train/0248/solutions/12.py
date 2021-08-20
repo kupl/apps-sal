@@ -1,4 +1,5 @@
 class Solution:
+
     def containsCycle(self, grid: List[List[str]]) -> bool:
         parent = {}
 
@@ -9,14 +10,13 @@ class Solution:
             return parent[u]
 
         def union(u, v):
-            x, y = find(u), find(v)
+            (x, y) = (find(u), find(v))
             if x != y:
                 parent[y] = x
             return x != y
-
-        m, n = len(grid), len(grid[0])
-        for i, row in enumerate(grid):
-            for j, cell in enumerate(row):
+        (m, n) = (len(grid), len(grid[0]))
+        for (i, row) in enumerate(grid):
+            for (j, cell) in enumerate(row):
                 if i + 1 < m and grid[i][j] == grid[i + 1][j]:
                     if not union((i, j), (i + 1, j)):
                         return True

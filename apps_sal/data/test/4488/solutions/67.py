@@ -1,14 +1,10 @@
 A = input()
 B = input()
-
 A = int(A)
 B = int(B)
-
 if A > B:
-    print("GREATER")
-
+    print('GREATER')
 elif A == B:
-    print("EQUAL")
-
+    print('EQUAL')
 else:
-    print("LESS")
+    print('LESS')

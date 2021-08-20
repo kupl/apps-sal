@@ -8,7 +8,6 @@ for c in s:
             continue
     else:
         lis.append(int(c))
-
 for i in lis:
-    print(i, end="")
+    print(i, end='')
 print()

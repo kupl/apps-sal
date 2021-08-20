@@ -23,15 +23,14 @@ def get_way(u, v):
 d = {}
 for i in range(q):
     a = input().split()
-
     if a[0] == '1':
-        v, u, w = list(map(int, a[1:]))
+        (v, u, w) = list(map(int, a[1:]))
         for x in get_way(u, v):
             if x not in d:
                 d[x] = 0
             d[x] += w
     else:
-        v, u = list(map(int, a[1:]))
+        (v, u) = list(map(int, a[1:]))
         res = 0
         for x in get_way(u, v):
             if x in d:

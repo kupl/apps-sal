@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 from sys import stdin
-from fractions import gcd  # math.gcd is introduced in python 3.5
+from fractions import gcd
 from functools import reduce
 
 
@@ -12,12 +10,12 @@ def lcm(x, y):
 
 def multiples(t, N):
     """Set of multiples (<= N) of some x in t."""
-    return set(i for x in t for i in range(x, N + 1, x))
+    return set((i for x in t for i in range(x, N + 1, x)))
 
 
 def value(a, t):
     """The value of the jewels that are labeled a multiple of some x in t."""
-    return sum(a[i - 1] for i in multiples(t, len(a)))
+    return sum((a[i - 1] for i in multiples(t, len(a))))
 
 
 def remove(a, t):
@@ -36,8 +34,7 @@ def tuples(m, N):
     if m > N:
         return [()]
     ts = tuples(m + 1, N)
-    us = [(m,) + t for t in ts
-          if reduce(lcm, t, m) <= N and all(j % m != 0 for j in t)]
+    us = [(m,) + t for t in ts if reduce(lcm, t, m) <= N and all((j % m != 0 for j in t))]
     ts.extend(us)
     return ts
 
@@ -54,4 +51,4 @@ N = int(stdin.readline())
 a = [int(w) for w in stdin.readline().split()]
 if len(a) != N:
     raise
-print((solve(a)))
+print(solve(a))

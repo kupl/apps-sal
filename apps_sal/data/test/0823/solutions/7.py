@@ -1,5 +1,5 @@
-x, y = list(map(int, input().split()))
-dx, dy = [1, 0, -1, 0], [0, 1, 0, -1]
+(x, y) = list(map(int, input().split()))
+(dx, dy) = ([1, 0, -1, 0], [0, 1, 0, -1])
 
 
 def onl(x1, y1, x2, y2):
@@ -11,7 +11,7 @@ def onl(x1, y1, x2, y2):
 
 def sp(cx, cy, t):
     l = t // 2 + 1
-    nx, ny = cx + dx[t % 4] * l, cy + dy[t % 4] * l
+    (nx, ny) = (cx + dx[t % 4] * l, cy + dy[t % 4] * l)
     return t if onl(cx, cy, nx, ny) else sp(nx, ny, t + 1)
 
 

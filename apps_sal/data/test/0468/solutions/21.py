@@ -1,8 +1,8 @@
 from math import log
-x, y = [int(x) for x in input().split()]
+(x, y) = [int(x) for x in input().split()]
 if y * log(x) == x * log(y):
-    print("=")
+    print('=')
 elif y * log(x) < x * log(y):
-    print("<")
+    print('<')
 else:
-    print(">")
+    print('>')

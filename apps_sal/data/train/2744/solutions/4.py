@@ -2,17 +2,19 @@ import re
 
 
 class memory(dict):
+
     def __init__(self, default):
         super().__init__()
         self._def = default
 
-    def __getitem__(self, key): return self.get(key, self._def)
+    def __getitem__(self, key):
+        return self.get(key, self._def)
 
 
 def poohbear(code):
-    code, output = list(re.sub(r'[^+-><cpWEPNTQULIVABYD]', '', code)), []
-    data, p, = memory(0), 0
-    loop, ind, ins = [], 0, None
+    (code, output) = (list(re.sub('[^+-><cpWEPNTQULIVABYD]', '', code)), [])
+    (data, p) = (memory(0), 0)
+    (loop, ind, ins) = ([], 0, None)
     copy_ = 0
     while ind < len(code):
         ins = code[ind]
@@ -50,9 +52,9 @@ def poohbear(code):
         elif ins == 'N':
             output.append(str(data[p]))
         elif ins == 'T':
-            data[p] = (data[p] * 2) % 256
+            data[p] = data[p] * 2 % 256
         elif ins == 'Q':
-            data[p] = (data[p] ** 2) % 256
+            data[p] = data[p] ** 2 % 256
         elif ins == 'U':
             data[p] = int(data[p] ** 0.5) % 256
         elif ins == 'L':
@@ -60,14 +62,14 @@ def poohbear(code):
         elif ins == 'I':
             data[p] = (data[p] - 2) % 256
         elif ins == 'V':
-            data[p] = (data[p] // 2) % 256
+            data[p] = data[p] // 2 % 256
         elif ins == 'A':
             data[p] = (data[p] + copy_) % 256
         elif ins == 'B':
             data[p] = (data[p] - copy_) % 256
         elif ins == 'Y':
-            data[p] = (data[p] * copy_) % 256
+            data[p] = data[p] * copy_ % 256
         elif ins == 'D':
-            data[p] = (data[p] // copy_) % 256
+            data[p] = data[p] // copy_ % 256
         ind += 1
     return ''.join(output)

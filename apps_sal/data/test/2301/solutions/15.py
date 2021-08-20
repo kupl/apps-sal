@@ -2,7 +2,6 @@ n = int(input())
 l = list(map(int, input().split()))
 l.sort()
 ans = []
-
 if n % 2 == 1:
     ans.append(l[n // 2])
     for i in range(n // 2):

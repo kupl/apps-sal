@@ -6,7 +6,7 @@ def read_ints():
     return list(map(int, input().split(' ')))
 
 
-a, b, c, d = read_ints()
+(a, b, c, d) = read_ints()
 ans = 0
 m = min(c - b, d - c)
 n = max(c - b, d - c)

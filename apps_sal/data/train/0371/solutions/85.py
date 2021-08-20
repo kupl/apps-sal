@@ -1,4 +1,5 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
@@ -15,7 +16,6 @@ class Solution:
                 if set(routes[i]) & set(routes[j]):
                     graph[i].append(j)
                     graph[j].append(i)
-
         dist = 1
         seen = set()
         while sources:

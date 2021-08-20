@@ -1,5 +1,4 @@
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 T = input()
 
 
@@ -11,5 +10,4 @@ def findAns(N, T):
 
 
 ans = findAns(N, T)
-
 print(T + ans * (K - 1))

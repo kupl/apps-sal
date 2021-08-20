@@ -1,5 +1,4 @@
-a, b = list(map(int, input().split()))
-
+(a, b) = list(map(int, input().split()))
 if a > b or (b - a) % 2 != 0:
     print(-1)
 else:
@@ -9,10 +8,9 @@ else:
             print(0)
         else:
             print(1, '\n' + str(a))
+    elif a & k // 2 == 0:
+        print(2)
+        print(a + k // 2, k // 2)
     else:
-        if a & (k // 2) == 0:
-            print(2)
-            print(a + k // 2, k // 2)
-        else:
-            print(3)
-            print(a, k // 2, k // 2)
+        print(3)
+        print(a, k // 2, k // 2)

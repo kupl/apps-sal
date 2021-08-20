@@ -7,7 +7,7 @@ def answer(n: int, d: List[int]) -> int:
 
 def main():
     n = int(input())
-    d = list(int(input()) for _ in range(n))
+    d = list((int(input()) for _ in range(n)))
     print(answer(n, d))
 
 

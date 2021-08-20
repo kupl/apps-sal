@@ -1,4 +1,5 @@
 class Solution:
+
     def superEggDrop(self, K: int, N: int) -> int:
         memo = {}
 
@@ -10,7 +11,7 @@ class Solution:
                 elif k == 1:
                     ans = n
                 else:
-                    l, r = 1, n
+                    (l, r) = (1, n)
                     while l + 1 < r:
                         x = (l + r) // 2
                         t1 = dp(k - 1, x - 1)
@@ -21,7 +22,7 @@ class Solution:
                             l = x
                         else:
                             l = r = x
-                    ans = 1 + min(max(dp(k - 1, x - 1), dp(k, n - x)) for x in (l, r))
-                memo[(k, n)] = ans
-            return memo[(k, n)]
+                    ans = 1 + min((max(dp(k - 1, x - 1), dp(k, n - x)) for x in (l, r)))
+                memo[k, n] = ans
+            return memo[k, n]
         return dp(K, N)

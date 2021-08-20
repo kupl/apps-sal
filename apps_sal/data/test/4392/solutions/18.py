@@ -1,8 +1,7 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    pos = sorted([int(x) - 1 for x in input().split()]) + [10**9]
-
+    pos = sorted([int(x) - 1 for x in input().split()]) + [10 ** 9]
     ans = sorted(a)
     l = pos[0]
     for i in range(m):

@@ -1,8 +1,7 @@
-# cook your dish here
 n = int(input())
-nums = list(map(int, input().strip().split(" ")))
+nums = list(map(int, input().strip().split(' ')))
 if n < 3:
-    print("NO")
+    print('NO')
 else:
     nums.sort(reverse=True)
     l = nums[0]
@@ -13,10 +12,10 @@ else:
         s = nums[i + 2]
         if l < m + s:
             trig = 0
-            print("YES")
+            print('YES')
             print(l, m, s)
             break
         l = m
         m = s
     if trig:
-        print("NO")
+        print('NO')

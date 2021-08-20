@@ -1,10 +1,7 @@
-MOD = 1_000_000_007
-
-
+MOD = 1000000007
 N = int(input())
 S1 = input()
 S2 = input()
-
 ans = 1
 idx = 0
 if S1[idx] == S2[idx]:

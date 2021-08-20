@@ -1,4 +1,5 @@
 class BIT:
+
     def __init__(self, n):
         self.n = n
         self.bit = [0] * (n + 1)
@@ -16,26 +17,23 @@ class BIT:
         return s
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 st = BIT(m)
-L, R = [], []
+(L, R) = ([], [])
 d = [[] for i in range(m + 1)]
 for i in range(n):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     L.append(l)
     R.append(r)
     d[r - l + 1].append(i)
-
 num = n
 for i in range(1, m + 1):
     num -= len(d[i])
     for j in d[i]:
         st.add(L[j], 1)
         st.add(R[j] + 1, -1)
-
     tmp = 0
     k = i
     for j in range(k, m + 1, i):
         tmp += st.sum(j)
-
-    print((num + tmp))
+    print(num + tmp)

@@ -1,6 +1,4 @@
-#import sys
-#input = sys.stdin.readline
-Q = 10**9 + 7
+Q = 10 ** 9 + 7
 
 
 def main():

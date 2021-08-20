@@ -1,9 +1,9 @@
-# cook your dish here
 try:
+
     def convert(list):
         s = [str(i) for i in list]
-        res = int("".join(s))
-        return(res)
+        res = int(''.join(s))
+        return res
     for _ in range(int(input())):
         x = int(input())
         while x > 0:

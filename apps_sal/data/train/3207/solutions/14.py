@@ -2,4 +2,4 @@ import re
 
 
 def reverseWords(str):
-    return "".join(re.split(r'(\s+)', str)[::-1])
+    return ''.join(re.split('(\\s+)', str)[::-1])

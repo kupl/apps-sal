@@ -1,10 +1,8 @@
 import numpy as np
 from numba import njit
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = np.array(list(map(int, input().split())))
 F = np.array(list(map(int, input().split())))
-
 A = np.sort(A)
 F = np.sort(F)[::-1]
 
@@ -12,7 +10,7 @@ F = np.sort(F)[::-1]
 @njit
 def is_ok(x):
     tmp = 0
-    for a, f in zip(A, F):
+    for (a, f) in zip(A, F):
         y = a * f
         if y > x:
             tmp += a - x // f
@@ -27,5 +25,4 @@ while ok - ng > 1:
         ok = mid
     else:
         ng = mid
-
 print(ok)

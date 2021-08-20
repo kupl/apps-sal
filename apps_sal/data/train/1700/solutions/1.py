@@ -1,4 +1,5 @@
 class DynamicConnectivity:
+
     def __init__(self, n):
         self.parents = list(range(n))
 
@@ -13,7 +14,7 @@ class DynamicConnectivity:
         return rp
 
     def union(self, p, q):
-        rp, rq = self.find(p), self.find(q)
+        (rp, rq) = (self.find(p), self.find(q))
         if rp == rq:
             return
         self.parents[rp] = rq

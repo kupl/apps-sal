@@ -1,13 +1,9 @@
-# n = int(input())
-# w, h = map(int, input().split())
-# to_zero_based = lambda x: int(x) - 1
 from fractions import gcd
 
 
 def main():
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     monsters = [int(input()) for _ in range(n)]
-
     if x == y:
         results = ['Both'] * n
     else:
@@ -24,7 +20,6 @@ def main():
                 results.append('Both')
             else:
                 results.append('Vanya' if turns[monster - 1] % y == 0 else 'Vova')
-
     print('\n'.join(results))
 
 

@@ -7,6 +7,6 @@ def find_leapyear(year):
 
 def year_days(year):
     if find_leapyear(year):
-        return f"{year} has 366 days"
+        return f'{year} has 366 days'
     else:
-        return f"{year} has 365 days"
+        return f'{year} has 365 days'

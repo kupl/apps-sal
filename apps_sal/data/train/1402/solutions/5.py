@@ -11,7 +11,7 @@ for i in range(t):
         val1 = int(a1, 2)
         val2 = int(b1, 2)
         c = 0
-        while(m > 0):
+        while m > 0:
             c += 1
             u = val1 ^ m
             v = val1 & m

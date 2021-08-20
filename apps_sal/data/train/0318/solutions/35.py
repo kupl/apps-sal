@@ -10,6 +10,7 @@ class Person(Enum):
 
 
 class DoublyLinkedListNode:
+
     def __init__(self, val: int) -> None:
         self.val = val
         self.prev = None
@@ -17,36 +18,28 @@ class DoublyLinkedListNode:
 
 
 class Solution:
+
     def maxSizeSlices(self, slices: List[int]) -> int:
+
         @lru_cache(None)
         def dfs(pizza_slice: int, max_slice: int, level: int) -> int:
             if level == len(slices) / 3:
                 return 0
-
             if pizza_slice > max_slice:
                 return 0
-
-            return max(
-                dfs(pizza_slice + 2, max_slice, level + 1) + slices[pizza_slice],
-                dfs(pizza_slice + 1, max_slice, level),
-            )
-
+            return max(dfs(pizza_slice + 2, max_slice, level + 1) + slices[pizza_slice], dfs(pizza_slice + 1, max_slice, level))
         return max(dfs(1, len(slices) - 1, 0), dfs(0, len(slices) - 2, 0))
 
     def maxSizeSlicesBruteForce(self, slices: List[int]) -> int:
         slices_nodes = [DoublyLinkedListNode(pos) for pos in range(len(slices))]
-
         for pizza_slice_pos in range(len(slices)):
             prev_pizza_slice_pos = (pizza_slice_pos - 1) % len(slices)
             next_pizza_slice_pos = (pizza_slice_pos + 1) % len(slices)
-
             pizza_slice = slices_nodes[pizza_slice_pos]
             prev_pizza_slice = slices_nodes[prev_pizza_slice_pos]
             next_pizza_slice = slices_nodes[next_pizza_slice_pos]
-
             prev_pizza_slice.next = pizza_slice
             pizza_slice.prev = prev_pizza_slice
-
             pizza_slice.next = next_pizza_slice
             next_pizza_slice.prev = pizza_slice
 
@@ -54,35 +47,27 @@ class Solution:
             result = 0
             for pizza_slice_pos in list(pizza_slices_left):
                 pizza_slice = slices_nodes[pizza_slice_pos]
-
                 prev_pizza_slice = pizza_slice.prev
                 next_pizza_slice = pizza_slice.__next__
-
                 prev_prev_pizza_slice = prev_pizza_slice.prev
                 next_next_pizza_slice = next_pizza_slice.__next__
-
                 prev_prev_pizza_slice.next = next_next_pizza_slice
                 next_next_pizza_slice.prev = prev_prev_pizza_slice
-
                 pizza_slices_left.remove(pizza_slice.val)
                 pizza_slices_left.remove(prev_pizza_slice.val)
                 pizza_slices_left.remove(next_pizza_slice.val)
-
                 result = max(result, dfs(pizza_slices_left) + slices[pizza_slice.val])
-
                 pizza_slices_left.add(pizza_slice.val)
                 pizza_slices_left.add(prev_pizza_slice.val)
                 pizza_slices_left.add(next_pizza_slice.val)
-
                 prev_prev_pizza_slice.next = prev_pizza_slice
                 next_next_pizza_slice.prev = next_pizza_slice
-
             return result
-
         return dfs(set(range(len(slices))))
 
 
 class TestSolution:
+
     def setup(self) -> None:
         self.sol = Solution()
 

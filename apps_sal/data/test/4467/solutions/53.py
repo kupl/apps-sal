@@ -4,9 +4,10 @@ input = sys.stdin.readline
 
 
 class Dinic:
+
     def __init__(self, v):
         self.vertice = v
-        self.inf = int(1e9)
+        self.inf = int(1000000000.0)
         self.graph = [[] for i in range(v)]
         self.level = [0] * v
         self.iter = [0] * v
@@ -20,7 +21,6 @@ class Dinic:
         que = deque([])
         self.level[s] = 0
         que.append(s)
-
         while que:
             v = que.popleft()
             for i in range(len(self.graph[v])):
@@ -50,7 +50,6 @@ class Dinic:
             if self.level[t] < 0:
                 return flow
             self.iter = [0] * self.vertice
-
             f = self.dfs(s, t, self.inf)
             while f:
                 flow += f
@@ -61,7 +60,6 @@ def main():
     n = int(input())
     red = [list(map(int, input().split())) for _ in range(n)]
     blue = [list(map(int, input().split())) for _ in range(n)]
-
     flow = Dinic(n * 2 + 2)
     for i in range(n):
         flow.add_edge(0, i + 1, 1)
@@ -69,7 +67,6 @@ def main():
         for j in range(n):
             if red[i][0] < blue[j][0] and red[i][1] < blue[j][1]:
                 flow.add_edge(i + 1, n + j + 1, 1)
-
     ans = flow.max_flow(0, 2 * n + 1)
     print(ans)
 

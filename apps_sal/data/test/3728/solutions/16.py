@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 L = [[int(x) for x in input().split()] for i in range(n)]
 
 
@@ -8,9 +8,9 @@ def solve(L):
         for j in range(m):
             if L[i][j] != j + 1:
                 D[i].add((min(j + 1, L[i][j]), max(j + 1, L[i][j])))
-                if len(D[i]) > 3 or len(D[i]) == 3 and L[i][L[i][j] - 1] == j + 1:
+                if len(D[i]) > 3 or (len(D[i]) == 3 and L[i][L[i][j] - 1] == j + 1):
                     return False
-    if all((len(D[i]) < 2) for i in range(n)):
+    if all((len(D[i]) < 2 for i in range(n))):
         return True
     for x in range(m):
         for y in range(x, m):

@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     a = [int(i) for i in input().split()]
-
     d = [0] * n
     for i in range(n):
         if a[i] > n or d[a[i] - 1] == 1:

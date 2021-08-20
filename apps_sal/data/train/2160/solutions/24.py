@@ -1,11 +1,9 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 s = [int(x) for x in input().split()]
 sm = sum(s)
 flag = 1
 if sm % k != 0:
     print('No')
-
 else:
     vh = sm // k
     s1 = []
@@ -20,14 +18,12 @@ else:
             break
         elif acummu < vh:
             continue
-
         elif acummu == vh:
             acummu = 0
             s1.append(count)
             count = 0
-
     if acummu != 0:
-        s1.append((sm) // vh)
+        s1.append(sm // vh)
     if flag:
-        print("Yes")
+        print('Yes')
         print(*s1)

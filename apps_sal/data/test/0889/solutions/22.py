@@ -15,10 +15,10 @@ for i in range(0, len(s) - 1):
         if s[i + 1][j + 1] == '#':
             x += 1
         if x != 2:
-            print("YES")
+            print('YES')
             b = True
             break
     if b == True:
         break
 if b == False:
-    print("NO")
+    print('NO')

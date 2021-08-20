@@ -1,6 +1,7 @@
 class StreamChecker:
 
     class Trie_node:
+
         def __init__(self, value):
             self.value = value
             self.children = {}
@@ -23,34 +24,27 @@ class StreamChecker:
         for word in words:
             current_node = self.trie
             self.max_length = self.max_length if len(word) < self.max_length else len(word)
-
-            for index, letter in enumerate(word[::-1]):
-                if(current_node.is_child(letter)):
-                    if(index == len(word) - 1):
+            for (index, letter) in enumerate(word[::-1]):
+                if current_node.is_child(letter):
+                    if index == len(word) - 1:
                         current_node.get_child(letter).value = 0
+                elif index == len(word) - 1:
+                    current_node.add_child(self.Trie_node(0), letter)
                 else:
-                    if(index == len(word) - 1):
-                        current_node.add_child(self.Trie_node(0), letter)
-                    else:
-                        current_node.add_child(self.Trie_node(-1), letter)
+                    current_node.add_child(self.Trie_node(-1), letter)
                 current_node = current_node.get_child(letter)
-        print((self.trie.children))
+        print(self.trie.children)
 
     def query(self, letter: str) -> bool:
         self.letter_list.append(letter)
-        if(len(self.letter_list) > self.max_length):
+        if len(self.letter_list) > self.max_length:
             self.letter_list.pop(0)
         top_node = self.trie
         for letter in self.letter_list[::-1]:
-            if(top_node.is_child(letter)):
+            if top_node.is_child(letter):
                 top_node = top_node.get_child(letter)
-                if(top_node.value == 0):
+                if top_node.value == 0:
                     return True
             else:
                 return False
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,14 +1,16 @@
 import collections
-def f(): return map(int, input().split())
+
+
+def f():
+    return map(int, input().split())
 
 
 N = input()
-*A, = f()
+(*A,) = f()
 c = collections.Counter(A)
 s = sum(A)
 BC = [f() for _ in range(int(input()))]
-
-for i, j in BC:
+for (i, j) in BC:
     v = c[i]
     s += v * (j - i)
     print(s)

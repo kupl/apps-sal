@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    s, i, e = list(map(int, input().split()))
+    (s, i, e) = list(map(int, input().split()))
     if s + e <= i:
         print('0')
     elif s > i + e:

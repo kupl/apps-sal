@@ -1,4 +1,3 @@
-# B Digital Gifts
 N = int(input())
 X = [list(map(str, input().split())) for _ in range(N)]
 gifts = 0

@@ -1,5 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+
         def can(days):
             res = 0
             count = 0
@@ -12,8 +14,7 @@ class Solution:
                     count = 0
                     res += 1
             return res >= m
-
-        l, r = 1, max(bloomDay)
+        (l, r) = (1, max(bloomDay))
         while l < r:
             mid = (l + r) // 2
             if can(mid):

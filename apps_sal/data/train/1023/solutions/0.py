@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     count = 1
@@ -13,12 +12,12 @@ for _ in range(int(input())):
                 print(count)
                 count += 1
             elif j == 0:
-                print(count, end="")
+                print(count, end='')
                 count += 1
             else:
-                print(" ", end="")
+                print(' ', end='')
         i += 1
     while count <= l:
-        print(count, end="")
+        print(count, end='')
         count += 1
     print()

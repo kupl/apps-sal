@@ -5,11 +5,10 @@ for i in range(len(S)):
         if S[i] == 'L':
             ok = False
             break
-    else:
-        if S[i] == 'R':
-            ok = False
-            break
+    elif S[i] == 'R':
+        ok = False
+        break
 if ok:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

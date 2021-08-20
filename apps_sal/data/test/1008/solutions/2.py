@@ -1,9 +1,8 @@
 def sol():
     s = input()
     k = int(input())
-
     if len(s) % k:
-        return "NO"
+        return 'NO'
     else:
         l = len(s) // k
         for i in range(k):
@@ -11,8 +10,8 @@ def sol():
             if st != st[::-1]:
                 break
         else:
-            return "YES"
-        return "NO"
+            return 'YES'
+        return 'NO'
 
 
 print(sol())

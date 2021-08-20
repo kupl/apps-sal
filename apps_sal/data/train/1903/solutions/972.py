@@ -1,13 +1,15 @@
-# Prim's algorithm
 from collections import defaultdict
 from heapq import *
 
 
 class Solution:
+
     def minCostConnectPoints(self, points):
         graph = defaultdict(list)
         n = len(points)
-        def dist(p0, p1): return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
+
+        def dist(p0, p1):
+            return abs(p1[0] - p0[0]) + abs(p1[1] - p0[1])
         for u in range(n):
             for v in range(u + 1, n):
                 w = dist(points[u], points[v])
@@ -17,12 +19,12 @@ class Solution:
         visited = set()
         res = 0
         while q:
-            d, u = heappop(q)
+            (d, u) = heappop(q)
             if u in visited:
                 continue
             visited.add(u)
             res = res + d
-            for v, w in graph[u]:
+            for (v, w) in graph[u]:
                 if v not in visited:
                     heappush(q, (w, v))
         if len(visited) != n:

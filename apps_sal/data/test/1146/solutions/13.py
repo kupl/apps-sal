@@ -3,8 +3,7 @@ if False:
     inp = open('A.txt', 'r')
 else:
     inp = sys.stdin
-
-n, m = map(int, inp.readline().split())
+(n, m) = map(int, inp.readline().split())
 bulbs = []
 for i in range(n):
     bulbs += list(map(int, inp.readline().split()))[1:]

@@ -1,11 +1,11 @@
-'''input
+"""input
 2
 3 2
 1 3 5
 4 1
 5 2 3 5
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -15,7 +15,7 @@ from random import randint as rd
 from bisect import bisect_left as bl
 from heapq import heappush as hpush
 from heapq import heappop as hpop
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -26,7 +26,7 @@ def ri(flag=0):
 
 
 for _ in range(ri(1)):
-    n, r = ri()
+    (n, r) = ri()
     a = ri()
     a = list(set(a))
     a.sort()

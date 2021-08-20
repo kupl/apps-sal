@@ -2,11 +2,12 @@ from collections import deque
 
 
 class Solution:
+
     def numBusesToDestination(self, routes, S, T):
         if S == T:
             return 0
         stopBoard = {}
-        for bus, stops in enumerate(routes):
+        for (bus, stops) in enumerate(routes):
             for stop in stops:
                 if stop not in stopBoard:
                     stopBoard[stop] = [bus]

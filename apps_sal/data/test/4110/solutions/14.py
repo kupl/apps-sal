@@ -6,26 +6,47 @@ import itertools
 import math
 import string
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
 INF = float('inf')
-def I(): return int(input())
-def F(): return float(input())
-def SS(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LSS(): return input().split()
+
+
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def SS():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LSS():
+    return input().split()
 
 
 def resolve():
-    D, G = LI()
+    (D, G) = LI()
     pc = [LI() for _ in range(D)]
-
-    # コンプリートする問題を全パターン試す
-    # 足りない分があれば解いてない最高点数の問題で埋める
     ans = sum([i[0] for i in pc])
     for i in range(2 ** D):
         score = 0
@@ -41,7 +62,6 @@ def resolve():
             ans = min(num, ans)
         elif (G - score) // ((not_completed_max + 1) * 100) <= pc[not_completed_max][0]:
             ans = min(num + (G - score - 1) // ((not_completed_max + 1) * 100) + 1, ans)
-
     print(ans)
 
 

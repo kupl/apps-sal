@@ -1,4 +1,3 @@
-
 n = int(input())
 a = list(map(int, input().split(' ')))
 freq = {}
@@ -11,11 +10,9 @@ for i in range(n):
     else:
         freq[a[i]] += 1
         ch += 1
-
 for i in range(n):
     if i + 1 not in list(freq.keys()):
         de.append(i + 1)
-
 index = 0
 for i in range(n):
     if freq[a[i]] > 1:
@@ -25,10 +22,7 @@ for i in range(n):
             index += 1
         else:
             seen[a[i]] = True
-
-
-sol = ""
+sol = ''
 for x in a:
-    sol += str(x) + " "
-
-print(str(ch) + "\n" + sol)
+    sol += str(x) + ' '
+print(str(ch) + '\n' + sol)

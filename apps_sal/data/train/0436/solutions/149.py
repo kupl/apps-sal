@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         step = 0
         cur = {n}

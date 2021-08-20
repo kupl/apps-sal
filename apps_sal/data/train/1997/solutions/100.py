@@ -1,7 +1,7 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         sorted_intervals = sorted(intervals, key=lambda x: (x[0], -x[1]))
-
         new_intervals = []
         new_intervals.append(sorted_intervals[0])
         for i in sorted_intervals:

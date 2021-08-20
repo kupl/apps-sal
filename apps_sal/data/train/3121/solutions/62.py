@@ -5,13 +5,12 @@ def solve(ar):
     while i < x:
         c = 0
         char = ar[i]
-        while c <= (x - 1):
-            if char == (-(ar[c])):
+        while c <= x - 1:
+            if char == -ar[c]:
                 i += 1
                 break
             c += 1
         else:
             temp = char
             return temp
-
     return temp

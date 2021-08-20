@@ -1,9 +1,7 @@
-# 1449. From Largest Integer With Digits That Add up to Target
-
 def prune(costs):
     ans = []
-    for ind, elem in enumerate(costs):
-        if any(costs[i] + costs[j] == elem for i in range(ind) for j in range(ind)):
+    for (ind, elem) in enumerate(costs):
+        if any((costs[i] + costs[j] == elem for i in range(ind) for j in range(ind))):
             pass
         else:
             ans.append(elem)
@@ -16,7 +14,6 @@ def find_longest_combos(costs, start, prefix, left, max_yets):
             max_yets[0] = len(prefix)
             yield prefix[:]
     else:
-        # judge if possible to find as long
         theoretical_max_length = len(prefix) + left // costs[start]
         if theoretical_max_length < max_yets[0]:
             return
@@ -39,10 +36,7 @@ def rlencode(arr):
 
 
 def encode(digit_choices, combo):
-    return sorted([
-        (digit_choices[elem], freq)
-        for (elem, freq) in combo
-    ], reverse=True)
+    return sorted([(digit_choices[elem], freq) for (elem, freq) in combo], reverse=True)
 
 
 def write(rle):
@@ -54,9 +48,9 @@ def write(rle):
 
 
 def gcd(a, b):
-    a, b = min(a, b), max(a, b)
+    (a, b) = (min(a, b), max(a, b))
     while a > 0:
-        a, b = b % a, a
+        (a, b) = (b % a, a)
     return b
 
 
@@ -94,5 +88,6 @@ def largest_num(cost, target):
 
 
 class Solution:
+
     def largestNumber(self, cost: List[int], target: int) -> str:
         return largest_num(cost, target)

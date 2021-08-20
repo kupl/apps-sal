@@ -17,7 +17,7 @@ def answer(n):
             a = int(math.log(n, 5))
         else:
             a = 0
-    total += 2 * (n)
+    total += 2 * n
     total = int(total)
     return total
 

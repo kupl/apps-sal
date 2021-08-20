@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 
 
 def solve():
@@ -23,4 +23,4 @@ def solve():
         return [-1]
 
 
-print((" ".join(map(str, solve()))))
+print(' '.join(map(str, solve())))

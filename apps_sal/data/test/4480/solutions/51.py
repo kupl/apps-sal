@@ -1,4 +1,5 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         s = sum(A)
         if s % 3 != 0:
@@ -6,7 +7,6 @@ class Solution:
         return self.can_partition(A, 0, 3, s // 3)
 
     def can_partition(self, A: List[int], i: int, n_parts: int, target_sum: int) -> bool:
-        #print(f'i={i}, n_parts={n_parts}')
         if n_parts == 1:
             return i < len(A) and sum(A[i:]) == target_sum
         if i >= len(A):

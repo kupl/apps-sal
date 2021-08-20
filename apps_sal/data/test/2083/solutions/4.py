@@ -2,16 +2,15 @@ import math
 3.5
 mean = [0.0] * 200010
 real = [0.0] * 200010
-n, T, c = input().split()
+(n, T, c) = input().split()
 n = int(n)
 T = int(T)
 c = float(c)
 t = T
 a = [0] + [int(x) for x in input().split()]
 for i in range(1, n + 1):
-    mean[i] = (mean[i - 1] + (a[i] / T)) / c
+    mean[i] = (mean[i - 1] + a[i] / T) / c
     real[i] = real[i - 1] + a[i]
-
 m = int(input())
 q = [int(x) for x in input().split()]
 for i in range(m):

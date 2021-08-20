@@ -1,7 +1,7 @@
 n = input()
 le = len(n)
 m = le
-for i in range(1, 2**le):
+for i in range(1, 2 ** le):
     i = bin(i)[2:]
     s = ''
     c = le
@@ -12,7 +12,7 @@ for i in range(1, 2**le):
     if s[0] == '0':
         continue
     s = int(s)
-    if int(s**(1 / 2))**2 == s:
+    if int(s ** (1 / 2)) ** 2 == s:
         m = min(m, c)
 if m == le:
     print(-1)

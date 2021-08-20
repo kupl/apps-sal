@@ -1,4 +1,4 @@
-h, a = list(map(int, input().split()))
+(h, a) = list(map(int, input().split()))
 if h % a == 0:
     count = h // a
 else:

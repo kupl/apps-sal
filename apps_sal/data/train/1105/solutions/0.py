@@ -3,7 +3,7 @@ for i in range(int(input())):
     c = [int(z) for z in input().split()]
     c.sort()
     c.reverse()
-    b1, b2 = 0, 0
+    (b1, b2) = (0, 0)
     for i in range(n):
         if b1 < b2:
             b1 += c[i]

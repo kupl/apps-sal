@@ -9,10 +9,6 @@ import timeit
 import random
 import string
 
-#########################
-# imgur.com/Pkt7iIf.png #
-#########################
-
 
 def sieve(n):
     if n < 2:
@@ -62,22 +58,41 @@ def flin(d, x, default=-1):
                 left = i
             right = i
     if left == -1:
-        return default, default
+        return (default, default)
     else:
-        return left, right
+        return (left, right)
 
 
-def ceil(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def prr(a, sep=' ', end='\n'): print(sep.join(map(str, a)), end=end)
-def dd(): return collections.defaultdict(int)
-def ddl(): return collections.defaultdict(list)
+def ceil(n, k):
+    return n // k + (n % k != 0)
 
-########################################################################################################################
-# input = sys.stdin.readline
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def prr(a, sep=' ', end='\n'):
+    print(sep.join(map(str, a)), end=end)
+
+
+def dd():
+    return collections.defaultdict(int)
+
+
+def ddl():
+    return collections.defaultdict(list)
 
 
 for _ in range(ii()):

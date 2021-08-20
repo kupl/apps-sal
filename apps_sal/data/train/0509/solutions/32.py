@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 import sys
 input = sys.stdin.readline
 mod = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
@@ -10,6 +10,7 @@ def getlist():
 
 
 class UnionFind(object):
+
     def __init__(self, N):
         self.par = [i for i in range(N)]
         self.rank = [0] * N
@@ -36,6 +37,7 @@ class UnionFind(object):
 
 
 class Graph(object):
+
     def __init__(self, N):
         self.graph = [[] for i in range(N)]
 
@@ -52,26 +54,25 @@ def bfs(G, s, N):
     label[s] = 0
     while Q:
         v = Q.popleft()
-        for i, c in G.graph[v]:
+        for (i, c) in G.graph[v]:
             if visit[i] == 0:
                 visit[i] = 1
                 if c != label[v]:
                     label[i] = c
+                elif c == N - 1:
+                    label[i] = 0
                 else:
-                    if c == N - 1:
-                        label[i] = 0
-                    else:
-                        label[i] = N - 1
+                    label[i] = N - 1
                 Q.append(i)
     return label
 
 
 def main():
-    N, M = getlist()
+    (N, M) = getlist()
     G = Graph(N)
     UF = UnionFind(N)
     for i in range(M):
-        u, v, c = getlist()
+        (u, v, c) = getlist()
         u -= 1
         v -= 1
         c -= 1
@@ -79,7 +80,6 @@ def main():
             UF.union(u, v)
             G.add_edge(u, v, c)
             G.add_edge(v, u, c)
-
     ans = bfs(G, 0, N)
     for i in ans:
         print(i + 1)

@@ -1,9 +1,9 @@
 import sys
-sys.setrecursionlimit(10**5)
+sys.setrecursionlimit(10 ** 5)
 n = int(input())
 xy = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     xy.append((i, x, y))
 xx = sorted(xy, key=lambda x: x[1])
 yy = sorted(xy, key=lambda x: x[2])
@@ -14,7 +14,8 @@ for i in range(n - 1):
 li.sort(key=lambda x: x[2])
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, li):
         self.li = li
 
@@ -37,7 +38,7 @@ class UnionFind():
 
 uf = UnionFind(list(range(n)))
 ans = 0
-for x, y, cost in li:
+for (x, y, cost) in li:
     if uf.same(x, y):
         continue
     uf.unite(x, y)

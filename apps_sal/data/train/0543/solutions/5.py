@@ -16,7 +16,7 @@ for _ in range(int(input())):
     Ds = list(map(int, input().split()))
     truthCheck = Check(Tr, Ts)
     dareCheck = Check(Dr, Ds)
-    if (truthCheck and dareCheck):
-        print("yes")
+    if truthCheck and dareCheck:
+        print('yes')
     else:
-        print("no")
+        print('no')

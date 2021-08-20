@@ -16,8 +16,5 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
-a, b, c = L()
+(a, b, c) = L()
 print(c, a, b)

@@ -1,5 +1,5 @@
 def descriptions(arr):
-    r, prev, n = 1, arr[0], 1
+    (r, prev, n) = (1, arr[0], 1)
     for x in arr[1:]:
         if x != prev + 1:
             r *= 2 ** (n - 1)

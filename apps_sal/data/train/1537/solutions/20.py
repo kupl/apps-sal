@@ -4,7 +4,7 @@ def isPrime(n):
     elif n == 2:
         return True
     else:
-        for i in range(2, int(n**(0.5)) + 1):
+        for i in range(2, int(n ** 0.5) + 1):
             if n % i == 0:
                 return False
         return True
@@ -12,14 +12,12 @@ def isPrime(n):
 
 def getNextPrime(n):
     n = n + 1
-    while(not isPrime(n)):
+    while not isPrime(n):
         n += 1
     return n
 
 
 t = int(input())
-
-
 for _ in range(t):
     n = int(input())
     sum_ = 0

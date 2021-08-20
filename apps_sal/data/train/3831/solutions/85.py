@@ -3,4 +3,4 @@ def angle(n):
     return x
 
 
-print((angle(6)))
+print(angle(6))

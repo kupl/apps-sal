@@ -3,5 +3,5 @@ def is_smooth(n):
         while n % v == 0:
             n /= v
         if n == 1:
-            return['', '', 'power of 2', '3-smooth', '', 'Hamming number', '', 'humble number'][v]
+            return ['', '', 'power of 2', '3-smooth', '', 'Hamming number', '', 'humble number'][v]
     return 'non-smooth'

@@ -1,12 +1,11 @@
-# abc135d
 s = input()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 res = [0] * 13
 res[0] = 1
 for i in s:
     dp = [0] * 13
     for j in range(13):
-        dp[(j * 10) % 13] = res[j] % mod
+        dp[j * 10 % 13] = res[j] % mod
     dp += dp
     if i == '?':
         for k in range(13):

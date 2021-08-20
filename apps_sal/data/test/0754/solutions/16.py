@@ -1,7 +1,5 @@
-# your code goes here
 n = int(input())
 str = input()
-
 S = 0
 prev = str[0]
 LEN = len(str)

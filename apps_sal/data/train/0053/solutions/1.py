@@ -1,12 +1,10 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     for _ in range(int(input())):
         line = list(input().split())
         N = int(line[0])
         S = line[1]
-
         inc_num = S.count('<')
         ans = [0] * N
         inc = N
@@ -25,9 +23,7 @@ def main():
                     else:
                         break
                     j += 1
-                # print(cnt)
                 for j in range(i + cnt - 1, i - 1, -1):
-                    # print(j)
                     ans[j + 1] = inc
                     inc -= 1
         for i in range(N):
@@ -35,7 +31,6 @@ def main():
                 ans[i] = dec
                 dec -= 1
         print(*ans)
-
         ans = [0] * N
         inc = N - inc_num + 1
         dec = N - inc_num

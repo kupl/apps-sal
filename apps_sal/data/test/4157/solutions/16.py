@@ -5,11 +5,11 @@ for i in range(n):
     a[i] = int(a[i])
 a.sort()
 j = 0
-while (len(a) > 0):
+while len(a) > 0:
     temp = []
     i = 0
-    while(i < len(a)):
-        if (a[i] % 3 != 0):
+    while i < len(a):
+        if a[i] % 3 != 0:
             temp.append(a[i] * pow(3, j))
             a.remove(a[i])
         else:

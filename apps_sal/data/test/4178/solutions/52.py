@@ -8,9 +8,9 @@ def main():
         elif h[i] - 1 == h[i + 1]:
             h[i] -= 1
     if f:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

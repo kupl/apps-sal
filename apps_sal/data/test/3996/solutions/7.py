@@ -1,4 +1,5 @@
 class Matrix:
+
     def __init__(self, n, m, arr=None):
         self.n = n
         self.m = m
@@ -28,7 +29,7 @@ class Matrix:
                 ans.arr[i][i] = 1
             return ans
         elif n & 1 == 1:
-            return self * (self ** (n - 1))
+            return self * self ** (n - 1)
         else:
             t = self ** (n >> 1)
             return t * t
@@ -51,10 +52,10 @@ def fpow(a, n):
     if n == 0:
         return 1
     elif n & 1 == 1:
-        return (a * fpow(a, n - 1)) % (10 ** 9 + 7)
+        return a * fpow(a, n - 1) % (10 ** 9 + 7)
     else:
         t = fpow(a, n >> 1)
-        return (t * t) % (10 ** 9 + 7)
+        return t * t % (10 ** 9 + 7)
 
 
 transform = Matrix(2, 2, [[1, 1], [0, 4]])
@@ -63,12 +64,12 @@ k = int(input())
 a = list(map(int, input().split()))
 x = 1
 for j in a:
-    x = (x * j) % (10 ** 9 + 6)
+    x = x * j % (10 ** 9 + 6)
 x = (x - 1) % (10 ** 9 + 6)
 if x % 2 == 0:
-    ans = (transform ** (x // 2)) * Matrix(2, 1, [[0], [1]])
-    print("%d/%d" % (ans.arr[0][0], fpow(2, x)))
+    ans = transform ** (x // 2) * Matrix(2, 1, [[0], [1]])
+    print('%d/%d' % (ans.arr[0][0], fpow(2, x)))
 else:
     y = (x - 1) % (10 ** 9 + 6)
-    ans = (transform ** (y // 2)) * Matrix(2, 1, [[0], [1]])
-    print("%d/%d" % ((ans.arr[0][0] * 2 + 1) % (10 ** 9 + 7), (ans.arr[1][0] * 2) % (10 ** 9 + 7)))
+    ans = transform ** (y // 2) * Matrix(2, 1, [[0], [1]])
+    print('%d/%d' % ((ans.arr[0][0] * 2 + 1) % (10 ** 9 + 7), ans.arr[1][0] * 2 % (10 ** 9 + 7)))

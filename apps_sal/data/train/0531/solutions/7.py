@@ -5,7 +5,6 @@ for i in range(n):
     arr = [int(x) for x in input().split()]
     co.append(arr[0])
     hi.append(arr[-1])
-
 if n <= 2:
     count = n
 else:

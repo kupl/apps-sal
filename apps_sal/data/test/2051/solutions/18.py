@@ -1,8 +1,8 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 c = list(map(int, input().split()))
-g = [[]for _ in range(n)]
+g = [[] for _ in range(n)]
 for _ in range(m):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     g[l - 1].append(r - 1)
     g[r - 1].append(l - 1)
 v = [-1] * n
@@ -21,7 +21,7 @@ for i in range(n):
                 if v[j] == -1:
                     v[j] = 1
                     s.append(j)
-        r, k = 0, 0
+        (r, k) = (0, 0)
         for b in q:
             k = max(k, q[b])
             r += q[b]

@@ -1,4 +1,4 @@
-a, k = list(map(int, input().split()))
+(a, k) = list(map(int, input().split()))
 a = str(a)
 i = 0
 na = a

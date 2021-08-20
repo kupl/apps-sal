@@ -5,13 +5,13 @@ def pwr(a, n, m):
     ans = ans * ans
     ans %= m
     if n % 2 == 1:
-        return (ans * a) % m
+        return ans * a % m
     else:
         return ans
 
 
 M = 1000000007
-tx, tn = input().split()
+(tx, tn) = input().split()
 x = int(tx)
 n = int(tn)
 ans = pwr(2, n + 1, M) * x

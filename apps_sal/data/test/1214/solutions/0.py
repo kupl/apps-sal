@@ -1,5 +1,4 @@
 Z = 100000
-
 n = int(input())
 xx = list(map(int, input().split()))
 

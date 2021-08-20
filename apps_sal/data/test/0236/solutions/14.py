@@ -5,8 +5,8 @@ for i in input():
     else:
         c1 += 1
 if c2 == 0:
-    print("YES")
+    print('YES')
 elif c1 % c2:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

@@ -1,4 +1,5 @@
 def make_function(n, crushes):
+
     def f(original_node):
         node = original_node
         x = 0
@@ -14,7 +15,9 @@ def make_function(n, crushes):
 
 
 def lcd(numbers):
-    def gcd(x, y): return int(x) if y == 0 else int(gcd(y, x % y))
+
+    def gcd(x, y):
+        return int(x) if y == 0 else int(gcd(y, x % y))
     ret = 1
     for number in numbers:
         ret = ret * number / gcd(ret, number)
@@ -24,7 +27,7 @@ def lcd(numbers):
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    crushes = {i: x for i, x in zip(list(range(1, n + 1)), a)}
+    crushes = {i: x for (i, x) in zip(list(range(1, n + 1)), a)}
     f = make_function(n, crushes)
     numbers = list(map(int, list(map(f, crushes))))
     if -1 in numbers:

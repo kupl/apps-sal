@@ -3,7 +3,6 @@ import re
 
 def replace_dots(s):
     if '.' in s:
-
-        return s.replace(".", "-")
+        return s.replace('.', '-')
     else:
         return s

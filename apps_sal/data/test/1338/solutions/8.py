@@ -10,5 +10,5 @@ def gen(n, start, t):
         return gen(n - 1, start + 1, t - 2 ** (n - 2)) + [start]
 
 
-n, t = list(map(int, input().split()))
-print(" ".join(map(str, gen(n, 1, t))))
+(n, t) = list(map(int, input().split()))
+print(' '.join(map(str, gen(n, 1, t))))

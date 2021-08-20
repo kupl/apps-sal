@@ -1,7 +1,6 @@
 n = int(input())
 s1 = input()
 s2 = input()
-
 domino = []
 i = 0
 while i < n:
@@ -11,15 +10,13 @@ while i < n:
     else:
         domino.append('Y')
         i += 2
-
 cnt = 0
 if domino[0] == 'X':
     cnt += 3
 else:
     cnt += 6
-
 if len(domino) == 1:
-    print(cnt % (10**9 + 7))
+    print(cnt % (10 ** 9 + 7))
 else:
     for i in range(1, len(domino)):
         if domino[i] == 'X':
@@ -27,9 +24,8 @@ else:
                 cnt *= 2
             else:
                 cnt *= 1
+        elif domino[i - 1] == 'X':
+            cnt *= 2
         else:
-            if domino[i - 1] == 'X':
-                cnt *= 2
-            else:
-                cnt *= 3
-    print(cnt % (10**9 + 7))
+            cnt *= 3
+    print(cnt % (10 ** 9 + 7))

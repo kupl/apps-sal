@@ -10,7 +10,6 @@ def check(now):
     if len(ddl) != m:
         return False
     for i in range(1, m + 1):
-        #        print(a[ddl[-i]])
         day += a[ddl[-i]]
         if day >= last[ddl[-i]]:
             return False
@@ -35,7 +34,7 @@ for i in range(0, m + 1):
 l = 0
 r = n + 1
 while l < r - 1:
-    mid = (l + r) >> 1
+    mid = l + r >> 1
     if check(mid):
         r = mid
     else:

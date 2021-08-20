@@ -1,4 +1,4 @@
-n1, n2 = list(map(int, input().split()))
+(n1, n2) = list(map(int, input().split()))
 polish_words = []
 enemy_words = []
 common_words = []

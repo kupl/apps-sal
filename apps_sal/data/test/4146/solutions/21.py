@@ -16,7 +16,6 @@ for i in d:
     if m2 <= d[i]:
         m2 = d[i]
         o2 = i
-
 d = {}
 for i in range(1, n, 2):
     d[V[i]] = d.get(V[i], 0) + 1
@@ -33,7 +32,6 @@ for i in d:
     if m4 <= d[i]:
         m4 = d[i]
         e2 = i
-
 if e != o:
     print(n - m1 - m3)
 else:

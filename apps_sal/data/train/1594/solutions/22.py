@@ -1,5 +1,4 @@
 _ = int(input())
-
 while _ > 0:
     n = int(input())
     a = []
@@ -7,5 +6,4 @@ while _ > 0:
         temp = input()
         a.append(temp)
     print((n * n + n) // 2)
-
     _ -= 1

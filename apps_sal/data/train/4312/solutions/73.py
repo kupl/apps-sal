@@ -1,26 +1,20 @@
 def pick_peaks(arr):
-
     print('input:{}'.format(arr))
     if len(arr) < 1:
-        return {"pos": [], "peaks": []}
-
-    # your code here
+        return {'pos': [], 'peaks': []}
     UP = 0
     DOWN = 1
     FLAT = 2
-    trends = ["UP", "DOWN", "FLAT"]
-
+    trends = ['UP', 'DOWN', 'FLAT']
     if arr[0] == arr[1]:
         trend = FLAT
     elif arr[0] > arr[1]:
         trend = DOWN
     else:
         trend = UP
-
     prev = arr[0]
     pos = []
     peaks = []
-
     local_max = None
     for i in range(1, len(arr)):
         if trend == UP:
@@ -45,11 +39,8 @@ def pick_peaks(arr):
                     pos.append(local_max)
                     peaks.append(prev)
                 trend = DOWN
-
         prev = arr[i]
-
-    # terminated with flat
     if trend == FLAT:
         pos = pos[0:]
         peaks = peaks[0:]
-    return {"pos": pos, "peaks": peaks}
+    return {'pos': pos, 'peaks': peaks}

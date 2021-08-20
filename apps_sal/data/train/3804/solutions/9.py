@@ -7,7 +7,7 @@ results = {}
 n = 1
 digit = 0
 while digit < 1000:
-    digit = len(str(sum(x**(n - x + 1) for x in range(1, n))))
+    digit = len(str(sum((x ** (n - x + 1) for x in range(1, n)))))
     if digit not in results:
         results[digit] = n
     n += 1

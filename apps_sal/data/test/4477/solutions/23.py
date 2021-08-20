@@ -1,5 +1,4 @@
 t = int(input())
-
 for test in range(t):
     x = int(input())
     a = len(str(x))

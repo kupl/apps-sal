@@ -1,4 +1,5 @@
 class Solution:
+
     def dfs(self, i, a, b, types):
         b[i] = 1
         for k in a[i]:

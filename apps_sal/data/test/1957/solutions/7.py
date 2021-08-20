@@ -1,7 +1,6 @@
 def run():
-    n, a, b = [int(x) for x in input().split()]
+    (n, a, b) = [int(x) for x in input().split()]
     d = [int(x) for x in input().split()]
-
     main = d[0]
     other = d[1:]
     other.sort()

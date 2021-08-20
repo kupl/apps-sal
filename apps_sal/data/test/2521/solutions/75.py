@@ -1,46 +1,30 @@
 import heapq
-
 N = int(input())
-
 A = list(map(int, input().split()))
-
 left = A[:N]
-left_total = [(sum(left))]
+left_total = [sum(left)]
 heapq.heapify(left)
-
 for i in range(N, 2 * N):
     l = heapq.heappop(left)
-    # 入れ替える場合
     if l < A[i]:
         heapq.heappush(left, A[i])
         left_total.append(left_total[-1] - l + A[i])
-    # Aのある要素よりleftの最小要素の方が大きいので入れ替えない
     else:
         heapq.heappush(left, l)
         left_total.append(left_total[-1])
-
-
-# rightもN要素から始めるが、leftとの対応のために最後にtotalをひっくり返すのを忘れない
 right = [-i for i in A[2 * N:]]
 right_total = [sum(right)]
 heapq.heapify(right)
-
 for i in reversed(range(N, 2 * N)):
     r = heapq.heappop(right)
     if r < -A[i]:
         heapq.heappush(right, -A[i])
         right_total.append(right_total[-1] - r - A[i])
-    # rの最小値の方がちいさいのでそのまま
     else:
         heapq.heappush(right, r)
         right_total.append(right_total[-1])
-
-
-# left_totalとの対応のために逆にする
 right_total = right_total[::-1]
-
-ans = -float("inf")
+ans = -float('inf')
 for i in range(len(left_total)):
     ans = max(ans, left_total[i] + right_total[i])
-
 print(ans)

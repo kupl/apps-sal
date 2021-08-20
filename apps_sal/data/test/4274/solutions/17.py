@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 if n != m:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')

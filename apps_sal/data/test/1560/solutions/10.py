@@ -9,31 +9,27 @@ if s[0] == 'b':
         if (i + 1) % 2 == 1:
             if s[i] != 'b':
                 ab += 1
-        else:
-            if s[i] != 'r':
-                ar += 1
+        elif s[i] != 'r':
+            ar += 1
     for i in range(n):
         if (i + 1) % 2 == 1:
             if s[i] != 'r':
                 ar1 += 1
-        else:
-            if s[i] != 'b':
-                ab1 += 1
+        elif s[i] != 'b':
+            ab1 += 1
 else:
     for i in range(n):
         if (i + 1) % 2 == 1:
             if s[i] != 'r':
                 ab += 1
-        else:
-            if s[i] != 'b':
-                ar += 1
+        elif s[i] != 'b':
+            ar += 1
     for i in range(n):
         if (i + 1) % 2 == 1:
             if s[i] != 'b':
                 ab1 += 1
-        else:
-            if s[i] != 'r':
-                ar1 += 1
+        elif s[i] != 'r':
+            ar1 += 1
 if max(ab1, ar1) > max(ab, ar):
     print(max(ab, ar))
 else:

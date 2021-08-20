@@ -1,7 +1,8 @@
 class Solution:
+
     def maxDistToClosest(self, seats: List[int]) -> int:
         ans = 0
-        for seat, group in itertools.groupby(seats):
+        for (seat, group) in itertools.groupby(seats):
             if not seat:
                 k = len(list(group))
                 ans = max(ans, (k + 1) // 2)

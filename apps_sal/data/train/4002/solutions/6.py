@@ -1,5 +1,5 @@
 def memesorting(meme):
-    bug, boom, edits = ['b', 'u', 'g'], ['b', 'o', 'o', 'm'], ['e', 'd', 'i', 't', 's']
+    (bug, boom, edits) = (['b', 'u', 'g'], ['b', 'o', 'o', 'm'], ['e', 'd', 'i', 't', 's'])
     for ch in meme.lower():
         if ch == bug[0]:
             bug.pop(0)

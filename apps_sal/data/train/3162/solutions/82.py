@@ -2,6 +2,7 @@ import string
 
 
 def compare(s1, s2):
+
     def numerise(s):
         if not s:
             return 0

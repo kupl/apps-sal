@@ -3,7 +3,6 @@ a = s[0]
 b = s[1]
 x = s[2]
 y = s[3]
-
 if a == b:
     print(x)
 elif a < b:

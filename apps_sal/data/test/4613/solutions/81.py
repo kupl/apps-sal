@@ -1,10 +1,9 @@
-# どの2点間も辺を辿れば到達できる　＝　連結グラフ
-# どう頑張ってもたどり着けない　＝　非連結グラフ
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 AB = [list(map(int, input().split())) for i in range(M)]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -19,13 +18,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -40,7 +36,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -49,20 +45,18 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-# 1辺を省いてUnionFindしたとき、グループ数が２以上になったらその辺は「橋」
 ans = 0
 for i in range(M):
     u = UnionFind(N)
-    for j, ab in enumerate(AB):
+    for (j, ab) in enumerate(AB):
         if i == j:
             continue
         else:
-            a, b = ab
+            (a, b) = ab
             u.union(a - 1, b - 1)
     if u.group_count() != 1:
         ans += 1
-
 print(ans)

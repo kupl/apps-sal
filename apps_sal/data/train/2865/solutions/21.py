@@ -1,5 +1,5 @@
 def solution(string):
-    reverse = ""
+    reverse = ''
     for i in string:
         reverse = i + reverse
     return reverse

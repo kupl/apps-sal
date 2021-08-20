@@ -4,6 +4,7 @@ sys.setrecursionlimit(2100000)
 
 
 def main():
+
     def counter(graph, vert, memo, pard=None):
         d = 0
         for c in graph[vert]:
@@ -13,19 +14,15 @@ def main():
                 else:
                     memo[c] = counter(graph, c, memo, vert)[0]
                 d += memo[c] + 1
-        return((d, memo))
-
+        return (d, memo)
     n = int(input())
     vizinhos = []
-
     for _ in range(n):
         vizinhos.append([])
-
     for _ in range(n - 1):
-        i, j = map(int, input().split())
+        (i, j) = map(int, input().split())
         vizinhos[i - 1].append(j - 1)
         vizinhos[j - 1].append(i - 1)
-
     same = 1
     layer = [0]
     par = [None]

@@ -1,10 +1,11 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
-        g, s = [0] * n, [0] * n
+        (g, s) = ([0] * n, [0] * n)
         for i in range(n):
             for j in range(i + 1, n):
-                print((rating[j]))
+                print(rating[j])
                 if rating[j] > rating[i]:
                     g[i] += 1
                 else:
@@ -18,5 +19,4 @@ class Solution:
                     ans += g[j]
                 else:
                     ans += s[j]
-
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         """
         :type input: str
@@ -6,11 +7,11 @@ class Solution:
         """
         dict = {0: 0}
         maxlen = 0
-        line = input.split("\n")
+        line = input.split('\n')
         for i in line:
             name = i.lstrip('\t')
             print(name)
-            print((len(name)))
+            print(len(name))
             depth = len(i) - len(name)
             if '.' in name:
                 maxlen = max(maxlen, dict[depth] + len(name))

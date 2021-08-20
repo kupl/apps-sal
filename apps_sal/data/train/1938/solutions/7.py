@@ -1,22 +1,19 @@
 class Solution:
+
     def rectangleArea(self, rectangles: List[List[int]]) -> int:
         START = 1
         END = 0
-        # we want it to end first then start
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         xaxis = []
-
-        for x1, y1, x2, y2 in rectangles:
+        for (x1, y1, x2, y2) in rectangles:
             xaxis.append((x1, START, y1, y2))
             xaxis.append((x2, END, y1, y2))
-
         xaxis.sort()
-
         prev = 0
         area = 0
         yaxis = []
         for i in range(len(xaxis)):
-            x, status, y1, y2 = xaxis[i]
+            (x, status, y1, y2) = xaxis[i]
             if i > 0:
                 area += self.get_length(yaxis) * (x - prev)
                 area %= MOD
@@ -31,9 +28,7 @@ class Solution:
     def get_length(self, yaxis):
         length = 0
         i = 0
-
         prev = (float('-inf'), float('-inf'))
-
         for i in range(len(yaxis)):
             if not self.has_overlap(prev, yaxis[i]):
                 length += yaxis[i][1] - yaxis[i][0]

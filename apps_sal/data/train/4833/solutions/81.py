@@ -1,12 +1,9 @@
 def replace_exclamation(s):
-    v = "aeiouAEIOU"
-
-    a = ""
-
+    v = 'aeiouAEIOU'
+    a = ''
     for each in s:
         if each in v:
-            a += "!"
+            a += '!'
         else:
             a += each
-
     return a

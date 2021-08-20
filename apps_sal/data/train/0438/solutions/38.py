@@ -1,6 +1,6 @@
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         startwith = dict()
         endwith = dict()
         length = dict()

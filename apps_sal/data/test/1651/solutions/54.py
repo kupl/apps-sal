@@ -1,4 +1,4 @@
-s, p = map(int, input().split())
+(s, p) = map(int, input().split())
 
 
 def divisor(n):
@@ -19,18 +19,17 @@ len_l = len(l)
 check = 0
 if len(l) % 2 == 0:
     for i in range(0, len_l // 2):
-        a, b = l[i], l[len_l - i - 1]
+        (a, b) = (l[i], l[len_l - i - 1])
         if a + b == s:
             check = 1
 else:
     for i in range(0, len_l // 2):
-        a, b = l[i], l[len_l - i - 1]
+        (a, b) = (l[i], l[len_l - i - 1])
         if a + b == s:
             check = 1
     if l[len_l // 2] * 2 == s:
         check = 1
-
 if check:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

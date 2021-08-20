@@ -1,4 +1,4 @@
-x, y, x0, y0 = [int(x) for x in input().split()]
+(x, y, x0, y0) = [int(x) for x in input().split()]
 s = input()
 was_in = [[False for y1 in range(y + 1)] for x1 in range(x + 1)]
 length = 1

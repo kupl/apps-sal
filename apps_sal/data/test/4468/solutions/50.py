@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 tlist = list(map(int, input().split()))
 time = t
 for i in range(0, n - 1):

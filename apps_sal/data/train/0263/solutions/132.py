@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         moves = [[4, 6], [6, 8], [9, 7], [8, 4], [3, 9, 0], [], [7, 1, 0], [6, 2], [1, 3], [2, 4]]
         count = [[0] * 10 for _ in range(n + 1)]

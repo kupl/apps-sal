@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
@@ -13,11 +14,11 @@ class Solution:
         cur = prior[0]
         res = 0
         while len(seen) < len(points):
-            dist, tar = heappop(cur)
+            (dist, tar) = heappop(cur)
             if tar not in seen:
                 res += dist
                 seen.add(tar)
-                for d, t in prior[tar]:
+                for (d, t) in prior[tar]:
                     if t not in seen:
                         heappush(cur, (d, t))
         return res

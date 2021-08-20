@@ -1,6 +1,6 @@
 def f(n, k):
     m = n
-    p, v = 0, 0
+    (p, v) = (0, 0)
     while n > 0:
         p += min(k, n)
         n -= min(n, k)
@@ -14,11 +14,10 @@ def f(n, k):
 
 
 n = int(input())
-
-l, u = 1, n
-while (l != u):
+(l, u) = (1, n)
+while l != u:
     m = (l + u) // 2
-    if not f(n, l) and not f(n, m):
+    if not f(n, l) and (not f(n, m)):
         l = m + 1
     elif f(n, m) and f(n, u):
         u = m

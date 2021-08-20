@@ -1,13 +1,9 @@
 def main():
     s = input()
     k = int(input())
-
     s += '?' * k
-
     N = len(s)
-
     result = 0
-
     for l in range(1, N):
         count = 0
         for i in range(N - l):
@@ -18,7 +14,6 @@ def main():
                     break
             else:
                 count = 0
-
     print(result * 2)
 
 

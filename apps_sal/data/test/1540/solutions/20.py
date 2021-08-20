@@ -1,5 +1,4 @@
-
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 chats_ = []
 for i in range(n):
     a = list(map(int, input().split()))
@@ -7,7 +6,7 @@ for i in range(n):
 sent = [0 for i in range(n)]
 chats = [0 for i in range(m)]
 for i in range(k):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     sent[a - 1] += 1
     chats[b - 1] += 1
 for i in range(n):

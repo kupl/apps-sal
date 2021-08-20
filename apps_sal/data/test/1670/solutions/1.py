@@ -9,30 +9,25 @@ Language: Python 3.3.4
 def main():
     s1 = read(0)
     s2 = read(0)
-    n, = read()
+    (n,) = read()
     arr = dict()
     res = []
     for i in range(n):
-        w, x, y, z = read(1)
+        (w, x, y, z) = read(1)
         w = int(w)
         if x + y in arr.keys():
-            if arr[x + y][1] != "r":
+            if arr[x + y][1] != 'r':
                 res.append((x, y, w))
-            arr[x + y] = (w, "r")
+            arr[x + y] = (w, 'r')
         else:
             arr[x + y] = (w, z)
-            if arr[x + y][1] == "r":
+            if arr[x + y][1] == 'r':
                 res.append((x, y, w))
-    for x, y, w in res:
-        print(s1 if x == "h" else s2, y, w)
-
-# NON-SOLUTION STUFF BELOW
+    for (x, y, w) in res:
+        print(s1 if x == 'h' else s2, y, w)
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -42,13 +37,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

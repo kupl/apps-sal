@@ -12,7 +12,7 @@ for _ in range(t):
         val = freq[i]
         if val >= last:
             val = last - 1
-        if(val <= 0):
+        if val <= 0:
             break
         else:
             ans += val

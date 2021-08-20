@@ -9,6 +9,6 @@ if N != 1:
             else:
                 plus = False
 if plus:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

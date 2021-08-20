@@ -1,4 +1,5 @@
-class Worker():
+class Worker:
+
     def __init__(self, j, c):
         self.job = j
         self.cost = c
@@ -6,7 +7,7 @@ class Worker():
 
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         line = list(map(int, file.readline().split()))
         a = list(map(int, file.readline().split()))
         b = list(map(int, file.readline().split()))
@@ -18,7 +19,7 @@ def read(type=1):
     c = []
     for i in range(line[0]):
         c.append(Worker(a[i], b[i]))
-    return line[0], line[1], c
+    return (line[0], line[1], c)
 
 
 def solve():
@@ -38,6 +39,6 @@ def solve():
     return sol
 
 
-n, k, a = read(0)
+(n, k, a) = read(0)
 sol = solve()
 print(sol)

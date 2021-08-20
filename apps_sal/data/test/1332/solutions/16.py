@@ -1,5 +1,4 @@
 __author__ = 'hamed1soleimani'
-
 ipt = input().split()
 s = 0
 for i in range(len(ipt)):

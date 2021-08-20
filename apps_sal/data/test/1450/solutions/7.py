@@ -9,17 +9,17 @@ def main():
         nums[int(s[i])].append(i)
     if len(nums[0]) == 0:
         temp = len(nums[1])
-        print("1" * temp + "2" * (n - temp))
+        print('1' * temp + '2' * (n - temp))
     elif len(nums[2]) == 0:
         temp = len(nums[0])
-        print("0" * temp + "1" * (n - temp))
+        print('0' * temp + '1' * (n - temp))
     else:
-        S = [i for i in s if i != "1"]
+        S = [i for i in s if i != '1']
         temp = len(nums[1])
         for i in range(len(S)):
-            if S[i] == "2":
+            if S[i] == '2':
                 break
-        print("".join(S[:i]) + temp * "1" + "".join(S[i:]))
+        print(''.join(S[:i]) + temp * '1' + ''.join(S[i:]))
     return 0
 
 

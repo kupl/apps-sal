@@ -1,5 +1,5 @@
 def men_from_boys(arr):
-    even, odd = [], []
+    (even, odd) = ([], [])
     for num in set(arr):
         if num % 2 == 0:
             even.append(num)

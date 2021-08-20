@@ -1,14 +1,14 @@
 def minimum(arr):
-    min = float("inf")
+    min = float('inf')
     for x in arr:
-        if(x < min):
+        if x < min:
             min = x
     return min
 
 
 def maximum(arr):
-    max = float("-inf")
+    max = float('-inf')
     for x in arr:
-        if(x > max):
+        if x > max:
             max = x
     return max

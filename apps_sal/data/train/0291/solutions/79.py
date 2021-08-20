@@ -2,6 +2,7 @@ MOD = 1000000007
 
 
 class Solution:
+
     def numOfSubarrays(self, arr):
         n = len(arr)
         pre_sum = [1, 0]

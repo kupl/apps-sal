@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         piles = deque(sorted(piles))
         my_coins = 0

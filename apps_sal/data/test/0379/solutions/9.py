@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 dic = {}
 for i in range(n):
     dic[i] = input()
@@ -22,15 +22,14 @@ for i in range(corner1[1], m + 1):
 rec = True
 for i in range(n):
     for j in range(m):
-        if i < corner1[0] or i > corner2 or j < corner1[1] or j > corner3:
+        if i < corner1[0] or i > corner2 or j < corner1[1] or (j > corner3):
             if dic[i][j] == 'X':
                 rec = False
                 break
-        else:
-            if dic[i][j] == '.':
-                rec = False
-                break
+        elif dic[i][j] == '.':
+            rec = False
+            break
 if rec:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

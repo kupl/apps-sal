@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 c = []
 dic = defaultdict(int)
 for _ in range(10):

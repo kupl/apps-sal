@@ -2,7 +2,7 @@ def digits_until_block_(n):
     result = 0
     for bas in range(1, 30):
         minimum = int(10 ** (bas - 1))
-        maximum = int((10 ** bas) - 1)
+        maximum = int(10 ** bas - 1)
         if n < maximum:
             maximum = n
         if maximum < minimum:
@@ -21,10 +21,10 @@ def digits_until_(n):
 
 def sum_between(x, y):
     try:
-        assert (x <= y)
+        assert x <= y
     except AssertionError:
         print(x, y)
-    return ((x + y) * (y - x + 1)) // 2
+    return (x + y) * (y - x + 1) // 2
 
 
 def solve(q):
@@ -49,9 +49,9 @@ def solve(q):
     return str(left)[q - 1]
 
 
-q = int(input(""))
+q = int(input(''))
 q_list = []
 for _ in range(q):
-    q_list.append(int(input("")))
+    q_list.append(int(input('')))
 for query in q_list:
     print(solve(query))

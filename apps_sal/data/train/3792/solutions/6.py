@@ -1,6 +1,6 @@
 def slogans(p, r):
     c = 0
-    while(r):
+    while r:
         for i in range(len(p)):
             if r.startswith(p[i:]):
                 c += 1

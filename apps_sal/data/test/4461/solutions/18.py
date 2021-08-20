@@ -1,6 +1,6 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 if not h % 3 or not w % 3:
-    print((0))
+    print(0)
 else:
     ans = min([h, w])
     for i in range(h):

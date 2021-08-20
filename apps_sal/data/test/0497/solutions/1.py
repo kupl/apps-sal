@@ -1,5 +1,3 @@
-
-
 def ria():
     return [int(i) for i in input().split()]
 

@@ -6,7 +6,6 @@ for i in 'abcdefghijklmnopqrstuvwxyz':
             ch += 1
         else:
             nch += 1
-
 t = 0
 while nch > 1:
     if ch > 0:

@@ -8,6 +8,6 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    a, b = read_ints()
+    (a, b) = read_ints()
     x = max(2 * min(a, b), max(a, b))
     print(x * x)

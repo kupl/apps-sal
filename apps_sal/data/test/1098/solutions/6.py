@@ -1,7 +1,7 @@
 n = int(input())
 x = []
 for i in range(n):
-    a, b = map(int, (input().split(':')))
+    (a, b) = map(int, input().split(':'))
     x.append(a * 60 + b)
 x = sorted(x)
 x.append(x[0] + 24 * 60)

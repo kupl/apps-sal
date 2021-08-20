@@ -1,6 +1,6 @@
 def pick_peaks(arr):
     print(arr)
-    ans = {"pos": [], "peaks": []}
+    ans = {'pos': [], 'peaks': []}
     for i in range(1, len(arr) - 1):
         start = None
         end = None
@@ -21,8 +21,8 @@ def pick_peaks(arr):
         if end == None:
             end = i
         if arr[start - 1] < arr[start] and arr[end + 1] < arr[end]:
-            if start not in ans["pos"]:
-                ans["pos"].append(start)
-                ans["peaks"].append(arr[start])
-        print("i:", i, "val:", arr[i], start, end)
+            if start not in ans['pos']:
+                ans['pos'].append(start)
+                ans['peaks'].append(arr[start])
+        print('i:', i, 'val:', arr[i], start, end)
     return ans

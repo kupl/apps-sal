@@ -1,9 +1,8 @@
 from collections import defaultdict
 n = input()
 t = list(map(int, input().split()))
-p, d = defaultdict(int), defaultdict(int)
-
-for i, x in enumerate(t, 1):
+(p, d) = (defaultdict(int), defaultdict(int))
+for (i, x) in enumerate(t, 1):
     if d[x] < 0:
         continue
     if p[x]:
@@ -12,10 +11,8 @@ for i, x in enumerate(t, 1):
         else:
             d[x] = i - p[x]
     p[x] = i
-
 y = list(d.keys())
 y.sort()
-
-t = list(str(x) + ' ' + str(d[x]) for x in y if d[x] >= 0)
+t = list((str(x) + ' ' + str(d[x]) for x in y if d[x] >= 0))
 print(len(t))
 print('\n'.join(t))

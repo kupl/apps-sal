@@ -9,9 +9,9 @@ def c(n, k):
     return a // b
 
 
-a, b, k, t = map(int, input().split())
-n, m, s = 2 * k + 1, 2 * t, 2 * k * t + b - a
-ans, mod = 0, 1000000007
+(a, b, k, t) = map(int, input().split())
+(n, m, s) = (2 * k + 1, 2 * t, 2 * k * t + b - a)
+(ans, mod) = (0, 1000000007)
 for i in range(m + 1):
     ans = (ans + [1, -1][i & 1] * c(m, i) * c(m + s - n * i, m)) % mod
 print((pow(n, m, mod) - ans) % mod)

@@ -9,8 +9,7 @@ minx = min(map(lambda x: x[0], sq[:n]))
 maxy = max(map(lambda x: x[3], sq[:n]))
 miny = min(map(lambda x: x[1], sq[:n]))
 area = (maxy - miny) * (maxx - minx)
-
 if maxx - minx != maxy - miny or area != sqsum:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

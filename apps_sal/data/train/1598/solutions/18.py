@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     t = int(input())
     for i in range(t):
@@ -10,7 +9,6 @@ try:
             avg = avg + float(t[2])
             a.append(t)
         avg /= n
-
         a.sort(key=lambda a: a[2])
         for x in a:
             if int(x[2]) < round(avg):

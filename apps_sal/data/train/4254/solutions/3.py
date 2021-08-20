@@ -1,13 +1,13 @@
 def solve(eq):
     r = []
-    n = ""
+    n = ''
     for i in eq:
-        if i in "*/-+":
+        if i in '*/-+':
             r.append(n)
             r.append(i)
-            n = ""
+            n = ''
         else:
             n += i
     r.append(n)
     r.reverse()
-    return "".join(r)
+    return ''.join(r)

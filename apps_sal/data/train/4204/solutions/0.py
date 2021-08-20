@@ -1,9 +1,9 @@
 def palindrome(num):
     if type(num) is not int or num < 0:
-        return "Not valid"
+        return 'Not valid'
     else:
         c = 0
-        for i in range(num, num**2):
+        for i in range(num, num ** 2):
             if is_pal(i):
                 return i
             elif is_pal(i - c):

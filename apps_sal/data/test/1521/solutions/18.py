@@ -1,9 +1,7 @@
 inp = input().strip().split()
 inp = [int(i) for i in inp]
-
 p = inp[0]
 n = inp[1]
-
 hashDict = {}
 conflict = False
 insertion = 0
@@ -15,11 +13,9 @@ for i in range(n):
             continue
         conflict = True
         insertion = i
-
     else:
         hashDict[num] = True
-
 if conflict:
     print(insertion + 1)
 else:
-    print("-1")
+    print('-1')

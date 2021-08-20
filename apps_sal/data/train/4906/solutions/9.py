@@ -1,6 +1,6 @@
 def traffic_lights(road, n):
-    a, b, c = 'GGGGGORRRRR', 'ORRRRRGGGGG', 'RRRRRGGGGGO'
-    r, p = [road], 0
+    (a, b, c) = ('GGGGGORRRRR', 'ORRRRRGGGGG', 'RRRRRGGGGGO')
+    (r, p) = ([road], 0)
     for i in range(1, n + 1):
         t = [a[i % 11] if x == 'G' else b[i % 11] if x == 'O' else c[i % 11] if x == 'R' else x for x in road]
         if p < len(road) - 1:

@@ -1,4 +1,4 @@
-n, z = list(map(int, input().split()))
+(n, z) = list(map(int, input().split()))
 arrs = [int(x) for x in input().split()]
 arrs.sort()
 

@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 reach = [0] * (n + 1)
 l = [[] for i in range(n + 1)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     l[a].append(b)
     l[b].append(a)
 

@@ -1,11 +1,7 @@
 import numpy as np
-n, a = map(int, input().split())
+(n, a) = map(int, input().split())
 x = list(map(int, input().split()))
-"""
-平均がa <=> 集合をlとして, len(l)a = sum(l)
-dp[i][j][k] := i番目までのカードを選んだとき, 選んだ枚数がkでの総和がちょうどjになる場合の数.
-これだとメモリが足りないので, iを省略する.
-"""
+'\n平均がa <=> 集合をlとして, len(l)a = sum(l)\ndp[i][j][k] := i番目までのカードを選んだとき, 選んだ枚数がkでの総和がちょうどjになる場合の数.\nこれだとメモリが足りないので, iを省略する.\n'
 sumx = sum(x)
 dp = np.zeros((n, sumx + 1), dtype=np.int64)
 for i in range(n):

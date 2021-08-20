@@ -1,6 +1,6 @@
 T = int(input())
 while T > 0:
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     T = T - 1
     r1 = 1
     r2 = K

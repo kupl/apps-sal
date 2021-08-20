@@ -4,6 +4,7 @@ input = stdin.readline
 
 
 class N:
+
     def __init__(self, il, ir, val, l, r):
         self.il = il
         self.ir = ir
@@ -26,10 +27,11 @@ class N:
 
 
 class ST:
+
     def __init__(self, arr, threshold):
         t1 = []
         t2 = []
-        for i, val in enumerate(arr):
+        for (i, val) in enumerate(arr):
             t1.append(N(i, i, int(val >= threshold), None, None))
         while len(t1) + len(t2) > 1:
             while len(t1) >= 2:
@@ -38,12 +40,12 @@ class ST:
                 t2.append(self.__get_next(a, b))
             if len(t1) > 0:
                 t2.append(t1.pop())
-            t1, t2 = t2, t1
+            (t1, t2) = (t2, t1)
         self.r = t1[0]
 
     def __get_next(self, a, b):
         if a.il > b.il:
-            a, b = b, a
+            (a, b) = (b, a)
         n = N(a.il, b.ir, self.__func(a.val, b.val), a, b)
         return n
 
@@ -61,7 +63,6 @@ class ST:
                     root = root.r
             answ = self.__func(answ, root.val)
             return answ
-
         if root.il == l and root.ir == r:
             return root.val
         f = True
@@ -81,7 +82,6 @@ class ST:
             else:
                 left = left.r
         answ = self.__func(answ, left.val)
-
         while not right.ir == r:
             if r > right.l.ir:
                 answ = self.__func(answ, right.l.val)
@@ -95,47 +95,18 @@ class ST:
         return self.r.get_amount(l, r, self.__func)
 
 
-'''
-class ST:
-
-    def __init__(self, arr, min_r):
-        self.len = (math.ceil(math.log(len(arr), 2))) ** 2
-        self.t = [0] * (4 * len(arr))
-        for i in range(0, len(arr)):
-            self.t[self.len + i] = int(arr[i] >= min_r)
-
-        for i in range(self.len - 1, 0, -1):
-            self.t[i] = self.__func(self.t[i * 2], self.t[i * 2 + 1])
-
-    def __func(self, l, r):
-        return l + r
-
-    def request(self, left, right):
-        l = self.len + left
-        r = self.len + right
-        ans = 0
-        while l <= r:
-            if l % 2 == 1:
-                ans = self.__func(ans, self.t[l])
-            if r % 2 == 0:
-                ans = self.__func(ans, self.t[r])
-            l = int((l + 1) / 2)
-            r = int((r - 1) / 2)
-        return ans'''
-
+'\nclass ST:\n\n    def __init__(self, arr, min_r):\n        self.len = (math.ceil(math.log(len(arr), 2))) ** 2\n        self.t = [0] * (4 * len(arr))\n        for i in range(0, len(arr)):\n            self.t[self.len + i] = int(arr[i] >= min_r)\n\n        for i in range(self.len - 1, 0, -1):\n            self.t[i] = self.__func(self.t[i * 2], self.t[i * 2 + 1])\n\n    def __func(self, l, r):\n        return l + r\n\n    def request(self, left, right):\n        l = self.len + left\n        r = self.len + right\n        ans = 0\n        while l <= r:\n            if l % 2 == 1:\n                ans = self.__func(ans, self.t[l])\n            if r % 2 == 0:\n                ans = self.__func(ans, self.t[r])\n            l = int((l + 1) / 2)\n            r = int((r - 1) / 2)\n        return ans'
 gradus = [0 for i in range(200002)]
-recipes, min_r, questions = list(map(int, input().split()))
+(recipes, min_r, questions) = list(map(int, input().split()))
 adds = []
-
 for i in range(recipes):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     if l == r:
         adds.append(l)
     else:
         gradus[l] -= 1
         gradus[r + 1] += 1
 counter = 0
-
 for i in range(0, len(gradus)):
     if gradus[i] < 0:
         counter += abs(gradus[i])
@@ -144,13 +115,9 @@ for i in range(0, len(gradus)):
     gradus[i] = counter
 for i in adds:
     gradus[i] += 1
-
 tree = ST(gradus, min_r)
 res = []
-
 for i in range(questions):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     res.append(str(tree.request(l, r)))
-
-
 print('\n'.join(res))

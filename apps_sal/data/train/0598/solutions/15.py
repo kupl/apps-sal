@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = 0
 c = 110000000
@@ -8,10 +8,9 @@ for d in a:
 if k == 0:
     for x in a:
         print(x, end=' ')
+elif k % 2 == 0:
+    for x in a:
+        print(x - c, end=' ')
 else:
-    if k % 2 == 0:
-        for x in a:
-            print(x - c, end=' ')
-    else:
-        for x in a:
-            print(b - x, end=' ')
+    for x in a:
+        print(b - x, end=' ')

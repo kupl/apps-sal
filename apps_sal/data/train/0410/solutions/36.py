@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         heap = []
         for i in range(lo, hi + 1):
@@ -10,8 +11,7 @@ class Solution:
                 else:
                     ret = 3 * ret + 1
                 steps += 1
-
             heapq.heappush(heap, (-steps, -i))
             if len(heap) > k:
                 heapq.heappop(heap)
-        return -(heap[0][1])
+        return -heap[0][1]

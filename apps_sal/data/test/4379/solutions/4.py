@@ -1,8 +1,7 @@
 n = int(input())
 a = input().split()
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     a[i] = int(x)
-
 d = [float('inf')] * (n + 1)
 d[0] = 0
 length = 0
@@ -21,12 +20,11 @@ for i in range(0, n):
         value = a[i]
 ans = []
 value0 = value - length + 1
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     if x == value0:
         ans.append(i + 1)
         value0 = value0 + 1
         if value0 > value:
             break
-
 print(length)
-print(' '.join(str(i) for i in ans))
+print(' '.join((str(i) for i in ans)))

@@ -1,21 +1,13 @@
-# 592_D
-
 import sys
-
 n = int(input())
-
 vs = []
-
 for i in range(0, 3):
-    ln = [int(j) for j in sys.stdin.readline().rstrip().split(" ")]
+    ln = [int(j) for j in sys.stdin.readline().rstrip().split(' ')]
     vs.append(ln)
-
 vt = {}
-
 f = True
-
 for i in range(0, n - 1):
-    edg = [int(j) for j in sys.stdin.readline().rstrip().split(" ")]
+    edg = [int(j) for j in sys.stdin.readline().rstrip().split(' ')]
     if edg[0] in vt:
         vt[edg[0]].append(edg[1])
     else:
@@ -24,7 +16,6 @@ for i in range(0, n - 1):
         vt[edg[1]].append(edg[0])
     else:
         vt[edg[1]] = [edg[0]]
-
 st = -1
 for i in vt:
     if len(vt[i]) > 2:
@@ -32,14 +23,13 @@ for i in vt:
         break
     if len(vt[i]) == 1:
         st = i
-
 if f:
     combos = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
     m = -1
     ms = -1
     for i in range(0, len(combos)):
         cost = 0
-        seq = [0] * (n)
+        seq = [0] * n
         vert = st
         vis = {}
         for j in range(0, len(vs[0])):
@@ -57,6 +47,6 @@ if f:
             m = cost
             ms = seq
     print(m)
-    print(" ".join([str(i) for i in ms]))
+    print(' '.join([str(i) for i in ms]))
 else:
     print(-1)

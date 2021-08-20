@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
     l = []
     avg = 0
     for i in range(n):
-        x, p, m = input().split(" ")
+        (x, p, m) = input().split(' ')
         p = int(p)
         m = int(m)
         avg += m

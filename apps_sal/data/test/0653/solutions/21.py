@@ -16,4 +16,4 @@ for i in s:
         k = int(i)
         a[k] = 0
 for i in range(10):
-    print(a[i], end="")
+    print(a[i], end='')

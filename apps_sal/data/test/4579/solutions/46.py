@@ -1,7 +1,5 @@
 N = int(input())
-
 dics = {}
-
 for _ in range(N):
     s = input()
     if s in dics:

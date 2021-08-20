@@ -3,18 +3,14 @@ import math
 
 
 def main(arr):
-    odd, even = 0, 0
-
+    (odd, even) = (0, 0)
     ans = 0
-
     for e in arr:
         if e & 1:
             odd += 1
         else:
             even += 1
-
     for e in arr:
-
         if e & 1:
             ans += even
             odd -= 1

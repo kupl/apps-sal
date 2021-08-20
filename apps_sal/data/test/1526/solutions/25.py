@@ -1,4 +1,4 @@
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 l = sorted([A, B, C])
 d = l[2] - l[0]
 e = l[1] - l[0]

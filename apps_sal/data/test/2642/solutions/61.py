@@ -1,15 +1,12 @@
 from math import gcd
-
 N = int(input())
 AB = [list(map(int, input().split())) for _ in range(N)]
-
 m = 1000000007
-
 t = []
 d = {}
 d[0] = {}
 d[0][0] = 0
-for a, b in AB:
+for (a, b) in AB:
     i = gcd(a, b)
     if i != 0:
         a //= i
@@ -18,17 +15,16 @@ for a, b in AB:
     d.setdefault(a, {})
     d[a].setdefault(b, 0)
     d[a][b] += 1
-
 used = set()
 result = 1
-for a, b in t:
+for (a, b) in t:
     if (a, b) in used:
         continue
     used.add((a, b))
     if a == 0 and b == 0:
         continue
     i = d[a][b]
-    j, k, l = 0, 0, 0
+    (j, k, l) = (0, 0, 0)
     if -a in d and -b in d[-a]:
         j = d[-a][-b]
         used.add((-a, -b))

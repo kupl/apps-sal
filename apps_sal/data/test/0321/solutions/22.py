@@ -10,11 +10,10 @@ def is_prime(n):
 
 
 def solve():
-    a, b = (int(x) for x in input().split())
+    (a, b) = (int(x) for x in input().split())
     if a - b != 1:
         print('NO')
         return
-
     if is_prime(a + b):
         print('YES')
     else:

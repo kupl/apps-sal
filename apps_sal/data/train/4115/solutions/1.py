@@ -1,5 +1,5 @@
 def find_outlier(integers):
-    even, odd = 0, 0
+    (even, odd) = (0, 0)
     for i in integers:
         if i % 2:
             even += 1

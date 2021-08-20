@@ -1,9 +1,7 @@
 N = int(input())
 S = sorted([int(input()) for _ in range(N)])
-
 t = sum(S)
-
-if (t % 10 != 0):
+if t % 10 != 0:
     print(sum(S))
 else:
     for i in S:

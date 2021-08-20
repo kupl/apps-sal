@@ -1,6 +1,6 @@
 from copy import deepcopy
 from collections import deque
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 s = [['#'] * (w + 2) for i in range(h + 2)]
 for i in range(h):
     x = input()
@@ -14,9 +14,9 @@ for i in range(1, h + 1):
             maze[i][j] = 0
             queue = deque([[i, j]])
             while queue:
-                x, y = queue.popleft()
-                for a, b in ([0, -1], [0, 1], [1, 0], [-1, 0]):
-                    nh, nw = x + a, y + b
+                (x, y) = queue.popleft()
+                for (a, b) in ([0, -1], [0, 1], [1, 0], [-1, 0]):
+                    (nh, nw) = (x + a, y + b)
                     if maze[nh][nw] == '.':
                         maze[nh][nw] = maze[x][y] + 1
                         queue.append([nh, nw])

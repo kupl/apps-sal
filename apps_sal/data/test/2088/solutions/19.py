@@ -8,7 +8,6 @@ bulb = [1] * (n + 1)
 for i in range(n - 1):
     bulb[par[i]] = 0
     graph[par[i]].append(i + 2)
-# print(graph,bulb)
 zero = bulb.count(0)
 for i in range(n, 0, -1):
     if bulb[i] == 0:

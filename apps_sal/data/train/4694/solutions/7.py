@@ -7,7 +7,7 @@ def sum_fib(n):
     s = 2
     i = 2
     while i < n:
-        a, b = b, a + b
+        (a, b) = (b, a + b)
         s += factorial(a)
         i += 1
     return s

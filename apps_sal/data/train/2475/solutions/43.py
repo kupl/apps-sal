@@ -1,4 +1,5 @@
 class Solution:
+
     def minDeletionSize(self, A: List[str]) -> int:
         size = len(A[0])
         setd = set([i for i in range(size)])
@@ -10,5 +11,4 @@ class Solution:
                 if A[i][digit] > A[i + 1][digit]:
                     setn.add(digit)
             setd -= setn
-
         return size - len(setd)

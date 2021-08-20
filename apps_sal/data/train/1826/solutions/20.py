@@ -2,6 +2,7 @@ from itertools import accumulate
 
 
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         A = mat.copy()
         for i in range(len(A)):

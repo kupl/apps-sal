@@ -1,7 +1,6 @@
 n = int(input())
 c = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 ans = 0
 v = [False for i in range(n)]
 for i in range(n):
@@ -24,10 +23,9 @@ for i in range(n):
         elif v[nex]:
             t = False
             za = s.pop()
-
     if not t:
         continue
-    an = float("INF")
+    an = float('INF')
     for k in range(j, len(pl)):
         an = min(c[pl[k]], an)
     ans += an

@@ -8,11 +8,9 @@ for i in range(len(c)):
 for i in range(len(c)):
     if i + 1 <= rcnt and c[i] == 'R':
         hrcnt += 1
-
 wcnt = len(c) - rcnt
 if rcnt == len(c) or rcnt == 0:
     ans = 0
 else:
     ans = rcnt - hrcnt
-
 print(ans)

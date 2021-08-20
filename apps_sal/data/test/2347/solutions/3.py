@@ -4,7 +4,7 @@ for _ in range(int(input())):
     p = sorted(p)
     ok = False
     for i in range(len(h) - len(p) + 1):
-        q = sorted(h[i: i + len(p)])
+        q = sorted(h[i:i + len(p)])
         if p == q:
             ok = True
             break

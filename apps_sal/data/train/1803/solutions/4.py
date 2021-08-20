@@ -29,7 +29,6 @@ def product1(list, pro, i, out):
     if i < len(list):
         proa = pro
         prob = list[i]
-
         pro = proa * prob
         if pro not in out:
             out.append(pro)
@@ -53,7 +52,6 @@ def numeric_palindrome(*args):
         product1(args1, args1[0], 1, pro1)
         if args.count(1) > 0:
             pro1 = pro1 + args1
-
         for j in pro1:
             out = palindrome(j)
             out1.append(out)

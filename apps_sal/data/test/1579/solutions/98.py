@@ -1,11 +1,10 @@
 import sys
 sys.setrecursionlimit(100000)
-
 n = int(input())
 xy = [list(map(int, input().split())) for _ in range(n)]
 xtoy = {}
 ytox = {}
-for x, y in xy:
+for (x, y) in xy:
     if x not in xtoy:
         xtoy[x] = [y]
     else:
@@ -34,5 +33,4 @@ while len(xtoy) > 0:
     ys = set()
     num = doit(x, xs, ys, xtoy, ytox)
     ret += len(xs) * len(ys) - num // 2
-
 print(ret)

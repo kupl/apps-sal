@@ -1,8 +1,8 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 MOD = 998244353
-MAX_N = 10**6
-fac = [0] * (MAX_N)
-fac_inv = [0] * (MAX_N)
+MAX_N = 10 ** 6
+fac = [0] * MAX_N
+fac_inv = [0] * MAX_N
 fac[0] = 1
 for i in range(MAX_N - 1):
     fac[i + 1] = fac[i] * (i + 1) % MOD
@@ -17,8 +17,7 @@ def nCk(n, k):
 
 ans = 0
 for k in range(K + 1):
-    # temp = M*nCk(N-1, k)*pow(M-1, N-K-1, MOD) % MOD
-    temp = (M * nCk(N - 1, k)) % MOD * pow(M - 1, N - k - 1, MOD) % MOD
+    temp = M * nCk(N - 1, k) % MOD * pow(M - 1, N - k - 1, MOD) % MOD
     ans += temp
     ans %= MOD
 print(ans)

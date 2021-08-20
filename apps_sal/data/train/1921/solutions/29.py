@@ -13,9 +13,8 @@ class DinnerPlates:
             self.data.append([])
 
     def pop(self) -> int:
-        while self.data and not self.data[-1]:
+        while self.data and (not self.data[-1]):
             self.data.pop()
-
         if self.data:
             if len(self.data) <= self.i:
                 self.i -= 1
@@ -28,10 +27,3 @@ class DinnerPlates:
                 self.i = index
             return self.data[index].pop()
         return -1
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

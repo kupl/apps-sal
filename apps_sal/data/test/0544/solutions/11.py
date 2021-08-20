@@ -3,9 +3,9 @@ def solve(s, n):
     while i < n // 2:
         if s[i] != s[n - i - 1]:
             if abs(ord(s[i]) - ord(s[n - i - 1])) != 2:
-                return "NO"
+                return 'NO'
         i += 1
-    return "YES"
+    return 'YES'
 
 
 for _ in range(int(input())):

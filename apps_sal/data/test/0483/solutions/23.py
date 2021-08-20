@@ -1,7 +1,7 @@
 n = int(input())
 s = input()
 pos = [int(i) for i in input().split()]
-min = 10**18
+min = 10 ** 18
 nosol = True
 for i in range(1, n):
     if s[i - 1] == 'R' and s[i] == 'L':

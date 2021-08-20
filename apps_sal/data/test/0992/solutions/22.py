@@ -12,6 +12,6 @@ def finalFunc(n, s, A):
     return var[s]
 
 
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 A = list(map(int, input().split()))
 print(finalFunc(n, s, A))

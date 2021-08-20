@@ -11,17 +11,22 @@ import sys
 import random
 import time
 import copy
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
 
 
 s = ns()

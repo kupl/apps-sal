@@ -11,11 +11,8 @@ def solve(s):
             continue
         for l in range(1, min(LOG, n - t + 1)):
             x = int(s[t:t + l], 2)
-            # print(l, t, x, l + z)
             if l + z >= x:
                 res += 1
-
-#			print(t, l, x, res, z)
         z = 0
     return res
 

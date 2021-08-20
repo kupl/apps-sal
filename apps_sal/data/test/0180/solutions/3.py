@@ -5,9 +5,9 @@ def read_nums():
 def parse_input(text, symbols='?*'):
     res = []
     prev_index = 0
-    for index, char in enumerate(text):
+    for (index, char) in enumerate(text):
         if char in symbols:
-            res.append(('', text[prev_index: index - 1]))
+            res.append(('', text[prev_index:index - 1]))
             res.append((char, text[index - 1]))
             prev_index = index + 1
     last_chunk = text[prev_index:]
@@ -26,10 +26,9 @@ def calc_length(parsed_input):
 
 def main():
     msg = input()
-    n, = read_nums()
+    (n,) = read_nums()
     parsed_input = parse_input(msg)
     length = calc_length(parsed_input)
-
     out = []
     for part in parsed_input:
         if part[0] == '':
@@ -41,7 +40,6 @@ def main():
             else:
                 out.append(part[1] * (n - length))
                 length = n
-
     res = ''.join(out)
     if len(res) == n:
         print(res)

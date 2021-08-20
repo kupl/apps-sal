@@ -1,6 +1,5 @@
 import sys
 input = iter(sys.stdin.read().splitlines()).__next__
-
 n = int(input())
 
 
@@ -22,7 +21,6 @@ def prep(s):
 for _ in range(n):
     t = input()
     s = input()
-
     T = prep(t)
     S = prep(s)
     if len(T) == len(S):

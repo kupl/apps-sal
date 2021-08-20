@@ -1,8 +1,8 @@
 n = int(input())
 s = input()
-dp = [[0, 0, 0]for i in range(n)]
+dp = [[0, 0, 0] for i in range(n)]
 ct = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(n):
     if i == 0:
         if s[i] == '?':
@@ -10,7 +10,7 @@ for i in range(n):
         if s[i] == 'a' or s[i] == '?':
             dp[i][0] += 1
     else:
-        aa, bb, cc = dp[i - 1]
+        (aa, bb, cc) = dp[i - 1]
         if s[i] == 'a':
             dp[i][0] = aa + ct
             dp[i][1] = bb

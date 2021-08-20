@@ -29,5 +29,4 @@ for _ in range(int(input())):
             else:
                 bbox += 1
                 n -= 1
-
     print(abox, bbox)

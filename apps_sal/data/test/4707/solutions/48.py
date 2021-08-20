@@ -1,5 +1,4 @@
 s = input()
-
 if s == '111':
     print(3)
 elif s == '110' or s == '101' or s == '011':

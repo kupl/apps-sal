@@ -7,5 +7,4 @@ for i in range(max(n // 1234567 + 1, 1)):
         if n3 % 1234 == 0:
             sol = True
             break
-
-print(["NO", "YES"][sol])
+print(['NO', 'YES'][sol])

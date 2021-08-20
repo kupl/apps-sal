@@ -23,9 +23,7 @@ for i in range(len(s)):
         cnt += 1
         tmp = 0
         used = [False] * 26
-
 prm = cnt + 1
-
 if prm == 1:
     for j in range(26):
         if used[j] == False:
@@ -44,7 +42,7 @@ else:
             used = [False] * 26
             d.append(i)
     d = d[::-1]
-    ans = ""
+    ans = ''
     cnt = 0
     i = 0
     skip = False
@@ -65,7 +63,6 @@ else:
             continue
         if used[num(s[i])] == False:
             used[num(s[i])] = True
-
     for j in range(26):
         if used[j] == False:
             ans += let(j)

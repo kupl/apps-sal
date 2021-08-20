@@ -1,11 +1,11 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         lo = 0
         hi = 0
         for i in range(len(weights)):
             lo = max(lo, weights[i])
             hi = hi + weights[i]
-
         optimalcapacity = hi + 1
         while lo <= hi:
             days = 1

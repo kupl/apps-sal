@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 ans = [0 for i in range(n)]
 lock = [False for i in range(k)]
 deadlock = lock[:]
@@ -9,7 +9,7 @@ for i in range(n):
         insset[j][i] = ins[j]
 for r in range(m):
     ins = insset[r]
-    for i, el in enumerate(ins):
+    for (i, el) in enumerate(ins):
         if el == 0 or ans[i]:
             continue
         if lock[el - 1]:

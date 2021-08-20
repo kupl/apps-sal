@@ -1,4 +1,4 @@
-WEEK = ' Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(" ")
+WEEK = ' Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(' ')
 
 
 def whatday(n):

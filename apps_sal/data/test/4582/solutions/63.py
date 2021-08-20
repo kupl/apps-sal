@@ -1,4 +1,4 @@
-a, b = list(map(str, input().split()))
+(a, b) = list(map(str, input().split()))
 if a == 'H' and b == 'H':
     print('H')
 elif a == 'H' and b == 'D':

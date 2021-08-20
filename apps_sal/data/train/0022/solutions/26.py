@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a1, k = map(int, input().split())
+    (a1, k) = map(int, input().split())
     an = a1
     for j in range(1, k):
         astr = str(an)

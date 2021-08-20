@@ -2,7 +2,7 @@ def find_final_posi(l1, cp, jumps):
     count = 0
     i = cp
     while i in range(cp, cp + 101):
-        if ((count == jumps) | (i >= len(l1))):
+        if (count == jumps) | (i >= len(l1)):
             return cp
         elif l1[cp] < l1[i]:
             cp = i

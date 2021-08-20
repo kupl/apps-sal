@@ -1,7 +1,6 @@
 from collections import deque
-
-n, a = int(input()), list(map(int, input().split()))
-a_sorted = sorted([a[i], i + 1] for i in range(1, n))
+(n, a) = (int(input()), list(map(int, input().split())))
+a_sorted = sorted(([a[i], i + 1] for i in range(1, n)))
 messages = []
 queue = deque([[a[0], 1]])
 while a_sorted and queue:

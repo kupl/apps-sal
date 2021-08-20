@@ -13,11 +13,10 @@ def triangle(row):
                 st = l[u + 1]
                 if ft == st:
                     lp.append(ft)
-                else:
-                    if ft == "R" and st == "G" or ft == "G" and st == "R":
-                        lp.append("B")
-                    elif ft == "R" and st == "B" or ft == "B" and st == "R":
-                        lp.append("G")
-                    elif ft == "B" and st == "G" or ft == "G" and st == "B":
-                        lp.append("R")
+                elif ft == 'R' and st == 'G' or (ft == 'G' and st == 'R'):
+                    lp.append('B')
+                elif ft == 'R' and st == 'B' or (ft == 'B' and st == 'R'):
+                    lp.append('G')
+                elif ft == 'B' and st == 'G' or (ft == 'G' and st == 'B'):
+                    lp.append('R')
         return l[len(l) - 1]

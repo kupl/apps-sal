@@ -1,4 +1,3 @@
-
 def blokovi(x):
     ret = [0]
     for i in range(len(x) - 1):
@@ -9,15 +8,12 @@ def blokovi(x):
 
 s = input()
 t = input()
-
 ss = blokovi(s)
 tt = blokovi(t)
-
 if s[-1] == 'a':
     s += 'b'
 else:
     s += 'a'
-
 if t[-1] == 'a':
     t += 'b'
 else:
@@ -25,7 +21,7 @@ else:
 
 
 def greedy(x, y, rev=False):
-    i, j = len(x) - 1, len(y) - 1
+    (i, j) = (len(x) - 1, len(y) - 1)
     swaps = []
     while True:
         while i >= 0 and x[i] == 'a':
@@ -34,12 +30,12 @@ def greedy(x, y, rev=False):
             j -= 1
         if i < 0 and j < 0:
             break
-        x, y = y, x
+        (x, y) = (y, x)
         if rev:
             swaps.append((j + 1, i + 1))
         else:
             swaps.append((i + 1, j + 1))
-        i, j = j, i
+        (i, j) = (j, i)
     return swaps
 
 
@@ -52,10 +48,9 @@ def solve(x, y):
 
 
 probao = set()
-
 total = len(ss) + len(tt)
 sol = solve(s[:-1], t[:-1])
-for b, i in enumerate(ss):
+for (b, i) in enumerate(ss):
     for c in range((2 * b + len(tt) - len(ss)) // 2 - 2, (2 * b + len(tt) - len(ss) + 1) // 2 + 3):
         if 0 <= c < len(tt):
             j = tt[c]
@@ -78,7 +73,6 @@ for b, i in enumerate(ss):
                 cand = solve(s2, t2)
             if len(cand) < len(sol):
                 sol = cand
-
 print(len(sol))
-for i, j in sol:
+for (i, j) in sol:
     print(i, j)

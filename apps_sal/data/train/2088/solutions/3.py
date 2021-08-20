@@ -2,7 +2,6 @@ n = int(input())
 dp = [[None for j in range(n)] for i in range(n)]
 cl = input().split(' ')
 cl = [int(color) for color in cl]
-
 for bias in range(0, n):
     for l in range(n - bias):
         r = l + bias
@@ -20,5 +19,4 @@ for bias in range(0, n):
             for k in range(l, r):
                 loc = min(loc, dp[l][k] + dp[k + 1][r])
             dp[l][r] = loc
-
 print(dp[0][n - 1])

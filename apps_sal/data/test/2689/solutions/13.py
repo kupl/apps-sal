@@ -1,4 +1,3 @@
-# cook your dish here
 s = input().rstrip()
 i = 0
 final = ''
@@ -20,10 +19,8 @@ while i < len(s):
             if i >= len(s):
                 break
         final += s1
-# print(final)
 final = list(final)
 temp = final[::-1]
-# print(temp,final)
 if final == temp:
     print('Return')
 else:

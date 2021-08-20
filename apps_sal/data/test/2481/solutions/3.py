@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 
 def read():
-    H, W = list(map(int, input().strip().split()))
+    (H, W) = list(map(int, input().strip().split()))
     N = 10
     C = []
     for i in range(N):
@@ -13,10 +13,10 @@ def read():
     for i in range(H):
         a = list(map(int, input().strip().split()))
         A.append(a)
-    return H, W, N, C, A
+    return (H, W, N, C, A)
 
 
-def warshall_floyd(N, G, INF=10**7):
+def warshall_floyd(N, G, INF=10 ** 7):
     for k in range(N):
         for i in range(N):
             for j in range(N):
@@ -39,7 +39,7 @@ def __starting_point():
     inputs = read()
     outputs = solve(*inputs)
     if outputs is not None:
-        print(("%s" % str(outputs)))
+        print('%s' % str(outputs))
 
 
 __starting_point()

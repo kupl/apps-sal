@@ -1,13 +1,11 @@
 n = int(input())
-a1, a2 = list(map(int, input().split()))
-b1, b2 = list(map(int, input().split()))
-c1, c2 = list(map(int, input().split()))
-
+(a1, a2) = list(map(int, input().split()))
+(b1, b2) = list(map(int, input().split()))
+(c1, c2) = list(map(int, input().split()))
 a = a1
 b = b1
 c = c1
 s = a + b + c
-
 if a2 - a1 < n - s:
     a = a2
     s += a2 - a1
@@ -22,5 +20,4 @@ if a2 - a1 < n - s:
         b += n - s
 else:
     a += n - s
-
 print(a, b, c)

@@ -1,7 +1,6 @@
 a = input()
 N = int(a)
 p = list(map(int, input().split()))
-
 count = 0
 for i in range(N):
     if p[i] != i + 1:

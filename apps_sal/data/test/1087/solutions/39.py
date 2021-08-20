@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-
 max_digit = K.bit_length()
 
 
@@ -17,7 +16,6 @@ def f(x):
 
 
 B = list(map(bi, A))
-
 count = [0] * max_digit
 ans = 0
 for j in range(max_digit):
@@ -25,9 +23,8 @@ for j in range(max_digit):
         if B[i][j] == '1':
             count[j] += 1
     if count[j] < N / 2:
-        if ans + 2**(max_digit - j - 1) <= K:
-            ans += 2**(max_digit - j - 1)
+        if ans + 2 ** (max_digit - j - 1) <= K:
+            ans += 2 ** (max_digit - j - 1)
         else:
             continue
-
 print(f(ans))

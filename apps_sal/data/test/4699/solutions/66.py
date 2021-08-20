@@ -1,11 +1,11 @@
 import sys
-sys.setrecursionlimit(10**7)
-arr = ["a", "b", "c"]
+sys.setrecursionlimit(10 ** 7)
+arr = ['a', 'b', 'c']
 savelis = [0] * 10
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     Flis = list(map(int, input().split()))
     Tlis = [i for i in range(10)]
     Tlis = [i for i in Tlis if i not in Flis]
@@ -18,10 +18,10 @@ def main():
             if j in str_flis:
                 TF = False
                 break
-        if(TF):
+        if TF:
             ANS.append(i)
     for item in ANS:
-        if(item >= N):
+        if item >= N:
             print(item)
             break
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
 
         def canPut(distance: int) -> bool:
@@ -11,11 +12,9 @@ class Solution:
                     if count >= m:
                         return True
             return False
-
         position.sort()
-        lo, hi = 1, position[-1] - position[0]
+        (lo, hi) = (1, position[-1] - position[0])
         max_distance = lo
-
         while lo <= hi:
             mi = (lo + hi) // 2
             if canPut(mi):
@@ -23,6 +22,4 @@ class Solution:
                 max_distance = max(max_distance, mi)
             else:
                 hi = mi - 1
-            #print(lo, hi)
-
         return max_distance

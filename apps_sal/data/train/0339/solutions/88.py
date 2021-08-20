@@ -1,10 +1,11 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         m1 = collections.defaultdict(int)
         m2 = collections.defaultdict(int)
-        for i, num in enumerate(nums1):
+        for (i, num) in enumerate(nums1):
             m1[num] += 1
-        for i, num in enumerate(nums2):
+        for (i, num) in enumerate(nums2):
             m2[num] += 1
         self.ans = 0
 

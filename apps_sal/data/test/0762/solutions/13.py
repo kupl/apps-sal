@@ -1,8 +1,7 @@
 from math import ceil
-
 t = 1
 for test in range(t):
-    n, b = list(map(int, input().split()))
+    (n, b) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     countOdd = 0
     countEven = 0
@@ -16,7 +15,7 @@ for test in range(t):
         else:
             countOdd += 1
         prev = i
-    cuts[0] = 200  # useless
+    cuts[0] = 200
     cuts.sort()
     ans = 0
     cost = 0

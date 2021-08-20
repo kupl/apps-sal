@@ -1,4 +1,5 @@
 class Solution:
+
     def compareVersion(self, version1, version2):
         """
         :type version1: str
@@ -14,5 +15,4 @@ class Solution:
                 return 1
             if x1 < x2:
                 return -1
-
         return 0

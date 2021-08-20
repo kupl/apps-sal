@@ -1,4 +1,5 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         checker = {}
         l = len(keyName)
@@ -8,7 +9,7 @@ class Solution:
             else:
                 checker[keyName[i]].append(keyTime[i])
         ans = []
-        for a, b in checker.items():
+        for (a, b) in checker.items():
             l = len(b)
             if l > 2:
                 b.sort()

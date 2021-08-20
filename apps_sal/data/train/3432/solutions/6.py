@@ -14,15 +14,13 @@ def cipher(phrase: str):
         y += 1
         num.append(z)
         z += 1
-
     for i in range(0, len(phrase)):
         for j in range(0, len(mass)):
             if phrase[i] == mass[j]:
                 j = j + num[i]
                 cip.append(mass[j])
                 break
-            elif phrase[i] == " ":
-                cip.append(" ")
+            elif phrase[i] == ' ':
+                cip.append(' ')
                 break
-
-    return (''.join(cip))
+    return ''.join(cip)

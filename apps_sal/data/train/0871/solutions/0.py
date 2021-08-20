@@ -1,9 +1,7 @@
 import sys
-
 t = int(input())
-# print(t)
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     s = []
     for i in range(n):
         s.append(input())
@@ -46,9 +44,7 @@ for _ in range(t):
     for i in range(n):
         for j in range(m):
             c = 1
-            # print(ans[i][j])
             for k in range(1, len(ans[i][j])):
-                # print(ans[i][j][k])
                 if ans[i][j][k] == ans[i][j][k - 1]:
                     c += 1
                 else:
@@ -59,8 +55,6 @@ for _ in range(t):
                     if c != 1:
                         res.append(c)
     pairs = 0
-    # print(res)
     for i in range(len(res)):
-        pairs += ((res[i] * (res[i] - 1)) // 2)
-
+        pairs += res[i] * (res[i] - 1) // 2
     print(pairs)

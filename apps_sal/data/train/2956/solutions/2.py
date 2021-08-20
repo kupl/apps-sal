@@ -3,5 +3,5 @@ def encode(string):
 
 
 def decode(bits):
-    bytes_ = ('01'['11' in a + b + c + a] for a, b, c in zip(* [iter(bits)] * 3))
-    return bytes(int(''.join(b), 2) for b in zip(* [iter(bytes_)] * 8)).decode()
+    bytes_ = ('01'['11' in a + b + c + a] for (a, b, c) in zip(*[iter(bits)] * 3))
+    return bytes((int(''.join(b), 2) for b in zip(*[iter(bytes_)] * 8))).decode()

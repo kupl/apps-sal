@@ -4,4 +4,4 @@ def double_char(s):
     while count >= 0:
         array.insert(count, array[count])
         count += -1
-    return "".join(array)
+    return ''.join(array)

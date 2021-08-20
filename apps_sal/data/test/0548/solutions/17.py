@@ -8,8 +8,7 @@ for i in range(n):
 k = a.count(1)
 if k % 2 == 1:
     print('First')
+elif k == 0:
+    print('Second')
 else:
-    if k == 0:
-        print('Second')
-    else:
-        print('First')
+    print('First')

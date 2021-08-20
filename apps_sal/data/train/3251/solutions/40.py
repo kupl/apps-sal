@@ -12,4 +12,4 @@ def primeFactors(n):
                 a.append((i, max_power))
                 n /= i
         i += 1
-    return ''.join([f'({x}**{y})' if y != 1 else f'({x})' for x, y in a])
+    return ''.join([f'({x}**{y})' if y != 1 else f'({x})' for (x, y) in a])

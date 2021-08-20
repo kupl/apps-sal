@@ -3,11 +3,11 @@ n = int(input())
 V = list(map(int, input().split()))
 x = len(set(V))
 if x == 1:
-    print((n // 2))
+    print(n // 2)
 else:
     A = list()
     B = list()
-    for i, v in enumerate(V):
+    for (i, v) in enumerate(V):
         if i & 1:
             A.append(v)
         else:
@@ -21,9 +21,8 @@ else:
             b = B[1]
         elif len(B) == 1:
             a = A[1]
+        elif A[1][1] >= B[1][1]:
+            a = A[1]
         else:
-            if A[1][1] >= B[1][1]:
-                a = A[1]
-            else:
-                b = B[1]
-    print((n - a[1] - b[1]))
+            b = B[1]
+    print(n - a[1] - b[1])

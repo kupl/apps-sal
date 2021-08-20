@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 v = list(map(int, input().split()))
 t = list(map(int, input().split()))
@@ -8,7 +7,7 @@ for i in range(n):
     for j in range(i + 1):
         e = v[j]
         v[j] = v[j] - t[i]
-        if(v[j] < 0):
+        if v[j] < 0:
             v[j] = 0
         loss = e - v[j]
         s = s + loss

@@ -1,5 +1,5 @@
 def fact(k):
-    a, b = 0, 0
+    (a, b) = (0, 0)
     while k % 2 == 0:
         k //= 2
         a += 1
@@ -11,7 +11,7 @@ def fact(k):
     return a + b
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 if n > m or m / n != m // n:
     print(-1)
 elif n == m:

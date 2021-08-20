@@ -1,6 +1,6 @@
 from functools import reduce
 import math
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 List = list(map(int, input().split()))
 abs_List = [abs(List[i] - X) for i in range(N)]
 

@@ -2,9 +2,7 @@ s = input()
 t = input()
 ns = len(s)
 nt = len(t)
-
 cand = []
-
 for i in range(ns - nt + 1):
     j = 0
     temps = list(s)
@@ -17,9 +15,8 @@ for i in range(ns - nt + 1):
             break
         j += 1
     if f1:
-        temps = "".join(temps)
+        temps = ''.join(temps)
         cand.append(temps.replace('?', 'a'))
-
 if len(cand) == 0:
     ans = 'UNRESTORABLE'
 else:

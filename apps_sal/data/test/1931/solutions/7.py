@@ -1,8 +1,3 @@
-# Contest No.: 639
-# Problem No.: B
-# Solver:      JEMINI
-# Date:        20200503
-
 import sys
 
 
@@ -14,13 +9,12 @@ def main():
         while n > 1:
             cnt = 1
             temp = 2
-            while n >= (temp + cnt + 2 * (cnt + 1)):
+            while n >= temp + cnt + 2 * (cnt + 1):
                 temp += cnt + 2 * (cnt + 1)
                 cnt += 1
             n -= temp
             ans += 1
         print(ans)
-
     return
 
 

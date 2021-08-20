@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, s: List[int]) -> int:
         count = 0
         if len(s) < 3:

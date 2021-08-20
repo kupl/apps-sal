@@ -1,17 +1,13 @@
-# Fast IO (only use in integer input)
-
 import os
 import io
 input = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 conquerer = ['0'] * n
 nextKnight = []
 for i in range(n):
     nextKnight.append(i)
-
 for _ in range(m):
-    l, r, x = list(map(int, input().split()))
+    (l, r, x) = list(map(int, input().split()))
     pathList = []
     index = l - 1
     maxIndex = r
@@ -30,5 +26,4 @@ for _ in range(m):
             nextKnight[elem] = x - 1
         else:
             nextKnight[elem] = maxIndex
-
 print(' '.join(conquerer))

@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @lru_cache(None)
         def dfs(i, f):
             res = 1 if i == e_idx else 0
@@ -14,8 +16,7 @@ class Solution:
                     break
                 res += dfs(j, f - df)
             return res
-
-        s_loc, e_loc = locations[start], locations[finish]
+        (s_loc, e_loc) = (locations[start], locations[finish])
         locations.sort()
-        s_idx, e_idx = locations.index(s_loc), locations.index(e_loc)
+        (s_idx, e_idx) = (locations.index(s_loc), locations.index(e_loc))
         return dfs(s_idx, fuel) % (10 ** 9 + 7)

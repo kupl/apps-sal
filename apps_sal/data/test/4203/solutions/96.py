@@ -15,6 +15,6 @@ if s[len(s) - 1].isupper():
 if cnt != 1:
     flag = False
 if flag:
-    print("AC")
+    print('AC')
 else:
-    print("WA")
+    print('WA')

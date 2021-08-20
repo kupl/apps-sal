@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,7 +32,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -43,27 +41,24 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
 def culc(x):
     return x * (x - 1) // 2
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 edge = []
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     edge.append((a, b))
-
-
 ans = [culc(n)]
-
 uf = UnionFind(n)
 for i in range(m):
-    a, b = edge[m - i - 1]
+    (a, b) = edge[m - i - 1]
     if uf.same(a, b):
         ans.append(ans[-1])
     else:
@@ -72,7 +67,5 @@ for i in range(m):
         uf.union(a, b)
         add = culc(member_a) + culc(member_b) - culc(uf.size(a))
         ans.append(ans[-1] + add)
-
-
 for i in range(m):
-    print((ans[m - i - 1]))
+    print(ans[m - i - 1])

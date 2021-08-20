@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 d = [list(map(int, input().split())) for i in range(c)]
 s = [list(map(int, input().split())) for i in range(n)]
 x = [0] * c
@@ -17,7 +17,7 @@ ans = 10 ** 16
 for i in range(c):
     for j in range(c):
         for k in range(c):
-            if i != j and i != k and j != k:
+            if i != j and i != k and (j != k):
                 o = 0
                 for l in range(c):
                     o += d[l][i] * x[l]

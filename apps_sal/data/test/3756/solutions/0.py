@@ -1,5 +1,5 @@
 def main():
-    n, t = map(int, input().split())
+    (n, t) = map(int, input().split())
     s = input()
     dot = s.find('.')
     for i in range(dot + 1, n):
@@ -18,7 +18,7 @@ def main():
         return
     else:
         l = list(s[dot - 1::-1])
-        for i, c in enumerate(l):
+        for (i, c) in enumerate(l):
             if c == '9':
                 l[i] = '0'
             else:

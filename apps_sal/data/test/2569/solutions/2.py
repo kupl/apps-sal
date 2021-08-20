@@ -9,7 +9,7 @@ for _ in range(t):
     n = int(input())
     ns.append(n)
 mx = max(ns)
-md = 10**9 + 7
+md = 10 ** 9 + 7
 for i in range(6, mx + 6):
     ans.append((ans[-2] * 2 + ans[-1] + (4 if i % 3 == 0 else 0)) % md)
 for ni in ns:

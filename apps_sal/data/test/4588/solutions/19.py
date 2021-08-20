@@ -1,7 +1,7 @@
-x, y = input().split()
-ans = "="
+(x, y) = input().split()
+ans = '='
 if x < y:
-    ans = "<"
+    ans = '<'
 elif x > y:
-    ans = ">"
+    ans = '>'
 print(ans)

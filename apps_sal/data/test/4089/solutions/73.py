@@ -1,7 +1,6 @@
 n = int(input())
-abc = "abcdefghijklmnopqrstuvwxyz"
-ans = ""
-
+abc = 'abcdefghijklmnopqrstuvwxyz'
+ans = ''
 while True:
     n -= 1
     m = n % 26
@@ -9,5 +8,4 @@ while True:
     n = n // 26
     if n == 0:
         break
-
-print((ans[::-1]))
+print(ans[::-1])

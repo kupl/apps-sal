@@ -1,7 +1,7 @@
 m = 1000000007
 n = int(input())
 a = map(int, input().split())
-t1, t2 = 0, 0
+(t1, t2) = (0, 0)
 for i in a:
     if i == 1:
         t1 += 1

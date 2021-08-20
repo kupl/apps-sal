@@ -24,7 +24,7 @@ class Solution:
                 dr = ne % 4
             else:
                 j = 0
-                while j < i and (tuple(nex(dr)) not in obs):
+                while j < i and tuple(nex(dr)) not in obs:
                     pos = nex(dr)
                     j += 1
                 gldis = max(gldis, pos[0] * pos[0] + pos[1] * pos[1])

@@ -3,7 +3,7 @@ a = input()
 b = input()
 c = False
 f = 0
-l = "12"
+l = '12'
 for i in range(n):
     if a[i] != b[i]:
         if c:

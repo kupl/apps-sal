@@ -13,7 +13,6 @@ a = []
 for x in range(max(0, n - 81), n):
     if x + digits(x) == n:
         a.append(x)
-
 print(len(a))
 if len(a) > 0:
-    print(" ".join(map(str, a)))
+    print(' '.join(map(str, a)))

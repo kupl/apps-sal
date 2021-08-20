@@ -1,11 +1,11 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         if len(intervals) < 2:
             return len(intervals)
         intervals.sort(key=lambda interval: interval[0])
-        start, idx = 0, 1
+        (start, idx) = (0, 1)
         removed = set()
-
         while start < len(intervals):
             if idx == len(intervals):
                 start += 1

@@ -1,5 +1,7 @@
 class Solution:
+
     def hasAllCodes(self, s: str, k: int) -> bool:
+
         def Hash_Function(b):
             num = list(b)
             num.reverse()
@@ -22,7 +24,7 @@ class Solution:
             buckets.add(num)
             start += 1
             end += 1
-        if len(buckets) == 2**k:
+        if len(buckets) == 2 ** k:
             return True
         else:
             return False

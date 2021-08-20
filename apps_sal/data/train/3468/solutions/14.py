@@ -7,6 +7,6 @@ def scramble(s1, s2):
         else:
             b.append(False)
     if len(set(b)) <= 1:
-        return(True)
+        return True
     else:
-        return(False)
+        return False

@@ -9,6 +9,6 @@ while f == False:
         else:
             d[i] = 1
     if not f:
-        print("Invalid")
+        print('Invalid')
     else:
-        print("Valid")
+        print('Valid')

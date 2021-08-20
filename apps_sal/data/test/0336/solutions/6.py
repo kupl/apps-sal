@@ -1,4 +1,4 @@
-n, a, b, c, d = list(map(int, input().split()))
+(n, a, b, c, d) = list(map(int, input().split()))
 ans = 0
 for i in range(1, n + 1):
     s = i + a + b

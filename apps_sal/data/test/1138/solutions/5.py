@@ -1,11 +1,9 @@
-'''
+"""
 def main():
     from sys import stdin,stdout
 def __starting_point():
     main()
-'''
-# 10/9/22016-370.2
-# 2
+"""
 
 
 def main():

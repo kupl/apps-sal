@@ -1,9 +1,7 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
 b = sorted(list(map(int, input().split())))
 c = sorted(list(set(a) & set(b)))
-
 if c != []:
     print(c[0])
 else:

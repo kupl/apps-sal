@@ -2,7 +2,7 @@ import collections
 import math
 from operator import mul
 from functools import reduce
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 
 
 def prime_factorize(n):
@@ -35,4 +35,4 @@ answer = 1
 for i in primeFactorizeList:
     answer *= combinations_count(i + N - 1, i)
     answer = answer % (10 ** 9 + 7)
-print((int(answer)))
+print(int(answer))

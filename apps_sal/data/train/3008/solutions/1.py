@@ -1,1 +1,2 @@
-def sort_array(v): return "".join(sorted(v))
+def sort_array(v):
+    return ''.join(sorted(v))

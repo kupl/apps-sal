@@ -12,11 +12,11 @@ def divisor(n):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     md = divisor(m)
     ans = 0
     for i in md:
-        if (m - n * i) % i == 0 and (m - n * i) >= 0:
+        if (m - n * i) % i == 0 and m - n * i >= 0:
             ans = i
         else:
             break

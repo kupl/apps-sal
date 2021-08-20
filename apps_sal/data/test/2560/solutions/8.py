@@ -4,7 +4,7 @@ def possible(numbers):
     elif int(numbers[0]) < int(numbers[1]) or int(numbers[0]) // int(numbers[1]) < int(numbers[1]) - int(numbers[2]):
         return 'No'
     else:
-        if int(numbers[0]) % int(numbers[1]) == 0 or int(numbers[0]) % int(numbers[1]) + int(numbers[1]) < int(numbers[2]) or (int(numbers[0]) % int(numbers[1]) + int(numbers[1]) * (int(numbers[0]) // int(numbers[1]) - 1) <= int(numbers[2]) and int(numbers[0]) % int(numbers[1]) + int(numbers[1]) * (int(numbers[0]) // int(numbers[1]) - 1) >= int(numbers[1])) or int(numbers[0]) % int(numbers[1]) // (int(numbers[0]) // int(numbers[1])) < int(numbers[2]) - int(numbers[1]):
+        if int(numbers[0]) % int(numbers[1]) == 0 or int(numbers[0]) % int(numbers[1]) + int(numbers[1]) < int(numbers[2]) or (int(numbers[0]) % int(numbers[1]) + int(numbers[1]) * (int(numbers[0]) // int(numbers[1]) - 1) <= int(numbers[2]) and int(numbers[0]) % int(numbers[1]) + int(numbers[1]) * (int(numbers[0]) // int(numbers[1]) - 1) >= int(numbers[1])) or (int(numbers[0]) % int(numbers[1]) // (int(numbers[0]) // int(numbers[1])) < int(numbers[2]) - int(numbers[1])):
             return 'Yes'
         return 'No'
 

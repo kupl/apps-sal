@@ -2,7 +2,9 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def dis(s, e):
             return abs(s[0] - e[0]) + abs(s[1] - e[1])
 
@@ -12,7 +14,7 @@ class Solution:
             return root[u]
 
         def union(u, v):
-            ru, rv = find(u), find(v)
+            (ru, rv) = (find(u), find(v))
             if ru == rv:
                 return False
             if rank[ru] < rank[rv]:
@@ -22,7 +24,6 @@ class Solution:
                 root[rv] = ru
                 rank[ru] = rank[ru] + rank[rv]
             return True
-
         n = len(points)
         res = 0
         queue = []
@@ -34,7 +35,7 @@ class Solution:
                 e = points[j]
                 heapq.heappush(queue, (dis(s, e), i, j))
         while queue:
-            dis, s, e = heapq.heappop(queue)
+            (dis, s, e) = heapq.heappop(queue)
             if union(s, e):
                 res += dis
         return res

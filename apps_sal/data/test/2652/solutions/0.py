@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n + 1)]
         self.rank = [0] * (n + 1)
@@ -41,26 +42,23 @@ X = []
 Y = []
 Branch = []
 for i in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     X.append((x, i))
     Y.append((y, i))
 X.sort()
 Y.sort()
-for X1, X2 in zip(X, X[1:]):
+for (X1, X2) in zip(X, X[1:]):
     Branch.append((X2[0] - X1[0], X1[1], X2[1]))
-for Y1, Y2 in zip(Y, Y[1:]):
+for (Y1, Y2) in zip(Y, Y[1:]):
     Branch.append((Y2[0] - Y1[0], Y1[1], Y2[1]))
 Branch.sort()
-
-# 負のとき size, 非負のとき parent
 par = [-1] * N
 ans = 0
-for c, a, b in Branch:
+for (c, a, b) in Branch:
     if N <= 1:
         break
     if not UF.same_check(a, b):
         UF.union(a, b)
         ans += c
         N -= 1
-
 print(ans)

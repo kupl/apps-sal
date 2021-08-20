@@ -11,21 +11,35 @@ from fractions import gcd
 from bisect import bisect, bisect_left, bisect_right
 
 
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def S_MAP(): return map(str, input().split())
-def LIST(): return list(map(int, input().split()))
-def S_LIST(): return list(map(str, input().split()))
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def S_MAP():
+    return map(str, input().split())
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def S_LIST():
+    return list(map(str, input().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-
 N = INT()
 A = LIST()
-
 S = set(A)
 C = Counter(A)
 cnt = 0

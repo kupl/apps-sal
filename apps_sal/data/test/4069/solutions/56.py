@@ -1,4 +1,4 @@
-X, K, D = list(map(int, input().split()))
+(X, K, D) = list(map(int, input().split()))
 
 
 def sign(x):
@@ -10,12 +10,9 @@ if abs(X) >= D * K:
 else:
     l = abs(X) // D
     mod = abs(X) % D
-
     residual = K - l
-
     if residual % 2 == 0:
         ans = mod
     else:
         ans = mod - sign(mod) * D
-
-print((abs(ans)))
+print(abs(ans))

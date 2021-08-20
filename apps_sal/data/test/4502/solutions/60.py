@@ -10,7 +10,6 @@ for i in range(n):
     else:
         b.appendleft(a[i])
         reverse *= -1
-
 b_list = list(b)
 if reverse == 1:
     print(*b_list)

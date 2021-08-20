@@ -1,11 +1,10 @@
-# cook your dish here
 import math
 
 
 def howmany(n):
     total = n * (n + 1) // 2
     a = 1
-    while(a <= n):
+    while a <= n:
         total = total - a * ((n - a) // (2 * a) + 1)
         total = total - 1
         a = a * 2

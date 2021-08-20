@@ -2,7 +2,7 @@ n = int(input())
 L = []
 for i in range(n):
     c = []
-    a, b = map(str, input().split())
+    (a, b) = map(str, input().split())
     c.append(a)
     c.append(100 - int(b))
     c.append(i + 1)

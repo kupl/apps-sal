@@ -1,5 +1,5 @@
 N = int(input())
 if N == 1:
-    print("Hello World")
+    print('Hello World')
 else:
-    print((sum([int(input()) for _ in range(2)])))
+    print(sum([int(input()) for _ in range(2)]))

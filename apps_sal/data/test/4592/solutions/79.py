@@ -12,6 +12,6 @@ for i in range(1, a + 1):
 f = 1
 g = 10 ** 9 + 7
 for h in c:
-    f *= (h + 1)
+    f *= h + 1
     f %= g
 print(f)

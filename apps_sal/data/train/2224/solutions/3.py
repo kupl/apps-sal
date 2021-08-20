@@ -1,14 +1,14 @@
 n = int(input())
 a = input()
 b = input()
-cnt0, cnt1 = 0, 0
+(cnt0, cnt1) = (0, 0)
 for i in range(n):
     if a[i] == '0':
         cnt0 += 1
     else:
         cnt1 += 1
 ans = 0
-t0, t1 = 0, 0
+(t0, t1) = (0, 0)
 for i in range(n):
     if b[i] == '0':
         if a[i] == '0':

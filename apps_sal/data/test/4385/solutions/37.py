@@ -5,6 +5,6 @@ d = int(input())
 e = int(input())
 k = int(input())
 if k >= e - a:
-    print("Yay!")
+    print('Yay!')
 else:
-    print(":(")
+    print(':(')

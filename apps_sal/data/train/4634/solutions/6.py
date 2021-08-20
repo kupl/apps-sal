@@ -1,6 +1,6 @@
 def pac_man(n, pm, enemies):
-    left, right, top, floor = -1, n, -1, n
-    for y, x in enemies:
+    (left, right, top, floor) = (-1, n, -1, n)
+    for (y, x) in enemies:
         if top < y < pm[0]:
             top = y
         if pm[0] < y < floor:

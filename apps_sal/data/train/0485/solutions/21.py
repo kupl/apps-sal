@@ -1,8 +1,9 @@
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         flips = 0
         q = deque()
-        for i, x in enumerate(A):
+        for (i, x) in enumerate(A):
             if q and q[0] == i:
                 q.popleft()
             if len(q) & 1:

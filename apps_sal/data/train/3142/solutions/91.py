@@ -1,5 +1,5 @@
 import re
-rx = re.compile(r'(?<=7)9(?=7)')
+rx = re.compile('(?<=7)9(?=7)')
 
 
 def seven_ate9(str_):

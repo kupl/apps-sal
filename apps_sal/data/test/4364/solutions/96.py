@@ -9,10 +9,10 @@ S = input()
 A = int(S[0:2])
 B = int(S[2:4])
 if YY(A) and YY(B):
-    print("AMBIGUOUS")
+    print('AMBIGUOUS')
 elif YY(A):
-    print("MMYY")
+    print('MMYY')
 elif YY(B):
-    print("YYMM")
+    print('YYMM')
 else:
-    print("NA")
+    print('NA')

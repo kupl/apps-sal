@@ -6,7 +6,6 @@ def pillows(n, k, h):
     right = 0
     if n - k + 1 < h:
         right = (h - (n - k + 1)) * (h - (n - k + 1) + 1) // 2
-
     return p - left - right
 
 
@@ -14,9 +13,8 @@ def solve(n, m, k):
     p = m - n
     if p == 0:
         return 1
-
     l = 0
-    r = 10**10
+    r = 10 ** 10
     while r - l >= 2:
         m = (l + r) // 2
         mp = pillows(n, k, m)
@@ -24,7 +22,6 @@ def solve(n, m, k):
             r = m
         else:
             l = m
-
     return l + 1
 
 
@@ -47,7 +44,6 @@ if False:
     assert solve(5, 9, 3) == 3
     assert solve(5, 9, 2) == 3
     assert solve(5, 9, 1) == 3
-
 else:
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     print(solve(n, m, k))

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxChunksToSorted(self, arr):
         """
         :type arr: List[int]
@@ -6,7 +7,6 @@ class Solution:
         """
         from collections import Counter
         s = sorted(arr)
-
         i = 0
         a_nums = Counter()
         b_nums = Counter()
@@ -19,5 +19,4 @@ class Solution:
                 b_nums.clear()
                 total += 1
             i += 1
-
         return total

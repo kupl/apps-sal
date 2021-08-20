@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self, n):
         self.p = [-1 for _ in range(n + 1)]
         self.size = [0 for _ in range(n + 1)]
@@ -18,25 +19,22 @@ class UF:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UF(len(arr))
         ans = -1
-
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             uf.p[x] = x
             uf.size[x] = 1
-
             if x > 0 and uf.find(x - 1) != -1:
                 if uf.size[uf.find(x - 1)] == m:
                     ans = i
                 uf.union(x, x - 1)
-
             if x < n and uf.find(x + 1) != -1:
                 if uf.size[uf.find(x + 1)] == m:
                     ans = i
                 uf.union(x, x + 1)
             if uf.size[uf.find(x)] == m:
                 ans = i + 1
-
         return ans

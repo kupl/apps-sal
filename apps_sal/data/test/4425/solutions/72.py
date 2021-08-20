@@ -1,7 +1,5 @@
-
-
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ans = 0.0
     for t in range(1, n + 1):
         cnt = 0
@@ -11,7 +9,7 @@ def main():
             per /= 2
             now *= 2
         ans += per / n
-    print(('{:.20}'.format(ans)))
+    print('{:.20}'.format(ans))
     pass
 
 

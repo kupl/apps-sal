@@ -9,5 +9,4 @@ def correct(string):
             correct += 'I'
         else:
             correct += i
-
     return correct

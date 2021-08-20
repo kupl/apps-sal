@@ -1,9 +1,7 @@
 N = int(input())
-
 buttons = []
 for _ in range(N):
     buttons.append(int(input()))
-
 s = 1
 cnt = 0
 while True:
@@ -14,5 +12,4 @@ while True:
     elif cnt > N:
         cnt = -1
         break
-
 print(cnt)

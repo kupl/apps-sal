@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
-scores = {k: v for k, v in zip('spr', map(int, input().split()))}
+(n, k) = map(int, input().split())
+scores = {k: v for (k, v) in zip('spr', map(int, input().split()))}
 zero_score_index = set()
 t = input()
-total = sum(scores[tt] for tt in t)
+total = sum((scores[tt] for tt in t))
 for i in range(n):
     if i < k:
         continue

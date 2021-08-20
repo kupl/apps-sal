@@ -1,6 +1,5 @@
 import sys
 from collections import Counter
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,7 +9,7 @@ MOD = 1000000007
 
 
 class UnionFind:
-    # Reference: https://note.nkmk.me/python-union-find/
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -25,13 +24,10 @@ class UnionFind:
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -46,7 +42,7 @@ class UnionFind:
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -56,26 +52,21 @@ class UnionFind:
 
 
 def main():
-    N, *XY = list(map(int, read().split()))
-
+    (N, *XY) = list(map(int, read().split()))
     MAX = 100010
     uf = UnionFind(MAX * 2)
-    for x, y in zip(*[iter(XY)] * 2):
+    for (x, y) in zip(*[iter(XY)] * 2):
         uf.union(x, y + MAX)
-
     x_comp = Counter()
     y_comp = Counter()
     for i in range(MAX):
         x_comp[uf.find(i)] += 1
     for i in range(MAX, 2 * MAX):
         y_comp[uf.find(i)] += 1
-
     ans = 0
     for k in list(x_comp.keys()):
         ans += x_comp[k] * y_comp[k]
-
     ans -= N
-
     print(ans)
     return
 

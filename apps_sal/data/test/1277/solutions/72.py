@@ -1,16 +1,13 @@
 import sys
 rd = sys.stdin.readline
-
 sys.setrecursionlimit(10000000)
-
-n, T, A = map(int, rd().split())
-T, A = T - 1, A - 1
-
+(n, T, A) = map(int, rd().split())
+(T, A) = (T - 1, A - 1)
 graph = [[] for _ in range(n)]
 for i in range(n - 1):
-    a, b = map(int, rd().split())
+    (a, b) = map(int, rd().split())
     graph[a - 1].append(b - 1)
-    graph[b - 1].append(a - 1)  # 有向グラフなら消す
+    graph[b - 1].append(a - 1)
 
 
 def dfs(v, p=-1):
@@ -48,9 +45,8 @@ def dfs2(v, p=-1):
 root = []
 dfs(A)
 x = len(root) // 2 - 1
-
 dp = [0] * n
-ans = (len(root)) // 2 + dfs2(root[x], root[x + 1])
+ans = len(root) // 2 + dfs2(root[x], root[x + 1])
 if len(root) % 2 == 0:
     ans -= 1
 print(ans)

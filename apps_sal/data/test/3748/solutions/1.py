@@ -1,5 +1,5 @@
 from collections import Counter
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 grid = [list(input()) for i in range(n)]
 
 
@@ -47,6 +47,6 @@ def judge(a):
 
 gt = list(zip(*grid))
 if judge(grid) & judge(gt):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,5 @@
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         i = 0
         res = 0
@@ -12,4 +13,4 @@ class Solution:
                     k += 1
                 j += 1
             i += 1
-        return(res)
+        return res

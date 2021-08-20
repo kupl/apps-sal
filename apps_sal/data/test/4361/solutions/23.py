@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -9,10 +8,10 @@ def ngram(numbers, n):
 
 def main():
     numbers = []
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     [numbers.append(int(input())) for _ in range(n)]
     numbers.sort()
-    print(min(numbers[i + m - 1] - numbers[i] for i in range(n - m + 1)))
+    print(min((numbers[i + m - 1] - numbers[i] for i in range(n - m + 1))))
 
 
 def __starting_point():

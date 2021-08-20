@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [n // 5 + (n % 5 > i) for i in range(5)]
 b = [m // 5 + (m % 5 > i) for i in range(5)]
 ans = 0

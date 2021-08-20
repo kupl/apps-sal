@@ -4,7 +4,6 @@ def binary_search(arr, x):
     high = len(arr) - 1
     mid = 0
     while low <= high:
-
         mid = low + (high - low) // 2
         if arr[mid] < x:
             low = mid + 1
@@ -16,20 +15,19 @@ def binary_search(arr, x):
 
 
 def ternary_search(l, r, key, ar):
-    if (r >= l):
+    if r >= l:
         mid1 = l + (r - l) // 3
         mid2 = r - (r - l) // 3
-        if (ar[mid1] == key):
+        if ar[mid1] == key:
             return mid1
-        if (ar[mid2] == key):
+        if ar[mid2] == key:
             return mid2
-        if (key < ar[mid1]):
+        if key < ar[mid1]:
             return ternary_search(l, mid1 - 1, key, ar)
-        elif (key > ar[mid2]):
+        elif key > ar[mid2]:
             return ternary_search(mid2 + 1, r, key, ar)
         else:
-            return ternary_search(mid1 + 1,
-                                  mid2 - 1, key, ar)
+            return ternary_search(mid1 + 1, mid2 - 1, key, ar)
     return -1
 
 
@@ -48,8 +46,8 @@ def cheaker(c, d, val, n):
 def binary_search_answer(low, high, d, a, n, de):
     x = 1
     p = 0
-    while(p != d):
-        while((high - low) > x):
+    while p != d:
+        while high - low > x:
             mid = (high + low) / 2
             if cheaker(a, de, mid, n):
                 low = mid
@@ -62,11 +60,10 @@ def binary_search_answer(low, high, d, a, n, de):
 
 def __starting_point():
     for i in range(int(input())):
-        n, d = list(map(int, input().split()))
+        (n, d) = list(map(int, input().split()))
         a = [int(X) for X in input().split()]
         a.sort()
-        print(round(binary_search_answer(0, 2 * (10**9), 7, a, n, d), 10))
-# cook your dish here
+        print(round(binary_search_answer(0, 2 * 10 ** 9, 7, a, n, d), 10))
 
 
 __starting_point()

@@ -9,10 +9,8 @@ diff=mx-mn+1
 ans=diff-len(s)
 print(ans)
 #for j in range(0,len(s)):"""
-
-
 import math
-a, b, x, y = list(map(int, input().split()))
+(a, b, x, y) = list(map(int, input().split()))
 g = math.gcd(x, y)
 x = x // g
 y = y // g

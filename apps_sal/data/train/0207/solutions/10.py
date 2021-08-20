@@ -1,18 +1,19 @@
 class Solution:
+
     def largestNumber(self, nums):
         """
         :type nums: List[int]
         :rtype: str
         """
         s = self.sort(nums)
-        if s.startswith("0"):
-            return "0"
+        if s.startswith('0'):
+            return '0'
         else:
             return s
 
     def sort(self, nums):
         if not nums:
-            return ""
+            return ''
         else:
             pivot = nums[0]
             left = []

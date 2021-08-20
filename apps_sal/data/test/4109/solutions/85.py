@@ -2,11 +2,10 @@ from itertools import product
 import sys
 read = sys.stdin.read
 readlines = sys.stdin.readlines
-#import numpy as np
 
 
 def main():
-    n, m, x = list(map(int, input().split()))
+    (n, m, x) = list(map(int, input().split()))
     books = []
     for _ in range(n):
         books.append(tuple(map(int, input().split())))
@@ -21,7 +20,7 @@ def main():
         if all([e >= x for e in effects[1:]]):
             r = min(r, effects[0])
     if r == float('inf'):
-        print((-1))
+        print(-1)
     else:
         print(r)
 

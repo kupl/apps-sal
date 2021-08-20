@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def is_pred(short, long):
             if len(short) + 1 != len(long):
                 return False
@@ -9,7 +11,7 @@ class Solution:
                 if short[i] != long[i]:
                     new = i
                     break
-            if short[:-1] == long[:new] + long[(new + 1):]:
+            if short[:-1] == long[:new] + long[new + 1:]:
                 return True
             return False
         words.sort(key=lambda x: len(x))

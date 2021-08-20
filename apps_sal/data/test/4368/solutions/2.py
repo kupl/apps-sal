@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = []
 while n != 0:
     r = divmod(n, k)

@@ -2,13 +2,13 @@ from collections import deque
 
 
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         dct = {i: [] for i in set(keyName)}
-        for i, j in zip(keyName, keyTime):
+        for (i, j) in zip(keyName, keyTime):
             j = j.split(':')
             j = int(j[0]) * 60 + int(j[1])
             dct[i].append(j)
-
         print(dct)
 
         def check(arr):
@@ -20,14 +20,10 @@ class Solution:
                         q.popleft()
                     else:
                         break
-
                 q.append(i)
                 if len(q) >= 3:
                     return True
-
             return False
-
-        res = [i for i, j in list(dct.items()) if check(j.copy())]
+        res = [i for (i, j) in list(dct.items()) if check(j.copy())]
         res.sort()
-
         return res

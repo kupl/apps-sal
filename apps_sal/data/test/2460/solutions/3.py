@@ -14,7 +14,7 @@ def mints():
     return map(int, minp().split())
 
 
-n, m = mints()
+(n, m) = mints()
 a = list(mints())
 b = list(mints())
 l = [None] * (n + m)
@@ -40,12 +40,10 @@ for i in range(len(a)):
                 c[rr] += 1
         elif rr == None:
             c[ll] += 1
+        elif aa - a[ll] <= a[rr] - aa:
+            c[ll] += 1
         else:
-            if aa - a[ll] <= a[rr] - aa:
-                c[ll] += 1
-            else:
-                c[rr] += 1
-
+            c[rr] += 1
 for i in range(len(a)):
     if b[i] == 1:
         print(c[i], end=' ')

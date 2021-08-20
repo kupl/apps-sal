@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        op_0, op_1 = 0, 1
+        (op_0, op_1) = (0, 1)
         for num in nums:
             b_len = 0
             while num:

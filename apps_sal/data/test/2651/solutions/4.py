@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 X = list(map(int, input().split()))
 Y = list(map(int, input().split()))
-MOD = 10**9 + 7
-sx, sy = 0, 0
+MOD = 10 ** 9 + 7
+(sx, sy) = (0, 0)
 for i in range(n):
     t = 2 * i + 1 - n
     t *= X[i]

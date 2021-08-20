@@ -1,4 +1,5 @@
 class Solution:
+
     def topKFrequent(self, words, k):
         counts = collections.Counter(words)
         items = list(counts.items())

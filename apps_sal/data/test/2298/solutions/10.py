@@ -11,11 +11,11 @@ def f(a, b, x):
 
 
 for _ in range(int(input())):
-    a, b, q = map(int, input().split())
+    (a, b, q) = map(int, input().split())
     if a > b:
-        a, b = b, a
+        (a, b) = (b, a)
     for i in range(q):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         ans = f(a, b, r) - f(a, b, l - 1)
         ans = r - l + 1 - ans
         print(ans, end=' ')

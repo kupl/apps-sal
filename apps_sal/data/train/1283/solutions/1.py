@@ -10,14 +10,14 @@ def sieve(num):
     for i in range(num + 1):
         cd[i] = 2
     for i in range(2, num + 1, 1):
-        if(s[i] == i and cd[i] == 2):
+        if s[i] == i and cd[i] == 2:
             for j in range(2 * i, num + 1, i):
-                if(cd[j] > 0):
+                if cd[j] > 0:
                     s[j] = int(s[j] / i)
                     cd[j] -= 1
     res = []
     for i in range(2, num + 1, 1):
-        if(s[i] == 1 and cd[i] == 0):
+        if s[i] == 1 and cd[i] == 0:
             res.append(i)
     return res
 
@@ -29,7 +29,7 @@ for i in l:
     a = sieve(i)
     c = list(combinations_with_replacement(a, 2))
     for j in c:
-        if(j[0] + j[1] == i):
+        if j[0] + j[1] == i:
             count += 1
             break
     if count > 0:

@@ -1,4 +1,4 @@
-n, m, Min, Max = map(int, input().split())
+(n, m, Min, Max) = map(int, input().split())
 a = list(map(int, input().split()))
 remain = n - m
 cnt = 0
@@ -10,8 +10,8 @@ for i in a:
         flag = -1
 cnt = 2 - cnt
 if flag == -1:
-    print("Incorrect")
+    print('Incorrect')
 elif n - m >= cnt:
-    print("Correct")
+    print('Correct')
 else:
-    print("Incorrect")
+    print('Incorrect')

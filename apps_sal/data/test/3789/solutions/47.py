@@ -2,12 +2,13 @@ from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
 
     def add_edge(self, fr, to, cap):
-        forward = [to, cap, None]  # (行き先、容量、逆辺の参照)
+        forward = [to, cap, None]
         forward[2] = backward = [fr, 0, forward]
         self.G[fr].append(forward)
         self.G[to].append(backward)
@@ -26,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -37,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -48,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.G))
+            (*self.it,) = list(map(iter, self.G))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -62,7 +63,7 @@ class Dinic:
 N = int(input())
 a = list(map(int, input().split()))
 D = Dinic(N + 2)
-inf = 10**18
+inf = 10 ** 18
 profit = 0
 cost = 0
 for i in range(N):
@@ -72,10 +73,8 @@ for i in range(N):
         D.add_edge(N, i, -a[i])
         cost += a[i]
     profit += abs(a[i])
-
-
 for i in range(1, N + 1):
     for k in range(2, N // i + 1):
         D.add_edge(i - 1, i * k - 1, inf)
 f = D.flow(N, N + 1)
-print((profit - f + cost))
+print(profit - f + cost)

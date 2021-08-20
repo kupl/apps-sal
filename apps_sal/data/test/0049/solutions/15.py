@@ -7,6 +7,6 @@ for i in T:
         break
 temp = T[a] - k
 x = temp % a
-res = (10 ** a) - 1 - int(temp / a)
-ans = int((res % (10 ** (x + 1))) / (10 ** x))
+res = 10 ** a - 1 - int(temp / a)
+ans = int(res % 10 ** (x + 1) / 10 ** x)
 print(ans)

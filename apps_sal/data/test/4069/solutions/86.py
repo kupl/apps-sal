@@ -1,4 +1,4 @@
-x, k, d = input().split()
+(x, k, d) = input().split()
 x = int(x)
 k = int(k)
 d = int(d)
@@ -11,5 +11,5 @@ else:
     if k_2 % 2 == 0:
         ans = abs(x) - d * kaisuu
     else:
-        ans = abs((abs(x) - d * kaisuu) - abs(d))
+        ans = abs(abs(x) - d * kaisuu - abs(d))
 print(int(ans))

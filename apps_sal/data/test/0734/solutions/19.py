@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 s = sum(a)
 need = 0
@@ -18,7 +18,7 @@ else:
             need += 1
         elif a[i] >= j and i != n - 1:
             need += 1
-        elif a[i] >= j and i == n - 1 and j <= k:
+        elif a[i] >= j and i == n - 1 and (j <= k):
             need += k - j + 1
         else:
             need += 1

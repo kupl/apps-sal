@@ -8,7 +8,7 @@ def gcd(a, b):
 
 
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     occ = [0] * 26
     for i in s:

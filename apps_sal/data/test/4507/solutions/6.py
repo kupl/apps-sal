@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Codeforces Round #552 (Div. 3)
 
 Problem F. Shovels Shop
@@ -11,10 +8,8 @@ Problem F. Shovels Shop
 Please feel free to contact me if you have any question
 regarding the implementation below.
 """
-
 __version__ = '2.0'
 __date__ = '2019-04-17'
-
 import sys
 from heapq import heappush, heappop
 
@@ -26,7 +21,7 @@ def buy_shovels(k, shovels, discounts):
     for s in shovels:
         accums.append(s + accums[-1])
     for i in range(k):
-        for x, y in list(discounts.items()):
+        for (x, y) in list(discounts.items()):
             if i + x > k:
                 continue
             perhaps = accums[i] + sum(shovels[i + y:i + x])
@@ -35,13 +30,12 @@ def buy_shovels(k, shovels, discounts):
 
 
 def main(argv=None):
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     costs = list(map(int, input().split()))
     discounts = dict()
     for line in range(m):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         if x > k:
-            # this discount is useless as we can't buy more than k
             continue
         if x not in discounts:
             discounts[x] = y
@@ -53,7 +47,7 @@ def main(argv=None):
 
 def __starting_point():
     STATUS = main()
-    return(STATUS)
+    return STATUS
 
 
 __starting_point()

@@ -1,10 +1,6 @@
 class Solution:
-    def shortestAlternatingPaths(
-        self,
-        n: int,
-        red_edges: List[List[int]],
-        blue_edges: List[List[int]],
-    ) -> List[int]:
+
+    def shortestAlternatingPaths(self, n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
         red_adj = [[] for i in range(n)]
         blue_adj = [[] for i in range(n)]
         for edge in red_edges:
@@ -25,18 +21,12 @@ class Solution:
                 result.append(start_blue)
         return result
 
-    def shortestPath(
-        self,
-        red_adj: List[List[int]],
-        blue_adj: List[List[int]],
-        startRed: bool,
-        X: int,
-    ) -> int:
+    def shortestPath(self, red_adj: List[List[int]], blue_adj: List[List[int]], startRed: bool, X: int) -> int:
         red_visited = set()
         blue_visited = set()
         bfs = [(0, startRed, 0)]
         while len(bfs) > 0:
-            node, is_red, depth = bfs.pop(0)
+            (node, is_red, depth) = bfs.pop(0)
             if node == X:
                 return depth
             if is_red and node in red_visited:

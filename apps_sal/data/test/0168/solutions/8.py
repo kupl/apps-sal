@@ -6,5 +6,4 @@ for i in s:
         t += 1
     else:
         t = max(t - 1, 0)
-
 print(max(t, 0))

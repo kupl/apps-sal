@@ -16,7 +16,7 @@ def prime_factors(n):
 
 def mobius(n):
     factors = prime_factors(n)
-    if any(c > 1 for c in factors.values()):
+    if any((c > 1 for c in factors.values())):
         return 0
     elif sum(factors.values()) % 2 == 0:
         return 1

@@ -2,6 +2,7 @@ import re
 
 
 class WordDictionary:
+
     def __init__(self):
         self.words = []
 
@@ -9,4 +10,4 @@ class WordDictionary:
         self.words.append(v)
 
     def search(self, rg):
-        return any(re.match(r'^{}$'.format(rg), i) for i in self.words)
+        return any((re.match('^{}$'.format(rg), i) for i in self.words))

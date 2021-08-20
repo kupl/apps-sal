@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import array
 
 
@@ -17,8 +14,8 @@ def z_sorted(length, sequence):
 
 def main():
     length = int(input())
-    sequence = array.array("L", list(map(int, input().split())))
-    print(" ".join(map(str, z_sorted(length, sequence))))
+    sequence = array.array('L', list(map(int, input().split())))
+    print(' '.join(map(str, z_sorted(length, sequence))))
 
 
 def __starting_point():

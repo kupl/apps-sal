@@ -1,6 +1,6 @@
 def getin():
     xin = input()
-    while xin.strip() == "":
+    while xin.strip() == '':
         xin = input()
     return xin
 
@@ -10,7 +10,6 @@ def gi():
 
 
 input()
-
 s = input()
 ch = s[0]
 i = 1
@@ -30,7 +29,6 @@ while i < len(s):
     i += 1
 if cur > 0:
     ans.append(cur)
-
 print(len(ans))
 if len(ans) > 0:
-    print(" ".join([str(x) for x in ans]))
+    print(' '.join([str(x) for x in ans]))

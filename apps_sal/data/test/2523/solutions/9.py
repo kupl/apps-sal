@@ -1,5 +1,4 @@
 import sys
-
 s = sys.stdin.readline().rstrip()
 n = len(s)
 
@@ -13,7 +12,6 @@ def main():
         l = s[m - 1::-1]
         r = s[m:]
     base = l[0]
-
     cnt = m
     i = 0
     if n & 1:

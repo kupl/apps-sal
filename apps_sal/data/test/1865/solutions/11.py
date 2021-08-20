@@ -12,10 +12,8 @@ n = int(input())
 a = input().split()
 for i in range(n):
     a[i] = int(a[i])
-
 k = 0
 ans = ()
-
 for i in range(n):
     m = find_min(i)
     if i != m:
@@ -24,7 +22,6 @@ for i in range(n):
         a[i] = a[i] - a[m]
         ans += (i, m)
         k += 1
-
 print(k)
 for i in range(0, len(ans), 2):
     print(ans[i], ans[i + 1])

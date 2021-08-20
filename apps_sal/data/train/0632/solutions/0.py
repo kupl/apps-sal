@@ -1,9 +1,9 @@
 n = int(input())
 while n > 0:
     i = 1
-    a, b = (int(i) for i in input().split())
+    (a, b) = (int(i) for i in input().split())
     if (b + 1) % (i << a) == 0:
-        print("ON")
+        print('ON')
     else:
-        print("OFF")
+        print('OFF')
     n = n - 1

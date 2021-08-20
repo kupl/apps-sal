@@ -1,4 +1,5 @@
 class Solution:
+
     def generateParenthesis(self, n):
         """
         :type n: int
@@ -6,7 +7,7 @@ class Solution:
         """
         if not n:
             return []
-        cache = [["(", 1, n - 1]]
+        cache = [['(', 1, n - 1]]
         for _ in range(2 * n - 1):
             for _ in range(len(cache)):
                 temp = cache.pop(0)

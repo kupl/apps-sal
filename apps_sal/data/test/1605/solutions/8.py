@@ -13,4 +13,4 @@ for i in range(len(s)):
         even += evenc[s[i]]
         odd += oddc[s[i]]
         oddc[s[i]] += 1
-print(str(even) + " " + str(odd))
+print(str(even) + ' ' + str(odd))

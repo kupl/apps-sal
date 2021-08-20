@@ -1,12 +1,10 @@
 from collections import deque
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 edge = [[] for _ in range(N)]
 for i in range(M):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
-
-
 ans = 0
 visited = [False] * N
 d = deque()

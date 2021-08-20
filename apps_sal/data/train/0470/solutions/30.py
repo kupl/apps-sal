@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         counter = [0] * 101
         for num in A:
@@ -10,10 +11,9 @@ class Solution:
             residual = target - A[i]
             for Aj in range(101):
                 Ak = residual - Aj
-                if Ak >= 0 and Ak <= 100 and Aj <= Ak:
+                if Ak >= 0 and Ak <= 100 and (Aj <= Ak):
                     if Aj != Ak:
                         count += counter[Aj] * counter[Ak]
                     else:
-                        count += (counter[Aj] * (counter[Aj] - 1)) // 2
-                    #print(A[i], Aj, Ak, count)
+                        count += counter[Aj] * (counter[Aj] - 1) // 2
         return count % MOD

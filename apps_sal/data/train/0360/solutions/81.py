@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         left = max(weights)
         right = sum(weights)
@@ -13,11 +14,10 @@ class Solution:
                     curr = w
                 else:
                     curr += w
-            if res > D:  # !!here use >, since mid is impossible to meet the requireent
+            if res > D:
                 left = mid
-            else:  # !!here means <=, since there might be smaller mid
+            else:
                 right = mid
-
         res = 1
         curr = 0
         for w in weights:

@@ -1,10 +1,10 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = list(map(int, input().split()))
 d = [0] * (n + 5)
 for q in range(n):
     d[s[q]] = q
-f, q2 = [], 0
+(f, q2) = ([], 0)
 for q in range(len(a)):
     if q - 1 == q2:
         f.append(q)

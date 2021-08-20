@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(m)]
 ini_1 = []
 end_n = []
@@ -8,6 +8,6 @@ for i in range(m):
     elif ab[i][1] == n:
         end_n.append(ab[i][0])
 if set(ini_1) & set(end_n):
-    print("POSSIBLE")
+    print('POSSIBLE')
 else:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')

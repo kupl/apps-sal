@@ -1,5 +1,5 @@
 def people_with_age_drink(age):
-    drinks = ["drink toddy", "drink coke", "drink beer", "drink whisky"]
+    drinks = ['drink toddy', 'drink coke', 'drink beer', 'drink whisky']
     if age < 14:
         return drinks[0]
     elif 14 <= age < 18:

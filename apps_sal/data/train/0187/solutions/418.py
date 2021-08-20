@@ -1,8 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if not customers:
             return -1
-
         profit = 0
         steps = 0
         waiting_customers = 0
@@ -26,20 +26,14 @@ class Solution:
                     on_board += arrived_customers
                     arrived_customers = 0
                 waiting_customers += arrived_customers
-
-            # print('on board = {}, waiting = {}'.format(on_board, waiting_customers))
             if boardingCost * on_board - step * runningCost > profit:
                 steps = step
                 profit = boardingCost * on_board - step * runningCost
-
             step += 1
-
             try:
                 arrived_customers = customers[step - 1]
             except IndexError:
                 arrived_customers = -1
-
         if profit <= 0:
             return -1
-
         return steps

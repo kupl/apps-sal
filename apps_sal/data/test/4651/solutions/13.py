@@ -15,7 +15,6 @@ for _ in range(int(input())):
                 stack.append(l1[i])
                 i += 1
             marked[j] = 1
-
             if stack:
                 l1[i] = stack[-1]
                 del marked[stack[-1]]
@@ -23,4 +22,4 @@ for _ in range(int(input())):
             else:
                 i += 1
         j += 1
-    print(*result, sep=" ")
+    print(*result, sep=' ')

@@ -7,13 +7,10 @@ def left_span(arr, n):
     ans = [0]
     span = [0]
     for i in range(1, n):
-
         while span and arr[i] > arr[span[-1]]:
             span.pop()
-
         if not span:
             ans.append(0)
-
         else:
             ans.append(span[-1] + 1)
         span.append(i)
@@ -24,10 +21,8 @@ def right_span(arr, n):
     ans = [n + 1]
     span = [n - 1]
     for i in range(n - 2, -1, -1):
-
         while span and arr[i] >= arr[span[-1]]:
             span.pop()
-
         if not span:
             ans.append(n + 1)
         else:
@@ -36,9 +31,8 @@ def right_span(arr, n):
     return ans[::-1]
 
 
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-
 left = left_span(arr, n)
 right = right_span(arr, n)
 c = Counter()
@@ -54,36 +48,34 @@ for i in range(1, n):
     prefix_sum.append(f[i] + prefix_sum[-1])
 r = [0] * q
 for i in range(q):
-    sign, k, player = list(map(str, input().split()))
+    (sign, k, player) = list(map(str, input().split()))
     k = int(k)
-    if sign == "=":
+    if sign == '=':
         if k in c:
             res = c[k]
         else:
             res = 0
-    elif sign == ">":
+    elif sign == '>':
         j = bisect_left(a, k)
         if j == n:
             res = 0
         elif a[j] == k:
             res = prefix_sum[-1] - prefix_sum[j]
+        elif j > 0:
+            res = prefix_sum[-1] - prefix_sum[j - 1]
         else:
-            if j > 0:
-                res = prefix_sum[-1] - prefix_sum[j - 1]
-            else:
-                res = prefix_sum[-1]
+            res = prefix_sum[-1]
     else:
         j = bisect_left(a, k)
         if j == 0:
             res = 0
         else:
             res = prefix_sum[j - 1]
-
     if res % 2 == 0:
-        if player == "D":
-            r[i] = "C"
+        if player == 'D':
+            r[i] = 'C'
         else:
-            r[i] = "D"
+            r[i] = 'D'
     else:
         r[i] = player
 print(''.join(r))

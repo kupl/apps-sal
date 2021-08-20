@@ -1,4 +1,4 @@
-n, n1, n2 = [int(x) for x in input().split()]
+(n, n1, n2) = [int(x) for x in input().split()]
 n3 = 0
 a = 0
 for i in input().split():
@@ -13,9 +13,8 @@ for i in input().split():
             n3 -= 1
         else:
             a += 1
+    elif n2:
+        n2 -= 1
     else:
-        if n2:
-            n2 -= 1
-        else:
-            a += 2
+        a += 2
 print(a)

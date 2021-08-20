@@ -4,9 +4,7 @@ def ne(c):
     return 'L'
 
 
-# for _ in range(1):
 for _ in range(int(input())):
-    # n, k = map(int, input().split())
     n = int(input())
     s = input()
     ans = 0

@@ -1,8 +1,8 @@
 res = 0
 cur = 0
 sign = +1
-for c in input() + "+":
-    if c in "+-":
+for c in input() + '+':
+    if c in '+-':
         res += sign * cur
         cur = 0
     if c == '+':

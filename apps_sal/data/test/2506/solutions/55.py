@@ -1,9 +1,9 @@
 import numpy as np
-N, M, *A = list(map(int, open(0).read().split()))
+(N, M, *A) = list(map(int, open(0).read().split()))
 A = np.sort(A)
 B = np.cumsum(np.concatenate([[0], A[::-1]]))
 l = -1
-r = 10**6
+r = 10 ** 6
 while l + 1 < r:
     s = (l + r) // 2
     cnt = np.sum(N - np.searchsorted(A, s - A))

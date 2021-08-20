@@ -5,11 +5,10 @@ for _ in range(t):
     ns.sort(reverse=True)
     from collections import OrderedDict
     ns = list(OrderedDict.fromkeys(ns))
-
     m = ns[0]
     ans = m
-    if m % 30 == 0 and (m // 2) in ns and (m // 3) in ns and (m // 5) in ns:
-        ans = (m // 30) * 31
+    if m % 30 == 0 and m // 2 in ns and (m // 3 in ns) and (m // 5 in ns):
+        ans = m // 30 * 31
     c = m
     for i in range(len(ns)):
         if m % ns[i] != 0:

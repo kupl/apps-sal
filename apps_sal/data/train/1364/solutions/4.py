@@ -1,10 +1,10 @@
 import collections
 t = int(input())
 for _ in range(t):
-    n, c = list(map(int, input().split()))
+    (n, c) = list(map(int, input().split()))
     hashmap = collections.defaultdict(list)
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         hashmap[x - y, x % c].append(x)
     steps = 0
     total = 0

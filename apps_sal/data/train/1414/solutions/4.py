@@ -1,5 +1,9 @@
-def read(): return list(map(int, input().split()))
-def read_s(): return list(map(str, input().split()))
+def read():
+    return list(map(int, input().split()))
+
+
+def read_s():
+    return list(map(str, input().split()))
 
 
 def found(K, gender, L, R):
@@ -10,17 +14,17 @@ def found(K, gender, L, R):
         for j in range(R - K + 1):
             Query_list = []
             for qq in range(K):
-                Query_list.append(grid[i + qq][j: j + K])
+                Query_list.append(grid[i + qq][j:j + K])
             if Query_list == ans:
                 return True
     return False
 
 
-L, R, Q = read()
+(L, R, Q) = read()
 grid = []
 for i in range(L):
     grid.append(str(input()))
 for i in range(Q):
-    K, gender = input().split()
-    K, gender = int(K), str(gender)
+    (K, gender) = input().split()
+    (K, gender) = (int(K), str(gender))
     print('yes' if found(K, gender, L, R) else 'no')

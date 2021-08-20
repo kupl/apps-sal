@@ -1,10 +1,9 @@
 for _ in range(int(input().strip())):
     N = int(input().strip())
-    A = list(map(int, input().strip().split(" ")))
+    A = list(map(int, input().strip().split(' ')))
     coins = [0, 0, 0]
     f = 1
     for i in A:
-        #print(i, coins)
         if i == 5:
             coins[0] += 1
         elif i == 10 and coins[0] > 0:
@@ -16,11 +15,11 @@ for _ in range(int(input().strip())):
                 coins[0] -= 2
             else:
                 f = 0
-                print("NO")
+                print('NO')
                 break
         else:
             f = 0
-            print("NO")
+            print('NO')
             break
     if f:
-        print("YES")
+        print('YES')

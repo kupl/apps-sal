@@ -5,18 +5,14 @@ def get_divisors(x):
         if x % i == 0:
             ret.add(i)
             ret.add(x // i)
-
         i += 1
-
     return ret
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 sm = sum(a)
 divs = get_divisors(sm)
-
 ans = 0
 for div in divs:
     mods = [e % div for e in a]
@@ -30,5 +26,4 @@ for div in divs:
             if p <= k:
                 ans = max(ans, div)
             break
-
 print(ans)

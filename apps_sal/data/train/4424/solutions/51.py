@@ -1,5 +1,4 @@
 def expression_matter(a, b, c):
-
     h = a * b + c
     d = a * (b + c)
     e = a + b * c

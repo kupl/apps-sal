@@ -2,7 +2,7 @@ def choose_best(t, k, ls):
     if k == 0:
         return 0
     best = -1
-    for i, v in enumerate(ls):
+    for (i, v) in enumerate(ls):
         if v > t:
             continue
         b = choose_best(t - v, k - 1, ls[i + 1:])

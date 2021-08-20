@@ -16,7 +16,6 @@ for _ in range(t):
             c = seq.count(el)
             if ans < c:
                 ans = c
-
                 anss = el
             elif ans == c:
                 if el < anss:

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 difficulties = list(map(int, input().split()))
 solved = True
 count = 0
@@ -14,5 +14,4 @@ while solved and left <= right:
         right -= 1
         solved = True
         count += 1
-
 print(count)

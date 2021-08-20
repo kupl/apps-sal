@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    N, K, L = map(int, input().split())
+    (N, K, L) = map(int, input().split())
     if K * L < N:
         print(-1)
     elif K == 1 and N > 1:

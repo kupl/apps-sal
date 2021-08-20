@@ -17,7 +17,7 @@ def all_primes(n):
     return res
 
 
-def count_pow_nums(n, p):  # don't count 1
+def count_pow_nums(n, p):
     top = int(pow(n, 1.0 / p))
     if pow(top + 2, p) <= n:
         return top + 1
@@ -38,7 +38,7 @@ for pi in range(3, len(primes)):
     for n in range(2, cnt + 5):
         sq2 = round(sqrt(n))
         sq3 = round(pow(n, 1 / 3))
-        if sq2**2 != n and sq3**3 != n:
+        if sq2 ** 2 != n and sq3 ** 3 != n:
             num = pow(n, p)
             if num <= max_n:
                 num_set.add(num)

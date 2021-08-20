@@ -7,6 +7,7 @@ def sum_of_digits(num):
 
 
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
         groups = {}
         for i in range(1, n + 1):

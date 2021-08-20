@@ -1,6 +1,5 @@
 n = int(input())
 s = '?' + input() + '?'
-
 flag = False
 for x in range(1, len(s) - 1):
     if s[x] == '?':
@@ -13,8 +12,7 @@ for x in range(1, len(s) - 1):
     elif s[x - 1] == s[x] or s[x + 1] == s[x]:
         flag = False
         break
-
 if flag:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

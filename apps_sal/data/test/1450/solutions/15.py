@@ -1,17 +1,17 @@
 r = list(input())
-s = ""
+s = ''
 count = 0
 for i in r:
-    if i == "1":
+    if i == '1':
         count = count + 1
     else:
         s = s + i
-ans = ""
+ans = ''
 u = 0
-while(u < len(s)):
-    if s[u] == "2":
+while u < len(s):
+    if s[u] == '2':
         break
     else:
         u = u + 1
-ans = s[:u] + count * "1" + s[u:]
+ans = s[:u] + count * '1' + s[u:]
 print(ans)

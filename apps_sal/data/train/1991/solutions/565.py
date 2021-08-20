@@ -2,6 +2,7 @@ MOD = 10 ** 9 + 7
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
 

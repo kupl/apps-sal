@@ -3,4 +3,4 @@ def problem(a):
         n = float(a)
         return n * 50 + 6
     except:
-        return "Error"
+        return 'Error'

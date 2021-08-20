@@ -7,4 +7,4 @@ elif len(c) == 1:
 elif max(c)[0] > 1:
     print(*sorted(set('BGR') - {max(c)[1]}), sep='')
 else:
-    print(*(set('BGR') - {x[1] for x in c}))
+    print(*set('BGR') - {x[1] for x in c})

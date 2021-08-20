@@ -1,9 +1,10 @@
 from collections import defaultdict
 
 
-class LongJumps():
+class LongJumps:
+
     def __init__(self, n, l, x, y, a):
-        self.n, self.l, self.x, self.y, self.a = n, l, x, y, a
+        (self.n, self.l, self.x, self.y, self.a) = (n, l, x, y, a)
 
     def get_markers(self):
         st = defaultdict(set)
@@ -12,7 +13,6 @@ class LongJumps():
         value_check = defaultdict(bool)
         for v in self.a:
             exist_check[v] = True
-
         for v in self.a:
             for i in range(len(req_pts)):
                 if v - req_pts[i] >= 0:
@@ -23,11 +23,9 @@ class LongJumps():
                     st[v + req_pts[i]].add(i)
                     if exist_check[v + req_pts[i]]:
                         value_check[i] = True
-
         if value_check[0] and value_check[1]:
             print(0)
             return
-
         sol_status = 2
         status1_marker = None
         for v in st:
@@ -38,7 +36,6 @@ class LongJumps():
                 if exist_check[v]:
                     sol_status = 1
                     status1_marker = req_pts[1 - st[v].pop()]
-
         if sol_status == 1:
             print(1)
             print(status1_marker)
@@ -48,7 +45,7 @@ class LongJumps():
             print(x, y)
 
 
-n, l, x, y = list(map(int, input().strip(' ').split(' ')))
+(n, l, x, y) = list(map(int, input().strip(' ').split(' ')))
 a = list(map(int, input().strip(' ').split(' ')))
 lj = LongJumps(n, l, x, y, a)
 lj.get_markers()

@@ -1,9 +1,7 @@
-N, K, C = map(int, input().split())
+(N, K, C) = map(int, input().split())
 S = list(input())
-
 A = [0] * N
 B = [0] * N
-
 i = 0
 a = 1
 while i < N:
@@ -22,7 +20,6 @@ while j >= 0:
         j -= C + 1
     else:
         j -= 1
-
 for i in range(N):
     if A[i] == B[i] and A[i] != 0:
         print(i + 1)

@@ -1,12 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = []
 for i in range(n):
     a.append(input())
-
 inf = 10 ** 9
-p, q = inf, inf
-r, s = -1, -1
-
+(p, q) = (inf, inf)
+(r, s) = (-1, -1)
 for i in range(n):
     for j in range(m):
         if a[i][j] == 'X':
@@ -14,7 +12,6 @@ for i in range(n):
             q = min(q, j)
             r = max(r, i)
             s = max(s, j)
-
 ok = True
 for i in range(n):
     for j in range(m):
@@ -22,7 +19,6 @@ for i in range(n):
             ok &= p <= i <= r and q <= j <= s
         if a[i][j] == '.':
             ok &= not (p <= i <= r and q <= j <= s)
-
 if ok:
     print('YES')
 if not ok:

@@ -1,7 +1,7 @@
 n = int(input())
 tot = []
 for i in range(n):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     tot.append((a, b))
 k = int(input())
 counter = 0

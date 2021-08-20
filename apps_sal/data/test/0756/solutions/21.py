@@ -1,5 +1,4 @@
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     n = int(input())
     t = [0] + list(map(int, input().split()))
     ans = -1

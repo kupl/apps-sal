@@ -1,11 +1,11 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
 
         def convert_to_minutes(time):
             hhmm = time.split(':')
-            hh, mm = int(hhmm[0]), int(hhmm[1])
+            (hh, mm) = (int(hhmm[0]), int(hhmm[1]))
             return 60 * hh + mm
-
         mod = 24 * 60
         res = set()
         minutes = [convert_to_minutes(hhmm) for hhmm in keyTime]

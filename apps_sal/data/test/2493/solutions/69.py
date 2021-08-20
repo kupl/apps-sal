@@ -1,7 +1,7 @@
 n = int(input())
 l = list(map(int, input().split()))
 cnt = [0 for i in range(n + 1)]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 fact = [1] * (n + 2)
 inv = [1] * (n + 2)
 for i in range(2, n + 2):
@@ -11,7 +11,8 @@ for i in range(n + 1, 1, -1):
     inv[i - 1] = inv[i] * i % mod
 
 
-def comb(x, y): return fact[x] * inv[y] % mod * inv[x - y] % mod if x >= y >= 0 else 0
+def comb(x, y):
+    return fact[x] * inv[y] % mod * inv[x - y] % mod if x >= y >= 0 else 0
 
 
 for i in range(n + 1):

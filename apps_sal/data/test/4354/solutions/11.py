@@ -1,12 +1,12 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [0] * n
 b = [0] * n
 for i in range(n):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
 c = [0] * m
 d = [0] * m
 for j in range(m):
-    c[j], d[j] = map(int, input().split())
+    (c[j], d[j]) = map(int, input().split())
 for i in range(n):
     e = []
     for j in range(m):

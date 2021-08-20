@@ -1,5 +1,4 @@
 s = input()
-
 tmp1 = ''
 tmp2 = ''
 for i in range(len(s)):
@@ -9,7 +8,6 @@ for i in range(len(s)):
     else:
         tmp1 += '1'
         tmp2 += '0'
-
 diff_tmp1 = 0
 diff_tmp2 = 0
 for i in range(len(s)):

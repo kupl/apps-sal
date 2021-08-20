@@ -1,15 +1,17 @@
 import sys
 import math
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 sys.setrecursionlimit(250000)
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
-
     sum_ = n
     count = 0
     while sum_ > 0:

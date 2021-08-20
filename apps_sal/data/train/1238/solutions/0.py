@@ -19,7 +19,7 @@ for i in range(test):
             list2.remove(m)
     list2.sort()
     if len(list2) == 0:
-        print(" ")
+        print(' ')
     else:
         list2.sort()
         for k in list2:

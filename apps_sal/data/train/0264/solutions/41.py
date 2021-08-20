@@ -1,6 +1,6 @@
 class Solution:
-    def maxLength(self, arr: List[str]) -> int:
 
+    def maxLength(self, arr: List[str]) -> int:
         self.ans = 0
         vis = set()
 

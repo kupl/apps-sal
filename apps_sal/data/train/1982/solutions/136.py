@@ -1,10 +1,11 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         from collections import defaultdict
 
         def build_graph():
             graph = defaultdict(set)
-            for u, v in dislikes:
+            for (u, v) in dislikes:
                 graph[u].add(v)
                 graph[v].add(u)
             return graph
@@ -17,7 +18,6 @@ class Solution:
                 if not dfs(nei, next_color ^ 1):
                     return False
             return True
-
         graph = build_graph()
         color = {}
         for node in graph:

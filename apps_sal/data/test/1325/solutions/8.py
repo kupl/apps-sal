@@ -3,9 +3,8 @@ def calc(c1, c2):
     return min(x, 26 - x)
 
 
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 strx = input()
-
 if a % 2 == 0:
     if b > a // 2:
         b = a + 1 - b
@@ -23,12 +22,10 @@ if a % 2 == 0:
     dist.reverse()
     for i in range(a // 2):
         if dist[i] != 0:
-            rightpt = (a // 2 - 1) - i
+            rightpt = a // 2 - 1 - i
             break
-
     sumlr = rightpt - leftpt + min(abs(leftpt - indx), abs(rightpt - indx))
     print(sum(dist) + sumlr)
-
 else:
     if b > a // 2 + 1:
         b = a + 1 - b
@@ -46,7 +43,7 @@ else:
     dist.reverse()
     for i in range(a // 2):
         if dist[i] != 0:
-            rightpt = (a // 2 - 1) - i
+            rightpt = a // 2 - 1 - i
             break
     sumlr = rightpt - leftpt + min(abs(leftpt - indx), abs(rightpt - indx))
     print(sum(dist) + sumlr)

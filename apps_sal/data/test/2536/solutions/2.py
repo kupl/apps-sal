@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = []
 for i in range(n):
     l.append(list(map(int, input().split())))
@@ -8,7 +8,7 @@ k = int(input())
 c = 0
 d = 0
 for i in range(k):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     try:
         ans1 += l[a - 1][b - 1]
     except:

@@ -1,6 +1,5 @@
 def fold_to(distance):
     fold = 0.0001
-
     if distance <= -1:
         return None
     elif distance < fold:

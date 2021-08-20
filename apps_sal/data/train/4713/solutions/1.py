@@ -1,5 +1,5 @@
 def late_clock(digits):
-    res, digits = [], digits[:]
+    (res, digits) = ([], digits[:])
 
     def rec(i):
         if i == 3:
@@ -13,6 +13,5 @@ def late_clock(digits):
                     return True
                 digits.append(res.pop())
         return False
-
     rec(0)
-    return "{}{}:{}{}".format(*res)
+    return '{}{}:{}{}'.format(*res)

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     s = input()
     if '1' not in s:
         print((n + 1) * b + a * n)

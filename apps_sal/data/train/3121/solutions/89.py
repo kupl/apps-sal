@@ -8,7 +8,7 @@ def solve(arr):
         else:
             ele[i] = i
         sum = sum + i
-    for k, v in ele.items():
+    for (k, v) in ele.items():
         if v == sum:
             if -k not in arr:
                 times = sum / k

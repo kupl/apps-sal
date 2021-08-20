@@ -1,10 +1,6 @@
-# coding: utf-8
-# Your code here!
-
 import sys
 n = int(input())
-
-inf = float("inf")
+inf = float('inf')
 u = d = l = r = 0
 umin = inf
 umax = -inf
@@ -19,33 +15,32 @@ xmax = -inf
 ymin = inf
 ymax = -inf
 xx = yy = 0
-
 for j in range(n):
-    x, y, D = [i for i in input().split()]
+    (x, y, D) = [i for i in input().split()]
     x = int(x)
     y = int(y)
-    if D == "U":
+    if D == 'U':
         umin = min(umin, y)
         umax = max(umax, y)
         u = 1
         xmin = min(xmin, x)
         xmax = max(xmax, x)
         xx = 1
-    if D == "D":
+    if D == 'D':
         dmin = min(dmin, y)
         dmax = max(dmax, y)
         d = 1
         xmin = min(xmin, x)
         xmax = max(xmax, x)
         xx = 1
-    if D == "L":
+    if D == 'L':
         lmin = min(lmin, x)
         lmax = max(lmax, x)
         l = 1
         ymin = min(ymin, y)
         ymax = max(ymax, y)
         yy = 1
-    if D == "R":
+    if D == 'R':
         rmin = min(rmin, x)
         rmax = max(rmax, x)
         r = 1
@@ -114,7 +109,6 @@ if l and r:
         s.add((lmin - rmin) / 2)
     if lmax - rmax > 0:
         s.add((lmax - rmax) / 2)
-
 if yy and d:
     if dmin - ymin > 0:
         s.add(dmin - ymin)
@@ -130,15 +124,9 @@ if d and u:
         s.add((dmin - umin) / 2)
     if dmax - umax > 0:
         s.add((dmax - umax) / 2)
-
-# print(rmax,xmax)
-
-ans = 10**18
+ans = 10 ** 18
 for t in s:
-    #    print(rpos(t),lpos(t),dpos(t),upos(t),xmin,ymin,xmax,ymax,xx,yy)
     area = (rpos(t) - lpos(t)) * (upos(t) - dpos(t))
-#    print(t,area)
     if area < ans:
         ans = area
-
 print(ans)

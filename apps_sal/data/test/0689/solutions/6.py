@@ -5,7 +5,7 @@ for _ in range(int(input())):
         for i in input():
             d[i] = d.get(i, 0) + 1
     s = 0
-    for i, j in list(d.items()):
+    for (i, j) in list(d.items()):
         if d[i] % n != 0:
             s += 1
             break

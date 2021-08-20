@@ -1,6 +1,5 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 cnt = [0 for _ in range(101)]
 for ai in a:
     cnt[ai] += 1

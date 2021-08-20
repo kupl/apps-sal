@@ -2,10 +2,11 @@ import collections
 
 
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         res = i = 0
         count = Counter()
-        for j, k in enumerate(tree):
+        for (j, k) in enumerate(tree):
             count[tree[j]] += 1
             while len(count) >= 3:
                 count[tree[i]] -= 1

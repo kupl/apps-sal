@@ -13,13 +13,6 @@ class Cashier:
         s = 0
         for i in range(0, len(product)):
             s += self.prod[product[i]] * amount[i]
-
         if self.cur_idx % self.idx == 0:
             s *= self.dis
-
         return s
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

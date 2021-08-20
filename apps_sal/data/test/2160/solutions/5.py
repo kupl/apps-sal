@@ -5,26 +5,26 @@ from decimal import Decimal
 def na():
     n = int(input())
     b = [int(x) for x in input().split()]
-    return n, b
+    return (n, b)
 
 
 def nab():
     n = int(input())
     b = [int(x) for x in input().split()]
     c = [int(x) for x in input().split()]
-    return n, b, c
+    return (n, b, c)
 
 
 def dv():
-    n, m = list(map(int, input().split()))
-    return n, m
+    (n, m) = list(map(int, input().split()))
+    return (n, m)
 
 
 def dva():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [int(x) for x in input().split()]
     b = [int(x) for x in input().split()]
-    return n, m, b
+    return (n, m, b)
 
 
 def eratosthenes(n):
@@ -41,20 +41,20 @@ def nm():
     b = [int(x) for x in input().split()]
     m = int(input())
     c = [int(x) for x in input().split()]
-    return n, b, m, c
+    return (n, b, m, c)
 
 
 def dvs():
     n = int(input())
     m = int(input())
-    return n, m
+    return (n, m)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 aa = [int(x) for x in input().split()]
 l = {i: m for i in range(n)}
 r = {i: -1 for i in range(n)}
-for i, a in enumerate(aa):
+for (i, a) in enumerate(aa):
     l[a - 1] = min(i, l[a - 1])
     r[a - 1] = max(i, r[a - 1])
 ans = 0

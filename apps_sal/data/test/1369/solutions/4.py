@@ -1,39 +1,30 @@
 import math
 n = int(input())
-tx, ty = 0, 0
-x, y = [], []
-
+(tx, ty) = (0, 0)
+(x, y) = ([], [])
 for i in range(n):
-    tx, ty = list(map(int, input().split()))
+    (tx, ty) = list(map(int, input().split()))
     x.append(tx)
     y.append(ty)
-
-
 cx = 0
 cy = 0
 rad = 0
 jud = 0
 diffr = 0
 maxdist = 0
-sx, sy = [], []
-
-
-# 任意2点間の距離を算出し最大距離を出す。
+(sx, sy) = ([], [])
 for i in range(n - 1):
     for j in range(i + 1, n):
         if rad < math.sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j])):
             rad = math.sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]))
             cx = (x[i] + x[j]) / 2
             cy = (y[i] + y[j]) / 2
-
 if rad >= max([math.sqrt((cx - x[i]) * (cx - x[i]) + (cy - y[i]) * (cy - y[i])) for i in range(n)]) * 2:
     jud = 1
-#
-
 if jud == 1:
     rad = rad / 2
 else:
-    p, sx, sy = n, x, y
+    (p, sx, sy) = (n, x, y)
     rad = 800
     for i in range(0, p - 2):
         for j in range(i + 1, p - 1):
@@ -58,5 +49,4 @@ else:
                     diffr = math.sqrt((cx - a) * (cx - a) + (cy - b) * (cy - b))
                     if maxdist <= diffr and diffr < rad:
                         rad = diffr
-
 print(rad)

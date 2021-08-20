@@ -1,24 +1,21 @@
-'''
+"""
 研究室PCでの解答
-'''
+"""
 import math
-#import numpy as np
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
-setrecursionlimit(10**7)
-mod = 10**9 + 7  # 998244353
+setrecursionlimit(10 ** 7)
+mod = 10 ** 9 + 7
 dir = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-alp = "abcdefghijklmnopqrstuvwxyz"
+alp = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def main():
-    n, k = list(map(int, ipt().split()))
+    (n, k) = list(map(int, ipt().split()))
     a = [int(i) for i in ipt().split()]
     ans = 0
     sm = 0
@@ -29,7 +26,6 @@ def main():
             sm -= a[l]
             l += 1
         ans += l
-
     print(ans)
     return None
 

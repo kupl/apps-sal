@@ -1,6 +1,6 @@
 def get_diagonale_code(grid: str) -> str:
     grid = grid.replace(' ', '').split('\n')
-    x, y = 0, 0
+    (x, y) = (0, 0)
     s = 1
     res = ''
     try:

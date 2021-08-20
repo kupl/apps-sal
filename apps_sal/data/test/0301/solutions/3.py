@@ -1,4 +1,4 @@
-u, v = list(map(int, input().split()))
+(u, v) = list(map(int, input().split()))
 if u > v:
     print(-1)
 elif u == 0 and v == 0:
@@ -7,8 +7,8 @@ elif u == v:
     print(1)
     print(u)
 else:
-    a, b, c = u, (v - u) // 2, (v - u) // 2
-    d, e = (v - u) // 2 + u, (v - u) // 2
+    (a, b, c) = (u, (v - u) // 2, (v - u) // 2)
+    (d, e) = ((v - u) // 2 + u, (v - u) // 2)
     if d + e == v and d ^ e == u:
         print(2)
         print(d, e)

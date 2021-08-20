@@ -1,10 +1,10 @@
 def main():
-    n, b, a = map(int, input().split())
+    (n, b, a) = map(int, input().split())
     arr = list(map(int, input().split()))
     B = b
     A = a
     for i in range(n + 1):
-        if (A == 0 and B == 0) or i == n:
+        if A == 0 and B == 0 or i == n:
             print(i)
             break
         if arr[i]:
@@ -15,11 +15,10 @@ def main():
                 A += 1
             else:
                 A -= 1
+        elif A:
+            A -= 1
         else:
-            if A:
-                A -= 1
-            else:
-                B -= 1
+            B -= 1
     return 0
 
 

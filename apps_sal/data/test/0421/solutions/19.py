@@ -1,7 +1,8 @@
-def cin(): return map(int, input().split())
+def cin():
+    return map(int, input().split())
 
 
-n, = cin()
+(n,) = cin()
 a = []
 count = 1
 for i in range(0, n):

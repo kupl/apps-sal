@@ -1,4 +1,4 @@
-a, b, c, x = map(int, [input() for i in range(4)])
+(a, b, c, x) = map(int, [input() for i in range(4)])
 ans = 0
 for i in range(a + 1):
     for j in range(b + 1):

@@ -2,7 +2,7 @@ def intlog2(n):
     if n <= 0:
         return -1
     i = 0
-    while 2**i <= n:
+    while 2 ** i <= n:
         i += 1
     return i - 1
 

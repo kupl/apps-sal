@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 flag = True
 order = [b]
 while b > a:
@@ -11,9 +11,9 @@ while b > a:
     else:
         break
 if b == a:
-    print("YES")
+    print('YES')
     print(len(order))
     for i in range(len(order) - 1, -1, -1):
-        print(order[i], end=" ")
+        print(order[i], end=' ')
 else:
-    print("NO")
+    print('NO')

@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -29,10 +28,8 @@ class UnionFind:
     def union(self, x, y):
         x_root = self.find(x)
         y_root = self.find(y)
-
         if x_root == y_root:
             return
-
         x_rank = self._rank[x_root]
         y_rank = self._rank[y_root]
         if x_rank > y_rank:
@@ -54,16 +51,14 @@ class UnionFind:
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     uf = UnionFind(N)
     for _ in range(M):
-        X, Y, _ = list(map(int, input().split()))
+        (X, Y, _) = list(map(int, input().split()))
         uf.union(X, Y)
-
     s = set()
     for i in range(1, N + 1):
         s.add(uf.find(i))
-
     ans = len(s)
     print(ans)
 

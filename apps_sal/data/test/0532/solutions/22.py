@@ -1,6 +1,5 @@
 import sys
 import math
-
 line = input()
 length = len(line)
 cur = 'a'

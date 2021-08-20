@@ -1,4 +1,4 @@
-N, M, K = list(map(int, input().split()))
+(N, M, K) = list(map(int, input().split()))
 root = [i for i in range(N)]
 height = [1 for i in range(N)]
 l = [set() for i in range(N)]
@@ -37,16 +37,16 @@ def same(a, b):
 
 
 for i in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     l[a].add(b)
     l[b].add(a)
     union(a, b)
 for j in range(K):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     same(a, b)
 for i in range(N):
-    print(height[find(i)] - len(l[i]) - 1, end=" ")
+    print(height[find(i)] - len(l[i]) - 1, end=' ')

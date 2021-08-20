@@ -19,8 +19,8 @@ def main():
         x = a[i]
         l = minL[x]
         r = maxR[x]
-        if (l < r):
-            if (r == l - 1):
+        if l < r:
+            if r == l - 1:
                 b[r] = 1
             else:
                 f[l + 1] = f[l + 1] + 1
@@ -28,9 +28,9 @@ def main():
     res = 1
     for i in range(1, n):
         f[i] = f[i] + f[i - 1]
-        if (f[i] > 0):
+        if f[i] > 0:
             b[i] = 1
-        res = (res * b[i]) % 998244353
+        res = res * b[i] % 998244353
     stdout.write(str(res))
     return 0
 

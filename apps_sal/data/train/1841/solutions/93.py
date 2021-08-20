@@ -1,11 +1,10 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         if not k or not arr:
             return []
-
         arr = sorted(arr)
         m = arr[(len(arr) - 1) // 2]
-
         l = 0
         r = len(arr) - 1
         ans = []

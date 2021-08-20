@@ -2,9 +2,8 @@ n = int(input())
 a = list(map(int, input().split()))
 b = a
 for bb in range(n):
-    b[bb] -= (bb + 1)
+    b[bb] -= bb + 1
 b.sort()
-
 if n % 2 == 1:
     c = b[n // 2]
     d = c
@@ -24,5 +23,4 @@ for i in range(n):
     res1 += abs(b[i] - c)
 for j in range(n):
     res2 += abs(b[j] - d)
-
 print(min(res1, res2))

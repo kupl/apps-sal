@@ -7,7 +7,7 @@ for j in range(len(S)):
     i = S[j]
     if i == 'W':
         White += 1
-    elif i == 'R' and White > 0 and j + 1 > Red:
+    elif i == 'R' and White > 0 and (j + 1 > Red):
         Answer += 1
         White -= 1
 print(Answer)

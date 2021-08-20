@@ -1,5 +1,5 @@
 import math
-p, y = list(map(int, input().split()))
+(p, y) = list(map(int, input().split()))
 
 
 def is_prime(n, p):

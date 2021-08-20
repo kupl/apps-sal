@@ -7,7 +7,6 @@ def f(k, p):
 
 
 ans = set()
-
 for k in range(65):
     l = 0
     r = n + 2
@@ -23,9 +22,7 @@ for k in range(65):
         r += 1
     for i in range(l + 1, r + 1):
         ans.add(2 ** k * (2 * i - 1))
-
 for x in sorted(ans):
     print(x)
-
 if not ans:
     print(-1)

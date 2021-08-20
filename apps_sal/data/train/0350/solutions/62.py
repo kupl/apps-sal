@@ -1,5 +1,7 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
+
         def atMost(A: List[int], K: int) -> int:
             d = collections.defaultdict(int)
             i = ret = 0

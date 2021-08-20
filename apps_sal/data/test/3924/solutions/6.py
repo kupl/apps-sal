@@ -1,4 +1,4 @@
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 a = [int(x) for x in input().split()]
 p = 0
 cp = 0
@@ -14,7 +14,7 @@ for d in range(n - 1):
         fplp = 0
     fdg -= min(fplp, fdg)
     cp += fdg // k
-    fdg -= (fdg // k) * k
+    fdg -= fdg // k * k
     p += cp
     sdg = fdg
 fdg = a[n - 1]

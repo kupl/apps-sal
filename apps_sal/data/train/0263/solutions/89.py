@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n):
         dmap = [[4, 6], [8, 6], [7, 9], [8, 4], [3, 9, 0], [], [1, 7, 0], [2, 6], [1, 3], [2, 4], [4, 6]]
         mod_val = 10 ** 9 + 7
@@ -11,6 +12,5 @@ class Solution:
                 tv = dmap[j]
                 for t in tv:
                     dp[i][j] += dp[i - 1][t] % mod_val
-        # print(dp)
         ans = sum(dp[n]) % mod_val
         return ans

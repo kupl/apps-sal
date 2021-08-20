@@ -1,17 +1,18 @@
 class TwelvefoldWay:
+
     def __init__(self, n, mod):
         self.g1 = [1, 1]
         self.g2 = [1, 1]
         self.re = [0, 1]
         self.md = mod
         for i in range(2, n + 1):
-            self.g1.append((self.g1[-1] * i) % self.md)
+            self.g1.append(self.g1[-1] * i % self.md)
 
     def fact(self, n):
         return self.g1[n]
 
     def perm(self, n, k):
-        return (self.g1[n] * self.g2[n - k]) % self.md
+        return self.g1[n] * self.g2[n - k] % self.md
 
     def comb(n, k):
         if k < 0 or k > n:
@@ -22,10 +23,9 @@ class TwelvefoldWay:
     def homo(n, k):
         return self.comb(n + k - 1, k)
 
-# 1-index
-
 
 class UnionFind:
+
     def __init__(self, n):
         self.root = [i for i in range(n + 1)]
         self.size = [1] * (n + 1)
@@ -47,13 +47,12 @@ class UnionFind:
         sy = self.size[ry]
         if rx == ry:
             return 0
+        elif sx >= sy:
+            self.root[ry] = rx
+            self.size[rx] = sx + sy
         else:
-            if sx >= sy:
-                self.root[ry] = rx
-                self.size[rx] = sx + sy
-            else:
-                self.root[rx] = ry
-                self.size[ry] = sx + sy
+            self.root[rx] = ry
+            self.size[ry] = sx + sy
         return sx * sy
 
     def size_list(self, n):
@@ -69,7 +68,7 @@ class UnionFind:
         print([self.find(i) for i in range(1, self.nn + 1)])
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = [list(map(int, input().split())) for _ in range(N)]
 MOD = 998244353
 
@@ -87,22 +86,17 @@ def f(A):
                     break
             if flag:
                 edge.append([i + 1, j + 1])
-
     uf = UnionFind(N)
     tw = TwelvefoldWay(N ** 2 + 1, MOD)
-    for a, b in edge:
+    for (a, b) in edge:
         uf.union(a, b)
-
     ret = 1
     for n in uf.size_list(N):
-        ret = (ret * tw.fact(n)) % MOD
-
+        ret = ret * tw.fact(n) % MOD
     return ret
 
 
 answer = f(A) % MOD
-
-# 転置
 A = [[A[i][j] for i in range(N)] for j in range(N)]
-answer = (answer * f(A)) % MOD
+answer = answer * f(A) % MOD
 print(answer)

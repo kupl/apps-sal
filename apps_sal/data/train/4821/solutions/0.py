@@ -1,4 +1,5 @@
-class FileMaster():
+class FileMaster:
+
     def __init__(self, filepath):
         lk = filepath.rfind('.')
         ls = filepath.rfind('/')

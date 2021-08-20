@@ -2,7 +2,7 @@ from itertools import product
 
 
 def relax(D, t):
-    k, i, j = t
+    (k, i, j) = t
     D[i][j] = min(D[i][j], D[i][k] + D[k][j])
 
 

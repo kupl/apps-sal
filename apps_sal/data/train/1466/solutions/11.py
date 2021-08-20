@@ -1,6 +1,4 @@
-# cook your dish here
-n, q = list(map(int, input().split()))
-
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = [0] * (n + 1)
 for i in range(n):

@@ -1,4 +1,5 @@
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
         if N == 1:
             return 2

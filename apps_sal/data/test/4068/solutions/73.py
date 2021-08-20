@@ -1,6 +1,6 @@
 def main():
-    N, M = list(map(int, input().split()))
-    mod = 10**9 + 7
+    (N, M) = list(map(int, input().split()))
+    mod = 10 ** 9 + 7
     a = [0] * (N + 1)
     a[0] = 1
     banned = [False] * (N + 1)
@@ -14,7 +14,7 @@ def main():
         if not banned[i - 2]:
             res += a[i - 2]
         a[i] = res
-    print((a[-1] % mod))
+    print(a[-1] % mod)
     return
 
 

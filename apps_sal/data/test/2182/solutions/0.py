@@ -7,10 +7,10 @@ for i in range(n):
         x = sum(s)
         if x % 3 == 0:
             if len([i for i in s if i % 2 == 0]) > 0:
-                print("red")
+                print('red')
             else:
-                print("cyan")
+                print('cyan')
         else:
-            print("cyan")
+            print('cyan')
     except:
-        print("cyan")
+        print('cyan')

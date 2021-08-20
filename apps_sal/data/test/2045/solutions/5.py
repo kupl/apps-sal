@@ -17,7 +17,7 @@ def zalgo(S):
 
 N = int(input())
 S = [list(map(ord, s)) for s in input().strip().split()]
-Ans = [0] * (10**6)
+Ans = [0] * 10 ** 6
 for s in S:
     n = len(s)
     Z = zalgo(s + [-1] + Ans[-n:])[n + 1:] + [0]
@@ -25,6 +25,5 @@ for s in S:
         if n - i == Z[i]:
             Ans += s[n - i:]
             break
-
-Ans = Ans[10**6:]
+Ans = Ans[10 ** 6:]
 print(''.join(map(chr, Ans)))

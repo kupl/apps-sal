@@ -1,9 +1,9 @@
 mod = 119 << 23 | 1
-n, m, l, r = list(map(int, input().split()))
+(n, m, l, r) = list(map(int, input().split()))
 a = (r + 1) // 2 - l // 2
 b = r - l + 1 - a
 if a > b:
-    a, b = b, a
+    (a, b) = (b, a)
 t = n * m
 if t % 2:
     print(pow(a + b, t, mod))

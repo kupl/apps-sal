@@ -1,23 +1,21 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         parent = {}
         for i in range(1, n + 1):
             parent[i] = i
-
         r = 0
-
         both = 0
-        for c, a, b in edges:
+        for (c, a, b) in edges:
             if c == 3:
                 if self.find(a, parent) == self.find(b, parent):
                     r += 1
                 else:
                     self.union(a, b, parent)
                     both += 1
-
         alice = both
         aliceP = parent.copy()
-        for c, a, b in edges:
+        for (c, a, b) in edges:
             if c == 1 or c == 3:
                 if self.find(a, aliceP) == self.find(b, aliceP):
                     if c == 1:
@@ -28,10 +26,9 @@ class Solution:
         print(alice)
         if alice < n - 1:
             return -1
-
         bob = both
         bobP = parent.copy()
-        for c, a, b in edges:
+        for (c, a, b) in edges:
             if c == 2 or c == 3:
                 if self.find(a, bobP) == self.find(b, bobP):
                     if c == 2:

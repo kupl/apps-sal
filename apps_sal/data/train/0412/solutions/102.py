@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         dp = [[0 for j in range(target + 1)] for i in range(d)]
         for j in range(1, min(f, target) + 1):
@@ -9,4 +10,4 @@ class Solution:
                     if j < k:
                         break
                     dp[i][j] += dp[i - 1][j - k]
-        return dp[d - 1][target] % (10**9 + 7)
+        return dp[d - 1][target] % (10 ** 9 + 7)

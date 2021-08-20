@@ -4,11 +4,9 @@ readlines = sys.stdin.readline
 
 
 def main():
-
     n = int(input())
     s = list(input())
     q = int(input())
-
     d = {}
     flag = {}
     for i in list('abcdefghijklmnopqrstuvwxyz'):
@@ -17,7 +15,7 @@ def main():
     for i in range(n):
         d.setdefault(s[i], []).append(i)
     for i in range(q):
-        q1, q2, q3 = map(str, input().split())
+        (q1, q2, q3) = map(str, input().split())
         if q1 == '1':
             q2 = int(q2) - 1
             if s[q2] != q3:
@@ -31,7 +29,7 @@ def main():
             if q2 == q3:
                 print(1)
                 continue
-            for string, l in d.items():
+            for (string, l) in d.items():
                 res = 0
                 if d[string] != [-1]:
                     left = bisect_left(l, q2)
@@ -49,7 +47,6 @@ def main():
                     if right - left > right2 - left2:
                         res = 1
                 ans += res
-                # print(string,l,res)
             print(ans)
 
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -9,7 +8,6 @@ from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations
 from operator import add, mul, sub
-
 sys.setrecursionlimit(100000)
 input = sys.stdin.readline
 
@@ -49,19 +47,17 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
 @mt
 def slv(N, XY):
-    g = [[] for _ in range((10**5) * 2)]
-    offset = 10**5
+    g = [[] for _ in range(10 ** 5 * 2)]
+    offset = 10 ** 5
     cs = set()
-    for x, y in XY:
+    for (x, y) in XY:
         x -= 1
         y = y - 1 + offset
         g[x].append(y)
@@ -88,15 +84,14 @@ def slv(N, XY):
                     done_c.add(v)
         xn = set()
         yn = set()
-        for v, u in done:
+        for (v, u) in done:
             for z in (v, u):
                 if z >= offset:
                     yn.add(z)
                 else:
                     xn.add(z)
-        ans += (len(xn) * len(yn)) - len(done)
+        ans += len(xn) * len(yn) - len(done)
         cs -= done_c
-
     return ans
 
 

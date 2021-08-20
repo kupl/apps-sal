@@ -8,11 +8,10 @@ while i < n:
         stack.append(a[i])
         i += 1
     else:
-        maxx = (max(stack[-1] ^ a[i], maxx))
+        maxx = max(stack[-1] ^ a[i], maxx)
         temp = stack.pop()
         if stack:
             maxx = max(stack[-1] ^ temp, maxx)
-    # print(stack)
 while len(stack) != 1:
     temp = stack.pop()
     maxx = max(temp ^ stack[-1], maxx)

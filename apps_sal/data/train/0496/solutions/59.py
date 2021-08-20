@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         if not A:
             return 0
@@ -9,6 +10,6 @@ class Solution:
             if A[i] > temp:
                 temp = A[i]
             else:
-                res += (temp + 1 - A[i])
+                res += temp + 1 - A[i]
                 temp += 1
         return res

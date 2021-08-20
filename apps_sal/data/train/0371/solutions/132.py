@@ -1,11 +1,11 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # to correct
         if len(routes[0]) == 89700:
             return 2
 
         def BFS(queue):
-            c, temp, level = 1, 0, 0
+            (c, temp, level) = (1, 0, 0)
             while queue:
                 var = queue.pop(0)
                 if var == T:
@@ -25,5 +25,5 @@ class Solution:
         for i in routes:
             for j in i:
                 d[j] += i
-        l = [0] * (10**6)
-        return(BFS([S]))
+        l = [0] * 10 ** 6
+        return BFS([S])

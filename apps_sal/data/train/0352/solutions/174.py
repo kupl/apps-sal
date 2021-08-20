@@ -1,20 +1,20 @@
 class Solution:
+
     def longer_by_one(self, word1, word2):
         if len(word2) - len(word1) != 1:
             return False
         j = 0
         count = 0
         for i in range(len(word2)):
-            if i < len(word2) and j < len(word1) and word2[i] != word1[j]:
+            if i < len(word2) and j < len(word1) and (word2[i] != word1[j]):
                 count += 1
                 if count > 1:
                     return False
                 continue
             j += 1
-
-        if i == len(word2) - 1 and j == len(word1) and count == 1:
+        if i == len(word2) - 1 and j == len(word1) and (count == 1):
             return True
-        elif i == len(word2) - 1 and j >= len(word1) and count == 0:
+        elif i == len(word2) - 1 and j >= len(word1) and (count == 0):
             return True
         else:
             return False

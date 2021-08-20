@@ -1,9 +1,9 @@
 from itertools import product
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = []
 for _ in range(N):
     l.append(int(input()))
-ans = 10**18
+ans = 10 ** 18
 for i in product(range(4), repeat=N):
     mp = 0
     bamboo = [0, 0, 0]

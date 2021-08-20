@@ -9,4 +9,4 @@ for i in range(n):
     else:
         free_color += 1
 num = 8 - result.count(0)
-print(("{} {}".format(max(num, 1), num + free_color)))
+print('{} {}'.format(max(num, 1), num + free_color))

@@ -1,6 +1,6 @@
 def sum_mul(n, m):
     if m < 1 or n < 1:
-        return "INVALID"
+        return 'INVALID'
     else:
         grandtotal = []
         subtotal = 0

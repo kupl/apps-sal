@@ -7,11 +7,11 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    ans = ""
+    ans = ''
     try:
         ans = a / b
     except ZeroDivisionError:
-        print("division by zero")
+        print('division by zero')
     else:
         return ans
 
@@ -25,8 +25,4 @@ def subt(a, b):
 
 
 def exponent(a, b):
-    return a**b
-
-# Make more functions. Refer to the description for function names.
-# The code will NOT WORK IF YOU USE names other than the ones
-# from the description
+    return a ** b

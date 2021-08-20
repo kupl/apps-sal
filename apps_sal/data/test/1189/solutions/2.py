@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 mod = 10 ** 6 + 3
 inv = [0, 1]
 for i in range(2, max(n, c) + 1):

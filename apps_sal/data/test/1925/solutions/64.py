@@ -12,5 +12,5 @@ def main(A, B, N):
         return f(A, B, B - 1)
 
 
-A, B, N = list(map(int, input().split()))
-print((main(A, B, N)))
+(A, B, N) = list(map(int, input().split()))
+print(main(A, B, N))

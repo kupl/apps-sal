@@ -1,16 +1,13 @@
 from collections import deque
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 cat = [0] + list(map(int, input().split()))
 path = [0] + [set() for _ in range(n)]
 dp = [0] * (n + 1)
 for _ in range(n - 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     path[x].add(y)
     path[y].add(x)
-
 d = deque()
-
 d.append(1)
 dp[1] = cat[1]
 ans = 0
@@ -28,5 +25,4 @@ while len(d) > 0:
             dp[x] = dp[t] + cat[x]
         else:
             dp[x] = 0
-
 print(ans)

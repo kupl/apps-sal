@@ -1,4 +1,4 @@
-cur, add = 0, 1
+(cur, add) = (0, 1)
 ans = 0
 n = int(input())
 while cur < n:

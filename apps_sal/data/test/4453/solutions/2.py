@@ -1,8 +1,3 @@
-#    !/usr/bin/env python3
-#    encoding: UTF-8
-#    Last Modified: 22/Oct/2019 08:13:15 PM
-
-
 import sys
 
 
@@ -19,13 +14,16 @@ def main():
         print(*ans)
 
 
-def get_array(): return list(map(int, sys.stdin.readline().split()))
+def get_array():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def get_ints(): return list(map(int, sys.stdin.readline().split()))
+def get_ints():
+    return list(map(int, sys.stdin.readline().split()))
 
 
-def input(): return sys.stdin.readline().strip()
+def input():
+    return sys.stdin.readline().strip()
 
 
 def __starting_point():

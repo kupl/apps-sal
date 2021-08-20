@@ -1,4 +1,5 @@
 class Solution:
+
     def isHappy(self, n):
         """
         :type n: int
@@ -8,9 +9,7 @@ class Solution:
             return False
         if n == 1:
             return True
-
         my_set = set()
-
         while n not in my_set:
             my_set.add(n)
             sq_sum = 0
@@ -24,5 +23,4 @@ class Solution:
                 return True
             else:
                 n = sq_sum
-
         return False

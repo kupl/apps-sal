@@ -1,8 +1,6 @@
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 L = [1]
 P = [1]
-
 for i in range(N):
     L.append(L[i] * 2 + 3)
     P.append(P[i] * 2 + 1)

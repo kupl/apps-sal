@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 if k % 2 == 1:
     ans = (n // k) ** 3
 if k % 2 == 0:

@@ -1,6 +1,5 @@
 N = int(input())
-*P, = map(int, input().split())
-
+(*P,) = map(int, input().split())
 i = c = 0
 while i < N:
     if P[i] == i + 1:

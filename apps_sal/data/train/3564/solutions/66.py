@@ -3,7 +3,7 @@ def stringy(size):
         return ''
     result = '1'
     for i in range(1, size):
-        if((i % 2) != 0):
+        if i % 2 != 0:
             result += '0'
         else:
             result += '1'

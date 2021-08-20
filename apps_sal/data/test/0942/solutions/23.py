@@ -16,17 +16,15 @@ for i in D.keys():
         s += D[i]
 if s != n:
     print('Impossible')
-
+elif check == False:
+    print('Impossible')
 else:
-    if check == False:
-        print('Impossible')
-    else:
-        print('Possible')
-        small = 1
-        D2 = {}
-        for i in D:
-            D2[i] = list(range(small, small + (D[i] // i))) * i
-            small += D[i] // i
-        for i in L:
-            print(D2[i][-1], end=' ')
-            D2[i].pop()
+    print('Possible')
+    small = 1
+    D2 = {}
+    for i in D:
+        D2[i] = list(range(small, small + D[i] // i)) * i
+        small += D[i] // i
+    for i in L:
+        print(D2[i][-1], end=' ')
+        D2[i].pop()

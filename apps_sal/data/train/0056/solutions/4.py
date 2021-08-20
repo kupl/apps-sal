@@ -1,9 +1,8 @@
 import sys
 lines = sys.stdin.readlines()
 T = int(lines[0].strip())
-# (N, K) = map(int, lines[0].strip().split(" "))
 for t in range(T):
-    (a, b) = map(int, lines[t + 1].strip().split(" "))
+    (a, b) = map(int, lines[t + 1].strip().split(' '))
     res = [[0 for _ in range(a)] for _ in range(a)]
     rema = b % a
     deno = b // a

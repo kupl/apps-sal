@@ -13,14 +13,12 @@ def compute_min_cost(t, nums):
 
 def main():
     _ = read_nums()
-
     costs = []
     nums = read_nums()
     for t in range(1, 101):
         min_cost = compute_min_cost(t, nums)
         costs.append((t, min_cost))
-
-    t, cost = sorted(costs, key=lambda x: x[1])[0]
+    (t, cost) = sorted(costs, key=lambda x: x[1])[0]
     print(t, cost)
 
 

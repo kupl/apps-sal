@@ -1,7 +1,7 @@
 n = int(input())
 lst = []
 for i in range(n):
-    ai, bi = list(map(int, input().split()))
+    (ai, bi) = list(map(int, input().split()))
     lst.append([ai, bi])
 lst.sort()
 path = []

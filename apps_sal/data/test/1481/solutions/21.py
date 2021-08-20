@@ -12,6 +12,6 @@ def do(board, size):
 
 
 if do(board, tcs):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

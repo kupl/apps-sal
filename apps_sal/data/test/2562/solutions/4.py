@@ -1,6 +1,6 @@
-(input())
+input()
 a = list(map(int, input().split()))
-n, p = 1000001, 1000000007
+(n, p) = (1000001, 1000000007)
 cnt = [0] * n
 curr = 1
 for i in a:

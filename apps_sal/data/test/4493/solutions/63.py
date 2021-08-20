@@ -1,8 +1,4 @@
-c = [
-    list(map(int, input().split()))
-    for _ in range(3)
-]
-
+c = [list(map(int, input().split())) for _ in range(3)]
 f = True
 for j in range(2):
     x = c[j][0] - c[j + 1][0]

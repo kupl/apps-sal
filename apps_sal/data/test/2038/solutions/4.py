@@ -2,9 +2,8 @@ n = int(input())
 n2 = n // 2
 p = list(map(int, input().split()))
 d = [0] * n
-for i, v in enumerate(p):
+for (i, v) in enumerate(p):
     d[v - 1] = i
-
 r = []
 
 
@@ -31,10 +30,9 @@ def swap(i, j):
         p[j] = p[i]
 
 
-for i, v in enumerate(p):
+for (i, v) in enumerate(p):
     j = d[i]
     swap(i, j)
     d[v - 1] = j
-
 print(len(r))
-print("\n".join(f"{a} {b}" for a, b in r))
+print('\n'.join((f'{a} {b}' for (a, b) in r)))

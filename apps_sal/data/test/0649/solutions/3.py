@@ -1,26 +1,18 @@
 from collections import defaultdict
-
 dx = [0, -1, -1, -1, 0, 1, 1, 1]
 dy = [1, 1, 0, -1, -1, -1, 0, 1]
-
-#visited =[[[[False for _ in range(32)] for _ in range(8)] for _ in range(320)] for _ in range(320)]
 visited = defaultdict(lambda: False)
-
 grid = [[False for _ in range(320)] for _ in range(320)]
 
 
 def dfs(x, y, d, n, N, inp):
-    if n >= N or visited[(x, y, d, n)]:
+    if n >= N or visited[x, y, d, n]:
         return
-
-    visited[(x, y, d, n)] = True
-
+    visited[x, y, d, n] = True
     dist = inp[n]
-
     for i in range(1, dist + 1):
         grid[x + dx[d] * i][y + i * dy[d]] = True
-
-    if (n < N):
+    if n < N:
         dfs(x + dx[d] * dist, y + dy[d] * dist, (d + 1) % 8, n + 1, N, inp)
         dfs(x + dx[d] * dist, y + dy[d] * dist, (d + 7) % 8, n + 1, N, inp)
 

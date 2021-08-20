@@ -1,9 +1,8 @@
-# cook your dish here
 from math import gcd
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 for a0 in range(int(input())):

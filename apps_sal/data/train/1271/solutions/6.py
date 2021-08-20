@@ -1,9 +1,8 @@
-
 t = int(input())
 for _ in range(t):
     q = int(input())
     s = []
-    e, o = 0, 0
+    (e, o) = (0, 0)
     for __ in range(q):
         x = int(input())
         d = []
@@ -21,7 +20,6 @@ for _ in range(t):
                 e += 1
             else:
                 o += 1
-
         for i in d:
             s.append(i)
         print(e, o)

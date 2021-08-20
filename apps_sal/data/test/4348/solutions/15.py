@@ -1,8 +1,8 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(input())
 cnt = {}
 d = {}
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     if c not in cnt:
         cnt[c] = 1
         d[c] = [i]
@@ -10,7 +10,6 @@ for i, c in enumerate(s):
         cnt[c] += 1
         d[c].append(i)
 ch = ''
-
 for c in sorted(cnt):
     if k - cnt[c] <= 0:
         ch = c

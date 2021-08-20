@@ -1,9 +1,10 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 dt = {'AB': (0, 1), 'AC': (0, 2), 'BC': (1, 2)}
 Q = [dt[input()] for _ in range(N)]
 
 
 class Game:
+
     def __init__(self, ABC):
         self.ABC = ABC
         self.ds = {0: 'A', 1: 'B', 2: 'C'}
@@ -22,7 +23,7 @@ class Game:
 
 def solve1(ABC):
     G = Game(ABC)
-    for q0, q1 in Q:
+    for (q0, q1) in Q:
         if G.ABC[q0] == G.ABC[q1] == 0:
             print('No')
             return
@@ -36,7 +37,7 @@ def solve1(ABC):
 
 def solve2(ABC):
     G = Game(ABC)
-    for i, (q0, q1) in enumerate(Q):
+    for (i, (q0, q1)) in enumerate(Q):
         if G.ABC[q0] == G.ABC[q1] == 0:
             print('No')
             return
@@ -49,19 +50,17 @@ def solve2(ABC):
                 G.add_q0(q0, q1)
             else:
                 G.add_q1(q0, q1)
+        elif G.ABC[q0] <= G.ABC[q1]:
+            G.add_q0(q0, q1)
         else:
-            # 余裕の無い方に足しておく
-            if G.ABC[q0] <= G.ABC[q1]:
-                G.add_q0(q0, q1)
-            else:
-                G.add_q1(q0, q1)
+            G.add_q1(q0, q1)
     print('Yes')
     print(*G.ans, sep='\n')
 
 
 def solve3(ABC):
     G = Game(ABC)
-    for q0, q1 in Q:
+    for (q0, q1) in Q:
         if G.ABC[q0] == G.ABC[q1] == 0:
             print('No')
             return
@@ -69,12 +68,10 @@ def solve3(ABC):
             G.add_q0(q0, q1)
         elif G.ABC[q1] == 0:
             G.add_q1(q0, q1)
+        elif G.ABC[q0] <= G.ABC[q1]:
+            G.add_q0(q0, q1)
         else:
-            # 余裕の無い方に足しておく
-            if G.ABC[q0] <= G.ABC[q1]:
-                G.add_q0(q0, q1)
-            else:
-                G.add_q1(q0, q1)
+            G.add_q1(q0, q1)
     print('Yes')
     print(*G.ans, sep='\n')
 

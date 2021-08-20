@@ -6,6 +6,6 @@ for i in range(len(S)):
         ans = 0
         break
 if ans == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

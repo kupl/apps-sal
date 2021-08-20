@@ -6,5 +6,4 @@ for x in s:
     L += x
     R -= x
     ans += L * R
-
 print(ans)

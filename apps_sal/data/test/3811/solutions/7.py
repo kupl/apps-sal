@@ -2,7 +2,7 @@ from math import sqrt
 import sys
 input = sys.stdin.readline
 n = int(input())
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 diva = set()
 divb = set()
 for i in range(2, int(sqrt(a)) + 1):
@@ -21,7 +21,7 @@ if b > 1:
     divb.add(b)
 alldiv = diva | divb
 for _ in range(n - 1):
-    e, q = map(int, input().split())
+    (e, q) = map(int, input().split())
     trash = []
     for k in alldiv:
         if e % k != 0 and q % k != 0:

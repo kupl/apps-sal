@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
-
 mod = 998244353
 now = n * pow(2, n - 1, mod)
 k = pow(2, n, mod)
@@ -20,11 +19,11 @@ else:
     ans.append(now * k % mod)
     ans.append(now * k % mod)
     for i in range(2, n // 2):
-        now += (2 * i - 1) * pow(2, (2 * i - 3), mod)
+        now += (2 * i - 1) * pow(2, 2 * i - 3, mod)
         ans.append(now * k % mod)
     sna = list(reversed(ans))
     if n % 2 == 1:
         i = n // 2
-        now += (2 * i - 1) * pow(2, (2 * i - 3), mod)
+        now += (2 * i - 1) * pow(2, 2 * i - 3, mod)
         ans.append(now * k % mod)
-    print(*(ans + sna), sep="\n")
+    print(*ans + sna, sep='\n')

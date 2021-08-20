@@ -1,4 +1,4 @@
-n, a = [int(x) for x in input().split()]
+(n, a) = [int(x) for x in input().split()]
 val = [int(x) for x in input().split()]
 vsum = 0
 for i in val:

@@ -1,10 +1,9 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
-
         cnt_left = 0
-        rev_left, rev_right = [], []
-
-        for i, c in enumerate(s):
+        (rev_left, rev_right) = ([], [])
+        for (i, c) in enumerate(s):
             if c == ')':
                 if cnt_left == 0:
                     rev_right.append(i)

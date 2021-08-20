@@ -1,9 +1,9 @@
-a, b, n = [int(x) for x in input().split()]
+(a, b, n) = [int(x) for x in input().split()]
 ltm = [[]] * n
 for i in range(n):
     ltm[i] = [int(x) for x in input().split()]
 for i in range(n):
-    l, t, m = ltm[i]
+    (l, t, m) = ltm[i]
     maxr = (t - a) // b + 1
     minr = l
     while maxr >= minr:

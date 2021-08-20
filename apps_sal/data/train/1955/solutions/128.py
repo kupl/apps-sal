@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         p = list(range(len(s)))
         d = defaultdict(list)
@@ -10,7 +11,7 @@ class Solution:
 
         def union(x, y):
             p[find(x)] = find(y)
-        for a, b in pairs:
+        for (a, b) in pairs:
             union(a, b)
         for i in range(len(p)):
             d[find(i)].append(s[i])

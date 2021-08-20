@@ -6,31 +6,26 @@ def main():
     S = input()
     T = input()
     if S == T:
-        print("No")
+        print('No')
         return
     if S in T:
-        print("Yes")
+        print('Yes')
         return
     s = list(S)
     t = list(T)
-
     s.sort()
     t.sort(reverse=True)
     if s == t:
-        print("No")
+        print('No')
         return
-
-#  if(len(s)<len(t)):
-#    print("Yes")
-#    return
     for i in range(min(len(s), len(t))):
         if ord(s[i]) > ord(t[i]):
-            print("No")
+            print('No')
             return
         elif ord(s[i]) < ord(t[i]):
-            print("Yes")
+            print('Yes')
             return
-    print("No")
+    print('No')
     return
 
 

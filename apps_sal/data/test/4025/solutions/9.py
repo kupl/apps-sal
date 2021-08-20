@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 week = [0, 1, 2, 0, 2, 1, 0]
 nums = [3, 2, 2]
 num = min(min(a // nums[0], b // nums[1]), c // nums[2])

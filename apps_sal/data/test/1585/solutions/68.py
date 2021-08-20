@@ -1,5 +1,5 @@
-X, Y = input().split(' ')
-X, Y = int(X), int(Y)
+(X, Y) = input().split(' ')
+(X, Y) = (int(X), int(Y))
 cnt = 1
 Num = X
 while Num <= Y:

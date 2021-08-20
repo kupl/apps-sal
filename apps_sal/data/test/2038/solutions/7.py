@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 ps = p.copy()
 ps.sort()
 dp = dict()
@@ -11,9 +10,7 @@ for i in range(n):
     else:
         dp[p[i]] = [i]
         ds[p[i]] = 0
-
 lop = []
-
 for i in range(n):
     if p[i] != ps[i]:
         a = i
@@ -39,10 +36,9 @@ for i in range(n):
                 lop.append([a + 1, bl[0]])
                 lop.append([b + 1, bl[0]])
                 lop.append([a + 1, bl[0]])
-        p[a], p[b] = p[b], p[a]
-        dp[p[a]][ds[p[a]]], dp[p[b]][ds[p[b]]] = dp[p[b]][ds[p[b]]], dp[p[a]][ds[p[a]]]
+        (p[a], p[b]) = (p[b], p[a])
+        (dp[p[a]][ds[p[a]]], dp[p[b]][ds[p[b]]]) = (dp[p[b]][ds[p[b]]], dp[p[a]][ds[p[a]]])
     ds[p[i]] += 1
-
 print(len(lop))
 for op in lop:
     print(*op)

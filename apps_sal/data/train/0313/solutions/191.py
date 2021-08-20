@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         left = min(bloomDay)
         right = max(bloomDay)
@@ -16,15 +17,12 @@ class Solution:
                 else:
                     count = 0
             return num >= m
-
         while left < right:
-            mid = (left + right) >> 1
+            mid = left + right >> 1
             if check(mid) == True:
                 right = mid
             else:
                 left = mid + 1
-
         if left == max_day and check(left) != True:
             return -1
-
         return left

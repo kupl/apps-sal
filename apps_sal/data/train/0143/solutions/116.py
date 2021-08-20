@@ -1,8 +1,9 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        if(len(tree) == 1):
+        if len(tree) == 1:
             return 1
-        if(not tree):
+        if not tree:
             return 0
         i = 0
         j = 1
@@ -11,11 +12,11 @@ class Solution:
         found = False
         second = tree[1]
         count = 1
-        while(i < l and j < l):
-            if(tree[i] != tree[j] and not found):
+        while i < l and j < l:
+            if tree[i] != tree[j] and (not found):
                 second = tree[j]
                 found = True
-            if(found and tree[j] != second and tree[j] != tree[i]):
+            if found and tree[j] != second and (tree[j] != tree[i]):
                 ans = max(ans, count)
                 count = 0
                 i += 1

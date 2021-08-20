@@ -8,11 +8,9 @@ def read(func=int):
 
 for _ in range(int(rl())):
     n = int(rl())
-
     profit = []
     for _ in range(n):
-        s, p, v = read()
+        (s, p, v) = read()
         if s < p:
-            profit.append(((p) // (s + 1)) * v)
-
+            profit.append(p // (s + 1) * v)
     print(max(profit)) if len(profit) > 1 else print(0)

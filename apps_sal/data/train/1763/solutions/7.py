@@ -1,5 +1,4 @@
 from scipy.special import comb
-
 MOD = 12345787
 
 

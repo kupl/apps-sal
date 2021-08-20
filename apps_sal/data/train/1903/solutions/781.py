@@ -1,13 +1,12 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         all_edges = []
         for point1 in points:
             for point2 in points:
                 if point1 != point2:
                     all_edges.append((abs(point1[0] - point2[0]) + abs(point1[1] - point2[1]), tuple(point1), tuple(point2)))
-
-        all_edges.sort(key=lambda x: (x[0]))
-
+        all_edges.sort(key=lambda x: x[0])
         parent = {tuple(point): tuple(point) for point in points}
         rank = {tuple(point): 1 for point in points}
         children = {tuple(point): 1 for point in points}

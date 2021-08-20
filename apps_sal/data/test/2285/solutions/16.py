@@ -1,4 +1,3 @@
-
 def index(lena):
     if lena == 8:
         return 4
@@ -19,7 +18,6 @@ def index(lena):
 
 
 s = int(input())
-
 ip = []
 for a in range(s):
     q = input().split(':')
@@ -31,13 +29,9 @@ for a in range(s):
             c = 1
         elif a == '' and c == 1:
             pass
-
         else:
             q1.append(a)
-
     ip.append(q1)
-
-
 for a in ip:
     s = []
     lena = len(a)
@@ -46,7 +40,7 @@ for a in ip:
         if a[i] == '':
             s.append(z[:index(lena)])
         else:
-            q = "{0:0>4}".format(a[i])
+            q = '{0:0>4}'.format(a[i])
             s.append(q)
     res = ':'.join(s)
     print(res)

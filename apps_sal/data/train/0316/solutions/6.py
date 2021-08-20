@@ -1,6 +1,7 @@
 class Solution:
+
     def longestPrefix(self, s):
-        res, l, r, mod = 0, 0, 0, 10**9 + 7
+        (res, l, r, mod) = (0, 0, 0, 10 ** 9 + 7)
         for i in range(len(s) - 1):
             l = (l * 128 + ord(s[i])) % mod
             r = (r + pow(128, i, mod) * ord(s[~i])) % mod

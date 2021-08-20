@@ -1,7 +1,7 @@
 def slogans(p, r):
     c = 0
     while r:
-        t, f = p[:], r[0]
+        (t, f) = (p[:], r[0])
         x = t.find(f)
         t = t[x:]
         if t == r[:len(t)]:

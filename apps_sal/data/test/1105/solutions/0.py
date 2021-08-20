@@ -2,7 +2,7 @@ n = int(input())
 a = [-1] * 100001
 p = 0
 for i in range(n):
-    x, k = map(int, input().split())
+    (x, k) = map(int, input().split())
     if a[k] < x - 1:
         p = 1
     else:

@@ -2,8 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        self.text1, self.text2 = text1, text2
+        (self.text1, self.text2) = (text1, text2)
         return self.lcs(0, 0)
 
     @lru_cache(maxsize=None)
@@ -13,5 +14,4 @@ class Solution:
         if self.text1[from1] == self.text2[from2]:
             return 1 + self.lcs(from1 + 1, from2 + 1)
         else:
-            return max(self.lcs(from1, from2 + 1),
-                       self.lcs(from1 + 1, from2))
+            return max(self.lcs(from1, from2 + 1), self.lcs(from1 + 1, from2))

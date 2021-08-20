@@ -10,6 +10,5 @@ for i in range(2 ** (l - 1)):
             sum += int(tmp)
             tmp = ''
     sum += int(tmp + s[-1])
-
     ans += sum
 print(ans)

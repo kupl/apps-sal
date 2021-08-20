@@ -1,7 +1,5 @@
 import heapq
-
 n = int(input())
-
 num_balloons = int(input().split()[0])
 better_teams = []
 current_place = 1
@@ -15,12 +13,10 @@ for i in range(1, n):
         better_teams.append(team_size - team_balloons + 1)
     else:
         worse_teams.append([team_balloons, team_size])
-
 heapq.heapify(better_teams)
 best_place = current_place
 worse_teams = sorted(worse_teams, key=lambda x: -x[0])
 ind = 0
-
 while True:
     if len(better_teams) == 0:
         break
@@ -35,5 +31,4 @@ while True:
         ind += 1
     if current_place < best_place:
         best_place = current_place
-
 print(best_place)

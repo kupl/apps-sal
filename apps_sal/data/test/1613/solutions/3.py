@@ -14,8 +14,7 @@ for i in l:
 for i in range(n):
     if l[i] == 0:
         count += 1
-    else:
-        if l[i] not in s1:
-            ans += min(d[l[i]], count)
-            s1.add(l[i])
+    elif l[i] not in s1:
+        ans += min(d[l[i]], count)
+        s1.add(l[i])
 print(ans)

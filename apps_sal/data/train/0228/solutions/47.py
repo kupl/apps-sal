@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         memo = collections.defaultdict(lambda: 0)
         i = 0

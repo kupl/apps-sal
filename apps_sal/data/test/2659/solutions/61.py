@@ -1,8 +1,7 @@
 k = int(input())
-
 l = []
 for i in range(17):
-    ten = 10**i
+    ten = 10 ** i
     for j in range(1, 1000):
         a = ten
         b = j
@@ -19,5 +18,5 @@ while count < k:
     if l[i][1] > now:
         now = l[i][1]
         count += 1
-        print((l[i][1]))
+        print(l[i][1])
     i += 1

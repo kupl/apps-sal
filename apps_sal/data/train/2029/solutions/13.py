@@ -18,5 +18,5 @@ else:
         i += 2
     b.append(2 * n)
     ans = a + b
-    print("YES")
-    print(" ".join(str(x) for x in ans))
+    print('YES')
+    print(' '.join((str(x) for x in ans)))

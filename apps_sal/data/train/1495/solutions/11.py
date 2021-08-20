@@ -6,7 +6,7 @@ for i in range(t):
     x.sort()
     x.reverse()
     dic = {}
-    b1, b2, b0 = [], [], []
+    (b1, b2, b0) = ([], [], [])
     for j in range(n):
         if x[j] != 0:
             if x[j] % 3 == 0:
@@ -21,7 +21,7 @@ for i in range(t):
             dic[x[j]] = 1
     if 0 in dic:
         if total % 3 == 0:
-            print(''.join(str(y) for y in x))
+            print(''.join((str(y) for y in x)))
         elif total % 3 == 1:
             flag = 1
             if len(b1) >= 1:
@@ -32,9 +32,9 @@ for i in range(t):
             else:
                 flag = 0
             if flag == 1:
-                print(''.join(str(y) for y in x))
+                print(''.join((str(y) for y in x)))
             else:
-                print("-1")
+                print('-1')
         elif total % 3 == 2:
             flag = 1
             if len(b2) >= 1:
@@ -45,8 +45,8 @@ for i in range(t):
             else:
                 flag = 0
             if flag == 1:
-                print(''.join(str(y) for y in x))
+                print(''.join((str(y) for y in x)))
             else:
-                print("-1")
+                print('-1')
     else:
-        print("-1")
+        print('-1')

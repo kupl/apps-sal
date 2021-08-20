@@ -7,8 +7,8 @@ def main():
     n = int(input())
     adj = [[] for i in range(n + 1)]
     for i in range(n - 1):
-        a, b = list(map(int, input().split()))
-        a, b = a - 1, b - 1
+        (a, b) = list(map(int, input().split()))
+        (a, b) = (a - 1, b - 1)
         adj[a].append(b)
         adj[b].append(a)
     init = [int(i) for i in input().split()]
@@ -34,9 +34,8 @@ def main():
         if l % 2 == 0:
             if fe % 2 == 1:
                 init[s] = 1 - init[s]
-        else:
-            if fo % 2 == 1:
-                init[s] = 1 - init[s]
+        elif fo % 2 == 1:
+            init[s] = 1 - init[s]
         if init[s] != goal[s]:
             ans.append(s + 1)
             if l % 2:
@@ -45,9 +44,8 @@ def main():
                 fe += 1
         for j in par[s]:
             dq.append((j, l + 1, fo, fe))
-
     print(len(ans))
-    print("\n".join(map(str, ans)))
+    print('\n'.join(map(str, ans)))
 
 
 def __starting_point():

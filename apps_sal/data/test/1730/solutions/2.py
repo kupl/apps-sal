@@ -31,18 +31,15 @@ def solve():
         print(*ans)
 
 
-n, m, k = put()
+(n, m, k) = put()
 graph = [[] for _ in range(n + 1)]
 for i in range(m):
-    x, y = put()
+    (x, y) = put()
     graph[x].append(y)
     graph[y].append(x)
-
-done, vis = [0] * (n + 1), [0] * (n + 1)
-element, ans = [], []
-
-
-max_recur_size = 10**5 * 2 + 1000
+(done, vis) = ([0] * (n + 1), [0] * (n + 1))
+(element, ans) = ([], [])
+max_recur_size = 10 ** 5 * 2 + 1000
 max_stack_size = max_recur_size * 500
 sys.setrecursionlimit(max_recur_size)
 threading.stack_size(max_stack_size)

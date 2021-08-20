@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 t = set(map(int, input().split()))
 y = x = min(t)
 t = list(t)

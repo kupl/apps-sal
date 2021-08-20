@@ -1,4 +1,3 @@
-#listInput = list(map(int,input().split()))
 num = int(input())
 numleft = num % 3
 out = 2 * (num // 3)

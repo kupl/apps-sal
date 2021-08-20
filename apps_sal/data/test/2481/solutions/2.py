@@ -1,11 +1,11 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 c = []
 for i in range(10):
     c.append(list(map(int, input().split())))
 a = []
 for i in range(h):
     a.append(list(map(int, input().split())))
-cost = [float("inf") for i in range(10)]
+cost = [float('inf') for i in range(10)]
 flag = [False for i in range(10)]
 cost[1] = 0
 test = [1]

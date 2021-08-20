@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
         max_possible = (position[-1] - position[0]) // (m - 1)
@@ -12,7 +13,6 @@ class Solution:
             else:
                 right = mid - 1
                 mid = (left + right) // 2
-
         return mid
 
     def check(self, position, m, force):

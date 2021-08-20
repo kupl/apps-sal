@@ -1,5 +1,4 @@
 import string
-
 n = int(input())
 s = input()
 cnt = set()

@@ -10,17 +10,15 @@ def li():
     return list(mi())
 
 
-n, m = mi()
+(n, m) = mi()
 a = li()
 c = li()
-
 x = list(range(n))
 x.sort(key=lambda i: (c[i], i))
 cur = 0
-
 out = []
 for i in range(m):
-    t, d = mi()
+    (t, d) = mi()
     p = min(d, a[t - 1])
     d -= p
     a[t - 1] -= p
@@ -36,5 +34,4 @@ for i in range(m):
         a[x[cur]] -= p
         ans += c[x[cur]] * p
     out.append(str(ans))
-
 print(*out, sep='\n')

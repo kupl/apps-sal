@@ -1,7 +1,8 @@
 class Solution:
+
     def countRoutes(self, locations, start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
-        dp = [[-1] * (len(locations) + 1)for _ in range(fuel + 1)]
+        dp = [[-1] * (len(locations) + 1) for _ in range(fuel + 1)]
 
         def recur(st, ed, f):
             if f < 0:
@@ -18,7 +19,5 @@ class Solution:
                 answer = total % MOD
             dp[f][st] = answer
             return answer
-
         recur(start, finish, fuel)
-
         return dp[fuel][start]

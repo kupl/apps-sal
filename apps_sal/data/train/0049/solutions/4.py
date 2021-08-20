@@ -20,10 +20,8 @@ def f(n):
                     if j < 3:
                         dp[i][j][0] += dp[i - 1][j + 1][0]
                         dp[i][j][1] += dp[i - 1][j + 1][1]
-                else:
-                    if j < 3:
-                        dp[i][j][0] += dp[i - 1][j + 1][0]
-
+                elif j < 3:
+                    dp[i][j][0] += dp[i - 1][j + 1][0]
     res = 0
     for j in range(4):
         res += dp[len(n) - 1][j][0] + dp[len(n) - 1][j][1]
@@ -33,5 +31,5 @@ def f(n):
 t = int(input())
 while t:
     t -= 1
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     print(f(str(r)) - f(str(l - 1)))

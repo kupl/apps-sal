@@ -1,23 +1,23 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         L = len(arr)
-        S = 1 + 2**(L + 1)
+        S = 1 + 2 ** (L + 1)
         count = 1
         account = L // m - 1
-        C = 2**m
+        C = 2 ** m
         if m == L:
             return L
-
         while account:
             k = arr.pop()
             if m + 1 <= k:
-                s = S >> (k - m - 1)
-                if s & (2 * C - 1) == 1:
+                s = S >> k - m - 1
+                if s & 2 * C - 1 == 1:
                     return L - count
-                s = s >> (m + 2)
+                s = s >> m + 2
             else:
-                s = (S >> k + 1) & (2 * C - 1)
-            if s & (2 * C - 1) == C:
+                s = S >> k + 1 & 2 * C - 1
+            if s & 2 * C - 1 == C:
                 return L - count
             S += 1 << k
             count += 1

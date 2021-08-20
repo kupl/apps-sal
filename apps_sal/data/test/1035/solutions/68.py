@@ -1,5 +1,5 @@
 import math
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 x = math.gcd(A, B)
 
 
@@ -17,5 +17,4 @@ def prime_decomposition(x):
 
 
 cnt = len(set(prime_decomposition(x)))
-
 print(cnt + 1)

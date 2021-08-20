@@ -1,43 +1,40 @@
 def main():
     from bisect import bisect_left as bl
 
-    class BIT():
+    class BIT:
+
         def __init__(self, member):
             self.member_list = sorted(member)
-            self.member_dict = {v: i + 1 for i, v in enumerate(self.member_list)}
+            self.member_dict = {v: i + 1 for (i, v) in enumerate(self.member_list)}
             self.n = len(member)
             self.maxmember = self.member_list[-1]
             self.minmember = self.member_list[0]
-            self.maxbit = 2**(len(bin(self.n)) - 3)
+            self.maxbit = 2 ** (len(bin(self.n)) - 3)
             self.bit = [0] * (self.n + 1)
             self.allsum = 0
 
-        # 要素iにvを追加する
         def add(self, i, v):
             x = self.member_dict[i]
             self.allsum += v
             while x < self.n + 1:
                 self.bit[x] += v
-                x += x & (-x)
+                x += x & -x
 
-        # 位置0からiまでの和(sum(bit[:i]))を計算する
         def sum(self, i):
             ret = 0
             x = i
             while x > 0:
                 ret += self.bit[x]
-                x -= x & (-x)
+                x -= x & -x
             return ret
 
-        # 位置iからjまでの和(sum(bit[i:j]))を計算する
         def sum_range(self, i, j):
             return self.sum(j) - self.sum(i)
 
-        # 和がw以上となる最小のインデックスを求める
         def lowerbound(self, w):
             if w <= 0:
                 return 0
-            x, k = 0, self.maxbit
+            (x, k) = (0, self.maxbit)
             while k:
                 if x + k <= self.n and self.bit[x + k] < w:
                     w -= self.bit[x + k]
@@ -45,7 +42,6 @@ def main():
                 k //= 2
             return x
 
-        # vに一番近いv以上の値を求める
         def greater(self, v):
             if v > self.maxmember:
                 return None
@@ -54,7 +50,6 @@ def main():
                 return None
             return self.member_list[self.lowerbound(p + 1)]
 
-        # vに一番近いv以下の値を求める
         def smaller(self, v):
             if v < self.minmember:
                 return None
@@ -67,11 +62,10 @@ def main():
             if p == 0:
                 return None
             return self.member_list[self.lowerbound(p)]
-
-    r, c, n = list(map(int, input().split()))
+    (r, c, n) = list(map(int, input().split()))
     xyzw = [list(map(int, input().split())) for _ in [0] * n]
     outer = []
-    for x, y, z, w in xyzw:
+    for (x, y, z, w) in xyzw:
         if x in [0, r] or y in [0, c]:
             if z in [0, r] or w in [0, c]:
                 if y == 0:
@@ -91,22 +85,20 @@ def main():
                 else:
                     q = 2 * r + 2 * c - w
                 if p > q:
-                    p, q = q, p
+                    (p, q) = (q, p)
                 outer.append((p, q))
-
-    member = [i for i, j in outer] + [j for i, j in outer] + [-1] + [2 * r + 2 * c + 1]
+    member = [i for (i, j) in outer] + [j for (i, j) in outer] + [-1] + [2 * r + 2 * c + 1]
     bit = BIT(member)
     bit.add(-1, 1)
     bit.add(2 * r + 2 * c + 1, 1)
-
     outer.sort(key=lambda x: x[0] - x[1])
-    for a, b in outer:
+    for (a, b) in outer:
         if bit.greater(a) < b:
-            print("NO")
+            print('NO')
             return
         bit.add(a, 1)
         bit.add(b, 1)
-    print("YES")
+    print('YES')
 
 
 main()

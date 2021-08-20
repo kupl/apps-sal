@@ -19,7 +19,7 @@ k = []
 for i in range(2, m + 1):
     if m % i == 0:
         k.append(i)
-l, r = 0, len(k) - 1
+(l, r) = (0, len(k) - 1)
 while r - l > 7:
     m1 = l + (r - l) // 3
     m2 = r - (r - l) // 3

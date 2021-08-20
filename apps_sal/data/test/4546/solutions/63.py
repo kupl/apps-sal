@@ -1,7 +1,5 @@
-# A - ι⊥l
 def main():
-    a, b, c = map(int, input().split())
-
+    (a, b, c) = map(int, input().split())
     if b - a == c - b:
         print('YES')
     else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         import numpy as np
         x = list(text1)

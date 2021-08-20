@@ -1,9 +1,8 @@
 class Solution:
-    def parseBoolExpr(self, expression: str) -> bool:
 
+    def parseBoolExpr(self, expression: str) -> bool:
         bool_stack = []
         expr_stack = []
-
         curr = []
         for char in expression:
             if char == ',':
@@ -12,7 +11,7 @@ class Solution:
                 expr_stack.append(curr)
                 curr = []
             elif char in 'tf':
-                curr.append(True if (char == 't') else False)
+                curr.append(True if char == 't' else False)
             elif char in '|&!':
                 bool_stack.append(char)
             else:

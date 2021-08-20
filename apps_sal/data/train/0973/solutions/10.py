@@ -1,6 +1,6 @@
 try:
     for _ in range(int(input())):
-        n, k = [*map(int, input().split())]
+        (n, k) = [*map(int, input().split())]
         t = [*map(int, input().split())]
         a = max(t) + k
         b = min(t) - k

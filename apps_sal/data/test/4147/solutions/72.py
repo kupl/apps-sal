@@ -1,20 +1,20 @@
-n, a, b, c = map(int, input().split())
+(n, a, b, c) = map(int, input().split())
 l = [int(input()) for _ in range(n)]
 ans = 100000000000
-for i in range(4**n):
+for i in range(4 ** n):
     A = []
     B = []
     C = []
     D = []
     current = 0
     for j in range(n):
-        if i >> (2 * j) & 3 == 0:
+        if i >> 2 * j & 3 == 0:
             A.append(l[j])
-        elif i >> (2 * j) & 3 == 1:
+        elif i >> 2 * j & 3 == 1:
             B.append(l[j])
-        elif i >> (2 * j) & 3 == 2:
+        elif i >> 2 * j & 3 == 2:
             C.append(l[j])
-        elif i >> (2 * j) & 3 == 3:
+        elif i >> 2 * j & 3 == 3:
             D.append(l[j])
     if A and B and C:
         current += (len(A) - 1) * 10 + abs(sum(A) - a)

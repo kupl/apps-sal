@@ -1,5 +1,5 @@
-k, a, b, v = list(map(int, input().split(' ')))
-c, i = 1, 1
+(k, a, b, v) = list(map(int, input().split(' ')))
+(c, i) = (1, 1)
 while a - v > 0:
     a -= v
     if i < k and b > 0:

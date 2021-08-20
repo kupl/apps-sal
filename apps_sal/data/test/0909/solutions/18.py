@@ -2,7 +2,7 @@ num = []
 num.append(int(input()))
 num.append(int(input()))
 num.append(int(input()))
-while(min(num) == 1):
+while min(num) == 1:
     m = num.index(1)
     num.pop(m)
     if m >= len(num):

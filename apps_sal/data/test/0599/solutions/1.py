@@ -13,4 +13,4 @@ for i in range(0, len(s) + 1):
             print(l)
             done = 1
 if done == 0:
-    print("NA")
+    print('NA')

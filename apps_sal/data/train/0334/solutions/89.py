@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost) -> int:
         l = 0
         ans = 0

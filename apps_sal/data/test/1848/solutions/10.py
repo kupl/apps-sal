@@ -20,7 +20,7 @@ def solution(A):
                 stop = False
                 c[key] -= 1
         if count:
-            ans += (count - 1)
+            ans += count - 1
     return ans
 
 

@@ -1,4 +1,4 @@
-a, b, q = map(int, input().split())
+(a, b, q) = map(int, input().split())
 tl = []
 qlist = []
 for i in range(a):
@@ -13,23 +13,23 @@ tl.sort()
 prea = [-1] * q
 preb = [-1] * q
 ta = tb = -1
-for i, c in enumerate(tl):
+for (i, c) in enumerate(tl):
     if c[1] == 0:
         ta = c[0]
     elif c[1] == 1:
         tb = c[0]
     elif c[1] == 2:
-        prea[c[2]], preb[c[2]] = ta, tb
+        (prea[c[2]], preb[c[2]]) = (ta, tb)
 posta = [-1] * q
 postb = [-1] * q
 ra = rb = -1
-for i, c in enumerate(tl[::-1]):
+for (i, c) in enumerate(tl[::-1]):
     if c[1] == 0:
         ra = c[0]
     elif c[1] == 1:
         rb = c[0]
     elif c[1] == 2:
-        posta[c[2]], postb[c[2]] = ra, rb
+        (posta[c[2]], postb[c[2]]) = (ra, rb)
 
 
 def cal(pra, poa, prb, pob, q):
@@ -51,5 +51,5 @@ def cal(pra, poa, prb, pob, q):
     return gmin
 
 
-for a1, a2, b1, b2, q in zip(prea, posta, preb, postb, qlist):
+for (a1, a2, b1, b2, q) in zip(prea, posta, preb, postb, qlist):
     print(cal(a1, a2, b1, b2, q))

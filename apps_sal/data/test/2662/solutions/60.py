@@ -1,6 +1,5 @@
 import sys
 from bisect import bisect_right
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,16 +9,14 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     vec = [A[-1]]
     for a in reversed(A[:-1]):
         if a >= vec[-1]:
             vec.append(a)
         else:
             vec[bisect_right(vec, a)] = a
-
-    print((len(vec)))
+    print(len(vec))
     return
 
 

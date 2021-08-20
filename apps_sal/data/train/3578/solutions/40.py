@@ -6,4 +6,3 @@ def paperwork(n, m):
         return 0
     else:
         return z
-    # Happy Coding! ^_^

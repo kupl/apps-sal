@@ -2,6 +2,7 @@ import heapq
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n + 1))
         self.rank = [0] * (n + 1)
@@ -27,6 +28,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         l = len(points)
         if l == 1:
@@ -40,7 +42,6 @@ class Solution:
                 v = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 li.append((v, i, j))
         heapq.heapify(li)
-        #li.sort(key = lambda x:x[2])
         while li:
             p = heapq.heappop(li)
             if u.find(p[1]) != u.find(p[2]):

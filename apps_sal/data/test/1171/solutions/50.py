@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 v = list(map(int, input().split()))
-ma = float('INF') * (-1)
+ma = float('INF') * -1
 m = min(n, k)
 for i in range(m + 1):
     for j in range(m + 1 - i):

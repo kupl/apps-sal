@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSubarraySumCircular(self, A: List[int]) -> int:
         sums = sum(A)
         min_res = min_s = sys.maxsize

@@ -3,13 +3,12 @@ input = sys.stdin.readline
 mod = 1000000007
 for f in range(int(input())):
     n = int(input())
-
     neig = [0] * n
     for i in range(n):
         neig[i] = [0]
     edges = []
     for i in range(n - 1):
-        vertexa, vertexb = map(int, input().split())
+        (vertexa, vertexb) = map(int, input().split())
         vertexa -= 1
         vertexb -= 1
         neig[vertexa][0] += 1
@@ -50,7 +49,7 @@ for f in range(int(input())):
             facs[j - diff] *= p[j]
     wedgies = [0] * (n - 1)
     for i in range(n - 1):
-        a, b = edges[i][0], edges[i][1]
+        (a, b) = (edges[i][0], edges[i][1])
         if upn[a] == b:
             wedgies[i] = dn[a] * (n - dn[a])
         else:

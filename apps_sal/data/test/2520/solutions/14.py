@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 root = [i for i in range(n)]
 height = [1 for i in range(n)]
 
@@ -28,12 +28,12 @@ def union(a, b):
 
 l = [set() for _ in range(n)]
 for i in range(m):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     union(a, b)
     l[a].add(b)
     l[b].add(a)
 for i in range(k):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     if find(a) == find(b):
         l[a].add(b)
         l[b].add(a)

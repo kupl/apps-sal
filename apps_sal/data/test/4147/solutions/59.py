@@ -1,6 +1,6 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = [int(input()) for _ in range(N)]
-inf = 10**18
+inf = 10 ** 18
 
 
 def dfs(cur, a, b, c):

@@ -11,4 +11,4 @@ for q in range(Q):
             o += 1
         out.append(str(o))
         i += 1
-    print(" ".join(out))
+    print(' '.join(out))

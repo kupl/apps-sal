@@ -7,9 +7,9 @@ def I():
 
 q = int(I())
 for _ in range(q):
-    h, n = list(map(int, I().split()))
+    (h, n) = list(map(int, I().split()))
     p = list(map(int, I().split()))
-    i, ans = 0, 0
+    (i, ans) = (0, 0)
     while i < n:
         if h == p[i]:
             pass

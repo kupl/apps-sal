@@ -22,13 +22,12 @@ def lm():
 
 
 def solve():
-
-    r, g, b, w = mi()
+    (r, g, b, w) = mi()
     par = r % 2 + g % 2 + b % 2 + w % 2
     if par <= 1:
         print('Yes')
         return
-    elif r >= 1 and g >= 1 and b >= 1:
+    elif r >= 1 and g >= 1 and (b >= 1):
         if par == 3 or par == 4:
             print('Yes')
             return
@@ -36,6 +35,5 @@ def solve():
 
 
 q = nn()
-
 for _ in range(q):
     solve()

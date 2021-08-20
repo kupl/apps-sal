@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 
 
@@ -7,12 +7,12 @@ def win(x, y):
         return x
     else:
         hands = [x, y]
-        if "R" not in hands:
-            return "S"
-        elif "S" not in hands:
-            return "P"
+        if 'R' not in hands:
+            return 'S'
+        elif 'S' not in hands:
+            return 'P'
         else:
-            return "R"
+            return 'R'
 
 
 for _ in range(k):

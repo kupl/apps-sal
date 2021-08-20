@@ -1,4 +1,5 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
         res = set()
 
@@ -8,6 +9,5 @@ class Solution:
                     res.add(path)
                 for i in range(len(t)):
                     dfs(path + t[i], t[:i] + t[i + 1:])
-
         dfs('', tiles)
         return len(res)

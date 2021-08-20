@@ -1,7 +1,6 @@
-h, w = map(int, input().split())
-
+(h, w) = map(int, input().split())
 tmps = 0
-ans = 10**18
+ans = 10 ** 18
 for i in range(1, h):
     k = (h - i) // 2
     t = [i * w, k * w, (h - i - k) * w]

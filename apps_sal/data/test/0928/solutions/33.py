@@ -1,11 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
-
 s = [0] * n
 s[0] = a[0]
 for i in range(1, n):
     s[i] = s[i - 1] + a[i]
-
 ans = 0
 for i in range(n):
     tmp = s[i] - a[i]
@@ -22,6 +20,5 @@ for i in range(n):
             right = mid
         else:
             left = mid
-    # print(i,right)
     ans += n - right
 print(ans)

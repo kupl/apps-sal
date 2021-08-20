@@ -1,7 +1,7 @@
 n = int(input())
 c = 0
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a == b:
         c += 1
     if a != b:

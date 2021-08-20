@@ -1,5 +1,5 @@
 kol = 0
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 p = list(map(int, input().split()))
 s = list(map(int, input().split()))
 for i in range(n):

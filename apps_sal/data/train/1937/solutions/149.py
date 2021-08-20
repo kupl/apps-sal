@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self, personName):
         self.name = personName
         self.children = []
@@ -17,10 +18,8 @@ class ThroneInheritance:
     def birth(self, parentName: str, childName: str) -> None:
         parent = self.treeMap[parentName]
         child = TreeNode(childName)
-
         self.treeMap[childName] = child
         child.parent = parent
-
         parent.children.append(child)
 
     def death(self, name: str) -> None:
@@ -32,15 +31,7 @@ class ThroneInheritance:
         def helper(node):
             if node.name not in self.dead:
                 self.ret.append(node.name)
-            for i, child in enumerate(node.children):
+            for (i, child) in enumerate(node.children):
                 helper(node.children[i])
-
         helper(self.king)
         return self.ret
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

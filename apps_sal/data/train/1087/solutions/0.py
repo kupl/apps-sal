@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 def iscycle(E, v, EXPLORED_NODES, EXPLORED_EDGES):
     EXPLORED_NODES.add(v)
     r = False
@@ -25,12 +23,12 @@ def process(E):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     E = []
     for m in range(M):
-        U, V = list(map(int, input().split()))
+        (U, V) = list(map(int, input().split()))
         if U > V:
-            U, V = V, U
+            (U, V) = (V, U)
         E.append((U, V))
     print(process(E))
 

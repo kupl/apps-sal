@@ -1,7 +1,6 @@
-# cook your dish here
 a = int(input())
 for i in range(a):
-    b, c = map(int, input().split())
+    (b, c) = map(int, input().split())
     l = list(map(int, input().split()))
     if len(l) == b:
         d = 0

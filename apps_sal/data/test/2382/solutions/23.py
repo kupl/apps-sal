@@ -3,7 +3,6 @@ S = list(map(int, input().split()))
 S.sort()
 p = [S.pop(-1)]
 r = S
-
 for i in range(N):
     nr = []
     for p_ in p[::-1]:
@@ -15,5 +14,4 @@ for i in range(N):
             nr.append(r_)
     p.sort()
     r += nr[::-1]
-
-print(("Yes" if len(r) == 0 else "No"))
+print('Yes' if len(r) == 0 else 'No')

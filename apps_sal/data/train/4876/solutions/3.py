@@ -1,2 +1,2 @@
 def hello(name=''):
-    return "Hello, {}!".format(name.title() if name else 'World')
+    return 'Hello, {}!'.format(name.title() if name else 'World')

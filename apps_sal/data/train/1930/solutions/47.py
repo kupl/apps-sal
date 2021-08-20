@@ -15,9 +15,5 @@ class Cashier:
             bill += self.p[product[i]] * amount[i]
         if self.count == self.n:
             self.count = 0
-            bill = bill - ((self.d * bill) / 100)
+            bill = bill - self.d * bill / 100
         return bill
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

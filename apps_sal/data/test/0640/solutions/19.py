@@ -1,5 +1,5 @@
 list = [0, 0, 0]
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 for i in range(1, 7):
     if abs(a - i) < abs(b - i):
         list[0] += 1

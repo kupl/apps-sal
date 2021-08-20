@@ -9,26 +9,20 @@ def check(n, m, s, v):
                     mi = v[i]
             else:
                 mi = v[i]
-
-        # print(i, mi)
     return True
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     v = list(map(int, input().split()))
-
     l = 0
     r = m
     while l < r:
         s = (l + r) // 2
         if check(n, m, s, v):
-            # print(s, 1)
             r = s
         else:
-            # print(s, 0)
             l = s + 1
-
     print(l)
 
 

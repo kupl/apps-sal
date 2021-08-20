@@ -1,5 +1,5 @@
 n = int(input())
-d, x = list(map(int, input().split()))
+(d, x) = list(map(int, input().split()))
 cnt = 0
 for i in range(n):
     a = int(input())
@@ -7,4 +7,4 @@ for i in range(n):
     while p <= d:
         p += a
         cnt += 1
-print((cnt + x))
+print(cnt + x)

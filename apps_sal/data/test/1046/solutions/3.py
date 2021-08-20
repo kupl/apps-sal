@@ -1,4 +1,4 @@
-n, s = int(input()), 0
+(n, s) = (int(input()), 0)
 t = list(map(int, input().split()))
 p = set(t)
 p.discard(0)

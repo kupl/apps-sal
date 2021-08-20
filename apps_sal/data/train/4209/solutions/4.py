@@ -7,7 +7,6 @@ def largest_rect(histogram):
     if max_el == min_el:
         return dim * max_el
     area = max_el if max_el > min_el * dim else min_el * dim
-
     arr_work = [histogram]
     while len(arr_work) > 0:
         h = arr_work.pop()
@@ -25,6 +24,5 @@ def largest_rect(histogram):
         if split_index * max_el >= area:
             arr_work.append(list(reversed(h[:split_index])))
         if (dim - 1 - split_index) * max_el >= area:
-            arr_work.append(list(reversed(h[(split_index + 1):])))
-
+            arr_work.append(list(reversed(h[split_index + 1:])))
     return area

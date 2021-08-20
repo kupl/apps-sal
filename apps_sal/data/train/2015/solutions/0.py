@@ -1,11 +1,7 @@
 import sys
-
 n = int(input())
-
 v = [list(map(int, input().split())) for i in range(n)]
-
 res = []
-
 for i in range(n):
     if v[i][2] >= 0:
         res.append(i + 1)
@@ -18,6 +14,5 @@ for i in range(n):
                 v[j][2] -= dec
                 if v[j][2] < 0:
                     dec += v[j][1]
-
 print(len(res))
-print(" ".join(map(str, res)))
+print(' '.join(map(str, res)))

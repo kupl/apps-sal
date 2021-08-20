@@ -7,4 +7,4 @@ def my_first_kata(a: Union[int, str], b: Union[int, str]) -> Union[bool, int]:
       - `False` if either a or b (or both) are not numbers
       - `a % b + b % a` if both arguments are numbers
     """
-    return False if not all(map(lambda _: type(_) in (int, float), [a, b])) else (a % b) + (b % a)
+    return False if not all(map(lambda _: type(_) in (int, float), [a, b])) else a % b + b % a

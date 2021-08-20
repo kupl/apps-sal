@@ -2,10 +2,11 @@ MOD = 1000000007
 
 
 class Solution:
+
     def kConcatenationMaxSum(self, arr, k):
         min_pre_sum = 0
         pre_sum = 0
-        max_pre_sum, max_suf_sum, max_win_sum = 0, 0, 0
+        (max_pre_sum, max_suf_sum, max_win_sum) = (0, 0, 0)
         n = len(arr)
         for i in range(n):
             pre_sum += arr[i]

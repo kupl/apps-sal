@@ -1,2 +1,2 @@
 n = int(input())
-print((sum(sorted(list(map(int, input().split())))[::2])))
+print(sum(sorted(list(map(int, input().split())))[::2]))

@@ -1,4 +1,4 @@
-cache2, cache, seq = {0: 0}, {0: 0, 1: 0}, {0}
+(cache2, cache, seq) = ({0: 0}, {0: 0, 1: 0}, {0})
 
 
 def rec(n):

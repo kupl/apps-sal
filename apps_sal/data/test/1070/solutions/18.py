@@ -1,8 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 line = [int(x) for x in input().split(' ')]
 line.append(line[-1])
 maxs = []
-
 last = line[0]
 count = 1
 for i in range(1, n + 1):
@@ -12,7 +11,6 @@ for i in range(1, n + 1):
         maxs.append(count)
         count = 1
     last = line[i]
-
 if maxs == []:
     print(1)
 else:

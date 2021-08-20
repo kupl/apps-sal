@@ -1,9 +1,9 @@
 def decrypt(s, n):
     if not s:
         return s
-    o, l = len(s) // 2, list(s)
+    (o, l) = (len(s) // 2, list(s))
     for _ in range(n):
-        l[1::2], l[::2] = l[:o], l[o:]
+        (l[1::2], l[::2]) = (l[:o], l[o:])
     return ''.join(l)
 
 

@@ -1,4 +1,5 @@
 class CodeforcesTask847ASolution:
+
     def __init__(self):
         self.result = ''
         self.n = 0
@@ -7,7 +8,7 @@ class CodeforcesTask847ASolution:
     def read_input(self):
         self.n = int(input())
         for x in range(self.n):
-            self.cells.append([int(y) for y in input().split(" ")])
+            self.cells.append([int(y) for y in input().split(' ')])
 
     def process_task(self):
         lists = []
@@ -22,7 +23,7 @@ class CodeforcesTask847ASolution:
         for x in range(len(lists) - 1):
             self.cells[lists[x][1] - 1][1] = lists[x + 1][0]
             self.cells[lists[x + 1][0] - 1][0] = lists[x][1]
-        self.result = "\n".join(["{0} {1}".format(*cell) for cell in self.cells])
+        self.result = '\n'.join(['{0} {1}'.format(*cell) for cell in self.cells])
 
     def get_result(self):
         return self.result

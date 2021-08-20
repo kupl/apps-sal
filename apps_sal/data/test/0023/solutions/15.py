@@ -12,17 +12,15 @@ def f(a, b):
     xb = list(b)
     ib = int(b)
     m = int(''.join(xa))
-
     l = []
     for i in range(len(xb)):
-        mj, r = 0, 0
+        (mj, r) = (0, 0)
         for j in range(len(xa)):
             if get_int(l, xa, j) <= ib:
                 r = get_int(l, xa, j)
                 mj = j
         l.append(xa[mj])
         xa = xa[:mj] + xa[mj + 1:]
-
     return int(''.join(l))
 
 

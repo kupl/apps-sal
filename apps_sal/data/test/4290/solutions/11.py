@@ -7,5 +7,5 @@ def combinations_count(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 print(combinations_count(n, 2) + combinations_count(m, 2))

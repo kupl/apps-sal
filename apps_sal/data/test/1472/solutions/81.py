@@ -1,5 +1,4 @@
-n, x, y = list(map(int, input().split()))
-
+(n, x, y) = list(map(int, input().split()))
 ans = [0] * n
 for i in range(1, n + 1):
     for j in range(i + 1, n + 1):
@@ -11,6 +10,5 @@ for i in range(1, n + 1):
             c = abs(x - i) + abs(y - j) + 1
             d = abs(j - i)
             ans[min(c, d)] += 1
-
 for i in range(1, n):
-    print((ans[i]))
+    print(ans[i])

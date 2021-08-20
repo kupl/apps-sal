@@ -1,15 +1,15 @@
 def main():
     tmp = input()
-    tmp = tmp.split(" ")
+    tmp = tmp.split(' ')
     n = int(tmp[0])
     l = int(tmp[1])
     tmp = input()
-    tmp = tmp.split(" ")
+    tmp = tmp.split(' ')
     a = []
     for i in tmp:
         a.append(int(i))
     tmp = input()
-    tmp = tmp.split(" ")
+    tmp = tmp.split(' ')
     b = []
     for i in tmp:
         b.append(int(i))
@@ -26,10 +26,10 @@ def main():
         lol = a1[0]
         a1.pop(0)
         a1.append(lol)
-        if (a1 == b1):
-            print("YES")
+        if a1 == b1:
+            print('YES')
             return 0
-    print("NO")
+    print('NO')
 
 
 main()

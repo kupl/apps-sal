@@ -15,7 +15,5 @@ def hanoiArray(n):
             solve(n - 1, f, t, h)
             move(f, t)
             solve(n - 1, h, f, t)
-
     solve(n, 0, 1, 2)
-
     return ret

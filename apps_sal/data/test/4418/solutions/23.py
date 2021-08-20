@@ -14,5 +14,4 @@ for k in range(n):
         dp[4] = min(dp[3], dp[4] + 1)
     else:
         dp[5] = min(dp[4], dp[5] + 1)
-
 print(n - 6 * dp[5])

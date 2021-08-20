@@ -17,8 +17,7 @@ def main():
             hah[s].append([i + 1, j])
 
     def lol(a):
-        return a[1], a[0]
-
+        return (a[1], a[0])
     ansq = 0
     bm = []
     for s in hah:

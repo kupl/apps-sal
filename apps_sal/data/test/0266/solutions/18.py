@@ -8,7 +8,6 @@ def minimize(m, s):
         return -1
     array = [0 for i in range(m)]
     array[0] = 1
-
     currentFiller = m - 1
     val = s - 1
     for i in range(s - 1):
@@ -23,7 +22,7 @@ def minimize(m, s):
             else:
                 break
     if val == 0:
-        s = ""
+        s = ''
         for i in range(len(array)):
             s += str(array[i])
         return s
@@ -33,7 +32,7 @@ def minimize(m, s):
 
 def maximizeS(m, s):
     array = []
-    for i in range(10**m):
+    for i in range(10 ** m):
         summ = 0
         st = str(i)
         for j in range(len(st)):
@@ -49,7 +48,7 @@ def maximizeS(m, s):
 
 def minimizeS(m, s):
     array = []
-    for i in range(10**m):
+    for i in range(10 ** m):
         if len(str(i)) == m:
             summ = 0
             st = str(i)
@@ -85,7 +84,7 @@ def maximize(m, s):
             else:
                 break
     if val == 0:
-        s = ""
+        s = ''
         for i in range(len(array)):
             s += str(array[i])
         return s
@@ -95,15 +94,9 @@ def maximize(m, s):
 
 for m in range(1, 6):
     for s in range(6):
-        """
-        if int(minimize(m, s)) != int(minimizeS(m, s)):
-             print(m, s, minimize(m, s), minimizeS(m, s))
-        if int(maximize(m, s)) != int(maximizeS(m, s)):
-             print(m, s, maximize(m, s), maximizeS(m, s))
-        """
+        '\n        if int(minimize(m, s)) != int(minimizeS(m, s)):\n             print(m, s, minimize(m, s), minimizeS(m, s))\n        if int(maximize(m, s)) != int(maximizeS(m, s)):\n             print(m, s, maximize(m, s), maximizeS(m, s))\n        '
         pass
-
-m, s = list(map(int, input().split(' ')))
+(m, s) = list(map(int, input().split(' ')))
 a = minimize(m, s)
 b = maximize(m, s)
 print(a, b)

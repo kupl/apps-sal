@@ -3,10 +3,10 @@ rl = sys.stdin.readline
 
 
 def main():
-    n, m = list(map(int, rl().strip().split()))
+    (n, m) = list(map(int, rl().strip().split()))
     eaw = [list(map(int, rl().strip().split())) for _ in range(m)]
-    d = dict(((x[0] - 1, x[1] - 1), -x[2]) for x in eaw)
-    inf = 10**14
+    d = dict((((x[0] - 1, x[1] - 1), -x[2]) for x in eaw))
+    inf = 10 ** 14
     mdl = [inf] * n
     mdl[0] = 0
 
@@ -22,7 +22,7 @@ def main():
     if a1 > a2:
         print('inf')
     else:
-        print((-a1))
+        print(-a1)
 
 
 def __starting_point():

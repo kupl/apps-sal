@@ -1,5 +1,4 @@
-# cook your dish here
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 h = list(map(int, input().split()))
 if r not in h:
     h.append(r)

@@ -1,10 +1,10 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 field = [list(input()) for _ in range(h)]
 dx = [1, 0, -1, 0, 1, -1, -1, 1]
 dy = [0, 1, 0, -1, 1, 1, -1, -1]
 for i in range(h):
     for j in range(w):
-        if field[i][j] == "#":
+        if field[i][j] == '#':
             continue
         num = 0
         for k in range(8):
@@ -14,8 +14,8 @@ for i in range(h):
                 continue
             if nj < 0 or w <= nj:
                 continue
-            if field[ni][nj] == "#":
+            if field[ni][nj] == '#':
                 num += 1
         field[i][j] = str(num)
 for out in field:
-    print(("".join(out)))
+    print(''.join(out))

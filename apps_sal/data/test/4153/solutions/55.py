@@ -6,5 +6,4 @@ for i in s:
         cnt0 += 1
     else:
         cnt1 += 1
-
 print(2 * min(cnt0, cnt1))

@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-max, fee = list(map(int, input().split()))
+(max, fee) = list(map(int, input().split()))
 total = 0
 a.sort(reverse=True)
 for i in range(n):
@@ -9,5 +9,4 @@ for i in range(n):
         total = total + fee * num
     else:
         break
-
 print(total)

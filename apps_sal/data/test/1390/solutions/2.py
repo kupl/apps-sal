@@ -1,10 +1,10 @@
 def __starting_point():
     inp = input()
-    arr = inp.split(" ")
+    arr = inp.split(' ')
     n = int(arr[0])
     m = int(arr[1])
     inp = input()
-    arr = inp.split(" ")
+    arr = inp.split(' ')
     L = []
     for s in arr:
         L.append(int(s))

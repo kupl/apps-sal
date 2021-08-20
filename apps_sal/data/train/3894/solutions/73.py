@@ -1,5 +1,5 @@
 def solve(s):
-    cup, clw = 0, 0
+    (cup, clw) = (0, 0)
     for c in s:
         if c.isupper():
             cup += 1

@@ -1,4 +1,4 @@
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 arr = list(map(int, input().split()))
 ans = 0
 i = min(n - 1, r - 1)

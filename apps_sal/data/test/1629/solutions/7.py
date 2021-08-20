@@ -1,4 +1,4 @@
-n, x = map(int, input().strip().split())
+(n, x) = map(int, input().strip().split())
 a = list(map(int, input().strip().split()))
 m = min(a)
 x -= 1
@@ -11,7 +11,6 @@ for i in range(n):
 for i in range(n):
     a[i] -= m
     a[pos] += m
-
 if x != pos:
     i = (pos + 1) % n
     while i != x:

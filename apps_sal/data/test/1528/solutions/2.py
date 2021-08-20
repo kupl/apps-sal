@@ -1,4 +1,4 @@
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 siz = [1]
 pat = [1]
 for i in range(N):

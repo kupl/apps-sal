@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
 
         def count(d):
@@ -12,11 +13,7 @@ class Solution:
                 if curr == k:
                     total += 1
                     curr = 0
-                # else:
-                #     total += (curr + 1) // k
-                #     curr = (curr + 1) % k
             return total
-
         if m * k > len(bloomDay):
             return -1
         l = min(bloomDay)

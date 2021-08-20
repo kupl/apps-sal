@@ -22,7 +22,7 @@ def homo(n, k):
         return cmb(n + k - 1, k - 1)
 
 
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 if k % 2 == 0:
     flg = 0
 else:
@@ -32,7 +32,7 @@ for i in range(3, k + 2, 2):
     ic = (i - 1) // 2
     anstmp = 0
     for j in range(ic + 1):
-        t = homo(n - j, (k - ic * 2 + j)) * cmb(ic, j) * pow(2, j, mod)
+        t = homo(n - j, k - ic * 2 + j) * cmb(ic, j) * pow(2, j, mod)
         anstmp = (anstmp + t) % mod
     ans.append(anstmp)
     ans.append(anstmp)
@@ -44,5 +44,5 @@ if flg:
     ans.append(anstmp)
 ans2 = ans[:-1]
 ans2 = ans2[::-1]
-print(*ans, sep="\n")
-print(*ans2, sep="\n")
+print(*ans, sep='\n')
+print(*ans2, sep='\n')

@@ -1,7 +1,7 @@
 import numpy as np
-H, W = list(map(int, input().split()))
-m = np.array([[0 if i == "#" else 1 for i in input()] for i in range(H)])
-l, r, u, d = np.zeros((4, H, W))
+(H, W) = list(map(int, input().split()))
+m = np.array([[0 if i == '#' else 1 for i in input()] for i in range(H)])
+(l, r, u, d) = np.zeros((4, H, W))
 for i in range(H):
     u[i] = (u[i - 1] + 1) * m[i]
     d[-i - 1] = (d[-i] + 1) * m[-i - 1]

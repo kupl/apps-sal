@@ -1,11 +1,7 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 sys.setrecursionlimit(1000000)
-#sys.stdin = open("input.txt", "r")
-
 n = int(input())
 a = list(map(int, input().split()))
 f = {}
@@ -14,7 +10,6 @@ for ai in a:
         f[ai] = 1
     else:
         f[ai] += 1
-
 mx = a[0]
 for k in f:
     if f[k] > f[mx]:
@@ -24,7 +19,6 @@ for i in range(n):
     if a[i] == mx:
         mxi = i
         break
-
 steps = []
 for i in range(mxi + 1, n):
     if a[i] < mx:

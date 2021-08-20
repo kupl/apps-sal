@@ -4,7 +4,7 @@ class Solution(object):
     f = ''
 
     def getNext(self, formular, locked=False):
-        stype = 0  # 0:null, 1:numeric, 2/20: Elem, 3: parenthesis
+        stype = 0
         ret = 0
         if self.loc == self.lastloc:
             return (0, 0)
@@ -19,8 +19,8 @@ class Solution(object):
             elif stype in (20, 2) and formular[i].islower():
                 stype = 2
                 ret += formular[i]
-            elif stype == 0 and formular[i] in "()":
-                stype = 3 + "()".index(formular[i])
+            elif stype == 0 and formular[i] in '()':
+                stype = 3 + '()'.index(formular[i])
                 ret = formular[i]
             else:
                 break
@@ -56,5 +56,5 @@ class Solution(object):
             if n[0] != '$':
                 cnt[n[0]] = cnt.get(n[0], 0) + n[1]
         for i in sorted(cnt.keys()):
-            r += "%s%d" % (i, cnt[i]) if cnt[i] > 1 else i
+            r += '%s%d' % (i, cnt[i]) if cnt[i] > 1 else i
         return r

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -14,7 +13,8 @@ import re
 import queue
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -40,7 +40,8 @@ class Scanner():
         return [int(input()) for i in range(n)]
 
 
-class Math():
+class Math:
+
     @staticmethod
     def gcd(a, b):
         if b == 0:
@@ -49,7 +50,7 @@ class Math():
 
     @staticmethod
     def lcm(a, b):
-        return (a * b) // Math.gcd(a, b)
+        return a * b // Math.gcd(a, b)
 
     @staticmethod
     def roundUp(a, b):
@@ -61,16 +62,16 @@ class Math():
 
     @staticmethod
     def toLowerMultiple(a, x):
-        return (a // x) * x
+        return a // x * x
 
     @staticmethod
     def nearPow2(n):
         if n <= 0:
             return 0
-        if n & (n - 1) == 0:
+        if n & n - 1 == 0:
             return n
         ret = 1
-        while(n > 0):
+        while n > 0:
             ret <<= 1
             n >>= 1
         return ret
@@ -99,6 +100,7 @@ class Math():
 
 
 class PriorityQueue:
+
     def __init__(self, l=[]):
         self.__q = l
         heapq.heapify(self.__q)
@@ -112,16 +114,15 @@ class PriorityQueue:
         return heapq.heappop(self.__q)
 
 
-MOD = int(1e09) + 7
-INF = int(1e15)
+MOD = int(1000000000.0) + 7
+INF = int(1000000000000000.0)
 
 
 def main():
-    # sys.stdin = open("sample.txt")
     N = Scanner.int()
     A = Scanner.map_int()
-    s1, s2 = 0, 0
-    c1, c2 = 0, 0
+    (s1, s2) = (0, 0)
+    (c1, c2) = (0, 0)
     for i in range(N):
         if i % 2 == 0:
             if s1 + A[i] > 0:
@@ -145,7 +146,7 @@ def main():
             else:
                 c2 += abs(s2 + A[i]) + 1
                 s2 = 1
-    print((min(c1, c2)))
+    print(min(c1, c2))
     return
 
 

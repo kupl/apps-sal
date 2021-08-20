@@ -11,15 +11,14 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-INF = 10**9
-MOD = 10**9 + 7
-
-N, M = map(int, input().split())
+INF = 10 ** 9
+MOD = 10 ** 9 + 7
+(N, M) = map(int, input().split())
 es = [[] for i in range(N + 1)]
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     es[a].append(b)
-ansr, ansd = -1, INF
+(ansr, ansd) = (-1, INF)
 for r in range(1, N + 1):
     d = [INF] * (N + 1)
     d[0] = 0

@@ -1,5 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, A: List[List[int]]) -> int:
+
         def distance(a, b):
             return abs(a[0] - b[0]) + abs(a[1] - b[1])
         dic = {}
@@ -11,7 +13,7 @@ class Solution:
             return dic[i]
 
         def union(i, j):
-            fi, fj = find(i), find(j)
+            (fi, fj) = (find(i), find(j))
             if fi != fj:
                 dic[fi] = fj
                 return 1
@@ -23,8 +25,8 @@ class Solution:
                 d = distance(A[i], A[j])
                 dis.append([d, i, j])
         dis = sorted(dis)
-        ret, ct = 0, 0
-        for d, i, j in dis:
+        (ret, ct) = (0, 0)
+        for (d, i, j) in dis:
             if union(i, j):
                 ret += d
                 ct += 1

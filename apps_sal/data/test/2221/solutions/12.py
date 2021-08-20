@@ -1,13 +1,15 @@
-def inp(): return list(map(int, input().split()))
+def inp():
+    return list(map(int, input().split()))
 
 
-x1, y1 = inp()
-x2, y2 = inp()
-n, = inp()
+(x1, y1) = inp()
+(x2, y2) = inp()
+(n,) = inp()
 W = list(input())
 
 
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -27,14 +29,7 @@ class Point:
 
 u = Point(x1, y1)
 v = Point(x2, y2)
-
-d = {
-    'L': Point(-1, 0),
-    'R': Point(+1, 0),
-    'U': Point(0, +1),
-    'D': Point(0, -1),
-}
-
+d = {'L': Point(-1, 0), 'R': Point(+1, 0), 'U': Point(0, +1), 'D': Point(0, -1)}
 W = [d[x] for x in W]
 
 
@@ -56,7 +51,7 @@ def check(days):
 
 
 l = 1
-r = 10**16
+r = 10 ** 16
 while r - l > 1:
     mid = int((l + r) / 2)
     if check(mid):

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 d = list(map(int, input().split()))
 x = list(range(1, 100001))
 y = [0] * 100000

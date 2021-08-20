@@ -20,15 +20,8 @@ class TweetCounts:
             den = 86400
             size = (endTime - startTime) // 86400 + 1
         op = [0] * size
-
         for t in self.tweets[tweetName]:
-            if(startTime <= t and t <= endTime):
+            if startTime <= t and t <= endTime:
                 idx = (t - startTime) // den
                 op[idx] += 1
-
         return op
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

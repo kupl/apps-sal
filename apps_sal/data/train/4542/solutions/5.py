@@ -1,6 +1,6 @@
 def caesar_crypto_encode(text, shift):
-    if text in ("", None):
-        return ""
+    if text in ('', None):
+        return ''
     else:
         from string import ascii_letters as abc
         text = text.strip()

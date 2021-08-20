@@ -1,4 +1,4 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 L = [list(input()) for _ in range(x)]
 F = [['#'] * (y + 2) for _ in range(x + 2)]
 for i in range(x):

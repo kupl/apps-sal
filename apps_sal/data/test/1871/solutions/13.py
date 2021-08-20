@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 c = list(map(int, input().split()))
 d = [0] * 100001
 for ci in c:

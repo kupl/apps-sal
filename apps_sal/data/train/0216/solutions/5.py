@@ -1,4 +1,5 @@
 class Solution:
+
     def minNumberOfFrogs(self, croak: str) -> int:
         if len(croak) == 0:
             return 0
@@ -9,7 +10,6 @@ class Solution:
         arr = [0 for _ in range(6)]
         arr[0] = 9999999
         index = {'c': 1, 'r': 2, 'o': 3, 'a': 4, 'k': 5}
-
         for letter in croak:
             i = index[letter]
             if arr[i - 1] > 0:

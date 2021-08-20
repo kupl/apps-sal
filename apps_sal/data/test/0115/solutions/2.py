@@ -1,4 +1,4 @@
-r, s, p = map(int, input().split())
+(r, s, p) = map(int, input().split())
 n = 101
 m = n * n
 t = [0] * n * m

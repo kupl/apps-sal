@@ -1,14 +1,12 @@
 import collections
 import math
-
-#n, p = map(int, input().split())
 n = int(input())
 p = list(map(int, input().split()))
 s = input()
 
 
 def solve(p, s):
-    a, b = [0] * n, [0] * n
+    (a, b) = ([0] * n, [0] * n)
     m = 0
     if s[0] == 'B':
         b[0] = p[0]

@@ -6,6 +6,6 @@ A = []
 for i in range(s_min, s_max + 1):
     b = 0
     for j in s:
-        b += (j - i)**2
+        b += (j - i) ** 2
     A.append(b)
 print(min(A))

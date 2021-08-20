@@ -1,5 +1,5 @@
 t = int(input())
-l, r, x = 0, 0, 0
+(l, r, x) = (0, 0, 0)
 ans = []
 for i in range(t):
     (n, m) = tuple(map(int, input().split()))
@@ -21,6 +21,6 @@ for i in range(t):
             x = l1[3]
             sumb = sumb + (r - l + 1) * x
         else:
-            ans.append((suma * sumb) % 998244353)
+            ans.append(suma * sumb % 998244353)
 for i in range(len(ans)):
     print(ans[i])

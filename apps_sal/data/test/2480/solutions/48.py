@@ -1,7 +1,3 @@
-# Rem of sum is Num
-# Reviewing problem
-
-
 from collections import defaultdict
 
 
@@ -16,8 +12,7 @@ def cnt_func(X):
     return res
 
 
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.insert(0, 0)
 for i in range(1, N + 1):

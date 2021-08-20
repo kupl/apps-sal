@@ -6,5 +6,4 @@ for t1 in range(t):
         if i == '0' or i == '5':
             a = 1
             break
-
     print(a)

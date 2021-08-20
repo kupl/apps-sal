@@ -2,24 +2,9 @@ import sys
 
 
 def main():
-    #n = iinput()
-    #k = iinput()
-    #m = iinput()
     n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
-    #n, t = map(int, sys.stdin.readline().split())
-    #q = list(map(int, sys.stdin.readline().split()))
-    #q = linput()
-    a, a1, a2 = list(map(int, sys.stdin.readline().split()))
-    b, b1, b2 = list(map(int, sys.stdin.readline().split()))
+    (a, a1, a2) = list(map(int, sys.stdin.readline().split()))
+    (b, b1, b2) = list(map(int, sys.stdin.readline().split()))
     res = min(a, b1) + min(a1, b2) + min(a2, b)
     if b >= a1 + a:
         ans = a2 - (n - b)
@@ -27,7 +12,7 @@ def main():
         ans = a - (n - b1)
     elif b2 >= a2 + a:
         ans = a1 - (n - b2)
-    elif (b == a and b1 == a1 and b2 == a2):
+    elif b == a and b1 == a1 and (b2 == a2):
         ans = 0
     elif a > b and a1 > b1:
         b2 -= a2

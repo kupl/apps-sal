@@ -2,18 +2,16 @@ def convert(dollars, cents, required):
     a = dollars
     b = cents
     if b >= required:
-        return ((b - required, a))
+        return (b - required, a)
     else:
         a = a - 1
         b = b + 100
-        return ((b - required, a))
-
-# print(convert(2, 55, 30))
+        return (b - required, a)
 
 
 for _ in range(int(input())):
     thearr = []
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     thearr.append((a, b))
     max_so_far = thearr[0][0] + thearr[0][1] / 100
     transform = 0
@@ -26,10 +24,7 @@ for _ in range(int(input())):
             max_so_far = sum
             transform = index
         thearr.append(z)
-        a, b = z
+        (a, b) = z
         index += 1
         count += 1
-        # print(thearr, a, b)
-
     print(transform)
-    # print(thearr[:10])

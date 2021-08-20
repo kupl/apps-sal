@@ -2,10 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def possibleBipartition(self, N, dislikes):
-        #graph = [[] * (N+1)]
         graph = [[] for _ in range(N + 1)]
-        for u, v in dislikes:
+        for (u, v) in dislikes:
             graph[u].append(v)
             graph[v].append(u)
         color = dict()

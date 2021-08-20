@@ -1,8 +1,6 @@
 n = int(input())
 size___nr = [int(x) for x in input().split()]
-
-one_idxes = [i for i, x in enumerate(size___nr) if x == 1]
-
+one_idxes = [i for (i, x) in enumerate(size___nr) if x == 1]
 curr_max = n - 1
 ans = 0
 while True:
@@ -28,6 +26,5 @@ while True:
         if size___nr[curr_max] == 1:
             size___nr[curr_max] -= 1
         continue
-
 ans += sum(size___nr) // 3
 print(ans)

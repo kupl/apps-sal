@@ -1,4 +1,4 @@
-n, z = list(map(int, input().split()))
+(n, z) = list(map(int, input().split()))
 arrs = [int(x) for x in input().split()]
 arrs.sort()
 
@@ -12,16 +12,15 @@ def fi():
     arr = arrs[:]
     cnt = 0
     while r != len(arr):
-        if arr[l] == 10**10:
+        if arr[l] == 10 ** 10:
             l += 1
         elif arr[r] - arr[l] >= z:
-            arr[r] = 10**10
+            arr[r] = 10 ** 10
             cnt += 1
             r += 1
             l += 1
         else:
             r += 1
-
     return cnt
 
 

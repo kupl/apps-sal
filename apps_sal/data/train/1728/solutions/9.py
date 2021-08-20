@@ -1,7 +1,7 @@
-KEYS = ["Right", "Left", "Down", "Up"]
+KEYS = ['Right', 'Left', 'Down', 'Up']
 DIRS = [6, 4, 2, 8]
-KEYS_DIR = {6: "Right", 4: "Left", 2: "Down", 8: "Up"}
-KEYS_DIR_REV = {"Right": 6, "Left": 4, "Down": 2, "Up": 8}
+KEYS_DIR = {6: 'Right', 4: 'Left', 2: 'Down', 8: 'Up'}
+KEYS_DIR_REV = {'Right': 6, 'Left': 4, 'Down': 2, 'Up': 8}
 MOVE = [(1, 0), (-1, 0), (0, -1), (0, 1)]
 firstTime = False
 
@@ -26,15 +26,14 @@ class PlayerMovement:
                     self.pressedList.append(Key)
                     self.direction = KEYS_DIR_REV[Key]
                     firstTime = True
-            else:
-                if Key in self.pressedList:
-                    if self.pressedList[-1] == Key:
-                        del self.pressedList[-1]
-                        if len(self.pressedList) > 0:
-                            self.direction = KEYS_DIR_REV[self.pressedList[-1]]
-                            firstTime = True
-                    else:
-                        del self.pressedList[self.pressedList.index(Key)]
+            elif Key in self.pressedList:
+                if self.pressedList[-1] == Key:
+                    del self.pressedList[-1]
+                    if len(self.pressedList) > 0:
+                        self.direction = KEYS_DIR_REV[self.pressedList[-1]]
+                        firstTime = True
+                else:
+                    del self.pressedList[self.pressedList.index(Key)]
             i += 1
         if len(self.pressedList) > 0 and firstTime == False:
             index = KEYS.index(self.pressedList[-1])

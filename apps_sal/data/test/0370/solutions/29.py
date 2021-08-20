@@ -1,5 +1,5 @@
 K = int(input())
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 
 
 def golf(a, b):
@@ -12,7 +12,6 @@ def golf(a, b):
     if a > b:
         t = golf(b, a)
         return (t[1], t[0])
-
     if a + b >= K * 2:
         return (a, b - K)
     if a + b == K:
@@ -27,7 +26,7 @@ else:
     res = []
     while X or Y:
         res.append((X, Y))
-        X, Y = golf(X, Y)
+        (X, Y) = golf(X, Y)
     print(len(res))
-    for r in res[:: -1]:
+    for r in res[::-1]:
         print(r[0], r[1])

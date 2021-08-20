@@ -1,5 +1,7 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
+
         def startswith(S, k, x):
             y = 0
             for i in range(k, len(S)):
@@ -9,8 +11,7 @@ class Solution:
                 elif y > x:
                     break
             return 0
-
-        MAX_INT = 2**31 - 1
+        MAX_INT = 2 ** 31 - 1
         a = 0
         for i in range(len(S) - 2):
             a = 10 * a + int(S[i])

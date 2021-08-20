@@ -1,8 +1,8 @@
 n = int(input())
 s = input()
-L = ""
-R = ""
-C = ""
+L = ''
+R = ''
+C = ''
 tmp = 0
 ans = []
 for i in range(1, len(s)):
@@ -10,6 +10,6 @@ for i in range(1, len(s)):
     R = s[i:]
     C = len(set(L) & set(R))
     ans.append(C)
-    L = ""
-    R = ""
+    L = ''
+    R = ''
 print(max(ans))

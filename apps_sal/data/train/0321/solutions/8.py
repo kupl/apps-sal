@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfCanBreak(self, s1: str, s2: str) -> bool:
         c1 = Counter(s1)
         c2 = Counter(s2)

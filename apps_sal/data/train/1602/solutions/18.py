@@ -5,19 +5,17 @@ for k in range(0, t):
         x = int(input())
         g = int(input())
         if g == 1:
-            print("Impossible")
+            print('Impossible')
         else:
-            print("Possible")
+            print('Possible')
     else:
         x = int(input())
-        seq = input().split(" ")
+        seq = input().split(' ')
         game = []
-
         for j in range(0, n):
             game.append(int(seq[j]))
         game.sort()
-
-        if(game[0] == 1):
-            print("Impossible")
+        if game[0] == 1:
+            print('Impossible')
         else:
-            print("Possible")
+            print('Possible')

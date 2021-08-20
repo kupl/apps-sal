@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def prime_factorization(n):
@@ -7,7 +7,7 @@ def prime_factorization(n):
     else:
         i = 2
         ans = []
-        k = int(n**0.5) + 1
+        k = int(n ** 0.5) + 1
         for j in range(2, k + 1):
             if n == 1:
                 break
@@ -27,5 +27,4 @@ def prime_factorization(n):
 
 A = prime_factorization(a)
 B = prime_factorization(b)
-
 print(len(set(A) & set(B)))

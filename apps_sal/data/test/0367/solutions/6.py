@@ -1,13 +1,10 @@
 def palindrome(s):
     chars = [0] * 26
     L = len(s)
-    isOdd = (L % 2 != 0)
-    # populate chars
+    isOdd = L % 2 != 0
     for c in s:
         n = ord(c) - 97
         chars[n] += 1
-    # permutations
-
     left = 0
     right = 25
     while left < right:
@@ -21,11 +18,9 @@ def palindrome(s):
             else:
                 chars[left] += 1
                 chars[right] -= 1
-
-    # build result
     result = [' '] * L
     index = 0
-    oddC = ""
+    oddC = ''
     for j in range(26):
         n = chars[j]
         if n > 0:
@@ -35,10 +30,8 @@ def palindrome(s):
                 result[index] = chr(j + 97)
                 result[L - 1 - index] = chr(j + 97)
                 index += 1
-
     if isOdd:
         result[L // 2] = oddC
-
     return ''.join(result)
 
 

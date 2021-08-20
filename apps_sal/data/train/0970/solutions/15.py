@@ -4,17 +4,17 @@ for _ in range(int(input())):
     l = list(map(int, input().split()))
     c = []
     for _ in range(int(input())):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         s = x + y
         st = 0
         end = n - 1
         t = True
-        while(st <= end):
+        while st <= end:
             half = (end + st) // 2
-            if (l[half] == s):
+            if l[half] == s:
                 t = False
                 break
-            elif(l[half] > s):
+            elif l[half] > s:
                 end = half - 1
             else:
                 st = half + 1

@@ -1,7 +1,7 @@
 n = int(input())
 a = map(int, input().split())
 b = map(int, input().split())
-parent, rank = [-1] * n, [0] * n
+(parent, rank) = ([-1] * n, [0] * n)
 source = [i for i in range(n)]
 occurences = [0] * n
 printer = []
@@ -20,7 +20,7 @@ def fp(x):
 
 def u(x, y):
     best = None
-    xP, yP = fp(x), fp(y)
+    (xP, yP) = (fp(x), fp(y))
     if rank[x] < rank[y]:
         best = parent[xP] = yP
     elif rank[x] > rank[y]:
@@ -43,4 +43,4 @@ for val in a:
     occurences[p] -= 1
     if occurences[p] == 0:
         u(p, (p + 1) % n)
-print(" ".join(printer))
+print(' '.join(printer))

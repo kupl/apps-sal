@@ -1,7 +1,6 @@
-n, k = (int(i) for i in input().split())
+(n, k) = (int(i) for i in input().split())
 string = input()
-
-INF = 10**100
+INF = 10 ** 100
 cache = [INF] * n
 
 
@@ -22,7 +21,6 @@ for i in range(n):
         if new < cache[i]:
             cache[i] = new
             last_idx = 0
-
         if reached_end:
             continue
         end = i + k + 1

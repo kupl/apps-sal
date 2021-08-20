@@ -14,9 +14,8 @@ for i in range(n):
     else:
         if z[i] < y and z[i] + x1 == y:
             flag[0] += 1
-        else:
-            if z[i] - x1 == y:
-                flag[0] += 1
+        elif z[i] - x1 == y:
+            flag[0] += 1
         if z[i] + x2 == a or z[i] == a:
             flag[1] += 1
         if z[i] - x2 == b or z[i] == b:

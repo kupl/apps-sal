@@ -27,10 +27,9 @@ def abc055_d():
                 if res[i] == 'W' and res[i - 1] == 'W':
                     res[i + 1] = 'W'
         return res
-
     ans = '-1'
     ini = [('S', 'S'), ('S', 'W'), ('W', 'S'), ('W', 'W')]
-    for ini1, ini0 in ini:
+    for (ini1, ini0) in ini:
         res = solve(ini1, ini0)
         if res[0] == res[n] and res[1] == res[n + 1]:
             ans = ''.join(res[1:n + 1])

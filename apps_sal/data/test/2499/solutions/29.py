@@ -14,7 +14,7 @@ def print_ans(N, input_line):
     """
     ar = np.array(input_line.split(), 'int64')
     X = np.bitwise_xor.reduce(ar)
-    ar = np.hstack((ar, np.array([1 << i for i in range(60) if X & (1 << i)], 'int64')))
+    ar = np.hstack((ar, np.array([1 << i for i in range(60) if X & 1 << i], 'int64')))
     for k in range(60)[::-1]:
         b = 1 << k
         j = ar & b != 0
@@ -25,7 +25,7 @@ def print_ans(N, input_line):
             ar[j] ^= x
             ar[i] = x
     r = np.bitwise_xor.reduce(ar)
-    print((r + (r ^ X)))
+    print(r + (r ^ X))
 
 
 def __starting_point():

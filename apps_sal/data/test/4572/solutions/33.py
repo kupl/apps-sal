@@ -10,4 +10,4 @@ for i in range(26):
 if flag:
     print(chr(97 + i))
 else:
-    print("None")
+    print('None')

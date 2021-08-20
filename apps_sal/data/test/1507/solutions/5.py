@@ -1,6 +1,5 @@
-n, k = [int(i) for i in input().strip().split()]
+(n, k) = [int(i) for i in input().strip().split()]
 g_l = input().strip()
-
 closing_i = dict()
 is_closing = [False for i in range(n)]
 for i in range(n):

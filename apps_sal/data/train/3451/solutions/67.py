@@ -1,7 +1,6 @@
-
 def mod(a, b):
     r = a % b
-    r = r + b if(r < 0) else r
+    r = r + b if r < 0 else r
     print(r)
     return r
 
@@ -30,11 +29,10 @@ def triangle(row):
     end = len(row) - 1
     i = 0
     seq = list(row)
-    while(end > 0):
+    while end > 0:
         seq[i] = IntToColor(mod(-ColorToInt(seq[i]) - ColorToInt(seq[i + 1]), 3))
         i += 1
         if i == end:
             end -= 1
             i = 0
-
     return seq[0]

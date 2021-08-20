@@ -20,11 +20,11 @@ class DSU:
             if 1 == self.target:
                 self.matches += 1
         else:
-            px, py = self.find(x), self.find(y)
-            sx, sy = self.sizes[px], self.sizes[py]
+            (px, py) = (self.find(x), self.find(y))
+            (sx, sy) = (self.sizes[px], self.sizes[py])
             if sy > sx:
-                px, py = py, px
-                sx, sy = sy, sx
+                (px, py) = (py, px)
+                (sx, sy) = (sy, sx)
             self.parents[py] = px
             self.sizes[px] = sx + sy
             if sx == self.target:
@@ -36,10 +36,11 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         dsu = DSU(len(arr), m)
         last_good = -1
-        for i, v in enumerate(arr):
+        for (i, v) in enumerate(arr):
             v -= 1
             dsu.union(v, v)
             if v - 1 >= 0 and dsu.find(v - 1) != -1:

@@ -1,4 +1,4 @@
-s = set(str(i) for i in range(10))
+s = set((str(i) for i in range(10)))
 
 
 def is_digit(n):

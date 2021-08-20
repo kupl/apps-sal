@@ -20,9 +20,9 @@ def main():
         mi = min(mi, curr)
         ma = max(ma, curr)
     if ma - mi > 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         print(*ans[:2 * n])
     return 0
 

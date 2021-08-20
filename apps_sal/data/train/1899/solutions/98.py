@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         q = collections.deque()
 
@@ -21,10 +22,9 @@ class Solution:
             elif A[r][c] == 0:
                 q.append((r, c, 1))
         find_first_island()
-
         while q:
-            cur_r, cur_c, cur_l = q.popleft()
-            for x, y in (cur_r + 1, cur_c), (cur_r - 1, cur_c), (cur_r, cur_c + 1), (cur_r, cur_c - 1):
+            (cur_r, cur_c, cur_l) = q.popleft()
+            for (x, y) in ((cur_r + 1, cur_c), (cur_r - 1, cur_c), (cur_r, cur_c + 1), (cur_r, cur_c - 1)):
                 if 0 <= x < len(A) and 0 <= y < len(A[0]):
                     if A[x][y] == 1:
                         return cur_l

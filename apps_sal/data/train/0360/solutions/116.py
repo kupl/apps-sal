@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def helper(w):
             i = 0
             cnt = 0
@@ -13,7 +15,7 @@ class Solution:
                         break
                 cnt += 1
             return False if i != len(weights) else True
-        l, r = max(weights), sum(weights)
+        (l, r) = (max(weights), sum(weights))
         while l <= r:
             mid = (l + r) // 2
             if helper(mid):

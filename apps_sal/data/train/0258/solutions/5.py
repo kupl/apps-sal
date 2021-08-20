@@ -1,41 +1,11 @@
 class Solution:
+
     def originalDigits(self, s):
         """
         :type s: str
         :rtype: str
         """
-        '''
-         # unique letter in nums: zero, two, four, six, eight
-         uniques = [['z', 'w', 'u', 'x', 'g'],
-                    ['zero', 'two', 'four', 'six', 'eight'],
-                    ['0', '2', '4', '6', '8']]
-         # then the leftover are: one, three, five, seven, nine
-         # the unique letter in each is: except nine
-         leftover = [['o', 't', 'f', 's'],
-                     ['one', 'three', 'five', 'seven'],
-                     ['1', '3', '5', '7']]
-         res = ''
-         count = collections.Counter(s)
-         for l in uniques[0]:
-             cntl = count[l]
-             if cntl != 0:
-                 idx = uniques[0].index(l)
-                 res += uniques[2][idx]*cntl
-                 for m in uniques[1][idx]:
-                     s = s.replace(m, '', cntl)
-                     count[m] -= cntl
-         #return s
-         for l in leftover[0]:
-             cntl = count[l]
-             if cntl != 0:
-                 idx = leftover[0].index(l)
-                 res += leftover[2][idx]*cntl
-                 for m in leftover[1][idx]:
-                     s = s.replace(m, '', cntl)
-                     count[m] -= cntl
-         res += '9'*count['i']
-         return ''.join(letter for letter in sorted(res))
-         '''
+        "\n         # unique letter in nums: zero, two, four, six, eight\n         uniques = [['z', 'w', 'u', 'x', 'g'],\n                    ['zero', 'two', 'four', 'six', 'eight'],\n                    ['0', '2', '4', '6', '8']]\n         # then the leftover are: one, three, five, seven, nine\n         # the unique letter in each is: except nine\n         leftover = [['o', 't', 'f', 's'],\n                     ['one', 'three', 'five', 'seven'],\n                     ['1', '3', '5', '7']]\n         res = ''\n         count = collections.Counter(s)\n         for l in uniques[0]:\n             cntl = count[l]\n             if cntl != 0:\n                 idx = uniques[0].index(l)\n                 res += uniques[2][idx]*cntl\n                 for m in uniques[1][idx]:\n                     s = s.replace(m, '', cntl)\n                     count[m] -= cntl\n         #return s\n         for l in leftover[0]:\n             cntl = count[l]\n             if cntl != 0:\n                 idx = leftover[0].index(l)\n                 res += leftover[2][idx]*cntl\n                 for m in leftover[1][idx]:\n                     s = s.replace(m, '', cntl)\n                     count[m] -= cntl\n         res += '9'*count['i']\n         return ''.join(letter for letter in sorted(res))\n         "
         dump = dict()
         dump[0] = s.count('z')
         dump[2] = s.count('w')
@@ -50,4 +20,4 @@ class Solution:
         tmp = ''
         for i in range(10):
             tmp += str(i) * dump[i]
-        return ''.join(letter for letter in sorted(tmp))
+        return ''.join((letter for letter in sorted(tmp)))

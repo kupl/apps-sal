@@ -1,30 +1,27 @@
 import math
-# Вычисление координаты точки по координатам центра, углу, и начальным относительно центра
 
 
 def getCoordinate(gx, gy, alpha, x, y):
     x1 = gx + x * math.cos(alpha) - y * math.sin(alpha)
     y1 = gy + x * math.sin(alpha) + y * math.cos(alpha)
-    return x1, y1
-# Вычисление угла, на который надо повернуть точку с координатами x, y,
-# чтобы она оказалась прямо над gx, gy
+    return (x1, y1)
 
 
 def getAngle(gx, gy, x, y):
     x = x - gx
     y = y - gy
-    cos = x / math.sqrt(x**2 + y**2)
+    cos = x / math.sqrt(x ** 2 + y ** 2)
     alpha = math.acos(cos)
     if y < 0:
         alpha = -alpha
     return math.pi / 2 - alpha
 
 
-n, q = list(map(int, input().split(' ')))
+(n, q) = list(map(int, input().split(' ')))
 x = [0] * n
 y = [0] * n
 for i in range(n):
-    x[i], y[i] = list(map(int, input().split(' ')))
+    (x[i], y[i]) = list(map(int, input().split(' ')))
 r = [0] * q
 f = [0] * q
 t = [0] * q
@@ -58,29 +55,16 @@ for i in range(n):
     x[i] -= gx
     y[i] -= gy
 alpha = 0
-#print('pos',gx, gy, alpha);
-# Восстанавливать положение точек будем по центру масс и углу
-# Угол - поворот против часовой вокруг центра масс
 fix = {0, 1}
 for i in range(q):
     if r[i] == 2:
-        currX, currY = getCoordinate(gx, gy, alpha, x[v[i]], y[v[i]])
-        print("%.6f %.6f" % (currX, currY))
+        (currX, currY) = getCoordinate(gx, gy, alpha, x[v[i]], y[v[i]])
+        print('%.6f %.6f' % (currX, currY))
     else:
         if len(fix) == 2:
             fix.remove(f[i])
-        # print('remove',f[i])
-        # j - единственный элемент в множестве
         for j in fix:
-            # print(j);
-            currX, currY = getCoordinate(gx, gy, alpha, x[j], y[j])
-            #print('fix:', currX, currY)
-            #dalpha=getAngle(gx, gy, currX, currY);
-            # alpha+=dalpha;
+            (currX, currY) = getCoordinate(gx, gy, alpha, x[j], y[j])
             alpha = angles[j]
-            # Чтобы вычислить новые координаты g, нуно повернуть ее на угол
-            # dalpha относительно currX, currY
-            gx, gy = currX, currY - math.sqrt(x[j]**2 + y[j]**2)
-
-            #print('pos',gx, gy, alpha/math.pi)
+            (gx, gy) = (currX, currY - math.sqrt(x[j] ** 2 + y[j] ** 2))
         fix.add(t[i])

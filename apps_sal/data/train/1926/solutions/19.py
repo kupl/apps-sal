@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def helper(self, num):
         sqrt = int(math.sqrt(num))
         gmin = float('inf')

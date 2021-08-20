@@ -1,4 +1,5 @@
 def buy_or_sell(pairs, fruit):
+
     def trade(pair):
         nonlocal fruit
         ret = ['buy', 'sell'][pair.index(fruit)]

@@ -1,7 +1,7 @@
-n, d, a = map(int, input().split())
+(n, d, a) = map(int, input().split())
 xh = []
 for _ in range(n):
-    x, h = map(int, input().split())
+    (x, h) = map(int, input().split())
     h = (h - 1) // a + 1
     xh.append([x, h])
 xh.sort()
@@ -9,7 +9,7 @@ damage = xh[0][1]
 ans = damage
 damage_lst = [[xh[0][0] + d * 2, damage]]
 pos = 0
-for i, (x, h) in enumerate(xh[1:], start=1):
+for (i, (x, h)) in enumerate(xh[1:], start=1):
     while x > damage_lst[pos][0]:
         damage -= damage_lst[pos][1]
         pos += 1

@@ -9,7 +9,7 @@ def pf(n: int) -> List[Tuple[int, int]]:
             break
         e = 0
         if n % p == 0:
-            while(n % p == 0):
+            while n % p == 0:
                 n //= p
                 e += 1
             r.append((p, e))
@@ -18,6 +18,6 @@ def pf(n: int) -> List[Tuple[int, int]]:
     return r
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 r = pf(gcd(a, b))
-print((len(r) + 1))
+print(len(r) + 1)

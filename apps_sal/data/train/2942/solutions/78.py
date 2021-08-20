@@ -4,8 +4,7 @@ def fold_to(distance):
     paper = 0.0001
     if distance >= paper:
         return ceil(log(distance / paper, 2))
+    elif distance >= 0:
+        return 0
     else:
-        if distance >= 0:
-            return 0
-        else:
-            return None
+        return None

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         prev = ans = float('-inf')
         for i in range(1, len(A)):

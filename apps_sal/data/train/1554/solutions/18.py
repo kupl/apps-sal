@@ -5,9 +5,8 @@ def gcd(m, b):
 
 
 test = int(input())
-
 while test != 0:
-    m, b = list(map(int, input().split()))
+    (m, b) = list(map(int, input().split()))
     result = gcd(m, b)
     print(result * 2)
     test -= 1

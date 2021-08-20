@@ -1,10 +1,9 @@
 import bisect
-A, B, Q = map(int, input().split())
+(A, B, Q) = map(int, input().split())
 S = [int(input()) for i in range(A)]
 T = [int(input()) for i in range(B)]
 S = sorted(S)
 T = sorted(T)
-
 for j in range(Q):
     x = int(input())
     a = S[bisect.bisect_left(S, x) - 1]
@@ -17,6 +16,5 @@ for j in range(Q):
         b_ = T[bisect.bisect_right(T, x)]
     else:
         b_ = T[bisect.bisect_right(T, x) - 1]
-    y = min([abs(a - x) + abs(b - a), abs(a - x) + abs(b_ - a), abs(a_ - x) + abs(b - a_), abs(a_ - x) + abs(b_ - a_),
-            abs(b - x) + abs(a - b), abs(b - x) + abs(a_ - b), abs(b_ - x) + abs(a - b_), abs(b_ - x) + abs(b_ - a_)])
+    y = min([abs(a - x) + abs(b - a), abs(a - x) + abs(b_ - a), abs(a_ - x) + abs(b - a_), abs(a_ - x) + abs(b_ - a_), abs(b - x) + abs(a - b), abs(b - x) + abs(a_ - b), abs(b_ - x) + abs(a - b_), abs(b_ - x) + abs(b_ - a_)])
     print(y)

@@ -1,7 +1,5 @@
-# alpha = "abcdefghijklmnopqrstuvwxyz"
 t = 1
 for test in range(t):
-    # n,s = (map(int, input().split()))
     n = int(input())
     a = list(map(int, input().split()))
     a.sort()

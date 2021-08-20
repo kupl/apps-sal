@@ -8,7 +8,7 @@ except ImportError:
 
 
 def isSharp(ang):
-    return ang > math.pi / 4 + 0.00001
+    return ang > math.pi / 4 + 1e-05
 
 
 def unitVector(p2, p1):
@@ -63,7 +63,7 @@ def checkMoves(check, P, V, A, filled):
     for i in check:
         if i < 0 or i >= len(P):
             break
-        x, y = P[i]
+        (x, y) = P[i]
         for j in range(51):
             for k in range(51):
                 P[i][0] = j
@@ -125,8 +125,7 @@ for i in range(T):
                 first = i
     if blunt:
         print('yes yes')
+    elif canFix(first, last, P, V, A, filled):
+        print('no yes')
     else:
-        if canFix(first, last, P, V, A, filled):
-            print('no yes')
-        else:
-            print('no no')
+        print('no no')

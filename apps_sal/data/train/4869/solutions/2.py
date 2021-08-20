@@ -6,8 +6,8 @@ def find_seventh_sons_of_seventh_sons(jstring):
 
 
 def seek4SeventhJSon(parent, _7up=False):
-    nSons, _7sons7 = 0, set()
-    for n, child in enumerate(parent['children'], 1):
+    (nSons, _7sons7) = (0, set())
+    for (n, child) in enumerate(parent['children'], 1):
         if child['gender'] == 'male':
             nSons += 1
             _7sons7 |= seek4SeventhJSon(child, n == nSons == 7)

@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 a = sorted([list(map(int, input().split())) for i in range(n)])
 left = 0
 cur_sum = 0

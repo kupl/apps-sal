@@ -1,49 +1,33 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
-    def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
 
-        if (root == None):
+    def sufficientSubset(self, root: TreeNode, limit: int) -> TreeNode:
+        if root == None:
             return None
 
         def dfs(root, val):
-
-            if (root == None):
-                return -10e9, 'nodel'
-
-            if (root):
-                left_val, left_del_str = dfs(root.left, val + root.val)
-                right_val, right_del_str = dfs(root.right, val + root.val)
-
-                if (root.left and root.right):
+            if root == None:
+                return (-10000000000.0, 'nodel')
+            if root:
+                (left_val, left_del_str) = dfs(root.left, val + root.val)
+                (right_val, right_del_str) = dfs(root.right, val + root.val)
+                if root.left and root.right:
                     cur_val = val + root.val + max(left_val, right_val)
-                elif (root.left):
+                elif root.left:
                     cur_val = val + root.val + left_val
-                elif (root.right):
+                elif root.right:
                     cur_val = val + root.val + right_val
                 else:
                     cur_val = val + root.val
-
-                #print (cur_val,root.val)
-
-                if (left_del_str == 'del'):
+                if left_del_str == 'del':
                     root.left = None
-
-                if (right_del_str == 'del'):
+                if right_del_str == 'del':
                     root.right = None
-
-                if (cur_val < limit):
-                    return cur_val - val, 'del'
+                if cur_val < limit:
+                    return (cur_val - val, 'del')
                 else:
-                    return cur_val - val, 'nodel'
-
-        _, root_del_str = dfs(root, 0)
-
-        if (root_del_str == 'del'):
+                    return (cur_val - val, 'nodel')
+        (_, root_del_str) = dfs(root, 0)
+        if root_del_str == 'del':
             return None
         else:
             return root

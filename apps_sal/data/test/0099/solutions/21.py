@@ -1,4 +1,4 @@
-B, Q, L, M = list(map(int, input().split()))
+(B, Q, L, M) = list(map(int, input().split()))
 A = set(map(int, input().split()))
 ans = 0
 for _ in range(100):
@@ -7,4 +7,4 @@ for _ in range(100):
     if B not in A:
         ans += 1
     B *= Q
-print(ans if ans < 32 else "inf")
+print(ans if ans < 32 else 'inf')

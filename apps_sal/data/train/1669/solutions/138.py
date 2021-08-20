@@ -1,8 +1,8 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-
         hand = sorted(hand)
         dct = {}
         for x in hand:
@@ -10,7 +10,6 @@ class Solution:
                 dct[x] = 1
             else:
                 dct[x] += 1
-
         while len(hand) > 0:
             group = [hand[0]]
             check = hand[0]

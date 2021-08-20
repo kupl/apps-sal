@@ -1,7 +1,6 @@
 n = int(input())
-t, a = list(map(int, input().split()))
+(t, a) = list(map(int, input().split()))
 h = [int(x) for x in input().split()]
-
 ans = float('inf')
 x = 0
 for i in range(n):

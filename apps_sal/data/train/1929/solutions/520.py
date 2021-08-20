@@ -1,10 +1,12 @@
 class TreeNode:
+
     def __init__(self):
         self.dict = defaultdict(TreeNode)
         self.result = False
 
 
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.tree = TreeNode()
         self.text = ''
@@ -24,7 +26,3 @@ class StreamChecker:
             if curr.result:
                 return True
         return False
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

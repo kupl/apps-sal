@@ -1,5 +1,4 @@
 S = input()
-
 ans = 0
 cnt = 0
 for i in S:
@@ -8,5 +7,4 @@ for i in S:
         ans = max(ans, cnt)
     else:
         cnt = 0
-
 print(ans)

@@ -13,13 +13,13 @@ for i in range(len(s) - 25):
         continue
     else:
         f = True
-        u = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        u = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         for j in u:
             if j not in subs:
                 subs = subs[:subs.find('?')] + j + subs[subs.find('?') + 1:]
         s = s[:i] + subs + s[i + 26:]
         break
-if (f):
+if f:
     s = s.replace('?', 'A')
     print(s)
 else:

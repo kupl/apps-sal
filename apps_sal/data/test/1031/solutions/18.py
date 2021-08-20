@@ -10,7 +10,7 @@ for i in range(n):
     ma = max(ma, a)
     mi = min(mi, a)
     r += lis[i]
-mat = [[' '] * (r) for i in range(ma + abs(mi) + 2)]
+mat = [[' '] * r for i in range(ma + abs(mi) + 2)]
 ro = ma
 col = 0
 for i in range(n):

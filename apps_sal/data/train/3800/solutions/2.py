@@ -3,15 +3,15 @@ from string import ascii_uppercase as ALPHA
 
 
 def num2alpha(num, b=len(ALPHA), numerals=ALPHA):
-    return '' if not num else (num2alpha((num - 1) // b, b, numerals) + numerals[(num - 1) % b])
+    return '' if not num else num2alpha((num - 1) // b, b, numerals) + numerals[(num - 1) % b]
 
 
 def alpha2num(string, b=len(ALPHA), numerals=ALPHA):
-    return sum((numerals.index(v) + 1) * b**i for i, v in enumerate(reversed(string)))
+    return sum(((numerals.index(v) + 1) * b ** i for (i, v) in enumerate(reversed(string))))
 
 
-rcregex = re.compile('R(\d+)C(\d+)')
-spregex = re.compile('([A-Z]+)(\d+)')
+rcregex = re.compile('R(\\d+)C(\\d+)')
+spregex = re.compile('([A-Z]+)(\\d+)')
 
 
 def spreadsheet(s):

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 1
 su = sum(a)
@@ -13,26 +13,23 @@ def pos(d):
     i = d
     while i <= n:
         k = i // d
-        neg = k * i - ((k * (k + 1)) // 2) * d
-        if(s[i - 1] - neg >= m):
+        neg = k * i - k * (k + 1) // 2 * d
+        if s[i - 1] - neg >= m:
             return True
         i += 1
     return False
 
 
-if(su < m):
+if su < m:
     ans = -1
     print(ans)
-
 else:
     first = 0
     last = n
-
     while first < last - 1:
         midpoint = (first + last) // 2
         if pos(midpoint):
             last = midpoint
         else:
             first = midpoint
-
     print(last)

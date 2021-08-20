@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSum(self, arr: List[int]) -> int:
         n = len(arr)
         if n == 1:
@@ -11,7 +12,7 @@ class Solution:
                 maxsum.append(arr[i])
         s = 0
         result = -10 ** 6
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             r = maxsum.pop()
             if 0 < i < n - 1:
                 result = max(result, s + r)

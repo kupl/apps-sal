@@ -1,8 +1,5 @@
-# put your current running code in here
-
 n = int(input())
 s = list(input())
-
 gr_lg = []
 i = 0
 while i < len(s):
@@ -13,7 +10,6 @@ while i < len(s):
     if gr_cnt > 0:
         gr_lg.append(gr_cnt)
     i += 1
-
 print(len(gr_lg))
 for lg in gr_lg:
-    print(lg, end=" ")
+    print(lg, end=' ')

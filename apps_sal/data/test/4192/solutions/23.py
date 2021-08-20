@@ -6,17 +6,16 @@ def input():
 
 
 sys.setrecursionlimit(20000000)
-
 MOD = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
-    D, T, S = list(map(int, input().split()))
+    (D, T, S) = list(map(int, input().split()))
     if D / S <= T:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

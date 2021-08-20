@@ -2,21 +2,19 @@
 NTC here
 """
 from sys import stdin, setrecursionlimit
-setrecursionlimit(10**7)
+setrecursionlimit(10 ** 7)
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
-
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
-    n, c = lin()
+    (n, c) = lin()
     s = lin()
     e = lin()
     sol = [[0, 0] for i in range(n)]
@@ -28,6 +26,3 @@ def main():
 
 
 main()
-# try:
-#     main()
-# except Exception as e: print(e)

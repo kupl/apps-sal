@@ -1,4 +1,4 @@
-x, n = list(map(int, input().split()))
+(x, n) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 a = 0
 ab = 0

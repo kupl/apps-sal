@@ -8,7 +8,7 @@ def f(t):
     return list(map(str, t))
 
 
-n, k, d = map(int, input().split())
+(n, k, d) = map(int, input().split())
 if k ** d < n:
     print(-1)
 else:

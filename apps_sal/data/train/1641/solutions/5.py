@@ -13,19 +13,15 @@ def do_normalize(current_elem, dimension, size, growing_value):
     missing_element_count = size - len(current_elem) if not is_basic else size
     current_items = [] if is_basic else current_elem
     fill_value = current_elem if is_basic else growing_value
-
     return_elem = []
     if dimension > 1:
         for item in current_items:
             return_elem.append(do_normalize(item, dimension - 1, size, growing_value))
         for _ in range(missing_element_count):
-            return_elem.append(
-                do_normalize(fill_value, dimension - 1, size, growing_value)
-            )
-    else:  # dimension == 1
+            return_elem.append(do_normalize(fill_value, dimension - 1, size, growing_value))
+    else:
         return_elem = list(current_items)
         return_elem.extend(repeat_value(fill_value, missing_element_count))
-
     return return_elem
 
 

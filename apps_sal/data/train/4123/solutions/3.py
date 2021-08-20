@@ -1,6 +1,6 @@
 def lcm_cardinality(n):
     card = 1
-    for d in range(2, int(n ** .5) + 1):
+    for d in range(2, int(n ** 0.5) + 1):
         if not n % d:
             mul = 0
             while not n % d:

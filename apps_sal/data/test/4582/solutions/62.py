@@ -1,2 +1,2 @@
-a, b = input().split()
-print("DH"[a == b])
+(a, b) = input().split()
+print('DH'[a == b])

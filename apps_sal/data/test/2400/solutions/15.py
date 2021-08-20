@@ -1,9 +1,9 @@
 t = int(input())
 for test in range(t):
     n = int(input())
-    a = list(map(int, input().split(" ")))
+    a = list(map(int, input().split(' ')))
     m = int(input())
-    b = list(map(int, input().split(" ")))
+    b = list(map(int, input().split(' ')))
     odda = 0
     evena = 0
     oddb = 0
@@ -19,6 +19,6 @@ for test in range(t):
             evenb += 1
         else:
             oddb += 1
-    res += (evena * evenb)
-    res += (odda * oddb)
+    res += evena * evenb
+    res += odda * oddb
     print(res)

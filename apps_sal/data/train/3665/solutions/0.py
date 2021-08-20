@@ -12,7 +12,7 @@ def is_prime(n):
 
 def all_dig_prime(n):
     for d in str(n):
-        if d not in "2357":
+        if d not in '2357':
             return False
     return True
 
@@ -20,6 +20,6 @@ def all_dig_prime(n):
 def not_primes(a, b):
     res = []
     for i in range(a, b):
-        if all_dig_prime(i) and not is_prime(i):
+        if all_dig_prime(i) and (not is_prime(i)):
             res.append(i)
     return res

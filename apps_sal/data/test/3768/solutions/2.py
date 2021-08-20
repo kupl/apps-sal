@@ -1,7 +1,7 @@
 def solve(a, b):
     r = []
-    while a and b and a + b > 2:
-        q = min((a // b + b // a), max(a, b) - 1)
+    while a and b and (a + b > 2):
+        q = min(a // b + b // a, max(a, b) - 1)
         r.append(str(q))
         if a > b:
             r.append('A')
@@ -15,7 +15,7 @@ def solve(a, b):
 
 
 def main():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(solve(a, b))
 
 

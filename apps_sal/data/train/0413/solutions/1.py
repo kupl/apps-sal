@@ -1,4 +1,5 @@
 class Solution:
+
     def breakPalindrome(self, s: str) -> str:
         for i in range(len(s) // 2):
             if s[i] != 'a':

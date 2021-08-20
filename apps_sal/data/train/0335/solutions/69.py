@@ -1,4 +1,5 @@
 class Solution:
+
     def tallestBillboard(self, rods: List[int]) -> int:
         deltaBase = {0: 0}
         deltaList = [0]
@@ -13,7 +14,6 @@ class Solution:
                     deltaBase[deltaPlus] = deltaBaseTemp[delta]
                 else:
                     deltaBase[deltaPlus] = max(deltaBase[deltaPlus], deltaBaseTemp[delta])
-
                 deltaMinus = delta - rod
                 if deltaMinus > 0:
                     if deltaMinus not in deltaBase:

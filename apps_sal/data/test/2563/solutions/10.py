@@ -18,11 +18,10 @@ for _ in range(int(input())):
         elif j == len(even):
             output.append(str(odd[i]))
             i += 1
+        elif odd[i] < even[j]:
+            output.append(str(odd[i]))
+            i += 1
         else:
-            if odd[i] < even[j]:
-                output.append(str(odd[i]))
-                i += 1
-            else:
-                output.append(str(even[j]))
-                j += 1
-    print("".join(output))
+            output.append(str(even[j]))
+            j += 1
+    print(''.join(output))

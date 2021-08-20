@@ -9,5 +9,5 @@ while True:
         print(ans)
         break
     if ans > N:
-        print((-1))
+        print(-1)
         break

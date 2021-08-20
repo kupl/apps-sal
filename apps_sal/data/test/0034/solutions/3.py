@@ -1,5 +1,4 @@
-n, a, b = list(map(int, input().strip().split()))
-
+(n, a, b) = list(map(int, input().strip().split()))
 x = 1
 while True:
     prva = a // x

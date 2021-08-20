@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 holes = list(map(int, input().split()))
 s = sum(holes)
 f = holes[0]

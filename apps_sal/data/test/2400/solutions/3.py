@@ -2,28 +2,13 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-3
-3
-1 3 2
-2
-0 3
-1
-1
-1
-1
-1
-2
-1
-1
-'''
+'\n3\n3\n1 3 2\n2\n0 3\n1\n1\n1\n1\n1\n2\n1\n1\n'
 for _ in range(int(input())):
     n = int(input())
     a = list(mi())
     m = int(input())
     b = list(mi())
-
-    oa, ob, ea, eb = 0, 0, 0, 0
+    (oa, ob, ea, eb) = (0, 0, 0, 0)
     for i in a:
         if i % 2:
             oa += 1
@@ -34,5 +19,4 @@ for _ in range(int(input())):
             ob += 1
         else:
             eb += 1
-
     print(ea * eb + oa * ob)

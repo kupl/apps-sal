@@ -1,8 +1,8 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         total = sum(A)
         isum = 0
-
         for i in range(0, len(A) - 2):
             isum += A[i]
             if isum == total / 3:

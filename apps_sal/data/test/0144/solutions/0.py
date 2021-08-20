@@ -7,14 +7,14 @@ for i in range(n - 1):
     has = False
     for j in range(i + 1, n):
         tn += a[j]
-        if (tn == sm):
+        if tn == sm:
             tn = 0
             has = True
         elif tn > sm:
             res = False
             break
-    if (tn == 0 and res and has):
-        print("YES")
+    if tn == 0 and res and has:
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

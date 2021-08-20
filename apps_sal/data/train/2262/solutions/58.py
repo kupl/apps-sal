@@ -1,8 +1,8 @@
-r, c, n = map(int, input().split())
+(r, c, n) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 iru = []
 for i in range(n):
-    if ((a[i][0] == 0 or a[i][0] == r or a[i][1] == 0 or a[i][1] == c) and (a[i][2] == 0 or a[i][2] == r or a[i][3] == 0 or a[i][3] == c)):
+    if (a[i][0] == 0 or a[i][0] == r or a[i][1] == 0 or (a[i][1] == c)) and (a[i][2] == 0 or a[i][2] == r or a[i][3] == 0 or (a[i][3] == c)):
         b = a[i]
         b1 = [b[0], b[1]]
         b2 = [b[2], b[3]]
@@ -14,7 +14,6 @@ for i in range(n):
             b1 = c + r + c - b1[1]
         else:
             b1 = c * 2 + r * 2 - b1[0]
-
         if b2[0] == 0:
             b2 = b2[1]
         elif b2[1] == c:
@@ -32,14 +31,12 @@ iru = sorted(iru)
 ato = 0
 stack = [r + r + c + c]
 flag = 'YES'
-for a, b in iru:
+for (a, b) in iru:
     while a >= stack[-1]:
         stack.pop()
-
     if b > stack[-1]:
         flag = 'NO'
         break
     else:
         stack.append(b)
-
 print(flag)

@@ -5,16 +5,14 @@ def rl():
     return [int(w) for w in stdin.readline().split()]
 
 
-n, end_day = rl()
+(n, end_day) = rl()
 d = rl()
-
 start_month = start_day = end_month = hugs = 0
 while end_month < n and end_day >= d[end_month]:
-    hugs += (d[end_month] * (d[end_month] + 1)) // 2
+    hugs += d[end_month] * (d[end_month] + 1) // 2
     end_day -= d[end_month]
     end_month += 1
-hugs += (end_day * (end_day + 1)) // 2
-
+hugs += end_day * (end_day + 1) // 2
 max_hugs = hugs
 if end_month < n:
     while start_month < n:
@@ -32,5 +30,4 @@ if end_month < n:
                 end_month = 0
         if hugs > max_hugs:
             max_hugs = hugs
-
 print(max_hugs)

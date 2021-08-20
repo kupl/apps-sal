@@ -10,7 +10,7 @@ def judge(k, N, A):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     A.sort()
     t = A[-1] * 2
@@ -56,4 +56,4 @@ def main():
     return r - (tot - M) * X
 
 
-print((main()))
+print(main())

@@ -1,6 +1,6 @@
 from math import *
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     yes = 0
     for i in range(n):
         b = [list(map(int, input().split())), list(map(int, input().split()))]

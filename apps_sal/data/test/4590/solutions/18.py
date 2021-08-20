@@ -1,7 +1,6 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 arr1 = list(map(int, input().split()))
 arr2 = list(map(int, input().split()))
-
 acum1 = [0]
 for i in range(n):
     acum1.append(acum1[-1] + arr1[i])

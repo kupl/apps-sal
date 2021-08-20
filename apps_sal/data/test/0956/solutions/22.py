@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 people = {}
 tmp = set()
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if people.get(a) == None:
         people[a] = []
     if people.get(b) == None:
@@ -22,7 +22,7 @@ for i in tmp:
         for fr in people[j]:
             if people[i].count(fr) != 0:
                 cnt += 1
-        per = (100 * cnt) / len(people[i])
+        per = 100 * cnt / len(people[i])
         if int(per) >= k:
             ans.append(j)
     print(len(ans), end=' ')

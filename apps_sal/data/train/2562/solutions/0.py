@@ -3,7 +3,7 @@ s = input().strip()
 s_unique_element = list(set(s))
 group = []
 key = []
-for k, g in itertools.groupby(s):
+for (k, g) in itertools.groupby(s):
     group.append(list(g))
     key.append(k)
 for i in range(len(group)):

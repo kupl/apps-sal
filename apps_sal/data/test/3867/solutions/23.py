@@ -5,7 +5,7 @@ visited = [False for i in range(n + 1)]
 dp = [0 for i in range(n + 1)]
 l = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     l[a].append(b)
     l[b].append(a)
 b = list(map(int, input().split()))
@@ -26,7 +26,7 @@ while len(s) != n:
             s.append(b[i])
             dp[b[i]] = 0
         else:
-            print("No")
+            print('No')
             t = False
             break
     else:
@@ -35,4 +35,4 @@ while len(s) != n:
         continue
     break
 if t:
-    print("Yes")
+    print('Yes')

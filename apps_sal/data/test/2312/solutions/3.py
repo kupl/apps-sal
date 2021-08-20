@@ -5,11 +5,11 @@ while t > 0:
     f = 0
     l.sort()
     for i in range(1, n):
-        if (l[i] == l[i - 1]):
+        if l[i] == l[i - 1]:
             f = 1
             break
     if f == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t -= 1

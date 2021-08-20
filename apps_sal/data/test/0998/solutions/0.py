@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = []
 lst = 0
 for i in range(1, 1 << n):
@@ -6,4 +6,4 @@ for i in range(1, 1 << n):
         a.append(i ^ lst)
         lst = i
 print(len(a))
-print(' '.join(str(i) for i in a))
+print(' '.join((str(i) for i in a)))

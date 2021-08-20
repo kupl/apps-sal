@@ -15,11 +15,10 @@ for i in range(q):
                 nch += 1
             if minrazn > a[k + 1] - a[k] and a[k + 1] != a[k]:
                 minrazn = a[k + 1] - a[k]
+        elif a[k] % 2 == 0:
+            ch += 1
         else:
-            if a[k] % 2 == 0:
-                ch += 1
-            else:
-                nch += 1
+            nch += 1
     if ch % 2 == 0:
         print('YES')
     elif minrazn == 1:

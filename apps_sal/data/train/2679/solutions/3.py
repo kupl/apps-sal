@@ -12,7 +12,7 @@ def hamster_me(code, message):
         if finish == 0:
             finish = len(abc)
         ind = 1
-        for j in abc[start: finish]:
+        for j in abc[start:finish]:
             table[j] = code[i] + str(ind)
             ind += 1
     cipher = str.maketrans(table)

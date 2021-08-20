@@ -3,13 +3,12 @@ from heapq import *
 
 
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if k * m > len(bloomDay):
             return -1
-
-        que = [[-1 * num, ind] for ind, num in enumerate(bloomDay[:k])]
+        que = [[-1 * num, ind] for (ind, num) in enumerate(bloomDay[:k])]
         heapify(que)
-
         maxArr = [-1 * que[0][0]]
         for ind in range(k, len(bloomDay)):
             while que and que[0][1] <= ind - k:
@@ -17,7 +16,6 @@ class Solution:
             heappush(que, [-1 * bloomDay[ind], ind])
             maxArr.append(-1 * que[0][0])
 
-        # print(maxArr)
         def isValid(num):
             cnt = 0
             ind = 0
@@ -27,9 +25,7 @@ class Solution:
                     ind += k
                 else:
                     ind += 1
-            # print(\"{0} => {1}\".format(num, cnt))
             return cnt >= m
-
         low = 1
         high = max(bloomDay) + 1
         ans = -1

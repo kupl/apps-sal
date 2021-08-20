@@ -1,6 +1,5 @@
-# cook your dish here
 sieve = [True for i in range(201)]
-sieve[0], sieve[1] = False, False
+(sieve[0], sieve[1]) = (False, False)
 i = 2
 p = []
 while i <= 200:
@@ -29,4 +28,4 @@ for _ in range(int(input())):
             break
         i += 1
     if not out:
-        print("NO")
+        print('NO')

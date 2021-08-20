@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 rows = list(map(int, input().split()))
 cols = list(map(int, input().split()))
 matrix = [None] * h
@@ -37,5 +37,5 @@ if not found:
         for j in range(w):
             if matrix[i][j] < 0:
                 cnt += 1
-    answer = (2 ** cnt) % 1000000007
+    answer = 2 ** cnt % 1000000007
 print(answer)

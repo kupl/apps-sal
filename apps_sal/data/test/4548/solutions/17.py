@@ -1,5 +1,5 @@
-n, m, x = map(int, input().split())
+(n, m, x) = map(int, input().split())
 a = list(map(int, input().split()))
-start = sum(i > x for i in a)
-end = sum(i < x for i in a)
+start = sum((i > x for i in a))
+end = sum((i < x for i in a))
 print(min(start, end))

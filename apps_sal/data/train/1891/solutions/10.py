@@ -1,4 +1,5 @@
 class Solution:
+
     def solveNQueens(self, n):
         """
         :type n: int
@@ -13,7 +14,7 @@ class Solution:
         for x in result:
             table_str = []
             for y in x:
-                table_str.append("." * y + "Q" + "." * (n - y - 1))
+                table_str.append('.' * y + 'Q' + '.' * (n - y - 1))
             result_str.append(table_str)
         return result_str
 
@@ -26,7 +27,7 @@ class Solution:
         else:
             result = []
             for x in table[n]:
-                table1 = [(x if type(x) == int else x.copy()) for x in table]
+                table1 = [x if type(x) == int else x.copy() for x in table]
                 table1[n] = x
                 for row in range(n + 1, len(table)):
                     if x in table1[row]:

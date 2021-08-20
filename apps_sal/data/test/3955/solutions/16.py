@@ -1,11 +1,8 @@
-
 def __starting_point():
-    n, k, p = map(int, input().split())
+    (n, k, p) = map(int, input().split())
     numbers = list(map(int, input().split()))
-    # initialize vectors x, y with 0 for n + 10 positions
     x = [0] * (n + 10)
     y = [0] * (n + 10)
-    # raise to power
     p = p ** k
     maxi = 0
     for i in range(n):

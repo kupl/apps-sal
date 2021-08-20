@@ -1,5 +1,5 @@
 def divisor(n):
-    lower, upper = [], []
+    (lower, upper) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -11,7 +11,7 @@ def divisor(n):
 
 
 n = int(input())
-ans = float("inf")
+ans = float('inf')
 for d in divisor(n):
     i = n // d
     tmp = i + d - 2

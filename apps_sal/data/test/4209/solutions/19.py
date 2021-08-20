@@ -12,7 +12,6 @@ def schedule(times):
     b_keys = sorted(list(index_by_b.keys()))
     result = []
     a_min = 0
-    # Get interval with minimun end time whose start time >= a_min.
     for end_time in b_keys:
         start = index_by_b[end_time][-1][0]
         if start >= a_min:
@@ -32,7 +31,7 @@ def solve(n, a_l):
             else:
                 index_by_sum[sum_] = [(i, j)]
     result = []
-    for sum_, times in index_by_sum.items():
+    for (sum_, times) in index_by_sum.items():
         sub_result = schedule(times)
         if len(sub_result) > len(result):
             result = sub_result
@@ -44,7 +43,7 @@ def main():
     a_l = list(map(int, input().split()))
     result = solve(n, a_l)
     print(len(result))
-    for a, b in result:
+    for (a, b) in result:
         print(a + 1, b)
 
 

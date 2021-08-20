@@ -2,11 +2,8 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-3 5
-1 2 3
-'''
-n, k = mi()
+'\n3 5\n1 2 3\n'
+(n, k) = mi()
 a = list(set(mi()))
 n = len(a)
 a.sort()
@@ -28,7 +25,4 @@ while k:
         continue
     print(a[i])
     i += 1
-'''
-4 2
-3 3 5 10
-'''
+'\n4 2\n3 3 5 10\n'

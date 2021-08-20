@@ -4,7 +4,6 @@ s = input()
 dic = {}
 for x in range(n):
     dic.update({cl[x]: x + 1})
-
 cl = sorted(cl)
 pl = []
 res = ''
@@ -18,5 +17,4 @@ for c in s:
         mx = pl[-1]
         res += str(dic[mx]) + ' '
         pl.pop(-1)
-
 print(res)

@@ -1,4 +1,4 @@
-n, c, d = list(map(int, input().split()))
+(n, c, d) = list(map(int, input().split()))
 coin = []
 diamond = []
 for i in range(n):

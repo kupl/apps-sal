@@ -1,7 +1,5 @@
 import sys
-
 S = input()
-
 count = 0
 ans = 0
 for i in range(len(S)):
@@ -10,5 +8,4 @@ for i in range(len(S)):
     else:
         count = 0
     ans = max(ans, count)
-
 print(ans)

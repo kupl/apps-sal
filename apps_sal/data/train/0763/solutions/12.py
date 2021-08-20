@@ -5,7 +5,7 @@ for _ in range(t):
     p = input()
     counter = 0
     flag = 0
-    count1, count2 = 0, 0
+    (count1, count2) = (0, 0)
     for x in s:
         if x == '1':
             count1 += 1

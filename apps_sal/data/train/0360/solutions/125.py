@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         l = -1
         r = max(weights) * len(weights)
@@ -23,13 +24,11 @@ class Solution:
                         break
                 day += 1
             return day <= D
-        print((isOk(100000)))
-
+        print(isOk(100000))
         while r - l > 1:
             mid = l + (r - l) // 2
             if isOk(mid):
                 r = mid
             else:
                 l = mid
-
         return r

@@ -3,8 +3,8 @@ def mapt(fn, *args):
 
 
 def main():
-    s = mapt(int, input().split("/"))
-    print("Heisei" if s <= (2019, 4, 30) else "TBD")
+    s = mapt(int, input().split('/'))
+    print('Heisei' if s <= (2019, 4, 30) else 'TBD')
 
 
 main()

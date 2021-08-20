@@ -10,14 +10,14 @@ for i in range(m - n + 1):
     L = []
     k = 0
     for j in range(len(s)):
-        if (t[ii] != s[j]):
+        if t[ii] != s[j]:
             L.append(j + 1)
             k = k + 1
         ii = ii + 1
-    if (k < min):
+    if k < min:
         min = k
         A = L
 print(min)
 for i in range(len(A)):
-    print(A[i], end=" ")
+    print(A[i], end=' ')
 print()

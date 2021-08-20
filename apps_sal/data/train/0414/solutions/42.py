@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         if k >= len(arr) - 1:
             return max(arr)
@@ -13,5 +14,4 @@ class Solution:
                 count = 1
                 arr.append(arr[0])
                 arr = arr[1:]
-            #print(arr, count)
         return arr[0]

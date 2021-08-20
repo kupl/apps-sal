@@ -7,4 +7,4 @@ for _ in range(int(input())):
     for i in range(num):
         if a == lst[i]:
             print(i + 1)
-            break  # cook your dish here
+            break

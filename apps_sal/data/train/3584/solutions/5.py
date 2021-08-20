@@ -1,6 +1,6 @@
 def encrypt(text, key):
-    r1, r2, r3 = 'qwertyuiop', 'asdfghjkl', 'zxcvbnm,.'
-    R1, R2, R3 = 'QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM<>'
+    (r1, r2, r3) = ('qwertyuiop', 'asdfghjkl', 'zxcvbnm,.')
+    (R1, R2, R3) = ('QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM<>')
     key = str(key).zfill(3)
     mx = ''
     for x in text:
@@ -22,8 +22,8 @@ def encrypt(text, key):
 
 
 def decrypt(text, key):
-    r1, r2, r3 = 'qwertyuiop', 'asdfghjkl', 'zxcvbnm,.'
-    R1, R2, R3 = 'QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM<>'
+    (r1, r2, r3) = ('qwertyuiop', 'asdfghjkl', 'zxcvbnm,.')
+    (R1, R2, R3) = ('QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM<>')
     key = str(key).zfill(3)
     mx = ''
     for x in text:

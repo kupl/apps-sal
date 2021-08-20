@@ -16,12 +16,7 @@ for i in range(3, n):
     min_ = mcd(min_, a[i] - a[i - 1])
     if min_ == 1:
         break
-# if min_ == 1:
-#     print(a[-1] - a[0] - n + 2)
-# else:
 count = 0
-
 for i in range(1, n):
     count += (a[i] - a[i - 1]) // min_ - 1
-
 print(count)

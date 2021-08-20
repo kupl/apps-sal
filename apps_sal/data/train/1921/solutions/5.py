@@ -15,14 +15,13 @@ class DinnerPlates:
 
     def pop(self) -> int:
         rightmost = len(self.stacks) - 1
-
-        while rightmost >= 0 and not self.stacks[rightmost]:
+        while rightmost >= 0 and (not self.stacks[rightmost]):
             rightmost -= 1
         if rightmost == -1:
             return -1
         elem = self.stacks[rightmost][-1]
         self.stacks[rightmost].pop()
-        while rightmost >= 0 and not self.stacks[rightmost]:
+        while rightmost >= 0 and (not self.stacks[rightmost]):
             self.stacks.pop()
             rightmost -= 1
         return elem
@@ -35,9 +34,3 @@ class DinnerPlates:
         if self.current > index:
             self.current = index
         return elem
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

@@ -1,7 +1,6 @@
-n, k = [int(x) for x in input().split()[:2]]
+(n, k) = [int(x) for x in input().split()[:2]]
 an = [int(x) for x in input().split()[:n]]
 tn = [int(x) for x in input().split()[:n]]
-
 first = 0
 for i in range(k):
     first += an[i]

@@ -1,4 +1,4 @@
-n, mod = int(input()), 10**9 + 7
+(n, mod) = (int(input()), 10 ** 9 + 7)
 dp = [{} for i in range(n + 1)]
 
 
@@ -6,7 +6,7 @@ def ok(last4):
     for i in range(4):
         t = list(last4)
         if i >= 1:
-            t[i - 1], t[i] = t[i], t[i - 1]
+            (t[i - 1], t[i]) = (t[i], t[i - 1])
         if ''.join(t).count('AGC') >= 1:
             return 0
     return 1

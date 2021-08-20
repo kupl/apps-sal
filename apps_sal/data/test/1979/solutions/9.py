@@ -10,7 +10,7 @@ def main():
     for i in range(n):
         A[next(ints) - 1] = i
     b = [next(ints) for i in range(n)]
-    ans = max(Counter((i - A[b[i] - 1]) % n for i in range(n)).values())
+    ans = max(Counter(((i - A[b[i] - 1]) % n for i in range(n))).values())
     print(ans)
     return
 

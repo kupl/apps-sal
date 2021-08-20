@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 o = []
 cur = 0
 for x in a:
@@ -10,7 +9,6 @@ for x in a:
         cur = 1
     else:
         cur += 1
-
 o.append(cur)
 print(len(o))
-print(' '.join(str(x) for x in o))
+print(' '.join((str(x) for x in o)))

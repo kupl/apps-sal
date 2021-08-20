@@ -1,9 +1,9 @@
 n = int(input())
 d1 = dict()
 d2 = dict()
-ar = [0] * (30000000)
+ar = [0] * 30000000
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ar[a] += 1
     ar[b] += 1
     d1[a] = b
@@ -30,8 +30,8 @@ else:
             arx.append(i)
     a = arx[0]
     b = arx[1]
-    if b in d2:  # a in d2
-        a, b = b, a
+    if b in d2:
+        (a, b) = (b, a)
     x = 0
     ar1 = []
     ar2 = []
@@ -41,7 +41,6 @@ else:
         x = d1[x]
         if x == 0:
             break
-
     x = a
     while x in d2:
         ar2.append(d2[x])

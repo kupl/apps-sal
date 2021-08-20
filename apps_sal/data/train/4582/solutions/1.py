@@ -6,4 +6,4 @@ class OrderedCounter(Counter, OrderedDict):
 
 
 def group(arr):
-    return [[k] * v for k, v in OrderedCounter(arr).items()]
+    return [[k] * v for (k, v) in OrderedCounter(arr).items()]

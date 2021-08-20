@@ -1,6 +1,6 @@
 for i in range(int(input())):
-    n, m, s = map(int, input().split(" "))
-    h1, t, count = list(map(int, input().split())), [], 0
+    (n, m, s) = map(int, input().split(' '))
+    (h1, t, count) = (list(map(int, input().split())), [], 0)
     t = [x for x in h1 if x <= 2 * s]
     if len(t) == 0:
         print(0)

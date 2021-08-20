@@ -13,5 +13,5 @@ def f(n, m, z):
     return z // ppcm(n, m)
 
 
-n, m, z = tuple(map(int, input().split()))
+(n, m, z) = tuple(map(int, input().split()))
 print(f(n, m, z))

@@ -1,7 +1,7 @@
 n = int(input())
 s = []
 cnt = [0] * 5
-l = ["M", "A", "R", "C", "H"]
+l = ['M', 'A', 'R', 'C', 'H']
 ans = 0
 for i in range(n):
     s.append(input())

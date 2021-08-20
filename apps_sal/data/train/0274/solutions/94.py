@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         i = 0
         j = 1
@@ -13,7 +14,6 @@ class Solution:
                 mn = nums[j]
             if mx < nums[j]:
                 mx = nums[j]
-            # print(i,j,mn,mx)
             if mx - mn <= limit:
                 if j - i + 1 > l:
                     l = j - i + 1

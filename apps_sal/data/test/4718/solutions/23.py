@@ -1,3 +1,2 @@
 S = input()
-
-print(S.replace(S[:4], "2018"))
+print(S.replace(S[:4], '2018'))

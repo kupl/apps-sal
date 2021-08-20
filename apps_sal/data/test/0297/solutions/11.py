@@ -1,6 +1,5 @@
 import math
-n, m, k = [int(x) for x in input().split()]
-
+(n, m, k) = [int(x) for x in input().split()]
 if 2 * n * m % k != 0:
     print('NO')
 else:
@@ -15,7 +14,7 @@ else:
         a = n // g
         k1 = k // g
         b = m // k1
-        if a < n:  # if a = n then b always < m
+        if a < n:
             a *= 2
         else:
             b *= 2

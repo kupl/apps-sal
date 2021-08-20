@@ -1,12 +1,9 @@
-#! /usr/bin/env python
-
 n = int(input())
 counts = [0] * 5
 s = 0
 for x in [int(x) for x in input().split()]:
     counts[x] += 1
     s += x
-
 if s > 2 and s != 5:
     ans = 0
     if counts[1] >= counts[2]:

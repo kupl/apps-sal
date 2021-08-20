@@ -1,4 +1,4 @@
-A, B = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 xor = []
 if B - A <= 8:
     ans = 0
@@ -11,14 +11,12 @@ else:
         else:
             xor.append(A)
         A += 1
-
     while True:
         if B % 4 == 3:
             break
         else:
             xor.append(B)
         B -= 1
-
     ans = 0
     while xor:
         ans ^= xor.pop()

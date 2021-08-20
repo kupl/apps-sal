@@ -1,4 +1,3 @@
-
 n = int(input())
 li = []
 for i in range(n):
@@ -8,10 +7,8 @@ for i in range(n):
 
 
 def dist(lst):
-
     ptr = lst[0]
     dst = 1
-
     for i in range(1, len(lst)):
         if ptr >= 1:
             ptr -= 1

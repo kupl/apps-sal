@@ -2,7 +2,7 @@ import re
 
 
 def s(m):
-    n, w = m.groups()
+    (n, w) = m.groups()
     n = int(n)
     if n <= 1:
         return m.group()
@@ -16,4 +16,4 @@ def s(m):
 
 
 def sursurungal(txt):
-    return re.sub('(\d+) (\w+)', s, txt)
+    return re.sub('(\\d+) (\\w+)', s, txt)

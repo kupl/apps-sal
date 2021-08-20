@@ -7,12 +7,11 @@ for i in range(n):
     out.append((i, (i + 1) % n))
 num = 0
 while curr not in p:
-    out.append(((num) % n, (num + 2) % n))
+    out.append((num % n, (num + 2) % n))
     num += 1
     curr += 1
     if num % 4 == 2:
         num += 2
-
 print(curr)
 for (a, b) in out:
     print(a + 1, b + 1)

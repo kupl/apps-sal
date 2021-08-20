@@ -1,16 +1,26 @@
 import sys
-
-
 stdin = sys.stdin
-def ns(): return stdin.readline().rstrip()
-def ni(): return int(stdin.readline().rstrip())
-def nm(): return list(map(int, stdin.readline().split()))
-def nl(): return list(map(int, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+def ni():
+    return int(stdin.readline().rstrip())
+
+
+def nm():
+    return list(map(int, stdin.readline().split()))
+
+
+def nl():
+    return list(map(int, stdin.readline().split()))
 
 
 def can_replace(S, T):
     cnt = 0
-    for s, t in zip(S, T):
+    for (s, t) in zip(S, T):
         if s == t or s == '?':
             cnt += 1
     if cnt == len(S):
@@ -26,7 +36,7 @@ def main():
         if can_replace(S[i:i + len(T)], T):
             S[i:i + len(T)] = T
             S = ''.join(S)
-            print((S.replace('?', 'a')[::-1]))
+            print(S.replace('?', 'a')[::-1])
             return
     print('UNRESTORABLE')
 

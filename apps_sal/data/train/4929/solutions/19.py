@@ -1,6 +1,6 @@
 def get_diagonale_code(grid: str) -> str:
     grid = [x.split() for x in grid.splitlines()]
-    res, rows, x = '', len(grid), 1
+    (res, rows, x) = ('', len(grid), 1)
     r = c = 0
     while -1 < r < rows and c < len(grid[r]):
         res += grid[r][c]

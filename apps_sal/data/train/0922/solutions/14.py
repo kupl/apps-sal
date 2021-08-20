@@ -9,7 +9,6 @@ def f(N, M):
             setrn.add(ele)
         else:
             setn.add(ele)
-
     return list(setn)
 
 
@@ -20,6 +19,5 @@ for _ in range(t):
     N = list(map(int, input().split()))
     M = list(map(int, input().split()))
     answers.append(f(N, M))
-
 for answer in answers:
-    print(*answer, sep=" ")
+    print(*answer, sep=' ')

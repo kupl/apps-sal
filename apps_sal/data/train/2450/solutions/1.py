@@ -1,4 +1,5 @@
 class Solution:
+
     def average(self, salary: List[int]) -> float:
         mx = 0
         mn = 100005

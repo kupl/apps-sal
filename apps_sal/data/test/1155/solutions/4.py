@@ -7,14 +7,11 @@ def ria():
 
 
 files = False
-
 if getpass.getuser() == 'frohenk' and files:
-    sys.stdin = open("test.in")
-
-n, m = ria()
+    sys.stdin = open('test.in')
+(n, m) = ria()
 mini = 1000
 for i in range(n):
-    a, b = ria()
+    (a, b) = ria()
     mini = min(mini, a / b)
-
 print(mini * m)

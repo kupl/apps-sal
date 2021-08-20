@@ -14,7 +14,7 @@ def solve(a, b):
 def main():
     n = int(input())
     for s in sys.stdin:
-        a, b = [int(x) for x in s.split()]
+        (a, b) = [int(x) for x in s.split()]
         print(solve(a, b))
 
 

@@ -8,21 +8,17 @@ def main():
     n = int(input())
     p = [list(map(int, input().split())) + [i] for i in range(n)]
     tree = [[] for _ in range(n)]
-
     p.sort()
     for i in range(n - 1):
         if p[i][0] == p[i + 1][0]:
             tree[p[i][2]].append(p[i + 1][2])
             tree[p[i + 1][2]].append(p[i][2])
-
     p.sort(key=itemgetter(1))
     for i in range(n - 1):
         if p[i][1] == p[i + 1][1]:
             tree[p[i][2]].append(p[i + 1][2])
             tree[p[i + 1][2]].append(p[i][2])
-
     p.sort(key=itemgetter(2))
-
     already = [False] * n
     ans = -n
     for i in range(n):
@@ -42,7 +38,6 @@ def main():
                 key_y.add(p[v][1])
                 not_yet.append(v)
         ans += len(key_x) * len(key_y)
-
     print(ans)
 
 

@@ -1,10 +1,7 @@
 N = int(input())
-
 arr = input()
 arr = [int(x) for x in arr.split(' ')]
-
 arr.sort()
-
 if arr[-1] >= arr[-2] + arr[-3]:
     print('NO')
 else:

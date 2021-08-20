@@ -1,12 +1,11 @@
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 d = {}
 ch = set()
 ans = set()
 for i in range(q):
-    a, b = input().split()
+    (a, b) = input().split()
     d.setdefault(b, set()).add(a)
-ch = {"a"}
-
+ch = {'a'}
 while ch != set():
     b = ch.pop()
     if len(b) == n:

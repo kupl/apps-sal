@@ -1,21 +1,15 @@
 from collections import deque
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 graph = [[] for _ in range(n + 1)]
-
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-
 dist = [-1] * (n + 1)
 dist[0] = 0
 dist[1] = 0
-
 d = deque()
 d.append(1)
-
-# BFS実行部分
 while d:
     v = d.popleft()
     for i in graph[v]:
@@ -23,10 +17,9 @@ while d:
             continue
         dist[i] = v
         d.append(i)
-
 if -1 in dist:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
 ans = dist[2:]
-print(*ans, sep="\n")
+print(*ans, sep='\n')

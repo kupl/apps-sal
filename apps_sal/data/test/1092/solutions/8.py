@@ -1,5 +1,4 @@
 def fac(n):
-    #    print('fac('+str(n)+')')
     if n == 0:
         return 1
     mul = 1
@@ -8,19 +7,17 @@ def fac(n):
     return mul
 
 
-n, m = (int(t) for t in input().split(' '))
+(n, m) = (int(t) for t in input().split(' '))
 gen = (int(t) for t in input().split(' '))
 v = []
 for i in gen:
     v.append(i)
 v.sort()
 ans = fac(n - m)
-# print(type(ans))
 ans //= fac(v[0] - 1)
 for i in range(1, len(v)):
-    #    print('#')
     ans //= fac(v[i] - v[i - 1] - 1)
     if v[i] - v[i - 1] - 1 != 0:
-        ans *= 2**(v[i] - v[i - 1] - 2)
+        ans *= 2 ** (v[i] - v[i - 1] - 2)
 ans //= fac(n - v[len(v) - 1])
-print('%d' % (ans % (int(1e9) + 7)))
+print('%d' % (ans % (int(1000000000.0) + 7)))

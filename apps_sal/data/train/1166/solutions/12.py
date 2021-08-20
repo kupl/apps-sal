@@ -1,6 +1,5 @@
 from sys import stdin, stdout
 import numpy as np
-
 n = int(input())
 a = np.array(list(map(int, input().split())))
 q = int(input())

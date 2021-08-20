@@ -1,13 +1,10 @@
 from collections import Counter
 from math import factorial
-
-
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 V = list(map(int, input().split()))
 C = Counter(V)
 keys = list(C.keys())
 keys.sort(reverse=True)
-
 if C[keys[0]] >= A:
     mean = keys[0]
     var = 0
@@ -24,8 +21,7 @@ else:
         else:
             total += v * (A - cnt)
             mean = total / A
-            var += factorial(C[v]) // factorial((A - cnt)) // factorial(C[v] - (A - cnt))
+            var += factorial(C[v]) // factorial(A - cnt) // factorial(C[v] - (A - cnt))
             break
-
 print(mean)
 print(var)

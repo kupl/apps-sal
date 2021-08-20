@@ -1,4 +1,4 @@
-n, h, *A = list(map(int, open(0).read().split()))
+(n, h, *A) = list(map(int, open(0).read().split()))
 a = max(A[::2])
 b = sorted(A[1::2])[::-1]
 for i in range(n):
@@ -10,4 +10,4 @@ for i in range(n):
         n = i
         break
     h -= b[i]
-print((n - (-h // a)))
+print(n - -h // a)

@@ -1,8 +1,9 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         s = set(initial)
         go_visit = set()
-        del_node, length = min(initial), 0
+        (del_node, length) = (min(initial), 0)
 
         def helper(node, visit):
             for i in range(len(graph[node])):

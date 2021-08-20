@@ -1,5 +1,5 @@
 def solve(s):
-    lcase, ucase = 0, 0
+    (lcase, ucase) = (0, 0)
     for i in s:
         if i.isupper():
             ucase = ucase + 1

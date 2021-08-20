@@ -1,5 +1,5 @@
 try:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     p = 1000000007
     a = [int(x) for x in input().split()]
     b = a.copy()

@@ -8,7 +8,7 @@ def solve(L):
         if pt > count[i]:
             pL.append(pt - count[i])
             pt = count[i]
-    countL = [0] * (2001)
+    countL = [0] * 2001
     countL[0] = 1
     for i in pL:
         permL = []

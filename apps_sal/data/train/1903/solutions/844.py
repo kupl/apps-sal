@@ -6,6 +6,7 @@ def dist(p1, p2):
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parents = list(range(n))
 
@@ -19,6 +20,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         q = []
         for i in range(len(points)):
@@ -27,7 +29,7 @@ class Solution:
         cost = 0
         s = UnionFind(len(points))
         while q:
-            d, i, j = heapq.heappop(q)
+            (d, i, j) = heapq.heappop(q)
             if s.root(i) != s.root(j):
                 s.union(i, j)
                 cost += d

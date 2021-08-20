@@ -12,5 +12,5 @@ for i in range(len(s)):
         ans2 += 1
         if s[i] == '1':
             con2 += 1
-L = [con + con2, (ans - con) + (ans2 - con2)]
-print((min(L)))
+L = [con + con2, ans - con + (ans2 - con2)]
+print(min(L))

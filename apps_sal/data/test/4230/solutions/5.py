@@ -1,4 +1,4 @@
-x, n = map(int, input().split())
+(x, n) = map(int, input().split())
 if n != 0:
     p = list(map(int, input().split()))
     sa = 102

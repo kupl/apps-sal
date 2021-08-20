@@ -1,5 +1,5 @@
 n = int(input())
-*a, = map(int, input().split())
+(*a,) = map(int, input().split())
 l = [abs(a[i] - a[i - 1]) for i in range(1, n)]
 ans = 0
 x = y = 0

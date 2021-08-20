@@ -1,6 +1,6 @@
-n, bx = list(map(int, input().split()))
+(n, bx) = list(map(int, input().split()))
 X = list(map(int, input().split()))
-m, by = list(map(int, input().split()))
+(m, by) = list(map(int, input().split()))
 Y = list(map(int, input().split()))
 
 
@@ -16,8 +16,8 @@ def calcul(n, bx, X):
 x = calcul(n, bx, X)
 y = calcul(m, by, Y)
 if x == y:
-    print("=")
+    print('=')
 elif x > y:
-    print(">")
+    print('>')
 else:
-    print("<")
+    print('<')

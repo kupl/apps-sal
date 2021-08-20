@@ -1,5 +1,4 @@
-A, B, K = map(int, input().split())
-
+(A, B, K) = map(int, input().split())
 if A + B <= K:
     print(0, 0)
 elif A <= K:

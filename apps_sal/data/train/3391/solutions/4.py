@@ -1,5 +1,5 @@
 def flatten(*a):
-    r, s = [], [iter(a)]
+    (r, s) = ([], [iter(a)])
     while s:
         it = s.pop()
         for v in it:

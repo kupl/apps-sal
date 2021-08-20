@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = [(x + 1) // 2 for x in a]
 w -= sum(b)

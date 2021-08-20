@@ -1,11 +1,9 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
 r = list(map(int, input().split()))
-
 p = sorted(p, reverse=True)
 q = sorted(q, reverse=True)
-
 pq = sorted(p[:x] + q[:y])
 r = sorted(r)
 ans = 0
@@ -18,5 +16,4 @@ for i in pq:
             j = r.pop()
     else:
         ans += i
-
 print(ans)

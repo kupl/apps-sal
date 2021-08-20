@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**8)
-mod = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+mod = 10 ** 9 + 7
 
 
 def main():
@@ -20,8 +20,8 @@ def main():
                 ans[j][i] = ans[j][i] | v[i]
     for i in range(n):
         for j in range(n):
-            if (u[i] & v[j]):
-                ans[i][j] = ans[i][j] | (u[i] & v[j])
+            if u[i] & v[j]:
+                ans[i][j] = ans[i][j] | u[i] & v[j]
     for x in range(n):
         if not s[x]:
             continue
@@ -39,7 +39,7 @@ def main():
                 if i == x:
                     continue
                 y_mul = y_mul & ans[i][y]
-            up_y = (~y_mul) & up
+            up_y = ~y_mul & up
             ans[x][y] += up_y
             up -= up_y
             if not up:
@@ -61,7 +61,7 @@ def main():
                 if y == j:
                     continue
                 x_mul = x_mul & ans[x][j]
-            up_x = (~x_mul) & up
+            up_x = ~x_mul & up
             ans[x][y] += up_x
             up -= up_x
             if not up:

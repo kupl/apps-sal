@@ -1,8 +1,3 @@
-# import sys
-# sys.setrecursionlimit(10 ** 6)
-# import bisect
-# from collections import deque
-
 def divisor(x):
     """約数"""
     from math import floor
@@ -17,10 +12,6 @@ def divisor(x):
     return re
 
 
-# from decorator import stop_watch
-#
-#
-# @stop_watch
 def solve(N, M):
     div = divisor(M)
     div.sort()
@@ -32,18 +23,8 @@ def solve(N, M):
 
 
 def __starting_point():
-    # S = input()
-    # N = int(input())
-    N, M = list(map(int, input().split()))
-    # A = [int(i) for i in input().split()]
-    # B = [int(i) for i in input().split()]
-    # AB = [[int(i) for i in input().split()] for _ in range(N)]
+    (N, M) = list(map(int, input().split()))
     solve(N, M)
-
-    # # test
-    # from random import randint
-    # from func import random_str
-    # solve()
 
 
 __starting_point()

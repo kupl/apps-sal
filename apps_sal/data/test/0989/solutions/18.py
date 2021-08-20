@@ -1,10 +1,7 @@
-# encoding: utf-8
 from sys import stdin
-
-n, k = [int(i) for i in stdin.readline().strip().split()]
+(n, k) = [int(i) for i in stdin.readline().strip().split()]
 a = [int(i) for i in stdin.readline().strip().split()]
 a.sort()
-
 i = 0
 j = n - 1
 a_min = a[i]
@@ -28,5 +25,4 @@ while i < j:
             j -= 1
             k -= required_steps
             a_max = a[j]
-
 print(a_max - a_min)

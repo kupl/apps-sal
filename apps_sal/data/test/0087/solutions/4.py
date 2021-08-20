@@ -1,3 +1,3 @@
 d = [-1, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 print((d[n] - (7 - k + 1) + 6) // 7 + 1)

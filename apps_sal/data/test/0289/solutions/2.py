@@ -2,7 +2,7 @@ import re
 
 
 def count(s):
-    return len(re.findall(r'VK', s))
+    return len(re.findall('VK', s))
 
 
 s = input().strip()

@@ -1,13 +1,11 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 SUM = abs(A[0])
 for i in range(N):
     if i < N - 1:
         SUM += abs(A[i + 1] - A[i])
     else:
         SUM += abs(0 - A[i])
-
 now = 0
 for i in range(N):
     if i != N - 1:

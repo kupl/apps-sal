@@ -10,7 +10,7 @@ def read_ints():
 
 
 def solve():
-    N, K, C = read_ints()
+    (N, K, C) = read_ints()
     S = input().strip()
     earliest = []
     i = 0
@@ -29,9 +29,9 @@ def solve():
         else:
             i -= 1
     latest.reverse()
-    for i, j in zip(earliest, latest):
+    for (i, j) in zip(earliest, latest):
         if i == j:
-            print((i + 1))
+            print(i + 1)
 
 
 def __starting_point():

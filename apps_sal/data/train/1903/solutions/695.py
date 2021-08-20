@@ -1,5 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def cost(i, j):
             return abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
         n = len(points)
@@ -10,13 +12,14 @@ class Solution:
         dists.sort()
         uf = UnionFind(n)
         ans = 0
-        for c, i, j in dists:
+        for (c, i, j) in dists:
             if uf.union(i, j):
                 ans += c
         return ans
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.id = [i for i in range(n)]
         self.size = [1 for _ in range(n)]

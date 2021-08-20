@@ -1,9 +1,7 @@
 import math
 N = int(input())
-
 n = int(math.ceil(math.sqrt(N)))
-
-ans = int(1e18)
+ans = int(1e+18)
 for i in range(1, n + 1):
     j = N // i
     if N % i == 0:

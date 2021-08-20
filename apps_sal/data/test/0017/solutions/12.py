@@ -1,5 +1,4 @@
-N, K, T = list(map(int, input().split()))
-
+(N, K, T) = list(map(int, input().split()))
 if T < K:
     print(T)
 elif N < T:

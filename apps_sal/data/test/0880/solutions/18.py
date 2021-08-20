@@ -3,11 +3,11 @@ def read_nums():
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     cur_res = 1
     factorial = 1
     for i in range(2, n + 1):
-        factorial = (factorial * i) % 998244353
+        factorial = factorial * i % 998244353
         cur_res = ((cur_res - 1) * i + factorial) % 998244353
     print(cur_res)
 

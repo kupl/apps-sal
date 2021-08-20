@@ -1,7 +1,7 @@
 def even_or_odd(number):
-    message = ""
+    message = ''
     if number % 2 == 0:
-        message = "Even"
+        message = 'Even'
     else:
-        message = "Odd"
+        message = 'Odd'
     return message

@@ -56,11 +56,9 @@ currLength = 0
 currSum = 0
 for x in anums:
     currSum += 1
-    val, num = x
+    (val, num) = x
     l = upgrade(num)
-    # print(pieces);
     currLength = max(currLength, l)
-    # print(currLength,"*",len(pieces),"==",currSum)
     if currLength * len(pieces) == currSum:
         currK = val + 1
         currLocation = len(pieces)

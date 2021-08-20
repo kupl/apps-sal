@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         self.res = 0
         for i in range(len(grid)):
@@ -7,7 +8,7 @@ class Solution:
         return self.res
 
     def dfs(self, grid, i, j, currSum):
-        if i > len(grid) - 1 or i < 0 or j > len(grid[0]) - 1 or j < 0:
+        if i > len(grid) - 1 or i < 0 or j > len(grid[0]) - 1 or (j < 0):
             return
         if grid[i][j] == 0:
             return

@@ -6,7 +6,7 @@ def main():
     a = list(map(int, input().split()))
     d = defaultdict(lambda: 0)
     ans = 0
-    for i, ai in enumerate(a, 1):
+    for (i, ai) in enumerate(a, 1):
         num = str(ai + i)
         d[num] += 1
         ans += d[str(i - ai)]

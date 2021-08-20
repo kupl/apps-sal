@@ -5,7 +5,7 @@ for i in range(T):
     J = []
     c = 0
     for j in range(N):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         S.append(a)
         J.append(b)
         if abs(J[j] - S[j] > 5):

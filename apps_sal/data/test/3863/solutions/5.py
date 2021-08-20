@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 MOD = 10 ** 9 + 7
 i = 1
 M = N
@@ -9,8 +9,6 @@ while i * i <= N:
         if N // i != i:
             div.append(N // i)
     i += 1
-
-
 div = sorted(div)
 N1 = len(div)
 num = [0] * (N1 + 1)
@@ -21,12 +19,10 @@ for i in range(N1):
         if div[i] % div[j] == 0:
             num[i] = num[i] - num[j] + MOD
             num[i] %= MOD
-
     if div[i] % 2 == 0:
         ans += div[i] * num[i] // 2
         ans %= MOD
     else:
         ans += div[i] * num[i]
         ans %= MOD
-
 print(ans)

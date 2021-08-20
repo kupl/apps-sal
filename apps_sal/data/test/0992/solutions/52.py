@@ -18,22 +18,10 @@ from itertools import accumulate
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
-alf = list("abcdefghijklmnopqrstuvwxyz")
-ALF = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-#import numpy as np
-INF = float("inf")
-#d = defaultdict(int)
-#d = defaultdict(list)
-#N = int(input())
-#A = list(map(int,input().split()))
-#S = list(input())[:-1]
-# S.remove("\n")
-#N,M = map(int,input().split())
-#S,T = map(str,input().split())
-#A = [int(input()) for _ in range(N)]
-#S = [list(input())[:-1] for _ in range(N)]
-#A = [list(map(int,input().split())) for _ in range(N)]
-N, S = list(map(int, input().split()))
+alf = list('abcdefghijklmnopqrstuvwxyz')
+ALF = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+INF = float('inf')
+(N, S) = list(map(int, input().split()))
 MOD = 998244353
 A = list(map(int, input().split()))
 dp = np.zeros(3003, dtype=np.int64)
@@ -46,4 +34,4 @@ for i in range(1, N):
     p[a:] += dp[:-a]
     p %= MOD
     dp = p
-print((dp[S]))
+print(dp[S])

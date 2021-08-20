@@ -1,8 +1,9 @@
 class Solution:
+
     def displayTable(self, orders: List[List[str]]) -> List[List[str]]:
         desk = collections.defaultdict(collections.Counter)
         meal = set()
-        for _, table, food in orders:
+        for (_, table, food) in orders:
             meal.add(food)
             desk[table][food] += 1
         foods = sorted(meal)

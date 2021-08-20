@@ -4,7 +4,7 @@ from itertools import cycle, chain
 def printhex(b):
     for x in b:
         st = ' '.join(map(str, x))
-        print(f'{st:^{2*len(b)-1}}')
+        print(f'{st:^{2 * len(b) - 1}}')
 
 
 def d1sum(b, n, l):
@@ -71,8 +71,6 @@ def max_hexagon_beam(n: int, seq: tuple):
             tmp.append(next(itr))
         b.append(tmp)
         hb_sum.append(sum(tmp))
-
-    # printhex(b)
     d1_sum = d1sum(b, n, l)
     d2_sum = d2sum(b, n, l)
-    return(max(chain(hb_sum, d1_sum, d2_sum)))
+    return max(chain(hb_sum, d1_sum, d2_sum))

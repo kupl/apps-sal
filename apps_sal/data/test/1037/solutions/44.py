@@ -3,7 +3,7 @@ a = list(map(int, input().split()))
 for i in range(n):
     a[i] = (a[i], i)
 b = sorted(a, reverse=True)
-dp = [[-10**14 for i in range(n + 1)] for j in range(n + 1)]
+dp = [[-10 ** 14 for i in range(n + 1)] for j in range(n + 1)]
 dp[0][0] = 0
 for i in range(1, n + 1):
     see = b[i - 1][0]

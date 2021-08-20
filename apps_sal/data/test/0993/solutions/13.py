@@ -2,7 +2,7 @@ from collections import defaultdict
 
 
 def main():
-    N, M = list(map(int, input().split(' ')))
+    (N, M) = list(map(int, input().split(' ')))
     A = list(map(int, input().split(' ')))
     d = defaultdict(int)
     d[0] += 1

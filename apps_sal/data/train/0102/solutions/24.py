@@ -11,6 +11,6 @@ for i in range(t):
             ans += 1
         if a[i] > r:
             break
-        a[i] = a[i] * 10 + (a[i] % 10)
+        a[i] = a[i] * 10 + a[i] % 10
         i += 1
     print(ans)

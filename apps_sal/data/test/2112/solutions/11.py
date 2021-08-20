@@ -12,17 +12,16 @@ def func(values, left, right, x, k, y, left_val, right_val):
         else:
             return len(copy) * y
     elif x <= k * y:
-        return len(copy) // k * x + (len(copy) % k) * y
+        return len(copy) // k * x + len(copy) % k * y
+    elif copy[-1] > max(left_val, right_val):
+        return x + y * (len(copy) - k)
     else:
-        if copy[-1] > max(left_val, right_val):
-            return x + y * (len(copy) - k)
-        else:
-            return y * len(copy)
+        return y * len(copy)
 
 
 def main():
-    n, m = map(int, input().split())
-    x, k, y = map(int, input().split())
+    (n, m) = map(int, input().split())
+    (x, k, y) = map(int, input().split())
     s1 = list(map(int, input().split()))
     s2 = list(map(int, input().split()))
     if m > n:
@@ -46,7 +45,6 @@ def main():
                     break
                 ans += a
                 l = i
-
         if j < m or ans == -1:
             print(-1)
         else:

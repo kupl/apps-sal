@@ -19,12 +19,11 @@ for m in M:
 t = 0
 for d in range(s):
     k = False
-    for i, m in enumerate(M):
+    for (i, m) in enumerate(M):
         r = R[i]
         if d % m == r:
             k = True
             break
     if k:
         t += 1
-
 print(t / s)

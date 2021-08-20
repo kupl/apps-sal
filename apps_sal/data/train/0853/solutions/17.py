@@ -10,7 +10,7 @@ for _ in range(int(input())):
     c = sorted(c)
     for i in range(n):
         for j in range(n):
-            if(c[i] == b[j]):
+            if c[i] == b[j]:
                 d.append(a[j])
     for i in d:
         print(i)

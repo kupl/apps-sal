@@ -1,8 +1,8 @@
 n = int(input())
-mn, mx = [], []
+(mn, mx) = ([], [])
 for i in range(n):
     b = list(map(int, input().split()))
-    if(b[0] > b[1]):
+    if b[0] > b[1]:
         mx.append(b + [i + 1])
     else:
         mn.append(b + [i + 1])

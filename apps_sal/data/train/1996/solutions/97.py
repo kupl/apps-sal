@@ -1,5 +1,7 @@
 class Solution:
+
     def eventualSafeNodes(self, graph):
+
         def explore(i):
             visited[i] = 0
             for v in graph[i]:
@@ -8,7 +10,7 @@ class Solution:
             visited[i] = 1
             res.append(i)
             return False
-        visited, res = [-1] * len(graph), []
+        (visited, res) = ([-1] * len(graph), [])
         for i in range(len(graph)):
             if visited[i] == -1:
                 explore(i)

@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t:
-    n, p = map(int, input().split())
+    (n, p) = map(int, input().split())
     if n <= 2:
         print(p * p * p)
     else:

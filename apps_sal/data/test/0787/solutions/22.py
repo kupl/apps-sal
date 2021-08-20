@@ -8,7 +8,6 @@ for i in range(1, len(q)):
     if q[i] not in topset:
         cut.append(i)
         topset.add(q[i])
-
 if len(cut) < k:
     print('NO')
 else:

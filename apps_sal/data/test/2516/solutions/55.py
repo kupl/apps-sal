@@ -1,6 +1,5 @@
-N, P = list(map(int, input().split()))
+(N, P) = list(map(int, input().split()))
 S = input()
-
 S = S[::-1]
 result = 0
 if P == 2 or P == 5:

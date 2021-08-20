@@ -1,6 +1,5 @@
 n = int(input())
 sectors = list(map(int, input().split()))
-
 ans = 360
 for _ in range(n):
     for i in range(n):

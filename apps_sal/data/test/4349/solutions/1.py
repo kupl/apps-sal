@@ -1,15 +1,13 @@
 import sys
-
-N, M = [int(x) for x in sys.stdin.readline().rstrip().split()]
+(N, M) = [int(x) for x in sys.stdin.readline().rstrip().split()]
 K = [int(x) for x in sys.stdin.readline().rstrip().split()]
 D = [0] * M
 T = [0] * M
 for i in range(M):
-    D[i], T[i] = [int(x) for x in sys.stdin.readline().rstrip().split()]
+    (D[i], T[i]) = [int(x) for x in sys.stdin.readline().rstrip().split()]
     D[i] -= 1
     T[i] -= 1
 KS = sum(K)
-
 ok = 2 * KS
 ng = KS - 1
 while ok - ng > 1:
@@ -22,7 +20,6 @@ while ok - ng > 1:
     for i in range(N):
         if last[i] != -1:
             l2i[last[i]].append(i)
-
     buy = 0
     now = 0
     for i in range(X):
@@ -32,10 +29,8 @@ while ok - ng > 1:
             now -= s
             buy += s
     buy += now // 2
-
     if buy >= KS:
         ok = X
     else:
         ng = X
-
 print(ok)

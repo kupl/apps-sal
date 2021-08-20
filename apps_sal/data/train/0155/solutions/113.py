@@ -1,11 +1,11 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         memo = {}
 
         def solve(i):
             if i in memo:
                 return memo[i]
-
             ret = 1
             j = i - 1
             while j >= max(0, i - d) and arr[j] < arr[i]:

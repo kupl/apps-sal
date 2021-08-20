@@ -1,8 +1,8 @@
 import math
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 znach = range(1, 200)
 for i in range(m):
-    k, f = map(int, input().split())
+    (k, f) = map(int, input().split())
     if f == 1:
         a = range(math.ceil(k / f), 200)
     else:

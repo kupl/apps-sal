@@ -1,7 +1,6 @@
 T = int(input())
-
 while T > 0:
-    R, C = input().split()
+    (R, C) = input().split()
     R = int(R)
     C = int(C)
     output = [[0] * C for i in range(R)]
@@ -36,8 +35,8 @@ while T > 0:
     no_of_pairs = 0
     for i in range(R):
         for j in range(C):
-            for no_of_steps, count in output[i][j].items():
+            for (no_of_steps, count) in output[i][j].items():
                 if count > 1:
-                    no_of_pairs = no_of_pairs + (count * (count - 1)) // 2
+                    no_of_pairs = no_of_pairs + count * (count - 1) // 2
     print(no_of_pairs)
     T = T - 1

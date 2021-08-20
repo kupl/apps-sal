@@ -1,7 +1,7 @@
 ans = []
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
-    a, b = max(a, b), min(a, b)
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (max(a, b), min(a, b))
     if a % b != 0:
         ans.append(-1)
         continue

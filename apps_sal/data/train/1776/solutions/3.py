@@ -9,14 +9,14 @@ def Comb(c, n, k):
 
 
 def P(C_vect, p, n, s):
-    return sum((-1) ** k * Comb(C_vect, n, k) * Comb(C_vect, p - s * k - 1, n - 1) for k in range((p - n) // s + 1)) / s ** n
+    return sum(((-1) ** k * Comb(C_vect, n, k) * Comb(C_vect, p - s * k - 1, n - 1) for k in range((p - n) // s + 1))) / s ** n
 
 
 def roll_dice(rolls, sides, threshold):
     if threshold > sides * rolls:
         return 0
-    if threshold == sides**rolls:
-        return 1 / sides**rolls
+    if threshold == sides ** rolls:
+        return 1 / sides ** rolls
     if threshold <= rolls:
         return 1
     k_max = max((threshold - rolls) // sides, rolls - 1)

@@ -1,5 +1,5 @@
-field = "A" + input() + "A"
-letters = ["A", "E", "I", "O", "U", "Y"]
+field = 'A' + input() + 'A'
+letters = ['A', 'E', 'I', 'O', 'U', 'Y']
 ans = 1
 last_let = 0
 for i in range(len(field)):

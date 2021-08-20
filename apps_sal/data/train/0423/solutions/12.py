@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         dp = [0 for _ in range(len(arr))]
         lookup = {}

@@ -7,7 +7,6 @@ def main():
     arr = [int(k) for k in input().split()]
     score = [0, 0]
     i = 0
-
     while left != right:
         if arr[left] > arr[right]:
             score[i] += arr[left]
@@ -17,7 +16,6 @@ def main():
             right -= 1
         i += 1
         i %= 2
-
     score[i] += arr[left]
     print(score[0], score[1])
 

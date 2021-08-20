@@ -1,8 +1,8 @@
-# Relative easy DP problem, time and space complexity are both O(N)
 from functools import lru_cache
 
 
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         c = 0
         sums = []

@@ -1,5 +1,7 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
+
         def solve(s, t):
             if s == 0:
                 if t == 0:
@@ -14,4 +16,4 @@ class Solution:
             dp[s][t] = ans
             return dp[s][t]
         dp = [[-1] * (target + 1) for _ in range(d + 1)]
-        return solve(d, target) % (10**9 + 7)
+        return solve(d, target) % (10 ** 9 + 7)

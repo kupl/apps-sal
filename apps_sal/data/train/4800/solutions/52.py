@@ -8,5 +8,4 @@ def hotpo(n):
         else:
             n = n / 2
         count += 1
-
     return count

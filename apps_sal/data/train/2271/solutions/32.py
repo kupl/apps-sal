@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.par = [i for i in range(n)]
         self.rank = [0] * n
@@ -31,22 +32,20 @@ class UnionFind():
         return self.root(x) == self.root(y)
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 P = list([int(x) - 1 for x in input().split()])
 X = UnionFind(N)
 Y = UnionFind(N)
 for _ in range(M):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     X.union(x, y)
     Y.union(P[x], P[y])
-
 ans = 0
 roots = X.roots
 for r in roots:
     A = X.members[r]
     B = Y.members[P[r]]
     ans += len(A & B)
-
 print(ans)

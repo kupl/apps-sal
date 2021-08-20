@@ -19,9 +19,9 @@ def movetotochka(a, b, c, d):
             y += 1
 
 
-a, b = list(map(int, input().split()))
-c, d = list(map(int, input().split()))
-e, f = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
+(e, f) = list(map(int, input().split()))
 g = min(a, c, e)
 h = max(a, c, e)
 j = min(b, d, f)

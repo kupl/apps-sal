@@ -1,4 +1,5 @@
 class Enumerator:
+
     def __init__(self, N: int, MOD: int) -> None:
         self.fact = [1, 1]
         self.finv = [1, 1]
@@ -11,7 +12,7 @@ class Enumerator:
         self._N = N
 
     def choose(self, n: int, k: int) -> int:
-        if p := self.permutate(n, k):
+        if (p := self.permutate(n, k)):
             return p * self.finv[k] % self._MOD
         else:
             return 0
@@ -26,9 +27,9 @@ class Enumerator:
         return self.choose(n + k - 1, n)
 
 
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-MOD = 1_000_000_007
+MOD = 1000000007
 A.sort()
 e = Enumerator(N, MOD)
 nck = e.choose(N, K)

@@ -17,12 +17,11 @@ def solve(N, X, D):
         L[m].append((l, 1))
         L[m].append((r + 1, -1))
     ans = 0
-    # print(L)
     for Q in list(L.values()):
         Q.sort()
         cnt = 0
         last = None
-        for val, sign in Q:
+        for (val, sign) in Q:
             if cnt > 0:
                 ans += val - last
             cnt += sign
@@ -30,5 +29,5 @@ def solve(N, X, D):
     return ans
 
 
-N, X, D = list(map(int, input().split()))
-print((solve(N, X, D)))
+(N, X, D) = list(map(int, input().split()))
+print(solve(N, X, D))

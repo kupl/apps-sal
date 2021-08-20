@@ -2,13 +2,10 @@ m = int(input())
 q = list(map(int, input().split()))
 n = int(input())
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
 q.sort()
-
 ans = 0
 mm = q[0]
-
 i = 0
 while i < n:
     j = i

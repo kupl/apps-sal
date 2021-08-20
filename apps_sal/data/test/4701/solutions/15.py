@@ -8,5 +8,4 @@ for i in range(N):
         start = start_a
     else:
         start = start_b
-
 print(start)

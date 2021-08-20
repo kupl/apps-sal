@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, m):
         self.reps = {}
         self.size = {}
@@ -40,10 +41,10 @@ class DSU:
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # dsu
-        dsu, s = DSU(m=m), -1
-        for i, x in enumerate(arr):
+        (dsu, s) = (DSU(m=m), -1)
+        for (i, x) in enumerate(arr):
             dsu.add(x)
             if x - 1 in dsu.reps:
                 dsu.union(x - 1, x)

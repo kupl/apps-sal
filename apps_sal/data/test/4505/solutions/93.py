@@ -1,5 +1,4 @@
 s = list(input())
-
 s.sort()
 if ''.join(s) == 'abc':
     print('Yes')

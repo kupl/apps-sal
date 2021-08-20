@@ -1,10 +1,7 @@
-#!/usr/bin python3
-# -*- coding: utf-8 -*-
-
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 vals = [[] for _ in range(8)]
 for _ in range(N):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     vals[0].append(a + b + c)
     vals[1].append(a + b - c)
     vals[2].append(a - b + c)

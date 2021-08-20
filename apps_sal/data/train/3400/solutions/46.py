@@ -5,5 +5,4 @@ def even_numbers(arr, n):
             res.append(arr[-i])
             if len(res) == n:
                 break
-
     return res[::-1]

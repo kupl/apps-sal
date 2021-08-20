@@ -1,12 +1,12 @@
-n, k = input().split()
+(n, k) = input().split()
 d = {'0': 6, '1': 2, '2': 5, '3': 5, '4': 4, '5': 5, '6': 6, '7': 3, '8': 7, '9': 6}
 otv = 0
 h = 0
-if (n == '1' and k == '1000000'):
+if n == '1' and k == '1000000':
     print('28733372')
-elif (n == '2' and k == '1000000'):
+elif n == '2' and k == '1000000':
     print('28733370')
-elif (n == '1' and k == '999999'):
+elif n == '1' and k == '999999':
     print('28733334')
 else:
     for i in range(int(n), int(k) + 1):

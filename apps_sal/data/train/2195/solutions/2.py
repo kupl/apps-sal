@@ -1,7 +1,6 @@
 n = int(input())
 arr = [int(t) for t in input().split()]
 arr.sort()
-
 nx = 0
 i = 0
 res = 0

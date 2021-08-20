@@ -2,10 +2,10 @@ n = int(input())
 arr = {}
 mi = 0
 ma = 0
-t, i = input().split()
+(t, i) = input().split()
 arr[i] = 0
 for _ in range(n - 1):
-    t, i = input().split()
+    (t, i) = input().split()
     if t == 'L':
         mi -= 1
         arr[i] = mi

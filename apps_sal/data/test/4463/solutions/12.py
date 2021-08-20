@@ -1,12 +1,8 @@
 s = list(input())
 t = list(input())
-
 s = sorted(s)
 t = sorted(t, reverse=True)
-
-# print(s,t)
 flag = [0, 0]
-
 if len(s) < len(t):
     for i in range(len(s)):
         if s[i] < t[i]:

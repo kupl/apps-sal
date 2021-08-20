@@ -9,7 +9,7 @@ def sum_div(n):
 def run(n):
     l_n = len(n)
     left = ''
-    if l_n > 2 and '9' * l_n != n and n[1] == '9' and '9' * (l_n - 1) != n[1:]:
+    if l_n > 2 and '9' * l_n != n and (n[1] == '9') and ('9' * (l_n - 1) != n[1:]):
         left = n[0]
         n = n[1:]
         while l_n > 1 and n[1] == '9':

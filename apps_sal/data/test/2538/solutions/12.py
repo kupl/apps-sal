@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     ans = 0
     cnt = 0
-    s, i, e = list(map(int, input().split()))
+    (s, i, e) = list(map(int, input().split()))
     b = (s - i + e - 1) // 2
     if b < 0:
         print(0)

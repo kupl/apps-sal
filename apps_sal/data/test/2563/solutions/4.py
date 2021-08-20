@@ -6,14 +6,14 @@ def I():
 
 
 for _ in range(int(I())):
-    e, o, a = [], [], []
+    (e, o, a) = ([], [], [])
     for c in I():
         x = ord(c) - ord('0')
         if x & 1:
             o.append(x)
         else:
             e.append(x)
-    i, j = 0, 0
+    (i, j) = (0, 0)
     while i < len(o) or j < len(e):
         if i < len(o) and j < len(e):
             if o[i] < e[j]:
@@ -28,4 +28,4 @@ for _ in range(int(I())):
         else:
             a.append(chr(e[j] + ord('0')))
             j += 1
-    print("".join(a))
+    print(''.join(a))

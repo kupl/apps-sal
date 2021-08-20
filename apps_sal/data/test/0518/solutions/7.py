@@ -1,5 +1,5 @@
 from math import sin, pi
-n, r = map(int, input().split())
+(n, r) = map(int, input().split())
 
 
 def p(n, r):
@@ -8,7 +8,7 @@ def p(n, r):
 
 le = 0
 ri = r * 1000
-while ri - le > 1e-9:
+while ri - le > 1e-09:
     m = (ri + le) / 2
     if p(n, r + m) < n * m * 2:
         ri = m

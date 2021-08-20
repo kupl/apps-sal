@@ -1,6 +1,7 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        minq, maxq = [], []
+        (minq, maxq) = ([], [])
         l = 0
         res = 0
         for i in range(len(nums)):

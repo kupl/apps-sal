@@ -6,7 +6,6 @@ for i in range(1, n + 1):
     clients[-1] += [i]
 k = int(input())
 r = list(map(int, input().split()))
-
 s = 0
 answer = []
 clients.sort(reverse=True)
@@ -20,6 +19,5 @@ for i in clients:
         answer.append(str(i[2]) + ' ' + str(pos))
         r[pos] = 0
         s += i[0]
-
 print(len(answer), s)
 print('\n'.join(answer))

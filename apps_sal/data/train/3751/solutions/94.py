@@ -1,6 +1,5 @@
 def bool_to_word(boolean):
-    # TODO
     if boolean == 0 or False:
-        return"No"
+        return 'No'
     else:
-        return "Yes"
+        return 'Yes'

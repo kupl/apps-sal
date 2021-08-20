@@ -1,18 +1,16 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         n = len(arr)
         if n <= 1:
             return 0
-
         seen = set([0])
-
         dic = collections.defaultdict(set)
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             dic[num].add(i)
-
         bfs = collections.deque([[0, 0]])
         while bfs:
-            ind, c = bfs.popleft()
+            (ind, c) = bfs.popleft()
             if ind == n - 1:
                 return c
             for nind in [ind - 1, ind + 1]:

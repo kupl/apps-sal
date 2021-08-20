@@ -4,10 +4,10 @@ try:
         c = 0
         for k in range(n):
             s = str(input())
-            a = s.find("1")
-            if(a != k):
+            a = s.find('1')
+            if a != k:
                 c = c + 1
-        a = ((n * (n + 1)) // 2)
+        a = n * (n + 1) // 2
         print(a - c)
 except:
     pass

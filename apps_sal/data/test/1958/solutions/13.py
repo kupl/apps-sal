@@ -1,4 +1,4 @@
-n, p = list(map(int, input().split()))
+(n, p) = list(map(int, input().split()))
 apple = 0
 operations = [input() for i in range(n)][::-1]
 for i in operations:
@@ -12,6 +12,6 @@ while apple != 0:
         apple //= 2
         result += p * apple
     else:
-        result += (p * apple) // 2
+        result += p * apple // 2
         apple //= 2
 print(result)

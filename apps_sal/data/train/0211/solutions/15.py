@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def helper(s, seen=set()):
             maximum = 0
             for i in range(1, len(s) + 1):

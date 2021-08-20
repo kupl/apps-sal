@@ -1,7 +1,10 @@
-def ri(S): return [int(v) for v in S.split()]
-def rii(): return ri(input())
+def ri(S):
+    return [int(v) for v in S.split()]
 
 
-K, X = rii()
+def rii():
+    return ri(input())
 
-print(("Yes" if K * 500 >= X else "No"))
+
+(K, X) = rii()
+print('Yes' if K * 500 >= X else 'No')

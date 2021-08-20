@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 p = list(map(int, input().split()))
 t = list(map(int, input().split()))
 bar = ['Limak', 'Tie', 'Radewoosh']

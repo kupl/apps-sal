@@ -1,5 +1,4 @@
 import re
-
 water = re.compile('water|wet|wash', flags=re.I)
 slime = re.compile("slime|i don't know", flags=re.I)
 

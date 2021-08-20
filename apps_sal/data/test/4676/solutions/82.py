@@ -1,10 +1,8 @@
 o = input()
 e = input()
-
 len_o = len(o)
 len_e = len(e)
 ans = ''
-
 if len_o == len_e:
     for i in range(len_o):
         ans += o[i]

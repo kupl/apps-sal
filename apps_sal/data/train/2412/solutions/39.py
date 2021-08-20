@@ -2,13 +2,13 @@ from itertools import groupby
 
 
 class Solution:
-    def removeDuplicates(self, S: str) -> str:
 
+    def removeDuplicates(self, S: str) -> str:
         uncompleted = True
         while uncompleted:
             uncompleted = False
             tmp = ['']
-            for key, grp in groupby(S):
+            for (key, grp) in groupby(S):
                 letters = list(grp)
                 if len(letters) == 1:
                     tmp.extend(letters)

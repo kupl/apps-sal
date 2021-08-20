@@ -2,7 +2,7 @@ n = int(input())
 a = []
 b = []
 for i in range(n):
-    s, t = map(int, input().split())
+    (s, t) = map(int, input().split())
     a.append(s)
     b.append(t)
 a.sort()

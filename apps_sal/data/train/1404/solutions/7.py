@@ -1,5 +1,4 @@
 T = eval(input())
-
 for _ in range(T):
     col = sorted(map(int, input().split()))
     k = eval(input())

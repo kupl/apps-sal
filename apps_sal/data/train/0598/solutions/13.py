@@ -4,7 +4,7 @@ def Turn(a, n):
         a[i] = m - a[i]
 
 
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 if k > 0:
     Turn(a, n)

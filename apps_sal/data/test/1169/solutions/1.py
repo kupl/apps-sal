@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, m = mi()
+(n, m) = mi()
 x = max(0, n - 2 * m)
 for i in range(n + 1):
     c = i * (i - 1) // 2

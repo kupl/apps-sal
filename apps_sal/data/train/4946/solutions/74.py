@@ -5,4 +5,4 @@ def house_numbers_sum(inp):
             tab.append(x)
         else:
             break
-    return (sum(tab))
+    return sum(tab)

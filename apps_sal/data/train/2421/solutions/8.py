@@ -1,11 +1,12 @@
 class Solution:
+
     def majorityElement(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
         if not nums:
-            return ""
+            return ''
         current = nums[0]
         counter = 1
         for i in range(1, len(nums)):

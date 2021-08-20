@@ -1,4 +1,4 @@
-n, l, r = list(map(int, input().split()))
+(n, l, r) = list(map(int, input().split()))
 l -= 1
 r -= 1
 op = 0

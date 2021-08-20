@@ -1,10 +1,11 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         maxq = []
         minq = []
         res = 0
         i = 0
-        for j, c in enumerate(nums):
+        for (j, c) in enumerate(nums):
             heapq.heappush(maxq, [-c, j])
             heapq.heappush(minq, [c, j])
             while -maxq[0][0] - minq[0][0] > limit:

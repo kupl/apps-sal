@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 ans = False
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))

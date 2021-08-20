@@ -1,7 +1,5 @@
 n = int(input())
-
 d = {}
-
 for i in range(n):
     s = input()
     k = 0
@@ -22,11 +20,10 @@ for i in range(n):
             k -= 1
         if k > 0:
             suf = False
-    if (k > 0 and pr) or (k == 0 and pr and suf) or (k < 0 and suf):
+    if k > 0 and pr or (k == 0 and pr and suf) or (k < 0 and suf):
         if k not in d:
             d[k] = 0
         d[k] += 1
-
 ans = 0
 if 0 in d:
     ans += d[0] // 2

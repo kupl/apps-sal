@@ -6,7 +6,7 @@ def main():
     while True:
         if n + 3 > num:
             break
-        if s[n:n + 3] == "fox":
+        if s[n:n + 3] == 'fox':
             s = s[:n] + s[n + 3:]
             n = max(0, n - 3)
         else:

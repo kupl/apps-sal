@@ -1,7 +1,7 @@
 import numpy as np
-n, k = map(int, input().split())
-m = n**2
-mod = 10**9 + 7
+(n, k) = map(int, input().split())
+m = n ** 2
+mod = 10 ** 9 + 7
 dp = np.zeros((n + 1, n + 1, m + 1), dtype=np.int64)
 dp[0, 0, 0] = 1
 for i in range(1, n + 1):

@@ -1,11 +1,10 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    n, p, q = input().split(" ")
+    (n, p, q) = input().split(' ')
     n = int(n)
     p = int(p)
     q = int(q)
-    l = list(map(int, input().split(" ")))
+    l = list(map(int, input().split(' ')))
     if q == 0:
         s = 0
         count = 0
@@ -17,5 +16,4 @@ while t > 0:
             else:
                 count = count + 1
         print(count)
-
     t = t - 1

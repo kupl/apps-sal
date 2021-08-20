@@ -1,4 +1,4 @@
-r, c = list(map(int, input().split()))
+(r, c) = list(map(int, input().split()))
 if r == 3:
     print('>vv')
     print('^<.')

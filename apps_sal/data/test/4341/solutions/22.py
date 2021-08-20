@@ -11,7 +11,7 @@ for _ in range(m):
     j = data[1]
     edge[i].append(j)
     edge[j].append(i)
-candidate = [k for k, v in list(edge.items()) if len(v) == 2]
+candidate = [k for (k, v) in list(edge.items()) if len(v) == 2]
 result = 0
 used = {}
 
@@ -32,7 +32,6 @@ def _iscircle(c, result):
             n = t
             continue
         last = n
-
         t = edge[n][1]
         if t == c:
             return result + 1

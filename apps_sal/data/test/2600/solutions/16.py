@@ -1,6 +1,6 @@
 tests = int(input())
 for test in range(tests):
-    rows, cols = list(map(int, input().split()))
+    (rows, cols) = list(map(int, input().split()))
     a = []
     for i in range(rows):
         b = list(map(int, input().split()))

@@ -1,8 +1,6 @@
-# cook your dish here
 tests = int(input())
 for test in range(tests):
     n = int(input())
-
     a = [[0 for i in range(n)] for i in range(n)]
     count = 1
     for k in range(n):
@@ -18,12 +16,10 @@ for test in range(tests):
             a[i][j] = count
             count += 1
             j -= 1
-
     my_str = ''
     for i in range(n):
         for j in range(n):
             my_str += str(a[i][j])
             my_str += ' '
         my_str += '\n'
-
     print(my_str)

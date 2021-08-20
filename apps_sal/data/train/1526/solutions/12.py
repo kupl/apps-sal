@@ -14,18 +14,15 @@ for _ in range(int(input())):
             if cur[j] not in ['a', 'e', 'i', 'o', 'u']:
                 if prev == -1:
                     prev = j
+                elif abs(prev - j) == 2 or abs(prev - j) == 1:
+                    f = 1
+                    break
                 else:
-                    if abs(prev - j) == 2 or abs(prev - j) == 1:
-                        f = 1
-                        break
-                    else:
-                        prev = j
+                    prev = j
         if f == 1:
             bob.append(cur)
         else:
             alice.append(cur)
-
-    # Alice
     n1 = len(alice)
     freq_a = {}
     for i in alice:
@@ -43,10 +40,8 @@ for _ in range(int(input())):
     num1 = 1
     den1 = 1
     for i in num_a:
-        num1 = (num1 * num_a[i])
+        num1 = num1 * num_a[i]
         den1 = den1 * freq_a[i]
-
-    # Bob alphabets
     n2 = len(bob)
     freq_b = {}
     for i in bob:
@@ -64,7 +59,7 @@ for _ in range(int(input())):
     num2 = 1
     den2 = 1
     for i in num_b:
-        num2 = (num2 * num_b[i])
+        num2 = num2 * num_b[i]
         den2 = den2 * freq_b[i]
     if n <= 10:
         if n2 >= n1:
@@ -74,14 +69,14 @@ for _ in range(int(input())):
         t = num1 / num2
         ans = ans * t
         if ans > 10000000.0:
-            print("Infinity")
+            print('Infinity')
         else:
             print(ans)
     else:
         ans1 = log10(num1) + n2 * log10(den2)
-        ans2 = log10(num2) + n1 * (log10(den1))
+        ans2 = log10(num2) + n1 * log10(den1)
         ans1 = ans1 - ans2
         if ans1 > 7.0:
-            print("Infinity")
+            print('Infinity')
         else:
             print(pow(10, ans1))

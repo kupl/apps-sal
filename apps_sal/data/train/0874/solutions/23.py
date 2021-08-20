@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m, s = [int(x) for x in input().split()]
+    (n, m, s) = [int(x) for x in input().split()]
     h = list(map(int, input().split()))
     h.sort()
     sum = 0

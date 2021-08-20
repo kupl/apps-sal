@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 data = [input().split() for i in range(n)]
 ans = 0
 for i in range(n - 1):

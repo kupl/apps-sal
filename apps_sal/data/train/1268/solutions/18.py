@@ -6,7 +6,7 @@ def sum(a, d, n):
 
 
 while True:
-    n, m, x = map(int, input().split())
+    (n, m, x) = map(int, input().split())
     if m is 0:
         break
     hcf = gcd(n, m)

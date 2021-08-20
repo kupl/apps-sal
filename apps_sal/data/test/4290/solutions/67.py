@@ -1,6 +1,5 @@
 import math
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 
 
 def c(a, b):
@@ -10,4 +9,4 @@ def c(a, b):
         return 0
 
 
-print((c(n, 2) + c(m, 2)))
+print(c(n, 2) + c(m, 2))

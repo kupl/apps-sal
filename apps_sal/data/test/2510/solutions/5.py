@@ -1,7 +1,6 @@
 import sys
 sys.setrecursionlimit(10 ** 9)
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 root = [-1] * n
 
 
@@ -28,11 +27,9 @@ def size(x):
 
 
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     y -= 1
     unite(x, y)
-
 max_size = max(map(size, range(n)))
-
 print(max_size)

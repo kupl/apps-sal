@@ -17,7 +17,7 @@ Note that the first and last seats are not adjacent (if `n != 2`).
 
 Input:
 
-The first line contains a single integer `n` (`1 \leq n \leq 1000`) — the
+The first line contains a single integer `n` (`1 \\leq n \\leq 1000`) — the
 number of chairs.
 
 The next line contains a string of `n` characters, each of them is either zero
@@ -33,15 +33,11 @@ lowercase).
 
 """
 import logging
-
-
 fmt = '%(levelname)s - %(name)s (line:%(lineno)s) - %(message)s'
 formatter = logging.Formatter(fmt)
-
 ch = logging.StreamHandler()
 ch.setLevel(logging.NOTSET)
 ch.setFormatter(formatter)
-
 logger = logging.getLogger('row')
 logger.setLevel(logging.NOTSET)
 logger.addHandler(ch)
@@ -49,16 +45,15 @@ logger.addHandler(ch)
 
 def solve(s):
     if len(s) == 1 and s == '0':
-        return False  # Its possible to seat someone
+        return False
     elif len(s) == 1 and s == '1':
         return True
-    elif len(s) == 2 and '1' in s and '0' in s:
-        return True  # maximal
+    elif len(s) == 2 and '1' in s and ('0' in s):
+        return True
     if '11' in s:
         return False
     if '000' in s or s[:2] == '00' or s[-2:] == '00':
-        return False  # Its possible to seat someone
-    # raise 'Missing something?'
+        return False
     return True
 
 

@@ -13,5 +13,5 @@ for i in range(t):
             if ok:
                 good = True
         if good:
-            ans.append(str(h) + "x" + str(w))
-    print(str(len(ans)) + " " + " ".join(ans))
+            ans.append(str(h) + 'x' + str(w))
+    print(str(len(ans)) + ' ' + ' '.join(ans))

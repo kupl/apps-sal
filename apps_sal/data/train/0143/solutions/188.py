@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        l, nums, res = 0, collections.Counter(), 0
+        (l, nums, res) = (0, collections.Counter(), 0)
         for r in range(len(tree)):
             nums[tree[r]] += 1
             while len(nums) > 2:

@@ -14,13 +14,13 @@ def mints():
 
 
 def solve():
-    n, dc = mints()
+    (n, dc) = mints()
     a = list(mints())
     a.append(0)
     x = [0] * n
     y = [0] * n
     for i in range(n):
-        x[i], y[i] = mints()
+        (x[i], y[i]) = mints()
     d = [1 << 30] * n
     d[0] = 0
     was = [False] * n

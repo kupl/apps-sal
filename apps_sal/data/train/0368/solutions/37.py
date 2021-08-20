@@ -1,5 +1,5 @@
 def merge(arr1, arr2):
-    index1, index2 = 0, 0
+    (index1, index2) = (0, 0)
     res = []
     while index1 < len(arr1) or index2 < len(arr2):
         if index1 >= len(arr1) or (index2 < len(arr2) and arr1[index1] > arr2[index2]):
@@ -33,9 +33,10 @@ def coefficient(arr):
 
 
 class Solution:
+
     def maxSatisfaction(self, unsortedSatisfaction: List[int]) -> int:
         satisfaction = mergeSort(unsortedSatisfaction)
-        negative, nonnegative = splitAtZero(satisfaction)
+        (negative, nonnegative) = splitAtZero(satisfaction)
         res = nonnegative[:]
         for dish in reversed(negative):
             attempt = [dish] + res[:]

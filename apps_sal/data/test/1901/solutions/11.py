@@ -5,17 +5,17 @@ threading.stack_size(67108864)
 
 
 def main():
+
     def dfs(v, cv):
         color[v] = cv
         for u in d[v]:
             if color[u] == 0:
                 dfs(u, cv)
-
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     c = list(map(int, input().split()))
     d = {x: [] for x in range(n + 1)}
     for i in range(m):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         d[x].append(y)
         d[y].append(x)
     color = [0] * (n + 1)

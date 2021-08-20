@@ -15,6 +15,6 @@ for query in range(q):
             pos = False
             break
     if pos == False:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -1,6 +1,6 @@
 def capitalize(s):
-    new_string = ""
-    new_string1 = ""
+    new_string = ''
+    new_string1 = ''
     for i in range(len(s)):
         if i % 2 == 0:
             new_string += s[i].upper()
@@ -11,4 +11,4 @@ def capitalize(s):
             new_string1 += s[j].upper()
         else:
             new_string1 += s[j]
-    return [f"{new_string}", f"{new_string1}"]
+    return [f'{new_string}', f'{new_string1}']

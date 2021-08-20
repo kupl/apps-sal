@@ -1,4 +1,4 @@
-X, Y = input().split()
+(X, Y) = input().split()
 alphabet = ['A', 'B', 'C', 'D', 'E', 'F']
 x_i = 0
 y_i = 0

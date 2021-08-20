@@ -6,5 +6,4 @@ for h in hl:
     if hmax <= h:
         hmax = h
         cnt += 1
-
 print(cnt)

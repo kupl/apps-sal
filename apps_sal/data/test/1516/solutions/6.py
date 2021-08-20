@@ -17,5 +17,4 @@ def pad(x, k):
 r = 0
 for x in a:
     r = (r + pad(x, 57)) % MOD
-
 print(r * n * 11 % MOD)

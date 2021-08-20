@@ -1,4 +1,4 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 c = list(map(int, input().split()))
 i = n
 c2 = sorted(c)

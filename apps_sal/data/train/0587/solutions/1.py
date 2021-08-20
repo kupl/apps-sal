@@ -11,8 +11,7 @@ for i in range(len(a)):
             rem = 32 - len(str)
             str = '0' * rem + str
         str1 = copy.deepcopy(str)
-        str1 = list(x for x in str1)
-
+        str1 = list((x for x in str1))
         if str[31] == '0':
             str1[31] = '0'
         if str[31] == '1':
@@ -21,7 +20,6 @@ for i in range(len(a)):
             str1[30] = '1'
         if str[30] == '1':
             str1[30] = '0'
-        # print(str1)
         str1 = ''.join(str1)
         x = int(str1, 2)
         c.append(x)

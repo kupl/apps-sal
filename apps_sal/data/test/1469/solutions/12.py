@@ -1,4 +1,3 @@
-# mada dame datta.
 def main():
     L = int(input())
     b = bin(L)[2:]
@@ -6,15 +5,15 @@ def main():
     r = []
     for i in range(bl - 1):
         r.append((i + 1, i + 2, 0))
-        r.append((i + 1, i + 2, 2**i))
-    if L == 2**(bl - 1):
+        r.append((i + 1, i + 2, 2 ** i))
+    if L == 2 ** (bl - 1):
         pr(r)
         return
     end = bl
     for i in reversed(list(range(1, end))):
-        if L - 2**(i - 1) >= 2**(end - 1):
-            r.append((i, end, L - 2**(i - 1)))
-            L -= 2**(i - 1)
+        if L - 2 ** (i - 1) >= 2 ** (end - 1):
+            r.append((i, end, L - 2 ** (i - 1)))
+            L -= 2 ** (i - 1)
     pr(r)
 
 

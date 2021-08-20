@@ -15,4 +15,4 @@ for i in range(n):
     else:
         bb[i] = 0 - aa[i + 1]
         aa[i + 1] = 0
-print((bef - sum(aa)))
+print(bef - sum(aa))

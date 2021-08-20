@@ -1,5 +1,5 @@
 import collections
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 a = collections.Counter(A)
 b = a.most_common()

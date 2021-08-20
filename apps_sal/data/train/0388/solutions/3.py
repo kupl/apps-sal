@@ -1,4 +1,5 @@
 class Solution:
+
     def hIndex(self, citations):
         """
         :type citations: List[int]
@@ -6,14 +7,11 @@ class Solution:
         """
         if len(citations) == 0:
             return 0
-
         maxCita = -sys.maxsize - 1
         for citation in citations:
             maxCita = max(maxCita, citation)
-
         start = 0
         end = maxCita
-
         while start + 1 < end:
             mid = start + (end - start) // 2
             if self.countAtleast(mid, citations) == mid:
@@ -22,7 +20,6 @@ class Solution:
                 start = mid
             else:
                 end = mid
-
         if self.countAtleast(end, citations) >= end:
             return end
         else:

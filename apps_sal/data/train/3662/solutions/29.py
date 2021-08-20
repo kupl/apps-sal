@@ -1,4 +1,2 @@
-def xor(a,
-        b):
-
+def xor(a, b):
     return a != b

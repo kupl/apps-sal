@@ -1,9 +1,9 @@
 class Solution:
+
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         mp = {}
         res = []
-
-        for i, v in enumerate(keyName):
+        for (i, v) in enumerate(keyName):
             if v in mp:
                 mp[v].append(keyTime[i])
             else:
@@ -19,7 +19,6 @@ class Solution:
                 if i + 2 < n:
                     dh = int(t[i + 2].split(':')[0]) - int(t[i].split(':')[0])
                     dm = int(t[i + 2].split(':')[1]) - int(t[i].split(':')[1])
-
                     if dh >= 2:
                         continue
                     elif dh == 1 and dm > 0:
@@ -43,8 +42,7 @@ class Solution:
             t = mp[name]
             t = t.sort()
             count = 0
-
-            for i, v in enumerate(t):
+            for (i, v) in enumerate(t):
                 if i + 2 < n:
                     dh = self.hour(t[i + 2]) - self.hour(v)
                     dm = self.minuu(t[i + 2]) - self.minuu(v)

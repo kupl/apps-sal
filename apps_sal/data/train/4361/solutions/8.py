@@ -1,4 +1,4 @@
-M, U = {}, []
+(M, U) = ({}, [])
 
 
 def H(Q):
@@ -6,7 +6,7 @@ def H(Q):
     while Q:
         if Q % 10 < 1:
             return 0
-        R += 1 << (Q % 10 * 3)
+        R += 1 << Q % 10 * 3
         Q //= 10
     return R
 

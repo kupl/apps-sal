@@ -12,14 +12,12 @@ class UnionFind(object):
             return self.nodes[x]
 
     def unite(self, x: int, y: int) -> bool:
-        root_x, root_y, nodes = self.find(x), self.find(y), self.nodes
-
+        (root_x, root_y, nodes) = (self.find(x), self.find(y), self.nodes)
         if root_x != root_y:
             if nodes[root_x] > nodes[root_y]:
-                root_x, root_y = root_y, root_x
+                (root_x, root_y) = (root_y, root_x)
             nodes[root_x] += nodes[root_y]
             nodes[root_y] = root_x
-
         return root_x != root_y
 
 
@@ -28,11 +26,10 @@ def __starting_point():
     n = int(input())
     uf = UnionFind(26 + n)
     cc_a = ord('a')
-    for i, p in enumerate((l.rstrip() for l in sys.stdin), start=26):
+    for (i, p) in enumerate((l.rstrip() for l in sys.stdin), start=26):
         for cc in list(map(lambda c: ord(c) - cc_a, set(p))):
             uf.unite(i, cc)
-
-    ans = sum(1 for i in range(26, 26 + n) if uf.nodes[i] < 0)
+    ans = sum((1 for i in range(26, 26 + n) if uf.nodes[i] < 0))
     print(ans)
 
 

@@ -7,12 +7,12 @@ Language: Python 3.3.4
 
 
 def main():
-    n, = read()
+    (n,) = read()
     a = []
     b = []
     last = 0
     for i in range(n):
-        x, = read()
+        (x,) = read()
         if x < 0:
             b.append(-x)
             last = 1
@@ -20,23 +20,18 @@ def main():
             a.append(x)
             last = 0
     if sum(a) > sum(b):
-        print("first")
+        print('first')
     elif sum(b) > sum(a):
-        print("second")
+        print('second')
     elif a > b:
-        print("first")
+        print('first')
     elif b > a:
-        print("second")
+        print('second')
     else:
-        print("second" if last else "first")
-
-# NON-SOLUTION STUFF BELOW
+        print('second' if last else 'first')
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -46,13 +41,13 @@ def read(mode=2):
         return list(map(int, inputs.split()))
 
 
-def write(s="\n"):
+def write(s='\n'):
     if s is None:
-        s = ""
+        s = ''
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 write(main())

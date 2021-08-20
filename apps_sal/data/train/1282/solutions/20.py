@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 while t > 0:
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     k = 1
     m = a
     n = b
@@ -21,12 +20,12 @@ while t > 0:
         if m >= p and m < q:
             if b < q:
                 o = b - m + 1
-                lum = ((o % 1000000007) * (y % 1000000007)) % 1000000007
+                lum = o % 1000000007 * (y % 1000000007) % 1000000007
                 sum = sum + lum
                 sum = sum % 1000000007
             else:
                 o = q - m
-                lum = ((o % 1000000007) * (y % 1000000007)) % 1000000007
+                lum = o % 1000000007 * (y % 1000000007) % 1000000007
                 sum = sum + lum
                 sum = sum % 1000000007
         y *= 2

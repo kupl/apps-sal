@@ -1,7 +1,8 @@
 class Solution:
+
     def Greedy(self, counts, zeros, ones):
         num = 0
-        for a, b in counts:
+        for (a, b) in counts:
             if a <= zeros and b <= ones:
                 zeros -= a
                 ones -= b
@@ -16,5 +17,4 @@ class Solution:
         :rtype: int
         """
         counts = list(map(lambda x: [x.count('0'), x.count('1')], strs))
-        return max(self.Greedy(sorted(counts, key=lambda c: min(c[0], c[1])), m, n),
-                   self.Greedy(sorted(counts, key=lambda c: min(m - c[0], n - c[1]), reverse=True), m, n))
+        return max(self.Greedy(sorted(counts, key=lambda c: min(c[0], c[1])), m, n), self.Greedy(sorted(counts, key=lambda c: min(m - c[0], n - c[1]), reverse=True), m, n))

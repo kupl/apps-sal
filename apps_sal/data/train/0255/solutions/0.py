@@ -1,4 +1,5 @@
 class Solution:
+
     def jump(self, nums):
         """
         :type nums: List[int]
@@ -16,11 +17,10 @@ class Solution:
                     if len(nums) - 1 == pos + i:
                         bestStep = i
                         break
-                    if (pos + i < len(nums) and nums[pos + i] != 0 and nums[pos + i] + i > bestValue):
+                    if pos + i < len(nums) and nums[pos + i] != 0 and (nums[pos + i] + i > bestValue):
                         bestStep = i
                         bestValue = nums[pos + i] + i
                 print(bestStep)
                 pos += bestStep
                 step += 1
-
             return step

@@ -1,6 +1,4 @@
-# ABC088C
-
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 cnt = 0
 i = X
 while i <= Y:

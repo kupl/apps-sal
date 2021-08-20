@@ -1,6 +1,7 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
-        length, last, max_char = len(s), s[-1], s[-1]
+        (length, last, max_char) = (len(s), s[-1], s[-1])
         for i in range(length - 2, -1, -1):
             if s[i] < max_char:
                 pass

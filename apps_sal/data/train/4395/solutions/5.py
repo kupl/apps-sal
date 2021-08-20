@@ -14,8 +14,7 @@ def next_higher(prev: int) -> int:
     must be sorted (unset bits more significant than set bits) to get the
     smallest possible number.
     """
-
     bin_string = f'0{prev:b}'
-    i = bin_string.rfind("01")
+    i = bin_string.rfind('01')
     counts = Counter(bin_string[i + 2:])
-    return int(f'{bin_string[:i]}10{"0" * counts["0"]}{"1" * counts["1"]}', 2)
+    return int(f"{bin_string[:i]}10{'0' * counts['0']}{'1' * counts['1']}", 2)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         n = len(nums)
         m = len(requests)
@@ -14,9 +15,6 @@ class Solution:
                 heapq.heappush(q, R[j][1])
                 j += 1
             d[i] = len(q)
-
-        # print(d)
-
         d.sort(reverse=1)
         nums.sort(reverse=1)
         ret = 0

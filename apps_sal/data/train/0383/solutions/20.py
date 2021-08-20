@@ -1,4 +1,5 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         spreads = [[] for _ in range(len(graph))]
         initial = set(initial)
@@ -18,9 +19,8 @@ class Solution:
         for s in spreads:
             if len(s) == 1:
                 counts[s[0]] += 1
-
         most = next(iter(initial))
-        for i, c in list(counts.items()):
+        for (i, c) in list(counts.items()):
             if c > counts[most] or (c == counts[most] and i < most):
                 most = i
         return most

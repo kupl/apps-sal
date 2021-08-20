@@ -1,5 +1,7 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
+
         def atmost(k):
             res = i = 0
             for j in range(len(nums)):

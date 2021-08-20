@@ -1,6 +1,6 @@
-H, W, A, B = map(int, input().split())
-MAX_NUM = 2 * 10**5 + 1
-pr = 10**9 + 7
+(H, W, A, B) = map(int, input().split())
+MAX_NUM = 2 * 10 ** 5 + 1
+pr = 10 ** 9 + 7
 fac = [0 for _ in range(MAX_NUM)]
 finv = [0 for _ in range(MAX_NUM)]
 inv = [0 for _ in range(MAX_NUM)]

@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         t1 = dict(collections.Counter(nums1))
         t2 = dict(collections.Counter(nums2))

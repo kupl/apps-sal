@@ -1,5 +1,6 @@
-def rd(): return list(map(int, input().split()))
+def rd():
+    return list(map(int, input().split()))
 
 
-n, k = rd()
+(n, k) = rd()
 print(' '.join(map(str, list(range(n, n - k, -1)) + list(range(1, n - k + 1)))))

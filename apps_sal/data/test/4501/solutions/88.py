@@ -1,4 +1,4 @@
-N, A = (int(T) for T in input().split())
+(N, A) = (int(T) for T in input().split())
 X = [int(T) - A for T in input().split()]
 DP = [[0] * (2 * (50 * N) + 1) for TI in range(0, N + 1)]
 DP[0][50 * N] = 1

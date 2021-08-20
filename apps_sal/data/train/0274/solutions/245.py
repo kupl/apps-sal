@@ -1,10 +1,11 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         decStack = collections.deque()
         incStack = collections.deque()
         ans = 0
         l = 0
-        for r, n in enumerate(nums):
+        for (r, n) in enumerate(nums):
             while decStack and decStack[-1][0] <= n:
                 decStack.pop()
             decStack.append((n, r))
@@ -18,5 +19,4 @@ class Solution:
                 while incStack and incStack[0][1] < l:
                     incStack.popleft()
             ans = max(ans, r - l + 1)
-            # print(ans, l, r, incStack, decStack)
         return ans

@@ -1,1 +1,2 @@
-def cockroach_speed(s): return int(s * (27 + 7 / 9))
+def cockroach_speed(s):
+    return int(s * (27 + 7 / 9))

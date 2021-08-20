@@ -1,7 +1,5 @@
-
-nmax = 3 * 10**5
-mod = 10**9 + 7
-
+nmax = 3 * 10 ** 5
+mod = 10 ** 9 + 7
 fac = [1] * nmax
 finv = [1] * nmax
 inv = [1] * nmax
@@ -23,7 +21,7 @@ def ncr(n, r):
 
 
 ncr_pre()
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = 0
 for i in range(min(n, k + 1)):
     ans += ncr(n, i) * ncr(i + n - i - 1, i)

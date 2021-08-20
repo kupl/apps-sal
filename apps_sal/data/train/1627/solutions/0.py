@@ -1,9 +1,13 @@
-l = {j: i for i, j in enumerate('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')}
+l = {j: i for (i, j) in enumerate('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz')}
 l_ = dict(enumerate('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'))
 
 
-def is_polydivisible(n, base): return next((0 for i in range(1, len(n) + 1) if get_base(n[:i], base) % i), 1)
-def get_base(n, base): return sum(int(l[j]) * (base ** i) for i, j in enumerate(n[::-1]))
+def is_polydivisible(n, base):
+    return next((0 for i in range(1, len(n) + 1) if get_base(n[:i], base) % i), 1)
+
+
+def get_base(n, base):
+    return sum((int(l[j]) * base ** i for (i, j) in enumerate(n[::-1])))
 
 
 def get_polydivisible(n, base):
@@ -21,6 +25,6 @@ def get_polydivisible(n, base):
 def to_base(n, base):
     li = []
     while n:
-        n, b = divmod(n, base)
+        (n, b) = divmod(n, base)
         li.append(l_[b])
     return li[::-1]

@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
-
 n = int(input())
 s = input()
-
-p, w = False, False
-x, y, z = 0, 0, 0
-
+(p, w) = (False, False)
+(x, y, z) = (0, 0, 0)
 for c in s:
     if c == '_':
         w = False
@@ -22,8 +18,7 @@ for c in s:
         x += 1
         if not p and x > y:
             y = x
-        if p and not w:
+        if p and (not w):
             z += 1
         w = True
-
 print(y, z)

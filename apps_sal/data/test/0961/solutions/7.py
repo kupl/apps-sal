@@ -1,7 +1,8 @@
 from collections import Counter, defaultdict
 
 
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
@@ -10,7 +11,7 @@ cnts = Counter(arr)
 dp = [0] * (n + 1)
 for i in range(n):
     acc = defaultdict(int)
-    cnt, xor = 0, 0
+    (cnt, xor) = (0, 0)
     dp[i] = dp[i - 1]
     for j in range(i, -1, -1):
         acc[arr[j]] += 1

@@ -1,9 +1,9 @@
-h, w, a, b = map(int, input().split())
+(h, w, a, b) = map(int, input().split())
 inv = [0] * (2 * max(h, w) + 1)
 fact = [0] * (2 * max(h, w) + 1)
 inv[0] = 1
 fact[0] = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(1, 2 * max(h, w) + 1):
     fact[i] = fact[i - 1] * i % mod
 inv[-1] = pow(fact[-1], mod - 2, mod)

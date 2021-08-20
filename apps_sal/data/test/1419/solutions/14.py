@@ -1,10 +1,7 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
-#sys.stdin = open("input.txt", "r")
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 sys.setrecursionlimit(1000000)
 
 
@@ -27,7 +24,7 @@ n = int(input())
 s = list(input().split())
 x = []
 for i in range(len(s) - 1):
-    s[i] += " "
+    s[i] += ' '
 for i in range(len(s)):
     s[i] = s[i].split('-')
 for i in range(len(s)):

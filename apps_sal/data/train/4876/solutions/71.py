@@ -6,6 +6,7 @@ def hello(name=None):
 
 
 class TestHello(unittest.TestCase):
+
     def test_hello_should_return_default_string_with_not_given_name(self):
         self.assertEqual(hello(None), 'Hello, World!')
 

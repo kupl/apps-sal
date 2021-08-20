@@ -1,12 +1,14 @@
-class TrieNode():
+class TrieNode:
+
     def __init__(self):
         self.children = [None] * 27
         self.ispresent = 0
-        self.priority = "aa"
+        self.priority = 'aa'
         self.index = -1
 
 
-class Trie():
+class Trie:
+
     def __init__(self):
         self.root = self.getnode()
 
@@ -50,7 +52,7 @@ data = Trie()
 n = int(input())
 strings = []
 for i in range(n):
-    string, pri = input().split()
+    (string, pri) = input().split()
     pri = int(pri)
     data.insert(string, i, pri)
     strings.append(string)
@@ -61,5 +63,4 @@ for i in range(q):
     if ans == -1:
         print('NO')
     else:
-        # print(ans,start)
         print(strings[ans])

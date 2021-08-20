@@ -13,11 +13,9 @@ for i in range(1, len(a)):
             t += 1
         else:
             t = 1
+    elif a[i] == a[i - 1]:
+        u += 1
     else:
-        if a[i] == a[i - 1]:
-            u += 1
-        else:
-            u = 1
+        u = 1
     ans = max(ans, min(u, t))
-
 print(ans * 2)

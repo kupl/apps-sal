@@ -1,27 +1,25 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 n = int(input())
 aa = input()
 ab = input()
 ba = input()
 bb = input()
-
-if ab == "A" and aa == "A":
+if ab == 'A' and aa == 'A':
     print(1)
-elif ab == "B" and bb == "B":
+elif ab == 'B' and bb == 'B':
     print(1)
-elif ab == "A" and aa == "B":
-    if ba == "B":
+elif ab == 'A' and aa == 'B':
+    if ba == 'B':
         print(pow(2, max(n - 3, 0), MOD))
     else:
         res = [1, 1]
         for _ in range(max(n - 3, 0)):
             res.append((res[-1] + res[-2]) % MOD)
         print(res[-1])
+elif ba == 'A':
+    print(pow(2, max(n - 3, 0), MOD))
 else:
-    if ba == "A":
-        print(pow(2, max(n - 3, 0), MOD))
-    else:
-        res = [1, 1]
-        for _ in range(max(n - 3, 0)):
-            res.append((res[-1] + res[-2]) % MOD)
-        print(res[-1])
+    res = [1, 1]
+    for _ in range(max(n - 3, 0)):
+        res.append((res[-1] + res[-2]) % MOD)
+    print(res[-1])

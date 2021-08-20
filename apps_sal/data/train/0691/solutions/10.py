@@ -8,7 +8,7 @@ for z in range(t):
         x = j - 1
         c = 0
         if h[a[j]] == 0:
-            while(x >= 0):
+            while x >= 0:
                 if a[x] % a[j] == 0:
                     h[a[x]] = 1
                     c = c + 1

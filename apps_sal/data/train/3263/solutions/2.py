@@ -8,9 +8,9 @@ def solve(arr):
 
 
 def time_to_minutes(time):
-    (hr, min) = time.split(":")
+    (hr, min) = time.split(':')
     return int(hr) * 60 + int(min)
 
 
 def minutes_to_time(minutes):
-    return "{H:0=2d}:{M:0=2d}".format(H=minutes // 60, M=minutes % 60)
+    return '{H:0=2d}:{M:0=2d}'.format(H=minutes // 60, M=minutes % 60)

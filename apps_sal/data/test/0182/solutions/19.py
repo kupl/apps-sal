@@ -1,5 +1,5 @@
-a, b, c = map(int, input().split())
-x, y, z = map(int, input().split())
+(a, b, c) = map(int, input().split())
+(x, y, z) = map(int, input().split())
 r = [a - x, b - y, c - z]
 r.sort()
 if r[2] < 0:

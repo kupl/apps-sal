@@ -18,15 +18,13 @@ def check(amidakuji, w):
 
 
 def main():
-    # 入力
     readline = stdin.readline
-    mod = 10**9 + 7
-    h, w, k = map(int, readline().split())
-
+    mod = 10 ** 9 + 7
+    (h, w, k) = map(int, readline().split())
     dp = [[0] * w for _ in range(h + 1)]
     dp[0][0] = 1
     for i in range(1, h + 1):
-        for bit in range(1 << (w - 1)):
+        for bit in range(1 << w - 1):
             if check(bit, w) == False:
                 continue
             else:
@@ -41,20 +39,17 @@ def main():
                             dp[i][j - 1] += dp[i - 1][j]
                         else:
                             dp[i][j] += dp[i - 1][j]
+                    elif bit & 1 == 1:
+                        dp[i][j - 1] += dp[i - 1][j]
+                        bit >>= 1
                     else:
+                        bit >>= 1
                         if bit & 1 == 1:
-                            dp[i][j - 1] += dp[i - 1][j]
-                            bit >>= 1
+                            dp[i][j + 1] += dp[i - 1][j]
                         else:
-                            bit >>= 1
-                            if bit & 1 == 1:
-                                dp[i][j + 1] += dp[i - 1][j]
-                            else:
-                                dp[i][j] += dp[i - 1][j]
-
+                            dp[i][j] += dp[i - 1][j]
                 for j in range(w):
                     dp[i][j] %= mod
-
     print(dp[h][k - 1])
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def isUgly(self, num):
         """
         :type num: int
@@ -10,7 +11,7 @@ class Solution:
         if num == 1:
             return True
         i = 2
-        while (i < num + 1):
+        while i < num + 1:
             print(num, i, ' ', lst)
             if num % i == 0:
                 if i not in [2, 3, 5]:

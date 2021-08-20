@@ -1,17 +1,14 @@
 def main():
     import sys
-    sys.setrecursionlimit(10**9)
+    sys.setrecursionlimit(10 ** 9)
     input = sys.stdin.readline
-    INF = 10**9
-
-    H, W, K = map(int, input().split())
+    INF = 10 ** 9
+    (H, W, K) = map(int, input().split())
     chocolate = [input() for _ in range(H)]
-
     loop_H = range(H)
     loop_W = range(W)
     min_cut = INF - 1
-    for div in range(1 << (H - 1)):
-        # 横割りでグループ分け
+    for div in range(1 << H - 1):
         group = [[]]
         group_number = 0
         for i in loop_H:
@@ -19,7 +16,6 @@ def main():
             if div >> i & 1:
                 group.append([])
                 group_number += 1
-        # 縦に切っていく
         cut = group_number
         zeros = [0] * len(group)
         cnt = zeros.copy()

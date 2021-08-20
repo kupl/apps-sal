@@ -1,13 +1,13 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 ar = [0] * k
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     if x < k:
         ar[x] = max(ar[x], y)
 ai.sort()
-big = 10**9
+big = 10 ** 9
 ar2 = [big] * (k + 1)
 ar3 = [0] * (k + 1)
 ar3[0] = 0

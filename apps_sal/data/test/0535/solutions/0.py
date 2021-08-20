@@ -8,7 +8,7 @@ def primeFactor(N):
         n = -n
     if n == 0:
         ret[0] = 1
-    while i**2 <= n:
+    while i ** 2 <= n:
         k = 0
         while n % i == 0:
             n //= i
@@ -18,9 +18,10 @@ def primeFactor(N):
             i = 3
         else:
             i += 2
-        if i == 101 and n >= (2**20):
+        if i == 101 and n >= 2 ** 20:
+
             def findFactorRho(N):
-                # print("FFF", N)
+
                 def gcd(a, b):
                     if b == 0:
                         return a
@@ -28,7 +29,7 @@ def primeFactor(N):
                         return gcd(b, a % b)
 
                 def f(x, c):
-                    return ((x ** 2) + c) % N
+                    return (x ** 2 + c) % N
                 semi = [N]
                 for c in range(1, 11):
                     x = 2
@@ -45,26 +46,22 @@ def primeFactor(N):
                             return N // d
                         else:
                             semi.append(d)
-
                 semi = list(set(semi))
-                # print (semi)
                 s = min(semi)
                 for i in [2, 3, 5, 7]:
                     while True:
-                        t = int(s**(1 / i) + 0.5)
-                        if t**i == s:
+                        t = int(s ** (1 / i) + 0.5)
+                        if t ** i == s:
                             s = t
                             if isPrimeMR(s):
                                 return s
                         else:
                             break
-
                 i = 3
                 while True:
                     if s % i == 0:
                         return i
                     i += 2
-
             while True:
                 if isPrimeMR(n):
                     ret[n] = 1
@@ -80,10 +77,10 @@ def primeFactor(N):
                         ret[j] = k
                 if n == 1:
                     break
-
     if n > 1:
         ret[n] = 1
     if mrFlg > 0:
+
         def dict_sort(X):
             Y = {}
             for x in sorted(X.keys()):
@@ -100,28 +97,21 @@ def isPrime(N):
 
 
 def isPrimeMR(n):
-    # print("MR", n)
     if n == 2:
         return True
     if n == 1 or n & 1 == 0:
         return False
-
-    d = (n - 1) >> 1
+    d = n - 1 >> 1
     while d & 1 == 0:
         d >>= 1
-
     for a in [2, 3, 5, 7, 11, 13, 17, 19]:
         t = d
         y = pow(a, t, n)
-
-        while t != n - 1 and y != 1 and y != n - 1:
-            y = (y * y) % n
+        while t != n - 1 and y != 1 and (y != n - 1):
+            y = y * y % n
             t <<= 1
-
         if y != n - 1 and t & 1 == 0:
-            # print("not prime")
             return False
-    # print("prime")
     return True
 
 
@@ -143,7 +133,7 @@ def divisors(N):
         ret = []
         for i in range(pf[p] + 1):
             for r in ret_prev:
-                ret.append(r * (p ** i))
+                ret.append(r * p ** i)
     return sorted(ret)
 
 
@@ -182,7 +172,6 @@ def mx(m):
     for i in range(m):
         for j in range(i, m):
             ret[i][j] = inv(j + 1)
-
     return ret
 
 
@@ -194,27 +183,17 @@ def inv(a):
     return pow(a, P - 2, P)
 
 
-# ----- -----
-
-P = 10**9 + 7
-
-n, k = list(map(int, input().split()))
-# n = 6
-# k = 2
-
+P = 10 ** 9 + 7
+(n, k) = list(map(int, input().split()))
 pf = primeFactor(n)
-# print(pf)
-
 ans = 1
 for p in pf:
     m = pf[p] + 1
     vvv = mxv(m, mxpow(m, mx(m), k), vc(m))
-
     t = 0
     for i in range(m):
-        t += (vvv[i] * p ** i) % P
+        t += vvv[i] * p ** i % P
         t %= P
-
     ans *= t
     ans %= P
 print(ans)

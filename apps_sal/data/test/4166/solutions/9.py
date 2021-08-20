@@ -1,13 +1,12 @@
-N, M = [int(n) for n in input().split()]
+(N, M) = [int(n) for n in input().split()]
 dp = [-1] * N
 ans = 0
 for _ in range(M):
-    s, c = [int(n) for n in input().split()]
+    (s, c) = [int(n) for n in input().split()]
     if dp[s - 1] == -1:
         dp[s - 1] = c
     elif dp[s - 1] != c:
         ans = -1
-
 if ans == -1 or (dp[0] == 0 and N != 1):
     print(-1)
 else:

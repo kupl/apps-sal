@@ -1,4 +1,4 @@
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 s = input()
 t = input()
 l = []
@@ -8,7 +8,7 @@ for i in range(n - m + 1):
         l.append(i)
         r.append(i + m - 1)
 for i in range(q):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     ans = 0

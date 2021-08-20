@@ -1,7 +1,7 @@
 from collections import deque
 t = int(input())
 for jfrhg in range(t):
-    n, k, d = list(map(int, input().split()))
+    (n, k, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     l = deque(a[:d])
     s = dict()

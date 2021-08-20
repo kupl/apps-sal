@@ -1,5 +1,5 @@
 def weight_key(s):
-    return (sum(int(c) for c in s), s)
+    return (sum((int(c) for c in s)), s)
 
 
 def order_weight(s):

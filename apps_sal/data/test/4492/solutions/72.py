@@ -1,4 +1,4 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = sum(a)
 a = [i if i <= x else x for i in a]

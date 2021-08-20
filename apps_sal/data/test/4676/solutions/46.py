@@ -5,7 +5,6 @@ if len(odd) == len(even):
 else:
     L = len(odd) + len(even)
 li = []
-
 for i in range(1, L + 1):
     if i % 2 == 1:
         if i == 1:
@@ -14,5 +13,4 @@ for i in range(1, L + 1):
             li.append(odd[i // 2])
     else:
         li.append(even[i // 2 - 1])
-
 print(''.join(li))

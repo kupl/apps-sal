@@ -3,7 +3,6 @@ def string_constructing(a, s):
         return 0
     if set(s) - set(a):
         return False
-
     n = 1
     i = 0
     for c in s:
@@ -17,5 +16,4 @@ def string_constructing(a, s):
             else:
                 i += 1
                 break
-
     return n + len(a) - i

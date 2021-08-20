@@ -2,6 +2,7 @@ class Solution:
     import math
 
     def minOperations(self, nums: List[int]) -> int:
+
         def f(s):
             n = 0
             p = 0
@@ -18,9 +19,8 @@ class Solution:
         inc = 0
         for i in range(len(nums)):
             if nums[i] != 0:
-                n, p = f(nums[i])
-                res += (n - p)
-                res += (p - inc)
+                (n, p) = f(nums[i])
+                res += n - p
+                res += p - inc
                 inc = p
-
         return res

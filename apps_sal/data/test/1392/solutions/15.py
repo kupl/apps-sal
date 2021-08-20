@@ -1,15 +1,15 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 
 
 def good(n, k):
     l = [0] * (k + 1)
-    while(n > 0):
+    while n > 0:
         num = n % 10
         n = n // 10
-        if(num <= k):
+        if num <= k:
             l[num] += 1
     for i in l:
-        if(i == 0):
+        if i == 0:
             return False
     return True
 
@@ -17,6 +17,6 @@ def good(n, k):
 c = 0
 for i in range(n):
     num = int(input())
-    if(good(num, k)):
+    if good(num, k):
         c = c + 1
 print(c)

@@ -7,7 +7,7 @@ Language: Python 3.3.4
 
 
 def main():
-    n, k = read()
+    (n, k) = read()
     s = set()
     for i in range(n):
         s.add(read(0))
@@ -15,14 +15,14 @@ def main():
     s.sort()
     s = treeify(s)
     res = solve(s)
-    if res == 0:  # neither: second player win
-        print("Second")
-    if res == 1:  # odd: first player win if k is odd
-        print("First" if k % 2 else "Second")
-    if res == 2:  # even: second player win
-        print("Second")
-    if res == 3:  # both: first player win
-        print("First")
+    if res == 0:
+        print('Second')
+    if res == 1:
+        print('First' if k % 2 else 'Second')
+    if res == 2:
+        print('Second')
+    if res == 3:
+        print('First')
 
 
 def treeify(s):
@@ -42,24 +42,19 @@ def solve(s, parity=2):
         if isinstance(s[i], list):
             s[i] = solve(s[i], 3 - parity)
     if not s:
-        return parity  # no possible move: current parity
+        return parity
     if 0 in s:
-        return 3  # any neither: both
+        return 3
     if 1 in s and 2 in s:
-        return 3  # any odd and any even: both
+        return 3
     if 1 in s:
-        return 1  # any odd: odd
+        return 1
     if 2 in s:
-        return 2  # any even: even
-    return 0  # all both: neither
-
-# NON-SOLUTION STUFF BELOW
+        return 2
+    return 0
 
 
 def read(mode=2):
-    # 0: String
-    # 1: List of strings
-    # 2: List of integers
     inputs = input().strip()
     if mode == 0:
         return inputs
@@ -69,11 +64,11 @@ def read(mode=2):
         return map(int, inputs.split())
 
 
-def write(s="\n"):
+def write(s='\n'):
     if isinstance(s, list):
-        s = " ".join(map(str, s))
+        s = ' '.join(map(str, s))
     s = str(s)
-    print(s, end="")
+    print(s, end='')
 
 
 main()

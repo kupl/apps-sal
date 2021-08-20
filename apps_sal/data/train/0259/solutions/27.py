@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
         nums.sort()
         return self.binSearch(1, nums[-1], nums, threshold)

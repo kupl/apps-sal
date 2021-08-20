@@ -1,7 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-i, ans = 0, 0
-
+(i, ans) = (0, 0)
 while i < n:
     ans += 1
     cap = a[i]
@@ -9,5 +8,4 @@ while i < n:
         i += 1
         cap += a[i]
     i += 1
-
 print(ans)

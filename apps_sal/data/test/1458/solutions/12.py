@@ -8,7 +8,6 @@ def main():
             l = i + 1
             r = i + 2
             break
-
     if l != -1 and r != -1:
         print('YES')
         print(l, r)

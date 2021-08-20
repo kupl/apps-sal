@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         curmaxsight = A[0] - 1
         curmaxpair = 0

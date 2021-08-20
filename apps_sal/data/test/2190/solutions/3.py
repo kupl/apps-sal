@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 ans = 0
 d = {}
@@ -15,11 +15,11 @@ for i in range(n):
                 c += 1
             if c % k > 0:
                 a.append((x, c % k))
-                b.append((x, k - (c % k)))
+                b.append((x, k - c % k))
         x += 1
     if y > 1:
         a.append((y, 1 % k))
-        b.append((y, k - (1 % k)))
+        b.append((y, k - 1 % k))
     try:
         ans += d[tuple(b)]
     except:

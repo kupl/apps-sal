@@ -3,9 +3,9 @@ from bisect import bisect
 
 
 def sum_part(n):
-    m, p, q, r, s = 1, 1, 1, 0, n
+    (m, p, q, r, s) = (1, 1, 1, 0, n)
     while n > 9:
-        n, d = divmod(n, 10)
+        (n, d) = divmod(n, 10)
         r += d * p
         p *= 10
         if d:
@@ -22,7 +22,7 @@ memo = {n: n for n in range(10)}
 for n in range(10, 10 ** 6):
     memo[n] = sum_part(n)
     if memo[n] > n:
-        k, r = divmod(n, memo[n] - n)
+        (k, r) = divmod(n, memo[n] - n)
         if not r:
             qualified[k].append(memo[n] - n)
 

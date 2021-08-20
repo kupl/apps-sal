@@ -1,7 +1,6 @@
 class BrowserHistory:
 
     def __init__(self, homepage: str):
-
         self.list1 = [homepage]
         self.currentInd = 0
 
@@ -13,7 +12,6 @@ class BrowserHistory:
         print((self.list1, self.currentInd))
 
     def back(self, steps: int) -> str:
-
         while self.currentInd > 0 and steps > 0:
             self.currentInd -= 1
             steps -= 1
@@ -25,10 +23,3 @@ class BrowserHistory:
             steps -= 1
         print((self.list1[self.currentInd], self.currentInd))
         return self.list1[self.currentInd]
-
-
-# Your BrowserHistory object will be instantiated and called as such:
-# obj = BrowserHistory(homepage)
-# obj.visit(url)
-# param_2 = obj.back(steps)
-# param_3 = obj.forward(steps)

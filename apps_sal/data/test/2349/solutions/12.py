@@ -14,4 +14,4 @@ for i in range(t):
         left = k
         m -= 1
     print(len(ans))
-    print(*ans, sep=" ")
+    print(*ans, sep=' ')

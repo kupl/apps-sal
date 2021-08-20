@@ -4,13 +4,13 @@ def grader(score):
     elif score < 0.7:
         return 'D'
     elif score < 0.8:
-        return "C"
+        return 'C'
     elif score < 0.9:
-        return "B"
+        return 'B'
     elif score <= 1:
-        return "A"
+        return 'A'
     elif score > 1:
-        return "F"
+        return 'F'
     else:
         None
     print(grader(score))

@@ -1,3 +1,3 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 L = list(map(int, input().split()))
-print((sum(sorted(L, reverse=True)[:k])))
+print(sum(sorted(L, reverse=True)[:k]))

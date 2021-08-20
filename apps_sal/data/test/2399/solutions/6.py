@@ -2,7 +2,7 @@ test_case = int(input())
 
 
 def solve():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     s = input().split('X')
     lens = [len(dot) for dot in s]
     cnt = 0
@@ -11,14 +11,13 @@ def solve():
         if le < b:
             continue
         if le < a:
-            return "NO"
+            return 'NO'
         if le >= 2 * b:
             if tmp > 0:
-                return "NO"
+                return 'NO'
             tmp = le
         else:
             cnt += 1
-
     if tmp is not 0:
         win = False
         for i in range(tmp + 1):
@@ -36,7 +35,7 @@ def solve():
                 win = True
     else:
         win = cnt % 2 == 1
-    return "YES" if win else "NO"
+    return 'YES' if win else 'NO'
 
 
 for _ in range(test_case):

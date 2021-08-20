@@ -1,5 +1,8 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
@@ -11,7 +14,7 @@ def main():
         x ^= a
     for i in range(n):
         B[i] = x ^ A[i]
-    print(" ".join(map(str, B)))
+    print(' '.join(map(str, B)))
 
 
 def __starting_point():

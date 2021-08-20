@@ -1,6 +1,7 @@
 class Solution:
+
     def minDays(self, bloomDay, m, k):
-        start, end = 1, max(bloomDay)
+        (start, end) = (1, max(bloomDay))
         while start + 1 < end:
             mid = start + (end - start) // 2
             if self.check(mid, bloomDay, m, k):

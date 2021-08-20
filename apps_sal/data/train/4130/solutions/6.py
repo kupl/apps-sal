@@ -6,4 +6,4 @@ def is_valid_HK_phone_number(number):
 
 
 def has_valid_HK_phone_number(number):
-    return bool(re.search(r'\d{4}\s\d{4}', number))
+    return bool(re.search('\\d{4}\\s\\d{4}', number))

@@ -6,7 +6,7 @@ def ceil(x, y):
 
 
 def main():
-    n, d, a = list(map(int, input().split()))
+    (n, d, a) = list(map(int, input().split()))
     info = [list(map(int, input().split())) for _ in range(n)]
     info.sort(key=lambda x: x[0])
     x = [x[0] for x in info]

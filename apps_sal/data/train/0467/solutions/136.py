@@ -1,4 +1,5 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
 
         def findiv(num):
@@ -14,9 +15,7 @@ class Solution:
                         res += i
                         res += num // i
             return res if cnt == 4 else 0
-
         res = 0
-
         for num in nums:
             res += findiv(num)
         return res

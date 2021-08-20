@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [list(input()) for i in range(n)]
 b = [list(input()) for i in range(m)]
 exist = False
@@ -11,4 +11,4 @@ for i in range(n - m + 1):
                     match = False
         if match:
             exist = True
-print("Yes" if exist else "No")
+print('Yes' if exist else 'No')

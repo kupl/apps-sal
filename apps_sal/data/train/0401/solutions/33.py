@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         dp = [0, 0, 0]
         for n in nums:
@@ -41,5 +42,4 @@ class Solution:
             dp[0] = dp0
             dp[1] = dp1
             dp[2] = dp2
-
         return dp[0]

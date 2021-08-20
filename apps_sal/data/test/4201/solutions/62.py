@@ -6,7 +6,7 @@ readlines = sys.stdin.readlines
 
 
 def main():
-    h, w, k = list(map(int, input().split()))
+    (h, w, k) = list(map(int, input().split()))
     gg = []
     for _ in range(h):
         row = [1 if c == '#' else 0 for c in list(input())]
@@ -17,8 +17,8 @@ def main():
     r = 0
     for pate in pat:
         t0 = 0
-        for i0, p0 in enumerate(pate[0]):
-            for i1, p1 in enumerate(pate[1]):
+        for (i0, p0) in enumerate(pate[0]):
+            for (i1, p1) in enumerate(pate[1]):
                 if p0 and p1:
                     t0 += gg[i0 * w + i1]
         r += t0 == k

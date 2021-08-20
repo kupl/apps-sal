@@ -10,7 +10,6 @@ for i in range(n):
         A[s] += 1
     else:
         A[s] = 1
-
 count = 0
 for i in A:
     if A[i] == 1:

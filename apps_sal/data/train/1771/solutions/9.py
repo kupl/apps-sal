@@ -7,9 +7,9 @@ def closure_gen(*seq):
     if 1 in seq:
         yield 1
     seq = [i for i in seq if i != 1]
-    d, ind, li = {i: [i] for i in seq}, {i: 0 for i in seq}, []
+    (d, ind, li) = ({i: [i] for i in seq}, {i: 0 for i in seq}, [])
     while True:
-        min_ = min(d[i][0] for i in d if d[i])
+        min_ = min((d[i][0] for i in d if d[i]))
         li.append(min_)
         yield min_
         for i in d:

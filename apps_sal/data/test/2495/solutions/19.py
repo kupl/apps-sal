@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
-
 import sys
 import math
 import copy
-# import fractions, itertools
-# import numpy as np
-# import scipy
-# sys.setrecursionlimit(1000000)
-
 HUGE = 2147483647
 HUGEL = 9223372036854775807
-ABC = "abcdefghijklmnopqrstuvwxyz"
+ABC = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def next(su, ai, sign):
@@ -26,7 +19,6 @@ def next(su, ai, sign):
 def main():
     n = int(input())
     an = list(map(int, input().split()))
-
     ress = HUGEL
     for beg in [-1, 1]:
         res = 0
@@ -36,9 +28,8 @@ def main():
             ai = next(su, an[i], sign)
             su = su + ai
             res += abs(ai - an[i])
-            sign *= (-1)
+            sign *= -1
         ress = min(ress, res)
-
     print(ress)
 
 

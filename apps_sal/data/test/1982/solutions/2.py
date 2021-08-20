@@ -1,13 +1,12 @@
 def solve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = k ** 2
     if n < s:
-        print("NO")
+        print('NO')
+    elif k % 2 ^ n % 2 == 0:
+        print('YES')
     else:
-        if (k % 2) ^ (n % 2) == 0:
-            print("YES")
-        else:
-            print("NO")
+        print('NO')
 
 
 for i in range(int(input())):

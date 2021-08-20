@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def count(num):
             div = 0
             minus = 0
@@ -10,11 +12,11 @@ class Solution:
                 else:
                     num = num - 1
                     minus += 1
-            return div, minus
+            return (div, minus)
         m = []
         d = []
         for i in nums:
-            div, minus = count(i)
+            (div, minus) = count(i)
             d.append(div)
             m.append(minus)
         return max(d) + sum(m)

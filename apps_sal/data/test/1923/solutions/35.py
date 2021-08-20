@@ -10,7 +10,6 @@ from functools import reduce
 from operator import xor
 from types import FunctionType
 from typing import List
-
 mod = 10 ** 9 + 7
 sys.setrecursionlimit(10 ** 9)
 

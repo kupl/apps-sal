@@ -13,4 +13,4 @@ for _ in range(int(input())):
             ap += 1
         else:
             break
-    print(((n - ap) // (m - 1)) - 1)
+    print((n - ap) // (m - 1) - 1)

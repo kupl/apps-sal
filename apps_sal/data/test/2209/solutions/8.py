@@ -2,7 +2,7 @@ n = int(input())
 a = []
 for i in range(n):
     k = input()
-    s, t = 0, 0
+    (s, t) = (0, 0)
     for j in k:
         if j == 's':
             s += 1
@@ -28,7 +28,7 @@ for i in a:
 m.append(x)
 if a[0][0][0] == 'h':
     m = m[1:]
-p, q = [], []
+(p, q) = ([], [])
 e = 0
 z = len(m)
 for i in range(z):

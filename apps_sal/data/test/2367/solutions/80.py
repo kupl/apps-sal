@@ -1,6 +1,6 @@
 import sys
 from functools import lru_cache
-sys.setrecursionlimit(10**9)
+sys.setrecursionlimit(10 ** 9)
 
 
 def mul(x, y, mod):
@@ -51,17 +51,14 @@ def cmb(a, b, mod, factorials, factorial_divs):
     return mul(mul(af, bf, mod), abf, mod)
 
 
-MOD = 10**9 + 7
-H, W, A, B = map(int, input().split())
+MOD = 10 ** 9 + 7
+(H, W, A, B) = map(int, input().split())
 ans = 0
-
 n = nmr(H + W - 2, MOD)
 d = dnm(H + W - 2, MOD, n[H + W - 2])
-
 for i in range(H - A):
     x = cmb(B - 1 + i, B - 1, MOD, n, d)
     y = cmb(H + W - 3 - (B - 1 + i), W - B - 1, MOD, n, d)
     ans += x * y % MOD
     ans %= MOD
-
 print(ans)

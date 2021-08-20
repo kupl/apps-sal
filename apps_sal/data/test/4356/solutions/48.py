@@ -13,12 +13,11 @@ def answer(n: int, m: int, a: List[str], b: List[str]) -> str:
                         break
                 if matched_lines == m:
                     return 'Yes'
-
     return 'No'
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [input() for _ in range(n)]
     b = [input() for _ in range(m)]
     print(answer(n, m, a, b))

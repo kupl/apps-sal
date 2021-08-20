@@ -1,5 +1,4 @@
 n = int(input())
-
 a = list(map(int, input().split()))
 
 
@@ -18,18 +17,14 @@ def f(x):
 
 
 my_dict = {}
-
 for i in range(n):
     d = f(a[i])
     if d in my_dict.keys():
         my_dict[d] += 1
     else:
         my_dict[d] = 1
-
-
 result = 0
 for key in my_dict.keys():
     t = my_dict[key]
     result += int(t * (t - 1) / 2)
-
 print(result)

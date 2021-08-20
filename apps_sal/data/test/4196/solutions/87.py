@@ -1,7 +1,7 @@
 from math import gcd
 n = int(input())
 a = list(map(int, input().split()))
-l, r = [a[0]] * n, [a[n - 1]] * n
+(l, r) = ([a[0]] * n, [a[n - 1]] * n)
 for i in range(1, n - 1):
     l[i] = gcd(l[i - 1], a[i])
     r[n - i - 1] = gcd(r[n - i], a[n - i - 1])

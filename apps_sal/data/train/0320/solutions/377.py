@@ -16,8 +16,9 @@ def howManyPower(n):
 
 
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        nums2p = []  # nums of 2 powers
+        nums2p = []
         ans = 0
         while max(nums) > 1:
             ans += 1
@@ -27,5 +28,4 @@ class Solution:
                 if nums[i] > 1:
                     ans += nums[i] % 2
                 nums[i] = max(nums[i] // 2, 1)
- #           print(nums)
         return ans + len(nums) - nums.count(0)

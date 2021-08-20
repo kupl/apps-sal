@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -7,11 +6,11 @@ while t:
     for i in range(len(li)):
         l[li[i]] = l[li[i]] + 1
     if max(l) >= 3:
-        print("NO")
+        print('NO')
     elif l[max(li)] >= 2:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
         for j in range(len(l)):
             if l[j] >= 1:
                 print(j, end=' ')
@@ -21,5 +20,4 @@ while t:
                 print(j, end=' ')
                 l[j] = l[j] - 1
     print()
-
     t = t - 1

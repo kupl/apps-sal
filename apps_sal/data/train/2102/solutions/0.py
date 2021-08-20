@@ -1,6 +1,9 @@
 k = int(input())
 p = [['0'] * 100 for j in range(100)]
-def g(n): return n * (n * n - 1) // 6
+
+
+def g(n):
+    return n * (n * n - 1) // 6
 
 
 i = n = 0
@@ -11,7 +14,10 @@ while i < n + 1:
         p[i][j] = p[j][i] = '1'
     i += 1
 k -= g(n)
-def g(n): return n * n - n >> 1
+
+
+def g(n):
+    return n * n - n >> 1
 
 
 while k:

@@ -27,7 +27,6 @@ class UnionFind:
         if x == y:
             return
         if self.size[x] > self.size[y]:
-            # 大きい方にくっつける
             self.parent[y] = x
             self.size[x] += self.size[y]
         else:
@@ -50,22 +49,16 @@ class UnionFind:
         print(self.size)
 
 
-N, M = map(int, readline().split())
+(N, M) = map(int, readline().split())
 bridges = [tuple(map(int, readline().split())) for i in range(M)]
-
-# 順に崩落していく = 最後に崩落するものから順に建設されていくと考える
-# 最初の不便さは(N * (N - 1)) // 2
-# 新たにa,bの間に橋が繋がると、[aが属していた島々 * bが属していた島々]だけ不便さが減る
 UF = UnionFind(N)
 ans = [0] * M
-num = (N * (N - 1)) // 2
-
+num = N * (N - 1) // 2
 for i in range(len(bridges) - 1, -1, -1):
     ans[i] = num
-    a, b = bridges[i]
-    a, b = a - 1, b - 1
+    (a, b) = bridges[i]
+    (a, b) = (a - 1, b - 1)
     if not UF.same(a, b):
         num -= UF.get_group_size(a) * UF.get_group_size(b)
     UF.unite(a, b)
-
-print(*ans, sep="\n")
+print(*ans, sep='\n')

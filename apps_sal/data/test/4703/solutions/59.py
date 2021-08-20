@@ -4,7 +4,7 @@ ans = 0
 for i in range(1 << N):
     a = S[0]
     for j in range(N):
-        if(i >> j) & 1 == 0:
+        if i >> j & 1 == 0:
             a += S[j + 1]
         else:
             x = int(a)

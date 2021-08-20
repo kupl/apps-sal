@@ -1,16 +1,12 @@
 n = int(input())
-
-inf = 10**9 + 11
+inf = 10 ** 9 + 11
 arr = []
-
 for i in range(n):
     wh = list(map(int, input().split()))
     wh.sort()
     arr.append(wh)
-
 best_S = inf
 cur_S = 0
-
 for h in range(1, 1001):
     cur_S = 0
     for j in range(n):
@@ -22,5 +18,4 @@ for h in range(1, 1001):
         else:
             cur_S += arr[j][1]
     best_S = min(best_S, cur_S * h)
-
 print(best_S)

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         s1 = text1
         s2 = text2
@@ -13,4 +14,4 @@ class Solution:
                     arr[i + 1][j + 1] = arr[i][j] + 1
                 if s1[i] != s2[j]:
                     arr[i + 1][j + 1] = max(arr[i][j + 1], arr[i + 1][j])
-        return(arr[-1][-1])
+        return arr[-1][-1]

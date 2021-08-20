@@ -7,7 +7,6 @@ def remove_smallest(numbers):
         min = sort[0]
     count = 0
     new = []
-
     for i in numbers:
         if i == min and count < 1:
             count += 1

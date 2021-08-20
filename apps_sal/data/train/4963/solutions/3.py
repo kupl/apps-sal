@@ -1,1 +1,2 @@
-def closest_multiple_10(x): return round(x, -1)
+def closest_multiple_10(x):
+    return round(x, -1)

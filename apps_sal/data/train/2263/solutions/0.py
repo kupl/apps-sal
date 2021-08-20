@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 M = 998244353
 
 
@@ -13,13 +10,11 @@ def powmod(a, x, m=M):
         x //= 2
         a = a ** 2
         a %= m
-
     return y
 
 
 def solve(s):
     n = len(s)
-
     nb = nc = 0
     ch = s[0]
     if ch == 'b':
@@ -39,7 +34,6 @@ def solve(s):
         else:
             tf = False
         left = ch
-
     if tf:
         return 1
     if n == 3:
@@ -49,17 +43,15 @@ def solve(s):
             return 3
     if n % 3:
         return (powmod(3, n - 1) + M - powmod(2, n - 1) + (1 if sf else 0)) % M
+    elif (nb + nc * 2) % 3:
+        return (powmod(3, n - 1) + M - (powmod(2, n - 1) - powmod(2, n // 3 - 1)) + (1 if sf else 0)) % M
     else:
-        if (nb + nc * 2) % 3:
-            return (powmod(3, n - 1) + M - (powmod(2, n - 1) - powmod(2, n // 3 - 1)) + (1 if sf else 0)) % M
-        else:
-            return (powmod(3, n - 1) + M - (powmod(2, n // 3) + 4 * powmod(8, n // 3 - 1)) + (1 if sf else 0)) % M
+        return (powmod(3, n - 1) + M - (powmod(2, n // 3) + 4 * powmod(8, n // 3 - 1)) + (1 if sf else 0)) % M
 
 
 def main():
     s = input()
-
-    print((solve(s)))
+    print(solve(s))
 
 
 def __starting_point():

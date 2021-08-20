@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         res = []
         s = set()
@@ -8,5 +9,4 @@ class Solution:
                     if j / i not in s:
                         res.append(str(j) + '/' + str(i))
                         s.add(j / i)
-
         return res

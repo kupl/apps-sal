@@ -1,5 +1,4 @@
 import math
-
 T = int(input())
 
 
@@ -12,7 +11,7 @@ def divs(n):
 
 
 for t in range(T):
-    N, K = [int(_) for _ in input().split()]
+    (N, K) = [int(_) for _ in input().split()]
     for d in divs(N):
         if N / d <= K:
             print(d)

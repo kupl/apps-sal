@@ -1,6 +1,6 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
-        # cost = [-1 for _ in range(n+1)]
 
         @lru_cache(None)
         def helper(n):
@@ -14,5 +14,4 @@ class Solution:
                 i += 1
                 sq = i * i
             return 0
-
         return helper(n)

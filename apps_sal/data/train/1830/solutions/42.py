@@ -1,4 +1,5 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
 
         def closest(i, arr):
@@ -6,14 +7,12 @@ class Solution:
                 if j > i:
                     return j
             return -1
-
         ans = [1] * len(rains)
         visited = dict()
         zeros = deque()
         x = 0
         while x < len(rains) and rains[x] == 0:
             x += 1
-
         for i in range(x, len(rains)):
             if rains[i] in visited:
                 if not zeros:

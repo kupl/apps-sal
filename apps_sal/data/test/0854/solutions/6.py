@@ -1,5 +1,5 @@
 import copy
-n, T = list(map(int, input().split()))
+(n, T) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 s = sum(A)
 ans = 0
@@ -19,7 +19,6 @@ while len(B) > 0:
     else:
         ans += loop * len(B)
         T %= s
-
     A = copy.deepcopy(B)
     B = []
     for a in A:

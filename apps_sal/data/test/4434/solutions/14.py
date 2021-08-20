@@ -18,15 +18,15 @@ def si():
 
 
 def pYes():
-    print("YES")
+    print('YES')
 
 
 def pNo():
-    print("NO")
+    print('NO')
 
 
 def plist(l):
-    print("".join(l))
+    print(''.join(l))
 
 
 t = int(input())
@@ -35,7 +35,6 @@ for i in range(t):
     ans = 0
     t = 1
     for k in range(3, n + 1, 2):
-
         ans += (2 * k + (k - 2) * 2) * t
         t = t + 1
     print(ans)

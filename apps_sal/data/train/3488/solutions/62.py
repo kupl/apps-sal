@@ -1,4 +1,5 @@
 def eval_object(v):
+
     def add(d):
         return d['a'] + d['b']
 
@@ -16,9 +17,4 @@ def eval_object(v):
 
     def double_star(d):
         return d['a'] ** d['b']
-    return {"+": add(v),
-            "-": subtract(v),
-            "/": divide(v),
-            "*": multiply(v),
-            "%": remainder(v),
-            "**": double_star(v)}.get(v['operation'])
+    return {'+': add(v), '-': subtract(v), '/': divide(v), '*': multiply(v), '%': remainder(v), '**': double_star(v)}.get(v['operation'])

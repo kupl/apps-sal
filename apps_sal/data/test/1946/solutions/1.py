@@ -1,7 +1,7 @@
 n = int(input())
 di = {}
 for i in range(n):
-    a, b = (list(map(int, input().strip().split(' '))))
+    (a, b) = list(map(int, input().strip().split(' ')))
     try:
         p = di[a]
         di[a] = max(di[a], b)
@@ -9,7 +9,7 @@ for i in range(n):
         di[a] = b
 m = int(input())
 for i in range(m):
-    a, b = (list(map(int, input().strip().split(' '))))
+    (a, b) = list(map(int, input().strip().split(' ')))
     try:
         p = di[a]
         di[a] = max(di[a], b)

@@ -3,4 +3,4 @@ while int(input()) != 0:
     inverse_permutation = [0 for i in range(len(permutation))]
     for index in range(len(permutation)):
         inverse_permutation[permutation[index] - 1] = index + 1
-    print('ambiguous') if inverse_permutation == permutation else print('not         ambiguous')
+    print('ambiguous') if inverse_permutation == permutation else print('not \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0ambiguous')

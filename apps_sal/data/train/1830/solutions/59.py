@@ -2,10 +2,11 @@ from sortedcontainers import SortedList
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         ans = [-1] * len(rains)
-        zeros, todry = SortedList(), {}
-        for i, r in enumerate(rains):
+        (zeros, todry) = (SortedList(), {})
+        for (i, r) in enumerate(rains):
             if r == 0:
                 zeros.add(i)
             elif r not in todry:

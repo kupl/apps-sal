@@ -1,5 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
+
         def reverse(s):
             return ''.join([s[len(s) - 1 - i] for i in range(len(s))])
 
@@ -12,5 +14,4 @@ class Solution:
             else:
                 prev = findNthStr(n1 - 1)
                 return prev + '1' + reverse(invert(prev))
-
         return findNthStr(n)[k - 1]

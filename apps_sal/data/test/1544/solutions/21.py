@@ -6,11 +6,6 @@ def choose(n, r):
 
 
 n = int(input())
-
 f = math.factorial
-
 result = choose(n - 1 + 5, 5) * choose(n - 1 + 3, 3)
-
-#result = n**8 // (f(3)*f(5))
-
 print(result)

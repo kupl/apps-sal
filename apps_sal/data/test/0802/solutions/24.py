@@ -9,7 +9,6 @@ for i in range(n):
     if stri[i] not in dict:
         dict[stri[i]] = 0
         count += 1
-
     dict[stri[i]] += 1
     if count == lenght:
         while dict[stri[j]] > 1:

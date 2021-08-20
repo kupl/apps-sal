@@ -1,14 +1,12 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=True)
-
 count = {}
 for x in v:
     if x in count:
         count[x] += 1
     else:
         count[x] = 1
-
 fact = [1] * 51
 for i in range(1, 51):
     fact[i] = fact[i - 1] * i

@@ -7,7 +7,7 @@ def merge_arrays(x, y):
         if len(y) == 0:
             res.extend(x)
             break
-        first, second = x[0], y[0]
+        (first, second) = (x[0], y[0])
         if first < second:
             res.append(first)
             x.pop(0)

@@ -1,4 +1,5 @@
 class Solution:
+
     def soupServings(self, N: int) -> float:
         if N >= 10000:
             return 1.0

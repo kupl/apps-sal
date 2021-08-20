@@ -1,12 +1,11 @@
 def well(x):
     goodCount = 0
     for item in x:
-        if item == "good":
+        if item == 'good':
             goodCount += 1
-
     if goodCount > 2:
-        return "I smell a series!"
+        return 'I smell a series!'
     elif goodCount > 0:
-        return "Publish!"
+        return 'Publish!'
     else:
-        return "Fail!"
+        return 'Fail!'

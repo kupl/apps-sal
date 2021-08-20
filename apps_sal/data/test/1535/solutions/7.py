@@ -1,12 +1,9 @@
 import sys
 f = sys.stdin
-
-n, x0, y0 = map(int, f.readline().strip().split())
-
+(n, x0, y0) = map(int, f.readline().strip().split())
 xy = []
 for i in range(n):
     xy.append(list(map(int, f.readline().strip().split())))
-
 used = [0] * n
 v = 0
 for i in range(n):

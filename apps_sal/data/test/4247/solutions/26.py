@@ -8,5 +8,4 @@ while i <= len(data) - 2:
     if data[i - 1] > data[i] and data[i] > data[i + 1]:
         point += 1
     i += 1
-
 print(point)

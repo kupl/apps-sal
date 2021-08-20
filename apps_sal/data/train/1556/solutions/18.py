@@ -1,11 +1,12 @@
 try:
+
     def solve(n):
-        res = ""
+        res = ''
         for i in range(n):
             if i % 2 == 0:
-                res += "1"
+                res += '1'
             else:
-                res += "0"
+                res += '0'
         return res
     t = int(input())
     for _ in range(t):
@@ -13,6 +14,5 @@ try:
         z = solve(n)
         for i in range(n):
             print(z)
-
 except EOFError:
     pass

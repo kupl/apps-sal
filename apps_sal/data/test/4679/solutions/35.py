@@ -7,4 +7,4 @@ while True:
     if S[card] == '':
         print(card.upper())
         break
-    S[card], card = S[card][1:], S[card][0]
+    (S[card], card) = (S[card][1:], S[card][0])

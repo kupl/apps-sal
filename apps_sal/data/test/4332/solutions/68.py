@@ -1,6 +1,8 @@
-#!/usr/bin/env python3
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():

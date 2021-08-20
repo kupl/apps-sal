@@ -6,12 +6,9 @@ def modi(a, m):
 
 
 def __starting_point():
-
-    n, m, k = [int(x) for x in input().split()]
+    (n, m, k) = [int(x) for x in input().split()]
     mod = 998244353
-
     ans = 1
-
     for i in range(k):
         ans *= (n - 1 - i) % mod
         ans = ans % mod
@@ -20,7 +17,6 @@ def __starting_point():
         ans = ans % mod
     ans *= m
     ans = ans % mod
-
     ans *= pow(m - 1, k, mod) % mod
     ans = ans % mod
     print(ans)

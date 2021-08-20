@@ -27,7 +27,7 @@ for i in range(n):
         stringbegin.append(s[:20])
 m = int(stdin.readline().rstrip())
 for _ in range(m):
-    a, b = list(map(int, stdin.readline().rstrip().split()))
+    (a, b) = list(map(int, stdin.readline().rstrip().split()))
     a -= 1
     b -= 1
     sdict1 = findAllStrings(stringend[a] + stringbegin[b])
@@ -38,7 +38,7 @@ for _ in range(m):
         sdict[i] = sdict1[i] | sdict2[i] | sdict3[i]
     strdict.append(sdict)
     for i in range(1, k + 1):
-        if len(sdict[i]) != 2**i:
+        if len(sdict[i]) != 2 ** i:
             print(i - 1)
             break
     if len(stringbegin[a]) < k and len(stringbegin[a]) + len(stringbegin[b]) < k:
@@ -48,7 +48,6 @@ for _ in range(m):
         stringbegin.append(s[:k])
     else:
         stringbegin.append(stringbegin[a])
-
     if len(stringend[b]) < k and len(stringend[a]) + len(stringend[b]) < k:
         stringend.append(stringend[a] + stringend[b])
     elif len(stringend[b]) < k:

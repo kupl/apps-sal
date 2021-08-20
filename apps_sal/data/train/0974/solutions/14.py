@@ -1,7 +1,7 @@
 t = int(input())
 f = []
 for i in range(t):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     if abs(c - d) == 0 and a == b:
         f.append('YES')
         continue

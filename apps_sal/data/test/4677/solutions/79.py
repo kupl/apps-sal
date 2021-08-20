@@ -1,5 +1,5 @@
 s = input()
-ans = ""
+ans = ''
 for c in s:
     if c == 'B':
         if ans:

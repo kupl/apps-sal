@@ -5,7 +5,7 @@ for i in range(L):
     Slist.add(ord(S[i]))
 Slist = list(Slist)
 Slist.sort()
-ans = "None"
+ans = 'None'
 j = 0
 L = len(Slist)
 for i in range(97, 123):

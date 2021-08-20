@@ -1,8 +1,8 @@
 n = int(input())
 for i in range(n):
     m = int(input())
-    a = ""
-    b = "1"
+    a = ''
+    b = '1'
     p = 65
     q = 2
     for j in range(m):

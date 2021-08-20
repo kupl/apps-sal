@@ -1,16 +1,14 @@
-
 def solve(n, b):
     for i in range(n - 1):
-        if (b[i] & b[i + 1] != b[i]):
+        if b[i] & b[i + 1] != b[i]:
             print(0)
             return
     x = 0
     for i in range(n - 1):
         x += bin(b[i]).count('1')
-
     ans = 1
-    while (x):
-        if (x > 30):
+    while x:
+        if x > 30:
             ans *= twopow[30]
             ans %= mod
             x -= 30

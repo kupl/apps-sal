@@ -10,8 +10,7 @@ for i in per:
         g += 1
     if i == 'B':
         b += 1
-
-if r != 0 and b != 0 and g != 0:
+if r != 0 and b != 0 and (g != 0):
     print('BGR')
 elif r == 0 and b == 0:
     print('G')
@@ -22,20 +21,15 @@ elif g == 0 and b == 0:
 elif r == 0:
     if g > 1:
         print('B', end='')
-
     if b > 1:
-
         print('G', end='')
     print('R', end='')
-
 elif g == 0:
     if r > 1:
         print('B', end='')
     print('G', end='')
     if b > 1:
         print('R', end='')
-
-
 elif b == 0:
     print('B', end='')
     if r > 1:

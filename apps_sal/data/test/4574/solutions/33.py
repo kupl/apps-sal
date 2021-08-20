@@ -1,9 +1,7 @@
 from collections import Counter as C
-
 _ = input()
-
 b = []
-for k, v in C([int(x) for x in input().split()]).items():
+for (k, v) in C([int(x) for x in input().split()]).items():
     b.extend([k] * (v // 2))
 else:
     if 2 <= len(b):

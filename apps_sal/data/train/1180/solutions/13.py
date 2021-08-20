@@ -1,7 +1,7 @@
 try:
     T = int(input())
     for i in range(T):
-        N, K, x, y = map(int, input().split())
+        (N, K, x, y) = map(int, input().split())
         c = 0
         a = K % 4
         if a == 0:
@@ -14,7 +14,7 @@ try:
                 if x in l and y in l:
                     break
                 elif x == N or x == 0:
-                    x, y = y, x
+                    (x, y) = (y, x)
                 elif y == N or y == 0:
                     b = y
                     y = N - x
@@ -23,19 +23,18 @@ try:
                     b = N - x
                     x += b
                     y += b
+            elif x in l and y in l:
+                break
+            elif y == N or y == 0:
+                (x, y) = (y, x)
+            elif x == N or x == 0:
+                b = x
+                x = N - y
+                y = N - b
             else:
-                if x in l and y in l:
-                    break
-                elif y == N or y == 0:
-                    x, y = y, x
-                elif x == N or x == 0:
-                    b = x
-                    x = N - y
-                    y = N - b
-                else:
-                    b = N - y
-                    x += b
-                    y += b
+                b = N - y
+                x += b
+                y += b
         print(x, y)
 except EOFError:
     pass

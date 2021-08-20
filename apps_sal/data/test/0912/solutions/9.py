@@ -8,7 +8,6 @@ def solve(n, s, closed):
             break
         floor -= 1
         time += 1
-
     floor = s
     time = 0
     while floor <= n:
@@ -17,14 +16,13 @@ def solve(n, s, closed):
             break
         floor += 1
         time += 1
-
     print(min_moves)
 
 
 def main():
     t = int(input())
     for i in range(t):
-        n, s, k = list(map(int, input().split()))
+        (n, s, k) = list(map(int, input().split()))
         closed = set(map(int, input().split()))
         solve(n, s, closed)
 

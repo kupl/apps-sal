@@ -1,9 +1,9 @@
 import sys
 from bisect import bisect_left as bl
 input = sys.stdin.readline
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 a = list(map(int, input().split()))
-cm = [float("inf")] * (N + 1)
+cm = [float('inf')] * (N + 1)
 cmx = [0] * (N + 1)
 for i in range(N):
     cm[i + 1] = min(cm[i], a[i])

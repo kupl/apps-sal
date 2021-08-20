@@ -2,7 +2,6 @@ T = int(input())
 
 
 def bSearch(A, suff, k, i, j):
-    # print('-?', k, i, j)
     if i >= len(A):
         return
     if i == j:
@@ -12,11 +11,10 @@ def bSearch(A, suff, k, i, j):
     mid = (i + j) // 2
     if mid <= k:
         return bSearch(A, suff, k, mid + 1, j)
+    elif A[mid] <= A[k] or suff[mid] == False:
+        return bSearch(A, suff, k, mid + 1, j)
     else:
-        if A[mid] <= A[k] or suff[mid] == False:
-            return bSearch(A, suff, k, mid + 1, j)
-        else:
-            return bSearch(A, suff, k, i, mid)
+        return bSearch(A, suff, k, i, mid)
 
 
 for _ in range(T):
@@ -36,26 +34,18 @@ for _ in range(T):
             suff[i] = True
         else:
             break
-
     count = 0
     for i in range(N):
         if pref[i] == True:
-
             j = bSearch(A, suff, i, i + 1, N - 1)
             if j == None:
-                # print(i, N)
                 if i < N - 1:
                     count += 1
-                # break
             elif j == i + 1:
                 count += N - j
-                # print(i, j, N-j)
             else:
                 count += N - j + 1
-                # print(i, j, N-j+1)
-
     for i in range(1, N):
         if suff[i] == True:
             count += 1
-
     print(count)

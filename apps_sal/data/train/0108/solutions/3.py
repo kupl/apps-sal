@@ -8,7 +8,7 @@ def f(a):
 def solve(a):
     i = f(a)
     j = len(a) - 1 - f(a[::-1])
-    return "Yes" if i >= j else "No"
+    return 'Yes' if i >= j else 'No'
 
 
 n = int(input())

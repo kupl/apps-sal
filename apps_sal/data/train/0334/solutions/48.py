@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         cur = 0
         mycost = 0
@@ -12,5 +13,4 @@ class Solution:
                 mycost += sum(temp) - max(temp)
             else:
                 cur += 1
-
         return mycost

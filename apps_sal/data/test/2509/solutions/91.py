@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 ans = 0
 for i in range(k + 1, n + 1):
     num = n // i
@@ -10,7 +7,4 @@ for i in range(k + 1, n + 1):
     if k == 0:
         ans_tmp -= 1
     ans += ans_tmp
-    # print(num * (i-k))
-    # print(max(0, n % i - k + 1))
-    # print()
 print(ans)

@@ -1,5 +1,4 @@
-# imports
-import operator as ops  # lt, le, eq, ne, ge, gt,  xor  notit, lshift, rshift,      neg, add, mul, sub,
+import operator as ops
 from operator import __or__ as orit
 from operator import __abs__ as absit
 from operator import __not__ as notit
@@ -12,31 +11,24 @@ from math import ceil, floor, factorial, fsum, isinf, exp, log, log10, log2, isf
 from collections import Counter, defaultdict, deque
 import sys
 sys.setrecursionlimit(30000)
-
-
-#PI, E, PHI, INF
-PHI, PHI2 = (1 + 5 ** 0.5) / 2, (5 ** 0.5 - 1) / 2
+(PHI, PHI2) = ((1 + 5 ** 0.5) / 2, (5 ** 0.5 - 1) / 2)
 INF = float('inf')
-
-# structures
 
 
 class TreeNode:
+
     def __init__(self, v):
         self.val = v
         self.left = None
         self.right = None
 
-# Bit Manipulation
-# <<, >>, bin(), int(s, 2)
-
 
 def setBit(x, offset):
-    return x | 1 << offset  # RHS: mask
+    return x | 1 << offset
 
 
 def clearBit(x, offset):
-    return x & ~(1 << offset)  # RHS: mask
+    return x & ~(1 << offset)
 
 
 def getBit(x, offset):
@@ -44,20 +36,20 @@ def getBit(x, offset):
 
 
 def testBit(x, offset):
-    return x & 1 << offset  # RHS: mask
+    return x & 1 << offset
 
 
 def flipBitAt(x, offset):
-    return x ^ 1 << offset  # RHS: mask
+    return x ^ 1 << offset
 
 
-def flipBits(x, length=-1):  # default: x.bit_length() - 1
+def flipBits(x, length=-1):
     length = x.bit_length() - 1 if length == -1 else length
     return x ^ (1 << length) - 1
 
 
 def numBits(x):
-    return x.bit_length()  # int.bit_length()
+    return x.bit_length()
 
 
 def countOnes(x):
@@ -67,8 +59,6 @@ def countOnes(x):
 def countZeros(x, length=-1):
     length = x.bit_length() if length == -1 else length
     return length - countOnes(x)
-
-# IO
 
 
 def getList(tcast=str):
@@ -85,8 +75,6 @@ def getVal(tcast=str):
 
 def getMatrix(r, tcast=str):
     return [getList(tcast) for row in range(r)]
-
-# Math
 
 
 def isOdd(n):
@@ -106,8 +94,8 @@ def getRecip(f):
 
 
 def _gcd(a, b):
-    while b:  # is not zero
-        a, b = b, a % b
+    while b:
+        (a, b) = (b, a % b)
     return a
 
 
@@ -122,7 +110,7 @@ def gcd(*xs):
 
 
 def _lcm(a, b):
-    return (a // gcd(a, b)) * b
+    return a // gcd(a, b) * b
 
 
 def lcm(*xs):
@@ -135,10 +123,10 @@ def lcm(*xs):
 
 def primesUpto(n):
     isp = [True] * (n + 1)
-    isp[0], isp[1] = False, False
+    (isp[0], isp[1]) = (False, False)
     primes = []
-    for i, x in enumerate(isp):  # for each number
-        if x:  # found a prime
+    for (i, x) in enumerate(isp):
+        if x:
             primes.append(i)
             mults = i * i
             while mults <= n:
@@ -147,13 +135,13 @@ def primesUpto(n):
     return primes
 
 
-def primeFactor(n):  # without a sieve
+def primeFactor(n):
     factors = Counter()
     while not n & 1:
         factors[2] += 1
         n >>= 1
     trynum = 3
-    while trynum <= ceil(sqrt(n)):  # just in case
+    while trynum <= ceil(sqrt(n)):
         while n % trynum == 0:
             factors[trynum] += 1
             n //= trynum
@@ -163,7 +151,7 @@ def primeFactor(n):  # without a sieve
     return factors
 
 
-def isPrime(n):  # num -> boolean
+def isPrime(n):
     if n & 1 and n >= 2:
         trynum = 3
         limit = ceil(sqrt(n))
@@ -181,21 +169,19 @@ def nthFib(n):
     if n <= 2:
         return 1
     else:
-        a, b = 1, 1
+        (a, b) = (1, 1)
         while n > 2:
-            a, b = b, a + b
+            (a, b) = (b, a + b)
             n -= 1
         return b
 
-# Iteration
 
-
-def zipNWith(f, *x):  # xs, ys, ... zs -> elementwise f -> os #return map(lambda *y: f(y), x) #list way: [f(y) for y in zip(*xs)]
+def zipNWith(f, *x):
     return (f(y) for y in zip(*x))
 
 
 def zipWith(f, xs, ys):
-    return (f(x, y) for x, y in zip(xs, ys))
+    return (f(x, y) for (x, y) in zip(xs, ys))
 
 
 def flatten(xs):
@@ -211,24 +197,21 @@ def dotproduct(xs, ys):
 
 
 def pairwise(it):
-    a, b = tee(it)
+    (a, b) = tee(it)
     next(b, None)
     return zip(a, b)
 
 
 def bipartition(pred, it):
-    t, f = tee(it)
-    return filter(pred, t), filterfalse(pred, f)
+    (t, f) = tee(it)
+    return (filter(pred, t), filterfalse(pred, f))
 
 
 def powerset(it):
     s = list(it)
-    return chain.from_iterable(combos(s, r) for r in range(len(s) + 1))
+    return chain.from_iterable((combos(s, r) for r in range(len(s) + 1)))
 
 
-# Input
-# Body
-# Output
 n = getVal(int)
 nums = getList(int)
 nums.sort()

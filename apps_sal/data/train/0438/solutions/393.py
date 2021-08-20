@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         counts = defaultdict(int)
         root = [i for i in range(len(arr))]
@@ -35,7 +36,4 @@ class Solution:
             if counts[m] != 0:
                 step = i + 1
         return step
-    '''
-    [5,3,4,7,8,14,11,9,2,12,1,13,10,6]
-6
-    '''
+    '\n    [5,3,4,7,8,14,11,9,2,12,1,13,10,6]\n6\n    '

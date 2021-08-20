@@ -1,9 +1,9 @@
 def main():
     input()
     hh = list(map(int, input().split()))
-    for f in True, False:
+    for f in (True, False):
         m = 1
-        for i, h in enumerate(hh):
+        for (i, h) in enumerate(hh):
             if h > m:
                 hh[i] = m
             else:

@@ -2,16 +2,16 @@ def zr(s):
     tmp = ':0000'
     if s == '::':
         return tmp[1:] + 7 * tmp
-    ind = s.find("::")
+    ind = s.find('::')
     if ind < 0:
         return s
-    h, k = 1, 0
+    (h, k) = (1, 0)
     if ind == 0 or ind == len(s) - 2:
         if ind > 0:
             h = 2
         else:
             k = 1
-        ddc = 9 - s.count(":")
+        ddc = 9 - s.count(':')
     else:
         ddc = 8 - s.count(':')
     return (s[:ind] + ddc * tmp + s[ind + h:])[k:]

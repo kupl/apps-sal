@@ -10,6 +10,6 @@ for i in range(n):
         if sorted(h[i:i + len(p)]) == p:
             good = True
     if good:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

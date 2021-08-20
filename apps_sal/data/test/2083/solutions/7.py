@@ -1,4 +1,4 @@
-n, t, c = input().split()
+(n, t, c) = input().split()
 n = int(n)
 t = int(t)
 c = float(c)
@@ -11,8 +11,7 @@ for i in range(1, n):
 approx = [a[0] / (t * c)]
 for i in range(1, n):
     approx.append((approx[i - 1] + a[i] / t) / c)
-
 for i in range(m):
     real = (sums[p[i] - 1] - (0 if p[i] == t else sums[p[i] - t - 1])) / t
-    appr = (approx[p[i] - 1])  # - (0 if p[i] == t else approx[p[i] - t - 1] / (c ** t)))
+    appr = approx[p[i] - 1]
     print(real, appr, abs(real - appr) / real)

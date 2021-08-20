@@ -1,4 +1,5 @@
-def productsum(n): return sum(set(factors[2:n + 1]))
+def productsum(n):
+    return sum(set(factors[2:n + 1]))
 
 
 def _productsum(prod, sum, n, start):

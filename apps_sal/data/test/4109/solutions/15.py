@@ -1,9 +1,9 @@
 import itertools
-n, m, x = map(int, input().split())
+(n, m, x) = map(int, input().split())
 books = []
 for i in range(n):
     ins = list(map(int, input().split()))
-    books.append({"c": ins[0], "a": ins[1: m + 1]})
+    books.append({'c': ins[0], 'a': ins[1:m + 1]})
 ans = float('inf')
 for i in range(1, n + 1):
     book_list = list(itertools.combinations(list(range(n)), i))

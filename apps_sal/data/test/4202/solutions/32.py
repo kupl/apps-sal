@@ -1,9 +1,6 @@
-L, R = map(int, input().split())
-
+(L, R) = map(int, input().split())
 MOD = 2019
-
-ans = 2020**2
-
+ans = 2020 ** 2
 if R - L >= 2020:
     print(0)
 else:

@@ -1,5 +1,4 @@
 import heapq
-
 INF = 1000000000
 
 
@@ -7,7 +6,6 @@ def dijkstra(G, d, s):
     h = []
     d[s] = 0
     heapq.heappush(h, (0, s))
-
     while len(h) != 0:
         p = heapq.heappop(h)
         v = p[1]
@@ -20,12 +18,12 @@ def dijkstra(G, d, s):
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     p = [0] * M
     q = [0] * M
     c = [0] * M
     for i in range(M):
-        p[i], q[i], c[i] = list(map(int, input().split()))
+        (p[i], q[i], c[i]) = list(map(int, input().split()))
         p[i] -= 1
         q[i] -= 1
     plat = []
@@ -44,7 +42,6 @@ def main():
     for i in range(N):
         plat[i][-1] = v_count
         v_count += 1
-
     G = [[] for _ in range(v_count)]
     for i in range(M):
         p1 = plat[p[i]][c[i]]
@@ -58,18 +55,14 @@ def main():
                 continue
             G[v].append((out, 0))
             G[out].append((v, 1))
-
     start = plat[0][-1]
     goal = plat[N - 1][-1]
-
     d = [INF for _ in range(v_count)]
-
     dijkstra(G, d, start)
-
     if d[goal] == INF:
-        print((-1))
+        print(-1)
     else:
-        print((d[goal]))
+        print(d[goal])
 
 
 def __starting_point():

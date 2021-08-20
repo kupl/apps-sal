@@ -9,13 +9,11 @@ def f(n):
         lists.append(2)
         n //= 2
     while n != 1 and i <= n:
-
         while n % i == 0:
             lists.append(i)
             n //= i
-
         i += 2
     for i in dict(Counter(lists)):
         a = dict(Counter(lists))[i]
-        sum *= (a * (i ** (a - 1)))
+        sum *= a * i ** (a - 1)
     return sum

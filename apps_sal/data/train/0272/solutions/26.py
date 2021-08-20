@@ -1,6 +1,6 @@
 class Solution:
-    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
 
+    def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
         n = len(status)
         hold = initialBoxes
         res = 0
@@ -11,7 +11,7 @@ class Solution:
             flag = False
             for i in range(len(hold)):
                 cur = hold.pop()
-                if status[cur] == 1 or status[cur] == 0 and cur in key:
+                if status[cur] == 1 or (status[cur] == 0 and cur in key):
                     flag = True
                     res += candies[cur]
                     for k in keys[cur]:

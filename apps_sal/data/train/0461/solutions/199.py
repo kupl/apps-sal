@@ -1,11 +1,12 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
         if n == 0:
             return 0
         if n == 1:
             return informTime[0]
         dic = collections.defaultdict(list)
-        for i, x in enumerate(manager):
+        for (i, x) in enumerate(manager):
             if x != -1:
                 dic[x].append(i)
 

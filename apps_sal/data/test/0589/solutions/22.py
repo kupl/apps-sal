@@ -1,9 +1,10 @@
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
 ans = 1
 cnt = set()
-for i, c in enumerate(list(input())):
+for (i, c) in enumerate(list(input())):
     if c == '?':
         ans *= 10 - (i == 0)
     elif c.isalpha() and c not in cnt:

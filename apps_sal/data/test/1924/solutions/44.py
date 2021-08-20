@@ -1,36 +1,31 @@
 import sys
 read = sys.stdin.read
 mod = 10 ** 9 + 7
-r1, c1, r2, c2 = map(int, read().split())
+(r1, c1, r2, c2) = map(int, read().split())
 
 
 def prepare(n, MOD):
-
-    # 1! - n! の計算
     f = 1
-    factorials = [1]  # 0!の分
+    factorials = [1]
     for m in range(1, n + 1):
         f *= m
         f %= MOD
         factorials.append(f)
-    # n!^-1 の計算
     inv = pow(f, MOD - 2, MOD)
-    # n!^-1 - 1!^-1 の計算
     invs = [1] * (n + 1)
     invs[n] = inv
     for m in range(n, 1, -1):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
+    return (factorials, invs)
 
-    return factorials, invs
 
-
-fac, finv = prepare(2 * 10**6 + 10, mod)
+(fac, finv) = prepare(2 * 10 ** 6 + 10, mod)
 
 
 def comb(n, k, mod=mod, fac=fac, finv=finv):
-    '''
+    """
     二項係数の計算
 
     Parameters
@@ -48,7 +43,7 @@ def comb(n, k, mod=mod, fac=fac, finv=finv):
     Returns
     c : int
         nCkの組み合わせの数
-    '''
+    """
     if n < k:
         return 0
     if n < 0 or k < 0:
@@ -56,7 +51,6 @@ def comb(n, k, mod=mod, fac=fac, finv=finv):
     return fac[n] * (finv[k] * finv[n - k] % mod) % mod
 
 
-answer = comb(r2 + c2 + 2, r2 + 1) - comb(r1 + c2 + 1, r1) - \
-    comb(c1 + r2 + 1, c1) + comb(r1 + c1, r1)
+answer = comb(r2 + c2 + 2, r2 + 1) - comb(r1 + c2 + 1, r1) - comb(c1 + r2 + 1, c1) + comb(r1 + c1, r1)
 answer %= mod
 print(answer)

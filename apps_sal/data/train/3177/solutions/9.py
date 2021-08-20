@@ -5,11 +5,11 @@ def palindrome(num):
     total = set()
     for i in range(2, len(check) + 1):
         for j in range(len(check) - i + 1):
-            if check[j:j + i][0] == "0" or check[j:j + i][-1] == "0":
+            if check[j:j + i][0] == '0' or check[j:j + i][-1] == '0':
                 continue
             if is_palin(check[j:j + i]):
                 total.add(int(check[j:j + i]))
-    return sorted(total) if total else "No palindromes found"
+    return sorted(total) if total else 'No palindromes found'
 
 
 def is_palin(s):

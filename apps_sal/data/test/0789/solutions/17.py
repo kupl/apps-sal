@@ -16,6 +16,4 @@ for i in range(len(number)):
         ret += dothat(2, len(number) - i - 1)
     else:
         ret += dothat(2, len(number) - i)
-
-
 print(ret)

@@ -1,6 +1,4 @@
-# 377A
 from sys import stdin
-
 __author__ = 'artyom'
 
 
@@ -9,7 +7,7 @@ def read_int_ary():
 
 
 def dfs(graph, start):
-    visited, tree, processed, stack = set(), [], set(), [start]
+    (visited, tree, processed, stack) = (set(), [], set(), [start])
     while stack:
         vertex = stack.pop()
         if vertex not in visited:
@@ -21,11 +19,10 @@ def dfs(graph, start):
     return tree
 
 
-n, m, k = read_int_ary()
+(n, m, k) = read_int_ary()
 grid = []
 for i in range(n):
     grid.append(list(stdin.readline().strip()))
-
 graph = {}
 for i in range(n):
     for j in range(m):
@@ -40,9 +37,7 @@ for i in range(n):
                 u = (i, j - 1)
                 graph[v].add(u)
                 graph[u].add(v)
-
 processed = dfs(graph, next(iter(graph.keys())))
-
 i = 0
 while i < k:
     vertex = processed.pop()

@@ -8,4 +8,4 @@ def fib_digits(n):
         update = first + second
         first = second
         second = update
-    return list(reversed(sorted([(v, k) for k, v in Counter([int(y) for y in str(update)]).items()])))
+    return list(reversed(sorted([(v, k) for (k, v) in Counter([int(y) for y in str(update)]).items()])))

@@ -1,6 +1,5 @@
 x = int(input())
-
-ans = (x // 11) * 2
+ans = x // 11 * 2
 q = x % 11
 if q == 0:
     print(ans)

@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        cnt1, cnt2 = defaultdict(int), defaultdict(int)
+        (cnt1, cnt2) = (defaultdict(int), defaultdict(int))
         for i in range(len(nums1)):
             for j in range(i + 1, len(nums1)):
                 cnt1[nums1[i] * nums1[j]] += 1

@@ -1,5 +1,6 @@
 class UnionFind:
-    def __init__(self, ):
+
+    def __init__(self):
         self._parent = {}
         self._size = {}
 
@@ -9,7 +10,7 @@ class UnionFind:
         if a == b:
             return False
         if self._size[a] < self._size[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         self._parent[b] = a
         self._size[a] += self._size[b]
         return True
@@ -29,14 +30,14 @@ class UnionFind:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         ufa = UnionFind()
         ufb = UnionFind()
         ufa2 = UnionFind()
         ufb2 = UnionFind()
         count = 0
-
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 ufa.union(u, v)
             elif t == 2:
@@ -46,14 +47,11 @@ class Solution:
                 ufb.union(u, v)
                 ufa2.union(u, v)
                 count += int(ufb2.union(u, v))
-
         if ufa.size(1) != n or ufb.size(1) != n:
             return -1
-
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 count += ufa2.union(u, v)
             elif t == 2:
                 count += ufb2.union(u, v)
-
         return len(edges) - count

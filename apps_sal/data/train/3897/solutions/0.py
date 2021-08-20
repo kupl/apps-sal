@@ -11,7 +11,6 @@ def solve(count, ball_number):
     """
     assert isinstance(count, int)
     assert isinstance(ball_number, int)
-
     balls = list(range(count))
     for idx in range(count):
         balls = balls[:idx] + balls[idx:][::-1]

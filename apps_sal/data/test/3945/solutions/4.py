@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 gor = []
 ver = []
 o = []
@@ -21,9 +21,9 @@ def f(vg, vr, o):
     return max([len(vg), len(vr) + vg1 - vr1])
 
 
-for i, vg in enumerate(gor):
+for (i, vg) in enumerate(gor):
     vg1 = sorted(list(set(vg)))
-    for j, vr in enumerate(vg):
+    for (j, vr) in enumerate(vg):
         o[i].append(f(vg1, ver[j], vr))
 for i in o:
     print(' '.join(list(map(str, i))))

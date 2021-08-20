@@ -1,7 +1,8 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         total = sum(weights)
-        lo, hi = max(max(weights), total // D), total
+        (lo, hi) = (max(max(weights), total // D), total)
         n = len(weights)
 
         def valid(x):
@@ -13,7 +14,6 @@ class Solution:
                     i += 1
                 days += 1
             return days <= D
-
         while lo < hi:
             mid = (lo + hi) // 2
             print(mid)

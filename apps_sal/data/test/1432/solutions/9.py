@@ -12,5 +12,4 @@ for i in range(1, n):
     ans *= -1
     ans += 2 * a[i - 1]
     print(ans, end=' ')
-
 print()

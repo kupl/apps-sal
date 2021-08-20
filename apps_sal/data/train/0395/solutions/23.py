@@ -2,6 +2,7 @@ from sortedcontainers import SortedList
 
 
 class Solution:
+
     def oddEvenJumps(self, A: List[int]) -> int:
         n = len(A)
         dpO = [False] * n
@@ -11,7 +12,6 @@ class Solution:
         sl.add(A[-1])
         indexes = collections.defaultdict(int)
         indexes[A[-1]] = n - 1
-
         for i in range(n - 2, -1, -1):
             num = A[i]
             idx = sl.bisect_left(num)
@@ -24,5 +24,4 @@ class Solution:
                 dpE[i] = dpO[val_idx]
             sl.add(num)
             indexes[num] = i
-
         return sum(dpO)

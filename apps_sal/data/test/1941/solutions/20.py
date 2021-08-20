@@ -1,10 +1,11 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-a, b, n = R()
+(a, b, n) = R()
 for _ in range(n):
-    l, t, m = R()
-    ll, rr = l - 1, 10**6 + 7
+    (l, t, m) = R()
+    (ll, rr) = (l - 1, 10 ** 6 + 7)
     sl = a + (l - 1) * b
     while ll < rr:
         mm = (ll + rr + 1) // 2

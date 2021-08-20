@@ -1,7 +1,7 @@
-N, T = list(map(int, input().split()))
-mi = 10**100
+(N, T) = list(map(int, input().split()))
+mi = 10 ** 100
 for i in range(N):
-    s, d = list(map(int, input().split()))
+    (s, d) = list(map(int, input().split()))
     if s >= T:
         a = s - T
     else:

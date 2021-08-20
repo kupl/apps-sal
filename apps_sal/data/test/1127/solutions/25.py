@@ -4,15 +4,15 @@ def main():
     if n % 2 == 0:
         for i in range(1, n, 2):
             if int(lst[i]) % 2 == 0:
-                print("2")
+                print('2')
                 return
-        print("1")
+        print('1')
         return
     for i in range(0, n, 2):
         if int(lst[i]) % 2 == 1:
-            print("1")
+            print('1')
             return
-    print("2")
+    print('2')
     return
 
 

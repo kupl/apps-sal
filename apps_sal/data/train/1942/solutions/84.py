@@ -1,6 +1,7 @@
 class Solution:
+
     def peopleIndexes(self, A: List[List[str]]) -> List[int]:
-        '''
+        """
         # 比赛用代码
         res = []
         A = [(v, i) for i, v in enumerate(A)]
@@ -19,8 +20,7 @@ class Solution:
                 res.append(i)
             visit.append(v)
         return sorted(res)
-        '''
-        # 暴力解法。set的&操作
+        """
         res = []
         fc = [set(f) for f in A]
         n = len(fc)

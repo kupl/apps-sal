@@ -1,9 +1,16 @@
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
+def ii():
+    return int(input())
 
 
-N, A, B = mi()
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+(N, A, B) = mi()
 X = li()
 ans = 0
 now = X[0]

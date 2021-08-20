@@ -1,6 +1,5 @@
 input()
 s = input()
-
 if 'MM' in s or 'YY' in s or 'CC' in s:
     print('No')
 elif s.startswith('?') or s.endswith('?'):

@@ -1,14 +1,14 @@
 def nd(n):
     v = 0
     while n:
-        n, v = n // 10, v + 1
+        (n, v) = (n // 10, v + 1)
     return v
 
 
 def sd(n):
     v = 0
     while n:
-        n, v = n // 10, v + n % 10
+        (n, v) = (n // 10, v + n % 10)
     return v
 
 

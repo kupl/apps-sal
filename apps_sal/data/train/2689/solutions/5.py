@@ -2,8 +2,6 @@ employees = [{'first_name': 'Ollie', 'last_name': 'Hepburn', 'role': 'Boss'}, {'
 
 
 def find_employees_role(name):
-    ns = name.split()  # it's stupid, isn't it?
-    fn, ln = ns if len(ns) == 2 else ('', '')  # omfg
-    return next(
-        (e['role'] for e in employees if e['first_name'] == fn and e['last_name'] == ln),
-        "Does not work here!")
+    ns = name.split()
+    (fn, ln) = ns if len(ns) == 2 else ('', '')
+    return next((e['role'] for e in employees if e['first_name'] == fn and e['last_name'] == ln), 'Does not work here!')

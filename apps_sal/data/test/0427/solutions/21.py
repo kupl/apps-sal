@@ -6,10 +6,10 @@ def valid(n1, n2, p1, p2, mid):
 
 
 def binary_search(n1, n2, p1, p2):
-    l, r = 0, 1 << 61
-    while (l <= r):
+    (l, r) = (0, 1 << 61)
+    while l <= r:
         mid = l + r >> 1
-        if (valid(n1, n2, p1, p2, mid)):
+        if valid(n1, n2, p1, p2, mid):
             l = mid + 1
         else:
             r = mid - 1
@@ -17,7 +17,7 @@ def binary_search(n1, n2, p1, p2):
 
 
 def main():
-    n1, n2, p1, p2 = map(int, input().split())
+    (n1, n2, p1, p2) = map(int, input().split())
     print(binary_search(n1, n2, p1, p2))
 
 

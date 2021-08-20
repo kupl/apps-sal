@@ -1,17 +1,12 @@
-#
-
 import heapq
 from math import ceil
-
 for _ in range(int(input())):
-    N, A, B, X, Y, Z = map(int, input().split())
+    (N, A, B, X, Y, Z) = map(int, input().split())
     C = list(map(int, input().split()))
     heap = [-contrib for contrib in C]
     heapq.heapify(heap)
-
     hooli_days = ceil((Z - B) / Y)
     piper_init_gap = Z - A
-
     if ceil((piper_init_gap - 2 * sum(C)) / X) >= hooli_days:
         print('RIP')
     else:

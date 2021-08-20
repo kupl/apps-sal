@@ -1,9 +1,9 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 p = 6000
 fact = [0] * p
 fact[0] = 1
 for i in range(1, p):
-    fact[i] = (fact[i - 1] * i) % MOD
+    fact[i] = fact[i - 1] * i % MOD
 
 
 def MI(a, MOD):
@@ -19,14 +19,12 @@ def nck(n, k):
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     prod = 1
     l = [int(i) for i in input().split()]
     l.sort()
-    # nck=combo_nck(n,k)
     for i in range(n):
         tot = nck(n - 1, k - 1)
-        # print(tot)
         x = n - i
         if x >= k - 1:
             asmin = nck(x - 1, k - 1)
@@ -37,8 +35,5 @@ for _ in range(int(input())):
             asmax = nck(y - 1, k - 1)
         else:
             asmax = 0
-        # print(asmin)
-        # print(asmin,asmax)
         prod *= pow(l[i], tot - asmin - asmax, MOD)
-        # print(prod)
     print(prod % MOD)

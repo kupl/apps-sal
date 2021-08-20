@@ -2,27 +2,22 @@ import heapq
 import sys
 from collections import defaultdict, Counter
 from functools import reduce
-
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = []
 for _ in range(n):
     arr.append(list(map(int, input().split())))
-
 rows = []
 for i in range(n):
     row = set()
     for j in range(m):
         row.add(arr[i][j])
-    rows.append({x: i for i, x in enumerate(sorted(row))})
-
+    rows.append({x: i for (i, x) in enumerate(sorted(row))})
 columns = []
-
 for j in range(m):
     column = set()
     for i in range(n):
         column.add(arr[i][j])
-    columns.append({x: i for i, x in enumerate(sorted(column))})
+    columns.append({x: i for (i, x) in enumerate(sorted(column))})
 
 
 def get_answer(i, j):

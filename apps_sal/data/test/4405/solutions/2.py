@@ -1,4 +1,3 @@
-
 def main():
     buf = input()
     n = int(buf)
@@ -11,7 +10,7 @@ def main():
             appearance.update({i: 1})
         else:
             appearance[i] += 1
-    appearance = [[k, v] for k, v in list(dict(sorted(list(appearance.items()), key=lambda x:x[1])).items())]
+    appearance = [[k, v] for (k, v) in list(dict(sorted(list(appearance.items()), key=lambda x: x[1])).items())]
     max_num = appearance[-1][1]
     pos = 0
     for i in range(1, max_num + 1):

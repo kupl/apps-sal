@@ -1,6 +1,7 @@
 class Solution:
+
     def largest1BorderedSquare(self, grid: List[List[int]]) -> int:
-        n, m = len(grid), len(grid[0])
+        (n, m) = (len(grid), len(grid[0]))
         max = 0
         hor = [[0] * m for _ in range(n)]
         ver = [[0] * m for _ in range(n)]
@@ -9,7 +10,6 @@ class Solution:
                 if grid[i][j] == 1:
                     hor[i][j] = hor[i][j - 1] + 1 if j > 0 else 1
                     ver[i][j] = ver[i - 1][j] + 1 if i > 0 else 1
-
         for i in range(n - 1, -1, -1):
             for j in range(m - 1, -1, -1):
                 small = min(ver[i][j], hor[i][j])
@@ -18,4 +18,4 @@ class Solution:
                         max = small
                         break
                     small -= 1
-        return max**2
+        return max ** 2

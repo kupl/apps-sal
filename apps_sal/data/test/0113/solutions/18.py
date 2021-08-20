@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 for i in range(k):
     if n % 5 == 0:
         n //= 5

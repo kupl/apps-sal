@@ -1,17 +1,14 @@
 n = int(input())
 s = list(input())
-
-dg = 10**6
+dg = 10 ** 6
 for i in range(n):
     s[i] = ord(s[i]) * dg + i
 s.sort()
 
 
 def init_max(init_max_val):
-    # set_val
     for i in range(n):
         seg_max[i + num_max - 1] = init_max_val[i]
-    # built
     for i in range(num_max - 2, -1, -1):
         seg_max[i] = max(seg_max[2 * i + 1], seg_max[2 * i + 2])
 
@@ -46,17 +43,13 @@ def query_max(p, q):
 
 
 ide_ele_max = 0
-
-num_max = 2**(n - 1).bit_length()
+num_max = 2 ** (n - 1).bit_length()
 seg_max = [ide_ele_max] * 2 * num_max
-
-
 res = [0] * n
 for e in s:
     ind = e % dg
     ad = query_max(ind, n)
     res[ind] = ad + 1
-
     update_max(ind, ad + 1)
 print(max(res))
 print(*res)

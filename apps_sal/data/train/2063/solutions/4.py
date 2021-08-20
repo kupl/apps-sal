@@ -1,6 +1,6 @@
 v0 = 0
 l = []
-n, m = (int(x) for x in input().split())
+(n, m) = (int(x) for x in input().split())
 for i in range(n):
     l2 = []
     curs = set([int(x) for x in input().split()][1:])

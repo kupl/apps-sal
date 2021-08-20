@@ -11,7 +11,6 @@ else:
     c = [1 for i in range(n)]
     visited = [-1 for i in range(n)]
     visited[0] = 0
-
     while dfs_stack != []:
         current_node = dfs_stack[-1]
         can_go_further = False
@@ -23,7 +22,6 @@ else:
         if can_go_further == False:
             dfs_stack.pop(-1)
             c[visited[current_node]] += c[current_node]
-
     ans = 0
     for i in c[1:]:
         if i % 2 == 0:

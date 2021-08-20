@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val):
         self.val = val
         self.children = [None] * 26
@@ -6,9 +7,9 @@ class Node:
 
 
 class Trie:
+
     def __init__(self, words):
         self.root = Node('')
-
         for word in words:
             p = self.root
             for ind in range(len(word) - 1, -1, -1):
@@ -30,7 +31,6 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.stream.insert(0, letter)
-
         p = self.trie.root
         for ch in self.stream:
             if p.children[ord(ch) - ord('a')]:

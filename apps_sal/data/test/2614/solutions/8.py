@@ -10,7 +10,7 @@ for _ in range(t):
     m = len(S)
 
     def cond(t):
-        q, r = n // (t + 1), n % (t + 1)
+        (q, r) = (n // (t + 1), n % (t + 1))
         if r > m:
             return False
         check = 0
@@ -20,7 +20,6 @@ for _ in range(t):
             elif data[i] == q + 1:
                 check += 1
         return r >= check
-
     ok = 0
     ng = n
     while ng - ok > 1:
@@ -29,5 +28,4 @@ for _ in range(t):
             ok = test
         else:
             ng = test
-
     print(ok)

@@ -1,8 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 S = list(input())
-# print(S)
 S.reverse()
-
 if S[0] == 1 or S[-1] == 1:
     det = -1
 else:
@@ -10,7 +8,7 @@ else:
     count = 0
     data = []
     for i in range(N + 1):
-        if S[i] == "0":
+        if S[i] == '0':
             data.append(count + 1)
             count = 0
         else:
@@ -18,8 +16,6 @@ else:
         if count == M:
             det = -1
             break
-    # print(data)
-
 if det != -1:
     ans = []
     count = 0
@@ -31,7 +27,6 @@ if det != -1:
             count += data[i]
     ans.append(count)
     ans.reverse()
-    print(" ".join(map(str, ans)))
-
+    print(' '.join(map(str, ans)))
 else:
     print(-1)

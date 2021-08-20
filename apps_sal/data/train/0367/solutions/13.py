@@ -1,4 +1,5 @@
 class Solution:
+
     def findDuplicate(self, nums):
         """
         :type nums: List[int]

@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         res = []
         dict1 = {}
@@ -7,13 +8,13 @@ class Solution:
             r = []
             v = 0
             p = i
-            while(c == 0):
-                if(i == 1):
+            while c == 0:
+                if i == 1:
                     c = 1
-                elif(i % 2 == 0):
+                elif i % 2 == 0:
                     i = i // 2
                     v += 1
-                    while(i % 2 == 0):
+                    while i % 2 == 0:
                         i = i // 2
                         v += 1
                 else:

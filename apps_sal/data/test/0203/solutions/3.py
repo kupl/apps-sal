@@ -1,4 +1,3 @@
-# Author: Maharshi Gor
 from collections import deque
 
 
@@ -12,18 +11,14 @@ def read_arr(t=int):
 
 D = deque()
 R = deque()
-
 k = read()
 S = input()
-
 n = len(S)
-
 for i in range(len(S)):
     if S[i] == 'R':
         R.append(i)
     else:
         D.append(i)
-
 while R and D:
     r = R.popleft()
     d = D.popleft()
@@ -31,7 +26,6 @@ while R and D:
         R.append(r + n)
     else:
         D.append(d + n)
-
 if R:
     print('R')
 else:

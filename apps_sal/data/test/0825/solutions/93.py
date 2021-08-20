@@ -8,7 +8,6 @@ def main():
     if N == 1:
         print(cnt)
         return 0
-
     for p in f:
         prime = p[0]
         power = p[1]
@@ -30,7 +29,6 @@ def prime_factorize(n):
         ret.append([n, 1])
     if len(ret) == 0:
         ret.append([n, 1])
-
     return ret
 
 

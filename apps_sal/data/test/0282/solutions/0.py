@@ -1,7 +1,7 @@
-'''input
+"""input
 4 2
 1001
-'''
+"""
 
 
 def list_input():
@@ -16,7 +16,7 @@ def map_string():
     return input().split()
 
 
-n, d = map_input()
+(n, d) = map_input()
 s = input()
 cur = 0
 cnt = 0

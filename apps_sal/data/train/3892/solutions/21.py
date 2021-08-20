@@ -1,2 +1,2 @@
 def grader(n):
-    return "FDCBAF"[(n >= .6) + (n >= .7) + (n >= .8) + (n >= .9) + (n > 1)]
+    return 'FDCBAF'[(n >= 0.6) + (n >= 0.7) + (n >= 0.8) + (n >= 0.9) + (n > 1)]

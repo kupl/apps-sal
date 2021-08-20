@@ -1,4 +1,4 @@
-s, t = input(), input()
+(s, t) = (input(), input())
 ls = len(s)
 lt = len(t)
 ans = 1000000000000

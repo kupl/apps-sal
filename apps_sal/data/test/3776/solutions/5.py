@@ -1,5 +1,5 @@
 c = input()
-h, m = map(int, input().split(':'))
+(h, m) = map(int, input().split(':'))
 if m >= 60:
     m %= 10
 if c == '12' and h == 0:

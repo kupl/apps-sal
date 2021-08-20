@@ -1,7 +1,7 @@
 class Solution:
+
     def numSub(self, s: str) -> int:
         n = len(s)
-
         start = 0
         while start < n and s[start] != '1':
             start += 1
@@ -12,7 +12,7 @@ class Solution:
         while i < n and start < n:
             if s[i] == '1':
                 count += i - start + 1
-                count = count % (10**9 + 7)
+                count = count % (10 ** 9 + 7)
                 i += 1
                 continue
             start = i

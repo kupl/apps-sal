@@ -9,9 +9,6 @@ def fin(x):
     return parent[x]
 
 
-#import sys
-#sys.stdin = open ('464-D.in', 'r')
-
 n = int(input())
 a = input()
 b = input()
@@ -24,7 +21,6 @@ for i in range(0, n):
     if u != v:
         lst.append((ord(a[i]) - 48, ord(b[i]) - 48))
         parent[u] = v
-
 print(len(lst))
-for i, j in lst:
+for (i, j) in lst:
     print(chr(i + 48), chr(j + 48))

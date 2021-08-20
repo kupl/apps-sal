@@ -9,4 +9,4 @@ while t:
     for i in range(x + 1):
         cnt = a.count(i)
         if cnt:
-            print(str(i) + ":", cnt)
+            print(str(i) + ':', cnt)

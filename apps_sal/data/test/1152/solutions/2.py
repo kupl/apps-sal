@@ -1,5 +1,5 @@
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(n)]
     kek = [list(map(int, input().split())) for _ in range(n)]
     for i in range(n):
@@ -21,9 +21,9 @@ def main():
             f = 0
             break
     if f:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
     return 0
 
 

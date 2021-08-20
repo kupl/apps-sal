@@ -6,5 +6,4 @@ for i in range(N):
     ma = max(ma, A[i])
     if ma <= i:
         ans += 1
-
 print(ans)

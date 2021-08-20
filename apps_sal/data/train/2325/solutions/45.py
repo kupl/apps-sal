@@ -5,16 +5,15 @@ T = input()
 q = int(input())
 abcd = [list(map(int, input().split())) for i in range(q)]
 
-# Segment Tree
-
 
 class SegmentTree:
+
     def __init__(self, data, op, default):
         N = len(data)
         self.N = N
         self.op = op
         self.default = default
-        self.l = 2**((N - 1).bit_length())
+        self.l = 2 ** (N - 1).bit_length()
         self.data = [default] * self.l + data + [default] * (self.l - N)
         for i in range(self.l - 1, 0, -1):
             self.data[i] = op(self.data[2 * i], self.data[2 * i + 1])
@@ -44,22 +43,19 @@ class SegmentTree:
             if j & 1:
                 s = self.op(s, self.data[j - 1])
                 j -= 1
-            i, j = i // 2, j // 2
+            (i, j) = (i // 2, j // 2)
         return s
 
 
-def convert(x): return 1 if x == 'A' else 2
+def convert(x):
+    return 1 if x == 'A' else 2
 
 
 nS = list(map(convert, S))
 nT = list(map(convert, T))
 segS = SegmentTree(nS, lambda x, y: x + y, 0)
 segT = SegmentTree(nT, lambda x, y: x + y, 0)
-
-# A -> BB -> AAAA -> A
-# B -> AA -> BBBB -> B
-# (S) -> AAAAA......
-for a, b, c, d in abcd:
+for (a, b, c, d) in abcd:
     rs = segS.get(a - 1, b)
     rt = segT.get(c - 1, d)
     if (rs - rt) % 3 == 0:

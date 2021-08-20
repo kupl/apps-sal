@@ -1,5 +1,4 @@
 [n, a, b] = list(map(int, input().split(' ')))
-
 r = [(b + 1) * [0] for _ in range(a + 1)]
 t = list(range(1, n + 1))
 for i in range(1, a + 1):

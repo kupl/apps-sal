@@ -1,6 +1,5 @@
 N = int(input())
 MOD = 10 ** 9 + 7
-
 memo = [{} for i in range(N + 1)]
 
 
@@ -8,7 +7,7 @@ def f(x):
     for i in range(4):
         temp = list(x)
         if i >= 1:
-            temp[i - 1], temp[i] = temp[i], temp[i - 1]
+            (temp[i - 1], temp[i]) = (temp[i], temp[i - 1])
         if ''.join(temp).count('AGC') >= 1:
             return False
     return True

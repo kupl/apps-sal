@@ -1,4 +1,3 @@
-#print('HARE KRISHNA')
 t = input()
 p = input()
 block = [int(i) - 1 for i in input().split()]
@@ -31,7 +30,7 @@ m = len(p)
 lo = 0
 hi = len(block) - 1
 while lo <= hi:
-    mi = (lo + hi) >> 1
+    mi = lo + hi >> 1
     if is_part_and_parcel(t, p, mi):
         ans = mi
         lo = mi + 1

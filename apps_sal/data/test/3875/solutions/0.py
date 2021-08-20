@@ -4,7 +4,7 @@ inf = 10 ** 18
 mod = 10 ** 9 + 7
 
 
-def nCr(n, r, mod=10**9 + 7):
+def nCr(n, r, mod=10 ** 9 + 7):
     if r < 0 or r > n:
         return 0
     res = 1
@@ -27,7 +27,7 @@ def calc_lis(A):
 
 
 def enum(N, A):
-    diff = [A[0]] + [r - l for l, r in zip(A[:-1], A[1:])]
+    diff = [A[0]] + [r - l for (l, r) in zip(A[:-1], A[1:])]
     dp = [[0] * (N + 1) for _ in range(N + 1)]
     dp[0][0] = 1
     for i in range(1, N + 1):
@@ -41,7 +41,6 @@ def enum(N, A):
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
     pair = [(0,)]
     for _ in range(1, N):
         nxt = []
@@ -50,13 +49,12 @@ def main():
             nxt.append(p + (v,))
             nxt.append(p + (v + 1,))
         pair = nxt
-
     ans = 0
     for p in pair:
         sz = p[-1] + 1
         for order in set(permutations(p)):
             arr = [inf] * sz
-            for i, a in zip(order, A):
+            for (i, a) in zip(order, A):
                 arr[i] = min(arr[i], a)
             for i in reversed(range(sz - 1)):
                 arr[i] = min(arr[i], arr[i + 1])

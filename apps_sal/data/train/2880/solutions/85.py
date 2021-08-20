@@ -6,4 +6,4 @@ def seven(m):
             x = m // 10 - 2 * (m % 10)
             m = x
             i += 1
-    return m, i
+    return (m, i)

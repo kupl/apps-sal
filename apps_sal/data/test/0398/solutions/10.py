@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, = map(int, input().split())
+    (n,) = map(int, input().split())
     a = list(map(int, input().split()))
     res = False
     a.sort()
@@ -9,9 +8,9 @@ def __starting_point():
             res = True
             break
     if res:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

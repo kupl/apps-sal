@@ -1,4 +1,4 @@
-X, Y = input().split()
+(X, Y) = input().split()
 if X > Y:
     ans = '>'
 elif X < Y:

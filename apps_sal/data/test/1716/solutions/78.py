@@ -17,17 +17,14 @@ def make_sumtable():
     return sumtable
 
 
-N, M, Q = list(map(int, input().split()))
-
+(N, M, Q) = list(map(int, input().split()))
 L = []
 R = []
 for i in range(M):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     L.append(l)
     R.append(r)
-
 sumtable = make_sumtable()
-
 for i in range(Q):
-    p, q = list(map(int, input().split()))
-    print((sumtable[q][q] - sumtable[q][p - 1] - sumtable[p - 1][q] + sumtable[p - 1][p - 1]))
+    (p, q) = list(map(int, input().split()))
+    print(sumtable[q][q] - sumtable[q][p - 1] - sumtable[p - 1][q] + sumtable[p - 1][p - 1])

@@ -3,7 +3,6 @@ def fold_to(distance):
         return None
     thickness = 0.0001
     n = 0
-    while thickness * (2**n) < distance:
-        #print(n, 2**n, thickness*(2**n))
+    while thickness * 2 ** n < distance:
         n += 1
     return n

@@ -9,6 +9,6 @@ def reduce_pyramid(a):
     x = len(a) - 1
     C = pascal(x)
     s = 0
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         s += C[i] * v
     return s

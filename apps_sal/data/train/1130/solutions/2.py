@@ -1,6 +1,6 @@
 import math
 for i in range(int(input())):
-    N, D = list(map(int, input().split()))
+    (N, D) = list(map(int, input().split()))
     n = list(map(int, input().split()))
     days = 0
     if D == 1:

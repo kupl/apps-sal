@@ -1,10 +1,8 @@
 import sys
-sys.setrecursionlimit(10**7)
+sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
-
-n, x = list(map(int, input().split()))
-
-a, p = [1], [1]
+(n, x) = list(map(int, input().split()))
+(a, p) = ([1], [1])
 for i in range(n):
     a.append(a[i] * 2 + 3)
     p.append(p[i] * 2 + 1)
@@ -19,4 +17,4 @@ def f(n, x):
         return p[n - 1] + 1 + f(n - 1, x - 2 - a[n - 1])
 
 
-print((f(n, x)))
+print(f(n, x))

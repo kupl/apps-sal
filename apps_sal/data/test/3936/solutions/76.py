@@ -17,14 +17,12 @@ for i in range(len(array)):
             ans = 3
         else:
             ans = 6
+    elif array[i] == 0:
+        if array[i - 1] == 0:
+            ans = ans * 2
+    elif array[i - 1] == 0:
+        ans = ans * 2
     else:
-        if array[i] == 0:
-            if array[i - 1] == 0:
-                ans = ans * 2
-        else:
-            if array[i - 1] == 0:
-                ans = ans * 2
-            else:
-                ans = ans * 3
+        ans = ans * 3
     ans = ans % mod
 print(ans)

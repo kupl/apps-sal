@@ -1,5 +1,4 @@
 n = int(input())
-
 ss = list(input())
 f = 0
 s = 0
@@ -13,5 +12,4 @@ for i in range(1, len(ss)):
     else:
         s += 1
     l = c
-
-print("YES") if f > s else print("NO")
+print('YES') if f > s else print('NO')

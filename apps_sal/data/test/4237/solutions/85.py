@@ -1,6 +1,5 @@
 import math
-
-a, b, c, d = map(int, input().split())
+(a, b, c, d) = map(int, input().split())
 l = c * d // math.gcd(c, d)
 all = b - a + 1
 can_c = b // c - (a - 1) // c

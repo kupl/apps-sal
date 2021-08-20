@@ -1,4 +1,4 @@
-n, s = int(input()), 0
+(n, s) = (int(input()), 0)
 a = [0] + list(map(int, input().split()))
 if n % 2 == 0 or n == 1:
     print(-1)

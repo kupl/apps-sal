@@ -1,12 +1,10 @@
 from collections import deque
-
-n, L = list(map(int, input().split()))
+(n, L) = list(map(int, input().split()))
 d1 = [int(i) for i in input().split()]
 d2 = deque([int(i) for i in input().split()])
 ans = False
 if n == 1:
     ans = True
-
 for i in range(n):
     if ans:
         break
@@ -18,5 +16,4 @@ for i in range(n):
     if fl:
         ans = True
     d2.rotate(1)
-
-print(["NO", "YES"][ans])
+print(['NO', 'YES'][ans])

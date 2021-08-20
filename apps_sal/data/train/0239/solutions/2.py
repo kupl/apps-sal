@@ -1,10 +1,12 @@
 class Item:
+
     def __init__(self, label, value):
         self.label = label
         self.value = value
 
 
 class Solution:
+
     def largestValsFromLabels(self, values: List[int], labels: List[int], num_wanted: int, use_limit: int) -> int:
         labelvalues = []
         i = 0
@@ -12,7 +14,6 @@ class Solution:
             labelvalues.append(Item(labels[i], values[i]))
             i += 1
         lv = []
-
         for item in labelvalues:
             heapq.heappush(lv, (-item.value, item.label))
         countlabels = collections.defaultdict(int)

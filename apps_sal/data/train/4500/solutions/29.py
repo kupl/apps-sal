@@ -1,5 +1,4 @@
 def define_suit(card):
-
     suite = card[-1]
     if card[-1] == 'S':
         return 'spades'

@@ -1,7 +1,7 @@
 def main():
     t = int(input())
-    s1 = "one"
-    s2 = "two"
+    s1 = 'one'
+    s2 = 'two'
     for i in range(t):
         s = input()
         n = len(s)
@@ -22,7 +22,7 @@ def main():
                 i += 1
         print(count)
         for i in range(len(ans)):
-            print(ans[i], end=" ")
+            print(ans[i], end=' ')
         print()
 
 

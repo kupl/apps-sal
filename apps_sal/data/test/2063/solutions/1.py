@@ -1,4 +1,5 @@
 def main():
+
     def check(x):
         b = [0] * (n + 1)
         curr = 0
@@ -13,9 +14,8 @@ def main():
             if day > m:
                 break
         return day
-    n, m, w = map(int, input().split())
+    (n, m, w) = map(int, input().split())
     a = list(map(int, input().split()))
-
     l = min(a)
     r = max(a) + m + 1
     while l + 1 < r:
@@ -24,7 +24,6 @@ def main():
             l = mid
         else:
             r = mid
-
     print(l)
 
 

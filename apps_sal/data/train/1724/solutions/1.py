@@ -1,4 +1,4 @@
-class Ship():
+class Ship:
     columns = 0
 
     def __init__(self, row, col, speed):
@@ -19,12 +19,12 @@ class Ship():
 
 
 def blast_sequence(aliens, position):
-    rows, column = position
+    (rows, column) = position
     Ship.columns = len(aliens[0])
     ships = []
-    for nrow, row in enumerate(aliens):
-        ships.extend(Ship(nrow, ncol, speed) for ncol, speed in enumerate(row) if speed)
-    shots, turn = [], 0
+    for (nrow, row) in enumerate(aliens):
+        ships.extend((Ship(nrow, ncol, speed) for (ncol, speed) in enumerate(row) if speed))
+    (shots, turn) = ([], 0)
     while ships:
         for ship in ships:
             ship.move()

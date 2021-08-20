@@ -1,4 +1,5 @@
 class Solution:
+
     def sumSubarrayMins(self, A: List[int]) -> int:
         n = len(A)
         left = [0] * n
@@ -18,4 +19,4 @@ class Solution:
                 cnt += s2.pop()[1]
             s2.append((A[i], cnt))
             right[i] = cnt
-        return sum(A[i] * left[i] * right[i] for i in range(n)) % mod
+        return sum((A[i] * left[i] * right[i] for i in range(n))) % mod

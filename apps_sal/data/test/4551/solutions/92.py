@@ -1,7 +1,7 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 if sum((a, b)) > sum((c, d)):
-    print("Left")
+    print('Left')
 elif sum((a, b)) < sum((c, d)):
-    print("Right")
+    print('Right')
 else:
-    print("Balanced")
+    print('Balanced')

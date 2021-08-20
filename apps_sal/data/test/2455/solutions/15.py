@@ -4,11 +4,11 @@ for i in range(0, t):
     answer = []
     p = [1, 2, 3, 4, 6, 12]
     for j in range(0, len(p)):
-        d1, d2 = p[j], 12 // p[j]
+        (d1, d2) = (p[j], 12 // p[j])
         cnt = [0 for h in range(0, d2)]
         for i2 in range(0, 12):
             tt = i2 % d2
-            cnt[tt] += (str[i2] == 'X')
+            cnt[tt] += str[i2] == 'X'
         ans_cand = False
         for i2 in range(0, d2):
             if cnt[i2] == d1:

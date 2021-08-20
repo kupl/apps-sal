@@ -16,7 +16,7 @@ def from_list_to_string_with_comma(A):
 
 
 def rearranger(k, *args):
-    min = float("inf")
+    min = float('inf')
     index = None
     list_of_permutations = list(itertools.permutations(args))
     for i in range(len(list_of_permutations)):
@@ -25,6 +25,6 @@ def rearranger(k, *args):
             min = tmp
             index = i
     if index == None:
-        return "There is no possible rearrangement"
+        return 'There is no possible rearrangement'
     else:
-        return "Rearrangement: " + str(from_list_to_string_with_comma(list_of_permutations[index])) + " generates: " + str(min) + " divisible by " + str(k)
+        return 'Rearrangement: ' + str(from_list_to_string_with_comma(list_of_permutations[index])) + ' generates: ' + str(min) + ' divisible by ' + str(k)

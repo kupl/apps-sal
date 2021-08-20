@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
@@ -12,7 +13,6 @@ class Solution:
                 second = points[j]
                 adj_list[tuple(first)].append([abs(first[0] - second[0]) + abs(first[1] - second[1]), second])
                 adj_list[tuple(second)].append([abs(first[0] - second[0]) + abs(first[1] - second[1]), first])
-
         pq = pq + adj_list[list(adj_list.keys())[0]]
         heapq.heapify(pq)
         visited.add(tuple(list(adj_list.keys())[0]))

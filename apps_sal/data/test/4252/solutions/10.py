@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-ans, l = 0, -2
+(ans, l) = (0, -2)
 for i in range(len(s)):
     if s[i] == 'x':
         l += 1

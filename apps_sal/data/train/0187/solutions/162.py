@@ -2,11 +2,11 @@ MIN = float('-inf')
 
 
 class Solution:
-    def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
 
+    def minOperationsMaxProfit(self, customers, boardingCost, runningCost):
         n = len(customers)
-        step, maxStep, maxProfit = 0, 0, MIN
-        i, people, queue = 0, 0, 0
+        (step, maxStep, maxProfit) = (0, 0, MIN)
+        (i, people, queue) = (0, 0, 0)
         while True:
             if i < n:
                 queue += customers[i]

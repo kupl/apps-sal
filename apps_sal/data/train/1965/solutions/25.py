@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.root = [i for i in range(n + 1)]
         self.forests = n
@@ -14,11 +15,12 @@ class UnionFind:
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        ufA, ufB = UnionFind(n), UnionFind(n)
+        (ufA, ufB) = (UnionFind(n), UnionFind(n))
         edges.sort(key=lambda x: -x[0])
         res = 0
-        for t, a, b in edges:
+        for (t, a, b) in edges:
             if 3 == t:
                 if ufA.find(a) == ufA.find(b) and ufB.find(a) == ufB.find(b):
                     res += 1
@@ -28,16 +30,13 @@ class Solution:
                     ufB.unite(a, b)
             elif t == 1:
                 if ufA.find(a) == ufA.find(b):
-                    # should remove this edge
                     res += 1
                 else:
                     ufA.unite(a, b)
+            elif ufB.find(a) == ufB.find(b):
+                res += 1
             else:
-                if ufB.find(a) == ufB.find(b):
-                    # should remove this edge
-                    res += 1
-                else:
-                    ufB.unite(a, b)
+                ufB.unite(a, b)
         if ufA.forests > 1 or ufB.forests > 1:
             return -1
         return res

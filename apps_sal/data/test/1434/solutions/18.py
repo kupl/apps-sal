@@ -1,11 +1,12 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
 n = int(input())
-degs, xors = [0] * (2 ** 16 + 1), [0] * (2 ** 16 + 1)
+(degs, xors) = ([0] * (2 ** 16 + 1), [0] * (2 ** 16 + 1))
 edges = []
 for curr in range(n):
-    degs[curr], xors[curr] = R()
+    (degs[curr], xors[curr]) = R()
 q = []
 for curr in range(n):
     if degs[curr] == 1:
@@ -22,6 +23,6 @@ while q:
         q.append(neighbor)
 filter(lambda p: p[0] < p[1], edges)
 print(len(edges))
-for u, v in edges:
+for (u, v) in edges:
     if u < v:
         print(u, v)

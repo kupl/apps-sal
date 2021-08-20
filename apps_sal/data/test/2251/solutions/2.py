@@ -10,24 +10,22 @@ def dfs(i, s, cnt):
         dfs(i, t, cnt)
 
 
-ver_n, edge_n = list(map(int, input().split()))
+(ver_n, edge_n) = list(map(int, input().split()))
 g = [[[] for _ in range(ver_n)] for _ in range(edge_n)]
 for _ in range(edge_n):
-    a, b, c = [int(x) - 1 for x in input().split()]
+    (a, b, c) = [int(x) - 1 for x in input().split()]
     g[c][a].append(b)
     g[c][b].append(a)
-
 colored = [[0] * ver_n for _ in range(edge_n)]
 for i in range(edge_n):
     cnt = 1
     for j in range(ver_n):
         dfs(i, j, cnt)
         cnt += 1
-
 q = int(input())
 for i in range(q):
     cnt = 0
-    u, v = [int(x) - 1 for x in input().split()]
+    (u, v) = [int(x) - 1 for x in input().split()]
     for j in range(edge_n):
         if colored[j][u] == colored[j][v]:
             cnt += 1

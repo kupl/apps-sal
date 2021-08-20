@@ -1,8 +1,6 @@
 import sys
 r_input = sys.stdin.readline
-
 t = int(r_input())
-
 for _ in range(t):
     s = r_input().rstrip()
     if s.endswith('po'):

@@ -11,16 +11,12 @@ for i in range(2, N):
         for j in range(i * i, N, i):
             if d[j] == 0:
                 d[j] = max(i, j // i)
-
-c = [0] * (N)
+c = [0] * N
 n = int(input())
 a = list(map(int, input().split()))
 for i in a:
     c[i] += 1
-
 ans = []
-
-
 for i in range(N - 1, 2, -1):
     if c[i] > 0:
         if pr[i] == 0:
@@ -33,5 +29,4 @@ for i in range(N - 1, 2, -1):
             for j in range(c[i]):
                 ans.append(k)
             c[k] -= c[i]
-
 print(*ans)

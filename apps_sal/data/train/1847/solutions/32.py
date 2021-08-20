@@ -9,7 +9,6 @@ class SubrectangleQueries:
         while row1 <= row2 and col1 <= col2:
             self.rectangle[row1][col1] = newValue
             col1 += 1
-
             if not col1 < self.columns or not col1 <= col2:
                 col1 = initial
                 row1 += 1

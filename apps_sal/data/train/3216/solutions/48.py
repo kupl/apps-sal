@@ -7,6 +7,6 @@ def movie(card, ticket, perc):
     ticket_cost = 0
     while math.ceil(card_cost) >= ticket_cost:
         num_trips += 1
-        card_cost += ticket * (perc ** num_trips)
+        card_cost += ticket * perc ** num_trips
         ticket_cost += ticket
     return num_trips

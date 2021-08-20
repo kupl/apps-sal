@@ -1,5 +1,5 @@
 s = input()
-a = "AEUYEOI"
+a = 'AEUYEOI'
 pos = [0]
 for i in range(len(s)):
     if s[i] in a:

@@ -1,14 +1,13 @@
 from sys import stdin
-
-height, width = list(map(int, stdin.readline().rstrip().split()))
+(height, width) = list(map(int, stdin.readline().rstrip().split()))
 
 
 def fib(n):
     if n < 2:
         return n
-    a, b = [0, 1]
+    (a, b) = [0, 1]
     for i in range(0, n):
-        a, b = [b, a + b]
+        (a, b) = [b, a + b]
     return a
 
 

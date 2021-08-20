@@ -2,14 +2,25 @@ import re
 import math
 import decimal
 import bisect
-def read(): return input().strip()
-def iread(): return int(input().strip())
-def viread(): return [int(_) for _ in input().strip().split()]
-def round(n): return int(n + 0.5)
+
+
+def read():
+    return input().strip()
+
+
+def iread():
+    return int(input().strip())
+
+
+def viread():
+    return [int(_) for _ in input().strip().split()]
+
+
+def round(n):
+    return int(n + 0.5)
 
 
 DEBUG = 1
-# DEBUG = 0
 
 
 def debug(*args, **kwargs):
@@ -17,7 +28,6 @@ def debug(*args, **kwargs):
         print(*args, **kwargs)
 
 
-# code goes here
 t = iread()
 for _ in range(t):
     n = iread()
@@ -27,4 +37,4 @@ for _ in range(t):
         if (arr[i] - arr[i + 1]) % 2 == 1:
             can = False
             break
-    print(["NO", "YES"][int(can)])
+    print(['NO', 'YES'][int(can)])

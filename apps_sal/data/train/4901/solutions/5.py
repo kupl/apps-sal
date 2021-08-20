@@ -4,8 +4,7 @@ def calculate_ratio(w, h):
 
     def gcd(a, b):
         while b:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
-
     denom = gcd(w, h)
-    return "{}:{}".format(w / denom, h / denom)
+    return '{}:{}'.format(w / denom, h / denom)

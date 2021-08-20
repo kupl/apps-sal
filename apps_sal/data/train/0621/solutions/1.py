@@ -11,10 +11,8 @@ def chk(st, n):
 for t in range(eval(input())):
     n = eval(input())
     s = list(input().split())
-
     mx = -1
-    ans = ""
-
+    ans = ''
     for i in range(len(s[0])):
         for j in range(i, len(s[0])):
             if chk(s[0][i:j + 1], n):
@@ -23,5 +21,4 @@ for t in range(eval(input())):
                 if mx < j + 1 - i:
                     mx = j + 1 - i
                     ans = s[0][i:j + 1]
-
     print(ans)

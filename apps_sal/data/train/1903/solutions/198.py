@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parent = list(range(n))
         self.size = [1] * n
@@ -18,25 +19,22 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         distances = []
         for idx0 in range(n):
-            i0, j0 = points[idx0]
+            (i0, j0) = points[idx0]
             for idx1 in range(idx0 + 1, n):
-                i1, j1 = points[idx1]
+                (i1, j1) = points[idx1]
                 dis = abs(i0 - i1) + abs(j0 - j1)
                 distances.append([dis, idx0, idx1])
-        # print(distances)
         heapq.heapify(distances)
-        # print(distances)
-
         res = 0
         uf = UnionFind(n)
         while uf.size[0] < n:
-            dis, idx0, idx1 = heapq.heappop(distances)
+            (dis, idx0, idx1) = heapq.heappop(distances)
             if uf.find(idx0) != uf.find(idx1):
-                # print(dis, idx0, idx1)
                 res += dis
                 uf.union(idx0, idx1)
         return res

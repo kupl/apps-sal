@@ -1,5 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
+
         def isOK(weights, D, w):
             count = 1
             weight = 0
@@ -14,7 +16,6 @@ class Solution:
                 return True
             else:
                 return False
-
         left = max(weights)
         right = sum(weights)
         while left <= right:

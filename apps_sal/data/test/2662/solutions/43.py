@@ -2,7 +2,7 @@ from bisect import bisect_right
 
 
 def main():
-    inf = float("inf")
+    inf = float('inf')
     n = int(input())
     alst = [int(input()) for _ in range(n)]
     work = [inf] * n

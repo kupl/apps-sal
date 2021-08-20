@@ -32,7 +32,6 @@ for i in range(10):
         if a[i][j] == '.':
             for direction in [[1, 0], [0, 1], [1, 1], [1, -1]]:
                 curr = max(curr, check(i, j, direction))
-
 if curr >= 5:
     print('YES')
 else:

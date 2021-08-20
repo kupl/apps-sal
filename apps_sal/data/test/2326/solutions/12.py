@@ -1,7 +1,7 @@
 n = int(input())
 s = list(map(int, input().split()))
 mod = 998244353
-cm = [[0 for i in range(n + 2)]for j in range(n + 2)]
+cm = [[0 for i in range(n + 2)] for j in range(n + 2)]
 for i in range(n + 2):
     cm[i][0] = 1
 for i in range(1, n + 2):

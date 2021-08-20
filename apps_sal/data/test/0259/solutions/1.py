@@ -1,8 +1,8 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 nearest_t = 200000
 ans = 0
 for i in range(n):
-    s, d = list(map(int, input().split()))
+    (s, d) = list(map(int, input().split()))
     if s >= t and s < nearest_t:
         nearest_t = s
         ans = i + 1

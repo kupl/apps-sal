@@ -1,16 +1,14 @@
 a = input()
 b = input()
-
 diff = 0
 for i in range(len(a)):
     if a[i] != b[i]:
         diff += 1
-
 if diff % 2 != 0:
-    print("impossible")
+    print('impossible')
 else:
     start = 0
-    ans = ""
+    ans = ''
     for i in range(len(a)):
         if a[i] != b[i]:
             if start % 2 == 0:

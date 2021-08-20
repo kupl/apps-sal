@@ -7,10 +7,10 @@ def f(L, x):
         return patties[L - 1] + 1 + f(L - 1, x - total[L - 1] - 2)
 
 
-N, X = list(map(int, input().split()))
+(N, X) = list(map(int, input().split()))
 total = [1]
 patties = [1]
 for i in range(50):
     total.append(total[-1] * 2 + 3)
     patties.append(patties[-1] * 2 + 1)
-print((f(N, X)))
+print(f(N, X))

@@ -1,7 +1,5 @@
-# フェルマーの小定理
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 m = 1000000007
 
 
@@ -22,17 +20,14 @@ def mcomb(n, k):
 
 
 fac = make_factorial_table(N)
-
 A.sort(reverse=True)
 maxX = 0
 for i in range(N - K + 1):
     maxX += A[i] * mcomb(N - (i + 1), K - 1)
     maxX %= m
-
 A.sort()
 minX = 0
 for i in range(N - K + 1):
     minX += A[i] * mcomb(N - (i + 1), K - 1)
     minX %= m
-
-print(((maxX - minX) % m))
+print((maxX - minX) % m)

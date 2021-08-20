@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 s = list(map(int, input().split()))
 e = list(map(int, input().split()))
@@ -15,4 +14,4 @@ else:
             else:
                 c += p[j]
                 s[j] = 0
-        print(c, end=" ")
+        print(c, end=' ')

@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         dp = [[-math.inf, -math.inf] for _ in range(n + 1)]
@@ -8,8 +9,7 @@ class Solution:
                 if dp[i][0] < dp[j][1] + sum(stoneValue[i:j]):
                     dp[i][0] = dp[j][1] + sum(stoneValue[i:j])
                     dp[i][1] = dp[j][0]
-        alice, bob = dp[i]
-        # print(dp)
+        (alice, bob) = dp[i]
         if alice > bob:
             return 'Alice'
         elif alice < bob:

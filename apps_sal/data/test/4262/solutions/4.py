@@ -1,5 +1,4 @@
 import itertools
-
 n = int(input())
 p = tuple(map(int, input().split()))
 q = tuple(map(int, input().split()))

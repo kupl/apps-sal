@@ -1,4 +1,5 @@
 class Solution:
+
     def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         words = [frozenset(word) for word in words if len(set(word)) <= 7]
         counter = Counter(words)

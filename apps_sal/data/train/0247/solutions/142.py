@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         n = len(arr)
         left = [float('inf')] * n
@@ -11,8 +12,6 @@ class Solution:
             if current - target in memo:
                 left[k] = min(left[k], k - memo[current - target])
             memo[current] = k
-        # print(left)
-
         right = [float('inf')] * n
         memo = {0: n}
         current = 0
@@ -23,7 +22,6 @@ class Solution:
             if current - target in memo:
                 right[k] = min(right[k], memo[current - target] - k)
             memo[current] = k
-
         ans = float('inf')
         for k in range(n - 1):
             ans = min(ans, left[k] + right[k + 1])

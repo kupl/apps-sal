@@ -1,6 +1,6 @@
 N = int(input())
 Numbers = list(map(int, input().split()))
-Zeros, Fives = 0, 0
+(Zeros, Fives) = (0, 0)
 for Num in Numbers:
     if Num == 0:
         Zeros += 1
@@ -11,4 +11,4 @@ if Zeros == 0:
 elif Fives < 9:
     print(0)
 else:
-    print("5" * (Fives // 9 * 9) + "0" * Zeros)
+    print('5' * (Fives // 9 * 9) + '0' * Zeros)

@@ -1,4 +1,5 @@
-def inpl(): return [int(i) for i in input().split()]
+def inpl():
+    return [int(i) for i in input().split()]
 
 
 def minich(A, plus):
@@ -11,12 +12,11 @@ def minich(A, plus):
             else:
                 ans += back + i + 1
                 back = -1
+        elif back + i > 0:
+            back = back + i
         else:
-            if back + i > 0:
-                back = back + i
-            else:
-                ans += 1 - back - i
-                back = 1
+            ans += 1 - back - i
+            back = 1
         plus = not plus
     return ans
 

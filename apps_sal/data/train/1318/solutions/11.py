@@ -1,5 +1,5 @@
 for t in range(int(input())):
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     if N < K:
         print('Case {}: {}'.format(t + 1, 0))
     else:

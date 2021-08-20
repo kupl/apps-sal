@@ -2,7 +2,6 @@ n = int(input())
 a1 = list(map(int, input().split()))
 a2 = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 pref1 = [0] * n
 for i in range(1, n):
     pref1[i] = pref1[i - 1] + a1[i - 1]
@@ -12,7 +11,6 @@ for i in range(1, n):
 post2 = [sum(a2)] * n
 for i in range(n):
     post2[i] -= pref2[i]
-
 minimum = -1
 for i in range(n):
     for j in range(n):

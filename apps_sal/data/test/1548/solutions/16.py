@@ -1,5 +1,5 @@
 n = int(input())
-a = list(map(int, input().split(" ")))
+a = list(map(int, input().split(' ')))
 a = sorted(a)
 x = 0
 y = 0

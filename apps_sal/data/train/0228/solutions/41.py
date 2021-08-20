@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, s: str, k: int) -> int:
         vowel = set({'a', 'e', 'i', 'o', 'u'})
         curr = 0

@@ -5,8 +5,7 @@ def animals(heads, legs):
     if x < 0 or y < 0:
         return 'No solutions'
     if x + y == 0:
-        return 0, 0
+        return (0, 0)
     if not x.is_integer():
         return 'No solutions'
-
-    return x, y
+    return (x, y)

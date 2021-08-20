@@ -4,7 +4,7 @@ for _ in range(int(input())):
     x = 0
     y = 0
     for z in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         x ^= a
         y ^= b
     print(x, y)

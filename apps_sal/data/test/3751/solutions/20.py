@@ -1,7 +1,5 @@
-
 def main():
     code = str(input())
-
     curr_a = 'a'
     while code:
         if code[0] != curr_a:

@@ -3,7 +3,6 @@ n = int(input())
 a = sorted(list(map(int, input().split())))
 x = a[-1]
 N = a[-1] // 2
-
 a = a[:-1]
 y = bisect.bisect_left(a, N)
 if len(a) <= y:

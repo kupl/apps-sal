@@ -6,5 +6,4 @@ def fact(k):
 
 
 n = int(input())
-
 print(fact(n) // 120)

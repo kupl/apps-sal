@@ -7,6 +7,5 @@ def compare(s1, s2):
         s1 = ''
     if not s2.isalpha():
         s2 = ''
-    s1, s2 = s1.upper(), s2.upper()
-
-    return sum(ord(i) for i in s1) == sum(ord(i) for i in s2)
+    (s1, s2) = (s1.upper(), s2.upper())
+    return sum((ord(i) for i in s1)) == sum((ord(i) for i in s2))

@@ -1,4 +1,4 @@
-n, Sum = list(map(int, input().split()))
+(n, Sum) = list(map(int, input().split()))
 if n == 1 and Sum == 0:
     print(0, 0)
 elif Sum == 0 or Sum > 9 * n:
@@ -6,7 +6,7 @@ elif Sum == 0 or Sum > 9 * n:
 else:
     l = [0] * n
     r = [0] * n
-    b, p = "", ""
+    (b, p) = ('', '')
     s = Sum
     for i in range(n):
         if s >= 9:

@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
 from collections import defaultdict
 import sys
-sys.setrecursionlimit(10**8)
-INF = float("inf")
-MOD = 10**9 + 7
+sys.setrecursionlimit(10 ** 8)
+INF = float('inf')
+MOD = 10 ** 9 + 7
 
 
 class Graph(object):
+
     def __init__(self, N):
         self.N = N
         self.E = defaultdict(list)
@@ -21,7 +21,7 @@ def make_order(g, v):
     last_order = [-1] * g.N
     parent = [-1] * g.N
     size = [1] * g.N
-    counter = {"last": 0}
+    counter = {'last': 0}
 
     def recur(v):
         seen[v] = True
@@ -31,17 +31,15 @@ def make_order(g, v):
             parent[to] = v
             recur(to)
             size[v] += size[to]
-
-        last_order[counter["last"]] = v
-        counter["last"] += 1
-
+        last_order[counter['last']] = v
+        counter['last'] += 1
     recur(v)
-    return last_order, parent, size
+    return (last_order, parent, size)
 
 
 def merge(d: dict, e: dict):
     if len(d) < len(e):
-        d, e = e, d
+        (d, e) = (e, d)
     for k in e:
         d[k] += e[k]
     return d
@@ -52,16 +50,13 @@ c = [x - 1 for x in map(int, input().split())]
 A = [None] * (N - 1)
 B = [None] * (N - 1)
 for i in range(N - 1):
-    A[i], B[i] = list(map(int, input().split()))
-
+    (A[i], B[i]) = list(map(int, input().split()))
 g = Graph(N)
-for a, b in zip(A, B):
+for (a, b) in zip(A, B):
     g.add_edge(a - 1, b - 1)
-
 ans = [0] * N
-
 ret = {}
-last_order, parent, size = make_order(g, 0)
+(last_order, parent, size) = make_order(g, 0)
 for curr in last_order:
     cn = c[curr]
     rrr = defaultdict(int)
@@ -69,20 +64,14 @@ for curr in last_order:
         if dest == parent[curr]:
             continue
         child = ret.pop(dest)
-
         n = size[dest] - child[cn]
         ans[cn] += n * (n + 1) // 2
-
-        # マージ
         rrr = merge(rrr, child)
-
     rrr[cn] = size[curr]
     ret[curr] = rrr
-
-
 tot = N * (N + 1) // 2
 for color in range(N):
     if color != c[0]:
         n = N - ret[0][color]
         ans[color] += n * (n + 1) // 2
-    print((tot - ans[color]))
+    print(tot - ans[color])

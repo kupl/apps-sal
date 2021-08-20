@@ -1,7 +1,7 @@
 N = int(input())
 AB = [list(map(int, input().split())) for i in range(N - 1)]
 c = [[] for i in range(N)]
-for a, b in AB:
+for (a, b) in AB:
     c[a - 1].append(b - 1)
     c[b - 1].append(a - 1)
 v = [1] + [0] * (N - 1)
@@ -18,14 +18,14 @@ while x:
             x.append(n)
             parent[n] = p
             child[p].append(n)
-m = 10**9 + 7
+m = 10 ** 9 + 7
 fac = [1] * (N + 10)
 inv = [1] * (N + 10)
 ifac = [1] * (N + 10)
 for n in range(2, N + 10):
-    fac[n] = (fac[n - 1] * n) % m
+    fac[n] = fac[n - 1] * n % m
     inv[n] = m - inv[m % n] * (m // n) % m
-    ifac[n] = (ifac[n - 1] * inv[n]) % m
+    ifac[n] = ifac[n - 1] * inv[n] % m
 size = [1] * N + [0]
 dp = [1] * N + [0]
 for n in s[::-1]:

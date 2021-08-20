@@ -1,7 +1,8 @@
-def rsum(n): return (n + 1) * (n // 2) + ((n + 1) // 2) if n % 2 else (n + 1) * (n // 2)
+def rsum(n):
+    return (n + 1) * (n // 2) + (n + 1) // 2 if n % 2 else (n + 1) * (n // 2)
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 p = list(map(int, input().split()))
 l = [0] * N
 for i in range(N):

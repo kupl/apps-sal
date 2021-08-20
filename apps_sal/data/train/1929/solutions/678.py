@@ -8,14 +8,11 @@ class StreamChecker:
                 if c not in p:
                     p[c] = {}
                 p = p[c]
-
             p['$'] = True
-
         self.pointers = []
 
     def query(self, letter: str) -> bool:
         self.pointers.append(self.trie)
-
         new_pointers = []
         found = False
         for pointer in self.pointers:
@@ -25,6 +22,3 @@ class StreamChecker:
                     found = True
         self.pointers = new_pointers
         return found
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

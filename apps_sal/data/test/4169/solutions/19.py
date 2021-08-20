@@ -1,10 +1,9 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 price = [[] for i in range(N)]
 for i in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     price[i] = [a, b]
 price.sort()
-# print(price)
 m = 0
 money = 0
 for i in range(N):

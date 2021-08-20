@@ -17,6 +17,6 @@ for i in range(q):
                 pos = False
                 break
     if pos == True:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

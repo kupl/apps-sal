@@ -1,7 +1,7 @@
 import numpy as np
 for _ in range(int(input())):
     ans = np.float('inf')
-    n, m = (int(x) for x in input().split())
+    (n, m) = (int(x) for x in input().split())
     sig = np.zeros((n, m))
     img = np.zeros((3 * n, 3 * m))
     for row in range(n):

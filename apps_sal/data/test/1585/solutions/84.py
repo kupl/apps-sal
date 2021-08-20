@@ -1,9 +1,9 @@
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 
 
 def count(x, y):
     ans = 0
-    while(x <= y):
+    while x <= y:
         x *= 2
         ans += 1
     return ans

@@ -1,6 +1,5 @@
 n = int(input())
 s = [int(i) for i in input().split()]
-
 answer = [0 for i in range(n)]
 p = n
 for j in range(n):

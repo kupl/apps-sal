@@ -1,4 +1,4 @@
-n, m, x, y = map(int, input().split())
+(n, m, x, y) = map(int, input().split())
 xl = list(map(int, input().split()))
 yl = list(map(int, input().split()))
 z = 'War'

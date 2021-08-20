@@ -1,9 +1,8 @@
 def timed_reading(max_length, text):
     count = 0
-    for punctuation_mark in '!.,?\'\"_-)(':
+    for punctuation_mark in '!.,?\'"_-)(':
         text = text.replace(punctuation_mark, '')
-    listed_text = text.split(" ")
-
+    listed_text = text.split(' ')
     for word in listed_text:
         if len(word) <= max_length and len(word) > 0:
             count += 1

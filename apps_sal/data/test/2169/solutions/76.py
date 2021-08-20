@@ -1,4 +1,4 @@
-h, w, d = map(int, input().split())
+(h, w, d) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(h)]
 q = int(input())
 lr = [list(map(int, input().split())) for _ in range(q)]
@@ -9,5 +9,5 @@ for i in range(h):
 c = [0] * (h * w + 1)
 for i in range(d + 1, h * w + 1):
     c[i] = c[i - d] + abs(b[i][0] - b[i - d][0]) + abs(b[i][1] - b[i - d][1])
-for l, r in lr:
+for (l, r) in lr:
     print(c[r] - c[l])

@@ -1,6 +1,6 @@
 def evil(n):
     n = int(n)
-    b = [2**i for i in range(100)]
+    b = [2 ** i for i in range(100)]
     d = b[::-1]
     c = 0
     for i in d:

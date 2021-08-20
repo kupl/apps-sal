@@ -1,5 +1,5 @@
 def can_jump(lst):
-    p, l = lst[0], len(lst)
+    (p, l) = (lst[0], len(lst))
     if l == 1:
         return False
     if p >= l:

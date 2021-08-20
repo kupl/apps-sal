@@ -1,18 +1,15 @@
 def find_inside_point(points, maxx, minx, maxy, miny):
-    # print('inside point')
-    for x, y in points:
+    for (x, y) in points:
         if minx < x < maxx and miny < y < maxy:
             print(x, y)
             return
 
 
 def find_outside_point(points, maxx, minx, maxy, miny):
-    # print('outside point')
-    maxx_points = [(x, y) for x, y in points if x == maxx]
-    minx_points = [(x, y) for x, y in points if x == minx]
-    maxy_points = [(x, y) for x, y in points if y == maxy]
-    miny_points = [(x, y) for x, y in points if y == miny]
-
+    maxx_points = [(x, y) for (x, y) in points if x == maxx]
+    minx_points = [(x, y) for (x, y) in points if x == minx]
+    maxy_points = [(x, y) for (x, y) in points if y == maxy]
+    miny_points = [(x, y) for (x, y) in points if y == miny]
     if len(maxx_points) == 1:
         print(*maxx_points[0])
     elif len(minx_points) == 1:
@@ -24,11 +21,9 @@ def find_outside_point(points, maxx, minx, maxy, miny):
 
 
 def process(n, points):
-    xs, ys = [x for x, _ in points], [y for _, y in points]
-    maxx, minx = max(xs), min(xs)
-    maxy, miny = max(ys), min(ys)
-
-    # count = sum([ 1 for x, y in points if minx < x < maxx and miny < y < maxy])
+    (xs, ys) = ([x for (x, _) in points], [y for (_, y) in points])
+    (maxx, minx) = (max(xs), min(xs))
+    (maxy, miny) = (max(ys), min(ys))
     if maxx - minx == maxy - miny:
         find_inside_point(points, maxx, minx, maxy, miny)
     else:
@@ -38,12 +33,9 @@ def process(n, points):
 def __starting_point():
     n = int(input())
     points = []
-
     for _ in range(4 * n + 1):
-        x, y = [int(z) for z in input().split()]
-        # print(x, y)
+        (x, y) = [int(z) for z in input().split()]
         points.append((x, y))
-
     process(n, points)
 
 

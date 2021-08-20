@@ -1,6 +1,6 @@
 m = input()
 x = ord(m)
 if x >= 97 and x <= 122:
-    print("a")
+    print('a')
 else:
-    print("A")
+    print('A')

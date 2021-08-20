@@ -4,7 +4,7 @@ adj = [[] for i in range(100)]
 for i in range(2 * n):
     adj[arr[i]].append(i)
 res = [0] * (2 * n)
-mul, curr = [], 1
+(mul, curr) = ([], 1)
 x = [0, 0]
 for i in range(10, 100):
     if len(adj[i]) == 1:

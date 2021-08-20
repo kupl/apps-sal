@@ -15,32 +15,31 @@ def mul3(ip):
     qsort(ip)
     sums = sum(ip)
     for i in ip:
-        if (i % 3) == 0:
+        if i % 3 == 0:
             q0.insert(0, i)
-        if (i % 3) == 1:
+        if i % 3 == 1:
             q1.insert(0, i)
-        if (i % 3) == 2:
+        if i % 3 == 2:
             q2.insert(0, i)
-    if(sums % 3 == 1):
-        if(len(q1)):
+    if sums % 3 == 1:
+        if len(q1):
             q1.pop()
-        elif(len(q2) >= 2):
+        elif len(q2) >= 2:
             q2.pop()
             q2.pop()
         else:
             return -1
-    elif(sums % 3 == 2):
-        if(len(q2)):
+    elif sums % 3 == 2:
+        if len(q2):
             q2.pop()
-        elif(len(q1) >= 2):
+        elif len(q1) >= 2:
             q1.pop()
             q1.pop()
         else:
             return -1
-
     q0.extend(q1)
     q0.extend(q2)
-    if(len(q0) <= 0):
+    if len(q0) <= 0:
         return -1
     q0.sort()
     q0.reverse()

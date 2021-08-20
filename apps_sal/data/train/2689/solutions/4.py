@@ -3,4 +3,4 @@ EMPLOYEES_ROLES = {'{} {}'.format(dct['first_name'], dct['last_name']): dct['rol
 
 
 def find_employees_role(name):
-    return EMPLOYEES_ROLES.get(name, "Does not work here!")
+    return EMPLOYEES_ROLES.get(name, 'Does not work here!')

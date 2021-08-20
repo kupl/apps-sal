@@ -1,5 +1,5 @@
 import numpy as np
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = [[0] * 10 for _ in range(m)]
 for i in range(m):
     k = list(map(int, input().split()))
@@ -8,7 +8,7 @@ for i in range(m):
 s = np.asarray(s)
 p = list(map(int, input().split()))
 ans = 0
-for i in range(2**n):
+for i in range(2 ** n):
     binst = format(i, '010b')
     l = list(map(int, list(binst)))
     l = np.asarray(l)

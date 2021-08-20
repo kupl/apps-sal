@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     st = input()
@@ -21,8 +20,8 @@ for _ in range(t):
                 f2 = 1
                 break
         if f1 == 1 and f2 == 1:
-            print("Not")
+            print('Not')
         else:
-            print("Dynamic")
+            print('Dynamic')
     else:
-        print("Dynamic")
+        print('Dynamic')

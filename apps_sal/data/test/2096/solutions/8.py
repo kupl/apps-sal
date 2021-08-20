@@ -1,8 +1,8 @@
 def s():
     input()
-    l = [[]for _ in range(100)]
+    l = [[] for _ in range(100)]
     a = list(map(int, input().split()))
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         l[v].append(i)
     c = 0
     cc = 0

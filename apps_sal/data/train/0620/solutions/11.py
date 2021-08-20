@@ -22,20 +22,12 @@ def _strarr():
 
 
 t = _int()
-
 ans = []
-
 for _ in range(t):
-    n, m = _ints()
+    (n, m) = _ints()
     arr = _intarr()
-
-    # start index of current calculation
     start = -1
-    # end index of current calculation
-    # used for edge cases
     end = -1
-    # index of previous bigger than m
-    # used for calculating start for next
     index = -1
     ans = 0
     for i in range(n):
@@ -43,23 +35,15 @@ for _ in range(t):
             start = i
             if arr[i] > m:
                 index = i
-        else:
-            if arr[i] > m:
-                if index == -1:
-                    index = i
-                elif arr[index] != arr[i]:
-                    end = i
-                    # calculate string length
-                    ans = max(ans, end - start)
-                    #print("{} {} {}".format(start, end, ans))
-                    # start new calculation with next element
-                    # of previos bigger than m
-                    start = index + 1
-                # previous bigger than m
+        elif arr[i] > m:
+            if index == -1:
                 index = i
+            elif arr[index] != arr[i]:
+                end = i
+                ans = max(ans, end - start)
+                start = index + 1
+            index = i
     if end != n - 1:
         end = n
         ans = max(ans, end - start)
-        #print("{} {} {}".format(start, end, ans))
-
     print(ans)

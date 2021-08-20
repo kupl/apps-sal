@@ -1,4 +1,4 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 a = a.upper()
 b = b.upper()
 c = c.upper()

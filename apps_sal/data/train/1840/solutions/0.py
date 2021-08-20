@@ -1,14 +1,8 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def longestZigZag(self, root: TreeNode) -> int:
         if root == None:
             return None
-
         maxlength = 0
         stack = collections.deque()
         if root.left:
@@ -16,7 +10,7 @@ class Solution:
         if root.right:
             stack.append((1, 0, root.right))
         while stack:
-            length, isleft, node = stack.pop()
+            (length, isleft, node) = stack.pop()
             if isleft:
                 if node.right:
                     stack.append((length + 1, 0, node.right))
@@ -29,8 +23,6 @@ class Solution:
                     stack.append((length + 1, 1, node.left))
                 else:
                     maxlength = max(maxlength, length)
-
                 if node.right:
                     stack.append((1, 0, node.right))
-
         return maxlength

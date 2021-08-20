@@ -6,22 +6,47 @@ import itertools
 import math
 import string
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(10**7)
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(10 ** 7)
 INF = float('inf')
-MOD = 10**9 + 7
-def I(): return int(input())
-def F(): return float(input())
-def SS(): return input()
-def LI(): return [int(x) for x in input().split()]
-def LI_(): return [int(x) - 1 for x in input().split()]
-def LF(): return [float(x) for x in input().split()]
-def LSS(): return input().split()
+MOD = 10 ** 9 + 7
 
 
-class UnionFind():
+def I():
+    return int(input())
+
+
+def F():
+    return float(input())
+
+
+def SS():
+    return input()
+
+
+def LI():
+    return [int(x) for x in input().split()]
+
+
+def LI_():
+    return [int(x) - 1 for x in input().split()]
+
+
+def LF():
+    return [float(x) for x in input().split()]
+
+
+def LSS():
+    return input().split()
+
+
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.par = list(range(n))
@@ -44,7 +69,7 @@ class UnionFind():
         if x == y:
             return False
         if self.rank[x] < self.rank[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         if self.rank[x] == self.rank[y]:
             self.rank[x] += 1
         self.par[y] = x
@@ -52,20 +77,17 @@ class UnionFind():
 
 
 def resolve():
-    N, M = LI()
+    (N, M) = LI()
     a = LI()
     b = LI()
-    # 連結成分の合計が等しければ実現可能
     uf = UnionFind(N)
     for _ in range(M):
-        c, d = LI_()
+        (c, d) = LI_()
         uf.merge(c, d)
-
     r = collections.defaultdict(list)
     for i in range(N):
         p = uf.root(i)
         r[p].append(i)
-    # print(r)
     if [sum([a[j] for j in l]) == sum([b[j] for j in l]) for l in list(r.values())].count(False) == 0:
         print('Yes')
     else:

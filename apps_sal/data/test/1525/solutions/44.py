@@ -1,12 +1,9 @@
-H, W, K = map(int, input().split())
-mod = 10**9 + 7
-
+(H, W, K) = map(int, input().split())
+mod = 10 ** 9 + 7
 dp = [0] * W
 dp[0] = 1
-
 OK = [0, 1, 1, 2, 3, 5, 8, 13]
 NG = [0, 1, 2, 3, 5, 8, 13, 21]
-
 if W == 1:
     print(dp[K - 1])
 else:

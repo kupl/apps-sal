@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
         n = len(arr)
         x = [0]
@@ -13,5 +14,4 @@ class Solution:
                 for k in range(j, n):
                     if x[j] ^ x[i] == x[k + 1] ^ x[j]:
                         ans += 1
-
         return ans

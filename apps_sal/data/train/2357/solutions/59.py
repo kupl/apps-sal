@@ -1,12 +1,11 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def binomial_coefficients(n, k):
-    numera = 1  # 分子
-    denomi = 1  # 分母
-
+    numera = 1
+    denomi = 1
     for i in range(k):
         numera *= n - i
         numera %= mod

@@ -2,8 +2,8 @@ import numpy as np
 
 
 class Solution:
-    def countTriplets(self, arr: List[int]) -> int:
 
+    def countTriplets(self, arr: List[int]) -> int:
         cumxor = [arr[0]]
         for k in range(1, len(arr)):
             cumxor.append(cumxor[-1] ^ arr[k])
@@ -14,5 +14,4 @@ class Solution:
             for y in range(x):
                 if cumxor[x] == cumxor[y]:
                     counter += x - y - 1
-
         return counter

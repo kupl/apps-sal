@@ -1,5 +1,4 @@
 def spacey(array):
-
     if len(array) != 0:
         string = [array[0]]
         for index in range(2, len(array) + 1):

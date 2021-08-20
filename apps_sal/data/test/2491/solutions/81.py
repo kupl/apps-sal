@@ -1,17 +1,17 @@
 from collections import defaultdict
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 G = defaultdict(dict)
 for i in range(1, n):
     G[i + 1] = {}
 for i in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     G[a][b] = c
 start_vertex = 1
 
 
 def bellmanford(G, start_vertex):
     if start_vertex not in G:
-        return -1, -1
+        return (-1, -1)
     distances = {}
     parents = {}
     for node in G:
@@ -29,11 +29,11 @@ def bellmanford(G, start_vertex):
         for neighbor in G[pathnode]:
             if distances[neighbor] < distances[pathnode] + G[pathnode][neighbor]:
                 print('inf', flush=True)
-                return -1, -1
+                return (-1, -1)
         pathnode = parents[pathnode]
-    return distances, parents
+    return (distances, parents)
 
 
-distances, parents = bellmanford(G, start_vertex)
+(distances, parents) = bellmanford(G, start_vertex)
 if distances != -1:
     print(distances[n], flush=True)

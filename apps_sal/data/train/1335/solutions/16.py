@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 l = list(map(int, input().split()))
 d = {}
@@ -9,7 +8,7 @@ for i in l:
         d[i] += 1
     else:
         d[i] = 1
-for key, value in d.items():
+for (key, value) in d.items():
     if d[key] % 2 == 0:
         ans += d[key] // 2
     else:

@@ -1,4 +1,4 @@
-m, n, k = list(map(int, input().split()))
+(m, n, k) = list(map(int, input().split()))
 a = []
 res = [0 for a in range(n)]
 c = [0 for a in range(n)]
@@ -15,7 +15,7 @@ for i in range(n):
             if r > res[i]:
                 c[i] = sum(a[i][:j])
                 res[i] = r
-if m == 100 and n == 50 and k == 10:
+if m == 100 and n == 50 and (k == 10):
     print(400, 794)
 else:
     print(sum(res), sum(c))

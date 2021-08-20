@@ -1,9 +1,7 @@
 from collections import Counter
-
 n = int(input())
 a = list(map(int, input().split()))
 c = Counter(a)
-
 res = 0
 cur = 0
 for i in sorted(c.keys()):
@@ -11,5 +9,4 @@ for i in sorted(c.keys()):
     cur -= d
     res += d
     cur += c[i]
-
 print(res)

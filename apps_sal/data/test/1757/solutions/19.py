@@ -7,14 +7,11 @@ for i in range(0, 1000):
     fib.append(b)
     if b > 1000:
         break
-    a, b = b, a
-
-s = ""
-
+    (a, b) = (b, a)
+s = ''
 for i in range(1, n + 1):
     if i in fib:
         s += 'O'
     else:
         s += 'o'
-
 print(s)

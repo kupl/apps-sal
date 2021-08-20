@@ -5,7 +5,7 @@ prod = 1
 cnt = 0
 for item in abcd:
     prod *= item
-flo = prod**(0.5)
+flo = prod ** 0.5
 if int(flo) == flo:
     for i in range(3):
         for j in range(i + 1, 4):
@@ -15,8 +15,8 @@ if int(flo) == flo:
         if cnt == 1:
             break
     if cnt == 1:
-        print("Possible")
+        print('Possible')
     else:
-        print("Impossible")
+        print('Impossible')
 else:
-    print("Impossible")
+    print('Impossible')

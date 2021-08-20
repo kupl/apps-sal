@@ -46,6 +46,6 @@ for i in range(0, t):
     l1[i] = int(input())
 for i in range(0, len(l1)):
     if sum_of_two(l1[i]):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

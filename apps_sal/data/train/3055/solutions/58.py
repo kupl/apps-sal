@@ -1,5 +1,4 @@
 def sum_str(a, b):
-    # happy coding !
     if a.isdigit() == False:
         a = 0
     if b.isdigit() == False:

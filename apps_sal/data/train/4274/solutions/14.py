@@ -1,7 +1,7 @@
 def do_math(s):
     s = s.split()
     for i in s:
-        a = sorted(s, key=lambda s: ([i for i in s if i.isalpha()]))
+        a = sorted(s, key=lambda s: [i for i in s if i.isalpha()])
     n = []
     for j in a:
         b = ''

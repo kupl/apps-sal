@@ -1,6 +1,5 @@
 days = int(input())
 events = [int(_) for _ in input().split()]
-
 rests = 0
 last = 0
 for event in events:
@@ -19,9 +18,8 @@ for event in events:
             last = 0
         else:
             last = 2
-    else:
-        if last == 1:
-            last = 2
-        elif last == 2:
-            last = 1
+    elif last == 1:
+        last = 2
+    elif last == 2:
+        last = 1
 print(rests)

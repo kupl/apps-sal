@@ -10,7 +10,7 @@ def map_string():
     return input().split()
 
 
-n, k, t = map_input()
+(n, k, t) = map_input()
 if t <= k:
     print(t)
 elif t <= n:

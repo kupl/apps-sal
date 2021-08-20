@@ -1,17 +1,16 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 g = [[] for _ in range(n)]
 for i in range(m):
-    p, q = list(map(int, input().split()))
+    (p, q) = list(map(int, input().split()))
     g[p - 1].append(q - 1)
     g[q - 1].append(p - 1)
-
 comp = [-1] * n
 
 
 def shortest(root):
     dist = [-1] * n
     q = [0] * n
-    left, right = 0, 1
+    (left, right) = (0, 1)
     q[left] = root
     dist[root] = 0
     good = True
@@ -29,13 +28,13 @@ def shortest(root):
     for i in dist:
         if far < i:
             far = i
-    return good, far, dist
+    return (good, far, dist)
 
 
 arr = [0] * n
 good = True
 for i in range(n):
-    _, opt, dist = shortest(i)
+    (_, opt, dist) = shortest(i)
     if _ is False:
         good = False
     if comp[i] is -1:
@@ -44,7 +43,6 @@ for i in range(n):
                 comp[j] = i
     if arr[comp[i]] < opt:
         arr[comp[i]] = opt
-
 if good is False:
     print('-1')
 else:

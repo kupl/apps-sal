@@ -1,7 +1,7 @@
 n = int(input())
 a = [int(x) for x in input().split()]
 ans = 0
-while(min(a) < 1001):
+while min(a) < 1001:
     ans += 1
     r = min(a)
     for i in range(len(a)):

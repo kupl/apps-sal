@@ -1,5 +1,5 @@
 from collections import Counter
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ar = list(map(int, input().split()))
 kc = []
 ris = 0

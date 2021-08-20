@@ -7,8 +7,6 @@ for i in range(2, len(a), 1):
         num += 1
     else:
         num = 0
-
     if num > res:
         res = num
-
 print(min(res + 2, n))

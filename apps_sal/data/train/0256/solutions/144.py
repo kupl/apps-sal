@@ -1,12 +1,12 @@
 class Solution:
-    def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        def count(k):
 
+    def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
+        def count(k):
             hours = 0
             for i in range(len(piles)):
                 hours += (piles[i] + k - 1) // k
             return hours
-
         l = 1
         r = 1000000000
         while l < r:

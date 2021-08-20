@@ -13,7 +13,6 @@ def li():
 n = ii()
 a = li()
 b = li()
-
 done = set()
 j = 0
 ans = []

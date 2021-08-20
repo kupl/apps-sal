@@ -1,19 +1,15 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [int(x) for x in input().split()]
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 nega = sorted([a[i] for i in range(n) if a[i] < 0], reverse=True)
-
 v = []
 if k == n:
-    # 全掛け算
     for i in a:
         v.append(i)
 elif k % 2 and n == len(nega):
-    # 答えは負
     for i in range(k):
         v.append(nega[i])
 else:
-    # 答えは正
     a = sorted(a, key=lambda x: abs(x), reverse=True)
     pi = ni = -1
     cnt = 0
@@ -33,10 +29,8 @@ else:
         else:
             v.append(mx)
             v.remove(a[ni])
-
 ans = 1
 for i in range(k):
     ans *= v[i]
     ans %= mod
-
 print(ans)

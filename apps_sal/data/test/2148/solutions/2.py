@@ -1,5 +1,5 @@
 from math import sqrt
-n, r = list(map(int, input().split()))
+(n, r) = list(map(int, input().split()))
 x = list(map(int, input().split()))
 y = []
 for i in range(n):

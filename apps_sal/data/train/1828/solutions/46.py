@@ -1,11 +1,11 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         h = []
         d = defaultdict(int)
         for ele in barcodes:
             d[ele] += 1
-
-        for key, val in d.items():
+        for (key, val) in d.items():
             heappush(h, (-1 * val, key))
         res = []
         prev = ()

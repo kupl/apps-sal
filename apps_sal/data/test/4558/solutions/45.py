@@ -1,5 +1,5 @@
-x, t = list(map(int, input().split()))
+(x, t) = list(map(int, input().split()))
 if x - t >= 0:
-    print((x - t))
+    print(x - t)
 else:
-    print((0))
+    print(0)

@@ -1,12 +1,3 @@
-# cook your dish here
-# 3
-# 2
-# 5 10
-# 2
-# 10 5
-# 2
-# 5 15
-
 for _ in range(int(input())):
     n = int(input())
     coins = list(map(int, input().split()))
@@ -23,15 +14,14 @@ for _ in range(int(input())):
             else:
                 res = False
                 break
+        elif tens > 0:
+            tens -= 1
+        elif fives > 1:
+            fives -= 2
         else:
-            if tens > 0:
-                tens -= 1
-            elif fives > 1:
-                fives -= 2
-            else:
-                res = False
-                break
+            res = False
+            break
     if res == True:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

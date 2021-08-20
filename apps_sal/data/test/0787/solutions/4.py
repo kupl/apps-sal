@@ -7,9 +7,9 @@ for i in range(len(s)):
         t.append(s[i])
         k.append(i)
 if len(t) < n:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     for u in range(n - 1):
         print(s[k[0]:k[1]])
         k.pop(0)

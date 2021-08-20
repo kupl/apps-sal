@@ -2,7 +2,7 @@ from collections import defaultdict
 import sys
 input = sys.stdin.readline
 mod = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
@@ -10,11 +10,10 @@ def getlist():
 
 
 def main():
-    N, A, B = getlist()
+    (N, A, B) = getlist()
     if 1 + N < A + B or N > A * B:
         print(-1)
         return
-
     ans = [i for i in range(N, N - B, -1)]
     N2 = N - B
     A2 = A - 1
@@ -27,17 +26,13 @@ def main():
     B.append(0)
     for i in range(q):
         B[i] += 1
-    # print(B)
     Bsum = [0] * A2
     for i in range(A2):
         Bsum[i] = Bsum[i - 1] + B[i]
-    # print(Bsum)
-
     pre = []
     for i in range(A2):
         for j in range(B[i]):
             pre.append(Bsum[i] - j)
-    # print(pre)
     answer = pre + ans
     print(*answer)
 

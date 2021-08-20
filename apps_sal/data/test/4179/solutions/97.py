@@ -1,4 +1,4 @@
-N, M, C = map(int, input().split())
+(N, M, C) = map(int, input().split())
 B = list(map(int, input().split()))
 A = [list(map(int, input().split())) for i in range(N)]
 S = 0

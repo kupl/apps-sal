@@ -1,6 +1,4 @@
-# ABC062 B:PictureFrame
-
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 pic = []
 for _ in range(H):
     a = input()

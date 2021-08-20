@@ -4,6 +4,6 @@ def solution(string, markers):
     for line in lst:
         for m in markers:
             if m in line:
-                line = line[: line.find(m)].strip()
+                line = line[:line.find(m)].strip()
         ans.append(line)
     return '\n'.join(ans)

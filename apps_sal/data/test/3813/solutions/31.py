@@ -1,12 +1,11 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**7)
-
-INF = 2**30
+sys.setrecursionlimit(10 ** 7)
+INF = 2 ** 30
 n = int(input())
 P = list(map(int, input().split()))
 T = [[] for _ in range(n)]
-for i, p in enumerate(P, 1):
+for (i, p) in enumerate(P, 1):
     T[p - 1].append(i)
 X = tuple(map(int, input().split()))
 D = [-1] * n
@@ -35,6 +34,6 @@ def dfs(v):
 
 ans = dfs(0)
 if ans == INF:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')
 else:
-    print("POSSIBLE")
+    print('POSSIBLE')

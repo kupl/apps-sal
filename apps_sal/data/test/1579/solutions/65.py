@@ -11,7 +11,7 @@ class UnionFind:
         return self.par[x]
 
     def union(self, x, y):
-        x, y = self.find(x), self.find(y)
+        (x, y) = (self.find(x), self.find(y))
         if x == y:
             return False
         elif self.rank[x] < self.rank[y]:
@@ -38,7 +38,7 @@ nx = [0 for i in range(200020)]
 ny = [0 for i in range(200020)]
 uf = UnionFind(200020)
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     uf.union(x, y + 100010)
 ans = 0
 for i in range(100010):

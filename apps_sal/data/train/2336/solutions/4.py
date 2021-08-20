@@ -5,8 +5,7 @@ c = 0
 for i in range(1, n + 1):
     if a[i - 1] == i:
         c += 1
-
 if c >= n // 1000:
-    print("Petr")
+    print('Petr')
 else:
-    print("Um_nik")
+    print('Um_nik')

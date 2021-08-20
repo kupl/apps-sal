@@ -1,10 +1,7 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 l = [int(i) for i in input().split()]
-
 l.sort()
 l = l[n // 2:]
-
-
 while k != 0:
     mini = l[0]
     compte = l.count(mini)
@@ -24,5 +21,4 @@ while k != 0:
         l[0] += reste
         k = 0
         break
-
 print(l[0])

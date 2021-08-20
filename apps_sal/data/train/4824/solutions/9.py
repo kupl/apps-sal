@@ -4,9 +4,7 @@ def get_min_max(seq):
     for number in seq:
         if number > max:
             max = number
-
     for number in seq:
         if number < min:
             min = number
-
     return (min, max)

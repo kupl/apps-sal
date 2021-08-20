@@ -3,7 +3,7 @@ def getsum(N):
         return 9
     if N == 2:
         return 99
-    s = ""
+    s = ''
     for i in range(0, N):
         s = s + '5'
     s = int(s)

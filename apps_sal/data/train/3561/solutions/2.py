@@ -11,4 +11,4 @@ def around_fib(n):
     while 25 * k < len(max1):
         chunks.append(max1[25 * k:25 * (k + 1)])
         k += 1
-    return "Last chunk {}; Max is {} for digit {}".format(chunks[-1], max1_count[0], max1_count[1])
+    return 'Last chunk {}; Max is {} for digit {}'.format(chunks[-1], max1_count[0], max1_count[1])

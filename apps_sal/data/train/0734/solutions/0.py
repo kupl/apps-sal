@@ -1,20 +1,16 @@
-# cook your dish here
 from collections import Counter, defaultdict
-
 for i in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
     coun = Counter(arr)
     check = True
-
     for j in coun:
         if coun[j] > n // 2:
-            print("No")
+            print('No')
             check = False
             break
-
     if check == True:
-        print("Yes")
+        print('Yes')
         narr = sorted(arr)
         dic = defaultdict()
         j = 0

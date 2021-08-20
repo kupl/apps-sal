@@ -3,7 +3,7 @@ a = '"'
 b = '"'
 for t in s:
     for word in t.split(';'):
-        if word.isdigit() and (word[0] != '0' or word == "0"):
+        if word.isdigit() and (word[0] != '0' or word == '0'):
             a = a + word + ','
         else:
             b = b + word + ','

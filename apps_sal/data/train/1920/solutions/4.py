@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class TimeMap:
+
     def __init__(self):
         self.d = defaultdict(list)
 
@@ -9,7 +10,7 @@ class TimeMap:
         self.d[key].append([timestamp, value])
 
     def get(self, key, timestamp):
-        start, end = 0, len(self.d[key]) - 1
+        (start, end) = (0, len(self.d[key]) - 1)
         while start + 1 < end:
             mid = start + (end - start) // 2
             if self.d[key][mid][0] == timestamp:

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 from operator import itemgetter
 
@@ -7,17 +6,16 @@ def explore_floor(floor, light, from_, to, is_last_floor):
     """from_, to is one of 'l' or 'r'"""
     if from_ != to:
         return len(floor) - 1
+    elif light == 0:
+        return 0
     else:
-        if light == 0:
-            return 0
+        mul = 1 if is_last_floor else 2
+        if from_ == 'l':
+            indx = floor.rindex('1')
+            return indx * mul
         else:
-            mul = 1 if is_last_floor else 2
-            if from_ == 'l':
-                indx = floor.rindex('1')
-                return indx * mul
-            else:
-                indx = floor.index('1')
-                return (len(floor) - indx - 1) * mul
+            indx = floor.index('1')
+            return (len(floor) - indx - 1) * mul
 
 
 def run_dp(n, m, floors, lights):
@@ -46,20 +44,17 @@ def get_virtual_max_floor(lights):
 
 
 def main():
-    n, m = list(map(int, sys.stdin.readline().split()))
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     inp = sys.stdin.read().rstrip()
-    floors = list(reversed(inp.split("\n")))
+    floors = list(reversed(inp.split('\n')))
     assert len(floors) == n
     lights = list([sum(map(int, floor)) for floor in floors])
     assert len(lights) == n
     virtual_n = get_virtual_max_floor(lights)
-    # sys.stderr.write("{}\n".format(lights))
-    # sys.stderr.write("{}\n".format(virtual_n))
     if virtual_n == 0:
         print(0)
         return
     dp_table = run_dp(virtual_n, m, floors, lights)
-    # sys.stderr.write("{}\n".format(dp_table))
     print(min([dp_table[indx][virtual_n] for indx in range(4)]))
 
 

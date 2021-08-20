@@ -1,5 +1,6 @@
 class Solution:
-    def primeFactors(self, n):  # Prime factor decomposition
+
+    def primeFactors(self, n):
         out = set()
         while n % 2 == 0:
             out.add(2)
@@ -20,29 +21,22 @@ class Solution:
 
         def find(target):
             curr = target
-
             while parents[curr] != curr:
                 curr = parents[curr]
-
             return curr
 
         def union(a, b):
             aParent = find(a)
             bParent = find(b)
-
             if aParent == bParent:
                 return
-
             size[aParent] += size[bParent]
             size[bParent] = 0
             parents[bParent] = aParent
-
-        for idx, num in enumerate(A):
+        for (idx, num) in enumerate(A):
             factors = self.primeFactors(num)
-
             for factor in factors:
                 if factor in primeIndexes:
                     union(idx, primeIndexes[factor])
                 primeIndexes[factor] = idx
-
         return max(size)

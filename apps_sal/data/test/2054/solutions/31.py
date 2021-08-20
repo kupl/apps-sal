@@ -6,5 +6,5 @@ def inp():
 
 
 for _ in range(int(inp())):
-    a, b = map(int, inp().split())
+    (a, b) = map(int, inp().split())
     print(min(a, b, (a + b) // 3))

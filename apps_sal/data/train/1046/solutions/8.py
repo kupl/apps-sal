@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     i = 1
     limak = bob = 0
     while True:

@@ -1,12 +1,11 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    m = 10**5
+    m = 10 ** 5
     l = [0] * m
     for i in range(n):
         if a[i] >= 1:

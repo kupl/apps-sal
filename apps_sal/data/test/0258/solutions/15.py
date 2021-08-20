@@ -16,14 +16,12 @@ for i in range(int(n / 2), n):
         l += int(s[i])
 if (fer + ler) % 2:
     print('Monocarp')
-else:
-    if f < l:
-        if l - f == 9 * ((fer - ler) / 2):
-            print('Bicarp')
-        else:
-            print('Monocarp')
+elif f < l:
+    if l - f == 9 * ((fer - ler) / 2):
+        print('Bicarp')
     else:
-        if f - l == 9 * ((ler - fer) / 2):
-            print('Bicarp')
-        else:
-            print('Monocarp')
+        print('Monocarp')
+elif f - l == 9 * ((ler - fer) / 2):
+    print('Bicarp')
+else:
+    print('Monocarp')

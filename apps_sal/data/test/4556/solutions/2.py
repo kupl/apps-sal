@@ -1,1 +1,1 @@
-print(('A' + input().split()[1][0] + 'C'))
+print('A' + input().split()[1][0] + 'C')

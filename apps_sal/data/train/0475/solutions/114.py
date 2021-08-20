@@ -1,5 +1,5 @@
-
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         subarr = []
         modu = pow(10, 9) + 7
@@ -13,5 +13,5 @@ class Solution:
         for i in range(left - 1, right):
             output += subarr[i]
             output = output % modu
-            print((subarr[i]))
+            print(subarr[i])
         return output

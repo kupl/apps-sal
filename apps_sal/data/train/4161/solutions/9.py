@@ -1,7 +1,7 @@
 def rat_at(n):
     if n == 0:
         return (1, 1)
-    a, b = rat_at(~-n >> 1)
+    (a, b) = rat_at(~-n >> 1)
     return (a, a + b) if n % 2 else (a + b, b)
 
 

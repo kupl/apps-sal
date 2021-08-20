@@ -3,6 +3,7 @@ import math
 
 
 class UF:
+
     def __init__(self, N):
         self.parent = list(range(N))
         self.size = [1] * N
@@ -13,9 +14,9 @@ class UF:
         return self.parent[x]
 
     def union(self, x, y):
-        px, py = self.find(x), self.find(y)
+        (px, py) = (self.find(x), self.find(y))
         if px != py:
-            size_x, size_y = self.size[px], self.size[py]
+            (size_x, size_y) = (self.size[px], self.size[py])
             if size_x < size_y:
                 self.parent[px] = py
                 self.size[py] += size_x
@@ -25,10 +26,11 @@ class UF:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         factor_to_num_index = collections.defaultdict(int)
         uf = UF(len(A))
-        for ind, num in enumerate(A):
+        for (ind, num) in enumerate(A):
             for factor in range(2, int(math.sqrt(num) + 1)):
                 if num % factor == 0:
                     for fac in (factor, num // factor):

@@ -15,7 +15,8 @@ def pf(n):
     return primes
 
 
-def reduce(n, p): return 0 if n < p else n // p + reduce(n // p, p)
+def reduce(n, p):
+    return 0 if n < p else n // p + reduce(n // p, p)
 
 
 def trailing_zeros(num, base):

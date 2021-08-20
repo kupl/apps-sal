@@ -1,9 +1,9 @@
 from heapq import heappush, heappop
 try:
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     normal = []
     exe = []
-    for i in range(0, (n + m)):
+    for i in range(0, n + m):
         get = int(input())
         if get == -1:
             c = -heappop(normal)

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDistance(self, pos: List[int], m: int) -> int:
         pos.sort()
 
@@ -12,8 +13,7 @@ class Solution:
                 if not m:
                     return True
             return False
-
-        left, right = 2, 10**9
+        (left, right) = (2, 10 ** 9)
         while left <= right:
             mid = left + (right - left) // 2
             if check(mid, m):

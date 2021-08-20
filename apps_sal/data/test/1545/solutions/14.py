@@ -2,11 +2,11 @@ n = int(input())
 s = input()
 alf = list(map(int, input().split()))
 d = [0 for i in range(n + 1)]
-div = int(10**9 + 7)
+div = int(10 ** 9 + 7)
 d[0] = 1
 maxlen = -1
 a = ord('a')
-INF = int(10**10)
+INF = int(10 ** 10)
 md = [INF for i in range(n + 1)]
 md[0] = 0
 for i in range(1, n + 1):

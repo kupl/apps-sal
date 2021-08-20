@@ -1,13 +1,9 @@
 n = int(input())
-positions = [int(x) for x in input().split(" ")]
-
+positions = [int(x) for x in input().split(' ')]
 output = '1 '
-
 pointer_to_right_wall = n - 1
-
 coins = [False for i in range(len(positions))]
 filled = 1
-
 for i in range(len(positions)):
     coins[positions[i] - 1] = True
     if positions[i] - 1 == pointer_to_right_wall:
@@ -22,5 +18,4 @@ for i in range(len(positions)):
     else:
         filled += 1
     output += str(filled) + ' '
-
 print(output[:-1])

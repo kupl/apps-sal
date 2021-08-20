@@ -12,26 +12,25 @@ for i in range(int(input())):
         print(1)
         lll = [1] * n
         print(*lll)
+    elif n % 2 == 0:
+        lll = [1, 2] * (n // 2)
+        print(2)
+        print(*lll)
     else:
-        if n % 2 == 0:
+        k = pos(lst)
+        if k != -2:
             lll = [1, 2] * (n // 2)
-            print(2)
-            print(*lll)
-        else:
-            k = pos(lst)
-            if k != -2:
-                lll = [1, 2] * (n // 2)
-                if k == -1:
-                    print(2)
-                    print(*lll, 1)
-                else:
-                    if lll[k] == 1:
-                        lll[k] = '1 1'
-                    else:
-                        lll[k] = '2 2'
-                    print(2)
-                    print(*lll)
+            if k == -1:
+                print(2)
+                print(*lll, 1)
             else:
-                print(3)
-                lll = [1, 2] * (n // 2)
-                print(*lll, 3)
+                if lll[k] == 1:
+                    lll[k] = '1 1'
+                else:
+                    lll[k] = '2 2'
+                print(2)
+                print(*lll)
+        else:
+            print(3)
+            lll = [1, 2] * (n // 2)
+            print(*lll, 3)

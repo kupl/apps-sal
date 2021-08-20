@@ -7,13 +7,12 @@ def main():
             count += 4
         elif a[i - 1] == 2:
             count += 3
+        elif i - 2 >= 0 and a[i - 2] == 3 and (a[i] == 2):
+            count += 2
+        elif a[i] == 2:
+            count += 3
         else:
-            if i - 2 >= 0 and a[i - 2] == 3 and a[i] == 2:
-                count += 2
-            elif a[i] == 2:
-                count += 3
-            else:
-                count += 4
+            count += 4
     return count
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def shiftingLetters(self, S: str, shifts: List[int]) -> str:
         char = 'abcdefghijklmnopqrstuvwxyz'
         s = 0

@@ -6,5 +6,4 @@ for i in range(N):
     while j < N and S[i:j] in S[j:]:
         ans = max(ans, j - i)
         j += 1
-
 print(ans)

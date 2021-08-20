@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         dis = [math.inf for i in range(n)]
@@ -7,8 +8,8 @@ class Solution:
         res = 0
         pt = points[0]
         for i in range(n - 1):
-            for idx, item in enumerate(points):
-                if(idx in myset):
+            for (idx, item) in enumerate(points):
+                if idx in myset:
                     continue
                 else:
                     dis[idx] = min(dis[idx], abs(pt[0] - item[0]) + abs(pt[1] - item[1]))

@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(6500)
 
 
@@ -41,16 +40,13 @@ def same(a, b):
         return False
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 p = list(map(int, input().split()))
-
 d = [-1] * N
-
 for i in range(M):
-    x, y = map(int, input().split())
-    x, y = x - 1, y - 1
+    (x, y) = map(int, input().split())
+    (x, y) = (x - 1, y - 1)
     union(x, y)
-
 q = [-1] * N
 for i in range(N):
     q[p[i] - 1] = i

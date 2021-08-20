@@ -11,7 +11,6 @@ def gcd(a, b):
 
 
 gcds = {0: 0}
-
 for i in range(n):
     adds = {}
     for g in list(gcds.keys()):
@@ -28,7 +27,6 @@ for i in range(n):
             if t and t > u + c[i] or t is None:
                 adds[x] = u + c[i]
     gcds.update(adds)
-
 if gcds.get(1):
     print(gcds[1])
 else:

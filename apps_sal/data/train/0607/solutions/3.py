@@ -9,11 +9,9 @@ def solve(arr, n):
         if g == 1:
             g = 0
             count += 1
-
     if g > 1 and count == 0:
         print(-1)
         return
-
     print(count)
 
 

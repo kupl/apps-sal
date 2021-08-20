@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -13,12 +12,12 @@ for _ in range(test):
     if n == 1:
         a.append(1)
     if isPowerOfTwo(n) and n != 1:
-        print("-1")
-    if n >= 3 and not (isPowerOfTwo(n)):
+        print('-1')
+    if n >= 3 and (not isPowerOfTwo(n)):
         a.append(2)
         a.append(3)
         a.append(1)
-    if n > 3 and not (isPowerOfTwo(n)):
+    if n > 3 and (not isPowerOfTwo(n)):
         i = 4
         while i <= n:
             if isPowerOfTwo(i):

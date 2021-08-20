@@ -1,7 +1,7 @@
 import numpy as np
 S = input()
 M = 13
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 dp = np.zeros(M, dtype=np.int64)
 dp[0] = 1
 idx = np.zeros(M, dtype=np.int8)
@@ -15,4 +15,4 @@ for s in S:
         dp = np.convolve(ndp, window, mode='valid') % MOD
     else:
         dp = np.roll(dp[idx], int(s))
-print((dp[5] % MOD))
+print(dp[5] % MOD)

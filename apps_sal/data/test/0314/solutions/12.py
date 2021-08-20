@@ -1,7 +1,6 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     candies = list(map(int, input().split()))
-
     rest = 0
     given = 0
     for i in range(n):
@@ -12,11 +11,9 @@ def main():
         else:
             given += rest
             rest = 0
-
         if given >= k:
             print(i + 1)
             break
-
         if i == n - 1:
             print(-1)
 

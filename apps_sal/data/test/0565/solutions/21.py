@@ -1,4 +1,4 @@
-y, b, r = list(map(int, input().split()))
+(y, b, r) = list(map(int, input().split()))
 if b > y + 1:
     b = y + 1
 else:

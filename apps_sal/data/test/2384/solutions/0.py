@@ -1,10 +1,12 @@
 def main():
     import sys
     import numpy as np
-    def input(): return sys.stdin.readline().rstrip()
+
+    def input():
+        return sys.stdin.readline().rstrip()
     n = int(input())
     a = list(map(int, input().split()))
-    inf = 1e18
+    inf = 1e+18
     k = n % 2 + 1
     dp = np.full((n + 1, k + 2), -inf, dtype=int)
     dp[0, 0] = 0

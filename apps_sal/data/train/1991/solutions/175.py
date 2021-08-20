@@ -1,6 +1,9 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        def fuelReduce(x, y): return abs(x - y)
+
+        def fuelReduce(x, y):
+            return abs(x - y)
 
         @lru_cache(None)
         def dfs(city, fuel):

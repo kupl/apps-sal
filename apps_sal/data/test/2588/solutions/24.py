@@ -1,6 +1,7 @@
 def main():
+
     def solve():
-        n, a, b = map(int, input().split())
+        (n, a, b) = map(int, input().split())
         ss = input()
         cost = 0
         for i in range(n):
@@ -19,7 +20,6 @@ def main():
                 last = i
         cost += (n + 1 - last) * (a + b) + b
         print(cost)
-
     q = int(input())
     for _ in range(q):
         solve()

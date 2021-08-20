@@ -1,4 +1,5 @@
 class TreeNode:
+
     def __init__(self, val='/'):
         self.val = val
         self.children = {}
@@ -22,6 +23,7 @@ class TreeNode:
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder = sorted(folder)
         ans = []

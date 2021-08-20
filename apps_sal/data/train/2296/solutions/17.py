@@ -2,6 +2,7 @@ from string import ascii_lowercase
 
 
 class Bit:
+
     def __init__(self, n):
         self.size = n
         self.tree = [0] * (n + 1)
@@ -21,16 +22,15 @@ class Bit:
 
 def solve(s):
     indices = {c: [] for c in ascii_lowercase}
-    for i, c in enumerate(s):
+    for (i, c) in enumerate(s):
         indices[c].append(i)
-
     n = len(s)
     center = n // 2
     bubbles = [-1] * n
     odd_flag = False
-    lefts, rights = [], []
+    (lefts, rights) = ([], [])
     used = [False] * n
-    for c, ids in list(indices.items()):
+    for (c, ids) in list(indices.items()):
         cnt = len(ids)
         if cnt & 1:
             if odd_flag:
@@ -39,7 +39,7 @@ def solve(s):
             bubbles[ids[cnt // 2]] = center + 1
             used[center] = True
         for i in range(cnt // 2):
-            li, ri = ids[i], ids[-i - 1]
+            (li, ri) = (ids[i], ids[-i - 1])
             if li < center:
                 lefts.append((li, ri))
                 used[n - li - 1] = True
@@ -48,23 +48,19 @@ def solve(s):
     lefts.sort()
     rights.sort()
     r_itr = iter(rights)
-    # print(lefts)
-    # print(rights)
-    for i, (li, ri) in enumerate(lefts):
+    for (i, (li, ri)) in enumerate(lefts):
         bubbles[li] = i + 1
         bubbles[ri] = n - i
     for i in range(len(lefts), center):
-        li, ri = next(r_itr)
+        (li, ri) = next(r_itr)
         bubbles[li] = i + 1
         bubbles[ri] = n - i
-    # print(bubbles)
-
     ans = 0
     bit = Bit(n)
-    for i, m in enumerate(bubbles):
+    for (i, m) in enumerate(bubbles):
         ans += i - bit.sum(m)
         bit.add(m, 1)
     return ans
 
 
-print((solve(input())))
+print(solve(input()))

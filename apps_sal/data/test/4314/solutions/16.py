@@ -1,5 +1,5 @@
 import copy
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 a = [input() for i in range(h)]
 index = 1
 ans = copy.copy(a)
@@ -21,6 +21,6 @@ for i in range(w):
     if bool:
         key -= 1
         for k in range(h - (1 - index)):
-            ans_1[k] = ans_1[k][:(i + key)] + ans_1[k][(i + key + 1):]
+            ans_1[k] = ans_1[k][:i + key] + ans_1[k][i + key + 1:]
 for i in range(len(ans_1)):
     print(ans_1[i])

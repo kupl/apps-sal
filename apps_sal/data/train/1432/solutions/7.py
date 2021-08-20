@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     T = int(input())
     nsw = []
@@ -15,9 +14,8 @@ try:
         ans = 0
         while count > 0:
             ans += 1
-            count = count - (2 * (N - 1))
+            count = count - 2 * (N - 1)
             N = N - 1
-
         nsw += [ans]
     print('\n'.join(map(str, nsw)))
 except EOFError:

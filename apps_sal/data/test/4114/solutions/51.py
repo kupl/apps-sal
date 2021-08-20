@@ -1,11 +1,10 @@
 n = int(input())
 xyh = []
 for i in range(n):
-    x, y, h = map(int, input().split())
+    (x, y, h) = map(int, input().split())
     xyh.append([h, x, y])
 xyh.sort(reverse=True)
 ans = 0
-
 for cx in range(101):
     for cy in range(101):
         for N in range(n):

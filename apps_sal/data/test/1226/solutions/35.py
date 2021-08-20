@@ -1,8 +1,6 @@
-k = 2 * 10**5
-mod = 10**9 + 7
-
-n, a, b = map(int, input().split())
-
+k = 2 * 10 ** 5
+mod = 10 ** 9 + 7
+(n, a, b) = map(int, input().split())
 modinv_table = [-1] * (k + 1)
 for i in range(1, k + 1):
     modinv_table[i] = pow(i, -1, mod)

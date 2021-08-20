@@ -1,6 +1,5 @@
 import sys
 3
-# -*- coding: utf-8 -*-
 
 
 def rl(proc=None):
@@ -18,7 +17,7 @@ def srl(proc=None):
 
 
 def main():
-    n, k = srl(int)
+    (n, k) = srl(int)
     A = srl(int)
     B = srl(int)
     spare = []

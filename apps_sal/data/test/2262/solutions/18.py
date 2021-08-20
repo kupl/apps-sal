@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     ss = [i for i in input().split(' ')]
-
     nss = []
     for i in range(len(ss)):
         arr = []
@@ -10,10 +9,8 @@ def main():
                 arr.append(c)
         arr.sort()
         ns = ''.join(arr)
-
         if not ns in nss:
             nss.append(ns)
-
     print(len(nss))
 
 

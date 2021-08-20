@@ -9,7 +9,6 @@ for i in s[:n // 2]:
         p1 += 1
     else:
         s1 += int(i)
-
 for i in s[n // 2:]:
     if i == '?':
         p2 += 1
@@ -27,7 +26,7 @@ if p1 > p2:
 else:
     p = abs(p1 - p2)
     ss = abs(s1 - s2)
-    if ss == (p // 2) * 9:
+    if ss == p // 2 * 9:
         print('Bicarp')
     else:
         print('Monocarp')

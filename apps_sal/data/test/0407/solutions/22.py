@@ -6,7 +6,7 @@ for i in range(n):
     s = input()
     firstLetter.append(s[0])
     for j in range(len(s)):
-        mapping[alphabets.index(s[j])] += 10**(len(s) - j - 1)
+        mapping[alphabets.index(s[j])] += 10 ** (len(s) - j - 1)
 flow = 1
 catchZero = 0
 ans = 0

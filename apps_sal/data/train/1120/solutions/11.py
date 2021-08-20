@@ -1,6 +1,6 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
-    r, c = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
+    (r, c) = list(map(int, input().split()))
     n -= 1
     m -= 1
     s1 = m - r + n - c

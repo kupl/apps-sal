@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         interval = defaultdict(int)
         Qs = []
@@ -15,18 +16,14 @@ class Solution:
                 heapq.heappop(Qe)
                 count -= 1
             interval[i] = count
-        # print(interval)
         keys = sorted(interval, key=lambda x: interval[x], reverse=True)
-        # print(keys)
         values = sorted(nums, reverse=True)
         finala = [0 for i in range(len(nums))]
         j = 0
         for i in keys:
             finala[i] = values[j]
             j += 1
-        # print(finala)
-        # print(keys)
         fsum = 0
         for i in keys:
             fsum += finala[i] * interval[i]
-        return fsum % (10**9 + 7)
+        return fsum % (10 ** 9 + 7)

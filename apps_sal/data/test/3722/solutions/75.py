@@ -1,15 +1,26 @@
-#from collections import deque,defaultdict
-def printn(x): return print(x, end='')
-def inn(): return int(input())
-def inl(): return list(map(int, input().split()))
-def inm(): return map(int, input().split())
-def ins(): return input().strip()
+def printn(x):
+    return print(x, end='')
 
 
-DBG = True  # and False
-BIG = 10**18
-R = 10**9 + 7
-#R = 998244353
+def inn():
+    return int(input())
+
+
+def inl():
+    return list(map(int, input().split()))
+
+
+def inm():
+    return map(int, input().split())
+
+
+def ins():
+    return input().strip()
+
+
+DBG = True
+BIG = 10 ** 18
+R = 10 ** 9 + 7
 
 
 def ddprint(x):
@@ -22,10 +33,9 @@ aa = ins()
 ab = ins()
 ba = ins()
 bb = ins()
-if ab == 'A' and aa == 'A' or ab == 'B' and bb == 'B':
+if ab == 'A' and aa == 'A' or (ab == 'B' and bb == 'B'):
     print(1)
-elif ab == 'A' and aa == 'B' and ba == 'A' or \
-        ab == 'B' and bb == 'A' and ba == 'B':
+elif ab == 'A' and aa == 'B' and (ba == 'A') or (ab == 'B' and bb == 'A' and (ba == 'B')):
     d = [0] * (n + 1)
     d[0] = 1
     for i in range(2, n + 1):
@@ -39,6 +49,5 @@ else:
     for i in range(2, n - 1):
         for j in range(i - 1):
             d[i] = (d[i] + d[j] * (i - j - 1)) % R
-        #ddprint(f"{i=} {x=} {d[i]=}")
         x = (x + d[i]) % R
     print(x)

@@ -3,7 +3,7 @@ n = int(input())
 a = deque([int(x) for x in input().split()])
 cur = -1
 ans = ''
-while (cur < a[0] or cur < a[-1]):
+while cur < a[0] or cur < a[-1]:
     if a[0] < a[-1]:
         if cur < a[0]:
             ans += 'L'
@@ -13,7 +13,6 @@ while (cur < a[0] or cur < a[-1]):
             ans += 'R'
             cur = a[-1]
             a.pop()
-
     elif a[0] > a[-1]:
         if cur < a[-1]:
             ans += 'R'
@@ -50,9 +49,7 @@ while (cur < a[0] or cur < a[-1]):
             for i in range(count2):
                 ans += 'R'
             break
-
     if len(a) == 0:
         break
-
 print(len(ans))
 print(ans)

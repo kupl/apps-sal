@@ -15,7 +15,7 @@ def reverse_it(data):
         return data
 
 
-reverse_it("Hello")
+reverse_it('Hello')
 reverse_it(12345)
 reverse_it(1231.123213)
 reverse_it([1, 2, 3, 4])

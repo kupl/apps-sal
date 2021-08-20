@@ -1,10 +1,9 @@
 import collections
-
 s = input()
 t = input()
 s_len = len(s)
 s_idx = dict([])
-for i, key in enumerate(s):
+for (i, key) in enumerate(s):
     try:
         s_idx[key].append(i + 1)
     except KeyError:

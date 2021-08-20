@@ -1,4 +1,4 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 par = [i for i in range(N + 1)]
 size = [1 for _ in range(N + 1)]
 
@@ -22,9 +22,8 @@ def unite(x, y):
 
 
 for i in range(M):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     unite(x, y)
-
 Ans = 0
 for j in size[1:]:
     if j != 0:

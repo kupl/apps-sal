@@ -1,5 +1,3 @@
-
-
 n = int(input())
 x = [int(i) for i in input().split()]
 otv = []
@@ -20,4 +18,4 @@ while len(otv) >= 2 and otv[len(otv) - 1] == otv[len(otv) - 2]:
     otv[len(otv) - 1] += 1
 print(len(otv))
 for i in otv:
-    print(i, end=" ")
+    print(i, end=' ')

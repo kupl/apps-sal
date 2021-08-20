@@ -7,9 +7,8 @@ for i in ip:
         odd = 1
     count += i
 if count % 2 == 1:
-    print("First")
+    print('First')
+elif odd == 1:
+    print('First')
 else:
-    if odd == 1:
-        print("First")
-    else:
-        print("Second")
+    print('Second')

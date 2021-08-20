@@ -1,6 +1,6 @@
-n, m, i, j, a, b = map(int, input().split())
-x, y, t = [i - 1, n - i], [j - 1, m - j], []
-if all(i < a for i in x) or all(j < b for j in y):
+(n, m, i, j, a, b) = map(int, input().split())
+(x, y, t) = ([i - 1, n - i], [j - 1, m - j], [])
+if all((i < a for i in x)) or all((j < b for j in y)):
     if 0 in x and 0 in y:
         t = [0]
 else:

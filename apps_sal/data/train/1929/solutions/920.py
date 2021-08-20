@@ -2,7 +2,9 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.waitlist = []
-        def T(): return collections.defaultdict(T)
+
+        def T():
+            return collections.defaultdict(T)
         self.trie = T()
         for word in words:
             temp_dict = self.trie
@@ -18,9 +20,4 @@ class StreamChecker:
             if letter in item:
                 waitlist.append(item[letter])
         self.waitlist = waitlist
-        return any('#' in item for item in self.waitlist)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)
+        return any(('#' in item for item in self.waitlist))

@@ -1,7 +1,5 @@
 from collections import Counter
-
 t = int(input())
-
 for _ in range(t):
     s = input()
     best = len(s) - max(Counter(s).values())
@@ -13,7 +11,5 @@ for _ in range(t):
                 longest[ci][j] += 1
             if longest[j][ci] % 2:
                 longest[j][ci] += 1
-
-    # print(longest)
-    best = min(best, len(s) - max(longest[i][j] - (longest[i][j] % 2) for i in range(10) for j in range(10) if i != j))
+    best = min(best, len(s) - max((longest[i][j] - longest[i][j] % 2 for i in range(10) for j in range(10) if i != j)))
     print(best)

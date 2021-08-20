@@ -7,7 +7,7 @@ def isPrime(n):
         return True
     if n % 3 == 0:
         return False
-    r = int(n**0.5)
+    r = int(n ** 0.5)
     f = 5
     while f <= r:
         if n % f == 0:
@@ -23,10 +23,9 @@ if n == 2:
     print(1)
 elif n % 2 == 0:
     print(2)
+elif isPrime(n):
+    print(1)
+elif isPrime(n - 2):
+    print(2)
 else:
-    if isPrime(n):
-        print(1)
-    elif isPrime(n - 2):
-        print(2)
-    else:
-        print(3)
+    print(3)

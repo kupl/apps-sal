@@ -6,7 +6,7 @@ from functools import lru_cache
 @lru_cache(maxsize=None)
 def solution(nstr, nint, acc):
     msf = float('inf')
-    if (math.sqrt(nint) - int(math.sqrt(nint))) == 0.0:
+    if math.sqrt(nint) - int(math.sqrt(nint)) == 0.0:
         return acc
     for i in range(len(nstr)):
         mstr = nstr[:i] + nstr[i + 1:]
@@ -20,7 +20,6 @@ def solution(nstr, nint, acc):
 
 
 n = sys.stdin.readline().strip()
-
 res = solution(n, int(n), 0)
 if res == float('inf'):
     print(-1)

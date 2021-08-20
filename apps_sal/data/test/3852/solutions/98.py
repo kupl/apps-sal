@@ -1,15 +1,13 @@
-# ARC086D
-
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
+def input():
+    return sys.stdin.readline().rstrip()
 
 
+sys.setrecursionlimit(max(1000, 10 ** 9))
 n = int(input())
 a = list(map(int, input().split()))
-
 m = max([abs(item) for item in a if item <= 0] + [0])
 M = max([abs(item) for item in a if item >= 0] + [0])
 

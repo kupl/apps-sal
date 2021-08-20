@@ -4,7 +4,7 @@ def get_next(T):
 
 
 def main():
-    y, x = [int(s) for s in input().split()]
+    (y, x) = [int(s) for s in input().split()]
     T = [x, x, x]
     i = 0
     while max(T) < y:

@@ -1,7 +1,7 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         c = collections.Counter(A)
-
         for x in sorted(A, key=abs):
             if c[x] == 0:
                 continue

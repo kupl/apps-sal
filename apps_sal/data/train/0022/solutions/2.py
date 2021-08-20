@@ -3,15 +3,18 @@ from collections import defaultdict as dd, Counter
 from math import ceil
 from math import gcd
 import sys
-INF = 10**20
-MOD = 10**9 + 7
-def I(): return list(map(int, input().split()))
+INF = 10 ** 20
+MOD = 10 ** 9 + 7
 
 
-t, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(t,) = I()
 while t:
     t -= 1
-    a, k = I()
+    (a, k) = I()
     b = str(a)
     s = []
     while b not in s:

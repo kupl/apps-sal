@@ -1,7 +1,7 @@
 def reverse_fizzbuzz(string):
     s = string.split()
     lst = [0] * len(s)
-    for indx, i in enumerate(s):
+    for (indx, i) in enumerate(s):
         if i.isdigit():
             lst[indx] = int(i)
             return list(range(lst[indx] - indx, lst[indx] + len(s) - indx))

@@ -6,13 +6,13 @@ def is_month(x):
 
 
 S = input()
-first, latter = is_month(int(S[:2])), is_month(int(S[2:]))
+(first, latter) = (is_month(int(S[:2])), is_month(int(S[2:])))
 if first and latter:
-    ans = "AMBIGUOUS"
-elif not first and not latter:
-    ans = "NA"
+    ans = 'AMBIGUOUS'
+elif not first and (not latter):
+    ans = 'NA'
 elif first:
-    ans = "MMYY"
+    ans = 'MMYY'
 else:
-    ans = "YYMM"
+    ans = 'YYMM'
 print(ans)

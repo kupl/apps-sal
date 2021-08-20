@@ -21,9 +21,8 @@ def binsearch():
     return l
 
 
-n, s = map(int, input().split())
+(n, s) = map(int, input().split())
 prices = list(map(int, input().split()))
 mincosts = [0 for i in range(n + 1)]
-
 b = binsearch()
 print(b, mincosts[b])

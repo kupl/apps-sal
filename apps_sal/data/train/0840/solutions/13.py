@@ -1,8 +1,8 @@
 def f(n):
-    # odd number is 2k + 1
     k = (n + 1) // 2
-    def line(i): return print(" " * (i - 1) + "*")
 
+    def line(i):
+        return print(' ' * (i - 1) + '*')
     for i in range(1, k + 1):
         line(i)
     i = k - 1
@@ -16,6 +16,5 @@ questions = list()
 for _ in range(t):
     n = int(input())
     questions.append(n)
-
 for question in questions:
     f(question)

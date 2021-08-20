@@ -1,6 +1,6 @@
 n = int(input())
 x = 0
-x += (n // 2520) * 576
+x += n // 2520 * 576
 for i in range(1, n % 2520 + 1):
     d = True
     for j in range(2, 11):

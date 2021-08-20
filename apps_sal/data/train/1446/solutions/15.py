@@ -6,7 +6,7 @@ while True:
     d[new] = prev
     prev = new
     st = new
-    if st > 2 * (2**30):
+    if st > 2 * 2 ** 30:
         break
 for _ in range(int(input())):
     n = int(input())

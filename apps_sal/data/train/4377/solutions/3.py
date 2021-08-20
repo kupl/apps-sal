@@ -1,9 +1,6 @@
 from operator import gt
 from numpy import sign
-result = {
-    -1: 'Bob made "Jeff" proud!',
-    0: 'that looks like a "draw"! Rock on!',
-    1: 'Alice made "Kurt" proud!'}
+result = {-1: 'Bob made "Jeff" proud!', 0: 'that looks like a "draw"! Rock on!', 1: 'Alice made "Kurt" proud!'}
 
 
 def solve(a, b):

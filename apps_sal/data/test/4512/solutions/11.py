@@ -14,13 +14,11 @@ def inl():
     return list(map(int, input().split()))
 
 
-MOD = 10**9 + 7
-INF = inf = 10**18 + 5
-
+MOD = 10 ** 9 + 7
+INF = inf = 10 ** 18 + 5
 s = list(input().strip())
 n = len(s)
 t = [[0] * 26 for i in range(2 * n)]
-
 for i in range(n):
     t[i + n][ord(s[i]) - 97] = 1
 
@@ -61,9 +59,8 @@ def query(l, r):
 
 
 build()
-
 for q in range(inn()):
-    tp, l, r = input().split()
+    (tp, l, r) = input().split()
     tp = int(tp)
     l = int(l)
     if tp == 1:
@@ -73,4 +70,3 @@ for q in range(inn()):
         res = query(l - 1, r)
         c = len([i for i in range(26) if res[i] > 0])
         print(c)
-    # print(t)

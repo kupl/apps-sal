@@ -12,7 +12,7 @@ def __starting_point():
         else:
             grid[row] += 1
     best_value = 0
-    for key, value in list(grid.items()):
+    for (key, value) in list(grid.items()):
         if value > best_value:
             best_value = value
     print(best_value)

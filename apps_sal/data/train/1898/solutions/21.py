@@ -1,4 +1,5 @@
 class Solution:
+
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
         final_list = []
 
@@ -17,4 +18,4 @@ class Solution:
         rec(root)
         if root.val not in to_delete:
             final_list.append(root)
-        return(final_list)
+        return final_list

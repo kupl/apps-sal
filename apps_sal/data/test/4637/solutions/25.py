@@ -1,7 +1,7 @@
 import sys
 agGK = int(input())
 for _ in range(agGK):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = [int(i) for i in input().split(' ', n - 1)]
     b = [int(i) for i in input().split(' ', n - 1)]
     a.sort()

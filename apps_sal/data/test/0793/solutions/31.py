@@ -37,15 +37,15 @@ def nok(a, b):
 
 
 def main():
-    mod = 1e9 + 7
-    n, m = rinput()
+    mod = 1000000000.0 + 7
+    (n, m) = rinput()
     s = rlinput()
     t = rlinput()
     a = [1] * (m + 1)
     for j in s:
         d = a[:]
         k = 0
-        for i, v in enumerate(t):
+        for (i, v) in enumerate(t):
             d[i] = (k + d[i]) % mod
             if j == v:
                 k = (k + a[i]) % mod

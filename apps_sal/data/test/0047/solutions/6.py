@@ -1,5 +1,5 @@
 def main():
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     arr = list(map(int, input().split()))
     dp = [[0] * 5 for _ in range(n)]
     dp[0] = [arr[0], arr[0] * x, 0]

@@ -1,5 +1,5 @@
 def main():
-    x, y, z = map(int, input().split())
+    (x, y, z) = map(int, input().split())
     a = x // z + y // z
     x %= z
     y %= z

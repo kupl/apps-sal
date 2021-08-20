@@ -4,5 +4,4 @@ def min_value(digits):
         if str(scan) not in storage:
             storage.append(str(scan))
     storage.sort()
-    return int("".join(storage))
-    # your code here
+    return int(''.join(storage))

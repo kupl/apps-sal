@@ -1,7 +1,6 @@
 from bisect import bisect_right
 import sys
 input = sys.stdin.readline
-
 bin_s = [1]
 while bin_s[-1] <= 10 ** 9:
     bin_s.append(bin_s[-1] * 2)

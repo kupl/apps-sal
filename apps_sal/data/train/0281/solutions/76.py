@@ -1,4 +1,5 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
@@ -10,6 +11,6 @@ class Solution:
                     maps[diff] = 1
                 else:
                     maps[diff] += 1
-                if ((maps[diff] - 1) * 26 + diff) > k:
+                if (maps[diff] - 1) * 26 + diff > k:
                     return False
         return True

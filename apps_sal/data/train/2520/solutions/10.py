@@ -1,4 +1,5 @@
 class Solution:
+
     def reverse(self, x):
         """
         :type x: int
@@ -12,8 +13,7 @@ class Solution:
             answer = -1 * int(ori_str[:0:-1].lstrip('0'))
         else:
             answer = int(ori_str[::-1].lstrip('0'))
-
-        if answer >= 2 ** 31 or answer < -(2 ** 31):
+        if answer >= 2 ** 31 or answer < -2 ** 31:
             return 0
         else:
             return answer

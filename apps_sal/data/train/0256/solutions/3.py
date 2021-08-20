@@ -2,7 +2,9 @@ import math
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def helper(k):
             ret = 0
             for pile in piles:
@@ -10,7 +12,7 @@ class Solution:
                 if ret > H:
                     return False
             return True
-        l, r = 1, max(piles)
+        (l, r) = (1, max(piles))
         while l <= r:
             mid = l + (r - l) // 2
             if helper(mid):

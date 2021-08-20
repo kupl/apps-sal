@@ -23,13 +23,12 @@ for _ in range(int(input())):
         for i in range(len(s)):
             if i <= l2:
                 s[i] = 0
+            elif s[i] == 0:
+                s[i] = 1
+                f = 0
+                break
             else:
-                if s[i] == 0:
-                    s[i] = 1
-                    f = 0
-                    break
-                else:
-                    s[i] = 0
+                s[i] = 0
         if f:
             s.append(1)
     ans = 0

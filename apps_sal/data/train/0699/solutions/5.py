@@ -6,7 +6,7 @@ for _ in range(t):
     an = list(map(int, input().split()))
     sum1 = sum(an)
     if sum1 < k:
-        print("0")
+        print('0')
     else:
         a = sum1 // k
         if a > d:

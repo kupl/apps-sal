@@ -1,9 +1,7 @@
 for _ in range(int(input())):
     p = sorted(input())
     h = input()
-
     ok = False
-
     i = 0
     while i < len(h):
         j = len(h) - 1
@@ -12,7 +10,6 @@ for _ in range(int(input())):
                 ok = True
             j -= 1
         i += 1
-
     if ok:
         print('YES')
     else:

@@ -4,7 +4,7 @@ for _ in range(int(input())):
     ans = a[0] * a[-1]
     b = set(a)
     r = []
-    for i in range(2, int(ans**.5 + 1)):
+    for i in range(2, int(ans ** 0.5 + 1)):
         if ans % i == 0:
             r.append(i)
             r.append(ans // i)

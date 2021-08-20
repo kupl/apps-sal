@@ -5,4 +5,4 @@ for _ in range(int(input())):
     ok = False
     for i in range(1, n):
         ok |= b[i] == b[i - 1]
-    print("YES" if ok else "NO")
+    print('YES' if ok else 'NO')

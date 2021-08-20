@@ -9,7 +9,7 @@ def binsearch(good, bad, fn):
 
 
 def main():
-    N, A, B = list(map(int, input().split()))
+    (N, A, B) = list(map(int, input().split()))
     H = [int(input()) for _ in range(N)]
     c = A - B
 
@@ -18,8 +18,7 @@ def main():
         for h in H:
             r += max((h - B * x + c - 1) // c, 0)
         return r <= x
+    return binsearch(10 ** 9, 0, helper)
 
-    return binsearch(10**9, 0, helper)
 
-
-print((main()))
+print(main())

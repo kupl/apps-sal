@@ -1,8 +1,9 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         i = 0
         count = collections.Counter()
-        for index, value in enumerate(tree):
+        for (index, value) in enumerate(tree):
             count[value] += 1
             if len(count) > 2:
                 count[tree[i]] -= 1

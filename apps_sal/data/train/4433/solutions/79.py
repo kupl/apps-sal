@@ -1,8 +1,8 @@
 def logical_calc(array, op):
     import functools
-    if op == "AND":
+    if op == 'AND':
         return functools.reduce(lambda i, j: i and j, array)
-    elif op == "OR":
+    elif op == 'OR':
         return functools.reduce(lambda i, j: i or j, array)
-    elif op == "XOR":
+    elif op == 'XOR':
         return functools.reduce(lambda i, j: i ^ j, array)

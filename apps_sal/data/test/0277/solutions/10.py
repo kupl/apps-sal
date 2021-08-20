@@ -1,9 +1,9 @@
-n, a, b = [int(s) for s in input().split()]
+(n, a, b) = [int(s) for s in input().split()]
 a -= 1
 b -= 1
 l = 0
 while a != b:
-    l -= - 1
+    l -= -1
     a //= 2
     b //= 2
-print(l if 2**l != n else 'Final!')
+print(l if 2 ** l != n else 'Final!')

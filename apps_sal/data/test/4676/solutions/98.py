@@ -1,3 +1,3 @@
 O = list(input())
 E = list(input()) + ['']
-print(*[o + e for o, e in zip(O, E)], sep="")
+print(*[o + e for (o, e) in zip(O, E)], sep='')

@@ -1,8 +1,6 @@
 n = input()
-
-s = "abcdefghijklmnopqrstuvwxyz"
-
+s = 'abcdefghijklmnopqrstuvwxyz'
 if n in s:
-    print("a")
+    print('a')
 else:
-    print("A")
+    print('A')

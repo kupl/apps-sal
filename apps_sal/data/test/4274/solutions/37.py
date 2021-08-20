@@ -1,5 +1,5 @@
-a, b = input().split()
+(a, b) = input().split()
 if a == b:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

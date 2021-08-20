@@ -1,7 +1,7 @@
 n = int(input())
 b = list(map(int, input().split()))
-b.insert(0, 1e7)
-b.append(1e7)
+b.insert(0, 10000000.0)
+b.append(10000000.0)
 count = 0
 for i in range(n):
     count += min(b[i], b[i + 1])

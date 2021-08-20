@@ -7,7 +7,6 @@ for i in range(1, n):
         t += 1
     else:
         t = 1
-    if (t > m):
+    if t > m:
         m = t
-
 print(m)

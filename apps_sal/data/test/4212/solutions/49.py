@@ -11,21 +11,35 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def MAP1(): return map(lambda x: int(x) - 1, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def MAP1():
+    return map(lambda x: int(x) - 1, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 def solve():
-    N, M, Q = MAP()
+    (N, M, Q) = MAP()
     A = [LIST() for _ in range(Q)]
-
     ans = 0
     for x in combinations_with_replacement(range(1, M + 1), N):
         score = 0
-        for a, b, c, d in A:
+        for (a, b, c, d) in A:
             if x[b - 1] - x[a - 1] == c:
                 score += d
         ans = max(ans, score)

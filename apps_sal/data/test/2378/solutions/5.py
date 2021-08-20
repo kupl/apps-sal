@@ -1,16 +1,19 @@
 from collections import deque
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-mod = 10**9 + 7
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+mod = 10 ** 9 + 7
 n = int(input())
 edge = [[] for i in range(n)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     edge[a - 1].append(b - 1)
     edge[b - 1].append(a - 1)
-inf = 10**6
+inf = 10 ** 6
 Par = [inf] * n
 Par[0] = -1
 Deg = [0] * n
@@ -23,8 +26,7 @@ while Chk:
             Par[next] = c
             Deg[next] += 1
             Chk.append(next)
-
-TS = list(v for v in range(n) if Deg[v] == 0)
+TS = list((v for v in range(n) if Deg[v] == 0))
 D = deque(TS)
 while D:
     v = D.popleft()
@@ -34,7 +36,6 @@ while D:
             if Deg[t] == 0:
                 D.append(t)
                 TS.append(t)
-
 Used = [False] * n
 C = [0] * n
 for i in reversed(list(range(n))):
@@ -43,13 +44,11 @@ for i in reversed(list(range(n))):
     for g in edge[v]:
         if not Used[g]:
             C[g] += C[v] + 1
-
 H = [0] * n
 H[0] = 1
 H[1] = pow(2, mod - 2, mod)
 for i in range(2, n):
-    H[i] = (H[i - 1] * H[1]) % mod
-
+    H[i] = H[i - 1] * H[1] % mod
 ans = 0
 for i in range(n):
     if len(edge[i]) == 1:
@@ -65,4 +64,4 @@ for i in range(n):
         for a in A:
             cur -= H[n - 1 - a]
         ans = (ans + cur) % mod
-print(((ans * H[1]) % mod))
+print(ans * H[1] % mod)

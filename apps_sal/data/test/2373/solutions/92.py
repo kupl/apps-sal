@@ -3,7 +3,7 @@ def main():
     p = list(map(int, input().split()))
     ans = 0
     cnt = 0
-    for i, q in enumerate(p):
+    for (i, q) in enumerate(p):
         if q == i + 1:
             cnt += 1
             if cnt == 3:

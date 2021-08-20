@@ -1,10 +1,8 @@
 n = int(input())
 m = int(input())
 A = [int(input()) for i in range(n)]
-
 A.sort()
 ANS2 = max(A) + m
-
 while m != 0:
     x = min(A)
     i = 0
@@ -15,8 +13,5 @@ while m != 0:
             m -= 1
         else:
             break
-
     A.sort()
-
-
 print(max(A), ANS2)

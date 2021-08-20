@@ -1,12 +1,11 @@
-inp = input().split(" ")
+inp = input().split(' ')
 n = inp[0]
 ss = 0
 a = []
 g = []
-inp1 = input().split(" ")
+inp1 = input().split(' ')
 p = []
 z = 0
-
 for i in range(int(n)):
     a.append(int(inp1[i]))
 ans = 0
@@ -31,6 +30,6 @@ else:
         if k == s * 2:
             ans += l
     if s == 0:
-        print(((l - 1) * (l - 2)) // 2)
+        print((l - 1) * (l - 2) // 2)
     else:
         print(ans)

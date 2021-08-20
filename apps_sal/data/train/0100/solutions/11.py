@@ -1,6 +1,6 @@
 def solve():
-    r, g, b = map(int, input().split())
-    a, b, c = sorted([r, g, b])
+    (r, g, b) = map(int, input().split())
+    (a, b, c) = sorted([r, g, b])
     if a + b <= c:
         ans = a + b
     else:

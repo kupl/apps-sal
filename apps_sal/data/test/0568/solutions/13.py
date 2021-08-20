@@ -11,7 +11,7 @@ for i in range(1, 4):
 a1 = 1
 a2 = 1
 for i in range(n):
-    a1 = (a1 * t1) % M
-    a2 = (a2 * t2) % M
+    a1 = a1 * t1 % M
+    a2 = a2 * t2 % M
 ans = ((a2 - a1) % M + M) % M
 print(ans)

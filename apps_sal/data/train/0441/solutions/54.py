@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def consecutiveNumbersSum(self, N: int) -> int:
         a = N
         while a % 2 == 0:

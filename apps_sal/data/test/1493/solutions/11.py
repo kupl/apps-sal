@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 BOARD = []
 A = ['B', 'W']
 for i in range(n):

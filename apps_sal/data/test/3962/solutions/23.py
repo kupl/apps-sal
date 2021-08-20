@@ -6,7 +6,7 @@ n = int(input())
 l = []
 r = []
 for _ in range(n):
-    li, ri = get_input_list()
+    (li, ri) = get_input_list()
     l.append(li)
     r.append(ri)
 l.sort()

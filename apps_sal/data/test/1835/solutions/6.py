@@ -1,7 +1,7 @@
 Q = int(input())
 for _ in range(Q):
     n = int(input())
-    zero, one = 0, 0
+    (zero, one) = (0, 0)
     odd = 0
     for _ in range(n):
         s = input()
@@ -9,7 +9,6 @@ for _ in range(Q):
             odd = 1
         zero += s.count('0')
         one += s.count('1')
-
     if odd or zero % 2 == 0:
         print(n)
     else:

@@ -7,4 +7,4 @@ def points(n):
             if i + j <= n_2:
                 count = count + 1
     count = 4 * (count + n) + 1
-    return(count)
+    return count

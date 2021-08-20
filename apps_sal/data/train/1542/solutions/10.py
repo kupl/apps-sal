@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for i in range(0, t):
     n = int(input())
@@ -11,20 +10,17 @@ for i in range(0, t):
         dw = 1
         tw = 1
         for k in range(i, i + 8):
-            if s[k] == "d":
+            if s[k] == 'd':
                 sum2 = sum2 + 2 * l[k - i]
-            elif s[k] == "t":
+            elif s[k] == 't':
                 sum2 = sum2 + 3 * l[k - i]
-            elif s[k] == "D":
+            elif s[k] == 'D':
                 dw *= 2
                 sum2 = sum2 + l[k - i]
-            elif s[k] == "T":
+            elif s[k] == 'T':
                 tw *= 3
                 sum2 = sum2 + l[k - i]
             else:
                 sum2 = sum2 + l[k - i]
-
-        # print(sum2)
         finalSum = max(finalSum, sum2 * dw * tw)
-
     print(finalSum)

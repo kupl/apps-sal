@@ -2,12 +2,12 @@ def time_correct(t):
     try:
         if t == None:
             return t
-        if t == "":
+        if t == '':
             return t
         if len(t) == 8:
-            if t.count(":") > 0:
-                t = t.split(":")
-            if t[0] == "00":
+            if t.count(':') > 0:
+                t = t.split(':')
+            if t[0] == '00':
                 first = 0
             else:
                 first = int(t[0])
@@ -21,6 +21,6 @@ def time_correct(t):
                 first += 1
             while first >= 24:
                 first -= 24
-            return "{}:{}:{}".format(str(first).zfill(2), str(second).zfill(2), str(third).zfill(2))
+            return '{}:{}:{}'.format(str(first).zfill(2), str(second).zfill(2), str(third).zfill(2))
     except:
         return None

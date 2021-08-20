@@ -1,20 +1,20 @@
 def solution(x, y):
     ans = ''
-    nowx, nowy = 0, 0
+    (nowx, nowy) = (0, 0)
     preX = [0] * 31
     preY = [0] * 31
     for i in range(31):
         if nowx < x:
-            nowx += 2**(30 - i)
+            nowx += 2 ** (30 - i)
             preX[i] = 1
         else:
-            nowx -= 2**(30 - i)
+            nowx -= 2 ** (30 - i)
             preX[i] = -1
         if nowy < y:
-            nowy += 2**(30 - i)
+            nowy += 2 ** (30 - i)
             preY[i] = 1
         else:
-            nowy -= 2**(30 - i)
+            nowy -= 2 ** (30 - i)
             preY[i] = -1
     for i in range(31):
         if preX[i] == -1 and preY[i] == -1:
@@ -31,20 +31,19 @@ def solution(x, y):
 N = int(input())
 X = [0] * N
 Y = [0] * N
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 X[0] = x
 Y[0] = y
 evod = (x + y) % 2
 Flag = True
 for i in range(1, N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     X[i] = x
     Y[i] = y
     if (x + y) % 2 != evod:
         Flag = False
-
 if Flag:
-    D = [2**i for i in range(30, -1, -1)]
+    D = [2 ** i for i in range(30, -1, -1)]
     if evod == 1:
         print(31)
         print(' '.join(map(str, D)))

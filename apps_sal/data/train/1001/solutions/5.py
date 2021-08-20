@@ -1,4 +1,3 @@
-# cook your dish here
 def prices(n, p):
     c = 0
     for i in range(n):
@@ -7,9 +6,8 @@ def prices(n, p):
         elif i < 6:
             if p[i] < min(p[:i]):
                 c += 1
-        else:
-            if p[i] < min(p[i - 5:i]):
-                c += 1
+        elif p[i] < min(p[i - 5:i]):
+            c += 1
     return c
 
 

@@ -1,23 +1,29 @@
-#import math
-#import itertools
-#import numpy as np
-#from collections import deque
+def INT():
+    return int(input())
 
 
-def INT(): return int(input())
+def INTM():
+    return map(int, input().split())
 
 
-def INTM(): return map(int, input().split())
-def STRM(): return map(str, input().split())
-def STR(): return str(input())
+def STRM():
+    return map(str, input().split())
 
 
-def LIST(): return list(map(int, input().split()))
-def LISTS(): return list(map(str, input().split()))
+def STR():
+    return str(input())
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def LISTS():
+    return list(map(str, input().split()))
 
 
 def do():
-    n, m = INTM()
+    (n, m) = INTM()
     A = LIST()
     bcs = []
     for i in range(m):
@@ -27,8 +33,7 @@ def do():
     bcs = sorted(bcs, key=lambda x: x[1], reverse=True)
     itr = -1
     flg = False
-    # print(A)
-    for b, c in bcs:
+    for (b, c) in bcs:
         if itr + b > n - 1:
             flg = True
         if flg:
@@ -36,25 +41,21 @@ def do():
                 if A[i] < c:
                     A[i] = c
                 else:
-                    itr = 10**9
+                    itr = 10 ** 9
                     break
+        elif A[itr + b] < c:
+            A[itr + 1:itr + b + 1] = [c] * b
         else:
-            if A[itr + b] < c:
-                A[itr + 1:itr + b + 1] = [c] * b
-            else:
-                for i in range(itr + 1, itr + b + 1):
-                    if A[i] < c:
-                        A[i] = c
-                    else:
-                        itr = 10**9
-                        break
-
+            for i in range(itr + 1, itr + b + 1):
+                if A[i] < c:
+                    A[i] = c
+                else:
+                    itr = 10 ** 9
+                    break
         itr += b
-
         if itr > n - 1:
             break
     print(sum(A))
-    # print(A)
 
 
 def __starting_point():

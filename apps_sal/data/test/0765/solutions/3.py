@@ -1,4 +1,4 @@
-t, s, q = list(map(int, input().split(' ')))
+(t, s, q) = list(map(int, input().split(' ')))
 c = 1
 while s < t:
     x = q * s - s

@@ -4,8 +4,8 @@ k1 = int(input())
 k2 = int(input())
 n = int(input())
 if k1 > k2:
-    k1, k2 = k2, k1
-    a1, a2 = a2, a1
+    (k1, k2) = (k2, k1)
+    (a1, a2) = (a2, a1)
 h = (k1 - 1) * a1 + (k2 - 1) * a2
 print(max(0, n - h), end=' ')
 ans = min(n // k1, a1)

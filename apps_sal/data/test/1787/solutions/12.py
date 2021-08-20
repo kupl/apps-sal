@@ -1,6 +1,5 @@
 s = input()
-mod = 1e9 + 7
-
+mod = 1000000000.0 + 7
 ans = 1
 cnt = 0
 for i in range(len(s)):
@@ -9,10 +8,8 @@ for i in range(len(s)):
             cnt += 1
     else:
         if cnt > 0:
-            ans = (ans * (cnt + 1)) % mod
+            ans = ans * (cnt + 1) % mod
         cnt = 0
-
 if cnt > 0:
-    ans = (ans * (cnt + 1)) % mod
-
+    ans = ans * (cnt + 1) % mod
 print(int(ans) - 1)

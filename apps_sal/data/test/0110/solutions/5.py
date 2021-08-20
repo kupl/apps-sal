@@ -5,7 +5,6 @@ for i in map(int, input().split()):
         a.append(-i - 1)
     else:
         a.append(i)
-
 c = 0
 for i in a:
     if i < 0:

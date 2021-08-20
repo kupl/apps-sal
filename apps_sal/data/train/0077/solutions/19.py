@@ -7,7 +7,6 @@ for _ in range(int(input())):
     for i in range(n):
         arr.append(list(map(int, sys.stdin.readline().split())))
     dp[0] = [0, arr[0][1], arr[0][1] * 2]
-
     for i in range(1, n):
         for j in range(3):
             for k in range(3):

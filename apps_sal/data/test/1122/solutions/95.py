@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 sets = []
 if N % 2 == 1:
     for i in range(M):

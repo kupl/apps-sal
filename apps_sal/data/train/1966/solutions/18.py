@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         m = len(mat)
         n = len(mat[0])
@@ -8,7 +9,6 @@ class Solution:
             for x in row:
                 cur.append(cur[-1] + x)
             rows.append(cur)
-
         res = 0
         for j2 in range(1, n + 1):
             for j1 in range(j2):

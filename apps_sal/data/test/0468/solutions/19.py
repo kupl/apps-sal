@@ -1,10 +1,10 @@
 from math import log
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 a = y * log(x)
 b = x * log(y)
 if a < b:
-    print("<")
+    print('<')
 elif a == b:
-    print("=")
+    print('=')
 else:
-    print(">")
+    print('>')

@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         n = len(coins)
         f = [[float('inf')] * (amount + 1) for _ in range(n + 1)]

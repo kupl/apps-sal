@@ -7,10 +7,9 @@ if n == 1:
         print('DOWN')
     else:
         print(-1)
+elif arr[n - 1] == 0:
+    print('UP')
+elif arr[n - 1] == 15:
+    print('DOWN')
 else:
-    if arr[n - 1] == 0:
-        print('UP')
-    elif arr[n - 1] == 15:
-        print('DOWN')
-    else:
-        print('UP' if arr[n - 1] > arr[n - 2] else 'DOWN')
+    print('UP' if arr[n - 1] > arr[n - 2] else 'DOWN')

@@ -1,5 +1,4 @@
-# cook your dish here
-a = list(map(int, input("").strip().split()))
+a = list(map(int, input('').strip().split()))
 n = a[0]
 t = a[1]
 del a[0]
@@ -20,5 +19,4 @@ for i in range(n):
                         res.append(li)
                 elif a[i] + a[j] + a[k] + a[l] > t:
                     break
-
 print(len(res))

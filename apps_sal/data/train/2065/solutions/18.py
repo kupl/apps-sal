@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def solve(n, seq):
     found = 0
     res = 0
@@ -17,7 +15,7 @@ def solve(n, seq):
 
 
 def __starting_point():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     seq = [list(map(int, input().split())) for _ in range(k)]
     print(solve(n, seq))
 

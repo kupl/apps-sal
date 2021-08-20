@@ -21,4 +21,4 @@ def two_decimal_places(n):
     else:
         t = t + f'{l[0]}' + f'{l[1]}'
     final_num = float(t)
-    return(final_num)
+    return final_num

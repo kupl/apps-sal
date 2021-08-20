@@ -13,7 +13,6 @@ for i in range(q):
     else:
         arr[i] = int(b[1])
         a2[arr[i] - 1] = int(b[2])
-
 pay_max = max(pay)
 pay_maxi = q - pay[::-1].index(pay_max) - 1
 a = [pay_max if x < pay_max else x for x in a]
@@ -30,4 +29,3 @@ for i in range(q):
         else:
             a[arr[i] - 1] = max(a2[arr[i] - 1], pay_max)
 print(*a)
-#print(' '.join([str(x) for x in a]))

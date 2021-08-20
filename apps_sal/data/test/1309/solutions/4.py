@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 a.sort()
 cap = []
 res = []
@@ -20,5 +19,4 @@ for i in range(0, 2 * n - 1, 2):
                 cap.append(abs(a[k] - f))
         result = sum(cap)
         res.append(result)
-
 print(min(res))

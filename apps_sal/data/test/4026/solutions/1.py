@@ -2,28 +2,12 @@ import sys
 
 
 def main():
-    #n = iinput()
-    #k = iinput()
-    #m = iinput()
-    #n = int(sys.stdin.readline().strip())
-    #n, k = rinput()
-    #n, m = rinput()
-    #m, k = rinput()
-    #n, k, m = rinput()
-    #n, m, k = rinput()
-    #k, n, m = rinput()
-    #k, m, n = rinput()
-    #m, k, n = rinput()
-    #m, n, k = rinput()
-    #n, t = map(int, sys.stdin.readline().split())
-    #q = list(map(int, sys.stdin.readline().split()))
-    #q = linput()
-    n, m = list(map(int, sys.stdin.readline().split()))
+    (n, m) = list(map(int, sys.stdin.readline().split()))
     q = []
     for i in range(n):
         q.append([list(map(int, sys.stdin.readline().split())), list(map(int, sys.stdin.readline().split()))])
     if m % 2:
-        print("NO")
+        print('NO')
     else:
         fl = 0
         for i in range(n):
@@ -31,9 +15,9 @@ def main():
                 fl = 1
                 break
         if fl:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
 
 
 for i in range(int(sys.stdin.readline().strip())):

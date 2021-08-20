@@ -4,11 +4,9 @@ def solve():
     nums = set()
     for n in a:
         nums.add(n)
-
     if len(nums) <= 2:
         print('YES')
         return
-
     if len(nums) == 3:
         ma = max(nums)
         mi = min(nums)
@@ -18,7 +16,6 @@ def solve():
         if ma - mid == mid - mi:
             print('YES')
             return
-
     print('NO')
 
 

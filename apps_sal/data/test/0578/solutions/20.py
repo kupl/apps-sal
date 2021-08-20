@@ -10,7 +10,6 @@ while s[i] != '.':
     i += 1
 a2 = a[i + 1:]
 a = a[0:i]
-
 i = 0
 while b > 0 and i < len(a2):
     a += a2[i]
@@ -36,5 +35,4 @@ elif i < len(a2):
         a += '.'
         for i in range(len(a3)):
             a += a3[i]
-
 print(a)

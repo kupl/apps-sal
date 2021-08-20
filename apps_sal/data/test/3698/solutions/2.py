@@ -1,6 +1,5 @@
 from math import factorial
 from functools import lru_cache
-
 mod = 1000000007
 
 
@@ -21,12 +20,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
+        (g, y, x) = egcd(b % a, a)
+        return (g, x - b // a * y, y)
 
 
 def modinv(a, m):
-    g, x, y = egcd(a, m)
+    (g, x, y) = egcd(a, m)
     if g != 1:
         raise Exception('modular inverse does not exist')
     else:
@@ -39,14 +38,10 @@ def inv(a):
 
 
 def binom(n, k):
-    return (fact(n) * inv(fact(k)) * inv(fact(n - k))) % mod
+    return fact(n) * inv(fact(k)) * inv(fact(n - k)) % mod
 
 
 def num_numbers(n, i):
-    # number of numbers in [1..n] that have exactly i 1s
-    # in their binary representation
-    # n is a str
-
     ans = 0
     num_ones_in_prefix = 0
     for j in range(len(n) - 1):
@@ -56,11 +51,9 @@ def num_numbers(n, i):
         if n[j] == '1':
             ans = (ans + binom(pos_right, i - num_ones_in_prefix)) % mod
             num_ones_in_prefix += 1
-
     cnt1 = n.count('1')
-    if (n[-1] == '0' and cnt1 == i) or (n[-1] == '1' and cnt1 in (i, i + 1)):
+    if n[-1] == '0' and cnt1 == i or (n[-1] == '1' and cnt1 in (i, i + 1)):
         ans = (ans + 1) % mod
-
     return ans
 
 
@@ -82,5 +75,4 @@ def solve(n, k):
 
 n = input()
 k = int(input())
-
 print(solve(n, k))

@@ -4,7 +4,7 @@ b = [-1] * n
 b[0] = 0
 b[n - 1] = a[0]
 for i in range(1, n // 2):
-    p, q = 0, a[i]
+    (p, q) = (0, a[i])
     fl = 1
     if p >= b[i - 1] and q <= b[n - i] and fl:
         b[i] = p

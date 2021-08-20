@@ -11,8 +11,7 @@ def alphabet_war(fight):
             except:
                 pass
     if res > 0:
-        return "Right side wins!"
-
+        return 'Right side wins!'
     if res == 0:
         return "Let's fight again!"
-    return "Left side wins!"
+    return 'Left side wins!'

@@ -1,26 +1,24 @@
 try:
-    t, m = input().split()
+    (t, m) = input().split()
     t = int(t)
     m = list(m)
-    letters = list("abcdefghijklmnopqrstuvwxyz")
+    letters = list('abcdefghijklmnopqrstuvwxyz')
     trans = {}
     for i in range(len(letters)):
         trans[letters[i]] = m[i]
     for i in range(t):
         x = list(input())
-        y = ""
+        y = ''
         for j in x:
-            if(j.isalpha() == True):
-                if(j.isupper() == True):
+            if j.isalpha() == True:
+                if j.isupper() == True:
                     y += trans[j.lower()].upper()
                 else:
                     y += trans[j]
+            elif j == '_':
+                y += ' '
             else:
-                if(j == '_'):
-                    y += " "
-                else:
-                    y += j
+                y += j
         print(y)
-
 except:
     pass

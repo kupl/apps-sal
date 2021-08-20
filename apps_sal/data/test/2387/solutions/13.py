@@ -1,13 +1,16 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 n = int(input())
-ls, rs = [], []
+(ls, rs) = ([], [])
 total = 0
 for i in range(n):
     s = input()
-    h, b = 0, 0
+    (h, b) = (0, 0)
     for c in s:
         if c == '(':
             h += 1
@@ -15,17 +18,17 @@ for i in range(n):
             h -= 1
         b = min(b, h)
     if h > 0:
-        ls.append((b, h))       # 増減+ はb:最下点, h:増減を取る
+        ls.append((b, h))
     else:
-        rs.append((b - h, -h))    # 増減- は、上下左右逆さに考え、b:右から見た最下点、h:増減のマイナスを取る
+        rs.append((b - h, -h))
     total += h
 ls.sort(reverse=True)
-rs.sort(reverse=True)   # 増減-は右から見るので、大きい順にsort
+rs.sort(reverse=True)
 
 
 def chk(s):
     h = 0
-    for sb, sh in s:
+    for (sb, sh) in s:
         b = h + sb
         if b < 0:
             return False
@@ -33,7 +36,7 @@ def chk(s):
     return True
 
 
-if (chk(ls) and chk(rs) and total == 0):
-    print("Yes")
+if chk(ls) and chk(rs) and (total == 0):
+    print('Yes')
 else:
-    print("No")
+    print('No')

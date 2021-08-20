@@ -1,9 +1,8 @@
-# cook your dish here
 t = int(input())
 
 
 def length(x):
-    return x**2 + x
+    return x ** 2 + x
 
 
 def is_valid(count_0, count_1):
@@ -36,7 +35,6 @@ while t:
                 i += 1
             else:
                 i += abs(a - cnt_1)
-
         a += 1
         x = length(a)
     print(res)

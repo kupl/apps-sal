@@ -6,7 +6,7 @@ b = [0] * (n + 1)
 for i in a:
     b[i] = 1
 c = []
-for i, j in enumerate(b):
+for (i, j) in enumerate(b):
     if j == 0:
         c.append(i)
 c = set(c)
@@ -28,4 +28,4 @@ for i in range(1, n + 1):
                 c.remove(k)
                 break
 for i in a:
-    print(i, end=" ")
+    print(i, end=' ')

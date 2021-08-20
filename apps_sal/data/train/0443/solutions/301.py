@@ -1,5 +1,7 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
+
         def checkLess(a, b, c):
             return rating[a] < rating[b] < rating[c]
 
@@ -11,7 +13,6 @@ class Solution:
             if checkLess(0, 1, 2) or checkG(0, 1, 2):
                 return 1
             return 0
-
         result = 0
         n = len(rating)
         for i in range(n):
@@ -19,5 +20,4 @@ class Solution:
                 for k in range(j, n):
                     if checkLess(i, j, k) or checkG(i, j, k):
                         result += 1
-
         return result

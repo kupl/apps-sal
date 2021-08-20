@@ -1,5 +1,5 @@
 def good(n):
-    return sum(int(c) for c in str(n)) % 4 == 0
+    return sum((int(c) for c in str(n))) % 4 == 0
 
 
 n = int(input())

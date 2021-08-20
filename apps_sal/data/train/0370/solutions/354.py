@@ -1,6 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
-        parent = [-1] * 100_001  # One more than all values
+        parent = [-1] * 100001
 
         def find(x):
             if parent[x] == -1:
@@ -9,10 +10,9 @@ class Solution:
             return parent[x]
 
         def union(x, y):
-            xp, yp = find(x), find(y)
+            (xp, yp) = (find(x), find(y))
             if xp != yp:
                 parent[yp] = xp
-
         for x in A:
             for i in range(2, int(sqrt(x)) + 1):
                 if x % i == 0:
@@ -36,10 +36,9 @@ class Solution:
         n = len(A)
         for i in range(n - 1):
             for j in range(i + 1, n):
-                a, b = A[i], A[j]
+                (a, b) = (A[i], A[j])
                 if gcd(a, b) > 1:
                     graph[a].append(b)
-
         for a in graph.keys():
             print(f'graph[{a}]', graph[a])
         largest = float('-inf')

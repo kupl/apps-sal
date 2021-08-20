@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 l = list(map(int, input().split()))
 beg = 1
 cnt = 0
@@ -10,6 +10,5 @@ while i < m:
     while i < m and l[i] <= end:
         i += 1
         ele += 1
-
     cnt += 1
 print(cnt)

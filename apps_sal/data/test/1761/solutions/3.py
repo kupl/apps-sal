@@ -1,7 +1,8 @@
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
-n, = readln()
+(n,) = readln()
 sms = '<3'.join([''] + [input() for _ in range(n)] + [''])
 s = 0
 for c in list(input()):

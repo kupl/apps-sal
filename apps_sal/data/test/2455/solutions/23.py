@@ -1,10 +1,8 @@
 t = int(input())
 ans = [[] for i in range(t)]
 for i in range(t):
-
     s = input()
     for a in range(1, 13):
-
         if 12 % a != 0:
             continue
         b = 12 // a

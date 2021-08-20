@@ -1,9 +1,10 @@
 class Solution:
+
     def racecar(self, target: int) -> int:
         q = deque([(0, 1, 0)])
         encountered = set()
         while q:
-            pos, spd, length = q.popleft()
+            (pos, spd, length) = q.popleft()
             if (pos, spd) in encountered:
                 continue
             else:

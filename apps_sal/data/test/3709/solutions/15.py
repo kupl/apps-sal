@@ -1,13 +1,10 @@
-n, k = [int(i) for i in input().split()]
-
+(n, k) = [int(i) for i in input().split()]
 K = 1 << k
 p = [0] * K
-
 for i in range(n):
     pi = [int(j) for j in input().split()]
-    pc = sum(pi[j] << j for j in range(k))
+    pc = sum((pi[j] << j for j in range(k)))
     p[pc] += 1
-
 s = [0] * k
 
 
@@ -19,9 +16,9 @@ def go(i0, used):
         ok = True
         used += 1
         for j in range(k):
-            f = (i0 >> j) & 1
+            f = i0 >> j & 1
             assert f == 0 or f == 1
-            s[j] += (i0 >> j) & 1
+            s[j] += i0 >> j & 1
             if s[j] * 2 > used:
                 ok = False
         if ok:
@@ -33,5 +30,5 @@ def go(i0, used):
     return go(i0 + 1, used)
 
 
-ans = "YES" if go(0, 0) else "NO"
+ans = 'YES' if go(0, 0) else 'NO'
 print(ans)

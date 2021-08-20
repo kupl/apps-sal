@@ -4,13 +4,10 @@ def f(x):
 
 def main():
     x = int(input())
-
     l = set()
-
     while x not in l:
         l.add(x)
         x = f(x)
-
     print(len(l))
 
 

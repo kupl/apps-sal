@@ -4,13 +4,13 @@ visited = [False for i in range(n + 2)]
 dp = [-1 for i in range(n + 2)]
 l = [[] for i in range(n + 2)]
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     l[a].append(b)
     l[b].append(a)
 b = deque(list(map(int, input().split())))
 b.popleft()
 s = deque([1])
-ans = "Yes"
+ans = 'Yes'
 visited[1] = True
 while len(b) > 0 and len(s) > 0:
     aux = 0
@@ -25,7 +25,7 @@ while len(b) > 0 and len(s) > 0:
             s.append(x)
             dp[x] = -1
         else:
-            ans = "No"
+            ans = 'No'
             b = []
             break
     s.popleft()

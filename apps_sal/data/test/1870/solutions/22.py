@@ -8,5 +8,4 @@ for i in range(n - 1):
         k += 1
     else:
         k = 1
-
 print(k)

@@ -2,6 +2,7 @@ import collections
 
 
 class Dinic:
+
     def __init__(self, vnum):
         self.edge = [[] for i in range(vnum)]
         self.n = vnum
@@ -17,7 +18,7 @@ class Dinic:
         Q = collections.deque([vst])
         while Q:
             nv = Q.popleft()
-            for vt, c, r in self.edge[nv]:
+            for (vt, c, r) in self.edge[nv]:
                 if dist[vt] == -1 and c > 0:
                     dist[vt] = dist[nv] + 1
                     Q.append(vt)
@@ -29,7 +30,7 @@ class Dinic:
             return nf
         dist = self.dist
         ist = nextv[nv]
-        for i, (vt, c, r) in enumerate(self.edge[nv][ist:], ist):
+        for (i, (vt, c, r)) in enumerate(self.edge[nv][ist:], ist):
             if dist[nv] < dist[vt] and c > 0:
                 df = self.dfs(vt, en, min(nf, c))
                 if df > 0:
@@ -55,10 +56,10 @@ class Dinic:
         return mf
 
 
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 G = [input() for _ in range(H)]
 T = Dinic(H + W)
-inf = 10**9 + 7
+inf = 10 ** 9 + 7
 SS = []
 for i in range(H):
     for j in range(W):
@@ -73,7 +74,7 @@ for i in range(H):
         T.addedge(i, H + j, inf)
         T.addedge(H + j, i, inf)
 ans = T.getmf(SS[0], SS[-1])
-if ans >= 10**9:
+if ans >= 10 ** 9:
     print(-1)
 else:
     print(ans)

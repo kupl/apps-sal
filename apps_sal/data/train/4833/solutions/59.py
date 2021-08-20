@@ -1,8 +1,8 @@
 def replace_exclamation(s):
-    ss = ""
+    ss = ''
     for el in s:
-        if el not in "euioaEUIOA":
+        if el not in 'euioaEUIOA':
             ss += el
         else:
-            ss += "!"
+            ss += '!'
     return ss

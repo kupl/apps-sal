@@ -11,21 +11,17 @@ def extract(a):
             d[e] = d
         else:
             r.append(0)
-
     return r
 
 
 def sonyaAndRobots(n, a):
     t1 = extract(a)
     t2 = list(reversed(extract(reversed(a))))
-
     for i in range(n - 1):
         t1[i + 1] += t1[i]
-
     result = 0
     for i in range(n - 1):
         result += t1[i] * t2[i + 1]
-
     return result
 
 

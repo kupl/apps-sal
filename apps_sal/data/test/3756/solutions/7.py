@@ -1,7 +1,6 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 c = input()
-clock = c.find(".")
-
+clock = c.find('.')
 for x in range(clock + 1, a):
     if c[x] > '4':
         break
@@ -15,7 +14,7 @@ if x != a:
         if c[x] != '4':
             break
     if x > clock:
-        print(c[:x], chr(ord(c[x]) + 1), sep="")
+        print(c[:x], chr(ord(c[x]) + 1), sep='')
     else:
         c = list(c[:x])
         x -= 1
@@ -28,4 +27,4 @@ if x != a:
                 break
         else:
             c.insert(0, '1')
-        print("".join(c))
+        print(''.join(c))

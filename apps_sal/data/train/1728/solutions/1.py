@@ -1,5 +1,5 @@
-
 class PlayerMovement:
+
     def __init__(self, x, y):
         self.position = Tile(x, y)
         self.direction = 8
@@ -19,11 +19,8 @@ class PlayerMovement:
             self.direction = self.pressed[-1]
 
     def move(self, direction):
-        dx, dy = PlayerMovement.DIR_VECT[direction]
-        self.position = Tile(
-            self.position.x + dx,
-            self.position.y + dy
-        )
+        (dx, dy) = PlayerMovement.DIR_VECT[direction]
+        self.position = Tile(self.position.x + dx, self.position.y + dy)
 
 
 PlayerMovement.DIR_VECT = {8: (0, 1), 2: (0, -1), 4: (-1, 0), 6: (1, 0)}

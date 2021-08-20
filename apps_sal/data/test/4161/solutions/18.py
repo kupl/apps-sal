@@ -1,5 +1,4 @@
 K = int(input())
-
 ans = 0
 
 
@@ -26,5 +25,4 @@ for i in range(1, K + 1):
                 ans += gcd(i, gcd(j, k)) * 3
             else:
                 ans += gcd(i, gcd(j, k)) * 6
-
 print(ans)

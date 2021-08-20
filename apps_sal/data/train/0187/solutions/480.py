@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         d = {}
         p = 0
@@ -7,7 +8,7 @@ class Solution:
         z = customers.count(0)
         for i in range(m + z):
             if customers[i] > 4:
-                customers += 0,
+                customers += (0,)
             p += boardingCost * min(customers[i], 4) - runningCost
             if p not in list(d.keys()):
                 d[p] = i

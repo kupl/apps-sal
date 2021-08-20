@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums, requests) -> int:
         chafen = [0] * (len(nums) + 1)
         for req in requests:
@@ -7,7 +8,7 @@ class Solution:
         chafen = chafen[:-1]
         sum_count = []
         lastsum = 0
-        for idx, cha in enumerate(chafen):
+        for (idx, cha) in enumerate(chafen):
             lastsum += cha
             sum_count.append(lastsum)
         sum_count = sorted(sum_count)
@@ -15,5 +16,5 @@ class Solution:
         res = 0
         for idx in range(len(nums)):
             res += sum_count[idx] * nums[idx]
-            res %= 1e9 + 7
+            res %= 1000000000.0 + 7
         return int(res)

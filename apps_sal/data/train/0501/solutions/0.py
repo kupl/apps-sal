@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestPalindrome(self, s):
         if len(s) < 2:
             return s

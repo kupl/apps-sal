@@ -1,5 +1,5 @@
 import collections
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 lsA = list(map(int, input().split()))
 counterA = collections.Counter(lsA)
 valu = list(counterA.values())

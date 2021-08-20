@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         ss = list(s)
         tot_cost = 0
@@ -14,5 +15,4 @@ class Solution:
                 tot_cost += dup_sum - dup_max
                 i = end_i
             i += 1
-
         return tot_cost

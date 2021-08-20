@@ -2,6 +2,7 @@ import sys
 
 
 class IO:
+
     @staticmethod
     def get(type=str):
         return type(input().strip())
@@ -21,7 +22,7 @@ def inv(n, p):
 
 def comb(n, k, p):
     k = min(k, n - k)
-    t, d = 1, 1
+    (t, d) = (1, 1)
     for i in range(k):
         t *= n - i
         t %= P
@@ -34,21 +35,17 @@ P = 10 ** 9 + 7
 
 
 def main():
-    n, m = IO.gets(int)
+    (n, m) = IO.gets(int)
     a = IO.gets(int)
-
     x = sum(a) + n
     dm = m - sum(a)
-    printerr(f"x={x} dm={dm}")
-
+    printerr(f'x={x} dm={dm}')
     if dm < 0:
         ans = 0
     elif dm == 0:
         ans = 1
     else:
-        # ans = (1 - pow(x, m+1, P)) * inv(1 - x, P) % P
         ans = comb(x + dm, dm, P)
-
     print(ans)
 
 

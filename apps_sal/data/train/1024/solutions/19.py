@@ -1,12 +1,8 @@
-# cook your dish here
-# Let's hack this code.
-
 from sys import stdin, stdout
 import math
 from itertools import permutations, combinations
 from collections import defaultdict
 from bisect import bisect_left
-
 mod = 1000000007
 
 
@@ -28,20 +24,18 @@ def printIn(ob):
 
 def powerLL(n, p):
     result = 1
-    while (p):
-        if (p & 1):
+    while p:
+        if p & 1:
             result = result * n % mod
         p = int(p / 2)
         n = n * n % mod
     return result
 
-# --------------------------------------
-
 
 def myCode():
     ext = 0
     short = 0
-    s, n, k, r = In()
+    (s, n, k, r) = In()
     share = k
     dist = k
     for i in range(n - 1):
@@ -49,25 +43,24 @@ def myCode():
         share = share + dist
     if share <= s:
         ext = s - share
-        print("POSSIBLE " + str(ext))
+        print('POSSIBLE ' + str(ext))
     else:
         short = share - s
-        print("IMPOSSIBLE " + str(short))
-
-    return ext, short
+        print('IMPOSSIBLE ' + str(short))
+    return (ext, short)
 
 
 def main():
     extra = 0
     shortage = 0
     for t in range(I()):
-        e, s = myCode()
+        (e, s) = myCode()
         extra += e
         shortage += s
     if extra >= shortage:
-        print("POSSIBLE")
+        print('POSSIBLE')
     else:
-        print("IMPOSSIBLE")
+        print('IMPOSSIBLE')
 
 
 def __starting_point():

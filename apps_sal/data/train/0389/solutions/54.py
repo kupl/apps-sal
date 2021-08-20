@@ -1,4 +1,5 @@
 class Solution:
+
     def splitArraySameAverage(self, A: List[int]) -> bool:
         total = sum(A)
         sets = [{0}] + [set() for _ in A]
@@ -9,5 +10,4 @@ class Solution:
                     if total * (j + 1) == s * len(A):
                         return True
                     sets[j + 1].add(k + num)
-
         return False

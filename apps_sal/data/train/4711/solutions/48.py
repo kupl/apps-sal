@@ -5,7 +5,7 @@ def zeros(n):
     i = 1
     while True:
         if n > 5 ** i:
-            value += n // 5**i
+            value += n // 5 ** i
         else:
             return value
         i += 1

@@ -1,5 +1,4 @@
-k, d, t = list(map(int, input().split()))
-
+(k, d, t) = list(map(int, input().split()))
 if d <= k:
     c = 2 * k + (d - k % d) % d
     r = 2 * t % c
@@ -18,8 +17,4 @@ else:
         tailTime = r / 2
     else:
         tailTime = r - k
-#print('energyPerPeriod: ' + str(c))
-#print('energyTotal: ' + str(2*t))
-#print('tailTime: ' + str(tailTime))
-# print(nrFullPeriods)
 print(nrFullPeriods * periodTime + tailTime)

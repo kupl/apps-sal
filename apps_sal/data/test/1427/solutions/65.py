@@ -10,5 +10,5 @@ def lcm(x, y):
 
 l = reduce(lcm, a)
 b = list(map(lambda x: l // x, a))
-m = 10**9 + 7
+m = 10 ** 9 + 7
 print(sum(b) % m)

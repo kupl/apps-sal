@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         counter = 0
         while 1:
@@ -14,7 +15,6 @@ class Solution:
             counter += temp_counter
             if bigger_than_zero == 0:
                 return counter
-
             run_again = True
             while run_again:
                 counter += 1

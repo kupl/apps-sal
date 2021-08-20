@@ -1,9 +1,9 @@
-n, k = map(int, input().split())
-l, a = list(map(int, input().split())), list(map(int, input().split()))
-v, t, s = 0, 0, sum(l)
+(n, k) = map(int, input().split())
+(l, a) = (list(map(int, input().split())), list(map(int, input().split())))
+(v, t, s) = (0, 0, sum(l))
 for i in range(n):
     l[i] -= a[i]
-L, A = [l[0]], [a[0]]
+(L, A) = ([l[0]], [a[0]])
 for i in range(1, n):
     if a[i] <= A[-1]:
         L[-1] += l[i]

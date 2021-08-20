@@ -10,7 +10,6 @@ for x in s:
             result += 1
         sub = 1
     last = x
-
 if sub % 2 == 0:
     result += 1
 print(result)

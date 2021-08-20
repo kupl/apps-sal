@@ -1,24 +1,24 @@
 from collections import deque
 for _ in range(int(input())):
     n = int(input())
-    val = set([0, 2 * 10**5 + 1])
-    seg = [(0, 2 * 10**5 + 1)]
+    val = set([0, 2 * 10 ** 5 + 1])
+    seg = [(0, 2 * 10 ** 5 + 1)]
     for i in range(n):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         val.add(l)
         val.add(r)
         seg.append((l, r))
     val = sorted(list(val))
-    comp = {i: e + 1 for e, i in enumerate(val)}
+    comp = {i: e + 1 for (e, i) in enumerate(val)}
     deg = [0] * (n + 1)
     out = [[] for i in range(n + 1)]
     for i in range(n + 1):
-        l, r = seg[i]
+        (l, r) = seg[i]
         seg[i] = (comp[l], comp[r])
     for i in range(n + 1):
         for j in range(i + 1, n + 1):
-            l, r = seg[i]
-            L, R = seg[j]
+            (l, r) = seg[i]
+            (L, R) = seg[j]
             if L <= l and r <= R:
                 out[j].append(i)
                 deg[i] += 1
@@ -40,11 +40,11 @@ for _ in range(int(input())):
         query = [[] for i in range(2 * n + 3)]
         subdp = [0] * (2 * n + 3)
         for nv in out[v]:
-            l, r = seg[nv]
+            (l, r) = seg[nv]
             query[r].append((l, dp[nv]))
         for i in range(1, 2 * n + 3):
             res = subdp[i - 1]
-            for l, val in query[i]:
+            for (l, val) in query[i]:
                 test = subdp[l - 1] + val
                 res = max(test, res)
             subdp[i] = res

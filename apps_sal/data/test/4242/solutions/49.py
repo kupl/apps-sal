@@ -15,16 +15,14 @@ def divisors(n: int) -> Set[int]:
 def answer(a: int, b: int, k: int) -> int:
     divisors_a = divisors(a)
     divisors_b = divisors(b)
-
     common_divisors = list(divisors_a & divisors_b)
     common_divisors.sort()
-
     return common_divisors[-k]
 
 
 def main():
-    a, b, k = list(map(int, input().split()))
-    print((answer(a, b, k)))
+    (a, b, k) = list(map(int, input().split()))
+    print(answer(a, b, k))
 
 
 def __starting_point():

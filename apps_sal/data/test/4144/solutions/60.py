@@ -8,7 +8,6 @@ def solve():
     noZeroOrNine = pow(9, N, mod)
     noZeroAndNine = pow(8, N, mod)
     print((total - 2 * noZeroOrNine + noZeroAndNine) % mod)
-
     return
 
 

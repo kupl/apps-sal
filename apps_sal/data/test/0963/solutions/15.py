@@ -1,9 +1,9 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 mod = 998244353
 L = [0] * K
 R = [0] * K
 for i in range(K):
-    L[i], R[i] = map(int, input().split())
+    (L[i], R[i]) = map(int, input().split())
 L.sort()
 R.sort()
 dp = [0] * (N + 1)

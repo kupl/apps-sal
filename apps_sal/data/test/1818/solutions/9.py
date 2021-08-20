@@ -1,4 +1,3 @@
-
 def helper(x):
     ret = 0
     while x > 0:
@@ -13,13 +12,10 @@ def helper(x):
 n = int(input())
 a = list(map(int, input().split()))
 d = [0] * 10000
-
 for element in a:
     res = helper(element)
     d[res] += 1
-
 ans = 0
 for element in d:
     ans += element * (element - 1) / 2
-
 print(int(ans))

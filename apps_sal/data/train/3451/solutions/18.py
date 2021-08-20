@@ -1,8 +1,8 @@
 def triangle(row):
-    colors = ["R", "G", "B"]
+    colors = ['R', 'G', 'B']
     while len(row) > 1:
         i = 0
-        new_row = ""
+        new_row = ''
         while i < len(row) - 1:
             if row[i] == row[i + 1]:
                 new_row += row[i]

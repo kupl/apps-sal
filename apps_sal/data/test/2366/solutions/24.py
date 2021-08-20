@@ -6,7 +6,6 @@ for i in range(n):
 d = 0
 for i in range(n):
     d = d + x[i] * (x[i] - 1) // 2
-
 for i in range(n):
     b = d - (x[l[i] - 1] - 1)
     print(b)

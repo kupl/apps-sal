@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 H = list(map(int, input().split()))
 ways = [list(map(int, input().split())) for i in range(M)]
 observatoryList = [1] * N

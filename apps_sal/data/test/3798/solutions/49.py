@@ -5,7 +5,7 @@ def f(b, n):
     if n < b:
         return n
     else:
-        return f(b, n // b) + (n % b)
+        return f(b, n // b) + n % b
 
 
 def build_div(x):
@@ -27,7 +27,7 @@ n = int(input())
 s = int(input())
 b = -1
 if n == s:
-    print((n + 1))
+    print(n + 1)
 else:
     for i in range(2, math.ceil(math.sqrt(n))):
         if f(i, n) == s:
@@ -42,4 +42,4 @@ else:
                 print(b)
                 break
     if b == -1:
-        print((-1))
+        print(-1)

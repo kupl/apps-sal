@@ -6,7 +6,7 @@ def check(a, b):
 
 while True:
     try:
-        n, m = map(int, input().split())
+        (n, m) = map(int, input().split())
         if n != m:
             a = list()
             b = list()
@@ -30,7 +30,7 @@ while True:
                             ansa = check(a[i], a[j])
                             ansb = check(a[i], b[k])
                             ansc = check(a[i], b[l])
-                            if (ansa[0] == ansb[0] and ansa[0] == ansc[0] and ansa[0] == 0) or (ansa[0] != 0 and ansb[0] != 0 and ansc[0] != 0 and ansa[1] / ansa[0] == ansb[1] / ansb[0] and ansa[1] / ansa[0] == ansc[1] / ansc[0]):
+                            if ansa[0] == ansb[0] and ansa[0] == ansc[0] and (ansa[0] == 0) or (ansa[0] != 0 and ansb[0] != 0 and (ansc[0] != 0) and (ansa[1] / ansa[0] == ansb[1] / ansb[0]) and (ansa[1] / ansa[0] == ansc[1] / ansc[0])):
                                 print('No')
                                 flag = True
                                 break

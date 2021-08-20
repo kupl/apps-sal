@@ -7,8 +7,8 @@ def answer(n: int, s: Set[str]) -> int:
 
 def main():
     n = int(input())
-    s = set(input() for _ in range(n))
-    print((answer(n, s)))
+    s = set((input() for _ in range(n)))
+    print(answer(n, s))
 
 
 def __starting_point():

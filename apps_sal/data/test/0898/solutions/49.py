@@ -1,5 +1,5 @@
 import math
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 fact = []
 ans = 1
 MAX = int(math.sqrt(m)) + 1

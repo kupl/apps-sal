@@ -8,7 +8,7 @@ def answer(a: int, b: int, h: int, m: int) -> float:
 
 
 def main():
-    a, b, h, m = map(int, input().split())
+    (a, b, h, m) = map(int, input().split())
     print(answer(a, b, h, m))
 
 

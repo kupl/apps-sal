@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 sum = n ** 2
 colx = n
 coly = n
 usedx = [False] * n
 usedy = [False] * n
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     x -= 1
     y -= 1
     if not usedx[x]:

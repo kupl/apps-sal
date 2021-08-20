@@ -8,7 +8,7 @@ def f(x, l, r):
 def foo(a, b, n):
     max_a = max(a)
     max_b = max(b)
-    a, max_a, b, max_b = (a, max_a, b, max_b) if max_a > max_b else (b, max_b, a, max_a)
+    (a, max_a, b, max_b) = (a, max_a, b, max_b) if max_a > max_b else (b, max_b, a, max_a)
     l = r = a.index(max_a)
     while r < n and f(a, l, r) + f(b, l, r) <= f(a, l, r + 1) + f(b, l, r + 1):
         r += 1
@@ -22,7 +22,7 @@ a = [int(n) for n in input().split()]
 b = [int(n) for n in input().split()]
 max_a = max(a)
 max_b = max(b)
-a, max_a, b, max_b = (a, max_a, b, max_b) if max_a > max_b else (b, max_b, a, max_a)
+(a, max_a, b, max_b) = (a, max_a, b, max_b) if max_a > max_b else (b, max_b, a, max_a)
 l = r = a.index(max_a)
 while r < n and f(a, l, r) + f(b, l, r) <= f(a, l, r + 1) + f(b, l, r + 1):
     r += 1

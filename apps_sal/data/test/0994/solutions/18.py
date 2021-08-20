@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 L = [[int(x) for x in input().split()] for z in range(m)]
 maxh = max([x[1] for x in L])
 
@@ -13,7 +13,7 @@ def maxp(a, b):
     t = abs(a[0] - b[0])
     t -= abs(a[1] - b[1])
     m = max(a[1], b[1])
-    return m + (t // 2)
+    return m + t // 2
 
 
 poss = True

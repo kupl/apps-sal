@@ -1,1 +1,2 @@
-def get_age(s): return int(s[0])
+def get_age(s):
+    return int(s[0])

@@ -4,7 +4,7 @@ def basereduct(x, f=0):
         return x
     elif f == 150:
         return -1
-    elif "9" in s:
+    elif '9' in s:
         f += 1
         return basereduct(int(s, 11), f)
     else:

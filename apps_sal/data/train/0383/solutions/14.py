@@ -1,9 +1,10 @@
 class Solution:
+
     def dfs(self, i, visited, graph):
         if i in visited:
             return
         visited.add(i)
-        for x, edge in enumerate(graph[i]):
+        for (x, edge) in enumerate(graph[i]):
             if edge:
                 self.dfs(x, visited, graph)
 
@@ -18,5 +19,4 @@ class Solution:
             if len(visited) < numInfected:
                 numInfected = len(visited)
                 minVal = i
-
         return minVal

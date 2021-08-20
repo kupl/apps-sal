@@ -1,22 +1,10 @@
-
-
 s = input()
 l = len(s)
-
 instances = [[] for x in range(26)]
-
 s_i = [ord(c) - 97 for c in s]
-
-
 for i in range(l):
     instances[s_i[i]].append(i)
-
-
-#sum_probability += len * probability
-#probability = sum_probabilty
-
 sum_probability = 0
-
 for c in range(0, 26):
     if not instances[c]:
         continue
@@ -34,6 +22,4 @@ for c in range(0, 26):
                 probability += 1
         max_probability = max(max_probability, probability)
     sum_probability += max_probability
-
-
 print(sum_probability / l)

@@ -3,11 +3,12 @@ import sys
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
 class Fraction:
+
     def __init__(self, p=0, q=1, reduced=True):
         if type(p) == int:
             self.p = p
@@ -36,9 +37,9 @@ class Fraction:
 
     def __str__(self):
         if self.q == 1:
-            return(str(self.p))
+            return str(self.p)
         else:
-            return(str(self.p) + '/' + str(self.q))
+            return str(self.p) + '/' + str(self.q)
 
     def __lt__(self, other):
         self.reduce()
@@ -160,7 +161,7 @@ class Fraction:
         elif type(other) == float:
             return self.p / self.q + other
         else:
-            return Fraction(self.p * other.q + self.q * other. p, self.q * other.q)
+            return Fraction(self.p * other.q + self.q * other.p, self.q * other.q)
 
     def __radd__(self, other):
         self.reduce()
@@ -169,7 +170,7 @@ class Fraction:
         elif type(other) == float:
             return self.p / self.q + other
         else:
-            return Fraction(self.p * other.q + self.q * other. p, self.q * other.q)
+            return Fraction(self.p * other.q + self.q * other.p, self.q * other.q)
 
     def __iadd__(self, other):
         self.reduce()
@@ -183,7 +184,7 @@ class Fraction:
         elif type(other) == float:
             return self.p / self.q - other
         else:
-            return Fraction(self.p * other.q - self.q * other. p, self.q * other.q)
+            return Fraction(self.p * other.q - self.q * other.p, self.q * other.q)
 
     def __rsub__(self, other):
         self.reduce()
@@ -192,7 +193,7 @@ class Fraction:
         elif type(other) == float:
             return other - self.p / self.q
         else:
-            return Fraction(self.q * other. p - self.p * other.q, self.q * other.q)
+            return Fraction(self.q * other.p - self.p * other.q, self.q * other.q)
 
     def __pos__(self):
         return Fraction(+self.p, +self.q)
@@ -216,15 +217,15 @@ class Fraction:
         return round(float(self), digits)
 
 
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 product = a * c
 B1 = b * c
 B2 = a * d
 if B1 > B2:
-    B1, B2 = B2, B1
+    (B1, B2) = (B2, B1)
 ans = Fraction(B2 - B1, B2)
 ans.reduce()
 if ans != 0:
     print(abs(ans))
 else:
-    print("0/1")
+    print('0/1')

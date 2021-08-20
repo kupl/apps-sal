@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, a, b, c, d = list(map(int, input().split()))
+    (n, a, b, c, d) = list(map(int, input().split()))
     minall = c - d
     maxall = c + d
     minone = a - b

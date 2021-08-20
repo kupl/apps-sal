@@ -1,6 +1,7 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
-        mod_1, mod_2, res, remove = [], [], 0, float('inf')
+        (mod_1, mod_2, res, remove) = ([], [], 0, float('inf'))
         for i in nums:
             if i % 3 == 0:
                 res += i

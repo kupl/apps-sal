@@ -1,13 +1,3 @@
-#    !/usr/bin/env python3
-#    encoding: UTF-8
-#    Modified: <13/Oct/2019 02:38:22 PM>
-
-
-#    ✪ H4WK3yE乡
-#    Mohd. Farhan Tahir
-#    Indian Institute Of Information Technology (IIIT), Gwalior
-
-
 import sys
 import os
 from io import IOBase, BytesIO
@@ -15,9 +5,8 @@ from io import IOBase, BytesIO
 
 def main():
     from math import ceil
-
     for tc in range(int(input())):
-        a, b, c, d, k = get_ints()
+        (a, b, c, d, k) = get_ints()
         pen = ceil(a / c)
         pencil = ceil(b / d)
         if pen + pencil > k:
@@ -35,7 +24,7 @@ class FastIO(BytesIO):
     def __init__(self, file):
         self._file = file
         self._fd = file.fileno()
-        self.writable = "x" in file.mode or "w" in file.mode
+        self.writable = 'x' in file.mode or 'w' in file.mode
         self.write = super(FastIO, self).write if self.writable else None
 
     def _fill(self):
@@ -51,17 +40,18 @@ class FastIO(BytesIO):
     def readline(self):
         while self.newlines == 0:
             s = self._fill()
-            self.newlines = s.count(b"\n") + (not s)
+            self.newlines = s.count(b'\n') + (not s)
         self.newlines -= 1
         return super(FastIO, self).readline()
 
     def flush(self):
         if self.writable:
             os.write(self._fd, self.getvalue())
-            self.truncate(0), self.seek(0)
+            (self.truncate(0), self.seek(0))
 
 
 class IOWrapper(IOBase):
+
     def __init__(self, file):
         py2 = round(0.5)
         self.buffer = FastIO(file)
@@ -72,12 +62,12 @@ class IOWrapper(IOBase):
             self.read = self.buffer.read
             self.readline = self.buffer.readline
         else:
-            self.write = lambda s: self.buffer.write(s.encode("ascii"))
-            self.read = lambda: self.buffer.read().decode("ascii")
-            self.readline = lambda: self.buffer.readline().decode("ascii")
+            self.write = lambda s: self.buffer.write(s.encode('ascii'))
+            self.read = lambda: self.buffer.read().decode('ascii')
+            self.readline = lambda: self.buffer.readline().decode('ascii')
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+(sys.stdin, sys.stdout) = (IOWrapper(sys.stdin), IOWrapper(sys.stdout))
 
 
 def get_array():

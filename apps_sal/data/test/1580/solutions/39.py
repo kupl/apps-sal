@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
 from collections import deque, Counter
 from heapq import heappop, heappush
 from bisect import bisect_right
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.parents = list(range(n))
         self.size = [1] * n
@@ -21,20 +21,19 @@ class UnionFind():
         y = self.find(y)
         if x != y:
             if self.size[x] < self.size[y]:
-                x, y = y, x
+                (x, y) = (y, x)
             self.parents[y] = x
             self.size[x] += self.size[y]
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     uf = UnionFind(N)
     for _ in range(M):
-        X, Y, Z = [int(x) - 1 for x in input().split()]
+        (X, Y, Z) = [int(x) - 1 for x in input().split()]
         uf.union(X, Y)
-    # print(len(set(uf.parents)))
     ans = [uf.find(x) for x in uf.parents]
-    print((len(set(ans))))
+    print(len(set(ans)))
 
 
 def __starting_point():

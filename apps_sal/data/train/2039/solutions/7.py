@@ -2,14 +2,10 @@ import heapq
 import sys
 import bisect
 from collections import defaultdict
-
 from itertools import product
-
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-
-l, r = -1, m
+(l, r) = (-1, m)
 
 
 def check_v(v):
@@ -20,11 +16,10 @@ def check_v(v):
                 continue
             else:
                 return False
+        elif el + v >= M + m:
+            continue
         else:
-            if el + v >= M + m:
-                continue
-            else:
-                M = el
+            M = el
     return True
 
 

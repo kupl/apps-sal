@@ -1,16 +1,15 @@
 import sys
 my_file = sys.stdin
-#my_file = open("input.txt", "r")
-n = int(my_file.readline().strip("\n"))
-a = [int(i) for i in my_file.readline().strip("\n").split()]
-m = int(my_file.readline().strip("\n"))
+n = int(my_file.readline().strip('\n'))
+a = [int(i) for i in my_file.readline().strip('\n').split()]
+m = int(my_file.readline().strip('\n'))
 x = []
 y = []
 for i in range(m):
-    line = [int(k) for k in my_file.readline().strip("\n").split()]
+    line = [int(k) for k in my_file.readline().strip('\n').split()]
     x.append(line[0] - 1)
     y.append(line[1])
-for x, y in zip(x, y):
+for (x, y) in zip(x, y):
     try:
         if x - 1 >= 0:
             a[x - 1] += y - 1

@@ -8,10 +8,9 @@ def check(arr, n):
 
 
 def pick_peaks(arr):
-    data = {"pos": [], "peaks": []}
-    for i, n in enumerate(arr[1:-1], 1):
+    data = {'pos': [], 'peaks': []}
+    for (i, n) in enumerate(arr[1:-1], 1):
         if arr[i - 1] < n >= arr[i + 1] and check(arr[i:], n):
-            data["pos"] += [i]
-            data["peaks"] += [n]
-
+            data['pos'] += [i]
+            data['peaks'] += [n]
     return data

@@ -1,6 +1,8 @@
-# cook your dish here
 import sys
-def input(): return sys.stdin.readline().rstrip('\r\n')
+
+
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
 
 
 for _ in range(int(input())):

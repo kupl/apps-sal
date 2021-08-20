@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         d = dict()
         n = len(s)
@@ -12,8 +13,7 @@ class Solution:
                     st.add(s[j])
                 x = s[i:j + 1]
                 ln = j - i + 1
-                # print(x,ln)
-                if ln >= minSize and ln <= maxSize and l <= maxLetters:
+                if ln >= minSize and ln <= maxSize and (l <= maxLetters):
                     if x in d:
                         d[x] += 1
                     else:

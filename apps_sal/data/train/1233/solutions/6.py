@@ -6,7 +6,6 @@ for _ in range(t):
     l = s[:]
     n = len(s)
     ans = 0
-
     if n <= 100:
         l = []
         for i in range(n):
@@ -36,5 +35,4 @@ for _ in range(t):
                 unmatched -= 1
             if unmatched <= 1:
                 ans = max(ans, j - i + 1)
-
     print(ans)

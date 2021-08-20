@@ -4,5 +4,4 @@ def contamination(text, char):
     text = list(text)
     for x in range(len(text)):
         text[x] = char
-
     return ''.join(text)

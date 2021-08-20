@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, l: int) -> int:
         dpTable = [1] * 10
         for _ in range(l - 1):

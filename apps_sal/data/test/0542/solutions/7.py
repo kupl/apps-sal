@@ -1,4 +1,3 @@
-
 def compare(s1, s2):
     ind = False
     for i in range(max(len(s1), len(s2))):
@@ -17,18 +16,14 @@ def compare(s1, s2):
 
 
 n = int(input())
-
 L = [input() for i in range(n)]
-
 first = []
 second = []
-
 for s in L:
     if s[0] == '-':
-        second.append(int(s) * (-1))
+        second.append(int(s) * -1)
     else:
         first.append(int(s))
-
 if sum(first) > sum(second):
     print('first')
 elif sum(first) < sum(second):
@@ -39,8 +34,7 @@ else:
         print('first')
     elif res == 's2':
         print('second')
+    elif int(L[-1]) >= 0:
+        print('first')
     else:
-        if int(L[-1]) >= 0:
-            print('first')
-        else:
-            print('second')
+        print('second')

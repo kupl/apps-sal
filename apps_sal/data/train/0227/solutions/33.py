@@ -1,9 +1,9 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
         longest = start = end = zeroes = 0
         while end < len(A):
             num = A[end]
-
             if not num:
                 zeroes += 1
             end += 1

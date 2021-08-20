@@ -1,4 +1,4 @@
-n, c = list(map(int, input().split()))
+(n, c) = list(map(int, input().split()))
 cnt = [0] * 500005
 ans = 0
 for v in map(int, input().split()):

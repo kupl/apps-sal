@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getSteps(lo):
             steps = 0
             reduced = lo
@@ -9,9 +11,7 @@ class Solution:
                 else:
                     reduced = 3 * reduced + 1
                 steps += 1
-
-            return (steps)
-
+            return steps
         a = {}
         for i in range(lo, hi + 1):
             steps = getSteps(i)
@@ -19,10 +19,8 @@ class Solution:
                 a[steps] = [i]
             else:
                 a[steps].append(i)
-
         r = []
         for key in sorted(a.keys()):
             for val in a[key]:
                 r.append(val)
-
         return r[k - 1]

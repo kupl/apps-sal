@@ -1,5 +1,5 @@
 s = input()
-x, y = 0, 0
+(x, y) = (0, 0)
 for ch in s:
     if ch == 'L':
         x = x - 1

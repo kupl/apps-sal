@@ -1,4 +1,4 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 count_dict = {s: 0 for s in range(1, n + 1)}
 for i in range(q):
     seikaisha = int(input())
@@ -7,9 +7,7 @@ for i in range(q):
     else:
         count_dict[seikaisha] = 0
 count_dict_sorted = sorted(count_dict.items(), key=lambda x: x[0])
-# print(type(count_dict_sorted))
-# print(count_dict_sorted)
-for i, j in count_dict_sorted:
+for (i, j) in count_dict_sorted:
     if k + j - q > 0:
         print('Yes')
     else:

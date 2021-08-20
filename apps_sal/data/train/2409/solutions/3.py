@@ -1,4 +1,5 @@
 class Solution:
+
     def maximum69Number(self, num: int) -> int:
         lst = list(map(int, str(num)))
         for i in range(len(lst)):

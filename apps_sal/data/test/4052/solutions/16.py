@@ -21,7 +21,7 @@ if A == B:
                 break
         for k in range(f, i, -1):
             M.append(k)
-            s[k], s[k - 1] = s[k - 1], s[k]
+            (s[k], s[k - 1]) = (s[k - 1], s[k])
     print(len(M))
     print(*M)
 else:

@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 for q in range(n):
     min1 = float('inf')

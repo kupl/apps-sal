@@ -1,7 +1,7 @@
 t = int(input())
 for q in range(t):
     answer = []
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     q1 = 0
     while q1 < n:
         answer.append(chr(ord('a') + q1 % k))

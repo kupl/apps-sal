@@ -1,11 +1,9 @@
 N = int(input())
 S = []
-
 for i in range(N):
     S.append(str(input()))
 S.sort()
 S.append(0)
-
 prev_name = S[0]
 cnt = 1
 names = []
@@ -19,7 +17,6 @@ for i in range(1, N + 1):
         prev_name = S[i]
         cnt = 1
 max_cnt = max(cnts)
-
 for i in range(len(names)):
     if cnts[i] == max_cnt:
         print(names[i])

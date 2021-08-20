@@ -3,7 +3,7 @@ n = int(input())
 s = [input() for i in range(n)]
 d = {}
 for i in s:
-    x = "".join(sorted(list(i)))
+    x = ''.join(sorted(list(i)))
     if x not in d:
         d[x] = 1
     else:

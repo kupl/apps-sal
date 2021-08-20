@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
 a = [0 for i in range(26)]
 for i in s:
@@ -15,5 +15,4 @@ while k != 0:
         s += k * k
         k = 0
     i += 1
-
 print(s)

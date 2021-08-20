@@ -1,4 +1,5 @@
 class Solution:
+
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -10,9 +11,9 @@ class Solution:
         end = len(nums) - 1
         while start < end:
             curr_sum = sorted_nums[start] + sorted_nums[end]
-            if (curr_sum == target):
+            if curr_sum == target:
                 break
-            if (curr_sum < target):
+            if curr_sum < target:
                 start += 1
             else:
                 end -= 1

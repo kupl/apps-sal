@@ -1,5 +1,4 @@
 def pick_peaks(arr):
-    # your code here
     result = {'pos': [], 'peaks': []}
     flagIndex = -1
     for i in range(1, len(arr) - 1):
@@ -15,5 +14,4 @@ def pick_peaks(arr):
                 flagIndex = -1
             elif arr[i] < arr[i + 1]:
                 flagIndex = -1
-
     return result

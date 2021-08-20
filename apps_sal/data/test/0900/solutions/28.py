@@ -1,6 +1,5 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 S = input()
-
 cur = [0] * 13
 cur[0] = 1
 r = 1
@@ -17,7 +16,5 @@ for i in range(len(S)):
             cur[m] %= MOD
     else:
         base = (base + r * int(s)) % 13
-
-    r = (10 * r) % 13
-
+    r = 10 * r % 13
 print(cur[(5 - base) % 13])

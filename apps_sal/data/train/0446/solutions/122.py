@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         d = {}
         for i in range(len(arr)):
@@ -6,7 +7,6 @@ class Solution:
                 d[arr[i]] += 1
             else:
                 d[arr[i]] = 1
-
         m = sorted(d.values())
         ans = len(m)
         for c in m:

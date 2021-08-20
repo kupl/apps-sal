@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
@@ -10,6 +9,6 @@ for _ in range(t):
             TWins = True
             break
     if TWins or sumA % 2 != 0:
-        print("T")
+        print('T')
     else:
-        print("HL")
+        print('HL')

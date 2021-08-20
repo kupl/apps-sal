@@ -1,6 +1,5 @@
-
 def m():
-    n, p = list(map(int, input().split()))
+    (n, p) = list(map(int, input().split()))
     now = 0
     s = input()
     if p == 2 or p == 5:
@@ -17,8 +16,7 @@ def m():
             now = (now + c * int(s[i])) % p
             c = 10 * c % p
             table[now] += 1
-        ans = sum(j * (j - 1) // 2 for j in table)
-
+        ans = sum((j * (j - 1) // 2 for j in table))
     print(ans)
 
 

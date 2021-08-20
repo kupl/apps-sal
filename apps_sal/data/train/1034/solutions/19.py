@@ -1,11 +1,10 @@
-
 def prime(n):
     ans = []
     i = 2
-    while (i * i <= n):
+    while i * i <= n:
         if n % i == 0:
             temp1 = 1
-            while (n % i == 0):
+            while n % i == 0:
                 n //= i
                 temp1 *= i
             ans.append(temp1)
@@ -31,7 +30,7 @@ def recur(arr, k):
 
 tc = int(input())
 for i in range(tc):
-    k, x = list(map(int, input().split()))
+    (k, x) = list(map(int, input().split()))
     p = prime(x)
     if len(p) <= k:
         print(sum(p) + k - len(p))

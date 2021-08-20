@@ -2,6 +2,7 @@ import collections
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -9,7 +10,6 @@ class Solution:
         queue = collections.deque()
         for coin in coins:
             queue.append((amount - coin, 1))
-
         while queue:
             curr = queue.popleft()
             if curr[0] == 0:

@@ -32,7 +32,7 @@ def score_selector(selector):
     so that natural ordering can be used without having to specify a key
     for the sort call.
     """
-    low, ids, classes, tags = 0, 0, 0, 0
+    (low, ids, classes, tags) = (0, 0, 0, 0)
     for part in tokenise(selector):
         if part.startswith('.'):
             classes -= 1
@@ -42,10 +42,9 @@ def score_selector(selector):
             low += 1
         else:
             tags -= 1
-
-    return low, ids, classes, tags
+    return (low, ids, classes, tags)
 
 
 def compare(a, b):
     """Compares two CSS selectors and returns the one with highest precedence"""
-    return sorted([(score_selector(s), -i, s) for i, s in enumerate([a, b])])[0][-1]
+    return sorted([(score_selector(s), -i, s) for (i, s) in enumerate([a, b])])[0][-1]

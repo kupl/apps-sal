@@ -1,8 +1,9 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         prefix = {0: -1}
-        res, best, dp = sys.maxsize, sys.maxsize, [sys.maxsize] * len(arr)
-        for i, acc in enumerate(itertools.accumulate(arr)):
+        (res, best, dp) = (sys.maxsize, sys.maxsize, [sys.maxsize] * len(arr))
+        for (i, acc) in enumerate(itertools.accumulate(arr)):
             if acc - target in prefix:
                 end = prefix[acc - target]
                 if end > -1:

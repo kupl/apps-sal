@@ -11,6 +11,6 @@ for i in range(n - 1):
     elif u and s[i] + 1 < s[i + 1]:
         t = s[i] + 1
         while t < s[i + 1] and u:
-            k += (t - s[u.pop(0)])
+            k += t - s[u.pop(0)]
             t += 1
 print(k)

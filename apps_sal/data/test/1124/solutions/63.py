@@ -2,6 +2,7 @@ from heapq import heappush, heappop, heapify
 
 
 class RemovableHeap:
+
     def __init__(self, is_max_heap: bool = False, data: list = None):
         self.data = [] if data is None else data
         self.erased = []
@@ -35,13 +36,11 @@ class RemovableHeap:
 def main():
     N = int(input())
     A = set(map(int, input().split()))
-
     max_que = RemovableHeap(is_max_heap=True)
     min_que = RemovableHeap()
     for a in A:
         max_que.push(a)
         min_que.push(a)
-
     while min_que.get() != max_que.get():
         min_A = min_que.get()
         while min_A < max_que.get():
@@ -50,8 +49,7 @@ def main():
             max_que.push((X - 1) % min_A + 1)
             min_que.push((X - 1) % min_A + 1)
         max_que.remove(min_que.pop())
-
-    print((max_que.get()))
+    print(max_que.get())
 
 
 main()

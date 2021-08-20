@@ -1,6 +1,6 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
-        # https://blog.csdn.net/fuxuemingzhu/article/details/84925747
         A.sort()
         N = len(A)
         count = collections.Counter(A)
@@ -15,12 +15,11 @@ class Solution:
                     if count[A[i] / 2] == 0:
                         del count[A[i] / 2]
                     del count[A[i]]
+            elif count[A[i] * 2] == 0:
+                return False
             else:
+                count[A[i] * 2] -= count[A[i]]
                 if count[A[i] * 2] == 0:
-                    return False
-                else:
-                    count[A[i] * 2] -= count[A[i]]
-                    if count[A[i] * 2] == 0:
-                        del count[A[i] * 2]
-                    del count[A[i]]
+                    del count[A[i] * 2]
+                del count[A[i]]
         return True

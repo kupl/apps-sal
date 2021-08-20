@@ -1,9 +1,9 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int]) -> int:
         deleted = False
-        max_, cur_cnt, last_cnt = 0, 0, 0
-        idx, size = 0, len(nums)
-
+        (max_, cur_cnt, last_cnt) = (0, 0, 0)
+        (idx, size) = (0, len(nums))
         while idx < size and nums[idx] == 0:
             idx += 1
         for i in range(idx, size):
@@ -16,7 +16,6 @@ class Solution:
                 else:
                     cur_cnt -= last_cnt
                 last_cnt = cur_cnt
-
         if size == sum(nums):
-            return size - 1  # [1,1,1,1]
+            return size - 1
         return max_

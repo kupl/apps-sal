@@ -1,5 +1,5 @@
 n = int(input())
-A = [int(i) for i in input().split(" ")]
+A = [int(i) for i in input().split(' ')]
 x = min(A)
 ans = n
 for i in range(n):

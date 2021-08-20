@@ -10,6 +10,5 @@ for _ in range(int(input())):
             fuel += arr[i]
         else:
             break
-
     dis += fuel
     print(dis)

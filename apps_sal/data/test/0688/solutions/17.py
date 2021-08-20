@@ -16,7 +16,7 @@ for i in range(len(t)):
         b[6] += 1
     else:
         b[int(t[i])] += 1
-ans = 10**9
+ans = 10 ** 9
 for i in range(10):
     if a[i] != 0:
         ans = min(ans, b[i] // a[i])

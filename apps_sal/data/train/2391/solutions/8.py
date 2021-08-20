@@ -1,10 +1,28 @@
 import sys
-def rs(): return sys.stdin.readline().rstrip()
-def ri(): return int(sys.stdin.readline())
-def ria(): return list(map(int, sys.stdin.readline().split()))
-def ws(s): sys.stdout.write(s + '\n')
-def wi(n): sys.stdout.write(str(n) + '\n')
-def wia(a): sys.stdout.write(' '.join([str(x) for x in a]) + '\n')
+
+
+def rs():
+    return sys.stdin.readline().rstrip()
+
+
+def ri():
+    return int(sys.stdin.readline())
+
+
+def ria():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def ws(s):
+    sys.stdout.write(s + '\n')
+
+
+def wi(n):
+    sys.stdout.write(str(n) + '\n')
+
+
+def wia(a):
+    sys.stdout.write(' '.join([str(x) for x in a]) + '\n')
 
 
 def rotate(a, i):
@@ -17,7 +35,6 @@ def rotate(a, i):
 def solve(n, a):
     sa = sorted(a)
     s = []
-
     rolled = False
     i = 0
     while i < n:
@@ -38,7 +55,6 @@ def solve(n, a):
                 if rolled:
                     wi(-1)
                     return
-
                 found = False
                 for k in range(n - 2, 0, -1):
                     if len(set(a[k - 1:k + 2])) == 2:
@@ -58,9 +74,7 @@ def solve(n, a):
                 else:
                     wi(-1)
                     return
-
         i += 1
-
     if len(s) <= n * n:
         wi(len(s))
         wia(s)

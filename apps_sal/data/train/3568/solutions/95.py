@@ -1,8 +1,7 @@
 def bumps(road):
-    n_count = road.count("n")
-
+    n_count = road.count('n')
     if n_count > 15:
-        return "Car Dead"
+        return 'Car Dead'
     elif n_count <= 15:
-        return "Woohoo!"
+        return 'Woohoo!'
     return

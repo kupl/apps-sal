@@ -19,9 +19,7 @@ for _ in range(t):
         continue
     x = a.count(max(s))
     y = max(s)
-    if(y == a.count(min(s))):
+    if y == a.count(min(s)):
         print(x)
     else:
         print(-1)
-    # ans = max(s)
-    # print(n-ans)

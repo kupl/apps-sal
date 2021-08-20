@@ -9,4 +9,4 @@ for i in range((n - 1) // 2):
         check = False
     if s[i + (n + 1) // 2] != s[n - i - 1]:
         check = False
-print("Yes" if check else "No")
+print('Yes' if check else 'No')

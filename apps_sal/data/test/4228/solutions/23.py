@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 a = [l + i for i in range(n)]
 if 0 in a:
     print(sum(a))

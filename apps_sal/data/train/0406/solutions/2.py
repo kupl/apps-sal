@@ -1,17 +1,15 @@
-class Solution():
+class Solution:
+
     def ladderLength(self, beginWord, endWord, wordDict):
-        front, back = set([beginWord]), set([endWord])
+        (front, back) = (set([beginWord]), set([endWord]))
         wordDict = set(wordDict)
         length = 2
         width = len(beginWord)
         charSet = 'abcdefghijklmnopqrstuvwxyz'
-
         if endWord not in wordDict:
             return 0
-
         while front:
             newFront = set()
-
             for phase in front:
                 for i in range(width):
                     for c in charSet:
@@ -21,11 +19,8 @@ class Solution():
                         if nw in wordDict:
                             newFront.add(nw)
             front = newFront
-
             if len(front) > len(back):
-                front, back = back, front
-
+                (front, back) = (back, front)
             wordDict -= wordDict & front
             length += 1
-
         return 0

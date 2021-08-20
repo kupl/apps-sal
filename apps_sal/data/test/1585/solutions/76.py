@@ -2,7 +2,7 @@ def LI():
     return list(map(int, input().split()))
 
 
-X, Y = LI()
+(X, Y) = LI()
 count = 1
 total = X
 for i in range(1000000):

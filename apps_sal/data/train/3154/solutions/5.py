@@ -1,5 +1,4 @@
 def color_2_grey(colors):
-
     res = []
     for row in colors:
         g_row = []

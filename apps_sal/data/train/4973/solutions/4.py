@@ -5,5 +5,4 @@ def trouble(arr, t):
             del arr[i + 1]
         else:
             i += 1
-
     return arr

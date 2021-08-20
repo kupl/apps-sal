@@ -1,9 +1,9 @@
 from collections import defaultdict
 3
-# coding: utf-8
 
 
 class UnionFind(object):
+
     def __init__(self, N):
         self.parent = [x for x in range(N)]
 
@@ -24,10 +24,10 @@ class UnionFind(object):
         return root_x == root_y
 
     def num_group(self):
-        return sum(1 for i in range(len(self.parent)) if self.parent[i] == i)
+        return sum((1 for i in range(len(self.parent)) if self.parent[i] == i))
 
 
-N, M = (int(x) for x in input().split())
+(N, M) = (int(x) for x in input().split())
 B = [[int(x) - 1 for x in input().split()] for _ in range(M)]
 
 

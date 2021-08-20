@@ -3,4 +3,4 @@ def remove_duplicate_words(s):
     for word in s.split():
         if word not in new_list:
             new_list.append(word)
-    return " ".join(new_list)
+    return ' '.join(new_list)

@@ -1,5 +1,9 @@
-def kk(): return map(int, input().split())
-def ll(): return list(kk())
+def kk():
+    return map(int, input().split())
+
+
+def ll():
+    return list(kk())
 
 
 def dp(ls):
@@ -8,4 +12,4 @@ def dp(ls):
     return max(dp(ls[:len(ls) // 2]), dp(ls[len(ls) // 2:]))
 
 
-_ = input(), print(dp(ll()))
+_ = (input(), print(dp(ll())))

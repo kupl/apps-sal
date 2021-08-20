@@ -1,5 +1,8 @@
 from datetime import *
-def R(): return datetime(*map(int, input().split(':')))
+
+
+def R():
+    return datetime(*map(int, input().split(':')))
 
 
 date1 = R()

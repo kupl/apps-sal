@@ -1,5 +1,4 @@
 k = int(input())
-
 if k == 0:
     a = [1, 1]
 elif k == 1:
@@ -15,9 +14,6 @@ else:
     m = k % 50
     for i in range(-1, -m - 1, -1):
         a[i] += 1
-print((len(a)))
-
-# print(a)
-
+print(len(a))
 a = [str(i) for i in a]
-print((' '.join(a)))
+print(' '.join(a))

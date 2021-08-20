@@ -7,7 +7,6 @@ def word_mesh(arr):
 
 
 def mesher(pair):
-    a, b = pair
-    nChars = next(i for i in count(min(map(len, pair)), -1)
-                  if a.endswith(b[:i]))
+    (a, b) = pair
+    nChars = next((i for i in count(min(map(len, pair)), -1) if a.endswith(b[:i])))
     return b[:nChars]

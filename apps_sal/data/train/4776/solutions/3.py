@@ -1,6 +1,5 @@
 def length_sup_u_k(n, k):
     u = {1: 1, 2: 1}
-
     count = 0
     if k == 1:
         count += 2

@@ -1,14 +1,13 @@
-A, B, C, D = map(int, input().split())
+(A, B, C, D) = map(int, input().split())
 if A <= C:
     if D >= B:
         t = B - C
     else:
         t = D - C
+elif D >= B:
+    t = B - A
 else:
-    if D >= B:
-        t = B - A
-    else:
-        t = D - A
+    t = D - A
 if t <= 0:
     print(0)
 else:

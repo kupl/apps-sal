@@ -2,6 +2,7 @@ from heapq import *
 
 
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -12,9 +13,10 @@ class Point:
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         distance_heap = []
-        for x, y in points:
+        for (x, y) in points:
             if len(distance_heap) >= K:
                 if Point(x, y) > distance_heap[0]:
                     heappop(distance_heap)
@@ -22,9 +24,7 @@ class Solution:
             else:
                 heappush(distance_heap, Point(x, y))
         res = []
-
         while distance_heap:
             point = heappop(distance_heap)
             res.append([point.x, point.y])
-
         return res

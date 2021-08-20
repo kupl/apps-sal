@@ -1,6 +1,6 @@
 s = input()
 t = input()
-ans = ""
+ans = ''
 if (len(s) + len(t)) % 2 == 0:
     for i in range(len(s)):
         ans += s[i]
@@ -10,5 +10,4 @@ else:
         ans += s[i]
         ans += t[i]
     ans += s[-1]
-
 print(ans)

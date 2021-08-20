@@ -1,8 +1,6 @@
-Y, M, D = input().split("/")
-
+(Y, M, D) = input().split('/')
 S = int(Y + M + D)
-
 if S <= 20190430:
-    print("Heisei")
+    print('Heisei')
 else:
-    print("TBD")
+    print('TBD')

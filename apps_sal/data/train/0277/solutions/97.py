@@ -1,4 +1,5 @@
 class Solution:
+
     def numTimesAllBlue(self, light: List[int]) -> int:
         count = 0
         max_idx = 0
@@ -8,5 +9,4 @@ class Solution:
             count += 1
             if count == max_idx + 1:
                 res += 1
-
         return res

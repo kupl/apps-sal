@@ -1,4 +1,5 @@
 class InfiniTick:
+
     def __init__(self):
         self.mem = [0]
         self.pointer = 0
@@ -29,26 +30,25 @@ class InfiniTick:
         return chr(self.mem[self.pointer])
 
     def process(self, tape):
-        result = ""
+        result = ''
         i = 0
-
         while True:
-            if tape[i] == ">":
+            if tape[i] == '>':
                 self.move_right()
-            elif tape[i] == "<":
+            elif tape[i] == '<':
                 self.move_left()
-            elif tape[i] == "+":
+            elif tape[i] == '+':
                 self.increment()
-            elif tape[i] == "-":
+            elif tape[i] == '-':
                 self.decrement()
-            elif tape[i] == "*":
+            elif tape[i] == '*':
                 result += self.output()
-            elif tape[i] == "&":
+            elif tape[i] == '&':
                 break
-            elif tape[i] == "/":
+            elif tape[i] == '/':
                 if self.mem[self.pointer] == 0:
                     i += 1
-            elif tape[i] == "\\":
+            elif tape[i] == '\\':
                 if self.mem[self.pointer] != 0:
                     i += 1
             i += 1
@@ -56,7 +56,6 @@ class InfiniTick:
                 i = 0
             elif i > len(tape):
                 i = 1
-
         return result
 
 

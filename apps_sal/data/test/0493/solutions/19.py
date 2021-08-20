@@ -3,7 +3,7 @@ s = input()
 balance = 0
 i = 0
 calc = [1] * n
-firstr, lastl = -1, -1
+(firstr, lastl) = (-1, -1)
 while i < n:
     if s[i] == 'R':
         balance += 1

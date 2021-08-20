@@ -1,5 +1,5 @@
 def pick_peaks(arr):
-    redic = {"pos": [], "peaks": []}
+    redic = {'pos': [], 'peaks': []}
     for i in range(1, len(arr) - 1):
         if all((arr[i] > arr[i - 1], arr[i] >= arr[i + 1])):
             j = i

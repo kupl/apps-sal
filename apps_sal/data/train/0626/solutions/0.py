@@ -13,7 +13,7 @@ def reversebinary(bits, n):
 
 
 for i in range(t):
-    k, msg = input().split()
+    (k, msg) = input().split()
     k = int(k)
     newmsg = []
     for j in msg:

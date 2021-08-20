@@ -3,6 +3,7 @@ dirs = [(0, -1), (0, 1), (-1, 0), (1, 0)]
 
 
 class DSU:
+
     def __init__(self, n):
         self.n = n
         self.parent = [x for x in range(n)]
@@ -15,7 +16,7 @@ class DSU:
         return self.parent[x]
 
     def union(self, s, t):
-        sp, tp = self.find(s), self.find(t)
+        (sp, tp) = (self.find(s), self.find(t))
         if sp == tp:
             return
         if self.rank[sp] > self.rank[tp]:
@@ -28,35 +29,34 @@ class DSU:
 
 
 class Solution:
+
     def closedIsland(self, grid: List[List[int]]) -> int:
-        # 0 is land,  1 is water!
-        m, n = len(grid), len(grid[0])
+        (m, n) = (len(grid), len(grid[0]))
         net = DSU(m * n)
         for r in range(m):
             for c in range(n):
                 if grid[r][c] == 1:
                     continue
-                # grid[r][c] = 0: land
                 net.land[r * n + c] = True
                 for d in dirs:
-                    nr, nc = r + d[0], c + d[1]
-                    if not (0 <= nr < m) or not (0 <= nc < n):
+                    (nr, nc) = (r + d[0], c + d[1])
+                    if not 0 <= nr < m or not 0 <= nc < n:
                         continue
                     elif grid[nr][nc] == 1:
                         continue
                     net.union(r * n + c, nr * n + nc)
-        ihm = defaultdict(list)  # island hashmap
+        ihm = defaultdict(list)
         for i in range(m * n):
-            p = net.find(i)  # parent
+            p = net.find(i)
             if net.land[p]:
                 ihm[p].append((i // n, i % n))
-        islands = list(ihm.values())  # list of list of integer
+        islands = list(ihm.values())
         ret = 0
-        for pl in islands:  # point list
+        for pl in islands:
             isClosed = True
-            for p in pl:  # point
-                r, c = p[0], p[1]
-                if r == m - 1 or c == n - 1 or r == 0 or c == 0:
+            for p in pl:
+                (r, c) = (p[0], p[1])
+                if r == m - 1 or c == n - 1 or r == 0 or (c == 0):
                     isClosed = False
                     break
             if isClosed:

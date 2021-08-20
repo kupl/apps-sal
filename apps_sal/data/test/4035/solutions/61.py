@@ -1,5 +1,5 @@
 from math import ceil
-A, B = map(float, input().split())
+(A, B) = map(float, input().split())
 c = ceil(A / 0.08)
 d = ceil(B / 0.1)
 if c == d:

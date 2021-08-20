@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import List
@@ -6,7 +5,7 @@ except ImportError:
     pass
 
 
-def solve(N: int, t: "List[int]", v: "List[int]"):
+def solve(N: int, t: 'List[int]', v: 'List[int]'):
     bounds = [[] for _ in range(N)]
     gb0 = (1, 0)
     tend = sum(t)
@@ -33,25 +32,26 @@ def solve(N: int, t: "List[int]", v: "List[int]"):
     for i in range(N):
         end = stt + t[i]
         bi = bounds[i]
-        inf = float("inf")
+        inf = float('inf')
         mins = {-1: inf, 0: inf, 1: inf}
-        for a, b in bi:
+        for (a, b) in bi:
             mins[a] = min(mins[a], b)
         for tm in range(stt * 2, end * 2):
-            vms[tm] = min(a * tm + b * 2 for a, b in list(mins.items()))
+            vms[tm] = min((a * tm + b * 2 for (a, b) in list(mins.items())))
         stt = end
-    print((sum(vms) / 4))
+    print(sum(vms) / 4)
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    t = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
-    v = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    t = [int(next(tokens)) for _ in range(N)]
+    v = [int(next(tokens)) for _ in range(N)]
     solve(N, t, v)
 
 

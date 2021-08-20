@@ -8,18 +8,13 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 s = input()
 t = input()
-
 tmp = 0
 res = 0
-
-for i, j in zip(s, t):
+for (i, j) in zip(s, t):
     if i != j:
         res += 1
-
 print(res)

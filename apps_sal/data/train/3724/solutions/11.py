@@ -8,4 +8,4 @@ def hero(bullets: int, dragons: int) -> bool:
     Returns:
         True (Lives) or False (Dies)
     """
-    return bullets >= (dragons * 2)
+    return bullets >= dragons * 2

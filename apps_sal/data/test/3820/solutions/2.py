@@ -1,15 +1,13 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 t = input()
-
 if '*' in s:
-    a, b = s.split('*')
+    (a, b) = s.split('*')
     if len(a) + len(b) <= len(t) and t.startswith(a) and t.endswith(b):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
+elif s == t:
+    print('YES')
 else:
-    if s == t:
-        print("YES")
-    else:
-        print("NO")
+    print('NO')

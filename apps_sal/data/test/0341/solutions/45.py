@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-S, P, R = map(int, input().split())
+(N, K) = map(int, input().split())
+(S, P, R) = map(int, input().split())
 point = {'s': S, 'p': P, 'r': R}
 T = str(input())
 max_point = 0

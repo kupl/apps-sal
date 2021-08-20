@@ -1,5 +1,5 @@
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     d = h * w
     for i in range(1, h):
         sh = (h - i) // 2

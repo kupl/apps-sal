@@ -1,4 +1,5 @@
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         free_days = []
         lake_tracker = {}
@@ -10,22 +11,17 @@ class Solution:
                 if lake in lake_tracker:
                     if free_days_balance > 0:
                         index = lake_tracker[lake]
-
                         fnd = None
                         for free_day in free_days:
                             if index < free_day:
                                 fnd = free_day
                                 break
-
                         if not fnd:
                             return []
-
                         free_days_balance = free_days_balance - 1
                         lake_tracker[lake] = i
-
                         ans[fnd] = lake
                         free_days.remove(fnd)
-
                     else:
                         return []
                 else:

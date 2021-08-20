@@ -1,8 +1,8 @@
 from math import ceil
-n, A = int(input()), []
+(n, A) = (int(input()), [])
 a = b = ab = ab_ = ans = 0
 for _ in range(n):
-    t, tt = input().split()
+    (t, tt) = input().split()
     tt = int(tt)
     if t != '11':
         A.append([t, tt])
@@ -17,7 +17,7 @@ for _ in range(n):
         ab += 1
 A.sort(reverse=True, key=lambda x: x[1])
 x = y = t = ttt = ab
-k, j = a, b
+(k, j) = (a, b)
 for i in A:
     if i[0] == '10' and (j or ttt):
         ans += i[1]

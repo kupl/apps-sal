@@ -1,6 +1,5 @@
 from re import compile, match
-
-REGEX = compile(r'(http[s]*://)?(www.)?(?P<domain>[\w-]+)\.')
+REGEX = compile('(http[s]*://)?(www.)?(?P<domain>[\\w-]+)\\.')
 
 
 def domain_name(url):

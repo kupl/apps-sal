@@ -1,20 +1,15 @@
 from sys import stdin
-"""
-n=int(stdin.readline().strip())
-n,m=map(int,stdin.readline().strip().split())
-s=list(map(int,stdin.readline().strip().split()))
-s=stdin.readline().strip()
-"""
+'\nn=int(stdin.readline().strip())\nn,m=map(int,stdin.readline().strip().split())\ns=list(map(int,stdin.readline().strip().split()))\ns=stdin.readline().strip()\n'
 T = int(stdin.readline().strip())
 for caso in range(T):
-    n, k = list(map(int, stdin.readline().strip().split()))
+    (n, k) = list(map(int, stdin.readline().strip().split()))
     s = list(stdin.readline().strip())
     aux = []
     last = -1
     for i in range(n):
-        if i > 0 and s[i] == 'L' and s[i - 1] == 'W':
+        if i > 0 and s[i] == 'L' and (s[i - 1] == 'W'):
             last = i
-        if i < n - 1 and s[i] == 'L' and s[i + 1] == 'W' and last != -1:
+        if i < n - 1 and s[i] == 'L' and (s[i + 1] == 'W') and (last != -1):
             aux.append([i - last, last, i])
     aux.sort()
     for i in aux:

@@ -1,4 +1,4 @@
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 buy = {}
 sale = {}
 for i in range(n):
@@ -10,19 +10,16 @@ for i in range(n):
             buy[p] += q
         else:
             buy[p] = q
+    elif p in sale:
+        sale[p] += q
     else:
-        if p in sale:
-            sale[p] += q
-        else:
-            sale[p] = q
-
+        sale[p] = q
 items = list(sale.items())
 items.sort()
 items = items[:s]
 items.reverse()
 for i in items:
     print('S', i[0], i[1])
-
 items = list(buy.items())
 items.sort()
 items.reverse()

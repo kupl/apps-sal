@@ -1,5 +1,5 @@
 def largest_rect(h):
-    r, s, i, l = 0, [], 0, len(h)
+    (r, s, i, l) = (0, [], 0, len(h))
     while i < l:
         if not s or h[s[-1]] <= h[i]:
             s.append(i)

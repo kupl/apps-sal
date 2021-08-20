@@ -14,7 +14,6 @@ s = input()
 n = len(s)
 ans = [0] * (n + 1)
 i = n - 1
-
 while i >= 0:
     p = prefix(s[i:])
     ans[i] = 2 + ans[i + 1]
@@ -25,5 +24,4 @@ while i >= 0:
         res = len(str(z)) + (j + 1) // z + ans[i + j + 1]
         ans[i] = min(ans[i], res)
     i -= 1
-
 print(ans[0])

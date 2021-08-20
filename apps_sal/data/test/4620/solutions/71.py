@@ -9,10 +9,9 @@ def main():
             print(0)
         else:
             t = 0
-            for c, s, f in csf[i:]:
+            for (c, s, f) in csf[i:]:
                 t = max(s, t)
                 t = math.ceil(t / f) * f + c
-                #print("start:", i, t)
             print(t)
 
 

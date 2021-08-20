@@ -1,5 +1,5 @@
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -16,4 +16,4 @@ ans = pow(10, 15)
 for x in A:
     temp = N // x + x
     ans = min(ans, temp)
-print((ans - 2))
+print(ans - 2)

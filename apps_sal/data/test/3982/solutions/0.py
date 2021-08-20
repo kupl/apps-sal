@@ -11,7 +11,7 @@ def zfunc(s):
         while i + z[i] < len(s) and s[z[i]] == s[i + z[i]]:
             z[i] += 1
         if i + z[i] - 1 > r:
-            l, r = i, i + z[i] - 1
+            (l, r) = (i, i + z[i] - 1)
     return z
 
 
@@ -26,7 +26,7 @@ for i in range(1, n + 1):
     for j in range(i - 1, -1, -1):
         if j + 4 < i:
             sum4 -= f[j + 5]
-        if j + 4 <= i and s[j: j + 4] in BAD:
+        if j + 4 <= i and s[j:j + 4] in BAD:
             f[j] -= f[j + 4]
         f[j] = (f[j] + sum4) % MOD
         sum4 += f[j]

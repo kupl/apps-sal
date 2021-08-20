@@ -1,7 +1,6 @@
-
 def solve(n, b):
     for i in range(n - 1):
-        if (b[i] & b[i + 1] != b[i]):
+        if b[i] & b[i + 1] != b[i]:
             print(0)
             return
     x = 0

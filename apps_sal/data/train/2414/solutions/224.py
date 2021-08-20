@@ -13,5 +13,6 @@ def bruteforce(arr, a, b, c):
 
 
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         return bruteforce(arr, a, b, c)

@@ -1,5 +1,4 @@
 from math import *
-
 for zz in range(int(input())):
     used = set()
     ans = 0
@@ -19,11 +18,9 @@ for zz in range(int(input())):
             pos[1] -= 1
         else:
             pos[1] += 1
-        if ((ppos, tuple(pos)) in used) or ((tuple(pos), ppos) in used):
+        if (ppos, tuple(pos)) in used or (tuple(pos), ppos) in used:
             ans += 1
         else:
             used.add((ppos, tuple(pos)))
             ans += 5
     print(ans)
-
-# aaa

@@ -1,13 +1,14 @@
 class Solution:
+
     def smallestSufficientTeam(self, req_skills: List[str], people: List[List[str]]) -> List[int]:
-        key = {v: i for i, v in enumerate(req_skills)}
+        key = {v: i for (i, v) in enumerate(req_skills)}
         dp = {0: tuple()}
-        for i, p in enumerate(people):
+        for (i, p) in enumerate(people):
             his_skill = 0
             for skill in p:
                 if skill in key:
                     his_skill |= 1 << key[skill]
-            for skill_set, need in list(dict(dp).items()):
+            for (skill_set, need) in list(dict(dp).items()):
                 with_him = skill_set | his_skill
                 if with_him == skill_set:
                     continue

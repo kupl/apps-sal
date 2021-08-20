@@ -18,8 +18,8 @@ def roll_dice(rolls, sides, threshold):
     threshold -= rolls + 1
     sum_ = 0.0
     i = 0
-    while (threshold >= 0):
-        sum_ += (-1)**i * c[rolls][i] * c[threshold + rolls][threshold]
+    while threshold >= 0:
+        sum_ += (-1) ** i * c[rolls][i] * c[threshold + rolls][threshold]
         threshold -= sides
         i += 1
-    return 1.0 - sum_ / (sides ** rolls)
+    return 1.0 - sum_ / sides ** rolls

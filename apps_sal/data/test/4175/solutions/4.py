@@ -1,6 +1,5 @@
 n = int(input())
 s = set()
-
 ok = True
 t = input()
 p = t[-1]
@@ -13,5 +12,4 @@ for i in range(n - 1):
     if t[0] != p:
         ok = False
     p = t[-1]
-
-print(('Yes' if ok else 'No'))
+print('Yes' if ok else 'No')

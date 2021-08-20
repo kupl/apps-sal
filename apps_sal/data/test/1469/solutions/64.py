@@ -8,6 +8,6 @@ for i in range(1, n):
     print(i, i + 1, 2 ** (i - 1))
 w = 2 ** (n - 1)
 for j in range(20, -1, -1):
-    if (L - w) >> j & 1:
+    if L - w >> j & 1:
         print(j + 1, n, w)
         w += 2 ** j

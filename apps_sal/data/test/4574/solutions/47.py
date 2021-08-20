@@ -1,7 +1,6 @@
 N = int(input())
 A = [int(x) for x in input().split()]
 A.sort(reverse=True)
-
 s = []
 i = 0
 while i < N - 1:
@@ -12,7 +11,6 @@ while i < N - 1:
         i += 2
     else:
         i += 1
-
 if len(s) == 2:
     print(s[0] * s[1])
 else:

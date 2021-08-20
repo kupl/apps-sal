@@ -1,5 +1,4 @@
 import sys
-
 MOD = 1000000007
 
 
@@ -8,7 +7,6 @@ def solve(io):
     M = io.readInt()
     S = io.readIntArray(N)
     T = io.readIntArray(N)
-
     P = 0
     Q = 1
     A = 1
@@ -45,44 +43,37 @@ def solve(io):
             gtBot = 1
             eqTop = 1
             eqBot = 1
-        P, Q = P * gtBot + gtTop * Q, Q * gtBot
+        (P, Q) = (P * gtBot + gtTop * Q, Q * gtBot)
         P %= MOD
         Q %= MOD
-        A = (A * eqTop) % MOD
-        B = (B * eqBot) % MOD
-        if S[i] != 0 and T[i] != 0 and S[i] != T[i]:
+        A = A * eqTop % MOD
+        B = B * eqBot % MOD
+        if S[i] != 0 and T[i] != 0 and (S[i] != T[i]):
             break
-    io.println((P * modinv(Q, MOD)) % MOD)
+    io.println(P * modinv(Q, MOD) % MOD)
 
 
 def extended_gcd(aa, bb):
-    lastremainder, remainder = abs(aa), abs(bb)
-    x, lastx, y, lasty = 0, 1, 1, 0
+    (lastremainder, remainder) = (abs(aa), abs(bb))
+    (x, lastx, y, lasty) = (0, 1, 1, 0)
     while remainder:
-        lastremainder, (quotient, remainder) = remainder, divmod(lastremainder, remainder)
-        x, lastx = lastx - quotient * x, x
-        y, lasty = lasty - quotient * y, y
-    return lastremainder, lastx * (-1 if aa < 0 else 1), lasty * (-1 if bb < 0 else 1)
+        (lastremainder, (quotient, remainder)) = (remainder, divmod(lastremainder, remainder))
+        (x, lastx) = (lastx - quotient * x, x)
+        (y, lasty) = (lasty - quotient * y, y)
+    return (lastremainder, lastx * (-1 if aa < 0 else 1), lasty * (-1 if bb < 0 else 1))
 
 
 def modinv(a, m):
-    g, x, _ = extended_gcd(a, m)
+    (g, x, _) = extended_gcd(a, m)
     if g != 1:
         raise ValueError
     return x % m
-
-# +---------------------+
-# | TEMPLATE CODE BELOW |
-# |    DO NOT MODIFY    |
-# +---------------------+
-
-# TODO: maybe reading byte-by-byte is faster than reading and parsing tokens.
 
 
 class IO:
     input = None
     output = None
-    raw = ""
+    raw = ''
     buf = []
     pos = 0
 
@@ -130,7 +121,7 @@ class IO:
         while self.pos == len(self.buf):
             self.readToBuffer()
         if self.pos > 0:
-            raise ValueError("Cannot call readline in the middle of a line.")
+            raise ValueError('Cannot call readline in the middle of a line.')
         return self.raw
 
     def print(self, s):

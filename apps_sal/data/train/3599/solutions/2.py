@@ -11,4 +11,4 @@ def f12(n, k):
 
 
 def find_f1_eq_f2(n, k):
-    return next(i for i in count(n + 1) if f12(i, k))
+    return next((i for i in count(n + 1) if f12(i, k)))

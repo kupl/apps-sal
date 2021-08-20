@@ -1,4 +1,5 @@
 class Solution:
+
     def hasCycle(self, head: ListNode) -> bool:
         nodes_seen = set()
         while head is not None:

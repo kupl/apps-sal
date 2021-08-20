@@ -1,8 +1,6 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 matrix = [list(map(int, input().split())) for _ in range(n)]
 res = 0
-
 for i in range(n - 2, 0, -1):
     for j in range(m - 1, 0, -1):
         if matrix[i][j] == 0:
@@ -26,5 +24,4 @@ else:
                 break
         else:
             res = sum((sum(matrix[i]) for i in range(n)))
-
 print(res)

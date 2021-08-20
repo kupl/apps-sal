@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         created_fld = set()
         result_set = []

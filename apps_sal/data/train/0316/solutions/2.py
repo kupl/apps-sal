@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class TrieNode:
+
     def __init__(self, x=None):
         self.val = x
         self.end = False
@@ -9,13 +10,14 @@ class TrieNode:
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
         self.max_len = 0
 
     def insert(self, word):
         node = self.root
-        for i, w in enumerate(word):
+        for (i, w) in enumerate(word):
             node.children[w].val = w
             node = node.children[w]
             self.root.children[w] = node
@@ -35,8 +37,9 @@ class Trie:
 
 
 class Solution:
+
     def longestPrefix(self, s):
-        res, l, r, mod = 0, 0, 0, 10**9 + 7
+        (res, l, r, mod) = (0, 0, 0, 10 ** 9 + 7)
         for i in range(len(s) - 1):
             l = (l * 128 + ord(s[i])) % mod
             r = (r + pow(128, i, mod) * ord(s[~i])) % mod

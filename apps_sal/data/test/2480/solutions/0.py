@@ -1,5 +1,5 @@
 import bisect
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 S = [0 for i in range(N + 1)]
 for i in range(N):
@@ -18,4 +18,4 @@ for k in D:
         L = bisect.bisect_left(D[k], i - K + 1)
         R = bisect.bisect_right(D[k], i + K - 1)
         ans += R - L - 1
-print((ans // 2))
+print(ans // 2)

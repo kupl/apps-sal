@@ -1,5 +1,4 @@
 from math import factorial
-
 t = int(input())
 for _ in range(t):
     line = input()

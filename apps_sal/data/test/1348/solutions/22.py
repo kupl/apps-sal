@@ -1,9 +1,12 @@
 import sys
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
 
 
-n, k = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n, k) = I()
 d = I()
 ed = []
 d = sorted([[d[i], i + 1] for i in range(n)])

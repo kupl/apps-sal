@@ -1,4 +1,4 @@
-H, A = map(int, input().split())
+(H, A) = map(int, input().split())
 ans = H // A
 mod = H % A
 if mod == 0:

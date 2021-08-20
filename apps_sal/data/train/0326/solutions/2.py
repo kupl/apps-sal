@@ -1,4 +1,5 @@
 class Solution:
+
     def convert(self, s, numRows):
         """
         :type s: str
@@ -7,10 +8,8 @@ class Solution:
         """
         if numRows == 1 or numRows >= len(s):
             return s
-
         list_string = [''] * numRows
-        index, step = 0, 1
-
+        (index, step) = (0, 1)
         for i in s:
             list_string[index] += i
             if index == 0:
@@ -18,5 +17,4 @@ class Solution:
             elif index == numRows - 1:
                 step = -1
             index += step
-
         return ''.join(list_string)

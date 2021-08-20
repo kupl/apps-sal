@@ -1,4 +1,5 @@
 class Solution:
+
     def lastStoneWeight(self, stones: List[int]) -> int:
         i = max(stones)
         weights = [0] * (i + 1)

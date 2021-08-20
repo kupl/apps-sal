@@ -4,6 +4,6 @@ ds = 0
 for c in s:
     ds += int(c)
 if n % ds == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

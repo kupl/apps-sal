@@ -1,5 +1,5 @@
 def f():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     s = []
     a = []
     for i in range(n):

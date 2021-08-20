@@ -1,9 +1,7 @@
-# cook your dish here
 test_cases = int(input())
 for test in range(test_cases):
     n = int(input())
     seq = list(map(int, input().split()))
-
     triplets = 0
     for i in range(n):
         res = [0 for _ in range(n)]
@@ -11,5 +9,5 @@ for test in range(test_cases):
         for j in range(i + 1, n):
             res[j] = res[j - 1] ^ seq[j]
             if res[j] == 0:
-                triplets += (j - i)
+                triplets += j - i
     print(triplets)

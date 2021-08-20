@@ -1,7 +1,7 @@
 from math import *
 from random import *
 for t in range(int(input())):
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     if b >= a:
         print(b)
         continue
@@ -13,4 +13,4 @@ for t in range(int(input())):
     cnt = a // (c - d)
     if a % (c - d) != 0:
         cnt += 1
-    print(otv + (c * cnt))
+    print(otv + c * cnt)

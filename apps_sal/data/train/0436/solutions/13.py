@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = set([n])
         level = 1
@@ -7,7 +8,6 @@ class Solution:
             for node in q:
                 if node - 1 == 0:
                     return level
-
                 new_q.add(node - 1)
                 if node % 2 == 0:
                     new_q.add(node // 2)

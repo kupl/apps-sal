@@ -15,7 +15,7 @@ for _ in range(int(input())):
             print()
             continue
         for j in range(2 * n - 1):
-            if(j == n - 1 - i or j == n - 1 + i):
+            if j == n - 1 - i or j == n - 1 + i:
                 print('*', end='')
             else:
                 print(end=' ')

@@ -10,5 +10,5 @@ def find_factors(n):
 
 
 def is_smooth(n):
-    f = {2: "power of 2", 3: "3-smooth", 5: "Hamming number", 7: "humble number"}
-    return f.get(max(find_factors(n)), "non-smooth")
+    f = {2: 'power of 2', 3: '3-smooth', 5: 'Hamming number', 7: 'humble number'}
+    return f.get(max(find_factors(n)), 'non-smooth')

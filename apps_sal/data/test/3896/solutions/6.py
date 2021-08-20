@@ -1,4 +1,4 @@
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 s = input()
 s = s[::-1]
 ans = 0

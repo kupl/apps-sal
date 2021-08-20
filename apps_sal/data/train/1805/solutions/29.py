@@ -1,9 +1,6 @@
 class Solution:
-    def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], ID: int, level: int) -> List[str]:
-        # friends is an adjacency list: person -> list<friends of person>
-        # watchedvideos: person -> list of videos
 
-        # find subset of friends with provided level
+    def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], ID: int, level: int) -> List[str]:
         freqs = dict()
         visited = set()
         visited.add(ID)
@@ -15,7 +12,5 @@ class Solution:
         for p in q:
             for v in watchedVideos[p]:
                 freqs[v] = freqs.get(v, 0) + 1
-
-        sortedfreqs = sorted([(n, v) for v, n in list(freqs.items())])
-
-        return [v for _, v in sortedfreqs]
+        sortedfreqs = sorted([(n, v) for (v, n) in list(freqs.items())])
+        return [v for (_, v) in sortedfreqs]

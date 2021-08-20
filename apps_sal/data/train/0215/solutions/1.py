@@ -1,4 +1,5 @@
 class Solution:
+
     def isGoodArray(self, nums: List[int]) -> bool:
         if not nums:
             return False

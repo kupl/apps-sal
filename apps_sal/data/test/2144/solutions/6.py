@@ -17,7 +17,7 @@ def solve(n):
 
 def main():
     for _ in range(int(input())):
-        a, m = list(map(int, input().split()))
+        (a, m) = list(map(int, input().split()))
         a = gcd(a, m)
         n = m // gcd(a, m)
         print(solve(m // gcd(a, m)))

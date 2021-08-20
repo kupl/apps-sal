@@ -1,10 +1,10 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 XY = [[0] * 2 for i in range(n)]
 X = [0] * n
 Y = [0] * n
 Z = [i for i in range(1, n + 1)]
 for i in range(n):
-    X[i], Y[i] = map(int, input().split())
+    (X[i], Y[i]) = map(int, input().split())
     XY[i] = [X[i], Y[i]]
 X.sort()
 Y.sort()
@@ -19,7 +19,7 @@ C = [[0] * (n + 1) for i in range(n + 1)]
 for i in range(1, n + 1):
     for j in range(1, n + 1):
         C[i][j] = C[i - 1][j] + C[i][j - 1] - C[i - 1][j - 1] + A[i - 1][j - 1]
-ans = 10**20
+ans = 10 ** 20
 for i in range(1, n):
     for j in range(i + 1, n + 1):
         for s in range(1, n):

@@ -2,7 +2,7 @@ def get_input_list():
     return list(map(int, input().split()))
 
 
-n, k = get_input_list()
+(n, k) = get_input_list()
 h = get_input_list()
 h.sort()
 l = []
@@ -10,7 +10,6 @@ for i in range(n - 1, 0, -1):
     if h[i] != h[i - 1]:
         for _ in range(h[i] - h[i - 1]):
             l.append(n - i)
-
 if len(l) == 0:
     print(0)
 else:

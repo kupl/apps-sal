@@ -12,8 +12,7 @@ def main():
         n = len(s)
         temp = s[(n + 3) // 2 - 1:]
         return temp == temp[::-1]
-
-    return "Yes" if first(S) and second(S) and third(S) else "No"
+    return 'Yes' if first(S) and second(S) and third(S) else 'No'
 
 
 def __starting_point():

@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 ai = list(map(int, input().split()))
 ai.sort()
 n2 = n

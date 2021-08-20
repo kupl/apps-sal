@@ -1,18 +1,18 @@
-def R(): return list(map(int, input().strip().split()))
+def R():
+    return list(map(int, input().strip().split()))
 
 
 [x, y, l, r] = R()
 a = list()
 b = list()
 cur = 1
-while(cur < r):
+while cur < r:
     a.append(cur)
     cur *= x
 cur = 1
-while(cur < r):
+while cur < r:
     b.append(cur)
     cur *= y
-
 s = set()
 s.add(l - 1)
 s.add(r + 1)

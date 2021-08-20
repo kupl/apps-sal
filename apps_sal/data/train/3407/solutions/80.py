@@ -11,4 +11,4 @@ def palindrome_chain_length(n):
     while is_palindrome(n) is False:
         n = n + reverse_n(n)
         chain_n += 1
-    return(chain_n)
+    return chain_n

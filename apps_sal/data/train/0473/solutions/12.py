@@ -1,12 +1,11 @@
 class Solution:
+
     def countTriplets(self, arr: List[int]) -> int:
-        # S1
-        ans, size = 0, len(arr)
+        (ans, size) = (0, len(arr))
         xor = [0] * size
         xor[0] = arr[0]
         for i in range(1, size):
             xor[i] = arr[i] ^ xor[i - 1]
-
         for i in range(size):
             for j in range(i + 1, size):
                 for k in range(j, size):

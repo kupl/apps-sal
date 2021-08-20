@@ -1,9 +1,10 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
-        while not all(n == 0 for n in nums):
+        while not all((n == 0 for n in nums)):
             div = 0
-            for i, n in enumerate(nums):
+            for (i, n) in enumerate(nums):
                 if n & 1:
                     ans += 1
                     n -= 1

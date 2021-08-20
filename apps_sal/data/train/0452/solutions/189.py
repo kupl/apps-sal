@@ -2,6 +2,7 @@ import sys
 
 
 class Solution:
+
     def minDifficulty(self, complexity: List[int], days: int) -> int:
         n = len(complexity)
         if n < days:

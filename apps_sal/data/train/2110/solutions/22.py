@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 d = {}
 for i in range(n):
     if A[i] in d:
@@ -11,5 +10,4 @@ for i in range(n):
         d[k] = 1
     else:
         d[A[i]] = 1
-
 print(len(d))

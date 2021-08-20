@@ -1,6 +1,5 @@
-MAX = 10**6
-MOD = 10**9 + 7
-
+MAX = 10 ** 6
+MOD = 10 ** 9 + 7
 fac = [0] * (MAX + 1)
 finv = [0] * (MAX + 1)
 inv = [0] * (MAX + 1)
@@ -42,7 +41,7 @@ def prime_factorize(n):
 
 
 def __starting_point():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     comb_init()
     prime_factor = prime_factorize(m)
     res = 1

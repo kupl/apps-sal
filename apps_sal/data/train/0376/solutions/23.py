@@ -3,6 +3,7 @@ def tri_score(a1, a2, a3):
 
 
 class Solution:
+
     def __init__(self):
         self.memory = []
 
@@ -20,6 +21,6 @@ class Solution:
             res = tri_score(A[start], A[start + 1], A[start + 2])
             self.memory[end][start] = res
             return res
-        res = min(tri_score(A[start], A[end], A[k]) + self.minScoreTriangulationPart(A, start, k) + self.minScoreTriangulationPart(A, k, end) for k in range(start + 1, end))
+        res = min((tri_score(A[start], A[end], A[k]) + self.minScoreTriangulationPart(A, start, k) + self.minScoreTriangulationPart(A, k, end) for k in range(start + 1, end)))
         self.memory[end][start] = res
         return res

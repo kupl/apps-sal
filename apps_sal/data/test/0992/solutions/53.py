@@ -1,5 +1,5 @@
 import numpy as np
-N, S = list(map(int, input().split()))
+(N, S) = list(map(int, input().split()))
 A = np.array(list(map(int, input().split())))
 P = 998244353
 table = np.zeros((N, S + 1), dtype=int)
@@ -12,4 +12,4 @@ for i in range(1, N):
     if Ai <= S:
         table[i][Ai:] += table[i - 1][:S - Ai + 1]
     table[i] = table[i] % P
-print((table[N - 1][S]))
+print(table[N - 1][S])

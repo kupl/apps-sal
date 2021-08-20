@@ -1,15 +1,16 @@
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
+
         def calc(d):
             n = len(d)
             s = sum(d.values())
             result = math.factorial(s)
             facs = {}
-            for k, v in list(d.items()):
+            for (k, v) in list(d.items()):
                 result /= math.factorial(v)
             return result
-
-        t, e = 0, 0
+        (t, e) = (0, 0)
 
         def choose(i, k, d1, d2):
             nonlocal t
@@ -37,9 +38,7 @@ class Solution:
                 d1.pop(i)
             if i in d2:
                 d2.pop(i)
-
         n = len(balls)
         k = sum(balls) // 2
         choose(0, k, {}, {})
-        # print(t, e)
         return e / t

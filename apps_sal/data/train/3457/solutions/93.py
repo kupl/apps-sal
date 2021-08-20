@@ -7,4 +7,4 @@ def final_grade(exam, projects):
         return 75
     else:
         return 0
-    return  # final grade
+    return

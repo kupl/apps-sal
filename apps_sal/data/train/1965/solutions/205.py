@@ -1,4 +1,5 @@
-class DAU():
+class DAU:
+
     def __init__(self, n):
         self.parent = list(range(n))
 
@@ -8,7 +9,7 @@ class DAU():
         return self.parent[p]
 
     def union(self, p, q):
-        pr, qr = self.find(p), self.find(q)
+        (pr, qr) = (self.find(p), self.find(q))
         if pr == qr:
             return False
         else:
@@ -17,8 +18,9 @@ class DAU():
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
-        ufA, ufB, ufAB = DAU(n), DAU(n), DAU(n)
+        (ufA, ufB, ufAB) = (DAU(n), DAU(n), DAU(n))
         usefulAB = 0
         for edge in edges:
             t = edge[0]

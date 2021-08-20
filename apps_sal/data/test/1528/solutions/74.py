@@ -1,8 +1,6 @@
-# 再帰の深さが1000を超えそうなときはこれをやっておく
 import sys
-sys.setrecursionlimit(10**7)
-
-n, x = map(int, input().split())
+sys.setrecursionlimit(10 ** 7)
+(n, x) = map(int, input().split())
 a = [0] * (n + 1)
 p = [0] * (n + 1)
 a[0] = 1

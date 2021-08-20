@@ -1,16 +1,13 @@
 import sys
 input = sys.stdin.readline
-
-H, W, K = list(map(int, input().split()))
+(H, W, K) = list(map(int, input().split()))
 S = [input().rstrip() for _ in range(H)]
-
-bit = 2**(H - 1)
+bit = 2 ** (H - 1)
 ans = 1010
 for bi in range(bit):
     w = 0
     cnt = bin(bi).count('1')
     counter_1 = [0] * H
-
     while w < W:
         i = 0
         for h in range(H):

@@ -1,4 +1,3 @@
-
 import re
 import inspect
 from sys import argv, exit
@@ -29,7 +28,8 @@ def prnt(*args, override=False):
         print(*args)
 
 
-class Spider():
+class Spider:
+
     def __init__(self, x, y, d):
         self.x = x
         self.y = y
@@ -53,30 +53,25 @@ class Spider():
 
 def main(i, n, m, lders, rders, uders):
     sightings = 0
-
     iders = [s for s in uders if s.x == i and s.y % 2 == 0]
     sightings += len(iders)
     prnt('id', len(iders))
-
-    ulders = [s for s in rders if s.y == (i - s.x)]
+    ulders = [s for s in rders if s.y == i - s.x]
     sightings += len(ulders)
     prnt('uld', len(ulders))
-
-    urders = [s for s in lders if s.y == (s.x - i)]
+    urders = [s for s in lders if s.y == s.x - i]
     sightings += len(urders)
     prnt('urd', len(urders))
-
     return str(sightings)
 
 
 def __starting_point():
     (n, m, k) = rints()
     field = [rstr() for i in range(n)]
-
     si = [0 for i in range(m)]
     spiders = []
-    for j, row in enumerate(field):
-        for i, space in enumerate(row):
+    for (j, row) in enumerate(field):
+        for (i, space) in enumerate(row):
             if space == 'R':
                 if i + j < len(si):
                     si[i + j] += 1
@@ -86,7 +81,6 @@ def __starting_point():
             if space == 'U':
                 if j % 2 == 0:
                     si[i] += 1
-
     print(' '.join([str(i) for i in si]))
 
 

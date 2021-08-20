@@ -1,8 +1,8 @@
 def go():
-    n, h, m = list(map(int, input().split(' ')))
+    (n, h, m) = list(map(int, input().split(' ')))
     houses = [h] * n
     for _ in range(m):
-        l, r, x = [int(w) for w in input().split(' ')]
+        (l, r, x) = [int(w) for w in input().split(' ')]
         l -= 1
         r -= 1
         for i in range(l, r + 1):
@@ -10,7 +10,6 @@ def go():
     answer = 0
     for i in range(n):
         answer += houses[i] ** 2
-
     return answer
 
 

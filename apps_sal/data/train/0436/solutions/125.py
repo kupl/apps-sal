@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = deque([n])
         days = 0

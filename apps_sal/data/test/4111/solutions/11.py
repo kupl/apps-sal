@@ -9,7 +9,6 @@ for i in range(n):
         e += a[i]
     b.append([e, o])
 ans = 0
-# print(b)
 for i in range(n):
     if i % 2 == 0:
         o1 = b[i][1]
@@ -23,5 +22,4 @@ for i in range(n):
         e = b[-1][1] - o1 + e1
     if o == e:
         ans += 1
-    # print(o,e,o1,e1,ans)
 print(ans)

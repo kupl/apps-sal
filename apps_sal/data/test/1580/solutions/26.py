@@ -4,15 +4,15 @@ input = sys.stdin.readline
 
 
 def read():
-    N, M = list(map(int, input().strip().split()))
+    (N, M) = list(map(int, input().strip().split()))
     XYZ = []
     for i in range(M):
-        x, y, z = list(map(int, input().strip().split()))
+        (x, y, z) = list(map(int, input().strip().split()))
         XYZ.append((x, y, z))
-    return N, M, XYZ
+    return (N, M, XYZ)
 
 
-class UnionFind():
+class UnionFind:
     """Union-Find木の実装
     """
 
@@ -35,7 +35,7 @@ class UnionFind():
         x = self.find(x)
         y = self.find(y)
         if x > y:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parent[y] = x
 
     def parents(self):
@@ -44,7 +44,7 @@ class UnionFind():
 
 def solve(N, M, XYZ):
     uf = UnionFind(N)
-    for x, y, z in XYZ:
+    for (x, y, z) in XYZ:
         uf.union(x - 1, y - 1)
     C = Counter(uf.parents())
     return len(C)
@@ -52,7 +52,7 @@ def solve(N, M, XYZ):
 
 def __starting_point():
     inputs = read()
-    print((solve(*inputs)))
+    print(solve(*inputs))
 
 
 __starting_point()

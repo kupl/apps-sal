@@ -6,7 +6,7 @@ for t in range(int(input())):
     num = 0
     for i in s:
         z = i.count(d)
-        if (z > f):
+        if z > f:
             f = z
             num = i
     print(num)

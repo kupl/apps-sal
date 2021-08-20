@@ -1,8 +1,8 @@
 class Solution:
+
     def longestMountain(self, A: List[int]) -> int:
         res = 0
         i = 0
-
         while i < len(A):
             j = i
             while j + 1 < len(A) and A[j] < A[j + 1]:
@@ -16,5 +16,4 @@ class Solution:
                 i += 1
             else:
                 i = j
-
         return res

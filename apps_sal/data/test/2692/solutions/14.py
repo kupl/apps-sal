@@ -1,5 +1,3 @@
-# //author : 'Amit Singh Sansoya @amit3200'
-# //it was all meant to happen as i was all talk!
 def finder(k):
     eaten = 0
     crumbs = 0
@@ -25,5 +23,5 @@ def search(N):
 
 
 for _ in range(int(input())):
-    n, b = list(map(int, input().split()))
+    (n, b) = list(map(int, input().split()))
     search(n)

@@ -1,9 +1,7 @@
 n = int(input())
 a = []
 b = []
-
 last = 0
-
 for i in range(n):
     q = int(input())
     if q > 0:
@@ -12,10 +10,8 @@ for i in range(n):
     else:
         b.append(-q)
         last = 2
-
 sum1 = sum(a)
 sum2 = sum(b)
-
 if sum1 > sum2:
     print('first')
 elif sum1 < sum2:

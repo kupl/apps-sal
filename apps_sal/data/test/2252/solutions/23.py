@@ -1,10 +1,5 @@
-##n = int(input())
-##a = list(map(int, input().split()))
-##print(' '.join(map(str, res)))
-
 [n, m] = list(map(int, input().split()))
 p = list(map(int, input().split()))
-
 for i in range(m):
     [l, r, x] = list(map(int, input().split()))
     a = p[x - 1]

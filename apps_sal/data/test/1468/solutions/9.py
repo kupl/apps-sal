@@ -14,4 +14,4 @@ def lexi(i):
 for i in range(n - 1, 0, -1):
     if l[i - 1] > l[i]:
         lexi(i)
-print("\n".join(l))
+print('\n'.join(l))

@@ -2,6 +2,7 @@ import itertools
 
 
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         mycom = [c for c in itertools.combinations(rating, 3)]
         ans = 0

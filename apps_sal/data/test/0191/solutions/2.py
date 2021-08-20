@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Codeforces Round #553 (Div. 2)
 
 Problem F. Sonya and Informatics
@@ -11,10 +8,8 @@ Problem F. Sonya and Informatics
 Please feel free to contact me if you have any question
 regarding the implementation below.
 """
-
 __version__ = '1.8'
 __date__ = '2019-04-21'
-
 import sys
 
 
@@ -38,12 +33,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
+        (g, y, x) = egcd(b % a, a)
+        return (g, x - b // a * y, y)
 
 
 def modinv(a, m):
-    g, x, y = egcd(a, m)
+    (g, x, y) = egcd(a, m)
     if g != 1:
         raise Exception('modular inverse does not exist')
     else:
@@ -52,7 +47,7 @@ def modinv(a, m):
 
 def multiply(A, B, mod):
     if not hasattr(B[0], '__len__'):
-        C = [sum(aij * B[j] % mod for j, aij in enumerate(ai)) for ai in A]
+        C = [sum((aij * B[j] % mod for (j, aij) in enumerate(ai))) for ai in A]
     else:
         C = [[0 for col in range(len(B[0]))] for row in range(len(A))]
         len_A = len(A)
@@ -61,8 +56,7 @@ def multiply(A, B, mod):
             if sum(A[row]) == 0:
                 continue
             for col in range(len_B):
-                C[row][col] = sum(A[row][k] * B[k][col]
-                                  for k in range(len_B)) % mod
+                C[row][col] = sum((A[row][k] * B[k][col] for k in range(len_B))) % mod
     return C
 
 
@@ -70,7 +64,7 @@ def memoize(func):
     memo = {}
 
     def wrapper(*args):
-        M, n, mod = args
+        (M, n, mod) = args
         if n not in memo:
             memo[n] = func(M, n, mod)
         return memo[n]
@@ -79,7 +73,6 @@ def memoize(func):
 
 @memoize
 def matrix_pow(M, n, mod):
-    # print(f'n is {n}')
     if n == 2:
         return multiply(M, M, mod)
     if n == 1:
@@ -99,8 +92,7 @@ def solve(n, k, a, binom, mod):
         pre_ones = zeros - pre_zeros
         post_zeros = pre_ones
         post_ones = ones - pre_ones
-        M[row][row] = (pre_ones * post_ones + pre_zeros * post_zeros
-                       + binom(zeros, 2) + binom(ones, 2))
+        M[row][row] = pre_ones * post_ones + pre_zeros * post_zeros + binom(zeros, 2) + binom(ones, 2)
         if row > max(0, zeros - ones):
             M[row - 1][row] = pre_zeros * post_ones
         if row < zeros:
@@ -113,8 +105,8 @@ def solve(n, k, a, binom, mod):
 
 
 def main(argv=None):
-    mod = int(1e9) + 7
-    n, k = list(map(int, input().split()))
+    mod = int(1000000000.0) + 7
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     binom = binom_dp()
     P = solve(n, k, a, binom, mod)
@@ -128,7 +120,7 @@ def main(argv=None):
 
 def __starting_point():
     STATUS = main()
-    return(STATUS)
+    return STATUS
 
 
 __starting_point()

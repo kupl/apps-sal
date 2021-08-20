@@ -1,5 +1,5 @@
 from operator import itemgetter
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 lis = []
 for _ in range(m):
     lis.append(list(map(int, input().split())))

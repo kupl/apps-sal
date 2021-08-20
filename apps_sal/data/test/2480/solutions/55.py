@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 arr = list(map(int, input().split()))
 arr = [i - 1 for i in arr]
 acum = [0]

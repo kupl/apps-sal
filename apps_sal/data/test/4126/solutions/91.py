@@ -3,7 +3,6 @@ def isParindrome(s):
 
 
 string = input()
-
 ans = True
 if not isParindrome(string):
     ans = False

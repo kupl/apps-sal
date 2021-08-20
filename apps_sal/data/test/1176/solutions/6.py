@@ -7,8 +7,8 @@ for i in range(n):
 if count % 2 == 0:
     for j in range(n):
         a[j] = abs(a[j])
-    print((sum(a)))
+    print(sum(a))
 else:
     for j in range(n):
         a[j] = abs(a[j])
-    print((sum(a) - 2 * min(a)))
+    print(sum(a) - 2 * min(a))

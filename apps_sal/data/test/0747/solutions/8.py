@@ -1,12 +1,10 @@
-a = input().split(" ")
+a = input().split(' ')
 h = int(a[1])
 n = int(a[0])
-
 candies = []
 for i in range(n):
-    s = input().split(" ")
+    s = input().split(' ')
     candies.append([int(s[0]), int(s[1]), int(s[2])])
-
 zap = []
 for i in range(n):
     zap.append(candies[i])
@@ -34,7 +32,7 @@ def eat(bl, cand, h):
 
 a = eat(1, candies, h)
 b = eat(0, zap, h)
-if(a > b):
+if a > b:
     print(a)
 else:
     print(b)

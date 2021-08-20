@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxJumps(self, arr, d):
         n = len(arr)
 

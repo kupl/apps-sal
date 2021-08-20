@@ -1,6 +1,5 @@
-sheep, wolves = map(int, input().split())
-
+(sheep, wolves) = map(int, input().split())
 if sheep > wolves:
-    print("safe")
+    print('safe')
 elif sheep <= wolves:
-    print("unsafe")
+    print('unsafe')

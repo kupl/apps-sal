@@ -3,7 +3,7 @@ import collections
 
 def letter_count(s):
     result = {}
-    for i, d in enumerate(s):
+    for (i, d) in enumerate(s):
         count = 1
         if d not in result:
             for j in range(i + 1, len(s)):

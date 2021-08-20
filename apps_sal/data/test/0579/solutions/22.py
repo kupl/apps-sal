@@ -1,12 +1,11 @@
 import numpy as np
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
-cycles, check = [], [False] * n
+(cycles, check) = ([], [False] * n)
 for pi in p:
     if not check[pi - 1]:
-        curr, cycle = pi, []
+        (curr, cycle) = (pi, [])
         check[pi - 1] = True
         while pi != p[curr - 1]:
             check[curr - 1] = True
@@ -14,7 +13,6 @@ for pi in p:
             curr = p[curr - 1]
         check[curr - 1] = True
         cycles.append(cycle + [c[curr - 1]])
-
 scores = []
 for cycle in (np.array(cycle) for cycle in cycles):
     for i in range(cycle.size):

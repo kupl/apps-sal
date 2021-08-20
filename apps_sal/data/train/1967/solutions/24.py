@@ -1,7 +1,8 @@
 class Solution:
+
     def splitIntoFibonacci(self, S: str) -> List[int]:
         ans = []
-        limit = 2**31 - 1
+        limit = 2 ** 31 - 1
 
         def helper(n, prefix):
             nonlocal S, ans

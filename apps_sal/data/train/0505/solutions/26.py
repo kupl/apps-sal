@@ -1,22 +1,20 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
         stack = []
         skip = []
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if c in '()':
                 if c == '(':
                     stack.append(i)
+                elif stack:
+                    stack.pop()
                 else:
-                    if stack:
-                        stack.pop()
-                    else:
-                        skip.append(i)
-
+                    skip.append(i)
         while stack:
             skip.append(stack.pop())
-
         t = []
-        for i, c in enumerate(s):
+        for (i, c) in enumerate(s):
             if i not in skip:
                 t.append(c)
         return ''.join(t)

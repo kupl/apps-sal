@@ -1,5 +1,4 @@
-w, h, sx, sy = list(map(int, input().split()))
-
+(w, h, sx, sy) = list(map(int, input().split()))
 for x in range(sx, w + 1):
     for y in range(sy, h + 1):
         print(x, y)

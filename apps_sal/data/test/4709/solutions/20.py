@@ -1,2 +1,2 @@
 s = list(input().split())
-print(eval("".join(s)))
+print(eval(''.join(s)))

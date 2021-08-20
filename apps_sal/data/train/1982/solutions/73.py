@@ -1,4 +1,5 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         h = collections.defaultdict(list)
         if dislikes == []:
@@ -22,11 +23,10 @@ class Solution:
                             continue
                         else:
                             return False
+                    elif x[1] == 2:
+                        continue
                     else:
-                        if x[1] == 2:
-                            continue
-                        else:
-                            return False
+                        return False
                 v.add(x[0])
                 k.add(x[0])
                 if x[1] == 1:

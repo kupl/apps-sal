@@ -1,17 +1,12 @@
 class Solution:
+
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
-
-        # ###method1
-        # while  "()" in s or "[]" in s or "{}" in s:
-        #     s = s.replace("()","").replace("[]","").replace("{}","")
-        # return len(s)==0
-
         stack = []
-        dict = {")": "(", "]": "[", "}": "{"}
+        dict = {')': '(', ']': '[', '}': '{'}
         for char in s:
             if char in list(dict.values()):
                 stack.append(char)

@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 listik = list(map(int, input().split()))
 counter = 1
 maxs = 0

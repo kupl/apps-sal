@@ -8,7 +8,6 @@ for i in range(n - 2):
         k = j + d
         if k >= n:
             break
-        else:
-            if s[i] != s[j] and s[j] != s[k] and s[k] != s[i]:
-                ans -= 1
+        elif s[i] != s[j] and s[j] != s[k] and (s[k] != s[i]):
+            ans -= 1
 print(ans)

@@ -9,5 +9,4 @@ def sum_arrays(arrays, shift):
     for i in range(len(dummy_arr)):
         for arr in modified_arrays:
             dummy_arr[i] += arr[i]
-
     return dummy_arr

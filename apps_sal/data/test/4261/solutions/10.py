@@ -1,5 +1,4 @@
-A, B, C = map(int, input().split())
-
+(A, B, C) = map(int, input().split())
 answer = C - (A - B)
 if answer > 0:
     print(answer)

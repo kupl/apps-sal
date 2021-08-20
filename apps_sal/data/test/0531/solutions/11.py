@@ -1,14 +1,11 @@
 n = int(input())
 x = input().split()
 x = [int(k) for k in x]
-
 rem = []
 x.sort()
-
 mn = x[0]
 mx = x[-1]
-
-if (mx - mn <= 1):
+if mx - mn <= 1:
     print(len(x))
     for k in x:
         print(k, end=' ')
@@ -22,16 +19,16 @@ else:
     countmx = 0
     for k in x:
         sm += k
-    if (sm - expsum) > 0:
+    if sm - expsum > 0:
         rem = x[len(x) - (sm - expsum):len(x)]
         x = x[0:len(x) - (sm - expsum)]
-    if (sm - expsum) < 0:
-        rem = x[0:(expsum - sm)]
-        x = x[(expsum - sm):len(x)]
+    if sm - expsum < 0:
+        rem = x[0:expsum - sm]
+        x = x[expsum - sm:len(x)]
     if len(x) % 2 == 1:
         rem.append(avg)
         for i in range(len(x)):
-            if (x[i] == avg):
+            if x[i] == avg:
                 x = x[0:i] + x[i + 1:len(x)]
                 break
     for k in x:

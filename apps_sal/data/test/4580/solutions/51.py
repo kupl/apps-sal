@@ -1,8 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 rate = [0 for _ in range(9)]
-
 for a in A:
     if a < 400:
         rate[0] += 1
@@ -22,7 +20,6 @@ for a in A:
         rate[7] += 1
     else:
         rate[8] += 1
-
 ans = 0
 for i in range(8):
     if rate[i] >= 1:

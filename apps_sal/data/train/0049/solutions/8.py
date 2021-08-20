@@ -1,6 +1,6 @@
 def cnt(l, c):
     if l <= c:
-        return 10**c
+        return 10 ** c
     res = 1
     if c > 0:
         res += l * 9
@@ -29,15 +29,8 @@ def calc(n, c):
     return res
 
 
-"""ans=0
-for i in range(90000):
-    s = str(i)
-    if len(s)-s.count('0') < 3:
-        ans+=1
-print(ans)"""
-
-# ans=calc(1000000,3) # 15850
+"ans=0\nfor i in range(90000):\n    s = str(i)\n    if len(s)-s.count('0') < 3:\n        ans+=1\nprint(ans)"
 t = int(input())
 for i in range(t):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     print(calc(r, 3) - calc(l - 1, 3))

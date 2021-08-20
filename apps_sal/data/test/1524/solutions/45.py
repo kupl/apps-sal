@@ -3,7 +3,7 @@ S = list(input())
 n = len(S)
 ans = [0] * n
 right_flag = False
-for i, s in enumerate(S):
+for (i, s) in enumerate(S):
     if s == 'R' and right_flag is False:
         right_index = i
         right_flag = True
@@ -15,7 +15,7 @@ for i, s in enumerate(S):
         ans[i - 1] += even
         ans[i] += odd
 left_flag = False
-for i, s in enumerate(S[::-1], 1):
+for (i, s) in enumerate(S[::-1], 1):
     if s == 'L' and left_flag is False:
         left_index = i
         left_flag = True

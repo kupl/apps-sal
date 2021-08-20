@@ -2,6 +2,7 @@ import math
 
 
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         result = dict()
 

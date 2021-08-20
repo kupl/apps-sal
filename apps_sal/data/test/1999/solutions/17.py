@@ -1,7 +1,7 @@
 def read_data():
     n = int(input().strip())
     a = list(map(int, list(input().strip().split())))
-    return n, a
+    return (n, a)
 
 
 def solve():
@@ -12,11 +12,10 @@ def solve():
             del s[j]
             j *= 2
         s[j] = i
-
     sol = list(sorted(s.keys(), key=lambda j: s[j]))
     print(len(sol))
     print(*sol)
 
 
-n, a = read_data()
+(n, a) = read_data()
 solve()

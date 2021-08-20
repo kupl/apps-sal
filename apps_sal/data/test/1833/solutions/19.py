@@ -14,20 +14,16 @@ def fct(x):
     return sorted(ans)[::-1]
 
 
-dp = [0 for i in range(10**6 + 5)]
-
-mod = 10**9 + 7
-
+dp = [0 for i in range(10 ** 6 + 5)]
+mod = 10 ** 9 + 7
 dp[0] = 1
 for i in A:
     do = fct(i)
     for j in do:
         dp[j] = (dp[j] + dp[j - 1]) % mod
-
 c = 0
 for i in dp:
     c += i
     if c >= mod:
         c -= mod
-
 print((c - 1) % mod)

@@ -9,8 +9,8 @@ def f(d):
         return a * b * b / (2 * math.tan(theta))
 
 
-a, b, x = map(int, input().split())
-l, r = 0.0, 90.0
+(a, b, x) = map(int, input().split())
+(l, r) = (0.0, 90.0)
 for i in range(1000):
     m = (l + r) / 2
     if f(m) <= x:

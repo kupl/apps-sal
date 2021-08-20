@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 i = 0
-while(i != t):
+while i != t:
     lst = list(map(int, input().split()))
     B = lst[0]
     G = lst[1]

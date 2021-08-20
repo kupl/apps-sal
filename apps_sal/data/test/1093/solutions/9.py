@@ -2,7 +2,7 @@ def mapp(s):
     return 1 if s == '*' else 0
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 x = []
 for i in range(n):
     x.append(list(map(mapp, input())))

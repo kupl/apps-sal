@@ -7,6 +7,7 @@ def input():
 
 
 class UnionFind:
+
     def __init__(self, n_nodes):
         self.n_nodes = n_nodes
         self.parent = [i for i in range(n_nodes)]
@@ -52,23 +53,22 @@ class UnionFind:
 
 
 def main():
-    N, K, L = map(int, input().split())
+    (N, K, L) = map(int, input().split())
     Tree_road = UnionFind(N)
     Tree_train = UnionFind(N)
     for _ in range(K):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         Tree_road.unite(p - 1, q - 1)
     for _ in range(L):
-        p, q = map(int, input().split())
+        (p, q) = map(int, input().split())
         Tree_train.unite(p - 1, q - 1)
     DD = defaultdict(int)
     for i in range(N):
-        DD[(Tree_road.find(i), Tree_train.find(i))] += 1
+        DD[Tree_road.find(i), Tree_train.find(i)] += 1
     answer = []
     for i in range(N):
-        answer.append(DD[(Tree_road.find(i), Tree_train.find(i))])
-
-    print(*answer, sep=" ")
+        answer.append(DD[Tree_road.find(i), Tree_train.find(i)])
+    print(*answer, sep=' ')
 
 
 def __starting_point():

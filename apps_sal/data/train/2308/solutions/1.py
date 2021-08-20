@@ -1,7 +1,7 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
-n, w = [int(i) for i in input().rstrip('\n').split()]
+(n, w) = [int(i) for i in input().rstrip('\n').split()]
 arr = []
 tem = []
 for i in range(n):
@@ -9,7 +9,6 @@ for i in range(n):
     tem.append(t[0])
     arr.append(t[1:])
 l = [0 for i in range(w)]
-
 wi = [0 for i in range(w + 1)]
 for j in range(n):
     st = deque()
@@ -28,10 +27,8 @@ for j in range(n):
         wi[w - (tem[j] - st[0]) + 1] += -arr[j][st[0]]
         ind = w - (tem[j] - st[0]) + 1
         st.popleft()
-
-
 curr = 0
 for i in range(w):
     curr += wi[i]
     l[i] += curr
-print(" ".join(str(e) for e in l))
+print(' '.join((str(e) for e in l)))

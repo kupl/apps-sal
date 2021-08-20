@@ -1,5 +1,5 @@
-# O(n) dp[n] = !dp[n-1] or !dp[n-4] ...
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dp = [-1] * (n + 1)
         dp[0] = 0

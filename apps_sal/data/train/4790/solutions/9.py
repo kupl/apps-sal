@@ -4,7 +4,7 @@ def clean_mean(sample, cutoff):
     samplesize = len(sample)
     print((samplesize, sample))
     mean = sum(sample) / samplesize
-    stddev = ((samplesize ** -1) * sum((element - mean) ** 2 for element in sample)) ** 0.5
+    stddev = (samplesize ** (-1) * sum(((element - mean) ** 2 for element in sample))) ** 0.5
     cutoffpos = mean + cutoff * stddev
     cutoffneg = mean - cutoff * stddev
     for element in sample[:]:

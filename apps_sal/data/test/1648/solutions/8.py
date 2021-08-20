@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
-mod = 10**9 + 7
-
+(N, K) = map(int, input().split())
+mod = 10 ** 9 + 7
 factorial = [1 for i in range(N + 1)]
 for i in range(1, N + 1):
     if i == 1:

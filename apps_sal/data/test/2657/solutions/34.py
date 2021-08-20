@@ -1,7 +1,7 @@
 def getval():
     n = int(input())
     a = list(map(int, input().split()))
-    return n, a
+    return (n, a)
 
 
 def main(n, a):
@@ -12,11 +12,11 @@ def main(n, a):
     for i in a:
         if abs(R - i) < abs(R - r):
             r = i
-    print("{x} {y}".format(x=c, y=r))
+    print('{x} {y}'.format(x=c, y=r))
 
 
 def __starting_point():
-    n, a = getval()
+    (n, a) = getval()
     main(n, a)
 
 

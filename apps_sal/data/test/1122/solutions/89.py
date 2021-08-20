@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ans = []
     t = [True] * (n + 1)
     l = n // 2 - 1

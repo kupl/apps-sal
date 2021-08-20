@@ -1,7 +1,6 @@
-N, K = map(int, input().split())
-mod = 10**9 + 7
+(N, K) = map(int, input().split())
+mod = 10 ** 9 + 7
 ans = 0
-
 data = [0] * (K + 1)
 for x in range(K, 0, -1):
     p = pow(K // x, N, mod)
@@ -11,9 +10,4 @@ for x in range(K, 0, -1):
     data[x] = p
     ans += x * p
     ans %= mod
-
-###
-# print(data)
-###
-
 print(ans)

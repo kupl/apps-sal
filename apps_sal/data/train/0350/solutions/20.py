@@ -1,4 +1,5 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
 
         def atMost(K):
@@ -18,5 +19,4 @@ class Solution:
                         i += 1
                     ans += j - i + 1
             return ans
-
         return atMost(K) - atMost(K - 1)

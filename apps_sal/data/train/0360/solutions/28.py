@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         maxVal = weights[0]
         sum = 0
@@ -20,7 +21,6 @@ class Solution:
                     local_sum = weight
                     count += 1
             return count < D
-
         left = maxVal
         right = sum
         result = 0

@@ -10,6 +10,7 @@ def fact(m):
 
 
 class Solution:
+
     def numDupDigitsAtMostN(self, N: int) -> int:
         found = {}
         NS = str(N)
@@ -17,7 +18,6 @@ class Solution:
         found = {}
 
         def count(par):
-            #            print(par,len(par),NS)
             res = 0
             if len(par) == len(NS) and par <= NS:
                 return 1
@@ -25,7 +25,7 @@ class Solution:
                 for ii in range(10):
                     if par.find(str(ii)) < 0 and par + str(ii) <= NS[:len(par) + 1]:
                         if par + str(ii) < NS[:len(par) + 1]:
-                            if not(len(par)) in found:
+                            if not len(par) in found:
                                 found[len(par)] = count(par + str(ii))
                             res = res + found[len(par)]
                         else:
@@ -33,5 +33,4 @@ class Solution:
             return res
         for ii in range(1, int(NS[0]) + 1):
             res = res + count(str(ii))
-#        print(res,print(found))
-        return(N - res)
+        return N - res

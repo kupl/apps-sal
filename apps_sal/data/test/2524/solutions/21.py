@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import numpy as np
 
 
@@ -7,18 +6,17 @@ def main():
     limit = 60
     N = int(input())
     A = np.array(input().split(), dtype=np.int64)
-
     ans = 0
     for n in range(limit):
-        res = A & (1 << n)
+        res = A & 1 << n
         x = np.count_nonzero(res)
-        y = N - x  # 0の数
+        y = N - x
         x *= y
         for _ in range(n):
             x *= 2
             x %= MOD
         ans += x
-    print((ans % MOD))
+    print(ans % MOD)
 
 
 def __starting_point():

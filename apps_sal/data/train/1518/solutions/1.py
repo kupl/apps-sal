@@ -1,4 +1,3 @@
-# cook your dish here
 def isprime(n):
     i = 2
     while i * i < n:
@@ -22,5 +21,5 @@ def istrue(n, k):
 
 n = int(input())
 for i in range(n):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     print(istrue(n, k))

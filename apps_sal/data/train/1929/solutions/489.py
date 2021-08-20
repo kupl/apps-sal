@@ -2,18 +2,20 @@ from collections import defaultdict
 
 
 class TrieNode:
+
     def __init__(self):
         self.children = defaultdict(TrieNode)
         self.end = False
 
 
 class Trie:
+
     def __init__(self, words):
         self.root = TrieNode()
         for word in words:
             self.add(word[::-1])
         self.word = ''
-        self.l = max(len(word) for word in words)
+        self.l = max((len(word) for word in words))
 
     def add(self, word):
         node = self.root
@@ -30,7 +32,6 @@ class Trie:
             node = node.children[c]
             if node.end:
                 return True
-
         return False
 
 
@@ -41,8 +42,3 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         return self.trie.search(letter)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

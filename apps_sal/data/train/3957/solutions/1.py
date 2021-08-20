@@ -1,5 +1,3 @@
-
-
 def uniq_c(s):
     lst = []
     c = 1

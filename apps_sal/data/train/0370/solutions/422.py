@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         N = len(A)
         parent = list(range(N))
@@ -7,13 +8,10 @@ class Solution:
         def union(x, y):
             x = find(x)
             y = find(y)
-
             if x == y:
                 return
-
             if size[x] < size[y]:
-                x, y = y, x
-
+                (x, y) = (y, x)
             parent[y] = x
             size[x] += size[y]
 
@@ -21,9 +19,8 @@ class Solution:
             if parent[x] != x:
                 parent[x] = find(parent[x])
             return parent[x]
-
         ftoi = {}
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             for factor in range(2, floor(sqrt(n)) + 1):
                 if n % factor == 0:
                     for f in (factor, n // factor):
@@ -35,5 +32,4 @@ class Solution:
                 union(i, ftoi[n])
             else:
                 ftoi[n] = i
-
         return max(size)

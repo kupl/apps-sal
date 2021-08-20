@@ -1,5 +1,5 @@
 def merge(line):
-    mrg, lst, l, fr = [], [x for x in line if x], len(line), 0
+    (mrg, lst, l, fr) = ([], [x for x in line if x], len(line), 0)
     for e in lst:
         if not fr:
             fr = e
@@ -9,7 +9,6 @@ def merge(line):
         else:
             mrg.append(fr)
             fr = e
-
     mrg.append(fr)
     while len(mrg) < l:
         mrg.append(0)

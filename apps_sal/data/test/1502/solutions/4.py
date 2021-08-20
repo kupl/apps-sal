@@ -1,6 +1,5 @@
-
 def int_to_bool(n):
-    return [bool(n & (1 << i)) for i in range(4)]
+    return [bool(n & 1 << i) for i in range(4)]
 
 
 a = int(input())
@@ -21,7 +20,6 @@ def apply(expected, input):
         output[0] = not input[0]
     else:
         output[0] = input[0]
-
     return output == expected
 
 

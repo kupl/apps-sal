@@ -14,27 +14,25 @@ for t in range(q):
                 ans = ans + '1'
             else:
                 ans = ans + '0'
-        else:
-            if uk1 == 0:
-                uk2 += 1
-                ma = max(ma, a[uk2])
-                if ma == uk2 - uk1 + 1:
-                    ans = ans + '1'
-                else:
-                    ans = ans + '0'
+        elif uk1 == 0:
+            uk2 += 1
+            ma = max(ma, a[uk2])
+            if ma == uk2 - uk1 + 1:
+                ans = ans + '1'
             else:
-                if a[uk1 - 1] < a[uk2 + 1]:
-                    uk1 -= 1
-                    ma = max(ma, a[uk1])
-                    if ma == uk2 - uk1 + 1:
-                        ans = ans + '1'
-                    else:
-                        ans = ans + '0'
-                else:
-                    uk2 += 1
-                    ma = max(ma, a[uk2])
-                    if ma == uk2 - uk1 + 1:
-                        ans = ans + '1'
-                    else:
-                        ans = ans + '0'
+                ans = ans + '0'
+        elif a[uk1 - 1] < a[uk2 + 1]:
+            uk1 -= 1
+            ma = max(ma, a[uk1])
+            if ma == uk2 - uk1 + 1:
+                ans = ans + '1'
+            else:
+                ans = ans + '0'
+        else:
+            uk2 += 1
+            ma = max(ma, a[uk2])
+            if ma == uk2 - uk1 + 1:
+                ans = ans + '1'
+            else:
+                ans = ans + '0'
     print(ans)

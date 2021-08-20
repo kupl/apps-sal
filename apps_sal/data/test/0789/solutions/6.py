@@ -22,7 +22,7 @@ for i in range(512):
     s1 = ''
     s2 = ''
     for c in s:
-        if(c == '0'):
+        if c == '0':
             s1 += '4'
             s2 += '7'
         else:
@@ -32,6 +32,5 @@ for i in range(512):
     d.add(int(s2))
 l = list(d)
 l.sort()
-
 n = int(input())
 print(binary_search(l, n) + 1)

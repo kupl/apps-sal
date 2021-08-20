@@ -1,7 +1,7 @@
 n = int(input())
-s = ""
+s = ''
 i = 1
-while (len(s) < n):
+while len(s) < n:
     k = str(i)
     for j in range(len(k)):
         s += k[j]

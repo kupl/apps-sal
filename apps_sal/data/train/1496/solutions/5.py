@@ -5,16 +5,14 @@ for _ in range(int(input())):
     ans = 1
     for a in s:
         if level % 2 != 0:
-            if a == "l":
+            if a == 'l':
                 ans = 2 * ans
             else:
                 ans = 2 * ans + 2
+        elif a == 'l':
+            ans = 2 * ans - 1
         else:
-            if a == "l":
-                ans = 2 * ans - 1
-            else:
-                ans = 2 * ans + 1
+            ans = 2 * ans + 1
         ans = ans % mod
         level += 1
-
     print(ans)

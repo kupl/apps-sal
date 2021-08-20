@@ -1,5 +1,5 @@
-n, m, k = map(int, input().split())
-d, s, p = 0, [], [list(map(str, range(1, m + 1)))]
+(n, m, k) = map(int, input().split())
+(d, s, p) = (0, [], [list(map(str, range(1, m + 1)))])
 p.append(list(reversed(p[0])))
 for i in map(str, range(1, n + 1)):
     s += [i + ' ' + j for j in p[d]]

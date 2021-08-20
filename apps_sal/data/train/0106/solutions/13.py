@@ -1,4 +1,3 @@
-
 L = 0
 R = 1
 
@@ -27,16 +26,16 @@ def main():
             elif threshold < lr_s[j][R]:
                 threshold = lr_s[j][R]
         if threshold_final == None:
-            print(-1)  # impossible
+            print(-1)
             continue
-        answer = ""
+        answer = ''
         for j in range(n[i]):
             if lr[i][j][L] <= threshold_final:
-                answer += "1"
+                answer += '1'
             else:
-                answer += "2"
+                answer += '2'
             if j < n[i] - 1:
-                answer += " "
+                answer += ' '
         print(answer)
 
 

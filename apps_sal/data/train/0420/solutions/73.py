@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         substrings = self.generate_subst(s)
         res = 0
@@ -15,4 +16,4 @@ class Solution:
     def generate_subst(self, s: str):
         for window_size in range(len(s), -1, -1):
             for i in range(len(s) - window_size + 1):
-                yield s[i: i + window_size]
+                yield s[i:i + window_size]

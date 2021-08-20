@@ -1,5 +1,4 @@
 def penaltyShots(shots, score):
-    # coding and coding..
     if score[0] == score[1] == 0 and shots == 0:
         return 6
     elif shots >= 5 and score[0] == score[1] != 0:

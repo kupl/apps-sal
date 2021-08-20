@@ -1,15 +1,13 @@
 def main():
-    N, P = list(map(int, input().split()))
-    *s, = list(map(int, input()))
-
+    (N, P) = list(map(int, input().split()))
+    (*s,) = list(map(int, input()))
     if P in {2, 5}:
         ans = 0
-        for i, x in enumerate(reversed(s), start=0):
+        for (i, x) in enumerate(reversed(s), start=0):
             if x % P == 0:
                 ans += N - i
         print(ans)
         return
-
     ans = 0
     total = 0
     coef = 1

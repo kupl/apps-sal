@@ -1,7 +1,6 @@
 from math import gcd
-
 for _ in range(int(input())):
-    m, d, w = list(map(int, input().split()))
+    (m, d, w) = list(map(int, input().split()))
     M = min(m, d)
     W = w // gcd(w, d - 1)
     Q = M // W

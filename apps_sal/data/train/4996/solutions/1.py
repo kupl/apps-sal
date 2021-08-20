@@ -1,11 +1,11 @@
 def fibs_fizz_buzz(n):
-    a, b, f = 1, 1, []
+    (a, b, f) = (1, 1, [])
     for _ in range(n):
-        s = ""
+        s = ''
         if not a % 3:
-            s += "Fizz"
+            s += 'Fizz'
         if not a % 5:
-            s += "Buzz"
+            s += 'Buzz'
         f.append(s or a)
-        a, b = b, a + b
+        (a, b) = (b, a + b)
     return f

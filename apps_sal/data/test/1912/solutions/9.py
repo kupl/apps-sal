@@ -11,18 +11,18 @@ def a(x):
 
 T = int(input())
 for _ in range(T):
-    r, g, b, w = list(map(int, input().split()))
+    (r, g, b, w) = list(map(int, input().split()))
     z = a([r, g, b, w])
     if z[0] <= 1:
-        print("Yes")
+        print('Yes')
         continue
-    elif r >= 1 and g >= 1 and b >= 1:
+    elif r >= 1 and g >= 1 and (b >= 1):
         w += 1
         r -= 1
         g -= 1
         b -= 1
         z = a([r, g, b, w])
         if z[0] <= 1:
-            print("Yes")
+            print('Yes')
             continue
-    print("No")
+    print('No')

@@ -11,12 +11,12 @@ def calc(spot, H):
 
 
 def solve():
-    n, H = map(int, input().split())
+    (n, H) = map(int, input().split())
     if n == 1:
         print(1)
         return 0
     st = 1
-    en = 10**20
+    en = 10 ** 20
     while st < en:
         mid = (st + en) // 2
         if calc(mid, H) >= n:

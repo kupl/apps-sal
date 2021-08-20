@@ -4,9 +4,9 @@ def main():
     a = l[-1]
     for b in l:
         while a:
-            a, b = b % a, a
+            (a, b) = (b % a, a)
         a = b
-    print(('Bob', 'Alice')[(max(l) // a - n) & 1])
+    print(('Bob', 'Alice')[max(l) // a - n & 1])
 
 
 def __starting_point():

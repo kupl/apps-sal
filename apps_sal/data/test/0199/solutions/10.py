@@ -8,7 +8,7 @@ def mp():
 
 
 def main():
-    n, s = mp()
+    (n, s) = mp()
     a = mp()
     sm = sum(a)
     if sm < s:
@@ -24,5 +24,4 @@ if deb:
     input = file.readline
 else:
     input = sys.stdin.readline
-
 main()

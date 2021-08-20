@@ -3,6 +3,7 @@ import random
 
 
 class CodeforcesTask566BSolution:
+
     def __init__(self):
         self.result = ''
         self.n = 0
@@ -10,10 +11,9 @@ class CodeforcesTask566BSolution:
 
     def read_input(self):
         self.n = int(input())
-        self.rules = [[int(x) for x in input().split(" ")] + [y + 1] for y in range(self.n * 4)]
+        self.rules = [[int(x) for x in input().split(' ')] + [y + 1] for y in range(self.n * 4)]
 
     def process_task(self):
-
         loads = [4] * self.n
         random.shuffle(self.rules)
         to_use = deque(self.rules)
@@ -34,7 +34,7 @@ class CodeforcesTask566BSolution:
                 to_use.append(moving)
             if ba > self.n * 12:
                 res = False
-        self.result = "NO" if not res else f"YES\n{' '.join([str(x) for x in order])}"
+        self.result = 'NO' if not res else f"YES\n{' '.join([str(x) for x in order])}"
 
     def get_result(self):
         return self.result

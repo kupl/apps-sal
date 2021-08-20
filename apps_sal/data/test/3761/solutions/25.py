@@ -1,16 +1,16 @@
 S = input()
-S += "E"
-x, y = map(int, input().split())
+S += 'E'
+(x, y) = map(int, input().split())
 go = [[], []]
 idx = 0
-while S[idx] == "F":
+while S[idx] == 'F':
     x -= 1
     idx += 1
 g = 1
 idx += 1
 while idx < len(S):
     now = 0
-    while S[idx] == "F":
+    while S[idx] == 'F':
         now += 1
         idx += 1
     if now > 0:
@@ -32,6 +32,6 @@ def check(L, m):
 
 
 if check(go[0], x) and check(go[1], y):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 def add(c, v, p=0):
-    assert(v < 10 and p < len(c))
+    assert v < 10 and p < len(c)
     for i in range(p, len(c)):
         c[i] += v
         if c[i] >= 10:
@@ -16,9 +14,8 @@ def find_min(xsum, l):
     csum = sum(l)
     if csum == xsum:
         return l
-
     if csum < xsum:
-        for i, e in enumerate(l):
+        for (i, e) in enumerate(l):
             delta = min(9 - e, xsum - csum)
             l[i] += delta
             csum += delta
@@ -38,7 +35,6 @@ def find_min(xsum, l):
 
 
 n = int(input())
-
 c = [0]
 for i in range(n):
     b = int(input())

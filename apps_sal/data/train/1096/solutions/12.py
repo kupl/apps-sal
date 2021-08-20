@@ -1,10 +1,9 @@
-# cook your dish here
 import sys
 from operator import itemgetter
-n, x, y = map(int, input().strip().split())
+(n, x, y) = map(int, input().strip().split())
 tests = []
 for _ in range(n):
-    start, end = map(int, input().strip().split())
+    (start, end) = map(int, input().strip().split())
     tests.append([start, end, 1 + end - start])
 start = []
 start[:] = map(int, input().strip().split())

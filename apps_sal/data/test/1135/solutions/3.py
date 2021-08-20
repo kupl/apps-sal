@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-t = ""
+t = ''
 i = 0
 if n % 2 == 1:
     t = s[0]

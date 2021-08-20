@@ -5,9 +5,9 @@ for i in 'ABCDEFGHIJ':
     if a.find(i) != -1:
         l += 1
 if a[0] != '?':
-    q = 10**q
+    q = 10 ** q
 else:
-    q = 9 * (10**(q - 1))
+    q = 9 * 10 ** (q - 1)
 l1 = 1
 for i in range(0, l):
     l1 *= 10 - i

@@ -2,6 +2,7 @@ import math
 
 
 class CodeforcesTask241ASolution:
+
     def __init__(self):
         self.result = ''
         self.m_k = []
@@ -9,9 +10,9 @@ class CodeforcesTask241ASolution:
         self.supplies = []
 
     def read_input(self):
-        self.m_k = [int(x) for x in input().split(" ")]
-        self.distances = [int(x) for x in input().split(" ")]
-        self.supplies = [int(x) for x in input().split(" ")]
+        self.m_k = [int(x) for x in input().split(' ')]
+        self.distances = [int(x) for x in input().split(' ')]
+        self.supplies = [int(x) for x in input().split(' ')]
 
     def process_task(self):
         travel_time = sum(self.distances)

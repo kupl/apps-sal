@@ -4,7 +4,6 @@ def run(n, a):
         result += (a - 1) / 2
     else:
         result += (n - a) / 2
-
     print(int(result))
 
 

@@ -1,6 +1,6 @@
 t = int(input())
 for case_num in range(t):
-    n, k = list(map(int, input().split(' ')))
+    (n, k) = list(map(int, input().split(' ')))
     a = list(map(int, input().split(' ')))
     d = dict()
     for i in a:
@@ -17,4 +17,4 @@ for case_num in range(t):
         if d[i] > 1:
             ok = False
             break
-    print("YES" if ok else "NO")
+    print('YES' if ok else 'NO')

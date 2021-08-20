@@ -3,15 +3,12 @@ def gcd(a, b):
         return b
     return gcd(b % a, a)
 
-# Function to return LCM of two numbers
-
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 t = int(input())
 for _ in range(t):
-
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(int(lcm(a, b)))

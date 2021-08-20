@@ -1,9 +1,7 @@
 N = input()
-
 C = [0] * 10
 for n in N:
     C[int(n)] += 1
-
 memo = {}
 
 
@@ -12,7 +10,7 @@ def dfs(i, state):
     if key in memo:
         return memo[key]
     r = 0
-    if all(s == 0 or 1 <= t for s, t in zip(C, state)):
+    if all((s == 0 or 1 <= t for (s, t) in zip(C, state))):
         r += 1
     for j in range(10):
         if C[j] - state[j] > 0:

@@ -1,6 +1,5 @@
 x = input()
 z = input().split()
-
 mx = 0
 for i in z:
     pres = 0

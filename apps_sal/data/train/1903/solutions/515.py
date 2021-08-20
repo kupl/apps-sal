@@ -2,9 +2,12 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints_Prim(self, points: List[List[int]]) -> int:
-        def manhattan(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
-        n, c = len(points), collections.defaultdict(list)
+
+        def manhattan(p1, p2):
+            return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+        (n, c) = (len(points), collections.defaultdict(list))
         for i in range(n):
             for j in range(i + 1, n):
                 d = manhattan(points[i], points[j])
@@ -14,21 +17,20 @@ class Solution:
         visited.add(0)
         res = 0
         heap = c[0]
-
         heapq.heapify(heap)
-
         while len(visited) < n:
-            d, j = heapq.heappop(heap)
+            (d, j) = heapq.heappop(heap)
             if j not in visited:
                 visited.add(j)
                 res += d
                 for record in c[j]:
                     heapq.heappush(heap, record)
-
         return res
 
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        def manhattan(p1, p2): return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+        def manhattan(p1, p2):
+            return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
         n = len(points)
         edges = []
         for i in range(n):
@@ -37,7 +39,7 @@ class Solution:
         edges.sort()
         res = 0
         ds = DisjointSet(n)
-        for cost, u, v in edges:
+        for (cost, u, v) in edges:
             if ds.find(u) != ds.find(v):
                 ds.union(u, v)
                 res += cost
@@ -45,6 +47,7 @@ class Solution:
 
 
 class DisjointSet:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.rank = [1 for _ in range(n)]
@@ -55,12 +58,7 @@ class DisjointSet:
         if pa == pb:
             return
         self.parent[pa] = pb
-        '''if self.rank[pa] > self.rank[pb]:
-            self.parent[pb] = pa
-            self.rank[pa] += self.rank[pb]
-        else:
-            self.parent[pa] = pb
-            self.rank[pb] += self.rank[pa] '''
+        'if self.rank[pa] > self.rank[pb]:\n            self.parent[pb] = pa\n            self.rank[pa] += self.rank[pb]\n        else:\n            self.parent[pa] = pb\n            self.rank[pb] += self.rank[pa] '
 
     def find(self, p):
         if self.parent[p] == p:

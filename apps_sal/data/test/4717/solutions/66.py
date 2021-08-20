@@ -1,5 +1,5 @@
-x, y, z = map(int, input().split())
+(x, y, z) = map(int, input().split())
 if abs(y - x) < abs(z - x):
-    print("A")
+    print('A')
 else:
-    print("B")
+    print('B')

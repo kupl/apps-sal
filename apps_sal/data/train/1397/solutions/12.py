@@ -6,7 +6,7 @@ for _ in range(int(input())):
     d = defaultdict(list)
     for i in range(n):
         d[arr[i]].append(i + 1)
-    ind = -10**10
+    ind = -10 ** 10
     uno = list(set(arr))
     uno.sort()
     for i in uno:

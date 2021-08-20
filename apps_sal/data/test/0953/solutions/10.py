@@ -31,4 +31,4 @@ for l in lists:
 for i in range(n):
     p[i] = lists[used[i] - 1][0]
     lists[used[i] - 1].pop(0)
-print(' '.join(str(x) for x in p))
+print(' '.join((str(x) for x in p)))

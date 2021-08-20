@@ -1,11 +1,10 @@
 for _ in range(int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     l = [int(i) for i in input().split()]
     d = {}
     ind = {}
     for i in range(n):
         ind[l[i]] = i
-    # dup=l[:]
     dup = sorted(l)
     for i in range(n):
         chote = i

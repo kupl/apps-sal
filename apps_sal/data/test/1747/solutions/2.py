@@ -1,6 +1,5 @@
 from collections import defaultdict
-
-n, k = [int(x) for x in input().split()]
+(n, k) = [int(x) for x in input().split()]
 A = [int(x) for x in input().split()]
 D = defaultdict(int)
 l = 0

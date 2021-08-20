@@ -1,12 +1,12 @@
 def resolve():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = [list(map(int, input().split())) for i in range(m)]
-    a = [[x, y, -z] for x, y, z in a]
+    a = [[x, y, -z] for (x, y, z) in a]
     print(BF(a, n, 1)[-1])
 
 
 def BF(p, n, s):
-    inf = float("inf")
+    inf = float('inf')
     d = [inf for i in range(n)]
     d[s - 1] = 0
     for i in range(n + 1):

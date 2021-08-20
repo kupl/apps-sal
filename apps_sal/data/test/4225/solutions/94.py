@@ -1,5 +1,5 @@
 def easy_linear_programming():
-    A, B, C, K = map(int, input().split())
+    (A, B, C, K) = map(int, input().split())
     if K <= A:
         print(K)
     elif K - A <= B:

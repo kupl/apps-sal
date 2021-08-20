@@ -1,11 +1,15 @@
-# ARC094E
-
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-sys.setrecursionlimit(max(1000, 10**9))
-def write(x): return sys.stdout.write(x + "\n")
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+sys.setrecursionlimit(max(1000, 10 ** 9))
+
+
+def write(x):
+    return sys.stdout.write(x + '\n')
 
 
 n = int(input())
@@ -16,9 +20,9 @@ same = 0
 m = 0
 diff = []
 for i in range(n):
-    a[i], b[i] = map(int, input().split())
+    (a[i], b[i]) = map(int, input().split())
     if a[i] < b[i]:
-        ans += (b[i] - a[i])
+        ans += b[i] - a[i]
     elif a[i] == b[i]:
         same += a[i]
     else:

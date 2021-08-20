@@ -1,4 +1,5 @@
 class Solution:
+
     def checkIfCanBreak(self, s1: str, s2: str) -> bool:
         s1_arr = [ord(x) for x in s1]
         s2_arr = [ord(x) for x in s2]

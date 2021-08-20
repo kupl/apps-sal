@@ -7,7 +7,7 @@ def sum_o(s):
     return res
 
 
-def can(s, summ):  # 3452 7
+def can(s, summ):
     if sum_o(s) == summ:
         return True
     res = ''

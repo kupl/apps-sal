@@ -14,17 +14,13 @@ class Solution:
     def get_prime_numbers(self, n_max: int):
         self.total_factors = [2, 3]
         for val in range(3, n_max // 2 + 2, 2):
-            for i in range(3, int(val**0.5) + 2, 2):
+            for i in range(3, int(val ** 0.5) + 2, 2):
                 if val % i == 0:
                     break
-                else:
-                    if i >= int(val**0.5):
-                        self.total_factors.append(val)
+                elif i >= int(val ** 0.5):
+                    self.total_factors.append(val)
 
     def largestComponentSize(self, A: List[int]) -> int:
-        # A.sort()
-        # self.get_prime_numbers(A[-1])
-        # print(self.total_factors)
         N = max(A) + 1
         nods = {d: d for d in range(N)}
 
@@ -39,16 +35,14 @@ class Solution:
             return root
 
         def union(x, y):
-            rx, ry = find(x), find(y)
+            (rx, ry) = (find(x), find(y))
             if rx != ry:
                 nods[ry] = rx
-
         for a in A:
             for factor in range(2, int(sqrt(a)) + 1):
                 if a % factor == 0:
                     union(a, factor)
                     union(a, a // factor)
-
         counts = collections.defaultdict(int)
         for a in A:
             counts[find(a)] += 1
@@ -58,7 +52,6 @@ class Solution:
     def largestComponentSize_slow(self, A: List[int]) -> int:
         A.sort()
         self.get_prime_numbers(A[-1])
-        # print(self.total_factors)
         max_len = 0
         while len(A) > max_len:
             factors = self.get_factors(A[0])

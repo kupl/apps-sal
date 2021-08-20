@@ -1,4 +1,5 @@
 class Solution:
+
     def minHeightShelves(self, books: List[List[int]], shelf_width: int) -> int:
         dp = [0] * (len(books) + 1)
         for i in range(len(books)):

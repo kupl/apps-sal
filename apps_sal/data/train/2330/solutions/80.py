@@ -1,9 +1,16 @@
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 S = '-' + sr()
@@ -12,16 +19,16 @@ N = len(S) - 1
 
 def solve(S):
     if S[1] == '0':
-        print((-1))
+        print(-1)
         return
     if S[N] == '1':
-        print((-1))
+        print(-1)
         return
     prev = 1
     graph = []
     for n in range(1, N // 2 + 1):
         if S[n] != S[N - n]:
-            print((-1))
+            print(-1)
             return
         if S[n] == '0':
             continue
@@ -34,8 +41,7 @@ def solve(S):
 
 
 graph = solve(S)
-
 if graph is None:
-    print((-1))
+    print(-1)
 else:
-    print(('\n'.join(graph)))
+    print('\n'.join(graph))

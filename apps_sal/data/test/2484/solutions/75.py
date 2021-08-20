@@ -1,8 +1,7 @@
 import sys
 import numpy as np
-
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
+INF = float('inf')
 MOD = 10 ** 9 + 7
 
 
@@ -13,8 +12,6 @@ def input():
 def main():
     N = int(input())
     A = list(map(int, input().split()))
-
-    # a ^ b <= a + b が成り立つ
     ans = 0
     right = 0
     xor = 0
@@ -24,15 +21,12 @@ def main():
             s += A[right]
             xor ^= A[right]
             right += 1
-
         ans += right - left
-
         if right == left:
             right += 1
         else:
             s -= A[left]
             xor ^= A[left]
-
     print(ans)
 
 

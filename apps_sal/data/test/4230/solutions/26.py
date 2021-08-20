@@ -1,4 +1,4 @@
-x, n = [int(s) for s in input().split()]
+(x, n) = [int(s) for s in input().split()]
 p_set = set([int(s) for s in input().split()])
 a = 0
 while True:

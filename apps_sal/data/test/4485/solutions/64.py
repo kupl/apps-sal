@@ -3,6 +3,7 @@ from typing import Deque, Set, Dict
 
 
 class Island:
+
     def __init__(self, id: int) -> None:
         self.id: int = id
         self.connection: List['Island'] = []
@@ -22,6 +23,7 @@ class Island:
 
 
 class Islands(Dict[int, Island]):
+
     def __init__(self, num: int):
         for id in range(1, num + 1):
             self[id] = Island(id)
@@ -45,16 +47,12 @@ def bfs(root: Island, max_depth: int) -> None:
 
 def main() -> None:
     with open(0) as f:
-        N, M = map(int, f.readline().split())
+        (N, M) = map(int, f.readline().split())
         ab = [map(int, line.split()) for line in f.readlines()]
-    # 諸島生成
     islands: Islands = Islands(N)
-    # 諸島間定期便生成
-    for a, b in ab:
+    for (a, b) in ab:
         islands[a].addConnection(islands[b])
-    # bfs
     bfs(islands[1], 2)
-    # 出力
     print('POSSIBLE' if islands[N].rank in (1, 2) else 'IMPOSSIBLE')
 
 

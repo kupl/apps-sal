@@ -1,5 +1,3 @@
-# cook your dish here
-
 def calc(array):
     result = 0
     for i in range(1, len(array)):
@@ -9,7 +7,7 @@ def calc(array):
 
 
 def answer(p, q):
-    result = p * (p - 1) + (p * (p - 3) * q) // 2
+    result = p * (p - 1) + p * (p - 3) * q // 2
     return result
 
 

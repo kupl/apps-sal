@@ -10,4 +10,4 @@ def graceful_tipping(bill):
     while total >= 20:
         d += 1
         total /= 10
-    return ceil(total) * 5 * 10**d
+    return ceil(total) * 5 * 10 ** d

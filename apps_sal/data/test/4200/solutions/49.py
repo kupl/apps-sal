@@ -1,4 +1,4 @@
-N, M = [int(s) for s in input().split()]
+(N, M) = [int(s) for s in input().split()]
 ls = [int(s) for s in input().split()]
 ls = sorted(ls, reverse=True)
 border = sum(ls) / (4 * M)

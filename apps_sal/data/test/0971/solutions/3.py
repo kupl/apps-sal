@@ -1,4 +1,4 @@
-n, b, d = map(int, input().split())
+(n, b, d) = map(int, input().split())
 arr = map(int, input().split())
 d1 = 0
 c = 0

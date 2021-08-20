@@ -1,7 +1,7 @@
 def spin_solve(sentence):
     r = []
     for s in sentence.split():
-        p, c = s.endswith('.'), s.endswith(',')
+        (p, c) = (s.endswith('.'), s.endswith(','))
         s = s[:-1] if p or c else s
         if len(s) > 6 or s.lower().count('t') > 1:
             r.append(s[::-1] + ('.' if p else ',' if c else ''))

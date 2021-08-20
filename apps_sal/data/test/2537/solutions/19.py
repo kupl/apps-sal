@@ -15,7 +15,7 @@ for _ in range(q):
             j += 1
         i += 1
     if t.count('') != len(s):
-        print("NO")
+        print('NO')
         continue
     for i in p:
         for j in range(len(t)):

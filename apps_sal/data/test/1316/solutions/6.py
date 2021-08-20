@@ -2,22 +2,18 @@ import copy
 import itertools
 import string
 
-###
-
 
 def powmod(x, p, m):
     if p <= 0:
         return 1
     if p <= 1:
         return x % m
-    return powmod(x * x % m, p // 2, m) * (x % m)**(p % 2) % m
-
-###
+    return powmod(x * x % m, p // 2, m) * (x % m) ** (p % 2) % m
 
 
 def to_basex(num, x):
     while num > 0:
-        yield num % x
+        yield (num % x)
         num //= x
 
 
@@ -29,14 +25,10 @@ def from_basex(it, x):
         p *= x
     return ret
 
-###
-
 
 def core():
-    n, k = (int(x) for x in input().split())
-    #print(n, k)
+    (n, k) = (int(x) for x in input().split())
     s = input()
-
     ansd = {l: 0 for l in string.ascii_lowercase}
     for l in string.ascii_lowercase:
         cnt = 0
@@ -48,9 +40,6 @@ def core():
                     cnt = 0
             else:
                 cnt = 0
-
-    # print(ansd)
-
     ans = max(ansd.values())
     print(ans)
 

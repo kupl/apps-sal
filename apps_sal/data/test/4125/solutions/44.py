@@ -2,9 +2,9 @@ from math import gcd
 
 
 def readinput():
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     xx = list(map(int, input().split()))
-    return n, x, xx
+    return (n, x, xx)
 
 
 def main(n, x, xx):
@@ -21,7 +21,7 @@ def main(n, x, xx):
 
 
 def __starting_point():
-    n, x, xx = readinput()
+    (n, x, xx) = readinput()
     ans = main(n, x, xx)
     print(ans)
 

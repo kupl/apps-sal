@@ -1,6 +1,6 @@
 tc = int(input())
 for i in range(tc):
-    x = input().split(" ")
+    x = input().split(' ')
     L = int(x[0])
     v = int(x[1])
     l = int(x[2])

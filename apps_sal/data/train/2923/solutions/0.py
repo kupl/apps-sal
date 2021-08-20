@@ -1,6 +1,5 @@
 from re import compile, sub
-
-REGEX = compile(r',+')
+REGEX = compile(',+')
 
 
 def dad_filter(strng):

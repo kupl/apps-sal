@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         n = len(arr)
         self.max = 0
@@ -10,6 +11,5 @@ class Solution:
             else:
                 helper(idx + 1, chars)
                 helper(idx + 1, chars + list(arr[idx]))
-
         helper(0, [])
         return self.max

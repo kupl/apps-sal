@@ -3,28 +3,27 @@ def alphabet_war(fight):
     right_power = 0
     fight = list(fight)
     for letter in fight:
-        if letter == "z":
+        if letter == 'z':
             right_power += 1
-        elif letter == "d":
+        elif letter == 'd':
             right_power += 2
-        elif letter == "q":
+        elif letter == 'q':
             right_power += 3
-        elif letter == "m":
+        elif letter == 'm':
             right_power += 4
-        elif letter == "s":
+        elif letter == 's':
             left_power += 1
-        elif letter == "b":
+        elif letter == 'b':
             left_power += 2
-        elif letter == "p":
+        elif letter == 'p':
             left_power += 3
-        elif letter == "w":
+        elif letter == 'w':
             left_power += 4
         else:
             continue
-
     if left_power > right_power:
-        return "Left side wins!"
+        return 'Left side wins!'
     elif right_power > left_power:
-        return "Right side wins!"
+        return 'Right side wins!'
     elif right_power == left_power:
         return "Let's fight again!"

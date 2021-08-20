@@ -1,8 +1,9 @@
 class Solution:
+
     def braceExpansionII(self, expression: str) -> List[str]:
         groups = [[]]
         level = 0
-        for i, c in enumerate(expression):
+        for (i, c) in enumerate(expression):
             if c == '{':
                 if level == 0:
                     start = i + 1

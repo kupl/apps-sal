@@ -3,9 +3,9 @@ while T:
     N = int(input())
     A = list(map(int, input().split()))
     d = set()
-    n = (N * (N + 1)) // 2
+    n = N * (N + 1) // 2
     if N > 60:
-        print("NO")
+        print('NO')
     else:
         for i in range(N):
             ans = 0
@@ -13,8 +13,7 @@ while T:
                 ans = A[j] | ans
                 d.add(ans)
         if len(d) == n:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
     T -= 1

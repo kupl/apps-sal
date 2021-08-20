@@ -21,10 +21,9 @@ def solve():
                 lsf[i][j] = lsf[lsf[i][j - 1]][j - 1]
             if lsb[i][j - 1] != -1:
                 lsb[i][j] = lsb[lsb[i][j - 1]][j - 1]
-
     for i in range(q):
-        a, b = list(map(int, input().rstrip('\n').split()))
-        a, b = a - 1, b - 1
+        (a, b) = list(map(int, input().rstrip('\n').split()))
+        (a, b) = (a - 1, b - 1)
         cnt = 0
         if a < b:
             for j in range(b.bit_length(), -1, -1):

@@ -14,7 +14,7 @@ def bfs(graph1, root1):
     visited1 = set()
     queue1 = [[root1, 0]]
     visited1.add(root1)
-    qw, ver = 0, 1
+    (qw, ver) = (0, 1)
     while queue1:
         vertex1 = queue1[0]
         queue1 = queue1[1:]
@@ -23,8 +23,8 @@ def bfs(graph1, root1):
                 visited1.add(neig1)
                 queue1 += [[neig1, vertex1[1] + 1]]
                 if qw < vertex1[1] + 1:
-                    ver, qw = neig1, vertex1[1] + 1
-    return ver, qw
+                    (ver, qw) = (neig1, vertex1[1] + 1)
+    return (ver, qw)
 
 
 def dfs(graph, ver):
@@ -46,7 +46,7 @@ def dfs(graph, ver):
 
 
 def binary_search(array, x):
-    left, right = -1, len(array)
+    (left, right) = (-1, len(array))
     while left + 1 != right:
         middle = (left + right) // 2
         if array[middle] >= x:
@@ -59,9 +59,9 @@ def binary_search(array, x):
 def c_mod(n1, k1, mod1):
     num = den = 1
     for i in range(n1 - k1):
-        num = (num * (n1 - i)) % mod1
-        den = (den * (i + 1)) % mod1
-    return (num * pow(den, mod1 - 2, mod1)) % mod1
+        num = num * (n1 - i) % mod1
+        den = den * (i + 1) % mod1
+    return num * pow(den, mod1 - 2, mod1) % mod1
 
 
 def c(n1, k1):

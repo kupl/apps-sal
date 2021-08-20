@@ -1,20 +1,14 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 from collections import deque
 
 
 class Solution:
+
     def bfs(self, root, col_table):
         min_col = 0
         max_col = 0
         queue = deque([(root, 0, 0)])
-
         while queue:
-            node, col, row = queue.popleft()
+            (node, col, row) = queue.popleft()
             col_value = col_table.get(col, [])
             col_value.append((row, node.val))
             col_table[col] = col_value
@@ -24,14 +18,13 @@ class Solution:
                 queue.append((node.left, col - 1, row + 1))
             if node.right:
                 queue.append((node.right, col + 1, row + 1))
-        return min_col, max_col
+        return (min_col, max_col)
 
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         if not root:
             return []
         col_table = dict()
-        min_col, max_col = self.bfs(root, col_table)
-
+        (min_col, max_col) = self.bfs(root, col_table)
         res = []
         for col_idx in range(min_col, max_col + 1):
             col_res = []

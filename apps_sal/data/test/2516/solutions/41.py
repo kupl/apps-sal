@@ -1,4 +1,4 @@
-N, P = list(map(int, input().split()))
+(N, P) = list(map(int, input().split()))
 lst = [int(d) for d in input()]
 chk = [0] * P
 t = 0

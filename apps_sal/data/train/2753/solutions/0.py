@@ -3,5 +3,5 @@ def is_kiss(words):
     l = len(wordsL)
     for word in wordsL:
         if len(word) > l:
-            return "Keep It Simple Stupid"
-    return "Good work Joe!"
+            return 'Keep It Simple Stupid'
+    return 'Good work Joe!'

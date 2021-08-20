@@ -1,6 +1,5 @@
 n = int(input())
-n = (n * -1) % 360
-
+n = n * -1 % 360
 minVueltas = -1
 minValor = -1
 for i in range(4):

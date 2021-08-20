@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Codeforces Round #555 (Div. 3)
 
 Problem F. Maximum Balanced Circle
@@ -11,10 +8,8 @@ Problem F. Maximum Balanced Circle
 Please feel free to contact me if you have any question
 regarding the implementation below.
 """
-
 __version__ = '0.1'
 __date__ = '2019-04-26'
-
 import sys
 
 
@@ -52,7 +47,6 @@ def solve(n, a):
     if curr_total > best_total:
         best_group = curr_group
         best_total = curr_total
-
     seq = best_group
     for i in best_group[::-1]:
         seq += [i] * (counter[i] - 1)
@@ -62,7 +56,7 @@ def solve(n, a):
 def main(argv=None):
     n = int(input())
     a = list(map(int, input().split()))
-    total, seq = solve(n, a)
+    (total, seq) = solve(n, a)
     print(total)
     print(' '.join(map(str, seq)))
     return 0
@@ -70,7 +64,7 @@ def main(argv=None):
 
 def __starting_point():
     STATUS = main()
-    return(STATUS)
+    return STATUS
 
 
 __starting_point()

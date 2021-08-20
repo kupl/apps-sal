@@ -1,8 +1,6 @@
 import heapq
-
 n = int(input())
 A = list(map(int, input().split()))
-
 sa = 0
 sb = 0
 hf = []
@@ -27,8 +25,7 @@ for i in range(n, 2 * n):
     sb += now2 - h2
     la[i - n + 1][0] = sa
     la[-i + n - 2][1] = sb
-
-ans = -float("INF")
-for i, j in la:
+ans = -float('INF')
+for (i, j) in la:
     ans = max(ans, i - j)
 print(ans)

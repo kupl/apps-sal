@@ -1,4 +1,5 @@
 class Solution:
+
     def dist(self, a, b):
         return (ord(b) - ord(a)) % 26
 
@@ -6,7 +7,7 @@ class Solution:
         if len(s) != len(t):
             return False
         seen = {}
-        for x, y in zip(s, t):
+        for (x, y) in zip(s, t):
             if x == y:
                 continue
             d = self.dist(x, y)

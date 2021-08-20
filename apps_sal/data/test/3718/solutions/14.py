@@ -38,7 +38,7 @@ def main():
     line = input()
     line = [int(i) for i in line.split()]
     line = line[0:n]
-    r = "YES" if isGift(line) else "NO"
+    r = 'YES' if isGift(line) else 'NO'
     print(r)
 
 

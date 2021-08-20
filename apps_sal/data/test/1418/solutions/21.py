@@ -1,5 +1,3 @@
-
-
 def __starting_point():
     n = int(input())
     arr = [None] * (n + 3)
@@ -10,8 +8,7 @@ def __starting_point():
                 if not arr[j]:
                     arr[j] = cnt
             cnt += 1
-
-    print(" ".join(map(str, arr[2:n + 1])))
+    print(' '.join(map(str, arr[2:n + 1])))
 
 
 __starting_point()

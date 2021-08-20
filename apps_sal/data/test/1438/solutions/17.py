@@ -1,19 +1,13 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 results = [None] * n
-
 for i in range(n):
-    div, mod = b[i] // a[i], b[i] % a[i]
+    (div, mod) = (b[i] // a[i], b[i] % a[i])
     insufficient = a[i] - mod
     results[i] = [div, mod, insufficient, i]
-
-
 results.sort()
-
 i = 0
-
 while k > 0:
     k -= 1
     index = results[i][3]
@@ -26,5 +20,4 @@ while k > 0:
         results[i][1] += 1
         results[i][2] -= 1
     results.sort()
-
 print(results[0][0])

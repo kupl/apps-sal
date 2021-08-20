@@ -12,7 +12,6 @@ for i in range(enum):
         cur.remove(events[i][1])
     else:
         cur.add(events[i][1])
-
 cur = before
 max_l = len(cur)
 for i in range(enum):

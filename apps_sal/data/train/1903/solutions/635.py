@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.sz = [1] * N
         self.par = list(range(N))
@@ -14,7 +15,7 @@ class DSU:
         if px == py:
             return False
         if self.sz[px] < self.sz[py]:
-            px, py = py, px
+            (px, py) = (py, px)
         self.par[py] = px
         self.sz[px] += self.sz[py]
         return True
@@ -24,6 +25,7 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         edges = []
@@ -35,7 +37,7 @@ class Solution:
                 edges.append([i, j, d])
         edges.sort(key=lambda key: key[2])
         ans = 0
-        for u, v, d in edges:
+        for (u, v, d) in edges:
             if dsu.union(u, v):
                 ans += d
         return ans

@@ -1,12 +1,15 @@
 import sys
-def LS(): return list(sys.stdin.readline().rstrip().split())
 
 
-N, S = LS()
+def LS():
+    return list(sys.stdin.readline().rstrip().split())
+
+
+(N, S) = LS()
 ans = 0
 for i in range(int(N)):
     S1 = S[i:]
-    a, g = 0, 0
+    (a, g) = (0, 0)
     for s in S1:
         if s == 'A':
             a += 1

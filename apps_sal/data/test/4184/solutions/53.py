@@ -1,5 +1,4 @@
-
-url = "https://atcoder.jp//contests/abc129/tasks/abc129_b"
+url = 'https://atcoder.jp//contests/abc129/tasks/abc129_b'
 
 
 def main():
@@ -9,7 +8,7 @@ def main():
     sums = sum(t)
     for v in t:
         sums -= v
-        ans = min(abs((sum(t) - sums) - sums), ans)
+        ans = min(abs(sum(t) - sums - sums), ans)
     print(ans)
 
 

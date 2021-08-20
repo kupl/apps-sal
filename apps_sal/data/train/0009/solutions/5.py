@@ -11,9 +11,7 @@ def solv():
     if sm:
         v.append(sm)
     v.sort(reverse=True)
-
     res = 0
-
     for n in range(0, len(v), 2):
         res += v[n]
     print(res)

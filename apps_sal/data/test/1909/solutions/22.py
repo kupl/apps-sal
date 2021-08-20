@@ -1,4 +1,3 @@
-# python3
 import sys
 import threading
 import os.path
@@ -7,7 +6,6 @@ import heapq
 import math
 import bisect
 import string
-
 sys.setrecursionlimit(10 ** 6)
 threading.stack_size(2 ** 27)
 
@@ -17,25 +15,19 @@ def main():
         input = open('in.txt', 'r')
     else:
         input = sys.stdin
-    # --------------------------------INPUT---------------------------------
-    n, k = list(map(int, input.readline().split()))
+    (n, k) = list(map(int, input.readline().split()))
     lis = list(map(int, input.readline().split()))
-
     lis1 = [0 for i in range(k)]
-
     case1 = n / k
-    ans1, ans2 = 10000000, 0
-    for i, x in enumerate(lis):
+    (ans1, ans2) = (10000000, 0)
+    for (i, x) in enumerate(lis):
         lis1[i % k] += lis[i]
-
     ans1 = min(lis1)
-    for i, x in enumerate(lis1):
+    for (i, x) in enumerate(lis1):
         if x == ans1:
             ans2 = i + 1
             break
-
     output = ans2
-    # -------------------------------OUTPUT----------------------------------
     if os.path.exists('out.txt'):
         open('out.txt', 'w').writelines(str(output))
     else:
@@ -44,7 +36,6 @@ def main():
 
 def __starting_point():
     main()
-# threading.Thread(target=main).start()
 
 
 __starting_point()

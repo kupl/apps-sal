@@ -1,12 +1,10 @@
 import math
-n, k = list(map(int, input().split()))
-r, s, p = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
+(r, s, p) = list(map(int, input().split()))
 t = input()
-#r<-p, s<-r, p<-s
 dic = {'r': p, 's': r, 'p': s}
 point = 0
 lose = False
-
 for j in range(k):
     point += dic[t[j]]
     for i in range(j + k, n, k):

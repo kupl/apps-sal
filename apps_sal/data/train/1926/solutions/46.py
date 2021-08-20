@@ -1,4 +1,5 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         diff = math.inf
         ans = []
@@ -7,7 +8,6 @@ class Solution:
 
         def func(num):
             nonlocal diff, ans
-
             for i in range(1, math.ceil(math.sqrt(num)) + 1):
                 if num % i == 0:
                     j = num // i
@@ -15,8 +15,6 @@ class Solution:
                         diff = abs(i - j)
                         ans = [i, j]
             return ans
-
         func(n + 1)
         func(n + 2)
-
         return ans

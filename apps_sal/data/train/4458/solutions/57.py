@@ -1,10 +1,10 @@
 def time_correct(t):
-    if t == "":
-        return ""
-    if not t or "+" in t:
+    if t == '':
+        return ''
+    if not t or '+' in t:
         return None
     try:
-        h, m, s = map(int, t.split(':'))
+        (h, m, s) = map(int, t.split(':'))
     except:
         return None
     m += s // 60

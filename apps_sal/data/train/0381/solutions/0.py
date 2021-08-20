@@ -1,4 +1,5 @@
 class Solution:
+
     def minSubArrayLen(self, k, nums):
         """
         :type k: int
@@ -10,8 +11,7 @@ class Solution:
         _min = float('inf')
         _sum = 0
         j = 0
-
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             _sum += n
             while _sum >= k:
                 _min = min(i - j + 1, _min)

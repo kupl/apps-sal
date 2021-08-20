@@ -4,7 +4,7 @@ import math
 
 
 def readInt(count=1):
-    m = re.match('\s*' + ('([+-]?\d+)\s*' * count), stdin.readline())
+    m = re.match('\\s*' + '([+-]?\\d+)\\s*' * count, stdin.readline())
     if m is not None:
         ret = []
         for i in range(1, m.lastindex + 1):
@@ -13,8 +13,7 @@ def readInt(count=1):
     return None
 
 
-x, y, l, r = readInt(4)
-
+(x, y, l, r) = readInt(4)
 max = 0
 unhappyYears = [l - 1]
 xa = 1
@@ -30,7 +29,6 @@ while xa <= r:
     xa *= x
 unhappyYears.sort()
 unhappyYears.append(r + 1)
-
 for i in range(len(unhappyYears) - 1):
     cur = unhappyYears[i + 1] - unhappyYears[i] - 1
     if cur > max:

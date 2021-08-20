@@ -7,5 +7,5 @@ for k in range(t):
     for j in range(6):
         s = int(n / l[j])
         c = c + s
-        n = n - (s * l[j])
+        n = n - s * l[j]
     print(c)

@@ -1,10 +1,10 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 if k < n:
     r = [k + 1, 1]
 else:
     m -= 1
     k -= n
-    y, x = divmod(k, m)
+    (y, x) = divmod(k, m)
     r = [n - y, 0]
     if y & 1:
         r[1] = m - x + 1

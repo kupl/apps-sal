@@ -1,6 +1,7 @@
 class Solution:
+
     def longestCommonSubsequence(self, A: str, B: str) -> int:
-        m, n = len(A), len(B)
+        (m, n) = (len(A), len(B))
         dp = [[0] * (n + 1) for i in range(m + 1)]
         for i in range(m + 1):
             for j in range(n + 1):

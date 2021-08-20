@@ -1,5 +1,5 @@
-h1, h2 = list(map(int, input().split(" ")))
-a, b = list(map(int, input().split(" ")))
+(h1, h2) = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 
 
 def caterpillar(a, b, h1, h2):
@@ -12,7 +12,7 @@ def caterpillar(a, b, h1, h2):
         else:
             c = h2 - h
             d = 12 * (a - b)
-            print((c // d) + (c % d > 0) * 1)
+            print(c // d + (c % d > 0) * 1)
 
 
 caterpillar(a, b, h1, h2)

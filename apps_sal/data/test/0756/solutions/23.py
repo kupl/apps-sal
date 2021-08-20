@@ -1,10 +1,7 @@
 def solve():
     n = int(input())
-
     ar = list(map(int, input().split()))
-
     prev = 0
-
     for i in range(n):
         if ar[i] - prev > 15:
             print(prev + 15)

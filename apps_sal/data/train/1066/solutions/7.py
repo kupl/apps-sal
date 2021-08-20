@@ -15,7 +15,7 @@ for i in range(t):
             l.append(int(k))
         except:
             pass
-    while(check(l)):
+    while check(l):
         for j in range(len(l) - 1):
             if l[j + 1] < l[j]:
                 l[j] = l[j] - 1

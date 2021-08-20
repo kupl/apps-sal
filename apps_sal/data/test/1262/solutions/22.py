@@ -1,26 +1,36 @@
 from sys import stdin, stdout
 from collections import Counter
-def ai(): return list(map(int, stdin.readline().split()))
-def ei(): return map(int, stdin.readline().split())
-def ip(): return int(stdin.readline().strip())
-def op(ans): return stdout.write(str(ans) + '\n')
+
+
+def ai():
+    return list(map(int, stdin.readline().split()))
+
+
+def ei():
+    return map(int, stdin.readline().split())
+
+
+def ip():
+    return int(stdin.readline().strip())
+
+
+def op(ans):
+    return stdout.write(str(ans) + '\n')
 
 
 n = ip()
 pos = [ai() for i in range(n)]
 c = ai()
 k = ai()
-
 connections = []
 plants = []
 used = [False] * n
 parent = [-1] * n
-
 ans = 0
 n_ = n
 while n_:
     n_ -= 1
-    mn, u = min([(ci, i) for i, ci in enumerate(c) if not used[i]])
+    (mn, u) = min([(ci, i) for (i, ci) in enumerate(c) if not used[i]])
     ans += mn
     used[u] = True
     if parent[u] == -1:

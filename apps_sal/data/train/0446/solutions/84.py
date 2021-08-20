@@ -1,8 +1,8 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        # 9:21
         c = collections.Counter(arr)
-        items = [(k, v) for k, v in list(c.items())]
+        items = [(k, v) for (k, v) in list(c.items())]
         items.sort(key=lambda x: x[1])
         removals = 0
         i = 0

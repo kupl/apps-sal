@@ -1,11 +1,9 @@
 import math
-
-n, m, q = list(map(int, input().split()))
+(n, m, q) = list(map(int, input().split()))
 d = math.gcd(n, m)
-nd, md = n // d, m // d
-
+(nd, md) = (n // d, m // d)
 for _ in range(q):
-    x, y, u, v = list(map(int, input().split()))
+    (x, y, u, v) = list(map(int, input().split()))
     y -= 1
     v -= 1
     if x == 1:

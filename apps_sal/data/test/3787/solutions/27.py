@@ -1,6 +1,6 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 if A * B < N or A + B - 1 > N:
-    print((-1))
+    print(-1)
 else:
     array = [i for i in reversed(list(range(1, N + 1)))]
     if A > 1:
@@ -21,4 +21,4 @@ else:
         array = []
         for l in reversed(L):
             array += l
-    print((' '.join([str(a) for a in array])))
+    print(' '.join([str(a) for a in array]))

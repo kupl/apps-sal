@@ -2,10 +2,10 @@ def time_correct(t):
     if not t:
         return t
     try:
-        h, m, s = t.split(':')
-        if (len(h) != 2) or (len(m) != 2) or (len(s) != 2):
+        (h, m, s) = t.split(':')
+        if len(h) != 2 or len(m) != 2 or len(s) != 2:
             return None
-        h, m, s = list(map(int, t.split(':')))
+        (h, m, s) = list(map(int, t.split(':')))
         if s >= 60:
             s -= 60
             m += 1

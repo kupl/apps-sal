@@ -1,11 +1,9 @@
 N = int(input())
 S1 = list(input())
 S2 = list(input())
-
 out = 1
 i = 0
 while i < N:
-    # print(i,S1[i])
     if i == 0:
         if S1[i] == S2[i]:
             out *= 3
@@ -14,23 +12,20 @@ while i < N:
             out *= 6
             flg = 1
             i += 1
-    else:
-        if flg == 0:
-            if S1[i] == S2[i]:
-                out *= 2
-                flg = 0
-            else:
-                out *= 2
-                i += 1
-                flg = 1
+    elif flg == 0:
+        if S1[i] == S2[i]:
+            out *= 2
+            flg = 0
         else:
-            if S1[i] == S2[i]:
-                out *= 1
-                flg = 0
-            else:
-                out *= 3
-                flg = 1
-                i += 1
+            out *= 2
+            i += 1
+            flg = 1
+    elif S1[i] == S2[i]:
+        out *= 1
+        flg = 0
+    else:
+        out *= 3
+        flg = 1
+        i += 1
     i += 1
-
-print((out % 1000000007))
+print(out % 1000000007)

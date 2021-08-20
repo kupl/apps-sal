@@ -7,7 +7,7 @@ dx = (0, 1, 0, -1)
 
 
 def main():
-    m, k = map(int, input().split())
+    (m, k) = map(int, input().split())
     if k >= pow(2, m):
         print(-1)
         return
@@ -17,7 +17,6 @@ def main():
         else:
             print('{0} {0} {1} {1}'.format(0, 1))
         return
-
     ans = [k]
     ans2 = [k]
     lim = pow(2, m)

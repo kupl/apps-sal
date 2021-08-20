@@ -1,8 +1,5 @@
 class Solution:
-    # Version 1: DFS with memoization
-    # Brute force
-    # TC: O(n^3), SC: O(n^2)
-    '''
+    """
     def minNumberOperations(self, target: List[int]) -> int:
 
         def get(num, dp):
@@ -26,30 +23,15 @@ class Solution:
 
         dp = {}
         return get(target, dp)
-    '''
+    """
 
-    # Version 2: Use stack to check the increment status
-    # If the number is smaller than the top of the stack, it means some increments used on the top of the stack will not be used for the new number.
-    # Therefore, we can pop the stack.
-    # TC: O(n), SC: O(n)
     def minNumberOperations(self, target: List[int]) -> int:
         ans = 0
         stack = [0]
         for k in target:
             while len(stack) >= 1 and stack[-1] >= k:
-                ans += (stack[-1] - max(k, stack[-2]))
+                ans += stack[-1] - max(k, stack[-2])
                 stack.pop()
             stack.append(k)
-        # print(stack)
         return ans + stack[-1]
-
-    '''
-    def minNumberOperations(self, target: List[int]) -> int:
-        ans = 0
-        current = 0
-        for k in target:
-            if k > current:
-                ans += (k-current)
-            current = k
-        return ans
-    '''
+    '\n    def minNumberOperations(self, target: List[int]) -> int:\n        ans = 0\n        current = 0\n        for k in target:\n            if k > current:\n                ans += (k-current)\n            current = k\n        return ans\n    '

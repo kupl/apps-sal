@@ -1,4 +1,4 @@
-d, n = map(int, input().split())
+(d, n) = map(int, input().split())
 
 
 def cal(x):

@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 if n % 2 == 0:
     for i in range(n):
         if i < int(n / 2):

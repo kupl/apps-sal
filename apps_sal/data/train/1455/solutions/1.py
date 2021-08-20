@@ -2,7 +2,7 @@ n = eval(input())
 gr = [int(i) for i in input().split()]
 q = eval(input())
 for _ in range(q):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     temp = gr[l - 1:r]
     temp.sort()
     ans = 0

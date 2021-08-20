@@ -1,4 +1,4 @@
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 minv = A[0]
 maxv = -1
@@ -10,4 +10,4 @@ for i in range(1, N):
     elif A[i] - minv == maxv:
         L.append(i)
     minv = min(minv, A[i])
-print((len(L)))
+print(len(L))

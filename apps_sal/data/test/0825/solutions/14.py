@@ -1,7 +1,7 @@
 def prime_factors(n):
     i = 2
     factors = []
-    while i**2 <= n:
+    while i ** 2 <= n:
         if n % i != 0:
             i += 1
         else:
@@ -18,7 +18,7 @@ def resolve():
     factors = collections.Counter(prime_factors(N))
     numbers = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
     cnt = 0
-    for k, v in list(factors.items()):
+    for (k, v) in list(factors.items()):
         cnt += numbers[v]
     print(cnt)
 

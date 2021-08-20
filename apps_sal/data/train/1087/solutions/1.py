@@ -1,6 +1,6 @@
 def main():
     try:
-        print("YES")
+        print('YES')
     except:
         return 0
 

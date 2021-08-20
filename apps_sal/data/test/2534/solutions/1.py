@@ -1,5 +1,4 @@
-# cook your dish here
-r, c = map(int, input().split())
+(r, c) = map(int, input().split())
 mi = []
 m = []
 for i in range(r):

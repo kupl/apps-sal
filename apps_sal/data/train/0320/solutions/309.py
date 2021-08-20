@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         nums.sort(reverse=True)
         s = sum(nums)
@@ -12,7 +13,6 @@ class Solution:
             nums = list([x for x in nums if x > 0])
             if not nums:
                 break
-            # mineve = min(nums)
             for i in range(len(nums)):
                 nums[i] //= 2
                 s += nums[i]

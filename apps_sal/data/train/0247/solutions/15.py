@@ -2,11 +2,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getSubArray(self, array, target):
         dic = defaultdict(int)
         minSub = [float('inf')] * len(array)
         currentSum = 0
-        for i, num in enumerate(array):
+        for (i, num) in enumerate(array):
             currentSum += num
             if currentSum == target:
                 minSub[i] = i - 0 + 1
@@ -21,7 +22,6 @@ class Solution:
         result = float('inf')
         leftMinSub = self.getSubArray(arr, target)
         rightMinSub = self.getSubArray(arr[::-1], target)[::-1]
-
         for i in range(1, n):
             result = min(result, leftMinSub[i - 1] + rightMinSub[i])
         if result == float('inf'):

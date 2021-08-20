@@ -1,5 +1,7 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+
         @lru_cache(None)
         def lcs(s1, n, i, s2, m, j):
             if i >= n or j >= m:

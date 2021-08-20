@@ -1,8 +1,8 @@
-n, W = map(int, input().split())
+(n, W) = map(int, input().split())
 w = [0] * n
 v = [0] * n
 for i in range(n):
-    w[i], v[i] = map(int, input().split())
+    (w[i], v[i]) = map(int, input().split())
 ws = w[0]
 V = [[] for i in range(4)]
 for i in range(n):

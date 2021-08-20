@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if len({l for l in s}) == 1:
             return s
@@ -11,7 +12,7 @@ class Solution:
             key = s[i:i + order]
             d[key].append(i)
         result = []
-        for k, v in sorted(d.items()):
+        for (k, v) in sorted(d.items()):
             if len(v) > 1:
                 result += self.sort_bucket(s, v, order * 2)
             else:

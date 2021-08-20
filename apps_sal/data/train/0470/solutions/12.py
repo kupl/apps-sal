@@ -1,7 +1,7 @@
 class Solution:
+
     def threeSum(self, A: List[int], target: int) -> List[List[int]]:
         triples = []
-
         i = 0
         k = len(A) - 1
         while i <= k:
@@ -25,10 +25,9 @@ class Solution:
         for num in A:
             count[num] = count.get(num, 0) + 1
         sorted_A_no_dup = sorted([num for num in count])
-
         all_triples = self.threeSum(sorted_A_no_dup, target)
         for triple in all_triples:
-            a, b, c = triple[0], triple[1], triple[2]
+            (a, b, c) = (triple[0], triple[1], triple[2])
             if a != b and b != c:
                 res += count[a] * count[b] * count[c]
             elif a == b and b != c:
@@ -37,5 +36,5 @@ class Solution:
                 res += count[a] * count[b] * (count[b] - 1) // 2
             elif a == b and b == c:
                 res += count[a] * (count[a] - 1) * (count[a] - 2) // 6
-            res %= 10**9 + 7
+            res %= 10 ** 9 + 7
         return res

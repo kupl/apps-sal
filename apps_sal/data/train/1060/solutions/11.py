@@ -1,4 +1,3 @@
-
 for x in range(int(input())):
     l = int(input())
     s = input()

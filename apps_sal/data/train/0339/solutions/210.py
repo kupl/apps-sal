@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         prod1 = {}
         for i in range(len(nums1) - 1):
@@ -14,14 +15,11 @@ class Solution:
                     prod2[nums2[i] * nums2[j]] = 1
                 else:
                     prod2[nums2[i] * nums2[j]] += 1
-
         cnt = 0
         for i in nums1:
             if i * i in prod2.keys():
                 cnt += prod2[i * i]
-
         for i in nums2:
             if i * i in prod1.keys():
                 cnt += prod1[i * i]
-
         return cnt

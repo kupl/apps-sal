@@ -1,4 +1,5 @@
 class Solution:
+
     def monotonicArrayIncreasing(self, a):
         i = 0
         while i + 1 < len(a):

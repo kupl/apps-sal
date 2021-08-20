@@ -1,8 +1,8 @@
 def main():
-    n, l = int(input()), [(0, "")]
+    (n, l) = (int(input()), [(0, '')])
     for c in map(int, input().split()):
         s = input()
-        l = [(x + dx, b) for dx, b in ((0, s), (c, s[::-1])) for x, a in l if a <= b]
+        l = [(x + dx, b) for (dx, b) in ((0, s), (c, s[::-1])) for (x, a) in l if a <= b]
         l.sort()
         for i in range(len(l) - 1, 0, -1):
             for j in range(i):

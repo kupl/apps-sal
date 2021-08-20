@@ -1,4 +1,5 @@
 class Solution:
+
     def brokenCalc(self, X: int, Y: int) -> int:
         ret = 0
         while Y > X:

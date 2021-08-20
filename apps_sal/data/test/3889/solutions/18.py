@@ -14,4 +14,4 @@ for i in c:
     cur += i
 if n == 1:
     f = 1
-print("Yes" if f else "No")
+print('Yes' if f else 'No')

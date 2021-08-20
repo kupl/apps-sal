@@ -1,7 +1,7 @@
 def dtob(num):
     if num > 1:
         dtob(num // 2)
-    return(num % 2)
+    return num % 2
 
 
 t = int(input())
@@ -11,6 +11,6 @@ for _ in range(t):
     l = []
     for i in range(len(value)):
         b = dtob(value[i])
-        if(b % 10 == 0):
+        if b % 10 == 0:
             l.append(value[i])
     print(sum(l))

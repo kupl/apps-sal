@@ -3,7 +3,7 @@ import re
 
 def replace(s):
     dic = {'!': '?', '?': '!'}
-    r = re.findall(r'[!]+|[/?]+', s)
+    r = re.findall('[!]+|[/?]+', s)
     for i in r[:]:
         ii = dic[i[0]] * len(i)
         if ii in r:

@@ -1,14 +1,13 @@
 class Solution:
+
     def leastOpsExpressTarget(self, x: int, target: int) -> int:
         import math
         from functools import lru_cache
 
         @lru_cache(maxsize=None)
         def f(x, target, depth):
-            # print('  ' * depth, '开始计算', x, target)
             if target == 1:
                 return 1
-
             res = target * 2 - 1
             if target < x:
                 if x - target < target:
@@ -26,5 +25,4 @@ class Solution:
                 else:
                     res = y_lower - 1
             return res
-
         return f(x, target, 0)

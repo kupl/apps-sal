@@ -1,4 +1,4 @@
-x, d = list(map(int, input().split()))
+(x, d) = list(map(int, input().split()))
 arr = []
 n = 0
 s = ''

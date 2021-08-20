@@ -1,6 +1,5 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     lm = [int(item) for item in input().split()]
     l = [item for item in range(1, n + 1)]
     for i in lm:

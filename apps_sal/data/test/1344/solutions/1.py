@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-
 m = 1
 c = 1
 for i in range(1, n):
@@ -10,5 +9,4 @@ for i in range(1, n):
         m = max(m, c)
         c = 1
 m = max(m, c)
-
 print(m)

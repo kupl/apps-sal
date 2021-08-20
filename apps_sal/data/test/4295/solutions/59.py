@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 i = n // k
 a = abs(n - k * i)
 b = abs(n - k * (i + 1))

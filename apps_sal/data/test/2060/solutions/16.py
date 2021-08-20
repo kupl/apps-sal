@@ -5,12 +5,12 @@ def __starting_point():
         found = False
         for a in range(x):
             for b in range(x):
-                if (3 * a) + (7 * b) == x:
+                if 3 * a + 7 * b == x:
                     found = True
                     break
             if found:
                 break
-        print("YES" if found else "NO")
+        print('YES' if found else 'NO')
 
 
 __starting_point()

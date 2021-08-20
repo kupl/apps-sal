@@ -1,8 +1,8 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve():
-    n, m, x, y = map(int, input().split())
+    (n, m, x, y) = map(int, input().split())
     for i in range(n):
         for j in range(m):
             print(x, y)

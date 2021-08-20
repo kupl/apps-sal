@@ -1,6 +1,6 @@
 from math import ceil
-h, m = list(map(int, input().split()))
-H, D, C, N = list(map(int, input().split()))
+(h, m) = list(map(int, input().split()))
+(H, D, C, N) = list(map(int, input().split()))
 if h >= 20:
     print(0.8 * C * ceil(H / N))
 else:

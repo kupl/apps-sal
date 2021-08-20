@@ -2,7 +2,7 @@ import string
 
 
 def string_clean(s):
-    out = ""
+    out = ''
     for element in s:
         if not element.isnumeric():
             out += element

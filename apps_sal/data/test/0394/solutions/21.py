@@ -16,4 +16,4 @@ for k in range(1, n + 1):
         k_s.append(k)
 print(len(k_s))
 for t in k_s:
-    print(t, end=" ")
+    print(t, end=' ')

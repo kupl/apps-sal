@@ -1,6 +1,4 @@
 from math import *
-
-
 for t in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -25,6 +23,6 @@ for t in range(int(input())):
         else:
             cntotr += 1
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -2,10 +2,10 @@ from collections import Counter
 
 
 class Solution:
-    '''
+    """
     Good use of counter
     Same can be done in complex way with sorting the array and using orderedDict
-    '''
+    """
 
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         c = Counter(nums)
@@ -18,5 +18,4 @@ class Solution:
                     del c[i]
                 else:
                     c[i] -= 1
-
         return True

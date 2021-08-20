@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 def judge(balls):
     if len(balls) < 3:
         return False
@@ -24,9 +20,9 @@ def main():
     _ = input()
     balls = set(map(int, input().split()))
     if judge(balls):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

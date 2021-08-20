@@ -1,7 +1,7 @@
 def graceful_tipping(bill):
     import math
     multiple = 0
-    tip = bill + (0.15 * bill)
+    tip = bill + 0.15 * bill
     if tip < 10:
         multiple = 1
     elif tip < 100:
@@ -18,5 +18,4 @@ def graceful_tipping(bill):
         multiple = 500000
     elif tip < 100000000:
         multiple = 5000000
-
     return math.ceil(float(tip) / multiple) * multiple

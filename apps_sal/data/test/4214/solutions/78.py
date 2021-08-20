@@ -1,10 +1,10 @@
 import itertools
 import math
 N = int(input())
-ls, val = [], 0
+(ls, val) = ([], 0)
 perm = itertools.permutations(range(N))
 for i in range(N):
-    x, y = map(int, input().split(' '))
+    (x, y) = map(int, input().split(' '))
     ls.append([x, y])
 for i in perm:
     for j in range(N - 1):

@@ -1,4 +1,4 @@
-s = [""] * 8
+s = [''] * 8
 for i in range(0, 8):
     s[i] = input()
 white = {}
@@ -36,8 +36,8 @@ for i in range(0, 8):
         w = w + white[s[i][j]]
         b = b + black[s[i][j]]
 if w > b:
-    print("White")
+    print('White')
 elif w < b:
-    print("Black")
+    print('Black')
 else:
-    print("Draw")
+    print('Draw')

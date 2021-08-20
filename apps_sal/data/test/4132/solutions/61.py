@@ -16,5 +16,4 @@ def gcd(a, b):
 ans = A[0]
 for n in range(N):
     ans = gcd(ans, A[n])
-
 print(ans)

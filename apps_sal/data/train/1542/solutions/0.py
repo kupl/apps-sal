@@ -1,15 +1,11 @@
-# cook your dish here
 try:
-
     T = int(input())
-
     for i in range(T):
         n = int(input())
         s = input()
-        arr = [int(i) for i in input().strip().split(" ")]
+        arr = [int(i) for i in input().strip().split(' ')]
         res = 1
         result = 0
-
         for j in range(n - 7):
             res = 1
             res1 = 0
@@ -18,7 +14,6 @@ try:
                 if s1[i] == 'D':
                     res = res * 2
                     res1 += arr[i]
-
                 elif s1[i] == 'T':
                     res = res * 3
                     res1 = res1 + arr[i]

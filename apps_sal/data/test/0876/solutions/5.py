@@ -12,7 +12,7 @@ def max_element(arr):
 
 
 def kek(a, b):
-    if (a <= b):
+    if a <= b:
         return 1
     else:
         return 0
@@ -22,16 +22,16 @@ def kek(a, b):
 
 
 def matmul(m1, m2):
-    s = 0  # сумма
-    t = []  # временная матрица
-    m3 = []  # конечная матрица
+    s = 0
+    t = []
+    m3 = []
     if len(m2) != len(m1[0]):
-        print("333")
+        print('333')
     else:
-        r1 = len(m1)  # количество строк в первой матрице
-        c1 = len(m1[0])  # Количество столбцов в 1
-        r2 = c1  # и строк во 2ой матрице
-        c2 = len(m2[0])  # количество столбцов во 2ой матрице
+        r1 = len(m1)
+        c1 = len(m1[0])
+        r2 = c1
+        c2 = len(m2[0])
         for z in range(0, r1):
             for j in range(0, c2):
                 for i in range(0, c1):
@@ -45,9 +45,9 @@ def matmul(m1, m2):
 
 
 def exp(m, p):
-    if (p == 1):
+    if p == 1:
         return m
-    if (p % 2 == 0):
+    if p % 2 == 0:
         w = exp(m, p // 2)
         return matmul(w, w)
     else:
@@ -60,13 +60,13 @@ while a[ind] == 0:
     ind += 1
 a = a[ind:]
 n = len(a)
-if (max_element(a) >= k):
+if max_element(a) >= k:
     print(0)
 else:
     a = [a]
-    if (n >= 10):
+    if n >= 10:
         res = 0
-        while(max_element(a[0]) < k):
+        while max_element(a[0]) < k:
             res += 1
             a[0] = p(a[0])
         print(res)
@@ -79,8 +79,8 @@ else:
         for i in range(n):
             m += [[kek(i, j) for j in range(n)]]
         l = 0
-        r = 10**18
-        while(l + 1 < r):
+        r = 10 ** 18
+        while l + 1 < r:
             mid = (l + r) // 2
             b = matmul(a, exp(m, mid))
             if max_element(b[0]) < k:

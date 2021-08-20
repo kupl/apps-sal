@@ -2,7 +2,7 @@ def f(w, n):
     if w >= 3 and w <= n + 1:
         return (w - 1) // 2
     elif w > n + 1 and w <= 2 * n - 1:
-        return ((2 * n + 2) - w - 1) // 2
+        return (2 * n + 2 - w - 1) // 2
     else:
         return 0
 

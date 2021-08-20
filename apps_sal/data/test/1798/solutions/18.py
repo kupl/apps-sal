@@ -1,5 +1,5 @@
 n = int(input())
-b = [(int(x), y) for x, y in zip(input().split(), list(range(n)))]
+b = [(int(x), y) for (x, y) in zip(input().split(), list(range(n)))]
 b.sort()
 b += [(0, 0)]
 t = 0
@@ -8,7 +8,7 @@ i = 0
 seq = 0
 while i < n:
     while b[i][0] != b[i + 1][0]:
-        ans.append(str(b[i][0]) + " 0")
+        ans.append(str(b[i][0]) + ' 0')
         i += 1
         if i == n:
             break
@@ -28,9 +28,7 @@ while i < n:
         if seq == -1:
             i += 1
         else:
-            ans.append(str(b[i][0]) + " " + str(seq))
+            ans.append(str(b[i][0]) + ' ' + str(seq))
             i += 1
-
-
 print(len(ans))
-print("\n".join(ans))
+print('\n'.join(ans))

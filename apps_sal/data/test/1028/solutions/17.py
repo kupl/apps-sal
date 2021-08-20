@@ -2,7 +2,7 @@ def ap(n):
     return n * (n - 1) // 2
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 kmax = ap(n - m + 1)
 if m == 1:
     kmin = kmax

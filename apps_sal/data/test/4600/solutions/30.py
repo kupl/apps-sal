@@ -1,9 +1,9 @@
-N, M = map(int, input().split(' '))
+(N, M) = map(int, input().split(' '))
 ac_set = set()
 wa_cnt_list = [0] * N
-ac_cnt, wa_cnt = 0, 0
+(ac_cnt, wa_cnt) = (0, 0)
 for i in range(M):
-    num, res = input().split(' ')
+    (num, res) = input().split(' ')
     num = int(num) - 1
     if num not in ac_set:
         if res == 'AC':

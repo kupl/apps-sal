@@ -1,4 +1,4 @@
-l, r, n = map(int, input().split())
+(l, r, n) = map(int, input().split())
 a = n
 n = 1
 cnt = 0

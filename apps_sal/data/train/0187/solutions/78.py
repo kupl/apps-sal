@@ -1,10 +1,11 @@
 class Solution:
+
     def minOperationsMaxProfit(self, cc: List[int], bc: int, rc: int) -> int:
         if 4 * bc < rc:
             return -1
-        pf, rt = 0, 0  # tracking results
+        (pf, rt) = (0, 0)
         pfc = 0
-        i, ac = 0, 0
+        (i, ac) = (0, 0)
         n = len(cc)
         while i < n or ac > 0:
             if i < n:

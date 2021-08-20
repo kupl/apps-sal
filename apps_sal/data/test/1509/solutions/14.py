@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Codeforces Round #553 (Div. 2)
 
 Problem E. Number of Components
@@ -11,10 +8,8 @@ Problem E. Number of Components
 Please feel free to contact me if you have any question
 regarding the implementation below.
 """
-
 __version__ = '1.0'
 __date__ = '2019-04-20'
-
 import sys
 
 
@@ -43,7 +38,7 @@ def main(argv=None):
 
 def __starting_point():
     STATUS = main()
-    return(STATUS)
+    return STATUS
 
 
 __starting_point()

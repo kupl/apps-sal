@@ -1,9 +1,6 @@
-# from math import ceil
-#from sys import stdout
-
-t = 1  # int(input())
+t = 1
 for test in range(1, t + 1):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     b = list(map(int, input().split()))
     a = set(b)
     ans = -1
@@ -17,8 +14,8 @@ for test in range(1, t + 1):
             else:
                 D[i] = 1
         for i in b:
-            if (i & x) in D:
-                if i == (i & x):
+            if i & x in D:
+                if i == i & x:
                     if D[i] > 1:
                         ans = 1
                         break

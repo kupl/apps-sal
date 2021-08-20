@@ -13,18 +13,17 @@ def dict_count(d, a, b):
     this = a / b
     pair = b / a
     if not d.get(this, False):
-        d[this] = {"num": 0, "pair": pair}
-    d[this]["num"] += 1
+        d[this] = {'num': 0, 'pair': pair}
+    d[this]['num'] += 1
 
 
 def main():
     MOD = 1000000007
     n = int(input())
-
     d = defaultdict(lambda: [0] * 2)
     zero = 0
     for i in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         if a == 0 or b == 0:
             if a == b == 0:
                 n -= 1
@@ -33,26 +32,21 @@ def main():
                 d[0][True] += 1
             elif b == 0:
                 d[0][False] += 1
-
         else:
             gcd = math.gcd(a, b)
             a //= gcd
             b //= gcd
-
             if b < 0:
-                a, b = -a, -b
-
+                (a, b) = (-a, -b)
             rot = False
             if a < 0:
-                b, a = -a, b
+                (b, a) = (-a, b)
                 rot = True
-            d[(a, b)][rot] += 1
-
+            d[a, b][rot] += 1
     ans = 1
-    for k, v in d.items():
+    for (k, v) in d.items():
         ans *= select_num(v[0], v[1], MOD)
         ans %= MOD
-
     ans += zero - 1
     ans %= MOD
     print(ans)

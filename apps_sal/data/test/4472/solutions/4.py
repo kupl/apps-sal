@@ -1,6 +1,4 @@
-#from math import ceil, log
-
-t = 1  # int(input())
+t = 1
 for test in range(t):
     n = int(input())
     a = input()
@@ -14,16 +12,13 @@ for test in range(t):
         elif tmp == 1:
             continue
         elif tmp == 2:
-
             arr.sort()
             if arr[0] == arr[2] or arr[1] == arr[3]:
                 count += 1
+        elif a[i] == a[n - i - 1]:
+            count += 2
         else:
-            if a[i] == a[n - i - 1]:
-                count += 2
-            else:
-                count += 1
-
+            count += 1
     if n % 2 == 1 and a[n // 2] != b[n // 2]:
         count += 1
     print(count)

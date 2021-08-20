@@ -1,8 +1,8 @@
 class Solution:
+
     def commondenominator(self, a, b):
         temp = b
-        while(temp > 1):
-            # print(\"temp:\", temp, \"a:\", a, \"b:\", b)
+        while temp > 1:
             if a % temp == 0 and b % temp == 0:
                 return temp
             temp -= 1
@@ -17,7 +17,6 @@ class Solution:
                 d[x] = 1
             else:
                 d[x] += 1
-        # print(\"d:\", d)
         mini = float('inf')
         ret = 1
         for x in d:
@@ -26,10 +25,8 @@ class Solution:
                 continue
             if d[x] != mini:
                 ret = self.commondenominator(d[x], mini)
-                # print(\"ret:\", ret)
                 if ret < 0:
                     return False
                 else:
                     mini = ret
-        # print(\"mini:\", mini)
         return True

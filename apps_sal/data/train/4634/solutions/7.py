@@ -3,8 +3,7 @@ def pac_man(N, PM, enemies):
         return N ** 2 - 1
     rows = []
     columns = []
-
-    for i, c in enumerate(enemies):
+    for (i, c) in enumerate(enemies):
         rows.append(c[0])
         columns.append(c[1])
     rows = sorted(rows)
@@ -27,5 +26,4 @@ def pac_man(N, PM, enemies):
         columns_less.append(0)
     y = min(rows_more) - max(rows_less) - 1
     x = min(columns_more) - max(columns_less) - 1
-
     return x * y - 1

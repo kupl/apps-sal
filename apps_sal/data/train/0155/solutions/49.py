@@ -2,6 +2,7 @@ import functools
 
 
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
 
         @functools.lru_cache(None)
@@ -15,7 +16,5 @@ class Solution:
                 if arr[inow - i] >= arr[inow]:
                     break
                 max_son = max(max_son, check_i(inow - i))
-
             return max_son + 1
-
         return max([check_i(i) for i in range(len(arr))])

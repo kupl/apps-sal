@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 ls = [0]
 for i in range(1, N + 1):
     if i >= K:

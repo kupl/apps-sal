@@ -4,15 +4,13 @@ from sys import stdin
 def main():
     readline = stdin.readline
     n = int(readline())
-    s = tuple(readline().strip() for _ in range(n))
-
-    plus, minus = [], []
+    s = tuple((readline().strip() for _ in range(n)))
+    (plus, minus) = ([], [])
     for c in s:
         if 2 * c.count('(') - len(c) > 0:
             plus.append(c)
         else:
             minus.append(c)
-
     plus.sort(key=lambda x: x.count(')'))
     minus.sort(key=lambda x: x.count('('), reverse=True)
     plus.extend(minus)
@@ -24,7 +22,6 @@ def main():
                 return print('No')
     if sum != 0:
         return print('No')
-
     return print('Yes')
 
 

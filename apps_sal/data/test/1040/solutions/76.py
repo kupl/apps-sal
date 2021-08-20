@@ -6,5 +6,4 @@ for ss in s:
     if len(t) >= 3:
         if t[len(t) - 3:len(t)] == 'fox':
             t = t[:len(t) - 3]
-
 print(len(t))

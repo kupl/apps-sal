@@ -5,7 +5,6 @@ for i in range(N):
     if s[0] in A:
         A[s[0]] += 1
 B = [A['M'], A['A'], A['R'], A['C'], A['H']]
-
 ans = 0
 for i in range(3):
     for j in range(i + 1, 4):

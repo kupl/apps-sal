@@ -1,4 +1,5 @@
 class Trie:
+
     def __init__(self, *words):
         self._end = '_end'
         self.root = {}
@@ -7,7 +8,6 @@ class Trie:
     def insert(self, *words):
         _end = self._end
         root = self.root
-
         for word in words:
             current_dict = root
             for letter in word:
@@ -18,7 +18,6 @@ class Trie:
     def has(self, word):
         trie = self.root
         _end = self._end
-
         current_dict = trie
         for letter in word:
             if letter not in current_dict:
@@ -28,10 +27,10 @@ class Trie:
 
 
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         if folder:
             folder.sort()
-
         r = []
         trie = Trie()
         for f in folder:
@@ -43,7 +42,6 @@ class Solution:
                 if trie.has(subfolder):
                     to_insert = False
                     break
-
             if to_insert:
                 r.append(f)
                 trie.insert(f)

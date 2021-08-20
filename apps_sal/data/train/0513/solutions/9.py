@@ -1,15 +1,14 @@
 from bisect import bisect_left
 import sys
-sys.setrecursionlimit(10**8)
+sys.setrecursionlimit(10 ** 8)
 N = int(input())
 A = list(map(int, input().split()))
 UV = [tuple(map(int, input().split())) for i in range(N - 1)]
 es = [[] for _ in range(N)]
-for u, v in UV:
-    u, v = u - 1, v - 1
+for (u, v) in UV:
+    (u, v) = (u - 1, v - 1)
     es[u].append(v)
     es[v].append(u)
-
 lis = [A[0]]
 stack = []
 ans = [1] * N
@@ -27,10 +26,8 @@ def dfs(v, p=-1):
             stack.append((i, lis[i]))
             lis[i] = A[to]
         ans[to] = len(lis)
-
         dfs(to, v)
-
-        i, a = stack.pop()
+        (i, a) = stack.pop()
         if a < 0:
             lis.pop()
         else:

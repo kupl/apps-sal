@@ -1,11 +1,9 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 for _ in range(t):
     n = int(input())
     s = input()
-
     out = 0
     lCycle = True
     rCycle = True
@@ -14,7 +12,6 @@ for _ in range(t):
             lCycle = False
         if c == '>':
             rCycle = False
-
     if lCycle or rCycle:
         print(n)
     else:

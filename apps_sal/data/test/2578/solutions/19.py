@@ -2,7 +2,8 @@ import sys
 input = sys.stdin.readline
 
 
-class Union_Find():
+class Union_Find:
+
     def __init__(self, num):
         self.par = [-1] * (num + 1)
         self.siz = [1] * (num + 1)
@@ -37,7 +38,7 @@ class Union_Find():
         return self.siz[self.find(x)]
 
 
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 union_find_tree = Union_Find(n)
 for i in range(q):
     a = list(map(int, input().split()))
@@ -48,4 +49,4 @@ for i in range(q):
 ans = []
 for i in range(1, n + 1):
     ans.append(union_find_tree.size(i))
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         uf = {}
         cnt = Counter()
@@ -10,18 +11,17 @@ class Solution:
             return uf[x]
 
         def union(x, y):
-            t1, t2 = find(y)[1], find(x)[1]
+            (t1, t2) = (find(y)[1], find(x)[1])
             cnt[t1] -= 1
             cnt[t2] -= 1
             uf[find(x)[0]][1] += t1
             uf[find(y)[0]][1] += t2
             uf[find(x)[0]][0] = find(y)[0]
             cnt[find(y)[1]] += 1
-
         seen = [0] * (len(arr) + 1)
         n = len(arr)
         ans = -1
-        for i, a in enumerate(arr, 1):
+        for (i, a) in enumerate(arr, 1):
             seen[a] = 1
             uf.setdefault(a, [a, 1])
             cnt[1] += 1

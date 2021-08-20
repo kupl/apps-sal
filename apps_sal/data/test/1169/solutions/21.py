@@ -1,11 +1,10 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n > 1 and m >= n / 2:
     ans1 = 0
+elif n > 1:
+    ans1 = n - m * 2
 else:
-    if n > 1:
-        ans1 = n - m * 2
-    else:
-        ans1 = 1
+    ans1 = 1
 k = 1
 while k * (k - 1) // 2 < m:
     k += 1

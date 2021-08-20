@@ -1,5 +1,5 @@
 from collections import deque
-n, d = [int(i) for i in input().split()]
+(n, d) = [int(i) for i in input().split()]
 alist = [int(i) for i in input().split()]
 de = deque()
 i = 0

@@ -1,9 +1,9 @@
-n, t, d = map(int, input().split())
+(n, t, d) = map(int, input().split())
 coin = [[(0, 0), (0, 0)] for i in range(100001)]
 diam = [[(0, 0), (0, 0)] for i in range(100001)]
 f = []
 for i in range(n):
-    b, c, q = input().split()
+    (b, c, q) = input().split()
     b = int(b)
     c = int(c)
     if q == 'C':
@@ -35,7 +35,6 @@ p = False
 ans = 0
 for i in range(n):
     fnt = f[i]
-    # print(fnt)
     if fnt[2] == 1:
         if t >= fnt[1]:
             s = t - fnt[1]
@@ -48,18 +47,17 @@ for i in range(n):
             if diam[d][0][0] > 0:
                 ans = max(fnt[0] + diam[d][0][0], ans)
                 p = True
-    else:
-        if d >= fnt[1]:
-            s = d - fnt[1]
-            if diam[s][0][0] > 0 and diam[s][0][1] != i:
-                ans = max(fnt[0] + diam[s][0][0], ans)
-                p = True
-            elif diam[s][1][0] > 0:
-                ans = max(fnt[0] + diam[s][1][0], ans)
-                p = True
-            if coin[t][0][0] > 0:
-                ans = max(fnt[0] + coin[t][0][0], ans)
-                p = True
+    elif d >= fnt[1]:
+        s = d - fnt[1]
+        if diam[s][0][0] > 0 and diam[s][0][1] != i:
+            ans = max(fnt[0] + diam[s][0][0], ans)
+            p = True
+        elif diam[s][1][0] > 0:
+            ans = max(fnt[0] + diam[s][1][0], ans)
+            p = True
+        if coin[t][0][0] > 0:
+            ans = max(fnt[0] + coin[t][0][0], ans)
+            p = True
 if p:
     print(ans)
 else:

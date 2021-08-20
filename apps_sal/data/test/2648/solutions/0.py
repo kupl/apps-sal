@@ -12,8 +12,6 @@ for i in num:
         x += 1
     else:
         n -= i - 1
-
 if x % 2:
     x -= 1
-
 print(n + x)

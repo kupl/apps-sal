@@ -1,17 +1,17 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 f = list(map(int, input().split()))
-ans = ""
+ans = ''
 for i in range(n - 1):
-    ans += "U"
+    ans += 'U'
 for i in range(m - 1):
-    ans += "L"
+    ans += 'L'
 for i in range(n):
     if i % 2 == 0:
-        ans += ("R" * (m - 1))
+        ans += 'R' * (m - 1)
     else:
-        ans += ("L" * (m - 1))
+        ans += 'L' * (m - 1)
     if i != n - 1:
-        ans += "D"
+        ans += 'D'
 print(len(ans))
 print(ans)

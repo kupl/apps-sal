@@ -5,5 +5,4 @@ def solution(a, b):
     else:
         short_str = b
         long_str = a
-
     return short_str + long_str + short_str

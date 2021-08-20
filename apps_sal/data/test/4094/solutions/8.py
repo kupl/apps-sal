@@ -1,13 +1,12 @@
 from collections import defaultdict
 import sys
 read = sys.stdin.read
-#readlines = sys.stdin.readlines
 
 
 def main():
     k = int(input())
     if k % 2 == 0:
-        print((-1))
+        print(-1)
         return
     rems = defaultdict(int)
     n = 7 % k
@@ -18,13 +17,13 @@ def main():
             print(r)
             return
         elif rems[n]:
-            print((-1))
+            print(-1)
             return
         else:
             rems[n] = 1
             n += next_digit
             n = n % k
-            next_digit = (next_digit * 10) % k
+            next_digit = next_digit * 10 % k
             r += 1
 
 

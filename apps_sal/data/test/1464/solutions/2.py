@@ -1,5 +1,5 @@
 n = int(input())
-t = ' '.join(input() for i in range(n))
+t = ' '.join((input() for i in range(n)))
 ans = 0
 for i in 'abcdefghijklmnopqrstuvwxyz':
     if not i in t:

@@ -5,11 +5,11 @@ for you in range(t):
     li = [int(i) for i in l]
     poss = 1
     for i in range(n - 1):
-        if(li[i] > li[i + 1]):
+        if li[i] > li[i + 1]:
             continue
         poss = 0
         break
-    if(poss):
-        print("NO")
+    if poss:
+        print('NO')
     else:
-        print("YES")
+        print('YES')

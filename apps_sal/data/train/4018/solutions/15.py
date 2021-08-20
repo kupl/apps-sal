@@ -7,13 +7,4 @@ def isDigit(string):
         return True
 
 
-"""
-    l = list(string)
-    if l.count('.') != 1 and l.count != 0:
-        return False
-    if l.count('-') != 0:
-        if l.count('-') == 1:
-            if l[0] != '-':
-                return False
-            return False
-"""
+"\n    l = list(string)\n    if l.count('.') != 1 and l.count != 0:\n        return False\n    if l.count('-') != 0:\n        if l.count('-') == 1:\n            if l[0] != '-':\n                return False\n            return False\n"

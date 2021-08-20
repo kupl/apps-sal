@@ -6,5 +6,5 @@ def last(x):
         last_char.append((word[-1], i, word))
         i = i + 1
     last_char = sorted(last_char)
-    output = [word for char, i, word in last_char]
+    output = [word for (char, i, word) in last_char]
     return output

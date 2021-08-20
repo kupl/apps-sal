@@ -1,11 +1,12 @@
 class Solution:
+
     def isMatch(self, s, p):
         """
         :type s: str
         :type p: str
         :rtype: bool
         """
-        '''维护两个下标，逐个比较，如果pj为*，则记录*的位置，将*后一个元素与si进行比较，如果不相等，则将i从记录的位置+1，重新比较'''
+        '维护两个下标，逐个比较，如果pj为*，则记录*的位置，将*后一个元素与si进行比较，如果不相等，则将i从记录的位置+1，重新比较'
         i = 0
         j = 0
         star = -1
@@ -26,5 +27,4 @@ class Solution:
                 return False
         while j < lenp and p[j] == '*':
             j += 1
-
         return j == lenp

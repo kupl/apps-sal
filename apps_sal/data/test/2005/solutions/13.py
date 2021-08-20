@@ -1,4 +1,4 @@
-n, n1, n2 = map(int, input().split())
+(n, n1, n2) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 a = a[n - (n1 + n2):]
@@ -9,4 +9,4 @@ if n1 > n2:
 else:
     ans += sum(a[-n1:]) / n1
     ans += sum(a[:-n1]) / n2
-print("%.7f" % ans)
+print('%.7f' % ans)

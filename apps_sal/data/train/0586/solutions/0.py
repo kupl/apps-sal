@@ -1,15 +1,14 @@
-# cook your dish here
 for t in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = []
     sr = []
     for i in range(k):
-        x, y = input().split()
+        (x, y) = input().split()
         y = int(y)
-        a.append([10**10 - y, x])
+        a.append([10 ** 10 - y, x])
         sr.append(sorted(x))
     for i in range(n - k):
-        x, y = input().split()
+        (x, y) = input().split()
         y = int(y)
         x = sorted(x)
         for j in range(k):
@@ -18,4 +17,4 @@ for t in range(int(input())):
                 break
     a.sort()
     for i in a:
-        print(i[1], abs(i[0] - 10**10))
+        print(i[1], abs(i[0] - 10 ** 10))

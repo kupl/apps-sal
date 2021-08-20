@@ -9,32 +9,25 @@ def fast_pow(x, n, MOD):
 
 
 def prepare(n, MOD):
-
-    # 1! - n! の計算
     f = 1
-    factorials = [1]  # 0!の分
+    factorials = [1]
     for m in range(1, n + 1):
         f *= m
         f %= MOD
         factorials.append(f)
-    # n!^-1 の計算
     inv = pow(f, MOD - 2, MOD)
-    # n!^-1 - 1!^-1 の計算
     invs = [1] * (n + 1)
     invs[n] = inv
     for m in range(n, 1, -1):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
-
-    return factorials, invs
+    return (factorials, invs)
 
 
 MOD = 998244353
-fact, fact_inv = prepare(3 * 10**5, MOD)
-
-n, m, k = map(int, input().split())
-
+(fact, fact_inv) = prepare(3 * 10 ** 5, MOD)
+(n, m, k) = map(int, input().split())
 dp = [0] * (n + 1)
 ans = 0
 for i in range(k + 1):
@@ -42,5 +35,4 @@ for i in range(k + 1):
     order = fact[n - 1] * fact_inv[i] % MOD * fact_inv[n - 1 - i] % MOD
     ans += m * color % MOD * order % MOD
     ans %= MOD
-
 print(ans)

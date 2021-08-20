@@ -1,6 +1,7 @@
 class StreamChecker:
 
     class Node:
+
         def __init__(self):
             self.end = False
             self.child = dict()
@@ -16,7 +17,6 @@ class StreamChecker:
                     node.child[c] = self.Node()
                 node = node.child[c]
             node.end = True
-
         for word in words:
             insert(word)
 
@@ -37,8 +37,3 @@ class StreamChecker:
         if len(self.seq) > 2000:
             self.seq.pop(0)
         return self._search()
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

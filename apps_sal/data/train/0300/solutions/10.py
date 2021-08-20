@@ -1,8 +1,8 @@
-#
 from functools import lru_cache
 
 
 class Solution:
+
     def leastOpsExpressTarget(self, x: int, target: int) -> int:
         cost = list(range(40))
         cost[0] = 2
@@ -15,9 +15,6 @@ class Solution:
                 return cost[i]
             if i >= 39:
                 return float('inf')
-
-            t, r = divmod(targ, x)
-            return min(r * cost[i] + dp(i + 1, t),
-                       (x - r) * cost[i] + dp(i + 1, t + 1))
-
+            (t, r) = divmod(targ, x)
+            return min(r * cost[i] + dp(i + 1, t), (x - r) * cost[i] + dp(i + 1, t + 1))
         return dp(0, target) - 1

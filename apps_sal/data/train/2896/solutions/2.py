@@ -1,6 +1,5 @@
 def cost_of_carpet(room_length, room_width, roll_width, roll_cost):
-    if room_length > roll_width and room_width > roll_width or \
-            not room_length * room_width * roll_width:
+    if room_length > roll_width and room_width > roll_width or not room_length * room_width * roll_width:
         return 'error'
     [a, b] = sorted([room_length, room_width])
     if room_length <= roll_width and room_width <= roll_width:

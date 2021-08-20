@@ -1,7 +1,8 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         movesMap = dict()
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         movesMap[0] = [4, 6]
         movesMap[1] = [6, 8]
         movesMap[2] = [7, 9]

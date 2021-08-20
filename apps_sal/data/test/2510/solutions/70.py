@@ -1,8 +1,8 @@
 from collections import deque
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 E = [[] for _ in range(n)]
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     E[a].append(b)

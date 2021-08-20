@@ -2,10 +2,10 @@ import math
 
 
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
         if not nums:
             return 0
-
         res = 0
         for i in nums:
             divisor = set()

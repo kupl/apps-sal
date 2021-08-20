@@ -1,8 +1,9 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def get_dist(p, q):
             return abs(p[0] - q[0]) + abs(p[1] - q[1])
-
         n = len(points)
         seen = set()
         dist = [math.inf] * n
@@ -15,8 +16,7 @@ class Solution:
                     continue
                 d = get_dist(points[cur], points[j])
                 dist[j] = min(dist[j], d)
-
-            delta, cur = min((d, j) for j, d in enumerate(dist))
+            (delta, cur) = min(((d, j) for (j, d) in enumerate(dist)))
             res += delta
             dist[cur] = math.inf
         return res

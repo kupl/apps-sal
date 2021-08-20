@@ -3,9 +3,8 @@ p = 998244353
 odp = [0] * (n + 1)
 pote = [1] * 250000
 for i in range(1, 250000):
-    pote[i] = (pote[i - 1] * 10) % p
+    pote[i] = pote[i - 1] * 10 % p
 for i in range(1, n + 1):
-    # odp[i]
     if i == n:
         odp[i] = 10
     else:

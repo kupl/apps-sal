@@ -1,6 +1,6 @@
 def solve(n, k, As):
     As.sort()
-    m, r = divmod(n, k)
+    (m, r) = divmod(n, k)
     dp = [0] * (r + 1)
     for i in range(1, k):
         im = i * m
@@ -12,6 +12,6 @@ def solve(n, k, As):
     return As[-1] - As[0] - max(dp[r], dp[r - 1])
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 As = list(map(int, input().split()))
 print(solve(n, k, As))

@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 ans = arr[-1]
 val = max(arr[-1] - 1, 0)
 for i in range(n - 2, -1, -1):
-    if(arr[i] > val):
+    if arr[i] > val:
         ans += val
         val = max(val - 1, 0)
     else:

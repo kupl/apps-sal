@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 mod = 1000000007
-
 b = mod - 2
 blis = []
 c = 0
@@ -37,21 +36,17 @@ if k >= n:
         ansbunbo = ansbunbo * L % mod
         L -= 1
     ansbunbo = modinv(ansbunbo)
-    print((ansbunsi * ansbunbo % mod))
-
+    print(ansbunsi * ansbunbo % mod)
 else:
     kaijou = [1, 1]
     for j in range(2, n):
         kaijou.append(kaijou[-1] * j % mod)
-
     ans = 0
-
     for m in range(k + 1):
-        ansbunsi = (kaijou[n - 1]**2) * n % mod
+        ansbunsi = kaijou[n - 1] ** 2 * n % mod
         ansbunbo = kaijou[n - m - 1] * kaijou[m] % mod
         ansbunbo = ansbunbo * ansbunbo % mod * (n - m) % mod
         ansbunbo = modinv(ansbunbo)
         ans += ansbunbo * ansbunsi % mod
         ans %= mod
-
     print(ans)

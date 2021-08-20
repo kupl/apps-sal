@@ -1,11 +1,10 @@
 class Solution:
+
     def maxCandies(self, status: List[int], candies: List[int], keys: List[List[int]], containedBoxes: List[List[int]], initialBoxes: List[int]) -> int:
-
-        OPEN, CLOSED = 1, 0
+        (OPEN, CLOSED) = (1, 0)
         q = deque(initialBoxes)
-        keys_obtained = set(i for i in range(len(status)) if status[i] == OPEN)
+        keys_obtained = set((i for i in range(len(status)) if status[i] == OPEN))
         count = 0
-
         while set(q) & keys_obtained:
             q2 = deque()
             while q:
@@ -17,5 +16,4 @@ class Solution:
                 else:
                     q2.append(box)
             q = q2
-
         return count

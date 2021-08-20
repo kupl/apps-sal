@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Codeforces
 567 B.
@@ -20,22 +19,15 @@ def solve(xs):
             d[person] -= 1
         if d[person] < 0:
             already_in[person] = True
-
     number = sum(dict(already_in).values())
     history = [number]
-
     for (sign, person) in xs:
         if sign == '+':
             number += 1
         else:
             number -= 1
         history.append(number)
-
     return max(history)
-
-
-# def print_stderr(*args, **kwargs):
-#     print(*args, file=sys.stderr, **kwargs)
 
 
 def main():

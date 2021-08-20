@@ -6,7 +6,6 @@ def min_to_sec(i):
 
 
 def longest_possible(sec):
-    sn = [(song['title'], min_to_sec(song))
-          for song in songs if min_to_sec(song) <= sec]
+    sn = [(song['title'], min_to_sec(song)) for song in songs if min_to_sec(song) <= sec]
     sn_sort = sorted(sn, key=lambda x: x[1])
     return False if sn_sort == [] else sn_sort[-1][0]

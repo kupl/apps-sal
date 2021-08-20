@@ -1,12 +1,11 @@
 class Calculator(object):
-    def evaluate(self, in_string):
 
+    def evaluate(self, in_string):
         what = str()
         lst = []
-
         count_par = 0
         index = 0
-        while(index < len(in_string)):
+        while index < len(in_string):
             if in_string[index] == '(':
                 count_par += 1
                 flag_par = True
@@ -21,7 +20,6 @@ class Calculator(object):
                     elif in_string[index + 1:].count('+') == 0 and in_string[index + 1:].count('-') == 0:
                         break
             index += 1
-
         if index == len(in_string):
             lst.append(in_string)
         else:
@@ -38,7 +36,6 @@ class Calculator(object):
                 temp2 = temp2.replace('x', '+')
             lst.append(temp1)
             lst.append(temp2)
-
         if len(lst) == 1:
             return float(lst[0])
         else:
@@ -82,53 +79,45 @@ CAL = Calculator()
 
 def evaluate0(num, sym):
     expr = num[0] + sym[0] + num[1] + sym[1] + num[2] + sym[2] + num[3]
-    # print(expr)
-    return CAL.evaluate(expr), expr
+    return (CAL.evaluate(expr), expr)
 
 
 def evaluate1(num, sym):
     expr = '(' + num[0] + sym[0] + num[1] + sym[1] + num[2] + ')' + sym[2] + num[3]
-    return CAL.evaluate(expr), expr
+    return (CAL.evaluate(expr), expr)
 
 
 def evaluate2(num, sym):
     expr = '(' + num[0] + sym[0] + num[1] + ')' + sym[1] + '(' + num[2] + sym[2] + num[3] + ')'
-    return CAL.evaluate(expr), expr
+    return (CAL.evaluate(expr), expr)
 
 
 def evaluate3(num, sym):
-    expr = num[0] + sym[0] + '(' + num[1] + sym[1] + '(' + num[2] + sym[2] + num[3] + "))"
-    return CAL.evaluate(expr), expr
+    expr = num[0] + sym[0] + '(' + num[1] + sym[1] + '(' + num[2] + sym[2] + num[3] + '))'
+    return (CAL.evaluate(expr), expr)
 
 
 def evaluate4(num, sym):
-    expr = "((" + num[0] + sym[0] + num[1] + ')' + sym[1] + num[2] + ')' + sym[2] + num[3]
-    return CAL.evaluate(expr), expr
+    expr = '((' + num[0] + sym[0] + num[1] + ')' + sym[1] + num[2] + ')' + sym[2] + num[3]
+    return (CAL.evaluate(expr), expr)
 
 
 def equal_to_24(a, b, c, d):
-
     for num in index_numbers(str(a), str(b), str(c), str(d)):
         for sym in index_symbols():
-
-            val, text = evaluate0(num, sym)
+            (val, text) = evaluate0(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate1(num, sym)
+            (val, text) = evaluate1(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate2(num, sym)
+            (val, text) = evaluate2(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate3(num, sym)
+            (val, text) = evaluate3(num, sym)
             if val == 24:
                 return text
-
-            val, text = evaluate4(num, sym)
+            (val, text) = evaluate4(num, sym)
             if val == 24:
                 return text
-
     return "It's not possible!"

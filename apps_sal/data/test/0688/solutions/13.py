@@ -1,15 +1,13 @@
-# import numpy as np
-
 def solution():
     number = input()
     book = {}
     book_of_repeats = {}
     for i in number:
         intermidiate = i
-        if intermidiate == "5":
-            intermidiate = "2"
-        elif intermidiate == "9":
-            intermidiate = "6"
+        if intermidiate == '5':
+            intermidiate = '2'
+        elif intermidiate == '9':
+            intermidiate = '6'
         book_of_repeats[intermidiate] = 0
         if intermidiate in book:
             book[intermidiate] += 1
@@ -18,10 +16,10 @@ def solution():
     cubs = input()
     for i in cubs:
         intermidiate = i
-        if intermidiate == "5":
-            intermidiate = "2"
-        elif intermidiate == "9":
-            intermidiate = "6"
+        if intermidiate == '5':
+            intermidiate = '2'
+        elif intermidiate == '9':
+            intermidiate = '6'
         if intermidiate in book_of_repeats:
             book_of_repeats[intermidiate] += 1
     result = len(cubs) // len(number)
@@ -41,7 +39,7 @@ def to_mixed_frac(first, second):
                 break
         else:
             break
-    return str(first) + "/" + str(second)
+    return str(first) + '/' + str(second)
 
 
 def array_to_int(array):
@@ -51,11 +49,10 @@ def array_to_int(array):
 
 
 def join0(array):
-    result = ""
+    result = ''
     for i in array:
         result += str(i)
     return result
 
 
 solution()
-# input-output by console

@@ -1,6 +1,5 @@
 f0 = 'What are you doing at the end of the world? Are you busy? Will you save us?'
-ft1, ft2, ft3 = 'What are you doing while sending "', '"? Are you busy? Will you send "', '"?'
-
+(ft1, ft2, ft3) = ('What are you doing while sending "', '"? Are you busy? Will you send "', '"?')
 flen = [2 * 10 ** 18] * (10 ** 5 + 1)
 flen[0] = len(f0)
 for i in range(1, 56):
@@ -31,7 +30,7 @@ def ans(n, k):
 q = int(input())
 a = ''
 for _ in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     k -= 1
     if k >= flen[n]:
         a += '.'

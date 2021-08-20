@@ -5,7 +5,7 @@ for i in range(t):
     n = int(input())
     for j in range(0, n + 1):
         for k in range(0, j):
-            print(s, end=" ")
+            print(s, end=' ')
             p = r + s
-            s, r = r, p
+            (s, r) = (r, p)
         print()

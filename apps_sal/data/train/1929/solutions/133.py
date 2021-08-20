@@ -20,7 +20,6 @@ class Trie:
         cur.end = True
 
     def match(self, word):
-        # print('word = ', word)
         cur = self.root
         for w in word:
             if cur.end:
@@ -48,8 +47,3 @@ class StreamChecker:
         if len(self.cache) > self.size:
             self.cache = self.cache[1:]
         return self.trie.match(self.cache[::-1])
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

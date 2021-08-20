@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -6,9 +5,8 @@ input = sys.stdin.readline
 def main():
     S = input().rstrip()
     k = int(input())
-
     for i in range(k):
-        if S[i] != "1":
+        if S[i] != '1':
             break
     print(S[i])
 

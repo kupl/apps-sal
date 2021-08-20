@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         dp = dict()
         dp[0] = dp[2] = 1
@@ -17,7 +18,6 @@ class Solution:
                 for a in adj[::-1]:
                     count += 1
                     dp[a] = count
-
         to_sort = []
         for i in range(lo, hi + 1):
             calc(i, [i])

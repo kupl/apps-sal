@@ -16,7 +16,7 @@ while i > 0:
     f = factors(a[i])
     if f:
         for j in f:
-            x, y = a[i] // j, a[0] * j
+            (x, y) = (a[i] // j, a[0] * j)
             ans = min(ans, sm - a[i] - a[0] + x + y)
     i -= 1
 print(ans)

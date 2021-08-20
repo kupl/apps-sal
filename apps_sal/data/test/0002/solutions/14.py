@@ -5,7 +5,6 @@ def main():
         year = int(str(d + 1) + '0' * (len(n) - 1))
     else:
         year = int('1' + '0' * len(n))
-
     print(year - int(n))
 
 

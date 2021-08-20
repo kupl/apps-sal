@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         idx_diff_count = {}
         for i in range(1, len(A)):

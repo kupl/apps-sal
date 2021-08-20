@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 b_dif = []
 for i in range(n - 1):

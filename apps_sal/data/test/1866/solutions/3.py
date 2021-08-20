@@ -16,7 +16,6 @@ if n == 0 or n == 1:
 else:
     x = 1
     for i in range(1, n):
-
         if 2 * x > n:
             break
         x *= 2

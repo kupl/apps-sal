@@ -1,5 +1,5 @@
 s = input()
-ans = ""
+ans = ''
 for i in range(len(s)):
-    ans += "x"
+    ans += 'x'
 print(ans)

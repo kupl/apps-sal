@@ -7,14 +7,14 @@ def f(s, t):
     return a
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 s = input()
 t = input()
 ans = 2000
 a = []
 for i in range(m - n + 1):
     if f(s, t[i:i + n])[0] < ans:
-        ans, a = f(s, t[i:i + n])
+        (ans, a) = f(s, t[i:i + n])
 print(ans)
 for i in a:
     print(i, end=' ')

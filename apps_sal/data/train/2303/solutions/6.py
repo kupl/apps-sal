@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -9,7 +8,6 @@ from decimal import ROUND_CEILING, ROUND_HALF_UP, Decimal
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations
 from operator import add, mul, sub
-
 sys.setrecursionlimit(10000)
 
 
@@ -48,10 +46,8 @@ def mt(f):
         s = time.time()
         ret = f(*args, **kwargs)
         e = time.time()
-
         error_print(e - s, 'sec')
         return ret
-
     return wrap
 
 
@@ -60,15 +56,13 @@ def bfs01(g, s):
     for v in g.keys():
         d[v] = sys.maxsize
     d[s] = 0
-
     if s not in d:
         return d
     q = deque()
     q.append((d[s], s))
-
     NM = 1 << 30
     while q:
-        _, u = q.popleft()
+        (_, u) = q.popleft()
         for v in g[u]:
             if v > NM:
                 c = 0
@@ -86,31 +80,27 @@ def bfs01(g, s):
 
 @mt
 def slv(N, M):
-
     g = defaultdict(list)
     NM = 30
     for _ in range(M):
-        p, q, c = input().split()
+        (p, q, c) = input().split()
         p = int(p)
         q = int(q)
         c = int(c)
-
         cp = (c << NM) + p
         cq = (c << NM) + q
         g[cp].append(cq)
         g[cq].append(cp)
         g[cp].append(p)
         g[cq].append(q)
-        g[p].append((cp))
-        g[q].append((cq))
-
+        g[p].append(cp)
+        g[q].append(cq)
     d = bfs01(g, 1)
     return -1 if N not in d or d[N] == sys.maxsize else d[N]
 
 
 def main():
-    N, M = read_int_n()
-
+    (N, M) = read_int_n()
     print(slv(N, M))
 
 

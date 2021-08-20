@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         small = []
         large = []
@@ -11,7 +12,7 @@ class Solution:
                 large.pop()
             small.append(i)
             large.append(i)
-            if small and large and nums[large[0]] - nums[small[0]] > limit:
+            if small and large and (nums[large[0]] - nums[small[0]] > limit):
                 left += 1
                 if small[0] < left:
                     small.pop(0)

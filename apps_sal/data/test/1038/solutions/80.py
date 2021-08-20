@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def f(x):
@@ -6,7 +6,6 @@ def f(x):
     while x % 4 != 3:
         res ^= x
         x -= 1
-
     return res
 
 

@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         self.longest = 0
 
@@ -22,13 +23,10 @@ class Solution:
                 temp = curr + arr[i]
                 if valid(temp):
                     backtrack(curr + arr[i], i + 1)
-
             if len(curr) > self.longest:
                 self.longest = len(curr)
             return
-
         for i in range(len(arr)):
             if valid(arr[i]):
                 backtrack(arr[i], i)
-
         return self.longest

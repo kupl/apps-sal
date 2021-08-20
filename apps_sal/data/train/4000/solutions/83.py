@@ -6,4 +6,4 @@ def strong_num(number):
         for i in range(1, i + 1):
             res *= i
         strong_list.append(res)
-    return "STRONG!!!!" if sum(strong_list) == number else "Not Strong !!"
+    return 'STRONG!!!!' if sum(strong_list) == number else 'Not Strong !!'

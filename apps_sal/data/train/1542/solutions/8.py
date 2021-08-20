@@ -1,5 +1,3 @@
-# cook your dish here
-# cook your code here
 t = int(input())
 for i in range(t):
     num = int(input())
@@ -10,14 +8,14 @@ for i in range(t):
         score = 0
         mul = 1
         for b in range(8):
-            if (arr[z + b] == 'd'):
+            if arr[z + b] == 'd':
                 score += sc[b] * 2
-            elif (arr[z + b] == 't'):
+            elif arr[z + b] == 't':
                 score += sc[b] * 3
-            elif (arr[z + b] == 'D'):
+            elif arr[z + b] == 'D':
                 mul *= 2
                 score += sc[b]
-            elif (arr[z + b] == 'T'):
+            elif arr[z + b] == 'T':
                 mul *= 3
                 score += sc[b]
             else:

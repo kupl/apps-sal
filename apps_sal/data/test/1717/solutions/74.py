@@ -11,5 +11,4 @@ def gcd(a, b):
 
 for i in range(3, n + 1):
     tmp = tmp * i // gcd(tmp, i)
-
 print(tmp + 1)

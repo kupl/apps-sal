@@ -1,8 +1,8 @@
 def main():
     rdl = list(map(int, input().split()))
-    x1, y1 = rdl
+    (x1, y1) = rdl
     rdl = list(map(int, input().split()))
-    x2, y2 = rdl
+    (x2, y2) = rdl
     n = int(input())
     Steps = 0
     for i in range(n):

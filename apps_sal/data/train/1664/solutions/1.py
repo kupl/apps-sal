@@ -12,7 +12,6 @@ class Outcomes:
     def __init__(self):
         """Initialize situational count members to 0.
         """
-
         self.checkmates = 0
         self.checks = 0
         self.stalemates = 0
@@ -24,7 +23,6 @@ class Outcomes:
         Returns:
             array -- integer array of counts of squares by chess condition.
         """
-
         return [self.checkmates, self.checks, self.stalemates, self.alives]
 
 
@@ -97,8 +95,7 @@ class MovementDirection(enum.Enum):
             return self.EAST
         elif self == self.NORTH_WEST:
             return self.SOUTH_EAST
-
-        raise ValueError("Unknown direction to recipricate!")
+        raise ValueError('Unknown direction to recipricate!')
 
     def move_from(self, x, y):
         """Apply the movement to the provided X, Y cartesian coordinates.
@@ -160,17 +157,14 @@ class GameSquare:
             direction {MovementDirection} -- Direction to get neighbor in.
         """
         if neighbor is self:
-            raise ValueError("Cannot set yourself as a neighbor!")
-
+            raise ValueError('Cannot set yourself as a neighbor!')
         existing_neighbor = self.neighbor(direction)
         if existing_neighbor is not None and existing_neighbor is not neighbor:
-            raise ValueError("Another neighbor is already in that direction!")
-
+            raise ValueError('Another neighbor is already in that direction!')
         recip_direction = direction.reciprical
         existing_recip_neighbor = neighbor.neighbor(recip_direction)
         if existing_recip_neighbor is not None and existing_recip_neighbor is not self:
-            raise ValueError("Input neighbor already has neighbor in opposite direction!")
-
+            raise ValueError('Input neighbor already has neighbor in opposite direction!')
         self.neighbors[direction] = neighbor
         neighbor.neighbors[recip_direction] = self
 
@@ -185,14 +179,13 @@ class GameSquare:
         Arguments:
             out_dest -- Output stream to render to.
         """
-
-        marker = " "
+        marker = ' '
         if self.condition.is_threatened:
-            marker = "v"
+            marker = 'v'
         elif self.condition.is_occupied:
-            marker = "*"
+            marker = '*'
         elif self.condition.is_inhibited:
-            marker = "-"
+            marker = '-'
         out_dest.write(marker)
 
     def render_outcome(self, out_dest):
@@ -201,16 +194,15 @@ class GameSquare:
         Arguments:
             out_dest -- Output stream to render to.
         """
-
-        marker = "?"
+        marker = '?'
         if self.outcome == GameSquareOutcome.CHECKMATE:
-            marker = "!"
+            marker = '!'
         elif self.outcome == GameSquareOutcome.CHECK:
-            marker = ":"
+            marker = ':'
         elif self.outcome == GameSquareOutcome.STALEMATE:
-            marker = "o"
+            marker = 'o'
         elif self.outcome == GameSquareOutcome.ALIVE:
-            marker = "."
+            marker = '.'
         out_dest.write(marker)
 
 
@@ -228,30 +220,26 @@ class Gameboard:
             num_cols {int} -- Number of columns on the gameboard
         """
         if num_rows < 1:
-            fmt = "Gameboard initialized with number of rows < 1 ({})!"
+            fmt = 'Gameboard initialized with number of rows < 1 ({})!'
             msg = fmt.format(num_rows)
             raise ValueError()
-
         if num_cols < 1:
-            fmt = "Gameboard initialized with number of columns < 1 ({})!"
+            fmt = 'Gameboard initialized with number of columns < 1 ({})!'
             msg = fmt.format(num_cols)
             raise ValueError(msg)
-
         self.num_rows = num_rows
         self.num_cols = num_cols
-
         self.board = {}
         for row in range(num_rows):
             for col in range(num_cols):
                 key = (row, col)
                 self.board[key] = GameSquare()
-
         for row in range(num_rows):
             for col in range(num_cols):
                 current = self.square_at(row, col)
                 for direction in MovementDirection:
                     try:
-                        neighbor_x, neighbor_y = direction.move_from(row, col)
+                        (neighbor_x, neighbor_y) = direction.move_from(row, col)
                         neighbor = self.square_at(neighbor_x, neighbor_y)
                         current.set_neighbor(neighbor, direction)
                     except KeyError:
@@ -279,12 +267,12 @@ class Gameboard:
         Arguments:
             out_dest -- Output stream to render to.
         """
-        out_dest.write("\n\nGameboard\n")
+        out_dest.write('\n\nGameboard\n')
         for y in range(self.num_cols - 1, -1, -1):
             for x in range(self.num_rows):
-                out_dest.write("|")
+                out_dest.write('|')
                 self.square_at(x, y).render(out_dest)
-            out_dest.write("|\n")
+            out_dest.write('|\n')
 
     def render_outcome(self, out_dest):
         """Simple grid rendering to the output stream. The board is rendered
@@ -293,12 +281,12 @@ class Gameboard:
         Arguments:
             out_dest -- Output stream to render to.
         """
-        out_dest.write("\n\nOutcomes\n")
+        out_dest.write('\n\nOutcomes\n')
         for y in range(self.num_cols - 1, -1, -1):
             for x in range(self.num_rows):
-                out_dest.write("|")
+                out_dest.write('|')
                 self.square_at(x, y).render_outcome(out_dest)
-            out_dest.write("|\n")
+            out_dest.write('|\n')
 
 
 class DestinationMover:
@@ -317,7 +305,6 @@ class DestinationMover:
     def append_path(self, *args):
         """Append the provided MovementDirections to the path.
         """
-
         self.movement_path = self.movement_path + list(args)
 
     def execute(self, origin):
@@ -341,8 +328,8 @@ class DestinationMover:
     def __str__(self):
         """Return a nice, printable representation of the DestinationMover.
         """
-        path = "-".join(p.name for p in self.movement_path)
-        return "DestinationMover: " + path
+        path = '-'.join((p.name for p in self.movement_path))
+        return 'DestinationMover: ' + path
 
 
 class VectorMover:
@@ -366,19 +353,17 @@ class VectorMover:
         """
         if self.direction is None:
             return []
-
         visited = []
         neighbor = origin.neighbor(self.direction)
-        while neighbor is not None and not neighbor.condition.is_occupied:
+        while neighbor is not None and (not neighbor.condition.is_occupied):
             visited.append(neighbor)
             neighbor = neighbor.neighbor(self.direction)
-
         return visited
 
     def __str__(self):
         """Return a nice, printable representation of the VectorMover.
         """
-        return "VectorMover: " + self.direction.name
+        return 'VectorMover: ' + self.direction.name
 
 
 class GamePiece:
@@ -408,23 +393,20 @@ class GamePiece:
         """
         if self.location is None:
             return []
-
         result = []
         for mover in self.movers:
             result = result + mover.execute(self.location)
-
         for square in result:
             square.condition.is_threatened = True
             if self.inhibit_as_well_as_threaten:
                 square.condition.is_inhibited = True
-
         return result
 
     def __str__(self):
         """Return a nice, printable representation of the GamePiece.
         """
-        mover_content = "\n  ".join([str(x) for x in self.movers])
-        r = "\n  ".join(['GamePiece', mover_content])
+        mover_content = '\n  '.join([str(x) for x in self.movers])
+        r = '\n  '.join(['GamePiece', mover_content])
         return r
 
 
@@ -434,40 +416,15 @@ def create_knight_movers():
     Returns:
         [list(DesintationMover)] -- List of movers to execute knight moves.
     """
-
     knight_paths = []
-    knight_paths.append((MovementDirection.NORTH,
-                         MovementDirection.NORTH,
-                         MovementDirection.WEST))
-
-    knight_paths.append((MovementDirection.NORTH,
-                         MovementDirection.NORTH,
-                         MovementDirection.EAST))
-
-    knight_paths.append((MovementDirection.NORTH,
-                         MovementDirection.WEST,
-                         MovementDirection.WEST))
-
-    knight_paths.append((MovementDirection.NORTH,
-                         MovementDirection.EAST,
-                         MovementDirection.EAST))
-
-    knight_paths.append((MovementDirection.SOUTH,
-                         MovementDirection.SOUTH,
-                         MovementDirection.WEST))
-
-    knight_paths.append((MovementDirection.SOUTH,
-                         MovementDirection.SOUTH,
-                         MovementDirection.EAST))
-
-    knight_paths.append((MovementDirection.SOUTH,
-                         MovementDirection.WEST,
-                         MovementDirection.WEST))
-
-    knight_paths.append((MovementDirection.SOUTH,
-                         MovementDirection.EAST,
-                         MovementDirection.EAST))
-
+    knight_paths.append((MovementDirection.NORTH, MovementDirection.NORTH, MovementDirection.WEST))
+    knight_paths.append((MovementDirection.NORTH, MovementDirection.NORTH, MovementDirection.EAST))
+    knight_paths.append((MovementDirection.NORTH, MovementDirection.WEST, MovementDirection.WEST))
+    knight_paths.append((MovementDirection.NORTH, MovementDirection.EAST, MovementDirection.EAST))
+    knight_paths.append((MovementDirection.SOUTH, MovementDirection.SOUTH, MovementDirection.WEST))
+    knight_paths.append((MovementDirection.SOUTH, MovementDirection.SOUTH, MovementDirection.EAST))
+    knight_paths.append((MovementDirection.SOUTH, MovementDirection.WEST, MovementDirection.WEST))
+    knight_paths.append((MovementDirection.SOUTH, MovementDirection.EAST, MovementDirection.EAST))
     return [DestinationMover(*x) for x in knight_paths]
 
 
@@ -477,10 +434,7 @@ def create_rook_movers():
     Returns:
         [list(VectorMover)] -- List of movers to execute rook moves.
     """
-    directions = (MovementDirection.NORTH,
-                  MovementDirection.SOUTH,
-                  MovementDirection.EAST,
-                  MovementDirection.WEST)
+    directions = (MovementDirection.NORTH, MovementDirection.SOUTH, MovementDirection.EAST, MovementDirection.WEST)
     return [VectorMover(direction) for direction in directions]
 
 
@@ -490,25 +444,18 @@ def create_bishop_movers():
     Returns:
         [list(VectorMover)] -- List of movers to execute bishop moves.
     """
-    directions = (MovementDirection.NORTH_EAST,
-                  MovementDirection.NORTH_WEST,
-                  MovementDirection.SOUTH_EAST,
-                  MovementDirection.SOUTH_WEST)
+    directions = (MovementDirection.NORTH_EAST, MovementDirection.NORTH_WEST, MovementDirection.SOUTH_EAST, MovementDirection.SOUTH_WEST)
     return [VectorMover(direction) for direction in directions]
 
 
 def create_amazon():
     piece = GamePiece()
-
     for mover in create_knight_movers():
         piece.movers.append(mover)
-
     for mover in create_rook_movers():
         piece.movers.append(mover)
-
     for mover in create_bishop_movers():
         piece.movers.append(mover)
-
     return piece
 
 
@@ -518,7 +465,6 @@ def create_king():
         mover = DestinationMover()
         mover.append_path(direction)
         piece.movers.append(mover)
-
     return piece
 
 
@@ -536,9 +482,7 @@ def chess_location_to_game_indicies(pos_string):
     return (first, second)
 
 
-def determine_square_status_and_update_outcome(my_condition,
-                                               neighbor_conditions,
-                                               outcome):
+def determine_square_status_and_update_outcome(my_condition, neighbor_conditions, outcome):
     """Determine the status of the square from the square's condition and
     the neighboring conditions. Update and return the outcome.
 
@@ -552,7 +496,6 @@ def determine_square_status_and_update_outcome(my_condition,
     outcome_type = GameSquareOutcome.UNKNOWN
     if my_condition.is_occupied or my_condition.is_inhibited:
         return outcome_type
-
     can_move_to_safety = any([x.is_safe for x in neighbor_conditions])
     if my_condition.is_threatened:
         if can_move_to_safety:
@@ -561,37 +504,26 @@ def determine_square_status_and_update_outcome(my_condition,
         else:
             outcome.checkmates += 1
             outcome_type = GameSquareOutcome.CHECKMATE
-
+    elif can_move_to_safety:
+        outcome.alives += 1
+        outcome_type = GameSquareOutcome.ALIVE
     else:
-        if can_move_to_safety:
-            outcome.alives += 1
-            outcome_type = GameSquareOutcome.ALIVE
-        else:
-            outcome.stalemates += 1
-            outcome_type = GameSquareOutcome.STALEMATE
-
+        outcome.stalemates += 1
+        outcome_type = GameSquareOutcome.STALEMATE
     return outcome_type
 
 
 def amazon_check_mate(king, amazon):
-
     outcomes = Outcomes()
     king_coords = chess_location_to_game_indicies(king)
     amazon_coords = chess_location_to_game_indicies(amazon)
-
     board = Gameboard(8, 8)
     king_piece = create_king()
     amazon_piece = create_amazon()
-
     king_piece.place_on_board(board.square_at(*king_coords))
     amazon_piece.place_on_board(board.square_at(*amazon_coords))
-
     king_piece.impart_force()
     amazon_piece.impart_force()
-
     for square in list(board.board.values()):
-        determine_square_status_and_update_outcome(square.condition,
-                                                   square.neighbor_conditions(),
-                                                   outcomes)
-
+        determine_square_status_and_update_outcome(square.condition, square.neighbor_conditions(), outcomes)
     return outcomes.as_array()

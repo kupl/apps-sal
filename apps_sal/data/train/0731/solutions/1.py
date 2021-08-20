@@ -1,15 +1,12 @@
-I = int(10e15)
-c, f = [int(i) for i in input().split()]
+I = int(1e+16)
+(c, f) = [int(i) for i in input().split()]
 arr = [[0 for i in range(c)] for j in range(c)]
-
 sdc = []
 for x in range(f):
-    sdc.append(list(int(x) for x in input().split()))
-
+    sdc.append(list((int(x) for x in input().split())))
 for i in sdc:
     arr[i[0] - 1][i[1] - 1] = i[2]
     arr[i[1] - 1][i[0] - 1] = i[2]
-
 for x in range(c):
     for y in range(c):
         if x != y:
@@ -28,5 +25,4 @@ f_w(c, arr)
 m = -1
 for x in range(c):
     m = max(m, max(arr[x]))
-
 print(m)

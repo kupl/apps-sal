@@ -1,7 +1,8 @@
 from bisect import bisect, bisect_left
 
 
-class Node():
+class Node:
+
     def __init__(self, val, freq):
         self.val = val
         self.freq = freq
@@ -52,8 +53,3 @@ class MajorityChecker:
         s = bisect_left(self.indexes[candidate], l)
         e = bisect(self.indexes[candidate], r)
         return candidate if e - s >= threshold else -1
-
-
-# Your MajorityChecker object will be instantiated and called as such:
-# obj = MajorityChecker(arr)
-# param_1 = obj.query(left,right,threshold)

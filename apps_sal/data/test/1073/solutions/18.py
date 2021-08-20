@@ -1,6 +1,5 @@
 import collections
 import math
-
 n = int(input())
 s = input()
 ans = 0

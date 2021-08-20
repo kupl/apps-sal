@@ -1,8 +1,9 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
-        max_, min_ = max(bloomDay), min(bloomDay)
+        (max_, min_) = (max(bloomDay), min(bloomDay))
 
         def check(day):
             m_done = 0
@@ -15,14 +16,11 @@ class Solution:
                         cont_count = 0
                 else:
                     cont_count = 0
-            #print(day, m_done)
             if m_done < m:
                 return False
             return True
-
         left = min_ - 1
         right = max_
-
         while left < right:
             mid = left + (right - left) // 2
             if check(mid):

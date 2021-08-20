@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 b = True
 nach = 0
 con = 0
@@ -27,5 +27,4 @@ for i in range(n):
         con = i
 m1 = cc - nn + 1
 m2 = con - nach + 1
-# print(m1,m2)
 print(max(m1, m2))

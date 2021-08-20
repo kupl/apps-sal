@@ -26,5 +26,4 @@ for i in range(n):
         if su <= 0:
             ans2 += abs(su - 1)
             su = 1
-
 print(min(ans1, ans2))

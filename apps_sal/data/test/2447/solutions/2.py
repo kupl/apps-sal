@@ -1,10 +1,10 @@
-N, = list(map(int, input().split()))
+(N,) = list(map(int, input().split()))
 for _ in range(N):
     s = input().strip()
     x = [0] * (len(s) + 1)
     y = [0] * (len(s) + 1)
     for i in range(1, len(s) + 1):
-        if s[i - 1] == "1":
+        if s[i - 1] == '1':
             x[i] = x[i - 1] + 1
             y[i] = y[i - 1]
         else:

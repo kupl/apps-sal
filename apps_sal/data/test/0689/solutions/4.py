@@ -8,10 +8,10 @@ for you in range(t):
             freq[ord(x) - 97] += 1
     poss = 1
     for i in freq:
-        if(i % n):
+        if i % n:
             poss = 0
             break
-    if(poss):
-        print("YES")
+    if poss:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

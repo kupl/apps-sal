@@ -2,7 +2,7 @@ import math
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = sorted(list(map(int, input().split())))
     w = sorted(list(map(int, input().split())))
     sm = 0

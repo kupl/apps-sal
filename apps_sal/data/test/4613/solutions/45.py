@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Oct 12 00:49:45 2020
 
@@ -23,16 +22,13 @@ def isBridge(start, goal):
     return True
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 adj = list()
-
-
 for i in range(N):
     adj.append(list())
-
 E = list()
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     E.append((a, b))
@@ -40,7 +36,7 @@ for i in range(M):
     adj[b].append(a)
 ans = 0
 for e in E:
-    a, b = e
+    (a, b) = e
     adj[a].remove(b)
     adj[b].remove(a)
     if isBridge(a, b):

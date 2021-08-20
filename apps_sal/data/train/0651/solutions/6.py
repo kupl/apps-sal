@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 input = sys.stdin.readline
 T = int(input())
@@ -9,12 +8,12 @@ for i in range(T):
     fc = 0
     flag = 0
     for i in A:
-        if (B[i] != 1):
+        if B[i] != 1:
             fc = fc + 1
             B[i] = B[i] + 1
         else:
             flag = flag + 1
-    if (flag % 2 == 0):
+    if flag % 2 == 0:
         print(fc)
     else:
         print(max(fc - 1, 1))

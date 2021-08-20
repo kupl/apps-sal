@@ -1,8 +1,8 @@
 def html(*args, **kwargs):
-    keywords, elements = [], []
+    (keywords, elements) = ([], [])
     if kwargs:
-        for key, value in kwargs.items():
-            if key == "cls":
+        for (key, value) in kwargs.items():
+            if key == 'cls':
                 key = 'class'
             keywords.append(f'{key}="{value}"')
     if len(args) == 1:
@@ -14,7 +14,7 @@ def html(*args, **kwargs):
             return element
         else:
             return f'<{args[0]} />'
-    for i, arg in enumerate(args):
+    for (i, arg) in enumerate(args):
         if i == 0:
             tag = arg
         else:
@@ -24,4 +24,4 @@ def html(*args, **kwargs):
                     element += ' ' + key
             element += f'>{arg}</{tag}>'
             elements.append(element)
-    return "\n".join(element for element in elements)
+    return '\n'.join((element for element in elements))

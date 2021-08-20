@@ -8,15 +8,14 @@ for i in range(t):
             print(1)
         else:
             print(0)
+    elif k > n:
+        print(0)
     else:
-        if k > n:
-            print(0)
-        else:
-            if n - k < k:
-                k = n - k
-            ans = 1
-            for i in range(n - k + 1, n + 1):
-                ans *= i
-            for i in range(1, k + 1):
-                ans /= i
-            print(ans)
+        if n - k < k:
+            k = n - k
+        ans = 1
+        for i in range(n - k + 1, n + 1):
+            ans *= i
+        for i in range(1, k + 1):
+            ans /= i
+        print(ans)

@@ -1,7 +1,8 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        good_start, bad_start = -1, -1
-        good_count, bad_count = {}, {}
+        (good_start, bad_start) = (-1, -1)
+        (good_count, bad_count) = ({}, {})
 
         def add(count, element):
             if element not in count:
@@ -21,7 +22,6 @@ class Solution:
                 cur += 1
                 remove(good_count, A[cur])
             return cur
-
         total = 0
         for i in range(len(A)):
             cur = A[i]

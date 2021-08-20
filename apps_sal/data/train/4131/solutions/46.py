@@ -5,4 +5,4 @@ def how_much_water(water, load, clothes):
     elif 2 * load < clothes:
         return 'Too much clothes'
     else:
-        return round(water * (1.1**f), 2)
+        return round(water * 1.1 ** f, 2)

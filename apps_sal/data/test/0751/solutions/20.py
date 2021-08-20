@@ -6,7 +6,7 @@ def main():
     linea = [int(x) for x in input().strip().split()]
     resp = 1
     for i in range(n):
-        if(suma + linea[i] <= m):
+        if suma + linea[i] <= m:
             suma += linea[i]
         else:
             resp += 1

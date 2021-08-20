@@ -2,10 +2,8 @@ def check(arr, d, mm):
     ss = 0
     k = -1
     for i in range(n):
-        if (i) % d == 0:
-            # print("i is ",i)
+        if i % d == 0:
             k += 1
-        # print("k is ",k)
         ss += max(0, arr[i] - k)
     if ss >= mm:
         return True
@@ -13,7 +11,7 @@ def check(arr, d, mm):
         return False
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 arr = list(map(int, input().split()))
 arr.sort(reverse=True)
 s = 1

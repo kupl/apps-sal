@@ -1,6 +1,6 @@
 def make_negative(number):
-    for num in [int(number)]:  # konwersja na int
+    for num in [int(number)]:
         if num <= 0:
-            return(num)
+            return num
         if num > 0:
             return abs(number) * -1

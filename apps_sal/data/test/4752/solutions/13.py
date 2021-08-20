@@ -1,4 +1,5 @@
 class Solution:
+
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -6,7 +7,7 @@ class Solution:
         :rtype: List[int]
         """
         numsMap = {}
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if target - num in numsMap:
                 return [i, numsMap[target - num]]
             numsMap[num] = i

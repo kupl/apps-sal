@@ -4,7 +4,6 @@ sm = []
 for i in range(n):
     for j in range(i + 1, n):
         sm.append(a[i] + a[j])
-
 cnt = dict()
 ans = 0
 for i in sm:
@@ -14,5 +13,4 @@ for i in sm:
         cnt[i] += 1
 for i in sm:
     ans = max(cnt[i], ans)
-
 print(ans)

@@ -7,137 +7,18 @@ from itertools import *
 from operator import *
 from functools import *
 import sys
-'''
-@lru_cache(None)
-def fact(x):
-    if x<2:
-        return 1
-    return fact(x-1)*x
-
-@lru_cache(None)
-def per(i,j):
-    return fact(i)//fact(i-j)
-
-@lru_cache(None)
-def com(i,j):
-    return per(i,j)//fact(j)
-
-def linc(f,t,l,r):
-    while l<r:
-        mid=(l+r)//2
-        if t>f(mid):
-            l=mid+1
-        else:
-            r=mid
-    return l
-
-def rinc(f,t,l,r):
-    while l<r:
-        mid=(l+r+1)//2
-        if t<f(mid):
-            r=mid-1
-        else:
-            l=mid
-    return l
-
-def ldec(f,t,l,r):
-    while l<r:
-        mid=(l+r)//2
-        if t<f(mid):
-            l=mid+1
-        else:
-            r=mid
-    return l
-
-def rdec(f,t,l,r):
-    while l<r:
-        mid=(l+r+1)//2
-        if t>f(mid):
-            r=mid-1
-        else:
-            l=mid
-    return l
-
-def isprime(n):
-    for i in range(2,int(n**0.5)+1):
-        if n%i==0:
-            return False
-    return True
-
-def power2(n):
-    while not n&1:
-        n>>=1
-    return n==1
-'''
-'''
-import time
-s=time.time()
-e=time.time()
-print(e-s)
-'''
-
+'\n@lru_cache(None)\ndef fact(x):\n    if x<2:\n        return 1\n    return fact(x-1)*x\n\n@lru_cache(None)\ndef per(i,j):\n    return fact(i)//fact(i-j)\n\n@lru_cache(None)\ndef com(i,j):\n    return per(i,j)//fact(j)\n\ndef linc(f,t,l,r):\n    while l<r:\n        mid=(l+r)//2\n        if t>f(mid):\n            l=mid+1\n        else:\n            r=mid\n    return l\n\ndef rinc(f,t,l,r):\n    while l<r:\n        mid=(l+r+1)//2\n        if t<f(mid):\n            r=mid-1\n        else:\n            l=mid\n    return l\n\ndef ldec(f,t,l,r):\n    while l<r:\n        mid=(l+r)//2\n        if t<f(mid):\n            l=mid+1\n        else:\n            r=mid\n    return l\n\ndef rdec(f,t,l,r):\n    while l<r:\n        mid=(l+r+1)//2\n        if t>f(mid):\n            r=mid-1\n        else:\n            l=mid\n    return l\n\ndef isprime(n):\n    for i in range(2,int(n**0.5)+1):\n        if n%i==0:\n            return False\n    return True\n\ndef power2(n):\n    while not n&1:\n        n>>=1\n    return n==1\n'
+'\nimport time\ns=time.time()\ne=time.time()\nprint(e-s)\n'
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split()))
-    # n=int(input())
+    (n, k) = list(map(int, input().split()))
     a = set(map(int, input().split()))
     n = len(a)
     if n == 1:
         ans = 1
+    elif k == 1:
+        ans = -1
     else:
-        if k == 1:
-            ans = -1
-        else:
-            ans = ceil((n - 1) / (k - 1))
+        ans = ceil((n - 1) / (k - 1))
     print(ans)
-'''
-n,m=map(int,input().split())
-graph=defaultdict(dict)
-for i in range(m):
-    u,v,w=map(int,input().split())
-    graph[u][v]=w
-    graph[v][u]=w
-def dij(u,v):
-    graph[u][v]*=2
-    graph[v][u]*=2
-    d={}
-    d[1]=0
-    for i in range(2,n+1):
-        d[i]=inf
-    remain=set(range(2,n+1))
-    for i in graph[1]:
-        d[i]=graph[1][i]
-    while remain:
-        k=min(remain,key=lambda x: d[x])
-        remain.remove(k)
-        for i in remain:
-            if i in graph[k]:
-                d[i]=min(d[i],d[k]+graph[k][i])
-    graph[u][v]//=2
-    graph[v][u]//=2
-    return d[n]
-D={}
-D[1]=0
-for i in range(2,n+1):
-    D[i]=inf
-remain=set(range(2,n+1))
-pre=[-1]*(n+1)
-for i in graph[1]:
-    D[i]=graph[1][i]
-    pre[i]=1
-while remain:
-    k=min(remain,key=lambda x: D[x])
-    remain.remove(k)
-    for i in remain:
-        if i in graph[k]:
-            if D[i]>D[k]+graph[k][i]:
-                D[i]=D[k]+graph[k][i]
-                pre[i]=k
-cur=ans=D[n]
-node=n
-while pre[node]!=-1:
-    ans=max(ans,dij(node,pre[node]))
-    node=pre[node]
-print(ans-cur)
-            
-'''
+'\nn,m=map(int,input().split())\ngraph=defaultdict(dict)\nfor i in range(m):\n    u,v,w=map(int,input().split())\n    graph[u][v]=w\n    graph[v][u]=w\ndef dij(u,v):\n    graph[u][v]*=2\n    graph[v][u]*=2\n    d={}\n    d[1]=0\n    for i in range(2,n+1):\n        d[i]=inf\n    remain=set(range(2,n+1))\n    for i in graph[1]:\n        d[i]=graph[1][i]\n    while remain:\n        k=min(remain,key=lambda x: d[x])\n        remain.remove(k)\n        for i in remain:\n            if i in graph[k]:\n                d[i]=min(d[i],d[k]+graph[k][i])\n    graph[u][v]//=2\n    graph[v][u]//=2\n    return d[n]\nD={}\nD[1]=0\nfor i in range(2,n+1):\n    D[i]=inf\nremain=set(range(2,n+1))\npre=[-1]*(n+1)\nfor i in graph[1]:\n    D[i]=graph[1][i]\n    pre[i]=1\nwhile remain:\n    k=min(remain,key=lambda x: D[x])\n    remain.remove(k)\n    for i in remain:\n        if i in graph[k]:\n            if D[i]>D[k]+graph[k][i]:\n                D[i]=D[k]+graph[k][i]\n                pre[i]=k\ncur=ans=D[n]\nnode=n\nwhile pre[node]!=-1:\n    ans=max(ans,dij(node,pre[node]))\n    node=pre[node]\nprint(ans-cur)\n            \n'

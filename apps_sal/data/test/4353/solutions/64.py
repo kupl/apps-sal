@@ -1,5 +1,3 @@
 s = input()
-
-a = s.split(",")
-
-print((" ".join(a)))
+a = s.split(',')
+print(' '.join(a))

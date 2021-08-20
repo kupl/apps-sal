@@ -20,12 +20,11 @@ for i in range(n, len(a)):
     if odd == 0:
         if flag:
             answer += 1
+    elif flag:
+        flag = False
     else:
-        if flag:
-            flag = False
-        else:
-            answer += 1
-            flag = True
+        answer += 1
+        flag = True
     if a[i - n] != a[i - n + 1]:
         odd += 1
         odd %= 2

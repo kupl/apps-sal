@@ -1,11 +1,10 @@
-n, h = map(int, input().split())
+(n, h) = map(int, input().split())
 A = []
 B = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     A.append(a)
     B.append(b)
-
 maxa = max(A)
 C = []
 B.sort(reverse=True)

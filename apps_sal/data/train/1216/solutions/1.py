@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     k = list(map(int, input().split()))
     c = 0
     for i in k:

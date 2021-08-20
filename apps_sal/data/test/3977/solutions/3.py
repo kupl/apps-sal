@@ -1,16 +1,13 @@
 from collections import deque
-
-n, m, k = [int(i) for i in input().split()]
+(n, m, k) = [int(i) for i in input().split()]
 c = [int(i) for i in input().split()]
-
 adj_dict = dict()
 for i in range(1, n + 1):
     adj_dict[i] = []
 for i in range(m):
-    u, v = [int(i) for i in input().split()]
+    (u, v) = [int(i) for i in input().split()]
     adj_dict[u].append(v)
     adj_dict[v].append(u)
-
 size = [0 for i in range(k)]
 remain = n
 visited = set()
@@ -27,7 +24,6 @@ for i in range(k):
             if x not in visited:
                 q.append(x)
                 visited.add(x)
-
 size_list = sorted(size)
 size_list[-1] += remain
 print(sum([i * (i - 1) // 2 for i in size_list]) - m)

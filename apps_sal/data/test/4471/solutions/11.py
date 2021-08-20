@@ -3,8 +3,8 @@ def solve(n, a):
     a = [i - mn for i in a]
     for i in a:
         if i % 2:
-            return "NO"
-    return "YES"
+            return 'NO'
+    return 'YES'
 
 
 def main():

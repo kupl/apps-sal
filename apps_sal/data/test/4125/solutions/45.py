@@ -5,7 +5,7 @@ def gcd(x, y):
         return gcd(y, x % y)
 
 
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 xxx = list(map(lambda xn: abs(int(xn) - x), input().split()))
 ans = xxx[0]
 for i in range(1, n):

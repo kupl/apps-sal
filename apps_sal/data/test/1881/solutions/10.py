@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 l = [int(x) for x in input().split()]
 maps = []
 for _ in range(256):
@@ -15,7 +15,7 @@ for innum in l:
             i -= 1
     else:
         i = innum
-        while i >= 0 and i >= innum - (k - 1) and maps[i][0] != 'chosen':
+        while i >= 0 and i >= innum - (k - 1) and (maps[i][0] != 'chosen'):
             i -= 1
         i += 1
         outnum = i

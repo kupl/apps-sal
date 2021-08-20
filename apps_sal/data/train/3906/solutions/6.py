@@ -7,4 +7,4 @@ def C(n, k):
 
 def total(arr):
     l = len(arr)
-    return sum(arr[i] * C(l - 1, i) for i in range(l))
+    return sum((arr[i] * C(l - 1, i) for i in range(l)))

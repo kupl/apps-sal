@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         teams = range(1, len(rating) + 1)
         teams = list(zip(teams, rating))

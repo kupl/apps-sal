@@ -1,8 +1,6 @@
 from math import sin, cos, pi, atan2
 3
-
-
-x, y = tuple(map(int, input().split()))
+(x, y) = tuple(map(int, input().split()))
 if (x, y) in ((0, 0), (1, 0)):
     print(0)
 elif x >= 1 and -x + 1 < y <= x:

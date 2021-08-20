@@ -1,4 +1,5 @@
 class KMP:
+
     def Build(self, p):
         m = len(p)
         nxt = [0, 0]
@@ -9,7 +10,6 @@ class KMP:
             if p[i] == p[j]:
                 j += 1
             nxt.append(j)
-
         return nxt
 
     def Match(self, s, p):
@@ -30,6 +30,7 @@ class KMP:
 
 
 class Solution:
+
     def longestPrefix(self, s: str) -> str:
         kmp = KMP()
         nxt = kmp.Build(s)

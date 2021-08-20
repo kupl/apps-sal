@@ -11,6 +11,6 @@ for i in range(n):
     else:
         b.append(a[i])
 if len(b) > 1:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

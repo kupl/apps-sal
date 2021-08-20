@@ -1,6 +1,12 @@
 import sys
-def ii(): return sys.stdin.readline().strip()
-def idata(): return [int(x) for x in ii().split()]
+
+
+def ii():
+    return sys.stdin.readline().strip()
+
+
+def idata():
+    return [int(x) for x in ii().split()]
 
 
 def solve():
@@ -12,7 +18,7 @@ def solve():
         cnt = 2 * cnt + 1
         ans += 1
         n -= s
-        s = (cnt * (cnt + 1)) // 2
+        s = cnt * (cnt + 1) // 2
     print(ans)
     return
 

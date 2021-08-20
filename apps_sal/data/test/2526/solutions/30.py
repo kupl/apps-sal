@@ -1,4 +1,4 @@
-x, y, a, b, c, = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 p = list(map(int, input().split()))
 q = list(map(int, input().split()))
 r = list(map(int, input().split()))

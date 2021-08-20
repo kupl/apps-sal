@@ -5,6 +5,6 @@ if S[2] != S[3]:
 if S[4] != S[5]:
     yes = False
 if yes:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

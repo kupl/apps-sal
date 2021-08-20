@@ -1,4 +1,2 @@
 N = int(input())
-
-
-print("ABC", N, sep="")
+print('ABC', N, sep='')

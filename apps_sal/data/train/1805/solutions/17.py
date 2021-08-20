@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         current_level = 0
         nodes_in_current_level = [id]
@@ -10,7 +11,6 @@ class Solution:
             next_level = []
             while len(nodes_in_current_level) > 0:
                 node = nodes_in_current_level.pop()
-
                 for neighbor in friends[node]:
                     if neighbor in visited:
                         continue
@@ -21,4 +21,4 @@ class Solution:
         counter = Counter()
         for id in nodes_in_current_level:
             counter.update(watchedVideos[id])
-        return [item for item, count in sorted(list(counter.items()), key=lambda x: (x[1], x[0]))]
+        return [item for (item, count) in sorted(list(counter.items()), key=lambda x: (x[1], x[0]))]

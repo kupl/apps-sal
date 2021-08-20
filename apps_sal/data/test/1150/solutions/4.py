@@ -1,13 +1,13 @@
 def rotate(i, j):
-    x, y, p, q = a[i]
+    (x, y, p, q) = a[i]
     for k in range(1, j + 1):
-        x, y = p - (y - q), q + (x - p)
-    c[i] = x, y
+        (x, y) = (p - (y - q), q + (x - p))
+    c[i] = (x, y)
 
 
 def dist(i, j):
-    x, y = c[i]
-    p, q = c[j]
+    (x, y) = c[i]
+    (p, q) = c[j]
     return (x - p) ** 2 + (y - q) ** 2
 
 

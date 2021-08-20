@@ -5,7 +5,7 @@ import decimal
 import numpy as np
 import math
 from bisect import bisect_left
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
 def find(x):
@@ -22,7 +22,7 @@ def unite(x, y):
     if p == q:
         return None
     if p > q:
-        p, q = q, p
+        (p, q) = (q, p)
     par[p] += par[q]
     par[q] = p
 
@@ -89,7 +89,7 @@ def query(i):
 
 a = list(map(int, input().split()))
 a.sort(reverse=True)
-l, r = 0, 10 ** 6
+(l, r) = (0, 10 ** 6)
 while r - l > 1:
     m2 = (l + r) // 2
     cnt = 0

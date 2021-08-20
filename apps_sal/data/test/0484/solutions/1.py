@@ -1,10 +1,9 @@
 import sys
-
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 x = []
 y = []
 for i in range(n):
-    x1, y1 = list(map(int, input().split()))
+    (x1, y1) = list(map(int, input().split()))
     x.append(x1)
     y.append(y1)
 ans = 0

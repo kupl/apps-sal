@@ -1,8 +1,7 @@
-
 class StreamChecker:
-    '''based on trie
+    """based on trie
        the core idea TLE is to create the trie with words in reverse order. also create a buffer that is used durring the query
-    '''
+    """
 
     def __init__(self, words: List[str]):
         self.s = ''
@@ -12,4 +11,4 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.s += letter
-        return any(self.s.endswith(w) for w in self.dic[letter])
+        return any((self.s.endswith(w) for w in self.dic[letter]))

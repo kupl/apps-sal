@@ -3,7 +3,6 @@ def main():
     a = [list([int(x) - 1 for x in input().split()]) for _ in range(n)]
     for i in range(n):
         a[i].reverse()
-    # print(a)
     s = set()
 
     def check(i, s):
@@ -17,14 +16,13 @@ def main():
                 s.add((i, j))
             else:
                 s.add((j, i))
-
     for i in range(n):
         check(i, s)
     day = 0
     while s:
         day += 1
         prevS = set()
-        s, prevS = prevS, s
+        (s, prevS) = (prevS, s)
         for p in prevS:
             i = p[0]
             j = p[1]
@@ -35,10 +33,9 @@ def main():
             j = p[1]
             check(i, s)
             check(j, s)
-
     for i in range(n):
         if len(a[i]):
-            print((-1))
+            print(-1)
             return
     print(day)
     return

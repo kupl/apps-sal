@@ -7,7 +7,6 @@ for _ in range(int(input())):
         k = sorted(k)
         l.append(k)
         n -= 1
-
     count = [l[-1][-1]]
     flag = 0
     for i in range(len(l) - 2, -1, -1):

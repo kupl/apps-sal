@@ -11,9 +11,7 @@ while test:
             h = h - 12
     hour_angle = 0.5 * (h * 60 + m)
     minute_angle = 6 * m
-
     angle = abs(hour_angle - minute_angle)
-
     angle = min(360 - angle, angle)
     a = angle
     b = int(angle)
@@ -21,5 +19,4 @@ while test:
         print(str(b) + ' degree')
     else:
         print(str(angle) + ' degree')
-
     test -= 1

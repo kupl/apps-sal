@@ -1,4 +1,5 @@
 class Solution:
+
     def sortString(self, s: str) -> str:
         res = ''
         s = list(s)
@@ -12,7 +13,6 @@ class Solution:
                 else:
                     i += 1
             res += ''.join(curr)
-
             j = len(s) - 1
             curr = []
             while j >= 0:

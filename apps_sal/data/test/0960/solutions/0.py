@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 result = 10 ** 26
 for i in range(1, k):
     if n % i == 0:

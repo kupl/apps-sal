@@ -8,7 +8,6 @@ for _ in range(t):
     j = 0
     for i in it:
         try:
-
             ss[i].append(j)
         except:
             ss[i] = [j]
@@ -20,7 +19,6 @@ for _ in range(t):
             continue
         for kk in ss[i][1:]:
             for jj in range(10):
-
                 j = i
                 j = j[:3] + str(jj)
                 try:
@@ -32,7 +30,6 @@ for _ in range(t):
         ss[i] = [ss[i][0]]
     for i in ss:
         ans.append([i, ss[i][0]])
-
     ans.sort(key=lambda x: x[1])
     print(tot)
     for i in ans:

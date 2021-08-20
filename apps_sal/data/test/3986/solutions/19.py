@@ -1,8 +1,7 @@
 li = list(map(int, input().split()))
 n = li[0]
 k = li[1]
-s = ""
-
+s = ''
 if k > n or (k < 2 and n != 1) or k == 0:
     print(-1)
 else:
@@ -18,5 +17,4 @@ else:
     if n != k:
         for i in range(99, 99 + (k - 2)):
             s += chr(i)
-
 print(s)

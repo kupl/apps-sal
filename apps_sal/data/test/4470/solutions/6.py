@@ -1,9 +1,8 @@
-# @author
-
 import sys
 
 
 class ADivideIt:
+
     def solve(self):
         for _ in range(int(input())):
             n = int(input())
@@ -27,5 +26,4 @@ class ADivideIt:
 
 solver = ADivideIt()
 input = sys.stdin.readline
-
 solver.solve()

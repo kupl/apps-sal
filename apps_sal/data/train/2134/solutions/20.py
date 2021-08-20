@@ -1,7 +1,10 @@
 from math import ceil, sqrt, factorial, gcd
 from collections import deque
 from sys import stdin
-def input(): return stdin.readline().strip()
+
+
+def input():
+    return stdin.readline().strip()
 
 
 n = int(input())
@@ -14,11 +17,10 @@ level = [[] for i in range(n + 2)]
 stack = [[1, 1]]
 flag = 1
 while stack:
-    x, y = stack.pop()
+    (x, y) = stack.pop()
     level[y].append(x)
     for i in graph[x]:
         stack.append([i, y + 1])
-# print(level)
 ans = [0 for i in range(n + 2)]
 ans[1] = s[0]
 for i in range(1, n + 1):
@@ -29,7 +31,7 @@ for i in range(1, n + 1):
                 s[j - 1] = papa
                 ans[j] = 0
             else:
-                mi = float("infinity")
+                mi = float('infinity')
                 for k in graph[j]:
                     mi = min(mi, s[k - 1])
                     if s[k - 1] < papa:
@@ -37,13 +39,10 @@ for i in range(1, n + 1):
                         break
                 ans[j] = mi - papa
                 s[j - 1] = papa + ans[j]
-    else:
-        if i > 1:
-            for j in level[i]:
-                papa = s[l[j - 2] - 1]
-                # print(papa)
-                ans[j] = s[j - 1] - papa
-# print(ans)
+    elif i > 1:
+        for j in level[i]:
+            papa = s[l[j - 2] - 1]
+            ans[j] = s[j - 1] - papa
 if flag == 0:
     print(-1)
 else:

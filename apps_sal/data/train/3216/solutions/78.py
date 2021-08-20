@@ -7,7 +7,6 @@ def movie(card, ticket, perc):
     count = 1
     while card + math.ceil(sysB) >= sysA:
         sysA += ticket
-        sysB = (sysB) + (ticket) * (perc**(count + 1))
+        sysB = sysB + ticket * perc ** (count + 1)
         count += 1
-
     return count

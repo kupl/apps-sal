@@ -9,6 +9,6 @@ for i in range(1, n + 1):
         k = 2 * j - i
         if k > n:
             continue
-        if s[i] != s[j] and s[j] != s[k] and s[k] != s[i]:
+        if s[i] != s[j] and s[j] != s[k] and (s[k] != s[i]):
             cnt += 1
 print(r * g * b - cnt)

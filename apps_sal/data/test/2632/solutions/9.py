@@ -1,4 +1,5 @@
 class Solution:
+
     def minPathSum(self, grid):
         """
         :type grid: List[List[int]]
@@ -6,7 +7,7 @@ class Solution:
         """
         height = len(grid)
         width = len(grid[0])
-        step_num = (height + width) - 2
+        step_num = height + width - 2
         for step in range(1, step_num + 1):
             for row in range(height):
                 col = step - row

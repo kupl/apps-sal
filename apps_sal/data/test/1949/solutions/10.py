@@ -1,11 +1,7 @@
 import sys
-
 input = sys.stdin.readline
-
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 a = sorted(map(int, input().split()))
-
 last = 0
 i = 0
 while k:
@@ -16,6 +12,5 @@ while k:
         last = a[i]
         k -= 1
     i += 1
-
 for i in range(max(0, k)):
     print(0)

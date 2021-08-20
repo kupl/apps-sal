@@ -14,11 +14,11 @@ def m(x, y):
 
 
 for i in range(n):
-    r, b, k = [int(x) for x in input().split(' ')]
+    (r, b, k) = [int(x) for x in input().split(' ')]
     a = m(r, b)
     x = max(r, b)
     y = min(r, b)
-    if (2 * x) % y != 0:
+    if 2 * x % y != 0:
         if x >= (k - 1) * y + 2 * a:
             print('REBEL')
         else:
@@ -28,8 +28,7 @@ for i in range(n):
             print('REBEL')
         else:
             print('OBEY')
+    elif x >= k * y + a:
+        print('REBEL')
     else:
-        if x >= k * y + a:
-            print('REBEL')
-        else:
-            print('OBEY')
+        print('OBEY')

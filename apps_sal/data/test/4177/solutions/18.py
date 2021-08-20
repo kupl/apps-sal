@@ -1,4 +1,3 @@
 S = input()
 Len = len(S)
-
-print("x" * Len)
+print('x' * Len)

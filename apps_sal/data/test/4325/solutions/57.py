@@ -1,5 +1,5 @@
 import math as m
-n, x, t = map(int, input().split())
+(n, x, t) = map(int, input().split())
 if n % x == 0:
     shong = int(n / x)
     ans = shong * t

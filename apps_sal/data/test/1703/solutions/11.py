@@ -7,11 +7,10 @@ for i in range(n):
     for i in k:
         if i == '(':
             right += 1
+        elif right == 0:
+            left += 1
         else:
-            if right == 0:
-                left += 1
-            else:
-                right -= 1
+            right -= 1
     if left == 0 or right == 0:
         c = left - right
         if c in d:

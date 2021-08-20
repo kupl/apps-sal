@@ -8,8 +8,8 @@ def stoi(s):
 
 for i in range(N - 1):
     if stoi(S[i]) > stoi(S[i + 1]):
-        print("YES")
+        print('YES')
         print(i + 1, i + 2)
         break
 else:
-    print("NO")
+    print('NO')

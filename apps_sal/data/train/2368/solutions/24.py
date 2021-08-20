@@ -3,10 +3,7 @@ from collections import deque
 from sys import stdin, stdout
 from string import ascii_letters
 input = stdin.readline
-#print = stdout.write
 letters = ascii_letters[:26]
-
-
 for _ in range(int(input())):
     n = int(input())
     first = list(map(int, input().split()))

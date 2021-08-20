@@ -2,8 +2,8 @@ def merge(array1, array2):
     array3 = []
     i = 0
     j = 0
-    while (i < len(array1) and j < len(array2)):
-        if (array1[i] < array2[j]):
+    while i < len(array1) and j < len(array2):
+        if array1[i] < array2[j]:
             array3.append(array1[i])
             i = i + 1
         else:
@@ -13,16 +13,10 @@ def merge(array1, array2):
 
 
 def validate_pin(pin):
-    # return true or false
-
     key = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-
-    # check conditions
     if len(pin) == 6 or len(pin) == 4:
         p = [i for i in pin]
         m = merge(key, p)
-
-        # check lengths
         if len(set(m)) == len(key):
             return True
         return False

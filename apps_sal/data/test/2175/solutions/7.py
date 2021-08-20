@@ -11,8 +11,8 @@ for i in range(m):
         w = c[2]
         k = c[1] - 1
         r = 0
-        while((w > 0) and (k < n)):
-            if(w <= vol[k] - water[k]):
+        while w > 0 and k < n:
+            if w <= vol[k] - water[k]:
                 water[k] = water[k] + w
                 break
             else:

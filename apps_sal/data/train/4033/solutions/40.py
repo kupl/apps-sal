@@ -1,7 +1,7 @@
 def contamination(text, char):
-    if text == "":
+    if text == '':
         return text
-    if char == "":
+    if char == '':
         return char
     else:
         return char * len(text)

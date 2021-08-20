@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-ans = 1e9
+ans = 1000000000.0
 for j in range(n):
     pref = [0] * (n + 1)
     for i in range(1, n + 1):

@@ -1,7 +1,7 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
-    mi, ma = min(l), max(l)
+    (mi, ma) = (min(l), max(l))
     if ma - mi > k:
         print('NO')
         return

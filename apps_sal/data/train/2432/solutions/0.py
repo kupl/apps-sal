@@ -1,4 +1,5 @@
 class Solution:
+
     def calPoints(self, ops):
         """
         :type ops: List[str]
@@ -30,7 +31,6 @@ class Solution:
                                 sum = sum + int(ops[i])
                                 break
                         break
-
         return sum
 
     def isInt(self, x):

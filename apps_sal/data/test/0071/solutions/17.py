@@ -1,4 +1,4 @@
-n, m, k, x, y = map(int, input().split())
+(n, m, k, x, y) = map(int, input().split())
 matrix = [[0] * m for i in range(n)]
 in_cycle = (n + n - 2) * m
 if n == 1:
@@ -22,7 +22,7 @@ else:
         matrix[-1][i] += k // in_cycle
     for i in range(1, n - 1):
         for j in range(m):
-            matrix[i][j] += (k // in_cycle) * 2
+            matrix[i][j] += k // in_cycle * 2
     k %= in_cycle
     for i in range(n):
         for j in range(m):

@@ -1,5 +1,4 @@
 import sys
-
 MAX_N = 20
 MAX_DIG = 3
 dp = [[0] * (MAX_DIG + 1) for i in range(MAX_N)]
@@ -19,13 +18,13 @@ def first_dig(n):
     while n >= 10:
         n //= 10
         cnt += 1
-    return n, cnt
+    return (n, cnt)
 
 
 def calc_ans(n):
     ans = 0
     for n_digs in range(MAX_DIG, -1, -1):
-        x, cnt = first_dig(n)
+        (x, cnt) = first_dig(n)
         for i in range(n_digs):
             ans += x * dp[cnt][i]
         ans += dp[cnt][n_digs]
@@ -37,7 +36,7 @@ def main():
     calc_dp()
     T = int(input())
     for _ in range(T):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         print(calc_ans(r) - calc_ans(l - 1))
 
 

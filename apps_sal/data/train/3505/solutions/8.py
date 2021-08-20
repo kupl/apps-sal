@@ -1,17 +1,16 @@
-def super_pad(string, width, fill=" "):
+def super_pad(string, width, fill=' '):
     if not width:
         return ''
     if not fill:
         return string
     direction = fill[0]
-    if direction in "<^>":
+    if direction in '<^>':
         fill = fill[1:]
     else:
-        direction = "<"
-
-    if direction == "<":
+        direction = '<'
+    if direction == '<':
         return ((fill * width)[:max(0, width - len(string))] + string)[-width:]
-    elif direction == ">":
+    elif direction == '>':
         return (string + fill * width)[:width]
     else:
         left = (width - len(string) + 1) // 2
@@ -22,5 +21,4 @@ def super_pad(string, width, fill=" "):
             return left_padding + string + right_padding
         else:
             return string[-left:right]
-
     return string

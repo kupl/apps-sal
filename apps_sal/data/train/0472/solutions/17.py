@@ -1,5 +1,5 @@
 class Solution:
-    # returns an adjacency list representation of graph
+
     def genGraph(self, arr: List[int]) -> List[List[int]]:
         adjList = [[] for i in range(len(arr))]
         for i in range(len(arr)):

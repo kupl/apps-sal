@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W:
             return False
@@ -14,5 +15,4 @@ class Solution:
                     if counter[key + w] == 0:
                         del counter[key + w]
                         keys.remove(key + w)
-
         return True

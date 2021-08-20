@@ -11,7 +11,6 @@ def binary_check(x):
     sol = []
     while start <= stop:
         mid = (start + stop) // 2
-
         if mid * mid == x:
             return True
         if mid * mid < x:
@@ -28,7 +27,6 @@ def prime_factors(n):
             yield i
         else:
             i += 1
-
     if n > 1:
         yield n
 
@@ -42,23 +40,16 @@ def prod(iterable):
 
 def get_divisors(n):
     pf = prime_factors(n)
-
     pf_with_multiplicity = collections.Counter(pf)
-
-    powers = [
-        [factor ** i for i in range(count + 1)]
-        for factor, count in list(pf_with_multiplicity.items())
-    ]
-
+    powers = [[factor ** i for i in range(count + 1)] for (factor, count) in list(pf_with_multiplicity.items())]
     for prime_power_combo in itertools.product(*powers):
         yield prod(prime_power_combo)
 
 
 def list_squared(m, n):
     sol = []
-
     for number in range(m, n):
-        candidate = [i**2 for i in range(1, number + 2) if number % i == 0]
+        candidate = [i ** 2 for i in range(1, number + 2) if number % i == 0]
         n = sum(candidate)
         if binary_check(n):
             sol.append([number, n])

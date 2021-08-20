@@ -2,30 +2,31 @@ import sys
 
 
 def main():
+
     def diff(s, l):
         ret1 = [0 for k in range(len(s))]
         for k in range(len(s)):
-            if k % 3 == 0 and s[k] != "R":
+            if k % 3 == 0 and s[k] != 'R':
                 ret1[k] = 1
-            if k % 3 == 1 and s[k] != "G":
+            if k % 3 == 1 and s[k] != 'G':
                 ret1[k] = 1
-            if k % 3 == 2 and s[k] != "B":
+            if k % 3 == 2 and s[k] != 'B':
                 ret1[k] = 1
         ret2 = [0] * len(s)
         for k in range(len(s)):
-            if k % 3 == 0 and s[k] != "G":
+            if k % 3 == 0 and s[k] != 'G':
                 ret2[k] = 1
-            if k % 3 == 1 and s[k] != "B":
+            if k % 3 == 1 and s[k] != 'B':
                 ret2[k] = 1
-            if k % 3 == 2 and s[k] != "R":
+            if k % 3 == 2 and s[k] != 'R':
                 ret2[k] = 1
         ret3 = [0] * len(s)
         for k in range(len(s)):
-            if k % 3 == 0 and s[k] != "B":
+            if k % 3 == 0 and s[k] != 'B':
                 ret3[k] = 1
-            if k % 3 == 1 and s[k] != "R":
+            if k % 3 == 1 and s[k] != 'R':
                 ret3[k] = 1
-            if k % 3 == 2 and s[k] != "G":
+            if k % 3 == 2 and s[k] != 'G':
                 ret3[k] = 1
         s1 = [0] * (len(s) + 1)
         s2 = [0] * (len(s) + 1)
@@ -41,7 +42,7 @@ def main():
     input = sys.stdin.readline
     q = int(input())
     for query in range(q):
-        n, k = list(map(int, input().split()))
+        (n, k) = list(map(int, input().split()))
         s = input()
         print(diff(s, k))
 

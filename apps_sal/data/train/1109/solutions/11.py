@@ -1,7 +1,7 @@
 for __ in range(eval(input())):
     n = eval(input())
-    k = n**0.5
+    k = n ** 0.5
     if int(k) * int(k) == n:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

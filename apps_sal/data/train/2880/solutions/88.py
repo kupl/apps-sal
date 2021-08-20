@@ -9,5 +9,4 @@ def seven(m):
             y = int(m[-1])
             m = x - 2 * y
             s = s + 1
-
-    return((m, s))
+    return (m, s)

@@ -1,10 +1,9 @@
-
 import itertools
-url = "https://atcoder.jp//contests/abc160/tasks/abc160_c"
+url = 'https://atcoder.jp//contests/abc160/tasks/abc160_c'
 
 
 def main():
-    n, m, X = list(map(int, input().split()))
+    (n, m, X) = list(map(int, input().split()))
     books = []
     ans = -1
     for _ in range(n):

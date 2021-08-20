@@ -1,8 +1,7 @@
 import sys
 n = 500001
-sqrt = int(0.75 * n**0.5)
-
-data = [0] * (n)
+sqrt = int(0.75 * n ** 0.5)
+data = [0] * n
 ans = [[]]
 out = []
 for i in range(1, sqrt):
@@ -17,10 +16,8 @@ for qu in qus:
         data[x] += y
         for i in range(1, sqrt):
             ans[i][x % i] += y
+    elif q[1] < sqrt:
+        out.append(str(ans[q[1]][q[2]]))
     else:
-        if q[1] < sqrt:
-            out.append(str(ans[q[1]][q[2]]))
-        else:
-            out.append(str(sum([data[i] for i in range(q[2], n, q[1])])))
-
+        out.append(str(sum([data[i] for i in range(q[2], n, q[1])])))
 sys.stdout.write('\n'.join(out) + '\n')

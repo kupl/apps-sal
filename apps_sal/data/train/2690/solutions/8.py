@@ -1,2 +1,2 @@
 import re
-f = remove_parentheses = lambda s: f(re.sub(r'\([^\(\)]*\)', '', s))if'(' in s else s
+f = remove_parentheses = lambda s: f(re.sub('\\([^\\(\\)]*\\)', '', s)) if '(' in s else s

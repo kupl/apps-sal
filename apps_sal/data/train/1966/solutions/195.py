@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
         m = len(mat)
         if m == 0:
@@ -11,9 +12,8 @@ class Solution:
             for j in range(n):
                 if j == 0:
                     dp[i][j] = mat[i][j]
-                else:
-                    if mat[i][j] == 1:
-                        dp[i][j] = dp[i][j - 1] + 1
+                elif mat[i][j] == 1:
+                    dp[i][j] = dp[i][j - 1] + 1
         result = 0
         for i in range(m):
             for j in range(n):

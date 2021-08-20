@@ -5,12 +5,12 @@ def fouriest(i):
     B = b
     while m < l:
         b += 1
-        f, x, l = base(i, b)
+        (f, x, l) = base(i, b)
         if f > m:
             m = f
             N = x
             B = b
-    return "%d is the fouriest (%s) in base %d" % (i, N, B)
+    return '%d is the fouriest (%s) in base %d' % (i, N, B)
 
 
 def base(n, b):
@@ -18,6 +18,6 @@ def base(n, b):
     s = ''
     while n:
         x = n % b
-        s = (str(x)if x < 10 else 'x') + s
+        s = (str(x) if x < 10 else 'x') + s
         n //= b
-    return s.count('4'), s, len(s)
+    return (s.count('4'), s, len(s))

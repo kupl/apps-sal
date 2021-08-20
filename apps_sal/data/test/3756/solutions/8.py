@@ -1,4 +1,4 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 x = input()
 i = x.find('.')
 for j in range(i + 1, n):

@@ -39,7 +39,7 @@ def main():
             b2 += 1
         if i == 1:
             b1 += 1
-    if (a5 + b5) % 2 == 0 and (a4 + b4) % 2 == 0 and (a3 + b3) % 2 == 0 and (a2 + b2) % 2 == 0 and (a1 + b1) % 2 == 0:
+    if (a5 + b5) % 2 == 0 and (a4 + b4) % 2 == 0 and ((a3 + b3) % 2 == 0) and ((a2 + b2) % 2 == 0) and ((a1 + b1) % 2 == 0):
         ans += max(a5, b5) - (a5 + b5) // 2
         ans += max(a4, b4) - (a4 + b4) // 2
         ans += max(a3, b3) - (a3 + b3) // 2
@@ -47,7 +47,6 @@ def main():
         ans += max(a1, b1) - (a1 + b1) // 2
         print(ans // 2)
         return
-
     print(-1)
 
 

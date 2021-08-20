@@ -24,7 +24,7 @@ def findCycle(source, getNbr):
 def markTime(cycle, getNbr):
     cycleLen = len(cycle)
     q = deque(cycle)
-    dist = {x: cycleLen - 1 - i for i, x in enumerate(cycle)}  # distance to reach cycle[-1]
+    dist = {x: cycleLen - 1 - i for (i, x) in enumerate(cycle)}
     while q:
         node = q.popleft()
         d = dist[node]
@@ -37,43 +37,34 @@ def markTime(cycle, getNbr):
 
 def solve(R, C, grid, directions):
     BLACK = 0
-    drdc = {
-        "U": [-1, 0],
-        "R": [0, 1],
-        "D": [1, 0],
-        "L": [0, -1],
-    }
+    drdc = {'U': [-1, 0], 'R': [0, 1], 'D': [1, 0], 'L': [0, -1]}
 
     def getNbr(i):
-        r, c = divmod(i, C)
-        dr, dc = drdc[directions[r][c]]
+        (r, c) = divmod(i, C)
+        (dr, dc) = drdc[directions[r][c]]
         return [(r + dr) * C + (c + dc)]
 
     def getNbrT(i):
-        r, c = divmod(i, C)
+        (r, c) = divmod(i, C)
         ret = []
-        for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+        for (dr, dc) in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
             nr = r + dr
             nc = c + dc
             if 0 <= nr < R and 0 <= nc < C:
                 if [-dr, -dc] == drdc[directions[nr][nc]]:
                     ret.append(nr * C + nc)
         return ret
-
     ans1 = 0
     ans2 = 0
     seen = set()
     for i in range(R * C):
         if i not in seen:
-            # BFS until found cycle
             cycle = findCycle(i, getNbr)
             uniqueTimes = len(cycle)
-            # Find all nodes going to cycle
-            # Each starting node going into cycle will have a collision timestamp mod cycle len
             dist = markTime(cycle, getNbrT)
             uniqueBlackTimes = set()
-            for j, t in list(dist.items()):
-                r, c = divmod(j, C)
+            for (j, t) in list(dist.items()):
+                (r, c) = divmod(j, C)
                 if grid[r][c] == BLACK:
                     uniqueBlackTimes.add(t)
                 seen.add(j)
@@ -82,19 +73,16 @@ def solve(R, C, grid, directions):
             del cycle
             del dist
             del uniqueBlackTimes
-
-    return str(ans1) + " " + str(ans2)
+    return str(ans1) + ' ' + str(ans2)
 
 
 def __starting_point():
     input = sys.stdin.readline
-
     T = int(input())
     for t in range(T):
-        R, C = [int(x) for x in input().split()]
+        (R, C) = [int(x) for x in input().split()]
         grid = [list(map(int, input().rstrip())) for r in range(R)]
         directions = [list(input().rstrip()) for r in range(R)]
-
         ans = solve(R, C, grid, directions)
         print(ans)
 

@@ -7,9 +7,8 @@ for i in range(n):
         dic[nam] = set()
     for elem in text[2:]:
         dic[nam].add(elem)
-# print(dic)
 print(len(dic))
-for nam, s in list(dic.items()):
+for (nam, s) in list(dic.items()):
     ls = []
     for e in s:
         add = True

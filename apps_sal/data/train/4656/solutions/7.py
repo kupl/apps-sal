@@ -13,12 +13,11 @@ def center_of(chars):
         return chars
     seq = chars[0]
     chars_len = len(chars)
-
     i = 2
     lcount = 0
     while True:
         if i % 2:
-            middle = chars[(lcount + (i // 2)) % chars_len]
+            middle = chars[(lcount + i // 2) % chars_len]
             seq += middle
         else:
             lcount += 2 * i - 1

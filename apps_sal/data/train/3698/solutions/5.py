@@ -3,13 +3,12 @@ def translate(x):
         if x not in 'AEIOU':
             return 'Iron'
         else:
-            return "Iron Yard"
+            return 'Iron Yard'
+    elif x not in 'aeiou' or not x.isalpha():
+        return x
     else:
-        if x not in 'aeiou' or not x.isalpha():
-            return x
-        else:
-            return 'Yard'
+        return 'Yard'
 
 
 def tiy_fizz_buzz(string):
-    return ''.join(translate(c) for c in string)
+    return ''.join((translate(c) for c in string))

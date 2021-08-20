@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 arr = [int(x) for x in input().split()]
 dp = [[0 for _ in range(n)] for _ in range(3)]
 dp[0][0] = max(arr[0], 0)

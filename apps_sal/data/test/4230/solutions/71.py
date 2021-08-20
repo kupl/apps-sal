@@ -1,4 +1,4 @@
-X, N = map(int, input().split())
+(X, N) = map(int, input().split())
 if N == 0:
     P = []
 else:
@@ -6,21 +6,19 @@ else:
     P = sorted(P)
 assert len(P) == N
 cands = []
-# 下側検索
 x = X
 while True:
     if x not in P:
         cands.append(x)
         break
     x -= 1
-# 上側検索
 x = X
 while True:
     if x not in P:
         cands.append(x)
         break
     x += 1
-a, b = cands
+(a, b) = cands
 if abs(a - X) > abs(b - X):
     print(b)
 else:

@@ -1,7 +1,5 @@
-# A Rounding
-
-x, a = list(map(int, input().split()))
+(x, a) = list(map(int, input().split()))
 if x < a:
-    print((0))
+    print(0)
 else:
-    print((10))
+    print(10)

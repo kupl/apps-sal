@@ -6,5 +6,4 @@ def is_triangle(a, b, c):
     elif b + c > a and abs(b - c) < a:
         return True
     else:
-
         return False

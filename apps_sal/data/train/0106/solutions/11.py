@@ -1,10 +1,9 @@
 T = int(input())
-
 for _ in range(T):
     n = int(input())
     seg = []
     for s in range(n):
-        l, r = [int(x) for x in input().split()]
+        (l, r) = [int(x) for x in input().split()]
         seg.append((l, r))
     pos = {}
     for i in range(n):

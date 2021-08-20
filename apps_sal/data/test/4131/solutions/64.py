@@ -1,10 +1,9 @@
-N, M = map(int, input().split())
-py = [list(map(int, input().split()))for _ in range(M)]
+(N, M) = map(int, input().split())
+py = [list(map(int, input().split())) for _ in range(M)]
 epy = list(enumerate(py))
-P = [[]for _ in range(N + 1)]
+P = [[] for _ in range(N + 1)]
 for x in epy:
     P[x[1][0]].append(x)
-
 i = 1
 ans = []
 while i <= N:
@@ -17,9 +16,8 @@ while i <= N:
         j += 1
     i += 1
 ans.sort()
-
-for e, py in ans:
-    p, y = map(str, py)
+for (e, py) in ans:
+    (p, y) = map(str, py)
     p = '0' * (6 - len(p)) + p
     y = '0' * (6 - len(y)) + y
     print(p + y)

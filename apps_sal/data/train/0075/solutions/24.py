@@ -7,11 +7,10 @@ def radius(n):
 
 
 def chord(num_sides, n):
-    return 2 * radius(n) * math.sin((PI * num_sides) / (2 * n))
+    return 2 * radius(n) * math.sin(PI * num_sides / (2 * n))
 
 
 t = int(input())
-
 for i in range(t):
     n = int(input())
     x = int(n / 2) + 1

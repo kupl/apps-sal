@@ -1,4 +1,4 @@
-INF = 10**30
+INF = 10 ** 30
 
 
 def solve(n, x, d):
@@ -17,17 +17,17 @@ def solve(n, x, d):
         l = (l - c) // d
         r = (r - c) // d
         if l > r:
-            l, r = r, l
+            (l, r) = (r, l)
         D[c].append((l, r))
     res = 0
     for v in D.values():
         threshold = -INF
-        for l, r in sorted(v):
+        for (l, r) in sorted(v):
             l = max(l, threshold)
             res += max(0, r - l + 1)
             threshold = max(threshold, r + 1)
     return res
 
 
-n, x, d = map(int, input().split())
+(n, x, d) = map(int, input().split())
 print(solve(n, x, d))

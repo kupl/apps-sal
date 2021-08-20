@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n > m:
-    n, m = m, n
+    (n, m) = (m, n)
 if n == 1:
     print(m // 6 * 6 + max(m % 6 * 2 - 6, 0))
 elif n == 2:

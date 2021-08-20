@@ -1,5 +1,4 @@
 import math
-
 n = int(input())
 a = list(map(int, input().split()))
 segs = []
@@ -12,7 +11,7 @@ for i in range(n):
         segs.append((st, i - 1))
         st = -1
 ans = 0
-for l, r in segs:
+for (l, r) in segs:
     span = r - l + 1
     ans = max(ans, span)
     for i in range(span // 2):

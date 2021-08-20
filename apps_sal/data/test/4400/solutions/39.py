@@ -1,9 +1,9 @@
 weather = input()
-if "RRR" in weather:
+if 'RRR' in weather:
     print(3)
-elif "RR" in weather:
+elif 'RR' in weather:
     print(2)
-elif "R" in weather:
+elif 'R' in weather:
     print(1)
 else:
     print(0)

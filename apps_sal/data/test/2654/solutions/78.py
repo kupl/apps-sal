@@ -1,8 +1,8 @@
 def main():
     n = int(input())
-    a, b = [None] * n, [None] * n
+    (a, b) = ([None] * n, [None] * n)
     for i in range(n):
-        a[i], b[i] = map(int, input().split())
+        (a[i], b[i]) = map(int, input().split())
     a.sort()
     b.sort()
     if n & 1:

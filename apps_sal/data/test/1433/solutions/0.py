@@ -1,4 +1,4 @@
-s, r = map(int, input().split())
+(s, r) = map(int, input().split())
 v = []
 for i in range(s):
     v += [list(map(int, input().split()))]

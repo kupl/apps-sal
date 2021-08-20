@@ -5,13 +5,13 @@ def add(a, b):
     return a + b
 
 
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 neigh = [[] for x in range(n)]
 for i in range(m):
-    x, y = [int(a) for a in input().split()]
+    (x, y) = [int(a) for a in input().split()]
     neigh[x - 1].append(y)
     neigh[y - 1].append(x)
-oneneigh, twoneigh, nneigh = 0, 0, 0
+(oneneigh, twoneigh, nneigh) = (0, 0, 0)
 for i in neigh:
     if len(i) == 1:
         oneneigh += 1

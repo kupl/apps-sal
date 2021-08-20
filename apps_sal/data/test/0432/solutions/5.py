@@ -1,6 +1,6 @@
 n = int(input())
-C = [int(s) for s in input().split(" ")]
-A = [int(s) - 1 for s in input().split(" ")]
+C = [int(s) for s in input().split(' ')]
+A = [int(s) - 1 for s in input().split(' ')]
 al = [False for i in range(0, n)]
 ans = 0
 for v in range(0, n):

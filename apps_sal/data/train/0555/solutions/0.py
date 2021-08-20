@@ -1,5 +1,4 @@
 t = eval(input())
-
 for i in range(t):
     n = eval(input())
     a = list(map(int, input().split()))

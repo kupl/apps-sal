@@ -1,5 +1,5 @@
-N, T = map(int, input().split())
-*A, = map(int, input().split())
+(N, T) = map(int, input().split())
+(*A,) = map(int, input().split())
 max_price = A[N - 1]
 max_prof = 0
 count = 1

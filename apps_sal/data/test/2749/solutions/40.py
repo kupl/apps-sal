@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 n = int(input())
 a = list(map(int, input().split()))
 p = []
@@ -13,4 +13,4 @@ for i in range(h):
     if i % 2 == 1:
         p2[i].reverse()
 for i in p2:
-    print((" ".join(i)))
+    print(' '.join(i))

@@ -6,6 +6,6 @@ for ch in s:
     else:
         stk.append(ch)
 if len(stk) == 0:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

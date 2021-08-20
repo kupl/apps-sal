@@ -1,6 +1,5 @@
-
 def read_mapped(func=lambda x: x):
-    return list(map(func, input().split(" ")))
+    return list(map(func, input().split(' ')))
 
 
 def read_array(N, func):
@@ -28,9 +27,8 @@ T = read_int()
 def solve(m, n, s):
     if m == n:
         return s
-
     if m < n:
-        m, n = n, m
+        (m, n) = (n, m)
     if m % 2 == 0:
         return solve(m / 2, n, s + 1)
     else:
@@ -38,7 +36,7 @@ def solve(m, n, s):
 
 
 for case in range(T):
-    i, j = read_mapped(int)
+    (i, j) = read_mapped(int)
     si = min(i, j)
     sj = max(i, j)
     print(solve(sj, si, 0))

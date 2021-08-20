@@ -18,6 +18,6 @@ for i in range(1, n):
             a = 3
             break
 if a != 3:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

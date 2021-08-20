@@ -1,7 +1,5 @@
-
 s = input()
 x = len(s)
-
 if set(s) == {'1'}:
     print(int(s[0:x - 1]))
 else:

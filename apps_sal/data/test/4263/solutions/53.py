@@ -1,11 +1,9 @@
 s = input()
-
 acgt = ['A', 'C', 'G', 'T']
 i = 0
 max_ans = 0
 curr_ans = 0
-
-while(i < len(s)):
+while i < len(s):
     if s[i] in acgt:
         curr_ans += 1
     else:

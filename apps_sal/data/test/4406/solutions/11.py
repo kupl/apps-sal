@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ids = input().split()
 queue = []
 for i in ids:

@@ -1,10 +1,10 @@
 t = int(input())
 mod = 10 ** 9 + 7
 for _ in range(t):
-    p, q, r = map(int, input(). strip(). split())
-    a = sorted(int(x) for x in input().split())
-    b = sorted(int(x) for x in input().split())
-    c = sorted(int(x) for x in input().split())
+    (p, q, r) = map(int, input().strip().split())
+    a = sorted((int(x) for x in input().split()))
+    b = sorted((int(x) for x in input().split()))
+    c = sorted((int(x) for x in input().split()))
     ans = 0
     m = 0
     n = 0

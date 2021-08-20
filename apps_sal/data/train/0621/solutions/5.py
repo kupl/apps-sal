@@ -5,7 +5,7 @@ for _ in range(t):
     words = input().split()
     min = 20
     min_index = 0
-    for i, word in enumerate(words):
+    for (i, word) in enumerate(words):
         if len(word) < min:
             min = len(word)
             min_index = i

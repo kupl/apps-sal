@@ -24,16 +24,16 @@ def ma():
 
 
 t = int(input())
-while(t):
+while t:
     t -= 1
     n = inp()
     a = lis()
     fl = 0
     for i in range(n - 1):
-        if(a[i] > a[i + 1]):
+        if a[i] > a[i + 1]:
             fl += 1
             continue
-    if(fl == n - 1):
-        print("NO")
+    if fl == n - 1:
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -2,18 +2,17 @@ def large(a, i, j):
     b = i
     maxo = a[i]
     t = i
-    while(b <= j):
-        if(a[b] > maxo):
+    while b <= j:
+        if a[b] > maxo:
             maxo = a[b]
             t = b
         b = b + 1
-
     return t
 
 
 def f(a, i, j, count):
     p = large(a, i, j)
-    if(p == i or p == j):
+    if p == i or p == j:
         count = count + 1
         return count
     else:

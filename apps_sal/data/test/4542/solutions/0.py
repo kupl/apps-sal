@@ -1,7 +1,6 @@
 s = input()
-color = "chokudai"
+color = 'chokudai'
 d = []
-
 for c in s:
     if c != color:
         d.append(c)

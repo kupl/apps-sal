@@ -1,4 +1,4 @@
-A, B, C = map(int, input().split())
+(A, B, C) = map(int, input().split())
 S = int(input())
 if A > B > C or A > C > B:
     for i in range(S):

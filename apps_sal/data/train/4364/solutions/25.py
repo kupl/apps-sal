@@ -1,6 +1,6 @@
 def odd_or_even(arr):
     if sum(arr[:]) % 2 == 1:
-        result = "odd"
+        result = 'odd'
     else:
-        result = "even"
+        result = 'even'
     return result

@@ -1,7 +1,7 @@
 from sys import stdin
 input = stdin.readline
 n = int(input())
-lis = list(list(map(int, input().split())) for _ in range(n))
+lis = list((list(map(int, input().split())) for _ in range(n)))
 val = 0
 for i in range(n):
     tmp = 0

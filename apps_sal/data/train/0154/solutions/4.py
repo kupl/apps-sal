@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, h: int, w: int, hc: List[int], v: List[int]) -> int:
         hc.append(0)
         hc.append(h)

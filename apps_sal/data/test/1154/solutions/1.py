@@ -1,4 +1,4 @@
-n, h, k = list(map(int, input().split()))
+(n, h, k) = list(map(int, input().split()))
 xs = list(map(int, input().split())) + [h + 1]
 t = 0
 x = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         max_ord = max([ord(c) for c in s])
         max_ord_idxs = [i for i in range(len(s)) if ord(s[i]) == max_ord]
@@ -15,8 +16,6 @@ class Solution:
                     nextOrd2CurIdx[ord(s[idx + level])].append(idx)
                     hist_max = max(hist_max, ord(s[idx + level]))
             return nextOrd2CurIdx[hist_max]
-
-        # Filtering indexes with maximum ord by comparing k-level away
         level = 1
         while 1:
             max_ord_idxs = findNextMaxOrd(max_ord_idxs, level)

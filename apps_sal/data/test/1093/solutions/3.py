@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 high = [0 for i in range(w)]
 for i in range(h, 0, -1):
     s = input()

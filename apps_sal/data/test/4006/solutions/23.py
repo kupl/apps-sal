@@ -6,10 +6,8 @@ def f(x):
 
 
 previous = set()
-
 n = int(input())
 while n not in previous:
     previous.add(n)
     n = f(n)
-
 print(len(previous))

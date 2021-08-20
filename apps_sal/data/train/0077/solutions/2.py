@@ -1,13 +1,12 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 for _ in range(Q):
     N = int(input())
     X = []
     ne = [0] * 3
     for i in range(N):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         X.append((a, b))
         if i == 0:
             ne = [0, b, b * 2]
@@ -32,5 +31,4 @@ for _ in range(Q):
             ne[2] = min(ne[2], Y[1] + b * 2)
         if X[i][0] + 2 != X[i - 1][0] + 2:
             ne[2] = min(ne[2], Y[2] + b * 2)
-
     print(min(ne))

@@ -1,4 +1,4 @@
 c = input()
-a = "abcdefghijklmnopqrstuvwxyz"
+a = 'abcdefghijklmnopqrstuvwxyz'
 b = a.index(c)
 print(a[b + 1])

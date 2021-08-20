@@ -1,12 +1,15 @@
 import sys
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
 
 
-n, = I()
+def I():
+    return list(map(int, input().split()))
+
+
+(n,) = I()
 l = I()
 an = []
-sv = [0] * (10**5 + 10)
+sv = [0] * (10 ** 5 + 10)
 for i in range(2, len(sv)):
     if not sv[i]:
         sv[i] = i
@@ -24,10 +27,9 @@ for i in range(n):
     while l[i] != i + 1 and ct < 5:
         cr = ix[i + 1]
         pr = sv[cr - i + 1]
-        # print(i,cr,pr)
         an.append(sorted([cr + 1, cr - pr + 2]))
-        l[cr], l[cr - pr + 1] = l[cr - pr + 1], l[cr]
-        ix[l[cr]], ix[l[cr - pr + 1]] = ix[l[cr - pr + 1]], ix[l[cr]]
+        (l[cr], l[cr - pr + 1]) = (l[cr - pr + 1], l[cr])
+        (ix[l[cr]], ix[l[cr - pr + 1]]) = (ix[l[cr - pr + 1]], ix[l[cr]])
         ct += 1
 print(len(an))
 for i in an:

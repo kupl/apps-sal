@@ -1,4 +1,5 @@
 class Solution:
+
     def letterCombinations(self, digits):
         """
         :type digits: str
@@ -12,10 +13,8 @@ class Solution:
             if i == len(digits):
                 result.append(''.join(partial))
                 return
-
             for c in MAPPING[int(digits[i])]:
                 directed_combinations(i + 1, partial + [c])
-
         result = []
         directed_combinations(0, [])
         return result

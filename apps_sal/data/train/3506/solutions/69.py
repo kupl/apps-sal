@@ -6,4 +6,4 @@ def vowel_indices(word):
         count += 1
         if x in vowels:
             vowel_list.append(count)
-    return(vowel_list)
+    return vowel_list

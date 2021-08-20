@@ -1,5 +1,7 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
+
         def checksign(A, B):
             if A > B:
                 return 1
@@ -7,10 +9,6 @@ class Solution:
                 return -1
             if A == B:
                 return 0
-
-#         9 4 2 10  7  8 8  1 9
-#         1 1 -1 1 -1  0 1 -1
-
         n = len(A)
         ans = 1
         start = 0
@@ -23,5 +21,4 @@ class Solution:
             if checksign(A[i - 1], A[i]) * checksign(A[i], A[i + 1]) != -1:
                 ans = max(ans, i - start + 1)
                 start = i
-
         return ans

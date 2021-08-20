@@ -1,17 +1,12 @@
-# Bhargey Mehta (Sophomore)
-#DA-IICT, Gandhinagar
 import sys
 import math
 import queue
 sys.setrecursionlimit(1000000)
-#sys.stdin = open("input.txt", "r")
-
 n = int(input())
 a = list(input())
 b = list(input())
 a = [ord(ai) - 97 for ai in a]
 b = [ord(bi) - 97 for bi in b]
-
 a = [a[i] for i in range(-1, -n - 1, -1)]
 b = [b[i] for i in range(-1, -n - 1, -1)]
 c = [-1 for i in range(n)]
@@ -22,10 +17,7 @@ for i in range(n):
     else:
         c[i] = carry + a[i] + b[i]
     carry = (carry + a[i] + b[i]) // 26
-# print(a)
-# print(b)
 c = [c[i] for i in range(-1, -n - 1, -1)]
-
 carry = 0
 for i in range(n):
     p = (carry * 26 + c[i]) // 2

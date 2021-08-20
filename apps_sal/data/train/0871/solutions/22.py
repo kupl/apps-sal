@@ -1,16 +1,14 @@
 for _ in range(int(input())):
-    r, c = map(int, input().split())
+    (r, c) = map(int, input().split())
     board = []
     for i in range(r):
         x = input()
         board.append(x)
-
     coll = []
     for i in range(r):
         coll.append([])
         for j in range(c):
             coll[i].append([])
-
     for i in range(r):
         for j in range(c):
             if board[i][j] == '-' or board[i][j] == '#':
@@ -23,21 +21,18 @@ for _ in range(int(input())):
                             break
                         coll[k][j].append(cnt)
                         cnt += 1
-
                 if board[i][j] == 'U':
                     for k in range(i - 1, -1, -1):
                         if board[k][j] == '#':
                             break
                         coll[k][j].append(cnt)
                         cnt += 1
-
                 if board[i][j] == 'R':
                     for k in range(j + 1, c):
                         if board[i][k] == '#':
                             break
                         coll[i][k].append(cnt)
                         cnt += 1
-
                 if board[i][j] == 'L':
                     for k in range(j - 1, -1, -1):
                         if board[i][k] == '#':
@@ -57,5 +52,4 @@ for _ in range(int(input())):
                 for k in counts.values():
                     if k > 1:
                         cnts += int(k * (k - 1) // 2)
-    # print(counts)
     print(cnts)

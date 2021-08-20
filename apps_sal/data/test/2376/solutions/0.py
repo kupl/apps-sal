@@ -1,12 +1,12 @@
 import sys
 sys.setrecursionlimit(1000000000)
 input = sys.stdin.readline
-n, w = map(int, input().split())
+(n, w) = map(int, input().split())
 knap = [[] for i in range(4)]
-w0, v = map(int, input().split())
+(w0, v) = map(int, input().split())
 knap[0].append(v)
 for i in range(n - 1):
-    W, v = map(int, input().split())
+    (W, v) = map(int, input().split())
     knap[W - w0].append(v)
 for i in range(4):
     knap[i].sort(reverse=1)

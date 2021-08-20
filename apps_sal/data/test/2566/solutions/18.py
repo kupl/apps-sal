@@ -19,10 +19,10 @@ def binpow(u, a, mod):
         return 1
     while a > 0:
         if a % 2 == 0:
-            u = (u ** 2) % mod
+            u = u ** 2 % mod
             a = int(a / 2)
         else:
-            ans = (ans * u) % mod
+            ans = ans * u % mod
             a = a - 1
     return int(ans)
 
@@ -38,7 +38,6 @@ def ffind(s, u):
 
 
 n = int(input())
-
 while n > 0:
     k = int(input())
     ss = input().split(' ')
@@ -57,8 +56,6 @@ while n > 0:
             ans = 7 - i + 7 * dd + ffind(s, k - d - dd * u) + 1
             if k == d + dd * u:
                 ans = ans - s[-1::-1].find('1')
-
         mx = min(mx, ans)
-
     print(mx)
     n = n - 1

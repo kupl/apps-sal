@@ -3,11 +3,13 @@ import itertools
 
 
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def check(b):
             h = {}
             w = ''
-            for i, v in enumerate(b):
+            for (i, v) in enumerate(b):
                 w += s[i]
                 if v == 0:
                     if w in h:
@@ -21,7 +23,6 @@ class Solution:
                     return -1
                 else:
                     h[w] = 1
-            # print(h)
             return len(h)
         ans = 1
         for b in itertools.product([0, 1], repeat=len(s) - 1):

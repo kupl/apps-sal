@@ -1,9 +1,9 @@
 rick = [bool(0)] * 100001
 morty = [bool(0)] * 100001
-a, b = input().split(' ')
+(a, b) = input().split(' ')
 a = int(a)
 b = int(b)
-c, d = input().split(' ')
+(c, d) = input().split(' ')
 c = int(c)
 d = int(d)
 i = int(1)

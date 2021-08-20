@@ -1,18 +1,12 @@
-x0, y0, ax, ay, bx, by = map(int, input().split())
-
-x, y, t = map(int, input().split())
-
+(x0, y0, ax, ay, bx, by) = map(int, input().split())
+(x, y, t) = map(int, input().split())
 s = [x, y]
-
 a = []
-
 cnt = 70
-
 for i in range(cnt):
     a.append([x0, y0])
     x0 = ax * x0 + bx
     y0 = ay * y0 + by
-
 ans = 0
 
 
@@ -27,5 +21,4 @@ for i in range(cnt):
                 ans = max(ans, k - j + 1)
             if dist(s, a[i]) + dist(a[i], a[k]) + dist(a[k], a[j]) <= t:
                 ans = max(ans, k - j + 1)
-
 print(ans)

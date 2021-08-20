@@ -1,7 +1,7 @@
 import math
 s = input()
-s = int(s.replace(" ", ''))
+s = int(s.replace(' ', ''))
 if math.sqrt(s) == int(math.sqrt(s)):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

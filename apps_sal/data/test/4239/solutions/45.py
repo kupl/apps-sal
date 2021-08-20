@@ -10,7 +10,7 @@ def main():
     N = int(input())
     MIN = 100000
     for k in range(N + 1):
-        MIN = min(MIN, f(9, k) + f(6, (N - k)))
+        MIN = min(MIN, f(9, k) + f(6, N - k))
     return MIN
 
 

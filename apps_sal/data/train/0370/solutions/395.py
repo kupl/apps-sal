@@ -2,6 +2,7 @@ from collections import defaultdict, Counter
 
 
 class DSU:
+
     def __init__(self, n):
         self.parent = list(range(n))
 
@@ -11,11 +12,12 @@ class DSU:
         return self.parent[x]
 
     def union(self, x, y):
-        parent_x, parent_y = self.find(x), self.find(y)
+        (parent_x, parent_y) = (self.find(x), self.find(y))
         self.parent[parent_x] = parent_y
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
 
         def prime(num):
@@ -29,17 +31,13 @@ class Solution:
                     i += 1
             temp.append(num)
             return set(temp)
-
         dsu = DSU(len(A))
         graph = defaultdict(list)
-
-        for i, num in enumerate(A):
+        for (i, num) in enumerate(A):
             pr_set = prime(num)
             for q in pr_set:
                 graph[q].append(i)
-
-        for _, indexes in list(graph.items()):
+        for (_, indexes) in list(graph.items()):
             for i in range(len(indexes) - 1):
                 dsu.union(indexes[i], indexes[i + 1])
-
         return max(Counter([dsu.find(i) for i in range(len(A))]).values())

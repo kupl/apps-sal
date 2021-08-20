@@ -15,6 +15,6 @@ def func(n, t, a):
     return count
 
 
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 a = list(map(int, input().split()))
 print(func(n, t, a))

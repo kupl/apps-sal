@@ -7,4 +7,4 @@ def sum_mul(n, m):
             n += inc
         return sum
     else:
-        return "INVALID"
+        return 'INVALID'

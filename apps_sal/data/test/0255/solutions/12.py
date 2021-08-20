@@ -5,10 +5,9 @@ arr2 = list(map(int, input().split()))
 graph = [[False] * (m + n) for _ in range(m + n)]
 for i in range(n):
     for j in range(m):
-        if(abs(arr1[i] - arr2[j]) <= 1):
+        if abs(arr1[i] - arr2[j]) <= 1:
             graph[i][j + n] = True
             graph[j + n][i] = True
-# print(str(graph).replace('], [','],\n[')[1:].replace('True','1').replace('False','-'))
 u = [False] * (m + n)
 to = [-1] * m
 
@@ -19,7 +18,7 @@ def match(v1):
         return 0
     u[v1] = True
     for i2 in range(m):
-        if(graph[v1][i2 + n] and (to[i2] == -1 or match(to[i2]))):
+        if graph[v1][i2 + n] and (to[i2] == -1 or match(to[i2])):
             to[i2] = v1
             return 1
     return 0

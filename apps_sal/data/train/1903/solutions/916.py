@@ -1,16 +1,17 @@
 class Solution:
-    def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        def dist(u, v):
-            x, y = points[u]
-            x2, y2 = points[v]
-            return abs(x - x2) + abs(y - y2)
 
+    def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
+        def dist(u, v):
+            (x, y) = points[u]
+            (x2, y2) = points[v]
+            return abs(x - x2) + abs(y - y2)
         n = len(points)
-        visited = [False] * (n)
+        visited = [False] * n
         pq = [(0, 0)]
         ans = 0
         while pq:
-            cost, u = heappop(pq)
+            (cost, u) = heappop(pq)
             if visited[u]:
                 continue
             visited[u] = True
@@ -19,5 +20,4 @@ class Solution:
                 if visited[v]:
                     continue
                 heappush(pq, (dist(u, v), v))
-
         return ans

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, ma: List[List[int]]) -> int:
         n = len(ma)
         m = len(ma[0])

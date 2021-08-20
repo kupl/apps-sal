@@ -9,4 +9,4 @@ for S in s:
     else:
         x -= 1
         b.append(x)
-print((max(max(b), 0)))
+print(max(max(b), 0))

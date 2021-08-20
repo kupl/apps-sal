@@ -7,5 +7,4 @@ for i in range(n):
         ans_1 += 1
     else:
         ans_2 += 1
-
 print(min(ans_1, ans_2))

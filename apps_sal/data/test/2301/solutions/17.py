@@ -55,4 +55,4 @@ while lo <= hi:
         hi = mid - 1
 a = ok(hi)
 print(hi)
-print(" ".join(map(str, a)))
+print(' '.join(map(str, a)))

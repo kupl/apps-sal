@@ -1,7 +1,7 @@
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
-    m = 10**10
+    m = 10 ** 10
     ind = 1
     for i in range(n):
         for j in range(i + 1, n):

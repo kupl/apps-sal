@@ -50,16 +50,16 @@ def srlinput():
 
 def NOYES(fl):
     if fl:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 
 
 def YESNO(fl):
     if fl:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def main():

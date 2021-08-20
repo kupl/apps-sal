@@ -1,26 +1,24 @@
 import sys
 import math
-# import re
-# from heapq import *
-# from collections import defaultdict as dd
-# from collections import Counter as cc
-# sys.setrecursionlimit(10**6)#thsis is must
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 md = 998244353
-def input(): return sys.stdin.readline().strip()
 
 
-def inp(): return list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().strip()
 
 
-# ______________________________________________________
+def inp():
+    return list(map(int, input().split()))
+
+
 for _ in range(int(input())):
-    a, b = inp()
+    (a, b) = inp()
     s = str(input())
     ans = []
     c = 0
     for i in s:
-        if i == "1":
+        if i == '1':
             c += 1
         else:
             if c == 0:
@@ -33,18 +31,16 @@ for _ in range(int(input())):
     c = 0
     res = []
     for i in s:
-        if i == "1":
+        if i == '1':
             flag = True
         if flag == True:
-            if i == "0":
+            if i == '0':
                 c += 1
             else:
                 if c == 0:
                     continue
                 res.append(c)
                 c = 0
-    # print(res)
-    # print(ans)
     fin = 0
     if len(ans) > 0:
         fin += a

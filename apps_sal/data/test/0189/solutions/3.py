@@ -1,10 +1,8 @@
 import math
-
 n = int(input())
 A = [int(i) for i in input().split()]
 A.sort()
-
-ans = 10**18
+ans = 10 ** 18
 val = 0
 for mid in range(1, 100):
     cost = 0
@@ -13,5 +11,4 @@ for mid in range(1, 100):
     if cost < ans:
         ans = cost
         val = mid
-
 print(val, ans)

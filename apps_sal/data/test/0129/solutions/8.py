@@ -1,4 +1,4 @@
-N, M, K, L = map(int, input().split())
+(N, M, K, L) = map(int, input().split())
 if N < M or K + L > N:
     print(-1)
 else:

@@ -1,9 +1,10 @@
 import sys
 import math
-INF = float("inf")
+INF = float('inf')
 
 
 def main():
+
     def input():
         return sys.stdin.readline()[:-1]
     q = int(input())

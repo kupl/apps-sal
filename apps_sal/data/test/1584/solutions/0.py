@@ -1,6 +1,6 @@
 def main():
     N = int(input())
-    L = [int(l) for l in input().split(" ")]
+    L = [int(l) for l in input().split(' ')]
     L.sort()
     m = len(L)
     cnt = 0

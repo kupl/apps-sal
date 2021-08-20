@@ -1,4 +1,5 @@
 class myObj:
+
     def __init__(self, val, p):
         self.val = val
         self.p = p
@@ -8,6 +9,7 @@ class myObj:
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         h = []
         heapq.heapify(h)
@@ -16,7 +18,6 @@ class Solution:
             heapq.heappush(h, myObj(dis, p))
             if len(h) > K:
                 heapq.heappop(h)
-
         ans = []
         while h:
             obj = heapq.heappop(h)

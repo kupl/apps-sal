@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        '''
+        """
         行不通的 example4就不满足
         #最长的bi-value subarray
         #记录到i处一共几种数出现，两个减出来=2意味着中间只有两种。subarray标准套路.
@@ -28,8 +29,7 @@ class Solution:
 
 
         return ans
-        '''
-        # sliding  window, two pointers:x,i
+        """
         n = len(tree)
         dic = {}
         x = 0
@@ -38,7 +38,6 @@ class Solution:
                 dic[tree[i]] = 1
             else:
                 dic[tree[i]] += 1
-
             if len(dic) > 2:
                 dic[tree[x]] -= 1
                 if dic[tree[x]] == 0:

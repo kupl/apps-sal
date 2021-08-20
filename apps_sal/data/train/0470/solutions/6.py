@@ -2,19 +2,19 @@ from collections import Counter
 
 
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         MOD = 10 ** 9 + 7
         if len(A) < 3:
             return 0
         counts = Counter(A)
         keys = sorted(counts.keys())
-        n, res = len(keys), 0
-
-        for i, a in enumerate(keys):
+        (n, res) = (len(keys), 0)
+        for (i, a) in enumerate(keys):
             T = target - a
-            j, k = i, n - 1
+            (j, k) = (i, n - 1)
             while j <= k:
-                b, c = keys[j], keys[k]
+                (b, c) = (keys[j], keys[k])
                 if b + c < T:
                     j += 1
                 elif b + c > T:

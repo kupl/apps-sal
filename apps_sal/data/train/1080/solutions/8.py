@@ -1,20 +1,17 @@
-# cook your dish here
 for t in range(int(input())):
     string = input()
-
     if len(string) == 1:
-        print("YES")
+        print('YES')
     elif len(string) == 2:
         if string[0] != string[1]:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     elif len(string) > 2:
         first = string[0]
         second = string[1]
-
         if first == second:
-            print("NO")
+            print('NO')
         else:
             flag = 1
             for i in range(2, len(string)):
@@ -24,13 +21,12 @@ for t in range(int(input())):
                     else:
                         flag = 0
                         break
+                elif string[i] == first:
+                    flag = 1
                 else:
-                    if string[i] == first:
-                        flag = 1
-                    else:
-                        flag = 0
-                        break
+                    flag = 0
+                    break
         if flag == 1:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

@@ -1,6 +1,5 @@
 import sys
 from functools import lru_cache
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,8 +9,7 @@ MOD = 1000000007
 
 
 def main():
-    N, X = list(map(int, readline().split()))
-
+    (N, X) = list(map(int, readline().split()))
     A = [0] * (N + 1)
     B = [0] * (N + 1)
     A[0] = B[0] = 1
@@ -26,8 +24,7 @@ def main():
             return rec(i - 1, x - 1)
         else:
             return B[i - 1] + 1 + rec(i - 1, x - 2 - A[i - 1])
-
-    print((rec(N, X)))
+    print(rec(N, X))
     return
 
 

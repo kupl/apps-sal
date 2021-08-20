@@ -4,12 +4,11 @@ n = int(input())
 def dfs(cur, use, cnt):
     if cur > n:
         return
-    if use == 0b111:
+    if use == 7:
         cnt.append(1)
-
-    dfs(cur * 10 + 7, use | 0b001, cnt)
-    dfs(cur * 10 + 5, use | 0b010, cnt)
-    dfs(cur * 10 + 3, use | 0b100, cnt)
+    dfs(cur * 10 + 7, use | 1, cnt)
+    dfs(cur * 10 + 5, use | 2, cnt)
+    dfs(cur * 10 + 3, use | 4, cnt)
 
 
 cnt = []

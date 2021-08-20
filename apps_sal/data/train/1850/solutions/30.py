@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOfDistancesInTree(self, N: int, edges: List[List[int]]) -> List[int]:
         edges_dict = dict()
         for i in range(N):
@@ -10,7 +11,7 @@ class Solution:
 
         def dp(node, src):
             if (node, src) in dp_dict:
-                return dp_dict[(node, src)]
+                return dp_dict[node, src]
             tgt_num = 1
             tgt_sum = 0
             for tgt in edges_dict[node]:
@@ -20,11 +21,10 @@ class Solution:
                     temp = dp(tgt, node)
                     tgt_num += temp[0]
                     tgt_sum += temp[0] + temp[1]
-            dp_dict[(node, src)] = (tgt_num, tgt_sum)
-            return dp_dict[(node, src)]
+            dp_dict[node, src] = (tgt_num, tgt_sum)
+            return dp_dict[node, src]
         results = [0] * N
         for node in range(N):
             for tgt in edges_dict[node]:
                 results[node] += sum(dp(tgt, node))
-        # print(dp_dict)
         return results

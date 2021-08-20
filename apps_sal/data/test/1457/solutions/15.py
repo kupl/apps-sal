@@ -1,9 +1,7 @@
 A = input()
 B = input()
-
 c = 0
 s = 0
-
 i = 0
 e = len(A) - len(B)
 while i <= e:
@@ -12,5 +10,4 @@ while i <= e:
         c += 1
         i += len(B) - 1
     i += 1
-
 print(c)

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ij = [list(map(int, input().split())) for i in range(m)]
 ni = [0] * n
 for i in range(m):

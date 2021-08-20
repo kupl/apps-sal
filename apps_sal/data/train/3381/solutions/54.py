@@ -4,5 +4,4 @@ def get_real_floor(n):
             n = n - 1
         else:
             n = n - 2
-
     return n

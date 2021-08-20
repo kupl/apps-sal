@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 scene = [list(map(int, input().split())) for i in range(a)]
 ans = 0
 for i in range(a):

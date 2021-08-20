@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,21 +8,18 @@ MOD = 1000000007
 
 
 def main():
-    N, M, *AB = list(map(int, read().split()))
-    X = [(a, b) for a, b in zip(*[iter(AB)] * 2)]
-
+    (N, M, *AB) = list(map(int, read().split()))
+    X = [(a, b) for (a, b) in zip(*[iter(AB)] * 2)]
     X.sort()
-
     ans = 0
     n = 0
-    for a, b in X:
+    for (a, b) in X:
         if n + b >= M:
             ans += (M - n) * a
             break
         else:
             ans += a * b
             n += b
-
     print(ans)
     return
 

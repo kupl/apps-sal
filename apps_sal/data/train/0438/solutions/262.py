@@ -1,6 +1,7 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        '''
+        """
         maintain a DS to record all segments (start, end).
         For each arr[i], test if i-1 or i+1 are in the DS.
         If so, merge the interval and insert to the DS again.
@@ -8,17 +9,14 @@ class Solution:
         DS:
         - Insert interval
         - Delete interval
-        '''
-
+        """
         starts = {}
         ends = {}
         intervals = {}
         interval_count = 0
-
         ans = -1
-
-        for i, x in enumerate(arr):
-            s, e = x, x
+        for (i, x) in enumerate(arr):
+            (s, e) = (x, x)
             if x - 1 in ends:
                 iid = ends[x - 1]
                 s = intervals[iid][0]
@@ -38,9 +36,6 @@ class Solution:
             intervals[iid] = (s, e)
             starts[s] = iid
             ends[e] = iid
-            # print(iid, s, e)
-            # print(starts, ends, intervals)
             if e - s + 1 == m:
                 ans = max(ans, i + 1)
-
         return ans

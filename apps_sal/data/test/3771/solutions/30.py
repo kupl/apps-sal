@@ -1,11 +1,11 @@
 import sys
 from collections import deque
-
 sys.setrecursionlimit(10 ** 7)
 rl = sys.stdin.readline
 
 
 class Dinic:
+
     def __init__(self, n):
         self.n = n
         self.graph = [[] for _ in range(n)]
@@ -32,7 +32,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] == -1:
                     level[w] = lv
                     deq.append(w)
@@ -42,7 +42,7 @@ class Dinic:
         if v == t:
             return f
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and self.level[v] < self.level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -55,7 +55,7 @@ class Dinic:
         flow = 0
         INF = 10 ** 18
         while self.bfs(s, t):
-            *self.it, = list(map(iter, self.graph))
+            (*self.it,) = list(map(iter, self.graph))
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -64,7 +64,7 @@ class Dinic:
 
 
 def solve():
-    H, W = list(map(int, rl().split()))
+    (H, W) = list(map(int, rl().split()))
     INF = 10 ** 18
     s = H + W
     t = s + 1
@@ -80,9 +80,8 @@ def solve():
             elif line[j] == 'T':
                 dinic.add_edge(i, t, INF)
                 dinic.add_edge(H + j, t, INF)
-
     ans = dinic.flow(s, t)
-    print((ans if ans < INF else -1))
+    print(ans if ans < INF else -1)
 
 
 def __starting_point():

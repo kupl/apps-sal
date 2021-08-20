@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         self.uf_table = [idx for idx in range(100001)]
 

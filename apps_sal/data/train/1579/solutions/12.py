@@ -1,8 +1,7 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = list(map(int, input().split()))
-    N = (n) * (n + 1) // 2
+    N = n * (n + 1) // 2
     d = set()
     if n > 60:
         print('NO')

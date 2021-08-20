@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 if A + B - 1 > N or N > A * B:
     print(-1)
 else:

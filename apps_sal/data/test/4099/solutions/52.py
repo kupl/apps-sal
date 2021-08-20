@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 sum1 = sum(a)
 stock = sum1
@@ -12,6 +12,6 @@ for i in range(k + 1):
         break
     sum1 = stock
 if flag == 0:
-    print((-1))
+    print(-1)
 else:
     print(ans)

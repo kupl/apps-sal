@@ -1,7 +1,6 @@
-# cook your dish here
 try:
     for _ in range(int(input())):
-        N, K = map(int, input().split())
+        (N, K) = map(int, input().split())
         memory = list(map(int, input().split()))
         memory.sort()
         a = memory[:K]

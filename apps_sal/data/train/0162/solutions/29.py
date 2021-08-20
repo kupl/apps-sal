@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 
         @lru_cache(maxsize=None)

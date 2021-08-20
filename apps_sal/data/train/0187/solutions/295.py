@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
-        profit, people, res, board = 0, 0, 0, 0
+        (profit, people, res, board) = (0, 0, 0, 0)
         minPeople = runningCost // boardingCost
         if sum(customers) < minPeople:
             return -1
@@ -13,7 +14,7 @@ class Solution:
             else:
                 board += people
                 people = 0
-        count, m = divmod(people, 4)
+        (count, m) = divmod(people, 4)
         board += count * 4
         if m > minPeople:
             count += 1

@@ -8,6 +8,6 @@ def enough(cap, on, wait):
 
 a = enough(5, 3, 2)
 if a == 0:
-    print("Yes.Bob can take all passengers with him")
+    print('Yes.Bob can take all passengers with him')
 else:
-    print(("Woops.Bob can't able to take ", a, " passengers into the bus"))
+    print(("Woops.Bob can't able to take ", a, ' passengers into the bus'))

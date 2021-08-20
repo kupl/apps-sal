@@ -20,13 +20,11 @@ def __starting_point():
                 gcd = math.gcd(Rgcd[i], a[i])
                 Rgcd.append(gcd)
             Rgcd = Rgcd[::-1]
-
             a = a[::-1]
             ans = []
             for i in range(n):
                 gcd = a[i] + math.gcd(Lgcd[i], Rgcd[i + 1])
                 ans.append(gcd)
-           # print(ans)
             print(max(ans))
 
 

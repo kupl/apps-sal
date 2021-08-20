@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 import sys
-
 input()
 arr = list(input().split())
 
@@ -17,19 +15,16 @@ def isBeautiful(s):
 logAns = 0
 nonBeautiful = None
 isZero = False
-
 for s in arr:
-    if s == "0":
+    if s == '0':
         isZero = True
     if isBeautiful(s):
-        logAns += (len(s) - 1)
+        logAns += len(s) - 1
     else:
         nonBeautiful = s
-
 if isZero:
     print(0)
 else:
     if nonBeautiful is None:
         nonBeautiful = '1'
-
     print(nonBeautiful + '0' * logAns)

@@ -3,7 +3,7 @@ def find_missing_number(s):
         return 0
     try:
         arr = list(map(int, s.split()))
-        mi, mx = min(arr), max(arr)
+        (mi, mx) = (min(arr), max(arr))
         for i in range(1, mx + 1):
             if i not in arr:
                 return i

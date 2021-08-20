@@ -1,4 +1,4 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 n = int(input())
 s = bin(n)[2:]
 dp = [[0, 0, 0] for _ in range(len(s) + 1)]
@@ -14,4 +14,4 @@ for i in range(len(s)):
         dp[i + 1][2] = dp[i][1] * 2 + dp[i][2] * 3
     for j in range(3):
         dp[i + 1][j] %= MOD
-print((sum(dp[-1]) % MOD))
+print(sum(dp[-1]) % MOD)

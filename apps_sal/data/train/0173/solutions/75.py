@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         arr = [a % k for a in arr]
         arr = Counter(arr)

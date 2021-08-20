@@ -3,10 +3,10 @@ from random import shuffle
 
 def mix_words(s):
     if type(s) != str:
-        return "undefined"
+        return 'undefined'
     else:
         splitter = s.split(' ')
-        for i, word in enumerate(splitter):
+        for (i, word) in enumerate(splitter):
             punctuation = not word[-1].isalpha()
             if len(word) > 3 + punctuation:
                 middle = list(word[1:-1 - punctuation])

@@ -1,6 +1,5 @@
 from re import compile, match
-
-REGEX = compile(r'\s*$')
+REGEX = compile('\\s*$')
 
 
 def whitespace(string):

@@ -2,15 +2,27 @@ import sys
 import math
 
 
-def inint(): return int(sys.stdin.readline())
-def inintm(): return map(int, sys.stdin.readline().split())
-def inintl(): return list(inintm())
-def instrm(): return map(str, sys.stdin.readline().split())
-def instrl(): return list(instrm())
+def inint():
+    return int(sys.stdin.readline())
+
+
+def inintm():
+    return map(int, sys.stdin.readline().split())
+
+
+def inintl():
+    return list(inintm())
+
+
+def instrm():
+    return map(str, sys.stdin.readline().split())
+
+
+def instrl():
+    return list(instrm())
 
 
 n = inint()
-
 z = {(): 0}
 ans = 0
 
@@ -31,8 +43,6 @@ for i in range(n):
         z[tuple(c)] += 1
     except:
         z[tuple(c)] = 1
-
 for i in z:
     ans += combinations(z[i], 2)
-
 print(ans)

@@ -1,6 +1,6 @@
 class Solution:
-    def findLucky(self, arr: List[int]) -> int:
 
+    def findLucky(self, arr: List[int]) -> int:
         arr.sort()
         l = []
         counts = 0
@@ -10,12 +10,10 @@ class Solution:
             if counts == arr[i] and visited:
                 l.append(arr[i])
                 counts = 0
-
             if arr[i] == arr[i + 1]:
                 visited = False
             else:
                 visited = True
-
         if len(l) != 0:
             return max(l)
         else:

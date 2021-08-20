@@ -1,4 +1,6 @@
-def ex(): print(-1); return
+def ex():
+    print(-1)
+    return
 
 
 s = input()

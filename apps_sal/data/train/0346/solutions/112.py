@@ -1,4 +1,5 @@
 class Solution:
+
     def addOrIncrement(self, key, dictionary):
         if key in dictionary:
             dictionary[key] += 1
@@ -9,7 +10,6 @@ class Solution:
         n = len(nums)
         if n < k:
             return 0
-
         ans = 0
         seen = {0: 1}
         curVal = 0
@@ -18,5 +18,4 @@ class Solution:
             if curVal - k in seen:
                 ans += seen[curVal - k]
             self.addOrIncrement(curVal, seen)
-
         return ans

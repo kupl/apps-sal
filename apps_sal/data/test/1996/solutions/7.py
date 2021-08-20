@@ -3,7 +3,6 @@ mn = set('qwertyuiopasdfghjklzxcvbnm')
 f = False
 k = 0
 for i in range(n):
-
     s = input().split()
     if f:
         if s[0] == '?' and set(s[1]) != mn or s[0] == '!':

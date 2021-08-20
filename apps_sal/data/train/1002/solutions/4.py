@@ -1,4 +1,3 @@
-# cook your dish here
 def ch(a):
     for i in range(1, len(a)):
         if a[i] - a[i - 1] > d:
@@ -7,14 +6,14 @@ def ch(a):
 
 
 for i in range(int(input())):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     b = a[0]
     a.sort()
     ind = a.index(b)
     i = ind
     if not ch(a):
-        print("NO")
+        print('NO')
     else:
         arr1 = []
         arr2 = []
@@ -36,7 +35,7 @@ for i in range(int(input())):
             if i + 1 < n:
                 arr4.append(a[i + 1])
             i += 2
-        if (ch(arr1) and ch(arr2)) or (ch(arr3) and ch(arr4)):
-            print("YES")
+        if ch(arr1) and ch(arr2) or (ch(arr3) and ch(arr4)):
+            print('YES')
         else:
-            print("NO")
+            print('NO')

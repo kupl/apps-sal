@@ -1,7 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 for i in range(n - 1):
     if a[i] == 3:
         a[i] = '11'
@@ -11,7 +10,6 @@ for i in range(n - 1):
         a[i] = '01'
     elif a[i] == 0:
         a[i] = '00'
-
 for i in range(n - 1):
     if b[i] == 3:
         b[i] = '11'
@@ -46,17 +44,16 @@ def Checker(z, x, y):
 
 s = []
 flag = True
-
 for ti in ['00', '01', '10', '11']:
     t = ti
     if len(s) == n:
         break
-    elif (Checker(t[0], a[0][0], b[0][0]) is not None) and (Checker(t[1], a[0][1], b[0][1]) is not None):
+    elif Checker(t[0], a[0][0], b[0][0]) is not None and Checker(t[1], a[0][1], b[0][1]) is not None:
         s.append(t)
         for i in range(n - 1):
             c = Checker(t[0], a[i][0], b[i][0])
             e = Checker(t[1], a[i][1], b[i][1])
-            if (c is not None) and (e is not None):
+            if c is not None and e is not None:
                 k = ''.join([c, e])
                 s.append(k)
                 t = k

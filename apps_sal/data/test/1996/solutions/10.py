@@ -14,7 +14,5 @@ for i in range(0, q - 1):
         if len(d) == 1:
             gf += 1
         d = d.difference(set(s1))
-
-    # print(d)
 s = input()
 print(gf)

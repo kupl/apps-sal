@@ -1,7 +1,7 @@
 def pizzatime(s, a, k):
-    cont1, m_time = 0, 0
+    (cont1, m_time) = (0, 0)
     for i in range(len(s)):
-        if(s[i] == '1'):
+        if s[i] == '1':
             cont1 += 1
         else:
             try:
@@ -14,13 +14,11 @@ def pizzatime(s, a, k):
 
 
 for T in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
-
     all_1 = [0] * (n + 1)
     check = True
     for ind in range(len(s) - 1, -1, -1):
-        if(s[ind] == '1'):
-            all_1[ind] += (all_1[ind + 1] + 1)
-
+        if s[ind] == '1':
+            all_1[ind] += all_1[ind + 1] + 1
     print(pizzatime(s, all_1, k))

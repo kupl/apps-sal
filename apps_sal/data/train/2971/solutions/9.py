@@ -1,5 +1,5 @@
 def watch_pyramid_from_the_side(s):
-    return '\n'.join(f"{' '*(len(s)-i)}{(i*2-1)*c}{' '*(len(s)-i)}" for i, c in enumerate(reversed(s), 1)) if s else s
+    return '\n'.join((f"{' ' * (len(s) - i)}{(i * 2 - 1) * c}{' ' * (len(s) - i)}" for (i, c) in enumerate(reversed(s), 1))) if s else s
 
 
 def watch_pyramid_from_above(s):
@@ -21,4 +21,4 @@ def count_visible_characters_of_the_pyramid(s):
 
 
 def count_all_characters_of_the_pyramid(s):
-    return sum(((n + 1) * 2 - 1)**2 for n in range(len(s))) if s else -1
+    return sum((((n + 1) * 2 - 1) ** 2 for n in range(len(s)))) if s else -1

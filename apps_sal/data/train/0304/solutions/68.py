@@ -1,7 +1,8 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         a = sorted(ages)
-        i, j, k = 0, 0, 0
+        (i, j, k) = (0, 0, 0)
         ans = 0
         for i in range(1, len(a)):
             if a[i] <= 14:

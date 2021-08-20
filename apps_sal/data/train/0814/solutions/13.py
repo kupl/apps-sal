@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 for t in range(int(input())):
     n = int(input())
     store = list(map(int, input().split()))
@@ -12,13 +11,12 @@ for t in range(int(input())):
                 curr += 1
             else:
                 curr = 1
-        else:
-            if curr != 0:
-                if curr in cStore:
-                    cStore[curr] += 1
-                else:
-                    cStore[curr] = 1
-                curr = 0
+        elif curr != 0:
+            if curr in cStore:
+                cStore[curr] += 1
+            else:
+                cStore[curr] = 1
+            curr = 0
     flag = 0
     maxi = 0
     for val in cStore:
@@ -28,9 +26,8 @@ for t in range(int(input())):
         elif val > maxi:
             maxi = val
     if flag == 1:
-        print("No")
+        print('No')
+    elif maxi % 2 == 0:
+        print('No')
     else:
-        if maxi % 2 == 0:
-            print("No")
-        else:
-            print("Yes")
+        print('Yes')

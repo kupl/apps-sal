@@ -15,7 +15,7 @@ def word_problem(rules, frm, to, limit):
         return False or frm == to
     steps = deque([[frm, limit]])
     while len(steps):
-        st, lim = steps.popleft()
+        (st, lim) = steps.popleft()
         for rule in rules:
             rep = replace(st, rule)
             for s in rep:

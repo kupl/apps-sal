@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    n, a, b = list(map(int, input().split()))
+    (n, a, b) = list(map(int, input().split()))
     s = input()
     ans = n * a + (n + 1) * b
     li = s.find('1')
@@ -10,7 +10,7 @@ for _ in range(T):
         lens = []
         for i in range(li + 1, ri):
             if s[i] == '0':
-                if(s[i - 1] == '1'):
+                if s[i - 1] == '1':
                     lens.append(0)
                 lens[-1] += 1
         for l in lens:

@@ -6,7 +6,7 @@ arr = [int(x) for x in input().split()]
 g = max(arr)
 print(g, end=' ')
 for i in arr:
-    if (g % i == 0) and i not in k:
+    if g % i == 0 and i not in k:
         k.append(i)
     else:
         p.append(i)

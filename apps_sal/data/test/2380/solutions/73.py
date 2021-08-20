@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = sorted(list(map(int, input().split())))
 BC = [list(map(int, input().split())) for i in range(m)]
 BC = sorted(BC, reverse=True, key=lambda x: x[1])

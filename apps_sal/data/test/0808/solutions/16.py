@@ -2,7 +2,7 @@ s = input()
 if '.' not in s:
     s += '.'
 s = s.strip('0')
-a, b = s.split('.')
+(a, b) = s.split('.')
 if len(a):
     b = a[1:] + b
     b = b.rstrip('0')

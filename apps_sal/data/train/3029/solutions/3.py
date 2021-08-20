@@ -1,4 +1,5 @@
 def levenshtein(a, b):
+
     def recurse(i, j):
         if i >= len(a) or j >= len(b):
             return abs(i - len(a)) + abs(j - len(b))

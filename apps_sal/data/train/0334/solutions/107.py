@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         s = list(s)
         if len(s) < 2:
@@ -9,11 +10,11 @@ class Solution:
         while True:
             i = 0
             deleted = False
-            for _, group in itertools.groupby(s):
+            for (_, group) in itertools.groupby(s):
                 group = list(group)
                 if len(group) > 1:
-                    idx_max, max_cost = -1, -1
-                    for j, c in enumerate(cost[i:i + len(group)]):
+                    (idx_max, max_cost) = (-1, -1)
+                    for (j, c) in enumerate(cost[i:i + len(group)]):
                         if c == None:
                             continue
                         if c > max_cost:

@@ -18,12 +18,12 @@ for i in range(q):
         numset.add(int(j))
     total = max(numset)
     n = total
-    if n // 2 in numset and n // 3 in numset and n // 5 in numset:
+    if n // 2 in numset and n // 3 in numset and (n // 5 in numset):
         total = n // 2 + n // 3 + n // 5
     for _ in range(3):
         if len(numset) == 0:
             break
-        n, numset = getMax(numset)
+        (n, numset) = getMax(numset)
         m.append(n)
         if sum(m) > total:
             total = sum(m)

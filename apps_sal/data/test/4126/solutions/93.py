@@ -13,6 +13,6 @@ if b == 0:
         else:
             b = 1
 if b == 0:
-    print("Yes")
+    print('Yes')
 elif b == 1:
-    print("No")
+    print('No')

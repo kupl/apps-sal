@@ -14,5 +14,4 @@ def unlucky_days(year):
         if day == 13 and calendar.weekday(year, month, day) == 4:
             counter += 1
         start_date += delta
-
     return counter

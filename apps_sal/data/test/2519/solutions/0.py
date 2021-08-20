@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 P = list(map(int, input().split()))
 e = []
 for i in P:

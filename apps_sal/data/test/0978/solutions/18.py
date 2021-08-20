@@ -14,12 +14,10 @@ for cont in range(0, 4):
             times[tmp - 1] += 1
         if l4[cont] == str(tmp):
             times[tmp - 1] += 1
-
 l = True
 for tmp in times:
     if tmp > k:
         l = False
-
 if l == True:
     print('YES')
 else:

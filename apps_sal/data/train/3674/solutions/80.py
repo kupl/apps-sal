@@ -4,9 +4,7 @@ def add_binary(a, b):
     while s > 1:
         s = s // 2
         bins.append(s % 2)
-
-    final = ""
+    final = ''
     for i in bins[::-1]:
         final += str(i)
-
     return final

@@ -3,4 +3,4 @@ def make_upper_case(string_to_capitalize):
     return capitalized_string
 
 
-print((make_upper_case("hello")))
+print(make_upper_case('hello'))

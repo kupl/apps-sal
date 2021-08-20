@@ -1,7 +1,6 @@
 n = int(input())
 s_l = [int(input()) for _ in range(n)]
 s_l = sorted(s_l)
-
 if sum(s_l) % 10 != 0:
     ans = sum(s_l)
 else:

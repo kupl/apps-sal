@@ -1,6 +1,6 @@
 class Solution:
-    def smallestRepunitDivByK(self, K: int) -> int:
 
+    def smallestRepunitDivByK(self, K: int) -> int:
         seen = set()
         remainder = 1
         N = 1
@@ -12,5 +12,4 @@ class Solution:
                 return -1
             seen.add(remainder)
             i += 1
-
         return i

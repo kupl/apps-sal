@@ -1,13 +1,25 @@
 import sys
 import numpy as np
-def input(): return sys.stdin.readline().rstrip()
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+
+
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
 
 
 def main():
-    n, x = mi()
+    (n, x) = mi()
     a = li()
     cnt = 0
     for i in range(1, n):

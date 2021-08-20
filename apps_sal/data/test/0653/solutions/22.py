@@ -16,5 +16,4 @@ for i in range(len(S)):
     else:
         k = int(S[i])
         D[k] = 0
-
 print(''.join(map(str, D)))

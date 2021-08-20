@@ -28,11 +28,10 @@ def prime_factoring(n):
 N = int(input())
 fac = factorial(N)
 List = list(prime_factoring(fac).values())
-# print(List)
 
 
 def num(m):
     return len(list([x for x in List if x >= m - 1]))
 
 
-print((num(75) + num(25) * (num(3) - 1) + num(15) * (num(5) - 1) + num(5) * (num(5) - 1) * (num(3) - 2) // 2))
+print(num(75) + num(25) * (num(3) - 1) + num(15) * (num(5) - 1) + num(5) * (num(5) - 1) * (num(3) - 2) // 2)

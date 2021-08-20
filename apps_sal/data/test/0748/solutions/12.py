@@ -10,9 +10,7 @@ def mx(a, b, c):
 
 
 n = int(input())
-
 nums = list(map(int, input().split()))
-
 if 5 in nums or 7 in nums or nums.count(1) != n // 3:
     print(-1)
 else:
@@ -27,5 +25,5 @@ else:
 if sum(count.values()) > 0:
     print(-1)
 else:
-    for a, b, c in ans:
+    for (a, b, c) in ans:
         print(a, b, c)

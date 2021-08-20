@@ -1,8 +1,7 @@
 T = int(input())
 for t in range(T):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     v = list(map(int, input().split()))
-
     tot = 0
     j = 0
     for i in range(n):
@@ -12,7 +11,6 @@ for t in range(T):
             break
         if v[i] > v[j]:
             j = i
-
     if tot <= s:
         print(0)
     else:

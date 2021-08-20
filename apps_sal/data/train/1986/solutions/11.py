@@ -1,4 +1,5 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
         bi = str(bin(start))[2:].zfill(n)
 

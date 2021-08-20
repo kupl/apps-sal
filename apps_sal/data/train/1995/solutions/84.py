@@ -1,4 +1,5 @@
 class Solution:
+
     def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
         d = {}
         for (passengers, start, end) in trips:
@@ -7,7 +8,6 @@ class Solution:
                     d[i] = passengers
                 else:
                     d[i] += passengers
-
         for x in d:
             if d[x] > capacity:
                 return False

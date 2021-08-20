@@ -1,16 +1,13 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         rot = 0
         profit = 0
-
         maprof = 0
         marot = 0
-
         wait = 0
-
         for c in customers:
             wait += c
-
             if wait > 4:
                 wait -= 4
                 profit += 4 * boardingCost - runningCost

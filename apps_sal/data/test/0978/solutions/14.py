@@ -1,7 +1,6 @@
 __author__ = 'asmn'
-
 k = int(input())
-cnt = dict((i, 0) for i in range(1, 10))
+cnt = dict(((i, 0) for i in range(1, 10)))
 for i in range(4):
     for j in input():
         if ord('1') <= ord(j) <= ord('9'):

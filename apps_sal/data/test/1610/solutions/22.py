@@ -1,8 +1,8 @@
-'''
-Created on ١٣‏/١٢‏/٢٠١٤
+"""
+Created on ١٣\u200f/١٢\u200f/٢٠١٤
 
 @author: mohamed265
-'''
+"""
 t = input().split()
 for i in range(int(t[1])):
     print(int(t[0]) - i, end=' ')

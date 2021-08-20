@@ -1,12 +1,13 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         rows = len(A)
         cols = len(A[0])
 
         def getNeighbors(i, j):
-            for x, y in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
-                if x >= 0 and x < rows and y >= 0 and y < cols:
-                    yield x, y
+            for (x, y) in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
+                if x >= 0 and x < rows and (y >= 0) and (y < cols):
+                    yield (x, y)
 
         def findComponents():
             visited = set()
@@ -15,10 +16,9 @@ class Solution:
             def findConnnectedComponent(i, j):
                 visited.add((i, j))
                 connectedNodes[connectedCompNumber].append((i, j))
-                for x, y in getNeighbors(i, j):
+                for (x, y) in getNeighbors(i, j):
                     if (x, y) not in visited and A[x][y]:
                         findConnnectedComponent(x, y)
-
             connectedCompNumber = -1
             for i in range(rows):
                 for j in range(cols):
@@ -29,8 +29,7 @@ class Solution:
 
         def findDistance() -> int:
             shortedDist = 1
-            source, target = findComponents()
-
+            (source, target) = findComponents()
             queue = collections.deque()
             for s in source:
                 queue.appendleft((s, 0))
@@ -38,12 +37,11 @@ class Solution:
             for s in source:
                 done.add(s)
             while queue:
-                node, dist = queue.pop()
+                (node, dist) = queue.pop()
                 if node in target:
                     return dist - 1
                 for n in getNeighbors(*node):
                     if n not in done:
                         queue.appendleft((n, dist + 1))
                         done.add(n)
-
         return findDistance()

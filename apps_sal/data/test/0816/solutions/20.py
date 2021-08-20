@@ -1,4 +1,4 @@
-_, n = map(int, input().split())
+(_, n) = map(int, input().split())
 M = {}
 ans = 0
 for x in map(int, input().split()):

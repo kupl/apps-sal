@@ -1,6 +1,8 @@
 def main():
-    def read(): return list(map(int, input().split()))
-    n, x, y = read()
+
+    def read():
+        return list(map(int, input().split()))
+    (n, x, y) = read()
     a = sorted(read())
     cnt = 0
     for k in a:

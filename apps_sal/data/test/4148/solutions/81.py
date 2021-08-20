@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
 def main():
     N = int(input())
     S = input()
-
     res = ord('A')
     ans = ''
     for s in S:

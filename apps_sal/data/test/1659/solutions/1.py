@@ -1,13 +1,12 @@
 d = 0
-a, b = list(map(int, input().split(' ')))
+(a, b) = list(map(int, input().split(' ')))
 ic = b
 for i in range(a):
-    x, y = list(map(str, input().split(' ')))
-    if (x == '+'):
+    (x, y) = list(map(str, input().split(' ')))
+    if x == '+':
         ic += int(y)
+    elif int(y) > ic:
+        d += 1
     else:
-        if (int(y) > ic):
-            d += 1
-        else:
-            ic -= int(y)
+        ic -= int(y)
 print(ic, d)

@@ -4,9 +4,9 @@ for _ in range(t):
     s = str(input())
     arr = ['A', 'E', 'I', 'O', 'U']
     if n == 1:
-        print("No")
+        print('No')
     elif s[0] in arr and s[n - 1] in arr:
-        print("Yes")
+        print('Yes')
     else:
         for i in range(n - 1):
             if s[i] in arr and s[i + 1] in arr:
@@ -15,6 +15,6 @@ for _ in range(t):
             else:
                 flag = False
         if flag == True:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')

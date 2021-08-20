@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         adj = defaultdict(set)
         po = dict()
@@ -17,6 +18,5 @@ class Solution:
                 curr = child
                 temp += 1
             po[i] = temp
-
         res = sorted(po.items(), key=lambda x: x[1])
         return res[k - 1][0]

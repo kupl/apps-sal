@@ -14,8 +14,6 @@ def eprint(*args):
 
 
 zz = 1
-
-# sys.setrecursionlimit(10**6)
 if zz:
     input = sys.stdin.readline
 else:
@@ -53,7 +51,7 @@ def gh():
 
 def graph(n, m):
     for i in range(m):
-        x, y = mi()
+        (x, y) = mi()
         a[x].append(y)
         a[y].append(x)
 
@@ -63,15 +61,12 @@ def bo(i):
 
 
 tt = 1
-
-
 while tt > 0:
     tt -= 1
     n = fi()
-    # Pick all even or odd levels
     a = [[] for i in range(n + 1)]
     for i in range(n - 1):
-        x, y = mi()
+        (x, y) = mi()
         a[x].append(y)
         a[y].append(x)
     dis = [0 for i in range(n + 1)]

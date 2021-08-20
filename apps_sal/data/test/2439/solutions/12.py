@@ -4,10 +4,10 @@ for _ in range(t):
     arr = [int(j) for j in input().split()]
     arr.sort()
     if sum(arr) == 0:
-        print("NO")
+        print('NO')
     elif sum(arr) > 0:
-        print("YES")
+        print('YES')
         print(*arr[::-1])
     else:
-        print("YES")
+        print('YES')
         print(*arr)

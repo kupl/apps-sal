@@ -1,4 +1,5 @@
 class Solution:
+
     def minWindow(self, s, t):
         """
         :type s: str
@@ -6,7 +7,7 @@ class Solution:
         :rtype: str
         """
         if len(t) > len(s):
-            return ""
+            return ''
         dic = {}
         for i in t:
             if i in dic:
@@ -16,8 +17,7 @@ class Solution:
         counter = len(dic)
         start = end = 0
         minl = len(s) + 1
-        res = ""
-
+        res = ''
         while end < len(s):
             j = s[end]
             if j in dic:

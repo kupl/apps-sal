@@ -6,7 +6,7 @@ def answer(w: int, a: int, b: int) -> int:
 
 
 def main():
-    w, a, b = map(int, input().split())
+    (w, a, b) = map(int, input().split())
     print(answer(w, a, b))
 
 

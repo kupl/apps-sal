@@ -1,17 +1,15 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     for _ in range(int(input())):
-        N, K = list(map(int, input().split()))
+        (N, K) = list(map(int, input().split()))
         S = input().rstrip('\n')
-
         cnt = [[0] * K for _ in range(26)]
-        for i, s in enumerate(S):
+        for (i, s) in enumerate(S):
             j = ord(s) - 97
             cnt[j][i % K] += 1
         ans = 0
-        L = (N // K) * 2
+        L = N // K * 2
         for i in range(K // 2):
             tmp = N + 1
             for j in range(26):

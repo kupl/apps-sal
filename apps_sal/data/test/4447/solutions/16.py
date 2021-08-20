@@ -1,11 +1,11 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 aa = list(map(int, input().split()))
-res, q = sum(aa), n // m
+(res, q) = (sum(aa), n // m)
 acc = [[] for _ in range(m)]
 for i in range(n):
     acc[aa[i] % m].append(i)
 j = -m
-for i, l in enumerate(acc):
+for (i, l) in enumerate(acc):
     if len(l) > q:
         if j <= i - m:
             j = i - m + 1

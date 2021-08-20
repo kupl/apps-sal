@@ -1,15 +1,13 @@
 class Solution:
-    def findLatestStep(self, arr: List[int], m: int) -> int:
 
+    def findLatestStep(self, arr: List[int], m: int) -> int:
         indeces = {}
         for i in range(len(arr)):
             indeces[arr[i]] = i
-
         leftToRight = {}
         rightToLeft = {}
         result = -1
         numOfGroup = 0
-
         for i in range(len(arr)):
             num = arr[i]
             if rightToLeft.get(num - 1) is not None and leftToRight.get(num + 1) is not None:
@@ -46,5 +44,4 @@ class Solution:
                     numOfGroup += 1
             if numOfGroup > 0:
                 result = i + 1
-
         return result

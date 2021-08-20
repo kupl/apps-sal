@@ -1,7 +1,6 @@
 from collections import Counter
-
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     cnt = Counter()
     bal = 0
     for c in input():

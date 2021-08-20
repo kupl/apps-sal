@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = sorted(map(int, input().split()))
 sums = [0] * n
 ans = [0] * n

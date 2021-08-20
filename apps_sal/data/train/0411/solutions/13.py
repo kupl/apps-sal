@@ -1,4 +1,5 @@
 class Solution:
+
     def wordBreak(self, s, wordDict):
         """
         :type s: str
@@ -17,5 +18,4 @@ class Solution:
                     break
                 splitIndex += 1
             endIndex += 1
-
         return canSplitUntilIndex[len(s)]

@@ -3,10 +3,8 @@ A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
 ans = 0
-
 for i in range(n):
     ans += B[A[i] - 1]
-    if(i > 0 and A[i] == A[i - 1] + 1):
+    if i > 0 and A[i] == A[i - 1] + 1:
         ans += C[A[i] - 2]
-
 print(ans)

@@ -1,5 +1,4 @@
 lst = input().split()
-
 x = int(lst[0])
 a = int(lst[1])
 b = int(lst[2])

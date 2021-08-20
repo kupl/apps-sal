@@ -7,4 +7,4 @@ def solve(arr):
             if ord(x[i]) - 96 == i + 1:
                 aa = aa + 1
         b.append(aa)
-    return(b)
+    return b

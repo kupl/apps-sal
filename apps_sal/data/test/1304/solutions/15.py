@@ -8,7 +8,7 @@ for i in range(11):
         for i in range(3):
             b.append(k[i])
     a.append(b)
-x, y = map(int, input().split())
+(x, y) = map(int, input().split())
 x = (x - 1) % 3
 y = (y - 1) % 3
 fl = False

@@ -17,13 +17,10 @@ def how_many_below(l, k):
 def main():
     first_line = input()
     first_line = first_line.split()
-
     n = int(first_line[0])
     k = int(first_line[1])
-
     l = input()
     l = l.split()
-
     print(how_many_below(l, k))
 
 

@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 P = list(map(int, input().split()))
-
 parent = list(range(256))
 sz = [1] * 256
 
@@ -17,7 +16,7 @@ def u(rx, ry):
 
 
 ans = [0] * n
-for i, p in enumerate(P):
+for (i, p) in enumerate(P):
     rx = rt(p)
     while rx > 0 and sz[rx] + sz[rt(rx - 1)] <= k:
         u(rt(rx - 1), rx)

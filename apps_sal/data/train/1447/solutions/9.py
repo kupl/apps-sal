@@ -9,24 +9,24 @@ for i in range(0, a):
         f1[c[l] - 1] += 1
     bo = True
     for l in range(0, 1000):
-        if(f1[l] > 0):
+        if f1[l] > 0:
             f2[f1[l]] += 1
-            if(f2[f1[l]] > 1):
+            if f2[f1[l]] > 1:
                 bo = False
                 break
-    if(bo):
+    if bo:
         j = 1
         n[c[0] - 1] = 1
-        while(j < b):
-            if(c[j] == c[j - 1]):
+        while j < b:
+            if c[j] == c[j - 1]:
                 j += 1
-            elif(c[j] != c[j - 1] and n[c[j] - 1] != 1):
+            elif c[j] != c[j - 1] and n[c[j] - 1] != 1:
                 n[c[j] - 1] = 1
                 j += 1
             else:
-                print("NO")
+                print('NO')
                 break
-        if(j == b):
-            print("YES")
+        if j == b:
+            print('YES')
     else:
-        print("NO")
+        print('NO')

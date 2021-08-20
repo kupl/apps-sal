@@ -1,6 +1,6 @@
 def encode(msg, k):
-    k = ''.join(dict.fromkeys(k)) + ''.join(i for i in 'abcdefghijklmnopqrstuvwxyz' if i not in k)
-    r, i = '', 1
+    k = ''.join(dict.fromkeys(k)) + ''.join((i for i in 'abcdefghijklmnopqrstuvwxyz' if i not in k))
+    (r, i) = ('', 1)
     for s in msg:
         x = s.lower()
         if x in k:
@@ -14,8 +14,8 @@ def encode(msg, k):
 
 
 def decode(msg, k):
-    k = ''.join(dict.fromkeys(k)) + ''.join(i for i in 'abcdefghijklmnopqrstuvwxyz' if i not in k)
-    r, i = '', 1
+    k = ''.join(dict.fromkeys(k)) + ''.join((i for i in 'abcdefghijklmnopqrstuvwxyz' if i not in k))
+    (r, i) = ('', 1)
     for s in msg:
         x = s.lower()
         if x in k:

@@ -1,7 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, k, x, y = map(int, input().split())
-
+    (n, k, x, y) = map(int, input().split())
     if x == y:
         print(n, n)
     else:

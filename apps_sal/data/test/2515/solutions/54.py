@@ -2,7 +2,7 @@ import bisect
 Q = int(input())
 lsQ = []
 for i in range(Q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     lsQ.append([l, r])
 
 
@@ -20,7 +20,7 @@ def prime(N):
     return lsprime2
 
 
-primels = prime(10**5)
+primels = prime(10 ** 5)
 primeset = set(primels)
 lssim = []
 for i in primels:

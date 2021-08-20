@@ -1,6 +1,6 @@
 import numpy as np
-n, s = map(int, input().split())
-a = [int(j)for j in input().split()]
+(n, s) = map(int, input().split())
+a = [int(j) for j in input().split()]
 mod = 998244353
 ans = 0
 dp = np.zeros(3001, np.int64)

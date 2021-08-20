@@ -1,21 +1,13 @@
 class Solution:
+
     def maxJumps(self, A: List[int], d: int) -> int:
-        # there is some topological order
-        # but now it is asking for the longest path
-        # now we have to start at the root of the tree, and then maximize the
-        # distance of each node
-        # building the graph is tricky
-        # sliding window for building the graph
-        # i -> j if arr[i] > arr[j] but not the otherway around
-        # so we have to use a deque and pop out the indices greater than d away
-        '''
+        """
         6 4
         14 -> 6, (0), 14 -> 4 (1)
         14 -> (3), 
         14 -> (4), (4) -> (3)
 
-        '''
-
+        """
         n = len(A)
         graph = {}
         inorder = [0] * n
@@ -47,7 +39,4 @@ class Solution:
                 dp[value] = max(dp[value], dp[top] + 1)
                 if inorder[value] == 0:
                     stack.append(value)
-
-        # print(A[20:60])
-        # print([(i, v)  for i,v in enumerate(dp)][:60])
         return max(dp)

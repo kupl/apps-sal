@@ -1,23 +1,24 @@
 class CodeforcesTask321ASolution:
+
     def __init__(self):
         self.result = ''
         self.a_b = []
         self.command = ''
 
     def read_input(self):
-        self.a_b = [int(x) for x in input().split(" ")]
+        self.a_b = [int(x) for x in input().split(' ')]
         self.command = input()
 
     def process_task(self):
         vector = [0, 0]
         for c in self.command:
-            if c == "U":
+            if c == 'U':
                 vector[1] += 1
-            elif c == "D":
+            elif c == 'D':
                 vector[1] -= 1
-            elif c == "R":
+            elif c == 'R':
                 vector[0] += 1
-            elif c == "L":
+            elif c == 'L':
                 vector[0] -= 1
         if vector[0] and vector[1]:
             turns_away = min(self.a_b[0] // vector[0], self.a_b[1] // vector[1])
@@ -31,22 +32,21 @@ class CodeforcesTask321ASolution:
         x = vector[0] * turns_away
         y = vector[1] * turns_away
         can = False
-        #print(vector, turns_away, x, y)
         if x == self.a_b[0] and y == self.a_b[1]:
             can = True
         for z in range(100):
             for c in self.command:
-                if c == "U":
+                if c == 'U':
                     y += 1
-                elif c == "D":
+                elif c == 'D':
                     y -= 1
-                elif c == "R":
+                elif c == 'R':
                     x += 1
-                elif c == "L":
+                elif c == 'L':
                     x -= 1
                 if x == self.a_b[0] and y == self.a_b[1]:
                     can = True
-        self.result = "Yes" if can else "No"
+        self.result = 'Yes' if can else 'No'
 
     def get_result(self):
         return self.result

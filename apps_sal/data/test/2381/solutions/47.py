@@ -1,11 +1,10 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
-div = 7 + 10**9
+div = 7 + 10 ** 9
 ans = 1
 t = 0
-i, j = 0, N - 1
-
+(i, j) = (0, N - 1)
 if A[-1] < 0 and K % 2 == 1:
     for i1 in range(N - K, N):
         ans *= A[i1]
@@ -25,5 +24,4 @@ else:
     if t == K - 1:
         ans *= A[j]
         ans %= div
-
 print(ans)

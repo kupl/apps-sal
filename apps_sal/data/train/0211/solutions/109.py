@@ -1,5 +1,7 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def permutations(s):
             result = [[s]]
             for i in range(1, len(s)):
@@ -8,9 +10,7 @@ class Solution:
                 for p in permutations(end):
                     result.append(start + p)
             return result
-
         l = permutations(s)
-        # print(l)
         maxt = 0
         totalset = set()
         for i in l:

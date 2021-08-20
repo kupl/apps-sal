@@ -1,5 +1,4 @@
 n = int(input())
-
 ts = 0
 s = 0
 for i in range(100):

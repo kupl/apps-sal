@@ -1,4 +1,4 @@
-P = 10**9 + 7
+P = 10 ** 9 + 7
 fac = [1]
 ifac = [1]
 ff = 1
@@ -10,10 +10,10 @@ for i in range(1, 200001):
 
 
 def ncr(n, r):
-    return (fac[n] * ifac[r] % P * ifac[n - r] % P)
+    return fac[n] * ifac[r] % P * ifac[n - r] % P
 
 
-h, w, a, b = list(map(int, input().split()))
+(h, w, a, b) = list(map(int, input().split()))
 s = 0
 nC = b - 1
 kC = 0

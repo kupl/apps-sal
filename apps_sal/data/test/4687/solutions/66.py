@@ -1,15 +1,10 @@
-#n = int(input())
-n, k = list(map(int, input().split()))
-#l = list(map(int,input().split()))
-#l = [list(map(int,input().split())) for i in range(n)]
+(n, k) = list(map(int, input().split()))
 dic = {}
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     dic[a] = dic.get(a, 0) + b
-
 l = sorted(dic.items())
-
-for a, b in l:
+for (a, b) in l:
     if k <= b:
         ans = a
         break

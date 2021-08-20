@@ -7,7 +7,6 @@ def group_check(s):
     for c in s:
         if c in OPENING:
             stack.append(CLOSING[c])
-        else:  # closing
-            if len(stack) == 0 or c != stack.pop():
-                return False
+        elif len(stack) == 0 or c != stack.pop():
+            return False
     return len(stack) == 0

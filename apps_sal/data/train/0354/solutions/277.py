@@ -1,6 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        MODE = 1e9 + 7
+        MODE = 1000000000.0 + 7
         f = [[0 for _ in range(7)] for _ in range(n + 1)]
         f[0][6] = 1
         for i in range(1, n + 1):

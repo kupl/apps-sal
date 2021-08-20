@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPalindrome(self, s):
         """
         :type s: str
@@ -8,7 +9,7 @@ class Solution:
         longest = 0
         for char in s:
             counter[char] = counter.get(char, 0) + 1
-        for key, val in counter.items():
+        for (key, val) in counter.items():
             if val % 2 == 0:
                 longest += val
             else:

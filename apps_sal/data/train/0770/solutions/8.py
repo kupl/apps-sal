@@ -1,4 +1,3 @@
-
 def sol(b, k):
     l = len(b)
     if l == 0:
@@ -28,9 +27,9 @@ def sol(b, k):
 
 
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     A = [int(x) for x in input().split()]
-    odd, even = [], []
+    (odd, even) = ([], [])
     for i in range(len(A)):
         if A[i] % 2 == 0:
             even.append(i)

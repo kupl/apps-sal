@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 x = []
 x.append(a + b)
 x.append(a + c)

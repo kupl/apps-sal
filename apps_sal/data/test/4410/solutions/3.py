@@ -13,7 +13,7 @@ def rl():
 
 
 def solve():
-    n, k = rl()
+    (n, k) = rl()
     s = input()
     blocks = [len(b) for b in s.split('1')]
     if len(blocks) == 1:
@@ -23,13 +23,10 @@ def solve():
         total = blocks[0] // (k + 1) + blocks[-1] // (k + 1)
         for b in blocks[1:-1]:
             total += max(0, (b - k) // (k + 1))
-
     print(total)
-    # print (blocks)
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

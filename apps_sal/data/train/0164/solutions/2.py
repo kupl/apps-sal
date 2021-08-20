@@ -1,4 +1,5 @@
 class Solution:
+
     def minInteger(self, num: str, k: int) -> str:
         rest = num
         move = 0
@@ -6,7 +7,7 @@ class Solution:
         for dig in range(10):
             count = 0
             digC = str(dig)
-            for i, c in enumerate(rest):
+            for (i, c) in enumerate(rest):
                 if c == digC:
                     if k < move + i - count:
                         rest = rest.replace(digC, '', count)
@@ -15,7 +16,7 @@ class Solution:
                         mid = rest[0:remain + 1]
                         while remain:
                             tmp = min(mid)
-                            for ti, tc in enumerate(mid):
+                            for (ti, tc) in enumerate(mid):
                                 if tc == tmp:
                                     remain -= ti
                                     s += tc

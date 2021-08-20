@@ -1,6 +1,6 @@
 def atc_142b(NK_input: str, hi_input: str) -> int:
-    N, K = list(map(int, NK_input.split(" ")))
-    hi = [int(i) for i in hi_input.split(" ")]
+    (N, K) = list(map(int, NK_input.split(' ')))
+    hi = [int(i) for i in hi_input.split(' ')]
     hi = sorted(hi)
     for i in range(0, len(hi)):
         if hi[i] >= K:
@@ -10,4 +10,4 @@ def atc_142b(NK_input: str, hi_input: str) -> int:
 
 NK_input_value = input()
 hi_input_value = input()
-print((atc_142b(NK_input_value, hi_input_value)))
+print(atc_142b(NK_input_value, hi_input_value))

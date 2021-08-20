@@ -1,6 +1,6 @@
-a, b = list(map(int, input().split()))
-c = ""
-d = ""
+(a, b) = list(map(int, input().split()))
+c = ''
+d = ''
 ans = 0
 for i in range(a, b + 1):
     c = str(i)

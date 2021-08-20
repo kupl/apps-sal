@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 S = set(input().split())
 while True:
     L = list(str(N))

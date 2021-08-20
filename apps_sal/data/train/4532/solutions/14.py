@@ -8,4 +8,4 @@ def validate_code(code):
 def first_digit(num):
     num_of_digs = ceil(log10(num))
     amount_of_digs_to_remove = num_of_digs - 1
-    return num // 10**(amount_of_digs_to_remove)  # removes digits starting from right
+    return num // 10 ** amount_of_digs_to_remove

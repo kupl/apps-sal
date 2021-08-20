@@ -1,10 +1,8 @@
 def how_many_bees(hive):
     bees = ('bee', 'eeb')
     num_of_bees = 0
-
     if hive == None:
         return 0
-
     for line in hive:
         for pos in range(len(line) - 2):
             possible_bee = line[pos] + line[pos + 1] + line[pos + 2]

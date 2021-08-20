@@ -1,7 +1,7 @@
 def main():
     n = int(input())
     a = list(map(int, input().split()))
-    s, cnt = [0] * n, 0
+    (s, cnt) = ([0] * n, 0)
     for i in range(n):
         s[i] = abs(a[i])
         if a[i] < 0:

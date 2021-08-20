@@ -1,7 +1,6 @@
 def calculator(x, y, op):
     if not (type(x) == int and type(y) == int):
-        return "unknown value"
-
+        return 'unknown value'
     if op == '+':
         return x + y
     elif op == '*':
@@ -11,4 +10,4 @@ def calculator(x, y, op):
     elif op == '/':
         return x / y
     else:
-        return "unknown value"
+        return 'unknown value'

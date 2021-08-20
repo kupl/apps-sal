@@ -11,6 +11,6 @@ def game(a, b):
             sum_b += i
         i += 1
     if sum_a > a:
-        return "Joe"
+        return 'Joe'
     if sum_b > b:
-        return "Mike"
+        return 'Mike'

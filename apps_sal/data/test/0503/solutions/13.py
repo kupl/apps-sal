@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 nums = [int(x) for x in input().split()]
 zero = {}
 one = {}

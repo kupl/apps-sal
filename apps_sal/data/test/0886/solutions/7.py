@@ -1,9 +1,7 @@
 s = list(input())
 d = int(s[-1])
-
 last_pos = None
-
-for i, x in enumerate(s[:-1]):
+for (i, x) in enumerate(s[:-1]):
     if int(x) % 2 == 0:
         if int(x) < d:
             s[i] = str(d)

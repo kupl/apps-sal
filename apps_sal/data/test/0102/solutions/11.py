@@ -1,22 +1,22 @@
 def digit(n2):
     if n2 == 1:
-        print("-one")
+        print('-one')
     elif n2 == 2:
-        print("-two")
+        print('-two')
     elif n2 == 3:
-        print("-three")
+        print('-three')
     elif n2 == 4:
-        print("-four")
+        print('-four')
     elif n2 == 5:
-        print("-five")
+        print('-five')
     elif n2 == 6:
-        print("-six")
+        print('-six')
     elif n2 == 7:
-        print("-seven")
+        print('-seven')
     elif n2 == 8:
-        print("-eight")
+        print('-eight')
     elif n2 == 9:
-        print("-nine")
+        print('-nine')
 
 
 n = int(input())
@@ -24,67 +24,67 @@ n1 = n // 10
 n2 = n % 10
 if n1 == 0:
     if n2 == 0:
-        print("zero")
+        print('zero')
     elif n2 == 1:
-        print("one")
+        print('one')
     elif n2 == 2:
-        print("two")
+        print('two')
     elif n2 == 3:
-        print("three")
+        print('three')
     elif n2 == 4:
-        print("four")
+        print('four')
     elif n2 == 5:
-        print("five")
+        print('five')
     elif n2 == 6:
-        print("six")
+        print('six')
     elif n2 == 7:
-        print("seven")
+        print('seven')
     elif n2 == 8:
-        print("eight")
+        print('eight')
     elif n2 == 9:
-        print("nine")
+        print('nine')
 elif n1 == 1:
     if n2 == 0:
-        print("ten")
+        print('ten')
     elif n2 == 1:
-        print("eleven")
+        print('eleven')
     elif n2 == 2:
-        print("twelve")
+        print('twelve')
     elif n2 == 3:
-        print("thirteen")
+        print('thirteen')
     elif n2 == 4:
-        print("fourteen")
+        print('fourteen')
     elif n2 == 5:
-        print("fifteen")
+        print('fifteen')
     elif n2 == 6:
-        print("sixteen")
+        print('sixteen')
     elif n2 == 7:
-        print("seventeen")
+        print('seventeen')
     elif n2 == 8:
-        print("eighteen")
+        print('eighteen')
     elif n2 == 9:
-        print("nineteen")
+        print('nineteen')
 elif n1 == 2:
-    print("twenty", end="")
+    print('twenty', end='')
     digit(n2)
 elif n1 == 3:
-    print("thirty", end="")
+    print('thirty', end='')
     digit(n2)
 elif n1 == 4:
-    print("forty", end="")
+    print('forty', end='')
     digit(n2)
 elif n1 == 5:
-    print("fifty", end="")
+    print('fifty', end='')
     digit(n2)
 elif n1 == 6:
-    print("sixty", end="")
+    print('sixty', end='')
     digit(n2)
 elif n1 == 7:
-    print("seventy", end="")
+    print('seventy', end='')
     digit(n2)
 elif n1 == 8:
-    print("eighty", end="")
+    print('eighty', end='')
     digit(n2)
 elif n1 == 9:
-    print("ninety", end="")
+    print('ninety', end='')
     digit(n2)

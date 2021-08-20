@@ -8,6 +8,4 @@ def group_cities(seq):
         d = bases[frozenset(Counter(w).items())]
         k = next((w2 for w2 in d if w in w2), w * 2)
         d[k].append(W)
-
-    return sorted([sorted(lst) for d in bases.values() for lst in d.values()],
-                  key=lambda g: (-len(g), g[0]))
+    return sorted([sorted(lst) for d in bases.values() for lst in d.values()], key=lambda g: (-len(g), g[0]))

@@ -13,8 +13,7 @@ def cmb(n, r):
     return numer // denom % INF
 
 
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 INF = 10 ** 9 + 7
-
 for i in range(1, K + 1):
     print(cmb(K - 1, i - 1) * cmb(N - K + 1, i) % INF)

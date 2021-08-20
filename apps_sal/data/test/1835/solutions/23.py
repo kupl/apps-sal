@@ -21,10 +21,10 @@ for fwefe in range(q):
         if j < 0 or z < 0:
             break
         kz = 0
-        while z - kz > j - (i - kz) and z - kz >= 0 and kz <= i:
+        while z - kz > j - (i - kz) and z - kz >= 0 and (kz <= i):
             kz += 2
         z -= kz
-        j -= (i - kz)
+        j -= i - kz
         wyn += 1
         if j < 0 or z < 0:
             wyn -= 1

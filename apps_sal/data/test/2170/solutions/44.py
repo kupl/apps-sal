@@ -1,7 +1,5 @@
-MOD = 10**9 + 7
-
-MOD_t_MAX = 5 * 10**5 + 10
-
+MOD = 10 ** 9 + 7
+MOD_t_MAX = 5 * 10 ** 5 + 10
 fac = [None] * MOD_t_MAX
 finv = [None] * MOD_t_MAX
 inv = [None] * MOD_t_MAX
@@ -35,13 +33,13 @@ def MOD_perm(n, r):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     ans = 0
     perm = MOD_perm(m, n)
     MOD_COM_init()
     for i in range(n + 1):
         tmp = perm * MOD_COM(n, i) % MOD
-        ans += (-1)**i * tmp
+        ans += (-1) ** i * tmp
         ans %= MOD
         if i < n:
             perm *= inv[m - i]

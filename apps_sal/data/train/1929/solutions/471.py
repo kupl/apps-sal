@@ -1,11 +1,12 @@
-# Trie
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.isEnd = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
         self.currentMatch = frozenset([self.root])
@@ -29,7 +30,7 @@ class Trie:
                 new_set.add(node.children[idx])
                 if node.children[idx].isEnd:
                     found = True
-        return frozenset(new_set), found
+        return (frozenset(new_set), found)
 
 
 class StreamChecker:
@@ -40,11 +41,6 @@ class StreamChecker:
             self.trie.insert(word)
 
     def query(self, letter: str) -> bool:
-        match, found = self.trie.matchNextChar(self.trie.currentMatch, letter)
+        (match, found) = self.trie.matchNextChar(self.trie.currentMatch, letter)
         self.trie.currentMatch = match
         return found
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

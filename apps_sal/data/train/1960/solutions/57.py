@@ -1,6 +1,9 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
+
         class Node:
+
             def __init__(self, val, nextNode=None):
                 self.val = val
                 self.next = nextNode
@@ -8,7 +11,6 @@ class Solution:
         res = {}
         out = []
         cur = dummy
-
         for i in range(m):
             cur.next = Node(i + 1)
             res[i + 1] = [i, cur.__next__]
@@ -20,7 +22,6 @@ class Solution:
                 continue
             cur = dummy.__next__
             while cur and cur.val != query:
-                # print(res[cur.val])
                 res[cur.val][0] += 1
                 prev = cur
                 cur = cur.__next__

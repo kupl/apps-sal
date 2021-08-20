@@ -14,7 +14,6 @@ for _ in range(t):
                 if (3 in d[i] or 2 in d[i]) and (4 in d[i] or 5 in d[i]):
                     flag = True
                     break
-
     if flag:
         print('YES')
     else:

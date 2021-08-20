@@ -1,8 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
-
         ans = {}
-
         for num in range(lo, hi + 1):
             num_copy = num
             steps = 0
@@ -14,5 +13,4 @@ class Solution:
                     num_copy = 3 * num_copy + 1
                     steps += 1
             ans[num] = steps
-
-        return(sorted(list(ans.items()), key=lambda item: item[1]))[k - 1][0]
+        return sorted(list(ans.items()), key=lambda item: item[1])[k - 1][0]

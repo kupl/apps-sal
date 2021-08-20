@@ -1,7 +1,6 @@
 def main():
     import sys
     input = sys.stdin.readline
-
     for _ in range(int(input())):
         S = input().rstrip('\n')
         cnt = 0

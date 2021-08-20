@@ -1,6 +1,7 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        start, end = max(weights), sum(weights) + 1
+        (start, end) = (max(weights), sum(weights) + 1)
         while start + 1 < end:
             mid = start + (end - start) // 2
             if self._can_ship(weights, mid, D):

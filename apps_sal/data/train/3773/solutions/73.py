@@ -3,8 +3,8 @@ def isValid(f):
         return False
     elif 3 in f and 4 in f:
         return False
-    elif (5 in f and not(6 in f)) or (6 in f and not(5 in f)):
+    elif 5 in f and (not 6 in f) or (6 in f and (not 5 in f)):
         return False
-    elif not(7 in f) and not(8 in f):
+    elif not 7 in f and (not 8 in f):
         return False
     return True

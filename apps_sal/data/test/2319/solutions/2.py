@@ -1,5 +1,8 @@
 import sys
-def num(c): return ord(c) - 97
+
+
+def num(c):
+    return ord(c) - 97
 
 
 input = sys.stdin.readline
@@ -24,7 +27,7 @@ for _ in range(int(input())):
             dp[a][b] = (True, val, sett)
     for i in range(n):
         for j in range(n):
-            valid, val, tab = dp[i][j]
+            (valid, val, tab) = dp[i][j]
             if not valid:
                 continue
             top = s1[i]

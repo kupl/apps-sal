@@ -7,8 +7,8 @@ def resolve():
     al = list()
     for i in range(2, 10):
         for j in range(sqrt_x, 0, -1):
-            if j**i <= x:
-                al.append(j**i)
+            if j ** i <= x:
+                al.append(j ** i)
                 break
     al = sorted(al)
     print(al[-1])

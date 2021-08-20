@@ -1,8 +1,4 @@
-# python3
-# utf-8
-
 n = int(input())
-
 decide = list(range(1, n % 4 + 1))
 n_sum = 0
 first_group = []

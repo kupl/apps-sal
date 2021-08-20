@@ -9,4 +9,4 @@ def r(m):
 
 
 def drop_cap(s):
-    return re.sub('\w+', r, s)
+    return re.sub('\\w+', r, s)

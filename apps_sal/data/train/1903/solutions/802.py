@@ -1,11 +1,8 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # pq = []
         dist = {tuple(points[0]): 0}
         p = points[0]
-        # for point in points[1:]:
-        #     dist[tuple(point)] = abs(point[0] - p[0]) + abs(point[1] + p[1])
-        #     heapq.heappush(pq, (dist[tuple(point)], point[0], point[1]))
         res = 0
         while p:
             min_dist = float('inf')
@@ -18,7 +15,6 @@ class Solution:
                     min_dist = dist[tuple(point)]
                     np = point
             p = np
-            #print(p, min_dist, dist)
             if p:
                 res += min_dist
                 dist[tuple(p)] = 0

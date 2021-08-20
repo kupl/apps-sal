@@ -1,12 +1,12 @@
 from collections import deque
-n, q = map(int, input().split())
+(n, q) = map(int, input().split())
 z = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     z[a].append(b)
     z[b].append(a)
 l = [list(map(int, input().split())) for i in range(q)]
-p, x = [list(i) for i in zip(*l)]
+(p, x) = [list(i) for i in zip(*l)]
 c = [0] * n
 for i in range(q):
     c[p[i] - 1] += x[i]

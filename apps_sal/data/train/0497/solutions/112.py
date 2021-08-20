@@ -1,4 +1,5 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         dp = {}
         interval = []
@@ -6,7 +7,7 @@ class Solution:
             interval.append((endTime[i], startTime[i], profit[i]))
         interval.sort()
         ans = 0
-        for j, i, p in interval:
+        for (j, i, p) in interval:
             index = self.find_previous_end(interval, i)
             dp.setdefault(index, 0)
             dp[j] = max(dp[index] + p, ans)
@@ -14,7 +15,7 @@ class Solution:
         return ans
 
     def find_previous_end(self, nums, target):
-        l, r = 0, len(nums)
+        (l, r) = (0, len(nums))
         while l + 1 < r:
             mid = (l + r) // 2
             if nums[mid][0] > target:

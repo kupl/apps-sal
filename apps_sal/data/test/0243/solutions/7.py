@@ -6,18 +6,11 @@ def int_reader():
 
 
 ints = int_reader()
-n, m, k = [next(ints) for i in range(3)]
+(n, m, k) = [next(ints) for i in range(3)]
 sp = {next(ints) for i in range(k)}
-
-'''
-edges = []
-for i in range(m):
-    u, v, w = [next(ints) for j in range(3)]
-    edges.append((w, u, v))
-'''
+'\nedges = []\nfor i in range(m):\n    u, v, w = [next(ints) for j in range(3)]\n    edges.append((w, u, v))\n'
 edges = [(w, u, v) for (u, v, w) in [(next(ints) for i in range(3)) for j in range(m)]]
 edges.sort()
-
 fu = [i for i in range(n + 1)]
 
 
@@ -33,13 +26,13 @@ def find(x):
 
 def union(a, b):
     if b in sp:
-        a, b = b, a
+        (a, b) = (b, a)
     fu[b] = a
 
 
 ans = 0
 for e in edges:
-    a, b = find(e[1]), find(e[2])
+    (a, b) = (find(e[1]), find(e[2]))
     if a == b:
         continue
     if a in sp and b in sp:

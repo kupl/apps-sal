@@ -1,4 +1,4 @@
-m, n = [int(x) for x in input().split()]
+(m, n) = [int(x) for x in input().split()]
 r = [int(x) for x in input().split()]
 cost = [int(x) for x in input().split()]
 costa = []
@@ -17,7 +17,7 @@ for item in costa:
 index = len(costa) - 1
 for item in range(n):
     counter = 0
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     if r[a - 1] >= b:
         counter += cost[a - 1] * b
         r[a - 1] -= b

@@ -1,5 +1,4 @@
 from collections import Counter
-
 n = int(input())
 arr = [int(i) for i in input().split()]
 cnt = Counter()

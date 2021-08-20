@@ -1,4 +1,4 @@
-a, b = input().split()
+(a, b) = input().split()
 k = 1
 for i in range(1, len(a)):
     if a[i] < b[0]:

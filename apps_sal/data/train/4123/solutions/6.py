@@ -1,8 +1,7 @@
 from collections import Counter as C
-
 p = [2]
 for i in range(3, 15000, 2):
-    if all(i % j for j in p):
+    if all((i % j for j in p)):
         p.append(i)
 
 
@@ -25,6 +24,6 @@ def lcm_cardinality(n):
     for i in range(len(c)):
         m = c[i]
         for j in c[i + 1:]:
-            m *= (2 * j + 1)
+            m *= 2 * j + 1
         ans += m
     return ans + 1

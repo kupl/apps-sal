@@ -10,16 +10,16 @@ def bfs(a):
         h = Q[ctr]
         ctr += 1
         z[h[0]][h[1]] = 'o'
-        if h[0] - 1 >= 0 and z[h[0] - 1][h[1]] == '.' and not used[h[0] - 1][h[1]]:
+        if h[0] - 1 >= 0 and z[h[0] - 1][h[1]] == '.' and (not used[h[0] - 1][h[1]]):
             Q.append([h[0] - 1, h[1]])
             used[h[0] - 1][h[1]] = 1
-        if h[0] + 1 < n and z[h[0] + 1][h[1]] == '.' and not used[h[0] + 1][h[1]]:
+        if h[0] + 1 < n and z[h[0] + 1][h[1]] == '.' and (not used[h[0] + 1][h[1]]):
             Q.append([h[0] + 1, h[1]])
             used[h[0] + 1][h[1]] = 1
-        if h[1] - 1 >= 0 and z[h[0]][h[1] - 1] == '.' and not used[h[0]][h[1] - 1]:
+        if h[1] - 1 >= 0 and z[h[0]][h[1] - 1] == '.' and (not used[h[0]][h[1] - 1]):
             Q.append([h[0], h[1] - 1])
             used[h[0]][h[1] - 1] = 1
-        if h[1] + 1 < m and z[h[0]][h[1] + 1] == '.' and not used[h[0]][h[1] + 1]:
+        if h[1] + 1 < m and z[h[0]][h[1] + 1] == '.' and (not used[h[0]][h[1] + 1]):
             Q.append([h[0], h[1] + 1])
             used[h[0]][h[1] + 1] = 1
 
@@ -49,7 +49,7 @@ def bfs1(a, b):
     return ctr
 
 
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 z = [list(input()) for i in range(n)]
 for i in range(n):
     if z[i][0] == '.':

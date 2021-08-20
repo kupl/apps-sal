@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         graph_reverse = collections.defaultdict(list)
         indegree = collections.defaultdict(int)

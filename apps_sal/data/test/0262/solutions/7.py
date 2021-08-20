@@ -67,7 +67,7 @@ else:
             else:
                 chislo4 = s2 - answer
                 s4 = s2
-            if s1 == s2 and s1 == s3 and s1 == s4 and chislo1 == chislo2 and chislo1 == chislo3 and chislo1 == chislo4 and s1 > 0 and chislo1 > 0:
+            if s1 == s2 and s1 == s3 and (s1 == s4) and (chislo1 == chislo2) and (chislo1 == chislo3) and (chislo1 == chislo4) and (s1 > 0) and (chislo1 > 0):
                 print(chislo1)
             else:
                 print(-1)

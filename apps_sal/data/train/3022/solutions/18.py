@@ -1,5 +1,5 @@
 def two_highest(x):
-    if (type(x) == type("cool")):
+    if type(x) == type('cool'):
         return False
     print(x)
     x.sort()

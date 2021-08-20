@@ -1,8 +1,5 @@
 def men_still_standing(cards):
-    teams = {
-        'A': [True, True, True, True, True, True, True, True, True, True, True],
-        'B': [True, True, True, True, True, True, True, True, True, True, True],
-    }
+    teams = {'A': [True, True, True, True, True, True, True, True, True, True, True], 'B': [True, True, True, True, True, True, True, True, True, True, True]}
     for card in cards:
         team = card[0]
         color = card[-1]

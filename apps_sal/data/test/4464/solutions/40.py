@@ -1,9 +1,7 @@
 import math
-
-A, B, C = list(map(int, input().split()))
+(A, B, C) = list(map(int, input().split()))
 x = math.gcd(A, B)
-
 if C % x == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

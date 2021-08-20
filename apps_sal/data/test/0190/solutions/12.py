@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [list(input()) for i in range(n)]
 ima = 0
 jma = 0

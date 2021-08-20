@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a_l = [int(input()) for _ in range(m)]
-
 dp = [1] * (n + 1)
 dp[0] = 1
 if 1 not in a_l:

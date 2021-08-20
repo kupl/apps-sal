@@ -16,7 +16,6 @@ for i in range(n):
         j += 1
     if nums[i] == 0:
         num = i + 1
-
 ci[ind[0]] = num
 dif = 0
 dif2 = 0
@@ -29,4 +28,4 @@ if dif != 1 or dif2 != 1:
     ci[ind[0]] = ai[ind[0]]
     ci[ind[1]] = num
 for i in range(n):
-    print(ci[i], end=" ")
+    print(ci[i], end=' ')

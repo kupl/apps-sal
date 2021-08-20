@@ -1,15 +1,14 @@
 def grader(score):
     print(score)
-    grade = "F"
+    grade = 'F'
     if score > 1:
-        grade = "F"
+        grade = 'F'
     elif score >= 0.9:
-        grade = "A"
+        grade = 'A'
     elif score >= 0.8:
-        grade = "B"
+        grade = 'B'
     elif score >= 0.7:
-        grade = "C"
+        grade = 'C'
     elif score >= 0.6:
-        grade = "D"
-
+        grade = 'D'
     return grade

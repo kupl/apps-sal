@@ -20,5 +20,5 @@ def balanced_num(number):
         elif i > right:
             rightSum += n
     if rightSum == leftSum:
-        return "Balanced"
-    return "Not Balanced"
+        return 'Balanced'
+    return 'Not Balanced'

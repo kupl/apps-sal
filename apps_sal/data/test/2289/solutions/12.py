@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
-
 import bisect
-
 [n, q] = list(map(int, input().strip().split()))
 ais = list(map(int, input().strip().split()))
 kis = list(map(int, input().strip().split()))
-
 iais = [0 for _ in range(n + 1)]
 for i in range(n):
     iais[i + 1] = iais[i] + ais[i]
@@ -29,8 +25,6 @@ def lsearch(v, xmin, xmax):
 
 
 thrs = (iais[-1] // n + 1) * 440
-
-
 s = 0
 tot = iais[-1]
 prevr = 0

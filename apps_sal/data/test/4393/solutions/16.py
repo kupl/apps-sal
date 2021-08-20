@@ -3,7 +3,7 @@ def read_nums():
 
 
 def main():
-    n, = read_nums()
+    (n,) = read_nums()
     cipher = input()
     i = 0
     d = 1

@@ -1,7 +1,6 @@
-n, m, d = map(int, input().split())
+(n, m, d) = map(int, input().split())
 a = list(map(int, input().split()))
 a = sorted([(a[i], i) for i in range(n)])
-
 right = 0
 left = 0
 day = 0

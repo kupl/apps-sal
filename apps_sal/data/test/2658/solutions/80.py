@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 lsA = [0] + list(map(int, input().split()))
 ls = []
 set1 = set()

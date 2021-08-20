@@ -26,7 +26,7 @@ try:
                     if j < num - 1 and arr[j + 1] == 2:
                         dpr[i] = dp[i - 1] * (count + 1)
                     else:
-                        dpr[i] = dp[i - 1] * (count)
+                        dpr[i] = dp[i - 1] * count
                 elif count % 2 == 0:
                     dpr[i] = dp[i - 1] * (count - 1)
             ans += dpr[i] + dp[i]

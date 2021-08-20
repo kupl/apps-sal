@@ -1,15 +1,12 @@
 from sys import stdin
 from fractions import gcd
-
 n = int(stdin.readline().strip())
 v = list(map(int, stdin.readline().strip().split()))
-
 adj = [[] for _ in range(n)]
 for _ in range(n - 1):
-    x, y = list(map(int, stdin.readline().strip().split()))
+    (x, y) = list(map(int, stdin.readline().strip().split()))
     adj[x - 1].append(y - 1)
     adj[y - 1].append(x - 1)
-
 root_divisors = []
 cnt = [0] * 200001
 d = 1
@@ -51,5 +48,4 @@ while s:
         for d in root_divisors:
             if v[x] % d == 0:
                 cnt[d] -= 1
-
 print(' '.join(list(map(str, res1))))

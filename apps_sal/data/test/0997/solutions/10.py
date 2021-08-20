@@ -10,10 +10,10 @@ def is_num(s):
     return True
 
 
-a = list(input().split(sep=","))
+a = list(input().split(sep=','))
 b = []
 for i in a:
-    t = list(i.split(sep=";"))
+    t = list(i.split(sep=';'))
     for j in t:
         b.append(j)
 ans = []
@@ -21,18 +21,18 @@ ans2 = []
 for i in range(len(b)):
     if is_num(b[i]):
         ans.append(b[i])
-        b[i] = "*"
+        b[i] = '*'
     else:
         ans2.append(b[i])
 if len(ans) == 0:
-    print("-")
+    print('-')
 else:
-    print("\"", end="")
-    print(*ans, sep=",", end="")
-    print("\"")
+    print('"', end='')
+    print(*ans, sep=',', end='')
+    print('"')
 if len(ans2) == 0:
-    print("-")
+    print('-')
 else:
-    print("\"", end="")
-    print(*ans2, sep=",", end="")
-    print("\"")
+    print('"', end='')
+    print(*ans2, sep=',', end='')
+    print('"')

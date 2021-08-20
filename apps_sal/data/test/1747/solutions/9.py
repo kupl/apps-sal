@@ -1,8 +1,6 @@
-
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     element_count = [0] * 1000001
-
     count = 0
     a = list(map(int, input().split()))
     s = 0
@@ -20,7 +18,6 @@ def main():
             res = t - s + 1
             l = s
             r = t
-
     print(l + 1, r + 1)
 
 

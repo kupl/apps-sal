@@ -1,5 +1,5 @@
 n = input()
-x, y = n.split()
+(x, y) = n.split()
 y = int(y)
 su = 0
 for i in range(1, int(x) + 1):

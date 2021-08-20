@@ -1,6 +1,5 @@
-n, t = list(map(int, input().split()))
+(n, t) = list(map(int, input().split()))
 li = [list(map(int, input().split())) for i in range(n)]
-
 lis = []
 for i in li:
     if i[1] <= t:
@@ -8,4 +7,4 @@ for i in li:
 if len(lis) == 0:
     print('TLE')
 else:
-    print((min(lis)))
+    print(min(lis))

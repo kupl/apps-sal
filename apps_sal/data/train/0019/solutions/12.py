@@ -1,6 +1,6 @@
 for i in range(int(input())):
     a = list(map(int, input().split()))
-    n, k, d = a[0], a[1], a[2]
+    (n, k, d) = (a[0], a[1], a[2])
     a = list(map(int, input().split()))
     di = dict()
     m = 0

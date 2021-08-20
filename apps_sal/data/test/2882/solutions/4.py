@@ -1,4 +1,5 @@
 class Solution:
+
     def generateParenthesis(self, n):
         """
         :type n: int
@@ -14,6 +15,5 @@ class Solution:
                 backtrack(left + 1, right, tmp + '(')
             if left > right:
                 backtrack(left, right + 1, tmp + ')')
-
         backtrack()
         return ret

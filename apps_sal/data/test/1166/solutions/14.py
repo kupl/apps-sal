@@ -1,5 +1,4 @@
 from math import ceil
-
 n = int(input())
 r = list(map(int, input().split()))
 l = [-1]
@@ -25,15 +24,11 @@ for i in range(1, n + 1):
         if l[s] > x:
             d[i].append(s)
         s -= x
-
 ans = 0
-
 for i in d:
     if len(d[i]) == 0:
         a[i] = 'B'
         ans += 1
-# print(a)
-# print(d[5])
 while ans != n:
     for i in d:
         dont = False
@@ -50,5 +45,4 @@ while ans != n:
             if not dont:
                 a[i] = 'B'
                 ans += 1
- #   print(a)
 print(''.join(a))

@@ -15,9 +15,6 @@ def time(i, free):
 
 n = int(input().strip())
 minutes = list(map(int, input().strip().split()))
-
 sys.setrecursionlimit(3 * n)
-
 mt = [[-1 for i in range(3)] for j in range(n)]
-
 print(time(0, 0))

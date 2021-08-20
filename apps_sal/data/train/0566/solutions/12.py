@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for z in range(t):
     a = input()
@@ -6,6 +5,6 @@ for z in range(t):
     s1 = set(a)
     s2 = set(b)
     if s1 & s2:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

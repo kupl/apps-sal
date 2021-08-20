@@ -1,6 +1,4 @@
 import math
-
-# init
 maxn = 55
 g = [1]
 for i in range(maxn):
@@ -56,13 +54,13 @@ def solve(n, k):
 
 
 def SOLVE():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if k > f[n]:
         print(-1)
         return
     ans = solve(n, k)
     for x in ans:
-        print(x, end=" ")
+        print(x, end=' ')
     print()
 
 

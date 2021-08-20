@@ -1,12 +1,10 @@
 li = list(map(int, input().split()))
 li1 = list(map(int, input().split()))
 li2 = list(map(int, input().split()))
-
 n = int(input())
 li3 = []
 for i in range(n):
     li3.append(int(input()))
-
 for i in range(3):
     if li[i] in li3:
         li[i] = 0

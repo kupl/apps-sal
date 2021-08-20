@@ -4,8 +4,7 @@ def nth_fib(n):
         return 0
     if n == 1:
         return 1
-    a, b, p, q = 1, 0, 0, 1
-
+    (a, b, p, q) = (1, 0, 0, 1)
     while n > 0:
         if n % 2 == 0:
             tp = p

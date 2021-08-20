@@ -1,9 +1,6 @@
-# solution
-
 import io
 import sys
 import math
-
 data = input()
 n = len(data)
 ans = n

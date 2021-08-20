@@ -1,7 +1,3 @@
-# import numpy as np
-# import sys
-
-# q=int(input())
 mod = 1000000007
 dp = [(0, 0), (0, 0)]
 for i in range(2, 2000001):

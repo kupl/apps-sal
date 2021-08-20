@@ -1,4 +1,4 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 datp = sorted(list(map(int, input().split())), reverse=True)
 datq = sorted(list(map(int, input().split())), reverse=True)
 datr = list(map(int, input().split()))

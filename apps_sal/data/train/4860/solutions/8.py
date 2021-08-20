@@ -8,9 +8,8 @@ def amidakuji(ar):
                 if line[pos - 1] == '1':
                     pos -= 1
                     move = True
-            if pos < len(line) and not move:
+            if pos < len(line) and (not move):
                 if line[pos] == '1':
                     pos += 1
         results[pos] = i
-
     return results

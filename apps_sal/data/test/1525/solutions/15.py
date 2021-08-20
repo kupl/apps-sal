@@ -1,8 +1,8 @@
-h, w, k = list(map(int, input().split()))
+(h, w, k) = list(map(int, input().split()))
 k -= 1
 dp = [[0] * w for _ in range(h + 1)]
 dp[0][0] = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def cnt(n):
@@ -23,4 +23,4 @@ for i in range(h):
             dp[i + 1][j + 1] %= mod
         dp[i + 1][j] += dp[i][j] * cnt(j - 1) * cnt(w - 2 - j)
         dp[i + 1][j] %= mod
-print((dp[h][k]))
+print(dp[h][k])

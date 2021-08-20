@@ -1,6 +1,5 @@
 import sys
 from collections import Counter
-
 sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 
@@ -15,8 +14,6 @@ def main():
     for a in aa:
         s += a
         cs += [s]
-    # print(aa)
-    # print(cs)
     ans = n + 1
     i = len(aa)
     for k in range(1, n + 1):

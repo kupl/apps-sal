@@ -1,10 +1,10 @@
-A, B, C, D = lambda: map(int, input().split()), range, min, max
-n, q = A()
-a, b = [n] * n, [n] * n
-h, w = n, n
-E = (n - 2)**2
+(A, B, C, D) = (lambda: map(int, input().split()), range, min, max)
+(n, q) = A()
+(a, b) = ([n] * n, [n] * n)
+(h, w) = (n, n)
+E = (n - 2) ** 2
 for _ in B(q):
-    Q, x = A()
+    (Q, x) = A()
     if Q - 1:
         for i in B(x, D(x, h)):
             b[i - 1] = w

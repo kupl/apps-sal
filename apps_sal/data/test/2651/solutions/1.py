@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = [x for x in map(int, input().split())]
 y = [y for y in map(int, input().split())]
 sum_x = 0

@@ -1,8 +1,7 @@
-# cook your dish here
 import math
 T = int(input())
 for _ in range(T):
-    N, H = map(int, input().split())
+    (N, H) = map(int, input().split())
     A = list(map(int, input().split()))
     A.sort()
     low = 1
@@ -13,7 +12,6 @@ for _ in range(T):
         mid = low + (high - low) // 2
         for i in range(N):
             time += int((A[i] + mid - 1) / mid)
-
         if time <= H:
             ans = mid
             high = mid - 1

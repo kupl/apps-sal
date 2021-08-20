@@ -1,15 +1,14 @@
-n, a, b = list(map(int, input().split()))
-inp = input().split("*")
+(n, a, b) = list(map(int, input().split()))
+inp = input().split('*')
 L = []
 for i in inp:
     L.append(len(i))
-
 out = 0
 for i in L:
     c1 = i // 2
     c2 = i - c1
     if b < a:
-        a, b = b, a
+        (a, b) = (b, a)
     if a < c1:
         out += a
         a = 0

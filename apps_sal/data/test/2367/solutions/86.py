@@ -1,5 +1,5 @@
 from math import comb
-h, w, a, b = list(map(int, input().split()))
+(h, w, a, b) = list(map(int, input().split()))
 s = 0
 nC = b - 1
 kC = 0
@@ -15,7 +15,7 @@ for i in range(1, 200001):
 
 
 def ncr(n, r, p):
-    return (fac[n] * pow(fac[r], p - 2, p) % p * pow(fac[n - r], p - 2, p) % p)
+    return fac[n] * pow(fac[r], p - 2, p) % p * pow(fac[n - r], p - 2, p) % p
 
 
 for i in range(h - a):

@@ -6,12 +6,7 @@ for i in range(N):
     for j in range(N - 1):
         a[i][j] = line[j] - 1
     a[i] = a[i][::-1]
-
 q = []
-
-#seen=[[False for j in range(N)] for i in range(N)]
-
-# 選手nが試合できるならqueに入れる
 
 
 def check(i):
@@ -24,12 +19,9 @@ def check(i):
 
 for i in range(N):
     check(i)
-
-
 day = 0
 while q:
     day += 1
-   # q=sorted(q)
     prevQ = q.copy()
     q = []
     matched = defaultdict(list)
@@ -37,7 +29,7 @@ while q:
         i = p[0]
         j = p[1]
         if i > j:
-            i, j = j, i
+            (i, j) = (j, i)
         if matched[i]:
             continue
         a[i].pop()
@@ -45,10 +37,9 @@ while q:
         check(i)
         check(j)
         matched[i].append(j)
-
 for i in range(N):
     if len(a[i]) != 0:
-        print((-1))
+        print(-1)
         break
 else:
     print(day)

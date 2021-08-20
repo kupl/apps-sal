@@ -9,24 +9,22 @@ def fun(string):
             if not saw:
                 saw = True
                 last = string[i]
-    return amount, last
+    return (amount, last)
 
 
 def main():
     n = int(input())
-    # to hack this solution write any test with n == 2e5, TLE
     words = {}
     sizesandlasts = {}
     sizes = set()
     for i in range(n):
         s = input()
-        pair = size, last = fun(s)
+        pair = (size, last) = fun(s)
         sizes.add(size)
         words[s] = pair
         if pair not in sizesandlasts:
             sizesandlasts[pair] = []
         sizesandlasts[pair].append(s)
-
     second = []
     first = {}
     for length in sizes:
@@ -39,7 +37,6 @@ def main():
                 if size not in first:
                     first[size] = []
                 first[size].append(text.pop())
-
     ans = []
     for size in first:
         if len(second) == 0:
@@ -51,8 +48,8 @@ def main():
         ans.append([second.pop(), second.pop()])
     print(len(ans))
     for i in range(len(ans)):
-        print("{} {}".format(ans[i][0][0], ans[i][1][0]))
-        print("{} {}".format(ans[i][0][1], ans[i][1][1]))
+        print('{} {}'.format(ans[i][0][0], ans[i][1][0]))
+        print('{} {}'.format(ans[i][0][1], ans[i][1][1]))
 
 
 gay = set()

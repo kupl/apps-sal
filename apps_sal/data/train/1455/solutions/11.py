@@ -1,7 +1,7 @@
 n = eval(input())
 a = list(map(int, input().split()))
 for i in range(eval(input())):
-    l, r = (int(x) for x in input().split())
+    (l, r) = (int(x) for x in input().split())
     b = a[l - 1:r]
     b.sort()
     sum = 0

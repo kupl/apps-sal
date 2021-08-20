@@ -1,18 +1,16 @@
-# 445B
-
 __author__ = 'artyom'
 
 
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, m = read()
+(n, m) = read()
 graph = [set() for _ in range(n + 1)]
 for __ in range(m):
-    x, y = read()
+    (x, y) = read()
     graph[x].add(y)
     graph[y].add(x)
-
 visited = set()
 
 
@@ -31,5 +29,4 @@ res = 1
 for v in range(1, n + 1):
     if v not in visited:
         res = dfs(v, res)
-
 print(res)

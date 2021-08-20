@@ -1,7 +1,7 @@
 def operator_insertor(total):
-    q = [(total, "123456789", 0)]
+    q = [(total, '123456789', 0)]
     while q:
-        s, n, d = q.pop(0)
+        (s, n, d) = q.pop(0)
         if int(n) == s:
             return d
         for i in range(0, len(n) - 1):

@@ -1,6 +1,5 @@
 from functools import reduce
 import operator
-
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -8,7 +7,7 @@ for _ in range(t):
     suspect = ds[0] * ds[-1]
     pfs = []
     g = suspect
-    for i in range(2, int(g**0.5) + 1):
+    for i in range(2, int(g ** 0.5) + 1):
         if g % i == 0:
             pfs.append([0, i])
             while g % i == 0:

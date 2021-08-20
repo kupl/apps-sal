@@ -1,13 +1,12 @@
 def array_equalization(a, k):
     sum = {}
-    for i, n in enumerate(a):
+    for (i, n) in enumerate(a):
         arr = sum.get(n)
         if not arr:
             sum[n] = [i]
         else:
             sum[n].append(i)
-    print((list(sum.values())))
-
+    print(list(sum.values()))
     times_arr = []
     for arr in list(sum.values()):
         i = 0
@@ -25,5 +24,4 @@ def array_equalization(a, k):
             if pos >= len(a):
                 break
         times_arr.append(times)
-
     return min(times_arr)

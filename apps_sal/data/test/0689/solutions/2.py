@@ -13,22 +13,17 @@ def main():
                 dct[k] = 1
     for i in dct:
         if dct[i] % n != 0:
-            print("NO")
+            print('NO')
             return
-    print("YES")
+    print('YES')
 
 
 def __starting_point():
     t = int(input())
-
     for i in range(t):
         main()
 
 
-"""
-60, 61
-"""
-"""
-"""
-
+'\n60, 61\n'
+'\n'
 __starting_point()

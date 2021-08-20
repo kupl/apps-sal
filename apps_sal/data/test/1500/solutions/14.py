@@ -1,9 +1,9 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 x = [int(i) for i in input().split()]
 count = 1
 i = 0
 f = False
-while (x[i] + k < x[-1]):
+while x[i] + k < x[-1]:
     if x[i] + k in x:
         i = x.index(x[i] + k)
     else:

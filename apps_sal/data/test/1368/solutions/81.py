@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 try:
     from typing import List
@@ -16,10 +15,10 @@ def comb(n: int, r: int):
     return p // q
 
 
-def solve(N: int, A: int, B: int, v: "List[int]"):
+def solve(N: int, A: int, B: int, v: 'List[int]'):
     v.sort(reverse=True)
     sl = v[:A]
-    print((sum(sl) / A))
+    print(sum(sl) / A)
     if len(set(sl)) == 1:
         m = sl[0]
         cm = v.count(m)
@@ -30,19 +29,20 @@ def solve(N: int, A: int, B: int, v: "List[int]"):
     else:
         m = sl[-1]
         cm = v.count(m)
-        print((comb(cm, sl.count(m))))
+        print(comb(cm, sl.count(m)))
 
 
 def main():
+
     def iterate_tokens():
         for line in sys.stdin:
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    N = int(next(tokens))  # type: int
-    A = int(next(tokens))  # type: int
-    B = int(next(tokens))  # type: int
-    v = [int(next(tokens)) for _ in range(N)]  # type: "List[int]"
+    N = int(next(tokens))
+    A = int(next(tokens))
+    B = int(next(tokens))
+    v = [int(next(tokens)) for _ in range(N)]
     solve(N, A, B, v)
 
 

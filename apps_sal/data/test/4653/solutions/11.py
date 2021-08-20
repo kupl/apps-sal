@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, k = mints()
+    (n, k) = mints()
     x = n // k
     r = n % k
     if r > k // 2:

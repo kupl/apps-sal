@@ -1,12 +1,14 @@
 from itertools import accumulate
-def acc(X): return list(accumulate(X))
 
 
-N, M = map(int, input().split())
+def acc(X):
+    return list(accumulate(X))
+
+
+(N, M) = map(int, input().split())
 A = [int(a) - 1 for a in input().split()]
-
-X = [0] * M  # 1,1,1,...
-Y = [0] * M  # 1,2,3,...
+X = [0] * M
+Y = [0] * M
 
 
 def tri(l, r, a=1):
@@ -32,8 +34,6 @@ def calc(a, b):
         tri(0, b)
         box(0, b, -a + M - 2)
 
-    # print(a, b, X, Y, rev())
-
 
 def rev():
     ret = acc(Y)
@@ -45,8 +45,6 @@ ans = 0
 for i in range(1, N):
     ans += (A[i] - A[i - 1]) % M
     calc(A[i - 1], A[i])
-
 X = rev()
-# print(X)
 ans -= max(X)
 print(ans)

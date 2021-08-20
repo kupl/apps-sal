@@ -1,5 +1,5 @@
 def gcd(a, b):
-    while(b != 0):
+    while b != 0:
         a %= b
         t = a
         a = b
@@ -8,7 +8,7 @@ def gcd(a, b):
 
 
 def main():
-    a, b = list(map(int, input().split(' ')))
+    (a, b) = list(map(int, input().split(' ')))
     gg = gcd(a, b)
     ans = 0
     can = 1
@@ -16,7 +16,7 @@ def main():
     A.append(a / gg)
     A.append(b / gg)
     for g in A:
-        while(g != 1):
+        while g != 1:
             ok = 0
             if g % 2 == 0:
                 g = g / 2
@@ -33,9 +33,8 @@ def main():
             if ok == 0:
                 can = 0
                 break
-
     if can == 0:
-        print("-1")
+        print('-1')
     else:
         print(ans)
 

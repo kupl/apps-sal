@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         m = 10 ** 9 + 7
         c = Counter(s)
@@ -11,11 +12,10 @@ class Solution:
         a = 0
         b = 0
         for i in range(len(s)):
-            if count == (ones // 3):
+            if count == ones // 3:
                 a += 1
-            if count == (2 * ones // 3):
+            if count == 2 * ones // 3:
                 b += 1
             if s[i] == '1':
                 count += 1
-        # print(a,b)
-        return (a * b % m)
+        return a * b % m

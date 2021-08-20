@@ -2,12 +2,12 @@ import re
 
 
 def top_3_words(text):
-    panctuation = '_\''
-    list_word = re.findall(r'[a-z0-9A-Z\']+', text.lower())
+    panctuation = "_'"
+    list_word = re.findall("[a-z0-9A-Z\\']+", text.lower())
     result = []
     dict1 = {}
     for word in list_word:
-        if word and word != "'" and word != "'''":
+        if word and word != "'" and (word != "'''"):
             if word in dict1:
                 dict1[word] += 1
             else:

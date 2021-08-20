@@ -5,4 +5,3 @@ def max_tri_sum(numbers):
             numbers_lst.append(i)
             numbers_lst.sort()
     return sum(numbers_lst[-3:])
-    # your code here

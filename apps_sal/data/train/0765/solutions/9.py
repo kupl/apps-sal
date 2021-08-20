@@ -1,4 +1,4 @@
-M = 10**9 + 7
+M = 10 ** 9 + 7
 n = int(input())
 f = list(map(int, input().split()))
 q = int(input())

@@ -10,5 +10,4 @@ for i in range(1, N):
         tmp = 0
     ans = max(ans, tmp)
     num = H[i]
-
 print(ans)

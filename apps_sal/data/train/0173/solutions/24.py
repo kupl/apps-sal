@@ -1,4 +1,5 @@
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         dic = defaultdict(int)
         for u in arr:
@@ -7,7 +8,6 @@ class Solution:
             if i == 0:
                 if dic[0] % 2 != 0:
                     return False
-            else:
-                if dic[i] != dic[k - i]:
-                    return False
+            elif dic[i] != dic[k - i]:
+                return False
         return True

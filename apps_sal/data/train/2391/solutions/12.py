@@ -1,12 +1,10 @@
-#!/usr/bin/env python3
-
 import heapq
 import sys
 input = sys.stdin.readline
 
 
 def shift(k, arr):
-    arr[k], arr[k + 1], arr[k + 2] = arr[k + 2], arr[k], arr[k + 1]
+    (arr[k], arr[k + 1], arr[k + 2]) = (arr[k + 2], arr[k], arr[k + 1])
 
 
 def solve(pos, cnt, ans, arr):
@@ -34,14 +32,14 @@ def solve(pos, cnt, ans, arr):
                 shift(tpos, arr)
                 shift(tpos, arr)
             pos += 1
-    return cnt, ans
+    return (cnt, ans)
 
 
 t = int(input())
 for _ in range(t):
     n = int(input())
     arr = list(map(int, input().split()))
-    cnt, ans = solve(0, 0, [], arr)
+    (cnt, ans) = solve(0, 0, [], arr)
     if arr[n - 2] <= arr[n - 1]:
         print(cnt)
         print(*ans)
@@ -57,7 +55,7 @@ for _ in range(t):
             ans.append(ttpos + 1)
             shift(ttpos, arr)
             shift(ttpos, arr)
-            cnt, ans = solve(0, cnt, ans, arr)
+            (cnt, ans) = solve(0, cnt, ans, arr)
             print(cnt)
             print(*ans)
         else:

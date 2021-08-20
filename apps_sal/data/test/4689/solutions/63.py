@@ -1,7 +1,8 @@
-def f(): return [*map(int, input().split())]
+def f():
+    return [*map(int, input().split())]
 
 
-k, n = f()
+(k, n) = f()
 l = f()
 l += [l[0] + k]
 a = 0

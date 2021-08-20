@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         if len(B) == 0:
             return []
@@ -12,7 +13,6 @@ class Solution:
             lb = Counter(B[i])
             for c in lb:
                 cb[c] = max(cb[c], lb[c])
-
         for i in range(len(A)):
             isUniv = True
             if len(cb - ca[i]) > 0:

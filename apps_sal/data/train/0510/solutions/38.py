@@ -7,8 +7,8 @@ d = defaultdict(list)
 for i in range(n):
     d[s[i]] += [i]
 for _ in range(q):
-    t, i, c = input().split()
-    t, i = int(t), int(i) - 1
+    (t, i, c) = input().split()
+    (t, i) = (int(t), int(i) - 1)
     if t == 1:
         if s[i] == c:
             continue

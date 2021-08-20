@@ -1,10 +1,11 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 g = [list() for i in range(n + 1)]
 for i in range(m):
-    a, b = read()
+    (a, b) = read()
     g[a].append(b)
     g[b].append(a)
 

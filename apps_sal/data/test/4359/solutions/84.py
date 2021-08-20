@@ -3,7 +3,7 @@ def ans123(A: int, B: int, C: int, D: int, E: int):
     number = 0
     minnum = 0
     min = 1
-    if A % 10 == 0 and B % 10 == 0 and C % 10 == 0 and D % 10 == 0 and E % 10 == 0:
+    if A % 10 == 0 and B % 10 == 0 and (C % 10 == 0) and (D % 10 == 0) and (E % 10 == 0):
         return A + B + C + D + E
     else:
         for i in range(5):
@@ -21,4 +21,4 @@ B = int(input())
 C = int(input())
 D = int(input())
 E = int(input())
-print((ans123(A, B, C, D, E)))
+print(ans123(A, B, C, D, E))

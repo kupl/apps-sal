@@ -1,13 +1,13 @@
-def f(c): return 'mps'.index(c)
+def f(c):
+    return 'mps'.index(c)
 
 
 l = [[], [], []]
 for c in input().split():
-    a, b = c
+    (a, b) = c
     l[f(b)].append(int(a))
 for i in range(3):
     l[i].sort()
-
 res = 3
 for x in l:
     if len(x) == 0:

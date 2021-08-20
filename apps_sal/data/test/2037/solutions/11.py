@@ -1,6 +1,5 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 tasks = list(map(int, input().split()))
-
 bank = [0] * n
 zeros = n
 res = []
@@ -16,5 +15,4 @@ for t in tasks:
         res.append(1)
     else:
         res.append(0)
-
 print(*res, sep='')

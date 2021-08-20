@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -45,7 +45,6 @@ class Main:
                     low2 = mid
                 else:
                     high2 = mid
-
             if not self.test_low(low1, n, kk) or not self.test_high(low2, n, kk):
                 print('NO')
                 return

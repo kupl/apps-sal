@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    sys.setrecursionlimit(1000000)  # recursion limit hack
+    sys.setrecursionlimit(1000000)
     buf = input()
     N = int(buf)
     a = []
@@ -24,7 +24,7 @@ def main():
     snuke_base = path[split_point:len(path)]
     fennec_vertex_count = len(fennec_base)
     snuke_vertex_count = len(snuke_base)
-    for i, v in enumerate(fennec_base):
+    for (i, v) in enumerate(fennec_base):
         for j in graph[v]:
             if i != 0:
                 if j == fennec_base[i - 1]:
@@ -32,26 +32,24 @@ def main():
             if i != len(fennec_base) - 1:
                 if j == fennec_base[i + 1]:
                     continue
-            else:
-                if j == snuke_base[0]:
-                    continue
+            elif j == snuke_base[0]:
+                continue
             fennec_vertex_count += get_vertex_count(graph, v, j)
-    for i, v in enumerate(snuke_base):
+    for (i, v) in enumerate(snuke_base):
         for j in graph[v]:
             if i != 0:
                 if j == snuke_base[i - 1]:
                     continue
-            else:
-                if j == fennec_base[-1]:
-                    continue
+            elif j == fennec_base[-1]:
+                continue
             if i != len(snuke_base) - 1:
                 if j == snuke_base[i + 1]:
                     continue
             snuke_vertex_count += get_vertex_count(graph, v, j)
     if fennec_vertex_count > snuke_vertex_count:
-        print("Fennec")
+        print('Fennec')
     else:
-        print("Snuke")
+        print('Snuke')
 
 
 def find_path(graph, current, target, path):

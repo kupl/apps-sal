@@ -1,16 +1,10 @@
 import math
 import sys
 import os
-
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 step = list(map(int, input().split()))
-
-
 step.sort()
 step.reverse()
-
-
 if n > k:
     z = int(round(n / k + 0.5))
     res = 0

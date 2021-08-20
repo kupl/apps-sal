@@ -1,14 +1,12 @@
 class Solution:
+
     def canTransform(self, start, end):
         """
         :type start: str
         :type end: str
         :rtype: bool
         """
-        previous = {
-            'L': 'X',
-            'X': 'R'
-        }
+        previous = {'L': 'X', 'X': 'R'}
         if len(start) != len(end):
             return False
         start = list(start)

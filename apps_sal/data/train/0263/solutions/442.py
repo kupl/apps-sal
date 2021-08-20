@@ -1,14 +1,14 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         M = 4
         N = 3
         KMOD = 10 ** 9 + 7
-        dp = [[1 for _ in range(N)] for _ in range(M)]  # init as 1 for 0/1 hops
+        dp = [[1 for _ in range(N)] for _ in range(M)]
         dp[3][0] = dp[3][2] = 0
-        directions = [(1, 2), (-1, -2), (1, -2), (-1, 2),
-                      (2, 1), (-2, -1), (2, -1), (-2, 1), ]
-        for _ in range(1, n):  # starts from 1 hop
-            cur = [[0 for _ in range(N)] for _ in range(M)]  # cur init as 0
+        directions = [(1, 2), (-1, -2), (1, -2), (-1, 2), (2, 1), (-2, -1), (2, -1), (-2, 1)]
+        for _ in range(1, n):
+            cur = [[0 for _ in range(N)] for _ in range(M)]
             for i in range(M):
                 for j in range(N):
                     if i == 3 and (j == 0 or j == 2):

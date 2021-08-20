@@ -1,4 +1,5 @@
 class dsu:
+
     def __init__(self, n):
         self.ranks = [0] * n
         self.ids = list(range(n))
@@ -29,6 +30,7 @@ class dsu:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         d = dsu(len(points))
         lst = []

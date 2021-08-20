@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     a = str(input())
@@ -6,9 +5,9 @@ for _ in range(t):
     k = 0
     for i in a:
         for j in b:
-            if(i == j):
+            if i == j:
                 k += 1
-    if(k > 0):
+    if k > 0:
         print('Yes')
     else:
         print('No')

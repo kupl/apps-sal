@@ -1,10 +1,9 @@
-# cook your dish here
 for tc in range(int(input())):
     N1 = int(input())
     P1 = set()
     Q1 = set()
     for i in range(4 * N1 - 1):
-        firt, sec1 = map(int, input().split())
+        (firt, sec1) = map(int, input().split())
         if firt in P1:
             P1.remove(firt)
         else:

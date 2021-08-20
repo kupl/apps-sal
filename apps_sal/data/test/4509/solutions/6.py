@@ -7,9 +7,7 @@ def ff(l, r, n):
 
 
 for _ in range(int(input())):
-    # n = int(input())
-    # arr = list(map(int, input().split()))
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     k -= 1
     s = 1
     while k > 0:
@@ -23,5 +21,4 @@ for _ in range(int(input())):
             s += 1
             if s % n == 0:
                 s += 1
-
     print(s)

@@ -2,8 +2,9 @@ from bisect import bisect, bisect_left
 
 
 class BisectSearch:
+
     @staticmethod
-    def search_float(f, l=0, r=10**9, epsilon=1e-9, return_left=False):
+    def search_float(f, l=0, r=10 ** 9, epsilon=1e-09, return_left=False):
         assert f(l) and (not f(r))
         while r - l > epsilon:
             m = (r + l) / 2
@@ -16,7 +17,7 @@ class BisectSearch:
         return r
 
     @staticmethod
-    def search_int(f, l=0, r=10**9, return_left=False):
+    def search_int(f, l=0, r=10 ** 9, return_left=False):
         assert f(l) and (not f(r))
         while r - l > 1:
             m = (r + l) // 2

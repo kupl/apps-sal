@@ -20,10 +20,10 @@ def SI():
 
 t = II()
 for q in range(t):
-    a, b, x, y, n = MI()
+    (a, b, x, y, n) = MI()
     if a - min(n, a - x) < b - min(n, b - y):
-        b, a = a, b
-        y, x = x, y
+        (b, a) = (a, b)
+        (y, x) = (x, y)
     temp = min(n, b - y)
     n -= temp
     b -= temp

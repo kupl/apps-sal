@@ -8,5 +8,3 @@ def sum_nested(L):
             return L[0] + sum_nested(L[1:])
     else:
         return sum_nested(L[0]) + sum_nested(L[1:])
-
-    # the sum of every numerical value in the list and its sublists

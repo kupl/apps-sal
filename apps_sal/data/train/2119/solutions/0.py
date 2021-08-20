@@ -3,7 +3,6 @@ n = int(input())
 aints = [int(i) for i in input().split()]
 permutes = [int(i) - 1 for i in input().split()]
 results = [0]
-
 rebuilt = {}
 m = 0
 for numby in range(n - 1, 0, -1):
@@ -15,8 +14,8 @@ for numby in range(n - 1, 0, -1):
     if p + 1 in rebuilt:
         above = True
     if above and below:
-        bsum, bottom = rebuilt[p - 1]
-        asum, top = rebuilt[p + 1]
+        (bsum, bottom) = rebuilt[p - 1]
+        (asum, top) = rebuilt[p + 1]
         new = bsum + asum + aints[p]
         rebuilt[bottom] = (new, top)
         rebuilt[top] = (new, bottom)
@@ -25,7 +24,7 @@ for numby in range(n - 1, 0, -1):
             other = p + 1
         else:
             other = p - 1
-        psum, prev = rebuilt[other]
+        (psum, prev) = rebuilt[other]
         new = psum + aints[p]
         rebuilt[prev] = (new, p)
         rebuilt[p] = (new, prev)

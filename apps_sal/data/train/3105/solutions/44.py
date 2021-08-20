@@ -1,5 +1,5 @@
 def count_sheep(n):
-    hold = ""
+    hold = ''
     for i in range(n):
-        hold += "{} sheep...".format(i + 1)
+        hold += '{} sheep...'.format(i + 1)
     return hold

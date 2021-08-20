@@ -1,4 +1,5 @@
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -13,13 +14,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -34,7 +32,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -43,15 +41,14 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ab = [list(map(int, input().split())) for _ in range(M)]
 ab = ab[::-1]
 uf = UnionFind(N)
 dli = [N * (N - 1) // 2] * M
-
 for i in range(M - 1):
     a = ab[i][0] - 1
     b = ab[i][1] - 1
@@ -59,9 +56,7 @@ for i in range(M - 1):
     if not uf.same(a, b):
         d = uf.size(a) * uf.size(b)
     uf.union(a, b)
-
     dli[i + 1] = dli[i] - d
-
 dli = dli[::-1]
 for el in dli:
     print(el)

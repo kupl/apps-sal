@@ -5,6 +5,6 @@ for i in range(n):
     polet = input()
     k = k + 1
 if k % 2 == 0:
-    print("home")
+    print('home')
 else:
-    print("contest")
+    print('contest')

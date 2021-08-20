@@ -4,10 +4,9 @@ input = sys.stdin.readline
 
 
 def main():
-    N, C = map(int, input().split())
+    (N, C) = map(int, input().split())
     D = [list(map(int, input().split())) for _ in range(C)]
     grid = [list(map(int, input().split())) for _ in range(N)]
-
     sup0 = [0] * C
     sup1 = [0] * C
     sup2 = [0] * C
@@ -19,9 +18,8 @@ def main():
                 sup0[grid[i][j] - 1] += 1
             elif (i + j) % 3 == 2:
                 sup1[grid[i][j] - 1] += 1
-
     ans = 10 ** 18
-    for i, j, k in permutations(range(C), 3):
+    for (i, j, k) in permutations(range(C), 3):
         tmp = 0
         for c in range(C):
             tmp += D[c][i] * sup0[c]

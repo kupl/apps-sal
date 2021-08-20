@@ -1,9 +1,10 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
-        start, finish = locations[start], locations[finish]
+        (start, finish) = (locations[start], locations[finish])
         locations.sort()
-        start, finish = locations.index(start), locations.index(finish)
+        (start, finish) = (locations.index(start), locations.index(finish))
         n = len(locations)
 
         @lru_cache(None)
@@ -26,5 +27,4 @@ class Solution:
                 else:
                     break
             return res
-
         return dp(start, fuel)

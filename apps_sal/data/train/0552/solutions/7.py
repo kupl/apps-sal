@@ -13,16 +13,11 @@ def kSmallest(lst, k, n):
 def solve():
     t = int(input())
     for _ in range(t):
-        n, k = [int(x) for x in input().split()]
+        (n, k) = [int(x) for x in input().split()]
         k = min(k, n - k)
         a = [int(x) for x in input().split()]
         b = kSmallest(a, k, n)
         print(abs(sum(a) - 2 * sum(b)))
 
 
-# import sys
-# def fast():
-#     sys.stdin = open("input.txt", "r")
-#     sys.stdout = open("output.txt", "w")
-# fast()
 solve()

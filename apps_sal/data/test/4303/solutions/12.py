@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 x = list(map(int, input().split()))
 mi = 10 ** 18
 for i in range(N - K + 1):

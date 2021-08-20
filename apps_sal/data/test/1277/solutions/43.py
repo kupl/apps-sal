@@ -1,14 +1,10 @@
 import sys
 from collections import defaultdict
-
-sys.setrecursionlimit(10**7)
-
-n, u, v = map(int, input().split())
-
+sys.setrecursionlimit(10 ** 7)
+(n, u, v) = map(int, input().split())
 graph = defaultdict(list)
-
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
 
@@ -30,11 +26,8 @@ def dfs(u):
 
 dist_u = dfs(u)
 dist_v = dfs(v)
-
-# 高橋くん（u）の方が近い頂点のうち、青木くん（v）から最も遠い頂点の一つ手前
 ans = 0
-for x, y in zip(dist_u, dist_v):
+for (x, y) in zip(dist_u, dist_v):
     if x < y:
         ans = max(ans, y - 1)
-
 print(ans)

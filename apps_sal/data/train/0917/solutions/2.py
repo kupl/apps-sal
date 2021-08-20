@@ -1,6 +1,6 @@
 from collections import *
 for u in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     d = []
     x = 100000000000000

@@ -1,5 +1,3 @@
-
-
 def is_cycle(seq, k):
     ii = 0
     for i in range(len(seq)):
@@ -12,15 +10,10 @@ def is_cycle(seq, k):
 
 
 n = int(input())
-
 A = [0] + [int(x) for x in input().split()]
-
 AA = []
 for i in range(1, len(A)):
     AA.append(A[i] - A[i - 1])
-
-# print("A: ", A)
-# print("AA: ", AA)
 cyqs = []
 for cyq in range(1, len(A)):
     if is_cycle(AA, cyq):

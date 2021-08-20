@@ -1,6 +1,6 @@
-region1 = "qwertyuiop"  # 10
-region2 = "asdfghjkl"  # 9
-region3 = "zxcvbnm,."  # 9
+region1 = 'qwertyuiop'
+region2 = 'asdfghjkl'
+region3 = 'zxcvbnm,.'
 
 
 def encrypt(text, encryptKey):
@@ -13,7 +13,6 @@ def encrypt(text, encryptKey):
         s = ['0', s[0], s[1]]
     else:
         s = str(encryptKey)
-
     ntext = ''
     for c in text:
         if c.lower() in region1:
@@ -33,13 +32,12 @@ def encrypt(text, encryptKey):
                 ind = region3.find(c.lower())
                 if c == c.lower():
                     ntext += region3[(ind + int(s[2])) % 9]
+                elif region3[(ind + int(s[2])) % 9] == ',':
+                    ntext += '<'
+                elif region3[(ind + int(s[2])) % 9] == '.':
+                    ntext += '>'
                 else:
-                    if region3[(ind + int(s[2])) % 9] == ',':
-                        ntext += '<'
-                    elif region3[(ind + int(s[2])) % 9] == '.':
-                        ntext += '>'
-                    else:
-                        ntext += region3[(ind + int(s[2])) % 9].upper()
+                    ntext += region3[(ind + int(s[2])) % 9].upper()
             if c == '<':
                 ind = region3.find(',')
                 q = region3[(ind + int(s[2])) % 9]
@@ -58,7 +56,6 @@ def encrypt(text, encryptKey):
                     ntext += '>'
                 else:
                     ntext += q.upper()
-
         else:
             ntext += c
     print(ntext)
@@ -68,7 +65,6 @@ def encrypt(text, encryptKey):
 def decrypt(text, encryptKey):
     print(text)
     print(encryptKey)
-
     s = str(encryptKey)
     if len(s) == 1:
         s = ['0', '0', encryptKey]
@@ -76,7 +72,6 @@ def decrypt(text, encryptKey):
         s = ['0', s[0], s[1]]
     else:
         s = str(encryptKey)
-
     ntext = ''
     for c in text:
         if c.lower() in region1:
@@ -96,13 +91,12 @@ def decrypt(text, encryptKey):
                 ind = region3.find(c.lower())
                 if c == c.lower():
                     ntext += region3[(ind - int(s[2])) % 9]
+                elif region3[(ind - int(s[2])) % 9] == ',':
+                    ntext += '<'
+                elif region3[(ind - int(s[2])) % 9] == '.':
+                    ntext += '>'
                 else:
-                    if region3[(ind - int(s[2])) % 9] == ',':
-                        ntext += '<'
-                    elif region3[(ind - int(s[2])) % 9] == '.':
-                        ntext += '>'
-                    else:
-                        ntext += region3[(ind - int(s[2])) % 9].upper()
+                    ntext += region3[(ind - int(s[2])) % 9].upper()
             if c == '<':
                 ind = region3.find(',')
                 q = region3[(ind - int(s[2])) % 9]
@@ -121,7 +115,6 @@ def decrypt(text, encryptKey):
                     ntext += '>'
                 else:
                     ntext += q.upper()
-
         else:
             ntext += c
     print(ntext)

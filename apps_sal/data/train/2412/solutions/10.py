@@ -1,9 +1,10 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
+
         def delete(S, index):
             S = S[:index] + S[index + 1:]
             return S
-
         stack = []
         stack_top = -1
         pointer = 0

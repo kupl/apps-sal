@@ -4,4 +4,4 @@ def seven(m):
     while len(str(m)) > 2:
         m = int(str(m)[:-1]) - 2 * int(str(m)[-1])
         s += 1
-    return(int(m), s)
+    return (int(m), s)

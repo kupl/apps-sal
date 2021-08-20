@@ -1,9 +1,7 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 n = int(input())
 a = list(map(int, input().split()))
-
 mat = [[0] * w for _ in range(h)]
-
 i = 0
 j = 0
 num = 1
@@ -19,13 +17,11 @@ while True:
             break
         i = 0
         j += 1
-
 for i in range(h):
     if i % 2 == 1:
         tmp = mat[i]
         tmp.reverse()
         mat[i] = tmp
-
 for i in range(h):
     for j in range(w - 1):
         print(mat[i][j], end=' ')

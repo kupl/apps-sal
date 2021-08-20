@@ -13,8 +13,6 @@ def kaibun_desuka(bun):
 
 
 if kaibun_desuka(kaibunkai) and kaibun_desuka(zenhan) and kaibun_desuka(kouhan):
-    print("Yes")
-
-
+    print('Yes')
 else:
-    print("No")
+    print('No')

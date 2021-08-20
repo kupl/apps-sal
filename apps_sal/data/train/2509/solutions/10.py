@@ -1,4 +1,5 @@
 class Solution:
+
     def minMoves(self, nums):
         """
         :type nums: List[int]
@@ -12,5 +13,4 @@ class Solution:
             else:
                 res += i * (nums_min - nums[i])
                 nums_min = nums[i]
-
         return res

@@ -1,10 +1,5 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def delNodes(self, root: TreeNode, to_delete: List[int]) -> List[TreeNode]:
         if root is None:
             return
@@ -20,7 +15,6 @@ class Solution:
         else:
             tovisit.append(root)
             result.append(root)
-
         while len(tovisit) > 0:
             new_tovisit = []
             for item in tovisit:

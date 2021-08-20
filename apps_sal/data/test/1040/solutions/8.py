@@ -1,6 +1,5 @@
 N = int(input())
 s = input()
-
 que = []
 for i in range(N):
     que.append(s[i])
@@ -8,4 +7,4 @@ for i in range(N):
         que.pop()
         que.pop()
         que.pop()
-print((len(que)))
+print(len(que))

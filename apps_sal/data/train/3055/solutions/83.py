@@ -1,6 +1,5 @@
 def sum_str(a, b):
-    #print(a, b)
-    if not a and not b:
+    if not a and (not b):
         x = 0
         y = 0
     elif not a:
@@ -12,5 +11,4 @@ def sum_str(a, b):
     else:
         x = int(a)
         y = int(b)
-
     return str(x + y)

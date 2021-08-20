@@ -1,5 +1,7 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def edit_dist(w1, w2):
             n = len(w1)
             m = len(w2)
@@ -25,13 +27,10 @@ class Solution:
                 for next_word in dic[n]:
                     if edit_dist(word, next_word):
                         recurse(next_word, length + 1)
-
         dic = collections.defaultdict(list)
-
         for word in words:
             dic[len(word)].append(word)
         max_l = 0
-
         for word in words:
             recurse(word, 1)
         return max_l

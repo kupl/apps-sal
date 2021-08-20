@@ -1,4 +1,4 @@
-n, t = input().split(' ')
+(n, t) = input().split(' ')
 s = input()
 s = list(s)
 t = int(t)

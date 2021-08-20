@@ -1,6 +1,6 @@
 def string_clean(s):
-    a = ""
+    a = ''
     for el in s:
-        if el not in "1234567890":
+        if el not in '1234567890':
             a += el
     return a

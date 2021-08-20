@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
 
         def build_graph(points):
@@ -12,24 +13,19 @@ class Solution:
 
         def min_span_tree(g):
             import heapq
-
             cost = 0
             min_heap = []
             heapq.heappush(min_heap, (0, 0))
             visited = set()
-
             while len(min_heap):
-                nxt_cost, idx = heapq.heappop(min_heap)
+                (nxt_cost, idx) = heapq.heappop(min_heap)
                 if idx in visited:
                     continue
                 visited.add(idx)
                 cost += nxt_cost
-                # print('visit', idx, nxt_cost, cost, visited, min_heap)
-
                 for adj in g[idx]:
                     if adj not in visited:
                         heapq.heappush(min_heap, (g[idx][adj], adj))
             return cost
-
         g = build_graph(points)
         return min_span_tree(g)

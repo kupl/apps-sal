@@ -5,4 +5,4 @@ def cookie(x):
         name = 'Zach'
     else:
         name = 'Monica'
-    return "Who ate the last cookie? It was {}!".format(name)
+    return 'Who ate the last cookie? It was {}!'.format(name)

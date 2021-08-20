@@ -1,21 +1,20 @@
 class Solution:
-    #from collections import deafal
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         s = set(A)
 
         def helper(i, j):
             ans = 2
-            while(True):
+            while True:
                 k = i + j
-                if(k in s and k <= 10**9):
+                if k in s and k <= 10 ** 9:
                     ans += 1
                     i = j
                     j = k
                 else:
                     break
             return ans
-
         c = 0
         for i in reversed(list(range(n - 2))):
             for j in reversed(list(range(i + 1, n - 1))):

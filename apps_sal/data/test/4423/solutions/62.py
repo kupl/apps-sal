@@ -13,12 +13,12 @@ def Atom(segment):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
     n = int(input())
-    data = [mapt(Atom, input().split(" ")) for _ in range(n)]
+    data = [mapt(Atom, input().split(' ')) for _ in range(n)]
     for i in range(n):
         data[i].append(i)
     data = sorted(data, key=lambda x: x[1], reverse=True)

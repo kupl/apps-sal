@@ -1,6 +1,5 @@
 import math
 T = int(input())
-
 for t in range(T):
     s = set()
     n = int(input())
@@ -9,6 +8,6 @@ for t in range(T):
             s.add(i)
             s.add(n / i)
     if len(s) % 2 != 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

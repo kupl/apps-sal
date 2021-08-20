@@ -2,6 +2,7 @@ import bisect
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
         last = N - 1
@@ -31,7 +32,6 @@ class Solution:
                 left = groupEndWith.pop(num)
                 groupStartWith.pop(left)
                 return (left, num)
-
             starts = sorted(list(groupStartWith.keys()))
             index = bisect.bisect_left(starts, num) - 1
             if index < 0:
@@ -53,49 +53,36 @@ class Solution:
             group = getGroup(num)
             if len(group) == 0:
                 return ()
-
-            left, right = group
+            (left, right) = group
             res = ()
             oldlen = right - left + 1
             if oldlen < m:
                 return ()
             decreaseGroupLength(oldlen)
-
             if num == left:
                 newlen = oldlen - 1
                 updateGroup(left + 1, right)
                 increaseGroupLength(newlen)
                 return (newlen,)
-
             if num == right:
                 newlen = oldlen - 1
                 updateGroup(left, right - 1)
                 increaseGroupLength(newlen)
                 return (newlen,)
-
             newLeftLen = num - left
             newRightLen = right - num
-
             if newLeftLen >= m:
                 updateGroup(left, num - 1)
                 increaseGroupLength(newLeftLen)
                 res = res + (newLeftLen,)
-
             if newRightLen >= m:
                 updateGroup(num + 1, right)
                 increaseGroupLength(newRightLen)
                 res = res + (newRightLen,)
-
             return res
-
         if m == N:
             return m
-
         for i in range(N, 0, -1):
-            #print(groupStartWith, i - 1, arr[i-1] - 1)
             if m in removeNumber(arr[i - 1] - 1):
-                #print(groupStartWith, i - 1, arr[i-1] - 1, '=')
                 return i - 1
-            #print(groupStartWith, i - 1, arr[i-1] - 1, '-')
-
-        return - 1
+        return -1

@@ -1,5 +1,5 @@
 def find_average(nums):
     try:
         return sum(nums) / len(nums)
-    except (ZeroDivisionError):
+    except ZeroDivisionError:
         return False

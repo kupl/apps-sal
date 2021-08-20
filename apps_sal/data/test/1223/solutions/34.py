@@ -1,14 +1,11 @@
 N = int(input())
 P = list(map(int, input().split()))
-
 left_bigger = [0] + [i for i in range(N + 1)]
 right_bigger = [i + 1 for i in range(N + 1)] + [N + 1]
-
-E = [(v, i + 1) for i, v in enumerate(P)]
+E = [(v, i + 1) for (i, v) in enumerate(P)]
 E.sort()
-
 ans = 0
-for v, i in E:
+for (v, i) in E:
     l0 = left_bigger[i]
     l1 = left_bigger[l0]
     r0 = right_bigger[i]

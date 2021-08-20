@@ -1,5 +1,5 @@
 from collections import Counter
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 ssum = [0] * (n + 1)
 for i in range(n):

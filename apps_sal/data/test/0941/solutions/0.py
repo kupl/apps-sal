@@ -1,4 +1,4 @@
-b, k = map(int, input().split())
+(b, k) = map(int, input().split())
 a = list(map(int, input().split()))
 r = 0
 for x in a:

@@ -1,4 +1,5 @@
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         self.quickselect(points, K, 0, len(points) - 1)
         return points[:K]
@@ -6,9 +7,7 @@ class Solution:
     def quickselect(self, points, k, lo, high):
         if lo >= high:
             return
-
         pivot = self.partition(points, lo, high)
-
         if pivot + 1 == k:
             return
         elif pivot < k:
@@ -19,14 +18,12 @@ class Solution:
     def partition(self, points, lo, high):
         pivot = self.dist(points[high])
         w = lo
-
         for r in range(lo, high):
             if self.dist(points[r]) < pivot:
-                points[w], points[r] = points[r], points[w]
+                (points[w], points[r]) = (points[r], points[w])
                 w += 1
-
-        points[w], points[high] = points[high], points[w]
+        (points[w], points[high]) = (points[high], points[w])
         return w
 
     def dist(self, pt):
-        return pt[0]**2 + pt[1]**2
+        return pt[0] ** 2 + pt[1] ** 2

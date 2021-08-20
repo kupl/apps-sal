@@ -17,7 +17,7 @@ def main():
     median = nums[k // 2]
     for i in range(k):
         ret += abs((nums[i] - median) // d)
-    sys.stdout.write("{}\n".format(ret))
+    sys.stdout.write('{}\n'.format(ret))
 
 
 main()

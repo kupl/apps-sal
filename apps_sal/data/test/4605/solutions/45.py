@@ -1,4 +1,4 @@
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 ans = []
 for i in range(1, N + 1):
     target = 0
@@ -6,5 +6,4 @@ for i in range(1, N + 1):
         target += int(str(i)[j])
     if A <= target <= B:
         ans.append(i)
-
-print((sum(ans)))
+print(sum(ans))

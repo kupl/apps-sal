@@ -1,4 +1,4 @@
-a, n, k = list(map(int, input().split()))
+(a, n, k) = list(map(int, input().split()))
 l = []
 c = 0
 while c != k:

@@ -1,25 +1,20 @@
 import sys
 import collections
 import copy
-
 input = sys.stdin.readline
 
 
 def main():
     N = int(input())
     A = [collections.deque([int(x) for x in input().split()]) for _ in range(N)]
-
     day = 0
     c = 0
     nxt = [x for x in range(N)]
     oppo = [0] * N
-
     while c != N * (N - 1):
         day += 1
-
         for i in nxt:
             oppo[i] = A[i].popleft() if A[i] else -1
-
         tmp = set()
         for i in nxt:
             if i == -1 or i in tmp:
@@ -29,11 +24,9 @@ def main():
                 tmp.add(oppo[i] - 1)
                 c += 2
         if not tmp:
-            print((-1))
+            print(-1)
             return
-
         nxt = tmp
-
     print(day)
 
 

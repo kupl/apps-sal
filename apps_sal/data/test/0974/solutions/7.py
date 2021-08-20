@@ -2,7 +2,6 @@ n = int(input())
 c = 1
 sorts = 0
 boxes = []
-
 for _ in range(2 * n):
     s = input()
     if s[0] == 'a':

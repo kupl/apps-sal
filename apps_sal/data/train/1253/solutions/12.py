@@ -1,5 +1,3 @@
-# cook your dish here
-
 def spread(arr):
     for i in range(len(arr)):
         a = list()
@@ -7,9 +5,9 @@ def spread(arr):
             if arr[i][j][0] == 1:
                 a.append(j)
         for j in range(len(a)):
-            if j == 0 and a[j] == 0 and len(arr[i]) > 1:
+            if j == 0 and a[j] == 0 and (len(arr[i]) > 1):
                 arr[i][1][0] = 1
-            elif j == len(a) - 1 and a[j] == len(arr[i]) - 1 and len(arr[i]) > 1:
+            elif j == len(a) - 1 and a[j] == len(arr[i]) - 1 and (len(arr[i]) > 1):
                 arr[i][a[j] - 1][0] = 1
             elif a[j] != 0 and a[j] != len(arr[i]) - 1:
                 arr[i][a[j] - 1][0] = arr[i][a[j] + 1][0] = 1

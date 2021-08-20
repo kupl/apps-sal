@@ -1,25 +1,24 @@
 import sys
 from collections import deque
 input = sys.stdin.readline
-N, M = list(map(int, input().split()))
-c, to = dict(), [[] for _ in range(N)]
+(N, M) = list(map(int, input().split()))
+(c, to) = (dict(), [[] for _ in range(N)])
 
 
 def maxmin(x, y):
     if x < y:
-        x, y = y, x
+        (x, y) = (y, x)
     return (x, y)
 
 
 for i in range(M):
-    x, y, z = list(map(int, input().split()))
-    x, y = x - 1, y - 1
-    x, y = maxmin(x, y)
+    (x, y, z) = list(map(int, input().split()))
+    (x, y) = (x - 1, y - 1)
+    (x, y) = maxmin(x, y)
     if (x, y) not in c:
-        c[(x, y)] = z
+        c[x, y] = z
         to[x].append(y)
         to[y].append(x)
-
 q = deque([0])
 mark = [0] * N
 mark[0] = 1
@@ -34,6 +33,5 @@ while q:
         else:
             mark[next] = cost
         q.append(next)
-
 for i in mark:
     print(i)

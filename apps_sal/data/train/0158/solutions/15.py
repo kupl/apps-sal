@@ -1,4 +1,4 @@
-'''
+"""
 'ab'
 'ba'
 1
@@ -46,33 +46,31 @@
 ('ac', 'ca') = 1 + ('a', 'a')
 ('a', 'a') = 0
 
-'''
+"""
 
 
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
         return do_kSimilarity(list(A), list(B), {})
 
 
 def do_kSimilarity(A, B, memo):
     if (tuple(A), tuple(B)) in memo:
-        return memo[(tuple(A), tuple(B))]
+        return memo[tuple(A), tuple(B)]
     if A == B:
         return 0
-
     if A[0] == B[0]:
         return do_kSimilarity(A[1:], B[1:], memo)
     else:
         swaps = []
-        for i, char in enumerate(A):
+        for (i, char) in enumerate(A):
             if char == B[0]:
                 swaps.append(i)
-
         k = float('inf')
         for swap in swaps:
-            A[0], A[swap] = A[swap], A[0]
+            (A[0], A[swap]) = (A[swap], A[0])
             k = min(k, 1 + do_kSimilarity(A[1:], B[1:], memo))
-            A[0], A[swap] = A[swap], A[0]
-
-        memo[(tuple(A), tuple(B))] = k
+            (A[0], A[swap]) = (A[swap], A[0])
+        memo[tuple(A), tuple(B)] = k
         return k

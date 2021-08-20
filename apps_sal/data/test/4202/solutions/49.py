@@ -1,6 +1,6 @@
 def main():
-    l, r = map(int, input().split())
-    q, ll = l // 2019, l % 2019
+    (l, r) = map(int, input().split())
+    (q, ll) = (l // 2019, l % 2019)
     rr = r % 2019
     rng = [*range(ll, rr + 1)] if r - l < (2019 * q - ll) % 2019 else [*range(ll, 2019)] + [*range(rr + 1)]
     lenrng = len(rng)

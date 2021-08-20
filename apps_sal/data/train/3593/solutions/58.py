@@ -8,4 +8,4 @@ def capitalize(s, ind):
         else:
             output.append(i)
             count += 1
-    return(''.join(output))
+    return ''.join(output)

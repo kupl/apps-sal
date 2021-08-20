@@ -1,6 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         memoi = {}
 
         def numbers(n, prev, prevCount):

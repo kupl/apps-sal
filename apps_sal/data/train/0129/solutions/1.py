@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         result = 0
         current = A[0]
@@ -10,5 +11,4 @@ class Solution:
             if current <= A[i] + i - current_pos:
                 current = A[i]
                 current_pos = i
-
         return result

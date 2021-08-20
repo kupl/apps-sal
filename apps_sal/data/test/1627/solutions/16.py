@@ -6,5 +6,4 @@ for i in range(n):
         if a[j] < a[j - 1]:
             print(j, j + 1)
             amount += 1
-            a[j], a[j - 1] = a[j - 1], a[j]
-#print(amount, a)
+            (a[j], a[j - 1]) = (a[j - 1], a[j])

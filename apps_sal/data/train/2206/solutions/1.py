@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 lp = n + 1
 ans = [1]
 vis = [0 for i in range(n)]
@@ -14,5 +13,4 @@ for i in range(len(p)):
         top -= 1
         hardness -= 1
     ans.append(hardness)
-
 print(' '.join([str(i) for i in ans]))

@@ -1,12 +1,11 @@
 import numpy as np
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 h = np.sort([int(input()) for i in range(N)])
 
 
 def enough(A, B, h, T):
     h = np.ceil((h - B * T) / (A - B))
     count = sum(h[h > 0])
-
     return True if count <= T else False
 
 
@@ -18,5 +17,4 @@ while right != left:
         right = mid
     else:
         left = mid + 1
-
 print(left)

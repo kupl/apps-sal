@@ -1,5 +1,5 @@
 from math import ceil
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 
 
@@ -10,7 +10,7 @@ def chk(L):
     return cnt <= K
 
 
-l, r = 1, max(A)
+(l, r) = (1, max(A))
 while l <= r:
     m = (l + r) // 2
     if chk(m):

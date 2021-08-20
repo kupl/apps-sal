@@ -1,8 +1,8 @@
 class Solution:
-    def countSquares(self, matrix: List[List[int]]) -> int:
 
+    def countSquares(self, matrix: List[List[int]]) -> int:
         res = 0
-        n, m = len(matrix), len(matrix[0])
+        (n, m) = (len(matrix), len(matrix[0]))
         for r in range(n):
             for c in range(m):
                 if matrix[r][c] == 0:

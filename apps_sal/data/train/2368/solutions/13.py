@@ -1,7 +1,5 @@
 import math
-
 t = int(input())
-
 for q in range(t):
     n = int(input())
     A = [int(i) for i in input().split()]

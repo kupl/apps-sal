@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         max_profit = remainder_customers = steps = 0
         res = []
@@ -12,8 +13,6 @@ class Solution:
                 remainder_customers = 0
             steps += 1
             res.append((max_profit, steps))
-
-        # print(remainder_customers)
         while remainder_customers > 0:
             if remainder_customers > 4:
                 remainder_customers -= 4
@@ -23,7 +22,5 @@ class Solution:
                 remainder_customers = 0
             steps += 1
             res.append((max_profit, steps))
-
         res.sort(key=lambda x: (-x[0], x[1]))
-        # print(res)
         return -1 if res[0][0] < 0 else res[0][1]

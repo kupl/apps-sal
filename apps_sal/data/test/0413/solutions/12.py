@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 res = 0
 if n >= m:
     res = n - m
@@ -9,5 +9,5 @@ else:
         else:
             m //= 2
         res += 1
-    res += (n - m)
+    res += n - m
 print(res)

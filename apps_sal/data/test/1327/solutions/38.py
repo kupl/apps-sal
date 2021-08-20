@@ -10,14 +10,14 @@ MOD = 10 ** 9 + 7
 
 
 def main():
-    N, M = list(map(int, input().split()))
+    (N, M) = list(map(int, input().split()))
     cake = [list(map(int, input().split())) for _ in range(N)]
     C = [[] for _ in range(8)]
     for i in range(2 ** 3):
         for c in range(N):
             m = 0
             for j in range(3):
-                if (i >> j) & 1:
+                if i >> j & 1:
                     m += cake[c][j]
                 else:
                     m -= cake[c][j]

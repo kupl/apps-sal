@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, k: int, f: int, target: int) -> int:
         d = {}
 
@@ -16,4 +17,4 @@ class Solution:
             d[v] = s
             return s
         x = h(k, target)
-        return x % (10**9 + 7)
+        return x % (10 ** 9 + 7)

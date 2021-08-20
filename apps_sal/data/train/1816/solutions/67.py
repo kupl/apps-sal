@@ -12,12 +12,12 @@ def difference_mins(str_time1, str_time2):
 
 
 class Solution:
+
     def alertNames(self, keyName, keyTime):
         alert_names = []
         log = defaultdict(list)
-        for name, time in zip(keyName, keyTime):
+        for (name, time) in zip(keyName, keyTime):
             log[name].append(time)
-
         for name in log.keys():
             times = log[name]
             sorted_times = sorted(times)
@@ -33,5 +33,4 @@ class Solution:
                     while difference_mins(sorted_times[start], sorted_times[i]) > 60:
                         start += 1
                         n -= 1
-
         return sorted(alert_names)

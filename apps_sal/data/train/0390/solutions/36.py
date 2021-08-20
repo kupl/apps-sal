@@ -1,7 +1,9 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
+
         def is_square(num):
-            a = int(num**0.5)
+            a = int(num ** 0.5)
             return a * a == num
         dp = [False] * (n + 1)
         dp[0] = False
@@ -16,5 +18,4 @@ class Solution:
                 if dp[i - j * j] == False:
                     dp[i] = True
                     break
-        # print(dp)
         return dp[n]

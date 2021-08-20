@@ -3,11 +3,8 @@ from itertools import combinations
 
 
 def solve(A, x):
-    # preliminary
-    if x < 0 or x > sum(A):  # T = sum(A)
+    if x < 0 or x > sum(A):
         return False
-
-    # algorithm
     sub_sum = [False] * (x + 1)
     sub_sum[0] = True
     p = 0
@@ -23,7 +20,7 @@ def solve(A, x):
 
 
 def main():
-    n, w = list(map(int, sys.stdin.readline().split()))
+    (n, w) = list(map(int, sys.stdin.readline().split()))
     arr = list(map(int, sys.stdin.readline().split()))
     for i in range(w):
         val = list(map(int, sys.stdin.readline().split()))
@@ -33,15 +30,10 @@ def main():
             a = val[1] - 1
             b = val[2]
             arr[a:b] = reversed(arr[a:b])
+        elif solve(arr[val[1] - 1:val[2]], val[3]):
+            print('Yes')
         else:
-            # print solve(arr[val[1]-1:val[2]], val[3])
-
-            if solve(arr[val[1] - 1:val[2]], val[3]):
-                print("Yes")
-            else:
-                print("No")
-
-        # print arr
+            print('No')
 
 
 main()

@@ -1,11 +1,13 @@
 class Solution:
+
     def findMinDifference(self, timePoints):
         """
         :type timePoints: List[str]
         :rtype: int
         """
+
         def cv2mnt(t):
-            h, m = t.split(':')
+            (h, m) = t.split(':')
             mnt = int(h) * 60 + int(m)
             return mnt
         lst = [0 for i in range(1440)]
@@ -16,7 +18,7 @@ class Solution:
             else:
                 lst[mnt] = 1
         beg = 0
-        stk = [i for i, n in enumerate(lst) if n == 1]
+        stk = [i for (i, n) in enumerate(lst) if n == 1]
         stk.append(stk[0] + 1440)
         res = 1439
         for i in range(len(stk) - 1):

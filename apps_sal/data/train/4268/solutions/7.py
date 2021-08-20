@@ -3,7 +3,6 @@ def find_polydivisible(digits_limit):
     previous = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     digits = 2
     poly_for_digits = []
-
     while previous and digits <= digits_limit:
         numbers += previous
         for p in previous:
@@ -11,11 +10,9 @@ def find_polydivisible(digits_limit):
                 number = p * 10 + i
                 if number % digits == 0:
                     poly_for_digits.append(number)
-
         previous = poly_for_digits[:]
         poly_for_digits = []
         digits += 1
-
     return numbers
 
 

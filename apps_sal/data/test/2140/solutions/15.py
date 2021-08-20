@@ -14,4 +14,4 @@ for i in range(m):
     z = ai[i] - 1
 if m % 2 != 0:
     s[ai[-1] - 1:n - ai[-1] + 1] = reversed(s[ai[-1] - 1:n - ai[-1] + 1])
-print("".join(s))
+print(''.join(s))

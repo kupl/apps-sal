@@ -1,5 +1,4 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 n = n - 1
 et = []
 for i in range(m):
@@ -19,7 +18,6 @@ else:
     et = et[1:]
     if res == -1 and et[-1][1] != 0:
         y = []
-
         for i in range(1, et[-1][0] // et[-1][1] + 1):
             fl = True
             for j in range(len(et)):
@@ -28,7 +26,7 @@ else:
                     break
             if fl:
                 y.append(i)
-        y1 = set([(n // tmp + 1) for tmp in y])
+        y1 = set([n // tmp + 1 for tmp in y])
         if len(y1) == 1:
             res = y1.pop()
 print(res)

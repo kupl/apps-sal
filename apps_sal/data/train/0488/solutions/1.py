@@ -1,4 +1,5 @@
 class Solution:
+
     def kthSmallest(self, matrix, k):
         """
         :type matrix: List[List[int]]
@@ -11,7 +12,7 @@ class Solution:
         for i in range(n):
             heappush(heap, (matrix[0][i], 0, i))
         for _ in range(k - 1):
-            v, x, y = heappop(heap)
+            (v, x, y) = heappop(heap)
             if x == n - 1:
                 continue
             heappush(heap, (matrix[x + 1][y], x + 1, y))

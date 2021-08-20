@@ -1,7 +1,7 @@
 def main():
     input()
     l = list(map(int, input().split()))
-    s, res = sum(l), 0
+    (s, res) = (sum(l), 0)
     if not s % 3:
         s //= 3
         s2 = s * 2

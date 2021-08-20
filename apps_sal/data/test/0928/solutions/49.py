@@ -1,11 +1,10 @@
 def main():
-    N, K = [int(i) for i in input().split()]
+    (N, K) = [int(i) for i in input().split()]
     A = [int(i) for i in input().split()]
-
-    f, b = 0, 0
+    (f, b) = (0, 0)
     ans = 0
     v = A[0]
-    while(f < N):
+    while f < N:
         if v < K:
             b += 1
             if b == N:

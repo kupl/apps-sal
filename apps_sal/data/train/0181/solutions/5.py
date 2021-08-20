@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfit(self, prices):
         """
         :type prices: List[int]
@@ -9,7 +10,6 @@ class Solution:
         valid_status = [0, [prices[0], -prices[0]], 0]
         for t in range(1, len(prices)):
             valid_status[1][0] = prices[t]
-            # cool down status
             cool_down_temp = sum(valid_status[1])
             if valid_status[0] > sum(valid_status[1]):
                 valid_status[1] = [prices[t], valid_status[0] - prices[t]]

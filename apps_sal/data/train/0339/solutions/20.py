@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         c1 = collections.Counter([i * i for i in nums1])
         c2 = collections.Counter([i * i for i in nums2])

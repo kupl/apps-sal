@@ -15,21 +15,13 @@ def tokenize(expression):
 
 
 def calculate(expression):
-    ops = {
-        '+': lambda x, y: x + y,
-        '-': lambda x, y: x - y,
-        '*': lambda x, y: x * y,
-        '$': lambda x, y: x / y,
-    }
-
+    ops = {'+': lambda x, y: x + y, '-': lambda x, y: x - y, '*': lambda x, y: x * y, '$': lambda x, y: x / y}
     try:
         l = tokenize(expression)
     except ValueError:
         return '400: Bad request'
-
     for op in '$*-+':
         while op in l:
             i = l.index(op)
             l = l[:i - 1] + [ops[op](l[i - 1], l[i + 1])] + l[i + 2:]
-
     return l[0]

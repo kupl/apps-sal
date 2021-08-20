@@ -7,15 +7,14 @@ import math
 from copy import deepcopy
 import queue
 import numpy as np
-# sympy as syp(素因数分解とか)
 Mod = 1000000007
 
 
 def sieve_of_eratosthenes(n):
     if not isinstance(n, int):
-        raise TypeError("n is not int")
+        raise TypeError('n is not int')
     if n < 2:
-        raise ValueError("n is not effective")
+        raise ValueError('n is not effective')
     prime = [1] * (n + 1)
     for i in range(2, int(math.sqrt(n)) + 1):
         if prime[i] == 1:
@@ -30,6 +29,7 @@ def sieve_of_eratosthenes(n):
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.parent = [i for i in range(n + 1)]
         self.rank = [0 for i in range(n + 1)]
@@ -54,7 +54,8 @@ class UnionFind:
         return self.findroot(x) == self.findroot(y)
 
 
-def main():  # startline-------------------------------------------
+def main():
+
     def divisor(n):
         res = []
         for i in range(1, int(np.sqrt(n)) + 1):
@@ -77,12 +78,11 @@ def main():  # startline-------------------------------------------
             nn //= d
         if nn % d == 1:
             ans += 1
-
     print(ans)
 
 
 def __starting_point():
-    main()  # endline===============================================
+    main()
 
 
 __starting_point()

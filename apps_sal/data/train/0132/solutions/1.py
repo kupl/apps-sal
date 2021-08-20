@@ -1,8 +1,8 @@
 class Solution:
+
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         dp = [0] * (days[-1] + 1)
         pos = 0
-
         for i in range(1, days[-1] + 1):
             if i == days[pos]:
                 d1 = i - 1
@@ -12,5 +12,4 @@ class Solution:
                 pos += 1
             else:
                 dp[i] = dp[i - 1]
-
         return dp[-1]

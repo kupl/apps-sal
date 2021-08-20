@@ -2,9 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
-        MOD = 10**9 + 7
-        # num_ways(0, 0, 0) = 1
+        MOD = 10 ** 9 + 7
 
         @lru_cache(maxsize=steps * arrLen)
         def num_ways(current, target, steps):
@@ -15,5 +15,4 @@ class Solution:
             elif steps == 1:
                 return 1 if abs(current - target) <= 1 else 0
             return (num_ways(current, target, steps - 1) + num_ways(current, target - 1, steps - 1) + num_ways(current, target + 1, steps - 1)) % MOD
-
         return num_ways(0, 0, steps)

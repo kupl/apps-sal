@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProfitAssignment(self, difficulty, profit, worker):
         jobs = sorted(zip(difficulty, profit))
         ans = i = best = 0

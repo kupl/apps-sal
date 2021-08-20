@@ -2,17 +2,14 @@ def read():
     return [int(x) for x in input().split()]
 
 
-k, n = read()
+(k, n) = read()
 a = read()
 b = read()
-
 c = []
 for x in a:
     c.append((c[-1] if c else 0) + x)
 c = set(c)
-
 z = set()
-
 s = 0
 for x in a:
     s += x
@@ -22,5 +19,4 @@ for x in a:
             break
     else:
         z.add(i)
-
 print(len(z))

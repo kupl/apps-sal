@@ -4,10 +4,10 @@ import re
 def time_correct(t):
     if t == None or t == '':
         return t
-    t_pattern = re.compile(r'\d\d:\d\d:\d\d')
+    t_pattern = re.compile('\\d\\d:\\d\\d:\\d\\d')
     if t_pattern.search(t) == None:
         return None
-    hours, minutes, seconds = [int(x) for x in t.split(':')]
+    (hours, minutes, seconds) = [int(x) for x in t.split(':')]
     if seconds > 59:
         seconds = seconds - 60
         minutes = minutes + 1

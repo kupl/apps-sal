@@ -10,13 +10,25 @@ from time import time
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
 
-h, w = MAP()
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
+
+
+(h, w) = MAP()
 a = [[0] * (w + 1)]
 for i in range(1, h + 1):
     a.append([0] + LIST())
@@ -41,7 +53,6 @@ for i in range(1, h + 1):
                     ans.append([i, j, i, j - 1])
                 elif i < h:
                     ans.append([i, j, i + 1, j])
-
 print(len(ans))
 for x in ans:
     print(*x)

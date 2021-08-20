@@ -1,5 +1,5 @@
 def moment_of_time_in_space(moment):
-    t, s = 0, 0
+    (t, s) = (0, 0)
     for c in moment:
         if c.isdigit() and c != '0':
             t += int(c)

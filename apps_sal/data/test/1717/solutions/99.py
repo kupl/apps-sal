@@ -1,11 +1,9 @@
 import math
 from functools import reduce
 
-# 最小公倍数
-
 
 def lcm_base(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 def lcm(l):
@@ -17,7 +15,6 @@ def lcm(l):
 
 
 N = int(input())
-
 l = [i for i in range(2, N + 1)]
 lcm_num = lcm(l)
 print(lcm_num + 1)

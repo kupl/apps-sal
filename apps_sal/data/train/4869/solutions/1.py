@@ -3,7 +3,7 @@ def find_seventh_sons_of_seventh_sons(jstring):
 
     def find_seventh_sons(father, seventh_son=False):
         seven_brother = True
-        for i, son in enumerate(father['children'], 1):
+        for (i, son) in enumerate(father['children'], 1):
             if son['gender'] == 'female':
                 seventh_son = seven_brother = False
             if i == 7 and seventh_son:

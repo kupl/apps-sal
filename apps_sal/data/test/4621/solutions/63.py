@@ -4,12 +4,12 @@ sys.setrecursionlimit(200000)
 
 
 def read():
-    H, W = list(map(int, input().strip().split()))
+    (H, W) = list(map(int, input().strip().split()))
     C = []
     for i in range(H):
         c = input().strip()
         C.append(c)
-    return H, W, C
+    return (H, W, C)
 
 
 def solve(H, W, C):

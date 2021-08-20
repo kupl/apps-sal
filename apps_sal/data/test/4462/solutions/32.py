@@ -1,6 +1,5 @@
 _ = input()
 a = [int(x) for x in input().split()]
-
 odd = []
 m4 = []
 m2 = 0
@@ -13,6 +12,6 @@ for i in a:
         m2 = 1
 else:
     if len(odd) + m2 - 1 <= len(m4):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

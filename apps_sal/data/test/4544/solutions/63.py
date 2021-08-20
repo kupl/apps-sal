@@ -6,5 +6,4 @@ for a in arr:
     cnt[a + 1] += 1
     if a > 0:
         cnt[a - 1] += 1
-
 print(max(cnt))

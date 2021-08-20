@@ -3,12 +3,11 @@ lista = []
 for i in range(n):
     lista.append([int(x) for x in input().split()])
 lista.sort()
-
 diccionario = dict()
 nada = True
 last = 0
 maximo = 0
-for x, i in lista:
+for (x, i) in lista:
     if nada == True:
         for c in range(0, x):
             diccionario[c] = 0

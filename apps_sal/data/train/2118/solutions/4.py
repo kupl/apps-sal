@@ -17,7 +17,7 @@ lol = 0
 for i in l:
     i = a[i]
     lol = lol ^ i
-if (lol == 0):
-    print("YES")
+if lol == 0:
+    print('YES')
 else:
-    print("NO")
+    print('NO')

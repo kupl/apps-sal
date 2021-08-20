@@ -14,4 +14,4 @@ def getg(n):
 
 g = getg(n)
 print(g[0])
-print(str(len(g[1])) + ' ' + ' '.join(str(x) for x in g[1]))
+print(str(len(g[1])) + ' ' + ' '.join((str(x) for x in g[1])))

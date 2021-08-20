@@ -1,8 +1,8 @@
-mod = 10**9 + 7
-MAX = 10**5 + 1
+mod = 10 ** 9 + 7
+MAX = 10 ** 5 + 1
 fact = [1] * (MAX + 1)
 for i in range(1, MAX + 1):
-    fact[i] = (fact[i - 1] * i) % mod
+    fact[i] = fact[i - 1] * i % mod
 inv = [1] * (MAX + 1)
 for i in range(2, MAX + 1):
     inv[i] = inv[mod % i] * (mod - mod // i) % mod
@@ -23,7 +23,7 @@ M = []
 for i in range(n + 1):
     M.append(L[i])
 M.sort()
-dou = 1  # 重複する数
+dou = 1
 for i in range(n + 1):
     if M[i] == dou:
         dou += 1
@@ -41,5 +41,5 @@ for i in range(n + 1):
         r = i + 1
         break
 for i in range(1, n + 1):
-    print(((comb(n + 1, i) - comb(l + n - r, i - 1)) % mod))
-print((1))
+    print((comb(n + 1, i) - comb(l + n - r, i - 1)) % mod)
+print(1)

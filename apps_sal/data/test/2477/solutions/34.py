@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 
 
@@ -13,7 +13,7 @@ def f(x):
 
 
 l = 0
-r = 10**10
+r = 10 ** 10
 while r - l > 1:
     x = (l + r) // 2
     if f(x):

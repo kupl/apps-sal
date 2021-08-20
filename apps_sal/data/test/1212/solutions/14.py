@@ -1,6 +1,4 @@
-#! /usr/bin/env python
-
-n, k = input().split()
+(n, k) = input().split()
 n = int(n)
 k = int(k)
 f = [int(x) for x in input().split()]

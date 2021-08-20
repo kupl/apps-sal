@@ -17,7 +17,7 @@ def digits_product(product):
                 exponent += 1
                 product //= i
             digits.append((i, exponent))
-    res = ""
-    for digit, occurances in digits:
+    res = ''
+    for (digit, occurances) in digits:
         res += str(digit) * occurances
     return int(res[::-1]) if res and reduce(mul, [int(i) for i in res]) == temp else -1

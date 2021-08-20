@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res = 0
         for num in nums1:
@@ -11,8 +12,8 @@ class Solution:
         return res
 
     def two_product(self, target, nums):
-        dic, res = defaultdict(int), 0
-        for i, num in enumerate(nums):
+        (dic, res) = (defaultdict(int), 0)
+        for (i, num) in enumerate(nums):
             if target % num:
                 continue
             remain = target // num

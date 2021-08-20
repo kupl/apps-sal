@@ -4,9 +4,9 @@ def isPP(n):
     root = math.sqrt(n)
     iroot = int(root)
     if float(iroot) == root:
-        return([iroot, 2])
+        return [iroot, 2]
     elif n == 1:
-        return([1, 1])
+        return [1, 1]
     else:
         if iroot == 2:
             iroot = 3
@@ -19,7 +19,7 @@ def isPP(n):
                 n = n / i
                 s = s + 1
                 if n == 1:
-                    return([i, s])
+                    return [i, s]
             else:
                 d = 'no'
         if d == 'no':

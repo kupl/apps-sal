@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumGap(self, nums):
         """
         :type nums: List[int]
@@ -11,7 +12,6 @@ class Solution:
         for num in nums:
             a = min(a, num)
             b = max(b, num)
-
         bucketSize = max(1, (b - a) // (len(nums) - 1))
         bucketNum = (b - a) // bucketSize + 1
         buckets = [[-1, -1] for i in range(bucketNum)]

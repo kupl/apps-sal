@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 d = [[] for i in range(3)]
 res_odd = 0
 res_even = 0
 for i in range(n):
-    t1, t2 = map(int, input().split())
+    (t1, t2) = map(int, input().split())
     d[t1 - 1].append(t2)
 d[0].sort()
 d[2].sort(reverse=True)

@@ -1,5 +1,7 @@
 class Solution:
+
     def countLargestGroup(self, n: int) -> int:
+
         def sumDigits(n):
             if n < 10:
                 return n
@@ -9,7 +11,7 @@ class Solution:
                 n //= 10
             return sum
         cnt = [0 for i in range(37)]
-        max_size, max_cnt = 0, 0
+        (max_size, max_cnt) = (0, 0)
         while n:
             cnt[sumDigits(n)] += 1
             if max_size < cnt[sumDigits(n)]:

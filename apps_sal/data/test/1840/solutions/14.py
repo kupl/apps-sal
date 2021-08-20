@@ -3,9 +3,9 @@ from sys import stdin
 
 def binary(A, x):
     N = len(A)
-    low, hi = 0, N
+    (low, hi) = (0, N)
     while low + 1 != hi:
-        mid = low + ((hi - low) >> 1)
+        mid = low + (hi - low >> 1)
         if x < A[mid]:
             hi = mid
         else:
@@ -14,12 +14,12 @@ def binary(A, x):
 
 
 def main():
-    s, b = stdin.readline().split()
+    (s, b) = stdin.readline().split()
     line = list(map(int, stdin.readline().split()))
     gold = {}
     l = list()
     for _ in range(int(b)):
-        d, g = map(int, stdin.readline().split())
+        (d, g) = map(int, stdin.readline().split())
         if gold.get(d) == None:
             gold[d] = g
             l.append(d)
@@ -33,17 +33,15 @@ def main():
     s = int(s)
     for i in range(s):
         it = binary(l, line[i])
-        if(i == s - 1):
-            if(it == 0 and line[i] < l[it]):
+        if i == s - 1:
+            if it == 0 and line[i] < l[it]:
                 print(0)
             else:
                 print(gold[l[it]])
+        elif it == 0 and line[i] < l[it]:
+            print(0, end=' ')
         else:
-
-            if(it == 0 and line[i] < l[it]):
-                print(0, end=" ")
-            else:
-                print(gold[l[it]], end=" ")
+            print(gold[l[it]], end=' ')
 
 
 main()

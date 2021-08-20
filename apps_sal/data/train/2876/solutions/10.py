@@ -1,9 +1,9 @@
 def check(a, x):
     if a:
         if a[0] == x:
-            return(True)
+            return True
         else:
-            return(check(a[1:], x))
+            return check(a[1:], x)
     else:
-        return(False)
+        return False
     pass

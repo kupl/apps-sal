@@ -6,7 +6,7 @@ T = int(input())
 for _ in range(T):
     n = int(input())
     a = list(map(int, input().split()))
-    odd, even = [], []
+    (odd, even) = ([], [])
     for x in a:
         if x % 2 == 1:
             odd.append(x)

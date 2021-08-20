@@ -21,7 +21,7 @@ for _ in range(int(input())):
         bd[i] = bd.setdefault(i, 0) + 1
         ad[i] = ad.setdefault(i, 0) - 1
     if len(s) > 0:
-        print("-1")
+        print('-1')
         continue
     a = []
     b = []

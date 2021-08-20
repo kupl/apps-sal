@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         dp = [[-1 for _ in range(fuel + 1)] for _ in locations]
 
@@ -13,7 +14,6 @@ class Solution:
             for i in range(len(locations)):
                 left = fuel - abs(locations[i] - locations[start])
                 if i != start and left >= 0:
-
                     dp[start][fuel] += dp[i][left] % 1000000007 if dp[i][left] > 0 else search(i, left)
             return dp[start][fuel] % 1000000007
         search(start, fuel)

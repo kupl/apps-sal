@@ -23,33 +23,30 @@ def rlinput():
 
 
 def main():
-    res1, res2, res12, o, res = 0, 0, 0, 0, []
+    (res1, res2, res12, o, res) = (0, 0, 0, 0, [])
     s = list(input())
     n = len(s) - 2
-
     while o < n - 2:
-        if s[o] == 't' and s[o + 1] == 'w' and s[o + 2] == 'o' and s[o + 3] == 'n' and s[o + 4] == 'e':
+        if s[o] == 't' and s[o + 1] == 'w' and (s[o + 2] == 'o') and (s[o + 3] == 'n') and (s[o + 4] == 'e'):
             res12 += 1
             res.append(o + 3)
             o += 5
-
-        elif s[o] == 'o' and s[o + 1] == 'n' and s[o + 2] == 'e':
+        elif s[o] == 'o' and s[o + 1] == 'n' and (s[o + 2] == 'e'):
             res1 += 1
             res.append(o + 2)
             o += 3
-        elif s[o] == 't' and s[o + 1] == 'w' and s[o + 2] == 'o':
+        elif s[o] == 't' and s[o + 1] == 'w' and (s[o + 2] == 'o'):
             res2 += 1
             res.append(o + 2)
             o += 3
         else:
             o += 1
-
     while o < n:
-        if s[o] == 'o' and s[o + 1] == 'n' and s[o + 2] == 'e':
+        if s[o] == 'o' and s[o + 1] == 'n' and (s[o + 2] == 'e'):
             res1 += 1
             res.append(o + 2)
             o += 3
-        elif s[o] == 't' and s[o + 1] == 'w' and s[o + 2] == 'o':
+        elif s[o] == 't' and s[o + 1] == 'w' and (s[o + 2] == 'o'):
             res2 += 1
             res.append(o + 2)
             o += 3

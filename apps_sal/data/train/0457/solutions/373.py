@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         memo = dict()
 
@@ -11,7 +12,7 @@ class Solution:
                 return -1
             res = 1000
             for coin in coins:
-                if (dp(n - coin) == -1):
+                if dp(n - coin) == -1:
                     continue
                 res = min(res, 1 + dp(n - coin))
             memo[n] = res if res != 1000 else -1

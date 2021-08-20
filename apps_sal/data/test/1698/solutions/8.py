@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = [int(i) for i in input().split()]
 ans = [0] * 2001
 for i in arr:

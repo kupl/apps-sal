@@ -1,14 +1,11 @@
 from collections import Counter
-
 n = int(input())
 l = []
 for i in range(n):
     l.append(dict(Counter(input())))
-
 l.sort(key=len)
-
 ans = []
-for ki, vi in l[0].items():
+for (ki, vi) in l[0].items():
     tmp = vi
     for j in range(1, n):
         if ki in l[j]:
@@ -18,4 +15,4 @@ for ki, vi in l[0].items():
     else:
         ans.append(ki * tmp)
 ans.sort()
-print(*ans, sep="")
+print(*ans, sep='')

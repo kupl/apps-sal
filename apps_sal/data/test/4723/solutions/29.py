@@ -13,6 +13,6 @@ for i in range(n - m + 1):
         s_ = s_.replace('?', 'a')
         ans.append(s_)
 if len(ans) > 0:
-    print((sorted(ans)[0]))
+    print(sorted(ans)[0])
 else:
     print('UNRESTORABLE')

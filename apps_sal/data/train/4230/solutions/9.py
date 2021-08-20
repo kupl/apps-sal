@@ -1,2 +1,2 @@
 def reverse_letter(string):
-    return"".join(i for i in string[::-1] if i.isalpha())
+    return ''.join((i for i in string[::-1] if i.isalpha()))

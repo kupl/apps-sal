@@ -1,4 +1,5 @@
 class Solution:
+
     def getFolderNames(self, names: List[str]) -> List[str]:
         seen_set = set()
         new_names = []

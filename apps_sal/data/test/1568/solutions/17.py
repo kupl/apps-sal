@@ -1,4 +1,4 @@
-n, a, b, c, t = list(map(int, input().split()))
+(n, a, b, c, t) = list(map(int, input().split()))
 l = [int(i) for i in input().split()]
 if b >= c:
     print(n * a)

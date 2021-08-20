@@ -1,22 +1,42 @@
 import sys
-
 sys.setrecursionlimit(10 ** 6)
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+
+
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def main():
-    n, ma, mb = MI()
-    inf = 10**9
+    (n, ma, mb) = MI()
+    inf = 10 ** 9
     abc = [LI() for _ in range(n)]
     dp = [[[inf] * (n * 10 + 1) for _ in range(10 * n + 1)] for _ in range(n + 1)]
     dp[0][0][0] = 0
-    for i, (a, b, c) in enumerate(abc):
+    for (i, (a, b, c)) in enumerate(abc):
         for j in range(n * 10 + 1):
             for k in range(n * 10 + 1):
                 pre = dp[i][j][k]

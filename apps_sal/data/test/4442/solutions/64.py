@@ -1,5 +1,4 @@
-a, b = map(str, input().split())
-
+(a, b) = map(str, input().split())
 list = []
 
 
@@ -10,7 +9,5 @@ def Repetition(x: str, y: str):
 
 Repetition(a, b)
 Repetition(b, a)
-
-
 list.sort()
 print(list[0])

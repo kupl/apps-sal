@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         slots = [0 for _ in arr]
         num_m = 0
@@ -19,7 +20,6 @@ class Solution:
                     num_m -= 1
                 if slots[idx - 1] > 0:
                     slots[idx - slots[idx - 1]] = slots[idx]
-
             elif idx == 0:
                 slots[idx] = slots[idx + 1] + 1
                 if slots[idx] == m:
@@ -40,5 +40,4 @@ class Solution:
                 slots[idx + slots[idx + 1]] = slots[idx]
             if num_m > 0:
                 last_m = n + 1
-
         return last_m

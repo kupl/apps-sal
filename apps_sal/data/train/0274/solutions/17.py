@@ -1,10 +1,10 @@
 class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
 
-        minheap, maxheap = [], []
+    def longestSubarray(self, nums: List[int], limit: int) -> int:
+        (minheap, maxheap) = ([], [])
         res = 0
         i = 0
-        for j, n in enumerate(nums):
+        for (j, n) in enumerate(nums):
             heapq.heappush(minheap, (n, j))
             heapq.heappush(maxheap, (-n, j))
             while -maxheap[0][0] - minheap[0][0] > limit:

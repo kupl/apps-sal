@@ -1,13 +1,10 @@
 class Solution:
-    def longestArithSeqLength(self, A: List[int]) -> int:
 
+    def longestArithSeqLength(self, A: List[int]) -> int:
         minimum = min(A)
         maximum = max(A)
-
         length = 2 * (maximum - minimum) + 1
-
         dp = [[1 for i in range(length)] for j in range(len(A))]
-
         diff = maximum - minimum
         ans = 0
         for i in range(len(dp)):

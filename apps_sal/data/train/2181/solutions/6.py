@@ -1,4 +1,4 @@
-s, l, r = 0, 0, int(input()) - 1
+(s, l, r) = (0, 0, int(input()) - 1)
 t = list(map(int, input().split()))
 while 1:
     while l < r and t[l] < t[l + 1]:

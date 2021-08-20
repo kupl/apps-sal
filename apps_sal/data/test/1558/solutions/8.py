@@ -15,7 +15,6 @@ for i in range(n):
         marks[inp[1]].append(inp[0])
     else:
         marks[inp[1]] = [inp[0]]
-
 if total / n >= avg:
     print(0)
 else:

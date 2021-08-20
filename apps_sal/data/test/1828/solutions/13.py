@@ -2,9 +2,9 @@ n = int(input())
 counter = 0
 direction = 0
 input()
-x_0, y_0 = list(map(int, input().split()))
+(x_0, y_0) = list(map(int, input().split()))
 for i in range(n - 1):
-    x_1, y_1 = list(map(int, input().split()))
+    (x_1, y_1) = list(map(int, input().split()))
     if direction == 0:
         if x_1 < x_0:
             counter += 1
@@ -22,10 +22,9 @@ for i in range(n - 1):
             direction = 3
         else:
             direction = 1
+    elif y_1 > y_0:
+        direction = 0
     else:
-        if y_1 > y_0:
-            direction = 0
-        else:
-            direction = 2
-    x_0, y_0 = x_1, y_1
+        direction = 2
+    (x_0, y_0) = (x_1, y_1)
 print(counter)

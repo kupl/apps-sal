@@ -31,16 +31,13 @@ def play(rounds, pa, a, pb, b):
     memo = {}
     score = [0, 0]
     cacat = False
-
     for i in range(rounds):
         pair = (a, b)
         if pair in memo:
-            cycle_len = (i - memo[pair].time)
+            cycle_len = i - memo[pair].time
             cycles = (rounds - i) // cycle_len
-
             score_a = score[0] - memo[pair].score_a
             score_b = score[1] - memo[pair].score_b
-
             score[0] += score_a * cycles
             score[1] += score_b * cycles
             rounds -= i + cycles * cycle_len
@@ -48,25 +45,21 @@ def play(rounds, pa, a, pb, b):
             break
         else:
             memo[pair] = State(score[0], score[1], i)
-
         score[0] += Player.round_score(a, b)
         score[1] += Player.round_score(b, a)
-        a, b = pa.choose_next(a, b), pb.choose_next(a, b)
-
+        (a, b) = (pa.choose_next(a, b), pb.choose_next(a, b))
     if cacat:
         for i in range(rounds):
             score[0] += Player.round_score(a, b)
             score[1] += Player.round_score(b, a)
-            a, b = pa.choose_next(a, b), pb.choose_next(a, b)
-
+            (a, b) = (pa.choose_next(a, b), pb.choose_next(a, b))
     return score
 
 
 def main():
-    rounds, a, b = list(map(int, input().split()))
+    (rounds, a, b) = list(map(int, input().split()))
     pa = read_player()
     pb = read_player()
-
     score = play(rounds, pa, a, pb, b)
     print(score[0], score[1])
 

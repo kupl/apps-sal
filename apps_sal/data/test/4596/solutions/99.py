@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(s) for s in input().split()]
-
 ans = 0
 parity = True
 while parity:

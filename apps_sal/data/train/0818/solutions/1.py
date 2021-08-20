@@ -11,20 +11,19 @@ for o in range(t):
             l1.append(c)
         else:
             l1.append(c)
-    # print(l1)
     for v in range(q):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         l -= 1
         r -= 1
         if l == 0:
             if l1[r] > 0:
-                print("EVEN")
+                print('EVEN')
             else:
-                print("ODD")
+                print('ODD')
         else:
             l -= 1
             x = l1[r] - l1[l]
             if x > 0:
-                print("EVEN")
+                print('EVEN')
             else:
-                print("ODD")
+                print('ODD')

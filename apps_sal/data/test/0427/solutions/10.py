@@ -1,12 +1,10 @@
-cnt1, cnt2, x, y = map(int, input().split())
-
+(cnt1, cnt2, x, y) = map(int, input().split())
 upper_limit = (cnt1 + cnt2) * (x * y) // (x * y - x - y + 1)
 
 
 def bin_search(low, high):
     if low >= high - 1:
         return high
-
     mid = (low + high) // 2
     best_way = max(0, cnt1 - mid // y + mid // (x * y)) + max(0, cnt2 - mid // x + mid // (x * y))
     leftovers = mid - mid // x - mid // y + mid // (x * y)

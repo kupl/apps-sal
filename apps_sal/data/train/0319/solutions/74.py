@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         dp = {}
         piles = stoneValue
@@ -24,7 +25,7 @@ class Solution:
                 if gap > res_gap:
                     res_gap = gap
                     res_sum = res
-            dp[i] = res_sum, res_gap
+            dp[i] = (res_sum, res_gap)
             return res_sum
         rec_max(0, n, sums)
         res = dp[0][1]

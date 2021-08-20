@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self):
         self.N = 0
         self.map = {}
@@ -19,18 +20,14 @@ class DSU:
 
     def find(self, obj):
         p = self.parent
-
         origI = self.map[obj]
-
         i = origI
         while p[i] != i:
             i = p[i]
         root = i
-
         i = origI
         while p[i] != i:
-            p[i], i = root, p[i]
-
+            (p[i], i) = (root, p[i])
         return root
 
     def union(self, objA, objB):
@@ -48,6 +45,7 @@ class DSU:
 
 
 class Solution:
+
     def largestComponentSize(self, nums) -> int:
         UF = DSU()
         max_ = 1
@@ -66,19 +64,15 @@ class Solution:
 
     def primeDivisors(self, num: int):
         x = num
-
         pDs = set()
-
         if x % 2 == 0:
             pDs.add(2)
             while x % 2 == 0:
                 x >>= 1
-
         if x % 3 == 0:
             pDs.add(3)
             while x % 3 == 0:
                 x //= 3
-
         div = 5
         d2 = True
         while x >= div * div:
@@ -88,8 +82,6 @@ class Solution:
                     x //= div
             div += 2 if d2 else 4
             d2 = not d2
-
         if x > 1:
             pDs.add(x)
-
         return pDs

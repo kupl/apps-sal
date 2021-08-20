@@ -1,5 +1,5 @@
 import math
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 ans = 1
 l = [0] * n
@@ -15,6 +15,6 @@ for ii in range(2, n + 1):
     if i != 1:
         l[i - 1] += 1
 for i in l:
-    ans *= (i + 1)
+    ans *= i + 1
     ans %= mod
 print(ans)

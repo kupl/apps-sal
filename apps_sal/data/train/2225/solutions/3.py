@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 ls = [input() for i in range(n)]
 sm = sum([len(s) for s in ls])
 ls.sort()
@@ -29,12 +29,12 @@ def d2(x):
     while x % 2 == 0:
         cnt += 1
         x //= 2
-    return 2**cnt
+    return 2 ** cnt
 
 
 for i in range(sm + 1):
     ans ^= d2(l + 1 - i) * (num[i] % 2)
 if ans:
-    print("Alice")
+    print('Alice')
 else:
-    print("Bob")
+    print('Bob')

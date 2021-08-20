@@ -26,7 +26,7 @@ class Solution:
         for i in range(len(Solution.directions)):
             new_row = row + Solution.directions[i][0]
             new_col = col + Solution.directions[i][1]
-            if new_row < 0 or new_row >= len(mat) or new_col < 0 or new_col >= len(mat[0]):
+            if new_row < 0 or new_row >= len(mat) or new_col < 0 or (new_col >= len(mat[0])):
                 continue
             if mat[new_row][new_col] == target_dest:
                 return True
@@ -49,7 +49,7 @@ class Solution:
 
     @staticmethod
     def paint_one_island(mat, row, col, val):
-        if row < 0 or row >= len(mat) or col < 0 or col >= len(mat[0]):
+        if row < 0 or row >= len(mat) or col < 0 or (col >= len(mat[0])):
             return
         if mat[row][col] == val or not mat[row][col]:
             return

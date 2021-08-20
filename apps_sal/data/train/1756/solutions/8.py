@@ -1,4 +1,5 @@
 class ErrorHandler:
+
     def __init__(self, *exceptions):
         self._exceptions = exceptions
 

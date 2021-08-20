@@ -1,7 +1,4 @@
 def alternateCase(s):
-    # a - z = 97 - 122
-    # A - Z = 65 - 90
-    # your code here
     new_s = ''
     for char in s:
         if ord(char) > 122 or ord(char) < 65:

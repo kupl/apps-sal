@@ -1,5 +1,4 @@
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 cnt = 0
 if K == 0:
     cnt = N * N
@@ -9,7 +8,4 @@ else:
         q = N % b
         cnt += p * max(0, b - K)
         cnt += max(0, q - K + 1)
-        #print(p * max(0, b-K),max(0,q-K+1))
-
-
 print(cnt)

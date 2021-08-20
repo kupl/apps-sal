@@ -1,14 +1,11 @@
 import sys
-
 n = int(sys.stdin.readline())
 a = [int(x) for x in sys.stdin.readline().split()]
-
 s = [a[0]]
 sucet = a[0]
 for i in range(1, len(a)):
     s.append(s[-1] + a[i])
     sucet += a[i]
-
 if sucet % 3 != 0:
     print(0)
 else:
@@ -23,7 +20,7 @@ else:
         elif kdedvoj[-1] - 2 == 1:
             print(1)
         else:
-            print((kdedvoj[-1]**2 - 3 * kdedvoj[-1] + 2) // 2)
+            print((kdedvoj[-1] ** 2 - 3 * kdedvoj[-1] + 2) // 2)
     else:
         j = n
         for i in range(len(a)):
@@ -37,5 +34,5 @@ else:
                 break
         for i in range(j, k):
             if s[i] == sucet // 3:
-                moznosti += (kdedvoj[-1] - kdedvoj[i])
+                moznosti += kdedvoj[-1] - kdedvoj[i]
         print(moznosti)

@@ -1,4 +1,4 @@
-'''
+"""
 4
 7
 4 2 4 1 4 3 4
@@ -8,7 +8,7 @@
 1
 4
 1 1 1 3
-'''
+"""
 from collections import Counter as c
 for _ in range(int(input())):
     n = int(input())

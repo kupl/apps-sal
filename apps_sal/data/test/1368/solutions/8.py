@@ -1,5 +1,5 @@
 from collections import Counter
-n, a, b = list(map(int, input().split()))
+(n, a, b) = list(map(int, input().split()))
 v = list(map(int, input().split()))
 v.sort(reverse=True)
 su = sum(v[:a])

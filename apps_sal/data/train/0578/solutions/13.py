@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     t1 = -(-(n / 2) // k)
-    t2 = (n / 2) // k
+    t2 = n / 2 // k
     if not t1:
         t1 = 1
     if not t2:

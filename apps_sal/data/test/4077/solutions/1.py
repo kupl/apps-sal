@@ -1,8 +1,8 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     res = []
-    for m in m, m - 1:
+    for m in (m, m - 1):
         r = c = 0
         cnt = [0] * 400002
         cnt[0] = last = 1

@@ -2,9 +2,9 @@ def main():
     n = int(input())
     pt = []
     for _ in range(n):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         pt.append([x, y])
-    a, b, c = [], [], []
+    (a, b, c) = ([], [], [])
     for p in pt:
         a.append(p[0] + p[1])
         b.append(p[0] - p[1])

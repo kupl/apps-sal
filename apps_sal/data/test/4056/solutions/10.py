@@ -1,10 +1,8 @@
 import math
 from functools import reduce
-
 n = int(input())
 a = list(map(int, input().split()))
 x = reduce(math.gcd, a)
-
 i = 1
 cnt = 0
 while i * i < x:

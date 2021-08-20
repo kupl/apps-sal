@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         asc = deque()
         dsc = deque()

@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, z: int) -> int:
         d = {}
 
@@ -15,7 +16,5 @@ class Solution:
             c = [0]
             dfs(i)
             d[i] = c[0]
-
         d = sorted(list(d.items()), key=lambda g: g[1])
-
         return d[z - 1][0]

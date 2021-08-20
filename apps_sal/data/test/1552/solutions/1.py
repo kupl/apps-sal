@@ -3,7 +3,6 @@ a = list(map(int, input().split()))
 k1 = []
 k2 = []
 k3 = []
-
 for i in range(n):
     if a[i] == 1:
         k1.append(i + 1)

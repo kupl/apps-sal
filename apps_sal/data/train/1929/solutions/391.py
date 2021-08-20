@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self, ch):
         self.ch = None
         self.children = {}
@@ -6,11 +7,11 @@ class TrieNode:
 
 
 class Trie:
+
     def __init__(self, words):
         self.root = TrieNode(None)
         for word in words:
             self.insert(word[::-1])
-
         return
 
     def insert(self, word):
@@ -19,9 +20,7 @@ class Trie:
             if ch not in cur.children:
                 newNode = TrieNode(ch)
                 cur.children[ch] = newNode
-
             cur = cur.children[ch]
-
         cur.isWord = True
 
     def search(self, word):
@@ -32,7 +31,6 @@ class Trie:
             if ch not in cur.children:
                 return False
             cur = cur.children[ch]
-
         return cur.isWord
 
 
@@ -45,8 +43,3 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.curr += letter
         return self.trieTree.search(self.curr)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

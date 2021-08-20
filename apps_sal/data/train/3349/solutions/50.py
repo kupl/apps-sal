@@ -1,5 +1,5 @@
 def find_missing_number(sequence):
-    if sequence == "":
+    if sequence == '':
         return 0
     seq = sequence.split()
     if not ''.join(seq).isdigit():

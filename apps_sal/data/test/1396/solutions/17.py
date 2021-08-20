@@ -1,4 +1,5 @@
-def R(): return list(map(int, input().split()))
+def R():
+    return list(map(int, input().split()))
 
 
 def dfs(a):
@@ -14,15 +15,13 @@ def dfs(a):
             j = i
             while a[j] == a[i]:
                 j += 1
-
             return j - i + 2 + dfs(a[:i - 2] + a[j:n])
     return 0
 
 
-n, k, x = R()
+(n, k, x) = R()
 a = R()
 ans = 1
 for i in range(n + 1):
     ans = max(ans, dfs(a[:i] + [x] + a[i:]))
-
 print(ans - 1)

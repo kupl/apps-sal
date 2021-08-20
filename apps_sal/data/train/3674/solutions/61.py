@@ -1,5 +1,5 @@
 def add_binary(a, b):
-    binaryNum = ""
+    binaryNum = ''
     q = 0
     mod = 0
     cSum = a + b

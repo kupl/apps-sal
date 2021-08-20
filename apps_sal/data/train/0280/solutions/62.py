@@ -1,4 +1,5 @@
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
         if not s:
             return
@@ -7,21 +8,20 @@ class Solution:
 
     def helper(self, i, j, k, s):
         if (i, j, k) in self.memo:
-            return self.memo[(i, j, k)]
+            return self.memo[i, j, k]
         if len(s) <= k:
             return 0
         if k == 1:
             min_change = self.cal_palindrome(s[i:j])
-            self.memo[(i, j, k)] = min_change
+            self.memo[i, j, k] = min_change
             return min_change
-
         min_change = float('inf')
         for split in range(i + 1, j):
             left = self.cal_palindrome(s[i:split])
             right = self.helper(split, j, k - 1, s)
             if left + right < min_change:
                 min_change = left + right
-        self.memo[(i, j, k)] = min_change
+        self.memo[i, j, k] = min_change
         return min_change
 
     def cal_palindrome(self, s):

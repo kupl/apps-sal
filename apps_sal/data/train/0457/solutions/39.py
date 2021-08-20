@@ -1,15 +1,13 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
 
+    def coinChange(self, coins: List[int], amount: int) -> int:
         queue = deque()
         numCoins = 0
         seen = set()
         coins.sort(reverse=True)
         queue.append(amount)
-
         if amount == 0:
             return 0
-
         while queue:
             qlen = len(queue)
             numCoins += 1

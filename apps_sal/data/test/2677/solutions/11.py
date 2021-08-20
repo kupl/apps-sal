@@ -1,8 +1,5 @@
-# cook your dish here
 from sys import stdin, stdout
-
 s = stdin.readline().strip()
-
 v = ['A', 'E', 'I', 'O', 'U']
 c1 = 0
 c2 = 0

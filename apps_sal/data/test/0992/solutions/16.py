@@ -1,5 +1,5 @@
 import numpy as np
-N, S = map(int, input().split())
+(N, S) = map(int, input().split())
 A = list(map(int, input().split()))
 d = np.zeros((N + 1, S + 1), dtype=np.int64)
 d[0, 0] = 1

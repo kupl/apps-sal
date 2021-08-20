@@ -1,1 +1,1 @@
-print(" ".join(input().split(",")))
+print(' '.join(input().split(',')))

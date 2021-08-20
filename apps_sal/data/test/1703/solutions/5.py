@@ -4,7 +4,7 @@ right_parts = Counter()
 n = int(input())
 for _ in range(n):
     seq = input()
-    for res_counter, first_par, s in (left_parts, '(', seq), (right_parts, ')', reversed(seq)):
+    for (res_counter, first_par, s) in ((left_parts, '(', seq), (right_parts, ')', reversed(seq))):
         res = 1
         for c in s:
             if c == first_par:

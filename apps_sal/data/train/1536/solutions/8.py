@@ -4,12 +4,10 @@ for T in range(t):
     a = [int(x) for x in input().split()]
     diff = []
     cor = 0
-
     for i in range(1, n):
         diff.append(a[i] - a[i - 1])
     d = set(diff)
     d = list(d)
-
     if len(d) == 1:
         print(*a)
         continue
@@ -21,7 +19,6 @@ for T in range(t):
             a[-1] = a[-2] + cor
         print(*a)
         continue
-
     if (d[0] + d[1]) / 2 == d[2]:
         cor = d[2]
     elif (d[1] + d[2]) / 2 == d[0]:

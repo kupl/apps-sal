@@ -1,13 +1,11 @@
 n = int(input())
 a = list(map(int, input()))
-
 acc = 0
 back = 0
 top = 0
 cur = 0
 s = []
-
-for i, x in enumerate(a):
+for (i, x) in enumerate(a):
     if x == 0:
         cur = 0
     else:
@@ -16,7 +14,7 @@ for i, x in enumerate(a):
         cur += 1
         if cur >= top:
             top = cur
-            back = (cur + 1) * (cur) // 2 + (i - cur + 1) * cur
+            back = (cur + 1) * cur // 2 + (i - cur + 1) * cur
             s = [(cur, i)]
         else:
             back += i - (s[-1][1] - cur + 1)
@@ -24,8 +22,4 @@ for i, x in enumerate(a):
                 s.pop()
             s += [(cur, i)]
     acc += back
-    #print(i,x,acc, back, top, cur)
-    # print(s)
-
-
 print(acc)

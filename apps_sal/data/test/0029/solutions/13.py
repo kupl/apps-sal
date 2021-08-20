@@ -1,4 +1,3 @@
-
 digit_set = set(range(10))
 double_digit_set = set(range(19))
 A = [int(i) for i in input()]
@@ -15,11 +14,10 @@ else:
                 print(1)
                 one_flag = False
                 break
-        else:
-            if first_sum - (second_sum - A[i]) in digit_set:
-                print(1)
-                one_flag = False
-                break
+        elif first_sum - (second_sum - A[i]) in digit_set:
+            print(1)
+            one_flag = False
+            break
     if one_flag:
         for i in range(6):
             for j in range(i + 1, 6):

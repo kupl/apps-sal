@@ -14,14 +14,13 @@ def numDecodings(A):
             d[i + 1] = d[i] + d[i - 1]
         else:
             d[i + 1] = d[i]
-
     return d[len(A)]
 
 
 for _ in range(int(input())):
     digits = input()
     n = len(digits)
-    if(numDecodings(digits) % 2 == 0):
-        print("YES")
+    if numDecodings(digits) % 2 == 0:
+        print('YES')
     else:
-        print("NO")
+        print('NO')

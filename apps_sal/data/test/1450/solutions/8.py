@@ -1,5 +1,5 @@
 s = input()
-tmp = ""
+tmp = ''
 s = s[::-1]
 xx = z = it = 0
 while it < len(s):

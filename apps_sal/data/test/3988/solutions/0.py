@@ -3,11 +3,11 @@ def put():
 
 
 def dfs(x, flag=1):
-    s, vis, ans = [x], [0] * n, ['+'] * m
+    (s, vis, ans) = ([x], [0] * n, ['+'] * m)
     vis[x] = 1
     while s:
         i = s.pop()
-        for j, k in graph[i]:
+        for (j, k) in graph[i]:
             if vis[j] == 0:
                 if k * flag < 0:
                     ans[abs(k) - 1] = '-'
@@ -16,15 +16,15 @@ def dfs(x, flag=1):
                 if flag == 1 or k == 0:
                     s.append(j)
                     vis[j] = 1
-    return ''.join(ans), sum(vis)
+    return (''.join(ans), sum(vis))
 
 
-n, m, s = put()
+(n, m, s) = put()
 graph = [[] for i in range(n)]
 k = 1
 for _ in range(m):
-    z, x, y = put()
-    x, y = x - 1, y - 1
+    (z, x, y) = put()
+    (x, y) = (x - 1, y - 1)
     if z == 1:
         graph[x].append((y, 0))
     else:
@@ -32,9 +32,9 @@ for _ in range(m):
         graph[y].append((x, -k))
         k += 1
 m = k - 1
-x, y = dfs(s - 1, 1)
+(x, y) = dfs(s - 1, 1)
 print(y)
 print(x)
-x, y = dfs(s - 1, -1)
+(x, y) = dfs(s - 1, -1)
 print(y)
 print(x)

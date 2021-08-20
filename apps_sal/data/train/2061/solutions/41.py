@@ -9,7 +9,7 @@ def short(v):
     s = 0
     M = max(abs(x), abs(y))
     s = s + M
-    if(x == y and x * (x - 1) != 0):
+    if x == y and x * (x - 1) != 0:
         s = s + 1
     print(s)
     return

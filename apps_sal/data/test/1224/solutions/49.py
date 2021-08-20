@@ -6,19 +6,17 @@ import time
 
 def main():
     N = int(input())
-
     idx2 = 1
     while N - pow(5, idx2) >= 1:
         tmp = N - pow(5, idx2)
         idx = 1
         while tmp - pow(3, idx) >= 0:
-            if(tmp == pow(3, idx)):
+            if tmp == pow(3, idx):
                 print(idx, idx2)
                 return 0
             else:
                 idx += 1
         idx2 += 1
-
     print(-1)
 
 

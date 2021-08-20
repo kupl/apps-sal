@@ -1,6 +1,7 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
-        i, res = 0, 0
+        (i, res) = (0, 0)
         for j in range(len(A)):
             K -= 1 - A[j]
             while K < 0:

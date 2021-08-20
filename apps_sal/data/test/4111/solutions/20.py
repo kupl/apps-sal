@@ -19,7 +19,6 @@ for i in range(n):
     if i % 2 == 0:
         if odd[i] - a[i] + even[n - 1] - even[i] == even[i] + odd[n - 1] - odd[i]:
             ans += 1
-    else:
-        if even[i] - a[i] + odd[n - 1] - odd[i] == odd[i] + even[n - 1] - even[i]:
-            ans += 1
+    elif even[i] - a[i] + odd[n - 1] - odd[i] == odd[i] + even[n - 1] - even[i]:
+        ans += 1
 print(ans)

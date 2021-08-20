@@ -7,7 +7,6 @@ def A(arr, a, b, c, L, T):
         return A(arr, a + 1, a + 2, a + 3, L, T)
     elif c == L - 1:
         return A(arr, a, b + 1, b + 2, L, T)
-
     return A(arr, a, b, c + 1, L, T)
 
 
@@ -19,7 +18,7 @@ def closest_sum(ints, num):
     if num in T:
         return num
     else:
-        l, h = num, num
+        (l, h) = (num, num)
         while True:
             l -= 1
             h += 1

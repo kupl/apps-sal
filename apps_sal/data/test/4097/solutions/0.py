@@ -9,7 +9,7 @@ else:
     for a in range(-1, 2):
         for b in range(-1, 2):
             c = True
-            p = (T[1] + b) - (T[0] + a)
+            p = T[1] + b - (T[0] + a)
             tot = 0
             if a != 0:
                 tot += 1
@@ -17,7 +17,7 @@ else:
                 tot += 1
             el = T[1] + b
             for j in range(2, n):
-                if abs((T[j] - el) - p) <= 1:
+                if abs(T[j] - el - p) <= 1:
                     el += p
                     if T[j] != el:
                         tot += 1

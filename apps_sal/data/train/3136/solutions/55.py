@@ -1,11 +1,11 @@
 def people_with_age_drink(age):
-    res = ""
+    res = ''
     if age < 14:
-        res = "drink toddy"
+        res = 'drink toddy'
     elif age < 18:
-        res = "drink coke"
+        res = 'drink coke'
     elif age < 21:
-        res = "drink beer"
+        res = 'drink beer'
     else:
-        res = "drink whisky"
+        res = 'drink whisky'
     return res

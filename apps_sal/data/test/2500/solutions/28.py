@@ -1,7 +1,5 @@
-# coding: utf-8
-# Your code here!
 dic_memo = {0: 1, 1: 2}
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def memo(N):
@@ -12,4 +10,4 @@ def memo(N):
 
 
 n = int(input())
-print((memo(n)))
+print(memo(n))

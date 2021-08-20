@@ -11,7 +11,7 @@ def nCr(n, r):
 
 
 def main():
-    N, A, B = list(map(int, input().split()))
+    (N, A, B) = list(map(int, input().split()))
     V = list(map(int, input().split()))
     VV = Counter(V)
     m = 0
@@ -24,14 +24,14 @@ def main():
             continue
         break
     else:
-        print((m / c))
-        print((1))
+        print(m / c)
+        print(1)
         return
     min_c = A - c
     max_c = min(B - c, vc)
     m += v * min_c
     c += min_c
-    print((m / c))
+    print(m / c)
     if m != c * v:
         max_c = min_c
     r = 0

@@ -1,13 +1,19 @@
 import collections as cc
 import sys
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
-def S(): return list(input().strip())
+
+
+def I():
+    return list(map(int, input().split()))
+
+
+def S():
+    return list(input().strip())
 
 
 s = S()
 t = S()
-k, = I()
+(k,) = I()
 ans = 0
 prev = ''
 ss = sorted([s[i:] for i in range(len(s))])

@@ -1,6 +1,6 @@
 def main():
     from math import factorial as f
-    n, res = 0, 1
+    (n, res) = (0, 1)
     for _ in range(int(input())):
         m = int(input())
         res = res * f(n + m - 1) // f(n) // f(m - 1) % 1000000007

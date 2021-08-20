@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumClosest(self, nums, target):
         """
         :type nums: List[int]
@@ -6,12 +7,11 @@ class Solution:
         :rtype: int
         """
         nums = sorted(nums)
-        res, diff = None, None
+        (res, diff) = (None, None)
         for first in range(len(nums) - 2):
             if first and nums[first] == nums[first - 1]:
                 continue
-
-            second, third = first + 1, len(nums) - 1
+            (second, third) = (first + 1, len(nums) - 1)
             if diff is None:
                 res = nums[first] + nums[second] + nums[third]
                 diff = abs(res - target)

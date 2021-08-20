@@ -1,4 +1,5 @@
 class Solution:
+
     def toZero(self, n):
         extra = 0
         pwr2 = 0

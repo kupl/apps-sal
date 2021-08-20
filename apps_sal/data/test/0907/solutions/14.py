@@ -1,12 +1,8 @@
 from sys import stdin
-"""
-n=int(stdin.readline().strip())
-n,m=map(int,stdin.readline().strip().split())
-s=list(map(int,stdin.readline().strip().split()))
-"""
-n, m = list(map(int, stdin.readline().strip().split()))
+'\nn=int(stdin.readline().strip())\nn,m=map(int,stdin.readline().strip().split())\ns=list(map(int,stdin.readline().strip().split()))\n'
+(n, m) = list(map(int, stdin.readline().strip().split()))
 s = [list(map(int, stdin.readline().strip().split())) for i in range(m)]
-a, b = s[0][0], s[0][1]
+(a, b) = (s[0][0], s[0][1])
 s1 = []
 flag = False
 for i in range(len(s)):
@@ -16,14 +12,12 @@ a1 = 0
 b1 = 0
 for i in range(len(s1)):
     if i == 0:
-        a1, b1 = s1[0][0], s1[0][1]
-
+        (a1, b1) = (s1[0][0], s1[0][1])
         continue
     if a1 != s1[i][1] and a1 != s1[i][0]:
         a1 = -1
     if b1 != s1[i][1] and b1 != s1[i][0]:
         b1 = -1
-
 if b1 != -1 or a1 != -1:
     flag = True
 s1 = []
@@ -34,17 +28,15 @@ a1 = 0
 b1 = 0
 for i in range(len(s1)):
     if i == 0:
-        a1, b1 = s1[0][0], s1[0][1]
+        (a1, b1) = (s1[0][0], s1[0][1])
         continue
     if a1 != s1[i][1] and a1 != s1[i][0]:
         a1 = -1
     if b1 != s1[i][1] and b1 != s1[i][0]:
         b1 = -1
-
 if b1 != -1 or a1 != -1:
     flag = True
-
 if flag:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

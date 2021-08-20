@@ -14,8 +14,7 @@ else:
         print('DOWN')
     elif per == 0:
         print('UP')
+    elif per > per2:
+        print('UP')
     else:
-        if per > per2:
-            print('UP')
-        else:
-            print('DOWN')
+        print('DOWN')

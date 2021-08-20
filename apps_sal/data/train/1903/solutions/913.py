@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         l = len(points)
         parent = [i for i in range(l)]
@@ -12,14 +13,12 @@ class Solution:
             p1 = find(a)
             p2 = find(b)
             parent[p2] = p1
-
         import heapq
 
         def new_cmp_lt(self, a, b):
             return a[0] - b[0]
         heapq.cmp_lt = new_cmp_lt
         res = 0
-
         p = []
         for i in range(l):
             for j in range(i + 1, l):

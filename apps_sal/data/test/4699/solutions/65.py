@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 dl = list(map(int, input().split()))
-
 i = n
 while True:
     money = list(map(int, str(i)))

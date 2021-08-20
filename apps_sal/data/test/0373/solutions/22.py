@@ -2,9 +2,7 @@ def mi():
     return list(map(int, input().split()))
 
 
-'''
-8
-'''
+'\n8\n'
 n = int(input())
 if n <= 2:
     print(n)

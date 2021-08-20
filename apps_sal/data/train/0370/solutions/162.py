@@ -3,6 +3,7 @@ small_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         label = defaultdict(int)
 
@@ -14,13 +15,12 @@ class Solution:
                 return key
 
         def mergeRoot(k1, k2):
-            r1, r2 = findRoot(k1), findRoot(k2)
+            (r1, r2) = (findRoot(k1), findRoot(k2))
             if r1 != r2:
-                r1, r2 = min(r1, r2), max(r1, r2)
+                (r1, r2) = (min(r1, r2), max(r1, r2))
                 label[r1] += label[r2]
                 label[r2] = r1
             return r1
-
         for x in A:
             root_id = 0
             for p in small_primes:
@@ -31,5 +31,4 @@ class Solution:
             if x != 1:
                 root_id = findRoot(x) if root_id == 0 else mergeRoot(root_id, x)
             label[root_id] -= 1
-
         return -min(label.values())

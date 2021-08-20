@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, n):
         self.par = list(range(n))
 
@@ -15,6 +16,7 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         if len(points) <= 1:
             return 0
@@ -30,7 +32,7 @@ class Solution:
                 lens.append((dist(points[i][0], points[i][1], points[j][0], points[j][1]), i, j))
         heapq.heapify(lens)
         while lens:
-            dist, i, j = heapq.heappop(lens)
+            (dist, i, j) = heapq.heappop(lens)
             if dsu.find(i) != dsu.find(j):
                 dsu.union(i, j)
                 res += dist

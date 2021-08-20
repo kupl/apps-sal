@@ -1,11 +1,12 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         if len(s) < k:
             return False
         cnts = collections.defaultdict(int)
         for ch in s:
             cnts[ch] += 1
-        odds, evens = [], []
+        (odds, evens) = ([], [])
         for ch in cnts:
             if cnts[ch] % 2 == 1:
                 odds.append(ch)
@@ -15,11 +16,12 @@ class Solution:
 
 
 class Solution1:
+
     def canConstruct(self, s: str, k: int) -> bool:
         cnts = collections.defaultdict(int)
         for ch in s:
             cnts[ch] += 1
-        odds, evens = [], []
+        (odds, evens) = ([], [])
         for ch in cnts:
             if cnts[ch] % 2 == 1:
                 odds.append(ch)

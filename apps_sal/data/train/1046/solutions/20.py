@@ -1,13 +1,13 @@
 t = int(input())
 for i in range(t):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     m = 1
     n = 2
-    while(1):
-        if(a < m):
+    while 1:
+        if a < m:
             print('Bob')
             break
-        elif(b < n):
+        elif b < n:
             print('Limak')
             break
         a = a - m

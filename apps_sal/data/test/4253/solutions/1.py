@@ -1,3 +1,3 @@
 r = int(input())
 a = r
-print(3 * a**2)
+print(3 * a ** 2)

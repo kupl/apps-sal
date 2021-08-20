@@ -3,7 +3,7 @@ def solve(n, k):
     Slen = len(s)
     removed = False
     largestIndex = 0
-    if (Slen < 2 and k > 1) or k > Slen:
+    if Slen < 2 and k > 1 or k > Slen:
         return '0'
     i = 1
     for j in range(k):

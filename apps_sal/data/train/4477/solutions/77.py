@@ -6,17 +6,14 @@ def reverse_number(n):
     isNegative = False
     if n < 0:
         isNegative = True
-    output = ""
+    output = ''
     stringLst = split(str(n))
     stringLst.reverse()
-
     for i in stringLst:
         output += i
-
-    if (isNegative):
+    if isNegative:
         output = output.replace('-', '')
         result = int(output)
         return result * -1
-
     else:
         return int(output)

@@ -1,4 +1,4 @@
-n, s, t = (int(x) for x in input().split())
+(n, s, t) = (int(x) for x in input().split())
 p = [0] + [int(x) for x in input().split()]
 val = 0
 while s > 0 and s != t:

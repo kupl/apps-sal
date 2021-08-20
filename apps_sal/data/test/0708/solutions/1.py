@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()))
-a, b, s, d = input().split()
+(n, k) = list(map(int, input().split()))
+(a, b, s, d) = input().split()
 if n < 5 or k < n + 1:
     print(-1)
 else:

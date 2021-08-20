@@ -7,7 +7,7 @@ def s():
         a = a[3:]
     c = a[0]
     a = a[1:].replace('ru', '.ru/', 1)
-    print(r, c, a[:-1] if a[-1] == '/'else a, sep='')
+    print(r, c, a[:-1] if a[-1] == '/' else a, sep='')
 
 
 s()

@@ -1,7 +1,4 @@
-# cook your dish here
-
 T = int(input())
-
 for _ in range(T):
     n = int(input())
     s = 0
@@ -15,5 +12,4 @@ for _ in range(T):
             temp.append(l[len(l) // 2])
     temp.sort(reverse=True)
     s += sum(temp[::2])
-
     print(s)

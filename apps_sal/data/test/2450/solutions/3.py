@@ -1,6 +1,5 @@
-
 def solv():
-    x, y, on, tw = map(int, input().split())
+    (x, y, on, tw) = map(int, input().split())
     ans = 0
     for n in range(x):
         s = input()
@@ -10,11 +9,11 @@ def solv():
                 tot += 1
             else:
                 a = tot * on
-                b = (tot // 2) * tw + (tot % 2) * on
+                b = tot // 2 * tw + tot % 2 * on
                 ans += min(a, b)
                 tot = 0
         a = tot * on
-        b = (tot // 2) * tw + (tot % 2) * on
+        b = tot // 2 * tw + tot % 2 * on
         ans += min(a, b)
     print(ans)
 

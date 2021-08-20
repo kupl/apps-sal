@@ -1,5 +1,4 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 oto = b // a
 if oto <= c:
     print(oto)

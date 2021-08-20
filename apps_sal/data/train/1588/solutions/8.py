@@ -1,15 +1,10 @@
-# input t,n,a[]
-# sort integers
-# if integer repeats continue
-# else break
-
 T = int(input())
 for t in range(0, T):
     n = int(input())
     s = [0] * n
     np = [0] * n
     for i in range(0, n):
-        s[i], np[i] = input().split()
+        (s[i], np[i]) = input().split()
         np[i] = int(np[i])
     no = np[:]
     no.sort()
@@ -25,7 +20,6 @@ for t in range(0, T):
                 continue
         if ans == '-1' and no[n - 2] != no[n - 1]:
             ans = no[n - 1]
-
     for i in range(0, n):
         if ans == np[i]:
             ans = int(i)

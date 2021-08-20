@@ -1,11 +1,10 @@
-n, r, avg = list(map(int, input().split()))
+(n, r, avg) = list(map(int, input().split()))
 a = []
 cur = 0
 for i in range(n):
-    t1, t2 = list(map(int, input().split()))
+    (t1, t2) = list(map(int, input().split()))
     cur += t1
     a.append((t2, t1))
-
 a = sorted(a)
 ans = 0
 avg = avg * n
@@ -16,6 +15,4 @@ for i in range(n):
     temp = min(need, r - a[i][1])
     cur += temp
     ans += temp * a[i][0]
-
-
 print(ans)

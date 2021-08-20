@@ -1,4 +1,4 @@
-s = "AEIOU"
+s = 'AEIOU'
 v = 0
 c = 0
 a = 3
@@ -16,6 +16,6 @@ else:
         if y not in s:
             v = v + 1
     if v >= 5 and c > 0:
-        print("GOOD")
+        print('GOOD')
     else:
         print(-1)

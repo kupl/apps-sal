@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     tr = int(input())
     trl = list(map(int, input().split()))
@@ -23,6 +22,6 @@ for _ in range(int(input())):
             res1 = 0
             break
     if res == 1 and res1 == 1:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

@@ -1,4 +1,4 @@
-n, a, x, b, y = list(map(int, input().split()))
+(n, a, x, b, y) = list(map(int, input().split()))
 ans = 'NO'
 if a == b:
     ans = 'YES'

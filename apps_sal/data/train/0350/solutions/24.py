@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Window:
+
     def __init__(self):
         self.count = Counter()
         self.nonzero = 0
@@ -18,11 +19,12 @@ class Window:
 
 
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
         ans = 0
-        l1, l2 = 0, 0
-        w1, w2 = Window(), Window()
-        for r, val in enumerate(A):
+        (l1, l2) = (0, 0)
+        (w1, w2) = (Window(), Window())
+        for (r, val) in enumerate(A):
             w1.add(val)
             w2.add(val)
             while w1.nonzero > K:

@@ -1,13 +1,10 @@
 import math
-n, k = map(int, input().split())
-# print(n, k)
+(n, k) = map(int, input().split())
 dp = [[0] * 102 for i in range(102)]
-# print(len(dp))
 s = input()
 last = [-1] * 26
 for i in range(0, 101):
     dp[i][0] = 1
-
 for i in range(1, n + 1):
     for j in range(1, n + 1):
         ch = s[i - 1]
@@ -18,15 +15,12 @@ for i in range(1, n + 1):
         sub -= 1
         dp[i][j] -= dp[sub][j - 1]
     last[ord(ch) - ord('a')] = i
-
 ans = int(0)
-
-for i in range(n, -1, -1):  # Need to consider empty subsequence too
+for i in range(n, -1, -1):
     if dp[n][i] >= k:
-        # print(i, k)
-        ans += (k) * (n - i)
+        ans += k * (n - i)
         k = 0
-    elif (k > 0):
+    elif k > 0:
         k -= dp[n][i]
         ans += (n - i) * dp[n][i]
     else:

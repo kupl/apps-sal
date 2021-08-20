@@ -1,15 +1,14 @@
-
 def solve(A, B, C):
     if A == B or A == C:
-        if(A == B and B == C):
-            print("No")
+        if A == B and B == C:
+            print('No')
         else:
-            print("Yes")
+            print('Yes')
     elif B == C:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 solve(a, b, c)

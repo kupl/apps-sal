@@ -1,4 +1,5 @@
 class Solution:
+
     def maxWidthRamp(self, A: List[int]) -> int:
         width = 0
         icandidate = [0]

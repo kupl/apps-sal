@@ -1,11 +1,12 @@
 class Solution:
+
     def merge_sort(self, nums):
+
         def helper_sort(left, right):
             if left > right:
                 return []
             if left == right:
                 return [nums[left]]
-
             mid = (left + right) // 2
             l = helper_sort(left, mid)
             r = helper_sort(mid + 1, right)
@@ -15,7 +16,6 @@ class Solution:
             l_idx = 0
             r_idx = 0
             ret = []
-
             while l_idx < len(left_arr) and r_idx < len(right_arr):
                 if left_arr[l_idx] < right_arr[r_idx]:
                     ret.append(left_arr[l_idx])
@@ -34,7 +34,6 @@ class Solution:
         q = deque()
         for n in nums:
             q.append([n])
-
         while len(q) > 1:
             size = len(q)
             idx = 0
@@ -46,7 +45,6 @@ class Solution:
                     break
                 r_arr = q.popleft()
                 idx += 1
-
                 l_idx = 0
                 r_idx = 0
                 tmp = []
@@ -63,5 +61,4 @@ class Solution:
         return q.popleft()
 
     def sortArray(self, nums: List[int]) -> List[int]:
-        # return self.merge_sort(nums)
         return self.merge_sort_iter(nums)

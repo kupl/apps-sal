@@ -1,11 +1,10 @@
 import collections
-
 n = int(input())
 arr_ab = []
 arr_a = []
 arr_b = []
 for _ in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     arr_a.append(a)
     arr_b.append(b)
     arr_ab.append((a, b))

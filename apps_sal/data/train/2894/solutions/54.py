@@ -1,6 +1,6 @@
 def triple_trouble(one, two, three):
     res = ''
-    a = one, two, three
+    a = (one, two, three)
     for i in range(len(one)):
         res += one[i]
         res += two[i]

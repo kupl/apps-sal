@@ -1,9 +1,9 @@
 import sys
-N, u, v = list(map(int, input().split()))
-sys.setrecursionlimit(10**6)
+(N, u, v) = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 6)
 T = [[] for _ in range(N)]
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     T[a - 1].append(b - 1)
     T[b - 1].append(a - 1)
 
@@ -31,4 +31,4 @@ for i in range(N):
     a = dao[i]
     if a > t:
         ans = max(ans, a)
-print((ans - 1))
+print(ans - 1)

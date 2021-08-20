@@ -1,5 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
+
         def cod(k, i):
             if k == 0:
                 self.memo[k] = [self.g[i], self.h[i]]
@@ -11,7 +13,6 @@ class Solution:
                 else:
                     self.h[i] += 1
                     cod(k - 1, i)
-
         self.memo = {}
         l = len(nums)
         f = [0] * l

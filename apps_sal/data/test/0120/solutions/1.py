@@ -1,8 +1,7 @@
 x = int(input())
 if x % 4 != 0:
-    print("===")
+    print('===')
     quit()
-
 ct = x // 4
 s = input()
 aa = s.count('A') - ct
@@ -14,7 +13,7 @@ cc = -cc
 gg = -gg
 tt = -tt
 if min([aa, cc, gg, tt]) < 0:
-    print("===")
+    print('===')
     quit()
 s = list(s)
 for i in range(len(s)):

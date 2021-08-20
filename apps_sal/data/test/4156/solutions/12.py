@@ -1,4 +1,4 @@
-n, w = list(map(int, input().split()))
+(n, w) = list(map(int, input().split()))
 cur_delta = max_delta = min_delta = 0
 for ai in map(int, input().split()):
     cur_delta += ai

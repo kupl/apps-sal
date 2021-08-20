@@ -1,4 +1,5 @@
 class Solution:
+
     def maxProduct(self, nums: List[int]) -> int:
         if len(set(nums)) == 1 and set(nums) == {1}:
             return 0

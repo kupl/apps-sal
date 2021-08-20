@@ -4,7 +4,7 @@ from itertools import groupby
 def rfe_tuple(S):
     grouped = groupby(S)
     res = []
-    for k, v in grouped:
+    for (k, v) in grouped:
         res.append((k, str(len(list(v)))))
     return res
 
@@ -14,7 +14,7 @@ def resolve():
     ls = rfe_tuple(s)
     ans = [0] * len(s)
     n = 0
-    for lr, i in ls:
+    for (lr, i) in ls:
         i = int(i)
         if lr == 'R':
             n += i

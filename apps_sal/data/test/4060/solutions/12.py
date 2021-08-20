@@ -5,7 +5,7 @@ s = input()
 def sol(n, S):
     L = [0]
     for s in S:
-        if s == "(":
+        if s == '(':
             L.append(L[-1] + 1)
         else:
             L.append(L[-1] - 1)

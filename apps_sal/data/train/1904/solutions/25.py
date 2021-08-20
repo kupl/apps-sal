@@ -2,6 +2,7 @@ from queue import PriorityQueue
 
 
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
         kPq = PriorityQueue()
         cnt = 0

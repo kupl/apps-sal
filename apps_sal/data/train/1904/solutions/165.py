@@ -1,16 +1,14 @@
-# class Solution:
-#     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-#         points.sort(key=lambda x: math.sqrt(x[0]*x[0] + x[1]*x[1]))
-#         return points[:K]
-
 class Solution:
+
     def kClosest(self, points: List[List[int]], K: int) -> List[List[int]]:
-        def dist(x): return math.sqrt(points[x][0]**2 + points[x][1]**2)
+
+        def dist(x):
+            return math.sqrt(points[x][0] ** 2 + points[x][1] ** 2)
 
         def dc(i, j, K):
             if i >= j:
                 return
-            oi, oj = i, j
+            (oi, oj) = (i, j)
             i += 1
             pivot = dist(oi)
             while True:
@@ -20,8 +18,8 @@ class Solution:
                     j -= 1
                 if i >= j:
                     break
-                points[i], points[j] = points[j], points[i]
-            points[oi], points[j] = points[j], points[oi]
+                (points[i], points[j]) = (points[j], points[i])
+            (points[oi], points[j]) = (points[j], points[oi])
             if K - 1 == j:
                 return
             elif K - 1 < j:

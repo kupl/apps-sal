@@ -1,6 +1,5 @@
 from itertools import cycle
 from operator import mul
-
 muls = (1, 1, 3, 1, -1, 3, 1, 1, 3, -1, 1, 3, 1, 1, -3)
 
 

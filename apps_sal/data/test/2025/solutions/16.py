@@ -9,5 +9,5 @@ for i in range(n):
         else:
             ans = 1
     else:
-        ans = (z // 4) - (z % 2)
+        ans = z // 4 - z % 2
     print(ans)

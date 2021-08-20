@@ -1,5 +1,4 @@
 char = input()
-
 answer = ''
 if char == 'A':
     answer = 'T'
@@ -9,5 +8,4 @@ elif char == 'G':
     answer = 'C'
 else:
     answer = 'A'
-
 print(answer)

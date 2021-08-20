@@ -1,5 +1,4 @@
 import math
-
 N = int(input())
 a = list(map(int, input().split()))
 ans = a[0]

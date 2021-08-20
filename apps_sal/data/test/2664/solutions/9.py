@@ -1,5 +1,4 @@
 import sys
-
 ans = 1
 print(1)
 sys.stdout.flush()

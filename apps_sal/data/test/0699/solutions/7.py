@@ -1,6 +1,6 @@
 def main():
-    y, k, n = map(int, input().split())
-    x = (-y) % k
+    (y, k, n) = map(int, input().split())
+    x = -y % k
     if not x:
         x = k
     res = list(range(x, n - y + 1, k))

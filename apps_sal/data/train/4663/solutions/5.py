@@ -2,8 +2,7 @@ import re
 
 
 class Word(object):
-
-    digit_regex = re.compile(r'[0-9]')
+    digit_regex = re.compile('[0-9]')
 
     def __init__(self, word):
         self._index = self.digit_regex.findall(word)[0]

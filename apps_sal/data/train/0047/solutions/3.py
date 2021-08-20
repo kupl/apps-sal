@@ -1,7 +1,7 @@
 import sys
 input = sys.stdin.readline
 for nt in range(int(input())):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     a = list(map(int, input().split()))
     if n == 1:
         print(a[0])

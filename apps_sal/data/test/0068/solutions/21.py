@@ -1,6 +1,12 @@
 n = int(input())
-def subtract(t1, t2): return (t1[0] - t2[0], t1[1] - t2[1])
-def add(t1, t2): return (t1[0] + t2[0], t1[1] + t2[1])
+
+
+def subtract(t1, t2):
+    return (t1[0] - t2[0], t1[1] - t2[1])
+
+
+def add(t1, t2):
+    return (t1[0] + t2[0], t1[1] + t2[1])
 
 
 def conv(ch):
@@ -15,7 +21,7 @@ def conv(ch):
 
 
 ops = [conv(ch) for ch in input()]
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 lsum = [ops[0]] * n
 for i in range(1, n):
     lsum[i] = add(lsum[i - 1], ops[i])
@@ -27,7 +33,6 @@ while i >= 0:
 
 
 def check(L):
-
     for i in range(0, n - L + 1):
         moves = (x, y)
         if i > 0:
@@ -35,15 +40,15 @@ def check(L):
         if i + L < n:
             moves = subtract(moves, rsum[i + L])
         turns = abs(moves[0]) + abs(moves[1])
-        if (turns <= L and (L - turns) % 2 == 0):
+        if turns <= L and (L - turns) % 2 == 0:
             return True
     return False
 
 
 if abs(x) + abs(y) > n or (abs(x) + abs(y) - n) % 2 != 0:
-    print((-1))
+    print(-1)
 else:
-    st, en = 0, n
+    (st, en) = (0, n)
     while st < en:
         md = (st + en) // 2
         if check(md):

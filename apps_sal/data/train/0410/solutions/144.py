@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         d = defaultdict(list)
         for integer in range(lo, hi + 1):

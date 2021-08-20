@@ -1,10 +1,8 @@
-# 20 C - Write and Erase
 N = int(input())
 A = [int(input()) for _ in range(N)]
-
 paper = set()
 for a in A:
-    if not(a in paper):
+    if not a in paper:
         paper.add(a)
     else:
         paper.remove(a)

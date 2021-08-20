@@ -15,31 +15,30 @@ def check2(n, ch, l):
         return 1
 
 
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 l = 0
 r = h
 while r - l > 1:
     mid = (l + r) // 2
-    if(check(n, mid)):
+    if check(n, mid):
         l = mid
     else:
         r = mid
-
 ch = 0
-if(check(n, r)):
+if check(n, r):
     ch = r
 else:
     ch = l
 l = ch
 r = 10000000000
-while(r - l > 1):
+while r - l > 1:
     mid = (l + r) // 2
-    if(check2(n, ch, mid)):
+    if check2(n, ch, mid):
         l = mid
     else:
         r = mid
 fans = 0
-if(check2(n, ch, r)):
+if check2(n, ch, r):
     fans = r
 else:
     fans = l

@@ -1,4 +1,4 @@
-l, r = map(int, input().split())
+(l, r) = map(int, input().split())
 ans = 2019
 if r - l >= 2018:
     print(0)

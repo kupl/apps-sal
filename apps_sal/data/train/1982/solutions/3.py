@@ -1,7 +1,8 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = defaultdict(list)
-        for u, v in dislikes:
+        for (u, v) in dislikes:
             graph[u].append(v)
             graph[v].append(u)
         color = {}

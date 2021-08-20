@@ -5,13 +5,13 @@ def main():
         print(-1)
         return
     elif n == 2:
-        a, b = l
+        (a, b) = l
         res = {a * 2 - b, b * 2 - a}
-        if not (a + b) & 1:
+        if not a + b & 1:
             res.add((a + b) // 2)
     else:
         q = min(l[1] - l[0], l[-1] - l[-2])
-        a, res = l[0] - q, ()
+        (a, res) = (l[0] - q, ())
         for b in l:
             if q != b - a:
                 if res or q * 2 != b - a:

@@ -1,13 +1,11 @@
 nim = int(input())
 mike = list(map(int, input().split()))
-
 S = [0]
 X = [0]
 for a in mike:
     S.append(S[-1] + a)
     X.append(X[-1] ^ a)
-
-l, r = 1, 1
+(l, r) = (1, 1)
 result = 0
 p = 1
 while r <= nim:

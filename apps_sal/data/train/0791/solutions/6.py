@@ -2,7 +2,7 @@ import sys
 
 
 def solve():
-    N, D = list(map(int, sys.stdin.readline().split()))
+    (N, D) = list(map(int, sys.stdin.readline().split()))
     A = list(map(int, sys.stdin.readline().split()))
     V = None
     M = 0
@@ -22,6 +22,5 @@ def solve():
 
 
 T = int(sys.stdin.readline())
-
 for _ in range(T):
     print(solve())

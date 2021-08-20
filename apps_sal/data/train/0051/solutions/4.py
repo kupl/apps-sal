@@ -1,8 +1,8 @@
 t = int(input())
 for l in range(t):
-    n, k, d1, d2 = map(int, input().split())
+    (n, k, d1, d2) = map(int, input().split())
     if n % 3 != 0:
-        print("no")
+        print('no')
         continue
     n = n // 3
     ok = False
@@ -22,10 +22,10 @@ for l in range(t):
             x3 = x2 + d2 * j
             if x1 < 0 or x2 < 0 or x3 < 0:
                 continue
-            if x1 <= n and x2 <= n and x3 <= n:
+            if x1 <= n and x2 <= n and (x3 <= n):
                 ok = True
                 break
     if ok:
-        print("yes")
+        print('yes')
     else:
-        print("no")
+        print('no')

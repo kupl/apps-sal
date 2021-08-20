@@ -1,5 +1,5 @@
 from operator import itemgetter
-n, m, d = map(int, input().split())
+(n, m, d) = map(int, input().split())
 ai = list(map(int, input().split()))
 ai2 = [[ai[i], i] for i in range(n)]
 d += 1
@@ -26,4 +26,4 @@ while i < n:
     i += 1
 print(j)
 for i in range(n):
-    print(ai[i], end=" ")
+    print(ai[i], end=' ')

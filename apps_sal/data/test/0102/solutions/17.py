@@ -23,12 +23,11 @@ else:
             print(a[int(s[0]) - 1], 'ty', sep='')
         else:
             print(a[int(s[0]) - 1], 'ty', '-', a[int(s[1]) - 1], sep='')
+    elif n < 30:
+        print('twenty', end='')
+        if n % 10 != 0:
+            print('-', a[int(s[1]) - 1], sep='')
     else:
-        if n < 30:
-            print('twenty', end='')
-            if n % 10 != 0:
-                print('-', a[int(s[1]) - 1], sep='')
-        else:
-            print('thirty', end='')
-            if n % 10 != 0:
-                print('-', a[int(s[1]) - 1], sep='')
+        print('thirty', end='')
+        if n % 10 != 0:
+            print('-', a[int(s[1]) - 1], sep='')

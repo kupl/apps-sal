@@ -1,6 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
-cnt1, cnt2 = 0, 0
+(cnt1, cnt2) = (0, 0)
 for i in A:
     if i > 0:
         cnt1 += 1

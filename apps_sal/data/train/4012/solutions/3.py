@@ -1,10 +1,10 @@
 def encrypt(text, key):
     final_list = []
-    if text == "":
-        return ""
+    if text == '':
+        return ''
     alpha_dict = {}
     num_lst_1 = []
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
     for i in range(0, 26):
         alpha_dict[alphabet[i]] = i
     for letter in text.lower():
@@ -22,7 +22,7 @@ def encrypt(text, key):
         sum_row_2 = num_lst_2[2] * num_lst_1[x] + num_lst_2[3] * num_lst_1[x + 1]
         final_list.append(sum_row_1 % 26)
         final_list.append(sum_row_2 % 26)
-    enpt = ""
+    enpt = ''
     for num in final_list:
         enpt += alphabet[num]
     return enpt.upper()

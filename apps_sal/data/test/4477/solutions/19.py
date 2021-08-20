@@ -1,5 +1,4 @@
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     counting = 0
@@ -12,6 +11,5 @@ for _ in range(t):
                 print(counting)
                 is_done = True
                 break
-
         if is_done:
             break

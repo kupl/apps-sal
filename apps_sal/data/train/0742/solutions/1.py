@@ -22,7 +22,7 @@ def solve():
         r.append(p + [0])
         k -= 1
     r = [x[0] for x in r]
-    atleastz, allz = 0, 1
+    (atleastz, allz) = (0, 1)
     for x in r:
         if x == 0:
             atleastz = 1

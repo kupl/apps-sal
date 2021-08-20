@@ -1,4 +1,4 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 A = []
 B = []
 for i in range(n):
@@ -33,7 +33,6 @@ for j in range(1, m):
         else:
             break
     a_list.append(a)
-
 b_list = []
 for i in range(n):
     a = []

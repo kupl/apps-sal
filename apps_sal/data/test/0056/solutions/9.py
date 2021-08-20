@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, t = read()
+(n, t) = read()
 a = [[0] * 20 for i in range(20)]
 b = [[0] * 20 for i in range(20)]
 for k in range(t):

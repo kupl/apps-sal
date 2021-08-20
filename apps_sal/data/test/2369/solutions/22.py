@@ -1,7 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 if K == 1:
     print(0)
 else:
@@ -14,13 +13,10 @@ else:
 
     def comb(n, k):
         return factorial[n] * pow(factorial[n - k] * factorial[k], -1, mod)
-
     A1 = sorted(A)
     A2 = A1[::-1]
-
     ans = 0
     for i in range(N - K + 1):
         ans += (A2[i] - A1[i]) * comb(N - i - 1, K - 1)
     ans %= mod
-
     print(ans)

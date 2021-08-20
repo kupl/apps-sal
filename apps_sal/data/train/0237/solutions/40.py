@@ -1,6 +1,6 @@
 class Solution:
-    def numSubarraysWithSum(self, A: List[int], S: int) -> int:
 
+    def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         d = defaultdict(int)
         d[0] = 1
         psum = res = 0

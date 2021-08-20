@@ -1,5 +1,3 @@
-
-
 vow = ['a', 'e', 'i', 'o', 'u']
 for _ in range(int(input())):
     name = str(input())
@@ -9,5 +7,4 @@ for _ in range(int(input())):
             tmp += '1'
         elif name[i] in vow and name[i].isalpha():
             tmp += '0'
-
-    print(int(tmp, 2) % (10**9 + 7))
+    print(int(tmp, 2) % (10 ** 9 + 7))

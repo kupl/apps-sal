@@ -1,7 +1,4 @@
-# C - Base -2 Number
-
 N = int(input())
-
 ans = ''
 if N == 0:
     ans = '0'

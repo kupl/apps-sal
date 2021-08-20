@@ -2,10 +2,9 @@ def mp():
     return map(int, input().split())
 
 
-n, k = mp()
+(n, k) = mp()
 a = list(mp())
 a.sort()
-
 l = 1
 r = 10 ** 20
 while l + 1 < r:
@@ -17,5 +16,4 @@ while l + 1 < r:
         r = m
     else:
         l = m
-
 print(l)

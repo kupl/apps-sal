@@ -6,7 +6,7 @@ def hull_method(points):
 def half_hull(sorted_points):
     hull = []
     for p in sorted_points:
-        while len(hull) > 1 and not is_ccw_turn(hull[-2], hull[-1], p):
+        while len(hull) > 1 and (not is_ccw_turn(hull[-2], hull[-1], p)):
             hull.pop()
         hull.append(p)
     hull.pop()

@@ -1,1 +1,2 @@
-def invite_more_women(a): return sum(a) > 0
+def invite_more_women(a):
+    return sum(a) > 0

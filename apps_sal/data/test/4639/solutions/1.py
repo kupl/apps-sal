@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     fbp = n - 2
     cur = 1
     while cur < k:

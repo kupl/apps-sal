@@ -1,7 +1,5 @@
 class StreamChecker(object):
 
-    # class StreamChecker:
-
     def __init__(self, words: List[str]):
         self.s = ''
         self.dic = collections.defaultdict(set)
@@ -10,4 +8,4 @@ class StreamChecker(object):
 
     def query(self, letter: str) -> bool:
         self.s += letter
-        return any(self.s.endswith(w) for w in self.dic[letter])
+        return any((self.s.endswith(w) for w in self.dic[letter]))

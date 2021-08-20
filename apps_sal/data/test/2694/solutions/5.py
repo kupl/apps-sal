@@ -1,34 +1,31 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Jul 16 13:36:30 2020
 
 @author: shubham gupta
 """
-# cook your dish here
 
 
 def main():
     from sys import stdin, stdout
     rl = stdin.readline
-    n, m, k = (int(x) for x in rl().split())
+    (n, m, k) = (int(x) for x in rl().split())
     a = [[int(x) for x in rl().split()] for _ in range(k)]
     dp = [[1] * m for _ in range(n)]
     for b in a:
         b[0] -= 1
         b[1] -= 1
         dp[b[0]][b[1]] = 0
-        x, y = b[0], 0
+        (x, y) = (b[0], 0)
         while y < m:
             t_cell = x + y
             t_check = t_cell - b[2] - abs(y - b[1])
-            if t_check < 0:  # Negative time is impossible
+            if t_check < 0:
                 y += 1
                 continue
             if t_check % b[3] == 0:
                 dp[x][y] = 0
             y += 1
-
-        x, y = 0, b[1]
+        (x, y) = (0, b[1])
         while x < n:
             t_cell = x + y
             t_check = t_cell - b[2] - abs(x - b[0])

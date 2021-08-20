@@ -1,13 +1,13 @@
 from bisect import bisect_left
 import sys
 input = sys.stdin.readline
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 W = [tuple(map(int, input().split())) for _ in range(N)]
 W.sort(key=lambda x: x[2])
 D = [int(input()) for _ in range(Q)]
 ans = [-1] * Q
 skip = [-1] * Q
-for s, t, x in W:
+for (s, t, x) in W:
     l = bisect_left(D, s - x)
     r = bisect_left(D, t - x)
     while l < r:

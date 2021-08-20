@@ -1,4 +1,4 @@
-a, b, x, y = list(map(int, input().split()))
+(a, b, x, y) = list(map(int, input().split()))
 vertical = min(2 * x, y)
 d = abs(a - b)
 if a > b:

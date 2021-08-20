@@ -1,4 +1,4 @@
-k, n = list(map(int, input().split()))
+(k, n) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 c = []
@@ -10,7 +10,7 @@ c += [n - a[-1] + a[0] + 1]
 d += [n - b[-1] + b[0] + 1]
 for i in range(k):
     if c == d[i:] + d[:i]:
-        print("YES")
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

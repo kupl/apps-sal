@@ -7,26 +7,26 @@ if n == 3:
     for i in li:
         ans ^= i
     if ans == 0:
-        print("BitAryo")
+        print('BitAryo')
     else:
-        print("BitLGM")
+        print('BitLGM')
 elif n == 2:
     li = list(map(int, input().split()))
     li.sort()
     phi = (1 + sqrt(5)) / 2
-    ch = [0] * (785)
+    ch = [0] * 785
     for i in range(300):
         a = floor(phi * i)
-        b = floor((phi**2) * i)
+        b = floor(phi ** 2 * i)
         ch[a] = b
         ch[b] = a
     if ch[li[0]] == li[1]:
-        print("BitAryo")
+        print('BitAryo')
     else:
-        print("BitLGM")
+        print('BitLGM')
 else:
     li = int(input())
     if li == 0:
-        print("BitAryo")
+        print('BitAryo')
     else:
-        print("BitLGM")
+        print('BitLGM')

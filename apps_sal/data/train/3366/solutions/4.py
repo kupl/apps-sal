@@ -8,6 +8,6 @@ def nth_perm(n, d):
     ans = []
     while lst:
         f = f // len(lst)
-        c, n = n // f, n % f
+        (c, n) = (n // f, n % f)
         ans += [lst.pop(c)]
     return ''.join(map(str, ans))

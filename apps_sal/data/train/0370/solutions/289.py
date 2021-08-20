@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class DSU:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.rnk = [0] * N
@@ -13,21 +14,21 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = list(map(self.find, (x, y)))
+        (xr, yr) = list(map(self.find, (x, y)))
         if xr == yr:
             return
         if self.rnk[xr] < self.rnk[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         if self.rnk[xr] == self.rnk[yr]:
             self.rnk[xr] += 1
-
         self.par[yr] = xr
         self.siz[xr] += self.siz[yr]
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
-        # Union-Find on Prime Factors
+
         def primeDecompose(num):
             factor = 2
             prime_factors = []
@@ -39,23 +40,17 @@ class Solution:
                     factor += 1
             prime_factors.append(num)
             return prime_factors
-
         dsu = DSU(max(A) + 1)
         num_factor_map = {}
-
         for num in A:
             prime_factors = list(set(primeDecompose(num)))
-            # map a number to its first prime factor
             num_factor_map[num] = prime_factors[0]
-            # merge all groups that contain the prime factors.
             for i in range(0, len(prime_factors) - 1):
                 dsu.union(prime_factors[i], prime_factors[i + 1])
-
         max_size = 0
         group_count = defaultdict(int)
         for num in A:
             group_id = dsu.find(num_factor_map[num])
             group_count[group_id] += 1
             max_size = max(max_size, group_count[group_id])
-
         return max_size

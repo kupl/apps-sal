@@ -1,12 +1,14 @@
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 nxt = {'R': 'G', 'G': 'B', 'B': 'R'}
-
 T = int(input())
 for _ in range(T):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     res = []
     for start in ['R', 'G', 'B']:

@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, N):
         self.par = list(range(N))
         self.sz = [1] * N
@@ -9,11 +10,11 @@ class DSU:
         return self.par[x]
 
     def union(self, x, y):
-        xr, yr = self.find(x), self.find(y)
+        (xr, yr) = (self.find(x), self.find(y))
         if xr == yr:
             return False
         if self.sz[xr] < self.sz[yr]:
-            xr, yr = yr, xr
+            (xr, yr) = (yr, xr)
         self.par[yr] = xr
         self.sz[xr] += self.sz[yr]
         self.sz[yr] = self.sz[xr]
@@ -24,15 +25,8 @@ class DSU:
 
 
 class Solution:
+
     def minCostConnectPoints(self, a: List[List[int]]) -> int:
-        # ans = []
-        # n = len(a)
-        # t = []
-        # for i in range(n):
-        #     t = []
-        #     for i in range(n):
-        #         t.append(0)
-        #     ans.append(t)
         n = len(a)
         if n == 1:
             return 0
@@ -40,7 +34,6 @@ class Solution:
         for i in range(n):
             for j in range(n):
                 x = abs(a[i][0] - a[j][0]) + abs(a[i][1] - a[j][1])
-                # ans[i][j] = x
                 if i != j and i > j:
                     temp.append([x, i, j])
         ans = 0

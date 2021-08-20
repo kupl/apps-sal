@@ -1,12 +1,10 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         max_length = 1
-
         for code in range(2 ** (len(s) - 1)):
             subs = set()
-
             cur = s[0]
-
             for i in range(1, len(s)):
                 if code % 2 == 1:
                     if cur in subs:

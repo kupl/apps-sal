@@ -1,5 +1,5 @@
 def solve(s):
-    string = ""
+    string = ''
     upper = 0
     lower = 0
     for letters in range(len(s)):

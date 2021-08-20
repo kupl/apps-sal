@@ -5,7 +5,7 @@ mx = 1
 def check(v):
     s = bin(v)[2:]
     k = s.count('1')
-    if ('1' * k + '0' * (k - 1)) == s:
+    if '1' * k + '0' * (k - 1) == s:
         return 1
     return 0
 

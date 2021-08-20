@@ -1,5 +1,5 @@
 import itertools
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 Switch = []
 for i in range(M):
     Swi = list(map(int, input().split()))

@@ -1,7 +1,7 @@
 def read_args():
     n = int(input())
     a = list(map(int, input().split()))
-    return a, n
+    return (a, n)
 
 
 def get_good_segment_of_max_length(a, n):
@@ -20,7 +20,7 @@ def get_good_segment_of_max_length(a, n):
 
 
 def __starting_point():
-    a, n = read_args()
+    (a, n) = read_args()
     print(get_good_segment_of_max_length(a, n))
 
 

@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
-
 def main():
     x = int(input())
-    ans, mod = divmod(x, 11)
+    (ans, mod) = divmod(x, 11)
     ans *= 2
     if mod >= 7:
         ans += 2

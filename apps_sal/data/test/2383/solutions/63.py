@@ -1,6 +1,5 @@
 N = int(input())
-*A, = map(int, input().split())
-
+(*A,) = map(int, input().split())
 b = 0
 i = 1
 for a in A:

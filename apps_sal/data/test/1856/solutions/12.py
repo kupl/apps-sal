@@ -10,13 +10,10 @@ def f(u):
 
 
 N = int(input())
-
 p = [0] * 26
 for i in range(26):
     p[i] = i
-
 vst = set()
-
 for i in range(N):
     t = input().rstrip()
     al = set()
@@ -25,12 +22,10 @@ for i in range(N):
         al.add(k)
         vst.add(k)
     if len(al) > 1:
-        for u, v in cb(al, 2):
+        for (u, v) in cb(al, 2):
             if f(u) != f(v):
                 p[f(u)] = p[f(v)]
-
 q = set()
 for w in vst:
     q.add(p[f(w)])
-
 print(len(q))

@@ -2,8 +2,8 @@ t = int(input())
 for _ in range(t):
     s = input()
     n = len(s)
-    ans = ""
-    l = ""
+    ans = ''
+    l = ''
     ind = 0
     while ind < n:
         if ind < n - 1:
@@ -16,7 +16,6 @@ for _ in range(t):
         if ind == n - 1:
             ans += s[ind]
             ind += 1
-
     ans = list(set(list(ans)))
     ans.sort()
     print(''.join(ans))

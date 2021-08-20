@@ -7,6 +7,6 @@ for i in map(int, input().split()):
     else:
         odd += 1
 if even > odd:
-    print("READY FOR BATTLE")
+    print('READY FOR BATTLE')
 else:
-    print("NOT READY")
+    print('NOT READY')

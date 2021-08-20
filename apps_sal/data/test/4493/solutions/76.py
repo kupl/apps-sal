@@ -12,8 +12,8 @@ def main():
             for k3 in range(0, grid[2][2] + 1):
                 a[2] = k3
                 b[2] = grid[2][2] - k3
-                if (sum(a) * 3) + (sum(b) * 3) == all:
-                    print("Yes")
+                if sum(a) * 3 + sum(b) * 3 == all:
+                    print('Yes')
                     return
     print('No')
 

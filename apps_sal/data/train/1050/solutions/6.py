@@ -16,5 +16,4 @@ for test in range(t):
                 streak = 0
             else:
                 streak += 2
-
     print(max_streak)

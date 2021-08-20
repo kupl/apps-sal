@@ -1,4 +1,5 @@
 class Solution:
+
     def toHex(self, num):
         """
         :type num: int
@@ -7,7 +8,7 @@ class Solution:
         if num == 0:
             return '0'
         if num < 0:
-            num = num + 2**32
+            num = num + 2 ** 32
         mapping = '0123456789abcdef'
         output = ''
         while num > 0:

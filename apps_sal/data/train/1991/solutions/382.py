@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         cache = dict()
 
@@ -10,6 +11,6 @@ class Solution:
                 for j in range(len(locations)):
                     if i != j:
                         count += helper(j, f - abs(locations[i] - locations[j]))
-                cache[(i, f)] = count
-            return cache[(i, f)]
+                cache[i, f] = count
+            return cache[i, f]
         return helper(start, fuel) % 1000000007

@@ -9,4 +9,4 @@ count = collections.Counter(words)
 for i in count.values():
     if i != 1:
         ok = False
-print("Yes" if ok else "No")
+print('Yes' if ok else 'No')

@@ -13,10 +13,8 @@ for _ in range(T):
         for i in range(6, n + 1, 2):
             right.append(i)
         right.reverse()
-
         for i in left:
             right.append(i)
-
         for i in right:
-            print(i, end=" ")
-        print("")
+            print(i, end=' ')
+        print('')

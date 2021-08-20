@@ -1,6 +1,5 @@
-# cook your dish here
 for i in range(int(input())):
-    n, l, r = list(map(int, input().split()))
+    (n, l, r) = list(map(int, input().split()))
     mins = 0
     maxs = 0
     start = 1
@@ -15,7 +14,6 @@ for i in range(int(input())):
             start = 1
         elif reached:
             start *= 2
-
     reached = True
     for j in range(n):
         maxs += end

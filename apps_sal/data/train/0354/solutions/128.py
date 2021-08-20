@@ -1,5 +1,7 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
+
         @lru_cache(None)
         def fun(last, no, con):
             if no == n:
@@ -14,4 +16,4 @@ class Solution:
         ans = 0
         for i in range(6):
             ans += fun(i, 1, 1)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

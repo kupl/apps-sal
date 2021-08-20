@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution(object):
+
     def stoneGameIII(self, Values):
         N = len(Values)
 
@@ -11,7 +12,7 @@ class Solution(object):
                 return (0, 0)
             if i == N - 1:
                 return (Values[-1], 0)
-            one, two, three = -float('inf'), -float('inf'), -float('inf')
+            (one, two, three) = (-float('inf'), -float('inf'), -float('inf'))
             one = (Values[i] + dp(i + 1)[1], dp(i + 1)[0])
             if i < N - 1:
                 two = (Values[i] + Values[i + 1] + dp(i + 2)[1], dp(i + 2)[0])

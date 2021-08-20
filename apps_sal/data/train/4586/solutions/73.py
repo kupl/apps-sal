@@ -3,7 +3,7 @@ import string
 
 def tv_remote(word):
     let = 0
-    numbers = "123456789.@0z_/"
+    numbers = '123456789.@0z_/'
     keyboard = {(i, j): 0 for i in range(1, 6) for j in range(1, 9)}
     for i in range(1, 6):
         for j in range(1, 6):
@@ -20,6 +20,6 @@ def tv_remote(word):
     cursor = [1, 1]
     moves = 0
     for i in word:
-        moves += 1 + (abs((keys[vals.index(i)][0]) - cursor[0]) + abs((keys[vals.index(i)][1]) - cursor[1]))
+        moves += 1 + (abs(keys[vals.index(i)][0] - cursor[0]) + abs(keys[vals.index(i)][1] - cursor[1]))
         cursor = keys[vals.index(i)]
     return moves

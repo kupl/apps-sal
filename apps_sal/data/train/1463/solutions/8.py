@@ -1,5 +1,5 @@
 def gcd(a, b):
-    if (b == 0):
+    if b == 0:
         return a
     return gcd(b, a % b)
 
@@ -16,7 +16,7 @@ for tes in range(testcase):
         for j in range(leng):
             flag2 = True
             for k in arr[j]:
-                if gcd(i, k) != 1 and i != 1 and k != 1:
+                if gcd(i, k) != 1 and i != 1 and (k != 1):
                     flag2 = False
                     break
             if flag2:

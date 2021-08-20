@@ -1,13 +1,12 @@
 n = int(input())
 prd = []
-adic = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4,
-        'f': 5, 'g': 6, 'h': 7, 'i': 8, 'j': 9}
+adic = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8, 'j': 9}
 fst = [0] * 10
 for i in range(n):
     raw = list(input())
     fst[adic[raw[0]]] = 1
     for i in range(len(raw)):
-        prd.append([raw[i], 10**(len(raw) - i - 1)])
+        prd.append([raw[i], 10 ** (len(raw) - i - 1)])
 cnt = [0] * 10
 for i in range(len(prd)):
     k = adic[prd[i][0]]

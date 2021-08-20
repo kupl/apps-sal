@@ -1,7 +1,7 @@
 from math import *
 n = int(input())
 a = [int(x) for x in input().split(' ')]
-pwrs = [2**i for i in range(1, 31)]
+pwrs = [2 ** i for i in range(1, 31)]
 cnts = {}
 s = set()
 clear = set()

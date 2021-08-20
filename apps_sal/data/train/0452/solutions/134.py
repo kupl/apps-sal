@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         MAX = 300 * 1000 * 10
         N = len(jobDifficulty)
@@ -16,7 +17,7 @@ class Solution:
                 else:
                     cost = dp(left_days, left_jobs_i + 1, current_jobs_i)
                     if left_days > 1:
-                        cost = min(cost, dp(left_days - 1, left_jobs_i + 1, left_jobs_i + 1) + max(jobDifficulty[current_jobs_i:(left_jobs_i + 1)]))
+                        cost = min(cost, dp(left_days - 1, left_jobs_i + 1, left_jobs_i + 1) + max(jobDifficulty[current_jobs_i:left_jobs_i + 1]))
                 cache[key] = cost
             return cache[key]
         ret = dp(d, 0, 0)

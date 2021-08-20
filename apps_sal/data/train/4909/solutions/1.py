@@ -1,15 +1,14 @@
 import random as random_
-del __import__("sys").modules['random']
-
-# Yeah, security isn't perfect yet
+del __import__('sys').modules['random']
 
 
-class Random():
+class Random:
+
     def __init__(self, seed):
         self.rand = random_.Random(seed)
 
     def __setattr__(self, name, value):
-        if name == "seed":
+        if name == 'seed':
             self.rand.seed(value)
         else:
             super(Random, self).__setattr__(name, value)

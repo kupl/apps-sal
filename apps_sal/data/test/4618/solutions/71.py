@@ -7,4 +7,4 @@ for i in range(N):
         s |= {S[i:j]}
 A = list(s)
 A.sort()
-print((A[K - 1]))
+print(A[K - 1])

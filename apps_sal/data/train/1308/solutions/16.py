@@ -9,10 +9,8 @@ while True:
             flag = 0
             break
     temp1 = sum([d[x] for x in list(d.keys()) if x.isalnum])
-
     if flag and temp1:
-        print("Valid")
+        print('Valid')
         break
-
     else:
-        print("Invalid")
+        print('Invalid')

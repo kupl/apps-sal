@@ -3,10 +3,9 @@ import math
 import random
 from fractions import gcd
 from itertools import permutations
-
 debug = 0
 if debug:
-    f = open("input.txt", "r")
+    f = open('input.txt', 'r')
     input = f.readline
 else:
     input = sys.stdin.readline
@@ -17,7 +16,7 @@ def mp():
 
 
 def _main():
-    n, m = mp()
+    (n, m) = mp()
     a = [0] * n
     for i in range(n):
         a[i] = mp()

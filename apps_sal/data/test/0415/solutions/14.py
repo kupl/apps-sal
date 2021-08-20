@@ -18,10 +18,9 @@ def find_d(A):
         if len(l) == 1:
             if l[0] < min_ind:
                 min_ind = l[0]
-            else:
-                if d < l[0] - min_ind:
-                    d = l[0] - min_ind
-                    r = (d, min_ind)
+            elif d < l[0] - min_ind:
+                d = l[0] - min_ind
+                r = (d, min_ind)
         elif len(l) == 2:
             if d < l[1] - min_ind:
                 d = l[1] - min_ind

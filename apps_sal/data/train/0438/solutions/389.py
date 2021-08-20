@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
 
         class DisjointSet:
@@ -20,16 +21,15 @@ class Solution:
                 a = self.find_set(a)
                 b = self.find_set(b)
                 if self.size[a] < self.size[b]:
-                    a, b = b, a
+                    (a, b) = (b, a)
                 self.parent[b] = a
                 self.size[a] += self.size[b]
-
         n = len(arr)
         if n == m:
             return n
         ans = -1
         ds = DisjointSet(n)
-        for step, i in enumerate(arr):
+        for (step, i) in enumerate(arr):
             i -= 1
             ds.make_set(i)
             for j in (i - 1, i + 1):

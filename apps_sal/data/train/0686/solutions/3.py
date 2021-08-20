@@ -9,6 +9,6 @@ for _ in range(int(input())):
     stairs_time = stairs_distance / stairs_speed
     elevators_time = elevators_distance / elevators_speed
     if stairs_time < elevators_time:
-        print("Stairs")
+        print('Stairs')
     else:
-        print("Elevator")
+        print('Elevator')

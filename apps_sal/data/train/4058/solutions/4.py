@@ -2,6 +2,7 @@ from itertools import chain
 
 
 def pattern(n):
+
     def f():
         length = 2 * n - 1
         lines = [' '] * length

@@ -1,7 +1,6 @@
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 a = list(map(int, input().split()))
 ans = 0
-
 while True:
     b = False
     k = 0
@@ -11,7 +10,7 @@ while True:
             s += a[i]
             k += 1
             b = True
-    if not(b):
+    if not b:
         break
     if t < s:
         for i in range(n):
@@ -19,7 +18,6 @@ while True:
                 ans += 1
                 t -= a[i]
     else:
-        ans += (t // s) * k
+        ans += t // s * k
         t %= s
-    #print(ans, t, s)
 print(ans)

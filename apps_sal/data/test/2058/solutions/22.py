@@ -4,7 +4,6 @@ if False:
 else:
     inp = sys.stdin
 count = [0]
-
 a = inp.readline().strip()
 b = inp.readline().strip()
 for i in range(len(b)):

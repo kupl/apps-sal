@@ -13,10 +13,9 @@ def solve2a(minx):
     miny = min(x)
     maxy = max(y)
     maxx = 0
-
     for i in range(n):
         if y[i] < minx:
-            return 2**60
+            return 2 ** 60
         if minx <= x[i]:
             maxx = max(maxx, x[i])
         else:
@@ -25,7 +24,7 @@ def solve2a(minx):
 
 
 def solve2_():
-    res = 2**60
+    res = 2 ** 60
     for minx in x:
         res = min(res, solve2a(minx))
     for minx in y:
@@ -34,13 +33,12 @@ def solve2_():
 
 
 def solve2():
-    res = 2**60
+    res = 2 ** 60
     xy = x + y
     xy.sort()
     miny = min(x)
     maxy = max(y)
     my = min(y)
-
     pi = 0
     for minx in xy:
         if my < minx:
@@ -53,15 +51,14 @@ def solve2():
 
 
 n = int(input())
-
 x = [0] * n
 y = [0] * n
 p = [(0, 0)] * n
 mini = maxi = 0
 for i in range(n):
-    x[i], y[i] = list(map(int, input().split()))
-    x[i], y[i] = min(x[i], y[i]), max(x[i], y[i])
-    p[i] = x[i], y[i]
+    (x[i], y[i]) = list(map(int, input().split()))
+    (x[i], y[i]) = (min(x[i], y[i]), max(x[i], y[i]))
+    p[i] = (x[i], y[i])
     if x[i] < x[mini]:
         mini = i
     if y[maxi] < y[i]:
@@ -73,11 +70,9 @@ mx = my = 0
 for i in range(n):
     my = max(my, p[i][1])
     ly[i + 1] = my
-
 for i in range(n - 1, -1, -1):
     mx = max(mx, p[i][0])
     rx[i + 1] = mx
-
 ans = solve1()
 if mini != maxi:
     ans = min(ans, solve2())

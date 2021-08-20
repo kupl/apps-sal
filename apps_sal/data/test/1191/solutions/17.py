@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 c = list(map(int, input().split()))
 arr = [[p[i], i] for i in range(n)]
@@ -15,4 +15,4 @@ for i in range(n):
     if len(z) > k:
         z = z[1:]
 for el in ans:
-    print(el, end=" ")
+    print(el, end=' ')

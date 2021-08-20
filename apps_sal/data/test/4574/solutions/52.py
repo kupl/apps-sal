@@ -10,7 +10,6 @@ for i in a:
             tmp[i] = 0
     else:
         tmp[i] = 1
-
 rods.sort(reverse=True)
 if len(rods) >= 2:
     print(rods[0] * rods[1])

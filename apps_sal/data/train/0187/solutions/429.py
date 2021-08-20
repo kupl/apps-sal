@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         cost = 0
         waiting = 0
@@ -20,7 +21,6 @@ class Solution:
             cost -= runningCost
             rotations += 1
             profits.append((rotations, cost))
-        # print(profits)
         p_ans = float('-inf')
         r_ans = None
         for p in profits:

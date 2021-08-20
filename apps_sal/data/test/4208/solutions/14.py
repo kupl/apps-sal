@@ -25,7 +25,6 @@ for i in range(n):
         b2[ord(s2[i]) - 97].append(i)
 cnt = 0
 c = []
-
 for i in range(26):
     while a1[i] > 0 and a2[i] > 0:
         cnt += 1

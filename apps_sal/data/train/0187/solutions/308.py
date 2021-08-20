@@ -1,9 +1,8 @@
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         i = 0
         g = [4, 4, 4, 4]
-
         profit = 0
         max_profit = 0
         customers = customers[::-1]
@@ -28,7 +27,6 @@ class Solution:
             if profit > max_profit:
                 best = rotates
                 max_profit = profit
-            #print(rotates, g, profit)
             i += 1
             i %= 4
         return best

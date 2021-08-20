@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         @lru_cache
         def helper(x):
             steps = 0
@@ -13,7 +15,6 @@ class Solution:
                     x //= 2
                 steps += 1
             return steps
-
         lookup = {}
         for x in range(lo, hi + 1):
             lookup[x] = helper(x)

@@ -1,6 +1,6 @@
 n = int(input())
 s = list(input())
-wd = list("abcdefghijklmnopqrstuvwxyz")
+wd = list('abcdefghijklmnopqrstuvwxyz')
 ans = 0
 for i in range(n):
     s1 = set(s[:i])

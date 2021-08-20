@@ -8,7 +8,7 @@ def main():
         for x in array:
             if x == 0:
                 zeros += 1
-        if (zeros + sum_) == 0:
+        if zeros + sum_ == 0:
             zeros += 1
         print(zeros)
 

@@ -4,13 +4,13 @@ def merge_arrays(first, second):
     print(first, second)
     common = []
     output = []
-    if (first == second) and first == []:
+    if first == second and first == []:
         return []
     if first == []:
         return second
     if second == []:
         return first
-    while (i < len(first)) and (j < len(second)):
+    while i < len(first) and j < len(second):
         if first[i] < second[j]:
             common.append(first[i])
             i = i + 1

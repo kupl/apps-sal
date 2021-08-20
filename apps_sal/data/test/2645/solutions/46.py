@@ -1,5 +1,4 @@
 S = sorted(list(input()))
-
 p = len(S) // 2
 g = len(S) // 2
 if len(S) % 2 == 1:

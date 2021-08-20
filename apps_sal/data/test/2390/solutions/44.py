@@ -1,10 +1,10 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 a = [(0, 0)]
 for _ in range(n):
-    x, v = map(int, input().split())
+    (x, v) = map(int, input().split())
     a += [(x, v)]
 a += [(0, 0)]
-max_r, max_l = [0], [0]
+(max_r, max_l) = ([0], [0])
 s = 0
 for i in range(1, n + 1):
     s += a[i][1]

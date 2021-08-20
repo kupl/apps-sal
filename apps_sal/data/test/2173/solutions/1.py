@@ -1,5 +1,4 @@
 dp = dict()
-
 n = int(input())
 a = list(map(int, input().split()))
 g = sorted(list(range(n)), key=lambda x: a[x])

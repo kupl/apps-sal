@@ -1,6 +1,8 @@
-# cook your dish here
 import sys
-def R(): return list(map(int, input().split()))
+
+
+def R():
+    return list(map(int, input().split()))
 
 
 t = int(input())
@@ -19,5 +21,4 @@ for _ in range(t):
             for j in range(0, i):
                 y += min(rev_lst[j], x)
             ans = min(ans, n - y)
-
     print(ans)

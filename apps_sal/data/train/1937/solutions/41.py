@@ -3,7 +3,7 @@ class ThroneInheritance:
 
     def __init__(self, kingName: str):
         self.king_name = kingName
-        self.dead = set([])  # names of dead people
+        self.dead = set([])
         self.children = collections.defaultdict(list)
         self.parent = {}
 
@@ -24,21 +24,11 @@ class ThroneInheritance:
                 if x == self.king_name:
                     return None
                 return successor(self.parent[x])
-
             y = ys[0]
             order.append(y)
             order_set.add(y)
             return y
-
         p = successor(self.king_name)
         while p:
             p = successor(p)
-
         return [name for name in order if name not in self.dead]
-
-
-# Your ThroneInheritance object will be instantiated and called as such:
-# obj = ThroneInheritance(kingName)
-# obj.birth(parentName,childName)
-# obj.death(name)
-# param_3 = obj.getInheritanceOrder()

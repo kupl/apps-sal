@@ -1,11 +1,11 @@
 def withZeros(m):
     t = str(m)
     if m < 1000:
-        t = "0" + t
+        t = '0' + t
         if m < 100:
-            t = "0" + t
+            t = '0' + t
             if m < 10:
-                t = "0" + t
+                t = '0' + t
     return t
 
 
@@ -22,7 +22,7 @@ for query in range(q):
             if r[i] == r[j]:
                 ans += 1
                 for a in range(10):
-                    if ((r[i] + a * 1000 + 1000) % 10000) not in r:
+                    if (r[i] + a * 1000 + 1000) % 10000 not in r:
                         r[i] = (r[i] + a * 1000 + 1000) % 10000
                         break
     print(ans)

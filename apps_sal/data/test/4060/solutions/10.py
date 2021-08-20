@@ -27,8 +27,7 @@ elif wasm == -1:
         print(0)
     else:
         print(int((len(line) - max(last0, last1)) / 2))
+elif curs != -2:
+    print(0)
 else:
-    if curs != -2:
-        print(0)
-    else:
-        print(int(wasm / 2) + 1)
+    print(int(wasm / 2) + 1)

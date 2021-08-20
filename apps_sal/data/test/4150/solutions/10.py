@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
-A = [(a, i) for i, a in enumerate(A)]
+A = [(a, i) for (i, a) in enumerate(A)]
 A.sort(key=lambda x: x[0])
 A.reverse()
 left = [-1] * n
@@ -21,7 +21,6 @@ for i in range(n):
             right[left[cur]] = right[cur]
         if right[cur] != -1:
             left[right[cur]] = left[cur]
-        # left
         for j in range(k):
             cur = left[cur]
             if cur == -1:
@@ -32,8 +31,6 @@ for i in range(n):
                 right[left[cur]] = right[cur]
             if right[cur] != -1:
                 left[right[cur]] = left[cur]
-
-        # right
         cur = A[i][1]
         for j in range(k):
             cur = right[cur]

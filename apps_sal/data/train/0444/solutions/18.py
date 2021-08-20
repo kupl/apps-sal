@@ -1,6 +1,7 @@
 class Solution:
+
     def nthPersonGetsNthSeat(self, n: int) -> float:
-        '''
+        """
         f(n) = 1/n                                    -> 1st person picks his own seat
             + 1/n * 0                                 -> 1st person picks last one's seat
             + (n-2)/n * (                            ->1st person picks one of seat from 2nd to (n-1)th
@@ -11,7 +12,7 @@ class Solution:
             )
 
         => f(n) = 1/n * ( f(n-1) + f(n-2) + f(n-3) + ... + f(1) )
-        '''
+        """
         if n == 1:
             return 1.0
         if n == 2:
@@ -22,23 +23,4 @@ class Solution:
             dp.append(acc / i)
             acc += dp[-1]
         return dp[-1]
-
-        '''
-        Formal proof with math solution
-        when n > 2,
-        f(n) = 1/n * ( f(n-1) + f(n-2) + ... + f(1) )
-        f(n-1) = 1/(n-1) * (f(n-2) + f(n-3) + ... + f(1))
-
-        because, the 2nd equation requires n-1 > 1
-        So that
-
-        n * f(n) = f(n-1) + f(n-2) + f(n-3) + ... + f(1)
-        (n-1) * f(n-1) = f(n-2) + f(n-3) + ... + f(1)
-        Substract both sides, we get
-
-        n * f(n) - (n-1)*f(n-1) = f(n-1)
-
-        => n * f(n) = n * f(n-1)
-        => f(n) = f(n-1) = f(2) = 1/2 , when n > 2
-        '''
-        # return 1 if n==1 else 0.5
+        '\n        Formal proof with math solution\n        when n > 2,\n        f(n) = 1/n * ( f(n-1) + f(n-2) + ... + f(1) )\n        f(n-1) = 1/(n-1) * (f(n-2) + f(n-3) + ... + f(1))\n\n        because, the 2nd equation requires n-1 > 1\n        So that\n\n        n * f(n) = f(n-1) + f(n-2) + f(n-3) + ... + f(1)\n        (n-1) * f(n-1) = f(n-2) + f(n-3) + ... + f(1)\n        Substract both sides, we get\n\n        n * f(n) - (n-1)*f(n-1) = f(n-1)\n\n        => n * f(n) = n * f(n-1)\n        => f(n) = f(n-1) = f(2) = 1/2 , when n > 2\n        '

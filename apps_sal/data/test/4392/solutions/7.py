@@ -1,6 +1,6 @@
 t = int(input())
 while t:
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     a = input().split()
     p = input().split()
     for i in range(n):
@@ -11,7 +11,7 @@ while t:
     ls = []
     temp = []
     for i in range(n):
-        if(visited[i] == 0):
+        if visited[i] == 0:
             temp.sort()
             for j in range(len(temp)):
                 ls.append(temp[j])
@@ -22,8 +22,8 @@ while t:
     for j in range(len(temp)):
         ls.append(temp[j])
     a.sort()
-    if(a == ls):
-        print("YES")
+    if a == ls:
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t -= 1

@@ -1,17 +1,16 @@
 import sys
-sys.setrecursionlimit(10**9)
-
+sys.setrecursionlimit(10 ** 9)
 n = int(input())
 to = [[] for i in range(n)]
 edge = {}
 color = [0] * (n - 1)
 for i in range(1, n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     to[a].append(b)
     to[b].append(a)
-    edge[(a, b)] = edge[(b, a)] = i
+    edge[a, b] = edge[b, a] = i
 
 
 def dfs(n, b=-1, bc=-1):
@@ -22,7 +21,7 @@ def dfs(n, b=-1, bc=-1):
             continue
         if k == bc:
             k += 1
-        color[edge[(n, to_n[i])] - 1] = k
+        color[edge[n, to_n[i]] - 1] = k
         dfs(to_n[i], n, k)
         k += 1
 

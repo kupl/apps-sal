@@ -5,7 +5,7 @@ for tt in range(t):
     s = a[0]
     l = a[0]
     for i in range(1, n):
-        if a[i] > 0 and l < 0 or a[i] < 0 and l > 0:
+        if a[i] > 0 and l < 0 or (a[i] < 0 and l > 0):
             l = a[i]
             s += l
         elif l < a[i]:

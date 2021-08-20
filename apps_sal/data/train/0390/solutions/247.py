@@ -1,4 +1,5 @@
 class Solution:
+
     def findWinner(self, res, sqlist, n, t, turn):
         if turn == 'Alice':
             if res[t] == 1:

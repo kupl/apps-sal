@@ -3,8 +3,8 @@ import math
 n = int(input())
 
 
-def lcm_base(x, y):  # 最小公倍数
-    return (x * y) // math.gcd(x, y)
+def lcm_base(x, y):
+    return x * y // math.gcd(x, y)
 
 
 def lcm(numbers):
@@ -14,5 +14,4 @@ def lcm(numbers):
 t = []
 for i in range(n):
     t.append(int(input()))
-
 print(lcm(t))

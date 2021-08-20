@@ -1,4 +1,5 @@
 class DynamicConnectivity(object):
+
     def __init__(self, n):
         self.a = [{i} for i in range(n)]
 

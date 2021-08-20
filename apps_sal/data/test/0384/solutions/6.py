@@ -13,4 +13,4 @@ for i in range(n):
         curr_b = 0
 print(len(ans))
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

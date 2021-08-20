@@ -1,6 +1,6 @@
 def capitalize(s):
-    ret = ""
-    ter = ""
+    ret = ''
+    ter = ''
     i = True
     for char in s:
         if i:

@@ -9,7 +9,6 @@ def find_divisor(n):
     for i in range(2, root + 1):
         if n % i == 0:
             ans.extend([i, n / i])
-
     return list(set(ans))
 
 
@@ -21,10 +20,9 @@ def fans(n):
         m = min(div)
         divs = True
         for x in div:
-            divs = divs and (x % m == 0)
+            divs = divs and x % m == 0
             if divs == False:
                 break
-
         if divs:
             return min(div)
         else:

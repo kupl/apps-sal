@@ -20,6 +20,6 @@ for i in range(10, 100):
         for j in range(2, len(g[i])):
             mus.append(g[i][j])
 for i in range(len(mus)):
-    ans[mus[i]] = 2 - (i % 2)
+    ans[mus[i]] = 2 - i % 2
 print(x[0] * x[1])
 print(*ans)

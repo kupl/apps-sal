@@ -8,8 +8,7 @@ def solve(arr):
             neg.append(i)
         else:
             pos.append(i)
-
-    if(len(neg) > len(pos)):
+    if len(neg) > len(pos):
         for i in neg:
             if abs(i) not in pos:
                 return i

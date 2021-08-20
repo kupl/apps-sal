@@ -13,9 +13,7 @@ for i in range(N):
 if count % 2 == 1:
     for i in range(count - 1):
         A[i] = -A[i]
-
     print(sum(A) - 2 * l - 2 * A[count - 1])
-
 if count % 2 == 0:
     for i in range(count):
         A[i] = -A[i]

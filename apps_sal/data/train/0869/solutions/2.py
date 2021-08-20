@@ -6,9 +6,9 @@ def main():
     a = s().strip()
     b = s().strip()
     if b in a:
-        print("Y")
+        print('Y')
     else:
-        print("N")
+        print('N')
 
 
 def __starting_point():

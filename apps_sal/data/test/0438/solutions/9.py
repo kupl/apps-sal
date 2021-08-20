@@ -1,6 +1,6 @@
 n = int(input())
 cur = 1
-while(n >= cur):
+while n >= cur:
     n -= cur
     cur += 1
 print(cur - 1)

@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
-        M = 10**9 + 7
+        M = 10 ** 9 + 7
         mismatch = 0
         nums.sort()
         base = 0

@@ -1,7 +1,6 @@
 s = list(input())
 t = list(input())
 n = len(s)
-
 s_par = [i for i in range(n + 1)]
 t_par = [i for i in range(n + 1)]
 

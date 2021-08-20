@@ -1,5 +1,5 @@
 n = int(input())
-a, b, c = [list(map(int, input().split())) for i in range(3)]
+(a, b, c) = [list(map(int, input().split())) for i in range(3)]
 x = 0
 d = -10
 for i in range(n):

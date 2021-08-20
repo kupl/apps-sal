@@ -1,4 +1,4 @@
-class MarketQueue():
+class MarketQueue:
 
     def __init__(self, customers, n):
         self.customers = customers
@@ -22,16 +22,13 @@ class MarketQueue():
 
     def process_active_checkouts(self):
         finished_customers = []
-        for index, customer in enumerate(self.active_checkouts):
+        for (index, customer) in enumerate(self.active_checkouts):
             if customer > 1:
                 self.active_checkouts[index] = int(customer - 1)
             else:
                 finished_customers.append(customer)
-
         for finished in finished_customers:
             self.active_checkouts.remove(finished)
-
-# implementing requirements
 
 
 def queue_time(customers, n):

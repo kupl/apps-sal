@@ -10,8 +10,8 @@ def split_all_even_numbers(numbers, split_type):
             elif split_type == 1:
                 result.extend(pairs[0])
             elif split_type == 2:
-                for c, _ in reversed(pairs):
-                    quo, rem = divmod(a, c)
+                for (c, _) in reversed(pairs):
+                    (quo, rem) = divmod(a, c)
                     if not rem:
                         result.extend([c] * quo)
                         break

@@ -1,6 +1,7 @@
 class Solution:
+
     def numSubmat(self, mat: List[List[int]]) -> int:
-        R, C = len(mat), len(mat[0])
+        (R, C) = (len(mat), len(mat[0]))
         for r in range(R):
             for c in range(1, C):
                 if mat[r][c]:

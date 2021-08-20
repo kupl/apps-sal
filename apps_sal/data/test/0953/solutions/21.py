@@ -2,7 +2,7 @@ def dfs(v):
     pos.append(v)
     used[v] = 1
     for i in range(n):
-        if s[v][i] == "1" and not used[i]:
+        if s[v][i] == '1' and (not used[i]):
             dfs(i)
 
 
@@ -17,7 +17,6 @@ for i in range(n):
         values = [a[i] for i in pos]
         pos.sort()
         values.sort()
-        for i, j in enumerate(pos):
+        for (i, j) in enumerate(pos):
             a[j] = values[i]
-
-print(" ".join(str(x) for x in a))
+print(' '.join((str(x) for x in a)))

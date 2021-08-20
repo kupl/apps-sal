@@ -1,21 +1,12 @@
-#   ==========     //\\       //||     ||====//||
-#       ||        //  \\        ||     ||   // ||
-#       ||       //====\\       ||     ||  //  ||
-#       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====||
-#  code
-
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
-
     if n == 1:
         print(1)
         return
-
     diff = 1
     ans = 1
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         if i > 0:
             if v == a[i - 1]:
                 continue
@@ -24,7 +15,6 @@ def solve():
                 if diff > k:
                     ans += 1
                     diff = 2
-
     if diff > k:
         print(-1)
     else:

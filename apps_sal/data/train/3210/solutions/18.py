@@ -1,16 +1,11 @@
 def get_strings(city):
-
     ciu = {}
-
-    for letra in city.lower().replace(" ", ""):
+    for letra in city.lower().replace(' ', ''):
         if letra not in ciu:
-            ciu[letra] = "*"
+            ciu[letra] = '*'
         else:
-            ciu[letra] += "*"
-
+            ciu[letra] += '*'
     array = []
     for clave in ciu:
-
-        array.append("{}:{}".format(clave, ciu[clave]))
-
-    return ",".join(array).replace(" ", "")
+        array.append('{}:{}'.format(clave, ciu[clave]))
+    return ','.join(array).replace(' ', '')

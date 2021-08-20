@@ -1,8 +1,8 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         maxDoubles = 0
         incrs = 0
-
         for num in nums:
             doubles = 0
             while num > 0:

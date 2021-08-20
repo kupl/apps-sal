@@ -1,7 +1,8 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
+
         def numway(s):
-            # if not s: return 0
             nw = 0
             for i in range(1, len(s) + 1):
                 if s[:i] not in nq:

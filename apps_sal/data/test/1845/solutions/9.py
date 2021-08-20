@@ -1,15 +1,16 @@
 import sys
 from math import *
 from fractions import gcd
-def readints(): return list(map(int, input().strip('\n').split()))
+
+
+def readints():
+    return list(map(int, input().strip('\n').split()))
 
 
 n = int(input())
 a = list(readints())
-
 s = sum(a)
 m = min(a)
-
 best = s
 for x in a:
     for d in range(1, x + 1):
@@ -18,7 +19,5 @@ for x in a:
             dm = m * d
             s2 = s - x - m + dx + dm
             best = min(best, s2)
-
 best = int(best)
-
 print(best)

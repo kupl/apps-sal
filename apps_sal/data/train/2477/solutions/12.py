@@ -1,6 +1,6 @@
 class Solution:
-    def numSpecialEquivGroups(self, A: List[str]) -> int:
 
+    def numSpecialEquivGroups(self, A: List[str]) -> int:
         set1 = set()
         even_set = []
         odd_set = []
@@ -14,10 +14,9 @@ class Solution:
                     odd.append(i[j])
             even.sort()
             odd.sort()
-
             if even in even_set:
                 k = []
-                for p, values in enumerate(even_set):
+                for (p, values) in enumerate(even_set):
                     if even == values:
                         k += [p]
                 flag = 0
@@ -30,6 +29,5 @@ class Solution:
             else:
                 even_set.append(even)
                 odd_set.append(odd)
-
         print((even_set, odd_set))
         return len(even_set)

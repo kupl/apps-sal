@@ -7,7 +7,7 @@ list1 = []
 s = 1000
 for i in range(n - 2):
     u = [t[i], t[i + 1], t[i + 2]]
-    v = "".join(map(str, u))
+    v = ''.join(map(str, u))
     w = int(v) - 753
     list1.append(w)
 u = int(len(list1))
@@ -16,4 +16,4 @@ for i in range(u):
         s = list1[i]
     else:
         pass
-print((abs(s)))
+print(abs(s))

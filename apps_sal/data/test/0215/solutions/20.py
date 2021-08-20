@@ -1,10 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 """
 """
-
-# import {{{
 from collections import ChainMap
 from collections import Counter
 from collections import defaultdict
@@ -24,15 +19,11 @@ import random
 import re
 import sys
 import time
-
 try:
     import numpy as np
     import scipy as sp
 except:
     pass
-# }}}
-
-# util {{{
 
 
 def is_odd(x):
@@ -63,33 +54,28 @@ def clamp(x, lo, hi):
 
 def chmax(xmax, x):
     if x > xmax:
-        return x, True
+        return (x, True)
     else:
-        return xmax, False
+        return (xmax, False)
 
 
 def chmin(xmin, x):
     if x < xmin:
-        return x, True
+        return (x, True)
     else:
-        return xmin, False
+        return (xmin, False)
 
 
 sys.setrecursionlimit(100000)
-# }}}
-
-# 適宜調整
-PINF = float("inf")
-NINF = float("-inf")
-EPS = 1e-9
+PINF = float('inf')
+NINF = float('-inf')
+EPS = 1e-09
 
 
 def main():
     N = int(input())
     S = input()
-
     sets = []
-
     s = set()
     for c in S:
         if c.isupper():
@@ -100,12 +86,12 @@ def main():
             s.add(c)
     if s:
         sets.append(s)
-
     ans = len(max(sets, key=len)) if sets else 0
     print(ans)
 
 
-def __starting_point(): main()
+def __starting_point():
+    main()
 
 
 __starting_point()

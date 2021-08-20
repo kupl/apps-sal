@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, A: List[int]) -> int:
 
         def even(A):
@@ -15,25 +16,17 @@ class Solution:
                     c += 1
                     if A[i] == 0:
                         z += 1
-            return A, c, z
-
+            return (A, c, z)
         res = 0
         zero = 0
         for i in A:
             if i == 0:
-                # res+=1
                 zero += 1
-
-        while(zero < len(A)):
-            A, c, z = odd(A)
+        while zero < len(A):
+            (A, c, z) = odd(A)
             zero += z
             res += c
-
             if zero < len(A):
                 A = even(A)
                 res += 1
         return res
-        # A=[]
-        # for i in range(1, 10001):
-        #     A.append(i)
-        # print(A)

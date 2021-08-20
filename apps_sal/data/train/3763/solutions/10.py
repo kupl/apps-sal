@@ -1,12 +1,6 @@
 import operator
 from functools import reduce
-
-OPS = {
-    "+": operator.__add__,
-    "-": operator.__sub__,
-    "*": operator.__mul__,
-    "/": operator.__truediv__
-}
+OPS = {'+': operator.__add__, '-': operator.__sub__, '*': operator.__mul__, '/': operator.__truediv__}
 
 
 def calculator(x, y, op):

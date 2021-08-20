@@ -1,6 +1,6 @@
 def no_space(x):
-    string = ""
+    string = ''
     for elem in x:
-        if elem != " ":
+        if elem != ' ':
             string += elem
     return string

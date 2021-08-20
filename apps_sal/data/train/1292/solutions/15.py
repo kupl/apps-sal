@@ -17,11 +17,11 @@ def solve(grid, row, col, white):
 
 
 array = [int(x) for x in input().split()]
-n, m, w, b = array[0], array[1], array[2], array[3]
+(n, m, w, b) = (array[0], array[1], array[2], array[3])
 array = array[4:]
 white = []
 black = []
-grid = [['.' for i in range(m)]for j in range(n)]
+grid = [['.' for i in range(m)] for j in range(n)]
 for i in range(0, 2 * w - 1, 2):
     grid[array[i] - 1][array[i + 1] - 1] = 'W'
 for i in range(2 * w, len(array) - 1, 2):

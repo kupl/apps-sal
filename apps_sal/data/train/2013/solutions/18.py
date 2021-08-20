@@ -9,9 +9,8 @@ for i in range(len(s)):
         else:
             s[i] = chr(ord(s[i]) - 1)
             a = 1
+    elif s[i] == 'a':
+        break
     else:
-        if s[i] == 'a':
-            break
-        else:
-            s[i] = chr(ord(s[i]) - 1)
+        s[i] = chr(ord(s[i]) - 1)
 print(''.join(s))

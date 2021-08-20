@@ -13,6 +13,5 @@ for i in range(6):
     if now < ans:
         ans = now
         anss = ss
-
 print(ans)
 print(anss)

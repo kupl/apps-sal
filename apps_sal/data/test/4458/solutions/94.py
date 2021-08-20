@@ -1,4 +1,3 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
@@ -9,8 +8,7 @@ def main():
     numbers = list(map(int, input().split()))
     small = 0
     dp = []
-
-    for idx, data in enumerate(numbers):
+    for (idx, data) in enumerate(numbers):
         if idx == 0:
             small = data
             dp.append(data)

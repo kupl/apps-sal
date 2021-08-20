@@ -3,7 +3,7 @@ def product_max(a, b, c, d):
 
 
 def __starting_point():
-    a, b, c, d = map(int, input().split())
+    (a, b, c, d) = map(int, input().split())
     product_max(a, b, c, d)
 
 

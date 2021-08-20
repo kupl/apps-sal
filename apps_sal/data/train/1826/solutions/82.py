@@ -1,6 +1,7 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
-        rc, cc = len(mat), len(mat[0])
+        (rc, cc) = (len(mat), len(mat[0]))
         acc = [[0] * (cc + 1) for _ in range(rc + 1)]
         for r in range(rc):
             for c in range(cc):

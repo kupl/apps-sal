@@ -1,17 +1,26 @@
 import sys
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+
+
+def sr():
+    return sys.stdin.readline().rstrip()
+
+
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
 
 
 def resolve():
-    H, W, K = lr()
+    (H, W, K) = lr()
     S = []
     for i in range(H):
         S.append([int(s) for s in sr()])
     ans = 2000
     idx = [0] * H
-    for div in range(1 << (H - 1)):
+    for div in range(1 << H - 1):
         g = 0
         for i in range(H):
             idx[i] = g

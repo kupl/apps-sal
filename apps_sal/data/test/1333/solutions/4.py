@@ -1,5 +1,5 @@
 s = input().split()
-c, r = int(s[0]), int(s[1])
+(c, r) = (int(s[0]), int(s[1]))
 s = '#' * r
 k = '.' * (r - 1)
 for i in range(1, c + 1):

@@ -1,19 +1,12 @@
-#!/usr/bin/env python3
-
 [n, k] = list(map(int, input().strip().split()))
 ais = list(map(int, input().strip().split()))
-
 n1 = ais.count(1)
-
 one_serie = [0 for _ in range(n)]
 for i in reversed(list(range(n))):
     if ais[i] == 1:
         one_serie[i] = (0 if i == n - 1 else one_serie[i + 1]) + 1
-
-
 n1_head = 0
 count = 0
-
 for i in range(n):
     p = 1
     s = 0
@@ -36,5 +29,4 @@ for i in range(n):
             elif p > (s + n1_tail) * k:
                 break
             j += 1
-
 print(count)

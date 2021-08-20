@@ -1,16 +1,16 @@
 class Solution:
+
     def getPermutation(self, n, k):
         """
         :type n: int
         :type k: int
         :rtype: str
         """
-        ans = ""
+        ans = ''
         nums = list(range(1, n + 1))
         m = self.factorial(n - 1)
-
         while len(nums) > 1:
-            print("n=", n, ", k=", k, " m=", m)
+            print('n=', n, ', k=', k, ' m=', m)
             remainer = k % m
             if remainer == 0:
                 remainer = m
@@ -21,7 +21,6 @@ class Solution:
             k = remainer
             n -= 1
             m = m // n
-
         ans += str(nums[0])
         return ans
 

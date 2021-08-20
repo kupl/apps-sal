@@ -1,6 +1,6 @@
 def loji_hogya(a, b):
     count = 0
-    while(b > 0):
+    while b > 0:
         u = a ^ b
         v = a & b
         a = u
@@ -10,10 +10,10 @@ def loji_hogya(a, b):
 
 
 n = int(input())
-while(n != 0):
+while n != 0:
     a = input()
     b = input()
     a = int(a, 2)
     b = int(b, 2)
-    print(loji_hogya((a), (b)))
+    print(loji_hogya(a, b))
     n = n - 1

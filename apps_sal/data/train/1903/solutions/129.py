@@ -3,6 +3,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         parent = defaultdict(int)
         weight = defaultdict(int)
@@ -20,7 +21,7 @@ class Solution:
             return parent[x]
 
         def union_set(x: int, y: int):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return
             if weight[px] > weight[py]:
@@ -29,17 +30,16 @@ class Solution:
             else:
                 parent[px] = py
                 weight[py] += weight[px]
-
         n = len(points)
-        ls = []  # list of(edge_weight, x, y)
+        ls = []
         for i in range(n):
             for j in range(i + 1, n):
-                x1, y1 = points[i]
-                x2, y2 = points[j]
+                (x1, y1) = points[i]
+                (x2, y2) = points[j]
                 ls.append([abs(x1 - x2) + abs(y1 - y2), i, j])
         ls.sort()
         cost = 0
-        for c, x, y in ls:
+        for (c, x, y) in ls:
             make_set(x)
             make_set(y)
             if find(x) == find(y):

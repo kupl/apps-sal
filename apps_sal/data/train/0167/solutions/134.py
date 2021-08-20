@@ -2,6 +2,7 @@ from math import comb
 
 
 class Solution:
+
     def ncr(self, n, r):
         sum = 0
         r = min(n, r)
@@ -10,8 +11,7 @@ class Solution:
         return sum
 
     def superEggDrop(self, K, N):
-
-        matrix = [[0 for j in range(K)]for i in range(N)]
+        matrix = [[0 for j in range(K)] for i in range(N)]
         for i in range(N):
             for j in range(K):
                 matrix[i][j] = self.ncr(i + 1, j + 1)

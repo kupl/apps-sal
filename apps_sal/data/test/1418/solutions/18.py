@@ -8,7 +8,6 @@ def solve(n):
                 array[i * j] = curr
                 j += 1
             curr += 1
-
     for i in range(2, n + 1):
         print(array[i], end=' ')
 

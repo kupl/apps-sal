@@ -1,6 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-value_lists = [[] for _ in range(2 * (10**5) + 1)]
+value_lists = [[] for _ in range(2 * 10 ** 5 + 1)]
 for val in arr:
     turn = 0
     while val != 1:

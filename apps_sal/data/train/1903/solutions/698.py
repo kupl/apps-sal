@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, p: List[List[int]]) -> int:
         n = len(p)
         a = [i for i in range(n + 1)]
@@ -15,7 +16,7 @@ class Solution:
             ys = find(y)
             if xs != ys:
                 if rank[ys] > rank[xs]:
-                    ys, xs = xs, ys
+                    (ys, xs) = (xs, ys)
                 a[ys] = xs
                 rank[xs] += 1
                 return 1
@@ -27,7 +28,7 @@ class Solution:
                 edge.append([dis, i, j])
         ans = 0
         edge.sort()
-        for dis, i, j in edge:
+        for (dis, i, j) in edge:
             if union(i, j):
                 ans += dis
         return ans

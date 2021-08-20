@@ -1,4 +1,4 @@
-n, b = list(map(int, input().split()))
+(n, b) = list(map(int, input().split()))
 now = 1
 p = []
 isp = [1] * 1000001
@@ -11,7 +11,6 @@ for i in range(2, 10 ** 6 + 1):
         isp[x * i] = 0
         if i < x or i % x == 0:
             break
-# print(len(p))
 de = []
 for prime in p:
     count = 0
@@ -24,13 +23,11 @@ for prime in p:
         break
 if b != 1:
     de.append((b, 1))
-# print(de)
-
 ans = 10 ** 20
 for pair in de:
     tmp = 1
     has = 0
-    num, count = pair[0], pair[1]
+    (num, count) = (pair[0], pair[1])
     while tmp <= n:
         tmp *= num
         has += n // tmp

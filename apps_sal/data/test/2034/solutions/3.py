@@ -1,14 +1,10 @@
 import sys
-
 sys.setrecursionlimit(200000)
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 graph = [[] for _ in range(n)]
 notused = [True for _ in range(n)]
-
 for _ in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     graph[x].append(y)
@@ -32,5 +28,4 @@ for j in range(n):
     if notused[j]:
         if dfs(j, -1):
             k += 1
-
 print(k)

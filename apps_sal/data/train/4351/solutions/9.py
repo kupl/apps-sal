@@ -2,7 +2,7 @@ from numpy import prod
 
 
 def find_middle(string):
-    return int(findMiddle(str(prod(list(map(int, filter(type(string).isdigit, string))))))) if type(string) is str and any(char.isdigit() for char in string) else -1
+    return int(findMiddle(str(prod(list(map(int, filter(type(string).isdigit, string))))))) if type(string) is str and any((char.isdigit() for char in string)) else -1
 
 
 def findMiddle(s):

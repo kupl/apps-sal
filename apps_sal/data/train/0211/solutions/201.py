@@ -1,4 +1,5 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         self.cnt = 0
 
@@ -6,7 +7,6 @@ class Solution:
             if start == len(s):
                 self.cnt = max(self.cnt, len(visited))
                 return
-
             for end in range(start + 1, len(s) + 1):
                 temp = s[start:end]
                 if temp in visited:

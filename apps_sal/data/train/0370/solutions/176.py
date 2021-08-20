@@ -1,4 +1,5 @@
 class Solution:
+
     def find(self, i, parent):
         if parent[i] == -1:
             return i
@@ -13,7 +14,7 @@ class Solution:
 
     def largestComponentSize(self, A: List[int]) -> int:
         hm = defaultdict(int)
-        parent = [-1] * (100001)
+        parent = [-1] * 100001
         for i in A:
             for j in range(2, int(sqrt(i)) + 1):
                 if i % j == 0:

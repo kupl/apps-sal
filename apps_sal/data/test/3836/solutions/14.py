@@ -5,18 +5,14 @@ def read():
 def main():
     n = int(input())
     d = [[], [], [], []]
-
     for _ in range(n):
-        key, influence = input().split()
+        (key, influence) = input().split()
         key = int(key, 2)
         d[key].append(int(influence))
-
     for key in range(4):
         d[key].sort(reverse=True)
-
     ans = sum(d[3])
     additional = len(d[3])
-
     container = []
     if len(d[1]) < len(d[2]):
         container = d[2]
@@ -24,12 +20,10 @@ def main():
         container = d[1]
     container_start = min(len(d[1]), len(d[2]))
     zeros_start = 0
-
-    for a1, a2 in zip(d[1], d[2]):
+    for (a1, a2) in zip(d[1], d[2]):
         ans += a1 + a2
-
     while (container_start < len(container) or zeros_start < len(d[0])) and additional:
-        t1, t2 = 0, 0
+        (t1, t2) = (0, 0)
         if container_start < len(container):
             t1 = container[container_start]
         if zeros_start < len(d[0]):
@@ -41,7 +35,6 @@ def main():
             ans += t1
             container_start += 1
         additional -= 1
-
     print(ans)
 
 

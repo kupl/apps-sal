@@ -15,7 +15,7 @@ def getTransIntList(n):
     return result
 
 
-n, m = getIntList()
+(n, m) = getIntList()
 a = []
 for _ in range(n):
     s = input()
@@ -32,8 +32,8 @@ def check():
             if a[i][j] == 1 and sumA[j] == 1:
                 break
         else:
-            return "YES"
-    return "NO"
+            return 'YES'
+    return 'NO'
 
 
 print(check())

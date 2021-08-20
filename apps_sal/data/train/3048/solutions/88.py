@@ -6,7 +6,5 @@ def alternateCase(s):
             new_s.append(char.lower())
         else:
             new_s.append(char.upper())
-
-    new_s_string = "".join(new_s)
-
+    new_s_string = ''.join(new_s)
     return new_s_string

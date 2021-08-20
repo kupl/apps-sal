@@ -13,36 +13,32 @@ def cycle_detection(V, E, s):
     return (-1, prev)
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 V = list(range(N))
 E = [[] for _ in range(N)]
 edges = []
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     E[a - 1].append(b - 1)
     edges.append((a - 1, b - 1))
-
 dag = False
 for v in range(N):
-    s, prev = cycle_detection(V, E, v)
+    (s, prev) = cycle_detection(V, E, v)
     if s != -1:
         break
 else:
     dag = True
-
 if dag:
     print(-1)
 else:
-    # construct a directed cycle
     cycle = set()
     cycle.add(s)
     pv = prev[s]
     while pv != s:
         cycle.add(pv)
         pv = prev[pv]
-    # shrink the directed cycle
-    for a, b in edges:
-        if a in cycle and b in cycle and prev[b] != a:
+    for (a, b) in edges:
+        if a in cycle and b in cycle and (prev[b] != a):
             pv = prev[b]
             while pv != a:
                 cycle.remove(pv)

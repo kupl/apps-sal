@@ -1,4 +1,5 @@
 class Solution:
+
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         if not days:
             return 0
@@ -16,5 +17,4 @@ class Solution:
             m30 = costs[2] + getMin(idx + 1, days[idx] + 29)
             dp[idx] = min(m1, m7, m30)
             return dp[idx]
-
         return getMin(0, 0)

@@ -1,6 +1,5 @@
-n, k = input().split()
+(n, k) = input().split()
 k = int(k)
-
 ans = 0
 nz = 0
 for c in reversed(n):
@@ -12,5 +11,4 @@ for c in reversed(n):
         ans += 1
 else:
     ans = len(n) - 1
-
 print(ans)

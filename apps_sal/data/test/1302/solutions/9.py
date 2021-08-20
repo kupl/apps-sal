@@ -1,5 +1,5 @@
 def gcd(a, b):
-    while (a != 0 and b != 0):
+    while a != 0 and b != 0:
         if a > b:
             a = a % b
         else:
@@ -7,7 +7,7 @@ def gcd(a, b):
     return (a + b) // 2
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 if n <= k:
     print('-1')
 else:

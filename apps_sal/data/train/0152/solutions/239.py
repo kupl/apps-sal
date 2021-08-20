@@ -2,10 +2,10 @@ def isPossible(arr, n, C, mid):
     magnet = 1
     currPosition = arr[0]
     for i in range(1, n):
-        if (arr[i] - currPosition >= mid):
+        if arr[i] - currPosition >= mid:
             magnet += 1
             currPosition = arr[i]
-            if (magnet == C):
+            if magnet == C:
                 return True
     return False
 
@@ -15,9 +15,9 @@ def binarySearch(n, C, arr):
     lo = 0
     hi = arr[n - 1]
     ans = 0
-    while (lo <= hi):
+    while lo <= hi:
         mid = int((lo + hi) / 2)
-        if (isPossible(arr, n, C, mid) == False):
+        if isPossible(arr, n, C, mid) == False:
             hi = mid - 1
         else:
             ans = max(ans, mid)
@@ -26,6 +26,7 @@ def binarySearch(n, C, arr):
 
 
 class Solution:
+
     def maxDistance(self, arr: List[int], k: int) -> int:
         n = len(arr)
         return binarySearch(n, k, arr)

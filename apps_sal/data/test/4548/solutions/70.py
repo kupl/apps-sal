@@ -1,5 +1,4 @@
-n, m, x = map(int, input().split())
-
+(n, m, x) = map(int, input().split())
 back = 0
 for a in map(int, input().split()):
     if a < x:

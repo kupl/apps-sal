@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x, y = map(int, input().split())
+    (n, x, y) = map(int, input().split())
     ans = [0] * n
     mn = 9999999999999999999999999
     for i in range(n - 1):

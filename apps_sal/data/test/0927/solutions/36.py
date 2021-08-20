@@ -1,5 +1,5 @@
 from collections import defaultdict
-N, M, *A = map(int, open(0).read().split())
+(N, M, *A) = map(int, open(0).read().split())
 ls = [0] * 10
 ls[1] = 2
 ls[2] = 5

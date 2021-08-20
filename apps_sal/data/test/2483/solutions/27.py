@@ -1,4 +1,4 @@
-n, C = map(int, input().split())
+(n, C) = map(int, input().split())
 stc = [list(map(int, input().split())) for i in range(n)]
 m = 0
 for i in stc:

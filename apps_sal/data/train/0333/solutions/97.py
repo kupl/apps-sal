@@ -1,4 +1,5 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         x = []
         x.append(arr[0])
@@ -21,20 +22,18 @@ class Solution:
             index = bfs.pop()
             if index == len(arr) - 1:
                 return steps
-            if (index + 1) < len(arr) and (index + 1) not in seen:
+            if index + 1 < len(arr) and index + 1 not in seen:
                 temp.append(index + 1)
                 seen.add(index + 1)
-            if (index - 1) >= 0 and (index - 1) not in seen:
+            if index - 1 >= 0 and index - 1 not in seen:
                 temp.append(index - 1)
                 seen.add(index - 1)
             for i in d[arr[index]]:
                 if i not in seen:
                     temp.append(i)
                     seen.add(i)
-
             if len(bfs) == 0:
                 bfs = temp
                 temp = []
                 steps += 1
-
         return steps

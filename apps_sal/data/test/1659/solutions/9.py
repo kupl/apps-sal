@@ -3,7 +3,7 @@ import sys
 
 def main():
     x = sys.stdin.readline().split()
-    n, x = int(x[0]), int(x[1])
+    (n, x) = (int(x[0]), int(x[1]))
     g = 0
     for i in range(n):
         y = sys.stdin.readline().split()

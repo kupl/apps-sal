@@ -6,10 +6,10 @@ def f(s):
     a[s] = 0
     p = [(0, s)]
     while p:
-        d, v = heappop(p)
+        (d, v) = heappop(p)
         if d > a[v]:
             continue
-        for u, w in G[v]:
+        for (u, w) in G[v]:
             if a[u] > d + w:
                 a[u] = d + w
                 heappush(p, (d + w, u))
@@ -23,8 +23,8 @@ def g(a, s):
     b[s] = 1
     p = [(0, s)]
     while p:
-        d, v = heappop(p)
-        for u, d in G[v]:
+        (d, v) = heappop(p)
+        for (u, d) in G[v]:
             if a[v] + d == a[u]:
                 w[u] = (w[u] + w[v]) % m
                 if not b[u]:
@@ -33,14 +33,14 @@ def g(a, s):
     return w
 
 
-m = 10**9 + 7
-N, M = map(int, input().split())
-S, T = map(int, input().split())
+m = 10 ** 9 + 7
+(N, M) = map(int, input().split())
+(S, T) = map(int, input().split())
 S -= 1
 T -= 1
-G = [[]for _ in [0] * N]
+G = [[] for _ in [0] * N]
 for _ in [0] * M:
-    U, V, D = map(int, input().split())
+    (U, V, D) = map(int, input().split())
     U -= 1
     V -= 1
     G[U] += [(V, D)]
@@ -50,10 +50,10 @@ dT = f(T)
 wS = g(dS, S)
 wT = g(dT, T)
 s = dS[T]
-a = (wS[T]**2 - (1 - s % 2) * sum((wS[i] * wT[i])**2for i in range(N)if dS[i] == dT[i] == s // 2)) % m
+a = (wS[T] ** 2 - (1 - s % 2) * sum(((wS[i] * wT[i]) ** 2 for i in range(N) if dS[i] == dT[i] == s // 2))) % m
 for i in range(N):
-    for j, d in G[i]:
+    for (j, d) in G[i]:
         if dS[i] + d + dT[j] == s:
-            if(dS[i] < dT[i]) * (dT[j] < dS[j]):
-                a = (a - (wS[i] * wT[j])**2) % m
+            if (dS[i] < dT[i]) * (dT[j] < dS[j]):
+                a = (a - (wS[i] * wT[j]) ** 2) % m
 print(a)

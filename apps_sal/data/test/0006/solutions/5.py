@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(n)]
-    max1, max2 = -float('inf'), -float('inf')
+    (max1, max2) = (-float('inf'), -float('inf'))
     for q in a:
         max1 = max(q[0], max1)
         max2 = max(max2, q[0] - q[1])

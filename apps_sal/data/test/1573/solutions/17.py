@@ -1,14 +1,13 @@
-def r(): return list(map(int, input().split()))
+def r():
+    return list(map(int, input().split()))
 
 
-n, d = r()
-a = sorted(tuple(r()) for i in range(n))
-
+(n, d) = r()
+a = sorted((tuple(r()) for i in range(n)))
 i = 0
 Min = a[i][0]
 Max = cur = 0
-
-for m, s in a:
+for (m, s) in a:
     cur += s
     if m - Min >= d:
         while m - a[i][0] >= d:
@@ -16,5 +15,4 @@ for m, s in a:
             i += 1
         Min = a[i][0]
     Max = max(Max, cur)
-
 print(Max)

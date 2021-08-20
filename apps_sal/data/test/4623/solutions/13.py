@@ -1,4 +1,3 @@
-
 for _ in range(int(input())):
     n = int(input())
     w = list(sorted(map(int, input().split())))
@@ -18,5 +17,4 @@ for _ in range(int(input())):
             else:
                 r -= 1
         ma = max(cnt, ma)
-
     print(ma)

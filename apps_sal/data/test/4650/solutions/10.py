@@ -8,12 +8,12 @@ def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
     else:
-        g, x, y = egcd(b % a, a)
-        return (g, y - (b // a) * x, x)
+        (g, x, y) = egcd(b % a, a)
+        return (g, y - b // a * x, x)
 
 
 def mulinv(b, n):
-    g, x, _ = egcd(b, n)
+    (g, x, _) = egcd(b, n)
     if g == 1:
         return x % n
 
@@ -64,7 +64,7 @@ class DisjointSet:
     def union(self, elem1, elem2):
         index_elem1 = self._find_index(elem1)
         index_elem2 = self._find_index(elem2)
-        if index_elem1 != index_elem2 and index_elem1 is not None and index_elem2 is not None:
+        if index_elem1 != index_elem2 and index_elem1 is not None and (index_elem2 is not None):
             self._disjoint_set[index_elem2] = self._disjoint_set[index_elem2] + self._disjoint_set[index_elem1]
             del self._disjoint_set[index_elem1]
         return self._disjoint_set
@@ -78,16 +78,15 @@ def graph(n, m, edg=False):
     visited = [0] * n
     g = [list() for _ in range(n + 1)]
     for i in range(m):
-        u, v = f(1)
+        (u, v) = f(1)
         g[u].append(v)
         g[v].append(u)
         if edg:
             edges.append((u, v))
-
     if edg:
-        return g, visited, edg
+        return (g, visited, edg)
     else:
-        return g, visited
+        return (g, visited)
 
 
 def bfs(g, visited):
@@ -122,5 +121,4 @@ for i in range(t):
             a += 1
         else:
             b += 1
-
     print(count + min(a, b) + (max(a, b) - min(a, b)) // 3)

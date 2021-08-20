@@ -1,6 +1,3 @@
-# cook your dish here
-
-
 def main():
     N = int(input())
     Numbers = list(map(int, input().split()))
@@ -18,7 +15,6 @@ def main():
 
 def __starting_point():
     main()
-# cook your dish here
 
 
 __starting_point()

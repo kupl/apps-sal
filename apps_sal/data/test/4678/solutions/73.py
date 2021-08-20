@@ -8,20 +8,15 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 n = int(input())
 A = [int(i) for i in input().split()]
-
 tmp = 0
 res = 0
-
 for i in range(n):
     if tmp < A[i]:
         tmp = A[i]
     else:
         res += tmp - A[i]
-
 print(res)

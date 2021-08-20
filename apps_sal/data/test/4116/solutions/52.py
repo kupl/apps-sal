@@ -5,6 +5,6 @@ for i in range(1, 10):
         flg = True
         break
 if flg:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

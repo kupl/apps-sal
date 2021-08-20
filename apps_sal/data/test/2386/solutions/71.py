@@ -1,5 +1,5 @@
 N = int(input())
-A = sorted([int(x) - i for i, x in enumerate(input().split(), 1)])
+A = sorted([int(x) - i for (i, x) in enumerate(input().split(), 1)])
 mid = N // 2
 ans = sum(list([abs(x - A[mid]) for x in A]))
 if N % 2 == 0:

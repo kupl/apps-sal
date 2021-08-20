@@ -6,7 +6,6 @@ lis = [0] + lis
 lis1 = [0]
 for i in range(1, n + 1):
     lis1.append(lis1[i - 1] + lis[i])
-
 if lis1[n] == 0:
     lis2 = []
     for i in range(1, n):

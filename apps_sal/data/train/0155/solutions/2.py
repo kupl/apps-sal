@@ -1,12 +1,10 @@
-class Solution:  # top-down dp
-    # Time complexity O(ND)
-    # Space complexity O(N) for dp
+class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         dp = [1] * (n + 1)
         stack = []
-
-        for i, a in enumerate(arr + [float('inf')]):
+        for (i, a) in enumerate(arr + [float('inf')]):
             while stack and arr[stack[-1]] < a:
                 L = [stack.pop()]
                 while stack and arr[stack[-1]] == arr[L[0]]:

@@ -1,5 +1,4 @@
-A, B, X, Y = map(int, input().split())
-
+(A, B, X, Y) = map(int, input().split())
 if A == B:
     print(X)
 elif A > B:
@@ -7,8 +6,7 @@ elif A > B:
         print(2 * X * (A - B - 1) + X)
     else:
         print(Y * (A - B - 1) + X)
+elif 2 * X < Y:
+    print(2 * X * (B - A) + X)
 else:
-    if 2 * X < Y:
-        print(2 * X * (B - A) + X)
-    else:
-        print(Y * (B - A) + X)
+    print(Y * (B - A) + X)

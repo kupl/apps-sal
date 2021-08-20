@@ -1,5 +1,5 @@
 inp = input()
-n, m, k = [int(x) for x in inp.split()]
+(n, m, k) = [int(x) for x in inp.split()]
 
 
 def gcd(x, y):

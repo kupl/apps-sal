@@ -1,9 +1,8 @@
 import sys
 import math
-
 fin = sys.stdin
 fout = sys.stdout
-n, k = list(map(int, fin.readline().split()))
+(n, k) = list(map(int, fin.readline().split()))
 a = list(map(int, fin.readline().split()))
 ans = 0
 i = 0

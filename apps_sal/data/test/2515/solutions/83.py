@@ -4,8 +4,7 @@ import bisect
 def sieve(n):
     is_prime = [1] * n
     is_prime[0] = 0
-
-    for i in range(2, int((n**0.5) // 1 + 2)):
+    for i in range(2, int(n ** 0.5 // 1 + 2)):
         if is_prime[i - 1]:
             j = i * 2
             while j <= n:
@@ -16,11 +15,9 @@ def sieve(n):
 
 
 q = int(input())
-L = sieve(10**5 + 1)
+L = sieve(10 ** 5 + 1)
 ans = []
-
 for i in range(q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ans.append(bisect.bisect_right(L, r) - bisect.bisect_left(L, l))
-
-print(*ans, sep="\n")
+print(*ans, sep='\n')

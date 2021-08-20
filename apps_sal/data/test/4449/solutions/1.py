@@ -18,6 +18,6 @@ for i in range(q):
         s.pop()
         s.pop()
     if t:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

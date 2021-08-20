@@ -17,7 +17,7 @@ def calc(sign, a, b):
         elif sign == '/':
             return a // b
         elif sign == '^':
-            return a**b
+            return a ** b
         else:
             return a % b
     except:
@@ -25,12 +25,12 @@ def calc(sign, a, b):
 
 
 def no_order(equation):
-    left, right = 0, ""
+    (left, right) = (0, '')
     sign = '+'
     for e in equation:
         if is_sign(e):
             left = calc(sign, left, int(right))
-            right = ""
+            right = ''
             if left == None:
                 return None
             sign = e

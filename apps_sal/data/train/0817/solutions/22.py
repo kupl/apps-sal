@@ -5,5 +5,4 @@ for _ in range(int(input())):
     r = a[0] ^ a[1]
     for i in range(2, n):
         r = r ^ a[i]
-
     print(r)

@@ -1,8 +1,7 @@
-#map(int, input().split())
 n = int(input())
-l, r = 0, 0
+(l, r) = (0, 0)
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if x > 0:
         r += 1
     else:

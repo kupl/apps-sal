@@ -1,9 +1,9 @@
-# AC
 import sys
 from math import gcd
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -43,7 +43,7 @@ class Main:
                     dy = abs(dy)
                 g = gcd(abs(dx), abs(dy))
                 k = (dx // g, dy // g)
-                x, y = pr[i][0], pr[i][1]
+                (x, y) = (pr[i][0], pr[i][1])
                 if dx == 0:
                     a = (pr[i][0], 0)
                 else:

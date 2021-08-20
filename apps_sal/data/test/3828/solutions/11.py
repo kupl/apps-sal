@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import collections
 import itertools
 import functools
@@ -8,9 +7,8 @@ import math
 def solve():
     n = int(input())
     p = list(map(int, input().split()))
-    pos = [(p, i) for i, p in enumerate(p)]
+    pos = [(p, i) for (i, p) in enumerate(p)]
     pos.sort()
-
     longest = 1
     seq = 1
     for i in range(1, n):

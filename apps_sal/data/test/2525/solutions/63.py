@@ -1,32 +1,22 @@
 s = input()
 n = int(input())
 d = 1
-left = ""
-right = ""
-
+left = ''
+right = ''
 for i in range(n):
     q = input()
-
-    if q == "1":
+    if q == '1':
         d *= -1
-
     else:
-        _, f, c = q.split()
-
+        (_, f, c) = q.split()
         if d == 1:
-            if f == "1":
+            if f == '1':
                 left += c
-
             else:
                 right += c
-
+        elif f == '2':
+            left += c
         else:
-            if f == "2":
-                left += c
-
-            else:
-                right += c
-
+            right += c
 ans = left[::-1] + s + right
-
 print(ans[::d])

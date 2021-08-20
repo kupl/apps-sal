@@ -1,7 +1,6 @@
 import math
-
 is_no = 0
-num1, num2 = list(map(int, input().split()))
+(num1, num2) = list(map(int, input().split()))
 str1 = input()
 table = list(str1)
 count = 0

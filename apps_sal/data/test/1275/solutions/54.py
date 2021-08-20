@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 alpha = 2
 sum = 0
 while alpha <= 2 * N:
@@ -9,10 +9,9 @@ while alpha <= 2 * N:
                 sum += (alpha - 1) * (beta - 1)
             else:
                 sum += (alpha - 1) * (2 * N - beta + 1)
+        elif beta <= N + 1:
+            sum += (2 * N - alpha + 1) * (beta - 1)
         else:
-            if beta <= N + 1:
-                sum += (2 * N - alpha + 1) * (beta - 1)
-            else:
-                sum += (2 * N - alpha + 1) * (2 * N - beta + 1)
+            sum += (2 * N - alpha + 1) * (2 * N - beta + 1)
     alpha += 1
 print(sum)

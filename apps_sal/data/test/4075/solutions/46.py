@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
-k, s = [], []
+(n, m) = map(int, input().split())
+(k, s) = ([], [])
 for i in range(m):
     inp = list(map(int, input().split()))
-    k_, s_ = inp[0], inp[1:]
+    (k_, s_) = (inp[0], inp[1:])
     k.append(k_)
     s.append(s_)
 p = list(map(int, input().split()))

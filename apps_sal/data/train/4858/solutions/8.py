@@ -1,9 +1,5 @@
-# Dictionaries to cache results
 john_dict = {}
 ann_dict = {}
-
-# Helper functions using caches to find each value.
-# I couldn't find a way to simplify this without making it more complex.
 
 
 def john_val(n):
@@ -20,8 +16,6 @@ def ann_val(n):
     if not n in ann_dict:
         ann_dict[n] = n - john_val(ann_val(n - 1))
     return ann_dict[n]
-
-# Once the helpers are done it's easy
 
 
 def john(n):

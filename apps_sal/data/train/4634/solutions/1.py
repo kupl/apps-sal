@@ -1,7 +1,7 @@
 def pac_man(N, PM, enemies):
-    dims = [[0, N], [0, N]]   # [[minX, maxX], [minY, maxY]]
+    dims = [[0, N], [0, N]]
     for pos in enemies:
-        for i, x in enumerate(pos):
+        for (i, x) in enumerate(pos):
             if PM[i] > x:
                 dims[i][0] = max(dims[i][0], x + 1)
             else:

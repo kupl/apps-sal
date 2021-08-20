@@ -4,7 +4,7 @@ for _ in range(q):
     lm = dm = -100000
     rm = um = 100000
     for _ in range(n):
-        x, y, l, u, r, d = list(map(int, input().split()))
+        (x, y, l, u, r, d) = list(map(int, input().split()))
         if l == 0:
             lm = max(lm, x)
         if r == 0:

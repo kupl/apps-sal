@@ -1,5 +1,5 @@
 def solve(n):
-    a, b = '01'
+    (a, b) = '01'
     for _ in range(n):
-        a, b = a + b, a
+        (a, b) = (a + b, a)
     return a

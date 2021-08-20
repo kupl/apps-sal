@@ -2,11 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
-        d = {
-            0: {x: i for i, x in enumerate(nums1)},
-            1: {x: i for i, x in enumerate(nums2)},
-        }
+        d = {0: {x: i for (i, x) in enumerate(nums1)}, 1: {x: i for (i, x) in enumerate(nums2)}}
         arrs = [nums1, nums2]
         MOD = 10 ** 9 + 7
 

@@ -21,13 +21,32 @@ def getdict(n):
     return d
 
 
-def cdiv(n, k): return n // k + (n % k != 0)
-def ii(): return int(input())
-def mi(): return map(int, input().split())
-def li(): return list(map(int, input().split()))
-def lcm(a, b): return abs(a * b) // math.gcd(a, b)
-def wr(arr): return ''.join(map(str, arr))
-def revn(n): return int(str(n)[::-1])
+def cdiv(n, k):
+    return n // k + (n % k != 0)
+
+
+def ii():
+    return int(input())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(map(int, input().split()))
+
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+
+def wr(arr):
+    return ''.join(map(str, arr))
+
+
+def revn(n):
+    return int(str(n)[::-1])
 
 
 def prime(n):

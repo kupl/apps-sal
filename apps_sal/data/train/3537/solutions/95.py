@@ -1,7 +1,7 @@
 def is_even(n):
-    if (n % 2) == 1:
+    if n % 2 == 1:
         return False
-    elif (n % 2) == 0:
+    elif n % 2 == 0:
         return True
-    elif (n) != int:
+    elif n != int:
         return False

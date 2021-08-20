@@ -12,7 +12,7 @@ def isIncreasing(matrix, n, m):
     return True
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 A = []
 B = []
 for i in range(n):
@@ -21,8 +21,8 @@ for i in range(n):
     B.append(list(map(int, input().split())))
 for i in range(n):
     for j in range(m):
-        A[i][j], B[i][j] = min(A[i][j], B[i][j]), max(A[i][j], B[i][j])
+        (A[i][j], B[i][j]) = (min(A[i][j], B[i][j]), max(A[i][j], B[i][j]))
 if isIncreasing(A, n, m) and isIncreasing(B, n, m):
-    print("Possible")
+    print('Possible')
 else:
-    print("Impossible")
+    print('Impossible')

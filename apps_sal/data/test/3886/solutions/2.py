@@ -1,10 +1,8 @@
-s = "What are you doing at the end of the world? Are you busy? Will you save us?"
-
-#fmt = 'What are you doing while sending "{}"? Are you busy? Will you send "{}"?'
+s = 'What are you doing at the end of the world? Are you busy? Will you save us?'
 
 
 def L(n):
-    return 143 * 2**n - 68 if n < 55 else 10**18
+    return 143 * 2 ** n - 68 if n < 55 else 10 ** 18
 
 
 beg = 'What are you doing while sending "'
@@ -22,7 +20,6 @@ def f(n, k):
                 return s[k]
             return '.'
         n -= 1
-
         if k < beglen:
             return beg[k]
         k -= beglen
@@ -41,10 +38,9 @@ def f(n, k):
 
 
 q = int(input())
-
 ans = []
 for _ in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     k -= 1
     ans.append(f(n, k))
 print(''.join(ans))

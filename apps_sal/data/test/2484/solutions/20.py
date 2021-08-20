@@ -4,7 +4,7 @@ left = 0
 ans = 0
 xor_sum = 0
 normal_sum = 0
-for right, b in enumerate(a):
+for (right, b) in enumerate(a):
     xor_sum ^= b
     normal_sum += b
     while xor_sum < normal_sum:

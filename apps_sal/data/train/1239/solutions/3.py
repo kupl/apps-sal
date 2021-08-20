@@ -3,9 +3,9 @@ for _ in range(t):
     l = []
     n = int(input())
     for i in range(n + 1):
-        x = ""
+        x = ''
         for k in range(n - i):
-            x += " "
+            x += ' '
         for k in range(n, n - i - 1, -1):
             x += str(k)
         l.append(x)

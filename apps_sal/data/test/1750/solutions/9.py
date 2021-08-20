@@ -1,13 +1,11 @@
 from collections import deque
 import sys
 sys.setrecursionlimit(100000)
-
 UNDEF = 0
-
 n = int(input())
 g = [[] for _ in range(n + 1)]
 for _ in range(n - 1):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     g[u].append(v)
     g[v].append(u)
 c = [UNDEF] * (n + 1)
@@ -30,7 +28,7 @@ def bfs():
     q = deque([(0, 1)])
     while q:
         cur = 1
-        par, v = q.pop()
+        (par, v) = q.pop()
         for to in g[v]:
             if c[to] != UNDEF:
                 continue

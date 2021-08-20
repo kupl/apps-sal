@@ -2,18 +2,16 @@ from itertools import permutations, combinations
 import sys
 from math import *
 from fractions import gcd
-from random import *  # randint(inclusive,inclusive)
-def readints(): return list(map(int, input().strip('\n').split()))
+from random import *
 
 
-s = "abcdefghijklmnopqrstuvwxyz"
-# print('', end=" ")
-# for i in {1..5}; do echo "hi"; done
+def readints():
+    return list(map(int, input().strip('\n').split()))
 
 
-n, k = readints()
+s = 'abcdefghijklmnopqrstuvwxyz'
+(n, k) = readints()
 s = input()
-
 lo = -1
 hi = n + 1
 
@@ -25,9 +23,7 @@ def test(x):
     for i in range(n):
         if s[i] == '0':
             arr.append(i)
-
-    arr.append(10**9)
-
+    arr.append(10 ** 9)
     for i in range(1, len(arr)):
         if arr[i] - last - 1 > x:
             if arr[i - 1] == last:
@@ -38,7 +34,6 @@ def test(x):
                 return False
             last = arr[i - 1]
             have -= 1
-
     return True
 
 
@@ -48,6 +43,4 @@ while hi - lo > 1:
         hi = mid
     else:
         lo = mid
-
-
 print(hi)

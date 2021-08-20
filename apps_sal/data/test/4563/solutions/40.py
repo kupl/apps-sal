@@ -1,8 +1,8 @@
 n = int(input())
-ca, cb = 0, 0
+(ca, cb) = (0, 0)
 for i in range(n):
-    a, b = list(map(int, input().split()))
-    x, y = 1, 1
+    (a, b) = list(map(int, input().split()))
+    (x, y) = (1, 1)
     if ca > a:
         x = ca // a
         if ca % a:
@@ -14,4 +14,4 @@ for i in range(n):
     x = max(x, y)
     ca = a * x
     cb = b * x
-print((ca + cb))
+print(ca + cb)

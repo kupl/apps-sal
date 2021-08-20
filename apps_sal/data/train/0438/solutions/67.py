@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         N = len(arr)
         m_cnt = 0
@@ -28,19 +29,14 @@ class Solution:
             else:
                 parent[x] = y
                 cnt[y] += cnt[x]
-
             return m_cnt
-
         ans = -1
-
-        for i, x in enumerate(arr):
+        for (i, x) in enumerate(arr):
             mark[x - 1] = 1
             l = False
             r = False
-
             if m == 1:
                 m_cnt += 1
-
             if x > 1 and mark[x - 2] == 1:
                 m_cnt = union(x - 1, x - 2, m_cnt)
             else:
@@ -49,9 +45,6 @@ class Solution:
                 m_cnt = union(x - 1, x, m_cnt)
             else:
                 r = True
-
             if m_cnt > 0:
                 ans = i + 1
-
-            # print(m_cnt)
         return ans

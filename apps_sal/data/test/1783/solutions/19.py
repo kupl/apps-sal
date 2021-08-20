@@ -1,16 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import sys
 import os
 import math
-
-# input_text_path = __file__.replace('.py', '.txt')
-# fd = os.open(input_text_path, os.O_RDONLY)
-# os.dup2(fd, sys.stdin.fileno())
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 if n == k:
     print(sum(A))
 elif n - k >= k:

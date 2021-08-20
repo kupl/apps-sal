@@ -1,7 +1,6 @@
 T = int(input())
-
 line_flag = 0
-out = ""
+out = ''
 for t in range(2 * T):
     if line_flag == 0:
         N = int(input())
@@ -14,7 +13,6 @@ for t in range(2 * T):
         min_array = []
         for i in range(len(S) - 1):
             min_array.append(abs(S[i + 1] - S[i]))
-        out += str(min(min_array)) + "\n"
+        out += str(min(min_array)) + '\n'
         line_flag = 0
-
 print(out[:-1])

@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 res = [0, 0, 0]
 for i in range(1, 7):
     if abs(a - i) < abs(b - i):

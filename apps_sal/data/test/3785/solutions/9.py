@@ -1,5 +1,5 @@
 from queue import Queue, PriorityQueue
-n, m, k = [int(x) for x in input().split()]
+(n, m, k) = [int(x) for x in input().split()]
 a = []
 for i in range(n):
     a.append(list(input()))
@@ -15,11 +15,11 @@ q.put((x, y))
 ans = []
 lvl[x][y] = 1
 while not q.empty():
-    x, y = q.get()
-    for dx, dy in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+    (x, y) = q.get()
+    for (dx, dy) in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
         nx = x + dx
         ny = y + dy
-        if nx < 0 or ny < 0 or nx >= n or ny >= m:
+        if nx < 0 or ny < 0 or nx >= n or (ny >= m):
             continue
         if lvl[nx][ny]:
             continue
@@ -30,6 +30,6 @@ while not q.empty():
         ans.append((-lvl[nx][ny], nx, ny))
 ans.sort()
 for i in range(k):
-    _, x, y = ans[i]
+    (_, x, y) = ans[i]
     a[x][y] = 'X'
-print('\n'.join(''.join(l) for l in a))
+print('\n'.join((''.join(l) for l in a)))

@@ -1,6 +1,7 @@
-class Segment_tree():
+class Segment_tree:
+
     def __init__(self, n, s):
-        self.alphabet_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        self.alphabet_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
         self.key = dict()
         self.k = 1
         for value in self.alphabet_list:
@@ -15,12 +16,12 @@ class Segment_tree():
         self.size = self.N * 2
         self.size -= 1
         self.N -= 1
-        self.segment = [0] * (self.N) + [self.key[self.s[i]] for i in range(self.n)] + [0] * (self.size - self.N - self.n)
+        self.segment = [0] * self.N + [self.key[self.s[i]] for i in range(self.n)] + [0] * (self.size - self.N - self.n)
         for i in range(self.N - 1, -1, -1):
             self.segment[i] = self.segment[2 * i + 1] | self.segment[2 * i + 2]
 
     def update(self, i, x):
-        i += (self.N - 1)
+        i += self.N - 1
         self.segment[i] = self.key[x]
         while i > 0:
             i = (i - 1) // 2
@@ -46,14 +47,14 @@ while N < n:
     N *= 2
 for i in range(q):
     quer = [x for x in input().split()]
-    if quer[0] == "1":
-        i, c = int(quer[1]), quer[2]
+    if quer[0] == '1':
+        (i, c) = (int(quer[1]), quer[2])
         segment.update(i, c)
     else:
-        l, r = int(quer[1]), int(quer[2])
+        (l, r) = (int(quer[1]), int(quer[2]))
         key = segment.find(l - 1, r, 0, 0, N)
         ans = 0
         for i in range(26):
-            if (key >> i) & 1:
+            if key >> i & 1:
                 ans += 1
         print(ans)

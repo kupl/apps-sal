@@ -1,2 +1,5 @@
 from re import sub
-def remove_url_anchor(url): return sub('#.*', '', url)
+
+
+def remove_url_anchor(url):
+    return sub('#.*', '', url)

@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, v):
         self.v = v
         self.p = None
@@ -15,7 +16,7 @@ N = int(input())
 pp = list(map(int, input().split()))
 nn = dict()
 prev = None
-for i, p in enumerate(pp):
+for (i, p) in enumerate(pp):
     n = Node(i)
     if prev:
         prev.n = n

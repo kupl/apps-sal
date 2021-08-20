@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 0
 for i in range(n):
@@ -7,7 +7,7 @@ for i in range(n):
 a.sort()
 a = a[::-1]
 i = 0
-while i != n and a[i] != 0 and m > 0:
+while i != n and a[i] != 0 and (m > 0):
     c = 10 - a[i]
     if m >= c:
         m -= c

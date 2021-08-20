@@ -1,5 +1,5 @@
 def array_change(arr):
-    m, s = 0, arr[0]
+    (m, s) = (0, arr[0])
     for i in arr[1:]:
         if s >= i:
             s += 1

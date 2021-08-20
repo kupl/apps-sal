@@ -1,13 +1,8 @@
 from sys import stdin
-
 n = int(stdin.readline())
-
 a = [int(x) for x in stdin.readline().split()]
-
 pizza_free_today = False
-
 result = 'NO'
-
 for teams in a:
     if pizza_free_today:
         teams -= 1
@@ -21,5 +16,4 @@ for teams in a:
 else:
     if not pizza_free_today:
         result = 'YES'
-
 print(result)

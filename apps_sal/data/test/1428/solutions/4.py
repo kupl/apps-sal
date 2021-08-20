@@ -1,18 +1,16 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 D = []
 for i in range(c):
     D.append(list(map(int, input().split())))
 C = []
 for i in range(n):
     C.append(list(map(int, input().split())))
-
 A = [[0] * c for i in range(3)]
 for i in range(n):
     for j in range(n):
         a = (i + j) % 3
         A[a][C[i][j] - 1] += 1
-
-ans = 10**100
+ans = 10 ** 100
 for a0 in range(c):
     for a1 in range(c):
         for a2 in range(c):

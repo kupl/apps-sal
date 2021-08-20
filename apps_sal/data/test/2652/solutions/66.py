@@ -24,7 +24,7 @@ def prim():
 n = int(input())
 P = []
 for i in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     P.append((x, y, i))
 P.sort()
 edge = [[] for _ in range(n)]

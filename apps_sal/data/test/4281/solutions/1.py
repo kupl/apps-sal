@@ -10,6 +10,6 @@ for i in l:
         mx[i] = 1
     else:
         mx[i + 1] = 1
-    if mn[i] == mn[i - 1] and mn[i - 1] == mn[i + 1] and mn[i + 1] == 0:
+    if mn[i] == mn[i - 1] and mn[i - 1] == mn[i + 1] and (mn[i + 1] == 0):
         mn[i + 1] = 1
 print(sum(mn), sum(mx))

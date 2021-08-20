@@ -1,9 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-
 def main():
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     s = input()
     i = 0
     cnt = 0

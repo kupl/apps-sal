@@ -1,8 +1,8 @@
 Q = int(input())
 for _ in range(Q):
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     S = input()
-    X = [{"R": 0, "G": 1, "B": 2}[s] for s in S]
+    X = [{'R': 0, 'G': 1, 'B': 2}[s] for s in S]
     mi = K
     for i in range(3):
         d = 0

@@ -14,8 +14,8 @@ try:
                     break
                 a.append(to_add)
             if f == 1:
-                print("NO")
+                print('NO')
             else:
-                print("YES")
+                print('YES')
 except:
     pass

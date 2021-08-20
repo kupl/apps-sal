@@ -1,5 +1,4 @@
 def max_tri_sum(numbers):
-
     x = set()
     for c in numbers:
         x.add(c)

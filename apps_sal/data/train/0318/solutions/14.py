@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSizeSlices(self, slices: List[int]) -> int:
         self.slices = slices
         n = len(self.slices)

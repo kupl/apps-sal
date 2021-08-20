@@ -8,7 +8,6 @@ class Solution:
                 dic[num * num] += 1
             else:
                 dic[num * num] = 1
-
         n = len(nums2)
         for i in range(n):
             for j in range(i + 1, n):

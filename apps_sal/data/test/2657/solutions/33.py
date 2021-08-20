@@ -2,7 +2,6 @@ N = int(input())
 A = list(map(int, input().split()))
 A.sort()
 n = A[-1]
-
 d = n
 r = -1
 for a in A[:-1]:

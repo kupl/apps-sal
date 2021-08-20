@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ans = set(range(1, 31))
 for i in range(n):
     kA = list(map(int, input().split()))

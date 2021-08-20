@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     ans = n
     for i in range(2, n + 1):
         if n % i == 0:

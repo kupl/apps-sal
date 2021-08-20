@@ -11,12 +11,22 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
 
-# レベルnバーガー
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 def f(n, x):
@@ -28,7 +38,7 @@ def f(n, x):
         return p[n - 1] + 1 + f(n - 1, x - 2 - a[n - 1])
 
 
-n, x = MAP()
+(n, x) = MAP()
 a = [0] * n
 p = [0] * n
 a[0] = 1
@@ -36,5 +46,4 @@ p[0] = 1
 for i in range(1, n):
     a[i] = a[i - 1] * 2 + 3
     p[i] = p[i - 1] * 2 + 1
-
 print(f(n, x))

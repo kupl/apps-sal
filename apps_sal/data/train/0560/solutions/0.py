@@ -1,4 +1,3 @@
-# cook your dish here
 for i in range(int(input())):
     N = int(input())
     ALICE = list(map(int, input().split()))
@@ -6,8 +5,8 @@ for i in range(int(input())):
     ALICE[ALICE.index(max(ALICE))] = 0
     BOB[BOB.index(max(BOB))] = 0
     if sum(ALICE) < sum(BOB):
-        print("Alice")
+        print('Alice')
     elif sum(BOB) < sum(ALICE):
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

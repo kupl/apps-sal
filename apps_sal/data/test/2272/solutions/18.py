@@ -1,11 +1,10 @@
 from collections import deque
 from sys import stdin
-
 N = int(stdin.readline().rstrip())
 nodes = []
 adj_list = []
 for n in range(0, N):
-    type, a, b = map(int, stdin.readline().rstrip().split())
+    (type, a, b) = map(int, stdin.readline().rstrip().split())
     if type == 1:
         adj_list.append([])
         for index in range(0, len(nodes)):

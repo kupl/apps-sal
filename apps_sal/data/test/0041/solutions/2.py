@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     try:
         while True:
@@ -11,14 +9,12 @@ def main():
                 if a[i] == 0:
                     last = i
                 b[i] = last - i
-
             last = -400000
             for i in range(n):
                 if a[i] == 0:
                     last = i
                 print(min(i - last, b[i]), end=' ')
             print()
-
     except EOFError:
         pass
 

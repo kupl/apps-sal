@@ -3,26 +3,19 @@ b = list(map(int, input().split()))
 ope = [[] for i in range(n)]
 Q = int(input())
 for i in range(Q):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     ope[r - 1].append(l - 1)
-
 res = b.count(0)
-
-Data = [(-1)**((b[i] == 1) + 1) for i in range(n)]
+Data = [(-1) ** ((b[i] == 1) + 1) for i in range(n)]
 for i in range(1, n):
     Data[i] += Data[i - 1]
 Data = [0] + Data
-
 for i in range(n):
     ope[i].sort(reverse=True)
-
-# N: 処理する区間の長さ
 N = n + 1
-N0 = 2**(N - 1).bit_length()
+N0 = 2 ** (N - 1).bit_length()
 data = [None] * (2 * N0)
-INF = (-2**31, -2**31)
-# 区間[l, r+1)の値をvに書き換える
-# vは(t, value)という値にする (新しい値ほどtは大きくなる)
+INF = (-2 ** 31, -2 ** 31)
 
 
 def update(l, r, v):
@@ -35,7 +28,6 @@ def update(l, r, v):
                 data[R - 1] = max(v, data[R - 1])
             else:
                 data[R - 1] = v
-
         if L & 1:
             if data[L - 1]:
                 data[L - 1] = max(v, data[L - 1])
@@ -44,7 +36,6 @@ def update(l, r, v):
             L += 1
         L >>= 1
         R >>= 1
-# a_iの現在の値を取得
 
 
 def _query(k):
@@ -55,7 +46,6 @@ def _query(k):
             s = max(s, data[k])
         k = (k - 1) // 2
     return s
-# これを呼び出す
 
 
 def query(k):
@@ -66,13 +56,10 @@ for i in range(n + 1):
     update(i, i + 1, (-Data[i], -Data[i]))
 if ope[0]:
     update(1, 2, (0, 0))
-
 for i in range(1, n):
     val = query(i)
     update(i + 1, i + 2, (val + Data[i] - Data[i + 1], val + Data[i] - Data[i + 1]))
     for l in ope[i]:
         val = query(l)
         update(l + 1, i + 2, (val, val))
-
-
 print(n - (res + query(n) + Data[n]))

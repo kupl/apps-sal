@@ -1,4 +1,5 @@
 class Solution:
+
     def kSmallestPairs(self, nums1, nums2, k):
         """
         :type nums1: List[int]
@@ -15,7 +16,7 @@ class Solution:
             used[0][0] = 1
             h = [(nums1[0] + nums2[0], (0, 0))]
             while k > 0 and h:
-                _, (s1, s2) = heapq.heappop(h)
+                (_, (s1, s2)) = heapq.heappop(h)
                 result.append([nums1[s1], nums2[s2]])
                 if s1 + 1 < m and used[s1 + 1][s2] == 0:
                     heapq.heappush(h, (nums1[s1 + 1] + nums2[s2], (s1 + 1, s2)))

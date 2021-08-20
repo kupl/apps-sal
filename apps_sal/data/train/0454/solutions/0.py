@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSwap(self, num):
         """
         :type num: int
@@ -12,10 +13,9 @@ class Solution:
                 dp[i] = i
             else:
                 dp[i] = i if nums[i] > nums[dp[i + 1]] else dp[i + 1]
-
         for i in range(len(nums)):
             if nums[i] != nums[dp[i]]:
-                nums[i], nums[dp[i]] = nums[dp[i]], nums[i]
+                (nums[i], nums[dp[i]]) = (nums[dp[i]], nums[i])
                 break
         res = 0
         for num in nums:

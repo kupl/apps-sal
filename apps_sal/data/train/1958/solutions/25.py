@@ -1,8 +1,9 @@
 class Solution:
+
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
         res = []
         dic = {}
-        for idx, size in enumerate(groupSizes):
+        for (idx, size) in enumerate(groupSizes):
             if size == 1:
                 res.append([idx])
             elif size > 1:

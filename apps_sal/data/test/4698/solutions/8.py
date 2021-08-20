@@ -2,8 +2,6 @@ n = int(input())
 data_1 = list(map(int, input().split()))
 m = int(input())
 data_2 = [input().split() for i in range(m)]
-
-
 for i in range(m):
     sum = 0
     b = int(data_2[i][0]) - 1

@@ -1,5 +1,3 @@
-# 332A Down the Hatch!
-
 n = int(input())
 actions = input()
 glasses = 0

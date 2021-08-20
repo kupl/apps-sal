@@ -1,5 +1,4 @@
-a, b = map(int, input().split())
-
+(a, b) = map(int, input().split())
 yen = 0
 if a <= 5:
     yen = 0

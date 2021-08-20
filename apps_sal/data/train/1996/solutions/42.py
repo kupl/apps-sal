@@ -1,4 +1,5 @@
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
         state = ['UNPROCESSED'] * n
@@ -10,7 +11,7 @@ class Solution:
                 return True
             else:
                 state[node] = 'PROCESSING'
-                if any(not isAcyclic(nei) for nei in graph[node]):
+                if any((not isAcyclic(nei) for nei in graph[node])):
                     return False
                 state[node] = 'PROCESSED'
                 return True

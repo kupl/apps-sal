@@ -2,8 +2,8 @@ import re
 
 
 def solve(s):
-    ops, parts = [], ['']
-    for c in re.findall(r'\d*\(|\)|[a-z]+', s):
+    (ops, parts) = ([], [''])
+    for c in re.findall('\\d*\\(|\\)|[a-z]+', s):
         if c == ')':
             segment = parts.pop()
             parts[-1] += ops.pop() * segment

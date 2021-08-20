@@ -1,11 +1,12 @@
 class Solution:
+
     def maxUniqueSplit(self, s: str) -> int:
         n = len(s)
         res = 1
         if n == 1:
             return res
-        for x in range(2**(n - 1)):
-            m = 1 << (n - 2)
+        for x in range(2 ** (n - 1)):
+            m = 1 << n - 2
             p0 = 0
             p1 = 0
             st = set()

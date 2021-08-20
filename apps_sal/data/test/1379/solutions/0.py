@@ -19,17 +19,15 @@ def readlist():
     return list(map(int, input().split()))
 
 
-n, m, d = readmap()
+(n, m, d) = readmap()
 A = readlist()
 Aind = dict([(A[i], i) for i in range(n)])
 A.sort()
-
 q = deque()
 a = A[0]
 ans = [0] * n
 ans[Aind[a]] = 1
 maxday = 1
-
 q.append((a, 1))
 for i in range(1, n):
     if A[i] > q[0][0] + d:
@@ -40,6 +38,5 @@ for i in range(1, n):
         maxday += 1
         ans[Aind[A[i]]] = maxday
         q.append((A[i], maxday))
-
 print(maxday)
-print(" ".join(list(map(str, ans))))
+print(' '.join(list(map(str, ans))))

@@ -12,4 +12,4 @@ for i in range(len(t)):
         else:
             vap += t[i]
             v[j] -= t[i]
-    print(vap, end=" ")
+    print(vap, end=' ')

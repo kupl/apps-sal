@@ -8,9 +8,9 @@ for i in range(t):
         tmp_b = 0
         str1 = input()
         for e in str1:
-            if(e == 'a'):
+            if e == 'a':
                 tmp_a += 1
-            elif(e == 'b'):
+            elif e == 'b':
                 tmp_b += 1
         min_a = min(min_a, tmp_a)
         min_b = min(min_b, tmp_b)

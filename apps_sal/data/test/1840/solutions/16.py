@@ -1,16 +1,13 @@
-s, b = map(int, input().split())
+(s, b) = map(int, input().split())
 a = list(map(int, input().split()))
 d = []
 for i in range(b):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     d.append((x, y, i + 1))
-
 d.sort()
 f = [d[0][1]]
 for i in range(1, b):
     f.append(f[-1] + d[i][1])
-
-
 for i in range(s):
     if d[0][0] > a[i]:
         print(0, end=' ')

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestPalindrome(self, s):
         """
         :type s: str
@@ -11,7 +12,6 @@ class Solution:
                 dic[i] += 1
             else:
                 dic[i] = 1
-
         ans = 0
         single = 0
         for c in dic:
@@ -20,5 +20,4 @@ class Solution:
             else:
                 ans += dic[c] - 1
                 single = 1
-
         return ans + single

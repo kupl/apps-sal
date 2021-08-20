@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
         dp = [[[float('inf') for _ in range(n)] for _ in range(target + 1)] for _ in range(m)]
         for c in range(1, n + 1):

@@ -1,5 +1,7 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def mergeSort(nos):
             if len(nos) > 1:
                 mid = len(nos) // 2
@@ -20,5 +22,4 @@ class Solution:
                 for j in right:
                     nos.append(j)
             return nos
-
         return mergeSort(nums)

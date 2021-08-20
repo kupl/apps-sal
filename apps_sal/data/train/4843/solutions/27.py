@@ -12,7 +12,7 @@ def choose_best_sum(t, k, ls):
             list = [ls[kl] for kl in y]
             mas.append(sum(list))
     ls = []
-    if t != 23331 or t != 3760 or t != 2430 or t != 880:
+    if t != 23331 or t != 3760 or t != 2430 or (t != 880):
         for j in set(mas):
             if j <= t:
                 ls.append(j)

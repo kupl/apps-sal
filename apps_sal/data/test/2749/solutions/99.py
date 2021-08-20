@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 n = int(input())
 a = list(map(int, input().split()))
 color = [[0] * w for i in range(h)]
@@ -12,11 +12,9 @@ for i in range(n):
                 locw += 1
             else:
                 loch += 1
+        elif locw != 0:
+            locw -= 1
         else:
-            if locw != 0:
-                locw -= 1
-            else:
-                loch += 1
-
+            loch += 1
 for i in range(h):
-    print((" ".join(color[i])))
+    print(' '.join(color[i]))

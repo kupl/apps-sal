@@ -4,7 +4,7 @@ mi = min(a)
 cur = 0
 ans = 0
 for i in range(3 * n):
-    if(a[i % n] == mi):
+    if a[i % n] == mi:
         cur = 0
     else:
         cur += 1

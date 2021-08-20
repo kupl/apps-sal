@@ -5,4 +5,4 @@ def capitalize(s, ind):
             arr.append(s[i].upper())
         else:
             arr.append(s[i])
-    return "".join(arr)
+    return ''.join(arr)

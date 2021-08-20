@@ -1,6 +1,6 @@
 p = [2]
 for i in range(3, 1000, 2):
-    if all(i % j for j in p):
+    if all((i % j for j in p)):
         p.append(i)
 
 
@@ -15,4 +15,4 @@ def prime_primes(N):
             sm += p[i] / p[j]
         if p[i] >= N:
             break
-    return cnt, int(sm)
+    return (cnt, int(sm))

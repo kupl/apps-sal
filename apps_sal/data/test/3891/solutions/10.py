@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -8,12 +7,12 @@ if not USE_STDIO:
 
 
 def main():
-    n, m = list(map(int, input().split(' ')))
+    (n, m) = list(map(int, input().split(' ')))
     grid = []
     for _ in range(n):
         grid.append(input())
-    x0, y0 = n, m
-    x1, y1 = 0, 0
+    (x0, y0) = (n, m)
+    (x1, y1) = (0, 0)
     for i in range(n):
         for j in range(m):
             if grid[i][j] == 'B':

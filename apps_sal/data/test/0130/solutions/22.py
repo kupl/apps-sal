@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 q = [str(input()) for i in range(n)]
 k = 0
 t = True
@@ -20,9 +20,9 @@ for i in range(n):
                 ni = i
             k += 1
         u += 1
-if (max(ni - vi, pi - li) + 1) > n or (max(ni - vi, pi - li) + 1) > m:
+if max(ni - vi, pi - li) + 1 > n or max(ni - vi, pi - li) + 1 > m:
     print(-1)
 elif k == 0:
     print(1)
 else:
-    print((max(ni - vi, pi - li) + 1)**2 - k)
+    print((max(ni - vi, pi - li) + 1) ** 2 - k)

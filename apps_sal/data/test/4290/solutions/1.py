@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ln = []
 ans = 0
 for i in range(n):
@@ -10,4 +10,4 @@ for a in range(len(ln)):
         if a != b:
             if (ln[a] + ln[b]) % 2 == 0:
                 ans += 1
-print((ans // 2))
+print(ans // 2)

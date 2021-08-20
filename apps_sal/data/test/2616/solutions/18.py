@@ -7,14 +7,13 @@ def main(r):
         i += 1
     if i % 2 == 0:
         if i == n:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
+    elif i == n:
+        print('First')
     else:
-        if i == n:
-            print("First")
-        else:
-            print("Second")
+        print('Second')
 
 
 def __starting_point():

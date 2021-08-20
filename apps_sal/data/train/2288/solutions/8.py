@@ -1,32 +1,28 @@
 input = __import__('sys').stdin.readline
-def MIS(): return map(int, input().split())
 
-# f(a) = z                 a <= x1
-#        a+z-x1      x1 <= a <= x2
-#        x2+z-x1     x2 <= a
+
+def MIS():
+    return map(int, input().split())
 
 
 class Sandgraph:
+
     def __init__(_, X):
         _.z = _.x1 = 0
         _.x2 = X
 
     def add(_, dt):
-        # Go towards the ceiling
         d1 = min(dt, X - (_.x2 + _.z - _.x1))
         _.z += d1
         dt -= d1
-        # Reduce the diagonal
         d1 = min(dt, _.x2 - _.x1)
         _.z += d1
         _.x2 -= d1
 
     def sub(_, dt):
-        # Go towards the floor
         d1 = min(dt, _.z)
         _.z -= d1
         dt -= d1
-        # Reduce the diagonal
         d1 = min(dt, _.x2 - _.x1)
         _.x1 += d1
 
@@ -44,11 +40,10 @@ k = int(input())
 rev = list(MIS())
 Q = int(input())
 sand = Sandgraph(X)
-
 last_t = 0
-i = 0  # even -, odd +
+i = 0
 for QUERY in range(Q):
-    t, a = MIS()
+    (t, a) = MIS()
     while i < k and rev[i] <= t:
         dt = rev[i] - last_t
         if i % 2 == 0:

@@ -5,7 +5,7 @@ def decompose(n):
         temp = answer.pop()
         total += temp ** 2
         for i in range(temp - 1, 0, -1):
-            if total - (i ** 2) >= 0:
+            if total - i ** 2 >= 0:
                 total -= i ** 2
                 answer.append(i)
                 if total == 0:

@@ -1,4 +1,3 @@
-
 n = int(input())
 servers = list(map(int, input().split()))
 Sum = sum(servers)
@@ -13,5 +12,4 @@ for i in range(n):
 left = n - cnt
 if not flag:
     ans += max(Sum % n - left, 0)
-
 print(ans)

@@ -1,15 +1,6 @@
 class Solution:
-    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
-        # cnt = Counter(frozenset(w) for w in words if len(set(w)) <= 7)
-        # ans = []
-        # for p in puzzles:
-        #     cur = 0
-        #     for k in range(7):
-        #         for i in itertools.combinations(p[1:], k):
-        #             cur += cnt[frozenset((p[0],) + i)]
-        #     ans.append(cur)
-        # return ans
 
+    def findNumOfValidWords(self, words: List[str], puzzles: List[str]) -> List[int]:
         ans = []
         cnt = Counter()
         for w in words:
@@ -24,5 +15,5 @@ class Solution:
             bfs = [1 << ord(p[0]) - ord('a')]
             for c in p[1:]:
                 bfs += [m | 1 << ord(c) - ord('a') for m in bfs]
-            ans.append(sum(cnt[m] for m in bfs))
+            ans.append(sum((cnt[m] for m in bfs)))
         return ans

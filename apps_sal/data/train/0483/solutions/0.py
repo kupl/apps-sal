@@ -1,25 +1,10 @@
 class Solution:
+
     def maxArea(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
-        # l = []
-        # maxH = 0
-        # for i in range(len(height)-1, -1, -1):
-        #     if height[i] > maxH:
-        #         maxH = height[i]
-        #         l.append((i, maxH))
-        # maxArea = 0
-        # for i in range(len(height)):
-        #     for jl in l:
-        #         if i >= jl[0]:
-        #             break
-        #         area = (jl[0] - i) * min(height[i], jl[1])
-        #         if area > maxArea:
-        #             maxArea = area
-        # return maxArea
-
         left = 0
         right = len(height) - 1
         if height[left] > height[right]:
@@ -30,7 +15,6 @@ class Solution:
             minIndex = left
         area = (right - left) * minH
         maxArea = area
-
         while left != right:
             if minIndex == left:
                 while left != right:

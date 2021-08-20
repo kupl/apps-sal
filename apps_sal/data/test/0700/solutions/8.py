@@ -38,7 +38,7 @@ L8 = rotate(L7)
 L9 = rotate(L5)
 L10 = rotate(L9)
 L11 = rotate(L10)
-if L == M or L1 == M or L2 == M or L3 == M or L4 == M or L5 == M or L6 == M or L7 == M or L8 == M or L9 == M or L10 == M or L11 == M:
+if L == M or L1 == M or L2 == M or (L3 == M) or (L4 == M) or (L5 == M) or (L6 == M) or (L7 == M) or (L8 == M) or (L9 == M) or (L10 == M) or (L11 == M):
     print('Yes')
 else:
     print('No')

@@ -1,6 +1,6 @@
 T = int(input())
 for t in range(T):
-    x, y = [int(n) for n in input().split()]
+    (x, y) = [int(n) for n in input().split()]
     ops = 0
     while x and y:
         if x < y:

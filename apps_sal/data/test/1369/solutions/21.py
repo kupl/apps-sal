@@ -2,7 +2,7 @@ import math
 
 
 def all_points(x, y):
-    return max(one_point(x, y, _x, _y) for _x, _y in points)
+    return max((one_point(x, y, _x, _y) for (_x, _y) in points))
 
 
 def one_point(x0, y0, x1, y1):
@@ -23,34 +23,31 @@ def three():
 
 
 def process_two():
-    minimum = 1e18
-    for (a, b), (c, d) in two():
-        x, y = (a + c) / 2, (b + d) / 2
+    minimum = 1e+18
+    for ((a, b), (c, d)) in two():
+        (x, y) = ((a + c) / 2, (b + d) / 2)
         minimum = min(minimum, all_points(x, y))
     return minimum
 
 
 def process_three():
-    minimum = 1e18
-    for (a, b), (c, d), (e, f) in three():
+    minimum = 1e+18
+    for ((a, b), (c, d), (e, f)) in three():
         try:
             if b == d == f:
                 continue
             if d == b:
-                a, b, c, d, e, f = e, f, a, b, c, d
+                (a, b, c, d, e, f) = (e, f, a, b, c, d)
             if f == b:
-                a, b, c, d, e, f = c, d, e, f, a, b
-            m0x, m0y = (a + c) / 2, (b + d) / 2
+                (a, b, c, d, e, f) = (c, d, e, f, a, b)
+            (m0x, m0y) = ((a + c) / 2, (b + d) / 2)
             m0 = -(c - a) / (d - b)
             b0 = m0y - m0 * m0x
-
-            m1x, m1y = (a + e) / 2, (b + f) / 2
+            (m1x, m1y) = ((a + e) / 2, (b + f) / 2)
             m1 = -(e - a) / (f - b)
             b1 = m1y - m1 * m1x
-
             x = (b1 - b0) / (m0 - m1)
             y = m0 * x + b0
-
             minimum = min(minimum, all_points(x, y))
         except ZeroDivisionError:
             continue
@@ -60,8 +57,6 @@ def process_three():
 N = int(input())
 points = []
 for i in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     points.append((x, y))
-
-
-print((math.sqrt(min(process_two(), process_three()))))
+print(math.sqrt(min(process_two(), process_three())))

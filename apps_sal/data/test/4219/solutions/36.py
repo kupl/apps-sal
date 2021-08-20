@@ -7,11 +7,10 @@ for _ in range(n):
     a.append(A)
     x.append(X)
 ans = 0
-
-for i in range(2**n):
+for i in range(2 ** n):
     tmp = [0] * n
     for j in range(n):
-        if (i >> j) & 1:
+        if i >> j & 1:
             tmp[j] = 1
     for k in range(n):
         if a[k] == 0:
@@ -27,5 +26,4 @@ for i in range(2**n):
         break
     else:
         ans = max(ans, sum(tmp))
-
 print(ans)

@@ -1,5 +1,4 @@
 import string
-
 letters = string.ascii_lowercase[::-1] + '!? '
 
 

@@ -1,5 +1,4 @@
 MAXN = 1000000000
-
 n = int(input())
 a = list(map(int, input().split()))
 
@@ -8,7 +7,7 @@ def solve1():
     for i in range(n - 1):
         if abs(a[i] - a[i + 1]) != 1:
             return False
-    print("YES\n%d %d" % (MAXN, 1))
+    print('YES\n%d %d' % (MAXN, 1))
     return True
 
 
@@ -26,7 +25,7 @@ def solve2():
     for i in range(n - 1):
         if abs(a[i] - a[i + 1]) == 1 and (a[i] - 1) // w != (a[i + 1] - 1) // w:
             return False
-    print("YES\n%d %d" % (MAXN, w))
+    print('YES\n%d %d' % (MAXN, w))
     return True
 
 
@@ -35,4 +34,4 @@ if solve1():
 elif solve2():
     pass
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,4 @@
-k, a, b = list(map(int, input().split()))
+(k, a, b) = list(map(int, input().split()))
 ans = 0
 if b < 0:
     a *= -1
@@ -9,6 +9,5 @@ if a > 0 and b >= 0:
 else:
     ans += b // k
     ans += 1
-    ans += (-a) // k
-
+    ans += -a // k
 print(ans)

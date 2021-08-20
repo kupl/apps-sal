@@ -1,10 +1,11 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         if not A:
             return 0
         ans = 0
-        hp, hp2 = [], []
-        n, mina, maxa = len(A), min(A), max(A)
+        (hp, hp2) = ([], [])
+        (n, mina, maxa) = (len(A), min(A), max(A))
         seen = set()
         for a in A:
             if a not in seen:

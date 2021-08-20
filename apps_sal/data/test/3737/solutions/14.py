@@ -4,6 +4,6 @@ mi = min(l)
 ma = max(l)
 count = 0
 for i in l:
-    if(i != mi and i != ma):
+    if i != mi and i != ma:
         count += 1
 print(count)

@@ -2,14 +2,36 @@ from collections import deque
 import sys
 
 
-def int1(x): return int(x) - 1
-def p2D(x): return print(*x, sep="\n")
-def II(): return int(sys.stdin.readline())
-def MI(): return map(int, sys.stdin.readline().split())
-def MI1(): return map(int1, sys.stdin.readline().split())
-def LI(): return list(map(int, sys.stdin.readline().split()))
-def LLI(rows_number): return [LI() for _ in range(rows_number)]
-def SI(): return sys.stdin.readline()[:-1]
+def int1(x):
+    return int(x) - 1
+
+
+def p2D(x):
+    return print(*x, sep='\n')
+
+
+def II():
+    return int(sys.stdin.readline())
+
+
+def MI():
+    return map(int, sys.stdin.readline().split())
+
+
+def MI1():
+    return map(int1, sys.stdin.readline().split())
+
+
+def LI():
+    return list(map(int, sys.stdin.readline().split()))
+
+
+def LLI(rows_number):
+    return [LI() for _ in range(rows_number)]
+
+
+def SI():
+    return sys.stdin.readline()[:-1]
 
 
 def solve():
@@ -18,7 +40,7 @@ def solve():
     q.append((0, 0))
     dist[0] = 0
     while q:
-        d, i = q.popleft()
+        (d, i) = q.popleft()
         if d > dist[i]:
             continue
         if i < n:
@@ -39,18 +61,16 @@ def solve():
     print(-1)
 
 
-inf = 10**9
-n, m = MI()
+inf = 10 ** 9
+(n, m) = MI()
 to = []
 uctoi = {}
-
 for u in range(n):
     to.append([])
     uctoi[u, 0] = u
-
 for _ in range(m):
-    u, v, c = MI()
-    u, v = u - 1, v - 1
+    (u, v, c) = MI()
+    (u, v) = (u - 1, v - 1)
     if (u, c) not in uctoi:
         i = uctoi[u, c] = len(to)
         to.append([])
@@ -67,7 +87,4 @@ for _ in range(m):
         j = uctoi[v, c]
     to[i].append(j)
     to[j].append(i)
-# print(to)
-# print(fin)
-
 solve()

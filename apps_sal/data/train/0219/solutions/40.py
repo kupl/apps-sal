@@ -1,8 +1,9 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
         stack = []
         ans = accu = 0
-        for i, h in enumerate(hours):
+        for (i, h) in enumerate(hours):
             if h > 8:
                 accu += 1
             else:
@@ -10,7 +11,7 @@ class Solution:
             if accu > 0:
                 ans = i + 1
             else:
-                L, U = -1, len(stack)
+                (L, U) = (-1, len(stack))
                 while L + 1 < U:
                     m = (L + U) // 2
                     if stack[m][1] < accu:

@@ -1,5 +1,5 @@
 n = int(input())
-st = ""
+st = ''
 i = 1
 while len(st) <= n:
     st += str(i)

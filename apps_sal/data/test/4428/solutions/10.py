@@ -8,7 +8,7 @@ sb[0] = b[0]
 for i in range(1, n):
     sa[i] = sa[i - 1] + a[i]
     sb[i] = sb[i - 1] + b[i]
-i, j = 1, 1
+(i, j) = (1, 1)
 rec = []
 while i + j <= n:
     if sa[i - 1] == sb[j - 1]:
@@ -18,7 +18,6 @@ while i + j <= n:
         i += 1
     else:
         j += 1
-
 if len(rec) == 0:
     print(0)
 else:

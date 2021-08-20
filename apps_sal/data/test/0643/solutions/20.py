@@ -1,6 +1,6 @@
 from math import ceil
 for _ in range(int(input())):
-    x, y, p, q = list(map(int, input().split()))
+    (x, y, p, q) = list(map(int, input().split()))
     if p == q and x != y:
         print(-1)
     elif p == q:

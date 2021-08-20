@@ -8,7 +8,7 @@ def count(x, y):
     for i in range(len(x + y)):
         l.append((x + y)[i])
     for letter in set(l):
-        if (letter in x) and (letter in y):
+        if letter in x and letter in y:
             result += 1
     return result
 
@@ -16,5 +16,4 @@ def count(x, y):
 lst = []
 for i in range(1, N):
     lst.append(count(s[:i], s[i:]))
-
 print(max(lst))

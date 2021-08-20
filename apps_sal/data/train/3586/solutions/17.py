@@ -1,6 +1,6 @@
 def html(*args, **k_args):
     attrs = []
-    for k, v in list(k_args.items()):
+    for (k, v) in list(k_args.items()):
         if k == 'cls':
             k = 'class'
         attrs.append(k + '="' + v + '"')

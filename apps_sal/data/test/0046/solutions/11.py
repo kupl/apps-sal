@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 n_rem = [n // 5 for _ in range(5)]
 for i in range(1, n % 5 + 1):
     n_rem[i] += 1

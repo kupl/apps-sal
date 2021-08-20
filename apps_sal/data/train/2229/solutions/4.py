@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding = 'utf-8' -*-
-
 t = input()
 p = input()
 a = list(map(int, input().split()))
@@ -13,19 +10,15 @@ def can(s, p):
             i += 1
             if i == len(p):
                 return True
-
     return False
 
 
 def binary_search(l, r):
-
-    while(l < r - 1):
+    while l < r - 1:
         s = list(t)
         mid = (l + r) // 2
-
         for index in range(mid):
             s[a[index] - 1] = ' '
-
         ok = False
         i = 0
         for ch in s:
@@ -38,7 +31,6 @@ def binary_search(l, r):
             l = mid
         else:
             r = mid
-
     return l
 
 

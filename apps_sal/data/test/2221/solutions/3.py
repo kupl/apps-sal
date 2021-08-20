@@ -1,5 +1,5 @@
-x1, y1 = list(map(int, input().split()))
-x2, y2 = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
+(x2, y2) = list(map(int, input().split()))
 x2 -= x1
 y2 -= y1
 x1 = 0
@@ -19,14 +19,14 @@ for i in range(n):
         r[0] += 1
 left = 0
 right = 90000000000
-for i in range(2 * (10**10)):
+for i in range(2 * 10 ** 10):
     r1 = r[:]
-    r1[0] *= ((left + right) // 2)
-    r1[1] *= ((left + right) // 2)
-    if abs(r1[0] - x2) + abs(r1[1] - y2) <= ((left + right) // 2) * n:
-        right = ((left + right) // 2)
+    r1[0] *= (left + right) // 2
+    r1[1] *= (left + right) // 2
+    if abs(r1[0] - x2) + abs(r1[1] - y2) <= (left + right) // 2 * n:
+        right = (left + right) // 2
     else:
-        left = ((left + right) // 2)
+        left = (left + right) // 2
     if right == 90000000000 and left == 90000000000 - 1:
         flag = False
     if left + 1 == right:

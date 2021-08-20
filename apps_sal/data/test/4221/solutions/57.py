@@ -1,8 +1,6 @@
-# -*- coding: utf-8 -*-
 s = input()
-if s[-1] == "s":
-    t_lang = s + "es"
+if s[-1] == 's':
+    t_lang = s + 'es'
 else:
-    t_lang = s + "s"
-
-print(("{}".format(t_lang)))
+    t_lang = s + 's'
+print('{}'.format(t_lang))

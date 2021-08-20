@@ -11,7 +11,6 @@ for n in range(N):
         P[n] += P[n - 1]
     if P[n] > 0:
         B[n] = False
-
 for n in range(N):
     if B[n]:
         total += 1

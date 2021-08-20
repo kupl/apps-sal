@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 c = dict()
 for x in s:
@@ -6,12 +6,11 @@ for x in s:
         c[x] = 1
     else:
         c[x] += 1
-
 no = False
 for x in c:
     if c[x] > k:
-        print("NO")
+        print('NO')
         no = True
         break
 if not no:
-    print("YES")
+    print('YES')

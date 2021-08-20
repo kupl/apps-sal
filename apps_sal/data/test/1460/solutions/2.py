@@ -27,7 +27,6 @@ def solve():
 
 
 mode = 's'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

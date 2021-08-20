@@ -1,5 +1,3 @@
-# https://atcoder.jp/contests/abc085/tasks/abc085_b
-
 """
 上のほうが餅が小さくなるように重ねる
 → 同じサイズの餅は使えない
@@ -10,11 +8,9 @@
 何段重ねられるか
 = 何種類のサイズの餅があるか
 """
-
 n = int(input())
 mochi_set = set()
 for i in range(n):
     size = int(input())
     mochi_set.add(size)
-
-print((len(mochi_set)))
+print(len(mochi_set))

@@ -1,4 +1,5 @@
 class Solution:
+
     def bagOfTokensScore(self, tokens: List[int], P: int) -> int:
         tokens.sort()
         left = 0
@@ -17,5 +18,4 @@ class Solution:
                 right -= 1
             else:
                 break
-
         return ans

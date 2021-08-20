@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = []
 if n % (2 * k + 1) >= k + 1 or n % (2 * k + 1) == 0:
     i = k + 1

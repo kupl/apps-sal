@@ -1,4 +1,5 @@
 class Solution:
+
     def fullJustify(self, words, maxWidth):
         """
         :type words: List[str]
@@ -12,11 +13,9 @@ class Solution:
         k = 0
         B = []
         for i in range(len(A)):
-            # if i==len(A)-1:
-            # B.append
             if temp == 0:
                 temp = A[i]
-            elif (temp + 1 + A[i]) > maxWidth:
+            elif temp + 1 + A[i] > maxWidth:
                 if i - k == 1:
                     B.append([k, i, 0, 0])
                 else:

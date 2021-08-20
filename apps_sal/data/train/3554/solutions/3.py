@@ -12,4 +12,4 @@ def get_score(dice):
             counter[i] = 0
     result += counter[0] * factors[0] * 10
     result += counter[4] * factors[4] * 10
-    return result or "Zonk"
+    return result or 'Zonk'

@@ -1,7 +1,6 @@
 def main():
     n = int(input())
     A = list(map(int, input().split()))
-
     ans = 0
     s = A[0]
     plus_flag = True
@@ -9,7 +8,6 @@ def main():
         ans += -A[0] + 1
         s = 1
     v1 = eval(s, ans, plus_flag, A)
-
     ans = 0
     s = A[0]
     plus_flag = False
@@ -17,8 +15,7 @@ def main():
         ans += A[0] + 1
         s = -1
     v2 = eval(s, ans, plus_flag, A)
-
-    print((min(v1, v2)))
+    print(min(v1, v2))
 
 
 def eval(s, ans, plus_flag, A):
@@ -39,7 +36,7 @@ def eval(s, ans, plus_flag, A):
                 ans += 1
                 s = 1
             elif s + a < 0:
-                ans += - (s + a) + 1
+                ans += -(s + a) + 1
                 s = 1
             else:
                 s = s + a

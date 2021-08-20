@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
     n = 1
     par = [0]
     rnk = [0]
@@ -23,11 +23,11 @@ class UnionFind():
         vertex2 = self.find(vertex2)
         if vertex1 == vertex2:
             return
-        if (self.rnk[vertex1] < self.rnk[vertex2]):
+        if self.rnk[vertex1] < self.rnk[vertex2]:
             self.par[vertex1] = vertex2
         else:
             self.par[vertex2] = vertex1
-            if (self.rnk[vertex1] == self.rnk[vertex2]):
+            if self.rnk[vertex1] == self.rnk[vertex2]:
                 self.rnk[vertex1] += 1
 
     def same(self, vetrex1, vertex2):

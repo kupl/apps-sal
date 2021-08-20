@@ -1,5 +1,4 @@
 q = int(input())
-
 for qq in range(q):
     n = int(input())
     a = list(map(int, input().split()))
@@ -26,8 +25,7 @@ for qq in range(q):
                 diff = b[i] - a[i]
         elif a[i] == b[i] and started:
             ended = True
-
     if possible:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

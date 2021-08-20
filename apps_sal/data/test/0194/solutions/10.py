@@ -1,4 +1,4 @@
-q, w, e = list(map(int, input().split()))
+(q, w, e) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 z = a.count(1)
 x = a.count(2)
@@ -15,9 +15,8 @@ for i in a:
             r -= 1
         else:
             s += 1
+    elif e > 0:
+        e -= 1
     else:
-        if e > 0:
-            e -= 1
-        else:
-            s += 2
+        s += 2
 print(s)

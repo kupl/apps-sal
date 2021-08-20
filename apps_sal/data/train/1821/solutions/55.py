@@ -1,5 +1,7 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
+
         def merge_sort(left, right):
             res = []
             left_p = right_p = 0
@@ -13,7 +15,6 @@ class Solution:
             res.extend(left[left_p:])
             res.extend(right[right_p:])
             return res
-
         if len(nums) <= 1:
             return nums
         middle = len(nums) // 2

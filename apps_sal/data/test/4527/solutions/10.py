@@ -29,9 +29,9 @@ def solve():
     t = int(input())
     for _ in range(t):
         n = int(input())
-        l, r, m = [], [], set()
+        (l, r, m) = ([], [], set())
         for i in range(n):
-            x, y = put()
+            (x, y) = put()
             l.append(x)
             r.append(y)
             m.add(x)

@@ -1,4 +1,5 @@
 def palindrome_chain_length(n):
+
     def calculate_palindrome(steps, n):
         if str(n)[::-1] == str(n):
             return steps

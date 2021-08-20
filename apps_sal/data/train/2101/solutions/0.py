@@ -1,19 +1,20 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
 
 
-N, M = list(map(int, input().split()))
+def input():
+    return sys.stdin.readline().rstrip()
+
+
+(N, M) = list(map(int, input().split()))
 D = [{} for _ in range(N)]
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     D[a][b] = 1
     D[b][a] = 1
-
 L = [i - 1 for i in range(N)]
 R = [i + 1 for i in range(N)]
-
 F = [0] * N
 for i in range(N):
     if F[i]:
@@ -43,11 +44,9 @@ for i in range(N):
                     del D[j][a]
                 if j in D[a]:
                     del D[a][j]
-
             if R[j] < N:
                 L[R[j]] = L[j]
             if L[j] >= 0:
                 R[L[j]] = R[j]
             j = R[j]
-
 print(N - sum(F) - 1)

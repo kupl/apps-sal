@@ -13,21 +13,17 @@ l = [[] for i in range(52)]
 ts = set()
 cs = set()
 d = createdict()
-
 for i in range(n):
     if s[i] not in ts:
         ts.add(s[i])
     l[d[s[i]]].append(i)
-
-for end in range(n):  # start = 0
+for end in range(n):
     if s[end] not in cs:
         cs.add(s[end])
     if ts & cs == ts:
         break
-
 ans = end + 1
 flag = 0
-
 for start in range(1, n):
     c = s[start - 1]
     while l[d[c]]:
@@ -43,5 +39,4 @@ for start in range(1, n):
     if flag:
         break
     ans = min(ans, end - start + 1)
-
 print(ans)

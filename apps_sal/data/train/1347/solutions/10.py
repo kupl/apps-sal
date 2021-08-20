@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l.sort()
 l2 = []
@@ -11,7 +11,6 @@ for i in range(m):
     l3[0] = int(l3[0])
     l3[1] = int(l3[1])
     l2.append(l3)
-
 for k in range(len(l2)):
     if l2[k][0] in l:
         l4.append(k)
@@ -19,7 +18,6 @@ for k in range(len(l2)):
     else:
         l5.append(k)
         l7.append(l2[k][1])
-
 while True:
     max = 0
     c = 0
@@ -32,7 +30,6 @@ while True:
     y = int(l4[c])
     print(l2[y][2])
     l6[c] = 0
-
 while True:
     max = 0
     c = 0

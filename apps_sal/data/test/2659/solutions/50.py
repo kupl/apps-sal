@@ -7,8 +7,8 @@ p = 1
 e = 0
 i = 0
 while i < k:
-    n = (p + 1) * 10**e - 1
-    nxt = (p + 2) * 10**e - 1
+    n = (p + 1) * 10 ** e - 1
+    nxt = (p + 2) * 10 ** e - 1
     if s(n) <= s(nxt):
         print(n)
         p += 1

@@ -1,7 +1,6 @@
-n, r = map(int, input().split())
-
+(n, r) = map(int, input().split())
 if n < 10:
-    ans = r + (100 * (10 - n))
+    ans = r + 100 * (10 - n)
     print(ans)
 else:
     print(r)

@@ -7,5 +7,5 @@ for _ in range(q):
     while total <= n:
         wyn += 1
         pot += 1
-        total += (2**pot - 1) * (2**pot) // 2
+        total += (2 ** pot - 1) * 2 ** pot // 2
     print(wyn)

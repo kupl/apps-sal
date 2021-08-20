@@ -1,21 +1,18 @@
-'''
+"""
 自宅用PCでの解答
-'''
+"""
 import math
-#import numpy as np
 import itertools
 import queue
 import bisect
 from collections import deque, defaultdict
 import heapq as hpq
 from sys import stdin, setrecursionlimit
-#from scipy.sparse.csgraph import dijkstra
-#from scipy.sparse import csr_matrix
 ipt = stdin.readline
-setrecursionlimit(10**7)
-mod = 10**9 + 7  # 998244353
+setrecursionlimit(10 ** 7)
+mod = 10 ** 9 + 7
 dir = [(-1, 0), (0, -1), (1, 0), (0, 1)]
-alp = "abcdefghijklmnopqrstuvwxyz"
+alp = 'abcdefghijklmnopqrstuvwxyz'
 
 
 def main():
@@ -26,13 +23,11 @@ def main():
     d = defaultdict(int)
     d[a[0]] = 1
     tot = a[0]
-    for i, ai in enumerate(a[1::]):
+    for (i, ai) in enumerate(a[1:]):
         tot += ai
         d[ai] += 1
         if cts[-1][0] < ai:
             cts.append((ai, i + 1))
-
-#    print(d,cts)
     nms = sorted(list(d.keys()), reverse=True)
     lc = len(cts) - 1
     na = cts[lc][0]
@@ -48,13 +43,9 @@ def main():
             ps = cts[lc][1]
         else:
             ans[pps] += d[i] * (i - na)
-#        print(ans)
-
-    ans[0] = tot - sum(ans[1::])
-
+    ans[0] = tot - sum(ans[1:])
     for i in ans:
         print(i)
-
     return None
 
 

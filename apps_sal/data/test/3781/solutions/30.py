@@ -9,6 +9,6 @@ for _ in range(t):
         if i % 2:
             flg = 0
     if (flg + n) % 2 == 0:
-        print("First")
+        print('First')
     else:
-        print("Second")
+        print('Second')

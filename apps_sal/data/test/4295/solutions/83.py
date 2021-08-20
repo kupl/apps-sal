@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 
 
 def absolute(x):
@@ -12,9 +12,8 @@ if N < K:
     while N > abs(N - K):
         N = absolute(N)
     print(N)
-
 elif N % K == 0:
-    print((0))
+    print(0)
 else:
     b = 1
     s = K

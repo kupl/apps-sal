@@ -1,10 +1,10 @@
 def define_suit(card):
     letter = card[-1]
-    if letter == "C":
+    if letter == 'C':
         return 'clubs'
-    elif letter == "S":
+    elif letter == 'S':
         return 'spades'
-    elif letter == "D":
+    elif letter == 'D':
         return 'diamonds'
     else:
         return 'hearts'

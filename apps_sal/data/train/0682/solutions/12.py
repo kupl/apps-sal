@@ -1,7 +1,7 @@
 from sys import stdin, stdout, exit
 from heapq import *
 try:
-    n = (int(stdin.readline()))
+    n = int(stdin.readline())
     a = list(map(int, stdin.readline().split()))
     s = 0
     l = 0
@@ -21,7 +21,7 @@ try:
             s = a[i]
             r = i
             break
-    arr = a[:l] + (a[l:r])[::-1] + a[r:]
+    arr = a[:l] + a[l:r][::-1] + a[r:]
     s = 0
     ans = True
     for i in arr:

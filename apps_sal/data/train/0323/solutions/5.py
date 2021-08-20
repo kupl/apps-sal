@@ -1,4 +1,5 @@
 class Solution:
+
     def isInterleave(self, s1, s2, s3):
         """
         :type s1: str
@@ -10,7 +11,6 @@ class Solution:
             return False
         if '' in [s1, s2]:
             return s3 == s1 + s2
-
         dp = [[False] * (len(s2) + 1) for _ in range(len(s1) + 1)]
         for i in range(len(s1) + 1):
             for j in range(len(s2) + 1):

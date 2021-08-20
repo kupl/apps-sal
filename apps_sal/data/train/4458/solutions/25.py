@@ -4,7 +4,7 @@ import re
 def time_correct(t):
     if t == '':
         return ''
-    if t and re.search(r'[0-9]{2}:[0-9]{2}:[0-9]{2}', t):
+    if t and re.search('[0-9]{2}:[0-9]{2}:[0-9]{2}', t):
         sec = int(t[-2:])
         min = int(t[3:5])
         hr = int(t[:2])

@@ -1,4 +1,5 @@
 class Solution:
+
     def minMoves2(self, nums):
         """
         :type nums: List[int]
@@ -6,4 +7,4 @@ class Solution:
         """
         nums.sort()
         median = nums[len(nums) // 2]
-        return sum(abs(num - median) for num in nums)
+        return sum((abs(num - median) for num in nums))

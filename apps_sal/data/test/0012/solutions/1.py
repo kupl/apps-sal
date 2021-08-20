@@ -1,7 +1,5 @@
 n = int(input())
 s = input()
-
-
 max_ans = len([x for x in s if x == 'G'])
 right = 0
 cnt = 0
@@ -18,7 +16,6 @@ for i in range(n):
             break
     if not assigned:
         right = n
-    # print(i, right)
     ans = max(ans, right - i)
     if s[i] == 'S':
         cnt -= 1

@@ -4,7 +4,8 @@ reader = (s.rstrip() for s in sys.stdin)
 input = reader.__next__
 
 
-class LCA():
+class LCA:
+
     def __init__(self, G, root):
         self.n = len(G)
         self.dep = [0] * self.n
@@ -14,24 +15,22 @@ class LCA():
             que = deque()
             que.append((-1, root, 0))
             while que:
-                p, v, d = que.pop()
+                (p, v, d) = que.pop()
                 self.dep[v] = d
                 self.par[0][v] = p
                 for to in G[v]:
                     if to != p:
                         que.append((v, to, d + 1))
-
         bfs(root)
-
         for i in range(17):
             for j in range(self.n):
                 self.par[i + 1][j] = self.par[i][self.par[i][j]]
 
     def lca(self, a, b):
         if self.dep[a] > self.dep[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         for i in range(18):
-            if (self.dep[b] - self.dep[a]) & 1 << i:
+            if self.dep[b] - self.dep[a] & 1 << i:
                 b = self.par[i][b]
         if a == b:
             return a
@@ -48,34 +47,26 @@ class LCA():
 
 n = int(input())
 G = [[] for i in range(n)]
-
 for i in range(n - 1):
-    a, b = list(map(int, input().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, input().split()))
+    (a, b) = (a - 1, b - 1)
     G[a].append(b)
     G[b].append(a)
-
 L = LCA(G, 0)
-
 q = int(input())
 for i in range(q):
-    x, y, a, b, k = list(map(int, input().split()))
-    x, y, a, b = x - 1, y - 1, a - 1, b - 1
-
+    (x, y, a, b, k) = list(map(int, input().split()))
+    (x, y, a, b) = (x - 1, y - 1, a - 1, b - 1)
     ab = L.dist(a, b)
     base = [ab]
-
     ax = L.dist(a, x)
     ay = L.dist(a, y)
     bx = L.dist(b, x)
     by = L.dist(b, y)
-
     base.append(ax + 1 + by)
     base.append(ay + 1 + bx)
-
-    flag = any(ki <= k and (k - ki) % 2 == 0 for ki in base)
-
+    flag = any((ki <= k and (k - ki) % 2 == 0 for ki in base))
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

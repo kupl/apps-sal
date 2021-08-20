@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    print("+------------------------+")
+    print('+------------------------+')
     b1 = 0
     if n == 0:
         b1 = 0
@@ -24,14 +24,14 @@ def main():
         b4 = 0
     else:
         b4 = (n - 1) // 3
-    print("|", end='')
+    print('|', end='')
     for i in range(1, 12):
         if i <= b1:
             print('O.', end='')
         else:
             print('#.', end='')
     print('|D|)')
-    print("|", end='')
+    print('|', end='')
     for i in range(1, 12):
         if i <= b2:
             print('O.', end='')
@@ -39,17 +39,17 @@ def main():
             print('#.', end='')
     print('|.|')
     if b3 == 0:
-        print("|#.......................|")
+        print('|#.......................|')
     else:
-        print("|O.......................|")
-    print("|", end='')
+        print('|O.......................|')
+    print('|', end='')
     for i in range(1, 12):
         if i <= b4:
             print('O.', end='')
         else:
             print('#.', end='')
     print('|.|)')
-    print("+------------------------+")
+    print('+------------------------+')
 
 
 main()

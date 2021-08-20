@@ -13,8 +13,7 @@ def nCr(n, r):
     return num // den % mod
 
 
-n, k = map(int, input().split())
-
-mod = 10**9 + 7
+(n, k) = map(int, input().split())
+mod = 10 ** 9 + 7
 for i in range(1, k + 1):
     print(nCr(k - 1, i - 1) * nCr(n - k + 1, i) % mod)

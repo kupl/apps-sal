@@ -1,6 +1,5 @@
 n = int(input())
 A = list(map(int, input().split()))
-
 s = A[0]
 s_ = sum(A[1:])
 gap = abs(s - s_)

@@ -6,7 +6,7 @@ q = 0
 m = 0
 ans = []
 for i in range(len(s)):
-    if(s[i] == '['):
+    if s[i] == '[':
         q += 1
         a[i] = q
         m = max(m, q)
@@ -14,38 +14,37 @@ for i in range(len(s)):
         a[i] = q
         q -= 1
         m = max(m, q)
-        if(s[i - 1] == '['):
+        if s[i - 1] == '[':
             t.add(i - 1)
 for i in range(m + 1):
     e = ''
     for j in range(len(s)):
-        if(a[j] - 1 == i):
-            if(s[j] == '['):
+        if a[j] - 1 == i:
+            if s[j] == '[':
                 e += '+-'
-                if(j in t):
+                if j in t:
                     e += ' '
             else:
                 e += '-+'
-        elif(a[j] - 1 < i):
-            if(s[j] == '['):
+        elif a[j] - 1 < i:
+            if s[j] == '[':
                 e += '|'
-                if(j in t):
+                if j in t:
                     e += '  '
-            elif(s[j] == ']'):
-                if(j - 1 in t):
+            elif s[j] == ']':
+                if j - 1 in t:
                     e += ' '
                 e += '|'
+        elif s[j] == '[':
+            if j > 0 and s[j - 1] == ']' and (a[j - 1] == a[j]):
+                e += ' '
+            e += ' '
+            if j in t:
+                e += ' '
         else:
-            if(s[j] == '['):
-                if(j > 0 and s[j - 1] == ']' and a[j - 1] == a[j]):
-                    e += ' '
+            if j != len(s) - 1 and s[j + 1] != ']':
                 e += ' '
-                if(j in t):
-                    e += ' '
-            else:
-                if(j != len(s) - 1 and s[j + 1] != ']'):
-                    e += ' '
-                e += ' '
+            e += ' '
     ans += [e]
 for i in range(len(ans)):
     print(ans[i])

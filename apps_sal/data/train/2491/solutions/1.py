@@ -1,4 +1,5 @@
 class Solution:
+
     def buddyStrings(self, A, B):
         if len(A) != len(B) or set(A) != set(B):
             return False

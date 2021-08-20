@@ -1,7 +1,6 @@
 def main():
     N = int(input())
-    friendliness = [int(a) for a in input().split(" ")]
-
+    friendliness = [int(a) for a in input().split(' ')]
     friendliness.sort(reverse=True)
     put = 1
     comfort = 0
@@ -15,7 +14,6 @@ def main():
         else:
             comfort += (len(friendliness) - put) * friendliness[i]
             break
-
     print(comfort)
 
 

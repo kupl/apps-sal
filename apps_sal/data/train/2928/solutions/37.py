@@ -1,5 +1,5 @@
 def alphabet_war(fight):
-    L, R = 0, 0
+    (L, R) = (0, 0)
     for e in fight:
         if e == 'w':
             L += 4
@@ -18,7 +18,7 @@ def alphabet_war(fight):
         if e == 'z':
             R += 1
     if L > R:
-        return "Left side wins!"
+        return 'Left side wins!'
     if R > L:
-        return "Right side wins!"
+        return 'Right side wins!'
     return "Let's fight again!"

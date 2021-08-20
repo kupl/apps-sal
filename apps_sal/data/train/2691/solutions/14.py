@@ -4,9 +4,9 @@ def solve(s):
     for characters in s:
         if characters.isdigit():
             number += characters
-        elif number != "":
+        elif number != '':
             new_list.append(int(number))
-            number = ""
-    if number != "":
+            number = ''
+    if number != '':
         new_list.append(int(number))
     return max(new_list)

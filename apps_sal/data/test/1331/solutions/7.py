@@ -1,5 +1,5 @@
 from collections import deque
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 d = deque([])

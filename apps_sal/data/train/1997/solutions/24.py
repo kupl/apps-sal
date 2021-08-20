@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         intervals = sorted(intervals, key=lambda k: (k[0], -k[1]))
         removed = set()

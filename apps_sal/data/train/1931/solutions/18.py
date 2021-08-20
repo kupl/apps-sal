@@ -1,15 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
+
     def isSubPath(self, head: ListNode, root: TreeNode, path=None, cool=None) -> bool:
         path = path or []
         cool = cool or []
@@ -25,7 +15,6 @@ class Solution:
             cool.append(head.__next__)
             if cool[-1] == None:
                 return True
-
         l = r = False
         if root.left:
             l = self.isSubPath(head, root.left, path.copy(), cool)
@@ -35,7 +24,6 @@ class Solution:
             r = self.isSubPath(head, root.right, path.copy(), cool)
             if r is True:
                 return True
-
         if root.left is None and root.right is None:
             cool = []
         return False

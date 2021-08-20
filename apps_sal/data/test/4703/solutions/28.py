@@ -12,4 +12,4 @@ def dfs(now, total, i):
         return res
 
 
-print((dfs(int(s[0]), 0, 1)))
+print(dfs(int(s[0]), 0, 1))

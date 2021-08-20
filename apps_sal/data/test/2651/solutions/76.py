@@ -1,7 +1,6 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 x = list(map(int, input().split()))
 y = list(map(int, input().split()))
-# ブロックの数は(m-1)*(n-1)
 mod = pow(10, 9) + 7
 ypoint = 0
 for i in range(m - 1):

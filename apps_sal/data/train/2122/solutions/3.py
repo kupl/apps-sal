@@ -1,19 +1,12 @@
 import sys
-
 lines = iter(sys.stdin.read().splitlines())
-
 next(lines)
-
-s, d = map(int, next(lines).split())
-
+(s, d) = map(int, next(lines).split())
 dates = [[0, 0], [s, s + d - 1], [10000000001, 10000000001]]
 res = [[s, s + d - 1]]
-
 for line in lines:
-    s, d = map(int, line.split())
-
+    (s, d) = map(int, line.split())
     nhueco = True
-
     for i in range(len(dates)):
         if s > dates[i][1] and s + d - 1 < dates[i + 1][0]:
             dates.insert(i + 1, [s, s + d - 1])
@@ -26,6 +19,5 @@ for line in lines:
     else:
         dates.insert(li, [ld, ld + d - 1])
         res.append([ld, ld + d - 1])
-
 for date in res:
-    print(" ".join(map(str, date)))
+    print(' '.join(map(str, date)))

@@ -1,7 +1,7 @@
 t = int(input())
 for case_num in range(t):
-    a, b, c, d = list(map(int, input().split(' ')))
-    x, y, x1, y1, x2, y2 = list(map(int, input().split(' ')))
+    (a, b, c, d) = list(map(int, input().split(' ')))
+    (x, y, x1, y1, x2, y2) = list(map(int, input().split(' ')))
     ok = True
     if a > b:
         delta = a - b
@@ -14,7 +14,6 @@ for case_num in range(t):
         delta = b - a
         if x2 - x < delta:
             ok = False
-
     if c > d:
         delta = c - d
         if y - y1 < delta:
@@ -26,5 +25,4 @@ for case_num in range(t):
         delta = d - c
         if y2 - y < delta:
             ok = False
-
     print('Yes' if ok else 'No')

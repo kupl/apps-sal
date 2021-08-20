@@ -7,11 +7,9 @@ for i in range(n):
     for j in range(n):
         if j > i and p[j] == '1':
             swaps.append([i, j])
-
 group = []
 for i in range(n):
     group.append([i])
-
 for i in range(len(swaps)):
     x = swaps[i][1]
     y = swaps[i][0]
@@ -22,11 +20,9 @@ for i in range(len(swaps)):
     if y != x:
         group[y] += group[x]
         group[x] = y
-
 for i in range(n):
     if isinstance(group[i], list) == 1:
         group[i] = sorted(group[i])
-
 for i in range(n):
     if isinstance(group[i], list) == 1:
         x = []
@@ -35,7 +31,6 @@ for i in range(n):
         x = list(sorted(x))
         for j in range(len(group[i])):
             l[group[i][j]] = x[j]
-
 s = str(l[0])
 for i in range(1, n):
     s += ' ' + str(l[i])

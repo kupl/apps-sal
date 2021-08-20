@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         s = s + ' '
         out = 0
@@ -21,7 +22,6 @@ class Solution:
             else:
                 break
             start = prev_i
-
             to_delete.sort(reverse=True)
             for i in range(1, len(to_delete)):
                 out += to_delete[i][0]

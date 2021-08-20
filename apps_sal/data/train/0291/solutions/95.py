@@ -1,9 +1,9 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int]) -> int:
         sumEven = 0
         sumOdd = 0
         cumSum = 0
-
         result = 0
         for num in arr:
             cumSum += num
@@ -13,5 +13,4 @@ class Solution:
             else:
                 result += sumOdd
                 sumEven += 1
-
-        return result % (10**9 + 7)
+        return result % (10 ** 9 + 7)

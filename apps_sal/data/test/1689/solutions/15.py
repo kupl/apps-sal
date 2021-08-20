@@ -1,12 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
-
 n = int(input())
 bus = []
 flag = True
-
 for i in range(n):
     x = list(input())
     if flag:
@@ -20,7 +15,6 @@ for i in range(n):
             flag = False
     bus.append(x)
 start = time.time()
-
 if flag:
     print('NO')
 else:
@@ -30,4 +24,3 @@ else:
             print(j, end='')
         print()
 finish = time.time()
-#print(finish - start)

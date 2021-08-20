@@ -1,5 +1,5 @@
 def fish(shoal):
-    size, eaten = 1, 0
+    (size, eaten) = (1, 0)
     for i in range(1, 10):
         if size < i:
             break

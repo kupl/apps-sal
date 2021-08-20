@@ -2,7 +2,7 @@ def main():
     n = int(input())
     s = input()
     k = input()
-    arr = [0] + [ord(s[i]) + ord(k[i]) - 2 * ord('a')for i in range(n)]
+    arr = [0] + [ord(s[i]) + ord(k[i]) - 2 * ord('a') for i in range(n)]
     for i in range(n, -1, -1):
         if arr[i] >= 26:
             arr[i] -= 26

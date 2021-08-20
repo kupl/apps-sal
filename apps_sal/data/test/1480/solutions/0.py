@@ -1,9 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 aa = [int(x) for x in input().split()]
-
 nxt = [(i + 1) % n for i in range(n)]
 prv = [(i - 1 + n) % n for i in range(n)]
-
 cur = 0
 for z in range(k):
     a = aa[z]

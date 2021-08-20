@@ -1,16 +1,12 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = set([int(input()) for _ in range(M)])
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 dp = [0] * (N + 1)
 dp[0] = 1
-
 if 1 not in A:
     dp[1] = 1
 else:
     dp[1] = 0
-
-# DP
 for i in range(2, N + 1):
     if i in A:
         continue

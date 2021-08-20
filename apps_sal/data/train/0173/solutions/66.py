@@ -2,9 +2,9 @@ from collections import Counter
 
 
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         matches = Counter()
-
         c = 0
         for e in arr:
             me = -e % k
@@ -13,5 +13,4 @@ class Solution:
                 c += 1
             else:
                 matches[e % k] += 1
-
         return c == len(arr) // 2

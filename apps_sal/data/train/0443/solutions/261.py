@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         teams = 0
         n = len(rating)
@@ -10,5 +11,4 @@ class Solution:
                             teams += 1
                         if rating[i] > rating[j] > rating[k]:
                             teams += 1
-
         return teams

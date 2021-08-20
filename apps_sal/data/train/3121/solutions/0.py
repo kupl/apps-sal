@@ -1,1 +1,2 @@
-def solve(arr): return sum(set(arr))
+def solve(arr):
+    return sum(set(arr))

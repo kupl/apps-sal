@@ -11,6 +11,5 @@ for _ in range(int(input())):
             n = i + 1
             for j in range(n):
                 for k in range(j, n):
-                    a[j][k], a[k][j] = a[k][j], a[j][k]
-
+                    (a[j][k], a[k][j]) = (a[k][j], a[j][k])
     print(l)

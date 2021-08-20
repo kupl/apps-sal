@@ -1,8 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 l = list()
 out = [0] * n
 for i in range(m):
-    s1, d1, c1 = map(int, input().split())
+    (s1, d1, c1) = map(int, input().split())
     l.append((s1, d1, c1, i))
 l.sort(key=lambda x: x[1])
 can = True
@@ -20,6 +20,5 @@ for i in l:
         print(-1)
         can = False
         break
-
 if can is True:
-    print(" ".join(map(str, out)))
+    print(' '.join(map(str, out)))

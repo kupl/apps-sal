@@ -19,11 +19,11 @@ def ans(dic, v):
     return count
 
 
-m, v = [int(x) for x in input().split()]
+(m, v) = [int(x) for x in input().split()]
 dic = {i: 0 for i in range(3002)}
 for i in range(m):
     try:
-        d, a = [int(x) for x in input().split()]
+        (d, a) = [int(x) for x in input().split()]
         dic[d] += a
     except:
         continue

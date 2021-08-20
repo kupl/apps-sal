@@ -5,9 +5,9 @@ def main():
             continue
         if c[0][j] - c[0][j - 1] == c[1][j] - c[1][j - 1] == c[2][j] - c[2][j - 1]:
             continue
-        print("No")
+        print('No')
         return
-    print("Yes")
+    print('Yes')
     return
 
 

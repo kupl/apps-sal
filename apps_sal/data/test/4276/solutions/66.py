@@ -5,15 +5,14 @@ def answer(n: int, t: int, cts: List[List[int]]) -> int:
     costs = [route[0] for route in cts if route[1] <= t]
     if not costs:
         return -1
-
     return min(costs)
 
 
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     cts = [list(map(int, input().split())) for _ in range(n)]
     ans = answer(n, t, cts)
-    print((ans if ans != -1 else 'TLE'))
+    print(ans if ans != -1 else 'TLE')
 
 
 def __starting_point():

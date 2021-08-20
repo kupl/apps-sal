@@ -1,6 +1,5 @@
 import re
-
-EQUATION_REGEXP = re.compile(r'^[xy]=(-?\d*)t([+-]\d+)$')
+EQUATION_REGEXP = re.compile('^[xy]=(-?\\d*)t([+-]\\d+)$')
 
 
 def parse_coefficient(raw_coef):
@@ -27,15 +26,11 @@ def lcm(a, b):
 
 def compile_result(mult_a, mult_b, coefs_a, coefs_b):
     multiplier = -1 if mult_a < 0 else 1
-
     A = mult_a * multiplier
     A = A if A != 1 else ''
-
     B = abs(mult_b) if abs(mult_b) != 1 else ''
     B_sign = '-' if multiplier * mult_b > 0 else '+'
-
     C = multiplier * (mult_a * coefs_a[1] - mult_b * coefs_b[1])
-
     return f'{A}x {B_sign} {B}y = {C}'
 
 

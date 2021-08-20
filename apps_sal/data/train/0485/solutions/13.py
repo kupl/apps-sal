@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def minKBitFlips(self, A: List[int], K: int) -> int:
         s = deque()
         count = 0

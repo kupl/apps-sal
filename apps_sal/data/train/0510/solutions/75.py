@@ -8,12 +8,12 @@ def main():
         al[ord(s[i]) - 97].append(i)
     ans = []
     for i in range(q):
-        a, b, x = input().split()
-        if a == "1":
+        (a, b, x) = input().split()
+        if a == '1':
             al[ord(s[int(b) - 1]) - 97].pop(bisect_left(al[ord(s[int(b) - 1]) - 97], int(b) - 1))
             al[ord(x) - 97].insert(bisect_left(al[ord(x) - 97], int(b) - 1), int(b) - 1)
             s[int(b) - 1] = x
-        elif a == "2":
+        elif a == '2':
             b = int(b) - 1
             x = int(x) - 1
             cou = 0

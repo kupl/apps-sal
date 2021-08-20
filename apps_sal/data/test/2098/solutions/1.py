@@ -1,7 +1,7 @@
 n = int(input())
 V = []
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     V.append(a)
     if b < n:
         print('NO')
@@ -9,7 +9,7 @@ for _ in range(n - 1):
 V.sort()
 for i in range(n - 1):
     if V[i] <= i:
-        print("NO")
+        print('NO')
         quit()
 used = [False] * (n + 1)
 tree = []
@@ -25,6 +25,6 @@ for i in range(n - 1):
                 used[j] = True
                 break
 tree.append(n)
-print("YES")
+print('YES')
 for i in range(n - 1):
     print(tree[i], tree[i + 1])

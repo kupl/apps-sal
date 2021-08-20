@@ -1,29 +1,18 @@
 from collections import deque
-
 stack = deque()
-
 n = int(input())
-links = [tuple(map(lambda x:int(x) - 1, input().split())) for i in range(n - 1)]
-
+links = [tuple(map(lambda x: int(x) - 1, input().split())) for i in range(n - 1)]
 linked_to = [[] for i in range(n)]
-
-for x, y in links:
+for (x, y) in links:
     linked_to[x].append(y)
     linked_to[y].append(x)
-
-init = list(map(lambda x: x == "1", input().split()))
-goal = list(map(lambda x: x == "1", input().split()))
-
-# print(init)
-# print(goal)
-
+init = list(map(lambda x: x == '1', input().split()))
+goal = list(map(lambda x: x == '1', input().split()))
 stack.append(0)
 ops = 0
-
 visited = [False] * n
 parent = [n] * (n + 1)
 was_swapped = [False] * (n + 1)
-
 visited[0] = True
 
 
@@ -44,11 +33,8 @@ while len(stack) > 0:
             visited[l] = True
             parent[l] = c
             stack.append(l)
-
 chosen = []
-
 stack.append(0)
-
 while len(stack) > 0:
     c = stack.pop()
     stack.extend(get_chld(c))
@@ -57,5 +43,4 @@ while len(stack) > 0:
         was_swapped[c] = not was_swapped[c]
         ops += 1
         chosen.append(c + 1)
-
 print(ops, *chosen, sep='\n')

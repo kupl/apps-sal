@@ -6,9 +6,8 @@ class DinnerPlates:
         self.stacks = []
 
     def push(self, val: int) -> None:
-        while self.heap and self.heap[0] < len(self.stacks) and len(self.stacks[self.heap[0]]) == self.capacity:
+        while self.heap and self.heap[0] < len(self.stacks) and (len(self.stacks[self.heap[0]]) == self.capacity):
             heapq.heappop(self.heap)
-
         if not self.heap:
             heapq.heappush(self.heap, len(self.stacks))
         if self.heap[0] == len(self.stacks):
@@ -16,7 +15,7 @@ class DinnerPlates:
         self.stacks[self.heap[0]].append(val)
 
     def pop(self) -> int:
-        while self.stacks and not self.stacks[-1]:
+        while self.stacks and (not self.stacks[-1]):
             self.stacks.pop()
         return self.popAtStack(len(self.stacks) - 1)
 
@@ -25,10 +24,3 @@ class DinnerPlates:
             heapq.heappush(self.heap, index)
             return self.stacks[index].pop()
         return -1
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

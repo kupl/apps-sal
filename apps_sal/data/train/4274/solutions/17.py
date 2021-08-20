@@ -21,7 +21,6 @@ def do_math(s):
                     if z == y:
                         list2.append(x)
         return list2
-
     list1 = izvlech(s)
     list2 = izvlech1(list1, alfavit)
     result = ''

@@ -1,24 +1,3 @@
-# prime power always 0
-# two prime powers?
-#
-# == 1 prime factor
-#   trivial
-# == 2 prime factors
-#   p^a q^b
-#   if a + b > 2: then fine
-#   p*q
-#   (remaining with p)
-#   p*p*q
-#   (remaining with q)
-# >= 3 prime factors is fine
-#   what ordering?
-#   p*q*r
-#   (all left with p)
-#   p*q
-#   (all left with q)
-#   q*r
-#   (all left with r)
-
 from collections import defaultdict as dd, deque
 
 
@@ -40,7 +19,6 @@ def divisors(n):
     factors = []
     while i * i <= n:
         if n % i == 0:
-            # If divisors are equal, print only one
             if n // i == i:
                 factors.append(i)
             else:
@@ -51,7 +29,6 @@ def divisors(n):
 
 
 t = int(input())
-
 for _ in range(t):
     n = int(input())
     F = factor(n)
@@ -62,13 +39,12 @@ for _ in range(t):
         print(0)
         continue
     if len(F) == 2:
-        p, q = list(F)
+        (p, q) = list(F)
         exp = sum(F.values())
         if exp > 2:
             res = []
             D.remove(p * q)
             D.remove(p * p * q)
-
             divP = {d for d in D if d % p == 0}
             divQ = D - divP
             print(p * q, *divP, p * p * q, *divQ)
@@ -84,10 +60,10 @@ for _ in range(t):
     Flist = list(F)
     res = [first]
     for i in range(len(Flist) - 1):
-        p, q = Flist[i - 1], Flist[i]
+        (p, q) = (Flist[i - 1], Flist[i])
         D.remove(p * q)
     for i in range(len(Flist) - 1):
-        p, q = Flist[i - 1], Flist[i]
+        (p, q) = (Flist[i - 1], Flist[i])
         div = {d for d in D if d % p == 0}
         D -= div
         res.extend(div)

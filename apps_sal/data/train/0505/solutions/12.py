@@ -1,6 +1,6 @@
 class Solution:
+
     def minRemoveToMakeValid(self, s: str) -> str:
-        # O(n) time and O(n) space - use stack to keep track of parentheses
         stack = []
         updated_s = []
         for ch in s:
@@ -9,11 +9,9 @@ class Solution:
             elif ch == '(':
                 stack.append(len(updated_s))
                 updated_s.append(ch)
-            else:
-                if stack:
-                    updated_s.append(ch)
-                    stack = stack[:-1]
-
+            elif stack:
+                updated_s.append(ch)
+                stack = stack[:-1]
         if stack:
             for i in stack[::-1]:
                 updated_s = updated_s[:i] + updated_s[i + 1:]

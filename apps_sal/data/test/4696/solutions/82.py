@@ -1,7 +1,8 @@
-def getints(): return list(map(int, input().split()))
+def getints():
+    return list(map(int, input().split()))
 
 
-a, b = getints()
+(a, b) = getints()
 if a * b % 2:
     print('Odd')
 else:

@@ -6,7 +6,5 @@ def two_highest(arg1):
         return list(unique_integers)
     largest_integer = max(unique_integers)
     unique_integers.remove(largest_integer)
-
     second_largest_integer = max(unique_integers)
-
     return [largest_integer, second_largest_integer]

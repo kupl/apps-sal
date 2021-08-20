@@ -4,7 +4,7 @@ c = b.copy()
 ans = 0
 for i in range(a):
     if b[i] == 1:
-        ans += (b[i:].count(1))
+        ans += b[i:].count(1)
         break
     ans += 1
 ans1 = 0

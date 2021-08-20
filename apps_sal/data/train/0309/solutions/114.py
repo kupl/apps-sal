@@ -1,4 +1,5 @@
 class Solution:
+
     def longestArithSeqLength(self, A: List[int]) -> int:
         n = len(A)
         dp = {}
@@ -7,8 +8,8 @@ class Solution:
             for j in range(i):
                 d = A[i] - A[j]
                 if j != 0 and (j, d) in dp:
-                    dp[(i, d)] = 1 + dp[(j, d)]
+                    dp[i, d] = 1 + dp[j, d]
                 else:
-                    dp[(i, d)] = 2
+                    dp[i, d] = 2
         l = dp.values()
         return max(l)

@@ -1,5 +1,4 @@
 s = input()
-
 cnt = 0
 for elem in s:
     if elem == 'a':

@@ -8,13 +8,12 @@ def decToHex(n):
 
 
 def hexToDec(string):
-    hex = "0123456789ABCDEF"
+    hex = '0123456789ABCDEF'
     total = 0
-    for index, i in enumerate(string):
+    for (index, i) in enumerate(string):
         value = hex.index(i)
         power = len(string) - (index + 1)
-        total += (value) * (16**power)
-
+        total += value * 16 ** power
     return total
 
 
@@ -22,16 +21,13 @@ def coffee_limits(year, month, day):
     cafe = hexToDec('CAFE')
     cafeCups = 0
     h = int(str(year) + str(month).zfill(2) + str(day).zfill(2))
-
     for i in range(5000):
         h += cafe
         cafeCups += 1
         if 'DEAD' in decToHex(h):
             break
-
     h = int(str(year) + str(month).zfill(2) + str(day).zfill(2))
     print(h)
-
     decaf = hexToDec('DECAF')
     decafCups = 0
     for i in range(5000):
@@ -39,5 +35,4 @@ def coffee_limits(year, month, day):
         decafCups += 1
         if 'DEAD' in decToHex(h):
             break
-
     return [cafeCups % 5000, decafCups % 5000]

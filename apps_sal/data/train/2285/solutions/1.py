@@ -6,17 +6,17 @@ def calc(X):
         for j in range(len(X)):
             if X[j] >= h:
                 h = X[j]
-                RET.append("2")
+                RET.append('2')
             elif l <= X[j] <= i:
                 l = X[j]
-                RET.append("1")
+                RET.append('1')
             else:
                 break
         else:
-            print("".join(RET))
+            print(''.join(RET))
             break
     else:
-        print("-")
+        print('-')
 
 
 T = int(input())

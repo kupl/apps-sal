@@ -11,6 +11,6 @@ def fmin(a, b, x, y, n):
 
 T = int(input())
 for _ in range(T):
-    a, b, x, y, n = list(map(int, input().split()))
+    (a, b, x, y, n) = list(map(int, input().split()))
     v = min(fmin(a, b, x, y, n), fmin(b, a, y, x, n))
     print(v)

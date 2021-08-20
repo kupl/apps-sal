@@ -1,10 +1,8 @@
-N, Q = map(int, input().split())
+(N, Q) = map(int, input().split())
 S = list(input())
-
 lsline = []
 for i in range(Q):
     lsline.append(list(map(int, input().split())))
-
 lsAC = [0, 0]
 AC = 0
 for i in range(N - 1):

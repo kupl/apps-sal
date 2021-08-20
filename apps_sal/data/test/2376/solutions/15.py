@@ -1,8 +1,8 @@
-N, W = map(int, input().split())
-w1, v1 = map(int, input().split())
+(N, W) = map(int, input().split())
+(w1, v1) = map(int, input().split())
 d = [[-v1], [], [], []]
 for i in range(N - 1):
-    w, v = map(int, input().split())
+    (w, v) = map(int, input().split())
     x = w - w1
     d[x].append(-v)
 d[0].sort()

@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 list1 = []
 cost = 0
 for i in range(N):
-    A, B = map(int, input().split())
+    (A, B) = map(int, input().split())
     list1.append((A, B))
 list2 = sorted(list1, key=lambda x: x[0])
 for i in range(N):

@@ -1,6 +1,4 @@
-SUFFIXES = {'a': ['o', 'as', 'a', 'amos', 'ais', 'an'],
-            'e': ['o', 'es', 'e', 'emos', 'eis', 'en'],
-            'i': ['o', 'es', 'e', 'imos', 'is', 'en']}
+SUFFIXES = {'a': ['o', 'as', 'a', 'amos', 'ais', 'an'], 'e': ['o', 'es', 'e', 'emos', 'eis', 'en'], 'i': ['o', 'es', 'e', 'imos', 'is', 'en']}
 
 
 def conjugate(verb):

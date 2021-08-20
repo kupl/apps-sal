@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         for i in range(minSize, maxSize + 1):
             max_freq = self.maxFreqSetSize(s, maxLetters, i)
@@ -27,7 +28,6 @@ class Solution:
                     break
                 frequency += 1
                 pos += new_pos + 1
-
             if frequency > maxFreq:
                 maxFreq = frequency
             valid_substrings.add(substring)

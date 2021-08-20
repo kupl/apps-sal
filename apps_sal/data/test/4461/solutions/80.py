@@ -1,6 +1,5 @@
-h, w = map(int, input().split())
-
-ans = 10**9
+(h, w) = map(int, input().split())
+ans = 10 ** 9
 for i in range(1, h):
     x = h - i
     s0 = i * w
@@ -12,7 +11,6 @@ for i in range(1, h):
     s4 = w * (x - x // 2)
     s = max(s0, s3, s4) - min(s0, s3, s4)
     ans = min(ans, s)
-
 for i in range(1, w):
     x = w - i
     s0 = i * h

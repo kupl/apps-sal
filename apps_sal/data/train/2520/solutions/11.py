@@ -1,4 +1,5 @@
 class Solution(object):
+
     def reverse(self, x):
         """
         :type x: int
@@ -14,6 +15,6 @@ class Solution(object):
             reminder = x % 10
             reserve = reserve * 10 + reminder
             x = x // 10
-        if reserve > (2**31 - 1):
+        if reserve > 2 ** 31 - 1:
             reserve = 0
         return reserve * sign

@@ -1,8 +1,5 @@
 class Solution:
-    # Version 1: Greedy
-    # Use binary search to find the first dry day after the city got wet.
-    # TC: O(n^2), SC: O(n)
-    '''
+    """
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from bisect import bisect_left
         wet = {}
@@ -25,7 +22,7 @@ class Solution:
                     ans[dry[index]] = rains[k]
                     dry.pop(index)
         return ans
-    '''
+    """
 
     def avoidFlood(self, rains: List[int]) -> List[int]:
         from sortedcontainers import SortedList

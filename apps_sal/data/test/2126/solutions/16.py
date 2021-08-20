@@ -1,8 +1,7 @@
-n, m, h = [int(i) for i in input().split()]
+(n, m, h) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 b = [int(i) for i in input().split()]
 c = [[int(i) for i in input().split()] for j in range(n)]
-
 for i in range(n):
     target = b[i]
     for j in range(m):

@@ -1,9 +1,10 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
         arr_len = len(arr)
         m = arr[(arr_len - 1) // 2]
-        i, j = 0, arr_len - 1
+        (i, j) = (0, arr_len - 1)
         toret = []
         size = 0
         while i <= j and size < k:

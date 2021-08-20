@@ -7,6 +7,6 @@ for _ in range(int(input())):
         if ar[i] - ar[i - 1] > 1:
             np = True
     if np:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -11,5 +11,4 @@ for i in range(n):
         last_or_a |= a[j]
         last_or_b |= b[j]
         max1 = max(max1, last_or_b + last_or_a)
-
 print(max1)

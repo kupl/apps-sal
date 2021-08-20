@@ -1,5 +1,5 @@
 def isPrimes(n):
-    return n > 1 and all(n % d > 0 for d in range(2, int(sqrt(n)) + 1))
+    return n > 1 and all((n % d > 0 for d in range(2, int(sqrt(n)) + 1)))
 
 
 def reverse(x):
@@ -11,10 +11,11 @@ def reverse(x):
 
 
 class Solution:
+
     def primePalindrome(self, N: int) -> int:
         while True:
             if N == reverse(N) and isPrimes(N):
                 return N
             N += 1
-            if 10**7 < N < 10**8:
-                N = 10**8
+            if 10 ** 7 < N < 10 ** 8:
+                N = 10 ** 8

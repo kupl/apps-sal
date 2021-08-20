@@ -1,4 +1,4 @@
-from sys import*
+from sys import *
 input = stdin.readline
 t = int(input())
 for _ in range(t):

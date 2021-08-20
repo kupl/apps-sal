@@ -8,18 +8,17 @@ n = len(s)
 L = abs(sa - ta) + abs(sb - tb)
 L /= 2
 if L % 2 == 1:
-    print("impossible")
+    print('impossible')
 else:
     ans = ''
     c = 0
     for i in range(n):
         if s[i] == t[i]:
             ans += s[i]
+        elif c == 0:
+            ans += s[i]
+            c = 1
         else:
-            if c == 0:
-                ans += s[i]
-                c = 1
-            else:
-                ans += t[i]
-                c = 0
+            ans += t[i]
+            c = 0
     print(ans)

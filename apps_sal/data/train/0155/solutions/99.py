@@ -1,12 +1,13 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         max_less_than = []
 
         def jump(iter):
             res = [None for i in range(len(arr))]
-            stack = deque([])  # stack里的元素要么大，要么新
+            stack = deque([])
             for i in iter:
-                while stack and abs(i - stack[0]) > d:  # 清空范围之外的
+                while stack and abs(i - stack[0]) > d:
                     stack.popleft()
                 while stack and arr[i] > arr[stack[-1]]:
                     latest_poped = stack.pop()

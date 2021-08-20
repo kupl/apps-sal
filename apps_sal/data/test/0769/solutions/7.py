@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input('').strip().split()))
+(a, b, c) = list(map(int, input('').strip().split()))
 occur = dict()
 count = 0
 for i in range(10 ** 6):
@@ -10,9 +10,8 @@ for i in range(10 ** 6):
     if occurs == c:
         print(count)
         break
+    elif left * 10 in occur:
+        print(-1)
+        break
     else:
-        if left * 10 in occur:
-            print(-1)
-            break
-        else:
-            a = a % b
+        a = a % b

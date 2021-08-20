@@ -1,9 +1,10 @@
 class Solution:
+
     def maxSum(self, nums1: List[int], nums2: List[int]) -> int:
         cross = []
-        n, m = len(nums1), len(nums2)
-        i, j = 0, 0
-        M = 10**9 + 7
+        (n, m) = (len(nums1), len(nums2))
+        (i, j) = (0, 0)
+        M = 10 ** 9 + 7
         while i < n and j < m:
             if nums1[i] > nums2[j]:
                 j += 1
@@ -24,12 +25,3 @@ class Solution:
         ans += max(sum(nums1[:cross[0][0]]), sum(nums2[:cross[0][1]]))
         ans %= M
         return ans % M
-#         memo = {}
-#         def fun(cl,f):
-#             if (cl,f) in memo:
-#                 return memo[(cl,f)]
-#             if cl == l-1:
-#                 if f == 0:
-#                     return sum(nums1[cross[cl][0]:])
-#                 else:
-#                     return sum(nums2[cross[cl][1]:])

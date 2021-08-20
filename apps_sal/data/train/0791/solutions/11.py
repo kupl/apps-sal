@@ -1,10 +1,9 @@
 t = eval(input())
 for _ in range(t):
-    n, d = list(map(int, input().split()))
+    (n, d) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     avg = sum(a) / n
     res = 0
-
     for i in range(n - d):
         if a[i] < avg:
             diff = avg - a[i]
@@ -21,8 +20,6 @@ for _ in range(t):
         if a[i] != avg:
             flag = False
             break
-
-    # print a
     if flag:
         print(res)
     else:

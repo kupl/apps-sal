@@ -7,5 +7,4 @@ def count_by(x, n):
             counter += 1
             multiples.append(i)
         i += 1
-
     return multiples

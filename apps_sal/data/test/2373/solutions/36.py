@@ -1,6 +1,5 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 ans = 0
 flg = False
 for i in range(n):

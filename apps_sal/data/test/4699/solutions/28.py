@@ -10,7 +10,7 @@ def check(n, D):
 
 
 def __starting_point():
-    n, k = [int(x) for x in input().split(' ')]
+    (n, k) = [int(x) for x in input().split(' ')]
     D = [int(x) for x in input().split(' ')]
     res = n
     while True:

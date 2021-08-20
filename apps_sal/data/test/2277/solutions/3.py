@@ -1,4 +1,3 @@
-# input
 N = int(input())
 A = list(map(int, input().split()))
 M = int(input())
@@ -12,19 +11,17 @@ def solve():
             if A[i] < A[j]:
                 count += 1
                 count %= 2
-
     res = []
     for q in Q:
-        l, r = q
+        (l, r) = q
         l = int(l) - 1
         r = int(r) - 1
-        count += ((r - l + 1) // 2)
+        count += (r - l + 1) // 2
         count %= 2
         if count == 0:
             res.append('even')
         else:
             res.append('odd')
-
     print('\n'.join(res))
 
 

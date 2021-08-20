@@ -1,5 +1,5 @@
 from sys import stdin, stdout
-M = 10**8
+M = 10 ** 8
 for _ in range(int(stdin.readline())):
     n = int(stdin.readline())
     a = list([int(x) // M for x in stdin.readline().split()])

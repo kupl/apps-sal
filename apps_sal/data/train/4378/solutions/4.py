@@ -5,4 +5,4 @@ def find_spaceship(astromap):
         for j in range(len(arr[i])):
             if arr[i][j] == 'X':
                 return [j, i]
-    return "Spaceship lost forever."
+    return 'Spaceship lost forever.'

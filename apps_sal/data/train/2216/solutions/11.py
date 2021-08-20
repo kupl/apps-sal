@@ -12,7 +12,7 @@ for i in range(len(s)):
 n = int(input())
 res = []
 for i in range(n):
-    l, r = list(map(int, input().split(" ")))
+    (l, r) = list(map(int, input().split(' ')))
     t = [hs[r][i] - hs[l - 1][i] for i in range(3)]
     res.append('YES' if r - l < 2 or max(t) - min(t) < 2 else 'NO')
 print('\n'.join(res))

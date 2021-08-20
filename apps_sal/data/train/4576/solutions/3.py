@@ -10,5 +10,4 @@ def gcd_matrix(a, b):
     for i in a:
         for j in b:
             g.append(gcd(i, j))
-
     return round(sum(g) / len(g), 3)

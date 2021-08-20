@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, size):
         self.data = [-1] * size
 
@@ -7,10 +8,8 @@ class UnionFind:
         y = self.root(y)
         if x == y:
             return False
-
         if self.data[x] < self.data[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.data[y] += self.data[x]
         self.data[x] = y
         return True
@@ -26,17 +25,15 @@ class UnionFind:
 
 
 def main():
-    N, M = map(int, input().split())
+    (N, M) = map(int, input().split())
     uf = UnionFind(N)
     for i in range(M):
-        x, y, z = map(int, input().split())
+        (x, y, z) = map(int, input().split())
         uf.merge(x - 1, y - 1)
-
     cnt = 0
     for i in range(N):
         if uf.root(i) == i:
             cnt += 1
-
     print(cnt)
 
 

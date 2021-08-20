@@ -7,5 +7,4 @@ def queue(queuers, pos):
                 min += 1
             if queuers[pos] == 0:
                 break
-
     return min

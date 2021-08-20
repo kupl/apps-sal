@@ -3,9 +3,10 @@ import sys
 input = sys.stdin.readline
 
 
-class SegmentTreeMin():
+class SegmentTreeMin:
+
     def __init__(self, n, init):
-        self.offset = 2**((n - 1).bit_length())
+        self.offset = 2 ** (n - 1).bit_length()
         self.tree = [init] * (2 * self.offset)
         self.init = init
 
@@ -30,8 +31,8 @@ class SegmentTreeMin():
 
 n = int(input())
 arr = list(map(int, input().split()))
-odds = SegmentTreeMin(n // 2, 10**18)
-evens = SegmentTreeMin(n // 2, 10**18)
+odds = SegmentTreeMin(n // 2, 10 ** 18)
+evens = SegmentTreeMin(n // 2, 10 ** 18)
 dic = {}
 for i in range(n):
     dic[arr[i]] = i
@@ -43,12 +44,12 @@ q = []
 heapq.heappush(q, (odds.query(0, (n - 1) // 2), 0, n - 1))
 ans = []
 while len(q) != 0:
-    _, l, r = heapq.heappop(q)
+    (_, l, r) = heapq.heappop(q)
     if l % 2 == 0:
         a = odds.query(l // 2, r // 2)
-        odds.update(dic[a] // 2, 10**18)
+        odds.update(dic[a] // 2, 10 ** 18)
         b = evens.query(dic[a] // 2, r // 2)
-        evens.update(dic[b] // 2, 10**18)
+        evens.update(dic[b] // 2, 10 ** 18)
         ans.append(a)
         ans.append(b)
         tl = dic[a]
@@ -61,9 +62,9 @@ while len(q) != 0:
             heapq.heappush(q, (odds.query((tr + 1) // 2, r // 2), tr + 1, r))
     else:
         a = evens.query(l // 2, r // 2)
-        evens.update(dic[a] // 2, 10**18)
+        evens.update(dic[a] // 2, 10 ** 18)
         b = odds.query((dic[a] + 1) // 2, r // 2)
-        odds.update(dic[b] // 2, 10**18)
+        odds.update(dic[b] // 2, 10 ** 18)
         ans.append(a)
         ans.append(b)
         tl = dic[a]

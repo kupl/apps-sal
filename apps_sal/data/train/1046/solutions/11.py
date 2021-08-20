@@ -1,17 +1,16 @@
 t = int(input())
 while t > 0:
-    l, b = map(int, input().split(" "))
+    (l, b) = map(int, input().split(' '))
     li = bo = 0
     c = 1
     while True:
-        # print(li,bo)
         li = li + c
         bo = bo + c + 1
         c += 2
         if li > l:
-            print("Bob")
+            print('Bob')
             break
         elif bo > b:
-            print("Limak")
+            print('Limak')
             break
     t -= 1

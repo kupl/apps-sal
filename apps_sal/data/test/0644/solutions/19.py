@@ -1,6 +1,6 @@
 t = int(input())
 r = 0
-s = [0] * 10**5
+s = [0] * 10 ** 5
 ss = 0
 for _ in range(t):
     x = input().split()
@@ -12,10 +12,10 @@ for _ in range(t):
         r = 0
     elif x[0] == 'end':
         ss -= 1
-        r_old, k = s[ss]
+        (r_old, k) = s[ss]
         r = r_old + r * k
-        if r >= 2**32:
-            print("OVERFLOW!!!")
+        if r >= 2 ** 32:
+            print('OVERFLOW!!!')
             break
 else:
-    print(r if r < 2**32 else "OVERFLOW!!!")
+    print(r if r < 2 ** 32 else 'OVERFLOW!!!')

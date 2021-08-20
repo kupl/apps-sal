@@ -1,5 +1,5 @@
 i = 0
-t, sx, sy, ex, ey = list(map(int, input().split()))
+(t, sx, sy, ex, ey) = list(map(int, input().split()))
 second_string = input()
 while i < t:
     if second_string[i] == 'E':
@@ -11,11 +11,10 @@ while i < t:
     elif second_string[i] == 'N':
         if sy < ey:
             sy += 1
-    else:
-        if sy > ey:
-            sy -= 1
+    elif sy > ey:
+        sy -= 1
     i += 1
-    if (sy == ey) and (sx == ex):
+    if sy == ey and sx == ex:
         print(i)
         break
     if i == t:

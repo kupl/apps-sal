@@ -10,7 +10,7 @@ def divide(a, b):
     try:
         return a / b
     except ValueError:
-        return "Error"
+        return 'Error'
 
 
 def mod(a, b):
@@ -18,7 +18,7 @@ def mod(a, b):
 
 
 def exponent(a, b):
-    return a**b
+    return a ** b
 
 
 def subt(a, b):

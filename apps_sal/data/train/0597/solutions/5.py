@@ -1,7 +1,6 @@
 def find(X, H):
     if len(X) == 2:
-        return (X[1] - X[0]) * (sum(H))
-
+        return (X[1] - X[0]) * sum(H)
     X = sorted(X)
     W = []
     for i in range(1, len(H) - 1):
@@ -18,7 +17,7 @@ for _ in range(int(input())):
     X = []
     H = []
     for i in range(N):
-        x, h = list(map(int, input().strip().split()))
+        (x, h) = list(map(int, input().strip().split()))
         X += [x]
         H += [h]
     print(find(X, H))

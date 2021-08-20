@@ -1,10 +1,8 @@
 n = int(input())
 profit = [int(x) for x in input().split(' ')]
-
 daysInFolders = [0]
 folders = 1
 badDays = 0
-
 for elem in profit:
     if elem < 0:
         if badDays >= 0 and badDays < 2:
@@ -19,6 +17,5 @@ for elem in profit:
             daysInFolders[-1] += 1
     else:
         daysInFolders[-1] += 1
-
 print(folders)
 print(' '.join([str(x) for x in daysInFolders]))

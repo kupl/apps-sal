@@ -13,7 +13,6 @@ class ProductOfNumbers:
                 self.currentProd *= num
             else:
                 self.currentProd = num
-
             self.prods.append(self.currentProd)
 
     def getProduct(self, k: int) -> int:
@@ -23,9 +22,3 @@ class ProductOfNumbers:
             return int(self.currentProd)
         else:
             return int(self.currentProd / self.prods[-k - 1])
-
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

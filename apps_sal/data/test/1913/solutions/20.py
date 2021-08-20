@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 from sys import stdin
 from collections import defaultdict
 from operator import itemgetter
@@ -9,20 +6,20 @@ from operator import itemgetter
 def main():
     n = int(stdin.readline())
     xs = stdin.readline().split()
-    print("{}".format(run(xs)))
+    print('{}'.format(run(xs)))
 
 
 def run(xs):
     zeros = 0
-    s = "1"
+    s = '1'
     for x in xs:
-        if x == "0":
+        if x == '0':
             return 0
         if beautiful(x):
             zeros += len(x) - 1
         else:
             s = x
-    return s + "0" * zeros
+    return s + '0' * zeros
 
 
 def beautiful(s):

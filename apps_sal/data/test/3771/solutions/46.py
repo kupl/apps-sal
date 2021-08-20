@@ -1,20 +1,52 @@
-# -*- coding: utf-8 -*-
-
 import sys
 
 
-def input(): return sys.stdin.readline().strip()
-def list2d(a, b, c): return [[c] * b for i in range(a)]
-def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
-def list4d(a, b, c, d, e): return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
-def ceil(x, y=1): return int(-(-x // y))
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(N=None): return list(MAP()) if N is None else [INT() for i in range(N)]
-def Yes(): print('Yes')
-def No(): print('No')
-def YES(): print('YES')
-def NO(): print('NO')
+def input():
+    return sys.stdin.readline().strip()
+
+
+def list2d(a, b, c):
+    return [[c] * b for i in range(a)]
+
+
+def list3d(a, b, c, d):
+    return [[[d] * c for j in range(b)] for i in range(a)]
+
+
+def list4d(a, b, c, d, e):
+    return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
+
+
+def ceil(x, y=1):
+    return int(-(-x // y))
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST(N=None):
+    return list(MAP()) if N is None else [INT() for i in range(N)]
+
+
+def Yes():
+    print('Yes')
+
+
+def No():
+    print('No')
+
+
+def YES():
+    print('YES')
+
+
+def NO():
+    print('NO')
 
 
 sys.setrecursionlimit(10 ** 9)
@@ -37,13 +69,12 @@ class Dinic:
 
     def bfs(self, s):
         from collections import deque
-
         depth = [-1] * self.n
         depth[s] = 0
         q = deque([s])
         while q:
             v = q.popleft()
-            for cap, to, _ in self.links[v]:
+            for (cap, to, _) in self.links[v]:
                 if cap > 0 and depth[to] < 0:
                     depth[to] = depth[v] + 1
                     q.append(to)
@@ -55,7 +86,7 @@ class Dinic:
         links_v = self.links[v]
         for i in range(self.progress[v], len(links_v)):
             self.progress[v] = i
-            cap, to, rev = link = links_v[i]
+            (cap, to, rev) = link = links_v[i]
             if cap == 0 or self.depth[v] >= self.depth[to]:
                 continue
             d = self.dfs(to, t, min(flow, cap))
@@ -80,14 +111,17 @@ class Dinic:
 
 
 def build_grid(H, W, intv, _type, space=True, padding=False):
-    # 入力がスペース区切りかどうか
     if space:
-        def _input(): return input().split()
-    else:
-        def _input(): return input()
 
-    def _list(): return list(map(_type, _input()))
-    # 余白の有無
+        def _input():
+            return input().split()
+    else:
+
+        def _input():
+            return input()
+
+    def _list():
+        return list(map(_type, _input()))
     if padding:
         offset = 1
     else:
@@ -100,10 +134,8 @@ def build_grid(H, W, intv, _type, space=True, padding=False):
     return grid
 
 
-H, W = MAP()
+(H, W) = MAP()
 grid = build_grid(H, W, '', str, space=0)
-
-# 最大流：頂点は各行全体、各列全体、始点、終点
 dn = Dinic(H + W + 2)
 s = H + W
 t = H + W + 1
@@ -118,9 +150,8 @@ for i in range(H):
         elif grid[i][j] == 'T':
             dn.add_link(i, t, INF)
             dn.add_link(H + j, t, INF)
-
 ans = dn.max_flow(s, t)
 if ans >= INF:
-    print((-1))
+    print(-1)
 else:
     print(ans)

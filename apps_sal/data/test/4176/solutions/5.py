@@ -1,9 +1,9 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def get_GCD(x, y):
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     y_ = y
     while True:
         if y % x == 0:

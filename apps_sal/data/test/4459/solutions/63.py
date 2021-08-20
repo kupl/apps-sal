@@ -1,6 +1,6 @@
 N = int(input())
 a = list(map(int, input().split()))
-a.append(10**10)
+a.append(10 ** 10)
 a.sort()
 n = 0
 c = 0

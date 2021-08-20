@@ -1,4 +1,5 @@
 class Tree(object):
+
     def __init__(self):
         self.left = None
         self.right = None
@@ -17,7 +18,7 @@ class Tree(object):
             if self.left is None:
                 self.left = Tree()
             return self.left.insert(zero, n + 1, row, i, counts)
-        else:  # row[1] == one
+        else:
             if self.right is None:
                 self.right = Tree()
             return self.right.insert(zero, n + 1, row, i, counts)
@@ -30,9 +31,7 @@ class Solution:
         vals = Tree()
         counts = [0] * 300
         nextfree = 0
-
         for row in matrix:
             firstrowcell = row[0]
             nextfree = vals.insert(firstcell if firstrowcell == 0 else 1 - firstcell, 0, row, nextfree, counts)
-
         return max(counts)

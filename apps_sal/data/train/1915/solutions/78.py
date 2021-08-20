@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         if set(stamp) != set(target):
             return []
@@ -22,7 +23,6 @@ class Solution:
                 else:
                     return False
             return count > 0
-
         while len(done) < m:
             found = 0
             for i in candidates:
@@ -36,5 +36,4 @@ class Solution:
                 return []
             else:
                 candidates.remove(i)
-
         return res[::-1]

@@ -1,6 +1,6 @@
 def main():
     n = int(input())
-    photo = [int(x) for x in (input().split())]
+    photo = [int(x) for x in input().split()]
     color = dict()
     cnt = 0
     for i in range(n):

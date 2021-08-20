@@ -1,5 +1,5 @@
 def array_operations(A, k, p=0, q=0):
-    D, E = {}, {}
+    (D, E) = ({}, {})
     for i in range(k):
         s = str(A)
         if s in D:
@@ -8,7 +8,7 @@ def array_operations(A, k, p=0, q=0):
             q = E[s]
             break
         m = max(A)
-        A = [(m - a)for a in A]
+        A = [m - a for a in A]
         D[s] = A
         E[s] = i
     if p != q:

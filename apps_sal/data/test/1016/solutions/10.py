@@ -5,10 +5,10 @@ def dfs(i):
             dfs(j)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 graph = [[] for i in range(n)]
 for i in range(m):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     a -= 1
     b -= 1
     graph[a] += [b]
@@ -19,4 +19,4 @@ for i in range(n):
     if not used[i]:
         cc += 1
         dfs(i)
-print(1 << (n - cc))
+print(1 << n - cc)

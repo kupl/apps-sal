@@ -1,11 +1,8 @@
 n = int(input())
-
 s = input()
-
-red, blue = 0, 0
+(red, blue) = (0, 0)
 ans = [0 for _ in range(n)]
-
-for i, item in enumerate(s):
+for (i, item) in enumerate(s):
     if item == '(':
         if red == blue:
             red += 1
@@ -20,5 +17,4 @@ for i, item in enumerate(s):
         else:
             red -= 1
             ans[i] = 0
-
 print(''.join(list(map(str, ans))))

@@ -1,4 +1,3 @@
-# cook your dish here
 import sys
 from collections import defaultdict
 
@@ -16,7 +15,7 @@ class Graph(object):
 
     def eulerPath(self):
         g = self.graph
-        odd = [k for k, v in g.items() if len(v) % 2 == 1]
+        odd = [k for (k, v) in g.items() if len(v) % 2 == 1]
         if len(odd) == 0:
             odd = [list(g.keys())[0]]
         elif len(odd) == 1 or len(odd) > 2:
@@ -35,32 +34,27 @@ class Graph(object):
         return path
 
 
-n, e = map(int, sys.stdin.readline().strip().split())
+(n, e) = map(int, sys.stdin.readline().strip().split())
 g = Graph(n)
-
 u = []
 v = []
-
 for i in range(e):
-    a, b = map(int, sys.stdin.readline().strip().split())
+    (a, b) = map(int, sys.stdin.readline().strip().split())
     g.add_edge(a, b)
     u.append(a)
     v.append(b)
-
 ans = g.eulerPath()
-
 if ans is None:
     print('NO')
+elif len(ans) == e + 1 and ans[0] == ans[-1]:
+    print('YES')
+    temp = defaultdict(defaultdict)
+    for i in range(len(ans) - 1, 0, -1):
+        temp[ans[i]][ans[i - 1]] = True
+    for i in range(e):
+        if u[i] in temp and v[i] in temp[u[i]]:
+            print(u[i], v[i])
+        else:
+            print(v[i], u[i])
 else:
-    if len(ans) == (e + 1) and ans[0] == ans[-1]:
-        print("YES")
-        temp = defaultdict(defaultdict)
-        for i in range(len(ans) - 1, 0, -1):
-            temp[ans[i]][ans[i - 1]] = True
-        for i in range(e):
-            if u[i] in temp and v[i] in temp[u[i]]:
-                print(u[i], v[i])
-            else:
-                print(v[i], u[i])
-    else:
-        print("NO")
+    print('NO')

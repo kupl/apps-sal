@@ -1,4 +1,4 @@
 def say_hello(name, city, state):
-    x = " "
+    x = ' '
     y = x.join(name)
-    return "Hello, {}! Welcome to {}, {}!".format(y, city, state)
+    return 'Hello, {}! Welcome to {}, {}!'.format(y, city, state)

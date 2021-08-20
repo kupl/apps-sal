@@ -1,6 +1,5 @@
-
 def main():
-    f = open("input.txt")
+    f = open('input.txt')
     inp = f.readline().strip().split()
     inp = [int(i) for i in inp]
     num = f.readline().strip().split()
@@ -15,12 +14,12 @@ def main():
     p = []
     cont = 0
     for i in range(len(num)):
-        if(num[i] >= y and cont < x):
+        if num[i] >= y and cont < x:
             p.append(i + 1)
             cont += 1
-    t = open("output.txt", "w")
-    t.write(str(y) + "\n")
-    t.write(' '.join(str(e) for e in p) + "\n")
+    t = open('output.txt', 'w')
+    t.write(str(y) + '\n')
+    t.write(' '.join((str(e) for e in p)) + '\n')
     t.close()
     f.close()
 

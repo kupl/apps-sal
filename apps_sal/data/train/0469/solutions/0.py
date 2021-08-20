@@ -1,7 +1,7 @@
 class Solution:
-    def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
 
-        leftset, rightset = set(leftChild), set(rightChild)
+    def validateBinaryTreeNodes(self, n: int, leftChild: List[int], rightChild: List[int]) -> bool:
+        (leftset, rightset) = (set(leftChild), set(rightChild))
         roots = []
         for i in range(n):
             if i not in leftset and i not in rightset:
@@ -11,7 +11,6 @@ class Solution:
         if not roots:
             return False
         root = roots[0]
-
         nodes = []
 
         def dfs(root):

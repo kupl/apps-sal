@@ -1,6 +1,6 @@
 def nok(a, b):
     c = a * b
-    while (a != 0) and (b != 0):
+    while a != 0 and b != 0:
         if a > b:
             a %= b
         else:
@@ -9,5 +9,5 @@ def nok(a, b):
 
 
 nk = input().split()
-n, k = int(nk[0]), int(nk[1])
-print(nok(10**k, n))
+(n, k) = (int(nk[0]), int(nk[1]))
+print(nok(10 ** k, n))

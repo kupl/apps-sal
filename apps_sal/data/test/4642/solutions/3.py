@@ -1,7 +1,7 @@
 def main():
     t = int(input())
     for _ in range(t):
-        n, x, y = map(int, input().split())
+        (n, x, y) = map(int, input().split())
         ans = 10 ** 10
         dd = -1
         d = y - x

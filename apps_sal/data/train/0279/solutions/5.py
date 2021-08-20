@@ -1,4 +1,5 @@
 class Solution:
+
     def getPermutation(self, n, k):
         """
         :type n: int
@@ -17,16 +18,15 @@ class Solution:
                     ret = nums[i]
                     nums[i] = 0
                     return ret
-
         facts = [1]
         for i in range(1, n + 2):
             facts.append(facts[i - 1] * i)
         perm = []
-        while (n > 1):
+        while n > 1:
             nk = (k - 1) // facts[n - 1] + 1
             rk = (k - 1) % facts[n - 1] + 1
             perm.append(nextnum(nk))
             k = rk
             n -= 1
         perm.append(nextnum(k))
-        return "".join([str(x) for x in perm])
+        return ''.join([str(x) for x in perm])

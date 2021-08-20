@@ -7,5 +7,5 @@ def Dragon(n):
     sub_table = {'a': 'aRbFR', 'b': 'LFaLb'}
     s = 'Fa'
     for i in range(0, n):
-        s = re.sub(r'[ab]', lambda m: sub_table[m.group()], s)
+        s = re.sub('[ab]', lambda m: sub_table[m.group()], s)
     return s.translate(None, 'ab')

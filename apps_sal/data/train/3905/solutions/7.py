@@ -1,4 +1,3 @@
-
 class State:
 
     def __init__(self, pos, missing_candidate, expected1, expected2):
@@ -20,7 +19,7 @@ class State:
         self.expected2 = self.expected1 + 1
 
     def __str__(self):
-        return "State({0}, {1}, {2}, {3})".format(self.pos, self.missing_candidate, self.expected1, self.expected2)
+        return 'State({0}, {1}, {2}, {3})'.format(self.pos, self.missing_candidate, self.expected1, self.expected2)
 
 
 def missing(s):
@@ -42,5 +41,4 @@ def missing(s):
             else:
                 res = -1
             break
-
     return res

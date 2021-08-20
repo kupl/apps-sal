@@ -1,9 +1,10 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         res = 0
         pos = 0
         neg = 0
-        left, right = -1, -1
+        (left, right) = (-1, -1)
         prev = -1
         cnt = 0
         n = len(nums)
@@ -16,7 +17,7 @@ class Solution:
                 cnt = 0
                 neg = 0
                 prev = i
-                left, right = prev, prev
+                (left, right) = (prev, prev)
                 continue
             if nums[i] < 0:
                 neg += 1
@@ -30,6 +31,4 @@ class Solution:
                 res = max(res, i - prev)
             else:
                 res = max(res, i - left, right - prev - 1)
-        #     print(res, neg, cnt,left,right)
-        # print(prev,left,right)
         return res

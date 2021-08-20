@@ -1,11 +1,9 @@
-# ABC 134 C
 N = int(input())
 A = []
 for i in range(N):
     a = int(input())
     A.append(a)
 B = sorted(A)
-
 if B[-1] != B[-2]:
     t = A.index(B[-1])
     for i in range(N):

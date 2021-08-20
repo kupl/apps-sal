@@ -1,7 +1,6 @@
 from collections import deque
 S = deque(input())
 Q = int(input())
-
 s = 1
 for i in range(Q):
     A = list(map(str, input().split()))
@@ -14,7 +13,6 @@ for i in range(Q):
         S.appendleft(A[2])
     else:
         S.append(A[2])
-
 if s == -1:
     S.reverse()
 print(''.join(S))

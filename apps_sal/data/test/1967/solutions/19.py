@@ -1,4 +1,4 @@
-m, n = list(map(int, input().split()))
+(m, n) = list(map(int, input().split()))
 a = [[0] * m for i in range(n)]
 for i in range(n):
     h = input()

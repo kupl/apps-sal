@@ -1,4 +1,5 @@
 class Solution:
+
     def __init__(self):
         self.dp = [[0 for _ in range(101)] for _ in range(101)]
 

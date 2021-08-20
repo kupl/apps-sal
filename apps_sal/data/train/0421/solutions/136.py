@@ -1,9 +1,10 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if not s:
             return None
         first = {}
-        for i, letter in enumerate(s):
+        for (i, letter) in enumerate(s):
             if letter not in first:
                 first[letter] = [i]
             else:

@@ -1,7 +1,7 @@
 import sys
 T = int(sys.stdin.readline())
 while T:
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     num = list(map(int, sys.stdin.readline().split()))
     den = list(map(int, sys.stdin.readline().split()))
     ans = n

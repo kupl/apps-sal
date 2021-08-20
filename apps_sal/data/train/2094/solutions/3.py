@@ -1,17 +1,25 @@
-#!usr/bin/env python3
 from collections import defaultdict, deque
 from heapq import heappush, heappop
 import sys
 import math
 import bisect
-def LI(): return [int(x) for x in sys.stdin.readline().split()]
-def I(): return int(sys.stdin.readline())
-def LS(): return [list(x) for x in sys.stdin.readline().split()]
+
+
+def LI():
+    return [int(x) for x in sys.stdin.readline().split()]
+
+
+def I():
+    return int(sys.stdin.readline())
+
+
+def LS():
+    return [list(x) for x in sys.stdin.readline().split()]
 
 
 def S():
     res = list(sys.stdin.readline())
-    if res[-1] == "\n":
+    if res[-1] == '\n':
         return res[:-1]
     return res
 
@@ -35,8 +43,6 @@ def LSR(n):
 sys.setrecursionlimit(1000000)
 mod = 1000000007
 
-# A
-
 
 def A():
     n = I()
@@ -44,56 +50,37 @@ def A():
     d = defaultdict(lambda: 0)
     for i in s:
         d[i] += 1
-    ans = [1] * d["n"]
-    d["o"] -= d["n"]
-    ans += [0] * d["o"]
+    ans = [1] * d['n']
+    d['o'] -= d['n']
+    ans += [0] * d['o']
     print(*ans)
     return
 
-# B
-
 
 def B():
-
     return
-
-# C
 
 
 def C():
-
     return
-
-# D
 
 
 def D():
-
     return
-
-# E
 
 
 def E():
-
     return
-
-# F
 
 
 def F():
-
     return
-
-# G
 
 
 def G():
-
     return
 
 
-# Solve
 def __starting_point():
     A()
 

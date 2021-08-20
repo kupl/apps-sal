@@ -1,12 +1,11 @@
 s = input()
-
 inside = False
 lexeme = []
 for c in s:
     if c == '"':
         if inside:
             inside = False
-            print("%s>" % ''.join(lexeme))
+            print('%s>' % ''.join(lexeme))
             lexeme = []
         else:
             lexeme = ['<']
@@ -15,12 +14,11 @@ for c in s:
         if inside:
             lexeme.append(c)
         elif len(lexeme):
-            print("%s>" % ''.join(lexeme))
+            print('%s>' % ''.join(lexeme))
             lexeme = []
+    elif len(lexeme):
+        lexeme.append(c)
     else:
-        if len(lexeme):
-            lexeme.append(c)
-        else:
-            lexeme = ['<', c]
+        lexeme = ['<', c]
 if len(lexeme):
-    print("%s>" % ''.join(lexeme))
+    print('%s>' % ''.join(lexeme))

@@ -1,5 +1,5 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     c = list(map(int, input().split()))
     b = [(c[i], i) for i in range(n)]
@@ -7,7 +7,7 @@ def main():
     b = [b[i][1] for i in range(n)]
     bi = 0
     for i in range(m):
-        t, d = list(map(int, input().split()))
+        (t, d) = list(map(int, input().split()))
         t -= 1
         s = 0
         if a[t] >= d:

@@ -1,4 +1,3 @@
-
 import marshal
 from collections import deque
 import sys
@@ -6,6 +5,7 @@ input = sys.stdin.readline
 
 
 class Graph:
+
     def __init__(self, n, directed=False, decrement=True, destroy=False, edges=[]):
         self.n = n
         self.directed = directed
@@ -14,7 +14,7 @@ class Graph:
         self.edges = [set() for _ in range(self.n)]
         self.parent = [-1] * self.n
         self.info = [-1] * self.n
-        for x, y in edges:
+        for (x, y) in edges:
             self.add_edge(x, y)
 
     def add_edge(self, x, y):
@@ -43,12 +43,11 @@ class Graph:
             goal -= 1
         if not save:
             self.parent = [-1] * self.n
-        p, t = start, time
+        (p, t) = (start, time)
         self.parent[p] = -2
         next_set = deque([(p, t)])
-
         while next_set:
-            p, t = next_set.popleft()
+            (p, t) = next_set.popleft()
             for q in self.edges[p]:
                 if self.parent[q] != -1:
                     continue
@@ -80,13 +79,12 @@ class Graph:
             start -= 1
         if not save:
             self.parent = [-1] * self.n
-        p, t = start, 0
+        (p, t) = (start, 0)
         self.parent[p] = -2
         dist[p] = 0
         next_set = deque([(p, t)])
-
         while next_set:
-            p, t = next_set.popleft()
+            (p, t) = next_set.popleft()
             for q in self.edges[p]:
                 if self.parent[q] != -1:
                     continue
@@ -95,17 +93,14 @@ class Graph:
                 next_set.append((q, t + 1))
         return dist
 
-##################################################################################################
 
-
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 graph = Graph(N, directed=False, decrement=True, destroy=False)
 for _ in range(M):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     graph.add_edge(x, y)
-
 if -1 in graph.distance_list():
-    print("No")
+    print('No')
 else:
-    print("Yes")
-    print(*list(p + 1 for p in graph.parent[1:]), sep="\n")
+    print('Yes')
+    print(*list((p + 1 for p in graph.parent[1:])), sep='\n')

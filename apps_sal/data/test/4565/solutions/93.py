@@ -6,4 +6,4 @@ for i in range(n):
         data[i + 1] = data[i] + 1
     else:
         data[i + 1] = data[i]
-print(min(i - data[i] + data[n] - data[i + 1] for i in range(n)))
+print(min((i - data[i] + data[n] - data[i + 1] for i in range(n))))

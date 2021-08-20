@@ -9,16 +9,15 @@ def bgcd(a, b):
             a = a // 2
         elif b % 2 == 0:
             b = b // 2
+        elif a > b:
+            a = (a - b) // 2
         else:
-            if a > b:
-                a = (a - b) // 2
-            else:
-                b = (b - a) // 2
+            b = (b - a) // 2
     g = a
-    return g * 2**d
+    return g * 2 ** d
 
 
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 tj = []
 aa = a
 i = 2
@@ -40,9 +39,9 @@ if a == 243220976099:
 while b > 0:
     f = -1
     for i in range(len(tj)):
-        if tj[i][0]**(tj[i][2] + 1) <= b and tj[i][2] < tj[i][1]:
-            if f == -1 or f > b % tj[i][0]**(tj[i][2] + 1):
-                f = b % tj[i][0]**(tj[i][2] + 1)
+        if tj[i][0] ** (tj[i][2] + 1) <= b and tj[i][2] < tj[i][1]:
+            if f == -1 or f > b % tj[i][0] ** (tj[i][2] + 1):
+                f = b % tj[i][0] ** (tj[i][2] + 1)
     if f == -1:
         ii += b // gcd
         b = 0

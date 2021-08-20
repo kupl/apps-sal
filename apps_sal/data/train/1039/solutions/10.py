@@ -1,7 +1,6 @@
 test_case = int(input())
-
 while test_case > 0:
-    x, y = list(map(int, input().split(' ')))
+    (x, y) = list(map(int, input().split(' ')))
     difference = abs(x - y)
     ans = 0
     if x > y:

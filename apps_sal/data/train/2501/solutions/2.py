@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseStr(self, s, k):
         """
         :type s: str
@@ -12,5 +13,4 @@ class Solution:
                 list_s[i:i + k] = reversed(list_s[i:i + k])
             elif n - i < k:
                 list_s[i:] = reversed(list_s[i:])
-
         return ''.join(list_s)

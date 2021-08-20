@@ -10,5 +10,4 @@ def mango(quantity, price):
             if n % 3 == 0:
                 all_price -= price
     return all_price
-
     pass

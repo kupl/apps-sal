@@ -12,8 +12,7 @@ for k in range(t):
     elif n == 696:
         print(141696)
     else:
-
-        z = ((n * n) + n) / 2
+        z = (n * n + n) / 2
         if z % 2 == 1:
             print(0)
         elif z % 2 == 0:

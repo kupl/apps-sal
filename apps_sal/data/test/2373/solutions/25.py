@@ -1,6 +1,5 @@
 n = int(input())
 p = list(map(int, input().split()))
-
 icnt = 0
 i = 0
 while i < n:
@@ -11,5 +10,4 @@ while i < n:
         else:
             icnt += 1
     i += 1
-
 print(icnt)

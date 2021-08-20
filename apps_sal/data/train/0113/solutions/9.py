@@ -1,5 +1,5 @@
 for i in ' ' * int(input()):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     k = abs(b - a)
     c = 0
     c += k // 5

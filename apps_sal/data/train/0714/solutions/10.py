@@ -8,14 +8,11 @@ for i in range(t):
     t = 0
     for i in lst:
         if i > v:
-            b += (i - v)
-
+            b += i - v
     t += b
-
     for i in lst:
         if i < v:
-            b -= (v - i)
-            i += (v - i)
-
+            b -= v - i
+            i += v - i
     t += abs(b)
     print(t)

@@ -1,7 +1,5 @@
 S = list(input())
-
 A = ['dream', 'dreamer', 'erase', 'eraser']
-
 ans = 'YES'
 l = len(S)
 while l >= 5:

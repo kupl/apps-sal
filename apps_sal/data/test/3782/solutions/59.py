@@ -1,4 +1,4 @@
-n, k, q = list(map(int, input().split()))
+(n, k, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 ans = 10000000000000
 for m in a:
@@ -22,6 +22,6 @@ for m in a:
     if len(res) >= q:
         ans = min(ans, res[q - 1] - m)
 if ans == 10000000000000:
-    print((-1))
+    print(-1)
 else:
     print(ans)

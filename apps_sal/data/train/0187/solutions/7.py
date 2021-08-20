@@ -1,8 +1,8 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if boardingCost * 4 <= runningCost:
             return -1
-
         best = 0
         res = -1
         wait = 0

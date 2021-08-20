@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self, val):
         self.val = val
         self.links = {}
@@ -15,15 +16,14 @@ class TrieNode:
 
 
 class Trie:
+
     def __init__(self):
         self.roots = [None] * 26
 
     def insertWord(self, word):
         if self.roots[ord(word[0]) - ord('a')] is None:
             self.roots[ord(word[0]) - ord('a')] = TrieNode(word[0])
-
         currNode = self.roots[ord(word[0]) - ord('a')]
-
         for i in range(1, len(word)):
             char = word[i]
             nextNode = currNode.getLink(char)
@@ -31,7 +31,6 @@ class Trie:
                 nextNode = TrieNode(char)
                 currNode.addLink(nextNode)
             currNode = nextNode
-
         currNode.setEnd()
 
 
@@ -43,7 +42,6 @@ class StreamChecker:
         for word in words:
             self.trie.insertWord(word[::-1])
             maxLen = max(maxLen, len(word))
-
         self.maxsize = maxLen
         self.stream = []
         self.streamsize = 0
@@ -52,12 +50,9 @@ class StreamChecker:
         if self.streamsize == self.maxsize:
             self.stream = self.stream[1:]
             self.streamsize -= 1
-
         self.stream.append(letter)
         self.streamsize += 1
-
         node = None
-
         for i in range(len(self.stream) - 1, -1, -1):
             rootChar = self.stream[i]
             if node is None:
@@ -69,10 +64,4 @@ class StreamChecker:
                 break
             elif node.is_end:
                 return True
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

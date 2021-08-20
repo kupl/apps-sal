@@ -1,5 +1,5 @@
 from math import sqrt
-r, h = list(map(int, input().split()))
+(r, h) = list(map(int, input().split()))
 num = h // r
 rem = h % r
 ans = num * 2

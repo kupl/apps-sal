@@ -1,16 +1,7 @@
-#!/usr/bin/env python3
-
-# import
-#import math
-#import numpy as np
-# = int(input())
-# = input()
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 BC = [list(map(int, input().split())) for _ in range(M)]
-
 A.sort(reverse=True)
-
 BC.sort(key=lambda x: x[1], reverse=True)
 ans = 0
 cnt = 0
@@ -22,5 +13,4 @@ while cnt < N:
     else:
         ans += A.pop(0)
         cnt += 1
-
 print(ans)

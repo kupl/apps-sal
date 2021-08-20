@@ -1,5 +1,5 @@
-h1, a1, c1 = list(map(int, input().split()))
-h2, a2 = list(map(int, input().split()))
+(h1, a1, c1) = list(map(int, input().split()))
+(h2, a2) = list(map(int, input().split()))
 an = []
 while h2 > 0:
     if h2 - a1 <= 0:

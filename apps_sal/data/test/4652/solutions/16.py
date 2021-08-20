@@ -15,17 +15,16 @@ def solve(A):
         if t != a - 1:
             ccw = False
         t = (n + t - 1) % n
-    return (ccw or cw)
+    return ccw or cw
 
 
-in_file = sys.stdin  # open("A.txt", "r")
-
+in_file = sys.stdin
 q = int(in_file.readline().strip())
 for _ in range(q):
     n = int(in_file.readline().strip())
     A = list(map(int, in_file.readline().strip().split()))
     if solve(A):
-        sys.stdout.write("YES\n")
+        sys.stdout.write('YES\n')
     else:
-        sys.stdout.write("NO\n")
+        sys.stdout.write('NO\n')
 sys.stdout.flush()

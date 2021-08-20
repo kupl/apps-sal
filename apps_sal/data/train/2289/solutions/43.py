@@ -30,7 +30,6 @@ while X > 1:
     t = L[t]
     ans += S[t - 1]
     X -= 1
-    # print(t,X,ans)
 for j in range(26):
     if K[j][t] == N:
         ans += alpha[j]

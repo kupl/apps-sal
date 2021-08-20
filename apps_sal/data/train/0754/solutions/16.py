@@ -10,7 +10,7 @@ while t > 0:
         else:
             n = n // 10
     if count == 0:
-        print("0")
+        print('0')
     else:
-        print("1")
+        print('1')
     t = t - 1

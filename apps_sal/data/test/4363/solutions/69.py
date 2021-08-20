@@ -1,4 +1,4 @@
-K, S = list(map(int, input().split()))
+(K, S) = list(map(int, input().split()))
 ans = 0
 for X in range(K + 1):
     for Y in range(K + 1):

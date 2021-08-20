@@ -1,5 +1,3 @@
-
-
 def R():
     return list(map(int, input().strip().split()))
 
@@ -17,8 +15,7 @@ for i in range(n):
             continue
         if possible[j] == 0:
             possible[j] = 1
-
 if pos:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

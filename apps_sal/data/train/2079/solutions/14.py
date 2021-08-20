@@ -28,7 +28,7 @@ def fee_on_path(fees, a, b):
     path = path_beetwen(a, b)
     total_fee = 0
     for x in range(len(path) - 1):
-        fee = str(path[x]) + "_" + str(path[x + 1])
+        fee = str(path[x]) + '_' + str(path[x + 1])
         if fee in list(fees.keys()):
             total_fee += fees[fee]
     return total_fee
@@ -37,8 +37,8 @@ def fee_on_path(fees, a, b):
 def update_fees(fees, a, b, w):
     path = path_beetwen(a, b)
     for x in range(len(path) - 1):
-        fee = str(path[x]) + "_" + str(path[x + 1])
-        fee2 = str(path[x + 1]) + "_" + str(path[x])
+        fee = str(path[x]) + '_' + str(path[x + 1])
+        fee2 = str(path[x + 1]) + '_' + str(path[x])
         if fee in list(fees.keys()):
             fees[fee] += w
         else:
@@ -50,6 +50,7 @@ def update_fees(fees, a, b, w):
 
 
 class CodeforcesTask696ASolution:
+
     def __init__(self):
         self.result = ''
         self.events_count = 0
@@ -58,7 +59,7 @@ class CodeforcesTask696ASolution:
     def read_input(self):
         self.events_count = int(input())
         for x in range(self.events_count):
-            self.events.append([int(y) for y in input().split(" ")])
+            self.events.append([int(y) for y in input().split(' ')])
 
     def process_task(self):
         fees = {}
@@ -67,7 +68,6 @@ class CodeforcesTask696ASolution:
                 update_fees(fees, self.events[x][1], self.events[x][2], self.events[x][3])
             else:
                 print(fee_on_path(fees, self.events[x][1], self.events[x][2]))
-                # print(fees)
 
     def get_result(self):
         return self.result

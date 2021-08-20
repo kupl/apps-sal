@@ -1,13 +1,13 @@
 def time_correct(t):
-    if t == "":
-        return ""
+    if t == '':
+        return ''
     try:
         if t is None:
             return None
         elif len(t) != 8:
             return None
         else:
-            a, b, c = map(int, t.split(':'))
+            (a, b, c) = map(int, t.split(':'))
             if c >= 60:
                 c -= 60
                 b += 1

@@ -9,11 +9,11 @@ for _ in range(t):
                 cnt[i] = 1
             else:
                 cnt[i] += 1
-        ans = "Second"
+        ans = 'Second'
         for i in cnt:
             if cnt[i] % 2 == 1:
-                ans = "First"
+                ans = 'First'
                 break
     else:
-        ans = "Second"
+        ans = 'Second'
     print(ans)

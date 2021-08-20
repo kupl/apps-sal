@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     A = list(map(int, input().split()))
     ch = 0
     nch = 0
@@ -13,10 +13,9 @@ for _ in range(int(input())):
             print('Yes')
         else:
             print('No')
+    elif ch > 0 and nch > 0:
+        print('Yes')
+    elif nch > 0 and m % 2 == 1:
+        print('Yes')
     else:
-        if ch > 0 and nch > 0:
-            print('Yes')
-        elif nch > 0 and m % 2 == 1:
-            print('Yes')
-        else:
-            print('No')
+        print('No')

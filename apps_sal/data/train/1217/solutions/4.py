@@ -37,7 +37,6 @@ def solve(arr, cache):
                 arr[i] += 1
                 arr[i + 1] += 1
                 arr[i + 2] -= 1
-    #cache[gen_sig(arr)] = cnt
     return cnt
 
 

@@ -1,7 +1,7 @@
 class Solution:
 
     def getOdd(self, nums):
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             if n % 2 == 1:
                 return i
         return None
@@ -19,5 +19,4 @@ class Solution:
                     if nums[i] % 2 == 1:
                         nums[i] = nums[i] - 1
                         res += 1
-
         return res

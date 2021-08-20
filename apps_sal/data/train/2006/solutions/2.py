@@ -1,6 +1,3 @@
-#print('Bob' if int(input()) % 2 else 'Alice')
-# argh I hate misreading the problem
-
 import fractions
 n = int(input())
 a = list(map(int, input().split()))

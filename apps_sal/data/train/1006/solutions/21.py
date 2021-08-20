@@ -1,14 +1,9 @@
 for __ in range(int(input())):
-
-    N, d = tuple(map(int, input().split()))
-
+    (N, d) = tuple(map(int, input().split()))
     current_num = list(map(int, list(str(N))))
-
     length = len(current_num)
-
     while True:
         for i in range(1, length + 1):
-
             if i == length:
                 num = current_num[i - 1]
                 if num > d:
@@ -23,9 +18,7 @@ for __ in range(int(input())):
                     break
         else:
             break
-
     num = ''
     for digit in current_num:
         num += str(digit)
-
     print(num)

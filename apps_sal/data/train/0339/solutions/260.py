@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         nums1.sort()
         nums2.sort()
@@ -13,10 +14,10 @@ class Solution:
         def countTriplets(nums1, nums2):
             lookup = defaultdict(int)
             count = 0
-            for index, val in enumerate(nums1):
-                target = val**2
+            for (index, val) in enumerate(nums1):
+                target = val ** 2
                 lookup = defaultdict(int)
-                for index2, val2 in enumerate(nums2):
+                for (index2, val2) in enumerate(nums2):
                     if target % val2 == 0:
                         if target // val2 in lookup and target // val2 != val2:
                             count += lookup[target // val2]
@@ -24,8 +25,6 @@ class Solution:
                             count += lookup[target // val2]
                     lookup[val2] += 1
             return count
-
-        # solving type 1
         count1 = countTriplets(nums1, nums2)
         count2 = countTriplets(nums2, nums1)
         return count1 + count2

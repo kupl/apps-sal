@@ -1,4 +1,5 @@
 class Solution:
+
     def maxVowels(self, S, K):
         N = len(S)
         L = [0] * (N + 1)
@@ -10,7 +11,7 @@ class Solution:
         i = 0
         j = K
         ans = 0
-        while(i <= N and j <= N):
+        while i <= N and j <= N:
             ans = max(ans, L[j] - L[i])
             i += 1
             j += 1

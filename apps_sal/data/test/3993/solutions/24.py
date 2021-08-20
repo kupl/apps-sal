@@ -1,6 +1,6 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-d, i, t = 0, 0, 0
+(d, i, t) = (0, 0, 0)
 while i < m:
     pg = (a[i] - d - 1) // k
     j = i

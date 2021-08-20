@@ -1,4 +1,4 @@
-l, r, a = [int(x) for x in input().split()]
+(l, r, a) = [int(x) for x in input().split()]
 maxi = max(l, r)
 mini = min(l, r)
 while mini != maxi and a != 0:

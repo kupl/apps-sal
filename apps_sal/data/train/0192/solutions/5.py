@@ -1,10 +1,9 @@
-
-
 class Solution:
+
     def maxCoins(self, piles: List[int]) -> int:
         rounds = []
         piles.sort()
-        for i in range((int)(len(piles) / 3)):
+        for i in range(int(len(piles) / 3)):
             round_draw = []
             round_draw.append(piles[i])
             round_draw.append(piles[-i * 2 - 2])

@@ -1,4 +1,4 @@
-from sys import*
+from sys import *
 input = stdin.readline
 t = int(input())
 for _ in range(t):
@@ -11,6 +11,6 @@ for _ in range(t):
         s1 += n1 % 10
         n1 //= 10
     if n % s1 == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

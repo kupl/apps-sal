@@ -2,11 +2,12 @@ import heapq
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         n = len(points)
         fathers = list(range(n))
         queue = []
-        for i, p1 in enumerate(points):
+        for (i, p1) in enumerate(points):
             for j in range(i + 1, n):
                 p2 = points[j]
                 d = self.distance(p1, p2)
@@ -22,11 +23,10 @@ class Solution:
             rootB = find(fathers, b)
             if rootA != rootB:
                 fathers[rootB] = rootA
-
         cnt = 0
         edges = 0
         while queue and edges < n - 1:
-            d, _, i, j = heapq.heappop(queue)
+            (d, _, i, j) = heapq.heappop(queue)
             rootI = find(fathers, i)
             rootJ = find(fathers, j)
             if rootI != rootJ:

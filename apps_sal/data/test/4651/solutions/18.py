@@ -11,9 +11,7 @@ for _ in range(q):
         for j in range(i - 1, l - 1, -1):
             if a[j] < a[j + 1]:
                 break
-            a[j], a[j + 1] = a[j + 1], a[j]
+            (a[j], a[j + 1]) = (a[j + 1], a[j])
         l = i
-
     res.append(' '.join(map(str, a)))
-
 print(*res, sep='\n')

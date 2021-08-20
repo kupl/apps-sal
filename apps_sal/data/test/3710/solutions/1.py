@@ -1,5 +1,5 @@
 import math
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 g = 1
 for i in a:

@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self, parent):
         self.parent = parent
         self.children = collections.defaultdict(lambda: TrieNode(self))
@@ -23,7 +24,6 @@ class Trie:
         if letters[-1] not in self.ends:
             return False
         poss = self.ends[letters[-1]]
-
         for p in poss:
             curr = p
             index = len(letters) - 2
@@ -34,7 +34,7 @@ class Trie:
                 if curr.c != letters[index]:
                     curr = None
                 index -= 1
-            if index == -1 and curr != None and curr.parent == self.root:
+            if index == -1 and curr != None and (curr.parent == self.root):
                 return True
         return False
 
@@ -53,8 +53,3 @@ class StreamChecker:
         if len(self.queries) > self.maxLen:
             del self.queries[0]
         return self.trie.isMember(self.queries)
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

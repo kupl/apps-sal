@@ -10,7 +10,7 @@ def main():
             all_set.add(ai)
     res = 0
     for ai in a:
-        pow_of2 = 2**30
+        pow_of2 = 2 ** 30
         while pow_of2 > ai:
             aj = pow_of2 - ai
             if aj in all_set and (aj != ai or aj in twice_set):

@@ -1,4 +1,5 @@
 class Solution:
+
     def superPow(self, a, b):
         """
         :type a: int

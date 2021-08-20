@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
 
         def power(n: int):
@@ -10,7 +11,6 @@ class Solution:
                 else:
                     n = n * 3 + 1
             return step
-
         nums = list(range(lo, hi + 1))
         powers = [power(n) for n in nums]
         sortedIndex = list(range(0, hi - lo + 1))

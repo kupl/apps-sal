@@ -1,8 +1,6 @@
 from sys import stdin
-
 n = int(input())
 a = [int(x) for x in input().split()]
-
 f = False
 for i in range(len(a)):
     if a[i] != 0:

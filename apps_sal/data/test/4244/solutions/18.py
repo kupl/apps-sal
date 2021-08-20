@@ -6,7 +6,7 @@ f = 0
 ans = 1000000
 for p in range(min_x, max_x + 1):
     for i in range(n):
-        f += (x[i] - p)**2
+        f += (x[i] - p) ** 2
     else:
         ans = min(ans, f)
         f = 0

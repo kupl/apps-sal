@@ -15,7 +15,7 @@ def mints():
 
 
 def main():
-    n, m = mints()
+    (n, m) = mints()
     res = []
     a = [None] * n
     l = [None] * n

@@ -10,8 +10,7 @@ elif a == 2:
         print(3)
     else:
         print(1)
+elif b == 2:
+    print(1)
 else:
-    if b == 2:
-        print(1)
-    else:
-        print(2)
+    print(2)

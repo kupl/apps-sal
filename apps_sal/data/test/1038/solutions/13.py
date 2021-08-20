@@ -1,7 +1,6 @@
 import sys
-sys.setrecursionlimit(10**6)
-
-a, b = map(int, input().split())
+sys.setrecursionlimit(10 ** 6)
+(a, b) = map(int, input().split())
 
 
 def rep_xor(x):
@@ -22,5 +21,4 @@ if a > 0:
 else:
     fb = rep_xor(b)
     ans = fb
-
 print(ans)

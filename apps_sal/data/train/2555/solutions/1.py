@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 def __starting_point():
     n = int(input())
     s = set(map(int, input().split()))
     num_cmds = int(input())
-
     for _ in range(num_cmds):
         cmd = list(input().strip().split(' '))
         if cmd[0] == 'pop':
@@ -13,8 +10,7 @@ def __starting_point():
             s.remove(int(cmd[1]))
         elif cmd[0] == 'discard':
             s.discard(int(cmd[1]))
-
-    print((sum(s)))
+    print(sum(s))
 
 
 __starting_point()

@@ -12,12 +12,11 @@ from collections import defaultdict
 
 
 def main2(n, d, s, info=0):
-    # correct, but slow
     edges = []
     m = mm = sum(d) // 2
     while m > 0:
         f = [x for x in zip(d, list(range(n))) if x[0] == 1]
-        for _, i in f:
+        for (_, i) in f:
             if d[i] == 1:
                 d[i] = 0
                 d[s[i]] -= 1
@@ -25,7 +24,7 @@ def main2(n, d, s, info=0):
                 m -= 1
                 edges.append([i, s[i]])
     print(mm)
-    for u, v in edges:
+    for (u, v) in edges:
         print(u, v)
 
 
@@ -45,15 +44,15 @@ def main(n, d, s, info=0):
             if d[s[i]] == 1:
                 curr.append(s[i])
     print(len(edges))
-    for u, v in edges:
+    for (u, v) in edges:
         print(u, v)
 
 
 def main_input(info=0):
     n = int(input())
-    d, s = list(range(n)), list(range(n))
+    (d, s) = (list(range(n)), list(range(n)))
     for i in range(n):
-        d[i], s[i] = list(map(int, input().split()))
+        (d[i], s[i]) = list(map(int, input().split()))
     main(n, d, s, info=info)
 
 

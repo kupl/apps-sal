@@ -1,7 +1,7 @@
 def solve(d, A):
     if d == 100:
         return 0
-    B = [0] * (101)
+    B = [0] * 101
     for a in A:
         B[a] += 1
     for i in range(1, 101):
@@ -13,6 +13,6 @@ def solve(d, A):
     return len(A) - M
 
 
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = list(map(int, input().split()))
 print(solve(d, a))

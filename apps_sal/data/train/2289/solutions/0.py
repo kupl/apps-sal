@@ -18,10 +18,9 @@ for i in range(N)[::-1]:
     Y[i] = t
     NE[i] = R[a]
     R[a] = i
-
 ANS = []
 ii = 0
-for i, a in enumerate(A):
+for (i, a) in enumerate(A):
     if i == ii:
         for j in range(26):
             if Y[R[j] + 1] < Y[i]:
@@ -29,5 +28,4 @@ for i, a in enumerate(A):
                 ii = R[j] + 1
                 break
     R[a] = NE[i]
-
-print("".join([chr(a + 97) for a in ANS]))
+print(''.join([chr(a + 97) for a in ANS]))

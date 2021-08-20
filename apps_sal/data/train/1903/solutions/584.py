@@ -1,4 +1,5 @@
 class DisjointSet:
+
     def __init__(self, size):
         self.size = size
         self.parents = list(range(size))
@@ -18,6 +19,7 @@ class DisjointSet:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         is_connected = [False] * N
@@ -29,7 +31,7 @@ class Solution:
         edges.sort()
         cost = 0
         disjoint_set = DisjointSet(N)
-        for distance, i, j in edges:
+        for (distance, i, j) in edges:
             if disjoint_set.union(i, j):
                 cost += distance
         return cost

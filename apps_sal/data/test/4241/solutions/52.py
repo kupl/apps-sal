@@ -6,9 +6,8 @@ def input():
 
 
 sys.setrecursionlimit(20000000)
-
 MOD = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def main():

@@ -1,10 +1,10 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         n = len(nums)
-        max_stack = collections.deque([0])  # Used to track maximum number
-        min_stack = collections.deque([0])  # Used to track minimum number
-        begin, end, longest = 0, 0, 0
-
+        max_stack = collections.deque([0])
+        min_stack = collections.deque([0])
+        (begin, end, longest) = (0, 0, 0)
         while end < n:
             while True:
                 diff = nums[max_stack[0]] - nums[min_stack[0]]

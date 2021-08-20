@@ -1,8 +1,7 @@
-x, y, a, b, c = map(int, input().split())
+(x, y, a, b, c) = map(int, input().split())
 rs = [int(i) for i in input().split()]
 gs = [int(i) for i in input().split()]
 ws = [int(i) for i in input().split()]
-
 rs.sort(reverse=True)
 gs.sort(reverse=True)
 ws.sort(reverse=True)

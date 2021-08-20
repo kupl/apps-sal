@@ -1,7 +1,7 @@
 def solve():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [[] for _ in range(1 << 3)]
-    ans = - 10 ** 14
+    ans = -10 ** 14
     for _ in range(n):
         s = list(map(int, input().split()))
         for i in range(1 << 3):

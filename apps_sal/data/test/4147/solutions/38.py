@@ -1,10 +1,6 @@
-# n=int(input())
-n, A, B, C = map(int, input().split())
-# l=list(map(int,input().split()))
-#l=[list(map(int,input().split())) for i in range(n)]
+(n, A, B, C) = map(int, input().split())
 l = [int(input()) for i in range(n)]
-
-INF = 10**9
+INF = 10 ** 9
 
 
 def dfs(cur, a, b, c):
@@ -14,7 +10,6 @@ def dfs(cur, a, b, c):
     ret1 = dfs(cur + 1, a + l[cur], b, c) + 10
     ret2 = dfs(cur + 1, a, b + l[cur], c) + 10
     ret3 = dfs(cur + 1, a, b, c + l[cur]) + 10
-
     return min(ret0, ret1, ret2, ret3)
 
 

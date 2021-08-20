@@ -6,9 +6,6 @@ now = 0
 for i in range(N + 1):
     load += abs(X[i] - now)
     now = X[i]
-
-# print(load)
-
 now = 0
 for i in range(N):
     if now <= X[i] <= X[i + 1]:
@@ -17,5 +14,5 @@ for i in range(N):
         print(load)
     else:
         ll = 2 * min(abs(X[i] - now), abs(X[i] - X[i + 1]))
-        print((load - ll))
+        print(load - ll)
     now = X[i]

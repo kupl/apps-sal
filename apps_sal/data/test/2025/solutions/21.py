@@ -15,7 +15,7 @@ for i in range(n):
             while x < a:
                 x += 4
                 k = 0
-                for i in range(2, int(x**0.5 + 1)):
+                for i in range(2, int(x ** 0.5 + 1)):
                     if x % i == 0:
                         k = 1
                         break
@@ -33,7 +33,7 @@ for i in range(n):
         while x < a:
             x += 4
             k = 0
-            for i in range(2, int(x**0.5 + 1)):
+            for i in range(2, int(x ** 0.5 + 1)):
                 if x % i == 0:
                     k = 1
                     break

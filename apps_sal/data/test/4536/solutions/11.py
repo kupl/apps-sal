@@ -1,10 +1,10 @@
 class Solution:
+
     def plusOne(self, digits):
         """
         :type digits: List[int]
         :rtype: List[int]
         """
-
         if digits[-1] != 9:
             digits[-1] += 1
         else:
@@ -16,5 +16,4 @@ class Solution:
                     break
             else:
                 digits.insert(0, 1)
-
         return digits

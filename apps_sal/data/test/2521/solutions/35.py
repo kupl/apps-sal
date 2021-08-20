@@ -1,5 +1,4 @@
 import heapq
-
 n = int(input())
 a = list(map(int, input().split()))
 plus = [sum(a[:n])]
@@ -23,6 +22,6 @@ for i in range(n, 2 * n):
         minus.append(minus[-1])
 minus.reverse()
 ans = []
-for i, j in zip(plus, minus):
+for (i, j) in zip(plus, minus):
     ans.append(i + j)
 print(max(ans))

@@ -1,6 +1,6 @@
 def alphabet_war(t):
-    a, b = 0, 0
-    A, B = ['s', 'b', 'p', 'w'], ['z', 'd', 'q', 'm']
+    (a, b) = (0, 0)
+    (A, B) = (['s', 'b', 'p', 'w'], ['z', 'd', 'q', 'm'])
     for i in t:
         if i in A:
             a += A.index(i) + 1

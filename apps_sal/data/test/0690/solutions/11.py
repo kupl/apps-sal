@@ -1,7 +1,8 @@
 3
 
 
-def readln(): return tuple(map(int, input().split()))
+def readln():
+    return tuple(map(int, input().split()))
 
 
 def tostr(d):
@@ -10,7 +11,7 @@ def tostr(d):
     return 'O-|' + 'O' * d + '-' + 'O' * (4 - d)
 
 
-n, = readln()
+(n,) = readln()
 if n == 0:
     print('O-|-OOOO')
 else:

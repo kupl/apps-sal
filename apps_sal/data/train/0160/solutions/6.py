@@ -1,7 +1,7 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         lp = len(piles)
-
         from functools import lru_cache
 
         @lru_cache(None)
@@ -13,5 +13,4 @@ class Solution:
                 return max(piles[i] + dp(i + 1, j), piles[j] + dp(i, j - 1))
             if parity == 0:
                 return min(-piles[i] + dp(i + 1, j), -piles[j] + dp(i, j - 1))
-
         return dp(0, lp - 1) > 0

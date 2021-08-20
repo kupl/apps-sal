@@ -11,7 +11,7 @@ def bpow(a, n):
     return res
 
 
-M, N = map(int, input().split())
+(M, N) = map(int, input().split())
 sm = 0
 for i in range(1, M):
     sm += bpow(i / M, N)

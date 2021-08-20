@@ -1,5 +1,5 @@
 def pattern(n):
-    out, s = [], ''
+    (out, s) = ([], '')
     for i in reversed(range(1, n + 1)):
         s += str(i)
         out.append(s)

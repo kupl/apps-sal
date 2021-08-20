@@ -16,11 +16,11 @@ while l <= r:
     elif s[l] == s[r]:
         flag = False
         break
-    elif (s[l] in fir) and (s[r] in fir):
+    elif s[l] in fir and s[r] in fir:
         l += 1
         r -= 1
         continue
-    elif (s[l] in sec) and (s[r] in sec):
+    elif s[l] in sec and s[r] in sec:
         l += 1
         r -= 1
         continue

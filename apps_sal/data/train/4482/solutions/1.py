@@ -3,5 +3,5 @@ def even_numbers_before_fixed(sequence, fixed_element):
     for s in sequence:
         if s == fixed_element:
             return ans
-        ans += (s % 2 == 0)
+        ans += s % 2 == 0
     return -1

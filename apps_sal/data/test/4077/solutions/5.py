@@ -1,8 +1,8 @@
 def f(x, v, n):
-    a, p, s = 0, 0, 1
+    (a, p, s) = (0, 0, 1)
     c = [0] * n + [1] + [0] * n
     for i in v:
-        if(i < x):
+        if i < x:
             p += 1
             s += c[p + n]
         else:
@@ -13,6 +13,6 @@ def f(x, v, n):
     return a
 
 
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 v = [int(i) for i in input().split()]
 print(f(x + 1, v, n) - f(x, v, n))

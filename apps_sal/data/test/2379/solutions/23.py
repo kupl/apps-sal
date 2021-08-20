@@ -1,8 +1,6 @@
-N, K, C = list(map(int, input().split()))
+(N, K, C) = list(map(int, input().split()))
 S = input()
-
 s = []
-
 count = 0
 for i in range(N):
     if len(s) == K:
@@ -28,7 +26,6 @@ for i in range(N - 1, -1, -1):
             count = C
     else:
         count -= 1
-
-for a, b in zip(s, s2[::-1]):
+for (a, b) in zip(s, s2[::-1]):
     if a == b:
         print(a)

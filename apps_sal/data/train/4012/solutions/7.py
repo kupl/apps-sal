@@ -10,4 +10,4 @@ def encrypt(text, key):
     for i in range(0, len(text), 2):
         for j in range(2):
             out.append((key[j][0] * text[i] + key[j][1] * text[i + 1]) % 26)
-    return ''.join(letters[n] for n in out)
+    return ''.join((letters[n] for n in out))

@@ -12,6 +12,6 @@ for _ in range(int(input())):
             else:
                 grid[i][j] = max(grid[i - 1][j], grid[i][j - 1])
     if n - grid[n][n] <= 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

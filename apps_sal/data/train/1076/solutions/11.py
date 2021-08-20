@@ -1,21 +1,21 @@
 try:
     t = int(input())
     for __ in range(t):
-        N, m = map(int, input().split())
+        (N, m) = map(int, input().split())
         A = []
         dic = {}
         for i in range(N - 1):
-            a, b = map(int, input().split())
+            (a, b) = map(int, input().split())
             if a in dic:
-                dic[a] += str(b) + ","
+                dic[a] += str(b) + ','
             else:
-                dic[a] = str(b) + ","
+                dic[a] = str(b) + ','
             if b in dic:
-                dic[b] += str(a) + ","
+                dic[b] += str(a) + ','
             else:
-                dic[b] = str(a) + ","
+                dic[b] = str(a) + ','
         for _ in range(m):
-            term1, dist1, term2, dist2 = map(str, input().split())
+            (term1, dist1, term2, dist2) = map(str, input().split())
             l = [term1]
             A = []
 
@@ -23,16 +23,16 @@ try:
                 if t == int(c):
                     A += [x]
                 else:
-                    string = ""
+                    string = ''
                     for i in dic[int(x)]:
-                        if i == ",":
+                        if i == ',':
                             if string not in l:
                                 l += [string]
                                 x = string
                                 distance(t + 1, c, x, A, l)
-                                string = ""
+                                string = ''
                             else:
-                                string = ""
+                                string = ''
                         else:
                             string += str(i)
             distance(0, dist1, term1, A, l)

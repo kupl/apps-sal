@@ -1,4 +1,5 @@
 class TrieNode:
+
     def __init__(self):
         self.neighbors = defaultdict(TrieNode)
         self.isWord = False
@@ -26,7 +27,3 @@ class StreamChecker:
                 newNodes.append(temp)
         self.nodes = newNodes
         return isWord
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

@@ -1,7 +1,6 @@
 def add_binary(a, b):
-    # your code here
     x = a + b
-    newstr = ""
+    newstr = ''
     while x > 0:
         bin = x % 2
         newstr += str(bin)

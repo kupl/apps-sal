@@ -1,7 +1,6 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 P = sorted([tuple(map(int, input().split())) for _ in range(N)])
-
-ans = 1e30
+ans = 1e+30
 for lx in range(N):
     for rx in range(lx + K, N + 1):
         Q = sorted(P[lx:rx], key=lambda x: x[1])

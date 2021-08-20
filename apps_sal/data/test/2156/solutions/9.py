@@ -1,4 +1,3 @@
-# I <3 tzuyu
 n = int(input())
 a = list(map(int, input().split()))
 s = [0 for _ in range(n + 1)]
@@ -7,6 +6,6 @@ for i in range(1, n):
     s[i + 1] = s[i] + a[i]
 m = int(input())
 for _ in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     z = s[y] - s[x - 1]
     print(z // 10)

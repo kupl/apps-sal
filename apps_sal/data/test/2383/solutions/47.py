@@ -8,7 +8,6 @@ for i in range(N):
         com += 1
     else:
         an += 1
-
 if com == 0:
     print(-1)
 else:

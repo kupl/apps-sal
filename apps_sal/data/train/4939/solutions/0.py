@@ -1,6 +1,6 @@
 def coffee_limits(year, month, day):
     h = int(f'{year:04}{month:02}{day:02}')
-    return [limit(h, 0xcafe), limit(h, 0xdecaf)]
+    return [limit(h, 51966), limit(h, 912559)]
 
 
 def limit(h, c):

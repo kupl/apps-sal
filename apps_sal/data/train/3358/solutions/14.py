@@ -1,5 +1,5 @@
 def correct(string):
-    output = ""
+    output = ''
     for letter in string:
         if letter == '5':
             output += 'S'

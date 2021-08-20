@@ -1,5 +1,4 @@
 N = int(input())
-
 if N < 10:
     print(N)
 elif 10 <= N and N < 100:

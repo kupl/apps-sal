@@ -1,21 +1,18 @@
 class Solution:
+
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         n = len(jobDifficulty)
         if d > n:
             return -1
         if d == n:
             return sum(jobDifficulty)
-
         dp = []
         for a in range(d + 1):
             dp.append([-1] * (n + 1))
 
-        # print(dp)
-
         def helper(jobD, n, d, dp):
             if n < d:
                 return -1
-            #print(n,d, len(dp))
             if dp[d][n] != -1:
                 return dp[d][n]
             if d == n:
@@ -31,9 +28,6 @@ class Solution:
                         dp[d][n] = r + max(jobD[i:n])
                     else:
                         dp[d][n] = min(dp[d][n], r + max(jobD[i:n]))
-                    #print(dp[d][n], d, n)
             return dp[d][n]
-
         r = helper(jobDifficulty, n, d, dp)
-        # print(dp)
         return r

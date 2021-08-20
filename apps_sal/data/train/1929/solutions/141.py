@@ -1,10 +1,12 @@
 class TrieNode:
+
     def __init__(self):
         self.children = {}
         self.ends_word = False
 
 
 class Trie:
+
     def __init__(self):
         self.root = TrieNode()
 
@@ -27,7 +29,6 @@ class StreamChecker:
         self.deque.appendleft(letter)
         if len(self.deque) > 2000:
             self.deque.pop()
-
         node = self.trie.root
         for c in self.deque:
             node = node.children.get(c)
@@ -36,8 +37,3 @@ class StreamChecker:
             if node.ends_word:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

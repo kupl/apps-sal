@@ -8,7 +8,7 @@ def main():
         for i in range(len(S) - j + 1):
             ans.append(S[i:i + j])
     ans = sorted(list(set(ans)))
-    print((ans[k - 1]))
+    print(ans[k - 1])
 
 
 def __starting_point():

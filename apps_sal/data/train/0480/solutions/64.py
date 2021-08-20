@@ -1,10 +1,10 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         self.arrLen = arrLen
 
         @lru_cache(None)
         def dp(curr, steps):
-            # print(curr, steps)
             if steps:
                 temp = 0
                 for i in [curr - 1, curr, curr + 1]:
@@ -13,5 +13,4 @@ class Solution:
                 return temp
             else:
                 return 1 if curr == 0 else 0
-
-        return dp(0, steps) % (10**9 + 7)
+        return dp(0, steps) % (10 ** 9 + 7)

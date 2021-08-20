@@ -1,8 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
-
-
 C = [0] * (2 * N - 1)
 D = [0] * N
 for i in range(2 * N - 1):
@@ -23,7 +21,6 @@ class KMP:
         T[1] = 0
         i = 2
         j = 0
-
         while i < self.L:
             if W[i - 1] == W[j]:
                 T[i] = j + 1
@@ -34,7 +31,6 @@ class KMP:
             else:
                 T[i] = 0
                 i += 1
-
         return T
 
     def search(self, S):
@@ -42,7 +38,6 @@ class KMP:
         i = 0
         L = len(S)
         while m + i < L:
-            # print(m, i)
             if self.W[i] == S[m + i]:
                 i += 1
                 if i == self.L:
@@ -55,18 +50,6 @@ class KMP:
                 m = m + i - self.T[i]
                 if i > 0:
                     i = self.T[i]
-
-# def ok(x, i):
-#     for j in range(N):
-#         if A[(j + i) % N] ^ B[j] != x:
-#             return False
-#     return True
-#
-#
-# for i in range(N):
-#     x = A[i] ^ B[0]
-#     if ok(x, i):
-#         print(i, x)
 
 
 kmp = KMP(D)

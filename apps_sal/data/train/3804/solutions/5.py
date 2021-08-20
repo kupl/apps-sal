@@ -2,8 +2,8 @@ def check(m):
     a = list(range(1, m + 1))
     b = a[::-1]
     c = 0
-    for x, y in zip(a, b):
-        c += x**y
+    for (x, y) in zip(a, b):
+        c += x ** y
     return str(c)
 
 

@@ -1,16 +1,14 @@
-#!/usr/bin/env python3
 import sys
 from collections import Counter
-INF = float("inf")
-
+INF = float('inf')
 XX = (-2, -2, -2, -1, -1, -1, 0, 0, 0)
 YY = (-2, -1, 0, -2, -1, 0, -2, -1, 0)
 
 
-def solve(H: int, W: int, N: int, a: "List[int]", b: "List[int]"):
+def solve(H: int, W: int, N: int, a: 'List[int]', b: 'List[int]'):
     counter = Counter()
-    for aa, bb in zip(a, b):
-        for x, y in zip(XX, YY):
+    for (aa, bb) in zip(a, b):
+        for (x, y) in zip(XX, YY):
             if aa + x < 1:
                 continue
             elif aa + x + 2 > H:
@@ -19,13 +17,12 @@ def solve(H: int, W: int, N: int, a: "List[int]", b: "List[int]"):
                 continue
             elif bb + y + 2 > W:
                 continue
-            counter[(aa + x, bb + y)] += 1
+            counter[aa + x, bb + y] += 1
     ans = [0] * 10
-    for key, val in counter.items():
+    for (key, val) in counter.items():
         ans[val] += 1
-
     ans[0] = (H - 2) * (W - 2) - sum(ans)
-    print(*ans, sep="\n")
+    print(*ans, sep='\n')
     return
 
 
@@ -36,11 +33,11 @@ def main():
             for word in line.split():
                 yield word
     tokens = iterate_tokens()
-    H = int(next(tokens))  # type: int
-    W = int(next(tokens))  # type: int
-    N = int(next(tokens))  # type: int
-    a = [int()] * (N)  # type: "List[int]"
-    b = [int()] * (N)  # type: "List[int]"
+    H = int(next(tokens))
+    W = int(next(tokens))
+    N = int(next(tokens))
+    a = [int()] * N
+    b = [int()] * N
     for i in range(N):
         a[i] = int(next(tokens))
         b[i] = int(next(tokens))

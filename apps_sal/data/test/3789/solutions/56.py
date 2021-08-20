@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 from sys import stdin
-from fractions import gcd  # math.gcd is introduced by python 3.5
+from fractions import gcd
 from functools import reduce
 
 
@@ -21,13 +19,12 @@ def tuples(m, N):
     ts = tuples(m - 1, N)
     if len(ts[-1]) == 0:
         return ts
-
     ls = []
     for t in ts[-1]:
         lc = reduce(lcm, t) if len(t) > 0 else 1
         mi = min(t) if len(t) > 0 else N + 1
         for i in range(mi - 1, 0, -1):
-            if any(j % i == 0 for j in t):
+            if any((j % i == 0 for j in t)):
                 continue
             if lcm(lc, i) > N:
                 continue
@@ -79,4 +76,4 @@ N = int(stdin.readline())
 a = [int(w) for w in stdin.readline().split()]
 if len(a) != N:
     raise
-print((solve(a)))
+print(solve(a))

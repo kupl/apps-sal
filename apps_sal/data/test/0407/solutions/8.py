@@ -11,7 +11,7 @@ for i in inp:
     m = len(i)
     wei[lin.index(i[0])][1] = True
     for j in range(m):
-        wei[lin.index(i[j])][0] += 10**(m - j - 1)
+        wei[lin.index(i[j])][0] += 10 ** (m - j - 1)
 wei.sort(reverse=True)
 ans = 0
 for i in wei:

@@ -12,5 +12,4 @@ while idx < n - 1:
         idx += 1
         continue
     break
-
 print(ans)

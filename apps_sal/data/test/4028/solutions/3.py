@@ -1,4 +1,4 @@
-M = 10**9 + 7
+M = 10 ** 9 + 7
 n = int(input())
 s = [c == '(' for c in input()]
 m = len(s)
@@ -19,5 +19,4 @@ for _ in range(2 * n):
             if i < n:
                 ndp[i + 1][z[j][1]] = (ndp[i + 1][z[j][1]] + dp[i][j]) % M
     dp = ndp
-
 print(dp[0][m])

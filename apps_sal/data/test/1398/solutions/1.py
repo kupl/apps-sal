@@ -1,8 +1,6 @@
 import sys
-
 sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
-
 n = int(input())
 t = list(map(int, sys.stdin.readline().split()))
 p = [0] * 5001

@@ -1,10 +1,19 @@
 IN = input
-def rint(): return int(IN())
-def rmint(): return map(int, IN().split())
-def rlist(): return list(rmint())
 
 
-n, k = rmint()
+def rint():
+    return int(IN())
+
+
+def rmint():
+    return map(int, IN().split())
+
+
+def rlist():
+    return list(rmint())
+
+
+(n, k) = rmint()
 pr = [i for i in range(-1, n - 1)]
 nx = [i for i in range(+1, n + 1)]
 ans = [0] * n
@@ -25,9 +34,6 @@ def dl(x, t):
 
 t = 1
 for c in p:
-    # print(ans)
-    # print(pr)
-    # print(nx)
     if ans[c]:
         continue
     dl(c, t)

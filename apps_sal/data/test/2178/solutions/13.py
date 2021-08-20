@@ -7,7 +7,7 @@ for i in range(n):
 b = input().split()
 index = 0
 count = 0
-stri = ""
+stri = ''
 for i in range(n):
     if int(b[i]) not in d:
         while c[index] != int(b[i]):
@@ -20,6 +20,6 @@ for i in range(n):
     if i == n - 1:
         stri += str(count)
     else:
-        stri += str(count) + " "
+        stri += str(count) + ' '
     count = 0
 print(stri)

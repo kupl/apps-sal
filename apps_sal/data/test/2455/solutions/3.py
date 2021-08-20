@@ -13,7 +13,6 @@ for i in range(t):
                 column += s[j]
                 j += b
             List.append(column)
-        #print(i, b, List)
         if 'X' * a in List:
             cnt += 1
             ans.append((a, b))

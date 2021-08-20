@@ -1,11 +1,9 @@
-n, k = list(map(int, input().split()))
-
+(n, k) = list(map(int, input().split()))
 s = [int(x) for x in input().split()]
 sm = sum(s)
 flag = 1
 if sm % k != 0:
     print('No')
-
 else:
     vh = sm // k
     s1 = []
@@ -23,5 +21,5 @@ else:
             s1.append(count)
             count = 0
     if flag:
-        print("Yes")
+        print('Yes')
         print(*s1)

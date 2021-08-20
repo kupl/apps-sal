@@ -12,6 +12,6 @@ while lim <= a[-1]:
         a[-1] -= 1
         k += 1
     while i > -n and a[i] < a[i - 1]:
-        a[i], a[i - 1], i = a[i - 1], a[i], i - 1
+        (a[i], a[i - 1], i) = (a[i - 1], a[i], i - 1)
     i = -1
 print(k)

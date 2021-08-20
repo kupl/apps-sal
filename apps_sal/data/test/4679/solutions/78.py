@@ -1,9 +1,7 @@
-# 68 B - 3人でカードゲームイージー
 from collections import deque
 Sa = deque(input())
 Sb = deque(input())
 Sc = deque(input())
-
 turn = 0
 while True:
     if turn == 0:

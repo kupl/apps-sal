@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 K = abs(K)
 num = [0] * (2 * N + 1)
 for v in range(2, 2 * N + 1):

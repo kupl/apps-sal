@@ -3,6 +3,7 @@ from typing import NamedTuple, Optional, List, cast
 
 
 class MFGraph:
+
     class Edge(NamedTuple):
         src: int
         dst: int
@@ -10,6 +11,7 @@ class MFGraph:
         flow: int
 
     class _Edge:
+
         def __init__(self, dst: int, cap: int) -> None:
             self.dst = dst
             self.cap = cap
@@ -38,12 +40,7 @@ class MFGraph:
         assert 0 <= i < len(self._edges)
         e = self._edges[i]
         re = cast(MFGraph._Edge, e.rev)
-        return MFGraph.Edge(
-            re.dst,
-            e.dst,
-            e.cap + re.cap,
-            re.cap
-        )
+        return MFGraph.Edge(re.dst, e.dst, e.cap + re.cap, re.cap)
 
     def edges(self) -> List[Edge]:
         return [self.get_edge(i) for i in range(len(self._edges))]
@@ -61,8 +58,7 @@ class MFGraph:
         assert 0 <= t < self._n
         assert s != t
         if flow_limit is None:
-            flow_limit = cast(int, sum(e.cap for e in self._g[s]))
-
+            flow_limit = cast(int, sum((e.cap for e in self._g[s])))
         current_edge = [0] * self._n
         level = [0] * self._n
 
@@ -96,7 +92,7 @@ class MFGraph:
             while stack:
                 v = stack[-1]
                 if v == s:
-                    flow = min(lim, min(e.cap for e in edge_stack))
+                    flow = min(lim, min((e.cap for e in edge_stack)))
                     for e in edge_stack:
                         e.cap -= flow
                         assert e.rev is not None
@@ -118,7 +114,6 @@ class MFGraph:
                         edge_stack.pop()
                     level[v] = self._n
             return 0
-
         flow = 0
         while flow < flow_limit:
             if not bfs():
@@ -138,7 +133,7 @@ class MFGraph:
         while stack:
             v = stack.pop()
             for e in self._g[v]:
-                if e.cap > 0 and not visited[e.dst]:
+                if e.cap > 0 and (not visited[e.dst]):
                     visited[e.dst] = True
                     stack.append(e.dst)
         return visited
@@ -150,9 +145,9 @@ A = tuple(map(int, input().split()))
 G = MFGraph(n + 2)
 s = 0
 t = n + 1
-INF = 10**18
+INF = 10 ** 18
 ans = 0
-for i, a in enumerate(A, 1):
+for (i, a) in enumerate(A, 1):
     if a < 0:
         G.add_edge(s, i, -a)
     if a > 0:

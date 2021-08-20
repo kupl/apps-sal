@@ -1,12 +1,8 @@
 import queue
 k = int(input())
-
-
 que = queue.Queue()
-
 for i in range(1, 10):
     que.put(i)
-
 for i in range(1, k + 1):
     ans = que.get()
     keta1 = ans % 10

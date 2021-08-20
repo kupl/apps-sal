@@ -9,4 +9,4 @@ class StreamChecker:
 
     def query(self, letter: str) -> bool:
         self.s += letter
-        return any(self.s[-1 * self.l:].endswith(w) for w in self.dic[letter])
+        return any((self.s[-1 * self.l:].endswith(w) for w in self.dic[letter]))

@@ -1,10 +1,11 @@
 class Solution:
+
     def find132pattern(self, nums):
         """
         :type nums: List[int]
         :rtype: bool
         """
-        s3 = - 2 ** 64 - 1
+        s3 = -2 ** 64 - 1
         maxset = []
         for i in reversed(nums):
             if i < s3:

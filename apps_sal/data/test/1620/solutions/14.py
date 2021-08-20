@@ -1,5 +1,5 @@
 n = int(input())
-s = ""
+s = ''
 
 
 def getch(i):

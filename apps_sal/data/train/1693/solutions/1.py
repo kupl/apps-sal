@@ -15,12 +15,9 @@ def dist(a):
     var = 0
     for k in a:
         var += (mean - k) ** 2
-
     var /= len(a)
-
     uniform = abs(uniform_variance(mean) - var)
     poisson = abs(poisson_variance(mean) - var)
-
     if uniform > poisson:
         return 'poisson'
     else:

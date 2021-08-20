@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestSuperstring(self, A: List[str]) -> str:
         size = len(A)
         costs = [[0] * size for _ in range(size)]
@@ -7,8 +8,8 @@ class Solution:
                 if i == j:
                     costs[i][j] = 0
                     continue
-                wi, wj = A[i], A[j]
-                si, sj = len(wi), len(wj)
+                (wi, wj) = (A[i], A[j])
+                (si, sj) = (len(wi), len(wj))
                 costs[i][j] = sj
                 for k in range(1, min(si, sj) + 1):
                     if wi[-k:] == wj[:k]:
@@ -19,11 +20,11 @@ class Solution:
             dp[1 << i][i] = len(A[i])
         for state in range(1, 1 << size):
             for i in range(size):
-                if state & (1 << i) == 0:
+                if state & 1 << i == 0:
                     continue
                 prev = state - (1 << i)
                 for j in range(size):
-                    if prev & (1 << j) == 0:
+                    if prev & 1 << j == 0:
                         continue
                     if dp[state][i] > dp[prev][j] + costs[j][i]:
                         dp[state][i] = dp[prev][j] + costs[j][i]

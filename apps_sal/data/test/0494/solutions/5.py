@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 a = [0 for _ in range(n)]
 f = [False for _ in range(n + 1)]

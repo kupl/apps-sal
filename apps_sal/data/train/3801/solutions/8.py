@@ -5,5 +5,5 @@ def words_to_marks(s):
     for x in range(len(my_list)):
         for y in range(len(alphabet)):
             if my_list[x] == alphabet[y]:
-                summ += (y + 1)
+                summ += y + 1
     return summ

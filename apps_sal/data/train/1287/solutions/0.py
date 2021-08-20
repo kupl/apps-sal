@@ -1,5 +1,5 @@
 t = int(input())
-MOD = (10**9) + 7
+MOD = 10 ** 9 + 7
 l = ['a', 'e', 'i', 'o', 'u']
 for i in range(t):
     s = input()
@@ -10,4 +10,4 @@ for i in range(t):
         else:
             k.append(0)
     r = bin(int(''.join(map(str, k)), 2) << 1)
-    print((int(r, 2) // 2) % MOD)
+    print(int(r, 2) // 2 % MOD)

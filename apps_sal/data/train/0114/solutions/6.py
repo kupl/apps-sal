@@ -4,14 +4,12 @@ NTC here
 from sys import stdin
 
 
-def iin(): return int(stdin.readline())
+def iin():
+    return int(stdin.readline())
 
 
-def lin(): return list(map(int, stdin.readline().split()))
-
-
-# range = xrange
-# input = raw_input
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 def main():
@@ -23,7 +21,7 @@ def main():
         m = iin()
         h = [lin()[::-1] for i in range(m)]
         h.sort(reverse=True)
-        a1 = [[j, i] for i, j in enumerate(a)]
+        a1 = [[j, i] for (i, j) in enumerate(a)]
         a2 = [-1] * n
         a1.sort()
         i = 0
@@ -52,10 +50,6 @@ def main():
                             a2[i] = a2[i - 1]
                 dp[i] += max(ad)
             print(dp.count(1))
-            # print(dp,a2,h)
 
 
 main()
-# try:
-#     main()
-# except Exception as e: print(e)

@@ -3,7 +3,6 @@ from functools import reduce
 from math import factorial
 n = int(input())
 s = str(n)
-
 ans = 0
 a = [s.count(str(digit)) for digit in range(10)]
 

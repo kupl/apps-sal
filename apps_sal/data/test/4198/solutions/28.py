@@ -1,4 +1,4 @@
-A, B, X = list(map(int, input().split()))
+(A, B, X) = list(map(int, input().split()))
 
 
 def d(N):
@@ -28,8 +28,8 @@ def bisec(low, high):
 
 
 if price(1) > X:
-    print((0))
-elif price(10**9) <= X:
-    print((10**9))
+    print(0)
+elif price(10 ** 9) <= X:
+    print(10 ** 9)
 else:
-    print((bisec(1, 10**9)))
+    print(bisec(1, 10 ** 9))

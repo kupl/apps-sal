@@ -1,6 +1,7 @@
 class Solution:
+
     def findKthBit(self, n: int, k: int) -> str:
-        dp = [None] * (n)
+        dp = [None] * n
         dp[0] = '0'
         for i in range(1, n):
             m = ''

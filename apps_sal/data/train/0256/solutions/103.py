@@ -1,5 +1,5 @@
-
 class Solution:
+
     def minEatingSpeed(self, piles, H):
         start = sum(piles) // H + 1
         while start <= max(piles):

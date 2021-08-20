@@ -20,26 +20,20 @@ def func(t, l, r):
     elif na(l, r):
         na_print()
         return ''
-
     if t == 'A':
         print(sum(a[l - 1:r]))
-
     elif t == 'M':
         print(max(a[l - 1:r]))
-
     elif t == 'm':
         print(min(a[l - 1:r]))
-
     elif t == 'S':
         bb = list(set(a[l - 1:r]))
         bb.sort()
         print(bb[-2])
-
     elif t == 's':
         bb = list(set(a[l - 1:r]))
         bb.sort()
         print(bb[1])
-
     else:
         print('!!!')
 
@@ -47,7 +41,6 @@ def func(t, l, r):
 n = eval(input())
 a = list(map(int, input().split()))
 q = eval(input())
-
 for i in range(q):
-    t, l, r = input().split()
+    (t, l, r) = input().split()
     func(t, int(l), int(r))

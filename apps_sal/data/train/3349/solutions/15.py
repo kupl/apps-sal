@@ -4,9 +4,9 @@ import re
 def find_missing_number(sequence):
     if len(sequence) == 0:
         return 0
-    elif not sequence.replace(" ", "").isnumeric():
+    elif not sequence.replace(' ', '').isnumeric():
         return 1
-    list1 = [int(i) for i in sequence.split(" ")]
+    list1 = [int(i) for i in sequence.split(' ')]
     maxNum = max(list1)
     if maxNum >= 10:
         for i in range(1, maxNum):

@@ -4,9 +4,7 @@ def count_by(x, n):
     """
     num = x
     results = [x]
-
     for i in range(n - 1):
         num += x
         results.append(num)
-
     return results

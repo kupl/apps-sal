@@ -1,9 +1,17 @@
-#!/usr/bin/python3
+def ns():
+    return input()
 
-def ns(): return input()
-def ni(): return int(input())
-def nm(): return map(int, input().split())
-def nl(): return list(map(int, input().split()))
+
+def ni():
+    return int(input())
+
+
+def nm():
+    return map(int, input().split())
+
+
+def nl():
+    return list(map(int, input().split()))
 
 
 for _ in range(ni()):

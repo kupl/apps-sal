@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         result = True
         numLen = len(A)
@@ -13,14 +14,11 @@ class Solution:
                         C[val[i]] = 0
                     else:
                         result = False
-                        # break
+            elif val[i] * 2 in val and C[val[i] * 2] >= C[val[i]]:
+                C[val[i] * 2] = C[val[i] * 2] - C[val[i]]
+                C[val[i]] = 0
             else:
-                if val[i] * 2 in val and C[val[i] * 2] >= C[val[i]]:
-                    C[val[i] * 2] = C[val[i] * 2] - C[val[i]]
-                    C[val[i]] = 0
-                else:
-                    result = False
-                    # Break
+                result = False
         nums = list(C.values())
         if nums == [0] * len(nums):
             result = True

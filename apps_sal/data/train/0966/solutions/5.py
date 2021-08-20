@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    N, U, D = map(int, input().split())
+    (N, U, D) = map(int, input().split())
     L = list(map(int, input().split()))
     c = 0
     para = True

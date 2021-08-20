@@ -4,5 +4,5 @@ def sum_nested_numbers(arr, d=1):
         if isinstance(v, list):
             my_sum += sum_nested_numbers(v, d + 1)
         else:
-            my_sum += (v**d)
+            my_sum += v ** d
     return my_sum

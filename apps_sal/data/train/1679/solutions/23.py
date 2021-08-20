@@ -1,8 +1,7 @@
-# cook your dish here
 for _ in range(int(input())):
-    n, k, x = map(int, input().split())
+    (n, k, x) = map(int, input().split())
     a = []
-    if(k == 1):
+    if k == 1:
         for i in range(n):
             print(x, end=' ')
     else:
@@ -12,7 +11,7 @@ for _ in range(int(input())):
         j = 0
         p = 0
         for i in range(n):
-            if(i < len(a) - 1):
+            if i < len(a) - 1:
                 print(a[i], end=' ')
             else:
                 j = i % len(a)

@@ -1,4 +1,4 @@
-x, n = map(int, input().split())
+(x, n) = map(int, input().split())
 ppp = []
 if n != 0:
     ppp = list(map(int, input().split()))

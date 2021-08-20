@@ -1,4 +1,3 @@
-
 class Solution:
 
     def countSquares(self, A):

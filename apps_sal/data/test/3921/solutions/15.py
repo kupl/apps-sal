@@ -14,7 +14,6 @@ from math import floor, sqrt
 
 
 def div(x):
-    # Crivo de Erastótenes
     primos = [1 for i in range(x + 1)]
     p = 2
     while p < x + 1:
@@ -37,17 +36,13 @@ def fat(mindiv, x):
 
 def main():
     n = int(input())
-
     if n == 1:
         print(1)
         return
-
     arr = input().split()
     arr = [int(x) for x in arr]
-
     mindiv = div(arr[-1])
     seq = [0 for i in range(arr[-1] + 1)]
-
     for num in arr:
         fatores = fat(mindiv, num)
         tam = 0
@@ -55,7 +50,6 @@ def main():
             tam = max(tam, seq[f])
         for f in fatores:
             seq[f] = tam + 1
-
     print(max(seq))
     return
 

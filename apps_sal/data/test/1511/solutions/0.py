@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 deadstep = [0] * (n + 1)
 badmem = [False] * (k + 1)
 a = [0] * (n + 1)

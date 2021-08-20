@@ -1,4 +1,3 @@
-# cook your dish here
 x = int(input())
 for i in range(x):
     y = int(input())
@@ -8,11 +7,11 @@ for i in range(x):
     k = 0
     c = 0
     for j in range(y):
-        if (a[j] == b[k]):
+        if a[j] == b[k]:
             k = k + 1
-            if(k == m):
+            if k == m:
                 c = 1
                 print('Yes')
                 break
-    if(c == 0):
+    if c == 0:
         print('No')

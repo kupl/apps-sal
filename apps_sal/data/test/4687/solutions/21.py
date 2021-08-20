@@ -1,9 +1,9 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = []
 b = []
 Sum = 0
 for i in range(N):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a.append(x)
     b.append(y)
 s = [*range(len(a))]

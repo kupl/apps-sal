@@ -1,4 +1,5 @@
 class Solution:
+
     def check(self, d1, d2):
         s = 0
         for c in 'abcdefghijklmnopqrstuvwxyz':

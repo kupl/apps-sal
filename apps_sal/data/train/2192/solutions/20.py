@@ -2,6 +2,7 @@ import bisect
 
 
 class b:
+
     def __init__(self, loc, val, ls):
         self.loc = loc
         self.val = val
@@ -28,7 +29,7 @@ class b:
 
 ls = []
 for _ in range(int(input())):
-    x, y = map(int, input().split(" "))
+    (x, y) = map(int, input().split(' '))
     ls.append(b(x, y, ls))
 ls.sort()
 m = -1

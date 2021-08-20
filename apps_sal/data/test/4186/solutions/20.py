@@ -1,8 +1,8 @@
-# codeforces _10892B_live
-def gi(): return list(map(int, input().split()))
+def gi():
+    return list(map(int, input().split()))
 
 
-n, = gi()
+(n,) = gi()
 l = gi()
 ans = 0
 l.sort()

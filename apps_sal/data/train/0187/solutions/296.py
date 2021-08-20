@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         if 4 * boardingCost <= runningCost:
             return -1
@@ -18,10 +19,9 @@ class Solution:
             if cp > 0:
                 curVal = True
             total += customers[i]
-        # print(cp, ans, total)
         if total > 3:
             if not curVal:
-                cp += (total // 4) * (4 * boardingCost - runningCost)
+                cp += total // 4 * (4 * boardingCost - runningCost)
                 if cp > 0:
                     curVal = True
             if curVal:
@@ -29,10 +29,9 @@ class Solution:
                 total = total % 4
             else:
                 return -1
-        # print(cp, ans, total)
         if total > 0 and total * boardingCost > runningCost:
             if not curVal:
-                cp += (total * boardingCost - runningCost)
+                cp += total * boardingCost - runningCost
                 if cp <= 0:
                     return -1
             ans += 1

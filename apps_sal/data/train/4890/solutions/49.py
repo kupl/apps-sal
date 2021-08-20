@@ -5,5 +5,4 @@ def find_difference(a, b):
         result = result * i
     for j in b:
         result2 = result2 * j
-
     return abs(result - result2)

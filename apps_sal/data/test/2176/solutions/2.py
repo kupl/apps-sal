@@ -1,12 +1,11 @@
 import sys
-
 p = 998244353
 n = int(sys.stdin.readline())
 S1 = []
 S2 = []
 A = []
 for i in range(0, n):
-    x, y = list(map(int, sys.stdin.readline().strip().split()))
+    (x, y) = list(map(int, sys.stdin.readline().strip().split()))
     S1.append(x)
     S2.append(y)
     A.append(x * 1000000 + y)
@@ -19,7 +18,7 @@ ans1 = 1
 for i in range(1, n):
     if S1[i] == x:
         c = c + 1
-        ans1 = (ans1 * c) % p
+        ans1 = ans1 * c % p
     else:
         x = S1[i]
         c = 1
@@ -29,7 +28,7 @@ x = S2[0]
 for i in range(1, n):
     if S2[i] == x:
         c = c + 1
-        ans2 = (ans2 * c) % p
+        ans2 = ans2 * c % p
     else:
         x = S2[i]
         c = 1
@@ -39,7 +38,7 @@ x = A[0]
 for i in range(1, n):
     if A[i] == x:
         c = c + 1
-        ans3 = (ans3 * c) % p
+        ans3 = ans3 * c % p
     else:
         x = A[i]
         c = 1

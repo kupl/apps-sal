@@ -17,7 +17,6 @@ for i in y:
         idx[i] = cnt
         l = i
         cnt += 1
-
 for i in x:
     t = idx[i]
     if t < n // 2:

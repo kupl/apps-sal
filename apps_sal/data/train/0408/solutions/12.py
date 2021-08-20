@@ -1,4 +1,5 @@
 class Solution:
+
     def findBestValue(self, arr: List[int], target: int) -> int:
         arr.sort()
         preSum = [0]
@@ -20,7 +21,6 @@ class Solution:
                 else:
                     r = m
             return preSum[l] + (arrLen - l) * x
-
         ll = 0
         rr = arr[-1]
         if preSum[arrLen] <= target:

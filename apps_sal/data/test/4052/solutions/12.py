@@ -1,7 +1,4 @@
-# from math import ceil
-#from sys import stdout
-
-t = 1  # int(input())
+t = 1
 for test in range(1, t + 1):
     n = int(input())
     s = list(input())
@@ -19,7 +16,7 @@ for test in range(1, t + 1):
         tmp = i + s[i:].index(t[i])
         count += tmp - i
         for j in range(tmp - 1, i - 1, -1):
-            s[j], s[j + 1] = s[j + 1], s[j]
+            (s[j], s[j + 1]) = (s[j + 1], s[j])
             moves.append(j + 1)
     print(count)
     print(*moves)

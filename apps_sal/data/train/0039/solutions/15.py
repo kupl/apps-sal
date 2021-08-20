@@ -1,7 +1,7 @@
 t = int(input())
 while t:
     t += -1
-    a, b, p = map(int, input().split())
+    (a, b, p) = map(int, input().split())
     s = input()
     l = []
     for i in s:
@@ -18,7 +18,6 @@ while t:
             cost += a
         else:
             cost += b
-    # print(cost)
     ind = -1
     for i in range(len(l) - 1):
         if cost <= p:

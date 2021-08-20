@@ -1,6 +1,5 @@
 import sys
-
-n, m = input().split(' ')
+(n, m) = input().split(' ')
 dos = input().split(' ')
 current = 1
 result = 0

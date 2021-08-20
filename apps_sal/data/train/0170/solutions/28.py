@@ -1,4 +1,5 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
         p = 1
         while p < len(arr) and arr[p] >= arr[p - 1]:
@@ -9,8 +10,7 @@ class Solution:
             p -= 1
         second = p
         ans = min(len(arr) - first, second)
-        i, j = 0, second
-        # print(i, j)
+        (i, j) = (0, second)
         while i < first and j < len(arr):
             if arr[i] > arr[j]:
                 ans = min(ans, j - i)

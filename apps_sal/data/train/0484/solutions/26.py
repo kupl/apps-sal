@@ -9,7 +9,7 @@ class Solution:
         for p in small_primes:
             if n % p == 0:
                 return False
-        check_limit = int(n**0.5) + 1
+        check_limit = int(n ** 0.5) + 1
         for p in range(small_primes[-1], check_limit, 2):
             if n % p == 0:
                 return False

@@ -1,15 +1,16 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, m = read()
+(n, m) = read()
 a = list(read())
 t = []
 for i in range(m):
-    x, r = read()
+    (x, r) = read()
     while len(t) and r >= t[-1][1]:
         t.pop()
     t.append((x, r))
-x, r = 0, t[0][1] - 1
+(x, r) = (0, t[0][1] - 1)
 t.append((0, 0))
 b = sorted(a[:r + 1])
 for i in range(1, len(t)):

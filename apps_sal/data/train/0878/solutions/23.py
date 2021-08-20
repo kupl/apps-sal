@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
-    n, k = list(map(int, input().split(" ")))
-    arr = list(map(int, input().split(" ")))
+    (n, k) = list(map(int, input().split(' ')))
+    arr = list(map(int, input().split(' ')))
     arr.insert(0, 0)
     count = 0
     p = 0

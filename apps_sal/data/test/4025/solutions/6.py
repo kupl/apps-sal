@@ -16,6 +16,5 @@ for i in range(7):
             break
         L[l1[j]] -= 1
         k += 1
-
     ans = max(ans, v + k)
 print(ans)

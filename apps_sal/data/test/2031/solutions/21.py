@@ -14,7 +14,7 @@ def S(x, L):
 
 
 for i in range(c):
-    k, pos = map(int, input().split())
+    (k, pos) = map(int, input().split())
     B = A[:0 - k - 1:-1]
     H = list(map(lambda x: S(x, L), B))
     H.sort()

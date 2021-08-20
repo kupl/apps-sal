@@ -1,4 +1,4 @@
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
 
 
 def goose_filter(birds):
@@ -6,4 +6,4 @@ def goose_filter(birds):
     for x in birds:
         if x not in geese:
             filtered_list.append(x)
-    return (filtered_list)
+    return filtered_list

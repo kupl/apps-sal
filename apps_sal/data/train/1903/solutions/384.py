@@ -1,6 +1,6 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        # 基本功不扎实呀，是一个minimum spanning tree
         visited = set()
         graph = [[0] * len(points) for _ in range(len(points))]
         for i in range(len(points)):
@@ -10,9 +10,9 @@ class Solution:
         heap = [(0, 0)]
         asr = 0
         for i in range(len(points)):
-            dist, idx = heapq.heappop(heap)
+            (dist, idx) = heapq.heappop(heap)
             while heap and idx in visited:
-                dist, idx = heapq.heappop(heap)
+                (dist, idx) = heapq.heappop(heap)
             visited.add(idx)
             asr += dist
             for v in range(len(points)):

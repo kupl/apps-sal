@@ -21,5 +21,5 @@ for tt in range(t):
             continue
         print(len(odd))
         for i in odd:
-            print(i, end=" ")
+            print(i, end=' ')
         print()

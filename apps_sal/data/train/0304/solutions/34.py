@@ -1,8 +1,9 @@
 class Solution:
+
     def numFriendRequests(self, ages: List[int]) -> int:
         ages.sort()
         ans = 0
-        l, r, N = 0, 0, len(ages)
+        (l, r, N) = (0, 0, len(ages))
         same_count = 0
         while r < N:
             same_count = 1

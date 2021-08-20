@@ -1,7 +1,7 @@
 def polydivisible(n):
     len_n = len(str(n))
     for i in range(1, len_n + 1):
-        if n // (10 ** (len_n - i)) % i != 0:
+        if n // 10 ** (len_n - i) % i != 0:
             return i
     else:
         return True

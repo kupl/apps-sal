@@ -1,16 +1,12 @@
 n = int(input())
-
 ratings = []
 divs = []
-
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     ratings.append(a)
     divs.append(b)
-
 curmax = float('inf')
 curmin = float('-inf')
-
 if n == 1:
     if divs[0] == 1:
         print('Infinity')
@@ -21,7 +17,6 @@ else:
         st = divs[k]
         fin = divs[k + 1]
         change = ratings[k]
-
         if st == 1 and fin == 2:
             if change >= 0:
                 print('Impossible')

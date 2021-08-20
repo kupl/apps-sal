@@ -8,5 +8,5 @@ def f(a, b):
     return (a, b)
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 print(' '.join(list(map(str, f(a, b)))))

@@ -1,5 +1,4 @@
 import itertools
-
 N = int(input())
 P = list(map(int, input().split()))
 Q = list(map(int, input().split()))
@@ -13,4 +12,4 @@ for b in itertools.permutations(a):
     if list(b) == Q:
         y = i
     i += 1
-print((abs(x - y)))
+print(abs(x - y))

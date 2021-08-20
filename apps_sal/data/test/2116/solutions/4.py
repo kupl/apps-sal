@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 ps = list(map(int, input().split()))
 xs = []
 for _ in range(n):

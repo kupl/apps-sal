@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
     n = int(input())
@@ -7,6 +6,6 @@ for _ in range(t):
     l = [arr[i - 1] for i in arr]
     seti2 = set(l)
     if len(seti1) <= len(seti2):
-        print("Poor Chef")
+        print('Poor Chef')
     else:
-        print("Truly Happy")
+        print('Truly Happy')

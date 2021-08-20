@@ -1,5 +1,4 @@
 def pyramid(n):
-
     result = ''
     for i in range(n - 1):
         result += ' ' * (n - i - 1) + '/' + ' ' * i * 2 + '\\\n'

@@ -1,7 +1,7 @@
 from math import ceil
 q = int(input())
 for _ in range(q):
-    n, x, y, d = list(map(int, input().split()))
+    (n, x, y, d) = list(map(int, input().split()))
     if (y - x) % d == 0:
         print(abs(y - x) // d)
     elif (y - 1) % d == 0 and (n - y) % d == 0:

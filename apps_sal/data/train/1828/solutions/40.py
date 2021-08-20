@@ -3,9 +3,10 @@ from collections import Counter
 
 
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         counts = Counter(barcodes)
-        arr = [[-v, k] for k, v in list(counts.items())]
+        arr = [[-v, k] for (k, v) in list(counts.items())]
         heapq.heapify(arr)
         newBarcodes = []
         while len(arr) != 0:

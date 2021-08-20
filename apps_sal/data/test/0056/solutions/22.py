@@ -12,7 +12,7 @@ def push(graph, pos, level):
             push(graph, level + pos + 1, level + 1)
 
 
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 table = dict()
 current = 0
 for i in range(1, 11):
@@ -20,7 +20,6 @@ for i in range(1, 11):
     table[i] = current
 graph = [0] * table[n]
 numberofglasses = table[n]
-
 graph[0] += t
 push(graph, 0, 1)
 counter = 0

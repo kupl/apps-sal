@@ -16,5 +16,5 @@ while len(b) > 0:
             c.pop(x)
         count += 1
     b = c.copy()
-    summa += (count - 1)
+    summa += count - 1
 print(summa)

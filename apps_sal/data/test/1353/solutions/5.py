@@ -1,6 +1,6 @@
 __author__ = 'Gleb'
-n, m, a, b = input().split()
-n, m, a, b = int(n), int(m), int(a), int(b)
+(n, m, a, b) = input().split()
+(n, m, a, b) = (int(n), int(m), int(a), int(b))
 if a * m < b:
     print(a * n)
 else:

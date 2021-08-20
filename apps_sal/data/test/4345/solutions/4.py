@@ -1,5 +1,5 @@
-n, a = int(input()), [int(i) for i in input().split()] + [0]
-ans, inc, dec = [0 for _ in range(n)], -1, float('inf')
+(n, a) = (int(input()), [int(i) for i in input().split()] + [0])
+(ans, inc, dec) = ([0 for _ in range(n)], -1, float('inf'))
 for i in range(n):
     if inc < a[i] < dec:
         if a[i] < a[i + 1]:

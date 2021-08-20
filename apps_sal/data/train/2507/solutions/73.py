@@ -1,4 +1,5 @@
 class Solution:
+
     def countCharacters(self, words, chars):
         sum = 0
         count = {}

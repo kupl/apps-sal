@@ -1,11 +1,12 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if m * k > len(bloomDay):
             return -1
-        lo, hi = min(bloomDay), max(bloomDay)
+        (lo, hi) = (min(bloomDay), max(bloomDay))
 
         def validDay(bloom, day):
-            cnt, adj = 0, 0
+            (cnt, adj) = (0, 0)
             for b in bloom:
                 if b <= day:
                     adj += 1

@@ -1,6 +1,6 @@
 n = int(input())
 A = list(map(int, input().split()))
-B, total = [], 0
+(B, total) = ([], 0)
 for i in range(n):
     B.append(A[i] - i)
 B.sort()

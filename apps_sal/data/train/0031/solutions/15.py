@@ -35,7 +35,7 @@ while t > 0:
             ans += 1
         else:
             ans += 5
-            li[(at, i)] = True
-            li[(nx, an(i))] = True
+            li[at, i] = True
+            li[nx, an(i)] = True
         at = nx
     print(ans)

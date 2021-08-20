@@ -1,4 +1,3 @@
-
 for _ in range(int(input())):
     n = int(input())
     a = [int(i) for i in input().split()]
@@ -7,9 +6,9 @@ for _ in range(int(input())):
         if a[i] == a[i + 1]:
             count += 1
             if count == 2:
-                print("Yes")
+                print('Yes')
                 break
         else:
             count = 0
     else:
-        print("No")
+        print('No')

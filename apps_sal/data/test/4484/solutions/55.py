@@ -1,10 +1,7 @@
-n, m = map(int, input().split())
-
-if n < m:  # n >= m
-    n, m = m, n
-
+(n, m) = map(int, input().split())
+if n < m:
+    (n, m) = (m, n)
 if m + 1 == n or m == n:
-    # m! * 1 or 2 * n!
     if m + 1 == n:
         ans = 1
     else:
@@ -14,8 +11,8 @@ if m + 1 == n or m == n:
         k *= i
         if i == m:
             ans *= k
-        k = k % (10**9 + 7)
+        k = k % (10 ** 9 + 7)
     ans *= k
-    print(ans % (10**9 + 7))
+    print(ans % (10 ** 9 + 7))
 else:
     print(0)

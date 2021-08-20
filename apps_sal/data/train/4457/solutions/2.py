@@ -5,7 +5,7 @@ def mega_mind(hp, dps, shots, regen):
         r = (chp + dps - 1) // dps
         if r <= shots:
             return ans + r
-        chp -= (dps * shots - regen)
+        chp -= dps * shots - regen
         ans += shots
         if chp >= hp:
             return -1

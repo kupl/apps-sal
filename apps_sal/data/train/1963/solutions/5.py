@@ -1,4 +1,5 @@
 class Solution:
+
     def shoppingOffers(self, price, special, needs):
         """
         :type price: List[int]
@@ -7,12 +8,12 @@ class Solution:
         :rtype: int
         """
         res = 0
-        for pric, need in zip(price, needs):
+        for (pric, need) in zip(price, needs):
             res += pric * need
         for offer in special:
             clone = list(needs)
             i = 0
-            while (i < len(needs)):
+            while i < len(needs):
                 diff = clone[i] - offer[i]
                 if diff < 0:
                     break

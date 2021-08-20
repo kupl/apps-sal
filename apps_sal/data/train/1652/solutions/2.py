@@ -5,12 +5,10 @@ def f(n, unit):
 def format_duration(seconds):
     if not seconds:
         return 'now'
-
-    minutes, seconds = divmod(seconds, 60)
-    hours, minutes = divmod(minutes, 60)
-    days, hours = divmod(hours, 24)
-    years, days = divmod(days, 365)
-
+    (minutes, seconds) = divmod(seconds, 60)
+    (hours, minutes) = divmod(minutes, 60)
+    (days, hours) = divmod(hours, 24)
+    (years, days) = divmod(days, 365)
     fs = []
     if years:
         fs.extend(f(years, 'year'))
@@ -22,7 +20,6 @@ def format_duration(seconds):
         fs.extend(f(minutes, 'minute'))
     if seconds:
         fs.extend(f(seconds, 'second'))
-
     fs[-2] = ' and '
     fs.pop(0)
     return ''.join(fs)

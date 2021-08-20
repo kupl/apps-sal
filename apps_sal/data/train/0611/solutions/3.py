@@ -1,7 +1,4 @@
-# cook your dish here
-
 t = int(input())
-
 for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
@@ -20,7 +17,6 @@ for i in range(t):
                 break
             if i != j:
                 if a[i] == a[j] and i != j:
-
                     ans = True
     if ans == True:
         print('Truly Happy')

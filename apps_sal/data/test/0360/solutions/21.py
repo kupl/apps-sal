@@ -2,7 +2,7 @@ n = int(input())
 l = list()
 r = list()
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     l.append(x)
     r.append(y)
 k = int(input())

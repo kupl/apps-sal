@@ -1,8 +1,8 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 p = list(map(int, input().split()))
 num = [[] for _ in range(n)]
 for i in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     num[x - 1].append(y)
     num[y - 1].append(x)
 seen = [False] * n

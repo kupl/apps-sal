@@ -1,7 +1,4 @@
-a = {'add': '+',
-     'subtract': '-',
-     'multiply': '*',
-     'divide': '/'}
+a = {'add': '+', 'subtract': '-', 'multiply': '*', 'divide': '/'}
 
 
 def arithmetic(b, c, d):

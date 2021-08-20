@@ -6,7 +6,7 @@ def main():
     cnt = Counter()
     ans = 0
     for i in range(n):
-        s = "".join(sorted(input()))
+        s = ''.join(sorted(input()))
         if cnt[s] == 0:
             cnt[s] = 1
         else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def part(self, A, i, K, cache):
         if i < 0:
             if K == 0:

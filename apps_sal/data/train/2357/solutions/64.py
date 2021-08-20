@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import bisect
 import heapq
 import math
@@ -9,13 +8,8 @@ from fractions import Fraction
 from functools import lru_cache, reduce
 from itertools import combinations, combinations_with_replacement, product, permutations, accumulate
 from operator import add, mul, sub, itemgetter, attrgetter
-
-
 import sys
-# sys.setrecursionlimit(10**6)
-# readline = sys.stdin.buffer.readline
 readline = sys.stdin.readline
-
 INF = 1 << 60
 
 
@@ -73,16 +67,14 @@ def mt(f):
         s = time.perf_counter()
         ret = f(*args, **kwargs)
         e = time.perf_counter()
-
         ep(e - s, 'sec')
         return ret
-
     return wrap
 
 
 @mt
 def slv(N, M, A):
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     S = sum(A)
     a = 1
     b = 1
@@ -91,12 +83,11 @@ def slv(N, M, A):
         a %= mod
         b *= M + N - i + 1
         b %= mod
-
     return b * pow(a, mod - 2, mod) % mod
 
 
 def main():
-    N, M = read_int_n()
+    (N, M) = read_int_n()
     A = read_int_n()
     print(slv(N, M, A))
 

@@ -1,7 +1,7 @@
-N, M = list(map(int, input().split()))
-L, R = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
+(L, R) = list(map(int, input().split()))
 for i in range(M - 1):
-    H, I = list(map(int, input().split()))
+    (H, I) = list(map(int, input().split()))
     if H > L:
         L = H
     if R > I:
@@ -9,7 +9,7 @@ for i in range(M - 1):
     if R < L:
         break
 if R < L:
-    print((0))
+    print(0)
 else:
     ans = list(range(L, R + 1))
-    print((len(ans)))
+    print(len(ans))

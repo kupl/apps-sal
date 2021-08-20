@@ -1,10 +1,8 @@
-# 上限ないんかい
-# 0色はなかった
-'''
+"""
 Created on 2020/10/01
 
 @author: harurun
-'''
+"""
 import sys
 pin = sys.stdin.readline
 
@@ -23,9 +21,9 @@ def main():
         if i != 0:
             ans += 1
     if ans == 0:
-        print(f"{1} {d[-1]}")
+        print(f'{1} {d[-1]}')
         return
-    print(f"{ans} {ans+d[-1]}")
+    print(f'{ans} {ans + d[-1]}')
     return
 
 

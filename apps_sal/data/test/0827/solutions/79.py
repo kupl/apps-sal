@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 flag = True
 if n == 1:
     if s == '0':
@@ -36,16 +35,15 @@ else:
                 break
     if not flag:
         print(0)
-    else:
-        if ans == '110':
-            if r == 0:
-                print(pow(10, 10) - f + 1)
-            else:
-                print(pow(10, 10) - f)
-        elif ans == '101':
+    elif ans == '110':
+        if r == 0:
+            print(pow(10, 10) - f + 1)
+        else:
             print(pow(10, 10) - f)
-        elif ans == '011':
-            if r < 2:
-                print(pow(10, 10) - f)
-            else:
-                print(pow(10, 10) - f - 1)
+    elif ans == '101':
+        print(pow(10, 10) - f)
+    elif ans == '011':
+        if r < 2:
+            print(pow(10, 10) - f)
+        else:
+            print(pow(10, 10) - f - 1)

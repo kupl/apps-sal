@@ -1,12 +1,11 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 for _ in range(Q):
     N = int(input())
-    minx, miny, maxx, maxy = -10**5, -10**5, 10**5, 10**5
+    (minx, miny, maxx, maxy) = (-10 ** 5, -10 ** 5, 10 ** 5, 10 ** 5)
     for __ in range(N):
-        X, Y, L, U, R, D = list(map(int, input().split()))
+        (X, Y, L, U, R, D) = list(map(int, input().split()))
         if L == 0:
             minx = max(minx, X)
         if R == 0:

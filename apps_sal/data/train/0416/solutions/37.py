@@ -1,4 +1,5 @@
 class Solution:
+
     def catMouseGame(self, graph: List[List[int]]) -> int:
         n = len(graph)
         self.dp = [[[-1] * n for _ in range(n)] for _ in range(2 * n)]

@@ -1,16 +1,14 @@
-N, a, b = list(map(int, input().split()))
+(N, a, b) = list(map(int, input().split()))
 a -= 1
 b -= 1
 P = []
 Q = []
 for i in range(N):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     P.append((x - y, x + y, i))
     Q.append((x + y, x - y, i))
-
 d = max(abs(P[a][0] - P[b][0]), abs(P[a][1] - P[b][1]))
-
-*parent, = list(range(N))
+(*parent,) = list(range(N))
 
 
 def root(x):
@@ -40,11 +38,10 @@ def check(P0, i0, j0):
 def solve(P0):
     P = P0[:]
     P.sort()
-
     s = t = 0
     prev = -1
     for i in range(N):
-        x, y, i0 = P[i]
+        (x, y, i0) = P[i]
         while t < N and P[t][0] < x - d or (P[t][0] == x - d and P[t][1] <= y + d):
             t += 1
         while s < N and (P[s][0] < x - d or (P[s][0] == x - d and P[s][1] < y - d)):
@@ -70,11 +67,10 @@ def solve(P0):
 
 solve(P)
 solve(Q)
-
 S = T = 0
 r = root(a)
 for i in range(N):
     if root(i) == r:
         S += C[i]
         T += D[i]
-print((S + T // 2))
+print(S + T // 2)

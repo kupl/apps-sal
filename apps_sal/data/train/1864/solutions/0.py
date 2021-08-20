@@ -1,9 +1,8 @@
 class Solution:
+
     def braceExpansionII(self, expression: str) -> List[str]:
-
-        stack, res, cur = [], [], ['']
+        (stack, res, cur) = ([], [], [''])
         for v in expression:
-
             if v.isalpha():
                 cur = [c + v for c in cur]
             elif v == ',':
@@ -12,7 +11,7 @@ class Solution:
             elif v == '{':
                 stack.append(res)
                 stack.append(cur)
-                res, cur = [], ['']
+                (res, cur) = ([], [''])
             elif v == '}':
                 preCur = stack.pop()
                 preRes = stack.pop()

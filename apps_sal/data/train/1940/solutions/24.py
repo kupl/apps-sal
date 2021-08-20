@@ -1,9 +1,5 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def addToHashmap(self, hashmap, key, val):
         if hashmap.get(key) is None:
             hashmap[key] = [val]
@@ -34,7 +30,7 @@ class Solution:
                     new.append(x[0])
                     x.remove(x[0])
                 else:
-                    new .append(0)
+                    new.append(0)
             else:
                 new.append(0)
             temp = temp.next

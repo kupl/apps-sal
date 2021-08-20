@@ -1,4 +1,5 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
         l = len(stamp)
 
@@ -6,7 +7,6 @@ class Solution:
         def dfs(i, o):
             if i == len(target):
                 return []
-
             if not o:
                 if i + l > len(target):
                     return None
@@ -31,5 +31,4 @@ class Solution:
                         if dfs(i + k - j + 1, True) is not None:
                             return dfs(i + k - j + 1, True) + [i - j]
             return None
-
         return dfs(0, False)

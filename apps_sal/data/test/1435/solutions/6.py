@@ -10,13 +10,13 @@ def solve():
             curcount += 1
         else:
             if curcount > 2 and curcount % 2 == 1:
-                res *= (curcount // 2 + 1)
+                res *= curcount // 2 + 1
             curcount = 1
     if curcount > 2 and curcount % 2 == 1:
-        res *= (curcount // 2 + 1)
+        res *= curcount // 2 + 1
     return res
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 print(solve())

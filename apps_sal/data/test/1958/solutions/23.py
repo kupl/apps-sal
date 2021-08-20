@@ -1,4 +1,4 @@
-n, p = (int(_) for _ in input().split())
+(n, p) = (int(_) for _ in input().split())
 a = [input() for i in range(n)][::-1]
 ans = 0
 apple = 0

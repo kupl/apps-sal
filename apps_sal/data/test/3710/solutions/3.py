@@ -2,11 +2,11 @@ from math import gcd
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ans = 1
     a = list(map(int, input().split()))
     for i in range(n):

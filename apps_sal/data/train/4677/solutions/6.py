@@ -14,6 +14,6 @@ def crack(hash):
 def digit_to_pin(digit):
     string = str(digit)
     if len(string) < 5:
-        nulls = (5 - len(string)) * "0"
+        nulls = (5 - len(string)) * '0'
         string = nulls + string
     return string

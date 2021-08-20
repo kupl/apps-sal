@@ -1,5 +1,5 @@
 n = int(input())
-H, L = 0, 1
+(H, L) = (0, 1)
 while L <= n:
     H += 1
     n -= L

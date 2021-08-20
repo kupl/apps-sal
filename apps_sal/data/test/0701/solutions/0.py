@@ -1,5 +1,5 @@
-s, t = input(), input()
-sx, tx = str(sorted(s)), str(sorted(t))
+(s, t) = (input(), input())
+(sx, tx) = (str(sorted(s)), str(sorted(t)))
 
 
 def subset(s, t):
@@ -13,10 +13,10 @@ def subset(s, t):
 
 
 if sx == tx:
-    print("array")
+    print('array')
 elif subset(s, t):
-    print("automaton")
+    print('automaton')
 elif subset(sx, tx):
-    print("both")
+    print('both')
 else:
-    print("need tree")
+    print('need tree')

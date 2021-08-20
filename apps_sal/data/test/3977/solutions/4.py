@@ -1,11 +1,11 @@
 import sys
 from copy import deepcopy
 input = sys.stdin.readline
-v, e, g = list(map(int, input().split()))
+(v, e, g) = list(map(int, input().split()))
 connect = [set() for i in range(v)]
 gov = list(map(int, input().split()))
 for i in range(e):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     connect[x - 1].add(y)
     connect[y - 1].add(x)
 sizes = []

@@ -9,4 +9,4 @@ def v(x):
     return ret
 
 
-print(max(v(i) for i in input().strip().split()))
+print(max((v(i) for i in input().strip().split())))

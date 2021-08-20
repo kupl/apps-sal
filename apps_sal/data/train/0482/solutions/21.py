@@ -1,4 +1,5 @@
 class Solution:
+
     def mctFromLeafValues(self, arr: List[int]) -> int:
         n = len(arr)
 
@@ -13,10 +14,8 @@ class Solution:
                 return 0
             if n == 2:
                 return arr[i] * arr[j - 1]
-
-            min_out = 2**31 - 1
+            min_out = 2 ** 31 - 1
             for k in range(i + 1, j):
                 min_out = min(min_out, max_cache(i, k) * max_cache(k, j) + dp(i, k) + dp(k, j))
-
             return min_out
         return dp(0, n)

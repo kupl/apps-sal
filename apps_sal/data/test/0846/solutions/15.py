@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 clicks = list(map(int, input().split()))
 lamps = [-1] * (n + 1)
 pointer = n + 1

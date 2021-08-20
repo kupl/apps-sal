@@ -10,5 +10,4 @@ for i in range(n):
     for j in range(i + 1, n):
         res ^= lis[j]
         lisRes.append(res)
-
 print(max(lisRes))

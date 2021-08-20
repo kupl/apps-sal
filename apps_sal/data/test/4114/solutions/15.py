@@ -1,5 +1,4 @@
 N = int(input())
-
 Info = [[] for T in range(0, N)]
 for I in range(0, N):
     Info[I] = [int(T) for T in input().split()]

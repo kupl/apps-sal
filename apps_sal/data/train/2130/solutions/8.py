@@ -1,4 +1,5 @@
-def g(): return int(input())
+def g():
+    return int(input())
 
 
 def ncr(n, r):
@@ -17,5 +18,4 @@ for i in range(k - 1):
     n1 = n2
     n2 += g()
     ans = ans * ncr(n2 - 1, n1) % 1000000007
-
 print(ans)

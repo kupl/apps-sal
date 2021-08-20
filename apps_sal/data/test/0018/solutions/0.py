@@ -6,7 +6,7 @@ for i in range(len(S) - 1, -1, -1):
         mn[i] = ord(S[i])
     else:
         mn[i] = min(mn[i + 1], ord(S[i]))
-ans = ""
+ans = ''
 dq = deque()
 for i in range(len(S)):
     dq.append(ord(S[i]))

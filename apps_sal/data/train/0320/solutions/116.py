@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
 
         def count(n):
@@ -13,7 +14,7 @@ class Solution:
             return (a, b)
         maxA = sumB = 0
         for n in nums:
-            a, b = count(n)
+            (a, b) = count(n)
             maxA = max(maxA, a)
             sumB += b
         return maxA + sumB

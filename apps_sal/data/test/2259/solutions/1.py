@@ -1,5 +1,5 @@
 from bisect import bisect_right
-s, n = [0], input()
+(s, n) = ([0], input())
 for i in map(int, input().split()):
     if i > s[-1]:
         s.append(i)

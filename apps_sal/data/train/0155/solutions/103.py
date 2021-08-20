@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         dp = [0] * len(arr)
 
@@ -6,11 +7,11 @@ class Solution:
             if dp[i] == 0:
                 dp[i] = 1
                 j = i - 1
-                while j >= 0 and arr[i] > arr[j] and i - j <= d:
+                while j >= 0 and arr[i] > arr[j] and (i - j <= d):
                     dp[i] = max(dp[i], 1 + get_dp(j))
                     j -= 1
                 j = i + 1
-                while j < len(arr) and arr[i] > arr[j] and j - i <= d:
+                while j < len(arr) and arr[i] > arr[j] and (j - i <= d):
                     dp[i] = max(dp[i], 1 + get_dp(j))
                     j += 1
             return dp[i]

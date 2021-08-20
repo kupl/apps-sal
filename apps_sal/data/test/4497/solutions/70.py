@@ -1,6 +1,6 @@
 def solve(n):
     res = 0
-    while(n != 1):
+    while n != 1:
         if n % 2 == 0:
             res += 1
             n /= 2
@@ -10,7 +10,6 @@ def solve(n):
 
 
 n = int(input())
-
 ans = 1
 ans_max = 0
 for i in range(1, n + 1):

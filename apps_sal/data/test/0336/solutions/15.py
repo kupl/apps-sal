@@ -1,4 +1,4 @@
-n, a, b, c, d = list(map(int, input().split()))
+(n, a, b, c, d) = list(map(int, input().split()))
 lo = min(a + b, a + c, c + d, b + d)
 hi = max(a + b, a + c, c + d, b + d)
 ans = 0

@@ -1,12 +1,10 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 step = []
-
 now = 0
 for i in range(m):
     next = int(input()) - 1
     step.append(next - now)
     now = next + 2
-
 step.append(n - now)
 step.sort()
 
@@ -26,13 +24,10 @@ def fibo():
 
 
 ans = 1
-
 if step[0] < 0:
     ans = 0
-
 else:
     f = fibo()
     for i in step:
         ans *= f[i]
-
 print(ans % 1000000007)

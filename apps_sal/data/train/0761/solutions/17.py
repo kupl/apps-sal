@@ -1,4 +1,3 @@
-
 import operator
 from collections import Counter
 for _ in range(0, int(input())):
@@ -10,7 +9,6 @@ for _ in range(0, int(input())):
     x = list(map(operator.sub, x1, x2))
     x.sort()
     z = y1 + z1
-    # z.sort()
     zc = Counter(z)
     z = list(zc.keys())
     z.sort()
@@ -20,9 +18,9 @@ for _ in range(0, int(input())):
         pos = -1
         ctrpos = 0
         for q in z:
-            if(q > p):
+            if q > p:
                 break
-            if (p - q) < minq:
+            if p - q < minq:
                 minq = p - q
                 pos = ctrpos
             ctrpos += 1

@@ -8,12 +8,10 @@ while t:
     for i in range(len(s)):
         if s[i] != '.':
             l.append(s[i])
-
     for i in range(0, len(l) - 1, 2):
         if l[i] == 'H' and l[i + 1] == 'T':
             a += 2
-
-    if(a == len(l)):
-        print("Valid")
+    if a == len(l):
+        print('Valid')
     else:
-        print("Invalid")
+        print('Invalid')

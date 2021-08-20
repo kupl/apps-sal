@@ -21,7 +21,7 @@ def main():
                         nxti = i + 1
                         nxtj = 0
                         nxtk = k
-                        if (nxtp ^ nxtq) != crrx:
+                        if nxtp ^ nxtq != crrx:
                             continue
                         nxts = nxtp + nxtq + j
                         if nxts % 2 != crrs:

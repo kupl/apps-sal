@@ -1,4 +1,4 @@
-from sys import*
+from sys import *
 input = stdin.readline
 t = int(input())
 for _ in range(t):
@@ -9,6 +9,6 @@ for _ in range(t):
             l[i] = 1
         else:
             l[i] = 0
-    ans = "".join([str(x) for x in l])
+    ans = ''.join([str(x) for x in l])
     for i in range(k):
         print(ans)

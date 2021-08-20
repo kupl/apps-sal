@@ -1,10 +1,9 @@
 import sys
 input = sys.stdin.readline
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 nums = [[] for i in range(N)]
 for i in range(N):
-    t, d = list(map(int, input().split()))
+    (t, d) = list(map(int, input().split()))
     t -= 1
     nums[t].append(d)
 maxs = []
@@ -26,9 +25,8 @@ while len(maxs) + len(other) < K:
     other.append(rest[idx])
     idx += 1
 rest = rest[idx:]
-
 types = len(maxs)
-for i, r in enumerate(rest):
+for (i, r) in enumerate(rest):
     diff = types * types - pow(types - 1, 2)
     if diff < r - maxs[len(maxs) - 1 - i]:
         maxs[len(maxs) - 1 - i] = r

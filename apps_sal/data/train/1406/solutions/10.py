@@ -8,22 +8,19 @@ def initialize():
 
 
 def countsetbits(n):
-    return (Bit[n & 0xff] +
-      Bit[(n >> 8) & 0xff] +
-      Bit[(n >> 16) & 0xff] +
-      Bit[n >> 24])
+    return Bit[n & 255] + Bit[n >> 8 & 255] + Bit[n >> 16 & 255] + Bit[n >> 24]
 
 
 initialize()
 t = int(input())
 for _ in range(t):
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     a = list(map(int, input().split()))
     e = 0
     o = 0
     for i in a:
         k = countsetbits(i)
-        if (k & 1) == 0:
+        if k & 1 == 0:
             e += 1
         else:
             o += 1

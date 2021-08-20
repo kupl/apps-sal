@@ -28,6 +28,5 @@ while l <= r:
         c += 1
     else:
         break
-
 print(c)
 print(b)

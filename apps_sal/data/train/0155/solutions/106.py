@@ -2,28 +2,26 @@ from functools import lru_cache
 
 
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         n = len(arr)
         canJumpRight = collections.defaultdict(set)
         deque = collections.deque()
         for i in range(n):
-            # print(deque)
             if not deque:
                 deque.append(i)
+            elif arr[i] < arr[deque[-1]]:
+                deque.append(i)
             else:
-                if arr[i] < arr[deque[-1]]:
-                    deque.append(i)
-                else:
-                    temp = collections.deque()
-                    while deque and arr[deque[-1]] <= arr[i]:
-                        curr = deque.pop()
-                        # print('pop', curr, deque and i - deque[-1] <= d)
-                        if deque and curr - deque[-1] <= d:
-                            canJumpRight[deque[-1]].add(curr)
-                            for idx in canJumpRight[curr]:
-                                if idx - deque[-1] <= d:
-                                    canJumpRight[deque[-1]].add(idx)
-                    deque.append(i)
+                temp = collections.deque()
+                while deque and arr[deque[-1]] <= arr[i]:
+                    curr = deque.pop()
+                    if deque and curr - deque[-1] <= d:
+                        canJumpRight[deque[-1]].add(curr)
+                        for idx in canJumpRight[curr]:
+                            if idx - deque[-1] <= d:
+                                canJumpRight[deque[-1]].add(idx)
+                deque.append(i)
         while deque:
             curr = deque.pop()
             if deque and curr - deque[-1] <= d:
@@ -31,23 +29,21 @@ class Solution:
                 for idx in canJumpRight[curr]:
                     if idx - deque[-1] <= d:
                         canJumpRight[deque[-1]].add(idx)
-                # canJump[deque[-1]].update(canJumpRight[curr])
         canJumpLeft = collections.defaultdict(set)
         for i in range(n - 1, -1, -1):
             if not deque:
                 deque.append(i)
+            elif arr[i] < arr[deque[-1]]:
+                deque.append(i)
             else:
-                if arr[i] < arr[deque[-1]]:
-                    deque.append(i)
-                else:
-                    while deque and arr[deque[-1]] <= arr[i]:
-                        curr = deque.pop()
-                        if deque and abs(curr - deque[-1]) <= d:
-                            canJumpLeft[deque[-1]].add(curr)
-                            for idx in canJumpLeft[curr]:
-                                if abs(idx - deque[-1]) <= d:
-                                    canJumpLeft[deque[-1]].add(idx)
-                    deque.append(i)
+                while deque and arr[deque[-1]] <= arr[i]:
+                    curr = deque.pop()
+                    if deque and abs(curr - deque[-1]) <= d:
+                        canJumpLeft[deque[-1]].add(curr)
+                        for idx in canJumpLeft[curr]:
+                            if abs(idx - deque[-1]) <= d:
+                                canJumpLeft[deque[-1]].add(idx)
+                deque.append(i)
         while deque:
             curr = deque.pop()
             if deque and abs(curr - deque[-1]) <= d:

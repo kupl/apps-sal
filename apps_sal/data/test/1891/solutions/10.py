@@ -14,7 +14,6 @@ def ans(arr, l, r, a, b):
     return min(b * len(arr) * (r - l + 1), ans(arr_left, l, mid, a, b) + ans(arr_right, mid + 1, r, a, b))
 
 
-n, k, a, b = list(map(int, input().split()))
+(n, k, a, b) = list(map(int, input().split()))
 arr = [int(i) - 1 for i in input().split()]
-
 print(ans(arr, 0, (1 << n) - 1, a, b))

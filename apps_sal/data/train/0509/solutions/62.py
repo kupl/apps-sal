@@ -1,13 +1,14 @@
 import collections
-N, M, *UVC = [int(_) for _ in open(0).read().split()]
-U, V, C = [UVC[_::len('UVC')] for _ in range(len('UVC'))]
+(N, M, *UVC) = [int(_) for _ in open(0).read().split()]
+(U, V, C) = [UVC[_::len('UVC')] for _ in range(len('UVC'))]
 CUV = []
-for u, v, c in zip(U, V, C):
+for (u, v, c) in zip(U, V, C):
     CUV += [(c, u, v)]
 CUV.sort()
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * (n + 1)
@@ -44,7 +45,7 @@ class UnionFind():
 uf = UnionFind(N)
 G = [{} for _ in range(N + 1)]
 se = set()
-for c, u, v in CUV:
+for (c, u, v) in CUV:
     if uf.is_same(u, v):
         continue
     uf.unite(u, v)

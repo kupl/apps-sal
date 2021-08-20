@@ -1,8 +1,10 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
+
         def okay(s):
             ret = False
-            for c1, c2 in zip(stamp, s):
+            for (c1, c2) in zip(stamp, s):
                 if c2 == '?':
                     continue
                 elif c1 != c2:
@@ -10,7 +12,6 @@ class Solution:
                 else:
                     ret = True
             return ret
-
         todo = len(target) - len(stamp) + 1
         res = []
         idx = 0
@@ -20,7 +21,7 @@ class Solution:
                 if okay(target[i:i + len(stamp)]):
                     idx += 1
                     res.append(i)
-                    target = target[:i] + '?' * (len(stamp)) + target[i + len(stamp):]
+                    target = target[:i] + '?' * len(stamp) + target[i + len(stamp):]
             if target == '?' * len(target):
                 return res[::-1]
             if idx == prv:

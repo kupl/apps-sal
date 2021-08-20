@@ -14,7 +14,7 @@ def mints():
 
 
 def solve():
-    n, m = mints()
+    (n, m) = mints()
     q = list(mints())
     w = dict()
     for i in q:
@@ -50,5 +50,4 @@ def solve():
     print(' '.join(map(str, y)))
 
 
-# for i in range(mint()):
 solve()

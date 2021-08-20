@@ -1,11 +1,6 @@
-# ABC092
-# 参加者
 N = int(input())
-# D日間の合宿でX個のチョコが残った
-D, X = list(map(int, input().split()))
-# 参加者iは,1,Ai+1,2Ai+1..目にチョコを一つ食べる
+(D, X) = list(map(int, input().split()))
 A = [int(input()) for _ in range(N)]
-
 eaten = 0
 for i in range(N):
     day = 0
@@ -17,4 +12,4 @@ for i in range(N):
             cnt += 1
         else:
             break
-print((eaten + X))
+print(eaten + X)

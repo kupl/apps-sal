@@ -4,9 +4,7 @@ def mp():
 
 n = int(input())
 s = input()
-
 a = [0] * 10
-
 for i in s:
     if i == 'L':
         for j in range(10):
@@ -20,5 +18,4 @@ for i in s:
                 break
     else:
         a[int(i)] = 0
-
 print(''.join(map(str, a)))

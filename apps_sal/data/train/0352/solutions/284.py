@@ -1,5 +1,5 @@
-
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=len)
         wordCounter = [collections.Counter(x) for x in words]

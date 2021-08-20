@@ -1,18 +1,15 @@
-# http://codeforces.com/contest/1162/problem/B
-'''
+"""
     Author - Subhajit Das
     University of Engineering and Management, Kolkata
     4/5/2019
-'''
+"""
 
 
 def main():
-    n, m = list(map(int, input().strip().split()))
+    (n, m) = list(map(int, input().strip().split()))
     a = [list(map(int, input().strip().split())) for _ in range(n)]
     b = [list(map(int, input().strip().split())) for _ in range(n)]
-
     possible = True
-
     for row in range(n):
         last_a = a[row][0]
         last_b = b[row][0]
@@ -21,14 +18,13 @@ def main():
                 last_a = a[row][col]
                 last_b = b[row][col]
             else:
-                a[row][col], b[row][col] = b[row][col], a[row][col]
+                (a[row][col], b[row][col]) = (b[row][col], a[row][col])
                 if last_a < a[row][col] and last_b < b[row][col]:
                     last_a = a[row][col]
                     last_b = b[row][col]
                 else:
                     possible = False
                     break
-
     if possible:
         for col in range(m):
             last_a = a[0][col]
@@ -38,15 +34,14 @@ def main():
                     last_a = a[row][col]
                     last_b = b[row][col]
                 else:
-                    a[row][col], b[row][col] = b[row][col], a[row][col]
+                    (a[row][col], b[row][col]) = (b[row][col], a[row][col])
                     if last_a < a[row][col] and last_b < b[row][col]:
                         last_a = a[row][col]
                         last_b = b[row][col]
                     else:
                         possible = False
                         break
-
-    print("Possible" if possible else "Impossible")
+    print('Possible' if possible else 'Impossible')
 
 
 def __starting_point():

@@ -1,7 +1,5 @@
 from sys import stdin, stdout
-
-num, k = list(map(int, stdin.readline().rstrip().split()))
-
+(num, k) = list(map(int, stdin.readline().rstrip().split()))
 numStr = str(num)
 if num == 0:
     print(0)

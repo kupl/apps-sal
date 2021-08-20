@@ -14,7 +14,7 @@ def ok(w):
             lettercnt += 1
             if j == len(s) - 1:
                 lettercnt -= 1
-            if (wordcnt + lettercnt) > w:
+            if wordcnt + lettercnt > w:
                 linecnt += 1
                 wordcnt = lettercnt
             else:
@@ -22,7 +22,6 @@ def ok(w):
             lettercnt = 0
         if wordcnt > w:
             return False
-
     if wordcnt:
         linecnt += 1
     if linecnt > n:

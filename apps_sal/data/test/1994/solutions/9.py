@@ -22,16 +22,13 @@ actpi = arr[-1]
 while actpi != 0:
     toimp.append(actpi)
     actpi = arr[actpi - 1]
-
 toimp.sort()
 for i in range(len(arr)):
     points[arr[i]] += 1
-
 for i in range(len(s) - 1, 0, -1):
     if i in dep:
         points[dep[i]] += points[i]
-
 print(len(toimp) + 1)
 for i in toimp:
-    print(str(i) + " " + str(points[i] + 1))
-print(str(len(s)) + " 1")
+    print(str(i) + ' ' + str(points[i] + 1))
+print(str(len(s)) + ' 1')

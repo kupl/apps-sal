@@ -15,7 +15,7 @@ def f(L):
         if k < mi:
             mi = k
         sumof += k
-        if sumof == (mx * (mx + 1)) // 2 - ((mi - 1) * mi) // 2:
+        if sumof == mx * (mx + 1) // 2 - (mi - 1) * mi // 2:
             s[i - 1] = 1
     s[n - 1] = 1
     return s

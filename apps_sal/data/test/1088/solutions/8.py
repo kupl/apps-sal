@@ -5,7 +5,8 @@ def input():
     return sys.stdin.readline()[:-1]
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, size):
         self.table = [-1 for _ in range(size)]
         self.size = [1 for _ in range(size)]
@@ -40,16 +41,14 @@ class UnionFind():
 
 
 MOD = 998244353
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [list(map(int, input().split())) for _ in range(n)]
 ans = 1
-
 uf_t = UnionFind(n)
 uf_y = UnionFind(n)
-
 for s in range(1, n):
     for t in range(s):
-        ok_y, ok_t = True, True
+        (ok_y, ok_t) = (True, True)
         for i in range(n):
             if a[s][i] + a[t][i] > k:
                 ok_y = False
@@ -59,11 +58,9 @@ for s in range(1, n):
             uf_y.unite(s, t)
         if ok_t:
             uf_t.unite(s, t)
-
 fact = [1 for _ in range(51)]
 for i in range(1, 51):
-    fact[i] = (fact[i - 1] * i) % MOD
-
+    fact[i] = fact[i - 1] * i % MOD
 for i in range(n):
     if uf_t.size[i] > 0:
         ans *= fact[uf_t.size[i]]
@@ -71,5 +68,4 @@ for i in range(n):
     if uf_y.size[i] > 0:
         ans *= fact[uf_y.size[i]]
         ans %= MOD
-
 print(ans)

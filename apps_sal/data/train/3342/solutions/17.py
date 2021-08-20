@@ -4,5 +4,5 @@ def pattern(n):
         for j in range(1, i + 1):
             s = s + str(i)
         if i < n:
-            s = s + "\n"
+            s = s + '\n'
     return s

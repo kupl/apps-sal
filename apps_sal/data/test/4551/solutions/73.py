@@ -1,10 +1,8 @@
 import sys
-
-A, B, C, D = list(map(int, input().split()))
-
+(A, B, C, D) = list(map(int, input().split()))
 if A + B > C + D:
-    print("Left")
+    print('Left')
 elif A + B == C + D:
-    print("Balanced")
+    print('Balanced')
 else:
-    print("Right")
+    print('Right')

@@ -1,7 +1,6 @@
-
 t = int(input())
 for nbt in range(t):
-    n, k = [int(i) for i in input().split()]
+    (n, k) = [int(i) for i in input().split()]
     a = [int(i) for i in input().split()]
     nbc = len(set(a)) - 1
     if k == 1:

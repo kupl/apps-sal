@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         index_list = []
         index_list.append(-1)
@@ -12,7 +13,7 @@ class Solution:
         right = 1
         k_count = 1
         count = 0
-        while right < (len(index_list) - 1):
+        while right < len(index_list) - 1:
             if k_count == k:
                 count += (index_list[left] - index_list[left - 1]) * (index_list[right + 1] - index_list[right])
                 left += 1

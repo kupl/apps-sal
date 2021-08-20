@@ -15,10 +15,8 @@ def check(s):
             h -= 1
         else:
             raise NotImplementedError()
-
         min_h = min(h, min_h)
         max_h = max(h, max_h)
-
     if min(0, h) == min_h:
         return h
     else:
@@ -32,12 +30,10 @@ def count_pairs(strs):
         if h not in by_height:
             by_height[h] = 0
         by_height[h] += 1
-
     pairs_count = 0
-    for h, c in list(by_height.items()):
+    for (h, c) in list(by_height.items()):
         if h is not None and h > 0:
             pairs_count += min(by_height[h], by_height.get(-h, 0))
-
     pairs_count += by_height.get(0, 0) // 2
     return pairs_count
 

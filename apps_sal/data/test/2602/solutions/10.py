@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    a, b, n, m = map(int, input().split())
+    (a, b, n, m) = map(int, input().split())
     if n + m > a + b:
         print('No')
         continue

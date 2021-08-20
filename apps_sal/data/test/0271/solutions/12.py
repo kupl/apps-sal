@@ -1,7 +1,5 @@
 from sys import stdin, stdout
-
 n = int(stdin.readline())
-
 if str(n)[-1] == '0':
     stdout.write(str(n))
 else:

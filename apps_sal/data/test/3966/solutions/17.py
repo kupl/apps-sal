@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()

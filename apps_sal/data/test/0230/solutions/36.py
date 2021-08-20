@@ -18,7 +18,7 @@ def f(m):
 
 l = 0
 r = N // 2 + 1
-while (r - l) > 1:
+while r - l > 1:
     mid = (r + l) // 2
     if f(mid):
         l = mid

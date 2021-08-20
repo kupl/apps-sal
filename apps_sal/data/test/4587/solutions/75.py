@@ -19,30 +19,25 @@ def bs(in_ls, key):
 
 def main():
     n = int(input())
-    a_list = list(map(int, input().split(" ")))
-    b_list = list(map(int, input().split(" ")))
-    c_list = list(map(int, input().split(" ")))
-    #a < b < c
-
+    a_list = list(map(int, input().split(' ')))
+    b_list = list(map(int, input().split(' ')))
+    c_list = list(map(int, input().split(' ')))
     a_sorted = list(sorted(a_list))
     b_sorted = list(sorted(b_list))
     c_sorted = list(sorted(c_list))
-
     bc_dict = {}
     score = 0
     score_list = [0 for i in range(n)]
-    for i, b in enumerate(b_sorted[::-1]):
+    for (i, b) in enumerate(b_sorted[::-1]):
         ok = bs(c_sorted, b)
         score += n - ok
         score_list[n - i - 1] += score
-
     total = 0
     for a in a_sorted:
         ok = bs(b_sorted, a)
         if ok == n:
             continue
         total += score_list[ok]
-
     print(total)
 
 

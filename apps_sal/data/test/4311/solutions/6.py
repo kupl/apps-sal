@@ -6,5 +6,4 @@ while not n in li:
         n //= 2
     else:
         n = n * 3 + 1
-
 print(len(li) + 1)

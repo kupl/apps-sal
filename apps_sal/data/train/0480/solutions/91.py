@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, steps: int, arrLen: int) -> int:
         dp = [[0 for _ in range(min(steps + 1, arrLen))] for _ in range(steps + 1)]
         dp[0][0] = 1

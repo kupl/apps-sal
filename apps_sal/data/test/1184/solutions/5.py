@@ -1,5 +1,5 @@
 sa = input()
-if sa == "{}":
+if sa == '{}':
     print(0)
 else:
     sa2 = []

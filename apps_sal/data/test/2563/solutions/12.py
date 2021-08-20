@@ -21,16 +21,15 @@ for ewfe in range(n):
             else:
                 odp.append(npar[npa])
                 npa += 1
+        elif pa == len(par):
+            odp.append(npar[npa])
+            npa += 1
         else:
-            if pa == len(par):
-                odp.append(npar[npa])
-                npa += 1
-            else:
-                odp.append(par[pa])
-                pa += 1
+            odp.append(par[pa])
+            pa += 1
     k = len(odp)
     for i in range(k):
         if i < k - 1:
-            print(odp[i], end="")
+            print(odp[i], end='')
         else:
             print(odp[i])

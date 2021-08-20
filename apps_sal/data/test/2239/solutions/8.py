@@ -1,4 +1,5 @@
-def read(): return [int(i) for i in input().split()]
+def read():
+    return [int(i) for i in input().split()]
 
 
 t = int(input())

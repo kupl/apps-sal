@@ -1,4 +1,4 @@
-h, w = list(map(int, input().split()))
+(h, w) = list(map(int, input().split()))
 s = [input() for i in range(h)]
 ss = [[0 for _ in range(w + 2)] for _ in range(h + 2)]
 for j in range(w):
@@ -17,6 +17,6 @@ for j in range(w):
     for i in range(h):
         if ss[i + 1][j + 1] == '#':
             s[i][j] = '#'
-for i, d in enumerate(s):
+for (i, d) in enumerate(s):
     d = list(map(str, d))
-    print((''.join(d)))
+    print(''.join(d))

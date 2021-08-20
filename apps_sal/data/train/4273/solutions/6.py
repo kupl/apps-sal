@@ -1,1 +1,2 @@
-def shorten_to_date(d): return d[:d.find(",")]
+def shorten_to_date(d):
+    return d[:d.find(',')]

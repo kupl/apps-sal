@@ -1,7 +1,5 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ps = list(map(int, input().split()))
-
-
 g = [None for i in range(256)]
 f = [None for i in range(256)]
 ans = []

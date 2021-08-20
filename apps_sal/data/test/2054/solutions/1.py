@@ -23,9 +23,6 @@ def lm():
 
 q = nn()
 for _ in range(q):
-
-    d, s = mi()
-
+    (d, s) = mi()
     m = min(d, s)
-
     print(min(m, (d + s) // 3))

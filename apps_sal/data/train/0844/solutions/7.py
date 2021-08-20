@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 hit = [0] * n
 count = 0
 for i in range(k):

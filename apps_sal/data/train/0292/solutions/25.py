@@ -1,4 +1,5 @@
 class Solution:
+
     def maxAbsValExpr(self, arr1: List[int], arr2: List[int]) -> int:
         mx = 0
         for a in [1, -1]:

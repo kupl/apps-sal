@@ -1,6 +1,4 @@
-SIERPINSKI = {
-    1: [' * ', '* *']
-}
+SIERPINSKI = {1: [' * ', '* *']}
 
 
 def join_lesser(fig):
@@ -17,7 +15,6 @@ def join_lesser(fig):
 def get_sierpinski(n):
     if n in SIERPINSKI:
         return SIERPINSKI[n]
-
     lesser = get_sierpinski(n - 1)
     SIERPINSKI[n] = join_lesser(lesser)
     return SIERPINSKI[n]

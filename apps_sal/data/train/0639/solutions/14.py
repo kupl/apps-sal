@@ -5,8 +5,7 @@ for i in range(t):
     for i in set(s):
         lst.append(s.count(i))
     lst.sort()
-
     if len(lst) < 3 or lst[-1] == lst[-2] + lst[-3]:
-        print("Dynamic")
+        print('Dynamic')
     else:
-        print("Not")
+        print('Not')

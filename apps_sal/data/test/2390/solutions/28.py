@@ -1,10 +1,10 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 xlist = []
 for i in range(n):
-    x, v = map(int, input().split())
+    (x, v) = map(int, input().split())
     xlist.append((x, v))
 fclock = [[0, 0] for _ in range(n)]
-ftemp, fval = [0] * n, [0] * n
+(ftemp, fval) = ([0] * n, [0] * n)
 for i in range(n):
     if i == 0:
         fval[0] = xlist[i][1]
@@ -23,7 +23,7 @@ rxlist = []
 for i in range(n - 1, -1, -1):
     rxlist.append([c - xlist[i][0], xlist[i][1]])
 rclock = [[0, 0] for _ in range(n)]
-rtemp, rval = [0] * n, [0] * n
+(rtemp, rval) = ([0] * n, [0] * n)
 for i in range(n):
     if i == 0:
         rval[0] = rxlist[i][1]
@@ -37,7 +37,6 @@ for i in range(n):
             rclock[i] = [i, rval[i] - rxlist[i][0]]
         else:
             rclock[i] = rclock[i - 1]
-
 rret = [rxlist[i][0] for i in range(n)]
 gmax = max(rclock[n - 1][1], fclock[n - 1][1])
 for i in range(n - 1):

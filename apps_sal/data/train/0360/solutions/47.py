@@ -1,13 +1,13 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
-        left, right = max(weights), sum(weights)
+        (left, right) = (max(weights), sum(weights))
         while left < right:
             mid = (left + right) // 2
             if self.can_achieve(weights, mid, D):
                 right = mid
             else:
                 left = mid + 1
-
         return left
 
     def can_achieve(self, weights, max_weight, D):
@@ -20,6 +20,5 @@ class Solution:
                 days += 1
             total += weights[i]
             i += 1
-
         days += 1
         return days <= D

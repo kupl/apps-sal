@@ -5,7 +5,7 @@ for _ in range(n):
 diz = {}
 for i in range(n - 1):
     for j in range(i + 1, n):
-        appo = (array[i] + array[j])
+        appo = array[i] + array[j]
         if appo % 2 == 0:
             diz[appo >> 1] = 1
 counter = 0

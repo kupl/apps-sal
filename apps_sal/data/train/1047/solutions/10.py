@@ -5,7 +5,7 @@ while t > 0:
     arr = []
     arr3 = []
     for i in range(n):
-        x, y = map(int, input().strip().split(" "))
+        (x, y) = map(int, input().strip().split(' '))
         arr.append(y - x)
         arr3.append(y + x)
     arr = sorted(arr)

@@ -1,12 +1,9 @@
 from collections import deque
-
-N, K = [int(i) for i in input().split()]
+(N, K) = [int(i) for i in input().split()]
 AS = [int(i) for i in input().split()]
-
 l = deque()
 s = 0
 cnt = 0
-
 s = 0
 for i in range(N):
     a = AS[i]
@@ -20,6 +17,4 @@ for i in range(N):
             l.popleft()
         s -= l[0]
         l.popleft()
-
-
 print(cnt)

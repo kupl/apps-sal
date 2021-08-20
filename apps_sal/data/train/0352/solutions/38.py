@@ -1,11 +1,10 @@
-
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words.sort(key=lambda x: len(x))
         print(words)
         if not words:
             return 0
-
         max_chain_dp = {}
         max_len = 1
         for i in range(len(words)):
@@ -26,17 +25,15 @@ class Solution:
         if len(word2) - len(word1) > 1:
             return False
         added = False
-        i, j = 0, 0
+        (i, j) = (0, 0)
         while i < len(word1) or j < len(word2):
             if i < len(word1) and word1[i] == word2[j]:
                 i += 1
                 j += 1
+            elif added:
+                return False
             else:
-                if added:
-                    return False
-                else:
-                    j += 1
-                    added = True
-
+                j += 1
+                added = True
         if i == len(word1) and j == len(word2):
             return True

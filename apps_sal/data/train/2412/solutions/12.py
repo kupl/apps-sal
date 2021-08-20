@@ -1,6 +1,6 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
-        # use a stack to save char, cnt
         if not S:
             return None
         stack = []
@@ -11,4 +11,4 @@ class Solution:
                 stack.append([s, 1])
             if stack[-1][1] == 2:
                 stack.pop()
-        return ''.join(char * num for char, num in stack)
+        return ''.join((char * num for (char, num) in stack))

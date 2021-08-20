@@ -4,6 +4,6 @@ for i in range(t):
     s = input()
     k = s.find('8')
     if k != -1 and len(s) - k >= 11:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

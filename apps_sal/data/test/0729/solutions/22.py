@@ -14,17 +14,15 @@ def main():
             print('YES')
             print(a[i] + a[i + 1])
             return
-    print("NO")
+    print('NO')
 
 
 deb = 0
 if deb:
-    file = open("input.txt", "r")
+    file = open('input.txt', 'r')
     input = file.readline
 else:
     input = sys.stdin.readline
-
 main()
-
 if deb:
     file.close()

@@ -1,10 +1,9 @@
 from functools import lru_cache
-
 kases = int(input())
 while kases > 0:
     kases = kases - 1
     T = int(input())
-    arr = list(map(int, input().split(" ")))
+    arr = list(map(int, input().split(' ')))
 
     @lru_cache(maxsize=500)
     def ans(i, j):

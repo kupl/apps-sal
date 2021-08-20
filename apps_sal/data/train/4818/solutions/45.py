@@ -1,5 +1,5 @@
 def solution(a, b):
-    if(len(a) < len(b)):
+    if len(a) < len(b):
         result = a + b + a
         return result
     else:

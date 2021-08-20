@@ -1,4 +1,5 @@
 class Solution:
+
     def deleteAndEarn(self, nums):
         """
         :type nums: List[int]
@@ -18,5 +19,4 @@ class Solution:
                 pick[num] = max(miss[prev], pick[prev]) + num * freq
                 miss[num] = max(miss[prev], pick[prev])
             prev = num
-            # print(num, pick, miss)
         return max(pick[prev], miss[prev])

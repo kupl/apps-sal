@@ -1,9 +1,10 @@
 class Solution:
+
     def canConvertString(self, s: str, t: str, k: int) -> bool:
         if len(s) != len(t):
             return False
         count = [0 for _ in range(26)]
-        for a, b in zip(s, t):
+        for (a, b) in zip(s, t):
             if a == b:
                 continue
             shift = (ord(b) - ord(a)) % 26

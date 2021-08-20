@@ -4,5 +4,5 @@ def powers_of_two(n):
     else:
         result = []
         for x in range(n + 1):
-            result.append(2**x)
+            result.append(2 ** x)
         return result

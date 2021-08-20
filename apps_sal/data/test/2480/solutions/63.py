@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [0] + list(map(int, input().split()))
 d = defaultdict(int)
 d[0] = 1

@@ -11,11 +11,11 @@ for i in range(t):
     y = []
     for i in range(b):
         k = fb[i]
-        if(k in fa):
+        if k in fa:
             x.append(fa.index(k))
             y.append(fa.index(k))
     y.sort()
-    if(x == y and len(x) == b):
-        print("Yes")
+    if x == y and len(x) == b:
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -1,6 +1,6 @@
 import math
 import sys
-n, m, k = map(int, sys.stdin.readline().split())
+(n, m, k) = map(int, sys.stdin.readline().split())
 a = [int(x) for x in sys.stdin.readline().split()]
 a.reverse()
 ans = 0

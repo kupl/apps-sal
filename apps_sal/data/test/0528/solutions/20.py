@@ -1,4 +1,4 @@
-'''
+"""
 n,m = map(int,input().split())
 eg,deg = [[] for _ in range(n+1)],[0 for _ in range(n+1)]
 f,rk = list(range(n+1)),[0 for _ in range(n+1)]
@@ -27,16 +27,16 @@ for i in range(1,n+1):
         ok = 0
         break
 print("YES") if ok else print("NO")
-'''
-n, m = [int(x) for x in input().split()]
+"""
+(n, m) = [int(x) for x in input().split()]
 d = {}
 visited = set()
 for x in range(m):
-    a, b = input().split()
+    (a, b) = input().split()
     d.setdefault(a, {a}).add(b)
     d.setdefault(b, {b}).add(a)
 res = 'YES'
-for x, y in d.items():
+for (x, y) in d.items():
     if x not in visited:
         if all([d[u] == y for u in y]):
             visited.update(y)

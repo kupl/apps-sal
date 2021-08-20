@@ -16,14 +16,14 @@ def inv(x, p):
 
 def v(p, a, b, k):
     i = 1
-    while (pow_mod(a, k, (10 ** 9 + 9) ** i) - pow_mod(b, k, (10 ** 9 + 9) ** i)) == 0:
+    while pow_mod(a, k, (10 ** 9 + 9) ** i) - pow_mod(b, k, (10 ** 9 + 9) ** i) == 0:
         i += 1
     return i - 1
 
 
 def main():
     p = 10 ** 9 + 9
-    n, a, b, k = list(map(int, input().split()))
+    (n, a, b, k) = list(map(int, input().split()))
     S = list(input())
     for i in range(k):
         if S[i] == '+':
@@ -33,14 +33,14 @@ def main():
     s = 0
     if a != b:
         vp = p ** v(p, a, b, k)
-        sum_mod = ((pow_mod(a, (n + 1), p * vp) - pow_mod(b, (n + 1), p * vp)) // vp) * inv(((pow_mod(a, k, p * vp) - pow_mod(b, k, p * vp)) // vp) % p, p)
+        sum_mod = (pow_mod(a, n + 1, p * vp) - pow_mod(b, n + 1, p * vp)) // vp * inv((pow_mod(a, k, p * vp) - pow_mod(b, k, p * vp)) // vp % p, p)
         pa = pow_mod(a, k - 1, p)
         pb = 1
         inv_a = inv(a, p)
         for i in range(k):
-            s += (S[i] * pa * pb * sum_mod) % p
-            pa = (pa * inv_a) % p
-            pb = (pb * b) % p
+            s += S[i] * pa * pb * sum_mod % p
+            pa = pa * inv_a % p
+            pb = pb * b % p
     else:
         for i in range(k):
             s += S[i] * (n + 1) // k
@@ -50,36 +50,3 @@ def main():
 
 
 main()
-
-
-# def giant_steps(start, target, n=2):
-#L = [target]
-# while L[-1] > start*n:
-#L = L + [L[-1]//n + 2]
-# return L[::-1]
-
-# def rshift(x, n):
-# if n >= 0: return x >> n
-# else:      return x << (-n)
-
-# def lshift(x, n):
-# if n >= 0: return x << n
-# else:      return x >> (-n)
-
-# def size(x):
-# return str(x).count('2')
-
-# def newdiv(p, q):
-#szp = size(p)
-#szq = size(q)
-#szr = szp - szq
-# if min(szp, szq, szr) < 2*START_PREC:
-# return p//q
-#r = (1 << (2*START_PREC)) // (q >> (szq - START_PREC))
-#last_prec = START_PREC
-# for prec in giant_steps(START_PREC, szr):
-#a = lshift(r, prec-last_prec+1)
-#b = rshift(r**2 * rshift(q, szq-prec), 2*last_prec)
-#r = a - b
-#last_prec = prec
-# return ((p >> szq) * r) >> szr

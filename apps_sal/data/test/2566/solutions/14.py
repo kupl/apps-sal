@@ -11,7 +11,7 @@ for i in range(int(input())):
         k %= sm
     ad = 7
     for i in range(7):
-        day, cnt = 0, k
+        (day, cnt) = (0, k)
         for j in range(i, i + 7):
             j %= 7
             day += 1

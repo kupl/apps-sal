@@ -1,4 +1,5 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if amount == 0:
             return 0
@@ -13,7 +14,6 @@ class Solution:
                 continue
             tmp = float('inf')
             for coin in coins:
-
                 if coin <= i:
                     if dp[i - coin] == -1:
                         continue

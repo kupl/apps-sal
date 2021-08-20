@@ -18,20 +18,20 @@ def si():
 
 
 def pYes():
-    print("YES")
+    print('YES')
 
 
 def pNo():
-    print("NO")
+    print('NO')
 
 
 def plist(l):
-    print("".join(l))
+    print(''.join(l))
 
 
 t = int(input())
 for i in range(t):
-    n, k = ri()
+    (n, k) = ri()
     a = li()
     b = li()
     a.sort()

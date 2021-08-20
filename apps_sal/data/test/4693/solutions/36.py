@@ -1,5 +1,5 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 if A + B >= 10:
-    print("error")
+    print('error')
 else:
     print(A + B)

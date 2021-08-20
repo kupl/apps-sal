@@ -1,2 +1,2 @@
 n = int(input())
-print(2 * (2**n - 1))
+print(2 * (2 ** n - 1))

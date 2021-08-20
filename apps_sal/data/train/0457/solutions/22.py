@@ -1,4 +1,4 @@
-'''
+"""
 Input: coins = [1, 2, 5], amount = 11
 Output: 3 
 Explanation: 11 = 5 + 5 + 1
@@ -20,7 +20,7 @@ visited =set(amount_explored/to_explore, amt2, amt3)
 ----BIG-O----
 O(V+E) -- O(remain+nextRemain)?
 
-'''
+"""
 
 
 class Solution:
@@ -35,13 +35,12 @@ class Solution:
         q.append((amount, count))
         visited = set()
         visited.add(amount)
-
         while q:
-            remain, count = q.popleft()
+            (remain, count) = q.popleft()
             if remain in coins:
                 return count
             for c in coins:
-                if remain - c > 0 and (remain - c) not in visited:
+                if remain - c > 0 and remain - c not in visited:
                     q.append((remain - c, count + 1))
-                    visited.add(remain - c)  # to avoid going down this path if another path has already explored this
+                    visited.add(remain - c)
         return -1

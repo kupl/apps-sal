@@ -4,9 +4,8 @@ input = sys.stdin.readline
 
 
 def get_diameter(tree):
-    u, _, _ = _dfs(0, tree)
-    v, diam, dist = _dfs(u, tree)
-
+    (u, _, _) = _dfs(0, tree)
+    (v, diam, dist) = _dfs(u, tree)
     path = [v]
     while v != u:
         for nxt_v in tree[v]:
@@ -14,7 +13,7 @@ def get_diameter(tree):
                 path.append(nxt_v)
                 v = nxt_v
                 break
-    return diam, path
+    return (diam, path)
 
 
 def _dfs(start, tree):
@@ -30,7 +29,7 @@ def _dfs(start, tree):
             dist[nxt_v] = dist[v] + 1
             stack.append(nxt_v)
     max_d = max(dist)
-    return dist.index(max_d), max_d, dist
+    return (dist.index(max_d), max_d, dist)
 
 
 def ab(a, b):
@@ -49,32 +48,27 @@ def ab(a, b):
 
 t = int(input())
 for _ in range(t):
-    n, a, b, da, db = map(int, input().split())
+    (n, a, b, da, db) = map(int, input().split())
     edges = [list(map(int, input().split())) for i in range(n - 1)]
-
     a -= 1
     b -= 1
     if da * 2 >= db:
-        print("Alice")
+        print('Alice')
         continue
-
     tree = [[] for i in range(n)]
-    for u, v in edges:
+    for (u, v) in edges:
         u -= 1
         v -= 1
         tree[u].append(v)
         tree[v].append(u)
-
     distance = ab(a, b)
     if distance <= da:
-        print("Alice")
+        print('Alice')
         continue
-
-    d, _ = get_diameter(tree)
+    (d, _) = get_diameter(tree)
     d += 1
     db = da * 2 + 2
-
     if d >= db:
-        print("Bob")
+        print('Bob')
     else:
-        print("Alice")
+        print('Alice')

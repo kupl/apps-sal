@@ -1,4 +1,3 @@
-
 road = input()
 t = input()
 cur = 0

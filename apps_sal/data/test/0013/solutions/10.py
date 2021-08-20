@@ -1,9 +1,10 @@
 from types import GeneratorType
-n, k = list(map(lambda x: int(x), input().split()))
+(n, k) = list(map(lambda x: int(x), input().split()))
 m = list(map(lambda x: int(x), input().split()))
 
 
 def bootstrap(f, stack=[]):
+
     def wrappedfunc(*args, **kwargs):
         if stack:
             return f(*args, **kwargs)
@@ -19,7 +20,6 @@ def bootstrap(f, stack=[]):
                         break
                     to = stack[-1].send(to)
             return to
-
     return wrappedfunc
 
 
@@ -31,45 +31,30 @@ class Graph:
 
     @bootstrap
     def DFSUtil(self, temp, v, visited):
-
         visited[v] = True
-
         for i in self.adj[v]:
             if visited[i] == False:
                 yield self.DFSUtil(temp, i, visited)
-
         temp.append(v)
         yield temp
 
     def addEdge(self, v, w):
         self.adj[v].append(w)
-        # self.adj[w].append(v)
 
     @bootstrap
     def isCyclicUtil(self, v, visited, recStack):
-
-        # Mark current node as visited and
-        # adds to recursion stack
         visited[v] = True
         recStack[v] = True
-
-        # Recur for all neighbours
-        # if any neighbour is visited and in
-        # recStack then graph is cyclic
         for neighbour in self.adj[v]:
             if visited[neighbour] == False:
-                ans = yield self.isCyclicUtil(neighbour, visited, recStack)
+                ans = (yield self.isCyclicUtil(neighbour, visited, recStack))
                 if ans == True:
                     yield True
             elif recStack[neighbour] == True:
                 yield True
-
-        # The node needs to be poped from
-        # recursion stack before function ends
         recStack[v] = False
         yield False
 
-    # Returns true if graph is cyclic else false
     def isCyclic(self, nodes):
         visited = [False] * self.V
         recStack = [False] * self.V
@@ -81,9 +66,7 @@ class Graph:
 
 
 G = Graph(n)
-
 for i in range(0, n):
-
     x = list(map(lambda x: int(x), input().split()))
     if x[0] == 0:
         continue
@@ -91,20 +74,16 @@ for i in range(0, n):
         for k in range(1, x[0] + 1):
             G.addEdge(i, x[k] - 1)
 visited = [False for _ in range(n)]
-
 path = []
-# print(G.adj)
 for subj in m:
     temp = []
     if visited[subj - 1] == False:
-
         G.DFSUtil(temp, subj - 1, visited)
-
         path.extend(temp)
 if G.isCyclic([x - 1 for x in m]):
     print(-1)
 else:
     print(len(path))
     for p in path:
-        print(p + 1, end=" ")
+        print(p + 1, end=' ')
     print()

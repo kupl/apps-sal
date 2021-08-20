@@ -7,8 +7,7 @@ def main():
     n = int(input())
     input_a = list(map(int, input().split()))
     a = deque(input_a)
-
-    while(len(a) != 1):
+    while len(a) != 1:
         x = a.popleft()
         y = a.popleft()
         z = x ^ y
@@ -18,7 +17,6 @@ def main():
     for i in input_a:
         x = i ^ sum
         ans.append(x)
-
     for i in ans:
         print(i, end=' ')
 

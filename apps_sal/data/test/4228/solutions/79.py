@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 ans = 0
 if l > 0:
     for i in range(l + 1, l + n):

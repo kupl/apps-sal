@@ -1,5 +1,5 @@
 def resolve():
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     cnt = 1
     ans = 0
     while cnt < b:

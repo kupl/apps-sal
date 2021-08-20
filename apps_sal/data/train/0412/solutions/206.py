@@ -1,4 +1,5 @@
 class Solution:
+
     def numRollsToTarget(self, d: int, f: int, target: int) -> int:
         m = pow(10, 9) + 7
         T = [[0 for i in range(max(target + 1, f + 1))] for i in range(d)]
@@ -10,5 +11,4 @@ class Solution:
                     if j - k > 0:
                         T[i][j] += T[i - 1][j - k]
                         T[i][j] = T[i][j] % m
-            # print(T)
         return T[d - 1][target]

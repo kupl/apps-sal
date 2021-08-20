@@ -3,7 +3,7 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    N, K = map(int, input().split())
+    (N, K) = map(int, input().split())
     A = [int(a) for a in input().split()]
     sumA = sum(A)
     D = []
@@ -15,7 +15,7 @@ def solve():
             if i ** 2 != sumA:
                 D.append(sumA // i)
     D.sort(reverse=True)
-    for i, d in enumerate(D):
+    for (i, d) in enumerate(D):
         L = []
         count = 0
         for a in A:
@@ -24,7 +24,7 @@ def solve():
                 count += 1
         L.sort()
         if count > 0:
-            minus, plus = [0] * count, [0] * count
+            (minus, plus) = ([0] * count, [0] * count)
             minus[0] = L[0]
             plus[count - 1] = d - L[count - 1]
             for i in range(1, count):
@@ -39,7 +39,6 @@ def solve():
                 break
     else:
         print(1)
-
     return 0
 
 

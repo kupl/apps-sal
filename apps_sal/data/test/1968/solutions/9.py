@@ -1,4 +1,4 @@
-n, v = map(int, input().split())
+(n, v) = map(int, input().split())
 p = 0
 q = []
 for i in range(n):
@@ -7,7 +7,6 @@ for i in range(n):
     if km < v:
         p += 1
         q.append(i + 1)
-
 print(p)
 for x in q:
     print(x, end=' ')

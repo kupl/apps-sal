@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ans = []
 count = 0
 for i in range(n):
@@ -8,5 +8,5 @@ for i in range(n):
         ans.append(i + 1)
 print(count)
 if count > 0:
-    sep = " "
+    sep = ' '
     print(sep.join(list(map(str, ans))))

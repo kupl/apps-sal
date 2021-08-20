@@ -1,6 +1,6 @@
 n = int(input())
 a = [int(i) for i in input().split()]
-s, f = [int(i) for i in input().split()]
+(s, f) = [int(i) for i in input().split()]
 a = a + a
 ln = f - s
 ans = sum(a[:ln])

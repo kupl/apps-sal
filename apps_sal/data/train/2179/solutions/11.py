@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split(' ')))
+(a, b, c) = list(map(int, input().split(' ')))
 n = int(input())
 ans = 0
 x = list(map(int, input().split(' ')))

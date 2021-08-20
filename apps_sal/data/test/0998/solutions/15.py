@@ -1,5 +1,5 @@
 v = [0]
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 e = [0] * (1 << 18)
 e[0] = 1
 for i in range(1, 1 << n):

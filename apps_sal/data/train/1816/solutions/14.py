@@ -11,10 +11,9 @@ class Solution:
 
     def alertNames(self, keyName: List[str], keyTime: List[str]) -> List[str]:
         sorted_list = sorted(zip(keyTime, keyName))
-        # print(sorted_list)
         alerted = []
         people = {}
-        for time_str, name in sorted_list:
+        for (time_str, name) in sorted_list:
             if name not in alerted:
                 time = [int(time_str[:2]), int(time_str[-2:])]
                 if name in list(people.keys()):
@@ -27,11 +26,10 @@ class Solution:
                                 alerted.append(name)
                         else:
                             people[name] = [time]
+                    elif not within_hour(time, people[name][0]):
+                        people[name] = [time]
                     else:
-                        if not within_hour(time, people[name][0]):
-                            people[name] = [time]
-                        else:
-                            people[name].append(time)
+                        people[name].append(time)
                 else:
                     people[name] = [time]
         return sorted(alerted)

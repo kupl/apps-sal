@@ -1,7 +1,5 @@
 from collections import Counter
-
-reqs = {"road": Counter("bw"), "settlement": Counter("bwsg"),
-        "city": Counter("ooogg"), "development": Counter("osg")}
+reqs = {'road': Counter('bw'), 'settlement': Counter('bwsg'), 'city': Counter('ooogg'), 'development': Counter('osg')}
 
 
 def build_or_buy(hand):

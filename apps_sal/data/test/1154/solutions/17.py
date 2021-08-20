@@ -1,4 +1,4 @@
-n, h, k = map(int, input().split())
+(n, h, k) = map(int, input().split())
 hh = 0
 ans = 0
 for x in list(map(int, input().split())):

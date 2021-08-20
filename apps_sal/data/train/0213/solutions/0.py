@@ -1,4 +1,5 @@
 class Solution:
+
     def myPow(self, x, n):
         """
         :type x: float
@@ -13,9 +14,9 @@ class Solution:
             else:
                 return 1 / x
         if n > 0:
-            a, b = int(n // 2), n % 2
+            (a, b) = (int(n // 2), n % 2)
         else:
-            a, b = -int(-n // 2), -(n % 2)
+            (a, b) = (-int(-n // 2), -(n % 2))
         y = self.myPow(x, a)
         z = self.myPow(x, b)
         return y * y * z

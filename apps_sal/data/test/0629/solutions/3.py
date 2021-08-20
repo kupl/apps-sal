@@ -1,7 +1,7 @@
 n = int(input())
-mas1 = list(map(int, input().split(" ")))
-mas2 = list(map(int, input().split(" ")))
-mas3 = list(map(int, input().split(" ")))
+mas1 = list(map(int, input().split(' ')))
+mas2 = list(map(int, input().split(' ')))
+mas3 = list(map(int, input().split(' ')))
 sum1 = 0
 sum2 = sum(mas2)
 res = list()

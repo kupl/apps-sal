@@ -1,4 +1,4 @@
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 l = []
 for i in range(N):
     l.append(int(input()))
@@ -9,7 +9,7 @@ def dfs(bamboo, a, b, c):
         if min(a, b, c) > 0:
             return abs(A - a) + abs(B - b) + abs(C - c) - 30
         else:
-            return 10**10
+            return 10 ** 10
     else:
         ans1 = dfs(bamboo + 1, a, b, c)
         ans2 = dfs(bamboo + 1, a + l[bamboo], b, c) + 10

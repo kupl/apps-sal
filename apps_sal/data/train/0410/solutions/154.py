@@ -1,8 +1,10 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def BFS(queue):
             while queue:
-                var, level = queue.popleft()
+                (var, level) = queue.popleft()
                 if var == 1:
                     return level
                 if var % 2:

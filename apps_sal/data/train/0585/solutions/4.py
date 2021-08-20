@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 
 
@@ -13,7 +12,7 @@ def maxfact(g, n):
     maxf = None
     while i * i <= g:
         if g % i == 0:
-            if(i <= n):
+            if i <= n:
                 maxf = i
             if math.floor(g / i) <= n:
                 maxf = math.floor(g / i)

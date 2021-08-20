@@ -16,7 +16,7 @@ ind = 2
 for p in paths:
     for i in range(len(p) - 1):
         for j in range(p[i]):
-            m[ind] = 'N' * (p[i] - j) + 'Y' * (p[i + 1]) + 'N' * n
+            m[ind] = 'N' * (p[i] - j) + 'Y' * p[i + 1] + 'N' * n
             ind += 1
     for j in range(p[-1]):
         m[ind] = 'N' * n

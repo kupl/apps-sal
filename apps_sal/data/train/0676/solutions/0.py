@@ -1,5 +1,4 @@
 from collections import Counter
-
 for _ in range(int(input())):
     n = int(input())
     l = [i for i in input().split()]
@@ -7,11 +6,10 @@ for _ in range(int(input())):
     c = Counter(l)
     cc = []
     m = 0
-    for l, count in c.most_common(len(l) - 1):
+    for (l, count) in c.most_common(len(l) - 1):
         if m == 0:
             ll.append(l)
             cc.append(count)
-
         if m == count:
             ll.append(l)
             cc.append(count)

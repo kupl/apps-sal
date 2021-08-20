@@ -1,9 +1,9 @@
-s = "RGB" * 666
-rgb = ["GB" + s]
-rgb.append("RGB" + s)
-rgb.append("BRGB" + s)
+s = 'RGB' * 666
+rgb = ['GB' + s]
+rgb.append('RGB' + s)
+rgb.append('BRGB' + s)
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     t = input()
     l = len(t)
     ans = 2001

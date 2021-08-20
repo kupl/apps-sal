@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class UnionFind:
+
     def __init__(self, size):
         self.parent = list(range(size))
 
@@ -11,24 +12,24 @@ class UnionFind:
         return i
 
     def unite(self, i, j):
-        i, j = self.find(i), self.find(j)
+        (i, j) = (self.find(i), self.find(j))
         if i > j:
-            i, j = j, i
+            (i, j) = (j, i)
         self.parent[j] = i
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 (*a,) = list(map(int, input().split()))
 (*b,) = list(map(int, input().split()))
 uf = UnionFind(n)
 for _ in range(m):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     uf.unite(x - 1, y - 1)
-sa, sb = defaultdict(int), defaultdict(int)
+(sa, sb) = (defaultdict(int), defaultdict(int))
 for i in range(n):
     sa[uf.find(i)] += a[i]
     sb[uf.find(i)] += b[i]
-if all(sa[i] == sb[i] for i in sa):
-    print("Yes")
+if all((sa[i] == sb[i] for i in sa)):
+    print('Yes')
 else:
-    print("No")
+    print('No')

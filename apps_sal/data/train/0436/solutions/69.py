@@ -1,11 +1,12 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         q = [n]
         seen = set()
         res = 0
         while q:
             nq = []
-            for x in q:  # SIMPLE BFS
+            for x in q:
                 if x == 0:
                     return res
                 cur = x

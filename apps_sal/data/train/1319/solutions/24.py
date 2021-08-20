@@ -1,4 +1,4 @@
-citizens, visits = list(map(int, input().split()))
+(citizens, visits) = list(map(int, input().split()))
 total = citizens + visits
 l = []
 for i in range(total):

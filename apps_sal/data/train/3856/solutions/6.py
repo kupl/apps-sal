@@ -9,4 +9,4 @@ dp = [p[i - 1] for i in p if i - 1 < len(p)]
 
 
 def solve(a, b):
-    return sum(n for n in dp if a <= n <= b)
+    return sum((n for n in dp if a <= n <= b))

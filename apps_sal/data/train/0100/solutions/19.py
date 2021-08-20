@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    r, g, b = map(int, input().split())
+    (r, g, b) = map(int, input().split())
     arr = [r, g, b]
     arr.sort()
     diff = arr[2] - arr[1]

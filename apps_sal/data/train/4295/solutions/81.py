@@ -16,6 +16,6 @@ def balanced_num(number):
     for j in right:
         sum_right = int(j) + sum_right
     if sum_left == sum_right:
-        return "Balanced"
+        return 'Balanced'
     else:
-        return "Not Balanced"
+        return 'Not Balanced'

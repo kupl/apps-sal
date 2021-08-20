@@ -8,4 +8,3 @@ def billboard(name, price=30):
         for c in range(len(name)):
             p += price
         return p
-    # Flez

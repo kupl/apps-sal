@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,17 +9,14 @@ MOD = 1000000007
 
 def main():
     N = int(readline())
-
     if N % 2:
-        print((0))
+        print(0)
         return
-
     ans = 0
     N //= 2
     while N:
         N //= 5
         ans += N
-
     print(ans)
     return
 

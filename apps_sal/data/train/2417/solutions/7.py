@@ -1,4 +1,5 @@
 class Solution:
+
     def convertToBase7(self, num):
         """
         :type num: int
@@ -11,5 +12,4 @@ class Solution:
             s += str(num % 7)
             num //= 7
         s += str(num)
-
         return minus * '-' + s[::-1]

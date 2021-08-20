@@ -18,7 +18,7 @@ def merge(a, b):
     a = find(a)
     b = find(b)
     if siz[a] < siz[b]:
-        a, b = b, a
+        (a, b) = (b, a)
     par[b] = a
     siz[a] += siz[b]
 
@@ -36,13 +36,11 @@ def main():
     for i in range(n):
         a = find(i)
         d[a].append(l[i])
-
     for i in range(n):
         d[i] = sorted(d[i])
-
     for i in range(n):
         a = find(i)
-        print(d[a][cnt[a]], end=" ")
+        print(d[a][cnt[a]], end=' ')
         cnt[a] += 1
 
 

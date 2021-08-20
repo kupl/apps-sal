@@ -9,14 +9,14 @@ def evaluate(a, b):
 
 
 def dp(p_bar, n, s):
-    mod = 10**7 + 9
+    mod = 10 ** 7 + 9
     if n == 0:
         return 0
     elif n == 1:
         k = 0
         if p_bar == s[0]:
             k += 1
-        if p_bar == "----------":
+        if p_bar == '----------':
             k += 1
         return k
     else:
@@ -24,7 +24,6 @@ def dp(p_bar, n, s):
 
 
 t = int(input())
-
 for i in range(0, t):
     p = input()
     n = int(input())

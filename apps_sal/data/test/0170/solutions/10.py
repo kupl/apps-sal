@@ -18,8 +18,7 @@ while s1 and s2:
         break
 if t > 1000:
     print(-1)
+elif s1:
+    print(t, 1)
 else:
-    if s1:
-        print(t, 1)
-    else:
-        print(t, 2)
+    print(t, 2)

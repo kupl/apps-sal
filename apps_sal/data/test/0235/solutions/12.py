@@ -25,5 +25,4 @@ while l >= 0:
     if c > 0 and eat(c):
         a += b
     l -= 1
-
 print(n - a)

@@ -3,7 +3,6 @@ import math
 
 def main(K, N):
     ans = []
-
     if K % 2 == 0:
         for i in range(N):
             if i == 0:
@@ -25,9 +24,8 @@ def main(K, N):
                 ans[-1] -= 1
                 while len(ans) < N:
                     ans.append(K)
-
     return ' '.join(map(str, ans))
 
 
-K, N = list(map(int, input().split()))
-print((main(K, N)))
+(K, N) = list(map(int, input().split()))
+print(main(K, N))

@@ -1,12 +1,10 @@
-n, a = list(map(int, input().split()))
-
+(n, a) = list(map(int, input().split()))
 l = input().split()
 l = [int(i) for i in l]
-
-if(n == 1):
+if n == 1:
     print(0)
-elif(n == 2):
-    if(abs(a - l[0]) < abs(a - l[1])):
+elif n == 2:
+    if abs(a - l[0]) < abs(a - l[1]):
         print(abs(a - l[0]))
     else:
         print(abs(a - l[1]))
@@ -19,10 +17,9 @@ else:
     l.remove(mi)
     min2 = min(l)
     l.append(mi)
-
-    if(a > ma):
+    if a > ma:
         print(a - min2)
-    elif(a < mi):
+    elif a < mi:
         print(max2 - a)
     else:
         ans = list()
@@ -30,6 +27,6 @@ else:
         ans.append(abs(a - mi) + max2 - mi)
         ans.append(ma - min2 + abs(ma - a))
         ans.append(ma - min2 + abs(a - min2))
-        while(min(ans) < 0):
+        while min(ans) < 0:
             ans.remove(min(ans))
         print(min(ans))

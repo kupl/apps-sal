@@ -3,12 +3,12 @@ def mapt(fn, *args):
 
 
 def Input():
-    return mapt(int, input().split(" "))
+    return mapt(int, input().split(' '))
 
 
 def main():
-    a, b, c = Input()
-    x, y, _ = sorted([abs(a - b), abs(b - c), abs(a - c)])
+    (a, b, c) = Input()
+    (x, y, _) = sorted([abs(a - b), abs(b - c), abs(a - c)])
     print(x + y)
 
 

@@ -1,4 +1,4 @@
-h, w = (int(x) for x in input().split())
+(h, w) = (int(x) for x in input().split())
 a = [[x != '.' for x in input()] for _ in range(h)]
 
 
@@ -11,11 +11,10 @@ def build(f):
     return d
 
 
-ver = build(lambda r, c: not a[r][c] and r < h - 1 and not a[r + 1][c])
-hor = build(lambda r, c: not a[r][c] and c < w - 1 and not a[r][c + 1])
-
+ver = build(lambda r, c: not a[r][c] and r < h - 1 and (not a[r + 1][c]))
+hor = build(lambda r, c: not a[r][c] and c < w - 1 and (not a[r][c + 1]))
 for _ in range(int(input())):
-    r1, c1, r2, c2 = (int(x) for x in input().split())
+    (r1, c1, r2, c2) = (int(x) for x in input().split())
     s = ver[r2 - 1][c2] - ver[r1 - 1][c2] - ver[r2 - 1][c1 - 1] + ver[r1 - 1][c1 - 1]
     s += hor[r2][c2 - 1] - hor[r1 - 1][c2 - 1] - hor[r2][c1 - 1] + hor[r1 - 1][c1 - 1]
     print(s)

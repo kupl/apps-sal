@@ -1,12 +1,12 @@
 mod = 998244353
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 lr = [list(map(int, input().split())) for i in range(k)]
 dp = [0] * n
 cum = [0] * n
 dp[0] = 1
 cum[0] = 1
 for i in range(n):
-    for l, r in lr:
+    for (l, r) in lr:
         if i - l >= 0:
             dp[i] += cum[i - l]
         if i - r - 1 >= 0:

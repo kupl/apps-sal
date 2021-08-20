@@ -1,7 +1,6 @@
 N = int(input())
-
 for i in range(N):
-    row = ""
+    row = ''
     for j in range(N):
         if (i + j) % 2 == 0:
             row += 'W'

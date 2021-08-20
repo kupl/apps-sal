@@ -4,21 +4,19 @@ for _ in range(int(input())):
     ing = [inp[0]]
     count = []
     last = inp[0]
-    ans = "YES"
+    ans = 'YES'
     cnt = 1
     for i in range(1, n):
         if last == inp[i]:
             cnt += 1
+        elif cnt not in count and inp[i] not in ing:
+            count.append(cnt)
+            cnt = 1
+            last = inp[i]
+            ing.append(last)
         else:
-            if cnt not in count and (inp[i] not in ing):
-                count.append(cnt)
-                cnt = 1
-                last = inp[i]
-                ing.append(last)
-            else:
-                ans = "NO"
-                break
-
+            ans = 'NO'
+            break
     if cnt in count:
-        ans = "NO"
+        ans = 'NO'
     print(ans)

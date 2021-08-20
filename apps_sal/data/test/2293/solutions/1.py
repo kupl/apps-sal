@@ -1,4 +1,3 @@
-# stdin=open('input.txt')
 import math
 from sys import stdin, stdout
 
@@ -7,26 +6,7 @@ def input():
     return stdin.readline()[:-1]
 
 
-# stdout=open('output.txt',mode='w+')
-
-# def print(x, end='\n'):
-# 	stdout.write(str(x) +end)
-
-
-# a, b = map(int, input().split())
-
-# l = list(map(int, input().split()))
-
-# n = int(input())
-
-
-# CODE BEGINS HERE.................
-# import copy
-# import sys
-# sys.setrecursionlimit(10**7)
-
-m, n = list(map(int, input().split()))
-
+(m, n) = list(map(int, input().split()))
 days = []
 for i in range(m):
     days.append(set(list(map(int, input().split()))[1:]))
@@ -38,13 +18,7 @@ for i in range(m):
             break
     if not possible:
         break
-
 if possible:
     print('possible')
 else:
     print('impossible')
-
-# CODE ENDS HERE....................
-
-
-# stdout.close()

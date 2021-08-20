@@ -3,6 +3,7 @@ vn = sorted(list(map(int, input().split())))
 
 
 class Solution:
+
     def __init__(self, n, vn):
         self.n = n
         self.vn = vn

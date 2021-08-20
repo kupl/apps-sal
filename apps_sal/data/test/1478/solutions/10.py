@@ -5,7 +5,7 @@ def __starting_point():
     lvl = 1
     res = []
     for i in range(n):
-        comm, child = comments[2 * i], int(comments[2 * i + 1])
+        (comm, child) = (comments[2 * i], int(comments[2 * i + 1]))
         while lvl > 1 and stack[lvl - 1] == 0:
             lvl -= 1
         stack[lvl - 1] -= 1

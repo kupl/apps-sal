@@ -1,6 +1,5 @@
-r, g, b = tuple(map(int, input().split()))
-
-if (r > 2 * (g + b)):
+(r, g, b) = tuple(map(int, input().split()))
+if r > 2 * (g + b):
     r = 2 * (g + b)
 if b > 2 * (g + r):
     b = 2 * (g + r)

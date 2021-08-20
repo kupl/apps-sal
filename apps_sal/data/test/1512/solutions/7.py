@@ -26,13 +26,10 @@ for i in range(1, n):
         isit[a[i]] = 1
 mx = 0
 val = a[0]
-
-
 for i in range(0, n):
     if mx < tot + freq[a[i]] - isit[a[i]]:
         val = a[i]
         mx = tot + freq[a[i]] - isit[a[i]]
     elif mx == tot + freq[a[i]] - isit[a[i]]:
         val = min(val, a[i])
-
 print(val)

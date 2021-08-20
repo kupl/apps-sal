@@ -7,7 +7,7 @@ def f(s, t):
         if s[i] != t[i]:
             w = [s[i], t[i]]
             w.sort()
-            if w != sorted(['o', '0']) and w != sorted(['i', 'l']) and w != sorted(['i', '1']) and w != sorted(['l', '1']):
+            if w != sorted(['o', '0']) and w != sorted(['i', 'l']) and (w != sorted(['i', '1'])) and (w != sorted(['l', '1'])):
                 return True
     return False
 

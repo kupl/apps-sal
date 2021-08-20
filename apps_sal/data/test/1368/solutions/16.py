@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 v = list(map(int, input().split()))
 v.sort(reverse=True)
 a = v[:A]

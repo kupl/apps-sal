@@ -14,13 +14,13 @@ def mints():
 
 
 def solve():
-    n, k, l = mints()
+    (n, k, l) = mints()
     x = 0
     pz = k
     for d in mints():
         z = l - d
         if z < 0:
-            print("No")
+            print('No')
             return
         if z >= k:
             x = 0
@@ -29,10 +29,10 @@ def solve():
         elif x >= k:
             x = x + 1
             if x - k > z:
-                print("No")
+                print('No')
                 return
         pz = max(z, k)
-    print("Yes")
+    print('Yes')
 
 
 for i in range(mint()):

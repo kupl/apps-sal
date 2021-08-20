@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         steps = [0] * (len(arr) + 2)
         count = defaultdict(int)

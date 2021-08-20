@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 l1 = [(l[i], i) for i in range(a)]
 otv = [0] * a
@@ -13,4 +13,4 @@ for i in range(a):
         otv[l1[i][1]] = otv[l1[j][1]]
         j += 1
 print(k)
-print(" ".join(map(str, otv)))
+print(' '.join(map(str, otv)))

@@ -8,9 +8,8 @@ if len(moji) == 1:
     ans = 0
 elif max(gucount, key=gucount.get) != max(kicount, key=kicount.get):
     ans = guall - max(gucount.values()) + kiall - max(kicount.values())
+elif kiall - max(kicount.values()) > guall - max(gucount.values()):
+    ans = max(kicount.values()) + guall - max(gucount.values())
 else:
-    if kiall - max(kicount.values()) > guall - max(gucount.values()):
-        ans = max(kicount.values()) + guall - max(gucount.values())
-    else:
-        ans = max(gucount.values()) + kiall - max(kicount.values())
+    ans = max(gucount.values()) + kiall - max(kicount.values())
 print(ans)

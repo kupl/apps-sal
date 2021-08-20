@@ -1,4 +1,5 @@
 class UF:
+
     def __init__(self) -> None:
         self.parent = {}
         self.sz = {}
@@ -31,9 +32,11 @@ class UF:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def fac(n):
-            for i in range(2, int(n**0.5) + 1):
+            for i in range(2, int(n ** 0.5) + 1):
                 if n % i == 0:
                     n //= i
                     return set((i,)) | fac(n)
@@ -57,6 +60,6 @@ class Solution:
         if uf.count == 1:
             return len(A)
         groups = Counter()
-        for factors, value in list(c.items()):
+        for (factors, value) in list(c.items()):
             groups[group_id(factors[0])] += value
         return groups.most_common()[0][1]

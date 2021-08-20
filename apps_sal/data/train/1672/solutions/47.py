@@ -6,7 +6,7 @@ def f(t):
 
 
 a = [float(input()) for _ in range(11)]
-for i, t in reversed(list(enumerate(a))):
+for (i, t) in reversed(list(enumerate(a))):
     y = f(t)
     t = int(t)
     if y > 400:

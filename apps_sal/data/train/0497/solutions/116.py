@@ -1,11 +1,10 @@
 class Solution:
+
     def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
         jobs = []
-        for s, e, p in zip(startTime, endTime, profit):
+        for (s, e, p) in zip(startTime, endTime, profit):
             jobs.append([s, e, p])
-
         jobs.sort(key=lambda x: x[0])
-
         memo = [0] * len(jobs)
 
         def recur(i):
@@ -15,7 +14,7 @@ class Solution:
                 return memo[i]
             else:
                 pro = 0
-                l, r = i + 1, len(jobs)
+                (l, r) = (i + 1, len(jobs))
                 while l < r:
                     mid = (l + r) // 2
                     if jobs[mid][0] < jobs[i][1]:

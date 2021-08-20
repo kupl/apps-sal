@@ -1,4 +1,5 @@
 class Solution:
+
     def numSubarraysWithSum(self, A: List[int], S: int) -> int:
         csum = [0]
         for a in A:
@@ -8,6 +9,5 @@ class Solution:
         print(csum)
         for p in csum:
             ans += counter[p - S]
-            # print('with',p,'found',counter[p-S],p-S)
             counter[p] += 1
         return ans

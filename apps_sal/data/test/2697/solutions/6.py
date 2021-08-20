@@ -8,5 +8,4 @@ for i in range(2, N + 1):
             break
     if flag:
         primes += 1
-
 print(primes)

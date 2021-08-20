@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 field = [input() for _ in range(n)]
 black = 0
 minheight = minwidth = 101

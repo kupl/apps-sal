@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         degree = [0] * n
@@ -10,7 +11,7 @@ class Solution:
             return find(par[x])
 
         def union(x: int, y: int) -> None:
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px == py:
                 return
             if degree[px] > degree[py]:
@@ -19,9 +20,8 @@ class Solution:
             else:
                 par[px] = py
                 degree[py] += degree[px]
-
         res = -1
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             num -= 1
             degree[num] = 1
             for nei in (num - 1, num + 1):
@@ -30,8 +30,6 @@ class Solution:
                         res = i
                     if degree[nei]:
                         union(nei, num)
-
-        # Check the last
         for i in range(n):
             if degree[find(i)] == m:
                 return n

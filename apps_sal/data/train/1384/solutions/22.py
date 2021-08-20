@@ -1,4 +1,3 @@
-# cook your dish here
 def fun(s):
     p = 0
     m = 0
@@ -12,7 +11,7 @@ def fun(s):
 
 
 for __ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     s = input()
     r = 0
     for i in range(n - k + 1):

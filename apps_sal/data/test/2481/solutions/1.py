@@ -21,7 +21,7 @@ def solve(h, w, tables, A):
 
 
 def main():
-    h, w = map(int, input().split(' '))
+    (h, w) = map(int, input().split(' '))
     tables = []
     for i in range(10):
         tables.append(list(map(int, input().split(' '))))

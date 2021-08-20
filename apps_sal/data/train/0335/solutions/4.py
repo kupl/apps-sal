@@ -1,6 +1,6 @@
 class Solution:
+
     def exclu(self, nums):
-        # whether we can find two elements x and y in nums so that x & y == 0
         n = len(nums)
         if n <= 1:
             return False
@@ -10,8 +10,7 @@ class Solution:
                     if x & y == 0:
                         return True
             return False
-
-        set0, set1 = set(), set()
+        (set0, set1) = (set(), set())
         for x in nums:
             if x & 1:
                 set1.add(x >> 1)
@@ -25,8 +24,6 @@ class Solution:
         return False
 
     def exclu2(self, set0, set1):
-        # whether we can find x in set0 and y in set1 so that x & y == 0
-        # set0 and set1 are not empty
         if len(set0) == 0 or len(set1) == 0:
             return False
         if len(set1) == 1:
@@ -35,22 +32,19 @@ class Solution:
                 if x & y == 0:
                     return True
             return False
-
         if len(set0) == 1:
             x = next(iter(set0))
             for y in set1:
                 if x & y == 0:
                     return True
             return False
-
         if len(set0) <= 8 and len(set1) <= 8:
             for x in set0:
                 for y in set1:
                     if x & y == 0:
                         return True
             return False
-
-        set00, setx0, set01, set11 = set(), set(), set(), set()
+        (set00, setx0, set01, set11) = (set(), set(), set(), set())
         for x in set0:
             setx0.add(x >> 1)
             if x & 1 == 0:
@@ -60,7 +54,6 @@ class Solution:
                 set11.add(x >> 1)
             else:
                 set01.add(x >> 1)
-
         if set00 and set11 and self.exclu2(set00, set11):
             return True
         if set01 and setx0 and self.exclu2(set01, setx0):
@@ -71,28 +64,20 @@ class Solution:
         n = len(rods)
         if n <= 1:
             return 0
-
         t = sum(rods)
         m = t // 2
         infos = [[] for _ in range(m + 1)]
         infos[0] = [0]
-
         b = 1
         for x in rods:
-            # print(f'x={x}')
             for y in range(m - x, -1, -1):
                 comb = infos[y]
                 if comb:
                     infos[x + y] += [z + b for z in comb]
             b *= 2
-            # print(infos)
-
         for y in range(m, 0, -1):
-            comb, n = infos[y], len(infos[y])
-            # print( (y, n, comb)  )
+            (comb, n) = (infos[y], len(infos[y]))
             if n >= 2:
-                # print( (y, n)  )
-                # print(n)
                 if self.exclu(comb):
                     return y
         return 0

@@ -1,4 +1,3 @@
-# cook your recipe
 from math import factorial
 test_cases = int(input())
 for _ in range(test_cases):
@@ -18,8 +17,6 @@ for _ in range(test_cases):
             sum1 += j * factorial(n - rep_count[j])
         else:
             sum1 += j * factorial(n - 1) / factorial(n - rep_count[j])
-
     for k in range(n):
-        final_sum += sum1 * (10**k)
-
+        final_sum += sum1 * 10 ** k
     print(int(final_sum))

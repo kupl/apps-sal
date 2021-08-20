@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-par = [-1] * (n)
+(n, m) = map(int, input().split())
+par = [-1] * n
 
 
 def find(x):
@@ -11,12 +11,12 @@ def find(x):
 
 
 def unite(x, y):
-    px, py = find(x), find(y)
+    (px, py) = (find(x), find(y))
     if px == py:
         return False
     else:
         if px < py:
-            px, py = py, px
+            (px, py) = (py, px)
         par[px] += par[py]
         par[py] = px
         return True
@@ -25,9 +25,9 @@ def unite(x, y):
 p = list(map(int, input().split()))
 gl = [[] for _ in range(n)]
 for i in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     unite(x - 1, y - 1)
-for c in range(n):  # par:
+for c in range(n):
     ap = find(c)
     gl[ap].append(c)
 g = 0

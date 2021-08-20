@@ -9,11 +9,11 @@ def get_primes(how_many, group_size=2):
 
 
 def is_prime(n):
-    return all(n % i for i in range(3, int(math.sqrt(n)) + 1, 2))
+    return all((n % i for i in range(3, int(math.sqrt(n)) + 1, 2)))
 
 
 def primes(n):
-    i, pr = 3, [2]
+    (i, pr) = (3, [2])
     while n > 1:
         if is_prime(i):
             n -= 1

@@ -1,11 +1,12 @@
 class Solution:
+
     def reachNumber(self, t):
         """
         :type target: int
         :rtype: int
         """
         t = abs(t)
-        lo, hi = 1, t
+        (lo, hi) = (1, t)
         while lo < hi:
             m = (lo + hi) // 2
             val = m * (m + 1) // 2

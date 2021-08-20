@@ -10,11 +10,10 @@ for i in range(2 * n - 2):
             d[b[i]] = 1
         else:
             d[b[i]] += 1
+    elif b[i].lower() in a:
+        d[b[i].lower()] -= 1
+        if d[b[i].lower()] == 0:
+            a.remove(b[i].lower())
     else:
-        if b[i].lower() in a:
-            d[b[i].lower()] -= 1
-            if d[b[i].lower()] == 0:
-                a.remove(b[i].lower())
-        else:
-            count += 1
+        count += 1
 print(count)

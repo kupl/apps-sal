@@ -9,5 +9,5 @@ else:
     meanA = ceil(meanA)
 ans = 0
 for a in A:
-    ans += (a - meanA)**2
+    ans += (a - meanA) ** 2
 print(ans)

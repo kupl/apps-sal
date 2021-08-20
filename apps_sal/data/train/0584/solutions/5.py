@@ -1,5 +1,3 @@
-# cook your dish here
-
 t = int(input())
 for i in range(t):
     count = 0
@@ -7,11 +5,11 @@ for i in range(t):
     f1 = 0
     f2 = 0
     for i in range(len(x)):
-        if x[i] == '1' and f1 == 0 and f2 == 0:
+        if x[i] == '1' and f1 == 0 and (f2 == 0):
             f1 = 1
-        elif x[i] == '1' and f1 == 1 and f2 == 0:
+        elif x[i] == '1' and f1 == 1 and (f2 == 0):
             continue
-        elif x[i] == '0' and f1 == 0 and f2 == 0:
+        elif x[i] == '0' and f1 == 0 and (f2 == 0):
             f2 = 1
         elif x[i] == '0' and f1 == 1:
             count = count + 1

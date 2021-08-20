@@ -1,13 +1,10 @@
 import sys
 input = sys.stdin.readline
-
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 H = [int(input()) for _ in range(N)]
 C = A - B
-
-hi = 10**9 + 1
+hi = 10 ** 9 + 1
 lo = -1
-
 while hi - lo > 1:
     mid = (hi + lo) // 2
     rem = 0
@@ -17,5 +14,4 @@ while hi - lo > 1:
         hi = mid
     else:
         lo = mid
-
 print(hi)

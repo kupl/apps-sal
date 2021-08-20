@@ -7,7 +7,7 @@ def kanban(x):
         return True
     if x >= 90:
         return True
-    return (x % 10) in [1, 7, 9]
+    return x % 10 in [1, 7, 9]
 
 
 print('NO' if kanban(int(input())) else 'YES')

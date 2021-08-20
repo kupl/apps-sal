@@ -1,7 +1,6 @@
 from bisect import bisect
 cache = [0, 2, 4]
 comp = [0, 2, 6]
-
 repeat = len(cache) - 1
 b = cache[-1]
 while comp[-1] < 2 ** 41:

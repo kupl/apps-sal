@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    n, a, b = map(int, input().split())
+    (n, a, b) = map(int, input().split())
     s = input()
     res = 0
     i = 0

@@ -1,4 +1,4 @@
-a, b, c, d = list(map(int, input().split()))
+(a, b, c, d) = list(map(int, input().split()))
 try:
     assert abs(a - b + c - d) < 2
     ans = []
@@ -53,7 +53,7 @@ try:
             b -= 1
         if a:
             ans.pop()
-    print("YES")
+    print('YES')
     print(*ans)
 except AssertionError:
-    print("NO")
+    print('NO')

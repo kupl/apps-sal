@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = list(map(int, input().split()))
 j = 0
 L = list(range(1, n + 1))
@@ -10,5 +10,4 @@ for i in l:
     else:
         print(L[j], end='')
     n -= 1
-
     L.pop(j)

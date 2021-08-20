@@ -1,4 +1,3 @@
-
 def around_fib(n):
     fiblist = [0, 1]
     if n > 1:
@@ -26,5 +25,4 @@ def around_fib(n):
             list3.append(list1[i])
             i -= 1
         list3.reverse()
-
-    return "Last chunk " + "".join([str(i) for i in list3]) + "; Max is " + str(max2) + " for digit " + str(max1)
+    return 'Last chunk ' + ''.join([str(i) for i in list3]) + '; Max is ' + str(max2) + ' for digit ' + str(max1)

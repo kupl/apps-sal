@@ -1,10 +1,6 @@
 import itertools
-N, A, B, C = map(int, input().split())
-
+(N, A, B, C) = map(int, input().split())
 L = [int(input()) for i in range(N)]
-
-# L本の竹を、A,B,C,0(使わない)に振り分ける全探索 4^N = 約60000通り
-
 ans = 10 ** 10
 for prod in itertools.product(range(4), repeat=N):
     bamboo = [0] * 4
@@ -20,5 +16,4 @@ for prod in itertools.product(range(4), repeat=N):
     mp += abs(A - bamboo[1]) + abs(B - bamboo[2]) + abs(C - bamboo[3])
     if ans > mp:
         ans = mp
-
 print(ans)

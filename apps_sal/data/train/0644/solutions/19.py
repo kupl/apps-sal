@@ -4,6 +4,6 @@ for _ in range(t):
     ls = list(map(int, input().split()))
     p = sum(ls)
     if p % n == 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

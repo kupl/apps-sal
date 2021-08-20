@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         table = collections.defaultdict(int)
         size = [0] * len(arr)
@@ -33,14 +34,11 @@ class Solution:
             table[size[y]] = table[size[y]] - 1
             if table[size[y]] == 0:
                 del table[size[y]]
-
             table[size[x]] = table[size[x]] - 1
             if table[size[x]] == 0:
                 del table[size[x]]
-
             size[y] += size[x]
             parent[x] = y
-
             table[size[y]] = table[size[y]] + 1
 
     def find(self, i, parent):

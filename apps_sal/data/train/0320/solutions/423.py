@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         c = 1
         count = 0
@@ -11,11 +12,10 @@ class Solution:
         def dfs(n):
             if n <= 1:
                 return n
+            elif n % 2 == 0:
+                return dfs(n // 2)
             else:
-                if n % 2 == 0:
-                    return dfs(n // 2)
-                else:
-                    return 1 + dfs(n // 2)
+                return 1 + dfs(n // 2)
         for i in nums:
             count += dfs(i)
         return count

@@ -8,15 +8,15 @@ for nt in range(t):
             new.append(i)
     new.sort()
     if 2048 in new:
-        print("YES")
+        print('YES')
     else:
         s = 0
         flag = 0
         for i in range(len(new) - 1, -1, -1):
             s += new[i]
             if s == 2048:
-                print("YES")
+                print('YES')
                 flag = 1
                 break
         if flag == 0:
-            print("NO")
+            print('NO')

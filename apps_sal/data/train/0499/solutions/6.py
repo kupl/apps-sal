@@ -1,4 +1,4 @@
-'''
+"""
             [1,2,3,2,1]
 
 diff array: [1,1,1,-1,-1]
@@ -23,16 +23,16 @@ target = [1,2,3,2,1] -> 求diff -> [1,1,1,-1,-1]
 
 
 
-'''
+"""
 
 
 class Solution:
+
     def minNumberOperations(self, target: List[int]) -> int:
         diff = [0] * len(target)
         diff[0] = target[0]
-        for i, num in enumerate(target[1:], 1):
+        for (i, num) in enumerate(target[1:], 1):
             diff[i] = target[i] - target[i - 1]
-
         opr = 0
         for d in diff:
             if d > 0:

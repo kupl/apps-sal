@@ -1,13 +1,12 @@
 def bmi(weight, height):
-    bmi = float(weight / height**2)
-
+    bmi = float(weight / height ** 2)
     if bmi <= 18.5:
-        return "Underweight"
+        return 'Underweight'
     elif bmi <= 25.0:
-        return "Normal"
+        return 'Normal'
     elif bmi <= 30.0:
-        return "Overweight"
+        return 'Overweight'
     elif bmi > 30:
-        return "Obese"
+        return 'Obese'
     else:
         pass

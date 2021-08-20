@@ -1,8 +1,8 @@
-n, k, q = list(map(int, input().split()))
+(n, k, q) = list(map(int, input().split()))
 friends = list(map(int, input().split()))
 main = [None] * k
 for i in range(q):
-    t, p = list(map(int, input().split()))
+    (t, p) = list(map(int, input().split()))
     if t == 1:
         for j in range(k):
             if main[k - j - 1] == None:
@@ -17,6 +17,6 @@ for i in range(q):
                 break
     elif t == 2:
         if p - 1 in main:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

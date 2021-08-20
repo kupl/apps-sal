@@ -1,11 +1,7 @@
-# coding: utf-8
-
-
 def main():
-    N, K = list(map(int, input().split()))
-    tmp, ans = 0.0, 0.0
+    (N, K) = list(map(int, input().split()))
+    (tmp, ans) = (0.0, 0.0)
     P = list(map(int, input().split()))
-
     for i in range(N):
         if i < K:
             tmp += P[i]
@@ -13,9 +9,7 @@ def main():
         else:
             tmp += P[i] - P[i - K]
             ans = max(ans, tmp)
-
     ans = (ans + K) / 2
-
     print(ans)
 
 

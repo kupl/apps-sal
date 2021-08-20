@@ -1,10 +1,8 @@
 import sys
 import math
 from functools import reduce
-
 sys.setrecursionlimit(10 ** 6)
-INF = float("inf")
-# MOD = 10 ** 9 + 7
+INF = float('inf')
 MOD = 998244353
 
 

@@ -1,8 +1,8 @@
 def main():
-    n, v = map(int, input().split())
+    (n, v) = map(int, input().split())
     l = [0] * 3002
     for _ in range(n):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         l[a] += b
     a = res = 0
     for b in l:

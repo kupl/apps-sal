@@ -1,6 +1,6 @@
 def fun(a, b):
     cnt = 0
-    while(True):
+    while True:
         cnt += a // b
         tmp = a
         a = b
@@ -10,5 +10,5 @@ def fun(a, b):
     return cnt
 
 
-a, b = [int(c) for c in input().split()]
+(a, b) = [int(c) for c in input().split()]
 print(fun(a, b))

@@ -1,7 +1,7 @@
 n = int(input())
 i = 1
 a = []
-while i**2 <= n:
+while i ** 2 <= n:
     if n % i == 0:
         b = [str(i), str(n // i)]
         a.append(b)

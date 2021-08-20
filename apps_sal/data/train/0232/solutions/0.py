@@ -1,4 +1,5 @@
 class Solution:
+
     def findPoisonedDuration(self, timeSeries, duration):
         """
         :type timeSeries: List[int]

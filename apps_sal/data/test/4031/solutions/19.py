@@ -11,8 +11,8 @@ for i in range(1, n):
         ans = 0
         break
 if ans == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     for i in range(n):
         print(si[i][0])

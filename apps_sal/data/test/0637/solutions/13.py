@@ -9,9 +9,8 @@ for i in range(n):
     if num != last:
         if ln == 0:
             ln = i + 1 - start
-        else:
-            if i + 1 - start != ln:
-                check = 0
+        elif i + 1 - start != ln:
+            check = 0
         start = i + 1
     last = num
 if ln != 0 and n + 1 - start != ln:

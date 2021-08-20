@@ -1,5 +1,5 @@
 import numpy as np
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 
@@ -14,7 +14,7 @@ def bisearch(t):
     return any(dp[max(0, k - a[t]):k])
 
 
-l, r = -1, n
+(l, r) = (-1, n)
 while r - l > 1:
     x = (l + r) // 2
     if bisearch(x):

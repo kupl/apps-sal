@@ -1,4 +1,5 @@
 class Solution:
+
     def maxDiff(self, num: int) -> int:
         if num < 10:
             return 8
@@ -10,7 +11,6 @@ class Solution:
             else:
                 a = a.replace(a[i], '9')
                 break
-
         if b[0] != '1':
             b = b.replace(b[0], '1')
         else:
@@ -21,5 +21,4 @@ class Solution:
                 else:
                     b = b.replace(b[i], '0')
                     break
-        # print(a,b)
         return int(a) - int(b)

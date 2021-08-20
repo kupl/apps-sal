@@ -1,4 +1,3 @@
-
 def count_red_beads(n):
     lista = []
     if n < 2:

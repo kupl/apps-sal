@@ -1,5 +1,4 @@
-n, l = list(map(int, input().split()))
-
+(n, l) = list(map(int, input().split()))
 apples = []
 ans = 300
 for i in range(1, n + 1):
@@ -7,6 +6,5 @@ for i in range(1, n + 1):
     apples.append(taste)
     if abs(taste) < abs(ans):
         ans = taste
-
 apples.remove(ans)
-print((sum(apples)))
+print(sum(apples))

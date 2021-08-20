@@ -1,4 +1,5 @@
 class Solution:
+
     def minIncrementForUnique(self, A: List[int]) -> int:
         n = len(A)
         if n < 2:
@@ -10,7 +11,7 @@ class Solution:
                 avails.append([A[i - 1] + 1, A[i]])
             if i == n - 1:
                 avails.append([A[i] + 1, A[i] + 2])
-        l, r = avails.popleft()
+        (l, r) = avails.popleft()
         nexts = deque(range(l, r))
         r = nexts.popleft()
         pre = A[0]
@@ -21,7 +22,7 @@ class Solution:
                     if nexts:
                         r = nexts.popleft()
                     elif avails:
-                        l, r = avails.popleft()
+                        (l, r) = avails.popleft()
                         nexts = deque(range(l, r))
                         r = nexts.popleft()
                     else:
@@ -31,7 +32,7 @@ class Solution:
                 if nexts:
                     r = nexts.popleft()
                 elif avails:
-                    l, r = avails.popleft()
+                    (l, r) = avails.popleft()
                     nexts = deque(range(l, r))
                     r = nexts.popleft()
                 else:

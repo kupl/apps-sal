@@ -1,10 +1,9 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = []
 for i in range(n):
-    l, r = map(int, input().split())
-    s.append([r, l, i])  # Greedy on largest right endpoint
+    (l, r) = map(int, input().split())
+    s.append([r, l, i])
 s.sort()
-
 ans = []
 for i in range(201):
     a = 0

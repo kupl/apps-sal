@@ -1,11 +1,14 @@
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 T = int(input())
 P = 10 ** 9 + 7
 for _ in range(T):
-    N, b = list(map(int, input().split()))
+    (N, b) = list(map(int, input().split()))
     A = sorted([int(a) for a in input().split()])
     if b == 1:
         print(N % 2)
@@ -28,7 +31,6 @@ for _ in range(T):
                     ans += P
             print(ans)
             break
-
         if s:
             s -= 1
             ans -= pow(b, a, P)

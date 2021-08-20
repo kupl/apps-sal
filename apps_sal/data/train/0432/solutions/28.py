@@ -1,13 +1,12 @@
 class Solution:
+
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
             return False
-
         my_dict = defaultdict(int)
         for num in nums:
             my_dict[num] += 1
         numbers_left = len(nums)
-
         while numbers_left > 0:
             mini = min(my_dict.keys())
             for i in range(k):

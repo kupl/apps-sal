@@ -4,7 +4,6 @@ def merge_sort(a, l, r):
         m = (l + r) // 2
         res += merge_sort(a, l, m)
         res += merge_sort(a, m + 1, r)
-
         i = l
         j = m + 1
         b = []
@@ -16,18 +15,14 @@ def merge_sort(a, l, r):
                 b.append(a[j])
                 j += 1
                 res += m - i + 1
-
         while i <= m:
             b.append(a[i])
             i += 1
-
         while j <= r:
             b.append(a[j])
             j += 1
-
-        for idx, val in enumerate(b):
+        for (idx, val) in enumerate(b):
             a[idx + l] = val
-
     return res
 
 

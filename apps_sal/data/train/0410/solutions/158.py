@@ -1,4 +1,5 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, m: int) -> int:
         a = [i for i in range(lo, hi + 1)]
         z = []
@@ -13,7 +14,7 @@ class Solution:
                 s = 3 * s + 1
                 c = c + 1
             if s == 1:
-                return sum(k.values()), c
+                return (sum(k.values()), c)
             return cv(s, c, k)
         for i in a:
             c = 0

@@ -11,4 +11,4 @@ for i in range(n):
     else:
         ans = False
         break
-print("YES" if ans else "NO")
+print('YES' if ans else 'NO')

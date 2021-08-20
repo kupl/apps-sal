@@ -1,5 +1,5 @@
-c1, c2, c3, c4 = map(int, input().split())
-n, m = map(int, input().split())
+(c1, c2, c3, c4) = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [int(x) for x in input().split()]
 b = [int(x) for x in input().split()]
 ans1 = 0

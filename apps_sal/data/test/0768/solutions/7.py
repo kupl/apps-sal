@@ -1,4 +1,4 @@
-f, i, t = list(map(int, input().split()))
+(f, i, t) = list(map(int, input().split()))
 q = [0 for x in range(i)]
 for g in range(f):
     s = input()

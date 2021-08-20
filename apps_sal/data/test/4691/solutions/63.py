@@ -8,20 +8,12 @@ from math import ceil, floor, sqrt, gcd, inf
 from copy import deepcopy
 import numpy as np
 import scipy as sp
-
 INF = inf
 MOD = 1000000007
-
 n = int(input())
-S = [input() for j in range(n)]  # nは行数
-
+S = [input() for j in range(n)]
 tmp = 0
 res = 0
-
 tmp = Counter(S)
-res = f"""AC x {tmp["AC"]}
-WA x {tmp["WA"]}
-TLE x {tmp["TLE"]}
-RE x {tmp["RE"]}"""
-
+res = f"AC x {tmp['AC']}\nWA x {tmp['WA']}\nTLE x {tmp['TLE']}\nRE x {tmp['RE']}"
 print(res)

@@ -7,7 +7,6 @@ def answer(n: int, a: List[int], b: List[int], c: List[int]) -> int:
         previous = a[i - 1]
         if a[i] == previous + 1:
             satisfaction += c[previous - 1]
-
     return satisfaction
 
 
@@ -16,7 +15,7 @@ def main():
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
     c = list(map(int, input().split()))
-    print((answer(n, a, b, c)))
+    print(answer(n, a, b, c))
 
 
 def __starting_point():

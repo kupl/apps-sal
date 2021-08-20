@@ -1,6 +1,9 @@
 from heapq import heapify, heappush as hpush, heappop as hpop
 import sys
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def dijkstra(n, E, i0=0):
@@ -12,11 +15,11 @@ def dijkstra(n, E, i0=0):
     D[i0] = 0
     while h:
         x = hpop(h)
-        d, i = x >> kk, x & mm
+        (d, i) = (x >> kk, x & mm)
         if done[i]:
             continue
         done[i] = 1
-        for j, w in E[i]:
+        for (j, w) in E[i]:
             nd = d + w
             if D[j] < 0 or D[j] > nd:
                 if done[j] == 0:
@@ -31,7 +34,7 @@ def dijkstra2(n, DD, i0=0):
     AA = [i for i in V]
     AA.sort(key=lambda x: DD[x])
     for a in AA:
-        for b, c in E[a]:
+        for (b, c) in E[a]:
             if DD[b] + c == DD[a]:
                 L[a] += L[b]
                 if L[a] >= P:
@@ -40,14 +43,13 @@ def dijkstra2(n, DD, i0=0):
 
 
 P = 10 ** 9 + 7
-N, M = list(map(int, input().split()))
-S, T = [int(a) - 1 for a in input().split()]
+(N, M) = list(map(int, input().split()))
+(S, T) = [int(a) - 1 for a in input().split()]
 E = [[] for _ in range(N)]
 for _ in range(M):
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     E[a - 1].append((b - 1, c))
     E[b - 1].append((a - 1, c))
-
 D1 = dijkstra(N, E, S)
 D2 = dijkstra(N, E, T)
 mad = D1[T]
@@ -59,7 +61,7 @@ for i in V:
     if D1[i] == D2[i]:
         ans = (ans - (X[i] * Y[i] % P) ** 2) % P
 for a in V:
-    for b, c in E[a]:
+    for (b, c) in E[a]:
         if D1[a] + c == D1[b]:
             if D1[a] * 2 < mad < D1[b] * 2:
                 ans = (ans - (X[a] * Y[b] % P) ** 2) % P

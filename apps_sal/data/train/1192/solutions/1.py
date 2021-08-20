@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(m, n):
     if m > n:
         (a, b) = (n, m)
@@ -30,7 +29,7 @@ def rlmakers(rl, pc, n):
             if pc % d == 0:
                 rl[i] += pc // d
             else:
-                rl[i] += ((pc // d) + 1)
+                rl[i] += pc // d + 1
             d += 1
     return rl
 
@@ -56,47 +55,40 @@ def insFinder(n, l):
             else:
                 lstone = 1
                 pc += 1
-        else:
-            if lstone == 1:
-                pathli.append(pc)
-                pc = 0
-                lstone = 0
-
+        elif lstone == 1:
+            pathli.append(pc)
+            pc = 0
+            lstone = 0
     if start == 0:
         if end == n - 1:
             if gcd(l[n - 1], l[0]) != 1:
                 pathli.append(pc)
                 if len(pathli) > 1:
-                    pathli[0] += (pathli[len(pathli) - 1] + 1)
+                    pathli[0] += pathli[len(pathli) - 1] + 1
                     pathli.remove(pathli[len(pathli) - 1])
                 else:
                     c = 1
                     pathli[0] += 1
             else:
                 pathli.append(pc)
+        elif gcd(l[n - 1], l[0]) != 1:
+            pathli[0] += 1
+    elif end == n - 1:
+        if gcd(l[n - 1], l[0]) != 1:
+            pc += 1
+            pathli.append(pc)
         else:
-            if gcd(l[n - 1], l[0]) != 1:
-                pathli[0] += 1
-    else:
-        if end == n - 1:
-            if gcd(l[n - 1], l[0]) != 1:
-                pc += 1
-                pathli.append(pc)
-            else:
-                pathli.append(pc)
-        else:
-            if gcd(l[n - 1], l[0]) != 1:
-                pathli.append(1)
+            pathli.append(pc)
+    elif gcd(l[n - 1], l[0]) != 1:
+        pathli.append(1)
     if c == 1:
         rl = rlmakers(rl, pathli[0], n)
     else:
         for i in range(0, len(pathli)):
             rl = rlmaker(rl, pathli[i], n)
-
     for i in range(0, n - 1):
         print(rl[i], end=' ')
-
-    print("")
+    print('')
 
 
 nt = int(input())

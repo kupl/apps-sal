@@ -1,7 +1,7 @@
 def repeat_it(string, n):
-    result = ""
+    result = ''
     if type(string) != type('string'):
-        return "Not a string"
+        return 'Not a string'
     else:
         result += string * n
     return result

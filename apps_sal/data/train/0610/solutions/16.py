@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t > 0:
     n = int(input())
@@ -8,15 +7,15 @@ while t > 0:
         if l[i] == 1:
             m.append(i)
     if len(m) == 1:
-        print("YES")
+        print('YES')
     else:
         diff = []
         for i in range(1, len(m)):
             diff.append(m[i] - m[i - 1])
         for i in diff:
             if i < 6:
-                print("NO")
+                print('NO')
                 break
         else:
-            print("YES")
+            print('YES')
     t -= 1

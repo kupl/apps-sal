@@ -1,4 +1,5 @@
 class ThroneInheritance:
+
     def __init__(self, kingName: str):
         self.family_tree = collections.defaultdict(list)
         self.king = kingName
@@ -17,7 +18,6 @@ class ThroneInheritance:
                 inheritance_order.append(name)
             for kid in self.family_tree[name]:
                 dfs(kid)
-
         inheritance_order = []
         dfs(self.king)
         return inheritance_order

@@ -5,4 +5,4 @@ def problem(a):
         a += 6
         return a
     except:
-        return "Error"
+        return 'Error'

@@ -9,8 +9,7 @@ for i in range(25):
             L[i] += s
         else:
             break
-# 1 75 3 25 5 15 (3 5 5)
-a, b, c, d, e = 0, 0, 0, 0, 0
+(a, b, c, d, e) = (0, 0, 0, 0, 0)
 for i in range(25):
     if L[i] >= 74:
         a += 1

@@ -1,22 +1,17 @@
 from sys import stdin, stdout
-
-n, k = list(map(int, stdin.readline().rstrip().split()))
-
+(n, k) = list(map(int, stdin.readline().rstrip().split()))
 a = stdin.readline().rstrip().split()
 a = [int(num) for num in a]
-
 b = stdin.readline().rstrip().split()
 b = [int(num) for num in b]
-
 costDiff = [b[i] - a[i] for i in range(n)]
 sortedCostDiff = sorted(costDiff, reverse=True)
-
 savingMade = len([i for i in costDiff if i >= 0])
-if savingMade >= k:  # Then he simply spends on all item which are cheaper
+if savingMade >= k:
     totalSpend = 0
     for i in range(n):
         totalSpend += min([a[i], b[i]])
-else:  # Now we need to find the k biggest cost differential
+else:
     maxCost = sortedCostDiff[k - 1]
     cutoffSortedDiff = sortedCostDiff[:k]
     minCount = cutoffSortedDiff.count(maxCost)
@@ -29,5 +24,4 @@ else:  # Now we need to find the k biggest cost differential
             minCount -= 1
         else:
             totalSpend += b[i]
-
 print(totalSpend)

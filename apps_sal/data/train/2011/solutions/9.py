@@ -9,7 +9,6 @@ def main():
 def foo(n):
     results = []
     min_border = n - len(str(n)) * 9
-
     for i in range(max(min_border, 0), n):
         if i + sum_of_digits(i) == n:
             results.append(i)
@@ -18,7 +17,7 @@ def foo(n):
 
 def sum_of_digits(n, result=0):
     while n > 0:
-        result += (n % 10)
+        result += n % 10
         n = n // 10
     return result
 

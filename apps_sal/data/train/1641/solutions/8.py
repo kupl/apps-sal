@@ -5,7 +5,6 @@ def longest_len(arr: list):
     """ longst len in a list of list-things """
     list_lens = []
     list_lens.append(len(arr))
-
     for curr_l in arr:
         if isinstance(curr_l, list):
             list_lens.append(len(curr_l))
@@ -16,7 +15,6 @@ def longest_len(arr: list):
 def deepest_depth(arr: list, current_depth: int = 1):
     """ returns the deepest depth """
     depths = []
-
     for item in arr:
         if isinstance(item, int):
             depths.append(current_depth)
@@ -41,35 +39,17 @@ def normalize(nested_list: list, growing_value: int = 0) -> list:
     working_list = deep_copy(nested_list)
     target_length = longest_len(working_list)
     target_depth = deepest_depth(working_list)
-    extendify(
-        working_list,
-        target_depth,
-        target_length,
-        fill_value=growing_value)
-    # print(len(working_list))
+    extendify(working_list, target_depth, target_length, fill_value=growing_value)
     return working_list
 
 
-def extendify(arr: list, target_depth: int, target_length: int,
-              depth: int = 1, fill_value: int = 0):
+def extendify(arr: list, target_depth: int, target_length: int, depth: int = 1, fill_value: int = 0):
     """ extendifies an arr """
-
-    arr.extend([fill_value] * (target_length - (len(arr))))
-
+    arr.extend([fill_value] * (target_length - len(arr)))
     if depth < target_depth:
-        for i, current_item in enumerate(arr):
+        for (i, current_item) in enumerate(arr):
             if isinstance(current_item, int):
-                arr[i] = extendify(
-                    [],
-                    target_depth,
-                    target_length,
-                    depth + 1,
-                    fill_value=current_item)
+                arr[i] = extendify([], target_depth, target_length, depth + 1, fill_value=current_item)
             elif isinstance(current_item, list):
-                arr[i] = extendify(
-                    current_item,
-                    target_depth,
-                    target_length,
-                    depth + 1,
-                    fill_value=fill_value)
+                arr[i] = extendify(current_item, target_depth, target_length, depth + 1, fill_value=fill_value)
     return arr

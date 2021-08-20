@@ -1,11 +1,10 @@
-# 解説解法
 n = int(input())
 xp = []
 xm = []
 yp = []
 ym = []
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x == 0:
         if y == 0:
             n -= 1
@@ -26,11 +25,11 @@ for i in range(-n, 0):
         X = 0
         Y = 0
         for k in range(i, j):
-            x, y = xy[k][1], xy[k][2]
+            (x, y) = (xy[k][1], xy[k][2])
             X += x
             Y += y
-        can.append(X**2 + Y**2)
+        can.append(X ** 2 + Y ** 2)
 if n == 0:
     print(0)
 else:
-    print(max(can)**.5)
+    print(max(can) ** 0.5)

@@ -18,7 +18,6 @@ for i in range(n):
         if not L:
             break
         mi = heappop(L)
-
     else:
         heappush(L, mi)
     ost = count + len(L) * l1[i]

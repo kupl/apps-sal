@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         n = len(s)
         count = 0
@@ -7,10 +8,8 @@ class Solution:
         for i in range(len(s)):
             if s[i] == '1':
                 cur += 1
-
         if cur == 0:
-            return (((n - 1) * (n - 2)) // 2) % mod
-
+            return (n - 1) * (n - 2) // 2 % mod
         left = 0
         lc = 0
         for i in range(n):
@@ -29,4 +28,4 @@ class Solution:
                 rc += 1
             if right > cur / 3:
                 break
-        return (lc * rc) % mod
+        return lc * rc % mod

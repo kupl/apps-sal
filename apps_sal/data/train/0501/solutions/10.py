@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestPalindrome(self, s):
         rev = s[::-1]
         aux = s + '#' + rev
@@ -16,10 +17,9 @@ class Solution:
                 cn += 1
                 nextarray[pos] = cn
                 pos += 1
+            elif cn > 0:
+                cn = nextarray[cn - 1]
             else:
-                if cn > 0:
-                    cn = nextarray[cn - 1]
-                else:
-                    nextarray[pos] = 0
-                    pos += 1
+                nextarray[pos] = 0
+                pos += 1
         return nextarray[-1]

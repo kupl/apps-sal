@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 nums = list(map(int, input().split()))
 counts = [{} for _ in range(11)]
 for n in nums:
@@ -14,7 +14,7 @@ res = 0
 for i in nums:
     wo = str(i)
     le = len(wo)
-    mimo = (k - (i % k)) % k
+    mimo = (k - i % k) % k
     if mimo in counts[le]:
         res += counts[le][mimo]
         if int(wo + wo) % k == 0:

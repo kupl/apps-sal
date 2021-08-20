@@ -13,7 +13,6 @@ for s in S:
         bu.append(mx - 1)
     else:
         bu.append(min(len(s), mx + N))
-
 ans = -1
 ansmx = -1
 for i in range(3):
@@ -22,7 +21,6 @@ for i in range(3):
         ansmx = bu[i]
     elif bu[i] == ansmx:
         ans = -1
-
 if ans == -1:
     print('Draw')
 elif ans == 0:

@@ -1,6 +1,4 @@
 def reverse_list(l):
-    'return a list with the reverse order of l'
-
-    # lijst = [1,2,3,4]
+    """return a list with the reverse order of l"""
     lijst_rev = l[::-1]
-    return(lijst_rev)
+    return lijst_rev

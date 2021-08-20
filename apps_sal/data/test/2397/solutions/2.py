@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mass = [int(i) for i in input().split()]
 mass = mass[::-1]
 summ = 0

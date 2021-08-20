@@ -3,9 +3,10 @@ import heapq
 
 
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         heapq.heapify(requests)
-        count, end_heap, counter = 0, [], collections.Counter()
+        (count, end_heap, counter) = (0, [], collections.Counter())
         for i in range(len(nums)):
             while requests and i >= requests[0][0]:
                 count += 1
@@ -16,7 +17,7 @@ class Solution:
             counter[i] += count
         heap = [-num for num in nums]
         heapq.heapify(heap)
-        total, mod = 0, 10 ** 9 + 7
+        (total, mod) = (0, 10 ** 9 + 7)
         for counts in sorted(list(counter.values()), reverse=True):
             total = (total - heapq.heappop(heap) * counts) % mod
         return total

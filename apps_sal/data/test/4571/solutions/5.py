@@ -5,9 +5,9 @@ readline = sys.stdin.readline
 
 
 def main():
-    n, m = list(map(int, readline().rstrip().split()))
+    (n, m) = list(map(int, readline().rstrip().split()))
     cnt = 2 ** m
-    print(((n + m * 18) * cnt * 100))
+    print((n + m * 18) * cnt * 100)
 
 
 def __starting_point():

@@ -10,17 +10,17 @@ def dj(s, dist, g):
     dist[s] = 0
 
 
-n, m, s, f = [int(x) for x in input().split()]
+(n, m, s, f) = [int(x) for x in input().split()]
 s = s - 1
 f = f - 1
 g = [[] for i in range(n)]
 for i in range(m):
-    x, y = [int(x) for x in input().split()]
+    (x, y) = [int(x) for x in input().split()]
     x = x - 1
     y = y - 1
     g[x].append(y)
     g[y].append(x)
-INF = int(1e9)
+INF = int(1000000000.0)
 dist_s = [0 for i in range(n)]
 dist_f = [0 for i in range(n)]
 dj(s, dist_s, g)

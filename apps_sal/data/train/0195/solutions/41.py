@@ -1,4 +1,5 @@
 class Solution:
+
     def countTriplets(self, A: List[int]) -> int:
         count = 0
         dic = dict()
@@ -11,5 +12,4 @@ class Solution:
             for k in dic:
                 if A[i] & k == 0:
                     result += dic[k]
-
         return result

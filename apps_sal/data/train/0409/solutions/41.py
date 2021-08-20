@@ -1,7 +1,7 @@
 class Solution:
+
     def low_high(self, arr):
         low = 0
-
         mhigh = 0
         high = 0
         peak = 0
@@ -10,7 +10,6 @@ class Solution:
             s += arr[i]
             if s > high:
                 high = s
-
             if s > mhigh:
                 mhigh = s
             if s < low:
@@ -18,11 +17,10 @@ class Solution:
                 high = s
             if high - low > peak:
                 peak = high - low
-
-        return low, high, peak, mhigh
+        return (low, high, peak, mhigh)
 
     def kConcatenationMaxSum(self, arr: List[int], k: int) -> int:
-        low, high, peak, mhigh = self.low_high(arr)
+        (low, high, peak, mhigh) = self.low_high(arr)
         print((low, high, peak, mhigh))
         s = sum(arr)
         print(s)
@@ -31,4 +29,4 @@ class Solution:
         elif s > 0:
             return (max(k - 2, 0) * s + mhigh + (s - low)) % 1000000007
         elif s <= 0:
-            return (max(peak, mhigh + (s - low), (s - low), 0)) % 1000000007
+            return max(peak, mhigh + (s - low), s - low, 0) % 1000000007

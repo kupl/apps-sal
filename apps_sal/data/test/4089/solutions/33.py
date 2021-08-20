@@ -9,15 +9,11 @@ while True:
     else:
         oldcumsum = cumsum
     keta += 1
-
 N -= oldcumsum
-#N -= 1
-# print(keta)
-
 name = ''
 for k in range(1, keta + 1):
-    ch_n = N // (26 ** (keta - k))
+    ch_n = N // 26 ** (keta - k)
     ch = chr(ord('a') + ch_n)
     name += ch
-    N -= ch_n * (26 ** (keta - k))
+    N -= ch_n * 26 ** (keta - k)
 print(name)

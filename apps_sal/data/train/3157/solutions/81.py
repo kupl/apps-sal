@@ -4,4 +4,3 @@ def number(bus_stops):
         res = res - st[1]
         res = res + st[0]
     return res
-    # Good Luck!

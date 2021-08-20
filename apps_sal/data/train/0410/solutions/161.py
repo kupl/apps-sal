@@ -9,11 +9,11 @@ class Solution:
 
     def getTheP(self, q: int) -> int:
         Pow = 0
-        while (q != 1):
-            if(q % 2 == 0):
-                q = (q / 2)
+        while q != 1:
+            if q % 2 == 0:
+                q = q / 2
                 Pow += 1
             else:
-                q = (3 * q + 1)
+                q = 3 * q + 1
                 Pow += 1
         return Pow

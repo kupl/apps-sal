@@ -1,6 +1,6 @@
 class Solution:
-    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
 
+    def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         d = collections.defaultdict(int)
         for b in B:
             b = collections.Counter(b)
@@ -10,7 +10,7 @@ class Solution:
         uni = []
         for a in A:
             c = collections.Counter(a)
-            for i, n in list(d.items()):
+            for (i, n) in list(d.items()):
                 if i not in c or c[i] < n:
                     break
             else:

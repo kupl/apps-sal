@@ -1,4 +1,5 @@
 class Solution:
+
     def winnerSquareGame(self, n: int) -> bool:
         dic = dict()
         dic[1] = True
@@ -11,7 +12,7 @@ class Solution:
                 return dic[n]
             i = int(n ** 0.5)
             while i >= 1:
-                if not helper(n - i**2):
+                if not helper(n - i ** 2):
                     dic[n] = True
                     return True
                 i -= 1

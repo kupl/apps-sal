@@ -6,5 +6,4 @@ def gen(i, angle):
 
 n = int(input())
 a = [int(input()) for _ in range(n)]
-
-print("YES" if gen(0, 0) else "NO")
+print('YES' if gen(0, 0) else 'NO')

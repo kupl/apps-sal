@@ -3,7 +3,6 @@ class StreamChecker:
     def __init__(self, words: List[str]):
         self.root = Trie()
         self.letters = ''
-
         for word in words:
             self.insert(word)
 
@@ -31,10 +30,7 @@ class StreamChecker:
 
 
 class Trie:
+
     def __init__(self):
         self.end = False
         self.child = [None for i in range(26)]
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

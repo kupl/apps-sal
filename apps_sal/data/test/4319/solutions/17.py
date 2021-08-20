@@ -4,7 +4,7 @@ k = l.count(1)
 l1 = []
 c = 1
 for i in range(1, len(l)):
-    if(l[i] == 1):
+    if l[i] == 1:
         l1.append(c)
         c = 1
     else:

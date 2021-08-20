@@ -1,5 +1,5 @@
 def binary_search(key):
-    bad, good = -1, len(ans)
+    (bad, good) = (-1, len(ans))
     while good - bad > 1:
         mid = (bad + good) // 2
         if ans[mid][-1] < key:
@@ -18,4 +18,4 @@ for _ in range(N):
         ans.append([A])
     else:
         ans[idx].append(A)
-print((len(ans)))
+print(len(ans))

@@ -2,10 +2,8 @@ n = int(input())
 a = int(input())
 b = int(input())
 c = int(input())
-
 cost1 = a
 cost2 = b - c
-
 if cost1 <= cost2:
     print(n // cost1)
 else:
@@ -17,6 +15,5 @@ else:
         if n >= b:
             n -= cost2
             r += 1
-
     r += n // cost1
     print(r)

@@ -8,7 +8,7 @@ def res(d, N):
 N = int(input())
 d = []
 for i in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d.append((a, b, i))
 d = sorted(d, key=lambda x: (x[0], -x[1]))
 print(res(d, N))

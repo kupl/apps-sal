@@ -20,6 +20,6 @@ if p == 1:
 else:
     z = 1
     for i in k:
-        z *= (i + 1)
+        z *= i + 1
     z -= 1
-    print(z % (10**9 + 7))
+    print(z % (10 ** 9 + 7))

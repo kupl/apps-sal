@@ -1,5 +1,5 @@
 import sys
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 N = int(sys.stdin.readline())
 bs = [int(b) - 1 for b in sys.stdin.readline().split()]
 fs = [0]

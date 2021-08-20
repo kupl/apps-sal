@@ -1,4 +1,5 @@
 class Monster:
+
     def __init__(self, hp, attack):
         self.hp = hp
         self.attack = attack
@@ -6,6 +7,7 @@ class Monster:
 
 
 class Game:
+
     def __init__(self, monsters: list):
         self.monsters = monsters
 
@@ -19,18 +21,16 @@ class Game:
         while True:
             self.calc_damage(0, 1)
             if self.monsters[1].death:
-                print("Yes")
+                print('Yes')
                 break
             self.calc_damage(1, 0)
             if self.monsters[0].death:
-                print("No")
+                print('No')
                 break
 
 
-a, b, c, d = map(int, input().split())
-
+(a, b, c, d) = map(int, input().split())
 t_monster = Monster(a, b)
 a_monster = Monster(c, d)
-
 game = Game([t_monster, a_monster])
 game.battle()

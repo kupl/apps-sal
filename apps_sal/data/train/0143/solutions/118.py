@@ -1,6 +1,7 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-        '''
+        """
         fruit_dict = collections.defaultdict(int)
         j,result,count=0,0,0
         for i,t in enumerate(tree):
@@ -15,10 +16,9 @@ class Solution:
             if len(fruit_dict)==2:
                 result = max(result,count)
         return result
-        '''
-        blocks = [(k, len(list(v))) for k, v in itertools.groupby(tree)]
-        i, result = 0, 0
-
+        """
+        blocks = [(k, len(list(v))) for (k, v) in itertools.groupby(tree)]
+        (i, result) = (0, 0)
         while i < len(blocks):
             j = i
             count = 0
@@ -33,5 +33,4 @@ class Solution:
                 j += 1
             else:
                 break
-
         return result

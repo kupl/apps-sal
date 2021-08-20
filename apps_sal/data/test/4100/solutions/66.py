@@ -1,4 +1,4 @@
-n, k, q = map(int, input().split())
+(n, k, q) = map(int, input().split())
 a = [int(input()) for i in range(q)]
 ans = []
 
@@ -14,6 +14,6 @@ for i in range(q):
     ans[a[i] - 1] += 1
 for i in range(n):
     if ans[i] <= 0:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

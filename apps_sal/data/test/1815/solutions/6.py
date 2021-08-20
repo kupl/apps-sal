@@ -3,8 +3,8 @@ a = [int(x) for x in input().split()]
 arr = [0] * 100001
 freqs = [0] * 100001
 freqs[0] = n
-minf, maxf = 0, 0
-for ind, i in enumerate(a):
+(minf, maxf) = (0, 0)
+for (ind, i) in enumerate(a):
     arr[i] += 1
     freqs[arr[i]] += 1
     freqs[arr[i] - 1] -= 1

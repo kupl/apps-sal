@@ -22,7 +22,7 @@ def min_price(coins):
         for r in range(d):
             nn = inf
             for q in range(r, a1, d):
-                if (q % d) == r:
+                if q % d == r:
                     nn = min(nn, n[q])
             if nn < inf:
                 for j in range(int(a1 / d) - 1):

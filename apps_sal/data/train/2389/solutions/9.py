@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 q = int(input())
-rgb = "RGB"
+rgb = 'RGB'
 for _ in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     ans = n
     for i in range(3):

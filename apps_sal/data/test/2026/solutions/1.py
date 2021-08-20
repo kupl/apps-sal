@@ -9,17 +9,14 @@ for i in s:
     if i in vs:
         if v == '':
             v = i
-        else:
-            if v != i:
-                v = i
-                ans += 1
-                h = ''
-    else:
-        if h == '':
-            h = i
-        else:
-            if h != i:
-                h = i
-                ans += 1
-                v = ''
+        elif v != i:
+            v = i
+            ans += 1
+            h = ''
+    elif h == '':
+        h = i
+    elif h != i:
+        h = i
+        ans += 1
+        v = ''
 print(ans)

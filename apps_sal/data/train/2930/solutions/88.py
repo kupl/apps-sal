@@ -5,4 +5,4 @@ def summation(num):
             s = s + i
         return s + num
     else:
-        print("No es un número entero positivo")
+        print('No es un número entero positivo')

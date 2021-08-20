@@ -4,7 +4,6 @@ def xxx(n):
     for i in range(n):
         total += curr * (i + 1)
         curr *= 10
-
     return total
 
 

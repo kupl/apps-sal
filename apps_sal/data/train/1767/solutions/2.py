@@ -1,30 +1,24 @@
 from collections import Counter
 from copy import *
-# only works for first case
 
 
 def solution(tiles):
-    valid = ""
+    valid = ''
     for i in range(1, 10):
         x = tiles + str(i)
         c = Counter(x)
-
         if c.most_common(1)[0][1] < 5 and is_valid(Counter(x)):
             valid += str(i)
-
     return valid
 
 
 def is_valid(hand, melds=0, pair=0):
-
-    hand = {k: v for k, v in hand.items() if v}
+    hand = {k: v for (k, v) in hand.items() if v}
     ordered_hand = sorted(hand, key=int)
-
     if melds > 5 or pair > 1:
         return False
     if len(hand) == 0:
         return True
-
     if hand[ordered_hand[0]] > 1:
         new_hand = deepcopy(hand)
         new_hand[ordered_hand[0]] -= 2

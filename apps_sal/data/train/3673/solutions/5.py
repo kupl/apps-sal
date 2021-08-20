@@ -16,4 +16,4 @@ def prime_factors(n):
 def totient(n):
     if type(n) is not int or n < 0:
         return 0
-    return round(n * prod(1 - 1 / p for p in set(prime_factors(n))))
+    return round(n * prod((1 - 1 / p for p in set(prime_factors(n)))))

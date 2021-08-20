@@ -1,6 +1,6 @@
-N = int(input())  # 問題の数
-T = list(map(int, input().split()))  # 問題を解くのにかかる時間
-M = int(input())  # ドリンクの種類の数
+N = int(input())
+T = list(map(int, input().split()))
+M = int(input())
 for i in range(1, M + 1):
     tmp = list(map(int, input().split()))
     tmp2 = T[tmp[0] - 1]

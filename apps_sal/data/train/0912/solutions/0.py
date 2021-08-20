@@ -1,7 +1,6 @@
-# dt = {} for i in x: dt[i] = dt.get(i,0)+1
 import sys
 input = sys.stdin.readline
-inp, ip = lambda: int(input()), lambda: [int(w) for w in input().split()]
+(inp, ip) = (lambda: int(input()), lambda: [int(w) for w in input().split()])
 
 
 def check(mid):
@@ -17,11 +16,11 @@ def check(mid):
 
 
 for _ in range(inp()):
-    n, k = ip()
+    (n, k) = ip()
     x = ip()
     x.sort()
     ans = -1
-    l, r = 1, x[-1]
+    (l, r) = (1, x[-1])
     while l < r:
         mid = (l + r) // 2
         if check(mid):

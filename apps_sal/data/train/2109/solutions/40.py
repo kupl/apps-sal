@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Contents   : AtCoder Regular Contest 094 d問題 WA
 Author     : Kitaura Hiromi
@@ -7,12 +6,10 @@ Since      : 20180414
 Comment    : 不等式での押さえ込みを意識すること
 """
 from math import ceil, sqrt
-
 Q = int(input())
 for i in range(Q):
-    A, B = sorted(map(int, input().split(" ")))
+    (A, B) = sorted(map(int, input().split(' ')))
     s = A * B
-
     if A == B:
         print(2 * A - 2)
     elif A == B + 1:

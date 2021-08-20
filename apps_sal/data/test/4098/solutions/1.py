@@ -1,8 +1,7 @@
 dp = []
 for i in range(5005):
     dp.append([0] * 5005)
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 p = [0] * (n + 1)

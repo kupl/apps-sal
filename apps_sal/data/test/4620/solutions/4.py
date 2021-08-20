@@ -1,6 +1,5 @@
 n = int(input())
 csf = [list(map(int, input().split())) for _ in range(n - 1)]
-
 for i in range(n):
     time = 0
     while True:

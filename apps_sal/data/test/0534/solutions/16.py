@@ -1,4 +1,4 @@
-a = input().split(" ")
+a = input().split(' ')
 a = [int(i) for i in a]
 n = input()
 n = [i for i in n]
@@ -12,4 +12,4 @@ while a[1]:
             n[i] = 'G'
             n[i + 1] = 'B'
     a[1] -= 1
-print("".join(n))
+print(''.join(n))

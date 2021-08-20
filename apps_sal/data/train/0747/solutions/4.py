@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -29,5 +28,5 @@ for _ in range(int(input())):
     else:
         l.reverse()
         print('YES')
-        print(*f, end=" ")
+        print(*f, end=' ')
         print(*l)

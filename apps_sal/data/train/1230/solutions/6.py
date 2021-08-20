@@ -1,14 +1,12 @@
 n = int(input())
 hit = list(map(int, input().split()))
-
 d = {}
 for i in range(1, n):
-    x1, x2 = hit[i], hit[i - 1]
+    (x1, x2) = (hit[i], hit[i - 1])
     try:
         d[x1 ^ x2] += [i]
     except:
         d[x1 ^ x2] = [i]
-
 done = False
 for i in d:
     x = d[i]
@@ -20,7 +18,6 @@ for i in d:
         if x[0] != x[1] - 1:
             done = True
             break
-
 if done:
     print('Yes')
 else:
@@ -37,7 +34,7 @@ else:
             x[i] += 1
         except:
             x[i] = 1
-    if (2 in x and x[2] == 2) or (4 in x and x[4] == 1):
+    if 2 in x and x[2] == 2 or (4 in x and x[4] == 1):
         print('Yes')
     else:
         print('No')

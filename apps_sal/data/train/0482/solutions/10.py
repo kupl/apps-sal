@@ -1,4 +1,5 @@
 class Solution:
+
     def mctFromLeafValues(self, arr: List[int]) -> int:
         n = len(arr)
         max_dp = [[0 for i in range(n)] for j in range(n)]

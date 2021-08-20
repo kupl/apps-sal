@@ -1,6 +1,4 @@
-# -*- coding:utf-8 -*-
 S = int(input())
-
 a = [S]
 cnt = 1
 while True:
@@ -13,5 +11,4 @@ while True:
         break
     else:
         a.append(S)
-
 print(cnt)

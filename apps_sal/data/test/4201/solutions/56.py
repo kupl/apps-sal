@@ -2,11 +2,10 @@ import numpy as np
 
 
 def main():
-    H, W, K = list(map(int, input().split()))
+    (H, W, K) = list(map(int, input().split()))
     M = np.array([list(input()) for _ in range(H)])
-
     ans = 0
-    for n in range(2**(H + W)):
+    for n in range(2 ** (H + W)):
         p = bin(n)[2:]
         p = '0' * (H + W - len(p)) + p
         m = M.copy()
@@ -17,7 +16,6 @@ def main():
         cnt = np.count_nonzero(m == '#')
         if cnt == K:
             ans += 1
-
     print(ans)
     return
 

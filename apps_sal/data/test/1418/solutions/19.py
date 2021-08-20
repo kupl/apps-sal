@@ -7,4 +7,4 @@ for i in range(2, n + 1):
         for j in range(i, n + 1, i):
             if not a[j]:
                 a[j] = cnt
-print(' '.join(str(i) for i in a[2:]))
+print(' '.join((str(i) for i in a[2:])))

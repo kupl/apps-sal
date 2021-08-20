@@ -2,12 +2,10 @@ n = int(input())
 c = list(map(int, input().split()))
 mod = 998244353
 inv = pow(n, mod - 2, mod)
-
 c.sort()
 imos = [c[i] for i in range(n)]
 for i in range(1, n):
     imos[i] += imos[i - 1]
-
 res = [0] * n
 for i in range(1, n + 1):
     temp = 0
@@ -22,6 +20,5 @@ for i in range(1, n + 1):
         else:
             R -= i
             L = max(0, L - i)
-    res[i - 1] = (temp * inv) % mod
-
+    res[i - 1] = temp * inv % mod
 print(*res)

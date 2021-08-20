@@ -3,7 +3,6 @@ A = [int(i) for i in input().split()]
 ct_1 = 0
 ct_2 = 0
 aa = 0
-
 j = 1
 for i in range(n):
     if (aa + A[i]) * j <= 0:
@@ -12,7 +11,6 @@ for i in range(n):
     else:
         aa += A[i]
     j *= -1
-
 aa = 0
 j = -1
 for i in range(n):
@@ -22,5 +20,4 @@ for i in range(n):
     else:
         aa += A[i]
     j *= -1
-
-print((min(ct_1, ct_2)))
+print(min(ct_1, ct_2))

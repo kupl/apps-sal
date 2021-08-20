@@ -4,7 +4,7 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
-for i in ' ' * (int(input())):
+for i in ' ' * int(input()):
     n = int(input())
     L = list(map(int, input().split()))
     M = [0]

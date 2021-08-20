@@ -6,14 +6,11 @@ def comb(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 v_list = list(map(int, input().split()))
-
 v_list.sort(reverse=True)
 max_mean = sum(v_list[:a]) / a
-
 number = v_list[a - 1]
-
 if v_list[:a].count(number) == a:
     count = 0
     for i in range(a, b + 1):

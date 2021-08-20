@@ -4,11 +4,11 @@ from heapq import *
 from collections import *
 from itertools import *
 from functools import *
-
 sys.setrecursionlimit(100000000)
 
 
-def input(): return sys.stdin.readline().rstrip()
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 N = int(input())
@@ -35,5 +35,4 @@ for K in f(N) | f(N - 1):
         n //= K
     if n % K == 1:
         ans.add(K)
-
-print((len(ans)))
+print(len(ans))

@@ -6,7 +6,7 @@ def sum_dig(num):
     return ans
 
 
-n, s = list(map(int, input().split()))
+(n, s) = list(map(int, input().split()))
 ans = 0
 for i in range(s, n + 1):
     if i - sum_dig(i) >= s:

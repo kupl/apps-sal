@@ -1,8 +1,8 @@
 def greek_comparator(lhs, rhs):
     if lhs == rhs:
         return 0
-    l, r = 0, 0
-    for i, a in enumerate(greek_alphabet):
+    (l, r) = (0, 0)
+    for (i, a) in enumerate(greek_alphabet):
         if lhs == a:
             l = i
         if rhs == a:

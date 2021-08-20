@@ -1,5 +1,3 @@
-
-
 def solved(string):
     l = len(string)
     if l % 2 == 1:

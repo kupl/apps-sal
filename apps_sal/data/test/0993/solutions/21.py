@@ -1,9 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 alis = list(map(int, input().split()))
 my_dict = dict()
-
 tmp = 0
-
 for item in alis:
     tmp += item
     tmp %= m
@@ -11,9 +9,7 @@ for item in alis:
         my_dict[tmp] += 1
     else:
         my_dict[tmp] = 1
-
 ret = 0
-
 for item in my_dict:
     if item == 0:
         val = my_dict[item]
@@ -21,5 +17,4 @@ for item in my_dict:
     else:
         val = my_dict[item]
         ret += val * (val - 1) // 2
-
 print(ret)

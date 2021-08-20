@@ -17,7 +17,7 @@ def rfa():
     return [float(i) for i in input().split()]
 
 
-eps = 1e-9
+eps = 1e-09
 
 
 def is_equal(a, b):
@@ -35,7 +35,7 @@ def distance_sqr(p0, p1):
 n = ri()
 curD = 1
 for i in range(n):
-    s, d = ria()
+    (s, d) = ria()
     while s > curD or (curD - s) % d != 0:
         curD += 1
     curD += 1

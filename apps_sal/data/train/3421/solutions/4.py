@@ -1,6 +1,6 @@
 def mysterious_pattern(m, n):
     exp = [[(' ', 'o')[j == e % n] for e in fib(m)] for j in range(n)]
-    return '\n'.join(''.join(e).rstrip() for e in exp).strip('\n')
+    return '\n'.join((''.join(e).rstrip() for e in exp)).strip('\n')
 
 
 def fib(n):

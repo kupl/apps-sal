@@ -10,7 +10,7 @@ def main():
     s = sum(a)
     q = int(input())
     for i in range(q):
-        b, c = map(int, input().split())
+        (b, c) = map(int, input().split())
         s -= b * d[b]
         s += c * d[b]
         print(s)

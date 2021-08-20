@@ -1,1 +1,2 @@
-def greet(x): return f"Hello, {x} how are you doing today?"
+def greet(x):
+    return f'Hello, {x} how are you doing today?'

@@ -12,4 +12,4 @@ def gen(n):
 
 def convergence(n, base_series=set(islice(gen(1), 1000))):
     it = gen(n)
-    return next(i for i in count() if next(it) in base_series)
+    return next((i for i in count() if next(it) in base_series))

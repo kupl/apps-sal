@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    s, i, e = (int(i) for i in input().split())
+    (s, i, e) = (int(i) for i in input().split())
     if s > i + e:
         print(e + 1)
     elif s + e <= i:

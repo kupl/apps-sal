@@ -23,6 +23,6 @@ for _ in range(t):
     n = int(input())
     arr = list(map(int, input().split()))
     if ans(arr, n):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

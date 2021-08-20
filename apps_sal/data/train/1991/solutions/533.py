@@ -1,4 +1,5 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         MOD = 10 ** 9 + 7
 
@@ -7,7 +8,7 @@ class Solution:
             ans = 0
             if i == finish:
                 ans += 1
-            for j, nex in enumerate(locations):
+            for (j, nex) in enumerate(locations):
                 if i != j and (used := abs(nex - locations[i])) <= f:
                     ans += dfs(j, f - used)
             return ans % MOD

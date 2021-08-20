@@ -1,11 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-
 s = set()
-
 mx = 0
 cnt = 0
-
 for i in a:
     k = int(i)
     while k in s:
@@ -16,5 +13,4 @@ for i in a:
     if mx < k:
         mx = k
     cnt = cnt + 1
-
 print(mx - cnt + 1)

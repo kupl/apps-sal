@@ -2,7 +2,7 @@ def points(games):
     l = []
     x = 0
     z = 0
-    n = (' '.join(games))
+    n = ' '.join(games)
     for i in n:
         if i != ' ' and i != ':':
             l.append(i)

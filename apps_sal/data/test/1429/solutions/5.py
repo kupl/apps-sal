@@ -1,24 +1,19 @@
-# 各区画Tが自分自身を並べ替えた文字列と相補的であるかどうかを調べていく。
-
-n, s = input().split()
+(n, s) = input().split()
 N = int(n)
 S = list(s)
 A = [0 for _ in range(N)]
 G = [0 for _ in range(N)]
 C = [0 for _ in range(N)]
 T = [0 for _ in range(N)]
-
 for i in range(N):
-    if S[i] == "A":
+    if S[i] == 'A':
         A[i] = 1
-    elif S[i] == "G":
+    elif S[i] == 'G':
         G[i] = 1
-    elif S[i] == "C":
+    elif S[i] == 'C':
         C[i] = 1
-    elif S[i] == "T":
+    elif S[i] == 'T':
         T[i] = 1
-
-
 ans = 0
 for i in range(N):
     Asum = 0
@@ -32,5 +27,4 @@ for i in range(N):
         Tsum += T[j]
         if Asum == Tsum and Csum == Gsum:
             ans += 1
-
 print(ans)

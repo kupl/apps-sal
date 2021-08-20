@@ -1,10 +1,10 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
-N, C = LI()
+(N, C) = LI()
 D = [LI() for _ in range(C)]
 c = [LI() for _ in range(N)]
-
 INF = 10 ** 15
 
 
@@ -15,7 +15,6 @@ def main():
             x = (i + j) % 3
             for k in range(C):
                 w[x][k] += D[c[i][j] - 1][k]
-
     ans = INF
     for i in range(C):
         for j in range(C):

@@ -1,6 +1,5 @@
 N = int(input())
 A = [int(a) for a in input().split()]
-
 m = max(A)
 ma = 0
 c = 0

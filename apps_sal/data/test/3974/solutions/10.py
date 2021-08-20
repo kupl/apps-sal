@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 def main():
     s = input()
     cnt = 0
@@ -9,11 +6,10 @@ def main():
         if x == '+':
             cnt += 1
             ans = max(ans, cnt)
+        elif cnt == 0:
+            ans += 1
         else:
-            if cnt == 0:
-                ans += 1
-            else:
-                cnt -= 1
+            cnt -= 1
     print(ans)
 
 

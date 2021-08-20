@@ -1,6 +1,5 @@
 from bisect import insort
-
-tot, wr, ma, mas, mis = map(int, input().split())
+(tot, wr, ma, mas, mis) = map(int, input().split())
 s = sorted(map(int, input().split()))
 res = []
 while wr < tot:

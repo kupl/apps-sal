@@ -2,6 +2,7 @@ import heapq
 
 
 class Input:
+
     def __init__(self):
         from sys import stdin
         lines = stdin.readlines()
@@ -33,7 +34,7 @@ def workout_plan(n, k, xs, a, cs):
 
 
 inp = Input()
-n, k = inp.input_int_list()
+(n, k) = inp.input_int_list()
 xs = inp.input_int_list()
 a = int(inp.input())
 cs = inp.input_int_list()

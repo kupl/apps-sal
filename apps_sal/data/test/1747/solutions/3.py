@@ -1,8 +1,8 @@
 def main():
-    n, k = list(map(int, input().split()))
-    l, cnt = list(map(int, input().split())), [0] * 1000001
+    (n, k) = list(map(int, input().split()))
+    (l, cnt) = (list(map(int, input().split())), [0] * 1000001)
     start = end = j = m = 0
-    for i, x in enumerate(l):
+    for (i, x) in enumerate(l):
         if not cnt[x]:
             k -= 1
         cnt[x] += 1
@@ -13,7 +13,7 @@ def main():
                 k += 1
             j += 1
         if m < i - j:
-            m, start, end = i - j, j, i
+            (m, start, end) = (i - j, j, i)
     print(start + 1, end + 1)
 
 

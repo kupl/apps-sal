@@ -1,7 +1,8 @@
-r1, c1, r2, c2 = map(int, input().split())
+(r1, c1, r2, c2) = map(int, input().split())
 
 
 class Combination:
+
     def __init__(self, N: int, MOD: int):
         fac = [0 for _ in range(N + 1)]
         fac[0] = 1
@@ -31,6 +32,5 @@ class Combination:
 
 MOD = 1000000007
 comb = Combination(2 * 1000000 + 10, MOD)
-
 ans = (2 * MOD + comb.combination(r1 + c1, r1) - comb.combination(r1 + c2 + 1, r1) - comb.combination(r2 + c1 + 1, r2 + 1) + comb.combination(r2 + c2 + 2, r2 + 1)) % MOD
 print(ans)

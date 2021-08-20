@@ -1,6 +1,5 @@
 s = input()
 k = int(input())
-
 min_l = max_l = 0
 for c in s:
     if c == '?' or c == '*':
@@ -8,7 +7,6 @@ for c in s:
     else:
         min_l += 1
         max_l += 1
-
 if k < min_l or (k > max_l and '*' not in s):
     print('Impossible')
 else:

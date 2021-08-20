@@ -5,21 +5,21 @@ for ahfiuyh in range(int(input())):
     f = True
     for i in a:
         if i[1] > i[0]:
-            print("NO")
+            print('NO')
             f = False
             break
         elif i[0] < cc[0]:
-            print("NO")
+            print('NO')
             f = False
             break
         elif i[1] < cc[1]:
-            print("NO")
+            print('NO')
             f = False
             break
         elif i[1] - cc[1] > i[0] - cc[0]:
-            print("NO")
+            print('NO')
             f = False
             break
         cc = i
     if f:
-        print("YES")
+        print('YES')

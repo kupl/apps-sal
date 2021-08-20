@@ -22,7 +22,7 @@ def wr(x):
     res = x[-2:]
     for i in range(m - 2, 2, -3):
         res = x[i - 3:i] + '.' + res
-    res = x[0: (m - 2) % 3] + '.' + res
+    res = x[0:(m - 2) % 3] + '.' + res
     if res[0] == '.':
         res = res[1:]
     if res[-2:] == '00':

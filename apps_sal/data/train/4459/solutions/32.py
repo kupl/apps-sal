@@ -6,6 +6,7 @@ def nth_even(n):
 
 
 class TestNthEven(unittest.TestCase):
+
     def test_should_0_when_given_n_is_1(self):
         n = 1
         actual = nth_even(n)

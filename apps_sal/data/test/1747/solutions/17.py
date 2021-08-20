@@ -1,5 +1,5 @@
 from collections import defaultdict
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l = [int(i) for i in input().split()]
 maxi = 0
 left = -1
@@ -21,6 +21,4 @@ for end in range(n):
         maxi = end - st + 1
         left = st
         right = end
-
-
 print(left + 1, right + 1)

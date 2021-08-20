@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = -10000000000
 c = 10000000000
@@ -16,12 +16,11 @@ for i in range(n):
         break
 if k == 0:
     print(sum(a))
+elif b == 0:
+    print(sum(a))
 else:
-    if b == 0:
-        print(sum(a))
+    l = (-1) ** k
+    if l == -1:
+        print(sum(a) - 2 * min(abs(b), abs(c)))
     else:
-        l = (-1)**k
-        if l == -1:
-            print(sum(a) - 2 * (min(abs(b), abs(c))))
-        else:
-            print(sum(a))
+        print(sum(a))

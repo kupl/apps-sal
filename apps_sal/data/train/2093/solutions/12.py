@@ -2,7 +2,6 @@ n = int(input())
 a = list(map(int, input().split()))
 groups = []
 groupTail = []
-
 for elem in a:
     if not groups:
         groups.append([elem])
@@ -26,6 +25,5 @@ for elem in a:
         else:
             groups[m].append(elem)
             groupTail[m] = elem
-
 for line in groups:
-    print(" ".join(map(str, line)))
+    print(' '.join(map(str, line)))

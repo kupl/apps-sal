@@ -30,17 +30,15 @@ def valid_parentheses(symbol_string):
     :param symbol_string: String
     :return Bool:
     """
-
     stack = Stack()
     for char in symbol_string:
-        if char == "(":
-            stack.push("(")
-        elif char == ")":
+        if char == '(':
+            stack.push('(')
+        elif char == ')':
             if stack.is_empty():
                 return False
             else:
                 stack.pop()
-
     if not stack.is_empty():
         return False
     else:

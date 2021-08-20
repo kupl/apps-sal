@@ -1,4 +1,5 @@
 class Solution:
+
     def mySqrt(self, x):
         """
         :type x: int
@@ -10,15 +11,14 @@ class Solution:
         down = 0
         while True:
             n = (up + down) // 2
-            if n**2 == x:
+            if n ** 2 == x:
                 return n
-            elif n**2 < x:
-                if (n + 1)**2 > x:
+            elif n ** 2 < x:
+                if (n + 1) ** 2 > x:
                     return n
                 else:
                     down = n
+            elif (n - 1) ** 2 < x:
+                return n - 1
             else:
-                if (n - 1)**2 < x:
-                    return n - 1
-                else:
-                    up = n
+                up = n

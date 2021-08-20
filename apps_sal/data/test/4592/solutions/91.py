@@ -15,5 +15,5 @@ for i in range(1, N + 1):
 ans = 1
 couterls.pop(0)
 for i in couterls.values():
-    ans = (ans * (i + 1)) % (10**9 + 7)
+    ans = ans * (i + 1) % (10 ** 9 + 7)
 print(ans)

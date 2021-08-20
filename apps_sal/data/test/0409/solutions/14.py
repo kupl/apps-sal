@@ -21,18 +21,15 @@ for i in range(len(s) - 1, 0, -1):
         break
 if pos == -1 or pos1 == -1:
     flag = False
+elif abs(pos - pos1) > 1:
+    flag = True
 else:
-    if abs(pos - pos1) > 1:
-        flag = True
-    else:
-        flag = False
+    flag = False
 if flag:
     print('YES')
+elif pos2 == -1 or pos3 == -1:
+    print('NO')
+elif abs(pos2 - pos3) > 1:
+    print('YES')
 else:
-    if pos2 == -1 or pos3 == -1:
-        print('NO')
-    else:
-        if abs(pos2 - pos3) > 1:
-            print('YES')
-        else:
-            print('NO')
+    print('NO')

@@ -1,15 +1,11 @@
-n, m = list(map(int, input().lstrip().split(' ')))
-
+(n, m) = list(map(int, input().lstrip().split(' ')))
 a = list(map(int, input().lstrip().split(' ')))
 c = list(map(int, input().lstrip().split(' ')))
-
-costs = sorted([(i, cost) for i, cost in enumerate(c)],
-               key=lambda x: (x[1], x[0]))
+costs = sorted([(i, cost) for (i, cost) in enumerate(c)], key=lambda x: (x[1], x[0]))
 ci = 0
-# print(costs)
 for _ in range(m):
     cost = 0
-    t, d = list(map(int, input().lstrip().split(' ')))
+    (t, d) = list(map(int, input().lstrip().split(' ')))
     t -= 1
     if a[t] > d:
         cost = d * c[t]
@@ -19,7 +15,7 @@ for _ in range(m):
         d -= a[t]
         a[t] = 0
         while d > 0 and ci < n:
-            ai, _cost = costs[ci]
+            (ai, _cost) = costs[ci]
             if a[ai] > d:
                 cost += d * _cost
                 a[ai] -= d
@@ -31,5 +27,4 @@ for _ in range(m):
                 ci += 1
         if d > 0:
             cost = 0
-    # print(a)
     print(cost)

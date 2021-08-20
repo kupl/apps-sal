@@ -1,4 +1,3 @@
-# cook your dish here
 from math import sqrt
 
 
@@ -12,7 +11,7 @@ def prime_facs(n):
 
 for a0 in range(int(input())):
     n = int(input())
-    x = prime_facs(n**2)
+    x = prime_facs(n ** 2)
     print(len(x))
     for i in x:
         print(i + n)

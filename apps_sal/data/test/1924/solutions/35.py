@@ -12,13 +12,12 @@ def prepare(n, MOD):
         inv *= m
         inv %= MOD
         invs[m - 1] = inv
+    return (factorials, invs)
 
-    return factorials, invs
 
-
-r1, c1, r2, c2 = list(map(int, input().split()))
+(r1, c1, r2, c2) = list(map(int, input().split()))
 MOD = 10 ** 9 + 7
-facts, invs = prepare(r2 + c2 + 1, MOD)
+(facts, invs) = prepare(r2 + c2 + 1, MOD)
 ans = 0
 for i in range(r1, r2 + 1):
     d1 = facts[i + c2 + 1] * invs[c2] % MOD

@@ -5,9 +5,7 @@ def func(n):
         if n % i == 0:
             if max(len(str(i)), len(str(n // i))) < b:
                 b = max(len(str(i)), len(str(n // i)))
-
         i += 1
-
     return print(b)
 
 

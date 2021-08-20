@@ -11,7 +11,7 @@ def get_cost(arr):
 
 
 arr = list(map(int, input().split()))
-left_cost, right_cost = get_cost(arr), get_cost(list(reversed(arr)))
+(left_cost, right_cost) = (get_cost(arr), get_cost(list(reversed(arr))))
 ans = min(left_cost[n], right_cost[n])
 for i in range(1, n - 1):
     ans = min(ans, max(left_cost[i] + right_cost[n - i], left_cost[i + 1] + right_cost[n - i - 1]))

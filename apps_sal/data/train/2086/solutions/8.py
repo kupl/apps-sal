@@ -1,6 +1,6 @@
 from sys import stdin
 input = stdin.readline
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 max = 0
 t = []

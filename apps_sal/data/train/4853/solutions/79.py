@@ -4,4 +4,4 @@ def double_char(s):
     for i in range(len(s)):
         returnArr.append(s[i])
         returnArr.append(s[i])
-    return "".join(returnArr)
+    return ''.join(returnArr)

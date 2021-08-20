@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 s = list(map(int, input().split()))
 sm = sum(s)
 s0 = s.pop(0)

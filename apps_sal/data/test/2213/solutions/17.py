@@ -11,8 +11,8 @@ def arr_inp(n):
         return [str(x) for x in stdin.readline().split()]
 
 
-n, m, k = arr_inp(1)
-arr, ans = [arr_inp(1) for i in range(n)], list(combinations(list(range(1, m + 1)), 2))
+(n, m, k) = arr_inp(1)
+(arr, ans) = ([arr_inp(1) for i in range(n)], list(combinations(list(range(1, m + 1)), 2)))
 print(len(ans))
 for i in range(len(ans)):
     if k:

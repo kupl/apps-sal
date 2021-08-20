@@ -22,7 +22,6 @@ for i in range(n):
     num = int(entry[1])
     phones = entry[2:]
     name_map[name].extend(phones)
-
 print(len(name_map))
 for name in name_map:
     phones = name_map[name]

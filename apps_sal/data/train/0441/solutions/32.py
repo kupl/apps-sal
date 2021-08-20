@@ -1,4 +1,5 @@
 class Solution:
+
     def consecutiveNumbersSum(self, N):
         res = 1
         i = 3

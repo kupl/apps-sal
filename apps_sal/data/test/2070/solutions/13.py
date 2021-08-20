@@ -13,7 +13,6 @@ def main():
         if i:
             num[i] += num[i - 1]
         pos[ord(s[i]) - ord('a')].append(i)
-    #print(pos, num)
     for i in range(26):
         tr = defaultdict(lambda: 0)
         if len(pos[i]) > 1:
@@ -21,7 +20,6 @@ def main():
                 count += tr[num[pos[i][j] - 1]]
                 tr[num[pos[i][j]]] += 1
     print(count)
-    #print(a, s)
 
 
 def __starting_point():

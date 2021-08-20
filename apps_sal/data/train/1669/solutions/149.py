@@ -1,10 +1,11 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
-        straights, pq, = [], []
+        (straights, pq) = ([], [])
         for h in hand:
             heapq.heappush(pq, h)
         while len(pq) > 0:
-            straight, dump = [], []
+            (straight, dump) = ([], [])
             while len(pq) > 0 and len(straight) < W:
                 pop = heapq.heappop(pq)
                 if len(straight) == 0 or pop == straight[-1] + 1:
@@ -17,7 +18,4 @@ class Solution:
             else:
                 for d in dump:
                     heapq.heappush(pq, d)
-
-        # print(\"hel\")
-        # print(straights)
         return len(straights) > 0

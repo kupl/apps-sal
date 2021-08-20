@@ -7,4 +7,4 @@ def reverse(s):
             indexes.append(i + 1)
     for i in list(set(indexes)):
         s[i] = s[i].swapcase()
-    return "".join(s)
+    return ''.join(s)

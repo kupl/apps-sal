@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         if n == 1:
             return 6
@@ -15,6 +16,6 @@ class Solution:
                     elif c < rollMax[d - 1]:
                         mem[n, d, c] += get_dp(n - 1, d, c + 1)
             return mem[n, d, c]
-        result = sum(get_dp(n - 1, d, 1) for d in range(1, 7))
-        result = result % int(10**9 + 7)
+        result = sum((get_dp(n - 1, d, 1) for d in range(1, 7)))
+        result = result % int(10 ** 9 + 7)
         return result

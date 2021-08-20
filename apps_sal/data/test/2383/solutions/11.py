@@ -1,7 +1,5 @@
-# D
 N = int(input())
 A = list(map(int, input().split()))
-
 next_number = 1
 cnt = 0
 for a in A:

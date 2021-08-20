@@ -6,4 +6,4 @@ def make_acronym(phrase):
     elif not phrase.replace(' ', '').isalpha():
         return 'Not letters'
     else:
-        return ''.join(word[0].upper() for word in phrase.split(' '))
+        return ''.join((word[0].upper() for word in phrase.split(' ')))

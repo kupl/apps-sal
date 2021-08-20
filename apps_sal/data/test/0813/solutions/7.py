@@ -1,7 +1,8 @@
-def read(): return map(int, input().split())
+def read():
+    return map(int, input().split())
 
 
-n, a, b = read()
+(n, a, b) = read()
 p1 = list(read())
 p2 = list(read())
 ans = [0] * n

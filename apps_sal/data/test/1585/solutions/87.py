@@ -1,5 +1,4 @@
-x, y = map(int, input().split())
-
+(x, y) = map(int, input().split())
 cnt = 0
 while y >= x:
     cnt += 1

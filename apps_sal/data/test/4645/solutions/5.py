@@ -17,5 +17,4 @@ for _ in range(int(input())):
     for i in range(n):
         if not done[i]:
             arr.append(i)
-
     print(*[e + 1 for e in arr])

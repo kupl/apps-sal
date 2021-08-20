@@ -6,7 +6,7 @@ for i in range(N):
         if P[i] == i + 1:
             ans += 1
         break
-    a, b = P[i], P[i + 1]
+    (a, b) = (P[i], P[i + 1])
     if a == i + 1:
         ans += 1
         P[i] = b

@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         start = end = disFruits = curTotal = maxTotal = 0
         fruits = {}

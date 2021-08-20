@@ -1,12 +1,8 @@
-
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 l = []
 for _ in range(N):
     l.append(list(map(int, input().split())))
-
 sorted_l = sorted(l, key=lambda x: x[0])
-
 ans = 0
 count = 0
 flag = 0

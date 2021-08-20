@@ -1,13 +1,13 @@
 def multiple(n):
     a = []
-    for i in range(1, int(n**.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         a.append(i * i)
     return a
 
 
 n = int(input())
 a = multiple(n)
-ans = 10**18
+ans = 10 ** 18
 for i in a:
     if n - i < 0:
         continue

@@ -1,10 +1,7 @@
-# lazy backtrack attempt
-
 def validate(tiles, used_pair=False):
     tiles = sorted(tiles)
     if not tiles:
         return True
-
     current_tile = tiles.pop(0)
     if tiles.count(current_tile) > 1:
         tiles.remove(current_tile)
@@ -15,7 +12,6 @@ def validate(tiles, used_pair=False):
         tiles.append(current_tile)
         tiles.append(current_tile)
         tiles = list(sorted(tiles))
-
     if tiles.count(current_tile + 1) > 0 and tiles.count(current_tile + 2) > 0:
         tiles.remove(current_tile + 1)
         tiles.remove(current_tile + 2)
@@ -25,7 +21,6 @@ def validate(tiles, used_pair=False):
         tiles.append(current_tile + 1)
         tiles.append(current_tile + 2)
         tiles = list(sorted(tiles))
-
     if not used_pair and tiles.count(current_tile) > 0:
         tiles.remove(current_tile)
         ok = validate(tiles, True)

@@ -1,8 +1,8 @@
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         dp = [0 - sys.maxsize for i in range(len(nums))]
         heap = []
-
         dp[0] = nums[0]
         heapq.heappush(heap, (0 - nums[0], 0))
         for i in range(1, len(nums)):

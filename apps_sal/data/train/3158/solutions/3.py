@@ -1,8 +1,7 @@
 def one_down(txt):
-    # your code here
     if isinstance(txt, list) or isinstance(txt, int):
-        return "Input is not a string"
-    Decode = list(map((ord), txt))
+        return 'Input is not a string'
+    Decode = list(map(ord, txt))
     txt = ''
     for x in Decode:
         if x < 65 or x > 122:
@@ -11,4 +10,4 @@ def one_down(txt):
             txt += chr(x + 25)
         else:
             txt += chr(x - 1)
-    return(txt)
+    return txt

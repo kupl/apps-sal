@@ -1,18 +1,23 @@
 import sys
 
 
-def sr(): return sys.stdin.readline().rstrip()
-def ir(): return int(sr())
-def lr(): return list(map(int, sr().split()))
+def sr():
+    return sys.stdin.readline().rstrip()
 
 
-# 二分探索
+def ir():
+    return int(sr())
+
+
+def lr():
+    return list(map(int, sr().split()))
+
+
 N = ir()
 S = sr()
 
 
 def check(x):
-    # x文字右側にずらした場所を調べる
     candidate = set()
     for i in range(N - 2 * x + 1):
         candidate.add(S[i:i + x])
@@ -29,5 +34,4 @@ while abs(ng - ok) > 1:
         ok = mid
     else:
         ng = mid
-
 print(ok)

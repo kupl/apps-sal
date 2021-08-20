@@ -1,5 +1,7 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
+
         def get_possible(idx, cur, step, swap):
             if idx >= len(positions):
                 return step + swap
@@ -8,17 +10,11 @@ class Solution:
             elif not swap:
                 return step
             else:
-                return max(
-                    step + 1,
-                    get_possible(idx, cur + 1, step + 1, False),
-                    get_possible(idx, positions[idx] - 1, 1, False),
-                    get_possible(idx + 1, positions[idx], 1, True),
-                )
-        letters, ans = defaultdict(list), 0
-        for i, c in enumerate(text):
+                return max(step + 1, get_possible(idx, cur + 1, step + 1, False), get_possible(idx, positions[idx] - 1, 1, False), get_possible(idx + 1, positions[idx], 1, True))
+        (letters, ans) = (defaultdict(list), 0)
+        for (i, c) in enumerate(text):
             letters[c].append(i)
-
-        for _, positions in letters.items():
+        for (_, positions) in letters.items():
             if len(positions) < 3:
                 ans = max(ans, len(positions))
                 continue

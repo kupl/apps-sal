@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l2 = list(map(int, input().split()))
     l = sorted(l2)
     if n == 2 or m < n:

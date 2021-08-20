@@ -1,13 +1,12 @@
 import math
-
-la, ra, ta = map(int, input().split())
-lb, rb, tb = map(int, input().split())
+(la, ra, ta) = map(int, input().split())
+(lb, rb, tb) = map(int, input().split())
 
 
 def f(la, ra, ta, lb, rb, tb):
     d = la - lb
     x = math.gcd(ta, tb)
-    d = ((d % x) + x) % x
+    d = (d % x + x) % x
     return min(ra, rb - d)
 
 

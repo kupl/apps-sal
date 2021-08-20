@@ -14,15 +14,15 @@ def dfs(adj, s, visited):
 
 
 def main():
-    n, m = map(int, input().strip().split())
-    adj, check = [[] for j in range(n + m)], 0
+    (n, m) = map(int, input().strip().split())
+    (adj, check) = ([[] for j in range(n + m)], 0)
     for i in range(n):
         l = [int(j) for j in input().split()][1:]
         check = max(check, len(l))
         for j in l:
             adj[i].append(n + j - 1)
             adj[n + j - 1].append(i)
-    visited, ans = [0 for i in range(n + m)], -1
+    (visited, ans) = ([0 for i in range(n + m)], -1)
     if check == 0:
         print(n)
         return

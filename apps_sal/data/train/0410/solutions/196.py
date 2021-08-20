@@ -17,10 +17,9 @@ class Solution:
                     else:
                         i /= 2
                         ans += 1
-            for ind, num in enumerate(num_list):
+            for (ind, num) in enumerate(num_list):
                 lst[num] = ans - ind
             num_list = []
         power_list = [(i, lst[i]) for i in range(lo, hi + 1)]
         power_list.sort(key=lambda x: x[1])
-
         return power_list[k - 1][0]

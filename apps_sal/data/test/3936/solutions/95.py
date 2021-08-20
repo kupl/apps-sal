@@ -1,10 +1,9 @@
 N = int(input())
 S1 = input()
 S2 = input()
-
-m1 = ""
-m = 10**9 + 7
-S1 += "."
+m1 = ''
+m = 10 ** 9 + 7
+S1 += '.'
 for i in range(len(S1) - 1):
     if S1[i] == S1[i + 1]:
         m1 += 'y'
@@ -25,8 +24,7 @@ if m1[0] == 'y':
     score[0] = 6
 else:
     score[0] = 3
-
 ans = 1
 for i in range(len(m1)):
-    ans = (ans * score[i]) % m
+    ans = ans * score[i] % m
 print(ans)

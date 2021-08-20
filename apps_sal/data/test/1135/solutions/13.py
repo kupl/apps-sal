@@ -5,10 +5,9 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
     n = int(input())
     s = input()
-    ans = ""
+    ans = ''
     if len(s) % 2 == 1:
         ans += s[0]
         s = s[1:]

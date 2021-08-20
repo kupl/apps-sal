@@ -2,13 +2,15 @@ import math
 
 
 class Solution:
+
     def pathInZigZagTree(self, label: int) -> List[int]:
+
         def findIndexorLabel(value):
             level = int(math.log(value, 2)) + 1
             if level % 2:
                 index = value
             else:
-                total = 2**(level - 1) + (2**level - 1)
+                total = 2 ** (level - 1) + (2 ** level - 1)
                 index = total - value
             return index
         arr = []

@@ -1,18 +1,9 @@
-#   ==========     //\\       //||     ||====//||
-#       ||        //  \\        ||     ||   // ||
-#       ||       //====\\       ||     ||  //  ||
-#       ||      //      \\      ||     || //   ||
-#   ========== //        \\  ========  ||//====||
-#  code
-
-
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
-
     last = -1
     ans = 0
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         if v == 1:
             if last > -1:
                 ans += i - last - 1

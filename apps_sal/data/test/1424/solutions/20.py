@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 x = []
 for i in range(m + 1):
     x.append(int(input()))

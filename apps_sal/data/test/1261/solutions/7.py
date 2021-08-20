@@ -1,5 +1,4 @@
 n = int(input())
-
 mult = 1
 res = []
 remain = n

@@ -1,5 +1,4 @@
 3
-
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input()))
@@ -18,9 +17,8 @@ while i < n:
         else:
             l = max(l, max(a[i], a[i - 1], a[i - 2], a[i - 3], a[i - 4]) + 1)
     i += 1
-
 if l is None:
     l = -1000000000
 if r is None:
     r = 1000000000
-print("%s %s" % (l, r))
+print('%s %s' % (l, r))

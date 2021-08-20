@@ -1,16 +1,15 @@
 class Solution:
+
     def lastSubstring(self, s: str) -> str:
         if len(set(s)) == 1:
             return s
         alpha = sorted(list(set(s)))
         start = alpha[-1]
-
         n = len(s)
         index = []
-        for i, char in enumerate(s):
+        for (i, char) in enumerate(s):
             if char == start:
                 index.append(i)
-
         prefix = start
         maxprefix = start
         while len(index) > 1:
@@ -25,5 +24,4 @@ class Solution:
                         nextindex = [i + 1]
             prefix = maxprefix
             index = nextindex
-
         return maxprefix + s[index[0] + 1:]

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from sys import stdin
 
 
@@ -16,5 +14,5 @@ def Choose(n, k):
 
 TC = int(stdin.readline().strip())
 for tc in range(TC):
-    N, K = list(map(int, stdin.readline().split()))
+    (N, K) = list(map(int, stdin.readline().split()))
     print(Choose(N, K))

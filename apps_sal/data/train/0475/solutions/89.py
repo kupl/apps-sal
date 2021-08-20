@@ -1,4 +1,5 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         a = []
         for i in range(len(nums)):
@@ -7,7 +8,7 @@ class Solution:
                 s += nums[j]
                 a.append(s)
         a = sorted(a)
-        b = 10**9 + 7
+        b = 10 ** 9 + 7
         print(b)
         a = sum(a[left - 1:right])
         if a > b:

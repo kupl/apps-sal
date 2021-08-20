@@ -6,4 +6,5 @@ def do(a, b, c, d, s):
     return dc
 
 
-def diamonds_and_toads(s, f): return do(*[['ruby', 'crystal', 'rcRC', 'cC', s], ['python', 'squirrel', 'psPS', 'sS', s]][f == 'evil'])
+def diamonds_and_toads(s, f):
+    return do(*[['ruby', 'crystal', 'rcRC', 'cC', s], ['python', 'squirrel', 'psPS', 'sS', s]][f == 'evil'])

@@ -1,39 +1,73 @@
 import sys
 from math import log2, floor, ceil, sqrt, gcd
 import bisect
-# from collections import deque
-# sys.setrecursionlimit(10**5)
 
 
-def Ri(): return [int(x) for x in sys.stdin.readline().split()]
-def ri(): return sys.stdin.readline().strip()
+def Ri():
+    return [int(x) for x in sys.stdin.readline().split()]
 
 
-def input(): return sys.stdin.readline().strip()
-def list2d(a, b, c): return [[c] * b for i in range(a)]
-def list3d(a, b, c, d): return [[[d] * c for j in range(b)] for i in range(a)]
-def list4d(a, b, c, d, e): return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
-def ceil(x, y=1): return int(-(-x // y))
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(N=None): return list(MAP()) if N is None else [INT() for i in range(N)]
-def Yes(): print('Yes')
-def No(): print('No')
-def YES(): print('YES')
-def NO(): print('NO')
+def ri():
+    return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def list2d(a, b, c):
+    return [[c] * b for i in range(a)]
+
+
+def list3d(a, b, c, d):
+    return [[[d] * c for j in range(b)] for i in range(a)]
+
+
+def list4d(a, b, c, d, e):
+    return [[[[e] * d for j in range(c)] for j in range(b)] for i in range(a)]
+
+
+def ceil(x, y=1):
+    return int(-(-x // y))
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST(N=None):
+    return list(MAP()) if N is None else [INT() for i in range(N)]
+
+
+def Yes():
+    print('Yes')
+
+
+def No():
+    print('No')
+
+
+def YES():
+    print('YES')
+
+
+def NO():
+    print('NO')
 
 
 INF = 10 ** 18
 MOD = 1000000007
-
-n, k = Ri()
+(n, k) = Ri()
 st = ri()
 st = [i for i in st]
 arr = [chr(ord('a') + i) for i in range(k)]
 flag = -1
 ch = -1
 if n == 1:
-    # YES()
     if st[0] == arr[-1]:
         NO()
     else:
@@ -62,15 +96,11 @@ else:
                 break
         if flag != -1:
             break
-    # print(flag)
     if flag == -1:
         NO()
     else:
         st[flag] = ch
-        # print(st)
-        # print(flag,n)
         for i in range(flag + 1, n):
-            # print("fs")
             for j in range(0, k):
                 tch = arr[j]
                 if i - 2 >= 0:
@@ -94,5 +124,4 @@ else:
                     ch = tch
                     st[i] = ch
                     break
-        # YES()
-        print("".join(st))
+        print(''.join(st))

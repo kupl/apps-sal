@@ -1,4 +1,3 @@
-# IAWT
 n = int(input())
 x = str(n + n - 1)
 if x.count('9') == len(x):
@@ -8,7 +7,7 @@ else:
 m = '9' * m
 
 
-def f(x):  # Number of pairs with sum x
+def f(x):
     if n + n - 1 < x:
         return 0
     if x <= n:
@@ -25,5 +24,4 @@ ans = 0
 for i in range(9):
     s = int(str(i) + m)
     ans += f(s)
-
 print(ans)

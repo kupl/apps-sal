@@ -1,7 +1,7 @@
 def smash(words):
-    s = ""
+    s = ''
     for v in words:
         s += v
         if v != words[len(words) - 1]:
-            s += " "
+            s += ' '
     return s

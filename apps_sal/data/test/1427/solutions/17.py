@@ -1,6 +1,9 @@
 import fractions
-mod = 10**9 + 7
-def lcm(m, n): return m // fractions.gcd(m, n) * n
+mod = 10 ** 9 + 7
+
+
+def lcm(m, n):
+    return m // fractions.gcd(m, n) * n
 
 
 n = int(input())

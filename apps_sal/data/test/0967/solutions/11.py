@@ -1,5 +1,5 @@
 n = int(input())
-a = (str(input())).split(' ')
+a = str(input()).split(' ')
 ma = 0
 output = 0
 for i in range(n - 1):

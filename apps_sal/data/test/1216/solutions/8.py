@@ -11,14 +11,13 @@ for i in range(0, s.__len__()):
             eo = False
         elif not eo:
             if i != s.__len__() - 1:
-                if prev == s[i] == 'e' and s[i + 1] == 'e' or prev == s[i] == 'o' and s[i + 1] == 'o':
+                if prev == s[i] == 'e' and s[i + 1] == 'e' or (prev == s[i] == 'o' and s[i + 1] == 'o'):
                     eo = True
-                elif prev == s[i] == 'e' and s[i + 1] != 'e' or prev == s[i] == 'o' and s[i + 1] != 'o':
+                elif prev == s[i] == 'e' and s[i + 1] != 'e' or (prev == s[i] == 'o' and s[i + 1] != 'o'):
                     eo = True
                     ans += prev
-            else:
-                if prev == s[i] == 'e' or prev == s[i] == 'o':
-                    ans += prev
+            elif prev == s[i] == 'e' or prev == s[i] == 'o':
+                ans += prev
     else:
         eo = False
         ans += s[i]

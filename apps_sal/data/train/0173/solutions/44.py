@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         n = len(arr)
         d = {i: 0 for i in range(k)}

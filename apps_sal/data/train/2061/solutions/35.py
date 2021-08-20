@@ -15,32 +15,31 @@ def angle(a, b, c, d, e, f):
         center = (a, b)
         p = (c, d)
         q = (e, f)
-
     if center[0] == p[0]:
         if center[0] > q[0]:
-            res.append("r")
+            res.append('r')
         else:
-            res.append("l")
+            res.append('l')
     elif center[0] == q[0]:
         if center[0] > p[0]:
-            res.append("r")
+            res.append('r')
         else:
-            res.append("l")
+            res.append('l')
     if center[1] == p[1]:
         if center[1] < q[1]:
-            res.append("d")
+            res.append('d')
         else:
-            res.append("u")
+            res.append('u')
     elif center[1] == q[1]:
         if center[1] < p[1]:
-            res.append("d")
+            res.append('d')
         else:
-            res.append("u")
+            res.append('u')
     return res
 
 
 def test():
-    ax, ay, bx, by, cx, cy = map(int, input().split())
+    (ax, ay, bx, by, cx, cy) = map(int, input().split())
     if set([(ax, ay), (bx, by), (cx, cy)]) == set([(0, 0), (0, 1), (1, 0)]):
         return 0
     XX = (ax + bx + cx) / 3
@@ -53,13 +52,13 @@ def test():
             return 1
         if x == y:
             tmp = x * 2 - 1
-            if "r" in ang and "u" in ang:
+            if 'r' in ang and 'u' in ang:
                 return tmp + 1
             return tmp
         tmp = (max(x, y) - 1) * 2
-        if x > y and "r" in ang:
+        if x > y and 'r' in ang:
             return tmp + 1
-        elif y > x and "u" in ang:
+        elif y > x and 'u' in ang:
             return tmp + 1
         return tmp
     elif XX < 0 and YY > 0:
@@ -68,12 +67,12 @@ def test():
         x = abs(x)
         if x >= y:
             tmp = x * 2 - 1
-            if "l" in ang:
+            if 'l' in ang:
                 return tmp + 1
             return tmp
         else:
             tmp = (y - 1) * 2
-            if "u" in ang:
+            if 'u' in ang:
                 return tmp + 1
             return tmp
     elif XX > 0 and YY < 0:
@@ -82,12 +81,12 @@ def test():
         y = abs(y)
         if y >= x:
             tmp = y * 2 - 1
-            if "d" in ang:
+            if 'd' in ang:
                 return tmp + 1
             return tmp
         else:
             tmp = (x - 1) * 2
-            if "r" in ang:
+            if 'r' in ang:
                 return tmp + 1
             return tmp
     else:
@@ -97,13 +96,13 @@ def test():
         y = abs(y)
         if x == y:
             tmp = 2 * x
-            if "d" in ang and "l" in ang:
+            if 'd' in ang and 'l' in ang:
                 return tmp + 1
             return tmp
         tmp = max(x, y) * 2 - 1
-        if x > y and "l" in ang:
+        if x > y and 'l' in ang:
             return tmp + 1
-        if y > x and "d" in ang:
+        if y > x and 'd' in ang:
             return tmp + 1
         return tmp
 

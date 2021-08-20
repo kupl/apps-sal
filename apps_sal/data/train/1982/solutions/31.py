@@ -2,9 +2,10 @@ from collections import defaultdict
 
 
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         adj = defaultdict(set)
-        for u, v in dislikes:
+        for (u, v) in dislikes:
             adj[u].add(v)
             adj[v].add(u)
         color = [-1] * (N + 1)

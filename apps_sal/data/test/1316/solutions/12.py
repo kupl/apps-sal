@@ -9,7 +9,6 @@ def kmp(pat, txt):
     N = len(txt)
     lps = [0] * M
     j = 0
-    # Calculo de lps, prefifo propio mas largo que tambien es sufijo de pat[0:i]
     while i < M:
         if pat[i] == pat[leng]:
             leng += 1
@@ -22,7 +21,6 @@ def kmp(pat, txt):
             i += 1
     i = 0
     while i < N:
-
         if pat[j] == txt[i]:
             i += 1
             j += 1
@@ -38,7 +36,7 @@ def kmp(pat, txt):
     return ans
 
 
-n, m = list(map(int, stdin.readline().strip().split()))
+(n, m) = list(map(int, stdin.readline().strip().split()))
 s = stdin.readline().strip()
 ans = 0
 for i in range(26):

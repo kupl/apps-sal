@@ -1,6 +1,5 @@
 s = input()
 k = int(input())
-
 for i in range(len(s)):
     n = int(s[i])
     if i + 1 == k:

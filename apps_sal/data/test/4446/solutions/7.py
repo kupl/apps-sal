@@ -1,8 +1,6 @@
 from math import *
-
-n, a, b, k = list(map(int, input().split()))
+(n, a, b, k) = list(map(int, input().split()))
 h = [int(i) for i in input().split()]
-
 ans = n
 nh = []
 for m in h:
@@ -12,7 +10,6 @@ for m in h:
     if m > 0:
         nh.append(m)
         ans -= 1
-
 nh.sort()
 i = 0
 while k > 0 and i < len(nh):
@@ -21,5 +18,4 @@ while k > 0 and i < len(nh):
         break
     i += 1
     ans += 1
-
 print(ans)

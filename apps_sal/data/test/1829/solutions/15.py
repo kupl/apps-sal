@@ -1,10 +1,10 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 s1 = []
 s2 = []
 if n > m:
-    print("YES")
+    print('YES')
 elif m > n:
-    print("NO")
+    print('NO')
 else:
     r = set()
     for i in range(n):
@@ -15,6 +15,6 @@ else:
         r.add(s2[-1])
     t = len(s2) + len(s1) - len(r)
     if t % 2 == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

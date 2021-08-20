@@ -1,5 +1,5 @@
 n = int(input())
-d, x = map(int, input().split())
+(d, x) = map(int, input().split())
 c = 0
 for i in range(n):
     a = int(input())

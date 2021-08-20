@@ -10,11 +10,10 @@ else:
                 k += 1
             else:
                 x += int(a[q])
+        elif a[q] == '?':
+            m += 1
         else:
-            if a[q] == '?':
-                m += 1
-            else:
-                y += int(a[q])
+            y += int(a[q])
     if (y - x) % 9 == 0 and (y - x) // 9 == (k - m) // 2:
         print('Bicarp')
     else:

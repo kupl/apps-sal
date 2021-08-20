@@ -9,10 +9,10 @@ def main():
     bef = -1
     for b in blst:
         if b == bef:
-            print("YES")
+            print('YES')
             return
         bef = b
-    print("NO")
+    print('NO')
 
 
 for _ in range(int(input())):

@@ -4,13 +4,13 @@ NTC here
 from sys import setcheckinterval, stdin
 setcheckinterval(1000)
 
-# print("Case #{}: {} {}".format(i, n + m, n * m))
+
+def iin():
+    return int(stdin.readline())
 
 
-def iin(): return int(stdin.readline())
-
-
-def lin(): return list(map(int, stdin.readline().split()))
+def lin():
+    return list(map(int, stdin.readline().split()))
 
 
 for _ in range(iin()):

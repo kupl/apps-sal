@@ -1,5 +1,5 @@
 import numpy as np
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 Map = [list(input()) for h in range(H)]
 Map = [[1 if s == '.' else 0 for s in Map[h]] for h in range(H)]
 Map = np.array(Map, dtype=int)

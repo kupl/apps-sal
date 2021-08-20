@@ -1,5 +1,5 @@
-n, h, k = map(int, input().split())
-a, ai, c, t = list(map(int, input().split())), 0, 0, 0
+(n, h, k) = map(int, input().split())
+(a, ai, c, t) = (list(map(int, input().split())), 0, 0, 0)
 while c > 0 or ai < n:
     while ai < n and c + a[ai] <= h:
         c += a[ai]

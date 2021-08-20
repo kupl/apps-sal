@@ -1,18 +1,14 @@
-#入力高速化 + 再帰回数制限解除
 from collections import deque
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10000000)
 
-# 負の閉路検出
-# n=頂点数 e=[[a,b,c],[]...](a~bの距離がc)
-
 
 def find_negative_loop(n, e):
-    d = n * [10**20]
+    d = n * [10 ** 20]
     d[0] = 0
     for h in range(n):
-        for i, j, k in e:
+        for (i, j, k) in e:
             if d[j] > d[i] + k:
                 d[j] = d[i] + k
                 if h == n - 1:
@@ -20,9 +16,6 @@ def find_negative_loop(n, e):
     return max(-d[n - 1], 0)
 
 
-# DAG判定
-# n=頂点数 e=隣接リスト
-# flag=0...DAG判定　flag=1...トポロジカルソート
 def find_loop(n, e, flag):
     x = [0] * n
     d = deque()
@@ -50,13 +43,13 @@ def find_loop(n, e, flag):
         return t
 
 
-n, m, p = map(int, input().split())
-ef = [[]for _ in range(n)]
-ee = [[]for _ in range(n)]
-edge = [[]for _ in range(n)]
+(n, m, p) = map(int, input().split())
+ef = [[] for _ in range(n)]
+ee = [[] for _ in range(n)]
+edge = [[] for _ in range(n)]
 e = []
 for _ in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     a -= 1
     b -= 1
     c -= p
@@ -93,7 +86,7 @@ while Q:
             P.append(j)
     Q = P
 ee = []
-for a, b, c in e:
-    if eff[a] == 1 and eef[a] == 1 and eff[b] == 1 and eef[b] == 1:
+for (a, b, c) in e:
+    if eff[a] == 1 and eef[a] == 1 and (eff[b] == 1) and (eef[b] == 1):
         ee.append((a, b, -c))
 print(find_negative_loop(n, ee))

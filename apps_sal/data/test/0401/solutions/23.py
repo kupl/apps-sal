@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 arr1 = sorted(list(map(int, input().split())))
 arr2 = sorted(list(map(int, input().split())))
 for i in range(n):

@@ -1,4 +1,4 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 MOD = 10 ** 9 + 7
 
 

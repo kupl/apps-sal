@@ -1,5 +1,5 @@
 def f(n):
-    p, n_, m = 2, 1, int(n ** .5)
+    (p, n_, m) = (2, 1, int(n ** 0.5))
     while n > 1 and p <= m:
         k = 0
         while not n % p:

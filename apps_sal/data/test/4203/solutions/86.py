@@ -1,5 +1,4 @@
 S = list(input())
-
 if S[0] == 'A' and S[2:-1].count('C') == 1:
     S.pop(S[2:-1].index('C') + 2)
     S.pop(0)

@@ -8,8 +8,7 @@ for it in s:
     if it != '#':
         f = 0
         break
-
 if f == 1:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

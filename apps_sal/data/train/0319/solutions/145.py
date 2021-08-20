@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGameIII(self, stoneValue: List[int]) -> str:
         n = len(stoneValue)
         p = [0] * n
@@ -7,7 +8,6 @@ class Solution:
                 p[i] = stoneValue[i]
             else:
                 p[i] = stoneValue[i] + p[i + 1]
-
         dp = [0] * (n + 1)
         for i in range(n - 1, -1, -1):
             dp[i] = p[i] - min(dp[i + 1:i + 4])

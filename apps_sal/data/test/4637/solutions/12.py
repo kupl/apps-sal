@@ -1,16 +1,30 @@
 import sys
-
 readline = sys.stdin.readline
 readall = sys.stdin.read
-def ns(): return readline().rstrip()
-def ni(): return int(readline().rstrip())
-def nm(): return map(int, readline().split())
-def nl(): return list(map(int, readline().split()))
-def prn(x): return print(*x, sep='\n')
+
+
+def ns():
+    return readline().rstrip()
+
+
+def ni():
+    return int(readline().rstrip())
+
+
+def nm():
+    return map(int, readline().split())
+
+
+def nl():
+    return list(map(int, readline().split()))
+
+
+def prn(x):
+    return print(*x, sep='\n')
 
 
 def solve():
-    n, k = nm()
+    (n, k) = nm()
     a = nl()
     b = nl()
     a.sort()
@@ -21,8 +35,6 @@ def solve():
         a[i] = b[i]
     print(sum(a))
     return
-
-# solve()
 
 
 T = ni()

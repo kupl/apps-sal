@@ -1,7 +1,8 @@
 class Solution:
+
     def shortestSubarray(self, A: List[int], K: int) -> int:
-        Sum, res, heap, flag = 0, len(A), [(0, -1)], False
-        for i, v in enumerate(A):
+        (Sum, res, heap, flag) = (0, len(A), [(0, -1)], False)
+        for (i, v) in enumerate(A):
             Sum += v
             while heap and Sum - K >= heap[0][0]:
                 flag = True

@@ -1,4 +1,5 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         climb = None
         bef = None
@@ -18,5 +19,4 @@ class Solution:
             else:
                 return False
             bef = num
-
         return True

@@ -1,13 +1,12 @@
 import sys
 from bisect import bisect_left
-
 input = sys.stdin.readline
 
 
 def solve(Q, S, T, X):
     ans = [0] * Q
     INF = 10 ** 11
-    for q, x in enumerate(X):
+    for (q, x) in enumerate(X):
         min_dist = INF
         i_s = bisect_left(S, x)
         i_t = bisect_left(T, x)
@@ -21,7 +20,7 @@ def solve(Q, S, T, X):
 
 
 def main():
-    A, B, Q = list(map(int, input().split()))
+    (A, B, Q) = list(map(int, input().split()))
     S = [0] * (A + 2)
     T = [0] * (B + 2)
     X = [0] * Q
@@ -31,12 +30,10 @@ def main():
         T[i] = int(input())
     for i in range(Q):
         X[i] = int(input())
-
     S[0] = T[0] = -10 ** 11
     S[-1] = T[-1] = 10 ** 11
-
     ans = solve(Q, S, T, X)
-    print(("\n".join(map(str, ans))))
+    print('\n'.join(map(str, ans)))
 
 
 def __starting_point():

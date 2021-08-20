@@ -10,7 +10,9 @@ def solve(n, a):
 
 
 def main():
-    def inp(): return int(input().split()[0])
+
+    def inp():
+        return int(input().split()[0])
     n = inp()
     a = [inp() for _ in range(n)]
     solve(n, a)

@@ -1,8 +1,8 @@
 INF = 1000
 n = int(input())
 desc = list(map(int, input().split()))
-r, g, c = {}, {}, {}
-r[0], g[0], c[0], i = 0, 0, 0, 0
+(r, g, c) = ({}, {}, {})
+(r[0], g[0], c[0], i) = (0, 0, 0, 0)
 for x in desc:
     i += 1
     r[i] = 1 + min([g[i - 1], r[i - 1], c[i - 1]])

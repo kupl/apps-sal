@@ -1,10 +1,10 @@
 import math
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 
 
 def gcd(a, b):
     if a < b:
-        a, b = b, a
+        (a, b) = (b, a)
     if b == 0:
         return a
     while b > 0:

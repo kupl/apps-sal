@@ -1,8 +1,8 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         if len(A) == 1:
             return True
-
         i = 0
         n = len(A)
         while i < n - 1 and A[i] == A[i + 1]:

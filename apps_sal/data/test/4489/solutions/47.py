@@ -6,7 +6,6 @@ for i in range(n):
         str_dict[s] = 1
     else:
         str_dict[s] += 1
-
 m = int(input())
 for i in range(m):
     t = input()
@@ -14,6 +13,5 @@ for i in range(m):
         str_dict[t] = -1
     else:
         str_dict[t] -= 1
-
 res = max(0, sorted(list(str_dict.values()))[-1])
 print(res)

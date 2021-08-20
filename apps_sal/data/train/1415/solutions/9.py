@@ -11,6 +11,6 @@ for _ in range(int(input())):
             status = True
             break
     if status == False:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

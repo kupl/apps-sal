@@ -1,5 +1,7 @@
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
+
         def helper(speed):
             h = 0
             for p in piles:
@@ -7,7 +9,7 @@ class Solution:
             return h
         if not piles or len(piles) == 0:
             return 0
-        start, end = 1, max(piles)
+        (start, end) = (1, max(piles))
         while start + 1 < end:
             mid = start + (end - start) // 2
             h = helper(mid)

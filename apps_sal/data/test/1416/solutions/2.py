@@ -1,5 +1,5 @@
-n, w = map(int, input().split(" "))
-mas = list(map(int, input().split(" ")))
+(n, w) = map(int, input().split(' '))
+mas = list(map(int, input().split(' ')))
 mas.sort()
 x1 = w / n / 3
 x2 = mas[0]

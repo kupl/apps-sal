@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 ans = 0
 mv = 100000
 for i in range(1, n + 1):

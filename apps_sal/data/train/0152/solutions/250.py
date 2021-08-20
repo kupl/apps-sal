@@ -1,15 +1,14 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
-        start, end = 0, position[-1]
-
+        (start, end) = (0, position[-1])
         while start + 1 < end:
             mid = (start + end) // 2
             if self.isValid(position, mid) < m:
                 end = mid
             else:
                 start = mid
-
         if self.isValid(position, end) < m:
             return start
         else:

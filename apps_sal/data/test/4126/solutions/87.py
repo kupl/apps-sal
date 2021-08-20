@@ -17,5 +17,4 @@ if palind(s):
     if palind(sb):
         sa = s[m + 1:]
         flag = palind(sa)
-
-print(("Yes" if flag else "No"))
+print('Yes' if flag else 'No')

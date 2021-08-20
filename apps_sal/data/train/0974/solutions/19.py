@@ -1,14 +1,12 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     if c == d:
         if a == b:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')
     elif abs(a - b) % abs(c - d) == 0:
-        print("YES")
-
+        print('YES')
     else:
-        print("NO")
+        print('NO')

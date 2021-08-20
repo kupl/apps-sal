@@ -1,8 +1,6 @@
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 ar = [-1 for i in range(256)]
 ls = list(map(int, input().split()))
-
 for e in ls:
     if ar[e] == -1:
         tmp = max(0, e - k + 1)
@@ -14,4 +12,4 @@ for e in ls:
                 while i <= e:
                     ar[i] = tmp
                     i += 1
-    print(ar[e], end=" ")
+    print(ar[e], end=' ')

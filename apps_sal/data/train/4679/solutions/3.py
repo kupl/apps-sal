@@ -1,8 +1,8 @@
 def to_freud(sentence):
     words = sentence.split()
     wordcount = len(words)
-    s = ""
+    s = ''
     while wordcount > 0:
-        s = s + "sex "
+        s = s + 'sex '
         wordcount -= 1
     return s[:-1]

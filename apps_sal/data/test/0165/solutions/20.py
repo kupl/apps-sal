@@ -1,7 +1,5 @@
-b, d, s = list(map(int, input().split()))
-a1, a2, a3, a4 = 0, 0, 0, 0
-
-
+(b, d, s) = list(map(int, input().split()))
+(a1, a2, a3, a4) = (0, 0, 0, 0)
 if max(b, s, d) == b:
     if d < b - 1 and s != max(b, s, d):
         a1 += b - 1 - d
@@ -16,8 +14,7 @@ elif max(b, s, d) == d:
 elif max(b, s, d) == s:
     a1 += s - d
     a1 += s - b
-
-b1, d1, s1 = d, s, b
+(b1, d1, s1) = (d, s, b)
 if max(b1, s1, d1) == b1:
     if d1 < b1 - 1 and s1 != max(b1, s1, d1):
         a2 += b1 - 1 - d1
@@ -32,8 +29,7 @@ elif max(b1, s1, d1) == d1:
 elif max(b1, s1, d1) == s1:
     a2 += s1 - d1
     a2 += s1 - b1
-
-b, d, s = s, b, d
+(b, d, s) = (s, b, d)
 if max(b, s, d) == b:
     if d < b - 1 and s != max(b, s, d):
         a3 += b - 1 - d

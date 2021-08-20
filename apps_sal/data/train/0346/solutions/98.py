@@ -1,7 +1,8 @@
 class Solution:
+
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         oddnum = 0
-        l, n = 0, len(nums)
+        (l, n) = (0, len(nums))
         add = 1
         sums = 0
         for r in range(n):

@@ -1,5 +1,5 @@
 s = input()
-g_cnt, p_cnt = 0, 0
+(g_cnt, p_cnt) = (0, 0)
 ans = 0
 for c in s:
     if c == 'g':
@@ -8,10 +8,9 @@ for c in s:
             p_cnt += 1
         else:
             g_cnt += 1
+    elif g_cnt > p_cnt:
+        p_cnt += 1
     else:
-        if g_cnt > p_cnt:
-            p_cnt += 1
-        else:
-            ans -= 1
-            g_cnt += 1
+        ans -= 1
+        g_cnt += 1
 print(ans)

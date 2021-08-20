@@ -28,9 +28,9 @@ def nia():
 def solve():
     arr = nia()
     if remainderSet(arr[0], arr[1]):
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 solve()

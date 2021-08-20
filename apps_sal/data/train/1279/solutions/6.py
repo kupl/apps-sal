@@ -2,7 +2,7 @@ for _ in range(int(input())):
     n = int(input())
     d = {}
     for i in range(n):
-        x, y = list(map(int, input().split()))
+        (x, y) = list(map(int, input().split()))
         if x not in d:
             d[x] = []
             d[x].append(y)
@@ -11,7 +11,6 @@ for _ in range(int(input())):
     y = []
     for v in d:
         y.extend(d[v])
-    # print(y)
     if len(y) >= 3:
         v1 = max(y)
         y.remove(v1)

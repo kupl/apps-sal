@@ -1,11 +1,8 @@
 def main():
-    N, M = list(map(int, input().split()))
-    *A, = list(map(int, input().split()))
-
+    (N, M) = list(map(int, input().split()))
+    (*A,) = list(map(int, input().split()))
     d = {0: 1}
-
     ans = 0
-
     t = 0
     for x in A:
         t = (t + x) % M

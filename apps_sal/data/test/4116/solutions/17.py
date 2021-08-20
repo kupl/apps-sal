@@ -5,6 +5,6 @@ for i in range(1, 10):
         f = True
         break
 if f:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

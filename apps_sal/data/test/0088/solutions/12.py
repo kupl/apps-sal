@@ -1,6 +1,5 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
-
 full = 0
 for mp in range(100):
     full += 2 ** mp

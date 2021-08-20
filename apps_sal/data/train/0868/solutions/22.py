@@ -16,7 +16,7 @@ def counting_sort(array1, max_val):
 
 
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     M = []
     ans = 0
@@ -41,18 +41,16 @@ for _ in range(int(input())):
             if l[j] > max:
                 max = l[j]
             if value not in s:
-                ####
                 s.add(value)
                 x = max
                 hallo_frnd[value] = max
+            elif l[j] < hallo_frnd[value]:
+                yt = l[i:j + 1]
+                heapq.heapify(yt)
+                x = heapq.nsmallest(value + 1, yt)[-1]
+                hallo_frnd[value] = x
             else:
-                if l[j] < hallo_frnd[value]:
-                    yt = l[i:j + 1]
-                    heapq.heapify(yt)
-                    x = heapq.nsmallest(value + 1, yt)[-1]
-                    hallo_frnd[value] = x
-                else:
-                    x = hallo_frnd[value]
+                x = hallo_frnd[value]
             if d[x] in d:
                 ans += 1
     print(ans)

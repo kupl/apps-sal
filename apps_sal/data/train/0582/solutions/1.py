@@ -1,4 +1,3 @@
-# cook your dish here
 T = int(input())
 for _ in range(T):
     s = input()
@@ -15,7 +14,6 @@ for _ in range(T):
         else:
             stack.append(i)
         nextOpen[i] = nextO
-
     for t in map(int, input().split()):
         t -= 1
         t = nextOpen[t]

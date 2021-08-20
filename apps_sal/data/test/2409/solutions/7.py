@@ -1,9 +1,10 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-t, = f()
+(t,) = f()
 for _ in [0] * t:
-    n, k, l = f()
+    (n, k, l) = f()
     s = [*f()]
     a = 0
     z = k - 1

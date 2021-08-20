@@ -1,4 +1,5 @@
 def remove_parentheses(s):
+
     def f():
         paren = 0
         for c in s:

@@ -15,5 +15,5 @@ if len(segments) == 0:
 else:
     segments[-1] = (segments[-1][0], n)
     print(len(segments))
-    for l, r in segments:
+    for (l, r) in segments:
         print(l, r)

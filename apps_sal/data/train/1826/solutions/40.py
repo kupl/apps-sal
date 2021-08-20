@@ -1,4 +1,5 @@
 class Solution:
+
     def matrixBlockSum(self, mat: List[List[int]], K: int) -> List[List[int]]:
         n = len(mat)
         m = len(mat[0])
@@ -12,4 +13,4 @@ class Solution:
                 row.append(summ)
             print(row)
             matx.append(row)
-        return(matx)
+        return matx

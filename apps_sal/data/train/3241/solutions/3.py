@@ -1,5 +1,5 @@
 def buy_newspaper(s1, s2):
-    t, i = 0, len(s1)
+    (t, i) = (0, len(s1))
     for c in s2:
         i = s1.find(c, i) + 1
         if not i:

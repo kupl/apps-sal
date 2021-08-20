@@ -1,12 +1,7 @@
 class Solution:
 
     def __init__(self):
-        self.moves = [
-            (1, 0),
-            (-1, 0),
-            (0, 1),
-            (0, -1)
-        ]
+        self.moves = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
     def getMaximumGold(self, grid: List[List[int]]) -> int:
         best = 0

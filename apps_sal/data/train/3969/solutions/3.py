@@ -6,6 +6,6 @@ def graceful_tipping(bill):
     if x < 11:
         return x
     else:
-        le = (len(str(x)) - 2)
-        y = (5 * (10**le))
-    return x + ((y * (math.ceil(x / y))) - x)
+        le = len(str(x)) - 2
+        y = 5 * 10 ** le
+    return x + (y * math.ceil(x / y) - x)

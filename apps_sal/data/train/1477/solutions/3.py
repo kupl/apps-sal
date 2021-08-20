@@ -5,7 +5,7 @@ for _ in range(t):
     ans = s
     for i in range(n):
         x = s.copy()
-        del(x[i])
+        del x[i]
         for j in range(n):
             ans = min(ans, x[:j] + [s[i]] + x[j:])
-    print("".join(ans))
+    print(''.join(ans))

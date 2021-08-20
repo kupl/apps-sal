@@ -1,6 +1,5 @@
 A = int(input())
-
 if A == 0:
-    print("1")
+    print('1')
 else:
-    print("0")
+    print('0')

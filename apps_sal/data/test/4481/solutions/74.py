@@ -1,5 +1,5 @@
 import numpy as np
-N, = map(int, input().split())
+(N,) = map(int, input().split())
 dic = {}
 for i in range(N):
     x = input()

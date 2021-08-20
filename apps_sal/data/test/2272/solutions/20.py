@@ -3,18 +3,18 @@ def input_tuple(f):
 
 
 def make_edge(i1, i2, adj_list):
-    i, a, b = i1
-    j, c, d = i2
+    (i, a, b) = i1
+    (j, c, d) = i2
     if c < a < d or c < b < d:
         adj_list[i].append(j)
 
 
 def dfs(curr, dest, seen, intervals):
-    i, a, b = curr
+    (i, a, b) = curr
     if i == dest:
         return True
     seen.add(i)
-    for j, c, d in intervals:
+    for (j, c, d) in intervals:
         if j in seen:
             continue
         if c < a < d or c < b < d:
@@ -28,7 +28,7 @@ def __starting_point():
     num_queries = int(input().rstrip())
     i = 1
     for _ in range(num_queries):
-        t, a, b = input_tuple(int)
+        (t, a, b) = input_tuple(int)
         if t == 1:
             intervals.append((i, a, b))
             i += 1

@@ -8,14 +8,14 @@ def deli(n):
         n //= 2
         n2 += 1
     if n != 1:
-        return -1, -1
+        return (-1, -1)
     else:
-        return n2, n3
+        return (n2, n3)
 
 
 def solve():
     n = int(input())
-    a, b = deli(n)
+    (a, b) = deli(n)
     if a == -1:
         print(-1)
     elif b < a:

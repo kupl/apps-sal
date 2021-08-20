@@ -1,15 +1,12 @@
 import sys
 sys.setrecursionlimit(4100000)
-
 mod = 10 ** 9 + 7
-
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 graph = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a - 1].append(b - 1)
     graph[b - 1].append(a - 1)
-
 ans = K
 
 
@@ -37,5 +34,4 @@ def dfs(parent, current):
 
 ans *= dfs(-1, 0)
 ans %= mod
-
 print(ans)

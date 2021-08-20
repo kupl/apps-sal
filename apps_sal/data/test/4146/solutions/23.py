@@ -1,7 +1,7 @@
 from collections import Counter
 n = int(input())
 v = list(map(int, input().split()))
-l, r = Counter(v[0::2]).most_common(), Counter(v[1::2]).most_common()
+(l, r) = (Counter(v[0::2]).most_common(), Counter(v[1::2]).most_common())
 l.append((0, 0))
 r.append((0, 0))
 if l[0][0] != r[0][0]:

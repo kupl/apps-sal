@@ -1,5 +1,5 @@
 def main():
-    n, m, k, l = map(int, input().split())
+    (n, m, k, l) = map(int, input().split())
     d = (l + k) // m
     if (l + k) % m:
         d += 1

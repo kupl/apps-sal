@@ -1,4 +1,5 @@
 class Solution:
+
     def pushDominoes(self, dominoes: str) -> str:
         l = len(dominoes)
         right_force = [0] * l
@@ -21,7 +22,6 @@ class Solution:
             else:
                 force2 = max(force2 - 1, 0)
             left_force[i] += force2
-
         result = ''
         for i in range(l):
             if right_force[i] > left_force[i]:

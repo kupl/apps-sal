@@ -8,21 +8,19 @@ for i in range(q):
     if len(query) == 1:
         rev = not rev
     else:
-        x, f, c = query.split()
-        if f == "1":
+        (x, f, c) = query.split()
+        if f == '1':
             if rev:
                 s.append(c)
             else:
                 s.appendleft(c)
+        elif rev:
+            s.appendleft(c)
         else:
-            if rev:
-                s.appendleft(c)
-            else:
-                s.append(c)
+            s.append(c)
 n = len(s)
-
 if rev:
     ans = [s[n - 1 - i] for i in range(n)]
 else:
     ans = [s[i] for i in range(n)]
-print("".join(ans))
+print(''.join(ans))

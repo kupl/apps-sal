@@ -1,6 +1,6 @@
 def describeList(list):
     if not list:
-        return "empty"
+        return 'empty'
     elif len(list) == 1:
-        return "singleton"
-    return "longer"
+        return 'singleton'
+    return 'longer'

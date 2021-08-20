@@ -1,4 +1,5 @@
 class Solution:
+
     def minDifficulty(self, JD: List[int], d: int) -> int:
         n = len(JD)
 

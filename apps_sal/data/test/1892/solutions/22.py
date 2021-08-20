@@ -1,5 +1,7 @@
 def solve():
-    def rd(): return list(map(int, input().split()))
+
+    def rd():
+        return list(map(int, input().split()))
     n = int(input())
     p = []
     for i in range(n):
@@ -7,8 +9,8 @@ def solve():
     dp = [0 for i in range(n)]
     dp[0] = 1
     indent = 0
-    L = int(1e9 + 7)
-    for i, val in enumerate(p):
+    L = int(1000000000.0 + 7)
+    for (i, val) in enumerate(p):
         if val == 'f':
             indent += 1
         else:

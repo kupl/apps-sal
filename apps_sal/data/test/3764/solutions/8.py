@@ -1,7 +1,4 @@
-#!/user/bin/env/python 3.5
-# ---*--- code:utf-8 ---*---
-
-n, k, x = list(map(int, input().split(' ')))
+(n, k, x) = list(map(int, input().split(' ')))
 a = list(map(int, input().split(' ')))
 b = []
 i = 0

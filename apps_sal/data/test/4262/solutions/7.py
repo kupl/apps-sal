@@ -5,7 +5,7 @@ def calc_cnt(nums, n):
     ans = 1
     data = [str(i) for i in range(1, n + 1)]
     for x in itertools.permutations(data):
-        if " ".join(x) == nums:
+        if ' '.join(x) == nums:
             return ans
         ans += 1
     return ans

@@ -1,7 +1,6 @@
-c, d = list(map(int, input().split()))
-n, m = list(map(int, input().split()))
+(c, d) = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 k = int(input())
-
 s = max(n * m - k, 0)
 res = 0
 while s:

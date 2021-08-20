@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 L = list(map(int, input().split()))
 T = [0 for _ in range(m)]
 for k in range(n):

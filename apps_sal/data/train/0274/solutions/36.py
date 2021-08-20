@@ -2,6 +2,7 @@ from heapq import heapify, heappop, heappush
 
 
 class Solution:
+
     def longestSubarray(self, lis: List[int], limit: int) -> int:
         n = len(lis)
         miheap = []
@@ -22,5 +23,4 @@ class Solution:
                 while miheap[0][1] < tmp:
                     heapq.heappop(miheap)
             ans = max(ans, i - tmp + 1)
-            # print(miheap,mxheap)
         return ans

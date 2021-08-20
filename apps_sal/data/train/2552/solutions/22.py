@@ -1,4 +1,5 @@
 class Solution:
+
     def findSpecialInteger(self, arr: List[int]) -> int:
         unique_values = list()
         for i in range(0, len(arr)):

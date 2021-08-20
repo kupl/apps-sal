@@ -1,6 +1,6 @@
 t = eval(input())
 while t:
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     ans = 0
     if c <= d:
         for x in range(a, b + 1):

@@ -27,9 +27,8 @@ for i in range(n // 2):
             ans += 1
         if len(st1) == 2 and len(st) == 2:
             ans += 1
-
     elif len(st2) == 2:
-        if (len(st) == 2 or len(st1) == 2) and (len(st) != len(st1)):
+        if (len(st) == 2 or len(st1) == 2) and len(st) != len(st1):
             ans += 1
 if n % 2 != 0:
     if s[n // 2] != s1[n // 2]:

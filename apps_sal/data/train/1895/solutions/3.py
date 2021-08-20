@@ -1,4 +1,5 @@
 class Solution:
+
     def validTicTacToe(self, board):
         """
         :type board: List[str]
@@ -63,5 +64,4 @@ class Solution:
             if num_O == 3:
                 return total_X == total_O
             return True
-
         return win(board, num_X, num_O)

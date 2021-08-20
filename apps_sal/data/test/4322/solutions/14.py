@@ -21,7 +21,7 @@ def solve():
             ans1.append(i)
         else:
             ans2.append(i)
-    print(*(ans1 + ans2[::-1]))
+    print(*ans1 + ans2[::-1])
 
 
 for _ in range(1):

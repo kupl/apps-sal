@@ -1,6 +1,5 @@
 import datetime
-
-a, b, c = input().split()
+(a, b, c) = input().split()
 a = int(a)
 ans = 0
 for i in range(1, 13):

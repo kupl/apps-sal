@@ -1,4 +1,5 @@
 class Solution:
+
     def checkValidString(self, s):
         """
         :type s: str
@@ -9,7 +10,6 @@ class Solution:
         count = {'(': 0, ')': 0, '*': 0}
         newS = []
         for i in s:
-            #count[i] += 1
             if i == ')':
                 if open > 0:
                     open -= 1
@@ -25,7 +25,6 @@ class Solution:
             else:
                 star += 1
                 newS += '*'
-
         if star >= open:
             o = 0
             s = 0
@@ -35,7 +34,6 @@ class Solution:
                 elif i == '*':
                     if o > 0:
                         o -= 1
-
             if o != 0:
                 return False
             else:

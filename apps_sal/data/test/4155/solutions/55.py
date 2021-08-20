@@ -1,9 +1,8 @@
 n = int(input())
-h = list(map(int, input().split(" ")))
+h = list(map(int, input().split(' ')))
 cnt = 0
 minNum = 0
 tmp = 0
-
 while True:
     for i in range(h.count(0)):
         if h.index(0) == 0:
@@ -13,10 +12,8 @@ while True:
             break
     else:
         tmp = len(h)
-
     if not h:
         break
-
     if tmp == 1:
         cnt += h[0]
         h.pop(0)
@@ -25,5 +22,4 @@ while True:
         cnt += minNum
         for j in range(tmp):
             h[j] -= minNum
-
 print(cnt)

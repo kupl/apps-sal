@@ -7,8 +7,8 @@ def is_sorted_and_how(arr):
         elif arr[i] > arr[i + 1]:
             t += 1
     if t == len(arr) - 1:
-        return "yes, descending"
+        return 'yes, descending'
     elif s == len(arr) - 1:
-        return "yes, ascending"
+        return 'yes, ascending'
     else:
         return 'no'

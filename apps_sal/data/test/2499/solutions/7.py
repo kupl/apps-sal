@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 A = list(map(int, input().split()))
 x = 0
@@ -12,7 +11,7 @@ for i in range(59, -1, -1):
         continue
     for j in range(now, n):
         if A[j] >> i & 1:
-            A[now], A[j] = A[j], A[now]
+            (A[now], A[j]) = (A[j], A[now])
             for k in range(n):
                 if k != now and A[k] >> i & 1:
                     A[k] ^= A[now]

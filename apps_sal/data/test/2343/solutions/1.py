@@ -11,7 +11,7 @@ def li():
 
 
 for t in range(ii()):
-    n, k = mi()
+    (n, k) = mi()
     if n == 1:
         ans = 'YES 0' if k == 1 else 'NO'
     elif n == 2:
@@ -24,7 +24,7 @@ for t in range(ii()):
     elif n <= 32 and k > (4 ** n - 1) // 3:
         ans = 'NO'
     else:
-        c, x = 0, n
+        (c, x) = (0, n)
         p2 = 2
         while x > 0:
             if c + p2 - 1 > k:

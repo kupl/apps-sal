@@ -1,5 +1,5 @@
 def main():
-    n, a, x, b, y = map(int, input().split(' '))
+    (n, a, x, b, y) = map(int, input().split(' '))
     while a != x and b != y:
         a = a + 1
         b = b - 1
@@ -8,9 +8,9 @@ def main():
         if b == 0:
             b = n
         if a == b:
-            print("YES")
+            print('YES')
             return
-    print("NO")
+    print('NO')
     return
 
 

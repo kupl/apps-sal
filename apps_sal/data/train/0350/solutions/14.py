@@ -1,7 +1,8 @@
 class Solution:
+
     def subarraysWithKDistinct(self, A: List[int], K: int) -> int:
-        int_dict = {}  # Stores the last appearence of each integer
-        int_sorted_list = []  # List of intergers that have already appeared, in the order of their last appearance
+        int_dict = {}
+        int_sorted_list = []
         current = 0
         l = len(A)
         count = 0

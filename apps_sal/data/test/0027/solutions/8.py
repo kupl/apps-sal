@@ -1,6 +1,6 @@
 def test(k):
     if len(s) >= 2 * k:
-        return s[:k] == s[k: 2 * k]
+        return s[:k] == s[k:2 * k]
     return False
 
 

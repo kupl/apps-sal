@@ -3,7 +3,7 @@ def carry(x, y):
     y = [*map(int, y[::-1])]
     r = 0
     c = 0
-    for a, b in zip(x, y):
+    for (a, b) in zip(x, y):
         v = a + b + c
         if v > 9:
             r += 1
@@ -12,4 +12,4 @@ def carry(x, y):
 
 
 def solve(input_string):
-    return'\n'.join(carry(*s.split())for s in input_string.split('\n'))
+    return '\n'.join((carry(*s.split()) for s in input_string.split('\n')))

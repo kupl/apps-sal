@@ -3,14 +3,13 @@ def chess_board_cell_color(cell1, cell2):
 
 
 def get_colour(cell):
-    letters = "ABCDEFGH"
+    letters = 'ABCDEFGH'
     if letters.index(cell[0]) % 2 == 0:
         if int(cell[1]) % 2 == 1:
             return 'b'
         else:
             return 'w'
+    elif int(cell[1]) % 2 == 1:
+        return 'w'
     else:
-        if int(cell[1]) % 2 == 1:
-            return 'w'
-        else:
-            return 'b'
+        return 'b'

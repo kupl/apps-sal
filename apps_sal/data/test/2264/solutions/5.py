@@ -5,7 +5,7 @@ for z in range(t):
     lr = 1000000000000
     rl = 0
     for i in range(n):
-        l, r = list(map(int, input().split()))
+        (l, r) = list(map(int, input().split()))
         lr = min(lr, r)
         rl = max(rl, l)
         arr.append([l, r])

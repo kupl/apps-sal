@@ -10,7 +10,6 @@ def gcm_2(a, b):
 
 
 N = int(input())
-
 ans = 2
 for i in range(3, N + 1):
     ans = gcm_2(ans, i)

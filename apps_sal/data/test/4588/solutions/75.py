@@ -1,8 +1,8 @@
-X, Y = map(str, input().split())
+(X, Y) = map(str, input().split())
 if X < Y:
-    ans = "<"
+    ans = '<'
 elif X > Y:
-    ans = ">"
+    ans = '>'
 else:
-    ans = "="
+    ans = '='
 print(ans)

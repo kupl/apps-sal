@@ -1,15 +1,12 @@
 from bisect import bisect
 from collections import *
-
 NUM_DIG = 8
 palindromes = OrderedDict()
 for n in range(int(10 ** (NUM_DIG / 2)) + 1):
     key = Counter(str(n ** 2))
     if '0' not in key:
-        palindromes.setdefault(
-            frozenset(key.most_common()), []).append(n ** 2)
-
-lasts, lengths = {}, defaultdict(list)
+        palindromes.setdefault(frozenset(key.most_common()), []).append(n ** 2)
+(lasts, lengths) = ({}, defaultdict(list))
 for seq in palindromes.values():
     for n in seq:
         lengths[len(seq)].append(n)

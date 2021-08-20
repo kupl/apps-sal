@@ -1,9 +1,9 @@
 from collections import deque
-
 INF = 1000000
 
 
 class Field:
+
     def __init__(self, n, agents):
         self.n = n
         self.agents = agents
@@ -12,7 +12,7 @@ class Field:
         self._calculate_safety()
 
     def _calculate_safety(self):
-        for i, j in self.agents:
+        for (i, j) in self.agents:
             if 0 <= i < self.n and 0 <= j < self.n:
                 self._add_to_queue(i, j, 0)
         self._process_queue()
@@ -22,20 +22,16 @@ class Field:
 
     def _process_queue(self):
         while self._queue:
-            i, j, value = self._queue.popleft()
+            (i, j, value) = self._queue.popleft()
             if self.table[i][j] != INF:
                 continue
             self.table[i][j] = value
-
             if i < self.n - 1:
                 self._add_to_queue(i + 1, j, value + 1)
-
             if i > 0:
                 self._add_to_queue(i - 1, j, value + 1)
-
             if j < self.n - 1:
                 self._add_to_queue(i, j + 1, value + 1)
-
             if j > 0:
                 self._add_to_queue(i, j - 1, value + 1)
 

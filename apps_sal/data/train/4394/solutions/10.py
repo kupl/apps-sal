@@ -6,11 +6,10 @@ def men_still_standing(cards):
         if player in dic:
             if dic[player][1] != 'out':
                 dic[player][0] = 1
+        elif string[len(string) - 1] == 'Y':
+            dic[player] = [0, 'in']
         else:
-            if string[len(string) - 1] == 'Y':
-                dic[player] = [0, 'in']
-            else:
-                dic[player] = [1, 'in']
+            dic[player] = [1, 'in']
         if dic[player][0] == 1 and dic[player][1] is 'in':
             if player[0] == 'A':
                 players[0] -= 1

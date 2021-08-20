@@ -1,5 +1,5 @@
 def duplicates(arr):
-    seen, count = set(), 0
+    (seen, count) = (set(), 0)
     for n in arr:
         if n in seen:
             seen.remove(n)

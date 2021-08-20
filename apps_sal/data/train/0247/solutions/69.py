@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         res = [float('inf')] * len(arr)
         ans = float('inf')
@@ -13,7 +14,5 @@ class Solution:
             if s == target:
                 currMin = min(currMin, j - i + 1)
                 ans = min(ans, j - i + 1 + res[i - 1])
-
             res[j] = currMin
-
         return ans if ans < float('inf') else -1

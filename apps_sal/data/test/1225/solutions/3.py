@@ -16,9 +16,6 @@ def NL(n):
 
 
 mod = pow(10, 9) + 7
-
-#import numpy as np
-
 n = N()
 l = int(math.log2(n))
 su = 0

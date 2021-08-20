@@ -3,7 +3,7 @@ n = int(stdin.readline().strip())
 s = []
 s1 = []
 for i in range(n):
-    a, b = list(map(int, stdin.readline().strip().split()))
+    (a, b) = list(map(int, stdin.readline().strip().split()))
     s.append((a, b))
     s1.append((b, a))
 s.sort()
@@ -37,6 +37,6 @@ for i in range(1, n):
         x += abs(v[i][j][0] - v[i][j - 1][0]) + abs(v[i][j][1] - v[i][j - 1][1])
     dist[i] = x
 for i in range(1, n):
-    dp[i][1] = dist[i] + (min(dp[i - 1][1] + abs(v[i][0][0] - v[i - 1][-1][0]) + abs(v[i][0][1] - v[i - 1][-1][1]), dp[i - 1][0] + abs(v[i][0][0] - v[i - 1][0][0]) + abs(v[i][0][1] - v[i - 1][0][1])))
-    dp[i][0] = dist[i] + (min(dp[i - 1][1] + abs(v[i][-1][0] - v[i - 1][-1][0]) + abs(v[i][-1][1] - v[i - 1][-1][1]), dp[i - 1][0] + abs(v[i][-1][0] - v[i - 1][0][0]) + abs(v[i][-1][1] - v[i - 1][0][1])))
+    dp[i][1] = dist[i] + min(dp[i - 1][1] + abs(v[i][0][0] - v[i - 1][-1][0]) + abs(v[i][0][1] - v[i - 1][-1][1]), dp[i - 1][0] + abs(v[i][0][0] - v[i - 1][0][0]) + abs(v[i][0][1] - v[i - 1][0][1]))
+    dp[i][0] = dist[i] + min(dp[i - 1][1] + abs(v[i][-1][0] - v[i - 1][-1][0]) + abs(v[i][-1][1] - v[i - 1][-1][1]), dp[i - 1][0] + abs(v[i][-1][0] - v[i - 1][0][0]) + abs(v[i][-1][1] - v[i - 1][0][1]))
 print(min(dp[-1]))

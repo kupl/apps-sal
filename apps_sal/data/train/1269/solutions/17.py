@@ -1,7 +1,7 @@
 for i in range(int(input())):
     n = int(input())
-    l = [int(k)for k in input().split()]
-    m = [int(k)for k in input().split()]
+    l = [int(k) for k in input().split()]
+    m = [int(k) for k in input().split()]
     l.sort()
     m.sort()
     s = 0

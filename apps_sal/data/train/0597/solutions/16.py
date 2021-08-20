@@ -6,7 +6,7 @@ for t in range(int(input())):
     points = []
     nex = 0
     for i in range(n):
-        x, h = [int(x) for x in input().split()]
+        (x, h) = [int(x) for x in input().split()]
         height.append(h)
         points.insert(i, x)
     for i in range(1, n):
@@ -22,5 +22,5 @@ for t in range(int(input())):
     height.sort(reverse=True)
     s = 0
     for i in range(n):
-        s += (height[i] * points[i])
+        s += height[i] * points[i]
     print(s)

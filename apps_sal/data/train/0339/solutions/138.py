@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         jk_1 = {}
         for i in range(len(nums1)):
@@ -18,8 +19,6 @@ class Solution:
                         jk_2[t] += 1
                     else:
                         jk_2[t] = 1
-
-        #print(jk_1, jk_2)
         c = 0
         for x in nums1:
             if x * x in jk_2:

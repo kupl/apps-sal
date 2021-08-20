@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 q = 0
 rez = [0] * int(m)
 st = 0
@@ -31,4 +31,4 @@ for i in range(int(n)):
                 break
         end += 1
 for i in rez:
-    print(i, end=" ")
+    print(i, end=' ')

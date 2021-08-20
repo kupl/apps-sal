@@ -2,12 +2,8 @@ desc = []
 for i in range(8):
     input_str = input()
     desc.append(input_str)
-w, b = 0, 0
-""" вес ферзя равен 9,
-вес ладьи равен 5,
-вес слона равен 3,
-вес коня равен 3,
-вес пешки равен 1, """
+(w, b) = (0, 0)
+' вес ферзя равен 9,\nвес ладьи равен 5,\nвес слона равен 3,\nвес коня равен 3,\nвес пешки равен 1, '
 for i in range(8):
     for j in range(8):
         if desc[i][j] == 'Q':
@@ -33,9 +29,8 @@ for i in range(8):
         else:
             pass
 if w > b:
-    print("White")
+    print('White')
 elif b > w:
-    print("Black")
+    print('Black')
 else:
-    print("Draw")
-# ферзь обозначается символом 'Q', ладья — 'R', слон — 'B', конь — 'N', пешка — 'P', король — 'K'.
+    print('Draw')

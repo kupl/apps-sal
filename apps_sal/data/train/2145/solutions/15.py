@@ -1,6 +1,5 @@
 MOD = 10 ** 9 + 7
-s, t = input(), input()
-
+(s, t) = (input(), input())
 p = t + '#' + s
 z = [0] * len(p)
 l = r = 0
@@ -10,8 +9,7 @@ for i in range(1, len(p)):
     while i + z[i] < len(p) and p[z[i]] == p[i + z[i]]:
         z[i] += 1
     if i + z[i] - 1 > r:
-        l, r = i, i + z[i] - 1
-
+        (l, r) = (i, i + z[i] - 1)
 f = [0] * (len(p) + 1)
 fsum = [0] * (len(p) + 1)
 fsum2 = [0] * (len(p) + 1)

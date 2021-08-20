@@ -1,5 +1,5 @@
 from math import gcd, sqrt
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 g = gcd(a, b)
 d = {}
 for i in range(2, int(sqrt(g)) + 1):

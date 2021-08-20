@@ -1,9 +1,9 @@
 T = int(input())
 for t in range(T):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     mines = input()
     price = 0
-    last = ""
+    last = ''
     not_mines = []
     there_was_mines = False
     not_mine = 0
@@ -19,9 +19,7 @@ for t in range(T):
         else:
             not_mine += 1
         last = c
-    # print(not_mines)
     for m in not_mines:
         if m * b < a:
             price = price - a + m * b
-
     print(price)

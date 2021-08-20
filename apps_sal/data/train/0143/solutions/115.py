@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         counter = {}
         longest = 0

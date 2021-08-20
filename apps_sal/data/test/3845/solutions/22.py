@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 mat = [['.'] * 50 + ['#'] * 50 for _ in range(100)]
 for i in range(a - 1):
     c = 51 + 2 * (i % 24)

@@ -1,4 +1,5 @@
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         counter = Counter(A)
         for a in sorted(A, key=abs):

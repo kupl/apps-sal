@@ -15,7 +15,7 @@ def func(i, cur_gcd):
 
 
 for _ in range(int(input())):
-    n, res = int(input()), 0
+    (n, res) = (int(input()), 0)
     ls = list(map(int, input().split()))
     d = {}
     for i in range(n):

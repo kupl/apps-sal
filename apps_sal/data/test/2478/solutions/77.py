@@ -1,10 +1,8 @@
 from collections import deque
-
 N = int(input())
 S = input()
 que = deque(S)
 l = r = 0
-
 for s in S:
     if s == '(':
         l += 1
@@ -14,7 +12,7 @@ for s in S:
         que.appendleft('(')
         l += 1
 else:
-    ans = "".join(que)
+    ans = ''.join(que)
     if r < l:
-        ans = ans + ")" * (l - r)
+        ans = ans + ')' * (l - r)
 print(ans)

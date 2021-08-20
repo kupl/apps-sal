@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = list(map(int, input().split()))
 a = set()
 x = 0
@@ -11,8 +11,8 @@ for i in range(n):
     if x == k:
         break
 if x == k:
-    print("YES")
+    print('YES')
     for i in sol:
-        print(i, end=" ")
+        print(i, end=' ')
 else:
-    print("NO")
+    print('NO')

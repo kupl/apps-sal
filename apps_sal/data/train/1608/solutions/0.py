@@ -8,5 +8,4 @@ def determinant(m):
                 a -= m[0][n] * determinant([o[:n] + o[n + 1:] for o in m[1:]])
             else:
                 a += m[0][n] * determinant([o[:n] + o[n + 1:] for o in m[1:]])
-
     return a

@@ -1,5 +1,4 @@
-# bismillah
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split(' ')))
 o = 0
 c = 0

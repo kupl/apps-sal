@@ -1,11 +1,9 @@
-# if graph problem, dont forget to write sys.setrecursionlimit(10**7)
 from math import ceil, floor
 
 
 def solve():
-
-    n, x = list(map(int, input().split()))
-    if (1 <= n <= 2):
+    (n, x) = list(map(int, input().split()))
+    if 1 <= n <= 2:
         print(1)
     else:
         print(ceil((n - 2) / x) + 1)

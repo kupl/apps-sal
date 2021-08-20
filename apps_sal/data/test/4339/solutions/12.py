@@ -10,11 +10,10 @@ def solve():
     C = [A[i] - B[i] for i in range(N)]
     C.sort()
     count = 0
-    for i, c in enumerate(C):
-        least = bisect(C, - c)
+    for (i, c) in enumerate(C):
+        least = bisect(C, -c)
         count += N - max(least, i + 1)
     print(count)
-
     return 0
 
 

@@ -3,8 +3,8 @@ data = input().strip()
 k = int(input())
 ans = 0
 alc = 1
-for i, d in enumerate(data):
-    if d == "0" or d == "5":
+for (i, d) in enumerate(data):
+    if d == '0' or d == '5':
         ans += alc
     alc *= 2
     alc %= MOD

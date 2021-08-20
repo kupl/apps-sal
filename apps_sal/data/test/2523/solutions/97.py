@@ -17,7 +17,7 @@ def main():
         sls = [ls[0]]
         for i in range(1, N):
             sls += [sls[-1] + ls[i]]
-        ans = min(max(sls[i], sls[-1] - sls[i]) for i in range(N - 1))
+        ans = min((max(sls[i], sls[-1] - sls[i]) for i in range(N - 1)))
         print(ans)
 
 

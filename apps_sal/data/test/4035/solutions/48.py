@@ -1,4 +1,4 @@
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 i = 0
 x = int(a / 0.08)
 while True:

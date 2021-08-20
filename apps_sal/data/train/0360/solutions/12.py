@@ -1,14 +1,13 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         average = sum(weights) // len(weights)
         min_capacity = max(max(weights), average)
-
         min_w = min_capacity
         max_w = min_w * 2
         while not enought_capacity(max_w, weights, D):
             min_w = max_w
             max_w = max_w * 2
-
         while True:
             mid = min_w + (max_w - min_w) // 2
             if enought_capacity(mid, weights, D):
@@ -17,8 +16,6 @@ class Solution:
                 max_w = mid
             else:
                 min_w = mid + 1
-
- #       10 11 12 13 14 15
 
 
 def enought_capacity(capacity: int, weights: List[int], D: int):
@@ -29,7 +26,6 @@ def enought_capacity(capacity: int, weights: List[int], D: int):
         if sum_weight > capacity:
             remain_ships -= 1
             sum_weight = pck_weight
-
     if remain_ships >= 0:
         return True
     return False

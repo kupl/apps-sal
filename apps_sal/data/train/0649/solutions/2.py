@@ -1,23 +1,22 @@
 def main():
     for _ in range(int(input())):
-        rows, column = map(int, input().split())
+        (rows, column) = map(int, input().split())
         arr = []
         for i in range(rows):
             arr.append(list(input()))
         string = input()
         last = string[-1]
         operation = Find(string, last)
-        # print(operation)
         for i in string:
-            if i == "L":
+            if i == 'L':
                 arr = Left(arr)
-            if i == "R":
+            if i == 'R':
                 arr = Right(arr)
-            if i == "U":
+            if i == 'U':
                 arr = Transpose(arr)
                 arr = Left(arr)
                 arr = Transpose(arr)
-            if i == "D":
+            if i == 'D':
                 arr = Transpose(arr)
                 arr = Right(arr)
                 arr = Transpose(arr)
@@ -27,15 +26,15 @@ def main():
 
 def Left(arr):
     for i in range(len(arr)):
-        ans = arr[i].count("1")
-        arr[i] = "1" * ans + (len(arr[i]) - ans) * "0"
+        ans = arr[i].count('1')
+        arr[i] = '1' * ans + (len(arr[i]) - ans) * '0'
     return arr
 
 
 def Right(arr):
     for i in range(len(arr)):
-        ans = arr[i].count("1")
-        arr[i] = (len(arr[i]) - ans) * "0" + "1" * ans
+        ans = arr[i].count('1')
+        arr[i] = (len(arr[i]) - ans) * '0' + '1' * ans
     return arr
 
 
@@ -44,7 +43,7 @@ def Transpose(arr):
     ans = list(map(list, zip(*arr)))
     for i in ans:
         ass = i
-        hello = ""
+        hello = ''
         for j in ass:
             hello += j
         ansss.append(hello)
@@ -52,22 +51,22 @@ def Transpose(arr):
 
 
 def Find(string, last):
-    oper = "" + last
+    oper = '' + last
     for i in string[-2::-1]:
-        if last == "L":
-            if i in ["D", "U"]:
+        if last == 'L':
+            if i in ['D', 'U']:
                 oper = i + oper
                 last = i
-        if last == "R":
-            if i in ["D", "U"]:
+        if last == 'R':
+            if i in ['D', 'U']:
                 oper = i + oper
                 last = i
-        if last == "D":
-            if i in ["L", "R"]:
+        if last == 'D':
+            if i in ['L', 'R']:
                 oper = i + oper
                 last = i
-        if last == "U":
-            if i in ["L", "R"]:
+        if last == 'U':
+            if i in ['L', 'R']:
                 oper = i + oper
                 last = i
     return oper

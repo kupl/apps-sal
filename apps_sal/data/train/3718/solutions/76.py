@@ -5,4 +5,4 @@ def divisors(n):
     for i in a:
         if n % i == 0:
             c.append(i)
-    return(len(c) + 1)
+    return len(c) + 1

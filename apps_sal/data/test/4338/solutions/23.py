@@ -1,5 +1,5 @@
 import math
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 a = [int(x) for x in input().split()]
 if x > y:
     print(n)

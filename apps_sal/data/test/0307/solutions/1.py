@@ -1,4 +1,4 @@
-k2, k3, k5, k6 = list(map(int, input().split()))
+(k2, k3, k5, k6) = list(map(int, input().split()))
 k256 = min(k2, k5, k6)
 k2 -= k256
 k5 -= k256

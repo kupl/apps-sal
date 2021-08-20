@@ -2,16 +2,24 @@ import sys
 input = sys.stdin.readline
 
 
-def getInt(): return int(input())
-def getVars(): return list(map(int, input().split()))
-def getArr(): return list(map(int, input().split()))
-def getStr(): return input().strip()
-# -------------------------------
+def getInt():
+    return int(input())
+
+
+def getVars():
+    return list(map(int, input().split()))
+
+
+def getArr():
+    return list(map(int, input().split()))
+
+
+def getStr():
+    return input().strip()
 
 
 N = getInt()
 A = getArr()
-
 res = 0
 k = 1
 for i in range(N):

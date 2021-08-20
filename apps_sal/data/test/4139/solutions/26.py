@@ -1,9 +1,8 @@
 import itertools
 N = int(input())
 s = len(str(N))
-
 ans = 0
-b1 = list(itertools.product("0357", repeat=s))
+b1 = list(itertools.product('0357', repeat=s))
 for k in b1:
     t = int(''.join(k))
     if N < t:

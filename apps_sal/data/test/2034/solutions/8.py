@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 E = [[] for i in range(n + 1)]
 for _ in range(m):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     E[x] += [y]
     E[y] += [x]
 f = [0] * (n + 1)
@@ -12,7 +12,7 @@ def bfs(nom):
     f[nom] = 1
     k = 1
     while len(l):
-        nom, pre = l.pop()
+        (nom, pre) = l.pop()
         for x in E[nom]:
             if x != pre:
                 if f[x]:

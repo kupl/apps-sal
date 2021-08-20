@@ -9,5 +9,4 @@ def adjacent_element_product(array):
             i += 1
         else:
             i += 1
-
     return c

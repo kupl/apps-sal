@@ -10,7 +10,6 @@ def count_devisor(n):
 
 n = int(input())
 ans = 0
-
 for i in range(1, n + 1, 2):
     if count_devisor(i) == 8:
         ans += 1

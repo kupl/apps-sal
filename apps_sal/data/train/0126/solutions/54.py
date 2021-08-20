@@ -1,4 +1,5 @@
 class Solution:
+
     def maxFreq(self, s: str, maxLetters: int, minSize: int, maxSize: int) -> int:
         validWords = {}
         for i in range(0, len(s)):
@@ -9,8 +10,6 @@ class Solution:
                         validWords[ss] += 1
                     else:
                         validWords[ss] = 1
-
-        # print(\"valid: \", validWords)
         if validWords:
             all_values = validWords.values()
             return max(all_values)

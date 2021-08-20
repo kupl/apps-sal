@@ -1,4 +1,4 @@
-n, x, y = map(int, input().split())
+(n, x, y) = map(int, input().split())
 l = list(map(int, input().split()))
 c = 0
 for i in l:
@@ -10,7 +10,7 @@ for i in l:
         if y - t > 0:
             c += y - t
     if c >= 300:
-        print("YES")
+        print('YES')
         break
 else:
-    print("NO")
+    print('NO')

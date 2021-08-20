@@ -6,5 +6,4 @@ total = sum(a)
 for i in range(n):
     total -= a[i]
     ans = (ans + total * a[i]) % mod
-
 print(ans)

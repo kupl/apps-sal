@@ -1,5 +1,5 @@
 for _ in range(int(input().strip())):
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     total = 0
     player = 0
     for i in map(int, input().strip().split()):
@@ -15,7 +15,6 @@ for _ in range(int(input().strip())):
             else:
                 total -= i
             player = 0
-
     if abs(total) >= k:
         print(1)
     else:

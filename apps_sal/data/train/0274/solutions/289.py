@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         from heapq import heappop, heappush
         res = j = 0
@@ -15,5 +16,4 @@ class Solution:
                 while j > n[0][1]:
                     heappop(n)
             res = max(res, i - j + 1)
-
         return res

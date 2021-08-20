@@ -2,13 +2,10 @@ import sys
 
 
 def main():
-    n, s = map(int, sys.stdin.readline().split())
-
+    (n, s) = map(int, sys.stdin.readline().split())
     a = list(map(int, sys.stdin.readline().split()))
-
     l = 0
     r = n
-
     bestk = 0
     bests = 0
     while l < r:
@@ -33,7 +30,6 @@ def main():
     if t <= s:
         bestk = mid
         bests = t
-
     print(bestk, bests)
 
 

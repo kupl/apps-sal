@@ -3,8 +3,7 @@ t = [0] * (N + 1)
 x = [0] * (N + 1)
 y = [0] * (N + 1)
 for i in range(N):
-    t[i + 1], x[i + 1], y[i + 1] = map(int, input().split())
-
+    (t[i + 1], x[i + 1], y[i + 1]) = map(int, input().split())
 f = True
 for i in range(N):
     dt = t[i + 1] - t[i]
@@ -13,5 +12,4 @@ for i in range(N):
         f = False
     if dist % 2 != dt % 2:
         f = False
-
 print('Yes' if f else 'No')

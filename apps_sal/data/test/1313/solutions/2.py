@@ -1,5 +1,5 @@
-a, b, c, d = map(int, input().split(' '))
+(a, b, c, d) = map(int, input().split(' '))
 if b < a:
-    print("First")
+    print('First')
 else:
-    print("Second")
+    print('Second')

@@ -1,5 +1,5 @@
 def judge(i):
-    return "Bob" if cnt[i] > n // 2 else "Alice"
+    return 'Bob' if cnt[i] > n // 2 else 'Alice'
 
 
 n = int(input())

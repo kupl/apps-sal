@@ -29,7 +29,6 @@ def main():
             tmp_e[i + 1] = -1
         else:
             continue
-
     print(min(count_o, count_e))
 
 

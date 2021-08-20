@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 lst = list(map(int, input().split()))
 au = list(map(int, input().split()))
 res = sum(lst)

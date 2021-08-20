@@ -1,10 +1,9 @@
-# cook your dish here
 def fn_bonAppetit(test):
     for _ in range(test):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         cust_preference = {}
         for c in range(n):
-            s, f, p = map(int, input().split())
+            (s, f, p) = map(int, input().split())
             if p not in cust_preference:
                 cust_preference[p] = [(s, f)]
             else:

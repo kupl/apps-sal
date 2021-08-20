@@ -2,6 +2,7 @@ import sys
 
 
 class TreeNode:
+
     def __init__(self, k, v):
         self.key = k
         self.value = v
@@ -56,7 +57,6 @@ class AvlTree:
         return x.num_total if x else 0
 
     def _rebalance(self, node):
-
         n = node
         while n:
             lh = self.get_height(n.left)
@@ -65,7 +65,6 @@ class AvlTree:
             balance_factor = lh - rh
             n.num_total = 1 + self.get_num_total(n.left) + self.get_num_total(n.right)
             n.num_left = 1 + self.get_num_total(n.left)
-
             if balance_factor > 1:
                 if self.get_height(n.left.left) < self.get_height(n.left.right):
                     self._rotate_left(n.left)
@@ -157,7 +156,7 @@ class AvlTree:
                 node = node.right
             else:
                 return (node.key, node.value)
-        raise IndexError("Out of ranges")
+        raise IndexError('Out of ranges')
 
     @staticmethod
     def _is_left(node):
@@ -220,24 +219,24 @@ class AvlTree:
 def __starting_point():
     lines = sys.stdin.readlines()
     n = int(lines[0])
-    aa = [(a, i) for i, a in enumerate(map(int, lines[1].split()))]
+    aa = [(a, i) for (i, a) in enumerate(map(int, lines[1].split()))]
     m = int(lines[2])
     qs = [None] * m
     ans = [None] * m
     for i in range(m):
-        k, pos = list(map(int, lines[i + 3].split()))
+        (k, pos) = list(map(int, lines[i + 3].split()))
         qs[i] = (pos, k, i)
     qs.sort(key=lambda x: x[1])
     aa.sort(key=lambda x: x[1])
     aa.sort(key=lambda x: x[0], reverse=True)
     avl = AvlTree()
     s = 0
-    for pos, k, i in qs:
-        for a, j in aa[s: k]:
+    for (pos, k, i) in qs:
+        for (a, j) in aa[s:k]:
             avl.add(j, a)
         ans[i] = str(avl.get_at(pos - 1)[1])
         s = k
-    print("\n".join(ans))
+    print('\n'.join(ans))
 
 
 __starting_point()

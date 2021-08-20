@@ -1,1 +1,2 @@
-def find_average(arr): return sum(arr) / (len(arr) or 1)
+def find_average(arr):
+    return sum(arr) / (len(arr) or 1)

@@ -1,6 +1,7 @@
 class TrieNode:
+
     def __init__(self):
-        self.neighbor = {}  # char -> TrieNode
+        self.neighbor = {}
         self.isend = False
 
 
@@ -10,7 +11,6 @@ class StreamChecker:
         self.trie_root = TrieNode()
         self.letters = []
         self.max_len = max(list(map(len, words)))
-
         for word in words:
             curr = self.trie_root
             for c in word[::-1]:
@@ -22,7 +22,6 @@ class StreamChecker:
     def query(self, letter: str) -> bool:
         self.letters.append(letter)
         self.letters = self.letters[max(0, len(self.letters) - self.max_len):]
-
         curr = self.trie_root
         for l in self.letters[::-1]:
             if l in curr.neighbor:
@@ -32,8 +31,3 @@ class StreamChecker:
             else:
                 return False
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

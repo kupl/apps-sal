@@ -1,4 +1,4 @@
-n, r1, r2, r3, d = map(int, input().split())
+(n, r1, r2, r3, d) = map(int, input().split())
 a = list(map(int, input().split()))
 if 2 * r1 < r3:
     save = [r3 - 2 * r1] * n

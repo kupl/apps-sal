@@ -1,10 +1,8 @@
-# coding=utf-8
 __author__ = 'Alexander'
 
 
 def f(n, k):
     t = 2 ** (n - 1)
-
     if k == t:
         return n
     elif k < t:
@@ -13,6 +11,5 @@ def f(n, k):
         return f(n - 1, k - t)
 
 
-n, k = map(int, input().split())
-
+(n, k) = map(int, input().split())
 print(f(n, k))

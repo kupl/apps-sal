@@ -12,7 +12,7 @@ for i in range(t):
     n = int(input())
     a = list(map(int, input().split()))
     a.sort()
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     k = n // 2
     s = 0
     for j in range(k):

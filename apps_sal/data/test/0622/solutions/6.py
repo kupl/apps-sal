@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 
 
 def f(i, j):
-    l = (1 << (i - 1))
+    l = 1 << i - 1
     if j == l:
         return i
     elif j < l:

@@ -3,8 +3,8 @@ for _ in range(t):
     n = int(input())
     x = input().strip()
     flag = False
-    ans1 = ""
-    ans2 = ""
+    ans1 = ''
+    ans2 = ''
     for c in x:
         if c == '0':
             ans1 += '0'

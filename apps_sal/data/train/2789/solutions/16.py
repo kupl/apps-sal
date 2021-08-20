@@ -1,5 +1,5 @@
 def bmi(weight, height):
-    BMI = weight / (height**2)
+    BMI = weight / height ** 2
     if BMI > 30:
         return 'Obese'
     elif BMI > 25:
@@ -8,4 +8,3 @@ def bmi(weight, height):
         return 'Normal'
     else:
         return 'Underweight'
-    # your code here

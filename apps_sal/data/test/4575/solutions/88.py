@@ -1,5 +1,5 @@
 n = int(input())
-d, x = (int(i) for i in input().split())
+(d, x) = (int(i) for i in input().split())
 list_a = [int(input()) for i in range(0, n)]
 ans = x
 for i in list_a:

@@ -1,6 +1,5 @@
 N = int(input())
 W = list(map(int, input().split()))
-
 diff = [0 for i in range(N - 1)]
 for i in range(N - 1):
     S1 = sum(W[:i + 1])

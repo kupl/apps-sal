@@ -6,6 +6,6 @@ for i in a:
         first = True
         break
 if first:
-    print("First")
+    print('First')
 else:
-    print("Second")
+    print('Second')

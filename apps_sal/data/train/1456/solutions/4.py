@@ -1,5 +1,3 @@
-# cook your dish here
-
 from math import log2
 
 
@@ -22,7 +20,7 @@ def get(n):
 def read():
     t = int(input())
     for i in range(t):
-        l, r = list(map(int, input().strip().split()))
+        (l, r) = list(map(int, input().strip().split()))
         print(get(r) - get(l - 1))
 
 

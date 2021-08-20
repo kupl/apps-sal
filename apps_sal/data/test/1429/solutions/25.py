@@ -1,9 +1,9 @@
 def hoge():
-    N, S = input().split()
+    (N, S) = input().split()
     N = int(N)
     ans = 0
     for i in range(N):
-        at, cg = 0, 0
+        (at, cg) = (0, 0)
         for j in range(i, N):
             X = S[j]
             if X == 'A':

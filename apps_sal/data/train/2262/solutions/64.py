@@ -1,5 +1,4 @@
-R, C, N = list(map(int, input().split()))
-
+(R, C, N) = list(map(int, input().split()))
 points = []
 
 
@@ -15,7 +14,7 @@ def dist(x, y):
 
 
 for i in range(N):
-    x1, y1, x2, y2 = list(map(int, input().split()))
+    (x1, y1, x2, y2) = list(map(int, input().split()))
     if ((x1 == 0 or x1 == R) or (y1 == 0 or y1 == C)) and ((x2 == 0 or x2 == R) or (y2 == 0 or y2 == C)):
         points.append((i + 1, dist(x1, y1)))
         points.append((i + 1, dist(x2, y2)))
@@ -30,6 +29,6 @@ for point in points:
     else:
         l.append(point[0])
 if len(l) == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

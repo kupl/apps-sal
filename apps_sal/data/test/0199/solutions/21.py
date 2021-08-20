@@ -1,18 +1,18 @@
 def ifPoss(arr, v, h):
     tot = 0
     for i in arr:
-        tot += (i - h)
+        tot += i - h
     return tot >= v
 
 
 def prog():
-    n, v = map(int, input().split())
+    (n, v) = map(int, input().split())
     arr = [int(x) for x in input().split()]
     minLev = -1
-    l, h = 0, min(arr)
-    while(l <= h):
+    (l, h) = (0, min(arr))
+    while l <= h:
         m = int((l + h) / 2)
-        if(ifPoss(arr, v, m)):
+        if ifPoss(arr, v, m):
             minLev = max(minLev, m)
             l = m + 1
         else:

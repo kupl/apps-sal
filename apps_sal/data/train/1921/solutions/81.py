@@ -3,6 +3,7 @@ import heapq
 
 
 class DinnerPlates:
+
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.stacklist = []
@@ -22,18 +23,14 @@ class DinnerPlates:
     def pop(self) -> int:
         if len(self.stacklist) == 0:
             return -1
-
         while len(self.stacklist[-1]) == 0:
             del self.stacklist[-1]
-
         if len(self.stacklist) > 0:
             res = self.stacklist[-1].pop()
         else:
             res = -1
-
         if len(self.stacklist[-1]) == 0:
             del self.stacklist[-1]
-
         return res
 
     def popAtStack(self, index: int) -> int:

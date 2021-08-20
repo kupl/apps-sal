@@ -1,4 +1,4 @@
-w, m = list(map(int, input().split()))
+(w, m) = list(map(int, input().split()))
 arr = [0] * 103
 i = 0
 while m != 0:

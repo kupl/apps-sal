@@ -7,7 +7,6 @@ for _ in range(int(input())):
     for i in range(len(a)):
         xor ^= a[i]
         xorsum.append(xor)
-
     xordict = dict()
     for i in range(len(xorsum)):
         if xorsum[i] in xordict:
@@ -17,6 +16,6 @@ for _ in range(int(input())):
     ans = 0
     for key in xordict:
         for i in range(1, len(xordict[key])):
-            x = (i * xordict[key][i]) - (i) - (sum(xordict[key][:i]))
+            x = i * xordict[key][i] - i - sum(xordict[key][:i])
             ans += x
     print(ans)

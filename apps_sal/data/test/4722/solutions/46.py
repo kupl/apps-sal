@@ -1,7 +1,5 @@
-# クッキー枚数（A,B）を整数で入力
-A, B = map(int, input().split())
-# AかBかA+Bのどれかを3匹に分けれればPossible、できなければImpossible
+(A, B) = map(int, input().split())
 if A % 3 == 0 or B % 3 == 0 or (A + B) % 3 == 0:
-    print("Possible")
+    print('Possible')
 else:
-    print("Impossible")
+    print('Impossible')

@@ -1,1 +1,2 @@
-def smash(words): return ' '.join(words)
+def smash(words):
+    return ' '.join(words)

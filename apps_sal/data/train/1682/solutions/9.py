@@ -1,4 +1,3 @@
-# cook your dish here
 a = input()
 a = [int(i) for i in a]
 l = []
@@ -18,4 +17,4 @@ for i in range(len(l)):
             c = l[i]
             l[i] = l[j]
             l[j] = c
-print("{}:{}-{}".format(l[-1][-1], l[-1][0], l[-1][1]))
+print('{}:{}-{}'.format(l[-1][-1], l[-1][0], l[-1][1]))

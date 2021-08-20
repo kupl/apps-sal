@@ -1,9 +1,9 @@
 from math import gcd
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 
 
 def make_divisors(n):
-    lower_divisors, upper_divisors = [], []
+    (lower_divisors, upper_divisors) = ([], [])
     i = 1
     while i * i <= n:
         if n % i == 0:
@@ -14,9 +14,8 @@ def make_divisors(n):
     return lower_divisors + upper_divisors[::-1]
 
 
-v = gcd(a, b)  # greatest common divisors
+v = gcd(a, b)
 divs = make_divisors(v)
-
 k = 1
 ans = 0
 for d in divs:

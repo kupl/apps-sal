@@ -1,4 +1,4 @@
-n = (input())
+n = input()
 i = 0
 while i < len(n) - 1 and n[i] != '0':
     print(n[i], end='')

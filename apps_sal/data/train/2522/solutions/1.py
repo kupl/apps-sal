@@ -1,4 +1,5 @@
 class Solution:
+
     def countAndSay(self, n):
         """
         :type n: int
@@ -6,7 +7,7 @@ class Solution:
         """
         s = '1'
         for _ in range(n - 1):
-            temp, pre, count = '', s[0], 0
+            (temp, pre, count) = ('', s[0], 0)
             for i in s:
                 if i == pre:
                     count += 1

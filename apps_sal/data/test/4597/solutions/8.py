@@ -7,4 +7,4 @@ for i in range(1, a + 1):
 if b < 1000000000:
     print(b)
 else:
-    print((b % 1000000007))
+    print(b % 1000000007)

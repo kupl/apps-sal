@@ -9,7 +9,7 @@ def cal(s):
 
 def solve():
     [n, s, t] = [input(), input(), input()]
-    if(sorted(s) != sorted(t)):
+    if sorted(s) != sorted(t):
         print('NO')
         return
     for i in range(26):

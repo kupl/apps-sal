@@ -15,7 +15,7 @@ def solve(w, sum):
     return dp[n][sum]
 
 
-n, q = list(map(int, input().split()))
+(n, q) = list(map(int, input().split()))
 w = list(map(int, input().split()))
 for i in range(q):
     s = list(map(int, input().split()))
@@ -23,8 +23,7 @@ for i in range(q):
         w[s[1] - 1] = s[2]
     elif s[0] == 2:
         w = w[:s[1] - 1] + w[s[1] - 1:s[2]][::-1] + w[s[2]:]
+    elif solve(w[s[1] - 1:s[2]], s[3]) == 1:
+        print('Yes')
     else:
-        if(solve(w[s[1] - 1:s[2]], s[3]) == 1):
-            print("Yes")
-        else:
-            print("No")
+        print('No')

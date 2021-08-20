@@ -5,16 +5,15 @@ for i in range(n):
     b = max(l[0], l[1])
     c = min(l[2], l[3])
     d = max(l[2], l[3])
-    if(d != c):
+    if d != c:
         d = d - c
         t = (b - a) // d
-        a = a + (t * d)
-        if(a == b):
-            print("YES")
+        a = a + t * d
+        if a == b:
+            print('YES')
         else:
-            print("NO")
+            print('NO')
+    elif a != b:
+        print('NO')
     else:
-        if(a != b):
-            print("NO")
-        else:
-            print("YES")
+        print('YES')

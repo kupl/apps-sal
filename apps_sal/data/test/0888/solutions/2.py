@@ -1,15 +1,11 @@
 n = int(input())
 p = [int(x) for x in input().split()]
 s = [int(x) for x in input().split()]
-
 list = []
-
 for i in range(n):
     list.append(s.index(p[i]) - i)
-
 cost = 0
 output = []
-
 while list != [0] * n:
     for i in range(n):
         if list[i] != 0:

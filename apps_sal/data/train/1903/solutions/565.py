@@ -1,35 +1,31 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         N = len(points)
         edges = []
-
         for i in range(N):
             a = tuple(points[i])
-
             for j in range(N):
                 if i == j:
                     continue
                 b = tuple(points[j])
                 cost = abs(a[0] - b[0]) + abs(a[1] - b[1])
                 edges.append((cost, i, j))
-
         edges.sort()
-
         dsu = DSU(N)
         mst = 0
         count = 0
-
-        for cost, a, b in edges:
+        for (cost, a, b) in edges:
             if count >= N - 1:
                 break
             if dsu.union(a, b):
                 mst += cost
                 count += 1
-
         return mst
 
 
-class DSU():
+class DSU:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.size = [1 for _ in range(n)]
@@ -52,11 +48,8 @@ class DSU():
         while root != self.parent[root]:
             root = self.parent[root]
         curr = a
-
-        # path compression
         while curr != root:
             after = self.parent[curr]
             self.parent[curr] = root
             curr = after
-
         return root

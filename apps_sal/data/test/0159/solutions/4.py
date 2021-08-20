@@ -8,16 +8,13 @@ def is_co_prime(x, y):
 def solve():
     N = int(input())
     L = list(map(int, input().split()))
-
     ans = [str(L[0])]
-
     x = 0
     for i in range(1, N):
         if is_co_prime(L[i], L[i - 1]):
             x += 1
             ans.append('1')
         ans.append(str(L[i]))
-
     print(x)
     print(' '.join(ans))
 

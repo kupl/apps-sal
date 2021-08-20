@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,13 +8,11 @@ MOD = 1000000007
 
 
 def main():
-    N, K = list(map(int, readline().split()))
-
+    (N, K) = list(map(int, readline().split()))
     if N % K == 0:
-        print((0))
+        print(0)
     else:
-        print((1))
-
+        print(1)
     return
 
 

@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         mask = 0
         mp = {'a': 0, 'e': 1, 'i': 2, 'o': 3, 'u': 4}
@@ -7,7 +8,7 @@ class Solution:
         max_len = 0
         for i in range(len(s)):
             if s[i] in 'aeiou':
-                mask ^= (1 << mp[s[i]])
+                mask ^= 1 << mp[s[i]]
             seen[mask] = min(seen[mask], i)
             max_len = max(max_len, i - seen[mask])
         return max_len

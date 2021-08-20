@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
-a, m, b = [], [], []
+(n, k) = list(map(int, input().split()))
+(a, m, b) = ([], [], [])
 for i in range(n):
-    ti, ai, bi = list(map(int, input().split()))
+    (ti, ai, bi) = list(map(int, input().split()))
     if ai == 1 and bi == 1:
         m.append(ti)
     elif ai == 1:

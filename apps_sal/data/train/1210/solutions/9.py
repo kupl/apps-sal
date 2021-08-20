@@ -1,6 +1,6 @@
 for i in range(int(input())):
-    n, x = map(int, input().split())
-    pos, lang = input().split()
+    (n, x) = map(int, input().split())
+    (pos, lang) = input().split()
     if 'L' in pos:
         x = x
     elif 'R' in pos:

@@ -1,6 +1,6 @@
-n, h, a, b, k = list(map(int, input().split()))
+(n, h, a, b, k) = list(map(int, input().split()))
 for i in range(k):
-    ta, ha, tb, hb = list(map(int, input().split()))
+    (ta, ha, tb, hb) = list(map(int, input().split()))
     m = 0
     if ta != tb:
         if ha < a and hb < a:

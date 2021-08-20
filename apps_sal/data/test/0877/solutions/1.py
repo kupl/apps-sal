@@ -1,8 +1,8 @@
-n, m = [int(i) for i in input().split()]
+(n, m) = [int(i) for i in input().split()]
 s1 = [1]
 s2 = [n]
 for i in range(m):
-    a, b = [int(i) for i in input().split()]
+    (a, b) = [int(i) for i in input().split()]
     s1.append(min(a, b))
     s2.append(max(a, b))
 s1.sort()

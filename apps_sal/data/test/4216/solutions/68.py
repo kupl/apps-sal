@@ -1,6 +1,9 @@
 from math import floor, sqrt
 N = int(input())
-def f(x, y): return len(str(x)) if x > y else len(str(y))
+
+
+def f(x, y):
+    return len(str(x)) if x > y else len(str(y))
 
 
 ans = len(str(N))

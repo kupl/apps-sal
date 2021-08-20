@@ -1,12 +1,12 @@
 def is_zigzag(h):
-    if (len(h) <= 1):
+    if len(h) <= 1:
         return True
     sign = h[1] - h[0]
-    if (len(h) == 2 and sign == 0):
+    if len(h) == 2 and sign == 0:
         return False
     for i in range(2, len(h)):
         diff = h[i] - h[i - 1]
-        if (diff * sign >= 0):
+        if diff * sign >= 0:
             return False
         sign = diff
     return True
@@ -15,11 +15,11 @@ def is_zigzag(h):
 def is_possible(h, r):
     for i in range(1, len(h)):
         diff = h[i] - h[i - 1]
-        if (diff < 0 and r[i] > r[i - 1]):
+        if diff < 0 and r[i] > r[i - 1]:
             return True
-        elif (diff > 0 and r[i] < r[i - 1]):
+        elif diff > 0 and r[i] < r[i - 1]:
             return True
-        elif (diff == 0 and r[i] != r[i - 1]):
+        elif diff == 0 and r[i] != r[i - 1]:
             return True
     return False
 
@@ -35,24 +35,22 @@ INF = float('inf')
 def find_intervals(heights, rates):
     intervals = []
     f = is_zigzag(heights)
-    if (f):
+    if f:
         interval = [0, 'Inf']
         intervals.append(interval)
     day = 0
-    while (is_possible(heights, rates)):
+    while is_possible(heights, rates):
         day += 1
         add_day(heights, rates)
-        if (is_zigzag(heights)):
-            if (f == 1):
+        if is_zigzag(heights):
+            if f == 1:
                 continue
             else:
                 intervals.append([day, 'Inf'])
                 f = 1
-        else:
-            if (f == 1):
-                intervals[-1][-1] = day - 1
-                f = 0
-
+        elif f == 1:
+            intervals[-1][-1] = day - 1
+            f = 0
     return intervals
 
 
@@ -62,7 +60,7 @@ for i in range(t):
     heights = []
     rates = []
     for k in range(n):
-        h, m = list(map(int, input().split()))
+        (h, m) = list(map(int, input().split()))
         heights.append(h)
         rates.append(m)
     intervals = find_intervals(heights, rates)

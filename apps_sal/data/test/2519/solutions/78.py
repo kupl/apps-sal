@@ -1,5 +1,5 @@
 from functools import reduce
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 p = [int(i) for i in input().split()]
 tmp_max = sum([i / 2 + 0.5 for i in p[0:k]])
 tmp = tmp_max

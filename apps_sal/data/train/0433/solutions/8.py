@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         start = 0
         count = 0
@@ -15,5 +16,4 @@ class Solution:
             else:
                 start += 1
                 i += 1
-
         return count

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 nOfM = [0 for i in range(m)]
 for md in range(m):
     if md <= n:

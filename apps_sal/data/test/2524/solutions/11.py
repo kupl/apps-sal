@@ -15,7 +15,7 @@ def solve():
     return ans
 
 
-N, *A = list(map(int, open(0).read().split()))
+(N, *A) = list(map(int, open(0).read().split()))
 A = np.array(A, dtype=np.int64)
-MOD = 1_000_000_007
-print((solve()))
+MOD = 1000000007
+print(solve())

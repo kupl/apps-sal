@@ -1,4 +1,4 @@
-A, B, X = list(map(int, input().split()))
+(A, B, X) = list(map(int, input().split()))
 
 
 def func1(N):
@@ -7,7 +7,7 @@ def func1(N):
 
 
 left = 0
-right = 10**30
+right = 10 ** 30
 while left + 1 < right:
     n = (left + right) // 2
     if func1(n):
@@ -15,4 +15,4 @@ while left + 1 < right:
     else:
         right = n
 ans = left
-print((ans if ans < 10**9 else 10**9))
+print(ans if ans < 10 ** 9 else 10 ** 9)

@@ -3,5 +3,5 @@ def solve(nums, div):
         return []
     output = []
     for num in nums:
-        output.append((num % div) + num)
+        output.append(num % div + num)
     return output

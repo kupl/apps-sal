@@ -1,23 +1,20 @@
 import sys
 from itertools import product
-
 sys.setrecursionlimit(10 ** 7)
 f_inf = float('inf')
 mod = 10 ** 9 + 7
 
 
 def resolve():
-    H, W, K = list(map(int, input().split()))
+    (H, W, K) = list(map(int, input().split()))
     grid = [list(input()) for _ in range(H)]
-
     R = [[0] * (W + 1) for _ in range(H + 1)]
     for h in range(H):
         for w in range(W):
             R[h + 1][w + 1] = R[h][w + 1] + R[h + 1][w] - R[h][w] + int(grid[h][w])
-
     res = f_inf
     for pattern in product([0, 1], repeat=H - 1):
-        cut_H = [idx + 1 for idx, p in enumerate(pattern) if p == 1] + [H]
+        cut_H = [idx + 1 for (idx, p) in enumerate(pattern) if p == 1] + [H]
         cnt_cut = sum(pattern)
         left = 0
         right = 1

@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     i = 1
     ad = []
     bd = []
@@ -10,7 +10,7 @@ for _ in range(int(input())):
                 bd.append((y - x) // i)
         i += 1
     ds = ad + bd[::-1]
-    best = (float("inf"), 0)
+    best = (float('inf'), 0)
     for d in ds:
         l = (y - x) // d + 1
         if l > n:

@@ -1,4 +1,5 @@
 class Solution:
+
     def timetominute(self, time1):
         t1 = int(time1[:2]) * 60 + int(time1[3:5])
         return t1
@@ -14,8 +15,8 @@ class Solution:
         timePoints.sort(reverse=False)
         print(timePoints)
         for i in range(len(timePoints)):
-            if (timePoints[(i + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1]) < 0:
-                count = min(min((timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + len(timePoints)) % len(timePoints) - 1]), (timePoints[(i + len(timePoints)) % len(timePoints) - 1] - (timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1]) + 1440)), count)
+            if timePoints[(i + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] < 0:
+                count = min(min(timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + len(timePoints)) % len(timePoints) - 1], timePoints[(i + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] + 1440), count)
             else:
-                count = min(min((timePoints[(i + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1]), (timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + len(timePoints)) % len(timePoints) - 1] + 1440)), count)
+                count = min(min(timePoints[(i + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1], timePoints[(i + 1 + len(timePoints)) % len(timePoints) - 1] - timePoints[(i + len(timePoints)) % len(timePoints) - 1] + 1440), count)
         return count

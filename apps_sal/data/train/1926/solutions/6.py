@@ -1,4 +1,5 @@
 class Solution:
+
     def closestDivisors(self, num: int) -> List[int]:
         result = [None, None]
         i = 1

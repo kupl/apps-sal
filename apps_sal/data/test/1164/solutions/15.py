@@ -17,23 +17,19 @@ for i in range(len(s)):
         len_cur += 1
     elif s[i] == '.':
         len_cur = 0
-
 if len_cur == 2:
     kop += cur - cur // 100 * 100
     rub += cur // 100
 else:
     rub += cur
-
 rub += kop // 100
 kop = kop - kop // 100 * 100
-
 if kop < 10:
     kop = '0' + str(kop)
 kop = str(kop)
 srub = ''
 if len(str(rub)) % 3 != 0:
     srub += str(str(rub)[:len(str(rub)) % 3]) + '.'
-
 c = 0
 for i in range(len(str(rub)) % 3, len(str(rub))):
     c += 1
@@ -41,7 +37,6 @@ for i in range(len(str(rub)) % 3, len(str(rub))):
     if c == 3:
         srub += '.'
         c = 0
-
 if kop == '00':
     print(srub[:-1])
 else:

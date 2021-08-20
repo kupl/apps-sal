@@ -1,10 +1,5 @@
-# Fast IO (be careful about bytestring)
-
-# import os,io
-# input=io.BytesIO(os.read(0,os.fstat(0).st_size)).readline
-
 for _ in range(int(input())):
-    n, x, y = list(map(int, input().split()))
+    (n, x, y) = list(map(int, input().split()))
     minMax = 100000
     minD = 0
     minStart = 0
@@ -27,4 +22,4 @@ for _ in range(int(input())):
     for i in range(n):
         ans.append(str(elem))
         elem += minD
-    print(" ".join(ans))
+    print(' '.join(ans))

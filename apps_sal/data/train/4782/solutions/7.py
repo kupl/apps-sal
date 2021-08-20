@@ -1,5 +1,3 @@
-# a skeleton class with required operators provided for convenience
-# feel free to use another approach
 import operator
 
 
@@ -10,26 +8,23 @@ def placeholdify(other):
 
 
 def make_bin_op(op):
+
     def __op__(self, other):
         other = placeholdify(other)
-        return Placeholder(
-            lambda *args: op(self(*args[:self.n]), other(*args[self.n:])),
-            self.n + other.n
-        )
+        return Placeholder(lambda *args: op(self(*args[:self.n]), other(*args[self.n:])), self.n + other.n)
     return __op__
 
 
 def make_bin_rop(op):
+
     def __rop__(self, other):
         other = placeholdify(other)
-        return Placeholder(
-            lambda *args: op(other(*args[:other.n]), self(*args[other.n:])),
-            self.n + other.n
-        )
+        return Placeholder(lambda *args: op(other(*args[:other.n]), self(*args[other.n:])), self.n + other.n)
     return __rop__
 
 
 class Placeholder:
+
     def __init__(self, f, n):
         self.f = f
         self.n = n

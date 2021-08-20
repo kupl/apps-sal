@@ -1,10 +1,8 @@
 import sys
-#sys.stdin = open('input.txt', 'r')
-#sys.stdout = open('output.txt', 'w')
 
 
 def x(y):
-    return ((2 + y) * (y // 2) // 2)
+    return (2 + y) * (y // 2) // 2
 
 
 def a(y):

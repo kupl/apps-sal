@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-
 from sys import stdin
-
-n, t, c = list(map(int, stdin.readline().split()))
+(n, t, c) = list(map(int, stdin.readline().split()))
 cnt = 0
 ct = 0
 for i in map(int, stdin.readline().split()):

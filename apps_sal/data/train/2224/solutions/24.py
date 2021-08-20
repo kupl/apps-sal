@@ -1,13 +1,9 @@
 from sys import stdin
 from math import *
-
 line = stdin.readline().rstrip().split()
 n = int(line[0])
-
-
 numbers = stdin.readline().rstrip().split()[0]
 numbers2 = stdin.readline().rstrip().split()[0]
-
 cant00 = 0
 cant01 = 0
 cant11 = 0

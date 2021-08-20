@@ -1,1 +1,2 @@
-def solution(a): return list(sorted(a)) if a else []
+def solution(a):
+    return list(sorted(a)) if a else []

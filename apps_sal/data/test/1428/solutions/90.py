@@ -1,16 +1,12 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 d = [list(map(int, input().split())) for i in range(c)]
 l = [list(map(int, input().split())) for i in range(n)]
-
 ll = [[0] * c for i in range(3)]
-
 for i in range(n):
     for j in range(n):
         x = (i + j + 2) % 3
         ll[x][l[i][j] - 1] += 1
-
-ans = float("INF")
-
+ans = float('INF')
 for i in range(c):
     for j in range(c):
         if i == j:

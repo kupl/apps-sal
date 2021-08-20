@@ -1,16 +1,14 @@
-# cook your dish here
-
 def gcd(a, b):
     if b == 0:
-        return(a)
+        return a
     return gcd(b, a % b)
 
 
 def lcm(x):
     ans = x[0]
     for i in range(1, len(x)):
-        ans = (ans * x[i]) // gcd(x[i], ans)
-    return(ans)
+        ans = ans * x[i] // gcd(x[i], ans)
+    return ans
 
 
 t = int(input())

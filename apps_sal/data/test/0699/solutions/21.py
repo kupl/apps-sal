@@ -1,6 +1,6 @@
-y, k, n = input().split()
+(y, k, n) = input().split()
 check = False
-y, k, n = [int(y), int(k), int(n)]
+(y, k, n) = [int(y), int(k), int(n)]
 if y >= k:
     a = k - y % k
     for i in range(a, n, k):
@@ -17,6 +17,5 @@ elif y < k:
             print(i, end=' ')
         else:
             break
-
 if check == False:
-    print("-1")
+    print('-1')

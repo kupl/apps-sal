@@ -1,13 +1,12 @@
 from string import ascii_lowercase as alpha
-
 alpha = list(alpha)
 ln = len(alpha)
-vowels = "aeiou"
+vowels = 'aeiou'
 
 
 def vowel_back(s):
     s = list(s)
-    for idx, char in enumerate(s):
+    for (idx, char) in enumerate(s):
         index = alpha.index(char)
         if char in ('c', 'o'):
             s[idx] = alpha[index - 1]
@@ -15,13 +14,12 @@ def vowel_back(s):
             s[idx] = alpha[index - 3]
         elif char == 'e':
             s[idx] = alpha[index - 4]
+        elif char in vowels:
+            s[idx] = alpha[index - 5]
         else:
-            if char in vowels:
-                s[idx] = alpha[index - 5]
-            else:
-                index += 9
-                index = index % ln
-                s[idx] = alpha[index]
+            index += 9
+            index = index % ln
+            s[idx] = alpha[index]
         if s[idx] in ('c', 'o', 'd', 'e'):
             s[idx] = char
-    return "".join(s)
+    return ''.join(s)

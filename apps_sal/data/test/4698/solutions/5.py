@@ -2,7 +2,7 @@ N = int(input())
 T = list(map(int, input().split()))
 M = int(input())
 for i in range(M):
-    Pi, Xi = map(int, input().split())
+    (Pi, Xi) = map(int, input().split())
     a = T[Pi - 1]
     T[Pi - 1] = Xi
     b = 0

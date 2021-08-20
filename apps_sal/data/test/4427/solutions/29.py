@@ -1,5 +1,4 @@
-r, d, x = list(map(int, input().strip().split()))
-
+(r, d, x) = list(map(int, input().strip().split()))
 for i in range(10):
     x = r * x - d
     print(x)

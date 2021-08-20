@@ -1,11 +1,11 @@
-inf = 10**18
+inf = 10 ** 18
 
 
 def D(a, b, c, d):
-    return ((c - a)**2 + (d - b)**2)**0.5
+    return ((c - a) ** 2 + (d - b) ** 2) ** 0.5
 
 
-xs, ys, xt, yt = map(int, input().split())
+(xs, ys, xt, yt) = map(int, input().split())
 n = int(input())
 xyr = [(xs, ys, 0)]
 for i in range(n):
@@ -16,8 +16,8 @@ for i in range(n + 2):
     dis[i][i] = 0
 for i in range(n + 2):
     for j in range(i):
-        a, b, r1 = xyr[i]
-        c, d, r2 = xyr[j]
+        (a, b, r1) = xyr[i]
+        (c, d, r2) = xyr[j]
         r = D(a, b, c, d) - (r1 + r2)
         r = max(0, r)
         dis[i][j] = r

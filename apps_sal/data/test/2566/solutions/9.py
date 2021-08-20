@@ -5,7 +5,7 @@ def main():
         arr = input().split()
         tot = 0
         for y in arr:
-            if y == "1":
+            if y == '1':
                 tot += 1
         if lessons % tot == 0:
             a = lessons // tot - 1
@@ -17,7 +17,7 @@ def main():
         for y in range(7):
             test = 0
             for z in range(7):
-                if arr[(y + z) % 7] == "1":
+                if arr[(y + z) % 7] == '1':
                     test += 1
                 if test == b:
                     break

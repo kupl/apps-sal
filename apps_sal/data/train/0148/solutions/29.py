@@ -1,4 +1,5 @@
 class Solution(object):
+
     def maxProfitAssignment(self, difficulty, profit, worker):
         jobs = zip(difficulty, profit)
         jobs = sorted(jobs)

@@ -1,13 +1,10 @@
-# cook your dish here
 t = int(input())
-
 sum1 = 0
 list2 = list()
 list3 = list()
 list4 = list()
-
 while t > 0:
-    s, n, k, r = input().split()
+    (s, n, k, r) = input().split()
     s = int(s)
     list3.append(s)
     n = int(n)
@@ -18,7 +15,6 @@ while t > 0:
     ans = k
     while n > 0:
         list1.append(ans)
-        # print(ans)
         ans = ans * r
         n -= 1
     m = sum(list1)
@@ -27,14 +23,11 @@ while t > 0:
     list4.append(z)
     t -= 1
 x = sum(list2)
-
 for i in list4:
     if i > 0:
         print('POSSIBLE', i)
     else:
         print('IMPOSSIBLE', -i)
-
-
 if x > sum1:
     print('IMPOSSIBLE')
 else:

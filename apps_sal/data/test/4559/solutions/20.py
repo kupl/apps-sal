@@ -1,5 +1,5 @@
 n = int(input())
-mod = 10**18
+mod = 10 ** 18
 li = list(map(int, input().split()))
 li.sort()
 ans = 1

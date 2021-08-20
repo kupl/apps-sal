@@ -1,6 +1,6 @@
 t = int(input())
 for i0 in range(t):
-    n, d = list(map(int, input().strip().split(' ')))
+    (n, d) = list(map(int, input().strip().split(' ')))
     a = list(map(int, input().strip().split(' ')))
     flag = 0
     count = 0
@@ -16,9 +16,9 @@ for i0 in range(t):
                     j = 1
                     y = x - a[i]
                     while a[i] != x:
-                        if a[i + (j * d)] - y >= 0:
+                        if a[i + j * d] - y >= 0:
                             a[i] = x
-                            a[i + (j * d)] -= y
+                            a[i + j * d] -= y
                             count += j * y
                             break
                         if i + j * d < len(a):
@@ -26,13 +26,12 @@ for i0 in range(t):
                         else:
                             flag = 1
                             break
+                elif i + d < len(a):
+                    count += a[i] - x
+                    a[i + d] += a[i] - x
+                    a[i] = x
                 else:
-                    if i + d < len(a):
-                        count += a[i] - x
-                        a[i + d] += a[i] - x
-                        a[i] = x
-                    else:
-                        flag = 1
+                    flag = 1
             else:
                 break
     if a.count(x) != len(a):

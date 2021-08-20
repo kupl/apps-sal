@@ -1,4 +1,5 @@
 class Solution:
+
     def getRange(self, nums, index):
         prev = index - 1
         after = index + 1
@@ -15,9 +16,7 @@ class Solution:
             return 0
         if target == nums[-1]:
             return len(nums) - 1
-
         m = int(len(nums) / 2)
-
         if target < nums[m]:
             return self.getIndex(nums[:m], target)
         else:

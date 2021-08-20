@@ -1,5 +1,5 @@
 def main():
-    p, k = list(map(int, input().split()))
+    (p, k) = list(map(int, input().split()))
     s = 1
     m = pow(10, 9) + 7
     if k == 0:

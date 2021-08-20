@@ -1,10 +1,10 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         if not coins and amount == 0:
             return 1
         if not coins:
             return 0
-
         dp = [float('inf')] * (amount + 1)
         dp[0] = 0
         for i in range(len(coins) + 1):

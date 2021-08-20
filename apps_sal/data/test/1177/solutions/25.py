@@ -1,7 +1,9 @@
 def main():
     import sys
-    def input(): return sys.stdin.readline().rstrip()
-    n, s = map(int, input().split())
+
+    def input():
+        return sys.stdin.readline().rstrip()
+    (n, s) = map(int, input().split())
     a = list(map(int, input().split()))
     import numpy as np
     dp = np.zeros(s + 1, dtype=int)

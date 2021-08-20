@@ -1,8 +1,8 @@
 class Solution:
+
     def getStrongest(self, arr: List[int], k: int) -> List[int]:
         arr_new = sorted(arr)
         med = arr_new[int((len(arr) - 1) / 2)]
-
         i = 0
         j = 1
         output = []
@@ -15,5 +15,4 @@ class Solution:
             else:
                 output.append(arr_new[i])
                 i += 1
-
         return output

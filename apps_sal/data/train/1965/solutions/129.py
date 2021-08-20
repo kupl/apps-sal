@@ -1,17 +1,17 @@
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         alice = DSU()
         bob = DSU()
         res = 0
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 3:
                 if alice.find(u) == alice.find(v):
                     res += 1
                 else:
                     alice.union(u, v)
                     bob.union(u, v)
-
-        for t, u, v in edges:
+        for (t, u, v) in edges:
             if t == 1:
                 if alice.find(u) == alice.find(v):
                     res += 1
@@ -22,14 +22,13 @@ class Solution:
                     res += 1
                 else:
                     bob.union(u, v)
-
         if max(bob.count.values()) != n or max(alice.count.values()) != n:
             return -1
-
         return res
 
 
 class DSU:
+
     def __init__(self):
         self.father = {}
         self.count = {}

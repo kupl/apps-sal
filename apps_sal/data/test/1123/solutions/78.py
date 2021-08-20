@@ -1,12 +1,10 @@
 import sys
-
 input = sys.stdin.readline
 P = 10 ** 9 + 7
 
 
 def main():
-    N, K = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
     ans = 0
     n_gcd = [0] * (K + 1)
     for k in reversed(list(range(1, K + 1))):
@@ -16,7 +14,6 @@ def main():
         n_gcd[k] = n % P
         ans += k * n_gcd[k]
         ans %= P
-
     print(ans)
 
 

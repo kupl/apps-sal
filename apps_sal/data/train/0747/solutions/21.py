@@ -1,4 +1,3 @@
-# cook your dish here
 t = int(input())
 while t:
     n = int(input())
@@ -10,7 +9,6 @@ while t:
     i = 0
     if a.count(a[-1]) > 1:
         flag = 1
-
     while i < n:
         if a.count(a[i]) > 2:
             flag = 1
@@ -24,9 +22,8 @@ while t:
         i += 1
     c = c[::-1]
     if flag == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
-        print(*(b + c))
-
+        print('YES')
+        print(*b + c)
     t -= 1

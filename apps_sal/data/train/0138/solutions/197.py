@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         first_neg = -1
         last_neg = -1
@@ -6,13 +7,12 @@ class Solution:
         start = 0
         best = 0
         n = len(nums)
-        for i, num in enumerate(nums):
+        for (i, num) in enumerate(nums):
             if num == 0:
                 if pos:
                     best = max(best, i - start)
-                else:
-                    if first_neg >= start:
-                        best = max(best, i - first_neg - 1, last_neg - start)
+                elif first_neg >= start:
+                    best = max(best, i - first_neg - 1, last_neg - start)
                 start = i + 1
                 pos = True
             elif num < 0:
@@ -22,7 +22,6 @@ class Solution:
                 pos = not pos
         if pos:
             best = max(best, n - start)
-        else:
-            if first_neg >= start:
-                best = max(best, n - first_neg - 1, last_neg - start)
+        elif first_neg >= start:
+            best = max(best, n - first_neg - 1, last_neg - start)
         return best

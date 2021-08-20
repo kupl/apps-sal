@@ -1,10 +1,11 @@
 class Solution:
+
     def isToeplitzMatrix(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: bool
         """
-        M, N = len(matrix), len(matrix[0])
+        (M, N) = (len(matrix), len(matrix[0]))
         if M == 1:
             return True
         prev_row = matrix[0][:-1]

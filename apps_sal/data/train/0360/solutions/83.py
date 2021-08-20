@@ -1,4 +1,5 @@
 class Solution:
+
     def canFinish(self, weights, D, C):
         index = 0
         for _ in range(D):
@@ -19,7 +20,6 @@ class Solution:
                 r = m
             else:
                 l = m + 1
-
         if self.canFinish(weights, D, l):
             return l
         return r

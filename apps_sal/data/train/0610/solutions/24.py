@@ -1,13 +1,9 @@
 t = int(input())
-
 while t > 0:
     t -= 1
     n = int(input())
-
-    l1 = [int(i) for i in input().split(" ")]
-
-    ans = ""
-
+    l1 = [int(i) for i in input().split(' ')]
+    ans = ''
     flag = 0
     k = 0
     for i in l1:
@@ -19,8 +15,8 @@ while t > 0:
             if k >= 5:
                 k = 0
             else:
-                ans = "NO"
+                ans = 'NO'
                 break
-    if ans == "":
-        ans = "YES"
+    if ans == '':
+        ans = 'YES'
     print(ans)

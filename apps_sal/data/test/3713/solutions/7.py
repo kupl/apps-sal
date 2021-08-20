@@ -1,6 +1,6 @@
 def main():
     input()
-    l, a = [0, 0], '*'
+    (l, a) = ([0, 0], '*')
     for b in input():
         l[a == b] += 1
         a = b

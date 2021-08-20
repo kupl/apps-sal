@@ -9,7 +9,6 @@ def matrix(L, row, col, c):
         for i in range(col + 1):
             temp.append([])
         dp.append(temp)
-
     for i in range(row + 1):
         dp[i][0] = 0
     for i in range(col + 1):
@@ -21,14 +20,10 @@ def matrix(L, row, col, c):
             else:
                 dp[i][j] = 0
             d[dp[i][j]] = d.get(dp[i][j], 0) + 1
-# for i in xrange(row+1):
-# for j in xrange(col+1):
-# print dp[i][j],
-# print
     return d
 
 
-n, m, q = list(map(int, stdin.readline().split()))
+(n, m, q) = list(map(int, stdin.readline().split()))
 L = []
 for i in range(n):
     L.append(stdin.readline().strip())
@@ -41,8 +36,7 @@ for i in range(q):
             print('no')
         else:
             print('yes')
+    elif male.get(int(query[0]), 0) == 0:
+        print('no')
     else:
-        if male.get(int(query[0]), 0) == 0:
-            print('no')
-        else:
-            print('yes')
+        print('yes')

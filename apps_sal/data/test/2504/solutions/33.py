@@ -6,15 +6,14 @@ INF = 10 ** 10
 
 
 def main():
-    n, m, l = map(int, input().split())
+    (n, m, l) = map(int, input().split())
     dist = [[np.inf] * n for _ in range(n)]
     for _ in range(m):
-        a, b, c = map(int, input().split())
+        (a, b, c) = map(int, input().split())
         a -= 1
         b -= 1
         dist[a][b] = c
         dist[b][a] = c
-
     csr = csr_matrix(dist)
     dist1 = floyd_warshall(csr, directed=False)
     dist1 = np.where(dist1 <= l, 1, np.inf)
@@ -23,7 +22,7 @@ def main():
     cnt = cnt.astype(int)
     q = int(input())
     for _ in range(q):
-        s, t = map(int, input().split())
+        (s, t) = map(int, input().split())
         s -= 1
         t -= 1
         print(cnt[s][t] - 1)

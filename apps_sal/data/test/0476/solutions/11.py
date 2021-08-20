@@ -9,5 +9,4 @@ for c in input().strip():
             ans = False
     else:
         ans = False
-
-print("YES" if ans else "NO")
+print('YES' if ans else 'NO')

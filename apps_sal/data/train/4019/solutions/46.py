@@ -7,4 +7,4 @@ def max_multiple(a, b):
     return res
 
 
-print((max_multiple(10, 50)))
+print(max_multiple(10, 50))

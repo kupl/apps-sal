@@ -1,11 +1,11 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 f_inf = float('inf')
 mod = 10 ** 9 + 7
 
 
 def resolve():
+
     def f(x):
         if x % 2:
             if x == 1:
@@ -17,9 +17,7 @@ def resolve():
         else:
             t = f(x - 1)
             return t ^ x
-
-    a, b = list(map(int, input().split()))
-
+    (a, b) = list(map(int, input().split()))
     res = f(b) ^ f(a - 1)
     print(res)
 

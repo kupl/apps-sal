@@ -1,14 +1,13 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 g1 = [1, 1]
 g2 = [1, 1]
 inv = [0, 1]
 for i in range(2, n + 2):
-    g1.append((g1[-1] * i) % mod)
-    inv.append((-inv[mod % i] * (mod // i)) % mod)
-    g2.append((g2[-1] * inv[-1]) % mod)
+    g1.append(g1[-1] * i % mod)
+    inv.append(-inv[mod % i] * (mod // i) % mod)
+    g2.append(g2[-1] * inv[-1] % mod)
 
 
 def comb(n, r):

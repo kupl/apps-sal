@@ -7,10 +7,10 @@ for i in li:
     i = int(i)
     if i == 0:
         zeros += 1
-    if round(i**0.5)**2 == i:
+    if round(i ** 0.5) ** 2 == i:
         ct += 1
-    tmp = int(i**0.5)
-    nums.append(min(i - tmp * tmp, (tmp + 1)**2 - i))
+    tmp = int(i ** 0.5)
+    nums.append(min(i - tmp * tmp, (tmp + 1) ** 2 - i))
 nums.sort()
 half = int(n / 2)
 if ct <= half:

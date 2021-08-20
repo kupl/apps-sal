@@ -1,6 +1,5 @@
 n = int(input())
-s, t = input().split()
-
+(s, t) = input().split()
 result = ''
 for i in range(n):
     result += s[i] + t[i]

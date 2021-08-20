@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
         s = max(weights)
         e = max(weights) * len(weights) // D
@@ -13,7 +14,6 @@ class Solution:
                     day += 1
                     total = weights[i]
             return day <= D
-
         while s <= e:
             mid = (s + e) // 2
             if dayCount(weights, mid, D):

@@ -1,10 +1,8 @@
 class Solution:
-    def countCharacters(self, words: List[str], chars: str) -> int:
 
-        # go through each word:
+    def countCharacters(self, words: List[str], chars: str) -> int:
         goodCount = 0
         for word in words:
-            # go through each letter in each word:
             wordLen = len(word)
             letterCount = 0
             chars_list = list(chars)

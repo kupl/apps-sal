@@ -1,6 +1,5 @@
-a, b, c = list(map(int, input().split(' ')))
-d, e, f = list(map(int, input().split(' ')))
-
+(a, b, c) = list(map(int, input().split(' ')))
+(d, e, f) = list(map(int, input().split(' ')))
 ex = []
 need = []
 if a >= d:
@@ -15,12 +14,10 @@ if c >= f:
     ex.append(c - f)
 else:
     need.append(f - c)
-
 sumx = 0
 for i in ex:
     sumx += i // 2
-
 if sumx >= sum(need):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

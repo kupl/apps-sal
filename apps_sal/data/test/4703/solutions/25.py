@@ -1,5 +1,8 @@
 S = input()
-def f(x): return 2**(x - 1) if x > 0 else 1
+
+
+def f(x):
+    return 2 ** (x - 1) if x > 0 else 1
 
 
 lenS = len(S)

@@ -6,10 +6,9 @@ for i in s:
     if i in dct:
         ms[-1] += i
         p = 1
-    else:
-        if p:
-            ms.append('')
-            p = 0
+    elif p:
+        ms.append('')
+        p = 0
 rub = 0
 kop = 0
 if ms[0] == '':
@@ -25,12 +24,11 @@ for i in ms:
             b = int(box[j])
             p = 1
         else:
-            a += int(box[j]) * (1000 ** (l - 1 - j - p))
+            a += int(box[j]) * 1000 ** (l - 1 - j - p)
     rub += a
     kop += b
 rub += kop // 100
 kop %= 100
-
 s = str(rub)
 l = len(s)
 d = l % 3

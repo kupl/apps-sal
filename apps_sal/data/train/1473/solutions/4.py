@@ -1,5 +1,4 @@
 def cut2(x, y, m, n):
-    # print "got {}*{} and {},{}".format(x,y,m,n)
     return m % x == 0 or n % y == 0
 
 
@@ -29,7 +28,6 @@ def cut1(x, y, l, m, n):
 
 
 t = int(input())
-
 for i in range(t):
-    x, y, l, m, n = list(map(int, input().strip().split()))
-    print("Yes" if cut1(x, y, l, m, n) else "No")
+    (x, y, l, m, n) = list(map(int, input().strip().split()))
+    print('Yes' if cut1(x, y, l, m, n) else 'No')

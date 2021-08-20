@@ -1,8 +1,8 @@
 def geometric_sequence_elements(a, r, n):
-    string = ""
+    string = ''
     for x in range(0, n):
         if x != n - 1:
-            string += str(a * (r ** x)) + ", "
+            string += str(a * r ** x) + ', '
         else:
-            string += str(a * (r ** x))
-    return(string)
+            string += str(a * r ** x)
+    return string

@@ -4,7 +4,6 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 m = int(input())
 pos = list(map(int, input().split()))
-
 fut = list(zip(p, a, b))
 fut = list(fut)
 
@@ -14,13 +13,11 @@ def sravni(elem):
 
 
 fut.sort(key=sravni)
-
 vz = []
 for i in range(n):
     vz.append(False)
-
 lastc = [0, 0, 0]
-result = ""
+result = ''
 for poset in pos:
     ctoim = -1
     for i in range(lastc[poset - 1], n):
@@ -32,5 +29,5 @@ for poset in pos:
                 break
     if ctoim == -1:
         lastc[poset - 1] = n + 1
-    result += str(ctoim) + " "
+    result += str(ctoim) + ' '
 print(result)

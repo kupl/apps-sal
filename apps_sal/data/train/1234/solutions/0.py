@@ -6,8 +6,8 @@ for x in range(0, t):
     i = 0
     for y in divisors:
         if y > a:
-            print("win", numbers[i])
+            print('win', numbers[i])
             break
         i = i + 1
     else:
-        print("lose")
+        print('lose')

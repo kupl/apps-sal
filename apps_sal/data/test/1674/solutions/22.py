@@ -1,5 +1,5 @@
 from heapq import heapify, heappush, heappop
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 s = input()
 h = [A[0]]
@@ -13,7 +13,7 @@ for i in range(1, n):
                 heappush(h, elem)
             else:
                 heappush(h, A[i])
-                ans += (A[i] - elem)
+                ans += A[i] - elem
         else:
             heappush(h, A[i])
             ans += A[i]

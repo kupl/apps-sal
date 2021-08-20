@@ -1,8 +1,8 @@
-'''
+"""
 Name : Jaymeet Mehta
 id :mj_13
 Problem : Single push
-'''
+"""
 from sys import stdin, stdout
 test = int(stdin.readline())
 for _ in range(test):
@@ -20,7 +20,7 @@ for _ in range(test):
             values.append(B[i] - A[i])
             indices.append(i)
     if not flag:
-        print("NO")
+        print('NO')
         continue
     if len(set(values)) > 1:
         flag = False
@@ -28,4 +28,4 @@ for _ in range(test):
         if indices[i] - indices[i - 1] != 1:
             flag = False
             break
-    print("YES") if flag else print("NO")
+    print('YES') if flag else print('NO')

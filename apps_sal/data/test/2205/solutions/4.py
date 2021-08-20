@@ -9,7 +9,7 @@ for i in p:
 c = []
 c.append(0)
 for i in range(1, n + 1):
-    if (n // i) & 1:
+    if n // i & 1:
         c.append(f[i - 1] ^ f[n % i])
     else:
         c.append(f[n % i])

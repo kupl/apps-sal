@@ -8,4 +8,4 @@ def gcd_list(numbers: list) -> int:
     return reduce(math.gcd, numbers)
 
 
-print((gcd_list(l)))
+print(gcd_list(l))

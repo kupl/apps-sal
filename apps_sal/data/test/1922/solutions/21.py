@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 if N == M == 1:
     print(1)
 elif N == 1 or M == 1:

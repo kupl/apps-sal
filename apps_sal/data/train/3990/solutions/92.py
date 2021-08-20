@@ -1,5 +1,3 @@
 def derive(coefficient, exponent):
-
     product = coefficient * exponent
-
-    return f"{product}x^{exponent - 1}"
+    return f'{product}x^{exponent - 1}'

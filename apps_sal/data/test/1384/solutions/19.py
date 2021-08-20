@@ -7,6 +7,6 @@ for i in range(1, n):
 ans = min(n, n - p[n - 1])
 for i in range(n):
     l = p[i]
-    r = (n - i - 1) - (p[n - 1] - p[i])
+    r = n - i - 1 - (p[n - 1] - p[i])
     ans = min(ans, l + r)
 print(n - ans)

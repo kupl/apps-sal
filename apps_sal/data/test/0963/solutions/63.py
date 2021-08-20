@@ -1,15 +1,13 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 mod = 998244353
 dp = [0] * (N + 1)
 dpSum = [0] * (N + 1)
 R = []
 L = []
-
 for i in range(K):
-    l, r = list(map(int, input().split()))
+    (l, r) = list(map(int, input().split()))
     L.append(l)
     R.append(r)
-
 dp[1] = 1
 dpSum[1] = 1
 for i in range(2, N + 1, 1):

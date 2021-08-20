@@ -18,7 +18,6 @@ for i in range(1, n + 1):
         if ctr < 3:
             suc = False
             break
-
 if suc:
     print('Yes')
 else:

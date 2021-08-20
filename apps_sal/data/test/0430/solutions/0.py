@@ -10,15 +10,15 @@ class InputHandlerObject(object):
     inputs = []
 
     def getInput(self, n=0):
-        res = ""
+        res = ''
         inputs = self.inputs
         if not inputs:
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n == 0:
             res = inputs[:]
             inputs[:] = []
         while n > len(inputs):
-            inputs.extend(input().split(" "))
+            inputs.extend(input().split(' '))
         if n > 0:
             res = inputs[:n]
             inputs[:n] = []
@@ -27,14 +27,12 @@ class InputHandlerObject(object):
 
 InputHandler = InputHandlerObject()
 g = InputHandler.getInput
-
-############################## SOLUTION ##############################
 n = int(input())
 a = [int(x) for x in g()]
 c100 = a.count(100)
 if sum(a) % 200:
-    print("NO")
-elif n % 2 and not c100:
-    print("NO")
+    print('NO')
+elif n % 2 and (not c100):
+    print('NO')
 else:
-    print("YES")
+    print('YES')

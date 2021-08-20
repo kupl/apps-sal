@@ -1,5 +1,4 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 if a == b and a != c:
     print('Yes')
 elif b == c and b != a:

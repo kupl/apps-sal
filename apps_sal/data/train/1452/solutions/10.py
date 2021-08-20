@@ -1,27 +1,17 @@
 import numpy as np
-
 t = int(input())
-while(t):
+while t:
     t -= 1
-    n, m = list(map(int, input().split()))
-    '''
-    a=range(1,n+1)
-    if m!=0:
-     a=a[m:]+a[:m]
-    '''
+    (n, m) = list(map(int, input().split()))
+    '\n    a=range(1,n+1)\n    if m!=0:\n     a=a[m:]+a[:m]\n    '
     b = np.zeros(n, dtype='bool')
-
-    # print b
     pos = 0
-    while(True):
+    while True:
         if b[(pos + m) % n] == True:
             break
         else:
             b[(pos + m) % n] = True
             pos = (pos + m) % n
-
-        # print b,pos
-
     s = sum(b)
     if s == n:
         print('Yes')

@@ -1,6 +1,4 @@
-# cook your dish here
 import math
-
 T = int(input())
 
 
@@ -14,15 +12,14 @@ def nb_bits(i, N):
 
 
 for t in range(T):
-    N, K = map(int, input().strip().split(" "))
+    (N, K) = map(int, input().strip().split(' '))
     d = {}
     for i in range(1, N + 1):
         d[i] = set()
-    for i in range(2**N):
+    for i in range(2 ** N):
         nb = nb_bits(i, N)
         if nb != 0:
             d[nb].add(i)
-
     last = d[1].pop()
     print(0, last)
     should_not_be = 0

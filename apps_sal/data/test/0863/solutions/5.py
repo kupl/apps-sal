@@ -1,7 +1,6 @@
-#!/usr/bin/env python
-a, t_a = list(map(int, input().split()))
-b, t_b = list(map(int, input().split()))
-hh, mm = list(map(int, input().split(sep=':')))
+(a, t_a) = list(map(int, input().split()))
+(b, t_b) = list(map(int, input().split()))
+(hh, mm) = list(map(int, input().split(sep=':')))
 start_time = (hh - 5) * 60 + mm
 buses = []
 for time in range((24 - 5) * 60):

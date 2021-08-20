@@ -9,5 +9,4 @@ for i in range(n):
         else:
             break
 a = [a[i] for i in range(n) if a[i] != 0]
-
 print(len(a))

@@ -2,26 +2,25 @@ from collections import deque
 sa = input()
 sb = input()
 sc = input()
-
 q = deque(sa[0])
 sa = sa[1:]
 while q:
     t = q.pop()
-    if t == "a":
+    if t == 'a':
         if not sa:
-            ans = "A"
+            ans = 'A'
             break
         q.append(sa[0])
         sa = sa[1:]
-    elif t == "b":
+    elif t == 'b':
         if not sb:
-            ans = "B"
+            ans = 'B'
             break
         q.append(sb[0])
         sb = sb[1:]
-    elif t == "c":
+    elif t == 'c':
         if not sc:
-            ans = "C"
+            ans = 'C'
             break
         q.append(sc[0])
         sc = sc[1:]

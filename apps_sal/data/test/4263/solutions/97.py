@@ -9,5 +9,4 @@ for i in range(len(S)):
             cnt += 1
             j += 1
         ans = max(ans, cnt)
-
 print(ans)

@@ -2,7 +2,7 @@ def go():
     n = int(input())
     a = list(map(int, input().split()))
     d = {}
-    for i, aa in enumerate(a):
+    for (i, aa) in enumerate(a):
         if aa in d:
             if i - d[aa] > 1:
                 return 'YES'

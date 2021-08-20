@@ -1,14 +1,12 @@
-
-
 def LI():
     return list(map(int, input().split()))
 
 
-N, H = LI()
+(N, H) = LI()
 amax = 0
 blist = []
 for _ in range(N):
-    a, b = LI()
+    (a, b) = LI()
     amax = max(amax, a)
     blist.append(b)
 blist.sort()
@@ -25,5 +23,4 @@ if H > 0:
         ans += H // amax
     else:
         ans += H // amax + 1
-
 print(ans)

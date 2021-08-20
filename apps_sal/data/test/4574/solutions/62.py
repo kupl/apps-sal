@@ -1,7 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
 A.sort()
-
 i = N - 1
 ans = 1
 count = 0
@@ -16,4 +15,4 @@ while i >= 1:
         print(ans)
         break
 else:
-    print((0))
+    print(0)

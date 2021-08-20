@@ -10,8 +10,7 @@ def main():
             return cnt
         elif tmp == 1:
             return -1
-
     return -1
 
 
-print((main()))
+print(main())

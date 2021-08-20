@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def main():
     try:
         while True:
@@ -14,7 +12,6 @@ def main():
             for i in range(1, result):
                 print(i, end=' ')
             print(t - sum(range(result)))
-
     except EOFError:
         pass
 

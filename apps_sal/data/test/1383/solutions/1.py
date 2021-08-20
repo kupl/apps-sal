@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 aa = list(map(int, input().split()))
 bb = list(map(int, input().split()))
 ss = {}
@@ -7,9 +7,8 @@ for i in bb:
         ss[i] += 1
     except:
         ss[i] = 1
-mi = float("inf")
+mi = float('inf')
 for i in range(n):
-
     x = (bb[i] - aa[0]) % m
     cc = [(a + x) % m for a in aa]
     tt = {}

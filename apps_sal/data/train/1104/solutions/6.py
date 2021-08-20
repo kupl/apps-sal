@@ -1,7 +1,6 @@
-# cook your dish here
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     if n == 0:
         print(k * (k - 1))
     else:

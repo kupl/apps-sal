@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def count(arr1, arr2):
             res = 0
             dic = collections.Counter(arr1)

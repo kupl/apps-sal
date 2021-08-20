@@ -6,4 +6,4 @@ while i < N:
     L[0] = L[1]
     L[1] += buff
     i += 1
-print((L[0]))
+print(L[0])

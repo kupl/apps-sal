@@ -5,9 +5,8 @@ p = 0
 for i in range(n):
     if int(A[i]) > 0:
         p += int(A[i])
+    elif p > 0:
+        p -= 1
     else:
-        if p > 0:
-            p -= 1
-        else:
-            c += 1
+        c += 1
 print(c)

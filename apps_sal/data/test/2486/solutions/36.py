@@ -1,6 +1,5 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
-
 a = sorted(a)
 ans = N
 psum = 0
@@ -9,5 +8,4 @@ for i in range(N - 1, -1, -1):
         psum += a[i]
     else:
         ans = min(ans, i)
-
 print(ans)

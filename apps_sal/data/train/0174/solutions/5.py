@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthLongestPath(self, input):
         """
         :type input: str
@@ -14,5 +15,4 @@ class Solution:
                 max_line = max(max_line, path_size[depth] + len(stripped))
             else:
                 path_size[depth + 1] = path_size[depth] + len(stripped) + 1
-
         return max_line

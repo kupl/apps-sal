@@ -1,4 +1,4 @@
 def to_freud(sentence):
-    a = sentence.split(" ")
+    a = sentence.split(' ')
     b = 'sex ' * len(a)
     return b.strip()

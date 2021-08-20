@@ -1,8 +1,9 @@
-def div(n): return [[i, n // i] for i in range(2, int(n**.5) + 1) if not n % i]
+def div(n):
+    return [[i, n // i] for i in range(2, int(n ** 0.5) + 1) if not n % i]
 
 
 def prod_int_part(n):
-    li, parts = div(n), set()
+    (li, parts) = (div(n), set())
 
     def recur(li, s=[]):
         parts.add(tuple(sorted(s)))

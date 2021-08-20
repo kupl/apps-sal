@@ -1,7 +1,7 @@
 def partial_match_table(word):
     table = [0] * (len(word) + 1)
     table[0] = -1
-    i, j = 0, 1
+    (i, j) = (0, 1)
     while j < len(word):
         matched = word[i] == word[j]
         if not matched and i > 0:
@@ -16,7 +16,7 @@ def partial_match_table(word):
 
 def kmp_search(text, word):
     table = partial_match_table(word)
-    i, p = 0, 0
+    (i, p) = (0, 0)
     results = []
     while i < len(text) and p < len(word):
         if text[i] == word[p]:
@@ -32,16 +32,14 @@ def kmp_search(text, word):
     return results
 
 
-inf = 10**18
+inf = 10 ** 18
 s = input().strip()
 t = input().strip()
 m = (len(t) + len(s) - 1 + len(s) - 1) // len(s)
 d = [-1] * (len(s) + 1)
-for a, b in kmp_search(m * s, t):
-    a, b = a % len(s) + 1, b % len(s) + 1
+for (a, b) in kmp_search(m * s, t):
+    (a, b) = (a % len(s) + 1, b % len(s) + 1)
     d[a] = b
-
-
 ls = [-1] * (len(s) + 1)
 vs = set()
 for i in range(1, len(s) + 1):
@@ -64,4 +62,4 @@ for i in range(1, len(s) + 1):
     if c == inf:
         break
     ls[j] = c
-print((max(ls) if c != inf else -1))
+print(max(ls) if c != inf else -1)

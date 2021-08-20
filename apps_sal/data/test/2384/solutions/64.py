@@ -7,7 +7,6 @@ for i in range(2, N):
         dp_odd = [max(dp_odd[0] + num[i], dp_even), dp_odd[1] + num[i]]
     else:
         dp_even = max(dp_even + num[i], dp_odd[1])
-
 if N % 2 == 0:
     print(dp_even)
 else:

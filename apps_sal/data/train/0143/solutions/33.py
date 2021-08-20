@@ -1,9 +1,10 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         i = 0
         counter = {}
         res = 0
-        for j, v in enumerate(tree):
+        for (j, v) in enumerate(tree):
             counter[v] = counter.get(v, 0) + 1
             while len(counter) > 2:
                 counter[tree[i]] -= 1

@@ -25,13 +25,12 @@ def comb(n, k, mod):
 
 s = int(input())
 n = s // 3
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 0
 for i in range(n):
     m = i + 1
     c = s - m * 3
     now = comb(c + i, i, mod)
-    # print(now)
     ans += now
     ans %= mod
 print(ans)

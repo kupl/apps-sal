@@ -1,4 +1,4 @@
-a, b = list(map(int, input().split()))
+(a, b) = list(map(int, input().split()))
 if b - a >= 5:
     print(0)
 else:
@@ -8,5 +8,5 @@ else:
         b += 10
     p = 1
     for i in range(1, b - a + 1):
-        p *= (a + i)
+        p *= a + i
     print(p % 10)

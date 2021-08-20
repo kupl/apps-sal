@@ -6,17 +6,16 @@ C = []
 H = []
 for _ in range(N):
     s = input()
-    if s.startswith("M"):
+    if s.startswith('M'):
         M.append(s)
-    if s.startswith("A"):
+    if s.startswith('A'):
         A.append(s)
-    if s.startswith("R"):
+    if s.startswith('R'):
         R.append(s)
-    if s.startswith("C"):
+    if s.startswith('C'):
         C.append(s)
-    if s.startswith("H"):
+    if s.startswith('H'):
         H.append(s)
-
 m = len(M)
 a = len(A)
 r = len(R)

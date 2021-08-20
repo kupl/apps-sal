@@ -4,7 +4,6 @@ def find(n):
     for x in range(n + 1):
         if x % 3 == 0:
             l.append(x)
-
         if x % 5 == 0:
             l.append(x)
     l = list(set(l))

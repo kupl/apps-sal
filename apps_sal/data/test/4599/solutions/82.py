@@ -12,8 +12,8 @@ for i in l:
         zyu = 0
         b += i
 if a < b:
-    print((b - a))
+    print(b - a)
 elif a > b:
-    print((a - b))
+    print(a - b)
 else:
-    print("0")
+    print('0')

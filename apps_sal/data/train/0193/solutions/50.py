@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         ans = 0
         d = {}
@@ -15,5 +16,5 @@ class Solution:
         print(l)
         for i in range(len(l)):
             res += l[i]
-            if res >= (len(arr) // 2):
+            if res >= len(arr) // 2:
                 return i + 1

@@ -7,7 +7,7 @@ A.sort()
 for i in range(a):
     A[i][1] = -A[i][1]
 for i in range(int(input())):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     B = list(A[a - n:])
     B.sort(key=lambda n: n[1])
     Ans.append(B[m - 1][0])

@@ -1,6 +1,6 @@
-h, w, a, b = map(int, input().split())
+(h, w, a, b) = map(int, input().split())
 mx = max(h, w)
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 fac = [1] * (h + w + 1)
 for i in range(1, h + w + 1):
     fac[i] = fac[i - 1] * i % mod

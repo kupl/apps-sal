@@ -15,6 +15,6 @@ segments[-1][1] = n
 if counter != 0:
     print(counter)
     segments.remove([0, 0])
-    print('\n'.join('{0} {1}'.format(p, q) for (p, q) in segments))
+    print('\n'.join(('{0} {1}'.format(p, q) for (p, q) in segments)))
 else:
     print(-1)

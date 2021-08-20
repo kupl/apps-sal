@@ -1,10 +1,8 @@
 import sys
 from typing import List
-
-slist = input().split(',')  # type: List[str]
-stack = [1 << 30]  # type: List[int]
+slist = input().split(',')
+stack = [1 << 30]
 res = [[]]
-
 for s in slist:
     if s.isnumeric():
         stack.append(int(s))
@@ -15,10 +13,8 @@ for s in slist:
             stack.pop()
         stack[-1] -= 1
         res[len(stack) - 1].append(s)
-
 while res[-1] == []:
     res.pop()
-
 print(len(res))
 for l in res:
     if l:

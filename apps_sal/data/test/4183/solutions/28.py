@@ -1,6 +1,5 @@
 import math
 from functools import reduce
-
 n = int(input())
 t = [int(input()) for _ in range(n)]
 

@@ -1,4 +1,4 @@
-n, k = (int(x) for x in input().split())
+(n, k) = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
 a.sort(key=lambda x: -(x % 10))
 for i in range(n):
@@ -11,4 +11,4 @@ for i in range(n):
     add = min(k, 100 - a[i])
     a[i] += add
     k -= add
-print(sum(x // 10 for x in a))
+print(sum((x // 10 for x in a)))

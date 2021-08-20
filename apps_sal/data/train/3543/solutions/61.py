@@ -6,7 +6,7 @@ def increment_string(strng):
         return '1'
     if strng[-1].isdigit():
         i += 1
-        while(i < length and strng[-i].isdigit()):
+        while i < length and strng[-i].isdigit():
             i += 1
     else:
         return strng + '1'

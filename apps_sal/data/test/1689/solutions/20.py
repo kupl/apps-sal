@@ -1,7 +1,5 @@
 n = int(input())
-
 l = [[c for c in input()] for _ in range(n)]
-
 ok = False
 for r in l:
     if r[0] == r[1] == 'O':
@@ -12,7 +10,6 @@ for r in l:
         r[3] = r[4] = '+'
         ok = True
         break
-
 if ok:
     print('YES')
     for r in l:

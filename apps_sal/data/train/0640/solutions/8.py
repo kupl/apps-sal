@@ -1,4 +1,3 @@
-# cook your dish here
 def gcd(a, b):
     if a == 0:
         return b
@@ -6,7 +5,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a / gcd(a, b)) * b
+    return a / gcd(a, b) * b
 
 
 T = int(input())

@@ -1,15 +1,14 @@
 def fizz_buzz_cuckoo_clock(time):
-    hh, mm = map(int, time.split(":"))
-
+    (hh, mm) = map(int, time.split(':'))
     if mm == 0:
-        return " ".join(["Cuckoo"] * (hh % 12 or 12))
+        return ' '.join(['Cuckoo'] * (hh % 12 or 12))
     elif mm == 30:
-        return "Cuckoo"
+        return 'Cuckoo'
     elif mm % 15 == 0:
-        return "Fizz Buzz"
+        return 'Fizz Buzz'
     elif mm % 3 == 0:
-        return "Fizz"
+        return 'Fizz'
     elif mm % 5 == 0:
-        return "Buzz"
+        return 'Buzz'
     else:
-        return "tick"
+        return 'tick'

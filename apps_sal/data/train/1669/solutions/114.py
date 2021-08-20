@@ -1,9 +1,10 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         d = collections.defaultdict(int)
         for i in hand:
             d[i] += 1
-        while(d):
+        while d:
             l = list(d)
             heapq.heapify(l)
             prev = None

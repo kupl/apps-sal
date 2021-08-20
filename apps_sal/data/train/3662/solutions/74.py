@@ -1,5 +1,4 @@
 def xor(a, b):
-
     if a == True and b == False:
         return True
     elif a == False and b == False:

@@ -1,7 +1,7 @@
-H, W, N = map(int, input().split())
+(H, W, N) = map(int, input().split())
 D = dict()
 for i in range(N):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     for p in range(-1, 2):
         for q in range(-1, 2):
             x = a + p

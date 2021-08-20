@@ -1,4 +1,5 @@
 class Solution:
+
     def convertToTitle(self, n):
         """
         :type n: int
@@ -10,4 +11,4 @@ class Solution:
             output.append(dict_alpha[n % 26])
             n = (n - 1) // 26
         output.reverse()
-        return(''.join(output))
+        return ''.join(output)

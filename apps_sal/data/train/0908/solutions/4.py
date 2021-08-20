@@ -1,9 +1,9 @@
-MAX = 10**9 + 100
+MAX = 10 ** 9 + 100
 a = []
 i = 1
 x = 1
 while x <= MAX:
-    x = (i * (i + 1)) / 2
+    x = i * (i + 1) / 2
     a.append(x)
     i += 1
 l = len(a)

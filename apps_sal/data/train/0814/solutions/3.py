@@ -15,7 +15,7 @@ while test_case > 0:
     max1 = max(c)
     c.remove(max1)
     max2 = max(c)
-    if max1 % 2 == 0 or (max1 / 2 + (max1 & 1)) <= max2:
-        print("No")
+    if max1 % 2 == 0 or max1 / 2 + (max1 & 1) <= max2:
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

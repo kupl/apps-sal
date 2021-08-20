@@ -8,8 +8,6 @@ def gcd_list(numbers):
 
 N = int(input())
 A = list(map(int, input().split()))
-
-
 X = [0] * N
 Y = [0] * N
 X[0] = A[0]
@@ -20,5 +18,5 @@ for i in range(1, N):
     Y[N - i - 1] = gcd(Y[N - i], A[N - i - 1])
 for i in range(1, N - 1):
     ans[i] = gcd(X[i - 1], Y[i + 1])
-ans[0], ans[-1] = gcd_list(A[1:]), gcd_list(A[:-1])
+(ans[0], ans[-1]) = (gcd_list(A[1:]), gcd_list(A[:-1]))
 print(max(ans))

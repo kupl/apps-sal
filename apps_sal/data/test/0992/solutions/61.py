@@ -1,5 +1,5 @@
 def main():
-    N, S = list(map(int, input().split()))
+    (N, S) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     return solve(N, S, A)
 
@@ -17,4 +17,4 @@ def solve(N, S, A):
     return dp[S]
 
 
-print((main()))
+print(main())

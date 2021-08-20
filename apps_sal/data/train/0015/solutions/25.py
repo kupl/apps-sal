@@ -1,7 +1,7 @@
 t = int(input())
 while t:
     t -= 1
-    a, b, x, y = list(map(int, input().split()))
+    (a, b, x, y) = list(map(int, input().split()))
     area1 = a * y
     area2 = x * b
     area3 = (a - 1 - x) * b

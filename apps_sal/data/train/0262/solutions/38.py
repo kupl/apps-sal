@@ -1,11 +1,10 @@
-
 class Solution:
+
     def isSolvable(self, words: List[str], result: str) -> bool:
         start = set()
         for word in words + [result]:
             if len(word) > 1:
                 start.add(word[0])
-
         n = max(map(len, words + [result]))
         if len(result) < n:
             return False
@@ -14,13 +13,12 @@ class Solution:
             if idx == n:
                 return carry == 0
             if i == len(words) + 1:
-                sums = sum(mp[word[-idx - 1]] if idx < len(word) else 0 for word in words) + carry
+                sums = sum((mp[word[-idx - 1]] if idx < len(word) else 0 for word in words)) + carry
                 if sums % 10 == mp[result[-idx - 1]]:
                     carry = sums // 10
                     return dfs(idx + 1, 0, carry, visited, mp)
                 return False
-
-            if (i < len(words) and idx >= len(words[i])):
+            if i < len(words) and idx >= len(words[i]):
                 return dfs(idx, i + 1, carry, visited, mp)
             tmp = words + [result]
             ch = tmp[i][-idx - 1]
@@ -37,5 +35,4 @@ class Solution:
                         return True
                     visited.remove(x)
             return False
-
         return dfs(0, 0, 0, set(), {})

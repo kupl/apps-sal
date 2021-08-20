@@ -1,17 +1,12 @@
 import collections
 n = int(input())
 v = list(map(int, input().split()))
-
 v1 = [v[i] for i in range(n) if i % 2 == 1]
 v2 = [v[i] for i in range(n) if i % 2 == 0]
-
-
 v1n = collections.Counter(v1)
 v2n = collections.Counter(v2)
-
 v1ns = v1n.most_common(2)
 v2ns = v2n.most_common(2)
-
 a = v2ns[0][1]
 c = v1ns[0][1]
 if v1ns[0][0] != v2ns[0][0]:

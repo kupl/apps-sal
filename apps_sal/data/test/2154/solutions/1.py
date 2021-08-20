@@ -3,17 +3,14 @@ from heapq import *
 
 
 def maxProfit(prices, days):
-
     payoff = 0
-    maxPrice, minPrice = max(prices), min(prices)
-    maxIndex, minIndex = prices.index(maxPrice), prices.index(minPrice)
+    (maxPrice, minPrice) = (max(prices), min(prices))
+    (maxIndex, minIndex) = (prices.index(maxPrice), prices.index(minPrice))
     iterator = iter(prices)
-    h = []  # heap
-
+    h = []
     if days == 1:
         print(0)
         return
-
     for i in range(days):
         p = next(iterator)
         if not i:
@@ -24,7 +21,6 @@ def maxProfit(prices, days):
             heappop(h)
             heappush(h, p)
         heappush(h, p)
-
     print(payoff)
 
 

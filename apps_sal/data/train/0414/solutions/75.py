@@ -1,7 +1,8 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         cnt = Counter()
-        for i in range((len(arr))):
+        for i in range(len(arr)):
             if cnt[arr[0]] == k:
                 break
             if arr[0] > arr[1]:

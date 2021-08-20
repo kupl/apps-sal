@@ -1,4 +1,4 @@
-n, s = [int(i) for i in input().split()]
+(n, s) = [int(i) for i in input().split()]
 ll = [int(i) for i in input().split()]
 curr = 0
 l = 0
@@ -9,9 +9,7 @@ while l <= h:
     for i in range(n):
         k[i] = (i + 1) * mid + ll[i]
     k.sort()
-    # print(k)
     sm = sum(k[:mid])
-    # print(mid,sm)
     if sm <= s:
         curr = mid
         l = mid + 1

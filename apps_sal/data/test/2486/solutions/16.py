@@ -1,8 +1,6 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 a = list(map(int, input().split()))
-
 a.sort(reverse=True)
-
 ans = 0
 tmp = 0
 for i in a:
@@ -10,6 +8,5 @@ for i in a:
         ans += 1
         tmp += i
     else:
-        ans = 0  # リセット
-
+        ans = 0
 print(ans)

@@ -8,11 +8,10 @@ for i in range(n):
     inp = inp.split()
     zn = inp[0]
     c = int(inp[1])
-    if (zn == '+'):
+    if zn == '+':
         x += c
+    elif x - c < 0:
+        gr += 1
     else:
-        if (x - c < 0):
-            gr += 1
-        else:
-            x -= c
+        x -= c
 print(x, gr)

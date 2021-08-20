@@ -1,7 +1,7 @@
 n = int(input())
 tall = []
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     tall.append([a, b])
 check = True
 now = max(tall[0])

@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
         MAX = float('inf')
         dp = defaultdict(lambda: MAX)

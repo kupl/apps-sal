@@ -20,15 +20,14 @@ for i in range(n):
             ans.append(d[loc])
             if len(index) == 0:
                 index.append(i)
+        elif len(index) != 0:
+            ans.append(d[loc])
+            (ans[-1], ans[index[-1]]) = (ans[index[-1]], ans[-1])
+            flag = 0
         else:
-            if len(index) != 0:
-                ans.append(d[loc])
-                ans[-1], ans[index[-1]] = ans[index[-1]], ans[-1]
-                flag = 0
-            else:
-                flag = 1
-                ans.append(d[loc])
-                if len(index) == 0:
-                    index.append(i)
+            flag = 1
+            ans.append(d[loc])
+            if len(index) == 0:
+                index.append(i)
         loc += 1
 print(*ans)

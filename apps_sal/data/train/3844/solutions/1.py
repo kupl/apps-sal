@@ -5,9 +5,10 @@ from operator import mul
 
 
 class P(Counter):
+
     def __mul__(self, other):
         m = P()
-        for (ao, av), (bo, bv) in product(self.items(), other.items()):
+        for ((ao, av), (bo, bv)) in product(self.items(), other.items()):
             m[ao + bo] += av * bv
         return m
 

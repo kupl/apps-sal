@@ -1,9 +1,5 @@
 import math
-
-
 a_vals = [2]
-
-
 for i in range(2, 50000):
     if i % 3 != 0:
         a_vals.append(1)
@@ -16,7 +12,6 @@ for s in a_vals:
 
 
 def convergents_of_e(n):
-
     output = sum([int(x) for x in str(h_vals[n + 1])])
     print(output)
-    return(output)
+    return output

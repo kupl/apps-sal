@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseBetween(self, head, m, n):
         """
         :type head: ListNode
@@ -8,13 +9,11 @@ class Solution:
         """
         if n == m:
             return head
-
         pre_head = head
         re_tail = head
         for i in range(m - 1):
             pre_head = re_tail
             re_tail = pre_head.__next__
-
         tmp_head = re_tail
         new_head = None
         for i in range(n - m + 1):
@@ -22,7 +21,6 @@ class Solution:
             tmp_head.next = new_head
             new_head = tmp_head
             tmp_head = next_node
-
         re_tail.next = tmp_head
         if m == 1:
             return new_head

@@ -22,7 +22,7 @@ for i in range(len(b) - 1, -1, -1):
     else:
         s[i] = j
         j -= 1
-ans = ""
+ans = ''
 for i in range(len(b) + 1):
     if p[i] == None:
         break
@@ -37,7 +37,7 @@ for i in range(len(b) + 1):
                 l = mid
         if len(ans) < i + len(b) - r:
             ans = b[:i] + b[r:]
-if ans == "":
-    print("-")
+if ans == '':
+    print('-')
 else:
     print(ans)

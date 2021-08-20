@@ -8,8 +8,7 @@ def work(n, m, completed):
             chef.append(pending[k])
         else:
             asst.append(pending[k])
-
-    return chef, asst
+    return (chef, asst)
 
 
 def main():
@@ -19,13 +18,12 @@ def main():
         n = int(jobs[0])
         m = int(jobs[1])
         completed = sorted(list(map(int, input().split())))
-
-        chef, asst = work(n, m, completed)
+        (chef, asst) = work(n, m, completed)
         for j in chef:
-            print(j, end=" ")
+            print(j, end=' ')
         print()
         for k in asst:
-            print(k, end=" ")
+            print(k, end=' ')
         print()
 
 

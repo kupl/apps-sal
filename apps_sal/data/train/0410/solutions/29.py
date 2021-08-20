@@ -9,7 +9,7 @@ class Solution:
             if num % 2 == 0:
                 num = num // 2
             else:
-                num = (3 * num) + 1
+                num = 3 * num + 1
             count += 1
         return count
 
@@ -17,7 +17,6 @@ class Solution:
         vals = []
         for num in range(lo, hi + 1):
             heapq.heappush(vals, (self.calculateSteps(num), num))
-
         print(vals)
         count = 1
         val = None

@@ -1,6 +1,6 @@
-n, m = int(input()) + 1, 1000001
-d, s = 1000000007, 0
-t, c = [0] * m, [0] * m
+(n, m) = (int(input()) + 1, 1000001)
+(d, s) = (1000000007, 0)
+(t, c) = ([0] * m, [0] * m)
 for i in input().split():
     c[int(i)] += 1
 for i in range(m, 1, -1):

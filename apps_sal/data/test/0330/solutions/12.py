@@ -14,8 +14,7 @@ def is_prime(n, p):
 
 
 def main():
-    p, y = list(map(int, sys.stdin.readline().split()))
-
+    (p, y) = list(map(int, sys.stdin.readline().split()))
     highest = y
     if y % 2 == 0:
         highest -= 1
@@ -24,7 +23,6 @@ def main():
             print(highest)
             return
         highest -= 2
-
     print(-1)
 
 

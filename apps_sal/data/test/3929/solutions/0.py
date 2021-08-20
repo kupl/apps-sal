@@ -1,20 +1,17 @@
 mod = 1000000007
-eps = 10**-9
+eps = 10 ** (-9)
 
 
 def main():
     import sys
     input = sys.stdin.readline
-
-    N, K = list(map(int, input().split()))
-
+    (N, K) = list(map(int, input().split()))
     if K == 1:
         if N == 1:
-            print((1))
+            print(1)
         else:
-            print((pow(2, N - 2, mod)))
+            print(pow(2, N - 2, mod))
         return
-
     dp = [[0] * (N + 1) for _ in range(K - 1)]
     for j in range(2, N + 1):
         dp[0][j] = 1
@@ -30,7 +27,7 @@ def main():
     for j in range(2, N + 1):
         ans = (ans + dp[-1][j]) % mod
     if K != N:
-        ans = (ans * pow(2, N - K - 1, mod)) % mod
+        ans = ans * pow(2, N - K - 1, mod) % mod
     print(ans)
 
 

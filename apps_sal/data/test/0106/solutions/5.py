@@ -3,11 +3,11 @@ def f(a, b):
 
 
 def main():
-    n, m, k = map(int, input().split())
-    a, b = map(int, input().split())
-    pa, pb = (a - 1) // (m * k), (b - 1) // (m * k)
+    (n, m, k) = map(int, input().split())
+    (a, b) = map(int, input().split())
+    (pa, pb) = ((a - 1) // (m * k), (b - 1) // (m * k))
     ans = min((pa - pb + n) % n, (-pa + pb + n) % n) * 15
-    ea, eb = (a - 1) // k % m, (b - 1) // k % m
+    (ea, eb) = ((a - 1) // k % m, (b - 1) // k % m)
     if ans == 0:
         ans = f(ea, eb)
     else:

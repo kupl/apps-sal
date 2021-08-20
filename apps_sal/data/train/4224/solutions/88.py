@@ -4,5 +4,4 @@ def dont_give_me_five(start, end):
         temp = str(i)
         if '5' not in temp:
             count += 1
-
     return count

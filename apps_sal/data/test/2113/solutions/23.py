@@ -4,7 +4,7 @@ f = 0
 s = 0
 gen = defaultdict(list)
 for i in range(n - 1):
-    a, b = map(lambda x: int(x), input().split())
+    (a, b) = map(lambda x: int(x), input().split())
     gen[a].append(b)
     gen[b].append(a)
 start = [1]

@@ -1,14 +1,11 @@
 from functools import reduce
 from math import gcd
-
 N = int(input())
 A = list(map(int, input().split()))
-
 c = max(A) + 1
 D = [0] * c
 div = [0] * c
 P = []
-
 for i in range(2, c):
     if D[i] == 0:
         P.append(i)
@@ -32,13 +29,9 @@ for i in A:
             temp = temp // temp2
     if f == 1:
         break
-
-
 if max(div) <= 1 and f == 0:
     print('pairwise coprime')
-
 elif reduce(gcd, A) == 1:
     print('setwise coprime')
-
 else:
     print('not coprime')

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSatisfaction(self, satisfaction: List[int]) -> int:
         satisfaction.sort()
         n = len(satisfaction)
@@ -9,7 +10,5 @@ class Solution:
         for i in range(2, n + 1):
             for j in range(i, n + 1):
                 dp[i][j] = dp[i - 1][j - 1] + satisfaction[j - 1] * i
-
                 ans = max(ans, dp[i][j])
-
         return ans

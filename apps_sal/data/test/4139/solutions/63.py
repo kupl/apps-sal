@@ -3,7 +3,6 @@ import math
 import itertools
 
 
-# \n
 def input():
     return sys.stdin.readline().rstrip()
 
@@ -19,7 +18,6 @@ def main():
             new.append(a + 5)
             new.append(a + 7)
         list.append(new)
-
     pass
     count = 0
     for sub in list:
@@ -28,7 +26,7 @@ def main():
             if j > N:
                 print(count)
                 return
-            if "3" in s and "7" in s and "5" in s:
+            if '3' in s and '7' in s and ('5' in s):
                 count += 1
 
 

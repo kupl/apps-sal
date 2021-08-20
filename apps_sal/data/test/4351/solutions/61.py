@@ -1,4 +1,5 @@
-def LI(): return list(map(int, input().split()))
+def LI():
+    return list(map(int, input().split()))
 
 
 N = input()
@@ -6,9 +7,9 @@ N = input()
 
 def main():
     if N[0] == N[2]:
-        ans = "Yes"
+        ans = 'Yes'
     else:
-        ans = "No"
+        ans = 'No'
     print(ans)
 
 

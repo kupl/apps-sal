@@ -8,9 +8,7 @@ def tandem(n, a, i):
 s = list(input().strip())
 k = int(input())
 s += ['??' for i in range(k)]
-
 res = 0
-
 for i in range(len(s)):
     for n in range(1, (len(s) - i) // 2 + 1):
         if tandem(n, s, i):

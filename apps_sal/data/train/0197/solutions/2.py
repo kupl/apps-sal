@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, S: str) -> bool:
         l = ''
         for c in S:

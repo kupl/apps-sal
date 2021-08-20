@@ -1,7 +1,6 @@
 n = int(input())
 ps = [int(a) for a in input().split()]
-s, f = [int(a) for a in input().split()]
-
+(s, f) = [int(a) for a in input().split()]
 window = f - s
 ps += ps[:window]
 
@@ -19,5 +18,4 @@ for i in range(n):
     elif c == m:
         answers += [f(i)]
     c += ps[i + window] - ps[i]
-
 print(min(answers))

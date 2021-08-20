@@ -1,4 +1,3 @@
-
 """
 Writer: SPD_9X2
 https://atcoder.jp/contests/arc087/tasks/arc087_c
@@ -21,7 +20,7 @@ Lがでかいので、深さを考えていては死ぬ
 Grundy数計算
 深さ1の部分木のGrundy → 1
 深さ2の部分木のGrundy → 2
-深さ3　　　　　　　　 → 1 ?
+深さ3\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000 → 1 ?
 深さ4
 
 Grundyで行ける = xorが全体のGrundyになるという仮定
@@ -49,7 +48,6 @@ prefix treeを作りたいな？
 
 
 def tp_z(now, nd):
-
     if z_child[now] == None:
         ret = len(z_child)
         z_child[now] = ret
@@ -58,12 +56,10 @@ def tp_z(now, nd):
         dep.append(nd + 1)
     else:
         ret = z_child[now]
-
     return ret
 
 
 def tp_o(now, nd):
-
     if o_child[now] == None:
         ret = len(z_child)
         o_child[now] = ret
@@ -72,50 +68,36 @@ def tp_o(now, nd):
         dep.append(nd + 1)
     else:
         ret = o_child[now]
-
     return ret
 
 
 def grundy(nd):
-
     if nd == 0:
         return 0
-
     for i in range(64):
-        if nd % (2**i) != 0:
-            return 2**(i - 1)
+        if nd % 2 ** i != 0:
+            return 2 ** (i - 1)
 
 
-N, L = map(int, input().split())
-
+(N, L) = map(int, input().split())
 z_child = [None]
 o_child = [None]
 dep = [0]
-
 for loop in range(N):
-
     now = 0
     s = input()
-
     for i in s:
-        if i == "0":
+        if i == '0':
             now = tp_z(now, dep[now])
         else:
             now = tp_o(now, dep[now])
-
-#print (z_child)
-#print (o_child)
-#print (dep)
-
 ans = 0
 for i in range(len(z_child)):
-
     if z_child[i] == None:
         ans ^= grundy(L - dep[i])
     if o_child[i] == None:
         ans ^= grundy(L - dep[i])
-
 if ans == 0:
-    print("Bob")
+    print('Bob')
 else:
-    print("Alice")
+    print('Alice')

@@ -28,13 +28,12 @@ def best(x1, y1, x2, y2, x3, y3):
             mass += put(x2, y1, x3, y3)
     elif y2 == y1:
         mass += put(x2, y2, x3, y3)
+    elif y3 > y1:
+        mass += put(x2, y1, x3, y3)
+    elif y3 <= y1 and y3 >= y2:
+        mass += put(x2, y3, x3, y3)
     else:
-        if y3 > y1:
-            mass += put(x2, y1, x3, y3)
-        elif y3 <= y1 and y3 >= y2:
-            mass += put(x2, y3, x3, y3)
-        else:
-            mass += put(x2, y2, x3, y3)
+        mass += put(x2, y2, x3, y3)
     for i in [(x1, y1), (x2, y2), (x3, y3)]:
         if i not in mass:
             mass.append(i)
@@ -43,9 +42,9 @@ def best(x1, y1, x2, y2, x3, y3):
         print(*i)
 
 
-x1, y1 = map(int, input().split())
-x2, y2 = map(int, input().split())
-x3, y3 = map(int, input().split())
+(x1, y1) = map(int, input().split())
+(x2, y2) = map(int, input().split())
+(x3, y3) = map(int, input().split())
 a = [(x1, y1), (x2, y2), (x3, y3)]
 a.sort()
 c = best(a[0][0], a[0][1], a[1][0], a[1][1], a[2][0], a[2][1])

@@ -1,7 +1,6 @@
 def main():
     N = int(input())
-    *H, = list(map(int, input().split()))
-
+    (*H,) = list(map(int, input().split()))
     ans = 0
     cnt = 0
     prev = H[0] - 1
@@ -12,7 +11,6 @@ def main():
         else:
             cnt = 0
         prev = h
-
     print(ans)
 
 

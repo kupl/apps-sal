@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 """
 Created on Thu Jul 26 20:46:22 2018
 
 @author: chirayu jain
 """
-# PROBLEM A FLY
-# DIVISION 1 499 CODEFORCES
 planet = int(input())
 mass = int(input())
 case = 0
@@ -21,10 +18,9 @@ if case == 0:
     for i in range(planet - 1, 0, -1):
         temp = temp / (1.0 - 1.0 / (A[i] * 1.0))
         temp = temp / (1.0 - 1.0 / (B[i] * 1.0))
-
     temp = temp / (1.0 - 1.0 / (A[0] * 1.0))
     temp = temp - mass * 1.0
 if case == 1:
-    print("-1")
+    print('-1')
 else:
     print(temp)

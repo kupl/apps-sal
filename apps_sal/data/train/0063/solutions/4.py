@@ -1,6 +1,6 @@
 ans = []
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     u = list(map(int, input().split()))
     w = list(map(int, input().split()))
     u.sort()

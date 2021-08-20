@@ -5,5 +5,5 @@ ans = 0
 for i in range(1, n):
     count += a[-i]
     ans += a[-i - 1] * count
-    ans = ans % (10**9 + 7)
+    ans = ans % (10 ** 9 + 7)
 print(ans)

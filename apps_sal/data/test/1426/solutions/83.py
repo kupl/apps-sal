@@ -1,13 +1,11 @@
 import collections
-
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 graph = [[] for i in range(n + 1)]
 for i in range(m):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     graph[u].append(v)
 flag = [False for i in range(n + 1)]
-s, t = map(int, input().split())
-
+(s, t) = map(int, input().split())
 queue = collections.deque([s])
 count = 0
 while True:
@@ -26,10 +24,9 @@ while True:
         for i in graph[test]:
             if flag[i] == True:
                 continue
-            else:
-                if i not in temp:
-                    temp.add(i)
-                    flag[i] = True
+            elif i not in temp:
+                temp.add(i)
+                flag[i] = True
     count += 1
     if flag[t] == True:
         print(count)

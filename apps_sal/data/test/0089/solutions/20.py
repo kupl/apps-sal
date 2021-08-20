@@ -1,6 +1,6 @@
-'''input
+"""input
 4
-'''
+"""
 n = int(input())
 l = [[False] * n]
 for s in range(n):

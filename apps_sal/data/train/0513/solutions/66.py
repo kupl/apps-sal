@@ -3,7 +3,6 @@ import sys
 sys.setrecursionlimit(100000000)
 input = sys.stdin.readline
 INF = 1 << 30
-
 MAXN = 200005
 G = [[] for _ in range(MAXN)]
 dp = [INF] * MAXN
@@ -20,7 +19,7 @@ def dfs(v, A, p=-1):
         if e == p:
             continue
         dfs(e, A, v)
-    idx, p = stack.pop()
+    (idx, p) = stack.pop()
     dp[idx] = p
 
 
@@ -28,13 +27,13 @@ def main():
     N = int(input())
     A = list(map(int, input().split()))
     for _ in range(N - 1):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         a -= 1
         b -= 1
         G[a].append(b)
         G[b].append(a)
     dfs(0, A)
-    print(('\n'.join(map(str, ans[:N]))))
+    print('\n'.join(map(str, ans[:N])))
 
 
 def __starting_point():

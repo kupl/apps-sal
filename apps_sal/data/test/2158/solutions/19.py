@@ -12,7 +12,7 @@ def __starting_point():
     graph = {x: {} for x in range(N)}
     visited = [False for _ in range(N + 1)]
     for i in range(N - 1):
-        u, v, c = list(map(int, input().strip().split(" ")))
+        (u, v, c) = list(map(int, input().strip().split(' ')))
         graph[u][v] = c
         graph[v][u] = c
     ans = solve(0, graph, visited)

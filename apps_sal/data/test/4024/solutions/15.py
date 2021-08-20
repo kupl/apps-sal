@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 pre = [input()]
 ans = 0
 k = 1

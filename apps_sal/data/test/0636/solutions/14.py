@@ -5,7 +5,7 @@ def mn(ms):
     return [ret, index]
 
 
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 ms = [int(i) for i in input().split()]
 mx = max(ms)
 ret = []

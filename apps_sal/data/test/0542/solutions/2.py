@@ -12,9 +12,8 @@ sa = sum(a)
 sb = sum(b)
 if sa != sb:
     win = 1 if sa > sb else 2
+elif a != b:
+    win = 1 if a > b else 2
 else:
-    if a != b:
-        win = 1 if a > b else 2
-    else:
-        win = 1 if last > 0 else 2
+    win = 1 if last > 0 else 2
 print('first' if win == 1 else 'second')

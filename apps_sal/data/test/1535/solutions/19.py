@@ -1,7 +1,6 @@
 def solo_mid(n, x0, y0, sturms=[]):
     if n == 0:
         return 0
-
     res = {}
     for i in range(n):
         for_shot = sturms[:]
@@ -9,17 +8,15 @@ def solo_mid(n, x0, y0, sturms=[]):
         sturms.remove(first_sturm)
         line_x = y0 - first_sturm[1]
         line_y = -(x0 - first_sturm[0])
-        line_c = -first_sturm[0] * line_x + first_sturm[1] * (-line_y)
+        line_c = -first_sturm[0] * line_x + first_sturm[1] * -line_y
         res[first_sturm] = 1
-        for xi, yi in for_shot[1:]:
+        for (xi, yi) in for_shot[1:]:
             is_in_line = line_x * xi + line_y * yi + line_c
             if is_in_line == 0:
                 res[first_sturm] += 1
                 sturms.remove((xi, yi))
-
         if not sturms:
             break
-
     return len(res)
 
 

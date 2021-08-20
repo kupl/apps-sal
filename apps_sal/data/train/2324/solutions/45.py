@@ -19,13 +19,10 @@ n = int(input())
 graph = dict()
 for i in range(1, n + 1):
     graph[i] = []
-
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-
-
 fstart = bfs(graph, 1, n, False)
 sstart = bfs(graph, n, n, False)
 fennec = 0
@@ -35,9 +32,7 @@ for i in range(1, n + 1):
         fennec += 1
     else:
         snuke += 1
-
-
 if fennec > snuke:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

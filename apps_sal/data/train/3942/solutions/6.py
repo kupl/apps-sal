@@ -20,5 +20,4 @@ def solve(n):
     while n >= 10:
         n -= 10
         count += 1
-
     return count

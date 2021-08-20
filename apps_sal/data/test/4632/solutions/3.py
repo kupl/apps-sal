@@ -1,10 +1,10 @@
 t = int(input())
 for i in range(t):
     a = int(input())
-    x, y = 0, 0
+    (x, y) = (0, 0)
     l = []
     for i in range(a):
-        x1, y1 = map(int, input().split())
+        (x1, y1) = map(int, input().split())
         l.append([x1, y1])
     l.sort()
     ll = 0

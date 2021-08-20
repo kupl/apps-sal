@@ -1,12 +1,12 @@
 class Solution:
+
     def isAnagram(self, s, t):
         """
         :type s: str
         :type t: str
         :rtype: bool
         """
-        memoS, memoT = {}, {}
-
+        (memoS, memoT) = ({}, {})
         for c in s:
             if c not in memoS:
                 memoS[c] = 0
@@ -15,7 +15,6 @@ class Solution:
             if c not in memoT:
                 memoT[c] = 0
             memoT[c] += 1
-
         for v in memoS:
             if v not in memoT or memoT[v] != memoS[v]:
                 return False

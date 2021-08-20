@@ -1,4 +1,4 @@
-n, k, m = list(map(int, input().split()))
+(n, k, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 a.sort()
 s = sum(a)
@@ -11,7 +11,7 @@ for i in range(n + 1):
     t = m - t
     for j in range(k):
         x = min(t // a[j], n - i)
-        t -= (x * a[j])
+        t -= x * a[j]
         cur += x
     ans = max(ans, cur)
 print(ans)

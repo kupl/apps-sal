@@ -1,5 +1,5 @@
-a, b = map(int, input().split(' '))
-c, d = map(int, input().split(' '))
+(a, b) = map(int, input().split(' '))
+(c, d) = map(int, input().split(' '))
 j = 0
 if c == a or b == d:
     j = 2

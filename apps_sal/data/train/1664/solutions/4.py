@@ -12,8 +12,7 @@ def place_pieces(board, king, amazon, connected):
     board[coord_king[0]][coord_king[1]] = 8
     coord_amazon = get_pos(amazon)
     board[coord_amazon[0]][coord_amazon[1]] = 9
-    if coord_king[0] - 1 <= coord_amazon[0] <= coord_king[0] + 1 \
-            and coord_king[1] - 1 <= coord_amazon[1] <= coord_king[1] + 1:
+    if coord_king[0] - 1 <= coord_amazon[0] <= coord_king[0] + 1 and coord_king[1] - 1 <= coord_amazon[1] <= coord_king[1] + 1:
         connected[0] = 1
     mark_attacked_squares(board, coord_king, coord_amazon)
 
@@ -114,9 +113,7 @@ def mark_queen(board, coord_amazon):
 def check_safe(board, y, x, connected):
     for i in product([-1, 0, 1], repeat=2):
         if 0 <= y + i[0] < 8 and 0 <= x + i[1] < 8:
-            if not (i[0] == 0 and i[1] == 0) and \
-                (board[y + i[0]][x + i[1]] == 0 or
-                 (connected[0] == 0 and board[y + i[0]][x + i[1]] == 9)):
+            if not (i[0] == 0 and i[1] == 0) and (board[y + i[0]][x + i[1]] == 0 or (connected[0] == 0 and board[y + i[0]][x + i[1]] == 9)):
                 return 1
     return 0
 
@@ -144,8 +141,3 @@ def amazon_check_mate(king, amazon):
     connected[0] = 0
     place_pieces(board, king, amazon, connected)
     return count_states(board, connected)
-    # 0 = safe
-    # 8 = whiteking
-    # 9 = amazon
-    # 2 = attacked
-    # 3 = black king can't be here

@@ -12,9 +12,9 @@ def __starting_point():
     for i in range(len(v)):
         v[i] -= 1
     if func(v):
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

@@ -3,4 +3,4 @@ def multiply(n):
     if int(n) < 0:
         return int(n) * 5 ** (len(n) - 1)
     else:
-        return int(n) * 5 ** (len(n))
+        return int(n) * 5 ** len(n)

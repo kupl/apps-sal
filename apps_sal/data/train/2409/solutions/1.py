@@ -1,4 +1,5 @@
 class Solution:
+
     def maximum69Number(self, num: int) -> int:
         res = 0
         li = list(str(num))

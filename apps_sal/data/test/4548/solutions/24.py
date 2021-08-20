@@ -7,7 +7,7 @@ def answer(n: int, m: int, x: int, a: []) -> int:
 
 
 def main():
-    n, m, x = map(int, input().split())
+    (n, m, x) = map(int, input().split())
     a = list(map(int, input().split()))
     print(answer(n, m, x, a))
 

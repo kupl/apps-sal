@@ -8,11 +8,11 @@ def main():
         else:
             l.append((b, a))
         a = b
-    l[0] = ((0, 0))
+    l[0] = (0, 0)
     l.sort()
-    for i, (c, d) in enumerate(l):
+    for (i, (c, d)) in enumerate(l):
         for j in range(i):
-            a, b = l[j]
+            (a, b) = l[j]
             if a < c < b < d:
                 print('yes')
                 return

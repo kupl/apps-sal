@@ -1,14 +1,13 @@
 from collections import deque
-
 for __ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     ar = list(map(int, input()))
     lol = deque([])
     for i in range(n):
         if ar[i] == 0:
             lol.append(i)
     i = 0
-    while lol and len(lol) > i and lol[i] == i:
+    while lol and len(lol) > i and (lol[i] == i):
         i += 1
     num = i
     for __ in range(i):

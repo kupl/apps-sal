@@ -1,6 +1,7 @@
 class Solution:
+
     def movesToStamp(self, stamp: str, target: str) -> List[int]:
-        stamp_len, target_len, stamp, target, result = len(stamp), len(target), list(stamp), list(target), []
+        (stamp_len, target_len, stamp, target, result) = (len(stamp), len(target), list(stamp), list(target), [])
         changed = True
         while changed:
             changed = False

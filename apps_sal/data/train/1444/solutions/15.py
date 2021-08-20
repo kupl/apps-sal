@@ -1,4 +1,3 @@
-# cook your dish here
 def array1(size):
     return [0 for _ in range(size)]
 
@@ -26,13 +25,13 @@ for _ in range(t):
             dp[i] += dp[i - 1]
         if i - 2 >= 0 and a[i - 2] == 2:
             dp[i] += dp[i - 2]
-        if i - 3 >= 0 and a[i - 3] == 2 and a[i - 2] == 2:
+        if i - 3 >= 0 and a[i - 3] == 2 and (a[i - 2] == 2):
             dp[i] += dp[i - 3]
         dp[i] = dp[i] % 1000000007
         ans += dp[i]
         x = no_of_twos[i + 1]
         if i + 1 < n and a[i - 1] == 2:
-            ans += (x * dp[i - 1])
+            ans += x * dp[i - 1]
             if x % 2 == 0:
                 if i + x + 1 < n:
                     ans += dp[i - 1]

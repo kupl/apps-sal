@@ -1,4 +1,4 @@
-n, s = int(input()), input()
+(n, s) = (int(input()), input())
 c0 = s.count('0')
 if c0 == n:
     print(0)

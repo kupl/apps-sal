@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def merge(self, x, y, f):
         f[y] = x
         t = y
@@ -9,7 +10,7 @@ class Solution:
             t = f[t]
         l = y
         while f[l] != l:
-            f[l], l = t, f[l]
+            (f[l], l) = (t, f[l])
         self.d[self.len[t]] -= 1
         self.d[self.len[y]] -= 1
         self.len[t] += self.len[y]
@@ -21,7 +22,7 @@ class Solution:
         self.len = [0] * len(arr)
         state = [0] * len(arr)
         ans = -1
-        for i, num in enumerate(arr):
+        for (i, num) in enumerate(arr):
             num = num - 1
             self.len[num] = 1
             self.d[1] += 1

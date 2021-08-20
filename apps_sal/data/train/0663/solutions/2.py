@@ -1,7 +1,7 @@
 def least_rotation(S):
-    S += S  # Concatenate string to it self to avoid modular arithmetic
-    f = [-1] * len(S)  # Failure function
-    k = 0  # Least rotation of string found so far
+    S += S
+    f = [-1] * len(S)
+    k = 0
     for j in range(1, len(S)):
         sj = S[j]
         i = f[j - k - 1]
@@ -9,8 +9,8 @@ def least_rotation(S):
             if sj < S[k + i + 1]:
                 k = j - i - 1
             i = f[i]
-        if sj != S[k + i + 1]:  # if sj != S[k+i+1], then i == -1
-            if sj < S[k]:  # k+i+1 = k
+        if sj != S[k + i + 1]:
+            if sj < S[k]:
                 k = j
             f[j - k] = -1
         else:
@@ -20,12 +20,12 @@ def least_rotation(S):
 
 test = int(input())
 for tc in range(test):
-    l, st = input().split()
+    (l, st) = input().split()
     l = int(l)
     if l == 1:
         kk = least_rotation(st)
         ln = len(st)
-        mt = ""
+        mt = ''
         for i in range(len(st)):
             mt += str(st[(kk + i) % ln])
         print(mt)
@@ -34,7 +34,7 @@ for tc in range(test):
         for i in range(len(st)):
             lst.append(st[i])
         lst.sort()
-        mt = ""
+        mt = ''
         for i in range(len(lst)):
             mt += str(lst[i])
         print(mt)

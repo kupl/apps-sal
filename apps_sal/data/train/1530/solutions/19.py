@@ -8,6 +8,6 @@ for i in range(t):
         for x in range(a, b):
             l.append(x)
         for y in l[::-1]:
-            print(y, end="")
+            print(y, end='')
         print()
         a = b

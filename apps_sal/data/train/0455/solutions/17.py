@@ -1,4 +1,5 @@
 class Component:
+
     def __init__(self, color):
         self.cells = set()
         self.color = color
@@ -19,6 +20,7 @@ class Component:
 
 
 class Solution:
+
     def isPrintable(self, targetGrid: List[List[int]]) -> bool:
         grid = targetGrid
 
@@ -40,8 +42,6 @@ class Solution:
             return True
 
         def replace_holes(cx, marked_for_removal):
-            # Go through cells from components marked for removal and see if the
-            # holes in cx could be replaced with the cells that we will remove
             for i in range(cx.min_row, cx.max_row + 1):
                 hole_colors = set()
                 for j in range(cx.min_col, cx.max_col + 1):
@@ -49,7 +49,6 @@ class Solution:
                         continue
                     if grid[i][j] not in marked_for_removal:
                         return
-
             for i in range(cx.min_row, cx.max_row + 1):
                 for j in range(cx.min_col, cx.max_col + 1):
                     if grid[i][j] != cx.color:
@@ -57,9 +56,8 @@ class Solution:
                         hc = grid[i][j]
                         marked_for_removal[hc].remove_cell((i, j))
                         if len(marked_for_removal[hc].cells) == 0:
-                            del(marked_for_removal[hc])
+                            del marked_for_removal[hc]
                         grid[i][j] = cx.color
-
         components = discover_components()
         marked_for_removal = {}
         while len(components) > 0:
@@ -67,13 +65,11 @@ class Solution:
             for c in components:
                 if is_complete_rect(components[c]):
                     marked_for_removal[c] = components[c]
-                    del(components[c])
+                    del components[c]
                     found_new_comp_to_remove = True
                     break
             if not found_new_comp_to_remove:
                 return False
-
             for c in list(components.keys()):
                 replace_holes(components[c], marked_for_removal)
-
         return True

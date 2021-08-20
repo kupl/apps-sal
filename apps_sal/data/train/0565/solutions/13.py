@@ -1,7 +1,7 @@
 t = int(input())
 while t > 0:
     t -= 1
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
     tarr = sorted(arr)
     d = {}
@@ -14,7 +14,7 @@ while t > 0:
     for _ in range(q):
         k = int(input())
         find = inddir[k]
-        l, r = 1, tarrlen
+        (l, r) = (1, tarrlen)
         gs = 0
         ls = 0
         sw = 0
@@ -30,14 +30,13 @@ while t > 0:
                     else:
                         sw = -1
                         break
+                elif tempc[0] > 0:
+                    tempc[0] -= 1
+                    sw += 1
+                    ls += 1
                 else:
-                    if tempc[0] > 0:
-                        tempc[0] -= 1
-                        sw += 1
-                        ls += 1
-                    else:
-                        sw = -1
-                        break
+                    sw = -1
+                    break
                 l = mid + 1
             else:
                 if arr[mid - 1] > k:
@@ -46,13 +45,12 @@ while t > 0:
                     else:
                         sw = -1
                         break
+                elif tempc[1] > 0:
+                    tempc[1] -= 1
+                    sw += 1
+                    gs += 1
                 else:
-                    if tempc[1] > 0:
-                        tempc[1] -= 1
-                        sw += 1
-                        gs += 1
-                    else:
-                        sw = -1
-                        break
+                    sw = -1
+                    break
                 r = mid - 1
         print(max(ls, gs) if sw != -1 else -1)

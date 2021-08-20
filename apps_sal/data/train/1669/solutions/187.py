@@ -1,4 +1,5 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
@@ -8,7 +9,6 @@ class Solution:
                 hand_count[x] = 1
             else:
                 hand_count[x] += 1
-
         while len(hand_count) > 0:
             min_key = min(hand_count.keys())
             min_key_count = hand_count[min_key]

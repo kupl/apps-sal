@@ -1,5 +1,5 @@
 t = int(input())
-st = ""
+st = ''
 x = 0
 while t:
     t -= 1
@@ -8,7 +8,7 @@ while t:
     if a[0] == 0 or a[1] == 0:
         x = 0
     elif a[1] > 1:
-        st += str(a[1] * a[0]) + "x^" + str(a[1] - 1)
+        st += str(a[1] * a[0]) + 'x^' + str(a[1] - 1)
     elif a[1] == 1:
         st += str(a[0])
     while n:
@@ -17,9 +17,8 @@ while t:
         if a[0] == 0 or a[1] == 0:
             x = 0
         elif a[1] > 1:
-            st += " + " + str(a[1] * a[0]) + "x^" + str(a[1] - 1)
+            st += ' + ' + str(a[1] * a[0]) + 'x^' + str(a[1] - 1)
         elif a[1] == 1:
-            st += " + " + str(a[0])
-
+            st += ' + ' + str(a[0])
     print(st)
-    st = ""
+    st = ''

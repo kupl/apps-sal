@@ -5,7 +5,7 @@ def get_candy_position(a, row, col, candy):
         n = ceil(a / (row * col)) * (col * row)
     else:
         n = row * col
-    l = [i if i <= a else 'X' for i in list(range(1, (n - (n % row) + 1)))]
+    l = [i if i <= a else 'X' for i in list(range(1, n - n % row + 1))]
     split_l = [list(l[i:i + bx_sz])[::-1] for i in range(0, len(l), bx_sz)]
     b = [i[j:j + col] for i in split_l for j in range(0, len(i), col)]
     c = [b[i:i + row] for i in range(0, len(b), row)]

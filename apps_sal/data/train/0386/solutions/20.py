@@ -1,6 +1,6 @@
 class Solution:
-    def countVowelPermutation(self, n: int) -> int:
 
+    def countVowelPermutation(self, n: int) -> int:
         d = {'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5}
 
         @lru_cache(maxsize=None)
@@ -17,10 +17,9 @@ class Solution:
                 return f(n - 1, d['i']) + f(n - 1, d['u'])
             if i == d['u']:
                 return f(n - 1, d['a'])
-
         if n == 0:
             return 0
         ans = 0
-        for k, v in d.items():
+        for (k, v) in d.items():
             ans += f(n - 1, v)
-        return ans % (10**9 + 7)
+        return ans % (10 ** 9 + 7)

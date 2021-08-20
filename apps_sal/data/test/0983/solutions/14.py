@@ -1,5 +1,5 @@
 inf = 10 ** 18
-n, p, q, r = map(int, input().split())
+(n, p, q, r) = map(int, input().split())
 a = list(map(int, input().split()))
 mx = [-inf] * n
 mn = [inf] * n
@@ -15,7 +15,7 @@ val3 = [0] * n
 mx2 = [-inf] * n
 mx2[0] = val2[0]
 val3[0] = val2[0] + r * a[0]
-ans = - inf
+ans = -inf
 for i in range(1, n):
     mx2[i] = max(mx2[i - 1], val2[i])
     val3[i] = r * a[i] + mx2[i]

@@ -1,14 +1,11 @@
 import sys
 import fractions
-
 n = int(sys.stdin.readline())
 data = list(map(int, sys.stdin.readline().split()))
-
 one_count = 0
 for v in data:
     if v == 1:
         one_count += 1
-
 if one_count > 0:
     print(n - one_count)
 else:

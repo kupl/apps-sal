@@ -1,13 +1,10 @@
-# C
-# 初期N人の参加者がK点のポイントを持っている
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 answers = [K - Q] * N
 for _ in range(Q):
     a = int(input())
     answers[a - 1] += 1
-
 for ans in answers:
     if ans > 0:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

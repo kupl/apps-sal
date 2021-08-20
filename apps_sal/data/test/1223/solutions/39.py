@@ -1,6 +1,6 @@
 class Node:
-    def __init__(self, key=None):
 
+    def __init__(self, key=None):
         self.key = key
         self.height = 1
         self.parent = None
@@ -17,7 +17,6 @@ def update_height(t):
         r = t.right.height
     else:
         r = 0
-
     if l >= r:
         t.height = l + 1
     else:
@@ -25,11 +24,11 @@ def update_height(t):
 
 
 class AVL:
+
     def __init__(self):
         self.root = Node()
 
     def insert(self, key):
-        # 値の挿入
         if self.root.key is None:
             self.root.key = key
             return
@@ -48,8 +47,6 @@ class AVL:
             p.left = new_node
         else:
             p.right = new_node
-
-        # バランスの確認
         cursor = p
         while cursor:
             if cursor.left is not None:
@@ -61,7 +58,6 @@ class AVL:
             else:
                 r = 0
             balance = l - r
-
             if balance == 0:
                 break
             elif balance == 2:
@@ -84,16 +80,13 @@ class AVL:
         p = n.parent
         c = n.left
         gc = n.left.right
-
         if gc is not None:
             n.left = gc
             gc.parent = n
         else:
             n.left = None
-
         c.right = n
         n.parent = c
-
         if p is not None:
             if p.right == n:
                 p.right = c
@@ -103,7 +96,6 @@ class AVL:
         else:
             self.root = c
             self.root.parent = None
-
         update_height(n)
         update_height(c)
 
@@ -111,16 +103,13 @@ class AVL:
         p = n.parent
         c = n.right
         gc = n.right.left
-
         if gc is not None:
             n.right = gc
             gc.parent = n
         else:
             n.right = None
-
         c.left = n
         n.parent = c
-
         if p is not None:
             if p.left == n:
                 p.left = c
@@ -130,16 +119,13 @@ class AVL:
         else:
             self.root = c
             self.root.parent = None
-
         update_height(n)
         update_height(c)
 
     def rotate_rl(self, n):
-
         p = n.parent
         c = n.right
         gc = n.right.left
-
         if gc.left and gc.right:
             n.right = gc.left
             c.left = gc.right
@@ -156,12 +142,10 @@ class AVL:
         else:
             n.right = None
             c.left = None
-
         gc.left = n
         gc.right = c
         n.parent = gc
         c.parent = gc
-
         if p is not None:
             if p.left == n:
                 p.left = gc
@@ -171,7 +155,6 @@ class AVL:
         else:
             self.root = gc
             self.root.parent = None
-
         update_height(n)
         update_height(c)
         update_height(gc)
@@ -180,7 +163,6 @@ class AVL:
         p = n.parent
         c = n.left
         gc = n.left.right
-
         if gc.left and gc.right:
             c.right = gc.left
             n.left = gc.right
@@ -201,7 +183,6 @@ class AVL:
         gc.right = n
         c.parent = gc
         n.parent = gc
-
         if p is not None:
             if p.left == n:
                 p.left = gc
@@ -211,7 +192,6 @@ class AVL:
         else:
             self.root = gc
             self.root.parent = None
-
         update_height(n)
         update_height(c)
         update_height(gc)
@@ -271,7 +251,7 @@ class AVL:
             l2 = 0
         else:
             l2 = l2.key
-        return l1.key, l2
+        return (l1.key, l2)
 
     def get_greater_key(self, key):
         cursor = self.find(key)
@@ -281,16 +261,14 @@ class AVL:
             r2 = 0
         else:
             r2 = r2.key
-        return r1.key, r2
+        return (r1.key, r2)
 
 
 def main():
-
     N = int(input())
     P = map(int, input().split())
-
     idx = [-1] * (N + 1)
-    for i, v in enumerate(P, 1):
+    for (i, v) in enumerate(P, 1):
         idx[v] = i
     avl = AVL()
     for i in [0, idx[N], N + 1]:
@@ -299,24 +277,20 @@ def main():
     for j in range(N - 1, 0, -1):
         n = idx[j]
         avl.insert(n)
-
-        l1_idx, l2_idx = avl.get_smaller_key(n)
+        (l1_idx, l2_idx) = avl.get_smaller_key(n)
         l1 = n - l1_idx
         if l1_idx != 0:
             l2 = l1_idx - l2_idx
         else:
             l2 = 0
-
-        r1_idx, r2_idx = avl.get_greater_key(n)
+        (r1_idx, r2_idx) = avl.get_greater_key(n)
         r1 = r1_idx - n
         if r1_idx != N + 1:
             r2 = r2_idx - r1_idx
         else:
             r2 = 0
-
         cnt = (l1 * r2 + r1 * l2) * j
         total += cnt
-
     print(total)
 
 

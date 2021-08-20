@@ -11,7 +11,8 @@ from itertools import chain, dropwhile, permutations, combinations
 from collections import defaultdict, deque
 
 
-def VI(): return list(map(int, input().split()))
+def VI():
+    return list(map(int, input().split()))
 
 
 def main(n, l, r, x, c):
@@ -20,13 +21,13 @@ def main(n, l, r, x, c):
         com = combinations(c, i)
         for j in com:
             s = sum(j)
-            if s >= l and s <= r and max(j) - min(j) >= x:
+            if s >= l and s <= r and (max(j) - min(j) >= x):
                 all.append(j)
     print(len(all))
 
 
 def main_input(info=0):
-    n, l, r, x = VI()
+    (n, l, r, x) = VI()
     c = VI()
     main(n, l, r, x, c)
 
@@ -36,7 +37,7 @@ def __starting_point():
 
 
 def test():
-    n, l, r, x = 15, 1, 100000, 1
+    (n, l, r, x) = (15, 1, 100000, 1)
     c = list(range(15))
     main(n, l, r, x, c)
 

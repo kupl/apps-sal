@@ -1,8 +1,8 @@
-'''
+"""
 Created on 11-Nov-2014
 
 @author: akash
-'''
+"""
 n = int(input())
 e = int(n / 2)
 o = int(n / 2)

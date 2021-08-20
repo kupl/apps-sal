@@ -1,7 +1,6 @@
 import collections
-
-n, m = list(map(int, input().split()))
-a, b, c = [], [], []
+(n, m) = list(map(int, input().split()))
+(a, b, c) = ([], [], [])
 for i in range(m):
     A = list(map(int, input().split()))
     a.append(A)
@@ -11,6 +10,6 @@ for i in range(m):
     elif a[i][0] == 1:
         c.append(a[i][1])
 if len(set(b) & set(c)) > 0:
-    print("POSSIBLE")
+    print('POSSIBLE')
 else:
-    print("IMPOSSIBLE")
+    print('IMPOSSIBLE')

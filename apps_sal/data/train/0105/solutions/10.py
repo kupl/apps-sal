@@ -20,7 +20,7 @@ def SI():
 
 t = II()
 for q in range(t):
-    n, k = MI()
+    (n, k) = MI()
     a = LI()
     a.sort()
     count = 0

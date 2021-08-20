@@ -4,13 +4,13 @@ a.sort()
 b.sort(reverse=True)
 ans = list()
 for i in a:
-    ans.append("a")
+    ans.append('a')
 len1 = len(a) // 2 - 1
 len2 = len(a) // 2 - 1
 if len(a) % 2:
     len1 = len1 + 1
-i = 0  # first
-j = 0  # end
+i = 0
+j = 0
 flag = 0
 ai = 0
 aj = 0
@@ -37,4 +37,4 @@ while i + j < len(a):
             j = j + 1
             bj = bj + 1
             flag = 1
-print("".join(ans))
+print(''.join(ans))

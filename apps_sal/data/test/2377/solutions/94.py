@@ -1,8 +1,8 @@
-N, H = list(map(int, input().split()))
+(N, H) = list(map(int, input().split()))
 B = []
 A = 0
 for _ in range(N):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     A = max(A, a)
     B.append(b)
 B.sort(reverse=True)

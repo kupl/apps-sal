@@ -1,6 +1,5 @@
-H1, H2 = list(map(int, input().split()))
-A, B = list(map(int, input().split()))
-
+(H1, H2) = list(map(int, input().split()))
+(A, B) = list(map(int, input().split()))
 num = H2 - H1 - 8 * A
 den = 12 * (A - B)
 if den > 0:

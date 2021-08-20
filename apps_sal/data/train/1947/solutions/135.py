@@ -2,13 +2,14 @@ from collections import defaultdict
 
 
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         ch2cnt = defaultdict(int)
         for b in B:
             tmp_cnt = defaultdict(int)
             for ch in b:
                 tmp_cnt[ch] += 1
-            for k, v in tmp_cnt.items():
+            for (k, v) in tmp_cnt.items():
                 ch2cnt[k] = max(ch2cnt[k], v)
         res = []
         for a in A:

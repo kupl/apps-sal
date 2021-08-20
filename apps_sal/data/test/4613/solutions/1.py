@@ -1,4 +1,4 @@
-class UnionFind():
+class UnionFind:
     """
     parents
         各要素の親要素の番号を格納するリスト
@@ -40,13 +40,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -61,7 +58,7 @@ class UnionFind():
         return [i for i in range(self.n) if self.find(i) == root]
 
     def roots(self):
-        return [i for i, x in enumerate(self.parents) if x < 0]
+        return [i for (i, x) in enumerate(self.parents) if x < 0]
 
     def group_count(self):
         return len(self.roots())
@@ -70,22 +67,18 @@ class UnionFind():
         return {r: self.members(r) for r in self.roots()}
 
     def __str__(self):
-        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
+        return '\n'.join(('{}: {}'.format(r, self.members(r)) for r in self.roots()))
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 ab = [tuple(map(int, input().split())) for _ in range(M)]
 ans = 0
-
 for i in range(M):
     uf = UnionFind(N)
-
     for j in range(M):
         if i != j:
-            a, b = ab[j][0], ab[j][1]
+            (a, b) = (ab[j][0], ab[j][1])
             uf.union(a - 1, b - 1)
-    # print(i)
     if uf.group_count() != 1:
         ans += 1
-
 print(ans)

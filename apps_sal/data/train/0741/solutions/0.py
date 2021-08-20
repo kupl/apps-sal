@@ -16,11 +16,11 @@ def rabin_miller(a, i, n):
     x = rabin_miller(a, i / 2, n)
     if x == 0:
         return 0
-    y = (x * x) % n
-    if (y == 1) and (x != 1) and (x != n - 1):
+    y = x * x % n
+    if y == 1 and x != 1 and (x != n - 1):
         return 0
     if i % 2 != 0:
-        y = (a * y) % n
+        y = a * y % n
     return y
 
 
@@ -31,9 +31,9 @@ def gcd(x, y):
 
 
 def brent_rho(n):
-    if (n <= 3) or (rabin_miller(random.randint(2, n - 2), n - 1, n) == 1):
+    if n <= 3 or rabin_miller(random.randint(2, n - 2), n - 1, n) == 1:
         return n
-    y, r, q, m = 1, 1, 1, 203
+    (y, r, q, m) = (1, 1, 1, 203)
     while 1:
         x = y
         for i in range(1, r + 1):
@@ -43,10 +43,10 @@ def brent_rho(n):
             ys = y
             for i in range(1, min(m, r - k) + 1):
                 y = (y * y + 1) % n
-                q = (q * abs(x - y)) % n
+                q = q * abs(x - y) % n
             g = gcd(q, n)
             k += m
-            if (k >= r) or (g > 1):
+            if k >= r or g > 1:
                 break
         r *= 2
         if g > 1:
@@ -67,16 +67,16 @@ def divsum2(n):
         return 0
     d = brent_rho(n)
     d = fix(d)
-    assert (d <= 3) or (rabin_miller(random.randint(2, d - 2), d - 1, d) == 1)
-    f, m = 0, n
+    assert d <= 3 or rabin_miller(random.randint(2, d - 2), d - 1, d) == 1
+    (f, m) = (0, n)
     while m % d == 0:
         m /= d
         f = f + 1
-    return (f * d) + (divsum2(m))
+    return f * d + divsum2(m)
 
 
 try:
-    while(1):
+    while 1:
         z = eval(input())
         print(divsum2(z))
 except:

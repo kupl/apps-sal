@@ -14,7 +14,7 @@ def main():
             break
         ansl.append(N % 2)
         N = -(N // 2)
-    ans = "".join(map(str, ansl))
+    ans = ''.join(map(str, ansl))
     ans = ans[::-1]
     print(ans)
     return

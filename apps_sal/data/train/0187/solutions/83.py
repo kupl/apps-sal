@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         curr = customers[0]
         onwheel = 0
@@ -14,7 +15,7 @@ class Solution:
                     cost = temp
                     ans = i
                 if i < n:
-                    curr += (customers[i] - 4)
+                    curr += customers[i] - 4
                 else:
                     curr -= 4
                 i += 1

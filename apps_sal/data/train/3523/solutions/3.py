@@ -12,13 +12,12 @@ def password(candidate):
 
        Otherwise, False.
     """
-
     if not len(candidate) >= 8:
         return False
-    if not any(char.islower() for char in candidate):
+    if not any((char.islower() for char in candidate)):
         return False
-    if not any(char.isupper() for char in candidate):
+    if not any((char.isupper() for char in candidate)):
         return False
-    if not any(char.isdigit() for char in candidate):
+    if not any((char.isdigit() for char in candidate)):
         return False
     return True

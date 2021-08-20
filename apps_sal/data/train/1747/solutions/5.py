@@ -1,18 +1,18 @@
 def crosstable(players, results):
-    scores = [sum(x for x in result if x) for result in results]
+    scores = [sum((x for x in result if x)) for result in results]
     sb = []
-    for i, result in enumerate(results):
+    for (i, result) in enumerate(results):
         s = 0
-        for j, w in enumerate(result):
+        for (j, w) in enumerate(result):
             if w is None:
                 continue
             s += w * scores[j]
         sb.append(s)
     rank = sorted(list(range(len(players))), key=lambda x: (-scores[x], -sb[x], players[x].split(' ')[1]))
     no_len = len(str(len(players)))
-    name_len = max(len(p) for p in players)
-    score_len = max(len('{:.1f}'.format(s)) for s in scores)
-    sb_len = max(len('{:.2f}'.format(s)) for s in sb)
+    name_len = max((len(p) for p in players))
+    score_len = max((len('{:.1f}'.format(s)) for s in scores))
+    sb_len = max((len('{:.2f}'.format(s)) for s in sb))
     r = []
     title = '#'.rjust(no_len) + '  ' + 'Player'.ljust(name_len) + '  '
     for i in range(1, len(players) + 1):
@@ -26,7 +26,7 @@ def crosstable(players, results):
     r.append(title.rstrip())
     r.append(bar)
     prev_sb = None
-    for i, j in enumerate(rank):
+    for (i, j) in enumerate(rank):
         if prev_sb and prev_sb == (scores[j], sb[j]):
             no = ' '
         else:

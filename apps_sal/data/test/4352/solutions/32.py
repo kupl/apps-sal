@@ -1,12 +1,11 @@
-A, B = map(int, input().split())
-
+(A, B) = map(int, input().split())
 if A == B:
-    print("Draw")
+    print('Draw')
 elif A == 1:
-    print("Alice")
+    print('Alice')
 elif B == 1:
-    print("Bob")
+    print('Bob')
 elif A > B:
-    print("Alice")
+    print('Alice')
 else:
-    print("Bob")
+    print('Bob')

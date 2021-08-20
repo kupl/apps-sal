@@ -1,9 +1,11 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
+
         def isIncreasing(self, A: List[int]) -> bool:
             mono = True
             for i in range(len(A)):
-                if i == (len(A) - 1):
+                if i == len(A) - 1:
                     break
                 if A[i] > A[i + 1]:
                     mono = False
@@ -12,7 +14,7 @@ class Solution:
         def isDecreasing(self, A: List[int]) -> bool:
             m = True
             for i in range(len(A)):
-                if i == (len(A) - 1):
+                if i == len(A) - 1:
                     break
                 if A[i] < A[i + 1]:
                     m = False

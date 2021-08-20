@@ -1,9 +1,4 @@
-
-# coding: utf-8
-
-# In[7]:
-
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 
 
 def fib(n):
@@ -18,4 +13,4 @@ def fib(n):
     return c
 
 
-print((2 * fib(n) + 2 * fib(m) - 2) % (10**9 + 7))
+print((2 * fib(n) + 2 * fib(m) - 2) % (10 ** 9 + 7))

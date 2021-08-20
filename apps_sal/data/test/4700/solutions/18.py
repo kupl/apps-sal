@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 H = list(map(int, input().split()))
 road = [[] for i in range(N)]
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     road[a - 1].append(b)
     road[b - 1].append(a)
 c = 0

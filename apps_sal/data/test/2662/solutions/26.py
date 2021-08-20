@@ -2,7 +2,8 @@ import sys
 import bisect
 
 
-def input(): return sys.stdin.readline().rstrip()
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 N = int(input())
@@ -11,15 +12,12 @@ A = A[::-1]
 
 
 def solve():
-
     LIS = [A[0]]
     for i in range(1, N):
-
         if A[i] >= LIS[-1]:
             LIS.append(A[i])
         else:
             LIS[bisect.bisect_right(LIS, A[i])] = A[i]
-
     ans = len(LIS)
     print(ans)
 

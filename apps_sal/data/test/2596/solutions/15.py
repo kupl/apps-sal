@@ -1,14 +1,13 @@
-n, k, m, t = map(int, input().split())
+(n, k, m, t) = map(int, input().split())
 for i in range(t):
-    type, i = map(int, input().split())
+    (type, i) = map(int, input().split())
     if type:
         n += 1
         if k >= i:
             k += 1
+    elif k >= i + 1:
+        k -= i
+        n -= i
     else:
-        if k >= i + 1:
-            k -= i
-            n -= i
-        else:
-            n = i
+        n = i
     print(n, k)

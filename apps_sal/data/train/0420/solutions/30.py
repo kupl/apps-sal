@@ -1,4 +1,5 @@
 class Solution:
+
     def findTheLongestSubstring(self, s: str) -> int:
         max_substring_size = 0
         s_len = len(s)
@@ -7,7 +8,7 @@ class Solution:
                 break
             vowel_counts = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
             allEven = True
-            for k, letter in enumerate(s[i:]):
+            for (k, letter) in enumerate(s[i:]):
                 if letter in vowel_counts:
                     vowel_counts[letter] += 1
                     currently_all_even = True

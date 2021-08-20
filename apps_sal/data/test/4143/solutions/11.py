@@ -7,6 +7,5 @@ movemin = min(move)
 if movemin >= N:
     ans = 5
 else:
-    ans = (math.ceil(N / movemin)) + 4
-
+    ans = math.ceil(N / movemin) + 4
 print(ans)

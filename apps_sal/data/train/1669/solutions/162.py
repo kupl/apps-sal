@@ -1,8 +1,8 @@
 class Solution:
+
     def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-
         hand = sorted(hand)
         dct = {}
         for x in hand:
@@ -10,12 +10,7 @@ class Solution:
                 dct[x] = 1
             else:
                 dct[x] += 1
-
-        '''
-        below is O(N^2)? so TOO SLOW
-        see https://leetcode.com/problems/hand-of-straights/discuss/135598/C%2B%2BJavaPython-O(MlogM)-Complexity
-        for O(NlogN) soln
-        '''
+        '\n        below is O(N^2)? so TOO SLOW\n        see https://leetcode.com/problems/hand-of-straights/discuss/135598/C%2B%2BJavaPython-O(MlogM)-Complexity\n        for O(NlogN) soln\n        '
         while len(hand) > 0:
             group = [hand[0]]
             check = hand[0]

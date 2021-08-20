@@ -1,4 +1,5 @@
 class Solution:
+
     def subtractProductAndSum(self, n: int) -> int:
         prod = 1
         smm = 0

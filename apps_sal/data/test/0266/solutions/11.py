@@ -1,5 +1,5 @@
-m, s = input().split()
-m, s = int(m), int(s)
+(m, s) = input().split()
+(m, s) = (int(m), int(s))
 if 9 * m < s or (s == 0 and m != 1):
     print(-1, -1)
 else:

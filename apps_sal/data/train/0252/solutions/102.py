@@ -1,6 +1,7 @@
 class Solution:
+
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        for i, val in enumerate(ranges):
+        for (i, val) in enumerate(ranges):
             if i - val < 0:
                 ranges[0] = max(i + val, ranges[0])
             else:

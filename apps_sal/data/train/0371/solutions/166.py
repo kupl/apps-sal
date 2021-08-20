@@ -8,17 +8,14 @@ def bfs(adjList, s, t):
     step = 0
     while queue:
         node = queue.popleft()
-
         if node == t:
             return step
-
         if node == END:
             if not queue:
                 break
             step += 1
             queue.append(END)
             continue
-
         visited.add(node)
         for adjNode in adjList[node]:
             if adjNode not in visited:
@@ -45,10 +42,7 @@ def numBusesToDestination_Graph_TLE(routes, S, T):
 def numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T):
     if S == T:
         return 0
-    adjList = {
-        'S': [], 'T': []
-    }
-
+    adjList = {'S': [], 'T': []}
     for i in range(len(routes)):
         routes[i] = set(routes[i])
         adjList[i] = []
@@ -56,7 +50,6 @@ def numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T):
             adjList['S'].append(i)
         if T in routes[i]:
             adjList[i].append('T')
-
     for i in range(len(routes)):
         for j in range(i + 1, len(routes)):
             if any([k in routes[j] for k in routes[i]]):
@@ -66,6 +59,6 @@ def numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T):
 
 
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
-        # return numBusesToDestination_Graph_TLE(routes, S, T)
         return numBusesToDestination_GraphTakeRouteAsNod_TLE(routes, S, T)

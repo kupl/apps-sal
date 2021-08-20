@@ -1,8 +1,8 @@
-'''input
+"""input
 5
 2 2 2 3 3
 
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -12,7 +12,7 @@ from random import randint as rd
 from bisect import bisect_left as bl
 from heapq import heappush as hpush
 from heapq import heappop as hpop
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -23,10 +23,7 @@ def ri(flag=0):
 
 
 n = ri(1)
-
 a = ri()
-
 odd = sum([i % 2 for i in a])
 even = n - odd
-
 print(min(even, odd))

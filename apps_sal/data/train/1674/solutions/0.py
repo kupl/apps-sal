@@ -2,6 +2,7 @@ from functools import *
 
 
 class Solution:
+
     def stoneGameII(self, arr):
         a = []
         s = 0

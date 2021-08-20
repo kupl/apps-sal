@@ -3,7 +3,7 @@ logs = [input().split() for _ in range(q)]
 origin = []
 now = []
 cnt = 0
-for old, new in logs:
+for (old, new) in logs:
     if old not in now:
         origin.append(old)
         now.append(new)

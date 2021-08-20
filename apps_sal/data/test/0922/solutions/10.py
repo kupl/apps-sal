@@ -1,4 +1,4 @@
-n, a = [int(next_token) for next_token in input().split()]
+(n, a) = [int(next_token) for next_token in input().split()]
 d = [int(next_token) for next_token in input().split()]
 s = sum(d)
 ans = []

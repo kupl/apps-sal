@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     s = list(input())
-    x, y = -1, -1
+    (x, y) = (-1, -1)
     for i in range(n):
         if s[i] == '>':
             x = i

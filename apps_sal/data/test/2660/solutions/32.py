@@ -1,6 +1,5 @@
 import heapq
 import collections
-
 cnt = 1
 cnts = collections.defaultdict(int)
 median = 0

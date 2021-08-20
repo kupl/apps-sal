@@ -1,11 +1,7 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
+
     def nextLargerNodes(self, head: ListNode) -> List[int]:
-        stk, res = [], []
+        (stk, res) = ([], [])
         while head:
             while stk and head.val > stk[-1][1]:
                 idx = stk.pop()[0]

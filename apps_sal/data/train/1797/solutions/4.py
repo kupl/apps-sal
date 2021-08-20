@@ -24,22 +24,20 @@ def factorizable(n, factors, sort_factors=True):
         return False
     if sort_factors:
         factors = sorted(set(factors))
-    fs = [n]  # The initial list of numbers to check contains only n
-    while fs:  # If there are no numbers left to check, there is no way to fully factorize n by factors
-        sub = []  # A list to store all the quotients from the division of n by factors
-        for n in fs:  # Try to factorize further
+    fs = [n]
+    while fs:
+        sub = []
+        for n in fs:
             for f in factors:
-                if n == f:  # Fully factorized!
+                if n == f:
                     return True
-                elif f <= n:  # A possible factor
-                    if n % f == 0:  # n is divisible by f. Let's check if n/f is in turn factorizable by factors
+                elif f <= n:
+                    if n % f == 0:
                         sub.append(n / f)
-                else:  # This, and, consequently, all subsequent factors are too large for n to be divisible by them
+                else:
                     break
-        # We are still here, so we still don't know if n is fully divisible by factors.
-        # Let's check all the quotients in the same way
         fs = sub
-    return False  # Sorry, no numbers left, no way to factorize n by factors.
+    return False
 
 
 def normalized_factors(factors, caching=True):
@@ -57,20 +55,16 @@ def normalized_factors(factors, caching=True):
         else:
             i += 1
     t = tuple(fs)
-    # We don't have to check if factors in _FACTORS_CACHE, because we checked it already.
     if caching and t != factors:
         _FACTORS_CACHE[factors] = _CacheEntry(is_optimal=False, linked_to=t)
     return t
 
 
 def normalized_factors_f(factors):
-    # Functional style: nicer, but less readable and some 25% slower
-    # Adding cache support would ruin its nicety though
     fs = sorted(set(factors))
     return (e[1] for e in filter(lambda t: not factorizable(t[1], fs[0:t[0]], False), enumerate(fs)))
 
 
-# This is based on http://www.codewars.com/kata/reviews/53d0337689316446e6000035/groups/5406bde018340bce700006c4
 def factored(n, factors, caching=True):
     """
     Build an increasing sequence of numbers divisible by the specified factors and return n-th number of such sequence.
@@ -80,26 +74,19 @@ def factored(n, factors, caching=True):
     :type factors: list(int)|tuple(int)
     """
     factors = normalized_factors(factors, caching)
-
     cached = False
     if caching and factors in _FACTORS_CACHE:
-        e = _FACTORS_CACHE[factors]  # Should be optimal
-        if n <= len(e.seq):  # The requested number is cached already
+        e = _FACTORS_CACHE[factors]
+        if n <= len(e.seq):
             return e.seq[n - 1]
         cached = True
-
     fn = len(factors)
-    next_nums = list(factors)  # e.g. [2, 3, 5]
-    if cached:  # Part of the sequence is cached, let's continue
+    next_nums = list(factors)
+    if cached:
         for i in range(fn):
             next_nums[i] = e.seq[e.idx[i]] * factors[i]
-    else:  # Initialize a new entry
-        e = _CacheEntry(
-            is_optimal=True,
-            idx=[0] * fn,
-            seq=[1]
-        )
-
+    else:
+        e = _CacheEntry(is_optimal=True, idx=[0] * fn, seq=[1])
     for _ in range(len(e.seq), n):
         next_n = min(next_nums)
         e.seq.append(next_n)
@@ -107,10 +94,8 @@ def factored(n, factors, caching=True):
             if next_n == next_nums[i]:
                 e.idx[i] += 1
                 next_nums[i] = e.seq[e.idx[i]] * factors[i]
-
-    if caching and not cached:
+    if caching and (not cached):
         _FACTORS_CACHE[factors] = e
-
     return e.seq[-1]
 
 

@@ -1,7 +1,5 @@
 import sys
 import collections as cl
-
-
 N = int(input())
 A = list(map(int, sys.stdin.readline().split()))
 c = cl.Counter(A)
@@ -22,4 +20,4 @@ pin = N - 1
 for K in range(1, N + 1):
     while pin >= 0 and K > FormulaList[pin]:
         pin -= 1
-    print((pin + 1))
+    print(pin + 1)

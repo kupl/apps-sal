@@ -3,15 +3,13 @@ from math import sqrt
 
 
 class OrderedIntDict(OrderedDict):
+
     def __missing__(self, key):
         return 0
 
 
 def format_factor(n, times):
-    return (
-        "({n})".format(n=n) if times == 1
-        else "({n}**{times})".format(n=n, times=times)
-    )
+    return '({n})'.format(n=n) if times == 1 else '({n}**{times})'.format(n=n, times=times)
 
 
 def prime_factors(number):
@@ -22,10 +20,7 @@ def prime_factors(number):
             factors[n] += 1
     if number > 1:
         factors[number] = 1
-    return "".join(
-        format_factor(n, times)
-        for n, times in factors.items()
-    )
+    return ''.join((format_factor(n, times) for (n, times) in factors.items()))
 
 
 primeFactors = prime_factors

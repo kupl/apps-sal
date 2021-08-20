@@ -1,6 +1,5 @@
 3
-
-n, t = tuple(map(int, input().split()))
+(n, t) = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 s = 0
 ans = 0

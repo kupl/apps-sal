@@ -2,7 +2,7 @@ import heapq
 
 
 def ulam_sequence(u0, u1, n):
-    seq, h, s = [u0, u1], [u0 + u1], set()
+    (seq, h, s) = ([u0, u1], [u0 + u1], set())
     while len(seq) < n:
         v = heapq.heappop(h)
         h = set(h)

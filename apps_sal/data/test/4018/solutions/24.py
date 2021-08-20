@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 s = input()
 last = [[-1 for i in range(26)] for j in range(n)]
 for i in range(n):

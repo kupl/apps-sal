@@ -1,4 +1,5 @@
 class Solution:
+
     def maxCoins(self, p: List[int]) -> int:
         p.sort()
         max_coins = 0

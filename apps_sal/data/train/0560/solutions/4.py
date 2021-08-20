@@ -14,8 +14,8 @@ for i in range(t):
     for i in b:
         sumb = sumb + i
     if suma < sumb:
-        print("Alice")
+        print('Alice')
     elif suma > sumb:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

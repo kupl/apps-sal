@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 t = input()
 i = n - 1
 while i > 0 and t[:i] != t[-i:]:

@@ -1,5 +1,7 @@
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
+
         @lru_cache(None)
         def doit(c, fuel):
             tot = 0 if c != finish else 1
@@ -10,4 +12,4 @@ class Solution:
                 if d <= fuel:
                     tot += doit(i, fuel - d)
             return tot
-        return doit(start, fuel) % (10**9 + 7)
+        return doit(start, fuel) % (10 ** 9 + 7)

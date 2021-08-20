@@ -13,4 +13,4 @@ def get_strings(city):
         if count != len(dict):
             out += ','
         count += 1
-    return(out)
+    return out

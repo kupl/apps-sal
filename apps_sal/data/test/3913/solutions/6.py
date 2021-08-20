@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 mp = dict()
 st = [0] * n
 k = 0
@@ -10,7 +9,6 @@ for i in s:
     else:
         st[k] = 1
     k += 1
-
 q = int(input())
 tp = q
 for i in range(q):
@@ -18,7 +16,7 @@ for i in range(q):
     cns = 0
     flag = 1
     for i in range(n):
-        if s[i] != s2[i] and not st[i]:
+        if s[i] != s2[i] and (not st[i]):
             tp -= 1
             flag = 0
             break
@@ -32,11 +30,10 @@ for i in range(q):
             if s2[i] not in list(mp.keys()):
                 mp[s2[i]] = 1
                 az[ord(s2[i]) - 97] = 1
-            elif mp[s2[i]] != -1 and not az[ord(s2[i]) - 97]:
+            elif mp[s2[i]] != -1 and (not az[ord(s2[i]) - 97]):
                 mp[s2[i]] += 1
                 az[ord(s2[i]) - 97] = 1
 cns = 0
-
 for i in list(mp.keys()):
     if mp[i] == tp:
         cns += 1

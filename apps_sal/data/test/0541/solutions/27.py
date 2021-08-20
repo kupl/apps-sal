@@ -1,7 +1,6 @@
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 data = [list(map(int, input().split())) for _ in range(M)]
 data = sorted(data, key=lambda x: x[1])
-
 count = 1
 left = data[0][1]
 for i in range(1, M):

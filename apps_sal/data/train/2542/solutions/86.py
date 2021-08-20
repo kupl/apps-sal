@@ -1,19 +1,19 @@
 class Solution:
+
     def isMonotonic(self, A: List[int]) -> bool:
         increase = []
         decrease = []
-        i, d = [], []
-        for idx, v in enumerate(A):
+        (i, d) = ([], [])
+        for (idx, v) in enumerate(A):
             while decrease and decrease[-1][0] >= v:
-                dv, di = decrease.pop()
+                (dv, di) = decrease.pop()
                 if not d:
                     d.append((dv, di))
                 elif d[-1][1] < di:
                     d.append((dv, di))
             decrease.append((v, idx))
-
             while increase and increase[-1][0] <= v:
-                iv, ii = increase.pop()
+                (iv, ii) = increase.pop()
                 if not i:
                     i.append((iv, ii))
                 elif i[-1][1] < ii:

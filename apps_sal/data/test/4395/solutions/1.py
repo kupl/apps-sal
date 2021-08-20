@@ -13,4 +13,4 @@ for i in range(6):
         f = i
 print(ans)
 for i in range(n):
-    print(A[f][i % 3], end="")
+    print(A[f][i % 3], end='')

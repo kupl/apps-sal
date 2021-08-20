@@ -1,7 +1,3 @@
-# region Header
-#!/usr/bin/env python3
-# from typing import *
-
 import sys
 import io
 import math
@@ -17,14 +13,8 @@ def input():
 
 
 sys.setrecursionlimit(1000000)
-# endregion
-
-# _INPUT = """2 1
-# """
-# sys.stdin = io.StringIO(_INPUT)
 
 
-# def solve(N: int, K: int) -> int:
 def solve(N, K):
     s = 0
     for Y in range(2, 2 * N + 1):
@@ -40,7 +30,7 @@ def solve(N, K):
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     a = solve(N, K)
     print(a)
 

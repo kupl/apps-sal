@@ -1,8 +1,7 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
 x = n
 for i in range(1, n):
-
     if s[:n - i] == s[i:]:
         x = i
         break

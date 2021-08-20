@@ -7,7 +7,6 @@ def main():
     y = [0] * n
     for i in range(n):
         y[i] = x[i] - 1
-
     q = []
     q.append(0)
     i = 0
@@ -25,7 +24,6 @@ def main():
         if res[y[c]] == -1:
             res[y[c]] = res[c] + 1
             q.append(y[c])
-
     print(' '.join(map(str, res)))
 
 

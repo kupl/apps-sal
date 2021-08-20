@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c, d, k = [int(i) for i in input().split()]
+    (a, b, c, d, k) = [int(i) for i in input().split()]
     if a % c == 0:
         x = a // c
     else:

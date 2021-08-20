@@ -31,7 +31,6 @@ if len(bad) == 1:
         else:
             tmp.append(rs)
     print(*tmp)
-
 else:
     tmp = []
     tmp1 = []

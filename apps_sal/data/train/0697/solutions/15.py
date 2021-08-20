@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     array = list(map(int, input().split()))
     massimo = sum(array[:k])
     appo = massimo

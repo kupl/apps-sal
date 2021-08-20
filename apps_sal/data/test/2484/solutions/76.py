@@ -4,7 +4,7 @@ right = 0
 sum = 0
 cnt = 0
 for left in range(n):
-    while right < n and (sum ^ aaa[right]) == (sum + aaa[right]):
+    while right < n and sum ^ aaa[right] == sum + aaa[right]:
         sum += aaa[right]
         right += 1
     cnt += right - left

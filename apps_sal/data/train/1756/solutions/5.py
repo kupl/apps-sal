@@ -1,4 +1,5 @@
 class Handler:
+
     def __init__(self, func, success, failure, *exception_types):
         self.func = func
         self.success = success

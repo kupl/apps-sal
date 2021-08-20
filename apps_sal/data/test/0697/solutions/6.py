@@ -1,6 +1,5 @@
 import sys
 import math
-
 MOD = 998244853
 
 
@@ -21,19 +20,15 @@ def main():
     if a + b == 0:
         print(0)
         return
-
     c = prepare_c(a + b)
-
     min_lv = max(0, a - b)
     max_lv = a
-
     res = 0
-    res += (min_lv * c[a]) % MOD
+    res += min_lv * c[a] % MOD
     for lv in range(min_lv + 1, max_lv + 1):
         t = 2 * lv - a + b
         res += c[(a + b + t) // 2]
         res = res % MOD
-
     print(res)
 
 

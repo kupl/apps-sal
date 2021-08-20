@@ -9,15 +9,12 @@ def gcd(a, b):
 
 
 def solve():
-
     n = int(input())
     ar = list(map(int, input().split()))
-    ar = [0, ] + ar
+    ar = [0] + ar
     mark = [0] * (n + 1)
-
     ans = list()
     for i in range(1, n + 1):
-
         if mark[i] == 0:
             start = i
             ver = i
@@ -34,7 +31,6 @@ def solve():
             else:
                 print(-1)
                 return
-
     f = 1
     for x in ans:
         f = f * x // gcd(f, x)

@@ -1,8 +1,9 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         ps_start = collections.defaultdict(int)
         ps_end = collections.defaultdict(int)
-        for s, e in requests:
+        for (s, e) in requests:
             ps_start[s] -= 1
             ps_end[e] += 1
         res = []
@@ -11,12 +12,10 @@ class Solution:
         for p in ps_end:
             res.append([p, ps_end[p]])
         res.sort()
-
         freq = [0 for i in range(len(nums))]
-        # print(res)
-        prev, count = 0, 0
-        for p, v in res:
-            if v < 0:  # start
+        (prev, count) = (0, 0)
+        for (p, v) in res:
+            if v < 0:
                 for i in range(prev, p):
                     freq[i] += count
                 prev = p
@@ -29,10 +28,9 @@ class Solution:
         freq.sort()
         ans = 0
         k = 0
-        # print(freq)
         nums.sort()
         mod = 1000000007
         for f in freq:
-            ans += (f * nums[k]) % mod
+            ans += f * nums[k] % mod
             k += 1
         return ans % mod

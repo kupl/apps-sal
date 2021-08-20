@@ -1,6 +1,5 @@
-n, B = (int(x) for x in input().split())
+(n, B) = (int(x) for x in input().split())
 a = [int(x) for x in input().split()]
-
 odd = 0
 s = []
 for i in range(n - 1):
@@ -10,7 +9,6 @@ for i in range(n - 1):
         odd -= 1
     if odd == 0:
         s.append(abs(a[i] - a[i + 1]))
-
 s.sort()
 k = 0
 i = 0

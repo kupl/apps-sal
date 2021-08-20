@@ -1,10 +1,9 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 h = [int(input()) for i in range(n)]
 h.sort()
 t = a - b
-r = 10**9 + 5
+r = 10 ** 9 + 5
 l = 0
-
 while r - l > 1:
     m = (r + l) // 2
     mi = m * b

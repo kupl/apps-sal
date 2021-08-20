@@ -4,5 +4,5 @@ for _ in range(int(input())):
     a.sort()
     sum = 0
     for i in range(n // 2):
-        sum += (a[n - i - 1] - a[i])
+        sum += a[n - i - 1] - a[i]
     print(sum)

@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 a = []
 sm = []
@@ -9,7 +8,7 @@ sm = []
 def best():
     mx = a[-1]
     n = len(a)
-    l, r = 0, n - 2
+    (l, r) = (0, n - 2)
     ret = mx
     while l <= r:
         mid = (l + r) // 2

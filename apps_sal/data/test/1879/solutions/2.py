@@ -1,7 +1,7 @@
 i = 0
-t, sx, sy, ex, ey = list(map(int, input().split()))
+(t, sx, sy, ex, ey) = list(map(int, input().split()))
 second_string = input()
-while (sy != ey) or (sx != ex):
+while sy != ey or sx != ex:
     if i == t:
         break
     if second_string[i] == 'E':

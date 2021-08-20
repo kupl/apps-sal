@@ -18,17 +18,15 @@ def COM(n, k):
     return res * finv[k] % MOD
 
 
-MOD = 10**9 + 7
-x, y = map(int, input().split())
-s, t = (-x + 2 * y) / 3, (2 * x - y) / 3
-
+MOD = 10 ** 9 + 7
+(x, y) = map(int, input().split())
+(s, t) = ((-x + 2 * y) / 3, (2 * x - y) / 3)
 if s < 0 or t < 0:
     ans = 0
 elif not (s.is_integer() and t.is_integer()):
     ans = 0
 else:
-    s, t = int(s), int(t)
+    (s, t) = (int(s), int(t))
     COMinit()
-    ans = COM((s + t), s)
-
+    ans = COM(s + t, s)
 print(ans)

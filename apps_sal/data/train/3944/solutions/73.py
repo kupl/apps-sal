@@ -5,5 +5,3 @@ def sum_triangular_numbers(n):
         count += num
         list.append(count)
     return sum(list)
-
-    # return sum(num for num in range(1,n+1))

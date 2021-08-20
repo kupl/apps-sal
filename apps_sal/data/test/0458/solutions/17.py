@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 
 
 def sumd(x):
@@ -12,7 +12,7 @@ def sumd(x):
 sol = []
 for s in range(1, 82):
     x = b * pow(s, a) + c
-    if x > 0 and x < 1000000000 and sumd(x) == s:
+    if x > 0 and x < 1000000000 and (sumd(x) == s):
         sol.append(x)
 print(len(sol))
 for el in sorted(sol):

@@ -5,7 +5,7 @@ cnt = [0 for i in range(n + 1)]
 
 
 def lb(x):
-    l, r = 0, n
+    (l, r) = (0, n)
     while l < r:
         m = (l + r) // 2
         if a[m] < x:
@@ -16,7 +16,7 @@ def lb(x):
 
 
 def ub(x):
-    l, r = 0, n
+    (l, r) = (0, n)
     while l < r:
         m = (l + r) // 2
         if a[m] <= x:
@@ -41,16 +41,15 @@ for i in range(n):
     elif i > r:
         cnt[l + n - i] += 1
         cnt[r + n + 1 - i] -= 1
-
 res = 0
 ans = -1
 for i in range(n):
     res += cnt[i]
-    if(res == 0):
+    if res == 0:
         ans = i
 if ans == -1:
-    print("No")
+    print('No')
 else:
-    print("Yes")
+    print('Yes')
     for i in range(n):
         print(b[(i - ans + n) % n], end=' ')

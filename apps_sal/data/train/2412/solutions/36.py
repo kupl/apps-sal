@@ -11,8 +11,9 @@ def remove_dupes(s):
 
 
 class Solution:
+
     def removeDuplicates(self, s: str) -> str:
         prev = None
         while s != prev:
-            s, prev = remove_dupes(s), s
+            (s, prev) = (remove_dupes(s), s)
         return s

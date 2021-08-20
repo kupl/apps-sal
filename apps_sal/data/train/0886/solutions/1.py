@@ -8,10 +8,10 @@ for _ in range(int(input())):
     pj = -1
     for i in range(n):
         arr[i] += arr[i] % 3
-        if(arr[i] > m and arr[i] - m < l):
+        if arr[i] > m and arr[i] - m < l:
             an = arr[i]
             l = arr[i] - m
-        if(arr[i] < m and m - arr[i] < s):
+        if arr[i] < m and m - arr[i] < s:
             pj = arr[i]
             s = m - arr[i]
     print(pj, an)

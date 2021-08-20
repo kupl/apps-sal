@@ -13,7 +13,7 @@ A = input().split()
 
 
 def LOL(n):
-    if(n == ''):
+    if n == '':
         return 0
     else:
         return int(n)
@@ -22,7 +22,6 @@ def LOL(n):
 cnt = [0 for i in range(11)]
 for i in A:
     cnt[len(i)] += 1
-
 ans = 0
 for i in A:
     _len = len(i)

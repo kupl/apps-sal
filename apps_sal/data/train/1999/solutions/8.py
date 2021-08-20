@@ -1,11 +1,6 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
 class Solution:
-    def removeZeroSumSublists(self, head: ListNode) -> ListNode:
 
+    def removeZeroSumSublists(self, head: ListNode) -> ListNode:
         dummy = ListNode(0)
         hash = {0: dummy}
         dummy.next = head
@@ -24,5 +19,4 @@ class Solution:
             else:
                 hash[sum] = i
             i = i.__next__
-
         return dummy.__next__

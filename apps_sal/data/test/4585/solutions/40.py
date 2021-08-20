@@ -12,12 +12,28 @@ from bisect import bisect_left, insort_left
 from heapq import heapify, heappush, heappop
 
 
-def INPUT(): return sys.stdin.readline().rstrip()
-def INT(): return int(INPUT())
-def MAP(): return map(int, INPUT().split())
-def S_MAP(): return map(str, INPUT().split())
-def LIST(): return list(map(int, INPUT().split()))
-def S_LIST(): return list(map(str, INPUT().split()))
+def INPUT():
+    return sys.stdin.readline().rstrip()
+
+
+def INT():
+    return int(INPUT())
+
+
+def MAP():
+    return map(int, INPUT().split())
+
+
+def S_MAP():
+    return map(str, INPUT().split())
+
+
+def LIST():
+    return list(map(int, INPUT().split()))
+
+
+def S_LIST():
+    return list(map(str, INPUT().split()))
 
 
 sys.setrecursionlimit(10 ** 9)
@@ -27,7 +43,6 @@ mod = 10 ** 9 + 7
 
 def main():
     X = INT()
-
     i = 1
     ans = 0
     while 1:
@@ -36,7 +51,6 @@ def main():
         if X <= 0:
             break
         i += 1
-
     print(ans)
 
 

@@ -1,8 +1,5 @@
 from math import gcd
-
-
-N, *A = list(map(int, open(0).read().split()))
-
+(N, *A) = list(map(int, open(0).read().split()))
 acc_l = [0] * (N + 1)
 acc_r = [0] * (N + 1)
 for i in range(1, N + 1):

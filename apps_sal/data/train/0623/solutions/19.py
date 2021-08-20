@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 x = []
 for i in range(n):

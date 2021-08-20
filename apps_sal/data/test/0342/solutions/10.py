@@ -1,4 +1,4 @@
-a, b, c = map(int, input().split())
+(a, b, c) = map(int, input().split())
 res = 2 * c
 x = min(a, b)
 res += 2 * x

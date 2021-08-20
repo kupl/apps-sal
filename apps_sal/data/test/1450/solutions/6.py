@@ -27,15 +27,12 @@ for i in range(len(S)):
         index = i
         break
     index = len(S)
-
 ans = []
 for i in range(len(S)):
     if i == index:
         ans += [1] * num1
     if S[i] != 1:
         ans.append(S[i])
-
 if index == len(S):
     ans += [1] * num1
-
-print("".join(list(map(str, ans))))
+print(''.join(list(map(str, ans))))

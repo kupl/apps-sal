@@ -6,7 +6,6 @@ def main():
     for i in range(64):
         for j in range(64):
             opts[i & j] += 1
-
     s = input()
     n = len(s)
     ans = 1
@@ -26,7 +25,6 @@ def main():
         else:
             ans *= opts[63]
             ans %= MOD
-
     print(ans)
 
 

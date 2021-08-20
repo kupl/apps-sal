@@ -1,11 +1,11 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         length = len(arr)
         if length == m:
             return m
         if length < m:
             return -1
-
         count_m = 0
         array2 = [0 for _ in range(length + 2)]
         result = -1

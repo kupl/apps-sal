@@ -1,8 +1,8 @@
-'''
+"""
 Created on 27-Feb-2016
 
 @author: venkatesh
-'''
+"""
 
 
 def is_row_wise(a, n, k):
@@ -52,7 +52,7 @@ def is_column_wise(a, n, k):
 
 
 def is_diag_wise(a, n, k):
-    cnt, flag = 0, True
+    (cnt, flag) = (0, True)
     for i in range(n):
         if a[i][i] == 'X':
             cnt += 1
@@ -69,7 +69,7 @@ def is_diag_wise(a, n, k):
                 flag = True
         if cnt == k:
             return True
-    cnt, flag = 0, True
+    (cnt, flag) = (0, True)
     for i in range(n):
         if a[i][n - 1 - i] == 'X':
             cnt += 1
@@ -99,10 +99,8 @@ def read_int_list():
 
 def is_chef_wins(game, n, k):
     if is_row_wise(game, n, k):
-        # print "row"
         return True
     elif is_column_wise(game, n, k):
-        # print "col"
         return True
     elif is_diag_wise(game, n, k):
         return True
@@ -113,9 +111,9 @@ def is_chef_wins(game, n, k):
 def main():
     tc = read_int()
     for _ in range(tc):
-        n, k = read_int_list()
+        (n, k) = read_int_list()
         game = [input() for _ in range(n)]
-        print("YES" if is_chef_wins(game, n, k) else "NO")
+        print('YES' if is_chef_wins(game, n, k) else 'NO')
 
 
 def __starting_point():

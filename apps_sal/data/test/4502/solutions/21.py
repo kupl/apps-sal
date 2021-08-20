@@ -1,5 +1,4 @@
 from collections import deque
-
 n = int(input())
 a = deque(list(map(int, input().split())))
 b = deque() if n % 2 == 0 else deque([a.popleft()])

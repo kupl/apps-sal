@@ -1,6 +1,7 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
-        left, right = 0, 0
+        (left, right) = (0, 0)
         valid_subarray_lengths = [0 for _ in range(len(arr))]
         cum_sum = 0
         for i in range(len(arr)):
@@ -18,6 +19,6 @@ class Solution:
             prefix_min_lengths[i] = prefix_min
         res = float('inf')
         for i in range(len(valid_subarray_lengths)):
-            if valid_subarray_lengths[i] != 0 and i - valid_subarray_lengths[i] >= 0 and prefix_min_lengths[i - valid_subarray_lengths[i]] > 0:
+            if valid_subarray_lengths[i] != 0 and i - valid_subarray_lengths[i] >= 0 and (prefix_min_lengths[i - valid_subarray_lengths[i]] > 0):
                 res = min(res, valid_subarray_lengths[i] + prefix_min_lengths[i - valid_subarray_lengths[i]])
         return res if res != float('inf') else -1

@@ -1,10 +1,10 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
-L = [[]for i in range(n)]
+L = [[] for i in range(n)]
 M = dict()
 for i in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     M[i] = (a, b)
     L[a - 1].append(b)
     L[b - 1].append(a)

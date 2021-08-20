@@ -4,7 +4,7 @@ from random import choice
 def nth_smallest(arr, pos):
     if len(arr) == 1:
         return arr[0]
-    big, lit, pivot = [], [], choice(arr)
+    (big, lit, pivot) = ([], [], choice(arr))
     for i in arr:
         if i > pivot:
             big.append(i)

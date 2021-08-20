@@ -1,4 +1,5 @@
 class Solution:
+
     def search(self, nums, target):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution:
         """
         if not nums:
             return False
-        left, right = 0, len(nums) - 1
+        (left, right) = (0, len(nums) - 1)
         while nums[left] == nums[right] and left != right:
             right -= 1
         while left <= right:
@@ -19,9 +20,8 @@ class Solution:
                     right = mid - 1
                 else:
                     left = mid + 1
+            elif target > nums[mid] and target <= nums[right]:
+                left = mid + 1
             else:
-                if target > nums[mid] and target <= nums[right]:
-                    left = mid + 1
-                else:
-                    right = mid - 1
+                right = mid - 1
         return False

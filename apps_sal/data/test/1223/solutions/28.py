@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ans = 0
 n = int(input())
 p = list(map(int, input().split()))
@@ -15,5 +14,4 @@ for i in range(1, n + 1):
     ans += ((l1 - l0) * (r0 - b[i]) + (r1 - r0) * (b[i] - l1)) * i
     LL[r0] = l1
     RR[l1] = r0
-
 print(ans)

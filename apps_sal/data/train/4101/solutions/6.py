@@ -2,11 +2,11 @@ from decimal import *
 
 
 def sum_prod(strexpression):
-    splitByPlus = strexpression.split("+")
+    splitByPlus = strexpression.split('+')
     for x in range(0, len(splitByPlus)):
         splitByPlus[x] = multiplyAll(splitByPlus[x])
     result = addAll(splitByPlus)
-    return "{:.5e}".format(result)
+    return '{:.5e}'.format(result)
 
 
 def addAll(exps):
@@ -17,7 +17,7 @@ def addAll(exps):
 
 
 def multiplyAll(exps):
-    exps = exps.split("*")
+    exps = exps.split('*')
     result = 1.0
     for j in exps:
         result *= float(j)

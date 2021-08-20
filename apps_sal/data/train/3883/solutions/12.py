@@ -1,5 +1,5 @@
 def solve(s):
-    c, v, r = [], [], []
+    (c, v, r) = ([], [], [])
     for m in s:
         if m in 'aeiou':
             v.append(m)
@@ -7,7 +7,7 @@ def solve(s):
             c.append(m)
     c.sort()
     v.sort()
-    cl, vl = len(c), len(v)
+    (cl, vl) = (len(c), len(v))
     if abs(cl - vl) > 1:
         return 'failed'
     for i in range(max(cl, vl)):

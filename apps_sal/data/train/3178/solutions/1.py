@@ -9,8 +9,4 @@ def pete_talk(speech, ok=()):
         if s in ok:
             return s
         return s[0] + '*' * (len(s) - 2) + s[-1]
-    return re.sub(
-        r'[a-z][^.?!]+',
-        lambda m: re.sub(r'\w{3,}', sub, m.group()).capitalize(),
-        speech.lower(),
-    )
+    return re.sub('[a-z][^.?!]+', lambda m: re.sub('\\w{3,}', sub, m.group()).capitalize(), speech.lower())

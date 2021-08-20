@@ -1,16 +1,15 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 q = [0 for i in range(n)]
 a = [False for i in range(n)]
 ans1 = 0
 ans2 = 0
 for i in range(m):
-    p, S = input().split()
+    (p, S) = input().split()
     p = int(p) - 1
     if S == 'AC':
         a[p] = True
-    else:
-        if a[p] == False:
-            q[p] += 1
+    elif a[p] == False:
+        q[p] += 1
 for i in range(n):
     if a[i] == True:
         ans1 += 1

@@ -1,4 +1,5 @@
 class MonoQ:
+
     def __init__(self, k):
         self.k = k
         self.m = []
@@ -21,13 +22,12 @@ class MonoQ:
 
 
 class Solution:
+
     def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
         n = len(nums)
         solution = [0] * n
         m = MonoQ(k)
-
         for i in range(n - 1, -1, -1):
             solution[i] = m.grab(i, solution, nums)
             m.add(i, solution)
-
         return max(solution)

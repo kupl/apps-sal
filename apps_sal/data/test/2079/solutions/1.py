@@ -6,7 +6,7 @@ w.sort(key=lambda e: e[1])
 nextIntro = 0
 result = [0 for _ in range(2 * n)]
 unfilled = []
-for index, v in enumerate(input()[:2 * n]):
+for (index, v) in enumerate(input()[:2 * n]):
     if v == '0':
         result[index] = w[nextIntro][0]
         unfilled.append(nextIntro)

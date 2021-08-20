@@ -1,5 +1,5 @@
 import numpy as np
-n, avea = tuple([int(x) for x in input().split()])
+(n, avea) = tuple([int(x) for x in input().split()])
 x = list([int(x) for x in input().split()])
 x = np.array(x)
 x = x - avea
@@ -12,4 +12,4 @@ for i in range(n):
             dp[i + 1, j] = dp[i, j] + dp[i, j - x[i]]
         else:
             dp[i + 1, j] = dp[i, j]
-print((dp[n, w] - 1))
+print(dp[n, w] - 1)

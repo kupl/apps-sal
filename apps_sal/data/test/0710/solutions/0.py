@@ -1,4 +1,4 @@
-g = "ACTG"
+g = 'ACTG'
 
 
 def dist(a, b):
@@ -7,7 +7,7 @@ def dist(a, b):
 
 
 def price(s):
-    return sum(dist(x, y) for x, y in zip(g, s))
+    return sum((dist(x, y) for (x, y) in zip(g, s)))
 
 
 n = int(input())

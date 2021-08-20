@@ -10,7 +10,7 @@ while t > 0:
     ans = sum
     for i in range(3, n + 3):
         sum += li[i % n] - li[(i - 3) % n]
-        if (sum > ans):
+        if sum > ans:
             ans = sum
             start = (i - 3 + 1) % n
             end = i % n

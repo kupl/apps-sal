@@ -1,10 +1,7 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 teams = list(map(int, input().split()))
-
 teams.sort()
-
 c = 0
-
 for team in teams:
     if x:
         pages_to_print = min(team // 2, x)
@@ -21,5 +18,4 @@ for team in teams:
                 break
             x -= pages_to_print
     c += 1
-
 print(c)

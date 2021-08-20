@@ -1,10 +1,9 @@
 def main():
     s = set(input())
-
     if len(s) == 3:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 
 
 main()

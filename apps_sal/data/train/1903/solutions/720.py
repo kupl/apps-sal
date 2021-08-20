@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self):
         self.roots = {}
         self.depth = {}
@@ -21,7 +22,7 @@ class UnionFind:
         if x == y:
             return
         if self.depth[x] > self.depth[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         if self.depth[x] == self.depth[y]:
             new_depth = self.depth[y] + 1
         else:
@@ -43,7 +44,7 @@ class Solution:
                 edges.append([edge_cost, i, j])
         edges.sort()
         to_connect = len(points) - 1
-        for edge_cost, i, j in edges:
+        for (edge_cost, i, j) in edges:
             if not to_connect:
                 break
             if min_span_tree.root(i) != min_span_tree.root(j):

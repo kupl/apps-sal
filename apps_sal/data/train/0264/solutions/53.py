@@ -1,4 +1,5 @@
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
 
         def unique_char_count(s):
@@ -17,7 +18,6 @@ class Solution:
                 return
             max_unique(arr, index + 1, cur_str + arr[index], result)
             max_unique(arr, index + 1, cur_str, result)
-
         result = [0]
         max_unique(arr, 0, '', result)
         return result[0]

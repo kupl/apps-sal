@@ -4,7 +4,7 @@ from itertools import combinations
 
 
 def closure_gen(s):
-    keys, seen = set(s), set(s)
+    (keys, seen) = (set(s), set(s))
     q = sorted(seen)
     while q:
         curr = heappop(q)
@@ -19,9 +19,9 @@ def gcd(s):
         return -1
     if len(s) == 1:
         return s[0]
-    res, *s = s
+    (res, *s) = s
     while s:
-        n, *s = s
+        (n, *s) = s
         res = math.gcd(res, n)
     return res
 
@@ -38,7 +38,7 @@ def survivor(zombies):
     curr = loop = big = 0
     zmin = min(zombies)
     while loop < zmin:
-        prev, curr = curr, next(g)
+        (prev, curr) = (curr, next(g))
         if prev + 1 == curr:
             loop += 1
         else:

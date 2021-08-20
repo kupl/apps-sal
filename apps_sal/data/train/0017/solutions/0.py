@@ -2,7 +2,8 @@ import random
 import sys
 
 
-class BIT():
+class BIT:
+
     def __init__(self, n):
         self.BIT = [0] * (n + 1)
         self.num = n
@@ -11,19 +12,17 @@ class BIT():
         res_sum = 0
         while idx > 0:
             res_sum += self.BIT[idx]
-            idx -= idx & (-idx)
+            idx -= idx & -idx
         return res_sum
 
-    # Ai += x O(logN)
     def update(self, idx, x):
         while idx <= self.num:
             self.BIT[idx] += x
-            idx += idx & (-idx)
+            idx += idx & -idx
         return
 
 
 input = sys.stdin.readline
-
 for _ in range(int(input())):
     n = int(input())
     a = list(map(int, input().split()))
@@ -32,7 +31,6 @@ for _ in range(int(input())):
         for j in range(i + 1, n):
             if a[i] == a[j]:
                 pair[i + 1].append(j + 1)
-
     bit = BIT(n)
     ans = 0
     for i in range(1, n + 1):
@@ -41,5 +39,4 @@ for _ in range(int(input())):
             ans += bit.query(r - 1) - minus
         for r in pair[i]:
             bit.update(r, 1)
-
     print(ans)

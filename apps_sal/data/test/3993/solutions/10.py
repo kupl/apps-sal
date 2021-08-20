@@ -1,4 +1,4 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 p = list(map(int, input().split()))
 p = [p[i] - 1 for i in range(m)]
 page = [(p[i] - i) // k for i in range(m)]

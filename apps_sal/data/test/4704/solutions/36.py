@@ -1,6 +1,6 @@
 n = int(input())
 a = list(map(int, input().split()))
-ans = 2 * (10**14) + 1
+ans = 2 * 10 ** 14 + 1
 s = sum(a)
 x = 0
 y = s

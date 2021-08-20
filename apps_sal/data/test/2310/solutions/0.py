@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
     input()
-    m, k = map(int, input().split())
+    (m, k) = map(int, input().split())
     ak = list(map(int, input().split()))
     ak2 = [0] * k
     tjrj = [list(map(int, input().split())) for j in range(m - 1)]
@@ -33,7 +33,7 @@ for i in range(t):
             num -= num3
     for z in range(k):
         if ak[z] - num < 1 or ak2[z] == 1:
-            print("Y", end="")
+            print('Y', end='')
         else:
-            print("N", end="")
+            print('N', end='')
     print()

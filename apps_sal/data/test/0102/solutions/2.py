@@ -31,4 +31,4 @@ d[90] = 'ninety'
 if n <= 19 or n % 10 == 0:
     print(d[n])
 else:
-    print(d[n - (n % 10)], '-', d[n % 10], sep='')
+    print(d[n - n % 10], '-', d[n % 10], sep='')

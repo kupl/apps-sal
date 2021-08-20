@@ -9,64 +9,19 @@ for j in range(0,n):
 t=L
 ct=ct+((t-ed)//a)
 print(ct)"""
-
-"""n,m=map(int,input().split())
-dp=[[-1 for i in range(m)] for j in range(n)]
-dp2=[[-1 for i in range(m)] for j in range(n)]
-#dp=[]
-#dp2=[]
-for i in range(0,n):
-    s=input()
-    for j in range(0,m):
-        if(s[j]=='.'):
-            dp[i][j]=-1
-        else:
-            dp[i][j]=s[j]
-for i in range(0,n-2):
-    for j in range(0,m-2):
-        #print(i,j)
-        p=0
-        c=0
-        for k in range(i,i+3):
-            for h in range(j,j+3):
-                p=p+1
-                if(p!=5):
-                    if(dp[k][h]=='#'):
-                        c=c+1
-
-                    
-        if(c==8):
-            p=0
-            for k in range(i,i+3):
-                for h in range(j,j+3):7
-                    p=p+1
-                    if(p!=5):
-                        dp2[k][h]='#'
-
-
-                        
-#print(dp)
-#print(dp2)
-if(dp==dp2):
-    print('YES')
-else:
-    print('NO')"""
-
-
 import math
+"n,m=map(int,input().split())\ndp=[[-1 for i in range(m)] for j in range(n)]\ndp2=[[-1 for i in range(m)] for j in range(n)]\n#dp=[]\n#dp2=[]\nfor i in range(0,n):\n    s=input()\n    for j in range(0,m):\n        if(s[j]=='.'):\n            dp[i][j]=-1\n        else:\n            dp[i][j]=s[j]\nfor i in range(0,n-2):\n    for j in range(0,m-2):\n        #print(i,j)\n        p=0\n        c=0\n        for k in range(i,i+3):\n            for h in range(j,j+3):\n                p=p+1\n                if(p!=5):\n                    if(dp[k][h]=='#'):\n                        c=c+1\n\n                    \n        if(c==8):\n            p=0\n            for k in range(i,i+3):\n                for h in range(j,j+3):7\n                    p=p+1\n                    if(p!=5):\n                        dp2[k][h]='#'\n\n\n                        \n#print(dp)\n#print(dp2)\nif(dp==dp2):\n    print('YES')\nelse:\n    print('NO')"
 n = int(input())
-if(n == 3):
+if n == 3:
     print('1 1 3')
-
 else:
     t = 1
-    while(t <= n):
-        ct = math.ceil((n // t) / 2)
+    while t <= n:
+        ct = math.ceil(n // t / 2)
         for i in range(0, ct):
-            print(t, end=" ")
-        # t=t*2
-        if(ct == 2 and (n // t) % 2 != 0):
+            print(t, end=' ')
+        if ct == 2 and n // t % 2 != 0:
             t = t * 3
         else:
             t = t * 2
-    print(" ")
+    print(' ')

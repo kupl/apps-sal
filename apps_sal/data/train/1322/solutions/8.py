@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     lst = [int(x) for x in input().split()]
     lst.sort(reverse=True)
     el = lst[k - 1]

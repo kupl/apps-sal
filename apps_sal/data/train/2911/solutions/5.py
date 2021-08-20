@@ -1,5 +1,5 @@
 def count_vowels(s=''):
-    vowels = ["a", "e", "o", "u", "i"]
+    vowels = ['a', 'e', 'o', 'u', 'i']
     counter = 0
     try:
         s = s.lower()

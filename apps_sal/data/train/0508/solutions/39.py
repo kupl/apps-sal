@@ -1,18 +1,18 @@
 from heapq import heappush, heappop
-N, Q, *L = map(int, open(0).read().split())
+(N, Q, *L) = map(int, open(0).read().split())
 D = L[3 * N:]
 ls = []
 for i in range(N):
-    s, t, x = L[3 * i], L[3 * i + 1], L[3 * i + 2]
+    (s, t, x) = (L[3 * i], L[3 * i + 1], L[3 * i + 2])
     ls.append((s - x, 1, x))
     ls.append((t - x, 0, x))
-for i, d in enumerate(D):
+for (i, d) in enumerate(D):
     ls.append((d, 2, i))
 ls.sort()
 ans = [0] * Q
 S = set()
 hq = []
-for a, b, c in ls:
+for (a, b, c) in ls:
     if b == 0:
         S.remove(c)
     elif b == 1:

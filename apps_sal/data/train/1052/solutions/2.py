@@ -26,5 +26,5 @@ def solve(n, d):
 
 
 for _ in range(int(input())):
-    n, d = map(int, input().split())
+    (n, d) = map(int, input().split())
     solve(n, d)

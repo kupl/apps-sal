@@ -1,2 +1,2 @@
 def revamp(s):
-    return " ".join(sorted(("".join(sorted(x)) for x in s.split()), key=lambda x: (sum(map(ord, x)), len(x), x)))
+    return ' '.join(sorted((''.join(sorted(x)) for x in s.split()), key=lambda x: (sum(map(ord, x)), len(x), x)))

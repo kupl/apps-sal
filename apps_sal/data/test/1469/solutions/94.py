@@ -11,13 +11,13 @@ def main():
     flag = True
     before = -1
     for i in range(19, -1, -1):
-        if (L >> i) & 1:
+        if L >> i & 1:
             if flag:
                 flag = False
                 vertex = i + 1
                 for j in range(1, vertex):
                     edges.append((j, j + 1, 0))
-                    edges.append((j, j + 1, 1 << (j - 1)))
+                    edges.append((j, j + 1, 1 << j - 1))
                 before = 1 << i
             else:
                 edges.append((i + 1, vertex, before))

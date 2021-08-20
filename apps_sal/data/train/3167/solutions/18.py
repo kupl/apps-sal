@@ -8,6 +8,5 @@ def twos_difference(lst):
     for pair in my_pairs:
         pair.sort()
         diffs.append(tuple(pair))
-
     diffs.sort()
     return diffs

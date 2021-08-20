@@ -9,12 +9,11 @@ def main():
     for i in range(len(s)):
         if s[i] == '*':
             star = i
-
     for i in range(n):
         t = sys.stdin.readline().rstrip()
         ok = True
-        if (star == -1 and len(s) > len(t)) or (star != -1 and len(s) - 1 > len(t)):
-            print("NO")
+        if star == -1 and len(s) > len(t) or (star != -1 and len(s) - 1 > len(t)):
+            print('NO')
             continue
         for j in range(star):
             if s[j] == '?':
@@ -25,10 +24,10 @@ def main():
                 ok = False
                 break
         if not ok:
-            print("NO")
+            print('NO')
             continue
         if len(t) < len(s) - star - 1:
-            print("NO")
+            print('NO')
             continue
         for j in range(len(s) - star - 1):
             k = len(t) - j - 1
@@ -41,22 +40,22 @@ def main():
                 ok = False
                 break
         if not ok:
-            print("NO")
+            print('NO')
             continue
         if star == -1 and len(s) == len(t):
-            print("YES")
+            print('YES')
             continue
         if star == -1:
-            print("NO")
+            print('NO')
             continue
         for j in range(star, len(t) - (len(s) - star - 1)):
             if t[j] in g:
                 ok = False
                 break
         if not ok:
-            print("NO")
+            print('NO')
             continue
-        print("YES")
+        print('YES')
 
 
 main()

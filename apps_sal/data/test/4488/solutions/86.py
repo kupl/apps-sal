@@ -6,8 +6,8 @@ import numpy as np
 A = int(input())
 B = int(input())
 if A > B:
-    print("GREATER")
+    print('GREATER')
 elif A < B:
-    print("LESS")
+    print('LESS')
 elif A == B:
-    print("EQUAL")
+    print('EQUAL')

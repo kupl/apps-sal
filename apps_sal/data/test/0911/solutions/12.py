@@ -1,4 +1,4 @@
-n, c = map(int, input().split())
+(n, c) = map(int, input().split())
 P = list(map(int, input().split()))
 T = list(map(int, input().split()))
 t = 0
@@ -12,8 +12,8 @@ for i in range(n - 1, -1, -1):
     t += T[i]
     R += max(P[i] - c * t, 0)
 if L > R:
-    print("Limak")
+    print('Limak')
 elif R > L:
-    print("Radewoosh")
+    print('Radewoosh')
 else:
-    print("Tie")
+    print('Tie')

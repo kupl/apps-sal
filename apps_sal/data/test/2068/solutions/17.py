@@ -1,7 +1,7 @@
 def nafig(s):
     for i in range(len(s)):
         x = ord(s[i])
-        if (x <= 90) and (x >= 65):
+        if x <= 90 and x >= 65:
             x += 32
             s = s[:i] + chr(x) + s[i + 1:]
     return s

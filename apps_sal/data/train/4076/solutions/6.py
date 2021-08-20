@@ -1,4 +1,4 @@
-V, C = 'vowels consonants'.split()
+(V, C) = 'vowels consonants'.split()
 
 
 def get_count(s=None):

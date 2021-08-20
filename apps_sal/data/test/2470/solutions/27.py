@@ -1,9 +1,8 @@
 class Solution:
-    def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
 
+    def makeArrayIncreasing(self, A: List[int], B: List[int]) -> int:
         dp = {-1: 0}
         B = sorted(B)
-
         for cur in A:
             temp = collections.defaultdict(lambda: float('inf'))
             for prev in dp:
@@ -13,7 +12,6 @@ class Solution:
                 if idx < len(B):
                     temp[B[idx]] = min(temp[B[idx]], dp[prev] + 1)
             dp = temp
-
         if dp:
             return min(dp.values())
         return -1

@@ -6,9 +6,9 @@ def check(f, s):
     if f.is_literal():
         return f in s
     elif f.is_and():
-        return all(check(e, s) for e in f.args)
+        return all((check(e, s) for e in f.args))
     elif f.is_or():
-        return any(check(e, s) for e in f.args)
+        return any((check(e, s) for e in f.args))
     elif f.is_not():
         return not check(f.args[0], s)
 

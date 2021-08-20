@@ -1,7 +1,7 @@
 def delta(x):
-    l, r = -1, 100000
+    (l, r) = (-1, 100000)
     while l + 1 < r:
-        mid = (l + r) >> 1
+        mid = l + r >> 1
         tot = mid * (mid + 1) // 2
         if tot < x:
             l = mid
@@ -15,5 +15,5 @@ def delta(x):
 
 t = int(input())
 for i in range(t):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     print(delta(abs(a - b)))

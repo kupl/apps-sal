@@ -2,7 +2,7 @@ t = int(input())
 for i in range(t):
     a = input()
     b = input()
-    sa, sb, fa, fb, ac1, ac2, bc1, bc2 = 0, 0, 0, 0, 0, 0, 0, 0
+    (sa, sb, fa, fb, ac1, ac2, bc1, bc2) = (0, 0, 0, 0, 0, 0, 0, 0)
     for x in a:
         if x < '4':
             ac1 += 1
@@ -21,12 +21,7 @@ for i in range(t):
             bc2 += 1
         elif x == '7':
             sb += 1
-
-    final7, final4 = 0, 0
-    # print sa,fa,ac1,ac2
-    # print sb,fb,bc1,bc2
-
-    # Check for 7s in A
+    (final7, final4) = (0, 0)
     if sa:
         x = sa if bc2 > sa else bc2
         final7 += x

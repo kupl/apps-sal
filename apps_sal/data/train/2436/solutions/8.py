@@ -1,4 +1,5 @@
 class Solution:
+
     def isPalindrome(self, s):
         """
         :type s: str
@@ -21,5 +22,5 @@ class Solution:
         return True
 
     def _is_alphanumeric(self, c):
-        if (ord(c) >= 97 and ord(c) <= 122) or (ord(c) >= 48 and ord(c) <= 57):
+        if ord(c) >= 97 and ord(c) <= 122 or (ord(c) >= 48 and ord(c) <= 57):
             return True

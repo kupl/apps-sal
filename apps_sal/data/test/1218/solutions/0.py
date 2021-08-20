@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 m = 2 * (n - 1) - k * (k - 1)
 if m > 0:
     print(-1)

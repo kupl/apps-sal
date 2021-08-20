@@ -4,9 +4,9 @@ def yesOrNo(a, b):
     if x % 2 == 1:
         x += 1
     if x < y:
-        return "NO"
+        return 'NO'
     else:
-        return "YES"
+        return 'YES'
 
 
 a = input()

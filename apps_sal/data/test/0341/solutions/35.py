@@ -1,5 +1,5 @@
-n, k = map(int, input().split())
-r, s, p = map(int, input().split())
+(n, k) = map(int, input().split())
+(r, s, p) = map(int, input().split())
 t = input()
 dp = [0] * (len(t) + 1)
 dp[0] = 0
@@ -15,7 +15,7 @@ def pon(d):
 
 
 m = []
-for i, j in enumerate(t):
+for (i, j) in enumerate(t):
     m.append(j)
     if i >= k:
         if m[i - k] == j:

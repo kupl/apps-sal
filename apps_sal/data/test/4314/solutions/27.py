@@ -7,15 +7,14 @@ def answer(h: int, w: int, a: List[str]) -> List[str]:
         loop = a.count(white_line)
         for _ in range(loop):
             a.remove(white_line)
-        a = [''.join(line) for line in (list(zip(*a)))]
+        a = [''.join(line) for line in list(zip(*a))]
         if i == 0:
             w = h - loop
-
     return a
 
 
 def main():
-    h, w = list(map(int, input().split()))
+    (h, w) = list(map(int, input().split()))
     a = [input() for _ in range(h)]
     for i in answer(h, w, a):
         print(i)

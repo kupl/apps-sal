@@ -1,5 +1,7 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
+
         def getPower(num):
             if num == 1:
                 return 1
@@ -15,6 +17,6 @@ class Solution:
         dic = {}
         for i in range(lo, hi + 1):
             dic[i] = getPower(i)
-        dic = {k: v for k, v in sorted(dic.items())}
-        dic = {k: v for k, v in sorted(list(dic.items()), key=lambda item: item[1])}
+        dic = {k: v for (k, v) in sorted(dic.items())}
+        dic = {k: v for (k, v) in sorted(list(dic.items()), key=lambda item: item[1])}
         return list(dic.keys())[k - 1]

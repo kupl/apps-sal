@@ -1,5 +1,4 @@
-
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 if a != b:
     button = max(a, b)
     all = 0

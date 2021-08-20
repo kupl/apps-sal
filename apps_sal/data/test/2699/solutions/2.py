@@ -1,4 +1,3 @@
-# cook your dish here
 def first_row(n):
     l = [1]
     s = [2]
@@ -12,17 +11,17 @@ def first_row(n):
         f.append(s[-1] + 1)
         d = d * 2
     for i in range(len(l)):
-        print(l[i], end=" ")
-    print("")
+        print(l[i], end=' ')
+    print('')
     for i in range(len(s)):
-        print(s[i], end=" ")
-    print("")
+        print(s[i], end=' ')
+    print('')
     for i in range(len(t)):
-        print(t[i], end=" ")
-    print("")
+        print(t[i], end=' ')
+    print('')
     for i in range(len(f)):
-        print(f[i], end=" ")
-    print("")
+        print(f[i], end=' ')
+    print('')
 
 
 t = int(input())

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [0] + list(map(int, input().split()))
 fa = [0] + [i + 1 for i in range(n)]
 
@@ -14,7 +14,7 @@ def findFa(x):
 
 
 while m:
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     u = findFa(u)
     v = findFa(v)
     if u != v:

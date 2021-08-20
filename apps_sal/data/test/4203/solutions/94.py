@@ -1,5 +1,4 @@
 S = input()
-
 flg = True
 cnt = 0
 for i in range(len(S)):
@@ -12,13 +11,10 @@ for i in range(len(S)):
     elif i == len(S) - 1:
         if S[i].isupper():
             flg = False
-    else:
-        if S[i] == 'C':
-            cnt += 1
-        elif S[i].isupper():
-            flg = False
-
+    elif S[i] == 'C':
+        cnt += 1
+    elif S[i].isupper():
+        flg = False
 if cnt != 1:
     flg = False
-
 print(['WA', 'AC'][flg])

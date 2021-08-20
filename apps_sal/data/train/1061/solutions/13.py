@@ -21,7 +21,6 @@ for _ in range(t):
     dp = [[0] * n for j in range(n)]
     for i in range(n):
         dp[i][i] = [int(arr[2 * i])]
-
     n = len(arr)
     for i in range(3, n + 1, 2):
         for j in range(0, n - i + 1, 2):
@@ -30,7 +29,6 @@ for _ in range(t):
                 for x in dp[j // 2][(k - 1) // 2]:
                     for y in dp[k // 2][(i + j) // 2]:
                         ans += [eval(str(x) + arr[k - 1] + str(y))]
-
             if i != n:
                 dp[j // 2][k // 2] = ans[:]
             else:

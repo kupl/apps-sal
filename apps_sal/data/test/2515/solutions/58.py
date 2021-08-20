@@ -21,7 +21,7 @@ def factorize(n):
     return len(a)
 
 
-s = [0] * 100001  # s[i]==1:iが素数
+s = [0] * 100001
 for i in range(100001):
     s[i] = factorize(i)
 j = [0] * 100001
@@ -35,5 +35,5 @@ for i in range(100000):
             j[i] = count
     else:
         j[i] = count
-for l, r in query:
+for (l, r) in query:
     print(j[r] - j[l - 1])

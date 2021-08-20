@@ -1,10 +1,8 @@
 import bisect
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 x = list(map(int, input().split()))
-
 c = bisect.bisect_left(x, 0)
-mt = 2 * 10**8
-
+mt = 2 * 10 ** 8
 for i in range(n - k + 1):
     if i + k < c:
         continue

@@ -1,9 +1,9 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 stations = []
 for i in range(n):
     stations.append([])
 for i in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     stations[a - 1].append((b - a) % n)
 maxes = []
 for i in range(n):
@@ -26,4 +26,4 @@ for i in range(n - 1):
     else:
         curr = curr - 1
     out.append(str(curr))
-print(" ".join(out))
+print(' '.join(out))

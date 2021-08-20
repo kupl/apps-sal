@@ -4,6 +4,6 @@ for i in range(n):
     a = int(ab[0])
     b = int(ab[1])
     if a >= b:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [0] + list(map(int, input().split()))
 sums = []
 for x in a:

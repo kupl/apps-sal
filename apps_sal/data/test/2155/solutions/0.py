@@ -19,24 +19,24 @@ def check(h, w, y, x, cnt):
             cnt[j] -= 1
     if any(cnt.values()):
         return
-    print(f'{h} {w}\n{y+1} {int(x)+1}')
+    print(f'{h} {w}\n{y + 1} {int(x) + 1}')
     raise TabError
 
 
 def getyx(h, w, tot, cnt):
-    b = (w - 1) * .5
-    c = h * (tot - h * (w * w - 2 * w * (1 - h) - 1) * .25)
+    b = (w - 1) * 0.5
+    c = h * (tot - h * (w * w - 2 * w * (1 - h) - 1) * 0.25)
     for y in range((h + 3) // 2):
-        d = (c - h * y * (w * y - h * w + w))
+        d = c - h * y * (w * y - h * w + w)
         if d >= 0:
             x = b - sqrt(d) / h
-            if x.is_integer() and x >= 0.:
+            if x.is_integer() and x >= 0.0:
                 check(h, w, y, int(x), cnt.copy())
 
 
 def main():
-    n, l = int(input()), list(map(int, input().split()))
-    cnt, r, R, tot = Counter(l), 1, max(l), sum(l)
+    (n, l) = (int(input()), list(map(int, input().split())))
+    (cnt, r, R, tot) = (Counter(l), 1, max(l), sum(l))
     for r in range(1, R + 1):
         if cnt[r] < r * 4:
             break

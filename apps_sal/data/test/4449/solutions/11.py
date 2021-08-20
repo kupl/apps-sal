@@ -1,18 +1,13 @@
-# 579_B
-
 import sys
-
 q = int(input())
-
 for i in range(0, q):
     n = int(input())
-    ln = [int(j) for j in sys.stdin.readline().rstrip().split(" ")]
+    ln = [int(j) for j in sys.stdin.readline().rstrip().split(' ')]
     ln = sorted(ln)
     f = True
     for j in range(1, len(ln), 2):
         if ln[j] != ln[j - 1]:
             f = False
-
     ind1 = 0
     ind2 = len(ln) - 2
     sm = ln[ind1] * ln[ind2]
@@ -23,6 +18,6 @@ for i in range(0, q):
             f = False
             break
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

@@ -1,5 +1,5 @@
-D, N = map(int, input().split())
-a = 100**(D)
+(D, N) = map(int, input().split())
+a = 100 ** D
 A = []
 for i in range(1, 101):
     A.append(i * a)

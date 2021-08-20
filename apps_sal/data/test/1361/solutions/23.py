@@ -9,7 +9,7 @@ def cek(arr):
 
 n = int(input())
 arr = [0] * n
-b = input().split(" ")
+b = input().split(' ')
 for i in range(n):
     arr[i] = int(b[i])
 narr = len(arr)
@@ -26,5 +26,4 @@ for i in range(narr - 2):
     hasil = cek(kan)
     if hasil < minn:
         minn = hasil
-
 print(minn)

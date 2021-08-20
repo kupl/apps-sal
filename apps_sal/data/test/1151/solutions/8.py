@@ -1,5 +1,5 @@
 from bisect import bisect_left
-n, u = map(int, input().split())
+(n, u) = map(int, input().split())
 arr = [int(x) for x in input().split()]
 ans = -1
 for i in range(n - 2):
@@ -12,6 +12,5 @@ for i in range(n - 2):
         bi -= 1
     if i == bi or i + 1 == bi:
         continue
-    #print(arr[i], arr[i+1], arr[bi])
     ans = max(ans, (arr[bi] - arr[i + 1]) / (arr[bi] - arr[i]))
 print(ans)

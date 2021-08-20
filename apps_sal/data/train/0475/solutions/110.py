@@ -1,15 +1,16 @@
 class Solution:
+
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         s = [0]
         for x in nums:
             s.append(s[-1] + x)
         n = len(nums)
-        q = [(x, i, i) for i, x in enumerate(nums)]
+        q = [(x, i, i) for (i, x) in enumerate(nums)]
         heapq.heapify(q)
         i = 1
         ans = 0
         while i <= right:
-            x, j, k = heapq.heappop(q)
+            (x, j, k) = heapq.heappop(q)
             if i >= left:
                 ans += x
             if k > 0:

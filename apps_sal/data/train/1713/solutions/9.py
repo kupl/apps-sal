@@ -6,7 +6,7 @@ def count_calls(func, *args, **kwargs):
     tracer = Tracer(func)
     sys.settrace(tracer.my_tracer)
     rv = func(*args, **kwargs)
-    return tracer.count, rv
+    return (tracer.count, rv)
 
 
 class Tracer:
@@ -21,6 +21,6 @@ class Tracer:
         func_name = frame.f_code.co_name
         if event == 'call' and (self.recursive or func_name != self.func_name):
             self.count += 1
-        elif func_name == self.func_name and not self.recursive:
+        elif func_name == self.func_name and (not self.recursive):
             self.recursive = True
         return self.my_tracer

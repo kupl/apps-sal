@@ -3,6 +3,6 @@ def odd_or_even(arr):
     for item in arr:
         result += item
     if result % 2 == 0:
-        return "even"
+        return 'even'
     else:
-        return "odd"
+        return 'odd'

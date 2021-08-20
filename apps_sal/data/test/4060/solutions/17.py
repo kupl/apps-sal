@@ -3,7 +3,7 @@ a = list(input())
 k = 0
 st = []
 for i in range(n):
-    if a[i] == ')' and len(st) > 0 and st[-1][0] == '(':
+    if a[i] == ')' and len(st) > 0 and (st[-1][0] == '('):
         k += 2
         st.pop()
     else:

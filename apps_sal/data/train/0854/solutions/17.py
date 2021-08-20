@@ -4,6 +4,6 @@ for x in range(t):
     arr = input().split()
     mySet = set(arr)
     if sorted(arr) == sorted(list(mySet)):
-        print("prekrasnyy")
+        print('prekrasnyy')
     else:
-        print("ne krasivo")
+        print('ne krasivo')

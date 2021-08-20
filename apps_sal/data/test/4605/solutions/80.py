@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 sum1 = 0
 for n in range(1, N + 1):
     sum2 = 0

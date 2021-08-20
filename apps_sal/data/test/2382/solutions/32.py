@@ -4,8 +4,8 @@ from sys import stderr, stdin
 input = stdin.readline
 
 
-def debug(var, name="hoge"):
-    print(name + ":" + str(type(var)) + " = " + repr(var), file=stderr)
+def debug(var, name='hoge'):
+    print(name + ':' + str(type(var)) + ' = ' + repr(var), file=stderr)
     return
 
 
@@ -30,12 +30,11 @@ def main():
         exist += next_exist
         exist.sort()
         S += next_s[::-1]
-
-    if len(exist) == 2**N:
-        print("Yes")
+    if len(exist) == 2 ** N:
+        print('Yes')
         return
     else:
-        print("No")
+        print('No')
         return
 
 

@@ -3,5 +3,5 @@ def alpha_seq(string):
     string = string.lower()
     l = []
     for i in sorted(string):
-        l.append(i.capitalize() + i * (alpha.find(i)))
+        l.append(i.capitalize() + i * alpha.find(i))
     return ','.join(l)

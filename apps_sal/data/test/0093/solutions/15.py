@@ -5,7 +5,6 @@ b = input()
 b = b + input()[::-1]
 b = b.replace('X', '')
 b = b * 2
-
 if b.find(a) == -1:
     print('NO')
 else:

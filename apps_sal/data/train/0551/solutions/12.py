@@ -6,8 +6,8 @@ def Cook(S):
         Counter[i] += 1
     for i in Counter.values():
         if i > 1:
-            return "yes"
-    return "no"
+            return 'yes'
+    return 'no'
 
 
 for T in range(int(input())):

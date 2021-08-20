@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         uf = UnionFind(n + 1, m)
@@ -18,6 +19,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, n, m):
         self.id = [-1 for _ in range(n)]
         self.size = [0 for _ in range(n)]

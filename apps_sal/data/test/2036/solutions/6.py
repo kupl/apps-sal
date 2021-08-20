@@ -1,4 +1,4 @@
-n, m, sx, sy = map(int, input().split())
+(n, m, sx, sy) = map(int, input().split())
 moves = [(sx, sy)]
 if sx != 1:
     moves.append((1, sy))

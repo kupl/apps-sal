@@ -1,6 +1,5 @@
 N = int(input())
 H = list(map(int, input().split()))
-
 a = 0
 ans = 0
 for i in range(N - 1):

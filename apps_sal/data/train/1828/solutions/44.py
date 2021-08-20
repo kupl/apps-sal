@@ -1,4 +1,5 @@
 class Solution:
+
     def rearrangeBarcodes(self, barcodes: List[int]) -> List[int]:
         freq = [0] * 10001
         maxFreqCode = 0
@@ -6,7 +7,7 @@ class Solution:
             freq[code] += 1
             if freq[code] > freq[maxFreqCode]:
                 maxFreqCode = code
-        i, n = 0, len(barcodes)
+        (i, n) = (0, len(barcodes))
         ans = [0] * n
         for code in range(10001):
             if code == 0:

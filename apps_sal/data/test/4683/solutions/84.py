@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 n = int(input())
 a = [int(i) for i in input().split()]
 s = sum(a)

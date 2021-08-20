@@ -1,6 +1,7 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
-        ans, largest = 0, 0
+        (ans, largest) = (0, 0)
         for num in nums:
             largest = max(largest, num)
             while num > 0:

@@ -1,17 +1,17 @@
 n = int(input())
 for i in range(n):
     if i % 2 == 0:
-        s = "W"
+        s = 'W'
         for j in range(1, n):
             if j % 2 == 1:
-                s += "B"
+                s += 'B'
             else:
-                s += "W"
+                s += 'W'
     else:
-        s = "B"
+        s = 'B'
         for j in range(1, n):
             if j % 2 == 1:
-                s += "W"
+                s += 'W'
             else:
-                s += "B"
+                s += 'B'
     print(s)

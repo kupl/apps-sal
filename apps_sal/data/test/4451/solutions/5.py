@@ -1,10 +1,10 @@
 n = int(input())
-a = sorted((int(v), i) for i, v in enumerate(input().split()))
-INF = 10**18
+a = sorted(((int(v), i) for (i, v) in enumerate(input().split())))
+INF = 10 ** 18
 dp = [-INF, -INF, 0]
 for i in range(n - 1):
     dp.append(max(dp[-1], dp[i] + a[i + 1][0] - a[i][0]))
-cur, t = n - 1, 1
+(cur, t) = (n - 1, 1)
 o = [0] * n
 while cur >= 0:
     if dp[cur] == dp[cur - 1]:

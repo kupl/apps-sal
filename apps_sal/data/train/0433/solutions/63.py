@@ -1,4 +1,5 @@
 class Solution:
+
     def numOfSubarrays(self, arr, k, threshold) -> int:
         s = 0
         sub = arr[0:k]

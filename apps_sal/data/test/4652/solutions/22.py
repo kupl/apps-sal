@@ -12,7 +12,7 @@ for we in range(w):
     n = int(input())
     l = list(map(int, input().split()))
     if n == 1:
-        print("YES")
+        print('YES')
     else:
         start = l[0]
         odp = 1
@@ -29,6 +29,6 @@ for we in range(w):
         else:
             odp = 0
         if odp == 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

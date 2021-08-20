@@ -1,6 +1,6 @@
-N, M, Q = [int(x) for x in input().split()]
-S = input()  # length N
-T = input()  # length M
+(N, M, Q) = [int(x) for x in input().split()]
+S = input()
+T = input()
 A = []
 pref = []
 for i in range(N):
@@ -14,7 +14,7 @@ for i in range(N):
     else:
         pref[i] = A[i]
 for i in range(Q):
-    l, r = [int(x) for x in input().split()]
+    (l, r) = [int(x) for x in input().split()]
     l -= 1
     r -= 1
     if r - l + 1 >= M:

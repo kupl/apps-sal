@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseBetween(self, head, m, n):
         """
         :type head: ListNode
@@ -13,11 +14,9 @@ class Solution:
         fast = slow = h
         for _ in range(n - m + 1):
             fast = fast.__next__
-
         for _ in range(m - 1):
             fast = fast.__next__
             slow = slow.__next__
-
         prev = fast.__next__
         curr = slow.__next__
         while prev != fast:
@@ -26,5 +25,4 @@ class Solution:
             prev = curr
             curr = temp
         slow.next = prev
-
         return h.__next__

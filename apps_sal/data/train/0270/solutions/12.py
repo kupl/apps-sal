@@ -1,8 +1,8 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
 
         def rec(x, n, s):
-
             if len(x) == n:
                 r.append(x)
             else:
@@ -13,10 +13,8 @@ class Solution:
                         rec(x + s[i], n, 'ac')
                     else:
                         rec(x + s[i], n, 'ab')
-
         r = []
         rec('', n, 'abc')
-
         if k <= len(r):
             return r[k - 1]
         else:

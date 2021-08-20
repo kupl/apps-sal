@@ -3,7 +3,7 @@ from calendar import month_name
 
 
 def solve(a, b):
-    m, c, res, s = [1, 3, 5, 7, 8, 10, 12], 0, [], '',
+    (m, c, res, s) = ([1, 3, 5, 7, 8, 10, 12], 0, [], '')
     for i in range(a, b + 1):
         for j in m:
             if date(i, j, 1).weekday() == 4:

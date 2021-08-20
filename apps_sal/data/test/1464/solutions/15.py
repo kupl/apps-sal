@@ -1,6 +1,6 @@
 n = int(input())
-ch = ""
-while(n):
+ch = ''
+while n:
     sh = input()
     ch += ' ' + sh
     n -= 1

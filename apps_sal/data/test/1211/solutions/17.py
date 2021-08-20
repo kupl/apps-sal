@@ -1,7 +1,6 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list([n % x for x in a])
 c = list([n // x for x in a])
-
 i = b.index(min(b))
 print(i + 1, c[i])

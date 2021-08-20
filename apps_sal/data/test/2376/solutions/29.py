@@ -1,10 +1,10 @@
 def main():
-    n, w = list(map(int, input().split()))
-    w1, v1 = list(map(int, input().split()))
+    (n, w) = list(map(int, input().split()))
+    (w1, v1) = list(map(int, input().split()))
     values = [[] for _ in range(4)]
     values[0].append(v1)
     for _ in range(n - 1):
-        wi, vi = list(map(int, input().split()))
+        (wi, vi) = list(map(int, input().split()))
         values[wi - w1].append(vi)
     for i in range(4):
         values[i].sort(reverse=True)

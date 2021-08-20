@@ -4,7 +4,7 @@ def scf(arr):
         return 1
     ret = []
     for j in arr:
-        for i in range(1, int(j**0.5) + 1):
+        for i in range(1, int(j ** 0.5) + 1):
             if j % i == 0:
                 ret.append(i)
                 ret.append(j // i)

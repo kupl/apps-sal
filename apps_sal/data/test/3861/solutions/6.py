@@ -6,7 +6,7 @@ def isqrt(n):
     x = n // 2
     seen = set([x])
     while x * x != n:
-        x = (x + (n // x)) // 2
+        x = (x + n // x) // 2
         if x in seen:
             return None
         seen.add(x)
@@ -19,5 +19,4 @@ def is_square(n):
 
 n = int(input())
 a = [int(v) for v in input().split()]
-
-print(max(v for v in a if not is_square(v)))
+print(max((v for v in a if not is_square(v))))

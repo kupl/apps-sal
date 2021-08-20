@@ -1,12 +1,6 @@
-#!python3
-
 import itertools
-
-
 INF = 10 ** 5
-
-# input
-H, W, K = list(map(int, input().split()))
+(H, W, K) = list(map(int, input().split()))
 S = [[int(e) for e in input()] for _ in range(H)]
 
 
@@ -50,14 +44,12 @@ def main():
     w = [S[0]]
     for i in range(1, H):
         w.append([w[i - 1][j] + S[i][j] for j in range(W)])
-
     ans = INF
     num_list = [i for i in range(H - 1)]
     for i in range(H):
         comb_list = itertools.combinations(num_list, i)
         for l in comb_list:
             ans = min(ans, i + solve(w, l))
-
     print(ans)
 
 

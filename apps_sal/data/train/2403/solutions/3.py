@@ -1,4 +1,5 @@
 class Solution:
+
     def checkPerfectNumber(self, num):
         """
         :type num: int
@@ -13,7 +14,7 @@ class Solution:
         for factor in factors:
             if num / factor not in factors and factor > 1:
                 factors.append(num / factor)
-        if num == sum(i for i in factors):
+        if num == sum((i for i in factors)):
             return True
         else:
             return False

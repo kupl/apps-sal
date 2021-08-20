@@ -8,7 +8,7 @@ for i in range(n):
 mins = 1000
 for i in range(n):
     for j in range(i, n):
-        s = abs((pref[j] - pref[i]) - (pref[i] + (pref[n - 1] - pref[j])))
+        s = abs(pref[j] - pref[i] - (pref[i] + (pref[n - 1] - pref[j])))
         if s < mins:
             mins = s
 print(mins)

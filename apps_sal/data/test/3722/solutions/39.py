@@ -1,10 +1,10 @@
-p = 10**9 + 7
+p = 10 ** 9 + 7
 n = int(input())
-a, b, c, d = [input() == "A"for i in range(4)]
+(a, b, c, d) = [input() == 'A' for i in range(4)]
 if b:
     b ^= 1
     c ^= 1
-    a, d = d ^ 1, a ^ 1
+    (a, d) = (d ^ 1, a ^ 1)
 if n < 4 or not d:
     print(1)
 elif c:

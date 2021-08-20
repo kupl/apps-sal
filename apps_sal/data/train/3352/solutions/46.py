@@ -5,5 +5,4 @@ def find_longest(arr):
         if len(str(i)) > highest_len:
             highest_len = len(str(i))
             highest_len_name = i
-
     return highest_len_name

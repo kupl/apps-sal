@@ -1,4 +1,4 @@
-s, e = input().split()
+(s, e) = input().split()
 d = dict()
 d['^'] = 0
 d['<'] = 1

@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     T = int(input())
     ans = []
@@ -12,7 +11,6 @@ try:
                 a[i - 1] = i + 1
             else:
                 a[i + 1] = i + 1
-
         ans.append(a)
     for _ in range(T):
         print(' '.join(map(str, ans[_])))

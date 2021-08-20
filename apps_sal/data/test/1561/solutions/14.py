@@ -1,4 +1,4 @@
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 mat = []
 for i in range(n):
     s = input()
@@ -8,7 +8,6 @@ for i in range(n):
             mat[i].append(0)
         else:
             mat[i].append(1)
-
 ans = 0
 for i in range(n):
     res = 0
@@ -19,7 +18,6 @@ for i in range(n):
                 ans += 1
         else:
             res = 0
-
 for i in range(m):
     res = 0
     for j in range(n):
@@ -29,8 +27,6 @@ for i in range(m):
                 ans += 1
         else:
             res = 0
-
 if k == 1:
     ans //= 2
-
 print(ans)

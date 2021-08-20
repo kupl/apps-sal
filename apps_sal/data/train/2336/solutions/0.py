@@ -12,8 +12,7 @@ while len(explore) > 0:
     for i in found[1:]:
         explore.remove(i)
     parity ^= (len(found) - 1) % 2
-
 if parity == n % 2:
-    print("Petr")
+    print('Petr')
 else:
-    print("Um_nik")
+    print('Um_nik')

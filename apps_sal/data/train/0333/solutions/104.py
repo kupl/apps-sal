@@ -1,4 +1,5 @@
 class Solution:
+
     def minJumps(self, arr: List[int]) -> int:
         if len(arr) <= 1:
             return 0
@@ -7,10 +8,10 @@ class Solution:
         seen = {}
         seen[0] = 0
         G = defaultdict(list)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             G[a].append(i)
         while bfs:
-            step, idx = heapq.heappop(bfs)
+            (step, idx) = heapq.heappop(bfs)
             idx = -idx
             for d in (-1, 1):
                 nidx = idx + d

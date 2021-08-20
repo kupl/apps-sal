@@ -1,4 +1,3 @@
-# 解説AC
 import math
 import string
 import itertools
@@ -13,26 +12,31 @@ import random
 import time
 import copy
 import bisect
-#from operator import itemgetter
-#from heapq import heappush, heappop
-#import numpy as np
-#from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
-#from scipy.sparse import csr_matrix
-#from decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN
 import sys
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
+
+
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
 
 
 S = ns()
@@ -47,6 +51,6 @@ for k in range(n - 1, -1, -1):
     else:
         d[tmp] += 1
 ans = 0
-for k, v in list(d.items()):
+for (k, v) in list(d.items()):
     ans += v * (v - 1) // 2
 print(ans)

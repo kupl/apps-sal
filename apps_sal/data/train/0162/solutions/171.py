@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, s1: str, s2: str) -> int:
         return self.helper(s1, s2, 0, 0)
 

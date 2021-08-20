@@ -1,4 +1,4 @@
-N = 5 * (10**5) + 1
+N = 5 * 10 ** 5 + 1
 dp = [0 for i in range(N)]
 dp[1] = 0
 for i in range(3, N, 2):

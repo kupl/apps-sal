@@ -1,11 +1,9 @@
 def evil(n):
     _odious = "It's Odious!"
     _evil = "It's Evil!"
-
     is_evil = True
     for degree in evilometer(n):
         is_evil = not is_evil
-
     return is_evil and _evil or _odious
 
 
@@ -17,7 +15,7 @@ def evilometer(n):
 
 
 def expand_to_string(n):
-    binary = ""
+    binary = ''
     while n != 0:
         binary += str(n % 2)
         n = n // 2

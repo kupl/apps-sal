@@ -1,10 +1,11 @@
 class Solution(object):
+
     def findUnsortedSubarray(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
-        n, lst = len(nums), sorted(nums)
+        (n, lst) = (len(nums), sorted(nums))
         for i in range(n):
             if lst[i] != nums[i]:
                 L = i

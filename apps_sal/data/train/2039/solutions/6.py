@@ -1,7 +1,7 @@
-n, m = input().split()
-n, m = int(n), int(m)
+(n, m) = input().split()
+(n, m) = (int(n), int(m))
 a = list(map(int, input().split()))
-l, r = 0, m - 1
+(l, r) = (0, m - 1)
 
 
 def isOptimal(mid):
@@ -11,9 +11,8 @@ def isOptimal(mid):
         if prev < a[i]:
             if m - a[i] + prev > mid:
                 prev = a[i]
-        else:
-            if prev - a[i] > mid:
-                check = False
+        elif prev - a[i] > mid:
+            check = False
     return check
 
 
@@ -25,6 +24,5 @@ while l <= r:
         r = mid - 1
     else:
         l = mid + 1
-
 check = isOptimal(l)
 print(l * check + r * (not check))

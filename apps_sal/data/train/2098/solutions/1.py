@@ -1,9 +1,7 @@
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 men = []
-
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     men.append((y, x - 1))
 
 
@@ -19,19 +17,15 @@ def Calc(lim):
             cost += men[i][0]
             vis[i] = True
             cnt[0] += 1
-
     for i in range(n):
-        if cnt[0] < lim and vis[i] == False and men[i][1] != 0:
+        if cnt[0] < lim and vis[i] == False and (men[i][1] != 0):
             cnt[0] += 1
             cost += men[i][0]
     return cost
 
 
 men.sort()
-
-ans = 10**18
-
+ans = 10 ** 18
 for i in range(n):
     ans = min(ans, Calc(i))
-
 print(ans)

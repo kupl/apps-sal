@@ -7,7 +7,7 @@ mod = 2019
 s = 1
 c[0] = 1
 for i in range(a):
-    k += (s * int(S[a - i - 1]))
+    k += s * int(S[a - i - 1])
     k %= mod
     s *= 10
     s %= mod

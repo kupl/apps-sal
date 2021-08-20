@@ -1,13 +1,12 @@
 import numpy as np
-
 MOD = 998244353
 
 
 def main():
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     dp = np.zeros((n + 1, s + 1), dtype=np.int64)
-    for i, v in enumerate(a):
+    for (i, v) in enumerate(a):
         dp[i][0] += 1
         dp[i + 1] += dp[i]
         if v <= s:

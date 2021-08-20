@@ -1,4 +1,5 @@
 class Solution:
+
     def canReach(self, arr: List[int], start: int) -> bool:
         from collections import defaultdict
         graph = defaultdict(list)
@@ -9,7 +10,7 @@ class Solution:
                     graph[i].append(i - arr[i])
                 if i + arr[i] < length:
                     graph[i].append(i + arr[i])
-        zeroindex = [i for i, j in enumerate(arr) if j == 0]
+        zeroindex = [i for (i, j) in enumerate(arr) if j == 0]
         visited = []
         print(graph, zeroindex)
 

@@ -10,6 +10,5 @@ for _ in range(t):
         if s % (i + 1) == 0:
             ans = max(ans, s // (i + 1))
         else:
-            ans = max(ans, (s // (i + 1)) + 1)
+            ans = max(ans, s // (i + 1) + 1)
     print(ans)
-    # case 1

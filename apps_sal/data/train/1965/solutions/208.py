@@ -1,5 +1,5 @@
 class UnionFind:
-    # When n is valid, each element is a tuple of two integers, (x, y)
+
     def __init__(self, m: int, n: int = None):
         self.rank = collections.Counter()
         if n is None:
@@ -18,20 +18,21 @@ class UnionFind:
         if px == py:
             return
         if self.rank[py] > self.rank[px]:
-            px, py = py, px
+            (px, py) = (py, px)
         if self.rank[py] == self.rank[px]:
             self.rank[px] += 1
         self.parent[py] = px
 
 
 class Solution:
+
     def maxNumEdgesToRemove(self, n: int, edges: List[List[int]]) -> int:
         uf1 = UnionFind(n)
         uf2 = UnionFind(n)
         res = 0
         e1 = e2 = e3 = 0
         for e in edges:
-            t, u, v = e[0], e[1] - 1, e[2] - 1
+            (t, u, v) = (e[0], e[1] - 1, e[2] - 1)
             if t == 3:
                 if uf1.find(u) == uf1.find(v):
                     res += 1
@@ -40,7 +41,7 @@ class Solution:
                     uf2.union(u, v)
                     e3 += 1
         for e in edges:
-            t, u, v = e[0], e[1] - 1, e[2] - 1
+            (t, u, v) = (e[0], e[1] - 1, e[2] - 1)
             if t == 1:
                 if uf1.find(u) == uf1.find(v):
                     res += 1

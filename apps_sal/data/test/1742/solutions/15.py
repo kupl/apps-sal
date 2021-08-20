@@ -1,15 +1,10 @@
-n, m = [int(x) for x in input().split()]
-
+(n, m) = [int(x) for x in input().split()]
 p = [int(x) - 1 for x in input().split()]
-
 e = [[] for _ in range(n)]
-
 for _ in range(m):
-    u, v = [int(x) for x in input().split()]
+    (u, v) = [int(x) for x in input().split()]
     e[u - 1].append(v - 1)
-
 t = [p[n - 1]]
-
 ans = 0
 for i in range(n - 2, -1, -1):
     u = p[i]
@@ -26,6 +21,4 @@ for i in range(n - 2, -1, -1):
             t.append(u)
     else:
         t.append(u)
-
-
 print(ans)

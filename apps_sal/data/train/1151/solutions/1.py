@@ -1,4 +1,5 @@
 class Graph:
+
     def __init__(self, V):
         self.V = V
         self.adj = [[] for i in range(V)]
@@ -28,9 +29,9 @@ class Graph:
 
 
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     g = Graph(n)
     for i in range(m):
-        u, v = list(map(int, input().split()))
+        (u, v) = list(map(int, input().split()))
         g.addEdge(u, v)
     print(len(g.connectedComponents()))

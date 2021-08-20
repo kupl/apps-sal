@@ -1,8 +1,6 @@
 import atexit
 import io
 import sys
-
-# Buffering IO
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
 _OUTPUT_BUFFER = io.StringIO()
@@ -15,17 +13,15 @@ def write():
 
 
 def main():
-    n, k = [int(x) for x in input().split()]
+    (n, k) = [int(x) for x in input().split()]
     a = [int(x) for x in input().split()]
     t = [int(x) for x in input().split()]
-
     mx = 0
     for i in range(n):
         if i < k:
             mx += a[i]
         else:
             mx += a[i] * t[i]
-
     xx = mx
     for i in range(n):
         if i + k >= n:
@@ -35,7 +31,6 @@ def main():
         xx += a[i + k]
         xx -= a[i + k] * t[i + k]
         mx = max(xx, mx)
-
     print(mx)
 
 

@@ -1,8 +1,6 @@
 import sys
 import math
 3
-
-
 DEBUG = False
 
 
@@ -19,7 +17,6 @@ def solve(N, M, K, B):
     segs = []
     for i in range(N - 1):
         segs.append(B[i + 1] - B[i])
-
     segs.sort()
     ntapes = N
     tapelen = N
@@ -28,12 +25,11 @@ def solve(N, M, K, B):
         tapelen += segs[j] - 1
         ntapes -= 1
         j += 1
-
     return tapelen
 
 
 def main():
-    N, M, K = [int(e) for e in inp().split()]
+    (N, M, K) = [int(e) for e in inp().split()]
     B = [int(e) for e in inp().split()]
     print(solve(N, M, K, B))
 

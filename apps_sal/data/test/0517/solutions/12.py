@@ -2,6 +2,7 @@
 
 
 class StdReader:
+
     def read_int(self):
         return int(self.read_string())
 
@@ -31,25 +32,19 @@ def add_e(adj, elist, i, j):
 
 
 def main():
-    n, td, th = reader.read_ints()
-
+    (n, td, th) = reader.read_ints()
     if td > 2 * th or (n > 2 and td == 1):
         print(-1)
         return
-
     adj = [list()] * n
     elist = []
     d = h = 0
-
-    # depth_v = None
     last_v = 0
     mother_v = 0
     if td == th:
         mother_v = 1
-
     dst = [0] * n
     dst[0] = th
-
     for i in range(1, n):
         if h < th:
             add_e(adj, elist, last_v, i)
@@ -64,11 +59,8 @@ def main():
             last_v = i
             d += 1
             dst[i] = d
-            # if d == td:
-            # 	last_v = 0
         else:
             add_e(adj, elist, mother_v, i)
-
     for e in elist:
         print(e[0] + 1, e[1] + 1)
 

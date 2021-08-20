@@ -1,4 +1,4 @@
-K, N = list(map(int, input().split()))
+(K, N) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 A.sort()
 d = [A[i + 1] - A[i] for i in range(N - 1)]

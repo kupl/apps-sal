@@ -1,9 +1,9 @@
-A, B, K = map(int, input().split())
+(A, B, K) = map(int, input().split())
 
 
 def make_divisors(n):
     divisors = []
-    for i in range(1, int(n**.5) + 1):
+    for i in range(1, int(n ** 0.5) + 1):
         if n % i == 0:
             divisors.append(i)
             if i != n // i:
@@ -14,7 +14,6 @@ def make_divisors(n):
 
 div_A = make_divisors(A)
 div_B = make_divisors(B)
-
 l = []
 for i in div_A:
     for j in div_B:

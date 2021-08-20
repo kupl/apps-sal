@@ -2,7 +2,6 @@ n = int(input())
 k = []
 for i in range(n):
     k.append(list(map(int, input().split())))
-
 if n == 1:
     print(1)
 else:

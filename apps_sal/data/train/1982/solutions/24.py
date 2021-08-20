@@ -1,7 +1,8 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = [[] for _ in range(N + 1)]
-        for a, b in dislikes:
+        for (a, b) in dislikes:
             graph[a].append(b)
             graph[b].append(a)
         visited = [0] * (N + 1)
@@ -16,8 +17,7 @@ class Solution:
                 if not go(t, node, -color):
                     return False
             return True
-
         for i in range(1, N + 1):
-            if visited[i] == 0 and not go(i, 0, 1):
+            if visited[i] == 0 and (not go(i, 0, 1)):
                 return False
         return True

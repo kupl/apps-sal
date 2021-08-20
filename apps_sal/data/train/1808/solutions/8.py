@@ -1,4 +1,5 @@
 class Solution:
+
     def eraseOverlapIntervals(self, intervals):
         intervals.sort(key=lambda x: x.end)
         end = -sys.maxsize

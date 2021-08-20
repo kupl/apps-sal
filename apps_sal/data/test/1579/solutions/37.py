@@ -1,23 +1,24 @@
 def main():
     from collections import defaultdict
     import sys
-    # functions used
-    def r(): return sys.stdin.readline().strip()
-    def R(): return list(map(int, r().split()))
 
+    def r():
+        return sys.stdin.readline().strip()
+
+    def R():
+        return list(map(int, r().split()))
     N = int(r())
     Dic = defaultdict(list)
-    V = 10**5 + 5
+    V = 10 ** 5 + 5
     Arrived = [False] * (2 * V)
     for _ in range(N):
-        x, y = R()
+        (x, y) = R()
         y += V
         Dic[x].append(y)
         Dic[y].append(x)
-
     ans = 0
     task = []
-    for k, v in Dic.items():
+    for (k, v) in Dic.items():
         if Arrived[k]:
             continue
         Arrived[k] = True

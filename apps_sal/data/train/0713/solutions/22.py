@@ -11,8 +11,8 @@ for _ in range(int(input())):
     g = sorted(x)
     if len(x) > 1:
         if x == g:
-            print("Yes")
+            print('Yes')
         else:
-            print("No")
+            print('No')
     else:
-        print("No")
+        print('No')

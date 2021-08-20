@@ -7,7 +7,7 @@ def solve(mid):
     cnt = 0
     tmp = []
     for i in range(n):
-        l, r = info[i]
+        (l, r) = info[i]
         if r < mid:
             ans += l
         elif mid < l:
@@ -32,7 +32,7 @@ def solve(mid):
 q = int(input())
 ans = [0] * q
 for qi in range(q):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     info = [list(map(int, input().split())) for i in range(n)]
     ok = 0
     ng = s + 1

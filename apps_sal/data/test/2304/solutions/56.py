@@ -1,27 +1,21 @@
-#!/usr/bin/env python3
 import sys
 sys.setrecursionlimit(200002)
-
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 graph = [[] for i in range(n)]
 for i in range(m):
-    l, r, d = list(map(int, input().split()))
-
+    (l, r, d) = list(map(int, input().split()))
     graph[l - 1].append([r - 1, d])
     graph[r - 1].append([l - 1, -d])
-# print(graph)
 
 
 def dfs(s):
-    for t, d in graph[s]:
+    for (t, d) in graph[s]:
         if x[t] is None:
             x[t] = x[s] + d
             if not dfs(t):
                 return False
-        else:
-            if x[t] - x[s] != d:
-                return False
+        elif x[t] - x[s] != d:
+            return False
     return True
 
 
@@ -32,5 +26,4 @@ for i in range(n):
         x[i] = 0
         if not dfs(i):
             ans = False
-
-print((('No', 'Yes')[ans]))
+print(('No', 'Yes')[ans])

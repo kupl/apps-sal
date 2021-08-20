@@ -1,5 +1,5 @@
 def is_thue_morse(seq):
-    tm, lt, ls = [0], 1, len(seq)
+    (tm, lt, ls) = ([0], 1, len(seq))
     while lt <= ls:
         if seq[:lt] != tm:
             return False

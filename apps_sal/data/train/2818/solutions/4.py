@@ -4,11 +4,10 @@ def duplicate_encode(word):
     if that character appears more than once in the original word. 
     Ignores capitalization when determining if a character is a duplicate. """
     word = word.upper()
-    result = ""
+    result = ''
     for char in word:
         if word.count(char) > 1:
-            result += ")"
+            result += ')'
         else:
-            result += "("
-
+            result += '('
     return result

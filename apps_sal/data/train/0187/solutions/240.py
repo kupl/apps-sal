@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         extra = 0
         count = 0
@@ -18,7 +19,6 @@ class Solution:
             if total * boardingCost - runningCost * count > profit:
                 profit = total * boardingCost - runningCost * count
                 round = count
-
         while extra > 0:
             if extra > 4:
                 total += 4

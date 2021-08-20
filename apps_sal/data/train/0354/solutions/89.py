@@ -1,4 +1,5 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         MOD = 10 ** 9 + 7
         dp = collections.deque([[1] * 7 for i in range(max(rollMax) + 1)])

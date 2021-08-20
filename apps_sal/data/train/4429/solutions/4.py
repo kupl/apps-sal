@@ -2,7 +2,7 @@ from collections import Counter
 
 
 def longest_palindrome(s):
-    if s == "":
+    if s == '':
         return 0
     s = s.upper()
     x = Counter(s)
@@ -14,7 +14,7 @@ def longest_palindrome(s):
                 len += x[i]
             else:
                 flag = True
-                len += (x[i] - 1)
+                len += x[i] - 1
     if flag == True:
         return len + 1
     return len

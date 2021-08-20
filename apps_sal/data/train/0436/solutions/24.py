@@ -1,6 +1,6 @@
 class Solution:
-    def minDays(self, n: int) -> int:
 
+    def minDays(self, n: int) -> int:
         q = {n}
         seen = set()
         ans = 1

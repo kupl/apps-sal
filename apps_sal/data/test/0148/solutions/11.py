@@ -1,5 +1,5 @@
 def main():
-    n, a, x, b, y = list(map(int, input().split()))
+    (n, a, x, b, y) = list(map(int, input().split()))
     flag = False
     for i in range(n):
         if a == b:

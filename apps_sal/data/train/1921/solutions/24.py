@@ -1,7 +1,7 @@
 class DinnerPlates:
 
     def __init__(self, capacity: int):
-        self.capacity, self.stacks = capacity, [[]]
+        (self.capacity, self.stacks) = (capacity, [[]])
         self.left = 0
         self.right = 0
 
@@ -12,7 +12,6 @@ class DinnerPlates:
             self.stacks.append([val])
         else:
             self.stacks[self.left].append(val)
-
         if self.left >= self.right:
             self.right = self.left
 
@@ -22,10 +21,8 @@ class DinnerPlates:
             self.right -= 1
         if self.right < self.left:
             self.left = self.right
-
         if len(self.stacks[self.right]) == 0:
             return -1
-
         return self.stacks[self.right].pop()
 
     def popAtStack(self, index: int) -> int:
@@ -34,10 +31,3 @@ class DinnerPlates:
         if index < self.left:
             self.left = index
         return self.stacks[index].pop()
-
-
-# Your DinnerPlates object will be instantiated and called as such:
-# obj = DinnerPlates(capacity)
-# obj.push(val)
-# param_2 = obj.pop()
-# param_3 = obj.popAtStack(index)

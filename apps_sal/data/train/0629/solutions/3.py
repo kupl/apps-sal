@@ -8,7 +8,7 @@ def potion(m, l):
 try:
     tstc = int(input())
     for t in range(tstc):
-        r, g, b, m = map(int, input().split())
+        (r, g, b, m) = map(int, input().split())
         red = [int(i) for i in input().split()]
         green = [int(i) for i in input().split()]
         blue = [int(i) for i in input().split()]

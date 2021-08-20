@@ -1,5 +1,7 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
+
         def cal(arr1, arr2):
             countMap = {}
             m = defaultdict(list)
@@ -17,6 +19,5 @@ class Solution:
                         c += sum([0] + [1 for idx in m[d] if idx != i])
                 countMap[e] = c
                 count += c
-
             return count // 2
         return cal(nums1, nums2) + cal(nums2, nums1)

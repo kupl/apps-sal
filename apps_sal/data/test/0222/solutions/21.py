@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 from math import sqrt
-
 import itertools
 
 
@@ -15,7 +12,7 @@ l = len(ns)
 
 
 def getsub(ns, it):
-    return ''.join(ns[i] for i in it)
+    return ''.join((ns[i] for i in it))
 
 
 def findmin(ns):

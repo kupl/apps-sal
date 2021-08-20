@@ -1,14 +1,14 @@
-'''
+"""
 Created on 27.4.2016
 
 @author: Ivan
-'''
+"""
 import sys
 
 
 def main():
     line = input()
-    parts = line.split(" ")
+    parts = line.split(' ')
     a = int(parts[0])
     b = int(parts[1])
     list = []
@@ -17,13 +17,13 @@ def main():
     pairs = []
     res = 0
     for l in list:
-        x = l.find("G")
-        y = l.find("S")
+        x = l.find('G')
+        y = l.find('S')
         print()
         if y < x:
-            print("-1")
+            print('-1')
             return
-        pairs.append((y - x))
+        pairs.append(y - x)
     pairs = set(pairs)
     print(str(len(pairs)))
 

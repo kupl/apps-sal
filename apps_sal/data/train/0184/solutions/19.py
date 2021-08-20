@@ -1,11 +1,11 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         ln = len(text)
         if ln == 1:
             return 1
         mx = -1
         start = 0
-
         while start < ln:
             print(start, ',', end='')
             i = start + 1
@@ -28,5 +28,4 @@ class Solution:
             else:
                 start = inx
             print(mx)
-
         return mx

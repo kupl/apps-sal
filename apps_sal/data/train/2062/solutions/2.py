@@ -1,5 +1,5 @@
 def main():
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     inv_n = [0] * 1001
     nCr = [[1] * (i + 1) for i in range(1001)]
     for i in range(1001):
@@ -7,10 +7,9 @@ def main():
     for i in range(2, 1001):
         for j in range(1, i):
             nCr[i][j] = (nCr[i - 1][j - 1] + nCr[i - 1][j]) % mod
-    n, a, b, c, d = map(int, input().split())
+    (n, a, b, c, d) = map(int, input().split())
     dp = [0] * (n + 1)
     dp[0] = 1
-
     for A in range(b, a - 1, -1):
         dp2 = [i for i in dp]
         for N in range(n - c * A, -1, -1):

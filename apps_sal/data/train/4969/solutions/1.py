@@ -1,5 +1,5 @@
 def tower_builder(n_floors, block_size):
-    w, h = block_size
+    (w, h) = block_size
     filled_block = '*' * w
     empty_block = ' ' * w
     tower = []

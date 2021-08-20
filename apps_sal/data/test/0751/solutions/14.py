@@ -1,9 +1,6 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 group = list(map(int, input().split()))
-
 b = 0
-
-
 tot = 0
 for i in range(n):
     tot += group[i]

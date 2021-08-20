@@ -1,5 +1,9 @@
-def toDex(n): return int(n[-1]) - 2 * toDex(n[:-1]) if n else 0
-def toBin(n): return toBin((n - n % 2) / -2) + str(n % 2) if n else ''
+def toDex(n):
+    return int(n[-1]) - 2 * toDex(n[:-1]) if n else 0
+
+
+def toBin(n):
+    return toBin((n - n % 2) / -2) + str(n % 2) if n else ''
 
 
 def skrzat(base, number):

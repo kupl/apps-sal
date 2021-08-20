@@ -36,17 +36,16 @@ def topological_sort_tree(E, r):
 
 def getcld(p):
     res = [[] for _ in range(len(p))]
-    for i, v in enumerate(p[1:], 1):
+    for (i, v) in enumerate(p[1:], 1):
         res[v].append(i)
     return res
 
 
 def check(L, Par, wri, even):
     for i in range(len(Par)):
-        if wri[i] and (wri[i] % 2 == even[i]):
+        if wri[i] and wri[i] % 2 == even[i]:
             return False
-
-    inf = 10**9 + 7
+    inf = 10 ** 9 + 7
     dpu = [w if w is not None else inf for w in wri]
     dpd = [w if w is not None else -inf for w in wri]
     for l in L[::-1][:-1]:
@@ -73,24 +72,21 @@ def check(L, Par, wri, even):
 N = int(readline())
 Edge = [[] for _ in range(N)]
 for _ in range(N - 1):
-    a, b = map(int, readline().split())
+    (a, b) = map(int, readline().split())
     a -= 1
     b -= 1
     Edge[a].append(b)
     Edge[b].append(a)
 K = int(readline())
-
 VP = [tuple(map(lambda x: int(x), readline().split())) for _ in range(K)]
 wri = [None] * N
-for v, p in VP:
+for (v, p) in VP:
     wri[v - 1] = p
-
 root = VP[0][0] - 1
 Par = getpar(Edge, root)
 L = topological_sort_tree(Edge, root)
-
 even = [True] * N
-even[root] = (wri[root] % 2 == 0)
+even[root] = wri[root] % 2 == 0
 for l in L[1:]:
     p = Par[l]
     even[l] = not even[p]

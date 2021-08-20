@@ -7,4 +7,4 @@ for i in x:
         ans += i
     if i > K - i:
         ans += K - i
-print((2 * ans))
+print(2 * ans)

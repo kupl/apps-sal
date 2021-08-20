@@ -8,15 +8,13 @@ def norm(a, b):
 
 def solve():
     houses = []
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     for i in range(n):
         s = input()
-        tmp = [i for i, x in enumerate(s) if x == '1']
+        tmp = [i for (i, x) in enumerate(s) if x == '1']
         houses = houses + [(i, j) for j in tmp]
-
     counter = defaultdict(int)
-    for a, b in combinations(houses, 2):
+    for (a, b) in combinations(houses, 2):
         counter[norm(a, b)] += 1
     return [counter[i] for i in range(1, n + m - 1)]
 

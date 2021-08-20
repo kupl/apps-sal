@@ -1,5 +1,5 @@
 from itertools import accumulate
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [0] + list(accumulate(map(int, input().split())))
 di = {}
 for i in a:

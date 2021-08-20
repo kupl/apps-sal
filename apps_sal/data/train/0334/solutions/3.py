@@ -1,4 +1,5 @@
 class Solution:
+
     def minCost(self, s: str, cost: List[int]) -> int:
         s = list(s)
         sums = 0
@@ -8,5 +9,4 @@ class Solution:
                 sums += min(cost[i], cost[i + 1])
                 cost[i + 1] = max(cost[i], cost[i + 1])
             i += 1
-
         return sums

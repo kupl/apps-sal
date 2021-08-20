@@ -2,7 +2,6 @@ N = int(input())
 S = ['' for i in range(N)]
 for i in range(N):
     S[i] = str(input())
-
 item = [0, 0, 0, 0]
 rslt = ['AC', 'WA', 'TLE', 'RE']
 for i in range(N):
@@ -14,6 +13,5 @@ for i in range(N):
         item[2] += 1
     else:
         item[3] += 1
-
 for i in range(4):
     print(rslt[i], 'x', item[i])

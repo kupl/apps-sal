@@ -19,5 +19,4 @@ def solve(s):
 ans = 30 * n
 for s in range(n - 3):
     ans = min(ans, solve(s))
-
 print(ans)

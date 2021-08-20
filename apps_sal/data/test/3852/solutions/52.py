@@ -1,9 +1,9 @@
 n = int(input())
 arr = list(map(int, input().split()))
 arr = [[arr[i], i + 1] for i in range(n)]
-mins = 10**18
+mins = 10 ** 18
 minpos = 0
-maxs = -10**18
+maxs = -10 ** 18
 maxpos = 0
 for i in range(n):
     a = arr[i][0]
@@ -18,17 +18,16 @@ if maxs <= 0:
     flag = False
 elif mins >= 0:
     flag = True
+elif maxs >= abs(mins):
+    flag = True
+    for i in range(n):
+        arr[i][0] += maxs
+        ans.append([maxpos, arr[i][1]])
 else:
-    if maxs >= abs(mins):
-        flag = True
-        for i in range(n):
-            arr[i][0] += maxs
-            ans.append([maxpos, arr[i][1]])
-    else:
-        flag = False
-        for i in range(n):
-            arr[i][0] += mins
-            ans.append([minpos, arr[i][1]])
+    flag = False
+    for i in range(n):
+        arr[i][0] += mins
+        ans.append([minpos, arr[i][1]])
 if flag == True:
     for i in range(1, n):
         ans.append([i, i + 1])

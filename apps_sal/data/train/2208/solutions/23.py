@@ -12,7 +12,6 @@ def find(u, a):
 def union(a, u, v, ct):
     x = find(u, a)
     y = find(v, a)
-    # print(x,y)
     if x == y:
         ct += 1
     else:
@@ -21,12 +20,10 @@ def union(a, u, v, ct):
     return ct
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = [-1 for i in range(n + 1)]
 count = 0
 for i in range(k):
-    u, v = map(int, input().split())
+    (u, v) = map(int, input().split())
     count = union(a, u, v, count)
-    # print(a)
-
 print(count)

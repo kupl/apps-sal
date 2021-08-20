@@ -1,5 +1,4 @@
 USE_STDIO = False
-
 if not USE_STDIO:
     try:
         import mypc
@@ -14,9 +13,9 @@ def gcd(x, y):
 
 
 def main():
-    a, b, x, y = list(map(int, input().split(' ')))
+    (a, b, x, y) = list(map(int, input().split(' ')))
     g = gcd(x, y)
-    x, y = x // g, y // g
+    (x, y) = (x // g, y // g)
     ans = min(a // x, b // y)
     print(ans)
 

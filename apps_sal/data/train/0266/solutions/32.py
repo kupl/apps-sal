@@ -1,7 +1,8 @@
 class Solution:
+
     def numSplits(self, s: str) -> int:
-        lc, rc = [], []
-        ls, rs = set(), set()
+        (lc, rc) = ([], [])
+        (ls, rs) = (set(), set())
         for c in s:
             ls.add(c)
             lc.append(len(ls))

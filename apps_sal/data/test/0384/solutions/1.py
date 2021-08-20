@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import re
 
 
@@ -7,10 +5,9 @@ def main():
     try:
         while True:
             input()
-            a = list(map(len, [_f for _f in re.split(r"W+", input()) if _f]))
+            a = list(map(len, [_f for _f in re.split('W+', input()) if _f]))
             print(len(a))
             print(*a)
-
     except EOFError:
         pass
 

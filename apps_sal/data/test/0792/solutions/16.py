@@ -1,4 +1,4 @@
-n, d = list(map(int, input().split()))
+(n, d) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 s = 0
 m = 0
@@ -15,16 +15,15 @@ for i in range(n):
             m = min(m, s)
     elif a[i] < 0:
         s = s + a[i]
-    else:
-        if(s + a[i] > d):
-            if(s + a[i] - d) > m:
-                flag = False
-                break
-            else:
-                m -= (s + a[i] - d)
-                s = d
+    elif s + a[i] > d:
+        if s + a[i] - d > m:
+            flag = False
+            break
         else:
-            s = s + a[i]
+            m -= s + a[i] - d
+            s = d
+    else:
+        s = s + a[i]
 if flag:
     print(ans)
 else:

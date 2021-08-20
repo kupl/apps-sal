@@ -11,7 +11,6 @@ for i in range(n // 2 + 1):
         s += '*'
     k += 2
     print(s)
-
 k -= 4
 for i in range(n // 2):
     s = ''

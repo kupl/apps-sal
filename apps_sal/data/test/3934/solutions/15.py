@@ -3,7 +3,7 @@ N = int(input())
 Edge = [[] for _ in range(N)]
 Dim = [0] * N
 for _ in range(N - 1):
-    a, b = map(int, sys.stdin.readline().split())
+    (a, b) = map(int, sys.stdin.readline().split())
     a -= 1
     b -= 1
     Edge[a].append(b)

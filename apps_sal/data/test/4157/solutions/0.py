@@ -1,6 +1,6 @@
 def powof3(x):
     ans = 0
-    while(x % 3 == 0):
+    while x % 3 == 0:
         x = x // 3
         ans += 1
     return ans

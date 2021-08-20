@@ -8,7 +8,7 @@ for i in range(t):
             co += 1
             m = n[j]
         if co > 2:
-            print("non-uniform")
+            print('non-uniform')
             break
     if co <= 2:
-        print("uniform")
+        print('uniform')

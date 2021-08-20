@@ -2,6 +2,7 @@ mexp = 10 ** 9 + 7
 
 
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         dp = [1 for x in range(10)]
         for _ in range(n - 1):

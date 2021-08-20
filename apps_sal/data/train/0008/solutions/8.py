@@ -1,5 +1,5 @@
 def solve():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     s = input()
     ans = 0
     prev = False

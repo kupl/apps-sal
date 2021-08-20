@@ -1,6 +1,7 @@
 class Solution:
+
     def minNumberOfFrogs(self, croakOfFrogs: str) -> int:
-        frogs, c, r, o, a, k = 0, 0, 0, 0, 0, 0
+        (frogs, c, r, o, a, k) = (0, 0, 0, 0, 0, 0)
         for char in croakOfFrogs:
             if char == 'c':
                 c += 1

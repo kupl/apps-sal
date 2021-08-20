@@ -1,6 +1,6 @@
 import numpy as np
 import itertools
-N, C, *XV = [int(_) for _ in open(0).read().split()]
+(N, C, *XV) = [int(_) for _ in open(0).read().split()]
 XV = [0, 0] + XV
 XV = np.array(XV).reshape((N + 1, 2))
 YV = np.zeros((N + 1, 2), dtype=np.int64)
@@ -21,4 +21,4 @@ def calc(XV, YV):
     return ans
 
 
-print((max(calc(XV, YV), calc(YV, XV))))
+print(max(calc(XV, YV), calc(YV, XV)))

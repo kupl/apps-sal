@@ -1,4 +1,3 @@
-# -*-coding: utf-8 -*-
 from sys import stdin
 for line in stdin:
     entrada = line.splitlines()

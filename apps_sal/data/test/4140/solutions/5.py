@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,15 +9,13 @@ MOD = 1000000007
 
 def main():
     S = readline().strip()
-
     ans1 = ans2 = 0
-    for i, c in enumerate(S):
+    for (i, c) in enumerate(S):
         if i % 2 == int(c):
             ans1 += 1
         else:
             ans2 += 1
-
-    print((min(ans1, ans2)))
+    print(min(ans1, ans2))
     return
 
 

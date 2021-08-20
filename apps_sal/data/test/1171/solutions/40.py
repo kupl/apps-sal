@@ -1,9 +1,7 @@
 import bisect
-
-N, K = [int(x) for x in input().split()]
+(N, K) = [int(x) for x in input().split()]
 V = [int(x) for x in input().split()]
 M = min(N, K)
-
 ans = 0
 juwel = []
 for l in range(M + 1):
@@ -13,5 +11,4 @@ for l in range(M + 1):
         s = min(s, K - l - r)
         juwel = juwel[s:]
         ans = max(ans, sum(juwel))
-
 print(ans)

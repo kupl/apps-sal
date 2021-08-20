@@ -1,10 +1,10 @@
 for _ in range(int(input())):
-    n, s = tuple(map(int, input().split()))
+    (n, s) = tuple(map(int, input().split()))
     p = list(map(int, input().split()))
     isattacker = list(map(int, input().split()))
     minatk = 101
     mindef = 101
-    for pos, price in zip(isattacker, p):
+    for (pos, price) in zip(isattacker, p):
         if pos == 1 and minatk > price:
             minatk = price
         elif pos == 0 and mindef > price:

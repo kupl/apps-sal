@@ -2,8 +2,8 @@ from collections import deque
 
 
 class Solution:
-    def minDays(self, n: int) -> int:
 
+    def minDays(self, n: int) -> int:
         d = {}
         q = deque([n])
         d[n] = 0
@@ -15,10 +15,8 @@ class Solution:
                 temp.append(item // 2)
             if item % 3 == 0:
                 temp.append(item // 3)
-
             for i in temp:
                 if i not in d:
                     d[i] = day
                     q.append(i)
-
         return d[0]

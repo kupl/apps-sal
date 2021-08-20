@@ -1,4 +1,4 @@
-h, a = map(int, input().split())
+(h, a) = map(int, input().split())
 hitpoint = h
 count = 0
 while hitpoint > 0:

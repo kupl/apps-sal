@@ -1,4 +1,4 @@
-k, q, v, s = int(input()), input(), 'YES', set()
+(k, q, v, s) = (int(input()), input(), 'YES', set())
 for ch in q:
     if k == 0 or ch in s:
         v += ch

@@ -16,5 +16,5 @@ for i in range(n):
 c = n - b
 ans = min(b, c)
 if b < c:
-    ans += ((c - b) // 3)
+    ans += (c - b) // 3
 print(ans)

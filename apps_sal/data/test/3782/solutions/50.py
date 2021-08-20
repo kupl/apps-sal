@@ -3,10 +3,9 @@ import sys
 
 def main():
     input = sys.stdin.readline
-    N, K, Q = map(int, input().split())
-    *A, = map(int, input().split())
-
-    ans = 10**10
+    (N, K, Q) = map(int, input().split())
+    (*A,) = map(int, input().split())
+    ans = 10 ** 10
     from heapq import heappop, heappush
     A.append(-1)
     for y in A:

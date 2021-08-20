@@ -7,7 +7,7 @@ def prime_digits(num):
     return True
 
 
-primes = set([2] + [n for n in range(3, 20000, 2) if all(n % r for r in range(3, int(n ** 0.5) + 1, 2))])
+primes = set([2] + [n for n in range(3, 20000, 2) if all((n % r for r in range(3, int(n ** 0.5) + 1, 2)))])
 
 
 def not_primes(a, b):

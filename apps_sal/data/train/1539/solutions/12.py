@@ -5,7 +5,7 @@ for itercnt in range(tc):
     cnt = 0
     for x in str2:
         for y in str1:
-            if (x == y):
+            if x == y:
                 cnt += 1
                 break
     print(cnt)

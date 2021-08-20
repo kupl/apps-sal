@@ -1,5 +1,5 @@
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     a.sort()
     mod = 10 ** 9 + 7
@@ -12,15 +12,13 @@ def main():
         inv[i] %= mod
 
     def comb(a, b, mod):
-        return (fac[a] * inv[b] * inv[a - b]) % mod
-
+        return fac[a] * inv[b] * inv[a - b] % mod
     ans = 0
     for i in range(k - 1, n):
         nck = comb(i, k - 1, mod)
         ans += nck * a[i]
         ans -= nck * a[n - i - 1]
         ans %= mod
-
     print(ans)
 
 

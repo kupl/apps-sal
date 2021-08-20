@@ -2,6 +2,7 @@ from heapq import heappop, heappush
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         heap = []
         self.parent = {}
@@ -10,10 +11,9 @@ class Solution:
             for j in range(i + 1, len(points)):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
                 heappush(heap, (dist, i, j))
-
         result = 0
         while heap:
-            cur_dist, point1, point2 = heappop(heap)
+            (cur_dist, point1, point2) = heappop(heap)
             point1_parent = self.find(point1)
             point2_parent = self.find(point2)
             if point1_parent == point2_parent:

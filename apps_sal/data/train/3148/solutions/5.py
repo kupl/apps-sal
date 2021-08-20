@@ -15,5 +15,4 @@ def simplify(p):
             p = p[:r.index((x, y))] + p[len(r):]
             r = r[:r.index((x, y))]
         r.append((x, y))
-
     return p

@@ -8,7 +8,6 @@ for i in range(len(first)):
     if second[i] == '0':
         num += 1
     adad.append(num)
-
 cnt = 0
 last_fill = -1
 for i in range(1, len(adad)):

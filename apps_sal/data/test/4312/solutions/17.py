@@ -1,4 +1,4 @@
-'''
+"""
 問題：
     高橋君と青木君がモンスターを闘わせます。
 
@@ -11,16 +11,12 @@
     先に自分のモンスターの体力が 0 以下になった方の負け、そうでない方の勝ちです。
 
     高橋君が勝つなら Yes、負けるなら No を出力してください。
-'''
-
-'''
-制約：
-    1 ≦ A, B, C, D ≦ 100
-    入力は全て整数である
-'''
+"""
+'\n制約：\n    1 ≦ A, B, C, D ≦ 100\n    入力は全て整数である\n'
 
 
 class Monster:
+
     def __init__(self, hp, power):
         self.hp = hp
         self.power = power
@@ -33,22 +29,17 @@ class Monster:
         return self.hp <= 0
 
 
-# 標準入力から A, B, C, D を取得する
-a, b, c, d = list(map(int, input().split()))
-
-takahashi_monster = Monster(a, b)   # 高橋モンスター
-aoki_monster = Monster(c, d)    # 青木モンスター
-result = "ret"
-
+(a, b, c, d) = list(map(int, input().split()))
+takahashi_monster = Monster(a, b)
+aoki_monster = Monster(c, d)
+result = 'ret'
 while True:
-    aoki_monster.fight(b)   # 高橋の攻撃
+    aoki_monster.fight(b)
     if aoki_monster.is_loser():
-        result = "Yes"
+        result = 'Yes'
         break
-
-    takahashi_monster.fight(d)  # 青木の攻撃
+    takahashi_monster.fight(d)
     if takahashi_monster.is_loser():
-        result = "No"
+        result = 'No'
         break
-
 print(result)

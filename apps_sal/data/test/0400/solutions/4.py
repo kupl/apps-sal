@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 ki = [0] * 11
 su = 0
 for x in input().split():

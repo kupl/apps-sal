@@ -8,15 +8,13 @@ def count(a, low):
     return topi - lowi
 
 
-gn, dn, fn = map(int, input().split())
+(gn, dn, fn) = map(int, input().split())
 g = [int(x) for x in input().split()]
 d = [int(x) for x in input().split()]
 f = [int(x) for x in input().split()]
-
 g = sorted(g)
 d = sorted(d)
 f = sorted(f)
-
 ans = 0
 for x in g:
     dc = count(d, x)
@@ -32,5 +30,4 @@ for x in f:
     dc = count(d, x)
     fc = count(f, x)
     ans += gc * dc * (dc - 1) * (fc - 1) * (fc - 2) // 4
-
 print(ans)

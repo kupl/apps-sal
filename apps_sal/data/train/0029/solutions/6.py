@@ -8,7 +8,6 @@ for qq in range(int(input())):
         last[a[i]] = i
     for i in range(n + 1):
         dura[i] = max(dura[i], n - last[i] - 1)
-
     ans = [n + 1] * n
     for i in range(n + 1):
         if dura[i] == n:

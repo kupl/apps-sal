@@ -3,16 +3,12 @@ def letters():
 
 
 s = input()
-
 ls = {lt: 0 for lt in letters()}
-
 for lt in s:
     ls[lt] += 1
-
 s = [ch for ch in reversed(s)]
 stack = []
 res = []
-
 for curr in letters():
     while stack and stack[-1] <= curr:
         res.append(stack.pop(-1))

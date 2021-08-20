@@ -1,5 +1,4 @@
-A, B, C = sorted(map(int, input().split()))
-# 1減らす or 2増やす
+(A, B, C) = sorted(map(int, input().split()))
 C -= A
 B -= A
 ans = 0

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumTwoNoOverlap(self, A: List[int], L: int, M: int) -> int:
         space = len(A) - L - M
         maxx = 0
@@ -39,5 +40,4 @@ class Solution:
                     leftSum += A[b]
                     rightSum -= A[c - 1]
                     rightSum += A[d]
-
         return max(maxx, maxx2)

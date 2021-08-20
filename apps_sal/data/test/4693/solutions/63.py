@@ -1,5 +1,5 @@
 C = sum(map(int, input().split()))
 if C >= 10:
-    print("error")
+    print('error')
 else:
     print(C)

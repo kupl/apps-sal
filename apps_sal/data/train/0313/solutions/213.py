@@ -1,4 +1,4 @@
-'''
+"""
 class Solution:
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         A = bloomDay
@@ -18,14 +18,15 @@ class Solution:
             else:
                 left = mid + 1
         return left
-'''
+"""
 
 
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if len(bloomDay) < m * k:
             return -1
-        l, r = 1, max(bloomDay)
+        (l, r) = (1, max(bloomDay))
         while l < r:
             mid = l + (r - l) // 2
             temp = 0

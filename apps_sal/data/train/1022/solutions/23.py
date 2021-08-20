@@ -4,7 +4,7 @@ while t:
     n = int(input())
     a = list(map(int, input().strip().split()))
     if n % 2:
-        print("NO")
+        print('NO')
     else:
         okay = True
         p = n // 2
@@ -18,9 +18,9 @@ while t:
             elif a[i] != a[i + p]:
                 okay = False
         if okay:
-            print("YES")
+            print('YES')
             for x in a:
-                print(x, end=" ")
+                print(x, end=' ')
             print()
         else:
-            print("NO")
+            print('NO')

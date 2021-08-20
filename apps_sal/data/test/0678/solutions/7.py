@@ -16,7 +16,7 @@ BAZ IS NOW A NUMBAR
 VISIBLE SMOOSH QUOSHUNT OF BAZ QUZ
 KTHXBYE
 """
-tux, foo, bar, baz, quz = int(input()), 0, 0, 0, 1
+(tux, foo, bar, baz, quz) = (int(input()), 0, 0, 0, 1)
 while tux != 0:
     pur = int(input())
     foo += pur

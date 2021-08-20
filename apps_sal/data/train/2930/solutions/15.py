@@ -1,4 +1,3 @@
-
 def summation(num):
     answer = 0
     for x in range(num):

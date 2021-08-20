@@ -10,7 +10,7 @@ for i in range(t):
         dct[i] = [now, max(dct[i][1], now - dct[i][0])]
         now += 1
     for i in dct:
-        dct[i] = max(dct[i][1], (n - dct[i][0]))
+        dct[i] = max(dct[i][1], n - dct[i][0])
     a = [(dct[i], i) for i in dct]
     a.sort()
     mini = 1000000000000000

@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
         mod = 10 ** 9 + 7
 
@@ -9,11 +10,10 @@ class Solution:
         def dfs(source, fuel):
             if fuel < 0:
                 return 0
-
             cnt = 0
             if source == finish:
                 cnt += 1
-            for i, val in enumerate(locations):
+            for (i, val) in enumerate(locations):
                 if i != source:
                     cnt += dfs(i, fuel - abs(locations[source] - val))
             return cnt % mod

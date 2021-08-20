@@ -1,7 +1,7 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 c = a - b
 h = sorted([int(input()) for _i in range(n)], reverse=True)
-left, right = 0, 10**9
+(left, right) = (0, 10 ** 9)
 while left < right:
     middle = (left + right) // 2
     counter = 0

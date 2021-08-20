@@ -1,7 +1,6 @@
 array = []
-n, m, d = input().split()
-n, m, d = int(n), int(m), int(d)
-
+(n, m, d) = input().split()
+(n, m, d) = (int(n), int(m), int(d))
 for i in range(n):
     array += list(map(int, input().split()))
 rem = array[0] % d

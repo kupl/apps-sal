@@ -11,13 +11,12 @@ for i in range(n):
         if p == -1:
             p = el
             cnt += 1
+        elif el == p:
+            cnt += 1
         else:
-            if el == p:
-                cnt += 1
-            else:
-                a.append((cnt, p))
-                cnt = 1
-                la += 1
+            a.append((cnt, p))
+            cnt = 1
+            la += 1
         p = el
     if cnt != 0:
         a.append((cnt, p))
@@ -29,13 +28,12 @@ for i in range(n):
         if p == -1:
             p = el
             cnt += 1
+        elif el == p:
+            cnt += 1
         else:
-            if el == p:
-                cnt += 1
-            else:
-                b.append((cnt, p))
-                cnt = 1
-                lb += 1
+            b.append((cnt, p))
+            cnt = 1
+            lb += 1
         p = el
     if cnt != 0:
         b.append((cnt, p))

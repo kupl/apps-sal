@@ -9,8 +9,8 @@ def convert_recipe(recipe):
 
 
 def tbsp(m):
-    return m.group(1) + " (" + str(math.ceil(eval('15*' + m.group(2)))) + "g)"
+    return m.group(1) + ' (' + str(math.ceil(eval('15*' + m.group(2)))) + 'g)'
 
 
 def tsp(m):
-    return m.group(1) + " (" + str(math.ceil(eval('5*' + m.group(2)))) + "g)"
+    return m.group(1) + ' (' + str(math.ceil(eval('5*' + m.group(2)))) + 'g)'

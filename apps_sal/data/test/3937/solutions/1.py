@@ -29,9 +29,9 @@ def extendedEuclides(a, b):
 
 def chineseRemainder(x, y, a, b):
     [d, s, t] = extendedEuclides(x, y)
-    if(a % d != b % d):
+    if a % d != b % d:
         return [0, -1]
-    return [int(((s * b * x + t * a * y) % (x * y)) / d), x * y / d]
+    return [int((s * b * x + t * a * y) % (x * y) / d), x * y / d]
 
 
 [n, m, k] = input().split(' ')
@@ -45,9 +45,9 @@ for el in arr:
     if I > n:
         break
 if I == 1:
-    print("YES")
+    print('YES')
 elif I > n:
-    print("NO")
+    print('NO')
 else:
     can = 1
     auxI = I
@@ -64,27 +64,26 @@ else:
     if auxI > 1:
         fat.append(auxI)
         occur.append(-1)
-    for i, x in enumerate(fat):
+    for (i, x) in enumerate(fat):
         for j in range(0, min(k, x)):
-            if(gcd(arr[j], x) == x):
+            if gcd(arr[j], x) == x:
                 occur[i] = j
         if occur[i] == -1:
             can = 0
-    for i, x in enumerate(fat):
+    for (i, x) in enumerate(fat):
         for j in range(0, k):
-            if ((gcd(arr[j], x) != x and j % x == occur[i]) or (gcd(arr[j], x) == x and j % x != occur[i])):
+            if gcd(arr[j], x) != x and j % x == occur[i] or (gcd(arr[j], x) == x and j % x != occur[i]):
                 can = 0
     I = 1
     J = 1
     lrem = 0
-    for i, x in enumerate(fat):
+    for (i, x) in enumerate(fat):
         rem = (x - occur[i]) % x
         g = gcd(I, x)
         auxI = I * int(x / g)
         xxx = chineseRemainder(I, x, lrem % I, rem)
         lrem = xxx[0]
         I = auxI
-        # print(lrem,rem,x,I)
     if lrem == 0:
         lrem = I
     if int(lrem) > m - k + 1:
@@ -93,5 +92,3 @@ else:
         print('NO')
     else:
         print('YES')
-
-# 1491583140056

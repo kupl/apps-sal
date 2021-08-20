@@ -18,7 +18,7 @@ def getTransIntList(n):
     return result
 
 
-n, k, d = getIntList()
+(n, k, d) = getIntList()
 a = getIntList()
 a.sort()
 seen = [False] * len(a)

@@ -11,6 +11,6 @@ for _ in range(int(input())):
         if flag == 1:
             break
     if flag == 1:
-        print("Accepted")
+        print('Accepted')
     else:
-        print("Rejected")
+        print('Rejected')

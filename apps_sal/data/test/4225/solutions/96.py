@@ -1,5 +1,4 @@
-a, b, c, k = map(int, input().split())
-
+(a, b, c, k) = map(int, input().split())
 max_val = 0
 if k <= a:
     max_val += k
@@ -8,9 +7,7 @@ else:
     k -= a
     if k <= b:
         pass
-        # break
     else:
         k -= b
         max_val -= k
-
 print(max_val)

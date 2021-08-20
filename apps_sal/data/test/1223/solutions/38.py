@@ -1,27 +1,18 @@
-# https://atcoder.jp/contests/abc140/submissions/7411285
-# 写経
-
 def main():
     N = int(input())
-    *p, = list(map(int, input().split()))
-
+    (*p,) = list(map(int, input().split()))
     xtoi = [-1] * (N + 1)
-    for i, x in enumerate(p):
+    for (i, x) in enumerate(p):
         xtoi[x] = i
-
     L = [-1] * (N + 2)
     R = [N] * (N + 2)
     for i in range(N):
         L[i] = i - 1
         R[i] = i + 1
-
     iter_inds = iter(xtoi)
     next(iter_inds)
-
     ans = 0
-    for x, ind in enumerate(iter_inds, start=1):
-        # l2, ..., l1, ..., x, ..., r1, ..., r2
-        # (l2,r1) or (l1,r2)
+    for (x, ind) in enumerate(iter_inds, start=1):
         l1 = L[ind]
         l2 = L[l1]
         r1 = R[ind]

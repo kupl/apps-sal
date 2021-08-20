@@ -1,4 +1,4 @@
-a, b, f, k = list(map(int, input().split()))
+(a, b, f, k) = list(map(int, input().split()))
 ans = 0
 c = b
 if b < f:
@@ -20,5 +20,4 @@ for i in range(k):
         ans += 1
         c = b
     c -= d
-
 print(ans)

@@ -1,5 +1,5 @@
 def alternateCase(s):
-    string = ""
+    string = ''
     for char in s:
         if char.islower():
             string += char.upper()

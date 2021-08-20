@@ -1,4 +1,4 @@
-n, Q = list(map(int, input().split()))
+(n, Q) = list(map(int, input().split()))
 cnt = 1
 F = [1]
 for i in range(1, 17):
@@ -11,7 +11,7 @@ for i in range(1, n + 1):
 for _ in range(Q):
     q = list(map(int, input().split()))
     if q[0] == 1:
-        l, r = q[1], q[2]
+        (l, r) = (q[1], q[2])
         print(a[r] - a[l - 1])
         continue
     x = q[1]

@@ -6,7 +6,7 @@ def lcm(a, b):
 
 
 def min_special_mult(arr):
-    valid, invalid = [], []
+    (valid, invalid) = ([], [])
     for x in filter(None, arr):
         try:
             valid.append(abs(int(x)))

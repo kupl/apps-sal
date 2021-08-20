@@ -15,5 +15,5 @@ for _ in range(int(input())):
         if a[i] > 0:
             res.append(i + 1)
     print(ans)
-    print(len(res), end=" ")
+    print(len(res), end=' ')
     print(*res)

@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         res = []
         for i in range(2, n + 1):
@@ -11,5 +12,5 @@ class Solution:
 
     def gcd(self, a, b):
         while b:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return abs(a)

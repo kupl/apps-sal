@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         check = set(A)
@@ -6,15 +7,14 @@ class Solution:
 
         def helper(i, j):
             if (i, j) in dp:
-                return dp[(i, j)]
-
+                return dp[i, j]
             total = i + j
             if total not in check:
                 result = 2
             else:
                 val = helper(j, total)
                 result = val + 1
-            dp[(i, j)] = result
+            dp[i, j] = result
             return result
         for i in range(n):
             for j in range(i + 1, n):

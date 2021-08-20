@@ -1,10 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
-
 res = []
 flag = True
-
 for i in range(4):
     if len(res) == n:
         flag = True
@@ -15,14 +13,13 @@ for i in range(4):
         if not flag:
             break
         for j in range(4):
-            if (res[k] & j) == b[k] and (res[k] | j) == a[k]:
+            if res[k] & j == b[k] and res[k] | j == a[k]:
                 res.append(j)
                 break
         else:
             flag = False
-
 if flag:
-    print("YES")
+    print('YES')
     print(*res)
 else:
-    print("NO")
+    print('NO')

@@ -1,8 +1,6 @@
 n = int(input())
 a = input()
-
 dic = {'SF': 0, 'FS': 0}
-
 for i in range(1, n):
     if a[i - 1] == 'F' and a[i] == 'S':
         dic['FS'] += 1

@@ -1,5 +1,5 @@
 def repeater(string, n):
-    return(string * n)
+    return string * n
 
 
-print("R", 5)
+print('R', 5)

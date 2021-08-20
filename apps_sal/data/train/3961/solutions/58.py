@@ -1,2 +1,2 @@
 def say_hello(name):
-    return "".join(["Hello, ", name])
+    return ''.join(['Hello, ', name])

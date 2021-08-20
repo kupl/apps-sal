@@ -2,7 +2,6 @@ from sys import *
 
 
 def main():
-
     nbre1 = int(stdin.readline().strip())
     nbre2 = int(stdin.readline().strip())
     if nbre1 > nbre2:

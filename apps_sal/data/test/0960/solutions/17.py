@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 ans = 2 * 10 ** 9
 i = 1
 while i * i <= n:

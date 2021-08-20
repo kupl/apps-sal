@@ -1,7 +1,7 @@
 n = int(input())
-ans, p, s = 0, 0, 0
+(ans, p, s) = (0, 0, 0)
 for i in range(n):
-    t, c = map(int, input().split())
+    (t, c) = map(int, input().split())
     s -= min(s, t - p)
     p = t
     s += c

@@ -7,7 +7,6 @@ for i in range(t):
         if s[i] == '8' and n - i >= 11:
             st = True
             break
-
     if st:
         print('YES')
     else:

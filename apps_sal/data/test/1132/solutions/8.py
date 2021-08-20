@@ -1,11 +1,11 @@
-n, m = [int(k) for k in input().split()]
+(n, m) = [int(k) for k in input().split()]
 ans = 'bus topology'
 dict = {}
 count = 0
 t = 0
 if m >= n - 1:
     for i in range(m):
-        first, second = [int(k) for k in input().split()]
+        (first, second) = [int(k) for k in input().split()]
         if first not in dict:
             dict[first] = set()
             dict[first].add(second)

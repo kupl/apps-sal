@@ -1,5 +1,5 @@
-
 def self_converge(number):
+
     def sub_converge(n, l, min_length):
         digits = [d for d in str(n)]
         while len(digits) < min_length:
@@ -8,7 +8,7 @@ def self_converge(number):
         desc = asc[::-1]
         if asc == desc:
             return -1
-        next = int("".join(desc)) - int("".join(asc))
+        next = int(''.join(desc)) - int(''.join(asc))
         if next in l:
             return len(l) + 1
         else:

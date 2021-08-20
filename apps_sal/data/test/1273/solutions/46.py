@@ -3,11 +3,11 @@ from collections import deque
 N = int(input())
 inp = []
 for k in range(N - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a > b:
-        a, b = b - 1, a - 1
+        (a, b) = (b - 1, a - 1)
     else:
-        a, b = a - 1, b - 1
+        (a, b) = (a - 1, b - 1)
     inp.append((a, b, k))
 inp.sort(key=lambda x: x[0])
 inp = deque(inp)
@@ -21,14 +21,11 @@ def binary_search(list, item):
         mid = (low + high) // 2
         guess = list[mid]
         if guess == item:
-            # return mid
             return True
         if guess > item:
             high = mid - 1
         else:
             low = mid + 1
-
-    # return None
     return False
 
 

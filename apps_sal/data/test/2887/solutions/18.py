@@ -1,17 +1,14 @@
-'''
+"""
 Name: Devansh
 Username: singhdevansh
 Github: https://github.com/Devansh3712
-'''
-
+"""
 import os
 import sys
 import math
 from itertools import *
 from io import BytesIO, IOBase
 from collections import *
-
-# <fast I/O>
 BUFSIZE = 8192
 
 
@@ -21,7 +18,7 @@ class FastIO(IOBase):
     def __init__(self, file):
         self._fd = file.fileno()
         self.buffer = BytesIO()
-        self.writable = "x" in file.mode or "r" not in file.mode
+        self.writable = 'x' in file.mode or 'r' not in file.mode
         self.write = self.buffer.write if self.writable else None
 
     def read(self):
@@ -30,61 +27,59 @@ class FastIO(IOBase):
             if not b:
                 break
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines = 0
         return self.buffer.read()
 
     def readline(self):
         while self.newlines == 0:
             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
-            self.newlines = b.count(b"\n") + (not b)
+            self.newlines = b.count(b'\n') + (not b)
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines -= 1
         return self.buffer.readline()
 
     def flush(self):
         if self.writable:
             os.write(self._fd, self.buffer.getvalue())
-            self.buffer.truncate(0), self.buffer.seek(0)
+            (self.buffer.truncate(0), self.buffer.seek(0))
 
 
 class IOWrapper(IOBase):
+
     def __init__(self, file):
         self.buffer = FastIO(file)
         self.flush = self.buffer.flush
         self.writable = self.buffer.writable
-        self.write = lambda s: self.buffer.write(s.encode("ascii"))
-        self.read = lambda: self.buffer.read().decode("ascii")
-        self.readline = lambda: self.buffer.readline().decode("ascii")
+        self.write = lambda s: self.buffer.write(s.encode('ascii'))
+        self.read = lambda: self.buffer.read().decode('ascii')
+        self.readline = lambda: self.buffer.readline().decode('ascii')
 
 
-sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
-# </fast I/O>
-
-# <template>
-mod = (10**9) + 7
-pi = 3.14159265358979323846264338327950
+(sys.stdin, sys.stdout) = (IOWrapper(sys.stdin), IOWrapper(sys.stdout))
+mod = 10 ** 9 + 7
+pi = 3.141592653589793
 
 
-def i1():  # int(input())
+def i1():
     return int(sys.stdin.readline())
 
 
-def sf():  # input()
+def sf():
     return sys.stdin.readline()
 
 
-def mi():  # map(int(input()))
+def mi():
     return map(int, sys.stdin.readline().split())
 
 
-def arr():  # list(map(int,input().split()))
+def arr():
     return list(map(int, sys.stdin.readline().split()))
 
 
-def pf(ans):  # print(x)
-    return sys.stdout.write(str(ans) + "\n")
+def pf(ans):
+    return sys.stdout.write(str(ans) + '\n')
 
 
 def gcd(a, b):
@@ -99,7 +94,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) // gcd(a, b)
+    return a * b // gcd(a, b)
 
 
 def LogN(a, b):
@@ -108,7 +103,7 @@ def LogN(a, b):
 
 def fpow(a, b):
     res = 1
-    while (b > 0):
+    while b > 0:
         if b & 1:
             res = res * a
         a = a * a
@@ -119,7 +114,7 @@ def fpow(a, b):
 def sieve(n):
     m = (n - 1) // 2
     b = [True] * m
-    i, p, ps = 0, 3, [2]
+    (i, p, ps) = (0, 3, [2])
     while p * p < n:
         if b[i]:
             ps.append(p)
@@ -135,9 +130,6 @@ def sieve(n):
         i += 1
         p += 2
     return ps
-# </template>
-
-# <solve>
 
 
 def solve():
@@ -159,10 +151,3 @@ def solve():
 
 
 solve()
-# </solve>
-
-# <solution>
-# tc=i1()
-# for t in range (tc):
-# 	solve()
-# <solution>

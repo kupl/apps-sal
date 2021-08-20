@@ -1,12 +1,9 @@
 import sys
 input = sys.stdin.readline
-
-
 t = int(input())
 for _ in range(t):
     n = int(input())
     a = list(map(int, input().split()))
-
     ans = 0
     for i in range(n - 1):
         diff = a[i] - a[i + 1]

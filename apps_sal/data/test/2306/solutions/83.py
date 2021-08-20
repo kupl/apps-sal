@@ -20,9 +20,8 @@ def upd(x, y, z, t):
             y = x + t
         elif t < a + b:
             y = x + (t + (z - x)) / 2
-    else:
-        if t < a:
-            y = x + t
+    elif t < a:
+        y = x + t
     return y
 
 
@@ -36,17 +35,14 @@ for i in range(1, N):
         if L[j] == 0:
             if k == -1:
                 k = j
-            else:
-                if v[j] < v[k]:
-                    k = j
+            elif v[j] < v[k]:
+                k = j
     L[k] = 1
     if k != 1:
         v[k - 1] = upd(min(v[k], v[k - 2]), v[k - 1], max(v[k], v[k - 2]), t[k - 2])
     if k != N:
         v[k + 1] = upd(min(v[k], v[k + 2]), v[k + 1], max(v[k], v[k + 2]), t[k])
-
 ans = 0
 for i in range(N):
     ans += exe(v[i], v[i + 1], v[i + 2], t[i])
-
 print(ans)

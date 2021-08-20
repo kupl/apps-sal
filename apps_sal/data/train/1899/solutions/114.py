@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestBridge(self, A: List[List[int]]) -> int:
         originBridge = []
 
@@ -7,7 +8,6 @@ class Solution:
             y = cord[0]
             A[y][x] = 2
             originBridge.append(cord)
-
             if x < len(A[y]) - 1:
                 if A[y][x + 1] == 1:
                     markBridge((y, x + 1))

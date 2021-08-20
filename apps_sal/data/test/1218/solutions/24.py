@@ -1,13 +1,12 @@
-n, k = list(map(int, input().split()))
-n, k = n - 1, k - 1
+(n, k) = list(map(int, input().split()))
+(n, k) = (n - 1, k - 1)
 l = 0
 r = k
 g = k * (k + 1) // 2
 ans = -1
 while l <= r:
     m = (l + r) // 2
-    # print(g,m*(m+1)//2,n,l,r)
-    if (g - m * (m + 1) // 2) >= n:
+    if g - m * (m + 1) // 2 >= n:
         ans = k - m
         l = m + 1
     else:

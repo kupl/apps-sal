@@ -1,26 +1,16 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2019/1/26 23:58
-# @Author  : LunaFire
-# @Email   : gilgemesh2012@gmail.com
-# @File    : C. Brutality.py
-
-
 def main():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     a = list(map(int, input().split()))
     s = input()
-
     ret = p1 = 0
     while p1 < n:
-        p2, temp = p1, []
+        (p2, temp) = (p1, [])
         while p2 < n and s[p2] == s[p1]:
             temp.append(a[p2])
             p2 += 1
-
         temp.sort(reverse=True)
         ret += sum(temp[:k])
         p1 = p2
-
     print(ret)
 
 

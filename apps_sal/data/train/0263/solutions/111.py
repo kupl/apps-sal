@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         if n == 1:
             return 10
@@ -12,9 +13,9 @@ class Solution:
                 dp[j].append(0)
                 for k in numpad[j]:
                     dp[j][i] += dp[k][i - 1]
-                dp[j][i] %= (1000000007)
+                dp[j][i] %= 1000000007
         res = 0
         for i in ['0', '1', '2', '3', '4', '6', '7', '8', '9']:
             res += dp[i][n - 1]
-            res %= (1000000007)
+            res %= 1000000007
         return res

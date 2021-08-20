@@ -1,5 +1,5 @@
 a = input()
-a1 = "abc"
+a1 = 'abc'
 lower = []
 upper = []
 for i in range(len(a1)):

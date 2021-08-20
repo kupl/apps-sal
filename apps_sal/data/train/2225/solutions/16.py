@@ -3,6 +3,7 @@ readline = sys.stdin.readline
 
 
 class Node:
+
     def __init__(self, sigma, depth):
         self.end = False
         self.child = [None] * sigma
@@ -15,7 +16,8 @@ class Node:
         return self.child[i]
 
 
-class Trie():
+class Trie:
+
     def __init__(self, sigma):
         self.sigma = sigma
         self.root = Node(sigma, 0)
@@ -30,15 +32,11 @@ class Trie():
 
 
 ans = 0
-
-N, L = list(map(int, readline().split()))
-
+(N, L) = list(map(int, readline().split()))
 Tr = Trie(2)
-
 for _ in range(N):
     S = list(map(int, readline().strip()))
     Tr.add(S)
-
 cnt = 0
 stack = [Tr.root]
 while stack:
@@ -49,5 +47,4 @@ while stack:
             cnt ^= -r & r
         else:
             stack.append(vn[i])
-
-print(('Alice' if cnt else 'Bob'))
+print('Alice' if cnt else 'Bob')

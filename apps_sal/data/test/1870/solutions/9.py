@@ -1,4 +1,4 @@
-amount, c = [int(i) for i in input().split()]
+(amount, c) = [int(i) for i in input().split()]
 row = [int(i) for i in input().split()]
 last = 0
 counter = 0

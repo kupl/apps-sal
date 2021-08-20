@@ -3,10 +3,10 @@ def solve(s):
     c = 0
     m = 0
     for x in range(len(s)):
-        if(s[x] == 'A'):
+        if s[x] == 'A':
             last = x
             c = 0
-        elif(last != -1):
+        elif last != -1:
             c += 1
             m = max(c, m)
     return m

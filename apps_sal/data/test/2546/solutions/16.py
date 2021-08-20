@@ -16,9 +16,6 @@ def check(mid):
     co += sum([i[0] for i in y])
     ll = len(y)
     m = 0
-
-   # if len(z)==0:
-    #    return False
     ne = max(0, (n + 1) // 2 - ll)
     if ne > len(z):
         return False
@@ -29,14 +26,13 @@ def check(mid):
         else:
             co += mid
         j += 1
-
     return co <= s
 
 
 input = sys.stdin.readline
 t = int(input())
 for _ in range(t):
-    n, s = list(map(int, input().split()))
+    (n, s) = list(map(int, input().split()))
     it = []
     for i in range(n):
         it.append(list(map(int, input().split())))

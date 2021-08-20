@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSizeSlices(self, s: List[int]) -> int:
         ct = len(s) // 3
 
@@ -7,7 +8,7 @@ class Solution:
             if n == 0:
                 return 0
             if l > r:
-                return -1e18
+                return -1e+18
             if n == 1:
                 return max(s[l:r + 1])
             return max(f(l + 1, r, n), s[l] + f(l + 2, r, n - 1))

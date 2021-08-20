@@ -1,5 +1,4 @@
 from math import hypot
-
 N = int(input())
 engines = [tuple(map(int, input().split())) for _ in range(N)]
 
@@ -13,12 +12,12 @@ def cross(x1, y1, x2, y2):
 
 
 def getDistMax(xBase, yBase):
-    x1s, y1s, x2s, y2s = [], [], [], []
-    x, y = 0, 0
-    for dx, dy in engines:
+    (x1s, y1s, x2s, y2s) = ([], [], [], [])
+    (x, y) = (0, 0)
+    for (dx, dy) in engines:
         d = dot(xBase, yBase, dx, dy)
         if d > 0:
-            x, y = x + dx, y + dy
+            (x, y) = (x + dx, y + dy)
         elif d == 0:
             c = cross(xBase, yBase, dx, dy)
             if c > 0:
@@ -32,12 +31,11 @@ def getDistMax(xBase, yBase):
 
 
 ans = 0
-for x, y in engines:
+for (x, y) in engines:
     ds = []
     ds.append(getDistMax(x, y))
     ds.append(getDistMax(-y, x))
     ds.append(getDistMax(-x, -y))
     ds.append(getDistMax(y, -x))
     ans = max(ans, max(ds))
-
 print(ans)

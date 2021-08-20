@@ -17,5 +17,4 @@ def dfs(left, right):
 
 N = int(input())
 h = list(map(int, input().split()))
-
-print((dfs(0, N)))
+print(dfs(0, N))

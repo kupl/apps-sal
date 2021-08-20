@@ -5,10 +5,9 @@ for i in range(int(input())):
         print('YES')
         print(2)
         print(s[0], s[1:])
+    elif len(s) == 1 or s[0] >= s[1]:
+        print('NO')
     else:
-        if len(s) == 1 or s[0] >= s[1]:
-            print('NO')
-        else:
-            print('YES')
-            print(2)
-            print(s[0], s[1:])
+        print('YES')
+        print(2)
+        print(s[0], s[1:])

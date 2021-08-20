@@ -9,12 +9,12 @@ def main():
     l = len(n)
     ans = 0
     for i in range(l):
-        if (i - ans == k):
+        if i - ans == k:
             print(ans)
             return
         if n[l - i - 1] != '0':
             ans += 1
-    if (l - ans > 0):
+    if l - ans > 0:
         print(l - 1)
 
 

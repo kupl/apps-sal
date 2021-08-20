@@ -5,6 +5,7 @@ from random import random, sample
 
 
 class TwoLayerSet:
+
     def __init__(self, p):
         self.top = []
         self.bottom = [[]]
@@ -96,7 +97,7 @@ def main():
     idx = [0] * n
     for i in range(0, n):
         idx[i] = i
-    idx.sort(key=lambda i: - p[i])
+    idx.sort(key=lambda i: -p[i])
     t = TwoLayerSet(1 / 50)
     t.insert(-1)
     t.insert(n)

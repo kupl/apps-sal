@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 n = int(input())
 a = [int(i) for i in input().split()]
 a = [(a[i], i) for i in range(len(a))]
 a.sort(reverse=True)
-
 s = 0
 order = []
 for i in range(len(a)):

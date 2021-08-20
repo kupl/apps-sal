@@ -1,13 +1,10 @@
 def main():
     ind = {'E': (1, 0), 'S': (0, -1), 'W': (-1, 0), 'N': (0, 1), '#': (0, 0)}
-
-    t, sx, sy, tx, ty = list(map(int, input().split()))
+    (t, sx, sy, tx, ty) = list(map(int, input().split()))
     s = str(input())
-
     if sx == tx and sy == ty:
         print('0')
         return
-
     for i in range(0, t):
         if sx != tx and abs(sx + ind[s[i]][0] - tx) < abs(sx - tx):
             sx += ind[s[i]][0]
@@ -16,7 +13,6 @@ def main():
         if sx == tx and sy == ty:
             print(i + 1)
             return
-
     print('-1')
 
 

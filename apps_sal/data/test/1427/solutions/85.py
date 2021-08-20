@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -23,19 +22,16 @@ def prime_factorization(n):
 def resolve():
     n = int(input())
     A = list(map(int, input().split()))
-
     prime = [0] * max(A)
     for a in A:
         primes = prime_factorization(a)
-        for num, ex in primes:
+        for (num, ex) in primes:
             prime[num - 1] = max(prime[num - 1], ex)
-
     L = 1
     for i in range(len(prime)):
         if prime[i] == 0:
             continue
         L *= pow(i + 1, prime[i])
-
     res = 0
     for a in A:
         res += L * pow(a, mod - 2, mod)

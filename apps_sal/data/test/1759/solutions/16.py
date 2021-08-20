@@ -1,4 +1,4 @@
-m, n = map(int, input().split())
+(m, n) = map(int, input().split())
 a = [0] * 8
 for i in range(m):
     x = list(map(int, input().split()))

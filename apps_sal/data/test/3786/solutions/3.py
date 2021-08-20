@@ -16,5 +16,4 @@ max_layer = max(layer)
 result = 1
 for i in range(1, max_layer + 1):
     result += nodes_in_layer[i] % 2
-
 print(result)

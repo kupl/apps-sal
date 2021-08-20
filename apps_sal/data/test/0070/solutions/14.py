@@ -1,4 +1,4 @@
-s, k = input().split()
+(s, k) = input().split()
 k = int(k)
 i = -1
 count = 0

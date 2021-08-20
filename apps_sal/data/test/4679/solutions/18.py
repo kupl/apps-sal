@@ -4,4 +4,4 @@ while a[now]:
     y = a[now][0]
     a[now] = a[now][1:]
     now = ord(y) - ord('a')
-print("ABC"[now])
+print('ABC'[now])

@@ -1,5 +1,5 @@
 def factors(num):
-    return sum(i for i in range(1, num) if num % i == 0)
+    return sum((i for i in range(1, num) if num % i == 0))
 
 
 def amicable_numbers(n1, n2):

@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, val, lev, count=1):
         self.val = val
         self.next = [None] * lev
@@ -74,10 +75,3 @@ class Skiplist:
 
     def erase(self, num: int) -> bool:
         return self._delete(num)
-
-
-# Your Skiplist object will be instantiated and called as such:
-# obj = Skiplist()
-# param_1 = obj.search(target)
-# obj.add(num)
-# param_3 = obj.erase(num)

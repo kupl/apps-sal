@@ -1,13 +1,12 @@
 import sys
 input = sys.stdin.readline
-
 q = int(input())
 for i in range(q):
     n = int(input())
     dp = [[0] * n for _ in range(3)]
     prev = 0
     for i in range(n):
-        l, c = [int(item) for item in input().split()]
+        (l, c) = [int(item) for item in input().split()]
         if i == 0:
             dp[0][0] = 0
             dp[1][0] = c

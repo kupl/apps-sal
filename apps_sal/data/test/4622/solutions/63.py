@@ -4,6 +4,6 @@ m = len(a)
 a = set(a)
 n = len(a)
 if m == n:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

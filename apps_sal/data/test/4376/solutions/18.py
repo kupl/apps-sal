@@ -1,8 +1,7 @@
 def main():
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     room = [int(x) for x in input().split()]
     letter = [int(x) for x in input().split()]
-
     room_num = 0
     j = 0
     for d in range(n):

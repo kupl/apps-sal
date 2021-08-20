@@ -5,7 +5,7 @@ for i in range(n):
 for i in range(n):
     for j in range(n):
         if i != j and a[j] <= a[i]:
-            print("NO")
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')

@@ -1,5 +1,5 @@
 m = 998244353
-n, *d = map(int, open(y := 0).read().split())
+(n, *d) = map(int, open((y := 0)).read().split())
 a = 1
 for v in d:
     a = a * v % m

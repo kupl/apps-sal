@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 same = [0] * (k + 1)
 diff = [0] * (k + 1)
 mod = 998244353

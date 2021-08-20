@@ -8,7 +8,7 @@ class RPG:
         self.field = [frame] + [['#'] + line + ['#'] for line in field] + [frame]
         self.actions = actions
         self.l = len(self.field)
-        self.pack = {'H': 3, 'X': 1, 'S': 1, }
+        self.pack = {'H': 3, 'X': 1, 'S': 1}
         self.bag = []
         self.moves = {'<': (0, -1), '>': (0, 1), '^': (-1, 0), 'v': (1, 0)}
         self.x = self.find_player(self.field, lambda e: any(('<' in e, '>' in e, '^' in e, 'v' in e)))
@@ -23,13 +23,13 @@ class RPG:
         self.use_item = {'K': self.use_key, 'C': self.coint_act, 'H': self.get_energy, 'A': self.atack}
 
     def __call__(self):
-        for i, act in enumerate(self.actions):
+        for (i, act) in enumerate(self.actions):
             self.use_item.get(act, self.make_step)(act, act != 'F')
             if not self._result:
                 break
             self.enemy_status(i, act)
         if self.use_coint:
-            x, y = self.step
+            (x, y) = self.step
             if self.field[x][y] != 'M':
                 return
         return self.result
@@ -54,12 +54,12 @@ class RPG:
         return self._player
 
     def enemy_status(self, i, act):
-        for x, y in [(self.x + 1, self.y), (self.x - 1, self.y), (self.x, self.y + 1), (self.x, self.y - 1)]:
+        for (x, y) in [(self.x + 1, self.y), (self.x - 1, self.y), (self.x, self.y + 1), (self.x, self.y - 1)]:
             if self.field[x][y] in 'DE':
                 self.ready_atack.append(self.field[x][y])
         if self.ready_atack:
-            pref_a, next_a, l = self.actions, self.actions, len(self.actions) - 1
-            if i and i < l and pref_a[i - 1] in '<>^vF' and next_a[i + 1] == 'F' and act == 'F' or act in '<>^vAH' and i != l or act == 'F' and i < l and next_a[i + 1] in '<>v^':
+            (pref_a, next_a, l) = (self.actions, self.actions, len(self.actions) - 1)
+            if i and i < l and (pref_a[i - 1] in '<>^vF') and (next_a[i + 1] == 'F') and (act == 'F') or (act in '<>^vAH' and i != l) or (act == 'F' and i < l and (next_a[i + 1] in '<>v^')):
                 self.enemy_atack()
             self.ready_atack = []
 
@@ -81,7 +81,7 @@ class RPG:
         self.field[x][y] = ' '
 
     def use_key(self, key, x):
-        x, y = self.step
+        (x, y) = self.step
         if key in self.bag and self.field[x][y] in '|-':
             self.drop(key)
             self.ded(x, y)
@@ -89,7 +89,7 @@ class RPG:
             self.game_over
 
     def atack(self, x, z):
-        x, y = self.step
+        (x, y) = self.step
         if self.field[x][y] == 'E':
             self.ded(x, y)
             self.level_up += 1
@@ -110,7 +110,7 @@ class RPG:
         self.use_coint += i
         self.drop(coint)
         if self.use_coint == 3:
-            x, y = self.step
+            (x, y) = self.step
             if self.field[x][y] == 'M':
                 self.use_coint = 0
                 self.ded(x, y)
@@ -131,8 +131,8 @@ class RPG:
         way = (self.set_player, element)[p]
         if not p:
             self.field[self.x][self.y] = ' '
-            self.x, self.y = self.step
-        if self.x < 1 or self.x >= self.l - 1 or self.y < 1 or self.y >= len(self.field[self.x]) - 1:
+            (self.x, self.y) = self.step
+        if self.x < 1 or self.x >= self.l - 1 or self.y < 1 or (self.y >= len(self.field[self.x]) - 1):
             self.game_over
             return
         if self.field[self.x][self.y] != ' ':
@@ -143,7 +143,7 @@ class RPG:
 
     @staticmethod
     def find_player(field, condition):
-        return next(i for i, e in enumerate(field) if condition(e))
+        return next((i for (i, e) in enumerate(field) if condition(e)))
 
 
 def rpg(f, a) -> Tuple[List[List[str]], int, int, int, List[str]]:

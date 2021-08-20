@@ -1,5 +1,4 @@
 def find_longest(arr):
-    # your code here
     max_lenght = 0
     max_index = 0
     for cur_num in arr:

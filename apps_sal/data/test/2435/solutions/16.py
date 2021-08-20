@@ -1,8 +1,8 @@
 def solve():
-    n, x, m = map(int, input().split())
-    al, ar = x, x
+    (n, x, m) = map(int, input().split())
+    (al, ar) = (x, x)
     for i in range(m):
-        l, r = map(int, input().split())
+        (l, r) = map(int, input().split())
         if max(l, al) <= min(r, ar):
             al = min(al, l)
             ar = max(ar, r)

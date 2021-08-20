@@ -14,6 +14,6 @@ for _ in range(T):
             quota += k
         else:
             r = max(0, k - quota)
-            quota -= (k - r)
+            quota -= k - r
             ans += r
     print(ans)

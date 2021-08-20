@@ -7,7 +7,7 @@ for i in b:
 if a[0][0] + a[1][1] + a[2][2] == -3 or a[0][2] + a[1][1] + a[2][0] == -3:
     print('Yes')
 else:
-    for i, j in zip(a, [*zip(*a)]):
+    for (i, j) in zip(a, [*zip(*a)]):
         if sum(i) == -3 or sum(j) == -3:
             print('Yes')
             break

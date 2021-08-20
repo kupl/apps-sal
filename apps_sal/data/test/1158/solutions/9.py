@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 prib = list(map(int, input().split()))
 prib.sort()
 I = 0

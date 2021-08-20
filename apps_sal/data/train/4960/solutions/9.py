@@ -1,9 +1,10 @@
 class Harshad:
+
     @staticmethod
     def is_valid(number):
         if number == 0:
             return False
-        sumdigits = sum(int(d) for d in str(number))
+        sumdigits = sum((int(d) for d in str(number)))
         return number % sumdigits == 0
 
     @staticmethod

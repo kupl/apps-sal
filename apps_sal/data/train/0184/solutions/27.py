@@ -1,4 +1,5 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         c = Counter(text)
         window = Counter()

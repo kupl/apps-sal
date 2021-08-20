@@ -1,4 +1,3 @@
-# cook your dish here
 def num(l):
     ans = 0
     for i in range(len(l)):
@@ -9,7 +8,7 @@ def num(l):
 def numof(n):
     ans = 0
     l = []
-    while(n > 0):
+    while n > 0:
         l.append(n % 10)
         n = n // 10
         ans += 1
@@ -24,7 +23,7 @@ for you in range(t):
     z = numof(n)
     l = []
     for i in range(len(z)):
-        if(min(z[i:]) == z[i]):
+        if min(z[i:]) == z[i]:
             l.append(z[i])
         else:
             l.append(min(z[i:]))

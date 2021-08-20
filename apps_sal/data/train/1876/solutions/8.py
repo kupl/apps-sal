@@ -1,4 +1,5 @@
 class Solution:
+
     def reachNumber(self, target):
         """
         :type target: int
@@ -10,8 +11,8 @@ class Solution:
             s += i
             if s >= target:
                 break
-        if (s - target) & 1:
-            if (i + 1) & 1:
+        if s - target & 1:
+            if i + 1 & 1:
                 return i + 1
             else:
                 return i + 2

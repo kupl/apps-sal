@@ -1,5 +1,5 @@
-n, a, b = list(map(int, input().split()))
-mod = 10**9 + 7
+(n, a, b) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 
 
 def nCk(n, k):
@@ -17,4 +17,4 @@ def nCk(n, k):
 
 ans = pow(2, n, mod) - 1
 ans -= nCk(n, a) + nCk(n, b)
-print((ans % mod))
+print(ans % mod)

@@ -1,13 +1,12 @@
 def pad_zero(s, n):
     s = str(s)
-    return ("0" * n + s)[-n:]
+    return ('0' * n + s)[-n:]
 
 
 def main():
     N = int(input())
-    F = [[int(f) for f in input().split(" ")] for i in range(N)]
-    P = [[int(p) for p in input().split(" ")] for i in range(N)]
-
+    F = [[int(f) for f in input().split(' ')] for i in range(N)]
+    P = [[int(p) for p in input().split(' ')] for i in range(N)]
     total_profit = []
     for b in range(1, 2 ** 10):
         sale_bit = list(pad_zero(format(b, 'b'), 10))

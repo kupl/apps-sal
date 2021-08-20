@@ -3,6 +3,7 @@ from heapq import heappop, heappush
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
 
         @lru_cache(None)
@@ -13,11 +14,9 @@ class Solution:
                 return 1 + get_steps(3 * num + 1)
             else:
                 return 1 + get_steps(num // 2)
-
         pq = []
         for i in range(lo, hi + 1):
             heappush(pq, (-get_steps(i), -i))
             if len(pq) > k:
                 heappop(pq)
-
         return -min(pq)[1]

@@ -1,12 +1,8 @@
-n, m = [int(x) for x in input().split()]
-
+(n, m) = [int(x) for x in input().split()]
 L = [int(x) for x in input().split()]
-
 D2 = {}
 T = {}
-
 ans = ''
-
 for i in L:
     if i in D2:
         D2[i] += 1
@@ -20,5 +16,4 @@ for i in L:
         ans = ans + '1'
     else:
         ans = ans + '0'
-
 print(ans)

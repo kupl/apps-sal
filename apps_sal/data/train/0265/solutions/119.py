@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNonOverlapping(self, lis: List[int], tar: int) -> int:
         n = len(lis)
         pre = [0] * (n + 1)

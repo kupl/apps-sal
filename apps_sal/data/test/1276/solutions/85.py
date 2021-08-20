@@ -6,11 +6,11 @@ def main():
     B = []
     cnt = 0
     for i in range(len(S)):
-        if S[i] == "R":
+        if S[i] == 'R':
             R.append(i)
-        elif S[i] == "G":
+        elif S[i] == 'G':
             G.append(i)
-        elif S[i] == "B":
+        elif S[i] == 'B':
             B.append(i)
     l = len(B)
     for i in range(len(R)):
@@ -25,11 +25,11 @@ def main():
                 M = r
                 m = g
             d = M - m
-            if (M + d) < N and S[M + d] == "B":
+            if M + d < N and S[M + d] == 'B':
                 cnt -= 1
-            if (m - d) >= 0 and S[m - d] == "B":
+            if m - d >= 0 and S[m - d] == 'B':
                 cnt -= 1
-            if (M + m) % 2 == 0 and S[int((M + m) / 2)] == "B":
+            if (M + m) % 2 == 0 and S[int((M + m) / 2)] == 'B':
                 cnt -= 1
     print(cnt)
 

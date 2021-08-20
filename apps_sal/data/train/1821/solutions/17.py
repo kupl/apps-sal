@@ -1,4 +1,5 @@
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         if len(nums) > 1:
             m = len(nums) // 2
@@ -14,10 +15,8 @@ class Solution:
                 else:
                     nums.append(right[0])
                     right.pop(0)
-
             for i in left:
                 nums.append(i)
             for i in right:
                 nums.append(i)
-
         return nums

@@ -23,7 +23,7 @@ def mian_chowla():
 
 def pretty(s, f):
     arr = []
-    for n in (islice(mian_chowla(), s, f)):
+    for n in islice(mian_chowla(), s, f):
         arr.append(int(n))
     return arr
 
@@ -34,7 +34,7 @@ def __starting_point():
         lst = pretty(0, n)
         sum = 0
         for i in range(n):
-            print(lst[i], end=" ")
+            print(lst[i], end=' ')
             sum += lst[i]
         print()
         print(sum)

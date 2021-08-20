@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         squares1 = Counter()
         squares2 = Counter()
@@ -6,7 +7,6 @@ class Solution:
             squares1[num * num] += 1
         for num in nums2:
             squares2[num * num] += 1
-
         numTriplets = 0
         for i in range(len(nums1)):
             for j in range(i + 1, len(nums1)):

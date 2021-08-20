@@ -6,4 +6,4 @@ def check_exam(arr1, arr2):
                 score = score + 4
             else:
                 score = score - 1
-    return (score if score > 0 else 0)
+    return score if score > 0 else 0

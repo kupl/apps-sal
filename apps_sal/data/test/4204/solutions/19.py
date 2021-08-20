@@ -8,5 +8,4 @@ for i in range(k):
         ans = s[i + 1]
     else:
         ans = s[i]
-
 print(ans)

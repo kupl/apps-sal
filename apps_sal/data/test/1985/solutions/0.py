@@ -1,11 +1,10 @@
 def main():
     from sys import stdin
-    k, n = map(int, stdin.readline().split())
+    (k, n) = map(int, stdin.readline().split())
     a = list(map(int, stdin.readline().split()))
     b = list(map(int, stdin.readline().split()))
     res = set()
     for i in range(k):
-        # putting b[0] on place i
         our = set()
         curr = b[0]
         for j in range(i, -1, -1):

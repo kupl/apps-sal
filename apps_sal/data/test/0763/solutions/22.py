@@ -9,7 +9,7 @@ def f(x, l):
     return s
 
 
-q = 10**10
+q = 10 ** 10
 for x in range(n):
     q = min(f(x, l), q)
 print(q)

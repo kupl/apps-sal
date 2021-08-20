@@ -1,8 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-
         dist = []
-
         for x in range(len(points)):
             [xi, yi] = points[x]
             for y in range(x + 1, len(points)):
@@ -10,7 +9,6 @@ class Solution:
                 manhattan_dist = abs(xi - xj) + abs(yi - yj)
                 if x != y:
                     dist.append([x, y, manhattan_dist])
-
         dist.sort(key=lambda pt: pt[2])
 
         def detectCycle(adj):
@@ -26,13 +24,11 @@ class Solution:
                     elif dfs(neighbor, curr):
                         return True
                 return False
-
             for node in range(len(points)):
                 if node not in visited:
                     if dfs(node, -1):
                         return True
             return False
-
         adj = {x: set() for x in range(len(points))}
         ans = 0
         v = 0
@@ -46,8 +42,6 @@ class Solution:
             else:
                 ans += manhattan_dist
                 v += 1
-
             if v == len(points) - 1:
                 break
-
         return ans

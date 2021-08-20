@@ -1,7 +1,8 @@
 class Solution:
+
     def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
-        man_idx = [[man, idx] for idx, man in enumerate(manager)]
-        man_copy = [[man, idx] for idx, man in enumerate(manager)]
+        man_idx = [[man, idx] for (idx, man) in enumerate(manager)]
+        man_copy = [[man, idx] for (idx, man) in enumerate(manager)]
         max_time = 0
         curr_time = 0
         memo_table = {}

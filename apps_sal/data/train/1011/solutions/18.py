@@ -18,13 +18,11 @@ def goodandbadPersons(n, k, s):
             print('none')
     return
 
-# Driver code starts here
-
 
 def __starting_point():
     t = int(input())
     for _ in range(t):
-        n, k = map(int, input().split())
+        (n, k) = map(int, input().split())
         s = input()
         goodandbadPersons(n, k, s)
 

@@ -1,11 +1,8 @@
-N, K = [int(_) for _ in input().split()]
-
+(N, K) = [int(_) for _ in input().split()]
 s = 0
 e = 0
 ans = 0
-
 MOD = 10 ** 9 + 7
-
 for i in range(N + 1):
     s += i
     e += N - i

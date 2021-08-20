@@ -1,11 +1,7 @@
 from collections import defaultdict
-
-N, K = map(int, input().split())
-
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
-
 visited = [0] * N
-
 current = 0
 i = 1
 while i <= K:
@@ -16,8 +12,6 @@ while i <= K:
         loop = i - visited[current]
         num_loop = (K - i) // loop
         i += loop * num_loop
-
     i += 1
-
 ans = current + 1
 print(ans)

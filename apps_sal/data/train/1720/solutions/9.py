@@ -5,10 +5,9 @@ class RomanNumerals:
     def to_roman(n):
         res = []
         for i in RomanNumerals.dic:
-            res.extend((n / i[0]) * i[1])
-            n -= (n / i[0]) * i[0]
-
-        return "".join(res)
+            res.extend(n / i[0] * i[1])
+            n -= n / i[0] * i[0]
+        return ''.join(res)
 
     @staticmethod
     def from_roman(n):

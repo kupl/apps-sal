@@ -1,7 +1,6 @@
 from math import gcd
-N, X = map(int, input().split())
+(N, X) = map(int, input().split())
 x = list(map(int, input().split()))
-
 xx = list()
 for i in range(N):
     xx.append(abs(X - x[i]))

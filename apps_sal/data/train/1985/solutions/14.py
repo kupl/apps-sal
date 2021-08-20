@@ -1,4 +1,5 @@
 class Solution:
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
@@ -11,7 +12,7 @@ class Solution:
         width = len(matrix[0])
 
         def search(x, y):
-            if x < 0 or y < 0 or x >= height or y >= width:
+            if x < 0 or y < 0 or x >= height or (y >= width):
                 return False
             current = matrix[x][y]
             if current == target:

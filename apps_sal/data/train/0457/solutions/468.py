@@ -2,8 +2,9 @@ import sys
 
 
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        dp = [[0 for i in range(amount + 1)]for j in range(len(coins) + 1)]
+        dp = [[0 for i in range(amount + 1)] for j in range(len(coins) + 1)]
         for i in range(len(coins) + 1):
             for j in range(amount + 1):
                 if i == 0:

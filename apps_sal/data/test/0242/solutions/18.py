@@ -1,5 +1,4 @@
 m = int(input())
-
 zeros = {}
 z = 0
 i = 5
@@ -8,10 +7,8 @@ while z <= m:
     while i_temp % 5 == 0:
         i_temp //= 5
         z += 1
-
     zeros[z] = i
     i += 5
-
 z = zeros.get(m, None)
 if z is None:
     print(0)
@@ -21,5 +18,5 @@ else:
         x += 1
     print(5)
     for i in range(zeros[m], zeros[x]):
-        print(i, end=" ")
+        print(i, end=' ')
     print()

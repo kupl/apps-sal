@@ -1,5 +1,5 @@
-N, K = map(int, input().split())
-big = 10**9 + 7
+(N, K) = map(int, input().split())
+big = 10 ** 9 + 7
 ans = 0
 
 

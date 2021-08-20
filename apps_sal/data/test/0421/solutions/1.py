@@ -10,7 +10,7 @@ l.sort(key=snd)
 e = 0
 ans = 0
 for p in l:
-    if (p[0] > e):
+    if p[0] > e:
         ans += 1
         e = p[1]
 print(ans)

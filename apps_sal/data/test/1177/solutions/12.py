@@ -3,7 +3,7 @@ mod = 998244353
 
 
 def main():
-    N, S = list(map(int, stdin.readline().split()))
+    (N, S) = list(map(int, stdin.readline().split()))
     a = list(map(int, stdin.readline().split()))
     dp = [0] * (S + 1)
     ans = 0

@@ -1,5 +1,3 @@
-
-
 def logical_calc(array, op):
     print(array)
     print(op)

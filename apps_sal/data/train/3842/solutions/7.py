@@ -1,8 +1,7 @@
-# rule: if a word is longer than limit, split it anyway
 def word_wrap(text, limit):
     answer = []
     words = text.split()[::-1]
-    line = ""
+    line = ''
     while words:
         word = words.pop()
         if not line:
@@ -11,16 +10,14 @@ def word_wrap(text, limit):
             else:
                 line += word[:limit]
                 words.append(word[limit:])
-        else:
-            if len(line) + 1 + len(word) <= limit:
-                line += " " + word
-            elif len(word) > limit:
-                upto = limit - len(line) - 1
-                line += " " + word[:upto]
-                words.append(word[upto:])
+        elif len(line) + 1 + len(word) <= limit:
+            line += ' ' + word
+        elif len(word) > limit:
+            upto = limit - len(line) - 1
+            line += ' ' + word[:upto]
+            words.append(word[upto:])
         lenNext = len(words[-1]) if words else 0
-        if not words or len(line) == limit or\
-                (lenNext <= limit and len(line) + 1 + lenNext > limit):
+        if not words or len(line) == limit or (lenNext <= limit and len(line) + 1 + lenNext > limit):
             answer.append(line)
-            line = ""
-    return "\n".join(answer)
+            line = ''
+    return '\n'.join(answer)

@@ -14,11 +14,9 @@ class Solution:
             if start == l:
                 continue
             r += self.dp(l, fuel - abs(start - l))
-        #print(start, fuel, r, self.finish)
         return r
 
     def countRoutes(self, locations: List[int], start: int, finish: int, fuel: int) -> int:
-        # print(\"===\")
         self.finish = locations[finish]
         self.locations = locations
-        return self.dp(locations[start], fuel) % (10**9 + 7)
+        return self.dp(locations[start], fuel) % (10 ** 9 + 7)

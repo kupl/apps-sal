@@ -1,5 +1,5 @@
 n = int(input())
-maxn = int(n**(1 / 3))
+maxn = int(n ** (1 / 3))
 count = 0
 for i in range(1, n + 1, 2):
     tmp = 0

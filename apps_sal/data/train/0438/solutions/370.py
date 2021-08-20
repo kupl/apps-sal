@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         res = -1
         mp = Counter()
@@ -6,7 +7,7 @@ class Solution:
         v = [False] * (n + 1)
         left = [0] * (n + 1)
         right = [0] * (n + 1)
-        for i, a in enumerate(arr):
+        for (i, a) in enumerate(arr):
             v[a] = True
             mp[1] += 1
             left[a] = a
@@ -27,7 +28,6 @@ class Solution:
                 left[ll] = left[rr] = ll
                 right[rr] = right[ll] = rr
                 mp[rr - ll + 1] += 1
-
             if mp[m] != 0:
                 res = i + 1
         return res

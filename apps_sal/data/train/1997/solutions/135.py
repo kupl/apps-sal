@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         covered_intervals = set()
         for a in intervals:
@@ -8,7 +9,6 @@ class Solution:
                 if covered(a, b):
                     covered_intervals.add(tuple(a))
                     break
-
         return len(intervals) - len(covered_intervals)
 
 

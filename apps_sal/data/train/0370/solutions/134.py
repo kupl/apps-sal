@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         uf = {}
         rank = {a: 1 for a in A}
@@ -10,10 +11,10 @@ class Solution:
             return uf[x]
 
         def union(x, y):
-            px, py = find(x), find(y)
+            (px, py) = (find(x), find(y))
             if px != py:
                 if rank[px] > rank[py]:
-                    px, py = py, px
+                    (px, py) = (py, px)
                 rank[py] += rank[px]
                 uf[px] = py
 
@@ -33,7 +34,6 @@ class Solution:
             if x > 1:
                 ans.add(x)
             return ans
-
         dic = {}
         for a in A:
             for k in primeFactor(a):

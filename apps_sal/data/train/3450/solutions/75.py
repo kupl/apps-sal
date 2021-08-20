@@ -3,7 +3,7 @@ def array(string):
     if string == '':
         return None
     else:
-        splitted = string.split(",")
+        splitted = string.split(',')
         if len(splitted) < 3:
             return None
         else:
@@ -14,6 +14,6 @@ def array(string):
             for x in splitted:
                 result = result + x
                 if i != len(splitted):
-                    result = result + " "
+                    result = result + ' '
                 i = i + 1
             return result

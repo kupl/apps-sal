@@ -1,31 +1,15 @@
 for i in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     lis = list(map(int, input().split()))
     mylis = []
     val = 0
     total = 0
     for i in range(n + 1):
         mylis.append([i, lis[i]])
-    # print(mylis)
     mylis = sorted(mylis, key=lambda x: x[1])
-    # print(mylis)
     i = 0
     j = n
-    ''''
-    while len(mylis)>0:
-     if val==0:
-      if mylis[i][1]==k:
-       mylis[i][1]-=k
-       print(i,k,0,0)
-       mylis=mylis[i+1:]
-      elif mylis[i][1]>=k:
-       mylis[i][1] -= k
-       print(i, k, 0, 0)
-      else:
-       val=mylis[i][1]
-       mylis[j][1]-=val
-       print()
-    '''
+    "'\n    while len(mylis)>0:\n     if val==0:\n      if mylis[i][1]==k:\n       mylis[i][1]-=k\n       print(i,k,0,0)\n       mylis=mylis[i+1:]\n      elif mylis[i][1]>=k:\n       mylis[i][1] -= k\n       print(i, k, 0, 0)\n      else:\n       val=mylis[i][1]\n       mylis[j][1]-=val\n       print()\n    "
     while total < k * n:
         mylis = sorted(mylis, key=lambda x: x[1])
         if mylis[0][1] == k:
@@ -43,5 +27,3 @@ for i in range(int(input())):
             mylis = mylis[1:]
             mylis[-1][1] = mylis[-1][1] - (k - val)
             total += k
-
-        # print(total,mylis)

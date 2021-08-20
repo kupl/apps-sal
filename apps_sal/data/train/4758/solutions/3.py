@@ -1,6 +1,6 @@
 def place(table, pos, arg):
     for i in range(6):
-        if(table[5 - i][pos] == '-'):
+        if table[5 - i][pos] == '-':
             table[5 - i][pos] = arg
             break
 

@@ -1,38 +1,30 @@
 import sys
 import math
-
 input_methods = ['clipboard', 'file', 'key']
 using_method = 1
 input_method = input_methods[using_method]
 
 
-def tin(): return map(int, input().split())
-def lin(): return list(IN())
+def tin():
+    return map(int, input().split())
+
+
+def lin():
+    return list(IN())
 
 
 mod = 1000000007
 
-# +++++
-
 
 def main():
     L = int(input())
-    #b , c = tin()
-    #s = input()
     v = int(math.log2(L))
-    # pa(v)
     num_p = v
     path_info = []
     for i in range(v):
         path_info.append([i, i + 1, 0])
-        path_info.append([i, i + 1, 2**i])
-
-    # for li in path_info:
-    #	print(*li)
-
-    nokori = L - (2 ** v)
-
-    # print(nokori)
+        path_info.append([i, i + 1, 2 ** i])
+    nokori = L - 2 ** v
     for i in range(v + 1):
         m = v - i
         if 2 ** m <= nokori:
@@ -40,11 +32,10 @@ def main():
             nokori -= 2 ** m
     print(v + 1, len(path_info))
     for l in path_info:
-        f, t, w = l
+        (f, t, w) = l
         print(*[f + 1, t + 1, w])
 
 
-# +++++
 isTest = False
 
 
@@ -65,7 +56,9 @@ def __starting_point():
     if sys.platform == 'ios':
         if input_method == input_methods[0]:
             ic = input_clipboard()
-            def input(): return ic.__next__()
+
+            def input():
+                return ic.__next__()
         elif input_method == input_methods[1]:
             sys.stdin = open('inputFile.txt')
         else:
@@ -73,8 +66,6 @@ def __starting_point():
         isTest = True
     else:
         pass
-        #input = sys.stdin.readline
-
     ret = main()
     if ret is not None:
         print(ret)

@@ -1,8 +1,7 @@
 import collections
 import math
-
-n, b, p = map(int, input().split())
-ans, k, t = 0, 2, n
+(n, b, p) = map(int, input().split())
+(ans, k, t) = (0, 2, n)
 while k <= n:
     k *= 2
 k //= 2

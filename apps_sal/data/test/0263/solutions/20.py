@@ -6,8 +6,8 @@ for _ in range(n):
     L.append(a)
 max_a = m + max(L)
 k = m
-while(k):
+while k:
     L[L.index(min(L))] = min(L) + 1
     k = k - 1
 min_a = max(L)
-print(str(min_a) + " " + str(max_a))
+print(str(min_a) + ' ' + str(max_a))

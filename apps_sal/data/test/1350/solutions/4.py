@@ -6,7 +6,7 @@ def ria():
     return [int(i) for i in input().split()]
 
 
-n, k = ria()
+(n, k) = ria()
 mp = {}
 for i in string.ascii_uppercase[:k]:
     mp[i] = 0

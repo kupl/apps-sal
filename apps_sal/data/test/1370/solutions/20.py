@@ -3,15 +3,13 @@ import sys
 
 def solve():
     input = sys.stdin.readline
-    H, W, K = map(int, input().split())
-    S = [input().strip("\n") for _ in range(H)]
+    (H, W, K) = map(int, input().split())
+    S = [input().strip('\n') for _ in range(H)]
     Ans = 10 ** 20
     Wcount = [[0 for _ in range(W + 1)] for _ in range(H + 1)]
     for h in range(H):
         for w in range(W):
             Wcount[h + 1][w + 1] = Wcount[h][w + 1] + Wcount[h + 1][w] - Wcount[h][w] + int(S[h][w])
-
-    # print(Wcount)
     Ans = H * W + 1
     for i in range(2 ** (H - 1)):
         B = [0]
@@ -39,9 +37,7 @@ def solve():
                 break
         else:
             Ans = min(TotalBound, Ans)
-        #print(i, B, TotalBound)
     print(Ans)
-
     return 0
 
 

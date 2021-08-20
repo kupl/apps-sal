@@ -1,4 +1,5 @@
 class Solution(object):
+
     def judgePoint24(self, nums):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution(object):
 
         def cal(operands, operaters):
             for opt in operaters:
-                op2, op1 = operands.pop(-1), operands.pop(-1)
+                (op2, op1) = (operands.pop(-1), operands.pop(-1))
                 if opt == '+':
                     ret = op1 + op2
                 elif opt == '-':
@@ -19,8 +20,7 @@ class Solution(object):
                 else:
                     return float('-inf')
                 operands.append(ret)
-
-            return operands[0] if abs(operands[0] - 24) > 0.0000001 else 24
+            return operands[0] if abs(operands[0] - 24) > 1e-07 else 24
 
         def comb(arr):
             if len(arr) == 1:
@@ -41,7 +41,6 @@ class Solution(object):
                 for res in genopt(n - 1):
                     ret.append(i + res)
             return ret
-
         nums.sort()
         ops = comb(nums)
         opts = genopt(3)
@@ -51,15 +50,13 @@ class Solution(object):
                     return True
 
         def base(a, b):
-            return set([a + b, a - b, b - a, a * b] + ([a / b] if b != 0 else[]) + ([b / a] if a != 0 else[]))
-
+            return set([a + b, a - b, b - a, a * b] + ([a / b] if b != 0 else []) + ([b / a] if a != 0 else []))
         for i in range(4):
             for j in range(i + 1, 4):
-                a, b = nums[i], nums[j]
+                (a, b) = (nums[i], nums[j])
                 remain = nums[:i] + nums[i + 1:j] + nums[j + 1:4]
                 for x in base(a, b):
                     for y in base(remain[0], remain[1]):
                         if 24 in base(x, y):
                             return True
-
         return False

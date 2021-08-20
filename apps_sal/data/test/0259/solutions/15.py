@@ -1,8 +1,8 @@
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 bt = -1
 br = -1
 for n in range(N):
-    s, d = list(map(int, input().split()))
+    (s, d) = list(map(int, input().split()))
     if s >= T:
         a = s
     else:

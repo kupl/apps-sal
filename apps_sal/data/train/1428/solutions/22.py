@@ -1,7 +1,6 @@
 import heapq as heap
-
 for t in range(int(input())):
-    n, a, b, x, y, z = map(int, input().split())
+    (n, a, b, x, y, z) = map(int, input().split())
     h = list(map(int, input().split()))
     for i in range(n):
         h[i] *= -1
@@ -18,6 +17,6 @@ for t in range(int(input())):
         if maximum:
             heap.heappush(h, -1 * maximum)
     if a < z:
-        print("RIP")
+        print('RIP')
     else:
         print(ans)

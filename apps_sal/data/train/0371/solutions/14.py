@@ -1,18 +1,15 @@
 class Solution:
+
     def numBusesToDestination(self, routes: List[List[int]], S: int, T: int) -> int:
         if S == T:
             return 0
-
         graph = collections.defaultdict(set)
-
-        for bus, stops in enumerate(routes):
+        for (bus, stops) in enumerate(routes):
             for stop in stops:
                 graph[stop].add(bus)
-
         queue = collections.deque([S])
         visited = set()
         result = int()
-
         while queue:
             result += 1
             for _ in range(len(queue)):

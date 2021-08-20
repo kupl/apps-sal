@@ -1,7 +1,7 @@
 s = input()
 t = input()
-a, b = int(s[:2]), int(s[3:])
-c, d = int(t[:2]), int(t[3:])
+(a, b) = (int(s[:2]), int(s[3:]))
+(c, d) = (int(t[:2]), int(t[3:]))
 a -= c
 b -= d
 if b < 0:

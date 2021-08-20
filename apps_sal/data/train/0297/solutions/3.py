@@ -1,12 +1,11 @@
 class Solution:
+
     def numTilePossibilities(self, tiles: str) -> int:
 
-        # self.seen=set()
         @lru_cache(None)
         def find(s):
             if len(s) <= 1:
                 return set([s])
-
             ret = set()
             for i in range(len(s)):
                 head = s[i]
@@ -18,5 +17,4 @@ class Solution:
                         ret.add(temp)
             return ret
         res = find(tiles)
-        # print(res)
         return len(set(res))

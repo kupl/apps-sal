@@ -1,9 +1,8 @@
 n = int(input())
 a = list(map(int, input().split()))
-
-for i, x in enumerate(a):
-    mn = int(2e9)
-    mx = int(-2e9)
+for (i, x) in enumerate(a):
+    mn = int(2000000000.0)
+    mx = int(-2000000000.0)
     if i > 0:
         mn = min(mn, x - a[i - 1])
         mx = max(mx, x - a[0])

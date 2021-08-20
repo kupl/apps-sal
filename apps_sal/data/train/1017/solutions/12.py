@@ -7,6 +7,6 @@ for i in range(T):
         L[j] = L[j] * P
     S = sum(L)
     if S > 120:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

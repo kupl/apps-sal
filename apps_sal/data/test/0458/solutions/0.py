@@ -1,4 +1,4 @@
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 ans = []
 for sum in range(1, 200):
     x = b * sum ** a + c

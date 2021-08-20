@@ -1,5 +1,5 @@
 a = int(input())
-q, w, e, r, t, y, u = 0, 0, 0, 0, 0, 0, 0
+(q, w, e, r, t, y, u) = (0, 0, 0, 0, 0, 0, 0)
 for i in range(a):
     b = input()
     q += int(b[0])

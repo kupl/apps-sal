@@ -1,9 +1,9 @@
 def time_correct(t):
     if not t:
         return t
-    if len(t) != 8 or t[2] != ':' or t[5] != ":" or any(not t[i].isdigit() for i in (0, 1, 3, 4, 6, 7)):
+    if len(t) != 8 or t[2] != ':' or t[5] != ':' or any((not t[i].isdigit() for i in (0, 1, 3, 4, 6, 7))):
         return None
-    h, m, s = [int(t[o:o + 2]) for o in (0, 3, 6)]
+    (h, m, s) = [int(t[o:o + 2]) for o in (0, 3, 6)]
     if s > 59:
         m += s // 60
         s %= 60

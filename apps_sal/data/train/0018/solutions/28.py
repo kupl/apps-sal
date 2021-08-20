@@ -6,13 +6,11 @@ if os.path.exists('/mnt/c/Users/Square/square/codeforces'):
 
     def input():
         return next(f).strip()
-    # input = lambda: sys.stdin.readline().strip()
 else:
-    def input(): return sys.stdin.readline().strip()
 
+    def input():
+        return sys.stdin.readline().strip()
 fprint = lambda *args: print(*args, flush=True)
-
-
 t = int(input())
 for _ in range(t):
     n = int(input())

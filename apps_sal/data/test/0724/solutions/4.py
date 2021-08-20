@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = sorted(list(map(int, input().split())))
 ans = n - 1
 for i in range(len(a)):

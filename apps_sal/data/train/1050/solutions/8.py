@@ -1,18 +1,17 @@
 for _ in range(int(input())):
     s = input()
     st = []
-    temp, count = 0, 0
+    (temp, count) = (0, 0)
     for i in s:
         if i == '<':
             st.append('<')
+        elif len(st) == 0:
+            break
         else:
+            st.pop()
             if len(st) == 0:
-                break
+                count += 2 + temp
+                temp = 0
             else:
-                st.pop()
-                if len(st) == 0:
-                    count += 2 + temp
-                    temp = 0
-                else:
-                    temp += 2
+                temp += 2
     print(count)

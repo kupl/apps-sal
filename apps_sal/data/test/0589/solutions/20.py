@@ -3,7 +3,6 @@ def main():
     l = []
     i = 1
     result = 1
-
     for i in range(len(s)):
         if s[i:i + 1] == '?':
             if i == 0:
@@ -14,12 +13,9 @@ def main():
             if i == 0:
                 result = result * 9
                 l.append(s[i:i + 1])
-
-            else:
-                if l.count(s[i:i + 1]) == 0:
-                    result = result * (10 - len(l))
-                    l.append(s[i:i + 1])
-
+            elif l.count(s[i:i + 1]) == 0:
+                result = result * (10 - len(l))
+                l.append(s[i:i + 1])
     print(result)
 
 

@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 b = sorted(map(int, input().split()))
 c = sorted(map(int, input().split()))
 a = b[0] * c[0]

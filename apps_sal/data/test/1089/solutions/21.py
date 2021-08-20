@@ -1,13 +1,13 @@
-N, M, K = map(int, input().split())
-MOD = 10**9 + 7
+(N, M, K) = map(int, input().split())
+MOD = 10 ** 9 + 7
 
 
-def comb(n, r, mod=10**9 + 7):
+def comb(n, r, mod=10 ** 9 + 7):
     if n == 0 and r == 0:
         return 1
     else:
         a = b = 1
-        A, B = n, r
+        (A, B) = (n, r)
         for i in range(r):
             a = a * A % mod
             b = b * B % mod

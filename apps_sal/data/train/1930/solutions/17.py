@@ -5,7 +5,7 @@ class Cashier:
         self.count = 0
         self.discount_factor = 1 - discount / 100
         self.prices_dict = {}
-        for product, price in zip(products, prices):
+        for (product, price) in zip(products, prices):
             self.prices_dict[product] = price
 
     def getBill(self, product: List[int], amount: List[int]) -> float:
@@ -14,12 +14,7 @@ class Cashier:
         if self.count == self.n:
             discount_factor = self.discount_factor
             self.count = 0
-        price_sum = 0.
-        for p, a in zip(product, amount):
+        price_sum = 0.0
+        for (p, a) in zip(product, amount):
             price_sum += a * self.prices_dict[p]
         return discount_factor * price_sum
-
-
-# Your Cashier object will be instantiated and called as such:
-# obj = Cashier(n, discount, products, prices)
-# param_1 = obj.getBill(product,amount)

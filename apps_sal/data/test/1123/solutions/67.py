@@ -8,8 +8,8 @@ def left_bin(a, n, c):
     return t
 
 
-n, k = list(map(int, input().split()))
-c = 10**9 + 7
+(n, k) = list(map(int, input().split()))
+c = 10 ** 9 + 7
 tm = [0] + [1] * k
 a = k // 2
 ans = k * (k + 1) // 2 - a * (a + 1) // 2

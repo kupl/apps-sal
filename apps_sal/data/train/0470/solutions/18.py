@@ -1,4 +1,5 @@
 class Solution:
+
     def threeSumMulti(self, A: List[int], target: int) -> int:
         from collections import Counter
         A.sort()
@@ -25,7 +26,6 @@ class Solution:
                         num = c[A[left]] * (c[A[left]] - 1) / 2 * c[A[i]]
                     else:
                         num = c[A[i]] * c[A[left]] * c[A[right]]
-
                     res += num
                     tmp_pre = A[left]
                     while left < right and A[left] == tmp_pre:
@@ -33,5 +33,4 @@ class Solution:
                     tmp_pre = A[right]
                     while left < right and A[right] == tmp_pre:
                         right -= 1
-
         return int(res) % (10 ** 9 + 7)

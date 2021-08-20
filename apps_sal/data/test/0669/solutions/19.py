@@ -1,8 +1,11 @@
 from bisect import *
-def f(): return map(int, input().split())
 
 
-n, m = f()
+def f():
+    return map(int, input().split())
+
+
+(n, m) = f()
 t = list(f())
 
 
@@ -15,8 +18,8 @@ def g(x, i, n, s):
 
 
 k = n >> 1
-x, y = set(), set()
+(x, y) = (set(), set())
 g(x, 0, k, 0)
 g(y, k, n, 0)
 y = sorted(y)
-print(max(i + y[bisect_left(y, m - i) - 1] for i in x))
+print(max((i + y[bisect_left(y, m - i) - 1] for i in x)))

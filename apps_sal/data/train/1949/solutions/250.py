@@ -2,17 +2,18 @@ import copy
 
 
 class Solution:
+
     def helper(self, grid, start_i, start_j, current_gold, visited):
         candidates = []
         current_gold += grid[start_i][start_j]
-        visited[(start_i, start_j)] = 1
-        if max(0, start_i - 1) != start_i and grid[start_i - 1][start_j] > 0 and (start_i - 1, start_j) not in visited:
+        visited[start_i, start_j] = 1
+        if max(0, start_i - 1) != start_i and grid[start_i - 1][start_j] > 0 and ((start_i - 1, start_j) not in visited):
             candidates.append((start_i - 1, start_j))
-        if min(len(grid) - 1, start_i + 1) != start_i and grid[start_i + 1][start_j] > 0 and (start_i + 1, start_j) not in visited:
+        if min(len(grid) - 1, start_i + 1) != start_i and grid[start_i + 1][start_j] > 0 and ((start_i + 1, start_j) not in visited):
             candidates.append((start_i + 1, start_j))
-        if max(0, start_j - 1) != start_j and grid[start_i][start_j - 1] > 0 and (start_i, start_j - 1) not in visited:
+        if max(0, start_j - 1) != start_j and grid[start_i][start_j - 1] > 0 and ((start_i, start_j - 1) not in visited):
             candidates.append((start_i, start_j - 1))
-        if min(len(grid[0]) - 1, start_j + 1) != start_j and grid[start_i][start_j + 1] > 0 and (start_i, start_j + 1) not in visited:
+        if min(len(grid[0]) - 1, start_j + 1) != start_j and grid[start_i][start_j + 1] > 0 and ((start_i, start_j + 1) not in visited):
             candidates.append((start_i, start_j + 1))
         res = 0
         if not candidates:

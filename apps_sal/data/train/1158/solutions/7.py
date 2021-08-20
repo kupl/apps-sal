@@ -2,7 +2,6 @@ price = []
 for _ in range(int(input())):
     s = input().split()
     price.append(s[len(s) - 1])
-
 count = 0
 for i in price:
     e = i.count('8')

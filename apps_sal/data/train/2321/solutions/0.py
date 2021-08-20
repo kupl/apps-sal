@@ -4,7 +4,8 @@ import math
 from functools import reduce
 
 
-class SegmentTree():
+class SegmentTree:
+
     def __init__(self, L, function=lambda x, y: x + y):
         self.function = function
         N = self.size = len(L)
@@ -12,21 +13,21 @@ class SegmentTree():
         self.margin = 2 * M - N
         self.L = [None for i in range(self.margin)] + L
         for i in range(M - 1, 0, -1):
-            x, y = self.L[i << 1], self.L[i << 1 | 1]
+            (x, y) = (self.L[i << 1], self.L[i << 1 | 1])
             self.L[i] = None if x is None or y is None else function(x, y)
 
     def modify(self, pos, value):
         p = pos + self.margin
         self.L[p] = value
         while p > 1:
-            x, y = self.L[p], self.L[p ^ 1]
+            (x, y) = (self.L[p], self.L[p ^ 1])
             if p & 1:
-                x, y = y, x
+                (x, y) = (y, x)
             self.L[p >> 1] = None if x is None or y is None else self.function(x, y)
             p >>= 1
 
     def query(self, left, right):
-        l, r = left + self.margin, right + self.margin
+        (l, r) = (left + self.margin, right + self.margin)
         stack = []
         void = True
         while l < r:
@@ -50,16 +51,16 @@ def degrect(r, phi):
     return rect(r, math.radians(phi))
 
 
-def vsum(u, v):  # u = (x + y*1j, phi)
+def vsum(u, v):
     return (u[0] + v[0] * degrect(1, u[1]), (u[1] + v[1]) % 360)
 
 
 def solve(f):
-    n, m = [int(x) for x in f.readline().split()]
+    (n, m) = [int(x) for x in f.readline().split()]
     segments = [[1, 0] for i in range(n)]
     arm = SegmentTree([(1, 0) for i in range(n)], vsum)
     for line in f:
-        q, i, a = [int(x) for x in line.split()]
+        (q, i, a) = [int(x) for x in line.split()]
         if q == 1:
             segments[i - 1][0] += a
         else:

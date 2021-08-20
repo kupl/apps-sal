@@ -2,13 +2,13 @@ from collections import defaultdict
 
 
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         graph = defaultdict(set)
         for pair in dislikes:
             graph[pair[0]].add(pair[1])
             graph[pair[1]].add(pair[0])
-        colors = [0] * ((N) + 1)
-
+        colors = [0] * (N + 1)
         visited = set()
 
         def check(i):

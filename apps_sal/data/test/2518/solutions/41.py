@@ -12,7 +12,7 @@ def binsearch(l, r, fn):
 
 
 def main():
-    N, A, B = list(map(int, input().split()))
+    (N, A, B) = list(map(int, input().split()))
     l = []
     C = A - B
     for _ in range(N):
@@ -31,4 +31,4 @@ def main():
     return 1 + binsearch(0, 1000000000, func)
 
 
-print((main()))
+print(main())

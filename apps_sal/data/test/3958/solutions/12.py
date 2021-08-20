@@ -11,18 +11,16 @@ for i in range(len(l)):
             az[0].append(i + 1)
             z.append(az[0])
             az.popleft()
+    elif len(z) == 0:
+        f = 1
+        break
     else:
-        # print(f)
-        if len(z) == 0:
-            f = 1
-            break
-        else:
-            z[0].append(i + 1)
-            az.append(z[0])
-            z.popleft()
+        z[0].append(i + 1)
+        az.append(z[0])
+        z.popleft()
 if f == 1 or len(az) != 0:
     print(-1)
 else:
     print(len(z))
     for i in range(len(z)):
-        print(len(z[i]), *z[i], sep=" ")
+        print(len(z[i]), *z[i], sep=' ')

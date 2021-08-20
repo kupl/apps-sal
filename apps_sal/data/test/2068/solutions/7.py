@@ -14,7 +14,7 @@ d = dict()
 t = 0
 repeat = []
 for i in range(a):
-    x, y, z = map(str, input().split())
+    (x, y, z) = map(str, input().split())
     if reg(x) not in d:
         d[reg(x)] = t
         t += 1

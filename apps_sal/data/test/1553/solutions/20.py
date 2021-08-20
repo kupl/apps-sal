@@ -1,4 +1,4 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 l = list(map(int, input().split()))
 
 
@@ -18,10 +18,10 @@ lo = 0
 hi = n
 kand = 0
 while True:
-    if (poss((lo + hi) // 2)):
-        lo = ((lo + hi) // 2)
+    if poss((lo + hi) // 2):
+        lo = (lo + hi) // 2
     else:
-        hi = ((lo + hi) // 2)
+        hi = (lo + hi) // 2
     if abs(lo - hi) < 2:
         kand = lo
         break

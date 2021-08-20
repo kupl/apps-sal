@@ -11,7 +11,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    a, b, x, y, n = read_ints()
+    (a, b, x, y, n) = read_ints()
     n1 = min(n, a - x)
     ans = (a - n1) * (b - min(n - n1, b - y))
     n2 = min(n, b - y)

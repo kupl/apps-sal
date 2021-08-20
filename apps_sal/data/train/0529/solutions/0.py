@@ -4,7 +4,7 @@ for _ in range(int(input())):
     s = int(math.sqrt(n))
     ans = 0
     for i in range(1, s + 1):
-        ans += (n // i)
-    ans = ans * 2 - (s * s)
+        ans += n // i
+    ans = ans * 2 - s * s
     g = math.gcd(n * n, ans)
-    print(str(ans // g) + "/" + str(n * n // g))
+    print(str(ans // g) + '/' + str(n * n // g))

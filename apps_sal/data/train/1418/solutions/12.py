@@ -3,9 +3,8 @@ def function(n, arr, i, dp):
         sum = 0
         pointer = 1
         s = ''
-        # print('arr:',arr)
         for k in arr:
-            sum += (k * pointer)
+            sum += k * pointer
             pointer += 1
             s += str(k)
         dp[s] = sum
@@ -18,7 +17,7 @@ def function(n, arr, i, dp):
     else:
         val = dp[s]
     for j in range(i, n - 1):
-        arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j])
         s = ''
         for l in arr:
             s += str(l)
@@ -27,7 +26,7 @@ def function(n, arr, i, dp):
         else:
             val1 = dp[s]
         val = val if val > val1 else val1
-        arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        (arr[j], arr[j + 1]) = (arr[j + 1], arr[j])
     return val
 
 

@@ -1,5 +1,4 @@
 n = input()
-
 zn = 0
 wyn = 0
 for i in range(len(n)):
@@ -8,11 +7,9 @@ for i in range(len(n)):
 for i in range(len(n)):
     if n[i] != '^' and n[i] != '=':
         wyn += (zn - i) * int(n[i])
-
-# print(wyn)
 if wyn == 0:
-    print("balance")
+    print('balance')
 elif wyn > 0:
-    print("left")
+    print('left')
 else:
-    print("right")
+    print('right')

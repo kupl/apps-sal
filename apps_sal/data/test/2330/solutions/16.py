@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     aa = list(map(int, input().split()))
     if m < n or n == 1 or n == 2:
         print(-1)

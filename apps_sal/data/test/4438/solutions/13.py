@@ -8,7 +8,7 @@ n = int(input())
 dist = [0] * (n + 1)
 lista.append((0, 0))
 for _ in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     lista.append((x, y))
 lista = sorted(lista, key=lambda x: min(x))
 lista = sorted(lista, key=lambda x: max(x))
@@ -33,13 +33,11 @@ while ne < n:
             miny = i
         elif lista[i][1] == lista[miny][1] and lista[i][0] > lista[miny][0]:
             miny = i
-
     mxy = dista(minx, miny)
     if dista(miny, ox) + dist[ox] < dist[oy] + dista(miny, oy):
         dist[minx] = dista(ox, miny) + dist[ox] + mxy
     else:
         dist[minx] = dista(oy, miny) + dist[oy] + mxy
-
     if dista(ox, minx) + dist[ox] < dist[oy] + dista(oy, minx):
         dist[miny] = dista(ox, minx) + dist[ox] + mxy
     else:

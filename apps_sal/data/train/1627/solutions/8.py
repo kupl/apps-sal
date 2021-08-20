@@ -1,4 +1,4 @@
-CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 
 def is_polydivisible(s, b):
@@ -8,7 +8,7 @@ def is_polydivisible(s, b):
         index = 0
         num = 0
         while temp > 0:
-            num += CHARS.index(s[index]) * (b**(temp - 1))
+            num += CHARS.index(s[index]) * b ** (temp - 1)
             temp -= 1
             index += 1
         if num % divide != 0:
@@ -22,20 +22,20 @@ def get_polydivisible(n, b):
     count = 0
     count2 = 0
     temp = 1
-    s = ""
+    s = ''
     while True:
-        if count2 >= b**temp:
+        if count2 >= b ** temp:
             temp += 1
         record = count2
         power = temp
         while len(s) < temp:
-            some = record // b**(power - 1)
+            some = record // b ** (power - 1)
             s += CHARS[some]
-            record -= some * (b**(power - 1))
+            record -= some * b ** (power - 1)
             power -= 1
         count2 += 1
         if is_polydivisible(s, b):
             count += 1
         if count == n:
             return s
-        s = ""
+        s = ''

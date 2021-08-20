@@ -16,5 +16,4 @@ for i in range(1, n + 1):
     ans += ((l1 - l0) * (r0 - ind[i]) + (r1 - r0) * (ind[i] - l1)) * i
     l[r0] = l1
     r[l1] = r0
-
 print(ans)

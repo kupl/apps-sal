@@ -1,11 +1,10 @@
-X, Y, a, b, c = map(int, input().split())
+(X, Y, a, b, c) = map(int, input().split())
 A = list(map(int, input().split()))
 B = list(map(int, input().split()))
 C = list(map(int, input().split()))
 A.sort()
 B.sort()
 C.sort()
-
 ans = 0
 if X < a:
     A = A[a - X:]

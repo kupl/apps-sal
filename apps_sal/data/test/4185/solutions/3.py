@@ -1,4 +1,4 @@
-n, m = (int(i) for i in input().split())
+(n, m) = (int(i) for i in input().split())
 a = [[int(i) for i in input().split()] for _ in range(n)]
 res = 0
 for j in range(m):
@@ -8,5 +8,5 @@ for j in range(m):
             pos = (a[i][j] - j - 1) // m
             shift = i - pos if i >= pos else i - pos + n
             b[shift] += 1
-    res += min(i + n - b[i] for i in range(n))
+    res += min((i + n - b[i] for i in range(n)))
 print(res)

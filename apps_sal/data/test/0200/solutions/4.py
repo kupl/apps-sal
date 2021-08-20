@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import itertools
 
 
@@ -24,8 +21,8 @@ def solve(h1, h2, a, b):
 
 
 def main():
-    h1, h2 = list(map(int, input().split()))
-    a, b = list(map(int, input().split()))
+    (h1, h2) = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     print(solve(h1, h2, a, b))
 
 

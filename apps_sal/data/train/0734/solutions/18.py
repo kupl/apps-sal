@@ -1,17 +1,14 @@
-'''
+"""
 25th march 2019 monday
 rocket to the moon
-'''
-
+"""
 t = int(input())
 for _ in range(t):
     n = int(input())
     a = [int(x) for x in input().split()]
-
     b = list()
-    for id, x in enumerate(a):
+    for (id, x) in enumerate(a):
         b.append([x, id])
-
     b.sort()
     a.sort()
     counter = list()
@@ -27,9 +24,9 @@ for _ in range(t):
     counter.append(count)
     c_max = max(c_max, counter[-1])
     if c_max > n // 2:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
         c = [0] * n
         for i in range(n):
             c[b[i][1]] = b[(i + c_max) % n][0]

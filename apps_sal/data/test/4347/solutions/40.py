@@ -1,6 +1,9 @@
 import sys
 input = sys.stdin.readline
-def I(): return list(map(int, input().split()))
+
+
+def I():
+    return list(map(int, input().split()))
 
 
 def fact(n):
@@ -9,5 +12,5 @@ def fact(n):
     return n * fact(n - 1)
 
 
-n, = I()
+(n,) = I()
 print(fact(n - 1) // (n // 2))

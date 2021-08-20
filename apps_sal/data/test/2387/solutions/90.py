@@ -1,5 +1,4 @@
 import bisect
-
 n = int(input())
 opens = 0
 closes = 0
@@ -12,11 +11,10 @@ for _ in range(n):
     for i in range(len(s)):
         if s[i] == '(':
             cnt1 += 1
+        elif cnt1 == 0:
+            cnt2 += 1
         else:
-            if cnt1 == 0:
-                cnt2 += 1
-            else:
-                cnt1 -= 1
+            cnt1 -= 1
     if cnt2 == 0:
         opens += cnt1
     elif cnt1 == 0:

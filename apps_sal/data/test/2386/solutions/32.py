@@ -4,7 +4,6 @@ n = int(input())
 A = list(map(int, input().split()))
 for i in range(n):
     A[i] -= i + 1
-
 m = int(statistics.median(A))
 ans1 = 0
 ans2 = 0

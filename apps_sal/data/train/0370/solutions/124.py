@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         fa = [i for i in range(len(A))]
         sz = [1] * len(A)
@@ -17,10 +18,10 @@ class Solution:
                         x //= y
             if x > 1:
                 factor[x].append(i)
-        for k, v in list(factor.items()):
+        for (k, v) in list(factor.items()):
             for j in range(1, len(v)):
-                x, y = v[0], v[j]
-                fx, fy = find(x), find(y)
+                (x, y) = (v[0], v[j])
+                (fx, fy) = (find(x), find(y))
                 if fx != fy:
                     if sz[fx] > sz[fy]:
                         sz[fy] += sz[fx]

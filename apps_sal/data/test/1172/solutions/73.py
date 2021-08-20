@@ -1,9 +1,8 @@
 s = input()
 MOD = 10 ** 9 + 7
 dp = [1, 0, 0, 0]
-
 for x in s:
-    emp, a, b, c = dp
+    (emp, a, b, c) = dp
     if x == 'A':
         dp[1] += emp
     if x == 'B':
@@ -15,7 +14,5 @@ for x in s:
         dp[1] += emp
         dp[2] += a
         dp[3] += b
-
     dp = [v % MOD for v in dp]
-
 print(dp[3])

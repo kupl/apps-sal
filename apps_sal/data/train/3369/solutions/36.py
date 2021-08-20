@@ -1,1 +1,2 @@
-def move(a, b): return a + 2 * b
+def move(a, b):
+    return a + 2 * b

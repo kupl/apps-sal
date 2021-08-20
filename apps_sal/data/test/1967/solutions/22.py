@@ -1,5 +1,5 @@
 ar1 = []
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ar = []
 for i in range(m):
     s1 = []
@@ -19,7 +19,6 @@ for i in range(n):
 for i in range(n):
     for j in ar1[i]:
         print(j * 2, end='')
-
     print()
     for j in ar1[i]:
         print(j * 2, end='')

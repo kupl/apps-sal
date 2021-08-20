@@ -1,8 +1,8 @@
-# AC
 import sys
 
 
 class Main:
+
     def __init__(self):
         self.buff = None
         self.index = 0
@@ -38,7 +38,6 @@ class Main:
                     if o == -1:
                         break
                     t[o] = tt
-
                 oo = od[i]
                 for _ in range(0, k):
                     oo = nx[oo]

@@ -8,8 +8,8 @@ for i in range(n):
         break
 c = a[0][1]
 k = n // 2
-if not(f):
-    if c == a[0][0] or (a[k][k] != a[0][0]):
+if not f:
+    if c == a[0][0] or a[k][k] != a[0][0]:
         f = True
     else:
         for i in range(n):

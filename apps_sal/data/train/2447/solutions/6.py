@@ -1,4 +1,5 @@
 class Solution:
+
     def reverseVowels(self, s):
         """
         :type s: str
@@ -15,7 +16,7 @@ class Solution:
                 left += 1
             while right > left and res[right] not in vowels:
                 right -= 1
-            res[left], res[right] = res[right], res[left]
+            (res[left], res[right]) = (res[right], res[left])
             left += 1
             right -= 1
         return ''.join(res)

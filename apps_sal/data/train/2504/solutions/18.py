@@ -1,4 +1,5 @@
 class Solution:
+
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
         ans = 0
         i = 0

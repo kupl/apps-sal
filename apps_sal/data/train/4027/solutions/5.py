@@ -9,4 +9,4 @@ def depth(arr, n):
 
 
 def sum_nested_numbers(arr):
-    return sum(n**i for (n, i) in depth(arr, 1))
+    return sum((n ** i for (n, i) in depth(arr, 1)))

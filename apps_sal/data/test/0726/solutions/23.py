@@ -1,7 +1,7 @@
-n, d = input().split(" ")
+(n, d) = input().split(' ')
 n = int(n)
 d = int(d)
-x = input().split(" ")
+x = input().split(' ')
 for i in range(n):
     x[i] = int(x[i])
 counter = 2

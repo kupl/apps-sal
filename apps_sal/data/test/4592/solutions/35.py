@@ -1,6 +1,6 @@
 import math
 n = int(input())
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 ans = 1
 cnt = [0] * 1000
 for i in range(2, n + 1):
@@ -13,6 +13,6 @@ for i in range(2, n + 1):
         cnt[int(x)] += 1
 for i in cnt:
     if i != 0:
-        ans *= (i + 1)
+        ans *= i + 1
         ans %= mod
 print(int(ans))

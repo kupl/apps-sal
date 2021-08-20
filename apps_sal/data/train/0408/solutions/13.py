@@ -1,10 +1,11 @@
 class Solution:
+
     def findBestValue(self, arr: List[int], target: int) -> int:
         s = sum(arr)
         m = max(arr)
         if s <= target:
             return m
-        l, r = 1, m + 1
+        (l, r) = (1, m + 1)
         while l < r:
             mid = (l + r) // 2
             cur = self.getSum(arr, mid)

@@ -1,16 +1,14 @@
-
-
 def restora(lin):
-    lin = lin.split(":")
+    lin = lin.split(':')
     ans = []
     falt = 8
     for w in lin:
-        if w != "":
+        if w != '':
             falt -= 1
     for w in lin:
-        if w == "":
+        if w == '':
             while falt > 0:
-                ans.append("0000")
+                ans.append('0000')
                 falt -= 1
             continue
         while len(w) < 4:

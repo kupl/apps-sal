@@ -1,4 +1,5 @@
 class Solution:
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
@@ -20,7 +21,6 @@ class Solution:
                 index_x = num
                 break
             index_x = n
-
         for num in range(m):
             if target == matrix[num][0]:
                 return True
@@ -28,10 +28,8 @@ class Solution:
                 index_y = num
                 break
             index_y = m
-
         for x in range(index_x):
             for y in range(index_y):
                 if matrix[y][x] == target:
                     return True
-
         return False

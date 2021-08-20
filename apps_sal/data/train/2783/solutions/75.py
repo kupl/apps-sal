@@ -1,7 +1,5 @@
 def get_grade(s1, s2, s3):
-
     mean_score = (s1 + s2 + s3) / 3
-
     if mean_score >= 90:
         return 'A'
     if mean_score >= 80:
@@ -10,4 +8,4 @@ def get_grade(s1, s2, s3):
         return 'C'
     if mean_score >= 60:
         return 'D'
-    return "F"
+    return 'F'

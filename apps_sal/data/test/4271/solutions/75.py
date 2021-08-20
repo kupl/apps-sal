@@ -4,12 +4,10 @@ def main():
     b = list(map(int, input().split()))
     c = list(map(int, input().split()))
     total_score = sum(b)
-
     for i in range(1, n):
         prev = a[i - 1]
         if prev + 1 == a[i]:
             total_score += c[prev - 1]
-
     print(total_score)
 
 

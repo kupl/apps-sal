@@ -2,8 +2,8 @@ def prod_int_partII(n, s):
     res = []
     stack = [[n, 2, []]]
     while stack:
-        m, d, store = stack.pop(0)
-        for i in range(d, int(m**0.5) + 1):
+        (m, d, store) = stack.pop(0)
+        for i in range(d, int(m ** 0.5) + 1):
             if m % i == 0:
                 res.append(store + [i] + [m // i])
                 stack.append([m // i, i, store + [i]])

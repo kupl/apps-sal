@@ -6,7 +6,8 @@ except:
     fin = sys.stdin
 
 
-def input(): return fin.readline().strip()
+def input():
+    return fin.readline().strip()
 
 
 n = int(input())
@@ -30,10 +31,10 @@ for i in range(2 * n):
     else:
         r[0][0] -= 1
         t[j] += [0, 0][j]
-x, y = t
+(x, y) = t
 if x > y:
-    print("First")
+    print('First')
 elif x < y:
-    print("Second")
+    print('Second')
 else:
-    print("Draw")
+    print('Draw')

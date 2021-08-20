@@ -1,4 +1,5 @@
 class Solution:
+
     def maxPower(self, s: str) -> int:
         if len(s) <= 1:
             return len(s)
@@ -12,9 +13,7 @@ class Solution:
                 if count > max_count:
                     max_count = count
                 count = 1
-
             last_char = c
         if count > max_count:
             max_count = count
-
         return max_count

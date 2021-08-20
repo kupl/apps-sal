@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 p = [0] + list(map(int, input().split()))
 xy = [list(map(int, input().split())) for i in range(M)]
 li = [[] for i in range(N + 1)]

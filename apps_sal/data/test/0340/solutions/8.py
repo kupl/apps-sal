@@ -1,7 +1,6 @@
 import sys
 from math import sqrt, log, ceil
 input_file = sys.stdin
-
 n = int(input_file.readline())
 
 
@@ -17,14 +16,14 @@ def factor(n):
                 n /= i
         if n < i:
             break
-    return lst, prod
+    return (lst, prod)
 
 
 if n == 1:
     print(1, 0)
 else:
-    lst, ans = factor(n)
-    maxi, mini = max(lst), min(lst)
+    (lst, ans) = factor(n)
+    (maxi, mini) = (max(lst), min(lst))
     if maxi == mini and log(maxi, 2) == int(log(maxi, 2)):
         print(ans, int(log(maxi, 2)))
     else:

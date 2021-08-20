@@ -3,12 +3,12 @@ n = int(input())
 bumpers = input()
 total = 0
 for i in bumpers:
-    if i == "<":
+    if i == '<':
         total += 1
     else:
         break
 for i in reversed(bumpers):
-    if i == ">":
+    if i == '>':
         total += 1
     else:
         break

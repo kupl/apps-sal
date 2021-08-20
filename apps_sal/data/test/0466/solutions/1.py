@@ -1,4 +1,4 @@
-[c, d], [n, m], k = list(map(int, input().split())), list(map(int, input().split())), int(input())
+([c, d], [n, m], k) = (list(map(int, input().split())), list(map(int, input().split())), int(input()))
 left = n * m - k
 if left <= 0:
     print(0)

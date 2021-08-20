@@ -1,4 +1,5 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         from collections import defaultdict
         graph = []
@@ -16,7 +17,7 @@ class Solution:
             return parent[x]
 
         def union(x, y):
-            a, b = find(x), find(y)
+            (a, b) = (find(x), find(y))
             if a != b:
                 parent[a] = b
                 return True
@@ -27,7 +28,7 @@ class Solution:
         res = 0
         i = 0
         while v != n - 1:
-            a, b, dist = graph[i]
+            (a, b, dist) = graph[i]
             if union(a, b):
                 res += dist
                 v += 1

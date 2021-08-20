@@ -5,8 +5,8 @@ def find(n):
         sum = full * (full - 1) * 210
         for i in range(3, half + 1):
             if i % 3 == 0 or i % 5 == 0:
-                sum += i + (full * 30)
-        sum += (225 * full)
+                sum += i + full * 30
+        sum += 225 * full
         return sum
     else:
         sum = 0

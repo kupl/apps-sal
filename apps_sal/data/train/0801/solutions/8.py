@@ -3,8 +3,8 @@ for i in range(int(input())):
     a = []
     a = list(map(int, input().split()))
     b = list(map(int, input().split()))
-    m = 10**6
-    arr = [0] * (10**6 + 1)
+    m = 10 ** 6
+    arr = [0] * (10 ** 6 + 1)
     for i in range(n):
         arr[a[i]] += 1
         arr[b[i]] += 1
@@ -16,7 +16,7 @@ for i in range(int(input())):
             break
         else:
             arr[i] = arr[i] // 2
-    a1, b1 = [], []
+    (a1, b1) = ([], [])
     bn = arr.copy()
     an = arr.copy()
     for i in range(n):

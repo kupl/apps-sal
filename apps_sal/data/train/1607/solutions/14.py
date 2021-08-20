@@ -1,6 +1,5 @@
 s = list(input())
 n = len(s)
-
 ans = 0
 for i in range(n - 2):
     if s[i] != 'Q':

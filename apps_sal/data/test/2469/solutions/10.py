@@ -1,4 +1,5 @@
 class Solution:
+
     def majorityElement(self, nums):
         ctr = collections.Counter()
         for n in nums:
@@ -6,7 +7,4 @@ class Solution:
             if len(ctr) == 3:
                 ctr -= collections.Counter(set(ctr))
         return [n for n in ctr if nums.count(n) > len(nums) // 3]
-        """
-         :type nums: List[int]
-         :rtype: List[int]
-         """
+        '\n         :type nums: List[int]\n         :rtype: List[int]\n         '

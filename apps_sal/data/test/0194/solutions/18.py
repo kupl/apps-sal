@@ -1,5 +1,5 @@
 def __starting_point():
-    n, c1, c2 = list(map(int, input().split()))
+    (n, c1, c2) = list(map(int, input().split()))
     g = list(map(int, input().split()))
     count = 0
     deny = 0
@@ -14,11 +14,10 @@ def __starting_point():
                 count -= 1
             else:
                 deny += 1
+        elif c2 > 0:
+            c2 -= 1
         else:
-            if c2 > 0:
-                c2 -= 1
-            else:
-                deny += 2
+            deny += 2
     print(deny)
 
 

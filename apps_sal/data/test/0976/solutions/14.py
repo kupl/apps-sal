@@ -1,10 +1,8 @@
 listx = []
-
-x, y = map(int, input().split(' '))
+(x, y) = map(int, input().split(' '))
 for i in range(x):
-    a, b = map(int, input().split(' '))
+    (a, b) = map(int, input().split(' '))
     listx.append([a, b])
-
 time = 1
 curr = 0
 mins = 0

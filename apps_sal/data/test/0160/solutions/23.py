@@ -1,6 +1,6 @@
 from itertools import accumulate
 from math import floor, sqrt
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 A = list(map(int, input().split()))
 sm = sum(A)
 divs = set()

@@ -1,18 +1,17 @@
 def shortestPath(topology, startPoint, endPoint):
     graph = {}
-    for key, value in topology.items():
+    for (key, value) in topology.items():
         values = []
-        for k, v in value.items():
+        for (k, v) in value.items():
             values.append(k)
         graph[key] = values
-
     paths = find_all_paths(graph, startPoint, endPoint)
     if len(paths) == 0:
         return []
     pathsAndDistances = []
     for path in paths:
         distance = 0
-        for i, waypoint in enumerate(path):
+        for (i, waypoint) in enumerate(path):
             if i < len(path) - 1:
                 distance += topology[waypoint][path[i + 1]]
         pathsAndDistances.append((distance, path))

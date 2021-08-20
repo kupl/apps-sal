@@ -1,5 +1,4 @@
 3
-
 n = int(input())
 lst = [input() for _ in range(n)]
 alf = [chr(ord('a') + _) for _ in range(26)]

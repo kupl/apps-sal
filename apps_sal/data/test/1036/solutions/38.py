@@ -10,7 +10,7 @@ def rps(a, b):
     return b
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = list(input())
 for _ in range(k):
     t = list(s) * 2

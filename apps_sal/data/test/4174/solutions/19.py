@@ -1,5 +1,5 @@
 import bisect
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 Y = list(map(int, input().split()))
 Z = [0] * n
 a = 0

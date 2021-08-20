@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, x = map(int, input().split())
+    (n, x) = map(int, input().split())
     s = input()
     y = s.count('0') - s.count('1')
     z = 0
@@ -13,7 +13,7 @@ for _ in range(int(input())):
             inf = True
             print(-1)
             break
-        if x - z == 0 or ((x - z) * y > 0 and abs((x - z)) % abs(y) == 0):
+        if x - z == 0 or ((x - z) * y > 0 and abs(x - z) % abs(y) == 0):
             ans += 1
     if not inf:
         print(ans)

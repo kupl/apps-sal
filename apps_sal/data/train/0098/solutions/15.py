@@ -1,5 +1,5 @@
 def solve():
-    c, m, x = list(map(int, input().split()))
+    (c, m, x) = list(map(int, input().split()))
     u = min(c, m)
     y = c - u + m - u + x
     if y >= u:
@@ -9,6 +9,5 @@ def solve():
 
 
 t = int(input())
-
 for _ in range(t):
     solve()

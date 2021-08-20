@@ -1,7 +1,6 @@
-#n = int(input())
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 val = n // m
 if val % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')

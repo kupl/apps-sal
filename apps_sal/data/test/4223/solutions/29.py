@@ -1,4 +1,3 @@
-
 N = int(input())
 S = str(input())
 i = 0

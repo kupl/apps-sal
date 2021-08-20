@@ -4,7 +4,7 @@ e = ['H', 'HE', 'LI', 'BE', 'B', 'C', 'N', 'O', 'F', 'NE', 'NA', 'MG', 'AL', 'SI
 def c(s):
     if s in e:
         return True
-    return any(s.startswith(x) and c(s[len(x):]) for x in e)
+    return any((s.startswith(x) and c(s[len(x):]) for x in e))
 
 
 print(['NO', 'YES'][c(input())])

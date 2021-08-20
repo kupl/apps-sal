@@ -1,8 +1,6 @@
-# import sys; input = sys.stdin.buffer.readline
-# sys.setrecursionlimit(10**7)
 from collections import defaultdict
 mod = 10 ** 9 + 7
-INF = float("inf")
+INF = float('inf')
 
 
 def getlist():
@@ -10,13 +8,13 @@ def getlist():
 
 
 def inverse(N, mod):
-    return (pow(N, mod - 2, mod))
+    return pow(N, mod - 2, mod)
 
 
 def main():
     T = int(input())
     for _ in range(T):
-        x, y = getlist()
+        (x, y) = getlist()
         C = getlist()
         D = [INF] * 8
         D[0] = min(C[5], C[0] + C[4])
@@ -36,7 +34,6 @@ def main():
         elif x < 0 and y >= 0:
             m = min(-x, y)
             ans = D[3] * m + D[4] * (-x - m) + D[2] * (y - m)
-     # x, y < 0
         else:
             m = min(-x, -y)
             ans = D[5] * m + D[4] * (-x - m) + D[6] * (-y - m)

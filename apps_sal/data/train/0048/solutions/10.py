@@ -11,6 +11,6 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    x, y, k = read_ints()
+    (x, y, k) = read_ints()
     a = (k * (y + 1) - 2) // (x - 1) + 1 + k
     print(a)

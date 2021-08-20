@@ -8,5 +8,4 @@ else:
     for i in range(l - 1):
         c += k * (i + 1)
         k *= 10
-    # ����� �� �������� �������
     print(c)

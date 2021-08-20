@@ -20,9 +20,8 @@ m = int(input())
 ans = 1
 d = defaultdict(lambda: 0)
 e = defaultdict(lambda: 0)
-
 i = 0
-while(i < n):
+while i < n:
     d[a[i]] += 1
     d[b[i]] += 1
     if a[i] == b[i]:
@@ -32,6 +31,6 @@ ans = 1
 for j in d:
     k = d[j]
     rep = e[j]
-    ans = (ans * factorial(k, m, rep))
+    ans = ans * factorial(k, m, rep)
     ans = ans % m
 print(int(ans))

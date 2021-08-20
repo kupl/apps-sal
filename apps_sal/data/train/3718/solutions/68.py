@@ -4,4 +4,4 @@ def divisors(n):
         result = n % number
         if result == 0:
             devisors.append(result)
-    return(len(devisors))
+    return len(devisors)

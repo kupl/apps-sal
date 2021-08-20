@@ -1,6 +1,5 @@
 for _ in range(int(input())):
-
-    a, b = [int(i) for i in input().split()]
+    (a, b) = [int(i) for i in input().split()]
     tot = 0
     ans = []
     for i in range(1, 11):

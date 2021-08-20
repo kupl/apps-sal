@@ -1,8 +1,9 @@
 class Solution:
+
     def longestWPI(self, hours: List[int]) -> int:
-        Sum, ans = 0, 0
+        (Sum, ans) = (0, 0)
         cache = {}
-        for i, n in enumerate(hours):
+        for (i, n) in enumerate(hours):
             Sum = Sum + 1 if n > 8 else Sum - 1
             if Sum > 0:
                 ans = i + 1

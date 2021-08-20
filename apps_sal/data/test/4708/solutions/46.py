@@ -1,4 +1,4 @@
-n, k, x, y = int(input()), int(input()), int(input()), int(input())
+(n, k, x, y) = (int(input()), int(input()), int(input()), int(input()))
 if n < k:
     print(x * n)
 else:

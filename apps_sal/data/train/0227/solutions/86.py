@@ -1,6 +1,7 @@
 class Solution:
+
     def longestOnes(self, A: List[int], K: int) -> int:
-        left, right = 0, 0
+        (left, right) = (0, 0)
         k = 0
         flipped = set()
         longest = 0
@@ -21,5 +22,4 @@ class Solution:
                     flipped.discard(left)
                     k -= 1
                 left += 1
-
         return longest

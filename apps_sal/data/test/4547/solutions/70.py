@@ -1,1 +1,1 @@
-print("YNeos"["9"not in input()::2])
+print('YNeos'['9' not in input()::2])

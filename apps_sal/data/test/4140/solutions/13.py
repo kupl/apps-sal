@@ -14,5 +14,4 @@ for i in range(0, len(s), 2):
 for i in range(1, len(s), 2):
     if s[i] == '0':
         d += 1
-
 print(min(c, d))

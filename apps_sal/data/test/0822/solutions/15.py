@@ -1,4 +1,4 @@
-n, m, z = map(int, input().split())
+(n, m, z) = map(int, input().split())
 
 
 def gcd(a, b):

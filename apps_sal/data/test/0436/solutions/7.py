@@ -9,6 +9,6 @@ for i in range(1, n):
 if 2 * Sum > sum(A):
     print(len(ans))
     for a in ans:
-        print(a, end=" ")
+        print(a, end=' ')
 else:
     print(0)

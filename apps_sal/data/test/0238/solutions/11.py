@@ -1,6 +1,5 @@
-
 def __starting_point():
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     aa = list(map(int, input().split()))
     ans = 0
     for start in range(m):

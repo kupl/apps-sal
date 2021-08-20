@@ -3,9 +3,9 @@ def div(a, b):
 
 
 for t in range(int(input())):
-    x, y, p, q = map(int, input().split())
+    (x, y, p, q) = map(int, input().split())
     if q == 1:
-        if p == 0 and x == 0 or p == 1 and x == y:
+        if p == 0 and x == 0 or (p == 1 and x == y):
             print(0)
         else:
             print(-1)

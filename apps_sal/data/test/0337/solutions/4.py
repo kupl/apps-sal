@@ -1,7 +1,6 @@
-w, h = map(int, input().split())
-a, b = map(int, input().split())
-c, d = map(int, input().split())
-
+(w, h) = map(int, input().split())
+(a, b) = map(int, input().split())
+(c, d) = map(int, input().split())
 while h != -1:
     w += h
     if h == b:

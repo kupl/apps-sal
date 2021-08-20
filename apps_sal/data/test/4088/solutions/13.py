@@ -3,7 +3,7 @@ def main():
     for _ in range(q):
         s = input()
         m = int(input())
-        t = ["0" for __ in range(m)]
+        t = ['0' for __ in range(m)]
         b = list(map(int, input().split()))
         l = sorted(s)
         d = {}
@@ -15,10 +15,9 @@ def main():
         while True:
             idxs = []
             num0s = 0
-            for c, el in enumerate(b):
+            for (c, el) in enumerate(b):
                 if el == 0:
                     num0s += 1
-                    #t[c] = l.pop()
                     idxs.append(c)
                     b[c] = -1
             if not num0s:
@@ -36,8 +35,7 @@ def main():
             for i in range(len(b)):
                 for idx in idxs:
                     b[i] -= abs(i - idx)
-            # print(b)
-        print("".join(t))
+        print(''.join(t))
 
 
 main()

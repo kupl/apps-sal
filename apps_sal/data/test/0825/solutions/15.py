@@ -23,10 +23,10 @@ cnt = 0
 for p in Primes:
     e = 1
     z = p
-    while (N % z == 0) and (N >= z):
+    while N % z == 0 and N >= z:
         N //= z
         e += 1
-        z = p**e
+        z = p ** e
         cnt += 1
     while N % p == 0:
         N //= p

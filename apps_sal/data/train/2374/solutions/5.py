@@ -13,5 +13,4 @@ for i in range(int(input())):
             break
         else:
             lvl = (lvl + 1) % 2
-
-    print("YES" if f and lvl == 1 else "NO")
+    print('YES' if f and lvl == 1 else 'NO')

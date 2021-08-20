@@ -9,8 +9,6 @@ for i in range(N):
         H.pop()
     else:
         H.append(S[i])
-    # print(H)
-# print(num)
 if num % 2 == 1:
     print('Yes')
 else:

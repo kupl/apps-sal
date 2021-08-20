@@ -1,7 +1,7 @@
-l, r, a = list(map(int, input().split()))
-small, big = sorted((l, r))
+(l, r, a) = list(map(int, input().split()))
+(small, big) = sorted((l, r))
 if big - small > a:
     print(2 * (small + a))
 else:
-    a -= (big - small)
+    a -= big - small
     print(2 * (big + a // 2))

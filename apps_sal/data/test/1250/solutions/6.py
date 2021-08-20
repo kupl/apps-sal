@@ -1,8 +1,7 @@
-# July 4, 2014
 sa = int(input())
 string = ''
 if sa == 1 or sa == 2:
-    print("-1")
+    print('-1')
 else:
     for x in range(sa, 0, -1):
         string += str(x)

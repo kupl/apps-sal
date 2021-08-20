@@ -1,12 +1,10 @@
 from sys import stdout, stdin
-
-n, kk = list(map(int, stdin.readline().split()))
+(n, kk) = list(map(int, stdin.readline().split()))
 s = stdin.readline().strip()
-s += "$"
+s += '$'
 n = n + 1
-
 dp = [[0 for i in range(n)] for j in range(n)]
-p = 10**15 + 5
+p = 10 ** 15 + 5
 for i in range(n):
     dp[i][0] = 1
 for end in range(n):
@@ -19,18 +17,14 @@ for end in range(n):
                 ans += dp[k][length - 1]
                 ans %= p
         dp[end][length] = ans
-
 totals = [dp[n - 1][length] for length in range(n)]
-# print(totals)
-
 ans = 0
 idx = n - 1
 while idx >= 0 and kk > 0:
     ans += min(totals[idx], kk) * (n - 1 - idx)
     kk -= totals[idx]
     idx -= 1
-
 if kk <= 0:
-    stdout.write(str(ans) + "\n")
+    stdout.write(str(ans) + '\n')
 else:
     print(-1)

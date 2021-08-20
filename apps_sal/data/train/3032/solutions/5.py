@@ -3,7 +3,7 @@ from collections import Counter
 
 def factors(n):
     result = set()
-    for i in range(2, int(n**0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1):
         if n % i == 0:
             result.add(i)
             result.add(n // i)

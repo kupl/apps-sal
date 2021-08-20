@@ -1,4 +1,4 @@
-n, p, l, r = map(int, input().split())
+(n, p, l, r) = map(int, input().split())
 if l == 1:
     if r == n:
         print(0)

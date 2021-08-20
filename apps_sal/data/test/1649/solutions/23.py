@@ -1,14 +1,8 @@
-# Fortune Cookies
-
-# 1 <= A <= B <= C <= D では，
-# A + D = B + C or A + B + C = D を調べればよい
-
 delic = list(map(int, input().split()))
 delic.sort()
-
 if delic[0] + delic[3] == delic[1] + delic[2]:
-    print("Yes")
+    print('Yes')
 elif sum(delic[0:3]) == delic[3]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

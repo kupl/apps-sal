@@ -1,14 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 (M, N) = map(int, input().split())
-
 times = []
 for m in range(M):
     times.append(list(map(int, input().split())))
-
 man = [0] * N
-
 time = 0
 for m in range(M):
     for n in range(N):
@@ -18,6 +12,4 @@ for m in range(M):
             time = max(time, man[n]) + times[m][n]
         man[n] = time
     print(time, end=' ')
-    # print("man = ", man)
-
 print()

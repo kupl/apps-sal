@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = list(map(int, input().split()))
 table = {0: 0}
 s = a[0] % m
@@ -11,5 +11,5 @@ for i in range(1, n):
         table[s] = 1
 ans = 0
 for i in table.values():
-    ans += (i * (i - 1)) // 2
+    ans += i * (i - 1) // 2
 print(ans + table[0])

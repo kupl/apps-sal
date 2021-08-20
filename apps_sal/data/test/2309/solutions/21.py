@@ -1,6 +1,5 @@
 first_pairs = []
 second_pairs = []
-
 lines = int(input())
 words = {}
 for i in range(lines):
@@ -18,7 +17,6 @@ for i in range(lines):
     else:
         second_pairs.append((words[vow_cnt][vow_last], w))
         del words[vow_cnt][vow_last]
-
 for l in words:
     first = None
     second = None
@@ -29,12 +27,9 @@ for l in words:
         second = k
         first_pairs.append((words[l][first], words[l][second]))
         first = None
-
 while len(first_pairs) < len(second_pairs):
     first_pairs.append(second_pairs.pop())
-
 print(len(second_pairs))
-
-for f, s in zip(first_pairs, second_pairs):
-    print("{} {}".format(f[0], s[0]))
-    print("{} {}".format(f[1], s[1]))
+for (f, s) in zip(first_pairs, second_pairs):
+    print('{} {}'.format(f[0], s[0]))
+    print('{} {}'.format(f[1], s[1]))

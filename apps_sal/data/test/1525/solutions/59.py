@@ -1,9 +1,9 @@
-h, w, k = map(int, input().split())
-dp = [[0 for _ in range(w)]for _ in range(h + 1)]
+(h, w, k) = map(int, input().split())
+dp = [[0 for _ in range(w)] for _ in range(h + 1)]
 dp[0][0] = 1
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for i in range(h):
-    for bit in range(2**(w - 1)):
+    for bit in range(2 ** (w - 1)):
         bit = bin(bit)[2:].zfill(w - 1)
         f = 0
         for j in range(w - 2):

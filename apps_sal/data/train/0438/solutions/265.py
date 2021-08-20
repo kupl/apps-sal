@@ -1,6 +1,6 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
-        # Union find
         records = []
         self.num_m = 0
         for i in range(len(arr)):
@@ -37,9 +37,8 @@ class Solution:
                 records[ans_j][1] += records[ans_i][1]
                 if m == records[ans_j][1]:
                     self.num_m += 1
-
         last = -1
-        for i, n in enumerate(arr):
+        for (i, n) in enumerate(arr):
             num = n - 1
             records[num] = [num, 1]
             if m == 1:

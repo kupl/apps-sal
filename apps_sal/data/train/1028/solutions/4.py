@@ -6,9 +6,9 @@ for i in range(1, t + 1):
     temp = num
     while temp > 0:
         dg = temp % 10
-        sum += dg**len(n)
+        sum += dg ** len(n)
         temp //= 10
     if num == sum:
-        print("FEELS GOOD")
+        print('FEELS GOOD')
     else:
-        print("FEELS BAD")
+        print('FEELS BAD')

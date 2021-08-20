@@ -7,7 +7,7 @@ def dfs(graph, start):
     stack.append([start, 0])
     costs[start] = -1
     while stack:
-        a, cost = stack.popleft()
+        (a, cost) = stack.popleft()
         for b in list(graph[a].keys()):
             if not costs[b]:
                 stack.append([b, cost + 1])
@@ -18,7 +18,7 @@ def dfs(graph, start):
 N = int(input())
 graph = {}
 for i in range(N - 1):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a not in graph:
         graph[a] = {}
     if b not in graph:
@@ -30,5 +30,4 @@ f_cnt = 1
 for i in range(2, N):
     if f_costs[i] <= s_costs[i]:
         f_cnt += 1
-# print(f_costs, s_costs, f_cnt)
-print(('Fennec' if f_cnt > N - f_cnt else 'Snuke'))
+print('Fennec' if f_cnt > N - f_cnt else 'Snuke')

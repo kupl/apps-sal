@@ -1,12 +1,10 @@
 import sys
-
-n, m = [int(x) for x in sys.stdin.readline().split()]
+(n, m) = [int(x) for x in sys.stdin.readline().split()]
 a = [int(x) for x in sys.stdin.readline().split()]
 increase = 0
-
 for i in range(m):
     op = [int(x) for x in sys.stdin.readline().split()]
-    t = op[0]  # type of operation
+    t = op[0]
     if t == 1:
         v = op[1]
         x = op[2]

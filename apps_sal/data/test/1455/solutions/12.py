@@ -2,9 +2,7 @@ import sys
 import math
 from itertools import permutations
 input = sys.stdin.readline
-
 n = int(input())
-
 minn = n // 2 + 1
 print(minn)
 for i in range(minn):

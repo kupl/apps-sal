@@ -1,5 +1,5 @@
 def scramble(s1, s2):
-    clean = ""
+    clean = ''
     boolean = []
     for i in s2:
         if i not in clean:

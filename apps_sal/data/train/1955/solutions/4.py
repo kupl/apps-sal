@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         n = len(s)
         parent = [i for i in range(n)]
@@ -13,10 +14,10 @@ class Solution:
             return p
 
         def union(a, b):
-            pa, pb = find(a), find(b)
+            (pa, pb) = (find(a), find(b))
             if pa != pb:
                 parent[pa] = pb
-        for u, v in pairs:
+        for (u, v) in pairs:
             union(u, v)
         for i in range(n):
             group[find(i)].append(s[i])

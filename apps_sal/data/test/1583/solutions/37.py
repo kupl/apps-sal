@@ -1,5 +1,5 @@
 import math
-a, b, x = map(int, input().split())
+(a, b, x) = map(int, input().split())
 s = a * a * b
 if x >= s / 2:
     tmp = (s - x) / a / a * 2

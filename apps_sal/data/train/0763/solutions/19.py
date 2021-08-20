@@ -1,16 +1,14 @@
-# cook your dish here
-# cook your dish here
 for j in range(int(input())):
     a = int(input())
     q = input()
     r = input()
     if q == r:
-        print("Yes")
+        print('Yes')
     else:
         c = 0
-        if(q.count('0') == r.count('0')):
+        if q.count('0') == r.count('0'):
             i = 0
-            while(i < a - 1):
+            while i < a - 1:
                 if q == r:
                     break
                 if q[i] != r[i]:
@@ -28,6 +26,6 @@ for j in range(int(input())):
                 else:
                     i += 1
         if c == 0:
-            print("No")
+            print('No')
         else:
-            print("Yes")
+            print('Yes')

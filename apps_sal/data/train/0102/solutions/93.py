@@ -4,9 +4,9 @@ for i in range(t):
     cnt = 0
     i = 1
     tmp = 1
-    while (int(str(tmp) * i) <= n):
+    while int(str(tmp) * i) <= n:
         cnt += 1
-        if (tmp == 9):
+        if tmp == 9:
             i += 1
             tmp = 1
         else:

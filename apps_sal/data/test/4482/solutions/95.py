@@ -9,5 +9,5 @@ else:
     ave = int(ave)
 ans = 0
 for i in a:
-    ans += (i - ave)**2
+    ans += (i - ave) ** 2
 print(ans)

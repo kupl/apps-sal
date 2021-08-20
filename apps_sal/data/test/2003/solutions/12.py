@@ -4,6 +4,7 @@ input = sys.stdin.readline
 
 
 class Trie:
+
     def __init__(self):
         self.cnt = 0
         self.next = [None] * 2
@@ -51,12 +52,11 @@ def query(x):
                 ret += mask
             else:
                 cur = cur.next[1]
+        elif cur.next[1] and cur.next[1].cnt > 0:
+            cur = cur.next[1]
+            ret += mask
         else:
-            if cur.next[1] and cur.next[1].cnt > 0:
-                cur = cur.next[1]
-                ret += mask
-            else:
-                cur = cur.next[0]
+            cur = cur.next[0]
         mask >>= 1
     return ret
 
@@ -64,7 +64,7 @@ def query(x):
 add(0)
 q = int(input())
 for _ in range(q):
-    comm, x = input().split()
+    (comm, x) = input().split()
     x = int(x)
     if comm == '+':
         add(x)

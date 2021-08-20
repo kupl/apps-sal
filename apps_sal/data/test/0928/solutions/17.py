@@ -1,5 +1,5 @@
 import bisect
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 S = [0] * N
 S[0] = a[0]

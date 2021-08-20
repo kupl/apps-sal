@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-
 n = int(input())
 
 
@@ -30,6 +29,7 @@ def Find(x):
 
 
 class Node:
+
     def __init__(self, label):
         self.label = label
 
@@ -40,7 +40,6 @@ class Node:
 used = [0] * 26
 nodes = [Node(ch) for ch in range(26)]
 [MakeSet(node) for node in nodes]
-
 for _ in range(n):
     s = input().strip()
     prev = -1
@@ -50,14 +49,11 @@ for _ in range(n):
         if prev != -1:
             Union(nodes[prev], nodes[val])
         prev = val
-
 outs = [0] * 26
 for node in nodes:
     outs[Find(node).label] += 1
-
 count = 0
 for val in outs:
     if val != 0:
         count += 1
-
 print(count + sum(used) - 26)

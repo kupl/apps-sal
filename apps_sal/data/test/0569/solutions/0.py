@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 from collections import Counter
-
 try:
     while True:
         n = int(input())
@@ -11,6 +8,5 @@ try:
         else:
             c = Counter(s)
             print(sum(c.values()) - len(c))
-
 except EOFError:
     pass

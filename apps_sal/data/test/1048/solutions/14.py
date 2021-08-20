@@ -1,8 +1,8 @@
 n = int(input())
 a = [0] + list(input())
-x, y = 0, 0
+(x, y) = (0, 0)
 an = 0
-ups, dwns, rts, lts = 0, 0, 0, 0
+(ups, dwns, rts, lts) = (0, 0, 0, 0)
 for i in range(n, 0, -1):
     if a[i] == 'U':
         ups += 1

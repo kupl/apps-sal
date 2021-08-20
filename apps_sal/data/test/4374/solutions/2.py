@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(1100)
 
 
-def dfs1(u, pre):  # find the components
+def dfs1(u, pre):
     vis[u] = True
     now.append(u)
     for v in to[u]:
@@ -10,7 +10,7 @@ def dfs1(u, pre):  # find the components
             dfs1(v, u)
 
 
-def dfs2(u, pre):  # calulate the distance
+def dfs2(u, pre):
     mxdist[u] = dist[u]
     for v in to[u]:
         if v != pre:
@@ -21,17 +21,15 @@ def dfs2(u, pre):  # calulate the distance
 
 try:
     lab = 1
-    n, m = [int(x) for x in input().split()]
+    (n, m) = [int(x) for x in input().split()]
     to = [[] for i in range(n + 10)]
     dist = [0 for i in range(n + 10)]
     mxdist = [0 for i in range(n + 10)]
-
     lab = 2
     for i in range(m):
-        u, v = [int(x) for x in input().split()]
+        (u, v) = [int(x) for x in input().split()]
         to[u].append(v)
         to[v].append(u)
-
     com = []
     vis = [False for i in range(n + 10)]
     for i in range(1, n + 1):
@@ -39,7 +37,6 @@ try:
             now = []
             dfs1(i, 0)
             com.append(now)
-
     lab = 3
     ct = []
     mx = 0
@@ -52,16 +49,11 @@ try:
             dfs2(root, 0)
             tmp.append((mxdist[root], root))
             d = max(d, sum(sorted([mxdist[u] for u in to[root]])[-2:]))
-            #print(*[mxdist[u] for u in lis])
         mx = max(mx, d)
-        #print('d =',d)
         for x in tmp:
             if x[0] == (d + 1) // 2:
                 center = [x[1] for x in tmp if x[0] == (d + 1) // 2][0]
         ct.append(((d + 1) // 2, center))
-
-    # print(*ct)
-
     lab = 4
     ct.sort(reverse=True)
     ans = []

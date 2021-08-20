@@ -21,29 +21,24 @@ def nu():
 
 
 def find_gcd(x, y):
-    while (y):
-        x, y = y, x % y
+    while y:
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
     gg = find_gcd(x, y)
-    return (x * y // gg)
+    return x * y // gg
 
 
 def printDivisors(n):
-    # Note that this loop runs till square root
     i = 1
     cc = 0
     while i <= ma.sqrt(n):
-
-        if (n % i == 0):
-
-            # If divisors are equal, print only one
-            if (n / i == i):
+        if n % i == 0:
+            if n / i == i:
                 cc += 1
             else:
-                # Otherwise print both
                 cc += 2
         i = i + 1
     return cc

@@ -7,9 +7,9 @@ def main():
             k = 2 * j - i
             if k >= N:
                 continue
-            if S[j] != S[i] and S[i] != S[k] and S[k] != S[j]:
+            if S[j] != S[i] and S[i] != S[k] and (S[k] != S[j]):
                 cnt += 1
-    print((S.count("R") * S.count("B") * S.count("G") - cnt))
+    print(S.count('R') * S.count('B') * S.count('G') - cnt)
 
 
 def __starting_point():

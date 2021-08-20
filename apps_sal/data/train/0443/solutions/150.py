@@ -1,4 +1,5 @@
 class Solution:
+
     def numTeams(self, rating: List[int]) -> int:
         if len(rating) <= 2:
             return 0
@@ -9,7 +10,6 @@ class Solution:
                 for k in range(j + 1, n):
                     if rating[i] < rating[j] < rating[k] or rating[i] > rating[j] > rating[k]:
                         cnt += 1
-
         return cnt
 
     def numTeams1(self, rating: List[int]) -> int:

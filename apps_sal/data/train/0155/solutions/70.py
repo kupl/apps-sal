@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         sorted_indexes = sorted(range(len(arr)), key=lambda i: arr[i])
         n = len(arr)
@@ -15,7 +16,6 @@ class Solution:
                         break
                     neighs.append(i)
             return neighs
-
         for cur in sorted_indexes:
             for neigh in get_neighs(cur):
                 dp[cur] = max(dp[cur], dp[neigh] + 1)

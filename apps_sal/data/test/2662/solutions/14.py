@@ -5,4 +5,4 @@ L = [-1] * N
 for a in A:
     idx = bisect_left(L, a)
     L[idx - 1] = a
-print((N - L.count(-1)))
+print(N - L.count(-1))

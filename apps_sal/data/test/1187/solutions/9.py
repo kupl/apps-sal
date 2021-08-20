@@ -1,10 +1,10 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 dic = {}
 paint = {}
 cycle = False
 edges = []
 for i in range(m):
-    a, b = [int(x) for x in input().split()]
+    (a, b) = [int(x) for x in input().split()]
     edges.append((a, b))
     if a not in dic:
         dic[a] = set([b])
@@ -22,9 +22,8 @@ def gcd(n):
             if not invite[item]:
                 if gcd(item):
                     return True
-            else:
-                if paint[item] == 0:
-                    return True
+            elif paint[item] == 0:
+                return True
     paint[n] = 1
     return False
 

@@ -1,24 +1,19 @@
 t = int(input())
-
 for test in range(t):
     n = int(input())
     ans = ['1' for i in range(n)]
-
-    start, end = dict(), dict()
+    (start, end) = (dict(), dict())
     for i in range(n):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         if a in start:
             start[a].append(i + 1)
         else:
             start[a] = [i + 1]
-
-        if (i + 1) in end:
+        if i + 1 in end:
             end[i + 1].append(b)
         else:
             end[i + 1] = [b]
-
     st_sorted = sorted(list(start.keys()))
-
     m = 0
     ok = False
     ans_pos = -1

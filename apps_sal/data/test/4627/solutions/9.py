@@ -10,12 +10,12 @@ for _ in range(t):
         else:
             odd.append(s[i])
     if len(even) % 2 == 0:
-        print("YES")
+        print('YES')
     else:
         even = set(even)
         for val in odd:
             if val - 1 in even or val + 1 in even:
-                print("YES")
+                print('YES')
                 break
         else:
-            print("NO")
+            print('NO')

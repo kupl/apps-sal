@@ -1,7 +1,7 @@
 n = int(input())
-minx, maxx, miny, maxy = (10**10), -(10**10), (10**10), -(10**10)
+(minx, maxx, miny, maxy) = (10 ** 10, -10 ** 10, 10 ** 10, -10 ** 10)
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     if x > maxx:
         maxx = x
     if y > maxy:
@@ -10,4 +10,4 @@ for i in range(n):
         minx = x
     if y < miny:
         miny = y
-print(max(maxx - minx, maxy - miny)**2)
+print(max(maxx - minx, maxy - miny) ** 2)

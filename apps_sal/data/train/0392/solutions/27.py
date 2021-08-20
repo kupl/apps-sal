@@ -1,4 +1,5 @@
 class Solution:
+
     def numWays(self, s: str) -> int:
         n = len(s)
         n1 = s.count('1')

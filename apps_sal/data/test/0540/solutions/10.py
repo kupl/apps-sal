@@ -1,11 +1,11 @@
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 inp = [input() for i in range(n)]
 source = [int(x) - 1 for x in input().split()]
 dest = [int(x) - 1 for x in input().split()]
 
 
 def valid(x):
-    return True if 0 <= x[0] < n and 0 <= x[1] < m and inp[x[0]][x[1]] == '.' else False
+    return True if 0 <= x[0] < n and 0 <= x[1] < m and (inp[x[0]][x[1]] == '.') else False
 
 
 def getn(x):
@@ -44,6 +44,4 @@ else:
         vis[x[0]][x[1]] = True
         for i in getn(x):
             mystak.append(i)
-#	for i in vis:
-#		print(i)
     print('YES' if vis[dest[0]][dest[1]] and (len(getn(dest)) > 1 - dis or dat) else 'NO')

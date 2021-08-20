@@ -1,10 +1,13 @@
 import sys
 from collections import Counter
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def main():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
     a_cnt = sorted(list(Counter(a).values()))
     s = set(a)

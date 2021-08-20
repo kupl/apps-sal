@@ -1,5 +1,4 @@
 from collections import Counter
-
 s = input()
 if len(s) < 26:
     print(-1)
@@ -23,7 +22,7 @@ else:
             ans += 'A' if c == '?' else c
         print(''.join(ans))
     else:
-        for i, c in enumerate(s[26:]):
+        for (i, c) in enumerate(s[26:]):
             p = s[i]
             ans += 'A' if p == '?' else p
             a[p] -= 1

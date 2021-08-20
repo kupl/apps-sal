@@ -4,7 +4,7 @@ used = [False for i in range(n)]
 accepted = [False for i in range(n)]
 j = 0
 for i in box:
-    if i <= n and not used[i - 1]:
+    if i <= n and (not used[i - 1]):
         accepted[j] = True
         used[i - 1] = True
     j += 1

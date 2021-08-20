@@ -1,10 +1,8 @@
-l, a, b, m = map(int, input().split())
-
+(l, a, b, m) = map(int, input().split())
 ten = 1
 
 
 def f(x):
-
     if x == 0:
         return 0
     if x % 2 == 1:
@@ -18,26 +16,23 @@ def f(x):
 
 
 def g(x):
-
     if x == 0:
         return 0
     if x % 2 == 1:
         t = x - 1
         x = g(t)
-        return x * ten + b * (t)
+        return x * ten + b * t
     else:
         t = x // 2
         x = g(t)
-        return x * pow(ten, t, m) + x + b * (t) * f(t)
+        return x * pow(ten, t, m) + x + b * t * f(t)
 
 
 last = a + b * (l - 1)
-
 ans = 0
 for i in range(1, 20):
     le = ten
     r = ten * 10 - 1
-
     ten *= 10
     if last < le or a > r:
         continue
@@ -50,10 +45,8 @@ for i in range(1, 20):
     else:
         nl = (r - a) // b * b + a
     n = (nl - na) // b + 1
-
     ans *= pow(ten, n, m)
-    ans += ((f(n) % m) * na) % m
+    ans += f(n) % m * na % m
     ans += g(n) % m
     ans %= m
-
 print(ans)

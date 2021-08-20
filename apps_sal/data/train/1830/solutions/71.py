@@ -2,6 +2,7 @@ from collections import defaultdict
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         dry_days = []
         filled_lakes = {}

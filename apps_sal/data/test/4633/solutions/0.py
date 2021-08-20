@@ -11,7 +11,7 @@ def read_ints():
 
 t = read_int()
 for case_num in range(t):
-    n, s = read_ints()
+    (n, s) = read_ints()
     a = [0] + [int(i) for i in str(n)]
     ds = sum(a)
     cost = 0

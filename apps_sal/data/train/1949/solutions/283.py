@@ -1,7 +1,9 @@
 class Solution:
+
     def getMaximumGold(self, grid: List[List[int]]) -> int:
+
         def findSum(row, col, total):
-            if row < 0 or row >= len(grid) or col < 0 or col >= len(grid[0]):
+            if row < 0 or row >= len(grid) or col < 0 or (col >= len(grid[0])):
                 return
             if not grid[row][col]:
                 return
@@ -18,7 +20,6 @@ class Solution:
                 findSum(row, col - 1, total)
             self.sm = max(self.sm, total)
             grid[row][col] = tmp
-
         self.sm = 0
         total = 0
         for row in range(len(grid)):

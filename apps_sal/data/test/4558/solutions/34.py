@@ -1,4 +1,4 @@
-X, t = map(int, input().split())
+(X, t) = map(int, input().split())
 answer = int(X - t)
 if answer > 0:
     print(answer)

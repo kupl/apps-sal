@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [[], [], []]
 for i in range(n):
-    w, c = list(map(int, input().split()))
+    (w, c) = list(map(int, input().split()))
     a[w - 1].append(c)
 p = [[0], [0], [0]]
 for i in range(3):
@@ -17,12 +17,10 @@ for i in range(min(m // 3, len(a[2])) + 1):
     if not len(a[0]):
         ans = max(ans, p[2][i] + p[1][min(w // 2, len(a[1]))])
         continue
-
     if 2 + 2 == 4:
         x = min(len(a[0]), w)
         y = (w - x) // 2
         ans = max(ans, p[2][i] + p[1][y] + p[0][x])
-
     lo = max((w - len(a[0]) + 1) // 2 + 1, 1)
     hi = min(len(a[1]), w // 2)
     while lo <= hi:

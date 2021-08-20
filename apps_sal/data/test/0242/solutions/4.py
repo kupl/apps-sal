@@ -7,9 +7,9 @@ def count(x):
 
 
 def find(n):
-    l, r = 0, 25 * n
+    (l, r) = (0, 25 * n)
     while l + 1 < r:
-        m = (l + r) >> 1
+        m = l + r >> 1
         if count(m) < n:
             l = m
         else:
@@ -18,6 +18,6 @@ def find(n):
 
 
 m = int(input())
-l, r = find(m), find(m + 1)
+(l, r) = (find(m), find(m + 1))
 print(r - l)
 print(*list(range(l, r)))

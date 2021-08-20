@@ -1,4 +1,5 @@
 class Solution:
+
     def gs(self, matrix, x, y, i, j):
         ans = matrix[i][j]
         if y:
@@ -21,17 +22,15 @@ class Solution:
         for i in range(1, n):
             for j in range(m):
                 matrix[i][j] += matrix[i - 1][j]
-            # print(matrix[i])
         ans = 0
         for i in range(n):
             for j in range(m):
-                x, y = i, j
+                (x, y) = (i, j)
                 l = 1
                 while x >= 0 and y >= 0:
-                    # print(x,y,i,j,self.gs(matrix,x,y,i,j))
                     if l * l == self.gs(matrix, x, y, i, j):
                         ans += 1
                     else:
                         break
-                    x, y, l = x - 1, y - 1, l + 1
+                    (x, y, l) = (x - 1, y - 1, l + 1)
         return ans

@@ -1,7 +1,5 @@
 import sys
 
-# sys.stdin = open('f1.in')
-
 
 def read_int_list():
     return list(map(int, input().split()))
@@ -32,7 +30,7 @@ def solve():
     origin = 0
     out = [0] * Q
     for i in range(Q):
-        t, a = read_int_list()
+        (t, a) = read_int_list()
         while j < K and r[j] < t:
             d = r[j] - origin
             y += d * sign
@@ -42,7 +40,7 @@ def solve():
                     s = e
                 y = 0
             if y + e - s > X:
-                diff = (y + e - s) - X
+                diff = y + e - s - X
                 e -= diff
                 if e < s:
                     e = s

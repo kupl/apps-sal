@@ -3,6 +3,7 @@ from numpy import int8, int32, int64
 
 
 def solve_core(N, ca, cb, dp):
+
     def check(n, d):
         k = 2 * n
         for m in range(k, k + d):
@@ -16,7 +17,6 @@ def solve_core(N, ca, cb, dp):
             if ca[m] != 0:
                 return 0
         return 1
-
     for i in range(N - 1, -1, -1):
         dp[i] = 0
         for j in range(i + 1, N + 1):
@@ -30,15 +30,13 @@ def solve_core(N, ca, cb, dp):
 def solve(N, ab):
     ca = np.zeros(2 * N, dtype=int64)
     cb = np.zeros(2 * N, dtype=int64)
-
     for i in range(ab.shape[0]):
         a = ab[i, 0]
         b = ab[i, 1]
-        # 両方の値がある場合
-        if a > - 1 and b > -1:
+        if a > -1 and b > -1:
             if b - a <= 0:
                 return 0
-            if ca[a] != 0 or cb[a] > 0 or ca[b] != 0 or cb[b] > 0:
+            if ca[a] != 0 or cb[a] > 0 or ca[b] != 0 or (cb[b] > 0):
                 return 0
             ca[a] = b - a
             cb[b] = 1
@@ -50,7 +48,6 @@ def solve(N, ab):
             if ca[b] != 0 or cb[b] > 0:
                 return 0
             cb[b] = 1
-
     dp = np.empty(N + 1, dtype=int64)
     dp[N] = 1
     return solve_core(N, ca, cb, dp)

@@ -6,5 +6,5 @@ for i in range(N):
 r = round(b / N)
 ans = 0
 for i in range(N):
-    ans += (a[i] - r)**2
+    ans += (a[i] - r) ** 2
 print(ans)

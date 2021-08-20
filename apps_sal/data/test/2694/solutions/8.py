@@ -1,12 +1,15 @@
 from sys import stdin
-def ip(): return [int(w) for w in stdin.readline().split()]
 
 
-n, m, k = [int(w) for w in stdin.readline().split()]
+def ip():
+    return [int(w) for w in stdin.readline().split()]
+
+
+(n, m, k) = [int(w) for w in stdin.readline().split()]
 sp = 2 if k == 1 else 0
 dp = [[1] * (m + 1) for j in range(n + 1)]
 for j in range(k):
-    x, y, t, f = [int(w) for w in stdin.readline().split()]
+    (x, y, t, f) = [int(w) for w in stdin.readline().split()]
     dp[x][y] = 0
     for i in range(1, n + 1):
         reach = i + y - 2 - t - abs(x - i) + sp
@@ -18,11 +21,10 @@ for j in range(k):
             dp[x][i] = 0
 for i in range(1, n + 1):
     for j in range(1, m + 1):
-        cur, left, up = dp[i][j], dp[i][j - 1], dp[i - 1][j]
+        (cur, left, up) = (dp[i][j], dp[i][j - 1], dp[i - 1][j])
         dp[i][j] = cur * left or cur * up
-
 if dp[-1][-1]:
-    print("YES")
+    print('YES')
     print(n + m - 2)
 else:
-    print("NO")
+    print('NO')

@@ -1,4 +1,4 @@
-while(int(input())):
+while int(input()):
     l = list(map(int, input().split()))
     h = len(l)
     l1 = [0] * h
@@ -6,6 +6,6 @@ while(int(input())):
         c = l[i]
         l1[c - 1] = i + 1
     if l == l1:
-        print("ambiguous")
+        print('ambiguous')
     else:
-        print("not ambiguous")
+        print('not ambiguous')

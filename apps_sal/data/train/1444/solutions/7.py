@@ -26,7 +26,7 @@ for _ in range(int(input())):
                 if j < len(arr) - 1 and arr[j + 1] == 2:
                     ans += dp[i - 1] * (count + 1)
                 else:
-                    ans += dp[i - 1] * (count)
+                    ans += dp[i - 1] * count
             elif count % 2 == 0:
                 ans += dp[i - 1] * (count - 1)
     print(ans)

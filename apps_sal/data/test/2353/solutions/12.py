@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    a, b, c, d = [int(x) for x in input().split()]
+    (a, b, c, d) = [int(x) for x in input().split()]
     if b >= a:
         print(b)
     elif d >= c:

@@ -8,7 +8,6 @@ def solve(array):
 
 N = int(input())
 costs = list(map(int, input().split()))
-
 if N == 1:
     print(0)
 elif N == 2:

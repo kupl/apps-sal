@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     ans = [[0 for i in range(m)] for i in range(n)]
     k = 0
     if n == 1:
@@ -23,7 +23,7 @@ for _ in range(int(input())):
         for i in range(m):
             ans[0][i] = t
             ans[1][i] = t
-            t = (t) % 3 + 1
+            t = t % 3 + 1
             k = max(k, ans[0][i])
     elif m == 2:
         t = 1
@@ -39,10 +39,9 @@ for _ in range(int(input())):
             else:
                 t = 2
             for j in range(m):
-                ans[i][j] = (t % 4) + 1
+                ans[i][j] = t % 4 + 1
                 t += 1
                 k = max(k, ans[i][j])
-
     print(k)
     for i in range(n):
         print(*ans[i])

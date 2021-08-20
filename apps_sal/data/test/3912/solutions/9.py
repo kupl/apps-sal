@@ -6,7 +6,6 @@ for char in s:
         d[char] = 1
     else:
         d[char] += 1
-
 odd = []
 even = []
 for char in d.keys():
@@ -15,13 +14,11 @@ for char in d.keys():
         even.append(char)
     for i in range(d[char] % 2):
         odd.append(char)
-
 if len(odd) <= 1:
     x = ''.join([even[i] for i in range(1, len(even), 2)])
     y = ''.join(odd)
     print(1)
     print(x + y + x[::-1])
-
 else:
     ratio = len(even) // len(odd)
     max_length = 1

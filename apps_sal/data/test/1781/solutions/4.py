@@ -1,4 +1,4 @@
-n, k = (int(s) for s in input().split())
+(n, k) = (int(s) for s in input().split())
 rows = []
 for i in range(n):
     rows.append([c for c in input()])
@@ -16,17 +16,14 @@ def nbcnt(row, col):
 for c in range(3):
     for i in range(n):
         for j in range(12):
-            if k != 0 and rows[i][j] == '.' and nbcnt(i, j) == c:
+            if k != 0 and rows[i][j] == '.' and (nbcnt(i, j) == c):
                 rows[i][j] = 'x'
                 k -= 1
-
 res = 0
 for i in range(n):
     for j in range(12):
         if rows[i][j] != '.' and rows[i][j] != '-':
             res += nbcnt(i, j)
-
 print(res)
-
 for i in range(n):
-    print("".join(rows[i]))
+    print(''.join(rows[i]))

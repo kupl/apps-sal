@@ -19,7 +19,7 @@ def main():
         a = la - bisect(aa, d)
         b = lb - bisect(bb, d)
         res.append((a - b, a))
-    b, a = max(res)
+    (b, a) = max(res)
     print('{:n}:{:n}'.format(a, a - b))
 
 

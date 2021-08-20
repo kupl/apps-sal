@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 mass = list(map(int, input().split()))
 e = mass.count(1)
 s = mass.count(-1)

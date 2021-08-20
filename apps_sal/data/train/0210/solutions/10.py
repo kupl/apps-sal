@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyAlmostDuplicate(self, nums, k, t):
         """
         :type nums: List[int]
@@ -10,7 +11,6 @@ class Solution:
             return False
         d = {}
         w = t + 1
-
         for i in range(len(nums)):
             b = nums[i] // w
             if b in d:
@@ -22,5 +22,4 @@ class Solution:
             d[b] = nums[i]
             if i >= k:
                 del d[nums[i - k] // w]
-
         return False

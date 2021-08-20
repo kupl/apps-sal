@@ -6,7 +6,7 @@ def input():
 
 
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
     B = K
     k = 1
@@ -14,12 +14,12 @@ def main():
         K //= 2
         k += 1
     if K == 0:
-        print((sum(A)))
+        print(sum(A))
         return
     cnt = [0 for _ in range(k)]
     for a in A:
         for i in range(k):
-            if (a >> i) & 1:
+            if a >> i & 1:
                 cnt[i] += 1
     X = 0
     if N % 2 == 0:
@@ -28,7 +28,7 @@ def main():
         n = N // 2
     for i in range(k):
         if cnt[k - i - 1] <= n:
-            if X + (2 ** (k - i - 1)) <= B:
+            if X + 2 ** (k - i - 1) <= B:
                 X += 2 ** (k - i - 1)
     answer = 0
     for a in A:

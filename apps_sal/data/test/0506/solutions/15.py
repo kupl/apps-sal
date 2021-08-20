@@ -1,6 +1,5 @@
-
 my_str = input().split()
-a, b = int(my_str[0]), int(my_str[1])
+(a, b) = (int(my_str[0]), int(my_str[1]))
 c = 0
 while a > b and b > 0:
     t = a

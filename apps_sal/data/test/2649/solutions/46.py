@@ -1,7 +1,7 @@
 n = int(input())
 l = [[] for i in range(4)]
 for i in range(n):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     l[0].append(x + y)
     l[1].append(x - y)
     l[2].append(-x + y)

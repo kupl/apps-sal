@@ -12,12 +12,12 @@ def left_counts(string, char):
     return result
 
 
-s = input().replace("C", "B")
-t = input().replace("C", "B")
-s_bcounts, t_bcounts = pref_counts(s, "B"), pref_counts(t, "B")
-s_lcounts, t_lcounts = left_counts(s, "A"), left_counts(t, "A")
+s = input().replace('C', 'B')
+t = input().replace('C', 'B')
+(s_bcounts, t_bcounts) = (pref_counts(s, 'B'), pref_counts(t, 'B'))
+(s_lcounts, t_lcounts) = (left_counts(s, 'A'), left_counts(t, 'A'))
 for i in range(int(input())):
-    a, b, c, d = list(map(int, input().split()))
+    (a, b, c, d) = list(map(int, input().split()))
     s_b = s_bcounts[b] - s_bcounts[a - 1]
     t_b = t_bcounts[d] - t_bcounts[c - 1]
     s_a = min(s_lcounts[b], b - a + 1)
@@ -28,4 +28,4 @@ for i in range(int(input())):
             answer = s_a - (s_b == 0) >= t_a
         elif s_b == t_b:
             answer = s_a >= t_a and (s_a - t_a) % 3 == 0
-    print(int(answer), end="")
+    print(int(answer), end='')

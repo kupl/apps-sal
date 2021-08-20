@@ -10,7 +10,7 @@ def main():
     for i in range(len_s):
         s_all[s[i]].append(i + 1)
     ans = 0
-    if any(s_all[tt] == [] for tt in t):
+    if any((s_all[tt] == [] for tt in t)):
         ans = -1
     else:
         s_ind = 1

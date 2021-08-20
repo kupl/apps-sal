@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- encoding: utf-8 -*-
-
 import sys
 
 
@@ -11,7 +8,7 @@ def main():
     p = [i for i in sys.stdin.readline().strip()]
     w.sort()
     res = []
-    intro, extro = 0, []
+    (intro, extro) = (0, [])
     for pa in p:
         if pa == '0':
             extro.append(w[intro][1])

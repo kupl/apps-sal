@@ -1,8 +1,8 @@
 def main():
     import sys
 
-    def input(): return sys.stdin.readline().rstrip()
-
+    def input():
+        return sys.stdin.readline().rstrip()
     n = int(input())
     a = [0] + list(map(int, input().split()))
     for i in range(n, 0, -1):

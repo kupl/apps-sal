@@ -1,4 +1,4 @@
-'''input
+"""input
 6 6
 6 6 6 6 6 6
 6 66 666 6666 66666 666666
@@ -8,7 +8,7 @@
 4 11
 5 6
 6 6
-'''
+"""
 import sys
 from collections import defaultdict as dd
 from itertools import permutations as pp
@@ -17,7 +17,7 @@ from collections import Counter as ccd
 from random import randint as rd
 from bisect import bisect_left as bl
 import heapq
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def ri(flag=0):
@@ -27,32 +27,28 @@ def ri(flag=0):
         return int(sys.stdin.readline())
 
 
-n, m = ri()
+(n, m) = ri()
 a = ri()
 c = ri()
-
 hee = []
-
 for i in range(n):
     heapq.heappush(hee, (c[i], i))
-
 avail = a[:]
-
 for i in range(m):
     cost = 0
-    t, d = ri()
+    (t, d) = ri()
     t -= 1
     fm = 0
     if avail[t] >= d:
         avail[t] = avail[t] - d
-        cost += (d * c[t])
+        cost += d * c[t]
     else:
         rem = d - avail[t]
         cost = avail[t] * c[t]
         avail[t] = 0
         while rem > 0:
             try:
-                nowc, nowi = heapq.heappop(hee)
+                (nowc, nowi) = heapq.heappop(hee)
                 if avail[nowi] >= rem:
                     avail[nowi] = avail[nowi] - rem
                     cost = cost + rem * c[nowi]

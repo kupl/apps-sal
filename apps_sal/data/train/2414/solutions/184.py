@@ -2,6 +2,7 @@ from itertools import combinations
 
 
 class Solution:
+
     def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
         num = len(arr)
         comb = combinations(arr, 3)

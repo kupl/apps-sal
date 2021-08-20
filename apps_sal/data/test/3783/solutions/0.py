@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()))
-m = 0x3b9aca07
+(n, k) = list(map(int, input().split()))
+m = 1000000007
 v = 500000004
 r = 0
 p = pow(2, n, m)

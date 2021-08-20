@@ -1,4 +1,4 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 
 
 def solve(n: str, k: int):
@@ -9,7 +9,7 @@ def solve(n: str, k: int):
         out = len(n) - 1
     elif k == 2:
         for i in range(1, min(len(n), 10)):
-            x = 2**i
+            x = 2 ** i
             cnt = 0
             for j in range(len(n)):
                 if n[j] == '1':

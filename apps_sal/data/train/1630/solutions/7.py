@@ -3,7 +3,8 @@ from functools import reduce
 import heapq
 
 
-def gcd2(xs): return reduce(gcd, xs, xs[0])
+def gcd2(xs):
+    return reduce(gcd, xs, xs[0])
 
 
 def gen(xs):
@@ -24,11 +25,11 @@ def survivor(xs):
         return 0
     if not xs or gcd2(xs) > 1:
         return -1
-    i, cnt, m = 0, 1, min(xs)
+    (i, cnt, m) = (0, 1, min(xs))
     g = gen(xs)
     for x in g:
         if x != i + cnt:
-            cnt, i = 1, x
+            (cnt, i) = (1, x)
         else:
             cnt += 1
         if cnt >= m:

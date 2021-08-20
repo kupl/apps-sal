@@ -5,10 +5,9 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
-    n, b, d = map(int, input().split())
+    (n, b, d) = map(int, input().split())
     arr = list(map(int, input().split()))
-    cnt, sm = 0, 0
+    (cnt, sm) = (0, 0)
     for i in arr:
         if i > b:
             continue

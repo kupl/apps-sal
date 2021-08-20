@@ -3,7 +3,7 @@ from decimal import *
 
 
 def count_sixes(n):
-    a = 6 << (n - 2)
+    a = 6 << n - 2
     b = Fraction(2, 3)
     c = Fraction(1, a)
     d = 0

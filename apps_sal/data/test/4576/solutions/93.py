@@ -2,7 +2,6 @@ A = int(input())
 B = int(input())
 C = int(input())
 X = int(input())
-
 total = 0
 for i in range(A + 1):
     for j in range(B + 1):

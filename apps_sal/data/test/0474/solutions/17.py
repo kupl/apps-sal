@@ -1,9 +1,9 @@
-def inpl(): return list(map(int, input().split()))
+def inpl():
+    return list(map(int, input().split()))
 
 
 N = int(input())
 A = inpl() + [-1]
-
 x = max(A)
 ctr = 0
 ans = 0

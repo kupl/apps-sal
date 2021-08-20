@@ -3,10 +3,10 @@ from typing import List
 
 
 class Solution:
+
     def findDivisor(self, num):
         min_gap = num
         min_gap_saved = []
-        # for i in range(int(sqrt(num)), 0, -1):
         for i in range(1, int(sqrt(num)) + 1):
             if num % i == 0:
                 gap = abs(i - num // i)
@@ -16,8 +16,8 @@ class Solution:
         return min_gap_saved
 
     def closestDivisors(self, num: int) -> List[int]:
-        a, b = self.findDivisor(num + 1)
-        c, d = self.findDivisor(num + 2)
+        (a, b) = self.findDivisor(num + 1)
+        (c, d) = self.findDivisor(num + 2)
         if b - a > d - c:
             return [c, d]
         else:

@@ -2,6 +2,7 @@ from typing import List, Dict, Tuple
 
 
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         current = 0
         cost = 0
@@ -17,7 +18,6 @@ class Solution:
                 if cost > macost:
                     macost = cost
                     ans = current
-
             else:
                 tmp = cost
                 tmp = cost
@@ -27,8 +27,7 @@ class Solution:
                 if cost > macost:
                     macost = cost
                     ans = current
-
-        a, b = divmod(amari, 4)
+        (a, b) = divmod(amari, 4)
         if 4 * boardingCost > runningCost:
             cost += a * boardingCost - runningCost
             current += a
@@ -41,5 +40,4 @@ class Solution:
             if cost > macost:
                 macost = cost
                 ans = current
-
         return ans

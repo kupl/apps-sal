@@ -1,4 +1,5 @@
 class Solution:
+
     def distinctEchoSubstrings(self, text: str) -> int:
         n = len(text)
         ans = set([])
@@ -13,13 +14,11 @@ class Solution:
                     lps[j] = k
                     j += 1
                     d = j - k
-                    if j % d == 0 and (j // d) % 2 == 0:
+                    if j % d == 0 and j // d % 2 == 0:
                         ans.add(pat[:j])
+                elif k != 0:
+                    k = lps[k - 1]
                 else:
-                    if k != 0:
-                        k = lps[k - 1]
-                    else:
-                        lps[j] = 0
-                        j += 1
-
+                    lps[j] = 0
+                    j += 1
         return len(ans)

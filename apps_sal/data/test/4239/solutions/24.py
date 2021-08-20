@@ -4,9 +4,7 @@ power_9 = [9 ** i for i in range(int(math.log(100000, 9)) + 1)]
 p = list(set(power_6 + power_9))
 p.sort()
 p.append(100001)
-
 N = int(input())
-
 idx = 0
 cnt = [0]
 i = 1
@@ -21,5 +19,4 @@ while i < N + 1:
         i += 1
     else:
         idx += 1
-
 print(cnt[N])

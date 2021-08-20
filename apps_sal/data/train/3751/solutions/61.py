@@ -1,7 +1,7 @@
 def bool_to_word(boolean):
-    outputtext = ""
+    outputtext = ''
     if boolean == True:
-        outputtext = "Yes"
+        outputtext = 'Yes'
     else:
-        outputtext = "No"
+        outputtext = 'No'
     return outputtext

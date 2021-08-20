@@ -1,10 +1,8 @@
 import sys
 input = sys.stdin.readline
-
 Q = int(input())
 Query = [list(map(str, input().rstrip().split())) for _ in range(Q)]
-
-for S, T in Query:
+for (S, T) in Query:
     L = len(S)
     update = False
     A = list(S)
@@ -21,8 +19,8 @@ for S, T in Query:
             A[ind] = S[i]
             A[i] = S[ind]
             break
-    A_str = "".join(A)
+    A_str = ''.join(A)
     if A_str < T:
         print(A_str)
     else:
-        print("---")
+        print('---')

@@ -1,11 +1,12 @@
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         dic = {}
         for i in range(lo, hi + 1):
             power = self.findPower(i, 0)
             dic[i] = power
         sortedValue = sorted(dic.items(), key=lambda x: x[1])
-        return (sortedValue[k - 1][0])
+        return sortedValue[k - 1][0]
 
     def findPower(self, num, count):
         if num == 1:

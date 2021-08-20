@@ -5,9 +5,7 @@ def solve(D):
             c7 = D - c4
             if c7 % 4 == 0:
                 return c4
-
         c4 -= 4
-
     return -1
 
 

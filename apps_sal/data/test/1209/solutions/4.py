@@ -10,9 +10,9 @@ for i in range(a):
     else:
         k = math.floor(k)
         if k < 0:
-            li.append(k - 0.00000000001)
+            li.append(k - 1e-11)
         else:
-            li.append(k + 0.00000000001)
+            li.append(k + 1e-11)
 ans = 0
 for i in li:
     ans += int(i)
@@ -20,7 +20,7 @@ if ans == 0:
     print(*li)
 else:
     for i in li:
-        if (ans < 0):
+        if ans < 0:
             if i == int(i):
                 print(i)
             else:

@@ -1,4 +1,5 @@
 class Solution:
+
     def is_force_valid(self, position: List[int], m: int, force: int) -> bool:
         last_pos = position[0]
         m -= 1
@@ -14,12 +15,10 @@ class Solution:
         position.sort()
         left = 1
         right = position[-1] - position[0]
-
         while right > left:
             mid = (right + left + 1) // 2
             if self.is_force_valid(position, m, mid):
                 left = mid
             else:
                 right = mid - 1
-
         return left

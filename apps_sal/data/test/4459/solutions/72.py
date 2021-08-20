@@ -7,12 +7,11 @@ for i in a:
     else:
         hindo[i] = 1
 ans = 0
-for num, cnt in hindo.items():
+for (num, cnt) in hindo.items():
     if num == cnt:
         continue
+    elif num > cnt:
+        ans += cnt
     else:
-        if num > cnt:
-            ans += cnt
-        else:
-            ans += cnt - num
+        ans += cnt - num
 print(ans)

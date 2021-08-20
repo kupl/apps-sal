@@ -3,7 +3,7 @@ def cookie(x):
     post = 'the dog'
     punc = '!'
     if type(x) == str:
-        post = "Zach"
+        post = 'Zach'
     elif type(x) == int or type(x) == float:
-        post = "Monica"
+        post = 'Monica'
     return pre + post + punc

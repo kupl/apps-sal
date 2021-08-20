@@ -7,9 +7,8 @@ def arithmetic(a, b, operator):
         result = a * b
     elif operator == 'divide':
         result = a / b
-
     return result
 
 
-result = arithmetic(5, 2, "divide")
+result = arithmetic(5, 2, 'divide')
 print(result)

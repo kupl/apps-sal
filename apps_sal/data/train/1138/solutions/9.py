@@ -5,7 +5,7 @@ for _ in range(t):
     arr = []
     ans = 0
     for i in range(1, n + 1):
-        if(num[i - 1] == 0):
+        if num[i - 1] == 0:
             arr[0:0] = [i]
         else:
             x = arr.index(num[i - 1]) + 1

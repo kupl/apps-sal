@@ -8,15 +8,10 @@ for _ in range(int(input())):
                 d[ip[0]][1] += 1
             else:
                 d[ip[0]][0] += 1
+        elif int(ip[1]) == 1:
+            d.update({ip[0]: {0: 0, 1: 1}})
         else:
-            if int(ip[1]) == 1:
-                d.update({
-                    ip[0]: {0: 0, 1: 1}
-                })
-            else:
-                d.update({
-                    ip[0]: {0: 1, 1: 0}
-                })
+            d.update({ip[0]: {0: 1, 1: 0}})
     for j in d.values():
         count += max(j.values())
     print(count)

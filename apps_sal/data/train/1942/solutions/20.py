@@ -1,4 +1,5 @@
 class Solution:
+
     def peopleIndexes(self, A: List[List[str]]) -> List[int]:
         A = [set(A[i]) for i in range(len(A))]
         answer = []

@@ -1,8 +1,7 @@
-# cook your dish here
 mod = 1000000007
 t = int(input())
 for _ in range(t):
-    m, n = list(map(int, input().split()))
+    (m, n) = list(map(int, input().split()))
     x = min(m, n)
     f1 = m * n % mod
     s1 = x * (x - 1) // 2 % mod

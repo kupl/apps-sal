@@ -9,19 +9,19 @@ def dfs(u, adj, visited, s, W, B):
     s.append(u)
     for v in adj[u]:
         if not visited[v]:
-            w, b = dfs(v, adj, visited, s, W, B)
+            (w, b) = dfs(v, adj, visited, s, W, B)
             total_w += w
             total_b += b
-    return total_w, total_b
+    return (total_w, total_b)
 
 
 def main():
-    n, m, w = inp()
+    (n, m, w) = inp()
     W = inp()
     B = inp()
     adj = [[] for _ in range(n)]
     for _ in range(m):
-        x, y = inp()
+        (x, y) = inp()
         x -= 1
         y -= 1
         adj[x].append(y)
@@ -32,7 +32,7 @@ def main():
         if visited[i]:
             continue
         s = []
-        total_w, total_b = dfs(i, adj, visited, s, W, B)
+        (total_w, total_b) = dfs(i, adj, visited, s, W, B)
         for j in range(w, -1, -1):
             jw = j + total_w
             if jw <= w:

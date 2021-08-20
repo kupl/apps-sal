@@ -1,11 +1,9 @@
-N, M, X = list(map(int, input().split()))
+(N, M, X) = list(map(int, input().split()))
 lis = []
-
 for i in range(N):
     CA = list(map(int, input().split()))
     lis.append(CA)
-
-ans = 1e9
+ans = 1000000000.0
 for i in range(2 ** N):
     check = [0 for i in range(M + 1)]
     for j in range(N):
@@ -14,7 +12,7 @@ for i in range(2 ** N):
                 check[k] += lis[j][k]
         if min(check[1:]) >= X:
             ans = min(ans, check[0])
-if ans == 1e9:
-    print((-1))
+if ans == 1000000000.0:
+    print(-1)
 else:
     print(ans)

@@ -1,6 +1,4 @@
-
 x = int(input())
-
 for i in range(x):
     y = int(input())
     h = {}
@@ -18,8 +16,6 @@ for i in range(x):
             occur = h[key]
             number = key
         elif h[key] is occur:
-            if (int(key) < int(number)):
-                # print 'key -> ' + key + ' number -> ' + str(number)
+            if int(key) < int(number):
                 number = key
-                # print 'new key is ' + number + ' occuring ' + str(number) + ' times'
     print(str(number) + ' ' + str(occur))

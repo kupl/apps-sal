@@ -1,8 +1,9 @@
-def R(): return map(int, input().split())
+def R():
+    return map(int, input().split())
 
 
-c1, c2, x, y = R()
-l, r = c1 + c2, 2 * 10**9 + 7
+(c1, c2, x, y) = R()
+(l, r) = (c1 + c2, 2 * 10 ** 9 + 7)
 while l < r:
     m = (l + r) // 2
     r1 = max(0, c1 - m // y + m // (x * y))

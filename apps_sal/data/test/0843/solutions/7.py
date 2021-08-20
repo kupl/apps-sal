@@ -15,7 +15,7 @@ data2 = list(map(int, input().split()))
 used = [False for i in range(n)]
 data3 = [None for i in range(n)]
 for i in range(n):
-    if data1[i] == ">":
+    if data1[i] == '>':
         data3[i] = i + data2[i]
     else:
         data3[i] = i - data2[i]
@@ -33,6 +33,6 @@ for i in range(2 * n):
         if index == prev:
             break
 if ans:
-    print("INFINITE")
+    print('INFINITE')
 else:
-    print("FINITE")
+    print('FINITE')

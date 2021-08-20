@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 i = 1
 d = 2 * d + 1
 while n > d * i:

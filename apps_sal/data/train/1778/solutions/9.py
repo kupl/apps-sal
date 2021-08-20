@@ -9,11 +9,9 @@ def get_key_length(cipher_text, max_key_length):
             l = len(txt)
             for k in alphabet:
                 c = txt.count(k)
-                n = (c * (c - 1)) / (l * (l - 1))
+                n = c * (c - 1) / (l * (l - 1))
                 ic += n
             avg_ic += ic
-
         avg_ic /= i
         IC.append(avg_ic)
-
     return IC.index(max(IC)) + 2

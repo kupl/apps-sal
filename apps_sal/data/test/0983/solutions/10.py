@@ -1,6 +1,5 @@
-n, p, q, r = list(map(int, input().split(' ')))
+(n, p, q, r) = list(map(int, input().split(' ')))
 a = list(map(int, input().split(' ')))
-
 max1 = {}
 min1 = {}
 max2 = {}
@@ -9,7 +8,6 @@ maxval1 = a[0]
 minval1 = a[0]
 maxval2 = a[n - 1]
 minval2 = a[n - 1]
-
 for i in range(n):
     j = n - 1 - i
     maxval1 = max(maxval1, a[i])
@@ -20,8 +18,6 @@ for i in range(n):
     max2[j] = maxval2
     minval2 = min(minval2, a[j])
     min2[j] = minval2
-
-
 x = None
 for i in range(n):
     y = q * a[i]
@@ -35,5 +31,4 @@ for i in range(n):
         y += r * min2[i]
     if x is None or x < y:
         x = y
-
 print(x)

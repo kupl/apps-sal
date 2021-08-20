@@ -5,11 +5,9 @@ from itertools import accumulate
 def sieve_primes(n):
     sieve = np.ones(n // 2, dtype=np.bool)
     limit = 1 + int(n ** 0.5)
-
     for a in range(3, limit, 2):
         if sieve[a // 2]:
             sieve[a * a // 2::a] = False
-
     prime_indexes = 2 * np.nonzero(sieve)[0].astype(int) + 1
     prime_indexes[0] = 2
     return set(map(str, prime_indexes))

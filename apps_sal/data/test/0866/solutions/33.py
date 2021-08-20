@@ -1,8 +1,7 @@
-X, Y = map(int, input().split())
-mod = 10**9 + 7
+(X, Y) = map(int, input().split())
+mod = 10 ** 9 + 7
 N = (X + Y) // 3
 M = (N + X - Y) // 2
-
 if (X + Y) % 3 != 0 or M < 0 or N < M:
     print(0)
 else:

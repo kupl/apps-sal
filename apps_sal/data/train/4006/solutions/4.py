@@ -1,11 +1,11 @@
 def basic_op(operator, value1, value2):
-    if operator == "+":
+    if operator == '+':
         return value1 + value2
-    elif operator == "-":
+    elif operator == '-':
         return value1 - value2
-    elif operator == "*":
+    elif operator == '*':
         return value1 * value2
-    elif operator == "/":
+    elif operator == '/':
         return value1 / value2
     else:
-        print("Unrecognized Operator. Abort.")
+        print('Unrecognized Operator. Abort.')

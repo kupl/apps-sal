@@ -1,10 +1,11 @@
 class Solution:
+
     def possibleBipartition(self, N: int, dislikes: List[List[int]]) -> bool:
         if not dislikes:
             return True
         color = [-1 for _ in range(N + 1)]
         g = collections.defaultdict(set)
-        for a, b in dislikes:
+        for (a, b) in dislikes:
             g[a].add(b)
             g[b].add(a)
         visited = set()
@@ -23,8 +24,7 @@ class Solution:
                                 q.append(nei)
                                 visited.add(nei)
                                 color[nei] = 1 - color[node]
-                            else:
-                                if color[nei] != 1 - color[node]:
-                                    return False
+                            elif color[nei] != 1 - color[node]:
+                                return False
                         size -= 1
         return len(set(color)) == 3

@@ -1,6 +1,6 @@
 n = int(input())
 l = list(map(int, input().split()))
-cnt = [0] * (10**6 + 100)
+cnt = [0] * (10 ** 6 + 100)
 for i in l:
     cnt[i] += 1
 s = 0

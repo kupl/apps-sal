@@ -1,4 +1,2 @@
 def getVolumeOfCubiod(length, width, height):
-    return (length * width * height)
-
- # from Russia with love
+    return length * width * height

@@ -10,6 +10,6 @@ def f(s):
 
 
 if f(input()) == f(input()):
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

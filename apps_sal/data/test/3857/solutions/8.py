@@ -1,4 +1,3 @@
-# coding: utf-8
 n = int(input())
 ans = 0
 li1 = [int(i) for i in input().split()]
@@ -10,7 +9,7 @@ while li1:
     while i < n:
         if li1[i] < i:
             li2.append(li1[i])
-            del(li1[i])
+            del li1[i]
             n -= 1
         else:
             i += 1

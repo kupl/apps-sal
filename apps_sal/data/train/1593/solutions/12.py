@@ -1,4 +1,3 @@
-# cook your dish here
 a = [100, 50, 10, 5, 2, 1]
 for i in range(int(input())):
     n = int(input())
@@ -7,7 +6,7 @@ for i in range(int(input())):
         if n != 0:
             if n // i != 0:
                 c += n // i
-                n -= ((n // i) * i)
+                n -= n // i * i
         else:
             break
     print(c)

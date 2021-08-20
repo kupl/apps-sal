@@ -8,6 +8,6 @@ for i in range(n):
         if a[i] % 3 == 0 or a[i] % 5 == 0:
             total += 1
 if count == total:
-    print("APPROVED")
+    print('APPROVED')
 else:
-    print("DENIED")
+    print('DENIED')

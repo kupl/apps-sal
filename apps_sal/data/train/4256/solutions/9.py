@@ -4,7 +4,7 @@ import string
 def insert_missing_letters(st):
     has_seen = []
     alphabet = string.ascii_lowercase
-    retstr = ""
+    retstr = ''
     i = 0
     while i < len(st):
         retstr = retstr + st[i]

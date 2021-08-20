@@ -1,7 +1,6 @@
 """ ATSTNG's ejudge Python3 solution template """
 import sys
 import queue
-
 try:
     import dev_act_ffc429465ab634
     DEV = True
@@ -15,7 +14,8 @@ def log(*s):
 
 
 class EJudge:
-    def __init__(self, problem="default", reclim=1 << 30):
+
+    def __init__(self, problem='default', reclim=1 << 30):
         self.problem = problem
         sys.setrecursionlimit(reclim)
 
@@ -49,6 +49,7 @@ class EJudge:
 
 
 class IntReader:
+
     def __init__(self):
         self.ost = queue.Queue()
 
@@ -68,18 +69,23 @@ class IntReader:
         return res
 
 
-###############################################################################
 ej = EJudge()
 int_reader = IntReader()
-def fmap(f, l): return list(map(f, l))
-def parse_int(): return fmap(int, input().split())
 
 
-def sign(x): return (x > 0) - (x < 0)
+def fmap(f, l):
+    return list(map(f, l))
 
 
-# input
-n, x = parse_int()
+def parse_int():
+    return fmap(int, input().split())
+
+
+def sign(x):
+    return (x > 0) - (x < 0)
+
+
+(n, x) = parse_int()
 st = [0] * 100500
 xored = [0] * 100500
 for _ in range(n):
@@ -88,12 +94,9 @@ for idx in range(100500):
     pair = idx ^ x
     if pair < 100500:
         xored[pair] = st[idx]
-
 ans = 0
 for idx in range(100500):
     ans += st[idx] * xored[idx]
-
 if x == 0:
     ans -= n
-
 print(ans // 2)

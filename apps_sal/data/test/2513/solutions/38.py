@@ -164,4 +164,4 @@ else:
             if majikayo() == 1:
                 print(A)
             else:
-                print((-1))
+                print(-1)

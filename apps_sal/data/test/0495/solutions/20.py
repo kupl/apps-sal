@@ -1,4 +1,4 @@
-n, k = input().split()
+(n, k) = input().split()
 k = int(k)
 l = list(n)
 u = len(l)
@@ -17,9 +17,8 @@ while k > 0 and i < u - 1:
                 j = p
             else:
                 p += 1
-
         for h in range(j, i, -1):
-            l[h], l[h - 1] = l[h - 1], l[h]
+            (l[h], l[h - 1]) = (l[h - 1], l[h])
             k -= 1
         i = 0
     else:

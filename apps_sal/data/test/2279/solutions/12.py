@@ -1,15 +1,14 @@
 def main():
-    mode = "filee"
-    if mode == "file":
-        f = open("test.txt", "r")
-
-    if mode == "file":
+    mode = 'filee'
+    if mode == 'file':
+        f = open('test.txt', 'r')
+    if mode == 'file':
         n = int(f.readline())
     else:
         n = int(input())
     w = []
     for i in range(2, 2 * n + 1):
-        if mode == "file":
+        if mode == 'file':
             g = [int(x) for x in f.readline().split()]
         else:
             g = [int(x) for x in input().split()]
@@ -19,7 +18,7 @@ def main():
     free = 2 * n
     fr = [-1] * (free + 1)
     w.reverse()
-    for e, k in w:
+    for (e, k) in w:
         if fr[k[0]] == -1 and fr[k[1]] == -1:
             fr[k[0]] = k[1]
             fr[k[1]] = k[0]
@@ -28,8 +27,7 @@ def main():
                 break
     for i in fr[1:]:
         print(i, end=' ')
-
-    if mode == "file":
+    if mode == 'file':
         f.close()
 
 

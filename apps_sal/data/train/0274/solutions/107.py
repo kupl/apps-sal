@@ -1,6 +1,6 @@
 class Solution:
-    def longestSubarray(self, nums: List[int], limit: int) -> int:
 
+    def longestSubarray(self, nums: List[int], limit: int) -> int:
         maxd = collections.deque()
         mind = collections.deque()
         i = 0

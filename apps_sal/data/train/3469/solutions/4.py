@@ -1,4 +1,4 @@
-CONSONANTS = set("bcdfghjklmnpqrstvwxyz")
+CONSONANTS = set('bcdfghjklmnpqrstvwxyz')
 
 
 def count_consonants(text):

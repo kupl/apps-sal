@@ -4,4 +4,3 @@ def past(h, m, s):
     sec = s * 1000
     mil = hr + mn + sec
     return mil
-    # Good Luck!

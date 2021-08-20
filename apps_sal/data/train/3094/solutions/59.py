@@ -6,6 +6,6 @@ def sum_array(arr):
     index = -1
     for i in arr:
         index += 1
-        if(index > 0 and index < len(arr) - 1):
+        if index > 0 and index < len(arr) - 1:
             arr2.append(i)
     return sum(arr2)

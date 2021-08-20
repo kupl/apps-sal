@@ -1,12 +1,10 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-'''
+"""
 Lala Land has exactly n apple trees
 Tree number i is located in a position xi and has ai apples growing on it
 
 Obj: wants to collect apples from the apple trees
-Start: Amr currently stands in x = 0 position
-'''
+Start: Amr currently stands in x\u2009=\u20090 position
+"""
 
 
 def solve(n, xas):
@@ -25,26 +23,22 @@ def solve(n, xas):
 
 
 def getinput():
+
     def getints_line():
         return list(map(int, input().split(' ')))
     n = int(input())
     xas = [getints_line() for _ in range(n)]
-    return n, xas
+    return (n, xas)
 
 
 def test():
-    # print(solve(2, [[-1, 5], [1, 5]]))
-    # print(solve(3, [[-2, 2], [1, 4], [-1, 3]]))
-    # print(solve(3, [[1, 9], [3, 5], [7, 10]]))
     assert solve(2, [[-1, 5], [1, 5]]) == 10
     assert solve(3, [[-2, 2], [1, 4], [-1, 3]]) == 9
     assert solve(3, [[1, 9], [3, 5], [7, 10]]) == 9
 
 
 def main():
-    # test()
     print(solve(*getinput()))
-    # print('\n'.join(map(str, solve(*getinput()))))
 
 
 def __starting_point():

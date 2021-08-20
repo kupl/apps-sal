@@ -1,4 +1,5 @@
 class Solution:
+
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         trie = {}
         for path in folder:
@@ -10,7 +11,6 @@ class Solution:
                     curr[f] = {}
                     curr = curr[f]
             curr[None] = None
-
         res = []
         for path in folder:
             curr = trie
@@ -22,5 +22,4 @@ class Solution:
                     curr = curr[f]
             if not issub:
                 res.append(path)
-
         return res

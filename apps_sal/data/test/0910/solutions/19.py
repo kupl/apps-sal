@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-n, a, b = [int(x) for x in input().split()]
-
+(n, a, b) = [int(x) for x in input().split()]
 if n > a * b:
     print(-1)
 else:

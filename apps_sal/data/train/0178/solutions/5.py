@@ -1,4 +1,5 @@
 class Solution:
+
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -7,10 +8,8 @@ class Solution:
         n = len(nums)
         dp = [float('inf')] * (n + 1)
         res = 0
-
         for num in nums:
-            # like finding inerstion position
-            lo, hi = 1, n
+            (lo, hi) = (1, n)
             while lo < hi:
                 mi = int((lo + hi) / 2)
                 if dp[mi] < num:

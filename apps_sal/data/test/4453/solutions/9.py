@@ -9,8 +9,8 @@ while t:
         while 1:
             a = l[a - 1]
             d += 1
-            if(a == aa):
+            if a == aa:
                 break
-        print(d, end=" ")
+        print(d, end=' ')
     print()
     t -= 1

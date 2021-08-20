@@ -1,5 +1,5 @@
 def group(arr):
-    answer, brac, counter, already = [], [], 0, []
+    (answer, brac, counter, already) = ([], [], 0, [])
     for i in arr:
         if arr.count(i) > 1 and i not in already:
             already.append(i)

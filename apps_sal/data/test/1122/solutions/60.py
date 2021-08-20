@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 7)
 input = sys.stdin.readline
 f_inf = float('inf')
@@ -7,8 +6,7 @@ mod = 10 ** 9 + 7
 
 
 def resolve():
-    n, m = list(map(int, input().split()))
-
+    (n, m) = list(map(int, input().split()))
     if n % 2:
         left = 1
         right = n - 1

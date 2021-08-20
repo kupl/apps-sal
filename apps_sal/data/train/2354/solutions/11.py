@@ -10,9 +10,8 @@ for i in range(int(input())):
 b = 0
 if p in ip:
     b = 1
-else:
-    if p[0] in e and p[1] in s:
-        b = 1
+elif p[0] in e and p[1] in s:
+    b = 1
 if b == 1:
     print('YES')
 else:

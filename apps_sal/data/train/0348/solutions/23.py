@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSum(self, arr: List[int]) -> int:
         nodel = [arr[0]]
         for i in range(1, len(arr)):

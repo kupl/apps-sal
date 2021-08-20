@@ -1,27 +1,12 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import time
-
-#   = input()
-#   = int(input())
-
-#() = (i for i in input().split())
-#   = [i for i in input().split()]
-
-#() = (int(i) for i in input().split())
 a = [[0 for j in range(8)] for i in range(8)]
-
 for i in range(8):
     b = input()
     for j in range(8):
         a[j][i] = b[j]
-
 start = time.time()
-
 mW = 10
 mB = 10
-
 for i in range(8):
     flag = True
     for j in range(8):
@@ -34,7 +19,6 @@ for i in range(8):
         continue
     if mW > j:
         mW = j
-
 for i in range(8):
     flag = True
     for j in range(8):
@@ -47,12 +31,8 @@ for i in range(8):
         continue
     if mB > j:
         mB = j
-
-
 if mW <= mB:
     print('A')
 else:
     print('B')
-# print(ans)
 finish = time.time()
-#print(finish - start)

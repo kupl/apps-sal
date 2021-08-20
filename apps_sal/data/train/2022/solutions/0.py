@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 if n == 1 and m == 1:
     print('YES\n1')
 elif n == 3 and m == 3:
@@ -14,7 +14,7 @@ elif n == 1 or m == 1:
     a += [i for i in range(1, t + 1, 2)]
     print('YES')
     for i in a:
-        print(i, end="")
+        print(i, end='')
         print([' ', '\n'][m == 1], end='')
 else:
     a = []
@@ -27,16 +27,16 @@ else:
                 a[i - 1][j] = a[i][j]
             a[n - 1][j] = t
         for i in range(1, n, 2):
-            r, s = a[i][0], a[i][1]
+            (r, s) = (a[i][0], a[i][1])
             for j in range(2, m):
                 a[i][j - 2] = a[i][j]
-            a[i][m - 2], a[i][m - 1] = r, s
+            (a[i][m - 2], a[i][m - 1]) = (r, s)
     else:
         for j in range(1, m, 2):
-            r, s = a[0][j], a[1][j]
+            (r, s) = (a[0][j], a[1][j])
             for i in range(2, n):
                 a[i - 2][j] = a[i][j]
-            a[n - 2][j], a[n - 1][j] = r, s
+            (a[n - 2][j], a[n - 1][j]) = (r, s)
         for i in range(1, n, 2):
             t = a[i][0]
             for j in range(1, m):

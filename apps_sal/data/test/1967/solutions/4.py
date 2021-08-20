@@ -1,4 +1,4 @@
-w, h = [int(i) for i in input().split()]
+(w, h) = [int(i) for i in input().split()]
 a = []
 for i in range(h):
     a.append([])

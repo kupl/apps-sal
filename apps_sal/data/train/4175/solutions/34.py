@@ -1,6 +1,5 @@
 def repeater(string, n):
-    total = ""
+    total = ''
     for i in range(n):
         total += string
-
     return total

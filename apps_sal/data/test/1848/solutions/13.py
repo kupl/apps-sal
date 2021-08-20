@@ -12,10 +12,10 @@ l = len(a) - 1
 s = 0
 while i < len(a):
     c = i
-    while (i < len(a)) and (a[i] == a[i - 1]):
+    while i < len(a) and a[i] == a[i - 1]:
         i += 1
     s += l * (a[i - 1] - r)
-    l -= (i - c + 1)
+    l -= i - c + 1
     r = a[i - 1]
     i += 1
 print(s)

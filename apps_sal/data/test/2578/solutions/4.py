@@ -1,4 +1,3 @@
-# stdin=open('input.txt')
 import math
 from sys import stdin, stdout
 
@@ -7,21 +6,8 @@ def input():
     return stdin.readline()[:-1]
 
 
-# # stdout=open('output.txt',mode='w+')
-
-# # def print(x, end='\n'):
-# # 	stdout.write(str(x) +end)
-
-
-# # a, b = map(int, input().split())
-
-# # l = list(map(int, input().split()))
-
-
-# CODE BEGINS HERE.................
-
-
 class disjoint_set:
+
     def __init__(self, n):
         self.parent = [i for i in range(n)]
         self.size = [1] * n
@@ -29,7 +15,6 @@ class disjoint_set:
     def union(self, a, b):
         p1 = self.find(a)
         p2 = self.find(b)
-
         if p1 == p2:
             return False
         if self.size[p1] > self.size[p2]:
@@ -51,18 +36,12 @@ class disjoint_set:
         return ans
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 ds = disjoint_set(n)
 for i in range(m):
     l = list(map(int, input().split()))
     for i in range(2, l[0] + 1):
         ds.union(l[i - 1] - 1, l[i] - 1)
-
-
 for i in range(n):
     print(ds.size[ds.find(i)], end=' ')
 print('')
-
-# CODE ENDS HERE....................
-
-# stdout.close()

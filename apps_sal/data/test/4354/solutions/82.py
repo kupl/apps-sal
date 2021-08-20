@@ -1,9 +1,12 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 Std = [tuple(map(int, input().split())) for _ in range(N)]
 Chp = [tuple(map(int, input().split())) for _ in range(M)]
-INF = 10e9
+INF = 10000000000.0
 Arrv = []
-def Mdist(x, y, u, v): return abs(x - u) + abs(y - v)
+
+
+def Mdist(x, y, u, v):
+    return abs(x - u) + abs(y - v)
 
 
 for s in Std:

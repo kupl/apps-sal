@@ -23,11 +23,10 @@ def main():
                     ans.append(1)
                 else:
                     ans.append(3)
+            elif flag:
+                ans.append(2)
             else:
-                if flag:
-                    ans.append(2)
-                else:
-                    flag = True
+                flag = True
         if ans[-1] == 3 or n % 2 == 0:
             ans.append(2)
     else:
@@ -39,7 +38,7 @@ def main():
                     ans.append(j)
                 break
     print(m)
-    print((len(ans)))
+    print(len(ans))
     for i in ans:
         print(i)
 

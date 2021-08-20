@@ -10,8 +10,8 @@ for i in range(2 * n - 1):
     a += k
 a.sort(reverse=True)
 for d in range(len(a)):
-    i, j = z[a[d]]
-    if not c[i] and not c[j]:
+    (i, j) = z[a[d]]
+    if not c[i] and (not c[j]):
         b[i] = j
         b[j] = i
         c[i] = c[j] = True

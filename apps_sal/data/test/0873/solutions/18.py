@@ -1,11 +1,7 @@
-
 import math
-
-
 n = int(input())
 s1 = input()
 s2 = input()
-
 l = len(s1)
 svar = 0
 for i in range(0, l):

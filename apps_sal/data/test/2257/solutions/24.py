@@ -1,8 +1,8 @@
-n, x, y, x1, y1 = map(int, input().split())
+(n, x, y, x1, y1) = map(int, input().split())
 a = []
 for i in range(n):
-    xt, yt = map(int, input().split())
-    a.append((((xt - x)**2 + (yt - y)**2), ((xt - x1)**2 + (yt - y1)**2)))
+    (xt, yt) = map(int, input().split())
+    a.append(((xt - x) ** 2 + (yt - y) ** 2, (xt - x1) ** 2 + (yt - y1) ** 2))
 a.sort(key=lambda x: x[0])
 ans = max([x[1] for x in a])
 ans = min(ans, a[-1][0])

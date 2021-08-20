@@ -1,6 +1,6 @@
 s = input()
-n, k, p, x, y = s.split()
-n, k, p, x, y = int(n), int(k), int(p), int(x), int(y)
+(n, k, p, x, y) = s.split()
+(n, k, p, x, y) = (int(n), int(k), int(p), int(x), int(y))
 s = input()
 a = []
 for i in s.split():
@@ -29,7 +29,6 @@ else:
         left -= b[i]
     if left < 0 or r < n // 2 + 1:
         flag = 0
-
 if flag == 1:
     for i in range(0, n - k - 1):
         print(b[i], end=' ')

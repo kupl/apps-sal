@@ -1,4 +1,4 @@
-N, A, B = map(int, input().split())
+(N, A, B) = map(int, input().split())
 diff = A - B
 H = [int(input()) for i in range(N)]
 
@@ -12,13 +12,12 @@ def check(x):
     return time <= x
 
 
-left = 0  # False
-right = 10**10  # True
+left = 0
+right = 10 ** 10
 while left + 1 < right:
     mid = (left + right) // 2
     if check(mid):
         right = mid
     else:
         left = mid
-
 print(right)

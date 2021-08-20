@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def canArrange(self, arr: List[int], k: int) -> bool:
         remainders = [0 for _ in range(k)]
         for number in arr:

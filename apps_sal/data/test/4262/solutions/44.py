@@ -1,6 +1,6 @@
 import itertools
 n = int(input())
-s = ""
+s = ''
 for i in range(n):
     s += str(i + 1)
 l = list(itertools.permutations(s, n))

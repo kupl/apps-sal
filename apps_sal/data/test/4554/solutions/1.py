@@ -1,4 +1,4 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 a = int(a)
 b = int(b)
 c = int(c)
@@ -7,8 +7,7 @@ if b <= c:
         print(0)
     else:
         print(c - b - a)
+elif a + c >= b:
+    print(0)
 else:
-    if a + c >= b:
-        print(0)
-    else:
-        print(b - c - a)
+    print(b - c - a)

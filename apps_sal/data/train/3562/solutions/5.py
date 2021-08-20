@@ -1,10 +1,8 @@
 def merge(a, left_index, mid, right_index, aux):
-    i, j = left_index, mid + 1
+    (i, j) = (left_index, mid + 1)
     inversions = 0
-
     for k in range(left_index, right_index + 1):
         aux[k] = a[k]
-
     for k in range(left_index, right_index + 1):
         if i > mid:
             a[k] = aux[j]
@@ -18,7 +16,6 @@ def merge(a, left_index, mid, right_index, aux):
         elif aux[j] < aux[i]:
             a[k] = aux[j]
             j += 1
-
             inversions += mid - i + 1
     return inversions
 

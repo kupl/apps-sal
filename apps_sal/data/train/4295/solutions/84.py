@@ -4,7 +4,7 @@ def balanced_num(number):
     number_string = str(number)
     number_length = len(number_string)
     if number_length < 3:
-        return "Balanced"
+        return 'Balanced'
     else:
         reverse_number = number_string[::-1]
         if number_length % 2 == 0:
@@ -15,6 +15,6 @@ def balanced_num(number):
             left_number += int(number_string[i])
             right_number += int(reverse_number[i])
         if left_number == right_number:
-            return "Balanced"
+            return 'Balanced'
         else:
-            return "Not Balanced"
+            return 'Not Balanced'

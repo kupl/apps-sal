@@ -1,4 +1,5 @@
 class Solution:
+
     def spiralOrder(self, matrix):
         """
         :type matrix: List[List[int]]
@@ -7,9 +8,7 @@ class Solution:
         res = []
         if not matrix:
             return res
-
-        left, right, top, bottom = 0, len(matrix[0]) - 1, 0, len(matrix) - 1
-
+        (left, right, top, bottom) = (0, len(matrix[0]) - 1, 0, len(matrix) - 1)
         while left <= right and top <= bottom:
             res += [matrix[top][i] for i in range(left, right + 1)]
             res += [matrix[i][right] for i in range(top + 1, bottom)]

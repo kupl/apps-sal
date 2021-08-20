@@ -1,12 +1,17 @@
 from collections import deque
 import sys
-def input(): return sys.stdin.readline().strip()
-def mapint(): return map(int, input().split())
 
 
-sys.setrecursionlimit(10**9)
+def input():
+    return sys.stdin.readline().strip()
 
-N, A, B = mapint()
+
+def mapint():
+    return map(int, input().split())
+
+
+sys.setrecursionlimit(10 ** 9)
+(N, A, B) = mapint()
 if A + B - 1 > N or N > A * B:
     print(-1)
 else:
@@ -14,7 +19,6 @@ else:
     blocks.append(' '.join(map(str, range(B, 0, -1))))
     now = B + 1
     rest = N - A + 2
-
     while now:
         if now >= rest:
             break

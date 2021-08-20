@@ -7,7 +7,6 @@ b = reversed(sorted(b))
 x = [0] * 200
 for t in a:
     x[t] += 1
-
 ans = 0
 for t in b:
     if x[t + 1]:
@@ -22,5 +21,4 @@ for t in b:
         ans += 1
         x[t - 1] -= 1
         continue
-
 print(ans)

@@ -1,5 +1,5 @@
 x = int(input())
-m = 2 * (10**5)
+m = 2 * 10 ** 5
 lis = [True for i in range(m)]
 i = 2
 while i * i <= m:

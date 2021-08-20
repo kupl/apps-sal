@@ -1,4 +1,5 @@
 class Solution:
+
     def isPossibleDivide(self, nums, k):
         d = collections.Counter(nums)
         roots = [n for n in d if not d[n - 1]]

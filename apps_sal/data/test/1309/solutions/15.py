@@ -13,9 +13,4 @@ for lonely_couple in combinations(list(range(2 * n)), 2):
     sample = list(chain(wi[:lonely_couple[0]], wi[lonely_couple[0] + 1:lonely_couple[1]], wi[lonely_couple[1] + 1:]))
     minimum = min(minimum, take(sample))
 print(minimum)
-
-
-"""
-4
-1 3 4 6 3 4 1000 200
-"""
+'\n4\n1 3 4 6 3 4 1000 200\n'

@@ -4,7 +4,7 @@ t = [int(input()) for _ in range(n)]
 
 
 def lcm(x, y):
-    return (x * y) // math.gcd(x, y)
+    return x * y // math.gcd(x, y)
 
 
 ans = 1

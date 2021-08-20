@@ -1,6 +1,6 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input()
-inf = 10**18
+inf = 10 ** 18
 who = [-1] * n
 for i in range(n):
     if s[i] == '1':

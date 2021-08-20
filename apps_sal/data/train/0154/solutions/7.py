@@ -1,4 +1,5 @@
 class Solution:
+
     def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:
         if 0 not in horizontalCuts:
             horizontalCuts.append(0)
@@ -22,4 +23,4 @@ class Solution:
             if verticalCuts[j + 1] - verticalCuts[j] > max_diff1:
                 max_diff1 = max(max_diff1, verticalCuts[j + 1] - verticalCuts[j])
             j += 1
-        return (max_diff * max_diff1) % ((10**9) + 7)
+        return max_diff * max_diff1 % (10 ** 9 + 7)

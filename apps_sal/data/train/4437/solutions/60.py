@@ -1,8 +1,8 @@
 def cookie(x):
     if type(x) is str:
-        busted = "Zach"
+        busted = 'Zach'
     elif type(x) in (int, float):
-        busted = "Monica"
+        busted = 'Monica'
     else:
-        busted = "the dog"
-    return f"Who ate the last cookie? It was {busted}!"
+        busted = 'the dog'
+    return f'Who ate the last cookie? It was {busted}!'

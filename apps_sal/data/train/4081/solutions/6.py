@@ -1,4 +1,3 @@
-# Which bump protrudes the farthest?
 def first_tooth(array):
     if len(array) == 1:
         return 0

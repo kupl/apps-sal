@@ -1,2 +1,2 @@
 def bonus_time(salary, bonus):
-    return ('${}'.format(salary * 10) if bonus else '${}'.format(salary))
+    return '${}'.format(salary * 10) if bonus else '${}'.format(salary)

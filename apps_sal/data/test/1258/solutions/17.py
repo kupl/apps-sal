@@ -3,7 +3,7 @@ A = []
 for i in range(a):
     A.append(set())
 for i in range(a - 2):
-    x, y, z = list(map(int, input().split()))
+    (x, y, z) = list(map(int, input().split()))
     x -= 1
     y -= 1
     z -= 1
@@ -32,7 +32,6 @@ for i in range(a - 2):
             B.append(w[0] + 1)
             m2 = int(m1)
             m1 = w[0]
-
         else:
             B.append(w[1] + 1)
             m2 = int(m1)
@@ -41,6 +40,4 @@ for i in range(a - 2):
         B.append(w[0] + 1)
         m2 = int(m1)
         m1 = w[0]
-
-
 print(*B)

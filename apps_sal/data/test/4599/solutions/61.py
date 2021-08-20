@@ -1,10 +1,6 @@
-# coding: utf-8
-# Your code here!
 N = int(input())
-A = list(int(x) for x in input().split())
-
+A = list((int(x) for x in input().split()))
 A.sort(reverse=True)
-
 ans = 0
 for i in range(N):
     a = A[i]
@@ -12,5 +8,4 @@ for i in range(N):
         ans += a
     else:
         ans -= a
-
 print(ans)

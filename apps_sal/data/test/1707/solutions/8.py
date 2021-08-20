@@ -1,6 +1,5 @@
 N = int(input())
 A = sorted([abs(int(a)) for a in input().split()])
-
 i = 0
 j = 1
 ans = 0
@@ -12,5 +11,4 @@ while j < N:
     i += 1
     if j == i:
         j += 1
-
 print(ans)

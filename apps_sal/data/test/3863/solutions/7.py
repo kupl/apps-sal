@@ -1,23 +1,22 @@
 from math import gcd
 
 
-def divisors(M):  # Mの約数列 O(n^(0.5+e))
+def divisors(M):
     d = []
     i = 1
-    while M >= i**2:
+    while M >= i ** 2:
         if M % i == 0:
             d.append(i)
-            if i**2 != M:
+            if i ** 2 != M:
                 d.append(M // i)
         i = i + 1
     d.sort()
     return d
 
 
-mod = 10**9 + 7
-N, K = list(map(int, input().split()))
+mod = 10 ** 9 + 7
+(N, K) = list(map(int, input().split()))
 div = divisors(N)
-
 res = [0 for i in range(len(div))]
 ans = 0
 if N % 2 == 0:
@@ -32,8 +31,7 @@ if N % 2 == 0:
             if div[j] % d == 0:
                 res[j] -= res[i]
                 res[j] %= mod
-
-    print((ans % mod))
+    print(ans % mod)
 else:
     for i in range(len(div)):
         d = div[i]
@@ -46,5 +44,4 @@ else:
             if div[j] % d == 0:
                 res[j] -= res[i]
                 res[j] %= mod
-
-    print((ans % mod))
+    print(ans % mod)

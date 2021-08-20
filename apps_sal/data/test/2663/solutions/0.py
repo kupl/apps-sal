@@ -1,5 +1,3 @@
-
-
 import heapq
 
 
@@ -20,14 +18,12 @@ def solver(N, K, A):
     prefix = [A[0]]
     for x in A[1:]:
         prefix.append(prefix[-1] + x)
-
     return heapq.nlargest(K, contig(prefix, A))
 
 
 def __starting_point():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     A = list(map(int, input().split()))
-
     print(' '.join([str(i) for i in solver(N, K, A)]))
 
 

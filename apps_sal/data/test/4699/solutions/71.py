@@ -1,6 +1,5 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = set(map(int, input().split()))
-
 while True:
     tmp_str = set(str(n))
     for i in tmp_str:

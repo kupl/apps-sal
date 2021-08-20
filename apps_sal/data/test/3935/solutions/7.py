@@ -19,10 +19,9 @@ for i in range(100):
     if cnt[i] == m:
         m = i
         break
-
 x = []
 for c in ns:
-    if c % (1 << m) == 0 and c % (1 << (m + 1)) != 0:
+    if c % (1 << m) == 0 and c % (1 << m + 1) != 0:
         continue
     x.append(c)
 print(len(x))

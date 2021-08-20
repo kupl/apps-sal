@@ -1,6 +1,4 @@
 import sys
-# sys.stdin.readline()
-#n = int(sys.stdin.readline())
 k = int(sys.stdin.readline())
 ans = []
 for kek in range(k):

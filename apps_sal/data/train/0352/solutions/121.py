@@ -1,7 +1,9 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
+
         def connected(x, y):
-            i, j = 0, 0
+            (i, j) = (0, 0)
             count = 0
             while i < len(y) and j < len(x):
                 if y[i] != x[j]:
@@ -14,10 +16,8 @@ class Solution:
                     i += 1
                     j += 1
             return True
-
         sort_words = sorted(words, key=len)
         res = [1 for i in range(len(sort_words))]
-
         for i in range(len(sort_words)):
             x = sort_words[i]
             for j in range(i, len(sort_words)):

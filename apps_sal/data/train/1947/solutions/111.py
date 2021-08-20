@@ -1,4 +1,5 @@
 class Solution:
+
     def wordSubsets(self, A: List[str], B: List[str]) -> List[str]:
         m = {}
         for i in range(26):
@@ -16,7 +17,7 @@ class Solution:
                     A_m[l] = 0
                 A_m[l] += 1
             for k in m:
-                if m[k] > 0 and ((k not in A_m) or (A_m[k] < m[k])):
+                if m[k] > 0 and (k not in A_m or A_m[k] < m[k]):
                     rt = False
             if rt == True:
                 res.append(w)

@@ -1,4 +1,5 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
         num = 0
         stack = [(1, i, i) for i in range(10)]
@@ -15,5 +16,4 @@ class Solution:
             memo[i][7] = memo[i - 1][2] + memo[i - 1][6]
             memo[i][8] = memo[i - 1][1] + memo[i - 1][3]
             memo[i][9] = memo[i - 1][2] + memo[i - 1][4]
-
-        return sum(memo[-1]) % (10**9 + 7)
+        return sum(memo[-1]) % (10 ** 9 + 7)

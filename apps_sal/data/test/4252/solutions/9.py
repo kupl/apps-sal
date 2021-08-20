@@ -3,7 +3,7 @@ s = input()
 sl = [i for i in s]
 c = 0
 x = s.find('xxx')
-while(x != -1):
+while x != -1:
     c += 1
     sl.pop(x)
     temp = ''

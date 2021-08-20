@@ -1,7 +1,8 @@
 class Solution:
+
     def maxUncrossedLines(self, A: List[int], B: List[int]) -> int:
         if len(A) < len(B):
-            A, B = B, A
+            (A, B) = (B, A)
         n = len(B)
         prev = [0] * (n + 1)
         for i in range(1, n + 1):
@@ -16,5 +17,5 @@ class Solution:
                     curr[j] = 1 + prev[j - 1]
                 else:
                     curr[j] = max(curr[j - 1], prev[j])
-            prev, curr = curr, prev
+            (prev, curr) = (curr, prev)
         return prev[-1]

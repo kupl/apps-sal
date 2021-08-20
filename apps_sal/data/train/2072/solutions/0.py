@@ -1,5 +1,4 @@
-from sys import*
-#
+from sys import *
 
 
 def check(u, d, l, r):
@@ -18,7 +17,6 @@ def check(u, d, l, r):
     return dx * dy
 
 
-#
 (n, k) = list(map(int, input().split()))
 pointsx = []
 pointsy = []
@@ -36,6 +34,3 @@ for u in range(0, k + 1):
                 if l + r <= k and u + d <= k:
                     ans = min(ans, check(u, d, l, r))
 print(ans // 4)
-
-
-# Made By Mostafa_Khaled

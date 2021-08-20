@@ -1,7 +1,6 @@
 def run_length_compress(string):
-    string.append("@")
+    string.append('@')
     n = len(string)
-
     begin = 0
     end = 1
     cnt = 1
@@ -17,7 +16,6 @@ def run_length_compress(string):
             begin = end
             end = begin + 1
             cnt = 1
-
     return ans
 
 

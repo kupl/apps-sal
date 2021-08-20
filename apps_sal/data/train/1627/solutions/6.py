@@ -1,4 +1,4 @@
-CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
 
 def todecimal(s, b):
@@ -7,7 +7,7 @@ def todecimal(s, b):
     for i in range(l):
         c = s[i]
         val = CHARS.find(c)
-        res = res + val * b**(l - i - 1)
+        res = res + val * b ** (l - i - 1)
     return res
 
 

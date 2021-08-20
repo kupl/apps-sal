@@ -1,4 +1,5 @@
 class Solution:
+
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         freq = defaultdict(lambda: 0)
         for i in arr:
@@ -8,7 +9,6 @@ class Solution:
             tup.append((freq[i], i))
         tup = sorted(tup)
         count = len(freq)
-
         for i in tup:
             k -= i[0]
             if k < 0:

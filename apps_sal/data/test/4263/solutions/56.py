@@ -9,5 +9,4 @@ for i in range(L):
         else:
             break
     ans = max(ans, c)
-
 print(ans)

@@ -1,6 +1,6 @@
 class Solution:
-    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
 
+    def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ans = 0
         anst = -1
         waiting = 0
@@ -21,6 +21,4 @@ class Solution:
             if tans > ans:
                 ans = tans
                 anst = times
-            # print(waiting, i, c, tans, done, times)
-
         return anst

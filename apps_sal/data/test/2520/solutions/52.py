@@ -1,15 +1,15 @@
 def main():
-    n, m, k = list(map(int, input().split()))
-    F, B = {}, {}
+    (n, m, k) = list(map(int, input().split()))
+    (F, B) = ({}, {})
     for i in range(1, n + 1):
         F[i] = []
         B[i] = []
     for _ in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         F[a] += [b]
         F[b] += [a]
     for _ in range(k):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         B[a] += [b]
         B[b] += [a]
     G = [0 for i in range(n)]
@@ -41,7 +41,7 @@ def main():
         a -= len(F[i + 1])
         a -= 1
         ans.append(a)
-    print((' '.join([str(a) for a in ans])))
+    print(' '.join([str(a) for a in ans]))
 
 
 def __starting_point():

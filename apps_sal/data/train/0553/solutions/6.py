@@ -7,7 +7,7 @@ def eq_solve(v0, v1, u0, u1):
 
 
 def solve(p, q, r, a, b, c, rs):
-    if p == a and q == b and r == c:
+    if p == a and q == b and (r == c):
         return rs
     if rs >= 2:
         return 3
@@ -29,31 +29,30 @@ def solve(p, q, r, a, b, c, rs):
             np = p
             nq = q
             nr = r
-            if (msk & 1) > 0:
+            if msk & 1 > 0:
                 np += add
-            if (msk & 2) > 0:
+            if msk & 2 > 0:
                 nq += add
-            if (msk & 4) > 0:
+            if msk & 4 > 0:
                 nr += add
             res = min(res, solve(np, nq, nr, a, b, c, rs + 1))
         for mul in muls:
             np = p
             nq = q
             nr = r
-            if (msk & 1) > 0:
+            if msk & 1 > 0:
                 np *= mul
-            if (msk & 2) > 0:
+            if msk & 2 > 0:
                 nq *= mul
-            if (msk & 4) > 0:
+            if msk & 4 > 0:
                 nr *= mul
             res = min(res, solve(np, nq, nr, a, b, c, rs + 1))
     return res
 
 
 t = int(input())
-
 while t > 0:
-    p, q, r = map(int, input().split())
-    a, b, c = map(int, input().split())
+    (p, q, r) = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     print(solve(p, q, r, a, b, c, 0))
     t -= 1

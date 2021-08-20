@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    n, l = list(map(int, input().split()))
+    (n, l) = list(map(int, input().split()))
     arr = list(map(int, input().split()))
-    ls, rs, lx, rx, li, ri = 1, 1, 0, l, 0, n
+    (ls, rs, lx, rx, li, ri) = (1, 1, 0, l, 0, n)
     total = 0
     while li != ri:
         if (arr[li] - lx) / ls < (rx - arr[ri - 1]) / rs:

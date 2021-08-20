@@ -3,6 +3,7 @@ store = dict()
 
 
 class node:
+
     def __init__(self, data):
         self.data = data
         self.parent = None
@@ -19,7 +20,6 @@ def makeset(data):
 def union(data1, data2):
     node1 = store[data1]
     node2 = store[data2]
-
     parent1 = findset(node1)
     parent2 = findset(node2)
     if parent1.data == parent2.data:
@@ -44,13 +44,13 @@ def repre(data):
 
 
 for _ in range(int(stdin.readline())):
-    n, q = list(map(int, stdin.readline().split()))
+    (n, q) = list(map(int, stdin.readline().split()))
     store = dict()
     different = []
     for i in range(1, n + 1):
         makeset(i)
     for i in range(q):
-        a, b, c = list(map(int, stdin.readline().split()))
+        (a, b, c) = list(map(int, stdin.readline().split()))
         if c == 0:
             union(a, b)
         else:
@@ -65,16 +65,14 @@ for _ in range(int(stdin.readline())):
         elif ob1.color == ob2.color and ob1.color != None:
             ans = 0
             break
-        else:
-            if ob1.color == None and ob2.color == None:
-                ob1.color = True
-                ob2.color = not ob1.color
-            elif ob1.color == None:
-                ob1.color = not ob2.color
-            elif ob2.color == None:
-                ob2.color = not ob1.color
-
+        elif ob1.color == None and ob2.color == None:
+            ob1.color = True
+            ob2.color = not ob1.color
+        elif ob1.color == None:
+            ob1.color = not ob2.color
+        elif ob2.color == None:
+            ob2.color = not ob1.color
     if ans:
-        stdout.write("yes\n")
+        stdout.write('yes\n')
     else:
-        stdout.write("no\n")
+        stdout.write('no\n')

@@ -1,5 +1,5 @@
 def multiple_split(s, delim=[]):
-    if not s and not delim:
+    if not s and (not delim):
         return []
     if not delim:
         return [s]

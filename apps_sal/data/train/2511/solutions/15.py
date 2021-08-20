@@ -1,4 +1,5 @@
 class Solution:
+
     def repeatedNTimes(self, qq: List[int]) -> int:
         stack = []
         for i in qq:

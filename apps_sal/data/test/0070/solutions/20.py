@@ -1,19 +1,16 @@
-n, k = list(map(str, input().split()))
+(n, k) = list(map(str, input().split()))
 k = int(k)
-
 n = n[::-1]
-
 cc = 0
 cz = 0
 c = len(n)
 for i in range(c):
     if int(n[i]) == 0:
         cz += 1
+    elif cz >= k:
+        break
     else:
-        if cz >= k:
-            break
-        else:
-            cc += 1
+        cc += 1
 if cz < k:
     print(c - 1)
 else:

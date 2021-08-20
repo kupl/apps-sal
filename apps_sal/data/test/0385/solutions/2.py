@@ -1,7 +1,7 @@
-n, m, p = list(map(int, input().split()))
-x, v, s, l, r = [0] * n, [], input(), list(range(-1, n)), list(range(1, n + 2))
+(n, m, p) = list(map(int, input().split()))
+(x, v, s, l, r) = ([0] * n, [], input(), list(range(-1, n)), list(range(1, n + 2)))
 p -= 1
-for i, c in enumerate(s):
+for (i, c) in enumerate(s):
     if c == '(':
         v.append(i)
     else:
@@ -14,7 +14,7 @@ for c in input():
             p = x[p]
         q = l[x[p]]
         p = r[p]
-        l[p], r[q] = q, p
+        (l[p], r[q]) = (q, p)
         if p == n:
             p = l[p]
     else:

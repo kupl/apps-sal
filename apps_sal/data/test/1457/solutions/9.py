@@ -22,5 +22,4 @@ while i < n:
         i += k
     else:
         i += 1
-
 print(ans)

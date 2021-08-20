@@ -7,7 +7,7 @@ def three_details(n):
         return 1
     elif n < 6:
         return 0
-    q, r = divmod(n, 2)
+    (q, r) = divmod(n, 2)
     if r:
         return three_details(q) + three_details(q + 1)
     else:

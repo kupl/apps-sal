@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         countOfArray = Counter(arr)
         listOfValues = list(countOfArray.values())

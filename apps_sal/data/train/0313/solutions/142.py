@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
         if len(bloomDay) < m * k:
             return -1
@@ -12,7 +13,6 @@ class Solution:
                 min1 = min(mid, min1)
             else:
                 low = mid + 1
-
         return min1
 
 

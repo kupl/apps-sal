@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         l1 = len(nums1)
         l2 = len(nums2)
@@ -14,7 +15,7 @@ class Solution:
         Count_upper2 = collections.Counter(upper2)
         count = 0
         for i in range(l1):
-            count += Count_upper2[nums1[i]**2]
+            count += Count_upper2[nums1[i] ** 2]
         for i in range(l2):
-            count += Count_upper1[nums2[i]**2]
+            count += Count_upper1[nums2[i] ** 2]
         return count

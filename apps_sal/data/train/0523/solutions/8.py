@@ -1,9 +1,9 @@
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 p = 100000
 fact = [0] * p
 fact[0] = 1
 for i in range(1, p):
-    fact[i] = (fact[i - 1] * i) % MOD
+    fact[i] = fact[i - 1] * i % MOD
 
 
 def MI(a, MOD):
@@ -15,11 +15,11 @@ def nck(n, k, MOD):
         return 1
     if n < k:
         return 0
-    return (fact[n] * MI(fact[k], MOD) % MOD * MI(fact[n - k], MOD) % MOD) % MOD
+    return fact[n] * MI(fact[k], MOD) % MOD * MI(fact[n - k], MOD) % MOD % MOD
 
 
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     prod = 1
     l = [int(i) for i in input().split()]
     l.sort()
@@ -30,5 +30,5 @@ for _ in range(int(input())):
         y = i + 1
         asmax = nck(y - 1, k - 1, MOD)
         req = tot - asmin - asmax
-        prod = (prod * pow(l[i], req, MOD)) % MOD
+        prod = prod * pow(l[i], req, MOD) % MOD
     print(prod % MOD)

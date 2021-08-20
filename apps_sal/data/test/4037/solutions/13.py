@@ -2,18 +2,16 @@ import math
 import sys
 from collections import defaultdict
 
-# input = sys.stdin.readline
 
-
-def nt(): return map(int, input().split())
+def nt():
+    return map(int, input().split())
 
 
 def main():
-    n, r = nt()
+    (n, r) = nt()
     projects = [tuple(nt()) for _ in range(n)]
     positive = [t for t in projects if t[1] > 0]
     negative = [t for t in projects if t[1] <= 0]
-
     max_pos = 0
     for p in sorted(positive):
         if p[0] <= r:
@@ -35,7 +33,6 @@ def main():
     max_neg = 0
     for i in range(MAX):
         max_neg = max(max_neg, dp[len(negative)][i])
-
     print(max_pos + max_neg)
 
 

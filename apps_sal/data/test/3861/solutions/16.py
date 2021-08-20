@@ -5,7 +5,6 @@ for i in a:
     if i < 0:
         if i > ans:
             ans = i
-    else:
-        if int(i**0.5)**2 != i and i > ans:
-            ans = i
+    elif int(i ** 0.5) ** 2 != i and i > ans:
+        ans = i
 print(ans)

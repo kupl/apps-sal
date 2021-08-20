@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     c = int(input())
     a = list(map(int, input().split()))
@@ -6,8 +5,8 @@ for _ in range(int(input())):
     a = sum(a) - max(a)
     b = sum(b) - max(b)
     if a < b:
-        print("Alice")
+        print('Alice')
     elif a > b:
-        print("Bob")
+        print('Bob')
     else:
-        print("Draw")
+        print('Draw')

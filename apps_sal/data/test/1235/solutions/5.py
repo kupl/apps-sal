@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Sun Jul 14 12:40:58 2019
 
@@ -7,11 +6,12 @@ Created on Sun Jul 14 12:40:58 2019
 
 
 class cinn:
+
     def __init__(self):
         self.x = []
 
     def cin(self, t=int):
-        if(len(self.x) == 0):
+        if len(self.x) == 0:
             a = input()
             self.x = a.split()
             self.x.reverse()
@@ -20,7 +20,7 @@ class cinn:
     def get(self, t):
         return t(self.x.pop())
 
-    def clist(self, n, t=int):  # n is number of inputs, t is type to be casted
+    def clist(self, n, t=int):
         l = [0] * n
         for i in range(n):
             l[i] = self.cin(t)
@@ -29,11 +29,11 @@ class cinn:
     def clist2(self, n, t1=int, t2=int, t3=int, tn=2):
         l = [0] * n
         for i in range(n):
-            if(tn == 2):
+            if tn == 2:
                 a1 = self.cin(t1)
                 a2 = self.cin(t2)
                 l[i] = (a1, a2)
-            elif (tn == 3):
+            elif tn == 3:
                 a1 = self.cin(t1)
                 a2 = self.cin(t2)
                 a3 = self.cin(t3)
@@ -44,16 +44,16 @@ class cinn:
         return self.clist2(self, n, t1, t2, t3, 3)
 
     def cout(self, i, ans=''):
-        if(ans == ''):
-            print("Case #" + str(i + 1) + ":", end=' ')
+        if ans == '':
+            print('Case #' + str(i + 1) + ':', end=' ')
         else:
-            print("Case #" + str(i + 1) + ":", ans)
+            print('Case #' + str(i + 1) + ':', ans)
 
     def printf(self, thing):
         print(thing, end='')
 
     def countlist(self, l, s=0, e=None):
-        if(e == None):
+        if e == None:
             e = len(l)
         dic = {}
         for el in range(s, e):
@@ -67,35 +67,33 @@ class cinn:
         print(x, flush=True)
 
     def dp1(self, k):
-        L = [-1] * (k)
+        L = [-1] * k
         return L
 
     def dp2(self, k, kk):
-        L = [-1] * (k)
+        L = [-1] * k
         for i in range(k):
             L[i] = [-1] * kk
         return L
 
     def isprime(self, n):
-        if(n == 1 or n == 0):
+        if n == 1 or n == 0:
             return False
-        for i in range(2, int(n**0.5 + 1)):
-            if(n % i == 0):
+        for i in range(2, int(n ** 0.5 + 1)):
+            if n % i == 0:
                 return False
         return True
 
     def factors(self, n):
         from functools import reduce
-        return set(reduce(list.__add__,
-                          ([i, n // i] for i in range(1, int(n**0.5) + 1) if n % i == 0)))
+        return set(reduce(list.__add__, ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0)))
 
     def nthprime(self, n):
-        # usable up to 10 thousand
         i = 0
         s = 2
         L = []
-        while(i < n):
-            while(not self.isprime(s)):
+        while i < n:
+            while not self.isprime(s):
                 s += 1
             L.append(s)
             s += 1
@@ -110,13 +108,12 @@ class cinn:
         return L
 
     def seive(self, k):
-        # 1000000 tops
         n = k + 1
         L = [True] * n
         L[1] = False
         L[0] = False
         for i in range(2, n):
-            if(L[i] == True):
+            if L[i] == True:
                 for j in range(2 * i, n, i):
                     L[j] = False
         return L
@@ -124,9 +121,9 @@ class cinn:
     def seiven(self, n, L):
         i = 0
         for j in range(len(L)):
-            if(L[j] == True):
+            if L[j] == True:
                 i += 1
-            if(i == n):
+            if i == n:
                 return j
 
     def matrixin2(self, m, t=int):
@@ -145,7 +142,7 @@ def rotcord(i, j, n):
 
 
 def rotbje(k):
-    if(k == "."):
+    if k == '.':
         return k
     ar = ['>', 'v', '<', '^']
     return ar[(ar.index(k) + 1) % 4]

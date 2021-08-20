@@ -1,4 +1,4 @@
-k, n = list(map(int, input().split()))
+(k, n) = list(map(int, input().split()))
 a = []
 b = []
 temp = input().split()

@@ -1,4 +1,4 @@
-(a, b), x, y = list(map(int, input().split())), [], 0
+((a, b), x, y) = (list(map(int, input().split())), [], 0)
 
 
 def bin(s):
@@ -15,9 +15,8 @@ for i in reversed(range(b + 1)):
     if a >= y + lowbit(i):
         x.append(i)
         y += lowbit(i)
-
 if y == a:
     print(len(x))
-    print(' '.join(str(i) for i in x))
+    print(' '.join((str(i) for i in x)))
 else:
     print(-1)

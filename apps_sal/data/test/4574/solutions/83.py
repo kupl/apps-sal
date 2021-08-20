@@ -1,6 +1,5 @@
 import sys
 from collections import Counter
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,10 +9,8 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
+    (N, *A) = list(map(int, read().split()))
     A.sort(reverse=True)
-
     i = 0
     w = h = 0
     while i < N - 1:
@@ -26,8 +23,7 @@ def main():
             i += 2
         else:
             i += 1
-
-    print((w * h))
+    print(w * h)
     return
 
 

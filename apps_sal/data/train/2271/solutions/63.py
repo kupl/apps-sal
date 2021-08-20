@@ -1,6 +1,6 @@
-n, m = map(int, input().split())
-p = [[0]] + [[int(i)]for i in input().split()]
-q = [[i]for i in range(n + 1)]
+(n, m) = map(int, input().split())
+p = [[0]] + [[int(i)] for i in input().split()]
+q = [[i] for i in range(n + 1)]
 par = [i for i in range(n + 1)]
 
 
@@ -13,9 +13,9 @@ def find(x):
 
 
 def unite(x, y):
-    x, y = find(x), find(y)
+    (x, y) = (find(x), find(y))
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     if x != y:
         par[y] = x
         p[x] += p[y]
@@ -23,7 +23,7 @@ def unite(x, y):
 
 
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     unite(a, b)
 for i in range(n):
     find(i)

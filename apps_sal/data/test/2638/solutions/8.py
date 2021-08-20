@@ -1,4 +1,5 @@
 class Solution:
+
     def minimumTotal(self, triangle):
         row = [triangle[0][0]]
         for i in range(1, len(triangle)):

@@ -16,6 +16,6 @@ for i in range(n - 1):
         flag = 0
         break
 if flag == 1:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

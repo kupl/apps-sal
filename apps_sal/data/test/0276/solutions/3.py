@@ -1,11 +1,11 @@
-'''input
+"""input
 4
 red
 purple
 yellow
 orange
 
-'''
+"""
 
 
 def list_input():
@@ -22,13 +22,12 @@ def map_string():
 
 n = int(input())
 d = {}
-d["purple"] = "Power"
-d["green"] = "Time"
-d["blue"] = "Space"
-d["orange"] = "Soul"
-d["red"] = "Reality"
-d["yellow"] = "Mind"
-
+d['purple'] = 'Power'
+d['green'] = 'Time'
+d['blue'] = 'Space'
+d['orange'] = 'Soul'
+d['red'] = 'Reality'
+d['yellow'] = 'Mind'
 a = []
 for i in range(n):
     a.append(input())

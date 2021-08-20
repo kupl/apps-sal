@@ -19,4 +19,4 @@ for i in range(k - 1, -1, -1):
         nval[i - 1] += nval[i] // 26
         nval[i] %= 26
     ans[i] = chr(ord('a') + nval[i])
-print("".join(x for x in ans))
+print(''.join((x for x in ans)))

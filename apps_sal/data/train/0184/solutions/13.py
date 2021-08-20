@@ -1,4 +1,5 @@
 class Solution:
+
     def maxRepOpt1(self, text: str) -> int:
         max_char = ''
         clist = [1] * len(text)

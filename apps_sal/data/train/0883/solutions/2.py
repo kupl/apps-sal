@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     l = [int(i) for i in input().split()]
@@ -16,5 +15,5 @@ for _ in range(int(input())):
     if len(set(l)) > 2 or max(l) - min(l) > 1:
         print(-1)
         continue
-    a, b = l.count(min(l)), l.count(max(l))
+    (a, b) = (l.count(min(l)), l.count(max(l)))
     print(b) if max(l) == a else print(-1)

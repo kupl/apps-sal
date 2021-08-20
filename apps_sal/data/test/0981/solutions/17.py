@@ -20,4 +20,4 @@ else:
                 now += 1
                 find = True
                 break
-    print("".join(list(map(str, ans))))
+    print(''.join(list(map(str, ans))))

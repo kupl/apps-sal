@@ -1,10 +1,8 @@
-#
 import collections
 import atexit
 import math
 import sys
 import bisect
-
 sys.setrecursionlimit(1000000)
 
 
@@ -13,28 +11,25 @@ def getIntList():
 
 
 try:
-    #raise ModuleNotFoundError
     import numpy
 
     def dprint(*args, **kwargs):
         print(*args, **kwargs, file=sys.stderr)
     dprint('debug mode')
 except ModuleNotFoundError:
+
     def dprint(*args, **kwargs):
         pass
-
-
 inId = 0
 outId = 0
 if inId > 0:
     dprint('use input', inId)
-    sys.stdin = open('input' + str(inId) + '.txt', 'r')  # 标准输出重定向至文件
+    sys.stdin = open('input' + str(inId) + '.txt', 'r')
 if outId > 0:
     dprint('use output', outId)
-    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')  # 标准输出重定向至文件
-    atexit.register(lambda: sys.stdout.close())  # idle 中不会执行 atexit
-
-N, = getIntList()
+    sys.stdout = open('stdout' + str(outId) + '.txt', 'w')
+    atexit.register(lambda: sys.stdout.close())
+(N,) = getIntList()
 
 
 def memo(func):
@@ -65,7 +60,6 @@ def getclam(K, left=3):
         return 1
     s = str(K)
     l = len(s)
-
     r = 0
     x = int(s[0])
     if l > 1:
@@ -89,8 +83,7 @@ def getclam(K, left=3):
 for i in range(1000, 1100):
     continue
     dprint(i, getclam(i))
-
 for _ in range(N):
-    L, R = getIntList()
+    (L, R) = getIntList()
     r = getclam(R) - getclam(L - 1)
     print(r)

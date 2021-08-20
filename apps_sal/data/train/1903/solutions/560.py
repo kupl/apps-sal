@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, length):
         self.parents = [-1] * length
         self.ranks = [1] * length
@@ -10,10 +11,9 @@ class UnionFind:
         return self.parents[src]
 
     def union(self, src, dest):
-        rootSrc, rootDest = self.find(src), self.find(dest)
+        (rootSrc, rootDest) = (self.find(src), self.find(dest))
         if rootSrc == rootDest:
             return False
-
         if self.ranks[rootSrc] > self.ranks[rootDest]:
             self.parents[rootDest] = rootSrc
             self.ranks[rootSrc] += self.ranks[rootDest]
@@ -25,19 +25,18 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
+
         def calHamming(pt1, pt2):
             return abs(pt1[0] - pt2[0]) + abs(pt1[1] - pt2[1])
-
         ptsDistance = []
-        for i, j in itertools.combinations(range(len(points)), 2):
+        for (i, j) in itertools.combinations(range(len(points)), 2):
             ptsDistance.append((calHamming(points[i], points[j]), i, j))
-
         ptsDistance.sort()
-
         result = 0
         uf = UnionFind(len(points))
-        for distance, src, dest in ptsDistance:
+        for (distance, src, dest) in ptsDistance:
             if uf.union(src, dest):
                 result += distance
         return result

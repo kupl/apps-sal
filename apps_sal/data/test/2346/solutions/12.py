@@ -3,7 +3,7 @@ mass = [0 for i in range(n + 10)]
 arr = [0 for i in range(n + 10)]
 nnn = [0 for i in range(n + 10)]
 for i in range(n):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     if a != -1:
         mass[a] += 1
         arr[a] += b

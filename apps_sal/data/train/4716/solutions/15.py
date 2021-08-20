@@ -1,5 +1,5 @@
 def distribution_of(golds):
-    g = golds[::]
+    g = golds[:]
     R = [0, 0]
     toggle = 0
     currentVar = 'A'
@@ -9,5 +9,4 @@ def distribution_of(golds):
         else:
             R[toggle] += g.pop(0)
         toggle = 1 - toggle
-
     return R

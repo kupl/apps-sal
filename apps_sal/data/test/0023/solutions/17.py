@@ -17,7 +17,6 @@ else:
         else:
             break
         i += 1
-
     flag = 0
     while True and len(ans) != len(a):
         num = int(b[i])
@@ -27,7 +26,7 @@ else:
                 ans += str(num)
                 f[num] -= 1
                 for j in range(9, -1, -1):
-                    ans += (str(j) * f[j])
+                    ans += str(j) * f[j]
                 break
             num -= 1
         if len(ans) == len(a):

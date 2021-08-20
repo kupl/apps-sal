@@ -1,7 +1,7 @@
 def remove_duplicate_words(s):
     cadena = s.split()
     cadena2 = []
-    cadena3 = " "
+    cadena3 = ' '
     for i in cadena:
         if i in cadena2:
             pass

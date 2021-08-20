@@ -3,7 +3,6 @@ def isDigit(string):
     for char in string:
         if char == '.':
             has_dot = True
-
     if has_dot:
         try:
             digit = float(string)
@@ -14,5 +13,4 @@ def isDigit(string):
             digit = int(string)
         except:
             return False
-
     return True

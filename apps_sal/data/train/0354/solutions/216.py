@@ -1,15 +1,14 @@
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
-        mode = (10**9 + 7)
+        mode = 10 ** 9 + 7
         memo = {}
 
         def dfs(prev, s, n):
             if n == 0:
                 return 1
-
-            if(prev, s, n) in memo:
-                return memo[(prev, s, n)]
-
+            if (prev, s, n) in memo:
+                return memo[prev, s, n]
             else:
                 res = 0
                 for i in range(6):
@@ -18,11 +17,8 @@ class Solution:
                             continue
                         else:
                             res += dfs(i, s + 1, n - 1)
-
                     else:
                         res += dfs(i, 1, n - 1)
-                memo[(prev, s, n)] = res
-
+                memo[prev, s, n] = res
             return res
-
         return dfs(-1, 0, n) % mode

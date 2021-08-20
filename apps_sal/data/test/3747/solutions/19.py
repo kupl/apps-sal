@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 text = input()
-bolba = "Bulbasaur"
+bolba = 'Bulbasaur'
 chars = {}
 for i in bolba:
     chars[i] = 0

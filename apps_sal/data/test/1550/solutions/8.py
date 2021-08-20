@@ -1,9 +1,5 @@
 __author__ = 'Rakshak.R.Hegde'
-"""
-Created on Dec 17 2014 PM 10:13
-
-@author: Rakshak.R.Hegde
-"""
+'\nCreated on Dec 17 2014 PM 10:13\n\n@author: Rakshak.R.Hegde\n'
 n = int(input())
 digits = list(map(int, input()))
 enum = [[0] * n for i in range(10)]

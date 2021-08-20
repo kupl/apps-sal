@@ -2,8 +2,9 @@ from collections import deque
 
 
 class Solution:
+
     def longestSubarray(self, nums, limit):
-        maxQ, minQ = deque(), deque()
+        (maxQ, minQ) = (deque(), deque())
         i = 0
         for val in nums:
             while maxQ and val > maxQ[-1]:

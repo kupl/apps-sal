@@ -1,7 +1,7 @@
 def read():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     powers = list(map(int, input().split()))
-    return n, k, powers
+    return (n, k, powers)
 
 
 def get_min_power(n, k, powers):
@@ -17,7 +17,7 @@ def get_min_power(n, k, powers):
 
 
 def main():
-    n, k, powers = read()
+    (n, k, powers) = read()
     print(get_min_power(n, k, powers))
 
 

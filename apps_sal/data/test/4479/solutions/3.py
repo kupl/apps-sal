@@ -1,4 +1,5 @@
 class Solution(object):
+
     def largestSumAfterKNegations(self, A, K):
         lst = sorted(A)
         count = K

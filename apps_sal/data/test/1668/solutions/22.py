@@ -1,10 +1,8 @@
-
 for _ in range(int(input())):
     n = int(input())
     arr = []
     for i in range(n):
         arr.append(input())
-
     p = '0123456789'
     ans = 0
     for i in range(n - 1):

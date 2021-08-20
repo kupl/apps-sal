@@ -1,5 +1,4 @@
 import sys
-
 sys.setrecursionlimit(10 ** 9)
 
 
@@ -14,7 +13,7 @@ def fun(plus, cnt):
     check[plus][cnt] = val
     if cnt % 2:
         check[plus][cnt] += 1
-    check[plus][cnt] %= (10 ** 9 + 7)
+    check[plus][cnt] %= 10 ** 9 + 7
     return check[plus][cnt]
 
 

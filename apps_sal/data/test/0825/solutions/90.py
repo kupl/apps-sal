@@ -1,5 +1,5 @@
 def prime_factorize(n):
-    '''
+    """
     素因数分解のリストを返す。n == 1のとき[]になるので注意。
     :param n:int
     素因数分解する自然数
@@ -9,7 +9,7 @@ def prime_factorize(n):
     例
     n : 10
     primes : [[2, 1], [5, 1]]
-    '''
+    """
     primes = []
     for i in range(2, int(n ** (1 / 2)) + 1):
         if n % i != 0:
@@ -27,7 +27,7 @@ def prime_factorize(n):
 N = int(input())
 prime_list = prime_factorize(N)
 ans = 0
-for _, e in prime_list:
+for (_, e) in prime_list:
     now = 1
     work = e
     while work >= now:

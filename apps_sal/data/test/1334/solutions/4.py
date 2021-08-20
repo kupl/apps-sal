@@ -10,12 +10,11 @@ def solve(k, s):
         i -= 1
     ind = letters.index(s[i])
     res[i] = letters[ind + 1]
-
     for j in range(i - 1, -1, -1):
         res[j] = s[j]
-    return "".join(res)
+    return ''.join(res)
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = input().strip()
 print(solve(k, s))

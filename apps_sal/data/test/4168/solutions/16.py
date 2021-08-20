@@ -1,5 +1,4 @@
 n = int(input())
-
 s = ''
 while True:
     if n % 2 == 0:

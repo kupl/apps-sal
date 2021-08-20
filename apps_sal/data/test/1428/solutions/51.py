@@ -1,4 +1,4 @@
-N, C = list(map(int, input().split()))
+(N, C) = list(map(int, input().split()))
 D = [list(map(int, input().split())) for _ in range(C)]
 G = [list(map(int, input().split())) for _ in range(N)]
 Z = [0] * C
@@ -12,8 +12,7 @@ for x in range(N):
             O[G[x][y] - 1] += 1
         else:
             T[G[x][y] - 1] += 1
-
-ans = 10**9
+ans = 10 ** 9
 for c1 in range(C):
     for c2 in range(C):
         for c3 in range(C):
@@ -27,5 +26,4 @@ for c1 in range(C):
             for k in range(C):
                 temp += T[k] * D[k][c3]
             ans = min(ans, temp)
-
 print(ans)

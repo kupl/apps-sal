@@ -1,4 +1,4 @@
-n, k, m = map(int, input().split())
+(n, k, m) = map(int, input().split())
 arr = [int(x) for x in input().split()]
 k = min(k, m)
 arr.sort()

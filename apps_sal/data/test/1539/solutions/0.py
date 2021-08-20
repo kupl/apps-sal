@@ -6,12 +6,12 @@ def main():
     hh = list(map(int, input().split()))
     ee = list(map(int, input().split()))
     dd = defaultdict(set)
-    for i, h in enumerate(hh):
+    for (i, h) in enumerate(hh):
         dd[h].add(i)
     idx = sorted(list(range(n)), key=ee.__getitem__, reverse=True)
     res = 0
-    for h, s in list(dd.items()):
-        x = sum(ee[i] for i in s)
+    for (h, s) in list(dd.items()):
+        x = sum((ee[i] for i in s))
         le = len(s) - 1
         if le:
             for i in idx:

@@ -8,8 +8,7 @@ for j in range(n):
         c[j] = c[j] // 3
 f = True
 for j in range(n - 1):
-    if(c[j] != c[j + 1]):
-
+    if c[j] != c[j + 1]:
         f = False
         break
 if f:

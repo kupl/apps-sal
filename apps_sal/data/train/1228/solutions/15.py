@@ -4,12 +4,10 @@ try:
         rects = int(input())
         xCords = {}
         yCords = {}
-
-        for i in range((rects * 4) - 1):
-            x, y = list(map(int, input().split()))
+        for i in range(rects * 4 - 1):
+            (x, y) = list(map(int, input().split()))
             xCords[x] = xCords.get(x, 0) + 1
             yCords[y] = yCords.get(y, 0) + 1
-
         x = None
         y = None
         for i in xCords:

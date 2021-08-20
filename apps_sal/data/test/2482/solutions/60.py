@@ -28,15 +28,15 @@ def bfs():
     return group
 
 
-n, k, l = map(int, input().split())
+(n, k, l) = map(int, input().split())
 G = [[] for _ in range(n + 1)]
 H = [[] for _ in range(n + 1)]
 for _ in range(k):
-    p, q = map(int, input().split())
+    (p, q) = map(int, input().split())
     G[p].append(q)
     G[q].append(p)
 for _ in range(l):
-    r, s = map(int, input().split())
+    (r, s) = map(int, input().split())
     H[r].append(s)
     H[s].append(r)
 group = bfs()
@@ -49,4 +49,4 @@ for i in range(1, n + 1):
 ans = [0] * n
 for i in range(1, n + 1):
     ans[i - 1] = d[group[i]]
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

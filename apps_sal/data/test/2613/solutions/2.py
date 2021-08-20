@@ -1,5 +1,5 @@
 for i in ' ' * int(input()):
-    n, k, z = map(int, input().split())
+    (n, k, z) = map(int, input().split())
     L = list(map(int, input().split()))
     mx = sum(L[:k + 1])
     sumL = []

@@ -8,9 +8,8 @@ def check(x):
     return cnt <= K
 
 
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 A = list(map(int, input().split()))
-
 left = 0
 right = max(A)
 while left < right - 1:

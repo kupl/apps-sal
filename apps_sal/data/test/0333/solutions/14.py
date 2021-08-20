@@ -1,8 +1,8 @@
 def myf(s, m):
-    if (s == m):
-        return (-1)
+    if s == m:
+        return -1
     else:
-        return (max(len(s), len(m)))
+        return max(len(s), len(m))
 
 
 s = input()

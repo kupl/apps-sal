@@ -3,15 +3,13 @@ def getn():
 
 
 def getns():
-    return [int(x)for x in input().split()]
+    return [int(x) for x in input().split()]
 
 
-# n=getn()
-# ns=getns()
-n, h, m = getns()
+(n, h, m) = getns()
 hs = [h] * (n + 1)
 for i in range(m):
-    l, r, x = getns()
+    (l, r, x) = getns()
     for i in range(l, r + 1):
         hs[i] = min(hs[i], x)
 ans = 0

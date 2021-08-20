@@ -1,4 +1,5 @@
 class Solution:
+
     def clumsy(self, N: int) -> int:
         res = []
         danhanvachiachua = False
@@ -6,7 +7,7 @@ class Solution:
         while i > 0:
             if danhanvachiachua == False:
                 if i >= 3:
-                    res.append((i * (i - 1)) // (i - 2))
+                    res.append(i * (i - 1) // (i - 2))
                 elif i == 2:
                     res.append(2)
                 elif i == 1:
@@ -17,7 +18,6 @@ class Solution:
                 res.append(i)
                 i = i - 1
                 danhanvachiachua = False
-
         print(res)
         dau = 0
         clumsy = res[0]

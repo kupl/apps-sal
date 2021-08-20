@@ -1,5 +1,5 @@
 def sort_key(s):
-    return (sum(int(n) for n in list(s)), s)
+    return (sum((int(n) for n in list(s))), s)
 
 
 def order_weight(strng):

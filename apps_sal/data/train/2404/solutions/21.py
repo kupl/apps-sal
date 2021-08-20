@@ -1,4 +1,5 @@
 class Solution:
+
     def findKthPositive(self, arr: List[int], k: int) -> int:
         a2 = arr.copy()
         arr.extend([i for i in range(arr[-1] + 1, arr[-1] + 1 + k)])
@@ -9,4 +10,3 @@ class Solution:
             if k == 0:
                 return i
         return a2[-1] + k
-        # return 0

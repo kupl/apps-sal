@@ -1,11 +1,9 @@
 class Solution:
-    def isNStraightHand(self, hand: List[int], W: int) -> bool:
 
+    def isNStraightHand(self, hand: List[int], W: int) -> bool:
         if len(hand) % W != 0:
             return False
-
         hand.sort()
-
         last = -1
         j = 0
         changed = False
@@ -19,12 +17,10 @@ class Solution:
             elif not changed:
                 for i in range(1, len(hand)):
                     if hand[i] <= last + 1:
-                        hand[i], hand[0] = hand[0], hand[i]
+                        (hand[i], hand[0]) = (hand[0], hand[i])
                     else:
                         break
-
                 changed = True
             else:
                 return False
-
         return True

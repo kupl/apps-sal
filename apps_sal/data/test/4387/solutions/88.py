@@ -1,8 +1,8 @@
 R = int(input())
 if R < 1200:
-    ans = "ABC"
+    ans = 'ABC'
 elif R < 2800:
-    ans = "ARC"
+    ans = 'ARC'
 else:
-    ans = "AGC"
+    ans = 'AGC'
 print(ans)

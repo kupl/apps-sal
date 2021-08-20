@@ -8,4 +8,4 @@ def solve(arr):
     return answer
 
 
-print((solve([3, 4, 4, 3, 6, 3])))
+print(solve([3, 4, 4, 3, 6, 3]))

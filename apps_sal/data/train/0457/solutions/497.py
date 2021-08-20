@@ -1,6 +1,6 @@
 class Solution:
+
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # BFS
         from collections import deque
         q = deque()
         visited = set()
@@ -17,6 +17,5 @@ class Solution:
                     if new not in visited and new >= 0:
                         q.append(new)
                         visited.add(new)
-
             steps += 1
         return -1

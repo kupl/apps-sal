@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -10,12 +9,9 @@ MOD = 1000000007
 
 def main():
     S = readline().strip()
-
     red = S.count('0')
     blue = len(S) - red
-
-    print((min(red, blue) * 2))
-
+    print(min(red, blue) * 2)
     return
 
 

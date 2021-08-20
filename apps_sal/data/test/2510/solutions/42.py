@@ -1,7 +1,8 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.root = [-1] * (n + 1)
@@ -37,7 +38,7 @@ class UnionFind():
 
 link = UnionFind(n)
 for _ in range(m):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     link.unite(a, b)

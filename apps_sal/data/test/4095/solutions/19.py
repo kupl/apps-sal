@@ -1,7 +1,7 @@
 ma = {0: 1}
-n, m = [int(x) for x in input().split()]
+(n, m) = [int(x) for x in input().split()]
 arr = [int(x) for x in input().split()]
-s, fla, ans = 0, False, 0
+(s, fla, ans) = (0, False, 0)
 for v in arr:
     if v == m:
         fla = True

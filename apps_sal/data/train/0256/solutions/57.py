@@ -2,8 +2,9 @@ import math
 
 
 class Solution:
+
     def minEatingSpeed(self, piles: List[int], H: int) -> int:
-        start, end = 1, max(piles)
+        (start, end) = (1, max(piles))
         while start + 1 < end:
             mid = (start + end) // 2
             if self.is_feasible(piles, H, mid) == False:

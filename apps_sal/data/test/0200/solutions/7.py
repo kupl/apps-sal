@@ -2,8 +2,6 @@ x = input().split()
 y = input().split()
 dif = int(x[1]) - int(x[0])
 cnt = 0
-
-
 if dif - int(y[0]) * 8 <= 0:
     print(0)
 elif int(y[0]) - int(y[1]) > 0:

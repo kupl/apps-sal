@@ -50,4 +50,4 @@ class StreamChecker:
         self.Trie = Trie(words)
 
     def query(self, letter):
-        return(self.Trie.next(letter))
+        return self.Trie.next(letter)

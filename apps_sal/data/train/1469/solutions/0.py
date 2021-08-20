@@ -2,7 +2,7 @@ try:
     tc = int(input())
     for _ in range(tc):
         n = int(input())
-        st = ""
+        st = ''
         b = 1
         for i in range(1, n + 1):
             b += 1

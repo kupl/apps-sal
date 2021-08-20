@@ -2,11 +2,12 @@ from collections import deque
 
 
 class Solution:
+
     def avoidFlood(self, rains: List[int]) -> List[int]:
         dry_sequence = [1 for _ in range(len(rains))]
         full_lakes = {}
         dry_days = deque()
-        for i, lake in enumerate(rains):
+        for (i, lake) in enumerate(rains):
             if lake:
                 dry_sequence[i] = -1
                 if lake in full_lakes:

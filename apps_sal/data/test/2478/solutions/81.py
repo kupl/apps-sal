@@ -1,6 +1,5 @@
 n = int(input())
 s = input()
-
 cntr = 0
 for i in range(n - 1, -1, -1):
     if s[i] == ')':
@@ -9,7 +8,6 @@ for i in range(n - 1, -1, -1):
         cntr -= 1
 s = '(' * cntr + s
 n = len(s)
-
 cntl = 0
 for i in range(n):
     if s[i] == '(':
@@ -17,5 +15,4 @@ for i in range(n):
     elif cntl > 0:
         cntl -= 1
 s += ')' * cntl
-
 print(s)

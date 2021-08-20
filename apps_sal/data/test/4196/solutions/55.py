@@ -2,6 +2,7 @@ from math import gcd
 
 
 class SegmentTree:
+
     def __init__(self, size, op, e):
         self._op = op
         self._e = e
@@ -32,6 +33,7 @@ class SegmentTree:
             data[i] = op(data[i * 2 + 1], data[i * 2 + 2])
 
     def query(self, start, stop):
+
         def iter_segments(data, l, r):
             while l < r:
                 if l & 1 == 0:
@@ -41,8 +43,7 @@ class SegmentTree:
                 l = l // 2
                 r = (r - 1) // 2
         op = self._op
-        it = iter_segments(self._data, start + self._offset,
-                           stop + self._offset)
+        it = iter_segments(self._data, start + self._offset, stop + self._offset)
         result = self._e
         for v in it:
             result = op(result, v)
@@ -51,10 +52,8 @@ class SegmentTree:
 
 N = int(input())
 A = list(map(int, input().split()))
-
 st = SegmentTree(N, gcd, 0)
 st.build(A)
-
 result = st.query(1, N)
 for i in range(1, N - 1):
     result = max(result, gcd(st.query(0, i), st.query(i + 1, N)))

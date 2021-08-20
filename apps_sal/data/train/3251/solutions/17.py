@@ -10,4 +10,4 @@ def primeFactors(n):
         a.append(n)
     s = [i for i in set(a)]
     s.sort()
-    return ''.join('({})'.format(i) if a.count(i) == 1 else '({}**{})'.format(i, a.count(i)) for i in s)
+    return ''.join(('({})'.format(i) if a.count(i) == 1 else '({}**{})'.format(i, a.count(i)) for i in s))

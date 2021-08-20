@@ -42,7 +42,7 @@ MAX = float('inf')
 MIN = -float('inf')
 p = input
 for _ in r(o()):
-    n, k = io()
+    (n, k) = io()
     l = op()
     ans = 0
     for i in r(l):

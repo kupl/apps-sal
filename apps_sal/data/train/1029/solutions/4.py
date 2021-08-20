@@ -1,7 +1,6 @@
-# cook your dish here
 t = int(input())
 for i in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     done_task = list(map(int, input().split()))
     done_task.sort()
     left_tasks = []

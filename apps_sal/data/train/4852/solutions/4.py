@@ -1,11 +1,8 @@
 def interpreter(tape):
-    ptr, stack, output = 0, [0], ''
+    (ptr, stack, output) = (0, [0], '')
     n = len(tape)
-
     while ptr < n:
-
         cmd = tape[ptr]
-
         if cmd == '^':
             stack.pop()
         elif cmd == '!':
@@ -22,7 +19,5 @@ def interpreter(tape):
         elif cmd == ']' and stack[-1] != 0:
             while tape[ptr] != '[':
                 ptr -= 1
-
         ptr += 1
-
     return output

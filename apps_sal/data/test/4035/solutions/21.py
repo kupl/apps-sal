@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 b = 10 * B
 if b * 2 // 25 == A:
     print(b)

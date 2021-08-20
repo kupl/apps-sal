@@ -1,5 +1,5 @@
 def __starting_point():
-    n, s = [int(__) for __ in input().strip().split()]
+    (n, s) = [int(__) for __ in input().strip().split()]
     arr = [int(__) for __ in input().strip().split()]
     arr.sort()
     mid = n // 2

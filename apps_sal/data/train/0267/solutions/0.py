@@ -1,4 +1,5 @@
 class Solution:
+
     def evalRPN(self, tokens):
         """
         :type tokens: List[str]
@@ -6,19 +7,19 @@ class Solution:
         """
         s = []
         for token in tokens:
-            if token == "+":
+            if token == '+':
                 a = int(s.pop())
                 b = int(s.pop())
                 s.append(a + b)
-            elif token == "/":
+            elif token == '/':
                 a = int(s.pop())
                 b = int(s.pop())
                 s.append(b / a)
-            elif token == "*":
+            elif token == '*':
                 a = int(s.pop())
                 b = int(s.pop())
                 s.append(a * b)
-            elif token == "-":
+            elif token == '-':
                 a = int(s.pop())
                 b = int(s.pop())
                 s.append(b - a)

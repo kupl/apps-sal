@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRepunitDivByK(self, K: int) -> int:
         if K == 1:
             return 1
@@ -17,6 +18,5 @@ class Solution:
                 if s0 % 10 == 1:
                     result = min(result, 1 + dfs(s0 // 10))
             return result
-
         result = dfs(0)
         return result if result < 10 ** 9 else -1

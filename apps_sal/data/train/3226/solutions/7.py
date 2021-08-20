@@ -12,7 +12,7 @@ def land_perimeter(arr):
             for k in range(4):
                 nx = i + dr[k]
                 ny = j + dc[k]
-                inside = (nx >= 0 and ny >= 0 and nx < n and ny < m)
+                inside = nx >= 0 and ny >= 0 and (nx < n) and (ny < m)
                 ans += (inside and arr[nx][ny] == 'O') + (not inside)
-    ampogiko = "Total land perimeter: " + str(ans)
+    ampogiko = 'Total land perimeter: ' + str(ans)
     return ampogiko

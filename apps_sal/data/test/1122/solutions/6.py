@@ -1,5 +1,4 @@
-N, M = map(int, input().split())
-
+(N, M) = map(int, input().split())
 if N % 2 == 1:
     for a in range(1, M + 1):
         print(a, N - a + 1)

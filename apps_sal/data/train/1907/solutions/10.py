@@ -1,10 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 def first(gen):
     for elem in gen:
         return elem
@@ -21,9 +14,6 @@ def walk(original, cloned, target):
 
 
 class Solution:
-    def getTargetCopy(
-            self,
-            original: TreeNode,
-            cloned: TreeNode,
-            target: TreeNode) -> TreeNode:
+
+    def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
         return first(walk(original, cloned, target))

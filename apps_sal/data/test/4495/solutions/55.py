@@ -1,4 +1,4 @@
-a, b, x = list(map(int, input().split()))
+(a, b, x) = list(map(int, input().split()))
 ans = 0
 if a % x == 0:
     ans += 1

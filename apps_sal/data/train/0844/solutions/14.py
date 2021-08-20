@@ -5,7 +5,6 @@ for line in sys.stdin:
     if first:
         first = False
         continue
-
     tok = line.split()
     if len(tok) == 1:
         opened = set()
@@ -15,5 +14,4 @@ for line in sys.stdin:
             opened.remove(x)
         else:
             opened.add(x)
-
     print(len(opened))

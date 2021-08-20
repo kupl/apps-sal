@@ -1,8 +1,5 @@
 from collections import Counter, defaultdict
-
 N = int(input())
-
-# 素数のリスト
 
 
 def createPrimeList(N, isTable=True):
@@ -17,7 +14,6 @@ def createPrimeList(N, isTable=True):
     return isPrime if isTable else [i for i in range(2, N) if isPrime[i]]
 
 
-# 素因数分解(複数回)
 primeList = createPrimeList(100, False)
 
 
@@ -33,14 +29,12 @@ def primeFactorization(N):
 primes = Counter()
 for i in range(1, N + 1):
     primes += primeFactorization(i)
-
 cnt = defaultdict(int)
 for c in list(primes.values()):
     c += 1
     for d in (3, 5, 15, 25, 75):
         if c >= d:
             cnt[d] += 1
-
 ans = 0
 ans += cnt[5] * (cnt[5] - 1) * (cnt[3] - 2) // 2
 ans += cnt[25] * (cnt[3] - 1)

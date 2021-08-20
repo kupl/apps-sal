@@ -1,4 +1,5 @@
 class Solution:
+
     def numberOfArithmeticSlices(self, A):
         """
         :type A: List[int]
@@ -10,7 +11,6 @@ class Solution:
         ans = 0
         cnt = 0
         delta = A[1] - A[0]
-
         for x in range(2, size):
             if A[x] - A[x - 1] == delta:
                 cnt += 1

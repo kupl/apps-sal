@@ -1,6 +1,5 @@
 n = int(input())
 s_l = [str(input()) for _ in range(n)]
-
 m = int(input())
 t_l = [str(input()) for _ in range(m)]
 d = {}
@@ -15,6 +14,6 @@ for t in t_l:
     else:
         d[t] -= 1
 ans = 0
-for k, v in d.items():
+for (k, v) in d.items():
     ans = max(v, ans)
 print(ans)

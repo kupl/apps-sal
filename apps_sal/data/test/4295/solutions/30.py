@@ -1,8 +1,7 @@
-x, y = map(int, input().split())
-
+(x, y) = map(int, input().split())
 z = x % y
 p = y - z
-if(z < p):
+if z < p:
     print(z)
 else:
     print(p)

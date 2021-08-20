@@ -1,4 +1,3 @@
-
 import itertools
 
 
@@ -17,6 +16,6 @@ def choose_best_sum(t, k, ls):
     if c > t:
         return None
     for i in a:
-        if sum(i) <= t and ((t - sum(i)) < (t - x)):
+        if sum(i) <= t and t - sum(i) < t - x:
             x = sum(i)
     return x

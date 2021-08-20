@@ -1,5 +1,5 @@
 n = int(input())
-while(n != 0):
+while n != 0:
     k = int(input())
     l = list(map(int, input().split(' ')))
     k = l[0]

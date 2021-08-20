@@ -1,12 +1,9 @@
 import numpy as np
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-
 a.insert(0, 0)
 Acum = np.array(a).cumsum()
-
-l, r = 0, 1
+(l, r) = (0, 1)
 ans = 0
 while True:
     if Acum[r] - Acum[l] < K:
@@ -19,5 +16,4 @@ while True:
         l += 1
     if l == N:
         break
-
 print(ans)

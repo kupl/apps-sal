@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums: List[int]) -> int:
         ans = 0
         seen_nonzero = True
@@ -10,10 +11,8 @@ class Solution:
                     ans += 1
                 if nums[i] > 0:
                     all_zeros = False
-
             if all_zeros:
                 break
-
             for i in range(len(nums)):
                 nums[i] = nums[i] // 2
             ans += 1

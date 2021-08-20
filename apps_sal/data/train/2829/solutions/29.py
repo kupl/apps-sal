@@ -5,5 +5,4 @@ def array_madness(a, b):
     SumB = 0
     for number in b:
         SumB += number ** 3
-
     return SumA > SumB

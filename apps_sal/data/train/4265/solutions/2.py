@@ -1,7 +1,7 @@
 def tops(msg):
     if not msg:
         return ''
-    n, length = 2, len(msg)
+    (n, length) = (2, len(msg))
     counter = 0
     s = ''
     while counter + n <= length:

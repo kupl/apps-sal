@@ -2,7 +2,6 @@ def increasecheck(List, second_index):
     count = 0
     for i in List[second_index + 1:]:
         if i > List[second_index]:
-
             count += 1
     return count
 
@@ -11,7 +10,6 @@ def decreasecheck(List, second_index):
     count = 0
     for i in List[second_index + 1:]:
         if i < List[second_index]:
-
             count += 1
     return count
 
@@ -26,9 +24,7 @@ class Solution:
                 if i > j:
                     continue
                 if rating[i] > rating[j]:
-
                     output += decreasecheck(rating, j)
-
                 if rating[i] < rating[j]:
                     output += increasecheck(rating, j)
         return output

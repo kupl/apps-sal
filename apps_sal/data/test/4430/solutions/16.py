@@ -1,7 +1,5 @@
-n, m, k = list(map(int, input().split()))  # object,箱,size,
-A = list(map(int, input().split()))  # size
-
-
+(n, m, k) = list(map(int, input().split()))
+A = list(map(int, input().split()))
 A.reverse()
 inb = 0
 box = 0
@@ -13,5 +11,4 @@ while box < m and i < n:
     else:
         box += 1
         inb = 0
-
 print(i)

@@ -1,4 +1,5 @@
 class Solution:
+
     def solveNQueens(self, n):
         """
         :type n: int
@@ -11,11 +12,9 @@ class Solution:
             if p == n:
                 result.append(queens)
                 return None
-
             for q in range(n):
-                if q not in queens and p - q not in xy_dif and p + q not in xy_sum:
+                if q not in queens and p - q not in xy_dif and (p + q not in xy_sum):
                     dfs(queens + [q], xy_dif + [p - q], xy_sum + [p + q])
-
         result = []
         dfs([], [], [])
-        return [["." * i + "Q" + "." * (n - i - 1) for i in sol] for sol in result]
+        return [['.' * i + 'Q' + '.' * (n - i - 1) for i in sol] for sol in result]

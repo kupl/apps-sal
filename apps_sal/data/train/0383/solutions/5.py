@@ -1,4 +1,5 @@
 class Solution:
+
     def minMalwareSpread(self, graph: List[List[int]], initial: List[int]) -> int:
         index = 0
         count = len(graph)
@@ -15,7 +16,7 @@ class Solution:
                 if curr in visited:
                     continue
                 visited.add(curr)
-                for n, i in enumerate(graph[curr]):
+                for (n, i) in enumerate(graph[curr]):
                     if n == removed:
                         continue
                     if i:

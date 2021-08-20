@@ -1,34 +1,16 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class FindElements:
+
     def recoverTree(self, node: TreeNode, val: int) -> None:
         if node:
             node.val = val
             self.num_set.add(val)
             self.recoverTree(node.left, 2 * val + 1)
             self.recoverTree(node.right, 2 * val + 2)
-
-        '''
-        if not node.left and not node.right:
-            return None
-        if node.left:
-            node.left.val = 2 * node.val + 1
-            self.num_set.add(node.left.val)
-            self.recoverTree(node.left)
-        if node.right:
-            node.right.val = 2 * node.val + 2
-            self.num_set.add(node.right.val)
-            self.recoverTree(node.right)
-        '''
+        '\n        if not node.left and not node.right:\n            return None\n        if node.left:\n            node.left.val = 2 * node.val + 1\n            self.num_set.add(node.left.val)\n            self.recoverTree(node.left)\n        if node.right:\n            node.right.val = 2 * node.val + 2\n            self.num_set.add(node.right.val)\n            self.recoverTree(node.right)\n        '
 
     def __init__(self, root: TreeNode):
         self.num_set = set()
         self.num_set.add(0)
-
         self.recoverTree(root, 0)
         self.root = root
 
@@ -36,8 +18,3 @@ class FindElements:
         if target < self.root.val:
             return False
         return target in self.num_set
-
-
-# Your FindElements object will be instantiated and called as such:
-# obj = FindElements(root)
-# param_1 = obj.find(target)

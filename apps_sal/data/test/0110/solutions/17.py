@@ -13,7 +13,7 @@ def main():
                 posmin = i
         a[posmin] = -a[posmin] - 1
     for ai in a:
-        print(ai, end=" ")
+        print(ai, end=' ')
 
 
 def __starting_point():

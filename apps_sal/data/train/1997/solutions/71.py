@@ -2,6 +2,7 @@ from copy import deepcopy
 
 
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         intind = []
         for i in range(0, len(intervals)):

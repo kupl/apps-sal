@@ -1,7 +1,7 @@
 def tongues(code):
     vowels = ['a', 'i', 'y', 'e', 'o', 'u']
     consonants = ['b', 'k', 'x', 'z', 'n', 'h', 'd', 'c', 'w', 'g', 'p', 'v', 'j', 'q', 't', 's', 'r', 'l', 'm', 'f']
-    result = ""
+    result = ''
     for char in code:
         uppercase = True if char.isupper() else False
         if char.lower() in vowels:

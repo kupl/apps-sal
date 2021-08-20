@@ -1,4 +1,5 @@
 class Solution:
+
     def tilingRectangle(self, n: int, m: int) -> int:
         if n > m:
             return self.tilingRectangle(m, n)
@@ -13,7 +14,7 @@ class Solution:
                 self.result = cur
                 return
             end = start = heights.index(curMinHeight)
-            while end < m and heights[start] == heights[end] and end - start + 1 + curMinHeight <= n:
+            while end < m and heights[start] == heights[end] and (end - start + 1 + curMinHeight <= n):
                 end += 1
             for i in range(end - 1, start - 1, -1):
                 size = i - start + 1

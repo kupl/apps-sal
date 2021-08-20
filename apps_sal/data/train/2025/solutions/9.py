@@ -1,6 +1,6 @@
 def main():
     n = int(input()) + 1
-    a, res = [True] * n, []
+    (a, res) = ([True] * n, [])
     for p in range(2, n):
         if a[p]:
             pp = 1

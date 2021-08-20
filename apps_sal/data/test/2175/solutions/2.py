@@ -10,7 +10,7 @@ m = int(input())
 for i in range(m):
     a = input()
     if a[0] == '1':
-        a, p, x = list(map(int, a.split()))
+        (a, p, x) = list(map(int, a.split()))
         p -= 1
         tt = set()
         while p < n and x > 0:
@@ -26,6 +26,6 @@ for i in range(m):
         for i in tt:
             index[i] = p
     else:
-        a, b = list(map(int, a.split()))
+        (a, b) = list(map(int, a.split()))
         ans.append(vessels[b - 1][0])
 print('\n'.join(map(str, ans)))

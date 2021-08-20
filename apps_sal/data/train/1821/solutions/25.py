@@ -1,12 +1,11 @@
 def swap(arr, i, j):
-    arr[i], arr[j] = arr[j], arr[i]
+    (arr[i], arr[j]) = (arr[j], arr[i])
 
 
 def heapify(nums, n, i):
     l = 2 * i
     r = 2 * i + 1
     largest = i
-
     if l < n and nums[l] > nums[largest]:
         largest = l
     if r < n and nums[r] > nums[largest]:
@@ -30,6 +29,7 @@ def heap_sort(nums):
 
 
 class Solution:
+
     def sortArray(self, nums: List[int]) -> List[int]:
         build_heap(nums)
         heap_sort(nums)

@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         arr = [i - 1 for i in arr]
         n = len(arr)
@@ -7,7 +8,7 @@ class Solution:
         steps = -1
         if m == 1:
             steps = 1
-        for i, idx in enumerate(arr):
+        for (i, idx) in enumerate(arr):
             s[idx] = '1'
             uf.sz_count[1] += 1
             if idx > 0 and s[idx - 1] == '1':
@@ -20,6 +21,7 @@ class Solution:
 
 
 class UnionFind:
+
     def __init__(self, n):
         self.component_count = n
         self.parents = list(range(n))
@@ -33,7 +35,7 @@ class UnionFind:
 
     def union(self, x, y):
         if self.size[x] < self.size[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         self.parents[y] = x
         self.sz_count[self.size[x]] -= 1
         self.sz_count[self.size[y]] -= 1
@@ -41,7 +43,6 @@ class UnionFind:
         self.sz_count[self.size[x]] += 1
         self.component_count -= 1
 
-    # return true if two are newly unioned, false if already unioned.
     def find_and_union(self, x, y):
         x0 = self.find(x)
         y0 = self.find(y)

@@ -8,10 +8,10 @@ def main():
         r_y = 10 ** 5
         flag = True
         for i in range(n):
-            x, y, f1, f2, f3, f4 = map(int, input().split())
+            (x, y, f1, f2, f3, f4) = map(int, input().split())
             if flag:
                 if f1 == f3 == 0:
-                    if not(x >= l_x and x <= r_x):
+                    if not (x >= l_x and x <= r_x):
                         flag = False
                     else:
                         l_x = x
@@ -21,7 +21,7 @@ def main():
                 elif f1 == 0 and f3 == 1:
                     l_x = max(x, l_x)
                 if f2 == f4 == 0:
-                    if not(y >= l_y and y <= r_y):
+                    if not (y >= l_y and y <= r_y):
                         flag = False
                     else:
                         l_y = y

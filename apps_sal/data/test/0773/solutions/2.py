@@ -20,40 +20,33 @@ class MinCostFlowwithDijkstra:
         res = 0
         Pot = [0] * N
         geta = N
-
         prv = [None] * N
         prenum = [None] * N
         while fl:
             dist = [INF] * N
             dist[so] = 0
             Q = [so]
-
             while Q:
-                cost, vn = divmod(hpp(Q), geta)
+                (cost, vn) = divmod(hpp(Q), geta)
                 if dist[vn] < cost:
                     continue
-
                 for enum in range(len(self.Edge[vn])):
-                    vf, cap, cost, _ = self.Edge[vn][enum]
+                    (vf, cap, cost, _) = self.Edge[vn][enum]
                     cc = dist[vn] + cost - Pot[vn] + Pot[vf]
                     if cap > 0 and dist[vf] > cc:
                         dist[vf] = cc
                         prv[vf] = vn
                         prenum[vf] = enum
                         hp(Q, cc * geta + vf)
-
             if dist[si] == INF:
                 return -1
-
             for i in range(N):
                 Pot[i] -= dist[i]
-
             cfl = fl
             vf = si
             while vf != so:
                 cfl = min(cfl, self.Edge[prv[vf]][prenum[vf]][1])
                 vf = prv[vf]
-
             fl -= cfl
             res -= cfl * Pot[si]
             vf = si
@@ -65,14 +58,12 @@ class MinCostFlowwithDijkstra:
         return res
 
 
-N, Q = list(map(int, readline().split()))
+(N, Q) = list(map(int, readline().split()))
 T = MinCostFlowwithDijkstra(2 * N + 2)
 geta = N
-
 candi = [set(range(N)) for _ in range(N)]
-
 for _ in range(Q):
-    t, l, r, v = list(map(int, readline().split()))
+    (t, l, r, v) = list(map(int, readline().split()))
     l -= 1
     r -= 1
     v -= 1
@@ -86,7 +77,6 @@ for _ in range(Q):
             for i in range(v + 1, N):
                 if i in candi[vn]:
                     candi[vn].remove(i)
-
 if not all(candi):
     print(-1)
 else:

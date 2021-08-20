@@ -13,7 +13,6 @@ else:
         left[i] = left[i - 2] + l[i]
     for i in range(n - 3, -1, -1):
         right[i] = right[i + 2] + l[i]
-
     ans = 0
     for i in range(n):
         a = right[i + 1] if i < n - 1 else 0

@@ -1,5 +1,4 @@
 def finding_k(arr):
-    # your code here
     maxValue = max(arr) - min(arr)
     k = 0
     while maxValue > 0:

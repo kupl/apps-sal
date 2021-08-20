@@ -1,4 +1,5 @@
 class Solution:
+
     def minKBitFlips(self, A: 'List[int]', K: 'int') -> 'int':
         flip = 0
         const = 10
@@ -13,14 +14,13 @@ class Solution:
                         A[i + K - 1] += const
                     else:
                         return -1
-            else:
-                if not temp:
-                    res += 1
-                    flip += 1
-                    if i + K - 1 < len(A):
-                        A[i + K - 1] += const
-                    else:
-                        return -1
+            elif not temp:
+                res += 1
+                flip += 1
+                if i + K - 1 < len(A):
+                    A[i + K - 1] += const
+                else:
+                    return -1
             if A[i] > 1:
                 flip -= 1
         return res

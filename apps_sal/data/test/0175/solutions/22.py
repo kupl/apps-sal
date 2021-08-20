@@ -2,7 +2,7 @@ def read():
     return list(map(int, input().split()))
 
 
-a, b = read()
+(a, b) = read()
 while True:
     if a == 0 or b == 0:
         break

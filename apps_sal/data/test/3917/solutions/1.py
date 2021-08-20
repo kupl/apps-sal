@@ -1,9 +1,10 @@
 import sys
 sys.setrecursionlimit(100000)
-INF = 1e9
+INF = 1000000000.0
 
 
 class Point:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -30,12 +31,11 @@ def strip_closest(point_set, left, right, mid, dist_min):
         if abs(point_set[i].x - point_mid.x) <= dist_min:
             splitted_points.append(point_set[i])
     splitted_points.sort(key=lambda p: p.y)
-
     smallest = INF
     l = len(splitted_points)
     for i in range(0, l):
         for j in range(i + 1, l):
-            if not (splitted_points[j].y - splitted_points[i].y) < dist_min:
+            if not splitted_points[j].y - splitted_points[i].y < dist_min:
                 break
             d = distance(splitted_points[i], splitted_points[j])
             smallest = min(smallest, d)
@@ -56,10 +56,9 @@ n = int(input())
 a = list(map(int, input().split()))
 point_set = []
 for i in range(n):
-    if (i > 0):
+    if i > 0:
         a[i] += a[i - 1]
     point_set.append(Point(i, a[i]))
-
 point_set.sort(key=lambda a: a.x)
 ans = closest_util(point_set, 0, n)
 print('%.0f' % (ans * ans))

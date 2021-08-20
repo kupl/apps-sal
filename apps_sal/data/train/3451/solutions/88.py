@@ -7,5 +7,5 @@ def triangle(row):
             else:
                 res += 'GBR'.replace(row[k], '').replace(row[k + 1], '')
         row = res
-    return(row[0])
+    return row[0]
     pass

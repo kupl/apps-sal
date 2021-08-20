@@ -7,12 +7,12 @@ def compare(tpl):
 
 points = []
 for i in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     points.append((a, b))
 ans = 1
 points.sort(key=compare)
 end = points[0][1]
-for a, b in points:
+for (a, b) in points:
     if a > end:
         ans += 1
         end = b

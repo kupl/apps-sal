@@ -1,24 +1,24 @@
 def gets():
-    while(1):
+    while 1:
         a = input().strip()
-        if(a):
+        if a:
             return a
 
 
 def solve(n, k):
-    if(k > n):
+    if k > n:
         return 0
     k = min(k, n - k)
-    num, den = 1, 1
+    (num, den) = (1, 1)
     for i in range(k):
-        num *= (n - i)
-        den *= (i + 1)
+        num *= n - i
+        den *= i + 1
     return num / den
 
 
 def Main():
     for cases in range(int(gets())):
-        a, b = [int(x) for x in gets().split()]
+        (a, b) = [int(x) for x in gets().split()]
         print(solve(a, b))
 
 

@@ -2,27 +2,40 @@
 // Author : snape_here - Susanta Mukherjee
      
  """
-
 from __future__ import division, print_function
 from math import log, sqrt, factorial, cos, tan, sin, radians, floor, ceil
 from decimal import *
 import bisect
-
 import os
 import sys
 from io import BytesIO, IOBase
-
 if sys.version_info[0] < 3:
     from __builtin__ import xrange as range
     from future_builtins import ascii, filter, hex, map, oct, zip
 
 
-def ii(): return int(input())
-def fi(): return float(input())
-def si(): return input()
-def msi(): return map(str, input().split())
-def mi(): return map(int, input().split())
-def li(): return list(mi())
+def ii():
+    return int(input())
+
+
+def fi():
+    return float(input())
+
+
+def si():
+    return input()
+
+
+def msi():
+    return map(str, input().split())
+
+
+def mi():
+    return map(int, input().split())
+
+
+def li():
+    return list(mi())
 
 
 def read():
@@ -32,12 +45,12 @@ def read():
 
 def gcd(x, y):
     while y:
-        x, y = y, x % y
+        (x, y) = (y, x % y)
     return x
 
 
 def lcm(x, y):
-    return (x * y) // (gcd(x, y))
+    return x * y // gcd(x, y)
 
 
 mod = 1000000007
@@ -45,44 +58,32 @@ mod = 1000000007
 
 def modInverse(b, m):
     g = gcd(b, m)
-    if (g != 1):
+    if g != 1:
         return -1
     else:
         return pow(b, m - 2, m)
 
-# def ceil(x,y):
-#     if x%y==0:
-#         return x//y
-#     else:
-#         return x//y+1
-
 
 def modu(a, b, m):
-
     a = a % m
     inv = modInverse(b, m)
-    if(inv == -1):
+    if inv == -1:
         return -999999999
     else:
-        return (inv * a) % m
+        return inv * a % m
 
 
 getcontext().prec = 8
-
-abc = "abcdefghijklmnopqrstuvwxyz"
-
-pi = 3.141592653589793238
+abc = 'abcdefghijklmnopqrstuvwxyz'
+pi = 3.141592653589793
 
 
 def main():
-
     for _ in range(ii()):
         n = ii()
         ans = [n] * n
         print(*ans)
 
-
-# region fastio
 
 BUFSIZE = 8192
 
@@ -93,7 +94,7 @@ class FastIO(IOBase):
     def __init__(self, file):
         self._fd = file.fileno()
         self.buffer = BytesIO()
-        self.writable = "x" in file.mode or "r" not in file.mode
+        self.writable = 'x' in file.mode or 'r' not in file.mode
         self.write = self.buffer.write if self.writable else None
 
     def read(self):
@@ -102,62 +103,61 @@ class FastIO(IOBase):
             if not b:
                 break
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines = 0
         return self.buffer.read()
 
     def readline(self):
         while self.newlines == 0:
             b = os.read(self._fd, max(os.fstat(self._fd).st_size, BUFSIZE))
-            self.newlines = b.count(b"\n") + (not b)
+            self.newlines = b.count(b'\n') + (not b)
             ptr = self.buffer.tell()
-            self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
+            (self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr))
         self.newlines -= 1
         return self.buffer.readline()
 
     def flush(self):
         if self.writable:
             os.write(self._fd, self.buffer.getvalue())
-            self.buffer.truncate(0), self.buffer.seek(0)
+            (self.buffer.truncate(0), self.buffer.seek(0))
 
 
 class IOWrapper(IOBase):
+
     def __init__(self, file):
         self.buffer = FastIO(file)
         self.flush = self.buffer.flush
         self.writable = self.buffer.writable
-        self.write = lambda s: self.buffer.write(s.encode("ascii"))
-        self.read = lambda: self.buffer.read().decode("ascii")
-        self.readline = lambda: self.buffer.readline().decode("ascii")
+        self.write = lambda s: self.buffer.write(s.encode('ascii'))
+        self.read = lambda: self.buffer.read().decode('ascii')
+        self.readline = lambda: self.buffer.readline().decode('ascii')
 
 
 def print(*args, **kwargs):
     """Prints the values to a stream, or to sys.stdout by default."""
-    sep, file = kwargs.pop("sep", " "), kwargs.pop("file", sys.stdout)
+    (sep, file) = (kwargs.pop('sep', ' '), kwargs.pop('file', sys.stdout))
     at_start = True
     for x in args:
         if not at_start:
             file.write(sep)
         file.write(str(x))
         at_start = False
-    file.write(kwargs.pop("end", "\n"))
-    if kwargs.pop("flush", False):
+    file.write(kwargs.pop('end', '\n'))
+    if kwargs.pop('flush', False):
         file.flush()
 
 
 if sys.version_info[0] < 3:
-    sys.stdin, sys.stdout = FastIO(sys.stdin), FastIO(sys.stdout)
+    (sys.stdin, sys.stdout) = (FastIO(sys.stdin), FastIO(sys.stdout))
 else:
-    sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+    (sys.stdin, sys.stdout) = (IOWrapper(sys.stdin), IOWrapper(sys.stdout))
 
 
-def input(): return sys.stdin.readline().rstrip("\r\n")
-
-# endregion
+def input():
+    return sys.stdin.readline().rstrip('\r\n')
 
 
 def __starting_point():
-    # read()
     main()
 
 

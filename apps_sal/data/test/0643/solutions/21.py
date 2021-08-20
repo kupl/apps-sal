@@ -1,6 +1,6 @@
 import math
 for _ in range(int(input())):
-    x, y, p, q = list(map(int, input().split()))
+    (x, y, p, q) = list(map(int, input().split()))
     if p == 0 or p == q:
         print(0 if x * q == p * y else -1)
         continue

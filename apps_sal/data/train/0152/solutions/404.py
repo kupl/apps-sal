@@ -1,9 +1,10 @@
 class Solution:
+
     def maxDistance(self, position: List[int], k: int) -> int:
         position.sort()
 
         def check(m):
-            prev = -1e20
+            prev = -1e+20
             c = 0
             for i in position:
                 if i - prev >= m:

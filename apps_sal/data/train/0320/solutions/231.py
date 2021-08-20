@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperations(self, nums):
         ret = []
         overall = 0
@@ -17,4 +18,4 @@ class Solution:
                     temp += 1
                     i /= 2
             ret.append(temp)
-        return (overall + max(ret) + len(ret))
+        return overall + max(ret) + len(ret)

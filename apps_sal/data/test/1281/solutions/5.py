@@ -1,12 +1,11 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
 newarr = [0]
-
 for num in arr:
     newarr += [newarr[-1] ^ num]
 dic = {}
 for num in newarr:
-    x = (min(num, 2**k - 1 - num), max(num, 2**k - 1 - num))
+    x = (min(num, 2 ** k - 1 - num), max(num, 2 ** k - 1 - num))
     if x in dic:
         dic[x] += 1
     else:

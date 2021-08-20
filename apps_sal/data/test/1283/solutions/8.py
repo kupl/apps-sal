@@ -1,11 +1,8 @@
-n, k = list(map(int, input().split(" ")))
-
+(n, k) = list(map(int, input().split(' ')))
 rows = []
 for i in range(n):
     rows += [input()]
-
 cnt = [[0 for i in range(n)] for j in range(n)]
-
 for i in range(n):
     for j in range(n):
         flag = True
@@ -24,7 +21,6 @@ for i in range(n):
         if flag:
             for kk in range(k):
                 cnt[i + kk][j] += 1
-
 mx = 0
 ia = 0
 ij = 0
@@ -34,5 +30,4 @@ for i in range(n):
             mx = cnt[i][j]
             ia = i
             ij = j
-
 print(ia + 1, ij + 1)

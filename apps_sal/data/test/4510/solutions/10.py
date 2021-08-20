@@ -13,7 +13,7 @@ class LRUCache:
         self.cache[key] = value
 
 
-n, k = map(int, input().strip().split())
+(n, k) = map(int, input().strip().split())
 ids = map(int, input().strip().split())
 convs = LRUCache(k)
 for i in ids:
@@ -22,4 +22,4 @@ for i in ids:
     else:
         convs.set(i, None)
 print(len(convs.cache))
-print(" ".join(map(str, reversed(convs.cache.keys()))))
+print(' '.join(map(str, reversed(convs.cache.keys()))))

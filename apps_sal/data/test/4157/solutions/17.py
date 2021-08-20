@@ -1,6 +1,3 @@
-# Codeforces Round #479
-# Problem D
-
 from sys import stdin, stdout
 
 
@@ -25,7 +22,7 @@ def main():
         temp = d[i]
         temp.sort()
         out += temp
-    stdout.write(" ".join([str(i) for i in out]) + "\n")
+    stdout.write(' '.join([str(i) for i in out]) + '\n')
 
 
 main()

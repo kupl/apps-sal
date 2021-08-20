@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = list(map(int, input().split()))
 a.sort()
 mn = 0
@@ -13,4 +13,4 @@ for i in range(n):
         mx = min(mx, d2)
 print(max(mx - mn, 0))
 for i in range(mn, mx):
-    print(i, end=" ")
+    print(i, end=' ')

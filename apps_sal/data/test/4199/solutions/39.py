@@ -1,4 +1,4 @@
-total_people, min_height = map(int, input().split())
+(total_people, min_height) = map(int, input().split())
 height = map(int, input().split())
 rideable_people = 0
 for i in height:

@@ -1,11 +1,8 @@
 from sys import *
-
 s1 = stdin.readline().strip()
 n = int(s1)
 s1 = stdin.readline().strip()
 a = list(map(float, s1.split()))
-
-
 b = []
 for i in range(2 * n):
     if int(a[i]) != a[i]:
@@ -19,13 +16,11 @@ if m <= n:
         r = r - 1000 * m
     else:
         r = min(r - 1000 * (r // 1000), 1000 - r + 1000 * (r // 1000))
+elif r >= n * 1000:
+    r = r - 1000 * n
+elif r <= 1000 * (m - n):
+    r = 1000 * (m - n) - r
 else:
-    if r >= n * 1000:
-        r = r - 1000 * n
-    else:
-        if r <= 1000 * (m - n):
-            r = 1000 * (m - n) - r
-        else:
-            r = min(r - 1000 * (r // 1000), 1000 - r + 1000 * (r // 1000))
+    r = min(r - 1000 * (r // 1000), 1000 - r + 1000 * (r // 1000))
 r = r / 1000
-print("%.3f" % r)
+print('%.3f' % r)

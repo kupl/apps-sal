@@ -2,8 +2,8 @@ from itertools import accumulate
 n = int(input())
 a = list(map(int, input().split()))
 c = list(accumulate(a))
-ans = float("inf")
-x, y = 0, 2
+ans = float('inf')
+(x, y) = (0, 2)
 for i in range(1, n - 2):
     while c[x] < c[i] - c[x + 1]:
         x += 1

@@ -1,8 +1,8 @@
 def adfgx_encrypt(plaintext, square):
-    if plaintext == "iii":
-        return ""
+    if plaintext == 'iii':
+        return ''
     else:
-        crypt = [i for i in "ADFGX"]
+        crypt = [i for i in 'ADFGX']
         cnt = 0
         in_list = []
         the_list = []
@@ -13,7 +13,7 @@ def adfgx_encrypt(plaintext, square):
                 the_list.append(in_list)
                 in_list = []
                 cnt = 0
-        the_encrypt = ""
+        the_encrypt = ''
         for i in plaintext:
             for inlist in the_list:
                 for char in inlist:
@@ -23,7 +23,7 @@ def adfgx_encrypt(plaintext, square):
 
 
 def adfgx_decrypt(ciphertext, square):
-    crypt = [i for i in "ADFGX"]
+    crypt = [i for i in 'ADFGX']
     cnt = 0
     in_list = []
     the_list = []
@@ -44,7 +44,7 @@ def adfgx_decrypt(ciphertext, square):
             the_crypt_list.append(crypt_in_list)
             crypt_in_list = []
             double_elements = 0
-    the_message = ""
+    the_message = ''
     for code in the_crypt_list:
         the_message += the_list[crypt.index(code[0])][crypt.index(code[1])]
     return the_message

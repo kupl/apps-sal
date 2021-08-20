@@ -7,7 +7,7 @@ b = ar[0]
 aa = 1
 bb = 1
 ans = 0
-while (aa != n and bb != m):
+while aa != n and bb != m:
     if a == b:
         a += arr[aa]
         aa += 1
@@ -19,11 +19,10 @@ while (aa != n and bb != m):
     else:
         b += ar[bb]
         bb += 1
-
-while (aa != n):
+while aa != n:
     a += arr[aa]
     aa += 1
-while (bb != m):
+while bb != m:
     b += ar[bb]
     bb += 1
 if a == b:

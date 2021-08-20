@@ -1,9 +1,7 @@
 s = input()
-
 stack = []
-
 for c in s:
-    if c == "B":
+    if c == 'B':
         if len(stack) == 0:
             continue
         else:
@@ -11,4 +9,4 @@ for c in s:
     else:
         stack.extend(c)
 for c in stack:
-    print(c, end="")
+    print(c, end='')

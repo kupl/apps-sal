@@ -1,6 +1,5 @@
 N = int(input())
 A = list(map(int, input().split()))
-
 cul_sum = [0 for _ in range(N + 1)]
 for i in range(N):
     cul_sum[i + 1] = A[i] + cul_sum[i]
@@ -16,7 +15,6 @@ def diff_right(center, right):
 
 L = [-1 for _ in range(N - 1)]
 R = [-1 for _ in range(N - 1)]
-# 真ん中の切り方が i と i+1 の間
 l = 0
 r = 2
 ans = float('inf')
@@ -27,12 +25,6 @@ for i in range(1, N - 2):
         r = i + 1
     while r < N and diff_right(i, r) > diff_right(i, r + 1):
         r += 1
-    part_sum = [
-        cul_sum[l + 1],
-        cul_sum[i + 1] - cul_sum[l + 1],
-        cul_sum[r + 1] - cul_sum[i + 1],
-        cul_sum[N] - cul_sum[r + 1],
-    ]
+    part_sum = [cul_sum[l + 1], cul_sum[i + 1] - cul_sum[l + 1], cul_sum[r + 1] - cul_sum[i + 1], cul_sum[N] - cul_sum[r + 1]]
     ans = min(ans, max(part_sum) - min(part_sum))
-
 print(ans)

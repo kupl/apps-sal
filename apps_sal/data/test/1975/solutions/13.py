@@ -1,8 +1,7 @@
 def main():
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     cx = [0] * x
     cy = [0] * y
-
     print(x + y - 1)
     for i in range(x):
         for j in range(y):

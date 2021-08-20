@@ -1,10 +1,10 @@
 n = int(input())
 s = input()
-z = s.count("z")
-e = s.count("e")
-r = s.count("r")
-o = s.count("o")
-n = s.count("n")
+z = s.count('z')
+e = s.count('e')
+r = s.count('r')
+o = s.count('o')
+n = s.count('n')
 ones = min(o, n, e)
 o -= ones
 n -= ones

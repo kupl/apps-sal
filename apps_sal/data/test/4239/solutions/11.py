@@ -1,18 +1,15 @@
 import sys
-sys.setrecursionlimit(10**8)
-
+sys.setrecursionlimit(10 ** 8)
 N = int(input())
-
 ss = set()
 n = 6
-while n <= 10**5:
+while n <= 10 ** 5:
     ss.add(n)
     n *= 6
 n = 9
-while n <= 10**5:
+while n <= 10 ** 5:
     ss.add(n)
     n *= 9
-
 dp = [None] * (N + 1)
 
 

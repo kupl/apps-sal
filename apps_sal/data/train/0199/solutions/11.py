@@ -1,4 +1,5 @@
 class Solution(object):
+
     def longestConsecutive(self, nums):
         """
         :type nums: List[int]
@@ -6,14 +7,10 @@ class Solution(object):
         """
         if not nums:
             return 0
-        nums_set = set(nums)  # dedup and build a map for fast lookup
-        # remove numbers which are not connected with any other numbers
+        nums_set = set(nums)
         for num in list(nums_set):
-            if (num - 1) not in nums_set and (num + 1) not in nums_set:
+            if num - 1 not in nums_set and num + 1 not in nums_set:
                 nums_set.remove(num)
-
-        # now nums_set only contains groups of consecutive numbers
-        # calculate the size of each group and find the largest group
         max_group_size = 1
         while nums_set:
             num = nums_set.pop()

@@ -1,4 +1,5 @@
 class Solution:
+
     def minAreaRect(self, points: List[List[int]]) -> int:
         x = 0
         y = 1

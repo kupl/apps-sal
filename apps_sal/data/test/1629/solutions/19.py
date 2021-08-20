@@ -20,7 +20,7 @@ def solve():
 
     3 2 5 4
     """
-    n, x = read_ints()
+    (n, x) = read_ints()
     a = read_ints()
     last_min_j = x % n
     for j in range(x, x + n):

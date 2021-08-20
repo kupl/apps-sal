@@ -1,4 +1,4 @@
-n, C = map(int, input().split())
+(n, C) = map(int, input().split())
 d = []
 for i in range(C):
     d.append(list(map(int, input().split())))
@@ -27,11 +27,11 @@ for i in range(C):
             if i == j or j == k or k == i:
                 continue
             temp = 0
-            for p, q in c0.items():
+            for (p, q) in c0.items():
                 temp += d[p - 1][i] * q
-            for p, q in c1.items():
+            for (p, q) in c1.items():
                 temp += d[p - 1][j] * q
-            for p, q in c2.items():
+            for (p, q) in c2.items():
                 temp += d[p - 1][k] * q
             D.append(temp)
 print(min(D))

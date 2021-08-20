@@ -1,4 +1,5 @@
 class Solution:
+
     def canPartitionKSubsets(self, nums, k):
         """
         :type nums: List[int]
@@ -24,5 +25,4 @@ class Solution:
                         return True
                     visited[i] = 0
             return False
-
         return canPart(nums, visited, 0, 0, k, tot / k)

@@ -1,5 +1,3 @@
-# cook your dish here
-
 for __ in range(int(input())):
     n = int(input())
     arr = list(map(int, input().split()))
@@ -12,7 +10,7 @@ for __ in range(int(input())):
         else:
             d[arr[i]] = 1
         curr_ele = arr[i]
-        if (curr_ele in s) and arr[i - 1] != arr[i]:
+        if curr_ele in s and arr[i - 1] != arr[i]:
             flag = 1
             break
         else:
@@ -21,6 +19,6 @@ for __ in range(int(input())):
     if len(c) != len(set(c)):
         flag = 1
     if flag == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

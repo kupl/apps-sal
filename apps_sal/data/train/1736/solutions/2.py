@@ -1,5 +1,5 @@
 def is_good(n, awesome):
-    return n in awesome or str(n) in "1234567890 9876543210" or str(n) == str(n)[::-1] or int(str(n)[1:]) == 0
+    return n in awesome or str(n) in '1234567890 9876543210' or str(n) == str(n)[::-1] or (int(str(n)[1:]) == 0)
 
 
 def is_interesting(n, awesome):

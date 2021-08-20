@@ -27,14 +27,11 @@ def solve():
 
 
 def main():
-    # start_time=time.time()
-    m = 10**9 + 7
+    m = 10 ** 9 + 7
     t = int(input())
-    while(t):
+    while t:
         t -= 1
         solve()
-
-    #print('Time Elapsed = ',time.time()-start_time," seconds")
 
 
 def __starting_point():

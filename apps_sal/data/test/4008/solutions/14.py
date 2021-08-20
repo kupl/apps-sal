@@ -1,15 +1,14 @@
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 a = [int(i) for i in input().split()]
 s = list(set(a))
 for i in s:
     if a.count(i) > k:
-        print("NO")
+        print('NO')
         quit()
 done = []
-
 for i in range(k):
     done.append([])
-print("YES")
+print('YES')
 for i in range(k):
     print(i + 1, end=' ')
     done[i].append(a[i])

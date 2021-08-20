@@ -12,6 +12,7 @@ def f(x, y, ci, v):
 
 
 class Solution:
+
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         l = len(graph)
         y = [-1 for i in range(l)]

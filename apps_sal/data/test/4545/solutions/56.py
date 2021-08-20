@@ -1,3 +1,3 @@
 n = int(input())
 a = int(input())
-print((n * n - a))
+print(n * n - a)

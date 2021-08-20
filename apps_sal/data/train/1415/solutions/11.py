@@ -13,7 +13,7 @@ for _ in range(int(input())):
     s = input()
     a = pal(s)
     if a == 1:
-        print("YES")
+        print('YES')
     else:
         f = 0
         for i in range(len(s) - 1):
@@ -23,6 +23,6 @@ for _ in range(int(input())):
                 f = 1
                 break
         if f == 0:
-            print("NO")
+            print('NO')
         else:
-            print("YES")
+            print('YES')

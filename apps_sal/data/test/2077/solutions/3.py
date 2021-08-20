@@ -11,12 +11,12 @@ def solve(n, m, Edges, T):
             return [1]
         return [-1]
     L = []
-    for i, t in enumerate(T):
+    for (i, t) in enumerate(T):
         L.append((t, i))
     L.sort()
     Visited = [False] * n
     Ans = []
-    for num, fr in L:
+    for (num, fr) in L:
         Visited[fr] = True
         s = set()
         for to in Edges[fr]:
@@ -31,10 +31,10 @@ def solve(n, m, Edges, T):
 
 
 def main():
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     Edges = [[] for _ in range(n)]
     for _ in range(m):
-        a, b = map(lambda x: int(x) - 1, input().split())
+        (a, b) = map(lambda x: int(x) - 1, input().split())
         Edges[a].append(b)
         Edges[b].append(a)
     T = list(map(int, input().split()))

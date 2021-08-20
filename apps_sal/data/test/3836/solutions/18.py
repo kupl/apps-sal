@@ -4,7 +4,7 @@ b = []
 c = []
 d = []
 for i in range(n):
-    opt, num = [int(x) for x in input().split()]
+    (opt, num) = [int(x) for x in input().split()]
     if opt == 0:
         a.append(num)
     if opt == 10:
@@ -14,8 +14,8 @@ for i in range(n):
     if opt == 11:
         d.append(num)
 ans = sum(d)
-b.sort(reverse=True)  # from the largest then choose: greedy
-c.sort(reverse=True)  # make sortings is O(nlogn)
+b.sort(reverse=True)
+c.sort(reverse=True)
 if len(b) < len(c):
     ans += sum(b) + sum(c[0:len(b)])
     a.extend(c[len(b):])

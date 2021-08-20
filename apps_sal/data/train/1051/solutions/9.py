@@ -1,4 +1,3 @@
-
 t = int(input())
 while t > 0:
     t -= 1
@@ -8,7 +7,7 @@ while t > 0:
     for i in range(1, n + 1):
         for j in range(i + 1):
             if j == i:
-                print(i, end="")
+                print(i, end='')
             else:
-                print("*", end="")
+                print('*', end='')
         print()

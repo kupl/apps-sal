@@ -1,7 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 
 
 class UnionFind:
+
     def __init__(self, N):
         self.root = list(range(N + 1))
         self.size = [1] * (N + 1)
@@ -18,10 +19,10 @@ class UnionFind:
         y = self[y]
         if x == y:
             return
-        sx, sy = self.size[x], self.size[y]
+        (sx, sy) = (self.size[x], self.size[y])
         if sx < sy:
-            x, y = y, x
-            sx, sy = sy, sx
+            (x, y) = (y, x)
+            (sx, sy) = (sy, sx)
         self.root[y] = x
         self.size[x] += sy
 
@@ -30,12 +31,10 @@ class UnionFind:
 
 
 uf = UnionFind(N)
-
 answer = []
 append = answer.append
 merge = uf.merge
-
 for i in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     merge(a, b)
 print(uf.find_max())

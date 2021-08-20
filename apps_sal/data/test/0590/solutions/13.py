@@ -1,6 +1,6 @@
-n, ans, j = int(input()), 0, 1
+(n, ans, j) = (int(input()), 0, 1)
 a = [int(i) for i in input().split()]
-res, c, lft = [0] * n, [0] * (n + 1), [0] * (n + 1)
+(res, c, lft) = ([0] * n, [0] * (n + 1), [0] * (n + 1))
 for i in a:
     c[i] += 1
 while j <= n and c[j]:

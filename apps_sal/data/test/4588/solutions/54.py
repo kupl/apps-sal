@@ -4,10 +4,10 @@ C = 3
 D = 4
 E = 5
 F = 6
-X, Y = input().split()
+(X, Y) = input().split()
 if X < Y:
-    print("<")
+    print('<')
 elif X > Y:
-    print(">")
+    print('>')
 elif X == Y:
-    print("=")
+    print('=')

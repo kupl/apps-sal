@@ -1,5 +1,4 @@
 def number(lines):
-    # your code here
     result = {}
     count = 1
     for i in lines:
@@ -7,6 +6,5 @@ def number(lines):
         count += 1
     final = []
     for i in result:
-        final.append(str(i) + ":" + " " + result[i])
-
-    return(final)
+        final.append(str(i) + ':' + ' ' + result[i])
+    return final

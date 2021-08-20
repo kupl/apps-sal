@@ -22,7 +22,6 @@ for _ in range(t):
         elif s == 6:
             c[0] += 4
         return c[0]
-
     for i in c:
         m.append(check(i))
     if m.count(max(m)) > 1:

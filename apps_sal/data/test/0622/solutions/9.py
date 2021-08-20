@@ -1,5 +1,5 @@
-n, k = [int(x) for x in input().strip().split(" ")]
-le = 2**n - 1
+(n, k) = [int(x) for x in input().strip().split(' ')]
+le = 2 ** n - 1
 
 
 def binsearch(level, le, ind):

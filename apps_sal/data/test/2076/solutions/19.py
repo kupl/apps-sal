@@ -1,6 +1,6 @@
 t = int(input())
 for i in range(t):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     ans1 = min(a, b // 2)
     b1 = b - ans1 * 2
     ans1 += min(b1, c // 2)

@@ -1,4 +1,4 @@
-n, m = [int(s) for s in input().split()]
+(n, m) = [int(s) for s in input().split()]
 g = [[0 for i in range(m)] for j in range(n)]
 sum = 0
 top = n - 1
@@ -21,4 +21,4 @@ else:
     if a > n or a > m:
         print(-1)
     else:
-        print(a**2 - sum)
+        print(a ** 2 - sum)

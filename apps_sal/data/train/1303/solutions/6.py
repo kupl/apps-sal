@@ -1,6 +1,6 @@
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 for _ in range(int(input())):
-    n, k, m = list(map(int, input().split()))
+    (n, k, m) = list(map(int, input().split()))
     a = list([(int(x) - 1) % m + 1 for x in input().split()])
     arr = [0] * k
     arr.insert(0, 1)

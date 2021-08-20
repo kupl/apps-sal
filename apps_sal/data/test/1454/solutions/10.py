@@ -1,4 +1,3 @@
-
 def sum_matr(matr):
     for i in (0, n - 1):
         for j in range(m - 1):
@@ -25,9 +24,8 @@ def sum_matr(matr):
     return s
 
 
-n, m = [int(elem) for elem in input().split()]
+(n, m) = [int(elem) for elem in input().split()]
 matr = []
 for i in range(n):
     matr.append([int(elem) for elem in input().split()])
-
 print(sum_matr(matr))

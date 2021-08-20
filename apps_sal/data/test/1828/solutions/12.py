@@ -2,6 +2,7 @@
 
 
 class StdIO:
+
     def read_int(self):
         return int(self.read_string())
 
@@ -25,34 +26,26 @@ io = StdIO()
 
 
 def left(u, v):
-    ux, uy = u
-    vx, vy = v
-
+    (ux, uy) = u
+    (vx, vy) = v
     z = ux * vy - uy * vx
-
     return z > 0
 
 
 def main():
     n = io.read_int()
-
-    x0, y0 = io.read_ints()
-    x1, y1 = io.read_ints()
-
+    (x0, y0) = io.read_ints()
+    (x1, y1) = io.read_ints()
     pv = (x1 - x0, y1 - y0)
-    ppx, ppy = x1, y1
-
+    (ppx, ppy) = (x1, y1)
     dang = 0
     for i in range(2, n + 1):
-        px, py = io.read_ints()
+        (px, py) = io.read_ints()
         v = (px - ppx, py - ppy)
-
         if left(pv, v):
             dang += 1
-
         pv = v
-        ppx, ppy = px, py
-
+        (ppx, ppy) = (px, py)
     print(dang)
 
 

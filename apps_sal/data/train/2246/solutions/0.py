@@ -3,7 +3,7 @@ from heapq import heappop, heappush
 
 
 def main():
-    n, k = map(int, stdin.readline().split())
+    (n, k) = map(int, stdin.readline().split())
     X = list(map(int, stdin.readline().split()))
     A = int(stdin.readline().strip())
     C = list(map(int, stdin.readline().split()))

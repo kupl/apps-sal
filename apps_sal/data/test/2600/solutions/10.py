@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     a = [list(map(int, input().split())) for _ in range(n)]
     ans = 0
     allCnts = []

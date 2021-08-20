@@ -1,12 +1,12 @@
 class Solution:
+
     def strStr(self, haystack, needle):
         """
         :type haystack: str
         :type needle: str
         :rtype: int
         """
-
-        if needle == "":
+        if needle == '':
             return 0
         for i in range(len(haystack) - len(needle) + 1):
             for j in range(len(needle)):
@@ -15,5 +15,4 @@ class Solution:
                         return i
                 else:
                     break
-
         return -1

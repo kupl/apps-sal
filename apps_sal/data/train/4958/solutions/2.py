@@ -1,6 +1,6 @@
 def solution(value):
     num = 5 - len(str(value))
-    zeros = ""
+    zeros = ''
     for i in range(num):
-        zeros += "0"
-    return("Value is {}".format(zeros + str(value)))
+        zeros += '0'
+    return 'Value is {}'.format(zeros + str(value))

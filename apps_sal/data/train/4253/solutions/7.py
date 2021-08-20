@@ -1,5 +1,5 @@
 def solve(n, k):
-    psum = (k * (k + 1)) / 2
+    psum = k * (k + 1) / 2
     if n >= psum:
         min_int = n // psum
         while min_int > 0:

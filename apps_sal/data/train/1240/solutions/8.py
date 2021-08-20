@@ -1,5 +1,5 @@
 def six(n):
-    return(1 + (n - 1) % 6)
+    return 1 + (n - 1) % 6
 
 
 def f(numbers):
@@ -12,6 +12,5 @@ for _ in range(t):
     throw = int(input())
     array = list(map(int, input().split()))
     answers.append(f(array))
-
 for answer in answers:
     print(answer)

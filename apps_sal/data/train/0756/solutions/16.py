@@ -1,17 +1,14 @@
-# cook your dish here
 def check_prime(num):
     for i in range(2, num):
-
         if num % i == 0:
-            return ('Not Prime')
-
+            return 'Not Prime'
     else:
-        return ('Prime')
+        return 'Prime'
 
 
 t = int(input())
 for i in range(t):
-    n, m = list(map(int, input().split()))
+    (n, m) = list(map(int, input().split()))
     s = n + m
     if s % 2 == 0:
         s += 1
@@ -24,7 +21,6 @@ for i in range(t):
         else:
             print(s - n - m)
     else:
-
         while True:
             s += 2
             res = check_prime(s)

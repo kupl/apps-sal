@@ -1,7 +1,7 @@
 n = int(input())
 d = []
 for i in range(n):
-    d1, d2 = map(int, input().split())
+    (d1, d2) = map(int, input().split())
     if d1 == d2:
         d.append(i)
 result = 'No'

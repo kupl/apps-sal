@@ -3,9 +3,9 @@ def main():
     l = stdin.read().splitlines()
     sms = iter(l[-1])
     l[0] = l[-1] = ''
-    good = set("abcdefghijklmnopqrstuvwxyz0123456789<>")
+    good = set('abcdefghijklmnopqrstuvwxyz0123456789<>')
     try:
-        for a in "<3".join(l):
+        for a in '<3'.join(l):
             b = next(sms)
             while b != a:
                 b = next(sms)

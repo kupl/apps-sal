@@ -18,8 +18,8 @@ while t > 0:
     for i in range(len(e) - 1):
         if e[i] == e[i + 1]:
             k = 1
-            print("NO")
+            print('NO')
             break
     if k == 0:
-        print("YES")
+        print('YES')
         print(*e)

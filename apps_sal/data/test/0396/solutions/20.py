@@ -1,5 +1,5 @@
 count = 0
-l, r = input().split()
+(l, r) = input().split()
 l = int(l)
 r = int(r)
 for i in range(31):

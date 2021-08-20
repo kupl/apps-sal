@@ -1,8 +1,6 @@
 import itertools
-
-N, M, Q = list(map(int, input().split()))
+(N, M, Q) = list(map(int, input().split()))
 ABCD = [[int(x) for x in input().split()] for i in range(Q)]
-
 ans = 0
 for A in itertools.combinations_with_replacement([m for m in range(1, M + 1)], N):
     ans2 = 0

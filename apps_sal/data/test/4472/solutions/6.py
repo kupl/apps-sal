@@ -9,7 +9,7 @@ for i in range(n // 2):
     if a[i] == a[n - i - 1] == b[i] == b[n - i - 1]:
         continue
     count += 2
-    if a[i] == a[n - i - 1] and b[i] != b[n - i - 1] and a[i] != b[i] and a[i] != b[n - i - 1]:
+    if a[i] == a[n - i - 1] and b[i] != b[n - i - 1] and (a[i] != b[i]) and (a[i] != b[n - i - 1]):
         continue
     for v in d.values():
         if v >= 2:

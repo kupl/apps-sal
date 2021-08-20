@@ -5,16 +5,46 @@ from heapq import merge, heapify, heappop, heappush, nsmallest
 from bisect import bisect_left as bl, bisect_right as br, bisect
 mod = pow(10, 9) + 7
 mod2 = 998244353
-def inp(): return stdin.readline().strip()
-def out(var, end="\n"): stdout.write(str(var) + "\n")
-def outa(*var, end="\n"): stdout.write(' '.join(map(str, var)) + end)
-def lmp(): return list(mp())
-def mp(): return map(int, inp().split())
-def smp(): return map(str, inp().split())
-def l1d(n, val=0): return [val for i in range(n)]
-def l2d(n, m, val=0): return [l1d(n, val) for j in range(m)]
-def remadd(x, y): return 1 if x % y else 0
-def ceil(a, b): return (a + b - 1) // b
+
+
+def inp():
+    return stdin.readline().strip()
+
+
+def out(var, end='\n'):
+    stdout.write(str(var) + '\n')
+
+
+def outa(*var, end='\n'):
+    stdout.write(' '.join(map(str, var)) + end)
+
+
+def lmp():
+    return list(mp())
+
+
+def mp():
+    return map(int, inp().split())
+
+
+def smp():
+    return map(str, inp().split())
+
+
+def l1d(n, val=0):
+    return [val for i in range(n)]
+
+
+def l2d(n, m, val=0):
+    return [l1d(n, val) for j in range(m)]
+
+
+def remadd(x, y):
+    return 1 if x % y else 0
+
+
+def ceil(a, b):
+    return (a + b - 1) // b
 
 
 def isprime(x):
@@ -34,5 +64,5 @@ for _ in range(int(inp())):
     n = int(inp())
     for i in range(n):
         for j in range(n):
-            print((i + j) % 2, end="")
+            print((i + j) % 2, end='')
         print()

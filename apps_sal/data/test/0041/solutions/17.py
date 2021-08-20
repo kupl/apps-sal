@@ -11,14 +11,12 @@ for i in range(n):
     l[i] = p
     if data[i] == 0:
         p = i
-
 for i in range(n - 1, -1, -1):
     r[i] = p1
     if data[i] == 0:
         p1 = i
-
 for i in range(n):
     if data[i] != 0:
-        print(min(abs((l[i] - i)), abs((r[i] - i))), end=' ')
+        print(min(abs(l[i] - i), abs(r[i] - i)), end=' ')
     else:
         print(0, end=' ')

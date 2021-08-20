@@ -1,1 +1,2 @@
-def pillow(s): return ('n', 'B') in zip(*s)
+def pillow(s):
+    return ('n', 'B') in zip(*s)

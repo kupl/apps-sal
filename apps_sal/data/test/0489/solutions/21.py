@@ -1,6 +1,6 @@
 n = int(input())
 a = sorted(map(int, input().split()))
-x, y, z = a[0], a[1], a[2]
+(x, y, z) = (a[0], a[1], a[2])
 if x < y < z:
     print(a.count(z))
 elif x < y <= z:

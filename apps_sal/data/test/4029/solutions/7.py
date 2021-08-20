@@ -6,8 +6,8 @@ ck = ['50', '25', '75']
 for c in ck:
     if c[0] in k and c[1] in k:
         temp = 2 * n - 3 - k.rfind(c[0]) - k.rfind(c[1])
-        if (c[1] == '5'):
-            if k.rfind('5') == 0 and k[1] == '0' and n > 3:
+        if c[1] == '5':
+            if k.rfind('5') == 0 and k[1] == '0' and (n > 3):
                 add = 0
                 i = 1
                 while k[i] == '0':

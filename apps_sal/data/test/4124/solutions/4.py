@@ -4,7 +4,6 @@ def mi():
 
 a = list(input())[::-1]
 b = list(input())[::-1]
-
 s = -1
 for i in range(min(len(a), len(b))):
     if a[i] != b[i]:

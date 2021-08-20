@@ -1,6 +1,9 @@
 n = int(input())
 ans = set()
-def f(x): return sum(int(i) for i in str(x))
+
+
+def f(x):
+    return sum((int(i) for i in str(x)))
 
 
 for i in range(max(0, n - 1000), n + 1):

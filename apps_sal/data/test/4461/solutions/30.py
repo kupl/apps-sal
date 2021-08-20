@@ -1,5 +1,5 @@
-#!/usr/bin/env python3
 class V:
+
     def __init__(self, f, v=None):
         self.f = f
         self.v = v
@@ -10,14 +10,13 @@ class V:
     def __call__(self, n):
         if n is None:
             return self.v
-
         if self.v is None:
             self.v = n
             return self.v
         self.v = self.f(self.v, n)
 
 
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 
 
 def minmax(*args):
@@ -27,20 +26,14 @@ def minmax(*args):
 def sep(m, n):
     a = b = c = 0
     nn = n // 2
-    ans = V(min, float("inf"))
-
+    ans = V(min, float('inf'))
     for i in range(1, m):
         a = i * n
         mm = (m - i) // 2
-
-        # 横
-        b, c = (m - i) * nn, (m - i) * (n - nn)
+        (b, c) = ((m - i) * nn, (m - i) * (n - nn))
         ans(minmax(a, b, c))
-
-        # 縦
-        b, c = mm * n, (m - i - mm) * n
+        (b, c) = (mm * n, (m - i - mm) * n)
         ans(minmax(a, b, c))
-
     return ans.v
 
 

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 kset = {str(i) for i in range(k + 1)}
 myans = 0
 for i in range(n):

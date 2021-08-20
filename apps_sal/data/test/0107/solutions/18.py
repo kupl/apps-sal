@@ -1,5 +1,4 @@
 s = input()
-
 p = 0
 r = 'no'
 for d in reversed(s):
@@ -7,5 +6,4 @@ for d in reversed(s):
         p += 1
     elif p >= 6:
         r = 'yes'
-
 print(r)

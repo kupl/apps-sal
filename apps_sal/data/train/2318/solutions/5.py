@@ -1,7 +1,7 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-s, j, all_res = 0, 0, []
-for i, q in enumerate(arr, 1):
+(s, j, all_res) = (0, 0, [])
+for (i, q) in enumerate(arr, 1):
     if s - j * (n - i) * q < k:
         all_res.append(str(i))
     else:

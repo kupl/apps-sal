@@ -1,5 +1,4 @@
 import string
-
 s = input()
 for x in string.ascii_lowercase:
     if x not in s:

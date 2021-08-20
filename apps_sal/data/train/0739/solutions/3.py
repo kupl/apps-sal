@@ -1,10 +1,8 @@
-# Program question at: http://www.codechef.com/COZL2012/problems/RBX12R01
 import math
 import sys
 dir_ = 'UDLR'
 left = 'LRDU'
 right = 'RLUD'
-
 t = int(input())
 while t > 0:
     t -= 1
@@ -31,7 +29,6 @@ while t > 0:
                 x -= steps
             elif cur == 'R':
                 x += steps
-
     dist = str(math.sqrt(x * x + y * y))
     i = dist.find('.')
     sys.stdout.write(dist[0:i + 2])

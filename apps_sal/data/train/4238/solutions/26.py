@@ -16,6 +16,6 @@ def squares_needed(grains):
             continue
         else:
             value = y
-    for keys, values in list(my_dict.items()):
+    for (keys, values) in list(my_dict.items()):
         if my_dict[keys] == value:
             return keys

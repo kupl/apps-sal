@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 import math
 import os
@@ -17,7 +16,8 @@ import copy
 import decimal
 
 
-class Scanner():
+class Scanner:
+
     @staticmethod
     def int():
         return int(sys.stdin.readline().rstrip())
@@ -44,16 +44,16 @@ class Scanner():
 
 
 def pop_count(x):
-    x = x - ((x >> 1) & 0x5555555555555555)
-    x = (x & 0x3333333333333333) + ((x >> 2) & 0x3333333333333333)
-    x = (x + (x >> 4)) & 0x0f0f0f0f0f0f0f0f
+    x = x - (x >> 1 & 6148914691236517205)
+    x = (x & 3689348814741910323) + (x >> 2 & 3689348814741910323)
+    x = x + (x >> 4) & 1085102592571150095
     x = x + (x >> 8)
     x = x + (x >> 16)
     x = x + (x >> 32)
-    return x & 0x0000007f
+    return x & 127
 
 
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
 def fact(N):
@@ -84,13 +84,13 @@ def modpow(n, p):
 
 
 def modinv(n):
-    b, u, v = MOD, 1, 0
+    (b, u, v) = (MOD, 1, 0)
     while b > 0:
         t = n // b
         n -= t * b
-        n, b = b, n
+        (n, b) = (b, n)
         u -= t * v
-        u, v = v, u
+        (u, v) = (v, u)
     u %= MOD
     if u < 0:
         u += MOD
@@ -102,10 +102,10 @@ def solve():
     A = Scanner.map_int()
     L = defaultdict(int)
     for i in range(N):
-        for k, v in list(fact(A[i]).items()):
+        for (k, v) in list(fact(A[i]).items()):
             L[k] = max(L[k], v)
     lcm = 1
-    for k, v in list(L.items()):
+    for (k, v) in list(L.items()):
         lcm *= modpow(k, v)
         lcm %= MOD
     ans = 0
@@ -117,12 +117,6 @@ def solve():
 
 
 def main():
-    # sys.setrecursionlimit(1000000)
-    # sys.stdin = open("sample.txt")
-    # T = Scanner.int()
-    # for _ in range(T):
-    #     solve()
-    # print('YNeos'[not solve()::2])
     solve()
 
 

@@ -8,4 +8,4 @@ def battle(h):
         return 2 * battle(h // 2) + 1
 
 
-print((battle(H)))
+print(battle(H))

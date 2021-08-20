@@ -1,20 +1,17 @@
 def sort_list(list1, list2):
-
     zipped_pairs = zip(list2, list1)
-
-    z = [x for _, x in sorted(zipped_pairs)]
-
+    z = [x for (_, x) in sorted(zipped_pairs)]
     return z
 
 
 class SegmentTree:
+
     def __init__(self, data, default=0, func=lambda a, b: a + b):
         """initialize the segment tree with data"""
         self._default = default
         self._func = func
         self._len = len(data)
         self._size = _size = 1 << (self._len - 1).bit_length()
-
         self.data = [default] * (2 * _size)
         self.data[_size:_size + self._len] = data
         for i in reversed(range(_size)):
@@ -43,7 +40,6 @@ class SegmentTree:
         stop += 1
         start += self._size
         stop += self._size
-
         res = self._default
         while start < stop:
             if start & 1:
@@ -57,7 +53,7 @@ class SegmentTree:
         return res
 
     def __repr__(self):
-        return "SegmentTree({0})".format(self.data)
+        return 'SegmentTree({0})'.format(self.data)
 
 
 def calc(prefix, t):
@@ -71,19 +67,17 @@ def calc(prefix, t):
     for i in range(len(prefix)):
         if j == len(prefix):
             ans += s.query(ind[i] + 1, len(prefix) - 1)
-            # print(ans,ind[i])
             continue
-        while(prefix[j] - t < prefix[i]):
+        while prefix[j] - t < prefix[i]:
             s.__setitem__(ind[j], 1)
             j += 1
             if j == len(prefix):
                 break
         ans += s.query(ind[i] + 1, len(prefix) - 1)
-        # print(ans,ind[i])
     print(ans)
 
 
-n, t = map(int, input().split())
+(n, t) = map(int, input().split())
 l = list(map(int, input().split()))
 pre = [0]
 for i in range(n):

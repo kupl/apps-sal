@@ -14,7 +14,6 @@ class TweetCounts:
                     a = (x - startTime) // 60
                     ans[a] += 1
             return ans
-
         elif freq[0] == 'h':
             ans = [0] * ((endTime - startTime) // 3600 + 1)
             for x in self.data[tweetName]:
@@ -29,9 +28,3 @@ class TweetCounts:
                     a = (x - startTime) // 86400
                     ans[a] += 1
             return ans
-
-
-# Your TweetCounts object will be instantiated and called as such:
-# obj = TweetCounts()
-# obj.recordTweet(tweetName,time)
-# param_2 = obj.getTweetCountsPerFrequency(freq,tweetName,startTime,endTime)

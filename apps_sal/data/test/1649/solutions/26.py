@@ -1,7 +1,3 @@
-# region Header
-#!/usr/bin/env python3
-# from typing import *
-
 import sys
 import io
 import math
@@ -17,11 +13,6 @@ def input():
 
 
 sys.setrecursionlimit(1000000)
-# endregion
-
-# _INPUT = """# paste here...
-# """
-# sys.stdin = io.StringIO(_INPUT)
 
 
 def main():

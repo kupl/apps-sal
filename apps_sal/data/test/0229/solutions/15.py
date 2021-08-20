@@ -5,8 +5,6 @@ import math
 
 
 def __starting_point():
-    #n, m = list(map(int, input().split()))
-    # sys.stdout.flush()
     n = int(input())
     arr = list(map(int, input().split()))
     temp = []
@@ -14,13 +12,13 @@ def __starting_point():
         if num not in temp:
             temp.append(num)
         if len(temp) > 3:
-            print("NO")
+            print('NO')
             return
     temp.sort()
     if len(temp) < 3 or temp[0] + temp[2] == 2 * temp[1]:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 __starting_point()

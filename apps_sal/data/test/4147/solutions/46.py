@@ -1,8 +1,7 @@
 from itertools import *
-N, A, B, C = map(int, input().split())
+(N, A, B, C) = map(int, input().split())
 L = [int(input()) for n in range(N)]
 ans = []
-
 for i in product(range(4), repeat=N):
     a = 0
     b = 0
@@ -19,5 +18,4 @@ for i in product(range(4), repeat=N):
                 c += L[j]
     if a * b * c:
         ans += [abs(A - a) + abs(B - b) + abs(C - c) + 10 * (d - 3)]
-
 print(min(ans))

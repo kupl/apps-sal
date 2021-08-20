@@ -8,6 +8,6 @@ def check_exam(arr1: list, arr2: list) -> int:
     for i in range(len(arr2)):
         if arr2[i] == arr1[i]:
             count += 4
-        elif arr2[i] != arr1[i] and not len(arr2[i]) == 0:
+        elif arr2[i] != arr1[i] and (not len(arr2[i]) == 0):
             count -= 1
     return count if count > 0 else 0

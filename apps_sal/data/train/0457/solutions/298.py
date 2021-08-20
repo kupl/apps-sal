@@ -1,4 +1,5 @@
 class Solution(object):
+
     def __init__(self):
         self.mem = {0: 0}
 
@@ -11,7 +12,6 @@ class Solution(object):
                 break
             numCoins = self.getMinCoins(coins, amount - c) + 1
             minCoins = min(numCoins, minCoins)
-
         self.mem[amount] = minCoins
         return minCoins
 

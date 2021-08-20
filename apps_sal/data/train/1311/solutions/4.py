@@ -1,7 +1,6 @@
 t = int(input())
-
-while (t > 0):
-    n, k = map(int, input().split())
+while t > 0:
+    (n, k) = map(int, input().split())
     a = list()
     if 2 * k <= n:
         for i in range(2 * k):
@@ -26,5 +25,5 @@ while (t > 0):
             else:
                 a.append(-i - 1)
     for i in a:
-        print(i, end=" ")
+        print(i, end=' ')
     t -= 1

@@ -1,6 +1,6 @@
 N = int(input())
 A = list(map(int, input().split()))
-mi, ma = min(A), max(A)
+(mi, ma) = (min(A), max(A))
 print(2 * N)
 if abs(mi) <= ma:
     k = A.index(ma)

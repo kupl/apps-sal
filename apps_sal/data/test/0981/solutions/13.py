@@ -1,6 +1,6 @@
 v = int(input())
 a = [int(i) for i in input().split()]
-ans = (v // min(a)) * [9 - a[::-1].index(min(a))]
+ans = v // min(a) * [9 - a[::-1].index(min(a))]
 v %= min(a)
 for i in range(len(ans)):
     for j in range(8, -1, -1):
@@ -10,6 +10,6 @@ for i in range(len(ans)):
     if v <= 0:
         break
 if ans:
-    print("".join([str(i) for i in ans]))
+    print(''.join([str(i) for i in ans]))
 else:
     print(-1)

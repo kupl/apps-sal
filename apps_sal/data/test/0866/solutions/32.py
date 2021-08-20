@@ -1,9 +1,8 @@
-X, Y = map(int, input().split())
+(X, Y) = map(int, input().split())
 if (X + Y) % 3 != 0:
     print(0)
-
 else:
-    # 経路
+
     def C(n, r, mod):
         num = 1
         den = 1
@@ -12,8 +11,8 @@ else:
             num %= mod
             den *= i + 1
             den %= mod
-        return (num * pow(den, mod - 2, mod)) % mod
-    mod = 10**9 + 7
+        return num * pow(den, mod - 2, mod) % mod
+    mod = 10 ** 9 + 7
     minimun = (X + Y) / 3
     if X >= minimun and Y >= minimun:
         X -= minimun

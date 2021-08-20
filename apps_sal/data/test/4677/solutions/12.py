@@ -6,4 +6,4 @@ for i in range(len(s)):
             ans.pop()
     else:
         ans.append(s[i])
-print((''.join(ans)))
+print(''.join(ans))

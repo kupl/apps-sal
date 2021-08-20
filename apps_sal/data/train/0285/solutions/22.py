@@ -1,4 +1,5 @@
 class Solution:
+
     def smallestRangeII(self, arr: List[int], k: int) -> int:
         arr.sort()
         best = arr[-1] - arr[0]

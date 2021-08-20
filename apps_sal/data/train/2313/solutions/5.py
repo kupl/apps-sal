@@ -1,10 +1,17 @@
-def f(): return list(map(int, input().split()))
-def g(j): return a[i] * b[j] + t[j]
-def h(j, k): return (t[i] - t[j]) * (b[j] - b[k]) < (t[j] - t[k]) * (b[i] - b[j])
+def f():
+    return list(map(int, input().split()))
+
+
+def g(j):
+    return a[i] * b[j] + t[j]
+
+
+def h(j, k):
+    return (t[i] - t[j]) * (b[j] - b[k]) < (t[j] - t[k]) * (b[i] - b[j])
 
 
 n = int(input())
-a, b = f(), f()
+(a, b) = (f(), f())
 t = [0] * n
 p = [0]
 for i in range(1, n):

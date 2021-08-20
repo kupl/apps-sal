@@ -1,7 +1,7 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 graph = [[] for _ in range(n)]
 for _ in range(m):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     u -= 1
     v -= 1
     graph[u].append(v)

@@ -1,4 +1,5 @@
 class Solution:
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         ln = len(customers)
         folks = 0
@@ -14,5 +15,4 @@ class Solution:
                 mxProfit = profit
                 mxProfitRotate = rotate + 1
             rotate += 1
-
         return -1 if mxProfit < 0 else mxProfitRotate

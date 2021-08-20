@@ -16,7 +16,6 @@ for b in range(n):
             else:
                 d[w] = 1
     a.append(s)
-
 for s in a:
     ans = s
     for i in range(len(s)):

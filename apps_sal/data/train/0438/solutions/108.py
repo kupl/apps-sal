@@ -1,9 +1,9 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         n = len(arr)
         if n == m:
             return m
-
         fa = [i for i in range(n)]
         sz = [0 for i in range(n)]
 
@@ -13,10 +13,10 @@ class Solution:
             return fa[i]
 
         def merge(x, y):
-            fx, fy = gf(x), gf(y)
+            (fx, fy) = (gf(x), gf(y))
             if fx != fy:
                 if sz[fx] < sz[fy]:
-                    fx, fy = fy, fx
+                    (fx, fy) = (fy, fx)
                 fa[fy] = fx
                 sz[fx] += sz[fy]
         ans = -1

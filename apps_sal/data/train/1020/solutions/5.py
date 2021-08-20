@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     x = 0
     for i in range(len(l)):
@@ -8,11 +8,10 @@ for _ in range(int(input())):
                 x += l[i]
             else:
                 x -= l[i]
+        elif x >= 0:
+            x -= l[i]
         else:
-            if x >= 0:
-                x -= l[i]
-            else:
-                x += l[i]
+            x += l[i]
     if abs(x) >= k:
         print(1)
     else:

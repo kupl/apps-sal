@@ -4,16 +4,14 @@ def main():
 
     def gcd(a, b):
         while b:
-            a, b = b, a % b
+            (a, b) = (b, a % b)
         return a
-
-    n, m, q = map(int, input().split())
+    (n, m, q) = map(int, input().split())
     g = gcd(n, m)
     n //= g
     m //= g
-
     for i in range(q):
-        s, x, t, y = map(int, input().split())
+        (s, x, t, y) = map(int, input().split())
         x -= 1
         y -= 1
         if s == 1:
@@ -25,10 +23,9 @@ def main():
         else:
             y //= m
         if x == y:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
-
+            print('NO')
     return 0
 
 

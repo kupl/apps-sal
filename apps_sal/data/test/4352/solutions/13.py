@@ -1,7 +1,4 @@
-# 入力
-A, B = map(int, input().split())
-
-# 処理
+(A, B) = map(int, input().split())
 if A == B:
     print('Draw')
 elif A == 1:

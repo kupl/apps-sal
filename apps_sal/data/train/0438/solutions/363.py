@@ -1,4 +1,5 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         from collections import defaultdict
         n = len(arr)
@@ -17,7 +18,6 @@ class Solution:
                 group_count[left_p - 1] += group_count[right_p - 1]
                 group_count[right_p - 1] = 0
                 dd[group_count[left_p - 1]] += 1
-            # print(left, right, group_count)
 
         def find(i):
             p = parent[i]
@@ -25,9 +25,8 @@ class Solution:
                 pp = find(p)
                 parent[i] = pp
             return parent[i]
-
         last = -1
-        for idx, num in enumerate(arr):
+        for (idx, num) in enumerate(arr):
             l[num - 1] = 1
             group_count[num - 1] = 1
             dd[1] += 1
@@ -35,11 +34,6 @@ class Solution:
                 union(num - 1, num)
             if num != n and l[num] == 1:
                 union(num, num + 1)
-
-            # print(group_count)
-
             if m in dd and dd[m] > 0:
                 last = idx + 1
-            # print(idx, num, l, parent)
-            # print(q)
         return last

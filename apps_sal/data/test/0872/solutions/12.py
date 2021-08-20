@@ -9,8 +9,8 @@ for i in a:
         even += 1
 if odd == n or even == n:
     for i in range(len(a)):
-        print(a[i], end=" ")
+        print(a[i], end=' ')
 else:
     a = sorted(a)
     for i in range(len(a)):
-        print(a[i], end=" ")
+        print(a[i], end=' ')

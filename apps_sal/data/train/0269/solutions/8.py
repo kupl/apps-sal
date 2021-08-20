@@ -1,4 +1,5 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         count = 0
         for i in range(len(nums)):
@@ -9,5 +10,4 @@ class Solution:
                 count = 0
             else:
                 count += 1
-
         return True

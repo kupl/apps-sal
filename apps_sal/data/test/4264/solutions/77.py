@@ -6,8 +6,7 @@ def ans136(N):
     for i in range(1, N + 1):
         if len(str(i)) % 2 == 1:
             odd_count += 1
-
     return odd_count
 
 
-print((ans136(N)))
+print(ans136(N))

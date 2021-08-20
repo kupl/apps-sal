@@ -1,5 +1,5 @@
 def correct(s):
-    st = ""
+    st = ''
     for c in s:
         if c == '5':
             st += 'S'

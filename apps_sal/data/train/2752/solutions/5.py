@@ -1,11 +1,12 @@
 def summary_ranges(nums):
+
     def f():
         cur = []
         for x in nums:
             if not cur:
                 cur = [x]
             elif x == cur[-1] + 1:
-                cur[1:] = x,
+                cur[1:] = (x,)
             elif x != cur[-1]:
                 yield cur
                 cur = [x]

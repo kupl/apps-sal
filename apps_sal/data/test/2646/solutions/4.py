@@ -1,10 +1,10 @@
 from collections import deque
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 roads = []
 for _ in range(N):
     roads.append([])
 for _ in range(M):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     roads[a - 1].append(b - 1)
     roads[b - 1].append(a - 1)
 visited = [float('inf')] * N
@@ -21,9 +21,6 @@ while q:
         if pre[next_room] == -1:
             pre[next_room] = now_room + 1
         q.append(next_room)
-# print(*roads)
-# print(*pre)
-
 print('Yes')
 for i in range(1, N):
-    print((pre[i]))
+    print(pre[i])

@@ -1,5 +1,5 @@
 def main():
-    x, y = input().split()
+    (x, y) = input().split()
     n = int(input())
     f = [int(x), int(y)]
     while len(f) < 6:

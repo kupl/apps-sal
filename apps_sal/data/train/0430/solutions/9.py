@@ -1,12 +1,13 @@
 class Solution:
+
     def distinctSubseqII(self, S: str) -> int:
-        MOD = 10**9 + 7
+        MOD = 10 ** 9 + 7
         memo = {}
 
         def dp(i, j):
             if i > j:
                 return 0
-            if(i, j) not in memo:
+            if (i, j) not in memo:
                 ans = 1 + dp(i + 1, j) * 2
                 for k in range(i + 1, j + 1):
                     if S[k] == S[i]:

@@ -12,6 +12,6 @@ for i in range(26):
     if chr(i + ord('A')) in str:
         big = 1
 if len(str) >= 5 and big and small and num:
-    print("Correct")
+    print('Correct')
 else:
-    print("Too weak")
+    print('Too weak')

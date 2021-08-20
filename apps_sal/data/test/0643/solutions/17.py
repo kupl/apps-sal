@@ -1,9 +1,9 @@
 import math
 N = int(input())
 for _ in range(N):
-    x, y, p, q = [int(x) for x in input().split()]
-    if (p == 0) or (p == q):
-        if (x * q == p * y):
+    (x, y, p, q) = [int(x) for x in input().split()]
+    if p == 0 or p == q:
+        if x * q == p * y:
             print(0)
         else:
             print(-1)

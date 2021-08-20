@@ -10,7 +10,7 @@ def dif(x):
     return c
 
 
-if list(sorted(dif(a))) == list(sorted(dif(b))) and a[0] == b[0] and a[n - 1] == b[n - 1]:
+if list(sorted(dif(a))) == list(sorted(dif(b))) and a[0] == b[0] and (a[n - 1] == b[n - 1]):
     print('Yes')
 else:
     print('No')

@@ -10,7 +10,7 @@ def mp():
 def main():
     t = int(input())
     for i in range(t):
-        l, r = mp()
+        (l, r) = mp()
         print(l, l * 2)
 
 
@@ -19,5 +19,4 @@ if deb:
     file = open('input.txt', 'w')
 else:
     input = sys.stdin.readline
-
 main()

@@ -1,11 +1,10 @@
-n, h = list(map(int, input().split()))
+(n, h) = list(map(int, input().split()))
 aa = []
 bb = []
 for _ in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     aa.append(a)
     bb.append(b)
-
 maxa = max(aa)
 bb.sort(reverse=True)
 nage = 0
@@ -16,16 +15,14 @@ for i in range(n):
         ch += 1
     else:
         break
-
 if h > nage:
     rest = h - nage
     ch1 = 0
     if rest % maxa == 0:
         ch1 += rest // maxa
     else:
-        ch1 += (rest // maxa + 1)
-    print((ch1 + ch))
-
+        ch1 += rest // maxa + 1
+    print(ch1 + ch)
 else:
     ans = 0
     hp = 0

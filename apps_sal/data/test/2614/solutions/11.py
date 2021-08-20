@@ -35,6 +35,5 @@ def solve():
 
 
 q = nn()
-
 for _ in range(q):
     solve()

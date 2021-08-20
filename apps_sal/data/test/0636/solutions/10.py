@@ -1,5 +1,5 @@
-n, k = list(map(int, input().split()))
-a = [(value, index) for index, value in enumerate(map(int, input().split()), 1)]
+(n, k) = list(map(int, input().split()))
+a = [(value, index) for (index, value) in enumerate(map(int, input().split()), 1)]
 a.sort()
 result = []
 i = 0

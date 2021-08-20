@@ -19,15 +19,14 @@ def solve():
         if wantother == 0:
             break
         opposite = s - i + 1
-        if i not in res and opposite not in res and i not in xset and opposite not in xset:
+        if i not in res and opposite not in res and (i not in xset) and (opposite not in xset):
             res.add(i)
             res.add(opposite)
             wantother -= 1
-
     print(len(res))
-    return " ".join(map(str, res))
+    return ' '.join(map(str, res))
 
 
 if sys.hexversion == 50594544:
-    sys.stdin = open("test.txt")
+    sys.stdin = open('test.txt')
 print(solve())

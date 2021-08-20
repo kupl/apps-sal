@@ -12,18 +12,24 @@ from queue import *
 from collections import *
 from re import *
 from string import *
-z, zz = input, lambda: list(map(int, z().split()))
-def zzz(): return [int(i) for i in stdin.readline().split()]
+(z, zz) = (input, lambda: list(map(int, z().split())))
 
 
-szz, graph, mod, szzz = lambda: sorted(zz()), {}, 10**9 + 7, lambda: sorted(zzz())
-def lcd(xnum1, xnum2): return (xnum1 * xnum2 // gcd(xnum1, xnum2))
+def zzz():
+    return [int(i) for i in stdin.readline().split()]
+
+
+(szz, graph, mod, szzz) = (lambda: sorted(zz()), {}, 10 ** 9 + 7, lambda: sorted(zzz()))
+
+
+def lcd(xnum1, xnum2):
+    return xnum1 * xnum2 // gcd(xnum1, xnum2)
 
 
 def prime(x):
-    p = ceil(x**.5) + 1
+    p = ceil(x ** 0.5) + 1
     for i in range(2, p):
-        if (x % i == 0 and x != 2) or x == 0:
+        if x % i == 0 and x != 2 or x == 0:
             return 0
     return 1
 
@@ -35,18 +41,9 @@ def dfs(u, visit, graph):
             dfs(i, visit, graph)
 
 
-###########################---Test-Case---#################################
-"""
-
-
-
-"""
-###########################---START-CODING---##############################
-
-
+'\n\n\n\n'
 num = 1
 num = int(z())
-
 for _ in range(num):
-    a, b, c = szzz()
+    (a, b, c) = szzz()
     print(c)

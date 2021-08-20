@@ -1,5 +1,4 @@
-# ABC166
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 cnt = [0] * (n + 1)
 for j in range(k):
     tmp = int(input())

@@ -1,7 +1,4 @@
-# 402B
-
 from sys import stdin
-
 __author__ = 'artyom'
 
 
@@ -9,7 +6,7 @@ def read_int_ary():
     return map(int, stdin.readline().strip().split())
 
 
-n, k = read_int_ary()
+(n, k) = read_int_ary()
 a = list(read_int_ary())
 mx = i_mx = 0
 for i in range(n):
@@ -24,7 +21,6 @@ for i in range(n):
     if count > mx:
         mx = count
         i_mx = i
-
 print(n - mx - 1)
 sh = a[i_mx] - k * i_mx
 for i in range(n):

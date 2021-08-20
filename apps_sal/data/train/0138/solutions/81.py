@@ -1,7 +1,8 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         ret = 0
-        l, r, p = 0, 0, 1
+        (l, r, p) = (0, 0, 1)
         i = 0
         while i <= len(nums):
             if i != len(nums) and nums[i] != 0:

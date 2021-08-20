@@ -15,7 +15,7 @@ def dfs(i, p, m):
             continue
         if cnt == m:
             cnt += 1
-        index = edge_index[(i, j)]
+        index = edge_index[i, j]
         ans[cnt].append(index)
         z = max(dfs(j, i, cnt), z)
         cnt += 1
@@ -34,13 +34,12 @@ edge_index = defaultdict()
 ans = [[] for i in range(n + 1)]
 tree = [[] for i in range(n + 1)]
 for i in range(n - 1):
-    x, y = put()
-    edge_index[(x, y)] = i + 1
-    edge_index[(y, x)] = i + 1
+    (x, y) = put()
+    edge_index[x, y] = i + 1
+    edge_index[y, x] = i + 1
     tree[x].append(y)
     tree[y].append(x)
-
-max_recur_size = 10**5 * 2 + 1000
+max_recur_size = 10 ** 5 * 2 + 1000
 max_stack_size = max_recur_size * 500
 sys.setrecursionlimit(max_recur_size)
 threading.stack_size(max_stack_size)

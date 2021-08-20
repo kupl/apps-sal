@@ -12,8 +12,8 @@ def solve(n, m):
 
 
 def main():
-    n, m = (int(x) for x in input().split())
-    print(' '.join(str(x) for x in solve(n, m)))
+    (n, m) = (int(x) for x in input().split())
+    print(' '.join((str(x) for x in solve(n, m))))
 
 
 def __starting_point():

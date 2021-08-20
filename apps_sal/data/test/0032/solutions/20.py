@@ -2,7 +2,7 @@ n = int(input())
 pos = 0
 is_correct = True
 for i in range(n):
-    d, direc = input().split()
+    (d, direc) = input().split()
     d = int(d)
     if is_correct:
         if pos == 0 and direc != 'South':
@@ -16,9 +16,8 @@ for i in range(n):
                 pos += d
             if pos < 0 or pos > 20000:
                 is_correct = False
-
 is_correct = is_correct and pos == 0
 if is_correct:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,13 +1,13 @@
 t = int(input())
 for _ in range(t):
-    n, m = map(int, input().split())
+    (n, m) = map(int, input().split())
     l = []
     for i in range(n):
         l.append(input())
     li = []
     for i in range(n):
         for j in range(m):
-            if(l[i][j] == '1'):
+            if l[i][j] == '1':
                 li.append((i + 1, j + 1))
     di = [0 for i in range(n + m - 2)]
     for x in range(len(li)):

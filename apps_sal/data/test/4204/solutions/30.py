@@ -1,20 +1,16 @@
 S = list(input())
 K = int(input())
-
 ref = 0
 for i in range(len(S)):
-    if S[i] == "1":
+    if S[i] == '1':
         ref += 1
     else:
         break
-
-ans = ""
+ans = ''
 if ref == 0:
     ans = S[0]
+elif ref >= K:
+    ans = '1'
 else:
-    if ref >= K:
-        ans = "1"
-    else:
-        ans = S[ref]
-
+    ans = S[ref]
 print(ans)

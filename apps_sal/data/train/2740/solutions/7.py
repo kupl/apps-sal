@@ -9,5 +9,5 @@ def wheat_from_chaff(values):
             tail -= 1
         if head >= tail:
             break
-        results[head], results[tail] = results[tail], results[head]
+        (results[head], results[tail]) = (results[tail], results[head])
     return results

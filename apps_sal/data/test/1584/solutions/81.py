@@ -15,7 +15,7 @@ def solve():
     for i in range(n):
         k = i
         for j in range(i + 1, n):
-            while(k < n and l[k] < l[i] + l[j]):
+            while k < n and l[k] < l[i] + l[j]:
                 k += 1
             res += k - (j + 1)
     print(res)

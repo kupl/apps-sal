@@ -1,8 +1,8 @@
 class Solution:
+
     def helper(self, n):
         if n == 1:
             return 0
-
         d = int(math.sqrt(n))
         cnt = 2
         sm = 1 + n
@@ -17,9 +17,7 @@ class Solution:
                     cnt += 1
             if cnt > 4:
                 return 0
-
             d -= 1
-
         if cnt == 4:
             return sm
         return 0
@@ -28,5 +26,4 @@ class Solution:
         res = 0
         for n in nums:
             res += self.helper(n)
-            #print(n, res)
         return res

@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = list(map(int, input().split()))
 A = [0] + A
 x = 0
@@ -9,7 +9,7 @@ for i in range(1, n + 1):
     if A[i] > 1:
         x = i
     sm[i] = A[i] + sm[i - 1]
-lim = int(2 * (10**18))
+lim = int(2 * 10 ** 18)
 ans = 0
 for i in range(1, n + 1):
     p = 1
@@ -18,7 +18,7 @@ for i in range(1, n + 1):
         if lim // A[j] > p:
             s = sm[i] - sm[j - 1]
             p *= A[j]
-            if p % k == 0 and p // k >= s and j - 1 - prev[j] >= p / k - s:
+            if p % k == 0 and p // k >= s and (j - 1 - prev[j] >= p / k - s):
                 ans += 1
         else:
             break

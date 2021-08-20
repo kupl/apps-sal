@@ -1,4 +1,4 @@
-a = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+a = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher']
 
 
 def goose_filter(b):

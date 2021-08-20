@@ -1,8 +1,8 @@
 def pattern(n):
-    s = ""
+    s = ''
     for i in range(1, n + 1):
         s += str(i) * i
         if i == n:
             break
-        s += "\n"
+        s += '\n'
     return s

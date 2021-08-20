@@ -8,6 +8,6 @@ for i in range(n):
             if t - j >= 11:
                 f = True
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

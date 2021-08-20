@@ -1,4 +1,5 @@
 class Solution:
+
     def hasAllCodes(self, s: str, k: int) -> bool:
         d = set()
         a = 2 ** k

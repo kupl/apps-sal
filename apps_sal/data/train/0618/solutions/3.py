@@ -1,6 +1,5 @@
-
 for _ in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     l = list(map(int, input().split()))
     l1 = []
     for i in range(k):
@@ -8,7 +7,6 @@ for _ in range(int(input())):
     l1.reverse()
     for i in l:
         l1.append(i)
-    # print(l1)
     sums = sum(l1[:k])
     sumlist = [sums]
     for i in range(len(l1) - k):

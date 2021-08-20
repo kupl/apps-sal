@@ -1,4 +1,5 @@
 class Union:
+
     def __init__(self, arr):
         self.weight = {}
         self.par = {}
@@ -12,13 +13,11 @@ class Union:
         return a
 
     def union(self, a, b):
-
-        pa, pb = self.find(a), self.find(b)
+        (pa, pb) = (self.find(a), self.find(b))
         if pa == pb:
             return
         if self.weight[pa] < self.weight[pb]:
-            pa, pb = pb, pa
-
+            (pa, pb) = (pb, pa)
         self.weight[pa] += self.weight[pb]
         self.par[pb] = pa
 
@@ -27,6 +26,7 @@ class Union:
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         union = Union(A)
         for a in A:
@@ -35,9 +35,7 @@ class Solution:
                 if a % j == 0:
                     union.union(a, a // j)
                     union.union(a, j)
-
         groups = collections.defaultdict(int)
         for a in A:
             groups[union.find(a)] += 1
-
         return max(groups.values())

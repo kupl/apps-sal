@@ -1,4 +1,5 @@
 class Solution(object):
+
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
@@ -7,21 +8,18 @@ class Solution(object):
         """
         if not matrix or not matrix[0]:
             return False
-
         m = len(matrix)
         n = len(matrix[0])
         cols = [[0] * m for _ in range(n)]
         for i in range(n):
             for j in range(m):
                 cols[i][j] = matrix[j][i]
-
         for i in range(m):
-            low, high = matrix[i][0], matrix[i][-1]
+            (low, high) = (matrix[i][0], matrix[i][-1])
             if low <= target <= high:
                 x = self.search(matrix[i], target)
                 if target == matrix[i][x] or (0 < x <= len(matrix[i]) and target == self.search(cols[x], target)):
                     return True
-
         return False
 
     def search(self, arr, target):
@@ -35,6 +33,4 @@ class Solution(object):
                 return mid
             else:
                 high = mid
-
         return low
-    # 1 2 4 5 6

@@ -1,2 +1,2 @@
 N = int(input())
-print("ABC{}".format(N))
+print('ABC{}'.format(N))

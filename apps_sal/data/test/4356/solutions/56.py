@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [input() for i in range(n)]
 b = [input() for j in range(m)]
 for i in range(n - m + 1):
@@ -7,10 +7,10 @@ for i in range(n - m + 1):
             if a[k + i][0 + j:m + j] != b[k]:
                 break
         else:
-            print("Yes")
+            print('Yes')
             break
     else:
         continue
     break
 else:
-    print("No")
+    print('No')

@@ -1,5 +1,7 @@
 class Solution:
+
     def findLengthOfShortestSubarray(self, arr: List[int]) -> int:
+
         def helper(i, j):
             if i < 0 or j >= len(arr):
                 return 0
@@ -16,10 +18,8 @@ class Solution:
                 intervals.append((start, end))
                 start = end
                 end = start + 1
-
         if start != len(arr):
             intervals.append((start, end))
-
         if len(intervals) < 2:
             return 0
         result = intervals[-1][0] - intervals[0][1]

@@ -1,4 +1,5 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
         maxque = collections.deque([])
         minque = collections.deque([])
@@ -20,5 +21,4 @@ class Solution:
                 end += 1
             else:
                 end += 1
-
         return len(nums) - start

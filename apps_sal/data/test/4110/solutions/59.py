@@ -1,13 +1,12 @@
-d, g = map(int, input().split())
+(d, g) = map(int, input().split())
 pc = [list(map(int, input().split())) for _ in range(d)]
-
 ans = 100 * 11
-for i in range(2**d):
+for i in range(2 ** d):
     sum = 0
     cnt = 0
     a = []
     for j in range(d):
-        if (i >> j) & 1 == 1:
+        if i >> j & 1 == 1:
             sum += (j + 1) * 100 * pc[j][0] + pc[j][1]
             cnt += pc[j][0]
             a.append(j)

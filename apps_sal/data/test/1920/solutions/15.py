@@ -5,7 +5,7 @@ for i in range(n):
     grid.append([tokens[0], int(tokens[1]), int(tokens[2])])
 ans = 0
 for i in range(366):
-    males, females = 0, 0
+    (males, females) = (0, 0)
     for j in range(n):
         if grid[j][1] - 1 <= i <= grid[j][2] - 1:
             if grid[j][0] == 'M':

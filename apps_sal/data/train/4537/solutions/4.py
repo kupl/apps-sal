@@ -1,5 +1,5 @@
 def bin2gray(bits):
-    return bits[:1] + [b1 ^ b2 for b1, b2 in zip(bits, bits[1:])]
+    return bits[:1] + [b1 ^ b2 for (b1, b2) in zip(bits, bits[1:])]
 
 
 def gray2bin(bits):

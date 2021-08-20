@@ -1,8 +1,9 @@
 class Solution:
-    def longestStrChain(self, words: List[str]) -> int:
-        def contains(w1, w2):
-            return all(l1 in w2 for l1 in w1)
 
+    def longestStrChain(self, words: List[str]) -> int:
+
+        def contains(w1, w2):
+            return all((l1 in w2 for l1 in w1))
         words.sort(key=lambda a: len(a))
         n = len(words)
         chain = [1] * n
@@ -14,5 +15,4 @@ class Solution:
                 if contains(words[i], words[j]) and chain[i] + 1 > chain[j]:
                     chain[j] = chain[i] + 1
                 j += 1
-
         return max(chain)

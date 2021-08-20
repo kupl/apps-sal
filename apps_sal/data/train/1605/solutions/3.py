@@ -1,16 +1,13 @@
-'''
+"""
 Created on Oct 12, 2014
 
 @author: Ismael
-'''
-
-#import time
-
-MOD = 10**9 + 7
+"""
+MOD = 10 ** 9 + 7
 
 
 def sumTermsArith1(firstTerm, r, nbTerms):
-    return (nbTerms * (2 * firstTerm + (nbTerms - 1) * r)) // 2
+    return nbTerms * (2 * firstTerm + (nbTerms - 1) * r) // 2
 
 
 def solve(a, b):
@@ -26,10 +23,6 @@ def solve2(a, b):
     return sumTermsArith1(reason, reason, b - 1) % MOD
 
 
-#t = time.clock()
-a, b = list(map(int, input().split()))
-#sol1 = solve(a,b)
+(a, b) = list(map(int, input().split()))
 sol2 = solve2(a, b)
 print(sol2)
-#print(sol1 == sol2)
-# print(time.clock()-t)

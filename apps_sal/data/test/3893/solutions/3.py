@@ -11,9 +11,8 @@ for i in range(n):
     a = int(line[0])
     b = int(line[1])
     c = int(line[2])
-    d1 = (a * x1 + b * y1 + c)
-    d2 = (a * x2 + b * y2 + c)
+    d1 = a * x1 + b * y1 + c
+    d2 = a * x2 + b * y2 + c
     if d1 * d2 < 0:
         ans += 1
-
 print(ans)

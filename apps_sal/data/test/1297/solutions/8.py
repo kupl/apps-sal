@@ -1,5 +1,5 @@
 def main():
-    a, cnt, res = '*', 1, 0
+    (a, cnt, res) = ('*', 1, 0)
     for b in input() + '*':
         if a != b:
             res += 1 - (cnt & 1)

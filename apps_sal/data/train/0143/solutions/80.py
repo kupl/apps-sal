@@ -1,4 +1,5 @@
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
         dp = [[] for i in range(len(tree))]
         dp[-1] = [1, 1, [tree[-1]]]

@@ -1,5 +1,4 @@
 s = list(map(int, list(input())))
-# s[0]=1,s[-1]=0,s[k]=s[n-k-1]は必要
 
 
 def main(s):

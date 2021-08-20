@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
 n = int(input())
 if n % 2 == 1:
     print(-1)
@@ -17,7 +11,6 @@ else:
     comp_size = [1 for i in range(n)]
     visited = [-1 for i in range(n)]
     visited[0] = 0
-
     while dfs_stack != []:
         current_node = dfs_stack[-1]
         can_go_further = False
@@ -29,12 +22,8 @@ else:
         if can_go_further == False:
             dfs_stack.pop(-1)
             comp_size[visited[current_node]] += comp_size[current_node]
-
     ans = 0
     for i in comp_size[1:]:
         if i % 2 == 0:
             ans += 1
     print(ans)
-
-
-# In[ ]:

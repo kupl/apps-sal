@@ -1,5 +1,5 @@
 def problemB():
-    n, k = list(map(int, input().strip().split()))
+    (n, k) = list(map(int, input().strip().split()))
     if k == 1:
         print(n)
     else:

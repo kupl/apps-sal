@@ -1,7 +1,6 @@
 N = int(input())
 H = list(map(int, input().split()))
 flag = True
-
 for i in range(1, len(H))[::-1]:
     if H[i] >= H[i - 1]:
         pass

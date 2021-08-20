@@ -1,4 +1,5 @@
 class Solution:
+
     def processQueries(self, queries: List[int], m: int) -> List[int]:
         p = []
         res = []
@@ -8,5 +9,4 @@ class Solution:
             idx = p.index(x)
             res.append(idx)
             p.insert(0, p.pop(idx))
-
         return res

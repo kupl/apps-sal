@@ -5,4 +5,3 @@ for i in range(int(input())):
     for i in range(len(l)):
         t.append(l[i] + i)
     print(max(t))
-# cook your dish here

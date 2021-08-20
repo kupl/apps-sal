@@ -1,13 +1,13 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position.sort()
         n = len(position)
 
         def distance(d):
-            p = 0  # current position
-            c = 1  # count of balls put into basket
+            p = 0
+            c = 1
             while p < n - 1:
-
                 for i in range(p, n):
                     if position[i] - position[p] >= d:
                         c += 1
@@ -16,11 +16,9 @@ class Solution:
                 if c == m:
                     return True
             return False
-
-        l, r = 0, position[-1]
+        (l, r) = (0, position[-1])
         while l < r:
             md = r - (r - l) // 2
-            # print(md,distance(md))
             if distance(md):
                 l = md
             else:

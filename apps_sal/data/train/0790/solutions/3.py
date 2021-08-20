@@ -1,4 +1,4 @@
-n, m, c = list(map(int, input().split()))
+(n, m, c) = list(map(int, input().split()))
 bit = [0] * (n + 1)
 
 
@@ -22,7 +22,7 @@ while m:
     m -= 1
     op = input().split()
     if len(op) == 4:
-        _, u, v, k = op
+        (_, u, v, k) = op
         u = int(u)
         v = int(v)
         k = int(k)
@@ -31,6 +31,6 @@ while m:
         add(u, k)
         add(v + 1, -k)
     else:
-        _, p = op
+        (_, p) = op
         p = int(p)
         print(get(p - 1) + c)

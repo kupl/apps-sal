@@ -1,5 +1,5 @@
 import numpy as np
-N, M, C = map(int, input().split())
+(N, M, C) = map(int, input().split())
 B = np.array(list(map(int, input().split())))
 ans = 0
 for _ in range(N):

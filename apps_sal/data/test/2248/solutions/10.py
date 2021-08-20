@@ -1,6 +1,5 @@
-# itne me hi thakk gaye?
 def bfs(x, g):
-    n, q = len(g), [x]
+    (n, q) = (len(g), [x])
     dist = [0 if y == x else -1 for y in range(n)]
     i = 0
     while i < len(q):
@@ -13,12 +12,10 @@ def bfs(x, g):
     return (q[-1], dist[q[-1]])
 
 
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 g = [[] for _ in range(n)]
-
 for _ in range(m):
-    a, b = map(lambda x: int(x) - 1, input().split())
+    (a, b) = map(lambda x: int(x) - 1, input().split())
     g[a].append(b)
     g[b].append(a)
-
 print(bfs(bfs(0, g)[0], g)[1])

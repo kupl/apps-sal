@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         dp = []
         for num in nums:
@@ -17,7 +18,7 @@ class Solution:
         dic = {}
         res = 0
         zero = -1
-        for i, num in enumerate(dp):
+        for (i, num) in enumerate(dp):
             if num > 0:
                 if 1 not in dic:
                     res = max(res, i - zero)
@@ -27,9 +28,8 @@ class Solution:
             elif num == 0:
                 dic = {}
                 zero = i
+            elif -1 not in dic:
+                dic[-1] = i
             else:
-                if -1 not in dic:
-                    dic[-1] = i
-                else:
-                    res = max(res, i - dic[-1])
+                res = max(res, i - dic[-1])
         return res

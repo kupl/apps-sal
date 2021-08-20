@@ -1,13 +1,10 @@
-s, v1, v2, t1, t2 = (int(x) for x in input().split())
-
+(s, v1, v2, t1, t2) = (int(x) for x in input().split())
 ans1 = t1 * 2 + s * v1
 ans2 = t2 * 2 + s * v2
-
 if ans1 < ans2:
-    ans = "First"
+    ans = 'First'
+elif ans1 == ans2:
+    ans = 'Friendship'
 else:
-    if ans1 == ans2:
-        ans = "Friendship"
-    else:
-        ans = "Second"
+    ans = 'Second'
 print(ans)

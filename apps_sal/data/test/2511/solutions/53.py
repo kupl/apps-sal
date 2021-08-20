@@ -1,15 +1,13 @@
 import sys
-
-
 sys.setrecursionlimit(10 ** 6)
 
 
 def main():
     MOD = 10 ** 9 + 7
-    N, K = list(map(int, input().split(' ')))
+    (N, K) = list(map(int, input().split(' ')))
     adj = [[] for _ in range(N)]
     for _ in range(N - 1):
-        a, b = list(map(lambda x: int(x) - 1, input().split(' ')))
+        (a, b) = list(map(lambda x: int(x) - 1, input().split(' ')))
         adj[a].append(b)
         adj[b].append(a)
     if K <= 2:
@@ -35,7 +33,6 @@ def main():
         p %= MOD
 
     def dfs(n=0, p=-1):
-        # node, parentの色を固定した時の色の塗り方
         children = [c for c in adj[n] if c != p]
         if len(children) == 0:
             return 1
@@ -47,8 +44,7 @@ def main():
             ret *= dfs(c, n)
             ret %= MOD
         return ret
-
-    print((K * dfs()) % MOD)
+    print(K * dfs() % MOD)
 
 
 def __starting_point():

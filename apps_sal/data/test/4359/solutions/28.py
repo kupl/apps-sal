@@ -6,7 +6,7 @@ for p in permutations(ls):
     for x in p[:-1]:
         t += x
         if t % 10 != 0:
-            t += 10 - (t % 10)
+            t += 10 - t % 10
     t += p[-1]
     ans = min(ans, t)
 print(ans)

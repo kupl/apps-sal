@@ -1,10 +1,10 @@
 class Solution:
+
     def countSquares(self, matrix: List[List[int]]) -> int:
         m = len(matrix)
         n = len(matrix[0])
         if m == 1 and n == 1:
             return matrix[0][0]
-
         count = [[[0] * 3 for i in range(n + 1)] for _ in range(m + 1)]
         res = 0
         for i in range(1, m + 1):

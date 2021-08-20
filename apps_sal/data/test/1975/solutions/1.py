@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 print(str(n + m - 1))
 for i in range(1, m + 1):
     print('1 ' + str(i))

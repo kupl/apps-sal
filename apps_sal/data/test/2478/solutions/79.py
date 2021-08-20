@@ -5,9 +5,8 @@ rc = 0
 for s in S:
     if s == '(':
         rc += 1
+    elif rc:
+        rc -= 1
     else:
-        if rc:
-            rc -= 1
-        else:
-            lc += 1
+        lc += 1
 print('(' * lc + S + ')' * rc)

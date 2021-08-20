@@ -8,7 +8,6 @@ uni = [0] * n
 uni[k - 1] = 1
 for _ in range(t):
     i = [int(k) for k in input().split()]
-
     if i[0] == 1:
         uni.insert(i[1] - 1, 0)
     if i[0] == 0:

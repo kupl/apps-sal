@@ -1,18 +1,11 @@
 import io
 import os
-#input = io.StringIO(os.read(0, os.fstat(0).st_size).decode()).readline
-
 n = int(input())
-
 a = list(map(int, input().split()))
-
 b = list(map(int, input().split()))
-
 f = True
 if 1 in b:
-
     j = b.index(1)
-
     for i in range(n - j):
         d = i + 1 - b[j + i]
         if d != 0:
@@ -25,8 +18,6 @@ if 1 in b:
         else:
             print(j)
             f = False
-
-
 if f:
     s = -2
     for k in range(n):

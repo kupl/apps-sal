@@ -1,8 +1,4 @@
-#!/usr/bin/env pypy3
-
 import collections
-
-
 INF = 10 ** 10
 
 
@@ -21,9 +17,9 @@ def solve(n, t, xs):
 
 
 def main():
-    n, t = list(map(int, input().split()))
+    (n, t) = list(map(int, input().split()))
     xs = list(map(int, input().split()))
-    print((solve(n, t, xs)))
+    print(solve(n, t, xs))
 
 
 def __starting_point():

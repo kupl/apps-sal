@@ -6,9 +6,8 @@ def reverse_number(n):
         for i in number:
             if i.isdigit() == True:
                 list.insert(0, i)
-
-            new_num = "".join(list)
-        return(0 - int(new_num))
+            new_num = ''.join(list)
+        return 0 - int(new_num)
     else:
         for i in number:
             if i.isdigit() == True:
@@ -18,5 +17,5 @@ def reverse_number(n):
                 index += 1
             else:
                 break
-        new_num = "".join(list[index::])
-        return (int(new_num))
+        new_num = ''.join(list[index:])
+        return int(new_num)

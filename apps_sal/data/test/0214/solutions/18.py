@@ -11,7 +11,7 @@ def li():
 
 
 ss = [input().strip(), input().strip()]
-s = [a + b for a, b in zip(ss[0], ss[1])] + ['XX']
+s = [a + b for (a, b) in zip(ss[0], ss[1])] + ['XX']
 n = len(s)
 
 

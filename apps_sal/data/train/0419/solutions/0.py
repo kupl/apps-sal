@@ -1,4 +1,5 @@
 class Solution:
+
     def bulbSwitch(self, n):
         """
         :type n: int
@@ -7,4 +8,4 @@ class Solution:
         if n == 0:
             return 0
         else:
-            return int(n**0.5)
+            return int(n ** 0.5)

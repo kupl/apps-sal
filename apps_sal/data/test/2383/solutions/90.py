@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(s) for s in input().split()]
-
 num = 0
 current = 1
 for i in range(n):

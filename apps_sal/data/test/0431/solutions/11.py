@@ -2,12 +2,11 @@ import sys
 
 
 def main():
-    n, m = map(int, sys.stdin.readline().split())
+    (n, m) = map(int, sys.stdin.readline().split())
     m += 2
     z = []
     for i in range(n):
         z.append(sys.stdin.readline().rstrip())
-
     ans = 0
     y = n - 1
     x = 0
@@ -43,7 +42,6 @@ def main():
     for i in range(len(q)):
         if q[i][2] < ans:
             ans = q[i][2]
-
     print(ans)
 
 

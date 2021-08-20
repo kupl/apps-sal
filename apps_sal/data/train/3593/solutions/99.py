@@ -5,4 +5,4 @@ def capitalize(s, ind):
             s_list[i] = s_list[i].upper()
         except IndexError:
             pass
-    return "".join(s_list)
+    return ''.join(s_list)

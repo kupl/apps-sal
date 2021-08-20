@@ -5,6 +5,6 @@ for i in range(len(s)):
     if s[i] != a[s[len(s) - i - 1]]:
         f = 0
 if f:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

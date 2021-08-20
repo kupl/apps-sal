@@ -1,7 +1,7 @@
 import bisect
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-a1, a2 = [], []
+(a1, a2) = ([], [])
 n1 = n // 2
 
 
@@ -23,10 +23,8 @@ def sums2(i, sum=0):
 
 sums1(0)
 sums2(n1)
-
 ans = 0
 end = len(a2) - 1
-
 a1 = sorted(set(a1))
 a2 = sorted(set(a2))
 for i in a2:

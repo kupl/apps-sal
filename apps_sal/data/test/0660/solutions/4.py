@@ -1,4 +1,4 @@
-n, b, p = map(int, input().split())
+(n, b, p) = map(int, input().split())
 ans_b = 0
 ans_p = n * p
 while n != 1:

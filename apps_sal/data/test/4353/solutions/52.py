@@ -1,3 +1,3 @@
 s = input()
-ans = s.replace(",", " ")
+ans = s.replace(',', ' ')
 print(ans)

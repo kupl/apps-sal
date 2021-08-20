@@ -2,6 +2,7 @@ from typing import List
 
 
 class Solution:
+
     def strengths(self, arr, length):
         ans = []
         m = arr[(length - 1) // 2]
@@ -18,20 +19,18 @@ class Solution:
         i = 0
         a = length - 1
         while count < k and i != a:
-            # print(count,k)
             if strength[a] > strength[i]:
                 ans.append(arr[a])
                 a -= 1
             elif strength[a] < strength[i]:
                 ans.append(arr[i])
                 i += 1
+            elif arr[a] > arr[i]:
+                ans.append(arr[a])
+                a -= 1
             else:
-                if arr[a] > arr[i]:
-                    ans.append(arr[a])
-                    a -= 1
-                else:
-                    ans.append(arr[i])
-                    i += 1
+                ans.append(arr[i])
+                i += 1
             count += 1
         if count < k and i == a:
             ans.append(arr[(length - 1) // 2])

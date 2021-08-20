@@ -3,7 +3,7 @@ def count_feelings(s, arr):
     for i in arr:
         r = True
         for j in i:
-            if (j not in s) or (i.count(j) > s.count(j)):
+            if j not in s or i.count(j) > s.count(j):
                 r = False
         if r:
             c += 1

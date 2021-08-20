@@ -18,7 +18,7 @@ def main():
             break
     if bo:
         for x in range(n):
-            print(store[x], end=" ")
+            print(store[x], end=' ')
     else:
         print(-1)
 

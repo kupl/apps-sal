@@ -1,15 +1,17 @@
 from collections import defaultdict
 import sys
-def input(): return sys.stdin.readline().strip()
+
+
+def input():
+    return sys.stdin.readline().strip()
 
 
 def main():
-    N, P = map(int, input().split())
+    (N, P) = map(int, input().split())
     S = input()
-
     ans = 0
     if P in [2, 5]:
-        for i, c in enumerate(S[::-1]):
+        for (i, c) in enumerate(S[::-1]):
             if int(c) % P == 0:
                 ans += N - i
     else:
@@ -23,9 +25,7 @@ def main():
             d[num] += 1
             ten *= 10
             ten %= P
-
         ans = sum([d[i] * (d[i] - 1) // 2 for i in range(P)])
-
     print(ans)
 
 

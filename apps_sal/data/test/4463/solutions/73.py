@@ -6,6 +6,6 @@ b.reverse()
 a = ''.join(a)
 b = ''.join(b)
 if a < b:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

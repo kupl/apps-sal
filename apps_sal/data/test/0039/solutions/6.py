@@ -1,4 +1,3 @@
-# python3
 from operator import eq
 
 
@@ -10,8 +9,7 @@ def is_palindrome(string):
 def main():
     string = input()
     first = string[0]
-
-    if all(symbol == first for symbol in string):
+    if all((symbol == first for symbol in string)):
         print(0)
     else:
         print(len(string) - 1 if is_palindrome(string) else len(string))

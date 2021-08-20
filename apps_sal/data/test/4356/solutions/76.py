@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 A = [input() for _ in range(n)]
 B = [input() for _ in range(m)]
 
@@ -11,15 +11,14 @@ def dfs(y, x):
     return True
 
 
-ans = "No"
+ans = 'No'
 for y in range(n - m + 1):
     for x in range(n - m + 1):
         if A[y][x] == B[0][0]:
             if dfs(y, x):
-                ans = "Yes"
+                ans = 'Yes'
                 break
     else:
         continue
     break
-
 print(ans)

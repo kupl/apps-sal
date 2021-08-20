@@ -2,7 +2,7 @@ result = []
 pol = 'polycarp'
 for i in range(int(input())):
     point = False
-    new_person, _, was = [x.lower() for x in input().split()]
+    (new_person, _, was) = [x.lower() for x in input().split()]
     if was == pol:
         result.append([pol, new_person])
     elif was in [x[-1] for x in result]:
@@ -22,6 +22,5 @@ for i in range(int(input())):
                     break
             if point:
                 break
-
-m = max(len(line) for line in result)
+m = max((len(line) for line in result))
 print(m)

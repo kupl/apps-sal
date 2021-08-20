@@ -1,4 +1,5 @@
 class Solution:
+
     def convertToTitle(self, n):
         """
         :type n: int
@@ -10,5 +11,4 @@ class Solution:
             n -= 1
             result = letters[n % 26] + result
             n //= 26
-
         return result

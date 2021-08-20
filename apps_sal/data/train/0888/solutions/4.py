@@ -1,5 +1,4 @@
 def kmp(s, t, lps):
-
     n = len(s)
     m = len(t)
     count = [0 for x in range(n)]
@@ -30,12 +29,11 @@ def lpsa(t, m):
             l += 1
             lps[i] = l
             i += 1
+        elif l != 0:
+            l = lps[l - 1]
         else:
-            if l != 0:
-                l = lps[l - 1]
-            else:
-                lps[i] = 0
-                i += 1
+            lps[i] = 0
+            i += 1
     return lps
 
 
@@ -47,7 +45,7 @@ lps = lpsa(t, m)
 one = kmp(s, t, lps)[-1]
 count = kmp(s + s, t, lps)
 two = count[-1]
-three = two - (2 * one)
+three = two - 2 * one
 for _ in range(int(input())):
     q = int(input())
     v = q // n
@@ -59,52 +57,3 @@ for _ in range(int(input())):
         e = q % n
         ans = count[e - 1]
     print(ans)
-    # if one:
-    #     if q>n:
-    #         hh=q//n
-    #         i=0
-    #         for i in range(hh):
-    #             ans+=one
-    #     print(ans)
-    # elif two:
-    #     hh=q//(n+n)
-    #     i=0
-    #     for i in range(hh):
-    #         ans+=two
-    #     print(ans)
-    # elif three:
-    #     hh=q//(n+n+n)
-    #     i=0
-    #     for i in range(hh):
-    #         ans+=three
-    #     print(ans)
-    # else:
-    #     print(0)
-    # S=''
-    # if q<n:
-    #     for i in range(q):
-    #         S+=s[i]
-    #     kmp(S,t,lps)
-
-    # elif q==n:
-    #     kmp(s,t,lps)
-
-    # elif q%n==0:
-    #     tt=q//n
-    #     for i in range(tt):
-    #         S+=s
-    #     kmp(S,t,lps)
-
-    # elif q%n!=0:
-    #     temp=0
-    #     while temp<q:
-    #         temp+=n
-    #     temp=temp-n
-    #     tem=temp//n
-    #     for i in range(tem):
-    #         S+=s
-
-    #     h=q-temp
-    #     for i in range(h):
-    #         S+=s[i]
-    #     kmp(S,t,lps)

@@ -1,4 +1,3 @@
-
 def sum_digits(number):
     sum = 0
     number = abs(number)

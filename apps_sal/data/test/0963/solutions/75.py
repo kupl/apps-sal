@@ -1,9 +1,8 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 lr = [list(map(int, input().split())) for _ in range(k)]
 mod = 998244353
 dp = [0] * (n + 1)
 imos = [0] * (n + 1)
-
 for i in range(n):
     if i == 0:
         tmp = 1

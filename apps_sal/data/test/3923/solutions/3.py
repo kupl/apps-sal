@@ -1,4 +1,4 @@
-n, a, b = list(map(int, input().strip().split()))
+(n, a, b) = list(map(int, input().strip().split()))
 
 
 def pp(seq):
@@ -10,13 +10,11 @@ def cycle(start, size):
 
 
 def fail_sequence(target, acc=[]):
-    ''' recursion failure, bloody python '''
-
+    """ recursion failure, bloody python """
     if target % a == 0:
         return acc + [a] * (target // a)
     if target % b == 0:
         return acc + [b] * (target // b)
-
     if a <= target:
         acc.append(a)
         res = sequence(target - a, acc)
@@ -30,21 +28,20 @@ def fail_sequence(target, acc=[]):
 
 
 def sequence(target, a, b):
-    dp = {0: (0, 0)}  # num of (a, b) needed to reach sum
+    dp = {0: (0, 0)}
     for i in range(1, target + 1):
         if i - a in dp:
-            na, nb = dp[i - a]
+            (na, nb) = dp[i - a]
             dp[i] = (na + 1, nb)
         elif i - b in dp:
-            na, nb = dp[i - b]
+            (na, nb) = dp[i - b]
             dp[i] = (na, nb + 1)
-    na, nb = dp.get(target, (0, 0))
+    (na, nb) = dp.get(target, (0, 0))
     return [a] * na + [b] * nb
 
 
 def sol():
     seq = sequence(n, a, b)
-
     if seq:
         res = []
         i = 1

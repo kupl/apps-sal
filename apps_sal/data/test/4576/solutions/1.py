@@ -1,5 +1,4 @@
 def main():
-
     five_hundred = int(input())
     one_hundred = int(input())
     fifty = int(input())
@@ -10,7 +9,6 @@ def main():
             for k in range(fifty + 1):
                 if 500 * i + 100 * j + 50 * k == x:
                     ans += 1
-
     print(ans)
 
 

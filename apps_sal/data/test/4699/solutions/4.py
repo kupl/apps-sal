@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = list(input().split())
 ans = n
 find = False
@@ -11,5 +11,4 @@ while find == False:
             break
     if find == False:
         ans += 1
-
 print(ans)

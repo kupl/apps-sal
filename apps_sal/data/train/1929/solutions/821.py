@@ -9,7 +9,6 @@ class StreamChecker:
                     ptr[ch] = {}
                 ptr = ptr[ch]
             ptr[None] = {}
-
         self.ptrs = []
 
     def query(self, letter: str) -> bool:
@@ -19,14 +18,8 @@ class StreamChecker:
             if letter in ptr:
                 ptrs.append(ptr[letter])
                 ret |= None in ptr[letter]
-
         if letter in self.trie:
             ptrs.append(self.trie[letter])
             ret |= None in self.trie[letter]
-
         self.ptrs = ptrs
         return ret
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

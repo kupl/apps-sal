@@ -1,5 +1,5 @@
 a = list(input().split())
-b, c = 1, 0
+(b, c) = (1, 0)
 for i in a:
     if i == '-':
         c = c + 1
@@ -15,7 +15,6 @@ if b - c * n <= n and n <= b * n - c:
     c0 = []
     for i in range(c):
         c0.append(1)
-
     x = b - c - n
     if x < 0:
         i = 0
@@ -46,4 +45,4 @@ if b - c * n <= n and n <= b * n - c:
         elif i == '=':
             print(s + ' = ' + str(n))
 else:
-    print('Impossible')  # '''
+    print('Impossible')

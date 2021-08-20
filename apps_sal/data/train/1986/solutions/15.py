@@ -1,5 +1,7 @@
 class Solution:
+
     def circularPermutation(self, n: int, start: int) -> List[int]:
+
         def extendPerm(arr):
             arr.extend(['1' + num for num in arr[::-1]])
             for i in range(len(arr) // 2):

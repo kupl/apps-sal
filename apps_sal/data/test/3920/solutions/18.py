@@ -15,6 +15,6 @@ def intSqrt(x):
 
 a = [int(x) for x in input().split()]
 area = sum([a[i] * a[i + 1] for i in range(0, 6, 2)])
-sides = [(a[i]**2 + a[i + 1]**2 + a[i] * a[i + 1])**0.5 for i in range(0, 6, 2)]
+sides = [(a[i] ** 2 + a[i + 1] ** 2 + a[i] * a[i + 1]) ** 0.5 for i in range(0, 6, 2)]
 semi = sum(sides) / 2
 print(area + int(intSqrt(16 * semi * (semi - sides[0]) * (semi - sides[1]) * (semi - sides[2]) / 3)))

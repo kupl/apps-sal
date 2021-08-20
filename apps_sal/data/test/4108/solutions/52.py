@@ -8,7 +8,6 @@ SArg = np.argsort(S)
 TArg = np.argsort(T)
 SAgT = S[TArg]
 TAgS = T[SArg]
-
 SBef = ''
 TBef = ''
 SFlag = True
@@ -21,7 +20,6 @@ for ST in range(0, N):
             break
     SBef = SNow
     TBef = TNow
-
 SBef = ''
 TBef = ''
 TFlag = True
@@ -34,7 +32,6 @@ for TT in range(0, N):
             break
     SBef = SNow
     TBef = TNow
-
 if SFlag and TFlag:
     print('Yes')
 else:

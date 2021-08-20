@@ -1,11 +1,9 @@
 from functools import lru_cache
 
-# Your new function as given to you by me, your boss.
-
 
 @lru_cache(maxsize=None)
 def cl(p, n):
-    if (n == 0):
+    if n == 0:
         return 0
     q = -1
     for i in range(1, n + 1):

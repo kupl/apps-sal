@@ -1,7 +1,7 @@
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 arr = []
 for _ in range(n):
-    l, r = map(int, input().split())
+    (l, r) = map(int, input().split())
     arr.append((l, r))
 res = 0
 res += (arr[0][0] - 1) % x

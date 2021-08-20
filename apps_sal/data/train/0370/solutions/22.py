@@ -16,7 +16,7 @@ class DSU:
         return root
 
     def union(self, x, y):
-        r1, r2 = self.find(x), self.find(y)
+        (r1, r2) = (self.find(x), self.find(y))
         if r1 == r2:
             return
         if self.size[r1] < self.size[r2]:
@@ -46,7 +46,7 @@ class Solution:
     def largestComponentSize(self, A: List[int]) -> int:
         dsu = DSU(len(A))
         prime_to_idx = {}
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             primes = self.getPrimeFactors(n)
             for prime in primes:
                 if prime in prime_to_idx:

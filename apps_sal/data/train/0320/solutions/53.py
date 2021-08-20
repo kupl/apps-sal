@@ -10,15 +10,14 @@ class Solution:
             else:
                 num = num >> 1
                 m += 1
-        return a, m
+        return (a, m)
 
     def minOperations(self, nums: List[int]) -> int:
         adds = 0
         mults = 0
         for i in range(len(nums)):
-            a, m = self.calc(nums[i])
+            (a, m) = self.calc(nums[i])
             if mults < m:
                 mults = m
             adds += a
-
         return mults + adds

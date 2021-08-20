@@ -1,9 +1,8 @@
-def f(): return map(int, input().split())
+def f():
+    return map(int, input().split())
 
 
-n, m, k = f()
-
-# Union_Find
+(n, m, k) = f()
 p = [-1] * n
 
 
@@ -14,11 +13,11 @@ def root(x):
 
 
 def unite(x, y):
-    x, y = root(x), root(y)
+    (x, y) = (root(x), root(y))
     if x == y:
         return
     if x > y:
-        x, y = y, x
+        (x, y) = (y, x)
     p[x] += p[y]
     p[y] = x
 
@@ -33,14 +32,14 @@ def size(x):
 
 l = [-1] * n
 for _ in range(m):
-    a, b = f()
+    (a, b) = f()
     unite(a - 1, b - 1)
     l[a - 1] -= 1
     l[b - 1] -= 1
 for i in range(n):
     l[i] += size(i)
 for _ in range(k):
-    c, d = f()
+    (c, d) = f()
     if same(c - 1, d - 1):
         l[c - 1] -= 1
         l[d - 1] -= 1

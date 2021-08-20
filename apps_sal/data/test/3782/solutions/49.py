@@ -1,9 +1,9 @@
-N, K, Q = map(int, input().split())
+(N, K, Q) = map(int, input().split())
 A = [int(a) for a in input().split()]
 S = set(A)
 I = sorted(list(S))
 m = len(I)
-D = {a: i for i, a in enumerate(I)}
+D = {a: i for (i, a) in enumerate(I)}
 ans = 1 << 30
 for i in range(m):
     l = I[i]

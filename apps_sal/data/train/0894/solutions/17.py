@@ -21,7 +21,6 @@ while t > 0:
     c = aindex
     for i in range(n):
         c[i] = 0
-
     for i in range(n):
         for j in range(n - i - 1):
             if a[j] > a[j + 1]:
@@ -43,18 +42,7 @@ while t > 0:
     for i in range(n):
         afinal[aindex[i]] = i + 1
         bfinal[bindex[i]] = i + 1
-
-    """
-    for i in range(n):
-        max=-1
-        maxindex =0
-        for j in range(n):
-            temp=~(a[i]^b[j])
-            if temp>max and c[j]==0:
-                max = temp
-                maxindex=j
-        bindex[maxindex]=i+1          
-        c[maxindex]=1"""
+    '\n    for i in range(n):\n        max=-1\n        maxindex =0\n        for j in range(n):\n            temp=~(a[i]^b[j])\n            if temp>max and c[j]==0:\n                max = temp\n                maxindex=j\n        bindex[maxindex]=i+1          \n        c[maxindex]=1'
     for i in afinal:
         print(i, end=' ')
     print()

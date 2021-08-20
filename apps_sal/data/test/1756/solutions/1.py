@@ -2,7 +2,7 @@ def sumprog(a, b):
     return (a + b) * (b - a + 1) // 2
 
 
-n, x = map(int, input().split())
+(n, x) = map(int, input().split())
 d = list(map(int, input().split())) * 2
 max_hugs = 0
 i = 0

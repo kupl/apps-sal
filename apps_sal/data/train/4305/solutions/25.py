@@ -1,13 +1,13 @@
 def order_weight(strng):
-    if strng == "":
+    if strng == '':
         return strng
     else:
         lss = strng.split()
         new_ls = []
         dic = {}
-        value = ""
+        value = ''
         for elements in lss:
-            new = sum(float(element) for element in elements)
+            new = sum((float(element) for element in elements))
             if new in new_ls:
                 while new in new_ls:
                     new = float(new)
@@ -27,7 +27,7 @@ def order_weight(strng):
                         new_ls[m] = new_ls[n]
                         new_ls[n] = t
         for i in range(len(new_ls) - 1):
-            value += "".join(dic.get(new_ls[i]))
-            value += " "
-        value += "".join(dic.get(new_ls[-1]))
+            value += ''.join(dic.get(new_ls[i]))
+            value += ' '
+        value += ''.join(dic.get(new_ls[-1]))
         return value

@@ -1,2 +1,2 @@
 def vaporcode(s):
-    return(("  ".join(("  ".join((s.upper()))).split())))
+    return '  '.join('  '.join(s.upper()).split())

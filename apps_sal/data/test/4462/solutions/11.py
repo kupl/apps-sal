@@ -1,5 +1,4 @@
 import sys
-
 read = sys.stdin.read
 readline = sys.stdin.readline
 readlines = sys.stdin.readlines
@@ -9,12 +8,10 @@ MOD = 1000000007
 
 
 def main():
-    N, *A = list(map(int, read().split()))
-
-    m = sum(1 for a in A if a % 2 == 1)
-    n2 = sum(1 for a in A if a % 2 == 0 and a % 4 != 0)
-    n4 = sum(1 for a in A if a % 4 == 0)
-
+    (N, *A) = list(map(int, read().split()))
+    m = sum((1 for a in A if a % 2 == 1))
+    n2 = sum((1 for a in A if a % 2 == 0 and a % 4 != 0))
+    n4 = sum((1 for a in A if a % 4 == 0))
     if m <= n4:
         print('Yes')
     elif m == n4 + 1:
@@ -24,7 +21,6 @@ def main():
             print('No')
     else:
         print('No')
-
     return
 
 

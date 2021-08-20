@@ -1,6 +1,5 @@
 import os
-
-N = int(3e5 + 233)
+N = int(300000.0 + 233)
 MOD = 998244353
 ans = []
 for i in range(N):
@@ -26,5 +25,5 @@ for i in range(1, n + 1):
     x = dig[i - 1]
     x *= inv
     x %= MOD
-    ans[i] = (((1 + ans[i - 1]) % MOD) * fp(x, MOD - 2)) % MOD
+    ans[i] = (1 + ans[i - 1]) % MOD * fp(x, MOD - 2) % MOD
 print(ans[n])

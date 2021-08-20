@@ -4,7 +4,6 @@ def count_positives_sum_negatives(arr):
     if arr == []:
         return []
     else:
-
         for number in arr:
             if number > 0:
                 count = count + 1

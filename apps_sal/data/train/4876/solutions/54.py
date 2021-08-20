@@ -1,6 +1,6 @@
-def hello(name=""):
+def hello(name=''):
     if len(name.strip()) == 0:
-        return "Hello, World!"
+        return 'Hello, World!'
     else:
         a = name.title()
-        return ("Hello, " + a + "!")
+        return 'Hello, ' + a + '!'

@@ -11,10 +11,9 @@ if n % 2 == 0:
         print(1)
     else:
         print(2)
+elif is_prime(n):
+    print(1)
+elif is_prime(n - 2):
+    print(2)
 else:
-    if is_prime(n):
-        print(1)
-    elif is_prime(n - 2):
-        print(2)
-    else:
-        print(3)
+    print(3)

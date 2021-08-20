@@ -1,4 +1,5 @@
 class CodeforcesTask643ASolution:
+
     def __init__(self):
         self.result = ''
         self.ball_count = 0
@@ -6,7 +7,7 @@ class CodeforcesTask643ASolution:
 
     def read_input(self):
         self.ball_count = int(input())
-        self.colors = [int(x) for x in input().split(" ")]
+        self.colors = [int(x) for x in input().split(' ')]
 
     def process_task(self):
         color_results = [0 for x in range(self.ball_count)]
@@ -23,7 +24,7 @@ class CodeforcesTask643ASolution:
                     if best_id > self.colors[y] - 1:
                         best_id = self.colors[y] - 1
                 color_results[best_id] += 1
-        self.result = " ".join([str(x) for x in color_results])
+        self.result = ' '.join([str(x) for x in color_results])
 
     def get_result(self):
         return self.result

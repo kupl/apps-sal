@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         words = [x for x in sorted(words, key=lambda w: len(w))]
         total = len(words)
@@ -7,7 +8,6 @@ class Solution:
             for j in range(i):
                 if self.predecessor(words[j], words[i]) and count[i] < count[j] + 1:
                     count[i] = count[j] + 1
-        # print(count)
         return max(count)
 
     def predecessor(self, word1, word2):

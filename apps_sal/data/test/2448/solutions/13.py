@@ -1,20 +1,15 @@
-'''
+"""
 Created on 2019. 9. 21.
 
 @author: kkhh88
-'''
-#q = int(input())
-#x, y = map(int,input().split(' '))
-
+"""
 import math
 q = int(input())
 for _ in range(q):
     n = int(input())
-    a, b, c = map(int, input().split(' '))
-
+    (a, b, c) = map(int, input().split(' '))
     bob = input()
     alice = ['X'] * n
-
     cnt = 0
     for i in range(n):
         s = bob[i]
@@ -30,7 +25,6 @@ for _ in range(q):
             a = a - 1
             cnt = cnt + 1
             alice[i] = 'R'
-
     if (n + 1) // 2 <= cnt:
         win = ''
         for i in range(n):
@@ -46,7 +40,7 @@ for _ in range(q):
                     win = win + 'S'
             else:
                 win = win + alice[i]
-        print("YES")
+        print('YES')
         print(win)
     else:
-        print("NO")
+        print('NO')

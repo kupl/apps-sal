@@ -1,7 +1,7 @@
 def readinput():
     n = int(input())
     h = list(map(int, input().split()))
-    return n, h
+    return (n, h)
 
 
 def main(n, h):
@@ -22,7 +22,7 @@ def main(n, h):
 
 
 def __starting_point():
-    n, h = readinput()
+    (n, h) = readinput()
     ans = main(n, h)
     print(ans)
 

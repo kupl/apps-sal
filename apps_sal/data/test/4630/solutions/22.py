@@ -1,11 +1,8 @@
 for _ in range(int(input())):
-
     n = int(input())
     p = [int(x) - 1 for x in input().split()]
-
     used = [False] * n
     r = [0] * n
-
     for i in range(n):
         if not used[i]:
             j = i

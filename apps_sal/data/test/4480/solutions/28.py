@@ -1,13 +1,13 @@
 class Solution:
+
     def canThreePartsEqualSum(self, A: List[int]) -> bool:
         sum1 = sum(A)
         if sum1 % 3 != 0:
             return False
-
         else:
             div = sum1 // 3
             print(div)
-            i1, sum2 = 0, 0
+            (i1, sum2) = (0, 0)
             for i in A:
                 sum2 = sum2 + i
                 print(sum2, i)

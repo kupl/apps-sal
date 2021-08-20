@@ -9,5 +9,5 @@ l2.sort()
 ans = 0
 for i in range(0, len(l2)):
     x = bisect.bisect_right(l2, 2 * l2[i], 0, len(l2))
-    ans += (x - i - 1)
+    ans += x - i - 1
 print(ans)

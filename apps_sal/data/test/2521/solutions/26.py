@@ -1,5 +1,4 @@
 import heapq
-
 n = int(input())
 A = list(map(int, input().split()))
 Left_top = A[:n]
@@ -13,7 +12,7 @@ heapq.heapify(Right_bottom)
 for i in range(n, 2 * n):
     L[i - n + 1] = L[i - n] - heapq.heappushpop(Left_top, A[i]) + A[i]
     R[2 * n - i - 1] = R[2 * n - i] - heapq.heappushpop(Right_bottom, -A[-(i + 1)]) - A[-(i + 1)]
-ans = -float("inf")
+ans = -float('inf')
 for i in range(n + 1):
     ans = max(ans, L[i] + R[i])
 print(ans)

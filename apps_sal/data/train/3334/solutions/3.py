@@ -6,4 +6,4 @@ def gcd(a, b):
 
 
 def reduce_fraction(fraction):
-    return tuple(int(x / gcd(*fraction)) for x in fraction)
+    return tuple((int(x / gcd(*fraction)) for x in fraction))

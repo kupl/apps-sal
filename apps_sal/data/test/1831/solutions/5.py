@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 ok = m == n - 1
 dsu = list(range(n))
 
@@ -15,9 +15,9 @@ def get(x):
 
 
 for i in range(m):
-    a, b = [int(x) - 1 for x in input().split()]
+    (a, b) = [int(x) - 1 for x in input().split()]
     dsu[get(a)] = get(b)
 for i in range(n):
     get(i)
 ok &= max(dsu) == min(dsu)
-print("yes" if ok else "no")
+print('yes' if ok else 'no')

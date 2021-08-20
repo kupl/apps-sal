@@ -11,6 +11,6 @@ for nt in range(int(input())):
                 flag = 1
                 break
     if flag:
-        print("NO")
+        print('NO')
         continue
-    print("YES")
+    print('YES')

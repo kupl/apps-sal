@@ -1,4 +1,5 @@
 class Solution:
+
     def numFactoredBinaryTrees(self, A: List[int]) -> int:
         cache = dict()
         iSet = set(A)

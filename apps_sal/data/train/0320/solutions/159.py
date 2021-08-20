@@ -1,6 +1,6 @@
 class Solution:
-    def minOperations(self, nums: List[int]) -> int:
 
+    def minOperations(self, nums: List[int]) -> int:
         max_divide = 0
         res = 0
         for num in nums:
@@ -13,5 +13,4 @@ class Solution:
                     num //= 2
                     cnt_divide += 1
             max_divide = max(max_divide, cnt_divide)
-
         return res + max_divide

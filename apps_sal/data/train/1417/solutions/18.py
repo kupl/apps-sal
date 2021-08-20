@@ -1,6 +1,5 @@
-# cook your dish here
 t = int(input())
-while(t):
+while t:
     n = int(input())
     notes = [int(x) for x in input().split()]
     count = []

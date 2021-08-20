@@ -10,7 +10,6 @@ class Solution:
             for i in range(start, len(rating)):
                 if not prev or prev[-1] < rating[i]:
                     dfs(rating, i + 1, prev + [rating[i]])
-
         dfs(rating, 0, [])
         dfs(rating[::-1], 0, [])
         return self.res

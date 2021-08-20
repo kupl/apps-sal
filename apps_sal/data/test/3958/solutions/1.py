@@ -1,4 +1,4 @@
-s, r, f, p = input(), [], 0, -1
+(s, r, f, p) = (input(), [], 0, -1)
 try:
     for i in range(len(s)):
         j = i + 1

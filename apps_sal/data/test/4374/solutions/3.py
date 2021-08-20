@@ -2,12 +2,14 @@ import sys
 sys.setrecursionlimit(10000)
 
 
-class Tree():
+class Tree:
+
     def __init__(self, nodes):
         self.root = None
 
 
-class Node():
+class Node:
+
     def __init__(self, val):
         self.parent = None
         self.val = val
@@ -39,7 +41,8 @@ class Node():
         return (self.get_count_ch(None), len(self.children), self.val)
 
 
-class Forest():
+class Forest:
+
     def __init__(self, count):
         self.nodes = []
         self.count = count
@@ -48,45 +51,39 @@ class Forest():
     def build(self):
         roots = []
         max_dist = []
-        #diam = []
         list_root = []
         for i in self.nodes:
-            tree = (list([x.get_dist() for x in i]))
+            tree = list([x.get_dist() for x in i])
             ma = max(tree)
             max_dist.append(ma)
-            # diam.append(ma)
             m = i[tree.index(min(tree))]
-            roots.append(m)  # .val)
+            roots.append(m)
         if len(roots) > 1:
             ind = max_dist.index(max(max_dist))
             if len(roots) > 1 and ind != 0:
-                roots[0], roots[ind] = roots[ind], roots[0]
+                (roots[0], roots[ind]) = (roots[ind], roots[0])
         s = set()
         for i in self.nodes:
             for j in i:
                 s.add(j.val)
         r = list(set(range(1, n + 1)) - s)
-
-        if len(roots) > 0:  # and len(diam) > 0:
+        if len(roots) > 0:
             for i in range(1, len(roots)):
                 self.add(roots[0].val, roots[i].val)
                 list_root.append((roots[0].val, roots[i].val))
-            #print(roots + r)
-
             for i in r:
                 self.add(roots[0].val, i)
                 list_root.append((roots[0].val, i))
-        else:
-            if len(r) == 1:
-                print(0)
-                return
-            elif len(r) > 1:
-                for i in range(1, len(r)):
-                    self.add(r[0], r[i])
-                    list_root.append((r[0], r[i]))
+        elif len(r) == 1:
+            print(0)
+            return
+        elif len(r) > 1:
+            for i in range(1, len(r)):
+                self.add(r[0], r[i])
+                list_root.append((r[0], r[i]))
         distances = []
         for i in self.nodes[0]:
-            dist = (i.get_dist())
+            dist = i.get_dist()
             distances.append(dist)
         print(max(distances))
         for i in list_root:
@@ -95,16 +92,15 @@ class Forest():
     def add(self, v, u):
         self.set_nodes.add(v)
         self.set_nodes.add(u)
-        v_node, v_list = self.find(v)
-        u_node, u_list = self.find(u)
-        #print(v_node, u_node)
+        (v_node, v_list) = self.find(v)
+        (u_node, u_list) = self.find(u)
         if v_node == None and u_node == None:
             v_node = Node(v)
             u_node = Node(u)
             v_node.add(u_node)
             u_node.add(v_node)
             self.nodes.append([v_node, u_node])
-        elif v_node != None and u_node != None and v_list != u_list:
+        elif v_node != None and u_node != None and (v_list != u_list):
             v_node.add(u_node)
             u_node.add(v_node)
             v_list += u_list
@@ -124,15 +120,13 @@ class Forest():
         for i_list in self.nodes:
             for i in i_list:
                 if i.val == value:
-                    return i, i_list
-        return None, None
+                    return (i, i_list)
+        return (None, None)
 
 
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 f = Forest(n)
 for i in range(m):
-    v, u = list(map(int, input().split()))
+    (v, u) = list(map(int, input().split()))
     f.add(v, u)
-
-# print(f.nodes)
 f.build()

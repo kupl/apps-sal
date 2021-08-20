@@ -1,14 +1,11 @@
 color = []
 ans = []
 check = True
-
 for _ in range(5005):
     color.append({})
-
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 arr = list(map(int, input().split()))
-index = 0  # 0 ~ K-1
-
+index = 0
 for i in range(N):
     k = 0
     while 1:
@@ -23,14 +20,12 @@ for i in range(N):
             index += 1
             index %= K
             break
-
         if k > K:
-            print("NO")
+            print('NO')
             check = False
             break
     if check == False:
         break
-
 if check:
-    print("YES")
+    print('YES')
     print(*ans)

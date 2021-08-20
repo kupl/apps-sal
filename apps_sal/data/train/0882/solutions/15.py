@@ -1,7 +1,9 @@
-# cook your dish here
 from sys import stdin
 from collections import defaultdict
-def input(): return stdin.readline().strip()
+
+
+def input():
+    return stdin.readline().strip()
 
 
 for _ in range(int(input())):

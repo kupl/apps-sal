@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
 
 
@@ -14,4 +14,4 @@ def solve(i, j):
     return cur_res
 
 
-print(max(solve(i, j) for i in range(n) for j in range(i, n)))
+print(max((solve(i, j) for i in range(n) for j in range(i, n))))

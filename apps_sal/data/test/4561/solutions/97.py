@@ -1,5 +1,5 @@
 with open(0) as f:
-    X, A, B = map(int, f.read().split())
+    (X, A, B) = map(int, f.read().split())
 if B - A <= 0:
     ans = 'delicious'
 if 0 < B - A <= X:

@@ -2,7 +2,7 @@ from sys import stdin
 
 
 def solve():
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if a == b:
         print(0)
     elif (b - a) % 2 and a < b:

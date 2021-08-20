@@ -9,15 +9,15 @@ def main():
         l = []
         visited = [False for i in range(n)]
         for j in range(n):
-            if(not visited[j]):
+            if not visited[j]:
                 i = j
                 s = 0
-                while(i < n):
+                while i < n:
                     visited[i] = True
-                    if(i + 1 < n and a[i] == a[i + 1]):
+                    if i + 1 < n and a[i] == a[i + 1]:
                         s += 1
                         i += 1
-                    elif(i + 2 < n and a[i] == a[i + 2]):
+                    elif i + 2 < n and a[i] == a[i + 2]:
                         s += 1
                         i += 2
                     else:

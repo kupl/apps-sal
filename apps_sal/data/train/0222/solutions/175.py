@@ -1,4 +1,5 @@
 class Solution:
+
     def lenLongestFibSubseq(self, A: List[int]) -> int:
         n = len(A)
         mem = collections.defaultdict(Counter)
@@ -12,7 +13,6 @@ class Solution:
                 else:
                     mem[A[i]][dij] = 2
                 ans = max(ans, mem[A[i]][dij])
-        # print(mem)
         if ans < 3:
             return 0
         return ans

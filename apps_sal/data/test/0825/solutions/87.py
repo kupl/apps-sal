@@ -1,5 +1,4 @@
 N = int(input())
-
 ans = 0
 for i in range(2, N):
     if i * i > N:
@@ -17,5 +16,4 @@ for i in range(2, N):
                 break
 if N > 1:
     ans += 1
-
 print(ans)

@@ -1,4 +1,5 @@
 class Solution:
+
     def calculate(self, nums1, nums2):
         a = [0] * 100001
         for i in nums1:

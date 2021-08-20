@@ -1,7 +1,6 @@
 import numpy as np
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 L = np.array(list(map(int, input().split())))
-
 L = np.sort(L)
 pos = L[0 < L]
 neg = L[0 > L]
@@ -18,7 +17,7 @@ def f(x):
     return tmp // 2
 
 
-l, r = -10**18, 10**18
+(l, r) = (-10 ** 18, 10 ** 18)
 while l < r - 1:
     m = (l + r) // 2
     count = f(m)
@@ -26,5 +25,4 @@ while l < r - 1:
         r = m
     else:
         l = m
-
 print(r)

@@ -5,7 +5,7 @@ def checkchoose(m, n):
         if m == ans:
             return k
         if m < ans:
-            return -1  # No need to search the other side of the triangle
+            return -1
     return -1
 
 
@@ -21,4 +21,5 @@ def factorial(n):
     return f[n]
 
 
-def partial_fact(hi, le): return 1 if hi <= le else hi * partial_fact(hi - 1, le)
+def partial_fact(hi, le):
+    return 1 if hi <= le else hi * partial_fact(hi - 1, le)

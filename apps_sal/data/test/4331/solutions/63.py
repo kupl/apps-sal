@@ -1,7 +1,6 @@
 N = int(input())
 N_str = str(N)
-
 if '7' in N_str:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

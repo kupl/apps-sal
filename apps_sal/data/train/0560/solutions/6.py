@@ -9,9 +9,9 @@ while t > 0:
     b.pop()
     al = sum(a)
     bob = sum(b)
-    if(al < bob):
+    if al < bob:
         print('Alice')
-    elif(al == bob):
+    elif al == bob:
         print('Draw')
     else:
         print('Bob')

@@ -1,4 +1,5 @@
 class Solution:
+
     def getMaxLen(self, nums: List[int]) -> int:
         from collections import defaultdict
         nums1 = []
@@ -14,11 +15,10 @@ class Solution:
         for i in range(len(nums1)):
             if i == 0:
                 pre_arr[i] = nums1[i]
+            elif pre_arr[i - 1] != 0:
+                pre_arr[i] = nums1[i] * pre_arr[i - 1]
             else:
-                if pre_arr[i - 1] != 0:
-                    pre_arr[i] = nums1[i] * pre_arr[i - 1]
-                else:
-                    pre_arr[i] = nums1[i]
+                pre_arr[i] = nums1[i]
         a1 = max(nums)
         if a1 > 0:
             m1 = 1
@@ -31,7 +31,6 @@ class Solution:
                 m1 = max(m1, i - Dict[1] + 1)
             elif pre_arr[i] == 0:
                 Dict[1] = i + 1
-        # print(pre_arr)
         Dict1 = defaultdict(list)
         m2 = 0
         for i in range(len(pre_arr)):
@@ -43,5 +42,4 @@ class Solution:
                 Dict1.clear()
         if len(Dict1[-1]) >= 2:
             m2 = max(m2, Dict1[-1][-1] - Dict1[-1][0])
-        #print(m1, m2)
         return max(m1, m2)

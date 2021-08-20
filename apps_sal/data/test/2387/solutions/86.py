@@ -6,7 +6,7 @@ def main():
         height = 0
         m = 0
         for si in input():
-            if si == "(":
+            if si == '(':
                 height += 1
             else:
                 height -= 1
@@ -17,22 +17,22 @@ def main():
             down.append([m - height, -height])
     up.sort(reverse=True)
     down.sort(reverse=True)
-    if sum([i for _, i in up]) - sum([i for _, i in down]) != 0:
-        print("No")
+    if sum([i for (_, i) in up]) - sum([i for (_, i) in down]) != 0:
+        print('No')
         return
     h = 0
-    for mi, hi in up:
+    for (mi, hi) in up:
         if h + mi < 0:
-            print("No")
+            print('No')
             return
         h += hi
     h = 0
-    for mi, hi in down:
+    for (mi, hi) in down:
         if h + mi < 0:
-            print("No")
+            print('No')
             return
         h += hi
-    print("Yes")
+    print('Yes')
     return
 
 

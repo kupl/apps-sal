@@ -1,4 +1,4 @@
-h, w = map(int, input().split())
+(h, w) = map(int, input().split())
 min_ = h * w
 if h % 3 == 0:
     min_ = 0

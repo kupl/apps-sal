@@ -5,7 +5,7 @@ def check_exam(arr1, arr2):
             if s == a:
                 if arr1[s] == arr2[a]:
                     score += 4
-                elif arr2[a] == "":
+                elif arr2[a] == '':
                     score += 0
                 elif arr1[s] != arr2[a]:
                     score -= 1

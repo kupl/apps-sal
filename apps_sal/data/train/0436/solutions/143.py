@@ -1,4 +1,5 @@
 class Solution:
+
     def minDays(self, n: int) -> int:
         s = {n}
         for i in itertools.count(1):

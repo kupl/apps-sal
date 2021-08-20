@@ -1,28 +1,23 @@
-# -*- coding: utf-8 -*-
-s = input() + "T"
+s = input() + 'T'
 n = len(s)
-x, y = list(map(int, input().split()))
-
+(x, y) = list(map(int, input().split()))
 fcnt = 0
 tcnt = 0
 xd = set()
 yd = set([0])
 for i in range(n):
-    if s[i] == "F":
+    if s[i] == 'F':
         fcnt += 1
         continue
-
     if tcnt == 0:
         xd.add(fcnt)
     elif tcnt % 2 == 0:
-        # x軸の移動
         tmp = set()
         for xx in xd:
             tmp.add(xx - fcnt)
             tmp.add(xx + fcnt)
         xd = tmp
     else:
-        # y軸の移動
         tmp = set()
         for yy in yd:
             tmp.add(yy - fcnt)
@@ -30,8 +25,7 @@ for i in range(n):
         yd = tmp
     tcnt += 1
     fcnt = 0
-
 if x in xd and y in yd:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

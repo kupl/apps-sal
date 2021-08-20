@@ -11,9 +11,7 @@ def is_divisible_by_6(string):
             c = num_lst[:]
             num_lst = [k.replace('*', str(x), 1) for x in range(10) for k in c]
             i += 1
-
     for num in num_lst:
-
         if int(num) % 6 == 0:
             result.append(num)
     return list(sorted(result))

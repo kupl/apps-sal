@@ -1,4 +1,5 @@
 class Solution(object):
+
     def isNStraightHand(self, hand, W):
         count = collections.Counter(hand)
         while count:
@@ -11,5 +12,4 @@ class Solution(object):
                     del count[k]
                 else:
                     count[k] = v - 1
-
         return True

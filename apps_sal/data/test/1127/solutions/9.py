@@ -5,12 +5,11 @@ for _ in range(int(input())):
     rayz = s[::2]
     bri = s[1::2]
     if n % 2:
-        if any(int(i) % 2 for i in rayz):
+        if any((int(i) % 2 for i in rayz)):
             print(1)
         else:
             print(2)
+    elif any((int(i) % 2 == 0 for i in bri)):
+        print(2)
     else:
-        if any(int(i) % 2 == 0 for i in bri):
-            print(2)
-        else:
-            print(1)
+        print(1)

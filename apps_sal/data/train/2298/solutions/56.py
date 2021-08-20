@@ -1,5 +1,5 @@
 from collections import defaultdict
-N, T = map(int, input().split())
+(N, T) = map(int, input().split())
 A = [int(i) for i in input().split()]
 mi = A[0]
 s = 0

@@ -1,5 +1,4 @@
-# cook your dish here
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 k = n + m - 1
 l1 = list(map(int, input().split()))
 l2 = list(map(int, input().split()))
@@ -12,9 +11,7 @@ for i in range(n):
             d.append(a)
             print(i, j)
             c += 1
-
         if c == k:
             break
-
     if c == k:
         break

@@ -3,7 +3,6 @@ def func(a):
     per = 0
     for i in range(len(a)):
         if a[i] == '1':
-
             per += 1
         else:
             s = max(s, per)

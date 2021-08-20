@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 k = abs(k)
 A = B = ans = 0
 value = [False] * (2 * n + 1)

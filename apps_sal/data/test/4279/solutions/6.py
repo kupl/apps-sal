@@ -1,5 +1,4 @@
 q = int(input())
-
 num_cnt = [[0, 0]]
 for i in range(1, 22000):
     if i < 10:
@@ -12,10 +11,9 @@ for i in range(1, 22000):
         num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + (i - 999) * 4])
     elif i < 100000:
         num_cnt.append([num_cnt[-1][1] + 1, num_cnt[-1][1] + 9 + 90 * 2 + 900 * 3 + 9000 * 4 + (i - 9999) * 5])
-
 for i in range(q):
     k = int(input())
-    left, right = 1, len(num_cnt)
+    (left, right) = (1, len(num_cnt))
     mid = 0
     while left <= right:
         mid = (left + right) // 2
@@ -25,7 +23,6 @@ for i in range(q):
             right = mid - 1
         else:
             left = mid + 1
-
     now_cnt = num_cnt[mid][0] - 1
     now_val = 1
     succ = False

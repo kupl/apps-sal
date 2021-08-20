@@ -1,13 +1,13 @@
 N = int(input())
-x, y = 0, 0
+(x, y) = (0, 0)
 for i in range(N):
     p = 0
-    T, A = map(int, input().split())
+    (T, A) = map(int, input().split())
     if i == 0:
-        x, y = T, A
+        (x, y) = (T, A)
         continue
     if x <= T and y <= A:
-        x, y = T, A
+        (x, y) = (T, A)
     elif x <= T and A < y:
         if y % A != 0:
             p = 1
@@ -18,15 +18,14 @@ for i in range(N):
             p = 1
         y = A * (x // T + p)
         x = T * (x // T + p)
+    elif x // T + 1 <= y // A + 1:
+        if y % A != 0:
+            p = 1
+        x = T * (y // A + p)
+        y = A * (y // A + p)
     else:
-        if (x // T + 1) <= (y // A + 1):
-            if y % A != 0:
-                p = 1
-            x = T * (y // A + p)
-            y = A * (y // A + p)
-        else:
-            if x % T != 0:
-                p = 1
-            y = A * (x // T + p)
-            x = T * (x // T + p)
+        if x % T != 0:
+            p = 1
+        y = A * (x // T + p)
+        x = T * (x // T + p)
 print(x + y)

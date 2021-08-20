@@ -1,7 +1,8 @@
 from collections import defaultdict
 
 
-class Primes():
+class Primes:
+
     def __init__(self, N):
         self.N = N
         self.prime = {i for i in range(2, self.N + 1)}
@@ -24,24 +25,22 @@ class Primes():
         return d
 
 
-P = Primes(10**5)
-
-n, k = list(map(int, input().split()))
+P = Primes(10 ** 5)
+(n, k) = list(map(int, input().split()))
 a = list(map(int, input().split()))
-cnt = [0] * (10**5 + 1)
+cnt = [0] * (10 ** 5 + 1)
 for v in a:
     cnt[v] += 1
-
 ans = 0
 for v in a:
     cnt[v] -= 1
     d = P.fact(v)
     res = 1
-    for num, order in list(d.items()):
+    for (num, order) in list(d.items()):
         res *= pow(num, (k - order % k) % k)
-    if res <= 10**5:
+    if res <= 10 ** 5:
         for i in range(1, 1000):
-            if pow(i, k) * res > 10**5:
+            if pow(i, k) * res > 10 ** 5:
                 break
             ans += cnt[pow(i, k) * res]
 print(ans)

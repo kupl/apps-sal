@@ -1,5 +1,5 @@
-n, m = map(int, input().split())
-ab, cd = [list(map(int, input().split())) for _ in range(n)], [list(map(int, input().split())) for _ in range(m)]
+(n, m) = map(int, input().split())
+(ab, cd) = ([list(map(int, input().split())) for _ in range(n)], [list(map(int, input().split())) for _ in range(m)])
 for i in ab:
     r = []
     for j in cd:

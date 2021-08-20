@@ -1,5 +1,5 @@
 from collections import Counter
-N, K, L = map(int, input().split())
+(N, K, L) = map(int, input().split())
 drive = [-1] * N
 train = [-1] * N
 
@@ -17,7 +17,7 @@ def unite(List, x, y):
 
 
 for i in range(K + L):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     unite(drive if i < K else train, a - 1, b - 1)
 pair = [(find(drive, i), find(train, i)) for i in range(N)]
 c = Counter(pair)

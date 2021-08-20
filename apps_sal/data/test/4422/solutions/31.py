@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 s = str(input())
 if s[k - 1] == 'A':
     ans = s[:k - 1] + 'a' + s[k:]

@@ -8,18 +8,18 @@ a = input()
 ab = []
 ba = []
 for i in range(len(a) - 1):
-    if a[i:i + 2] == "AB":
+    if a[i:i + 2] == 'AB':
         ab.append([i, i + 1])
-    if a[i:i + 2] == "BA":
+    if a[i:i + 2] == 'BA':
         ba.append([i, i + 1])
 s = 0
 for i in range(len(ab)):
     for l in range(len(ba)):
         if ham(ab[i], ba[l]):
-            print("YES")
+            print('YES')
             s = 1
             break
     if s == 1:
         break
 if s == 0:
-    print("NO")
+    print('NO')

@@ -1,8 +1,7 @@
 import heapq
-
 N = int(input())
 A = list(map(int, input().split()))
-l, r = [], []
+(l, r) = ([], [])
 ll = 0
 for i in range(3 * N):
     if i < N:
@@ -13,7 +12,7 @@ for i in range(3 * N):
 used = set()
 rr = 0
 for i in range(N):
-    a, idx = heapq.heappop(r)
+    (a, idx) = heapq.heappop(r)
     used.add(idx)
     rr += a
 ans = ll - rr
@@ -27,11 +26,10 @@ for i in range(N, 2 * N):
         ll += A[i]
     if i in used:
         rr -= A[i]
-        a, idx = heapq.heappop(r)
+        (a, idx) = heapq.heappop(r)
         while idx in done:
-            a, idx = heapq.heappop(r)
+            (a, idx) = heapq.heappop(r)
         used.add(idx)
         rr += a
-    #print(i, ll, rr, l, r)
     ans = max(ans, ll - rr)
 print(ans)

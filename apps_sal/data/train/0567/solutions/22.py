@@ -1,5 +1,5 @@
 t = int(input())
-while(t):
+while t:
     t -= 1
     n = int(input())
     ls = list(map(int, input().split()))
@@ -9,6 +9,6 @@ while(t):
             k = 1
             break
     if k == 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

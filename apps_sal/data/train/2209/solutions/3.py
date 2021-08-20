@@ -1,11 +1,10 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 N = [[] for i in range(0, n)]
 C = [-1 for i in range(0, n)]
 for i in range(0, n - 1):
-    a, b = list(map(int, sys.stdin.readline().strip().split()))
-    a, b = a - 1, b - 1
+    (a, b) = list(map(int, sys.stdin.readline().strip().split()))
+    (a, b) = (a - 1, b - 1)
     N[a].append(b)
     N[b].append(a)
 C[0] = 0

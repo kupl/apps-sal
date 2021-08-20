@@ -1,6 +1,5 @@
 def __starting_point():
-    a, b, c = map(int, input().split())
-
+    (a, b, c) = map(int, input().split())
     for i in range(1000000):
         m = a * i % b
         if m == c:

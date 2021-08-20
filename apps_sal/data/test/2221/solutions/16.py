@@ -2,7 +2,7 @@ def valid(num):
     x2 = x0 + disx[n] * (num // n) + disx[num % n]
     y2 = y0 + disy[n] * (num // n) + disy[num % n]
     distance = abs(x2 - x1) + abs(y2 - y1)
-    return (distance <= num)
+    return distance <= num
 
 
 def binsearch(L, R):
@@ -17,8 +17,8 @@ def binsearch(L, R):
     return ans
 
 
-x0, y0 = list(map(int, input().split()))
-x1, y1 = list(map(int, input().split()))
+(x0, y0) = list(map(int, input().split()))
+(x1, y1) = list(map(int, input().split()))
 n = int(input())
 s = input()
 disx = [0 for i in range(n + 1)]

@@ -10,16 +10,14 @@ def solve(n: int, board: List[List[str]]) -> str:
         for j in range(1, n - 1):
             if board[i][j] == '#':
                 board[i][j] = '.'
-                for x, y in cross_neighbors(i, j):
+                for (x, y) in cross_neighbors(i, j):
                     if board[x][y] == '.':
                         return 'NO'
                     if board[x][y] == '#':
                         board[x][y] = '.'
-    return ['YES', 'NO'][any(board[i][j] == '#'
-                             for i in range(n) for j in range(n))]
+    return ['YES', 'NO'][any((board[i][j] == '#' for i in range(n) for j in range(n)))]
 
 
 n = int(input())
 board = [list(input()) for _ in range(n)]
-
 print(solve(n, board))

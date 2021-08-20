@@ -1,15 +1,15 @@
 def main():
     n = int(input())
     v = list(map(int, input().split()))
-    a, c1, ok = 0, 0, 0
+    (a, c1, ok) = (0, 0, 0)
     for i in range(n):
-        if (v[i] == i):
+        if v[i] == i:
             c1 = c1 + 1
-        elif (v[v[i]] == i):
+        elif v[v[i]] == i:
             ok = 1
-    if (c1 == n):
+    if c1 == n:
         print(c1)
-    elif (ok):
+    elif ok:
         print(c1 + 2)
     else:
         print(c1 + 1)

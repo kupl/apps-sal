@@ -1,6 +1,6 @@
 n = int(input())
 for j in range(n):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     d = 0
     while a != b:
         if a > b:

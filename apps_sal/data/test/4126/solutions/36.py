@@ -15,10 +15,9 @@ def kaibun(Str):
 
 N = len(S)
 if not kaibun(S):
-    ans = ('No')
+    ans = 'No'
 if not kaibun(S[:(N - 1) // 2]):
-    ans = ('No')
+    ans = 'No'
 if not kaibun(S[(N + 3) // 2 - 1:]):
-    ans = ('No')
-
+    ans = 'No'
 print(ans)

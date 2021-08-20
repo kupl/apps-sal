@@ -7,11 +7,9 @@ for i in range(n):
         x += 1
     elif a[i] % 4 == 0:
         y += 1
-
 if x <= y:
-    print("Yes")
+    print('Yes')
+elif x + y == n and x == y + 1:
+    print('Yes')
 else:
-    if x + y == n and x == y + 1:
-        print("Yes")
-    else:
-        print("No")
+    print('No')

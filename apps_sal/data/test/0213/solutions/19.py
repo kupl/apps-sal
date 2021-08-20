@@ -1,10 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 k = [0] * m
 f = [0] * m
 l = 1
 r = 100
 for i in range(m):
-    k[i], f[i] = list(map(int, input().split()))
+    (k[i], f[i]) = list(map(int, input().split()))
 for i in range(m):
     fl = True
     for kol in range(l, r + 1):

@@ -1,6 +1,7 @@
 class Solution:
+
     def peopleIndexes(self, favoriteCompanies: List[List[str]]) -> List[int]:
-        d = {i: set(v) for i, v in enumerate(favoriteCompanies)}
+        d = {i: set(v) for (i, v) in enumerate(favoriteCompanies)}
         print(d)
         res = []
         for i in range(len(favoriteCompanies)):

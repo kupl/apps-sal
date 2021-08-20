@@ -1,4 +1,5 @@
 class DSU:
+
     def __init__(self, arr):
         self.max_size = 0
         self.parent = [i for i in range(len(arr))]
@@ -15,7 +16,7 @@ class DSU:
         return root
 
     def union(self, x, y):
-        r1, r2 = self.find(x), self.find(y)
+        (r1, r2) = (self.find(x), self.find(y))
         if r1 == r2:
             return
         if self.size[r1] < self.size[r2]:
@@ -29,8 +30,8 @@ class DSU:
 
 
 class Solution:
-    def largestComponentSize(self, A: List[int]) -> int:
 
+    def largestComponentSize(self, A: List[int]) -> int:
         primes = collections.defaultdict(list)
 
         def getPrimeFactors(n):
@@ -45,10 +46,9 @@ class Solution:
             if n > 2:
                 out.add(n)
             return out
-
         prime_to_idx = {}
         dsu = DSU(A)
-        for i, n in enumerate(A):
+        for (i, n) in enumerate(A):
             primes = getPrimeFactors(n)
             for p in primes:
                 if p in prime_to_idx:

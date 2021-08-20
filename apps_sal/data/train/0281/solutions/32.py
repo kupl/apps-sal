@@ -1,6 +1,7 @@
 class Solution:
+
     def canConvertString(self, s, t, k):
-        n, m = len(s), len(t)
+        (n, m) = (len(s), len(t))
         if n != m:
             return False
         cnt = [0] * 26

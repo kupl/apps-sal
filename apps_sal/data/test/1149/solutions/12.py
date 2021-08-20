@@ -12,12 +12,11 @@ for i in b:
     i = int(i)
 f = 0
 for i in range(1, n + 1):
-    if((str(i) in a) or (str(i) in b)):
+    if str(i) in a or str(i) in b:
         continue
     else:
         f = 1
-        print("Oh, my keyboard!")
+        print('Oh, my keyboard!')
         break
-if(f == 0):
-
-    print("I become the guy.")
+if f == 0:
+    print('I become the guy.')

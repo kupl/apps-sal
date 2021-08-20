@@ -1,5 +1,4 @@
 from math import cos, pi, sin, sqrt
-
 for _ in range(int(input())):
     n = int(input())
     k0 = (n + 2) // 4

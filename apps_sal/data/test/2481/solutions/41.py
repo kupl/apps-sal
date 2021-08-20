@@ -1,5 +1,5 @@
 from itertools import permutations
-H, W = map(int, input().split())
+(H, W) = map(int, input().split())
 c = [list(map(int, input().split())) for i in range(10)]
 A = [list(map(int, input().split())) for i in range(H)]
 ma = [1001] * 10

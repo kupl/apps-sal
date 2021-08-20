@@ -1,10 +1,9 @@
-# -*-coding:utf-8-*-
 import sys
 input = sys.stdin.readline
 
 
 def main():
-    a, b, c, x, y = map(int, input().split())
+    (a, b, c, x, y) = map(int, input().split())
     ans1 = 99999999999999999999999999
     if a + b > 2 * c:
         if x > y:

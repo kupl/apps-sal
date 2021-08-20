@@ -13,7 +13,7 @@ for i in range(1, n):
 b += [0]
 m = int(input())
 for i in range(m):
-    t, l, r = list(map(int, input().split()))
+    (t, l, r) = list(map(int, input().split()))
     if t - 1:
         print(b[r - 1] - b[l - 2])
     else:

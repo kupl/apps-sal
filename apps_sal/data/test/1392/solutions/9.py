@@ -1,9 +1,7 @@
 line = input()
-
 integers = [int(i) for i in line.split()]
 n = integers[0]
 k = integers[1]
-
 toTest = []
 for i in range(n):
     line = input()
@@ -11,7 +9,7 @@ for i in range(n):
 
 
 def test(num, n):
-    arr = [0] * (10)
+    arr = [0] * 10
     goal = [1] * (n + 1)
     for i in range(10, n + 1, -1):
         goal.append(0)
@@ -27,5 +25,4 @@ def test(num, n):
 total = 0
 for num in toTest:
     total += test(num, k)
-
 print(total)

@@ -1,13 +1,12 @@
 n = int(input())
 h = list(map(int, input().split()))
-
 if n == 1:
-    print("Yes")
+    print('Yes')
 elif n == 2:
     if h[0] - h[1] <= 1:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')
 else:
     c = 0
     if h[0] - h[1] <= 1:
@@ -24,6 +23,6 @@ else:
             else:
                 break
     if c == n - 2:
-        print("Yes")
+        print('Yes')
     else:
-        print("No")
+        print('No')

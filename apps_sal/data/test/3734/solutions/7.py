@@ -1,19 +1,10 @@
 days = [28, 30, 31]
-week = ['monday',
-        'tuesday',
-        'wednesday',
-        'thursday',
-        'friday',
-        'saturday',
-        'sunday']
-
+week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
 a = input()
 b = input()
-
-for index, name in enumerate(week):
+for (index, name) in enumerate(week):
     if name == a:
         ind = index
-
 flag = False
 for mo in days:
     if week[(ind + mo) % 7] == b:

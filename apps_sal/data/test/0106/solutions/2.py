@@ -9,15 +9,15 @@ def numb(ch):
     et = ((ch - 1) % (m * k) + 1) // k
     if ((ch - 1) % (m * k) + 1) % k != 0:
         et += 1
-    return(pod, et)
+    return (pod, et)
 
 
 ans = 0
-n, m, k = map(int, input().split())
-a, b = map(int, input().split())
+(n, m, k) = map(int, input().split())
+(a, b) = map(int, input().split())
 ans = 0
-f_x, f_y = numb(a)
-a_x, a_y = numb(b)
+(f_x, f_y) = numb(a)
+(a_x, a_y) = numb(b)
 if f_x != a_x:
     z = min(math.fabs(f_x - a_x), math.fabs(n - max(f_x, a_x) + min(f_x, a_x)))
     ans += 15 * z

@@ -14,12 +14,11 @@ def find(x):
 def unite(x, y):
     x = find(x)
     y = find(y)
-
     if x == y:
         return False
     else:
         if par[x] > par[y]:
-            x, y = y, x
+            (x, y) = (y, x)
         par[x] += par[y]
         par[y] = x
         return True
@@ -33,9 +32,9 @@ def size(x):
     return -par[find(x)]
 
 
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 par = [-1] * N
 for _ in range(M):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     unite(a - 1, b - 1)
 print(-min(par))

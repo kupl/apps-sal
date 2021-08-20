@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 i = 0
 while n >= 2 and m >= 2:
     if m >= n:

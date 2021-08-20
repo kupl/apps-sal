@@ -1,5 +1,5 @@
-n, a, b = list(map(int, input().split()))
-mod = 10**9 + 7
+(n, a, b) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 factna = [n]
 factnb = [n]
 facta = [a]
@@ -14,7 +14,7 @@ for i in range(1, b):
 
 def pow(x, n):
     a = 1
-    while(n > 0):
+    while n > 0:
         if n % 2 == 1:
             a *= x % mod
         x *= x % mod
@@ -22,4 +22,4 @@ def pow(x, n):
     return a
 
 
-print(((pow(2, n) - 1 - factna[-1] * pow(facta[-1], mod - 2) % mod - factnb[-1] * pow(factb[-1], mod - 2) % mod) % mod))
+print((pow(2, n) - 1 - factna[-1] * pow(facta[-1], mod - 2) % mod - factnb[-1] * pow(factb[-1], mod - 2) % mod) % mod)

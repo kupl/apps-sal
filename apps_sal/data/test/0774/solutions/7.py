@@ -1,5 +1,5 @@
-
 class Fraction:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -19,7 +19,7 @@ class Fraction:
         return str(self.x) + '/' + str(self.y)
 
 
-x, y, n = list(map(int, input().split()))
+(x, y, n) = list(map(int, input().split()))
 f = Fraction(x, y)
 dif = None
 for i in range(1, n + 1):

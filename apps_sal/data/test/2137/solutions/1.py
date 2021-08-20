@@ -1,17 +1,13 @@
-#!/usr/bin/env python3
-
 [n, a, b] = list(map(int, input().strip().split()))
 bis = [tuple(map(int, input().strip().split())) for _ in range(n)]
-dis = [(a * Vx - Vy, Vx) for x, Vx, Vy in bis]
-
+dis = [(a * Vx - Vy, Vx) for (x, Vx, Vy) in bis]
 dis.sort()
-
 res = 0
 dprev = dis[0][0] - 1
 vprev = 0
 dcount = 0
 vcount = 0
-for di, vi in dis:
+for (di, vi) in dis:
     if di != dprev:
         res += dcount * (dcount - 1)
         res -= vcount * (vcount - 1)
@@ -29,5 +25,4 @@ for di, vi in dis:
             vcount += 1
 res += dcount * (dcount - 1)
 res -= vcount * (vcount - 1)
-
 print(res)

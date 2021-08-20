@@ -3,6 +3,7 @@ from typing import List
 
 
 class Solution:
+
     def canReorderDoubled(self, A: List[int]) -> bool:
         d = dict()
         num_zeros = 0
@@ -18,11 +19,9 @@ class Solution:
                 d[y].update([x])
             else:
                 d[y] = Counter([x])
-
         if num_zeros % 2:
             return False
-
-        for base, counter in d.items():
+        for (base, counter) in d.items():
             keys = sorted(counter)
             for key in keys:
                 if counter[key] <= counter[2 * key]:

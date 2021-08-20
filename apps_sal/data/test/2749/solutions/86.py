@@ -12,21 +12,32 @@ from heapq import heappush, heappop
 from functools import reduce
 
 
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
 INF = float('inf')
 mod = 10 ** 9 + 7
-
-H, W = MAP()
+(H, W) = MAP()
 N = INT()
 a = LIST()[::-1]
-
 ans = [[0] * W for _ in range(H)]
 tmp = a.pop()
 color = 1
@@ -41,6 +52,5 @@ for i in range(H):
             cnt = 0
             tmp = a.pop()
             color += 1
-
 for i in ans:
-    print((" ".join([str(x) for x in i])))
+    print(' '.join([str(x) for x in i]))

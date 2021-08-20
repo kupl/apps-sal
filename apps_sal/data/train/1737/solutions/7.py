@@ -1,5 +1,5 @@
 def runoff(li):
-    while all(li) and not all(len(k) == 1 for k in li):
+    while all(li) and (not all((len(k) == 1 for k in li))):
         d = {l: 0 for k in li for l in k}
         for i in range(len(li)):
             d[li[i][0]] += 1

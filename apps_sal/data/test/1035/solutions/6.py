@@ -1,6 +1,6 @@
 import collections
 import math
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 
 
 def prime_factorize(n):
@@ -23,5 +23,4 @@ def prime_factorize(n):
 c = prime_factorize(math.gcd(A, B))
 c = collections.Counter(c)
 c = c.values()
-
 print(len(c) + 1)

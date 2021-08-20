@@ -1,4 +1,3 @@
-
 n = int(input())
 l = list(map(int, input().split()))
 l.sort()
@@ -15,8 +14,8 @@ if len(ans) != 0:
     for j in ans:
         s.append(sum(j))
     m = s.index(max(s))
-    print("YES")
+    print('YES')
     for i in reversed(ans[m]):
         print(i, end=' ')
 else:
-    print("NO")
+    print('NO')

@@ -1,11 +1,7 @@
 n = int(input())
-
 arr = list(map(int, input().split()))
-
 arr = sorted(arr)
-
 s = sum(arr)
-
 if s % 2 == 0:
     print(s)
 else:

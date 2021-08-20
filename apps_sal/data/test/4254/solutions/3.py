@@ -1,5 +1,5 @@
 def resolve():
-    s, w = map(int, input().split())
+    (s, w) = map(int, input().split())
     print('safe' if s > w else 'unsafe')
 
 

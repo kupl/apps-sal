@@ -10,4 +10,4 @@ def get_pal(s):
 
 def solve(s):
     ans = get_pal(s)
-    return "OK" if ans == 0 else "remove one" if ans == 1 else "not possible"
+    return 'OK' if ans == 0 else 'remove one' if ans == 1 else 'not possible'

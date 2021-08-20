@@ -1,7 +1,6 @@
 import sys
 input = sys.stdin.readline
-
-N, T = list(map(int, input().split()))
+(N, T) = list(map(int, input().split()))
 t = list(map(int, input().split()))
 t_stop = []
 for i in range(N):

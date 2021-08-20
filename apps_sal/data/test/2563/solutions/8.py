@@ -1,8 +1,6 @@
 import sys
 from collections import deque
 input = sys.stdin.readline
-
-
 q = int(input())
 s = [input() for i in range(q)]
 for i in range(q):
@@ -31,4 +29,4 @@ for i in range(q):
                 tmp = a1.popleft()
                 ans.append(tmp)
             break
-    print("".join(map(str, ans)))
+    print(''.join(map(str, ans)))

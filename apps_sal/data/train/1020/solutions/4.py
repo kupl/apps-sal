@@ -1,6 +1,6 @@
 testCases = int(input())
 for Case in range(testCases):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     sum = 0
     for i in range(n):
@@ -10,25 +10,21 @@ for Case in range(testCases):
                     sum += l[i]
                 else:
                     sum -= l[i]
+            elif l[i] > 0:
+                sum -= l[i]
             else:
-                if l[i] > 0:
-                    sum -= l[i]
-                else:
-                    sum += l[i]
+                sum += l[i]
+        elif sum > 0:
+            if l[i] > 0:
+                sum -= l[i]
+            else:
+                sum += l[i]
+        elif l[i] > 0:
+            sum += l[i]
         else:
-            if sum > 0:
-                if l[i] > 0:
-                    sum -= l[i]
-                else:
-                    sum += l[i]
-            else:
-                if l[i] > 0:
-                    sum += l[i]
-                else:
-                    sum -= l[i]
-    # print('sum',sum)
+            sum -= l[i]
     if sum < 0:
-        s = (-1) * sum
+        s = -1 * sum
     else:
         s = sum
     if k <= s:

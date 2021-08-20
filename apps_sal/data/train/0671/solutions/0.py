@@ -1,5 +1,5 @@
 for i in range(int(input())):
-    n, s = map(int, input().split())
+    (n, s) = map(int, input().split())
     l1 = list(map(int, input().split()))
     l2 = list(map(int, input().split()))
     m = []
@@ -10,9 +10,9 @@ for i in range(int(input())):
         else:
             n.append(l1[i])
     if len(m) > 0 and len(n) > 0:
-        if 100 - s >= (min(m) + min(n)):
-            print("yes")
+        if 100 - s >= min(m) + min(n):
+            print('yes')
         else:
-            print("no")
+            print('no')
     else:
-        print("no")
+        print('no')

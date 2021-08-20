@@ -1,7 +1,6 @@
-# cook your dish here
-extra, less = 0, 0
+(extra, less) = (0, 0)
 for _ in range(int(input())):
-    sli, mem, sma, luc = list(map(int, input().split()))
+    (sli, mem, sma, luc) = list(map(int, input().split()))
     total = sma
     t = sma
     while mem > 1:

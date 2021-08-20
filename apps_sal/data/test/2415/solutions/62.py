@@ -3,5 +3,5 @@ x = input()
 a = 1
 b = 0
 for i in range(len(x)):
-    a, b = x[i] in s and a or x[i - 1:i + 1] in s and b, a
+    (a, b) = (x[i] in s and a or (x[i - 1:i + 1] in s and b), a)
 print(['NO', 'YES'][a])

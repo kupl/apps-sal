@@ -5,8 +5,8 @@ def IsInTime(d, t, s: int) -> bool:
         return False
 
 
-d, t, s = list(map(int, input().split()))
+(d, t, s) = list(map(int, input().split()))
 if IsInTime(d, t, s):
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

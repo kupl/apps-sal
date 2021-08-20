@@ -1,10 +1,10 @@
 def main():
     n = int(input())
     s = input()
-    g = "ACTG"
+    g = 'ACTG'
     mi = 1000000000
     for i in range(n - 3):
-        a = s[i: i + 4]
+        a = s[i:i + 4]
         arr = [ord(g[i]) - ord(a[i]) for i in range(4)]
         kek = [ord(a[i]) - ord(g[i]) for i in range(4)]
         ans = 0

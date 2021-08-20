@@ -4,9 +4,9 @@ if len(s) % n == 0:
     for i in range(n):
         t = s[len(s) // n * i:len(s) // n * (i + 1)]
         if t != t[::-1]:
-            print("NO")
+            print('NO')
             break
     else:
-        print("YES")
+        print('YES')
 else:
-    print("NO")
+    print('NO')

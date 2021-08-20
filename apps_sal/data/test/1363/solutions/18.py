@@ -12,7 +12,7 @@ def compute(array):
     return (ggg, ddd, fff)
 
 
-g, d, f = list(map(int, input().split()))
+(g, d, f) = list(map(int, input().split()))
 gg = list(map(int, input().split()))
 dd = list(map(int, input().split()))
 ff = list(map(int, input().split()))
@@ -32,23 +32,16 @@ while players[right][0] / players[left][0] <= 2:
     if right == len(players):
         break
 right -= 1
-
-a, b, c = compute(players[left:right + 1])
+(a, b, c) = compute(players[left:right + 1])
 count += a * b * (b - 1) / 2 * c * (c - 1) * (c - 2) / 6
-
-while (1):
+while 1:
     right += 1
     if right == len(players):
         break
-
     while players[right][0] / players[left][0] > 2:
         left += 1
-
-    a, b, c = compute(players[left:right + 1])
-    x, y, z = compute(players[left:right])
-
+    (a, b, c) = compute(players[left:right + 1])
+    (x, y, z) = compute(players[left:right])
     count += a * b * (b - 1) / 2 * c * (c - 1) * (c - 2) / 6
     count -= x * y * (y - 1) / 2 * z * (z - 1) * (z - 2) / 6
-
-
 print(int(count))

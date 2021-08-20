@@ -1,8 +1,8 @@
 N = int(input())
-name = ""
+name = ''
 k = 0
 p = 0
-while(N > p):
+while N > p:
     k += 1
     p += 26 ** k
 N -= p - 26 ** k + 1

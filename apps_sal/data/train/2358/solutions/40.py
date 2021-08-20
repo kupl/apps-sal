@@ -1,10 +1,8 @@
 import heapq as hq
-sx, sy, gx, gy = list(map(int, input().split()))
+(sx, sy, gx, gy) = list(map(int, input().split()))
 N = int(input())
 zone = [list(map(int, input().split())) for i in range(N)]
-
 zone = [[sx, sy, 0]] + zone + [[gx, gy, 0]]
-
 G = [[0] * (N + 2) for i in range(N + 2)]
 for i in range(len(zone) - 1):
     for j in range(i + 1, len(zone)):
@@ -12,13 +10,11 @@ for i in range(len(zone) - 1):
         dist = max(0, dist - (zone[i][2] + zone[j][2]))
         G[i][j] = dist
         G[j][i] = dist
-
-# 浴びた距離, 頂点
 q = [(0, 0)]
 hq.heapify(q)
 seen = set()
 while q:
-    dist, v = hq.heappop(q)
+    (dist, v) = hq.heappop(q)
     if v in seen:
         continue
     seen.add(v)

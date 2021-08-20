@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minCost(self, houses: List[int], cost: List[List[int]], m: int, n: int, target: int) -> int:
-        '''
+        """
 
         m houses - n colors (1~n)
         neighborhoods of same color
@@ -34,37 +35,22 @@ class Solution:
         edge cases:
         -if # of color neighborhoods > target: return -1
         -num houses < target: return -1
-        '''
+        """
         prev = [[0] * n for _ in range(target + 1)]
         out = float('inf')
-        for h, house in enumerate(houses):
+        for (h, house) in enumerate(houses):
             dp = [[float('inf')] * n for _ in range(target + 1)]
             for numNeighbors in range(1, min(h + 2, target + 1)):
                 if house == 0:
                     for color in range(n):
                         colorCost = cost[h][color]
-                        dp[numNeighbors][color] = min(
-                            dp[numNeighbors][color],
-                            colorCost + prev[numNeighbors][color],
-                            colorCost + min(prev[numNeighbors - 1][c] for c in range(n) if c != color)
-                        )
+                        dp[numNeighbors][color] = min(dp[numNeighbors][color], colorCost + prev[numNeighbors][color], colorCost + min((prev[numNeighbors - 1][c] for c in range(n) if c != color)))
                         if numNeighbors == target and h == m - 1:
-                            # print(h,numNeighbors,color,out,dp[numNeighbors][color])
                             out = min(out, dp[numNeighbors][color])
                 else:
                     color = house - 1
-                    dp[numNeighbors][color] = min(
-                        dp[numNeighbors][color],
-                        prev[numNeighbors][color],
-                        min(prev[numNeighbors - 1][c] for c in range(n) if c != color)
-                    )
+                    dp[numNeighbors][color] = min(dp[numNeighbors][color], prev[numNeighbors][color], min((prev[numNeighbors - 1][c] for c in range(n) if c != color)))
                     if numNeighbors == target and h == m - 1:
                         out = min(out, dp[numNeighbors][color])
             prev = dp
-
-        # out = None
-        # if houses[-1]==0:
-        #     out = min(prev[target][c] for c in range(n))
-        # else:
-        #     prev[target][houses[-1]-1]
         return out if out != float('inf') else -1

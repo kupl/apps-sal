@@ -1,11 +1,10 @@
-# IAWT
-n, k, q = list(map(int, input().split()))
+(n, k, q) = list(map(int, input().split()))
 l = [list(map(int, input().split())) for i in range(n)]
 qs = [list(map(int, input().split())) for i in range(q)]
 
 
 def answer(q):
-    a, b = q
+    (a, b) = q
     if a == 1:
         print(l3[b - 1])
     else:
@@ -27,9 +26,7 @@ for i in range(1, 200000):
     if l2[i] >= k:
         l3[i] = 1
     l2[i] -= mins[i]
-
 for i in range(1, 200000):
     l3[i] = l3[i - 1] + l3[i]
-
 for q in qs:
     answer(q)

@@ -1,8 +1,9 @@
 class Solution:
+
     def maxDistance(self, position: List[int], m: int) -> int:
         position = sorted(position)
-        minp, maxp = position[0], position[-1]
-        lo, hi = 1, (maxp - minp) // (m - 1) + 1
+        (minp, maxp) = (position[0], position[-1])
+        (lo, hi) = (1, (maxp - minp) // (m - 1) + 1)
         ans = lo
 
         def distributable(n):

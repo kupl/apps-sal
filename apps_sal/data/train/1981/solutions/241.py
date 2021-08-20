@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         q = []
         ans = 0
@@ -21,5 +22,5 @@ class Solution:
                 break
         for i in range(len(q)):
             ans += q[i] * nums[i]
-            ans = ans % (10**9 + 7)
+            ans = ans % (10 ** 9 + 7)
         return ans

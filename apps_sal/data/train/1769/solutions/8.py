@@ -4,7 +4,6 @@ def find_all_paths(topology, start, end, path=[]):
     path = path + [start]
     if start == end:
         return [path]
-
     paths = []
     for node in topology[start]:
         if node not in path:
@@ -18,7 +17,7 @@ def distance(topology):
     dist = {}
     for element in topology:
         for node in topology[element]:
-            dist[(element, node)] = topology[element][node]
+            dist[element, node] = topology[element][node]
     return dist
 
 

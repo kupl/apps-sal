@@ -12,7 +12,6 @@ def SubArr(arr, n):
         if cs in ps:
             res += ps[cs]
         ps[cs] += 1
-
     return res
 
 

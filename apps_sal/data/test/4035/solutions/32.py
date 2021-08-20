@@ -1,4 +1,4 @@
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 l = []
 for i in range(1, 10000):
     a = i * 0.08
@@ -7,7 +7,6 @@ for i in range(1, 10000):
         break
     elif A <= a < A + 1 and B <= b < B + 1:
         l.append(i)
-
 if len(l) == 0:
     print(-1)
 else:

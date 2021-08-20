@@ -14,18 +14,13 @@ while test_case > 0:
                 flag = False
                 times += 1
         else:
-            # c = max(c,temp)
             c.append(temp)
             temp = 0
             flag = True
-    # if c % 2 == 0 :
-    #     print("No")
-    # else:
-    #     print("Yes")
     max1 = max(c)
     c.remove(max1)
     max2 = max(c)
     if max1 % 2 == 0 or max1 == max2:
-        print("No")
+        print('No')
     else:
-        print("Yes")
+        print('Yes')

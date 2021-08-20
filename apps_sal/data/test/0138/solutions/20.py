@@ -1,5 +1,4 @@
-n, one, two, three = (int(x) for x in input().split())
-
+(n, one, two, three) = (int(x) for x in input().split())
 n = n % 4
 if n == 3:
     print(min(one, 3 * three, two + three))

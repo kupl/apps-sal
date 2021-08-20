@@ -1,4 +1,3 @@
-# cook your dish here
 try:
     T = int(input())
     while T != 0:
@@ -8,12 +7,11 @@ try:
         th = l[2]
         flag = False
         if (th - tc) % 3 != 0:
-            print("Yes")
+            print('Yes')
+        elif (th - tc) // 3 <= m:
+            print('No')
         else:
-            if (th - tc) // 3 <= m:
-                print("No")
-            else:
-                print("Yes")
+            print('Yes')
         T -= 1
 except:
     pass

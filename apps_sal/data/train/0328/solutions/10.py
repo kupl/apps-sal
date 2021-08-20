@@ -1,4 +1,5 @@
 class Solution:
+
     def find132pattern(self, nums):
         """
         :type nums: List[int]
@@ -8,13 +9,11 @@ class Solution:
             return False
         mins = [-1 for i in range(len(nums))]
         mins[0] = nums[0]
-
         for i in range(1, len(nums)):
             mins[i] = min(mins[i - 1], nums[i])
         print(mins)
         s = []
         for i in range(len(nums) - 1, -1, -1):
-            # print(i, s)
             if nums[i] != mins[i]:
                 while s and s[-1] <= mins[i]:
                     s.pop()

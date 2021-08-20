@@ -1,7 +1,5 @@
-#!/usr/bin/env python3
-
 from sys import stdin
-from fractions import gcd  # math.gcd is introduced in python 3.5
+from fractions import gcd
 from functools import reduce
 
 
@@ -17,12 +15,12 @@ def flatten(ls):
 
 def multiples(t, N):
     """Set of multiples (<= N) of some x in t."""
-    return set(i for x in t for i in range(x, N + 1, x))
+    return set((i for x in t for i in range(x, N + 1, x)))
 
 
 def value(a, t):
     """The value of the jewels that are labeled a multiple of some x in t."""
-    return sum(a[i - 1] for i in multiples(t, len(a)))
+    return sum((a[i - 1] for i in multiples(t, len(a))))
 
 
 def remove(a, t):
@@ -42,7 +40,6 @@ def tuples(m, N):
     ts = tuples(m - 1, N)
     if ts[-1] == []:
         return ts
-
     ls = []
     for t in ts[-1]:
         lc = reduce(lcm, t) if len(t) > 0 else 1
@@ -50,9 +47,9 @@ def tuples(m, N):
         for i in range(mi - 1, 0, -1):
             if lcm(lc, i) > N:
                 continue
-            if any(j % i == 0 for j in t):
+            if any((j % i == 0 for j in t)):
                 continue
-            ls.append((i,) + t)  # smaller label first
+            ls.append((i,) + t)
     ts.append(ls)
     return ts
 
@@ -60,7 +57,6 @@ def tuples(m, N):
 def solve(a):
     N = len(a)
     tl = flatten(tuples(N, N))
-    # break jewels with larger labels first.
     tl.sort(key=lambda t: [-x for x in t])
     for t in tl:
         if value(a, t) < 0:
@@ -72,4 +68,4 @@ N = int(stdin.readline())
 a = [int(w) for w in stdin.readline().split()]
 if len(a) != N:
     raise
-print((solve(a)))
+print(solve(a))

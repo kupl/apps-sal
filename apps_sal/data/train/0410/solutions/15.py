@@ -10,6 +10,7 @@ def power_value(x):
 
 
 class Solution:
+
     def getKth(self, lo: int, hi: int, k: int) -> int:
         power_values = []
         for x in range(lo, hi + 1):

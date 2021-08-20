@@ -1,6 +1,6 @@
 def two_sort(array):
     array = sorted(array)
-    a = ""
+    a = ''
     for el in array[0]:
-        a += el + "***"
+        a += el + '***'
     return a[:-3]

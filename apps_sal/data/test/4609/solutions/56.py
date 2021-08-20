@@ -6,5 +6,4 @@ for i in range(n):
         a.discard(x)
     else:
         a.add(x)
-
 print(len(a))

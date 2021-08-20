@@ -2,7 +2,7 @@ n = int(input())
 friends = [list(map(str, input().split())) for i in range(n)]
 days = [[0] * 366 for i in range(2)]
 for i in range(n):
-    if friends[i][0] == "M":
+    if friends[i][0] == 'M':
         for j in range(int(friends[i][1]) - 1, int(friends[i][2])):
             days[0][j] += 1
     else:

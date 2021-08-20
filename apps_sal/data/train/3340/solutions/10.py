@@ -13,17 +13,15 @@ def sharkovsky(a, b):
         return ans
     ans_a = Answer(a)
     ans_b = Answer(b)
-
     if ans_a[1] == 1 and ans_b[1] != 1:
         return False
     elif ans_a[1] != 1 and ans_b[1] == 1:
         return True
     elif ans_a[1] == 1 and ans_b[1] == 1:
         return ans_a[0] > ans_b[0]
+    elif ans_a[0] > ans_b[0]:
+        return False
+    elif ans_a[0] < ans_b[0]:
+        return True
     else:
-        if ans_a[0] > ans_b[0]:
-            return False
-        elif ans_a[0] < ans_b[0]:
-            return True
-        else:
-            return ans_a[1] < ans_b[1]
+        return ans_a[1] < ans_b[1]

@@ -1,4 +1,5 @@
 class Solution:
+
     def maxScore(self, cardPoints: List[int], k: int) -> int:
         if not cardPoints or len(cardPoints) == 0:
             return 0

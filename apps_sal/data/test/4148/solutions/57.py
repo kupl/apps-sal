@@ -3,5 +3,5 @@ n = int(input())
 s = input()
 ans = ''
 for i in s:
-    ans += (a[(a.index(i) + n) % 26])
+    ans += a[(a.index(i) + n) % 26]
 print(ans)

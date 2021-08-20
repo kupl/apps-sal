@@ -4,7 +4,7 @@ def main():
     bits = [0] * (10 ** 6 + 100)
     for e in w:
         bits[e] += 1
-    cur, res = 0, 0
+    (cur, res) = (0, 0)
     for e in bits:
         cur += e
         if cur % 2:

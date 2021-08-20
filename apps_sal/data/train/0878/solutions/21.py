@@ -1,7 +1,7 @@
 from sys import stdin, stdout
 ans = []
 for _ in range(int(stdin.readline())):
-    n, k = map(int, stdin.readline().split())
+    (n, k) = map(int, stdin.readline().split())
     s_h = list(map(int, stdin.readline().split()))
     num = (s_h[0] - 1) // k
     for i in range(1, n):

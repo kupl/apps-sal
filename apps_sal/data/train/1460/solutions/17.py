@@ -1,4 +1,3 @@
-# Enter your code here...
 try:
     num = list(map(int, input().split()))
     n = num[0]
@@ -9,13 +8,13 @@ try:
     dic = {}
     dic[1] = y
     for i in range(2, n + 1):
-        dic[i] = (y - 0.02 * y)
+        dic[i] = y - 0.02 * y
         y = dic[i]
     for i in inp:
         x += dic[i]
     if x < 300:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 except EOFError:
     pass

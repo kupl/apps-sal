@@ -1,6 +1,6 @@
 def almost_increasing_sequence(sequence):
-    save, first = -float('inf'), True
-    for i, x in enumerate(sequence):
+    (save, first) = (-float('inf'), True)
+    for (i, x) in enumerate(sequence):
         if x > save:
             save = x
         elif first:

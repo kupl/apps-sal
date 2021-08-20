@@ -1,4 +1,5 @@
 class Solution:
+
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         dicts = {}
         for row in matrix:
@@ -12,9 +13,7 @@ class Solution:
                 dicts[rev_bin_rep] = 1
             else:
                 dicts[rev_bin_rep] += 1
-            #print (bin_rep, rev_bin_rep)
         res = 0
-        #print (dicts)
-        for key, value in dicts.items():
+        for (key, value) in dicts.items():
             res = max(res, value)
         return res

@@ -1,4 +1,5 @@
 class Solution:
+
     def shipWithinDays(self, weights: List[int], D: int) -> int:
 
         def isPossible(capacity):
@@ -10,9 +11,7 @@ class Solution:
                     day += 1
                     w = wt
             return day
-
-        start, end = max(max(weights), sum(weights) // D), sum(weights)
-
+        (start, end) = (max(max(weights), sum(weights) // D), sum(weights))
         while start < end:
             mid = start + (end - start) // 2
             days = isPossible(mid)
@@ -20,5 +19,4 @@ class Solution:
                 end = mid
             elif days > D:
                 start = mid + 1
-
         return start

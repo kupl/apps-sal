@@ -8,5 +8,5 @@ else:
     else:
         ans += n // 10
         for i in range(100):
-            ans += n // (10 * (5**(i + 1)))
+            ans += n // (10 * 5 ** (i + 1))
         print(ans)

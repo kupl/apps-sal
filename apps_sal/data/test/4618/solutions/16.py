@@ -3,7 +3,7 @@ def main():
     K = int(input())
     r = set()
     for i in range(97, 97 + 26):
-        for j, v in enumerate(s):
+        for (j, v) in enumerate(s):
             if v == chr(i):
                 for k in range(5):
                     r.add(s[j:j + k + 1])
@@ -14,4 +14,4 @@ def main():
     return l[K - 1]
 
 
-print((main()))
+print(main())

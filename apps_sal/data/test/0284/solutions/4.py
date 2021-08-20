@@ -12,18 +12,18 @@ def main():
     if n % 2 != 0:
         n -= a
         if n < 0:
-            print("NO")
+            print('NO')
             return
     for i in range(0, 1000):
         now = a * i
         toc = n - now
         if toc < 0:
-            print("NO")
+            print('NO')
             return
         j = 0
         while j * b <= toc:
             if (toc - j * b) % c == 0:
-                print("YES")
+                print('YES')
                 return
             j += 1
 

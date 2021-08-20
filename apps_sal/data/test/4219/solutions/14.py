@@ -4,12 +4,12 @@ count = 0
 for i in range(N):
     A = int(input())
     for j in range(A):
-        x, y = map(int, input().split())
+        (x, y) = map(int, input().split())
         testimony[i][x - 1] = y
-for i in range(2**N):
+for i in range(2 ** N):
     honest = [0] * N
     for j in range(N):
-        if(i >> j) & 1:
+        if i >> j & 1:
             honest[j] = 1
     flag = True
     for j in range(N):

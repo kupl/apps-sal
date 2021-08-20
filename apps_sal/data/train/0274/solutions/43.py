@@ -1,6 +1,7 @@
 class Solution:
+
     def longestSubarray(self, nums: List[int], limit: int) -> int:
-        min_deque, max_deque = deque(), deque()
+        (min_deque, max_deque) = (deque(), deque())
         l = r = 0
         ans = 0
         while r < len(nums):
@@ -19,5 +20,4 @@ class Solution:
                 while max_deque[0] <= l:
                     max_deque.popleft()
                 l += 1
-
         return ans

@@ -1,20 +1,16 @@
 from math import gcd
 from functools import reduce
 
-# https://brg.a2hosted.com/?page_id=563
-# The Money Changing Problem Revisited:
-# Computing the Frobenius Numberin Time O(ka1) by Bocker and Liptak
-# http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.389.4933&rep=rep1&type=pdf
-
 
 def frobenius_number(a):
+
     def __residue_table(a):
         n = [0] + [None] * (a[0] - 1)
         for i in range(1, len(a)):
             d = gcd(a[0], a[i])
             for r in range(d):
                 try:
-                    nn = min(n[q] for q in range(r, a[0], d) if n[q] is not None)
+                    nn = min((n[q] for q in range(r, a[0], d) if n[q] is not None))
                 except ValueError:
                     continue
                 if nn is not None:

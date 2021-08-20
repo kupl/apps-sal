@@ -1,4 +1,5 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
         A = sorted(A)
 
@@ -10,7 +11,6 @@ class Solution:
                     fact.add(a // i)
             fact.add(a)
             return fact
-
         parent = [i for i in range(len(A))]
         nodes = [1] * len(A)
         rank = [1] * len(A)
@@ -22,7 +22,7 @@ class Solution:
             return parent[a]
 
         def union(a, b):
-            pa, pb = find(a), find(b)
+            (pa, pb) = (find(a), find(b))
             if rank[pa] > pb:
                 parent[pb] = pa
                 nodes[pa] += nodes[pb]
@@ -33,9 +33,7 @@ class Solution:
                 parent[pb] = pa
                 nodes[pa] += nodes[pb]
                 rank[pa] += 1
-
         m = {}
-
         for i in range(len(A)):
             facts = factors(A[i])
             for f in facts:
@@ -43,5 +41,4 @@ class Solution:
                     union(i, m[f])
                 else:
                     m[f] = i
-
         return max(nodes)

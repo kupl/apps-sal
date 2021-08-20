@@ -1,2 +1,2 @@
 s = list(input())
-print(s.count("+") - s.count("-"))
+print(s.count('+') - s.count('-'))

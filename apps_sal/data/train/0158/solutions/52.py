@@ -1,10 +1,11 @@
 class Solution:
+
     def kSimilarity(self, A: str, B: str) -> int:
         if A == B:
             return 0
         visited = set([A])
         q = collections.deque([A])
-        res, n = 0, len(A)
+        (res, n) = (0, len(A))
         while q:
             res += 1
             qn = len(q)
@@ -26,5 +27,5 @@ class Solution:
 
     def swap(self, s: str, i: int, j: int) -> str:
         l = list(s)
-        l[i], l[j] = l[j], l[i]
+        (l[i], l[j]) = (l[j], l[i])
         return ''.join(l)

@@ -20,8 +20,7 @@ while q:
     if m['L'] == 0:
         m['D'] = min(m['D'], 1)
         m['U'] = m['D']
-
-    print(m['L'] + m['D'] + m['R'] + m["U"])
+    print(m['L'] + m['D'] + m['R'] + m['U'])
     print('L' * m['L'], end='')
     print('U' * m['U'], end='')
     print('R' * m['R'], end='')

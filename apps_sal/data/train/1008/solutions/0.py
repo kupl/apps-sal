@@ -8,21 +8,16 @@ for k in range(t):
         if l[i] == l[i - 1]:
             count += 1
         else:
-
             if l[i - 1] not in m:
-                m[l[i - 1]] = (count * (count + 1)) / 2
+                m[l[i - 1]] = count * (count + 1) / 2
             else:
-
-                m[l[i - 1]] += (count * (count + 1)) / 2
+                m[l[i - 1]] += count * (count + 1) / 2
             count = 1
-    if(l[n - 1]) not in m:
-        m[l[n - 1]] = (count * (count + 1)) / 2
+    if l[n - 1] not in m:
+        m[l[n - 1]] = count * (count + 1) / 2
     else:
-
-        m[l[n - 1]] += (count * (count + 1)) / 2
+        m[l[n - 1]] += count * (count + 1) / 2
     s = 1
-
     for x in m:
-
-        s = (s * m[x]) % (1000000007)
+        s = s * m[x] % 1000000007
     print(s)

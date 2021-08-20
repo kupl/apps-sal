@@ -2,9 +2,10 @@ from collections import Counter
 
 
 class Solution:
+
     def maxLength(self, arr: List[str]) -> int:
         self.max_len = 0
-        for i, s in enumerate(arr):
+        for (i, s) in enumerate(arr):
             self.bfs(Counter(s), arr, i)
         return self.max_len
 
@@ -13,7 +14,6 @@ class Solution:
             return
         if len(counter) > self.max_len:
             self.max_len = len(counter)
-
         for i in range(_index + 1, len(arr)):
             s = arr[i]
             counter_copy = copy.copy(counter)

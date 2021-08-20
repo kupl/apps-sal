@@ -22,5 +22,4 @@ if N != 1:
         ans = ans * T[n] // gcd(ans, T[n])
 else:
     ans = T[0]
-
 print(ans)

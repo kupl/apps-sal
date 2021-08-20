@@ -5,7 +5,7 @@ a = []
 b = []
 g = 0
 for i in range(n):
-    x, y = map(int, sys.stdin.readline().split())
+    (x, y) = map(int, sys.stdin.readline().split())
     a.append(x)
     b.append(y)
     g = math.gcd(g, x * y)

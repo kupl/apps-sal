@@ -1,4 +1,5 @@
-def tr(n): return sum(int(i) ** 2 for i in str(n))
+def tr(n):
+    return sum((int(i) ** 2 for i in str(n)))
 
 
 def repeat_sequence_len(n):

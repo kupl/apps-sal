@@ -8,13 +8,11 @@ def resolve():
         ans = 0
         for i in range(2, len(S)):
             now.append(S[i])
-            # print(now)
-            if now[-3:] == ["f", "o", "x"]:
+            if now[-3:] == ['f', 'o', 'x']:
                 now.pop()
                 now.pop()
                 now.pop()
                 ans += 3
-
         print(N - ans)
 
 

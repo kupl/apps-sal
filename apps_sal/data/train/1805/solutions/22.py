@@ -1,11 +1,12 @@
 class Solution:
+
     def watchedVideosByFriends(self, watchedVideos: List[List[str]], friends: List[List[int]], id: int, level: int) -> List[str]:
         visited = set()
         queue = deque([(id, 0)])
         visited.add(id)
         requiredFriends = []
         while queue:
-            person, lev = queue.popleft()
+            (person, lev) = queue.popleft()
             if lev == level:
                 requiredFriends.append(person)
             if lev > level:

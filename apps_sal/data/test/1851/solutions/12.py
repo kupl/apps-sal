@@ -14,7 +14,7 @@ def read():
 
 
 def get():
-    return int(input()), [int(i) for i in input().split()]
+    return (int(input()), [int(i) for i in input().split()])
 
 
 def out(*arg):
@@ -26,7 +26,7 @@ def out(*arg):
 
 
 def main():
-    n, ls = get()
+    (n, ls) = get()
     stack = -1
     ans = 0
     for i in range(n):

@@ -1,23 +1,18 @@
 class Solution:
+
     def numSubseq(self, nums: List[int], target: int) -> int:
         nums.sort()
-
         cnt = 0
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             if i < len(nums) - 1:
                 if n + n > target:
                     continue
-            else:
-                if n + n > target:
-                    continue
-
-#             print ('ssss')
-
+            elif n + n > target:
+                continue
             if n + nums[-1] <= target:
                 R = len(nums)
-                cnt += 2**(R - i - 1)
+                cnt += 2 ** (R - i - 1)
                 continue
-
             L = i
             R = len(nums) - 1
             while L < R:
@@ -26,6 +21,5 @@ class Solution:
                     L = mid + 1
                 else:
                     R = mid
-            cnt += 2**(R - i - 1)
-            # print (n, i, R, cnt)
-        return cnt % (10**9 + 7)
+            cnt += 2 ** (R - i - 1)
+        return cnt % (10 ** 9 + 7)

@@ -1,4 +1,4 @@
-n, u = list(map(int, input().split()))
+(n, u) = list(map(int, input().split()))
 e = list(map(int, input().split()))
 max_eff = -1
 j = 0

@@ -9,12 +9,11 @@ def input():
 
 @jit
 def main():
-    R, C, K = list(map(int, input().split()))
+    (R, C, K) = list(map(int, input().split()))
     item = np.zeros((R, C), np.int64)
     for i in range(K):
-        r, c, v = list(map(int, input().split()))
+        (r, c, v) = list(map(int, input().split()))
         item[r - 1][c - 1] = v
-
     dp = np.zeros((R + 1, C + 1, 4), np.int64)
     for i in range(R):
         for j in range(C):
@@ -26,4 +25,4 @@ def main():
     return max(dp[R - 1][C - 1])
 
 
-print((main()))
+print(main())

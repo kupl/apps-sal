@@ -1,8 +1,8 @@
-from math import*
-n, s = map(int, input().split())
+from math import *
+(n, s) = map(int, input().split())
 dist = []
 for i in range(n):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     dist.append((a * a + b * b, c))
 dist = sorted(dist)
 i = 0

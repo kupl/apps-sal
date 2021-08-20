@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    x, n = map(int, input().split())
+    (x, n) = map(int, input().split())
     r = 0
     i = 1
     while x * i < n:

@@ -7,7 +7,6 @@ def isSame(n):
 
 n_s = input()
 n_i = int(n_s)
-
 while True:
     if isSame(n_s):
         print(n_s)

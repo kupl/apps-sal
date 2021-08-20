@@ -1,10 +1,9 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 mCnt = 0
 ans = [0] * m
 start = 0
 end = 0
 Q = [[] for i in range(m)]
-
 for i in range(n):
     A = list(map(int, input().split()))
     z = 0
@@ -31,6 +30,5 @@ for i in range(n):
             if z <= k:
                 break
         end += 1
-
 for i in ans:
-    print(i, end=" ")
+    print(i, end=' ')

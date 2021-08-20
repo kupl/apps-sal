@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    a, b, c = [int(x) for x in input().split()]
+    (a, b, c) = [int(x) for x in input().split()]
     l = 0
     r = c
     while r - l > 1:
@@ -13,6 +13,5 @@ for i in range(n):
         print(c + 1)
     elif a + r > b + c - r:
         print(c - r + 1)
-
     else:
         print(0)

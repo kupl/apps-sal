@@ -1,5 +1,4 @@
 def tidyNumber(n):
-
     n = str(n)
     print(n)
     for i in range(1, len(n)):
@@ -7,5 +6,4 @@ def tidyNumber(n):
             continue
         else:
             return False
-
     return True

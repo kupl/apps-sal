@@ -1,4 +1,5 @@
 class StreamChecker:
+
     def __init__(self, words: List[str]):
         self.tree = Tree()
         for item in words:
@@ -25,6 +26,7 @@ class StreamChecker:
 
 
 class Tree:
+
     def __init__(self):
         self.food = False
         self.subtrees = {}

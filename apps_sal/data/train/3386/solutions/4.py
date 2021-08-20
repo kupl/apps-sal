@@ -3,9 +3,8 @@ def get_column_title(num):
         raise TypeError
     if num < 1:
         raise IndexError
-
-    abc = " ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    col_title = ""
+    abc = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    col_title = ''
     while num > 0:
         letter_index = num % 26
         if letter_index == 0:
@@ -13,5 +12,4 @@ def get_column_title(num):
             num -= 26
         num //= 26
         col_title = abc[letter_index] + col_title
-
     return col_title.strip()

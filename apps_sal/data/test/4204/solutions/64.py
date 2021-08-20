@@ -9,4 +9,4 @@ for i in range(len(S)):
 if K <= one:
     print('1')
 else:
-    print((S[one]))
+    print(S[one])

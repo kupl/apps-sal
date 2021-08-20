@@ -1,6 +1,6 @@
 t = int(input())
 for qq in range(t):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     m = list(map(int, input().split()))
     p = 0
     for i in range(n - k + 1, n - 1):

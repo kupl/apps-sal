@@ -25,5 +25,4 @@ for v in list(Nso.values()):
         else:
             count += i
             ans += 1
-
 print(ans)

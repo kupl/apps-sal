@@ -1,7 +1,5 @@
-
 import math
 import sys
-
 s = input()
 k = int(input())
 l = len(s)
@@ -13,8 +11,8 @@ if l % k == 0:
             if s[d * i + j] != s[d * i + d - j - 1]:
                 fail = 1
     if fail == 1:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')
 else:
-    print("NO")
+    print('NO')

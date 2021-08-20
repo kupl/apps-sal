@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         return self.triplets(nums1, nums2) + self.triplets(nums2, nums1)
 
@@ -17,5 +18,4 @@ class Solution:
                     nums2_lookup[nums2[j]] += 1
                 else:
                     nums2_lookup[nums2[j]] = 1
-
         return n_triplets

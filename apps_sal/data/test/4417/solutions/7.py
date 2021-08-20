@@ -1,6 +1,6 @@
 q = int(input())
 for i in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     it = list(map(int, input().split()))
     ti = [i + k for i in it]
     st = False

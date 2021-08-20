@@ -10,7 +10,7 @@ def li():
     return list(mi())
 
 
-n, m, a, b = mi()
+(n, m, a, b) = mi()
 d = n % m
 c1 = d * b
 c2 = (m - d) * a

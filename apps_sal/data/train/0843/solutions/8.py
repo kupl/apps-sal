@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     a = []
     n = int(input())
@@ -19,7 +18,6 @@ for _ in range(int(input())):
             break
         else:
             s += c[i]
-
     if f == 1:
         print(-1)
     else:

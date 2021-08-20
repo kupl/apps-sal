@@ -1,7 +1,8 @@
-def I(): return list(map(int, input().split()))
+def I():
+    return list(map(int, input().split()))
 
 
-n, m, N, X = I()
+(n, m, N, X) = I()
 t = I()
 r = min(t) != N
 r += max(t) != X

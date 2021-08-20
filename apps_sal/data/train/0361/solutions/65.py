@@ -1,4 +1,5 @@
 class Solution:
+
     def tilingRectangle(self, m: int, n: int) -> int:
         cur = [0] * (n * m)
         q = [cur]
@@ -27,7 +28,7 @@ class Solution:
                     flag = False
                     for i in range(start[0], start[0] + sz):
                         for j in range(start[1], start[1] + sz):
-                            if not (0 <= i < m and 0 <= j < n and cur[i * n + j] == 0):
+                            if not (0 <= i < m and 0 <= j < n and (cur[i * n + j] == 0)):
                                 flag = True
                                 break
                             cc[i * n + j] = 1

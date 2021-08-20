@@ -10,19 +10,33 @@ from bisect import bisect, bisect_left
 from fractions import gcd
 from heapq import heappush, heappop
 from functools import reduce, lru_cache
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return list(map(int, input().split()))
-def LIST(): return list(map(int, input().split()))
-def ZIP(n): return list(zip(*(MAP() for _ in range(n))))
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return list(map(int, input().split()))
+
+
+def LIST():
+    return list(map(int, input().split()))
+
+
+def ZIP(n):
+    return list(zip(*(MAP() for _ in range(n))))
 
 
 sys.setrecursionlimit(10 ** 9)
-INF = float("inf")
+INF = float('inf')
 mod = 10 ** 9 + 7
-
-X, Y = MAP()
+(X, Y) = MAP()
 if abs(X - Y) <= 1:
-    print("Brown")
+    print('Brown')
 else:
-    print("Alice")
+    print('Alice')

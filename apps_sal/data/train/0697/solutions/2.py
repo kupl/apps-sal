@@ -10,6 +10,6 @@ def maxSum(arr, n, k):
 
 
 for i in range(int(input())):
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     arr = list(map(int, input().split()))
     print(maxSum(arr, n, k))

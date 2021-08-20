@@ -1,15 +1,14 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 A = list(map(int, input().split()))
 A.sort()
 BC = []
 for _ in range(M):
-    b, c = map(int, input().split())
+    (b, c) = map(int, input().split())
     BC.append((b, c))
-BC.sort(key=lambda bc: -bc[1])  # sort from largest
-
+BC.sort(key=lambda bc: -bc[1])
 i = 0
 done = False
-for b, c in BC:
+for (b, c) in BC:
     if done:
         break
     for _ in range(b):

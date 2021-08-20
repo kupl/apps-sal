@@ -1,4 +1,5 @@
 class Solution:
+
     def solveEquation(self, equation):
         """
         :type equation: str
@@ -17,11 +18,10 @@ class Solution:
             else:
                 if temp[-1] != 'x':
                     l[1] += flag * int(temp)
+                elif len(temp) == 1:
+                    l[0] += flag
                 else:
-                    if len(temp) == 1:
-                        l[0] += flag
-                    else:
-                        l[0] += flag * int(temp[:-1])
+                    l[0] += flag * int(temp[:-1])
                 if i == '+':
                     flag = 1
                 if i == '-':
@@ -30,11 +30,10 @@ class Solution:
                 print(l)
         if temp[-1] != 'x':
             l[1] += flag * int(temp)
+        elif len(temp) == 1:
+            l[0] += flag
         else:
-            if len(temp) == 1:
-                l[0] += flag
-            else:
-                l[0] += flag * int(temp[:-1])
+            l[0] += flag * int(temp[:-1])
         temp = ''
         r = [0, 0]
         flag = 1
@@ -47,11 +46,10 @@ class Solution:
             else:
                 if temp[-1] != 'x':
                     r[1] += flag * int(temp)
+                elif len(temp) == 1:
+                    r[0] += flag
                 else:
-                    if len(temp) == 1:
-                        r[0] += flag
-                    else:
-                        r[0] += flag * int(temp[:-1])
+                    r[0] += flag * int(temp[:-1])
                 if i == '+':
                     flag = 1
                 if i == '-':
@@ -59,11 +57,10 @@ class Solution:
                 temp = ''
         if temp[-1] != 'x':
             r[1] += flag * int(temp)
+        elif len(temp) == 1:
+            r[0] += flag
         else:
-            if len(temp) == 1:
-                r[0] += flag
-            else:
-                r[0] += flag * int(temp[:-1])
+            r[0] += flag * int(temp[:-1])
         temp = ''
         print(l, r)
         if l[0] == r[0]:

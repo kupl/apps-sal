@@ -1,11 +1,11 @@
 class Solution:
-    # O(n) Time | O(1) Space
+
     def minOperationsMaxProfit(self, customers: List[int], boardingCost: int, runningCost: int) -> int:
         result = 0
         totalPeople = 0
         totalProfit = 0
         maxProfit = 0
-        for i, num in enumerate(customers):
+        for (i, num) in enumerate(customers):
             totalPeople += num
             onBoard = min(4, totalPeople)
             totalPeople -= onBoard
@@ -13,7 +13,7 @@ class Solution:
             if totalProfit > maxProfit:
                 maxProfit = totalProfit
                 result = i + 1
-        q, r = divmod(totalPeople, 4)
+        (q, r) = divmod(totalPeople, 4)
         if 4 * boardingCost > runningCost:
             result += q
         if r * boardingCost > runningCost:

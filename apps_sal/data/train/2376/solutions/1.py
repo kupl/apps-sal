@@ -1,14 +1,12 @@
 import sys
 input = sys.stdin.readline
 for f in range(int(input())):
-    n, k = map(int, input().split())
-
+    (n, k) = map(int, input().split())
     neig = [0] * n
     for i in range(n):
         neig[i] = [0]
-
     for i in range(n - 1):
-        a, b = map(int, input().split())
+        (a, b) = map(int, input().split())
         a -= 1
         b -= 1
         neig[a][0] += 1

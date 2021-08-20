@@ -1,10 +1,10 @@
 import re
-D = {v: [r, c] for r, row in enumerate(['abcde123', 'fghij456', 'klmno789', 'pqrst.@0', 'uvwxyz_/', '* ']) for c, v in enumerate(row)}
+D = {v: [r, c] for (r, row) in enumerate(['abcde123', 'fghij456', 'klmno789', 'pqrst.@0', 'uvwxyz_/', '* ']) for (c, v) in enumerate(row)}
 
 
 def manhattan_dist(*points):
     print('points md: ', points)
-    return [abs(z2 - z1) for z1, z2 in zip(*points)]
+    return [abs(z2 - z1) for (z1, z2) in zip(*points)]
 
 
 def wrap_manhattan_dist(*points):
@@ -14,10 +14,10 @@ def wrap_manhattan_dist(*points):
 
 
 def tv_remote(words):
-    words = re.sub('([A-Z])', r'*\1*', words).lower()
-    words = re.sub('\*([\d.@_/ ]*)(\*|$)', r'\1', words)
-    words = re.sub('\*$', '', words)
-    words = re.sub('\*([0-9.@_/ ]+)([^\*])', r'\1*\2', words)
+    words = re.sub('([A-Z])', '*\\1*', words).lower()
+    words = re.sub('\\*([\\d.@_/ ]*)(\\*|$)', '\\1', words)
+    words = re.sub('\\*$', '', words)
+    words = re.sub('\\*([0-9.@_/ ]+)([^\\*])', '\\1*\\2', words)
     words = 'a' + words
     moves = sum([wrap_manhattan_dist(D[words[i]], D[words[i + 1]]) + 1 for i in range(len(words) - 1)])
     return moves

@@ -1,9 +1,9 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 a = [0] + list(map(int, input().split())) + [0]
 x = []
 y = []
 for i in range(n):
-    xx, yy = map(int, input().split())
+    (xx, yy) = map(int, input().split())
     x += [xx]
     y += [yy]
 b = [-1] * n

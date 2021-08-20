@@ -2,7 +2,6 @@ from heapq import *
 
 
 def add_all(lst):
-
     heapify(lst)
     s = 0
     total = 0
@@ -10,5 +9,4 @@ def add_all(lst):
         s = heappop(lst) + heappop(lst)
         total += s
         heappush(lst, s)
-
     return total

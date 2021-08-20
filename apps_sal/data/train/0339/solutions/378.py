@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         d1 = collections.defaultdict(int)
         d2 = collections.defaultdict(int)
@@ -18,24 +19,3 @@ class Solution:
                 if p in d1:
                     res += d1[p]
         return res
-#         pow_nums1 = [ x**2 for x in nums1 ]
-#         pow_nums2 = [ x**2 for x in nums2 ]
-#         count = 0
-
-#         # type 1
-#         for num_index in range(len(nums2) - 1): # exclude the last one
-#             current = nums2[num_index]
-#             rests = nums2[num_index + 1:]
-#             for rest in rests:
-#                 product = current * rest
-#                 count += pow_nums1.count(product)
-#         # type 2
-#         for num_index in range(len(nums1) - 1): # exclude the last one
-#             current = nums1[num_index]
-#             rests = nums1[num_index + 1:]
-#             for rest in rests:
-#                 product = current * rest
-#                 count += pow_nums2.count(product)
-
-
-#         return count

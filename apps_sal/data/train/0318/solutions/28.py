@@ -1,5 +1,7 @@
 class Solution:
+
     def maxSizeSlices(self, slices: List[int]) -> int:
+
         @lru_cache(None)
         def dp(i, remaining, version):
             if i > len(slices) - version:

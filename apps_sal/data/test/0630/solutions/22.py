@@ -3,11 +3,9 @@ from random import *
 from copy import *
 import os
 import sys
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 res = [0] * (n + 1)
-
 for i in range(1, n + 1):
     prev = A[i - 1]
     res[i] = res[prev]

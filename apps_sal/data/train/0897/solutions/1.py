@@ -1,11 +1,11 @@
 MOD = 10 ** 9 + 7
 for t in range(int(input())):
-    N, M, K = map(int, input().split())
+    (N, M, K) = map(int, input().split())
     A = list(map(int, input().split()))
-    I, D = [0] * (N + 2), [0] * (N + 2)
+    (I, D) = ([0] * (N + 2), [0] * (N + 2))
     for i in range(M):
-        x, L, R = input().split()
-        L, R = int(L), int(R)
+        (x, L, R) = input().split()
+        (L, R) = (int(L), int(R))
         if x == 'I':
             I[L] += 1
             I[R] -= 1
@@ -20,9 +20,9 @@ for t in range(int(input())):
         if I[i] and D[i]:
             impossibru = 1
             break
-        if not I[i] and not D[i]:
+        if not I[i] and (not D[i]):
             ans = ans * (mx - mn + 1) % MOD
-            mn, mx = 1, K
+            (mn, mx) = (1, K)
         elif I[i]:
             mx = min(mx + 1, K)
             mn += 1

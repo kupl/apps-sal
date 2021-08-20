@@ -1,4 +1,5 @@
 class Solution:
+
     def containsNearbyDuplicate(self, nums, k):
         """
         :type nums: List[int]
@@ -9,7 +10,6 @@ class Solution:
         for i in range(len(nums)):
             if i - k - 1 >= 0:
                 s.remove(nums[i - k - 1])
-
             if nums[i] in s:
                 return True
             s.add(nums[i])

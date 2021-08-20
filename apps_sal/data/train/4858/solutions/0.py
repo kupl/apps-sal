@@ -2,9 +2,9 @@ def j_n(n):
     j = [0]
     a = [1]
     for i in range(1, n):
-        j.append((i - a[j[i - 1]]))
-        a.append((i - j[a[i - 1]]))
-    return j, a
+        j.append(i - a[j[i - 1]])
+        a.append(i - j[a[i - 1]])
+    return (j, a)
 
 
 def john(n):

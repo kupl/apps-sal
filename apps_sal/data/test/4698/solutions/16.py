@@ -5,7 +5,6 @@ drinks = []
 for _ in range(m):
     drink = list(map(int, input().split()))
     drinks.append(drink)
-
 for drink in drinks:
     time = 0
     copy = times.copy()

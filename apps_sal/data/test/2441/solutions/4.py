@@ -3,7 +3,6 @@ from heapq import heappop, heappush
 import bisect
 import sys
 import threading
-# 2
 mod = 10 ** 9 + 7
 
 
@@ -32,7 +31,7 @@ def main():
     G = [[] for i in range(n + 1)]
     RG = [[] for i in range(n + 1)]
     for i in range(m):
-        a, b = list(map(int, input().split()))
+        (a, b) = list(map(int, input().split()))
         G[a].append(b)
         RG[b].append(a)
     order = deque()
@@ -40,21 +39,18 @@ def main():
     for i in range(1, n + 1):
         if not visited[i]:
             dfs_order(i, visited, G, order)
-
     visited = [0] * (n + 1)
     comp = defaultdict(list)
     while order:
         now = order.pop()
         if not visited[now]:
             dfs_scc(now, now, RG, visited, comp, cost)
-
-    ans1, ans2 = 0, 1
-    for k, v in list(comp.items()):
+    (ans1, ans2) = (0, 1)
+    for (k, v) in list(comp.items()):
         v = sorted(v)
         ans1 += v[0]
         poss = bisect.bisect_right(v, v[0])
         ans2 = (ans2 * poss + mod) % mod
-
     print(ans1, ans2)
 
 

@@ -1,5 +1,4 @@
-n, k = [int(x) for x in input().split()]
-
+(n, k) = [int(x) for x in input().split()]
 if k == n:
     print(-1)
 elif n == 1 and k == 0:

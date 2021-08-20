@@ -1,4 +1,4 @@
-def super_pad(string, width, fill=" "):
+def super_pad(string, width, fill=' '):
     if fill.startswith('>'):
         return (string + width * fill[1:])[:width]
     elif fill.startswith('^'):

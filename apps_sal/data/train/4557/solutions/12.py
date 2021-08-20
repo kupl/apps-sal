@@ -1,7 +1,6 @@
 def row_weights(array):
     y = 2
-    team1, team2 = 0, 0
-
+    (team1, team2) = (0, 0)
     for i in array:
         if y % 2 == 0:
             team1 += i

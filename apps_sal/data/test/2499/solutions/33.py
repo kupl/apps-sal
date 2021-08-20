@@ -3,7 +3,7 @@ f = bitwise_xor.reduce
 N = int(input())
 A = array(input().split(), int64)
 X = f(A)
-A = hstack((A, array([1 << i for i in range(60)if X & (1 << i)], int64)))
+A = hstack((A, array([1 << i for i in range(60) if X & 1 << i], int64)))
 for k in range(60)[::-1]:
     b = 1 << k
     j = A & b != 0

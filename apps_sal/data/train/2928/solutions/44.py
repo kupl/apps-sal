@@ -1,27 +1,26 @@
 def alphabet_war(fight):
-    # your code here
     left = 0
     right = 0
     for i in fight:
-        if i == "w":
+        if i == 'w':
             left += 4
-        if i == "p":
+        if i == 'p':
             left += 3
-        if i == "b":
+        if i == 'b':
             left += 2
-        if i == "s":
+        if i == 's':
             left += 1
-        if i == "m":
+        if i == 'm':
             right += 4
-        if i == "q":
+        if i == 'q':
             right += 3
-        if i == "d":
+        if i == 'd':
             right += 2
-        if i == "z":
+        if i == 'z':
             right += 1
     if left > right:
-        return("Left side wins!")
+        return 'Left side wins!'
     elif right > left:
-        return("Right side wins!")
+        return 'Right side wins!'
     else:
-        return("Let's fight again!")
+        return "Let's fight again!"

@@ -1,13 +1,9 @@
-#!/usr/bin/env python3
-
 from sys import stdin
 
 
 def main():
-    n, m = stdin_get_ints_from_line()
-
+    (n, m) = stdin_get_ints_from_line()
     colored = ['C', 'M', 'Y']
-
     for i in range(n):
         pixels = stdin_get_string_from_line().split(' ')
         for pixel in pixels:
@@ -15,7 +11,6 @@ def main():
                 print('#Color')
                 return
     print('#Black&White')
-
     return
 
 
@@ -24,7 +19,7 @@ def stdin_get_ints_from_line():
 
 
 def stdin_get_ints_list_from_line():
-    return list(int(x) for x in stdin.readline().strip().split(' '))
+    return list((int(x) for x in stdin.readline().strip().split(' ')))
 
 
 def stdin_get_string_from_line():

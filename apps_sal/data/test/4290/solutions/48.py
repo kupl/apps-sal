@@ -7,5 +7,5 @@ def comb(n, r):
     return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
 
 
-N, M = list(map(int, input().split()))
+(N, M) = list(map(int, input().split()))
 print(comb(N + M, 2) - N * M)

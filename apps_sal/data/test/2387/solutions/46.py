@@ -1,7 +1,6 @@
 N = int(input())
 As = []
 Bs = []
-
 for _ in range(N):
     c = 0
     m = 0
@@ -15,10 +14,8 @@ for _ in range(N):
         As.append((-m, c - m))
     else:
         Bs.append((-m, c - m))
-
 As.sort(key=lambda x: x[0])
 Bs.sort(key=lambda x: x[1], reverse=True)
-
 f = True
 c = 0
 for (l, r) in As:
@@ -32,9 +29,7 @@ if f:
             f = False
             break
         c += r - l
-
-f = f and (c == 0)
-
+f = f and c == 0
 if f:
     print('Yes')
 else:

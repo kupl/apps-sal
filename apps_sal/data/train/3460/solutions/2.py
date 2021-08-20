@@ -2,7 +2,6 @@ from functools import reduce, lru_cache
 from collections import Counter
 from math import factorial
 from operator import mul
-
 fact = lru_cache(maxsize=None)(factorial)
 
 

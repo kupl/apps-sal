@@ -1,8 +1,5 @@
 N = int(input())
 
-# 約数
-# O(N**0.5)
-
 
 def yakusu(N):
     ret = [[], []]
@@ -18,7 +15,6 @@ ans = 0
 for a in yakusu(N):
     if a == 1:
         continue
-
     if N % a == 0:
         b = N
         while b % a == 0:

@@ -1,7 +1,6 @@
 S = input()
 T = input()
-
 if S == T[:len(S)]:
-    print("Yes")
+    print('Yes')
 else:
-    print("No")
+    print('No')

@@ -1,4 +1,5 @@
 class Solution:
+
     def canConstruct(self, s: str, k: int) -> bool:
         dict = {}
         for c in s:

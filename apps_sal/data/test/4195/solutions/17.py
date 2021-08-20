@@ -1,4 +1,4 @@
-D, N = map(int, input().split())
+(D, N) = map(int, input().split())
 if D == 0 and N <= 99:
     print(1 + N - 1)
 elif D == 0 and N == 100:

@@ -1,19 +1,12 @@
-# coding: utf-8
 import numpy as np
 import sys
-#from operator import itemgetter
 sysread = sys.stdin.readline
 read = sys.stdin.read
-#from heapq import heappop, heappush
-#from collections import defaultdict
-sys.setrecursionlimit(10**7)
-#import math
-#from itertools import combinations
-# import bisect# lower_bound etc
+sys.setrecursionlimit(10 ** 7)
 
 
 def run():
-    N, K, *A = list(map(int, read().split()))
+    (N, K, *A) = list(map(int, read().split()))
     B = [a for a in A if a > 0]
     C = [a for a in A if a < 0]
     C_abs = [-c for c in C]
@@ -28,7 +21,6 @@ def run():
         ret = 0
         if x < 0:
             ret += np.searchsorted(C, x // B, side='right').sum()
-
         elif x == 0:
             ret += n_0 + n_neg
         else:
@@ -36,10 +28,8 @@ def run():
             b_count = (B ** 2 <= x).sum()
             c_count = (C ** 2 <= x).sum()
             ret += (np.searchsorted(B, x // B, side='right').sum() - b_count) // 2
-
             ret += (np.searchsorted(C_abs, x // C_abs, side='right').sum() - c_count) // 2
         return ret
-
     high = 10 ** 18
     low = -high
     current = 0
@@ -49,9 +39,7 @@ def run():
             low = current
         else:
             high = current
-
         current = (low + high) // 2
-
     print(high)
 
 

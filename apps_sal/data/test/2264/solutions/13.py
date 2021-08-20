@@ -4,7 +4,7 @@ for i in range(t):
     a = []
     d = []
     for j in range(n):
-        b, c = map(int, input().split())
+        (b, c) = map(int, input().split())
         a.append(b)
         d.append(c)
     k1 = max(a)

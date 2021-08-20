@@ -1,7 +1,5 @@
-# 88 C - X: Yet Another Die Game
 import decimal
 x = decimal.Decimal(input())
-
 n = x / decimal.Decimal(11)
 ans = n * decimal.Decimal(2)
 judge = int(ans)

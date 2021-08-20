@@ -1,4 +1,5 @@
 class Solution:
+
     def longestStrChain(self, words: List[str]) -> int:
         if len(words) == 0:
             return 0
@@ -6,7 +7,7 @@ class Solution:
         def findDistance(shorterString, longerString):
             if len(longerString) - len(shorterString) != 1:
                 return False
-            i, j = 0, 0
+            (i, j) = (0, 0)
             edits = 0
             while j < len(shorterString):
                 if longerString[i] != shorterString[j]:
@@ -19,7 +20,6 @@ class Solution:
                 i += 1
                 j += 1
             return True
-
         dp = [1] * len(words)
         words = sorted(words, key=lambda x: len(x))
         maxAnswer = 0
@@ -30,5 +30,4 @@ class Solution:
                     temp = max(temp, dp[j] + 1)
             dp[i] = temp
             maxAnswer = max(maxAnswer, dp[i])
-        # print(dp)
         return maxAnswer

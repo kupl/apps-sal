@@ -1,5 +1,5 @@
 def go():
-    n, m = (int(i) for i in input().split(' '))
+    (n, m) = (int(i) for i in input().split(' '))
     board = []
     for i in range(n):
         board.append([i for i in input()])
@@ -19,7 +19,6 @@ def go():
                 if board[i + k][j + l] == '*':
                     total += 1
         return total
-
     for i in range(n):
         for j in range(m):
             if board[i][j] != '*':

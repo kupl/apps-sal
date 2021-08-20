@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 xvis = [False] * (n + 1)
 yvis = [False] * (n + 1)
 xc = 0
@@ -11,11 +11,11 @@ def cal():
 
 
 for i in range(m):
-    x, y = map(int, input().split())
-    if not(xvis[x]):
+    (x, y) = map(int, input().split())
+    if not xvis[x]:
         xvis[x] = True
         xc += 1
-    if not(yvis[y]):
+    if not yvis[y]:
         yvis[y] = True
         yc += 1
     print(cal(), end=' ')

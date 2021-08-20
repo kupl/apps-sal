@@ -2,7 +2,7 @@ def count_adjacent_pairs(st):
     words = st.lower().split(' ')
     currentWord = None
     count = 0
-    for i, word in enumerate(words):
+    for (i, word) in enumerate(words):
         if i + 1 < len(words):
             if word == words[i + 1]:
                 if word != currentWord:
@@ -10,5 +10,4 @@ def count_adjacent_pairs(st):
                     count += 1
             else:
                 currentWord = None
-
     return count

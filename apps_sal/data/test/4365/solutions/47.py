@@ -1,5 +1,4 @@
 K = int(input())
-
 even = K // 2
 odd = K - even
 if K == 3:

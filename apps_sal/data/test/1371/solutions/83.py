@@ -1,12 +1,11 @@
 from functools import lru_cache
 import sys
-sys.setrecursionlimit(10**8)
-
+sys.setrecursionlimit(10 ** 8)
 S = int(input())
-MOD = 10**9 + 7
+MOD = 10 ** 9 + 7
 
 
-@lru_cache(maxsize=10**8)
+@lru_cache(maxsize=10 ** 8)
 def rec(n):
     if n < 3:
         return 0
@@ -16,4 +15,4 @@ def rec(n):
     return ret % MOD
 
 
-print((rec(S)))
+print(rec(S))

@@ -19,7 +19,7 @@ for s in range(9 * 18):
     root = is_square(d)
     if root != -1:
         val = -s + root
-        if val % 2 == 0 and (val // 2 < ans or ans == -1) and sum(list(map(int, str(val // 2)))) == s:
+        if val % 2 == 0 and (val // 2 < ans or ans == -1) and (sum(list(map(int, str(val // 2)))) == s):
             ans = val // 2
 if ans == -1:
     print(-1)

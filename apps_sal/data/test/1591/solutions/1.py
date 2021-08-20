@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 l1 = [0] * k
 for i in range(n):
     x = int(input())
@@ -9,7 +9,7 @@ for item in l1:
     if item % 2 == 0:
         ans += item
     else:
-        ans += (item - 1)
+        ans += item - 1
         odds += 1
 if n % 2 == 0:
     print(ans + odds // 2)

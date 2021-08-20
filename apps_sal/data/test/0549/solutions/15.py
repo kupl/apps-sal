@@ -10,8 +10,8 @@ def displaysize(n):
 
 def __starting_point():
     i = int(input())
-    a, b = displaysize(i)
-    print(str(a) + "   " + str(b))
+    (a, b) = displaysize(i)
+    print(str(a) + '   ' + str(b))
 
 
 __starting_point()

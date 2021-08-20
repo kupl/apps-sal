@@ -1,7 +1,7 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = [[] for i in range(m)]
 for _ in range(n):
-    t, s = map(int, input().split())
+    (t, s) = map(int, input().split())
     a[t - 1].append(s)
 pre = [0] * n
 for i in range(m):

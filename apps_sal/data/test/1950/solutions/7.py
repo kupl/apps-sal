@@ -3,7 +3,7 @@ n = int(input())
 resp = 0
 test = [int(i) for i in input().split()]
 test.sort()
-if(n % 2 == 0):
+if n % 2 == 0:
     test = [0] + test
     n += 1
 while n != 1:

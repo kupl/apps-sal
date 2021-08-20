@@ -3,4 +3,4 @@ def repeat_it(string: str, n: int) -> str:
     if type(string) is str:
         return string * n
     else:
-        return "Not a string"
+        return 'Not a string'

@@ -8,5 +8,4 @@ def find_uniq(a):
         t = frozenset(e.strip().lower())
         d[t] = e
         c[t] += 1
-
     return d[next(filter(lambda k: c[k] == 1, c))]

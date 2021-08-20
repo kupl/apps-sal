@@ -1,4 +1,5 @@
 class Solution:
+
     def jump(self, nums):
         """
         :type nums: List[int]
@@ -9,7 +10,7 @@ class Solution:
         s = 0
         e = 0
         step = 0
-        while (e < len(nums) - 1):
+        while e < len(nums) - 1:
             fst = e
             step += 1
             for i in range(s, e + 1):

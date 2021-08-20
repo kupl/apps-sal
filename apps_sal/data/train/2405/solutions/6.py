@@ -1,4 +1,5 @@
 class Solution:
+
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         dx = [0, 1, 0, -1]
         dy = [1, 0, -1, 0]

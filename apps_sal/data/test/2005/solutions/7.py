@@ -1,7 +1,6 @@
 import math
-
-n, n1, n2 = [int(x) for x in input().split()]
-n1, n2 = min(n1, n2), max(n1, n2)
+(n, n1, n2) = [int(x) for x in input().split()]
+(n1, n2) = (min(n1, n2), max(n1, n2))
 s = [int(x) for x in input().split()]
 s.sort()
 s.reverse()

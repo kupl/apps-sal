@@ -1,4 +1,3 @@
-
 t = int(input())
 while t > 0:
     t -= 1
@@ -8,10 +7,10 @@ while t > 0:
         a.append(i)
     a = a[::-1]
     for j in a:
-        print(j, end="")
+        print(j, end='')
     print()
     for i in range(n - 1):
-        a[i] = "*"
+        a[i] = '*'
         for j in a:
-            print(j, end="")
+            print(j, end='')
         print()

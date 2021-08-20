@@ -6,11 +6,9 @@ def input():
 
 
 T = int(input())
-
-
 for i in range(T):
     flag = True
-    n, m, k = list(map(int, input().split()))
+    (n, m, k) = list(map(int, input().split()))
     h = list(map(int, input().split()))
     for i in range(n - 1):
         x = max(h[i + 1] - k, 0)
@@ -20,6 +18,6 @@ for i in range(T):
         else:
             m -= x - h[i]
     if flag:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

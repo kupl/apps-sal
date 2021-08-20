@@ -3,7 +3,7 @@ def check_exam(arr1='', arr2=''):
     for i in range(0, len(arr2), 1):
         if arr1[i] == arr2[i]:
             x = x + 4
-        elif (arr2[i] != arr1[i]) and (arr2[i] != ''):
+        elif arr2[i] != arr1[i] and arr2[i] != '':
             x = x - 1
         else:
             x = x

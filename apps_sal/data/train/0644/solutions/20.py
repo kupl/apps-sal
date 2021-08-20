@@ -3,7 +3,7 @@ while T < 1 or T > 10:
     T = int(input())
 for i in range(T):
     n = int(input())
-    a = list(map(int, input().strip().split(" ")))
+    a = list(map(int, input().strip().split(' ')))
     sum = 0
     k = 0
     for j in a:

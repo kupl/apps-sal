@@ -12,7 +12,7 @@ def main():
         dp[0] = a
         dp[1] = b
     dp[1] += 1
-    print((min(dp)))
+    print(min(dp))
 
 
 def __starting_point():

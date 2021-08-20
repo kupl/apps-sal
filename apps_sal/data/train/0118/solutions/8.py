@@ -1,6 +1,6 @@
 t = int(input())
 for _ in range(t):
-    n, x = list(map(int, input().split()))
+    (n, x) = list(map(int, input().split()))
     l = list(map(int, input().split()))
     l.sort(reverse=True)
     out = 0

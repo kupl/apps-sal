@@ -1,19 +1,16 @@
 n = int(input())
 s = input()
 ans = 0
-s1, s2 = [], []
+(s1, s2) = ([], [])
 f1 = [1] * n
 f2 = [1] * n
 for i in range(n):
     s1.append([0, 0])
     s2.append([0, 0])
-# s1[0][0]=8
-# print(s1,s2)
 if s[0] == '(':
     s1[0][0] += 1
 else:
     s1[0][1] += 1
-# print(s1)
 for i in range(1, n):
     s1[i][0] = s1[i - 1][0]
     s1[i][1] = s1[i - 1][1]
@@ -21,12 +18,10 @@ for i in range(1, n):
         s1[i][0] += 1
     else:
         s1[i][1] += 1
-    # print(s1)
 if s[-1] == '(':
     s2[-1][0] += 1
 else:
     s2[-1][1] += 1
-# print(s2)
 for i in range(n - 2, -1, -1):
     s2[i][0] = s2[i + 1][0]
     s2[i][1] = s2[i + 1][1]
@@ -34,7 +29,6 @@ for i in range(n - 2, -1, -1):
         s2[i][0] += 1
     else:
         s2[i][1] += 1
-# print(s2)
 if s[0] == ')':
     f1[0] = 0
 for i in range(1, n):
@@ -90,7 +84,6 @@ for i in range(n):
             p2 = s1[i - 1][1]
             if p2 > p1 or f1[i - 1] == 0:
                 continue
-        # print("CHECK")
         p1 = s2[i][0]
         p2 = s2[i][1]
         q1 = s1[i][0]
@@ -117,5 +110,4 @@ for i in range(n):
             continue
         if t1 == t2:
             ans += 1
-    # print(i,ans)
 print(ans)

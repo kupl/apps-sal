@@ -2,10 +2,10 @@ S = int(input())
 A = S // 100
 B = S % 100
 if 0 < A <= 12 and 0 < B <= 12:
-    print("AMBIGUOUS")
+    print('AMBIGUOUS')
 elif 0 < A <= 12:
-    print("MMYY")
+    print('MMYY')
 elif 0 < B <= 12:
-    print("YYMM")
+    print('YYMM')
 else:
-    print("NA")
+    print('NA')

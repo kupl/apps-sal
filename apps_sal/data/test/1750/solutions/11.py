@@ -2,6 +2,7 @@ from collections import defaultdict, deque
 
 
 class Graph:
+
     def __init__(self, n):
         self.graph = defaultdict(list)
         self.parentColor = [-1] * (n + 1)
@@ -18,18 +19,18 @@ class Graph:
         queue.append(root)
         self.color[root] = 1
         self.parentColor[root] = 0
-        while(queue):
+        while queue:
             s = queue.popleft()
             Set = defaultdict(bool)
             Set[self.color[s]] = True
             Set[self.parentColor[s]] = True
             culur = 1
             for i in self.graph[s]:
-                if(self.visited[i] == False):
+                if self.visited[i] == False:
                     queue.append(i)
                     self.parentColor[i] = self.color[s]
-                    while(1):
-                        if(not Set[culur]):
+                    while 1:
+                        if not Set[culur]:
                             self.color[i] = culur
                             culur += 1
                             break
@@ -44,7 +45,7 @@ class Graph:
 n = int(input())
 G = Graph(n)
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     G.addEdge(a, b)
 G.BFS(1)
 G.show()

@@ -4,15 +4,15 @@ def shift(s):
 
 def encode(s):
     if not s:
-        return ("", 0)
-    return ("".join([x[-1] for x in shift(s)]), shift(s).index(s))
+        return ('', 0)
+    return (''.join([x[-1] for x in shift(s)]), shift(s).index(s))
 
 
 def decode(s, n):
     if not s:
-        return ""
-    first, last = sorted(s), list(s)
-    res = ""
+        return ''
+    (first, last) = (sorted(s), list(s))
+    res = ''
     i = n
     while len(res) < len(s):
         res += first[i]

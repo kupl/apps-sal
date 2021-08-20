@@ -2,11 +2,11 @@ S = input()
 
 
 def solve(S):
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
     N = len(S)
     Aquest = []
     Cquest = []
-    cntA, cntquest = 0, 0
+    (cntA, cntquest) = (0, 0)
     for i in range(N):
         if S[i] in 'B?':
             Aquest.append([cntA, cntquest])
@@ -14,7 +14,7 @@ def solve(S):
             cntA += 1
         if S[i] == '?':
             cntquest += 1
-    cntC, cntquest = 0, 0
+    (cntC, cntquest) = (0, 0)
     for i in range(N - 1, -1, -1):
         if S[i] in 'B?':
             Cquest.append([cntC, cntquest])
@@ -24,7 +24,7 @@ def solve(S):
             cntquest += 1
     Cquest = Cquest[::-1]
     ans = 0
-    for aquest, cquest in zip(Aquest, Cquest):
+    for (aquest, cquest) in zip(Aquest, Cquest):
         a = aquest[0] * pow(3, aquest[1], mod)
         if aquest[1] > 0:
             a += aquest[1] * pow(3, aquest[1] - 1, mod)

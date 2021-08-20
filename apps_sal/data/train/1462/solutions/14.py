@@ -3,11 +3,11 @@ for _ in range(int(input())):
     k = []
     for i in l:
         k.append(i.lower())
-    if 'berhampore' in k and "serampore" in k:
+    if 'berhampore' in k and 'serampore' in k:
         print('Both')
-    elif "serampore" in k and 'berhampore' not in k:
+    elif 'serampore' in k and 'berhampore' not in k:
         print('GCETTS')
-    elif "serampore" not in k and 'berhampore' in k:
+    elif 'serampore' not in k and 'berhampore' in k:
         print('GCETTB')
     else:
         print('Others')

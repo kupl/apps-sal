@@ -12,7 +12,6 @@ while k[1][1] + k[2][2] != s:
     k[0][0] += 1
     k[1][1] += 1
     k[2][2] += 1
-
 for i in k:
     for j in i:
         print(j, end=' ')

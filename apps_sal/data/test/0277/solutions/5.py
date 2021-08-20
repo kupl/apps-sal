@@ -1,4 +1,4 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 ans = 0
 a -= 1
 b -= 1
@@ -11,4 +11,4 @@ while n > 2:
         print(ans)
         break
 else:
-    print("Final!")
+    print('Final!')

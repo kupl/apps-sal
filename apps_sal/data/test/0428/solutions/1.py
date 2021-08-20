@@ -1,7 +1,8 @@
-mod, sx, sy, dx, dy, t = list(map(int, input().split()))
+(mod, sx, sy, dx, dy, t) = list(map(int, input().split()))
 
 
-class Matrix():
+class Matrix:
+
     def __init__(self, n):
         self.n = n
         self.a = [[0] * n for _ in range(n)]
@@ -29,16 +30,14 @@ class Matrix():
 
 
 M = Matrix(6)
-M.a = [[2, 1, 1, 0, 1, 2],
-       [1, 2, 0, 1, 1, 2],
-       [1, 1, 1, 0, 1, 2],
-       [1, 1, 0, 1, 1, 2],
-       [0, 0, 0, 0, 1, 1],
-       [0, 0, 0, 0, 0, 1]]
+M.a = [[2, 1, 1, 0, 1, 2], [1, 2, 0, 1, 1, 2], [1, 1, 1, 0, 1, 2], [1, 1, 0, 1, 1, 2], [0, 0, 0, 0, 1, 1], [0, 0, 0, 0, 0, 1]]
 sx -= 1
 sy -= 1
 r = M ** t
-def f(i): return (r.a[i][0] * sx + r.a[i][1] * sy + r.a[i][2] * dx + r.a[i][3] * dy + r.a[i][5]) % mod + 1
+
+
+def f(i):
+    return (r.a[i][0] * sx + r.a[i][1] * sy + r.a[i][2] * dx + r.a[i][3] * dy + r.a[i][5]) % mod + 1
 
 
 print(f(0), f(1))

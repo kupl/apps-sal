@@ -1,9 +1,8 @@
-# cook your dish here
 for _ in range(int(input())):
     s = input()
     n = len(s)
-    ans = "yes"
-    st = "CES"
+    ans = 'yes'
+    st = 'CES'
     if n == 1:
         print(ans)
         continue
@@ -17,9 +16,8 @@ for _ in range(int(input())):
             elif curr == 'S' and s[i + 1] == 'S':
                 continue
             else:
-                ans = "no"
+                ans = 'no'
                 break
-
     else:
         for i in range(0, n - 2):
             curr = s[i]
@@ -30,6 +28,6 @@ for _ in range(int(input())):
             elif curr == 'S' and s[i + 1] == 'S':
                 continue
             else:
-                ans = "no"
+                ans = 'no'
                 break
     print(ans)

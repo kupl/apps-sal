@@ -1,4 +1,5 @@
 class Solution:
+
     def lemonadeChange(self, bills: List[int]) -> bool:
         table = dict.fromkeys([5, 10, 20], 0)
         for p in bills:

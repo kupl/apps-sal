@@ -1,4 +1,5 @@
 class Solution:
+
     def maxNumberOfBalloons(self, text: str) -> int:
         ret = []
         for i in 'ban':

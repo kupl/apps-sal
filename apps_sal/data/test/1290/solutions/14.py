@@ -1,4 +1,4 @@
-n, m = list(map(int, input().strip().split()))
+(n, m) = list(map(int, input().strip().split()))
 arr = list(map(int, input().strip().split()))
 rslt = [0] * n
 for x in arr:

@@ -1,4 +1,4 @@
-n, nt = map(int, input().split())
+(n, nt) = map(int, input().split())
 a = list(map(int, input().split()))
 t = list(map(int, input().split()))
 c = 0
@@ -41,7 +41,6 @@ elif lv < rv:
     rv -= r[ir - 1][0] * r[ir - 1][1]
     rvv -= r[ir - 1][1]
     rvv += (lv - rv) / r[ir - 1][0]
-
 ans += rvv
 ans += lvv
-print("%.8f" % ans)
+print('%.8f' % ans)

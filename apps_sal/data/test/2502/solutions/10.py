@@ -16,8 +16,8 @@ def getTableKMP(Ss):
 
 def getPosPtnsKMP(Ss, ptn, table):
     anss = []
-    lenS, lenP = len(Ss), len(ptn)
-    iS, iP = 0, 0
+    (lenS, lenP) = (len(Ss), len(ptn))
+    (iS, iP) = (0, 0)
     while iS < lenS:
         if Ss[iS] == ptn[iP]:
             iS += 1
@@ -35,20 +35,16 @@ def getPosPtnsKMP(Ss, ptn, table):
 
 Ss = input()
 Ts = input()
-
-lenS, lenT = len(Ss), len(Ts)
+(lenS, lenT) = (len(Ss), len(Ts))
 num = (lenT + lenS - 1 + lenS - 1) // lenS
 S2s = Ss * num
-
 tableKMP = getTableKMP(Ts)
 posPtns = getPosPtnsKMP(S2s, Ts, tableKMP)
-
 isFounds = [False] * lenS
 for pos in posPtns:
     if pos >= lenS:
         break
     isFounds[pos] = True
-
 ans = 0
 numDone = 0
 for i in range(lenS):
@@ -63,7 +59,6 @@ for i in range(lenS):
         else:
             ans = -1
             break
-
 if numDone < lenS:
     ans = -1
 print(ans)

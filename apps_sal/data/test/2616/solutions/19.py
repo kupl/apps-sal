@@ -1,14 +1,11 @@
 import sys
 input = sys.stdin.readline
-
 t = int(input())
 letters = 'abcdefghijklmnopqrst'
-
 for _ in range(t):
     l = int(input())
     b = list(map(int, input().split()))
     c = 0
-
     if max(b) == 1:
         if l % 2 == 0:
             print('Second')

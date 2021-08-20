@@ -1,8 +1,8 @@
-# Dinic's algorithm
 from collections import deque
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for i in range(N)]
@@ -27,7 +27,7 @@ class Dinic:
         while deq:
             v = deq.popleft()
             lv = level[v] + 1
-            for w, cap, _ in G[v]:
+            for (w, cap, _) in G[v]:
                 if cap and level[w] is None:
                     level[w] = lv
                     deq.append(w)
@@ -38,7 +38,7 @@ class Dinic:
             return f
         level = self.level
         for e in self.it[v]:
-            w, cap, rev = e
+            (w, cap, rev) = e
             if cap and level[v] < level[w]:
                 d = self.dfs(w, t, min(f, cap))
                 if d:
@@ -49,10 +49,10 @@ class Dinic:
 
     def flow(self, s, t):
         flow = 0
-        INF = 10**9 + 7
+        INF = 10 ** 9 + 7
         G = self.G
         while self.bfs(s, t):
-            *self.it, = map(iter, self.G)
+            (*self.it,) = map(iter, self.G)
             f = INF
             while f:
                 f = self.dfs(s, t, INF)
@@ -62,7 +62,6 @@ class Dinic:
 
 N = int(input())
 a = list(map(int, input().split()))
-
 jew = Dinic(N + 2)
 ans = 0
 for i in range(N):
@@ -71,11 +70,9 @@ for i in range(N):
         jew.add_edge(0, i + 1, a[i])
     else:
         jew.add_edge(i + 1, N + 1, -a[i])
-
-inf = 10**15
+inf = 10 ** 15
 for i in range(1, N + 1):
     for j in range(1, N // i + 1):
         jew.add_edge(i * j, i, inf)
-
 f = jew.flow(0, N + 1)
 print(ans - f)

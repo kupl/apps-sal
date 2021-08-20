@@ -1,7 +1,5 @@
 from math import ceil
 from collections import deque
-
-
 for _ in range(int(input())):
     n = int(input())
     a = [int(i) for i in input().split()]

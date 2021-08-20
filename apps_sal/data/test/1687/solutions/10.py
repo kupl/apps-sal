@@ -4,7 +4,7 @@ from math import gcd
 
 def main():
     n = int(input())
-    g, d = 0, set()
+    (g, d) = (0, set())
     for i in map(int, input().split()):
         if g == 0:
             g = i

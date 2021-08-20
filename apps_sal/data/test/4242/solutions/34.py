@@ -1,4 +1,4 @@
-A, B, K = list(map(int, input().split()))
+(A, B, K) = list(map(int, input().split()))
 if A >= B:
     count = 0
     for i in range(B, 0, -1):

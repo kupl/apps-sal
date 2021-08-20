@@ -1,4 +1,4 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 a = [int(i) for i in input().split()]
 op = 0
 for i in range(1, n):

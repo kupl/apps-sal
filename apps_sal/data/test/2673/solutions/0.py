@@ -1,10 +1,6 @@
-# cook your dish here
 from sys import stdin, stdout
 import math
-# from itertools import permutations, combinations
 from collections import defaultdict, deque
-# import bisect
-# import heapq as hq
 
 
 def bfs(d, n, d1, s):
@@ -29,10 +25,8 @@ def main():
         s = stdin.readline().strip()
         n = len(s)
         d = defaultdict(list)
-
         for i in range(1, len(s)):
             d[int(s[i])].append(i)
-
         high = [0] * (n + 1)
         visit = [False] * (n + 1)
         q = deque([0])
@@ -46,11 +40,11 @@ def main():
                     q.append(x)
                     high[x] = high[node] + 1
             d[int(s[node])].clear()
-            if node - 1 >= 0 and not visit[node - 1]:
+            if node - 1 >= 0 and (not visit[node - 1]):
                 visit[node - 1] = True
                 q.append(node - 1)
                 high[node - 1] = high[node] + 1
-            if node + 1 < n and not visit[node + 1]:
+            if node + 1 < n and (not visit[node + 1]):
                 visit[node + 1] = True
                 q.append(node + 1)
                 high[node + 1] = high[node] + 1
@@ -61,7 +55,7 @@ def main():
 
 def add(a, b, c):
     res = a + b
-    if (res >= c):
+    if res >= c:
         return res - c
     else:
         return res
@@ -69,7 +63,7 @@ def add(a, b, c):
 
 def mod(a, b, c):
     res = a * b
-    if (res >= c):
+    if res >= c:
         return res % c
     else:
         return res
@@ -77,7 +71,7 @@ def mod(a, b, c):
 
 def gcd(a, b):
     while b:
-        a, b = b, a % b
+        (a, b) = (b, a % b)
     return a
 
 
@@ -87,9 +81,9 @@ def lcm(a, b):
 
 
 def expo(a, b):
-    x, y = 1, a
-    while (b > 0):
-        if (b & 1):
+    (x, y) = (1, a)
+    while b > 0:
+        if b & 1:
             x = x * y
         y = y * y
         b >>= 1
@@ -97,9 +91,9 @@ def expo(a, b):
 
 
 def power(a, b, m):
-    x, y = 1,
-    while (b > 0):
-        if (b & 1):
+    (x, y) = (1,)
+    while b > 0:
+        if b & 1:
             x = mod(x, y, m)
         y = mod(y, y, m)
         b >>= 1

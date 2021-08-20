@@ -1,6 +1,6 @@
 class Solution:
-    def countSquares(self, matrix: List[List[int]]) -> int:
 
+    def countSquares(self, matrix: List[List[int]]) -> int:
         res = 0
         n = len(matrix)
         m = len(matrix[0]) if matrix else 0

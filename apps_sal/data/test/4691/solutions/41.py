@@ -1,5 +1,5 @@
 N = int(input())
-c0, c1, c2, c3 = 0, 0, 0, 0
+(c0, c1, c2, c3) = (0, 0, 0, 0)
 for i in range(N):
     r = input()
     if r == 'AC':

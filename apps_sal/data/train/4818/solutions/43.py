@@ -6,6 +6,6 @@ def solution(a, b):
     for iB in b:
         zB.append(len(iB))
     if zA < zB:
-        return f"{a+b+a}"
+        return f'{a + b + a}'
     else:
-        return f"{b+a+b}"
+        return f'{b + a + b}'

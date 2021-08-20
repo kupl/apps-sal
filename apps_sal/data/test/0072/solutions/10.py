@@ -4,7 +4,7 @@ import itertools
 def beauty(string, n):
     string = sorted(string)
     maxlen = 0
-    for k, g in itertools.groupby(string):
+    for (k, g) in itertools.groupby(string):
         maxlen = max(maxlen, len(list(g)))
     if maxlen == len(string) and n == 1:
         return maxlen - 1

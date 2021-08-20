@@ -7,5 +7,4 @@ def create_array(n):
         i += 1    
     return res
     """
-
     return [i for i in range(1, n + 1)]

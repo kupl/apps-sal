@@ -1,7 +1,7 @@
 nk = input()
-n, k = [int(i) for i in nk.split(" ")]
+(n, k) = [int(i) for i in nk.split(' ')]
 a = input()
-a = [int(i) for i in a.split(" ")]
+a = [int(i) for i in a.split(' ')]
 b = []
 for i in range(len(a)):
     b += [(i, a[i])]
@@ -19,6 +19,6 @@ for i in range(n):
 if len(p) > 0:
     print(no)
     for i in p:
-        print(i + 1, end=" ")
+        print(i + 1, end=' ')
 else:
     print(0)

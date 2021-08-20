@@ -1,5 +1,5 @@
 while True:
-    n, m, x = [int(x) for x in input().split()]
+    (n, m, x) = [int(x) for x in input().split()]
     if n == m == x == 0:
         break
     ans = 0

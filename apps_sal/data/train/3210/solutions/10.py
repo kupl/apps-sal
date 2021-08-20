@@ -2,16 +2,16 @@ def get_strings(city):
     city = list(city.lower())
     con = {}
     for char in city:
-        if char == " ":
+        if char == ' ':
             pass
         else:
-            con[char] = city.count(char) * "*"
+            con[char] = city.count(char) * '*'
     first = True
-    result = ""
+    result = ''
     for item in con.keys():
         if first == True:
             first = False
-            result += item + ":" + con.get(item)
+            result += item + ':' + con.get(item)
         else:
-            result += "," + item + ":" + con.get(item)
+            result += ',' + item + ':' + con.get(item)
     return result

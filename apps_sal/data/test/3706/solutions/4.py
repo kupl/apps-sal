@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(n)]
 r = [a[i][0] - a[0][0] for i in range(n)]
 c = [a[0][i] - a[0][0] for i in range(m)]
@@ -17,9 +17,9 @@ for i in range(n):
             print(-1)
             quit()
 print(sum(r) + sum(c))
-for i, x in enumerate(r):
+for (i, x) in enumerate(r):
     for j in range(x):
-        print("row", i + 1)
-for i, x in enumerate(c):
+        print('row', i + 1)
+for (i, x) in enumerate(c):
     for j in range(x):
-        print("col", i + 1)
+        print('col', i + 1)

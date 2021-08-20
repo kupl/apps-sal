@@ -1,4 +1,3 @@
-# yl2 decode
 n = int(input())
 s = list(input())
 med = s[len(s) // 2]

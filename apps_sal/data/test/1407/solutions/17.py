@@ -1,5 +1,5 @@
 from bisect import bisect_left as bl
-p = 10**5 + 10
+p = 10 ** 5 + 10
 
 
 def sieve():
@@ -18,9 +18,8 @@ def sieve():
 
 
 primes = sieve()
-n, m = list(map(int, input().split()))
-req = [[0 for i in range(m)]for j in range(n)]
-
+(n, m) = list(map(int, input().split()))
+req = [[0 for i in range(m)] for j in range(n)]
 mat = []
 for i in range(n):
     mat.append([int(i) for i in input().split()])
@@ -30,7 +29,6 @@ for i in range(n):
         ind = bl(primes, curr)
         g = primes[ind]
         req[i][j] = g - curr
-# print(req)
 mini = 1000000000
 for i in range(n):
     curr = sum(req[i])

@@ -1,6 +1,5 @@
 from sys import stdin, stdout, exit
-
-n, m, k = list(map(int, stdin.readline().split()))
+(n, m, k) = list(map(int, stdin.readline().split()))
 a = list(map(int, stdin.readline().split()))
 
 
@@ -13,7 +12,7 @@ def bf(a):
             if cur > best:
                 best = max(best, cur)
                 best_arg = (i, j)
-    return best, best_arg
+    return (best, best_arg)
 
 
 def max_sum(a):
@@ -38,19 +37,13 @@ def max_sum(a):
         if (idx + 1) % m == 0:
             r_sum -= k
         r_bests[(idx + 1) % m] = max(r_bests[(idx + 1) % m], r_sum)
-
- #   print("Array:", a, "mid:", mid)
-#    print(l_bests)
-  #  print(r_bests)
     best_acr = 0
     for i in range(m):
         for j in range(m):
             best_acr = max(best_acr, l_bests[i] + r_bests[j] - (k if i + j > 0 else 0) - (k if i + j > m else 0))
     ans = max(l_rec, r_rec, best_acr)
-   # print("Answer:", ans)
     return ans
 
 
 ans = max_sum(a)
-stdout.write(str(ans) + "\n")
-# stdout.write(str(bf(a))+"\n")
+stdout.write(str(ans) + '\n')

@@ -1,6 +1,6 @@
 class Solution:
-    def totalFruit(self, tree: List[int]) -> int:
 
+    def totalFruit(self, tree: List[int]) -> int:
         st = c = res = 0
         dic = dict()
         for end in range(len(tree)):

@@ -1,5 +1,4 @@
 T = int(input())
-
 for _ in range(T):
     X = [0] * 26
     s = input()
@@ -12,5 +11,4 @@ for _ in range(T):
         else:
             X[ord(s[0]) - 97] = 1
             s = s[1:]
-
-    print("".join([chr(97 + i) for i in range(26) if X[i]]))
+    print(''.join([chr(97 + i) for i in range(26) if X[i]]))

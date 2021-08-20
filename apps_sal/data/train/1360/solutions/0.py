@@ -1,7 +1,6 @@
 for _ in range(eval(input())):
     S1 = input()
     m1 = len(S1) / 2
-
     S2 = input()
     m2 = len(S2) / 2
     d1 = {}
@@ -22,7 +21,6 @@ for _ in range(eval(input())):
                 d2[c] = [v, i]
         else:
             d2[c] = [v, i]
-
     mini = 999999999999999999999999999999999
     for i in d1:
         if i in d2:

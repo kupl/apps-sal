@@ -1,4 +1,4 @@
-n, p, q, r = map(int, input().split())
+(n, p, q, r) = map(int, input().split())
 list1 = list(map(int, input().split()))
 pref = [list1[0]]
 suf = [list1[-1]]

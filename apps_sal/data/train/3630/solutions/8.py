@@ -1,10 +1,10 @@
 def arithmetic(a, b, operator):
     c = operator
-    if c == "add":
+    if c == 'add':
         return a + b
-    if c == "subtract":
+    if c == 'subtract':
         return a - b
-    if c == "multiply":
+    if c == 'multiply':
         return a * b
-    if c == "divide":
+    if c == 'divide':
         return a / b

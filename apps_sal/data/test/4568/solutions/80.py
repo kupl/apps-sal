@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-alh = "abcdefghijklmnopqrstuvwxyz"
+alh = 'abcdefghijklmnopqrstuvwxyz'
 max = 0
 for i in range(n):
     front = s[:i]

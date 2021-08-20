@@ -1,5 +1,4 @@
 x = int(input())
-
 m = 100
 i = 0
 while 1:
@@ -7,5 +6,4 @@ while 1:
     i += 1
     if m >= x:
         break
-
 print(i)

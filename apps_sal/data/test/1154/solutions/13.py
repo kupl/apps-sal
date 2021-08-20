@@ -1,4 +1,4 @@
-n, h, k = map(int, input().split())
+(n, h, k) = map(int, input().split())
 hei = list(map(int, input().split()))
 sec = 0
 cur = 0

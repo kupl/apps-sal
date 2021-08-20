@@ -1,4 +1,5 @@
 class Solution:
+
     def minSumOfLengths(self, arr: List[int], target: int) -> int:
         l = r = 0
         s = arr[l]
@@ -7,7 +8,6 @@ class Solution:
             if s == target:
                 ln = r - l + 1
                 res.append((ln, l, r))
-
             if s <= target:
                 r += 1
                 if r < len(arr):
@@ -19,10 +19,8 @@ class Solution:
                     r += 1
                     if r < len(arr):
                         s += arr[r]
-
-        msl = [math.inf] * len(arr)  # minimum interval length so far from left
-        msr = [math.inf] * len(arr)  # minimum interval length so far fromm right
-
+        msl = [math.inf] * len(arr)
+        msr = [math.inf] * len(arr)
         mi = math.inf
         resi = -1
         for i in range(len(arr)):
@@ -30,7 +28,6 @@ class Solution:
                 resi += 1
                 mi = min(mi, res[resi][0])
             msl[i] = mi
-
         mi = math.inf
         resi = len(res)
         for i in range(len(arr) - 1, -1, -1):
@@ -38,11 +35,9 @@ class Solution:
                 resi -= 1
                 mi = min(mi, res[resi][0])
             msr[i] = mi
-
         mn = math.inf
         for i in range(len(arr) - 1):
             mn = min(mn, msl[i] + msr[i + 1])
-
         if mn == math.inf:
             return -1
         return mn

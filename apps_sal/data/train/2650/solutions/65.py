@@ -1,4 +1,4 @@
-n, l = map(int, input().split())
+(n, l) = map(int, input().split())
 str = [input() for i in range(n)]
 str.sort()
 for i in str:

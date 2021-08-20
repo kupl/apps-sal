@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self):
         self.children = {}
         self.is_word = False
@@ -25,14 +26,7 @@ class StreamChecker:
         for i in range(len(self.stream) - 1, -1, -1):
             if self.stream[i] not in root.children:
                 return False
-
             root = root.children.get(self.stream[i])
             if root.is_word:
                 return True
-
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

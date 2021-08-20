@@ -13,9 +13,9 @@ def converter(n, decimals=0, base=pi):
             break
         if i == -1:
             ans += '.'
-        d = int(n / (base**i))
+        d = int(n / base ** i)
         ans += digs[d]
-        n -= d * base**i
-    while len(ans) > 1 and ans[0] == '0' and ans[1] != '.':
+        n -= d * base ** i
+    while len(ans) > 1 and ans[0] == '0' and (ans[1] != '.'):
         ans = ans[1:]
     return neg + ans

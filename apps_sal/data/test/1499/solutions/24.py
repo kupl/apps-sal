@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 left = []
 right = []
 for i in range(n):
@@ -10,13 +10,10 @@ for i in range(m):
             left[i // 2].append(i + 1)
         else:
             right[i // 2].append(i + 1)
+    elif i % 2 == 0:
+        left[(i - 2 * n) // 2].append(i + 1)
     else:
-        if i % 2 == 0:
-            left[(i - 2 * n) // 2].append(i + 1)
-        else:
-            right[(i - 2 * n) // 2].append(i + 1)
-
-
+        right[(i - 2 * n) // 2].append(i + 1)
 s = ''
 for i in range(n):
     for j in range(len(left[i]) - 1, -1, -1):

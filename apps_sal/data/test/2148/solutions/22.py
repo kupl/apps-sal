@@ -19,7 +19,7 @@ class Curling:
 
     def add(self, x):
         min_y = [self.r]
-        for disk in self.disks:  # type: Point
+        for disk in self.disks:
             x_distance = abs(x - disk.x)
             if x_distance == 0:
                 min_y.append(disk.y + self.d)
@@ -42,4 +42,4 @@ curling = Curling(r)
 x_positions = list(map(int, input().split()))
 for x_position in x_positions:
     curling.add(x_position)
-print(" ".join(curling.results))
+print(' '.join(curling.results))

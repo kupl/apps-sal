@@ -1,14 +1,11 @@
 import math
 import numpy as np
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 a = np.array(input().split(), dtype=int)
 f = np.array(input().split(), dtype=int)
-
 a = np.sort(a)[::-1]
 f = np.sort(f)
-
-ok = 10**18
+ok = 10 ** 18
 ng = -1
 
 
@@ -22,5 +19,4 @@ while abs(ok - ng) > 1:
         ok = mid
     else:
         ng = mid
-
 print(ok)

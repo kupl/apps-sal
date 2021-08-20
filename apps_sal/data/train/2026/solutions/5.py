@@ -1,7 +1,8 @@
-def f(): return list(map(int, input().split()))
+def f():
+    return list(map(int, input().split()))
 
 
-n, d = f()
+(n, d) = f()
 a = [0] + f() + [0]
 p = [f() for i in range(n)]
 r = list(range(n))

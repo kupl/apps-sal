@@ -17,8 +17,3 @@ class ProductOfNumbers:
             return 0
         result = int(self.products[-1] / self.products[len(self.products) - k - 1])
         return result
-
-# Your ProductOfNumbers object will be instantiated and called as such:
-# obj = ProductOfNumbers()
-# obj.add(num)
-# param_2 = obj.getProduct(k)

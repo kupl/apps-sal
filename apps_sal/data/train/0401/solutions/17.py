@@ -1,11 +1,12 @@
 class Solution:
+
     def maxSumDivThree(self, nums: List[int]) -> int:
         snum = sum(nums)
         if not snum % 3:
             return snum
-        ones, twos = [], []
+        (ones, twos) = ([], [])
         nums.sort()
-        for k, v in enumerate(nums):
+        for (k, v) in enumerate(nums):
             if v % 3 == 1:
                 ones += [nums[k]]
             if v % 3 == 2:

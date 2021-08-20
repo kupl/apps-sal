@@ -1,4 +1,5 @@
 class Solution:
+
     def monotoneIncreasingDigits(self, N):
         N = str(N)
         L = len(N)

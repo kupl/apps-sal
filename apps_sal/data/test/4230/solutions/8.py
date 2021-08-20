@@ -1,4 +1,4 @@
-x, n = map(int, input().split())
+(x, n) = map(int, input().split())
 p = list(map(int, input().split()))
 temp = 100
 for i in range(x - 51, x + 51):

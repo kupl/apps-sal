@@ -1,5 +1,5 @@
 import sys
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 m += 1
 d = {'I': 0, 'M': 1, 'A': 2, 'D': 3, '\n': -7}
 t = list(map(d.get, sys.stdin.read())) + [-7] * m
@@ -10,7 +10,7 @@ for a in range(n * m):
         if abs(t[b] - t[a] + 1) == 2:
             p[a].append(b)
             c[b] += 1
-s = [i for i, q in enumerate(c) if not q]
+s = [i for (i, q) in enumerate(c) if not q]
 while s:
     a = s.pop()
     for b in p[a]:

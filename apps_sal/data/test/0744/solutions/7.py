@@ -9,6 +9,6 @@ for i in range(1, len(s)):
         else:
             s2 += 1
 if s1 > s2:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

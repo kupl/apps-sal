@@ -1,5 +1,5 @@
 from itertools import accumulate
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 suma = list(accumulate(a))

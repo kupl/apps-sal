@@ -11,10 +11,22 @@ from functools import reduce
 import string
 import sys
 sys.setrecursionlimit(10 ** 7)
-def input(): return sys.stdin.readline().strip()
-def INT(): return int(input())
-def MAP(): return map(int, input().split())
-def LIST(): return list(MAP())
+
+
+def input():
+    return sys.stdin.readline().strip()
+
+
+def INT():
+    return int(input())
+
+
+def MAP():
+    return map(int, input().split())
+
+
+def LIST():
+    return list(MAP())
 
 
 def bfs():
@@ -35,7 +47,7 @@ def bfs():
 n = INT()
 g = [[] for i in range(n)]
 for i in range(n - 1):
-    x, y, z = MAP()
+    (x, y, z) = MAP()
     g[x - 1].append([y - 1, z])
     g[y - 1].append([x - 1, z])
 for k in bfs():

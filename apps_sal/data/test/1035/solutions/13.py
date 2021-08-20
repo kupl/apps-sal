@@ -19,6 +19,6 @@ def prime_factorize(n):
     return a
 
 
-a, b = map(int, input().split())
+(a, b) = map(int, input().split())
 x = gcd(a, b)
 print(len(set(prime_factorize(x))) + 1)

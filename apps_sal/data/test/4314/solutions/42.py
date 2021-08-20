@@ -1,4 +1,4 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 ls = []
 for i in range(N):
     ls.append(list(input()))
@@ -15,7 +15,6 @@ tate2 = list(range(M))
 for i in range(M):
     if i in tate:
         tate2.remove(i)
-
 ansls = []
 for i in range(N):
     if not i in yoko:

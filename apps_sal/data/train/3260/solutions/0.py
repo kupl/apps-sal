@@ -8,4 +8,4 @@ def rearranger(k, *args):
         rearranged = min(divisible_by_k, key=lambda x: int(''.join(x)))
         return 'Rearrangement: {} generates: {} divisible by {}'.format(', '.join(rearranged), ''.join(rearranged), k)
     except ValueError:
-        return "There is no possible rearrangement"
+        return 'There is no possible rearrangement'

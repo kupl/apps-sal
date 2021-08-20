@@ -1,4 +1,4 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 a = []
 array = []
 for i in range(n):
@@ -12,9 +12,9 @@ for i in range(n):
     array.append(listt)
 for y in range(1, n - 1):
     for x in range(1, m - 1):
-        f = a[y + 1][x] == '#' and a[y + 1][x + 1] == '#' and a[y + 1][x - 1] == '#'
+        f = a[y + 1][x] == '#' and a[y + 1][x + 1] == '#' and (a[y + 1][x - 1] == '#')
         s = a[y][x + 1] == '#' and a[y][x - 1] == '#'
-        th = a[y - 1][x] == '#' and a[y - 1][x + 1] == '#' and a[y - 1][x - 1] == '#'
+        th = a[y - 1][x] == '#' and a[y - 1][x + 1] == '#' and (a[y - 1][x - 1] == '#')
         if f and s and th:
             array[y + 1][x] -= 1
             array[y + 1][x + 1] -= 1
@@ -31,6 +31,6 @@ for y in range(n):
             mb = False
             break
 if mb:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

@@ -1,9 +1,7 @@
 import numpy as np
-
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 p = input().split()
 pn = [int(tmp) for tmp in p]
-
 if y == 0:
     ans = x
 elif not np.where(np.array(pn) == x)[0].size:
@@ -20,5 +18,4 @@ else:
             break
         else:
             continue
-
 print(ans)

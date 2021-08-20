@@ -1,6 +1,5 @@
 from re import compile as reCompile
-
-PATTERN = reCompile(r'(?i)[-_]([a-z])')
+PATTERN = reCompile('(?i)[-_]([a-z])')
 
 
 def to_camel_case(text):

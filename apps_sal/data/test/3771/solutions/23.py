@@ -1,9 +1,9 @@
-# 解説AC、辺の張り方が難しすぎる
 from collections import deque
 INF = 1 << 23
 
 
 class Dinic:
+
     def __init__(self, N):
         self.N = N
         self.G = [[] for _ in range(self.N)]
@@ -39,7 +39,7 @@ class Dinic:
 
     def max_flow(self, s, t):
         flow = 0
-        INF = 10**9
+        INF = 10 ** 9
         while True:
             self.bfs(s)
             if self.level[t] < 0:
@@ -52,29 +52,28 @@ class Dinic:
 
 
 def main():
-    H, W = (int(i) for i in input().split())
+    (H, W) = (int(i) for i in input().split())
     A = [input() for i in range(H)]
-    F = Dinic(H + W + 2)  # 0,1,...,W-1,0,..,H-1,s,t
+    F = Dinic(H + W + 2)
     s = H + W
     t = H + W + 1
-    Sh, Sw = -1, -1
-    Th, Tw = -1, -1
+    (Sh, Sw) = (-1, -1)
+    (Th, Tw) = (-1, -1)
     for h in range(H):
         for w in range(W):
-            if A[h][w] == "S":
-                Sh, Sw = h, w
+            if A[h][w] == 'S':
+                (Sh, Sw) = (h, w)
                 F.add_edge(s, h + W, INF)
                 F.add_edge(s, w, INF)
-            elif A[h][w] == "T":
-                Th, Tw = h, w
+            elif A[h][w] == 'T':
+                (Th, Tw) = (h, w)
                 F.add_edge(h + W, t, INF)
                 F.add_edge(w, t, INF)
-            if A[h][w] != ".":
+            if A[h][w] != '.':
                 F.add_edge(h + W, w, 1)
                 F.add_edge(w, h + W, 1)
     if Sh == Th or Sw == Tw:
         return print(-1)
-
     print(F.max_flow(s, t))
 
 

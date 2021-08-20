@@ -1,12 +1,15 @@
 from collections import defaultdict
-def l(): return map(int, input().split())
 
 
-n, m = l()
+def l():
+    return map(int, input().split())
+
+
+(n, m) = l()
 c = list(l())
 graph = defaultdict(set)
 for i in range(m):
-    a, b = l()
+    (a, b) = l()
     if c[a - 1] == c[b - 1]:
         continue
     graph[c[a - 1]].add(c[b - 1])

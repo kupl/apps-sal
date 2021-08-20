@@ -1,11 +1,9 @@
 import math
-n, m = list(map(int, input().split()))
-
+(n, m) = list(map(int, input().split()))
 mn_x = 1211111
 mx_x = -1211111
 mn_y = 1211111
 mx_y = -1211111
-
 for i in range(n):
     x = input()
     for j in range(len(x)):

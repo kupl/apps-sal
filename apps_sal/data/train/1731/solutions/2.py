@@ -1,13 +1,12 @@
 from random import choice
-
-DIR = (1, 0), (-1, 0), (0, 1), (0, -1)
+DIR = ((1, 0), (-1, 0), (0, 1), (0, -1))
 
 
 def interpret(code):
-    grid, stack, out, direction = [*map(list, code.splitlines())], [], '', DIR[0]
+    (grid, stack, out, direction) = ([*map(list, code.splitlines())], [], '', DIR[0])
     x = y = smode = value = 0
     while True:
-        value, jump = grid[y][x], 1
+        (value, jump) = (grid[y][x], 1)
         if value is '"':
             smode = not smode
         elif smode or value.isdigit():
@@ -40,4 +39,4 @@ def interpret(code):
             jump = 2
         elif value in '@':
             return out
-        x, y = x + direction[0] * jump, y + direction[1] * jump
+        (x, y) = (x + direction[0] * jump, y + direction[1] * jump)

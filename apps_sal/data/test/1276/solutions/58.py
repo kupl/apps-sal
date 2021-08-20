@@ -1,6 +1,6 @@
 n = int(input())
 s = input()
-r, g, b = [], [], []
+(r, g, b) = ([], [], [])
 cnt = 1
 for i in s:
     if i == 'R':

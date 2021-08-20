@@ -1,11 +1,10 @@
-
 N = int(input())
 testimo_ls = [[] for i in range(N)]
 rst = 0
 for i in range(N):
     A = int(input())
     for j in range(A):
-        x, y = map(int, input().split(' '))
+        (x, y) = map(int, input().split(' '))
         testimo_ls[i].append([x - 1, y])
 for i in range(1 << N):
     honest_ls = []
@@ -18,7 +17,7 @@ for i in range(1 << N):
             if t[1] == 0 and t[0] in honest_ls:
                 is_ok = False
                 break
-            if t[1] == 1 and not t[0] in honest_ls:
+            if t[1] == 1 and (not t[0] in honest_ls):
                 is_ok = False
                 break
     if is_ok:

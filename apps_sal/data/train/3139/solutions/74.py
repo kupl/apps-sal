@@ -3,4 +3,4 @@ def index(array, n):
         x = array.pop(n)
     except IndexError:
         return -1
-    return x**n
+    return x ** n

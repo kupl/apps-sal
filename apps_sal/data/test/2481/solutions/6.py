@@ -17,32 +17,41 @@ from heapq import heappush, heappop
 import numpy as np
 from scipy.sparse.csgraph import shortest_path, floyd_warshall, dijkstra, bellman_ford, johnson
 from scipy.sparse import csr_matrix
-
-sys.setrecursionlimit(10**7)
-inf = 10**20
-mod = 10**9 + 7
-
+sys.setrecursionlimit(10 ** 7)
+inf = 10 ** 20
+mod = 10 ** 9 + 7
 stdin = sys.stdin
 
 
-def ni(): return int(ns())
-def nf(): return float(ns())
-def na(): return list(map(int, stdin.readline().split()))
-def nb(): return list(map(float, stdin.readline().split()))
-def ns(): return stdin.readline().rstrip()  # ignore trailing spaces
+def ni():
+    return int(ns())
 
 
-H, W = na()
+def nf():
+    return float(ns())
+
+
+def na():
+    return list(map(int, stdin.readline().split()))
+
+
+def nb():
+    return list(map(float, stdin.readline().split()))
+
+
+def ns():
+    return stdin.readline().rstrip()
+
+
+(H, W) = na()
 c = [na() for _ in range(10)]
 A = [na() for _ in range(H)]
 adj = [[] for _ in range(10)]
-
 c = np.array(c)
 d = shortest_path(c)
 ans = 0
 for y in range(H):
     for x in range(W):
         if A[y][x] != -1:
-            # print(ans)
             ans += d[A[y][x]][1]
-print((int(ans)))
+print(int(ans))

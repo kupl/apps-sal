@@ -1,14 +1,3 @@
 def switch_it_up(number):
-    cases = {
-        0: 'Zero',
-        1: 'One',
-        2: 'Two',
-        3: 'Three',
-        4: 'Four',
-        5: 'Five',
-        6: 'Six',
-        7: 'Seven',
-        8: 'Eight',
-        9: 'Nine'
-    }
-    return cases.get(number, "Invalid value")
+    cases = {0: 'Zero', 1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine'}
+    return cases.get(number, 'Invalid value')

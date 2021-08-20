@@ -1,12 +1,14 @@
 class Solution:
+
     def longestConsecutive(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
+
         def union(uf, p, q):
-            i, j = root(uf, p), root(uf, q)
-            uf[i], uf[j] = min(i, j), min(i, j)
+            (i, j) = (root(uf, p), root(uf, q))
+            (uf[i], uf[j]) = (min(i, j), min(i, j))
 
         def root(uf, p):
             while p != uf[p]:
@@ -17,12 +19,12 @@ class Solution:
             return 0
         ht = {}
         uf = [i for i in range(len(nums))]
-        for i, n in enumerate(nums):
+        for (i, n) in enumerate(nums):
             if n not in ht:
                 ht[n] = i
             else:
                 continue
-            m, o = n - 1, n + 1
+            (m, o) = (n - 1, n + 1)
             if m in ht:
                 union(uf, ht[m], i)
             if o in ht:

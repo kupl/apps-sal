@@ -1,4 +1,3 @@
-# cook your dish here
 import math
 t = int(input())
 while t > 0:
@@ -9,7 +8,7 @@ while t > 0:
     a = int(a)
     if a * (a + 1) > k:
         a -= 1
-    b = k - (a * (a + 1))
+    b = k - a * (a + 1)
     if b == 0:
         c = a - 1
     else:

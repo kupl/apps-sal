@@ -2,7 +2,8 @@ import math
 from collections import defaultdict
 
 
-class UnionFind():
+class UnionFind:
+
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
@@ -17,13 +18,10 @@ class UnionFind():
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         if x == y:
             return
-
         if self.parents[x] > self.parents[y]:
-            x, y = y, x
-
+            (x, y) = (y, x)
         self.parents[x] += self.parents[y]
         self.parents[y] = x
 
@@ -32,7 +30,9 @@ class UnionFind():
 
 
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def prime_factorize(n):
             a = []
             while n % 2 == 0:
@@ -48,18 +48,14 @@ class Solution:
             if n != 1:
                 a.append(n)
             return a
-
         uf = UnionFind(len(A))
         res = 0
         primes = defaultdict(list)
-
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             for p in set(prime_factorize(a)):
                 primes[p].append(i)
-
-        for _, indices in primes.items():
+        for (_, indices) in primes.items():
             i0 = indices[0]
             for i1 in indices[1:]:
                 uf.union(i0, i1)
-
         return -min(uf.parents)

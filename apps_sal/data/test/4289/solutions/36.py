@@ -1,7 +1,7 @@
 n = int(input())
-t, a = map(int, input().split())
+(t, a) = map(int, input().split())
 h = list(map(int, input().split()))
-x = 10**6
+x = 10 ** 6
 total = 0
 for i in range(n):
     if abs(x - a) > abs(t - h[i] * 0.006 - a):

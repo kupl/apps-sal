@@ -1,10 +1,9 @@
 import sys
-
 n = int(sys.stdin.readline().strip())
 if n % 2 == 0:
-    print("NO")
+    print('NO')
 else:
-    print("YES")
+    print('YES')
     x = []
     y = []
     for i in range(1, 2 * n + 1):
@@ -12,4 +11,4 @@ else:
             x.append(i)
         else:
             y.append(i)
-    print(" ".join(list(map(str, x))) + " " + " ".join(list(map(str, y))))
+    print(' '.join(list(map(str, x))) + ' ' + ' '.join(list(map(str, y))))

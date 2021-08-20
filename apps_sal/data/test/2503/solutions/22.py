@@ -1,13 +1,13 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 g = [[0] * (k + 1) for _ in range(k + 1)]
-ans, b = 0, 0
+(ans, b) = (0, 0)
 for _ in range(n):
-    x, y, c = input().split()
-    x, y = int(x), int(y)
+    (x, y, c) = input().split()
+    (x, y) = (int(x), int(y))
     d = x // k + y // k
     x %= k
     y %= k
-    if (c == 'W') ^ (d % 2):
+    if (c == 'W') ^ d % 2:
         g[x + 1][y + 1] += 1
     else:
         g[x + 1][y + 1] -= 1

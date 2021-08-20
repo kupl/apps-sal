@@ -1,4 +1,5 @@
 class Solution:
+
     def removeCoveredIntervals(self, intervals: List[List[int]]) -> int:
         covered = 0
         same = 0
@@ -10,4 +11,3 @@ class Solution:
                     covered += 1
                     break
         return len(intervals) - covered
-        # return len(intervals)-covered+same

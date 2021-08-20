@@ -2,7 +2,7 @@ n = int(input())
 v = list(map(int, input().split()))
 ans = 0
 for k in range(1, n):
-    p, s = k, 0
+    (p, s) = (k, 0)
     while p < n:
         r = n - p - 1
         if r <= k:

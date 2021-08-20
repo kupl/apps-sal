@@ -1,7 +1,6 @@
 q = int(input())
 for ew in range(q):
-    a, b = map(int, input().split())
-    # x+y+xy = conc(x,y)
+    (a, b) = map(int, input().split())
     p = 0
     pi = 0
     while True:

@@ -23,7 +23,7 @@ def _b(n):
             product_denominators *= arr[i][1]
     sum_numerator = 0
     for i in range(0, n - 1):
-        p = (product_denominators * arr[i][0] // arr[i][1]) * triangles[i]
+        p = product_denominators * arr[i][0] // arr[i][1] * triangles[i]
         sum_numerator += p
     [a, b] = simplify(-sum_numerator, product_denominators * triangles[-1])
     arr.append([a, b])
@@ -43,11 +43,11 @@ def series(k, nb):
         temp = b(k)
         bk = abs(temp[0] / temp[1])
         fk = math.factorial(k)
-        return (1 / 2) * bk * (2 * math.pi) ** k / fk
+        return 1 / 2 * bk * (2 * math.pi) ** k / fk
     elif k > 0 and k % 2:
         sum = 0
         for i in range(1, nb):
-            sum += 1 / (i)**k
+            sum += 1 / i ** k
         return sum
     elif k < 0:
         temp = b(1 - k)

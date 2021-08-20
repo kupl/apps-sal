@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-n, m, k = list(map(int, input().split()))
+(n, m, k) = list(map(int, input().split()))
 A = [int(i) for i in input().split()]
 if n <= m:
     AA = [0] * (n + 1)

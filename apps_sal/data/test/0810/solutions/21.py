@@ -1,6 +1,6 @@
 ans = 0
 mod = 1000000007
-a, b, n = map(int, input().split())
+(a, b, n) = map(int, input().split())
 s = set()
 for x in range(2, 1 << 8):
     z = 0

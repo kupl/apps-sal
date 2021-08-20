@@ -1,4 +1,4 @@
-lst = [0] + [_ in "IEAOUY" for _ in input()]
+lst = [0] + [_ in 'IEAOUY' for _ in input()]
 n = len(lst) - 1
 for _ in range(1, n + 1):
     lst[_] += lst[_ - 1]

@@ -1,5 +1,7 @@
 class Solution:
+
     def largestComponentSize(self, A: List[int]) -> int:
+
         def find(n):
             if n not in root:
                 return n
@@ -7,10 +9,10 @@ class Solution:
             return root[n]
 
         def union(n1, n2):
-            root1, root2 = find(n1), find(n2)
+            (root1, root2) = (find(n1), find(n2))
             if root1 == root2:
                 return
-            rank1, rank2 = rank[root1], rank[root2]
+            (rank1, rank2) = (rank[root1], rank[root2])
             if rank1 > rank2:
                 root[root2] = root1
                 size[root1] += size[root2]
@@ -34,19 +36,15 @@ class Solution:
             if n > 2:
                 factors.add(n)
             return factors
-
         factor_to_num = collections.defaultdict(list)
         for n in A:
             for factor in find_prime_factors(n):
                 factor_to_num[factor].append(n)
-
         root = {}
         rank = {n: 1 for n in A}
         size = {n: 1 for n in A}
-
         for factor in factor_to_num:
             first_root = find(factor_to_num[factor][0])
             for i in range(1, len(factor_to_num[factor])):
                 union(first_root, factor_to_num[factor][i])
-
         return max(size.values())

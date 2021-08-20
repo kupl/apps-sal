@@ -1,8 +1,7 @@
 n = int(input())
 edges = [[] for _ in range(n)]
-
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     edges[a].append(b)
@@ -42,6 +41,6 @@ for i in range(n):
     if dp[i] <= fp[i]:
         c += 1
 if 2 * c > n:
-    print("Fennec")
+    print('Fennec')
 else:
-    print("Snuke")
+    print('Snuke')

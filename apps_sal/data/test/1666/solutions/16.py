@@ -1,4 +1,4 @@
-x, y, a, b = input().split(' ')
+(x, y, a, b) = input().split(' ')
 x = int(x)
 y = int(y)
 a = int(a)

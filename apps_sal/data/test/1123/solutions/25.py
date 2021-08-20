@@ -1,7 +1,5 @@
-#from line_profiler import LineProfiler
-
-N, K = list(map(int, input().split()))
-mod = 10**9 + 7
+(N, K) = list(map(int, input().split()))
+mod = 10 ** 9 + 7
 
 
 def main():
@@ -26,11 +24,9 @@ def main():
             for item in blis:
                 res = res * li[item] % mod
             return res
-
     fact_count = [0 for _ in range(K + 1)]
     for k in range(1, K + 1):
         fact_count[k] = K // k
-
     ans = 0
     count = [0 for _ in range(K + 1)]
     for k in range(K, 0, -1):
@@ -38,7 +34,7 @@ def main():
         cc = modpow(x)
         j = 2 * k
         l = 2
-        while(j <= K):
+        while j <= K:
             cc -= count[j]
             l += 1
             j = k * l
@@ -51,10 +47,6 @@ def main():
 
 def __starting_point():
     main()
-#prof = LineProfiler()
-# prof.add_function(main)
-# prof.runcall(main)
-# prof.print_stats()
 
 
 __starting_point()

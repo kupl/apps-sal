@@ -2,6 +2,7 @@ from math import comb
 
 
 class Solution:
+
     def getProbability(self, balls: List[int]) -> float:
         n = len(balls)
         s = sum(balls)
@@ -15,5 +16,4 @@ class Solution:
             total += count(index + 1, delta + 1, ca)
             total += count(index + 1, delta - 1, ca + balls[index])
             return total
-
         return count(0, 0, 0) / comb(s, s // 2)

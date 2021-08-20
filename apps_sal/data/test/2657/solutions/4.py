@@ -5,21 +5,16 @@ x = a[-1]
 c = bisect_right(a, x // 2)
 if x % 2 == 0:
     if x // 2 in a:
-        print("{} {}".format(x, x // 2))
+        print('{} {}'.format(x, x // 2))
+    elif a[c] - x // 2 >= x // 2 - a[c - 1]:
+        print('{} {}'.format(x, a[c - 1]))
     else:
-        if a[c] - x // 2 >= x // 2 - a[c - 1]:
-            print("{} {}".format(x, a[c - 1]))
-        else:
-            print("{} {}".format(x, a[c]))
-
-
+        print('{} {}'.format(x, a[c]))
+elif x // 2 in a:
+    print('{} {}'.format(x, x // 2))
+elif x // 2 + 1 in a:
+    print('{} {}'.format(x, x // 2 + 1))
+elif a[c] - (x // 2 + 1) >= x // 2 - a[c - 1]:
+    print('{} {}'.format(x, a[c - 1]))
 else:
-    if x // 2 in a:
-        print("{} {}".format(x, x // 2))
-    elif x // 2 + 1 in a:
-        print("{} {}".format(x, x // 2 + 1))
-    else:
-        if a[c] - (x // 2 + 1) >= x // 2 - a[c - 1]:
-            print("{} {}".format(x, a[c - 1]))
-        else:
-            print("{} {}".format(x, a[c]))
+    print('{} {}'.format(x, a[c]))

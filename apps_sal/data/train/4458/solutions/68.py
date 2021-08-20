@@ -1,11 +1,10 @@
 def time_correct(t):
-    if t == "":
-        return ""
+    if t == '':
+        return ''
     elif t == None:
         return None
-    elif len(t) != 8 or len(t.split(':')) != 3 or not all(x.isdigit() for x in t.split(':')):
+    elif len(t) != 8 or len(t.split(':')) != 3 or (not all((x.isdigit() for x in t.split(':')))):
         return None
-
     t_list = [int(x) for x in t.split(':')]
     if t_list[2] > 59:
         t_list[1] += 1

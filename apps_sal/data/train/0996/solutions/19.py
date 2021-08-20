@@ -1,4 +1,3 @@
-# cook your dish here
 n = int(input())
 i = 0
 s1 = 0
@@ -6,7 +5,7 @@ s2 = 0
 m = 0
 w = 0
 while i < n:
-    a, b = input().split()
+    (a, b) = input().split()
     a = int(a)
     b = int(b)
     s1 += a

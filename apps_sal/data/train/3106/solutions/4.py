@@ -11,4 +11,5 @@ def H(Q, S):
     return M[Q, S]
 
 
-def combs_non_empty_boxes(Q, S): return 'It cannot be possible!' if Q < S else H(Q, S)
+def combs_non_empty_boxes(Q, S):
+    return 'It cannot be possible!' if Q < S else H(Q, S)

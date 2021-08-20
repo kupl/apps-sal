@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 n = int(input())
 a = list(map(int, input().split()))
 a.sort()
@@ -19,8 +18,7 @@ for _ in range(n):
     parent += next_parent
     parent.sort()
     rest = rest + next_rest[::-1]
-
-if len(parent) == 2**n:
+if len(parent) == 2 ** n:
     ans = 'Yes'
 else:
     ans = 'No'

@@ -8,7 +8,6 @@ def next_num(n):
             for d in range(0 if fromZ else s[i], 10):
                 if not (m + d) % (i + 1):
                     yield from dfs(m + d, i + 1, fromZ or d > s[i])
-
     s = list(map(int, str(n)))
     ret = next(dfs(), None)
     if ret is None:

@@ -1,13 +1,10 @@
-# E71_A
-
 t = int(input())
-
 for i in range(0, t):
-    ln = [int(j) for j in input().split(" ")]
+    ln = [int(j) for j in input().split(' ')]
     b = ln[0]
     p = ln[1]
     f = ln[2]
-    ln = [int(j) for j in input().split(" ")]
+    ln = [int(j) for j in input().split(' ')]
     h = ln[0]
     c = ln[1]
     b = b // 2

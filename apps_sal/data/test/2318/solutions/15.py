@@ -7,12 +7,12 @@ for _ in range(n):
     tgr = itertools.groupby(t)
     slist = []
     tlist = []
-    for key, group in sgr:
+    for (key, group) in sgr:
         slist.append([key, len(list(group))])
-    for key, group in tgr:
+    for (key, group) in tgr:
         tlist.append([key, len(list(group))])
     if len(slist) != len(tlist):
-        print("NO")
+        print('NO')
     else:
         flag = 1
         for i in range(len(slist)):
@@ -22,6 +22,6 @@ for _ in range(n):
                 flag = 0
                 break
         if flag == 1:
-            print("YES")
+            print('YES')
         else:
-            print("NO")
+            print('NO')

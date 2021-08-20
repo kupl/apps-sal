@@ -1,9 +1,6 @@
-#!/usr/bin/env python3
-
-n, m = (int(x) for x in input().split())
-w = [int(x) for x in input().split()]  # len(w) == n
-b = [int(x) - 1 for x in input().split()]  # len(b) == m
-
+(n, m) = (int(x) for x in input().split())
+w = [int(x) for x in input().split()]
+b = [int(x) - 1 for x in input().split()]
 visited = [False] * n
 stack = []
 for book in b:
@@ -11,7 +8,6 @@ for book in b:
         stack.append(book)
         visited[book] = True
 stack.reverse()
-
 total_weight = 0
 for reading in b:
     p = len(stack) - 1
@@ -21,5 +17,4 @@ for reading in b:
     else:
         stack.__delitem__(p)
         stack.append(reading)
-
 print(total_weight)

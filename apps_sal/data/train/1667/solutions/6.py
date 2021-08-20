@@ -2,7 +2,7 @@ def unflatten(flat_array, depth, direction=1):
     if depth == 0:
         return flat_array
     if direction == 1:
-        result, j = [], 0
+        (result, j) = ([], 0)
         length = len(flat_array)
         while j < length:
             if isinstance(flat_array[j], list):
@@ -19,7 +19,7 @@ def unflatten(flat_array, depth, direction=1):
         return unflatten(result, depth - 1, direction=-1)
     else:
         length = len(flat_array)
-        result, j = [], length - 1
+        (result, j) = ([], length - 1)
         while j >= 0:
             if isinstance(flat_array[j], list):
                 result.append(unflatten(flat_array[j], 1, direction=-1))

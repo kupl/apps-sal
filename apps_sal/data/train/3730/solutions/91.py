@@ -1,8 +1,8 @@
 def capitalize(s):
     p = len(s)
     newar = []
-    o = ""
-    e = ""
+    o = ''
+    e = ''
     for i in range(0, p):
         if i & 1:
             e += s[i].upper()

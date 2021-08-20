@@ -7,5 +7,4 @@ sb = cumsum(b)
 ans = 0
 for i in range(n):
     ans = max(ans, sa[i] + sb[n - 1] - sb[i] + b[i])
-
 print(ans)

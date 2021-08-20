@@ -1,6 +1,5 @@
-n, x = list(map(int, input().split()))
+(n, x) = list(map(int, input().split()))
 c = list(map(int, input().split()))
-
 c.sort()
 res = 0
 learn_time = x

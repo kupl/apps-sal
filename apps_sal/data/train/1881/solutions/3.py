@@ -1,4 +1,5 @@
 class Solution:
+
     def intersectionSizeTwo(self, intervals):
         """
         :type intervals: List[List[int]]
@@ -17,7 +18,6 @@ class Solution:
                 continue
             if e[0] <= a:
                 continue
-
             if e[0] > a and e[1] > b >= e[0]:
                 a = b
                 b = e[-1]
@@ -27,5 +27,4 @@ class Solution:
             b = e[1]
             s.add(a)
             s.add(b)
-
         return len(s)

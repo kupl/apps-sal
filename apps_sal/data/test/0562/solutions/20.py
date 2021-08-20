@@ -13,8 +13,8 @@ def lol(a):
 n = int(input())
 a = []
 for _ in range(n):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     a.append([x, 1])
     a.append([y, 2])
 a = sorted(a)
-print("YES" if lol(a) else "NO")
+print('YES' if lol(a) else 'NO')

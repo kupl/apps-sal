@@ -1,4 +1,5 @@
 class Solution:
+
     def findContentChildren(self, g, s):
         """
         :type g: List[int]
@@ -7,7 +8,7 @@ class Solution:
         """
         g.sort()
         s.sort()
-        i, j = 0, 0
+        (i, j) = (0, 0)
         happyKids = 0
         while i < len(g) and j < len(s):
             if s[j] >= g[i]:

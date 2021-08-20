@@ -6,6 +6,6 @@ for i in range(n - 2):
     if a[i] + a[i + 1] > a[i + 2]:
         f = True
 if f:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

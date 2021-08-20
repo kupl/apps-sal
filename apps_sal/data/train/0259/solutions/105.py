@@ -1,6 +1,7 @@
 class Solution:
+
     def divide(self, num, divisor):
-        return -((-num) // divisor)
+        return -(-num // divisor)
 
     def getQuotient(self, nums, divisor):
         output = 0
@@ -18,7 +19,6 @@ class Solution:
     def helper(self, results, nums, i, j, threshold):
         if i == j:
             return i
-
         mid = (i + j) // 2
         if mid == 1:
             return mid
@@ -30,10 +30,6 @@ class Solution:
             return self.helper(results, nums, mid + 1, j, threshold)
 
     def smallestDivisor(self, nums: List[int], threshold: int) -> int:
-
         maxDivisor = self.divide(2 * sum(nums), threshold)
-        # print(maxDivisor)
-        #maxDivisor = 1000000
         results = dict()
-
         return self.helper(results, nums, 1, maxDivisor, threshold)

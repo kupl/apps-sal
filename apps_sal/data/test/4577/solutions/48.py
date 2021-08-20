@@ -1,5 +1,4 @@
-A, B, C = list(map(int, input().split()))
-
+(A, B, C) = list(map(int, input().split()))
 if A <= C <= B:
     print('Yes')
 else:

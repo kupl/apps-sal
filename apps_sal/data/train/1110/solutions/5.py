@@ -4,11 +4,10 @@ for _ in range(int(input())):
     li.sort()
     dli = dict()
     modi = 0
-    # 2*n optimiztion
     for i in li:
         if i not in dli:
             dli[i] = li.count(i)
-    if(len(dli) != 0):
+    if len(dli) != 0:
         while 1:
             tmp = []
             for i in dli:
@@ -21,6 +20,6 @@ for _ in range(int(input())):
             for i in range(l):
                 mn = min(mn, tmp[i] - 1 - i + l - 1 - i)
             modi += mn
-            if(l == 0):
+            if l == 0:
                 break
     print(modi)

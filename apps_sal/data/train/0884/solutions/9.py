@@ -28,11 +28,11 @@ k_fac = 0
 cycle = int(input())
 cy = 0
 while cy < cycle:
-    x, k = input().split()
-    x, k = int(x), int(k)
+    (x, k) = input().split()
+    (x, k) = (int(x), int(k))
     x_fac = factor_x(k, x)
     k_fac = factor_k(x, k)
-    print(int(x_fac), " ", int(k_fac))
+    print(int(x_fac), ' ', int(k_fac))
     x_fac = 0
     k_fac = 0
     cy = cy + 1

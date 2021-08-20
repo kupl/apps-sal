@@ -1,6 +1,6 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 div = []
-for i in range(2, int(M**(1 / 2)) + 2):
+for i in range(2, int(M ** (1 / 2)) + 2):
     cur = 0
     while M % i == 0:
         M = M // i
@@ -10,7 +10,7 @@ for i in range(2, int(M**(1 / 2)) + 2):
 if M > 1:
     div.append(1)
 div.sort()
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 frac = [1] * (N + 50)
 num = len(frac)
 for i in range(len(frac) - 1):

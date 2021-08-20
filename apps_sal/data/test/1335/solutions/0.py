@@ -1,6 +1,5 @@
 import math
-
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 now = [-1] * k
 t = [0] * k

@@ -1,5 +1,3 @@
-# cook your dish here
-
 for _ in range(int(input())):
     L = list(map(int, input().split()))
     S = L[0]

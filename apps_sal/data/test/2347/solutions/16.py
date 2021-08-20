@@ -7,7 +7,6 @@ import bisect
 import string
 import math
 import time
-#import random
 
 
 def I():
@@ -44,18 +43,18 @@ def GI(V, E, Directed=False, index=0):
             inp[0] -= 1
             inp[1] -= 1
         if len(inp) == 2:
-            a, b = inp
+            (a, b) = inp
             g[a].append(b)
             if not Directed:
                 g[b].append(a)
         elif len(inp) == 3:
-            a, b, c = inp
+            (a, b, c) = inp
             aa = (inp[0], inp[2])
             bb = (inp[1], inp[2])
             g[a].append(bb)
             if not Directed:
                 g[b].append(aa)
-    return g, org_inp
+    return (g, org_inp)
 
 
 def show(*inp, end='\n'):
@@ -64,20 +63,18 @@ def show(*inp, end='\n'):
 
 
 YN = ['Yes', 'No']
-mo = 10**9 + 7
+mo = 10 ** 9 + 7
 inf = float('inf')
 l_alp = string.ascii_lowercase
 u_alp = string.ascii_uppercase
 
-# sys.setrecursionlimit(10**5)
 
-
-def input(): return sys.stdin.readline().rstrip()
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 show_flg = False
 show_flg = True
-
 t = I()
 for _ in range(t):
     p = input()

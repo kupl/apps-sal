@@ -1,8 +1,8 @@
-n, m, k = map(int, input().split())
+(n, m, k) = map(int, input().split())
 answer = [[False for i in range(m)] for i in range(n)]
 flag = False
 for i in range(k):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
     if x <= n - 1 and y <= m - 1:
         if answer[x][y]:
             if answer[x - 1][y] and answer[x][y - 1]:
@@ -28,8 +28,7 @@ for i in range(k):
                 flag = True
                 break
     answer[x - 1][y - 1] = True
-
 for j in range(i + 1, k):
-    x, y = map(int, input().split())
+    (x, y) = map(int, input().split())
 if flag == False:
     print(0)

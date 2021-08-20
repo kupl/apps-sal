@@ -11,20 +11,15 @@ class Solution:
         m[n - 1] = 1
         for i in range(n - 2, -1, -1):
             m[i] = min(m[i], m[i + 1] + 1)
-
-        return(max(m))
+        return max(m)
 
 
 def __starting_point():
-    # for i in range(int(si.readline().strip())):
     n = int(si.readline().strip())
-    #n,m = map(int, si.readline().strip().split())
     m = list(map(int, si.readline().strip().split()))
     S = Solution()
     print(S.bazinga(n, m))
 
 
-'''
-http://codeforces.com/contest/573/problem/B
-'''
+'\nhttp://codeforces.com/contest/573/problem/B\n'
 __starting_point()

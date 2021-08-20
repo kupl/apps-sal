@@ -30,12 +30,11 @@ while queue:
                 if suma[child - 1] < suma[vertex - 1]:
                     ok = False
                 else:
-                    weight[child] = (suma[child - 1] - suma[vertex - 1])
+                    weight[child] = suma[child - 1] - suma[vertex - 1]
+            elif suma[child - 1] < suma[vertex - 1]:
+                ok = False
             else:
-                if suma[child - 1] < suma[vertex - 1]:
-                    ok = False
-                else:
-                    weight[child] = (suma[child - 1] - suma[vertex - 1])
+                weight[child] = suma[child - 1] - suma[vertex - 1]
             queue.append(child)
             visited.add(child)
 if ok == True:

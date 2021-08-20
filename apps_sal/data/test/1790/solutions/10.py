@@ -1,5 +1,3 @@
-# map(int, input().split())
-# int(input())
 n = int(input())
 s = set(range(1, 101))
 for i in range(n):
@@ -9,7 +7,6 @@ for i in range(n):
     for el in scp:
         if el in curr:
             s.add(el)
-
 for el in s:
-    print(el, end=" ")
+    print(el, end=' ')
 print()

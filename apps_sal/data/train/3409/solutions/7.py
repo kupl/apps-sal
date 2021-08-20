@@ -3,8 +3,7 @@ from collections import Counter
 
 def fish(shoal):
     count = Counter(map(int, shoal))
-
-    size, eaten, step = 1, 0, 4
+    (size, eaten, step) = (1, 0, 4)
     for n in range(1, 10):
         if size >= n:
             eaten += count[n] * n
@@ -14,5 +13,4 @@ def fish(shoal):
                 step += 4
         else:
             break
-
     return size

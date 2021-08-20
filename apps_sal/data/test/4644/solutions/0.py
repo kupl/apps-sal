@@ -1,7 +1,7 @@
 for _ in range(int(input())):
     n = int(input())
     ar = list(map(int, input().split()))
-    a, b = 0, 0
+    (a, b) = (0, 0)
     for elem in ar:
         if elem % 2 == 0:
             a = 1

@@ -1,4 +1,3 @@
-
 """
 
 https://atcoder.jp/contests/arc086/tasks/arc086_c
@@ -48,60 +47,45 @@ c = 子の数
 浅い部分は共通。よって-xで管理すればいいか
 
 """
-
 from collections import deque
 import sys
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 sys.setrecursionlimit(200000)
 
 
 def NC_Dij(lis, start):
-
-    ret = [float("inf")] * len(lis)
+    ret = [float('inf')] * len(lis)
     ret[start] = 0
-
     q = deque([start])
     plis = [i for i in range(len(lis))]
-
     while len(q) > 0:
         now = q.popleft()
-
         for nex in lis[now]:
-
             if ret[nex] > ret[now] + 1:
                 ret[nex] = ret[now] + 1
                 plis[nex] = now
                 q.append(nex)
+    return (ret, plis)
 
-    return ret, plis
 
-
-def inverse(a):  # aのmodを法にした逆元を返す
+def inverse(a):
     return pow(a, mod - 2, mod)
 
 
 def dfs(v):
-
     if len(lis[v]) == 0:
         ret = [[1, 1]]
         return ret
-
     else:
-
         retlis = []
         for nex in lis[v]:
             nret = dfs(nex)
             retlis.append([len(nret), nret])
         retlis.sort()
-
-        # 1つしかない場合マージしない
         if len(retlis) == 1:
             retlis[-1][1].append([1, 1])
             return retlis[-1][1]
-
-        # 2つ以上の場合最大のやつにマージする
         for revd in range(retlis[-2][0]):
-
             zmul = 1
             amul = 1
             for i in range(len(retlis) - 1, -1, -1):
@@ -112,7 +96,6 @@ def dfs(v):
                     amul %= mod
                 else:
                     break
-
             nsum = 0
             for i in range(len(retlis) - 1, -1, -1):
                 if revd < retlis[i][0]:
@@ -120,33 +103,23 @@ def dfs(v):
                     nsum %= mod
                 else:
                     break
-
             retlis[-1][1][-1 - revd][1] = nsum
             retlis[-1][1][-1 - revd][0] = (amul - nsum) % mod
-
         retlis[-1][1].append([1, 1])
         return retlis[-1][1]
 
 
 N = int(input())
 p = list(map(int, input().split()))
-
 lis = [[] for i in range(N + 1)]
-
 for i in range(N):
-
-    # lis[i+1].append(p[i])
     lis[p[i]].append(i + 1)
-
-dlis, plis = NC_Dij(lis, 0)
+(dlis, plis) = NC_Dij(lis, 0)
 maxd = max(dlis)
-
 dn = [0] * (maxd + 1)
 for i in dlis:
     dn[i] += 1
-
 ans = dfs(0)
-#print (dn,ans)
 A = 0
 for i in range(maxd + 1):
     A += ans[-1 - i][1] * pow(2, N + 1 - dn[i], mod)

@@ -1,7 +1,7 @@
 t = int(input())
 for i in range(t):
     n = int(input())
-    a, b, c = list(map(int, input().split()))
+    (a, b, c) = list(map(int, input().split()))
     d = list(input())
     ans = 0
     ansarr = ['0' for x in range(n)]
@@ -33,7 +33,7 @@ for i in range(t):
         else:
             ansstr += ansarr[j]
     if ans >= n / 2:
-        print("YES")
+        print('YES')
         print(ansstr)
     else:
-        print("NO")
+        print('NO')

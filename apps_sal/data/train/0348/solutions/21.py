@@ -1,4 +1,5 @@
 class Solution:
+
     def maximumSum(self, arr: List[int]) -> int:
         if len(arr) == 1:
             return arr[0]

@@ -3,7 +3,7 @@ for _ in range(T):
     n = int(input())
     s = []
     for k in range(n):
-        l, r = [int(i) for i in input().split()]
+        (l, r) = [int(i) for i in input().split()]
         s.append([l, 1, k])
         s.append([r, 2, k])
     s.sort()

@@ -1,5 +1,5 @@
 def main():
-    N, K = list(map(int, input().split()))
+    (N, K) = list(map(int, input().split()))
     h = []
     for _ in range(N):
         h.append(int(input()))

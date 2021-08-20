@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 d = list(map(int, input().split()))
 di = dict()
 for i in range(n):

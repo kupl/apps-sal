@@ -1,4 +1,5 @@
 class Solution:
+
     def prevPermOpt1(self, A: List[int]) -> List[int]:
         point = -1
         for i in range(len(A) - 1, 0, -1):
@@ -13,5 +14,5 @@ class Solution:
             if A[i] < A[point] and max_val < A[i]:
                 right_point = i
                 max_val = A[i]
-        A[point], A[right_point] = A[right_point], A[point]
+        (A[point], A[right_point]) = (A[right_point], A[point])
         return A

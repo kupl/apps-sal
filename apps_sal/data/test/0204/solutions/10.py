@@ -19,8 +19,6 @@ def readlist():
     return list(map(int, input().split()))
 
 
-a, b, x, y = readmap()
-
+(a, b, x, y) = readmap()
 g = math.gcd(x, y)
-
 print(min(a // (x // g), b // (y // g)))

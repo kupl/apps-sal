@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 maxi = 0
 a = list(map(int, input().split()))
 for i in a:

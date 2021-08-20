@@ -1,4 +1,4 @@
-s, K = open(0).read().split()
+(s, K) = open(0).read().split()
 K = int(K)
 ss = set()
 temp = set([''])

@@ -1,5 +1,4 @@
-z = (10**9 + 7)
-
+z = 10 ** 9 + 7
 cachencr = {}
 cachepow = {}
 fact = []
@@ -35,9 +34,9 @@ def powc(n):
 
 
 for _ in range(0, int(input())):
-    n, q = list(map(int, input().split()))
+    (n, q) = list(map(int, input().split()))
     for __ in range(0, q):
-        i, k = list(map(int, input().split()))
+        (i, k) = list(map(int, input().split()))
         a = nCr(i - 1, k - 1)
         b = powc(n - i)
-        print((a * b) % z)
+        print(a * b % z)

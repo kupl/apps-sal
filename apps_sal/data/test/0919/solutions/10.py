@@ -1,7 +1,6 @@
 from collections import defaultdict
 import string
-
-n, k = [int(i) for i in input().split()]
+(n, k) = [int(i) for i in input().split()]
 x = input()
 d = {}
 for i in string.ascii_lowercase:
@@ -15,7 +14,6 @@ while i < 26 and k > 0:
         k -= 1
     else:
         i += 1
-
 if k > 0:
     print(-1)
 else:

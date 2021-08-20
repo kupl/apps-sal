@@ -1,5 +1,4 @@
 from math import gcd
-
 n = int(input())
 a = list(map(int, input().split()))
 d = {}
@@ -22,7 +21,6 @@ for x in t:
         if d[x] == 1 and d.get(x - 1, 0) == 0:
             d[x - 1] = 1
             d[x] = 0
-
 ans = 0
 for c in d:
     if d[c]:

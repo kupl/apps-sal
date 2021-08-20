@@ -1,8 +1,8 @@
 from collections import deque
-n, u, v = map(int, input().split())
+(n, u, v) = map(int, input().split())
 edge = [[] for i in range(n)]
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     a -= 1
     b -= 1
     edge[a].append(b)
@@ -26,15 +26,13 @@ def bfs(s, visited):
 bfs(u - 1, visitedu)
 bfs(v - 1, visitedv)
 a = 0
-b = 10**10
+b = 10 ** 10
 for i in range(n):
     if visitedu[i] < visitedv[i]:
         a = max(a, visitedv[i])
     elif visitedu[i] == visitedv[i]:
         b = min(b, visitedv[i])
-# print(visitedv)
-# print(visitedu)
-if b == 10**10:
+if b == 10 ** 10:
     b = -1
 if a <= b:
     print(b)

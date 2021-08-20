@@ -10,7 +10,7 @@ def solve():
     S = input()
     T = input()
     lis = [[] for _ in range(26)]
-    for i, s in enumerate(S):
+    for (i, s) in enumerate(S):
         lis[alph_to_num(s)].append(i)
     ind = -1
     for t in T:

@@ -1,7 +1,7 @@
 t = int(input())
 buf = []
 for _ in range(t):
-    a, k = input().split()
+    (a, k) = input().split()
     k = int(k) - 1
     for _ in range(k):
         c = min(a)
@@ -10,5 +10,4 @@ for _ in range(t):
         if '0' in a:
             break
     buf.append(a)
-
 print('\n'.join(buf))

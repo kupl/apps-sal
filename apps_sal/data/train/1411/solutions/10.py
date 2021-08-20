@@ -1,7 +1,4 @@
-# lannisters don't act like fools
-
-
-'''And who are you, the proud lord said,
+"""And who are you, the proud lord said,
 That I must bow so low?
 Only a cat of a different coat,
 That's all the truth I know.
@@ -14,13 +11,9 @@ That lord of Castamere,
 But now the rains weep o'er his hall,
 With no one there to hear.
 Yes now the rains weep o'er his hall,
-And not a soul to hear.'''
-
-
+And not a soul to hear."""
 import math
-
 t = int(input())
-
 for _ in range(t):
     z = input().split()
     x = int(z[0])
@@ -33,8 +26,8 @@ for _ in range(t):
         a = b
         b = temp
     first_meet = length / (a - b)
-    total_time = (x * length) / a
-    if(first_meet == total_time):
+    total_time = x * length / a
+    if first_meet == total_time:
         ans = 0
     else:
         ans = int(total_time / first_meet)

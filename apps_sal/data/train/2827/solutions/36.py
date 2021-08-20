@@ -1,5 +1,4 @@
-ENGLISH_NUMBE_NAMES = ("Zero", "One", "Two", "Three", "Four",
-                       "Five", "Six", "Seven", "Eight", "Nine")
+ENGLISH_NUMBE_NAMES = ('Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine')
 
 
 def switch_it_up(number: int) -> str:

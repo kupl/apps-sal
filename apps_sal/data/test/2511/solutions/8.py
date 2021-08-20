@@ -2,7 +2,7 @@ from collections import deque
 
 
 class ModCalc:
-    mod = 10**9 + 7
+    mod = 10 ** 9 + 7
 
     def __init__(self, n):
         self.n = n
@@ -23,7 +23,6 @@ class ModCalc:
             return 0
         if n < 0 or r < 0:
             return 0
-
         return self.fac[n] * self.finv[r] % self.mod * self.finv[n - r] % self.mod
 
     def perm(self, n, r):
@@ -31,25 +30,21 @@ class ModCalc:
             return 0
         if n < 0 or r < 0:
             return 0
-
         return self.fac[n] * self.finv[n - r] % self.mod
 
     def fact(self, n):
         return self.fac[n]
 
 
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 tree = [[] for _ in range(n + 1)]
-
 for _ in range(n - 1):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     tree[a].append(b)
     tree[b].append(a)
-
 ans = k
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 mc = ModCalc(100001)
-
 q = deque([1])
 dist = [-1] * (n + 1)
 dist[1] = 0
@@ -62,12 +57,10 @@ while q:
         cnt += 1
         q.append(node)
         dist[node] = dist[now] + 1
-
     if dist[now] == 0:
         ans *= mc.comb(k - 1, cnt) * mc.fact(cnt) % mod
         ans %= mod
     else:
         ans *= mc.comb(k - 2, cnt) * mc.fact(cnt) % mod
         ans %= mod
-
 print(ans)

@@ -1,16 +1,13 @@
-X, Y = [int(_) for _ in input().split()]
-
+(X, Y) = [int(_) for _ in input().split()]
 p = 10 ** 9 + 7
 N = 670000
-
 fact = [1, 1]
 factinv = [1, 1]
 inv = [0, 1]
-
 for i in range(2, N + 1):
-    fact.append((fact[-1] * i) % p)
+    fact.append(fact[-1] * i % p)
     inv.append((p - inv[p % i] * (p // i)) % p)
-    factinv.append((factinv[-1] * inv[-1]) % p)
+    factinv.append(factinv[-1] * inv[-1] % p)
 
 
 def combination(n, r, p):
@@ -28,4 +25,4 @@ def solve(X, Y):
     return combination(Z, x, p)
 
 
-print((solve(X, Y)))
+print(solve(X, Y))

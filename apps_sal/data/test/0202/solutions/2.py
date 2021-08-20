@@ -1,5 +1,5 @@
-x1, x2 = map(int, input().split())
-x3, x4 = map(int, input().split())
+(x1, x2) = map(int, input().split())
+(x3, x4) = map(int, input().split())
 a = abs(x2 - x4)
 b = abs(x1 - x3)
 print(max(a, b))

@@ -1,4 +1,4 @@
-n, m, k, x, y = [int(x) for x in input().split()]
+(n, m, k, x, y) = [int(x) for x in input().split()]
 ma = 0
 mi = 0
 minn = 199999999999999999

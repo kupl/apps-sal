@@ -1,6 +1,6 @@
 class Solution:
-    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
 
+    def threeConsecutiveOdds(self, arr: List[int]) -> bool:
         oddFound = False
         numOdd = 0
         for num in arr:

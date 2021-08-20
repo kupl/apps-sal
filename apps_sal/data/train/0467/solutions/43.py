@@ -1,5 +1,7 @@
 class Solution:
+
     def sumFourDivisors(self, nums: List[int]) -> int:
+
         def isPrime(n):
             if n <= 1:
                 return False
@@ -17,7 +19,7 @@ class Solution:
         c = 0
         temp = set()
         for i in nums:
-            for j in range(1, int(i**.5) + 1):
+            for j in range(1, int(i ** 0.5) + 1):
                 if i % j == 0:
                     temp.add(j)
                     temp.add(i // j)

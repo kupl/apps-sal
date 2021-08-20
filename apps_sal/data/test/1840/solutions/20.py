@@ -1,13 +1,16 @@
 from bisect import bisect_right
 import sys
-def input(): return sys.stdin.readline().strip()
 
 
-s, b = map(int, input().split())
+def input():
+    return sys.stdin.readline().strip()
+
+
+(s, b) = map(int, input().split())
 ls = list(map(int, input().split()))
 d = {}
 for i in range(b):
-    a, b = map(int, input().split())
+    (a, b) = map(int, input().split())
     try:
         d[a] += b
     except:

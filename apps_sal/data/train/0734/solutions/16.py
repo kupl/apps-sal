@@ -10,18 +10,18 @@ for tt in range(t):
             d[i] = 1
     arr = []
     mm = 0
-    for key, value in d.items():
+    for (key, value) in d.items():
         mm = max(mm, value)
     for i in range(len(a)):
         arr.append([a[i], i])
-    ans = [0] * (n)
-    if mm > (n // 2):
-        print("No")
+    ans = [0] * n
+    if mm > n // 2:
+        print('No')
     else:
-        print("Yes")
+        print('Yes')
         arr = sorted(arr, key=lambda item: item[0])
         for i in range(n):
             ans[arr[(i + mm) % n][1]] = arr[i][0]
         for i in ans:
-            print(i, end=" ")
+            print(i, end=' ')
         print()

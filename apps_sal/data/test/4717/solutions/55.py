@@ -1,5 +1,5 @@
-x, a, b = map(int, input().split())
+(x, a, b) = map(int, input().split())
 if min(abs(x - a), abs(x - b)) == abs(x - a):
-    print("A")
+    print('A')
 else:
-    print("B")
+    print('B')

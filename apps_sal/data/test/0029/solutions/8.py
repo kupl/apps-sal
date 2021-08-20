@@ -16,5 +16,4 @@ for i in range(1000000):
     m = list(reversed(m))
     if sum(m[:3]) == sum(m[3:]):
         ans = min(ans, comp(n, m))
-
 print(ans)

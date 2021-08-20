@@ -1,4 +1,4 @@
-p, n = map(int, input().split())
+(p, n) = map(int, input().split())
 s = set()
 ex = 0
 for i in range(n):

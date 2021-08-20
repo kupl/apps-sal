@@ -2,14 +2,12 @@ from collections import defaultdict
 
 
 class Solution:
+
     def totalFruit(self, tree: List[int]) -> int:
-
         maxAmountOfFruit = 0
-        startIndex, endIndex = 0, 0
-
+        (startIndex, endIndex) = (0, 0)
         countByFruit = defaultdict(int)
         countByFruit[tree[startIndex]] = 1
-
         while endIndex < len(tree):
             while len(countByFruit) > 2:
                 fruitToRemove = tree[startIndex]

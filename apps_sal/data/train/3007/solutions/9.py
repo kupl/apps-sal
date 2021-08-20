@@ -7,5 +7,4 @@ def consecutive_sum(num):
             sol += 1
         nums += i
         i += 1
-
     return sol

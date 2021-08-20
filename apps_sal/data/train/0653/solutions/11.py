@@ -7,7 +7,7 @@ m = 0
 z = 0
 i = 0
 l.sort()
-while(i < n):
+while i < n:
     if l[i] <= x:
         c += 1
         x = x - l[i]

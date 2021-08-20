@@ -4,7 +4,7 @@ while t > 0:
     li2 = [int(i) for i in input().split()]
     s1 = set()
     s2 = set()
-    val, ans = 0, 3
+    (val, ans) = (0, 3)
     for i in range(3):
         if li1[i] == li2[i]:
             val += 1
@@ -16,7 +16,7 @@ while t > 0:
         for i in range(3):
             if li2[i] - li1[i] != 0:
                 s1.add(li2[i] - li1[i])
-            if li1[i] != 0 and li2[i] % li1[i] == 0 and li2[i] // li1[i] != 1:
+            if li1[i] != 0 and li2[i] % li1[i] == 0 and (li2[i] // li1[i] != 1):
                 s2.add(li2[i] // li1[i])
         temp = []
         for i in s1:
@@ -51,7 +51,7 @@ while t > 0:
                     ans = min(ans, 2)
                 s3 = set()
                 for k in range(3):
-                    if temp[k] != 0 and li2[k] % temp[k] == 0 and li2[k] // temp[k] != 1:
+                    if temp[k] != 0 and li2[k] % temp[k] == 0 and (li2[k] // temp[k] != 1):
                         s3.add(li2[k] // temp[k])
                 temp1 = []
                 for k in s3:
@@ -130,7 +130,7 @@ while t > 0:
             d4 = li1[1] - li1[0]
             d5 = li2[2] - li2[0]
             d6 = li1[2] - li1[0]
-            if (d3 != 0 and d4 != 0 and d6 != 0 and d1 % d3 == 0 and d2 % d4 == 0 and d5 % d6 == 0 and d1 // d3 == d2 // d4 and d1 // d3 == d5 // d6):
+            if d3 != 0 and d4 != 0 and (d6 != 0) and (d1 % d3 == 0) and (d2 % d4 == 0) and (d5 % d6 == 0) and (d1 // d3 == d2 // d4) and (d1 // d3 == d5 // d6):
                 ans = min(ans, 2)
             for i in s2:
                 s3 = set()
@@ -143,7 +143,6 @@ while t > 0:
                         if temp[j] != 0:
                             s3.add(temp[j])
                         count += 1
-
                 if len(s3) == 1 and count == 3:
                     ans = min(ans, 2)
             for i in s2:
@@ -179,7 +178,7 @@ while t > 0:
                     temp2 = []
                     s4 = set()
                     for k in range(3):
-                        if temp[k] != 0 and li2[k] % temp[k] == 0 and li2[k] // temp[k] != 1:
+                        if temp[k] != 0 and li2[k] % temp[k] == 0 and (li2[k] // temp[k] != 1):
                             s4.add(li2[k] // temp[k])
                     temp2 = []
                     for k in s4:

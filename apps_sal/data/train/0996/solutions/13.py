@@ -4,7 +4,7 @@ l2 = []
 n1 = 0
 n2 = 0
 for i in range(t):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     n1 += x
     n2 += y
     if n1 > n2:

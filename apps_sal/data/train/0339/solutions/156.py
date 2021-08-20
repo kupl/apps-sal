@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         fin = 0
         for i in range(len(nums1)):
@@ -22,5 +23,4 @@ class Solution:
                     di[p] += 1
                 else:
                     di[p] = 1
-
         return res

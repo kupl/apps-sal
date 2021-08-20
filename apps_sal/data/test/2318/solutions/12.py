@@ -14,7 +14,7 @@ for i in range(int(input())):
         else:
             di2.append([i, 1])
     if len(di) != len(di2):
-        print("NO")
+        print('NO')
         continue
     f = 0
     for i in range(len(di)):
@@ -23,6 +23,6 @@ for i in range(int(input())):
         f = 1
         break
     if f:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 Aset = set()
 for _ in range(M):
     Aset.add(int(input()))
-mod = 10**9 + 7
+mod = 10 ** 9 + 7
 num = [0] * (N + 1)
 for i in range(2):
     if not i in Aset:

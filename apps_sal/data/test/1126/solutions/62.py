@@ -1,5 +1,5 @@
 def main():
-    n, x, m = list(map(int, input().split()))
+    (n, x, m) = list(map(int, input().split()))
     now = x
     l = [now]
     s = set([now])
@@ -11,7 +11,7 @@ def main():
             l.append(now)
             s.add(now)
     if n == len(l):
-        print((sum(l)))
+        print(sum(l))
         return 0
     i = l.index(now)
     l1 = l[:i]
@@ -19,7 +19,7 @@ def main():
     ans = sum(l1)
     n -= i
     size = len(l2)
-    print((ans + ((n // size) * sum(l2) + sum(l2[:n % size]))))
+    print(ans + (n // size * sum(l2) + sum(l2[:n % size])))
 
 
 main()

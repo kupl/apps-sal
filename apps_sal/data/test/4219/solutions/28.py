@@ -3,9 +3,8 @@ A = [[] * N for _ in range(N)]
 for i in range(N):
     a = int(input())
     for _ in range(a):
-        x, y = [int(x) for x in input().split()]
+        (x, y) = [int(x) for x in input().split()]
         A[i].append([x - 1, y])
-
 ans = 0
 for i in range(1, 1 << N):
     B = format(i, f'0{N}b')[::-1]

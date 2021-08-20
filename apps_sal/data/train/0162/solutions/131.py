@@ -1,4 +1,5 @@
 class Solution:
+
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
 
         @lru_cache(maxsize=None)
@@ -9,5 +10,4 @@ class Solution:
                 if text1[i1] == text2[i2]:
                     return helper(i1 + 1, i2 + 1) + 1
                 return max(helper(i1 + 1, i2), helper(i1, i2 + 1))
-
         return helper(0, 0)

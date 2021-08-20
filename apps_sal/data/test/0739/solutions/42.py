@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
-#from numpy import matrix, eye, dot
 
 
 def productMatrix(N, A, B):
@@ -12,18 +11,18 @@ def productMatrix(N, A, B):
     return Ret
 
 
-def modMatrix(N, A, Q):  # N×N行列のmod
+def modMatrix(N, A, Q):
     for i in range(N):
         for j in range(N):
             A[i][j] %= Q
     return
 
 
-def powOfMatrix(N, X, n, Q):  # N×N行列のn乗
+def powOfMatrix(N, X, n, Q):
     Ret = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
-    power = '{:060b}'.format(n)[::-1]  # log2(pow(10,18)) < 60
+    power = '{:060b}'.format(n)[::-1]
     for p in power:
-        if p == "1":
+        if p == '1':
             Ret = productMatrix(N, Ret, X)
             modMatrix(N, Ret, Q)
         X = productMatrix(N, X, X)
@@ -32,7 +31,7 @@ def powOfMatrix(N, X, n, Q):  # N×N行列のn乗
 
 
 def main():
-    L, A, B, M = list(map(int, input().split()))
+    (L, A, B, M) = list(map(int, input().split()))
     s = A
     ANS = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
     for i in range(1, 37):
@@ -48,7 +47,7 @@ def main():
         modMatrix(3, ANS, M)
         L -= step
         s += step * B
-    print(((ANS[1][0] * A + ANS[2][0]) % M))
+    print((ANS[1][0] * A + ANS[2][0]) % M)
 
 
 def __starting_point():

@@ -1,10 +1,4 @@
-L, R = map(int, input().split())
-
-# 例：L=3000, R=10000 で考える
-# (i,j)=(3000,3001)から始まり、(3000,5018)で最小(=0)
-
-# R-L>=2019 のとき、(L,L+1),...,(L,L+2019)の間で最小値0を取れるので、高々2018回の探索
-# 全探索しても break すれば間に合う！
+(L, R) = map(int, input().split())
 m = 2019
 flag = False
 for i in range(L, R):
@@ -15,5 +9,4 @@ for i in range(L, R):
             break
     if flag:
         break
-
 print(m)

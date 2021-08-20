@@ -1,4 +1,5 @@
 class Solution:
+
     def shortestCommonSupersequence(self, str1: str, str2: str) -> str:
 
         def lcs(text1, text2):
@@ -12,7 +13,6 @@ class Solution:
                     else:
                         dp[i][j] = max(dp[i][j - 1], dp[i - 1][j], key=lambda x: len(x))
             return dp[-1][-1]
-
         if str1 == str2:
             return str1
         i = 0

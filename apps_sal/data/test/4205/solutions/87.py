@@ -3,10 +3,9 @@ from typing import List
 
 def answer(n: int, p: List[int]) -> str:
     count = 0
-    for i, num in enumerate(p, start=1):
+    for (i, num) in enumerate(p, start=1):
         if i != num:
             count += 1
-
     return 'YES' if count <= 2 else 'NO'
 
 

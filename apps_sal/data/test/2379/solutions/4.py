@@ -1,7 +1,6 @@
-n, k, c = map(int, input().split())
+(n, k, c) = map(int, input().split())
 s = list(input())
-
-i, cnt = 0, 0
+(i, cnt) = (0, 0)
 l = []
 while cnt < k:
     if s[i] == 'o':
@@ -9,8 +8,7 @@ while cnt < k:
         cnt += 1
         i += c
     i += 1
-
-i, cnt = n - 1, 0
+(i, cnt) = (n - 1, 0)
 r = []
 while cnt < k:
     if s[i] == 'o':
@@ -18,7 +16,6 @@ while cnt < k:
         cnt += 1
         i -= c
     i -= 1
-
 r.sort()
 for i in range(len(r)):
     if l[i] == r[i]:

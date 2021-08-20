@@ -1,5 +1,5 @@
 def controller(events):
-    d, m, opening = 0, 0, True
+    (d, m, opening) = (0, 0, True)
     r = ''
     for e in events:
         if e == 'P':
@@ -20,7 +20,7 @@ def controller(events):
             opening = not opening
             m *= -1
         d += m
-        if (m == 1 and d == 5) or (m == -1 and d == 0):
+        if m == 1 and d == 5 or (m == -1 and d == 0):
             m = 0
         r += str(d)
     return r

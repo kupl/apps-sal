@@ -22,18 +22,18 @@ def solve(n):
                 swap = cnt
                 cnt += 1
                 cnt %= n
-            b[i], b[swap] = b[swap], b[i]
-    return a, b
+            (b[i], b[swap]) = (b[swap], b[i])
+    return (a, b)
 
 
 def main():
     n = int(input())
-    a, b = solve(n)
-    if all(a[i] != b[i] for i in range(n)):
-        print("Yes")
-        print((" ".join(map(str, b))))
+    (a, b) = solve(n)
+    if all((a[i] != b[i] for i in range(n))):
+        print('Yes')
+        print(' '.join(map(str, b)))
     else:
-        print("No")
+        print('No')
 
 
 def __starting_point():

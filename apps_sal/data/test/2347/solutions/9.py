@@ -13,6 +13,6 @@ for i in range(n):
         if now == new_s:
             f = True
     if f:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

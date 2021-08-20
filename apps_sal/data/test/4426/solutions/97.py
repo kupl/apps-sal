@@ -1,2 +1,2 @@
-day = ["", "SAT", "FRI", "THU", "WED", "TUE", "MON", "SUN"]
+day = ['', 'SAT', 'FRI', 'THU', 'WED', 'TUE', 'MON', 'SUN']
 print(day.index(input()))

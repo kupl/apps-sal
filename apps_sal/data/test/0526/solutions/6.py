@@ -6,7 +6,7 @@ def in_list():
     return [int(x) for x in input().split()]
 
 
-n, m = in_list()
+(n, m) = in_list()
 mat = []
 first = -1
 for i in range(n):
@@ -26,7 +26,7 @@ if first == -1:
     else:
         print('NIE')
 else:
-    r, c = first
+    (r, c) = first
     print('TAK')
     ans = 0
     for i in range(n):

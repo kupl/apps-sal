@@ -1,5 +1,3 @@
-# Just to be cheeky
-
 def check(a, x):
     if not a:
         return False

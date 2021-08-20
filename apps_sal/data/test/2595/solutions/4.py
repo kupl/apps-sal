@@ -1,6 +1,6 @@
 from math import ceil
 for _ in range(int(input())):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     bia = bin(a)[2:]
     bib = bin(b)[2:]
     aa = bia.strip('0')

@@ -1,7 +1,7 @@
 for _ in range(int(input())):
-    P1, P2, k = map(int, input().split())
+    (P1, P2, k) = map(int, input().split())
     d = (P1 + P2) // k
     if d % 2 == 0:
-        print("CHEF")
+        print('CHEF')
     else:
-        print("COOK")
+        print('COOK')

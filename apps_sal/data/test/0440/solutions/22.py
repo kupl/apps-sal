@@ -1,5 +1,5 @@
 def vowel(t):
-    if t == 'a' or t == 'e' or t == 'i' or t == 'o' or t == 'u' or t == 'y':
+    if t == 'a' or t == 'e' or t == 'i' or (t == 'o') or (t == 'u') or (t == 'y'):
         return True
     else:
         return False
@@ -16,5 +16,4 @@ while cur < len(s):
         s = s[:cur] + s[cur + 1:]
     else:
         cur += 1
-
 print(s)

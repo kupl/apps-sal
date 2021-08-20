@@ -5,7 +5,7 @@ q = int(input())
 res = sum(a)
 cnt = Counter(a)
 for _ in range(q):
-    b, c = map(int, input().split())
+    (b, c) = map(int, input().split())
     res = res + cnt[b] * (c - b)
     print(res)
     cnt[c] += cnt[b]

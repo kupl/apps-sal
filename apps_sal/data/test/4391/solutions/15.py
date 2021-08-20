@@ -1,7 +1,8 @@
-def read(): return list(map(int, input().split()))
+def read():
+    return list(map(int, input().split()))
 
 
-n, k = read()
+(n, k) = read()
 a = list(read())
 s = [0] * (n + 1)
 for i in range(1, n + 1):

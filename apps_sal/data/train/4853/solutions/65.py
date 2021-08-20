@@ -3,5 +3,5 @@ def double_char(s):
     for x in s:
         lst.append(x)
         lst.append(x)
-    lst = "".join(lst)
+    lst = ''.join(lst)
     return lst

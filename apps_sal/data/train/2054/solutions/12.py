@@ -11,12 +11,11 @@ def main():
     edges = []
     vx_to_neighbor_colors = collections.defaultdict(set)
     for _ in range(N - 1):
-        u, v = read_ints()
+        (u, v) = read_ints()
         u -= 1
         v -= 1
         edges.append((u, v))
     colors = read_ints()
-
     vx_to_cnt = collections.Counter()
     e_cnt = 0
     for e in edges:
@@ -25,14 +24,12 @@ def main():
         vx_to_cnt[e[0]] += 1
         vx_to_cnt[e[1]] += 1
         e_cnt += 1
-
     if e_cnt == 0:
-        return 1  # any
+        return 1
     if e_cnt == 1:
         return 1 + list(vx_to_cnt.keys())[0]
-
     root = None
-    for vx, cnt in list(vx_to_cnt.items()):
+    for (vx, cnt) in list(vx_to_cnt.items()):
         if cnt == e_cnt:
             if root is not None:
                 return None

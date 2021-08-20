@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import numpy as np
 import sys
 from collections import deque
@@ -9,7 +8,7 @@ import itertools
 import bisect
 from scipy.special import comb
 import copy
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10 ** 6)
 
 
 def zz():
@@ -33,9 +32,9 @@ P = zz()
 change_lis = []
 ans = 0
 for i in range(N - 1):
-    if (P[i] == (i + 1)):
-        P[i], P[i + 1] = P[i + 1], P[i]
+    if P[i] == i + 1:
+        (P[i], P[i + 1]) = (P[i + 1], P[i])
         ans += 1
-if (P[-1] == N):
+if P[-1] == N:
     ans += 1
 print(ans)

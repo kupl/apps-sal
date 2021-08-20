@@ -1,4 +1,5 @@
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         wins = 0
         c = 1
@@ -6,7 +7,7 @@ class Solution:
             if arr[0] > arr[c]:
                 wins += 1
             else:
-                arr[0], arr[c] = arr[c], arr[0]
+                (arr[0], arr[c]) = (arr[c], arr[0])
                 wins = 1
             c = (c + 1) % len(arr)
             if c == 0:

@@ -1,10 +1,10 @@
 def main():
     s = input().split()
-    n, T, c = int(s[0]), int(s[1]), float(s[2])
+    (n, T, c) = (int(s[0]), int(s[1]), float(s[2]))
     a = list(map(int, input().split()))
     m = int(input())
     q = list(map(int, input().split()))
-    sumA, approx, mean = [0], [], 0.
+    (sumA, approx, mean) = ([0], [], 0.0)
     for i in range(1, n + 1):
         mean = (mean + a[i - 1] / T) / c
         approx.append(mean)

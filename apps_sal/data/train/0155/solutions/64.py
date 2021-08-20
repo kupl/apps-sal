@@ -1,4 +1,5 @@
 class Solution:
+
     def maxJumps(self, arr: List[int], d: int) -> int:
         N = len(arr)
         dp = [None] * N
@@ -16,7 +17,6 @@ class Solution:
                     break
                 dp[i] = max(dp[i], 1 + cdp(j))
             return dp[i]
-
         for i in range(N):
             cdp(i)
         return max(dp)

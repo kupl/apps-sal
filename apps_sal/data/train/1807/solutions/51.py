@@ -1,4 +1,5 @@
 class Solution:
+
     def simplifiedFractions(self, n: int) -> List[str]:
         if n < 2:
             return []
@@ -22,7 +23,7 @@ class Solution:
                     found = True
                     de = j
                     candidates = []
-                    for key, value in list(dicts.items()):
+                    for (key, value) in list(dicts.items()):
                         if de in value:
                             candidates.append(key)
                     for can in candidates:

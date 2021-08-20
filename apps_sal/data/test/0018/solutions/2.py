@@ -13,4 +13,4 @@ for i in range(len(s)):
     while l and l[-1] <= m[i]:
         res += l.pop()
     l.append(s[i])
-print(res + ''.join(map(str, (l[::-1]))))
+print(res + ''.join(map(str, l[::-1])))

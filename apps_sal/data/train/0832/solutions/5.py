@@ -1,6 +1,6 @@
 t = int(input())
 while t > 0:
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     y = list(map(int, input().split()))
     y.sort()
     k1 = []
@@ -18,5 +18,4 @@ while t > 0:
     for i in ans:
         l.append(sum(i))
     print(l.count(min(l)))
-
     t -= 1

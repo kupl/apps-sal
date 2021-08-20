@@ -1,17 +1,14 @@
 import struct
-
-CHARSET = ('ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-           'abcdefghijklmnopqrstuvwxyz'
-           '0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"')
+CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~"'
 
 
 def b91decode(message):
     value = stack = 0
     out = bytes()
-    for first, second in zip(message[::2], message[1::2]):
+    for (first, second) in zip(message[::2], message[1::2]):
         cipher = CHARSET.index(first) + CHARSET.index(second) * 91
         value |= cipher << stack
-        stack += 13 + ((cipher & 8191) < 89)
+        stack += 13 + (cipher & 8191 < 89)
         while stack > 7:
             out += struct.pack('B', value & 255)
             value >>= 8

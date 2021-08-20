@@ -1,4 +1,4 @@
-n, x, y = list(map(int, input().split()))
+(n, x, y) = list(map(int, input().split()))
 b = list(map(int, input().split()))
 b.sort()
 if x > y:

@@ -1,9 +1,8 @@
-
 n = int(input())
 s = input()
 p = 0
 good = [0] * (n + 1)
-options = [0] * (n)
+options = [0] * n
 for i in range(n):
     if s[i] == '(':
         p += 1
@@ -14,7 +13,6 @@ for i in range(n):
         options[i] = p
         good[i + 1] = good[i]
 options2 = list(reversed(options))
-
 if abs(p) != 2:
     print(0)
 else:

@@ -1,10 +1,11 @@
 class UnionFind:
+
     def __init__(self, n):
         self.parents = [i for i in range(n)]
         self.rank = [1 for i in range(n)]
 
     def union(self, x, y):
-        a, b = self.find(x), self.find(y)
+        (a, b) = (self.find(x), self.find(y))
         if a == b:
             return
         if self.rank[a] > self.rank[b]:
@@ -21,6 +22,7 @@ class UnionFind:
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         edges = []
         UF = UnionFind(len(points))
@@ -30,7 +32,7 @@ class Solution:
                 edges.append([abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j])
         edges.sort(key=lambda x: x[0])
         for i in range(len(edges)):
-            dist, j, k = edges[i]
+            (dist, j, k) = edges[i]
             if UF.find(j) != UF.find(k):
                 cost += dist
                 UF.union(j, k)

@@ -1,5 +1,5 @@
 string = input()
-line = "abcdefgh"
+line = 'abcdefgh'
 a = line.find(string[0]) + 1
 b = int(string[1])
 if (a, b) in [(1, 1), (8, 8), (1, 8), (8, 1)]:

@@ -1,5 +1,4 @@
 import sys
-
 input = sys.stdin.readline
 
 
@@ -10,7 +9,7 @@ def gcd(a, b):
 
 
 def lcm(a, b):
-    return (a * b) / gcd(a, b)
+    return a * b / gcd(a, b)
 
 
 def main():
@@ -28,7 +27,6 @@ def main():
         for j in s:
             if ord(j) - ord('a') >= 0:
                 k[ord(j) - ord('a')] += 1
-            # print(ord(j)-ord('a'))
         key = 0
         for i in range(26):
             if k[i] % 2:
@@ -40,18 +38,13 @@ def main():
             d[key] = 1
     ans = 0
     for i in list(d.values()):
-        ans += (i) * (i - 1) // 2
-    # print(ans)
+        ans += i * (i - 1) // 2
     for i in table:
-        # print(i)
         for j in range(len(i[0])):
             if i[0][j] % 2:
                 if i[1] - comp[j] in list(d.keys()):
-                    #print(i[1],i[1]-comp[j] )
-                    ans += (d[i[1] - comp[j]])
-
+                    ans += d[i[1] - comp[j]]
     print(int(ans))
-
     return
 
 

@@ -1,21 +1,12 @@
 class Solution:
+
     def knightDialer(self, n: int) -> int:
-        mp = {0: [4, 6],
-              1: [6, 8],
-              2: [9, 7],
-              3: [8, 4],
-              4: [9, 0, 3],
-              5: [],
-              6: [1, 7, 0],
-              7: [6, 2],
-              8: [3, 1],
-              9: [2, 4]
-              }
+        mp = {0: [4, 6], 1: [6, 8], 2: [9, 7], 3: [8, 4], 4: [9, 0, 3], 5: [], 6: [1, 7, 0], 7: [6, 2], 8: [3, 1], 9: [2, 4]}
         c = 0
         memo = {}
         for i in range(0, 10):
             c += self.gen(i, n, mp, memo)
-        mpow = (10**9) + 7
+        mpow = 10 ** 9 + 7
         return c % mpow
 
     def gen(self, start, n, mp, memo):

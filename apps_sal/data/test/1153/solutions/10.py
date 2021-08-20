@@ -1,13 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 xs = list(map(int, input().split()))
 ys = list(map(int, input().split()))
-
 sm1 = sm2 = 0
 i = j = 0
 cnt = 0
-
 moveX = moveY = True
-
 while i < len(xs):
     if moveX:
         sm1 += xs[i]
@@ -28,5 +25,4 @@ while i < len(xs):
         j += 1
         moveX = True
         moveY = True
-
 print(cnt)

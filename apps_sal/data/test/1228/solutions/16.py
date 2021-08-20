@@ -13,17 +13,15 @@ def getList():
 
 
 def main():
-    # something
-    # 1 3 2 4
     n = getN()
     if n % 4 == 1:
-        print("0 A")
+        print('0 A')
     elif n % 4 == 3:
-        print("2 A")
+        print('2 A')
     elif n % 4 == 2:
-        print("1 B")
+        print('1 B')
     else:
-        print("1 A")
+        print('1 A')
 
 
 def __starting_point():

@@ -7,7 +7,7 @@ def sunuke(n):
     a = 0
     for i in str(n):
         a += int(i)
-    return(n / a)
+    return n / a
 
 
 count = 0

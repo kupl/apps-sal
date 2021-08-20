@@ -1,6 +1,4 @@
-# ABC167
-A, B, C, K = map(int, input().split())
-# ----------以上入力----------
+(A, B, C, K) = map(int, input().split())
 if A > K:
     print(K)
 elif A + B >= K:

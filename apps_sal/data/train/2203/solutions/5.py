@@ -9,7 +9,6 @@ def remove(A, i, n):
 
 n = int(input())
 A = [list(map(int, input().split())) for i in range(n)]
-
 ans = [0 for i in range(n)]
 for i in range(n - 1):
     t = -1
@@ -23,13 +22,9 @@ for i in range(n - 1):
                 g = True
         if f and g:
             t = j
-
     ans[t] = i + 1
     remove(A, t, n)
-
-
 for i in range(n):
     if ans[i] == 0:
         ans[i] = n
-
-print(" ".join(map(str, ans)))
+print(' '.join(map(str, ans)))

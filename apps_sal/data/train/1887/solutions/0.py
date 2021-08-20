@@ -1,10 +1,10 @@
 class Solution:
+
     def findCircleNum(self, M):
         N = len(M)
         students = set()
         for i in range(N):
             students.add(i)
-
         num_grp = 0
         while students:
             num_grp += 1

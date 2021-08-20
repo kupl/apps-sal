@@ -15,18 +15,16 @@ def dfs(i):
     return v
 
 
-n, m = get()
+(n, m) = get()
 c = get()
 a = [list() for _ in range(n)]
 for _ in range(m):
-    x, y = get()
+    (x, y) = get()
     a[x - 1].append(y - 1)
     a[y - 1].append(x - 1)
-
 b = [0] * n
 ans = 0
 for i in range(n):
     if b[i] == 0:
         ans += dfs(i)
-
 print(ans)

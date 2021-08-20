@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
 from itertools import combinations
 import sys
 input = sys.stdin.readline
-INF = 10**9
-
+INF = 10 ** 9
 t = int(input())
 for i in range(t):
     n = int(input())
@@ -28,4 +26,4 @@ for i in range(t):
             ans.append(0)
             max_val = max(max_val, a[r + 1])
             r += 1
-    print("".join([str(item) for item in ans]))
+    print(''.join([str(item) for item in ans]))

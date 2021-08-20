@@ -15,14 +15,14 @@ def comb(n, r):
     return res
 
 
-N, A, B = list(map(int, input().split()))
+(N, A, B) = list(map(int, input().split()))
 V = list(map(int, input().split()))
 V.sort(reverse=True)
-mi = 10**18
+mi = 10 ** 18
 dic = defaultdict(int)
 dic2 = defaultdict(int)
 tot = 0
-for i, a in enumerate(V):
+for (i, a) in enumerate(V):
     if i < A:
         tot += a
         dic2[a] += 1
@@ -35,5 +35,5 @@ if len(dic2) == 1:
         ans += comb(dic[mi], i)
 else:
     ans = comb(dic[mi], dic2[mi])
-print((tot / A))
+print(tot / A)
 print(ans)

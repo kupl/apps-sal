@@ -9,8 +9,8 @@ def cmb(a, b, c):
     return num * pow(den, -1, c) % c
 
 
-mod = 10**9 + 7
-n, a, b = map(int, input().split())
+mod = 10 ** 9 + 7
+(n, a, b) = map(int, input().split())
 ans = (pow(2, n, mod) - cmb(n, a, mod) - cmb(n, b, mod) - 1) % mod
 if ans < 0:
     ans = ans + mod

@@ -2,29 +2,24 @@ from re import findall
 
 
 def encoder(data):
-    base = ""
+    base = ''
     dictionary = {base: 0}
     output = []
-
     for char in data:
         curr = base + char
         if curr in dictionary:
             base = curr
         else:
-            output.append(f"{dictionary[base]}{char}")
+            output.append(f'{dictionary[base]}{char}')
             dictionary[curr] = len(dictionary)
-            base = ""
-
+            base = ''
     if base:
-        output.append(f"{dictionary[base]}")
-
-    return "".join(output)
+        output.append(f'{dictionary[base]}')
+    return ''.join(output)
 
 
 def decoder(data):
-    dictionary = [""]
-
-    for idx, char in findall("(\d+)([A-Z]?)", data):
+    dictionary = ['']
+    for (idx, char) in findall('(\\d+)([A-Z]?)', data):
         dictionary.append(dictionary[int(idx)] + char)
-
-    return "".join(dictionary)
+    return ''.join(dictionary)

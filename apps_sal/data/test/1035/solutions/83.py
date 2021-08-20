@@ -1,5 +1,5 @@
 import math
-A, B = map(int, input().split())
+(A, B) = map(int, input().split())
 gcd = math.gcd(A, B)
 ans = [1]
 while gcd % 2 == 0:

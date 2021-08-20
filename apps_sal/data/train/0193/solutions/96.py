@@ -1,4 +1,5 @@
 class Solution:
+
     def minSetSize(self, arr: List[int]) -> int:
         d = collections.defaultdict(int)
         for i in arr:
@@ -6,7 +7,7 @@ class Solution:
         s = sorted([(d[i], i) for i in d], reverse=True)
         res = 0
         ans = 0
-        for i, v in s:
+        for (i, v) in s:
             res += i
             ans += 1
             if res >= (len(arr) + 1) // 2:

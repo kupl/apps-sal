@@ -1,10 +1,9 @@
-# coding = utf-8
 from functools import reduce
 div = 1000000007
 s = input()
 n = int(s)
 s = input()
-num = list([int(x) for x in s.split(" ")])
+num = list([int(x) for x in s.split(' ')])
 
 
 def gcd(a, b):
@@ -15,10 +14,9 @@ def gcd(a, b):
 
 g = reduce(gcd, num)
 m = max(num)
-
 now = m / g
 remain = now - len(num)
 if remain % 2 == 0:
-    print("Bob")
+    print('Bob')
 else:
-    print("Alice")
+    print('Alice')

@@ -1,4 +1,3 @@
-# cook your dish here
 for _ in range(int(input())):
     n = int(input())
     a = [int(x) for x in input().split()]
@@ -19,10 +18,10 @@ for _ in range(int(input())):
             break
     if a.count(j) % 2 == 0:
         flag = 0
-    if(flag):
-        print("YES")
+    if flag:
+        print('YES')
         s.sort()
         su.sort(reverse=True)
-        print(*(s + su))
+        print(*s + su)
     else:
-        print("NO")
+        print('NO')

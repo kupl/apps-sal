@@ -1,1 +1,1 @@
-print(["NO", "YES"][input() in "357"])
+print(['NO', 'YES'][input() in '357'])

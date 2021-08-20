@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 n = int(input().strip())
 a = [tuple(map(int, input().strip().split())) for _ in range(n)]
 m = int(input().strip())
-a.extend(tuple(map(int, input().strip().split())) for _ in range(m))
-
+a.extend((tuple(map(int, input().strip().split())) for _ in range(m)))
 a.sort()
 a.append((0, 0))
 res = 0
@@ -16,6 +13,4 @@ while i < n + m:
     else:
         res += a[i][1]
         i += 1
-
-
 print(res)

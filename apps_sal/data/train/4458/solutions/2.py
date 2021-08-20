@@ -1,10 +1,10 @@
 def time_correct(t):
     try:
-        if t == "":
-            return ""
+        if t == '':
+            return ''
         if len(t) != 8:
             return None
-        h, m, s = [int(x) for x in t.split(":")]
+        (h, m, s) = [int(x) for x in t.split(':')]
         if s >= 60:
             s -= 60
             m += 1

@@ -1,4 +1,5 @@
 class Solution:
+
     def numSpecialEquivGroups(self, A: List[str]) -> int:
         l = len(A)
         counter = {}
@@ -12,6 +13,5 @@ class Solution:
                     odd.append(A[i][j])
             even.sort()
             odd.sort()
-            counter[(str(even), str(odd))] = counter.get((str(even), str(odd)), 0) + 1
-
+            counter[str(even), str(odd)] = counter.get((str(even), str(odd)), 0) + 1
         return len(counter)

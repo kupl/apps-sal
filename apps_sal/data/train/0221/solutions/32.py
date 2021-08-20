@@ -2,8 +2,9 @@ from collections import defaultdict
 
 
 class Solution:
+
     def longestDupSubstring(self, S: str) -> str:
-        l, h = 2, len(S) - 1
+        (l, h) = (2, len(S) - 1)
         res = ''
         while l <= h:
             m = l + (h - l) // 2
@@ -21,16 +22,12 @@ class Solution:
         D = pow(BASE, k - 1, MOD)
         hash_val = 0
         seen = defaultdict(set)
-
         for i in range(len(s)):
-            # update the sliding hash value
             if i >= k:
                 char_offset = ord(s[i - k]) - ord('a')
                 hash_val = (hash_val - char_offset * D) % MOD
             char_offset = ord(s[i]) - ord('a')
             hash_val = (hash_val * BASE + char_offset) % MOD
-
-            # check hash collision and return string if duplicate found
             if i >= k - 1:
                 if hash_val in seen:
                     cand_i = s[i - k + 1:i + 1]

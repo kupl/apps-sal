@@ -21,5 +21,5 @@ for x in range(len(a) + 1):
             break
     if done:
         break
-if not(done):
-    print("NA")
+if not done:
+    print('NA')

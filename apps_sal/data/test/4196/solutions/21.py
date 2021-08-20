@@ -1,18 +1,18 @@
-#!/usr/bin/env python3
-
-# import
 import math
-#import numpy as np
 N = int(input())
 A = list(map(int, input().split()))
 
 
 class SegTree:
+
     def __init__(self, segfunc, e, v, init_val=None):
         """
-        segfunc: function 区間にしたい操作\n
-        e: Any 単位元\n
-        v: int or List 要素数か格納する配列\n
+        segfunc: function 区間にしたい操作
+
+        e: Any 単位元
+
+        v: int or List 要素数か格納する配列
+
         init_val: Any 初期値
         """
         self.segfunc = segfunc
@@ -21,11 +21,9 @@ class SegTree:
         if isinstance(v, int):
             v = [self.init_val] * v
         self.n = len(v)
-        self.log = (self.n).bit_length()
+        self.log = self.n.bit_length()
         self.size = 1 << self.log
         self.tree = [e] * 2 * self.size
-        # 1-indexedなのでtree[1:self.size]がN-1要素
-        # tree[self.size:self.size + N]が配列
         for i in range(self.n):
             self.tree[self.size + i] = v[i]
         for i in range(self.size - 1, 0, -1):
@@ -33,8 +31,10 @@ class SegTree:
 
     def set(self, k, x) -> None:
         """
-        k番目の値をxに更新\n
-        k: index(0-indexed)\n
+        k番目の値をxに更新
+
+        k: index(0-indexed)
+
         x: update value
         """
         k += self.size
@@ -44,7 +44,8 @@ class SegTree:
 
     def get(self, k):
         """
-        a[k]を返す\n
+        a[k]を返す
+
         k: index(0-indexed)
         """
         assert 0 <= k < self.size
@@ -52,8 +53,10 @@ class SegTree:
 
     def query(self, l, r):
         """
-        [l, r)のsegfuncしたものを得る\n
-        l: index(0-indexed)\n
+        [l, r)のsegfuncしたものを得る
+
+        l: index(0-indexed)
+
         r: index(0-indexed)
         """
         res = self.e
@@ -75,17 +78,12 @@ class SegTree:
         """
         return self.tree[1]
 
-    # 二分探索実装、いる？
-
     def _update(self, k):
         self.tree[k] = self.segfunc(self.tree[k * 2], self.tree[k * 2 + 1])
 
 
 seg = SegTree(math.gcd, 0, A)
-
 ans = 0
-
 for i in range(N):
     ans = max(ans, math.gcd(seg.query(0, i), seg.query(i + 1, N)))
-
 print(ans)

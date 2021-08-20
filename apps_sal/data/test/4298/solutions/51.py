@@ -1,4 +1,4 @@
-n, d = map(int, input().split())
+(n, d) = map(int, input().split())
 c = 0
 p = d * 2 + 1
 tmp = 0

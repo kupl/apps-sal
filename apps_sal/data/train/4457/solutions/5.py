@@ -1,5 +1,5 @@
 def mega_mind(hp, dps, shots, regen):
-    if (hp > dps * shots) and dps * shots <= regen:
+    if hp > dps * shots and dps * shots <= regen:
         return -1
     res = 0
     num_shots = 0

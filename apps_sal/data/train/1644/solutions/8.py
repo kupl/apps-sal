@@ -1,14 +1,6 @@
 import struct
-
-base91_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-                   'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-                   'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-                   'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '#', '$',
-                   '%', '&', '(', ')', '*', '+', ',', '.', '/', ':', ';', '<', '=',
-                   '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"']
-
-decode_table = dict((v, k) for k, v in enumerate(base91_alphabet))
+base91_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~', '"']
+decode_table = dict(((v, k) for (k, v) in enumerate(base91_alphabet)))
 
 
 def b91decode(encoded_str):
@@ -20,12 +12,12 @@ def b91decode(encoded_str):
         if not strletter in decode_table:
             continue
         c = decode_table[strletter]
-        if(v < 0):
+        if v < 0:
             v = c
         else:
             v += c * 91
             b |= v << n
-            n += 13 if (v & 8191) > 88 else 14
+            n += 13 if v & 8191 > 88 else 14
             while True:
                 out += struct.pack('B', b & 255)
                 b >>= 8

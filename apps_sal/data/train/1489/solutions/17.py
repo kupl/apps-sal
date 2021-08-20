@@ -1,6 +1,5 @@
-# cook your dish here
 try:
-    s, k = map(int, input().split())
+    (s, k) = map(int, input().split())
     num = str(s)
     l = []
     for i in range(len(num)):
@@ -15,7 +14,7 @@ try:
         if cnt == k:
             break
     for i in l:
-        print(i, end="")
+        print(i, end='')
     print()
 except EOFError as e:
     pass

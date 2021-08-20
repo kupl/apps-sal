@@ -1,6 +1,6 @@
 def alphabet_war(fight):
-    r, r_c = 'zdqm', 0
-    l, l_c = 'sbpw', 0
+    (r, r_c) = ('zdqm', 0)
+    (l, l_c) = ('sbpw', 0)
     for i in fight:
         if i in r:
             r_c += r.index(i) + 1

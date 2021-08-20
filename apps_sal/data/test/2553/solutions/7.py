@@ -14,7 +14,7 @@ def r3(t):
 
 
 for _ in range(int(input())):
-    n, x = r2(int)
+    (n, x) = r2(int)
     a = r2(int)
     co = 0
     ce = 0
@@ -23,8 +23,7 @@ for _ in range(int(input())):
             ce += 1
         else:
             co += 1
-
-    if ((x == n) and co % 2 == 0) or co <= 0 or (ce == 0 and x % 2 == 0):
+    if x == n and co % 2 == 0 or co <= 0 or (ce == 0 and x % 2 == 0):
         print('No')
     else:
         print('Yes')

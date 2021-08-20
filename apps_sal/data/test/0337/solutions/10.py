@@ -1,6 +1,6 @@
 def read(type=1):
     if type:
-        file = open("input.dat", "r")
+        file = open('input.dat', 'r')
         line1 = list(map(int, file.readline().split()))
         line2 = list(map(int, file.readline().split()))
         line3 = list(map(int, file.readline().split()))
@@ -9,7 +9,7 @@ def read(type=1):
         line1 = list(map(int, input().strip().split()))
         line2 = list(map(int, input().strip().split()))
         line3 = list(map(int, input().strip().split()))
-    return line1, line2, line3
+    return (line1, line2, line3)
 
 
 def solve():
@@ -27,6 +27,6 @@ def solve():
     return w
 
 
-a, b, c = read(0)
+(a, b, c) = read(0)
 sol = solve()
 print(sol)

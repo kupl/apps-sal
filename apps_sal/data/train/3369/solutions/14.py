@@ -6,5 +6,6 @@ def move(position, roll):
 
 
 class TestMove(unittest.TestCase):
+
     def test_move(self):
         self.assertEqual(move(position=0, roll=4), 8)

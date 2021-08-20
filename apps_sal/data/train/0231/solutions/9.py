@@ -1,4 +1,5 @@
 class Solution:
+
     def firstMissingPositive(self, nums):
         """
         :type nums: List[int]
@@ -8,7 +9,6 @@ class Solution:
         maxSet = set()
         nums = set(nums)
         for num in nums:
-
             if num > 0:
                 if num + 1 in minSet:
                     minSet.remove(num + 1)
@@ -25,8 +25,8 @@ class Solution:
                 else:
                     minSet.add(num)
                     maxSet.add(num)
-                print("min set:", minSet)
-                print("max set:", maxSet)
+                print('min set:', minSet)
+                print('max set:', maxSet)
         if len(minSet) == 0 or len(maxSet) == 0:
             return 1
         return min(maxSet) + 1 if min(minSet) == 1 else 1

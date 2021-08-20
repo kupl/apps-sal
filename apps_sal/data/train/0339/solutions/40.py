@@ -1,4 +1,5 @@
 class Solution:
+
     def numTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         n1 = [x * x for x in nums1]
         n2 = [x * x for x in nums2]
@@ -16,7 +17,6 @@ class Solution:
                     ans += dnum2[nums1[i] * nums1[j]]
                 if comb > m2:
                     break
-
         for i in range(len(nums2) - 1):
             for j in range(i + 1, len(nums2)):
                 comb = nums2[i] * nums2[j]

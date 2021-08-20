@@ -1,7 +1,8 @@
 class Solution:
+
     def maxTurbulenceSize(self, A: List[int]) -> int:
         n = len(A)
-        ans, s, last = 0, 0, 0
+        (ans, s, last) = (0, 0, 0)
         i = 1
         while i < n:
             df = A[i] - A[i - 1]

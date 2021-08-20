@@ -1,6 +1,6 @@
 def capitalize(x, a):
     b = []
-    for i, e in enumerate(x):
+    for (i, e) in enumerate(x):
         if i in a:
             b += e.upper()
         else:

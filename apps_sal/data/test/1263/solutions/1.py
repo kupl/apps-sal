@@ -1,8 +1,8 @@
-n, k = map(int, input().split())
-x, y = [0] * 100001, [0] * 100001
+(n, k) = map(int, input().split())
+(x, y) = ([0] * 100001, [0] * 100001)
 x[0] = y[0] = 1
 g = h = 0
-for u, v in zip(*(map(int, input().split()), map(int, input().split()))):
+for (u, v) in zip(*(map(int, input().split()), map(int, input().split()))):
     d = u - k * v
     if d > 0:
         for j in range(g, -1, -1):
@@ -14,5 +14,5 @@ for u, v in zip(*(map(int, input().split()), map(int, input().split()))):
             if y[j]:
                 y[j - d] = max(y[j - d], y[j] + v)
         h -= d
-s = max(x[i] + y[i] for i in range(min(g, h) + 1) if x[i] and y[i]) - 2
+s = max((x[i] + y[i] for i in range(min(g, h) + 1) if x[i] and y[i])) - 2
 print(k * s - (not s))

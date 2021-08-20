@@ -1,5 +1,5 @@
 def largest_rect(histogram):
-    lis, ris = [], []
+    (lis, ris) = ([], [])
     st = []
     for i in range(len(histogram)):
         while st and histogram[st[-1]] >= histogram[i]:
@@ -12,4 +12,4 @@ def largest_rect(histogram):
             st.pop()
         ris.append(st[-1] if st else len(histogram))
         st.append(i)
-    return max((w * (ri - li - 1) for w, li, ri in zip(histogram, lis, reversed(ris))), default=0)
+    return max((w * (ri - li - 1) for (w, li, ri) in zip(histogram, lis, reversed(ris))), default=0)

@@ -1,4 +1,4 @@
-N, K = list(map(int, input().split()))
+(N, K) = list(map(int, input().split()))
 S = input()
 a = [0]
 for i in range(1, N):
@@ -12,4 +12,4 @@ for i in range(l - 1):
         ans.append(a[min(i + 2 * K, l - 1)] - a[i])
     else:
         ans.append(a[min(i + 2 * K + 1, l - 1)] - a[i])
-print((max(ans)))
+print(max(ans))

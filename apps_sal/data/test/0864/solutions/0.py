@@ -1,4 +1,4 @@
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 a = list(map(int, input().split()))
 day = 1
 
@@ -18,5 +18,4 @@ def poss(day):
 
 while poss(day):
     day += 1
-
 print(day - 1)

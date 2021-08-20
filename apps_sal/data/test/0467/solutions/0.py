@@ -1,18 +1,15 @@
 3
-
 s = input()
 n = len(s)
-
-a, b = 0, 0
+(a, b) = (0, 0)
 d = dict()
 for i in range(len(s)):
     if s[i] in d:
         a = d[s[i]]
         b = i
     d[s[i]] = i
-
 if a == b - 1:
-    print("Impossible")
+    print('Impossible')
 else:
     ans = [[' '] * 13 for i in range(2)]
     if (b - a) % 2 == 1:
@@ -39,8 +36,8 @@ else:
             if x == -14:
                 y = 1
                 x = 0
-        print("".join(ans[0]))
-        print("".join(ans[1]))
+        print(''.join(ans[0]))
+        print(''.join(ans[1]))
     else:
         for i in range((b - a) // 2):
             ans[0][-(b - a) // 2 + i + 1] = s[a + i + 1]
@@ -65,5 +62,5 @@ else:
             if x == -14:
                 y = 1
                 x = 0
-        print("".join(ans[0]))
-        print("".join(ans[1]))
+        print(''.join(ans[0]))
+        print(''.join(ans[1]))

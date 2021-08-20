@@ -1,6 +1,6 @@
 def solve(a, b):
     print((a, b))
-    if sorted(a) == sorted(b) or (set(list(a)) == set(list(b))):
+    if sorted(a) == sorted(b) or set(list(a)) == set(list(b)):
         return 0
     for x in b:
         for x in a:

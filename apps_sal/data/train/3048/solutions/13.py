@@ -1,7 +1,7 @@
 def alternateCase(s):
     if len(s) < 1:
         return s
-    res = ""
+    res = ''
     for l in s:
         if l.isupper():
             res += l.lower()

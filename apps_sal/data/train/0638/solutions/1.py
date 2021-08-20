@@ -1,7 +1,7 @@
 MOD = 1000000007
 for t in range(int(input())):
     print('Case ' + str(t + 1) + ':')
-    n, q = map(int, input().split())
+    (n, q) = map(int, input().split())
     for i in range(q):
         x = input().strip()
         xlen = len(x)

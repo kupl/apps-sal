@@ -1,4 +1,5 @@
 class Solution:
+
     def maxSumRangeQuery(self, nums: List[int], requests: List[List[int]]) -> int:
         heap_start = []
         heap_end = []
@@ -15,16 +16,14 @@ class Solution:
                 current -= 1
                 heapq.heappop(heap_end)
             p.append(current)
-
         heap = []
-        for i, e in enumerate(p):
+        for (i, e) in enumerate(p):
             heapq.heappush(heap, -e)
         ret = 0
         heapn = []
         for n in nums:
             heapq.heappush(heapn, -n)
-
         while heapn:
             n = heapq.heappop(heapn)
             ret += n * heapq.heappop(heap)
-        return ret % (10**9 + 7)
+        return ret % (10 ** 9 + 7)

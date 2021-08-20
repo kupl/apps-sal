@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 H = sorted(map(int, input().split()))
 if K == 0:
     print(sum(H))

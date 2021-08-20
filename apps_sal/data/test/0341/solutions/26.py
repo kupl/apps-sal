@@ -1,6 +1,6 @@
 def main():
-    n, k = list(map(int, input().split()))
-    r, s, p = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
+    (r, s, p) = list(map(int, input().split()))
     t = input()
     dp = [0] * n
     hnd = [0] * n
@@ -17,7 +17,7 @@ def main():
             dp[i] += dp[i - 1] + point[t[i]]
         else:
             dp[i] = dp[i - 1]
-    print((dp[-1]))
+    print(dp[-1])
 
 
 def __starting_point():

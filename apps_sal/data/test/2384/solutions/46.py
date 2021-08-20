@@ -1,6 +1,9 @@
 import sys
 import numpy as np
-def input(): return sys.stdin.readline().rstrip()
+
+
+def input():
+    return sys.stdin.readline().rstrip()
 
 
 def odd(A):

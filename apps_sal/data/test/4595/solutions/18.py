@@ -5,4 +5,4 @@ while S[left] != 'A':
 right = len(S) - 1
 while S[right] != 'Z':
     right -= 1
-print((right - left + 1))
+print(right - left + 1)

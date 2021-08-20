@@ -11,12 +11,10 @@ def C(n, k):
 fact = [1, 1]
 inv = [0, 1]
 invfact = [1, 1]
-
 for i in range(2, maxn):
     fact.append(fact[-1] * i % mod)
     inv.append(inv[mod % i] * (mod - mod // i) % mod)
     invfact.append(invfact[-1] * inv[-1] % mod)
-
 s = input()
 op = 0
 cl = s.count(')')
@@ -28,5 +26,4 @@ for x in s:
         ans += cur % mod
     else:
         cl -= 1
-
 print(ans % mod)

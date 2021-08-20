@@ -7,13 +7,11 @@ for i in range(n):
     cities[i] = int(cities[i])
 for i in range(m):
     towers[i] = int(towers[i])
-
 worst = 0
 i = 0
-
 for city in cities:
     if m > 1:
-        while (city > towers[i + 1] and i + 2 < m):
+        while city > towers[i + 1] and i + 2 < m:
             i += 1
         a = abs(towers[i] - city)
         b = abs(towers[i + 1] - city)

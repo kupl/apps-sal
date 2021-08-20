@@ -5,7 +5,7 @@ def solve(K):
         while not checked[x]:
             checked[x] = True
             yield x
-            x = (x * 10) % K
+            x = x * 10 % K
     i = 0
     xs = [0]
     while 1:

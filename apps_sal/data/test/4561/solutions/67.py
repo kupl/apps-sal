@@ -1,12 +1,8 @@
-X, A, B = [int(v) for v in input().split(" ")]
-
-# A: 3 B: 4 X: 3
-
+(X, A, B) = [int(v) for v in input().split(' ')]
 result = A - B
-
 if result >= 0:
-    print("delicious")
+    print('delicious')
 elif abs(result) > X:
-    print("dangerous")
+    print('dangerous')
 else:
-    print("safe")
+    print('safe')

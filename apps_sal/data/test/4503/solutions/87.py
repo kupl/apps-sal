@@ -1,4 +1,4 @@
-H, N = list(map(int, input().split()))
+(H, N) = list(map(int, input().split()))
 A = list(map(int, input().split()))
 s = 0
 flg = True

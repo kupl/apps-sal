@@ -1,12 +1,11 @@
-p = 10**9 + 7
+p = 10 ** 9 + 7
 f = [1] * (100000 + 1)
 for i in range(1, 100000):
     f[i] = i * f[i - 1]
     if f[i] >= p:
         f[i] = f[i] % p
-
 for _ in range(int(input())):
-    n, x, m = map(int, input().split())
+    (n, x, m) = map(int, input().split())
     a = list(map(int, input().split()))
     pre = [1] * (x + 1)
     for i in range(1, x):

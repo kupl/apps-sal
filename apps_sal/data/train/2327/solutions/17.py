@@ -1,14 +1,15 @@
 from bisect import bisect
 from operator import itemgetter
-
 import sys
 input = sys.stdin.readline
 
 
-def inpl(): return list(map(int, input().split()))
+def inpl():
+    return list(map(int, input().split()))
 
 
 class BIT:
+
     def __init__(self, N):
         self.size = 2 ** (int.bit_length(N) + 1)
         self.tree = [0] * (self.size + 1)
@@ -17,7 +18,7 @@ class BIT:
         res = 0
         while i:
             res += self.tree[i]
-            i -= (i & -(i))
+            i -= i & -i
         return res
 
     def add(self, i, x):
@@ -25,11 +26,11 @@ class BIT:
             return
         while i <= self.size:
             self.tree[i] += x
-            i += (i & -(i))
+            i += i & -i
 
 
-class RABIT():
-    # range add BIT
+class RABIT:
+
     def __init__(self, N):
         self.bit0 = BIT(N)
         self.bit1 = BIT(N)
@@ -47,21 +48,19 @@ class RABIT():
         return self.sum(r) - self.sum(l - 1)
 
 
-N, M = inpl()
-R, L, S = [], [], []
+(N, M) = inpl()
+(R, L, S) = ([], [], [])
 Q = []
 for _ in range(N):
-    l, r = inpl()
-    Q.append((l, r, (r - l + 1)))
-
+    (l, r) = inpl()
+    Q.append((l, r, r - l + 1))
 Q = sorted(Q, key=itemgetter(2), reverse=True)
 rabit = RABIT(M + 1)
-
 Lmin = M
 Rmax = 0
 for i in range(1, M + 1):
     while Q and Q[-1][2] < i:
-        l, r, _ = Q.pop()
+        (l, r, _) = Q.pop()
         rabit.add_range(l, r, 1)
         Lmin = min(Lmin, l)
         Rmax = max(Rmax, r)

@@ -4,7 +4,6 @@ try:
         lst = []
         for j in range(nm):
             lst.append(sorted([int(x) for x in input().split()]))
-
         sm = lst[-1][-1]
         mx = lst[-1][-1]
         c = 1
@@ -19,6 +18,5 @@ try:
             print(sm)
         else:
             print(-1)
-
 except:
     pass

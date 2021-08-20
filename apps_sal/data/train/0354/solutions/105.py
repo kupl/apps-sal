@@ -2,6 +2,7 @@ from functools import lru_cache
 
 
 class Solution:
+
     def dieSimulator(self, n: int, rollMax: List[int]) -> int:
         mod = 10 ** 9 + 7
 
@@ -9,7 +10,6 @@ class Solution:
         def dfs(n, last_idx, curr_len):
             if n == 0:
                 return 1
-
             cnt = 0
             for i in range(6):
                 if i != last_idx or curr_len < rollMax[i]:

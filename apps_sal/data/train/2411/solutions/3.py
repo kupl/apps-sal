@@ -1,4 +1,5 @@
 class Solution:
+
     def thirdMax(self, nums):
         """
         :type nums: List[int]
@@ -21,10 +22,8 @@ class Solution:
                     else:
                         m3.append(y)
                     break
-
         if len(m3) < 3:
             return max(m3)
-
         for y in nums[3:]:
             if y == m3[0] or y == m3[1] or y <= m3[2]:
                 continue

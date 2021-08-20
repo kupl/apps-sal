@@ -3,7 +3,7 @@ n = int(input())
 a = list(map(int, input().split()))
 dp = [0] * (n + 1)
 dp[0] = 1
-mod = int(1e9 + 7)
+mod = int(1000000000.0 + 7)
 for el in a:
     sqrt = int(math.sqrt(el))
     for d in range(min(n, sqrt), 0, -1):

@@ -2,20 +2,35 @@ import heapq as hq
 import itertools
 import math
 import collections
-def ma(): return map(int, input().split())
-def lma(): return list(map(int, input().split()))
-def tma(): return tuple(map(int, input().split()))
-def ni(): return int(input())
-def yn(fl): return print("Yes") if fl else print("No")
+
+
+def ma():
+    return map(int, input().split())
+
+
+def lma():
+    return list(map(int, input().split()))
+
+
+def tma():
+    return tuple(map(int, input().split()))
+
+
+def ni():
+    return int(input())
+
+
+def yn(fl):
+    return print('Yes') if fl else print('No')
 
 
 ceil = math.ceil
-a, b = ma()
-wh = "."
-bl = "#"
+(a, b) = ma()
+wh = '.'
+bl = '#'
 if a > b:
-    a, b = b, a
-    wh, bl = bl, wh
+    (a, b) = (b, a)
+    (wh, bl) = (bl, wh)
 area = [[wh] * 100 for i in range(100)]
 
 
@@ -46,4 +61,4 @@ def solve():
 solve()
 print(100, 100)
 for ar in area:
-    print("".join(ar))
+    print(''.join(ar))

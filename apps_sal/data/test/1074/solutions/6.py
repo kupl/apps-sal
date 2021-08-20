@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-
-
 def main():
     a = oct(int(input()))
     print(a.count('1'))

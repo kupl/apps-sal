@@ -1,7 +1,5 @@
-# input = raw_input
-# range = xrange
-
 class Fen:
+
     def __init__(self, n):
         self.value = [0] * n
 
@@ -13,17 +11,17 @@ class Fen:
         result = 0
         while to >= 0:
             result += self.value[to]
-            to = (to & (to + 1)) - 1
+            to = (to & to + 1) - 1
         return result
 
     def add(self, at, value):
         while at < len(self.value):
             self.value[at] += value
-            at = at | (at + 1)
+            at = at | at + 1
 
 
 def solve():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     k = min(k, n - k)
     count = [0] * n
     res = [None] * n
@@ -42,7 +40,7 @@ def solve():
         cur = nxt
         ans += here + 1
         res[iteration] = ans
-    print(" ".join(map(str, res)))
+    print(' '.join(map(str, res)))
 
 
 solve()

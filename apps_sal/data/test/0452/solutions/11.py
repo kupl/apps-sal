@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding:utf-8
-
 from fractions import Fraction
 
 
@@ -12,21 +9,18 @@ def frac(lis, i):
 
 
 def main():
-    linesp = input().split(" ")
-    p, q = int(linesp[0]), int(linesp[1])
+    linesp = input().split(' ')
+    (p, q) = (int(linesp[0]), int(linesp[1]))
     one = Fraction(p, q)
-
     n = int(input())
-
     A = []
-    for s in input().split(" "):
+    for s in input().split(' '):
         A.append(Fraction(int(s)))
-
     two = frac(A, 0)
     if one == two:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
 
 
 def __starting_point():

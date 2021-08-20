@@ -3,4 +3,4 @@ def double_char(s):
     for i in s:
         a = i * 2
         ans.append(a)
-    return "".join(ans)
+    return ''.join(ans)

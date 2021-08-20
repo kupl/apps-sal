@@ -6,9 +6,8 @@ for f in range(int(input())):
     m = max(a)
     s = sum(a)
     if 2 * m > s:
-        print("T")
+        print('T')
+    elif s % 2 == 0:
+        print('HL')
     else:
-        if s % 2 == 0:
-            print("HL")
-        else:
-            print("T")
+        print('T')

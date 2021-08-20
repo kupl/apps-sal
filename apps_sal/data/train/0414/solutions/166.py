@@ -2,6 +2,7 @@ from collections import deque
 
 
 class Solution:
+
     def getWinner(self, arr: List[int], k: int) -> int:
         last_winner = 0
         num_wins = 0

@@ -1,8 +1,7 @@
 n = input()
 k = int(input())
 ln = len(n) + 1
-
-dp = [[[0] * (ln) for _ in range(2)] for i in range(ln)]
+dp = [[[0] * ln for _ in range(2)] for i in range(ln)]
 dp[0][0][0] = 1
 for i in range(len(n)):
     for smaller in range(2):

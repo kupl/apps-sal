@@ -1,5 +1,5 @@
 q = int(input())
 for i in range(q):
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     y = n % k
-    print((n // k) * k + min(y, k // 2))
+    print(n // k * k + min(y, k // 2))

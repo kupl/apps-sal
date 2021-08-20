@@ -1,4 +1,4 @@
-k, n = map(int, input().split())
+(k, n) = map(int, input().split())
 alst = list(map(int, input().split()))
 alst.append(alst[0] + k)
 minus = 0

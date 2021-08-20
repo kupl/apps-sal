@@ -1,4 +1,4 @@
-k, p = list(map(int, input('').strip().split()))
+(k, p) = list(map(int, input('').strip().split()))
 answer = 0
 before = 0
 for i in range(k):

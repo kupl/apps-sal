@@ -1,4 +1,5 @@
 class UnionFind:
+
     def __init__(self, n):
         self.roots = [i for i in range(n)]
         self.sizes = [1 for i in range(n)]
@@ -14,12 +15,13 @@ class UnionFind:
         a = self.root(a)
         b = self.root(b)
         if self.sizes[a] < self.sizes[b]:
-            a, b = b, a
+            (a, b) = (b, a)
         self.roots[b] = a
         self.sizes[a] += self.sizes[b]
 
 
 class Solution:
+
     def findLatestStep(self, arr: List[int], M: int) -> int:
         uf = UnionFind(len(arr))
         m = [0 for i in range(len(arr))]
@@ -29,7 +31,6 @@ class Solution:
         for a in arr:
             a -= 1
             m[a] = 1
-
             if a > 0 and m[a - 1] == 1:
                 if uf.root(a - 1) in good:
                     good.remove(uf.root(a - 1))

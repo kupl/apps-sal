@@ -1,11 +1,12 @@
 class Solution:
+
     def characterReplacement(self, s, k):
         """
         :type s: str
         :type k: int
         :rtype: int
         """
-        if s == "":
+        if s == '':
             return 0
         count = {}
         lo = 0

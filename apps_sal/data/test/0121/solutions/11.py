@@ -13,7 +13,7 @@ for i in range(N):
             cand.append([board[i + k][j - k] for k in range(3)])
         for row in cand:
             for k in range(3):
-                if all(c == 'x' if i != k else c == '.' for i, c in enumerate(row)):
-                    print("YES")
+                if all((c == 'x' if i != k else c == '.' for (i, c) in enumerate(row))):
+                    print('YES')
                     quit()
-print("NO")
+print('NO')

@@ -1,8 +1,6 @@
 import itertools
-
-n, *abc = map(int, input().split())
+(n, *abc) = map(int, input().split())
 llst = [int(input()) for _ in range(n)]
-
 ans = 10 ** 10
 for abc_lst in itertools.product(range(4), repeat=n):
     tmp = 0

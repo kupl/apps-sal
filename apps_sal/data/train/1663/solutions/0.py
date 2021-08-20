@@ -5,5 +5,5 @@ def count_divisors(n):
     to that point (at n^{1/2}), and double it. By this method, a square region is
     counted twice, and thus subtracted off the total.
     """
-    r = int(n**(1 / 2))
-    return 2 * sum(n // i for i in range(1, r + 1)) - r * r
+    r = int(n ** (1 / 2))
+    return 2 * sum((n // i for i in range(1, r + 1))) - r * r

@@ -7,4 +7,4 @@ elif len(sn) == 2:
 elif len(sn) == 3:
     print(3)
 elif len(sn) > 3:
-    print("More than 3 digits")
+    print('More than 3 digits')

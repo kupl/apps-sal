@@ -1,6 +1,5 @@
-
 def main():
-    n, m = [int(i) for i in input().split()]
+    (n, m) = [int(i) for i in input().split()]
     ans = []
     k = min(n, m) + 1
     print(k)

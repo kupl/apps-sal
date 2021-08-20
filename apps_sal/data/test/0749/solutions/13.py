@@ -9,7 +9,6 @@ for i in range(len(line)):
     else:
         dist[elem] = max(dist[elem], i - d[elem])
         d[elem] = i
-    # print(dist)
 minimum = 999999999
 for key in dist:
     dist[key] = max(dist[key], len(line) - d[key])

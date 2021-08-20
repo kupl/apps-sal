@@ -1,6 +1,7 @@
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
-        distances, n = {i: [] for i in range(len(points))}, len(points)
+        (distances, n) = ({i: [] for i in range(len(points))}, len(points))
         for i in range(n - 1):
             for j in range(i + 1, n):
                 dist = abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1])
@@ -13,7 +14,7 @@ class Solution:
         count = 0
         visited = set([0])
         while heap:
-            dist, j = heapq.heappop(heap)
+            (dist, j) = heapq.heappop(heap)
             if j not in visited:
                 visited.add(j)
                 ans += dist

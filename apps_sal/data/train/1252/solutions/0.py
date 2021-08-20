@@ -1,6 +1,5 @@
-# cook your dish here
 import math
-N = 10**6
+N = 10 ** 6
 sum_arr = [0] * (N + 1)
 
 
@@ -12,9 +11,7 @@ def lprime():
         if arr[i] == 0:
             for j in range(i * i, N + 1, i):
                 arr[j] = 1
-
     curr_prime_sum = 0
-
     for i in range(1, N + 1):
         if arr[i] == 0:
             curr_prime_sum += i

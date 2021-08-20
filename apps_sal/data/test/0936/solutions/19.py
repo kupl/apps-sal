@@ -13,5 +13,4 @@ for i in range(0, n):
     if photo[photo_num] > max_val:
         max_val = photo[photo_num]
         max_num = photo_num
-
 print(max_num)

@@ -1,14 +1,6 @@
-#  =========     /\       /|    |====/|
-#      |        /  \       |    |   / |
-#      |       /____\      |    |  /  |
-#      |      /      \     |    | /   |
-#  ========= /        \  =====  |/====|
-#  code
-
 def __starting_point():
-    n, k = map(int, input().split())
+    (n, k) = map(int, input().split())
     a = list(map(int, input().split()))
-
     b = [0 for i in range(n)]
     for i in range(n - 1, -1, -1):
         if i == n - 1:

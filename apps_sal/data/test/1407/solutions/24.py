@@ -3,7 +3,6 @@ import bisect
 
 def sieve(n):
     p = 2
-
     prime = [True for i in range(n + 1)]
     while p * p <= n:
         if prime[p] == True:
@@ -35,12 +34,12 @@ def calcost(a, c):
     cost = 0
     for i in range(len(a)):
         p = bisect.bisect_left(c, a[i])
-        cost += (c[p] - a[i])
+        cost += c[p] - a[i]
     return cost
 
 
 c = sieve(1000001)
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 l = []
 for i in range(n):
     a = list(map(int, input().split()))

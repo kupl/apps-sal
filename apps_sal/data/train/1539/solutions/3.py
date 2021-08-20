@@ -1,6 +1,3 @@
-# code chef may2012  stones.py
-
-
 t = int(input())
 for t1 in range(t):
     j = input().strip()

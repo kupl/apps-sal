@@ -1,4 +1,4 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 a = [list(input()) for i in range(n)]
 p1 = 0
 pp = 0
@@ -19,5 +19,4 @@ for i in range(m):
             pp = p1
             p1 = n - j
             d[i] = False
-
 print(pm, sm)

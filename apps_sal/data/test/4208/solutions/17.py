@@ -31,15 +31,14 @@ for i in range(1, len(a)):
         if min(a[i], b[i]) > 0:
             out.append([c[i].popleft(), d[i].popleft()])
     for j in range(min(voprb, a[i] - min(a[i], b[i]))):
-        if (min(voprb, a[i] - min(a[i], b[i]))) > 0:
+        if min(voprb, a[i] - min(a[i], b[i])) > 0:
             out.append([c[i].popleft(), d[0].popleft()])
     voprb -= min(voprb, a[i] - min(a[i], b[i]))
     sch += min(vopra, b[i] - min(a[i], b[i]))
     for j in range(min(vopra, b[i] - min(a[i], b[i]))):
-        if (min(vopra, b[i] - min(a[i], b[i]))) > 0:
+        if min(vopra, b[i] - min(a[i], b[i])) > 0:
             out.append([c[0].popleft(), d[i].popleft()])
     vopra -= min(vopra, b[i] - min(a[i], b[i]))
-
 if vopra > 0 and voprb > 0:
     sch += min(vopra, voprb)
     for j in range(min(vopra, voprb)):

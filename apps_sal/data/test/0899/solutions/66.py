@@ -1,12 +1,10 @@
 import heapq
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 adj_list = [[] for i in range(n + 1)]
 for _ in range(m):
-    a, b, c = map(int, input().split())
+    (a, b, c) = map(int, input().split())
     adj_list[a].append((b, c))
     adj_list[b].append((a, c))
-
-# dijkstra
 
 
 def dijkstra(start):
@@ -19,9 +17,9 @@ def dijkstra(start):
     visit = [NOT_VISITED] * (n + 1)
     queue = [(cost[start], start)]
     while len(queue) > 0:
-        c, v = heapq.heappop(queue)
+        (c, v) = heapq.heappop(queue)
         visit[v] = VISITED
-        for u, cost_vu in adj_list[v]:
+        for (u, cost_vu) in adj_list[v]:
             if visit[u] == VISITED:
                 continue
             if cost[u] > cost[v] + cost_vu:
@@ -32,7 +30,6 @@ def dijkstra(start):
 
 
 used_edge = [[False] * (n + 1) for i in range(n + 1)]
-
 used_count = 0
 for s in range(1, n + 1):
     prev_node = dijkstra(s)
@@ -44,5 +41,4 @@ for s in range(1, n + 1):
             used_count += 1
             used_edge[i][j] = True
             used_edge[j][i] = True
-
 print(m - used_count)

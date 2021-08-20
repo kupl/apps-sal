@@ -14,4 +14,4 @@ while True:
     if i >= len(o) + len(e) + 1:
         break
 for i in range(len(s)):
-    print(s[i], end="")
+    print(s[i], end='')

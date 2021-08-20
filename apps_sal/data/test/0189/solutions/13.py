@@ -1,6 +1,5 @@
 n = int(input())
 a = [int(t) for t in input().split(' ')]
-
 mincost = 1000 * 100 + 1
 best_t = None
 for t in range(1, 101):
@@ -10,5 +9,4 @@ for t in range(1, 101):
     if cost < mincost:
         mincost = cost
         best_t = t
-
 print(best_t, mincost)

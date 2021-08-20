@@ -1,5 +1,5 @@
 for _ in range(int(input())):
-    n, r, x, y = map(int, input().split())
+    (n, r, x, y) = map(int, input().split())
     if x > 0:
         arr = set(list(map(int, input().split())))
     if y > 0:
@@ -18,8 +18,7 @@ for _ in range(int(input())):
             print(r)
         else:
             print(t)
+    elif n > r:
+        print(r)
     else:
-        if n > r:
-            print(r)
-        else:
-            print(n)
+        print(n)

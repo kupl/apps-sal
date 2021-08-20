@@ -9,9 +9,7 @@ def grundy(x, k):
 
 
 g = 0
-
 for _ in range(N):
-    a, k = map(int, input().split())
+    (a, k) = map(int, input().split())
     g ^= grundy(a, k)
-
 print('Takahashi' if g != 0 else 'Aoki')

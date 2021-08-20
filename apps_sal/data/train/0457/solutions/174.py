@@ -1,6 +1,6 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
 
+    def coinChange(self, coins: List[int], amount: int) -> int:
         dp = [float('inf')] * (amount + 1)
         dp[0] = 0
         for i in coins:

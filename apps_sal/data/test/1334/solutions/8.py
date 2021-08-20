@@ -1,4 +1,4 @@
-q, w = map(int, input().split())
+(q, w) = map(int, input().split())
 s = input()
 d = [i for i in s]
 d = list(set(d))

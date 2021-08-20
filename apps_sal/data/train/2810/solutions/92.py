@@ -6,6 +6,6 @@ def solve(arr: list):
     same = []
     for s in arr:
         same.append(0)
-        for a, b in zip(string.ascii_lowercase, s):
+        for (a, b) in zip(string.ascii_lowercase, s):
             same[-1] += a == b
     return same

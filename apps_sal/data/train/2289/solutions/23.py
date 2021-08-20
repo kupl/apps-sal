@@ -1,8 +1,7 @@
 from bisect import bisect_right
-a = list([ord(x) - ord("a") for x in list(input())])
+a = list([ord(x) - ord('a') for x in list(input())])
 n = len(a)
 m = 26
-
 b = [0] * n
 pos = [[] for i in range(m)]
 s = set()
@@ -15,13 +14,9 @@ for i in reversed(list(range(n))):
     if len(s) == m:
         cnt += 1
         s = set()
-
 for i in range(m):
     pos[i].sort()
-
 k = cnt + 1
-
-
 ans = []
 cur = -1
 for i in range(k):
@@ -35,6 +30,5 @@ for i in range(k):
             cur = to
             ans.append(j)
             break
-
-ans = "".join(chr(ord("a") + i) for i in ans)
+ans = ''.join((chr(ord('a') + i) for i in ans))
 print(ans)

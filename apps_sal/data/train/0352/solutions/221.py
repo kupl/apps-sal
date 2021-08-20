@@ -1,6 +1,6 @@
 class Solution:
-    def longestStrChain(self, words: List[str]) -> int:
 
+    def longestStrChain(self, words: List[str]) -> int:
         d = {w: 1 for w in words}
         words.sort(key=lambda x: len(x))
 
@@ -8,10 +8,7 @@ class Solution:
             if len(w1) <= len(w2):
                 return False
             if len(w1) - len(w2) == 1:
-                '''for i in range(len(w1)):
-                    temp = w1[:i] + w1[i + 1:]
-                    if temp == w2:
-                        return True'''
+                'for i in range(len(w1)):\n                    temp = w1[:i] + w1[i + 1:]\n                    if temp == w2:\n                        return True'
                 i = 0
                 j = 0
                 count = 0
@@ -22,16 +19,12 @@ class Solution:
                     else:
                         i += 1
                         count += 1
-
                 if count > 1:
                     return False
                 else:
                     return True
-
             return False
-
         dp = [0 for _ in range(len(words))]
-
         dp[0] = 1
         res = 1
         for i in range(1, len(words)):
@@ -39,8 +32,6 @@ class Solution:
             for j in range(i):
                 if check(words[i], words[j]):
                     curr_max = max(curr_max, dp[j])
-
             dp[i] = curr_max + 1
             res = max(res, dp[i])
-
         return res

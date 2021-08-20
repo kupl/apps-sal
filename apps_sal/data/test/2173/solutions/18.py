@@ -9,4 +9,4 @@ for i in b:
     else:
         current += 1
         a[i[0]] = str(current)
-print(" ".join(a))
+print(' '.join(a))

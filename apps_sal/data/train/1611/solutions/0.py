@@ -1,8 +1,7 @@
 from collections import defaultdict
 from itertools import chain
 import re
-
-PARSE = re.compile(r'[pP]\d+|q')
+PARSE = re.compile('[pP]\\d+|q')
 
 
 def magic_call_depth_number(prog):
@@ -25,9 +24,7 @@ def magic_call_depth_number(prog):
                     yield d
                 else:
                     yield from travel(n, seen | {n}, d + 1)
-
     pCmds = defaultdict(list)
     parse(PARSE.finditer(prog))
-    inf = list(chain.from_iterable(travel(p, {p}) for p in pCmds['']))
-
+    inf = list(chain.from_iterable((travel(p, {p}) for p in pCmds[''])))
     return [min(inf, default=0), max(inf, default=0)]

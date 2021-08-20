@@ -1,11 +1,11 @@
 import numpy as N
-n, k = map(int, input().split())
+(n, k) = map(int, input().split())
 A = N.array(list(map(int, input().split())))
 A.sort()
 p = A[A > 0]
 z = N.count_nonzero(A == 0)
 m = A[A < 0]
-r = 10**19
+r = 10 ** 19
 l = -r
 while r - l > 1:
     b = (l + r) // 2

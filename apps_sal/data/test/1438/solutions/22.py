@@ -1,6 +1,5 @@
 import math
-
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 req_ingr = list(map(int, input().split()))
 hvng_ingr = list(map(int, input().split()))
 
@@ -16,9 +15,8 @@ def if_sum_bigger(count):
 
 
 l = 0
-r = 2 * (10 ** 9) + 1
-
-while (r > l):
+r = 2 * 10 ** 9 + 1
+while r > l:
     m = math.floor((r + l) / 2)
     if if_sum_bigger(m):
         l = m + 1

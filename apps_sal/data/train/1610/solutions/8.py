@@ -7,4 +7,4 @@ def c(n):
 
 
 def subsets_parity(n, k):
-    return "EVEN" if (c(n) - c(k) - c(n - k)) > 0 else "ODD"
+    return 'EVEN' if c(n) - c(k) - c(n - k) > 0 else 'ODD'

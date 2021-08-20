@@ -1,6 +1,6 @@
 from math import ceil
-h, m = list(map(int, input().split()))
-H, d, c, n = list(map(float, input().split()))
+(h, m) = list(map(int, input().split()))
+(H, d, c, n) = list(map(float, input().split()))
 if h >= 20:
     print(round(ceil(H / n) * c * 0.8, 3))
 else:

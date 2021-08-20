@@ -1,24 +1,24 @@
 class Solution:
+
     def findLatestStep(self, arr: List[int], m: int) -> int:
         if m == len(arr):
             return m
-
         dsu = DSU()
         used = set()
         ans = -1
-        for index, i in enumerate(arr):
-            if i + 1 in used and dsu.get_count(i + 1) == m or i - 1 in used and dsu.get_count(i - 1) == m:
+        for (index, i) in enumerate(arr):
+            if i + 1 in used and dsu.get_count(i + 1) == m or (i - 1 in used and dsu.get_count(i - 1) == m):
                 ans = index
             if i + 1 in used:
                 dsu.union(i, i + 1)
             if i - 1 in used:
                 dsu.union(i, i - 1)
             used.add(i)
-
         return ans
 
 
 class DSU:
+
     def __init__(self):
         self.father = {}
         self.count = {}

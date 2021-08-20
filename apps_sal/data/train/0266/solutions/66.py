@@ -1,4 +1,5 @@
 class Solution:
+
     def make_hist(self, array: str) -> dict:
         hist = {}
         for s in array:
@@ -20,7 +21,6 @@ class Solution:
                 hist_left[v] = 1
             else:
                 hist_left[v] += 1
-
             if v in list(hist_right.keys()):
                 if hist_right[v] == 1:
                     del hist_right[v]

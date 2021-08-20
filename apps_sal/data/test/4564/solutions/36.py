@@ -6,10 +6,10 @@ for i in s:
         if i == j:
             c += 1
     if c != 1:
-        print("no")
+        print('no')
         break
     else:
         x += 1
         if x == len(s):
-            print("yes")
+            print('yes')
             break

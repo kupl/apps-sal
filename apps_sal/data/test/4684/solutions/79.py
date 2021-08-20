@@ -1,5 +1,5 @@
-a, b, c = input().split()
+(a, b, c) = input().split()
 if int(b + c) % 4 == 0:
-    print("YES")
+    print('YES')
 else:
-    print("NO")
+    print('NO')

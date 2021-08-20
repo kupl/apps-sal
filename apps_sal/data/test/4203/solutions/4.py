@@ -1,22 +1,20 @@
 import sys
-
 input = sys.stdin.readline
 
 
 def main():
     S = list(input().strip())
-
-    if S[0] == "A" and S[2:-1].count("C") == 1:
+    if S[0] == 'A' and S[2:-1].count('C') == 1:
         cnt = 0
         for s in S:
             if s.islower():
                 cnt += 1
         if cnt == len(S) - 2:
-            print("AC")
+            print('AC')
         else:
-            print("WA")
+            print('WA')
     else:
-        print("WA")
+        print('WA')
 
 
 def __starting_point():

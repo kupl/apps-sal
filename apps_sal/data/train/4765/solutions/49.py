@@ -2,7 +2,7 @@ class Hero(object):
 
     def __init__(self, name=None):
         if name is None:
-            self.name = "Hero"
+            self.name = 'Hero'
         else:
             self.name = name
         self.experience = 0

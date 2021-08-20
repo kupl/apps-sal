@@ -1,10 +1,10 @@
-n, m = list(map(int, input().split()))
+(n, m) = list(map(int, input().split()))
 special = list(map(int, input().split()))
 arr1 = []
 arr2 = []
 for i in range(m):
-    f, p, s = list(map(str, input().split()))
-    f, p = int(f), int(p)
+    (f, p, s) = list(map(str, input().split()))
+    (f, p) = (int(f), int(p))
     if f in special:
         arr1.append([f, p, s])
     else:

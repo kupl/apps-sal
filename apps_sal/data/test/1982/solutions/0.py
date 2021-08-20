@@ -1,10 +1,10 @@
 t = int(input())
 for _ in range(t):
-    n, k = map(int, input().split())
-    n -= k**2
+    (n, k) = map(int, input().split())
+    n -= k ** 2
     if n < 0:
-        print("NO")
+        print('NO')
     elif n % 2 == 0:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')

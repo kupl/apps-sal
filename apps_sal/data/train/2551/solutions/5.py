@@ -1,4 +1,5 @@
 class Solution:
+
     def isValid(self, s):
         """
         :type s: str
@@ -14,6 +15,6 @@ class Solution:
                 if len(stack) == 0:
                     return False
                 j = stack.pop()
-                if (j == '(' and i != ')') or (j == '[' and i != ']') or (j == '{' and i != '}'):
+                if j == '(' and i != ')' or (j == '[' and i != ']') or (j == '{' and i != '}'):
                     return False
         return len(stack) == 0

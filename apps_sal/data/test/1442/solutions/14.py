@@ -1,8 +1,8 @@
-n, s = list(map(int, input().split()))
-sem = [-1] * (100001)
-bum = [-1] * (100001)
+(n, s) = list(map(int, input().split()))
+sem = [-1] * 100001
+bum = [-1] * 100001
 for i in range(n):
-    wh, p, q = input().split()
+    (wh, p, q) = input().split()
     p = int(p)
     q = int(q)
     if wh == 'B':
@@ -19,27 +19,27 @@ ts = s
 for i in range(100000, -1, -1):
     if not ts:
         break
-    if(bum[i] != -1):
+    if bum[i] != -1:
         finb.append((i, bum[i]))
         ts -= 1
 ts = s
 for i in range(100001):
     if not ts:
         break
-    if(sem[i] != -1):
+    if sem[i] != -1:
         fins.append((i, sem[i]))
         ts -= 1
 ts = s
 for i in range(len(fins) - 1, -1, -1):
     if not ts:
         break
-    a, b = fins[i]
+    (a, b) = fins[i]
     print('S', a, b)
     ts -= 1
 ts = s
 for i in range(len(finb)):
     if not ts:
         break
-    a, b = finb[i]
+    (a, b) = finb[i]
     print('B', a, b)
     ts -= 1

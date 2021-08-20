@@ -8,6 +8,6 @@ for case in range(T):
             flag = 0
             break
     if flag:
-        print("NO")
+        print('NO')
     else:
-        print("YES")
+        print('YES')

@@ -1,1 +1,2 @@
-def reverse(x): return ' '.join(x.split()[::-1])
+def reverse(x):
+    return ' '.join(x.split()[::-1])

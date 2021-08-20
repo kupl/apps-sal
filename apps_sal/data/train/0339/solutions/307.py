@@ -1,4 +1,5 @@
 class Solution:
+
     def count(self, nums1: List[int], nums2: List[int]) -> int:
         c = 0
         for n in nums1:

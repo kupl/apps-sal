@@ -13,7 +13,7 @@ def rl():
 
 
 def solve():
-    a, b, n = rl()
+    (a, b, n) = rl()
     steps = 0
     while max(a, b) <= n:
         steps += 1
@@ -25,7 +25,6 @@ def solve():
 
 
 mode = 'T'
-
 if mode == 'T':
     t = ri()
     for i in range(t):

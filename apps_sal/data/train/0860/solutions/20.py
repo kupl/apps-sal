@@ -13,7 +13,7 @@ def b(l, s, h):
 
 t = int(input())
 for z in range(t):
-    n, h = map(int, input().split())
+    (n, h) = map(int, input().split())
     l = list(map(int, input().split()))
     q = 1
     r = max(l)

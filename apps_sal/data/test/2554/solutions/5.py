@@ -1,9 +1,3 @@
-# f = open('test.py')
-# def input():
-# 	return f.readline().replace('\n','')
-
-# import heapq
-# from collections import defaultdict
 def read_list():
     return list(map(int, input().strip().split(' ')))
 

@@ -1,5 +1,5 @@
 def find_num(n):
-    found, lastComplete, lastFound = {0}, 0, 0
+    (found, lastComplete, lastFound) = ({0}, 0, 0)
     while len(found) <= n:
         lastDigits = set(str(lastFound))
         curr = lastComplete + 1

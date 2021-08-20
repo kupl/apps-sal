@@ -6,7 +6,7 @@ def getAllPrimeFactors(n):
     factors = []
     while n > 1:
         for i in range(2, n + 1):
-            if is_prime(i) and not n % i:
+            if is_prime(i) and (not n % i):
                 factors.append(i)
                 n = int(n / i)
                 break
@@ -22,7 +22,7 @@ def getUniquePrimeFactorsWithCount(n):
 
 def getUniquePrimeFactorsWithProducts(n):
     cf = getUniquePrimeFactorsWithCount(n)
-    return [factor**count for factor, count in zip(cf[0], cf[1])]
+    return [factor ** count for (factor, count) in zip(cf[0], cf[1])]
 
 
 def is_prime(n):

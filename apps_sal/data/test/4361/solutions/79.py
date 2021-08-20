@@ -1,4 +1,4 @@
-N, K = map(int, input().split())
+(N, K) = map(int, input().split())
 h = [int(input()) for i in range(N)]
 s_h = sorted(h)
 tmp = []
@@ -10,5 +10,4 @@ for i in range(N - K + 1):
     ans2 = s_h[i]
     ans3 = ans1 - ans2
     tmp.append(ans3)
-
 print(min(tmp))

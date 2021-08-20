@@ -1,5 +1,4 @@
-n, m = map(int, input().split())
-
+(n, m) = map(int, input().split())
 iArr = []
 for _ in range(n + m):
     i = int(input())

@@ -1,4 +1,4 @@
-n, p = map(int, input().split())
+(n, p) = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 r = a[p - 1] + b[0]

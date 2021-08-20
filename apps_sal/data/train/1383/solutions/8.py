@@ -2,6 +2,7 @@ t = int(input())
 
 
 class Container:
+
     def __init__(self):
         self.comp = [0, 0]
         self.state = -1
@@ -19,8 +20,8 @@ class Container:
 
 
 for _ in range(t):
-    n, k1, k2 = map(int, input().split())
-    p1, p2, p3, p4 = map(int, input().split())
+    (n, k1, k2) = map(int, input().split())
+    (p1, p2, p3, p4) = map(int, input().split())
     containers = [Container() for _ in range(n)]
     sum = 0
     for i in range(1, n + 1):

@@ -24,19 +24,16 @@ while res == 0:
     while inp[k] == '0':
         k += 1
     inp = inp[k:]
-
     if inp[0] == '.':
         inp.insert(0, '0')
     if inp[len(inp) - 1] == '.':
         inp.remove(inp[len(inp) - 1])
-
     if ('.' in inp) == True:
         while True:
             if inp[i] != '.':
                 i += 1
             else:
                 break
-
         inp.reverse()
         k = 0
         while inp[k] == '0':
@@ -46,7 +43,6 @@ while res == 0:
             inp.remove('.')
         inp.reverse()
         res -= 1
-
         if ('.' in inp) == False:
             i = len(inp)
             inp.insert(1, '.')
@@ -74,12 +70,11 @@ while res == 0:
                 inp.remove('.')
             a = -1
             print(out(''.join(inp), -i))
-        if ('.' in inp) == True and len(inp[:i]) > 1 and a == 0:
+        if ('.' in inp) == True and len(inp[:i]) > 1 and (a == 0):
             inp.remove('.')
             inp.insert(1, '.')
             inp = ''.join(inp)
             print(out(inp, i - 1))
-
     else:
         i = len(inp)
         inp.insert(1, '.')

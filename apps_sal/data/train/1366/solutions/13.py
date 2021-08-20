@@ -1,17 +1,14 @@
-# cook your dish here
 t = int(input())
-
 while t > 0:
     n = input()
     ls = input()
     ls = ls.split()
-    st = ""
+    st = ''
     for i in ls:
-        if i == "0":
-            st += " "
+        if i == '0':
+            st += ' '
         else:
-            st += "x"
-
+            st += 'x'
     if len(st.strip()) == 0:
         print(1)
     else:

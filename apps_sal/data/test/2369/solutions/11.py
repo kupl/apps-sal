@@ -1,14 +1,18 @@
 from sys import stdin
-def nii(): return map(int, stdin.readline().split())
-def lnii(): return list(map(int, stdin.readline().split()))
 
 
-n, k = nii()
+def nii():
+    return map(int, stdin.readline().split())
+
+
+def lnii():
+    return list(map(int, stdin.readline().split()))
+
+
+(n, k) = nii()
 a = lnii()
 a.sort()
-
-mod = 10**9 + 7
-
+mod = 10 ** 9 + 7
 MAX_N = n + 5
 fac = [1, 1] + [0] * MAX_N
 finv = [1, 1] + [0] * MAX_N
@@ -31,12 +35,10 @@ min_X = 0
 for i in range(n - k + 1):
     min_X += a[i] * nCk(n - i - 1, k - 1)
     min_X %= mod
-
 max_X = 0
 for i in range(k - 1, n):
     max_X += a[i] * nCk(i, k - 1)
     max_X %= mod
-
 ans = max_X - min_X
 ans %= mod
 print(ans)

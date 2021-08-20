@@ -23,5 +23,5 @@ def entekhab(r, n):
 ways *= b
 a -= 1
 ways *= entekhab(c, a)
-ways *= (b - 1)**c
+ways *= (b - 1) ** c
 print(ways % 998244353)

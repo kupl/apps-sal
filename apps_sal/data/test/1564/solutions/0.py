@@ -1,7 +1,7 @@
 n = int(input())
 a = input()
 s = input()
-d1, d2 = [], []
+(d1, d2) = ([], [])
 for q in range(n):
     if a[q] == 'a' and s[q] == 'b':
         d1.append(q + 1)

@@ -1,6 +1,6 @@
 n = int(input())
 for i in range(n):
-    c, s = list(map(int, input().strip().split()))
+    (c, s) = list(map(int, input().strip().split()))
     left = s % c
     v = s // c
     o = 0

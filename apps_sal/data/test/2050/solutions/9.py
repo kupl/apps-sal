@@ -1,4 +1,4 @@
-n, k = list(map(int, input().split()))
+(n, k) = list(map(int, input().split()))
 print((n * 6 - 1) * k)
 for i in range(n):
     m = i * 6

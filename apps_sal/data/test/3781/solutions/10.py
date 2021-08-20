@@ -1,8 +1,6 @@
 import collections
 import sys
-
 sys.setrecursionlimit(10 ** 8)
-
 input = sys.stdin.readline
 
 
@@ -11,23 +9,19 @@ def main():
     for _ in range(t):
         N = int(input())
         A = [int(x) for x in input().split()]
-
         if N == 1:
-            print("Second")
+            print('Second')
             continue
-
         c = collections.Counter(A)
-
         f = True
         for k in list(c.keys()):
             if c[k] % 2 == 1:
                 f = False
                 break
-
         if f or N % 2 == 1:
-            print("Second")
+            print('Second')
         else:
-            print("First")
+            print('First')
 
 
 def __starting_point():

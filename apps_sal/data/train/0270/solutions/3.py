@@ -1,4 +1,5 @@
 class Solution:
+
     def getHappyString(self, n: int, k: int) -> str:
         nextLetter = {'a': 'bc', 'b': 'ac', 'c': 'ab'}
         q = deque(['a', 'b', 'c'])

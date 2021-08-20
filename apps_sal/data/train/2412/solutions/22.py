@@ -1,10 +1,11 @@
 class Solution:
+
     def removeDuplicates(self, S: str) -> str:
         count = 1
         S = list(S)
         while count != 0:
             x = 0
-            while x < (len(S) - 1):
+            while x < len(S) - 1:
                 if S[x] == S[x + 1]:
                     S.pop(x)
                     S.pop(x)
@@ -16,4 +17,4 @@ class Solution:
                 count = 1
             else:
                 count = 0
-        return(''.join(S))
+        return ''.join(S)

@@ -1,7 +1,7 @@
 class Solution:
+
     def kLengthApart(self, nums: List[int], k: int) -> bool:
         zCounter = k
-
         for n in nums:
             if n == 1:
                 if zCounter < k:

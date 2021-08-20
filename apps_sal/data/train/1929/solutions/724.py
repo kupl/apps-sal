@@ -1,4 +1,5 @@
 class Node:
+
     def __init__(self, char, parent):
         self.children = [None for _ in range(26)]
         self.char = char
@@ -41,8 +42,3 @@ class StreamChecker:
             if curr.parent is self.root:
                 return True
         return False
-
-
-# Your StreamChecker object will be instantiated and called as such:
-# obj = StreamChecker(words)
-# param_1 = obj.query(letter)

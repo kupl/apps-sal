@@ -1,8 +1,6 @@
-# coding: utf-8
-# Your code here!
 odd = {0: 1}
 even = {0: 1, 1: 3}
-M = 10**9 + 7
+M = 10 ** 9 + 7
 
 
 def memo(N):
@@ -28,4 +26,4 @@ def memoeven(N):
 
 
 n = int(input())
-print((memo(n)))
+print(memo(n))

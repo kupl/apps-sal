@@ -7,7 +7,5 @@ for s in S:
         tmp += 1
     elif s == 'D':
         tmp -= 1
-
     res = max(res, tmp)
-
 print(res)

@@ -1,11 +1,11 @@
 class Solution:
+
     def maxScoreSightseeingPair(self, A: List[int]) -> int:
         return self.with_sort(A)
 
     def with_sort(self, A):
         n = len(A)
-        max_list = [(i[0] + i[1], i[0]) for i in sorted(enumerate(A),
-                                                        key=lambda x:-(x[1] + x[0] * 1.000000001))]
+        max_list = [(i[0] + i[1], i[0]) for i in sorted(enumerate(A), key=lambda x: -(x[1] + x[0] * 1.000000001))]
         idx = 0
         max_s = 0
         for j in range(n - 1, -1, -1):
@@ -19,7 +19,7 @@ class Solution:
 
     def count_sort(self, A):
         C = [[] for _ in range(51001)]
-        for i, a in enumerate(A):
+        for (i, a) in enumerate(A):
             C[a + i].append((a + i, i))
         res = []
         k = 0

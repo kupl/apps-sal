@@ -1,6 +1,6 @@
 import math
-a, b = map(int, input().split())
-x = ""
+(a, b) = map(int, input().split())
+x = ''
 y = 0
 for i in range(a):
     x = input().split()

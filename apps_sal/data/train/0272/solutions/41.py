@@ -1,16 +1,14 @@
 class Solution:
+
     def maxCandies(self, status, candies, keys, containedBoxes, initialBoxes):
         n = len(status)
         access = [0] * n
         source = []
         visited = set()
-
-        # (access, status, key, i)
         for i in initialBoxes:
             access[i] = 1
             visited.add(i)
             source.append(i)
-
         ans = 0
         while source:
             i = source.pop()
@@ -27,5 +25,4 @@ class Solution:
                 if j not in visited and access[j]:
                     visited.add(j)
                     source.append(j)
-
         return ans

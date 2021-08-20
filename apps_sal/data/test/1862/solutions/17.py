@@ -8,9 +8,9 @@ string = input()
 i = 0
 while i < len(string):
     j = 0
-    if string[i] == " ":
+    if string[i] == ' ':
         i += 1
-    while string[i] != " ":
+    while string[i] != ' ':
         j *= 10
         j += int(string[i])
         i += 1
@@ -18,9 +18,8 @@ while i < len(string):
             break
     socks[j] += 1
     present += 1
-    if(socks[j] == 2):
+    if socks[j] == 2:
         present -= 2
-    if(maximum < present):
+    if maximum < present:
         maximum = present
-
 print(maximum)

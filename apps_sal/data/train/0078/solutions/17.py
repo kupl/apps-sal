@@ -1,6 +1,5 @@
 def __starting_point():
     T = int(input())
-    #fout = open('1194B.out', 'w')
     for _ in range(T):
         s = input().rstrip().split()
         n = int(s[0])

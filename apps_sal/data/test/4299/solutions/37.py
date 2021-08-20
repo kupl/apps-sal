@@ -1,5 +1,4 @@
 n = input()
-
 a = n[-1]
 if a in '3':
     print('bon')

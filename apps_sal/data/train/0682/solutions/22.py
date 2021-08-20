@@ -1,7 +1,7 @@
 n = int(input())
 arr = list(map(int, input().split()))
-i, j = 0, n - 1
-x, y = -1, -1
+(i, j) = (0, n - 1)
+(x, y) = (-1, -1)
 while i < j:
     if arr[i] == i + 1 and x < 0:
         i += 1

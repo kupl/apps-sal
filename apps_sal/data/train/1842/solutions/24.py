@@ -1,4 +1,5 @@
 class Solution:
+
     def frogPosition(self, n: int, edges: List[List[int]], t: int, target: int) -> float:
         visited = [False for i in range(n + 1)]
         visited[0] = True
@@ -19,12 +20,12 @@ class Solution:
             for i in curr:
                 occ = False
                 for j in edgelists[i]:
-                    if(visited[j] == False):
+                    if visited[j] == False:
                         occ = True
                         nex.append(j)
                         prb[j] = prb[i] / (len(edgelists[i]) - 1)
                         visited[j] = True
-                if(occ):
+                if occ:
                     prb[i] = 0
             curr = nex
         print(prb)

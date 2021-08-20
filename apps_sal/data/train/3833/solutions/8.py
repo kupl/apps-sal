@@ -2,7 +2,7 @@ import itertools
 
 
 def longest(s1, s2):
-    longest = ""
+    longest = ''
     for i in s1:
         if i not in longest:
             longest += i

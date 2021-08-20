@@ -2,7 +2,6 @@ def solve(n, k):
     bn = binary(n)
     if k < len(bn):
         return 'No'
-
     cur_dec = len(bn)
     next_dec = cur_dec + 1
     while True:
@@ -22,14 +21,14 @@ def solve(n, k):
 def binary(x):
     out = []
     for i in reversed(list(range(64 + 1))):
-        if x >= 2**i:
-            x -= 2**i
+        if x >= 2 ** i:
+            x -= 2 ** i
             out.append(i)
     return list(reversed(out))
 
 
 def __starting_point():
-    n, k = list(map(int, input().split()))
+    (n, k) = list(map(int, input().split()))
     print(solve(n, k))
 
 

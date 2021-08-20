@@ -1,6 +1,5 @@
-n, a, b = map(int, input().split())
+(n, a, b) = map(int, input().split())
 x = list(map(int, input().split()))
-
 current = x[0]
 cost = 0
 for i in x:

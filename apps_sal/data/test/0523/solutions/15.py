@@ -1,14 +1,12 @@
-n, m = map(int, input().split())
+(n, m) = map(int, input().split())
 data = [input() for _ in range(n)]
 data_rev = [x[::-1] for x in data]
-
-now = ""
+now = ''
 ans = 0
 for i in range(n):
     for j in range(i + 1, n):
         if data[i] == data_rev[j]:
             now = data[i] + now + data[j]
-
 ans = len(now)
 for i in range(n):
     if data[i] == data_rev[i]:
@@ -24,6 +22,5 @@ for i in range(n):
         if ans < len(now2):
             now = now2
             ans = len(now2)
-
 print(ans)
 print(now)

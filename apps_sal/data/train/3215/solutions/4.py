@@ -8,4 +8,4 @@ def _coefs(l):
 
 def reduce_pyramid(base):
     coefs = _coefs(len(base))
-    return sum(next(coefs) * n for n in base)
+    return sum((next(coefs) * n for n in base))

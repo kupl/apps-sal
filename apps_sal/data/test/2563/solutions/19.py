@@ -15,7 +15,7 @@ def solve():
     nums = [int(i) for i in input().strip()]
     odds = []
     evens = []
-    lodd, leven = 0, 0
+    (lodd, leven) = (0, 0)
     for num in nums:
         if num % 2 == 1:
             odds.append(num)
@@ -23,14 +23,11 @@ def solve():
         else:
             evens.append(num)
             leven += 1
-
-    # lodd = len(odds)
-    # leven = len(evens)
     odds.append(100)
     evens.append(100)
-    io, ie = 0, 0
+    (io, ie) = (0, 0)
     ans = []
-    while(True):
+    while True:
         if odds[io] < evens[ie]:
             ans.append(odds[io])
             io += 1
@@ -43,12 +40,7 @@ def solve():
             if ie == leven:
                 ans += odds[io:lodd]
                 break
-        # if io == lodd and ie == leven:
-        #     break
-    # nums.reverse()
-
-    print("".join(list(map(str, ans))))
-
+    print(''.join(list(map(str, ans))))
     return
 
 

@@ -1,9 +1,9 @@
-x, y = list(map(int, input().split()))
+(x, y) = list(map(int, input().split()))
 n = 0
 d = [0] * x
 f = []
 for i in range(x):
-    a, b = list(map(int, input().split()))
+    (a, b) = list(map(int, input().split()))
     if b < a:
         n = n + b
     else:

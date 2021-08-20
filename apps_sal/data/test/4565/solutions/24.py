@@ -9,7 +9,7 @@ def count(n, s):
     mcnte = 0
     maxn = 0
     for i in range(n):
-        if s[i] == "W":
+        if s[i] == 'W':
             cntw += 1
         else:
             cnte += 1
@@ -17,13 +17,11 @@ def count(n, s):
             maxn = cnte - cntw
             mcnte = cnte
             mcntw = cntw
-
     if cntw == 0 or cnte == 0:
-        print((0))
+        print(0)
         return
-
     else:
-        print((mcntw + cnte - mcnte))
+        print(mcntw + cnte - mcnte)
         return
 
 

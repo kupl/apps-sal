@@ -1,4 +1,5 @@
 class Solution:
+
     def stoneGame(self, piles: List[int]) -> bool:
         n = len(piles)
         memo = [[-sys.maxsize for i in range(n)] for j in range(n)]
@@ -11,5 +12,4 @@ class Solution:
             score = max(piles[left] - DFS(left + 1, right), piles[right] - DFS(left, right - 1))
             memo[left][right] = score
             return score
-
         return True if DFS(0, n - 1) > 0 else False

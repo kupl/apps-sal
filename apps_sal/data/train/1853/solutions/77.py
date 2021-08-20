@@ -1,13 +1,14 @@
 class Solution:
+
     def findTheCity(self, n: int, edges: List[List[int]], distanceThreshold: int) -> int:
         adjl = [[] for _ in range(n)]
         d = distanceThreshold
         for e in edges:
-            i, j, w = e
+            (i, j, w) = e
             adjl[i].append((w, j))
             adjl[j].append((w, i))
         inf = float('inf')
-        minc = 1e9
+        minc = 1000000000.0
         mini = 0
         for i in range(n):
             ds = [inf for _ in range(n)]
@@ -16,8 +17,8 @@ class Solution:
             heapq.heapify(fringe)
             visited = {i}
             while len(fringe) > 0:
-                w, uv = heapq.heappop(fringe)
-                u, v = uv
+                (w, uv) = heapq.heappop(fringe)
+                (u, v) = uv
                 if w > d:
                     continue
                 if v not in visited:

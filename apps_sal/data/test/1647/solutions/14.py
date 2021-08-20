@@ -5,7 +5,7 @@ def initialize(arr, n):
 
 
 def root(arr, n):
-    while(arr[n] != n):
+    while arr[n] != n:
         n = arr[n]
     return n
 
@@ -25,7 +25,7 @@ for i in range(n):
     b1 = ord(b[i]) - 97
     x = root(arr, a1)
     y = root(arr, b1)
-    if(x != y):
+    if x != y:
         cnt += 1
         union(arr, x, y)
         ans.append([a[i], b[i]])

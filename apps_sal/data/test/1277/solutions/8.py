@@ -1,6 +1,6 @@
 import sys
-sys.setrecursionlimit(10**6)
-n, a, b = list(map(int, input().split()))
+sys.setrecursionlimit(10 ** 6)
+(n, a, b) = list(map(int, input().split()))
 D = [[0] * 2 for _ in range(101010)]
 E = [[] for _ in range(n)]
 
@@ -15,7 +15,7 @@ def dfs(cur, pre, d, id):
 a -= 1
 b -= 1
 for i in range(n - 1):
-    x, y = list(map(int, input().split()))
+    (x, y) = list(map(int, input().split()))
     x -= 1
     y -= 1
     E[x].append(y)

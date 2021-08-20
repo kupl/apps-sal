@@ -6,4 +6,4 @@ def solve(a, b):
             countA += 1
         elif a[i] < b[i]:
             countB += 1
-    return f'{countA}, {countB}: that looks like a "draw"! Rock on!'if countA == countB else f'{countA}, {countB}: Alice made "Kurt" proud!' if countA > countB else f'{countA}, {countB}: Bob made "Jeff" proud!'
+    return f'{countA}, {countB}: that looks like a "draw"! Rock on!' if countA == countB else f'{countA}, {countB}: Alice made "Kurt" proud!' if countA > countB else f'{countA}, {countB}: Bob made "Jeff" proud!'

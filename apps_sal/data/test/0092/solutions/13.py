@@ -1,11 +1,7 @@
 import math
 import itertools
 import operator
-
-
-primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
-          31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
-          73, 79, 83, 89, 97]
+primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 
 def get_prime_mult(n):
@@ -21,16 +17,14 @@ def get_prime_mult(n):
             m[p] += 1
             n //= primes[p]
             sq = int(math.sqrt(n))
-
     m[primes.index(n)] += 1
     return m
 
 
-a, b, c = list(map(int, input().split()))
+(a, b, c) = list(map(int, input().split()))
 mtab = []
 for i in range(max((a, b, c)) + 1):
     mtab.append(get_prime_mult(i))
-
 total = 0
 mults_cnt = {}
 for i in range(1, a + 1):
@@ -40,5 +34,4 @@ for i in range(1, a + 1):
                 mults = [sum(triple) + 1 for triple in zip(mtab[i], mtab[j], mtab[k])]
                 mults_cnt[i * j * k] = list(itertools.accumulate(mults, operator.mul))[-1]
             total += mults_cnt[i * j * k]
-
-print(total & 0x3FFFFFFF)
+print(total & 1073741823)

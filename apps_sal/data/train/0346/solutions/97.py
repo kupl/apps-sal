@@ -7,7 +7,6 @@ class Solution:
         lookup = Counter()
         lookup[0] = 1
         answer = accumulated_odd = 0
-
         for num in nums:
             if num % 2 == 1:
                 accumulated_odd += 1

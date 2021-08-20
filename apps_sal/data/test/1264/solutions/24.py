@@ -6,5 +6,4 @@ for i in range(n):
         t = sum(a[0:i]) + a[i:j].count(0) + sum(a[j:n])
         if t > mx:
             mx = t
-
 print(mx)

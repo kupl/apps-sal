@@ -1,8 +1,8 @@
 def ok(integer):
     if 360 % (180 - integer) == 0:
-        return "YES"
+        return 'YES'
     else:
-        return "NO"
+        return 'NO'
 
 
 stor = []

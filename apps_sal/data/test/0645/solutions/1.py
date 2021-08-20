@@ -1,5 +1,4 @@
 s = input().strip()
-
 c = 0
 for z in s:
     if z in 'aeiou':
@@ -11,5 +10,4 @@ for z in s:
                 c += 1
         except:
             pass
-
 print(c)

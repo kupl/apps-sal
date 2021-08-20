@@ -2,7 +2,9 @@ from functools import lru_cache
 
 
 class Solution:
+
     def palindromePartition(self, s: str, k: int) -> int:
+
         @lru_cache(maxsize=None)
         def costs(i, j):
             if i >= j:
@@ -15,6 +17,5 @@ class Solution:
                 return costs(0, j)
             if k > j + 1:
                 return 0
-            return min(dfs(i, k - 1) + costs(i + 1, j) for i in range(j))
-
+            return min((dfs(i, k - 1) + costs(i + 1, j) for i in range(j)))
         return dfs(len(s) - 1, k)

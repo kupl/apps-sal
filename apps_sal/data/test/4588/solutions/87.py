@@ -1,7 +1,7 @@
-x, y = map(lambda x: int(x, 16), input().split())
-ans = "="
+(x, y) = map(lambda x: int(x, 16), input().split())
+ans = '='
 if x < y:
-    ans = "<"
+    ans = '<'
 elif x > y:
-    ans = ">"
+    ans = '>'
 print(ans)

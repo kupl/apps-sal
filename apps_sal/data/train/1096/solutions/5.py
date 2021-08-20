@@ -18,15 +18,15 @@ def wormholes(tlist, vlist, wlist):
     return min(sumlist)
 
 
-n, x, y = input().split()
-n, x, y = int(n), int(x), int(y)
+(n, x, y) = input().split()
+(n, x, y) = (int(n), int(x), int(y))
 timelist = []
 for i in range(n):
-    s, e = input().split()
-    s, e = int(s), int(e)
+    (s, e) = input().split()
+    (s, e) = (int(s), int(e))
     timelist.append([s, e])
 v = list(map(int, input().strip().split()))
 w = list(map(int, input().strip().split()))
 v.sort()
 w.sort()
-print((wormholes(timelist, v, w)))  # cook your dish here
+print(wormholes(timelist, v, w))

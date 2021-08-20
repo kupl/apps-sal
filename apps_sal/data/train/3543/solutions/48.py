@@ -9,5 +9,5 @@ def increment_string(string):
     if bool(re.match('(.*?)[0-9]*$', string)):
         letras = re.match('(.*?)[0-9]*$', string).group(1)
     else:
-        letras = ""
+        letras = ''
     return letras + numeros

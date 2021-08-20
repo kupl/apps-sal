@@ -1,8 +1,7 @@
-N, M = map(int, input().split())
+(N, M) = map(int, input().split())
 AB = []
 for _ in range(N):
     AB.append(list(map(int, input().split())))
-
 AB = sorted(AB)
 cnt = 0
 ans = 0
@@ -14,5 +13,4 @@ for ab in AB:
         ans += (M - cnt) * ab[0]
         cnt += M - cnt
         break
-
 print(ans)

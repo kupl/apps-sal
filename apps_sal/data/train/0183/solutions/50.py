@@ -1,7 +1,8 @@
 class Solution:
+
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
-        n, m = len(nums1), len(nums2)
-        dp = [[0] * (m) for i in range(n)]
+        (n, m) = (len(nums1), len(nums2))
+        dp = [[0] * m for i in range(n)]
         for i in range(n):
             for j in range(m):
                 dp[i][j] = nums1[i] * nums2[j]

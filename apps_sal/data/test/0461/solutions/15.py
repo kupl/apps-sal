@@ -2,7 +2,6 @@ n = int(input())
 a = int(input())
 b = int(input())
 c = int(input())
-
 dist = 0
 curr = 'r'
 while n > 1:
@@ -21,11 +20,10 @@ while n > 1:
         else:
             curr = 'e'
             dist += c
+    elif a < b:
+        curr = 'o'
+        dist += a
     else:
-        if a < b:
-            curr = 'o'
-            dist += a
-        else:
-            curr = 'e'
-            dist += b
+        curr = 'e'
+        dist += b
 print(dist)

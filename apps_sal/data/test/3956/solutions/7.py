@@ -1,4 +1,4 @@
-K, N = map(int, input().split())
+(K, N) = map(int, input().split())
 P = 998244353
 fa = [1]
 for i in range(1, 10000):

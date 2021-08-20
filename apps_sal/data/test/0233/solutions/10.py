@@ -1,7 +1,7 @@
 n = int(input())
-a, b = 0, 0
+(a, b) = (0, 0)
 for _ in range(n):
-    u, v = list(map(int, input().split()))
+    (u, v) = list(map(int, input().split()))
     if u > v:
         a += 1
     elif u < v:

@@ -6,7 +6,7 @@ while t:
         if n % i == 0:
             r = r + 1
     if r % 2 == 1:
-        print("YES")
+        print('YES')
     else:
-        print("NO")
+        print('NO')
     t = t - 1

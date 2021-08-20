@@ -11,9 +11,6 @@ class Solution:
                 elif s != '#' and erase == 0:
                     r = s + r
                 elif s != '#' and erase >= 1:
-                    # r=s+r
                     erase -= 1
-
             return r
-
         return helper(S) == helper(T)

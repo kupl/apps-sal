@@ -6,4 +6,4 @@ def min_value(digits):
     for i in set_n:
         arr.append(str(i))
     arr = sorted(arr)
-    return int("".join(arr))
+    return int(''.join(arr))

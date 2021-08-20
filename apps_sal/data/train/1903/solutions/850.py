@@ -2,20 +2,18 @@ from collections import defaultdict
 
 
 class Solution:
+
     def minCostConnectPoints(self, points: List[List[int]]) -> int:
         cost = 0
         n = len(points)
-
-        edges = [[3000000, 0] for i in range((n * (n - 1)) // 2)]
+        edges = [[3000000, 0] for i in range(n * (n - 1) // 2)]
         idx = 0
         for i in range(len(points)):
             for j in range(i + 1, len(points)):
                 edges[idx] = [abs(points[i][0] - points[j][0]) + abs(points[i][1] - points[j][1]), i, j]
                 idx += 1
         edges.sort()
-
         ret = 0
-
         i = 0
         k = 0
         child = defaultdict(lambda: [])
@@ -39,6 +37,4 @@ class Solution:
                 child[edges[k][1]].append(edges[k][2])
                 child[edges[k][2]].append(edges[k][1])
             k += 1
-            # print(child)
-            # print(k,i)
         return ret

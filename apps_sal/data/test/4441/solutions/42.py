@@ -1,5 +1,5 @@
 if int(input()) == 1:
-    print("Hello World")
+    print('Hello World')
 else:
     b = int(input())
     c = int(input())

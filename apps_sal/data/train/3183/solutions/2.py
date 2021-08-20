@@ -2,7 +2,7 @@ import itertools
 
 
 def interpreter(tape):
-    cells, cell, out, skip = {}, 0, '', False
+    (cells, cell, out, skip) = ({}, 0, '', False)
     for c in itertools.cycle(tape):
         if not skip:
             if c == '>':
@@ -17,5 +17,5 @@ def interpreter(tape):
                 out += chr(cells.get(cell, 0))
             if c == '&':
                 break
-        skip = (c == '/' and cells.get(cell, 0) == 0) or (c == '\\' and cells.get(cell, 0))
+        skip = c == '/' and cells.get(cell, 0) == 0 or (c == '\\' and cells.get(cell, 0))
     return out

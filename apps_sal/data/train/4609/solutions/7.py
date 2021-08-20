@@ -1,6 +1,6 @@
 def egged(year, span):
     if year == 0:
-        return "No chickens yet!"
+        return 'No chickens yet!'
     chickens = []
     for y in range(year):
         for i in range(len(chickens)):
@@ -9,4 +9,4 @@ def egged(year, span):
         chickens.append([300, 0])
         chickens.append([300, 0])
         chickens.append([300, 0])
-    return sum(i[0] for i in chickens if i[1] < span)
+    return sum((i[0] for i in chickens if i[1] < span))

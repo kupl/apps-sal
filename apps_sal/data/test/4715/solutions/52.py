@@ -1,8 +1,7 @@
-a, b, c = list(map(int, input().split()))
-
+(a, b, c) = list(map(int, input().split()))
 if a == b == c:
-    print((1))
+    print(1)
 elif a == b or b == c or a == c:
-    print((2))
+    print(2)
 else:
-    print((3))
+    print(3)

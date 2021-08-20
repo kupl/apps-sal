@@ -13,10 +13,10 @@ def f(n, k):
     dp = ws
     m = len(ws)
     for _ in range(k - 1):
-        dp = [s * w % md for s, w in zip(accumulate(dp[::-1]), ws)]
-    print((sum(dp) % md))
+        dp = [s * w % md for (s, w) in zip(accumulate(dp[::-1]), ws)]
+    print(sum(dp) % md)
 
 
-md = 10**9 + 7
-n, k = list(map(int, input().split()))
+md = 10 ** 9 + 7
+(n, k) = list(map(int, input().split()))
 f(n, k)

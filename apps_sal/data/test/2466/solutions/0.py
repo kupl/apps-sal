@@ -1,4 +1,5 @@
 class Solution:
+
     def permute(self, nums):
         """
         :type nums: List[int]
@@ -12,8 +13,6 @@ class Solution:
         if len(nums) == 0:
             all_permutes.append(cur_permute)
             return
-
         for i in range(len(nums)):
             num = nums[i]
-
             self.permute_nums(all_permutes, nums[0:i] + nums[i + 1:len(nums)], cur_permute + [num])

@@ -9,5 +9,4 @@ def count_positives_sum_negatives(arr):
             print(pos)
         elif i < 0:
             neg = neg + i
-
     return [pos, neg]
