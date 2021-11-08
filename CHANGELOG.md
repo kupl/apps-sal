@@ -6,6 +6,7 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ### Changed
 - Format solutions with `ast` module and `autopep8`.
+- Change default Python version to `3.9`.
 
 ### Removed
 - Remove duplicated solutions.
