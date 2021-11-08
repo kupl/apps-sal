@@ -3,11 +3,7 @@ APPS is a python coding competition dataset.
 The original contents can be found in [here](https://github.com/hendrycks/apps).
 
 ## Refined
-We (SAL, Software Analysis Laboratory) refined the original dataset as follows:
-* Fill missing `input_output.json`.
-* Format all solutions.
-* Discard buggy codes.
-* Discard C++ solutions.
+We (SAL, Software Analysis Laboratory) refined the original dataset.
 
 ## Installation
 You can install `apps-sal` using `pip3`.
