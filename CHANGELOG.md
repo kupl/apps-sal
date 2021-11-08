@@ -4,6 +4,8 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+## [v0.0.1](https://github.com/kupl/apps-sal/releases/v0.0.2) - 2021-11-08
+
 ### Changed
 - Format solutions with `ast` module and `autopep8`.
 - Change default Python version to `3.9`.
