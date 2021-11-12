@@ -3,7 +3,8 @@ from typing import Dict
 from typing import Iterable
 from typing import Union
 import json
-import logging
+
+from apps_sal.logger import get_logger
 
 
 class DataElement:
@@ -27,7 +28,7 @@ class DataElement:
             with input_output_json.open() as f:
                 self.input_output = json.load(f)
         else:
-            logging.warning(f'No such file: "{input_output_json}"')
+            get_logger().warning(f'No such file: "{input_output_json}"')
 
         # Load solutions
         self.solutions: Iterable[str] = []
