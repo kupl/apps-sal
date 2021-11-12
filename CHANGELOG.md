@@ -4,6 +4,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+### Fixed
+- Use project logger instead of configuring root logger.
+
 ## [v0.0.2](https://github.com/kupl/apps-sal/releases/v0.0.2) - 2021-11-08
 
 ### Changed
