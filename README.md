@@ -18,26 +18,7 @@ You can install `apps-sal` using `pip` and `git`.
 Currently, the latest released version is `v0.1.0`.
 If you set ssh authentication with GitHub, you can install `apps-sal` by simply typing a following command:
 ```bash
-$ [sudo] pip3 install git+ssh://git@github.com/kupl/apps-sal.git@v0.1.0
-```
-If you do not use ssh authentication, you can install `apps-sal` with following commands:
-```bash
-$ git clone -b v0.1.0 https://github.com/kupl/apps-sal.git
-$ cd apps-sal
-apps-sal $ [sudo] pip3 install .
-```
-
-#### Currently Developing Version
-Instead of installing latest released version, you can install currently developing snapshot in a similar way.
-Use the following command to install currently developing `apps_sal` with pip and ssh:
-```bash
-$ [sudo] pip3 install git+ssh://git@github.com/kupl/apps-sal.git # clone from main branch
-```
-Or, if you do not use ssh authentication:
-```bash
-$ git clone https://github.com/kupl/apps-sal.git # clone from main branch
-$ cd apps-sal
-apps-sal $ [sudo] pip3 install .
+$ [sudo] pip3 install git+https://github.com/kupl/apps-sal.git@v0.1.0
 ```
 
 ### Examples
