@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Callable
 from typing import List
 from typing import Union
 
@@ -12,9 +13,7 @@ class Dataset:
 
     def __init__(self, path: Union[str, Path]) -> None:
         self.path: Path = Path(path)
-        self.data: List[DataElement] = list(
-            map(DataElement, self.path.glob('*')))
-        self.index: int = 0
+        self.data: List[DataElement] = [DataElement(p) for p in self.path.glob('*')]
 
     def __len__(self) -> int:
         return len(self.data)
@@ -27,6 +26,14 @@ class Dataset:
 
     def __getitem__(self, idx: int) -> DataElement:
         return self.data[idx]
+
+    def filter(self, filtering_function: Callable[[DataElement], bool]) -> Dataset:
+        self.data = [elem for elem in self.data if filtering_function(elem)]
+        return self
+
+    def map(self, mapping_function: Callable[[DataElement], DataElement]) -> Dataset:
+        self.data = [mapping_function(elem) for elem in self.data]
+        return self
 
 
 def load_dataset(path: Union[str, Path]) -> Dataset:
