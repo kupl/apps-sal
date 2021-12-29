@@ -13,7 +13,7 @@ class Dataset:
 
     def __init__(self, path: Union[str, Path]) -> None:
         self.path: Path = Path(path)
-        self.data: List[DataElement] = [DataElement(p) for p in self.path.glob('*')]
+        self.data: List[DataElement] = [DataElement(p) for p in self.path.glob('*') if not p.name.endswith('buggy')]
 
     def __len__(self) -> int:
         return len(self.data)
