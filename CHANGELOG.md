@@ -4,6 +4,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+### Added
+- List utility functions (`map` and `filter`) for processing `Dataset`.
+
 ### Changed
 - Installation method with `https` instead of `ssh`.
 
