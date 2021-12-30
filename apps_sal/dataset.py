@@ -26,6 +26,13 @@ class Dataset:
     def __getitem__(self, idx: int) -> DataElement:
         return self.data[idx]
 
+    def load_per_program(self) -> Dataset:
+        self.data = sum((elem.load_per_program() for elem in self.data), [])
+        return self
+
+    def to_jsonl(self, *args, **kwargs) -> str:
+        return '\n'.join((elem.to_json(*args, **kwargs) for elem in self.data))
+
 
 def load_dataset(path: Union[str, Path]) -> Dataset:
     return Dataset(path)

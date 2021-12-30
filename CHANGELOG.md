@@ -4,6 +4,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+### Added
+- Implement exporting dataset as `jsonl` format.
+
 ### Changed
 - Installation method with `https` instead of `ssh`.
 

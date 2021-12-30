@@ -1,6 +1,8 @@
+from __future__ import annotations
 from pathlib import Path
 from typing import Dict
 from typing import Iterable
+from typing import List
 from typing import Union
 import json
 
@@ -39,5 +41,50 @@ class DataElement:
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
 
+    def load_per_program(self) -> List[DataElement]:
+        elements = []
+        if len(self.solutions) == 0:
+            get_logger().warning(f'This problem is discarded since it does not have any reference solution: {self.path}')
+        for solution in self.solutions:
+            element = DataElementPerProgram(self.path, self.text, self.metadata, self.input_output, solution)
+            elements.append(element)
+        return elements
+
+    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
+        data = {'text': self.text}
+        if with_solutions:
+            data['solutions'] = self.solutions
+        if with_input_output:
+            data['input_output'] = self.input_output
+        if with_metadata:
+            data['path'] = str(self.path)
+            data['metadata'] = self.metadata
+        return json.dumps(data)
+
     def score(self, program: str) -> float:
         raise NotImplementedError('app_sal.dataelement.DataElement.score is not implemeted.')
+
+
+class DataElementPerProgram(DataElement):
+
+    def __init__(self, path: Union[str, Path], text: str, metadata: Dict[str, str], io: Dict[str, str], solution: str) -> None:
+        self.path: Path = Path(path)
+        self.text: str = text
+        self.metadata: Dict[str, str] = metadata
+        self.input_output: Dict[str, str] = io
+        self.solution: str = solution
+        self.solutions: List[str] = [self.solution]
+
+    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
+        data = {'text': self.text}
+        if with_solutions:
+            data['solution'] = self.solution
+        if with_input_output:
+            data['input_output'] = self.input_output
+        if with_metadata:
+            data['path'] = str(self.path)
+            data['metadata'] = self.metadata
+        return json.dumps(data)
+
+    def __repr__(self) -> str:
+        return f'DataElementPerProgram("{self.path}")'
