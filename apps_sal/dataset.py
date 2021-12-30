@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Callable
 from typing import List
 from typing import Union
 
@@ -25,6 +26,14 @@ class Dataset:
 
     def __getitem__(self, idx: int) -> DataElement:
         return self.data[idx]
+
+    def filter(self, filtering_function: Callable[[DataElement], bool]) -> Dataset:
+        self.data = [elem for elem in self.data if filtering_function(elem)]
+        return self
+
+    def map(self, mapping_function: Callable[[DataElement], DataElement]) -> Dataset:
+        self.data = [mapping_function(elem) for elem in self.data]
+        return self
 
     def load_per_program(self) -> Dataset:
         self.data = sum((elem.load_per_program() for elem in self.data), [])
