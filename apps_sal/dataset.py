@@ -42,6 +42,13 @@ class Dataset:
     def to_jsonl(self, *args, **kwargs) -> str:
         return '\n'.join((elem.to_json(*args, **kwargs) for elem in self.data))
 
+    def query(self, id: Union[int, str]) -> Union[DataElement, None]:
+        id = f'{id:04d}'
+        for elem in self.data:
+            if str(elem.path).endswith(id):
+                return elem
+        return None
+
 
 def load_dataset(path: Union[str, Path]) -> Dataset:
     return Dataset(path)

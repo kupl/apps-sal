@@ -7,6 +7,7 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 ### Added
 - List utility functions (`map` and `filter`) for processing `Dataset`.
 - Implement exporting dataset as `jsonl` format.
+- Querying a data element with its id.
 
 ### Changed
 - Installation method with `https` instead of `ssh`.
