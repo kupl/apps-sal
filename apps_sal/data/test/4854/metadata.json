@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/sort",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

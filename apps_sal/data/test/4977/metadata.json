@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/exactlyelectrical",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/tetris",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

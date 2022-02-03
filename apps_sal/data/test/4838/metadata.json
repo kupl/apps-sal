@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/stopwatch",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

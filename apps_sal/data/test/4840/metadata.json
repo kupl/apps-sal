@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/dicegame",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

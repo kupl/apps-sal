@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/greetings2",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

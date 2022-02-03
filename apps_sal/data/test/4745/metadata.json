@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/aprizenoonecanwin",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

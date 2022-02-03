@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/harshadnumbers",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

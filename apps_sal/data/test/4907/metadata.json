@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/breakingbranches",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/damagedequation",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/crne",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/cetiri",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/heirsdilemma",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

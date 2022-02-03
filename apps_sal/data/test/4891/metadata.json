@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/bijele",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/proofs",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

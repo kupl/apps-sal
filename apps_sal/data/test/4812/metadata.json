@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/rhyming",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

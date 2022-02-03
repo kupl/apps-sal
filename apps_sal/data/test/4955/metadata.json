@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/musicalscales",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

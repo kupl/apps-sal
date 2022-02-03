@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/ada",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

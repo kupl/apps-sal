@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/redrover",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

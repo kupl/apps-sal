@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/jazzitup",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

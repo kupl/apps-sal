@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/anotherbrick",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

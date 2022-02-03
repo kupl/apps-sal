@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/delimitersoup",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

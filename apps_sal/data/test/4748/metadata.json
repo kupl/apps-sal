@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/pyramidkonstruktion",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

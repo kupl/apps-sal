@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/anthonyanddiablo",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/drunkvigenere",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

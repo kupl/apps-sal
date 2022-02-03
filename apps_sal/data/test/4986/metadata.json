@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/keyboardd",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

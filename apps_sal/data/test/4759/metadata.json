@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/batterup",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

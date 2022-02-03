@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/millionairemadness",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

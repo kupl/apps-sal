@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/recount",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

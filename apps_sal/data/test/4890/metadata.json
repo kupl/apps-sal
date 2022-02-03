@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/keepitcool",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }

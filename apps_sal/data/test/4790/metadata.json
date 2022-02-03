@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/yinyangstones",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio"
+    ]
 }
