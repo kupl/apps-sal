@@ -1,3 +1,6 @@
 {
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }
