@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/leftandright",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/flygskam",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

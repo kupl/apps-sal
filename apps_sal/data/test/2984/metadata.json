@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/trainboarding",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

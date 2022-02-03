@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/trojke",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

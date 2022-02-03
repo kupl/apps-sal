@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/dobra",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

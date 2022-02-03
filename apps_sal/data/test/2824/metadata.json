@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/pullingtheirweight",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

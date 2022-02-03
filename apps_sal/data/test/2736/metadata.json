@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/terraces",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

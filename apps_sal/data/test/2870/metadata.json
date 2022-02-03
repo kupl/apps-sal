@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/irrationaldivision",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

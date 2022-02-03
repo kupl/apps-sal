@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/greetingcard",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

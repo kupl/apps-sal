@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/annoyedcoworkers",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/cowcrane",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

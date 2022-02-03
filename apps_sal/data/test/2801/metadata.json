@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/eatingeverything",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

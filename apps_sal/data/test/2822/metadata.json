@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/forestforthetrees",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

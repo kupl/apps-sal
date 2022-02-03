@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/visualgo",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

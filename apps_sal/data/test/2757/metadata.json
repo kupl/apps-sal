@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/decisions",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

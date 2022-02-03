@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/linearrecurrence",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

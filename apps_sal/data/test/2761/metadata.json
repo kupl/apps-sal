@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/biggesttriangle",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

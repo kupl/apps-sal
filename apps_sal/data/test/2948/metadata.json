@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/sabor",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

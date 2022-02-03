@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/zapis",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

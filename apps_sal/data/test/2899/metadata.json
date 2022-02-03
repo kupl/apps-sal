@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/hyacinth",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

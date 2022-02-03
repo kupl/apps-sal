@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/beehives2",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

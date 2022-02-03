@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/kaleidoscopicpalindromes",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

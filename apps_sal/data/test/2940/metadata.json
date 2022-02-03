@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/control",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

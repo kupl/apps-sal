@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/famouspagoda",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

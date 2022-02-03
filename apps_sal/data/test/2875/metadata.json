@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/inverteddeck",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

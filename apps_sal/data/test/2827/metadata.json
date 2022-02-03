@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/hoppers",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }

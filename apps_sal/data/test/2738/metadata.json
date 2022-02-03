@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/gears2",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio"
+    ]
 }
