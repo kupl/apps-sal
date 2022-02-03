@@ -3,6 +3,7 @@ from io import StringIO
 from itertools import chain
 from typing import Callable
 from typing import Dict
+from unittest.mock import mock_open
 from unittest.mock import patch
 import types
 
@@ -29,6 +30,7 @@ def run_stdio(pgm: Callable[[], None], input: str) -> str:
 
     stdout = StringIO()
 
+    @patch('builtins.open', mock_open(read_data=input))
     @patch('sys.stdin', StringIO(input))
     @patch('sys.stdout', stdout)
     def _inner_run_stdio(_pgm):
