@@ -7,6 +7,7 @@ from typing import Union
 import json
 
 from apps_sal.logger import get_logger
+from apps_sal.score import score_stdio_exact
 
 
 class DataElement:
@@ -62,6 +63,8 @@ class DataElement:
         return json.dumps(data)
 
     def score(self, program: str) -> float:
+        if 'stdio' in self.metadata['types'] and 'exact' in self.metadata['types']:
+            return score_stdio_exact(program, self.input_output)
         raise NotImplementedError('app_sal.dataelement.DataElement.score is not implemeted.')
 
 
