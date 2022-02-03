@@ -44,17 +44,23 @@ def run_stdio(pgm: Callable[[], None], input: str) -> str:
 def score_stdio_exact(pgm: str, in_out: Dict[str, str]) -> float:
 
     # make callable program
-    pgm = make_stdio_runnable(pgm)
+    try:
+        pgm = make_stdio_runnable(pgm)
 
-    # test for each io
-    results = []
-    for input, expected in zip(in_out['inputs'], in_out['outputs']):
+        # test for each io
+        results = []
+        for input, expected in zip(in_out['inputs'], in_out['outputs']):
 
-        # run program
-        output = run_stdio(pgm, input)
+            try:
+                # run program
+                output = run_stdio(pgm, input)
 
-        # recored result
-        results.append(expected.strip() == output.strip())
+                # recored result
+                results.append(expected.strip() == output.strip())
+            except Exception:
+                results.append(False)
 
-    score = sum(results) / len(results)
+        score = sum(results) / len(results)
+    except Exception:
+        score = 0.0
     return score
