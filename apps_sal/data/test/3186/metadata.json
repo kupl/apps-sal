@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/classicalcounting",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

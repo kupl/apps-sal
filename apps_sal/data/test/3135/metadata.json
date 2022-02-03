@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/powersigns",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

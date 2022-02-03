@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/prosjek2",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

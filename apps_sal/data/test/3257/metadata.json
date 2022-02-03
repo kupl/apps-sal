@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/carpet",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/haikuformatting",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

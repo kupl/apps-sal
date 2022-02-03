@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/streaming",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

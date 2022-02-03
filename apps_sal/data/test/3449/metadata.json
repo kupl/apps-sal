@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/darkness",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

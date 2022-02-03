@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/kindergarten",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

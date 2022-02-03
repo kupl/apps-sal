@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/archimedes",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

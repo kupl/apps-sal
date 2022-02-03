@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/paired",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

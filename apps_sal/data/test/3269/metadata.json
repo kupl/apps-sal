@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/parovi",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

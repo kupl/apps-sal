@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/cuttingthenecklace",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

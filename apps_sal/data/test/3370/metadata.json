@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/skysthelimit",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

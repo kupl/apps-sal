@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/witchdance",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

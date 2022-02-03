@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/applescherriesmangos",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

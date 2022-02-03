@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/learningtocode",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

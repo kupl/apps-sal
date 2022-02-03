@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/radar",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

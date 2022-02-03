@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/slalom2",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

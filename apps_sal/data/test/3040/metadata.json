@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/repeatedsubstrings",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/infinite2darray",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }

@@ -1,4 +1,7 @@
 {
     "url": "https://open.kattis.com/problems/atlantis",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio"
+    ]
 }
