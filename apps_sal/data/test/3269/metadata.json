@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/parovi",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }
