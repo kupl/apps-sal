@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/extensiveor",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

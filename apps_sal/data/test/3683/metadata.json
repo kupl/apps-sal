@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/minigolf",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

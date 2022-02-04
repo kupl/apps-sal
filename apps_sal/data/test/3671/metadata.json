@@ -2,6 +2,7 @@
     "difficulty": "competition",
     "url": "https://open.kattis.com/problems/konsultarbeten",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

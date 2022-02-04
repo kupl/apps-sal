@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/deckrandomisation",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

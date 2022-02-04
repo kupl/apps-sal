@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/allkill",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

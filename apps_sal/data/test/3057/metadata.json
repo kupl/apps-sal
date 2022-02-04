@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/more10",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

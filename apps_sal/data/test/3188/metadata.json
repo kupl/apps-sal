@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/svemir",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

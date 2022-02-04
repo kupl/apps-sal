@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/kolone",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

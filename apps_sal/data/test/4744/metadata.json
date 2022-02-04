@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/cardboardcontainer",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

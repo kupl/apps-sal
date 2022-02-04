@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/findmyfamily",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

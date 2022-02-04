@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/bumped",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

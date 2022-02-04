@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/flagquiz",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

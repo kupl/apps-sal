@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/cool1",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

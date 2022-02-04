@@ -2,6 +2,7 @@
     "difficulty": "competition",
     "url": "https://open.kattis.com/problems/youbethejudge",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

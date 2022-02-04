@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/spam",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

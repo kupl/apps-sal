@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/abc",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }
