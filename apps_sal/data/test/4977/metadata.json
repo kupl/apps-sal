@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/exactlyelectrical",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

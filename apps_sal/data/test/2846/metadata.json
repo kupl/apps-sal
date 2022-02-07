@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/hindex",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }
