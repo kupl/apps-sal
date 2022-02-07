@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/taxing",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

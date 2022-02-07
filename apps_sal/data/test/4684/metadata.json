@@ -1,6 +1,7 @@
 {
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "exact"
     ]
 }
