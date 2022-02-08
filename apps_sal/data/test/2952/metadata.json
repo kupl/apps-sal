@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/eatingout",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

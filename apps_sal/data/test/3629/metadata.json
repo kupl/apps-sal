@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/crazedboar",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

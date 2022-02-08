@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/slatkisi",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }
