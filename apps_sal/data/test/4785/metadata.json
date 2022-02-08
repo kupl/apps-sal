@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/hissingmicrophone",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

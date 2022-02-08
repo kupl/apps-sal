@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/divideandconquer",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

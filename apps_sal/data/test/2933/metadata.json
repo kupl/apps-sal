@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/walrusweights",
     "difficulty": "interview",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

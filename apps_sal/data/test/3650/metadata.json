@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/slidingblocks",
     "difficulty": "competition",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }

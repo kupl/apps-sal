@@ -2,6 +2,7 @@
     "url": "https://open.kattis.com/problems/heirsdilemma",
     "difficulty": "introductory",
     "types": [
-        "stdio"
+        "stdio",
+        "no_solution"
     ]
 }
