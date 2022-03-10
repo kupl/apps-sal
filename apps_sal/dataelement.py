@@ -66,9 +66,9 @@ class DataElement:
         return json.dumps(data)
 
     def score(self, program: str) -> float:
-        if 'stdio' in self.metadata['types'] and 'exact' in self.metadata['types']:
-            return score_stdio_exact(program, self.input_output)
-        raise NotImplementedError('app_sal.dataelement.DataElement.score is not implemeted.')
+        if not ('stdio' in self.metadata['types'] and 'exact' in self.metadata['types']):
+            get_logger().warning('Problem without "stdio" and "exact" tags. This may consider your program wrong even if it is correct.')
+        return score_stdio_exact(program, self.input_output)
 
 
 class DataElementPerProgram(DataElement):
