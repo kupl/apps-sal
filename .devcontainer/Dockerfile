@@ -26,3 +26,6 @@ RUN useradd \
         -m -d /home/${USERNAME} -k /etc/skel \
         ${USERNAME} && \
     sed -i -e 's/%sudo.*/%sudo\tALL=(ALL:ALL)\tNOPASSWD:ALL/g' /etc/sudoers
+
+USER ${USERNAME}
+RUN touch /home/${USERNAME}/.sudo_as_admin_successful
