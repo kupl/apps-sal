@@ -15,6 +15,7 @@ class DataElement:
     def __init__(self, path: Union[str, Path]) -> None:
         # Base directory
         self.path: Path = Path(path)
+        self.id: str = self.path.name
 
         # Load natural language question
         with (self.path / 'question.txt').open() as f:
@@ -52,7 +53,9 @@ class DataElement:
         return elements
 
     def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
-        data = {'text': self.text}
+        data = {}
+        data['id'] = self.id
+        data['text'] = self.text
         if with_solutions:
             data['solutions'] = self.solutions
         if with_input_output:
