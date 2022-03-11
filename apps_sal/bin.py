@@ -28,12 +28,15 @@ def load_json(path: Union[str, Path]) -> Dict[str, List[str]]:
     return json.loads(path.read_text('utf-8'))
 
 
-def print_in_upperline(*s, upper: int = 0) -> None:
+def print_in_upperline(*s, upper: int = 0, filemode: bool = False) -> None:
     if len(s) > 0:
-        to_upper_line = '\033[F' * upper
+        to_upper_line = ''
+        if not filemode:
+            to_upper_line = to_upper_line + '\033[F' * upper
         print(to_upper_line + s[0], *s[1:])
-        if upper >= 1:
-            print('\n' * (upper - 1), end='', flush=True)
+        if not filemode:
+            if upper >= 1:
+                print('\n' * (upper - 1), end='', flush=True)
 
 
 class NewlineMonitor:
@@ -70,6 +73,7 @@ def main(argv=None):
     parser.add_argument('-s', '--set', default='test', choices=['train', 'test'], help='set to use (default=test)')
     parser.add_argument('-t', '--target', default='apps.jsonl', type=str, metavar='<*.jsonl|*.json>', help='file that has program data (apps.jsonl)')
     parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>', help='time budget for each program in eval mode (default=None)')
+    parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
     dataset_loader = {
@@ -92,11 +96,11 @@ def main(argv=None):
 
         result = {}
         for key, programs in target.items():
-            print(f'Problem: {key}\n')
+            print(f'Problem: {key}' + ('' if args.filemode else '\n'))
             problem = dataset.query(key)
             printed_lines = 1
             for i, program in enumerate(programs):
-                print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines)
+                print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
                 with NewlineMonitor() as monitor:
                     score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
@@ -105,7 +109,7 @@ def main(argv=None):
                     break
             else:
                 result[key] = 'failed'
-            print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines)
+            print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines, filemode=args.filemode)
             print()
 
         total = len(target)
