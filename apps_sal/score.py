@@ -3,9 +3,13 @@ from io import StringIO
 from itertools import chain
 from typing import Callable
 from typing import Dict
+from typing import Union
 from unittest.mock import mock_open
 from unittest.mock import patch
+import multiprocessing as mp
 import types
+
+from apps_sal.logger import get_logger
 
 
 def make_stdio_runnable(pgm: str) -> Callable[[], None]:
@@ -43,10 +47,10 @@ def run_stdio(pgm: Callable[[], None], input: str) -> str:
     return stdout.getvalue()
 
 
-def score_stdio_exact(pgm: str, in_out: Dict[str, str]) -> float:
+def score_stdio_exact(pgm: str, in_out: Dict[str, str], timeout: Union[None, int] = None) -> float:
 
-    # make callable program
     try:
+        # make callable program
         pgm = make_stdio_runnable(pgm)
 
         # test for each io
@@ -55,11 +59,15 @@ def score_stdio_exact(pgm: str, in_out: Dict[str, str]) -> float:
 
             try:
                 # run program
-                output = run_stdio(pgm, input)
+                with mp.Pool(processes=1) as pool:
+                    output = pool.apply_async(run_stdio, (pgm, input))
+                    output = output.get(timeout)
 
                 # recored result
                 results.append(expected.strip() == output.strip())
-            except Exception:
+            except Exception as exception:
+                if isinstance(exception, mp.TimeoutError):
+                    get_logger().warning('Timeout while evaluating program.')
                 results.append(False)
 
         score = sum(results) / len(results)

@@ -65,10 +65,10 @@ class DataElement:
             data['metadata'] = self.metadata
         return json.dumps(data)
 
-    def score(self, program: str) -> float:
+    def score(self, program: str, timeout: Union[None, int] = None) -> float:
         if not ('stdio' in self.metadata['types'] and 'exact' in self.metadata['types']):
             get_logger().warning('Problem without "stdio" and "exact" tags. This may consider your program wrong even if it is correct.')
-        return score_stdio_exact(program, self.input_output)
+        return score_stdio_exact(program, self.input_output, timeout=timeout)
 
 
 class DataElementPerProgram(DataElement):

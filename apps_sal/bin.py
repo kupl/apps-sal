@@ -69,6 +69,7 @@ def main(argv=None):
     parser.add_argument('-m', '--mode', default='eval', choices=['save', 'eval'], help='mode (default=eval)')
     parser.add_argument('-s', '--set', default='test', choices=['train', 'test'], help='set to use (default=test)')
     parser.add_argument('-t', '--target', default='apps.jsonl', type=str, metavar='<*.jsonl|*.json>', help='file that has program data (apps.jsonl)')
+    parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>', help='time budget for each program in eval mode (default=None)')
     args = parser.parse_args(argv)
 
     dataset_loader = {
@@ -97,7 +98,7 @@ def main(argv=None):
             for i, program in enumerate(programs):
                 print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines)
                 with NewlineMonitor() as monitor:
-                    score = problem.score(program)
+                    score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
                 if score == 1.0:
                     result[key] = 'solved'
