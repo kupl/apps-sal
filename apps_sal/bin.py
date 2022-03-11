@@ -95,7 +95,7 @@ def main(argv=None):
             problem = dataset.query(key)
             printed_lines = 1
             for i, program in enumerate(programs):
-                print_in_upperline(f' Status: evaluating candidate {i + 1} {printed_lines}', upper=printed_lines)
+                print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines)
                 with NewlineMonitor() as monitor:
                     score = problem.score(program)
                 printed_lines += monitor.newlines
