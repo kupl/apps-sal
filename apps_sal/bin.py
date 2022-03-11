@@ -1,3 +1,5 @@
+from __future__ import annotations
+from io import StringIO
 from typing import Dict
 from typing import List
 from typing import Union
@@ -24,6 +26,38 @@ def load_jsonl(path: Union[str, Path]) -> Dict[str, List[str]]:
 def load_json(path: Union[str, Path]) -> Dict[str, List[str]]:
     path = Path(path)
     return json.loads(path.read_text('utf-8'))
+
+
+def print_in_upperline(*s, upper: int = 0) -> None:
+    if len(s) > 0:
+        to_upper_line = '\033[F' * upper
+        print(to_upper_line + s[0], *s[1:])
+        if upper >= 1:
+            print('\n' * (upper - 1), end='', flush=True)
+
+
+class NewlineMonitor:
+
+    def __init__(self):
+        # self.newlines: int = 0
+        self.stream: StringIO = StringIO()
+        self.stream.close = lambda _: 1
+        self.out: Union[None, str] = None
+
+    def __enter__(self) -> NewlineMonitor:
+        sys.stdout = self.stream
+        sys.stderr = self.stream
+        return self
+
+    def __exit__(self, *_) -> None:
+        sys.stdout = sys.__stdout__
+        sys.stderr = sys.__stderr__
+        self.out = self.stream.getvalue()
+        print(self.out, end='', flush=True)
+
+    @property
+    def newlines(self) -> int:
+        return self.out.count('\n')
 
 
 def main(argv=None):
@@ -57,17 +91,20 @@ def main(argv=None):
 
         result = {}
         for key, programs in target.items():
-            print(f'Problem: {key}')
+            print(f'Problem: {key}\n')
             problem = dataset.query(key)
+            printed_lines = 1
             for i, program in enumerate(programs):
-                print(f'\rStatus: evaluating candidate {i + 1}', end='', flush=True)
-                score = problem.score(program)
+                print_in_upperline(f' Status: evaluating candidate {i + 1} {printed_lines}', upper=printed_lines)
+                with NewlineMonitor() as monitor:
+                    score = problem.score(program)
+                printed_lines += monitor.newlines
                 if score == 1.0:
                     result[key] = 'solved'
                     break
             else:
                 result[key] = 'failed'
-            print(f'\rStatus: {result[key]}                        ')
+            print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines)
             print()
 
         total = len(target)
