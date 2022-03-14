@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/kingofthewaves",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

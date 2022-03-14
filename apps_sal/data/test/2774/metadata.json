@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/joggers",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

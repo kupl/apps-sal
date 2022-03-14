@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/stoichiometry",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

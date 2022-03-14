@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/poplocavanje",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

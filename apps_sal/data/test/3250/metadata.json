@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/divideandconquer",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

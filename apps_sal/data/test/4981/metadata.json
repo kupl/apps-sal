@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/abc",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

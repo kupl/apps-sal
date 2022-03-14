@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/transitcard",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

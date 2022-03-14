@@ -1,1 +1,8 @@
-{"difficulty": "competition", "url": "https://open.kattis.com/problems/longestcommonsubsequence"}
+{
+    "difficulty": "competition",
+    "url": "https://open.kattis.com/problems/longestcommonsubsequence",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
+}

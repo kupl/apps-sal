@@ -7,6 +7,7 @@ from typing import Union
 import json
 
 from apps_sal.logger import get_logger
+from apps_sal.score import score_stdio_exact
 
 
 class DataElement:
@@ -14,6 +15,7 @@ class DataElement:
     def __init__(self, path: Union[str, Path]) -> None:
         # Base directory
         self.path: Path = Path(path)
+        self.id: str = self.path.name
 
         # Load natural language question
         with (self.path / 'question.txt').open() as f:
@@ -51,7 +53,9 @@ class DataElement:
         return elements
 
     def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
-        data = {'text': self.text}
+        data = {}
+        data['id'] = self.id
+        data['text'] = self.text
         if with_solutions:
             data['solutions'] = self.solutions
         if with_input_output:
@@ -61,8 +65,10 @@ class DataElement:
             data['metadata'] = self.metadata
         return json.dumps(data)
 
-    def score(self, program: str) -> float:
-        raise NotImplementedError('app_sal.dataelement.DataElement.score is not implemeted.')
+    def score(self, program: str, timeout: Union[None, int] = None) -> float:
+        if not ('stdio' in self.metadata['types'] and 'exact' in self.metadata['types']):
+            get_logger().warning('Problem without "stdio" and "exact" tags. This may consider your program wrong even if it is correct.')
+        return score_stdio_exact(program, self.input_output, timeout=timeout)
 
 
 class DataElementPerProgram(DataElement):

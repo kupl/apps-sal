@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/inquiryi",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

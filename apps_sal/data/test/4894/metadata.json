@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/musicalnotation",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

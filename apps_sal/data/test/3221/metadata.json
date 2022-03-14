@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/gingercandy",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

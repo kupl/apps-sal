@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/enjoyingelderberries",
-    "difficulty": "competition"
+    "difficulty": "competition",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

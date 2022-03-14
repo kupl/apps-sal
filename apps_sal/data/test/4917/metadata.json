@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/cookingwater",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

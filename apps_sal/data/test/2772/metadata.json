@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/monk",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

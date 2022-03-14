@@ -20,4 +20,9 @@ setup(
     setup_requires=[],
     install_requires=[],
     dependency_links=[],
+    entry_points={
+        'console_scripts': [
+            'apps-sal=apps_sal.bin:main'
+        ]
+    }
 )

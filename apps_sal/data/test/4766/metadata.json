@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/simonsays",
-    "difficulty": "introductory"
+    "difficulty": "introductory",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }

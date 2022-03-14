@@ -1,4 +1,8 @@
 {
     "url": "https://open.kattis.com/problems/powersof2easy",
-    "difficulty": "interview"
+    "difficulty": "interview",
+    "types": [
+        "stdio",
+        "no_solution"
+    ]
 }
