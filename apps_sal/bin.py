@@ -113,7 +113,7 @@ def main(argv=None):
                     score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
                 if score == 1.0:
-                    result[key] = 'solved'
+                    result[key] = 'passed'
                     break
             else:
                 result[key] = 'failed'
@@ -121,5 +121,5 @@ def main(argv=None):
             print()
 
         total = len(target)
-        solved = sum((1 for r in result if r == 'solved'))
-        print(f'Solve rate: {solved} / {total} ({solved / total * 100:.2f}%)')
+        passed = sum((1 for r in result if r == 'passed'))
+        print(f'Pass rate: {passed} / {total} ({passed / total * 100:.2f}%)')
