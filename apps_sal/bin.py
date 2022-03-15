@@ -102,12 +102,15 @@ def main(argv=None):
         for key, programs in target.items():
             if int(key) < args.start or int(key) >= args.end:
                 continue
-            print(f'Problem: {key}' + ('' if args.filemode else '\n'))
+            print(f'Problem: {key}')
             evaluated += 1
             problem = dataset.query(key)
             if problem is None:
                 get_logger().warning('No problem is found. Skipped. Index: %s', key)
+                print()
                 continue
+            if not args.filemode:
+                print()
             printed_lines = 1
             for i, program in enumerate(programs):
                 print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
