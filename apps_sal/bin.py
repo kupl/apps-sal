@@ -125,5 +125,5 @@ def main(argv=None):
             print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines, filemode=args.filemode)
             print()
 
-        passed = sum((1 for r in result if r == 'passed'))
+        passed = sum((1 for r in result.values() if r == 'passed'))
         print(f'Pass rate: {passed} / {evaluated} ({passed / evaluated * 100:.2f}%)')
