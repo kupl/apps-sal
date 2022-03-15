@@ -10,6 +10,7 @@ import sys
 
 from apps_sal import load_train_dataset
 from apps_sal import load_test_dataset
+from apps_sal.logger import get_logger
 
 
 def load_jsonl(path: Union[str, Path]) -> Dict[str, List[str]]:
@@ -102,6 +103,9 @@ def main(argv=None):
                 continue
             print(f'Problem: {key}' + ('' if args.filemode else '\n'))
             problem = dataset.query(key)
+            if problem is None:
+                get_logger().warning('No problem is found. Skipped. Index: %s', key)
+                continue
             printed_lines = 1
             for i, program in enumerate(programs):
                 print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
