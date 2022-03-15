@@ -98,10 +98,12 @@ def main(argv=None):
         target = target_loader(target)
 
         result = {}
+        evaluated = 0
         for key, programs in target.items():
             if int(key) < args.start or int(key) >= args.end:
                 continue
             print(f'Problem: {key}' + ('' if args.filemode else '\n'))
+            evaluated += 1
             problem = dataset.query(key)
             if problem is None:
                 get_logger().warning('No problem is found. Skipped. Index: %s', key)
@@ -120,6 +122,5 @@ def main(argv=None):
             print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines, filemode=args.filemode)
             print()
 
-        total = len(target)
         passed = sum((1 for r in result if r == 'passed'))
-        print(f'Pass rate: {passed} / {total} ({passed / total * 100:.2f}%)')
+        print(f'Pass rate: {passed} / {evaluated} ({passed / evaluated * 100:.2f}%)')
