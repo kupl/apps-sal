@@ -73,6 +73,8 @@ def main(argv=None):
     parser.add_argument('-s', '--set', default='test', choices=['train', 'test'], help='set to use (default=test)')
     parser.add_argument('-t', '--target', default='apps.jsonl', type=str, metavar='<*.jsonl|*.json>', help='file that has program data (apps.jsonl)')
     parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>', help='time budget for each program in eval mode (default=None)')
+    parser.add_argument('--start', default=0, type=int, metavar='<int>', help='start point of index range (default=0)')
+    parser.add_argument('--end', default=5000, type=int, metavar='<int>', help='end pint of index range (default=5000)')
     parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
@@ -96,6 +98,8 @@ def main(argv=None):
 
         result = {}
         for key, programs in target.items():
+            if int(key) < args.start or int(key) >= args.end:
+                continue
             print(f'Problem: {key}' + ('' if args.filemode else '\n'))
             problem = dataset.query(key)
             printed_lines = 1
