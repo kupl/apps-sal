@@ -10,6 +10,7 @@ import sys
 
 from apps_sal import load_train_dataset
 from apps_sal import load_test_dataset
+from apps_sal.logger import get_logger
 
 
 def load_jsonl(path: Union[str, Path]) -> Dict[str, List[str]]:
@@ -73,6 +74,8 @@ def main(argv=None):
     parser.add_argument('-s', '--set', default='test', choices=['train', 'test'], help='set to use (default=test)')
     parser.add_argument('-t', '--target', default='apps.jsonl', type=str, metavar='<*.jsonl|*.json>', help='file that has program data (apps.jsonl)')
     parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>', help='time budget for each program in eval mode (default=None)')
+    parser.add_argument('--start', default=0, type=int, metavar='<int>', help='start point of index range (default=0)')
+    parser.add_argument('--end', default=5000, type=int, metavar='<int>', help='end pint of index range (default=5000)')
     parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
@@ -95,9 +98,19 @@ def main(argv=None):
         target = target_loader(target)
 
         result = {}
+        evaluated = 0
         for key, programs in target.items():
-            print(f'Problem: {key}' + ('' if args.filemode else '\n'))
+            if int(key) < args.start or int(key) >= args.end:
+                continue
+            print(f'Problem: {key}')
+            evaluated += 1
             problem = dataset.query(key)
+            if problem is None:
+                get_logger().warning('No problem is found. Skipped. Index: %s', key)
+                print()
+                continue
+            if not args.filemode:
+                print()
             printed_lines = 1
             for i, program in enumerate(programs):
                 print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
@@ -105,13 +118,12 @@ def main(argv=None):
                     score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
                 if score == 1.0:
-                    result[key] = 'solved'
+                    result[key] = 'passed'
                     break
             else:
                 result[key] = 'failed'
             print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines, filemode=args.filemode)
             print()
 
-        total = len(target)
-        solved = sum((1 for r in result if r == 'solved'))
-        print(f'Solve rate: {solved} / {total} ({solved / total * 100:.2f}%)')
+        passed = sum((1 for r in result.values() if r == 'passed'))
+        print(f'Pass rate: {passed} / {evaluated} ({passed / evaluated * 100:.2f}%)')

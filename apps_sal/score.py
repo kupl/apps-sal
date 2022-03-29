@@ -30,7 +30,10 @@ def make_stdio_runnable(pgm: str) -> Callable[[], None]:
     return getattr(module, 'code')
 
 
-def run_stdio(pgm: Callable[[], None], input: str) -> str:
+def run_stdio(pgm: str, input: str) -> str:
+
+    # make callable program
+    pgm = make_stdio_runnable(pgm)
 
     stdout = StringIO()
 
@@ -50,9 +53,6 @@ def run_stdio(pgm: Callable[[], None], input: str) -> str:
 def score_stdio_exact(pgm: str, in_out: Dict[str, str], timeout: Union[None, int] = None) -> float:
 
     try:
-        # make callable program
-        pgm = make_stdio_runnable(pgm)
-
         # test for each io
         results = []
         for input, expected in zip(in_out['inputs'], in_out['outputs']):
