@@ -16,7 +16,7 @@ def pass_at_k(results: Dict[Union[int, str], List[float]], k: int = 1) -> float:
     for result in results.values():
         n = len(result)
         c = len([e for e in result if e >= 1.0])
-        correct.append(1 - math.comb(n - c, k) / math.comb(n, c))
+        correct.append(1 - math.comb(n - c, k) / math.comb(n, k))
     score = sum(correct)
     total = len(results)
     return score / total
