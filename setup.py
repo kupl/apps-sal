@@ -18,7 +18,9 @@ setup(
     packages=find_packages(include=('apps_sal',)),
     include_package_data=True,
     setup_requires=[],
-    install_requires=[],
+    install_requires=[
+        'tabulate'
+    ],
     dependency_links=[],
     entry_points={
         'console_scripts': [
