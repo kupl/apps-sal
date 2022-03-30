@@ -11,9 +11,15 @@ from apps_sal.dataiterator import DataIterator
 
 class Dataset:
 
-    def __init__(self, path: Union[str, Path]) -> None:
-        self.path: Path = Path(path)
-        self.data: List[DataElement] = [DataElement(p) for p in self.path.glob('*') if not p.name.endswith('buggy')]
+    def __init__(self, data: List[DataElement], name: Union[None, str] = None) -> None:
+        self.name: str = name if name is not None else 'APPS-SAL'
+        self.data: List[DataElement] = data
+
+    @classmethod
+    def from_path(cls, path: Union[str, Path]) -> Dataset:
+        path = Path(path)
+        data = [DataElement(p) for p in path.glob('*') if not p.name.endswith('buggy')]
+        return Dataset(data, str(path))
 
     def __len__(self) -> int:
         return len(self.data)
@@ -22,22 +28,22 @@ class Dataset:
         return DataIterator(self.data)
 
     def __repr__(self) -> str:
-        return f'Dataset("{self.path.name}")'
+        return f'Dataset("{self.name}")'
 
     def __getitem__(self, idx: int) -> DataElement:
         return self.data[idx]
 
     def filter(self, filtering_function: Callable[[DataElement], bool]) -> Dataset:
-        self.data = [elem for elem in self.data if filtering_function(elem)]
-        return self
+        data = [elem for elem in self.data if filtering_function(elem)]
+        return Dataset(data, self.name)
 
     def map(self, mapping_function: Callable[[DataElement], DataElement]) -> Dataset:
-        self.data = [mapping_function(elem) for elem in self.data]
-        return self
+        data = [mapping_function(elem) for elem in self.data]
+        return Dataset(data, self.name)
 
     def load_per_program(self) -> Dataset:
-        self.data = sum((elem.load_per_program() for elem in self.data), [])
-        return self
+        data = sum((elem.load_per_program() for elem in self.data), [])
+        return Dataset(data, self.name)
 
     def to_jsonl(self, *args, **kwargs) -> str:
         return '\n'.join((elem.to_json(*args, **kwargs) for elem in self.data))
@@ -51,15 +57,15 @@ class Dataset:
         return None
 
 
-def load_dataset(path: Union[str, Path]) -> Dataset:
-    return Dataset(path)
+def load_dataset_from_path(path: Union[str, Path]) -> Dataset:
+    return Dataset.from_path(path)
 
 
 def load_train_dataset() -> Dataset:
     filepath = Path(__file__).parent
-    return load_dataset(filepath / 'data/train')
+    return load_dataset_from_path(filepath / 'data/train')
 
 
 def load_test_dataset() -> Dataset:
     filepath = Path(__file__).parent
-    return load_dataset(filepath / 'data/test')
+    return load_dataset_from_path(filepath / 'data/test')
