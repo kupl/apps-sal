@@ -149,7 +149,7 @@ def main(argv=None):
                     score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
                 result[key].append(score)
-            print_in_upperline(f' Status: Done   Max score: {max(result[key])}                     ', upper=printed_lines, filemode=args.filemode)
+            print_in_upperline(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}                     ', upper=printed_lines, filemode=args.filemode)
             print()
 
         metrics = make_metric(args.metric, args.pass_at_k)
