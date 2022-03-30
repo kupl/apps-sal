@@ -1,4 +1,5 @@
 from __future__ import annotations
+from collections import defaultdict
 from io import StringIO
 from typing import Dict
 from typing import List
@@ -11,6 +12,10 @@ import sys
 from apps_sal import load_train_dataset
 from apps_sal import load_test_dataset
 from apps_sal.logger import get_logger
+from apps_sal.metric import Metric
+from apps_sal.metric import PassAtK
+from apps_sal.metric import StrictAccuracy
+from apps_sal.metric import TestcaseAccuracy
 
 
 def load_jsonl(path: Union[str, Path]) -> Dict[str, List[str]]:
@@ -38,6 +43,20 @@ def print_in_upperline(*s, upper: int = 0, filemode: bool = False) -> None:
         if not filemode:
             if upper >= 1:
                 print('\n' * (upper - 1), end='', flush=True)
+
+
+def make_metric(metrics: List[str], ks: List[int]) -> List[Metric]:
+    metric_objects = []
+    for metric in metrics:
+        if metric == 'pass@k':
+            for k in ks:
+                metric_objects.append(PassAtK(k))
+        else:
+            if metric == 'strict':
+                metric_objects.append(StrictAccuracy())
+            elif metric == 'testcase':
+                metric_objects.append(TestcaseAccuracy())
+    return metric_objects
 
 
 class NewlineMonitor:
@@ -70,12 +89,24 @@ def main(argv=None):
         argv = sys.argv[1:]
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-m', '--mode', default='eval', choices=['save', 'eval'], help='mode (default=eval)')
-    parser.add_argument('-s', '--set', default='test', choices=['train', 'test'], help='set to use (default=test)')
-    parser.add_argument('-t', '--target', default='apps.jsonl', type=str, metavar='<*.jsonl|*.json>', help='file that has program data (apps.jsonl)')
-    parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>', help='time budget for each program in eval mode (default=None)')
-    parser.add_argument('--start', default=0, type=int, metavar='<int>', help='start point of index range (default=0)')
-    parser.add_argument('--end', default=5000, type=int, metavar='<int>', help='end pint of index range (default=5000)')
+    parser.add_argument('-m', '--mode', default='eval', choices=['save', 'eval'],
+                        help='mode (default=eval)')
+    parser.add_argument('-s', '--set', default='test', choices=['train', 'test'],
+                        help='set to use (default=test)')
+    parser.add_argument('-t', '--target', default='apps.jsonl', type=str,
+                        metavar='<*.jsonl|*.json>',
+                        help='file that has program data (apps.jsonl)')
+    parser.add_argument('-to', '--timeout', default=None, type=int, metavar='<int>',
+                        help='time budget for each program in eval mode (default=None)')
+    parser.add_argument('--start', default=0, type=int, metavar='<int>',
+                        help='start point of index range (default=0)')
+    parser.add_argument('--end', default=5000, type=int, metavar='<int>',
+                        help='end pint of index range (default=5000)')
+    parser.add_argument('--metric', default=['strict'], nargs='+',
+                        choices=['strict', 'testcase', 'pass@k'],
+                        help='metric (default=strict)')
+    parser.add_argument('--pass-at-k', default=[1], nargs='+', metavar='<int>', type=int,
+                        help='k for pass@k (default=1)')
     parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
@@ -97,7 +128,7 @@ def main(argv=None):
         }[target.suffix]
         target = target_loader(target)
 
-        result = {}
+        result = defaultdict(list)
         evaluated = 0
         for key, programs in target.items():
             if int(key) < args.start or int(key) >= args.end:
@@ -117,13 +148,10 @@ def main(argv=None):
                 with NewlineMonitor() as monitor:
                     score = problem.score(program, timeout=args.timeout)
                 printed_lines += monitor.newlines
-                if score == 1.0:
-                    result[key] = 'passed'
-                    break
-            else:
-                result[key] = 'failed'
-            print_in_upperline(f' Status: {result[key]}                        ', upper=printed_lines, filemode=args.filemode)
+                result[key].append(score)
+            print_in_upperline(f' Status: Done   Max score: {max(result[key])}                     ', upper=printed_lines, filemode=args.filemode)
             print()
 
-        passed = sum((1 for r in result.values() if r == 'passed'))
-        print(f'Pass rate: {passed} / {evaluated} ({passed / evaluated * 100:.2f}%)')
+        metrics = make_metric(args.metric, args.pass_at_k)
+        for metric in metrics:
+            metric.print_report(result, dataset)
