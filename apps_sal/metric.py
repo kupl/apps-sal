@@ -18,7 +18,7 @@ def pass_at_k(results: Dict[Union[int, str], List[float]], k: int = 1) -> float:
         c = len([e for e in result if e >= 1.0])
         correct.append(1 - math.comb(n - c, k) / math.comb(n, c))
     score = sum(correct)
-    total = len(correct)
+    total = len(results)
     return score / total
 
 
@@ -35,7 +35,7 @@ def strict_accuracy(results: Dict[Union[int, str], List[float]]) -> float:
         else:
             correct.append(1)
     correct = sum(correct)
-    total = len(correct)
+    total = len(results)
     return correct / total
 
 
@@ -47,7 +47,7 @@ def testcase_accuracy(results: Dict[Union[int, str], List[float]]) -> float:
         else:
             get_logger().warning('No testcase evaluated. This problem is discarded.')
     correct = sum(correct)
-    total = len(correct)
+    total = len(results)
     return correct / total
 
 
