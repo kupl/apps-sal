@@ -29,11 +29,11 @@ def strict_accuracy(results: Dict[Union[int, str], List[float]]) -> float:
             get_logger().warning('No testcase evaluated. This problem is discarded.')
             continue
         for score in result:
-            if score < 1.0:
-                correct.append(0)
+            if score >= 1.0:
+                correct.append(1)
                 break
         else:
-            correct.append(1)
+            correct.append(0)
     correct = sum(correct)
     total = len(results)
     return correct / total
