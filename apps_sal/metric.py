@@ -94,26 +94,26 @@ class StrictAccuracy(Metric):
             introductories = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'introductory')
             introductories = [int(elem.id) for elem in introductories]
             introductory_results = {id: result for id, result in results.items() if int(id) in introductories}
-            introductory_accuracy = self(introductory_results)
-            entries.append(('introductory', len(introductory_results), introductory_accuracy * 100))
+            introductory_accuracy = self(introductory_results) * 100 if len(introductory_results) > 0 else None
+            entries.append(('introductory', len(introductory_results), introductory_accuracy))
 
             # interview
             interviews = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'interview')
             interviews = [int(elem.id) for elem in interviews]
             interview_results = {id: result for id, result in results.items() if int(id) in interviews}
-            interview_accuracy = self(interview_results)
-            entries.append(('interview', len(interview_results), interview_accuracy * 100))
+            interview_accuracy = self(interview_results) * 100 if len(interview_results) > 0 else None
+            entries.append(('interview', len(interview_results), interview_accuracy))
 
             # competition
             competitions = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'competition')
             competitions = [int(elem.id) for elem in competitions]
             competition_results = {id: result for id, result in results.items() if int(id) in competitions}
-            competition_accuracy = self(competition_results)
-            entries.append(('competition', len(competition_results), competition_accuracy * 100))
+            competition_accuracy = self(competition_results) * 100 if len(competition_results) > 0 else None
+            entries.append(('competition', len(competition_results), competition_accuracy))
 
         # total
-        total_accuracy = self(results)
-        entries.append(('total', len(results), total_accuracy * 100))
+        total_accuracy = self(results) * 100
+        entries.append(('total', len(results), total_accuracy))
 
         # print table
         redirect(tabulate(entries, headers=['', 'counts', 'strict accuracy (%)'], floatfmt='.2f'))
@@ -140,26 +140,26 @@ class TestcaseAccuracy(Metric):
             introductories = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'introductory')
             introductories = [int(elem.id) for elem in introductories]
             introductory_results = {id: result for id, result in results.items() if int(id) in introductories}
-            introductory_accuracy = self(introductory_results)
-            entries.append(('introductory', len(introductory_results), introductory_accuracy * 100))
+            introductory_accuracy = self(introductory_results) * 100 if len(introductory_results) > 0 else None
+            entries.append(('introductory', len(introductory_results), introductory_accuracy))
 
             # interview
             interviews = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'interview')
             interviews = [int(elem.id) for elem in interviews]
             interview_results = {id: result for id, result in results.items() if int(id) in interviews}
-            interview_accuracy = self(interview_results)
-            entries.append(('interview', len(interview_results), interview_accuracy * 100))
+            interview_accuracy = self(interview_results) * 100 if len(interview_results) > 0 else None
+            entries.append(('interview', len(interview_results), interview_accuracy))
 
             # competition
             competitions = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'competition')
             competitions = [int(elem.id) for elem in competitions]
             competition_results = {id: result for id, result in results.items() if int(id) in competitions}
-            competition_accuracy = self(competition_results)
-            entries.append(('competition', len(competition_results), competition_accuracy * 100))
+            competition_accuracy = self(competition_results) * 100 if len(competition_results) > 0 else None
+            entries.append(('competition', len(competition_results), competition_accuracy))
 
         # total
-        total_accuracy = self(results)
-        entries.append(('total', len(results), total_accuracy * 100))
+        total_accuracy = self(results) * 100
+        entries.append(('total', len(results), total_accuracy))
 
         # print table
         redirect(tabulate(entries, headers=['', 'counts', 'testcase accuracy (%)'], floatfmt='.2f'))
@@ -189,26 +189,26 @@ class PassAtK(Metric):
             introductories = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'introductory')
             introductories = [int(elem.id) for elem in introductories]
             introductory_results = {id: result for id, result in results.items() if int(id) in introductories}
-            introductory_accuracy = self(introductory_results)
-            entries.append(('introductory', len(introductory_results), introductory_accuracy * 100))
+            introductory_accuracy = self(introductory_results) * 100 if len(introductory_results) > 0 else None
+            entries.append(('introductory', len(introductory_results), introductory_accuracy))
 
             # interview
             interviews = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'interview')
             interviews = [int(elem.id) for elem in interviews]
             interview_results = {id: result for id, result in results.items() if int(id) in interviews}
-            interview_accuracy = self(interview_results)
-            entries.append(('interview', len(interview_results), interview_accuracy * 100))
+            interview_accuracy = self(interview_results) * 100 if len(interview_results) > 0 else None
+            entries.append(('interview', len(interview_results), interview_accuracy))
 
             # competition
             competitions = dataset.filter(lambda elem: elem.metadata['difficulty'] == 'competition')
             competitions = [int(elem.id) for elem in competitions]
             competition_results = {id: result for id, result in results.items() if int(id) in competitions}
-            competition_accuracy = self(competition_results)
-            entries.append(('competition', len(competition_results), competition_accuracy * 100))
+            competition_accuracy = self(competition_results) * 100 if len(competition_results) > 0 else None
+            entries.append(('competition', len(competition_results), competition_accuracy))
 
         # total
-        total_accuracy = self(results)
-        entries.append(('total', len(results), total_accuracy * 100))
+        total_accuracy = self(results) * 100
+        entries.append(('total', len(results), total_accuracy))
 
         # print table
         redirect(tabulate(entries, headers=['', 'counts', f'pass@{self.k} (%)'], floatfmt='.2f'))
