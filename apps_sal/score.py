@@ -65,12 +65,12 @@ def time_limit(seconds: float):
     else:
         def signal_handler(*_):
             raise TimeoutExcpetion()
-        signal.setitimer(signal.ITIMER_VIRTUAL, seconds)
-        signal.signal(signal.SIGVTALRM, signal_handler)
+        signal.setitimer(signal.ITIMER_REAL, seconds)
+        signal.signal(signal.SIGALRM, signal_handler)
         try:
             yield
         finally:
-            signal.setitimer(signal.ITIMER_VIRTUAL, 0)
+            signal.setitimer(signal.ITIMER_REAL, 0)
 
 
 def _score_stdio_exact_aux(args: Tuple[str, str, str, Union[int, None]]) -> bool:
