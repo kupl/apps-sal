@@ -107,6 +107,8 @@ def main(argv=None):
                         help='metric (default=strict)')
     parser.add_argument('--pass-at-k', default=[1], nargs='+', metavar='<int>', type=int,
                         help='k for pass@k (default=1)')
+    parser.add_argument('--processes', default=1, type=int, metavar='<int>',
+                        help='number of processes to use (default=1)')
     parser.add_argument('--score-json', default=None, metavar='<json>', type=str,
                         help='json file to store evaluated scores')
     parser.add_argument('--filemode', action='store_true', help='print in filemode')
@@ -148,7 +150,7 @@ def main(argv=None):
             for i, program in enumerate(programs):
                 print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
                 with NewlineMonitor() as monitor:
-                    score = problem.score(program, timeout=args.timeout)
+                    score = problem.score(program, timeout=args.timeout, processes=args.processes)
                 printed_lines += monitor.newlines
                 result[key].append(score)
             print_in_upperline(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}                     ', upper=printed_lines, filemode=args.filemode)

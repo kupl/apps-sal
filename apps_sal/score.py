@@ -3,10 +3,13 @@ from io import StringIO
 from itertools import chain
 from typing import Callable
 from typing import Dict
+from typing import Tuple
 from typing import Union
 from unittest.mock import mock_open
 from unittest.mock import patch
+import contextlib
 import multiprocessing as mp
+import signal
 import types
 
 from apps_sal.logger import get_logger
@@ -50,26 +53,51 @@ def run_stdio(pgm: str, input: str) -> str:
     return stdout.getvalue()
 
 
-def score_stdio_exact(pgm: str, in_out: Dict[str, str], timeout: Union[None, int] = None) -> float:
+class TimeoutExcpetion(Exception):
+    pass
+
+
+@contextlib.contextmanager
+def time_limit(seconds: float):
+    if seconds is None:
+        yield
+
+    else:
+        def signal_handler(*_):
+            raise TimeoutExcpetion()
+        signal.setitimer(signal.ITIMER_VIRTUAL, seconds)
+        signal.signal(signal.SIGVTALRM, signal_handler)
+        try:
+            yield
+        finally:
+            signal.setitimer(signal.ITIMER_VIRTUAL, 0)
+
+
+def _score_stdio_exact_aux(args: Tuple[str, str, str, Union[int, None]]) -> bool:
+    pgm, input, expected, timeout = args
+    result = False
 
     try:
-        # test for each io
-        results = []
-        for input, expected in zip(in_out['inputs'], in_out['outputs']):
+        with time_limit(timeout):
+            output = run_stdio(pgm, input)
+        result = expected.strip() == output.strip()
+    except Exception as exception:
+        if isinstance(exception, TimeoutExcpetion):
+            get_logger().warning('Timeout while evaluating program.')
+        result = False
+    return result
 
-            try:
-                # run program
-                with mp.Pool(processes=1) as pool:
-                    output = pool.apply_async(run_stdio, (pgm, input))
-                    output = output.get(timeout)
 
-                # recored result
-                results.append(expected.strip() == output.strip())
-            except Exception as exception:
-                if isinstance(exception, mp.TimeoutError):
-                    get_logger().warning('Timeout while evaluating program.')
-                results.append(False)
+def score_stdio_exact(pgm: str, in_out: Dict[str, str], timeout: Union[None, int] = None, processes: Union[int, None] = None) -> float:
 
+    def make_args(in_exp: Tuple[str, str]) -> Tuple[str, str, str, Union[int, None]]:
+        input, expected = in_exp
+        return pgm, input, expected, timeout
+    args = map(make_args, zip(in_out['inputs'], in_out['outputs']))
+
+    try:
+        with mp.Pool(processes) as pool:
+            results = pool.map(_score_stdio_exact_aux, args)
         score = sum(results) / len(results)
     except Exception:
         score = 0.0
