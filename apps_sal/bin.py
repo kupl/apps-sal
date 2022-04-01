@@ -1,6 +1,4 @@
-from __future__ import annotations
 from collections import defaultdict
-from io import StringIO
 from typing import Dict
 from typing import List
 from typing import Union
@@ -34,17 +32,6 @@ def load_json(path: Union[str, Path]) -> Dict[str, List[str]]:
     return json.loads(path.read_text('utf-8'))
 
 
-def print_in_upperline(*s, upper: int = 0, filemode: bool = False) -> None:
-    if len(s) > 0:
-        to_upper_line = ''
-        if not filemode:
-            to_upper_line = to_upper_line + '\033[F' * upper
-        print(to_upper_line + s[0], *s[1:])
-        if not filemode:
-            if upper >= 1:
-                print('\n' * (upper - 1), end='', flush=True)
-
-
 def make_metric(metrics: List[str], ks: List[int]) -> List[Metric]:
     metric_objects = []
     for metric in metrics:
@@ -57,30 +44,6 @@ def make_metric(metrics: List[str], ks: List[int]) -> List[Metric]:
             elif metric == 'testcase':
                 metric_objects.append(TestcaseAccuracy())
     return metric_objects
-
-
-class NewlineMonitor:
-
-    def __init__(self):
-        # self.newlines: int = 0
-        self.stream: StringIO = StringIO()
-        self.stream.close = lambda _: 1
-        self.out: Union[None, str] = None
-
-    def __enter__(self) -> NewlineMonitor:
-        sys.stdout = self.stream
-        sys.stderr = self.stream
-        return self
-
-    def __exit__(self, *_) -> None:
-        sys.stdout = sys.__stdout__
-        sys.stderr = sys.__stderr__
-        self.out = self.stream.getvalue()
-        print(self.out, end='', flush=True)
-
-    @property
-    def newlines(self) -> int:
-        return self.out.count('\n')
 
 
 def main(argv=None):
@@ -111,7 +74,6 @@ def main(argv=None):
                         help='number of processes to use (default=1)')
     parser.add_argument('--score-json', default=None, metavar='<json>', type=str,
                         help='json file to store evaluated scores')
-    parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
     dataset_loader = {
@@ -144,16 +106,11 @@ def main(argv=None):
                 get_logger().warning('No problem is found. Skipped. Index: %s', key)
                 print()
                 continue
-            if not args.filemode:
-                print()
-            printed_lines = 1
             for i, program in enumerate(programs):
-                print_in_upperline(f' Status: evaluating candidate {i + 1}', upper=printed_lines, filemode=args.filemode)
-                with NewlineMonitor() as monitor:
-                    score = problem.score(program, timeout=args.timeout, processes=args.processes)
-                printed_lines += monitor.newlines
+                print(f' Status: evaluating candidate {i + 1}')
+                score = problem.score(program, timeout=args.timeout, processes=args.processes)
                 result[key].append(score)
-            print_in_upperline(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}                     ', upper=printed_lines, filemode=args.filemode)
+            print(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}                     ')
             print()
 
         metrics = make_metric(args.metric, args.pass_at_k)
