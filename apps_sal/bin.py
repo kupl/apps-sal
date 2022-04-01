@@ -109,6 +109,8 @@ def main(argv=None):
                         help='k for pass@k (default=1)')
     parser.add_argument('--processes', default=1, type=int, metavar='<int>',
                         help='number of processes to use (default=1)')
+    parser.add_argument('--score-json', default=None, metavar='<json>', type=str,
+                        help='json file to store evaluated scores')
     parser.add_argument('--filemode', action='store_true', help='print in filemode')
     args = parser.parse_args(argv)
 
@@ -157,3 +159,7 @@ def main(argv=None):
         metrics = make_metric(args.metric, args.pass_at_k)
         for metric in metrics:
             metric.print_report(result, dataset)
+
+        if args.score_json is not None:
+            score_json = Path(score_json)
+            score_json.write_text(json.dumps(result, indent=4), encoding='utf-8')
