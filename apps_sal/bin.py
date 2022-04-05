@@ -118,5 +118,5 @@ def main(argv=None):
             metric.print_report(result, dataset)
 
         if args.score_json is not None:
-            score_json = Path(score_json)
+            score_json = Path(args.score_json)
             score_json.write_text(json.dumps(result, indent=4), encoding='utf-8')
