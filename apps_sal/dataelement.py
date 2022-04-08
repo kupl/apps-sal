@@ -39,6 +39,12 @@ class DataElement:
         solutions_dir = self.path / 'solutions'
         if solutions_dir.exists():
             self.solutions = [py.read_text() for py in solutions_dir.glob('*.py')]
+        
+        # Load starter code
+        starter_code_py = self.path / 'starter_code.py'
+        if starter_code_py.exists():
+            with starter_code_py.open() as f:
+                self.starter_code = starter_code_py.read_text()
 
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
@@ -48,11 +54,11 @@ class DataElement:
         if len(self.solutions) == 0:
             get_logger().warning(f'This problem is discarded since it does not have any reference solution: {self.path}')
         for solution in self.solutions:
-            element = DataElementPerProgram(self.path, self.text, self.metadata, self.input_output, solution)
+            element = DataElementPerProgram(self.path, self.text, self.metadata, self.input_output, solution, self.starter_code)
             elements.append(element)
         return elements
 
-    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
+    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False, with_starter_code=True) -> str:
         data = {}
         data['id'] = self.id
         data['text'] = self.text
@@ -63,6 +69,8 @@ class DataElement:
         if with_metadata:
             data['path'] = str(self.path)
             data['metadata'] = self.metadata
+        if with_starter_code:
+            data['starter_code'] = self.starter_code
         return json.dumps(data)
 
     def score(self, program: str, timeout: Union[None, int] = None, processes: Union[int, None] = None) -> float:
@@ -74,15 +82,17 @@ class DataElement:
 class DataElementPerProgram(DataElement):
 
     # pylint: disable=super-init-not-called
-    def __init__(self, path: Union[str, Path], text: str, metadata: Dict[str, str], io: Dict[str, str], solution: str) -> None:
+    def __init__(self, path: Union[str, Path], text: str, metadata: Dict[str, str], io: Dict[str, str], solution: str, starter_code: str) -> None:
         self.path: Path = Path(path)
+        self.id: str = self.path.name
         self.text: str = text
         self.metadata: Dict[str, str] = metadata
         self.input_output: Dict[str, str] = io
         self.solution: str = solution
         self.solutions: List[str] = [self.solution]
+        self.starter_code = starter_code
 
-    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False) -> str:
+    def to_json(self, with_solutions=True, with_input_output=False, with_metadata=False, with_starter_code=True) -> str:
         data = {'text': self.text}
         if with_solutions:
             data['solution'] = self.solution
@@ -91,6 +101,8 @@ class DataElementPerProgram(DataElement):
         if with_metadata:
             data['path'] = str(self.path)
             data['metadata'] = self.metadata
+        if with_starter_code:
+            data['starter_code'] = self.starter_code
         return json.dumps(data)
 
     def __repr__(self) -> str:
