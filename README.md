@@ -9,7 +9,7 @@ We (SAL, Software Analysis Laboratory) refined the original dataset.
 You can install `apps-sal` using `pip3`.
 
 ### Requirement
-`apps-sal` requires python 3.7 or higher.
+`apps-sal` requires python 3.9 or higher.
 
 ### Installation
 You can install `apps-sal` using `pip` and `git`.
