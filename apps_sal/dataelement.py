@@ -39,6 +39,12 @@ class DataElement:
         solutions_dir = self.path / 'solutions'
         if solutions_dir.exists():
             self.solutions = [py.read_text() for py in solutions_dir.glob('*.py')]
+        
+        # Load starter code
+        starter_code_py = self.path / 'starter_code.py'
+        if starter_code_py.exists():
+            with starter_code_py.open() as f:
+                self.starter_code = starter_code_py.read_text()
 
     def __repr__(self) -> str:
         return f'DataElement("{self.path}")'
@@ -76,6 +82,7 @@ class DataElementPerProgram(DataElement):
     # pylint: disable=super-init-not-called
     def __init__(self, path: Union[str, Path], text: str, metadata: Dict[str, str], io: Dict[str, str], solution: str) -> None:
         self.path: Path = Path(path)
+        self.id: str = self.path.name
         self.text: str = text
         self.metadata: Dict[str, str] = metadata
         self.input_output: Dict[str, str] = io
