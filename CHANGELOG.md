@@ -5,16 +5,22 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
 ### Added
+- Commandline tool `apps-sal` with evaluation mode.
+- Problem entry tags.
+- STDIO scoring function with multiprocessing.
+- Starter code is now accessable with `DataElement`.
+- Per program enumeration with `DataElementPerProgram`.
 - List utility functions (`map` and `filter`) for processing `Dataset`.
 - Implement exporting dataset as `jsonl` format.
 - Querying a data element with its id.
+- Provide various metrics (`strict_accuracy`, `testcase_accuracy`, and `pass@k`).
 
 ### Changed
 - Installation method with `https` instead of `ssh`.
 - Ignore docstring warnings in VSCode
 
-### Fixed
-- Querying failed when query problem with string.
+### Removed
+- Problems with non-English description.
 
 ## [v0.1.0](https://github.com/kupl/apps-sal/releases/v0.1.0) - 2021-12-10
 
