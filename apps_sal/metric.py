@@ -19,6 +19,7 @@ def pass_at_k(results: Dict[Union[int, str], List[float]], k: int = 1) -> float:
             get_logger().warning('No submission evaluated. This problem is treated as wrong.')
             continue
         c = len([e for e in result if e >= 1.0])
+        k = min(n, k)
         correct.append(1 - math.comb(n - c, k) / math.comb(n, k))
     score = sum(correct)
     total = len(results)
