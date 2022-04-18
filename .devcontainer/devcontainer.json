@@ -23,5 +23,7 @@
         "ms-python.vscode-pylance",
     ],
 
+    "postCreateCommand": "sudo pip install -e .",
+
     "remoteUser": "apps"
 }
