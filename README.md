@@ -15,10 +15,10 @@ You can install `apps-sal` using `pip3`.
 You can install `apps-sal` using `pip` and `git`.
 
 #### Latest Released Version
-Currently, the latest released version is `v0.1.0`.
+Currently, the latest released version is `v0.2.0`.
 If you set ssh authentication with GitHub, you can install `apps-sal` by simply typing a following command:
 ```bash
-$ [sudo] pip3 install git+https://github.com/kupl/apps-sal.git@v0.1.0
+$ [sudo] pip3 install git+https://github.com/kupl/apps-sal.git@v0.2.0
 ```
 
 ### Examples
