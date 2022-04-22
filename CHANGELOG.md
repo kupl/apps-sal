@@ -4,6 +4,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 
 ## [Unreleased](https://github.com/kupl/apps-sal)
 
+### Added
+- Table redirect option in `apps-sal` cli.
+
 ## [v0.2.0](https://github.com/kupl/apps-sal/releases/v0.2.0) - 2022-04-19
 
 ### Added

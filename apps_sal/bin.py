@@ -74,6 +74,8 @@ def main(argv=None):
                         help='number of processes to use (default=1)')
     parser.add_argument('--score-json', default=None, metavar='<json>', type=str,
                         help='json file to store evaluated scores')
+    parser.add_argument('--table', default=None, metavar='<txt>', type=str,
+                        help='txt file to save metric reports')
     args = parser.parse_args(argv)
 
     dataset_loader = {
@@ -110,12 +112,18 @@ def main(argv=None):
                 print(f' Status: evaluating candidate {i + 1}')
                 score = problem.score(program, timeout=args.timeout, processes=args.processes)
                 result[key].append(score)
-            print(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}                     ')
+            print(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}')
             print()
 
         metrics = make_metric(args.metric, args.pass_at_k)
-        for metric in metrics:
-            metric.print_report(result, dataset)
+        if args.table is not None:
+            table_file = Path(args.table)
+            with table_file.open('w', encoding='utf8') as f:
+                for metric in metrics:
+                    metric.print_report(result, dataset, file=f)
+        else:
+            for metric in metrics:
+                metric.print_report(result, dataset)
 
         if args.score_json is not None:
             score_json = Path(args.score_json)
