@@ -7,6 +7,9 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 ### Added
 - Table redirect option in `apps-sal` cli.
 
+### Fixed
+- Remove a problem with incompatible specification (`test/2432`).
+
 ## [v0.2.0](https://github.com/kupl/apps-sal/releases/v0.2.0) - 2022-04-19
 
 ### Added
