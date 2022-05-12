@@ -8,6 +8,12 @@ This file is following [keep-a-changelog](https://keepachangelog.com).
 - Table redirect option in `apps-sal` cli.
 
 ### Fixed
+- Evaluate all entries in between `start` and `end`.
+
+### Chores
+- Refactor codes in `metric.py` to reuse repeated parts.
+
+### Fixed
 - Remove a problem with incompatible specification (`test/2432`).
 
 ## [v0.2.0](https://github.com/kupl/apps-sal/releases/v0.2.0) - 2022-04-19
