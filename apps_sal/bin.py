@@ -102,11 +102,15 @@ def main(argv=None):
             print(f'Problem: {key}')
             problem = dataset.query(key)
             if problem is None:
-                get_logger().warning('No problem is found. Skipped. Index: %s', key)
+                get_logger().warning('No problem is found. Skipped. Key: %s', key)
                 print()
                 continue
             result[key] = []
-            programs = target[str(key)]
+            try:
+                programs = target[str(key)]
+            except KeyError:
+                get_logger().warning('No submission is found. This problem is treated as wrong. Key: %s', key)
+                continue
             for i, program in enumerate(programs):
                 print(f' Status: evaluating candidate {i + 1}')
                 score = problem.score(program, timeout=args.timeout, processes=args.processes)
