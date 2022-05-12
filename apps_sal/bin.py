@@ -1,4 +1,3 @@
-from collections import defaultdict
 from typing import Dict
 from typing import List
 from typing import Union
@@ -63,8 +62,8 @@ def main(argv=None):
                         help='time budget for each program in eval mode (default=None)')
     parser.add_argument('--start', default=0, type=int, metavar='<int>',
                         help='start point of index range (default=0)')
-    parser.add_argument('--end', default=5000, type=int, metavar='<int>',
-                        help='end pint of index range (default=5000)')
+    parser.add_argument('--end', default=4999, type=int, metavar='<int>',
+                        help='end pint of index range (default=4999)')
     parser.add_argument('--metric', default=['strict'], nargs='+',
                         choices=['strict', 'testcase', 'pass@k'],
                         help='metric (default=strict)')
@@ -96,18 +95,18 @@ def main(argv=None):
         }[target.suffix]
         target = target_loader(target)
 
-        result = defaultdict(list)
-        evaluated = 0
-        for key, programs in target.items():
-            if int(key) < args.start or int(key) >= args.end:
-                continue
+        result = {}
+        start = max(0, args.start)
+        end = min(4999, args.end)
+        for key in range(start, end + 1):
             print(f'Problem: {key}')
-            evaluated += 1
             problem = dataset.query(key)
             if problem is None:
                 get_logger().warning('No problem is found. Skipped. Index: %s', key)
                 print()
                 continue
+            result[key] = []
+            programs = target[str(key)]
             for i, program in enumerate(programs):
                 print(f' Status: evaluating candidate {i + 1}')
                 score = problem.score(program, timeout=args.timeout, processes=args.processes)
