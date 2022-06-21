@@ -16,7 +16,7 @@ def pass_at_k(results: Dict[Union[int, str], List[float]],
               n: Union[int, None] = None) -> float:  # pylint: disable=invalid-name
     correct = []
     for result in results.values():
-        n = len(result) if n is not None else n
+        n = len(result) if n is None else n
         if n == 0:
             get_logger().warning('No submission evaluated. This problem is treated as wrong.')
             continue
