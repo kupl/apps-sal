@@ -11,10 +11,12 @@ from apps_sal.dataset import Dataset
 from apps_sal.logger import get_logger
 
 
-def pass_at_k(results: Dict[Union[int, str], List[float]], k: int = 1) -> float:
+def pass_at_k(results: Dict[Union[int, str], List[float]],
+              k: int = 1,
+              n: Union[int, None] = None) -> float:  # pylint: disable=invalid-name
     correct = []
     for result in results.values():
-        n = len(result)
+        n = len(result) if n is None else n
         if n == 0:
             get_logger().warning('No submission evaluated. This problem is treated as wrong.')
             continue
@@ -132,9 +134,13 @@ class TestcaseAccuracy(Metric):
 
 class PassAtK(Metric):
 
-    def __init__(self, k: int = 1, title: Union[None, str] = None) -> None:
+    def __init__(self,
+                 k: int = 1,
+                 n: Union[int, None] = None,
+                 title: Union[None, str] = None) -> None:
         super().__init__(f'Pass@{k} Report' if title is None else title)
         self.k: int = k
+        self.n: Union[int, None] = n  # pylint: disable=invalid-name
 
     def evaluate(self, results: Dict[Union[int, str], List[float]]) -> float:
-        return pass_at_k(results, self.k)
+        return pass_at_k(results, self.k, self.n)

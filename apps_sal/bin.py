@@ -30,13 +30,15 @@ def load_json(path: Union[str, Path]) -> Dict[str, List[str]]:
     path = Path(path)
     return json.loads(path.read_text('utf-8'))
 
+# pylint: disable=invalid-name
 
-def make_metric(metrics: List[str], ks: List[int]) -> List[Metric]:
+
+def make_metric(metrics: List[str], ks: List[int], n: Union[int, None] = None) -> List[Metric]:
     metric_objects = []
     for metric in metrics:
         if metric == 'pass@k':
             for k in ks:
-                metric_objects.append(PassAtK(k))
+                metric_objects.append(PassAtK(k, n))
         else:
             if metric == 'strict':
                 metric_objects.append(StrictAccuracy())
@@ -69,6 +71,8 @@ def main(argv=None):
                         help='metric (default=strict)')
     parser.add_argument('--pass-at-k', default=[1], nargs='+', metavar='<int>', type=int,
                         help='k for pass@k (default=1)')
+    parser.add_argument('--strict-n', defalut=None, metaver='<int>', type=int,
+                        help='use strict population number in pass@k (default=disabled)')
     parser.add_argument('--processes', default=1, type=int, metavar='<int>',
                         help='number of processes to use (default=1)')
     parser.add_argument('--score-json', default=None, metavar='<json>', type=str,
@@ -118,7 +122,7 @@ def main(argv=None):
             print(f' Status: Done   Max score: {max(result[key]) if len(result[key]) > 0 else 0.0:.2f}')
             print()
 
-        metrics = make_metric(args.metric, args.pass_at_k)
+        metrics = make_metric(args.metric, args.pass_at_k, args.strict_n)
         if args.table is not None:
             table_file = Path(args.table)
             with table_file.open('w', encoding='utf8') as f:
